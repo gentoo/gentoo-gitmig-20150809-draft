@@ -1,26 +1,28 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libctl/libctl-3.0.3.ebuild,v 1.2 2008/11/08 18:58:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libctl/libctl-3.0.3.ebuild,v 1.3 2011/06/21 08:31:16 jlec Exp $
 
-DESCRIPTION="Guile-based library implementing flexible control files for scientific simulations"
-SRC_URI="http://ab-initio.mit.edu/libctl/${P}.tar.gz"
+inherit fortran-2
+
+DESCRIPTION="Guile-based library for scientific simulations"
 HOMEPAGE="http://ab-initio.mit.edu/libctl/"
-
-LICENSE="GPL-2"
-KEYWORDS="amd64 x86"
+SRC_URI="http://ab-initio.mit.edu/libctl/${P}.tar.gz"
 
 SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="amd64 x86"
 IUSE="examples"
 
 DEPEND=">=dev-scheme/guile-1.6"
+RDEPEND="${DEPEND}"
 
 src_compile() {
-	econf --enable-shared || die "econf failed"
+	econf --enable-shared
 	emake || die "emake failed"
 }
 
 src_install() {
 	einstall || die "einstall failed"
-	dodoc NEWS AUTHORS COPYRIGHT ChangeLog
+	dodoc NEWS AUTHORS ChangeLog
 	use examples && doins -r examples
 }

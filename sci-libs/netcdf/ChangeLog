@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.90 2011/06/08 15:13:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.91 2011/06/21 08:33:42 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> netcdf-3.6.3.ebuild,
+  netcdf-4.1.1-r4.ebuild:
+  Added fortran-2.eclass support
 
   08 Jun 2011; Jeroen Roovers <jer@gentoo.org> netcdf-3.6.3.ebuild,
   netcdf-4.1.1-r4.ebuild:

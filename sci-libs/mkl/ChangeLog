@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/mkl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.41 2010/12/17 13:41:58 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/ChangeLog,v 1.42 2011/06/21 08:33:27 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> mkl-9.1.023.ebuild,
+  mkl-10.0.2.018-r2.ebuild, mkl-10.0.5.025.ebuild:
+  Added fortran-2.eclass support
 
   17 Dec 2010; Justin Lecher <jlec@gentoo.org> mkl-9.1.023.ebuild,
   mkl-10.0.2.018-r2.ebuild, mkl-10.0.5.025.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.8.0.ebuild,v 1.7 2011/03/26 17:10:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.8.0.ebuild,v 1.8 2011/06/21 08:38:08 jlec Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
 
-inherit eutils distutils flag-o-matic toolchain-funcs versionator
+inherit eutils fortran-2 distutils flag-o-matic toolchain-funcs versionator
 
 SP="${PN}-$(get_version_component_range 1-2)"
 
@@ -46,6 +46,7 @@ RESTRICT="test"
 DOCS="THANKS.txt LATEST.txt TOCHANGE.txt"
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	# scipy automatically detects libraries by default
 	export {FFTW,FFTW3,UMFPACK}=None
 	use umfpack && unset UMFPACK

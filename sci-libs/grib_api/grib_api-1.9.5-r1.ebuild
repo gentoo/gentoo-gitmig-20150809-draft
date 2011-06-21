@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/grib_api-1.9.5-r1.ebuild,v 1.2 2011/04/25 09:36:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/grib_api-1.9.5-r1.ebuild,v 1.3 2011/06/21 08:24:37 jlec Exp $
 
 EAPI=2
-inherit eutils autotools
+inherit eutils fortran-2 autotools
 
 DESCRIPTION="Library for decoding WMO FM-92 GRIB messages"
 HOMEPAGE="http://www.ecmwf.int/products/data/software/grib_api.html"

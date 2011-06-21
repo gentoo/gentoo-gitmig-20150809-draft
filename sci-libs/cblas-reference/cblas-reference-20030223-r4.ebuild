@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/cblas-reference-20030223-r4.ebuild,v 1.16 2010/12/16 14:27:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cblas-reference/cblas-reference-20030223-r4.ebuild,v 1.17 2011/06/21 08:21:17 jlec Exp $
 
-inherit autotools eutils multilib toolchain-funcs
+inherit autotools eutils fortran-2 multilib toolchain-funcs
 
 MyPN="${PN/-reference/}"
 

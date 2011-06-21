@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/metis-5.0_pre2-r1.ebuild,v 1.2 2010/01/02 18:14:15 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/metis-5.0_pre2-r1.ebuild,v 1.3 2011/06/21 08:32:25 jlec Exp $
 
-inherit autotools eutils
+inherit autotools eutils fortran-2
 
 MY_PV=${PV/_/}
 
@@ -25,6 +25,7 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/metis-${MY_PV}"
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	if use openmp \
 		&& [[ $(tc-getCC) == *gcc ]] \
 		&& [[  $(gcc-major-version)$(gcc-minor-version) -lt 42 ]]; then

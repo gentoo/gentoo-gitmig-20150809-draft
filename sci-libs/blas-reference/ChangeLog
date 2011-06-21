@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/blas-reference
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.51 2011/05/28 11:10:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-reference/ChangeLog,v 1.52 2011/06/21 08:19:42 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> blas-reference-20070226.ebuild,
+  blas-reference-20070226-r1.ebuild, blas-reference-20070226-r2.ebuild:
+  Added fortran-2.eclass support
 
   28 May 2011; Justin Lecher <jlec@gentoo.org> blas-reference-20070226.ebuild,
   blas-reference-20070226-r1.ebuild, blas-reference-20070226-r2.ebuild:

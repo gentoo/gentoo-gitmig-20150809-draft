@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r9.ebuild,v 1.3 2011/03/14 17:05:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r9.ebuild,v 1.4 2011/06/21 08:22:30 jlec Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="2"
 
-inherit autotools eutils gnuconfig multilib python toolchain-funcs
+inherit autotools eutils fortran-2 gnuconfig multilib python toolchain-funcs
 
 SRC="ftp://ftp.ccp4.ac.uk/ccp4"
 
@@ -63,6 +63,7 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	python_set_active_version 2
 }
 

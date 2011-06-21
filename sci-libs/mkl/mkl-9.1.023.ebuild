@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-9.1.023.ebuild,v 1.14 2010/12/19 18:38:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-9.1.023.ebuild,v 1.15 2011/06/21 08:33:27 jlec Exp $
 
-inherit eutils versionator toolchain-funcs
+inherit eutils fortran-2 versionator toolchain-funcs
 
 PID=779
 PB=${PN}
@@ -46,6 +46,7 @@ get_fcomp() {
 }
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	# setting up license
 	[[ -z ${MKL_LICENSE} && -d /opt/intel/licenses ]] && \
 		MKL_LICENSE=$(find /opt/intel/licenses -name *MKL*.lic)

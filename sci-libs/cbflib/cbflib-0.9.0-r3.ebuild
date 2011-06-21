@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/cbflib-0.9.0-r3.ebuild,v 1.3 2011/01/16 10:54:32 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/cbflib-0.9.0-r3.ebuild,v 1.4 2011/06/21 08:21:20 jlec Exp $
 
 EAPI="3"
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit distutils eutils flag-o-matic toolchain-funcs
+inherit distutils eutils fortran-2 flag-o-matic toolchain-funcs
 
 PYTHON_MODNAME="pycbf.py"
 MY_P1="CBFlib-${PV}"

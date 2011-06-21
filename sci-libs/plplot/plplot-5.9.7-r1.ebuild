@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.7-r1.ebuild,v 1.3 2010/12/17 07:04:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.7-r1.ebuild,v 1.4 2011/06/21 08:35:49 jlec Exp $
 
 EAPI="3"
 
 WX_GTK_VER="2.8"
 PYTHON_DEPEND="python? 2"
 
-inherit eutils cmake-utils python toolchain-funcs virtualx wxwidgets java-pkg-opt-2
+inherit eutils fortran-2 cmake-utils python toolchain-funcs virtualx wxwidgets java-pkg-opt-2
 
 DESCRIPTION="Multi-language scientific plotting library"
 HOMEPAGE="http://plplot.sourceforge.net/"
@@ -58,6 +58,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	if use fortran; then
+		fortran-2_pkg_setup
 		export FC=$(tc-getFC) F77=$(tc-getF77)
 	else
 		export FC="" F77=""

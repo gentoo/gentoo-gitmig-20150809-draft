@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.5.025.ebuild,v 1.10 2010/12/19 18:38:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.5.025.ebuild,v 1.11 2011/06/21 08:33:27 jlec Exp $
 
-inherit eutils toolchain-funcs check-reqs
+inherit eutils fortran-2 toolchain-funcs check-reqs
 
 PID=1232
 PB=${PN}
@@ -41,6 +41,7 @@ get_fcomp() {
 }
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	# Check the license
 	if [[ -z ${MKL_LICENSE} ]]; then
 		MKL_LICENSE="$(grep -ls MKern ${ROOT}${INTEL_LIC_DIR}/* | tail -n 1)"

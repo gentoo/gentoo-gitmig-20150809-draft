@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.1.1-r1.ebuild,v 1.25 2011/05/28 11:14:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.1.1-r1.ebuild,v 1.26 2011/06/21 08:26:16 jlec Exp $
 
-inherit autotools eutils flag-o-matic multilib toolchain-funcs
+inherit autotools eutils fortran-2 flag-o-matic multilib toolchain-funcs
 
 MyPN="${PN/-reference/}"
 
@@ -29,6 +29,7 @@ DEPEND="
 S="${WORKDIR}/${MyPN}-lite-${PV}"
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	if  [[ $(tc-getFC) =~ if ]]; then
 		ewarn "Using Intel Fortran at your own risk"
 		export LDFLAGS="$(raw-ldflags)"

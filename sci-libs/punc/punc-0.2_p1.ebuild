@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-0.2_p1.ebuild,v 1.4 2010/07/28 15:16:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-0.2_p1.ebuild,v 1.5 2011/06/21 08:37:03 jlec Exp $
 
 EAPI="3"
 
-inherit autotools multilib
+inherit autotools fortran-2 multilib
 
 MY_PV="${PV}"
 MY_P="${PN}-${MY_PV/_p/-}"

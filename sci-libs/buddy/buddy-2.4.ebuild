@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/buddy/buddy-2.4.ebuild,v 1.6 2011/06/02 07:29:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/buddy/buddy-2.4.ebuild,v 1.7 2011/06/21 08:20:29 jlec Exp $
 
 EAPI=4
 
-inherit eutils
+inherit eutils fortran-2
 
 DESCRIPTION="Binary Decision Diagram Package"
 HOMEPAGE="http://sourceforge.net/projects/buddy/"

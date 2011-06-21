@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/umfpack-5.4.0.ebuild,v 1.2 2010/01/02 18:19:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/umfpack-5.4.0.ebuild,v 1.3 2011/06/21 08:39:59 jlec Exp $
 
 EAPI=2
-inherit autotools eutils
+inherit autotools eutils fortran-2
 
 MY_PN=UMFPACK
 

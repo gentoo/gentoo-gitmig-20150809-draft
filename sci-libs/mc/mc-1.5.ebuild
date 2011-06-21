@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mc/mc-1.5.ebuild,v 1.1 2011/04/16 07:45:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mc/mc-1.5.ebuild,v 1.2 2011/06/21 08:32:11 jlec Exp $
 
 EAPI="2"
 
-inherit autotools eutils multilib
+inherit autotools eutils fortran-2 multilib
 
 DESCRIPTION="2D/3D AFEM code for nonlinear geometric PDE"
 HOMEPAGE="http://fetk.org/codes/mc/index.html"

@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cctbx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/ChangeLog,v 1.17 2011/04/10 14:51:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cctbx/ChangeLog,v 1.18 2011/06/21 08:22:34 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> cctbx-2010.03.29.2334-r3.ebuild,
+  cctbx-2010.03.29.2334-r4.ebuild:
+  Added fortran-2.eclass support
 
 *cctbx-2010.03.29.2334-r4 (10 Apr 2011)
 

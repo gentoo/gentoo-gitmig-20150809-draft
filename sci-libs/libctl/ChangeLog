@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libctl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libctl/ChangeLog,v 1.14 2010/12/02 10:39:39 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libctl/ChangeLog,v 1.15 2011/06/21 08:31:16 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> libctl-3.0.3.ebuild,
+  libctl-3.1.ebuild:
+  Added fortran-2.eclass support
 
   02 Dec 2010; Justin Lecher <jlec@gentoo.org> libctl-3.1.ebuild:
   Fix DEPs for guile; #346695

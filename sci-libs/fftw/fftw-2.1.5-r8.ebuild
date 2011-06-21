@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r8.ebuild,v 1.6 2011/03/21 11:24:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r8.ebuild,v 1.7 2011/06/21 08:23:37 jlec Exp $
 
 EAPI="3"
 
-inherit autotools eutils flag-o-matic toolchain-funcs
+inherit autotools eutils fortran-2 flag-o-matic toolchain-funcs
 
 DESCRIPTION="Fast C library for the Discrete Fourier Transform"
 SRC_URI="http://www.fftw.org/${P}.tar.gz"
@@ -20,6 +20,7 @@ IUSE="doc float fortran mpi openmp threads"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 s390 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	# this one is reported to cause trouble on pentium4 m series
 	filter-mfpmath "sse"
 

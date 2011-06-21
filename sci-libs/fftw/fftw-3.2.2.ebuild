@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.2.2.ebuild,v 1.12 2010/04/09 18:41:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.2.2.ebuild,v 1.13 2011/06/21 08:23:37 jlec Exp $
 
 EAPI=2
-inherit flag-o-matic eutils toolchain-funcs autotools
+inherit flag-o-matic eutils fortran-2 toolchain-funcs autotools
 
 DESCRIPTION="Fast C library for the Discrete Fourier Transform"
 HOMEPAGE="http://www.fftw.org/"
@@ -15,6 +15,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~amd64-linux ~x86-
 IUSE="altivec doc fortran openmp sse sse2 threads"
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	FFTW_THREADS="--disable-threads --disable-openmp"
 	if use openmp; then
 		FFTW_THREADS="--disable-threads --enable-openmp"

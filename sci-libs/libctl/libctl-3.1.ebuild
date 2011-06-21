@@ -1,16 +1,18 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libctl/libctl-3.1.ebuild,v 1.2 2010/12/02 10:39:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libctl/libctl-3.1.ebuild,v 1.3 2011/06/21 08:31:16 jlec Exp $
 
-EAPI=2
+EAPI=4
+
+inherit fortran-2
 
 DESCRIPTION="Guile-based library for scientific simulations"
-SRC_URI="http://ab-initio.mit.edu/libctl/${P}.tar.gz"
 HOMEPAGE="http://ab-initio.mit.edu/libctl/"
+SRC_URI="http://ab-initio.mit.edu/libctl/${P}.tar.gz"
 
+SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
-SLOT="0"
 IUSE="debug doc examples"
 
 DEPEND="
@@ -25,14 +27,13 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake failed"
-	dodoc NEWS AUTHORS COPYRIGHT ChangeLog
+	default
 	if use doc; then
-		dohtml doc/* || die
+		dohtml doc/*
 	fi
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
 		cd examples
-		doins Makefile.am README *.c *.h *.ctl *scm || die
+		doins Makefile.am README *.c *.h *.ctl *scm
 	fi
 }

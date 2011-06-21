@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/taucs/taucs-2.2.ebuild,v 1.3 2011/06/02 10:42:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/taucs/taucs-2.2.ebuild,v 1.4 2011/06/21 08:39:03 jlec Exp $
 
 EAPI=2
-inherit eutils toolchain-funcs flag-o-matic
+inherit eutils fortran-2 toolchain-funcs flag-o-matic
 
 DESCRIPTION="C library of sparse linear solvers"
 HOMEPAGE="http://www.tau.ac.il/~stoledo/taucs/"

@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.113 2011/03/21 11:24:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.114 2011/06/21 08:23:37 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> fftw-2.1.5-r5.ebuild,
+  fftw-2.1.5-r8.ebuild, fftw-3.2.2.ebuild, fftw-3.2.2-r1.ebuild:
+  Added fortran-2.eclass support
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> fftw-2.1.5-r8.ebuild:
   ppc/ppc64 stable wrt #351745

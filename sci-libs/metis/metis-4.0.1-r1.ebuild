@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/metis-4.0.1-r1.ebuild,v 1.15 2010/12/22 19:51:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/metis-4.0.1-r1.ebuild,v 1.16 2011/06/21 08:32:25 jlec Exp $
 
-inherit autotools eutils
+inherit autotools eutils fortran-2
 
 MYP=${PN}-4.0
 DESCRIPTION="A package for unstructured serial graph partitioning"

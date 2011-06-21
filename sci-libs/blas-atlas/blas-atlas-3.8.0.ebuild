@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.8.0.ebuild,v 1.13 2010/12/17 08:09:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-atlas/blas-atlas-3.8.0.ebuild,v 1.14 2011/06/21 08:18:38 jlec Exp $
 
-inherit eutils toolchain-funcs multilib
+inherit eutils fortran-2 toolchain-funcs multilib
 
 PATCH_V="3.7.39"
 
@@ -27,6 +27,7 @@ DEPEND="app-admin/eselect-blas
 S="${WORKDIR}/ATLAS"
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	# icc won't compile (as of icc-10.0.026)
 	# and will blow out $PORTAGE_TMPDIR
 	if [[ $(tc-getCC) = icc* ]]; then

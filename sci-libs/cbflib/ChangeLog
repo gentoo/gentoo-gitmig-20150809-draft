@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cbflib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/ChangeLog,v 1.15 2011/01/16 10:54:32 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/ChangeLog,v 1.16 2011/06/21 08:21:20 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> cbflib-0.8.1-r7.ebuild,
+  cbflib-0.9.0-r3.ebuild:
+  Added fortran-2.eclass support
 
   16 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   cbflib-0.9.0-r3.ebuild:

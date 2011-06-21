@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/proj-4.5.0.ebuild,v 1.2 2008/01/08 15:23:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/proj-4.5.0.ebuild,v 1.3 2011/06/21 08:35:46 jlec Exp $
 
-inherit eutils
+inherit eutils fortran-2
 N="${S}/nad"
 
 DESCRIPTION="Proj.4 cartographic projection software with updated NAD27 grids"

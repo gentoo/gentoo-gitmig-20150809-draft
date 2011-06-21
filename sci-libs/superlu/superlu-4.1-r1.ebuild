@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/superlu-4.1-r1.ebuild,v 1.6 2011/05/23 17:19:08 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/superlu-4.1-r1.ebuild,v 1.7 2011/06/21 08:38:15 jlec Exp $
 
 EAPI="2"
 
-inherit autotools eutils toolchain-funcs multilib
+inherit autotools eutils fortran-2 toolchain-funcs multilib
 
 MY_PN=SuperLU
 

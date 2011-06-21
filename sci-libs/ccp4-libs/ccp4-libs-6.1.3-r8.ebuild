@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r8.ebuild,v 1.1 2011/02/19 15:10:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r8.ebuild,v 1.2 2011/06/21 08:22:30 jlec Exp $
 
 EAPI="3"
 
-inherit eutils gnuconfig multilib toolchain-funcs
+inherit eutils fortran-2 gnuconfig multilib toolchain-funcs
 
 SRC="ftp://ftp.ccp4.ac.uk/ccp4"
 

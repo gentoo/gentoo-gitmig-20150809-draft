@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/buddy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/buddy/ChangeLog,v 1.9 2011/06/02 07:29:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/buddy/ChangeLog,v 1.10 2011/06/21 08:20:29 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> buddy-2.4.ebuild:
+  Added fortran-2.eclass support
 
   02 Jun 2011; Justin Lecher <jlec@gentoo.org> buddy-2.2.ebuild,
   buddy-2.4.ebuild, +files/buddy-2.4-gold.patch:

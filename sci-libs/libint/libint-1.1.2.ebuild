@@ -1,18 +1,17 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libint/libint-1.1.2.ebuild,v 1.2 2006/07/09 07:11:27 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libint/libint-1.1.2.ebuild,v 1.3 2011/06/21 08:31:23 jlec Exp $
 
-inherit eutils
+inherit eutils fortran-2
 
-DESCRIPTION="Used to evaluate traditional and novel two-body matrix elements (integrals) over Cartesian Gaussian functions"
+DESCRIPTION="Matrix elements (integrals) evaluation over Cartesian Gaussian functions"
 HOMEPAGE="http://www.ccmst.gatech.edu/evaleev/libint/"
 SRC_URI="http://www.ccmst.gatech.edu/evaleev/libint/src/${P}.tar.gz"
-LICENSE="GPL-2"
+
 SLOT="0"
+LICENSE="GPL-2"
 KEYWORDS="x86"
 IUSE=""
-RDEPEND=""
-DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -28,8 +27,7 @@ src_compile() {
 	econf \
 		--enable-shared \
 		--enable-deriv \
-		--enable-r12 \
-		|| die "econf failed"
+		--enable-r12
 	emake || die "emake failed"
 }
 
