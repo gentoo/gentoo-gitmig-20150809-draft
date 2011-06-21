@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gnome-subtitles
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-subtitles/ChangeLog,v 1.30 2011/04/27 20:29:46 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-subtitles/ChangeLog,v 1.31 2011/06/21 13:49:57 phajdan.jr Exp $
+
+  21 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gnome-subtitles-1.1.ebuild:
+  x86 stable wrt bug #371163
 
   27 Apr 2011; Christoph Mende <angelos@gentoo.org>
   gnome-subtitles-0.9.1.ebuild, gnome-subtitles-1.1.ebuild:
