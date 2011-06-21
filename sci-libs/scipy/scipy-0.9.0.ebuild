@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.9.0.ebuild,v 1.5 2011/06/21 08:38:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.9.0.ebuild,v 1.6 2011/06/21 14:46:11 jlec Exp $
 
 EAPI="3"
 
@@ -37,7 +37,9 @@ DEPEND="${CDEPEND}
 	doc? ( app-arch/unzip )
 	umfpack? ( dev-lang/swig )"
 
-RDEPEND="${CDEPEND}
+RDEPEND="
+	virtual/fortran
+	${CDEPEND}
 	dev-python/imaging"
 
 # buggy test suite - still true for 0.9.0

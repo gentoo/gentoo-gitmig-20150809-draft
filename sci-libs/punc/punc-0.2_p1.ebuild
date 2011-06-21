@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-0.2_p1.ebuild,v 1.5 2011/06/21 08:37:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-0.2_p1.ebuild,v 1.6 2011/06/21 14:46:52 jlec Exp $
 
 EAPI="3"
 
@@ -24,7 +24,9 @@ DEPEND="
 	sci-libs/superlu
 	virtual/blas
 	virtual/mpi"
-RDEPEND="${DEPEND}"
+RDEPEND="
+	virtual/fortran
+	${DEPEND}"
 
 S="${WORKDIR}/${PN}"
 

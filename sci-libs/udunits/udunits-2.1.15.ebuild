@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/udunits-2.1.15.ebuild,v 1.6 2011/06/21 08:39:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/udunits-2.1.15.ebuild,v 1.7 2011/06/21 14:45:12 jlec Exp $
 
 EAPI=2
 inherit eutils fortran-2 autotools
@@ -13,7 +13,9 @@ SLOT="0"
 LICENSE="UCAR-Unidata"
 KEYWORDS="alpha amd64 ~hppa ~mips ppc ~sparc x86"
 
-RDEPEND="dev-libs/expat"
+RDEPEND="
+	virtual/fortran
+	dev-libs/expat"
 DEPEND="${RDEPEND}"
 
 IUSE="doc"

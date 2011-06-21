@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/xgks-pmel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/ChangeLog,v 1.6 2011/06/21 09:52:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/ChangeLog,v 1.7 2011/06/21 14:44:33 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> xgks-pmel-2.5.5.ebuild:
+  Add dependency on virtual/fortran
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> xgks-pmel-2.5.5.ebuild:
   Added fortran-2.eclass support

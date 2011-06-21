@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-1.4-r1.ebuild,v 1.4 2011/06/21 08:37:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-1.4-r1.ebuild,v 1.5 2011/06/21 14:46:52 jlec Exp $
 
 EAPI="3"
 
@@ -16,6 +16,8 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug doc mpi static-libs"
 
 RDEPEND="
+	virtual/fortran
+
 	dev-libs/maloc[mpi=]
 	dev-libs/libf2c
 	sci-libs/amd

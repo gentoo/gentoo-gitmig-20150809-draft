@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/xgks-pmel-2.5.5.ebuild,v 1.6 2011/06/21 09:52:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/xgks-pmel-2.5.5.ebuild,v 1.7 2011/06/21 14:44:33 jlec Exp $
 
 inherit eutils fortran-2 toolchain-funcs multilib
 
@@ -12,7 +12,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc"
 
-RDEPEND="x11-libs/libX11"
+RDEPEND="
+	virtual/fortran
+	x11-libs/libX11"
 
 DEPEND="${RDEPEND}
 	sys-devel/flex

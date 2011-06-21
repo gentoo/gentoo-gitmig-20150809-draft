@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/superlu-4.0-r2.ebuild,v 1.2 2011/06/21 08:38:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/superlu/superlu-4.0-r2.ebuild,v 1.3 2011/06/21 14:45:38 jlec Exp $
 
 EAPI="2"
 
@@ -17,7 +17,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples static-libs test"
 
-RDEPEND="virtual/blas"
+RDEPEND="
+	virtual/fortran
+	virtual/blas"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	test? ( app-shells/tcsh )"
