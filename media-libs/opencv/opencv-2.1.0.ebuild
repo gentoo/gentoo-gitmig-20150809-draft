@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.1.0.ebuild,v 1.8 2011/06/09 16:28:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.1.0.ebuild,v 1.9 2011/06/21 10:30:56 jlec Exp $
 
 EAPI=3
 
@@ -42,6 +42,7 @@ S=${WORKDIR}/${MY_P}
 RESTRICT="test" #296681
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	if use python; then
 		python_set_active_version 2
 		python_pkg_setup

@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.2.0.ebuild,v 1.6 2011/05/09 23:11:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.2.0.ebuild,v 1.7 2011/06/21 10:30:56 jlec Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="python? 2:2.6"
 
-inherit base cmake-utils python
+inherit base cmake-utils fortran-2 python
 
 MY_P=OpenCV-${PV}
 
@@ -25,7 +25,6 @@ RESTRICT=test
 RDEPEND="
 	app-arch/bzip2
 	dev-libs/libf2c
-	sys-devel/gcc[fortran]
 	sys-libs/zlib
 	>=sci-libs/clapack-3.2.1-r4
 	sci-libs/flann
@@ -79,6 +78,7 @@ CMAKE_BUILD_TYPE="Release"
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	if use python; then
 		python_set_active_version 2
 		python_pkg_setup

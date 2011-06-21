@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.37 2011/06/09 16:28:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.38 2011/06/21 10:30:56 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> opencv-2.1.0.ebuild,
+  opencv-2.2.0.ebuild, opencv-2.2.0-r10.ebuild:
+  Added fortran-2.eclass support
 
   09 Jun 2011; Jeroen Roovers <jer@gentoo.org> opencv-2.1.0.ebuild:
   Drop HPPA keywording (bug #365451).
