@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12857 2011/06/21 07:55:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12858 2011/06/21 08:00:36 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Eray Aslan <eras@gentoo.org> (21 Jun 2011)
+# Mask prerelease software
+=app-crypt/heimdal-1.5_pre*
 
 # Peter Volkov <pva@gentoo.org> (18 Jun 2011)
 # Mask release candidate
