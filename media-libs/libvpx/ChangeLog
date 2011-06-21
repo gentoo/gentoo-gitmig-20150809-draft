@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.17 2011/05/28 19:08:23 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.18 2011/06/21 14:00:06 klausman Exp $
+
+  21 Jun 2011; Tobias Klausmann <klausman@gentoo.org> libvpx-0.9.6.ebuild:
+  Stable on alpha, bug #365273
 
   28 May 2011; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> libvpx-0.9.6.ebuild:
   Adding workaround for bug 345161, forces yasm as as interpreter and adjusts
