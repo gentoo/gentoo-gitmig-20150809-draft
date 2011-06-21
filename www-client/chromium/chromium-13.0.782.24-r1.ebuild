@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-13.0.782.24-r1.ebuild,v 1.1 2011/06/17 15:10:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-13.0.782.24-r1.ebuild,v 1.2 2011/06/21 10:22:13 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -117,6 +117,9 @@ pkg_setup() {
 src_prepare() {
 	# Make sure we don't use bundled libvpx headers.
 	epatch "${FILESDIR}/${PN}-system-vpx-r4.patch"
+
+	# Backport build fix for perl-5.14, bug #372301.
+	epatch "${FILESDIR}/${PN}-perl-5.14-r0.patch"
 
 	# Remove most bundled libraries. Some are still needed.
 	find third_party -type f \! -iname '*.gyp*' \
