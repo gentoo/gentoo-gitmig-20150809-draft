@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/balbes/balbes-1.0.0_p100317-r1.ebuild,v 1.3 2011/01/16 11:14:07 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/balbes/balbes-1.0.0_p100317-r1.ebuild,v 1.4 2011/06/21 09:42:08 jlec Exp $
 
 EAPI="3"
 
 CCP4VER="6.1.3"
 PYTHON_DEPEND="2"
 
-inherit eutils python toolchain-funcs
+inherit eutils fortran-2 python toolchain-funcs
 
 DESCRIPTION="Automated molecular replacement (MR) pipeline"
 HOMEPAGE="http://www.ysbl.york.ac.uk/~fei/balbes/index.html"
@@ -31,6 +31,7 @@ DEPEND="${COMMON_DEPEND}"
 S="${WORKDIR}"/src
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	python_set_active_version 2
 }
 

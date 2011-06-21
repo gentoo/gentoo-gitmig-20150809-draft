@@ -1,16 +1,18 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ortep3/ortep3-1.0.3-r1.ebuild,v 1.2 2010/12/16 15:20:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ortep3/ortep3-1.0.3-r1.ebuild,v 1.3 2011/06/21 09:46:29 jlec Exp $
 
-inherit toolchain-funcs
+EAPI=4
+
+inherit fortran-2 toolchain-funcs
 
 DESCRIPTION="Thermal ellipsoid plot program for crystal structure illustrations"
 HOMEPAGE="http://www.ornl.gov/sci/ortep/"
 SRC_URI="ftp://ftp.ornl.gov/pub/ortep/src/ortep.f"
 
-LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~x86"
+LICENSE="public-domain"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
@@ -31,5 +33,5 @@ src_compile() {
 }
 
 src_install() {
-	dobin ${PN} || die
+	dobin ${PN}
 }

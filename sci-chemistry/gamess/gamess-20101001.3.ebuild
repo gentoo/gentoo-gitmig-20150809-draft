@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20101001.3.ebuild,v 1.1 2011/06/17 10:58:11 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20101001.3.ebuild,v 1.2 2011/06/21 09:44:18 jlec Exp $
 
 EAPI="3"
 
-inherit eutils toolchain-funcs flag-o-matic
+inherit eutils fortran-2 toolchain-funcs flag-o-matic
 
 DESCRIPTION="A powerful quantum chemistry package"
 LICENSE="gamess"
@@ -64,6 +64,7 @@ get_fcomp() {
 }
 
 pkg_setup() {
+	fortran-2_pkg_setup
 	get_fcomp
 	# currently amd64 is only supported with gfortran
 	if [[ "${ARCH}" == "amd64" ]] && [[ ${FCOMP} != *gfortran* ]];

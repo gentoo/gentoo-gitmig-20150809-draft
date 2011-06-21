@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/ortep3
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ortep3/ChangeLog,v 1.8 2010/12/16 15:20:57 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ortep3/ChangeLog,v 1.9 2011/06/21 09:46:29 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> ortep3-1.0.3-r1.ebuild:
+  Added fortran-2.eclass support
 
   16 Dec 2010; Justin Lecher <jlec@gentoo.org> ortep3-1.0.3-r1.ebuild:
   Removal of fortran.eclass, #348851

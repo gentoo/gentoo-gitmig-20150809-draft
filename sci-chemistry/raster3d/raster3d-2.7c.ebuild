@@ -1,19 +1,19 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.7c.ebuild,v 1.12 2011/02/27 10:40:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-2.7c.ebuild,v 1.13 2011/06/21 09:49:40 jlec Exp $
 
-inherit toolchain-funcs
+inherit fortran-2 toolchain-funcs
 
 NAME="Raster3D"
 
-DESCRIPTION="A set of tools for generating high quality raster images of proteins or other molecules"
+DESCRIPTION="Generation high quality raster images of proteins or other molecules"
 HOMEPAGE="http://www.bmsc.washington.edu/raster3d/raster3d.html"
 SRC_URI="http://www.bmsc.washington.edu/${PN}/${NAME}_${PV}.tar.gz"
 
-LICENSE="as-is"
 SLOT="0"
-IUSE=""
+LICENSE="as-is"
 KEYWORDS="ppc x86"
+IUSE=""
 
 RDEPEND="
 	virtual/jpeg

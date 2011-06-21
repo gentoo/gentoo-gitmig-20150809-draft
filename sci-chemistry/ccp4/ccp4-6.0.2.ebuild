@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.2.ebuild,v 1.9 2010/12/16 13:09:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.0.2.ebuild,v 1.10 2011/06/21 09:42:50 jlec Exp $
 
-inherit eutils gnuconfig toolchain-funcs
+inherit eutils fortran-2 gnuconfig toolchain-funcs
 
 SRC="ftp://ftp.ccp4.ac.uk/ccp4"
 

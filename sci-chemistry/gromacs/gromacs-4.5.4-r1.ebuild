@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.4-r1.ebuild,v 1.6 2011/06/21 06:41:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.4-r1.ebuild,v 1.7 2011/06/21 09:46:17 jlec Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ LIBTOOLIZE="true"
 TEST_PV="4.0.4"
 MANUAL_PV="4.5.4"
 
-inherit autotools-utils bash-completion flag-o-matic multilib toolchain-funcs
+inherit autotools-utils bash-completion flag-o-matic fortran-2 multilib toolchain-funcs
 
 SRC_URI="test? ( ftp://ftp.gromacs.org/pub/tests/gmxtest-${TEST_PV}.tgz )
 		doc? ( ftp://ftp.gromacs.org/pub/manual/manual-${MANUAL_PV}.pdf -> gromacs-manual-${MANUAL_PV}.pdf )"

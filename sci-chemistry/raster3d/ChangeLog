@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/raster3d
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/ChangeLog,v 1.25 2011/03/14 08:17:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/ChangeLog,v 1.26 2011/06/21 09:49:40 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> raster3d-2.7c.ebuild,
+  raster3d-2.9.2.ebuild, raster3d-3.0.2.ebuild:
+  Added fortran-2.eclass support
 
   14 Mar 2011; Justin Lecher <jlec@gentoo.org> raster3d-3.0.2.ebuild:
   Fix for parallel build, #358555

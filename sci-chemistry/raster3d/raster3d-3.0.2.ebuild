@@ -1,23 +1,23 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-3.0.2.ebuild,v 1.2 2011/03/14 08:17:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-3.0.2.ebuild,v 1.3 2011/06/21 09:49:40 jlec Exp $
 
-EAPI="4"
+EAPI=4
 
-inherit flag-o-matic multilib toolchain-funcs versionator prefix
+inherit fortran-2 flag-o-matic multilib toolchain-funcs versionator prefix
 
 MY_PN="Raster3D"
 MY_PV=$(replace_version_separator 2 -)
 MY_P="${MY_PN}_${MY_PV}"
 
-DESCRIPTION="A set of tools for generating high quality raster images of proteins or other molecules"
+DESCRIPTION="Generation high quality raster images of proteins or other molecules"
 HOMEPAGE="http://www.bmsc.washington.edu/raster3d/raster3d.html"
 SRC_URI="http://www.bmsc.washington.edu/${PN}/${MY_P}.tar.gz -> ${MY_P}.tar"
 
-LICENSE="as-is"
 SLOT="0"
-IUSE="gd tiff"
+LICENSE="as-is"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+IUSE="gd tiff"
 
 RDEPEND="
 	tiff? ( media-libs/tiff )
