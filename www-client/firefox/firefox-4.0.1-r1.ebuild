@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-4.0.1-r1.ebuild,v 1.2 2011/05/16 18:00:19 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-4.0.1-r1.ebuild,v 1.3 2011/06/21 12:33:50 nirbheek Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -36,7 +36,6 @@ RDEPEND="
 	>=dev-libs/nspr-4.8.7
 	>=dev-libs/glib-2.26
 	media-libs/libpng[apng]
-	x11-libs/pango[X]
 	dev-libs/libffi
 	system-sqlite? ( >=dev-db/sqlite-3.7.4[fts3,secure-delete,unlock-notify,debug=] )
 	~net-libs/xulrunner-${XUL_PV}[wifi=,libnotify=,system-sqlite=,webm=]

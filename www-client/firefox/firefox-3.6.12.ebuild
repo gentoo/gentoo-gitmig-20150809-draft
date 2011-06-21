@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-3.6.12.ebuild,v 1.9 2011/03/14 06:54:47 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-3.6.12.ebuild,v 1.10 2011/06/21 12:33:50 nirbheek Exp $
 EAPI="3"
 WANT_AUTOCONF="2.1"
 
@@ -55,7 +55,6 @@ RDEPEND="
 	system-sqlite? ( >=dev-db/sqlite-3.7.1[fts3,secure-delete] )
 	alsa? ( media-libs/alsa-lib )
 	>=x11-libs/cairo-1.8.8[X]
-	x11-libs/pango[X]
 	gnome? ( >=gnome-base/gnome-vfs-2.16.3
 		>=gnome-base/libgnomeui-2.16.1
 		>=gnome-base/gconf-2.16.0
