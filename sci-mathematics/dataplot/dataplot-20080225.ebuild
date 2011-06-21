@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/dataplot-20080225.ebuild,v 1.9 2011/06/21 10:19:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/dataplot/dataplot-20080225.ebuild,v 1.10 2011/06/21 14:44:22 jlec Exp $
 
 EAPI=2
 
@@ -28,7 +28,9 @@ COMMON_DEPEND="
 	gs? ( app-text/ghostscript-gpl media-libs/gd[png,jpeg] )"
 DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig"
-RDEPEND="${COMMON_DEPEND}
+RDEPEND="
+	virtual/fortran
+	${COMMON_DEPEND}
 	X? ( x11-misc/xdg-utils )"
 
 S="${WORKDIR}/${MY_P}"
