@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/grace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.50 2011/06/21 09:56:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.51 2011/06/21 14:30:59 jlec Exp $
+
+  21 Jun 2011; Justin Lecher <jlec@gentoo.org> grace-5.1.22-r1.ebuild,
+  grace-5.1.22-r2.ebuild:
+  Add dependency on virtual/fortran
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> grace-5.1.22-r1.ebuild,
   grace-5.1.22-r2.ebuild:

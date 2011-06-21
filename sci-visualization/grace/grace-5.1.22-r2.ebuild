@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r2.ebuild,v 1.8 2011/06/21 09:56:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r2.ebuild,v 1.9 2011/06/21 14:30:59 jlec Exp $
 
 EAPI=4
 
@@ -27,7 +27,9 @@ DEPEND="
 	jpeg? ( virtual/jpeg )
 	netcdf? ( sci-libs/netcdf )
 	png? ( media-libs/libpng )"
-RDEPEND="${DEPEND}
+RDEPEND="
+	fortran? ( virtual/fortran )
+${DEPEND}
 	x11-misc/xdg-utils"
 
 pkg_setup() {

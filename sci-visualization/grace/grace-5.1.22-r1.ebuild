@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r1.ebuild,v 1.14 2011/06/21 09:56:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r1.ebuild,v 1.15 2011/06/21 14:30:59 jlec Exp $
 
 EAPI=3
 inherit eutils fortran-2 toolchain-funcs
@@ -26,7 +26,9 @@ DEPEND=">=x11-libs/openmotif-2.3:0
 	png? ( media-libs/libpng )
 	jpeg? ( virtual/jpeg )"
 
-RDEPEND="${DEPEND}
+RDEPEND="
+	fortran? ( virtual/fortran )
+${DEPEND}
 	x11-misc/xdg-utils"
 
 src_prepare() {
