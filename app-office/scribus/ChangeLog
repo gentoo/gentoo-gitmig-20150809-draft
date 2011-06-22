@@ -1,6 +1,11 @@
 # ChangeLog for app-office/scribus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.141 2011/06/03 22:57:52 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.142 2011/06/22 22:11:32 radhermit Exp $
+
+*scribus-1.4.0_rc5 (22 Jun 2011)
+
+  22 Jun 2011; Tim Harder <radhermit@gentoo.org> +scribus-1.4.0_rc5.ebuild:
+  Version bump.
 
 *scribus-1.4.0_rc3 (03 Jun 2011)
 
