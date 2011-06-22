@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXaw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/ChangeLog,v 1.94 2011/03/07 21:09:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXaw/ChangeLog,v 1.95 2011/06/22 18:57:33 grobian Exp $
+
+  22 Jun 2011; Fabian Groffen <grobian@gentoo.org> libXaw-1.0.9.ebuild:
+  Marked ~x64-macos, bug #371861
 
   07 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> -libXaw-1.0.8.ebuild:
   old
