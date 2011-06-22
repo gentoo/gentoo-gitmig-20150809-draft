@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ebtables-2.0.9.2-r2.ebuild,v 1.1 2011/05/19 10:29:33 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ebtables-2.0.9.2-r2.ebuild,v 1.2 2011/06/22 18:30:24 pva Exp $
 
 EAPI="4"
 
@@ -32,6 +32,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.0.8.1-ebt-save.diff"
 	epatch "${FILESDIR}/${PN}-v2.0.9-2-LDFLAGS.diff"
 	epatch "${FILESDIR}/${PN}-v2.0.8-2-ethertype-DESTDIR-mkdir.patch"
+	epatch "${FILESDIR}/${PN}-v2.0.9-2-compilation.patch" #370953
 
 	sed -i -e "s,^MANDIR:=.*,MANDIR:=/usr/share/man," \
 		-e "s,^BINDIR:=.*,BINDIR:=/sbin," \
@@ -44,6 +45,10 @@ src_compile() {
 	# This package uses _init functions to initialise extensions. With
 	# --as-needed this will not work.
 	append-ldflags $(no-as-needed)
+	# This package correctly aliases pointers, but gcc is unable to know that:
+	# unsigned char ip[4];
+	# if (*((uint32_t*)ip) == 0) {
+	append-cflags -Wno-strict-aliasing
 	emake \
 		CC="$(tc-getCC)" \
 		CFLAGS="${CFLAGS}" \
