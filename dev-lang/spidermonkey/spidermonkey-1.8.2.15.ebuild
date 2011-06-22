@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.9.2.15.ebuild,v 1.8 2011/04/25 16:24:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/spidermonkey-1.8.2.15.ebuild,v 1.1 2011/06/22 02:22:54 nirbheek Exp $
 
 EAPI="2"
 inherit eutils toolchain-funcs multilib python
 
 MY_PV="${PV}"
-MY_PV="${MY_PV/1.9.2/3.6}"
+MY_PV="${MY_PV/1.8.2/3.6}"
 DESCRIPTION="Stand-alone JavaScript C library"
 HOMEPAGE="http://www.mozilla.org/js/spidermonkey/"
 REL_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases"
