@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.6-r1.ebuild,v 1.1 2011/06/20 05:23:29 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.6-r1.ebuild,v 1.2 2011/06/22 13:52:05 pva Exp $
 
 EAPI=4
 inherit eutils linux-info
@@ -42,7 +42,7 @@ src_configure() {
 
 	case ${KV_FULL} in
 	2.2.*|2.4.*) myconf="${myconf} --with-linux=${KV_DIR}";;
-	2.5.*|2.6.*) myconf="${myconf} --with-kernel-support";;
+	2.5.*|2.6.*|3.*) myconf="${myconf} --with-kernel-support";;
 	*) die "Kernel version '${KV_FULL}' not supported";;
 	esac
 	econf ${myconf}
