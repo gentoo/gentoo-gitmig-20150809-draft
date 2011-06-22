@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.6.4.ebuild,v 1.8 2011/03/26 17:25:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/liquidwar/liquidwar-5.6.4.ebuild,v 1.9 2011/06/22 05:52:00 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -37,6 +37,7 @@ src_prepare() {
 		-e '/^GAMEDIR/ s/$(exec_prefix)/@bindir@/' \
 		-e 's:/games::' src/Makefile.in \
 		|| die "sed src/Makefile.in failed"
+	epatch "${FILESDIR}"/${P}-underlink.patch
 }
 
 src_configure() {
