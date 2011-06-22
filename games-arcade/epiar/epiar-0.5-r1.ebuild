@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/epiar/epiar-0.5-r1.ebuild,v 1.3 2010/10/15 13:15:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/epiar/epiar-0.5-r1.ebuild,v 1.4 2011/06/22 13:33:43 tupone Exp $
 
 EAPI=2
 inherit flag-o-matic eutils games
@@ -31,7 +31,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-paths.patch \
 		"${FILESDIR}"/${P}-gcc41.patch \
-		"${FILESDIR}"/${P}-Makefile.linux.patch
+		"${FILESDIR}"/${P}-Makefile.linux.patch \
+		"${FILESDIR}"/${P}-underlink.patch
 	sed -i \
 		-e "s:GENTOO_DATADIR:${GAMES_DATADIR}/${PN}/:" \
 		src/main.c \

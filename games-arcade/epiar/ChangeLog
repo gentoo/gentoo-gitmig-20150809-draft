@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/epiar
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/epiar/ChangeLog,v 1.17 2010/10/15 13:15:42 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/epiar/ChangeLog,v 1.18 2011/06/22 13:33:43 tupone Exp $
+
+  22 Jun 2011; Tupone Alfredo <tupone@gentoo.org> epiar-0.5-r1.ebuild,
+  +files/epiar-0.5-underlink.patch:
+  Fix underlink. Bug #371813 by Diego Elio Pettenò
 
   15 Oct 2010; Brent Baude <ranger@gentoo.org> epiar-0.5-r1.ebuild:
   stable ppc, bug 332323
