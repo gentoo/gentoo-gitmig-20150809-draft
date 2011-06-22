@@ -1,9 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-client/ggz-gtk-client-0.0.14.1.ebuild,v 1.6 2011/01/12 22:57:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-client/ggz-gtk-client-0.0.14.1.ebuild,v 1.7 2011/06/22 04:02:10 tupone Exp $
 
 EAPI=2
-inherit games-ggz
+inherit autotools games-ggz
 
 DESCRIPTION="The GTK+ client for GGZ Gaming Zone"
 
@@ -19,6 +19,10 @@ RDEPEND="~dev-games/libggz-${PV}
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
+
+src_prepare() {
+	eautoreconf
+}
 
 src_compile() {
 	games-ggz_src_compile \

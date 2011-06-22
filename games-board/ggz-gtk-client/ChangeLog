@@ -1,6 +1,10 @@
 # ChangeLog for games-board/ggz-gtk-client
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-client/ChangeLog,v 1.21 2008/06/25 19:13:31 nixnut Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/ggz-gtk-client/ChangeLog,v 1.22 2011/06/22 04:02:10 tupone Exp $
+
+  22 Jun 2011; Tupone Alfredo <tupone@gentoo.org>
+  ggz-gtk-client-0.0.14.1.ebuild:
+  Fix underlink. Bug #372057 by Diego Elio Pettenò
 
   25 Jun 2008; nixnut <nixnut@gentoo.org> ggz-gtk-client-0.0.14.1.ebuild:
   Stable on ppc wrt bug 229163
