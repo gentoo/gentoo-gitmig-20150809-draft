@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12858 2011/06/21 08:00:36 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12859 2011/06/22 09:37:44 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -176,13 +176,6 @@ net-misc/gateway6
 # Mask prerelease of xorg-server 1.11
 >=x11-base/xorg-server-1.10.99
 >=x11-base/xorg-drivers-1.11
-
-# Michał Górny <mgorny@gentoo.org> (6 Jun 2011)
-# Masked for testing; at least until:
-# - openrc-0.8.3 is released,
-# - most of udev[extras] deps are fixed.
-# Test on your own responsibility. Bug #318365.
-sys-apps/systemd
 
 # Jeroen Roovers <jer@gentoo.org> (5 Jun 2011)
 # Masked until bug #370163 is resolved.

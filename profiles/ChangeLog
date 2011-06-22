@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5471 2011/06/22 07:06:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5472 2011/06/22 09:37:44 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Jun 2011; Michał Górny <mgorny@gentoo.org> package.mask:
+  Unmask systemd.
 
   22 Jun 2011; Justin Lecher <jlec@gentoo.org> default/linux/make.defaults:
   Add fortran to default USE again in order to avoid direct installation of
