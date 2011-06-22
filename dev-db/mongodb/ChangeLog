@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.17 2011/06/03 08:48:34 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.18 2011/06/22 05:26:54 nirbheek Exp $
+
+  22 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> mongodb-1.6.5-r1.ebuild,
+  mongodb-1.8.2_rc1.ebuild, mongodb-1.8.2_rc3.ebuild:
+  Fix spidermonkey versions for the new versioning scheme
 
 *mongodb-1.8.2_rc3 (03 Jun 2011)
 
