@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.9999.ebuild,v 1.30 2011/06/06 16:23:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.9999.ebuild,v 1.31 2011/06/22 12:38:38 aballier Exp $
 
 EAPI="3"
 
@@ -63,7 +63,7 @@ RDEPEND="
 		sys-libs/zlib
 		>=media-libs/libdvbpsi-0.1.6
 		a52? ( >=media-libs/a52dec-0.7.4-r3 )
-		aalib? ( media-libs/aalib )
+		aalib? ( media-libs/aalib x11-libs/libX11 )
 		aac? ( >=media-libs/faad2-2.6.1 )
 		alsa? ( >=media-libs/alsa-lib-1.0.23 )
 		avahi? ( >=net-dns/avahi-0.6[dbus] )
@@ -115,7 +115,7 @@ RDEPEND="
 		remoteosd? ( >=dev-libs/libgcrypt-1.2.0 )
 		samba? ( || ( >=net-fs/samba-3.4.6[smbclient] <net-fs/samba-3.4 ) )
 		schroedinger? ( >=media-libs/schroedinger-1.0.10 )
-		sdl? ( >=media-libs/libsdl-1.2.8
+		sdl? ( >=media-libs/libsdl-1.2.8 x11-libs/libX11
 			sdl-image? ( media-libs/sdl-image sys-libs/zlib	) )
 		shout? ( media-libs/libshout )
 		skins? (
@@ -185,6 +185,8 @@ pkg_setup() {
 	vlc_use_force vaapi ffmpeg
 	vlc_use_force nsplugin xcb
 	has_version '<media-sound/pulseaudio-0.9.22' && vlc_use_force pulseaudio X
+	vlc_use_force sdl X
+	vlc_use_force aalib X
 
 	# Useflags that will be automagically discarded if deps are not met
 	vlc_use_needs bidi truetype
@@ -340,7 +342,9 @@ src_configure() {
 		$(vlc_use_enable_force gnutls libgcrypt) \
 		$(vlc_use_enable_force vaapi avcodec) \
 		$(vlc_use_enable_force nsplugin xcb) \
-		$(has_version '<media-sound/pulseaudio-0.9.22' && use pulseaudio && echo '--with-x')
+		$(has_version '<media-sound/pulseaudio-0.9.22' && use pulseaudio && echo '--with-x') \
+		$(use sdl && echo '--with-x') \
+		$(use aalib && echo '--with-x')
 }
 
 src_install() {
