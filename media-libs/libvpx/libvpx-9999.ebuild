@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.9 2011/06/22 15:22:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.10 2011/06/22 16:03:13 aballier Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs
 
 if [[ ${PV} == *9999* ]]; then
-	inherit git
+	inherit git-2
 	EGIT_REPO_URI="git://review.webmproject.org/${PN}.git"
 	KEYWORDS=""
 elif [[ ${PV} == *pre* ]]; then
