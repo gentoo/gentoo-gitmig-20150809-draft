@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/supertuxkart-0.7.ebuild,v 1.4 2011/04/15 21:52:12 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/supertuxkart-0.7.ebuild,v 1.5 2011/06/22 12:59:19 tupone Exp $
 
 EAPI=2
 inherit autotools flag-o-matic eutils games
@@ -28,7 +28,8 @@ DEPEND="${RDEPEND}
 	unicode? ( dev-libs/fribidi )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-build.patch
+	epatch "${FILESDIR}"/${P}-build.patch \
+		"${FILESDIR}"/${P}-underlink.patch
 	rm -rf src/enet
 	eautoreconf
 }
