@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.8 2011/02/21 06:25:32 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.9 2011/06/22 15:22:30 aballier Exp $
 
-EAPI=3
+EAPI=4
 inherit multilib toolchain-funcs
 
 if [[ ${PV} == *9999* ]]; then
@@ -32,6 +32,10 @@ DEPEND="amd64? ( dev-lang/yasm )
 		dev-lang/php
 	)
 "
+
+REQUIRED_USE="
+	sse2? ( mmx )
+	"
 
 src_configure() {
 	tc-export CC

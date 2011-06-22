@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-0.9.6.ebuild,v 1.4 2011/06/21 14:00:06 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-0.9.6.ebuild,v 1.5 2011/06/22 15:22:30 aballier Exp $
 
-EAPI=3
+EAPI=4
 inherit eutils multilib toolchain-funcs
 
 if [[ ${PV} == *9999* ]]; then
@@ -34,6 +34,10 @@ DEPEND="amd64? ( dev-lang/yasm )
 		dev-lang/php
 	)
 "
+
+REQUIRED_USE="
+	sse2? ( mmx )
+	"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.9.5-enable-shared.patch

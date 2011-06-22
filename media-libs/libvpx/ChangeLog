@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.18 2011/06/21 14:00:06 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.19 2011/06/22 15:22:30 aballier Exp $
+
+  22 Jun 2011; Alexis Ballier <aballier@gentoo.org> libvpx-0.9.6.ebuild,
+  libvpx-9999.ebuild:
+  sse2 requires mmx, bump to eapi4 to reflect this requirement, reported by
+  andreas schürch in bug #365273
 
   21 Jun 2011; Tobias Klausmann <klausman@gentoo.org> libvpx-0.9.6.ebuild:
   Stable on alpha, bug #365273
