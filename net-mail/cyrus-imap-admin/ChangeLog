@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/cyrus-imap-admin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.99 2011/06/21 06:23:24 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.100 2011/06/22 10:56:40 eras Exp $
+
+  22 Jun 2011; Eray Aslan <eras@gentoo.org>
+  -files/cyrus-imap-admin-2.2-fPIC.patch,
+  -files/cyrus-imap-admin-2.3.14-kolab-annotations.patch:
+  Clean up FILESDIR
 
   21 Jun 2011; Eray Aslan <eras@gentoo.org> metadata.xml:
   Maintainer changed to net-mail with dertobi123's permission
