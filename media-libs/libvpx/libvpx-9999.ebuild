@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.10 2011/06/22 16:03:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.11 2011/06/22 16:09:38 aballier Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.webmproject.org"
 
 LICENSE="BSD"
 SLOT="0"
-IUSE="altivec debug doc mmx postproc sse sse2 sse3 ssse3 +threads"
+IUSE="altivec debug doc mmx postproc sse sse2 sse3 ssse3 sse4_1 +threads"
 
 RDEPEND=""
 DEPEND="amd64? ( dev-lang/yasm )
@@ -51,6 +51,7 @@ src_configure() {
 		$(use_enable sse2) \
 		$(use_enable sse3) \
 		$(use_enable ssse3) \
+		$(use_enable sse4_1) \
 		$(use_enable debug) \
 		$(use_enable debug debug-libs) \
 		$(use_enable doc install-docs) \
