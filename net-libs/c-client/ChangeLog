@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/c-client
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.75 2011/06/12 15:56:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.76 2011/06/22 21:31:19 ranger Exp $
+
+  22 Jun 2011; Brent Baude <ranger@gentoo.org> c-client-2007e-r2.ebuild:
+  Marking c-client-2007e-r2 ppc for bug 368585
 
   12 Jun 2011; Raúl Porcel <armin76@gentoo.org> c-client-2007e-r2.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #368585
