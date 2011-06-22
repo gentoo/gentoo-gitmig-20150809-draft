@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/qjoypad-4.1.0.ebuild,v 1.4 2010/05/26 19:14:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/qjoypad/qjoypad-4.1.0.ebuild,v 1.5 2011/06/22 05:22:15 tupone Exp $
 
 EAPI=2
-inherit qt4 eutils
+inherit eutils qt4-r2
 
 DESCRIPTION="translate gamepad/joystick input into key strokes/mouse actions in X"
 HOMEPAGE="http://qjoypad.sourceforge.net/"
@@ -22,6 +22,8 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
 S="${WORKDIR}"/${P}/src
+
+PATCHES=( "${FILESDIR}"/${P}-underlink.patch )
 
 src_configure() {
 	eqmake4 qjoypad.pro PREFIX=/usr DEVDIR=/dev/input
