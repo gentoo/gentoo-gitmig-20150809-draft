@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.253 2011/06/07 22:33:16 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.254 2011/06/22 16:06:01 sping Exp $
+
+  22 Jun 2011; Sebastian Pipping <sping@gentoo.org>
+  genkernel-3.4.10.907-r1.ebuild:
+  Stabilize 3.4.10.907-r1 on all arches. I dare doing that because 3.4.10.907
+  is stable, the only addition is a patch for make 3.82, make 3.82 is stable
+  already, users keep reporting the make 3.82 bug, the patch has been reported
+  to solve the problem. So I believe there is good reason for an exception
+  here.
 
 *genkernel-3.4.16 (07 Jun 2011)
 
