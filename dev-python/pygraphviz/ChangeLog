@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygraphviz
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygraphviz/ChangeLog,v 1.8 2010/11/10 18:12:58 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygraphviz/ChangeLog,v 1.9 2011/06/22 19:01:32 grobian Exp $
+
+  22 Jun 2011; Fabian Groffen <grobian@gentoo.org> pygraphviz-1.0-r1.ebuild:
+  Marked ~x64-macos, bug #371861
 
   10 Nov 2010; Fabian Groffen <grobian@gentoo.org> pygraphviz-1.0-r1.ebuild:
   Marked ~x86-linux, ~ppc-macos, bug #342001

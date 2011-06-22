@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygraphviz/pygraphviz-1.0-r1.ebuild,v 1.2 2010/11/10 18:12:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygraphviz/pygraphviz-1.0-r1.ebuild,v 1.3 2011/06/22 19:01:32 grobian Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -15,7 +15,7 @@ SRC_URI="http://networkx.lanl.gov/download/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-linux ~ppc-macos"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="examples"
 
 RDEPEND=">=media-gfx/graphviz-2.12"
