@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libICE
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libICE/ChangeLog,v 1.78 2011/02/14 15:56:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libICE/ChangeLog,v 1.79 2011/06/22 18:24:07 grobian Exp $
+
+  22 Jun 2011; Fabian Groffen <grobian@gentoo.org> libICE-1.0.7.ebuild:
+  Marked ~x64-macos, bug #371861
 
   14 Feb 2011; Tomáš Chvátal <scarabeus@gentoo.org> -libICE-1.0.6.ebuild:
   old
