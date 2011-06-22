@@ -1,6 +1,15 @@
 # ChangeLog for net-im/ejabberd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.97 2011/06/19 13:43:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.98 2011/06/22 13:02:32 pva Exp $
+
+  22 Jun 2011; Peter Volkov <pva@gentoo.org>
+  -files/ejabberd-2.0.5-erlang-13.patch,
+  -files/ejabberd-2.1.4-mod_shared_roster_ldap.patch, -ejabberd-2.1.5.ebuild,
+  -files/ejabberd-2.1.5-md2-optional.patch, -ejabberd-2.1.6.ebuild,
+  -files/ejabberd-2.confd, -files/ejabberd-2.initd,
+  -files/ejabberd-wrapper-2.template, -files/ejabberdctl-wrapper-3.template,
+  -files/self-cert-v2.sh, -files/ssl.cnf:
+  Drop old and vulnerable versions.
 
   19 Jun 2011; Markus Meier <maekke@gentoo.org> ejabberd-2.1.8.ebuild:
   x86 stable, bug #370201
