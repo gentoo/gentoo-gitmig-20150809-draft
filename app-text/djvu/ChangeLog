@@ -1,6 +1,9 @@
 # ChangeLog for app-text/djvu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.118 2011/04/30 20:14:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.119 2011/06/22 17:20:49 hwoarang Exp $
+
+  22 Jun 2011; Markos Chandras <hwoarang@gentoo.org> djvu-3.5.24.ebuild:
+  Stable on amd64 wrt bug #372593
 
 *djvu-3.5.24 (30 Apr 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.24.ebuild,v 1.1 2011/04/30 20:14:28 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.24.ebuild,v 1.2 2011/06/22 17:20:49 hwoarang Exp $
 
 EAPI="4"
 inherit eutils fdo-mime autotools flag-o-matic
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/djvu/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc jpeg nls tiff xml"
 
 RDEPEND="jpeg? ( virtual/jpeg )
