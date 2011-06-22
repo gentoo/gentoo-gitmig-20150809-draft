@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.226 2011/04/14 16:54:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.227 2011/06/22 19:36:33 sping Exp $
+
+  22 Jun 2011; Sebastian Pipping <sping@gentoo.org> catalyst-2.0.6.ebuild,
+  catalyst-2.0.6.916.ebuild, catalyst-9999.ebuild:
+  Bring 2.0.6.916 and 9999 ebuilds back in sync, remove SVN bits, update
+  homepage
 
 *catalyst-2.0.6.916 (14 Apr 2011)
 

@@ -1,32 +1,28 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-9999.ebuild,v 1.10 2010/09/05 20:10:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-9999.ebuild,v 1.11 2011/06/22 19:36:33 sping Exp $
 
-# catalyst-9999         -> latest SVN
-# catalyst-9999.REV     -> use SVN REV
+# catalyst-9999         -> latest Git
 # catalyst-VER          -> normal catalyst release
 
-if [[ ${PV} == 9999* ]]
-then
-	[[ ${PV} == 9999.* ]] && ESVN_UPDATE_CMD="svn up -r ${PV/9999./}"
+if [[ ${PV} == 9999* ]]; then
 	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/catalyst.git"
-	inherit git eutils multilib
+	inherit git
 	SRC_URI=""
 	S="${WORKDIR}/${PN}"
+	KEYWORDS=""
 else
-	inherit eutils multilib
 	SRC_URI="mirror://gentoo/${P}.tar.bz2
 		http://wolf31o2.org/sources/${PN}/${P}.tar.bz2"
+	KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 fi
+inherit eutils multilib
 
 DESCRIPTION="release metatool used for creating releases based on Gentoo Linux"
-HOMEPAGE="http://wolf31o2.org/projects/catalyst"
+HOMEPAGE="http://www.gentoo.org/proj/en/releng/catalyst/"
 
 LICENSE="GPL-2"
 SLOT="0"
-#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-#KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-KEYWORDS=""
 RESTRICT=""
 IUSE="ccache"
 
@@ -59,20 +55,15 @@ pkg_setup() {
 	ewarn "mailing list and we have asked you to do so."
 }
 
-src_unpack() {
-	if [[ ${PV} == 9999* ]] ; then
-		git_src_unpack
-	else
-		unpack ${A}
-		cd "${S}"
-	fi
-}
-
 src_install() {
 	insinto /usr/$(get_libdir)/${PN}
 	exeinto /usr/$(get_libdir)/${PN}
 	doexe catalyst || die "copying catalyst"
-	doins -r modules files || die "copying files"
+	if [[ ${PV} == 9999* ]]; then
+		doins -r modules files || die "copying files"
+	else
+		doins -r arch modules livecd || die "copying files"
+	fi
 	for x in targets/*; do
 		exeinto /usr/$(get_libdir)/${PN}/$x
 		doexe $x/* || die "copying ${x}"

@@ -1,19 +1,28 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.6.916.ebuild,v 1.1 2011/04/14 16:54:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.6.916.ebuild,v 1.2 2011/06/22 19:36:33 sping Exp $
 
+# catalyst-9999         -> latest Git
+# catalyst-VER          -> normal catalyst release
+
+if [[ ${PV} == 9999* ]]; then
+	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/catalyst.git"
+	inherit git
+	SRC_URI=""
+	S="${WORKDIR}/${PN}"
+	KEYWORDS=""
+else
+	SRC_URI="mirror://gentoo/${P}.tar.bz2
+		http://wolf31o2.org/sources/${PN}/${P}.tar.bz2"
+	KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+fi
 inherit eutils multilib
-SRC_URI="mirror://gentoo/${P}.tar.bz2
-	http://wolf31o2.org/sources/${PN}/${P}.tar.bz2"
 
 DESCRIPTION="release metatool used for creating releases based on Gentoo Linux"
-HOMEPAGE="http://wolf31o2.org/projects/catalyst"
+HOMEPAGE="http://www.gentoo.org/proj/en/releng/catalyst/"
 
 LICENSE="GPL-2"
 SLOT="0"
-#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-#KEYWORDS=""
 RESTRICT=""
 IUSE="ccache"
 
@@ -38,18 +47,23 @@ pkg_setup() {
 	einfo "them under /usr/share/doc/${PF}/examples"
 	einfo "and they are considered to be the authorative source of information"
 	einfo "on catalyst."
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+	echo
+	ewarn "The git master branch (what you get with this -9999 ebuild) for catalyst"
+	ewarn "now contains the work-in-progress code for catalyst-3.x. Be aware that"
+	ewarn "it's very likely that it will not be in a working state at any given"
+	ewarn "point. Please do not file bugs until you have posted on the gentoo-catalyst"
+	ewarn "mailing list and we have asked you to do so."
 }
 
 src_install() {
 	insinto /usr/$(get_libdir)/${PN}
 	exeinto /usr/$(get_libdir)/${PN}
 	doexe catalyst || die "copying catalyst"
-	doins -r arch modules livecd || die "copying files"
+	if [[ ${PV} == 9999* ]]; then
+		doins -r modules files || die "copying files"
+	else
+		doins -r arch modules livecd || die "copying files"
+	fi
 	for x in targets/*; do
 		exeinto /usr/$(get_libdir)/${PN}/$x
 		doexe $x/* || die "copying ${x}"
