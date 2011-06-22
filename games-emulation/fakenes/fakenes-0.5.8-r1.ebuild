@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fakenes/fakenes-0.5.8-r1.ebuild,v 1.4 2011/03/26 17:27:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fakenes/fakenes-0.5.8-r1.ebuild,v 1.5 2011/06/22 15:34:48 tupone Exp $
 EAPI=2
 
 inherit eutils flag-o-matic toolchain-funcs games
@@ -32,6 +32,7 @@ src_prepare() {
 	sed -i \
 		-e "s:LIBAGL = agl:LIBAGL = alleggl:" \
 		build/alleggl.cbd || die
+	epatch "${FILESDIR}"/${P}-underlink.patch
 }
 
 src_compile() {
@@ -45,7 +46,7 @@ src_compile() {
 	use opengl || myconf="$myconf -alleggl"
 	use zlib   || myconf="$myconf -zlib"
 
-	./cbuild ${myconf} || die "cbuild failed"
+	./cbuild ${myconf} --verbose || die "cbuild failed"
 }
 
 src_install() {

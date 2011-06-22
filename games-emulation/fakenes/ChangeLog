@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/fakenes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fakenes/ChangeLog,v 1.19 2011/03/26 17:27:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fakenes/ChangeLog,v 1.20 2011/06/22 15:34:48 tupone Exp $
+
+  22 Jun 2011; Tupone Alfredo <tupone@gentoo.org> fakenes-0.5.8-r1.ebuild,
+  +files/fakenes-0.5.8-underlink.patch:
+  Fix underlink. Bug #371741 by Diego Elio Pettenò
 
   26 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> fakenes-0.5.8-r1.ebuild:
   Pin media-libs/allegro to old version.
