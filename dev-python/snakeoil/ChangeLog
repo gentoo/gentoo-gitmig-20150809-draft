@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/snakeoil
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.40 2011/04/27 16:40:53 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.41 2011/06/22 22:00:07 ferringb Exp $
+
+*snakeoil-0.4.1 (22 Jun 2011)
+
+  22 Jun 2011; Brian Harring <ferringb@gentoo.org> -snakeoil-0.3.6.4.ebuild,
+  -snakeoil-0.3.6.5.ebuild, -snakeoil-0.3.7-r1.ebuild,
+  -files/snakeoil-0.3.7-multiprocess.patch, +snakeoil-0.4.1.ebuild,
+  -files/snakeoil-issue-7567-term-invocation.patch:
+  snakeoil 0.4.1; remove old versions.
 
   27 Apr 2011; Brian Harring <ferringb@gentoo.org> snakeoil-0.4.ebuild,
   +files/snakeoil-0.4-lib2to3.patch:
