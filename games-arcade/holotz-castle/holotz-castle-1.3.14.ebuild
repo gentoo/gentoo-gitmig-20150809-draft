@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/holotz-castle/holotz-castle-1.3.14.ebuild,v 1.3 2009/12/17 21:35:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/holotz-castle/holotz-castle-1.3.14.ebuild,v 1.4 2011/06/22 04:15:58 tupone Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -25,6 +25,7 @@ S=${WORKDIR}/${P}-src
 PATCHES=(
 	"${FILESDIR}"/${P}-build.patch
 	"${FILESDIR}"/${P}-gcc44.patch
+	"${FILESDIR}"/${P}-underlink.patch
 )
 
 src_compile() {
