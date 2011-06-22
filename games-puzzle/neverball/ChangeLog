@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/neverball
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/ChangeLog,v 1.41 2011/01/11 07:31:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/ChangeLog,v 1.42 2011/06/22 04:48:42 tupone Exp $
+
+  22 Jun 2011; Tupone Alfredo <tupone@gentoo.org> neverball-1.5.4.ebuild,
+  +files/neverball-1.5.4-underlink.patch:
+  Fix underlink. Bug #371885 by Diego Elio Pettenò
 
   11 Jan 2011; Michael Sterrett <mr_bones_@gentoo.org>
   neverball-1.5.4.ebuild:
