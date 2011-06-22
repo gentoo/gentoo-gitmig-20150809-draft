@@ -1,6 +1,10 @@
 # ChangeLog for games-action/garden
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/garden/ChangeLog,v 1.7 2011/05/23 01:08:43 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/garden/ChangeLog,v 1.8 2011/06/22 16:24:25 tupone Exp $
+
+  22 Jun 2011; Tupone Alfredo <tupone@gentoo.org> garden-1.0.8.ebuild,
+  +files/garden-1.0.8-underlink.patch:
+  Fix underlink. Bug #371611 by Diego Elio Pettenò
 
   23 May 2011; Joseph Jezak <josejx@gentoo.org> garden-1.0.8.ebuild:
   Marked ~ppc for bug #365995.

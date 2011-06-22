@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/garden/garden-1.0.8.ebuild,v 1.5 2011/05/23 01:08:43 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/garden/garden-1.0.8.ebuild,v 1.6 2011/06/22 16:24:25 tupone Exp $
 
 EAPI=2
-inherit eutils games
+inherit eutils autotools games
 
 DESCRIPTION="Multiplatform vertical shoot-em-up with non-traditional elements"
 HOMEPAGE="http://garden.sourceforge.net/"
@@ -17,10 +17,8 @@ IUSE=""
 DEPEND="<media-libs/allegro-5"
 
 src_prepare() {
-	sed -i \
-		-e '/SUBDIRS/s:resources::' \
-		Makefile.in \
-		|| die "sed failed"
+	epatch "${FILESDIR}"/${P}-underlink.patch
+	eautoreconf
 }
 
 src_install() {
