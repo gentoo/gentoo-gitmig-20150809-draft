@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/atk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.219 2011/04/29 00:54:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.220 2011/06/22 09:32:43 phajdan.jr Exp $
+
+  22 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> atk-1.32.0-r1.ebuild:
+  x86 stable wrt security bug #371320
 
   29 Apr 2011; Jeroen Roovers <jer@gentoo.org> atk-1.32.0-r1.ebuild:
   Marked ~hppa (bug #364693).
