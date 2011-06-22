@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/spamcup
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/spamcup/ChangeLog,v 1.10 2011/06/14 19:06:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/spamcup/ChangeLog,v 1.11 2011/06/22 21:29:45 ranger Exp $
+
+  22 Jun 2011; Brent Baude <ranger@gentoo.org> spamcup-1.09.ebuild:
+  Marking spamcup-1.09 ppc for bug 370221
 
   14 Jun 2011; Markus Meier <maekke@gentoo.org> spamcup-1.09.ebuild:
   x86 stable, bug #370221
