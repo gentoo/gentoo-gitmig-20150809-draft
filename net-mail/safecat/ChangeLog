@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/safecat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/safecat/ChangeLog,v 1.22 2011/06/19 15:49:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/safecat/ChangeLog,v 1.23 2011/06/22 21:27:21 ranger Exp $
+
+  22 Jun 2011; Brent Baude <ranger@gentoo.org> safecat-1.13.ebuild:
+  Marking safecat-1.13 ppc for bug 370249
 
   19 Jun 2011; Raúl Porcel <armin76@gentoo.org> safecat-1.11.ebuild,
   safecat-1.13.ebuild:
