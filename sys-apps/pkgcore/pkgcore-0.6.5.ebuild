@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.5.11.8-r1.ebuild,v 1.4 2011/04/25 15:24:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.6.5.ebuild,v 1.1 2011/06/22 22:02:57 ferringb Exp $
 
 EAPI="3"
 DISTUTILS_SRC_TEST="setup.py"
 
-inherit distutils eutils
+inherit distutils
 
 DESCRIPTION="pkgcore package manager"
 HOMEPAGE="http://www.pkgcore.org"
@@ -17,8 +17,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="doc"
 
 RDEPEND=">=dev-lang/python-2.4
-	>=dev-python/snakeoil-0.3.6.3
-	>=app-shells/bash-3.0
+	>=dev-python/snakeoil-0.4
+	dev-python/pyparsing
 	|| ( >=dev-lang/python-2.5 dev-python/pycrypto )"
 DEPEND="${RDEPEND}
 	doc? ( >=dev-python/docutils-0.4 )"
@@ -29,11 +29,6 @@ pkg_setup() {
 	# disable snakeoil 2to3 caching...
 	unset PY2TO3_CACHEDIR
 	python_pkg_setup
-}
-
-src_prepare() {
-	epatch "${FILESDIR}/${PV}-magic-compat.patch"
-	distutils_src_prepare
 }
 
 src_compile() {
