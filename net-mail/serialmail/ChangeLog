@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/serialmail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/ChangeLog,v 1.23 2011/06/14 19:07:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/ChangeLog,v 1.24 2011/06/22 21:28:30 ranger Exp $
+
+  22 Jun 2011; Brent Baude <ranger@gentoo.org> serialmail-0.75-r4.ebuild:
+  Marking serialmail-0.75-r4 ppc for bug 370231
 
   14 Jun 2011; Markus Meier <maekke@gentoo.org> serialmail-0.75-r4.ebuild:
   x86 stable, bug #370231
