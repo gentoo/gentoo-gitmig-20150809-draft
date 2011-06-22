@@ -1,6 +1,18 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.172 2011/06/21 06:21:58 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.173 2011/06/22 10:50:31 eras Exp $
+
+  22 Jun 2011; Eray Aslan <eras@gentoo.org>
+  -files/cyrus-imapd-2.2-libwrap.patch,
+  -files/cyrus-imapd-2.3.14-add-db47-support.patch,
+  -files/cyrus-imapd-2.3.14-bug283596-2.patch,
+  -files/cyrus-imapd-2.3.14-fix-db-rpath.patch,
+  -files/kolab/2.3.14/Annotations2.patch,
+  -files/kolab/2.3.14/Folder-names.patch, -files/kolab/2.3.14/Groups2.patch,
+  -files/kolab/2.3.14/UID.patch, -files/cyrus-imapd-2.3.16+db-5.0.patch,
+  -files/cyrus-imapd-strip.patch, -files/kolab/2.3.14/Logging.patch,
+  -files/kolab/2.3.14/timsieved_starttls-sendcaps.patch:
+  Clean up FILESDIR
 
   21 Jun 2011; Eray Aslan <eras@gentoo.org> metadata.xml:
   Maintainer changed to net-mail with dertobi123's permission
