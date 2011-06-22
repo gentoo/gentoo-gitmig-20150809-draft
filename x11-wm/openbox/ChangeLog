@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.218 2011/03/13 20:40:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.219 2011/06/22 08:05:33 hwoarang Exp $
+
+  22 Jun 2011; Markos Chandras <hwoarang@gentoo.org> openbox-3.4.11.2.ebuild,
+  openbox-3.5.0_pre20110313.ebuild, openbox-9999.ebuild:
+  Fix x11-libs/pango dependency per bug #293368
 
 *openbox-3.5.0_pre20110313 (13 Mar 2011)
 
