@@ -7,6 +7,7 @@
 <name>Markos Chandras</name>
 </maintainer>
 <use>
+<flag name="filelog">Enable the ability to log to a file instead of syslog</flag>
 <flag name="memtrace">Enable leefs to create a report regarding the memory allocation. This feature should be used for debugging purposes to avoid performance degradation</flag>
 </use>
 <longdescription lang="en">
