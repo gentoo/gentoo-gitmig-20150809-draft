@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1377.ebuild,v 1.1 2011/06/13 13:00:27 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1378.ebuild,v 1.1 2011/06/22 19:05:06 tommy Exp $
 
 EAPI="2"
-DATE=20110611
+DATE=20110618
 JAVA_PKG_IUSE="doc source"
 
 inherit eutils java-pkg-2 java-ant-2 multilib
@@ -75,8 +75,6 @@ src_prepare() {
 	use freemail && echo "wrapper.java.classpath.12=/usr/share/bcprov/lib/bcprov.jar" >> freenet-wrapper.conf
 	java-ant_rewrite-classpath "${EANT_BUILD_XML}"
 	cp "${DISTDIR}"/freenet-ant-1.7.1.jar lib/ant.jar || die
-	#build-fix from upstream, should be in 1378
-	sed -i 's:target="1.6":target="1.6" encoding="UTF-8":g' build-clean.xml || die
 	java-pkg-2_src_prepare
 }
 
