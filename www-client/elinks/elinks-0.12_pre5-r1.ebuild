@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.12_pre5-r1.ebuild,v 1.9 2011/06/12 12:11:05 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/elinks/elinks-0.12_pre5-r1.ebuild,v 1.10 2011/06/22 02:33:17 nirbheek Exp $
 
 EAPI="3"
 
@@ -32,7 +32,7 @@ DEPEND="dev-libs/boehm-gc
 	perl? ( sys-devel/libperl )
 	ruby? ( dev-lang/ruby dev-ruby/rubygems )
 	samba? ( net-fs/samba )
-	javascript? ( <dev-lang/spidermonkey-2.0 )"
+	javascript? ( <dev-lang/spidermonkey-1.8.5 )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
@@ -54,7 +54,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/elinks-0.11.5-makefile.patch
 	epatch "${FILESDIR}"/elinks-0.12_pre5-compilation-fix.patch
 
-	if use javascript && has_version ">=dev-lang/spidermonkey-1.9"; then
+	if use javascript && has_version ">=dev-lang/spidermonkey-1.8"; then
 		epatch "${FILESDIR}"/elinks-0.12pre5-spidermonkey-callback.patch
 	fi
 
