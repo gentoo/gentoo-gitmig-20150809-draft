@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.6-r1.ebuild,v 1.2 2011/06/22 13:52:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.6-r1.ebuild,v 1.3 2011/06/22 14:42:24 pva Exp $
 
 EAPI=4
 inherit eutils linux-info
@@ -50,15 +50,15 @@ src_configure() {
 
 src_compile() {
 	local mymake=""
-	sed -i -e "s,depmod -a,:,g" Makefile
-	emake ${mymake} || die
+	sed -i -e "s,depmod -a,:,g" Makefile || die
+	emake ${mymake}
 }
 
 src_install() {
 	local myinst=""
 
 	myinst="${myinst} MODINSTALLDIR=${ED}/lib/modules/${KV_FULL}"
-	make DESTDIR="${D}" ${myinst} htmldir="/usr/share/doc/${PF}" install
+	emake DESTDIR="${D}" ${myinst} htmldir="/usr/share/doc/${PF}" install
 
 	dodoc ChangeLog* README TODO
 }

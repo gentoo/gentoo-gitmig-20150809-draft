@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.7_rc1.ebuild,v 1.1 2011/06/20 05:23:29 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.7_rc1.ebuild,v 1.2 2011/06/22 14:42:24 pva Exp $
 
 EAPI=2
 inherit eutils linux-info java-pkg-opt-2
@@ -50,7 +50,7 @@ src_configure() {
 }
 
 src_install() {
-	make DESTDIR="${D}" htmldir="/usr/share/doc/${PF}" install || die
+	emake DESTDIR="${D}" htmldir="/usr/share/doc/${PF}" install || die
 
 	dodoc ChangeLog* README TODO
 
