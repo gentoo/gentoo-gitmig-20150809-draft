@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.4-r1.ebuild,v 1.15 2011/06/21 15:18:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.4-r1.ebuild,v 1.16 2011/06/22 18:05:24 jlec Exp $
 
 EAPI=2
-inherit eutils fortran-2 autotools
+
+inherit autotools eutils fortran-2
 
 DESCRIPTION="General purpose library and file format for storing scientific data"
 HOMEPAGE="http://www.hdfgroup.org/HDF5/"
@@ -28,7 +29,7 @@ DEPEND="${RDEPEND}
 	sys-process/time"
 
 pkg_setup() {
-	fortran-2_pkg_setup
+	fortran && fortran-2_pkg_setup
 	if use mpi; then
 		if has_version 'sci-libs/hdf5[-mpi]'; then
 			ewarn "Installing hdf5 with mpi enabled with a previous hdf5 with mpi disabled may fail."
@@ -49,20 +50,21 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.8.3-as-needed.patch
-	epatch "${FILESDIR}"/${PN}-1.8.3-includes.patch
-	epatch "${FILESDIR}"/${PN}-1.8.3-noreturn.patch
-	epatch "${FILESDIR}"/${P}-gnutools.patch
-	epatch "${FILESDIR}"/${P}-scaleoffset.patch
-	epatch "${FILESDIR}"/${P}-sigbus.patch
+	epatch \
+		"${FILESDIR}"/${PN}-1.8.3-as-needed.patch \
+		"${FILESDIR}"/${PN}-1.8.3-includes.patch \
+		"${FILESDIR}"/${PN}-1.8.3-noreturn.patch \
+		"${FILESDIR}"/${P}-gnutools.patch \
+		"${FILESDIR}"/${P}-scaleoffset.patch \
+		"${FILESDIR}"/${P}-sigbus.patch
 
 	# respect gentoo examples directory
-	sed -i \
+	sed \
 		-e 's:$(docdir)/hdf5:$(DESTDIR)/$(docdir):' \
-		$(find . -name Makefile.am) || die
-	sed -i \
+		-i $(find . -name Makefile.am) || die
+	sed \
 		-e '/docdir/d' \
-		config/commence.am || die
+		-i config/commence.am || die
 	eautoreconf
 	# enable shared libs by default for h5cc config utility
 	sed -i -e "s/SHLIB:-no/SHLIB:-yes/g" tools/misc/h5cc.in \
