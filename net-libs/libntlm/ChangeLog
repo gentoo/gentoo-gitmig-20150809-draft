@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libntlm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libntlm/ChangeLog,v 1.23 2011/06/19 10:33:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libntlm/ChangeLog,v 1.24 2011/06/22 21:23:18 ranger Exp $
+
+  22 Jun 2011; Brent Baude <ranger@gentoo.org> libntlm-1.2.ebuild:
+  Marking libntlm-1.2 ppc for bug 370629
 
   19 Jun 2011; Markus Meier <maekke@gentoo.org> libntlm-1.2.ebuild:
   arm stable, bug #370629
