@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/cylindrix/cylindrix-1.0.ebuild,v 1.9 2011/03/26 17:28:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/cylindrix/cylindrix-1.0.ebuild,v 1.10 2011/06/22 16:48:26 tupone Exp $
 
 EAPI=2
 inherit autotools games
@@ -20,7 +20,8 @@ DEPEND=">=media-libs/allegro-4.0.3
 S=${WORKDIR}/${PN}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-ldflags.patch
+	epatch "${FILESDIR}"/${P}-ldflags.patch \
+		"${FILESDIR}"/${P}-underlink.patch
 	sed -i \
 		-e "/g_DataPath/s:\./:${GAMES_DATADIR}/${PN}/:" \
 		sb_stub.c \
