@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.278 2011/06/15 06:44:42 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.279 2011/06/22 09:42:25 phajdan.jr Exp $
+
+  22 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> vte-0.28.1-r200.ebuild:
+  x86 stable wrt security bug #371320
 
   15 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> vte-0.28.1-r200.ebuild,
   vte-0.28.1-r300.ebuild:

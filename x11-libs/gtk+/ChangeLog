@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.516 2011/06/18 15:44:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.517 2011/06/22 09:41:18 phajdan.jr Exp $
+
+  22 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> gtk+-2.24.4.ebuild:
+  x86 stable wrt security bug #371320
 
 *gtk+-2.24.5-r1 (18 Jun 2011)
 
