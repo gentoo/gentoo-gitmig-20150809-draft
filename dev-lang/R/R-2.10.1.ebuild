@@ -1,9 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.10.1.ebuild,v 1.10 2010/11/08 18:44:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.10.1.ebuild,v 1.11 2011/06/22 18:46:09 jlec Exp $
 
 EAPI=2
-inherit eutils flag-o-matic bash-completion versionator
+
+inherit bash-completion eutils flag-o-matic fortran-2 versionator
 
 DESCRIPTION="Language and environment for statistical computing and graphics"
 HOMEPAGE="http://www.r-project.org/"
@@ -17,11 +18,14 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc java jpeg lapack minimal nls perl png readline threads tk X cairo"
 
 # common depends
-CDEPEND="dev-libs/libpcre
+CDEPEND="
 	app-arch/bzip2
-	virtual/blas
 	app-text/ghostscript-gpl
-	cairo? ( x11-libs/cairo[X]
+	dev-libs/libpcre
+	virtual/blas
+	virtual/fortran
+	cairo? (
+		x11-libs/cairo[X]
 		|| ( >=x11-libs/pango-1.20[X] <x11-libs/pango-1.20 ) )
 	jpeg? ( virtual/jpeg )
 	lapack? ( virtual/lapack )
@@ -33,9 +37,11 @@ CDEPEND="dev-libs/libpcre
 
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig
-	doc? ( virtual/latex-base
-	  || ( dev-texlive/texlive-fontsrecommended
-		   app-text/ptex ) )"
+	doc? (
+		virtual/latex-base
+		|| (
+			dev-texlive/texlive-fontsrecommended
+			app-text/ptex ) )"
 
 RDEPEND="${CDEPEND}
 	app-arch/unzip

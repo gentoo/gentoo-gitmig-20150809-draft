@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.183 2011/03/01 21:31:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.184 2011/06/22 18:46:09 jlec Exp $
+
+  22 Jun 2011; Justin Lecher <jlec@gentoo.org> R-2.10.1.ebuild,
+  R-2.12.1.ebuild, R-2.12.2.ebuild:
+  Added fortran-2.eclass support
 
 *R-2.12.2 (01 Mar 2011)
 
