@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.905-r1.ebuild,v 1.7 2011/06/10 08:55:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/gxine-0.5.905-r1.ebuild,v 1.8 2011/06/22 02:30:29 nirbheek Exp $
 
 EAPI=2
 inherit autotools eutils fdo-mime gnome2-utils multilib nsplugins
@@ -18,7 +18,7 @@ RDEPEND=">=media-libs/xine-lib-1.1.17
 	>=x11-libs/gtk+-2.8:2
 	>=dev-libs/glib-2.10:2
 	>=x11-libs/pango-1.12
-	>=dev-lang/spidermonkey-1.9.2.13
+	>=dev-lang/spidermonkey-1.8.2.13
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXrender
