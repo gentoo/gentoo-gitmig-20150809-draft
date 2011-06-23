@@ -1,6 +1,15 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.388 2011/06/21 18:18:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.389 2011/06/23 17:43:51 phajdan.jr Exp $
+
+*chromium-13.0.782.32 (23 Jun 2011)
+
+  23 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-glibc-2.14-r0.patch, files/chromium-perl-5.14-r0.patch,
+  +chromium-13.0.782.32.ebuild:
+  Version bump for beta channel release. Fix a problem with perl patch (bug
+  #372627 by Richard Cox). Fix build failure with glibc-2.14 (bug #372495 by
+  Chris Smith).
 
 *chromium-14.0.797.0 (21 Jun 2011)
 
