@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/qu-prolog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.78 2011/05/29 16:46:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.79 2011/06/23 20:02:13 ranger Exp $
+
+  23 Jun 2011; Brent Baude <ranger@gentoo.org> qu-prolog-8.12.ebuild:
+  Marking qu-prolog-8.12 ppc for bug 365369
 
   29 May 2011; Raúl Porcel <armin76@gentoo.org> qu-prolog-8.11.ebuild,
   qu-prolog-8.12.ebuild:
