@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.22 2011/06/22 16:09:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.23 2011/06/23 13:28:08 phajdan.jr Exp $
+
+  23 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> libvpx-0.9.6.ebuild:
+  x86 stable wrt security bug #365273
 
   22 Jun 2011; Alexis Ballier <aballier@gentoo.org> libvpx-9999.ebuild,
   metadata.xml:
