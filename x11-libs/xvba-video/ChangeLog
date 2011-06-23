@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xvba-video
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/ChangeLog,v 1.3 2011/04/26 11:41:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/ChangeLog,v 1.4 2011/06/23 07:54:47 hwoarang Exp $
+
+  23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> xvba-video-0.7.8.ebuild:
+  Stable on amd64 wrt bug #372333
 
   26 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> xvba-video-0.7.8.ebuild:
   Rather keep fdo as homepage as it contains better desc.
