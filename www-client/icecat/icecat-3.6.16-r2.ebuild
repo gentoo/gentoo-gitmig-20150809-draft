@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.16-r2.ebuild,v 1.1 2011/06/23 11:08:56 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.16-r2.ebuild,v 1.2 2011/06/23 11:13:10 polynomial-c Exp $
 EAPI="3"
 WANT_AUTOCONF="2.1"
 
@@ -19,7 +19,7 @@ MAJ_PV="${PV/_*/}" # Without the _rc and _beta stuff
 DESKTOP_PV="3.6"
 MY_PV="${PV/_rc/rc}" # Handle beta for SRC_URI
 #XUL_PV="${MAJ_XUL_PV}${MAJ_PV/${DESKTOP_PV}/}" # Major + Minor version no.s
-XUL_PV="${MAJ_XUL_PV}.17"
+XUL_PV="${MAJ_XUL_PV}.18"
 FIREFOX_PN="firefox"
 FIREFOX_P="${FIREFOX_PN}-${PV}"
 PATCH="${FIREFOX_PN}-3.6-patches-0.4"

@@ -1,6 +1,9 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.89 2011/06/23 11:08:56 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.90 2011/06/23 11:13:10 polynomial-c Exp $
+
+  23 Jun 2011; Lars Wendler <polynomial-c@gentoo.org> icecat-3.6.16-r2.ebuild:
+  Fixed dependecy on xulrunner.
 
 *icecat-3.6.16-r2 (23 Jun 2011)
 
