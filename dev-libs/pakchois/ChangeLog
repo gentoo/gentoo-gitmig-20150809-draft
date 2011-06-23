@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pakchois
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pakchois/ChangeLog,v 1.13 2010/09/10 21:07:15 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pakchois/ChangeLog,v 1.14 2011/06/23 16:09:11 hwoarang Exp $
+
+  23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  add crypto as maintainer. Remove Arfrever per his request
 
   10 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   metadata.xml:
