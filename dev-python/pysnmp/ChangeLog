@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysnmp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.42 2011/05/28 13:56:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.43 2011/06/23 14:58:14 hwoarang Exp $
+
+  23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> -pysnmp-3.4.4.ebuild:
+  Remove old ebuilds. Requested by Arfrever
 
   28 May 2011; Brent Baude <ranger@gentoo.org> pysnmp-4.1.16a.ebuild:
   Marking pysnmp-4.1.16a ppc for bug 364871

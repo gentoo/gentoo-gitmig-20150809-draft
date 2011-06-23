@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/webob
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/ChangeLog,v 1.41 2011/06/14 20:14:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webob/ChangeLog,v 1.42 2011/06/23 14:52:27 hwoarang Exp $
+
+  23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> -webob-1.0.3.ebuild,
+  -webob-1.0.5.ebuild:
+  Remove old ebuilds. Requested by Arfrever
 
   14 Jun 2011; Markus Meier <maekke@gentoo.org> webob-1.0.7.ebuild:
   x86 stable, bug #370511
