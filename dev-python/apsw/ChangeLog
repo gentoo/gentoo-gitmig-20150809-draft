@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/apsw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.38 2011/06/20 10:37:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.39 2011/06/23 15:19:52 hwoarang Exp $
+
+  23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> -apsw-3.7.5.1.ebuild:
+  Remove old ebuilds. Requested by Arfrever
 
   20 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> apsw-3.7.6.2.1.ebuild:
   x86 stable wrt bug #372309
