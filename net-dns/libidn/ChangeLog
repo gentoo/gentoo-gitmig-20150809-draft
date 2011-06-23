@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/libidn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.141 2011/06/19 10:51:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.142 2011/06/23 20:12:57 ranger Exp $
+
+  23 Jun 2011; Brent Baude <ranger@gentoo.org> libidn-1.22.ebuild:
+  Marking libidn-1.22 ppc for bug 371169
 
   19 Jun 2011; Markus Meier <maekke@gentoo.org> libidn-1.22.ebuild:
   arm stable, bug #371169
