@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-010.ebuild,v 1.2 2011/04/03 20:29:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-010.ebuild,v 1.3 2011/06/23 10:38:17 aidecoe Exp $
 
 EAPI=2
 
@@ -38,6 +38,7 @@ DM_MODULES="
 	"
 IUSE_DRACUT_MODULES="${COMMON_MODULES} ${DM_MODULES} ${NETWORK_MODULES}"
 IUSE="debug selinux ${IUSE_DRACUT_MODULES}"
+RESTRICT="test"
 
 NETWORK_DEPS="net-misc/bridge-utils >=net-misc/dhcp-4.2.1-r1 sys-apps/iproute2"
 DM_DEPS="|| ( sys-fs/device-mapper >=sys-fs/lvm2-2.02.33 )"

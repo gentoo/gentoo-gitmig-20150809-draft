@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.23 2011/06/07 20:16:01 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.24 2011/06/23 10:38:17 aidecoe Exp $
+
+  23 Jun 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-009-r1.ebuild,
+  dracut-010.ebuild, dracut-010-r1.ebuild, dracut-010-r2.ebuild:
+  Missing RESTRICT="test" fixed. Refs bug #298014.
 
 *dracut-010-r2 (07 Jun 2011)
 
