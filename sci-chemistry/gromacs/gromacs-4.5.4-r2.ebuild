@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.4-r2.ebuild,v 1.3 2011/06/21 16:03:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.4-r2.ebuild,v 1.4 2011/06/23 10:08:45 ottxor Exp $
 
 EAPI="4"
 
@@ -36,8 +36,7 @@ mpi +single-precision sse2 test +threads xml zsh-completion"
 REQUIRED_USE="fkernels? ( !threads )"
 
 CDEPEND="
-	virtual/fortran
-
+	fkernels? ( virtual/fortran )
 	X? (
 		x11-libs/libX11
 		x11-libs/libSM
@@ -55,6 +54,10 @@ RDEPEND="${CDEPEND}
 	app-shells/tcsh"
 
 RESTRICT="test"
+
+pkg_setup() {
+	use fkernels && fortran-2_pkg_setup
+}
 
 src_prepare() {
 	#add user patches from /etc/portage/patches/sci-chemistry/gromacs
