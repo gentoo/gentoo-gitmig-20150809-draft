@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina-plugins/remmina-plugins-0.9.2.ebuild,v 1.1 2011/01/22 16:11:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina-plugins/remmina-plugins-0.9.2-r1.ebuild,v 1.1 2011/06/23 11:58:36 hwoarang Exp $
 
 EAPI=2
 inherit gnome2-utils
@@ -30,12 +30,16 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	local myconf="--disable-dependency-tracking"
-	if use nx && ! use ssh; then
-		myconf="${myconf} --disable-nx"
-		ewarn "nx support requires ssh."
-		ewarn "nx support will not be included."
+	if use nx; then
+		if ! use ssh; then
+			myconf="${myconf} --disable-nx"
+			ewarn "nx support requires ssh."
+			ewarn "nx support will not be included."
+		else
+			myconf="${myconf} --enable-nx"
+		fi
 	else
-		myconf="${myconf} --enable-nx"
+		myconf="${myconf} --disable-nx"
 	fi
 
 	econf \
