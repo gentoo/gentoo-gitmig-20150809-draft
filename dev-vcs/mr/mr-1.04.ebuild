@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mr/mr-0.51.ebuild,v 1.1 2010/12/17 10:31:49 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mr/mr-1.04.ebuild,v 1.1 2011/06/23 18:10:29 tove Exp $
 
 DESCRIPTION="Multiple Repository management tool"
 HOMEPAGE="http://kitenet.net/~joey/code/mr/"
