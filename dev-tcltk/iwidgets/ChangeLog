@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/iwidgets
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/ChangeLog,v 1.21 2010/12/07 19:56:39 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/ChangeLog,v 1.22 2011/06/23 15:16:17 jlec Exp $
+
+*iwidgets-4.0.1-r3 (23 Jun 2011)
+
+  23 Jun 2011; Justin Lecher <jlec@gentoo.org> files/4.0.1-path.patch,
+  -iwidgets-4.0.1-r2.ebuild, +iwidgets-4.0.1-r3.ebuild:
+  Don't install in /usr/usr #372587
 
   07 Dec 2010; Justin Lecher <jlec@gentoo.org> +files/4.0.1-path.patch,
   iwidgets-4.0.1-r2.ebuild:

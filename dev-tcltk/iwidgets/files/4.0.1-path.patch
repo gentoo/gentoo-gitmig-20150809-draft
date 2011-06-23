@@ -1,19 +1,25 @@
-diff --git a/Makefile.in b/Makefile.in
-index 381bfac..1ba8efb 100644
---- a/Makefile.in
-+++ b/Makefile.in
-@@ -48,7 +48,9 @@ LIB_INSTALL_DIR = $(INSTALL_ROOT)$(exec_prefix)/lib
+--- iwidgets4.0.1/Makefile.in
++++ iwidgets4.0.1/Makefile.in
+@@ -30,6 +30,7 @@
+ 
+ srcdir = @srcdir@
+ bindir = @bindir@
++mandir = @mandir@
+ 
+ # The following definition can be set to non-null for special systems
+ # like AFS with replication.  It allows the pathnames used for installation
+@@ -48,7 +49,9 @@
  BIN_INSTALL_DIR = $(INSTALL_ROOT)$(exec_prefix)/bin
  
  # Top-level directory in which to install manual entries:
 -MAN_INSTALL_DIR = $(INSTALL_ROOT)$(prefix)/man/mann
-+MAN_INSTALL_DIR = $(INSTALL_ROOT)$(prefix)/usr/share/man/mann
++MAN_INSTALL_DIR = $(INSTALL_ROOT)$(mandir)/mann
 +
-+DATA_DIR = $(INSTALL_ROOT)$(prefix)/usr/share/iwidgets$(IWIDGETS_VERSION)
++DATA_DIR = $(INSTALL_ROOT)$(prefix)/share/iwidgets$(IWIDGETS_VERSION)
  
  # Directory containing Tcl source code (for library used during test):
  TCL_SRC_DIR = @TCL_SRC_DIR@
-@@ -135,26 +137,26 @@ install-libraries:
+@@ -135,26 +138,26 @@
  	    done;
  
  install-demos:
@@ -47,7 +53,7 @@ index 381bfac..1ba8efb 100644
  	    fi; \
  	    done;
  
-@@ -169,7 +171,6 @@ install-doc:
+@@ -169,7 +172,6 @@
  	        $$i > $(MAN_INSTALL_DIR)/`basename iwidgets_$$i`; \
  	    chmod 444 $(MAN_INSTALL_DIR)/`basename iwidgets_$$i`; \
  	    done;
