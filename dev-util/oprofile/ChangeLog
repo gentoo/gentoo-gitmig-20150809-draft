@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/oprofile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.73 2011/06/23 07:25:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.74 2011/06/23 17:38:08 phajdan.jr Exp $
+
+  23 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  oprofile-0.9.6-r1.ebuild:
+  x86 stable wrt bug #366699
 
   23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> oprofile-0.9.6-r1.ebuild:
   Stable on amd64 wrt bug #366699
