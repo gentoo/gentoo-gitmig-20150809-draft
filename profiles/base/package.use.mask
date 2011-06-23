@@ -1,9 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.245 2011/06/19 03:38:57 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.246 2011/06/23 15:53:41 mgorny Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Michał Górny <mgorny@gentoo.org) (23 Jun 2011)
+# Requires masked >=sys-process/audit-2.
+sys-apps/systemd audit
 
 # Bernard Cafarelli <voyageur@gentoo.org> (6 Jun 2011)
 # libobjc2/clang only works on some arches
