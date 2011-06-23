@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/augustus/augustus-2.4.ebuild,v 1.6 2011/03/09 22:54:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/augustus/augustus-2.4.ebuild,v 1.7 2011/06/23 14:58:14 jlec Exp $
 
-EAPI="2"
+EAPI=2
 
 inherit base eutils
 
