@@ -1,9 +1,0 @@
-diff -ru pydot-1.0.2~/setup.py pydot-1.0.2/setup.py
---- pydot-1.0.2~/setup.py	2008-10-25 14:22:54.000000000 +0200
-+++ pydot-1.0.2/setup.py	2008-10-25 14:23:10.000000000 +0200
-@@ -28,4 +28,4 @@
-     long_description = "\n".join(pydot.__doc__.split('\n')),
-     py_modules = ['pydot', 'dot_parser'],
-     install_requires = ['pyparsing', 'setuptools'],
--    data_files = [('.', ['ChangeLog', 'LICENSE', 'README'])] )
-+)

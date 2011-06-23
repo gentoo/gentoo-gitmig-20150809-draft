@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/pydot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pydot/ChangeLog,v 1.27 2011/06/23 14:46:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pydot/ChangeLog,v 1.28 2011/06/23 15:37:35 hwoarang Exp $
+
+  23 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
+  -files/pydot-1.0.2-setup.patch:
+  remove unused file
 
   23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> -pydot-1.0.2-r1.ebuild:
   Remove old ebuilds. Requested by Arfrever
