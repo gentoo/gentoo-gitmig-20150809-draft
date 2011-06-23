@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/aruba
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.3 2011/06/23 05:32:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.4 2011/06/23 05:54:16 graaff Exp $
+
+*aruba-0.4.2 (23 Jun 2011)
+
+  23 Jun 2011; Hans de Graaff <graaff@gentoo.org> +aruba-0.4.2.ebuild:
+  Version bump.
 
   23 Jun 2011; Hans de Graaff <graaff@gentoo.org> -aruba-0.3.5.ebuild:
   Remove old version.
