@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5473 2011/06/23 12:57:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5474 2011/06/23 14:17:50 scarabeus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
+  Mask just 0.7 release. Not the pre or the live ebuild.
 
   23 Jun 2011; Alexis Ballier <aballier@gentoo.org> package.mask:
   mask ffmpeg 0.8
