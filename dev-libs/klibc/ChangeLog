@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.78 2011/06/12 17:19:42 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.79 2011/06/23 20:19:08 ranger Exp $
+
+  23 Jun 2011; Brent Baude <ranger@gentoo.org> klibc-1.5.20.ebuild:
+  Marking klibc-1.5.20 ppc for bug 367269
 
   12 Jun 2011; Matt Turner <mattst88@gentoo.org> klibc-1.5.8.ebuild,
   klibc-1.5.11.ebuild, klibc-1.5.12.ebuild, klibc-1.5.12-r1.ebuild,
