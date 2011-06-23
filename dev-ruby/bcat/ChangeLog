@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/bcat
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/ChangeLog,v 1.1 2011/06/23 05:48:07 graaff Exp $
+
+*bcat-0.6.1 (23 Jun 2011)
+
+  23 Jun 2011; Hans de Graaff <graaff@gentoo.org> +bcat-0.6.1.ebuild,
+  +metadata.xml:
+  Initial import. New dependency of dev-util/aruba.
+
