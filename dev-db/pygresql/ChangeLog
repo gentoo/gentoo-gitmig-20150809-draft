@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/pygresql
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.56 2011/05/28 12:24:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.57 2011/06/23 14:50:35 hwoarang Exp $
+
+  23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> -pygresql-3.5.ebuild,
+  -files/pygresql-3.5-gentoo.patch, -pygresql-3.6.2.ebuild,
+  -pygresql-3.6.2-r1.ebuild, -files/pygresql-3.6.2-gentoo.patch:
+  Remove old ebuilds. Requested by Arfrever
 
   28 May 2011; Brent Baude <ranger@gentoo.org> pygresql-3.8.1.ebuild:
   Marking pygresql-3.8.1 ppc for bug 354267
