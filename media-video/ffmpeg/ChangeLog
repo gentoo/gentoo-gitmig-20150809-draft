@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.419 2011/06/23 12:50:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.420 2011/06/23 12:59:22 aballier Exp $
+
+*ffmpeg-0.8 (23 Jun 2011)
+
+  23 Jun 2011; Alexis Ballier <aballier@gentoo.org> +ffmpeg-0.8.ebuild:
+  version bump: same as 0.7.1 but with only the new api/abi
 
 *ffmpeg-0.7.1 (23 Jun 2011)
 
