@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/shotwell
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.18 2011/06/10 09:09:20 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.19 2011/06/23 10:37:01 angelos Exp $
+
+*shotwell-0.10.1 (23 Jun 2011)
+
+  23 Jun 2011; Christoph Mende <angelos@gentoo.org> -files/0.9.1-ldflags.patch,
+  -shotwell-0.7.2.ebuild, -shotwell-0.8.1.ebuild, -shotwell-0.9.1.ebuild,
+  -shotwell-0.9.1-r1.ebuild, -shotwell-0.9.2.ebuild, -shotwell-0.9.3.ebuild,
+  +shotwell-0.10.1.ebuild, metadata.xml:
+  Take maintainership with permission from Andreas, remove old and bump to
+  0.10.1
 
   10 Jun 2011; Christoph Mende <angelos@gentoo.org> shotwell-0.7.2.ebuild,
   shotwell-0.8.1.ebuild, shotwell-0.9.1.ebuild, shotwell-0.9.1-r1.ebuild,

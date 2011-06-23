@@ -3,13 +3,8 @@
 <pkgmetadata>
 	<herd>graphics</herd>
 	<maintainer>
-		<email>hollow@gentoo.org</email>
-		<name>Benedikt Böhm</name>
-	</maintainer>
-	<maintainer>
-		<email>nutz@noova.de</email>
-		<name>Andreas Nüßlein</name>
-		<description>Proxy maintainer. Please CC on bugs.</description>
+		<email>angelos@gentoo.org</email>
+		<name>Christoph Mende</name>
 	</maintainer>
 	<longdescription lang="en">
 	Shotwell is a digital photo organizer designed for the GNOME desktop

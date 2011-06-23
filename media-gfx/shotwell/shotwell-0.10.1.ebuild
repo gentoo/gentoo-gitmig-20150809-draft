@@ -1,10 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.9.3.ebuild,v 1.2 2011/06/10 09:09:20 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.10.1.ebuild,v 1.1 2011/06/23 10:37:01 angelos Exp $
 
-EAPI="2"
-GCONF_DEBUG="no"
-
+EAPI=4
 inherit gnome2 versionator eutils multilib toolchain-funcs
 
 MY_PV=$(get_version_component_range 1-2)
@@ -24,7 +22,6 @@ RDEPEND=">=dev-db/sqlite-3.5.9:3
 	>=dev-libs/libunique-1:1
 	>=dev-libs/libxml2-2.6.32:2
 	>=gnome-base/gconf-2.22.0:2
-	gnome-base/gnome-vfs:2
 	>=media-libs/gexiv2-0.2.0
 	media-libs/gstreamer:0.10
 	media-libs/lcms:2
@@ -38,7 +35,7 @@ RDEPEND=">=dev-db/sqlite-3.5.9:3
 DEPEND="${RDEPEND}
 	>=dev-lang/vala-0.11.7:0.12"
 
-DOCS="AUTHORS MAINTAINERS NEWS README THANKS"
+DOCS=( AUTHORS MAINTAINERS NEWS README THANKS )
 
 pkg_setup() {
 	tc-export CC
@@ -50,7 +47,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/0.9.1-ldflags.patch
+	epatch "${FILESDIR}"/0.10-ldflags.patch
 	gnome2_src_prepare
 
 	sed -e 's/valac/valac-0.12/' -i plugins/Makefile.plugin.mk || die
