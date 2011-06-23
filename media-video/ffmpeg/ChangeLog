@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.420 2011/06/23 12:59:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.421 2011/06/23 14:39:34 phajdan.jr Exp $
+
+  23 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> ffmpeg-0.7_rc1.ebuild:
+  x86 stable wrt security bug #365273
 
 *ffmpeg-0.8 (23 Jun 2011)
 
