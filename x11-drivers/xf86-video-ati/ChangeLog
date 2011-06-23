@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.149 2011/05/31 10:18:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.150 2011/06/23 07:53:00 hwoarang Exp $
+
+  23 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
+  xf86-video-ati-6.14.2.ebuild:
+  Stable on amd64 wrt bug #372333
 
   31 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Keep it just on x11 team. No need for double mails for me.

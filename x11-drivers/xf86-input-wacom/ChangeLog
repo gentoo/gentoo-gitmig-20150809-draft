@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-wacom
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-wacom/ChangeLog,v 1.42 2011/05/14 16:29:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-wacom/ChangeLog,v 1.43 2011/06/23 07:52:45 hwoarang Exp $
+
+  23 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
+  xf86-input-wacom-0.11.0.ebuild:
+  Stable on amd64 wrt bug #372333
 
   14 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   xf86-input-wacom-0.11.0.ebuild:
