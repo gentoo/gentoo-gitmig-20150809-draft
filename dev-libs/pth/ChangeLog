@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.68 2011/05/21 19:57:38 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/ChangeLog,v 1.69 2011/06/23 14:44:10 hwoarang Exp $
+
+  23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> -pth-2.0.7-r2.ebuild:
+  Remove old ebuilds. Requested by Arfrever
 
   21 May 2011; Kacper Kowalik <xarthisius@gentoo.org> pth-2.0.7-r3.ebuild:
   ppc/ppc64 stable wrt #366665
