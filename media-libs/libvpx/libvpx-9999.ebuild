@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.11 2011/06/22 16:09:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.12 2011/06/23 16:04:47 aballier Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs
@@ -61,8 +61,7 @@ src_configure() {
 }
 
 src_install() {
-	# http://bugs.gentoo.org/show_bug.cgi?id=323805
-	emake -j1 DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 
 	dodoc AUTHORS CHANGELOG README || die
 }
