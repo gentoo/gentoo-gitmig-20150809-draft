@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpipeline
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpipeline/ChangeLog,v 1.5 2011/06/19 13:30:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpipeline/ChangeLog,v 1.6 2011/06/23 20:08:01 ranger Exp $
+
+  23 Jun 2011; Brent Baude <ranger@gentoo.org> libpipeline-1.2.0.ebuild:
+  Marking libpipeline-1.2.0 ~ppc for bug 371687
 
   19 Jun 2011; Markus Meier <maekke@gentoo.org> libpipeline-1.2.0.ebuild:
   add ~arm, bug #371687
