@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sqlalchemy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.63 2011/06/14 19:04:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/ChangeLog,v 1.64 2011/06/23 15:11:10 hwoarang Exp $
+
+  23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> -sqlalchemy-0.6.6.ebuild:
+  Remove old ebuilds. Requested by Arfrever
 
   14 Jun 2011; Markus Meier <maekke@gentoo.org> sqlalchemy-0.6.7.ebuild:
   x86 stable, bug #367301
