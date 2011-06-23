@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/esmtp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/esmtp/ChangeLog,v 1.32 2011/06/22 21:32:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/esmtp/ChangeLog,v 1.33 2011/06/23 11:49:14 eras Exp $
+
+  23 Jun 2011; Eray Aslan <eras@gentoo.org> -esmtp-0.5.0-r1.ebuild:
+  remove old
 
   22 Jun 2011; Brent Baude <ranger@gentoo.org> esmtp-1.2.ebuild:
   Marking esmtp-1.2 ppc for bug 366973
