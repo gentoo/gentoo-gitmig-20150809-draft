@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xvba-video
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/ChangeLog,v 1.4 2011/06/23 07:54:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xvba-video/ChangeLog,v 1.5 2011/06/23 14:37:42 phajdan.jr Exp $
+
+  23 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> xvba-video-0.7.8.ebuild:
+  x86 stable wrt security bug #365273
 
   23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> xvba-video-0.7.8.ebuild:
   Stable on amd64 wrt bug #372333
