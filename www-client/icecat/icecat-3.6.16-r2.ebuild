@@ -1,47 +1,54 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-3.6.16-r1.ebuild,v 1.2 2011/06/21 12:33:50 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.16-r2.ebuild,v 1.1 2011/06/23 11:08:56 polynomial-c Exp $
 EAPI="3"
 WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib pax-utils fdo-mime autotools mozextension java-pkg-opt-2 python
 
-LANGS="af ar as be bg bn-BD bn-IN ca cs cy da de el en en-GB en-US eo es-AR \
-es-CL es-ES es-MX et eu fa fi fr fy-NL ga-IE gl gu-IN he hi-IN hr hu id is it \
-ja ka kk kn ko ku lt lv mk ml mr nb-NO nl nn-NO oc or pa-IN pl pt-BR pt-PT rm \
-ro ru si sk sl sq sr sv-SE ta ta-LK te th tr uk vi zh-CN zh-TW"
+LANGS="af ar as ast be bg bn-BD bn-IN ca cs cy da de el en en-GB en-US eo es-AR
+es-CL es-ES es-MX et eu fa fi fr fy-NL ga-IE gl gu-IN he hi-IN hr hu id is it
+ja ka kk kn ko ku lt lv mk ml mr nb-NO nl nn-NO oc or pa-IN pl pt-BR pt-PT rm ro
+ru si sk sl sq sr sv-SE ta ta-LK te th tr uk vi zh-CN zh-TW"
+# Malformed install.rdf: ta-LK
+
 NOSHORTLANGS="en-GB es-AR es-CL es-MX pt-BR zh-CN zh-TW"
 
 MAJ_XUL_PV="1.9.2"
 MAJ_PV="${PV/_*/}" # Without the _rc and _beta stuff
 DESKTOP_PV="3.6"
 MY_PV="${PV/_rc/rc}" # Handle beta for SRC_URI
-XUL_PV="${MAJ_XUL_PV}${MAJ_PV/${DESKTOP_PV}/}" # Major + Minor version no.s
-PATCH="${PN}-3.6-patches-0.4"
+#XUL_PV="${MAJ_XUL_PV}${MAJ_PV/${DESKTOP_PV}/}" # Major + Minor version no.s
+XUL_PV="${MAJ_XUL_PV}.17"
+FIREFOX_PN="firefox"
+FIREFOX_P="${FIREFOX_PN}-${PV}"
+PATCH="${FIREFOX_PN}-3.6-patches-0.4"
 
-DESCRIPTION="Firefox Web Browser"
-HOMEPAGE="http://www.mozilla.com/firefox"
+DESCRIPTION="GNU project's edition of Mozilla Firefox"
+HOMEPAGE="http://www.gnu.org/software/gnuzilla/"
 
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~sparc x86 ~amd64-linux ~ia64-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="+alsa bindist gnome +ipc java libnotify system-sqlite wifi"
+IUSE="+alsa +ipc gnome java libnotify system-sqlite wifi"
 
-REL_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases"
-SRC_URI="${REL_URI}/${MY_PV}/source/firefox-${MY_PV}.source.tar.bz2
-	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.bz2"
+SRC_URI="mirror://gnu/gnuzilla/${MY_PV}/${PN}-${MY_PV}.tar.bz2
+	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.bz2
+	http://dev.gentoo.org/~polynomial-c/mozilla/ff3617.diff.xz
+	http://dev.gentoo.org/~polynomial-c/mozilla/ff3618.diff.xz"
+LANGPACK_URI="http://gnuzilla.gnu.org/download/langpacks/${MY_PV}"
 
 for X in ${LANGS} ; do
 	if [ "${X}" != "en" ] && [ "${X}" != "en-US" ]; then
 		SRC_URI="${SRC_URI}
-			linguas_${X/-/_}? ( ${REL_URI}/${MY_PV}/linux-i686/xpi/${X}.xpi -> ${P}-${X}.xpi )"
+			linguas_${X/-/_}? ( ${LANGPACK_URI}/${X}.xpi -> ${P}-${X}.xpi )"
 	fi
 	IUSE="${IUSE} linguas_${X/-/_}"
 	# english is handled internally
 	if [ "${#X}" == 5 ] && ! has ${X} ${NOSHORTLANGS}; then
 		if [ "${X}" != "en-US" ]; then
 			SRC_URI="${SRC_URI}
-				linguas_${X%%-*}? ( ${REL_URI}/${PV}/linux-i686/xpi/${X}.xpi -> ${P}-${X}.xpi )"
+				linguas_${X%%-*}? ( ${LANGPACK_URI}/${X}.xpi -> ${P}-${X}.xpi )"
 		fi
 		IUSE="${IUSE} linguas_${X%%-*}"
 	fi
@@ -70,11 +77,9 @@ DEPEND="${RDEPEND}
 
 RDEPEND="${RDEPEND} java? ( >=virtual/jre-1.4 )"
 
-S="${WORKDIR}/mozilla-1.9.2"
-
 # This is a copy of the launcher program installed as part of xulrunner, so has
 # already been stripped. Bug #332071 for details.
-QA_PRESTRIPPED="usr/$(get_libdir)/${PN}/firefox"
+QA_PRESTRIPPED="usr/$(get_libdir)/${PN}/${PN}"
 
 linguas() {
 	local LANG SLANG
@@ -98,8 +103,6 @@ linguas() {
 	done
 }
 
-# XXX FIXME XXX: All refs to mozilla-${PN} need to become ${PN} with the next bump
-# Note that this WILL cause breakage for packages that use fx's libdir and includedir
 pkg_setup() {
 	# Ensure we always build with C locale.
 	export LANG="C"
@@ -107,21 +110,14 @@ pkg_setup() {
 	export LC_MESSAGES="C"
 	export LC_CTYPE="C"
 
-	if ! use bindist ; then
-		einfo
-		elog "You are enabling official branding. You may not redistribute this build"
-		elog "to any users on your network or the internet. Doing so puts yourself into"
-		elog "a legal problem with Mozilla Foundation"
-		elog "You can disable it by emerging ${PN} _with_ the bindist USE-flag"
-	fi
-
 	java-pkg-opt-2_pkg_setup
 
 	python_set_active_version 2
 }
 
 src_unpack() {
-	unpack firefox-${MY_PV}.source.tar.bz2 ${PATCH}.tar.bz2
+	#xz -dc -- "${DISTDIR}/icecat-${MY_PV}.tar.xz" | tar xof - || die "failed to unpack"
+	unpack ${A} #${PATCH}.tar.bz2
 
 	linguas
 	for X in ${linguas}; do
@@ -131,13 +127,23 @@ src_unpack() {
 }
 
 src_prepare() {
+	# Make this a 3.6.17 version
+	epatch "${DISTDIR}"/ff3617.diff.xz "${DISTDIR}"/ff3618.diff.xz
+
+	# Integrate rebranding
+	sed -i "s|/firefox|/icecat|" \
+		"${WORKDIR}"/001-firefox_gentoo_install_dirs.patch
+
+	# Fix preferences location
+	sed -i 's|defaults/pref/|defaults/preferences/|' browser/installer/packages-static || die "sed failed"
+
 	# Apply our patches
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"
 
-	# Allow user to apply additional patches without modifing ebuild
-	epatch_user
+	# Fix rebranding
+	sed -i 's|\$(DIST)/bin/firefox|\$(DIST)/bin/icecat|' browser/app/Makefile.in
 
 	eautoreconf
 
@@ -146,6 +152,9 @@ src_prepare() {
 }
 
 src_configure() {
+	# We will build our own .mozconfig
+	rm "${S}"/.mozconfig
+
 	MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
 	MEXTENSIONS="default"
 
@@ -160,6 +169,13 @@ src_configure() {
 
 	# It doesn't compile on alpha without this LDFLAGS
 	use alpha && append-ldflags "-Wl,--no-relax"
+
+	# Specific settings for icecat
+	echo "export MOZ_PHOENIX=1" >> "${S}"/.mozconfig
+	echo "mk_add_options MOZ_PHOENIX=1" "${S}"/.mozconfig
+	mozconfig_annotate '' --with-branding=browser/branding/unofficial
+	mozconfig_annotate '' --disable-official-branding
+	mozconfig_annotate '' --with-user-appdir=.icecat
 
 	mozconfig_annotate '' --enable-crypto
 	mozconfig_annotate '' --enable-extensions="${MEXTENSIONS}"
@@ -189,7 +205,6 @@ src_configure() {
 	mozconfig_annotate '' --enable-system-hunspell
 	mozconfig_annotate '' --with-system-nspr --with-nspr-prefix="${EPREFIX}"/usr
 	mozconfig_annotate '' --with-system-nss --with-nss-prefix="${EPREFIX}"/usr
-	mozconfig_annotate '' --x-includes="${EPREFIX}"/usr/include	--x-libraries="${EPREFIX}"/usr/$(get_libdir)
 	mozconfig_annotate '' --with-system-bz2
 	mozconfig_annotate '' --with-system-libxul
 	mozconfig_annotate '' --with-libxul-sdk="${EPREFIX}"/usr/$(get_libdir)/xulrunner-devel-${MAJ_XUL_PV}
@@ -203,9 +218,8 @@ src_configure() {
 	mozconfig_use_enable alsa ogg
 	mozconfig_use_enable alsa wave
 	mozconfig_use_enable system-sqlite
-	mozconfig_use_enable !bindist official-branding
 
-	# Other ff-specific settings
+	# Other browser-specific settings
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
 
 	# Finalize and report settings
@@ -241,45 +255,28 @@ src_install() {
 	done
 
 	# Install icon and .desktop for menu entry
-	if ! use bindist ; then
-		newicon "${S}"/other-licenses/branding/firefox/content/icon48.png ${PN}-icon.png
-		newmenu "${FILESDIR}"/icon/${PN}-1.5.desktop \
-			mozilla-${PN}-${DESKTOP_PV}.desktop
-	else
-		newicon "${S}"/browser/branding/unofficial/content/icon48.png ${PN}-icon-unbranded.png
-		newmenu "${FILESDIR}"/icon/${PN}-1.5-unbranded.desktop \
-			mozilla-${PN}-${DESKTOP_PV}.desktop
-		sed -i -e "s:Bon\ Echo:Namoroka:" \
-			"${ED}"/usr/share/applications/mozilla-${PN}-${DESKTOP_PV}.desktop || die "sed failed!"
-	fi
+	newicon "${S}"/browser/branding/unofficial/default48.png icecat-icon.png
+	newmenu "${FILESDIR}"/icon/icecat.desktop ${PN}-${DESKTOP_PV}.desktop
 
 	# Add StartupNotify=true bug 237317
 	if use startup-notification ; then
-		echo "StartupNotify=true" >> "${ED}"/usr/share/applications/mozilla-${PN}-${DESKTOP_PV}.desktop
+		echo "StartupNotify=true" >> "${ED}"/usr/share/applications/${PN}-${DESKTOP_PV}.desktop
 	fi
 
-	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/firefox
+	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/${PN}
 
 	# Enable very specific settings not inherited from xulrunner
 	cp "${FILESDIR}"/firefox-default-prefs.js \
 		"${ED}/${MOZILLA_FIVE_HOME}/defaults/preferences/all-gentoo.js" || \
-		die "failed to cp firefox-default-prefs.js"
-
+		die "failed to cp icecat-default-prefs.js"
 	# Plugins dir
 	dosym ../nsbrowser/plugins "${MOZILLA_FIVE_HOME}"/plugins \
 		|| die "failed to symlink"
-
-	# very ugly hack to make firefox not sigbus on sparc
-	use sparc && { sed -e 's/Firefox/FirefoxGentoo/g' \
-					 -i "${ED}/${MOZILLA_FIVE_HOME}/application.ini" || \
-					 die "sparc sed failed"; }
 }
 
 pkg_postinst() {
-	ewarn "We have finished moving away from mozilla-${PN}"
-	ewarn "to plain jane ${PN}. If for some reason you have a bug"
-	ewarn "that results please open a report and assign to maintainer"
-	ewarn "with mozilla@gentoo.org being CC'd on the bug report."
+	ewarn "All the packages built against ${PN} won't compile,"
+	ewarn "any package that fails to build warrants a bug report."
 	elog
 
 	# Update mimedb for the new .desktop file
