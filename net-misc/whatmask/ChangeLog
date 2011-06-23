@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whatmask
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whatmask/ChangeLog,v 1.23 2011/06/08 18:23:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whatmask/ChangeLog,v 1.24 2011/06/23 20:10:20 ranger Exp $
+
+  23 Jun 2011; Brent Baude <ranger@gentoo.org> whatmask-1.2-r1.ebuild:
+  Marking whatmask-1.2-r1 ppc for bug 369233
 
   08 Jun 2011; Markus Meier <maekke@gentoo.org> whatmask-1.2-r1.ebuild:
   x86 stable, bug #369233

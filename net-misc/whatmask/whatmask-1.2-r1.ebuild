@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whatmask/whatmask-1.2-r1.ebuild,v 1.4 2011/06/08 18:23:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whatmask/whatmask-1.2-r1.ebuild,v 1.5 2011/06/23 20:10:20 ranger Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://downloads.laffeycomputer.com/current_builds/whatmask/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ~ppc ~sparc x86"
+KEYWORDS="amd64 hppa ppc ~sparc x86"
 IUSE=""
 
 src_prepare() {
