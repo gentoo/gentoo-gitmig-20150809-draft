@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/shotwell
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.19 2011/06/23 10:37:01 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.20 2011/06/23 10:39:13 angelos Exp $
+
+  23 Jun 2011; Christoph Mende <angelos@gentoo.org> shotwell-0.10.1.ebuild:
+  Re-add accidentally removed GCONF_DEBUG
 
 *shotwell-0.10.1 (23 Jun 2011)
 

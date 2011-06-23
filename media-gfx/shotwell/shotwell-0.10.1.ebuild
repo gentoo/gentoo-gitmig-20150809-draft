@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.10.1.ebuild,v 1.1 2011/06/23 10:37:01 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.10.1.ebuild,v 1.2 2011/06/23 10:39:13 angelos Exp $
 
 EAPI=4
+GCONF_DEBUG="no"
 inherit gnome2 versionator eutils multilib toolchain-funcs
 
 MY_PV=$(get_version_component_range 1-2)
