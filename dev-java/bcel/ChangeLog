@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.58 2011/05/24 13:38:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.59 2011/06/23 17:13:44 ranger Exp $
+
+  23 Jun 2011; Brent Baude <ranger@gentoo.org> bcel-5.2-r2.ebuild:
+  Marking bcel-5.2-r2 ppc for bug 368239
 
   24 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> bcel-5.2-r2.ebuild:
   x86 stable wrt bug #368239
