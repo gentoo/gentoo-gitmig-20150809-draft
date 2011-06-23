@@ -1,13 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.103 2011/06/23 16:11:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.104 2011/06/23 16:17:31 aballier Exp $
 
 EAPI=4
 
 EGIT_REPO_URI="git://git.videolan.org/ffmpeg.git"
-EGIT_PROJECT="ffmpeg" # git eclass sets it to PN otherwise
 ESVN_REPO_URI="svn://svn.mplayerhq.hu/mplayer/trunk"
-[[ ${PV} = *9999* ]] && SVN_ECLASS="subversion git" || SVN_ECLASS=""
+[[ ${PV} = *9999* ]] && SVN_ECLASS="subversion git-2" || SVN_ECLASS=""
 
 inherit toolchain-funcs eutils flag-o-matic multilib base ${SVN_ECLASS}
 
@@ -237,7 +236,7 @@ src_unpack() {
 		subversion_src_unpack
 		cd "${WORKDIR}"
 		rm -rf "${WORKDIR}/${P}/ffmpeg/"
-		( S="${WORKDIR}/${P}/ffmpeg/" git_src_unpack )
+		( S="${WORKDIR}/${P}/ffmpeg/" git-2_src_unpack )
 		cd "${S}"
 		cp "${FILESDIR}/dump_ffmpeg.sh" . || die
 		chmod +x dump_ffmpeg.sh

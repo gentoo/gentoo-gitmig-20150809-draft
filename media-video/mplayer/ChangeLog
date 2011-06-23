@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.794 2011/06/23 16:11:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.795 2011/06/23 16:17:31 aballier Exp $
+
+  23 Jun 2011; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
+  use git-2.eclass for ffmpeg
 
   23 Jun 2011; Alexis Ballier <aballier@gentoo.org> mplayer-9999.ebuild:
   do not default enable faac, its non free, not compatible with binary
