@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.4.11.2.ebuild,v 1.12 2011/06/22 08:05:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.4.11.2.ebuild,v 1.13 2011/06/23 10:59:23 hwoarang Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ RDEPEND="dev-libs/glib:2
 	x11-libs/libXft
 	x11-libs/libXrandr
 	x11-libs/libXt
-	>=x11-libs/pango-1.8
+	>=x11-libs/pango-1.8[X]
 	nls? ( sys-devel/gettext )
 	startup-notification? ( >=x11-libs/startup-notification-0.8 )
 	x11-libs/libXinerama"

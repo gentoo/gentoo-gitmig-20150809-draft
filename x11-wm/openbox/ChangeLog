@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.219 2011/06/22 08:05:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.220 2011/06/23 10:59:23 hwoarang Exp $
+
+  23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> openbox-3.4.11.2.ebuild,
+  openbox-3.5.0_pre20110313.ebuild, openbox-9999.ebuild:
+  Revert my previous commit re pango[X]. Bug #293368 and bug #372619
 
   22 Jun 2011; Markos Chandras <hwoarang@gentoo.org> openbox-3.4.11.2.ebuild,
   openbox-3.5.0_pre20110313.ebuild, openbox-9999.ebuild:
