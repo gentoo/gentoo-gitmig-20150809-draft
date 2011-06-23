@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/chrony
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.75 2011/06/14 19:40:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.76 2011/06/23 20:11:31 ranger Exp $
+
+  23 Jun 2011; Brent Baude <ranger@gentoo.org> chrony-1.25.ebuild:
+  Marking chrony-1.25 ppc for bug 370485
 
   14 Jun 2011; Markus Meier <maekke@gentoo.org> chrony-1.25.ebuild:
   x86 stable, bug #370485
