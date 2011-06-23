@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/weka
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.41 2011/03/13 16:04:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/weka/ChangeLog,v 1.42 2011/06/23 17:19:00 ranger Exp $
+
+  23 Jun 2011; Brent Baude <ranger@gentoo.org> weka-3.6.4.ebuild:
+  Marking weka-3.6.4 ppc for bug 358515
 
   13 Mar 2011; Markos Chandras <hwoarang@gentoo.org> weka-3.6.4.ebuild:
   Stable on amd64 wrt bug #358515
