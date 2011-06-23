@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pydot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pydot/ChangeLog,v 1.26 2011/06/22 19:13:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pydot/ChangeLog,v 1.27 2011/06/23 14:46:16 hwoarang Exp $
+
+  23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> -pydot-1.0.2-r1.ebuild:
+  Remove old ebuilds. Requested by Arfrever
 
   22 Jun 2011; Fabian Groffen <grobian@gentoo.org> pydot-1.0.23.ebuild:
   Marked ~x64-macos, bug #371861
