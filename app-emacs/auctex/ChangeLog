@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/auctex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.109 2011/06/19 16:38:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/ChangeLog,v 1.110 2011/06/24 18:57:23 ranger Exp $
+
+  24 Jun 2011; Brent Baude <ranger@gentoo.org> auctex-11.86-r1.ebuild:
+  Marking auctex-11.86-r1 ppc for bug 368307
 
   19 Jun 2011; Raúl Porcel <armin76@gentoo.org> auctex-11.86.ebuild,
   auctex-11.86-r1.ebuild:
