@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/drbd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.108 2011/04/29 10:12:47 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.109 2011/06/24 12:02:38 xarthisius Exp $
+
+*drbd-8.3.10 (24 Jun 2011)
+
+  24 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org> +drbd-8.3.10.ebuild:
+  Version bump wrt #372811
 
 *drbd-8.3.7 (29 Apr 2011)
 
