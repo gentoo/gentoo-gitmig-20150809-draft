@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/atheme-services
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.6 2011/06/14 03:07:58 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.7 2011/06/24 03:08:33 binki Exp $
+
+  24 Jun 2011; Nathan Phillip Brink <binki@gentoo.org>
+  atheme-services-6.0.8.ebuild:
+  Add gentoo-prefix support, tested on amd64-linux.
 
   14 Jun 2011; Nathan Phillip Brink <binki@gentoo.org>
   atheme-services-6.0.8.ebuild,

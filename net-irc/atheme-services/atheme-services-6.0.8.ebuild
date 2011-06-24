@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-6.0.8.ebuild,v 1.3 2011/06/14 03:07:58 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-6.0.8.ebuild,v 1.4 2011/06/24 03:08:33 binki Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://atheme.net/downloads/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~sparc ~x86 ~x86-fbsd ~amd64-linux"
 IUSE="largenet ldap nls +pcre perl profile ssl"
 
 RDEPEND="dev-libs/libmowgli
@@ -85,7 +85,7 @@ src_install() {
 	fowners -R 0:${PN} /etc/${PN}
 	keepdir /var/{lib,log}/atheme
 	fowners ${PN}:${PN} /var/{lib,log}/atheme
-	fperms -R 640 /etc/${PN}
+	fperms -R go-w,o-rx /etc/${PN}
 	fperms 750 /etc/${PN} /var/{lib,log,run}/atheme
 
 	cp "${FILESDIR}"/${PN}.initd.in "${T}"/${PN}.initd || die
@@ -98,7 +98,7 @@ src_install() {
 
 	if use perl; then
 		perlinfo
-		insinto "${VENDOR_LIB}"
+		insinto "${VENDOR_LIB#${EPREFIX}}"
 		doins -r contrib/Atheme{,.pm}
 	fi
 }
