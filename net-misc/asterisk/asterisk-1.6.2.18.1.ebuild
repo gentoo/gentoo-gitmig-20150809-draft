@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.2.18.ebuild,v 1.2 2011/05/25 01:59:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.2.18.1.ebuild,v 1.1 2011/06/24 09:08:11 chainsaw Exp $
 
 EAPI=3
 inherit autotools base eutils linux-info multilib
