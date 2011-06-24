@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.3-r3.ebuild,v 1.5 2011/06/24 14:41:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.3-r3.ebuild,v 1.6 2011/06/24 18:44:07 ranger Exp $
 
 EAPI=3
 # desklets don't run with USE=debug
@@ -20,7 +20,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 IUSE="dbus"
-KEYWORDS="alpha amd64 ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86"
 
 # is libgsf needed for runtime or just compiling?
 RDEPEND=">=dev-libs/glib-2.4
