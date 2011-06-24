@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-5.11.ebuild,v 1.1 2011/06/24 06:20:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-5.11.ebuild,v 1.2 2011/06/24 16:29:24 jer Exp $
 
 EAPI="4"
 
@@ -22,19 +22,16 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_prepare() {
-	echo "./logos/gentoo.logo" >> logo_config
-	echo "./logos/gentoo2.logo" >> logo_config
-	echo "./logos/banner-simplified.logo" >> logo_config
-	echo "./logos/banner.logo" >> logo_config
-	echo "./logos/classic-no_periods.logo" >> logo_config
-	echo "./logos/classic-no_periods_or_chars.logo" >> logo_config
-	echo "./logos/classic.logo" >> logo_config
-	cp "${FILESDIR}"/gentoo{,2}.logo "${S}"/logos/
+	cp "${FILESDIR}"/logo_config "${S}"/ || die
+	cp "${FILESDIR}"/gentoo{,2}.logo "${S}"/logos/ || die
 	echo "NAME gentoo" >> "${S}"/logos/gentoo.logo
 }
 
-src_compile() {
+src_configure() {
+	# Not an autotools based configure script
 	ARCH="" ./configure --prefix="${D}"/usr || die
+}
+src_compile() {
 	emake CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" CC="$(tc-getCC)"
 }
 
@@ -43,8 +40,8 @@ src_install() {
 
 	dodoc BUGS README README.CUSTOM_LOGOS TODO USAGE LINUX_LOGO.FAQ
 
-	cp "${FILESDIR}"/${PN}.conf "${WORKDIR}"
-	sed -i -e 's/-L 4 -f -u/-f -u/' "${WORKDIR}"/${PN}.conf
+	cp "${FILESDIR}"/${PN}.conf "${WORKDIR}" || die
+	sed -i -e 's/-L 4 -f -u/-f -u/' "${WORKDIR}"/${PN}.conf || die
 
 	newinitd "${FILESDIR}"/${PN}.initscript ${PN}
 	newconfd "${WORKDIR}"/${PN}.conf ${PN}
