@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+	<email>maksbotan@gentoo.org</email>
+	<description>Proxy maintainer (CC on bugs)</description>
+</maintainer>
+<maintainer>
+	<email>spamslepnoga@inbox.ru</email>
+	<description>Proxied maintainer (assing bugs)</description>
+</maintainer>
+<use>
+	<flag name="kvm">Add support kernel virtual mashine</flag>
+</use>
+</pkgmetadata>

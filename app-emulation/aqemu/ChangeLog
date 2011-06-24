@@ -1,0 +1,11 @@
+# ChangeLog for app-emulation/aqemu
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/aqemu/ChangeLog,v 1.1 2011/06/24 12:35:05 maksbotan Exp $
+
+*aqemu-0.8.1 (24 Jun 2011)
+
+  24 Jun 2011; Maxim Koltsov (maksbotan) <maksbotan@gentoo.org>
+  +aqemu-0.8.1.ebuild, +metadata.xml:
+  Copy app-emulation/aqemu-0.8.1 from layman/rion overlay with slepnoga
+  (spamslepnoga@inbox.ru) as proxied maintainer. Fix bug #251001.
+
