@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libntlm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libntlm/ChangeLog,v 1.24 2011/06/22 21:23:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libntlm/ChangeLog,v 1.25 2011/06/24 15:24:19 armin76 Exp $
+
+  24 Jun 2011; Raúl Porcel <armin76@gentoo.org> libntlm-1.2.ebuild:
+  alpha/ia64/sparc stable wrt #370629
 
   22 Jun 2011; Brent Baude <ranger@gentoo.org> libntlm-1.2.ebuild:
   Marking libntlm-1.2 ppc for bug 370629
