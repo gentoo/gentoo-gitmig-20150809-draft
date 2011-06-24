@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/gsasl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.42 2011/06/22 21:20:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.43 2011/06/24 15:20:30 armin76 Exp $
+
+  24 Jun 2011; Raúl Porcel <armin76@gentoo.org> gsasl-0.2.4.ebuild,
+  gsasl-0.2.29.ebuild, gsasl-1.1.ebuild, gsasl-1.4.1.ebuild,
+  gsasl-1.6.0.ebuild, gsasl-1.6.0-r1.ebuild, gsasl-1.6.1.ebuild:
+  Drop ia64/sparc keywords
 
   22 Jun 2011; Brent Baude <ranger@gentoo.org> gsasl-1.6.1.ebuild:
   Marking gsasl-1.6.1 ppc for bug 364523
