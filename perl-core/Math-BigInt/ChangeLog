@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Math-BigInt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt/ChangeLog,v 1.69 2011/04/24 15:27:35 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt/ChangeLog,v 1.70 2011/06/24 14:31:54 grobian Exp $
+
+  24 Jun 2011; Fabian Groffen <grobian@gentoo.org> Math-BigInt-1.993.0.ebuild:
+  Marked ~ppc-macos
 
   24 Apr 2011; Fabian Groffen <grobian@gentoo.org> ChangeLog:
   Marked ~x86-solaris, bug #296509
