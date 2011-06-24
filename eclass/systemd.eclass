@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.5 2011/06/19 16:05:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.6 2011/06/24 13:13:24 darkside Exp $
 
 # @ECLASS: systemd.eclass
 # @MAINTAINER:
@@ -35,9 +35,10 @@ esac
 # Output the path for the systemd unit directory (not including ${D}).
 # This function always succeeds, even if systemd is not installed.
 systemd_get_unitdir() {
+	has "${EAPI:-0}" 0 1 2 && ! use prefix && EPREFIX=
 	debug-print-function ${FUNCNAME} "${@}"
 
-	echo -n /lib/systemd/system
+	echo -n "${EPREFIX}"/lib/systemd/system
 }
 
 # @FUNCTION: systemd_dounit
