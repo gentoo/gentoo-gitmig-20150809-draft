@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/uqm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/ChangeLog,v 1.27 2010/11/07 22:26:25 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/ChangeLog,v 1.28 2011/06/24 11:31:11 tupone Exp $
+
+  24 Jun 2011; Tupone Alfredo <tupone@gentoo.org> uqm-0.6.2.ebuild:
+  Fix dodoc call on a directory. Bug #369961 by Diego Elio Pettenò
 
   07 Nov 2010; Samuli Suominen <ssuominen@gentoo.org> uqm-0.6.2.ebuild:
   Use virtual/jpeg wrt #327487.

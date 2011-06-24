@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.6.2.ebuild,v 1.12 2010/11/07 22:26:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.6.2.ebuild,v 1.13 2011/06/24 11:31:11 tupone Exp $
 
 EAPI=2
 inherit eutils multilib games
@@ -109,7 +109,9 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog Contributing README WhatsNew doc/users/manual.txt
 	docinto devel
-	dodoc doc/devel/*
+	dodoc doc/devel/[!n]*
+	docinto devel/netplay
+	dodoc doc/devel/netplay/*
 	make_desktop_entry uqm "The Ur-Quan Masters"
 	prepgamesdirs
 
