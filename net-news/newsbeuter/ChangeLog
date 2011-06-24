@@ -1,6 +1,9 @@
 # ChangeLog for net-news/newsbeuter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.28 2011/02/07 13:58:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.29 2011/06/24 16:09:39 radhermit Exp $
+
+  24 Jun 2011; Tim Harder <radhermit@gentoo.org> newsbeuter-2.4.ebuild:
+  Add sys-devel/bc to test deps and explicitly define the src_configure phase.
 
 *newsbeuter-2.4 (07 Feb 2011)
 

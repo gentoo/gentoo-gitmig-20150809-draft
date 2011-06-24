@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-2.4.ebuild,v 1.1 2011/02/07 13:58:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-2.4.ebuild,v 1.2 2011/06/24 16:09:39 radhermit Exp $
 
 EAPI="2"
 inherit toolchain-funcs
@@ -22,7 +22,10 @@ RDEPEND=">=dev-db/sqlite-3.5:3
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext
-	test? ( dev-libs/boost )"
+	test? (
+		dev-libs/boost
+		sys-devel/bc
+	)"
 
 src_prepare() {
 	sed -i \
@@ -32,6 +35,10 @@ src_prepare() {
 
 	# Fix tests count
 	sed -i -e "s:323:325:" test/test.cpp
+}
+
+src_configure() {
+	./config.sh || die
 }
 
 src_test() {
