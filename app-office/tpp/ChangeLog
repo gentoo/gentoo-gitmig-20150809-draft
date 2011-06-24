@@ -1,6 +1,9 @@
 # ChangeLog for app-office/tpp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/tpp/ChangeLog,v 1.18 2010/11/08 07:54:12 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/tpp/ChangeLog,v 1.19 2011/06/24 21:00:14 ranger Exp $
+
+  24 Jun 2011; Brent Baude <ranger@gentoo.org> tpp-1.3.1-r1.ebuild:
+  Marking tpp-1.3.1-r1 ppc for bug 344245
 
   08 Nov 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> tpp-1.3.1-r1.ebuild:
   x86 stable wrt bug #344245
