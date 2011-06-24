@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/libgsasl-1.6.1.ebuild,v 1.4 2011/06/22 21:40:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/libgsasl-1.6.1.ebuild,v 1.5 2011/06/24 16:34:45 armin76 Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ SLOT="0"
 # TODO: check http://www.gnu.org/software/gsasl/#dependencies for more
 # 	optional external libraries.
 #   * ntlm - libntlm ( http://josefsson.org/libntlm/ )
-KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="idn gcrypt kerberos nls static-libs"
 DEPEND="
 	gcrypt? ( dev-libs/libgcrypt )
