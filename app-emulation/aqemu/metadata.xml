@@ -8,9 +8,9 @@
 </maintainer>
 <maintainer>
 	<email>spamslepnoga@inbox.ru</email>
-	<description>Proxied maintainer (assing bugs)</description>
+	<description>Proxied maintainer (assign bugs)</description>
 </maintainer>
 <use>
-	<flag name="kvm">Add support kernel virtual mashine</flag>
+	<flag name="kvm">Add kernel virtual machine support</flag>
 </use>
 </pkgmetadata>

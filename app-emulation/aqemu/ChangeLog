@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/aqemu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/aqemu/ChangeLog,v 1.1 2011/06/24 12:35:05 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/aqemu/ChangeLog,v 1.2 2011/06/24 14:44:51 maksbotan Exp $
+
+  24 Jun 2011; Maxim Koltsov (maksbotan) <maksbotan@gentoo.org>
+  metadata.xml:
+  Fix typo in metadata.xml
 
 *aqemu-0.8.1 (24 Jun 2011)
 
