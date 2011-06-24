@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.285 2011/06/23 20:00:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.286 2011/06/24 08:01:01 keri Exp $
+
+  24 Jun 2011; <keri@gentoo.org> -swi-prolog-5.10.2.ebuild,
+  -swi-prolog-5.10.3.ebuild:
+  Remove old versions
 
   23 Jun 2011; Brent Baude <ranger@gentoo.org> swi-prolog-5.10.4.ebuild:
   Marking swi-prolog-5.10.4 ppc for bug 368537
