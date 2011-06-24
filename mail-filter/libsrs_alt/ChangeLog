@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/libsrs_alt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs_alt/ChangeLog,v 1.25 2011/06/22 21:36:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs_alt/ChangeLog,v 1.26 2011/06/24 15:58:06 armin76 Exp $
+
+  24 Jun 2011; Raúl Porcel <armin76@gentoo.org> libsrs_alt-1.0.ebuild:
+  alpha/ia64/sparc stable wrt #370997
 
   22 Jun 2011; Brent Baude <ranger@gentoo.org> libsrs_alt-1.0.ebuild:
   Marking libsrs_alt-1.0 ppc for bug 370997
