@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-postgresql
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-postgresql/ChangeLog,v 1.21 2011/06/20 08:23:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-postgresql/ChangeLog,v 1.22 2011/06/24 14:51:20 armin76 Exp $
+
+  24 Jun 2011; Raúl Porcel <armin76@gentoo.org>
+  eselect-postgresql-1.0.10.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #371763
 
   20 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   eselect-postgresql-1.0.10.ebuild:
