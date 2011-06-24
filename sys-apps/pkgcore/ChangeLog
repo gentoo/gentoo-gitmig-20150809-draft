@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.114 2011/06/22 22:02:57 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.115 2011/06/24 19:38:57 ferringb Exp $
+
+  24 Jun 2011; Brian Harring <ferringb@gentoo.org> pkgcore-0.6.5.ebuild:
+  update snakeoil deps to 0.4.1; missed in the commit.
 
 *pkgcore-0.6.5 (22 Jun 2011)
 
