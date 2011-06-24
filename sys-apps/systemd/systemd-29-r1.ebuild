@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-29.ebuild,v 1.1 2011/06/17 15:14:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-29-r1.ebuild,v 1.1 2011/06/24 07:15:58 mgorny Exp $
 
 EAPI=4
 
-inherit autotools-utils linux-info pam
+inherit autotools-utils bash-completion linux-info pam
 
 DESCRIPTION="System and service manager for Linux"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
@@ -70,6 +70,7 @@ src_configure() {
 		--with-distro=gentoo
 		--with-rootdir=
 		--localstatedir=/var
+		--docdir=/tmp/docs
 		$(use_enable audit)
 		$(use_enable cryptsetup libcryptsetup)
 		$(use_enable gtk)
@@ -90,10 +91,13 @@ src_configure() {
 }
 
 src_install() {
-	autotools-utils_src_install
+	autotools-utils_src_install \
+		bashcompletiondir=/tmp
 
-	dodoc "${D}"/usr/share/doc/systemd/*
-	rm -rf "${D}"/usr/share/doc/systemd || die
+	# move files as necessary
+	dobashcompletion "${D}"/tmp/systemctl-bash-completion.sh
+	dodoc "${D}"/tmp/docs/*
+	rm -rf "${D}"/tmp || die
 
 	cd "${D}"/usr/share/man/man8/
 	for i in halt poweroff reboot runlevel shutdown telinit; do
