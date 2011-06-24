@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/gedit-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.14 2011/05/02 19:12:17 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.15 2011/06/24 13:31:53 pacho Exp $
+
+*gedit-plugins-2.32.0 (24 Jun 2011)
+
+  24 Jun 2011; Pacho Ramos <pacho@gentoo.org> +gedit-plugins-2.32.0.ebuild,
+  metadata.xml:
+  Version bump and handle plugins better (bug #372511 by Sébastien Wilmet),
+  thanks to Alexandre Rostovtsev for pointing to fixed ebuild. Take
+  maintainership.
 
   02 May 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   gedit-plugins-2.30.0.ebuild:
