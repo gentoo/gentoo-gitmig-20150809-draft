@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qprint
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qprint/ChangeLog,v 1.7 2011/05/24 09:43:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qprint/ChangeLog,v 1.8 2011/06/24 13:51:24 grobian Exp $
+
+  24 Jun 2011; Fabian Groffen <grobian@gentoo.org> qprint-1.0.ebuild:
+  Marked ~ppc-macos
 
   24 May 2011; Kacper Kowalik <xarthisius@gentoo.org> qprint-1.0.ebuild:
   Straight to stable ppc as it's a missing dependency of
