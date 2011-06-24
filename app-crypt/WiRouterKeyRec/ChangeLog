@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/WiRouterKeyRec
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/WiRouterKeyRec/ChangeLog,v 1.10 2011/06/17 19:11:43 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/WiRouterKeyRec/ChangeLog,v 1.11 2011/06/24 12:25:13 c1pher Exp $
+
+*WiRouterKeyRec-1.0.7 (24 Jun 2011)
+
+  24 Jun 2011; Dane Smith <c1pher@gentoo.org> +WiRouterKeyRec-1.0.7.ebuild:
+  Version bump. Thanks Agostino.
 
 *WiRouterKeyRec-1.0.6 (17 Jun 2011)
 
