@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/pf-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/ChangeLog,v 1.28 2011/06/04 16:35:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/ChangeLog,v 1.29 2011/06/24 14:57:17 hwoarang Exp $
+
+*pf-sources-2.6.39_p3 (24 Jun 2011)
+
+  24 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
+  -pf-sources-2.6.39_p2.ebuild, +pf-sources-2.6.39_p3.ebuild:
+  Version bump. Remove previous ebuild since the BFS squeduler contained a
+  number of regressions and bugs.
+  http://ck-hack.blogspot.com/2011/06/2639-bfs-test-9-is-this-one.html and
+  http://ck-hack.blogspot.com/2011/05/2639-bfs-progress.html
 
 *pf-sources-2.6.39_p2 (04 Jun 2011)
 
