@@ -1,6 +1,16 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.73 2011/06/23 11:08:17 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.74 2011/06/24 09:55:00 nirbheek Exp $
+
+*firefox-5.0 (24 Jun 2011)
+
+  24 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +firefox-5.0.ebuild,
+  files/gentoo-default-prefs.js, metadata.xml:
+  Bump to 5.0, major release as well as security bump. XULRunner has been
+  merged back into Firefox with this release, and there is no corresponding
+  net-libs/xulrunner release since upstream has dropped official support for
+  it. Packages that want libmozjs should use dev-lang/spidermonkey, which will
+  be updated soon.
 
 *firefox-3.6.18 (23 Jun 2011)
 
