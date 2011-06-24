@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance/pydance-1.1.0.ebuild,v 1.3 2011/05/14 14:11:33 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance/pydance-1.1.0.ebuild,v 1.4 2011/06/24 18:51:25 ranger Exp $
 
 EAPI=2
 inherit eutils games
@@ -11,7 +11,7 @@ SRC_URI="http://www.icculus.org/pyddr/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 DEPEND="dev-python/pygame
