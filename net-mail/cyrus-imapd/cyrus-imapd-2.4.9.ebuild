@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.4.9.ebuild,v 1.1 2011/06/22 10:53:39 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.4.9.ebuild,v 1.2 2011/06/24 15:37:40 eras Exp $
 
 EAPI=4
 
@@ -71,7 +71,13 @@ src_prepare() {
 	# correct afs include and liblwp.a directory
 	sed -i -e '/I${with_afs_incdir/s/\/include//' \
 		-e '/liblwp/s/liblwp/afs\/liblwp/' \
-		"${S}"/configure{,.in}
+		"${S}"/configure{,.in} || die
+	# same with lock.h
+	sed -i -e '/lock.h/s:lock.h:afs/lock.h:' \
+		ptclient/afskrb.c || die
+	# libcom_err.a to libafscom_err.a
+	sed -i -e '/afs\/libcom_err.a/s:libcom_err.a:libafscom_err.a:' \
+		configure{,.in} || die
 }
 
 src_configure() {
@@ -85,7 +91,7 @@ src_configure() {
 		myconf+=" --with-afs-incdir=/usr/include/afs"
 	fi
 	if use berkdb ; then
-		myconf+="--with-bdb-incdir=$(db_includedir)"
+		myconf+=" --with-bdb-incdir=$(db_includedir)"
 	fi
 	econf \
 		--enable-murder \

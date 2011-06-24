@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.174 2011/06/22 10:53:39 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.175 2011/06/24 15:37:40 eras Exp $
+
+  24 Jun 2011; Eray Aslan <eras@gentoo.org> cyrus-imapd-2.4.9.ebuild:
+  Fix compiling against openafs - bug #372829 by Andrej Filipcic.
 
 *cyrus-imapd-2.4.9 (22 Jun 2011)
 
