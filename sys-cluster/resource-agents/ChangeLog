@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/resource-agents
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/resource-agents/ChangeLog,v 1.13 2011/03/17 22:40:08 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/resource-agents/ChangeLog,v 1.14 2011/06/24 06:24:15 xarthisius Exp $
+
+  24 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  -resource-agents-1.0.3-r1.ebuild, -resource-agents-1.0.4.ebuild:
+  Drop version vulnerable wrt CVE-2010-3389 and old
 
   17 Mar 2011; Thomas Kahle <tomka@gentoo.org> resource-agents-1.0.4-r1.ebuild:
   x86 stable per bug 358785
