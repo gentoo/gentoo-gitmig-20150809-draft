@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/btail
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/btail/ChangeLog,v 1.4 2008/12/30 19:27:36 angelos Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/btail/ChangeLog,v 1.5 2011/06/24 05:49:36 jer Exp $
+
+*btail-0.3 (24 Jun 2011)
+
+  24 Jun 2011; Jeroen Roovers <jer@gentoo.org> +btail-0.3.ebuild:
+  Version bump. Clean up ebuild. Fix one compiler warning.
 
   30 Dec 2008; Christoph Mende <angelos@gentoo.org> btail-0.2.ebuild:
   QA: Respect CC/CXX (bug 243612) and CFLAGS/LDFLAGS (bug 243616)
