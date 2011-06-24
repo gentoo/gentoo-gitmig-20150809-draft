@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.35 2011/05/28 06:53:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.36 2011/06/24 18:52:35 graaff Exp $
+
+*facter-1.6.0 (24 Jun 2011)
+
+  24 Jun 2011; Hans de Graaff <graaff@gentoo.org> +facter-1.6.0.ebuild:
+  Version bump. License changed to Apache-2.0.
 
 *facter-1.5.9 (28 May 2011)
 
