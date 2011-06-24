@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.115 2011/06/24 19:38:57 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.116 2011/06/24 19:51:26 ferringb Exp $
+
+*pkgcore-0.6.5-r1 (24 Jun 2011)
+
+  24 Jun 2011; Brian Harring <ferringb@gentoo.org>
+  +files/0.6.5-fix-screwup-in-incrementals-removal.patch,
+  +pkgcore-0.6.5-r1.ebuild:
+  fix a screwup reported by mgorny for users w/ /etc/portage/profiles
 
   24 Jun 2011; Brian Harring <ferringb@gentoo.org> pkgcore-0.6.5.ebuild:
   update snakeoil deps to 0.4.1; missed in the commit.
