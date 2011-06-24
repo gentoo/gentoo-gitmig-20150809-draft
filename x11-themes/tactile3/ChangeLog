@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/tactile3
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tactile3/ChangeLog,v 1.1 2011/06/24 17:06:17 hwoarang Exp $
+
+*tactile3-3.1 (24 Jun 2011)
+
+  24 Jun 2011; Markos Chandras <hwoarang@gentoo.org> +tactile3-3.1.ebuild,
+  +metadata.xml:
+  Initial commit of tactile3 gtk2.x theme
+
