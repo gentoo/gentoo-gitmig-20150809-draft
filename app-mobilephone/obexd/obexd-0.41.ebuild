@@ -1,15 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/obexd-0.37.ebuild,v 1.3 2011/01/04 19:00:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/obexd-0.41.ebuild,v 1.1 2011/06/24 12:44:04 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 
 DESCRIPTION="OBEX Server and Client"
 HOMEPAGE="http://www.bluez.org/"
 SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug -eds nokia -server usb"
 
 RDEPEND="eds? ( gnome-extra/evolution-data-server )
@@ -27,12 +27,12 @@ src_configure() {
 	econf \
 		$(use_enable debug) \
 		$(use_with eds phonebook ebook) \
-		$(use_enable nokia nokia-backup) \
+		$(use_enable nokia pcsuite) \
 		$(use_enable server) \
 		$(use_enable usb)
 }
 
 src_install() {
-	emake DESTDIR="${ED}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog README doc/*.txt || die
+	emake DESTDIR="${D}" install
+	dodoc AUTHORS ChangeLog README doc/*.txt
 }
