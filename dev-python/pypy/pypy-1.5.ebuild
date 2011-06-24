@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.5.ebuild,v 1.1 2011/06/06 10:58:35 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/pypy-1.5.ebuild,v 1.2 2011/06/24 09:18:38 djc Exp $
 
 EAPI="3"
 
 inherit eutils toolchain-funcs check-reqs python versionator
 
-DESCRIPTION="PyPy is a fast, compliant implementation of the Python language."
+DESCRIPTION="PyPy is a very compliant implementation of the Python language"
 HOMEPAGE="http://pypy.org/"
 SRC_URI="http://pypy.org/download/pypy-${PV}-src.tar.bz2"
 SLOTVER=$(get_version_component_range 1-2 ${PV})
@@ -17,11 +17,9 @@ PYTHON_ABI="2.7-pypy-${SLOTVER}"
 KEYWORDS="~amd64"
 IUSE="doc examples +jit sandbox stackless test bzip2 ncurses xml ssl"
 
-RDEPEND=">=app-admin/eselect-python-20091230
-		>=sys-libs/zlib-1.1.3
+RDEPEND=">=sys-libs/zlib-1.1.3
 		virtual/libffi
 		virtual/libintl
-		sys-devel/gcc
 		bzip2? ( app-arch/bzip2 )
 		ncurses? ( sys-libs/ncurses )
 		xml? ( dev-libs/expat )
@@ -73,8 +71,9 @@ src_install() {
 	insinto ${INSPATH}
 	doins -r include lib_pypy lib-python pypy-c || die "failed"
 	fperms a+x ${INSPATH}/pypy-c || die "failed"
+	dosym ../$(get_libdir)/pypy${SLOT}/pypy-c /usr/bin/pypy-c${SLOT}
 }
 
 src_test() {
-	./pypy/test_all.py --pypy=./pypy-c lib-python
+	$(PYTHON -2) ./pypy/test_all.py --pypy=./pypy-c lib-python
 }
