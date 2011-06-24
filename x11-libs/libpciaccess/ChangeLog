@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libpciaccess
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.69 2011/03/07 21:07:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libpciaccess/ChangeLog,v 1.70 2011/06/24 13:17:08 darkside Exp $
+
+  24 Jun 2011; Jeremy Olexa <darkside@gentoo.org> libpciaccess-0.12.1.ebuild:
+  Add prefix keywords to align with x11-libs/libdrm
 
   07 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -libpciaccess-0.12.0.ebuild:
