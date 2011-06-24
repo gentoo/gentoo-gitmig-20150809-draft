@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/podcast
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/podcast/ChangeLog,v 1.8 2010/08/13 06:32:56 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/podcast/ChangeLog,v 1.9 2011/06/24 14:33:38 armin76 Exp $
+
+  24 Jun 2011; Raúl Porcel <armin76@gentoo.org> podcast-0.0.4-r1.ebuild:
+  Drop ia64 keywords
 
   13 Aug 2010; Hans de Graaff <graaff@gentoo.org> -podcast-0.0.4.ebuild:
   Remove old version.
