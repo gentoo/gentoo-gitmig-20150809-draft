@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/irssi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.164 2010/08/28 11:03:11 swegener Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.165 2011/06/24 05:02:45 binki Exp $
+
+*irssi-0.8.15-r1 (24 Jun 2011)
+
+  24 Jun 2011; Nathan Phillip Brink <binki@gentoo.org>
+  +irssi-0.8.15-r1.ebuild:
+  Fix link error concerning -lncurses on prefix and import changes from
+  prefix-overlay. Bump to EAPI=3.
 
   28 Aug 2010; Sven Wegener <swegener@gentoo.org> -irssi-0.8.14.ebuild,
   -irssi-0.8.15_rc1.ebuild:
