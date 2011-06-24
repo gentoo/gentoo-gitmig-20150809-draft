@@ -1,0 +1,31 @@
+--- trunk/DebugMemory.c	2006/11/08 20:40:10	66
++++ trunk/DebugMemory.c	2011/03/22 20:37:08	216
+@@ -90,7 +90,7 @@
+    return data;
+ }
+ 
+-void* DebugMemory_strdup(char* str, char* file, int line) {
++void* DebugMemory_strdup(const char* str, char* file, int line) {
+    assert(str);
+    char* data = strdup(str);
+    DebugMemory_registerAllocation(data, file, line);
+@@ -102,7 +102,7 @@
+ }
+ 
+ void DebugMemory_free(void* data, char* file, int line) {
+-   assert(data);
++   if (!data) return;
+    DebugMemory_registerDeallocation(data, file, line);
+    if (singleton->file) {
+       if (singleton->totals) fprintf(singleton->file, "%d\t", singleton->size);
+--- trunk/Process.c	2010/11/22 12:40:20	206
++++ trunk/Process.c	2011/03/22 20:37:08	216
+@@ -471,7 +471,7 @@
+       RichString_setAttr(out, CRT_colors[PROCESS_SHADOW]);
+    if (this->tag == true)
+       RichString_setAttr(out, CRT_colors[PROCESS_TAG]);
+-   assert(out->len > 0);
++   assert(out->chlen > 0);
+ }
+ 
+ void Process_delete(Object* cast) {

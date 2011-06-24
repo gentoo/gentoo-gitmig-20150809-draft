@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/htop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.89 2011/06/24 19:59:48 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.90 2011/06/24 22:11:25 idl0r Exp $
+
+  24 Jun 2011; Christian Ruppert <idl0r@gentoo.org> htop-0.9.ebuild,
+  +files/htop-0.9-debug.patch:
+  Another debug fix, bug 372911.
 
   24 Jun 2011; Christian Ruppert <idl0r@gentoo.org> htop-0.9.ebuild,
   metadata.xml:

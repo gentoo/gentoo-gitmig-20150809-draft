@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.9.ebuild,v 1.4 2011/06/24 19:59:49 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.9.ebuild,v 1.5 2011/06/24 22:11:25 idl0r Exp $
 
 EAPI=3
 
@@ -38,8 +38,8 @@ src_prepare() {
 	sed -i -e '1c\#!'"${EPREFIX}"'/usr/bin/python' \
 		scripts/MakeHeader.py || die
 
-	# bug 352024
-	sed -i -e 's:assert(out->len > 0);:assert(out->chlen > 0);:' Process.c || die
+	# bug 352024, 372911
+	epatch "${FILESDIR}/${P}-debug.patch"
 }
 
 src_configure() {
