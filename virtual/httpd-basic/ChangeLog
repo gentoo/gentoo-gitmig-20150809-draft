@@ -1,6 +1,10 @@
 # ChangeLog for virtual/httpd-basic
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-basic/ChangeLog,v 1.7 2011/02/06 11:58:26 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/httpd-basic/ChangeLog,v 1.8 2011/06/24 08:07:25 pva Exp $
+
+  24 Jun 2011; Peter Volkov <pva@gentoo.org> httpd-basic-0.ebuild:
+  www-servers/tux (bug #241452) and www-servers/shttpd (bug #248484) were
+  removed from the tree.
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> httpd-basic-0.ebuild:
   Drop to ~mips
