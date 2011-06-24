@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.26-r1.ebuild,v 1.4 2011/06/14 19:35:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.26-r1.ebuild,v 1.5 2011/06/24 12:01:25 armin76 Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.linuxvirtualserver.org/software/kernel-2.6/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ppc64 ~s390 ~sparc x86"
+KEYWORDS="amd64 ia64 ppc ppc64 s390 sparc x86"
 IUSE="static-libs"
 
 RDEPEND=">=sys-libs/ncurses-5.2
