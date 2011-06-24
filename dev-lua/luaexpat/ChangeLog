@@ -1,6 +1,9 @@
 # ChangeLog for dev-lua/luaexpat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luaexpat/ChangeLog,v 1.3 2011/06/06 11:34:21 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luaexpat/ChangeLog,v 1.4 2011/06/24 20:12:18 djc Exp $
+
+  24 Jun 2011; Dirkjan Ochtman <djc@gentoo.org> -luaexpat-1.1.ebuild:
+  Remove vulnerable old version.
 
 *luaexpat-1.2.0 (06 Jun 2011)
 
