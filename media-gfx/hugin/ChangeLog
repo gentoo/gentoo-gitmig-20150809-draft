@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.112 2011/05/29 21:07:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.113 2011/06/24 16:42:01 ranger Exp $
+
+  24 Jun 2011; Brent Baude <ranger@gentoo.org> hugin-2010.2.0.ebuild:
+  Marking hugin-2010.2.0 ppc for bug 347633
 
 *hugin-2011.0.0 (29 May 2011)
 
