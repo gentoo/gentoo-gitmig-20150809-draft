@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/aiccu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.26 2011/03/21 10:02:49 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aiccu/ChangeLog,v 1.27 2011/06/24 18:58:46 ranger Exp $
+
+  24 Jun 2011; Brent Baude <ranger@gentoo.org> aiccu-2007.01.15-r1.ebuild:
+  Marking aiccu-2007.01.15-r1 ppc for bug 357265
 
   21 Mar 2011; Thomas Kahle <tomka@gentoo.org> aiccu-2007.01.15-r1.ebuild:
   x86 stable per bug 357265
