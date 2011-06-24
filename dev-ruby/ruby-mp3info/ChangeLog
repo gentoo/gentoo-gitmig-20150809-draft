@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-mp3info
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-mp3info/ChangeLog,v 1.17 2011/06/24 14:35:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-mp3info/ChangeLog,v 1.18 2011/06/24 18:25:50 graaff Exp $
+
+  24 Jun 2011; Hans de Graaff <graaff@gentoo.org>
+  -ruby-mp3info-0.6.13-r1.ebuild:
+  Remove old versions.
 
   24 Jun 2011; Raúl Porcel <armin76@gentoo.org> ruby-mp3info-0.6.13-r1.ebuild:
   Drop ia64 keywords
