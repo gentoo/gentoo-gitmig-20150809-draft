@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gif2apng/gif2apng-1.5.ebuild,v 1.2 2011/04/29 07:53:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gif2apng/gif2apng-1.6.ebuild,v 1.1 2011/06/25 23:21:46 radhermit Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit toolchain-funcs
 
@@ -15,18 +15,17 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="media-libs/libpng[apng]"
+RDEPEND="sys-libs/zlib"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
 	app-arch/unzip"
 
 S=${WORKDIR}
 
 src_compile() {
-	emake CC="$(tc-getCC)" LDLIBS="$($(tc-getPKG_CONFIG) --libs libpng)" ${PN} || die
+	emake CC="$(tc-getCC)" LDLIBS="-lz" ${PN}
 }
 
 src_install() {
-	dobin ${PN} || die
+	dobin ${PN}
 	dodoc readme.txt
 }
