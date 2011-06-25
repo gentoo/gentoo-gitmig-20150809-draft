@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/dbext
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/dbext/ChangeLog,v 1.22 2011/03/10 04:43:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/dbext/ChangeLog,v 1.23 2011/06/25 10:20:26 radhermit Exp $
+
+*dbext-13.00 (25 Jun 2011)
+
+  25 Jun 2011; Tim Harder <radhermit@gentoo.org> +dbext-13.00.ebuild:
+  Version bump.
 
   10 Mar 2011; Tim Harder <radhermit@gentoo.org> -dbext-2.20.ebuild,
   -dbext-6.20.ebuild:
