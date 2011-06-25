@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/scite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.114 2011/06/08 18:41:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.115 2011/06/25 17:18:53 armin76 Exp $
+
+  25 Jun 2011; Raúl Porcel <armin76@gentoo.org> scite-2.22.ebuild,
+  scite-2.24.ebuild, scite-2.25.ebuild, scite-2.26.ebuild:
+  Drop sparc keywords
 
   08 Jun 2011; Markus Meier <maekke@gentoo.org> scite-2.25.ebuild:
   x86 stable, bug #369805
