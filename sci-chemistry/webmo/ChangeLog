@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/webmo
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/ChangeLog,v 1.17 2009/05/29 00:44:59 dberkholz Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/ChangeLog,v 1.18 2011/06/25 18:13:47 jlec Exp $
+
+  25 Jun 2011; Justin Lecher <jlec@gentoo.org> webmo-6.1.010.ebuild,
+  webmo-7.0.003.ebuild, webmo-8.0.010.ebuild, metadata.xml:
+  define RDEPEND
 
   29 May 2009; Donnie Berkholz <dberkholz@gentoo.org>; webmo-8.0.010.ebuild:
   Keyword ~amd64.
