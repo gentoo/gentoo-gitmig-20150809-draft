@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/pcl-cvs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/pcl-cvs/ChangeLog,v 1.20 2011/06/12 04:27:01 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/pcl-cvs/ChangeLog,v 1.21 2011/06/25 18:34:40 armin76 Exp $
+
+  25 Jun 2011; Raúl Porcel <armin76@gentoo.org> pcl-cvs-1.70.ebuild:
+  alpha/sparc stable wrt #369897
 
   12 Jun 2011; Thomas Kahle <tomka@gentoo.org> pcl-cvs-1.70.ebuild:
   x86 stable per bug 369897

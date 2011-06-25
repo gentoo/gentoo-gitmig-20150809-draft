@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/leim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/leim/ChangeLog,v 1.18 2011/06/12 04:18:58 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/leim/ChangeLog,v 1.19 2011/06/25 18:22:30 armin76 Exp $
+
+  25 Jun 2011; Raúl Porcel <armin76@gentoo.org> leim-1.31.ebuild:
+  alpha/sparc stable wrt #369897
 
   12 Jun 2011; Thomas Kahle <tomka@gentoo.org> leim-1.31.ebuild:
   x86 stable per bug 369897

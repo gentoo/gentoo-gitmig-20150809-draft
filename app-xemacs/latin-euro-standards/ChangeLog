@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/latin-euro-standards
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/latin-euro-standards/ChangeLog,v 1.9 2011/06/12 04:18:13 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/latin-euro-standards/ChangeLog,v 1.10 2011/06/25 18:21:25 armin76 Exp $
+
+  25 Jun 2011; Raúl Porcel <armin76@gentoo.org>
+  latin-euro-standards-1.09.ebuild:
+  alpha/sparc stable wrt #369897
 
   12 Jun 2011; Thomas Kahle <tomka@gentoo.org>
   latin-euro-standards-1.09.ebuild:

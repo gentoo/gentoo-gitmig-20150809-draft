@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/ps-print
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ps-print/ChangeLog,v 1.16 2011/06/12 04:31:17 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ps-print/ChangeLog,v 1.17 2011/06/25 18:40:39 armin76 Exp $
+
+  25 Jun 2011; Raúl Porcel <armin76@gentoo.org> ps-print-1.12.ebuild:
+  alpha/sparc stable wrt #369897
 
   12 Jun 2011; Thomas Kahle <tomka@gentoo.org> ps-print-1.12.ebuild:
   x86 stable per bug 369897

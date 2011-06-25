@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/igrep
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/igrep/ChangeLog,v 1.16 2011/06/12 04:15:55 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/igrep/ChangeLog,v 1.17 2011/06/25 18:18:07 armin76 Exp $
+
+  25 Jun 2011; Raúl Porcel <armin76@gentoo.org> igrep-1.16.ebuild:
+  alpha/sparc stable wrt #369897
 
   12 Jun 2011; Thomas Kahle <tomka@gentoo.org> igrep-1.16.ebuild:
   x86 stable per bug 369897

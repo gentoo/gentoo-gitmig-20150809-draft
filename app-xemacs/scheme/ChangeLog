@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/scheme
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/scheme/ChangeLog,v 1.25 2011/06/12 04:33:36 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/scheme/ChangeLog,v 1.26 2011/06/25 18:43:59 armin76 Exp $
+
+  25 Jun 2011; Raúl Porcel <armin76@gentoo.org> scheme-1.18.ebuild:
+  alpha/sparc stable wrt #369897
 
   12 Jun 2011; Thomas Kahle <tomka@gentoo.org> scheme-1.18.ebuild:
   x86 stable per bug 369897
