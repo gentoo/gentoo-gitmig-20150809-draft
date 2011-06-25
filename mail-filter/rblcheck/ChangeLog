@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/rblcheck
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/rblcheck/ChangeLog,v 1.12 2011/06/22 21:37:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/rblcheck/ChangeLog,v 1.13 2011/06/25 18:28:51 armin76 Exp $
+
+  25 Jun 2011; Raúl Porcel <armin76@gentoo.org> rblcheck-1.5-r1.ebuild:
+  alpha/sparc stable wrt #370669
 
   22 Jun 2011; Brent Baude <ranger@gentoo.org> rblcheck-1.5-r1.ebuild:
   Marking rblcheck-1.5-r1 ppc for bug 370669
