@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/acpi_call
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpi_call/ChangeLog,v 1.1 2011/06/10 05:46:52 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpi_call/ChangeLog,v 1.2 2011/06/25 11:04:41 maksbotan Exp $
+
+  25 Jun 2011; Maxim Koltsov (maksbotan) <maksbotan@gentoo.org>
+  acpi_call-9999.ebuild:
+  Migrate to git-2.eclass
 
 *acpi_call-9999 (10 Jun 2011)
 
