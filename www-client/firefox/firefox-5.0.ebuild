@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-5.0.ebuild,v 1.1 2011/06/24 09:55:00 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-5.0.ebuild,v 1.2 2011/06/25 14:24:38 nirbheek Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -42,10 +42,12 @@ RDEPEND="
 	system-sqlite? ( >=dev-db/sqlite-3.7.4[fts3,secure-delete,unlock-notify,debug=] )
 	webm? ( media-libs/libvpx
 		media-libs/alsa-lib )"
-
+# We don't use PYTHON_DEPEND/PYTHON_USE_WITH for some silly reason
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	pgo? ( >=sys-devel/gcc-4.5 )
+	pgo? (
+		=dev-lang/python-2*[sqlite]
+		>=sys-devel/gcc-4.5 )
 	webm? ( x86? ( ${ASM_DEPEND} )
 		amd64? ( ${ASM_DEPEND} ) )"
 
@@ -118,6 +120,13 @@ linguas() {
 pkg_setup() {
 	moz_pkgsetup
 
+	# Avoid PGO profiling problems due to enviroment leakage
+	# These should *always* be cleaned up anyway
+	unset DBUS_SESSION_BUS_ADDRESS \
+		XDG_SESSION_COOKIE \
+		ORBIT_SOCKETDIR \
+		SESSION_MANAGER
+
 	if ! use bindist ; then
 		einfo
 		elog "You are enabling official branding. You may not redistribute this build"
@@ -166,6 +175,13 @@ src_prepare() {
 	# Ensure that are plugins dir is enabled as default
 	sed -i -e "s:/usr/lib/mozilla/plugins:/usr/$(get_libdir)/nsbrowser/plugins:" \
 		"${S}"/xpcom/io/nsAppFileLocationProvider.cpp || die "sed failed to replace plugin path!"
+
+	# Fix sandbox violations during make clean, bug 372817
+	sed -e "s:\(/no-such-file\):${T}\1:g" \
+		-i "${S}"/config/rules.mk \
+		-i "${S}"/js/src/config/rules.mk \
+		-i "${S}"/nsprpub/configure{.in,} \
+		|| die
 
 	eautoreconf
 
