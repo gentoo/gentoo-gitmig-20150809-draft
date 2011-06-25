@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/ufdbguard
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ChangeLog,v 1.16 2011/06/18 15:34:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ChangeLog,v 1.17 2011/06/25 07:27:43 flameeyes Exp $
+
+*ufdbguard-1.26 (25 Jun 2011)
+
+  25 Jun 2011; Diego E. Pettenò <flameeyes@gentoo.org> -ufdbguard-1.25.ebuild,
+  +ufdbguard-1.26.ebuild:
+  Version bump; also add -fno-strict-aliasing as upstream code seems to have
+  possible issues.
 
   18 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   ufdbguard-1.24-r1.ebuild:

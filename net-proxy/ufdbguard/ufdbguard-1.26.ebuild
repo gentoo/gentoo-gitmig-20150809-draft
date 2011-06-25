@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ufdbguard-1.25.ebuild,v 1.1 2011/06/10 15:20:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ufdbguard-1.26.ebuild,v 1.1 2011/06/25 07:27:43 flameeyes Exp $
 
 EAPI="4"
 
-inherit eutils
+inherit eutils flag-o-matic
 
 MY_P="ufdbGuard-${PV}"
 
@@ -48,6 +48,10 @@ src_prepare() {
 }
 
 src_configure() {
+	# better safe than sorry, the code has a number of possible
+	# breakage, and at least one certain breakage.
+	append-flags -fno-strict-aliasing
+
 	econf \
 		--with-ufdb-user=squid \
 		--with-ufdb-config=/etc \
