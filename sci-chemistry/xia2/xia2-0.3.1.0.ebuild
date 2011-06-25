@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xia2/xia2-0.3.1.0.ebuild,v 1.1 2010/02/06 23:36:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xia2/xia2-0.3.1.0.ebuild,v 1.2 2011/06/25 18:02:55 jlec Exp $
 
 EAPI="3"
 
 inherit eutils python
 
 DESCRIPTION="An automated data reduction system for crystallography"
-HOMEPAGE="http://www.xia2.org/xia/"
+HOMEPAGE="http://www.ccp4.ac.uk/xia/"
 SRC_URI="http://www.ccp4.ac.uk/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD"
