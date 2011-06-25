@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygoocanvas
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoocanvas/ChangeLog,v 1.20 2011/03/22 19:03:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoocanvas/ChangeLog,v 1.21 2011/06/25 17:49:01 armin76 Exp $
+
+  25 Jun 2011; Raúl Porcel <armin76@gentoo.org> pygoocanvas-0.14.1.ebuild:
+  Add ~sparc wrt #371407
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> pygoocanvas-0.14.1.ebuild:
   Marking pygoocanvas-0.14.1 ppc stable for bug 353436
