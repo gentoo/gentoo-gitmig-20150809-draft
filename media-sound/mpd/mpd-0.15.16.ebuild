@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15.16.ebuild,v 1.3 2011/05/04 18:37:06 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15.16.ebuild,v 1.4 2011/06/25 17:47:22 angelos Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="aac +alsa ao audiofile avahi bzip2 cdio cue +curl debug +fifo +ffmpeg flac
-fluidsynth profile +id3 ipv6 jack lame lastfmradio libmms libsamplerate +mad
+fluidsynth profile +id3tag ipv6 jack lame lastfmradio libmms libsamplerate +mad
 mikmod modplug musepack +network ogg oss pipe pulseaudio sid sqlite unicode
 vorbis wavpack wildmidi zip"
 
@@ -32,7 +32,7 @@ RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	fluidsynth? ( media-sound/fluidsynth )
 	network? ( >=media-libs/libshout-2
 		!lame? ( !vorbis? ( media-libs/libvorbis ) ) )
-	id3? ( media-libs/libid3tag )
+	id3tag? ( media-libs/libid3tag )
 	jack? ( media-sound/jack-audio-connection-kit )
 	lame? ( network? ( media-sound/lame ) )
 	libmms? ( >=media-libs/libmms-0.4 )
@@ -105,7 +105,7 @@ src_configure() {
 		$(use_enable sqlite) $(use_enable curl) \
 		$(use_enable libmms mms) $(use_enable wildmidi) \
 		$(use_enable bzip2) $(use_enable zip) \
-		$(use_enable cdio iso9660) $(use_enable id3) \
+		$(use_enable cdio iso9660) $(use_enable id3tag id3) \
 		$(use_enable audiofile) $(use_enable ffmpeg) \
 		$(use_enable flac) $(use_enable mad) \
 		$(use_enable mikmod) $(use_enable modplug) \

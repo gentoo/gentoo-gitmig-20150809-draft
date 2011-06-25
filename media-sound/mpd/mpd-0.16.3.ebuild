@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.3.ebuild,v 1.1 2011/06/05 20:13:42 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.3.ebuild,v 1.2 2011/06/25 17:47:22 angelos Exp $
 
 EAPI=4
 inherit eutils flag-o-matic linux-info multilib
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="aac +alsa ao audiofile bzip2 cdio cue +curl debug +fifo +ffmpeg flac
-fluidsynth profile +id3 inotify ipv6 jack lame lastfmradio libmms libsamplerate
+fluidsynth profile +id3tag inotify ipv6 jack lame lastfmradio libmms libsamplerate
 +mad mikmod modplug mpg123 musepack +network ogg openal oss pipe pulseaudio sid
 sndfile sqlite tcpd twolame unicode vorbis wavpack wildmidi zeroconf zip"
 
@@ -38,7 +38,7 @@ RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	fluidsynth? ( media-sound/fluidsynth )
 	network? ( >=media-libs/libshout-2
 		!lame? ( !vorbis? ( media-libs/libvorbis ) ) )
-	id3? ( media-libs/libid3tag )
+	id3tag? ( media-libs/libid3tag )
 	jack? ( media-sound/jack-audio-connection-kit )
 	lame? ( network? ( media-sound/lame ) )
 	libmms? ( media-libs/libmms )
@@ -121,7 +121,7 @@ src_configure() {
 		$(use_enable fifo) \
 		$(use_enable flac) \
 		$(use_enable fluidsynth) \
-		$(use_enable id3) \
+		$(use_enable id3tag id3) \
 		$(use_enable inotify) \
 		$(use_enable ipv6) \
 		$(use_enable jack) \

@@ -16,7 +16,7 @@
 	<flag name="curl">Support for web stream listening</flag>
 	<flag name="fifo">Support writing audio to a FIFO</flag>
 	<flag name="fluidsynth">Enables Fluidsynth MIDI software synthesis</flag>
-	<flag name="id3">Support for ID3 tags</flag>
+	<flag name="id3tag">Support for ID3 tags</flag>
 	<flag name="inotify">Use the Linux kernel inotify subsystem to notice changes to mpd music library</flag>
 	<flag name="lame">Support for MP3 streaming via Icecast2</flag>
 	<flag name="lastfmradio">Support listening to last.fm radio stations</flag>
