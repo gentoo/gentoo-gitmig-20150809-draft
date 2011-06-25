@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/gigabase
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/ChangeLog,v 1.49 2011/06/23 07:23:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/ChangeLog,v 1.50 2011/06/25 18:39:54 armin76 Exp $
+
+  25 Jun 2011; Raúl Porcel <armin76@gentoo.org> gigabase-3.69.ebuild,
+  gigabase-3.70.ebuild, gigabase-3.82.ebuild, gigabase-3.82-r1.ebuild:
+  Drop s390 keywords
 
   23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> gigabase-3.82-r1.ebuild:
   Stable on amd64 wrt bug #372599
