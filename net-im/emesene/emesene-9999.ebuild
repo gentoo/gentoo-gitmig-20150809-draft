@@ -1,15 +1,16 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/emesene-9999.ebuild,v 1.3 2011/05/30 18:06:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/emesene-9999.ebuild,v 1.4 2011/06/25 08:12:52 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="sqlite"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
-EGIT_REPO_URI="git://github.com/emesene/emesene.git"
+EGIT_REPO_URI="git://github.com/${PN}/${PN}.git
+	http://github.com/${PN}/${PN}.git"
 
-inherit distutils eutils git
+inherit distutils eutils git-2
 
 DESCRIPTION="Platform independent MSN Messenger client written in Python+GTK"
 HOMEPAGE="http://www.emesene.org"
