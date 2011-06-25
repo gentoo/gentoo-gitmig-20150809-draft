@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pysmssend
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pysmssend/ChangeLog,v 1.20 2011/05/17 19:54:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pysmssend/ChangeLog,v 1.21 2011/06/25 08:58:50 hwoarang Exp $
+
+  25 Jun 2011; Markos Chandras <hwoarang@gentoo.org> pysmssend-9999.ebuild:
+  migrate to git-2 eclass
 
   17 May 2011; Markos Chandras <hwoarang@gentoo.org> pysmssend-9999.ebuild:
   update homepage
