@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/speakup
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/ChangeLog,v 1.58 2011/01/19 01:32:08 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/ChangeLog,v 1.59 2011/06/25 13:29:48 williamh Exp $
+
+  25 Jun 2011; William Hubbs <williamh@gentoo.org>
+  speakup-3.1.6_p201011120508.ebuild, speakup-9999.ebuild:
+  migrate to git-2 eclass
 
   19 Jan 2011; William Hubbs <williamh@gentoo.org>
   speakup-3.1.6_p201011120508.ebuild:
