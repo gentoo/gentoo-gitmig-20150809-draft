@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.388 2011/06/10 00:21:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.389 2011/06/25 17:27:01 armin76 Exp $
+
+  25 Jun 2011; Raúl Porcel <armin76@gentoo.org> clamav-0.97.1.ebuild:
+  Add ~sparc wrt #370959
 
   10 Jun 2011; Tim Harder <radhermit@gentoo.org> clamav-0.97.1.ebuild:
   Use the system libtommath library (bug #268309 by Nathan Phillip Brink
