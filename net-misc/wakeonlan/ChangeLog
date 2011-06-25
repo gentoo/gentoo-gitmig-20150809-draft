@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wakeonlan
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/ChangeLog,v 1.21 2010/01/07 16:01:06 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wakeonlan/ChangeLog,v 1.22 2011/06/25 18:59:47 hwoarang Exp $
+
+  25 Jun 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  add myself as maintainer
 
   07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   wakeonlan-0.41-r1.ebuild:
