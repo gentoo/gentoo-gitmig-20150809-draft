@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.8.ebuild,v 1.3 2011/06/07 08:17:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.2.8.ebuild,v 1.4 2011/06/25 15:30:46 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -107,6 +107,8 @@ pkg_setup() {
 	# Not in portage
 	G2CONF="${G2CONF}
 		--disable-default-binary"
+
+	export XDG_DATA_HOME="${T}/.local"
 }
 
 src_prepare() {
@@ -126,8 +128,4 @@ src_prepare() {
 
 	intltoolize --force --copy --automake || die
 	eautoreconf
-}
-
-src_test() {
-	emake check XDG_DATA_HOME="${T}/.local" || die "tests failed"
 }
