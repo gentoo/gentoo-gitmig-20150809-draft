@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/vim-r
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-r/ChangeLog,v 1.1 2011/03/14 07:21:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-r/ChangeLog,v 1.2 2011/06/25 09:48:47 radhermit Exp $
+
+*vim-r-110614 (25 Jun 2011)
+
+  25 Jun 2011; Tim Harder <radhermit@gentoo.org> +vim-r-110614.ebuild:
+  Version bump. Use github mirror.
 
 *vim-r-110222 (14 Mar 2011)
 
