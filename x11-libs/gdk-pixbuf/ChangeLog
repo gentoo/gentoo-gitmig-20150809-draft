@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.16 2011/06/22 09:37:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.17 2011/06/25 16:59:35 pacho Exp $
+
+  25 Jun 2011; Pacho Ramos <pacho@gentoo.org> gdk-pixbuf-2.22.1-r1.ebuild:
+  PDEPEND on gnome-base/librsvg conditionally (bug #373001 by Lev Babiev).
 
   22 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gdk-pixbuf-2.22.1-r1.ebuild:
