@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libfm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.43 2011/06/14 09:15:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.44 2011/06/25 18:11:18 hwoarang Exp $
+
+  25 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
+  libfm-0.1.15_pre20110422.ebuild, libfm-0.1.15_pre20110614.ebuild,
+  libfm-9999.ebuild:
+  migrate to git-2. Touch non-live ebuilds to silence repoman
 
 *libfm-0.1.15_pre20110614 (14 Jun 2011)
 
