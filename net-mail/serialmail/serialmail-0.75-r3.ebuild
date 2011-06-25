@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/serialmail-0.75-r3.ebuild,v 1.1 2011/01/30 19:18:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/serialmail-0.75-r3.ebuild,v 1.2 2011/06/25 18:27:46 armin76 Exp $
 
 EAPI="3"
 
@@ -20,7 +20,7 @@ RDEPEND="sys-apps/groff
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="static"
 
 src_prepare() {
