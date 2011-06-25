@@ -1,15 +1,16 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-2.0.9999.ebuild,v 1.3 2011/02/28 20:00:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-2.0.9999.ebuild,v 1.4 2011/06/25 08:53:29 hwoarang Exp $
 
 EAPI=3
 
 EGIT_HAS_SUBMODULES="true"
 KDE_LINGUAS="ar ca da de el es et fi fr hu it ko nb nl pt_BR sk sl sv th tr zh_CN zh_TW"
-EGIT_REPO_URI="git://gitorious.org/kmess/kmess.git"
+EGIT_REPO_URI="git://gitorious.org/${PN}/${PN}.git
+	http://git.gitorious.org/${PN}/${PN}.git"
 EGIT_BRANCH="kmess-2.0.x"
 
-inherit git kde4-base
+inherit git-2 kde4-base
 
 DESCRIPTION="KMess is an alternative MSN Messenger chat client for Linux"
 HOMEPAGE="http://www.kmess.org"
@@ -39,7 +40,7 @@ RDEPEND="${COMMONDEPEND}
 RESTRICT="test"
 
 src_unpack() {
-	git_src_unpack
+	git-2_src_unpack
 }
 
 src_configure() {
