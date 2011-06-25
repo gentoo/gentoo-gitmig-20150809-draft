@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.9.9_pre20110422.ebuild,v 1.5 2011/06/02 12:16:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.9.9_pre20110422.ebuild,v 1.6 2011/06/25 18:19:04 hwoarang Exp $
 
 EAPI=2
 
 if [[ ${PV} == 9999 ]]; then
 	EGIT_REPO_URI="git://pcmanfm.git.sourceforge.net/gitroot/pcmanfm/${PN}"
-	inherit autotools git
+	inherit autotools git-2
 	SRC_URI=""
 else
 	inherit autotools
