@@ -1,6 +1,9 @@
 # ChangeLog for app-text/acroread
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.167 2011/06/05 18:47:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.168 2011/06/25 07:40:18 zmedico Exp $
+
+  25 Jun 2011; Zac Medico <zmedico@gentoo.org> acroread-9.4.2.ebuild:
+  Fix firefox dep for rename from mozilla-firefox.
 
   05 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -acroread-9.4.1.ebuild:

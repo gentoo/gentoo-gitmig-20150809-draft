@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.4.2.ebuild,v 1.5 2011/06/05 15:31:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.4.2.ebuild,v 1.6 2011/06/25 07:40:18 zmedico Exp $
 
 EAPI="1"
 
@@ -39,7 +39,7 @@ RDEPEND="media-libs/fontconfig
 	x86? ( x11-libs/gtk+:2
 			ldap? ( net-nds/openldap )
 			!minimal? ( || ( net-libs/xulrunner
-						www-client/mozilla-firefox
+						www-client/firefox
 						www-client/seamonkey ) ) )
 	amd64? ( app-emulation/emul-linux-x86-gtklibs )"
 
