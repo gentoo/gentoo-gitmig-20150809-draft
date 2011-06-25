@@ -1,6 +1,26 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.63 2011/06/14 05:49:44 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.64 2011/06/25 16:59:59 mattst88 Exp $
+
+  25 Jun 2011; Matt Turner <mattst88@gentoo.org> +mips64/n64/make.defaults,
+  +mipsel/mips64el/n64/make.defaults, -mips64/multilib/n32-n64/use.force,
+  -mips64/multilib/n32-o32/use.force, -mips64/multilib/n32/use.force,
+  -mips64/multilib/n64-n32/use.force, -mips64/multilib/n64-o32/use.force,
+  -mips64/multilib/n64/use.force, -mips64/multilib/o32-n32/use.force,
+  -mips64/multilib/o32-n64/use.force, -mips64/multilib/o32/use.force,
+  -mips64/n32/use.force, -mips64/n64/use.force,
+  -mipsel/mips64el/multilib/n32-n64/use.force,
+  -mipsel/mips64el/multilib/n32-o32/use.force,
+  -mipsel/mips64el/multilib/n32/use.force,
+  -mipsel/mips64el/multilib/n64-n32/use.force,
+  -mipsel/mips64el/multilib/n64-o32/use.force,
+  -mipsel/mips64el/multilib/n64/use.force,
+  -mipsel/mips64el/multilib/o32-n32/use.force,
+  -mipsel/mips64el/multilib/o32-n64/use.force,
+  -mipsel/mips64el/multilib/o32/use.force, -mipsel/mips64el/n32/use.force,
+  -mipsel/mips64el/n64/use.force:
+  Remove use.force files containing n32/n64 USE flags, since these flags aren't
+  used anymore
 
   14 Jun 2011; Matt Turner <mattst88@gentoo.org> use.mask:
   use.mask pdfannotextractor
