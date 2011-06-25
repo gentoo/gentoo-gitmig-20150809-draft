@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.3-r2.ebuild,v 1.7 2010/11/28 14:29:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.5.ebuild,v 1.1 2011/06/25 20:27:04 dirtyepic Exp $
 
-EAPI="2"
+EAPI="4"
 
-inherit eutils flag-o-matic libtool
+inherit autotools-utils eutils flag-o-matic libtool
 
 DESCRIPTION="A high-quality and portable font engine"
 HOMEPAGE="http://www.freetype.org/"
@@ -14,8 +14,8 @@ SRC_URI="mirror://sourceforge/freetype/${P/_/}.tar.bz2
 
 LICENSE="FTL GPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="X auto-hinter bindist debug doc utils fontforge"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+IUSE="X auto-hinter bindist debug doc fontforge static-libs utils"
 
 DEPEND="sys-libs/zlib
 	X?	( x11-libs/libX11
@@ -56,15 +56,13 @@ src_prepare() {
 	disable_option FT_CONFIG_OPTION_OLD_INTERNALS
 
 	epatch "${FILESDIR}"/${PN}-2.3.2-enable-valid.patch
-	epatch "${FILESDIR}"/${PN}-2.4.3-SA41738.patch
-	epatch "${FILESDIR}"/${PN}-2.4.3-CVE-2010-3814.patch
 
 	if use utils; then
 		cd "${WORKDIR}/ft2demos-${PV}"
-		sed -i -e "s:\.\.\/freetype2$:../freetype-${PV}:" Makefile
+		sed -i -e "s:\.\.\/freetype2$:../freetype-${PV}:" Makefile || die
 		# Disable tests needing X11 when USE="-X". (bug #177597)
 		if ! use X; then
-			sed -i -e "/EXES\ +=\ ftdiff/ s:^:#:" Makefile
+			sed -i -e "/EXES\ +=\ ftdiff/ s:^:#:" Makefile || die
 		fi
 	fi
 
@@ -75,20 +73,20 @@ src_prepare() {
 src_configure() {
 	append-flags -fno-strict-aliasing
 	type -P gmake &> /dev/null && export GNUMAKE=gmake
-	econf
+	econf $(use_enable static-libs static)
 }
 
 src_compile() {
-	emake || die "emake failed"
+	emake
 
 	if use utils; then
 		cd "${WORKDIR}/ft2demos-${PV}"
-		emake || die "ft2demos emake failed"
+		emake
 	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 
 	dodoc ChangeLog README
 	dodoc docs/{CHANGES,CUSTOMIZE,DEBUG,*.txt,PROBLEMS,TODO}
@@ -111,6 +109,10 @@ src_install() {
 			mkdir -p "${D}/usr/include/freetype2/internal4fontforge/$(dirname ${header})"
 			cp ${header} "${D}/usr/include/freetype2/internal4fontforge/$(dirname ${header})"
 		done
+	fi
+
+	if ! use static-libs; then
+		 remove_libtool_files || die "failed removing libtool files"
 	fi
 }
 
