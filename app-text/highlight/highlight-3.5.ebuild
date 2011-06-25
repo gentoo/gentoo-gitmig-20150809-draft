@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/highlight-3.5.ebuild,v 1.1 2011/06/04 08:12:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/highlight-3.5.ebuild,v 1.2 2011/06/25 14:54:52 grobian Exp $
 
 EAPI=4
 
@@ -27,8 +27,11 @@ pkg_setup() {
 		"AR=$(tc-getAR)"
 		"LDFLAGS=${LDFLAGS}"
 		"CFLAGS=${CXXFLAGS}"
-		"DESTDIR=${ED}"
+		"DESTDIR=${D}"
 		"PREFIX=${EPREFIX}/usr"
+		"LUA_CFLAGS="
+		"HL_CONFIG_DIR=${EPREFIX}/etc/highlight/"
+		"HL_DATA_DIR=${EPREFIX}/usr/share/highlight/"
 		"doc_dir=${EPREFIX}/usr/share/doc/${PF}/"
 		"conf_dir=${EPREFIX}/etc/highlight/"
 	)
@@ -43,7 +46,7 @@ src_compile() {
 	emake -f makefile "${myhlopts[@]}"
 	if use qt4 ; then
 		cd src/gui-qt
-		eqmake4 'DEFINES+=DATA_DIR=\\\"/usr/share/${PN}/\\\" CONFIG_DIR=\\\"/etc/${PN}/\\\" DOC_DIR=\\\"/usr/share/doc/${PF}/\\\"'
+		eqmake4 'DEFINES+=DATA_DIR=\\\"'"${EPREFIX}"'/usr/share/${PN}/\\\" CONFIG_DIR=\\\"'"${EPREFIX}"'/etc/${PN}/\\\" DOC_DIR=\\\"'"${EPREFIX}"'/usr/share/doc/${PF}/\\\"'
 		emake
 	fi
 }

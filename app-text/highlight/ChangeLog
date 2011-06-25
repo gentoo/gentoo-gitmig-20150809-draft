@@ -1,6 +1,9 @@
 # ChangeLog for app-text/highlight
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/ChangeLog,v 1.41 2011/06/08 18:37:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/ChangeLog,v 1.42 2011/06/25 14:54:52 grobian Exp $
+
+  25 Jun 2011; Fabian Groffen <grobian@gentoo.org> highlight-3.5.ebuild:
+  Fix for Prefix
 
   08 Jun 2011; Markus Meier <maekke@gentoo.org> highlight-3.3.ebuild:
   x86 stable, bug #369715
