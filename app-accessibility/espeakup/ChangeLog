@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/espeakup
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeakup/ChangeLog,v 1.21 2011/05/16 23:25:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeakup/ChangeLog,v 1.22 2011/06/25 13:54:08 williamh Exp $
+
+  25 Jun 2011; William Hubbs <williamh@gentoo.org> espeakup-9999.ebuild:
+  migrate to git-2 eclass.
 
   16 May 2011; Diego E. Pettenò <flameeyes@gentoo.org> espeakup-0.71.ebuild,
   espeakup-9999.ebuild:

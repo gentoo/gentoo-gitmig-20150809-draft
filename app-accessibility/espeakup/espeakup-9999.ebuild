@@ -1,17 +1,22 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeakup/espeakup-9999.ebuild,v 1.8 2011/05/16 23:25:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeakup/espeakup-9999.ebuild,v 1.9 2011/06/25 13:54:08 williamh Exp $
 
-EGIT_REPO_URI="git://github.com/williamh/espeakup.git"
-inherit git linux-info
+if [[ ${PV} == "9999" ]] ; then
+	EGIT_REPO_URI="git://github.com/williamh/espeakup.git"
+	vcs=git-2
+else
+	SRC_URI=""
+	KEYWORDS="~amd64 ~x86"
+fi
+
+inherit $vcs linux-info
 
 DESCRIPTION="espeakup is a small lightweight connector for espeak and speakup"
 HOMEPAGE="http://www.github.com/williamh/espeakup"
-SRC_URI=""
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
 IUSE=""
 
 DEPEND="app-accessibility/espeak"
