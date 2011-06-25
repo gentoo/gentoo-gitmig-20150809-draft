@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/viewmol-2.4.1-r2.ebuild,v 1.1 2011/04/17 10:51:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/viewmol/viewmol-2.4.1-r2.ebuild,v 1.2 2011/06/25 18:12:02 jlec Exp $
 
-EAPI="3"
+EAPI=3
 
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="tk"
@@ -38,8 +38,9 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PV}-remove-icc-check.patch
-	epatch "${FILESDIR}"/${PV}-change-default-paths.patch
+	epatch \
+		"${FILESDIR}"/${PV}-remove-icc-check.patch \
+		"${FILESDIR}"/${PV}-change-default-paths.patch
 
 	eprefixify getrc.c
 	sed "s:GENTOOLIBDIR:$(get_libdir):g" \
