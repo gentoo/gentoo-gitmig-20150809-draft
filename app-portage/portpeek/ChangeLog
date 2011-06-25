@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.111 2011/06/19 10:59:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.112 2011/06/25 18:25:23 armin76 Exp $
+
+  25 Jun 2011; Raúl Porcel <armin76@gentoo.org> portpeek-1.9.70.ebuild:
+  sparc stable wrt #370255
 
   19 Jun 2011; Markus Meier <maekke@gentoo.org> portpeek-1.9.70.ebuild:
   arm stable, bug #371783
