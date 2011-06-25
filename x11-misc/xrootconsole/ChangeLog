@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xrootconsole
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/ChangeLog,v 1.25 2011/06/18 11:17:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/ChangeLog,v 1.26 2011/06/25 18:18:53 armin76 Exp $
+
+  25 Jun 2011; Raúl Porcel <armin76@gentoo.org> xrootconsole-0.4-r1.ebuild,
+  xrootconsole-0.6.ebuild:
+  Drop sparc keywords
 
   18 Jun 2011; Markos Chandras <hwoarang@gentoo.org> xrootconsole-0.6.ebuild:
   Stable on amd64 wrt bug #371797
