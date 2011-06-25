@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zpspell/zpspell-0.4.3.ebuild,v 1.1 2009/05/07 21:04:41 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zpspell/zpspell-0.4.3.ebuild,v 1.2 2011/06/25 07:43:34 serkan Exp $
 
 inherit cmake-utils
 
@@ -13,7 +13,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="app-text/zemberek-server"
+DEPEND="dev-libs/dbus-glib"
+RDEPEND="${DEPEND}
+	app-text/zemberek-server"
+
+src_prepare() {
+	epatch "${FILESDIR}"/add-gobject-linkage-11566.diff
+}
 
 src_install() {
 	cmake-utils_src_install

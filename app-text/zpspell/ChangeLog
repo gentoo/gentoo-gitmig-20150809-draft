@@ -1,6 +1,10 @@
 # ChangeLog for app-text/zpspell
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zpspell/ChangeLog,v 1.3 2009/05/07 21:04:41 serkan Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/zpspell/ChangeLog,v 1.4 2011/06/25 07:43:34 serkan Exp $
+
+  25 Jun 2011; Serkan Kaba <serkan@gentoo.org> zpspell-0.4.3.ebuild,
+  +files/add-gobject-linkage-11566.diff:
+  Add Pardus patch to fix bug #369651 and fix dependency wrt bug #372477.
 
 *zpspell-0.4.3 (07 May 2009)
 
