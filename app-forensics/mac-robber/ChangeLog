@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/mac-robber
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/mac-robber/ChangeLog,v 1.5 2009/09/13 22:34:40 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/mac-robber/ChangeLog,v 1.6 2011/06/26 06:27:48 radhermit Exp $
+
+*mac-robber-1.02 (26 Jun 2011)
+
+  26 Jun 2011; Tim Harder <radhermit@gentoo.org> +mac-robber-1.02.ebuild:
+  Version bump. Respect LDFLAGS (bug #336772).
 
   13 Sep 2009; Patrick Lauer <patrick@gentoo.org> mac-robber-1.00.ebuild:
   Remove virtual/libc deps
