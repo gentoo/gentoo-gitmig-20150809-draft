@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/p3d/p3d-0.4.3.ebuild,v 1.1 2011/03/11 12:18:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/p3d/p3d-0.4.3.ebuild,v 1.2 2011/06/26 08:46:21 jlec Exp $
 
-EAPI="3"
+EAPI=3
 
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,7 @@ MY_P="${PN}-$(replace_version_separator 3 -)"
 GITHUB_ID="gb8b9a75"
 
 DESCRIPTION="Python module for structural bioinformatics"
-HOMEPAGE="http://p3d.fufezan.net"
+HOMEPAGE="http://p3d.fufezan.net/"
 SRC_URI="https://nodeload.github.com/fu/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 SLOT="0"
@@ -30,6 +30,6 @@ src_install() {
 	distutils_src_install
 	if use examples; then
 		insinto /usr/share/${PN}
-		doins -r pdbs exampleScripts
+		doins -r pdbs exampleScripts || die
 	fi
 }
