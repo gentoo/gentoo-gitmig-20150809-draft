@@ -1,20 +1,20 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/moldy-2.16e.ebuild,v 1.12 2010/02/17 21:22:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/moldy-2.16e.ebuild,v 1.13 2011/06/26 08:39:46 jlec Exp $
 
-IUSE=""
-
-S=${WORKDIR}
-DESCRIPTION="Program for performing molecular dynamics simulations."
+DESCRIPTION="Molecular dynamics simulations platform"
+HOMEPAGE="http://www.ccp5.ac.uk/moldy/moldy.html"
 SRC_URI="ftp://ftp.earth.ox.ac.uk/pub/keith/${P}.tar.gz"
-#For lack of a better homepage
-HOMEPAGE="http://www.earth.ox.ac.uk/~keithr/moldy.html"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~amd64"
+IUSE=""
 
 DEPEND="virtual/latex-base"
+RDEPEND=""
+
+S="${WORKDIR}"
 
 src_compile() {
 #Individuals may want to edit the OPT* variables below.

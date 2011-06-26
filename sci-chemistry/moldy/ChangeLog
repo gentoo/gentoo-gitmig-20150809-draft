@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/moldy
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/ChangeLog,v 1.18 2010/04/15 14:46:26 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/ChangeLog,v 1.19 2011/06/26 08:39:46 jlec Exp $
+
+  26 Jun 2011; Justin Lecher <jlec@gentoo.org> moldy-2.16e.ebuild,
+  -moldy-2.16e-r1.ebuild, moldy-2.16e-r2.ebuild, metadata.xml:
+  Straight out QA issues
 
 *moldy-2.16e-r2 (15 Apr 2010)
 

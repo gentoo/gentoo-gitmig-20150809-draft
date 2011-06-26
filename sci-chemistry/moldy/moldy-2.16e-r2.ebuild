@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/moldy-2.16e-r2.ebuild,v 1.1 2010/04/15 14:46:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/moldy/moldy-2.16e-r2.ebuild,v 1.2 2011/06/26 08:39:46 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit eutils toolchain-funcs
 
-DESCRIPTION="Program for performing molecular dynamics simulations."
+DESCRIPTION="Molecular dynamics simulations platform"
 HOMEPAGE="http://www.ccp5.ac.uk/moldy/moldy.html"
 SRC_URI="ftp://ftp.earth.ox.ac.uk/pub/keith/${P}.tar.gz"
 
@@ -16,6 +16,7 @@ KEYWORDS="~x86 ~amd64 ~x86-linux ~ppc-macos"
 IUSE="doc examples"
 
 DEPEND="doc? ( virtual/latex-base )"
+RDEPEND=""
 
 S="${WORKDIR}"
 
@@ -42,17 +43,17 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die
+	emake
 	# To prevent sandbox violations by metafont
 	if use doc; then
-		VARTEXFONTS="${T}"/fonts emake moldy.pdf || die
+		VARTEXFONTS="${T}"/fonts emake moldy.pdf
 	fi
 }
 
 src_install() {
 	dodir /usr/bin
-	emake prefix="${ED}"/usr install || die
-	dodoc BENCHMARK READ.ME RELNOTES || die
+	emake prefix="${ED}"/usr install
+	dodoc BENCHMARK READ.ME RELNOTES
 
 	if use examples; then
 		rm Makefile.in configure.in config.h.in
