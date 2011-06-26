@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/mmdb-1.23.2-r1.ebuild,v 1.1 2011/03/04 10:20:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/mmdb-1.23.2-r1.ebuild,v 1.2 2011/06/26 10:51:47 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit autotools eutils
 
-DESCRIPTION="The Coordinate Library is designed to assist CCP4 developers in working with coordinate files"
-HOMEPAGE="http://www.ebi.ac.uk/~keb/cldoc/ http://www.biop.ox.ac.uk/coot"
+DESCRIPTION="The Coordinate Library, designed to assist CCP4 developers in working with coordinate files"
+HOMEPAGE="http://www.ebi.ac.uk/~keb/cldoc/ http://www.biop.ox.ac.uk/coot/"
 SRC_URI="http://www.ysbl.york.ac.uk/~emsley/software/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-3"
@@ -24,7 +24,7 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 
 	# create missing mmdb.pc
 	cat >> "${T}"/mmdb.pc <<- EOF
@@ -44,5 +44,5 @@ src_install() {
 	EOF
 
 	insinto /usr/$(get_libdir)/pkgconfig
-	doins "${T}"/mmdb.pc || die
+	doins "${T}"/mmdb.pc
 }
