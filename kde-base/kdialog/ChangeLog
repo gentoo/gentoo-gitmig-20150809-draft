@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdialog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.173 2011/06/10 18:00:07 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.174 2011/06/26 01:54:42 ranger Exp $
+
+  25 Jun 2011; Brent Baude <ranger@gentoo.org> kdialog-4.6.3.ebuild:
+  Marking kdialog-4.6.3 ppc stable for bug 369979
 
 *kdialog-4.6.4 (10 Jun 2011)
 

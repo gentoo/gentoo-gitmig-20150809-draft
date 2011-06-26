@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kteatime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kteatime/ChangeLog,v 1.172 2011/06/10 17:59:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kteatime/ChangeLog,v 1.173 2011/06/26 01:54:39 ranger Exp $
+
+  26 Jun 2011; Brent Baude <ranger@gentoo.org> kteatime-4.6.3.ebuild:
+  Marking kteatime-4.6.3 ppc stable for bug 369979
 
 *kteatime-4.6.4 (10 Jun 2011)
 

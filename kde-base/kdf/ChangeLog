@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.171 2011/06/10 18:00:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.172 2011/06/26 01:54:39 ranger Exp $
+
+  25 Jun 2011; Brent Baude <ranger@gentoo.org> kdf-4.6.3.ebuild:
+  Marking kdf-4.6.3 ppc stable for bug 369979
 
 *kdf-4.6.4 (10 Jun 2011)
 

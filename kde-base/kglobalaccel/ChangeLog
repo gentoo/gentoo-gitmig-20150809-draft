@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kglobalaccel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kglobalaccel/ChangeLog,v 1.62 2011/06/10 17:59:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kglobalaccel/ChangeLog,v 1.63 2011/06/26 01:54:41 ranger Exp $
+
+  25 Jun 2011; Brent Baude <ranger@gentoo.org> kglobalaccel-4.6.3.ebuild:
+  Marking kglobalaccel-4.6.3 ppc stable for bug 369979
 
 *kglobalaccel-4.6.4 (10 Jun 2011)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-kscreensaver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/ChangeLog,v 1.189 2011/06/10 17:59:53 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-kscreensaver/ChangeLog,v 1.190 2011/06/26 01:54:29 ranger Exp $
+
+  25 Jun 2011; Brent Baude <ranger@gentoo.org>
+  kdeartwork-kscreensaver-4.6.3.ebuild:
+  Marking kdeartwork-kscreensaver-4.6.3 ppc stable for bug 369979
 
 *kdeartwork-kscreensaver-4.6.4 (10 Jun 2011)
 

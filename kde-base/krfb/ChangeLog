@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krfb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.178 2011/06/10 18:00:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.179 2011/06/26 01:54:43 ranger Exp $
+
+  26 Jun 2011; Brent Baude <ranger@gentoo.org> krfb-4.6.3.ebuild:
+  Marking krfb-4.6.3 ppc stable for bug 369979
 
 *krfb-4.6.4 (10 Jun 2011)
 

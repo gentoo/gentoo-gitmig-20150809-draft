@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kaccessible
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaccessible/ChangeLog,v 1.14 2011/06/10 18:00:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaccessible/ChangeLog,v 1.15 2011/06/26 01:54:47 ranger Exp $
+
+  25 Jun 2011; Brent Baude <ranger@gentoo.org> kaccessible-4.6.3.ebuild:
+  Marking kaccessible-4.6.3 ppc stable for bug 369979
 
 *kaccessible-4.6.4 (10 Jun 2011)
 

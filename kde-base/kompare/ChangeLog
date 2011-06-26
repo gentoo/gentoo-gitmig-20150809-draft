@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kompare
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kompare/ChangeLog,v 1.170 2011/06/10 18:00:08 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kompare/ChangeLog,v 1.171 2011/06/26 01:54:47 ranger Exp $
+
+  25 Jun 2011; Brent Baude <ranger@gentoo.org> kompare-4.6.3.ebuild:
+  Marking kompare-4.6.3 ppc stable for bug 369979
 
 *kompare-4.6.4 (10 Jun 2011)
 

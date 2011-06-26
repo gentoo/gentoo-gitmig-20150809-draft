@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/activitymanager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/activitymanager/ChangeLog,v 1.23 2011/06/10 17:59:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/activitymanager/ChangeLog,v 1.24 2011/06/26 01:54:34 ranger Exp $
+
+  25 Jun 2011; Brent Baude <ranger@gentoo.org> activitymanager-4.6.3.ebuild:
+  Marking activitymanager-4.6.3 ppc stable for bug 369979
 
 *activitymanager-4.6.4 (10 Jun 2011)
 

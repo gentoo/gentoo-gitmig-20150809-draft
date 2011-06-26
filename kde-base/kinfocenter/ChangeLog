@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kinfocenter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kinfocenter/ChangeLog,v 1.85 2011/06/10 21:29:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kinfocenter/ChangeLog,v 1.86 2011/06/26 01:54:42 ranger Exp $
+
+  25 Jun 2011; Brent Baude <ranger@gentoo.org> kinfocenter-4.6.3.ebuild:
+  Marking kinfocenter-4.6.3 ppc stable for bug 369979
 
   10 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> Manifest:
   Remanifest as tarball was changed

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.6.3.ebuild,v 1.4 2011/06/10 11:50:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.6.3.ebuild,v 1.5 2011/06/26 01:54:36 ranger Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ fi
 inherit ${kde_eclass} python
 
 DESCRIPTION="Generic geographical map widget"
-KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 IUSE="debug designer-plugin gps plasma python"
 
 # tests fail / segfault. Last checked for 4.2.88

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.230 2011/06/10 21:32:00 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.231 2011/06/26 01:54:39 ranger Exp $
+
+  26 Jun 2011; Brent Baude <ranger@gentoo.org> kwin-4.6.3-r1.ebuild:
+  Marking kwin-4.6.3-r1 ppc stable for bug 369979
 
   10 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> Manifest:
   Remanifest as tarball was changed

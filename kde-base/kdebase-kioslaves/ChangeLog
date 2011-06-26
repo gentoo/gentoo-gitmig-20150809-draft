@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-kioslaves
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.223 2011/06/10 17:59:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/ChangeLog,v 1.224 2011/06/26 01:54:25 ranger Exp $
+
+  25 Jun 2011; Brent Baude <ranger@gentoo.org> kdebase-kioslaves-4.6.3.ebuild:
+  Marking kdebase-kioslaves-4.6.3 ppc stable for bug 369979
 
 *kdebase-kioslaves-4.6.4 (10 Jun 2011)
 

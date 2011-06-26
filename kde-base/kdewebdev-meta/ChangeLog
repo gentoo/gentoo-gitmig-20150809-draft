@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdewebdev-meta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev-meta/ChangeLog,v 1.162 2011/06/10 18:00:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev-meta/ChangeLog,v 1.163 2011/06/26 01:54:35 ranger Exp $
+
+  25 Jun 2011; Brent Baude <ranger@gentoo.org> kdewebdev-meta-4.6.3.ebuild:
+  Marking kdewebdev-meta-4.6.3 ppc stable for bug 369979
 
 *kdewebdev-meta-4.6.4 (10 Jun 2011)
 

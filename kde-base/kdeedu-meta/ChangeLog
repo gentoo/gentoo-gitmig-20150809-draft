@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeedu-meta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.180 2011/06/10 18:00:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.181 2011/06/26 01:54:26 ranger Exp $
+
+  25 Jun 2011; Brent Baude <ranger@gentoo.org> kdeedu-meta-4.6.3.ebuild:
+  Marking kdeedu-meta-4.6.3 ppc stable for bug 369979
 
 *kdeedu-meta-4.6.4 (10 Jun 2011)
 

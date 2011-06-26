@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kbattleship
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbattleship/ChangeLog,v 1.178 2011/06/10 18:00:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbattleship/ChangeLog,v 1.179 2011/06/26 01:54:30 ranger Exp $
+
+  25 Jun 2011; Brent Baude <ranger@gentoo.org> kbattleship-4.6.3.ebuild:
+  Marking kbattleship-4.6.3 ppc stable for bug 369979
 
 *kbattleship-4.6.4 (10 Jun 2011)
 

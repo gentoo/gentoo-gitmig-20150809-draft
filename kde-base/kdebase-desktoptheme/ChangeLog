@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-desktoptheme
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-desktoptheme/ChangeLog,v 1.76 2011/06/10 18:00:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-desktoptheme/ChangeLog,v 1.77 2011/06/26 01:54:48 ranger Exp $
+
+  25 Jun 2011; Brent Baude <ranger@gentoo.org>
+  kdebase-desktoptheme-4.6.3.ebuild:
+  Marking kdebase-desktoptheme-4.6.3 ppc stable for bug 369979
 
 *kdebase-desktoptheme-4.6.4 (10 Jun 2011)
 

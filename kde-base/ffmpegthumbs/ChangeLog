@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ffmpegthumbs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ffmpegthumbs/ChangeLog,v 1.19 2011/06/10 18:00:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ffmpegthumbs/ChangeLog,v 1.20 2011/06/26 01:54:46 ranger Exp $
+
+  25 Jun 2011; Brent Baude <ranger@gentoo.org> ffmpegthumbs-4.6.3.ebuild:
+  Marking ffmpegthumbs-4.6.3 ppc stable for bug 369979
 
 *ffmpegthumbs-4.6.4 (10 Jun 2011)
 

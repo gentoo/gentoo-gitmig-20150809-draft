@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/liboxygenstyle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/liboxygenstyle/ChangeLog,v 1.19 2011/06/10 21:32:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/liboxygenstyle/ChangeLog,v 1.20 2011/06/26 01:54:36 ranger Exp $
+
+  26 Jun 2011; Brent Baude <ranger@gentoo.org> liboxygenstyle-4.6.3.ebuild:
+  Marking liboxygenstyle-4.6.3 ppc stable for bug 369979
 
   10 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> Manifest:
   Remanifest as tarball was changed

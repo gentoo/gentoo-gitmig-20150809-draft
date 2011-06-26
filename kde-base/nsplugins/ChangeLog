@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/nsplugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/ChangeLog,v 1.203 2011/06/16 22:38:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/ChangeLog,v 1.204 2011/06/26 01:54:27 ranger Exp $
+
+  26 Jun 2011; Brent Baude <ranger@gentoo.org> nsplugins-4.6.3.ebuild:
+  Marking nsplugins-4.6.3 ppc stable for bug 369979
 
 *nsplugins-4.6.4-r1 (16 Jun 2011)
 

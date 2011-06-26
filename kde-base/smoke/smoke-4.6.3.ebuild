@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-4.6.3.ebuild,v 1.5 2011/06/10 11:50:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-4.6.3.ebuild,v 1.6 2011/06/26 01:54:42 ranger Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ fi
 inherit ${eclass}
 
 DESCRIPTION="Scripting Meta Object Kompiler Engine"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE="akonadi attica debug kate okular +phonon qimageblitz qscintilla qwt semantic-desktop webkit"
 
 COMMON_DEPEND="
