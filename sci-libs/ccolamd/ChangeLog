@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/ccolamd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ChangeLog,v 1.16 2011/02/23 19:50:06 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ChangeLog,v 1.17 2011/06/26 13:17:19 jlec Exp $
+
+  26 Jun 2011; Justin Lecher <jlec@gentoo.org> ccolamd-2.7.1.ebuild,
+  ccolamd-2.7.3.ebuild, metadata.xml:
+  Defined RDEPEND, bumped EAPI
 
 *ccolamd-2.7.3 (23 Feb 2011)
 
