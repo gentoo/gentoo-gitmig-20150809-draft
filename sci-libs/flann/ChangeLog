@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/flann
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/ChangeLog,v 1.6 2011/06/13 22:23:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/ChangeLog,v 1.7 2011/06/26 10:29:06 jlec Exp $
+
+  26 Jun 2011; Justin Lecher <jlec@gentoo.org> flann-1.6.8.ebuild,
+  flann-1.6.10.ebuild, metadata.xml:
+  Rearranged ebuild
 
   13 Jun 2011; Sébastien Fabbro <bicatali@gentoo.org> flann-1.6.10.ebuild:
   Depend on unzip, closing bug #371513

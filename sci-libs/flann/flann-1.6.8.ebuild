@@ -1,15 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.6.8.ebuild,v 1.4 2011/05/09 23:11:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.6.8.ebuild,v 1.5 2011/06/26 10:29:06 jlec Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="python? 2:2.5"
 
-inherit python cmake-utils
+inherit cmake-utils python
 
 DESCRIPTION="Library for performing fast approximate nearest neighbor searches in high dimensional spaces"
-HOMEPAGE="http://www.cs.ubc.ca/~mariusm/index.php/FLANN/FLANN"
+HOMEPAGE="http://www.cs.ubc.ca/~mariusm/index.php/FLANN/FLANN/"
 SRC_URI="http://people.cs.ubc.ca/~mariusm/uploads/FLANN/${P}-src.zip"
 
 LICENSE="BSD"
@@ -17,15 +17,17 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="python test"
 
-RDEPEND="sci-libs/hdf5[mpi,threads]
+RDEPEND="
+	sci-libs/hdf5[mpi,threads]
 	python? ( dev-python/numpy )"
 DEPEND="${DEPEND}
+	app-arch/unzip
 	test? ( dev-util/gtest )"
 
 RESTRICT=test
 # bug 366477
 
-S=${WORKDIR}/${P}-src
+S="${WORKDIR}"/${P}-src
 
 src_prepare() {
 	sed -i -e "s:share/doc/flann:share/doc/${PF}:" doc/CMakeLists.txt || die

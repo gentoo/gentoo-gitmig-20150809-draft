@@ -1,15 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.6.10.ebuild,v 1.2 2011/06/13 22:23:24 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.6.10.ebuild,v 1.3 2011/06/26 10:29:06 jlec Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="python? 2:2.5"
 
-inherit python cmake-utils eutils
+inherit cmake-utils eutils python
 
-DESCRIPTION="Fast approximate nearest neighbor searches library"
-HOMEPAGE="http://www.cs.ubc.ca/~mariusm/index.php/FLANN/FLANN"
+DESCRIPTION="Library for performing fast approximate nearest neighbor searches in high dimensional spaces"
+HOMEPAGE="http://www.cs.ubc.ca/~mariusm/index.php/FLANN/FLANN/"
 SRC_URI="http://people.cs.ubc.ca/~mariusm/uploads/FLANN/${P}-src.zip"
 
 LICENSE="BSD"
@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc mpi octave python static-libs test"
 
-RDEPEND="sci-libs/hdf5[mpi?]
+RDEPEND="
+	sci-libs/hdf5[mpi?]
 	mpi? ( dev-libs/boost[mpi] )
 	octave? ( sci-mathematics/octave )
 	python? ( dev-python/numpy )"
@@ -25,7 +26,7 @@ DEPEND="${DEPEND}
 	app-arch/unzip
 	test? ( dev-util/gtest )"
 
-S=${WORKDIR}/${P}-src
+S="${WORKDIR}"/${P}-src
 
 src_prepare() {
 	# bug #302621
@@ -37,7 +38,7 @@ src_prepare() {
 	# python standard installation directory respected
 	sed -i \
 		-e "/share/d" \
-		-e "/COMMAND/s:install:install --root=${ED} --no-compile:" \
+		-e "/COMMAND/s:install:install --root="${ED}" --no-compile:" \
 		src/python/CMakeLists.txt || die
 	# produce pure octave files
 	# octave gentoo installation for .m files respected
@@ -71,7 +72,7 @@ src_configure() {
 src_test() {
 	cd "${CMAKE_BUILD_DIR}"
 	LD_LIBRARY_PATH="${PWD}/lib" PYTHONPATH="${S}/src/python" \
-		make test || die
+		emake test
 }
 
 src_install() {
