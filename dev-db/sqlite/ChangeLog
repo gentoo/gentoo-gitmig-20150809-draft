@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.374 2011/06/24 18:39:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.375 2011/06/26 20:00:55 maekke Exp $
+
+  26 Jun 2011; Markus Meier <maekke@gentoo.org> sqlite-3.7.6.3.ebuild:
+  arm stable, bug #372307
 
   24 Jun 2011; Brent Baude <ranger@gentoo.org> sqlite-3.7.6.3.ebuild:
   Marking sqlite-3.7.6.3 ppc for bug 372307
