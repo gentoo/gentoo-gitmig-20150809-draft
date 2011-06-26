@@ -1,6 +1,13 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.59 2011/06/23 14:12:11 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.60 2011/06/26 03:08:02 nirbheek Exp $
+
+*firefox-bin-5.0 (26 Jun 2011)
+
+  26 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +firefox-bin-5.0.ebuild,
+  +files/firefox-bin-prefs.js:
+  Bump to 5.0, we now install the 64-bit build for amd64 instead of the 32-bit
+  build with emul x86 libs
 
 *firefox-bin-3.6.18 (23 Jun 2011)
 
