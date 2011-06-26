@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/xcb-util-renderutil
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-renderutil/ChangeLog,v 1.2 2011/06/23 07:41:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-renderutil/ChangeLog,v 1.3 2011/06/26 20:42:58 maekke Exp $
+
+  26 Jun 2011; Markus Meier <maekke@gentoo.org>
+  xcb-util-renderutil-0.3.8.ebuild:
+  arm stable, bug #371857
 
   23 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
   xcb-util-renderutil-0.3.8.ebuild:
