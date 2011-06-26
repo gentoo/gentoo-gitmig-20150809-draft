@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.2-r3.ebuild,v 1.1 2011/04/12 11:14:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.2-r3.ebuild,v 1.2 2011/06/26 16:32:13 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -18,7 +18,7 @@ SRC_URI="${SRC_URI} http://dev.gentoo.org/~pacho/gnome/${P}-patches-r1.tar.bz2"
 LICENSE="GPL-2 LGPL-2 OPENLDAP"
 SLOT="2.0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="clutter connman crypt doc gstreamer kerberos ldap networkmanager python ssl"
+IUSE="clutter crypt doc gstreamer kerberos ldap networkmanager python ssl"
 
 # We need a graphical pinentry frontend to be able to ask for the GPG
 # password from inside evolution, bug 160302
@@ -47,7 +47,6 @@ RDEPEND=">=dev-libs/glib-2.25.12:2
 	>=dev-libs/libgdata-0.4
 
 	clutter? ( media-libs/clutter:1.0[gtk] )
-	connman? ( net-misc/connman )
 	crypt? ( || (
 				  ( >=app-crypt/gnupg-2.0.1-r2
 					${PINENTRY_DEPEND} )
@@ -91,7 +90,6 @@ pkg_setup() {
 		$(use_enable ssl nss)
 		$(use_enable ssl smime)
 		$(use_enable networkmanager nm)
-		$(use_enable connman)
 		$(use_enable gstreamer audio-inline)
 		--disable-profiling
 		--disable-pst-import
@@ -102,7 +100,8 @@ pkg_setup() {
 		--disable-contacts-map
 		--without-glade-catalog
 		--disable-mono
-		--disable-gtk3"
+		--disable-gtk3
+		--disable-connman"
 
 	# dang - I've changed this to do --enable-plugins=experimental.  This will
 	# autodetect new-mail-notify and exchange, but that cannot be helped for the
@@ -118,12 +117,6 @@ pkg_setup() {
 			--without-nspr-includes
 			--without-nss-libs
 			--without-nss-includes"
-	fi
-
-	# NM and connman support cannot coexist
-	if use networkmanager && use connman ; then
-		ewarn "It is not possible to enable both ConnMan and NetworkManager, disabling connman..."
-		G2CONF="${G2CONF} --disable-connman"
 	fi
 
 	python_set_active_version 2
