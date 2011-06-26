@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.8.ebuild,v 1.20 2011/06/07 02:47:28 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.8.ebuild,v 1.21 2011/06/26 15:03:00 ranger Exp $
 
 EAPI=3
 CMAKE_REQUIRED="never"
@@ -22,7 +22,7 @@ fi
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ~ppc64 ~sparc x86"
 IUSE="+agg cairo cygnal dbus doc fbcon +ffmpeg gnome gstreamer gtk kde lirc mysql +nls nsplugin opengl python +sdl sdl-sound ssh ssl test vaapi video_cards_intel xv"
 
 # gnash fails if obsolete boost is installed, bug #334259

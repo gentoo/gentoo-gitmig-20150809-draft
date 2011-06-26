@@ -1,6 +1,9 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.62 2011/06/07 02:47:28 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.63 2011/06/26 15:03:00 ranger Exp $
+
+  26 Jun 2011; Brent Baude <ranger@gentoo.org> gnash-0.8.8.ebuild:
+  Marking gnash-0.8.8 ppc for bug 339102
 
   07 Jun 2011; Jonathan Callen <abcd@gentoo.org> gnash-0.8.8.ebuild,
   gnash-0.8.9.ebuild:
