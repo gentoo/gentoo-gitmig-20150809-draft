@@ -1,0 +1,27 @@
+--- thinkpad-5.9.orig/2.6/drivers/thinkpad.c	2010-11-19 01:35:10.610000017 +0100
++++ thinkpad-5.9/2.6/drivers/thinkpad.c	2010-11-19 01:35:37.215000017 +0100
+@@ -66,7 +66,6 @@
+ 	struct file * pfileThe 
+ );
+ static int thinkpad_ioctl(
+-	struct inode * pinodeThe,
+ 	struct file * pfileThe,
+ 	unsigned int uintIoctlNum,
+ 	unsigned long ulongIoctlArg
+@@ -111,7 +110,7 @@
+ static flag_t _fInUse = 1;
+ 
+ static struct file_operations _fileopsThinkpad = {
+-	.ioctl   = thinkpad_ioctl,
++	.unlocked_ioctl   = thinkpad_ioctl,
+ 	.open    = thinkpad_open,
+ 	.release = thinkpad_release,
+ 	.owner   = THIS_MODULE
+@@ -169,7 +168,6 @@
+ 
+ 
+ static int thinkpad_ioctl(
+-	struct inode * pinodeThe,
+ 	struct file * pfileThe,
+ 	unsigned int uintIoctlNum,
+ 	unsigned long ulongIoctlArg

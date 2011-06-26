@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/thinkpad-5.9-r1.ebuild,v 1.6 2007/03/21 01:05:02 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/thinkpad-5.9-r1.ebuild,v 1.7 2011/06/26 09:35:33 hwoarang Exp $
 
 inherit eutils linux-mod
 
@@ -47,7 +47,8 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${PN}-5.9-remove-thinkpadapm-argument.patch
 	epatch "${FILESDIR}"/${PN}-5.9-remove-inter_module.patch
-
+	# bug 342161
+	epatch "${FILESDIR}"/${P}-ioctl.patch
 	kernel_is ge 2 6 0 && epatch "${FILESDIR}"/${P}-module-param.patch
 }
 

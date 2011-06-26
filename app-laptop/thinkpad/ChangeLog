@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/thinkpad
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/ChangeLog,v 1.21 2007/05/25 07:00:31 opfer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/thinkpad/ChangeLog,v 1.22 2011/06/26 09:35:33 hwoarang Exp $
+
+  26 Jun 2011; Markos Chandras <hwoarang@gentoo.org> thinkpad-5.9-r1.ebuild,
+  +files/thinkpad-5.9-ioctl.patch:
+  Apply patch from Mateusz Dziadko <matidz.gentoo@gmail.com> to compile against
+  new kernels. Bug #342161
 
   25 May 2007; Christian Faulhammer <opfer@gentoo.org> ChangeLog:
   corrected ChangeLog, so it conforms to our standards
