@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/blohg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/ChangeLog,v 1.5 2011/06/14 02:26:02 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/ChangeLog,v 1.6 2011/06/26 18:10:08 rafaelmartins Exp $
+
+*blohg-9999 (26 Jun 2011)
+
+  26 Jun 2011; Rafael G. Martins <rafaelmartins@gentoo.org> +blohg-9999.ebuild:
+  Added live ebuild.
 
 *blohg-0.5.1 (14 Jun 2011)
 
