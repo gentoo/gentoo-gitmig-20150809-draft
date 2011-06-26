@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/eshell
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/eshell/ChangeLog,v 1.19 2011/06/12 04:47:14 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/eshell/ChangeLog,v 1.20 2011/06/26 10:54:12 armin76 Exp $
+
+  26 Jun 2011; Raúl Porcel <armin76@gentoo.org> eshell-1.18.ebuild:
+  alpha/sparc stable
 
   12 Jun 2011; Thomas Kahle <tomka@gentoo.org> eshell-1.18.ebuild:
   x86 stable per bug 369897
