@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/metis-5.0_pre2-r1.ebuild,v 1.4 2011/06/21 15:12:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/metis-5.0_pre2-r1.ebuild,v 1.5 2011/06/26 09:39:04 jlec Exp $
+
+EAPI=4
 
 inherit autotools eutils fortran-2
 
@@ -10,36 +12,29 @@ DESCRIPTION="A package for unstructured serial graph partitioning"
 HOMEPAGE="http://www-users.cs.umn.edu/~karypis/metis/metis/index.html"
 SRC_URI="http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/metis-${MY_PV}.tar.gz"
 
+SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 LICENSE="free-noncomm"
-
-IUSE="pcre openmp int64 threads"
-SLOT="0"
+IUSE="int64 openmp pcre threads"
 
 DEPEND="
 	virtual/fortran
-	pcre? ( dev-libs/libpcre )
-	openmp? ( || ( >=sys-devel/gcc-4.2 >=dev-lang/icc-9 ) )"
-
+	pcre? ( dev-libs/libpcre )"
 RDEPEND="${DEPEND}
 	!sci-libs/parmetis"
 
 S="${WORKDIR}/metis-${MY_PV}"
 
 pkg_setup() {
-	fortran-2_pkg_setup
-	if use openmp \
-		&& [[ $(tc-getCC) == *gcc ]] \
-		&& [[  $(gcc-major-version)$(gcc-minor-version) -lt 42 ]]; then
-			eerror "You need gcc >= 4.2 to use openmp features."
-			eerror "Please use gcc-config to switch gcc version >= 4.2"
-			die "setup gcc failed"
+	if use openmp; then
+		tc-has-openmp || \
+			die "Please select an OPENMP capable compiler"
+		FORTRAN_NEED_OPENMP=1
 	fi
+	fortran-2_pkg_setup
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-autotools.patch
 	if use int64; then
 		sed -e 's/\(#define IDXTYPEWIDTH\).*32/\1 64/' \
@@ -54,15 +49,8 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		$(use_enable pcre) \
-		$(use_enable openmp) \
-		|| die "econf failed"
-	emake || die "emake failed"
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc CHANGES.v5 || die "dodoc failed"
+		$(use_enable openmp)
 }

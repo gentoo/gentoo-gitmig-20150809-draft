@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/metis
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/ChangeLog,v 1.22 2011/06/21 15:12:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/metis/ChangeLog,v 1.23 2011/06/26 09:39:04 jlec Exp $
+
+  26 Jun 2011; Justin Lecher <jlec@gentoo.org> metis-4.0.1-r1.ebuild,
+  metis-5.0_pre2-r1.ebuild, metadata.xml:
+  Bumped EAPI and corrected structure
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> metis-4.0.1-r1.ebuild,
   metis-5.0_pre2-r1.ebuild:
