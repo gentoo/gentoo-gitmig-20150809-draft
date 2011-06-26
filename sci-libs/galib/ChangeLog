@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/galib
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/galib/ChangeLog,v 1.8 2008/07/07 10:36:21 bicatali Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/galib/ChangeLog,v 1.9 2011/06/26 10:33:03 jlec Exp $
+
+  26 Jun 2011; Justin Lecher <jlec@gentoo.org> galib-2.4.6.ebuild,
+  galib-2.4.7.ebuild, metadata.xml:
+  Bumped EAPI
 
 *galib-2.4.7 (07 Jul 2008)
 
