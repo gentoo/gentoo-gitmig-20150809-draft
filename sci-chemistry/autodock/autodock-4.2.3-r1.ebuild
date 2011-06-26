@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/autodock/autodock-4.2.3-r1.ebuild,v 1.2 2010/06/28 01:07:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/autodock/autodock-4.2.3-r1.ebuild,v 1.3 2011/06/26 09:00:41 jlec Exp $
 
-EAPI="2"
+EAPI=3
 
 PYTHON_DEPEND="test? 2"
 
@@ -49,6 +49,16 @@ src_compile() {
 	emake -C autogrid || die
 }
 
+src_test() {
+	einfo "Testing autodock"
+	cd "${S}/autodock/Tests"
+	cp ../*.dat .
+	$(PYTHON) test_autodock4.py || die "AutoDock tests failed."
+	einfo "Testing autogrid"
+	cd "${S}/autogrid/Tests"
+	$(PYTHON) test_autogrid4.py || die "AutoGrid tests failed."
+}
+
 src_install() {
 	dobin "${S}"/autodock/autodock4 "${S}"/autogrid/autogrid4 \
 		|| die "Failed to install autodock binary."
@@ -59,16 +69,6 @@ src_install() {
 
 	dodoc "${S}"/autodock/{AUTHORS,ChangeLog,NEWS,README} \
 		|| die "Failed to install documentation."
-}
-
-src_test() {
-	einfo "Testing autodock"
-	cd "${S}/autodock/Tests"
-	cp ../*.dat .
-	$(PYTHON) test_autodock4.py || die "AutoDock tests failed."
-	einfo "Testing autogrid"
-	cd "${S}/autogrid/Tests"
-	$(PYTHON) test_autogrid4.py || die "AutoGrid tests failed."
 }
 
 pkg_postinst() {
