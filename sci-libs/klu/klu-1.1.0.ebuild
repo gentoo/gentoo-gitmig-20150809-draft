@@ -1,20 +1,24 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/klu/klu-1.1.0.ebuild,v 1.2 2010/12/25 18:51:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/klu/klu-1.1.0.ebuild,v 1.3 2011/06/26 15:18:10 jlec Exp $
 
 EAPI=2
+
 inherit autotools eutils
 
 MY_PN=KLU
+
 DESCRIPTION="Sparse LU factorization for circuit simulation"
-HOMEPAGE="http://www.cise.ufl.edu/research/sparse/klu"
+HOMEPAGE="http://www.cise.ufl.edu/research/sparse/klu/"
 SRC_URI="http://www.cise.ufl.edu/research/sparse/${PN}/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc static-libs"
-DEPEND="sci-libs/amd
+
+DEPEND="
+	sci-libs/amd
 	sci-libs/btf
 	sci-libs/colamd"
 RDEPEND="${DEPEND}"
