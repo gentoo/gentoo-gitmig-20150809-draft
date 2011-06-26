@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gaul-devel/gaul-devel-0.1849-r2.ebuild,v 1.1 2010/02/13 16:42:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gaul-devel/gaul-devel-0.1849-r2.ebuild,v 1.2 2011/06/26 14:47:52 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit autotools eutils
 
@@ -15,14 +15,17 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="debug slang"
 
-DEPEND=">=sys-apps/sed-4
-	slang? ( >=sys-libs/slang-2.1.3 )"
+DEPEND="
+	sys-apps/sed
+	slang? ( sys-libs/slang )"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${P}-0
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-slang2-error.patch
-	epatch "${FILESDIR}"/${P}-as-needed.patch
+	epatch \
+		"${FILESDIR}"/${P}-slang2-error.patch \
+		"${FILESDIR}"/${P}-as-needed.patch
 	eautoreconf
 }
 
@@ -38,6 +41,6 @@ src_configure() {
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" install || die
-	dodoc README || die
+	MAKEOPTS+=" -j1"
+	default
 }

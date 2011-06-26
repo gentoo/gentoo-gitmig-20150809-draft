@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/gaul-devel
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gaul-devel/ChangeLog,v 1.10 2010/02/13 16:42:19 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gaul-devel/ChangeLog,v 1.11 2011/06/26 14:47:52 jlec Exp $
+
+  26 Jun 2011; Justin Lecher <jlec@gentoo.org> gaul-devel-0.1849-r1.ebuild,
+  gaul-devel-0.1849-r2.ebuild, metadata.xml:
+  Defined RDEPEND, bumped EAPI, corrected die
 
 *gaul-devel-0.1849-r2 (13 Feb 2010)
 
