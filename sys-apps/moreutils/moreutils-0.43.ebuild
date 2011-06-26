@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/moreutils-0.43.ebuild,v 1.4 2011/04/01 05:07:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/moreutils-0.43.ebuild,v 1.5 2011/06/26 08:13:48 hwoarang Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://debian/pool/main/${PN:0:1}/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="amd64 ~hppa ~x86"
 IUSE="+doc +perl"
 
 RDEPEND="
