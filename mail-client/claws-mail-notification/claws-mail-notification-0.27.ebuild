@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/claws-mail-notification-0.27.ebuild,v 1.1 2011/04/10 16:54:17 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/claws-mail-notification-0.27.ebuild,v 1.2 2011/06/26 05:44:02 fauli Exp $
 
 EAPI=2
 inherit eutils multilib
@@ -26,6 +26,7 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.26-libnotify-0.7.patch
+	epatch "${FILESDIR}"/${P}-libnotify-0.7-extra.patch
 }
 
 src_configure() {

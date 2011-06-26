@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/claws-mail-notification
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/ChangeLog,v 1.58 2011/04/10 16:54:17 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/ChangeLog,v 1.59 2011/06/26 05:44:02 fauli Exp $
+
+  26 Jun 2011; Christian Faulhammer <fauli@gentoo.org>
+  claws-mail-notification-0.27.ebuild,
+  +files/claws-mail-notification-0.27-libnotify-0.7-extra.patch:
+  Finally fix the brain-dead configuration checks for libnotify, thanks to
+  detrito from upstream bug
+  http://www.thewildbeast.co.uk/claws-mail/bugzilla/show_bug.cgi?id=2392 and
+  Matteo 'The Peach' Pescarin from bug 368355
 
 *claws-mail-notification-0.27 (10 Apr 2011)
 
