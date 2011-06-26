@@ -1,6 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/memdump/memdump-1.0.1.ebuild,v 1.3 2009/09/13 22:35:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/memdump/memdump-1.0.1.ebuild,v 1.4 2011/06/26 07:17:08 radhermit Exp $
+
+EAPI=4
+
+inherit toolchain-funcs
 
 DESCRIPTION="Simple memory dumper for UNIX-Like systems"
 HOMEPAGE="http://www.porcupine.org/forensics"
@@ -8,20 +12,22 @@ SRC_URI="http://www.porcupine.org/forensics/${PN}-1.01.tar.gz"
 LICENSE="IBM"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-DEPEND="sys-apps/sed
-	sys-apps/grep"
+DEPEND=""
 RDEPEND=""
 IUSE=""
 
 S=${WORKDIR}/${PN}-1.01
 
+src_prepare() {
+	sed -i -e 's:$(CFLAGS):\0 $(LDFLAGS):' Makefile || die
+}
+
 src_compile() {
-	cd ${S}/memdump-1.01
-	emake XFLAGS="${CFLAGS}" OPT= DEBUG= || die
+	emake CC="$(tc-getCC)" XFLAGS="${CFLAGS}" OPT= DEBUG=
 }
 
 src_test() {
-	if has userpriv ${FEATURES};
+	if [[ ${EUID} -ne 0 ]];
 	then
 		einfo "Cannot test with FEATURES=userpriv"
 	elif [ -x /bin/wc ];
@@ -38,6 +44,6 @@ src_test() {
 
 src_install() {
 	dosbin memdump
-	dodoc README LICENSE
+	dodoc README
 	doman memdump.1
 }

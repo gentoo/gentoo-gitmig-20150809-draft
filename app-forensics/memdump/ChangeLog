@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/memdump
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/memdump/ChangeLog,v 1.8 2009/09/13 22:35:31 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/memdump/ChangeLog,v 1.9 2011/06/26 07:17:08 radhermit Exp $
+
+  26 Jun 2011; Tim Harder <radhermit@gentoo.org> memdump-1.0.1.ebuild:
+  Respect LDFLAGS (bug #337739), respect CC (bug #243594), don't test FEATURES
+  (bug #278874), and remove unecessary deps.
 
   13 Sep 2009; Patrick Lauer <patrick@gentoo.org> memdump-1.0.ebuild,
   memdump-1.0.1.ebuild:
