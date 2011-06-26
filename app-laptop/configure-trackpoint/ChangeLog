@@ -1,0 +1,11 @@
+# ChangeLog for app-laptop/configure-trackpoint
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/configure-trackpoint/ChangeLog,v 1.1 2011/06/26 12:21:20 hwoarang Exp $
+
+*configure-trackpoint-0.7 (26 Jun 2011)
+
+  26 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
+  +configure-trackpoint-0.7.ebuild, +metadata.xml:
+  Initial commit of configure-trackpoint, a configuration utility for
+  app-laptop/tp_smapi
+
