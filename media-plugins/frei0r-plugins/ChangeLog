@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/frei0r-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/frei0r-plugins/ChangeLog,v 1.10 2011/06/16 22:59:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/frei0r-plugins/ChangeLog,v 1.11 2011/06/26 14:56:57 ranger Exp $
+
+  26 Jun 2011; Brent Baude <ranger@gentoo.org> frei0r-plugins-1.1.22-r1.ebuild:
+  Marking frei0r-plugins-1.1.22-r1 ppc for bug 365273
 
   16 Jun 2011; Jeroen Roovers <jer@gentoo.org> frei0r-plugins-1.1.22-r1.ebuild:
   Stable for HPPA (bug #365273).
