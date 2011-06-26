@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-5.0.ebuild,v 1.3 2011/06/26 05:59:53 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-5.0.ebuild,v 1.4 2011/06/26 18:06:45 anarchy Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -23,7 +23,7 @@ HOMEPAGE="http://www.mozilla.com/firefox"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="bindist gconf +ipc pgo system-sqlite +webm"
+IUSE="bindist gconf hardened +ipc pgo system-sqlite +webm"
 
 REL_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases"
 FTP_URI="ftp://ftp.mozilla.org/pub/firefox/releases/"
@@ -137,7 +137,7 @@ pkg_setup() {
 		elog "You can disable it by emerging ${PN} _with_ the bindist USE-flag"
 	fi
 
-	if use pgo; then
+	if ! use hardened && use pgo; then
 		einfo
 		ewarn "You will do a double build for profile guided optimization. This will result in your"
 		ewarn "build taking at least twice as long as before."
@@ -217,6 +217,7 @@ src_configure() {
 	mozconfig_annotate '' --enable-canvas
 	mozconfig_annotate '' --enable-safe-browsing
 	mozconfig_annotate '' --with-system-png
+	use hardened && mozconfig_annotate 'hardened' --disable-methodjit
 
 	# Other ff-specific settings
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
@@ -225,7 +226,9 @@ src_configure() {
 	mozconfig_use_enable gconf
 
 	# Allow for a proper pgo build
-	use pgo && echo "mk_add_options PROFILE_GEN_SCRIPT='\$(PYTHON) \$(OBJDIR)/_profile/pgo/profileserver.py'" >> "${S}"/.mozconfig
+	if ! use hardened && use pgo; then
+		echo "mk_add_options PROFILE_GEN_SCRIPT='\$(PYTHON) \$(OBJDIR)/_profile/pgo/profileserver.py'" >> "${S}"/.mozconfig
+	fi
 
 	# Finalize and report settings
 	mozconfig_final
@@ -240,14 +243,14 @@ src_configure() {
 }
 
 src_compile() {
-	if use pgo; then
+	if ! use hardened && use pgo; then
 		CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" \
 		MOZ_MAKE_FLAGS="${MAKEOPTS}" \
 		Xemake -f client.mk profiledbuild || die "Xemake failed"
 	else
 		CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" \
 		MOZ_MAKE_FLAGS="${MAKEOPTS}" \
-		emake -f client.mk realbuild || die "emake failed"
+		emake -f client.mk || die "emake failed"
 	fi
 
 }
@@ -306,7 +309,10 @@ src_install() {
 		echo "StartupNotify=true" >> "${ED}/usr/share/applications/${PN}.desktop"
 	fi
 
-	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/firefox
+	if use hardened; then
+		pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/firefox-bin
+		pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/plugin-container
+	fi
 
 	# Plugins dir
 	dosym ../nsbrowser/plugins "${MOZILLA_FIVE_HOME}"/plugins \

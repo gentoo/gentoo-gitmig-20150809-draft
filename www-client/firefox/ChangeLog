@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.76 2011/06/26 05:59:53 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.77 2011/06/26 18:06:45 anarchy Exp $
+
+  26 Jun 2011; Jory A. Pratt <anarchy@gentoo.org> firefox-5.0.ebuild:
+  Workaround misc hardened issues
 
   26 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> firefox-5.0.ebuild,
   +files/firefox-5.0-fix-title.patch:
