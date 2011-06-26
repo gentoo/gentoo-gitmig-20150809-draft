@@ -1,24 +1,23 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/taucs/taucs-2.2.ebuild,v 1.5 2011/06/21 14:45:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/taucs/taucs-2.2.ebuild,v 1.6 2011/06/26 11:05:22 jlec Exp $
 
-EAPI=2
-inherit eutils fortran-2 toolchain-funcs flag-o-matic
+EAPI=4
+
+inherit eutils flag-o-matic fortran-2 toolchain-funcs
 
 DESCRIPTION="C library of sparse linear solvers"
 HOMEPAGE="http://www.tau.ac.il/~stoledo/taucs/"
 SRC_URI="http://www.tau.ac.il/~stoledo/${PN}/${PV}/${PN}.tgz -> ${P}.tgz"
 
-KEYWORDS="~amd64 ~x86"
-LICENSE="LGPL-2.1"
-
-IUSE="cilk doc static-libs"
 SLOT="0"
+LICENSE="LGPL-2.1"
+IUSE="cilk doc static-libs"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
-	virtual/fortran
-
 	virtual/blas
+	virtual/fortran
 	virtual/lapack
 	|| ( sci-libs/metis sci-libs/parmetis )
 	cilk? ( dev-lang/cilk )"
@@ -55,10 +54,10 @@ src_compile() {
 	# not autotools configure
 	if use static-libs; then
 		./configure variant=_static || die
-		emake || die
+		emake
 	fi
 	./configure variant=_shared || die
-	emake || die
+	emake
 
 	cd lib/linux_shared
 	$(tc-getAR) x libtaucs.a
@@ -80,15 +79,16 @@ src_test() {
 
 src_install() {
 	if use static-libs; then
-		dolib.a lib/linux_static/libtaucs.a || die "static lib install failed"
+		dolib.a lib/linux_static/libtaucs.a
 	fi
-	dolib.so lib/linux_shared/libtaucs.so.1.0.0 || die "shared lib install failed"
+	dolib.so lib/linux_shared/libtaucs.so.1.0.0
 	dosym libtaucs.so.1.0.0 /usr/$(get_libdir)/libtaucs.so.1
 	dosym libtaucs.so.1 /usr/$(get_libdir)/libtaucs.so
 
 	insinto /usr/include
-	doins build/*/*.h src/*.h || die "headers install failed"
+	doins build/*/*.h src/*.h
 
-	insinto /usr/share/doc/${PF}
-	use doc && doins doc/*.pdf
+	use doc && \
+		insinto /usr/share/doc/${PF} && \
+		doins doc/*.pdf
 }

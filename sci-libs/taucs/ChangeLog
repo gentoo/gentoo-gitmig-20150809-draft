@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/taucs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/taucs/ChangeLog,v 1.5 2011/06/21 14:45:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/taucs/ChangeLog,v 1.6 2011/06/26 11:05:22 jlec Exp $
+
+  26 Jun 2011; Justin Lecher <jlec@gentoo.org> taucs-2.2.ebuild, metadata.xml:
+  Corrected quoting, bumped EAPI
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> taucs-2.2.ebuild:
   Add dependency on virtual/fortran
