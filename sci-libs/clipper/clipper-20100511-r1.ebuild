@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/clipper/clipper-20100511.ebuild,v 1.5 2011/06/26 10:13:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/clipper/clipper-20100511-r1.ebuild,v 1.1 2011/06/26 10:13:02 jlec Exp $
 
-EAPI=3
+EAPI=4
 
 WANT_AUTOMAKE="1.11"
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.ysbl.york.ac.uk/~cowtan/clipper/clipper-2.1-${PV:2:${#PV}}-a
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 RDEPEND="
@@ -55,10 +55,5 @@ src_configure() {
 src_test() {
 	emake \
 		-C examples \
-		check || die
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc README ChangeLog NEWS || die
+		check
 }
