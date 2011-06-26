@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/FusionSound
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/FusionSound/ChangeLog,v 1.10 2011/06/23 14:42:19 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/FusionSound/ChangeLog,v 1.11 2011/06/26 14:57:27 ranger Exp $
+
+  26 Jun 2011; Brent Baude <ranger@gentoo.org> FusionSound-1.1.1-r1.ebuild:
+  Marking FusionSound-1.1.1-r1 ppc for bug 365273
 
   23 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   FusionSound-1.1.1-r1.ebuild:
