@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.24 2011/06/23 16:04:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.25 2011/06/26 14:44:45 ranger Exp $
+
+  26 Jun 2011; Brent Baude <ranger@gentoo.org> libvpx-0.9.6.ebuild:
+  Marking libvpx-0.9.6 ppc for bug 365273
 
   23 Jun 2011; Alexis Ballier <aballier@gentoo.org> libvpx-9999.ebuild:
   parallel install has been fixed upstream, remove workaround, bug #323805
