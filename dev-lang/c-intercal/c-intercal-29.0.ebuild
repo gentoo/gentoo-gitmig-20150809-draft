@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/c-intercal/c-intercal-28.65535.65534.0.ebuild,v 1.2 2011/06/26 11:17:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/c-intercal/c-intercal-29.0.ebuild,v 1.1 2011/06/26 11:17:12 ulm Exp $
+
+EAPI=4
 
 inherit elisp-common eutils multilib
 
@@ -20,10 +22,11 @@ get_intercal_version() {
 	echo ${j#.}
 }
 
-MY_PV=$(get_intercal_version)
+MY_PN="${PN#c-}"
+MY_PV="$(get_intercal_version)"
 DESCRIPTION="C-INTERCAL - INTERCAL to binary (via C) compiler"
 HOMEPAGE="http://c.intercal.org.uk"
-SRC_URI="http://overload.intercal.org.uk/c/ick-${MY_PV}.pax.gz"
+SRC_URI="http://overload.intercal.org.uk/c/${MY_PN}-${MY_PV}.pax.gz"
 
 LICENSE="GPL-2 FDL-1.2"
 SLOT="0"
@@ -34,7 +37,7 @@ DEPEND="emacs? ( virtual/emacs )"
 RDEPEND="${DEPEND}"
 
 MY_PV2=${MY_PV%.${MY_PV##*.}}
-S="${WORKDIR}/ick-${MY_PV2##*.}.${MY_PV##*.}"
+S="${WORKDIR}/${MY_PN}-${MY_PV2##*.}.${MY_PV##*.}"
 SITEFILE="50${PN}-gentoo.el"
 
 src_unpack() {
@@ -42,8 +45,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf
-	emake || die
+	emake
 
 	if use emacs; then
 		elisp-compile etc/intercal.el || die
@@ -51,11 +53,8 @@ src_compile() {
 }
 
 src_install() {
-	# Thinks the directories exist, won't as this is done to a DESTDIR...
-	#dodir /usr/bin
-	#dodir /usr/$(get_libdir)
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc BUGS NEWS README doc/THEORY.txt
+	emake DESTDIR="${D}" install
+	dodoc BUGS NEWS HISTORY README doc/THEORY.txt
 
 	if use emacs; then
 		elisp-install ${PN} etc/intercal.{el,elc} || die
@@ -64,7 +63,7 @@ src_install() {
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}
-		doins -r pit || die
+		doins -r pit
 	fi
 }
 
