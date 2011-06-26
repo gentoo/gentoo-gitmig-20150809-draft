@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-5.0.ebuild,v 1.2 2011/06/25 14:24:38 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-5.0.ebuild,v 1.3 2011/06/26 05:59:53 nirbheek Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -123,9 +123,11 @@ pkg_setup() {
 	# Avoid PGO profiling problems due to enviroment leakage
 	# These should *always* be cleaned up anyway
 	unset DBUS_SESSION_BUS_ADDRESS \
-		XDG_SESSION_COOKIE \
+		DISPLAY \
 		ORBIT_SOCKETDIR \
-		SESSION_MANAGER
+		SESSION_MANAGER \
+		XDG_SESSION_COOKIE \
+		XAUTHORITY
 
 	if ! use bindist ; then
 		einfo
@@ -182,6 +184,9 @@ src_prepare() {
 		-i "${S}"/js/src/config/rules.mk \
 		-i "${S}"/nsprpub/configure{.in,} \
 		|| die
+
+	# https://bugs.gentoo.org/372843
+	epatch "${FILESDIR}/${P}-fix-title.patch"
 
 	eautoreconf
 
