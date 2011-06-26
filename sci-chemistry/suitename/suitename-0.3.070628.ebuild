@@ -1,14 +1,14 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/suitename/suitename-0.3.070628.ebuild,v 1.1 2010/07/14 20:15:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/suitename/suitename-0.3.070628.ebuild,v 1.2 2011/06/26 09:10:34 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit toolchain-funcs
 
 MY_P="${PN}.${PV}"
 
-DESCRIPTION="Program that supports the ROC RNA Ontology Consortium consensus RNA backbone nomenclature and conformer-list development"
+DESCRIPTION="The ROC RNA Ontology Consortium consensus RNA backbone nomenclature and conformer-list development"
 HOMEPAGE="http://kinemage.biochem.duke.edu/software/suitename.php"
 SRC_URI="http://kinemage.biochem.duke.edu/downloads/software/${PN}/${MY_P}.src.tgz"
 
@@ -29,9 +29,9 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CFLAGS="${CFLAGS}" || die
+	emake CFLAGS="${CFLAGS}"
 }
 
 src_install() {
-	dobin ${PN} || die
+	dobin ${PN}
 }
