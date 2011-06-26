@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.39 2011/06/21 16:12:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.40 2011/06/26 14:56:25 ranger Exp $
+
+  26 Jun 2011; Brent Baude <ranger@gentoo.org> opencv-2.1.0.ebuild:
+  Marking opencv-2.1.0 ppc for bug 365273
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> opencv-2.1.0.ebuild,
   opencv-2.2.0.ebuild, opencv-2.2.0-r10.ebuild:
