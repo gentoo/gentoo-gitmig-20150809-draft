@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/galleta
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/galleta/ChangeLog,v 1.6 2009/12/30 11:44:38 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/galleta/ChangeLog,v 1.7 2011/06/26 07:37:09 radhermit Exp $
+
+  26 Jun 2011; Tim Harder <radhermit@gentoo.org> galleta-20040505_p1.ebuild:
+  Respect LDFLAGS (bug #343675).
 
   30 Dec 2009; Patrick Lauer <patrick@gentoo.org>
   galleta-20040505_p1.ebuild:
