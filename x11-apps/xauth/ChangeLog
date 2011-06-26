@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xauth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xauth/ChangeLog,v 1.71 2011/06/23 07:50:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xauth/ChangeLog,v 1.72 2011/06/26 20:33:09 maekke Exp $
+
+  26 Jun 2011; Markus Meier <maekke@gentoo.org> xauth-1.0.6.ebuild:
+  arm stable, bug #371857
 
   23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> xauth-1.0.6.ebuild:
   Stable on amd64 wrt bug #372333
