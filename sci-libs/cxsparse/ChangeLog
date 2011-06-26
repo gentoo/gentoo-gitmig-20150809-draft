@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cxsparse
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cxsparse/ChangeLog,v 1.19 2011/02/23 19:52:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cxsparse/ChangeLog,v 1.20 2011/06/26 14:39:26 jlec Exp $
+
+  26 Jun 2011; Justin Lecher <jlec@gentoo.org> cxsparse-2.2.1.ebuild,
+  cxsparse-2.2.3.ebuild, cxsparse-2.2.5.ebuild, metadata.xml:
+  Defined RDEPEND, bumped EAPI
 
 *cxsparse-2.2.5 (23 Feb 2011)
 
