@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.8.1-r2.ebuild,v 1.1 2011/06/24 03:59:16 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.8.1-r2.ebuild,v 1.2 2011/06/26 04:07:48 binki Exp $
 
-EAPI="2"
+EAPI=3
 
 inherit eutils autotools ssl-cert versionator multilib
 
