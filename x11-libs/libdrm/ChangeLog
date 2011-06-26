@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.162 2011/06/23 07:54:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.163 2011/06/26 21:09:03 maekke Exp $
+
+  26 Jun 2011; Markus Meier <maekke@gentoo.org> libdrm-2.4.26.ebuild:
+  arm stable, bug #371857
 
   23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> libdrm-2.4.26.ebuild:
   Stable on amd64 wrt bug #372333
