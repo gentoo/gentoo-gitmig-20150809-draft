@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/argparse
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.26 2011/06/24 16:54:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.27 2011/06/26 08:39:38 naota Exp $
+
+  26 Jun 2011; Naohiro Aota <naota@gentoo.org> argparse-1.2.1.ebuild:
+  Add ~x86-fbsd, bug #346005
 
   24 Jun 2011; Raúl Porcel <armin76@gentoo.org> argparse-1.2.1.ebuild:
   m68k/s390/sh stable
