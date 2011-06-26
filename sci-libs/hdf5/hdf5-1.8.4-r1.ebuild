@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.4-r1.ebuild,v 1.16 2011/06/22 18:05:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.4-r1.ebuild,v 1.17 2011/06/26 09:30:00 jlec Exp $
 
-EAPI=2
+EAPI=3
 
 inherit autotools eutils fortran-2
 
@@ -13,7 +13,6 @@ SRC_URI="http://www.hdfgroup.org/ftp/HDF5/prev-releases/${P}/src/${P}.tar.gz"
 LICENSE="NCSA-HDF"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
-
 IUSE="cxx examples fortran mpi szip threads zlib"
 
 RDEPEND="
@@ -25,7 +24,7 @@ RDEPEND="
 	zlib? ( sys-libs/zlib )"
 
 DEPEND="${RDEPEND}
-	>=sys-devel/libtool-2.2
+	sys-devel/libtool:2
 	sys-process/time"
 
 pkg_setup() {
