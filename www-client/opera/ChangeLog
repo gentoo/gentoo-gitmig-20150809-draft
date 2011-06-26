@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.637 2011/06/25 13:45:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.638 2011/06/26 10:25:49 jer Exp $
+
+*opera-11.50.1073 (26 Jun 2011)
+
+  26 Jun 2011; Jeroen Roovers <jer@gentoo.org> +opera-11.50.1073.ebuild:
+  http://my.opera.com/desktopteam/blog/2011/06/26/swordfish-release-candidate-4
 
 *opera-11.50.1071 (25 Jun 2011)
 
