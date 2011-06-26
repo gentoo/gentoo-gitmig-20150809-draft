@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/ivtv-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-utils/ChangeLog,v 1.14 2011/03/13 16:30:55 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-utils/ChangeLog,v 1.15 2011/06/26 15:19:24 lxnay Exp $
+
+  26 Jun 2011; Fabio Erculiani <lxnay@gentoo.org> ivtv-utils-1.4.0-r2.ebuild:
+  sys-kernel/linux-firmware blocks ivtv-firmware making impossible to have
+  ivtv-utils installed. add or dependency, including sys-kernel/linux-firmware
+  as alternative package to ivtv-firmware
 
   13 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   ivtv-utils-1.4.0-r2.ebuild:

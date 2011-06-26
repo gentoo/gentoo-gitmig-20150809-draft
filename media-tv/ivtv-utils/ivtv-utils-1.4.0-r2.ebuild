@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-utils/ivtv-utils-1.4.0-r2.ebuild,v 1.5 2011/03/13 16:30:55 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-utils/ivtv-utils-1.4.0-r2.ebuild,v 1.6 2011/06/26 15:19:25 lxnay Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ RDEPEND=">=sys-fs/udev-103"
 DEPEND="app-arch/unzip
 	>=sys-kernel/linux-headers-2.6.29
 	!media-tv/ivtv"
-PDEPEND=">=media-tv/ivtv-firmware-20070217
+PDEPEND="|| ( >=media-tv/ivtv-firmware-20070217 sys-kernel/linux-firmware )
 	perl? (
 		dev-perl/Video-Frequencies
 		dev-perl/Video-ivtv
