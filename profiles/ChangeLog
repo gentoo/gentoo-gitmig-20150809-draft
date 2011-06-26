@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5476 2011/06/25 14:13:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5477 2011/06/26 17:13:43 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Jun 2011; Alexis Ballier <aballier@gentoo.org> package.mask:
+  unmask ocamlnet 3.3
 
   25 Jun 2011; Hans de Graaff <graaff@gentoo.org> package.mask:
   Mask forthcoming rubygems 1.8.x releases for testing.

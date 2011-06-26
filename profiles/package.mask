@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12862 2011/06/25 14:13:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12863 2011/06/26 17:13:43 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -363,10 +363,6 @@ app-text/gnochm
 # Luca Barbato <lu_zero@gentoo.org> (19 Apr 2011)
 # Masked for testing, breaks reverse dependencies 
 =media-video/libav-0.7
-
-# Alexis Ballier <aballier@gentoo.org> (14 Apr 2011)
-# Beta/test version -> masked
->=dev-ml/ocamlnet-3.3.0_beta
 
 # Daniel Gryniewicz <dang@gentoo.org> (13 Apr 2011)
 # Masked for removal in 30 days. Functionality is merged into and maintained in
