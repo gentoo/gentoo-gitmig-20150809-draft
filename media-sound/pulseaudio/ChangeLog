@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.231 2011/06/23 07:36:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.232 2011/06/26 20:03:01 maekke Exp $
+
+  26 Jun 2011; Markus Meier <maekke@gentoo.org> pulseaudio-0.9.22-r2.ebuild:
+  arm stable, bug #372355
 
   23 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
   pulseaudio-0.9.22-r2.ebuild:
