@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/resourceproto
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/resourceproto/ChangeLog,v 1.46 2011/06/23 07:55:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/resourceproto/ChangeLog,v 1.47 2011/06/26 21:12:19 maekke Exp $
+
+  26 Jun 2011; Markus Meier <maekke@gentoo.org> resourceproto-1.2.0.ebuild:
+  arm stable, bug #371857
 
   23 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
   resourceproto-1.2.0.ebuild:
