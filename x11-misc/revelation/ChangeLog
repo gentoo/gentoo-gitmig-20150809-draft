@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/revelation
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.18 2010/05/28 18:00:57 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.19 2011/06/26 13:07:04 nyhm Exp $
+
+  26 Jun 2011; Tristan Heaven <nyhm@gentoo.org> revelation-0.4.11-r2.ebuild,
+  files/revelation-0.4.11-build.patch, metadata.xml:
+  Add applet USE flag
 
   28 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   revelation-0.4.11-r2.ebuild:

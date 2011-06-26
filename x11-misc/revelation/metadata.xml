@@ -6,4 +6,7 @@
 		<email>nyhm@gentoo.org</email>
 		<name>Tristan Heaven</name>
 	</maintainer>
+	<use>
+		<flag name="applet">Enable applet for <pkg>gnome-base/gnome-panel</pkg></flag>
+	</use>
 </pkgmetadata>

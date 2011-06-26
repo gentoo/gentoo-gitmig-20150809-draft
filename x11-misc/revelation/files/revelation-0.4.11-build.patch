@@ -18,6 +18,73 @@
  
  RVL_PYTHON_PATH(2.3)
  RVL_PYGTK()
+@@ -26,11 +27,17 @@
+ RVL_PYTHON_MODULE(gconf, yes)
+ RVL_PYTHON_MODULE(gtk, yes)
+ RVL_PYTHON_MODULE(gnome, yes)
+-RVL_PYTHON_MODULE(gnomeapplet, yes)
+ RVL_PYTHON_MODULE(gnomevfs, yes)
+ RVL_PYTHON_MODULE(gobject, yes)
+ RVL_PYTHON_MODULE(pango, yes)
+ 
++AC_ARG_ENABLE([applet],
++	[AS_HELP_STRING([--enable-applet], [install the panel applet])],
++	[enable_applet="${enableval}"], [enable_applet="no"])
++AM_CONDITIONAL([ENABLE_APPLET], [test "${enable_applet}" = "yes"])
++if test "${enable_applet}" = "yes" ; then
++	RVL_PYTHON_MODULE([gnomeapplet], [yes])
++fi
+ 
+ dnl output files
+ AC_OUTPUT([
+--- data/bonobo/Makefile.am
++++ data/bonobo/Makefile.am
+@@ -6,10 +6,13 @@
+ #
+ 
+ serverdir		= $(libdir)/bonobo/servers
+-server_DATA		= GNOME_RevelationApplet.server
+ CLEANFILES		= GNOME_RevelationApplet.server
+ EXTRA_DIST		= GNOME_RevelationApplet.server.in
+ 
++if ENABLE_APPLET
++server_DATA = GNOME_RevelationApplet.server
++endif
++
+ GNOME_RevelationApplet.server: GNOME_RevelationApplet.server.in
+ 	sed \
+ 		-e "s|\@libexecdir\@|$(libexecdir)|" \
+--- data/gconf/Makefile.am
++++ data/gconf/Makefile.am
+@@ -6,7 +6,11 @@
+ #
+ 
+ schemadir		= @GCONF_SCHEMA_FILE_DIR@
+-dist_schema_DATA	= revelation.schemas revelation-applet.schemas
++dist_schema_DATA	= revelation.schemas
++
++if ENABLE_APPLET
++dist_schema_DATA += revelation-applet.schemas
++endif
+ 
+ 
+ install-data-hook:
+--- src/Makefile.am
++++ src/Makefile.am
+@@ -7,10 +7,12 @@
+ 
+ SUBDIRS		= bundle lib wrap
+ bin_SCRIPTS	= revelation
+-libexec_SCRIPTS	= revelation-applet
+ EXTRA_DIST	= revelation.in revelation-applet.in
+ CLEANFILES	= revelation revelation-applet
+ 
++if ENABLE_APPLET
++libexec_SCRIPTS = revelation-applet
++endif
+ 
+ revelation: revelation.in
+ 	sed \
 --- src/wrap/crack/crack.c
 +++ src/wrap/crack/crack.c
 @@ -24,8 +24,6 @@
@@ -32,7 +99,6 @@
 --- src/wrap/crack/Makefile.am
 +++ src/wrap/crack/Makefile.am
 @@ -5,19 +5,9 @@
- # $Id: revelation-0.4.11-build.patch,v 1.2 2010/01/07 20:30:17 nyhm Exp $
  #
  
 -module_PROGRAMS	= crack.so
