@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/pymmlib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/ChangeLog,v 1.21 2011/04/11 10:02:44 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/pymmlib/ChangeLog,v 1.22 2011/06/26 10:22:51 jlec Exp $
+
+  26 Jun 2011; Justin Lecher <jlec@gentoo.org> pymmlib-1.0.0-r1.ebuild,
+  metadata.xml:
+  Straight out QA issues
 
   11 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org> pymmlib-1.0.0-r1.ebuild:
   ppc stable wrt #321873, drop old.
