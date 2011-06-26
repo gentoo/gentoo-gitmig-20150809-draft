@@ -1,37 +1,41 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/molmol-2k_p2-r2.ebuild,v 1.4 2010/11/08 17:14:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/molmol-2k_p2-r2.ebuild,v 1.5 2011/06/26 08:21:32 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
-inherit eutils toolchain-funcs multilib prefix
+inherit eutils multilib prefix toolchain-funcs
 
 MY_PV="${PV/_p/.}.0"
 MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="Publication-quality molecular visualization package"
 HOMEPAGE="http://hugin.ethz.ch/wuthrich/software/molmol/index.html"
-SRC_URI="ftp://ftp.mol.biol.ethz.ch/software/MOLMOL/unix-gzip/${MY_P}-src.tar.gz
+SRC_URI="
+	ftp://ftp.mol.biol.ethz.ch/software/MOLMOL/unix-gzip/${MY_P}-src.tar.gz
 	ftp://ftp.mol.biol.ethz.ch/software/MOLMOL/unix-gzip/${MY_P}-doc.tar.gz"
+
 LICENSE="molmol"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
+
 DEPEND="
 	media-libs/mesa[motif]
-	virtual/jpeg
-	media-libs/tiff
 	media-libs/libpng
+	media-libs/tiff
 	sys-libs/zlib
-	x11-apps/xdpyinfo
+	virtual/jpeg
+	x11-libs/libXpm
 	>=x11-libs/openmotif-2.3:0
-	x11-libs/libXpm"
-# Run-time dependencies, same as DEPEND if RDEPEND isn't defined:
-#RDEPEND=""
-# Yeah, the gz's aren't in a subdir.
+	x11-apps/xdpyinfo"
+RDEPEND="${DEPEND}"
+
 S="${WORKDIR}"
 
 MMDIR="/usr/$(get_libdir)/molmol"
+
+MAKEOPTS="${MAKEOPTS} -j1"
 
 src_prepare() {
 	rm -rf tiff*
@@ -45,35 +49,25 @@ src_prepare() {
 
 	ln -s makedef.lnx "${S}"/makedef
 
-	# 1) The Korn shell is only taken by default because the Bourne shell
-	# on DEC systems cannot handle the script.
-	# We don't want this needless dependency.
-	# 2) Fix up MOLMOLHOME, which determines the directory the binary's in.
-	sed -i \
+	sed \
 		-e "s:/bin/ksh:${EPREFIX}/bin/sh:" \
 		-e "s:^MOLMOLHOME.*:MOLMOLHOME=${EPREFIX}/${MMDIR}:" \
-		"${S}"/molmol
-	# 1) Set CFLAGS.
-	# 2) Set compiler.
-	sed -i \
+		-i "${S}"/molmol || die
+	sed \
 		-e "s:^MCFLAGS.*:MCFLAGS = ${CFLAGS}:" \
 		-e "s:^CC.*:CC = $(tc-getCC):" \
-		"${S}"/makedef
+		-i "${S}"/makedef || die
 
 	epatch "${FILESDIR}"/cast.patch
 }
 
-src_compile() {
-	emake -j1 || die "emake failed"
-}
-
 src_install() {
-	dobin molmol || die
+	dobin molmol
 
 	exeinto ${MMDIR}
-	newexe src/main/molmol molmol.lnx || die
+	newexe src/main/molmol molmol.lnx
 	insinto ${MMDIR}
-	doins -r auxil help macros man setup tips || die
+	doins -r auxil help macros man setup tips
 
-	dodoc HISTORY README || die
+	dodoc HISTORY README
 }
