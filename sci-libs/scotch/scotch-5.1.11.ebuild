@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/scotch-5.1.11.ebuild,v 1.2 2011/03/15 16:58:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/scotch-5.1.11.ebuild,v 1.3 2011/06/26 10:08:23 jlec Exp $
 
 EAPI=4
 
@@ -20,10 +20,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples mpi static-libs"
 
-DEPEND="sys-devel/bison
+RDEPEND="
 	sys-libs/zlib
 	mpi? ( virtual/mpi )"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	sys-devel/bison"
 
 S="${WORKDIR}/${MYP}/src"
 
@@ -37,9 +38,11 @@ make_shared_lib() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/metis-header.patch
-	epatch "${FILESDIR}"/respect-ldflags.patch
-	sed -e "s/@CFLAGS@/${CFLAGS}/" \
+	epatch \
+		"${FILESDIR}"/metis-header.patch \
+		"${FILESDIR}"/respect-ldflags.patch
+	sed \
+		-e "s/@CFLAGS@/${CFLAGS}/" \
 		-e "s/@CC@/$(tc-getCC)/" \
 		-e "s/@AR@/$(tc-getAR)/" \
 		-e "s/@RANLIB@/$(tc-getRANLIB)/" \

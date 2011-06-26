@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/scotch-5.1.7.ebuild,v 1.1 2010/01/15 22:43:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/scotch-5.1.7.ebuild,v 1.2 2011/06/26 10:08:23 jlec Exp $
 
-EAPI="2"
+EAPI=3
 
 inherit eutils
 
-DESCRIPTION="Software package and libraries for graph partitioning, static mapping, and sparse matrix block ordering"
+DESCRIPTION="Software for graph, mesh and hypergraph partitioning"
 HOMEPAGE="http://www.labri.u-bordeaux.fr/perso/pelegrin/scotch/"
 SRC_URI="http://gforge.inria.fr/frs/download.php/23390/${PN}_${PV}.tgz"
 
@@ -15,15 +15,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="mpi"
 
-DEPEND="sys-devel/bison
-	mpi? ( virtual/mpi )"
-RDEPEND="${DEPEND}"
+RDEPEND="mpi? ( virtual/mpi )"
+DEPEND="${RDEPEND}
+	sys-devel/bison"
 
 S=${WORKDIR}"/scotch_5.1/src"
 
 src_prepare() {
-	epatch "${FILESDIR}"/shared-libs_${PV}.patch
-	epatch "${FILESDIR}"/metis-header.patch
+	epatch \
+		"${FILESDIR}"/shared-libs_${PV}.patch \
+		"${FILESDIR}"/metis-header.patch
 }
 
 src_configure() {
@@ -32,7 +33,7 @@ src_configure() {
 
 src_compile() {
 	emake -j1 || die "make failed"
-	use mpi && (emake -j1 ptscotch || die "make failed")
+	use mpi && emake -j1 ptscotch || die "make failed"
 }
 
 src_install() {

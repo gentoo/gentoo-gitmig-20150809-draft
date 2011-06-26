@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/scotch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/ChangeLog,v 1.5 2011/05/17 10:08:20 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scotch/ChangeLog,v 1.6 2011/06/26 10:08:23 jlec Exp $
+
+  26 Jun 2011; Justin Lecher <jlec@gentoo.org> scotch-5.1.7.ebuild,
+  scotch-5.1.11.ebuild, metadata.xml:
+  Removed suspect RDEPEND
 
   17 May 2011; Kacper Kowalik <xarthisius@gentoo.org> files/Makefile.inc.in:
   Fix underlinking wrt #367495. Thanks to Diego Elio Pettenò
