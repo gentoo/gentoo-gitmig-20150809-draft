@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gavl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gavl/ChangeLog,v 1.14 2011/06/16 22:59:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gavl/ChangeLog,v 1.15 2011/06/26 14:55:47 ranger Exp $
+
+  26 Jun 2011; Brent Baude <ranger@gentoo.org> gavl-1.1.0.ebuild:
+  Marking gavl-1.1.0 ppc for bug 365273
 
   16 Jun 2011; Jeroen Roovers <jer@gentoo.org> gavl-1.1.0-r1.ebuild:
   Stable for HPPA (bug #365273).
