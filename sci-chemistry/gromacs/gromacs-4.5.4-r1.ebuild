@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.4-r1.ebuild,v 1.9 2011/06/23 10:08:45 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.4-r1.ebuild,v 1.10 2011/06/26 08:32:55 jlec Exp $
 
 EAPI="4"
 
@@ -10,24 +10,21 @@ MANUAL_PV="4.5.4"
 
 inherit autotools-utils bash-completion flag-o-matic fortran-2 multilib toolchain-funcs
 
-SRC_URI="test? ( ftp://ftp.gromacs.org/pub/tests/gmxtest-${TEST_PV}.tgz )
-		doc? ( ftp://ftp.gromacs.org/pub/manual/manual-${MANUAL_PV}.pdf -> gromacs-manual-${MANUAL_PV}.pdf )"
-
 if [ "${PV%9999}" != "${PV}" ]; then
 	EGIT_REPO_URI="git://git.gromacs.org/gromacs"
 	EGIT_BRANCH="release-4-5-patches"
-	inherit git
+	inherit git-2
 else
 	SRC_URI="${SRC_URI} ftp://ftp.gromacs.org/pub/${PN}/${P}.tar.gz"
 fi
 
-SRC_URI="${SRC_URI}
-		http://dev.gentoo.org/~alexxy/gromacs/0001-Make-stack-non-executable-for-GAS-assembly.patch.gz
-		http://dev.gentoo.org/~alexxy/gromacs/0002-Make-stack-non-executable-for-ATT-assembly.patch.gz
-		"
-
 DESCRIPTION="The ultimate molecular dynamics simulation package"
 HOMEPAGE="http://www.gromacs.org/"
+SRC_URI="${SRC_URI}
+	http://dev.gentoo.org/~alexxy/gromacs/0001-Make-stack-non-executable-for-GAS-assembly.patch.gz
+	http://dev.gentoo.org/~alexxy/gromacs/0002-Make-stack-non-executable-for-ATT-assembly.patch.gz
+	doc? ( ftp://ftp.gromacs.org/pub/manual/manual-${MANUAL_PV}.pdf -> gromacs-manual-${MANUAL_PV}.pdf )
+	test? ( ftp://ftp.gromacs.org/pub/tests/gmxtest-${TEST_PV}.tgz )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -37,13 +34,15 @@ mpi +single-precision sse2 static-libs test +threads +xml zsh-completion"
 REQUIRED_USE="fkernels? ( !threads )"
 
 CDEPEND="
-	fkernels? ( virtual/fortran )
-	X? ( x11-libs/libX11
+	X? (
+		x11-libs/libX11
 		x11-libs/libSM
-		x11-libs/libICE )
+		x11-libs/libICE
+		)
 	dmalloc? ( dev-libs/dmalloc )
 	blas? ( virtual/blas )
 	fftw? ( sci-libs/fftw:3.0 )
+	fkernels? ( virtual/fortran )
 	gsl? ( sci-libs/gsl )
 	lapack? ( virtual/lapack )
 	mpi? ( virtual/mpi )
