@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rifiuti/rifiuti-20040505_p1.ebuild,v 1.5 2009/09/13 22:36:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rifiuti/rifiuti-20040505_p1.ebuild,v 1.6 2011/06/26 06:31:53 radhermit Exp $
 
 inherit toolchain-funcs
 
@@ -17,7 +17,7 @@ S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	cd src
-	$(tc-getCC) ${CFLAGS}  -o rifiuti rifiuti.c -lm -lc || die "failed to compile"
+	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o rifiuti rifiuti.c -lm -lc || die "failed to compile"
 }
 
 src_install() {
