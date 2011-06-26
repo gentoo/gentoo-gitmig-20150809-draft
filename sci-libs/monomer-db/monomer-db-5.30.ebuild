@@ -1,11 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/monomer-db/monomer-db-5.21.ebuild,v 1.5 2011/02/26 11:22:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/monomer-db/monomer-db-5.30.ebuild,v 1.1 2011/06/26 15:16:15 jlec Exp $
+
+EAPI=4
 
 MY_PN="refmac_dictionary"
 
 DESCRIPTION="Monomer library used for macromolecular structure building and refinement"
-HOMEPAGE="http://www.ccp4.ac.uk"
+HOMEPAGE="http://www.ccp4.ac.uk/"
 SRC_URI="http://www.ysbl.york.ac.uk/~garib/refmac/data/refmac_experimental/${MY_PN}_v${PV}.tar.gz"
 
 SLOT="0"
@@ -25,8 +27,8 @@ S="${WORKDIR}"/monomers
 src_install() {
 	insinto /usr/share/ccp4/data/monomers/
 	for i in {a..z} {0..9} *list *.cif *.txt; do
-		doins -r ${i} || die
+		einfo "Installing ${i}** ..."
+		doins -r ${i}
 	done
-	dodoc *.txt *.ps || die
-	dohtml *.html || die
+	dodoc *.txt
 }

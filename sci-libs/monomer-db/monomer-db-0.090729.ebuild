@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/monomer-db/monomer-db-0.090729.ebuild,v 1.6 2011/02/26 11:22:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/monomer-db/monomer-db-0.090729.ebuild,v 1.7 2011/06/26 15:16:15 jlec Exp $
 
 DESCRIPTION="Monomer library used for macromolecular structure building and refinement"
-HOMEPAGE="http://www.ccp4.ac.uk"
+HOMEPAGE="http://www.ccp4.ac.uk/"
 # SRC_URI="http://www.ysbl.york.ac.uk/~garib/refmac/data/refmac_dictionary.tar.gz"
 SRC_URI="http://dev.gentooexperimental.org/~jlec/science-dist/${P}.tar.gz"
 
