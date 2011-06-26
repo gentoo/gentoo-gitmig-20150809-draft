@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/pasco/pasco-20040505_p1.ebuild,v 1.6 2009/12/30 12:02:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/pasco/pasco-20040505_p1.ebuild,v 1.7 2011/06/26 06:34:11 radhermit Exp $
 
 inherit toolchain-funcs
 
@@ -17,7 +17,7 @@ S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	cd src
-	$(tc-getCC) ${CFLAGS}  -o pasco pasco.c -lm -lc || die "failed to compile"
+	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o pasco pasco.c -lm -lc || die "failed to compile"
 }
 
 src_install() {

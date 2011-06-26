@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/pasco
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/pasco/ChangeLog,v 1.6 2009/12/30 12:02:54 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/pasco/ChangeLog,v 1.7 2011/06/26 06:34:11 radhermit Exp $
+
+  26 Jun 2011; Tim Harder <radhermit@gentoo.org> pasco-20040505_p1.ebuild:
+  Respect LDFLAGS (bug #338159).
 
   30 Dec 2009; Patrick Lauer <patrick@gentoo.org> pasco-20040505_p1.ebuild:
   Add ~amd64 keyword for #298964
