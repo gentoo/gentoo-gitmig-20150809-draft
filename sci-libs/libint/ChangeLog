@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libint
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libint/ChangeLog,v 1.9 2011/06/21 15:14:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libint/ChangeLog,v 1.10 2011/06/26 10:38:19 jlec Exp $
+
+  26 Jun 2011; Justin Lecher <jlec@gentoo.org> libint-1.1.2.ebuild,
+  libint-1.1.4.ebuild, libint-1.1.4-r1.ebuild, metadata.xml:
+  Corrected quoting, bumped EAPI
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> libint-1.1.2.ebuild,
   libint-1.1.4.ebuild, libint-1.1.4-r1.ebuild:
