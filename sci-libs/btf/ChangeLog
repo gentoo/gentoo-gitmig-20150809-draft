@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/btf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/btf/ChangeLog,v 1.4 2011/02/23 19:44:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/btf/ChangeLog,v 1.5 2011/06/26 09:20:15 jlec Exp $
+
+  26 Jun 2011; Justin Lecher <jlec@gentoo.org> btf-1.0.1.ebuild,
+  btf-1.1.0.ebuild, btf-1.1.2.ebuild, metadata.xml:
+  Straight out QA issues
 
 *btf-1.1.2 (23 Feb 2011)
 
