@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/cmospwd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/cmospwd/ChangeLog,v 1.14 2011/04/02 14:05:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/cmospwd/ChangeLog,v 1.15 2011/06/26 06:15:22 radhermit Exp $
+
+  26 Jun 2011; Tim Harder <radhermit@gentoo.org> cmospwd-4.6.ebuild,
+  -cmospwd-4.8.ebuild, -cmospwd-5.0.ebuild, cmospwd-5.1.ebuild:
+  Respect LDFLAGS (bug #335089) and remove old.
 
 *cmospwd-5.1 (02 Apr 2011)
 

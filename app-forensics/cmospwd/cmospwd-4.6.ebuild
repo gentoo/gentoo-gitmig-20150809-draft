@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/cmospwd/cmospwd-4.6.ebuild,v 1.5 2009/11/26 10:29:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/cmospwd/cmospwd-4.6.ebuild,v 1.6 2011/06/26 06:15:22 radhermit Exp $
 
 inherit toolchain-funcs
 
@@ -14,7 +14,7 @@ IUSE=""
 
 src_compile() {
 	cd src
-	$(tc-getCC) ${CFLAGS} cmospwd.c -o cmospwd || die
+	$(tc-getCC) ${CFLAGS} ${LDFLAGS} cmospwd.c -o cmospwd || die
 }
 
 src_install() {
