@@ -1,9 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.296 2011/06/26 10:44:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.297 2011/06/26 10:46:28 armin76 Exp $
 
   26 Jun 2011; Raúl Porcel <armin76@gentoo.org> dbus-1.4.12.ebuild:
-  arm/ia64/s390/sh/sparc stable wrt #371261
+  arm/ia64/s390/sh/sparc/x86 stable wrt #371261
 
   22 Jun 2011; Brent Baude <ranger@gentoo.org> dbus-1.4.12.ebuild:
   Marking dbus-1.4.12 ppc for bug 371261
