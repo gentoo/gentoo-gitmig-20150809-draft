@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/probe/probe-2.12.071128.ebuild,v 1.4 2010/06/28 15:49:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/probe/probe-2.12.071128.ebuild,v 1.5 2011/06/26 08:48:58 jlec Exp $
 
 inherit toolchain-funcs
 
 MY_P="${PN}.${PV}"
+
 DESCRIPTION="Evaluates atomic packing within or between molecules"
 HOMEPAGE="http://kinemage.biochem.duke.edu/software/probe.php"
 SRC_URI="http://kinemage.biochem.duke.edu/downloads/software/probe/${MY_P}.src.zip"
