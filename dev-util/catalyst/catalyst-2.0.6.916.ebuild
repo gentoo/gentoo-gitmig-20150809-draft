@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.6.916.ebuild,v 1.3 2011/06/26 16:40:39 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.6.916.ebuild,v 1.4 2011/06/27 05:04:18 mattst88 Exp $
 
 # catalyst-9999         -> latest Git
 # catalyst-VER          -> normal catalyst release
@@ -63,6 +63,9 @@ src_install() {
 	doexe catalyst || die "copying catalyst"
 	if [[ ${PV} == 9999* ]]; then
 		doins -r modules files || die "copying files"
+
+		# arch files don't live in modules/ in catalyst_2
+		[[ ${EGIT_BRANCH} == "catalyst_2" ]] && { doins -r arch || die "copying files"; }
 	else
 		doins -r arch modules livecd || die "copying files"
 	fi
