@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.5-r1.ebuild,v 1.1 2011/06/18 15:44:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.5-r1.ebuild,v 1.2 2011/06/27 06:36:21 grobian Exp $
 
 EAPI="3"
 GNOME2_LA_PUNT="yes"
@@ -94,6 +94,9 @@ src_prepare() {
 
 	# Revert this commit as it causes gnome-panel problems, bug #372147
 	EPATCH_OPTS="-R" epatch "${FILESDIR}/${P}-background-repaint.patch"
+
+	# fix building with gir #372953
+	epatch "${FILESDIR}"/${PN}-2.24.5-darwin-quartz-introspection.patch
 
 	# Stop trying to build unmaintained docs, bug #349754
 	strip_builddir SUBDIRS tutorial docs/Makefile.am docs/Makefile.in

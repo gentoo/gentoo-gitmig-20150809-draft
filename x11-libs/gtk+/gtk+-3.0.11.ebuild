@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.0.11.ebuild,v 1.2 2011/06/11 03:05:04 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.0.11.ebuild,v 1.3 2011/06/27 06:36:21 grobian Exp $
 
 EAPI="3"
 GNOME_TARBALL_SUFFIX="xz"
@@ -15,6 +15,8 @@ SLOT="3"
 # NOTE: This gtk+ has multi-gdk-backend support, see:
 #  * http://blogs.gnome.org/kris/2010/12/29/gdk-3-0-on-mac-os-x/
 #  * http://mail.gnome.org/archives/gtk-devel-list/2010-November/msg00099.html
+# I tried this and got it all compiling, but the end result is unusable as it
+# horribly mixes up the backends -- grobian
 IUSE="aqua cups debug doc examples +introspection test vim-syntax xinerama"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 
@@ -112,6 +114,8 @@ src_prepare() {
 
 	# http://mail.gnome.org/archives/commits-list/2011-March/msg04372.html
 	epatch "${FILESDIR}"/${PN}-3.0.8-darwin-quartz.patch
+	# fix building with gir #372953
+	epatch "${FILESDIR}"/${PN}-3.0.11-darwin-quartz-introspection.patch
 }
 
 src_configure() {
