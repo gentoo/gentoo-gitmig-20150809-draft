@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.68 2011/04/27 16:54:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.69 2011/06/27 21:11:57 abcd Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -240,6 +240,9 @@ cmake-utils_use() { _use_me_now "" "$@" ; }
 _modify-cmakelists() {
 	debug-print-function ${FUNCNAME} "$@"
 
+	# Only edit the files once
+	grep -qs "<<< Gentoo configuration >>>" CMakeLists.txt && return 0
+
 	# Comment out all set (<some_should_be_user_defined_variable> value)
 	# TODO Add QA checker - inform when variable being checked for below is set in CMakeLists.txt
 	find "${CMAKE_USE_DIR}" -name CMakeLists.txt \
@@ -250,7 +253,7 @@ _modify-cmakelists() {
 		|| die "${LINENO}: failed to disable hardcoded settings"
 
 	# NOTE Append some useful summary here
-	cat >> CMakeLists.txt <<- _EOF_
+	cat >> "${CMAKE_USE_DIR}"/CMakeLists.txt <<- _EOF_
 
 		MESSAGE(STATUS "<<< Gentoo configuration >>>
 		Build type      \${CMAKE_BUILD_TYPE}
