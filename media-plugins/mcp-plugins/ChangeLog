@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mcp-plugins
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mcp-plugins/ChangeLog,v 1.14 2008/04/19 14:12:19 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mcp-plugins/ChangeLog,v 1.15 2011/06/27 23:34:31 radhermit Exp $
+
+  27 Jun 2011; Tim Harder <radhermit@gentoo.org> mcp-plugins-0.4.0.ebuild:
+  Respect LDFLAGS (bug #331819, patch thanks to Ross Smith) and update to EAPI
+  4.
 
 *mcp-plugins-0.4.0 (19 Apr 2008)
 
