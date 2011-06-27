@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytest
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.24 2011/04/29 20:37:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.25 2011/06/27 15:20:20 ranger Exp $
+
+  27 Jun 2011; Brent Baude <ranger@gentoo.org> pytest-2.0.2.ebuild:
+  Marking pytest-2.0.2 ppc for bug 372595
 
   29 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> pytest-2.0.2.ebuild:
   ppc64 stable wrt #362773
