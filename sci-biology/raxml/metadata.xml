@@ -6,5 +6,7 @@
 		<name>Andrey Kislyuk</name>
 	</maintainer>
 	<herd>sci-biology</herd>
-	<use><flag name='sse3'>Enable optimization for SSE3 capable chips</flag></use>
+	<use>
+		<flag name="sse3">Enable optimization for SSE3 capable chips</flag>
+	</use>
 </pkgmetadata>
