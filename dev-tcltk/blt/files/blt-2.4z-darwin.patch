@@ -1,0 +1,86 @@
+--- configure.in
++++ configure.in
+@@ -183,9 +183,6 @@
+       blt_lib_prefix=""
+     fi
+     ;;
+-  *-*-macosx)
+-    blt_platform="macosx"
+-    ;;
+   *)
+     blt_platform="unix"
+     ;;
+@@ -728,6 +725,9 @@
+   *-hpux*)
+     SHLIB_SUFFIX="sl"
+     ;;
++  *-darwin*)
++    SHLIB_SUFFIX="dylib"
++    ;;
+   *)
+     SHLIB_SUFFIX="so"
+     ;;
+@@ -1053,7 +1053,6 @@
+ SHLIB_LD_FLAGS="$TCL_LD_FLAGS"
+ SHLIB_RUNPATH="$TCL_LD_SEARCH_FLAGS"
+ 
+-SHLIB_SUFFIX=".so"
+ SHLIB_TARGET=""
+ SHLIB_CFLAGS=""
+ SHLIB_LIB_SPECS="${JPEG_LIB_SPEC}"
+@@ -1145,6 +1145,12 @@
+     LDFLAGS=""
+     ;;
+ 
++  *-darwin*)
++    SHLIB_CFLAGS=""
++    SHLIB_LD="${CC}"
++    SHLIB_LD_FLAGS='-dynamiclib -install_name $(libdir)/$@'
++    ;;
++
+   *-dgux*)
+     SHLIB_CFLAGS="-K PIC"
+     SHLIB_LD="cc"
+--- configure
++++ configure
+@@ -1279,9 +1279,6 @@
+       blt_lib_prefix=""
+     fi
+     ;;
+-  *-*-macosx)
+-    blt_platform="macosx"
+-    ;;
+   *)
+     blt_platform="unix"
+     ;;
+@@ -3396,6 +3393,9 @@
+   *-hpux*)
+     SHLIB_SUFFIX="sl"
+     ;;
++  *-darwin*)
++    SHLIB_SUFFIX="dylib"
++    ;;
+   *)
+     SHLIB_SUFFIX="so"
+     ;;
+@@ -3853,7 +3853,6 @@
+ SHLIB_LD_FLAGS="$TCL_LD_FLAGS"
+ SHLIB_RUNPATH="$TCL_LD_SEARCH_FLAGS"
+ 
+-SHLIB_SUFFIX=".so"
+ SHLIB_TARGET=""
+ SHLIB_CFLAGS=""
+ SHLIB_LIB_SPECS="${JPEG_LIB_SPEC}"
+@@ -3943,6 +3943,12 @@
+     LDFLAGS=""
+     ;;
+ 
++  *-darwin*)
++    SHLIB_CFLAGS=""
++    SHLIB_LD="${CC}"
++    SHLIB_LD_FLAGS='-dynamiclib -install_name $(libdir)/$@'
++    ;;
++
+   *-dgux*)
+     SHLIB_CFLAGS="-K PIC"
+     SHLIB_LD="cc"

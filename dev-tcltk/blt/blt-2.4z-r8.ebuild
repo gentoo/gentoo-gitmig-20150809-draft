@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r8.ebuild,v 1.8 2011/06/13 12:38:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r8.ebuild,v 1.9 2011/06/27 17:22:24 grobian Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ DESCRIPTION="Extension to Tk, adding new widgets, geometry managers, and misc co
 IUSE="jpeg X"
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 
 DEPEND="
 	dev-lang/tk
@@ -44,6 +44,7 @@ src_prepare() {
 		Makefile.in demos/Makefile.in || die "sed Makefile.in failed"
 
 	epatch "${FILESDIR}"/${P}-linking.patch
+	epatch "${FILESDIR}"/${P}-darwin.patch
 }
 
 src_configure() {
@@ -75,8 +76,8 @@ src_compile() {
 
 src_install() {
 	sed \
-		-e "s:../src/bltwish:${EPREFIX}/usr/bin/bltwish:g" \
-		-e "s:../bltwish:${EPREFIX}/usr/bin/bltwish:g" \
+		-e "s:\.\./src/bltwish:${EPREFIX}/usr/bin/bltwish:g" \
+		-e "s:\.\./bltwish:${EPREFIX}/usr/bin/bltwish:g" \
 		-e "s:/usr/local/bin/bltwish:${EPREFIX}/usr/bin/bltwish:g" \
 		-e "s:/usr/local/bin/tclsh:${EPREFIX}/usr/bin/tclsh:g" \
 		-i demos/{,scripts/}*.tcl || die
@@ -98,6 +99,6 @@ src_install() {
 	cp "${FILESDIR}"/pkgIndex.tcl "${ED}"/usr/$(get_libdir)/blt2.4/pkgIndex.tcl
 
 	# fix for linking against shared lib with -lBLT or -lBLTlite
-	dosym libBLT24.so /usr/$(get_libdir)/libBLT.so || die
-	dosym libBLTlite24.so /usr/$(get_libdir)/libBLTlite.so || die
+	dosym libBLT24$(get_libname) /usr/$(get_libdir)/libBLT$(get_libname) || die
+	dosym libBLTlite24$(get_libname) /usr/$(get_libdir)/libBLTlite$(get_libname) || die
 }

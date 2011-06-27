@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/blt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.42 2011/06/13 12:38:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.43 2011/06/27 17:22:24 grobian Exp $
+
+  27 Jun 2011; Fabian Groffen <grobian@gentoo.org> blt-2.4z-r8.ebuild,
+  +files/blt-2.4z-darwin.patch:
+  Fix for Darwin and Prefix, marked *-macos, bug #355373
 
   13 Jun 2011; Justin Lecher <jlec@gentoo.org> blt-2.4z-r8.ebuild:
   Fix compilation under et_EE locale, #367539
