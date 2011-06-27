@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/ucl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ChangeLog,v 1.31 2011/01/13 20:54:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ucl/ChangeLog,v 1.32 2011/06/27 17:18:08 binki Exp $
+
+*ucl-1.03-r1 (27 Jun 2011)
+
+  27 Jun 2011; Nathan Phillip Brink <binki@gentoo.org> +ucl-1.03-r1.ebuild,
+  +files/ucl-1.03-CFLAGS.patch:
+  Respect CFLAGS (CCASFLAGS) which compiling assembly files. Fixes building
+  with portage-multilib.
 
   13 Jan 2011; Brent Baude <ranger@gentoo.org> ucl-1.03.ebuild:
   stable ppc, bug 350761
