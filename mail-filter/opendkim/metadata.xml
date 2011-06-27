@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
+<herd>net-mail</herd>
 <maintainer>
   <email>dragonheart@gentoo.org</email>
     <name>Daniel Black</name>
@@ -27,6 +27,8 @@ using the DKIM standard. This is a fork of Sendmail's DKIM-milter</longdescripti
 	supports.</flag>
 	<flag name='lua'>Enables control over signature verification, filtering and
 	policy to be controlled by user defined lua scripts.</flag>
+	<flag name='poll'>Use poll() instead of select() for the provided
+	asynchronous resolver library.</flag>
 
 </use>
 </pkgmetadata>

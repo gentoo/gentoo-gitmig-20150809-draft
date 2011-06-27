@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/opendkim
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.21 2010/11/30 11:27:37 dragonheart Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.22 2011/06/27 07:03:04 eras Exp $
+
+*opendkim-2.4.0 (27 Jun 2011)
+
+  27 Jun 2011; Eray Aslan <eras@gentoo.org> +opendkim-2.4.0.ebuild,
+  +files/opendkim-2.4.0-ipv6.patch, +files/opendkim-2.4.0-oversign.patch,
+  +files/opendkim.init.r2, metadata.xml:
+  Version bump - bug #370407. Herd from no-herd to net-mail
 
 *opendkim-2.2.2 (30 Nov 2010)
 
