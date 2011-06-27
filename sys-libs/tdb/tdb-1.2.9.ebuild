@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/tdb-1.2.9.ebuild,v 1.1 2011/06/27 19:51:50 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/tdb-1.2.9.ebuild,v 1.2 2011/06/27 20:11:47 vostorga Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2"
@@ -18,7 +18,7 @@ IUSE="python"
 
 RDEPEND=""
 DEPEND="dev-lang/python
-	app-text/docbook-xsl-stylesheets"
+	app-text/docbook-xml-dtd:4.2"
 
 WAF_BINARY="${S}/buildtools/bin/waf"
 
