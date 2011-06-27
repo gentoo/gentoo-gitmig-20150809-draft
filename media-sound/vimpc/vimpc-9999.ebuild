@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vimpc/vimpc-9999.ebuild,v 1.1 2011/06/27 10:14:32 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vimpc/vimpc-9999.ebuild,v 1.2 2011/06/27 15:41:41 angelos Exp $
 
 EAPI=4
 inherit autotools subversion
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${PN}
 
-DOCS=( AUTHORS README )
+DOCS=( AUTHORS README doc/vimpcrc.example )
 
 src_configure() {
 	econf --docdir="${EPREFIX}"/usr/share/doc/${PF}
