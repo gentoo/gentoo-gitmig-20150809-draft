@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.2.ebuild,v 1.1 2011/06/27 08:28:31 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.2.ebuild,v 1.2 2011/06/27 09:19:45 djc Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="none"
@@ -63,7 +63,8 @@ RDEPEND=">=app-admin/eselect-python-20091230
 			xml? ( >=dev-libs/expat-2 )
 		)
 		!!<sys-apps/portage-2.1.9"
-DEPEND="${RDEPEND}
+DEPEND=">=sys-devel/autoconf-2.65
+		${RDEPEND}
 		$([[ "${PV}" == *_pre* ]] && echo "=${CATEGORY}/${PN}-${PV%%.*}*")
 		dev-util/pkgconfig
 		$([[ "${PV}" =~ ^[[:digit:]]+\.[[:digit:]]+_pre ]] && echo "doc? ( dev-python/sphinx )")
