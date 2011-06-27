@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.45 2011/06/24 13:32:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.46 2011/06/27 14:25:08 aballier Exp $
 
 EAPI="2"
 
@@ -31,9 +31,9 @@ fi
 IUSE="
 	+3dnow +3dnowext aac alsa altivec amr avx bindist +bzip2 celt cpudetection
 	custom-cflags debug dirac doc +encode faac frei0r gsm +hardcoded-tables
-	ieee1394 jack jpeg2k +mmx +mmxext mp3 network oss pic qt-faststart rtmp
-	schroedinger sdl speex +ssse3 static-libs test theora threads truetype v4l
-	v4l2 vaapi vdpau vorbis vpx X x264 xvid +zlib
+	ieee1394 jack jpeg2k +mmx +mmxext mp3 network openal oss pic qt-faststart
+	rtmp schroedinger sdl speex +ssse3 static-libs test theora threads truetype
+	v4l v4l2 vaapi vdpau vorbis vpx X x264 xvid +zlib
 	"
 
 VIDEO_CARDS="nvidia"
@@ -63,6 +63,7 @@ RDEPEND="
 	ieee1394? ( media-libs/libdc1394 sys-libs/libraw1394 )
 	jack? ( media-sound/jack-audio-connection-kit )
 	jpeg2k? ( >=media-libs/openjpeg-1.3-r2 )
+	openal? ( >=media-libs/openal-1.1 )
 	rtmp? ( >=media-video/rtmpdump-2.2f )
 	sdl? ( >=media-libs/libsdl-1.2.13-r1[audio,video] )
 	schroedinger? ( media-libs/schroedinger )
@@ -139,6 +140,7 @@ src_configure() {
 
 	# libavdevice options
 	use ieee1394 && myconf="${myconf} --enable-libdc1394"
+	use openal && myconf="${myconf} --enable-openal"
 	# Indevs
 	for i in v4l v4l2 alsa oss jack ; do
 		use ${i} || myconf="${myconf} --disable-indev=${i}"

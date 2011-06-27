@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.423 2011/06/26 14:58:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.424 2011/06/27 14:25:08 aballier Exp $
+
+  27 Jun 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  add openal useflag
 
   26 Jun 2011; Brent Baude <ranger@gentoo.org> ffmpeg-0.7_rc1.ebuild:
   marking ffmpeg-0.7_rc1 ppc for sec bug 365273
