@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/webmo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/ChangeLog,v 1.18 2011/06/25 18:13:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/ChangeLog,v 1.19 2011/06/27 05:30:11 jlec Exp $
+
+  27 Jun 2011; Justin Lecher <jlec@gentoo.org> webmo-6.1.010.ebuild,
+  webmo-7.0.003.ebuild, webmo-8.0.010.ebuild:
+  Added fetch restriction and dropped keywords
 
   25 Jun 2011; Justin Lecher <jlec@gentoo.org> webmo-6.1.010.ebuild,
   webmo-7.0.003.ebuild, webmo-8.0.010.ebuild, metadata.xml:
