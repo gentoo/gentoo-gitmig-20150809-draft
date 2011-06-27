@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-musictracker/pidgin-musictracker-0.4.22.ebuild,v 1.3 2010/11/28 17:22:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-musictracker/pidgin-musictracker-0.4.22.ebuild,v 1.4 2011/06/27 19:45:17 serkan Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE="debug"
 
-DEPEND=">=net-im/pidgin-2.0.0
+DEPEND=">=net-im/pidgin-2.0.0[gtk]
 	>=dev-libs/dbus-glib-0.73
 	dev-libs/libpcre
 	>=sys-devel/gettext-0.17"
