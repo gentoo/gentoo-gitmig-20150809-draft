@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/newlfm/newlfm-8.3-r1.ebuild,v 1.2 2008/09/05 07:01:50 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/newlfm/newlfm-8.3-r1.ebuild,v 1.3 2011/06/27 14:40:00 aballier Exp $
 
 inherit latex-package
 
@@ -16,7 +16,8 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE=""
 
-DEPEND=""
+DEPEND="dev-texlive/texlive-latexextra"
+RDEPEND="${DEPEND}"
 S="${WORKDIR}/${PN}"
 
 src_compile() {

@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/newlfm
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/newlfm/ChangeLog,v 1.7 2008/09/05 07:01:50 opfer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/newlfm/ChangeLog,v 1.8 2011/06/27 14:40:00 aballier Exp $
+
+  27 Jun 2011; Alexis Ballier <aballier@gentoo.org> newlfm-8.3-r1.ebuild:
+  depend on tl-latexextra for lastpage.sty, by Łukasz Stelmach, bug #360129
 
   05 Sep 2008; Christian Faulhammer <opfer@gentoo.org> newlfm-8.3-r1.ebuild:
   remove dependency on virtual/tetex
