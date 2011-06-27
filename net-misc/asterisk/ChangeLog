@@ -1,9 +1,9 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.322 2011/06/27 08:16:04 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.323 2011/06/27 08:17:27 chainsaw Exp $
 
   27 Jun 2011; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.6.2.17.3.ebuild:
-  Remove last vulnerable ebuild on 1.8 branch now that stabling has been
+  Remove last vulnerable ebuild on 1.6.2 branch now that stabling has been
   completed for security bug #372793.
 
   26 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
