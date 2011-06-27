@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/azara/azara-2.8-r4.ebuild,v 1.2 2011/06/26 09:05:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/azara/azara-2.8-r4.ebuild,v 1.3 2011/06/27 13:47:18 jlec Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ SRC_URI="http://www.bio.cam.ac.uk/ccpn/download/${PN}/${P}-src.tgz"
 LICENSE="AZARA"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux"
-IUSE="python xpm"
+IUSE="python xpm X"
 
 RDEPEND="
 	x11-libs/libX11
