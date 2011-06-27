@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/mock-0.7.1.ebuild,v 1.6 2011/06/24 14:42:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/mock-0.7.1.ebuild,v 1.7 2011/06/27 20:48:02 ranger Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ~ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ~ppc64 s390 sh sparc x86"
 IUSE="doc test"
 
 # dev-python/unittest2 is not required with Python >=3.2.
