@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-9999.ebuild,v 1.2 2011/06/27 08:58:08 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-0.9.0.1.ebuild,v 1.1 2011/06/27 08:58:08 pva Exp $
 
 EAPI="4"
 
 WEBAPP_MANUAL_SLOT="yes"
 
-inherit webapp eutils multilib git-2
+inherit webapp eutils multilib
 
 [[ -z "${CGIT_CACHEDIR}" ]] && CGIT_CACHEDIR="/var/cache/${PN}/"
 
@@ -14,12 +14,12 @@ GIT_V="1.7.4"
 
 DESCRIPTION="a fast web-interface for git repositories"
 HOMEPAGE="http://hjemli.net/git/cgit/about/"
-SRC_URI="mirror://kernel/software/scm/git/git-${GIT_V}.tar.bz2"
-EGIT_REPO_URI="git://hjemli.net/pub/git/${PN}"
+SRC_URI="mirror://kernel/software/scm/git/git-${GIT_V}.tar.bz2
+	http://hjemli.net/git/cgit/snapshot/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="doc highlight"
 
 RDEPEND="

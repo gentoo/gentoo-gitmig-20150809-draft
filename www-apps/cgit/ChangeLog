@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/cgit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/ChangeLog,v 1.6 2011/06/27 05:41:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/ChangeLog,v 1.7 2011/06/27 08:58:08 pva Exp $
+
+*cgit-0.9.0.1 (27 Jun 2011)
+
+  27 Jun 2011; Peter Volkov <pva@gentoo.org> +cgit-0.9.0.1.ebuild,
+  cgit-9999.ebuild, files/postinstall-en.txt:
+  Version bump, bump EAPI, add instructions for apache2 installation bug 370681
+  wrt to Oliver Schinagl. Thank Nikoli for all this job.
 
   27 Jun 2011; Peter Volkov <pva@gentoo.org> -cgit-0.8.3.1-r1.ebuild:
   Drop old and vulnerable version.
