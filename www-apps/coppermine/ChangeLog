@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/coppermine
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/ChangeLog,v 1.29 2011/06/09 06:53:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/ChangeLog,v 1.30 2011/06/27 10:54:57 pva Exp $
+
+  27 Jun 2011; Peter Volkov <pva@gentoo.org> -coppermine-1.4.26.ebuild:
+  Drop vulnerable version, bug #347287, thank Tim Sammut for report.
 
 *coppermine-1.4.27 (09 Jun 2011)
 
