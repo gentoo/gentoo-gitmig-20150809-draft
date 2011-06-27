@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sflowtool
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/ChangeLog,v 1.18 2011/06/22 20:21:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/ChangeLog,v 1.19 2011/06/27 18:44:19 jer Exp $
+
+  27 Jun 2011; Jeroen Roovers <jer@gentoo.org> -sflowtool-3.10.ebuild,
+  -sflowtool-3.10-r1.ebuild:
+  ^^^
 
   22 Jun 2011; Brent Baude <ranger@gentoo.org> sflowtool-3.20.ebuild:
   Marking sflowtool-3.20 ppc for bug 370839
