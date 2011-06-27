@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/curve
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/curve/ChangeLog,v 1.13 2011/06/27 14:11:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/curve/ChangeLog,v 1.14 2011/06/27 14:14:44 aballier Exp $
+
+  27 Jun 2011; Alexis Ballier <aballier@gentoo.org> -curve-1.11.ebuild:
+  remove old
 
   27 Jun 2011; Alexis Ballier <aballier@gentoo.org> curve-1.15.ebuild:
   add unzip dep for unpacking, by Piotr Szymaniak, bug #371505
