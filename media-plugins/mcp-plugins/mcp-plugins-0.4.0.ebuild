@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mcp-plugins/mcp-plugins-0.4.0.ebuild,v 1.2 2011/06/27 23:34:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mcp-plugins/mcp-plugins-0.4.0.ebuild,v 1.3 2011/06/27 23:36:43 radhermit Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ RDEPEND=""
 
 S=${WORKDIR}/${MY_P}
 
-src_configure() {
+src_prepare() {
 	tc-export CXX
 	sed -i -e "s/-O3//" \
 		-e "s/g++/$(tc-getCXX) ${LDFLAGS}/" Makefile || die "sed failed"
