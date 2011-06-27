@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/wavplay
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavplay/ChangeLog,v 1.14 2006/09/12 15:17:35 tcort Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavplay/ChangeLog,v 1.15 2011/06/27 06:06:51 radhermit Exp $
+
+*wavplay-2.0 (27 Jun 2011)
+
+  27 Jun 2011; Tim Harder <radhermit@gentoo.org> +wavplay-2.0.ebuild:
+  Version bump. Re-keyword for amd64.
 
   12 Sep 2006; Thomas Cort <tcort@gentoo.org> wavplay-1.4.ebuild:
   Fix broken wavrec symlink. Solves Bug #146808.
