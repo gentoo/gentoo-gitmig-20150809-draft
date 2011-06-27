@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.27 2011/06/26 10:33:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.28 2011/06/27 13:27:50 jer Exp $
+
+*opera-next-11.50.1074 (27 Jun 2011)
+
+  27 Jun 2011; Jeroen Roovers <jer@gentoo.org> +opera-next-11.50.1074.ebuild:
+  http://my.opera.com/desktopteam/blog/2011/06/27/swordfish-rc5
 
 *opera-next-11.50.1073 (26 Jun 2011)
 
