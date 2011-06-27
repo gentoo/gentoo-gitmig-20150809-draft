@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.45 2011/06/27 20:23:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.46 2011/06/27 20:45:12 ranger Exp $
+
+  27 Jun 2011; Brent Baude <ranger@gentoo.org> pyro-3.13.ebuild:
+  Marking pyro-3.13 ppc for bug 371659
 
   27 Jun 2011; Brent Baude <ranger@gentoo.org> pyro-4.4.ebuild:
   Marking pyro-4.4 ppc for bug 370507
