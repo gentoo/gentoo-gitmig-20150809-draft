@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vco-plugins/vco-plugins-0.3.0.ebuild,v 1.6 2007/11/18 18:11:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vco-plugins/vco-plugins-0.3.0.ebuild,v 1.7 2011/06/27 23:47:30 radhermit Exp $
+
+EAPI=4
 
 inherit multilib toolchain-funcs
 
-IUSE=""
-#
 MY_P=${P/vco/VCO}
 
 DESCRIPTION="SAW-VCO ladspa plugin package. Anti-aliased oscillators"
@@ -14,16 +14,17 @@ SRC_URI="http://www.kokkinizita.net/linuxaudio/downloads/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64 ~ppc"
+IUSE=""
 
 DEPEND="media-libs/ladspa-sdk"
+RDEPEND=""
 
 S=${WORKDIR}/${MY_P}
 
-src_compile() {
+src_prepare() {
 	tc-export CXX
-	sed -i -e "s/-O3//" Makefile
-	sed -i -e "s/g++/$(tc-getCXX)/" Makefile
-	emake || die
+	sed -i -e "s/-O3//" \
+		-e "s/g++/$(tc-getCXX) ${LDFLAGS}/" Makefile || die "sed failed"
 }
 
 src_install() {
