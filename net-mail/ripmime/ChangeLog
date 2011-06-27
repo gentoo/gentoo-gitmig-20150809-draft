@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/ripmime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ChangeLog,v 1.38 2011/06/25 18:26:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ChangeLog,v 1.39 2011/06/27 05:59:11 eras Exp $
+
+  27 Jun 2011; Eray Aslan <eras@gentoo.org> -ripmime-1.4.0.6.ebuild,
+  -ripmime-1.4.0.9-r2.ebuild:
+  Remove old
 
   25 Jun 2011; Raúl Porcel <armin76@gentoo.org> ripmime-1.4.0.10.ebuild:
   sparc stable wrt #370255
