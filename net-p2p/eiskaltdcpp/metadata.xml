@@ -21,7 +21,6 @@
   <flag name="daemon">Enable eiskaltdcpp-daemon without any UI</flag>
   <flag name="emoticons">Install emoticon packs</flag>
   <flag name="minimal">Don't install headers</flag>
-  <flag name="sounds">Install sound files</flag>
   <flag name="upnp">Forward ports using UPnP</flag>
 </use>
 </pkgmetadata>

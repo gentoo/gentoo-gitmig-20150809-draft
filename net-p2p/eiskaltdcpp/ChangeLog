@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/eiskaltdcpp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.29 2011/05/25 07:22:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/ChangeLog,v 1.30 2011/06/27 09:20:19 pva Exp $
+
+*eiskaltdcpp-2.2.3 (27 Jun 2011)
+
+  27 Jun 2011; Peter Volkov <pva@gentoo.org> +eiskaltdcpp-2.2.3.ebuild,
+  eiskaltdcpp-9999.ebuild, metadata.xml:
+  Version bump: de translation, readline daemon is not available any more, for
+  xmlrpc >=xmlrpc-c-1.19 (currently not in tree) is required. Thank Nikoli for
+  this job.
 
   25 May 2011; Peter Volkov <pva@gentoo.org> -eiskaltdcpp-2.1.1.ebuild:
   Drop old.
