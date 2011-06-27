@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-5.0.ebuild,v 1.4 2011/06/26 18:06:45 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-5.0-r1.ebuild,v 1.1 2011/06/27 00:42:11 anarchy Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -15,7 +15,7 @@ FF_PV="${PV/_alpha/a}" # Handle alpha for SRC_URI
 FF_PV="${FF_PV/_beta/b}" # Handle beta for SRC_URI
 FF_PV="${FF_PV/_rc/rc}" # Handle rc for SRC_URI
 CHANGESET="e56ecd8b3a68"
-PATCH="${PN}-5.0-patches-0.4"
+PATCH="${PN}-5.0-patches-0.5"
 
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.com/firefox"
@@ -39,6 +39,7 @@ RDEPEND="
 	gconf? ( >=gnome-base/gconf-1.2.1:2 )
 	>=dev-libs/glib-2.26
 	media-libs/libpng[apng]
+	dev-libs/libffi
 	system-sqlite? ( >=dev-db/sqlite-3.7.4[fts3,secure-delete,unlock-notify,debug=] )
 	webm? ( media-libs/libvpx
 		media-libs/alsa-lib )"
@@ -156,6 +157,7 @@ src_unpack() {
 
 src_prepare() {
 	# Apply our patches
+	EPATCH_EXCLUDE="5001_use_system_libffi.patch" \
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"
@@ -184,9 +186,6 @@ src_prepare() {
 		-i "${S}"/js/src/config/rules.mk \
 		-i "${S}"/nsprpub/configure{.in,} \
 		|| die
-
-	# https://bugs.gentoo.org/372843
-	epatch "${FILESDIR}/${P}-fix-title.patch"
 
 	eautoreconf
 
