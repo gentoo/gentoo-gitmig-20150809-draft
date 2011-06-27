@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.85 2011/03/24 19:50:14 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.86 2011/06/27 19:27:45 lu_zero Exp $
+
+*qemu-9999 (27 Jun 2011)
+
+  27 Jun 2011; Luca Barbato <lu_zero@gentoo.org> +qemu-9999.ebuild:
+  Introduce live ebuild, useful for static qemu-user deployment
 
   24 Mar 2011; Christoph Mende <angelos@gentoo.org> qemu-0.11.1.ebuild:
   Stable on amd64 wrt bug #356685
