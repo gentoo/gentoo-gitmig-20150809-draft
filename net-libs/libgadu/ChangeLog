@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgadu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.57 2011/06/01 01:09:11 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.58 2011/06/27 17:45:10 reavertm Exp $
+
+  27 Jun 2011; Maciej Mrozowski <reavertm@gentoo.org> libgadu-1.11.0.ebuild:
+  Restrict tests, bug 373215
 
 *libgadu-1.11.0 (01 Jun 2011)
 

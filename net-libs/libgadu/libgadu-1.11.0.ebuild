@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.11.0.ebuild,v 1.1 2011/06/01 01:09:11 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/libgadu-1.11.0.ebuild,v 1.2 2011/06/27 17:45:10 reavertm Exp $
 
 EAPI="4"
 
@@ -11,6 +11,9 @@ inherit autotools-utils
 DESCRIPTION="This library implements the client side of the Gadu-Gadu protocol"
 HOMEPAGE="http://toxygen.net/libgadu/"
 SRC_URI="http://toxygen.net/libgadu/files/${MY_P}.tar.gz"
+
+# Bug 373215, relies on remote server presence
+RESTRICT="test"
 
 LICENSE="LGPL-2.1"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos"
