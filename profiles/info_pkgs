@@ -19,6 +19,7 @@ sys-devel/gcc
 sys-devel/gcc-config
 dev-java/java-config
 dev-util/cmake
+dev-util/pkgconfig
 # NOTE: portage no longer list /etc/gentoo-release,
 # so this is not redundant
 sys-apps/baselayout
