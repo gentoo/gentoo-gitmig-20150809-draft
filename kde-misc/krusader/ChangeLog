@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/krusader
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.98 2011/01/28 12:47:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/ChangeLog,v 1.99 2011/06/27 15:35:20 scarabeus Exp $
+
+*krusader-2.4.0_beta1 (27 Jun 2011)
+
+  27 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +krusader-2.4.0_beta1.ebuild:
+  Version bump to latest krusader beta. This thing bundles ktar from kdelibs
+  and libisofs (as older releases do).
 
   28 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -krusader-2.2.0_beta1.ebuild, krusader-2.3.0_beta1.ebuild:
