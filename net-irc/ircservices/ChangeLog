@@ -1,6 +1,19 @@
 # ChangeLog for net-irc/ircservices
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.47 2009/12/28 19:01:34 nixnut Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.48 2011/06/27 23:55:00 binki Exp $
+
+*ircservices-5.1.24 (27 Jun 2011)
+
+  27 Jun 2011; Nathan Phillip Brink <binki@gentoo.org>
+  +ircservices-5.1.24.ebuild, +files/ircservices-5.1.24-as-needed.patch,
+  +files/ircservices-5.1.24-fd_set-amd64.patch,
+  +files/ircservices-5.1.24-ircservices-chk-pidfile.patch,
+  +files/ircservices-5.1.24-ldflags.patch,
+  +files/ircservices-5.1.24-parallel-make.patch, +files/ircservices.confd,
+  +files/ircservices.initd:
+  Bump to ircservices-5.1.24 with build on amd64 fixed, hopefully parallel
+  make issues solved, LDFLAGS and -Wl,--as-needed support. Last upstream
+  release (ircservices is discontinued upstream).
 
   28 Dec 2009; nixnut <nixnut@gentoo.org> ircservices-5.1.17.ebuild:
   ppc stable #289539
