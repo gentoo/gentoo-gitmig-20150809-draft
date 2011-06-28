@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/pyzmq-2.1.7.ebuild,v 1.1 2011/05/14 12:00:13 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/pyzmq-2.1.7.ebuild,v 1.2 2011/06/28 12:28:23 djc Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*:2.5"
@@ -17,7 +17,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc examples"
+IUSE="examples"
 
 RDEPEND=">=net-libs/zeromq-2.1"
 DEPEND="${RDEPEND}"
@@ -34,9 +34,6 @@ src_test() {
 
 src_install() {
 	distutils_src_install
-	if use doc; then
-		dohtml -r docs/build/html/* || die "Installation of documentation failed"
-	fi
 	if use examples; then
 		insinto /usr/share/doc/${PF}
 		doins -r examples
