@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.325 2011/06/28 21:43:51 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.326 2011/06/28 22:08:15 ken69267 Exp $
+
+  28 Jun 2011; Kenneth Prugh <ken69267@gentoo.org> asterisk-1.6.2.18.2.ebuild:
+  amd64 stable, bug #373409
 
 *asterisk-1.6.2.18.2 (28 Jun 2011)
 
