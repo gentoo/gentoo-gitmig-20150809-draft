@@ -1,0 +1,16 @@
+Index: texlive-20110627-source/texk/bibtexu/utils.c
+===================================================================
+--- texlive-20110627-source.orig/texk/bibtexu/utils.c
++++ texlive-20110627-source/texk/bibtexu/utils.c
+@@ -1261,7 +1261,11 @@ static void setup_bound_variable (Intege
+ {
+ #ifdef KPATHSEA
+     char *expansion = kpse_var_value (name);
++#ifdef kpse_invocation_name
+     const char *me = kpse_invocation_name;
++#else
++    const char *me = program_invocation_name;
++#endif
+     const char *src = " or texmf.cnf";
+ #else
+     char *expansion = getenv (name);

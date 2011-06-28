@@ -1,6 +1,13 @@
 # ChangeLog for dev-tex/bibtexu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtexu/ChangeLog,v 1.8 2011/06/13 20:59:48 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtexu/ChangeLog,v 1.9 2011/06/28 03:36:05 aballier Exp $
+
+*bibtexu-3.71_p20110627 (28 Jun 2011)
+
+  28 Jun 2011; Alexis Ballier <aballier@gentoo.org>
+  +bibtexu-3.71_p20110627.ebuild,
+  +files/bibtexu-3.71_p20110627-invoc_name.patch:
+  add version from texlive 2011 pretest that supports both old and new kpathsea
 
   13 Jun 2011; Matt Turner <mattst88@gentoo.org> bibtexu-3.71_p20100722.ebuild:
   Added ~mips, bug 342513
