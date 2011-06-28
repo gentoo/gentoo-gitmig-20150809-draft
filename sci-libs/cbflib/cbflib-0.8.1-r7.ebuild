@@ -1,15 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/cbflib-0.8.1-r7.ebuild,v 1.3 2011/06/21 15:41:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/cbflib-0.8.1-r7.ebuild,v 1.4 2011/06/28 19:30:30 jlec Exp $
 
-EAPI="3"
+EAPI=3
 
-inherit eutils fortran-2 flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic fortran-2 toolchain-funcs
 
 MY_P1="CBFlib-${PV}"
 MY_P2="CBFlib_${PV}"
 
-DESCRIPTION="Library providing a simple mechanism for accessing CBF files and imgCIF files."
+DESCRIPTION="Library providing a simple mechanism for accessing CBF files and imgCIF files"
 HOMEPAGE="http://www.bernstein-plus-sons.com/software/CBF/"
 #BASE_TEST_URI="http://arcib.dowling.edu/software/CBFlib/downloads/version_${PV}/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P1}.tar.gz"
@@ -37,15 +37,15 @@ src_prepare(){
 	append-cflags -D_USE_XOPEN_EXTENDED
 
 	sed \
-		-e "s:^CC.*$:CC = $(tc-getCC):" \
-		-e "s:^C++.*$:C++ = $(tc-getCXX):" \
-		-e "s:C++:CXX:g" \
-		-e "s:^CFLAGS.*$:CFLAGS = ${CFLAGS}:" \
-		-e "s:^F90C.*$:F90C = $(tc-getFC):" \
-		-e "s:^F90FLAGS.*$:F90FLAGS = ${FFLAGS}:" \
-		-e "s:^SOLDFLAGS.*$:SOLDFLAGS = -shared ${LDFLAGS}:g" \
-		-e "s: /bin: ${EPREFIX}/bin:g" \
-		-e "s:/usr:${EPREFIX}/usr:g" \
+		-e "s|^CC.*$|CC = $(tc-getCC)|" \
+		-e "s|^C++.*$|C++ = $(tc-getCXX)|" \
+		-e "s|C++|CXX|g" \
+		-e "s|^CFLAGS.*$|CFLAGS = ${CFLAGS}|" \
+		-e "s|^F90C.*$|F90C = $(tc-getFC)|" \
+		-e "s|^F90FLAGS.*$|F90FLAGS = ${FFLAGS}|" \
+		-e "s|^SOLDFLAGS.*$|SOLDFLAGS = -shared ${LDFLAGS}|g" \
+		-e "s| /bin| ${EPREFIX}/bin|g" \
+		-e "s|/usr|${EPREFIX}/usr|g" \
 		-i Makefile || die
 }
 
