@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.122 2011/06/11 21:07:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.123 2011/06/28 20:35:16 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> awesome-3.4.9-r1.ebuild:
+  Marking awesome-3.4.9-r1 ppc for bug 372799
 
   11 Jun 2011; Markus Meier <maekke@gentoo.org> awesome-3.4.10.ebuild:
   add ~arm, bug #359137
