@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/jmol
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/ChangeLog,v 1.9 2008/10/05 19:12:36 betelgeuse Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/jmol/ChangeLog,v 1.10 2011/06/28 10:17:13 je_fro Exp $
+
+*jmol-12.0.45 (28 Jun 2011)
+
+  28 Jun 2011; Jeff Gardner <je_fro@gentoo.org>
+  +files/12.0.45/jmol-manifest.patch, +files/12.0.45/jmol-nointl.patch,
+  +jmol-12.0.45.ebuild:
+  Newest Jmol
 
   05 Oct 2008; Petteri Räty <betelgeuse@gentoo.org> jmol-11.0.3-r1.ebuild:
   Add slot deps.
