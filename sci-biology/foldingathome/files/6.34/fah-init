@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/files/6.34/fah-init,v 1.2 2011/06/15 17:41:48 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/foldingathome/files/6.34/fah-init,v 1.3 2011/06/28 15:14:16 je_fro Exp $
 
 opts="${opts} unitinfo"
 
@@ -13,7 +13,7 @@ unitinfo() {
 start() {
 	ebegin "Starting Folding@Home"
 	cd /opt/foldingathome
-	start-stop-daemon --chdir ${PWD} --chuid foldingathome --nicelevel 19 \
+	start-stop-daemon --chdir ${PWD} --user foldingathome --nicelevel 19 \
 		--make-pidfile --pidfile "${PIDFILE}" \
 		--start --background --exec ./fah6 -- ${FOLD_OPTS}
 	eend $?
