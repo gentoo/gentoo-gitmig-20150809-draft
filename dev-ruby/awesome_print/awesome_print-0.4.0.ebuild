@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/awesome_print/awesome_print-0.4.0.ebuild,v 1.1 2011/05/23 17:38:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/awesome_print/awesome_print-0.4.0.ebuild,v 1.2 2011/06/28 23:25:16 matsuu Exp $
 
 EAPI=2
-USE_RUBY="ruby18 ree18 jruby"
+USE_RUBY="ruby18 ruby19 ree18 jruby"
 
 RUBY_FAKEGEM_TASK_TEST="spec"
 
@@ -16,7 +16,7 @@ DESCRIPTION="Ruby library that pretty prints Ruby objects in full color with pro
 HOMEPAGE="http://github.com/michaeldv/awesome_print"
 LICENSE="MIT"
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE=""
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/awesome_print
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/awesome_print/ChangeLog,v 1.5 2011/05/23 17:38:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/awesome_print/ChangeLog,v 1.6 2011/06/28 23:25:16 matsuu Exp $
+
+  28 Jun 2011; MATSUU Takuto <matsuu@gentoo.org> awesome_print-0.4.0.ebuild:
+  Added ruby19 to USE_RUBY. Added ~x86 to KEYWORDS.
 
 *awesome_print-0.4.0 (23 May 2011)
 
