@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.157 2011/06/28 04:34:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.158 2011/06/28 05:42:13 williamh Exp $
+
+  28 Jun 2011; William Hubbs <williamh@gentoo.org> -openrc-0.8.3.ebuild:
+  remove old version
 
   28 Jun 2011; Mike Frysinger <vapier@gentoo.org> openrc-0.8.3-r1.ebuild:
   Mark m68k/s390 stable #367467.
