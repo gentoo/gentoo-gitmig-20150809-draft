@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/dsdp/dsdp-5.8.ebuild,v 1.3 2011/06/05 12:19:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/dsdp/dsdp-5.8.ebuild,v 1.4 2011/06/28 18:12:18 jlec Exp $
 
 EAPI=4
 
@@ -40,13 +40,13 @@ src_prepare() {
 	find . -name Makefile -exec \
 		sed -i -e 's:make :$(MAKE) :g' '{}' \;
 	sed -i \
-		-e "s:#\(DSDPROOT[[:space:]]*=\).*:\1${S}:" \
-		-e "s:\(CC[[:space:]]*=\).*:\1$(tc-getCC):" \
-		-e "s:\(OPTFLAGS[[:space:]]*=\).*:\1${CFLAGS}:" \
-		-e "s:\(CLINKER[[:space:]]*=\).*:\1 \${CC} ${LDFLAGS}:" \
-		-e "s:\(LAPACKBLAS[[:space:]]*=\).*:\1 $(pkg-config --libs blas lapack):" \
-		-e "s:\(^ARCH[[:space:]]*=\).*:\1$(tc-getAR) cr:" \
-		-e "s:\(^RANLIB[[:space:]]*=\).*:\1$(tc-getRANLIB):" \
+		-e "s|#\(DSDPROOT[[:space:]]*=\).*|\1${S}|" \
+		-e "s|\(CC[[:space:]]*=\).*|\1$(tc-getCC)|" \
+		-e "s|\(OPTFLAGS[[:space:]]*=\).*|\1${CFLAGS}|" \
+		-e "s|\(CLINKER[[:space:]]*=\).*|\1 \${CC} ${LDFLAGS}|" \
+		-e "s|\(LAPACKBLAS[[:space:]]*=\).*|\1 $(pkg-config --libs blas lapack)|" \
+		-e "s|\(^ARCH[[:space:]]*=\).*|\1$(tc-getAR) cr|" \
+		-e "s|\(^RANLIB[[:space:]]*=\).*|\1$(tc-getRANLIB)|" \
 		make.include || die
 }
 
