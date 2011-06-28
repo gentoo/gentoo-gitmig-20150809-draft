@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.3-r3.ebuild,v 1.2 2011/06/07 21:05:51 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.3-r4.ebuild,v 1.1 2011/06/28 18:54:43 aidecoe Exp $
 
 EAPI="3"
 
@@ -51,6 +51,7 @@ src_prepare() {
 
 src_configure() {
 	local myeconfargs=(
+		--localstatedir=/var
 		$(use_enable pango)
 		$(use_enable gdm gdm-transition)
 		$(use_enable video_cards_intel libdrm_intel)
