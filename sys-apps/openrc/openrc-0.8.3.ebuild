@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.8.3.ebuild,v 1.1 2011/06/20 03:28:15 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.8.3.ebuild,v 1.2 2011/06/28 01:49:50 idl0r Exp $
 
 EAPI=4
 
@@ -66,6 +66,8 @@ src_prepare() {
 		local ver="git-${EGIT_VERSION:0:6}"
 		sed -i "/^GITVER[[:space:]]*=/s:=.*:=${ver}:" mk/git.mk || die
 	fi
+
+	epatch "${FILESDIR}/${P}-deprecation_warning.patch"
 
 	# Allow user patches to be applied without modifying the ebuild
 	epatch_user

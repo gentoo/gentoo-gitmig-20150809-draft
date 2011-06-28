@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.153 2011/06/20 03:28:15 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.154 2011/06/28 01:49:50 idl0r Exp $
+
+  28 Jun 2011; Christian Ruppert <idl0r@gentoo.org> openrc-0.8.3.ebuild,
+  +files/openrc-0.8.3-deprecation_warning.patch:
+  Fix deprecation warning for -c/--chuid, take a look at the patch for more
+  details.
 
 *openrc-0.8.3 (20 Jun 2011)
 
