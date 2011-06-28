@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.148 2011/06/04 17:04:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.149 2011/06/28 19:40:38 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> wxpython-2.8.11.0.ebuild:
+  Marking wxpython-2.8.11.0 ppc for bug 364203
 
   04 Jun 2011; Raúl Porcel <armin76@gentoo.org> wxpython-2.8.11.0.ebuild:
   alpha/ia64/sh/sparc stable wrt #364203
