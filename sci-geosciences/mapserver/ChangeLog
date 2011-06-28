@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/mapserver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.40 2011/06/11 15:08:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.41 2011/06/28 15:22:38 olemarkus Exp $
+
+  28 Jun 2011; Ole Markus With <olemarkus@gentoo.org> -mapserver-5.6.6.ebuild:
+  Non-maintainer commit: Removing ebuild depending on older PHP versions. Bug
+  363809
 
   11 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> mapserver-6.0.0.ebuild:
   Gif ain't exactly optional. Fixes bug #371159.
