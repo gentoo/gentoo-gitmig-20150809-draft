@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libexplain
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/ChangeLog,v 1.4 2011/06/13 07:51:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/ChangeLog,v 1.5 2011/06/28 12:02:45 jlec Exp $
+
+  28 Jun 2011; Justin Lecher <jlec@gentoo.org> libexplain-0.40.ebuild,
+  libexplain-0.42.ebuild, metadata.xml:
+  ADded missing dependency on sys-libs/libcap, #372633; EAPI bump
 
 *libexplain-0.42 (13 Jun 2011)
 

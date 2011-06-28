@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/libexplain-0.42.ebuild,v 1.1 2011/06/13 07:51:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libexplain/libexplain-0.42.ebuild,v 1.2 2011/06/28 12:02:45 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
 MY_P="${P}.D001"
 
@@ -18,6 +18,7 @@ IUSE=""
 
 DEPEND="
 	>=sys-kernel/linux-headers-2.6.35
+	sys-libs/libcap
 	>=sys-libs/glibc-2.11"
 RDEPEND="${DEPEND}"
 
@@ -32,6 +33,6 @@ src_prepare() {
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" install || die
-	dodoc README || die
+	MAKEOPTS+=" -j1"
+	default
 }
