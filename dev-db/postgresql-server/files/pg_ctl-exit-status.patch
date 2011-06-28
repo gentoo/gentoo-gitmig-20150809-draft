@@ -1,0 +1,20 @@
+diff -cr a/src/bin/pg_ctl/pg_ctl.c b/src/bin/pg_ctl/pg_ctl.c
+*** a/src/bin/pg_ctl/pg_ctl.c	2011-04-14 23:15:53.000000000 -0400
+--- b/src/bin/pg_ctl/pg_ctl.c	2011-05-22 10:25:34.186930946 -0400
+***************
+*** 1036,1042 ****
+  		}
+  	}
+  	printf(_("%s: no server running\n"), progname);
+! 	exit(1);
+  }
+  
+  
+--- 1036,1042 ----
+  		}
+  	}
+  	printf(_("%s: no server running\n"), progname);
+! 	exit(3);
+  }
+  
+  
