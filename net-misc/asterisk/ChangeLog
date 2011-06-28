@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.324 2011/06/28 21:38:10 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.325 2011/06/28 21:43:51 chainsaw Exp $
+
+*asterisk-1.6.2.18.2 (28 Jun 2011)
+
+  28 Jun 2011; Tony Vroon <chainsaw@gentoo.org> +asterisk-1.6.2.18.2.ebuild:
+  Version bump to 1.6.2.18.2 for AST-2011-011 (information disclosure on
+  valid/invalid SIP usernames even with alwaysauthreject).
 
 *asterisk-1.8.4.4 (28 Jun 2011)
 
