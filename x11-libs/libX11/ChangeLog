@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libX11
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.178 2011/05/15 13:39:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.179 2011/06/28 20:07:08 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> libX11-1.4.3.ebuild:
+  Marking libX11-1.4.3 ppc stable for bug 363965
 
   15 May 2011; Raúl Porcel <armin76@gentoo.org> libX11-1.4.3.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #363965
