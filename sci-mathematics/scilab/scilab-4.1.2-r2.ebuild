@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.2-r2.ebuild,v 1.10 2011/06/21 14:43:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.2-r2.ebuild,v 1.11 2011/06/28 13:56:38 jlec Exp $
 
-EAPI="1"
+EAPI=4
 
-inherit eutils fortran-2 toolchain-funcs multilib autotools java-pkg-opt-2
+inherit autotools eutils fortran-2 java-pkg-opt-2 multilib toolchain-funcs
 
 DESCRIPTION="Scientific software package for numerical computations (Matlab lookalike)"
 LICENSE="scilab"
@@ -12,7 +12,7 @@ SRC_URI="http://www.scilab.org/download/${PV}/${P}-src.tar.gz"
 HOMEPAGE="http://www.scilab.org/"
 
 SLOT="0"
-IUSE="ocaml gtk Xaw3d java examples"
+IUSE="examples gtk java ocaml Xaw3d"
 KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND="
@@ -43,30 +43,31 @@ pkg_setup() {
 	java-pkg-opt-2_pkg_setup
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}"/${PN}-4.0-makefile.patch
-	epatch "${FILESDIR}"/${PN}-4.1-java-pic.patch
-	epatch "${FILESDIR}"/${P}-header-fix.patch
-	epatch "${FILESDIR}"/${PN}-4.1-examples.patch
-	epatch "${FILESDIR}"/${P}-java-config.patch
-	epatch "${FILESDIR}"/${P}-tmp-fix.patch
-	epatch "${FILESDIR}"/${P}-gcc45.patch
+src_prepare() {
+	epatch \
+		"${FILESDIR}"/${PN}-4.0-makefile.patch \
+		"${FILESDIR}"/${PN}-4.1-java-pic.patch \
+		"${FILESDIR}"/${P}-header-fix.patch \
+		"${FILESDIR}"/${PN}-4.1-examples.patch \
+		"${FILESDIR}"/${P}-java-config.patch \
+		"${FILESDIR}"/${P}-tmp-fix.patch \
+		"${FILESDIR}"/${P}-gcc45.patch
 	eautoconf
 
-	sed -e '/^ATLAS_LAPACKBLAS\>/s,=.*,= $(ATLASDIR)/liblapack.so $(ATLASDIR)/libblas.so $(ATLASDIR)/libcblas.so,' \
+	sed \
+		-e "/^ATLAS_LAPACKBLAS\>/s,=.*,= $(pkg-config --libs blas cblas lapack)," \
 		-e 's,$(SCIDIR)/libs/lapack.a,,' \
 		-i Makefile.OBJ.in || die "Failed to fix Makefile.OBJ.in"
 
-	sed -e "s:\$(PREFIX):\${D}\$(PREFIX):g" \
+	sed \
+		-e "s:\$(PREFIX):\${D}\$(PREFIX):g" \
 		-e "s:\$(PREFIX)/lib:\$(PREFIX)/$(get_libdir):g" \
 		-i Makefile.in || die "Failed to fix Makefile.in"
 
-	sed -e "s:@CC_OPTIONS@:${CFLAGS}:" \
-		-e "s:@FC_OPTIONS@:${FFLAGS}:" \
-		-e "s:@LD_LDFLAGS@:${LDFLAGS} -lpthread:" \
+	sed \
+		-e "s|@CC_OPTIONS@|${CFLAGS}|" \
+		-e "s|@FC_OPTIONS@|${FFLAGS}|" \
+		-e "s|@LD_LDFLAGS@|${LDFLAGS} -lpthread|" \
 		-i Makefile.incl.in || die "Failed to fix Makefile.incl.in"
 
 	# fix bad C practices by failure of scilab build system to
@@ -84,7 +85,7 @@ src_unpack() {
 	done
 }
 
-src_compile() {
+src_configure() {
 	local myopts
 	myopts="${myopts} --with-atlas-library=/usr/$(get_libdir)"
 
@@ -95,44 +96,47 @@ src_compile() {
 		myopts="${myopts} --with-gfortran"
 	fi
 
-	econf $(use_with Xaw3d xaw3d) \
+	econf \
+		$(use_with Xaw3d xaw3d) \
 		$(use_with gtk gtk2 ) \
 		$(use_with ocaml) \
 		$(use_with java ) \
-		${myopts} || die "econf failed"
-	env HOME="${S}" emake -j1 all || die "emake failed"
+		${myopts}
+}
+
+src_compile() {
+	env HOME="${S}" emake -j1 all
 }
 
 src_install() {
-	DESTDIR="${D}" make install || die "installation failed"
+	default
 
 	# some postinstall fixes
 	echo "SCIDIR=/usr/$(get_libdir)/${P}" > \
 		"${D}/usr/$(get_libdir)/${P}/Path.incl"
 
 	# install docs
-	dodoc ACKNOWLEDGEMENTS CHANGES README_Unix RELEASE_NOTES \
-		Readme_Visual.txt || die "failed to install docs"
+	dodoc ACKNOWLEDGEMENTS Readme_Visual.txt
 
 	# install examples
 	if use examples; then
 		insinto /usr/share/${PN}/
-		doins -r examples/ || die "failed to install examples"
+		doins -r examples/
 	fi
 
 	# install static libs since they are needed to link some third
 	# party apps (see bug #257252)
 	insinto /usr/$(get_libdir)/${P}/libs
-	doins libs/*.a || die "failed to install static libs"
+	doins libs/*.a
 
 	insinto /usr/$(get_libdir)/${P}
-	doins Makefile.incl || die "failed to install Makefile.incl"
+	doins Makefile.incl
 
 	exeinto /usr/$(get_libdir)/${P}
-	doexe libtool || die "failed to install libtool"
+	doexe libtool
 
 	insinto /usr/$(get_libdir)/${P}/config
-	doins config/Makeso.incl || die "failed to install Makeso.incl"
+	doins config/Makeso.incl
 
 	# The compile and install process causes the work folder
 	# to be registered as the runtime folder in many files.

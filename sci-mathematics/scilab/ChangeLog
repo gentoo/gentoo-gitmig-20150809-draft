@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/scilab
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.57 2011/06/21 14:43:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.58 2011/06/28 13:56:38 jlec Exp $
+
+  28 Jun 2011; Justin Lecher <jlec@gentoo.org> scilab-4.1.2-r1.ebuild,
+  scilab-4.1.2-r2.ebuild, metadata.xml:
+  Fix sed on *FLAGS from : to |, EAPI bump
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> scilab-4.1.2-r1.ebuild,
   scilab-4.1.2-r2.ebuild:
