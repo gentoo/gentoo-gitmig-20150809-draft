@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.341 2011/06/26 20:29:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.342 2011/06/28 20:04:40 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> mesa-7.10.2.ebuild:
+  Marking mesa-7.10.2 ppc stable for bug 363965
 
   26 Jun 2011; Markus Meier <maekke@gentoo.org> mesa-7.10.3.ebuild:
   arm stable, bug #371857
