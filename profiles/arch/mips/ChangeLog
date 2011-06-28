@@ -1,6 +1,20 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.65 2011/06/28 19:23:05 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.66 2011/06/28 20:14:12 mattst88 Exp $
+
+  28 Jun 2011; Matt Turner <mattst88@gentoo.org> -sys/README,
+  -sys/cobalt/make.defaults, -sys/lemote/lm2e/fulong/make.defaults,
+  -sys/lemote/lm2e/fulong/parent, -sys/lemote/lm2e/parent,
+  -sys/lemote/lm2e/use.force, -sys/lemote/lm2f/parent,
+  -sys/lemote/lm2f/use.force, -sys/lemote/lm2f/yeeloong/make.defaults,
+  -sys/lemote/lm2f/yeeloong/parent, -sys/sgi/ip22/make.defaults,
+  -sys/sgi/ip22/parent, -sys/sgi/ip27/make.defaults, -sys/sgi/ip27/parent,
+  -sys/sgi/ip27/use.force, -sys/sgi/ip28/make.defaults, -sys/sgi/ip28/parent,
+  -sys/sgi/ip28/use.force, -sys/sgi/ip30/make.defaults, -sys/sgi/ip30/parent,
+  -sys/sgi/ip30/use.force, -sys/sgi/ip32/make.defaults, -sys/sgi/ip32/parent,
+  -sys/sgi/ip32/r10k/make.defaults, -sys/sgi/ip32/r10k/parent,
+  -sys/sgi/ip32/r10k/use.force, -sys/sgi/make.defaults:
+  Remove sys/ profiles. They didn't do anything.
 
   28 Jun 2011; Matt Turner <mattst88@gentoo.org> use.mask:
   Remove acl from use.mask, bug 372249
