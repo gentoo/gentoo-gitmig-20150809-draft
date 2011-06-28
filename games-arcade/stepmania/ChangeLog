@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/stepmania
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/ChangeLog,v 1.37 2011/04/12 13:29:48 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/ChangeLog,v 1.38 2011/06/28 12:12:00 tupone Exp $
+
+  28 Jun 2011; Tupone Alfredo <tupone@gentoo.org> stepmania-3.9-r2.ebuild,
+  +files/stepmania-3.9-libpng15.patch:
+  Fix build with media-libs/libpng-1.5 Bug #355119 by Lars Wendler
+  (Polynomial-C)
 
   12 Apr 2011; Alfredo Tupone <tupone@gentoo.org> stepmania-3.9-r2.ebuild,
   +files/stepmania-3.9-gcc46.patch:

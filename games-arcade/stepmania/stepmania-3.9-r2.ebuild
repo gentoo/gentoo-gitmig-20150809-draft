@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/stepmania-3.9-r2.ebuild,v 1.6 2011/04/12 13:29:48 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/stepmania-3.9-r2.ebuild,v 1.7 2011/06/28 12:12:00 tupone Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -39,13 +39,10 @@ src_prepare() {
 		"${FILESDIR}"/${P}-gentoo.patch > "${T}"/${P}.patch
 
 	EPATCH_SUFFIX=patch epatch "${T}"/${P}.patch "${WORKDIR}"/patches
-	epatch "${FILESDIR}"/${P}-gcc46.patch
+	epatch "${FILESDIR}"/${P}-gcc46.patch \
+		"${FILESDIR}"/${P}-libpng15.patch
 
-	sed -i \
-		-e 's:png_set_gray_1_2_4_to_8:png_set_expand_gray_1_2_4_to_8:' \
-		src/RageSurface_Load_PNG.cpp || die
-
-	AT_M4DIR=autoconf/m4 eautoreconf
+	eautoreconf
 }
 
 src_configure() {
