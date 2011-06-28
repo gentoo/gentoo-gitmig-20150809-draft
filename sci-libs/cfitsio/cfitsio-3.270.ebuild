@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.270.ebuild,v 1.3 2011/05/03 09:38:45 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.270.ebuild,v 1.4 2011/06/28 10:43:39 grobian Exp $
 
 EAPI=3
 inherit autotools-utils
@@ -25,12 +25,15 @@ src_prepare() {
 		ln -s "${EPREFIX}"/usr/include/cfortran.h .
 	fi
 	autotools-utils_src_prepare
+	# fix stupdity in zlib check macro
+	sed -i -e '/^ZLIB_HOME=\/usr\/local/d' configure || die
 }
 
 src_configure() {
 	myeconfargs=(
 		$(use_enable threads)
 		$(use_enable fortran)
+		"--with-zlib=${EPREFIX}/usr"
 	)
 	autotools-utils_src_configure
 }
