@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.2_p02.ebuild,v 1.14 2011/06/21 14:39:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.2_p02.ebuild,v 1.15 2011/06/28 13:34:44 jlec Exp $
 
 EAPI=2
 
-inherit eutils fortran-2 versionator toolchain-funcs
+inherit eutils fortran-2 toolchain-funcs versionator
 
 PV1=$(get_version_component_range 1 ${PV})
 PV2=$(get_version_component_range 2 ${PV})
@@ -13,10 +13,10 @@ MY_P=${PN}$(replace_version_separator 3 .)
 
 DESCRIPTION="Toolkit for simulation of passage of particles through matter"
 HOMEPAGE="http://geant4.cern.ch/"
-
 SRC_COM="http://geant4.web.cern.ch/geant4/support/source"
 SRC_URI="${SRC_COM}/${MY_P}.tar.gz"
-GEANT4_DATA="G4NDL.3.13
+GEANT4_DATA="
+	G4NDL.3.13
 	G4EMLOW.6.2
 	G4RadioactiveDecay.3.2
 	PhotonEvaporation.2.0
@@ -33,20 +33,22 @@ IUSE="aida athena +data dawn debug examples gdml geant3 global minimal +motif
 
 RDEPEND="
 	virtual/fortran
-<sci-physics/clhep-2.1
-	motif? ( >=x11-libs/openmotif-2.3:0 )
+	<sci-physics/clhep-2.1
+	motif? ( x11-libs/openmotif:0 )
 	athena? ( x11-libs/libXaw )
 	qt4? ( x11-libs/qt-gui:4 )
 	openinventor? ( >=media-libs/openinventor-2.1.5.10-r3 )
-	raytracerx? ( x11-libs/libX11 x11-libs/libXmu )
-	opengl? ( virtual/opengl
-			  athena? ( x11-libs/Xaw3d )
-			  qt4? ( x11-libs/qt-opengl:4 ) )
+	raytracerx? (
+		x11-libs/libX11
+		x11-libs/libXmu )
+	opengl? (
+		virtual/opengl
+		athena? ( x11-libs/Xaw3d )
+		qt4? ( x11-libs/qt-opengl:4 ) )
 	gdml? ( dev-libs/xerces-c )
 	geant3? ( sci-physics/geant:3 )
 	dawn? ( media-gfx/dawn )
 	zlib? ( sys-libs/zlib )"
-
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
@@ -67,10 +69,10 @@ src_prepare() {
 		-e '/FC.*:=.*gfortran/d' \
 		-e 's/\(CXXFLAGS.*:=\).*/\1 -ansi/' \
 		-e '/CXXFLAGS.*+=.*pipe/d' \
-		-e "/CXXFLAGS.*=.*-O2/s:=.*:= ${CXXFLAGS}:" \
-		-e "/FCFLAGS.*=.*-O2/s:=.*:= ${FCFLAGS}:" \
-		-e "/CCFLAGS.*=.*-O2/s:=.*:= ${CFLAGS}:" \
-		-e "s:-Wl,-soname:${LDFLAGS} -Wl,-soname:g" \
+		-e "/CXXFLAGS.*=.*-O2/s|=.*|= ${CXXFLAGS}|" \
+		-e "/FCFLAGS.*=.*-O2/s|=.*|= ${FCFLAGS}|" \
+		-e "/CCFLAGS.*=.*-O2/s|=.*|= ${CFLAGS}|" \
+		-e "s|-Wl,-soname|${LDFLAGS} -Wl,-soname|g" \
 		-e "s/libq\*/lib\[q,Q\]t*/g" \
 		config/sys/Linux*gmk || die "flag substitution failed"
 	sed -i \

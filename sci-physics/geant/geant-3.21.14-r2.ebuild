@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-3.21.14-r2.ebuild,v 1.19 2011/06/21 14:39:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-3.21.14-r2.ebuild,v 1.20 2011/06/28 13:34:44 jlec Exp $
 
 EAPI=2
+
 inherit eutils fortran-2
 
 DEB_PN=geant321
@@ -12,22 +13,21 @@ DEB_P=${DEB_PN}_${DEB_PV}
 
 DESCRIPTION="CERN's detector description and simulation Tool"
 HOMEPAGE="http://wwwasd.web.cern.ch/wwwasd/geant/index.html"
-
-LICENSE="GPL-2 LGPL-2 BSD"
-SRC_URI="mirror://debian/pool/main/${DEB_PN:0:1}/${DEB_PN}/${DEB_P}.orig.tar.gz
+SRC_URI="
+	mirror://debian/pool/main/${DEB_PN:0:1}/${DEB_PN}/${DEB_P}.orig.tar.gz
 	mirror://debian/pool/main/${DEB_PN:0:1}/${DEB_PN}/${DEB_P}-${DEB_PR}.diff.gz"
 
-KEYWORDS="amd64 x86"
 SLOT="3"
+LICENSE="GPL-2 LGPL-2 BSD"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="
-	virtual/fortran
->=x11-libs/openmotif-2.3:0
 	dev-lang/cfortran
 	sci-physics/cernlib
-	sci-physics/paw"
-
+	sci-physics/paw
+	virtual/fortran
+	x11-libs/openmotif:0"
 DEPEND="${RDEPEND}
 	virtual/latex-base
 	x11-misc/imake
@@ -42,9 +42,9 @@ src_prepare() {
 	cd "${S}"
 	cp debian/add-ons/Makefile .
 	export DEB_BUILD_OPTIONS="$(tc-getFC) nostrip nocheck"
-	sed -i \
+	sed \
 		-e 's:/usr/local:/usr:g' \
-		Makefile || die "sed'ing the Makefile failed"
+		-i Makefile || die "sed'ing the Makefile failed"
 
 	einfo "Applying Debian patches"
 	emake -j1 patch || die "debian patch failed"

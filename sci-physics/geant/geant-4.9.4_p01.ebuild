@@ -1,23 +1,22 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.4_p01.ebuild,v 1.5 2011/06/21 14:39:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.4_p01.ebuild,v 1.6 2011/06/28 13:34:44 jlec Exp $
 
-EAPI=3
+EAPI=4
 
-inherit cmake-utils fortran-2 versionator eutils fortran-2
+inherit cmake-utils eutils fortran-2 versionator
 
 PV1=$(get_version_component_range 1 ${PV})
 PV2=$(get_version_component_range 2 ${PV})
 PV3=$(get_version_component_range 3 ${PV})
-
 MYP=${PN}$(replace_version_separator 3 .)
 
 DESCRIPTION="Toolkit for simulation of passage of particles through matter"
 HOMEPAGE="http://geant4.cern.ch/"
-
 SRC_COM="http://geant4.cern.ch/support/source"
 SRC_URI="${SRC_COM}/${MYP}.tar.gz"
-GEANT4_DATA="G4NDL.3.14
+GEANT4_DATA="
+	G4NDL.3.14
 	G4EMLOW.6.19
 	G4RadioactiveDecay.3.3
 	G4NEUTRONXS.1.0
@@ -36,13 +35,12 @@ IUSE="+data dawn examples gdml geant3 granular qt4 static-libs vrml zlib"
 
 RDEPEND="
 	virtual/fortran
->=sci-physics/clhep-2.1
+	>=sci-physics/clhep-2.1
 	qt4? ( x11-libs/qt-gui:4 x11-libs/qt-opengl:4 )
 	gdml? ( dev-libs/xerces-c )
 	geant3? ( sci-physics/geant:3 )
 	dawn? ( media-gfx/dawn )
 	zlib? ( sys-libs/zlib )"
-
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MYP}"
@@ -71,7 +69,7 @@ src_install() {
 		pushd "${WORKDIR}" > /dev/null
 		for d in ${GEANT4_DATA}; do
 			local p=${d/.}
-			doins -r *${p/G4} || die "installing data ${d} failed"
+			doins -r *${p/G4}
 		done
 		popd > /dev/null
 	fi

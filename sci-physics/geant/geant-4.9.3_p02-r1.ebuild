@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.3_p02-r1.ebuild,v 1.6 2011/06/21 14:39:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.3_p02-r1.ebuild,v 1.7 2011/06/28 13:34:44 jlec Exp $
 
-EAPI=3
+EAPI=4
 
-inherit eutils fortran-2 versionator toolchain-funcs
+inherit eutils fortran-2 toolchain-funcs versionator
 
 PV1=$(get_version_component_range 1 ${PV})
 PV2=$(get_version_component_range 2 ${PV})
@@ -13,10 +13,10 @@ MY_P=${PN}$(replace_version_separator 3 .)
 
 DESCRIPTION="Toolkit for simulation of passage of particles through matter"
 HOMEPAGE="http://geant4.cern.ch/"
-
 SRC_COM="http://geant4.cern.ch/support/source"
 SRC_URI="${SRC_COM}/${MY_P}.tar.gz"
-GEANT4_DATA="G4NDL.3.13
+GEANT4_DATA="
+	G4NDL.3.13
 	G4EMLOW.6.9
 	G4RadioactiveDecay.3.2
 	PhotonEvaporation.2.0
@@ -34,8 +34,8 @@ IUSE="athena +data dawn debug examples gdml geant3 global minimal +motif
 
 RDEPEND="
 	virtual/fortran
-<sci-physics/clhep-2.1
-	motif? ( >=x11-libs/openmotif-2.3:0 )
+	<sci-physics/clhep-2.1
+	motif? ( x11-libs/openmotif:0 )
 	athena? ( x11-libs/libXaw )
 	qt4? ( x11-libs/qt-gui:4 )
 	openinventor? ( >=media-libs/openinventor-2.1.5.10-r3 )
@@ -47,7 +47,6 @@ RDEPEND="
 	geant3? ( sci-physics/geant:3 )
 	dawn? ( media-gfx/dawn )
 	zlib? ( sys-libs/zlib )"
-
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
@@ -151,20 +150,20 @@ src_configure() {
 src_compile() {
 	cd "${S}/source/"
 	einfo "Building shared library"
-	emake || die "Building shared geant failed"
+	emake
 
 	if use global; then
 		export G4LIB_USE_GRANULAR=y
 		einfo "Building granular libraries"
-		emake global || die "Building global libraries failed"
-		emake || die "Rebuilding shared geant failed"
+		emake global
+		emake
 	fi
 
 	if use static-libs; then
 		einfo "Building static libraries"
 		rm -rf tmp
 		export G4LIB_BUILD_STATIC=y ; unset G4LIB_BUILD_SHARED
-		emake || die "Building static geant failed"
+		emake
 	fi
 }
 
@@ -199,34 +198,34 @@ g4_create_env_script() {
 	printenv | uniq | \
 		sed -n -e '/^G4/s:BUILD\(.*\)_DRIVER:USE\1:gp' >> ${g4env}
 	sed -i -e '/G4WORKDIR/d' ${g4env}
-	doenvd ${g4env} || die "Installing environment scripts failed "
+	doenvd ${g4env}
 }
 
 src_install() {
 	# install headers via make since we want them in a single directory
 	cd "${S}/source/"
 	einfo "Installing Geant4 headers"
-	emake includes || die 'Installing headers failed'
+	emake includes
 	cd "${S}"
 
 	# but install libraries and Geant library tool manually
 	einfo "Installing Geant4 libraries"
 	insinto ${GEANT4_LIBDIR}
 	insopts -m0755
-	doins tmp/*.so || die
-	doins tmp/libname.map || die
+	doins tmp/*.so
+	doins tmp/libname.map
 	insopts -m0644
 	if use static-libs; then
-		doins tmp/*.a || die
+		doins tmp/*.a
 	fi
 	exeinto ${GEANT4_LIBDIR}
-	doexe tmp/liblist || die
+	doexe tmp/liblist
 
 	g4_create_env_script
 
 	# configs
 	insinto ${GEANT4_DIR}
-	doins -r config || die
+	doins -r config
 
 	# install data
 	if use data; then
@@ -235,7 +234,7 @@ src_install() {
 		pushd "${WORKDIR}" > /dev/null
 		for d in ${GEANT4_DATA}; do
 			local p=${d/.}
-			doins -r *${p/G4} || die "installing data ${d} failed"
+			doins -r *${p/G4}
 		done
 		popd > /dev/null
 	fi
