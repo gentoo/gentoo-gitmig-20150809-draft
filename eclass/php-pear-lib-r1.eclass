@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-lib-r1.eclass,v 1.22 2011/04/16 12:19:00 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-pear-lib-r1.eclass,v 1.23 2011/06/28 07:03:59 olemarkus Exp $
 #
 # Author: Luca Longinotti <chtekk@gentoo.org>
 
@@ -21,7 +21,6 @@ DEPEND="dev-lang/php
 		 >=dev-php/pear-1.9.0"
 RDEPEND="${DEPEND}"
 
-
 if [[ -n $PHP_PEAR_CHANNEL ]] ; then
 	PHP_PEAR_PV=${PV/_rc/RC}
 	[[ -z ${PHP_PEAR_PN} ]] && die "Missing PHP_PEAR_PN. Please notify the maintainer"
@@ -29,7 +28,7 @@ if [[ -n $PHP_PEAR_CHANNEL ]] ; then
 
 	S=${WORKDIR}/${PHP_PEAR_P}
 
-	SRC_URI="http://${PHP_PEAR_CHANNEL}/get/${PHP_PEAR_P}.tgz"
+	SRC_URI="http://${PHP_PEAR_URI}/get/${PHP_PEAR_P}.tgz"
 fi
 
 
