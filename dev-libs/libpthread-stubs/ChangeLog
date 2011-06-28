@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpthread-stubs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpthread-stubs/ChangeLog,v 1.19 2011/06/26 20:27:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpthread-stubs/ChangeLog,v 1.20 2011/06/28 21:18:40 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> libpthread-stubs-0.3.ebuild:
+  Marking libpthread-stubs-0.3 ppc stable for bug 371857
 
   26 Jun 2011; Markus Meier <maekke@gentoo.org> libpthread-stubs-0.3.ebuild:
   arm stable, bug #371857
