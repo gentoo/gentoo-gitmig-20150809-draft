@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/semantic
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/semantic/ChangeLog,v 1.18 2011/06/25 18:49:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/semantic/ChangeLog,v 1.19 2011/06/28 21:43:19 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> semantic-1.21.ebuild:
+  Marking semantic-1.21 ppc stable for bug 369897
 
   25 Jun 2011; Raúl Porcel <armin76@gentoo.org> semantic-1.21.ebuild:
   alpha/sparc stable wrt #369897

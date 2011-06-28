@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/net-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/net-utils/ChangeLog,v 1.27 2011/06/25 18:31:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/net-utils/ChangeLog,v 1.28 2011/06/28 21:43:11 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> net-utils-1.56.ebuild:
+  Marking net-utils-1.56 ppc stable for bug 369897
 
   25 Jun 2011; Raúl Porcel <armin76@gentoo.org> net-utils-1.56.ebuild:
   alpha/sparc stable wrt #369897

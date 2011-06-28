@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/vc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/vc/ChangeLog,v 1.19 2011/06/25 18:59:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/vc/ChangeLog,v 1.20 2011/06/28 21:43:11 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> vc-1.48.ebuild:
+  Marking vc-1.48 ppc stable for bug 369897
 
   25 Jun 2011; Raúl Porcel <armin76@gentoo.org> vc-1.48.ebuild:
   alpha/sparc stable wrt #369897

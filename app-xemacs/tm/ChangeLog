@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/tm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/tm/ChangeLog,v 1.17 2011/06/25 18:57:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/tm/ChangeLog,v 1.18 2011/06/28 21:43:19 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> tm-1.39.ebuild:
+  Marking tm-1.39 ppc stable for bug 369897
 
   25 Jun 2011; Raúl Porcel <armin76@gentoo.org> tm-1.39.ebuild:
   alpha/sparc stable wrt #369897

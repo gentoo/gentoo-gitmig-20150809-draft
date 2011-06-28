@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/ibuffer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ibuffer/ChangeLog,v 1.14 2011/06/25 18:17:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ibuffer/ChangeLog,v 1.15 2011/06/28 21:43:18 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> ibuffer-1.10.ebuild:
+  Marking ibuffer-1.10 ppc stable for bug 369897
 
   25 Jun 2011; Raúl Porcel <armin76@gentoo.org> ibuffer-1.10.ebuild:
   alpha/sparc stable wrt #369897

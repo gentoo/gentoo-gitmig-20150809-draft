@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/cogre/cogre-1.02.ebuild,v 1.5 2011/06/26 10:52:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/cogre/cogre-1.02.ebuild,v 1.6 2011/06/28 21:43:15 ranger Exp $
 
 SLOT="0"
 IUSE=""
@@ -15,6 +15,6 @@ app-xemacs/cedet-common
 app-xemacs/eieio
 app-xemacs/semantic
 "
-KEYWORDS="alpha ~amd64 ~ppc sparc x86"
+KEYWORDS="alpha ~amd64 ppc sparc x86"
 
 inherit xemacs-packages

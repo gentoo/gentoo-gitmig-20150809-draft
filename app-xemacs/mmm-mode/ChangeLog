@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/mmm-mode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mmm-mode/ChangeLog,v 1.17 2011/06/25 18:28:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mmm-mode/ChangeLog,v 1.18 2011/06/28 21:43:12 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> mmm-mode-1.05.ebuild:
+  Marking mmm-mode-1.05 ppc stable for bug 369897
 
   25 Jun 2011; Raúl Porcel <armin76@gentoo.org> mmm-mode-1.05.ebuild:
   alpha/sparc stable wrt #369897

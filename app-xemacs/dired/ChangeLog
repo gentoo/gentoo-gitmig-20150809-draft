@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/dired
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/dired/ChangeLog,v 1.18 2011/06/25 17:27:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/dired/ChangeLog,v 1.19 2011/06/28 21:43:15 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> dired-1.20.ebuild:
+  Marking dired-1.20 ppc stable for bug 369897
 
   25 Jun 2011; Raúl Porcel <armin76@gentoo.org> dired-1.20.ebuild:
   alpha/sparc stable wrt #369897

@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/efs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/efs/ChangeLog,v 1.17 2011/06/25 18:02:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/efs/ChangeLog,v 1.18 2011/06/28 21:43:15 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> efs-1.34.ebuild:
+  Marking efs-1.34 ppc stable for bug 369897
 
   25 Jun 2011; Raúl Porcel <armin76@gentoo.org> efs-1.34.ebuild:
   alpha/sparc stable wrt #369897

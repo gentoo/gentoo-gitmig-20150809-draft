@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/tramp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/tramp/ChangeLog,v 1.21 2011/06/25 18:58:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/tramp/ChangeLog,v 1.22 2011/06/28 21:43:16 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> tramp-1.40.ebuild:
+  Marking tramp-1.40 ppc stable for bug 369897
 
   25 Jun 2011; Raúl Porcel <armin76@gentoo.org> tramp-1.40.ebuild:
   alpha/sparc stable wrt #369897

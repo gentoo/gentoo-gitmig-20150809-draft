@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/fsf-compat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/fsf-compat/ChangeLog,v 1.21 2011/06/25 18:11:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/fsf-compat/ChangeLog,v 1.22 2011/06/28 21:43:17 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> fsf-compat-1.19.ebuild:
+  Marking fsf-compat-1.19 ppc stable for bug 369897
 
   25 Jun 2011; Raúl Porcel <armin76@gentoo.org> fsf-compat-1.19.ebuild:
   alpha/sparc stable wrt #369897

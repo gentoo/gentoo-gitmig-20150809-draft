@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/sh-script
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/sh-script/ChangeLog,v 1.23 2011/06/25 18:51:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/sh-script/ChangeLog,v 1.24 2011/06/28 21:43:15 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> sh-script-1.24.ebuild:
+  Marking sh-script-1.24 ppc stable for bug 369897
 
   25 Jun 2011; Raúl Porcel <armin76@gentoo.org> sh-script-1.24.ebuild:
   alpha/sparc stable wrt #369897

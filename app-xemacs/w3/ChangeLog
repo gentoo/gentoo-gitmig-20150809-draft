@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/w3
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/w3/ChangeLog,v 1.18 2011/06/25 19:02:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/w3/ChangeLog,v 1.19 2011/06/28 21:43:10 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> w3-1.35.ebuild:
+  Marking w3-1.35 ppc stable for bug 369897
 
   25 Jun 2011; Raúl Porcel <armin76@gentoo.org> w3-1.35.ebuild:
   alpha/sparc stable wrt #369897

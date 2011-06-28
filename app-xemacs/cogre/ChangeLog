@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/cogre
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/cogre/ChangeLog,v 1.5 2011/06/26 10:52:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/cogre/ChangeLog,v 1.6 2011/06/28 21:43:15 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> cogre-1.02.ebuild:
+  Marking cogre-1.02 ppc stable for bug 369897
 
   26 Jun 2011; Raúl Porcel <armin76@gentoo.org> cogre-1.02.ebuild:
   alpha/sparc stable

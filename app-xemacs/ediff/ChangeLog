@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/ediff
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ediff/ChangeLog,v 1.26 2011/06/25 17:59:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/ediff/ChangeLog,v 1.27 2011/06/28 21:43:16 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> ediff-1.81.ebuild:
+  Marking ediff-1.81 ppc stable for bug 369897
 
   25 Jun 2011; Raúl Porcel <armin76@gentoo.org> ediff-1.81.ebuild:
   alpha/sparc stable wrt #369897

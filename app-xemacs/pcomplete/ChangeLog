@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/pcomplete
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/pcomplete/ChangeLog,v 1.18 2011/06/25 18:35:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/pcomplete/ChangeLog,v 1.19 2011/06/28 21:43:14 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> pcomplete-1.06.ebuild:
+  Marking pcomplete-1.06 ppc stable for bug 369897
 
   25 Jun 2011; Raúl Porcel <armin76@gentoo.org> pcomplete-1.06.ebuild:
   alpha/sparc stable wrt #369897

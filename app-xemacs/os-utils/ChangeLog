@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/os-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/os-utils/ChangeLog,v 1.18 2011/06/25 18:33:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/os-utils/ChangeLog,v 1.19 2011/06/28 21:43:12 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> os-utils-1.41.ebuild:
+  Marking os-utils-1.41 ppc stable for bug 369897
 
   25 Jun 2011; Raúl Porcel <armin76@gentoo.org> os-utils-1.41.ebuild:
   alpha/sparc stable wrt #369897

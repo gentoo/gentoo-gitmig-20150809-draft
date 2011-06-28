@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/oo-browser
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/oo-browser/ChangeLog,v 1.7 2011/06/25 18:32:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/oo-browser/ChangeLog,v 1.8 2011/06/28 21:43:19 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> oo-browser-1.05.ebuild:
+  Marking oo-browser-1.05 ppc stable for bug 369897
 
   25 Jun 2011; Raúl Porcel <armin76@gentoo.org> oo-browser-1.05.ebuild:
   alpha/sparc stable wrt #369897
