@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-boost
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-boost/ChangeLog,v 1.15 2010/03/21 15:10:05 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-boost/ChangeLog,v 1.16 2011/06/28 21:32:24 mattst88 Exp $
+
+  28 Jun 2011; Matt Turner <mattst88@gentoo.org> eselect-boost-0.3.ebuild:
+  Add ~mips
 
   21 Mar 2010; Brent Baude <ranger@gentoo.org> eselect-boost-0.3.ebuild:
   Marking eselect-boost-0.3 ppc64 for bug 306335
