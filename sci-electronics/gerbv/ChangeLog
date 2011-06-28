@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gerbv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/ChangeLog,v 1.40 2011/03/02 21:40:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/ChangeLog,v 1.41 2011/06/28 19:53:20 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> gerbv-2.4.0.ebuild:
+  Marking gerbv-2.4.0 ppc for bug 342811
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> gerbv-2.3.0-r2.ebuild,
   gerbv-2.4.0.ebuild, gerbv-2.5.0.ebuild:
