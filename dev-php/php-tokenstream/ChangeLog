@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/php-tokenstream
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-tokenstream/ChangeLog,v 1.4 2011/05/24 14:56:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-tokenstream/ChangeLog,v 1.5 2011/06/28 07:34:43 olemarkus Exp $
+
+  28 Jun 2011; Ole Markus With <olemarkus@gentoo.org>
+  php-tokenstream-1.0.1.ebuild:
+  Added missing PHP_PEAR_URI
 
   24 May 2011; Markos Chandras <hwoarang@gentoo.org>
   php-tokenstream-1.0.1.ebuild:

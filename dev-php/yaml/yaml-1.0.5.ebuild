@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/yaml/yaml-1.0.5.ebuild,v 1.6 2011/05/24 14:54:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/yaml/yaml-1.0.5.ebuild,v 1.7 2011/06/28 07:39:00 olemarkus Exp $
 
 EAPI=3
 
 PHP_PEAR_CHANNEL="${FILESDIR}/channel.xml"
+PHP_PEAR_URI="pear.symfony-project.com"
 PHP_PEAR_PN="YAML"
 
 inherit php-pear-lib-r1
