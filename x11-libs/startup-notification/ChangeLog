@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/startup-notification
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/startup-notification/ChangeLog,v 1.79 2011/06/26 21:16:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/startup-notification/ChangeLog,v 1.80 2011/06/28 20:06:38 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org>
+  startup-notification-0.12.ebuild:
+  Marking startup-notification-0.12 ppc stable for bug 372333
 
   26 Jun 2011; Markus Meier <maekke@gentoo.org>
   startup-notification-0.12.ebuild:
