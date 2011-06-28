@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/oregano
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.46 2011/05/06 11:23:23 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.47 2011/06/28 20:09:50 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> oregano-0.69.1.ebuild:
+  Marking oregano-0.69.1 ppc for bug 361889
 
   06 May 2011; Thomas Kahle <tomka@gentoo.org> oregano-0.69.1-r1.ebuild:
   x86 stable per bug 361889
