@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-2.24.ebuild,v 1.3 2011/06/25 17:18:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-2.27.ebuild,v 1.1 2011/06/28 14:19:21 nelchael Exp $
 
 EAPI="1"
 
@@ -65,20 +65,20 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/bin
-	dodir /usr/share/{pixmaps,applications}
+	dodir /usr/bin || die
+	dodir /usr/share/{pixmaps,applications} || die
 
 	make prefix="${D}/usr" install || die
 
 	# we have to keep this because otherwise it'll break upgrading
-	mv "${D}/usr/bin/SciTE" "${D}/usr/bin/scite"
-	dosym /usr/bin/scite /usr/bin/SciTE
+	mv "${D}/usr/bin/SciTE" "${D}/usr/bin/scite" || die
+	dosym /usr/bin/scite /usr/bin/SciTE || die
 
 	# replace .desktop file with our own working version
-	insinto /usr/share/applications
 	rm -f "${D}/usr/share/applications/SciTE.desktop"
-	doins "${FILESDIR}/scite.desktop"
+	insinto /usr/share/applications
+	doins "${FILESDIR}/scite.desktop" || die
 
-	doman ../doc/scite.1
-	dodoc ../README
+	doman ../doc/scite.1 || die
+	dodoc ../README || die
 }

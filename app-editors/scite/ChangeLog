@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/scite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.115 2011/06/25 17:18:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.116 2011/06/28 14:19:21 nelchael Exp $
+
+*scite-2.27 (28 Jun 2011)
+
+  28 Jun 2011; Krzysztof Pawlik <nelchael@gentoo.org> -scite-2.24.ebuild,
+  +scite-2.27.ebuild:
+  Version bump, remove old, obsolete version.
 
   25 Jun 2011; Raúl Porcel <armin76@gentoo.org> scite-2.22.ebuild,
   scite-2.24.ebuild, scite-2.25.ebuild, scite-2.26.ebuild:
