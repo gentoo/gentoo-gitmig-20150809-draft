@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.5-r1.ebuild,v 1.6 2011/06/13 11:42:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.5-r1.ebuild,v 1.7 2011/06/28 20:04:39 ranger Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE="aalib doc -gtk nls png svga threads X"
 
 RDEPEND="
