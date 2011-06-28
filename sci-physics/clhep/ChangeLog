@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/clhep
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/ChangeLog,v 1.34 2011/02/18 17:09:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/ChangeLog,v 1.35 2011/06/28 20:00:38 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> clhep-2.1.0.1.ebuild:
+  Marking clhep-2.1.0.1 ppc for bug 354009
 
   18 Feb 2011; Jeroen Roovers <jer@gentoo.org> clhep-2.1.0.1.ebuild:
   Stable for HPPA (bug #354009).
