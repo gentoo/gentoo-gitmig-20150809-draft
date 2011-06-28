@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/mmdb-1.21-r4.ebuild,v 1.2 2011/06/26 10:51:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/mmdb-1.21-r4.ebuild,v 1.3 2011/06/28 15:50:03 ranger Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.ysbl.york.ac.uk/~emsley/software/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="!<sci-libs/ccp4-libs-6.1.3"
