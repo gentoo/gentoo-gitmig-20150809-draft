@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mcp-plugins/mcp-plugins-0.4.0.ebuild,v 1.3 2011/06/27 23:36:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mcp-plugins/mcp-plugins-0.4.0.ebuild,v 1.4 2011/06/28 00:02:30 radhermit Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="media-libs/ladspa-sdk"
-RDEPEND=""
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
