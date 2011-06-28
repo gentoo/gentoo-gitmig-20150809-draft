@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-MakeMaker/perl-ExtUtils-MakeMaker-6.56.ebuild,v 1.19 2011/06/12 23:55:31 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-MakeMaker/perl-ExtUtils-MakeMaker-6.56.ebuild,v 1.20 2011/06/28 19:55:13 tove Exp $
 
 DESCRIPTION="Virtual for perl-core/ExtUtils-MakeMaker"
 HOMEPAGE=""
@@ -12,4 +12,4 @@ KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ~ppc64 ~s390 ~sh sparc x86 ~ppc-a
 IUSE=""
 
 DEPEND=""
-RDEPEND="|| ( ~dev-lang/perl-5.12.3 ~dev-lang/perl-5.12.2 ~perl-core/ExtUtils-MakeMaker-${PV} )"
+RDEPEND="|| ( ~dev-lang/perl-5.12.4 ~dev-lang/perl-5.12.3 ~dev-lang/perl-5.12.2 ~perl-core/ExtUtils-MakeMaker-${PV} )"
