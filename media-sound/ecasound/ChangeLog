@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/ecasound
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ChangeLog,v 1.58 2010/06/23 14:19:23 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ChangeLog,v 1.59 2011/06/28 04:21:12 radhermit Exp $
+
+*ecasound-2.8.1 (28 Jun 2011)
+
+  28 Jun 2011; Tim Harder <radhermit@gentoo.org> +ecasound-2.8.1.ebuild,
+  +files/ecasound-2.8.1-ldflags.patch, metadata.xml:
+  Version bump (fixes bug #313033). Add oil, osc, and static-libs USE flags,
+  fix documentation install (bug #299097, thanks to Christophe LEFEBVRE), and
+  improve python support (bug #313945).
 
   23 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   ecasound-2.6.0.ebuild:
