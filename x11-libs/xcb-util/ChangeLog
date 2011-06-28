@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xcb-util
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util/ChangeLog,v 1.53 2011/06/26 20:46:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util/ChangeLog,v 1.54 2011/06/28 20:07:14 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> xcb-util-0.3.8.ebuild:
+  Marking xcb-util-0.3.8 ppc stable for bug 372333
 
   26 Jun 2011; Markus Meier <maekke@gentoo.org> xcb-util-0.3.8.ebuild:
   arm stable, bug #371857
