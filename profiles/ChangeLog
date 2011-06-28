@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5483 2011/06/28 10:32:27 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5484 2011/06/28 18:54:25 olemarkus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Jun 2011; Ole Markus With <olemarkus@gentoo.org> package.mask:
+  Mask php 5.4 alpha versions and above
 
   28 Jun 2011; Tony Vroon <chainsaw@gentoo.org> package.mask:
   The replacement package is net-misc/gogoc, not net-misc/gogo6. As pointed out

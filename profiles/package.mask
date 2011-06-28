@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12868 2011/06/28 10:32:27 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12869 2011/06/28 18:54:25 olemarkus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -318,7 +318,7 @@ app-crypt/scsign
 =dev-lang/php-5.3.7_rc1
 =dev-lang/php-5.3.7_rc2
 =dev-lang/php-5.3.7_rc3
->=dev-lang/php-5.4.0_pre1
+>=dev-lang/php-5.4.0_alpha1
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (30 Apr 2011)
 # GTK3 version of notification-daemon, added for testing
