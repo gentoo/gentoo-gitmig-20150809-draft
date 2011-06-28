@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.6-r1.ebuild,v 1.4 2011/05/19 09:59:04 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.0.10.ebuild,v 1.1 2011/06/28 20:46:39 polynomial-c Exp $
 
 EAPI=4
 
@@ -159,9 +159,6 @@ src_prepare() {
 
 	# We still want to use ${HOME}/.VirtualBox/Machines as machines dir.
 	epatch "${FILESDIR}/${PN}-4.0.2-restore_old_machines_dir.patch"
-
-	# make configure accept gcc-4.6.x (bug #362861)
-	epatch "${FILESDIR}/${PN}-4.0.4-gcc46.patch"
 
 	# add correct java path
 	if use java ; then
@@ -354,8 +351,10 @@ pkg_postinst() {
 	elog "to run ${PN} as."
 	elog ""
 	elog "Starting with version 4.0.0, ${PN} has USB-1 support."
-	elog "For USB-2 support, PXE-boot ability and VRDP support please"
-	elog "emerge app-emulation/virtualbox-extpack-oracle package."
+	elog "For PXE-boot ability and VRDP support please emerge"
+	elog "app-emulation/virtualbox-extpack-oracle package."
+	elog "Unfortunately USB2 support is still not available."
+	elog "See https://bugs.gentoo.org/364717 for the reasons."
 	if [ -e "${ROOT}/etc/udev/rules.d/10-virtualbox.rules" ] ; then
 		elog ""
 		elog "Please remove \"${ROOT}/etc/udev/rules.d/10-virtualbox.rules\""

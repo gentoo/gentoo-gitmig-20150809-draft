@@ -1,13 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.0.6-r1.ebuild,v 1.2 2011/05/08 17:29:10 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.0.10.ebuild,v 1.1 2011/06/28 20:43:04 polynomial-c Exp $
 
 EAPI=2
 
 inherit eutils fdo-mime pax-utils
 
-MY_PV=${PV}-71344
+MY_PV=${PV}-72479
 SDK_PV=${MY_PV}
+EXTP_PV=${PV}-72436
 MY_P=VirtualBox-${MY_PV}-Linux
 EXTP_PN=Oracle_VM_VirtualBox_Extension_Pack
 
@@ -16,7 +17,7 @@ HOMEPAGE="http://www.virtualbox.org/"
 SRC_URI="amd64? ( http://download.virtualbox.org/virtualbox/${PV}/${MY_P}_amd64.run )
 	x86? ( http://download.virtualbox.org/virtualbox/${PV}/${MY_P}_x86.run )
 	sdk? ( http://download.virtualbox.org/virtualbox/${PV}/VirtualBoxSDK-${SDK_PV}.zip )
-	http://download.virtualbox.org/virtualbox/${PV}/${EXTP_PN}-${MY_PV}.vbox-extpack -> ${EXTP_PN}-${MY_PV}.tar.gz"
+	http://download.virtualbox.org/virtualbox/${PV}/${EXTP_PN}-${EXTP_PV}.vbox-extpack -> ${EXTP_PN}-${EXTP_PV}.tar.gz"
 
 LICENSE="GPL-2 PUEL"
 SLOT="0"
@@ -162,7 +163,7 @@ src_unpack() {
 
 	mkdir "${S}"/${EXTP_PN} || die
 	pushd "${S}"/${EXTP_PN} &>/dev/null || die
-	unpack ${EXTP_PN}-${MY_PV}.tar.gz
+	unpack ${EXTP_PN}-${EXTP_PV}.tar.gz
 	popd &>/dev/null || die
 
 	if use sdk; then
@@ -294,7 +295,9 @@ src_install() {
 
 	insinto /lib/udev/rules.d
 	doins "${FILESDIR}"/10-virtualbox.rules
-	fperms 0750 /opt/VirtualBox/VBoxCreateUSBNode.sh
+	# move udev scripts into /lib/udev (bug #372491)
+	mv "${D}"/opt/VirtualBox/VBoxCreateUSBNode.sh "${D}"/lib/udev
+	fperms 0750 /lib/udev/VBoxCreateUSBNode.sh
 }
 
 pkg_postinst() {
@@ -315,6 +318,11 @@ pkg_postinst() {
 	elog "Please visit http://www.virtualbox.org/wiki/Editions for"
 	elog "an overview about the different features of ${PN}"
 	elog "and virtualbox-ose"
+	if [ -e "${ROOT}/etc/udev/rules.d/10-virtualbox.rules" ] ; then
+		elog ""
+		elog "Please remove \"${ROOT}/etc/udev/rules.d/10-virtualbox.rules\""
+		elog "or else USB in ${PN} won't work."
+	fi
 }
 
 pkg_postrm() {
