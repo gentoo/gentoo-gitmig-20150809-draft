@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/pcb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.63 2011/03/06 09:27:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/pcb/ChangeLog,v 1.64 2011/06/28 19:56:04 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> pcb-20100929.ebuild:
+  Marking pcb-20100929 ppc for bug 349096
 
   06 Mar 2011; Justin Lecher <jlec@gentoo.org> pcb-20081128-r1.ebuild,
   pcb-20091103.ebuild, pcb-20100929.ebuild:
