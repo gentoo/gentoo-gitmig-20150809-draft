@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2008.12.18.ebuild,v 1.5 2009/06/02 16:53:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2008.12.18.ebuild,v 1.6 2011/06/28 09:31:26 pva Exp $
 
 inherit eutils fixheadtails toolchain-funcs
 
@@ -22,8 +22,8 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-	sed -e "s/gcc.*\-o/$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o/g" \
-		-e "s/g++.*\-o/$(tc-getCXX) ${CXXFLAGS} ${LDFLAGS} -o/g" \
+	sed -e "s|gcc.*\-o|$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o|g" \
+		-e "s|g++.*\-o|$(tc-getCXX) ${CXXFLAGS} ${LDFLAGS} -o|g" \
 			-i testing/Makefile
 	ht_fix_file testing/*.sh
 }
