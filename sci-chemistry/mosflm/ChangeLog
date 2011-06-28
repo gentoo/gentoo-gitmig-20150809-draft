@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/mosflm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/ChangeLog,v 1.11 2011/06/21 16:02:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/ChangeLog,v 1.12 2011/06/28 20:07:39 ranger Exp $
+
+  28 Jun 2011; Brent Baude <ranger@gentoo.org> mosflm-7.0.6-r2.ebuild:
+  Marking mosflm-7.0.6-r2 ppc for bug 352112
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> mosflm-7.0.6-r2.ebuild:
   Add dependency on virtual/fortran
