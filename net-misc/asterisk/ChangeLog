@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.323 2011/06/27 08:17:27 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.324 2011/06/28 21:38:10 chainsaw Exp $
+
+*asterisk-1.8.4.4 (28 Jun 2011)
+
+  28 Jun 2011; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.4.3.ebuild,
+  +asterisk-1.8.4.4.ebuild:
+  Trim down 1.8 branch by removing vulnerable 1.8.4.3 ebuild. Version bump to
+  1.8.4.4 for AST-2011-011. Information disclosure vulnerability;
+  alwaysauthreject is not always effective resulting in different replies for
+  non-existent SIP users than for a wrong password on a valid user.
 
   27 Jun 2011; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.6.2.17.3.ebuild:
   Remove last vulnerable ebuild on 1.6.2 branch now that stabling has been
