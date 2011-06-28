@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.38 2011/06/14 05:49:44 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.39 2011/06/28 19:23:05 mattst88 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -252,11 +252,6 @@ java
 # Ciaran McCreesh <ciaranm@gentoo.org>
 # No java, no netbeans
 netbeans
-
-# Aron Griffis <agriffis@gentoo.org>
-# acl doesn't build on mips atm.  Mask it so that vim quits
-# complaining
-acl
 
 # masked until gnome-extra/evolution-data-server is keyworded for mips
 eds

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.64 2011/06/25 16:59:59 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.65 2011/06/28 19:23:05 mattst88 Exp $
+
+  28 Jun 2011; Matt Turner <mattst88@gentoo.org> use.mask:
+  Remove acl from use.mask, bug 372249
 
   25 Jun 2011; Matt Turner <mattst88@gentoo.org> +mips64/n64/make.defaults,
   +mipsel/mips64el/n64/make.defaults, -mips64/multilib/n32-n64/use.force,
