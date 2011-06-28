@@ -1,6 +1,13 @@
 # ChangeLog for app-benchmarks/phoronix-test-suite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/ChangeLog,v 1.12 2011/02/01 21:50:49 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/ChangeLog,v 1.13 2011/06/28 17:06:07 olemarkus Exp $
+
+  28 Jun 2011; Ole Markus With <olemarkus@gentoo.org>
+  -phoronix-test-suite-1.8.0.ebuild, -phoronix-test-suite-2.0.0.ebuild,
+  -phoronix-test-suite-2.2.0.ebuild, -phoronix-test-suite-2.4.1.ebuild,
+  -phoronix-test-suite-2.4.1-r1.ebuild:
+  Non-maintainer commit: Removing ebuild depending on older PHP versions. Bug
+  363809
 
 *phoronix-test-suite-2.8.1-r1 (01 Feb 2011)
 
