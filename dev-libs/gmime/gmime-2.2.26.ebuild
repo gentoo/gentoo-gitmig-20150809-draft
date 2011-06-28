@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.2.26.ebuild,v 1.8 2010/08/20 19:45:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.2.26.ebuild,v 1.9 2011/06/28 13:00:10 pacho Exp $
 
 inherit gnome2 eutils mono libtool autotools
 
 DESCRIPTION="Utilities for creating and parsing messages using MIME"
-#SRC_URI="http://spruce.sourceforge.net/${PN}/sources/v${PV%.*}/${P}.tar.gz"
+SRC_URI="${SRC_URI} http://dev.gentoo.org/~pacho/gnome/gmime-sharp.snk"
 HOMEPAGE="http://spruce.sourceforge.net/gmime/"
 
 SLOT="0"
@@ -37,7 +37,7 @@ src_unpack() {
 	# by an uuencode operation, bug 308051
 	epatch "${FILESDIR}/gmime-2.2.26-uuencode-buffer-overflow.patch"
 
-	cp "${FILESDIR}/gmime-sharp.snk" mono/
+	cp "${DISTDIR}/gmime-sharp.snk" mono/ || die
 	if use doc ; then
 		#db2html should be docbook2html
 		sed -i -e 's:db2html:docbook2html -o gmime-tut:g' \

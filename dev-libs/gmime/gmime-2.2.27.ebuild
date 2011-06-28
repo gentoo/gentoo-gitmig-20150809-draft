@@ -1,14 +1,17 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.2.27.ebuild,v 1.1 2011/03/08 14:19:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.2.27.ebuild,v 1.2 2011/06/28 13:00:10 pacho Exp $
 
-EAPI="3"
+EAPI="4"
+GNOME_TARBALL_SUFFIX="bz2"
 GCONF_DEBUG="no"
 
 inherit gnome2 eutils mono libtool autotools
 
 DESCRIPTION="Utilities for creating and parsing messages using MIME"
 HOMEPAGE="http://spruce.sourceforge.net/gmime/"
+
+SRC_URI="${SRC_URI} http://dev.gentoo.org/~pacho/gnome/gmime-sharp.snk"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
@@ -36,7 +39,7 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}/gmime-2.2.23-sign-assembly.patch"
 
-	cp "${FILESDIR}/gmime-sharp.snk" mono/
+	cp "${DISTDIR}/gmime-sharp.snk" mono/ || die
 	if use doc ; then
 		#db2html should be docbook2html
 		sed -i -e 's:db2html:docbook2html -o gmime-tut:g' \
@@ -52,11 +55,11 @@ src_prepare() {
 }
 
 src_compile() {
-	MONO_PATH="${S}" emake || die "make failed"
+	MONO_PATH="${S}" emake
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "installation failed"
+	emake DESTDIR="${D}" install
 
 	if use doc ; then
 		# we don't use docinto/dodoc, because we don't want html doc gzipped
