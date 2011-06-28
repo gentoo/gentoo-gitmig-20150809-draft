@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-base.eclass,v 1.18 2011/06/08 08:55:55 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep-base.eclass,v 1.19 2011/06/28 15:27:23 voyageur Exp $
 
 # @ECLASS: gnustep-base.eclass
 # @MAINTAINER:
@@ -55,10 +55,10 @@ gnustep-base_src_prepare() {
 		# to know when they use some direct include.
 		ebegin "Cleaning paths from GNUmakefile"
 		sed -i \
-			-e 's|-I/usr/X11R6/include||g' \
-			-e 's|-I/usr/include||g' \
-			-e 's|-L/usr/X11R6/lib||g' \
-			-e 's|-L/usr/lib||g' \
+			-e 's|-I/usr/X11R6/include/\?||g' \
+			-e 's|-I/usr/include/\?||g' \
+			-e 's|-L/usr/X11R6/lib/\?||g' \
+			-e 's|-L/usr/lib/\?||g' \
 			GNUmakefile
 		eend $?
 	fi
