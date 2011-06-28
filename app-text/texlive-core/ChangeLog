@@ -1,6 +1,13 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.134 2011/05/18 18:23:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.135 2011/06/28 15:52:55 aballier Exp $
+
+*texlive-core-2010-r2 (28 Jun 2011)
+
+  28 Jun 2011; Alexis Ballier <aballier@gentoo.org>
+  +texlive-core-2010-r2.ebuild:
+  disable largefile again as it seems to cause problems on some arches, require
+  a kpathsea version with largefile support disabled
 
   18 May 2011; Alexis Ballier <aballier@gentoo.org>
   texlive-core-2010-r1.ebuild:
