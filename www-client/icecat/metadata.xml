@@ -5,8 +5,12 @@
 <use>
 	<flag name='custom-optimization'>Fine-tune custom compiler
 		optimizations</flag>
+	<flag name="gconf">Add support for setting of default browser using
+		<pkg>gnome-base/gconf</pkg>. Useful only for GNOME 2 users.</flag>
         <flag name="ipc">Use inter-process communication between tabs and plugins.
                 Allows for greater stability in case of plugin crashes</flag>
+	<flag name="pgo">Add support for profile-guided optimization using gcc-4.5,
+		for faster binaries. This option will double the compile time.</flag>
 	<flag name='system-sqlite'>Use the system-wide <pkg>dev-db/sqlite</pkg>
 		installation with secure-delete enabled</flag>
 	<flag name="webm">Use system libvpx <pkg>media-libs/libvpx</pkg></flag>
