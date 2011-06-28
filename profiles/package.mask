@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12867 2011/06/27 16:53:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12868 2011/06/28 10:32:27 chainsaw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -172,7 +172,7 @@ dev-haskell/gtk2hs
 # Diego E. Pettenò <flameeyes@gentoo.org> (09 Jun 2011)
 #  on behalf of QA team
 #
-# Fails to build with GCC 4.6; replaced by net-misc/gogo6
+# Fails to build with GCC 4.6; replaced by net-misc/gogoc
 # (same codebase, renamed and reversioned) which is somewhat
 # maintained.
 #

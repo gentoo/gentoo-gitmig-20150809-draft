@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5482 2011/06/28 01:49:11 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5483 2011/06/28 10:32:27 chainsaw Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Jun 2011; Tony Vroon <chainsaw@gentoo.org> package.mask:
+  The replacement package is net-misc/gogoc, not net-misc/gogo6. As pointed out
+  by Evesong on #gentoo.
 
   28 Jun 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   default/linux/packages.build, hardened/packages.build:
