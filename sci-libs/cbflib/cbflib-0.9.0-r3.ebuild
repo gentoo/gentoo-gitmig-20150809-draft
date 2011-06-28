@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/cbflib-0.9.0-r3.ebuild,v 1.5 2011/06/21 15:41:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/cbflib-0.9.0-r3.ebuild,v 1.6 2011/06/28 15:53:36 ranger Exp $
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P1}_14Feb10.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE="doc python"
 
 DEPEND="virtual/fortran	"
