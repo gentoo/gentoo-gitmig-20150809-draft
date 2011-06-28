@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.29.1.ebuild,v 1.1 2011/06/17 11:21:25 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ceph-0.29.1.ebuild,v 1.2 2011/06/28 11:06:18 xarthisius Exp $
 
 EAPI="3"
 
@@ -19,6 +19,7 @@ CDEPEND="
 	dev-libs/boost
 	dev-libs/libedit
 	dev-libs/crypto++
+	sys-apps/keyutils
 	fuse? ( sys-fs/fuse )
 	libatomic? ( dev-libs/libatomic_ops )
 	gtk? (
