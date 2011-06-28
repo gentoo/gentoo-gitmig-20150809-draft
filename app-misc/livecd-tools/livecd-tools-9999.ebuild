@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-9999.ebuild,v 1.2 2011/05/03 05:50:26 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-9999.ebuild,v 1.3 2011/06/28 04:22:44 williamh Exp $
 
 EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/livecd-tools.git"
 inherit eutils git
@@ -28,6 +28,7 @@ pkg_setup() {
 }
 
 src_install() {
+	doconfd conf.d/*
 	doinitd init.d/*
 	dosbin net-setup spind
 	into /
