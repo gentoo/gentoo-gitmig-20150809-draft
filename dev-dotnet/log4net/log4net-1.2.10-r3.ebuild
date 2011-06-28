@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/log4net/log4net-1.2.10-r3.ebuild,v 1.2 2009/10/21 15:56:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/log4net/log4net-1.2.10-r3.ebuild,v 1.3 2011/06/28 12:27:22 pacho Exp $
 
-EAPI=2
+EAPI="4"
 
 inherit eutils mono versionator
 
@@ -10,7 +10,8 @@ PV_MAJOR=$(get_version_component_range 1-2)
 
 DESCRIPTION="tool to help the programmer output log statements to a variety of output targets."
 HOMEPAGE="http://logging.apache.org/log4net/"
-SRC_URI="mirror://debian/pool/main/l/log4net/log4net_1.2.10+dfsg.orig.tar.gz -> ${P}.tar.gz"
+SRC_URI="mirror://debian/pool/main/l/log4net/log4net_1.2.10+dfsg.orig.tar.gz -> ${P}.tar.gz
+	http://dev.gentoo.org/~pacho/dotnet/log4net.snk"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -24,7 +25,7 @@ src_compile() {
 	/usr/bin/gmcs \
 		-t:library \
 		-out:log4net.dll \
-		-keyfile:"${FILESDIR}"/log4net.snk \
+		-keyfile:"${DISTDIR}"/log4net.snk \
 		-r:System.Data \
 		-r:System.Web \
 		$(find src -name "*.cs") || die
