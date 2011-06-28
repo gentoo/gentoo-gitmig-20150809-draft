@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.155 2011/05/29 17:25:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.156 2011/06/28 16:33:29 vapier Exp $
+
+  28 Jun 2011; Mike Frysinger <vapier@gentoo.org> grub-1.99_rc1.ebuild,
+  grub-9999.ebuild:
+  Install into the right bash-completion dir #373201 by Rodrigo Severo.
 
   29 May 2011; Mike Frysinger <vapier@gentoo.org> grub-9999.ebuild:
   Convert to EAPI=2 and do not run `set -e` with eautoreconf #369093 by Zachary

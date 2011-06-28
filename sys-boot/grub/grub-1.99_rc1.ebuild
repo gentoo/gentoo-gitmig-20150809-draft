@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.99_rc1.ebuild,v 1.3 2011/04/10 14:34:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.99_rc1.ebuild,v 1.4 2011/06/28 16:33:29 vapier Exp $
 
 # XXX: need to implement a grub.conf migration in pkg_postinst before we ~arch
 
@@ -52,6 +52,11 @@ src_unpack() {
 		sed -i -e '/^autoreconf/s:^:e:' autogen.sh || die
 		(. ./autogen.sh) || die
 	fi
+
+	# install into the right dir for eselect #372735
+	sed -i \
+		-e '/^bashcompletiondir =/s:=.*:= $(datarootdir)/bash-completion:' \
+		util/bash-completion.d/Makefile.in || die
 }
 
 src_compile() {
