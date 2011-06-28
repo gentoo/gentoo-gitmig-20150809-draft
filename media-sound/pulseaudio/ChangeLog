@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.233 2011/06/28 20:33:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.234 2011/06/28 21:20:37 ford_prefect Exp $
+
+  28 Jun 2011; Arun Raghavan <ford_prefect@gentoo.org> pulseaudio-9999.ebuild:
+  Fix live ebuild deps
 
   28 Jun 2011; Brent Baude <ranger@gentoo.org> pulseaudio-0.9.22-r2.ebuild:
   Marking pulseaudio-0.9.22-r2 ppc for bug 372355

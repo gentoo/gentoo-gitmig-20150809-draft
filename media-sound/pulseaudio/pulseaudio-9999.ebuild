@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.8 2011/06/09 08:16:50 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.9 2011/06/28 21:20:37 ford_prefect Exp $
 
 EAPI=4
 
@@ -18,9 +18,9 @@ IUSE="+alsa avahi +caps equalizer jack lirc oss tcpd +X dbus libsamplerate gnome
 
 RDEPEND="app-admin/eselect-esd
 	X? (
-		>=x11-libs/libX11-1.4.0
+		|| ( >=x11-libs/libX11-1.4.0 <x11-libs/libX11-1.4.0[xcb] )
 		>=x11-libs/libxcb-1.6
-		x11-libs/xcb-util
+		>=x11-libs/xcb-util-0.3.1
 		x11-libs/libSM
 		x11-libs/libICE
 		x11-libs/libXtst
@@ -45,7 +45,7 @@ RDEPEND="app-admin/eselect-esd
 	equalizer? ( sci-libs/fftw:3.0 )
 	orc? ( >=dev-lang/orc-0.4.9 )
 	>=media-libs/audiofile-0.2.6-r1
-	>=media-libs/speex-1.2_beta
+	>=media-libs/speex-1.2_rc1
 	>=media-libs/libsndfile-1.0.20
 	sys-libs/gdbm
 	dev-libs/json-c
@@ -55,7 +55,7 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	X? (
 		x11-proto/xproto
-		>=x11-libs/libXtst-1.0.99.2
+		|| ( >=x11-libs/libXtst-1.0.99.2 <x11-proto/xextproto-7.0.99 )
 	)
 	dev-libs/libatomic_ops
 	dev-util/pkgconfig
