@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-164-r2.ebuild,v 1.12 2011/06/25 17:32:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-164-r2.ebuild,v 1.13 2011/06/28 02:46:50 williamh Exp $
 
 EAPI="1"
 
@@ -391,7 +391,7 @@ postinst_init_scripts() {
 		if [[ -x "${ROOT}"/etc/init.d/udev  \
 			&& -d "${ROOT}"/etc/runlevels/sysinit ]]
 		then
-			ln -s "${ROOT}"/etc/init.d/udev "${ROOT}"/etc/runlevels/sysinit/udev
+			ln -s /etc/init.d/udev "${ROOT}"/etc/runlevels/sysinit/udev
 		fi
 		enable_postmount=true
 	fi
