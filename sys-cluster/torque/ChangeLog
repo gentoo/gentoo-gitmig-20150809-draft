@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.115 2011/06/29 15:05:46 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.116 2011/06/29 19:43:10 maekke Exp $
+
+  29 Jun 2011; Markus Meier <maekke@gentoo.org> torque-2.4.14.ebuild:
+  x86 stable, bug #372959
 
   29 Jun 2011; Christoph Mende <angelos@gentoo.org> torque-2.4.14.ebuild:
   Stable on amd64 wrt bug #372959
