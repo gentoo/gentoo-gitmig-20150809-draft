@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12872 2011/06/29 13:25:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12873 2011/06/29 13:32:45 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -40,7 +40,7 @@ app-editors/mlview
 app-editors/screem
 dev-python/gtksourceview-python
 app-editors/scribes
-dev-ruby/ruby-gtksourceview
+=dev-ruby/ruby-gtksourceview-0.19.4
 =sci-electronics/oregano-0.69.0*
 
 # Justin Lecher <jlec@gentoo.org> (27 Jun 2011)
