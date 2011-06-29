@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.6.0117.ebuild,v 1.3 2011/06/21 15:57:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.6.0117.ebuild,v 1.4 2011/06/29 11:11:20 jlec Exp $
 
-EAPI=2
+EAPI=4
 
 inherit base fortran-2 flag-o-matic toolchain-funcs versionator
 
@@ -20,14 +20,15 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 RDEPEND="
-	virtual/fortran
-
+	!sci-chemistry/makecif
 	>=sci-libs/ccp4-libs-6.1.3-r7
 	sci-libs/mmdb
 	>sci-libs/monomer-db-1
 	virtual/blas
+	virtual/fortran
 	virtual/lapack"
 DEPEND="${RDEPEND}"
+
 FORTRAN_STANDARD="77 90"
 
 S="${WORKDIR}"
@@ -59,8 +60,7 @@ src_compile() {
 		XCFLAGS="" \
 		LLIBCCP="-lccp4f -lccp4c -lccif $(pkg-config --libs mmdb)" \
 		LLIBLAPACK="$(pkg-config --libs lapack blas)" \
-		LLIBOTHERS="${LIBS}" \
-		|| die
+		LLIBOTHERS="${LIBS}"
 }
 
 src_test() {
@@ -77,9 +77,9 @@ src_test() {
 src_install() {
 	for i in refmac libcheck FreeTwin header2matr; do
 		exeinto /usr/libexec/ccp4/bin/
-		doexe ${i} || die
+		doexe ${i}
 		dosym ../libexec/ccp4/bin/${i} /usr/bin/${i}
 	done
-	dosym refmac /usr/bin/refmac5 || die
-	dosym refmac /usr/libexec/ccp4/bin/refmac5 || die
+	dosym refmac /usr/bin/refmac5
+	dosym refmac /usr/libexec/ccp4/bin/refmac5
 }

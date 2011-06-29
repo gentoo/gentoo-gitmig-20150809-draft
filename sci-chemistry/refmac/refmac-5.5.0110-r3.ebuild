@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.5.0110-r3.ebuild,v 1.4 2011/06/21 15:57:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/refmac/refmac-5.5.0110-r3.ebuild,v 1.5 2011/06/29 11:11:20 jlec Exp $
 
-EAPI=2
+EAPI=4
 
 inherit base fortran-2 flag-o-matic toolchain-funcs versionator
 
@@ -18,15 +18,15 @@ KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 RDEPEND="
-	virtual/fortran
-
 	sci-chemistry/makecif
 	>=sci-libs/ccp4-libs-6.1.3-r7
 	sci-libs/mmdb
 	<sci-libs/monomer-db-1
 	virtual/blas
+	virtual/fortran
 	virtual/lapack"
 DEPEND="${RDEPEND}"
+
 FORTRAN_STANDARD="77 90"
 
 S="${WORKDIR}"
@@ -60,7 +60,7 @@ src_compile() {
 		LLIBCCP="-lccp4f -lccp4c -lccif $(pkg-config --libs mmdb)" \
 		LLIBLAPACK="$(pkg-config --libs lapack blas)" \
 		LLIBOTHERS="${LIBS}" \
-		${PN} libcheck || die
+		${PN} libcheck
 }
 
 src_test() {
@@ -76,9 +76,9 @@ src_test() {
 
 src_install() {
 	exeinto /usr/libexec/ccp4/bin/
-	doexe ${PN} || die
-	dosym refmac /usr/libexec/ccp4/bin/refmac5 || die
-	dosym ../libexec/ccp4/bin/${PN} /usr/bin/${PN} || die
-	dosym refmac /usr/bin/refmac5 || die
-	dodoc refmac_keywords.pdf bugs_and_features.pdf || die
+	doexe ${PN}
+	dosym refmac /usr/libexec/ccp4/bin/refmac5
+	dosym ../libexec/ccp4/bin/${PN} /usr/bin/${PN}
+	dosym refmac /usr/bin/refmac5
+	dodoc refmac_keywords.pdf bugs_and_features.pdf
 }
