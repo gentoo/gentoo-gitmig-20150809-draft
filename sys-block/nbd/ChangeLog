@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/nbd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.58 2011/06/26 16:21:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.59 2011/06/29 15:04:59 angelos Exp $
+
+  29 Jun 2011; Christoph Mende <angelos@gentoo.org> nbd-2.9.22.ebuild:
+  Stable on amd64 wrt bug #372891
 
   26 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> nbd-2.9.22.ebuild:
   x86 stable wrt security bug #372891
