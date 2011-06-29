@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/stride
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/stride/ChangeLog,v 1.10 2010/04/25 11:25:18 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/stride/ChangeLog,v 1.11 2011/06/29 05:42:13 jlec Exp $
+
+  29 Jun 2011; Justin Lecher <jlec@gentoo.org> stride-20011129.ebuild,
+  stride-20011129-r1.ebuild:
+  Fix sed on *FLAGS from : to |, EAPI bump
 
   07 Mar 2010; Justin Lecher <jlec@gentoo.org>
   stride-20011129-r1.ebuild:
