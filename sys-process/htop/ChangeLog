@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/htop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.91 2011/06/26 08:21:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.92 2011/06/29 18:50:24 maekke Exp $
+
+  29 Jun 2011; Markus Meier <maekke@gentoo.org> htop-0.9.ebuild:
+  x86 stable, bug #372889
 
   26 Jun 2011; Markos Chandras <hwoarang@gentoo.org> htop-0.9.ebuild:
   Stable on amd64 wrt bug #372889

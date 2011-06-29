@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.9.ebuild,v 1.6 2011/06/26 08:21:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.9.ebuild,v 1.7 2011/06/29 18:50:24 maekke Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 IUSE="debug elibc_FreeBSD kernel_linux openvz unicode vserver"
 
 RDEPEND="sys-libs/ncurses[unicode?]"
