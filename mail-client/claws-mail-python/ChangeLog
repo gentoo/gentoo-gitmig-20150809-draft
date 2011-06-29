@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/claws-mail-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-python/ChangeLog,v 1.17 2011/04/10 16:56:32 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-python/ChangeLog,v 1.18 2011/06/29 19:56:54 maekke Exp $
+
+  29 Jun 2011; Markus Meier <maekke@gentoo.org> claws-mail-python-0.7.ebuild:
+  x86 stable, bug #372957
 
 *claws-mail-python-0.7 (10 Apr 2011)
 
