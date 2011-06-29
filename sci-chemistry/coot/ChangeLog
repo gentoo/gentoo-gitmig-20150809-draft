@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/coot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.38 2011/06/28 19:13:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.39 2011/06/29 13:13:59 jlec Exp $
+
+  29 Jun 2011; Justin Lecher <jlec@gentoo.org> +files/0.6.2-test.patch,
+  coot-0.6.2.ebuild:
+  Fixed deps and test
 
   28 Jun 2011; Justin Lecher <jlec@gentoo.org> -files/0.3.1-as-needed.patch,
   -files/0.4_pre2-as-needed.patch,

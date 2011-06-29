@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.2.ebuild,v 1.1 2011/06/28 17:01:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.2.ebuild,v 1.2 2011/06/29 13:13:59 jlec Exp $
 
 EAPI=3
 
@@ -31,8 +31,9 @@ SCIDEPS="
 	>=sci-libs/coot-data-2
 	>=sci-libs/gsl-1.3
 	sci-libs/mmdb
+	<sci-libs/monomer-db-1
 	sci-chemistry/reduce
-	sci-chemistry/refmac
+	<sci-chemistry/refmac-5.6
 	sci-chemistry/probe"
 
 XDEPS="
@@ -74,8 +75,9 @@ pkg_setup() {
 
 PATCHES=(
 	"${FILESDIR}"/${PV}-clipper-config.patch
-	"${FILESDIR}"/${PV}-gl.patch
 	"${FILESDIR}"/${PV}-mmdb-config.patch
+	"${FILESDIR}"/${PV}-gl.patch
+	"${FILESDIR}"/${PV}-test.patch
 	)
 
 src_prepare() {
@@ -122,7 +124,7 @@ src_test() {
 	export CLIBD_MON="${EPREFIX}/usr/share/ccp4/data/monomers/"
 	export SYMINFO="${S}/syminfo.lib"
 
-	export COOT_TEST_DATA_DIR="${WORKDIR}/data/greg-data"
+	export COOT_TEST_DATA_DIR="${WORKDIR}"/data/greg-data
 
 	cat > command-line-greg.scm <<- EOF
 	(use-modules (ice-9 greg))
@@ -148,6 +150,6 @@ src_test() {
 	einfo "CLIBD_MON ${CLIBD_MON}"
 	einfo "SYMINFO ${SYMINFO}"
 
-	"${S}"/src/coot-real --no-graphics --script python-tests/coot_unittest.py || die
 	"${S}"/src/coot-real --no-graphics --script command-line-greg.scm || die
+	"${S}"/src/coot-real --no-graphics --script python-tests/coot_unittest.py || die
 }
