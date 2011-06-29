@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-5.0.ebuild,v 1.1 2011/06/28 22:07:57 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-5.0.ebuild,v 1.2 2011/06/29 20:25:58 mr_bones_ Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -136,7 +136,7 @@ src_prepare() {
 	sed -i 's|defaults/pref/|defaults/preferences/|' browser/installer/packages-static || die "sed failed"
 
 	# Apply our patches
-	# 
+	#
 	EPATCH_EXCLUDE="2000-firefox_gentoo_install_dirs.patch
 			5001_use_system_libffi.patch" \
 	EPATCH_SUFFIX="patch" \
