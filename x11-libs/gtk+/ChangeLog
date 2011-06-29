@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.519 2011/06/28 22:09:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.520 2011/06/29 01:49:07 jer Exp $
+
+  29 Jun 2011; Jeroen Roovers <jer@gentoo.org> gtk+-2.24.4.ebuild:
+  Stable for HPPA (bug #371320).
 
   28 Jun 2011; Brent Baude <ranger@gentoo.org> gtk+-2.24.4.ebuild:
   Marking gtk+-2.24.4 ppc stable for bug 371320
