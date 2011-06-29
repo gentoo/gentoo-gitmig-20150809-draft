@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit-dev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.109 2011/06/23 15:25:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.110 2011/06/29 11:05:57 idl0r Exp $
+
+  29 Jun 2011; Christian Ruppert <idl0r@gentoo.org>
+  gentoolkit-dev-0.2.8.ebuild, +files/gentoolkit-dev-0.2.8-tests.patch:
+  Fix tests, bug 373421.
 
   23 Jun 2011; Brent Baude <ranger@gentoo.org> gentoolkit-dev-0.2.8.ebuild:
   Marking gentoolkit-dev-0.2.8 ppc for bug 365387
