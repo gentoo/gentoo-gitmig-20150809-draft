@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.424 2011/06/27 14:25:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.425 2011/06/29 14:50:13 aballier Exp $
+
+  29 Jun 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  convert to eapi4, add eprefix stuff, make use of REQUIRED_USE
 
   27 Jun 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   add openal useflag

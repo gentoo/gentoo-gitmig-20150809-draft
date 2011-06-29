@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.46 2011/06/27 14:25:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.47 2011/06/29 14:50:13 aballier Exp $
 
-EAPI="2"
+EAPI="4"
 
 SCM=""
 if [ "${PV#9999}" != "${PV}" ] ; then
@@ -88,6 +88,8 @@ DEPEND="${RDEPEND}
 	v4l? ( sys-kernel/linux-headers )
 	v4l2? ( sys-kernel/linux-headers )
 "
+# faac is license-incompatible with ffmpeg
+REQUIRED_USE="bindist? ( encode? ( !faac ) )"
 
 S=${WORKDIR}/${P/_/-}
 
@@ -127,13 +129,7 @@ src_configure() {
 		for i in theora vorbis x264 xvid; do
 			use ${i} && myconf="${myconf} --enable-lib${i}"
 		done
-		if use bindist
-		then
-			use faac && ewarn "faac is nonfree and cannot be distributed;
-			disabling faac support."
-		else
-			use faac && myconf="${myconf} --enable-libfaac --enable-nonfree"
-		fi
+		use faac && myconf="${myconf} --enable-libfaac --enable-nonfree"
 	else
 		myconf="${myconf} --disable-encoders"
 	fi
@@ -236,10 +232,10 @@ src_configure() {
 
 	cd "${S}"
 	./configure \
-		--prefix=/usr \
-		--libdir=/usr/$(get_libdir) \
-		--shlibdir=/usr/$(get_libdir) \
-		--mandir=/usr/share/man \
+		--prefix="${EPREFIX}/usr" \
+		--libdir="${EPREFIX}/usr/$(get_libdir)" \
+		--shlibdir="${EPREFIX}/usr/$(get_libdir)" \
+		--mandir="${EPREFIX}/usr/share/man" \
 		--enable-shared \
 		--cc="$(tc-getCC)" \
 		$(use_enable static-libs static) \
@@ -247,30 +243,31 @@ src_configure() {
 }
 
 src_compile() {
-	emake version.h || die #252269
-	emake || die
+	#252269
+	emake version.h
+	emake
 
 	if use qt-faststart; then
 		tc-export CC
-		emake -C tools qt-faststart || die
+		emake -C tools qt-faststart
 	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" install install-man || die
+	emake DESTDIR="${D}" install install-man
 
 	dodoc Changelog README INSTALL
-	dodoc doc/*
+	dodoc -r doc/*
 
 	if use qt-faststart; then
-		dobin tools/qt-faststart || die
+		dobin tools/qt-faststart
 	fi
 }
 
 src_test() {
 	if use encode ; then
 		LD_LIBRARY_PATH="${S}/libpostproc:${S}/libswscale:${S}/libavcodec:${S}/libavdevice:${S}/libavfilter:${S}/libavformat:${S}/libavutil" \
-			emake test || die "Some tests failed"
+			emake test
 	else
 		ewarn "Tests fail without USE=encode, skipping"
 	fi
