@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.210 2011/06/24 23:07:37 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.211 2011/06/29 22:49:13 chainsaw Exp $
+
+*audacious-plugins-2.5.3 (29 Jun 2011)
+
+  29 Jun 2011; Tony Vroon <chainsaw@gentoo.org>
+  +audacious-plugins-2.5.3.ebuild:
+  Bugfix release; restores compatibility with newest libav/ffmpeg and addresses
+  double free in the cue plugin. Closes bug #373157 by shinydoofy.
 
 *audacious-plugins-2.5.2 (24 Jun 2011)
 
