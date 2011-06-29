@@ -1,0 +1,45 @@
+#!/sbin/runscript
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/files/maui.initd,v 1.1 2011/06/29 13:55:09 alexxy Exp $
+
+. /etc/conf.d/torque 
+PBS_SERVER_HOME="$(. /etc/env.d/25torque; echo ${PBS_SERVER_HOME})"
+
+depend() {
+    need net
+    after pbs_server
+    before pbs_mom
+    after logger
+}
+
+checkconfig() {
+    for i in "server_name"; do
+        if [ ! -e ${PBS_SERVER_HOME}/${i} ]; then
+            eerror "Missing config file ${PBS_SERVER_HOME}/${i}"
+            return 1
+        fi
+    done
+
+    if [ -z "$(grep 'queue_type' ${PBS_SERVER_HOME}/server_priv/queues/*)" ]; then
+        eerror "No queues have been defined yet."
+        return 1
+    fi
+}
+
+start() {
+    checkconfig || return 1
+	
+    ebegin "Starting Maui scheduler"
+    local extra_args=""
+
+    start-stop-daemon --start --exec /usr/sbin/maui 
+    eend ${?}		
+}
+
+stop() {
+    ebegin "Stopping Maui scheduler"
+    start-stop-daemon --stop -p /usr/spool/maui/maui.pid
+    eend ${?}
+}
+# vim:ts=4

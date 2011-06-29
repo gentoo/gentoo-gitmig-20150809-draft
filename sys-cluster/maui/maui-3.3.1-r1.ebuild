@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/maui-3.3.1.ebuild,v 1.1 2011/03/05 10:29:28 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/maui-3.3.1-r1.ebuild,v 1.1 2011/06/29 13:55:09 alexxy Exp $
 
 EAPI="3"
 
@@ -37,6 +37,7 @@ src_install() {
 	emake install BUILDROOT="${D}" INST_DIR="${ED}/usr" || die
 	dodoc docs/README CHANGELOG || die
 	dohtml docs/mauidocs.html || die
+	newinitd "${FILESDIR}/maui.initd" maui || die
 }
 
 pkg_nofetch() {
