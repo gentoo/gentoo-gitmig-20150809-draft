@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12871 2011/06/29 13:20:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12872 2011/06/29 13:25:35 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,7 +31,19 @@
 
 #--- END OF EXAMPLES ---
 
-# Justin Lecher <jlec@gentoo.org> (27. Jun 2011)
+# Pacho Ramos <pacho@gentoo.org> (29 Jun 2011)
+# Mask for removal in 30 days x11-libs/gtksourceview:1.0
+# and reverse dependencies, bug #354241
+=x11-libs/gtksourceview-1.8.5-r1
+app-editors/conglomerate
+app-editors/mlview
+app-editors/screem
+dev-python/gtksourceview-python
+app-editors/scribes
+dev-ruby/ruby-gtksourceview
+=sci-electronics/oregano-0.69.0*
+
+# Justin Lecher <jlec@gentoo.org> (27 Jun 2011)
 # Only avalable version isn't in the tree.
 # Mask until it is bumped
 sci-chemistry/webmo
