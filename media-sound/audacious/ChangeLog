@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.232 2011/06/24 23:06:43 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.233 2011/06/29 22:48:35 chainsaw Exp $
+
+*audacious-2.5.3 (29 Jun 2011)
+
+  29 Jun 2011; Tony Vroon <chainsaw@gentoo.org> +audacious-2.5.3.ebuild:
+  Bugfix release; root to non-root path relocation is now handled correctly in
+  all cases.
 
 *audacious-2.5.2 (24 Jun 2011)
 
