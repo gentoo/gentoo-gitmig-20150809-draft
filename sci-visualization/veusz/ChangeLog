@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/veusz
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/ChangeLog,v 1.32 2011/05/15 17:51:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/ChangeLog,v 1.33 2011/06/29 19:19:32 grozin Exp $
+
+*veusz-1.12 (29 Jun 2011)
+
+  29 Jun 2011; Andrey Grozin <grozin@gentoo.org> +veusz-1.12.ebuild:
+  Version bump
 
   15 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> veusz-1.11.ebuild:
   x86 stable wrt bug #365887
