@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.427 2011/06/29 15:01:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.428 2011/06/29 15:07:07 aballier Exp $
+
+  29 Jun 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  drop the video_cards_nvidia guard for vdpau
 
   29 Jun 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   drop custom-cflags useflag and always use ours

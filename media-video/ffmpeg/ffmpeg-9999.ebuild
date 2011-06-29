@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.48 2011/06/29 15:01:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.49 2011/06/29 15:07:07 aballier Exp $
 
 EAPI="4"
 
@@ -36,12 +36,6 @@ IUSE="
 	v4l v4l2 vaapi vdpau vorbis vpx X x264 xvid +zlib
 	"
 
-VIDEO_CARDS="nvidia"
-
-for x in ${VIDEO_CARDS}; do
-	IUSE="${IUSE} video_cards_${x}"
-done
-
 RDEPEND="
 	alsa? ( media-libs/alsa-lib )
 	amr? ( media-libs/opencore-amr )
@@ -70,7 +64,7 @@ RDEPEND="
 	speex? ( >=media-libs/speex-1.2_beta3 )
 	truetype? ( media-libs/freetype:2 )
 	vaapi? ( >=x11-libs/libva-0.32 )
-	video_cards_nvidia? ( vdpau? ( x11-libs/libvdpau ) )
+	vdpau? ( x11-libs/libvdpau )
 	vpx? ( >=media-libs/libvpx-0.9.6 )
 	X? ( x11-libs/libX11 x11-libs/libXext )
 	zlib? ( sys-libs/zlib )
@@ -105,19 +99,13 @@ src_configure() {
 	local version3=""
 
 	# enabled by default
-	for i in debug doc network vaapi zlib; do
+	for i in debug doc network vaapi vdpau zlib; do
 		use ${i} || myconf="${myconf} --disable-${i}"
 	done
 	use bzip2 || myconf="${myconf} --disable-bzlib"
 	use sdl || myconf="${myconf} --disable-ffplay"
 
 	use cpudetection && myconf="${myconf} --enable-runtime-cpudetect"
-
-	#for i in h264_vdpau mpeg1_vdpau mpeg_vdpau vc1_vdpau wmv3_vdpau; do
-	#	use video_cards_nvidia || myconf="${myconf} --disable-decoder=${i}"
-	#	use vdpau || myconf="${myconf} --disable-decoder=${i}"
-	#done
-	use video_cards_nvidia && use vdpau || myconf="${myconf} --disable-vdpau"
 
 	# Encoders
 	if use encode
