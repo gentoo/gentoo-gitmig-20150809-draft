@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gtkwave
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.63 2011/06/28 19:54:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gtkwave/ChangeLog,v 1.64 2011/06/29 05:39:32 tomjbe Exp $
+
+  29 Jun 2011; Thomas Beierlein <tomjbe@gentoo.org> -gtkwave-3.1.1.ebuild:
+  Remove broken package (Bug #346701)
 
   28 Jun 2011; Brent Baude <ranger@gentoo.org> gtkwave-3.3.14.ebuild:
   Marking gtkwave-3.3.14 ppc for bug 347057
