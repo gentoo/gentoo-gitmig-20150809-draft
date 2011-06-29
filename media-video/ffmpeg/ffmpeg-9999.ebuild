@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.47 2011/06/29 14:50:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.48 2011/06/29 15:01:15 aballier Exp $
 
 EAPI="4"
 
@@ -30,9 +30,9 @@ if [ "${PV#9999}" = "${PV}" ] ; then
 fi
 IUSE="
 	+3dnow +3dnowext aac alsa altivec amr avx bindist +bzip2 celt cpudetection
-	custom-cflags debug dirac doc +encode faac frei0r gsm +hardcoded-tables
-	ieee1394 jack jpeg2k +mmx +mmxext mp3 network openal oss pic qt-faststart
-	rtmp schroedinger sdl speex +ssse3 static-libs test theora threads truetype
+	debug dirac doc +encode faac frei0r gsm +hardcoded-tables ieee1394 jack
+	jpeg2k +mmx +mmxext mp3 network openal oss pic qt-faststart rtmp
+	schroedinger sdl speex +ssse3 static-libs test theora threads truetype
 	v4l v4l2 vaapi vdpau vorbis vpx X x264 xvid +zlib
 	"
 
@@ -111,7 +111,6 @@ src_configure() {
 	use bzip2 || myconf="${myconf} --disable-bzlib"
 	use sdl || myconf="${myconf} --disable-ffplay"
 
-	use custom-cflags && myconf="${myconf} --disable-optimizations"
 	use cpudetection && myconf="${myconf} --enable-runtime-cpudetect"
 
 	#for i in h264_vdpau mpeg1_vdpau mpeg_vdpau vc1_vdpau wmv3_vdpau; do
@@ -238,6 +237,7 @@ src_configure() {
 		--mandir="${EPREFIX}/usr/share/man" \
 		--enable-shared \
 		--cc="$(tc-getCC)" \
+		--disable-optimizations \
 		$(use_enable static-libs static) \
 		${myconf} || die
 }
