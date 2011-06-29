@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.104 2011/05/28 11:46:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.105 2011/06/29 14:22:25 aballier Exp $
+
+*libebml-1.2.1 (29 Jun 2011)
+
+  29 Jun 2011; Alexis Ballier <aballier@gentoo.org> +libebml-1.2.1.ebuild:
+  version bump
 
   28 May 2011; Brent Baude <ranger@gentoo.org> libebml-1.0.0.ebuild:
   Marking libebml-1.0.0 ppc for bug 329633
