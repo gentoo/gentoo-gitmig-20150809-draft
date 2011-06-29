@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/gundo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gundo/ChangeLog,v 1.4 2011/05/30 10:23:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gundo/ChangeLog,v 1.5 2011/06/29 00:53:06 radhermit Exp $
+
+*gundo-2.2.1 (29 Jun 2011)
+
+  29 Jun 2011; Tim Harder <radhermit@gentoo.org> +gundo-2.2.1.ebuild:
+  Version bump. Use github mirrored tarball.
 
 *gundo-2.2.0 (30 May 2011)
 
