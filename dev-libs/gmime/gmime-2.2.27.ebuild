@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.2.27.ebuild,v 1.2 2011/06/28 13:00:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.2.27.ebuild,v 1.3 2011/06/29 12:49:27 pacho Exp $
 
 EAPI="4"
 GNOME_TARBALL_SUFFIX="bz2"
@@ -45,6 +45,8 @@ src_prepare() {
 		sed -i -e 's:db2html:docbook2html -o gmime-tut:g' \
 			docs/tutorial/Makefile.am docs/tutorial/Makefile.in \
 			|| die "sed failed (1)"
+		sed -i -e 's:db2html:docbook2html:g' configure.in configure \
+			|| die "sed failed (2)"
 		# Fix doc targets (bug #97154)
 		sed -i -e 's!\<\(tmpl-build.stamp\): !\1 $(srcdir)/tmpl/*.sgml: !' \
 			gtk-doc.make docs/reference/Makefile.in || die "sed failed (3)"
@@ -56,6 +58,8 @@ src_prepare() {
 
 src_compile() {
 	MONO_PATH="${S}" emake
+	# 'all' rule doesn't generate html files
+	use doc && cd docs/tutorial/ && emake html
 }
 
 src_install() {

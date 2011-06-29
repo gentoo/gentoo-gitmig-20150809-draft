@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.148 2011/06/28 13:00:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.149 2011/06/29 12:49:27 pacho Exp $
+
+  29 Jun 2011; Pacho Ramos <pacho@gentoo.org> gmime-2.2.27.ebuild:
+  html doc files weren't being installed neither generated properly, bug
+  #373449 by Agostino Sarubbo.
 
   28 Jun 2011; Pacho Ramos <pacho@gentoo.org> gmime-2.2.26.ebuild,
   gmime-2.2.27.ebuild, -files/gmime-sharp.snk:
