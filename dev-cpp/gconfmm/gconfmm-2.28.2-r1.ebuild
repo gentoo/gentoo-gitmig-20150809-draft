@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/gconfmm-2.28.2-r1.ebuild,v 1.2 2011/03/22 21:46:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/gconfmm-2.28.2-r1.ebuild,v 1.3 2011/06/29 17:09:24 pacho Exp $
 
-EAPI="3"
+EAPI="4"
+GNOME_TARBALL_SUFFIX="bz2"
 GCONF_DEBUG="no"
 
 inherit autotools gnome2 eutils
@@ -13,7 +14,7 @@ HOMEPAGE="http://www.gtkmm.org"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="doc examples"
+IUSE="doc"
 
 RDEPEND=">=gnome-base/gconf-2.4:2
 	>=dev-cpp/glibmm-2.12:2[doc?]
@@ -32,12 +33,6 @@ pkg_setup() {
 src_prepare() {
 	gnome2_src_prepare
 
-	if ! use examples; then
-		# don't waste time building the examples
-		sed -i 's/^\(SUBDIRS =.*\)examples\(.*\)$/\1\2/' Makefile.in || \
-			die "sed Makefile.in failed"
-	fi
-
 	# doc-install.pl was removed from glibmm, and is provided by mm-common now
 	# This should not be needed if the tarball is generated with mm-common-0.9.3
 	if use doc && has_version '>=dev-cpp/glibmm-2.27.97'; then
@@ -46,24 +41,10 @@ src_prepare() {
 	fi
 }
 
-src_compile() {
-	gnome2_src_compile
-
-	if use doc; then
-		cd "${S}/docs/reference"
-		emake all
-	fi
-}
-
 src_install() {
 	gnome2_src_install
 
 	if use doc ; then
-		dohtml -r docs/reference/html/* docs/images/*
-	fi
-
-	if use examples; then
-		find examples -type d -name '.deps' -exec rm -fr {} \; 2>/dev/null
-		cp -R examples "${ED}/usr/share/doc/${PF}"
+		dohtml -r docs/reference/html/*
 	fi
 }
