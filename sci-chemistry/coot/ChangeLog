@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/coot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.39 2011/06/29 13:13:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.40 2011/06/29 13:31:32 jlec Exp $
+
+  29 Jun 2011; Justin Lecher <jlec@gentoo.org> coot-0.6.2.ebuild:
+  Fix mmdb dep version
 
   29 Jun 2011; Justin Lecher <jlec@gentoo.org> +files/0.6.2-test.patch,
   coot-0.6.2.ebuild:
