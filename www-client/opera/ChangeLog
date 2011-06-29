@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.640 2011/06/28 06:45:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.641 2011/06/29 18:59:25 maekke Exp $
+
+  29 Jun 2011; Markus Meier <maekke@gentoo.org> opera-11.50.1074.ebuild:
+  amd64/x86 stable, bug #373289
 
   28 Jun 2011; Jeroen Roovers <jer@gentoo.org> -opera-11.50.1027.ebuild,
   -opera-11.50.1067.ebuild, -opera-11.50.1068.ebuild, -opera-11.50.1071.ebuild,
