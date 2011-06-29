@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgadu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.60 2011/06/29 12:46:00 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgadu/ChangeLog,v 1.61 2011/06/29 15:04:16 angelos Exp $
+
+  29 Jun 2011; Christoph Mende <angelos@gentoo.org> libgadu-1.11.0.ebuild:
+  Stable on amd64 wrt bug #372785
 
   29 Jun 2011; Thomas Kahle <tomka@gentoo.org> libgadu-1.11.0.ebuild:
   x86 stable per bug 372785
