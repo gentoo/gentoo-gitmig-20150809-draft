@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.50 2011/06/28 21:21:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.51 2011/06/29 12:54:53 chithanh Exp $
+
+  29 Jun 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-drivers-1.11.ebuild:
+  Allow xf86-input-{elographics,fpit,hyperpen,penmount,mutouch} back in.
 
   28 Jun 2011; Brent Baude <ranger@gentoo.org> xorg-drivers-1.10.ebuild:
   Marking xorg-drivers-1.10 ppc stable for bug 371857
