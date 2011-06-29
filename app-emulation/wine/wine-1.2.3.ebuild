@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.2.3.ebuild,v 1.2 2011/04/30 06:26:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.2.3.ebuild,v 1.3 2011/06/29 04:56:23 vapier Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ else
 	inherit autotools
 	MY_P="${PN}-${PV/_/-}"
 	SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
-	KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
+	KEYWORDS="-* amd64 x86 ~x86-fbsd"
 	S=${WORKDIR}/${MY_P}
 fi
 

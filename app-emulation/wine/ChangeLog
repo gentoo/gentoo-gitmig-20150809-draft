@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.366 2011/06/29 04:55:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.367 2011/06/29 04:56:23 vapier Exp $
+
+  29 Jun 2011; Mike Frysinger <vapier@gentoo.org> wine-1.2.2.ebuild,
+  wine-1.2.3.ebuild:
+  Mark amd64/x86 stable.
 
   29 Jun 2011; Mike Frysinger <vapier@gentoo.org> wine-9999.ebuild:
   Update winepulse patches #367089.
