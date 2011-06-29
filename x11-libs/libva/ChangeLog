@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libva
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.20 2011/06/23 14:38:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.21 2011/06/29 14:56:54 angelos Exp $
+
+  29 Jun 2011; Christoph Mende <angelos@gentoo.org> libva-0.32.0_p2.ebuild:
+  Stable on amd64 wrt bug #365273
 
   23 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> libva-0.32.0_p2.ebuild:
   x86 stable wrt security bug #365273
