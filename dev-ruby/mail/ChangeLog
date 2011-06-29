@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mail/ChangeLog,v 1.10 2011/06/04 07:25:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mail/ChangeLog,v 1.11 2011/06/29 19:44:24 grobian Exp $
+
+  29 Jun 2011; Fabian Groffen <grobian@gentoo.org> mail-2.2.18.ebuild:
+  Marked ~x86-solaris
 
   04 Jun 2011; Hans de Graaff <graaff@gentoo.org> -mail-2.2.15.ebuild,
   -mail-2.2.17.ebuild:

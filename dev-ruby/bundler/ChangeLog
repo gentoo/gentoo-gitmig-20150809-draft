@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bundler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.20 2011/06/10 05:19:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.21 2011/06/29 19:43:35 grobian Exp $
+
+  29 Jun 2011; Fabian Groffen <grobian@gentoo.org> bundler-1.0.15.ebuild:
+  Marked ~x86-solaris
 
 *bundler-1.0.15 (10 Jun 2011)
 

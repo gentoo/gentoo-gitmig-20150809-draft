@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/erubis
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.10 2011/04/09 09:14:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/ChangeLog,v 1.11 2011/06/29 19:36:49 grobian Exp $
+
+  29 Jun 2011; Fabian Groffen <grobian@gentoo.org> erubis-2.7.0.ebuild:
+  Marked ~x86-solaris
 
 *erubis-2.7.0 (09 Apr 2011)
 
