@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12869 2011/06/28 18:54:25 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12870 2011/06/29 12:56:43 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -194,7 +194,6 @@ net-misc/gateway6
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (6 Jun 2011)
 # Mask prerelease of xorg-server 1.11
 >=x11-base/xorg-server-1.10.99
->=x11-base/xorg-drivers-1.11
 
 # Jeroen Roovers <jer@gentoo.org> (5 Jun 2011)
 # Masked until bug #370163 is resolved.

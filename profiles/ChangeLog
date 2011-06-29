@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5485 2011/06/28 20:21:15 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5486 2011/06/29 12:56:43 chithanh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Jun 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.mask:
+  Unmask xorg-drivers-1.11
 
   28 Jun 2011; Matt Turner <mattst88@gentoo.org> profiles.desc:
   Remove mips sys/ profiles and add multilib profiles to profiles.desc
