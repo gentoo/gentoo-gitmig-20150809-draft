@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.5_p110602.ebuild,v 1.1 2011/06/02 07:36:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.5_p110602.ebuild,v 1.2 2011/06/29 05:51:28 jlec Exp $
 
 EAPI="3"
 
@@ -81,23 +81,23 @@ src_prepare() {
 	rm -rf data model doc license || die
 
 	sed \
-		-e "s:/usr:${EPREFIX}/usr:g" \
-		-e "s:^\(CC =\).*:\1 $(tc-getCC):g" \
-		-e "s:^\(OPT_FLAG =\).*:\1 ${CFLAGS}:g" \
-		-e "s:^\(LINK_FLAGS =.*\):\1 ${LDFLAGS}:g" \
-		-e "s:^\(IGNORE_GL_FLAG =\).*:\1 ${IGNORE_GL_FLAG}:g" \
-		-e "s:^\(GL_FLAG =\).*:\1 ${GL_FLAG}:g" \
-		-e "s:^\(GL_DIR =\).*:\1 ${GL_DIR}:g" \
-		-e "s:^\(GL_LIB =\).*:\1 ${GL_LIB}:g" \
-		-e "s:^\(GL_LIB_FLAGS =\).*:\1 ${GL_LIB_FLAGS}:g" \
-		-e "s:^\(GL_INCLUDE_FLAGS =\).*:\1 ${GL_INCLUDE_FLAGS}:g" \
-		-e "s:^\(GLUT_NEED_INIT =\).*:\1 ${GLUT_NEED_INIT}:g" \
-		-e "s:^\(GLUT_NOT_IN_GL =\).*:\1:g" \
-		-e "s:^\(X11_LIB_FLAGS =\).*:\1 -L${EPREFIX}/usr/$(get_libdir):g" \
-		-e "s:^\(TCL_LIB_FLAGS =\).*:\1 -L${EPREFIX}/usr/$(get_libdir):g" \
-		-e "s:^\(TK_LIB_FLAGS =\).*:\1 -L${EPREFIX}/usr/$(get_libdir):g" \
-		-e "s:^\(PYTHON_INCLUDE_FLAGS =\).*:\1 -I${EPREFIX}/$(python_get_includedir):g" \
-		-e "s:^\(PYTHON_LIB =\).*:\1 $(python_get_library -l):g" \
+		-e "s|/usr|${EPREFIX}/usr|g" \
+		-e "s|^\(CC =\).*|\1 $(tc-getCC)|g" \
+		-e "s|^\(OPT_FLAG =\).*|\1 ${CFLAGS}|g" \
+		-e "s|^\(LINK_FLAGS =.*\)|\1 ${LDFLAGS}|g" \
+		-e "s|^\(IGNORE_GL_FLAG =\).*|\1 ${IGNORE_GL_FLAG}|g" \
+		-e "s|^\(GL_FLAG =\).*|\1 ${GL_FLAG}|g" \
+		-e "s|^\(GL_DIR =\).*|\1 ${GL_DIR}|g" \
+		-e "s|^\(GL_LIB =\).*|\1 ${GL_LIB}|g" \
+		-e "s|^\(GL_LIB_FLAGS =\).*|\1 ${GL_LIB_FLAGS}|g" \
+		-e "s|^\(GL_INCLUDE_FLAGS =\).*|\1 ${GL_INCLUDE_FLAGS}|g" \
+		-e "s|^\(GLUT_NEED_INIT =\).*|\1 ${GLUT_NEED_INIT}|g" \
+		-e "s|^\(GLUT_NOT_IN_GL =\).*|\1|g" \
+		-e "s|^\(X11_LIB_FLAGS =\).*|\1 -L${EPREFIX}/usr/$(get_libdir)|g" \
+		-e "s|^\(TCL_LIB_FLAGS =\).*|\1 -L${EPREFIX}/usr/$(get_libdir)|g" \
+		-e "s|^\(TK_LIB_FLAGS =\).*|\1 -L${EPREFIX}/usr/$(get_libdir)|g" \
+		-e "s|^\(PYTHON_INCLUDE_FLAGS =\).*|\1 -I${EPREFIX}/$(python_get_includedir)|g" \
+		-e "s|^\(PYTHON_LIB =\).*|\1 $(python_get_library -l)|g" \
 		c/environment_default.txt > c/environment.txt
 }
 
@@ -119,12 +119,12 @@ src_install() {
 	use extendnmr && _wrapper="${_wrapper} extendNmr"
 	for wrapper in ${_wrapper}; do
 		sed \
-			-e "s:gentoo_sitedir:${EPREFIX}$(python_get_sitedir):g" \
-		   -e "s:gentoolibdir:${EPREFIX}/usr/${libdir}:g" \
-			-e "s:gentootk:${EPREFIX}/usr/${libdir}/tk${tkver}:g" \
-			-e "s:gentootcl:${EPREFIX}/usr/${libdir}/tclk${tkver}:g" \
-			-e "s:gentoopython:${EPREFIX}/usr/bin/python:g" \
-			-e "s://:/:g" \
+			-e "s|gentoo_sitedir|${EPREFIX}$(python_get_sitedir)|g" \
+		   -e "s|gentoolibdir|${EPREFIX}/usr/${libdir}|g" \
+			-e "s|gentootk|${EPREFIX}/usr/${libdir}/tk${tkver}|g" \
+			-e "s|gentootcl|${EPREFIX}/usr/${libdir}/tclk${tkver}|g" \
+			-e "s|gentoopython|${EPREFIX}/usr/bin/python|g" \
+			-e "s|//|/|g" \
 			"${FILESDIR}"/${wrapper} > "${T}"/${wrapper} || die "Fail fix ${wrapper}"
 		dobin "${T}"/${wrapper} || die "Failed to install ${wrapper}"
 	done
@@ -140,7 +140,7 @@ src_install() {
 
 	for i in python/memops/format/compatibility/{Converters,part2/Converters2}.py; do
 	sed \
-		-e 's:#from __future__:from __future__:g' \
+		-e 's|#from __future__|from __future__|g' \
 		-i ${i} || die
 	done
 

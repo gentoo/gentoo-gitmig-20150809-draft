@@ -1,6 +1,22 @@
 # ChangeLog for sci-chemistry/ccpn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.64 2011/06/02 07:36:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.65 2011/06/29 05:51:28 jlec Exp $
+
+*ccpn-2.2.1_p110629 (29 Jun 2011)
+*ccpn-2.1.5_p110629 (29 Jun 2011)
+
+  29 Jun 2011; Justin Lecher <jlec@gentoo.org> ccpn-2.1.3.1_p100806.ebuild,
+  -ccpn-2.1.5_p110202.ebuild, -ccpn-2.1.5_p110217.ebuild,
+  -ccpn-2.1.5_p110222.ebuild, -ccpn-2.1.5_p110226.ebuild,
+  -ccpn-2.1.5_p110308.ebuild, -ccpn-2.1.5_p110401.ebuild,
+  -ccpn-2.1.5_p110505.ebuild, -ccpn-2.1.5_p110526.ebuild,
+  -ccpn-2.1.5_p110527.ebuild, ccpn-2.1.5_p110602.ebuild,
+  +ccpn-2.1.5_p110629.ebuild, -ccpn-2.2.1_p110222.ebuild,
+  -ccpn-2.2.1_p110226.ebuild, -ccpn-2.2.1_p110308.ebuild,
+  -ccpn-2.2.1_p110401.ebuild, -ccpn-2.2.1_p110505.ebuild,
+  -ccpn-2.2.1_p110526.ebuild, -ccpn-2.2.1_p110527.ebuild,
+  ccpn-2.2.1_p110602.ebuild, +ccpn-2.2.1_p110629.ebuild, metadata.xml:
+  Cleaned old, python patches, fixed sed strings
 
 *ccpn-2.2.1_p110602 (02 Jun 2011)
 *ccpn-2.1.5_p110602 (02 Jun 2011)
