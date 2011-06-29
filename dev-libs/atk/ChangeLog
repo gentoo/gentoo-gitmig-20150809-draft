@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/atk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.221 2011/06/28 22:06:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.222 2011/06/29 01:47:55 jer Exp $
+
+  29 Jun 2011; Jeroen Roovers <jer@gentoo.org> atk-1.32.0-r1.ebuild:
+  Stable for HPPA (bug #371320).
 
   28 Jun 2011; Brent Baude <ranger@gentoo.org> atk-1.32.0-r1.ebuild:
   Marking atk-1.32.0-r1 ppc stable for bug 371320
