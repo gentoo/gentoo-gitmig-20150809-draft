@@ -1,6 +1,12 @@
 # ChangeLog for net-im/psi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.205 2011/05/24 17:46:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.206 2011/06/29 05:23:31 pva Exp $
+
+  29 Jun 2011; Peter Volkov <pva@gentoo.org> -psi-0.12.1.ebuild,
+  -files/psi-0.12.1-build-error.patch,
+  -files/psi-0.12.1-qt-4.5-compatibility.patch, psi-9999.ebuild:
+  Use git-2 elass, bump EAPI and other cleanups in psi-9999, thank Rion for
+  report. Drop old.
 
 *psi-0.14-r2 (24 May 2011)
 
