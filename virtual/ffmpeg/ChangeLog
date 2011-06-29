@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.16 2011/06/26 15:00:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ffmpeg/ChangeLog,v 1.17 2011/06/29 14:57:45 angelos Exp $
+
+  29 Jun 2011; Christoph Mende <angelos@gentoo.org> ffmpeg-0.6.90.ebuild:
+  Stable on amd64 wrt bug #365273
 
   26 Jun 2011; Brent Baude <ranger@gentoo.org> ffmpeg-0.6.90.ebuild:
   Marking ffmpeg-0.6.90 ppc for bug 365273
