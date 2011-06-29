@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/apngopt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/apngopt/ChangeLog,v 1.2 2011/04/29 08:15:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/apngopt/ChangeLog,v 1.3 2011/06/29 20:01:56 vapier Exp $
+
+  29 Jun 2011; Mike Frysinger <vapier@gentoo.org> apngopt-1.0.ebuild:
+  Tweak DESCRIPTION #373167 by Denilson Sá.
 
   29 Apr 2011; Tim Harder <radhermit@gentoo.org> apngopt-1.0.ebuild:
   Fix dependencies and linking error (bug #365107 by Helmut Jarausch).
