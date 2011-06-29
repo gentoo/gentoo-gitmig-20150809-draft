@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/makecif/makecif-5.6.6.ebuild,v 1.10 2011/06/29 11:51:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/makecif/makecif-5.6.6-r1.ebuild,v 1.1 2011/06/29 11:51:15 jlec Exp $
 
-EAPI=3
+EAPI=4
 
 inherit eutils fortran-2 toolchain-funcs
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ysbl.york.ac.uk/~alexei/makecif.html"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 LICENSE="ccp4"
 IUSE=""
 
@@ -28,14 +28,14 @@ src_prepare() {
 }
 
 src_compile() {
-	cd src && emake clean
+	emake -C src clean
 	emake \
+		-C src \
 		BLANC_FORT="$(tc-getFC) ${FFLAGS}" \
-		LDFLAGS="${LDFLAGS}" \
-		|| die
+		LDFLAGS="${LDFLAGS}"
 }
 
 src_install() {
-	dobin bin/* || die
-	dodoc readme || die
+	dobin bin/*
+	dodoc readme
 }
