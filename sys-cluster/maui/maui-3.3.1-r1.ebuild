@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/maui-3.3.1-r1.ebuild,v 1.1 2011/06/29 13:55:09 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/maui-3.3.1-r1.ebuild,v 1.2 2011/06/29 14:21:51 alexxy Exp $
 
 EAPI="3"
 
@@ -29,7 +29,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--with-spooldir="${EPREFIX}"/usr/spool/maui \
+		--with-spooldir="${EPREFIX}"/var/spool/maui \
 		--with-pbs="${EPREFIX}"/usr
 }
 
