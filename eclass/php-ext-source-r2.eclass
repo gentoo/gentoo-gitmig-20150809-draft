@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.9 2011/05/22 07:18:44 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.10 2011/06/29 07:04:43 olemarkus Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -60,7 +60,7 @@ esac
 # @ECLASS-VARIABLE: USE_PHP
 # @DESCRIPTION:
 # Lists the PHP slots compatibile the extension is compatibile with
-[[ -z "${USE_PHP}" ]] && USE_PHP="php5-5 php5-4 php5-3 php5-2"
+[[ -z "${USE_PHP}" ]] && USE_PHP="php5-3 php5-2"
 
 # @ECLASS-VARIABLE: PHP_EXT_OPTIONAL_USE
 # @DESCRIPTION:
