@@ -1,6 +1,17 @@
 # ChangeLog for app-misc/linux-logo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.76 2011/06/24 16:29:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/ChangeLog,v 1.77 2011/06/29 14:11:37 c1pher Exp $
+
+*linux-logo-5.11-r1 (29 Jun 2011)
+
+  29 Jun 2011; Dane Smith <c1pher@gentoo.org> -linux-logo-5.04.ebuild,
+  -linux-logo-5.06.ebuild, -linux-logo-5.07.ebuild, -linux-logo-5.10.ebuild,
+  -linux-logo-5.11.ebuild, +linux-logo-5.11-r1.ebuild,
+  +files/linux-logo-5.11.conf, +files/linux-logo.init.d, metadata.xml:
+  Updated metadata to reflect new Maintainer/Proxy.
+  Removed old versions.
+  Added 5.11-r1. Uses new init script. Numerous cleanups. Moved to
+  EAPI4.
 
   24 Jun 2011; Jeroen Roovers <jer@gentoo.org> linux-logo-5.11.ebuild,
   +files/logo_config:

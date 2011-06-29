@@ -1,8 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-5.07.ebuild,v 1.1 2010/02/08 11:50:11 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux-logo/linux-logo-5.11-r1.ebuild,v 1.1 2011/06/29 14:11:37 c1pher Exp $
 
-inherit eutils toolchain-funcs
+EAPI="4"
+
+inherit toolchain-funcs
 
 MY_P=${PN/-/_}-${PV}
 S=${WORKDIR}/${MY_P}
@@ -19,35 +21,31 @@ RDEPEND="nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	echo "./logos/gentoo.logo" >> logo_config
-	echo "./logos/gentoo2.logo" >> logo_config
-	echo "./logos/banner-simplified.logo" >> logo_config
-	echo "./logos/banner.logo" >> logo_config
-	echo "./logos/classic-no_periods.logo" >> logo_config
-	echo "./logos/classic-no_periods_or_chars.logo" >> logo_config
-	echo "./logos/classic.logo" >> logo_config
-	cp "${FILESDIR}"/gentoo{,2}.logo "${S}"/logos/
+src_prepare() {
+	cp "${FILESDIR}"/logo_config "${S}/" || die
+	cp "${FILESDIR}"/gentoo{,2}.logo "${S}"/logos/ \
+		|| die "Unable to copy Gentoo logos"
 	echo "NAME gentoo" >> "${S}"/logos/gentoo.logo
+	# Remove warn_unused_result warning
+	sed -i -e 's/FILE \*fff;/FILE \*fff;\n   char *stemp;/' \
+	    -e 's/fgets/stemp=fgets/' "${S}"/load_logo.c || die "sed failed"
+}
+
+src_configure() {
+	ARCH="" ./configure --prefix="${D}"/usr || die "configure failed"
 }
 
 src_compile() {
-	ARCH="" ./configure --prefix="${D}"/usr || die
-	emake CFLAGS="${CFLAGS}" CC="$(tc-getCC)" || die
+	emake CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" CC="$(tc-getCC)"
 }
 
 src_install() {
-	make install || die
+	emake install
 
 	dodoc BUGS README README.CUSTOM_LOGOS TODO USAGE LINUX_LOGO.FAQ
 
-	cp "${FILESDIR}"/${PN}.conf "${WORKDIR}"
-	sed -i -e 's/-L 4 -f -u/-f -u/' "${WORKDIR}"/${PN}.conf
-
-	newinitd "${FILESDIR}"/${PN}.initscript ${PN}
-	newconfd "${WORKDIR}"/${PN}.conf ${PN}
+	newinitd "${FILESDIR}"/${PN}.init.d ${PN}
+	newconfd "${FILESDIR}"/${P}.conf ${PN}
 }
 
 pkg_postinst() {
@@ -63,4 +61,10 @@ pkg_postinst() {
 	elog "which uses the settings found in"
 	elog "   /etc/conf.d/linux-logo"
 	echo
+}
+
+pkg_prerm() {
+	# Restore issue files
+	mv /etc/issue.linux-logo.backup /etc/issue 2> /dev/null
+	mv /etc/issue.net.linux-logo.backup /etc/issue.net 2> /dev/null
 }

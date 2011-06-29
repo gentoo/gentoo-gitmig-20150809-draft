@@ -3,6 +3,12 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-	<email>jer@gentoo.org</email>
+	<email>c1pher@gentoo.org</email>
+	<name>Dane Smith</name>
+</maintainer>
+<maintainer>
+	<email>nimiux@gentoo.org</email>
+	<name>Chema Alonso</name>
+	<description>Proxy-Maintainer. CC on bugs</description>
 </maintainer>
 </pkgmetadata>
