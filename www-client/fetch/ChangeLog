@@ -1,6 +1,9 @@
 # ChangeLog for www-client/fetch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/fetch/ChangeLog,v 1.7 2011/06/18 10:49:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/fetch/ChangeLog,v 1.8 2011/06/29 18:50:45 maekke Exp $
+
+  29 Jun 2011; Markus Meier <maekke@gentoo.org> fetch-1.0-r1.ebuild:
+  x86 stable, bug #371795
 
   18 Jun 2011; Markos Chandras <hwoarang@gentoo.org> fetch-1.0-r1.ebuild:
   Stable on amd64 wrt bug #371795
