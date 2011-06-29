@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-3.2.12.ebuild,v 1.5 2011/03/05 19:06:53 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-3.2.12.ebuild,v 1.6 2011/06/29 15:23:18 polynomial-c Exp $
 
 EAPI=2
 
@@ -55,6 +55,12 @@ pkg_setup() {
 }
 
 src_prepare() {
+        if kernel_is -ge 2 6 33 ; then
+				# evil patch for new kernels - header moved
+				grep -lR linux/autoconf.h *  | xargs sed -i -e \
+						's:<linux/autoconf.h>:<generated/autoconf.h>:'
+        fi
+
 		# Prepare the vboxvideo_drm sources and Makefile in ${WORKDIR}
 		cp -a "${WORKDIR}/${MY_P/-OSE/_OSE}"/src/VBox/Additions/linux/drm \
 		"${WORKDIR}/vboxvideo_drm" || die "cannot copy vboxvideo_drm directory"
