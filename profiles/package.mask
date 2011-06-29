@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12870 2011/06/29 12:56:43 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12871 2011/06/29 13:20:26 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -463,10 +463,6 @@ x11-themes/qgtkstyle
 # Diego E. Pettenò <flameeyes@gentoo.org> (01 Mar 2011)
 # Messed up build system, automagic dependencies.
 dev-util/perf
-
-# Justin Lecher <jlec@gentoo.org> (04 Mar 2011)
-# Probably API change, packages fail to compile
-~sci-libs/mmdb-1.23.2
 
 # Ulrich Mueller <ulm@gentoo.org> (01 Mar 2011)
 # Christian Faulhammer <fauli@gentoo.org>
