@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/files/maui.initd,v 1.1 2011/06/29 13:55:09 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/files/maui.initd,v 1.2 2011/06/29 16:15:04 alexxy Exp $
 
 . /etc/conf.d/torque 
 PBS_SERVER_HOME="$(. /etc/env.d/25torque; echo ${PBS_SERVER_HOME})"
@@ -39,7 +39,7 @@ start() {
 
 stop() {
     ebegin "Stopping Maui scheduler"
-    start-stop-daemon --stop -p /usr/spool/maui/maui.pid
+    start-stop-daemon --stop -p /var/spool/maui/maui.pid
     eend ${?}
 }
 # vim:ts=4
