@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.281 2011/06/29 01:49:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.282 2011/06/29 15:01:59 angelos Exp $
+
+  29 Jun 2011; Christoph Mende <angelos@gentoo.org> vte-0.28.1-r200.ebuild:
+  Stable on amd64 wrt bug #371320
 
   29 Jun 2011; Jeroen Roovers <jer@gentoo.org> vte-0.28.1-r200.ebuild:
   Stable for HPPA (bug #371320).
