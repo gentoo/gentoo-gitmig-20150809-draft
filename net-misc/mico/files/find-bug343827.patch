@@ -1,0 +1,51 @@
+--- orb/address.cc.orig	2011-06-28 17:22:58.275355766 +0200
++++ orb/address.cc	2011-06-28 17:46:12.268357549 +0200
+@@ -269,21 +269,30 @@
+ {
+     if (_ipaddr.size() > 0)
+ 	return TRUE;
+-    if (_host.length() == 0)
++
++    if (_host.length() == 0) {
++::std::cerr << "for gentoo bug#343827: resolve_ip() detected _host.length() == 0, failed." << ::std::endl;
+ 	return FALSE;
++    }
+ 
+     InetAddress &me = (InetAddress &)*this;
+ 
++::std::cerr << "for gentoo bug#343827: resolve_ip() for hostname '" << _host << "' using ::inet_addr()...";
++
+     CORBA::ULong addr = ::inet_addr ((char *)_host.c_str());
+     if (addr != (CORBA::ULong)-1L || _host == string("255.255.255.255")) {
+ 	me._ipaddr.insert (me._ipaddr.begin(),
+ 			   (CORBA::Octet *)&addr,
+ 			   (CORBA::Octet *)&addr + sizeof (CORBA::ULong));
++::std::cerr << " succeeded." << ::std::endl;
+ 	return TRUE;
+     }
++::std::cerr << " failed, using ::gethostbyname() ";
+ #ifndef HAVE_THREADS
++::std::cerr << "without threads...";
+     struct hostent *hent = ::gethostbyname ((char *)_host.c_str());
+ #else // HAVE_THREADS
++::std::cerr << "with threads...";
+     struct hostent* hent = NULL;
+     {
+         MICOMT::AutoLock lock(S_netdb_lock_);
+@@ -293,6 +302,7 @@
+         me._ipaddr.insert (me._ipaddr.begin(),
+                            (CORBA::Octet *)hent->h_addr,
+                            (CORBA::Octet *)hent->h_addr + hent->h_length);
++::std::cerr << " succeeded." << ::std::endl;
+         return TRUE;
+     }
+ #ifdef HAVE_THREADS
+@@ -305,6 +315,8 @@
+ 	<< "Warning: cannot resolve hostname '" << _host
+ 	<< "' into an IP address." << endl;
+     }
++
++::std::cerr << " failed." << ::std::endl;
+     return FALSE;
+ }
+ 

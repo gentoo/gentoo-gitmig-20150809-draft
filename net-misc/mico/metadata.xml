@@ -13,5 +13,8 @@
 		renowned for its market-leading security features, its great
 		user-friendliness, and its full standard-compliance.
 	</longdescription>
+	<use>
+		<flag name="findbug">Adds patch to help finding bug#343827</flag>
+	</use>
 </pkgmetadata>
 

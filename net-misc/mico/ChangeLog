@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mico
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/ChangeLog,v 1.34 2011/05/26 20:47:56 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/ChangeLog,v 1.35 2011/06/29 11:44:04 haubi Exp $
+
+  29 Jun 2011; Michael Haubenwallner <haubi@gentoo.org>
+  +files/find-bug343827.patch, mico-2.3.13-r5.ebuild, metadata.xml:
+  try to find bug#343827 via extra patch upon USE=findbug
 
   26 May 2011; Michael Haubenwallner <haubi@gentoo.org> mico-9999.ebuild:
   err, do not try to trigger the description problem
