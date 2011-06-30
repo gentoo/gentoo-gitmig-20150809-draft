@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt/qlandkartegt-1.1.2.ebuild,v 1.1 2011/06/01 10:12:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt/qlandkartegt-1.2.1.ebuild,v 1.1 2011/06/30 12:20:03 scarabeus Exp $
 
 EAPI=4
 
@@ -16,8 +16,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="exif gps"
 
 RDEPEND="
-	sci-libs/gdal
-	sci-libs/proj
+	>=sci-libs/gdal-1.6
+	>=sci-libs/proj-4.7
 	sci-geosciences/gpsbabel
 	media-libs/libexif
 	x11-libs/qt-gui:4
@@ -29,7 +29,7 @@ RDEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}/${PV}-fix_automagicness.patch"
+	"${FILESDIR}/1.1.2-fix_automagicness.patch"
 )
 
 src_configure() {

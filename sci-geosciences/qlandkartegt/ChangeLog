@@ -1,6 +1,12 @@
 # ChangeLog for sci-geosciences/qlandkartegt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt/ChangeLog,v 1.13 2011/06/01 10:12:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt/ChangeLog,v 1.14 2011/06/30 12:20:03 scarabeus Exp $
+
+*qlandkartegt-1.2.1 (30 Jun 2011)
+
+  30 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -qlandkartegt-1.1.2.ebuild, +qlandkartegt-1.2.1.ebuild:
+  Version bump to latest, drop older.
 
 *qlandkartegt-1.1.2 (01 Jun 2011)
 
