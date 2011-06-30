@@ -1,6 +1,7 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.106.ebuild,v 1.11 2009/11/10 21:12:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.106.ebuild,v 1.12 2011/06/30 10:25:56 tupone Exp $
+EAPI=2
 
 inherit flag-o-matic toolchain-funcs eutils games
 
@@ -56,11 +57,8 @@ toggle_feature2() {
 	use $1 && toggle_feature $2 $3
 }
 
-src_unpack() {
+src_prepare() {
 	local mycpu
-
-	unpack ${A}
-	cd "${S}"
 
 	case ${ARCH} in
 		x86)	mycpu="i386";;
@@ -143,6 +141,7 @@ EOF
 		-e 's/doinstallsuid/doinstall/' \
 		-e '/^QUIET/s:^:#:' src/unix/unix.mak \
 		|| die "sed src/unix/unix.mak failed"
+	epatch "${FILESDIR}"/${P}-overflow.patch
 }
 
 src_compile() {
