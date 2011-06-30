@@ -1,6 +1,13 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.277 2011/06/19 03:38:57 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.278 2011/06/30 20:46:34 alexxy Exp $
+
+  30 Jun 2011; Alexey Shvetsov <alexxy@gentoo.org> make.defaults,
+  package.use.mask:
+  Also unmask infiniband use flag
+
+  30 Jun 2011; Alexey Shvetsov <alexxy@gentoo.org> make.defaults:
+  Add OPENIB_DRIVERS to USE_EXPAND
 
   19 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
   Remove glade use-mask, it's been added to the tree

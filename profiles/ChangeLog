@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5491 2011/06/30 19:15:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5492 2011/06/30 20:46:33 alexxy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Jun 2011; Alexey Shvetsov <alexxy@gentoo.org> +desc/openib_drivers.desc,
+  base/ChangeLog, base/make.defaults, base/package.use.mask, categories,
+  use.desc:
+  Add OPENIB_DRIVERS to USE_EXPAND and its descriptins. Add infiniband use flag
+  to global one since many packages can use it
 
   30 Jun 2011; Anthony G. Basile <blueness@gentoo.org> hardened/linux/use.mask:
   Use masked opencl on hardened, bug #367225

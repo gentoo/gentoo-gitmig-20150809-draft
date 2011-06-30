@@ -129,6 +129,7 @@ sys-cluster
 sys-devel
 sys-freebsd
 sys-fs
+sys-infiniband
 sys-kernel
 sys-libs
 sys-power

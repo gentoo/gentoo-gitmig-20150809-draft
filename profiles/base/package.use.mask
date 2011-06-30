@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.246 2011/06/23 15:53:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.247 2011/06/30 20:46:34 alexxy Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -122,10 +122,6 @@ dev-lang/ruby-enterprise fastthreading
 # Mask clutter till introspection is unmasked
 =gnome-extra/gnome-games-2.3* clutter
 
-# Kacper Kowalik <xarthisius@gentoo.org> (26 Jun 2010)
-# Mask infiniband until we've libibverbs and librdmacm with pc file
-sys-cluster/corosync infiniband
-
 # Nirbheek Chauhan <nirbheek@gentoo.org> (26 Jun 2010)
 # Inter-process communication doesn't work on anything except x86/amd64/arm
 # due to lack of atomic ops, bug 325185
@@ -174,12 +170,6 @@ sci-chemistry/gamess mpi
 <kde-base/kdeadmin-meta-4.5.0 cups
 <kde-base/kdeutils-meta-4.5.0 cups
 <kde-base/plasma-workspace-4.5.0 google-gadgets
-
-# Alexey Shvetsov <alexxy@gentoo.org> (25 Nov 2009)
-# mask infiniband use flag for some packages since infiniband software
-# still not in portage. All needed libs available via science overlay
-sys-cluster/glusterfs infiniband
-sys-block/tgt infiniband
 
 # Mounir Lamouri <volkmar@gentoo.org> (07 Nov 2009)
 # Mask cuda for k3d. Works only on amd64/x86. Bug 267264

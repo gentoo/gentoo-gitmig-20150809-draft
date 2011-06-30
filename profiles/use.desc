@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.460 2011/05/09 19:43:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.461 2011/06/30 20:46:33 alexxy Exp $
 
 # Keep them sorted
 
@@ -157,6 +157,7 @@ ieee1394 - Enable FireWire/iLink IEEE1394 support (dv, camera, ...)
 imagemagick - Enables support for Imagemagick (image converter)
 imap - Adds support for IMAP (Internet Mail Application Protocol)
 imlib - Adds support for imlib, an image loading and rendering library
+infiniband - Enable Infiniband RDMA transport support
 inifile - Adds dbm support for .ini files
 innodb - Adds innodb support for mySQL (transaction support)
 interbase - Adds support for Interbase database
