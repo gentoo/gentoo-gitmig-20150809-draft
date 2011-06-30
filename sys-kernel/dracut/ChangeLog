@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.24 2011/06/23 10:38:17 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.25 2011/06/30 21:23:39 aidecoe Exp $
+
+*dracut-010-r3 (30 Jun 2011)
+
+  30 Jun 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-010-r3.ebuild,
+  +files/dracut-010-rd.driver.post-fixed.patch,
+  +files/dracut-010-rd.driver.pre-and-blacklist-fix.patch:
+  rd.driver.* kernel args handling patches. Fixes bug #373007.
 
   23 Jun 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-009-r1.ebuild,
   dracut-010.ebuild, dracut-010-r1.ebuild, dracut-010-r2.ebuild:
