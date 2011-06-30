@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wiki2beamer/wiki2beamer-0.9.4.ebuild,v 1.1 2011/05/09 18:49:52 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wiki2beamer/wiki2beamer-0.9.4.ebuild,v 1.2 2011/06/30 00:11:37 sping Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+examples"
 
-DEPEND=""
+DEPEND="app-arch/unzip"
 RDEPEND=""
 
 src_install() {
