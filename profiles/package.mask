@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12874 2011/06/29 15:21:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12875 2011/06/30 15:36:16 dagger Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Robert Piasek <dagger@gentoo.org> (30 Jun 2011)
+# Masking for testing
+=net-fs/samba-3.6.0_rc2.ebuild
 
 # Justin Lecher <jlec@gentoo.org> (29 Jun 2011)
 # ABI/API break
