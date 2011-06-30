@@ -1,6 +1,16 @@
 # ChangeLog for media-libs/gst-plugins-base
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.170 2011/06/09 16:01:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.171 2011/06/30 13:08:44 leio Exp $
+
+*gst-plugins-base-0.10.35 (30 Jun 2011)
+
+  30 Jun 2011; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-base-0.10.35.ebuild:
+  Version bump. Don't let the upstream build system always pass -g (honoring
+  CFLAGS in make.conf about it instead), also removed the debug USE flag,
+  which affected nothing. Adds ARGB64, AYUV64 (16 bits per channel) and r210
+  (10 bits per channel) format support to some elements. Many other
+  improvements, some new API and bug fixes
 
   09 Jun 2011; Jeroen Roovers <jer@gentoo.org> gst-plugins-base-0.10.32.ebuild:
   Stable for HPPA (bug #368281).
