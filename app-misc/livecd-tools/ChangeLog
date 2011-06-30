@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/livecd-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.117 2011/06/30 18:48:06 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.118 2011/06/30 20:34:53 williamh Exp $
+
+  30 Jun 2011; William Hubbs <williamh@gentoo.org> livecd-tools-9999.ebuild:
+  re-install bashlogin for serial lines
 
   30 Jun 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   livecd-tools-9999.ebuild:
