@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/w3af
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/w3af/ChangeLog,v 1.9 2011/05/29 21:07:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/w3af/ChangeLog,v 1.10 2011/06/30 09:44:52 hwoarang Exp $
+
+  30 Jun 2011; Markos Chandras <hwoarang@gentoo.org> w3af-1.0.ebuild:
+  Stable on amd64 wrt bug #372809
 
   29 May 2011; Markos Chandras <hwoarang@gentoo.org> w3af-1.0.ebuild:
   add pysvn dependency. Bug #368869
