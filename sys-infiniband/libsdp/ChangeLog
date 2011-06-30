@@ -1,0 +1,10 @@
+# ChangeLog for sys-infiniband/libsdp
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libsdp/ChangeLog,v 1.1 2011/06/30 21:10:52 alexxy Exp $
+
+*libsdp-1.1.108 (30 Jun 2011)
+
+  30 Jun 2011; Alexey Shvetsov <alexxy@gentoo.org> +libsdp-1.1.108.ebuild,
+  +metadata.xml:
+  Initial import to tree
+
