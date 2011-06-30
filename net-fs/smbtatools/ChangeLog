@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/smbtatools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/smbtatools/ChangeLog,v 1.2 2011/05/09 13:22:58 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/smbtatools/ChangeLog,v 1.3 2011/06/30 16:07:16 dagger Exp $
+
+*smbtatools-1.2.5 (30 Jun 2011)
+
+  30 Jun 2011; Robert Piasek <dagger@gentoo.org> +smbtatools-1.2.5.ebuild,
+  +files/dont_use_unsigned_long_long.patch, +files/fix_calculating.patch,
+  +files/reorder_divisions.patch:
+  Add version 1.2.5
 
 *smbtatools-1.2.4 (09 May 2011)
 
