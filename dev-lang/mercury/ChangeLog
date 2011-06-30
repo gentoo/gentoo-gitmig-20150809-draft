@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.139 2011/06/29 19:10:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.140 2011/06/30 07:53:16 keri Exp $
+
+*mercury-11.07_beta1 (30 Jun 2011)
+
+  30 Jun 2011; <keri@gentoo.org> +mercury-11.07_beta1.ebuild:
+  Version bump
 
   29 Jun 2011; Markus Meier <maekke@gentoo.org> mercury-11.01.ebuild:
   x86 stable, bug #371557
