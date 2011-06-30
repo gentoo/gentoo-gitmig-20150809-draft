@@ -1,0 +1,12 @@
+
+
+  30 Jun 2011; Anthony G. Basile <blueness@gentoo.org> bitflu-1.37.ebuild,
+  +files/bitflu-add-pidfile.patch, files/bitflu.config, files/bitflu.initd:
+  Added patch to produce a pid file
+
+*bitflu-1.37 (30 Jun 2011)
+
+  30 Jun 2011; Anthony G. Basile <blueness@gentoo.org> +bitflu-1.37.ebuild,
+  +files/bitflu.config, +files/bitflu.initd, +metadata.xml:
+  Initial commit
+
