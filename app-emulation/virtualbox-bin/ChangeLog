@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.109 2011/06/28 20:43:04 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.110 2011/06/30 04:11:55 polynomial-c Exp $
+
+*virtualbox-bin-4.0.10-r1 (30 Jun 2011)
+
+  30 Jun 2011; Lars Wendler <polynomial-c@gentoo.org>
+  files/10-virtualbox.rules, virtualbox-bin-4.0.8.ebuild,
+  -virtualbox-bin-4.0.10.ebuild, +virtualbox-bin-4.0.10-r1.ebuild:
+  Fixed udev rules to look in /lib/udev for VBoxCreateUSBNode.sh. Thanks to
+  Nikolaos Chatzidakis for reporting this in bug #373515.
 
 *virtualbox-bin-4.0.10 (28 Jun 2011)
 
