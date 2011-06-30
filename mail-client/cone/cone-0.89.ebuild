@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/cone-0.89.ebuild,v 1.1 2011/05/24 22:56:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/cone-0.89.ebuild,v 1.2 2011/06/30 09:46:44 hwoarang Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE="crypt fam gnutls idn ipv6 ldap spell"
 
 RDEPEND=">=dev-libs/openssl-0.9.6
