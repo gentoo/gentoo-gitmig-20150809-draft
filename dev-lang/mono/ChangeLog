@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mono
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.221 2011/06/21 13:35:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.222 2011/06/30 14:16:12 angelos Exp $
+
+  30 Jun 2011; Christoph Mende <angelos@gentoo.org> mono-2.10.2.ebuild:
+  Stable on amd64 wrt bug #371163
 
   21 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> mono-2.10.2.ebuild:
   x86 stable wrt bug #371163
