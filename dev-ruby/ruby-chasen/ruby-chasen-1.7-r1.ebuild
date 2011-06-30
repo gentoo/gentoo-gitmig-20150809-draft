@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-chasen/ruby-chasen-1.7-r1.ebuild,v 1.3 2011/02/22 08:27:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-chasen/ruby-chasen-1.7-r1.ebuild,v 1.4 2011/06/30 15:02:21 ranger Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -14,7 +14,7 @@ SRC_URI="https://sites.google.com/a/ixenon.net/ruby-chasen/home/chasen1.7.tar.gz
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="${DEPEND} >=app-text/chasen-2.3.3-r2"
