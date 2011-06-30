@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.86 2011/06/26 00:54:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.87 2011/06/30 19:35:06 pacho Exp $
 
 
 # Brent Baude <ranger@gentoo.org> (25 June  2011)
@@ -87,7 +87,7 @@ sci-chemistry/vmd tachyon
 
 # QA: This entry is moved from INVALID location from default/linux/powerpc.
 # Not keyworded
-media-plugins/gst-plugins-meta mythtv
+media-plugins/gst-plugins-meta mythtv vcd
 
 # QA: This entry is moved from INVALID location from default/linux/powerpc.
 # VDPAU is currently not keyworded on PPC since its a nvidia-drivers feature

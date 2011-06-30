@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86-fbsd profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.24 2011/03/31 08:31:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.25 2011/06/30 19:40:47 pacho Exp $
+
+  30 Jun 2011; Pacho Ramos <pacho@gentoo.org> package.use.mask:
+  Needed plugins are not keyworded on this arch
 
   31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
   Drop obslolete KDE entries

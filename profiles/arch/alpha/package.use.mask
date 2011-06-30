@@ -1,6 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.60 2011/05/09 14:27:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.61 2011/06/30 19:28:37 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (30 Jun 2011)
+# Needed plugins are not keyworded on this arch
+media-plugins/gst-plugins-meta vcd
 
 # Pacho Ramos <pacho@gentoo.org> (02 Apr 2011)
 # quvi support is needed to play youtube files now

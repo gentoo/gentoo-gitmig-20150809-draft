@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/package.use.mask,v 1.24 2011/03/18 17:00:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/package.use.mask,v 1.25 2011/06/30 19:40:47 pacho Exp $
 
 # Pacho Ramos <pacho@gentoo> (18 Mar 2011)
 # Missing keywords on deps (GNOME related packages)
 dev-libs/totem-pl-parser quvi
-media-plugins/gst-plugins-meta dv dvd musepack wavpack
+media-plugins/gst-plugins-meta dv dvd musepack vcd vpx wavpack
 
 # Justin Lecher <jlec@gentoo.org> (19 Sep 2010)
 # kde-base/konqueror not keyworded

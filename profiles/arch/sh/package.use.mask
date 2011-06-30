@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/package.use.mask,v 1.20 2011/05/09 14:27:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/package.use.mask,v 1.21 2011/06/30 19:40:11 pacho Exp $
 
 # Sebastian Pipping <sping@gentoo.org> (22 Feb 2011)
 # No media-sound/lilypond here, yet (bug #356069)
@@ -37,5 +37,5 @@ media-libs/taglib test
 # missing keyword for sys-cluster/openmpi sys-cluster/mpich2
 dev-libs/boost mpi
 
-# Needs testing
-media-plugins/gst-plugins-meta lame taglib
+# Needs testing and keywording
+media-plugins/gst-plugins-meta aac dv lame pulseaudio taglib vcd vpx wavpack

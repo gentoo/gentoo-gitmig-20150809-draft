@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sh profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/ChangeLog,v 1.63 2011/04/23 18:49:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/ChangeLog,v 1.64 2011/06/30 19:40:11 pacho Exp $
+
+  30 Jun 2011; Pacho Ramos <pacho@gentoo.org> package.use.mask:
+  Needed plugins are not keyworded on these arches
 
   23 Apr 2011; Raúl Porcel <armin76@gentoo.org> use.mask:
   Add video_cards_nouveau to use.mask

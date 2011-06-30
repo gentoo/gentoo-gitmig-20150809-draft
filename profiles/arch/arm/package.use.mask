@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.51 2011/05/09 14:27:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.52 2011/06/30 19:31:36 pacho Exp $
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (08 Apr 2011)
 # x11-libs/qscintilla still needs arm keywords, so...
@@ -79,7 +79,7 @@ dev-libs/boost mpi
 
 # missing keywords
 media-sound/sox ladspa
-media-plugins/gst-plugins-meta aac dv lame taglib wavpack
+media-plugins/gst-plugins-meta aac dv lame taglib vcd wavpack
 
 # projectm not keyworded, bug #314969
 media-video/vlc projectm
