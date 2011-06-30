@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.103 2011/05/15 16:57:10 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.104 2011/06/30 09:34:21 hwoarang Exp $
+
+  30 Jun 2011; Markos Chandras <hwoarang@gentoo.org> msmtp-1.4.24.ebuild:
+  Stable on amd64 wrt bug #372937
 
   15 May 2011; Eray Aslan <eras@gentoo.org> msmtp-1.4.24.ebuild:
   Fix building with doc USE flag bug #367179. Thanks to Andrew Savchenko.
