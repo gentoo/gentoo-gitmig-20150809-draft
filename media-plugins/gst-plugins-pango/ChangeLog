@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-pango
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pango/ChangeLog,v 1.159 2011/06/09 16:04:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-pango/ChangeLog,v 1.160 2011/06/30 16:13:27 leio Exp $
+
+*gst-plugins-pango-0.10.35 (30 Jun 2011)
+
+  30 Jun 2011; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-pango-0.10.29.ebuild, +gst-plugins-pango-0.10.35.ebuild:
+  Version bump. xBGR, RGBx, ARGB and other RGB alpha variants support;
+  vertical alignment support; and assorted fixes for textoverlay
 
   09 Jun 2011; Jeroen Roovers <jer@gentoo.org>
   gst-plugins-pango-0.10.32.ebuild:
