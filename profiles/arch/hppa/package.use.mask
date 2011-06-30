@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.82 2011/06/05 18:05:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.83 2011/06/30 18:49:57 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
@@ -16,10 +16,6 @@ x11-libs/qt-script jit
 # Jeroen Roovers <jer@gentoo.org> (24 Feb 2011)
 # Needs Java (bug #355353)
 app-text/texlive pdfannotextractor
-
-# Sebastian Pipping <sping@gentoo.org> (22 Feb 2011)
-# No media-sound/lilypond here, yet (bug #356069)
-app-text/asciidoc test
 
 # Jeroen Roovers <jer@gentoo.org> (21 Jan 2011)
 # Pulls in either GNOME or LXDE, neither are keyworded (bug #296548)
