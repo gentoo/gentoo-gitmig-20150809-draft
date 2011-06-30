@@ -7,8 +7,6 @@ iSCSI Target daemon with rdma support
 </longdescription>
 <use>
 	<flag name='ibmvio'>Add support for IBM Virtual I/O</flag>
-	<flag name='infiniband'>Add support for iSCSI over RDMA (iser). All needed
-		libs can be found in science overlay</flag>
 	<flag name='fcp'>Add support for new FC protocol</flag>
 	<flag name='fcoe'>Add support for FCoE protocol</flag>
 </use>
