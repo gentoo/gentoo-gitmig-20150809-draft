@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>xarthisius@gentoo.org</email>
+		<name>Kacper Kowalik</name>
+	</maintainer>
+	<longdescription>
+		MTPfs is a FUSE filesystem that supports reading and writing from any
+		MTP device, as supported by libmtp. MTPfs includes extra features such
+		as playlist and meta information support for MP3 players.
+	</longdescription>
+</pkgmetadata>

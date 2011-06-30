@@ -1,0 +1,16 @@
+Prevent possible overflow of destination buffer, as
+strncat appends the first num characters of source 
+to destination, _plus_ a terminating null-character.
+
+Patch written by Kacper Kowalik <xarthisius@gentoo.org>
+--- a/id3read.c
++++ b/id3read.c
+@@ -269,7 +269,7 @@
+         if (strlen (trackstr) == 1) {
+             strcat (trackno, "0");
+         }
+-        strncat (trackno, trackstr, sizeof (trackno));
++        strncat (trackno, trackstr, sizeof (trackno)-1);
+         g_free (trackstr);
+         g_free (posstr);
+     } else {
