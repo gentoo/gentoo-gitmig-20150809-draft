@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/gst-plugins-theora
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-theora/ChangeLog,v 1.165 2011/06/09 16:05:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-theora/ChangeLog,v 1.166 2011/06/30 16:16:48 leio Exp $
+
+*gst-plugins-theora-0.10.35 (30 Jun 2011)
+
+  30 Jun 2011; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-theora-0.10.29.ebuild, +gst-plugins-theora-0.10.35.ebuild:
+  Version bump. Many fixes to the encoder: don't reset the video quality
+  when setting the bitrate; support adjustment of the speed-level property
+  while running, and use the same defaults as libtheora for it
 
   09 Jun 2011; Jeroen Roovers <jer@gentoo.org>
   gst-plugins-theora-0.10.32.ebuild:
