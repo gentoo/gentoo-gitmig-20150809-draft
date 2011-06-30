@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-alsa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-alsa/ChangeLog,v 1.185 2011/06/09 16:02:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-alsa/ChangeLog,v 1.186 2011/06/30 14:09:03 leio Exp $
+
+*gst-plugins-alsa-0.10.35 (30 Jun 2011)
+
+  30 Jun 2011; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-alsa-0.10.29.ebuild, +gst-plugins-alsa-0.10.35.ebuild:
+  Version bump with a trivial error path fix. Remove old
 
   09 Jun 2011; Jeroen Roovers <jer@gentoo.org> gst-plugins-alsa-0.10.32.ebuild:
   Stable for HPPA (bug #368281).
