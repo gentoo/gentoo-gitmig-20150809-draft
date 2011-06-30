@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/smbtad
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/smbtad/ChangeLog,v 1.2 2011/05/09 13:21:27 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/smbtad/ChangeLog,v 1.3 2011/06/30 16:07:08 dagger Exp $
+
+*smbtad-1.2.5 (30 Jun 2011)
+
+  30 Jun 2011; Robert Piasek <dagger@gentoo.org> +smbtad-1.2.5.ebuild:
+  Add version 1.2.5
 
 *smbtad-1.2.4 (09 May 2011)
 
