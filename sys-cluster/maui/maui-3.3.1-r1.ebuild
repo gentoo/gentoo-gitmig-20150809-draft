@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/maui-3.3.1-r1.ebuild,v 1.2 2011/06/29 14:21:51 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/maui-3.3.1-r1.ebuild,v 1.3 2011/06/30 08:28:12 xarthisius Exp $
 
 EAPI="3"
 
@@ -8,12 +8,12 @@ inherit autotools eutils multilib
 
 DESCRIPTION="Maui Cluster Scheduler"
 HOMEPAGE="http://www.clusterresources.com/products/maui/"
-SRC_URI="http://www.adaptivecomputing.com/download/maui/${P}.tar.gz"
+SRC_URI="http://www.adaptivecomputing.com/download/${PN}/${P}.tar.gz"
 
-IUSE=""
-SLOT="0"
 LICENSE="maui"
+SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux"
+IUSE=""
 
 DEPEND="sys-cluster/torque"
 RDEPEND="${DEPEND}"
@@ -29,15 +29,15 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--with-spooldir="${EPREFIX}"/var/spool/maui \
+		--with-spooldir="${EPREFIX}"/var/spool/${PN} \
 		--with-pbs="${EPREFIX}"/usr
 }
 
 src_install() {
-	emake install BUILDROOT="${D}" INST_DIR="${ED}/usr" || die
+	emake BUILDROOT="${D}" INST_DIR="${ED}/usr" install || die
 	dodoc docs/README CHANGELOG || die
 	dohtml docs/mauidocs.html || die
-	newinitd "${FILESDIR}/maui.initd" maui || die
+	newinitd "${FILESDIR}/${PN}.initd" ${PN} || die
 }
 
 pkg_nofetch() {

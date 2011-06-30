@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/maui
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/ChangeLog,v 1.20 2011/06/29 16:15:04 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/ChangeLog,v 1.21 2011/06/30 08:28:12 xarthisius Exp $
+
+  30 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org> maui-3.3.1-r1.ebuild:
+  maui->PN, fix order of vars
 
   29 Jun 2011; Alexey Shvetsov <alexxy@gentoo.org> files/maui.initd:
   Fix typo in init.d
