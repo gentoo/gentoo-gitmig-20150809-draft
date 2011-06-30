@@ -1,0 +1,11 @@
+# ChangeLog for sys-infiniband/openib-files
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/openib-files/ChangeLog,v 1.1 2011/06/30 22:02:03 alexxy Exp $
+
+*openib-files-1.5.3.1 (30 Jun 2011)
+
+  30 Jun 2011; Alexey Shvetsov <alexxy@gentoo.org> +files/90-ib.rules,
+  +openib-files-1.5.3.1.ebuild, +files/openib, +files/openib.conf,
+  +files/openib.env, +files/openib.modprobe, +metadata.xml:
+  Initial import to tree
+
