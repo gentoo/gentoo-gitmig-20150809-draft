@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.29 2010/02/16 01:06:24 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.30 2011/06/30 04:14:38 dirtyepic Exp $
 
 # @ECLASS:			wxwidgets.eclass
 # @MAINTAINER:
@@ -45,7 +45,7 @@
 #  wx-config file to use.  Most configure scripts use this path if it's set in
 #  the environment or accept --with-wx-config="${WX_CONFIG}".
 
-inherit eutils multilib
+inherit base eutils multilib
 
 case "${EAPI:-0}" in
 	0|1)
