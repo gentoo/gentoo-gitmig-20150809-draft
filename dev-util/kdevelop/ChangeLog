@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.222 2011/06/01 19:48:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.223 2011/06/30 00:27:39 reavertm Exp $
+
+*kdevelop-4.2.3 (29 Jun 2011)
+
+  29 Jun 2011; Maciej Mrozowski <reavertm@gentoo.org> +kdevelop-4.2.3.ebuild:
+  Version bump, bug 373485
 
   01 Jun 2011; Brent Baude <ranger@gentoo.org> kdevelop-4.2.2.ebuild:
   Marking kdevelop-4.2.2 ppc stable for bug 354033
