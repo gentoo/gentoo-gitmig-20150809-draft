@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.66 2011/06/30 09:36:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.67 2011/06/30 12:06:19 tomka Exp $
+
+  30 Jun 2011; Thomas Kahle <tomka@gentoo.org> v8-3.2.10.21.ebuild:
+  x86 stable per bug 373469
 
   30 Jun 2011; Markos Chandras <hwoarang@gentoo.org> v8-3.2.10.21.ebuild:
   Stable on amd64 wrt bug #373469
