@@ -1,0 +1,10 @@
+# ChangeLog for sys-infiniband/libipathverbs
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libipathverbs/ChangeLog,v 1.1 2011/06/30 21:37:01 alexxy Exp $
+
+*libipathverbs-1.2 (30 Jun 2011)
+
+  30 Jun 2011; Alexey Shvetsov <alexxy@gentoo.org> +libipathverbs-1.2.ebuild,
+  +metadata.xml:
+  Initial import to tree
+
