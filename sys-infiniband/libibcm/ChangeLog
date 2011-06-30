@@ -1,0 +1,10 @@
+# ChangeLog for sys-infiniband/libibcm
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libibcm/ChangeLog,v 1.1 2011/06/30 21:01:27 alexxy Exp $
+
+*libibcm-1.0.5 (30 Jun 2011)
+
+  30 Jun 2011; Alexey Shvetsov <alexxy@gentoo.org> +libibcm-1.0.5.ebuild,
+  +metadata.xml:
+  Initial import to tree
+
