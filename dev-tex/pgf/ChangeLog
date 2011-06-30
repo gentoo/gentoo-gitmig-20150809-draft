@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/pgf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.57 2011/06/14 03:27:40 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.58 2011/06/30 10:13:17 hwoarang Exp $
+
+  30 Jun 2011; Markos Chandras <hwoarang@gentoo.org> pgf-2.10.ebuild:
+  Stable on amd64 wrt bug #373415
 
   14 Jun 2011; Matt Turner <mattst88@gentoo.org> pgf-2.10.ebuild:
   Added ~mips, bug 342513
