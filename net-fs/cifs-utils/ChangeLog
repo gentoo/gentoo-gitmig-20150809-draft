@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/cifs-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.10 2011/06/02 22:36:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.11 2011/06/30 15:10:51 vostorga Exp $
+
+  30 Jun 2011; Víctor Ostorga <vostorga@gentoo.org> -cifs-utils-4.8.1.ebuild,
+  cifs-utils-5.0.ebuild:
+  Fixing DEPEND on !<net-fs/samba-3.6_rc2 bug #364225
 
   02 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> cifs-utils-5.0.ebuild:
   Keyword ~arm, bug 358401

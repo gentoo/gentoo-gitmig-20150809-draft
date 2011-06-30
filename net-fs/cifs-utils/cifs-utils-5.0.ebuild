@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-5.0.ebuild,v 1.3 2011/06/02 22:36:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-5.0.ebuild,v 1.4 2011/06/30 15:10:51 vostorga Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~x86"
 IUSE="ads +caps caps-ng creds setuid"
 
 DEPEND="!net-fs/mount-cifs
-	!<net-fs/samba-3.6
+	!<net-fs/samba-3.6_rc1
 	ads? ( sys-libs/talloc virtual/krb5 sys-apps/keyutils )
 	caps? ( sys-libs/libcap )
 	caps-ng? ( sys-libs/libcap-ng )
