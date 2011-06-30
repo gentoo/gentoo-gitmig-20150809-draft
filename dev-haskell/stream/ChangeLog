@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/stream
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stream/ChangeLog,v 1.7 2011/02/12 17:52:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/stream/ChangeLog,v 1.8 2011/06/30 12:18:14 tomka Exp $
+
+  30 Jun 2011; Thomas Kahle <tomka@gentoo.org> stream-0.2.6-r1.ebuild:
+  x86 stable per bug 338985
 
   12 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   stream-0.2.6-r1.ebuild:
