@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/detex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/detex/ChangeLog,v 1.31 2011/01/25 16:45:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/detex/ChangeLog,v 1.32 2011/06/30 15:09:34 ranger Exp $
+
+  30 Jun 2011; Brent Baude <ranger@gentoo.org> detex-2.8-r1.ebuild:
+  Marking detex-2.8-r1 ppc for bug 349710
 
   25 Jan 2011; Jeroen Roovers <jer@gentoo.org> detex-2.8-r1.ebuild:
   Stable for HPPA (bug #349710).
