@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-13.0.782.24-r1.ebuild,v 1.2 2011/06/21 10:22:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-13.0.782.41.ebuild,v 1.1 2011/06/30 10:27:45 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -120,6 +120,12 @@ src_prepare() {
 
 	# Backport build fix for perl-5.14, bug #372301.
 	epatch "${FILESDIR}/${PN}-perl-5.14-r0.patch"
+
+	# Backport build fix for glibc-2.14, bug #372495.
+	epatch "${FILESDIR}/${PN}-glibc-2.14-r0.patch"
+
+	# Fix build without libgcrypt, bug #373079.
+	epatch "${FILESDIR}/${PN}-libgcrypt-r0.patch"
 
 	# Remove most bundled libraries. Some are still needed.
 	find third_party -type f \! -iname '*.gyp*' \
