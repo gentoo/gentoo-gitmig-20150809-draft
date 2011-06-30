@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.278 2011/06/30 20:46:34 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.279 2011/06/30 22:55:37 alexxy Exp $
+
+  30 Jun 2011; Alexey Shvetsov <alexxy@gentoo.org> package.use.mask:
+  Use mask infiniband for stable corosync and glusterfs
 
   30 Jun 2011; Alexey Shvetsov <alexxy@gentoo.org> make.defaults,
   package.use.mask:
