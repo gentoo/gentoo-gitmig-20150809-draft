@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/luakit-9999.ebuild,v 1.16 2011/03/21 23:26:04 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/luakit-9999.ebuild,v 1.17 2011/06/30 17:07:49 wired Exp $
 
 EAPI=3
 
@@ -31,6 +31,7 @@ COMMON_DEPEND="
 	!luajit? ( >=dev-lang/lua-5.1 )
 	dev-db/sqlite:3
 	dev-libs/glib:2
+	dev-libs/libunique:1
 	net-libs/libsoup:2.4
 	net-libs/webkit-gtk:2
 	x11-libs/gtk+:2
