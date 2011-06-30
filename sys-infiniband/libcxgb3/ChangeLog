@@ -1,0 +1,10 @@
+# ChangeLog for sys-infiniband/libcxgb3
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libcxgb3/ChangeLog,v 1.1 2011/06/30 21:30:20 alexxy Exp $
+
+*libcxgb3-1.2.5 (30 Jun 2011)
+
+  30 Jun 2011; Alexey Shvetsov <alexxy@gentoo.org> +libcxgb3-1.2.5.ebuild,
+  +metadata.xml:
+  Initial import to tree
+
