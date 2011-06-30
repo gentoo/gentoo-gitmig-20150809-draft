@@ -1,6 +1,7 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-9999.ebuild,v 1.4 2011/06/30 13:14:54 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-9999.ebuild,v 1.5 2011/06/30 18:48:06 jmbsvicetto Exp $
+EAPI="4"
 
 EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/livecd-tools.git"
 inherit eutils git-2
@@ -33,5 +34,4 @@ src_install() {
 	dosbin net-setup spind
 	into /
 	dosbin livecd-functions.sh
-	dosym /etc/init.d/fixinittab /etc/runlevels/default/
 }

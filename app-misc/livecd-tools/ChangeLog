@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/livecd-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.116 2011/06/30 13:14:54 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.117 2011/06/30 18:48:06 jmbsvicetto Exp $
+
+  30 Jun 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  livecd-tools-9999.ebuild:
+  Dropping the fixinittab symlink as that is going to be taken care of by
+  catalyst.
 
   30 Jun 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   livecd-tools-9999.ebuild:
