@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-augeas/ruby-augeas-0.3.0-r1.ebuild,v 1.5 2011/02/13 17:34:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-augeas/ruby-augeas-0.3.0-r1.ebuild,v 1.6 2011/06/30 15:04:21 ranger Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -16,7 +16,7 @@ SRC_URI="http://augeas.net/download/ruby/${P}.gem"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 hppa ~ppc sparc x86"
+KEYWORDS="amd64 hppa ppc sparc x86"
 IUSE=""
 
 DEPEND="${DEPEND} >=app-admin/augeas-0.5.1"
