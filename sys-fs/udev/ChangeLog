@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.597 2011/06/28 02:46:50 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.598 2011/06/30 19:58:12 williamh Exp $
+
+  30 Jun 2011; William Hubbs <williamh@gentoo.org> -udev-168-r2.ebuild:
+  removing udev 168 because it breaks X11
 
   28 Jun 2011; William Hubbs <williamh@gentoo.org> udev-164-r2.ebuild,
   udev-171-r1.ebuild, udev-9999.ebuild:
