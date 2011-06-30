@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.0_alpha1.ebuild,v 1.1 2011/06/29 06:38:38 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.0_alpha1.ebuild,v 1.2 2011/06/30 07:30:11 olemarkus Exp $
 
 EAPI=4
 
@@ -103,8 +103,8 @@ IUSE="${IUSE} bcmath berkdb bzip2 calendar cdb cjk
 	intl iodbc ipv6 +json kerberos ldap ldap-sasl libedit mhash
 	mssql mysql mysqlnd mysqli nls
 	oci8-instant-client odbc pcntl pdo +phar pic +posix postgres qdbm
-	readline recode +session sharedext sharedmem
-	+simplexml snmp soap sockets spell sqlite sqlite3 ssl
+	readline recode +session sharedmem
+	+simplexml snmp soap sockets spell sqlite3 ssl
 	sybase-ct sysvipc tidy +tokenizer truetype unicode wddx
 	xml xmlreader xmlwriter xmlrpc xpm xsl zip zlib"
 
@@ -116,7 +116,6 @@ DEPEND="!dev-lang/php:5
 	>=dev-libs/libpcre-8.12[unicode]
 	apache2? ( www-servers/apache[threads=] )
 	berkdb? ( =sys-libs/db-4* )
-	birdstep? ( >=dev-db/unixODBC-1.8.13 )
 	bzip2? ( app-arch/bzip2 )
 	cdb? ( || ( dev-db/cdb dev-db/tinycdb ) )
 	cjk? ( !gd? (
@@ -162,7 +161,6 @@ DEPEND="!dev-lang/php:5
 	snmp? ( >=net-analyzer/net-snmp-5.2 )
 	soap? ( >=dev-libs/libxml2-2.6.8 )
 	spell? ( >=app-text/aspell-0.50 )
-	sqlite? ( =dev-db/sqlite-2* pdo? ( >=dev-db/sqlite-3.7.6.3 ) )
 	sqlite3? ( >=dev-db/sqlite-3.7.6.3 )
 	ssl? ( >=dev-libs/openssl-0.9.7 )
 	sybase-ct? ( dev-db/freetds )
@@ -325,6 +323,6 @@ eblit-pkg pkg_setup v2
 src_prepare() { eblit-run src_prepare v4 ; }
 src_configure() { eblit-run src_configure v3 ; }
 src_compile() { eblit-run src_compile v1 ; }
-src_install() { eblit-run src_install v2 ; }
+src_install() { eblit-run src_install v3 ; }
 src_test() { eblit-run src_test v1 ; }
 pkg_postinst() { eblit-run pkg_postinst v2 ; }

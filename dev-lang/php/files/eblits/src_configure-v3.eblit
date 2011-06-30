@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v3.eblit,v 1.1 2011/06/29 06:38:38 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v3.eblit,v 1.2 2011/06/30 07:30:11 olemarkus Exp $
 
 eblit-php-src_configure() {
 	PHP_DESTDIR="/usr/$(get_libdir)/php${SLOT}"
@@ -181,14 +181,6 @@ eblit-php-src_configure() {
 		phpconfutils_extension_with "mm" "sharedmem" 0
 	else
 		phpconfutils_extension_disable "session" "session" 0
-	fi
-
-	# SQLite support
-	if use sqlite ; then
-		phpconfutils_extension_with   "sqlite"      "sqlite"  0 "/usr"
-		phpconfutils_extension_enable "sqlite-utf8" "unicode" 0
-	else
-		phpconfutils_extension_without "sqlite" "sqlite" 0
 	fi
 
 	if use pic ; then
