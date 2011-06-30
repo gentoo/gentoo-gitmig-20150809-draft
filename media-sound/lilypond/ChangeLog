@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lilypond
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.108 2010/06/29 01:31:44 chiiph Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.109 2011/06/30 18:49:31 jer Exp $
+
+  30 Jun 2011; Jeroen Roovers <jer@gentoo.org> lilypond-2.12.3.ebuild:
+  Marked ~hppa (bug #356069).
 
   29 Jun 2010; Tomas Touceda <chiiph@gentoo.org> lilypond-2.12.3.ebuild,
   +files/lilypond-2.12.3-gcc45.patch,
