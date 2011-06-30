@@ -1,6 +1,15 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.472 2011/06/29 17:53:04 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.473 2011/06/30 15:48:00 dagger Exp $
+
+*samba-3.6.0_rc2 (30 Jun 2011)
+
+  30 Jun 2011; Robert Piasek <dagger@gentoo.org> +files/3.6/lmhosts,
+  +files/3.6/samba.confd, +files/3.6/samba.initd, +files/3.6/samba.pam,
+  +files/3.6/smb.conf.default.patch, +files/3.6/smbusers,
+  +files/3.6/swat.xinetd, +files/3.6/system-auth-winbind.pam,
+  +samba-3.6.0_rc2.ebuild:
+  Add samba 3.6_rc2
 
 *samba-3.5.9 (29 Jun 2011)
 
