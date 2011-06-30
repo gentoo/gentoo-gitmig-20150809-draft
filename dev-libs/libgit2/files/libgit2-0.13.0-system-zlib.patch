@@ -1,0 +1,44 @@
+--- libgit2-0.13.0/CMakeLists.txt.orig
++++ libgit2-0.13.0/CMakeLists.txt
+@@ -22,7 +22,14 @@
+ SET(LIBGIT2_VERSION_STRING "${LIBGIT2_VERSION_MAJOR}.${LIBGIT2_VERSION_MINOR}.${LIBGIT2_VERSION_REV}")
+ 
+ # Find required dependencies
+-INCLUDE_DIRECTORIES(deps/zlib src include)
++INCLUDE_DIRECTORIES(src include)
++IF (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
++	find_package(ZLIB REQUIRED)
++	INCLUDE_DIRECTORIES( ${ZLIB_INCLUDE_DIRS} )
++ELSE (${CMAKE_SYSTEM_NAME} MATCHES "Linux")
++	INCLUDE_DIRECTORIES(deps/zlib)
++	FILE(GLOB SRC_ZLIB deps/zlib/*.c)
++ENDIF()
+ 
+ # Installation paths
+ SET(INSTALL_BIN bin CACHE PATH "Where to install binaries to.")
+@@ -57,7 +64,6 @@
+ 
+ # Collect sourcefiles
+ FILE(GLOB SRC src/*.c src/backends/*.c)
+-FILE(GLOB SRC_ZLIB deps/zlib/*.c)
+ FILE(GLOB SRC_SHA1 src/block-sha1/*.c)
+ FILE(GLOB SRC_PLAT src/unix/*.c)
+ FILE(GLOB SRC_H include/git2/*.h)
+@@ -70,7 +76,7 @@
+ 
+ # Compile and link libgit2
+ ADD_LIBRARY(git2 ${SRC} ${SRC_PLAT} ${SRC_SHA1} ${SRC_ZLIB})
+-TARGET_LINK_LIBRARIES(git2 ${CMAKE_THREAD_LIBS_INIT})
++TARGET_LINK_LIBRARIES(git2 ${CMAKE_THREAD_LIBS_INIT} ${ZLIB_LIBRARIES})
+ SET_TARGET_PROPERTIES(git2 PROPERTIES VERSION ${LIBGIT2_VERSION_STRING})
+ SET_TARGET_PROPERTIES(git2 PROPERTIES SOVERSION ${LIBGIT2_VERSION_MAJOR})
+ 
+@@ -92,7 +98,7 @@
+ 	FILE(GLOB SRC_TEST tests/t??-*.c)
+ 
+ 	ADD_EXECUTABLE(libgit2_test tests/test_main.c tests/test_lib.c tests/test_helpers.c ${SRC} ${SRC_PLAT} ${SRC_SHA1} ${SRC_TEST} ${SRC_ZLIB})
+-	TARGET_LINK_LIBRARIES(libgit2_test ${CMAKE_THREAD_LIBS_INIT})
++	TARGET_LINK_LIBRARIES(libgit2_test ${CMAKE_THREAD_LIBS_INIT} ${ZLIB_LIBRARIES})
+ 
+ 	ENABLE_TESTING()
+ 	ADD_TEST(libgit2_test libgit2_test)
