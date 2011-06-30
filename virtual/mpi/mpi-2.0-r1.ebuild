@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mpi/mpi-2.0-r1.ebuild,v 1.5 2011/03/03 20:46:55 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mpi/mpi-2.0-r1.ebuild,v 1.6 2011/06/30 23:13:18 alexxy Exp $
 
 EAPI=2
 
@@ -15,6 +15,7 @@ IUSE="cxx fortran romio"
 RDEPEND="|| (
 	sys-cluster/openmpi[cxx?,fortran?,romio?]
 	sys-cluster/mpich2[cxx?,fortran?,romio?]
+	sys-cluster/mvampich2[fortran?,romio?]
 	sys-cluster/native-mpi
 )"
 
