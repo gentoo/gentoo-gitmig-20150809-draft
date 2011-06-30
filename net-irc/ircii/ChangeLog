@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/ircii
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ChangeLog,v 1.27 2011/05/13 03:53:15 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ChangeLog,v 1.28 2011/06/30 03:00:37 binki Exp $
+
+  30 Jun 2011; Nathan Phillip Brink <binki@gentoo.org> ircii-20110228.ebuild:
+  Import modifications necessary for prefix from prefix-overlay, add some
+  prefix keywords.
 
 *ircii-20110228 (13 May 2011)
 
