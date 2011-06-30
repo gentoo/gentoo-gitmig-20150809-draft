@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libsemanage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.35 2011/05/28 06:00:57 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.36 2011/06/30 10:40:52 blueness Exp $
+
+  30 Jun 2011; Anthony G. Basile <blueness@gentoo.org>
+  libsemanage-2.0.45.ebuild:
+  Only build libsemanage for python-2, fixes bug #369089
 
   28 May 2011; Anthony G. Basile <blueness@gentoo.org>
   libsemanage-2.0.27.ebuild, libsemanage-2.0.33.ebuild:
