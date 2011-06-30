@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.395 2011/06/30 10:27:45 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.396 2011/06/30 11:57:36 tomka Exp $
+
+  30 Jun 2011; Thomas Kahle <tomka@gentoo.org> chromium-12.0.742.112.ebuild:
+  x86 stable per bug 373451
 
 *chromium-13.0.782.41 (30 Jun 2011)
 
