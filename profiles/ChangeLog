@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5490 2011/06/29 17:29:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5491 2011/06/30 19:15:45 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Jun 2011; Anthony G. Basile <blueness@gentoo.org> hardened/linux/use.mask:
+  Use masked opencl on hardened, bug #367225
 
   29 Jun 2011; Pacho Ramos <pacho@gentoo.org> targets/desktop/make.defaults:
   Enable 'cdda' by default as most desktop users will want it like 'cdr' and

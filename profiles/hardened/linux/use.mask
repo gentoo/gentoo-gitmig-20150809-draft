@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/use.mask,v 1.10 2011/05/06 13:38:27 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/use.mask,v 1.11 2011/06/30 19:15:46 blueness Exp $
 
 -hardened
 
@@ -14,3 +14,6 @@ pch
 
 # prelink is masked for hardened
 prelink
+
+# opencl is used by nvidia drivers, bug #367225
+opencl
