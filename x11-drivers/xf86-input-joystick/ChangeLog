@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-joystick
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-joystick/ChangeLog,v 1.90 2011/06/28 21:24:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-joystick/ChangeLog,v 1.91 2011/06/30 09:44:03 hwoarang Exp $
+
+  30 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
+  xf86-input-joystick-1.6.0.ebuild:
+  Stable on amd64 wrt bug #371857
 
   28 Jun 2011; Brent Baude <ranger@gentoo.org>
   xf86-input-joystick-1.6.0.ebuild:
