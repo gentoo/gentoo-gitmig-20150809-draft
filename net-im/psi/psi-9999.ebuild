@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-9999.ebuild,v 1.11 2011/06/29 05:23:31 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-9999.ebuild,v 1.12 2011/06/30 09:23:16 pva Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ EGIT_HAS_SUBMODULES=1
 LANGS_URI="git://pv.et-inf.fho-emden.de/git/psi-l10n"
 
 PSI_PLUS_URI="git://github.com/psi-plus/main.git"
-PSI_PLUS_ICONSETS_URI="git://github.com/psi-plus/iconsets.git"
+PSI_PLUS_RESOURCES_URI="git://github.com/psi-plus/resources.git"
 
 inherit eutils qt4-r2 multilib git-2 subversion
 
@@ -114,9 +114,9 @@ src_unpack() {
 		EGIT_SOURCEDIR="${WORKDIR}/psi-plus" \
 		EGIT_REPO_URI="${PSI_PLUS_URI}" git-2_src_unpack
 		if use iconsets; then
-			EGIT_DIR="${EGIT_STORE_DIR}/psi-plus/iconsets" \
-			EGIT_SOURCEDIR="${WORKDIR}/iconsets" \
-			EGIT_REPO_URI="${PSI_PLUS_ICONSETS_URI}" git-2_src_unpack
+			EGIT_DIR="${EGIT_STORE_DIR}/psi-plus/resources" \
+			EGIT_SOURCEDIR="${WORKDIR}/resources" \
+			EGIT_REPO_URI="${PSI_PLUS_RESOURCES_URI}" git-2_src_unpack
 		fi
 	fi
 }
@@ -124,15 +124,15 @@ src_unpack() {
 src_prepare() {
 	if use extras; then
 		cp -a "${WORKDIR}/psi-plus/iconsets" "${S}" || die "failed to copy iconsets"
-		use iconsets && { cp -a "${WORKDIR}/iconsets" "${S}" || \
+		use iconsets && { cp -a "${WORKDIR}/resources/iconsets" "${S}" || \
 			die	"failed to copy additional iconsets"; }
 		EPATCH_EXCLUDE="${MY_EPATCH_EXCLUDE} " \
 		EPATCH_SOURCE="${WORKDIR}/psi-plus/patches/" EPATCH_SUFFIX="diff" EPATCH_FORCE="yes" epatch
 
 		use powersave && epatch "${WORKDIR}/psi-plus/patches/dev/psi-reduce-power-consumption.patch"
 
-		sed -e "s/.xxx/.$(cd "${WORKDIR}/psi-plus"; git describe --tags | cut -d - -f 2)/" \
-			-i src/applicationinfo.cpp || die "sed failed"
+		sed -e "s/.xxx/.$(cd "${WORKDIR}/psi-plus"; echo $((`git describe --tags | \
+			cut -d - -f 2`+5000)))/" -i src/applicationinfo.cpp || die "sed failed"
 
 		qconf || die "Failed to create ./configure."
 	fi
