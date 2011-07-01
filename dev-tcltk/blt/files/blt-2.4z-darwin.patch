@@ -20,15 +20,7 @@
    *)
      SHLIB_SUFFIX="so"
      ;;
-@@ -1053,7 +1053,6 @@
- SHLIB_LD_FLAGS="$TCL_LD_FLAGS"
- SHLIB_RUNPATH="$TCL_LD_SEARCH_FLAGS"
- 
--SHLIB_SUFFIX=".so"
- SHLIB_TARGET=""
- SHLIB_CFLAGS=""
- SHLIB_LIB_SPECS="${JPEG_LIB_SPEC}"
-@@ -1145,6 +1145,12 @@
+@@ -1145,6 +1145,13 @@
      LDFLAGS=""
      ;;
  
@@ -36,6 +28,7 @@
 +    SHLIB_CFLAGS=""
 +    SHLIB_LD="${CC}"
 +    SHLIB_LD_FLAGS='-dynamiclib -install_name $(libdir)/$@'
++    SHLIB_SUFFIX=".dylib"
 +    ;;
 +
    *-dgux*)
@@ -63,15 +56,7 @@
    *)
      SHLIB_SUFFIX="so"
      ;;
-@@ -3853,7 +3853,6 @@
- SHLIB_LD_FLAGS="$TCL_LD_FLAGS"
- SHLIB_RUNPATH="$TCL_LD_SEARCH_FLAGS"
- 
--SHLIB_SUFFIX=".so"
- SHLIB_TARGET=""
- SHLIB_CFLAGS=""
- SHLIB_LIB_SPECS="${JPEG_LIB_SPEC}"
-@@ -3943,6 +3943,12 @@
+@@ -3943,6 +3943,13 @@
      LDFLAGS=""
      ;;
  
@@ -79,6 +64,7 @@
 +    SHLIB_CFLAGS=""
 +    SHLIB_LD="${CC}"
 +    SHLIB_LD_FLAGS='-dynamiclib -install_name $(libdir)/$@'
++    SHLIB_SUFFIX=".dylib"
 +    ;;
 +
    *-dgux*)

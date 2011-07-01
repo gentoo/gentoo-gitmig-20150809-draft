@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r8.ebuild,v 1.11 2011/07/01 14:54:53 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r9.ebuild,v 1.1 2011/07/01 14:54:53 grobian Exp $
 
 EAPI="3"
 
@@ -44,6 +44,7 @@ src_prepare() {
 		Makefile.in demos/Makefile.in || die "sed Makefile.in failed"
 
 	epatch "${FILESDIR}"/${P}-linking.patch
+	epatch "${FILESDIR}"/${P}-darwin.patch
 }
 
 src_configure() {
