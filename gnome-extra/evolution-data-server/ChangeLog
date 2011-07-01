@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.302 2011/06/19 21:32:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.303 2011/07/01 21:12:59 hwoarang Exp $
+
+  01 Jul 2011; Markos Chandras <hwoarang@gentoo.org>
+  evolution-data-server-2.32.2-r1.ebuild:
+  Stable on amd64 wrt bug #278255
 
 *evolution-data-server-2.32.3 (19 Jun 2011)
 

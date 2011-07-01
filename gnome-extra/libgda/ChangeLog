@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.171 2011/06/25 15:31:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.172 2011/07/01 21:14:31 hwoarang Exp $
+
+  01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> libgda-4.2.7.ebuild:
+  Stable on amd64 wrt bug #278255
 
   25 Jun 2011; Pacho Ramos <pacho@gentoo.org> libgda-4.2.8.ebuild:
   Try to prevent more sandbox violation issues suffered by some people with USE
