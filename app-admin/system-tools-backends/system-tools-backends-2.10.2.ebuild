@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/system-tools-backends-2.10.2.ebuild,v 1.1 2011/04/03 10:30:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/system-tools-backends-2.10.2.ebuild,v 1.2 2011/07/01 21:04:46 hwoarang Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="http://projects.gnome.org/gst/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="!<app-admin/gnome-system-tools-1.1.91
