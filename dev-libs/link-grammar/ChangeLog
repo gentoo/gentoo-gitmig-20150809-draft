@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/link-grammar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/ChangeLog,v 1.36 2011/03/22 19:57:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/link-grammar/ChangeLog,v 1.37 2011/07/01 10:16:16 hwoarang Exp $
+
+  01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> link-grammar-4.7.4.ebuild:
+  Stable on amd64 wrt bug #372349
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> link-grammar-4.7.2.ebuild:
   Marking link-grammar-4.7.2 ppc stable for bug 353436
