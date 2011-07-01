@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/smproxy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/smproxy/ChangeLog,v 1.44 2011/02/14 23:40:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/smproxy/ChangeLog,v 1.45 2011/07/01 23:55:16 chithanh Exp $
+
+*smproxy-1.0.5 (01 Jul 2011)
+
+  01 Jul 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +smproxy-1.0.5.ebuild:
+  Version bump.
 
   14 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> smproxy-1.0.4.ebuild:
   ppc stable wrt #344827, #354237

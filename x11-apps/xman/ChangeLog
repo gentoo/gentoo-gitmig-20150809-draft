@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xman
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xman/ChangeLog,v 1.50 2011/02/14 23:41:01 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xman/ChangeLog,v 1.51 2011/07/01 23:54:54 chithanh Exp $
+
+*xman-1.1.2 (01 Jul 2011)
+
+  01 Jul 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xman-1.1.2.ebuild:
+  Version bump.
 
   14 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> xman-1.1.1.ebuild:
   ppc stable wrt #344827, #354237
