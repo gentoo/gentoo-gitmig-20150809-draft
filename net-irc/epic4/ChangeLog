@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/epic4
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.88 2010/10/18 08:11:39 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.89 2011/07/01 02:54:41 binki Exp $
+
+*epic4-2.10.1 (01 Jul 2011)
+
+  01 Jul 2011; Nathan Phillip Brink <binki@gentoo.org> +epic4-2.10.1.ebuild,
+  +files/epic4-2.10.1-make-recursion.patch, +files/epic4-2.10.1-perl.patch:
+  Bump to epic4-2.10.1, with gentoo-prefix support and EAPI=4 and some build
+  fixes.
 
   18 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org> epic4-2.10.ebuild:
   Fix phases for EAPI=2 add quote around $D.
