@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/papyon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/papyon/ChangeLog,v 1.23 2011/05/08 10:43:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/papyon/ChangeLog,v 1.24 2011/07/01 21:08:44 hwoarang Exp $
+
+  01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> papyon-0.5.5.ebuild:
+  Stable on amd64 wrt bug #278255
 
 *papyon-0.5.5 (08 May 2011)
 
