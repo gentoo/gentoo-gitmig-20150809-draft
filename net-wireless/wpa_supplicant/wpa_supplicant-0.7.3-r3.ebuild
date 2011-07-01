@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r3.ebuild,v 1.3 2011/06/19 16:31:51 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r3.ebuild,v 1.4 2011/07/01 20:01:04 gurligebis Exp $
 
 EAPI="2"
 
-inherit eutils toolchain-funcs qt4-r2 systemd
+inherit eutils toolchain-funcs qt4-r2 systemd multilib
 
 DESCRIPTION="IEEE 802.1X/WPA supplicant for secure wireless transfers"
 HOMEPAGE="http://hostap.epitest.fi/wpa_supplicant/"
@@ -71,6 +71,9 @@ src_prepare() {
 	if use wimax; then
 		cd "${WORKDIR}/${P}"
 		epatch "${FILESDIR}/${P}-generate-libeap-peer.patch"
+
+		# multilib-strict fix (bug #373685)
+		sed -e "s/\/usr\/lib/\/usr\/$(get_libdir)/" -i src/eap_peer/Makefile
 	fi
 
 	# bug (320097)
