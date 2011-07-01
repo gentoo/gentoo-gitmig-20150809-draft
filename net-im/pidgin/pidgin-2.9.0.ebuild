@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.9.0.ebuild,v 1.4 2011/06/29 15:04:37 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.9.0.ebuild,v 1.5 2011/07/01 12:46:35 pva Exp $
 
 EAPI=3
 
@@ -42,7 +42,7 @@ RDEPEND="
 		>=net-libs/farsight2-0.0.14
 		media-plugins/gst-plugins-meta
 		media-plugins/gst-plugins-gconf )
-	zeroconf? ( net-dns/avahi )
+	zeroconf? ( net-dns/avahi[dbus] )
 	dbus? ( >=dev-libs/dbus-glib-0.71
 		>=sys-apps/dbus-0.90
 		dev-python/dbus-python )
