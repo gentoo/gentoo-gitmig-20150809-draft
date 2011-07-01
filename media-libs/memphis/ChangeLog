@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/memphis
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/ChangeLog,v 1.7 2011/03/26 19:12:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/memphis/ChangeLog,v 1.8 2011/07/01 21:20:06 hwoarang Exp $
+
+  01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> memphis-0.2.3.ebuild:
+  Stable on amd64 wrt bug #278255
 
   26 Mar 2011; Gilles Dartiguelongue <eva@gentoo.org> memphis-0.2.3.ebuild:
   Enable introspection by default, per gnome policy.
