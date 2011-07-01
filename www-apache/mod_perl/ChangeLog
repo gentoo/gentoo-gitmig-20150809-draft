@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_perl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.89 2011/05/15 17:26:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.90 2011/07/01 17:56:29 idl0r Exp $
+
+  01 Jul 2011; Christian Ruppert <idl0r@gentoo.org> mod_perl-2.0.5.ebuild:
+  Fix Dependencies. Add threads useflag.
 
   15 May 2011; Raúl Porcel <armin76@gentoo.org> mod_perl-2.0.5.ebuild:
   Add ~alpha/~ia64/~sparc wrt #359047
