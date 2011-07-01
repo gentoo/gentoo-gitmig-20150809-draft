@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.4.1.ebuild,v 1.1 2011/06/29 19:53:06 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/opendkim-2.4.1.ebuild,v 1.2 2011/07/01 05:35:06 eras Exp $
 
 EAPI=4
 
@@ -35,7 +35,8 @@ DEPEND="|| ( mail-filter/libmilter mail-mta/sendmail )
 
 RDEPEND="${DEPEND}"
 
-REQUIRED_USE="sasl? ( ldap )"
+REQUIRED_USE="sasl? ( ldap )
+	lua? ( berkdb )"
 
 pkg_setup() {
 	enewgroup milter
