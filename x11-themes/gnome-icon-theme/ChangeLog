@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-icon-theme
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.199 2011/04/08 11:40:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/ChangeLog,v 1.200 2011/07/01 21:19:44 hwoarang Exp $
+
+  01 Jul 2011; Markos Chandras <hwoarang@gentoo.org>
+  gnome-icon-theme-3.0.0.ebuild:
+  Stable on amd64 wrt bug #278255
 
   08 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org>
   gnome-icon-theme-3.0.0.ebuild:
