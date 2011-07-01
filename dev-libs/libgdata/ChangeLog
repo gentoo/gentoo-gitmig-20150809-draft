@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgdata
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/ChangeLog,v 1.29 2011/04/20 12:41:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/ChangeLog,v 1.30 2011/07/01 21:08:01 hwoarang Exp $
+
+  01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> libgdata-0.8.1.ebuild:
+  Stable on amd64 wrt bug #278255
 
 *libgdata-0.8.1 (20 Apr 2011)
 

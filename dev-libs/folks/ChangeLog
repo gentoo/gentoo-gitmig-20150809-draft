@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/folks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/ChangeLog,v 1.10 2011/04/26 20:18:16 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/ChangeLog,v 1.11 2011/07/01 21:06:53 hwoarang Exp $
+
+  01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> folks-0.4.3.ebuild:
+  Stable on amd64 wrt bug #278255
 
 *folks-0.4.3 (26 Apr 2011)
 
