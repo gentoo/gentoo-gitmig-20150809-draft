@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.812 2011/06/09 16:47:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.813 2011/07/01 06:02:29 dirtyepic Exp $
+
+  01 Jul 2011; Ryan Hill <dirtyepic@gentoo.org> gcc-4.3.4.ebuild:
+  4.3.4 p1.3 fixes a race condition in the build system (bug #305739).
 
   09 Jun 2011; Mike Frysinger <vapier@gentoo.org> gcc-3.3.6-r1.ebuild:
   Fix from upstream for missing symbol versions in multilib builds #304239.
