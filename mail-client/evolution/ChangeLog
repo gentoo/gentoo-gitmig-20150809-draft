@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.338 2011/06/26 16:32:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.339 2011/07/01 17:28:56 pacho Exp $
+
+  01 Jul 2011; Pacho Ramos <pacho@gentoo.org> evolution-2.32.2.ebuild:
+  Drop *DISABLE_DEPRECATED* also in stable evolution.
 
   26 Jun 2011; Pacho Ramos <pacho@gentoo.org> evolution-2.32.2-r3.ebuild:
   Disable connman in stable candidate as it is not ready to stabilize yet.
