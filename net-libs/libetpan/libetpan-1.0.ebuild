@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/libetpan-1.0.ebuild,v 1.3 2011/06/14 14:04:45 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/libetpan-1.0.ebuild,v 1.4 2011/07/01 15:04:26 eras Exp $
 
 EAPI="2"
 
@@ -25,6 +25,8 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-ldflags.patch
 	epatch "${FILESDIR}"/${P}-nonnull.patch
+	# respect CFLAGS - bug #373723
+	sed -i -e "s/-O2 -g//" configure.ac
 	eautoreconf
 }
 
