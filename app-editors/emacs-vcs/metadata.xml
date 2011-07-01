@@ -22,6 +22,10 @@
 <use>
   <flag name='gconf'>Use <pkg>gnome-base/gconf</pkg> to read the system
     font name</flag>
+  <flag name='gsettings'>Use gsettings (<pkg>dev-libs/glib</pkg>) to read the
+    system font name</flag>
+  <flag name='gtk3'>Link against version 3 of the GIMP Toolkit instead of
+    version 2 (<pkg>x11-libs/gtk+</pkg>)</flag>
   <flag name='gzip-el'>Compress bundled Emacs Lisp source</flag>
   <flag name='hesiod'>Enable support for <pkg>net-dns/hesiod</pkg></flag>
   <flag name='imagemagick'>Use <pkg>media-gfx/imagemagick</pkg> for image
@@ -30,5 +34,6 @@
     of the internal Lisp implementations</flag>
   <flag name='toolkit-scroll-bars'>Use the selected toolkit's scrollbars in
     preference to Emacs' own scrollbars</flag>
+  <flag name='wide-int'>Prefer wide Emacs integers (typically 62-bit)</flag>
 </use>
 </pkgmetadata>
