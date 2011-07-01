@@ -3,7 +3,8 @@
 <pkgmetadata>
   <herd>dev-tools</herd>
   <maintainer>
-    <email>nerdboy@gentoo.org</email>
+    <email>binki@gentoo.org</email>
+    <name>Nathan Phillip Brink</name>
     <description>Primary maintainer</description>
   </maintainer>
   <longdescription>
