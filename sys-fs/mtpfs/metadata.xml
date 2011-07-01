@@ -6,6 +6,10 @@
 		<email>xarthisius@gentoo.org</email>
 		<name>Kacper Kowalik</name>
 	</maintainer>
+	<maintainer>
+		<email>voyageur@gentoo.org</email>
+		<name>Bernard Cafarelli</name>
+	</maintainer>
 	<longdescription>
 		MTPfs is a FUSE filesystem that supports reading and writing from any
 		MTP device, as supported by libmtp. MTPfs includes extra features such
