@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/mmdb-1.23.2.2.ebuild,v 1.1 2011/06/29 15:26:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/mmdb-1.23.2.2.ebuild,v 1.2 2011/07/01 07:28:56 jlec Exp $
 
 EAPI=4
 
-inherit autotools eutils
+inherit autotools-utils
 
 DESCRIPTION="The Coordinate Library, designed to assist CCP4 developers in working with coordinate files"
 HOMEPAGE="http://www.ebi.ac.uk/~keb/cldoc/ http://www.biop.ox.ac.uk/coot/"
@@ -18,3 +18,7 @@ IUSE=""
 
 DEPEND="!<sci-libs/ccp4-libs-6.1.3"
 RDEPEND=""
+
+PATCHES=(
+	"${FILESDIR}"/${PV}-pkg-config.patch
+	)
