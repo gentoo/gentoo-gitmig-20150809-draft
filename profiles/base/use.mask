@@ -1,6 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.119 2011/05/21 16:42:43 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.120 2011/07/01 21:54:28 alexxy Exp $
+
+# Infiniband stuff should generaly work on all arches but keyworded only on amd64/x86
+infiniband
 
 # These ABIs are in constant change and currently only available for SVN snapshots
 php_targets_php5-4

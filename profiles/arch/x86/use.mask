@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.24 2011/05/09 21:20:22 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.25 2011/07/01 21:54:28 alexxy Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -x86
@@ -8,6 +8,10 @@
 # This file masks out USE flags that are simply NOT allowed in the default
 # x86 profile.  This works, for example, if another architecture's
 # profile have a USE flag associated with (such as altivec, mmx, etc).
+
+# 2011/07/01 - Alexey Shvetsov <alexxy@gentoo.org>
+# Infiniband stuff works on x86
+-infiniband
 
 # 2010/07/27 - Matti Bickel <mabi@gentoo.org>
 # app-text/fdf is only supported on x86
