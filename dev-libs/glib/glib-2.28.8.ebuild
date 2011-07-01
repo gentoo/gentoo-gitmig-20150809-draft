@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.28.8.ebuild,v 1.3 2011/06/11 03:05:04 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.28.8.ebuild,v 1.4 2011/07/01 16:09:55 pacho Exp $
 
 EAPI="3"
 GNOME_TARBALL_SUFFIX="xz"
@@ -100,8 +100,7 @@ src_prepare() {
 
 	if ! use test; then
 		# don't waste time building tests
-		sed 's/^\(SUBDIRS =.*\)tests\(.*\)$/\1\2/' -i Makefile.am Makefile.in \
-			|| die "sed failed"
+		sed 's/^\(.*\SUBDIRS .*\=.*\)tests\(.*\)$/\1\2/' -i $(find -name Makefile.am -o -name Makefile.in) || die
 	fi
 
 	# Needed for the punt-python-check patch, disabling timeout test
