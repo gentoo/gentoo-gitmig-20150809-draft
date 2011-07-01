@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/autofs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.111 2011/06/28 14:06:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.112 2011/07/01 11:24:07 pva Exp $
+
+*autofs-5.0.6-r1 (01 Jul 2011)
+
+  01 Jul 2011; Peter Volkov <pva@gentoo.org> +autofs-5.0.6-r1.ebuild,
+  +files/autofs-5.0.6-ipv6_name_lookup_regression.patch:
+  Fix regression in the ipv6 lookup, bug #373577 thank Juergen Rose for report
+  and Dustin Polke for the fix.
 
 *autofs-5.0.6 (28 Jun 2011)
 
