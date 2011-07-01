@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server-console/vmware-server-console-1.0.10.203137.ebuild,v 1.1 2010/08/09 17:43:18 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server-console/vmware-server-console-1.0.10.203137.ebuild,v 1.2 2011/07/01 14:04:49 vadimk Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -27,7 +27,6 @@ RESTRICT="strip"
 DEPEND=">=sys-libs/glibc-2.3.5
 	virtual/os-headers
 	>=dev-lang/perl-5
-	>=sys-apps/portage-2.0.54
 	app-arch/unzip"
 
 # vmware-server-console should not use virtual/libc as this is a
