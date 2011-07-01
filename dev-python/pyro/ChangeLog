@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.47 2011/07/01 09:22:34 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.48 2011/07/01 21:32:16 hwoarang Exp $
+
+  01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> -pyro-3.12.ebuild,
+  -pyro-4.1.ebuild, -pyro-4.2.ebuild, -pyro-4.3.ebuild:
+  Remove old ebuilds. Requested by Arfrever
 
   01 Jul 2011; Thomas Kahle <tomka@gentoo.org> pyro-4.4.ebuild:
   x86 stable per bug 370507

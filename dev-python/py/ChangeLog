@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/py
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.91 2011/06/27 15:14:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.92 2011/07/01 21:32:55 hwoarang Exp $
+
+  01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> -py-1.4.0.ebuild,
+  -py-1.4.1.ebuild:
+  Remove old ebuilds. Requested by Arfrever
 
   27 Jun 2011; Brent Baude <ranger@gentoo.org> py-1.4.2.ebuild:
   Marking py-1.4.2 ppc for bug 372595
