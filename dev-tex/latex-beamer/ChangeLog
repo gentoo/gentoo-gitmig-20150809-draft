@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.65 2011/06/14 03:30:10 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.66 2011/07/01 09:22:35 hwoarang Exp $
+
+  01 Jul 2011; Markos Chandras <hwoarang@gentoo.org>
+  latex-beamer-3.10-r1.ebuild:
+  Stable on amd64 wrt bug #373417
 
   14 Jun 2011; Matt Turner <mattst88@gentoo.org> latex-beamer-3.10-r1.ebuild:
   Added ~mips, bug 342513
