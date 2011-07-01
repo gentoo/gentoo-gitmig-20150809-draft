@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.4.11.ebuild,v 1.1 2011/06/20 16:44:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.4.11.ebuild,v 1.2 2011/07/01 17:07:59 pacho Exp $
 
 EAPI="4"
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="free, redistributable digital camera software application"
 HOMEPAGE="http://www.gphoto.org/"
@@ -30,8 +30,13 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( >=sys-devel/gettext-0.14 )"
 
+src_prepare() {
+	epatch "${FILESDIR}/${P}-cdk-libs.patch"
+	eautoreconf
+}
+
 src_configure() {
-	econf \
+	CPPFLAGS="-I/usr/include/cdk" econf \
 		--docdir=/usr/share/doc/${PF} \
 		$(use_with aalib) \
 		$(use_with aalib jpeg) \
