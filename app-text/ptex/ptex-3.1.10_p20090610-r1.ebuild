@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.10_p20090610-r1.ebuild,v 1.6 2010/07/10 17:28:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ptex-3.1.10_p20090610-r1.ebuild,v 1.7 2011/07/01 11:34:32 hwoarang Exp $
 
 # jmbreuer FOR DEV ONLY
 RESTRICT="mirror test"
@@ -73,6 +73,10 @@ src_unpack() {
 	echo ">>> Unpacking jis and morisawa fonts ..."
 	tar xzf "${WORKDIR}"/${PTETEX}/archive/jis.tar.gz -C "${WORKDIR}" || die
 	tar xzf "${WORKDIR}"/${PTETEX}/archive/morisawa.tar.gz -C "${WORKDIR}" || die
+
+	# Bug #323559
+	cd "${WORKDIR}"
+	epatch "${FILESDIR}"/latex-date-warning.patch
 
 	# Gentoo box reserves variable ${P}!!
 	cd "${S}"
