@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gconfmm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.84 2011/06/29 17:09:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.85 2011/07/01 10:35:28 hwoarang Exp $
+
+  01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> gconfmm-2.28.2-r1.ebuild:
+  Stable on amd64 wrt bug #372353
 
   29 Jun 2011; Pacho Ramos <pacho@gentoo.org> gconfmm-2.28.2-r1.ebuild:
   Fix docs installation (bug #373465 by Agostino Sarubbo) and drop 'examples'

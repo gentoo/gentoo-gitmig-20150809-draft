@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/mm-common
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/mm-common/ChangeLog,v 1.6 2011/03/31 13:07:00 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/mm-common/ChangeLog,v 1.7 2011/07/01 10:36:57 hwoarang Exp $
+
+  01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> mm-common-0.9.5.ebuild:
+  Stable on amd64 wrt bug #372353
 
 *mm-common-0.9.5 (31 Mar 2011)
 
