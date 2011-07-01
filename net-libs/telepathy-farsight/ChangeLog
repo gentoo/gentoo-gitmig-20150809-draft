@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/telepathy-farsight
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farsight/ChangeLog,v 1.22 2011/04/15 16:35:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farsight/ChangeLog,v 1.23 2011/07/01 21:18:01 hwoarang Exp $
+
+  01 Jul 2011; Markos Chandras <hwoarang@gentoo.org>
+  telepathy-farsight-0.0.17.ebuild:
+  Stable on amd64 wrt bug #278255
 
 *telepathy-farsight-0.0.17 (15 Apr 2011)
 
