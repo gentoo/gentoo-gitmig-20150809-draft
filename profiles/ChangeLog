@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5497 2011/07/01 10:55:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5498 2011/07/01 11:01:45 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  masking app-emulation/gdb-armulator for removal
 
   01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Masking pcmcia-cs suite for removal. Bug #236286
