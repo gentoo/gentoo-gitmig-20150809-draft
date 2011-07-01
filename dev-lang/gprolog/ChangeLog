@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/gprolog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.46 2011/07/01 09:54:44 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.47 2011/07/01 20:33:45 keri Exp $
+
+  01 Jul 2011; <keri@gentoo.org> gprolog-1.4.0.ebuild,
+  +files/gprolog-1.4.0-nodocs.patch:
+  Simplify install - docs and examples are installed based on use_with()
+  parameters in src_configure()
 
   01 Jul 2011; <keri@gentoo.org> gprolog-1.4.0.ebuild:
   Split docs and html targets from system targets

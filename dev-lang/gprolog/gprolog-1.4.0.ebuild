@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/gprolog-1.4.0.ebuild,v 1.2 2011/07/01 09:54:44 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/gprolog-1.4.0.ebuild,v 1.3 2011/07/01 20:33:45 keri Exp $
 
 EAPI=2
 
@@ -21,6 +21,7 @@ RDEPEND=""
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-ldflags.patch
+	epatch "${FILESDIR}"/${P}-nodocs.patch
 	epatch "${FILESDIR}"/${P}-txt-file.patch
 }
 
@@ -53,18 +54,7 @@ src_test() {
 
 src_install() {
 	cd "${S}"/src
-	make DESTDIR="${D}" install-system install-links \
-		|| die "make install failed"
-
-	if use doc; then
-		make DESTDIR="${D}" install-html \
-			|| die "make install-html failed"
-	fi
-
-	if use examples; then
-		make DESTDIR="${D}" install-examples \
-			|| die "make install-examples failed"
-	fi
+	make DESTDIR="${D}" install || die "make install failed"
 
 	cd "${S}"
 	dodoc ChangeLog NEWS PROBLEMS README VERSION || die "dodoc failed"
