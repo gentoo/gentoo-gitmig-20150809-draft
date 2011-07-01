@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc-am
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.61 2011/05/22 12:36:44 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.62 2011/07/01 21:09:45 hwoarang Exp $
+
+  01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> gtk-doc-am-1.17.ebuild:
+  Stable on amd64 wrt bug #278255
 
   22 May 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gtk-doc-am-1.17.ebuild:
   Fix circular dep, bug 368301
