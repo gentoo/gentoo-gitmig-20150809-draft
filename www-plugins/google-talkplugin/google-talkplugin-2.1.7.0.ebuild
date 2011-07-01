@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-2.1.6.0.ebuild,v 1.1 2011/06/14 19:43:20 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-2.1.7.0.ebuild,v 1.1 2011/07/01 18:09:13 ottxor Exp $
 
-EAPI=3
+EAPI=4
 
 inherit nsplugins
 
@@ -48,6 +48,7 @@ NATIVE_DEPS="|| ( media-sound/pulseaudio media-libs/alsa-lib )
 	x11-libs/libX11
 	x11-libs/libXcomposite
 	x11-libs/libXfixes
+	x11-libs/libXrandr
 	x11-libs/libXrender
 	x11-libs/libXt
 	sys-apps/lsb-release
@@ -61,22 +62,20 @@ EMUL_DEPS=">=app-emulation/emul-linux-x86-baselibs-20100220
 	app-emulation/emul-linux-x86-soundlibs
 	app-emulation/emul-linux-x86-xlibs"
 
-#amd64 always needs EMUL_DEPS GoogleTalkPlugin is always a 32-bit binary
+#amd64 needs EMUL_DEPS as GoogleTalkPlugin is a 32-bit binary
 RDEPEND="x86? ( ${NATIVE_DEPS} )
 	amd64? ( ${NATIVE_DEPS} ${EMUL_DEPS} )"
 
 INSTALL_BASE="/opt/google/talkplugin"
 
-[ "${ARCH}" = "amd64" ] && SO_SUFFIX="64" || SO_SUFFIX=""
-
 QA_EXECSTACK="${INSTALL_BASE#/}/GoogleTalkPlugin"
 
-QA_TEXTRELS="${INSTALL_BASE#/}/libnpgtpo3dautoplugin.so
-	${INSTALL_BASE#/}/libnpgoogletalk${SO_SUFFIX}.so"
+QA_TEXTRELS="${INSTALL_BASE#/}/libnpg*.so"
 
-QA_DT_HASH="${INSTALL_BASE#/}/libnpgtpo3dautoplugin.so
-	${INSTALL_BASE#/}/libnpgoogletalk${SO_SUFFIX}.so
+QA_DT_HASH="${INSTALL_BASE#/}/libnpg*.so
 	${INSTALL_BASE#/}/GoogleTalkPlugin"
+
+S="${WORKDIR}"
 
 # nofetch means upstream bumped and thus needs version bump
 pkg_nofetch() {
@@ -86,22 +85,22 @@ pkg_nofetch() {
 }
 
 src_unpack() {
-	unpack ${A} ./data.tar.gz ./usr/share/doc/google-talkplugin/changelog.Debian.gz || die
+	unpack ${A} ./data.tar.gz ./usr/share/doc/google-talkplugin/changelog.Debian.gz
 }
 
 src_install() {
 	dodoc ./usr/share/doc/google-talkplugin/changelog.Debian
 
-	cd "./${INSTALL_BASE#/}" || die
-	exeinto "${INSTALL_BASE}" || die
-	doexe GoogleTalkPlugin libnpgtpo3dautoplugin.so	libnpgoogletalk"${SO_SUFFIX}".so || die
-	inst_plugin "${INSTALL_BASE}"/libnpgtpo3dautoplugin.so || die
-	inst_plugin "${INSTALL_BASE}"/libnpgoogletalk"${SO_SUFFIX}".so || die
+	exeinto "${INSTALL_BASE}"
+	doexe "${INSTALL_BASE#/}"/GoogleTalkPlugin
+	for i in "${INSTALL_BASE#/}"/libnpg*.so; do
+		doexe "${i}"
+		inst_plugin "${INSTALL_BASE}"/"${i}"
+	done
 
 	#install bundled libCg
 	if ! use system-libCg; then
-		cd lib || die
-		exeinto "${INSTALL_BASE}/lib" || die
-		doexe *.so || die
+		exeinto "${INSTALL_BASE}"/lib
+		doexe "${INSTALL_BASE#/}"/lib/*.so
 	fi
 }
