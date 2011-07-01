@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/configure-trackpoint
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/configure-trackpoint/ChangeLog,v 1.2 2011/06/30 07:19:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/configure-trackpoint/ChangeLog,v 1.3 2011/07/01 09:19:28 hwoarang Exp $
+
+  01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  update email for proxy maintainer
 
   30 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
   configure-trackpoint-0.7.ebuild:
