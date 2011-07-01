@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/opendnssec
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/ChangeLog,v 1.4 2011/06/08 22:34:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/ChangeLog,v 1.5 2011/07/01 19:21:53 scarabeus Exp $
+
+*opendnssec-1.3.0_rc3 (01 Jul 2011)
+
+  01 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -opendnssec-1.3.0_rc2-r1.ebuild, +opendnssec-1.3.0_rc3.ebuild,
+  -files/opendnssec-rename-test.patch, files/opendnssec-use-system-trang.patch:
+  Version bump to latest RC. Drop older.
 
   08 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   opendnssec-1.3.0_rc2-r1.ebuild:
