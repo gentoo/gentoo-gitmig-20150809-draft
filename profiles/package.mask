@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12884 2011/07/01 12:23:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12885 2011/07/01 12:53:59 anarchy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -445,10 +445,6 @@ app-crypt/ekey-egd-linux
 # - doesn't build when boehm-gc is built without threads
 # - no SLOTting yet!
 =dev-scheme/guile-2.0.0
-
-# Jory A. Pratt <anarchy@gentoo.org> (04 Apr 2011)
-# Masked for testing.
->=mail-client/thunderbird-3.3_alpha3
 
 # Ryan Hill <dirtyepic@gentoo.org> (02 Apr 2011)
 # Masked for testing
