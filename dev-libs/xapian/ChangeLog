@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xapian
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.59 2011/06/24 21:01:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.60 2011/07/01 21:26:35 hwoarang Exp $
+
+  01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> -xapian-1.2.4.ebuild:
+  Remove old ebuilds. Requested by Arfrever
 
   24 Jun 2011; Brent Baude <ranger@gentoo.org> xapian-1.2.5.ebuild:
   Marking xapian-1.2.5 ppc for bug 371655

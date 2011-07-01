@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/xapian-bindings
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.19 2011/05/09 15:09:29 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.20 2011/07/01 21:27:01 hwoarang Exp $
+
+  01 Jul 2011; Markos Chandras <hwoarang@gentoo.org>
+  -xapian-bindings-1.2.4.ebuild:
+  Remove old ebuilds. Requested by Arfrever
 
 *xapian-bindings-1.2.5 (09 May 2011)
 
