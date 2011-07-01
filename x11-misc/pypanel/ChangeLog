@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/pypanel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/ChangeLog,v 1.44 2011/06/24 18:55:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/ChangeLog,v 1.45 2011/07/01 21:25:44 hwoarang Exp $
+
+  01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> -pypanel-2.4.ebuild:
+  Remove old ebuilds. Requested by Arfrever
 
   24 Jun 2011; Brent Baude <ranger@gentoo.org> pypanel-2.4-r1.ebuild:
   Marking pypanel-2.4-r1 ppc for bug 362341
