@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/openib_drivers.desc,v 1.2 2011/06/30 20:58:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/ofed_drivers.desc,v 1.1 2011/07/01 21:34:11 alexxy Exp $
 
-# This file contains descriptions of OPENIB_DRIVERS USE_EXPAND flags.
+# This file contains descriptions of OFED_DRIVERS USE_EXPAND flags.
 
 # Keep it sorted.
 
