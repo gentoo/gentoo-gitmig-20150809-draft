@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/notecase/notecase-1.9.8.ebuild,v 1.3 2011/03/27 12:21:59 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/notecase/notecase-1.9.8.ebuild,v 1.4 2011/07/01 15:43:32 hwoarang Exp $
 
 EAPI="1"
 
@@ -31,6 +31,7 @@ src_unpack() {
 	# Respect CFLAGS and don't use --as-needed by default
 	epatch "${FILESDIR}/notecase-1.7.2-CFLAGS.patch"
 	epatch "${FILESDIR}"/${P}-gcc44.patch
+	epatch "${FILESDIR}"/${P}-gtksourceview.patch
 
 	if ! use gnome; then
 		# Comment variable in the Makefile if we don't have gnome

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/notecase
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/notecase/ChangeLog,v 1.25 2011/03/27 12:21:59 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/notecase/ChangeLog,v 1.26 2011/07/01 15:43:32 hwoarang Exp $
+
+  01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> notecase-1.9.8.ebuild,
+  +files/notecase-1.9.8-gtksourceview.patch:
+  Apply patch thanks to victor romanchuk <r088@mail.ru>. Bug #314779
 
   27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> notecase-1.9.8.ebuild:
   Fix slot-dep on gtk+
