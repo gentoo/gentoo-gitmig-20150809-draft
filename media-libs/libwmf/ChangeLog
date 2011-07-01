@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libwmf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.70 2011/05/23 17:18:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.71 2011/07/01 21:03:48 scarabeus Exp $
+
+*libwmf-0.2.8.4-r4 (01 Jul 2011)
+
+  01 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +libwmf-0.2.8.4-r4.ebuild, +files/libwmf-0.2.8.4-gdk-pixbuf.patch,
+  +files/libwmf-0.2.8.4-use-system-fonts.patch:
+  Revision bump in order to fix gdk-pixbuf split and use system fonts. Fixes
+  bugs #256087 and #368485.
 
   23 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   libwmf-0.2.8.4-r3.ebuild, +files/libwmf-0.2.8.4-libpng-1.5.patch:
