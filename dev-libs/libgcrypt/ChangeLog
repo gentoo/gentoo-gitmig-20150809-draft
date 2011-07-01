@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.148 2011/05/01 16:04:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.149 2011/07/01 21:49:52 hwoarang Exp $
+
+*libgcrypt-1.5.0 (01 Jul 2011)
+
+  01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> +libgcrypt-1.5.0.ebuild:
+  Version bump. Requested by Arfrever
 
 *libgcrypt-1.5.0_beta1-r2 (01 May 2011)
 
