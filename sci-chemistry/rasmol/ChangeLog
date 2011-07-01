@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/rasmol
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.25 2011/06/21 15:57:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.26 2011/07/01 06:30:47 jlec Exp $
+
+  01 Jul 2011; Justin Lecher <jlec@gentoo.org> rasmol-2.7.2.1.1-r1.ebuild,
+  rasmol-2.7.5-r1.ebuild, rasmol-2.7.5.1.ebuild, metadata.xml:
+  Cleaned ebuild, EAPI=4 bump
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> rasmol-2.7.2.1.1-r1.ebuild,
   rasmol-2.7.5-r1.ebuild, rasmol-2.7.5.1.ebuild:

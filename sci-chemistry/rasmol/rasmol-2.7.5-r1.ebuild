@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.5-r1.ebuild,v 1.7 2011/06/21 15:57:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.5-r1.ebuild,v 1.8 2011/07/01 06:30:47 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
-inherit eutils fortran-2 toolchain-funcs prefix
+inherit eutils fortran-2 prefix toolchain-funcs
 
 MY_P="RasMol_${PV}"
 VERS="23Jul09"
@@ -19,22 +19,21 @@ KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
+	dev-libs/cvector
+	sci-libs/cbflib
+	sci-libs/cqrlib
+	sci-libs/neartree
 	virtual/fortran
-
 	x11-libs/cairo
 	x11-libs/gtk+:2
 	x11-libs/libXext
 	x11-libs/libXi
-	x11-libs/vte:0
-	dev-libs/cvector
-	sci-libs/cbflib
-	sci-libs/cqrlib
-	sci-libs/neartree"
+	x11-libs/vte:0"
 DEPEND="${RDEPEND}
-	x11-proto/inputproto
-	x11-proto/xextproto
 	app-text/rman
-	x11-misc/imake"
+	x11-misc/imake
+	x11-proto/inputproto
+	x11-proto/xextproto"
 
 S="${WORKDIR}/${P}-${VERS}"
 
@@ -55,25 +54,24 @@ src_prepare() {
 }
 
 src_compile() {
-	cd src
-	make clean
+	emake -C src clean
 	emake \
+		-C src \
 		DEPTHDEF=-DTHIRTYTWOBIT \
 		CC="$(tc-getCC)" \
 		CDEBUGFLAGS="${CFLAGS}" \
-		EXTRA_LDOPTIONS="${LDFLAGS}" \
-		|| die "make failed"
+		EXTRA_LDOPTIONS="${LDFLAGS}"
 }
 
 src_install () {
 	libdir=$(get_libdir)
 	insinto /usr/${libdir}/${PN}
-	doins doc/rasmol.hlp || die
-	dobin src/rasmol || die
-	dodoc PROJECTS {README,TODO}.txt doc/*.{ps,pdf}.gz doc/rasmol.txt.gz || die
-	doman doc/rasmol.1 || die
+	doins doc/rasmol.hlp
+	dobin src/rasmol
+	dodoc PROJECTS {README,TODO}.txt doc/*.{ps,pdf}.gz doc/rasmol.txt.gz
+	doman doc/rasmol.1
 	insinto /usr/${libdir}/${PN}/databases
-	doins data/* || die
+	doins data/*
 
-	dohtml -r *html doc/*.html html_graphics || die
+	dohtml -r *html doc/*.html html_graphics
 }
