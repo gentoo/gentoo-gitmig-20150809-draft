@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ticpp/ticpp-0_p20100924.ebuild,v 1.1 2011/02/22 16:58:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ticpp/ticpp-0_p20100924.ebuild,v 1.2 2011/07/01 07:54:07 hwoarang Exp $
 
 DESCRIPTION="A completely new interface to TinyXML that uses MANY of the C++ strengths"
 HOMEPAGE="http://code.google.com/p/ticpp/"
@@ -11,7 +11,7 @@ KEYWORDS="~amd64"
 SLOT="0"
 IUSE="debug doc"
 
-DEPEND="dev-util/premake
+DEPEND="<dev-util/premake-4.3
 	doc? ( app-doc/doxygen sys-apps/sed )"
 RDEPEND=""
 

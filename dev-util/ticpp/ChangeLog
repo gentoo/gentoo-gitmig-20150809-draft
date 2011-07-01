@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ticpp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ticpp/ChangeLog,v 1.1 2011/02/22 16:58:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ticpp/ChangeLog,v 1.2 2011/07/01 07:54:07 hwoarang Exp $
+
+  01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> ticpp-0_p20100924.ebuild:
+  Fix premake dependencies. Bug #372731. Thanks to Piotr Szymaniak
+  <szarpaj@grubelek.pl>
 
 *ticpp-9999 (22 Feb 2011)
 *ticpp-0_p20100924 (22 Feb 2011)
