@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hwloc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.7 2011/01/26 19:43:12 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.8 2011/07/02 16:26:37 alexxy Exp $
+
+*hwloc-1.1.1-r1 (02 Jul 2011)
+
+  02 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +hwloc-1.1.1-r1.ebuild:
+  Enable prefix support for ~amd64-linux =D
 
 *hwloc-1.1.1 (26 Jan 2011)
 
