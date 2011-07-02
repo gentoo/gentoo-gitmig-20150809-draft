@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/man-pages-ru
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.10 2011/01/24 04:25:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ru/ChangeLog,v 1.11 2011/07/02 14:24:27 alexxy Exp $
+
+  02 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org>
+  man-pages-ru-3.27.2066.1435.20101003.ebuild:
+  Add ~amd64-linux keyword
 
   24 Jan 2011; Jeroen Roovers <jer@gentoo.org>
   man-pages-ru-3.27.2066.1435.20101003.ebuild:
