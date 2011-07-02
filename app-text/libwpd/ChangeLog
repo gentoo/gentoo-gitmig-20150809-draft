@@ -1,6 +1,10 @@
 # ChangeLog for app-text/libwpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.73 2011/07/01 21:06:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.74 2011/07/02 11:24:14 pacho Exp $
+
+  02 Jul 2011; Pacho Ramos <pacho@gentoo.org> libwpd-0.8.14-r1.ebuild,
+  libwpd-0.9.1.ebuild:
+  Skip stream tests when it's disabled, bug #373757 by Nikoli.
 
   01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> libwpd-0.8.14-r1.ebuild:
   Stable on amd64 wrt bug #278255

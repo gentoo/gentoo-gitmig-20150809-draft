@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/libwpd-0.8.14-r1.ebuild,v 1.2 2011/07/01 21:06:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/libwpd-0.8.14-r1.ebuild,v 1.3 2011/07/02 11:24:14 pacho Exp $
 
 EAPI="4"
 
@@ -23,6 +23,13 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	test? ( dev-util/cppunit )
 "
+
+src_prepare() {
+	# Skip stream tests when it's disabled, bug #373757
+	if ! use tools; then
+		sed -i -e '/src\/test/d' Makefile.{am,in} || die
+	fi
+}
 
 src_configure() {
 	econf \
