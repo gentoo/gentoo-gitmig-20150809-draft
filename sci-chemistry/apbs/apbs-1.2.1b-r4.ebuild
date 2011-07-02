@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.2.1b-r4.ebuild,v 1.11 2011/06/21 16:07:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.2.1b-r4.ebuild,v 1.12 2011/07/02 08:56:56 jlec Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="python? 2"
 
-inherit autotools eutils fortran-2 flag-o-matic python toolchain-funcs versionator
+inherit autotools eutils flag-o-matic fortran-2 python toolchain-funcs versionator
 
 MY_PV=$(get_version_component_range 1-3)
 MY_P="${PN}-${MY_PV}"
@@ -80,7 +80,7 @@ src_configure() {
 	econf \
 		--disable-maloc-rebuild \
 		--enable-shared \
-		--with-blas=-lblas \
+		--with-blas="$(pkg-config --libs blas)" \
 		$(use_enable openmp) \
 		$(use_enable python) \
 		$(use_enable tools) \

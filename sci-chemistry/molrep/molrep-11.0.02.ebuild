@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molrep/molrep-11.0.02.ebuild,v 1.7 2011/06/28 19:49:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molrep/molrep-11.0.02.ebuild,v 1.8 2011/07/02 08:55:01 jlec Exp $
 
 EAPI="3"
 
@@ -37,7 +37,7 @@ src_compile() {
 		MR_FORT="$(tc-getFC) ${FFLAGS}" \
 		FFLAGS="${FFLAGS}" \
 		LDFLAGS="${LDFLAGS}" \
-		MR_LIBRARY="-L${EPREFIX}/usr/$(get_libdir) -lccp4f -lccp4c -lmmdb -lccif -llapack -lstdc++ -lm" \
+		MR_LIBRARY="-L${EPREFIX}/usr/$(get_libdir) -lccp4f -lccp4c $(pkg-config --libs mmdb lapack) -lccif -lstdc++ -lm" \
 		|| die
 }
 
