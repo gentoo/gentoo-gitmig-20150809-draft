@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/emacs-23.ebuild,v 1.27 2011/06/14 04:34:58 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/emacs-23.ebuild,v 1.28 2011/07/02 17:31:27 ulm Exp $
 
-EAPI=2
+EAPI=4
 
 DESCRIPTION="Virtual for GNU Emacs"
 HOMEPAGE=""
