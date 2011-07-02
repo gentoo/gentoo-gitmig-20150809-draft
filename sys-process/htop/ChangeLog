@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/htop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.92 2011/06/29 18:50:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.93 2011/07/02 17:59:00 armin76 Exp $
+
+  02 Jul 2011; Raúl Porcel <armin76@gentoo.org> htop-0.9.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #372889
 
   29 Jun 2011; Markus Meier <maekke@gentoo.org> htop-0.9.ebuild:
   x86 stable, bug #372889
