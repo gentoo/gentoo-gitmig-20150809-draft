@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/ulogd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.65 2010/10/15 19:33:54 wormo Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.66 2011/07/02 10:27:29 flameeyes Exp $
+
+  02 Jul 2011; Diego E. Pettenò <flameeyes@gentoo.org> ulogd-1.23-r1.ebuild,
+  ulogd-1.24-r2.ebuild:
+  QA: do not try to guess whether the package will work with the kernel or not;
+  cross-compilation is common and this doesn't even look entirely right; don't
+  execute econf during src_unpack phase.
 
   15 Oct 2010; Stephanie Lockwood-Childs <wormo@gentoo.org>
   -files/ulogd-1.23-configure.in.patch, -files/configure-fixes.patch:

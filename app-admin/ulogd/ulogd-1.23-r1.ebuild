@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.23-r1.ebuild,v 1.8 2010/10/07 15:45:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.23-r1.ebuild,v 1.9 2011/07/02 10:27:29 flameeyes Exp $
 
-inherit eutils flag-o-matic linux-info
+inherit eutils flag-o-matic
 
 DESCRIPTION="iptables daemon for ULOG target for userspace iptables filter logging"
 SRC_URI="http://ftp.netfilter.org/pub/ulogd/${P}.tar.bz2
@@ -17,14 +17,6 @@ IUSE="mysql postgres"
 DEPEND="net-firewall/iptables
 	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql-server )"
-
-pkg_setup() {
-	# can't depend on supported kernel versions because dependencies
-	# on virtuals are not versioned
-	linux-info_pkg_setup
-	kernel_is lt 2 6 14 && die "requires at least 2.6.14 kernel version"
-	kernel_is ge 2 6 31 && die "kernel version is too new -- try a newer ulogd"
-}
 
 src_unpack() {
 	unpack ${A}
