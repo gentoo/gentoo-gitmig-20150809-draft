@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.8-r2.ebuild,v 1.3 2011/03/22 09:54:15 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.8-r2.ebuild,v 1.4 2011/07/02 06:13:22 binki Exp $
 
-EAPI=2
+EAPI=3
 
 inherit eutils versionator gnome2 autotools
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.xchat.org/"
 
 LICENSE="GPL-2 hires-icons? ( GPL-3 )"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="dbus fastscroll +gtk hires-icons ipv6 libnotify mmx nls ntlm perl python spell ssl tcl xchatdccserver"
 
 RDEPEND=">=dev-libs/glib-2.6.0:2
@@ -45,6 +45,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-input-box4.patch
+	epatch "${FILESDIR}"/${PN}-2.8.4-interix.patch
 	epatch "${FILESDIR}"/${P}-libnotify07.patch
 
 	use xchatdccserver && epatch "${DISTDIR}"/xchat-dccserver-0.6.patch.bz2
@@ -57,7 +58,7 @@ src_prepare() {
 
 	# xchat sourcecode ships with po/Makefile.in.in from gettext-0.17
 	# which fails with >=gettext-0.18
-	cp /usr/share/gettext/po/Makefile.in.in "${S}"/po/ || die
+	cp "${EPREFIX}"/usr/share/gettext/po/Makefile.in.in "${S}"/po/ || die
 
 	eautoreconf
 }
@@ -66,6 +67,13 @@ src_configure() {
 	# xchat's configure script uses sys.path to find library path
 	# instead of python-config (#25943)
 	unset PYTHONPATH
+
+	if [[ ${CHOST} == *-interix* ]]; then
+		# this -Wl,-E option for the interix ld makes some checks
+		# false positives, so set those here.
+		export ac_cv_func_strtoull=no
+		export ac_cv_func_memrchr=no
+	fi
 
 	econf \
 		--enable-shm \
