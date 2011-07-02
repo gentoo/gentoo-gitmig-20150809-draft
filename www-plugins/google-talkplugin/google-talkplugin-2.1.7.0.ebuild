@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-2.1.7.0.ebuild,v 1.1 2011/07/01 18:09:13 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-2.1.7.0.ebuild,v 1.2 2011/07/02 00:49:51 zmedico Exp $
 
 EAPI=4
 
@@ -95,7 +95,7 @@ src_install() {
 	doexe "${INSTALL_BASE#/}"/GoogleTalkPlugin
 	for i in "${INSTALL_BASE#/}"/libnpg*.so; do
 		doexe "${i}"
-		inst_plugin "${INSTALL_BASE}"/"${i}"
+		inst_plugin /"${i}"
 	done
 
 	#install bundled libCg

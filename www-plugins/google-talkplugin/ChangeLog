@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/google-talkplugin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/ChangeLog,v 1.10 2011/07/01 18:09:13 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/ChangeLog,v 1.11 2011/07/02 00:49:51 zmedico Exp $
+
+  02 Jul 2011; Zac Medico <zmedico@gentoo.org>
+  google-talkplugin-2.1.7.0.ebuild:
+  Fix duplicate INSTALL_BASE when calling inst_plugin.
 
 *google-talkplugin-2.1.7.0 (01 Jul 2011)
 
