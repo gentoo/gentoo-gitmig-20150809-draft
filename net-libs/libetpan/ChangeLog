@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.85 2011/07/01 15:04:26 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.86 2011/07/02 22:14:00 hwoarang Exp $
+
+  02 Jul 2011; Markos Chandras <hwoarang@gentoo.org> libetpan-1.0.ebuild:
+  Stable on amd64 wrt bug #373687
 
   01 Jul 2011; Eray Aslan <eras@gentoo.org> libetpan-1.0.ebuild:
   respect CFLAGS with debug USE flag - bug #373723
