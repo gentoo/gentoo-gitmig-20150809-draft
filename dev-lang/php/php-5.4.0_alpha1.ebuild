@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.0_alpha1.ebuild,v 1.2 2011/06/30 07:30:11 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.0_alpha1.ebuild,v 1.3 2011/07/02 15:14:41 olemarkus Exp $
 
 EAPI=4
 
@@ -318,7 +318,7 @@ eblit-pkg() {
 	eblit-core $1 $2 1
 }
 
-eblit-pkg pkg_setup v2
+eblit-pkg pkg_setup v3
 
 src_prepare() { eblit-run src_prepare v4 ; }
 src_configure() { eblit-run src_configure v3 ; }
