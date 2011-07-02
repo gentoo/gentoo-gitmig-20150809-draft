@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.9.ebuild,v 1.6 2011/06/07 02:47:28 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.9.ebuild,v 1.7 2011/07/02 21:09:02 chithanh Exp $
 
 EAPI=3
 CMAKE_REQUIRED="never"
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.gnu.org/software/gnash/"
 if [[ ${PV} = 9999* ]]; then
 	SRC_URI=""
 	EGIT_REPO_URI="git://git.savannah.gnu.org/gnash.git"
-	inherit git
+	inherit git-2
 else
 	SRC_URI="mirror://gnu/${PN}/${PV}/${P}.tar.bz2"
 fi
@@ -152,8 +152,12 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.8.9-libavcodec-version.patch
 	epatch "${FILESDIR}"/${PN}-0.8.9-look-harder-for-version_h.patch
 
-	# Fix linking against recent ffmpeg, bug #362949, upstream #107657
+	# Fix building against ffmpeg-0.8, bug #362949, upstream #33696
+	epatch "${FILESDIR}"/${PN}-0.8.9-no-deprecated-avcodec-audio-resample.patch
+	epatch "${FILESDIR}"/${PN}-0.8.9-no-deprecated-avcodec-decode-audio.patch
+	epatch "${FILESDIR}"/${PN}-0.8.9-no-deprecated-avcodec-decode-video.patch
 	epatch "${FILESDIR}"/${PN}-0.8.9-no-deprecated-avcodec-parser.patch
+	epatch "${FILESDIR}"/${PN}-0.8.9-no-deprecated-avformat-metadata.patch
 
 	# Fix building on ppc64, bug #342535
 	use ppc64 && append-flags -mminimal-toc
