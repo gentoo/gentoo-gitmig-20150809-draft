@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-6.7-r1.ebuild,v 1.1 2011/06/16 12:32:39 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-6.7-r1.ebuild,v 1.2 2011/07/02 13:04:17 swegener Exp $
 
 EAPI="4"
 inherit autotools linux-info linux-mod
@@ -73,8 +73,9 @@ src_prepare() {
 src_configure() {
 	econf \
 		--with-maxsets=${IP_NF_SET_MAX} \
-		--libdir=${EPREFIX}/$(get_libdir) \
-		--with-kbuild=${KV_DIR}
+		--libdir="${EPREFIX}"/$(get_libdir) \
+		--with-source="${KV_DIR}" \
+		--with-kbuild="${KV_OUT_DIR}"
 }
 
 src_compile() {
@@ -90,7 +91,7 @@ src_compile() {
 
 src_install() {
 	einfo "Installing userspace"
-	emake DESTDIR=${D} install
+	emake DESTDIR="${D}" install
 
 	if [[ ${build_modules} -eq 1 ]]; then
 		einfo "Installing kernel modules"
