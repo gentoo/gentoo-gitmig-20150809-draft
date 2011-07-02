@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/qled/qled-0.6.2.ebuild,v 1.2 2011/07/02 20:11:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/qled/qled-0.6.2.ebuild,v 1.3 2011/07/02 20:14:33 hwoarang Exp $
 
 EAPI=3
 
@@ -14,7 +14,7 @@ SRC_URI="http://qt-apps.org/CONTENT/content-files/72482-${MY_P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="x11-libs/qt-gui:4
