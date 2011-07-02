@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-postgresql
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-postgresql/ChangeLog,v 1.22 2011/06/24 14:51:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-postgresql/ChangeLog,v 1.23 2011/07/02 15:20:17 hwoarang Exp $
+
+  02 Jul 2011; Markos Chandras <hwoarang@gentoo.org>
+  eselect-postgresql-1.0.10.ebuild:
+  Stable on amd64 wrt bug #371763
 
   24 Jun 2011; Raúl Porcel <armin76@gentoo.org>
   eselect-postgresql-1.0.10.ebuild:
