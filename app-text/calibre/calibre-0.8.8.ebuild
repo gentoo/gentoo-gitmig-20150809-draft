@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.4.ebuild,v 1.1 2011/06/07 09:16:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.8.ebuild,v 1.1 2011/07/02 00:35:56 zmedico Exp $
 
 EAPI=3
 PYTHON_DEPEND=2:2.7
@@ -54,17 +54,22 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Fix outdated version constant.
+	#sed -e "s#\\(^numeric_version =\\).*#\\1 (${PV//./, })#" \
+	#	-i src/calibre/constants.py || \
+	#	die "sed failed to patch constants.py"
+
 	# Avoid sandbox violation in /usr/share/gnome/apps when linux.py
 	# calls xdg-* (bug #258938).
 	sed -e "s:'xdg-desktop-menu', 'install':\\0, '--mode', 'user':" \
 		-e "s:check_call(\\['xdg-desktop-menu', 'forceupdate'\\]):#\\0:" \
 		-e "s:xdg-icon-resource install:\\0 --mode user:" \
 		-e "s:xdg-mime install:\\0 --mode user:" \
-		-i src/calibre/linux.py || die "sed'ing in the IMAGE path failed"
+		-i src/calibre/linux.py || die "sed failed to patch linux.py"
 
 	# Disable unnecessary privilege dropping for bug #287067.
 	sed -e "s:if os.geteuid() == 0:if False and os.geteuid() == 0:" \
-		-i setup/install.py || die "sed'ing in the IMAGE path failed"
+		-i setup/install.py || die "sed failed to patch install.py"
 
 	distutils_src_prepare
 }
