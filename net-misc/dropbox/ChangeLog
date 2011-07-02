@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/dropbox
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.1 2011/07/02 11:01:04 naota Exp $
+
+*dropbox-1.2.13 (02 Jul 2011)
+
+  02 Jul 2011; Naohiro Aota <naota@gentoo.org> +dropbox-1.2.13.ebuild,
+  +metadata.xml:
+  New ebuild net-misc/dropbox. Based on a ebuild written by
+  piotr.karbowski@gmail.com
+
