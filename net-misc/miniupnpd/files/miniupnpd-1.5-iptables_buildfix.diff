@@ -1,0 +1,14 @@
+--- netfilter/iptcrdr.c   4 Jun 2011 08:57:41 -0000       1.43
++++ netfilter/iptcrdr.c   20 Jun 2011 14:03:24 -0000      1.44
+@@ -43,6 +43,11 @@
+ #define IPTC_HANDLE            iptc_handle_t
+ #endif
+ 
++/* IPT_ALIGN was renamed XT_ALIGN in iptables-1.4.11 */
++#ifndef IPT_ALIGN
++#define IPT_ALIGN XT_ALIGN
++#endif
++
+ #include "iptcrdr.h"
+ #include "../upnpglobalvars.h"
+ 

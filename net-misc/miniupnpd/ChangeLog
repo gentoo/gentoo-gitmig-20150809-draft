@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/miniupnpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/ChangeLog,v 1.17 2011/06/30 20:02:17 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/ChangeLog,v 1.18 2011/07/02 09:33:02 gurligebis Exp $
+
+  02 Jul 2011; <gurligebis@gentoo.org> miniupnpd-1.5.ebuild,
+  +files/miniupnpd-1.5-iptables_buildfix.diff:
+  Fixed building with iptables-1.4.11 - fixing bug #373371
 
 *miniupnpd-1.6_pre20110623 (30 Jun 2011)
 

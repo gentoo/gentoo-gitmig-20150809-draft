@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/miniupnpd-1.5.ebuild,v 1.1 2011/01/21 16:09:48 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/miniupnpd-1.5.ebuild,v 1.2 2011/07/02 09:33:02 gurligebis Exp $
 
 EAPI=2
 inherit eutils linux-info toolchain-funcs
@@ -29,6 +29,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.3-iptables_path.diff"
 	epatch "${FILESDIR}/${PN}-1.3-Makefile_fix.diff"
 	epatch "${FILESDIR}/${PN}-1.5-iptcrdr.diff"
+	epatch "${FILESDIR}/${PN}-1.5-iptables_buildfix.diff"
 	sed -i \
 		-e "s#^CFLAGS = .*-D#CPPFLAGS += -I${KERNEL_DIR}/include -D#" \
 		-e '/^CFLAGS :=/s/CFLAGS/CPPFLAGS/g' \
