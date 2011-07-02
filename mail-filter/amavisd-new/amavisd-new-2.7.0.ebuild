@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.7.0_rc1.ebuild,v 1.1 2011/05/22 20:26:45 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.7.0.ebuild,v 1.1 2011/07/02 05:34:59 eras Exp $
 
-EAPI=3
+EAPI=4
 
 inherit eutils
 
@@ -85,19 +85,19 @@ src_prepare() {
 
 src_install() {
 	dosbin amavisd amavisd-agent amavisd-nanny amavisd-release \
-		amavisd-signer || die
-	dobin p0f-analyzer.pl amavisd-submit || die
+		amavisd-signer
+	dobin p0f-analyzer.pl amavisd-submit
 
 	if use snmp ; then
-		dosbin amavisd-snmp-subagent || die
-		dodoc AMAVIS-MIB.txt || die
+		dosbin amavisd-snmp-subagent
+		dodoc AMAVIS-MIB.txt
 	fi
 
 	insinto /etc
 	insopts -m0640
-	doins amavisd.conf || die "doins failed"
+	doins amavisd.conf
 
-	newinitd "${FILESDIR}/amavisd.initd" amavisd || die "initd failed"
+	newinitd "${FILESDIR}/amavisd.initd" amavisd
 
 	keepdir "${AMAVIS_ROOT}"
 	keepdir "${AMAVIS_ROOT}/db"
