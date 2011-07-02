@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gpac
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.90 2011/06/19 09:19:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/ChangeLog,v 1.91 2011/07/02 22:18:43 hwoarang Exp $
+
+  02 Jul 2011; Markos Chandras <hwoarang@gentoo.org> gpac-0.4.5-r4.ebuild:
+  Stable on amd64 wrt bug #367039
 
   19 Jun 2011; Justin Lecher <jlec@gentoo.org> gpac-0.4.5-r4.ebuild:
   Make it gcc46 resistant, #361077 thanks Vladimir for the patch
