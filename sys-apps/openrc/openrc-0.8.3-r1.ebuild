@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.8.3-r1.ebuild,v 1.4 2011/07/02 15:30:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.8.3-r1.ebuild,v 1.5 2011/07/02 17:53:31 armin76 Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ DESCRIPTION="OpenRC manages the services, startup and shutdown of a host"
 HOMEPAGE="http://www.gentoo.org/proj/en/base/openrc/"
 if [[ ${PV} != "9999" ]] ; then
 	SRC_URI="mirror://gentoo/${P}.tar.bz2"
-	KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 m68k ~mips ~ppc ~ppc64 s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+	KEYWORDS="alpha amd64 arm ~hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 fi
 
 LICENSE="BSD-2"
