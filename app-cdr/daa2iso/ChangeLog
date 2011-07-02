@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/daa2iso
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/daa2iso/ChangeLog,v 1.1 2010/12/24 13:05:55 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/daa2iso/ChangeLog,v 1.2 2011/07/02 21:49:47 hwoarang Exp $
+
+  02 Jul 2011; Markos Chandras <hwoarang@gentoo.org> daa2iso-0.1.7e.ebuild:
+  Add missing app-arch/unzip dependency. Bug #371507
 
 *daa2iso-0.1.7e (24 Dec 2010)
 
