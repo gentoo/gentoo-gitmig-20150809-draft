@@ -1,9 +1,13 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.501 2011/07/02 17:39:58 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.502 2011/07/02 18:26:47 williamh Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+  02 Jul 2011; William Hubbs <williamh@gentoo.org> baselayout-2.0.3.ebuild:
+  Makedev is now part of stage 1 so we dont need the dependency at all
+  #368597.
 
   02 Jul 2011; William Hubbs <williamh@gentoo.org> baselayout-2.0.3.ebuild:
   Only depend on makedev for linux and when stages are being built #368597.

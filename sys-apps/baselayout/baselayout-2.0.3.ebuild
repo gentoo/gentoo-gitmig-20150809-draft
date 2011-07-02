@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.3.ebuild,v 1.3 2011/07/02 17:39:58 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.3.ebuild,v 1.4 2011/07/02 18:26:47 williamh Exp $
 
 inherit eutils multilib
 
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="build kernel_linux"
 
-PDEPEND="sys-apps/openrc
-build? ( kernel_linux? ( sys-apps/makedev ) )"
+PDEPEND="sys-apps/openrc"
 
 pkg_preinst() {
 	# Bug #217848 - Since the remap_dns_vars() called by pkg_preinst() of
