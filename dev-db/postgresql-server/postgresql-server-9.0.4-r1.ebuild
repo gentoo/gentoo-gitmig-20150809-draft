@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.0.4-r1.ebuild,v 1.3 2011/06/24 15:07:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.0.4-r1.ebuild,v 1.4 2011/07/02 15:20:47 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -10,7 +10,7 @@ inherit autotools eutils multilib pam prefix python versionator
 
 SLOT="$(get_version_component_range 1-2)"
 
-KEYWORDS="alpha ~amd64 arm ~hppa ia64 ~mips ~ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd ~ppc-macos ~x86-solaris"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ~ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd ~ppc-macos ~x86-solaris"
 
 DESCRIPTION="PostgreSQL server"
 HOMEPAGE="http://www.postgresql.org/"
