@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.420 2011/06/14 04:33:36 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.421 2011/07/02 17:21:10 ulm Exp $
+
+  02 Jul 2011; Ulrich Mueller <ulm@gentoo.org> -emacs-21.4-r22.ebuild,
+  -emacs-22.3-r6.ebuild, -emacs-23.2-r3.ebuild:
+  Remove old. Drop Emacs 21 and 22 keywords to unstable.
 
   14 Jun 2011; Matt Turner <mattst88@gentoo.org> emacs-23.3.ebuild:
   Added ~mips, bug 234095
