@@ -1,6 +1,9 @@
 # ChangeLog for sys-infiniband/libmlx4
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libmlx4/ChangeLog,v 1.1 2011/06/30 21:50:30 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libmlx4/ChangeLog,v 1.2 2011/07/02 20:30:15 alexxy Exp $
+
+  02 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> libmlx4-1.0.1.ebuild:
+  Add ~amd64-linux keywrod
 
 *libmlx4-1.0.1 (30 Jun 2011)
 

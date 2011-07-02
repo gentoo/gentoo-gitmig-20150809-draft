@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/ibutils/ibutils-1.5.7.ebuild,v 1.1 2011/06/30 21:25:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/ibutils/ibutils-1.5.7.ebuild,v 1.2 2011/07/02 20:30:16 alexxy Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ OFED_SUFFIX="1"
 inherit openib
 
 DESCRIPTION="OpenIB userspace tools"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux"
 IUSE=""
 
 DEPEND=">=sys-infiniband/libibverbs-1.1.4

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/infiniband-diags/infiniband-diags-1.5.8.ebuild,v 1.1 2011/06/30 21:28:34 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/infiniband-diags/infiniband-diags-1.5.8.ebuild,v 1.2 2011/07/02 20:30:16 alexxy Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ OFED_SUFFIX="1"
 inherit openib
 
 DESCRIPTION="OpenIB diagnostic programs and scripts needed to diagnose an IB subnet"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux"
 IUSE=""
 
 DEPEND="

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/openib/openib-1.5.3.1.ebuild,v 1.1 2011/06/30 22:06:28 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/openib/openib-1.5.3.1.ebuild,v 1.2 2011/07/02 20:30:16 alexxy Exp $
 
 EAPI=3
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 SLOT="0"
 LICENSE="|| ( GPL-2 BSD-2 )"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux"
 IUSE="+dapl diags ehca ipath mlx4 mthca nes +opensm srp"
 
 DEPEND="

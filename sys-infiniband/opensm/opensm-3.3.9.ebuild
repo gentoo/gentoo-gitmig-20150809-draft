@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/opensm/opensm-3.3.9.ebuild,v 1.1 2011/06/30 22:04:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/opensm/opensm-3.3.9.ebuild,v 1.2 2011/07/02 20:30:15 alexxy Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ OFED_SUFFIX="1"
 inherit openib
 
 DESCRIPTION="OpenSM - InfiniBand Subnet Manager and Administration for OpenIB"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux"
 IUSE=""
 
 DEPEND="
@@ -34,7 +34,7 @@ src_install() {
 	insinto /etc/logrotate.d
 	newins "${S}/scripts/opensm.logrotate" opensm
 	# we dont nee this int script
-	rm "${D}/etc/init.d/opensmd" || die "Dropping of upstream initscript failed"
+	rm "${ED}/etc/init.d/opensmd" || die "Dropping of upstream initscript failed"
 }
 
 pkg_postinst() {

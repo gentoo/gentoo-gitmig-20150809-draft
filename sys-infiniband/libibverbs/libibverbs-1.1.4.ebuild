@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libibverbs/libibverbs-1.1.4.ebuild,v 1.1 2011/06/30 20:51:19 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libibverbs/libibverbs-1.1.4.ebuild,v 1.2 2011/07/02 20:30:15 alexxy Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ OFED_SNAPSHOT="1"
 inherit eutils openib
 
 DESCRIPTION="A library allowing programs to use InfiniBand 'verbs' for direct access to IB hardware"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux"
 IUSE=""
 
 DEPEND="sys-fs/sysfsutils"

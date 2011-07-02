@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libsdp/libsdp-1.1.108.ebuild,v 1.1 2011/06/30 21:10:52 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libsdp/libsdp-1.1.108.ebuild,v 1.2 2011/07/02 20:30:15 alexxy Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ OFED_SNAPSHOT="1"
 inherit openib
 
 DESCRIPTION="Socket Direct Protocol for unmodified applications"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux"
 IUSE=""
 
 DEPEND="

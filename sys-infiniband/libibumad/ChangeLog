@@ -1,6 +1,9 @@
 # ChangeLog for sys-infiniband/libibumad
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libibumad/ChangeLog,v 1.1 2011/06/30 20:55:57 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libibumad/ChangeLog,v 1.2 2011/07/02 20:30:15 alexxy Exp $
+
+  02 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> libibumad-1.3.7.ebuild:
+  Add ~amd64-linux keywrod
 
 *libibumad-1.3.7 (30 Jun 2011)
 

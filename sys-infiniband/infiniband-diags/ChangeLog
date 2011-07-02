@@ -1,6 +1,10 @@
 # ChangeLog for sys-infiniband/infiniband-diags
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/infiniband-diags/ChangeLog,v 1.1 2011/06/30 21:28:34 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/infiniband-diags/ChangeLog,v 1.2 2011/07/02 20:30:16 alexxy Exp $
+
+  02 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org>
+  infiniband-diags-1.5.8.ebuild:
+  Add ~amd64-linux keywrod
 
 *infiniband-diags-1.5.8 (30 Jun 2011)
 
