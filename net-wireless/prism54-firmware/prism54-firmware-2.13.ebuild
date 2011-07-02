@@ -1,15 +1,15 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54-firmware/prism54-firmware-2.13.ebuild,v 1.2 2010/03/04 14:14:44 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54-firmware/prism54-firmware-2.13.ebuild,v 1.3 2011/07/02 19:26:04 betelgeuse Exp $
 
-EAPI="1"
+EAPI="4"
 
 inherit eutils
 
 DESCRIPTION="firmware for Intersil Prism GT / Prism Duette (including USB) wireless chipsets"
 HOMEPAGE="http://wireless.kernel.org/en/users/Drivers/p54"
 SRC_URI="http://daemonizer.de/prism54/prism54-fw/fw-softmac/2.13.12.0.arm
-	http://daemonizer.de/prism54/prism54-fw/fw-usb/2.13.1.0.arm.0
+	http://daemonizer.de/prism54/prism54-fw/fw-usb/2.13.1.0.lm86.arm
 	http://daemonizer.de/prism54/prism54-fw/fw-usb/2.13.24.0.lm87.arm
 	http://daemonizer.de/prism54/prism54-fw/stlc4560/2.13.12.0.a.5.2.arm"
 
@@ -21,6 +21,8 @@ RESTRICT="mirror"
 
 RDEPEND="|| ( >=sys-fs/udev-096 >=sys-apps/hotplug-20040923 )"
 
+S="${WORKDIR}"
+
 src_unpack() { :; }
 
 src_install() {
@@ -28,7 +30,7 @@ src_install() {
 	insinto /lib/firmware
 	newins "${DISTDIR}"/2.13.12.0.a.5.2.arm 3826.arm
 	newins "${DISTDIR}"/2.13.24.0.lm87.arm isl3887usb
-	newins "${DISTDIR}"/2.13.1.0.arm.0 isl3886usb
+	newins "${DISTDIR}"/2.13.1.0.lm86.arm isl3886usb
 	newins "${DISTDIR}"/2.13.12.0.arm isl3886pci
 }
 
