@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.30.2-r1.ebuild,v 1.3 2011/07/01 21:13:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/gnome-screensaver-2.30.2-r1.ebuild,v 1.4 2011/07/02 11:26:54 pacho Exp $
 
 EAPI="2"
 
@@ -44,7 +44,8 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-proto/randrproto
 	x11-proto/scrnsaverproto
-	x11-proto/xf86miscproto"
+	x11-proto/xf86miscproto
+	gnome-base/gnome-common"
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README TODO"
 
