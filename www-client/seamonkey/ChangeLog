@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.315 2011/07/03 18:25:32 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.316 2011/07/03 19:17:08 polynomial-c Exp $
+
+  03 Jul 2011; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.1.ebuild:
+  Allow user to apply any additional patches without modifing ebuild.
 
 *seamonkey-2.1 (03 Jul 2011)
 

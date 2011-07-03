@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.1.ebuild,v 1.1 2011/07/03 18:25:32 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.1.ebuild,v 1.2 2011/07/03 19:17:08 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -137,6 +137,9 @@ src_prepare() {
 	epatch "${WORKDIR}/patch"
 
 	epatch "${FILESDIR}"/${PN}-2.1b3-restore-tabbar-scrolling-from-2.1b2.diff
+
+	# Allow user to apply any additional patches without modifing ebuild
+	epatch_user
 
 	if use crypt ; then
 		mv "${WORKDIR}"/enigmail "${S}"/mailnews/extensions/enigmail
