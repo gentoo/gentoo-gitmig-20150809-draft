@@ -1,6 +1,9 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.242 2011/07/01 12:46:35 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.243 2011/07/03 16:23:16 armin76 Exp $
+
+  03 Jul 2011; Raúl Porcel <armin76@gentoo.org> pidgin-2.9.0.ebuild:
+  alpha/ia64/sparc stable wrt #372785
 
   01 Jul 2011; Peter Volkov <pva@gentoo.org> pidgin-2.9.0.ebuild:
   Depend on avahi[dbus] for required avahi-client, bug #373659 thank Antonio
