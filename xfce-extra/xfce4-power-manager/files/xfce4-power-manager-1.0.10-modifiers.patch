@@ -1,0 +1,13 @@
+diff --git a/src/xfpm-button.c b/src/xfpm-button.c
+index d2a92e0..70c07a1 100644
+--- a/src/xfpm-button.c
++++ b/src/xfpm-button.c
+@@ -125,7 +125,7 @@ xfpm_button_grab_keystring (XfpmButton *button, guint keycode)
+ {
+     Display *display;
+     guint ret;
+-    guint modmask = 0;
++    guint modmask = AnyModifier;
+     
+     display = GDK_DISPLAY ();
+     
