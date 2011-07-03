@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.3.0-r2.ebuild,v 1.1 2011/02/18 08:01:01 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.3.0-r3.ebuild,v 1.1 2011/07/03 10:02:29 lxnay Exp $
 
 EAPI="2"
 
@@ -34,6 +34,8 @@ src_prepare() {
 	# There is consolekit
 	epatch "${FILESDIR}/${P}-pam_console-disable.patch"
 	use consolekit || epatch "${FILESDIR}/${P}-consolekit-disable.patch"
+
+	epatch "${FILESDIR}"/${P}-properly-load-session-settings-using-dmrc-entry-as-pointer-for-xsessions-dir-file.patch
 
 	# this replaces the bootstrap/autogen script in most packages
 	eautoreconf
