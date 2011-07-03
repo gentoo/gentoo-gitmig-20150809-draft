@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.256 2011/06/25 17:47:22 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.257 2011/07/03 10:30:35 angelos Exp $
+
+*mpd-0.16.3-r1 (03 Jul 2011)
+
+  03 Jul 2011; Christoph Mende <angelos@gentoo.org> +mpd-0.16.3-r1.ebuild,
+  +files/mpd-0.16.3-ffmpeg.patch:
+  Fix segfault with recent ffmpeg versions (bug #373423 by Mike MacDonald)
 
   25 Jun 2011; Christoph Mende <angelos@gentoo.org> mpd-0.15.8.ebuild,
   mpd-0.15.15.ebuild, mpd-0.15.16.ebuild, mpd-0.16.2.ebuild, mpd-0.16.3.ebuild,
