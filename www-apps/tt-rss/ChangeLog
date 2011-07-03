@@ -1,0 +1,11 @@
+# ChangeLog for www-apps/tt-rss
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.1 2011/07/03 12:37:42 hwoarang Exp $
+
+*tt-rss-1.5.4 (03 Jul 2011)
+
+  03 Jul 2011; Markos Chandras <hwoarang@gentoo.org> +tt-rss-1.5.4.ebuild,
+  +files/postinstall-en.txt, +metadata.xml:
+  Moved from sunrise overlay. Thanks to Patrick Nagel <mail@patrick-nagel.net>.
+  Bug #250607
+
