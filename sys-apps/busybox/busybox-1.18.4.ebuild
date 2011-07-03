@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.18.4.ebuild,v 1.1 2011/06/11 19:54:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.18.4.ebuild,v 1.2 2011/07/03 16:59:59 vapier Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic savedconfig toolchain-funcs
@@ -160,8 +160,9 @@ src_configure() {
 		ADD_SHELL \
 		BEEP BOOTCHARTD \
 		CRONTAB \
-		DC DEVFS{,D} DNSD DPKG{,_DEB} \
+		DC DEVFSD DNSD DPKG{,_DEB} \
 		FAKEIDENTD FBSPLASH FOLD FSCK_MINIX FTP{GET,PUT} \
+		FEATURE_DEVFS \
 		HOSTID HUSH \
 		INETD INOTIFYD IPCALC \
 		LASH LOCALE_SUPPORT LOGNAME LPD \
