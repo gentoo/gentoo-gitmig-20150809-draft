@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5505 2011/07/02 05:37:17 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5506 2011/07/03 05:22:06 nirbheek Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Jul 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.mask:
+  Remove old spidermonkey-2.0 mask, add 1.8.5 mask for new js185 release
 
   02 Jul 2011; Eray Aslan <eras@gentoo.org> package.mask:
   remove mask entry for amavisd-new-2.7.0_rc*. No longer in the tree
