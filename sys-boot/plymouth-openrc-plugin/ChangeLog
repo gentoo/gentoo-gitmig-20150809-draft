@@ -1,0 +1,13 @@
+# ChangeLog for sys-boot/plymouth-openrc-plugin
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth-openrc-plugin/ChangeLog,v 1.1 2011/07/03 09:52:40 aidecoe Exp $
+
+*plymouth-openrc-plugin-0.1.1 (03 Jul 2011)
+
+  03 Jul 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +plymouth-openrc-plugin-0.1.1.ebuild, +metadata.xml:
+  Initial ebuild. Resolves bug #372699.
+
+  Plugin for OpenRC is installed directly by sys-boot/plymouth until upcoming
+  plymouth-0.8.3-r5.ebuild. Now it's going to be installed by this package.
+
