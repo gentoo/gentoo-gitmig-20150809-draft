@@ -1,8 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.59 2011/07/03 19:29:03 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.60 2011/07/03 23:36:32 alexxy Exp $
 
 # This file requires >=portage-2.1.1
+
+# Alexey Shvetsov <alexxy@gentoo.org> (4 Jul 2011)
+# unmask maui use flag for torque
+sys-cluster/torque -maui
 
 # Alexey Shvetsov <alexxy@gentoo.org> (1 Jul 2011)
 # Use mask infiniband for stable corosync and glusterfs
