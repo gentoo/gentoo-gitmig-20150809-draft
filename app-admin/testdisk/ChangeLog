@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/testdisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.40 2011/02/25 18:13:56 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.41 2011/07/03 23:58:06 robbat2 Exp $
+
+*testdisk-6.12 (03 Jul 2011)
+
+  03 Jul 2011; Robin H. Johnson <robbat2@gentoo.org> +testdisk-6.12.ebuild:
+  Version bump.
 
   25 Feb 2011; Kevin McCarthy <signals@gentoo.org> testdisk-6.5.ebuild,
   testdisk-6.8-r1.ebuild, testdisk-6.10.ebuild, testdisk-6.11-r1.ebuild,
