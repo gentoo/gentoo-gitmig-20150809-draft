@@ -1,0 +1,11 @@
+# ChangeLog for sys-cluster/slurm
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/ChangeLog,v 1.1 2011/07/03 23:23:21 alexxy Exp $
+
+*slurm-2.2.7 (03 Jul 2011)
+
+  03 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +slurm-2.2.7.ebuild,
+  +files/slurm.confd, +files/slurmctld.initd, +files/slurmd.initd,
+  +files/slurmdbd.initd, +metadata.xml:
+  Initial import
+
