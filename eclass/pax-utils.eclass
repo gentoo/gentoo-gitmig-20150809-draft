@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/pax-utils.eclass,v 1.12 2011/07/02 17:03:51 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/pax-utils.eclass,v 1.13 2011/07/03 21:17:10 blueness Exp $
 
 # @ECLASS: pax-utils.eclass
 # @MAINTAINER:
@@ -24,11 +24,6 @@
 # PAX_MARKINGS is set to "none", no markings will be made.
 
 inherit eutils
-
-IUSE="hardened"
-
-DEPEND="hardened? ( app-misc/pax-utils
-	sys-apps/paxctl )"
 
 # Default to PT markings.
 PAX_MARKINGS=${PAX_MARKINGS:="PT"}
@@ -56,10 +51,6 @@ PAX_MARKINGS=${PAX_MARKINGS:="PT"}
 # Either ask on the gentoo-hardened mailing list, or CC/assign hardened@g.o on
 # the bug report.
 pax-mark() {
-	# It doesn't make sense to pax-mark on non-hardened systems
-	# so we'll just do nothing.
-	use hardened || return 0;
-
 	local f flags fail=0 failures="" zero_load_alignment
 	# Ignore '-' characters - in particular so that it doesn't matter if
 	# the caller prefixes with -
