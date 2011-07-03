@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/unbound
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.26 2011/05/31 13:31:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.27 2011/07/03 01:28:00 matsuu Exp $
+
+*unbound-1.4.11 (03 Jul 2011)
+
+  03 Jul 2011; MATSUU Takuto <matsuu@gentoo.org> -unbound-1.4.8.ebuild,
+  -unbound-1.4.9.ebuild, +unbound-1.4.11.ebuild:
+  Version bumped. Fixed GNU stack issue. Added SUPPORT_PYTHON_ABIS="1". Removed
+  old versions.
 
   31 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> unbound-1.4.10.ebuild:
   x86 stable wrt security bug #368981

@@ -1,10 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.8.ebuild,v 1.3 2011/05/11 19:37:25 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.4.11.ebuild,v 1.1 2011/07/03 01:28:00 matsuu Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
-inherit eutils python
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.*"
+
+inherit eutils flag-o-matic python
 
 DESCRIPTION="A validating, recursive and caching DNS resolver"
 HOMEPAGE="http://unbound.net/"
@@ -12,7 +15,7 @@ SRC_URI="http://unbound.net/downloads/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 x86 ~x64-macos"
+KEYWORDS="~amd64 ~x86 ~x64-macos"
 IUSE="debug gost python static-libs test threads"
 
 RDEPEND="dev-libs/expat
@@ -33,28 +36,30 @@ RDEPEND="${RDEPEND}
 	net-dns/dnssec-root"
 
 pkg_setup() {
-	python_set_active_version 2
 	enewgroup unbound
 	enewuser unbound -1 -1 /etc/unbound unbound
 }
 
 src_configure() {
+	append-ldflags -Wl,-z,noexecstack || die
 	econf \
 		--with-pidfile="${EPREFIX}"/var/run/unbound.pid \
 		--with-ldns="${EPREFIX}"/usr \
 		--with-libevent="${EPREFIX}"/usr \
 		--with-rootkey-file="${EPREFIX}"/etc/dnssec/root-anchors.txt \
 		$(use_enable debug) \
-		$(use_enable debug lock-checks) \
-		$(use_enable debug alloc-checks) \
-		$(use_enable debug alloc-lite) \
-		$(use_enable debug alloc-nonregional) \
 		$(use_enable gost) \
 		$(use_enable static-libs static) \
 		$(use_with threads pthreads) \
 		$(use_with python pyunbound) \
 		$(use_with python pythonmodule) \
 		--disable-rpath || die
+
+		# http://unbound.nlnetlabs.nl/pipermail/unbound-users/2011-April/001801.html
+		# $(use_enable debug lock-checks) \
+		# $(use_enable debug alloc-checks) \
+		# $(use_enable debug alloc-lite) \
+		# $(use_enable debug alloc-nonregional) \
 }
 
 src_install() {
@@ -62,7 +67,10 @@ src_install() {
 
 	# bug #299016
 	if use python ; then
-		find "${ED}$(python_get_sitedir)" "(" -name "*.a" -o -name "*.la" ")" -type f -delete || die
+		find "${ED}" -name '_unbound.{la,a}' -delete || die
+	fi
+	if ! use static-libs ; then
+		find "${ED}" -name "*.la" -type f -delete || die
 	fi
 
 	newinitd "${FILESDIR}/unbound.initd" unbound || die "newinitd failed"
