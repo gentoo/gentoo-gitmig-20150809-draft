@@ -1,6 +1,24 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.844 2011/07/03 15:15:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.845 2011/07/03 17:28:53 zmedico Exp $
+
+*portage-2.1.10.4 (03 Jul 2011)
+
+  03 Jul 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.4.ebuild:
+  2.1.10.4 version bump. This fixes bug #355283 (fix distcc and ccache
+  features to use the default ABI dir), bug #365033 (make.conf parser behaves
+  like echo -e though it shouldn't), bug #370693 (extended repo-level config
+  file support), bug #371767 (emerge KeyError triggered by --exclude in some
+  cases), bug #371909 (unnecessary ccache messages triggered by pkg_info),
+  bug #371987 (make repoman handle EACCESS when generating Manifest),
+  bug #372033 (emerge suggests package that has no available ebuilds),
+  bug #372183 (make PORTAGE_COMPRESS_FLAGS handle -k correctly), bug #372193
+  (portageq all_best_visible IndexError), bug #372789 (make repoman trigger
+  dependency.unknown for unknown packages in || deps), bug #373301 (remove
+  FEATURES=severe docs since it's not implemented), and bug #373341 (always
+  use ldconfig -X, to avoid interference with FEATURES=preserve-libs when
+  downgrading libraries). Bug #373933 tracks all bugs fixed since
+  portage-2.1.10.3.
 
   03 Jul 2011; Raúl Porcel <armin76@gentoo.org> portage-2.1.10.3.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc/x86 stable wrt #373523
