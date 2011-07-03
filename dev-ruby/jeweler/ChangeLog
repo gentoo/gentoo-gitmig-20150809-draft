@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/jeweler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/ChangeLog,v 1.10 2011/07/03 07:55:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/ChangeLog,v 1.11 2011/07/03 08:00:13 graaff Exp $
+
+*jeweler-1.6.3 (03 Jul 2011)
+
+  03 Jul 2011; Hans de Graaff <graaff@gentoo.org> +jeweler-1.6.3.ebuild:
+  Version bump.
 
   03 Jul 2011; Hans de Graaff <graaff@gentoo.org> -jeweler-1.4.0.ebuild,
   -jeweler-1.5.2.ebuild, -jeweler-1.6.0.ebuild:
