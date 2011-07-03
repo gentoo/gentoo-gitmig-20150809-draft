@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12888 2011/07/03 05:22:07 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12889 2011/07/03 09:19:23 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -274,15 +274,6 @@ net-mail/gml
 # Tim Harder <radhermit@gentoo.org> (3 Jun 2011)
 # Mask release candidates
 =app-office/scribus-1.4.0_rc*
-
-# Markos Chandras <hwoarang@gentoo.org> (3 Jun 2011)
-# Dead upstrea, many open bugs, partially working with 
-# kernel-2.6
-# Bugs #159741, #159838, #165120, #165200, #231459,
-# #273902, #278949, #305155, #330523, #369293
-# Masked for removal in 30 days
-# Alternative: sys-fs/lvm2
-sys-fs/evms
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (3 Jun 2011)
 # Requires KDE 4.4, which is not in the portage tree anymore.
