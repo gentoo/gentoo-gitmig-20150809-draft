@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.2.6.ebuild,v 1.1 2011/05/06 23:12:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.2.6.ebuild,v 1.2 2011/07/03 14:53:29 fauli Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/gramps/Stable/${PV}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="gnome mozembed reports spell webkit"
+IUSE="gnome reports spell webkit"
 
 RDEPEND="dev-python/bsddb3
 	>=dev-python/pygtk-2.10.0
@@ -24,7 +24,6 @@ RDEPEND="dev-python/bsddb3
 	gnome-base/librsvg:2
 	gnome? ( dev-python/libgnome-python
 		dev-python/gconf-python )
-	mozembed? ( dev-python/gtkmozembed-python )
 	spell? ( dev-python/gtkspell-python
 		dev-python/pyenchant )
 	reports? ( media-gfx/graphviz )
