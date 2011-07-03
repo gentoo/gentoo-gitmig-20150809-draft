@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth-openrc-plugin/plymouth-openrc-plugin-0.1.1.ebuild,v 1.1 2011/07/03 09:52:40 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth-openrc-plugin/plymouth-openrc-plugin-0.1.1.ebuild,v 1.2 2011/07/03 11:11:20 aidecoe Exp $
 
 EAPI=4
 
@@ -14,8 +14,12 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-DEPEND=">=sys-apps/openrc-0.8.2-r1"
-RDEPEND="${DEPEND}"
+DEPEND=">=sys-apps/openrc-0.8.2-r1
+	!!<sys-boot/plymouth-0.8.3-r5
+	"
+RDEPEND="${DEPEND}
+	>=sys-boot/plymouth-0.8.3-r5
+	"
 
 pkg_pretend() {
 	if [[ ! -w /run ]]; then
