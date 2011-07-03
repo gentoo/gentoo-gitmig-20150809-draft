@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/xemacs-packages-all
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-packages-all/ChangeLog,v 1.18 2011/06/28 21:43:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/xemacs-packages-all/ChangeLog,v 1.19 2011/07/03 08:13:12 hwoarang Exp $
+
+  03 Jul 2011; Markos Chandras <hwoarang@gentoo.org>
+  xemacs-packages-all-2010.07.29.ebuild:
+  Stable on amd64 wrt bug #369897
 
   28 Jun 2011; Brent Baude <ranger@gentoo.org>
   xemacs-packages-all-2010.07.29.ebuild:

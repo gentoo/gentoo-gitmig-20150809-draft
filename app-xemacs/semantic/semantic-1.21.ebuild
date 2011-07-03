@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/semantic/semantic-1.21.ebuild,v 1.7 2011/06/28 21:43:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/semantic/semantic-1.21.ebuild,v 1.8 2011/07/03 08:08:58 hwoarang Exp $
 
 SLOT="0"
 IUSE=""
@@ -20,6 +20,6 @@ app-xemacs/cc-mode
 app-xemacs/edebug
 app-xemacs/sgml
 "
-KEYWORDS="alpha ~amd64 ppc sparc x86"
+KEYWORDS="alpha amd64 ppc sparc x86"
 
 inherit xemacs-packages

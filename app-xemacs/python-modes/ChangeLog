@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/python-modes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/python-modes/ChangeLog,v 1.21 2011/06/28 21:43:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/python-modes/ChangeLog,v 1.22 2011/07/03 08:08:16 hwoarang Exp $
+
+  03 Jul 2011; Markos Chandras <hwoarang@gentoo.org> python-modes-1.14.ebuild:
+  Stable on amd64 wrt bug #369897
 
   28 Jun 2011; Brent Baude <ranger@gentoo.org> python-modes-1.14.ebuild:
   Marking python-modes-1.14 ppc stable for bug 369897

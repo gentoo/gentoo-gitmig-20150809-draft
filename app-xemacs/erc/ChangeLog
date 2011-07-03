@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/erc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/erc/ChangeLog,v 1.10 2011/06/28 21:43:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/erc/ChangeLog,v 1.11 2011/07/03 08:00:03 hwoarang Exp $
+
+  03 Jul 2011; Markos Chandras <hwoarang@gentoo.org> erc-0.23.ebuild:
+  Stable on amd64 wrt bug #369897
 
   28 Jun 2011; Brent Baude <ranger@gentoo.org> erc-0.23.ebuild:
   Marking erc-0.23 ppc stable for bug 369897

@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/eshell
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/eshell/ChangeLog,v 1.21 2011/06/28 21:43:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/eshell/ChangeLog,v 1.22 2011/07/03 08:12:57 hwoarang Exp $
+
+  03 Jul 2011; Markos Chandras <hwoarang@gentoo.org> eshell-1.18.ebuild:
+  Stable on amd64 wrt bug #369897
 
   28 Jun 2011; Brent Baude <ranger@gentoo.org> eshell-1.18.ebuild:
   Marking eshell-1.18 ppc stable for bug 369897

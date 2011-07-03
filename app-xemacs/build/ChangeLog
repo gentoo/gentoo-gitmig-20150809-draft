@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/build
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/build/ChangeLog,v 1.17 2011/06/28 21:43:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/build/ChangeLog,v 1.18 2011/07/03 07:54:57 hwoarang Exp $
+
+  03 Jul 2011; Markos Chandras <hwoarang@gentoo.org> build-1.15.ebuild:
+  Stable on amd64 wrt bug #369897
 
   28 Jun 2011; Brent Baude <ranger@gentoo.org> build-1.15.ebuild:
   Marking build-1.15 ppc stable for bug 369897

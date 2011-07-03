@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/pcl-cvs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/pcl-cvs/ChangeLog,v 1.22 2011/06/28 21:43:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/pcl-cvs/ChangeLog,v 1.23 2011/07/03 08:06:40 hwoarang Exp $
+
+  03 Jul 2011; Markos Chandras <hwoarang@gentoo.org> pcl-cvs-1.70.ebuild:
+  Stable on amd64 wrt bug #369897
 
   28 Jun 2011; Brent Baude <ranger@gentoo.org> pcl-cvs-1.70.ebuild:
   Marking pcl-cvs-1.70 ppc stable for bug 369897

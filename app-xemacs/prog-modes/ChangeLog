@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/prog-modes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/prog-modes/ChangeLog,v 1.28 2011/06/28 21:43:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/prog-modes/ChangeLog,v 1.29 2011/07/03 08:07:35 hwoarang Exp $
+
+  03 Jul 2011; Markos Chandras <hwoarang@gentoo.org> prog-modes-2.20.ebuild:
+  Stable on amd64 wrt bug #369897
 
   28 Jun 2011; Brent Baude <ranger@gentoo.org> prog-modes-2.20.ebuild:
   Marking prog-modes-2.20 ppc stable for bug 369897

@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/general-docs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/general-docs/ChangeLog,v 1.10 2011/06/28 21:43:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/general-docs/ChangeLog,v 1.11 2011/07/03 08:01:02 hwoarang Exp $
+
+  03 Jul 2011; Markos Chandras <hwoarang@gentoo.org> general-docs-1.06.ebuild:
+  Stable on amd64 wrt bug #369897
 
   28 Jun 2011; Brent Baude <ranger@gentoo.org> general-docs-1.06.ebuild:
   Marking general-docs-1.06 ppc stable for bug 369897

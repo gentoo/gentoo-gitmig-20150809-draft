@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/skk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/skk/ChangeLog,v 1.14 2011/06/28 21:43:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/skk/ChangeLog,v 1.15 2011/07/03 08:09:25 hwoarang Exp $
+
+  03 Jul 2011; Markos Chandras <hwoarang@gentoo.org> skk-1.24.ebuild:
+  Stable on amd64 wrt bug #369897
 
   28 Jun 2011; Brent Baude <ranger@gentoo.org> skk-1.24.ebuild:
   Marking skk-1.24 ppc stable for bug 369897
