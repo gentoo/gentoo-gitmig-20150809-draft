@@ -1,16 +1,22 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-2.20101213-r16.ebuild,v 1.2 2011/06/02 12:06:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/selinux-base-policy-2.20101213-r16.ebuild,v 1.3 2011/07/03 00:33:35 blueness Exp $
 
 EAPI="1"
 IUSE="+peer_perms +open_perms +ubac"
 
 inherit eutils
 
-PATCHBUNDLE="${FILESDIR}/patchbundle-${PF}.tar.bz2"
+#PATCHBUNDLE="${FILESDIR}/patchbundle-${PF}.tar.bz2"
+PATCHBUNDLE="${DISTDIR}/patchbundle-${PF}.tar.bz2"
+
 DESCRIPTION="Gentoo base policy for SELinux"
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/selinux/"
-SRC_URI="http://oss.tresys.com/files/refpolicy/refpolicy-${PV}.tar.bz2"
+
+#SRC_URI="http://oss.tresys.com/files/refpolicy/refpolicy-${PV}.tar.bz2"
+SRC_URI="http://oss.tresys.com/files/refpolicy/refpolicy-${PV}.tar.bz2
+	http://dev.gentoo.org/~blueness/patchbundle-selinux-base-policy/patchbundle-${PF}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
 
