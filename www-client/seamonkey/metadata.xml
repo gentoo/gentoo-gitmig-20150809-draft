@@ -7,16 +7,17 @@
     <name>Lars Wendler</name>
   </maintainer>
 <use>
-	<!-- New EAPI-1 style USE-flags -->
 	<flag name='chatzilla'>Build Mozilla's IRC client (default on)</flag>
-	<flag name='composer'>Build Mozilla's HTML editor component (default on)</flag>
-	<flag name='mailclient'>Build Mozilla's Mail client (default on)</flag>
-	<flag name='roaming'>Build roaming extension support (default on)</flag>
-
-	<!-- Other USE-flags -->
 	<flag name='custom-optimization'>Fine-tune custom compiler
 		optimizations</flag>
+	<flag name='composer'>Build Mozilla's HTML editor component (default on)</flag>
+	<flag name="gconf">Add support for setting of default browser using
+		<pkg>gnome-base/gconf</pkg>. Useful only for GNOME 2 users.</flag>
+	<flag name='mailclient'>Build Mozilla's Mail client (default on)</flag>
+	<flag name='roaming'>Build roaming extension support (default on)</flag>
 	<flag name='system-sqlite'>Use the system-wide <pkg>dev-db/sqlite</pkg>
 		installation with secure-delete enabled</flag>
+	<flag name="webm">Use system <pkg>media-libs/libvpx</pkg> for HTML5 WebM
+		video support.</flag>
 </use>
 </pkgmetadata>

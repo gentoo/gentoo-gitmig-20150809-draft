@@ -1,0 +1,12 @@
+--- enigmail/src/nsEnigMsgCompose.cpp	2011-07-03 10:45:45.000000000 +0200
++++ enigmail/src/nsEnigMsgCompose.cpp	2011-07-03 10:45:17.000000000 +0200
+@@ -1092,7 +1092,8 @@
+       nsCString left(tmpStr);
+       left.SetLength(15);
+ 
+-      if (left.LowerCaseEqualsLiteral("x-mozilla-keys:")) {
++      ToLowerCase(left);
++      if (left.EqualsLiteral("x-mozilla-keys:")) {
+         DEBUG_LOG(("nsEnigMimeWriter::OnDataAvailable: workaround for 'X-Mozilla-Keys:' header\n"));
+ 
+         tmpStr.StripWhitespace();
