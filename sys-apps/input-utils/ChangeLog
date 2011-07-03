@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/input-utils
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/input-utils/ChangeLog,v 1.7 2008/01/20 18:47:24 angelos Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/input-utils/ChangeLog,v 1.8 2011/07/03 07:56:19 robbat2 Exp $
+
+*input-utils-0.0.1_pre20081014 (03 Jul 2011)
+
+  03 Jul 2011; Robin H. Johnson <robbat2@gentoo.org>
+  +input-utils-0.0.1_pre20081014.ebuild,
+  +files/input-utils-0.0.1-protocol-mismatch-fix.patch,
+  +files/input-utils-0.0.1_pre20081014.patch:
+  Version bump. Port Debian patch. Also fix bug #344579: protocol version
+  mismatch.
 
   20 Jan 2008; Christoph Mende <angelos@gentoo.org>
   input-utils-0.0.1_pre20051128-r1.ebuild:
