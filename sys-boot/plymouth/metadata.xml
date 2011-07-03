@@ -7,7 +7,8 @@
 		<name>Amadeusz Żołnowski</name>
 	</maintainer>
 	<use>
-		<flag name="gdm">Enable smooth transition to GDM</flag>
+		<flag name="gdm">Enables smooth transition to GDM</flag>
+		<flag name="openrc">Installs plugin for OpenRC</flag>
 		<flag name="pango">Adds support for printing text on splash screen and
 			text prompts, e.g. for password</flag>
 	</use>

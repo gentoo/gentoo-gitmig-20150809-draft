@@ -1,6 +1,14 @@
 # ChangeLog for sys-boot/plymouth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.13 2011/06/28 21:51:11 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.14 2011/07/03 10:06:14 aidecoe Exp $
+
+*plymouth-0.8.3-r5 (03 Jul 2011)
+
+  03 Jul 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +plymouth-0.8.3-r5.ebuild, metadata.xml:
+  Split plymouth-openrc-plugin from sys-boot/plymouth. 'branding' flag was
+  abandoned and Gentoo logo is installed unconditionally now.  New 'openrc'
+  flag pulls sys-boot/plymouth-openrc-plugin.  Fixes bug #372699.
 
   28 Jun 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
   plymouth-0.8.3-r2.ebuild, plymouth-0.8.3-r4.ebuild:
