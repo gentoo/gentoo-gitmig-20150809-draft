@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.95 2011/06/30 19:28:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.96 2011/07/03 15:09:42 armin76 Exp $
+
+  03 Jul 2011; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  P.use.mask =sys-apps/portage-2.1.10* python3
 
   30 Jun 2011; Pacho Ramos <pacho@gentoo.org> package.use.mask:
   Needed plugins are not keyworded on this arch

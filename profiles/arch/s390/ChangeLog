@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/s390 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/ChangeLog,v 1.39 2011/04/30 17:18:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/ChangeLog,v 1.40 2011/07/03 15:12:04 armin76 Exp $
+
+  03 Jul 2011; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  P.use.mask =sys-apps/portage-2.1.10* python3
 
   30 Apr 2011; Ulrich Mueller <ulm@gentoo.org> -virtuals:
   Remove old-style virtual/linux-sources, bug 118442.

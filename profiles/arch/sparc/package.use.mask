@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.74 2011/06/30 19:36:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.75 2011/07/03 15:11:33 armin76 Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (02 Apr 2011)
 # quvi support is needed to play youtube files now
@@ -32,6 +32,7 @@ media-gfx/povray mkl
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (29 Jul 2010)
 # Mask python3 for stable portage until python-3.x is marked stable.
+=sys-apps/portage-2.1.10* python3
 =sys-apps/portage-2.1.9* python3
 
 # Steve Arnold <nerdboy@gentoo.org> (12 Jun 2010)

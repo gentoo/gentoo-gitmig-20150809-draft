@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/package.use.mask,v 1.21 2011/06/30 19:40:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/package.use.mask,v 1.22 2011/07/03 15:13:42 armin76 Exp $
 
 # Sebastian Pipping <sping@gentoo.org> (22 Feb 2011)
 # No media-sound/lilypond here, yet (bug #356069)
@@ -12,6 +12,7 @@ media-libs/mesa gallium
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (29 Jul 2010)
 # Mask python3 for stable portage until python-3.x is marked stable.
+=sys-apps/portage-2.1.10* python3
 =sys-apps/portage-2.1.9* python3
 
 # Alon Bar-Lev <alonbl@gentoo.org> (24 Jan 2007)
