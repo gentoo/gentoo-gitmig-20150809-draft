@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.10.2-r1.ebuild,v 1.11 2011/04/29 12:05:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.10.2-r1.ebuild,v 1.12 2011/07/03 10:45:00 armin76 Exp $
 
 EAPI=3
 
@@ -79,6 +79,9 @@ src_prepare() {
 
 src_configure() {
 	local myopts
+
+	# SuperH doesn't have native atomics yet
+	use sh && myopts+=" --disable-atomic"
 
 	[[ ${CHOST} == *-interix* ]] && append-flags -D_REENTRANT
 
