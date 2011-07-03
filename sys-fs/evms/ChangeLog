@@ -1,0 +1,13 @@
+# ChangeLog for sys-fs/evms
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.102 2011/07/03 19:43:57 reavertm Exp $
+
+*evms-2.5.5-r12 (03 Jul 2011)
+
+  03 Jul 2011; Maciej Mrozowski <reavertm@gentoo.org> +evms-2.5.5-r12.ebuild,
+  +metadata.xml:
+  Version bump, deps cleaned (gtk1 dep removed hence gtk gui support), patches
+  cleaned, rc scripts removed (evms volumes not supported anymore by Gentoo),
+  static libs removed, libs and binaries moved to /usr. Added message that this
+  package is meant for data migration only.
+
