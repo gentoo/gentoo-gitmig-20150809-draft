@@ -1,0 +1,42 @@
+Index: opensc-0.12.0/src/pkcs11/Makefile.am
+===================================================================
+--- opensc-0.12.0.orig/src/pkcs11/Makefile.am
++++ opensc-0.12.0/src/pkcs11/Makefile.am
+@@ -15,9 +15,10 @@ OPENSC_PKCS11_SRC = pkcs11-global.c pkcs
+ 	mechanism.c openssl.c framework-pkcs15.c \
+ 	framework-pkcs15init.c debug.c opensc-pkcs11.exports \
+ 	pkcs11-display.c pkcs11-display.h
+-OPENSC_PKCS11_LIBS = $(OPTIONAL_OPENSSL_LIBS) $(PTHREAD_LIBS) \
++OPENSC_PKCS11_LIBS = \
+ 	$(top_builddir)/src/common/libcompat.la \
+-	$(top_builddir)/src/libopensc/libopensc.la
++	$(top_builddir)/src/libopensc/libopensc.la \
++	$(OPTIONAL_OPENSSL_LIBS) $(PTHREAD_LIBS)
+ 
+ libpkcs11_la_SOURCES = libpkcs11.c
+ libpkcs11_la_LIBADD = $(LTLIB_LIBS)
+@@ -35,7 +36,7 @@ onepin_opensc_pkcs11_la_LDFLAGS = $(AM_L
+ 	-module -shared -avoid-version -no-undefined
+ 
+ pkcs11_spy_la_SOURCES = pkcs11-spy.c pkcs11-display.c pkcs11-display.h pkcs11-spy.exports
+-pkcs11_spy_la_LIBADD = $(OPTIONAL_OPENSSL_LIBS) $(LTLIB_LIBS) libpkcs11.la
++pkcs11_spy_la_LIBADD = libpkcs11.la $(OPTIONAL_OPENSSL_LIBS) $(LTLIB_LIBS)
+ pkcs11_spy_la_LDFLAGS = $(AM_LDFLAGS) \
+ 	-export-symbols "$(srcdir)/pkcs11-spy.exports" \
+ 	-module -shared -avoid-version -no-undefined
+Index: opensc-0.12.0/src/tools/Makefile.am
+===================================================================
+--- opensc-0.12.0.orig/src/tools/Makefile.am
++++ opensc-0.12.0/src/tools/Makefile.am
+@@ -24,8 +24,9 @@ opensc_explorer_LDADD = $(OPTIONAL_READL
+ pkcs15_tool_SOURCES = pkcs15-tool.c util.c
+ pkcs15_tool_LDADD = $(OPTIONAL_OPENSSL_LIBS)
+ pkcs11_tool_SOURCES = pkcs11-tool.c util.c
+-pkcs11_tool_LDADD = $(OPTIONAL_OPENSSL_LIBS) $(LTLIB_LIBS) \
+-	$(top_builddir)/src/pkcs11/libpkcs11.la
++pkcs11_tool_LDADD = \
++	$(top_builddir)/src/pkcs11/libpkcs11.la \
++	$(OPTIONAL_OPENSSL_LIBS) $(LTLIB_LIBS)
+ pkcs15_crypt_SOURCES = pkcs15-crypt.c util.c
+ pkcs15_crypt_LDADD = $(OPTIONAL_OPENSSL_LIBS)
+ cryptoflex_tool_SOURCES = cryptoflex-tool.c util.c

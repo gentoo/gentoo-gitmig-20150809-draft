@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.12.0-r2.ebuild,v 1.1 2011/04/18 18:49:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.12.0-r2.ebuild,v 1.2 2011/07/03 17:13:16 flameeyes Exp $
 
 EAPI="4"
+
+inherit eutils autotools
 
 DESCRIPTION="Libraries and applications to access smartcards."
 HOMEPAGE="http://www.opensc-project.org/opensc/"
@@ -29,6 +31,11 @@ DEPEND="${RDEPEND}
 REQUIRED_USE="
 	pcsc-lite? ( !openct )
 	openct? ( !pcsc-lite )"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-crossbuild.patch
+	eautoreconf
+}
 
 src_configure() {
 	# disable everything, enable selectively
