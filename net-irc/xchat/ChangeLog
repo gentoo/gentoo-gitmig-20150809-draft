@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.298 2011/07/02 06:13:22 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.299 2011/07/03 18:49:05 binki Exp $
+
+  03 Jul 2011; Nathan Phillip Brink <binki@gentoo.org> Manifest:
+  Regenerate my bad Manifest found by Hacly0n.
 
   02 Jul 2011; Nathan Phillip Brink <binki@gentoo.org>
   +files/xchat-2.8.4-interix.patch, xchat-2.8.8-r2.ebuild:
