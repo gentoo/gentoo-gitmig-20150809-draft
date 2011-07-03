@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/maui-3.3.1-r1.ebuild,v 1.3 2011/06/30 08:28:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/maui-3.3.1-r2.ebuild,v 1.1 2011/07/03 23:19:35 alexxy Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit autotools eutils multilib
 
@@ -13,9 +13,13 @@ SRC_URI="http://www.adaptivecomputing.com/download/${PN}/${P}.tar.gz"
 LICENSE="maui"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux"
-IUSE=""
+IUSE="pbs slurm"
 
-DEPEND="sys-cluster/torque"
+REQUIRED_USE="^^ ( pbs slurm )"
+
+DEPEND="
+	pbs? ( sys-cluster/torque )
+	slurm? ( sys-cluster/slurm )"
 RDEPEND="${DEPEND}"
 
 RESTRICT="fetch mirror"
@@ -28,9 +32,12 @@ src_prepare() {
 }
 
 src_configure() {
+	local myconf
+	use pbs && myconf="--with-pbs="${EPREFIX}"/usr"
+	use slurm && myconf="--with-wiki"
 	econf \
 		--with-spooldir="${EPREFIX}"/var/spool/${PN} \
-		--with-pbs="${EPREFIX}"/usr
+		${myconf}
 }
 
 src_install() {
