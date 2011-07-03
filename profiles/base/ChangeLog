@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.280 2011/07/01 21:54:28 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.281 2011/07/03 23:34:00 alexxy Exp $
+
+  03 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> package.use.mask:
+  Mask maui use flag for torque
 
   01 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> use.mask:
   use mask infiniband in base profile

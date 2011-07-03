@@ -1,9 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.249 2011/07/03 19:29:03 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.250 2011/07/03 23:34:00 alexxy Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Alexey Shvetsov <alexxy@gentoo.org> (4 Jul 2011)
+# Mask maui use flag for torque
+sys-cluster/torque maui
 
 # Michał Górny <mgorny@gentoo.org) (23 Jun 2011)
 # Requires masked >=sys-process/audit-2.
