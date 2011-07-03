@@ -16,9 +16,9 @@ diff -Naur exim-4.32/src/EDITME exim-4.32-dlopen/src/EDITME
 +# linker flags.  Without it, the loaded .so won't be able to access any
 +# functions from exim.
 +
-+LFLAGS=-rdynamic
++LFLAGS = -rdynamic
 +ifeq ($(OSTYPE),Linux)
-+LFLAGS+= -ldl
++LFLAGS += -ldl
 +endif
 +
 +
