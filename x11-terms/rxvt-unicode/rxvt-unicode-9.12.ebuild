@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.12.ebuild,v 1.1 2011/07/02 06:30:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.12.ebuild,v 1.2 2011/07/03 18:53:24 wired Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://dist.schmorp.de/rxvt-unicode/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris"
 IUSE="
 	256-color alt-font-width afterimage blink +focused-urgency fading-colors
 	+font-styles force-hints iso14755 +mousewheel perl pixbuf truetype unicode3
@@ -25,7 +25,8 @@ RDEPEND="x11-libs/libX11
 	>=sys-libs/ncurses-5.7-r6
 	afterimage? ( || ( media-libs/libafterimage x11-wm/afterstep ) )
 	perl? ( dev-lang/perl )
-	pixbuf? ( x11-libs/gdk-pixbuf x11-libs/gtk+:2 )"
+	pixbuf? ( x11-libs/gdk-pixbuf x11-libs/gtk+:2 )
+	kernel_Darwin? ( dev-perl/Mac-Pasteboard )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	x11-proto/xproto"
@@ -33,6 +34,12 @@ DEPEND="${RDEPEND}
 REQUIRED_USE="vanilla? ( !alt-font-width focused-urgency !force-hints !wcwidth )"
 
 src_prepare() {
+	if use kernel_Darwin; then
+		cp "${FILESDIR}"/macosx-clipboard src/perl/ || die
+	fi
+	# fix for prefix not installing properly
+	epatch "${FILESDIR}"/${PN}-9.06-case-insensitive-fs.patch
+
 	if ! use afterimage && ! use pixbuf; then
 		einfo " + If you want transparency support, please enable either the *pixbuf*"
 		einfo "   or the *afterimage* USE flag. Enabling both will default to pixbuf."
