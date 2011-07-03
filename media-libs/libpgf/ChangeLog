@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libpgf
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpgf/ChangeLog,v 1.5 2010/05/13 18:18:51 josejx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpgf/ChangeLog,v 1.6 2011/07/03 07:34:27 radhermit Exp $
+
+*libpgf-6.11.24 (03 Jul 2011)
+
+  03 Jul 2011; Tim Harder <radhermit@gentoo.org> +libpgf-6.11.24.ebuild:
+  Version bump (bug #373857). Update to EAPI 4 and add static-libs USE flag.
 
   13 May 2010; Joseph Jezak <josejx@gentoo.org> libpgf-6.09.44-r1.ebuild:
   Marked ~ppc for bug #309419.
