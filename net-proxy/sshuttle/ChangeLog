@@ -1,0 +1,10 @@
+# ChangeLog for net-proxy/sshuttle
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshuttle/ChangeLog,v 1.1 2011/07/04 22:17:22 radhermit Exp $
+
+*sshuttle-0.54 (04 Jul 2011)
+
+  04 Jul 2011; Tim Harder <radhermit@gentoo.org> +sshuttle-0.54.ebuild,
+  +metadata.xml:
+  Initial import.
+
