@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.111 2011/07/04 10:48:01 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.112 2011/07/04 10:50:28 djc Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -2652,12 +2652,12 @@ python_mod_optimize() {
 		fi
 	else
 		# Deprecated part of python_mod_optimize()
-		# ewarn
-		# ewarn "Deprecation Warning: Usage of ${FUNCNAME}() in packages not supporting installation"
-		# ewarn "for multiple Python ABIs in EAPI <=2 is deprecated and will be disallowed on 2011-06-01."
-		# ewarn "Use EAPI >=3 and call ${FUNCNAME}() with paths having appropriate syntax."
-		# ewarn "The ebuild needs to be fixed. Please report a bug, if it has not been already reported."
-		# ewarn
+		ewarn
+		ewarn "Deprecation Warning: Usage of ${FUNCNAME}() in packages not supporting installation"
+		ewarn "for multiple Python ABIs in EAPI <=2 is deprecated and will be disallowed on 2011-08-01."
+		ewarn "Use EAPI >=3 and call ${FUNCNAME}() with paths having appropriate syntax."
+		ewarn "The ebuild needs to be fixed. Please report a bug, if it has not been already reported."
+		ewarn
 
 		local myroot mydirs=() myfiles=() myopts=() return_code="0"
 
@@ -2816,12 +2816,12 @@ python_mod_cleanup() {
 		done
 	else
 		# Deprecated part of python_mod_cleanup()
-		# ewarn
-		# ewarn "Deprecation Warning: Usage of ${FUNCNAME}() in packages not supporting installation"
-		# ewarn "for multiple Python ABIs in EAPI <=2 is deprecated and will be disallowed on 2011-06-01."
-		# ewarn "Use EAPI >=3 and call ${FUNCNAME}() with paths having appropriate syntax."
-		# ewarn "The ebuild needs to be fixed. Please report a bug, if it has not been already reported."
-		# ewarn
+		ewarn
+		ewarn "Deprecation Warning: Usage of ${FUNCNAME}() in packages not supporting installation"
+		ewarn "for multiple Python ABIs in EAPI <=2 is deprecated and will be disallowed on 2011-08-01."
+		ewarn "Use EAPI >=3 and call ${FUNCNAME}() with paths having appropriate syntax."
+		ewarn "The ebuild needs to be fixed. Please report a bug, if it has not been already reported."
+		ewarn
 
 		search_paths=("${@#/}")
 		search_paths=("${search_paths[@]/#/${root}/}")
