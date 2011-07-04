@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/nspluginwrapper-1.4.4.ebuild,v 1.1 2011/07/04 15:29:08 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/nspluginwrapper-1.4.4.ebuild,v 1.2 2011/07/04 15:34:49 chutzpah Exp $
 
 EAPI=2
 
 inherit eutils multilib nsplugins flag-o-matic
 
 DESCRIPTION="Netscape Plugin Wrapper - Load 32bit plugins on 64bit browser"
-HOMEPAGE="http://nspluginwrapper.davidben.net/"
+HOMEPAGE="http://nspluginwrapper.org/"
 SRC_URI="http://web.mit.edu/davidben/Public/nspluginwrapper/${P}.tar.gz"
 
 LICENSE="GPL-2"
