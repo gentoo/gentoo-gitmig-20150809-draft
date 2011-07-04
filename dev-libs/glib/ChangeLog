@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.474 2011/07/04 10:51:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.475 2011/07/04 19:42:16 aballier Exp $
+
+  04 Jul 2011; Alexis Ballier <aballier@gentoo.org> glib-2.28.8.ebuild:
+  implicit . argument to find is a GNUism that fails with BSDs find; the die
+  call following it made glib impossile to build on G/FreeBSD
 
   04 Jul 2011; Pacho Ramos <pacho@gentoo.org> glib-2.28.8.ebuild:
   Fix warning about skipped tests being shown even when tests are disabled by
