@@ -1,6 +1,11 @@
 # ChangeLog for net-im/prosody
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/ChangeLog,v 1.14 2011/06/06 11:44:26 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/ChangeLog,v 1.15 2011/07/04 08:32:03 djc Exp $
+
+*prosody-0.8.2 (04 Jul 2011)
+
+  04 Jul 2011; Dirkjan Ochtman <djc@gentoo.org> +prosody-0.8.2.ebuild:
+  Version bump to 0.8.2 (bug 373869).
 
   06 Jun 2011; Dirkjan Ochtman <djc@gentoo.org> -prosody-0.7.0.ebuild,
   -files/prosody-0.7.0-cfg.lua.patch, -prosody-0.8.0.ebuild:
