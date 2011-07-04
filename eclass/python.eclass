@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.115 2011/07/04 11:27:29 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.116 2011/07/04 11:27:53 djc Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -622,6 +622,11 @@ python_clean_installation_image() {
 # Set this in EAPI <= 4 to indicate that current package supports installation for
 # multiple Python ABIs.
 
+# @ECLASS-VARIABLE: PYTHON_TESTS_RESTRICTED_ABIS
+# @DESCRIPTION:
+# Space-separated list of Python ABI patterns. Testing in Python ABIs matching any Python ABI
+# patterns specified in this list is skipped.
+
 # @ECLASS-VARIABLE: PYTHON_EXPORT_PHASE_FUNCTIONS
 # @DESCRIPTION:
 # Set this to export phase functions for the following ebuild phases:
@@ -1010,6 +1015,13 @@ python_execute_function() {
 		iterated_PYTHON_ABIS="${PYTHON_ABIS}"
 	fi
 	for PYTHON_ABI in ${iterated_PYTHON_ABIS}; do
+		if [[ "${EBUILD_PHASE}" == "test" ]] && _python_check_python_abi_matching --patterns-list "${PYTHON_ABI}" "${PYTHON_TESTS_RESTRICTED_ABIS}"; then
+			if [[ "${quiet}" == "0" ]]; then
+				echo " ${_GREEN}*${_NORMAL} ${_BLUE}Testing of ${CATEGORY}/${PF} with $(python_get_implementation) $(python_get_version) skipped${_NORMAL}"
+			fi
+			continue
+		fi
+
 		_python_prepare_flags
 
 		if [[ "${quiet}" == "0" ]]; then
