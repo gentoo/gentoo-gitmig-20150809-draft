@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.329 2011/06/29 20:23:17 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.330 2011/07/04 14:59:44 chainsaw Exp $
+
+*asterisk-1.8.4.4-r1 (04 Jul 2011)
+*asterisk-1.6.2.19-r1 (04 Jul 2011)
+
+  04 Jul 2011; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.6.2.19.ebuild,
+  +asterisk-1.6.2.19-r1.ebuild, -asterisk-1.8.4.4.ebuild,
+  +asterisk-1.8.4.4-r1.ebuild:
+  Actually install the newest init script with Jaco Kroon's restart fixes; as
+  pointed out by Erik Wallin (reopened) bug #345307.
 
 *asterisk-1.6.2.19 (29 Jun 2011)
 
