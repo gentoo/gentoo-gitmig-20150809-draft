@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/files/slurmctld.initd,v 1.1 2011/07/03 23:23:21 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/files/slurmctld.initd,v 1.2 2011/07/04 10:15:30 alexxy Exp $
 
 opts="reload"
 
@@ -41,6 +41,6 @@ stop() {
 
 reload() {
 	ebegin "Reloading slurm daemon configuration"
-	killproc slurmctld -HUP
+	start-stop-daemon --signal HUP --pidfile /var/run/slurm/slurmctld.pid
 	eend $?
 }
