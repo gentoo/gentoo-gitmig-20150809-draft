@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.112 2011/07/04 10:50:28 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.113 2011/07/04 10:59:25 djc Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -602,7 +602,7 @@ if ! has "${EAPI:-0}" 0 1; then
 		python_copy_sources
 	}
 
-	for python_default_function in src_configure src_compile src_test src_install; do
+	for python_default_function in src_configure src_compile src_test; do
 		eval "python_${python_default_function}() {
 			_python_check_python_pkg_setup_execution
 
@@ -614,6 +614,26 @@ if ! has "${EAPI:-0}" 0 1; then
 		}"
 	done
 	unset python_default_function
+
+	python_src_install() {
+		if ! _python_package_supporting_installation_for_multiple_python_abis; then
+			die "${FUNCNAME}() cannot be used in ebuilds of packages not supporting installation for multiple Python ABIs"
+		fi
+
+		_python_check_python_pkg_setup_execution
+
+		if has "${EAPI:-0}" 0 1 2 3; then
+			python_execute_function -d -s -- "$@"
+		else
+			python_installation() {
+				emake DESTDIR="${T}/images/${PYTHON_ABI}" install "$@"
+			}
+			python_execute_function -s python_installation "$@"
+			unset python_installation
+
+			python_merge_intermediate_installation_images "${T}/images"
+		fi
+	}
 
 	if [[ -n "${PYTHON_EXPORT_PHASE_FUNCTIONS}" ]]; then
 		EXPORT_FUNCTIONS src_prepare src_configure src_compile src_test src_install
