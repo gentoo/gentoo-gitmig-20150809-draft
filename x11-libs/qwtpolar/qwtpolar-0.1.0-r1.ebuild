@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtpolar/qwtpolar-0.1.0.ebuild,v 1.2 2011/06/14 10:11:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtpolar/qwtpolar-0.1.0-r1.ebuild,v 1.1 2011/07/04 10:39:27 scarabeus Exp $
 
 EAPI=4
 
@@ -24,6 +24,8 @@ src_prepare() {
 		-e "s:/path/to/qwt-5.2/lib:${EPREFIX}/usr/$(get_libdir):g" \
 		-e "/= QwtPolarDesigner/ d" \
 		-e "s:/usr/local/qwtpolar-0.1.0:/usr/:g" \
+		-e "s:INSTALLBASE/lib:INSTALLBASE/$(get_libdir):g" \
+		-e "s:INSTALLBASE/include:INSTALLBASE/include/${PN}:" \
 		${PN}.pri || die
 
 	sed -i \
@@ -35,8 +37,6 @@ src_install() {
 	qt4-r2_src_install
 
 	rm -rf "${ED}/usr/doc" || die
-	dodir /usr/include/${PN}
-	mv "${ED}/usr/include/"*.h "${ED}/usr/include/${PN}/" || die
 
 	doman doc/man/man3/QwtPolar*
 	dohtml -r doc/html
