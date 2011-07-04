@@ -1,6 +1,13 @@
 # ChangeLog for www-plugins/nspluginwrapper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/ChangeLog,v 1.17 2011/07/04 15:29:08 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/ChangeLog,v 1.18 2011/07/04 15:31:34 chutzpah Exp $
+
+  04 Jul 2011; Patrick McLean <chutzpah@gentoo.org>
+  -nspluginwrapper-1.2.2-r2.ebuild, -files/nspluginwrapper-1.2.2-gcc44.patch,
+  -files/nspluginwrapper-1.2.2-npidentifiers.patch,
+  -files/nspluginwrapper-1.2.2-respect-ldflags.patch,
+  -files/nspluginwrapper-1.4.0-parallel-make.patch:
+  Really remove older versions.
 
 *nspluginwrapper-1.4.4 (04 Jul 2011)
 
