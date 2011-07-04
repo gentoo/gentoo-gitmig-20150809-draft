@@ -1,6 +1,15 @@
 # ChangeLog for www-plugins/nspluginwrapper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/ChangeLog,v 1.16 2011/06/17 02:25:58 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/ChangeLog,v 1.17 2011/07/04 15:29:08 chutzpah Exp $
+
+*nspluginwrapper-1.4.4 (04 Jul 2011)
+
+  04 Jul 2011; Patrick McLean <chutzpah@gentoo.org>
+  -nspluginwrapper-1.4.0-r1.ebuild, -nspluginwrapper-1.4.2.ebuild,
+  +nspluginwrapper-1.4.4.ebuild,
+  +files/nspluginwrapper-1.4.4-compile-on-hardened.patch:
+  Version bump, includes fix for bug #373971. Also add patch to compile on
+  hardened (Bug #368777). Clean out some older versions.
 
 *nspluginwrapper-1.4.2 (17 Jun 2011)
 

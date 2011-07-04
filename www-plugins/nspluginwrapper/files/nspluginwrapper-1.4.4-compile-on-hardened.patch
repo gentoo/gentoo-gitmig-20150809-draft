@@ -1,0 +1,11 @@
+--- b/Makefile	2011-06-29 02:10:27.000000000 +0200
++++ a/Makefile	2011-06-29 02:09:06.000000000 +0200
+@@ -333,7 +333,7 @@
+ 	@[ -d $(LSB_OBJ_DIR) ] || mkdir $(LSB_OBJ_DIR) > /dev/null 2>&1
+ 
+ $(LSB_OBJ_DIR)/%.o: $(LSB_SRC_DIR)/%.c
+-	$(CC) $(CFLAGS_32) -nostdinc -fno-builtin -I. -I$(LSB_INC_DIR) -c $< -o $@
++	$(CC) $(CFLAGS_32) -nostdinc -fno-builtin -I. -I$(LSB_INC_DIR) -c -fno-stack-protector $< -o $@
+ 
+ $(LSB_OBJ_DIR)/%.a: $(LSB_OBJ_DIR)/%.o
+ 	$(AR) rc $@ $<
