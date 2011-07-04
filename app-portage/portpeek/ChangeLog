@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.113 2011/07/04 20:44:10 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.114 2011/07/04 20:53:10 mpagano Exp $
+
+  04 Jul 2011; Michael Pagano <mpagano@gentoo.org> -portpeek-1.5.9.0-r1.ebuild:
+  Remove old version
 
 *portpeek-1.9.71 (04 Jul 2011)
 
