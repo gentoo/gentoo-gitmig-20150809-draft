@@ -1,6 +1,10 @@
 # ChangeLog for games-board/pokerth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/ChangeLog,v 1.28 2011/04/26 20:25:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/ChangeLog,v 1.29 2011/07/04 07:42:21 tupone Exp $
+
+  04 Jul 2011; Tupone Alfredo <tupone@gentoo.org> pokerth-0.8.3.ebuild,
+  +files/pokerth-0.8.3-boost142.patch:
+  Fix build with dev-libs/boost-1.42 and gcc-4.5 Bug #352429 by Gef Lebster
 
   26 Apr 2011; Michael Sterrett <mr_bones_@gentoo.org> pokerth-0.8.3.ebuild:
   fix building with boost-1.46 (bug #362933)

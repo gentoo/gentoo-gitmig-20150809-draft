@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/pokerth-0.8.3.ebuild,v 1.6 2011/04/26 20:25:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/pokerth-0.8.3.ebuild,v 1.7 2011/07/04 07:42:21 tupone Exp $
 
 EAPI=2
 inherit multilib flag-o-matic eutils qt4-r2 games
@@ -31,6 +31,7 @@ DEPEND=">=dev-libs/boost-1.41
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-boost142.patch
 	local boost_ver
 
 	if use dedicated ; then
