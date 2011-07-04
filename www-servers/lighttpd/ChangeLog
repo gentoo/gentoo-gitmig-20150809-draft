@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.247 2011/05/13 14:06:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.248 2011/07/04 14:43:13 hwoarang Exp $
+
+*lighttpd-1.4.29 (04 Jul 2011)
+
+  04 Jul 2011; Markos Chandras <hwoarang@gentoo.org> +lighttpd-1.4.29.ebuild:
+  version bump. EAPI4fy
 
   13 May 2011; Markos Chandras <hwoarang@gentoo.org> files/lighttpd.initd:
   Fix another typo. Bug #367065
