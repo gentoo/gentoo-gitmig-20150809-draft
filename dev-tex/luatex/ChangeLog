@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/luatex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.86 2011/06/15 06:03:47 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.87 2011/07/04 17:42:41 aballier Exp $
+
+*luatex-0.70.1 (04 Jul 2011)
+
+  04 Jul 2011; Alexis Ballier <aballier@gentoo.org> +luatex-0.70.1.ebuild:
+  version bump
 
   15 Jun 2011; Naohiro Aota <naota@gentoo.org> luatex-0.65.0.ebuild:
   Added ~x86-fbsd, bug #345317
