@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.20 2011/06/12 13:51:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.21 2011/07/04 08:17:29 djc Exp $
+
+*redis-2.2.11 (04 Jul 2011)
+
+  04 Jul 2011; Dirkjan Ochtman <djc@gentoo.org> +redis-2.2.11.ebuild:
+  Version bump to 2.2.11, add doc use flag (bug 373591).
 
   12 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> redis-2.2.6.ebuild:
   x86 stable wrt bug #370241
