@@ -1,6 +1,20 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.282 2011/06/14 21:35:13 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.283 2011/07/04 08:27:53 grobian Exp $
+
+  04 Jul 2011; Fabian Groffen <grobian@gentoo.org> +darwin/macos/10.7/eapi,
+  +darwin/macos/10.7/make.defaults, +darwin/macos/10.7/package.provided,
+  +darwin/macos/10.7/package.use.mask, +darwin/macos/10.7/parent,
+  +darwin/macos/10.7/profile.bashrc, +darwin/macos/10.7/x64/make.defaults,
+  +darwin/macos/10.7/x64/package.mask,
+  +darwin/macos/10.7/x64/package.use.force,
+  +darwin/macos/10.7/x64/package.use.mask, +darwin/macos/10.7/x64/parent,
+  +darwin/macos/10.7/x64/use.mask, +darwin/macos/10.7/x86/make.defaults,
+  +darwin/macos/10.7/x86/package.mask,
+  +darwin/macos/10.7/x86/package.use.force,
+  +darwin/macos/10.7/x86/package.use.mask, +darwin/macos/10.7/x86/parent,
+  +darwin/macos/10.7/x86/use.mask:
+  Add profile for upcoming OSX Lion (10.7)
 
   14 Jun 2011; Jonathan Callen <abcd@gentoo.org> packages:
   Add version to shadow to match base/packages
