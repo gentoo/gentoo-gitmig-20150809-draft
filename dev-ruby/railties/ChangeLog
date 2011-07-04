@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/railties
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.8 2011/05/01 14:10:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.9 2011/07/04 09:37:13 graaff Exp $
+
+*railties-3.0.9 (04 Jul 2011)
+
+  04 Jul 2011; Hans de Graaff <graaff@gentoo.org> +railties-3.0.9.ebuild:
+  Version bump for Rails 3.0.9.
 
   01 May 2011; Hans de Graaff <graaff@gentoo.org> -railties-3.0.3-r1.ebuild:
   Remove old versions.

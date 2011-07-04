@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/activerecord-3.0.7.ebuild,v 1.4 2011/07/04 09:36:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/activerecord-3.0.9.ebuild,v 1.1 2011/07/04 09:36:31 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -28,7 +28,7 @@ S="${WORKDIR}/rails-rails-*/activerecord"
 
 ruby_add_rdepend "~dev-ruby/activesupport-${PV}
 	~dev-ruby/activemodel-${PV}
-	>=dev-ruby/arel-2.0.2:2.0
+	>=dev-ruby/arel-2.0.10-r1:2.0
 	>=dev-ruby/tzinfo-0.3.23
 	sqlite3? ( >=dev-ruby/sqlite3-ruby-1.3.3 )
 	mysql? ( dev-ruby/mysql2:0.2 )
