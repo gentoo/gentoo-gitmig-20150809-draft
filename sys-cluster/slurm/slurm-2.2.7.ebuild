@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.2.7.ebuild,v 1.2 2011/07/04 07:51:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.2.7.ebuild,v 1.3 2011/07/04 16:09:46 alexxy Exp $
 
 EAPI=4
 
@@ -28,8 +28,8 @@ RDEPEND="${DEPEND}
 	maui? ( sys-cluster/maui[slurm] )"
 
 pkg_setup() {
-	enewgroup slurm
-	enewuser slurm -1 -1 /var/spool/slurm slurm
+	enewgroup slurm 500
+	enewuser slurm 500 -1 /var/spool/slurm slurm
 }
 
 src_prepare() {
