@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/maui-3.3.1-r2.ebuild,v 1.1 2011/07/03 23:19:35 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/maui-3.3.1-r2.ebuild,v 1.2 2011/07/04 16:18:38 alexxy Exp $
 
 EAPI="4"
 
-inherit autotools eutils multilib
+inherit eutils multilib
 
 DESCRIPTION="Maui Cluster Scheduler"
 HOMEPAGE="http://www.clusterresources.com/products/maui/"
@@ -24,17 +24,24 @@ RDEPEND="${DEPEND}"
 
 RESTRICT="fetch mirror"
 
+pkg_setup() {
+	if use slurm; then
+		if [ -z ${MAUI_KEY} ]; then
+			eerror "You should set MAUI_KEY to any integer value in make.conf"
+			return 1
+		fi
+	fi
+}
+
 src_prepare() {
-	epatch "${FILESDIR}"/3.2.6_p21-autoconf-2.60-compat.patch
 	sed -e "s:\$(INST_DIR)/lib:\$(INST_DIR)/$(get_libdir):" \
 		-i src/{moab,server,mcom}/Makefile || die
-	eautoreconf
 }
 
 src_configure() {
 	local myconf
 	use pbs && myconf="--with-pbs="${EPREFIX}"/usr"
-	use slurm && myconf="--with-wiki"
+	use slurm && myconf="--with-wiki --with-key=${MAUI_KEY}"
 	econf \
 		--with-spooldir="${EPREFIX}"/var/spool/${PN} \
 		${myconf}
