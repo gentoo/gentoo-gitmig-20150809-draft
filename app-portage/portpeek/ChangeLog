@@ -1,8 +1,13 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.112 2011/06/25 18:25:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.113 2011/07/04 20:44:10 mpagano Exp $
 
-  25 Jun 2011; Raúl Porcel <armin76@gentoo.org> portpeek-1.9.70.ebuild:
+*portpeek-1.9.71 (04 Jul 2011)
+
+  04 Jul 2011; Michael Pagano <mpagano@gentoo.org> +portpeek-1.9.71.ebuild:
+  Add portpeek-skip option to not process specific files
+
+  25 Jun 2011; RaÃºl Porcel <armin76@gentoo.org> portpeek-1.9.70.ebuild:
   sparc stable wrt #370255
 
   19 Jun 2011; Markus Meier <maekke@gentoo.org> portpeek-1.9.70.ebuild:
@@ -168,7 +173,7 @@
   Restrict 1.9.36 and 1.9.36.1 to portage 2.2_rc67. Bump 1.9.37 to be
   compatible with portage 2.2_rc68
 
-  06 Jun 2010; Raúl Porcel <armin76@gentoo.org> portpeek-1.5.8.4.ebuild:
+  06 Jun 2010; RaÃºl Porcel <armin76@gentoo.org> portpeek-1.5.8.4.ebuild:
   arm stable wrt #300825
 
 *portpeek-1.9.36.1 (05 Jun 2010)
@@ -198,7 +203,7 @@
   +portpeek-2.0.1.ebuild:
   python 3 porting and remove old version
 
-  17 Apr 2010; Raúl Porcel <armin76@gentoo.org> portpeek-1.5.7.2.ebuild,
+  17 Apr 2010; RaÃºl Porcel <armin76@gentoo.org> portpeek-1.5.7.2.ebuild,
   portpeek-1.5.8.4.ebuild, portpeek-1.9.36.ebuild, portpeek-2.0.0.ebuild:
   Add ~arm wrt #300825
 
@@ -210,7 +215,7 @@
   07 Apr 2010; Mike Pagano <mpagano@gentoo.org> +portpeek-2.0.0.ebuild:
   Version bump. Support for python 3.1.
 
-  05 Apr 2010; Raúl Porcel <armin76@gentoo.org> portpeek-1.5.8.4.ebuild:
+  05 Apr 2010; RaÃºl Porcel <armin76@gentoo.org> portpeek-1.5.8.4.ebuild:
   sparc stable wrt #309059
 
   30 Mar 2010; Michael Pagano <mpagano@gentoo.org> portpeek-1.9.36.ebuild:
@@ -455,7 +460,7 @@
   14 Mar 2009; Tiago Cunha <tcunha@gentoo.org> portpeek-1.5.7.2.ebuild:
   stable amd64, bug 262127
 
-  14 Mar 2009; Raúl Porcel <armin76@gentoo.org> portpeek-1.5.7.2.ebuild:
+  14 Mar 2009; RaÃºl Porcel <armin76@gentoo.org> portpeek-1.5.7.2.ebuild:
   sparc stable wrt #262127
 
   12 Mar 2009; Mike Pagano <mpagano@gentoo.org> portpeek-1.5.7.2.ebuild:
@@ -530,7 +535,7 @@
   31 Mar 2008; Doug Goldstein <cardoe@gentoo.org> portpeek-1.5.7.ebuild:
   Add ~amd64
 
-  30 Jan 2008; Dawid Węgliński <cla@gentoo.org> portpeek-1.5.7.ebuild:
+  30 Jan 2008; Dawid WÄgliÅski <cla@gentoo.org> portpeek-1.5.7.ebuild:
   Stable on x86 (bug #207748)
 
   15 Oct 2007; Donnie Berkholz <dberkholz@gentoo.org>;
