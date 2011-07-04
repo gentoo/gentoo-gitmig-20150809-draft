@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.29.ebuild,v 1.1 2011/07/04 14:43:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.29.ebuild,v 1.2 2011/07/04 14:56:19 hwoarang Exp $
 
 EAPI="4"
 
-inherit base eutils depend.php
+inherit base autotools eutils depend.php
 
 DESCRIPTION="Lightweight high-performance web server"
 HOMEPAGE="http://www.lighttpd.net/"
@@ -93,6 +93,13 @@ pkg_setup() {
 	enewuser lighttpd -1 -1 /var/www/localhost/htdocs lighttpd
 }
 
+src_prepare() {
+	base_src_prepare
+	#dev-python/docutils installs rst2html.py not rst2html
+	sed -i -e 's|\(rst2html\)|\1.py|g' doc/outdated/Makefile.am || \
+		die "sed doc/Makefile.am failed"
+	eautoreconf
+}
 src_configure() {
 	econf --libdir=/usr/$(get_libdir)/${PN} \
 		--enable-lfs \
