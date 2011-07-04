@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.15.0-r1.ebuild,v 1.1 2011/06/08 09:41:59 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.15.0-r1.ebuild,v 1.2 2011/07/04 20:37:17 chithanh Exp $
 
 EAPI=4
 
@@ -15,6 +15,7 @@ IUSE=""
 RDEPEND="x11-libs/libXext
 	x11-libs/libXfixes
 	x11-libs/libXvMC
+	>=x11-libs/libdrm-2.4.23[video_cards_intel]
 	>=x11-libs/libxcb-1.5"
 DEPEND="${RDEPEND}"
 
