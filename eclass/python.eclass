@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.114 2011/07/04 11:00:52 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.115 2011/07/04 11:27:29 djc Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -25,22 +25,59 @@ _PYTHON_GLOBALLY_SUPPORTED_ABIS=(${_CPYTHON2_GLOBALLY_SUPPORTED_ABIS[@]} ${_CPYT
 # ================================================================================================
 
 _python_check_python_abi_matching() {
+	local pattern patterns patterns_list="0" PYTHON_ABI
+
+	while (($#)); do
+		case "$1" in
+			--patterns-list)
+				patterns_list="1"
+				;;
+			--)
+				shift
+				break
+				;;
+			-*)
+				die "${FUNCNAME}(): Unrecognized option '$1'"
+				;;
+			*)
+				break
+				;;
+		esac
+		shift
+	done
+
 	if [[ "$#" -ne 2 ]]; then
 		die "${FUNCNAME}() requires 2 arguments"
 	fi
 
-	if [[ "$2" == *"-cpython" ]]; then
-		[[ "$1" =~ ^[[:digit:]]+\.[[:digit:]]+$ && "$1" == ${2%-cpython} ]]
-	elif [[ "$2" == *"-jython" ]]; then
-		[[ "$1" == $2 ]]
-	else
-		if [[ "$1" =~ ^[[:digit:]]+\.[[:digit:]]+$ ]]; then
-			[[ "$1" == $2 ]]
-		elif [[ "$1" =~ ^[[:digit:]]+\.[[:digit:]]+-jython$ ]]; then
-			[[ "${1%-jython}" == $2 ]]
+	PYTHON_ABI="$1"
+
+	if [[ "${patterns_list}" == "0" ]]; then
+		pattern="$2"
+
+		if [[ "${pattern}" == *"-cpython" ]]; then
+			[[ "${PYTHON_ABI}" =~ ^[[:digit:]]+\.[[:digit:]]+$ && "${PYTHON_ABI}" == ${pattern%-cpython} ]]
+		elif [[ "${pattern}" == *"-jython" ]]; then
+			[[ "${PYTHON_ABI}" == ${pattern} ]]
 		else
-			die "${FUNCNAME}(): Unrecognized Python ABI '$1'"
+			if [[ "${PYTHON_ABI}" =~ ^[[:digit:]]+\.[[:digit:]]+$ ]]; then
+				[[ "${PYTHON_ABI}" == ${pattern} ]]
+			elif [[ "${PYTHON_ABI}" =~ ^[[:digit:]]+\.[[:digit:]]+-jython$ ]]; then
+				[[ "${PYTHON_ABI%-jython}" == ${pattern} ]]
+			else
+				die "${FUNCNAME}(): Unrecognized Python ABI '${PYTHON_ABI}'"
+			fi
 		fi
+	else
+		patterns="${2// /$'\n'}"
+
+		while read pattern; do
+			if _python_check_python_abi_matching "${PYTHON_ABI}" "${pattern}"; then
+				return 0
+			fi
+		done <<< "${patterns}"
+
+		return 1
 	fi
 }
 
