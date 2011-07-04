@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.2.7.ebuild,v 1.1 2011/07/03 23:23:21 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.2.7.ebuild,v 1.2 2011/07/04 07:51:12 alexxy Exp $
 
 EAPI=4
 
@@ -40,9 +40,6 @@ src_prepare() {
 		-i "${S}/etc/cgroup.release_agent" \
 		-i "${S}/src/plugins/proctrack/cgroup/xcgroup.h" \
 		|| die
-	# also we running slurm daemons under slurm user
-	sed -e '#SlurmdUser=root:SlurmdUser=slurm:g' \
-		-i "${S}/etc/slurm.conf.example"
 	# and pids should go to /var/run/slurm
 	sed -e 's:/var/run/slurmctld.pid:/var/run/slurm/slurmctld.pid:g' \
 		-e 's:/var/run/slurmd.pid:/var/run/slurm/slurmd.pid:g' \
