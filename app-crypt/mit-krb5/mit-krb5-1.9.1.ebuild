@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.9.1.ebuild,v 1.1 2011/05/06 07:54:31 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.9.1.ebuild,v 1.2 2011/07/04 15:11:23 eras Exp $
 
 EAPI=3
 
@@ -37,6 +37,9 @@ src_unpack() {
 
 src_configure() {
 	append-flags "-I${EPREFIX}/usr/include/et"
+	# QA
+	append-flags -fno-strict-aliasing
+	append-flags -fno-strict-overflow
 	use keyutils || export ac_cv_header_keyutils_h=no
 	econf \
 		$(use_with openldap ldap) \
