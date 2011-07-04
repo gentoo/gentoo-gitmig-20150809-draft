@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.249 2011/07/04 14:56:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.250 2011/07/04 17:48:20 hwoarang Exp $
+
+*lighttpd-1.4.29-r1 (04 Jul 2011)
+
+  04 Jul 2011; Markos Chandras <hwoarang@gentoo.org> -lighttpd-1.4.29.ebuild,
+  +lighttpd-1.4.29-r1.ebuild:
+  Add missing variable to avoid sandbox violation. Old ebuild removed
 
   04 Jul 2011; Markos Chandras <hwoarang@gentoo.org> lighttpd-1.4.29.ebuild:
   Bring back src_prepare function to fix the documentation makefile

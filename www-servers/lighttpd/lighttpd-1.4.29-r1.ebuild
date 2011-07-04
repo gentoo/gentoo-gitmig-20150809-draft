@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.29.ebuild,v 1.2 2011/07/04 14:56:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.29-r1.ebuild,v 1.1 2011/07/04 17:48:20 hwoarang Exp $
 
 EAPI="4"
 
@@ -48,7 +48,7 @@ DEPEND="${RDEPEND}
 
 # update certain parts of lighttpd.conf based on conditionals
 update_config() {
-	local config="/etc/lighttpd/lighttpd.conf"
+	local config="${D}/etc/lighttpd/lighttpd.conf"
 
 	# enable php/mod_fastcgi settings
 	use php && { sed -i -e 's|#.*\(include.*fastcgi.*$\)|\1|' ${config} || die; }
