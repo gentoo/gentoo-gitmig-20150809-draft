@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.20 2011/06/29 14:59:58 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.21 2011/07/04 11:39:50 pacho Exp $
+
+*gdk-pixbuf-2.22.1-r2 (04 Jul 2011)
+
+  04 Jul 2011; Pacho Ramos <pacho@gentoo.org> +gdk-pixbuf-2.22.1-r2.ebuild,
+  +files/gdk-pixbuf-2.22.1-CVE-2011-2485.patch:
+  GIF: Don't return a partially initialized pixbuf structure, fix security bug
+  #373999 by Tim Sammut.
 
   29 Jun 2011; Christoph Mende <angelos@gentoo.org>
   gdk-pixbuf-2.22.1-r1.ebuild:
