@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.76.ebuild,v 1.9 2011/05/16 18:39:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.76.ebuild,v 1.10 2011/07/04 10:28:12 grobian Exp $
 
 EAPI="3"
 
@@ -73,6 +73,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/exim-4.69-r1.27021.patch
 	epatch "${FILESDIR}"/exim-4.74-radius-db-ENV-clash.patch # 287426
 	epatch "${FILESDIR}"/exim-4.75-makefile-freebsd.patch
+	epatch "${FILESDIR}"/exim-4.76-as-needed.patch # 352265
 
 	use maildir && epatch "${FILESDIR}"/exim-4.20-maildir.patch
 
@@ -174,7 +175,7 @@ src_configure() {
 		sed -i "s:# RADIUS_CONFIG_FILE=/etc/radiusclient/radiusclient.conf:RADIUS_CONFIG_FILE=${EPREFIX}/etc/radiusclient/radiusclient.conf:" Makefile
 		sed -i "s:# RADIUS_LIB_TYPE=RADIUSCLIENT$:RADIUS_LIB_TYPE=RADIUSCLIENT:" Makefile
 	fi
-	echo "EXTRALIBS=${myconf} ${LDFLAGS}" >> Makefile
+	echo "EXTRALIBS=${myconf}" >> Makefile
 
 	# make iconv usage explicit
 	echo "HAVE_ICONV=yes" >> Makefile
