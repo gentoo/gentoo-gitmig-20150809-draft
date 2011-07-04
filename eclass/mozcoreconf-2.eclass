@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf-2.eclass,v 1.19 2011/04/02 17:36:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf-2.eclass,v 1.20 2011/07/04 19:26:42 anarchy Exp $
 #
 # mozcoreconf.eclass : core options for mozilla
 # inherit mozconfig-2 if you need USE flags
 
 inherit multilib flag-o-matic python
 
-IUSE="${IUSE} custom-optimization"
+IUSE="${IUSE} custom-cflags custom-optimization"
 
 RDEPEND="x11-libs/libXrender
 	x11-libs/libXt
@@ -151,7 +151,7 @@ mozconfig_init() {
 	filter-flags '-O*'
 
 	# Strip over-aggressive CFLAGS 
-	strip-flags
+	use custom-cflags || strip-flags
 
 	# Additional ARCH support
 	case "${ARCH}" in
