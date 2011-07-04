@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.845 2011/07/03 17:28:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.846 2011/07/04 16:49:56 nixnut Exp $
+
+  04 Jul 2011; nixnut <nixnut@gentoo.org> portage-2.1.10.3.ebuild:
+  ppc stable #373523
 
 *portage-2.1.10.4 (03 Jul 2011)
 
