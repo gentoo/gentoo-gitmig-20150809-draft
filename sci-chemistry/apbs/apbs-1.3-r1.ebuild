@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.3-r1.ebuild,v 1.6 2011/07/02 08:56:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.3-r1.ebuild,v 1.7 2011/07/04 09:27:37 jlec Exp $
 
 EAPI="3"
 
@@ -65,7 +65,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-1.2.1b-parallelbuild.patch \
 		"${FILESDIR}"/${P}-mainroutines.patch \
 		"${FILESDIR}"/${P}-zlib.patch \
-		"${FILESDIR}"/${P}-python.patch
+		"${FILESDIR}"/${P}-python.patch \
+		"${FILESDIR}"/${P}-blas.patch
 	sed "s:GENTOO_PKG_NAME:${PN}:g" \
 		-i Makefile.am || die "Cannot correct package name"
 	# this test is broken
