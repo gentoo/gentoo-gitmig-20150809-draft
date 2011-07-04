@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.28.8.ebuild,v 1.5 2011/07/01 21:07:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.28.8.ebuild,v 1.6 2011/07/04 10:51:44 pacho Exp $
 
 EAPI="3"
 GNOME_TARBALL_SUFFIX="xz"
@@ -75,32 +75,32 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.26.0-disable-locale-sensitive-test.patch"
 	epatch "${FILESDIR}/${PN}-2.26.0-disable-volumemonitor-broken-test.patch"
 
-	# Disable tests requiring dev-util/desktop-file-utils when not installed, bug #286629
-	if ! has_version dev-util/desktop-file-utils ; then
-		ewarn "Some tests will be skipped due dev-util/desktop-file-utils not being present on your system,"
-		ewarn "think on installing it to get these tests run."
-		sed -i -e "/appinfo\/associations/d" gio/tests/appinfo.c || die
-		sed -i -e "/desktop-app-info\/default/d" gio/tests/desktop-app-info.c || die
-		sed -i -e "/desktop-app-info\/fallback/d" gio/tests/desktop-app-info.c || die
-		sed -i -e "/desktop-app-info\/lastused/d" gio/tests/desktop-app-info.c || die
-	fi
-
-	# Disable tests requiring dev-python/dbus-python, bug #349236
-	if ! has_version dev-python/dbus-python ; then
-		ewarn "Some tests will be skipped due dev-python/dbus-python not being present on your system,"
-		ewarn "think on installing it to get these tests run."
-		sed -i -e "/connection\/filter/d" gio/tests/gdbus-connection.c || die
-		sed -i -e "/connection\/large_message/d" gio/tests/gdbus-connection-slow.c || die
-		sed -i -e "/gdbus\/proxy/d" gio/tests/gdbus-proxy.c || die
-		sed -i -e "/gdbus\/bus-watch-name/d" gio/tests/gdbus-names.c || die
-		sed -i -e "/gdbus\/proxy-well-known-name/d" gio/tests/gdbus-proxy-well-known-name.c || die
-		sed -i -e "/gdbus\/introspection-parser/d" gio/tests/gdbus-introspection.c || die
-		sed -i -e "/gdbus\/method-calls-in-thread/d" gio/tests/gdbus-threading.c || die
-	fi
-
 	if ! use test; then
 		# don't waste time building tests
 		sed 's/^\(.*\SUBDIRS .*\=.*\)tests\(.*\)$/\1\2/' -i $(find -name Makefile.am -o -name Makefile.in) || die
+	else
+		# Disable tests requiring dev-util/desktop-file-utils when not installed, bug #286629
+		if ! has_version dev-util/desktop-file-utils ; then
+			ewarn "Some tests will be skipped due dev-util/desktop-file-utils not being present on your system,"
+			ewarn "think on installing it to get these tests run."
+			sed -i -e "/appinfo\/associations/d" gio/tests/appinfo.c || die
+			sed -i -e "/desktop-app-info\/default/d" gio/tests/desktop-app-info.c || die
+			sed -i -e "/desktop-app-info\/fallback/d" gio/tests/desktop-app-info.c || die
+			sed -i -e "/desktop-app-info\/lastused/d" gio/tests/desktop-app-info.c || die
+		fi
+
+		# Disable tests requiring dev-python/dbus-python, bug #349236
+		if ! has_version dev-python/dbus-python ; then
+			ewarn "Some tests will be skipped due dev-python/dbus-python not being present on your system,"
+			ewarn "think on installing it to get these tests run."
+			sed -i -e "/connection\/filter/d" gio/tests/gdbus-connection.c || die
+			sed -i -e "/connection\/large_message/d" gio/tests/gdbus-connection-slow.c || die
+			sed -i -e "/gdbus\/proxy/d" gio/tests/gdbus-proxy.c || die
+			sed -i -e "/gdbus\/bus-watch-name/d" gio/tests/gdbus-names.c || die
+			sed -i -e "/gdbus\/proxy-well-known-name/d" gio/tests/gdbus-proxy-well-known-name.c || die
+			sed -i -e "/gdbus\/introspection-parser/d" gio/tests/gdbus-introspection.c || die
+			sed -i -e "/gdbus\/method-calls-in-thread/d" gio/tests/gdbus-threading.c || die
+		fi
 	fi
 
 	# Needed for the punt-python-check patch, disabling timeout test
