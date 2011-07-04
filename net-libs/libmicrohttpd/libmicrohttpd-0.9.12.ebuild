@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/libmicrohttpd-0.9.11.ebuild,v 1.1 2011/05/30 10:41:39 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/libmicrohttpd-0.9.12.ebuild,v 1.1 2011/07/04 21:07:02 chithanh Exp $
 
 EAPI=2
 
