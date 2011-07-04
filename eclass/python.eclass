@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.113 2011/07/04 10:59:25 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.114 2011/07/04 11:00:52 djc Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -360,11 +360,10 @@ _python_check_python_pkg_setup_execution() {
 #
 # This function is exported in EAPI 2 and 3 when PYTHON_USE_WITH or PYTHON_USE_WITH_OR variable
 # is set and always in EAPI >=4. Calling of this function is mandatory in EAPI >=4.
-#
-# This function can be used only in pkg_setup() phase.
 python_pkg_setup() {
-	# Check if phase is pkg_setup().
-	[[ "${EBUILD_PHASE}" != "setup" ]] && die "${FUNCNAME}() can be used only in pkg_setup() phase"
+	if [[ "${EBUILD_PHASE}" != "setup" ]]; then
+		die "${FUNCNAME}() can be used only in pkg_setup() phase"
+	fi
 
 	if [[ "$#" -ne 0 ]]; then
 		die "${FUNCNAME}() does not accept arguments"
@@ -515,14 +514,17 @@ python_convert_shebangs() {
 # @USAGE: [-q|--quiet]
 # @DESCRIPTION:
 # Delete needless files in installation image.
+#
+# This function can be used only in src_install() phase.
 python_clean_installation_image() {
+	if [[ "${EBUILD_PHASE}" != "install" ]]; then
+		die "${FUNCNAME}() can be used only in src_install() phase"
+	fi
+
 	_python_check_python_pkg_setup_execution
 	_python_initialize_prefix_variables
 
 	local file files=() quiet="0"
-
-	# Check if phase is src_install().
-	[[ "${EBUILD_PHASE}" != "install" ]] && die "${FUNCNAME}() can be used only in src_install() phase"
 
 	while (($#)); do
 		case "$1" in
@@ -586,14 +588,18 @@ python_clean_installation_image() {
 # @ECLASS-VARIABLE: PYTHON_EXPORT_PHASE_FUNCTIONS
 # @DESCRIPTION:
 # Set this to export phase functions for the following ebuild phases:
-# src_prepare, src_configure, src_compile, src_test, src_install.
+# src_prepare(), src_configure(), src_compile(), src_test(), src_install().
 if ! has "${EAPI:-0}" 0 1; then
 	python_src_prepare() {
-		_python_check_python_pkg_setup_execution
+		if [[ "${EBUILD_PHASE}" != "prepare" ]]; then
+			die "${FUNCNAME}() can be used only in src_prepare() phase"
+		fi
 
 		if ! _python_package_supporting_installation_for_multiple_python_abis; then
 			die "${FUNCNAME}() cannot be used in ebuilds of packages not supporting installation for multiple Python ABIs"
 		fi
+
+		_python_check_python_pkg_setup_execution
 
 		if [[ "$#" -ne 0 ]]; then
 			die "${FUNCNAME}() does not accept arguments"
@@ -604,11 +610,15 @@ if ! has "${EAPI:-0}" 0 1; then
 
 	for python_default_function in src_configure src_compile src_test; do
 		eval "python_${python_default_function}() {
-			_python_check_python_pkg_setup_execution
+			if [[ \"\${EBUILD_PHASE}\" != \"${python_default_function#src_}\" ]]; then
+				die \"\${FUNCNAME}() can be used only in ${python_default_function}() phase\"
+			fi
 
 			if ! _python_package_supporting_installation_for_multiple_python_abis; then
 				die \"\${FUNCNAME}() cannot be used in ebuilds of packages not supporting installation for multiple Python ABIs\"
 			fi
+
+			_python_check_python_pkg_setup_execution
 
 			python_execute_function -d -s -- \"\$@\"
 		}"
@@ -616,6 +626,10 @@ if ! has "${EAPI:-0}" 0 1; then
 	unset python_default_function
 
 	python_src_install() {
+		if [[ "${EBUILD_PHASE}" != "install" ]]; then
+			die "${FUNCNAME}() can be used only in src_install() phase"
+		fi
+
 		if ! _python_package_supporting_installation_for_multiple_python_abis; then
 			die "${FUNCNAME}() cannot be used in ebuilds of packages not supporting installation for multiple Python ABIs"
 		fi
@@ -690,7 +704,7 @@ _python_calculate_PYTHON_ABIS() {
 				die "USE_PYTHON variable does not enable any CPython ABI"
 			fi
 		else
-			local python_version python2_version= python3_version= support_python_major_version
+			local python_version python2_version python3_version support_python_major_version
 
 			if ! has_version "dev-lang/python"; then
 				die "${FUNCNAME}(): 'dev-lang/python' is not installed"
@@ -830,15 +844,14 @@ _python_restore_flags() {
 # Execute specified function for each value of PYTHON_ABIS, optionally passing additional
 # arguments. The specified function can use PYTHON_ABI and BUILDDIR variables.
 python_execute_function() {
-	_python_check_python_pkg_setup_execution
-
 	if ! _python_package_supporting_installation_for_multiple_python_abis; then
 		die "${FUNCNAME}() cannot be used in ebuilds of packages not supporting installation for multiple Python ABIs"
 	fi
 
+	_python_check_python_pkg_setup_execution
 	_python_set_color_variables
 
-	local action action_message action_message_template= default_function="0" failure_message failure_message_template= final_ABI="0" function iterated_PYTHON_ABIS nonfatal="0" previous_directory previous_directory_stack previous_directory_stack_length PYTHON_ABI quiet="0" return_code separate_build_dirs="0" source_dir=
+	local action action_message action_message_template default_function="0" failure_message failure_message_template final_ABI="0" function iterated_PYTHON_ABIS nonfatal="0" previous_directory previous_directory_stack previous_directory_stack_length PYTHON_ABI quiet="0" return_code separate_build_dirs="0" source_dir
 
 	while (($#)); do
 		case "$1" in
@@ -1063,11 +1076,11 @@ python_execute_function() {
 # @DESCRIPTION:
 # Copy unpacked sources of current package to separate build directory for each Python ABI.
 python_copy_sources() {
-	_python_check_python_pkg_setup_execution
-
 	if ! _python_package_supporting_installation_for_multiple_python_abis; then
 		die "${FUNCNAME}() cannot be used in ebuilds of packages not supporting installation for multiple Python ABIs"
 	fi
+
+	_python_check_python_pkg_setup_execution
 
 	local dir dirs=() PYTHON_ABI
 
@@ -1094,13 +1107,18 @@ python_copy_sources() {
 # Generate wrapper scripts. Existing files are overwritten only with --force option.
 # If --respect-EPYTHON option is specified, then generated wrapper scripts will
 # respect EPYTHON variable at run time.
+#
+# This function can be used only in src_install() phase.
 python_generate_wrapper_scripts() {
-	_python_check_python_pkg_setup_execution
+	if [[ "${EBUILD_PHASE}" != "install" ]]; then
+		die "${FUNCNAME}() can be used only in src_install() phase"
+	fi
 
 	if ! _python_package_supporting_installation_for_multiple_python_abis; then
 		die "${FUNCNAME}() cannot be used in ebuilds of packages not supporting installation for multiple Python ABIs"
 	fi
 
+	_python_check_python_pkg_setup_execution
 	_python_initialize_prefix_variables
 
 	local eselect_python_option file force="0" quiet="0" PYTHON_ABI PYTHON_ABIS_list python2_enabled="0" python3_enabled="0" respect_EPYTHON="0"
@@ -1341,14 +1359,21 @@ EOF
 # @USAGE: [-q|--quiet] [--] <intermediate_installation_images_directory>
 # @DESCRIPTION:
 # Merge intermediate installation images into installation image.
+#
+# This function can be used only in src_install() phase.
 python_merge_intermediate_installation_images() {
+	if [[ "${EBUILD_PHASE}" != "install" ]]; then
+		die "${FUNCNAME}() can be used only in src_install() phase"
+	fi
+
+	if ! _python_package_supporting_installation_for_multiple_python_abis; then
+		die "${FUNCNAME}() cannot be used in ebuilds of packages not supporting installation for multiple Python ABIs"
+	fi
+
 	_python_check_python_pkg_setup_execution
 	_python_initialize_prefix_variables
 
 	local b file files=() intermediate_installation_images_directory PYTHON_ABI quiet="0" regex shebang version_executable wrapper_scripts=() wrapper_scripts_set=()
-
-	# Check if phase is src_install().
-	[[ "${EBUILD_PHASE}" != "install" ]] && die "${FUNCNAME}() can be used only in src_install() phase"
 
 	while (($#)); do
 		case "$1" in
@@ -1524,8 +1549,9 @@ unset EPYTHON PYTHON_ABI
 #
 # This function can be used only in pkg_setup() phase.
 python_set_active_version() {
-	# Check if phase is pkg_setup().
-	[[ "${EBUILD_PHASE}" != "setup" ]] && die "${FUNCNAME}() can be used only in pkg_setup() phase"
+	if [[ "${EBUILD_PHASE}" != "setup" ]]; then
+		die "${FUNCNAME}() can be used only in pkg_setup() phase"
+	fi
 
 	if _python_package_supporting_installation_for_multiple_python_abis; then
 		die "${FUNCNAME}() cannot be used in ebuilds of packages supporting installation for multiple Python ABIs"
@@ -1575,11 +1601,11 @@ python_set_active_version() {
 # @DESCRIPTION: Mark current package for rebuilding by python-updater after
 # switching of active version of Python.
 python_need_rebuild() {
-	_python_check_python_pkg_setup_execution
-
 	if _python_package_supporting_installation_for_multiple_python_abis; then
 		die "${FUNCNAME}() cannot be used in ebuilds of packages supporting installation for multiple Python ABIs"
 	fi
+
+	_python_check_python_pkg_setup_execution
 
 	if [[ "$#" -ne 0 ]]; then
 		die "${FUNCNAME}() does not accept arguments"
@@ -2184,7 +2210,7 @@ python_execute_nosetests() {
 	_python_check_python_pkg_setup_execution
 	_python_set_color_variables
 
-	local PYTHONPATH_template= separate_build_dirs=
+	local PYTHONPATH_template separate_build_dirs
 
 	while (($#)); do
 		case "$1" in
@@ -2248,7 +2274,7 @@ python_execute_py.test() {
 	_python_check_python_pkg_setup_execution
 	_python_set_color_variables
 
-	local PYTHONPATH_template= separate_build_dirs=
+	local PYTHONPATH_template separate_build_dirs
 
 	while (($#)); do
 		case "$1" in
@@ -2312,7 +2338,7 @@ python_execute_trial() {
 	_python_check_python_pkg_setup_execution
 	_python_set_color_variables
 
-	local PYTHONPATH_template= separate_build_dirs=
+	local PYTHONPATH_template separate_build_dirs
 
 	while (($#)); do
 		case "$1" in
@@ -2497,11 +2523,12 @@ _python_clean_compiled_modules() {
 #
 # This function can be used only in pkg_postinst() phase.
 python_mod_optimize() {
+	if [[ "${EBUILD_PHASE}" != "postinst" ]]; then
+		die "${FUNCNAME}() can be used only in pkg_postinst() phase"
+	fi
+
 	_python_check_python_pkg_setup_execution
 	_python_initialize_prefix_variables
-
-	# Check if phase is pkg_postinst().
-	[[ "${EBUILD_PHASE}" != "postinst" ]] && die "${FUNCNAME}() can be used only in pkg_postinst() phase"
 
 	if ! has "${EAPI:-0}" 0 1 2 || _python_package_supporting_installation_for_multiple_python_abis || _python_implementation || [[ "${CATEGORY}/${PN}" == "sys-apps/portage" ]]; then
 		# PYTHON_ABI variable cannot be local in packages not supporting installation for multiple Python ABIs.
@@ -2756,13 +2783,14 @@ python_mod_optimize() {
 #
 # This function can be used only in pkg_postrm() phase.
 python_mod_cleanup() {
+	if [[ "${EBUILD_PHASE}" != "postrm" ]]; then
+		die "${FUNCNAME}() can be used only in pkg_postrm() phase"
+	fi
+
 	_python_check_python_pkg_setup_execution
 	_python_initialize_prefix_variables
 
 	local allow_evaluated_non_sitedir_paths="0" dir iterated_PYTHON_ABIS PYTHON_ABI="${PYTHON_ABI}" root search_paths=() sitedir
-
-	# Check if phase is pkg_postrm().
-	[[ "${EBUILD_PHASE}" != "postrm" ]] && die "${FUNCNAME}() can be used only in pkg_postrm() phase"
 
 	if _python_package_supporting_installation_for_multiple_python_abis; then
 		if has "${EAPI:-0}" 0 1 2 3 && [[ -z "${PYTHON_ABIS}" ]]; then
