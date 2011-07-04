@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/rack-mount-0.7.3.ebuild,v 1.2 2011/06/29 19:36:00 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/rack-mount-0.7.3.ebuild,v 1.3 2011/07/04 09:24:54 graaff Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ree18 jruby"
@@ -16,7 +16,7 @@ SRC_URI="https://github.com/josh/rack-mount/tarball/v${PV} -> ${P}.tgz"
 S="${WORKDIR}/josh-${PN}-*"
 
 LICENSE="MIT"
-SLOT="0"
+SLOT="0.7"
 KEYWORDS="~amd64 ~x86 ~x86-solaris"
 IUSE=""
 
