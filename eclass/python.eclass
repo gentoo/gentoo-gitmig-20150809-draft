@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.116 2011/07/04 11:27:53 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.117 2011/07/04 11:28:24 djc Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -708,9 +708,7 @@ _python_calculate_PYTHON_ABIS() {
 	_python_initial_sanity_checks
 
 	if [[ "$(declare -p PYTHON_ABIS 2> /dev/null)" != "declare -x PYTHON_ABIS="* ]] && has "${EAPI:-0}" 0 1 2 3 4; then
-		local PYTHON_ABI restricted_ABI restricted_ABIs support_ABI supported_PYTHON_ABIS
-
-		restricted_ABIs="${RESTRICT_PYTHON_ABIS// /$'\n'}"
+		local PYTHON_ABI
 
 		if [[ "$(declare -p USE_PYTHON 2> /dev/null)" == "declare -x USE_PYTHON="* ]]; then
 			local cpython_enabled="0"
@@ -728,14 +726,9 @@ _python_calculate_PYTHON_ABIS() {
 					cpython_enabled="1"
 				fi
 
-				support_ABI="1"
-				while read restricted_ABI; do
-					if _python_check_python_abi_matching "${PYTHON_ABI}" "${restricted_ABI}"; then
-						support_ABI="0"
-						break
-					fi
-				done <<< "${restricted_ABIs}"
-				[[ "${support_ABI}" == "1" ]] && export PYTHON_ABIS+="${PYTHON_ABIS:+ }${PYTHON_ABI}"
+				if ! _python_check_python_abi_matching --patterns-list "${PYTHON_ABI}" "${RESTRICT_PYTHON_ABIS}"; then
+					export PYTHON_ABIS+="${PYTHON_ABIS:+ }${PYTHON_ABI}"
+				fi
 			done
 
 			if [[ -z "${PYTHON_ABIS//[${IFS}]/}" ]]; then
@@ -761,21 +754,17 @@ _python_calculate_PYTHON_ABIS() {
 
 				python2_version="$("${EPREFIX}/usr/bin/python2" -c 'from sys import version_info; print(".".join(str(x) for x in version_info[:2]))')"
 
+				support_python_major_version="0"
 				for PYTHON_ABI in "${_CPYTHON2_GLOBALLY_SUPPORTED_ABIS[@]}"; do
-					support_python_major_version="1"
-					while read restricted_ABI; do
-						if _python_check_python_abi_matching "${PYTHON_ABI}" "${restricted_ABI}"; then
-							support_python_major_version="0"
-						fi
-					done <<< "${restricted_ABIs}"
-					[[ "${support_python_major_version}" == "1" ]] && break
+					if ! _python_check_python_abi_matching --patterns-list "${PYTHON_ABI}" "${RESTRICT_PYTHON_ABIS}"; then
+						support_python_major_version="1"
+						break
+					fi
 				done
 				if [[ "${support_python_major_version}" == "1" ]]; then
-					while read restricted_ABI; do
-						if _python_check_python_abi_matching "${python2_version}" "${restricted_ABI}"; then
-							die "Active version of CPython 2 is not supported by ${CATEGORY}/${PF}"
-						fi
-					done <<< "${restricted_ABIs}"
+					if _python_check_python_abi_matching --patterns-list "${python2_version}" "${RESTRICT_PYTHON_ABIS}"; then
+						die "Active version of CPython 2 is not supported by ${CATEGORY}/${PF}"
+					fi
 				else
 					python2_version=""
 				fi
@@ -788,21 +777,17 @@ _python_calculate_PYTHON_ABIS() {
 
 				python3_version="$("${EPREFIX}/usr/bin/python3" -c 'from sys import version_info; print(".".join(str(x) for x in version_info[:2]))')"
 
+				support_python_major_version="0"
 				for PYTHON_ABI in "${_CPYTHON3_GLOBALLY_SUPPORTED_ABIS[@]}"; do
-					support_python_major_version="1"
-					while read restricted_ABI; do
-						if _python_check_python_abi_matching "${PYTHON_ABI}" "${restricted_ABI}"; then
-							support_python_major_version="0"
-						fi
-					done <<< "${restricted_ABIs}"
-					[[ "${support_python_major_version}" == "1" ]] && break
+					if ! _python_check_python_abi_matching --patterns-list "${PYTHON_ABI}" "${RESTRICT_PYTHON_ABIS}"; then
+						support_python_major_version="1"
+						break
+					fi
 				done
 				if [[ "${support_python_major_version}" == "1" ]]; then
-					while read restricted_ABI; do
-						if _python_check_python_abi_matching "${python3_version}" "${restricted_ABI}"; then
-							die "Active version of CPython 3 is not supported by ${CATEGORY}/${PF}"
-						fi
-					done <<< "${restricted_ABIs}"
+					if _python_check_python_abi_matching --patterns-list "${python3_version}" "${RESTRICT_PYTHON_ABIS}"; then
+						die "Active version of CPython 3 is not supported by ${CATEGORY}/${PF}"
+					fi
 				else
 					python3_version=""
 				fi
