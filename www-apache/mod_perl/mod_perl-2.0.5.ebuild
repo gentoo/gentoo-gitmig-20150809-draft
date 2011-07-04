@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.5.ebuild,v 1.3 2011/07/01 17:56:29 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.5.ebuild,v 1.4 2011/07/04 22:07:57 idl0r Exp $
 
 EAPI="3"
 
@@ -12,15 +12,18 @@ HOMEPAGE="http://perl.apache.org/"
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
-IUSE="threads"
 SLOT="1"
 
 # Make sure we always use the latest Apache-Test version or even check the
 # version of the bundled Apache-Test!
+#
+# We need both, apache and perl but either apache without threads or perl with
+# ithreads, bug 373943
 DEPEND=">=dev-perl/Apache-Test-1.360
 	>=virtual/perl-CGI-3.08
-	threads? ( www-servers/apache[threads] dev-lang/perl[ithreads] )
-	!threads? ( www-servers/apache[-threads] dev-lang/perl[-ithreads] )"
+	dev-lang/perl
+	www-servers/apache
+	|| ( www-servers/apache[-threads] dev-lang/perl[ithreads] )"
 RDEPEND="${DEPEND}"
 PDEPEND=">=dev-perl/Apache-Reload-0.11
 	>=dev-perl/Apache-SizeLimit-0.95"
