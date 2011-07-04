@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.110 2011/03/10 17:49:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.111 2011/07/04 10:48:01 djc Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -2833,27 +2833,3 @@ python_mod_cleanup() {
 # ================================================================================================
 # ===================================== DEPRECATED FUNCTIONS =====================================
 # ================================================================================================
-
-# Scheduled for deletion on 2011-01-01.
-python_version() {
-	eerror "Use PYTHON() instead of python variable. Use python_get_*() instead of PYVER* variables."
-	die "${FUNCNAME}() is banned"
-}
-
-# Scheduled for deletion on 2011-01-01.
-python_mod_exists() {
-	eerror "Use USE dependencies and/or has_version() instead of ${FUNCNAME}()."
-	die "${FUNCNAME}() is banned"
-}
-
-# Scheduled for deletion on 2011-01-01.
-python_tkinter_exists() {
-	eerror "Use PYTHON_USE_WITH=\"xml\" and python_pkg_setup() instead of ${FUNCNAME}()."
-	die "${FUNCNAME}() is banned"
-}
-
-# Scheduled for deletion on 2011-04-01.
-python_mod_compile() {
-	eerror "Use python_mod_optimize() instead of ${FUNCNAME}()."
-	die "${FUNCNAME}() is banned"
-}
