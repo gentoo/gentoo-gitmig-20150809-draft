@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ansifilter/ansifilter-1.6.ebuild,v 1.1 2011/07/05 10:34:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ansifilter/ansifilter-1.6.ebuild,v 1.2 2011/07/05 10:36:41 radhermit Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="qt4"
 
 RDEPEND="
-	qt4? ( 
+	qt4? (
 		x11-libs/qt-core:4
 		x11-libs/qt-gui:4
 	)"
