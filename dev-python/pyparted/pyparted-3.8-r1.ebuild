@@ -1,11 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/pyparted-3.8.ebuild,v 1.2 2011/07/05 16:51:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/pyparted-3.8-r1.ebuild,v 1.1 2011/07/05 19:06:15 jer Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.7"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
+PYTHON_MODNAME="parted"
 
 inherit distutils
 
