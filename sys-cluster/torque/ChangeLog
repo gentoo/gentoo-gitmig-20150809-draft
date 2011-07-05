@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.118 2011/07/03 23:37:20 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.119 2011/07/05 20:04:52 jsbronder Exp $
+
+  05 Jul 2011; Justin Bronder <jsbronder@gentoo.org> torque-2.5.6-r1.ebuild,
+  metadata.xml:
+  Remove maui USE flag as it only modified RDEPEND.
 
 *torque-2.5.6-r1 (03 Jul 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.5.6-r1.ebuild,v 1.1 2011/07/03 23:37:20 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/torque-2.5.6-r1.ebuild,v 1.2 2011/07/05 20:04:52 jsbronder Exp $
 
 EAPI=2
 inherit flag-o-matic eutils linux-info
@@ -13,7 +13,7 @@ LICENSE="torque-2.5"
 
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="cpusets +crypt doc drmaa kernel_linux maui munge server +syslog threads tk xml"
+IUSE="cpusets +crypt doc drmaa kernel_linux munge server +syslog threads tk xml"
 
 # ed is used by makedepend-sh
 DEPEND_COMMON="sys-libs/ncurses
@@ -29,8 +29,7 @@ DEPEND="${DEPEND_COMMON}
 
 RDEPEND="${DEPEND_COMMON}
 	crypt? ( net-misc/openssh )
-	!crypt? ( net-misc/netkit-rsh )
-	maui? ( sys-cluster/maui[pbs] )"
+	!crypt? ( net-misc/netkit-rsh )"
 
 pkg_setup() {
 	PBS_SERVER_HOME="${PBS_SERVER_HOME:-/var/spool/torque}"
@@ -181,7 +180,6 @@ pkg_postinst() {
 	elog "http://www.clusterresources.com/wiki/doku.php?id=torque:torque_wiki"
 
 	elog "    For a basic setup, you may use emerge --config ${PN}"
-
 }
 
 # root will be setup as the primary operator/manager, the local machine
