@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.2.ebuild,v 1.9 2011/04/30 06:26:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.2.ebuild,v 1.10 2011/07/05 00:18:26 vapier Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit eutils flag-o-matic multilib autotools
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://source.winehq.org/git/wine.git"
-	inherit git
+	inherit git-2
 	SRC_URI=""
 	#KEYWORDS=""
 else
@@ -98,7 +98,7 @@ src_unpack() {
 	fi
 
 	if [[ ${PV} == "9999" ]] ; then
-		git_src_unpack
+		git-2_src_unpack
 	else
 		unpack ${MY_P}.tar.bz2
 	fi
