@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gprolog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.47 2011/07/01 20:33:45 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gprolog/ChangeLog,v 1.48 2011/07/05 07:47:32 keri Exp $
+
+  05 Jul 2011; <keri@gentoo.org> gprolog-1.4.0.ebuild,
+  +files/gprolog-1.4.0-ma2asm-pllong.patch:
+  Fix Ma2Asm PlLong calls on ppc. Reported by Laurent G. in bug #373881
 
   01 Jul 2011; <keri@gentoo.org> gprolog-1.4.0.ebuild,
   +files/gprolog-1.4.0-nodocs.patch:
