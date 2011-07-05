@@ -1,0 +1,3 @@
+# Which mooseFS roles should we start ?
+# Possible values: mfsmetalogger mfschunkserver mfsmaster
+#ROLES=""

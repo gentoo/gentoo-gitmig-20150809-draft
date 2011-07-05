@@ -1,0 +1,43 @@
+#!/sbin/runscript
+
+depend() {
+	need net
+}
+
+chkconfig() {
+	[ -z "${ROLES}" ] && { eerror "No role defined !"; return 1;}
+	for ROLE in ${ROLES}; do
+		if [ ! -f /etc/mfs/${ROLE}.cfg ]; then
+			eerror "Missing configuration file for role ${ROLE} !"
+			return 1
+		fi
+	done
+	return 0
+}
+
+start_roles() {
+	eindent
+	for ROLE in ${ROLES}; do
+		einfo "${ROLE}"
+		"${ROLE}" start 2>&1 | logger -s -p daemon.info -t mfs
+	done
+	eoutdent
+	return 0
+}
+
+start() {
+	ebegin "Starting mfs node"
+	chkconfig && start_roles
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping mfs node"
+	eindent
+	for ROLE in ${ROLES}; do
+		einfo "${ROLE}"
+		"${ROLE}" stop 2>&1 | logger -s -p daemon.info -t mfs
+	done
+	eoutdent
+	eend 0
+}
