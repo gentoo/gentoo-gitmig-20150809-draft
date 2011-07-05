@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.55 2011/07/05 18:17:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.56 2011/07/05 21:14:01 aballier Exp $
+
+  05 Jul 2011; Alexis Ballier <aballier@gentoo.org> packages:
+  let findutils be part of @system
 
   05 Jul 2011; Alexis Ballier <aballier@gentoo.org> package.use.force:
   force lzma on libarchive as its quite common these days
