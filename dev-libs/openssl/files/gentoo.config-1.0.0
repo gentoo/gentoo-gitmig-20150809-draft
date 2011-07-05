@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/files/gentoo.config-1.0.0,v 1.1 2010/08/23 06:02:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/files/gentoo.config-1.0.0,v 1.2 2011/07/05 07:01:04 vapier Exp $
 #
 # Openssl doesn't play along nicely with cross-compiling 
 # like autotools based projects, so let's teach it new tricks.
@@ -61,6 +61,7 @@ case ${CHOST} in
 	*-linux*)    system="linux";;
 	*-solaris*)  system="solaris";;
 	*-winnt*)    system="winnt";;
+	*mingw*)     system="mingw";;
 	*)           exit 0;;
 esac
 
@@ -143,6 +144,10 @@ solaris)
 	;;
 winnt)
 	machine=parity
+	;;
+mingw)
+	# special case ... no xxx-yyy style name
+	echo ${system}
 	;;
 esac
 
