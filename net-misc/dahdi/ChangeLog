@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.17 2011/04/28 21:37:53 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.18 2011/07/05 09:03:45 flameeyes Exp $
+
+  05 Jul 2011; Diego E. Pettenò <flameeyes@gentoo.org> dahdi-2.4.1.ebuild:
+  Check whether CRC_CCITT is enabled in kernel configuration; if it is not, it
+  would result in an unusable dahdi module. Bug #374109.
 
   28 Apr 2011; Thomas Kahle <tomka@gentoo.org> dahdi-2.4.1.ebuild:
   x86 stable per bug 364887
