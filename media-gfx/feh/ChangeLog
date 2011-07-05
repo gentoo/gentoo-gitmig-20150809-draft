@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/feh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.82 2011/06/11 12:10:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.83 2011/07/05 09:05:40 radhermit Exp $
+
+*feh-1.14.2 (05 Jul 2011)
+
+  05 Jul 2011; Tim Harder <radhermit@gentoo.org> +feh-1.14.2.ebuild:
+  Version bump.
 
   11 Jun 2011; Markus Meier <maekke@gentoo.org> feh-1.14.1.ebuild:
   add ~arm, bug #359133
