@@ -1,6 +1,12 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.79 2011/05/11 08:58:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.80 2011/07/05 09:54:28 jlec Exp $
+
+  05 Jul 2011; Justin Lecher <jlec@gentoo.org> qtiplot-0.9.8.6.ebuild,
+  +files/qtiplot-0.9.8.6-gold.patch, +files/qtiplot-0.9.8.6-kde.patch,
+  metadata.xml:
+  Fix for qt-*[kde] creating src/plot2D/Graph.cpp:5989:46: error: invalid use
+  of incomplete type 'struct QPaintEngine', #367503; Gold resistance
 
   11 May 2011; Justin Lecher <jlec@gentoo.org> qtiplot-0.9.8.6.ebuild:
   Fixes for Prefixed installation

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.6.ebuild,v 1.2 2011/05/11 08:58:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.6.ebuild,v 1.3 2011/07/05 09:54:28 jlec Exp $
 
 EAPI=3
 
@@ -27,6 +27,8 @@ done
 # qwtplot3d much modified from original upstream
 # >=x11-libs/qwt-5.3 they are using trunk checkouts
 CDEPEND="
+	x11-libs/qt-assistant
+	x11-libs/qt-gui
 	x11-libs/qt-opengl:4
 	x11-libs/qt-qt3support:4
 	|| ( >=x11-libs/qt-assistant-4.7.0:4[compat] <x11-libs/qt-assistant-4.7.0:4 )
@@ -54,6 +56,8 @@ PATCHES=(
 	"${FILESDIR}/${PN}-0.9.7.12-system-gl2ps.patch"
 	"${FILESDIR}/${PN}-0.9.7.10-dont-install-qwt.patch"
 	"${FILESDIR}/${P}-tamuanova.patch"
+	"${FILESDIR}/${P}-gold.patch"
+	"${FILESDIR}/${P}-kde.patch"
 	)
 
 pkg_setup() {

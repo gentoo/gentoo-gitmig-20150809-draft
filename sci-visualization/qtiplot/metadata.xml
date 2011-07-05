@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>sci</herd>
-  <maintainer>
-    <email>cryos@gentoo.org</email>
-  </maintainer>
-  <maintainer>
-  	<email>pva@gentoo.org</email>
-	<name>Peter Volkov</name>
-</maintainer>
+	<herd>sci</herd>
+	<maintainer>
+		<email>cryos@gentoo.org</email>
+	</maintainer>
+	<maintainer>
+		<email>pva@gentoo.org</email>
+		<name>Peter Volkov</name>
+	</maintainer>
 	<use>
 		<flag name="emf">Export support for Windows Enhanced Metafile</flag>
 		<flag name="ods">Import support for OpenOffice .ods sheets</flag>
 		<flag name="origin">Import support for Origin project files</flag>
 		<flag name="xls">Import support for Microsoft office excel sheets</flag>
-  </use>
-  <longdescription>
+	</use>
+	<longdescription>
 	Data analysis and scientific plotting package. This is a clone of the
 	popular Origin software available on another well known platform implemented
 	in Qt with powerful 2D and 3D data plotting, ASCII import and powerful
