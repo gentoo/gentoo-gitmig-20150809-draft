@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.23 2011/05/06 11:03:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.24 2011/07/05 02:46:37 halcy0n Exp $
+
+  05 Jul 2011; Mark Loeser <halcy0n@gentoo.org> lxc-0.7.4.1-r1.ebuild:
+  Mark ~ppc64
 
   06 May 2011; Diego E. Pettenò <flameeyes@gentoo.org> files/lxc.initd:
   Reset the environment when starting the container so that its environment is
