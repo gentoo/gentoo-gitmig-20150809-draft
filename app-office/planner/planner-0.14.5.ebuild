@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.5.ebuild,v 1.1 2011/07/05 13:10:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.5.ebuild,v 1.2 2011/07/05 19:37:01 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -8,14 +8,14 @@ GNOME2_LA_PUNT="yes"
 GNOME_TARBALL_SUFFIX="xz"
 PYTHON_DEPEND="python? 2"
 
-inherit python gnome2
+inherit python gnome2 eutils autotools
 
 DESCRIPTION="Project manager for Gnome"
 HOMEPAGE="http://live.gnome.org/Planner/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha amd64 ppc sparc x86"
 IUSE="doc eds python examples"
 
 RDEPEND=">=dev-libs/glib-2.6:2
@@ -35,7 +35,9 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	app-text/scrollkeeper
 	>=dev-util/intltool-0.35.5
-	doc? ( >=dev-util/gtk-doc-1.0 )"
+	doc? ( >=dev-util/gtk-doc-1.0 )
+	dev-util/gtk-doc-am
+	gnome-base/gnome-common"
 
 # FIXME: disable eds backend for now, it fails, upstream bug #654005
 pkg_setup() {
@@ -56,6 +58,12 @@ src_prepare() {
 
 	# Fix intltoolize broken file, see upstream #577133
 	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in || die "sed failed"
+
+	# Find python in a faster way, bug #344231, upstream bug #654044
+	epatch "${FILESDIR}/${PN}-0.14.5-find-python.patch"
+
+	intltoolize --force --copy --automake || die "intltoolize failed"
+	eautoreconf
 }
 
 src_install() {

@@ -1,6 +1,11 @@
 # ChangeLog for app-office/planner
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.60 2011/07/05 13:10:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.61 2011/07/05 19:37:01 pacho Exp $
+
+  05 Jul 2011; Pacho Ramos <pacho@gentoo.org> planner-0.14.5.ebuild,
+  +files/planner-0.14.5-find-python.patch:
+  Find python in a faster way, bug #344231, upstream bug #654044. Thanks a lot
+  to Arfrever Frehtes Taifersar Arahesis and Ed Catmur for their help.
 
 *planner-0.14.5 (05 Jul 2011)
 
