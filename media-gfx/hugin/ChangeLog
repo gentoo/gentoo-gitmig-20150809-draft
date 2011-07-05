@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.113 2011/06/24 16:42:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.114 2011/07/05 19:41:43 maekke Exp $
+
+  05 Jul 2011; Markus Meier <maekke@gentoo.org> hugin-2010.0.0.ebuild,
+  hugin-2010.2.0.ebuild, hugin-2010.4.0.ebuild, hugin-2011.0.0.ebuild:
+  inherit cmake-utils last by Andrej Lajovic, bug #373683
 
   24 Jun 2011; Brent Baude <ranger@gentoo.org> hugin-2010.2.0.ebuild:
   Marking hugin-2010.2.0 ppc for bug 347633

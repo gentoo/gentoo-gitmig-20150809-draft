@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2011.0.0.ebuild,v 1.1 2011/05/29 21:07:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-2011.0.0.ebuild,v 1.2 2011/07/05 19:41:43 maekke Exp $
 
 EAPI=4
 WX_GTK_VER="2.8"
 
-inherit cmake-utils wxwidgets versionator
+inherit wxwidgets versionator cmake-utils
 
 DESCRIPTION="GUI for the creation & processing of panoramic images"
 HOMEPAGE="http://hugin.sf.net"
