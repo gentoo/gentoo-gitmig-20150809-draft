@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.3.21.ebuild,v 1.1 2011/05/28 17:53:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.3.21.ebuild,v 1.2 2011/07/05 00:16:41 vapier Exp $
 
 EAPI="2"
 
@@ -33,7 +33,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="alsa capi cups custom-cflags dbus esd fontconfig +gecko gnutls gphoto2 gsm gstreamer hal jack jpeg lcms ldap mp3 nas ncurses nls openal +opengl +oss +perl png pulseaudio samba scanner ssl test +threads +truetype v4l +win32 +win64 +X xcomposite xinerama xml"
+IUSE="alsa capi cups custom-cflags dbus esd fontconfig +gecko gnutls gphoto2 gsm gstreamer hal jack jpeg lcms ldap mp3 nas ncurses nls openal opencl +opengl +oss +perl png pulseaudio samba scanner ssl test +threads +truetype v4l +win32 +win64 +X xcomposite xinerama xml"
 RESTRICT="test" #72375
 
 MLIB_DEPS="amd64? (
@@ -72,6 +72,7 @@ RDEPEND="truetype? ( >=media-libs/freetype-2.0.0 media-fonts/corefonts )
 	esd? ( media-sound/esound )
 	nas? ( media-libs/nas )
 	cups? ( net-print/cups )
+	opencl? ( x11-drivers/nvidia-drivers )
 	opengl? ( virtual/opengl )
 	pulseaudio? ( media-sound/pulseaudio )
 	gsm? ( media-sound/gsm )
@@ -151,6 +152,7 @@ do_configure() {
 		$(use_with nas) \
 		$(use_with nls gettextpo) \
 		$(use_with openal) \
+		$(use_with opencl) \
 		$(use_with opengl) \
 		$(use_with ssl openssl) \
 		$(use_with oss) \
