@@ -1,19 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-2.14.19-r1.ebuild,v 1.3 2011/07/01 21:12:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-2.14.19-r1.ebuild,v 1.4 2011/07/05 19:51:34 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
+GNOME_ORG_MODULE="ORBit2"
 
 inherit gnome2 toolchain-funcs autotools
 
-MY_PN="ORBit2"
-MY_P="${MY_PN}-${PV}"
-S=${WORKDIR}/${MY_P}
-
 DESCRIPTION="ORBit2 is a high-performance CORBA ORB"
-HOMEPAGE="http://www.gnome.org/"
-SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
+HOMEPAGE="http://projects.gnome.org/ORBit2/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="2"
