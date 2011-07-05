@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.778 2011/07/05 05:43:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.779 2011/07/05 06:00:40 vapier Exp $
+
+*glibc-2.13-r3 (05 Jul 2011)
+
+  05 Jul 2011; Mike Frysinger <vapier@gentoo.org> +glibc-2.13-r3.ebuild:
+  Push out accumulated fixes.
 
   05 Jul 2011; Mike Frysinger <vapier@gentoo.org> glibc-2.10.1-r1.ebuild:
   Add make-3.82 patch to older version too #373837 by Raúl Porcel.
