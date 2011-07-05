@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/johntheripper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.132 2011/03/08 19:33:41 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.133 2011/07/05 14:01:52 c1pher Exp $
+
+*johntheripper-1.7.8 (05 Jul 2011)
+
+  05 Jul 2011; Dane Smith <c1pher@gentoo.org> +johntheripper-1.7.8.ebuild:
+  Version bump wrt bug 374123. Move to EAPI 4. Add REQUIRED_USE so that
+  openmp can't be used with minimal since the community patches are what
+  provied openmp support. Remove no longer needed || die.
 
   08 Mar 2011; Jonathan Callen <abcd@gentoo.org> johntheripper-1.7.6-r1.ebuild:
   Add prefix keywords, support
