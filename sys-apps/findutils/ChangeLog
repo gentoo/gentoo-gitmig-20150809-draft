@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.195 2011/05/11 15:00:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.196 2011/07/05 21:08:17 vapier Exp $
+
+*findutils-4.5.10-r1 (05 Jul 2011)
+*findutils-4.4.2-r1 (05 Jul 2011)
+
+  05 Jul 2011; Mike Frysinger <vapier@gentoo.org> +findutils-4.4.2-r1.ebuild,
+  +findutils-4.5.10-r1.ebuild:
+  Drop --without-included-regex as it breaks systems more than it saves size.
 
 *findutils-4.5.10 (11 May 2011)
 
