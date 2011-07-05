@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/crossdev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.77 2011/07/05 06:48:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.78 2011/07/05 06:49:04 vapier Exp $
+
+*crossdev-20110705 (05 Jul 2011)
+
+  05 Jul 2011; Mike Frysinger <vapier@gentoo.org> +crossdev-20110705.ebuild:
+  Push out multilib fixes.
 
   05 Jul 2011; Mike Frysinger <vapier@gentoo.org> crossdev-20100814.ebuild,
   crossdev-20101011.ebuild, crossdev-20110310.ebuild, crossdev-99999999.ebuild:
