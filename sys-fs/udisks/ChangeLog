@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udisks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.44 2011/06/30 00:18:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.45 2011/07/05 10:14:12 ssuominen Exp $
+
+*udisks-1.0.3-r1 (05 Jul 2011)
+
+  05 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> +udisks-1.0.3-r1.ebuild,
+  +files/udisks-1.0.3-mkfs-tempdir.patch:
+  Use /tmp instead of /var/run/udisks wrt #333893 by Diego Elio Pettenò.
 
 *udisks-1.0.3 (30 Jun 2011)
 

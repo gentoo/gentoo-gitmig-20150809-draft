@@ -1,0 +1,17 @@
+The daemon doesn't create /var/run/udisks
+
+http://bugs.gentoo.org/show_bug.cgi?id=333893
+http://bugs.freedesktop.org/show_bug.cgi?id=24265
+http://bugs.freedesktop.org/show_bug.cgi?id=36589
+
+--- src/helpers/job-mkfs.c
++++ src/helpers/job-mkfs.c
+@@ -546,7 +546,7 @@
+   /* take ownership of the device if requested */
+   if (take_ownership_uid != 0 || take_ownership_gid != 0)
+     {
+-      char dir[256] = PACKAGE_LOCALSTATE_DIR "/run/udisks/job-mkfs-XXXXXX";
++      char dir[256] = "/tmp/job-mkfs-XXXXXX";
+ 
+       if (mkdtemp (dir) == NULL)
+         {
