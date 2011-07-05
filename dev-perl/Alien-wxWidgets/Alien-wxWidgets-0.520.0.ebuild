@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/Alien-wxWidgets-0.520.0.ebuild,v 1.1 2011/06/06 17:02:40 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/Alien-wxWidgets-0.520.0.ebuild,v 1.2 2011/07/05 19:32:23 tove Exp $
 
 EAPI=4
 
 WX_GTK_VER="2.8"
 MODULE_AUTHOR=MDOOTSON
 MODULE_VERSION=0.52
-inherit perl-module wxwidgets
+inherit wxwidgets perl-module
 
 DESCRIPTION="Building, finding and using wxWidgets binaries"
 

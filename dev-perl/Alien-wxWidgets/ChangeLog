@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Alien-wxWidgets
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/ChangeLog,v 1.30 2011/06/06 17:02:40 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/ChangeLog,v 1.31 2011/07/05 19:32:23 tove Exp $
+
+  05 Jul 2011; Torsten Veller <tove@gentoo.org> Alien-wxWidgets-0.47.ebuild,
+  Alien-wxWidgets-0.51.ebuild, Alien-wxWidgets-0.520.0.ebuild:
+  Inherit perl after wxwidgets (#374129) broken by wxwidgets inheriting base
+  (#372831)
 
 *Alien-wxWidgets-0.520.0 (06 Jun 2011)
 
