@@ -1,15 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.8.0-r1.ebuild,v 1.3 2011/06/11 14:06:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.8.0-r1.ebuild,v 1.4 2011/07/05 01:00:30 nerdboy Exp $
 
 EAPI="2"
 
 WANT_AUTOCONF="2.5"
 RUBY_OPTIONAL="yes"
 USE_RUBY="ruby18"
-PYTHON_DEPEND="python? *:2.6"
+PYTHON_DEPEND="python? 2:2.6"
 
-inherit autotools eutils perl-module python ruby-ng toolchain-funcs
+inherit autotools eutils libtool perl-module python ruby-ng toolchain-funcs
 
 DESCRIPTION="GDAL is a translator library for raster geospatial data formats (includes OGR support)"
 HOMEPAGE="http://www.gdal.org/"
@@ -57,6 +57,13 @@ DEPEND="${RDEPEND}
 AT_M4DIR="${S}/m4"
 MAKEOPTS+=" -j1"
 
+pkg_setup() {
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
+}
+
 src_unpack() {
 	# prevent ruby-ng.eclass from messing with the src path
 	default
@@ -69,8 +76,10 @@ src_prepare() {
 		-e "s:@exec_prefix@/doc:@exec_prefix@/share/doc/${PF}/html:g" \
 		GDALmake.opt.in || die
 
+	# the second sed expression should fix bug 371075
 	sed -i \
 		-e "s:setup.py install:setup.py install --root=\$(DESTDIR):" \
+		-e "s:--prefix=\$(DESTDIR):--prefix=:" \
 		swig/python/GNUmakefile || die
 
 	epatch "${FILESDIR}"/1.7.2-ruby_cflags.patch
@@ -81,7 +90,11 @@ src_prepare() {
 		&& epatch "${FILESDIR}"/${PN}-1.5.0-install_name.patch \
 		|| epatch "${FILESDIR}"/${PN}-1.5.0-soname.patch
 
-	eautoreconf
+	# autoheader fail
+	eaclocal
+	eautoconf
+	eautomake
+	elibtoolize
 }
 
 src_configure() {
@@ -234,6 +247,11 @@ src_install() {
 }
 
 pkg_postinst() {
+	if use python; then
+		    python_need_rebuild
+		    python_mod_optimize $(python_get_sitedir)/${PN}.py \
+			    $(python_get_sitedir)/ogr.py
+	fi
 	echo
 	elog "Check available image and data formats after building with"
 	elog "gdalinfo and ogrinfo (using the --formats switch)."
