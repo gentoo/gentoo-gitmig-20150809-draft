@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5510 2011/07/04 09:28:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5511 2011/07/05 16:03:43 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Jul 2011; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Mask >=dev-python/pyparted-3.8 (bug #370163).
 
   04 Jul 2011; Hans de Graaff <graaff@gentoo.org> +updates/3Q-2011:
   Slot move rack-mount into slots. Start new quarter file.
