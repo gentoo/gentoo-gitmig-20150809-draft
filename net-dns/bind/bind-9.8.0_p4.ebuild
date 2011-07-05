@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.0_p4.ebuild,v 1.1 2011/07/05 17:00:12 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.0_p4.ebuild,v 1.2 2011/07/05 17:10:14 idl0r Exp $
 
 EAPI="3"
 
@@ -86,7 +86,7 @@ src_prepare() {
 		fi
 
 		if use odbc; then
-			epatch "${FILESDIR}/${P}-odbc-dlz-detect.patch"
+			epatch "${FILESDIR}/${PN}-9.7.3-odbc-dlz-detect.patch"
 		fi
 	fi
 
