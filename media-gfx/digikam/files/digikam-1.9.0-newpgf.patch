@@ -1,0 +1,92 @@
+diff -ruN digikam-1.9.0.prepared/cmake/modules/FindPGF.cmake digikam-1.9.0/cmake/modules/FindPGF.cmake
+--- digikam-1.9.0.prepared/cmake/modules/FindPGF.cmake	2011-02-27 19:58:23.000000000 +0100
++++ digikam-1.9.0/cmake/modules/FindPGF.cmake	2011-07-05 12:03:41.000000000 +0200
+@@ -1,9 +1,10 @@
+ # - Try to find libpgf
+ # Once done this will define
+ #
+-#  PGF_FOUND - system has libgf
+-#  PGF_INCLUDE_DIRS - the libpgf include directory
+-#  PGF_LIBRARIES - Link these to use libpgf
++#  PGF_FOUND            - system has libgf
++#  PGF_INCLUDE_DIRS     - the libpgf include directory
++#  PGF_LIBRARIES        - Link these to use libpgf
++#  PGF_CODEC_VERSION_ID - PGF codec version ID.
+ 
+ # PKG-CONFIG is required.
+ INCLUDE(FindPkgConfig REQUIRED)
+@@ -12,4 +13,15 @@
+ 	INCLUDE(FindPkgConfig)
+ 
+ 	PKG_CHECK_MODULES(PGF libpgf)
++
++	MESSAGE(STATUS "PGF_INCLUDE_DIRS     = ${PGF_INCLUDE_DIRS}")
++	MESSAGE(STATUS "PGF_INCLUDEDIR       = ${PGF_INCLUDEDIR}")
++	MESSAGE(STATUS "PGF_LIBRARIES        = ${PGF_LIBRARIES}")
++	MESSAGE(STATUS "PGF_LDFLAGS          = ${PGF_LDFLAGS}")
++	MESSAGE(STATUS "PGF_CFLAGS           = ${PGF_CFLAGS}")
++	MESSAGE(STATUS "PGF_VERSION          = ${PGF_VERSION}")
++
++	STRING(REPLACE "." "" PGF_CODEC_VERSION_ID "${PGF_VERSION}")
++	MESSAGE(STATUS "PGF_CODEC_VERSION_ID = ${PGF_CODEC_VERSION_ID}")
++
+ ENDIF(PKG_CONFIG_FOUND)
+diff -ruN digikam-1.9.0.prepared/config-digikam.h.cmake digikam-1.9.0/config-digikam.h.cmake
+--- digikam-1.9.0.prepared/config-digikam.h.cmake	2011-02-27 19:58:07.000000000 +0100
++++ digikam-1.9.0/config-digikam.h.cmake	2011-07-05 12:05:59.000000000 +0200
+@@ -54,6 +54,8 @@
+ /* Define to 1 if you have Nepomuk shared libraries installed */
+ #cmakedefine HAVE_NEPOMUK 1
+ 
++#define PGFCodecVersionID 0x${PGF_CODEC_VERSION_ID}
++
+ #define LIBEXEC_INSTALL_DIR "${LIBEXEC_INSTALL_DIR}"
+ 
+ #endif /* CONFIG_DIGIKAM_H */
+diff -ruN digikam-1.9.0.prepared/libs/dimg/loaders/pgfloader.cpp digikam-1.9.0/libs/dimg/loaders/pgfloader.cpp
+--- digikam-1.9.0.prepared/libs/dimg/loaders/pgfloader.cpp	2011-02-27 19:58:08.000000000 +0100
++++ digikam-1.9.0/libs/dimg/loaders/pgfloader.cpp	2011-07-05 12:22:56.000000000 +0200
+@@ -29,6 +29,7 @@
+ //#define ENABLE_DEBUG_MESSAGES
+ 
+ #include "pgfloader.h"
++#include "config-digikam.h"
+ 
+ // C Ansi includes
+ 
+@@ -435,7 +436,11 @@
+                          CallbackForLibPGF, this);
+ 
+         UINT32 nWrittenBytes = 0;
++#if PGFCodecVersionID >= 0x061124
++        pgf.Write(&stream, &nWrittenBytes, CallbackForLibPGF, this);
++#else
+         pgf.Write(&stream, 0, CallbackForLibPGF, &nWrittenBytes, this);
++#endif
+ 
+ #ifdef ENABLE_DEBUG_MESSAGES
+         kDebug() << "PGF width     = " << header.width;
+diff -ruN digikam-1.9.0.prepared/libs/threadimageio/pgfutils.cpp digikam-1.9.0/libs/threadimageio/pgfutils.cpp
+--- digikam-1.9.0.prepared/libs/threadimageio/pgfutils.cpp	2011-02-27 19:58:07.000000000 +0100
++++ digikam-1.9.0/libs/threadimageio/pgfutils.cpp	2011-07-05 12:19:15.000000000 +0200
+@@ -46,6 +46,7 @@
+ // LibPGF includes
+ 
+ #include "PGFimage.h"
++#include "config-digikam.h"
+ 
+ namespace Digikam
+ {
+@@ -136,7 +137,12 @@
+         // TODO : optimize memory allocation...
+         CPGFMemoryStream stream(256000);
+         UINT32 nWrittenBytes = 0;
++
++#if PGFCodecVersionID >= 0x061124
++        pgfImg.Write(&stream, &nWrittenBytes);
++#else
+         pgfImg.Write(&stream, 0, NULL, &nWrittenBytes);
++#endif
+ 
+         data = QByteArray((const char*)stream.GetBuffer(), nWrittenBytes);
+     }

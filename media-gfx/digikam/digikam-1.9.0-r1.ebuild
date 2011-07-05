@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.9.0-r1.ebuild,v 1.4 2011/06/07 02:51:20 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.9.0-r1.ebuild,v 1.5 2011/07/05 11:39:35 dilfridge Exp $
 
 EAPI=4
 
@@ -69,6 +69,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}"-1.8.0-tests.patch
 	"${FILESDIR}/${PN}"-1.9.0-nomysql.patch
 	"${FILESDIR}/${PN}"-1.9.0-turbo.patch
+	"${FILESDIR}/${PN}"-1.9.0-newpgf.patch
 )
 
 src_prepare() {
