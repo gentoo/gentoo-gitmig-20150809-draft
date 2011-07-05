@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.90 2011/04/20 18:13:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.91 2011/07/05 03:23:12 aballier Exp $
+
+  05 Jul 2011; Alexis Ballier <aballier@gentoo.org> freebsd-lib-8.0.ebuild,
+  +files/freebsd-lib-8.0-gcc45.patch:
+  fix build with gcc 4.5, by Denis I. Polukarov, bug #362449
 
   20 Apr 2011; Ulrich Mueller <ulm@gentoo.org> freebsd-lib-7.2-r1.ebuild,
   freebsd-lib-8.0.ebuild:
