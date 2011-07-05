@@ -1,0 +1,10 @@
+# ChangeLog for app-text/ansifilter
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ansifilter/ChangeLog,v 1.1 2011/07/05 10:34:39 radhermit Exp $
+
+*ansifilter-1.6 (05 Jul 2011)
+
+  05 Jul 2011; Tim Harder <radhermit@gentoo.org> +ansifilter-1.6.ebuild,
+  +metadata.xml:
+  Initial import.
+
