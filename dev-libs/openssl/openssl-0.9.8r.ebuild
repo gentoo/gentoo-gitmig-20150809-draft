@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8r.ebuild,v 1.4 2011/03/16 03:39:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8r.ebuild,v 1.5 2011/07/05 07:01:57 vapier Exp $
 
 # this ebuild is only for the libcrypto.so.0.9.8 and libssl.so.0.9.8 SONAME for ABI compat
 
@@ -38,7 +38,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${PN}-0.9.7e-gentoo.patch
 	epatch "${FILESDIR}"/${PN}-0.9.8e-bsd-sparc64.patch
 	epatch "${FILESDIR}"/${PN}-0.9.8h-ldflags.patch #181438
 	epatch "${FILESDIR}"/${PN}-0.9.8m-binutils.patch #289130

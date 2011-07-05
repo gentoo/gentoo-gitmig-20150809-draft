@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0d.ebuild,v 1.10 2011/04/30 07:06:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0d.ebuild,v 1.11 2011/07/05 07:01:56 vapier Exp $
 
 EAPI="2"
 
@@ -32,7 +32,6 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.9.7e-gentoo.patch
 	epatch "${FILESDIR}"/${PN}-0.9.8l-binutils.patch #289130
 	epatch "${FILESDIR}"/${PN}-1.0.0a-ldflags.patch #327421
 	epatch "${FILESDIR}"/${PN}-1.0.0d-alpha-typo.patch #364699
