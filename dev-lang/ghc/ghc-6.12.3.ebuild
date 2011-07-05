@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3.ebuild,v 1.21 2011/02/25 12:36:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3.ebuild,v 1.22 2011/07/05 18:30:32 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -261,11 +261,15 @@ src_compile() {
 		# We can't depend on haddock except when bootstrapping when we
 		# must build docs and include them into the binary .tbz2 package
 		if use ghcbootstrap && use doc; then
-			echo XMLDocWays="html" >> mk/build.mk
-			echo HADDOCK_DOCS=YES >> mk/build.mk
+			echo "BUILD_DOCBOOK_PDF  = NO"  >> mk/build.mk
+			echo "BUILD_DOCBOOK_PS   = NO"  >> mk/build.mk
+			echo "BUILD_DOCBOOK_HTML = YES" >> mk/build.mk
+			echo "HADDOCK_DOCS       = YES" >> mk/build.mk
 		else
-			echo XMLDocWays="" >> mk/build.mk
-			echo HADDOCK_DOCS=NO >> mk/build.mk
+			echo "BUILD_DOCBOOK_PDF  = NO" >> mk/build.mk
+			echo "BUILD_DOCBOOK_PS   = NO" >> mk/build.mk
+			echo "BUILD_DOCBOOK_HTML = NO" >> mk/build.mk
+			echo "HADDOCK_DOCS       = NO" >> mk/build.mk
 		fi
 
 		sed -e "s|utils/haddock_dist_INSTALL_SHELL_WRAPPER = YES|utils/haddock_dist_INSTALL_SHELL_WRAPPER = NO|" \
@@ -389,7 +393,6 @@ pkg_postinst() {
 		ewarn
 		ewarn "\e[1;31m************************************************************************\e[0m"
 		ewarn
-		ebeep 12
 	fi
 
 	bash-completion_pkg_postinst

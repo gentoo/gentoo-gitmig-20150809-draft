@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3-r2.ebuild,v 1.2 2011/04/25 17:59:48 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.12.3-r2.ebuild,v 1.3 2011/07/05 18:30:32 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -403,11 +403,15 @@ src_configure() {
 		# We can't depend on haddock except when bootstrapping when we
 		# must build docs and include them into the binary .tbz2 package
 		if use ghcbootstrap && use doc; then
-			echo XMLDocWays="html" >> mk/build.mk
-			echo HADDOCK_DOCS=YES >> mk/build.mk
+			echo "BUILD_DOCBOOK_PDF  = NO"  >> mk/build.mk
+			echo "BUILD_DOCBOOK_PS   = NO"  >> mk/build.mk
+			echo "BUILD_DOCBOOK_HTML = YES" >> mk/build.mk
+			echo "HADDOCK_DOCS       = YES" >> mk/build.mk
 		else
-			echo XMLDocWays="" >> mk/build.mk
-			echo HADDOCK_DOCS=NO >> mk/build.mk
+			echo "BUILD_DOCBOOK_PDF  = NO" >> mk/build.mk
+			echo "BUILD_DOCBOOK_PS   = NO" >> mk/build.mk
+			echo "BUILD_DOCBOOK_HTML = NO" >> mk/build.mk
+			echo "HADDOCK_DOCS       = NO" >> mk/build.mk
 		fi
 
 		sed -e "s|utils/haddock_dist_INSTALL_SHELL_WRAPPER = YES|utils/haddock_dist_INSTALL_SHELL_WRAPPER = NO|" \

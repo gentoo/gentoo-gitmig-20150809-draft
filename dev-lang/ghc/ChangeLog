@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.205 2011/06/05 16:27:38 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.206 2011/07/05 18:30:32 slyfox Exp $
+
+  05 Jul 2011; Sergei Trofimovich <slyfox@gentoo.org> ghc-6.12.3.ebuild,
+  ghc-6.12.3-r2.ebuild:
+  Disable doc building when user didn't request it (bug #368195 by Valentin
+  David).
 
   05 Jun 2011; Sergei Trofimovich <slyfox@gentoo.org> -files/10ghc,
   -ghc-6.2.2.ebuild, -ghc-6.4.2.ebuild, -files/ghc-6.4.2-sparc32plus.patch,
