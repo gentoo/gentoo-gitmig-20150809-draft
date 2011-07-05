@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-11.07_beta1.ebuild,v 1.1 2011/06/30 07:53:16 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/mercury-11.07_beta1.ebuild,v 1.2 2011/07/05 07:07:57 keri Exp $
 
 EAPI=2
 
 inherit autotools elisp-common eutils flag-o-matic java-pkg-opt-2 multilib
 
-PATCHSET_VER="0"
+PATCHSET_VER="1"
 MY_PV=${PV/%?/-2011-06-28}
 MY_P=${PN}-compiler-${MY_PV/_/-}
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.140 2011/06/30 07:53:16 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.141 2011/07/05 07:07:57 keri Exp $
+
+  05 Jul 2011; <keri@gentoo.org> mercury-11.07_beta1.ebuild:
+  Provide upstream workaround for mgnuc problems with GCC 4.4-4.6 on x86
 
 *mercury-11.07_beta1 (30 Jun 2011)
 
