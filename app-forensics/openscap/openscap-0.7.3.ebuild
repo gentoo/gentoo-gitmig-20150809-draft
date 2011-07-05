@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/openscap-0.7.2.ebuild,v 1.1 2011/04/27 20:04:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/openscap-0.7.3.ebuild,v 1.1 2011/07/05 08:00:51 hwoarang Exp $
 
 EAPI=3
 
@@ -22,6 +22,7 @@ RDEPEND="!nss? ( dev-libs/libgcrypt )
 	sql? ( dev-db/opendbx )
 	dev-libs/libpcre
 	dev-libs/libxml2
+	dev-libs/libxslt
 	net-misc/curl"
 DEPEND="${RDEPEND}
 	perl? ( dev-lang/swig )

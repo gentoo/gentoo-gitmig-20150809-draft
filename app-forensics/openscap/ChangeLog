@@ -1,6 +1,13 @@
 # ChangeLog for app-forensics/openscap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/ChangeLog,v 1.5 2011/04/27 20:04:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/ChangeLog,v 1.6 2011/07/05 08:00:51 hwoarang Exp $
+
+*openscap-0.7.3 (05 Jul 2011)
+
+  05 Jul 2011; Markos Chandras <hwoarang@gentoo.org> -openscap-0.7.1-r1.ebuild,
+  -openscap-0.7.2.ebuild, +openscap-0.7.3.ebuild:
+  Version bump. Add missing dev-libs/libxslt dependency. Bug #373037. Thanks to
+  LABBE Corentin (Montjoie)
 
 *openscap-0.7.2 (27 Apr 2011)
 
