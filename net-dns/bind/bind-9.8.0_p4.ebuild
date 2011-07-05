@@ -1,22 +1,24 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.3.ebuild,v 1.7 2011/02/26 17:37:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.0_p4.ebuild,v 1.1 2011/07/05 17:00:12 idl0r Exp $
 
 EAPI="3"
 
-inherit eutils autotools toolchain-funcs flag-o-matic
+inherit eutils autotools toolchain-funcs flag-o-matic multilib
 
 MY_PV="${PV/_p/-P}"
+MY_PV="${MY_PV/_rc/rc}"
 MY_P="${PN}-${MY_PV}"
 
-SDB_LDAP_VER="1.1.0"
+SDB_LDAP_VER="1.1.0-fc14"
 
+# bind-9.8.0-P1-geoip-1.3.patch
 GEOIP_PV=1.3
 #GEOIP_PV_AGAINST="${MY_PV}"
-GEOIP_PV_AGAINST="9.7.2-P2"
-GEOIP_P="bind-geoip-${GEOIP_PV}"
-GEOIP_PATCH_A="${GEOIP_P}-${GEOIP_PV_AGAINST}.patch"
-GEOIP_DOC_A="${GEOIP_P}-readme.txt"
+GEOIP_PV_AGAINST="9.8.0-P1"
+GEOIP_P="bind-${GEOIP_PV_AGAINST}-geoip-${GEOIP_PV}"
+GEOIP_PATCH_A="${GEOIP_P}.patch"
+GEOIP_DOC_A="bind-geoip-1.3-readme.txt"
 GEOIP_SRC_URI_BASE="http://bind-geoip.googlecode.com/"
 
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"
@@ -24,14 +26,14 @@ HOMEPAGE="http://www.isc.org/software/bind"
 SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz
 	doc? ( mirror://gentoo/dyndns-samples.tbz2 )
 	geoip? ( ${GEOIP_SRC_URI_BASE}/files/${GEOIP_DOC_A}
-			 ${GEOIP_SRC_URI_BASE}/files/${GEOIP_PATCH_A} )"
-#	sdb-ldap? ( mirror://gentoo/bind-sdb-ldap-${SDB_LDAP_VER}.tar.bz2 )
+			 ${GEOIP_SRC_URI_BASE}/files/${GEOIP_PATCH_A} )
+	sdb-ldap? ( http://ftp.disconnected-by-peer.at/pub/bind-sdb-ldap-${SDB_LDAP_VER}.patch.bz2 )"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads
-	resolvconf urandom xml geoip gssapi" # sdb-ldap
+	resolvconf urandom xml geoip gssapi sdb-ldap"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	mysql? ( >=virtual/mysql-4.0 )
@@ -42,8 +44,8 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	threads? ( >=sys-libs/libcap-2.1.0 )
 	xml? ( dev-libs/libxml2 )
 	geoip? ( >=dev-libs/geoip-1.4.6 )
-	gssapi? ( virtual/krb5 )"
-#	sdb-ldap? ( net-nds/openldap )
+	gssapi? ( virtual/krb5 )
+	sdb-ldap? ( net-nds/openldap )"
 
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )
@@ -93,15 +95,17 @@ src_prepare() {
 
 	# sdb-ldap patch as per  bug #160567
 	# Upstream URL: http://bind9-ldap.bayour.com/
-	# FIXME: bug 302735
-#	use sdb-ldap && epatch "${WORKDIR}"/sdb-ldap/${PN}-sdb-ldap-${SDB_LDAP_VER}.patch
+	# New patch take from bug 302735
+	if use sdb-ldap; then
+		epatch "${WORKDIR}"/${PN}-sdb-ldap-${SDB_LDAP_VER}.patch
+		cp -fp contrib/sdb/ldap/ldapdb.[ch] bin/named
+		cp -fp contrib/sdb/ldap/{ldap2zone.1,ldap2zone.c} bin/tools
+		cp -fp contrib/sdb/ldap/{zone2ldap.1,zone2ldap.c} bin/tools
+	fi
 
 	if use geoip; then
 		cp "${DISTDIR}"/${GEOIP_PATCH_A} "${S}" || die
-		sed -i -e 's/RELEASETYPE=-P/RELEASETYPE=/' \
-			-e 's/-RELEASEVER=2/-RELEASEVER=/' \
-			-e 's/+RELEASEVER=2-geoip-1.3/+RELEASEVER=-geoip-1.3/' \
-			${GEOIP_PATCH_A} || die
+		sed -i -e 's:RELEASEVER=1:RELEASEVER=4:' ${GEOIP_PATCH_A} || die
 		epatch ${GEOIP_PATCH_A}
 	fi
 
@@ -208,7 +212,7 @@ src_install() {
 		tar xf "${DISTDIR}"/dyndns-samples.tbz2 || die
 	fi
 
-	use geoip && dodoc "${DISTDIR}"/${GEOIP_P}-readme.txt
+	use geoip && dodoc "${DISTDIR}"/${GEOIP_DOC_A}
 
 	insinto /etc/bind
 	newins "${FILESDIR}"/named.conf-r5 named.conf || die
@@ -221,8 +225,14 @@ src_install() {
 	newins "${FILESDIR}"/127.zone-r1 127.zone || die
 	newins "${FILESDIR}"/localhost.zone-r3 localhost.zone || die
 
-	newinitd "${FILESDIR}"/named.init-r9 named || die
-	newconfd "${FILESDIR}"/named.confd-r5 named || die
+	newinitd "${FILESDIR}"/named.init-r11 named || die
+	newconfd "${FILESDIR}"/named.confd-r6 named || die
+
+	if use ssl && [ -e /usr/lib/engines/libgost.so ]; then
+		sed -i -e 's/^OPENSSL_LIBGOST=${OPENSSL_LIBGOST:-0}$/OPENSSL_LIBGOST=${OPENSSL_LIBGOST:-1}/' "${D}/etc/init.d/named" || die
+	else
+		sed -i -e 's/^OPENSSL_LIBGOST=${OPENSSL_LIBGOST:-1}$/OPENSSL_LIBGOST=${OPENSSL_LIBGOST:-0}/' "${D}/etc/init.d/named" || die
+	fi
 
 	newenvd "${FILESDIR}"/10bind.env 10bind || die
 
@@ -235,15 +245,16 @@ src_install() {
 	dosym /var/bind/named.cache /var/bind/root.cache || die
 	dosym /var/bind/pri /etc/bind/pri || die
 	dosym /var/bind/sec /etc/bind/sec || die
-	keepdir /var/bind/sec
+	dosym /var/bind/dyn /etc/bind/dyn || die
+	keepdir /var/bind/{pri,sec,dyn}
 
 	dodir /var/{run,log}/named || die
 
-	fowners root:named /{etc,var}/bind /var/{run,log}/named /var/bind/{sec,pri}
+	fowners root:named /{etc,var}/bind /var/{run,log}/named /var/bind/{sec,pri,dyn}
 	fowners root:named /var/bind/named.cache /var/bind/pri/{127,localhost}.zone /etc/bind/{bind.keys,named.conf}
 	fperms 0640 /var/bind/named.cache /var/bind/pri/{127,localhost}.zone /etc/bind/{bind.keys,named.conf}
 	fperms 0750 /etc/bind /var/bind/pri
-	fperms 0770 /var/{run,log}/named /var/bind/{,sec}
+	fperms 0770 /var/{run,log}/named /var/bind/{,sec,dyn}
 }
 
 pkg_postinst() {
@@ -293,11 +304,11 @@ pkg_postinst() {
 	ewarn
 	ewarn "NOTE: If you upgrade from <net-dns/bind-9.4.3_p5-r1, you may encounter permission problems"
 	ewarn "To fix the permissions do:"
-	ewarn "chown root:named /{etc,var}/bind /var/{run,log}/named /var/bind/{sec,pri}"
+	ewarn "chown root:named /{etc,var}/bind /var/{run,log}/named /var/bind/{sec,pri,dyn}"
 	ewarn "chown root:named /var/bind/named.cache /var/bind/pri/{127,localhost}.zone /etc/bind/{bind.keys,named.conf}"
 	ewarn "chmod 0640 /var/bind/named.cache /var/bind/pri/{127,localhost}.zone /etc/bind/{bind.keys,named.conf}"
 	ewarn "chmod 0750 /etc/bind /var/bind/pri"
-	ewarn "chmod 0770 /var/{run,log}/named /var/bind/{,sec}"
+	ewarn "chmod 0770 /var/{run,log}/named /var/bind/{,sec,dyn}"
 	ewarn
 }
 
@@ -328,9 +339,16 @@ pkg_config() {
 	mkdir -m 0755 -p ${CHROOT}/{dev,etc,var/{run,log}}
 	mkdir -m 0750 -p ${CHROOT}/etc/bind
 	mkdir -m 0770 -p ${CHROOT}/var/{bind,{run,log}/named}
+	# As of bind 9.8.0
+	if has_version net-dns/bind[ssl] -a -e /usr/lib/engines/libgost.so; then
+		if [ "$(get_libdir)" = "lib64" ]; then
+			mkdir -m 0755 -p ${CHROOT}/usr/lib64/engines
+			ln -s lib64 ${CHROOT}/usr/lib
+		else
+			mkdir -m 0755 -p ${CHROOT}/usr/lib/engines
+		fi
+	fi
 	chown root:named ${CHROOT} ${CHROOT}/var/{bind,{run,log}/named} ${CHROOT}/etc/bind
-
-	cp /etc/localtime ${CHROOT}/etc/localtime
 
 	mknod ${CHROOT}/dev/null c 1 3
 	chmod 0666 ${CHROOT}/dev/null

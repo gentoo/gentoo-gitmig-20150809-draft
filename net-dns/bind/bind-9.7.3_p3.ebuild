@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.3-r1.ebuild,v 1.2 2011/02/27 22:27:48 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.3_p3.ebuild,v 1.1 2011/07/05 17:00:12 idl0r Exp $
 
 EAPI="3"
 
@@ -84,7 +84,7 @@ src_prepare() {
 		fi
 
 		if use odbc; then
-			epatch "${FILESDIR}/${P}-odbc-dlz-detect.patch"
+			epatch "${FILESDIR}/bind-9.7.3-odbc-dlz-detect.patch"
 		fi
 	fi
 
@@ -103,9 +103,8 @@ src_prepare() {
 
 	if use geoip; then
 		cp "${DISTDIR}"/${GEOIP_PATCH_A} "${S}" || die
-		sed -i -e 's/RELEASETYPE=-P/RELEASETYPE=/' \
-			-e 's/-RELEASEVER=2/-RELEASEVER=/' \
-			-e 's/+RELEASEVER=2-geoip-1.3/+RELEASEVER=-geoip-1.3/' \
+		sed -i -e 's:PATCHVER=2:PATCHVER=3:' \
+			-e 's/RELEASEVER=2/RELEASEVER=3/' \
 			${GEOIP_PATCH_A} || die
 		epatch ${GEOIP_PATCH_A}
 	fi
@@ -213,7 +212,7 @@ src_install() {
 		tar xf "${DISTDIR}"/dyndns-samples.tbz2 || die
 	fi
 
-	use geoip && dodoc "${DISTDIR}"/${GEOIP_P}-readme.txt
+	use geoip && dodoc "${DISTDIR}"/${GEOIP_DOC_A}
 
 	insinto /etc/bind
 	newins "${FILESDIR}"/named.conf-r5 named.conf || die
@@ -226,7 +225,7 @@ src_install() {
 	newins "${FILESDIR}"/127.zone-r1 127.zone || die
 	newins "${FILESDIR}"/localhost.zone-r3 localhost.zone || die
 
-	newinitd "${FILESDIR}"/named.init-r10 named || die
+	newinitd "${FILESDIR}"/named.init-r11 named || die
 	newconfd "${FILESDIR}"/named.confd-r6 named || die
 
 	newenvd "${FILESDIR}"/10bind.env 10bind || die
