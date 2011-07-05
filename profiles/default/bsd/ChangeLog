@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.56 2011/07/05 21:14:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.57 2011/07/05 21:15:41 aballier Exp $
+
+  05 Jul 2011; Alexis Ballier <aballier@gentoo.org> fbsd/profile.bashrc:
+  use GNU find and xargs in ebuild env, bug #374099
 
   05 Jul 2011; Alexis Ballier <aballier@gentoo.org> packages:
   let findutils be part of @system
