@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.215 2011/04/12 13:54:22 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.216 2011/07/05 21:18:19 wired Exp $
+
+  05 Jul 2011; Alex Alexander <wired@gentoo.org> mc-4.7.5.2.ebuild:
+  added ~x64-macos
 
 *mc-4.7.5.2 (12 Apr 2011)
 
