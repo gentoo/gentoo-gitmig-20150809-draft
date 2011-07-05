@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.10.0.ebuild,v 1.3 2011/04/02 12:02:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.10.0.ebuild,v 1.4 2011/07/05 06:00:34 vapier Exp $
 
 inherit eutils
 
@@ -40,7 +40,7 @@ src_unpack() {
 	if use zfcpdump ; then
 		local x
 		for x in ${E2FSPROGS_P}.tar.gz ${LINUX_P}.tar.bz2 ; do
-			ln -s "${DISTDIR}"/${x} zfcpdump/${x} || die "ln ${x}"
+			ln -s "${DISTDIR}"/${x} zfcpdump_v2/${x} || die "ln ${x}"
 		done
 		sed -i -e '/^ZFCPDUMP_DIR/s:local/::' common.mak
 		sed -i -e '/^SUB_DIRS/s:=:=zfcpdump_v2 :' Makefile
