@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/crossdev-20100814.ebuild,v 1.3 2011/02/06 11:31:49 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/crossdev-20100814.ebuild,v 1.4 2011/07/05 06:48:09 vapier Exp $
 
 EAPI="3"
 
 if [[ ${PV} == "99999999" ]] ; then
 	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/crossdev.git"
-	inherit git
+	inherit git-2
 	SRC_URI=""
 	#KEYWORDS=""
 else
