@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DateTime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/ChangeLog,v 1.120 2011/06/05 23:13:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/ChangeLog,v 1.121 2011/07/06 03:24:03 aballier Exp $
+
+  06 Jul 2011; Alexis Ballier <aballier@gentoo.org> DateTime-0.700.0.ebuild:
+  keyword ~x86-fbsd, bug #366911
 
   05 Jun 2011; Jeroen Roovers <jer@gentoo.org> DateTime-0.700.0.ebuild:
   Marked ~hppa (bug #366911).
