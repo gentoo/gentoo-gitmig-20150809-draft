@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.16 2011/07/05 18:46:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/freebsd.eclass,v 1.17 2011/07/06 05:41:01 aballier Exp $
 #
 # Diego Pettenò <flameeyes@gentoo.org>
 
@@ -77,7 +77,7 @@ freebsd_rename_libraries() {
 		sed -i -e 's:-ltermcap:-lncurses:g; s:{LIBTERMCAP}:{LIBNCURSES}:g'
 	# flex provides libfl, not libl
 	find "${S}" -name Makefile -print0 | xargs -0 \
-		sed -i -e 's:-ll:-lfl:g; s:{LIBL}:{LIBFL}:g'
+		sed -i -e 's:-ll$:-lfl:g; s:-ll :-lfl :g; s:{LIBL}:{LIBFL}:g'
 	# ncurses provides libncursesw not libcursesw
 	find "${S}" -name Makefile -print0 | xargs -0 \
 		sed -i -e 's:-lcursesw:-lncursesw:g'
