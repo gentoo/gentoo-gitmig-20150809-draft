@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/boot0
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/ChangeLog,v 1.25 2010/03/19 11:51:04 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/ChangeLog,v 1.26 2011/07/06 05:42:56 aballier Exp $
+
+*boot0-8.2 (06 Jul 2011)
+
+  06 Jul 2011; Alexis Ballier <aballier@gentoo.org> +boot0-8.2.ebuild:
+  bump to 8.2
 
 *boot0-8.0 (19 Mar 2010)
 
