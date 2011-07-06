@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.24 2011/07/05 16:01:44 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.25 2011/07/06 23:31:42 halcy0n Exp $
+
+  06 Jul 2011; Mark Loeser <halcy0n@gentoo.org> gdk-pixbuf-2.22.1-r1.ebuild:
+  Stable for ppc64; bug #371320
 
   05 Jul 2011; Thomas Kahle <tomka@gentoo.org> gdk-pixbuf-2.22.1-r2.ebuild:
   x86 stable per bug 373999

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.521 2011/06/29 15:01:33 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.522 2011/07/06 23:34:00 halcy0n Exp $
+
+  06 Jul 2011; Mark Loeser <halcy0n@gentoo.org> gtk+-2.24.4.ebuild:
+  Stable for ppc64; bug #371320
 
   29 Jun 2011; Christoph Mende <angelos@gentoo.org> gtk+-2.24.4.ebuild:
   Stable on amd64 wrt bug #371320
