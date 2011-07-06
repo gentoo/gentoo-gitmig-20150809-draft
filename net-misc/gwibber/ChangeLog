@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gwibber
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/ChangeLog,v 1.11 2010/11/01 20:21:05 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/ChangeLog,v 1.12 2011/07/06 14:44:09 neurogeek Exp $
+
+  06 Jul 2011; Jesus Rivero <neurogeek@gentoo.org> metadata.xml:
+  Added hwoarang as maintainer and dropped proxy-maintainer
 
   01 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -gwibber-1.2.0_pre340.ebuild, -gwibber-2.29.92.1.ebuild,
