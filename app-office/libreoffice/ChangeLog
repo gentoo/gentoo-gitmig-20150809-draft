@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.33 2011/07/06 10:38:23 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.34 2011/07/06 12:01:03 suka Exp $
+
+  06 Jul 2011; Andreas Proschofsky <suka@gentoo.org> libreoffice-3.4.1.ebuild:
+  You should not listen to repoman in every case. Build fix.
 
 *libreoffice-3.4.1 (06 Jul 2011)
 
