@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.342 2011/07/05 17:00:12 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.343 2011/07/06 18:06:27 hwoarang Exp $
+
+  06 Jul 2011; Markos Chandras <hwoarang@gentoo.org> bind-9.7.3_p3.ebuild:
+  Stable on amd64 wrt bug #374201
 
 *bind-9.8.0_p4 (05 Jul 2011)
 *bind-9.7.3_p3 (05 Jul 2011)
