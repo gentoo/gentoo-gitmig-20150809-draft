@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.252 2011/06/26 01:54:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.253 2011/07/06 20:05:39 dilfridge Exp $
+
+  06 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org> -kdm-4.6.2-r1.ebuild:
+  Drop KDE 4.6.2
 
   25 Jun 2011; Brent Baude <ranger@gentoo.org> kdm-4.6.3-r1.ebuild:
   Marking kdm-4.6.3-r1 ppc stable for bug 369979

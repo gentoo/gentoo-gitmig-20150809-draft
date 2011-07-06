@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstars
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.192 2011/06/26 01:54:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.193 2011/07/06 20:05:36 dilfridge Exp $
+
+  06 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org> -kstars-4.6.2.ebuild:
+  Drop KDE 4.6.2
 
   26 Jun 2011; Brent Baude <ranger@gentoo.org> kstars-4.6.3.ebuild:
   Marking kstars-4.6.3 ppc stable for bug 369979

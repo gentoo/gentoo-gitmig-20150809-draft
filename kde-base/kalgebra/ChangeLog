@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kalgebra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/ChangeLog,v 1.90 2011/06/26 01:54:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/ChangeLog,v 1.91 2011/07/06 20:05:44 dilfridge Exp $
+
+  06 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kalgebra-4.6.2.ebuild:
+  Drop KDE 4.6.2
 
   25 Jun 2011; Brent Baude <ranger@gentoo.org> kalgebra-4.6.3.ebuild:
   Marking kalgebra-4.6.3 ppc stable for bug 369979

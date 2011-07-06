@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktron
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktron/ChangeLog,v 1.150 2011/06/26 01:54:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktron/ChangeLog,v 1.151 2011/07/06 20:05:29 dilfridge Exp $
+
+  06 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org> -ktron-4.6.2.ebuild:
+  Drop KDE 4.6.2
 
   26 Jun 2011; Brent Baude <ranger@gentoo.org> ktron-4.6.3.ebuild:
   Marking ktron-4.6.3 ppc stable for bug 369979

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.285 2011/06/26 01:54:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.286 2011/07/06 20:05:24 dilfridge Exp $
+
+  06 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org> -kopete-4.6.2.ebuild:
+  Drop KDE 4.6.2
 
   25 Jun 2011; Brent Baude <ranger@gentoo.org> kopete-4.6.3.ebuild:
   Marking kopete-4.6.3 ppc stable for bug 369979

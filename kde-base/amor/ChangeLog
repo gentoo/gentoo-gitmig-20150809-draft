@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/amor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/amor/ChangeLog,v 1.180 2011/06/26 01:54:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/amor/ChangeLog,v 1.181 2011/07/06 20:05:26 dilfridge Exp $
+
+  06 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org> -amor-4.6.2.ebuild:
+  Drop KDE 4.6.2
 
   25 Jun 2011; Brent Baude <ranger@gentoo.org> amor-4.6.3.ebuild:
   Marking amor-4.6.3 ppc stable for bug 369979

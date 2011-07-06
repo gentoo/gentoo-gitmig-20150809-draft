@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.771 2011/07/06 19:31:28 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.772 2011/07/06 20:05:25 dilfridge Exp $
+
+  06 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kdelibs-4.6.2-r3.ebuild:
+  Drop KDE 4.6.2
 
   06 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org> kdelibs-4.6.4-r1.ebuild:
   Only check for gcc version if we actually compile something

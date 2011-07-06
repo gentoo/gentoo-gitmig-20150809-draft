@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/printer-applet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/printer-applet/ChangeLog,v 1.49 2011/06/26 01:54:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/printer-applet/ChangeLog,v 1.50 2011/07/06 20:05:21 dilfridge Exp $
+
+  06 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -printer-applet-4.6.2.ebuild:
+  Drop KDE 4.6.2
 
   26 Jun 2011; Brent Baude <ranger@gentoo.org> printer-applet-4.6.3.ebuild:
   Marking printer-applet-4.6.3 ppc stable for bug 369979

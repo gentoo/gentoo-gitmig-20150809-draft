@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksysguard
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.209 2011/06/26 01:54:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.210 2011/07/06 20:05:38 dilfridge Exp $
+
+  06 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -ksysguard-4.6.2-r1.ebuild:
+  Drop KDE 4.6.2
 
   26 Jun 2011; Brent Baude <ranger@gentoo.org> ksysguard-4.6.3.ebuild:
   Marking ksysguard-4.6.3 ppc stable for bug 369979

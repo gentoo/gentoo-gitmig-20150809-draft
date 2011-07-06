@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/filelight
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/filelight/ChangeLog,v 1.16 2011/06/26 01:54:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/filelight/ChangeLog,v 1.17 2011/07/06 20:05:30 dilfridge Exp $
+
+  06 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -filelight-4.6.2.ebuild:
+  Drop KDE 4.6.2
 
   25 Jun 2011; Brent Baude <ranger@gentoo.org> filelight-4.6.3.ebuild:
   Marking filelight-4.6.3 ppc stable for bug 369979
