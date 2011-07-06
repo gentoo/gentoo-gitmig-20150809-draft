@@ -1,6 +1,18 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.99 2011/04/29 00:03:00 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.100 2011/07/06 22:43:36 dang Exp $
+
+*logrotate-3.8.0 (06 Jul 2011)
+
+  06 Jul 2011; Daniel Gryniewicz <dang@gentoo.org> +logrotate-3.8.0.ebuild,
+  +files/logrotate-3.8.0-atomic-create.patch,
+  +files/logrotate-3.8.0-fbsd.patch,
+  +files/logrotate-3.8.0-ignore-hidden.patch:
+  Bump to logrotate-3.8.0
+  - CVE-2011-1098
+  - CVE-2011-1154
+  - CVE-2011-1155
+
 
   29 Apr 2011; Daniel Gryniewicz <dang@gentoo.org> logrotate-3.7.9-r1.ebuild,
   logrotate-3.7.9-r2.ebuild, +files/logrotate-3.7.9-no-cloexec.patch:
