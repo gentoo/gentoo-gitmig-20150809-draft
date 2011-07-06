@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.20 2011/06/24 10:34:55 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.21 2011/07/06 13:36:46 darkside Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -71,7 +71,7 @@ mozconfig_config() {
 				mozconfig_annotate '+webm' --with-system-libvpx="${EPREFIX}"/usr
 			else
 				mozconfig_use_enable webm
-				mozconfig_use_with webm system-libvpx
+				mozconfig_annotate '+webm' --with-system-libvpx="${EPREFIX}"/usr
 			fi
 		else
 			mozconfig_annotate '' --disable-webm
