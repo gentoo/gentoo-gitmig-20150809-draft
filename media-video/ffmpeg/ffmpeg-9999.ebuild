@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.49 2011/06/29 15:07:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.50 2011/07/06 21:49:06 aballier Exp $
 
 EAPI="4"
 
@@ -29,12 +29,19 @@ if [ "${PV#9999}" = "${PV}" ] ; then
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 fi
 IUSE="
-	+3dnow +3dnowext aac alsa altivec amr avx bindist +bzip2 celt cpudetection
-	debug dirac doc +encode faac frei0r gsm +hardcoded-tables ieee1394 jack
-	jpeg2k +mmx +mmxext mp3 network openal oss pic qt-faststart rtmp
-	schroedinger sdl speex +ssse3 static-libs test theora threads truetype
-	v4l v4l2 vaapi vdpau vorbis vpx X x264 xvid +zlib
+	aac alsa amr bindist +bzip2 celt cpudetection debug dirac doc +encode faac
+	frei0r gsm +hardcoded-tables ieee1394 jack jpeg2k mp3 network openal oss pic
+	qt-faststart rtmp schroedinger sdl speex static-libs test theora threads
+	truetype v4l v4l2 vaapi vdpau vorbis vpx X x264 xvid +zlib
 	"
+
+# String for CPU features in the useflag[:configure_option] form
+# if :configure_option isn't set, it will use 'useflag' as configure option
+CPU_FEATURES="3dnow:amd3dnow 3dnowext:amd3dnowext altivec avx mmx mmxext:mmx2 ssse3"
+
+for i in ${CPU_FEATURES}; do
+	IUSE="${IUSE} ${i%:*}"
+done
 
 RDEPEND="
 	alsa? ( media-libs/alsa-lib )
@@ -148,12 +155,9 @@ src_configure() {
 	use jpeg2k && myconf="${myconf} --enable-libopenjpeg"
 
 	# CPU features
-	for i in mmx ssse3 altivec avx ; do
-		use ${i} || myconf="${myconf} --disable-${i}"
+	for i in ${CPU_FEATURES}; do
+		use ${i%:*} || myconf="${myconf} --disable-${i#*:}"
 	done
-	use mmxext || myconf="${myconf} --disable-mmx2"
-	use 3dnow || myconf="${myconf} --disable-amd3dnow"
-	use 3dnowext || myconf="${myconf} --disable-amd3dnowext"
 	# disable mmx accelerated code if PIC is required
 	# as the provided asm decidedly is not PIC for x86.
 	if use pic && use x86 ; then
