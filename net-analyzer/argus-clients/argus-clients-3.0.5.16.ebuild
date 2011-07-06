@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/argus-clients-3.0.5.16.ebuild,v 1.1 2011/07/06 14:58:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus-clients/argus-clients-3.0.5.16.ebuild,v 1.2 2011/07/06 15:26:07 jer Exp $
 
 EAPI="2"
 
@@ -37,9 +37,6 @@ DEPEND="
 "
 
 src_prepare() {
-	for x in $(find . -name "Makefile.in"); do
-		sed -i "s:\$(CFLAGS):& \$(LDFLAGS) :" $x
-	done
 	epatch "${FILESDIR}"/${PN}-3.0.4.1-disable-tcp-wrappers-automagic.patch
 	eautoreconf
 }
@@ -54,7 +51,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake  CCOPT="${CFLAGS} ${LDFLAGS}" || die "emake failed"
+	emake CCOPT="${CFLAGS} ${LDFLAGS}" || die "emake failed"
 }
 
 src_install() {
