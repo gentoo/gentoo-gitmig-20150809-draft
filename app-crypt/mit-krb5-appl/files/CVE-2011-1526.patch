@@ -1,0 +1,58 @@
+diff --git a/configure.ac b/configure.ac
+index 86e23f1..2fe68ad 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -107,6 +107,7 @@ AC_CHECK_FUNCS(_getpty cgetent getcwd getenv gettosbyname getusershell getutmp)
+ AC_CHECK_FUNCS(getutmpx grantpt inet_aton initgroups isatty killpg killpg)
+ AC_CHECK_FUNCS(line_push ptsname revoke rmufile rresvport_af)
+ AC_CHECK_FUNCS(seteuid setlogin setpgid setpriority setresuid setreuid)
++AC_CHECK_FUNCS(setegid setregid setresgid)
+ AC_CHECK_FUNCS(setutent setutsent setutxent strsave tcgetpgrp tcsetpgrp)
+ AC_CHECK_FUNCS(ttyname unsetenv updwtmp updwtmpx utimes utmpname utmpxname)
+ AC_CHECK_FUNCS(vhangup vsnprintf waitpid)
+diff --git a/gssftp/ftpd/ftpd.c b/gssftp/ftpd/ftpd.c
+index fe62a9c..a150819 100644
+--- a/gssftp/ftpd/ftpd.c
++++ b/gssftp/ftpd/ftpd.c
+@@ -994,9 +994,14 @@ login(passwd, logincode)
+ #endif
+ 	}
+ 
+-	(void) krb5_setegid((gid_t)pw->pw_gid);
+-	(void) initgroups(pw->pw_name, pw->pw_gid);
+-
++	if (krb5_setegid((gid_t)pw->pw_gid) < 0) {
++		reply(550, "Can't set egid.");
++		goto bad;
++	}
++	if (geteuid() == 0 && initgroups(pw->pw_name, pw->pw_gid) < 0) {
++		reply(550, "Can't initgroups");
++		goto bad;
++	}
+ 	/* open wtmp before chroot */
+ 	(void) snprintf(ttyline, sizeof(ttyline), "ftp%ld", (long) getpid());
+ 	pty_logwtmp(ttyline, pw->pw_name, rhost_sane);
+diff --git a/k5-util.h b/k5-util.h
+index 7bb8cfb..64cd53d 100644
+--- a/k5-util.h
++++ b/k5-util.h
+@@ -69,8 +69,7 @@
+ #elif defined(HAVE_SETREUID)
+ #  define krb5_seteuid(EUID)	setreuid(geteuid(), (uid_t)(EUID))
+ #else
+-   /* You need to add a case to deal with this operating system.*/
+-#  define krb5_seteuid(EUID)	(errno = EPERM, -1)
++#  error "You need to add a case to deal with this operating system."
+ #endif
+ 
+ #ifdef HAVE_SETEGID
+@@ -80,8 +79,7 @@
+ #elif defined(HAVE_SETREGID)
+ #  define krb5_setegid(EGID)	(setregid(getegid(), (gid_t)(EGID)))
+ #else
+-   /* You need to add a case to deal with this operating system.*/
+-#  define krb5_setegid(EGID)	(errno = EPERM, -1)
++#  error "You need to add a case to deal with this operating system."
+ #endif
+ 
+ #endif
