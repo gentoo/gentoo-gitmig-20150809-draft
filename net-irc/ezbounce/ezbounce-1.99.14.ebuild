@@ -1,7 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ezbounce/ezbounce-1.99.14.ebuild,v 1.3 2009/06/02 12:53:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ezbounce/ezbounce-1.99.14.ebuild,v 1.4 2011/07/06 16:51:16 ssuominen Exp $
 
+EAPI=4
 inherit eutils
 
 DESCRIPTION="a small IRC bouncer"
@@ -12,31 +13,38 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="ssl boost"
-RESTRICT="test"
 
-DEPEND=">=net-misc/mdidentd-1.04c
+RDEPEND=">=net-misc/mdidentd-1.04c
 	ssl? ( dev-libs/openssl )
 	boost? ( dev-libs/boost )"
+DEPEND="${RDEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+RESTRICT="test"
+
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-build.patch #251445
 	epatch "${FILESDIR}"/${P}-asneeded.patch
 	epatch "${FILESDIR}"/${P}+glibc-2.10.patch
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		$(use_with ssl) \
-		$(use_with boost) \
-		|| die
-	emake CXX_OPTIMIZATIONS="${CXXFLAGS}" || die
+		$(use_with boost)
+}
+
+src_compile() {
+	emake CXX_OPTIMIZATIONS="${CXXFLAGS}"
 }
 
 src_install() {
-	dobin ezbounce || die
+	dobin ezbounce
 	dosym ezbounce /usr/bin/ezb
-	dodoc CHANGES TODO README ezb.conf sample.*
-	doman misc/ezbounce.1
+
+	echo '.so ezbounce.1' > ${T}/ezb.1
+	doman docs/ezbounce.1 "${T}"/ezb.1
+
+	dodoc CHANGES README TODO ezb.conf sample.conf
+	docinto docs
+	dodoc docs/{FAQ,README,REPORTING-BUGS,worklog,*.txt}
 }
