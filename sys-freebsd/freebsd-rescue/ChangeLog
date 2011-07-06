@@ -1,6 +1,12 @@
 # ChangeLog for sys-freebsd/freebsd-rescue
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-rescue/ChangeLog,v 1.22 2010/03/19 11:50:47 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-rescue/ChangeLog,v 1.23 2011/07/06 06:06:54 aballier Exp $
+
+*freebsd-rescue-8.2 (06 Jul 2011)
+
+  06 Jul 2011; Alexis Ballier <aballier@gentoo.org> +freebsd-rescue-8.2.ebuild,
+  +files/freebsd-rescue-8.2-libzcleverlink.patch, metadata.xml:
+  bump to 8.2
 
 *freebsd-rescue-8.0 (19 Mar 2010)
 

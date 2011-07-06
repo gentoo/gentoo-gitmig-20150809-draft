@@ -1,12 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.67 2011/07/05 16:17:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.68 2011/07/06 05:59:29 aballier Exp $
 
-*freebsd-ubin-8.0-r1 (05 Jul 2011)
+*freebsd-ubin-8.2 (06 Jul 2011)
 
-  05 Jul 2011; Alexis Ballier <aballier@gentoo.org>
-  +freebsd-ubin-8.0-r1.ebuild:
-  remove tabs that is provided by ncurses, bug #360569 by Yuta SATOH
+  06 Jul 2011; Alexis Ballier <aballier@gentoo.org> +freebsd-ubin-8.2.ebuild:
+  bump to 8.2
 
   24 Mar 2010; Javier Villavicencio <the_paya@gentoo.org>
   freebsd-ubin-8.0.ebuild, +files/freebsd-ubin-8.0-xinstall.patch:
