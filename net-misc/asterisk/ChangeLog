@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.330 2011/07/04 14:59:44 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.331 2011/07/06 09:13:18 chainsaw Exp $
+
+*asterisk-1.6.2.19-r2 (06 Jul 2011)
+
+  06 Jul 2011; Tony Vroon <chainsaw@gentoo.org> +asterisk-1.6.2.19-r2.ebuild:
+  Regression fix by Jaco Kroon closes bug #374195. If you set DAHDI channel
+  variables from your dial plan and this stopped working in 1.6.2.19; this is
+  for you.
 
 *asterisk-1.8.4.4-r1 (04 Jul 2011)
 *asterisk-1.6.2.19-r1 (04 Jul 2011)
