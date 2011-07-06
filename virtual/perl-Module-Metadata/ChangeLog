@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Module-Metadata
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Metadata/ChangeLog,v 1.10 2011/06/18 20:20:50 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Metadata/ChangeLog,v 1.11 2011/07/06 03:49:07 aballier Exp $
+
+  06 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  perl-Module-Metadata-1.0.4-r2.ebuild:
+  keyword ~x86-fbsd, bug #357599
 
 *perl-Module-Metadata-1.0.4-r2 (18 Jun 2011)
 
