@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/ocamlduce
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlduce/ChangeLog,v 1.19 2011/07/06 16:32:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlduce/ChangeLog,v 1.20 2011/07/06 16:38:12 aballier Exp $
+
+  06 Jul 2011; Alexis Ballier <aballier@gentoo.org> -ocamlduce-3.11.2.0.ebuild,
+  -ocamlduce-3.12.0.0.ebuild, -ocamlduce-3.12.0.0-r10.ebuild:
+  remove old
 
 *ocamlduce-3.12.0.0-r20 (06 Jul 2011)
 
