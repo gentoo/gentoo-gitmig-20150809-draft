@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.598 2011/06/30 19:58:12 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.599 2011/07/06 16:44:44 williamh Exp $
+
+  06 Jul 2011; William Hubbs <williamh@gentoo.org> udev-146-r1.ebuild,
+  udev-149.ebuild, udev-151-r4.ebuild, udev-164-r2.ebuild, udev-171-r1.ebuild,
+  udev-9999.ebuild:
+  add blk_dev_bsg to config_check for bug #373535.
 
   30 Jun 2011; William Hubbs <williamh@gentoo.org> -udev-168-r2.ebuild:
   removing udev 168 because it breaks X11

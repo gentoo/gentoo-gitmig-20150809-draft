@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-149.ebuild,v 1.18 2011/06/05 21:09:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-149.ebuild,v 1.19 2011/07/06 16:44:44 williamh Exp $
 
 EAPI="1"
 
@@ -61,7 +61,8 @@ if [[ ${PV} == "9999" ]]; then
 fi
 
 # required kernel options
-CONFIG_CHECK="~INOTIFY_USER ~SIGNALFD ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2"
+CONFIG_CHECK="~INOTIFY_USER ~SIGNALFD ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2
+	~BLK_DEV_BSG"
 
 # Return values:
 # 2 - reliable
