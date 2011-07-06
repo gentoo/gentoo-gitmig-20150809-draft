@@ -1,6 +1,14 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.25 2011/06/14 18:17:56 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.26 2011/07/06 08:40:13 suka Exp $
+
+*libreoffice-bin-3.4.1 (06 Jul 2011)
+
+  06 Jul 2011; Andreas Proschofsky <suka@gentoo.org>
+  +libreoffice-bin-3.4.1.ebuild:
+  Bump to LibreOffice 3.4.1, also remove useless wrapper symlinks
+  You still can explicitely call a certain component, just use
+  "libreoffice --writer" instead of "lowriter"
 
 *libreoffice-bin-3.4.0-r1 (14 Jun 2011)
 

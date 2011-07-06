@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.0-r1.ebuild,v 1.1 2011/06/14 18:17:56 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.1.ebuild,v 1.1 2011/07/06 08:40:13 suka Exp $
 
 EAPI="3"
 
@@ -9,9 +9,9 @@ inherit eutils fdo-mime gnome2-utils pax-utils prefix rpm multilib
 IUSE="gnome java offlinehelp"
 
 MY_PV="${PV/_/-}"
-MY_PV2="${PV}rc2"
-BVER="3.4.0-12"
-BVER2="3.4-12"
+MY_PV2="${PV}rc3"
+BVER="3.4.1-103"
+BVER2="3.4-103"
 BASIS="libobasis3.4"
 BASIS2="basis3.4"
 NM="libreoffice"
@@ -175,13 +175,7 @@ src_install () {
 	newbin "${T}/wrapper.in" ${NM1}
 	sed -i -e s/LIBDIR/$(get_libdir)/g "${ED}/usr/bin/${NM1}" || die
 
-	# Component symlinks
-	for app in base calc draw impress math writer; do
-		dosym ${INSTDIR}/program/s${app} /usr/bin/lo${app}
-	done
-
 	dosym ${INSTDIR}/program/spadmin /usr/bin/${NM1}-printeradmin
-	dosym ${INSTDIR}/program/soffice /usr/bin/soffice
 
 	rm -f "${ED}${INSTDIR}/basis-link" || die
 	dosym ${INSTDIR}/${BASIS2} ${INSTDIR}/basis-link
