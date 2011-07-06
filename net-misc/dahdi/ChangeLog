@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.19 2011/07/06 11:19:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.20 2011/07/06 13:37:38 chainsaw Exp $
+
+  06 Jul 2011; Tony Vroon <chainsaw@gentoo.org> dahdi-2.4.1-r1.ebuild:
+  CONFIG_MODULES check was faulty, as pointed out by Stefan "stkn" Knoblich on
+  #gentoo-voip.
 
 *dahdi-2.4.1-r1 (06 Jul 2011)
 
