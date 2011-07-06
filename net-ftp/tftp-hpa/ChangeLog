@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/tftp-hpa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.49 2011/07/04 06:23:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.50 2011/07/06 17:50:15 hwoarang Exp $
+
+  06 Jul 2011; Markos Chandras <hwoarang@gentoo.org> tftp-hpa-5.1.ebuild:
+  Stable on amd64 wrt bug #374001
 
 *tftp-hpa-5.1 (04 Jul 2011)
 
