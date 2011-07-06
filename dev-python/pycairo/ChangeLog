@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.100 2011/05/08 21:28:41 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.101 2011/07/06 19:49:41 djc Exp $
+
+*pycairo-1.10.0-r2 (06 Jul 2011)
+
+  06 Jul 2011; Dirkjan Ochtman <djc@gentoo.org> +pycairo-1.10.0-r2.ebuild:
+  Remove config.h to fix SVG (bug 368601).
 
 *pycairo-1.10.0-r1 (08 May 2011)
 
