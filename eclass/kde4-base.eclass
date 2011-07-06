@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.100 2011/06/15 22:03:13 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.101 2011/07/06 19:26:40 dilfridge Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -635,9 +635,11 @@ kde4-base_pkg_setup() {
 	# In theory should be in pkg_pretend but we check it only for kdelibs there
 	# and for others we do just quick scan in pkg_setup because pkg_pretend
 	# executions consume quite some time.
-	[[ $(gcc-major-version) -lt 4 ]] || \
-			( [[ $(gcc-major-version) -eq 4 && $(gcc-minor-version) -le 3 ]] ) \
-		&& die "Sorry, but gcc-4.3 and earlier wont work for KDE (see bug 354837)."
+	if [[ ${MERGE_TYPE} != binary ]]; then
+		[[ $(gcc-major-version) -lt 4 ]] || \
+				( [[ $(gcc-major-version) -eq 4 && $(gcc-minor-version) -le 3 ]] ) \
+			&& die "Sorry, but gcc-4.3 and earlier wont work for KDE (see bug 354837)."
+	fi
 
 	KDEDIR=/usr
 	: ${PREFIX:=/usr}
