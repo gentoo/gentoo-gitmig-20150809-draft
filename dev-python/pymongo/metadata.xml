@@ -16,4 +16,7 @@
 	for working with MongoDB, and is the recommended way to work 
 	with MongoDB from Python.
 	</longdescription>
+	<use>
+		<flag name="mod_wsgi">Disable the C extension to work with mod_wsgi.</flag>
+	</use>
 </pkgmetadata>
