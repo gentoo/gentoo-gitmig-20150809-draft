@@ -1,14 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/votca-tools-1.2.ebuild,v 1.1 2011/06/17 08:51:50 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/votca-tools-1.2.ebuild,v 1.2 2011/07/06 14:43:39 ottxor Exp $
 
 EAPI="3"
 
 inherit eutils cmake-utils
 
 if [ "${PV}" != "9999" ]; then
-	SRC_URI="boost? ( http://votca.googlecode.com/files/${PF}_pristine.tar.gz )
-		!boost? ( http://votca.googlecode.com/files/${PF}.tar.gz )"
+	SRC_URI="http://votca.googlecode.com/files/${PF}.tar.gz"
 	RESTRICT="primaryuri"
 else
 	SRC_URI=""

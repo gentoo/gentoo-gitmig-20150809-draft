@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/votca-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/ChangeLog,v 1.5 2011/06/17 08:51:50 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/ChangeLog,v 1.6 2011/07/06 14:43:39 ottxor Exp $
+
+  06 Jul 2011; Christoph Junghans <ottxor@gentoo.org> votca-tools-1.2.ebuild:
+  pristine tarball has wrong ${S} (bug #374165)
 
 *votca-tools-1.2 (17 Jun 2011)
 
