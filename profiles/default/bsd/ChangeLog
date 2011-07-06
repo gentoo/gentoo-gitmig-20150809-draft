@@ -1,6 +1,12 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.57 2011/07/05 21:15:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.58 2011/07/06 05:56:06 aballier Exp $
+
+  06 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  +fbsd/amd64/8.2/make.defaults, +fbsd/amd64/8.2/parent,
+  +fbsd/sparc/8.2/make.defaults, +fbsd/sparc/8.2/parent,
+  +fbsd/x86/8.2/make.defaults, +fbsd/x86/8.2/parent:
+  add 8.2 profiles
 
   05 Jul 2011; Alexis Ballier <aballier@gentoo.org> fbsd/profile.bashrc:
   use GNU find and xargs in ebuild env, bug #374099
