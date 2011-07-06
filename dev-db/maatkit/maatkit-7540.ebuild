@@ -1,23 +1,36 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/maatkit-5240.ebuild,v 1.5 2011/04/25 14:58:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/maatkit-7540.ebuild,v 1.1 2011/07/06 16:51:45 idl0r Exp $
 
-EAPI=2
-inherit perl-app toolchain-funcs
+EAPI=3
 
-DESCRIPTION="maatkit: essential command-line utilities for MySQL"
+inherit perl-app perl-module toolchain-funcs
+
+DESCRIPTION="essential command-line utilities for MySQL"
 HOMEPAGE="http://www.maatkit.org/"
 SRC_URI="http://maatkit.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="udf"
 
-DEPEND="dev-perl/DBD-mysql
-		dev-perl/TermReadKey
-		udf? ( dev-db/mysql[-minimal] )"
-RDEPEND="${DEPEND}"
+COMMON_DEPEND="dev-perl/DBI
+	dev-perl/DBD-mysql
+	virtual/perl-Time-HiRes"
+RDEPEND="${COMMON_DEPEND}
+	virtual/perl-Getopt-Long
+	virtual/perl-Time-Local
+	virtual/perl-Digest-MD5
+	virtual/perl-IO-Compress
+	virtual/perl-File-Temp
+	virtual/perl-File-Spec
+	virtual/perl-Time-HiRes
+	virtual/perl-Scalar-List-Utils
+	dev-perl/TermReadKey"
+DEPEND="${COMMON_DEPEND}
+	udf? ( dev-db/mysql )
+	virtual/perl-ExtUtils-MakeMaker"
 
 mysql-udf_src_compile() {
 	local udfdir="${T}/udf/"
@@ -40,22 +53,20 @@ mysql-udf_src_compile() {
 	done
 	einfo "UDF ${udfname}: compiling from ${src}"
 	${CXX} \
-		${CXXFLAGS} -fPIC \
-		-I/usr/include/mysql \
-		-shared -o "${udfoutpath}" \
-		$src \
+		${CXXFLAGS} -I/usr/include/mysql \
+		${LDFLAGS} -fPIC -shared -o "${udfoutpath}" $src \
 		|| die "UDF ${udfname}: Failed to compile"
 }
 
 mysql-udf_src_install() {
 	local udfdir="${T}/udf/"
-	local udfname udffile udfext udffile udfoutpath
+	local udfname udfext udffile udfoutpath
 	udfname="${1}"
 	udfext=".so"
 	udffile="${udfname}${udfext}"
 	udfoutpath="${udfdir}/${udffile}"
 	insinto /usr/$(get_libdir)/mysql/plugins
-	doins "${udfoutpath}"
+	doins "${udfoutpath}" || die
 }
 
 udf_done_intro=0

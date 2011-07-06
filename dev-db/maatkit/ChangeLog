@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/maatkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/ChangeLog,v 1.21 2011/05/10 13:22:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/maatkit/ChangeLog,v 1.22 2011/07/06 16:51:45 idl0r Exp $
+
+*maatkit-7540 (06 Jul 2011)
+
+  06 Jul 2011; Christian Ruppert <idl0r@gentoo.org> -maatkit-5014.ebuild,
+  -maatkit-5240.ebuild, -maatkit-6070.ebuild, -maatkit-7041.ebuild,
+  +maatkit-7540.ebuild, metadata.xml:
+  Version bump, bug 374231. Add myself as secondary maintainer.
 
   10 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> maatkit-7207.ebuild:
   x86 stable wrt bug #363245
