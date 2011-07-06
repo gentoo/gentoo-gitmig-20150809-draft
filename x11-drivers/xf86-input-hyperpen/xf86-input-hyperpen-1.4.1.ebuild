@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-hyperpen/xf86-input-hyperpen-1.4.0.ebuild,v 1.1 2011/06/29 12:44:52 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-hyperpen/xf86-input-hyperpen-1.4.1.ebuild,v 1.1 2011/07/06 20:49:53 chithanh Exp $
 
 EAPI=4
 
