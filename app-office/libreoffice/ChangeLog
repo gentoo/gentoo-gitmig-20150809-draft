@@ -1,6 +1,15 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.32 2011/06/20 17:51:07 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.33 2011/07/06 10:38:23 suka Exp $
+
+*libreoffice-3.4.1 (06 Jul 2011)
+
+  06 Jul 2011; Andreas Proschofsky <suka@gentoo.org> +libreoffice-3.4.1.ebuild,
+  +files/libreoffice-3.4.1-salfix.diff, +files/wrapper.in:
+  LibreOffice 3.4.1. New build system so took some time, but will (hopefully)
+  make everything quite 
+  a bit easier in the long run. Still masked for some further bugfixing and
+  testing.
 
   20 Jun 2011; Jonathan Callen <abcd@gentoo.org> -files/gentoo-3.3.3.diff:
   Remove unused file
