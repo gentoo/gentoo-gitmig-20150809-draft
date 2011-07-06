@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-cddl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/ChangeLog,v 1.10 2010/04/04 21:04:18 the_paya Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/ChangeLog,v 1.11 2011/07/06 05:51:32 aballier Exp $
+
+  06 Jul 2011; Alexis Ballier <aballier@gentoo.org> files/zvol.initd:
+  fix zvol init script
 
   04 Apr 2010; Javier Villavicencio <the_paya@gentoo.org>
   freebsd-cddl-8.0.ebuild, +files/zvol.initd:
