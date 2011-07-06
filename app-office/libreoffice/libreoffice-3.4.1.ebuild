@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.1.ebuild,v 1.2 2011/07/06 12:01:03 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.1.ebuild,v 1.3 2011/07/06 22:05:53 suka Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ PYTHON_USE_WITH="threads"
 
 inherit autotools check-reqs db-use eutils fdo-mime flag-o-matic gnome2-utils java-pkg-opt-2 kde4-base multilib pax-utils prefix python toolchain-funcs
 
-IUSE="binfilter cups -custom-cflags dbus debug eds gnome gstreamer gtk kde ldap nsplugin odk opengl"
+IUSE="binfilter cups -custom-cflags dbus debug eds gnome gstreamer gtk kde ldap nsplugin odk offlinehelp opengl"
 
 MY_PV=3.4.1.3
 MY_P="${PN}-build-${MY_PV}"
@@ -27,9 +27,7 @@ BASIS=basis3.3
 
 DESCRIPTION="LibreOffice, a full office productivity suite."
 HOMEPAGE="http://www.libreoffice.org"
-SRC_URI="odk? ( java? ( http://tools.openoffice.org/unowinreg_prebuild/680/unowinreg.dll ) )
-	http://download.go-oo.org/SRC680/extras-3.1.tar.bz2
-	http://download.go-oo.org/SRC680/biblio.tar.bz2"
+SRC_URI="odk? ( java? ( http://tools.openoffice.org/unowinreg_prebuild/680/unowinreg.dll ) )"
 
 # Shiny split sources with so many packages...
 MODULES="artwork base calc components extensions extras filters help
@@ -304,6 +302,7 @@ src_prepare() {
 	echo $(use_enable opengl) >> ${CONFFILE}
 	echo $(use_with opengl system-mesa-headers) >> ${CONFFILE}
 	echo $(use_with ldap openldap) >> ${CONFFILE}
+	echo $(use_with offlinehelp helppack-integration) >> ${CONFFILE}
 	echo $(use_with java) >> ${CONFFILE}
 	echo $(use_with templates sun-templates) >> ${CONFFILE}
 	echo $(use_enable debug crashdump) >> ${CONFFILE}
