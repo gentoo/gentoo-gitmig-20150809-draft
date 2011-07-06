@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.4-r1.ebuild,v 1.17 2011/06/26 09:30:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.4-r1.ebuild,v 1.18 2011/07/06 15:00:48 xarthisius Exp $
 
 EAPI=3
 
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 	sys-process/time"
 
 pkg_setup() {
-	fortran && fortran-2_pkg_setup
+	use fortran && fortran-2_pkg_setup
 	if use mpi; then
 		if has_version 'sci-libs/hdf5[-mpi]'; then
 			ewarn "Installing hdf5 with mpi enabled with a previous hdf5 with mpi disabled may fail."

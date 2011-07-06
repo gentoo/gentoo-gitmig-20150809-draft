@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.71 2011/06/26 09:30:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.72 2011/07/06 15:00:48 xarthisius Exp $
+
+  06 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> hdf5-1.8.4-r1.ebuild,
+  hdf5-1.8.6.ebuild, hdf5-1.8.7.ebuild:
+  Fix use fortran check in pkg_setup
 
   26 Jun 2011; Justin Lecher <jlec@gentoo.org> hdf5-1.8.4-r1.ebuild,
   hdf5-1.8.6.ebuild, hdf5-1.8.7.ebuild, metadata.xml:
