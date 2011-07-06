@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.4-r1.ebuild,v 1.1 2011/06/21 20:36:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.4-r1.ebuild,v 1.2 2011/07/06 19:30:01 dilfridge Exp $
 
 EAPI=4
 
@@ -137,9 +137,11 @@ PATCHES=(
 )
 
 pkg_pretend() {
-	[[ $(gcc-major-version) -lt 4 ]] || \
-			( [[ $(gcc-major-version) -eq 4 && $(gcc-minor-version) -le 3 ]] ) \
-		&& die "Sorry, but gcc-4.3 and earlier won't work for KDE SC 4.6 (see bug #354837)."
+	if [[ ${MERGE_TYPE} != binary ]]; then
+		[[ $(gcc-major-version) -lt 4 ]] || \
+				( [[ $(gcc-major-version) -eq 4 && $(gcc-minor-version) -le 3 ]] ) \
+			&& die "Sorry, but gcc-4.3 and earlier won't work for KDE SC 4.6 (see bug #354837)."
+	fi
 }
 
 src_prepare() {
