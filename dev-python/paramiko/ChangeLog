@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/paramiko
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.58 2011/04/10 12:35:14 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/ChangeLog,v 1.59 2011/07/06 19:31:33 djc Exp $
+
+*paramiko-1.7.7.1 (06 Jul 2011)
+
+  06 Jul 2011; Dirkjan Ochtman <djc@gentoo.org> +paramiko-1.7.7.1.ebuild:
+  Version bump to 1.7.7.1 (bug 372661).
 
   10 Apr 2011; Tobias Klausmann <klausman@gentoo.org> paramiko-1.7.6.ebuild:
   Stable on alpha, bug #343309
