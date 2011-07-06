@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/core
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/core/ChangeLog,v 1.4 2011/06/25 18:57:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/core/ChangeLog,v 1.5 2011/07/06 18:26:59 aballier Exp $
+
+  06 Jul 2011; Alexis Ballier <aballier@gentoo.org> -core-0.6.0.ebuild,
+  -files/core-0.6.0-ocaml312.patch, -core-0.7.0_beta1.ebuild,
+  -files/core-0.7.0_beta1-ocaml312.patch:
+  remove old
 
 *core-0.7.0 (25 Jun 2011)
 

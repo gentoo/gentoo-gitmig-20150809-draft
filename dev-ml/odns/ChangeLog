@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/odns
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/odns/ChangeLog,v 1.2 2011/03/04 12:33:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/odns/ChangeLog,v 1.3 2011/07/06 18:34:50 aballier Exp $
+
+  06 Jul 2011; Alexis Ballier <aballier@gentoo.org> -odns-0.2.ebuild:
+  remove old
 
 *odns-0.3 (04 Mar 2011)
 
