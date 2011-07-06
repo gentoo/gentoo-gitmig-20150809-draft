@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libva
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.21 2011/06/29 14:56:54 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.22 2011/07/06 18:11:28 aballier Exp $
+
+  06 Jul 2011; Alexis Ballier <aballier@gentoo.org> -libva-0.31.1_p4.ebuild,
+  -libva-0.31.1_p5.ebuild, -libva-0.32.0_p1.ebuild:
+  remove old
 
   29 Jun 2011; Christoph Mende <angelos@gentoo.org> libva-0.32.0_p2.ebuild:
   Stable on amd64 wrt bug #365273
