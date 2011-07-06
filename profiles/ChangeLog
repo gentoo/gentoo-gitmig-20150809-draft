@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5511 2011/07/05 16:03:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5512 2011/07/06 05:58:45 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Jul 2011; Alexis Ballier <aballier@gentoo.org> profiles.desc:
+  add gfbsd 8.2 profiles to profiles.desc
 
   05 Jul 2011; Jeroen Roovers <jer@gentoo.org> package.mask:
   Mask >=dev-python/pyparted-3.8 (bug #370163).
