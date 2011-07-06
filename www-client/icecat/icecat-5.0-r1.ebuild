@@ -1,20 +1,18 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-5.0.ebuild,v 1.2 2011/06/29 20:25:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-5.0-r1.ebuild,v 1.1 2011/07/06 23:43:49 polynomial-c Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
 WANT_AUTOCONF="2.1"
 
-inherit flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-3 makeedit multilib pax-utils fdo-mime autotools mozextension versionator python virtualx
+inherit flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-3 multilib pax-utils fdo-mime autotools mozextension versionator python virtualx
 
-MAJ_XUL_PV="5.0"
 MAJ_FF_PV="$(get_version_component_range 1-2)" # 3.5, 3.6, 4.0, etc.
-XUL_PV="${MAJ_XUL_PV}${PV/${MAJ_FF_PV}/}" # 1.9.3_alpha6, 1.9.2.3, etc.
 FF_PV="${PV/_alpha/a}" # Handle alpha for SRC_URI
 FF_PV="${FF_PV/_beta/b}" # Handle beta for SRC_URI
 FF_PV="${FF_PV/_rc/rc}" # Handle rc for SRC_URI
-PATCH="firefox-5.0-patches-0.5"
+PATCH="firefox-5.0-patches-0.6"
 
 DESCRIPTION="GNU project's edition of Mozilla Firefox"
 HOMEPAGE="http://www.gnu.org/software/gnuzilla/"
@@ -22,7 +20,7 @@ HOMEPAGE="http://www.gnu.org/software/gnuzilla/"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="gconf hardened +ipc pgo system-sqlite +webm"
+IUSE="+methodjit +ipc pgo system-sqlite +webm"
 
 # More URIs appended below...
 SRC_URI="mirror://gnu/gnuzilla/${FF_PV}/${PN}-${FF_PV}.tar.bz2
@@ -31,12 +29,13 @@ LANGPACK_URI="http://gnuzilla.gnu.org/download/langpacks/${FF_PV}"
 
 ASM_DEPEND=">=dev-lang/yasm-1.1"
 
+# Mesa 7.10 needed for WebGL + bugfixes
 RDEPEND="
 	>=sys-devel/binutils-2.16.1
 	>=dev-libs/nss-3.12.9
 	>=dev-libs/nspr-4.8.7
-	gconf? ( >=gnome-base/gconf-1.2.1:2 )
 	>=dev-libs/glib-2.26
+	>=media-libs/mesa-7.10
 	media-libs/libpng[apng]
 	dev-libs/libffi
 	system-sqlite? ( >=dev-db/sqlite-3.7.4[fts3,secure-delete,unlock-notify,debug=] )
@@ -114,10 +113,16 @@ pkg_setup() {
 		XDG_SESSION_COOKIE \
 		XAUTHORITY
 
-	if ! use hardened && use pgo; then
+	if ! use methodjit ; then
 		einfo
-		ewarn "You will do a double build for profile guided optimization. This will result in your"
-		ewarn "build taking at least twice as long as before."
+		ewarn "You are disabling the method-based JIT in JägerMonkey."
+		ewarn "This will greatly slowdown JavaScript in ${PN}!"
+	fi
+
+	if use pgo ; then
+		einfo
+		ewarn "You will do a double build for profile guided optimization."
+		ewarn "This will result in your build taking at least twice as long as before."
 	fi
 }
 
@@ -208,20 +213,20 @@ src_configure() {
 	mozconfig_annotate '' --prefix=/usr
 	mozconfig_annotate '' --libdir=/usr/$(get_libdir)
 	mozconfig_annotate '' --enable-extensions="${MEXTENSIONS}"
+	mozconfig_annotate '' --disable-gconf
 	mozconfig_annotate '' --disable-mailnews
 	mozconfig_annotate '' --enable-canvas
 	mozconfig_annotate '' --enable-safe-browsing
 	mozconfig_annotate '' --with-system-png
-	use hardened && mozconfig_annotate 'hardened' --disable-methodjit
 
 	# Other browser-specific settings
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
 
 	mozconfig_use_enable system-sqlite
-	mozconfig_use_enable gconf
+	mozconfig_use_enable methodjit
 
 	# Allow for a proper pgo build
-	if ! use hardened && use pgo; then
+	if use pgo ; then
 		echo "mk_add_options PROFILE_GEN_SCRIPT='\$(PYTHON) \$(OBJDIR)/_profile/pgo/profileserver.py'" >> "${S}"/.mozconfig
 	fi
 
@@ -293,10 +298,8 @@ src_install() {
 		echo "StartupNotify=true" >> "${ED}/usr/share/applications/${PN}.desktop"
 	fi
 
-	if use hardened; then
-		pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/${PN}
-		pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/plugin-container
-	fi
+	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/${PN}
+	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/plugin-container
 
 	# Plugins dir
 	dosym ../nsbrowser/plugins "${MOZILLA_FIVE_HOME}"/plugins \
