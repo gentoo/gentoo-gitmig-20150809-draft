@@ -1,21 +1,19 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-5.0-r1.ebuild,v 1.1 2011/06/27 00:42:11 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-5.0-r2.ebuild,v 1.1 2011/07/06 05:14:18 nirbheek Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
 WANT_AUTOCONF="2.1"
 
-inherit flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-3 makeedit multilib pax-utils fdo-mime autotools mozextension versionator python virtualx
+inherit flag-o-matic toolchain-funcs eutils gnome2-utils mozconfig-3 multilib pax-utils fdo-mime autotools mozextension versionator python virtualx
 
-MAJ_XUL_PV="5.0"
 MAJ_FF_PV="$(get_version_component_range 1-2)" # 3.5, 3.6, 4.0, etc.
-XUL_PV="${MAJ_XUL_PV}${PV/${MAJ_FF_PV}/}" # 1.9.3_alpha6, 1.9.2.3, etc.
 FF_PV="${PV/_alpha/a}" # Handle alpha for SRC_URI
 FF_PV="${FF_PV/_beta/b}" # Handle beta for SRC_URI
 FF_PV="${FF_PV/_rc/rc}" # Handle rc for SRC_URI
 CHANGESET="e56ecd8b3a68"
-PATCH="${PN}-5.0-patches-0.5"
+PATCH="${PN}-5.0-patches-0.6"
 
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.com/firefox"
@@ -23,7 +21,7 @@ HOMEPAGE="http://www.mozilla.com/firefox"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="bindist gconf hardened +ipc pgo system-sqlite +webm"
+IUSE="bindist +methodjit +ipc pgo system-sqlite +webm"
 
 REL_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases"
 FTP_URI="ftp://ftp.mozilla.org/pub/firefox/releases/"
@@ -32,12 +30,13 @@ SRC_URI="http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.bz2"
 
 ASM_DEPEND=">=dev-lang/yasm-1.1"
 
+# Mesa 7.10 needed for WebGL + bugfixes
 RDEPEND="
 	>=sys-devel/binutils-2.16.1
 	>=dev-libs/nss-3.12.9
 	>=dev-libs/nspr-4.8.7
-	gconf? ( >=gnome-base/gconf-1.2.1:2 )
 	>=dev-libs/glib-2.26
+	>=media-libs/mesa-7.10
 	media-libs/libpng[apng]
 	dev-libs/libffi
 	system-sqlite? ( >=dev-db/sqlite-3.7.4[fts3,secure-delete,unlock-notify,debug=] )
@@ -70,25 +69,24 @@ fi
 # No language packs for alphas
 if ! [[ ${PV} =~ alpha|beta ]]; then
 	# This list can be updated with scripts/get_langs.sh from mozilla overlay
-	LANGS="af ak ar ast be bg bn-BD bn-IN br bs ca cs cy da de
-	el en eo es-ES et eu fa fi fr fy-NL ga-IE gd gl gu-IN
-	he hi-IN hr hu hy-AM id is it ja kk kn ko ku lg lt lv mai mk
-	ml mr nb-NO nl nn-NO nso or pa-IN pl pt-PT rm ro ru si sk sl
-	son sq sr sv-SE ta ta-LK te th tr uk vi zu"
-	NOSHORTLANGS="en-GB en-ZA es-AR es-CL es-MX pt-BR zh-CN zh-TW"
+	LANGS=(af ak ar ast be bg bn-BD bn-IN br bs ca cs cy da de el en en-GB en-US
+	en-ZA eo es-AR es-CL es-ES es-MX et eu fa fi fr fy-NL ga-IE gd gl gu-IN he
+	hi-IN hr hu hy-AM id is it ja kk kn ko ku lg lt lv mai mk ml mr nb-NO nl
+	nn-NO nso or pa-IN pl pt-BR pt-PT rm ro ru si sk sl son sq sr sv-SE ta ta-LK
+	te th tr uk vi zh-CN zh-TW zu)
 
-	for X in ${LANGS} ; do
-		if [ "${X}" != "en" ] && [ "${X}" != "en-US" ]; then
+	for X in "${LANGS[@]}" ; do
+		# en and en_US are handled internally
+		if [[ ${X} != en ]] && [[ ${X} != en-US ]]; then
 			SRC_URI="${SRC_URI}
 				linguas_${X/-/_}? ( ${REL_URI}/${FF_PV}/linux-i686/xpi/${X}.xpi -> ${P}-${X}.xpi )"
 		fi
 		IUSE="${IUSE} linguas_${X/-/_}"
-		# english is handled internally
-		if [ "${#X}" == 5 ] && ! has ${X} ${NOSHORTLANGS}; then
-			if [ "${X}" != "en-US" ]; then
-				SRC_URI="${SRC_URI}
-					linguas_${X%%-*}? ( ${REL_URI}/${FF_PV}/linux-i686/xpi/${X}.xpi -> ${P}-${X}.xpi )"
-			fi
+		# Install all the specific locale xpis if there's no generic locale xpi
+		# Example: there's no pt.xpi, so install all pt-*.xpi
+		if ! has ${X%%-*} "${LANGS[@]}"; then
+			SRC_URI="${SRC_URI}
+				linguas_${X%%-*}? ( ${REL_URI}/${FF_PV}/linux-i686/xpi/${X}.xpi -> ${P}-${X}.xpi )"
 			IUSE="${IUSE} linguas_${X%%-*}"
 		fi
 	done
@@ -96,25 +94,31 @@ fi
 
 QA_PRESTRIPPED="usr/$(get_libdir)/${PN}/firefox"
 
+# TODO: Move all the linguas crap to an eclass
 linguas() {
-	local LANG SLANG
-	for LANG in ${LINGUAS}; do
-		if has ${LANG} en en_US; then
-			has en ${linguas} || linguas="${linguas:+"${linguas} "}en"
+	# Generate the list of language packs called "linguas"
+	# This list is used to install the xpi language packs
+	local LINGUA
+	for LINGUA in ${LINGUAS}; do
+		if has ${LINGUA} en en_US; then
+			# For mozilla products, en and en_US are handled internally
 			continue
-		elif has ${LANG} ${LANGS//-/_}; then
-			has ${LANG//_/-} ${linguas} || linguas="${linguas:+"${linguas} "}${LANG//_/-}"
+		# If this language is supported by ${P},
+		elif has ${LINGUA} "${LANGS[@]//-/_}"; then
+			# Add the language to linguas, if it isn't already there
+			has ${LINGUA//_/-} "${linguas[@]}" || linguas+=(${LINGUA//_/-})
 			continue
-		elif [[ " ${LANGS} " == *" ${LANG}-"* ]]; then
-			for X in ${LANGS}; do
-				if [[ "${X}" == "${LANG}-"* ]] && \
-					[[ " ${NOSHORTLANGS} " != *" ${X} "* ]]; then
-					has ${X} ${linguas} || linguas="${linguas:+"${linguas} "}${X}"
+		# For each short LINGUA that isn't in LANGS,
+		# add *all* long LANGS to the linguas list
+		elif ! has ${LINGUA%%-*} "${LANGS[@]}"; then
+			for LANG in "${LANGS[@]}"; do
+				if [[ ${LANG} == ${LINGUA}-* ]]; then
+					has ${LANG} "${linguas[@]}" || linguas+=(${LANG})
 					continue 2
 				fi
 			done
 		fi
-		ewarn "Sorry, but ${P} does not support the ${LANG} LINGUA"
+		ewarn "Sorry, but ${P} does not support the ${LINGUA} locale"
 	done
 }
 
@@ -130,7 +134,7 @@ pkg_setup() {
 		XDG_SESSION_COOKIE \
 		XAUTHORITY
 
-	if ! use bindist ; then
+	if ! use bindist; then
 		einfo
 		elog "You are enabling official branding. You may not redistribute this build"
 		elog "to any users on your network or the internet. Doing so puts yourself into"
@@ -138,10 +142,16 @@ pkg_setup() {
 		elog "You can disable it by emerging ${PN} _with_ the bindist USE-flag"
 	fi
 
-	if ! use hardened && use pgo; then
+	if ! use methodjit; then
 		einfo
-		ewarn "You will do a double build for profile guided optimization. This will result in your"
-		ewarn "build taking at least twice as long as before."
+		ewarn "You are disabling the method-based JIT in JägerMonkey."
+		ewarn "This will greatly slowdown JavaScript in ${PN}!"
+	fi
+
+	if use pgo; then
+		einfo
+		ewarn "You will do a double build for profile guided optimization."
+		ewarn "This will result in your build taking at least twice as long as before."
 	fi
 }
 
@@ -149,9 +159,9 @@ src_unpack() {
 	unpack ${A}
 
 	linguas
-	for X in ${linguas}; do
+	for X in "${linguas[@]}"; do
 		# FIXME: Add support for unpacking xpis to portage
-		[[ ${X} != "en" ]] && xpi_unpack "${P}-${X}.xpi"
+		xpi_unpack "${P}-${X}.xpi"
 	done
 }
 
@@ -212,20 +222,20 @@ src_configure() {
 	mozconfig_annotate '' --prefix=/usr
 	mozconfig_annotate '' --libdir=/usr/$(get_libdir)
 	mozconfig_annotate '' --enable-extensions="${MEXTENSIONS}"
+	mozconfig_annotate '' --disable-gconf
 	mozconfig_annotate '' --disable-mailnews
 	mozconfig_annotate '' --enable-canvas
 	mozconfig_annotate '' --enable-safe-browsing
 	mozconfig_annotate '' --with-system-png
-	use hardened && mozconfig_annotate 'hardened' --disable-methodjit
 
 	# Other ff-specific settings
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
 
 	mozconfig_use_enable system-sqlite
-	mozconfig_use_enable gconf
+	mozconfig_use_enable methodjit
 
 	# Allow for a proper pgo build
-	if ! use hardened && use pgo; then
+	if use pgo; then
 		echo "mk_add_options PROFILE_GEN_SCRIPT='\$(PYTHON) \$(OBJDIR)/_profile/pgo/profileserver.py'" >> "${S}"/.mozconfig
 	fi
 
@@ -242,7 +252,7 @@ src_configure() {
 }
 
 src_compile() {
-	if ! use hardened && use pgo; then
+	if use pgo; then
 		CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" \
 		MOZ_MAKE_FLAGS="${MAKEOPTS}" \
 		Xemake -f client.mk profiledbuild || die "Xemake failed"
@@ -270,8 +280,8 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	linguas
-	for X in ${linguas}; do
-		[[ ${X} != "en" ]] && xpi_install "${WORKDIR}/${P}-${X}"
+	for X in "${linguas[@]}"; do
+		xpi_install "${WORKDIR}/${P}-${X}"
 	done
 
 	local size sizes icon_path icon name
@@ -308,10 +318,8 @@ src_install() {
 		echo "StartupNotify=true" >> "${ED}/usr/share/applications/${PN}.desktop"
 	fi
 
-	if use hardened; then
-		pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/firefox-bin
-		pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/plugin-container
-	fi
+	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/firefox-bin
+	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/plugin-container
 
 	# Plugins dir
 	dosym ../nsbrowser/plugins "${MOZILLA_FIVE_HOME}"/plugins \

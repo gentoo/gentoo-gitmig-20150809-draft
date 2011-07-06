@@ -1,6 +1,19 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.78 2011/06/27 00:42:11 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.79 2011/07/06 05:14:18 nirbheek Exp $
+
+*firefox-5.0-r2 (06 Jul 2011)
+
+  06 Jul 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -files/xulrunner-1.9.2-arm-fixes.patch, -files/firefox-3.0-solaris64.patch,
+  -files/137-bz460917_reload_new_plugins-gentoo-update-3.6.4.patch,
+  firefox-3.6.12.ebuild, -firefox-5.0-r1.ebuild, +firefox-5.0-r2.ebuild,
+  -files/801-enable-x86_64-tracemonkey.patch,
+  -files/fix_blocklist_support.patch, metadata.xml:
+  Always disable gconf, bug 360307, bug 373605 comment 15; add mesa dep for
+  webgl, bug 373245; update the list of locales, bug 364659; add a use-flag to
+  disable JIT, bug 367111. Refactor LINGUAS code to use bash arrays, remove
+  unused patches, drop all keywords on vulnerable 3.6.12 except 'sparc'.
 
 *firefox-5.0-r1 (27 Jun 2011)
 
