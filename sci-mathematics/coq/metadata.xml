@@ -16,8 +16,4 @@
   Constructions" extended by a modular development system for
   theories.
 </longdescription>
-<use>
-  <flag name='norealanalysis'>Do not build real analysis modules (faster compilation)</flag>
-  <flag name='realanalysis'>Build real analysis modules (slower compilation)</flag>
-</use>
 </pkgmetadata>
