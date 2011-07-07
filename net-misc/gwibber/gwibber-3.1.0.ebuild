@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/gwibber-3.1.0.ebuild,v 1.2 2011/07/07 18:04:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/gwibber-3.1.0.ebuild,v 1.3 2011/07/07 18:14:12 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -38,6 +38,11 @@ RDEPEND="
 	"
 
 DOC="AUTHORS README"
+
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
 
 src_prepare() {
 	epatch "$FILESDIR"/gwibber-twitter-api-key.patch
