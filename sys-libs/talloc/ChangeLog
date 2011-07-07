@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/talloc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.24 2011/06/02 17:56:29 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.25 2011/07/07 04:16:07 aballier Exp $
+
+  07 Jul 2011; Alexis Ballier <aballier@gentoo.org> talloc-2.0.5.ebuild:
+  keyword ~x86-fbsd
 
   02 Jun 2011; Víctor Ostorga <vostorga@gentoo.org> talloc-2.0.5.ebuild:
   Adding dependency dev-lang/python[threads] bug 363071
