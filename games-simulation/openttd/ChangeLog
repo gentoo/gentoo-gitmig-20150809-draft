@@ -1,6 +1,11 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.108 2011/05/01 00:32:08 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.109 2011/07/07 17:42:33 mr_bones_ Exp $
+
+*openttd-1.1.1 (07 Jul 2011)
+
+  07 Jul 2011; Michael Sterrett <mr_bones_@gentoo.org> +openttd-1.1.1.ebuild:
+  version bump (bug #374035)
 
   01 May 2011; Mark Loeser <halcy0n@gentoo.org> openttd-1.0.5.ebuild:
   Revert to ~ppc64 to resolve broken deps
