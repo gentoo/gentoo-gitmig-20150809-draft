@@ -1,9 +1,9 @@
 # ChangeLog for sys-block/megarc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megarc/ChangeLog,v 1.7 2011/07/07 22:15:05 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megarc/ChangeLog,v 1.8 2011/07/07 22:16:20 idl0r Exp $
 
   07 Jul 2011; Christian Ruppert <idl0r@gentoo.org> megarc-1.11-r1.ebuild:
-  Use "use" instead of "useq".
+  Use "use" instead of "useq". Define RDEPEND.
 
 *megarc-1.11-r1 (07 Jul 2011)
 
