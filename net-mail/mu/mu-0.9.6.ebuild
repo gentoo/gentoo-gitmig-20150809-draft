@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mu/mu-0.9.6.ebuild,v 1.3 2011/07/02 22:02:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mu/mu-0.9.6.ebuild,v 1.4 2011/07/07 17:04:47 tomka Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="http://mu0.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="gui"
 
 DEPEND=">=dev-libs/gmime-2.4:2.4
