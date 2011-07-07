@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openastromenace/openastromenace-1.2.0.ebuild,v 1.9 2011/02/25 21:39:56 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/openastromenace/openastromenace-1.2.0.ebuild,v 1.10 2011/07/07 02:41:31 mr_bones_ Exp $
 
 EAPI=2
 inherit flag-o-matic cmake-utils eutils games
@@ -22,7 +22,7 @@ IUSE="linguas_en linguas_de linguas_ru"
 
 DEPEND="virtual/opengl
 	virtual/glu
-	media-libs/libsdl[joystick,video]
+	media-libs/libsdl[joystick,video,X]
 	media-libs/openal
 	media-libs/freealut
 	media-libs/libogg
