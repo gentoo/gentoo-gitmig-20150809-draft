@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libssh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.44 2011/05/03 11:32:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.45 2011/07/07 23:07:28 radhermit Exp $
+
+*libssh-0.5.0 (07 Jul 2011)
+
+  07 Jul 2011; Tim Harder <radhermit@gentoo.org> +libssh-0.5.0.ebuild,
+  +files/libssh-0.5.0-no-pdf-doc.patch, +files/libssh-0.5.0-no-server.patch,
+  +files/libssh-0.5.0-tests.patch:
+  Version bump. Add doc and test USE flags.
 
   03 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> libssh-9999.ebuild:
   Migrate to git-2 eclass.
