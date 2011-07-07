@@ -1,10 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/versionator.eclass,v 1.17 2010/07/19 20:17:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/versionator.eclass,v 1.18 2011/07/07 00:34:19 abcd Exp $
 
 # @ECLASS: versionator.eclass
 # @MAINTAINER:
-# base-system@gentoo.org
+# Jonathan Callen <abcd@gentoo.org>, base-system@gentoo.org
 # @BLURB: functions which simplify manipulation of ${PV} and similar version strings
 # @DESCRIPTION:
 # This eclass provides functions which simplify manipulating $PV and similar
@@ -39,52 +39,49 @@ inherit eutils
 #     3.0c-r1     ->  3 . 0 c - r1
 get_all_version_components() {
 	eshopts_push -s extglob
-	local ver_str=${1:-${PV}} result result_idx=0
-	result=( )
+	local ver_str=${1:-${PV}} result
+	result=()
 
 	# sneaky cache trick cache to avoid having to parse the same thing several
 	# times.
-	if [[ "${VERSIONATOR_CACHE_VER_STR}" == "${ver_str}" ]] ; then
+	if [[ ${VERSIONATOR_CACHE_VER_STR} == ${ver_str} ]] ; then
 		echo ${VERSIONATOR_CACHE_RESULT}
 		eshopts_pop
 		return
 	fi
-	export VERSIONATOR_CACHE_VER_STR="${ver_str}"
+	export VERSIONATOR_CACHE_VER_STR=${ver_str}
 
-	while [[ -n "$ver_str" ]] ; do
-		case "${ver_str:0:1}" in
+	while [[ -n $ver_str ]] ; do
+		case "${ver_str::1}" in
 			# number: parse whilst we have a number
 			[[:digit:]])
-				result[$result_idx]="${ver_str%%[^[:digit:]]*}"
-				ver_str="${ver_str##+([[:digit:]])}"
-				result_idx=$(($result_idx + 1))
+				result+=("${ver_str%%[^[:digit:]]*}")
+				ver_str=${ver_str##+([[:digit:]])}
 				;;
 
 			# separator: single character
 			[-_.])
-				result[$result_idx]="${ver_str:0:1}"
-				ver_str="${ver_str:1}"
-				result_idx=$(($result_idx + 1))
+				result+=("${ver_str::1}")
+				ver_str=${ver_str:1}
 				;;
 
 			# letter: grab the letters plus any following numbers
 			[[:alpha:]])
-				local not_match="${ver_str##+([[:alpha:]])*([[:digit:]])}"
-				result[$result_idx]=${ver_str:0:$((${#ver_str} - ${#not_match}))}
-				ver_str="${not_match}"
-				result_idx=$(($result_idx + 1))
+				local not_match=${ver_str##+([[:alpha:]])*([[:digit:]])}
+				# Can't say "${ver_str::-${#not_match}}" in Bash 3.2
+				result+=("${ver_str::${#ver_str} - ${#not_match}}")
+				ver_str=${not_match}
 				;;
 
 			# huh?
 			*)
-				result[$result_idx]="${ver_str:0:1}"
-				ver_str="${ver_str:1}"
-				result_idx=$(($result_idx + 1))
+				result+=("${ver_str::1}")
+				ver_str=${ver_str:1}
 				;;
 		esac
 	done
 
-	export VERSIONATOR_CACHE_RESULT="${result[@]}"
+	export VERSIONATOR_CACHE_RESULT=${result[*]}
 	echo ${result[@]}
 	eshopts_pop
 }
@@ -100,11 +97,8 @@ get_all_version_components() {
 #     20040905    ->  20040905
 #     3.0c-r1     ->  3 0 c r1
 get_version_components() {
-	eshopts_push -s extglob
-	local c="$(get_all_version_components "${1:-${PV}}")"
-	c=( ${c[@]//[-._]/ } )
-	echo ${c[@]}
-	eshopts_pop
+	local c=$(get_all_version_components "${1:-${PV}}")
+	echo ${c//[-._]/ }
 }
 
 # @FUNCTION: get_major_version
@@ -117,11 +111,8 @@ get_version_components() {
 #     20040905    ->  20040905
 #     3.0c-r1     ->  3
 get_major_version() {
-	eshopts_push -s extglob
-	local c
-	c=( $(get_all_version_components "${1:-${PV}}" ) )
+	local c=($(get_all_version_components "${1:-${PV}}"))
 	echo ${c[0]}
-	eshopts_pop
 }
 
 # @FUNCTION: get_version_component_range
@@ -134,22 +125,23 @@ get_major_version() {
 #    2-     1.2.3       -> 2.3
 get_version_component_range() {
 	eshopts_push -s extglob
-	local c v="${2:-${PV}}" range="${1}" range_start range_end i=-1 j=0
-	c=( $(get_all_version_components ${v} ) )
-	range_start="${range%-*}" ; range_start="${range_start:-1}"
-	range_end="${range#*-}"   ; range_end="${range_end:-${#c[@]}}"
+	local c v="${2:-${PV}}" range="${1}" range_start range_end
+	local -i i=-1 j=0
+	c=($(get_all_version_components "${v}"))
+	range_start=${range%-*}; range_start=${range_start:-1}
+	range_end=${range#*-}  ; range_end=${range_end:-${#c[@]}}
 
-	while (( j < ${range_start} )) ; do
-		i=$(($i + 1))
-		[[ $i -gt ${#c[@]} ]] && eshopts_pop && return
-		[[ -n "${c[${i}]//[-._]}" ]] && j=$(($j + 1))
+	while ((j < range_start)); do
+		i+=1
+		((i > ${#c[@]})) && eshopts_pop && return
+		[[ -n "${c[i]//[-._]}" ]] && j+=1
 	done
 
-	while (( j <= ${range_end} )) ; do
-		echo -n ${c[$i]}
-		[[ $i -gt ${#c[@]} ]] && eshopts_pop && return
-		[[ -n "${c[${i}]//[-._]}" ]] && j=$(($j + 1))
-		i=$(($i + 1))
+	while ((j <= range_end)); do
+		echo -n ${c[i]}
+		((i > ${#c[@]})) && eshopts_pop && return
+		[[ -n "${c[i]//[-._]}" ]] && j+=1
+		i+=1
 	done
 	eshopts_pop
 }
@@ -165,9 +157,7 @@ get_version_component_range() {
 #     20040905    ->  (empty string)
 #     3.0c-r1     ->  0c-r1
 get_after_major_version() {
-	eshopts_push -s extglob
-	echo $(get_version_component_range 2- "${1:-${PV}}" )
-	eshopts_pop
+	echo $(get_version_component_range 2- "${1:-${PV}}")
 }
 
 # @FUNCTION: replace_version_separator
@@ -182,29 +172,30 @@ get_after_major_version() {
 # or '_'. In this case, the first separator of this kind is selected.
 replace_version_separator() {
 	eshopts_push -s extglob
-	local w i c found=0 v="${3:-${PV}}"
+	local w c v="${3:-${PV}}"
+	declare -i i found=0
 	w=${1:-1}
-	c=( $(get_all_version_components ${v} ) )
-	if [[ "${w//[[:digit:]]/}" == "${w}" ]] ; then
+	c=($(get_all_version_components ${v}))
+	if [[ ${w} != *[[:digit:]]* ]] ; then
 		# it's a character, not an index
-		for (( i = 0 ; i < ${#c[@]} ; i = $i + 1 )) ; do
-			if [[ "${c[${i}]}" == "${w}" ]] ; then
-				c[${i}]="${2}"
+		for ((i = 0; i < ${#c[@]}; i++)); do
+			if [[ ${c[i]} == ${w} ]]; then
+				c[i]=${2}
 				break
 			fi
 		done
 	else
-		for (( i = 0 ; i < ${#c[@]} ; i = $i + 1 )) ; do
-			if [[ -n "${c[${i}]//[^-._]}" ]] ; then
-				found=$(($found + 1))
-				if [[ "$found" == "${w}" ]] ; then
-					c[${i}]="${2}"
+		for ((i = 0; i < ${#c[@]}; i++)); do
+			if [[ -n "${c[i]//[^-._]}" ]]; then
+				found+=1
+				if ((found == w)); then
+					c[i]=${2}
 					break
 				fi
 			fi
 		done
 	fi
-	c=${c[@]}
+	c=${c[*]}
 	echo ${c// }
 	eshopts_pop
 }
@@ -215,12 +206,9 @@ replace_version_separator() {
 # Replace all version separators in $2 (defaults to $PV) with $1.
 #     '_' 1b.2.3        -> 1b_2_3
 replace_all_version_separators() {
-	eshopts_push -s extglob
-	local c
-	c=( $(get_all_version_components "${2:-${PV}}" ) )
-	c="${c[@]//[-._]/$1}"
+	local c=($(get_all_version_components "${2:-${PV}}"))
+	c=${c[@]//[-._]/$1}
 	echo ${c// }
-	eshopts_pop
 }
 
 # @FUNCTION: delete_version_separator
@@ -234,9 +222,7 @@ replace_all_version_separators() {
 # Rather than being a number, $1 can be a separator character such as '-', '.'
 # or '_'. In this case, the first separator of this kind is deleted.
 delete_version_separator() {
-	eshopts_push -s extglob
 	replace_version_separator "${1}" "" "${2}"
-	eshopts_pop
 }
 
 # @FUNCTION: delete_all_version_separators
@@ -245,9 +231,7 @@ delete_version_separator() {
 # Delete all version separators in $1 (defaults to $PV).
 #     1b.2.3        -> 1b23
 delete_all_version_separators() {
-	eshopts_push -s extglob
 	replace_all_version_separators "" "${1}"
-	eshopts_pop
 }
 
 # @FUNCTION: get_version_component_count
@@ -257,11 +241,8 @@ delete_all_version_separators() {
 #     1.0.1       ->  3
 #     3.0c-r1     ->  4
 get_version_component_count() {
-	eshopts_push -s extglob
-	local a
-	a=( $(get_version_components "${1:-${PV}}" ) )
+	local a=($(get_version_components "${1:-${PV}}"))
 	echo ${#a[@]}
-	eshopts_pop
 }
 
 # @FUNCTION: get_last_version_component_index
@@ -269,12 +250,10 @@ get_version_component_count() {
 # @DESCRIPTION:
 # What is the index of the last version component in $1 (defaults to $PV)?
 # Equivalent to get_version_component_count - 1.
-#     1.0.1       ->  3
-#     3.0c-r1     ->  4
+#     1.0.1       ->  2
+#     3.0c-r1     ->  3
 get_last_version_component_index() {
-	eshopts_push -s extglob
-	echo $(( $(get_version_component_count "${1:-${PV}}" ) - 1 ))
-	eshopts_pop
+	echo $(($(get_version_component_count "${1:-${PV}}" ) - 1))
 }
 
 # @FUNCTION: version_is_at_least
@@ -284,25 +263,20 @@ get_last_version_component_index() {
 # only. May not be reliable, be sure to do very careful testing before actually
 # using this.
 version_is_at_least() {
-	eshopts_push -s extglob
 	local want_s="$1" have_s="${2:-${PVR}}" r
 	version_compare "${want_s}" "${have_s}"
 	r=$?
 	case $r in
 		1|2)
-			eshopts_pop
 			return 0
 			;;
 		3)
-			eshopts_pop
 			return 1
 			;;
 		*)
-			eshopts_pop
 			die "versionator compare bug [atleast, ${want_s}, ${have_s}, ${r}]"
 			;;
 	esac
-	eshopts_pop
 }
 
 # @FUNCTION: version_compare
@@ -314,70 +288,95 @@ version_is_at_least() {
 # May not be very reliable. Test carefully before using this.
 version_compare() {
 	eshopts_push -s extglob
-	local ver_a=${1} ver_b=${2} parts_a parts_b cur_idx_a=0 cur_idx_b=0
+	local ver_a=${1} ver_b=${2} parts_a parts_b
+	local cur_tok_a cur_tok_b num_part_a num_part_b
+	local -i cur_idx_a=0 cur_idx_b=0 prev_idx_a prev_idx_b
 	parts_a=( $(get_all_version_components "${ver_a}" ) )
 	parts_b=( $(get_all_version_components "${ver_b}" ) )
 
 	### compare number parts.
-	local inf_loop=0
-	while true ; do
-		inf_loop=$(( ${inf_loop} + 1 ))
-		[[ ${inf_loop} -gt 20 ]] && \
+	local -i inf_loop=0
+	while true; do
+		inf_loop+=1
+		((inf_loop > 20)) && \
 			die "versionator compare bug [numbers, ${ver_a}, ${ver_b}]"
 
+		# Store the current index to test later
+		prev_idx_a=cur_idx_a
+		prev_idx_b=cur_idx_b
+
 		# grab the current number components
-		local cur_tok_a=${parts_a[${cur_idx_a}]}
-		local cur_tok_b=${parts_b[${cur_idx_b}]}
+		cur_tok_a=${parts_a[cur_idx_a]}
+		cur_tok_b=${parts_b[cur_idx_b]}
 
 		# number?
 		if [[ -n ${cur_tok_a} ]] && [[ -z ${cur_tok_a//[[:digit:]]} ]] ; then
-			cur_idx_a=$(( ${cur_idx_a} + 1 ))
-			[[ ${parts_a[${cur_idx_a}]} == "." ]] \
-				&& cur_idx_a=$(( ${cur_idx_a} + 1 ))
+			cur_idx_a+=1
+			[[ ${parts_a[cur_idx_a]} == . ]] \
+				&& cur_idx_a+=1
 		else
-			cur_tok_a=""
+			cur_tok_a=
 		fi
 
 		if [[ -n ${cur_tok_b} ]] && [[ -z ${cur_tok_b//[[:digit:]]} ]] ; then
-			cur_idx_b=$(( ${cur_idx_b} + 1 ))
-			[[ ${parts_b[${cur_idx_b}]} == "." ]] \
-				&& cur_idx_b=$(( ${cur_idx_b} + 1 ))
+			cur_idx_b+=1
+			[[ ${parts_b[cur_idx_b]} == . ]] \
+				&& cur_idx_b+=1
 		else
-			cur_tok_b=""
+			cur_tok_b=
 		fi
 
 		# done with number components?
-		[[ -z ${cur_tok_a} ]] && [[ -z ${cur_tok_b} ]] && break
+		[[ -z ${cur_tok_a} && -z ${cur_tok_b} ]] && break
 
-		# to avoid going into octal mode, strip any leading zeros. otherwise
-		# bash will throw a hissy fit on versions like 6.3.068.
-		cur_tok_a=${cur_tok_a##+(0)}
-		cur_tok_b=${cur_tok_b##+(0)}
+		# if a component is blank, then it is the lesser value
+		[[ -z ${cur_tok_a} ]] && eshopts_pop && return 1
+		[[ -z ${cur_tok_b} ]] && eshopts_pop && return 3
 
-		# if a component is blank, make it zero.
-		[[ -z ${cur_tok_a} ]] && cur_tok_a=0
-		[[ -z ${cur_tok_b} ]] && cur_tok_b=0
+		# According to PMS, if we are *not* in the first number part, and either
+		# token begins with "0", then we use a different algorithm (that
+		# effectively does floating point comparison)
+		if (( prev_idx_a != 0 && prev_idx_b != 0 )) \
+			&& [[ ${cur_tok_a} == 0* || ${cur_tok_b} == 0* ]] ; then
 
-		# compare
-		[[ ${cur_tok_a} -lt ${cur_tok_b} ]] && eshopts_pop && return 1
-		[[ ${cur_tok_a} -gt ${cur_tok_b} ]] && eshopts_pop && return 3
+			# strip trailing zeros
+			cur_tok_a=${cur_tok_a%%+(0)}
+			cur_tok_b=${cur_tok_b%%+(0)}
+
+			# do a *string* comparison of the resulting values: 2 > 11
+			[[ ${cur_tok_a} < ${cur_tok_b} ]] && eshopts_pop && return 1
+			[[ ${cur_tok_a} > ${cur_tok_b} ]] && eshopts_pop && return 3
+		else
+			# to avoid going into octal mode, strip any leading zeros. otherwise
+			# bash will throw a hissy fit on versions like 6.3.068.
+			cur_tok_a=${cur_tok_a##+(0)}
+			cur_tok_b=${cur_tok_b##+(0)}
+
+			# now if a component is blank, it was originally 0 -- make it so
+			: ${cur_tok_a:=0}
+			: ${cur_tok_b:=0}
+
+			# compare
+			((cur_tok_a < cur_tok_b)) && eshopts_pop && return 1
+			((cur_tok_a > cur_tok_b)) && eshopts_pop && return 3
+		fi
 	done
 
 	### number parts equal. compare letter parts.
 	local letter_a=
-	letter_a=${parts_a[${cur_idx_a}]}
-	if [[ ${#letter_a} -eq 1 ]] && [[ -z ${letter_a/[a-z]} ]] ; then
-		cur_idx_a=$(( ${cur_idx_a} + 1 ))
+	letter_a=${parts_a[cur_idx_a]}
+	if [[ ${#letter_a} -eq 1 && -z ${letter_a/[a-z]} ]] ; then
+		cur_idx_a+=1
 	else
-		letter_a="@"
+		letter_a=@
 	fi
 
 	local letter_b=
-	letter_b=${parts_b[${cur_idx_b}]}
-	if [[ ${#letter_b} -eq 1 ]] && [[ -z ${letter_b/[a-z]} ]] ; then
-		cur_idx_b=$(( ${cur_idx_b} + 1 ))
+	letter_b=${parts_b[cur_idx_b]}
+	if [[ ${#letter_b} -eq 1 && -z ${letter_b/[a-z]} ]] ; then
+		cur_idx_b+=1
 	else
-		letter_b="@"
+		letter_b=@
 	fi
 
 	# compare
@@ -385,38 +384,73 @@ version_compare() {
 	[[ ${letter_a} > ${letter_b} ]] && eshopts_pop && return 3
 
 	### letter parts equal. compare suffixes in order.
-	local suffix rule part r_lt r_gt
-	for rule in "alpha=1" "beta=1" "pre=1" "rc=1" "p=3" "r=3" ; do
-		suffix=${rule%%=*}
-		r_lt=${rule##*=}
-		[[ ${r_lt} -eq 1 ]] && r_gt=3 || r_gt=1
+	inf_loop=0
+	while true ; do
+		inf_loop+=1
+		((inf_loop > 20)) && \
+			die "versionator compare bug [numbers, ${ver_a}, ${ver_b}]"
+		[[ ${parts_a[cur_idx_a]} == _ ]] && ((cur_idx_a++))
+		[[ ${parts_b[cur_idx_b]} == _ ]] && ((cur_idx_b++))
 
-		local suffix_a=
-		for part in ${parts_a[@]} ; do
-			[[ ${part#${suffix}} != ${part} ]] && \
-				[[ -z ${part##${suffix}*([[:digit:]])} ]] && \
-				suffix_a=${part#${suffix}}0
-		done
+		cur_tok_a=${parts_a[cur_idx_a]}
+		cur_tok_b=${parts_b[cur_idx_b]}
+		num_part_a=0
+		num_part_b=0
 
-		local suffix_b=
-		for part in ${parts_b[@]} ; do
-			[[ ${part#${suffix}} != ${part} ]] && \
-				[[ -z ${part##${suffix}*([[:digit:]])} ]] && \
-				suffix_b=${part#${suffix}}0
-		done
+		if has ${cur_tok_a%%+([0-9])} "alpha" "beta" "pre" "rc" "p"; then
+			cur_idx_a+=1
+			num_part_a=${cur_tok_a##+([a-z])}
+			# I don't like octal
+			num_part_a=${num_part_a##+(0)}
+			: ${num_part_a:=0}
+			cur_tok_a=${cur_tok_a%%+([0-9])}
+		else
+			cur_tok_a=
+		fi
 
-		[[ -z ${suffix_a} ]] && [[ -z ${suffix_b} ]] && continue
+		if has ${cur_tok_b%%+([0-9])} alpha beta pre rc p; then
+			cur_idx_b+=1
+			num_part_b=${cur_tok_b##+([a-z])}
+			# I still don't like octal
+			num_part_b=${num_part_b##+(0)}
+			: ${num_part_b:=0}
+			cur_tok_b=${cur_tok_b%%+([0-9])}
+		else
+			cur_tok_b=
+		fi
 
-		[[ -z ${suffix_a} ]] && eshopts_pop && return ${r_gt}
-		[[ -z ${suffix_b} ]] && eshopts_pop && return ${r_lt}
-
-		# avoid octal problems
-		suffix_a=${suffix_a##+(0)} ; suffix_a=${suffix_a:-0}
-		suffix_b=${suffix_b##+(0)} ; suffix_b=${suffix_b:-0}
-
-		[[ ${suffix_a} -lt ${suffix_b} ]] && eshopts_pop && return 1
-		[[ ${suffix_a} -gt ${suffix_b} ]] && eshopts_pop && return 3
+		if [[ ${cur_tok_a} != ${cur_tok_b} ]]; then
+			local suffix
+			for suffix in alpha beta pre rc "" p; do
+				[[ ${cur_tok_a} == ${suffix} ]] && eshopts_pop && return 1
+				[[ ${cur_tok_b} == ${suffix} ]] && eshopts_pop && return 3
+			done
+		elif [[ -z ${cur_tok_a} && -z ${cur_tok_b} ]]; then
+			break
+		else
+			((num_part_a < num_part_b)) && eshopts_pop && return 1
+			((num_part_a > num_part_b)) && eshopts_pop && return 3
+		fi
 	done
+
+	# At this point, the only thing that should be left is the -r# part
+	[[ ${parts_a[cur_idx_a]} == - ]] && ((cur_idx_a++))
+	[[ ${parts_b[cur_idx_b]} == - ]] && ((cur_idx_b++))
+
+	# Sanity check
+	if [[ ${parts_a[cur_idx_a]/r+([0-9])} || ${parts_b[cur_idx_b]/r+([0-9])} ]]; then
+		die "versionator compare bug [revisions, ${ver_a}, ${ver_b}]"
+	fi
+
+	num_part_a=${parts_a[cur_idx_a]#r}
+	num_part_a=${num_part_a##+(0)}
+	: ${num_part_a:=0}
+	num_part_b=${parts_b[cur_idx_b]#r}
+	num_part_b=${num_part_b##+(0)}
+	: ${num_part_b:=0}
+
+	((num_part_a < num_part_b)) && eshopts_pop && return 1
+	((num_part_a > num_part_b)) && eshopts_pop && return 3
 
 	### no differences.
 	eshopts_pop
@@ -431,20 +465,21 @@ version_compare() {
 # Uses version_compare, so be careful.
 version_sort() {
 	eshopts_push -s extglob
-	local items= left=0
-	items=( $@ )
-	while [[ ${left} -lt ${#items[@]} ]] ; do
-		local lowest_idx=${left}
-		local idx=$(( ${lowest_idx} + 1 ))
-		while [[ ${idx} -lt ${#items[@]} ]] ; do
-			version_compare "${items[${lowest_idx}]}" "${items[${idx}]}"
-			[[ $? -eq 3 ]] && lowest_idx=${idx}
-			idx=$(( ${idx} + 1 ))
+	local items=
+	local -i left=0
+	items=("$@")
+	while ((left < ${#items[@]})); do
+		local -i lowest_idx=left
+		local -i idx=lowest_idx+1
+		while ((idx < ${#items[@]})); do
+			version_compare "${items[lowest_idx]}" "${items[idx]}"
+			[[ $? -eq 3 ]] && lowest_idx=idx
+			idx+=1
 		done
-		local tmp=${items[${lowest_idx}]}
-		items[${lowest_idx}]=${items[${left}]}
-		items[${left}]=${tmp}
-		left=$(( ${left} + 1 ))
+		local tmp=${items[lowest_idx]}
+		items[lowest_idx]=${items[left]}
+		items[left]=${tmp}
+		left+=1
 	done
 	echo ${items[@]}
 	eshopts_pop
@@ -456,7 +491,7 @@ version_sort() {
 # Reformat complicated version strings.  The first argument is the string
 # to reformat with while the rest of the args are passed on to the
 # get_version_components function.  You should make sure to single quote
-# the first argument since it'll have variables that get delayed expansion.s
+# the first argument since it'll have variables that get delayed expansions.
 # @EXAMPLE:
 # P="cow-hat-1.2.3_p4"
 # MY_P=$(version_format_string '${PN}_source_$1_$2-$3_$4')
@@ -507,7 +542,7 @@ __versionator__test_version_compare() {
 		1.2.3         $lt 1.2.4
 		1.2.4         $gt 1.2.3
 
-		1.2.0         $eq 1.2
+		1.2.0         $gt 1.2
 		1.2.1         $gt 1.2
 		1.2           $lt 1.2.1
 
@@ -531,7 +566,7 @@ __versionator__test_version_compare() {
 		1.0_alpha6-r1 $gt 1.0_alpha6
 		1.0_beta6-r1  $gt 1.0_alpha6-r2
 
-		1.0_pre1      $lt 1.0-p1
+		1.0_pre1      $lt 1.0_p1
 
 		1.0p          $gt 1.0_p1
 		1.0r          $gt 1.0-r1
@@ -544,7 +579,7 @@ __versionator__test_version_compare() {
 	done
 
 
-	for q in "alpha beta pre rc=${lt};${gt}" "p r=${gt};${lt}" ; do
+	for q in "alpha beta pre rc=${lt};${gt}" "p=${gt};${lt}" ; do
 		for p in ${q%%=*} ; do
 			local c=${q##*=}
 			local alt=${c%%;*} agt=${c##*;}
@@ -564,6 +599,14 @@ __versionator__test_version_compare() {
 			__versionator__test_version_compare_t "1_${p}7"  $eq "1_${p}7"
 			__versionator__test_version_compare_t "1_${p}7"  $gt "1_${p}6"
 			__versionator__test_version_compare_t "1_${p}09" $eq "1_${p}9"
+
+			__versionator__test_version_compare_t "1_${p}7-r0"  $eq "1_${p}7"
+			__versionator__test_version_compare_t "1_${p}7-r0"  $lt "1_${p}7-r1"
+			__versionator__test_version_compare_t "1_${p}7-r0"  $lt "1_${p}7-r01"
+			__versionator__test_version_compare_t "1_${p}7-r01" $eq "1_${p}7-r1"
+			__versionator__test_version_compare_t "1_${p}8-r1"  $gt "1_${p}7-r100"
+
+			__versionator__test_version_compare_t "1_${p}_alpha" $lt "1_${p}_beta"
 		done
 	done
 
@@ -573,5 +616,78 @@ __versionator__test_version_compare() {
 		__versionator__test_version_compare_t "7.2${p}3" $gt "7.2${p}2"
 		__versionator__test_version_compare_t "7.2${p}2" $lt "7.2${p}3"
 	done
+
+	# The following tests all come from portage's test cases:
+	__versionator__test_version_compare_t "6.0" $gt "5.0"
+	__versionator__test_version_compare_t "5.0" $gt "5"
+	__versionator__test_version_compare_t "1.0-r1" $gt "1.0-r0"
+	__versionator__test_version_compare_t "1.0-r1" $gt "1.0"
+	__versionator__test_version_compare_t "999999999999999999999999999999" $gt "999999999999999999999999999998"
+	__versionator__test_version_compare_t "1.0.0" $gt "1.0"
+	__versionator__test_version_compare_t "1.0.0" $gt "1.0b"
+	__versionator__test_version_compare_t "1b" $gt "1"
+	__versionator__test_version_compare_t "1b_p1" $gt "1_p1"
+	__versionator__test_version_compare_t "1.1b" $gt "1.1"
+	__versionator__test_version_compare_t "12.2.5" $gt "12.2b"
+
+	__versionator__test_version_compare_t "4.0" $lt "5.0"
+	__versionator__test_version_compare_t "5" $lt "5.0"
+	__versionator__test_version_compare_t "1.0_pre2" $lt "1.0_p2"
+	__versionator__test_version_compare_t "1.0_alpha2" $lt "1.0_p2"
+	__versionator__test_version_compare_t "1.0_alpha1" $lt "1.0_beta1"
+	__versionator__test_version_compare_t "1.0_beta3" $lt "1.0_rc3"
+	__versionator__test_version_compare_t "1.001000000000000000001" $lt "1.001000000000000000002"
+	__versionator__test_version_compare_t "1.00100000000" $lt "1.0010000000000000001"
+	__versionator__test_version_compare_t "999999999999999999999999999998" $lt "999999999999999999999999999999"
+	__versionator__test_version_compare_t "1.01" $lt "1.1"
+	__versionator__test_version_compare_t "1.0-r0" $lt "1.0-r1"
+	__versionator__test_version_compare_t "1.0" $lt "1.0-r1"
+	__versionator__test_version_compare_t "1.0" $lt "1.0.0"
+	__versionator__test_version_compare_t "1.0b" $lt "1.0.0"
+	__versionator__test_version_compare_t "1_p1" $lt "1b_p1"
+	__versionator__test_version_compare_t "1" $lt "1b"
+	__versionator__test_version_compare_t "1.1" $lt "1.1b"
+	__versionator__test_version_compare_t "12.2b" $lt "12.2.5"
+
+	__versionator__test_version_compare_t "4.0" $eq "4.0"
+	__versionator__test_version_compare_t "1.0" $eq "1.0"
+	__versionator__test_version_compare_t "1.0-r0" $eq "1.0"
+	__versionator__test_version_compare_t "1.0" $eq "1.0-r0"
+	__versionator__test_version_compare_t "1.0-r0" $eq "1.0-r0"
+	__versionator__test_version_compare_t "1.0-r1" $eq "1.0-r1"
+
+	# The following were just tests for != in portage, we need something a bit
+	# more precise
+	__versionator__test_version_compare_t "1" $lt "2"
+	__versionator__test_version_compare_t "1.0_alpha" $lt "1.0_pre"
+	__versionator__test_version_compare_t "1.0_beta" $gt "1.0_alpha"
+	__versionator__test_version_compare_t "0" $lt "0.0"
+	__versionator__test_version_compare_t "1.0-r0" $lt "1.0-r1"
+	__versionator__test_version_compare_t "1.0-r1" $gt "1.0-r0"
+	__versionator__test_version_compare_t "1.0" $lt "1.0-r1"
+	__versionator__test_version_compare_t "1.0-r1" $gt "1.0"
+	__versionator__test_version_compare_t "1_p1" $lt "1b_p1"
+	__versionator__test_version_compare_t "1b" $gt "1"
+	__versionator__test_version_compare_t "1.1b" $gt "1.1"
+	__versionator__test_version_compare_t "12.2b" $gt "12.2"
+
+	# The following tests all come from paludis's test cases:
+	__versionator__test_version_compare_t "1.0" $gt "1"
+	__versionator__test_version_compare_t "1" $lt "1.0"
+	__versionator__test_version_compare_t "1.0_alpha" $gt "1_alpha"
+	__versionator__test_version_compare_t "1.0_alpha" $gt "1"
+	__versionator__test_version_compare_t "1.0_alpha" $lt "1.0"
+	__versionator__test_version_compare_t "1.2.0.0_alpha7-r4" $gt "1.2_alpha7-r4"
+
+	__versionator__test_version_compare_t "0001" $eq "1"
+	__versionator__test_version_compare_t "01" $eq "001"
+	__versionator__test_version_compare_t "0001.1" $eq "1.1"
+	__versionator__test_version_compare_t "01.01" $eq "1.01"
+	__versionator__test_version_compare_t "1.010" $eq "1.01"
+	__versionator__test_version_compare_t "1.00" $eq "1.0"
+	__versionator__test_version_compare_t "1.0100" $eq "1.010"
+	__versionator__test_version_compare_t "1" $eq "1-r0"
+	__versionator__test_version_compare_t "1-r00" $eq "1-r0"
+
 	eshopts_pop
 }
