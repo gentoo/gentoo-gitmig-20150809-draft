@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Encode-Locale
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-Locale/ChangeLog,v 1.8 2011/06/13 00:00:49 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-Locale/ChangeLog,v 1.9 2011/07/07 05:00:12 aballier Exp $
+
+  07 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  Encode-Locale-1.20.0.ebuild:
+  keyword ~x86-fbsd, bug #358079
 
   13 Jun 2011; Matt Turner <mattst88@gentoo.org> Encode-Locale-1.20.0.ebuild:
   Added ~mips, bug 358079
