@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.23.1_p27077.ebuild,v 1.1 2010/11/04 16:46:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.23.1_p27077.ebuild,v 1.2 2011/07/07 21:28:52 cardoe Exp $
 
 EAPI=2
 inherit flag-o-matic multilib eutils qt4 mythtv toolchain-funcs python
 
 DESCRIPTION="Homebrew PVR project"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 
 IUSE_VIDEO_CARDS="video_cards_nvidia video_cards_via"
 IUSE="alsa altivec autostart +css dbus debug directv dvb faad \

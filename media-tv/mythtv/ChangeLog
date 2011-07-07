@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.330 2010/11/04 16:46:12 cardoe Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.331 2011/07/07 21:28:52 cardoe Exp $
+
+  07 Jul 2011; Doug Goldstein <cardoe@gentoo.org> mythtv-0.23.1_p27077.ebuild:
+  Mark the latest 0.23.1 as stable since I've been running it on both x86 and
+  amd64 stable machines for a long time.
 
 *mythtv-0.23.1_p27077 (04 Nov 2010)
 
