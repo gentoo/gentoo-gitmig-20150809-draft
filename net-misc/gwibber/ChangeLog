@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/gwibber
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/ChangeLog,v 1.12 2011/07/06 14:44:09 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/ChangeLog,v 1.13 2011/07/07 18:00:45 hwoarang Exp $
+
+*gwibber-3.1.0 (07 Jul 2011)
+
+  07 Jul 2011; Markos Chandras <hwoarang@gentoo.org> +gwibber-3.1.0.ebuild,
+  +files/gwibber-fix-uuid-import.patch, +files/gwibber-twitter-api-key.patch,
+  +files/make_nm_optional.patch, metadata.xml:
+  Version bump. Fixes bug #361555. Add new proxy maintainer
 
   06 Jul 2011; Jesus Rivero <neurogeek@gentoo.org> metadata.xml:
   Added hwoarang as maintainer and dropped proxy-maintainer

@@ -10,4 +10,9 @@
 		<email>neurogeek@gentoo.org</email>
 		<name>Jesus Rivero</name>
 	</maintainer>
+	<maintainer>
+		<email>tante@the-gay-bar.com</email>
+		<name>Jürgen Geuter</name>
+		<description>Maintainer. Assign bugs to him</description>
+	</maintainer>
 </pkgmetadata>
