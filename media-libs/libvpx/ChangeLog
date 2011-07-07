@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.26 2011/06/29 14:54:16 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.27 2011/07/07 03:01:00 aballier Exp $
+
+  07 Jul 2011; Alexis Ballier <aballier@gentoo.org> -libvpx-0.9.5.ebuild:
+  remove old
 
   29 Jun 2011; Christoph Mende <angelos@gentoo.org> libvpx-0.9.6.ebuild:
   Stable on amd64 wrt bug #365273
