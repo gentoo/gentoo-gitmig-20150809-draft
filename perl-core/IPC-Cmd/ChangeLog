@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/IPC-Cmd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/IPC-Cmd/ChangeLog,v 1.23 2011/06/13 02:09:35 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/IPC-Cmd/ChangeLog,v 1.24 2011/07/07 23:17:04 aballier Exp $
+
+  07 Jul 2011; Alexis Ballier <aballier@gentoo.org> IPC-Cmd-0.700.0.ebuild:
+  keyword ~x86-fbsd, bug #351526
 
   13 Jun 2011; Matt Turner <mattst88@gentoo.org> IPC-Cmd-0.700.0.ebuild:
   Added ~mips, bug 351526

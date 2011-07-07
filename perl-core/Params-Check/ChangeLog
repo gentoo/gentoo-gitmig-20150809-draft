@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Params-Check
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Params-Check/ChangeLog,v 1.10 2011/06/13 01:59:06 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Params-Check/ChangeLog,v 1.11 2011/07/07 23:14:31 aballier Exp $
+
+  07 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  Params-Check-0.280.0.ebuild:
+  keyword ~x86-fbsd
 
   13 Jun 2011; Matt Turner <mattst88@gentoo.org> Params-Check-0.280.0.ebuild:
   Added ~mips, bug 351526
