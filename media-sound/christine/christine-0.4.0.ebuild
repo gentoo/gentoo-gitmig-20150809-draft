@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/christine/christine-0.4.0.ebuild,v 1.3 2010/05/28 19:16:45 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/christine/christine-0.4.0.ebuild,v 1.4 2011/07/07 15:29:58 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 inherit autotools eutils python
 
 DESCRIPTION="Python, GTK+ and GStreamer based media player (audio and video)"
@@ -43,14 +43,14 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 }
 
 pkg_postinst() {
-	python_mod_optimize $(python_get_sitedir)/lib${PN}
+	python_mod_optimize lib${PN}
 }
 
 pkg_postrm() {
-	python_mod_cleanup $(python_get_sitedir)/lib${PN}
+	python_mod_cleanup lib${PN}
 }

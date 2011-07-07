@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/christine
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/christine/ChangeLog,v 1.6 2010/05/28 19:16:45 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/christine/ChangeLog,v 1.7 2011/07/07 15:29:58 ssuominen Exp $
+
+  07 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> christine-0.4.0.ebuild:
+  Change away from deprecated python.eclass functions by Arfrever.
 
   28 May 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   christine-0.4.0.ebuild:
