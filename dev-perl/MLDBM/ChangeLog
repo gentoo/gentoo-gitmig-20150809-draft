@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MLDBM
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MLDBM/ChangeLog,v 1.29 2010/12/03 02:12:49 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MLDBM/ChangeLog,v 1.30 2011/07/07 05:38:59 aballier Exp $
+
+  07 Jul 2011; Alexis Ballier <aballier@gentoo.org> MLDBM-2.04.ebuild:
+  keyword ~x86-fbsd
 
   03 Dec 2010; Michael Weber <xmw@gentoo.org> MLDBM-2.01.ebuild,
   MLDBM-2.04.ebuild:

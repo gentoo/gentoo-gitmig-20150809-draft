@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Clone
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.64 2011/04/24 15:58:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.65 2011/07/07 05:37:08 aballier Exp $
+
+  07 Jul 2011; Alexis Ballier <aballier@gentoo.org> Clone-0.31.ebuild:
+  keyword ~x86-fbsd
 
   24 Apr 2011; Fabian Groffen <grobian@gentoo.org> Clone-0.31.ebuild:
   Marked ~x86-solaris, bug #296509

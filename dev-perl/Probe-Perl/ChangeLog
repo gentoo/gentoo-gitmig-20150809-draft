@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Probe-Perl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Probe-Perl/ChangeLog,v 1.9 2010/05/09 17:23:31 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Probe-Perl/ChangeLog,v 1.10 2011/07/07 05:40:42 aballier Exp $
+
+  07 Jul 2011; Alexis Ballier <aballier@gentoo.org> Probe-Perl-0.01.ebuild:
+  keyword ~x86-fbsd
 
   09 May 2010; Raúl Porcel <armin76@gentoo.org> Probe-Perl-0.01.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable
