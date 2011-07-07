@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/railties-3.0.9.ebuild,v 1.1 2011/07/04 09:37:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/railties-3.0.9.ebuild,v 1.2 2011/07/07 04:39:29 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -33,6 +33,7 @@ RESTRICT="test"
 ruby_add_rdepend "
 	~dev-ruby/activesupport-${PV}
 	~dev-ruby/actionpack-${PV}
+	>=dev-ruby/rdoc-3.4
 	>=dev-ruby/thor-0.14.4
 	>=dev-ruby/rake-0.8.7"
 
