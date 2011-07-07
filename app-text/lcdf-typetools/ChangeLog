@@ -1,6 +1,9 @@
 # ChangeLog for app-text/lcdf-typetools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lcdf-typetools/ChangeLog,v 1.69 2011/06/27 14:52:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lcdf-typetools/ChangeLog,v 1.70 2011/07/07 06:03:41 aballier Exp $
+
+  07 Jul 2011; Alexis Ballier <aballier@gentoo.org> lcdf-typetools-2.91.ebuild:
+  eapi2ify, default enable kpathsea as required by texlive
 
   27 Jun 2011; Alexis Ballier <aballier@gentoo.org>
   -lcdf-typetools-2.86.ebuild, -lcdf-typetools-2.87.ebuild,
