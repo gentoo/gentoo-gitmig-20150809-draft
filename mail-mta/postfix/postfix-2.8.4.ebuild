@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.8.4_rc1.ebuild,v 1.1 2011/06/18 12:55:02 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.8.4.ebuild,v 1.1 2011/07/07 12:46:09 eras Exp $
 
 EAPI=4
 
@@ -251,7 +251,6 @@ src_install () {
 	fi
 
 	# Remove unnecessary files
-	rm -f "${D}"/usr/$(get_libdir)/postfix/*.cf
 	rm -f "${D}"/etc/postfix/{*LICENSE,access,aliases,canonical,generic}
 	rm -f "${D}"/etc/postfix/{header_checks,relocated,transport,virtual}
 }
