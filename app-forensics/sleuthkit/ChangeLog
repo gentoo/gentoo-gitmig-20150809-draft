@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/sleuthkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.46 2011/07/07 07:43:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.47 2011/07/07 07:52:08 radhermit Exp $
+
+  07 Jul 2011; Tim Harder <radhermit@gentoo.org> sleuthkit-3.1.0.ebuild,
+  sleuthkit-3.2.1.ebuild, sleuthkit-3.2.2.ebuild:
+  Keyworded ~ppc for all recent versions (not done previously due to responding
+  to bug #260682 after a version bump).
 
 *sleuthkit-3.2.2 (07 Jul 2011)
 
