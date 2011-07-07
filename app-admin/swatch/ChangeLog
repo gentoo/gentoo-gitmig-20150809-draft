@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/swatch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/swatch/ChangeLog,v 1.22 2011/07/06 12:23:00 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/swatch/ChangeLog,v 1.23 2011/07/07 10:13:05 c1pher Exp $
+
+  07 Jul 2011; Dane Smith <c1pher@gentoo.org> -swatch-3.1.1.ebuild,
+  -swatch-3.2.1.ebuild, -swatch-3.2.3.ebuild:
+  Drop old.
 
 *swatch-3.2.3-r1 (06 Jul 2011)
 
