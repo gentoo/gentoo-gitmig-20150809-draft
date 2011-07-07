@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.270 2011/07/07 12:46:09 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.271 2011/07/07 14:11:36 eras Exp $
+
+*postfix-2.9_pre20110706 (07 Jul 2011)
+
+  07 Jul 2011; Eray Aslan <eras@gentoo.org> -postfix-2.9_pre20110615.ebuild,
+  +postfix-2.9_pre20110706.ebuild, files/postfix.rc6.2.6:
+  Version bump. Add header files - bug #173103. Add abort flush commands to
+  init script thanks to Steve Dibb - bug #369915
 
 *postfix-2.8.4 (07 Jul 2011)
 

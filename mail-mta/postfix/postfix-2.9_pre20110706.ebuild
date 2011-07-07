@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9_pre20110615.ebuild,v 1.1 2011/06/16 06:12:53 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9_pre20110706.ebuild,v 1.1 2011/07/07 14:11:36 eras Exp $
 
 EAPI=4
 
@@ -249,6 +249,10 @@ src_install () {
 		insinto /etc/sasl2
 		newins "${FILESDIR}"/smtp.sasl smtpd.conf
 	fi
+
+	# header files
+	insinto /usr/include/postfix
+	doins include/*.h
 
 	# Remove unnecessary files
 	rm -f "${D}"/etc/postfix/{*LICENSE,access,aliases,canonical,generic}

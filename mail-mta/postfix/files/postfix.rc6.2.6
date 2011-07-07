@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/files/postfix.rc6.2.6,v 1.1 2011/06/15 10:24:58 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/files/postfix.rc6.2.6,v 1.2 2011/07/07 14:11:36 eras Exp $
 
 # Please read http://www.postfix.org/MULTI_INSTANCE_README.html for multi instance support
 
@@ -18,7 +18,11 @@ else
 	CONF_MESSAGE="(${CONF_DIR})"
 fi
 
-opts="${opts} reload"
+opts="${opts} reload abort flush"
+
+description_reload="Re-read configuration files. Running processes terminate at their earliest convenience."
+description_abort="Stop the Postfix mail system abruptly. Running processes are signaled to stop immediately."
+description_flush="Force delivery: attempt to deliver every message in the deferred mail queue."
 
 depend() {
 	use logger dns ypbind amavisd antivirus postfix_greylist net saslauthd
@@ -49,5 +53,21 @@ stop() {
 reload() {
 	ebegin "Reloading postfix ${CONF_MESSAGE}"
 	/usr/sbin/postfix ${CONF_PARAM} reload >/dev/null 2>&1
+	eend $?
+}
+
+abort() {
+	ebegin "Aborting postfix ${CONF_MESSAGE}"
+
+	if service_started "${SVCNAME}"; then
+		mark_service_stopped "${SVCNAME}"
+	fi
+	/usr/sbin/postfix ${CONF_PARAM} abort >/dev/null 2>&1
+	eend $?
+}
+
+flush() {
+	ebegin "Flushing postfix ${CONF_MESSAGE}"
+	/usr/sbin/postfix ${CONF_PARAM} flush >/dev/null 2>&1
 	eend $?
 }
