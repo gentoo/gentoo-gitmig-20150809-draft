@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megarc/megarc-1.11.ebuild,v 1.4 2011/07/07 14:30:39 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megarc/megarc-1.11-r1.ebuild,v 1.1 2011/07/07 17:17:20 idl0r Exp $
 
 EAPI="3"
 
@@ -24,7 +24,7 @@ RESTRICT="mirror"
 
 S="${WORKDIR}"
 
-QA_PRESTRIPPED="/usr/sbin/megarc"
+QA_PRESTRIPPED="/opt/bin/megarc"
 
 pkg_setup() {
 	use amd64 && { has_multilib_profile || die "needs multilib profile on amd64"; }
@@ -37,5 +37,7 @@ src_compile() {
 src_install() {
 	useq doc && dodoc ${PN}-manual.txt
 	newdoc ut_linux_${PN}_${PV}.txt ${PN}-release-${PV}.txt
-	newsbin megarc.bin megarc || die
+
+	exeinto /opt/bin
+	newexe megarc.bin megarc || die
 }
