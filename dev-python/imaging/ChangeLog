@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/imaging
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.63 2011/02/25 17:50:42 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.64 2011/07/07 23:26:15 neurogeek Exp $
+
+  07 Jul 2011; Jesus Rivero <neurogeek@gentoo.org> imaging-1.1.7.ebuild:
+  Fixed shebang in Scripts/pilfont.py wrt bug #371117
 
   25 Feb 2011; Fabian Groffen <grobian@gentoo.org> imaging-1.1.7.ebuild:
   Marked ~x64-macos, bug #356447

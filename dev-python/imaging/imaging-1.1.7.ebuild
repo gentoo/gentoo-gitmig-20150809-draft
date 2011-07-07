@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.7.ebuild,v 1.12 2011/02/25 17:50:42 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.7.ebuild,v 1.13 2011/07/07 23:26:15 neurogeek Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -44,6 +44,10 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-sane.patch"
 	epatch "${FILESDIR}/${P}-giftrans.patch"
 	epatch "${FILESDIR}/${P}-missing-math.patch"
+
+	# Add shebang.
+	sed -e "1i#!/usr/bin/python" -i Scripts/pilfont.py \
+		|| die "sed	failed adding shebang"
 
 	sed -i \
 		-e "s:/usr/lib\":/usr/$(get_libdir)\":" \
