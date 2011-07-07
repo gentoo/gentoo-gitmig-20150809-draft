@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Perl-OSType
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Perl-OSType/ChangeLog,v 1.8 2011/06/18 20:21:41 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Perl-OSType/ChangeLog,v 1.9 2011/07/07 04:34:36 aballier Exp $
+
+  07 Jul 2011; Alexis Ballier <aballier@gentoo.org> Perl-OSType-1.2.0.ebuild:
+  keyword ~x86-fbsd
 
 *Perl-OSType-1.2.0 (18 Jun 2011)
 
