@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.3.11.ebuild,v 1.6 2011/07/05 00:18:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.3.11.ebuild,v 1.7 2011/07/07 18:01:02 vapier Exp $
 
 EAPI="2"
 
@@ -72,7 +72,7 @@ RDEPEND="truetype? ( >=media-libs/freetype-2.0.0 media-fonts/corefonts )
 	esd? ( media-sound/esound )
 	nas? ( media-libs/nas )
 	cups? ( net-print/cups )
-	opencl? ( x11-drivers/nvidia-drivers )
+	opencl? ( x11-drivers/nvidia-drivers dev-util/nvidia-cuda-toolkit )
 	opengl? ( virtual/opengl )
 	pulseaudio? ( media-sound/pulseaudio )
 	gsm? ( media-sound/gsm )
