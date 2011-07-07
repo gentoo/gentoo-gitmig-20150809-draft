@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/yajl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.9 2011/07/07 04:48:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.10 2011/07/07 04:50:38 graaff Exp $
+
+  07 Jul 2011; Hans de Graaff <graaff@gentoo.org> yajl-2.0.2.ebuild:
+  Move back into the normal slot since this package is not designed for
+  parallel installation.
 
 *yajl-2.0.2 (07 Jul 2011)
 
