@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTTP-Negotiate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Negotiate/ChangeLog,v 1.6 2011/06/13 00:03:22 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Negotiate/ChangeLog,v 1.7 2011/07/07 05:00:57 aballier Exp $
+
+  07 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  HTTP-Negotiate-6.0.0.ebuild:
+  keyword ~x86-fbsd
 
   13 Jun 2011; Matt Turner <mattst88@gentoo.org> HTTP-Negotiate-6.0.0.ebuild:
   Added ~mips, bug 358079
