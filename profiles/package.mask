@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12894 2011/07/06 17:12:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12895 2011/07/07 12:49:02 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -159,10 +159,6 @@ mail-client/smtpclient
 # Several working alternatives, including dovecot, cyrus, mailutils.
 # Removal in 30 days
 net-mail/teapop
-
-# Eray Aslan <eras@gentoo.org> (18 Jun 2011)
-# Mask release candidate
-=mail-mta/postfix-2.8.4_rc*
 
 # Torsten Veller <tove@gentoo.org> (18 Jun 2011)
 # Mask perl-5.14. See tracker bug #356171
