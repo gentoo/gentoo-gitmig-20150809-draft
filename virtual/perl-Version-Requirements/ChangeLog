@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Version-Requirements
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Version-Requirements/ChangeLog,v 1.9 2011/06/18 20:20:43 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Version-Requirements/ChangeLog,v 1.10 2011/07/07 04:05:42 aballier Exp $
+
+  07 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  perl-Version-Requirements-0.101.20-r2.ebuild:
+  keyword ~x86-fbsd, bug #357599
 
 *perl-Version-Requirements-0.101.20-r2 (18 Jun 2011)
 
