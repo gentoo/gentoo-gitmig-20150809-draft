@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-DBI/Template-DBI-2.65.ebuild,v 1.5 2010/12/03 02:14:11 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-DBI/Template-DBI-2.65.ebuild,v 1.6 2011/07/07 05:51:59 aballier Exp $
 
 EAPI=3
 
@@ -10,7 +10,7 @@ inherit perl-module
 DESCRIPTION="DBI plugin for the Template Toolkit"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-solaris"
 IUSE="test"
 
 RDEPEND=">=dev-perl/DBI-1.612

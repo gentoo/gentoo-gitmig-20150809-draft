@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Template-DBI
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-DBI/ChangeLog,v 1.20 2010/12/03 02:14:11 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-DBI/ChangeLog,v 1.21 2011/07/07 05:51:59 aballier Exp $
+
+  07 Jul 2011; Alexis Ballier <aballier@gentoo.org> Template-DBI-2.65.ebuild:
+  keyword ~x86-fbsd, bug #330301
 
   03 Dec 2010; Michael Weber <xmw@gentoo.org> Template-DBI-2.64.ebuild,
   Template-DBI-2.65.ebuild:
