@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/gnome-themes-standard-3.0.2.ebuild,v 1.1 2011/06/02 16:54:41 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/gnome-themes-standard-3.0.2.ebuild,v 1.2 2011/07/07 13:50:51 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -26,8 +26,8 @@ DEPEND="${COMMON_DEPEND}
 # gnome-themes{,-extras} are OBSOLETE for GNOME 3
 # http://comments.gmane.org/gmane.comp.gnome.desktop/44130
 RDEPEND="${COMMON_DEPEND}
-	!x11-themes/gnome-themes
-	!x11-themes/gnome-themes-extras"
+	!<x11-themes/gnome-themes-2.32.1-r1"
+
 # This ebuild does not install any binaries
 RESTRICT="binchecks strip"
 # FIXME: --enable-placeholders fails
