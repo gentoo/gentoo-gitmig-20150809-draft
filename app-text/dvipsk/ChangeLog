@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dvipsk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipsk/ChangeLog,v 1.9 2011/06/13 20:56:21 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipsk/ChangeLog,v 1.10 2011/07/07 06:00:12 aballier Exp $
+
+  07 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  dvipsk-5.99_p20100722.ebuild:
+  keyword ~x86-fbsd
 
   13 Jun 2011; Matt Turner <mattst88@gentoo.org> dvipsk-5.99_p20100722.ebuild:
   Added ~mips, bug 342513
