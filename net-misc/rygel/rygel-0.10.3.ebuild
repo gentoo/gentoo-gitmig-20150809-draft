@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.10.1.ebuild,v 1.1 2011/04/17 15:57:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.10.3.ebuild,v 1.1 2011/07/07 12:35:03 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 
 inherit gnome2
 
@@ -55,9 +56,4 @@ pkg_setup() {
 		$(use_enable sqlite media-export-plugin)
 		$(use_enable tracker tracker-plugin)
 		$(use_with X ui)"
-}
-
-src_install() {
-	gnome2_src_install
-	find "${ED}" -name "*.la" -delete || die
 }
