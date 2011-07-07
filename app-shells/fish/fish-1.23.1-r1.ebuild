@@ -1,14 +1,14 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-1.23.1-r1.ebuild,v 1.1 2010/11/27 23:28:06 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/fish-1.23.1-r1.ebuild,v 1.2 2011/07/07 10:41:38 polynomial-c Exp $
 
 EAPI="3"
 
 inherit base autotools eutils
 
 DESCRIPTION="fish is the Friendly Interactive SHell"
-HOMEPAGE="http://fishshell.org/"
-SRC_URI="http://fishshell.org/files/${PV}/${P}.tar.bz2"
+HOMEPAGE="http://fishshell.com/"
+SRC_URI="http://fishshell.com/files/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/fish
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.48 2010/11/27 23:28:06 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/fish/ChangeLog,v 1.49 2011/07/07 10:41:38 polynomial-c Exp $
+
+  07 Jul 2011; Lars Wendler <polynomial-c@gentoo.org> -fish-1.23.0.ebuild,
+  fish-1.23.1.ebuild, fish-1.23.1-r1.ebuild:
+  Homepage/download URL has changed. Removed old version.
 
 *fish-1.23.1-r1 (27 Nov 2010)
 
