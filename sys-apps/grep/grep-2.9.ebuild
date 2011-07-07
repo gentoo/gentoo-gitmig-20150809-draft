@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.9.ebuild,v 1.1 2011/06/22 03:59:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.9.ebuild,v 1.2 2011/07/07 03:04:19 aballier Exp $
 
 EAPI="3"
 
@@ -15,7 +15,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE="nls pcre"
 
 RDEPEND="nls? ( virtual/libintl )
-	pcre? ( >=dev-libs/libpcre-7.8-r1 )"
+	pcre? ( >=dev-libs/libpcre-7.8-r1 )
+	virtual/libiconv"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
