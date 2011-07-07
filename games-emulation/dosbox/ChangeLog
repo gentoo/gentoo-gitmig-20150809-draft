@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/dosbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.56 2011/04/28 07:22:45 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.57 2011/07/07 18:29:24 mr_bones_ Exp $
+
+  07 Jul 2011; Michael Sterrett <mr_bones_@gentoo.org> dosbox-0.74.ebuild,
+  dosbox-9999.ebuild:
+  add alsa use dep for libsdl (bug #374333)
 
   28 Apr 2011; Tupone Alfredo <tupone@gentoo.org> dosbox-0.74.ebuild,
   +files/dosbox-0.74-gcc46.patch:
