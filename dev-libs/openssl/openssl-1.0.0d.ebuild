@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0d.ebuild,v 1.11 2011/07/05 07:01:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0d.ebuild,v 1.12 2011/07/07 23:50:26 aballier Exp $
 
 EAPI="2"
 
@@ -35,6 +35,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.9.8l-binutils.patch #289130
 	epatch "${FILESDIR}"/${PN}-1.0.0a-ldflags.patch #327421
 	epatch "${FILESDIR}"/${PN}-1.0.0d-alpha-typo.patch #364699
+	epatch "${FILESDIR}"/${PN}-1.0.0d-fbsd-amd64.patch #363089
 	epatch_user #332661
 
 	# disable fips in the build

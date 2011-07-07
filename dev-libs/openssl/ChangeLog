@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.397 2011/07/05 07:01:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.398 2011/07/07 23:50:26 aballier Exp $
+
+  07 Jul 2011; Alexis Ballier <aballier@gentoo.org> openssl-1.0.0d.ebuild,
+  +files/openssl-1.0.0d-fbsd-amd64.patch:
+  add patch from Yuta SATOH to fix build on amd64-fbsd, bug #363089
 
   05 Jul 2011; Mike Frysinger <vapier@gentoo.org>
   -files/openssl-0.9.7e-gentoo.patch, openssl-0.9.8r.ebuild,
