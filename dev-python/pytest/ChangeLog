@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pytest
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.27 2011/07/03 09:13:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.28 2011/07/07 07:29:30 hwoarang Exp $
+
+  07 Jul 2011; Markos Chandras <hwoarang@gentoo.org>
+  -files/pytest-2.0.0-nose-1.0+python-3.patch:
+  Remove unneeded files. Requested by Arfrever
 
   03 Jul 2011; Markos Chandras <hwoarang@gentoo.org> pytest-2.0.3.ebuild:
   Stable on amd64 wrt bug #373363
