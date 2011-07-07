@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gwibber
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/ChangeLog,v 1.13 2011/07/07 18:00:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/ChangeLog,v 1.14 2011/07/07 18:04:34 hwoarang Exp $
+
+  07 Jul 2011; Markos Chandras <hwoarang@gentoo.org> gwibber-3.1.0.ebuild:
+  Refactor python[sqlite] dependency
 
 *gwibber-3.1.0 (07 Jul 2011)
 

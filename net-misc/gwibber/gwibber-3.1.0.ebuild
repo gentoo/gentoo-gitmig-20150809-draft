@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/gwibber-3.1.0.ebuild,v 1.1 2011/07/07 18:00:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/gwibber-3.1.0.ebuild,v 1.2 2011/07/07 18:04:34 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
+PYTHON_USE_WITH="sqlite"
 
 inherit eutils distutils
 
@@ -17,7 +18,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	dev-lang/python[sqlite]
 	>=dev-python/dbus-python-0.80.2
 	>=dev-python/gconf-python-2.18.0
 	dev-python/gnome-keyring-python
