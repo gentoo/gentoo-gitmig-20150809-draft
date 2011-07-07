@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-TimeZone
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/ChangeLog,v 1.169 2011/07/06 13:35:51 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-TimeZone/ChangeLog,v 1.170 2011/07/07 23:05:27 aballier Exp $
+
+  07 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  DateTime-TimeZone-1.350.0.ebuild:
+  keyword ~x86-fbsd, bug #346449
 
 *DateTime-TimeZone-1.350.0 (06 Jul 2011)
 
