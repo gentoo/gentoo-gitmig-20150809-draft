@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Version-Requirements
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Version-Requirements/ChangeLog,v 1.7 2011/06/13 00:22:13 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Version-Requirements/ChangeLog,v 1.8 2011/07/07 04:03:53 aballier Exp $
+
+  07 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  Version-Requirements-0.101.20.ebuild:
+  keyword ~x86-fbsd, bug #357599
 
   13 Jun 2011; Matt Turner <mattst88@gentoo.org>
   Version-Requirements-0.101.20.ebuild:
