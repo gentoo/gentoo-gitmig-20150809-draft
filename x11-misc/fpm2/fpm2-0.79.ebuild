@@ -1,10 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fpm2/fpm2-0.79.ebuild,v 1.1 2011/07/07 22:03:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fpm2/fpm2-0.79.ebuild,v 1.2 2011/07/07 22:10:04 hwoarang Exp $
 
 EAPI="4"
-
-inherit eutils
 
 DESCRIPTION="A GUI password manager utility with password generator"
 HOMEPAGE="http://als.regnet.cz/fpm2/"
