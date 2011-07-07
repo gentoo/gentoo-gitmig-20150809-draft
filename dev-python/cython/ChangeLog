@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cython
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.68 2011/03/31 17:21:01 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/ChangeLog,v 1.69 2011/07/07 03:46:54 aballier Exp $
+
+  07 Jul 2011; Alexis Ballier <aballier@gentoo.org> cython-0.14.1.ebuild:
+  keyword ~x86-fbsd, tests fail due to missing cpow on fbsd though
 
   31 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> cython-0.14.1.ebuild:
   ppc64 stable wrt #357847
