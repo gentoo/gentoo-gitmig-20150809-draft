@@ -1,6 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/package.mask,v 1.28 2011/05/02 19:36:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/package.mask,v 1.29 2011/07/07 11:10:21 grobian Exp $
+
+# Fabian Groffen <grobian@gentoo.org> (07 Jul 2011)
+# cannot unpack :(
+# tar: Archive value 4294967295 is out of gid_t range
+# -2147483648..2147483647
+~dev-libs/boost-build-1.46.1
+~dev-libs/boost-1.46.1
 
 # Fabian Groffen <grobian@gentoo.org> (14 Feb 2010)
 # fails to compile, offical 7.2 works like a charm
