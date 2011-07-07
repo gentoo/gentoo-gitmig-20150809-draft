@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.27 2011/07/07 03:01:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.28 2011/07/07 03:09:07 aballier Exp $
+
+  07 Jul 2011; Alexis Ballier <aballier@gentoo.org> libvpx-0.9.6.ebuild,
+  libvpx-9999.ebuild:
+  x86-fbsd needs yasm too
 
   07 Jul 2011; Alexis Ballier <aballier@gentoo.org> -libvpx-0.9.5.ebuild:
   remove old

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-0.9.6.ebuild,v 1.8 2011/06/29 14:54:16 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-0.9.6.ebuild,v 1.9 2011/07/07 03:09:07 aballier Exp $
 
 EAPI=4
 inherit eutils multilib toolchain-funcs
@@ -29,6 +29,7 @@ IUSE="altivec debug doc mmx postproc sse sse2 sse3 ssse3 +threads"
 RDEPEND=""
 DEPEND="amd64? ( dev-lang/yasm )
 	x86? ( dev-lang/yasm )
+	x86-fbsd? ( dev-lang/yasm )
 	doc? (
 		app-doc/doxygen
 		dev-lang/php
