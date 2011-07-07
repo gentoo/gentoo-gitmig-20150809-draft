@@ -1,12 +1,14 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megarc/megarc-1.11.ebuild,v 1.3 2009/08/03 19:29:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megarc/megarc-1.11.ebuild,v 1.4 2011/07/07 14:30:39 idl0r Exp $
+
+EAPI="3"
 
 inherit multilib
 
 DESCRIPTION="LSI Logic MegaRAID Text User Interface management tool"
 HOMEPAGE="http://www.lsi.com"
-SRC_URI="http://www.lsi.com/DistributionSystem/AssetDocument/files/support/rsa/utilities/megaconf/ut_linux_${PN}_${PV}.zip"
+SRC_URI="http://www.lsi.com/downloads/Public/MegaRAID%20Common%20Files/ut_linux_${PN}_${PV}.zip"
 
 LICENSE="LSI"
 SLOT="0"
@@ -18,9 +20,11 @@ IUSE="doc"
 DEPEND="app-arch/unzip
 	doc? ( app-text/antiword )"
 
-RESTRICT="strip mirror test"
+RESTRICT="mirror"
 
 S="${WORKDIR}"
+
+QA_PRESTRIPPED="/usr/sbin/megarc"
 
 pkg_setup() {
 	use amd64 && { has_multilib_profile || die "needs multilib profile on amd64"; }
@@ -33,5 +37,5 @@ src_compile() {
 src_install() {
 	useq doc && dodoc ${PN}-manual.txt
 	newdoc ut_linux_${PN}_${PV}.txt ${PN}-release-${PV}.txt
-	dosbin "${FILESDIR}"/megarc megarc.bin
+	newsbin megarc.bin megarc || die
 }
