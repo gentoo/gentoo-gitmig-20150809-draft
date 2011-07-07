@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.35.ebuild,v 1.1 2011/06/30 13:08:44 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.35.ebuild,v 1.2 2011/07/07 22:24:34 leio Exp $
 
 EAPI=1
 GCONF_DEBUG="no"
@@ -10,7 +10,7 @@ inherit gst-plugins-base gst-plugins10 gnome2 flag-o-matic eutils
 # libtool
 
 DESCRIPTION="Basepack of plugins for gstreamer"
-HOMEPAGE="http://gstreamer.sourceforge.net"
+HOMEPAGE="http://gstreamer.freedesktop.org/"
 SRC_URI="http://gstreamer.freedesktop.org/src/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
