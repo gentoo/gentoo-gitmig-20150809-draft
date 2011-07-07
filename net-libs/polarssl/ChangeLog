@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/polarssl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/ChangeLog,v 1.20 2011/06/11 12:53:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/ChangeLog,v 1.21 2011/07/07 03:58:54 aballier Exp $
+
+  07 Jul 2011; Alexis Ballier <aballier@gentoo.org> polarssl-0.14.2.ebuild:
+  keyword ~x86-fbsd
 
   11 Jun 2011; Markus Meier <maekke@gentoo.org> polarssl-0.14.2.ebuild:
   add ~arm, bug #354467
