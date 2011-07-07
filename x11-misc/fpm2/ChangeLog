@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/fpm2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fpm2/ChangeLog,v 1.1 2011/07/07 22:03:24 hwoarang Exp $
+
+*fpm2-0.79 (07 Jul 2011)
+
+  07 Jul 2011; Markos Chandras <hwoarang@gentoo.org> +fpm2-0.79.ebuild,
+  +metadata.xml:
+  Initial commit. Bug #247313. Thanks to Incinerator <inciner@gmail.com> for
+  the initial ebuild
+
