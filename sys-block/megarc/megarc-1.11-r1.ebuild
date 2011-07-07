@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megarc/megarc-1.11-r1.ebuild,v 1.1 2011/07/07 17:17:20 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megarc/megarc-1.11-r1.ebuild,v 1.2 2011/07/07 22:15:05 idl0r Exp $
 
 EAPI="3"
 
@@ -31,11 +31,11 @@ pkg_setup() {
 }
 
 src_compile() {
-	useq doc && antiword ut_linux.doc > ${PN}-manual.txt
+	use doc && antiword ut_linux.doc > ${PN}-manual.txt
 }
 
 src_install() {
-	useq doc && dodoc ${PN}-manual.txt
+	use doc && dodoc ${PN}-manual.txt
 	newdoc ut_linux_${PN}_${PV}.txt ${PN}-release-${PV}.txt
 
 	exeinto /opt/bin
