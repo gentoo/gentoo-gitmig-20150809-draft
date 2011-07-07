@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.192 2011/07/04 09:38:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.193 2011/07/07 19:09:20 hwoarang Exp $
+
+  07 Jul 2011; Markos Chandras <hwoarang@gentoo.org> rails-2.3.12.ebuild:
+  Stable on amd64 wrt bug #372391
 
 *rails-3.0.9 (04 Jul 2011)
 
