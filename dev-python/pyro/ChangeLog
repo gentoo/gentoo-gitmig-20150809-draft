@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.48 2011/07/01 21:32:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.49 2011/07/07 19:11:07 neurogeek Exp $
+
+  07 Jul 2011; Jesus Rivero <neurogeek@gentoo.org> pyro-4.4.ebuild:
+  Disabled tests that request connections wrt bug #370577
 
   01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> -pyro-3.12.ebuild,
   -pyro-4.1.ebuild, -pyro-4.2.ebuild, -pyro-4.3.ebuild:

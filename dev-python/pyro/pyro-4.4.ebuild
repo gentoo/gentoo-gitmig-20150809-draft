@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/pyro-4.4.ebuild,v 1.4 2011/07/01 09:22:34 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/pyro-4.4.ebuild,v 1.5 2011/07/07 19:11:07 neurogeek Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*:2.6"
@@ -50,7 +50,12 @@ src_prepare() {
 		-e "s/testOwnloopBasics/_&/" \
 		-e "s/testStartNSfunc/_&/" \
 		-i tests/PyroTests/test_naming2.py
-	sed -e "s/testServerConnections/_&/" -i tests/PyroTests/test_server.py
+
+	sed \
+		-e "s/testServerConnections/_&/" \
+	    -e "s/testServerParallelism/_&/" \
+		-i tests/PyroTests/test_server.py
+
 	sed \
 		-e "s/testBroadcast/_&/" \
 		-e "s/testGetIP/_&/" \
