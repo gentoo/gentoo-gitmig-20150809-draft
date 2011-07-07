@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/gnome-themes-extras-2.22.0-r1.ebuild,v 1.6 2011/02/27 15:50:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/gnome-themes-extras-2.22.0-r1.ebuild,v 1.7 2011/07/07 12:57:07 pacho Exp $
 
-EAPI="2"
+EAPI="4"
+GCONF_DEBUG="yes"
+GNOME_TARBALL_SUFFIX="bz2"
 
 inherit autotools eutils gnome2
 
@@ -22,7 +24,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.23"
 
-DOCS="AUTHORS ChangeLog MAINTAINERS README TODO"
+DOCS="AUTHORS ChangeLog MAINTAINERS"
 
 src_prepare() {
 	gnome2_src_prepare
@@ -32,5 +34,5 @@ src_prepare() {
 
 	# Respect LINGUAS, bug #182086
 	intltoolize --force || die "intloolize failed"
-	eautomake
+	eautoreconf
 }

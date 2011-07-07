@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/gnome-themes-extras
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.62 2011/02/27 15:50:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.63 2011/07/07 12:57:07 pacho Exp $
+
+  07 Jul 2011; Pacho Ramos <pacho@gentoo.org>
+  gnome-themes-extras-2.22.0-r1.ebuild:
+  Bump to eapi4, stop installing empty docs, run full autoreconf as suggested
+  at buildtime when running automake only.
 
   27 Feb 2011; Gilles Dartiguelongue <eva@gentoo.org>
   gnome-themes-extras-2.22.0-r1.ebuild:
