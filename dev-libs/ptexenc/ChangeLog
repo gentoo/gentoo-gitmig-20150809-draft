@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/ptexenc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptexenc/ChangeLog,v 1.8 2011/06/13 21:13:28 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptexenc/ChangeLog,v 1.9 2011/07/07 14:01:04 aballier Exp $
+
+  07 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  ptexenc-1.1.0_p20100722.ebuild:
+  keyword ~x86-fbsd
 
   13 Jun 2011; Matt Turner <mattst88@gentoo.org>
   ptexenc-1.1.0_p20100722.ebuild:
