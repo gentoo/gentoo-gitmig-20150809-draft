@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.32.1.1.ebuild,v 1.8 2011/03/31 04:11:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.32.1.1.ebuild,v 1.9 2011/07/07 11:00:18 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -119,4 +119,14 @@ pkg_postinst() {
 	elog "Some project templates may require additional development"
 	elog "libraries to function correctly. It goes beyond the scope"
 	elog "of this ebuild to provide them."
+
+	if use vala; then
+		elog ""
+		elog "To create a generic vala project you will need to specify"
+		elog "desired valac versioned binary to be used, to do that you"
+		elog "will need to:"
+		elog "1. Go to 'Build' -> 'Configure project'"
+		elog "2. Add 'VALAC=/usr/bin/valac-X.XX' (respecting quotes) to"
+		elog "'Configure options'."
+	fi
 }

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.133 2011/03/31 04:11:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.134 2011/07/07 11:00:18 pacho Exp $
+
+  07 Jul 2011; Pacho Ramos <pacho@gentoo.org> anjuta-2.32.1.1.ebuild:
+  Add a message to explain people about how to create vala projects since we
+  don't provide unversioned binaries for vala (bug #369565 by Stephan Haller).
 
   31 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> anjuta-2.32.1.1.ebuild:
   sparc stable wrt #353436, Comment #29. Thanks to Alex Buell for testing.
