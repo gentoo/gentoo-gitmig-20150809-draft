@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libgdamm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgdamm/ChangeLog,v 1.19 2011/07/01 10:36:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgdamm/ChangeLog,v 1.20 2011/07/07 11:54:48 pacho Exp $
+
+  07 Jul 2011; Pacho Ramos <pacho@gentoo.org> -libgdamm-4.1.1.ebuild:
+  Remove old.
 
   01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> libgdamm-4.1.2.ebuild:
   Stable on amd64 wrt bug #372353
