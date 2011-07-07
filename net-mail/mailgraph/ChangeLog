@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/mailgraph
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/ChangeLog,v 1.35 2008/06/15 10:19:03 zmedico Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/ChangeLog,v 1.36 2011/07/07 15:08:14 eras Exp $
+
+*mailgraph-1.14-r1 (07 Jul 2011)
+
+  07 Jul 2011; Eray Aslan <eras@gentoo.org> +mailgraph-1.14-r1.ebuild,
+  files/mailgraph.initd-new:
+  Fix depreciation warning and crashed status in init script - bugs #366581
+  #374311. EAPI bump.
 
   15 Jun 2008; Zac Medico <zmedico@gentoo.org> mailgraph-1.14.ebuild:
   Bug #226505 - For compatibility with phase execution order in
