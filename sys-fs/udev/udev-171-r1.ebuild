@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r1.ebuild,v 1.9 2011/07/06 16:44:44 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r1.ebuild,v 1.10 2011/07/07 19:30:44 zzam Exp $
 
 EAPI="1"
 
@@ -48,7 +48,7 @@ DEPEND="${COMMON_DEPEND}
 	extras? ( dev-util/gperf )
 	dev-util/pkgconfig
 	virtual/os-headers
-	!<sys-kernel/linux-headers-2.6.29
+	!<sys-kernel/linux-headers-2.6.34
 	test? ( app-text/tree )"
 
 RDEPEND="${COMMON_DEPEND}

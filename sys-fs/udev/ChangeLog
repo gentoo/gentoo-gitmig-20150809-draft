@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.599 2011/07/06 16:44:44 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.600 2011/07/07 19:30:44 zzam Exp $
+
+  07 Jul 2011; Matthias Schwarzott <zzam@gentoo.org> udev-171-r1.ebuild,
+  udev-9999.ebuild:
+  Enforce new enough linux-headers, Bug #368403.
 
   06 Jul 2011; William Hubbs <williamh@gentoo.org> udev-146-r1.ebuild,
   udev-149.ebuild, udev-151-r4.ebuild, udev-164-r2.ebuild, udev-171-r1.ebuild,
