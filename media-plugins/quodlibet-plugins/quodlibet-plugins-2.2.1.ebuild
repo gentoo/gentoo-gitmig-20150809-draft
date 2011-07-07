@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-plugins/quodlibet-plugins-2.2.1.ebuild,v 1.3 2010/06/13 16:07:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-plugins/quodlibet-plugins-2.2.1.ebuild,v 1.4 2011/07/07 15:28:23 ssuominen Exp $
 
-EAPI=2
+EAPI=3
 
 PYTHON_DEPEND="2:2.6"
 
@@ -48,9 +48,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize "$(python_get_sitedir)"/quodlibet/plugins
+	python_mod_optimize quodlibet/plugins
 }
 
 pkg_postrm() {
-	python_mod_cleanup "$(python_get_sitedir)"/quodlibet/plugins
+	python_mod_cleanup quodlibet/plugins
 }
