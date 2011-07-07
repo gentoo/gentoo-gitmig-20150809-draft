@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Script
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Script/ChangeLog,v 1.23 2010/12/07 04:59:20 mattst88 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Script/ChangeLog,v 1.24 2011/07/07 05:48:19 aballier Exp $
+
+  07 Jul 2011; Alexis Ballier <aballier@gentoo.org> Test-Script-1.07.ebuild:
+  keyword ~x86-fbsd
 
   07 Dec 2010; Matt Turner <mattst88@gentoo.org> Test-Script-1.07.ebuild:
   Added ~mips, bug 285343.
