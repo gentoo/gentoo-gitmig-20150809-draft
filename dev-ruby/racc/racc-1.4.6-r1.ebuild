@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.6.ebuild,v 1.12 2011/07/07 09:35:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/racc-1.4.6-r1.ebuild,v 1.1 2011/07/07 09:35:59 graaff Exp $
 
 EAPI=2
 
-USE_RUBY="ree18 ruby18 jruby"
+USE_RUBY="ree18 ruby18 ruby19 jruby"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="README.en.rdoc README.ja.rdoc TODO ChangeLog"

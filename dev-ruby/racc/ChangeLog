@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/racc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.54 2011/02/20 13:02:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.55 2011/07/07 09:35:59 graaff Exp $
+
+*racc-1.4.6-r1 (07 Jul 2011)
+
+  07 Jul 2011; Hans de Graaff <graaff@gentoo.org> racc-1.4.6.ebuild,
+  +racc-1.4.6-r1.ebuild:
+  Revision bump to create stable candidate.
 
   20 Feb 2011; Hans de Graaff <graaff@gentoo.org> racc-1.4.6.ebuild:
   Always depend on dev-ruby/rake since we use it to build the package. Fixes
