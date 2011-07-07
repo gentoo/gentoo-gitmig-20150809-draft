@@ -1,6 +1,16 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.159 2011/07/01 20:01:04 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.160 2011/07/07 07:54:54 gurligebis Exp $
+
+*wpa_supplicant-0.7.3-r4 (07 Jul 2011)
+
+  07 Jul 2011; <gurligebis@gentoo.org> -wpa_supplicant-0.7.2-r3.ebuild,
+  -files/wpa_supplicant-0.7.2-dbus_path_fix.patch,
+  -files/wpa_supplicant-0.7.2-no-crash.patch, -wpa_supplicant-0.7.3-r3.ebuild,
+  +wpa_supplicant-0.7.3-r4.ebuild,
+  +files/wpa_supplicant-0.7.3-dbus-WPAIE-fix.patch,
+  -files/fix-ssid-combo.patch, files/wpa_cli.sh:
+  Cleaning bug and fixing bugs #373921 and #374089
 
   01 Jul 2011; <gurligebis@gentoo.org> wpa_supplicant-0.7.3-r3.ebuild:
   Fixing multilib-strict problem (bug #373685)

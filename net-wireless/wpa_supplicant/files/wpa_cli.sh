@@ -1,9 +1,9 @@
 #!/bin/sh
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Written by Roy Marples <uberlord@gentoo.org>
 # Distributed under the terms of the GNU General Public License v2
 # Alternatively, this file may be distributed under the terms of the BSD License
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/files/wpa_cli.sh,v 1.1 2006/07/11 15:07:16 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/files/wpa_cli.sh,v 1.2 2011/07/07 07:54:55 gurligebis Exp $
 
 if [ -z "$1" -o -z "$2" ]; then
 	logger -t wpa_cli "Insufficient parameters"
@@ -41,5 +41,6 @@ esac
 # stopping the interface and a background process - like wpa_cli - is.
 export IN_BACKGROUND=true
 
-logger -t wpa_cli "interface ${INTERFACE} ${ACTION}"
-${EXEC} || logger -t wpa_cli "executing '${EXEC}' failed"
+# Removed, since stopping /etc/init.d/net.wlanX stops the network completly.
+#logger -t wpa_cli "interface ${INTERFACE} ${ACTION}"
+#${EXEC} || logger -t wpa_cli "executing '${EXEC}' failed"

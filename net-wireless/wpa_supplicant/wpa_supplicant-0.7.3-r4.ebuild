@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r3.ebuild,v 1.4 2011/07/01 20:01:04 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r4.ebuild,v 1.1 2011/07/07 07:54:54 gurligebis Exp $
 
 EAPI="2"
 
@@ -80,6 +80,8 @@ src_prepare() {
 	epatch "${FILESDIR}/do-not-call-dbus-functions-with-NULL-path.patch"
 	# https://bugzilla.gnome.org/show_bug.cgi?id=644634
 	epatch "${FILESDIR}/${P}-dbus-api-changes.patch"
+	# bug (374089)
+	epatch "${FILESDIR}/${P}-dbus-WPAIE-fix.patch"
 }
 
 src_configure() {
