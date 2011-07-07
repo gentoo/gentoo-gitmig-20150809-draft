@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/rtmpdump-2.3.ebuild,v 1.11 2011/06/11 12:55:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/rtmpdump-2.3.ebuild,v 1.12 2011/07/07 03:57:22 aballier Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://rtmpdump.mplayerhq.hu/download/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm hppa ppc ppc64 x86"
+KEYWORDS="amd64 ~arm hppa ppc ppc64 x86 ~x86-fbsd"
 IUSE="gnutls polarssl ssl"
 
 DEPEND="ssl? (
