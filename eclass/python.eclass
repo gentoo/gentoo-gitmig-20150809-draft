@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.125 2011/07/08 07:47:30 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.126 2011/07/08 07:48:38 djc Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -18,7 +18,8 @@ fi
 _CPYTHON2_GLOBALLY_SUPPORTED_ABIS=(2.4 2.5 2.6 2.7)
 _CPYTHON3_GLOBALLY_SUPPORTED_ABIS=(3.1 3.2 3.3)
 _JYTHON_GLOBALLY_SUPPORTED_ABIS=(2.5-jython)
-_PYTHON_GLOBALLY_SUPPORTED_ABIS=(${_CPYTHON2_GLOBALLY_SUPPORTED_ABIS[@]} ${_CPYTHON3_GLOBALLY_SUPPORTED_ABIS[@]} ${_JYTHON_GLOBALLY_SUPPORTED_ABIS[@]})
+_PYPY_GLOBALLY_SUPPORTED_ABIS=(2.7-pypy-1.5)
+_PYTHON_GLOBALLY_SUPPORTED_ABIS=(${_CPYTHON2_GLOBALLY_SUPPORTED_ABIS[@]} ${_CPYTHON3_GLOBALLY_SUPPORTED_ABIS[@]} ${_JYTHON_GLOBALLY_SUPPORTED_ABIS[@]} ${_PYPY_GLOBALLY_SUPPORTED_ABIS[@]})
 
 # ================================================================================================
 # ===================================== HANDLING OF METADATA =====================================
@@ -61,11 +62,15 @@ _python_check_python_abi_matching() {
 			[[ "${PYTHON_ABI}" =~ ^[[:digit:]]+\.[[:digit:]]+$ && "${PYTHON_ABI}" == ${pattern%-cpython} ]]
 		elif [[ "${pattern}" == *"-jython" ]]; then
 			[[ "${PYTHON_ABI}" == ${pattern} ]]
+		elif [[ "${pattern}" == *"-pypy-"* ]]; then
+			[[ "${PYTHON_ABI}" == ${pattern} ]]
 		else
 			if [[ "${PYTHON_ABI}" =~ ^[[:digit:]]+\.[[:digit:]]+$ ]]; then
 				[[ "${PYTHON_ABI}" == ${pattern} ]]
 			elif [[ "${PYTHON_ABI}" =~ ^[[:digit:]]+\.[[:digit:]]+-jython$ ]]; then
 				[[ "${PYTHON_ABI%-jython}" == ${pattern} ]]
+			elif [[ "${PYTHON_ABI}" =~ ^[[:digit:]]+\.[[:digit:]]+-pypy-[[:digit:]]+\.[[:digit:]]+$ ]]; then
+				[[ "${PYTHON_ABI%-pypy-*}" == ${pattern} ]]
 			else
 				die "${FUNCNAME}(): Unrecognized Python ABI '${PYTHON_ABI}'"
 			fi
@@ -294,6 +299,8 @@ _python_implementation() {
 		return 0
 	elif [[ "${CATEGORY}/${PN}" == "dev-java/jython" ]]; then
 		return 0
+	elif [[ "${CATEGORY}/${PN}" == "dev-python/pypy" ]]; then
+		return 0
 	else
 		return 1
 	fi
@@ -462,7 +469,7 @@ if ! has "${EAPI:-0}" 0 1 2 3 || { has "${EAPI:-0}" 2 3 && [[ -n "${PYTHON_USE_W
 	EXPORT_FUNCTIONS pkg_setup
 fi
 
-_PYTHON_SHEBANG_BASE_PART_REGEX='^#![[:space:]]*([^[:space:]]*/usr/bin/env[[:space:]]+)?([^[:space:]]*/)?(jython|python)'
+_PYTHON_SHEBANG_BASE_PART_REGEX='^#![[:space:]]*([^[:space:]]*/usr/bin/env[[:space:]]+)?([^[:space:]]*/)?(jython|pypy-c|python)'
 
 # @FUNCTION: python_convert_shebangs
 # @USAGE: [-q|--quiet] [-r|--recursive] [-x|--only-executables] [--] <Python_ABI|Python_version> <file|directory> [files|directories]
@@ -540,7 +547,7 @@ python_convert_shebangs() {
 				einfo "Converting shebang in '${file}'"
 			fi
 
-			sed -e "1s:^#![[:space:]]*\([^[:space:]]*/usr/bin/env[[:space:]]\)\?[[:space:]]*\([^[:space:]]*/\)\?\(jython\|python\)\([[:digit:]]\+\(\.[[:digit:]]\+\)\?\)\?\(\$\|[[:space:]].*\):#!\1\2${python_interpreter}\6:" -i "${file}" || die "Conversion of shebang in '${file}' failed"
+			sed -e "1s:^#![[:space:]]*\([^[:space:]]*/usr/bin/env[[:space:]]\)\?[[:space:]]*\([^[:space:]]*/\)\?\(jython\|pypy-c\|python\)\([[:digit:]]\+\(\.[[:digit:]]\+\)\?\)\?\(\$\|[[:space:]].*\):#!\1\2${python_interpreter}\6:" -i "${file}" || die "Conversion of shebang in '${file}' failed"
 		fi
 	done
 }
@@ -1228,16 +1235,24 @@ import sys
 
 cpython_re = re.compile(r"^python(\d+\.\d+)$")
 jython_re = re.compile(r"^jython(\d+\.\d+)$")
+pypy_re = re.compile(r"^pypy-c(\d+\.\d+)$")
 python_shebang_re = re.compile(r"^#! *(${EPREFIX}/usr/bin/python|(${EPREFIX})?/usr/bin/env +(${EPREFIX}/usr/bin/)?python)")
 python_verification_output_re = re.compile("^GENTOO_PYTHON_TARGET_SCRIPT_PATH supported\n$")
+
+pypy_versions_mapping = {
+	"1.5": "2.7"
+}
 
 def get_PYTHON_ABI(EPYTHON):
 	cpython_matched = cpython_re.match(EPYTHON)
 	jython_matched = jython_re.match(EPYTHON)
+	pypy_matched = pypy_re.match(EPYTHON)
 	if cpython_matched is not None:
 		PYTHON_ABI = cpython_matched.group(1)
 	elif jython_matched is not None:
 		PYTHON_ABI = jython_matched.group(1) + "-jython"
+	elif pypy_matched is not None:
+		PYTHON_ABI = pypy_versions_mapping[pypy_matched.group(1)] + "-pypy-" + pypy_matched.group(1)
 	else:
 		PYTHON_ABI = None
 	return PYTHON_ABI
@@ -1654,11 +1669,14 @@ python_need_rebuild() {
 # ======================================= GETTER FUNCTIONS =======================================
 # ================================================================================================
 
-_PYTHON_ABI_EXTRACTION_COMMAND='import platform
+_PYTHON_ABI_EXTRACTION_COMMAND=\
+'import platform
 import sys
 sys.stdout.write(".".join(str(x) for x in sys.version_info[:2]))
 if platform.system()[:4] == "Java":
-	sys.stdout.write("-jython")'
+	sys.stdout.write("-jython")
+elif hasattr(platform, "python_implementation") and platform.python_implementation() == "PyPy":
+	sys.stdout.write("-pypy-" + ".".join(str(x) for x in sys.pypy_version_info[:2]))'
 
 _python_get_implementation() {
 	local ignore_invalid="0"
@@ -1690,6 +1708,8 @@ _python_get_implementation() {
 		echo "CPython"
 	elif [[ "$1" =~ ^[[:digit:]]+\.[[:digit:]]+-jython$ ]]; then
 		echo "Jython"
+	elif [[ "$1" =~ ^[[:digit:]]+\.[[:digit:]]+-pypy-[[:digit:]]+\.[[:digit:]]+$ ]]; then
+		echo "PyPy"
 	else
 		if [[ "${ignore_invalid}" == "0" ]]; then
 			die "${FUNCNAME}(): Unrecognized Python ABI '$1'"
@@ -1808,6 +1828,8 @@ PYTHON() {
 			python_interpreter="python${PYTHON_ABI}"
 		elif [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "Jython" ]]; then
 			python_interpreter="jython${PYTHON_ABI%-jython}"
+		elif [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "PyPy" ]]; then
+			python_interpreter="pypy-c${PYTHON_ABI#*-pypy-}"
 		fi
 
 		if [[ "${absolute_path_output}" == "1" ]]; then
@@ -1910,12 +1932,16 @@ python_get_implementational_package() {
 			echo "=dev-lang/python-${PYTHON_ABI}*"
 		elif [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "Jython" ]]; then
 			echo "=dev-java/jython-${PYTHON_ABI%-jython}*"
+		elif [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "PyPy" ]]; then
+			echo "=dev-python/pypy-${PYTHON_ABI#*-pypy-}*"
 		fi
 	else
 		if [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "CPython" ]]; then
 			echo "dev-lang/python:${PYTHON_ABI}"
 		elif [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "Jython" ]]; then
 			echo "dev-java/jython:${PYTHON_ABI%-jython}"
+		elif [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "PyPy" ]]; then
+			echo "dev-python/pypy:${PYTHON_ABI#*-pypy-}"
 		fi
 	fi
 }
@@ -1972,13 +1998,15 @@ python_get_includedir() {
 		echo "${prefix}usr/include/python${PYTHON_ABI}"
 	elif [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "Jython" ]]; then
 		echo "${prefix}usr/share/jython-${PYTHON_ABI%-jython}/Include"
+	elif [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "PyPy" ]]; then
+		echo "${prefix}usr/$(get_libdir)/pypy${PYTHON_ABI#*-pypy-}/include"
 	fi
 }
 
 # @FUNCTION: python_get_libdir
 # @USAGE: [-b|--base-path] [-f|--final-ABI]
 # @DESCRIPTION:
-# Print path to Python library directory.
+# Print path to Python standard library directory.
 # If --base-path option is specified, then path not prefixed with "/" is printed.
 # If --final-ABI option is specified, then final ABI from the list of enabled ABIs is used.
 python_get_libdir() {
@@ -2027,6 +2055,8 @@ python_get_libdir() {
 		echo "${prefix}usr/$(get_libdir)/python${PYTHON_ABI}"
 	elif [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "Jython" ]]; then
 		echo "${prefix}usr/share/jython-${PYTHON_ABI%-jython}/Lib"
+	elif [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "PyPy" ]]; then
+		die "${FUNCNAME}(): PyPy has multiple standard library directories"
 	fi
 }
 
@@ -2039,16 +2069,15 @@ python_get_libdir() {
 python_get_sitedir() {
 	_python_check_python_pkg_setup_execution
 
-	local final_ABI="0" options=()
+	local base_path="0" final_ABI="0" prefix PYTHON_ABI="${PYTHON_ABI}"
 
 	while (($#)); do
 		case "$1" in
 			-b|--base-path)
-				options+=("$1")
+				base_path="1"
 				;;
 			-f|--final-ABI)
 				final_ABI="1"
-				options+=("$1")
 				;;
 			-*)
 				die "${FUNCNAME}(): Unrecognized option '$1'"
@@ -2060,17 +2089,32 @@ python_get_sitedir() {
 		shift
 	done
 
+	if [[ "${base_path}" == "0" ]]; then
+		prefix="/"
+	fi
+
 	if [[ "${final_ABI}" == "1" ]]; then
 		if ! _python_package_supporting_installation_for_multiple_python_abis; then
 			die "${FUNCNAME}(): '--final-ABI' option cannot be used in ebuilds of packages not supporting installation for multiple Python ABIs"
 		fi
+		PYTHON_ABI="$(PYTHON -f --ABI)"
 	else
-		if _python_package_supporting_installation_for_multiple_python_abis && ! _python_abi-specific_local_scope; then
-			die "${FUNCNAME}() should be used in ABI-specific local scope"
+		if _python_package_supporting_installation_for_multiple_python_abis; then
+			if ! _python_abi-specific_local_scope; then
+				die "${FUNCNAME}() should be used in ABI-specific local scope"
+			fi
+		else
+			PYTHON_ABI="${PYTHON_ABI:-$(PYTHON --ABI)}"
 		fi
 	fi
 
-	echo "$(python_get_libdir "${options[@]}")/site-packages"
+	if [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "CPython" ]]; then
+		echo "${prefix}usr/$(get_libdir)/python${PYTHON_ABI}/site-packages"
+	elif [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "Jython" ]]; then
+		echo "${prefix}usr/share/jython-${PYTHON_ABI%-jython}/Lib/site-packages"
+	elif [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "PyPy" ]]; then
+		echo "${prefix}usr/$(get_libdir)/pypy${PYTHON_ABI#*-pypy-}/site-packages"
+	fi
 }
 
 # @FUNCTION: python_get_library
@@ -2137,6 +2181,8 @@ python_get_library() {
 		fi
 	elif [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "Jython" ]]; then
 		die "${FUNCNAME}(): Jython does not have shared library"
+	elif [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "PyPy" ]]; then
+		die "${FUNCNAME}(): PyPy does not have shared library"
 	fi
 }
 
@@ -2219,19 +2265,21 @@ python_get_version() {
 		fi
 	else
 		if [[ "${full}" == "1" ]]; then
-			python_command="from sys import version_info; print('.'.join(str(x) for x in version_info[:3]))"
+			python_command="import sys; print('.'.join(str(x) for x in getattr(sys, 'pypy_version_info', sys.version_info)[:3]))"
 		elif [[ "${major}" == "1" ]]; then
-			python_command="from sys import version_info; print(version_info[0])"
+			python_command="import sys; print(getattr(sys, 'pypy_version_info', sys.version_info)[0])"
 		elif [[ "${minor}" == "1" ]]; then
-			python_command="from sys import version_info; print(version_info[1])"
+			python_command="import sys; print(getattr(sys, 'pypy_version_info', sys.version_info)[1])"
 		elif [[ "${micro}" == "1" ]]; then
-			python_command="from sys import version_info; print(version_info[2])"
+			python_command="import sys; print(getattr(sys, 'pypy_version_info', sys.version_info)[2])"
 		else
 			if [[ -n "${PYTHON_ABI}" && "${final_ABI}" == "0" ]]; then
 				if [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "CPython" ]]; then
 					echo "${PYTHON_ABI}"
 				elif [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "Jython" ]]; then
 					echo "${PYTHON_ABI%-jython}"
+				elif [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "PyPy" ]]; then
+					echo "${PYTHON_ABI#*-pypy-}"
 				fi
 				return
 			fi
@@ -2761,9 +2809,9 @@ python_mod_optimize() {
 					for dir in "${evaluated_dirs[@]}"; do
 						eval "dirs+=(\"\${root}${dir}\")"
 					done
-					stderr+="${stderr:+$'\n'}$("$(PYTHON)" "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${dirs[@]}" 2>&1)" || return_code="1"
+					stderr+="${stderr:+$'\n'}$("$(PYTHON)" -m compileall "${options[@]}" "${dirs[@]}" 2>&1)" || return_code="1"
 					if [[ "$(_python_get_implementation "${PYTHON_ABI}")" != "Jython" ]]; then
-						"$(PYTHON)" -O "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${dirs[@]}" &> /dev/null || return_code="1"
+						"$(PYTHON)" -O -m compileall "${options[@]}" "${dirs[@]}" &> /dev/null || return_code="1"
 					fi
 					_python_clean_compiled_modules "${dirs[@]}"
 				fi
@@ -2774,9 +2822,9 @@ python_mod_optimize() {
 					for file in "${evaluated_files[@]}"; do
 						eval "files+=(\"\${root}${file}\")"
 					done
-					stderr+="${stderr:+$'\n'}$("$(PYTHON)" "${root}$(python_get_libdir)/py_compile.py" "${files[@]}" 2>&1)" || return_code="1"
+					stderr+="${stderr:+$'\n'}$("$(PYTHON)" -m py_compile "${files[@]}" 2>&1)" || return_code="1"
 					if [[ "$(_python_get_implementation "${PYTHON_ABI}")" != "Jython" ]]; then
-						"$(PYTHON)" -O "${root}$(python_get_libdir)/py_compile.py" "${files[@]}" &> /dev/null || return_code="1"
+						"$(PYTHON)" -O -m py_compile "${files[@]}" &> /dev/null || return_code="1"
 					fi
 					_python_clean_compiled_modules "${files[@]}"
 				fi
@@ -2805,16 +2853,16 @@ python_mod_optimize() {
 			stderr=""
 			ebegin "Compilation and optimization of Python modules placed outside of site-packages directories for $(python_get_implementation_and_version)"
 			if ((${#other_dirs[@]})); then
-				stderr+="${stderr:+$'\n'}$("$(PYTHON ${PYTHON_ABI})" "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${other_dirs[@]}" 2>&1)" || return_code="1"
+				stderr+="${stderr:+$'\n'}$("$(PYTHON ${PYTHON_ABI})" -m compileall "${options[@]}" "${other_dirs[@]}" 2>&1)" || return_code="1"
 				if [[ "$(_python_get_implementation "${PYTHON_ABI}")" != "Jython" ]]; then
-					"$(PYTHON ${PYTHON_ABI})" -O "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${other_dirs[@]}" &> /dev/null || return_code="1"
+					"$(PYTHON ${PYTHON_ABI})" -O -m compileall "${options[@]}" "${other_dirs[@]}" &> /dev/null || return_code="1"
 				fi
 				_python_clean_compiled_modules "${other_dirs[@]}"
 			fi
 			if ((${#other_files[@]})); then
-				stderr+="${stderr:+$'\n'}$("$(PYTHON ${PYTHON_ABI})" "${root}$(python_get_libdir)/py_compile.py" "${other_files[@]}" 2>&1)" || return_code="1"
+				stderr+="${stderr:+$'\n'}$("$(PYTHON ${PYTHON_ABI})" -m py_compile "${other_files[@]}" 2>&1)" || return_code="1"
 				if [[ "$(_python_get_implementation "${PYTHON_ABI}")" != "Jython" ]]; then
-					"$(PYTHON ${PYTHON_ABI})" -O "${root}$(python_get_libdir)/py_compile.py" "${other_files[@]}" &> /dev/null || return_code="1"
+					"$(PYTHON ${PYTHON_ABI})" -O -m py_compile "${other_files[@]}" &> /dev/null || return_code="1"
 				fi
 				_python_clean_compiled_modules "${other_files[@]}"
 			fi
