@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.199 2011/06/06 23:50:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.200 2011/07/08 21:08:34 vapier Exp $
+
+*file-5.07-r3 (08 Jul 2011)
+
+  08 Jul 2011; Mike Frysinger <vapier@gentoo.org> +file-5.07-r3.ebuild,
+  +files/file-5.07-postscript-detect.patch:
+  Add fix from upstream for postscript detection #368121 by Justin Brody and
+  Shannon.
 
 *file-5.07-r2 (06 Jun 2011)
 
