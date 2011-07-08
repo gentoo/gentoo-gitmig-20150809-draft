@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.104 2011/06/23 16:17:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.105 2011/07/08 10:10:07 ssuominen Exp $
 
 EAPI=4
 
@@ -632,7 +632,7 @@ src_compile() {
 		local ALLOWED_LINGUAS="cs de en es fr hu it pl ru zh_CN"
 		local BUILT_DOCS=""
 		for i in ${LINGUAS} ; do
-			hasq ${i} ${ALLOWED_LINGUAS} && BUILT_DOCS+=" ${i}"
+			has ${i} ${ALLOWED_LINGUAS} && BUILT_DOCS+=" ${i}"
 		done
 		if [[ -z $BUILT_DOCS ]]; then
 			emake -j1 -C DOCS/xml html-chunked

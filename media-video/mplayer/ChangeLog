@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.796 2011/06/23 16:21:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.797 2011/07/08 10:10:07 ssuominen Exp $
+
+  08 Jul 2011; Samuli Suominen <ssuominen@gentoo.org>
+  mplayer-1.0_rc4_p20101114.ebuild, mplayer-1.0_rc4_p20110322.ebuild,
+  mplayer-9999.ebuild:
+  Convert from "hasq" to "has".
 
   23 Jun 2011; Alexis Ballier <aballier@gentoo.org>
   -mplayer-1.0_rc4_p20091026-r1.ebuild,
