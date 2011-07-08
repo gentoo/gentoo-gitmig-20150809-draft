@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.35 2011/06/13 22:57:16 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.36 2011/07/08 19:12:15 mattst88 Exp $
 
 # Kacper Kowalik <xarthisius@gentoo.org> (20 May 2011)
 # depends on dev-libs/dmalloc which is not keyworded
@@ -21,14 +21,6 @@ dev-ruby/rubygems server
 # Wolfram Schlich <wschlich@gentoo.org> (20 Nov 2007)
 # dependency can't be fulfilled at the moment
 net-im/mcabber otr
-
-# Piotr Jaroszyński <peper@gentoo.org> (19 Nov 2007)
-# Mask python flag until mips keyword is added to dev-python/pygments, bug #198989.
-sys-apps/paludis python
-
-# Piotr Jaroszyński <peper@gentoo.org> (19 Nov 2007)
-# Mask ruby flag until mips keyword is added to dev-ruby/syntax - #198864 and dev-ruby/allison - #206031.
-sys-apps/paludis ruby
 
 # Chris Gianelloni <cgianelloni@gentoo.org> (22 Sep 2007)
 # dependency can't be fulfilled at the moment

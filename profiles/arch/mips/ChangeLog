@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.66 2011/06/28 20:14:12 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.67 2011/07/08 19:12:15 mattst88 Exp $
+
+  08 Jul 2011; Matt Turner <mattst88@gentoo.org> package.use.mask:
+  Remove outdated paludis package.use.mask entries
 
   28 Jun 2011; Matt Turner <mattst88@gentoo.org> -sys/README,
   -sys/cobalt/make.defaults, -sys/lemote/lm2e/fulong/make.defaults,
