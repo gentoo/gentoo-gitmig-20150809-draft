@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.126 2011/07/08 07:48:38 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.127 2011/07/08 07:49:36 djc Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -1424,7 +1424,7 @@ python_merge_intermediate_installation_images() {
 	_python_check_python_pkg_setup_execution
 	_python_initialize_prefix_variables
 
-	local b file files=() intermediate_installation_images_directory PYTHON_ABI quiet="0" regex shebang version_executable wrapper_scripts=() wrapper_scripts_set=()
+	local absolute_file b file files=() intermediate_installation_images_directory PYTHON_ABI quiet="0" regex shebang version_executable wrapper_scripts=() wrapper_scripts_set=()
 
 	while (($#)); do
 		case "$1" in
@@ -1516,9 +1516,26 @@ for file in sorted(files_set):
 				done
 			fi
 
-			[[ "${version_executable}" == "0" || ! -x "${file}" ]] && continue
+			[[ "${version_executable}" == "0" ]] && continue
 
-			shebang="$(head -n1 "${file}")" || die "Extraction of shebang from '${file}' failed"
+			if [[ -L "${file}" ]]; then
+				absolute_file="$(readlink "${file}")"
+				if [[ "${absolute_file}" == /* ]]; then
+					absolute_file="${intermediate_installation_images_directory}/${PYTHON_ABI}${EPREFIX}/${absolute_file##/}"
+				else
+					if [[ "${file}" == */* ]]; then
+						absolute_file="${intermediate_installation_images_directory}/${PYTHON_ABI}${EPREFIX}/${file%/*}/${absolute_file}"
+					else
+						absolute_file="${intermediate_installation_images_directory}/${PYTHON_ABI}${EPREFIX}/${absolute_file}"
+					fi
+				fi
+			else
+				absolute_file="${intermediate_installation_images_directory}/${PYTHON_ABI}${EPREFIX}/${file}"
+			fi
+
+			[[ ! -x "${absolute_file}" ]] && continue
+
+			shebang="$(head -n1 "${absolute_file}")" || die "Extraction of shebang from '${absolute_file}' failed"
 
 			if [[ "${version_executable}" == "2" ]]; then
 				wrapper_scripts+=("${ED}${file}")
@@ -1539,7 +1556,11 @@ for file in sorted(files_set):
 			mv "${file}" "${file}-${PYTHON_ABI}" || die "Renaming of '${file}' failed"
 
 			if [[ "${shebang}" =~ ${_PYTHON_SHEBANG_BASE_PART_REGEX}[[:digit:]]*($|[[:space:]]+) ]]; then
-				python_convert_shebangs $([[ "${quiet}" == "1" ]] && echo --quiet) "${PYTHON_ABI}" "${file}-${PYTHON_ABI}"
+				if [[ -L "${file}-${PYTHON_ABI}" ]]; then
+					python_convert_shebangs $([[ "${quiet}" == "1" ]] && echo --quiet) "${PYTHON_ABI}" "${absolute_file}"
+				else
+					python_convert_shebangs $([[ "${quiet}" == "1" ]] && echo --quiet) "${PYTHON_ABI}" "${file}-${PYTHON_ABI}"
+				fi
 			fi
 		done
 
