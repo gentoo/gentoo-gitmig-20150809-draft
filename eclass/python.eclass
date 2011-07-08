@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.118 2011/07/08 07:37:49 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.119 2011/07/08 07:39:03 djc Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -2596,7 +2596,7 @@ python_mod_optimize() {
 
 	if ! has "${EAPI:-0}" 0 1 2 || _python_package_supporting_installation_for_multiple_python_abis || _python_implementation || [[ "${CATEGORY}/${PN}" == "sys-apps/portage" ]]; then
 		# PYTHON_ABI variable cannot be local in packages not supporting installation for multiple Python ABIs.
-		local allow_evaluated_non_sitedir_paths="0" dir dirs=() evaluated_dirs=() evaluated_files=() file files=() iterated_PYTHON_ABIS options=() other_dirs=() other_files=() previous_PYTHON_ABI="${PYTHON_ABI}" return_code root site_packages_dirs=() site_packages_files=()
+		local allow_evaluated_non_sitedir_paths="0" dir dirs=() evaluated_dirs=() evaluated_files=() file files=() iterated_PYTHON_ABIS options=() other_dirs=() other_files=() previous_PYTHON_ABI="${PYTHON_ABI}" return_code root site_packages_dirs=() site_packages_files=() stderr stderr_line
 
 		if _python_package_supporting_installation_for_multiple_python_abis; then
 			if has "${EAPI:-0}" 0 1 2 3 && [[ -z "${PYTHON_ABIS}" ]]; then
@@ -2701,6 +2701,7 @@ python_mod_optimize() {
 		for PYTHON_ABI in ${iterated_PYTHON_ABIS}; do
 			if ((${#site_packages_dirs[@]})) || ((${#site_packages_files[@]})) || ((${#evaluated_dirs[@]})) || ((${#evaluated_files[@]})); then
 				return_code="0"
+				stderr=""
 				ebegin "Compilation and optimization of Python modules for $(python_get_implementation) $(python_get_version)"
 				if ((${#site_packages_dirs[@]})) || ((${#evaluated_dirs[@]})); then
 					for dir in "${site_packages_dirs[@]}"; do
@@ -2709,7 +2710,7 @@ python_mod_optimize() {
 					for dir in "${evaluated_dirs[@]}"; do
 						eval "dirs+=(\"\${root}${dir}\")"
 					done
-					"$(PYTHON)" "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${dirs[@]}" || return_code="1"
+					stderr+="${stderr:+$'\n'}$("$(PYTHON)" "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${dirs[@]}" 2>&1)" || return_code="1"
 					if [[ "$(_python_get_implementation "${PYTHON_ABI}")" != "Jython" ]]; then
 						"$(PYTHON)" -O "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${dirs[@]}" &> /dev/null || return_code="1"
 					fi
@@ -2722,13 +2723,19 @@ python_mod_optimize() {
 					for file in "${evaluated_files[@]}"; do
 						eval "files+=(\"\${root}${file}\")"
 					done
-					"$(PYTHON)" "${root}$(python_get_libdir)/py_compile.py" "${files[@]}" || return_code="1"
+					stderr+="${stderr:+$'\n'}$("$(PYTHON)" "${root}$(python_get_libdir)/py_compile.py" "${files[@]}" 2>&1)" || return_code="1"
 					if [[ "$(_python_get_implementation "${PYTHON_ABI}")" != "Jython" ]]; then
 						"$(PYTHON)" -O "${root}$(python_get_libdir)/py_compile.py" "${files[@]}" &> /dev/null || return_code="1"
 					fi
 					_python_clean_compiled_modules "${files[@]}"
 				fi
 				eend "${return_code}"
+				if [[ -n "${stderr}" ]]; then
+					eerror "Syntax errors / warnings in Python modules for $(python_get_implementation) $(python_get_version):" &> /dev/null
+					while read stderr_line; do
+						eerror "    ${stderr_line}"
+					done <<< "${stderr}"
+				fi
 			fi
 			unset dirs files
 		done
@@ -2744,22 +2751,29 @@ python_mod_optimize() {
 
 		if ((${#other_dirs[@]})) || ((${#other_files[@]})); then
 			return_code="0"
+			stderr=""
 			ebegin "Compilation and optimization of Python modules placed outside of site-packages directories for $(python_get_implementation) $(python_get_version)"
 			if ((${#other_dirs[@]})); then
-				"$(PYTHON ${PYTHON_ABI})" "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${other_dirs[@]}" || return_code="1"
+				stderr+="${stderr:+$'\n'}$("$(PYTHON ${PYTHON_ABI})" "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${other_dirs[@]}" 2>&1)" || return_code="1"
 				if [[ "$(_python_get_implementation "${PYTHON_ABI}")" != "Jython" ]]; then
 					"$(PYTHON ${PYTHON_ABI})" -O "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${other_dirs[@]}" &> /dev/null || return_code="1"
 				fi
 				_python_clean_compiled_modules "${other_dirs[@]}"
 			fi
 			if ((${#other_files[@]})); then
-				"$(PYTHON ${PYTHON_ABI})" "${root}$(python_get_libdir)/py_compile.py" "${other_files[@]}" || return_code="1"
+				stderr+="${stderr:+$'\n'}$("$(PYTHON ${PYTHON_ABI})" "${root}$(python_get_libdir)/py_compile.py" "${other_files[@]}" 2>&1)" || return_code="1"
 				if [[ "$(_python_get_implementation "${PYTHON_ABI}")" != "Jython" ]]; then
 					"$(PYTHON ${PYTHON_ABI})" -O "${root}$(python_get_libdir)/py_compile.py" "${other_files[@]}" &> /dev/null || return_code="1"
 				fi
 				_python_clean_compiled_modules "${other_files[@]}"
 			fi
 			eend "${return_code}"
+			if [[ -n "${stderr}" ]]; then
+				eerror "Syntax errors / warnings in Python modules placed outside of site-packages directories for $(python_get_implementation) $(python_get_version):" &> /dev/null
+				while read stderr_line; do
+					eerror "    ${stderr_line}"
+				done <<< "${stderr}"
+			fi
 		fi
 	else
 		# Deprecated part of python_mod_optimize()
