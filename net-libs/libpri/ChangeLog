@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libpri
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.89 2011/05/17 08:11:22 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.90 2011/07/08 15:46:46 chainsaw Exp $
+
+*libpri-1.4.12 (08 Jul 2011)
+
+  08 Jul 2011; Tony Vroon <chainsaw@gentoo.org> +libpri-1.4.12.ebuild,
+  +files/libpri-1.4.12-released-respect-cflags.patch:
+  Bump to final 1.4.12 release; patches reworked by Erik Wallin from
+  pushtalk.se in bug #374363.
 
 *libpri-1.4.12_beta3 (17 May 2011)
 

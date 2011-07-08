@@ -1,0 +1,37 @@
+--- libpri-1.4.12/Makefile.orig	2011-07-07 16:18:34.185504616 +0200
++++ libpri-1.4.12/Makefile	2011-07-07 16:32:09.095312715 +0200
+@@ -90,7 +90,7 @@
+ 	rose_qsig_mwi.lo \
+ 	rose_qsig_name.lo \
+ 	version.lo
+-CFLAGS=-Wall -Werror -Wstrict-prototypes -Wmissing-prototypes -g -fPIC $(ALERTING) $(LIBPRI_OPT) $(COVERAGE_CFLAGS)
++CFLAGS+=-Wall -Wstrict-prototypes -Wmissing-prototypes -g -fPIC $(ALERTING) $(LIBPRI_OPT) $(COVERAGE_CFLAGS)
+ INSTALL_PREFIX=$(DESTDIR)
+ INSTALL_BASE=/usr
+ LIBDIR=$(INSTALL_PREFIX)$(INSTALL_BASE)/lib
+@@ -124,20 +124,12 @@
+ 
+ PRIVERSION:=$(shell GREP=$(GREP) AWK=$(AWK) build_tools/make_version .)
+ 
+-#The problem with sparc is the best stuff is in newer versions of gcc (post 3.0) only.
+-#This works for even old (2.96) versions of gcc and provides a small boost either way.
+-#A ultrasparc cpu is really v9 but the stock debian stable 3.0 gcc doesnt support it.
+-ifeq ($(PROC),sparc64)
+-PROC=ultrasparc
+-LIBPRI_OPT = -mtune=$(PROC) -O3 -pipe -fomit-frame-pointer -mcpu=v8
++ifneq ($(CODE_COVERAGE),)
++  LIBPRI_OPT=
++  COVERAGE_CFLAGS=-ftest-coverage -fprofile-arcs
++  COVERAGE_LDFLAGS=-ftest-coverage -fprofile-arcs
+ else
+-  ifneq ($(CODE_COVERAGE),)
+-    LIBPRI_OPT=
+-    COVERAGE_CFLAGS=-ftest-coverage -fprofile-arcs
+-    COVERAGE_LDFLAGS=-ftest-coverage -fprofile-arcs
+-  else
+-    LIBPRI_OPT=-O2
+-  endif
++  LIBPRI_OPT=
+ endif
+ 
+ ifeq ($(CPUARCH),i686)
