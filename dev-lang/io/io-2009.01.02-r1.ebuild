@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/io-2009.01.02-r1.ebuild,v 1.2 2010/06/17 21:31:21 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/io-2009.01.02-r1.ebuild,v 1.3 2011/07/08 10:51:43 ssuominen Exp $
 
 DESCRIPTION="Io is a small, prototype-based programming language."
 HOMEPAGE="http://www.iolanguage.com"
@@ -27,17 +27,17 @@ RDEPEND=""
 src_compile() {
 	make INSTALL_PREFIX="/usr" vm || die "make failed."
 	# Building optional addons if any.
-	useq readline && make ReadLine
-	useq mysql && make MySQL
-	useq cairo && make Cairo
-	useq postgres && make PostgreSQL
-	useq opengl && make OpenGL
-	useq dbi && make DBI
-	useq ncurses && make Curses
-	useq sqlite && make SQLite
-	useq sqlite3 && make SQLite3
-	useq zlib && make Zlib
-	useq lzo && make LZO
+	use readline && make ReadLine
+	use mysql && make MySQL
+	use cairo && make Cairo
+	use postgres && make PostgreSQL
+	use opengl && make OpenGL
+	use dbi && make DBI
+	use ncurses && make Curses
+	use sqlite && make SQLite
+	use sqlite3 && make SQLite3
+	use zlib && make Zlib
+	use lzo && make LZO
 }
 
 src_install() {

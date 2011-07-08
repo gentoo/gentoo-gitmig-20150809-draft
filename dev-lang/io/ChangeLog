@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/io
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/ChangeLog,v 1.6 2010/06/17 21:31:21 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/ChangeLog,v 1.7 2011/07/08 10:51:43 ssuominen Exp $
+
+  08 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> io-2009.01.02-r1.ebuild:
+  Convert from "useq" to "use".
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> io-2009.01.02-r1.ebuild:
   Migrating away from deprecated postgres virtuals
