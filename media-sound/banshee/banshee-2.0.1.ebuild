@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.8.1.ebuild,v 1.8 2011/03/27 14:38:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.0.1.ebuild,v 1.1 2011/07/08 16:41:18 pacho Exp $
 
-EAPI=2
+EAPI="4"
 
 inherit eutils autotools mono gnome2-utils fdo-mime versionator
 
@@ -14,11 +14,11 @@ HOMEPAGE="http://banshee.fm/"
 #BANSHEE_V2=$(get_version_component_range 2)
 #[[ $((${BANSHEE_V2} % 2)) -eq 0 ]] && RELTYPE=stable || RELTYPE=unstable
 #SRC_URI="http://download.banshee-project.org/${PN}/${RELTYPE}/${PV}/${PN}-1-${PV}.tar.bz2"
-SRC_URI="http://download.banshee-project.org/${PN}/stable/${PV}/${PN}-1-${PV}.tar.bz2"
+SRC_URI="http://download.banshee-project.org/${PN}/stable/${PV}/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="+aac +cdda boo daap doc +encode ipod karma mtp podcast test udev +web youtube"
 
 RDEPEND=">=dev-lang/mono-2.4.3
@@ -90,10 +90,17 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README"
 
-S=${WORKDIR}/${PN}-1-${PV}
-
 src_prepare () {
-	epatch "${FILESDIR}/${PN}-1.7.4-make-webkit-optional.patch"
+	# MusicBrainz: Allow specifying a UserAgent
+	epatch "${FILESDIR}/${P}-musicbrainz-useragent.patch"
+
+	# Set UserAgent when doing MusicBrainz queries (bgo#649401)
+	epatch "${FILESDIR}/${P}-musicbrainz-useragent-fixes.patch"
+
+	# AudioCd: Fix metadata fetching with multiple results (bgo#587264)
+	epatch "${FILESDIR}/${P}-audiocd-metadata.patch"
+
+	epatch "${FILESDIR}/${PN}-1.7.4-make-webkit-optional.patch" # upstream bug 628518
 	AT_M4DIR="-I build/m4/banshee -I build/m4/shamrock -I build/m4/shave" \
 		eautoreconf
 }
@@ -109,7 +116,9 @@ src_configure() {
 		--disable-gst-sharp
 		--disable-hal
 		--disable-torrent
-		--disable-shave"
+		--disable-shave
+		--disable-ubuntuone
+		--enable-soundmenu"
 
 	econf \
 		$(use_enable doc docs) \
@@ -132,8 +141,8 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	find "${D}" -name '*.la' -exec rm -f {} +
+	emake DESTDIR="${D}" install
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
 
 pkg_preinst() {
