@@ -1,25 +1,29 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-community-extensions/banshee-community-extensions-1.8.0.ebuild,v 1.5 2011/04/27 20:28:49 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-community-extensions/banshee-community-extensions-2.0.1.ebuild,v 1.1 2011/07/08 16:43:56 pacho Exp $
 
-EAPI=3
+EAPI="4"
 
 inherit base mono
 
 DESCRIPTION="Community-developed plugins for the Banshee media player"
-HOMEPAGE="http://banshee-project.org/"
+HOMEPAGE="http://banshee.fm/"
 SRC_URI="http://download.banshee-project.org/${PN}/${PV}/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="doc lirc lyrics mirage telepathy"
+KEYWORDS="~amd64 ~x86"
+IUSE="doc lastfmfingerprint lirc lyrics mirage telepathy"
 
 DEPEND=">=dev-lang/mono-2.0
-	>=media-sound/banshee-1.7.4[web]
+	>=media-sound/banshee-1.9.6[web]
 	>=gnome-base/gconf-2.0
 	dev-dotnet/gconf-sharp:2
 	doc? ( >=app-text/gnome-doc-utils-0.17.3 )
+	lastfmfingerprint? (
+		sci-libs/fftw:3.0
+		media-libs/libsamplerate
+	)
 	lirc? ( app-misc/lirc  )
 	mirage? (
 		dev-libs/glib:2
@@ -43,15 +47,18 @@ src_configure() {
 	# Disable AppIndicator as it's not in tree
 	# Disable OpenVP as some of its dependencies are not in the tree
 	# Disable SoundMenu as it requires indicate-sharp
+	# Disable zeitgeistdataprovider as it requires zeitgeist-sharp
 	local myconf="--enable-gnome --disable-static --enable-release
 		--with-gconf-schema-file-dir=/etc/gconf/schemas
 		--with-vendor-build-id=Gentoo/${PN}/${PVR}
 		--disable-scrollkeeper --disable-clutterflow
-		--disable-ubuntuonemusicstore --disable-appindicator
-		--disable-openvp --disable-soundmenu"
+		--disable-appindicator --disable-openvp --enable-ampache
+		--enable-karaoke --enable-jamendo
+		--disable-zeitgeistdataprovider --enable-randombylastfm"
 
 	econf \
 		$(use_enable doc user-help) \
+		$(use_enable lastfmfingerprint) \
 		$(use_enable lirc) \
 		$(use_enable lyrics) \
 		$(use_enable mirage) \
@@ -63,5 +70,5 @@ src_configure() {
 src_install() {
 	base_src_install
 	find "${ED}" -name "*.la" -delete || die "remove of la files failed"
-	dodoc AUTHORS NEWS README || die
+	dodoc AUTHORS NEWS README
 }
