@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-2.0.19.ebuild,v 1.2 2011/05/28 06:12:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/checkpolicy-2.0.19.ebuild,v 1.3 2011/07/08 11:01:06 ssuominen Exp $
 
 IUSE="debug"
 
@@ -39,7 +39,7 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install
 
-	if useq debug; then
+	if use debug; then
 		dobin "${S}/test/dismod"
 		dobin "${S}/test/dispol"
 	fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.58.5.ebuild,v 1.2 2011/04/13 12:39:30 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.58.5.ebuild,v 1.3 2011/07/08 11:00:19 ssuominen Exp $
 
 inherit bash-completion eutils
 
@@ -90,9 +90,9 @@ src_compile() {
 		$(use_enable pbins ) \
 		$(use_enable pink ) \
 		$(use_enable ruby-bindings ruby ) \
-		$(useq ruby-bindings && useq doc && echo --enable-ruby-doc ) \
+		$(use ruby-bindings && use doc && echo --enable-ruby-doc ) \
 		$(use_enable python-bindings python ) \
-		$(useq python-bindings && useq doc && echo --enable-python-doc ) \
+		$(use python-bindings && use doc && echo --enable-python-doc ) \
 		$(use_enable vim-syntax vim ) \
 		$(use_enable visibility ) \
 		$(use_enable xml ) \

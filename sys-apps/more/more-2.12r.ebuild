@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/more/more-2.12r.ebuild,v 1.3 2008/03/21 11:22:23 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/more/more-2.12r.ebuild,v 1.4 2011/07/08 10:59:24 ssuominen Exp $
 
 inherit eutils flag-o-matic
 
@@ -20,7 +20,7 @@ RDEPEND=">=sys-libs/ncurses-5.2-r2
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
-yesno() { useq $1 && echo yes || echo no; }
+yesno() { use $1 && echo yes || echo no; }
 
 src_unpack() {
 	unpack ${A}

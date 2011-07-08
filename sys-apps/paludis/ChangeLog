@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.204 2011/06/23 09:18:26 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.205 2011/07/08 11:00:19 ssuominen Exp $
+
+  08 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> paludis-0.58.5.ebuild,
+  paludis-0.60.4.ebuild, paludis-0.62.2.ebuild, paludis-0.64.0.ebuild,
+  paludis-0.64.1.ebuild:
+  Convert from "useq" to "use".
 
 *paludis-0.64.1 (23 Jun 2011)
 

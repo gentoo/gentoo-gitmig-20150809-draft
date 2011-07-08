@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/checkpolicy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.57 2011/05/28 06:12:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.58 2011/07/08 11:01:06 ssuominen Exp $
+
+  08 Jul 2011; Samuli Suominen <ssuominen@gentoo.org>
+  checkpolicy-2.0.16.ebuild, checkpolicy-2.0.19.ebuild:
+  Convert from "useq" to "use".
 
   28 May 2011; Anthony G. Basile <blueness@gentoo.org>
   checkpolicy-2.0.19.ebuild:
