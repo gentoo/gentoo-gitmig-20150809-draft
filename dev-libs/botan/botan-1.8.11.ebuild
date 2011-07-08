@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.8.11.ebuild,v 1.4 2011/02/28 01:02:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.8.11.ebuild,v 1.5 2011/07/08 11:11:41 ssuominen Exp $
 
 EAPI="3"
 #PYTHON_BDEPEND="2"
@@ -40,7 +40,7 @@ src_prepare() {
 src_configure() {
 	local disable_modules="proc_walk,unix_procs,cpu_counter"
 
-	if ! useq threads; then
+	if ! use threads; then
 		disable_modules="${disable_modules},pthreads"
 	fi
 
