@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome-python-common.eclass,v 1.11 2010/06/11 08:35:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome-python-common.eclass,v 1.12 2011/07/08 11:35:01 ssuominen Exp $
 
 # Original Author: Arun Raghavan <ford_prefect@gentoo.org> (based on the
 #		   gnome-python-desktop eclass by Jim Ramsay <lack@gentoo.org>)
@@ -138,7 +138,7 @@ gnome-python-common_src_install() {
 	python_execute_function -s gnome2_src_install "$@"
 	python_clean_installation_image
 
-	if hasq examples ${IUSE} && use examples; then
+	if has examples ${IUSE} && use examples; then
 		insinto /usr/share/doc/${PF}/examples
 
 		for example in ${EXAMPLES}; do

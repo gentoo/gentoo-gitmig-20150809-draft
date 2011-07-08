@@ -5,7 +5,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-2.eclass,v 1.35 2010/02/01 09:38:44 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-2.eclass,v 1.36 2011/07/08 11:35:01 ssuominen Exp $
 
 inherit java-utils-2
 
@@ -93,7 +93,7 @@ java-pkg-2_src_compile() {
 		[[ "${EANT_FILTER_COMPILER}" ]] && \
 			java-pkg_filter-compiler ${EANT_FILTER_COMPILER}
 		local antflags="${EANT_BUILD_TARGET:=jar}"
-		if hasq doc ${IUSE} && [[ -n "${EANT_DOC_TARGET=javadoc}" ]]; then
+		if has doc ${IUSE} && [[ -n "${EANT_DOC_TARGET=javadoc}" ]]; then
 			antflags="${antflags} $(use_doc ${EANT_DOC_TARGET})"
 		fi
 		local tasks

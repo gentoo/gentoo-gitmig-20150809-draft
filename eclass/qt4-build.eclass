@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.90 2011/03/10 23:45:51 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.91 2011/07/08 11:35:01 ssuominen Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -174,7 +174,7 @@ qt4-build_src_prepare() {
 	# fix libx11 dependency on non X packages
 	if version_is_at_least "4.7.0_beta2"; then
 		local NOLIBX11PKG="qt-core qt-dbus qt-script qt-sql qt-test qt-xmlpatterns"
-		hasq ${PN} ${NOLIBX11PKG} && qt_nolibx11
+		has ${PN} ${NOLIBX11PKG} && qt_nolibx11
 		[[ ${PN} == "qt-assistant" ]] && qt_assistant_cleanup
 	fi
 
@@ -601,7 +601,7 @@ generate_qconfigs() {
 			# including qconfig_add and excluding qconfig_remove
 			for x in $(sed -n 's/^QT_CONFIG +=//p' \
 				"${ROOT}${QTDATADIR}"/mkspecs/qconfig.pri) ${qconfig_add}; do
-					hasq ${x} ${qconfig_remove} || qconfig_new+=" ${x}"
+					has ${x} ${qconfig_remove} || qconfig_new+=" ${x}"
 			done
 
 			# replace the existing QT_CONFIG list with qconfig_new

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim-plugin.eclass,v 1.26 2011/01/16 18:18:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim-plugin.eclass,v 1.27 2011/07/08 11:35:01 ssuominen Exp $
 #
 # This eclass simplifies installation of app-vim plugins into
 # /usr/share/vim/vimfiles.  This is a version-independent directory
@@ -139,7 +139,7 @@ display_vim_plugin_help() {
 		elog " "
 	fi
 
-	if hasq "filetype" "${VIM_PLUGIN_MESSAGES}" ; then
+	if has "filetype" "${VIM_PLUGIN_MESSAGES}" ; then
 		elog "This plugin makes use of filetype settings. To enable these,"
 		elog "add lines like:"
 		elog "    filetype plugin on"

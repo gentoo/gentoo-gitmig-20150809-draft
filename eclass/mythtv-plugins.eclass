@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.38 2010/06/16 05:29:21 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.39 2011/07/08 11:35:01 ssuominen Exp $
 #
 # @ECLASS: mythtv-plugins.eclass
 # @AUTHOR: Doug Goldstein <cardoe@gentoo.org>
@@ -87,7 +87,7 @@ mythtv-plugins_src_configure() {
 
 	local myconf=""
 
-	if hasq ${PN} ${MYTHPLUGINS} ; then
+	if has ${PN} ${MYTHPLUGINS} ; then
 		for x in ${MYTHPLUGINS} ; do
 			if [[ ${PN} == ${x} ]] ; then
 				myconf="${myconf} --enable-${x}"
@@ -113,7 +113,7 @@ mythtv-plugins_src_compile() {
 }
 
 mythtv-plugins_src_install() {
-	if hasq ${PN} ${MYTHPLUGINS} ; then
+	if has ${PN} ${MYTHPLUGINS} ; then
 		cd "${S}"/${PN}
 	else
 		die "Package ${PN} is unsupported"

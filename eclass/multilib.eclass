@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.90 2011/03/18 22:03:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.91 2011/07/08 11:35:01 ssuominen Exp $
 
 # @ECLASS: multilib.eclass
 # @MAINTAINER:
@@ -175,15 +175,15 @@ get_install_abis() {
 	if [[ ${EMULTILIB_PKG} == "true" ]] ; then
 		for x in ${MULTILIB_ABIS} ; do
 			if [[ ${x} != "${DEFAULT_ABI}" ]] ; then
-				hasq ${x} ${ABI_DENY} || order="${order} ${x}"
+				has ${x} ${ABI_DENY} || order="${order} ${x}"
 			fi
 		done
-		hasq ${DEFAULT_ABI} ${ABI_DENY} || order="${order} ${DEFAULT_ABI}"
+		has ${DEFAULT_ABI} ${ABI_DENY} || order="${order} ${DEFAULT_ABI}"
 
 		if [[ -n ${ABI_ALLOW} ]] ; then
 			local ordera=""
 			for x in ${order} ; do
-				if hasq ${x} ${ABI_ALLOW} ; then
+				if has ${x} ${ABI_ALLOW} ; then
 					ordera="${ordera} ${x}"
 				fi
 			done

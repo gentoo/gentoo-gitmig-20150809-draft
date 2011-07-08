@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.88 2010/09/18 08:39:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.89 2011/07/08 11:35:01 ssuominen Exp $
 
 # @ECLASS: enlightenment.eclass
 # @MAINTAINER:
@@ -129,7 +129,7 @@ enlightenment_src_unpack() {
 	else
 		unpack ${A}
 	fi
-	hasq src_prepare ${ENLIGHTENMENT_EXPF} || enlightenment_src_prepare
+	has src_prepare ${ENLIGHTENMENT_EXPF} || enlightenment_src_prepare
 }
 
 enlightenment_src_prepare() {
@@ -155,7 +155,7 @@ enlightenment_src_configure() {
 }
 
 enlightenment_src_compile() {
-	hasq src_configure ${ENLIGHTENMENT_EXPF} || enlightenment_src_configure
+	has src_configure ${ENLIGHTENMENT_EXPF} || enlightenment_src_configure
 
 	emake || die
 

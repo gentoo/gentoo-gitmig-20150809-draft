@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.32 2011/04/25 08:37:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.33 2011/07/08 11:35:01 ssuominen Exp $
 #
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -213,7 +213,7 @@ ruby_add_rdepend() {
 	# Add the dependency as a test-dependency since we're going to
 	# execute the code during test phase.
 	DEPEND="${DEPEND} test? ( ${dependency} )"
-	hasq test "$IUSE" || IUSE="${IUSE} test"
+	has test "$IUSE" || IUSE="${IUSE} test"
 }
 
 # @FUNCTION: ruby_add_bdepend

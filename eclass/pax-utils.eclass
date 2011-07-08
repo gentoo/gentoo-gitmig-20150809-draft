@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/pax-utils.eclass,v 1.13 2011/07/03 21:17:10 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/pax-utils.eclass,v 1.14 2011/07/08 11:35:01 ssuominen Exp $
 
 # @ECLASS: pax-utils.eclass
 # @MAINTAINER:
@@ -57,7 +57,7 @@ pax-mark() {
 	flags=${1//-}
 	shift
 	# Try paxctl, then scanelf.  paxctl is preferred.
-	if type -p paxctl > /dev/null && hasq PT ${PAX_MARKINGS}; then
+	if type -p paxctl > /dev/null && has PT ${PAX_MARKINGS}; then
 		# Try paxctl, the upstream supported tool.
 		elog "PT PaX marking -${flags}"
 		_pax_list_files elog "$@"

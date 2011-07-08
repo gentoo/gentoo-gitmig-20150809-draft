@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.96 2011/04/22 11:04:13 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.97 2011/07/08 11:35:01 ssuominen Exp $
 
 # @ECLASS: gnome2.eclass
 # @MAINTAINER:
@@ -112,7 +112,7 @@ gnome2_src_configure() {
 	fi
 
 	# Prevent a QA warning
-	if hasq doc ${IUSE} ; then
+	if has doc ${IUSE} ; then
 		G2CONF="${G2CONF} $(use_enable doc gtk-doc)"
 	fi
 

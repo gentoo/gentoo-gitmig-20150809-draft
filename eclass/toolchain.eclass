@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.460 2011/06/14 20:28:20 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.461 2011/07/08 11:35:01 ssuominen Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -451,7 +451,7 @@ hardened_gcc_is_stable() {
 		die "hardened_gcc_stable needs to be called with pie or ssp"
 	fi
 
-	hasq $(tc-arch) ${tocheck} && return 0
+	has $(tc-arch) ${tocheck} && return 0
 	return 1
 }
 
@@ -481,7 +481,7 @@ hardened_gcc_check_unsupported() {
 		die "hardened_gcc_check_unsupported needs to be called with pie or ssp"
 	fi
 
-	hasq $(tc-arch) ${tocheck} && return 0
+	has $(tc-arch) ${tocheck} && return 0
 	return 1
 }
 

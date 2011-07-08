@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fox.eclass,v 1.11 2010/12/02 16:11:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fox.eclass,v 1.12 2011/07/08 11:35:01 ssuominen Exp $
 
 # @ECLASS: fox.eclass
 # @MAINTAINER:
@@ -89,7 +89,7 @@ fox_src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	hasq src_prepare ${FOX_EXPF} || fox_src_prepare
+	has src_prepare ${FOX_EXPF} || fox_src_prepare
 }
 
 fox_src_prepare() {
@@ -139,7 +139,7 @@ fox_src_configure() {
 
 
 fox_src_compile() {
-	hasq src_configure ${FOX_EXPF} || fox_src_configure
+	has src_configure ${FOX_EXPF} || fox_src_configure
 
 	cd "${S}/${FOX_COMPONENT}"
 	emake || die "compile error"
