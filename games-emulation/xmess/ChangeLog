@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/xmess
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/ChangeLog,v 1.65 2011/06/30 10:25:56 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/ChangeLog,v 1.66 2011/07/08 10:53:23 ssuominen Exp $
+
+  08 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> xmess-0.106.ebuild:
+  Convert from "useq" to "use".
 
   30 Jun 2011; Tupone Alfredo <tupone@gentoo.org> xmess-0.106.ebuild,
   +files/xmess-0.106-overflow.patch:

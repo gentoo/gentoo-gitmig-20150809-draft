@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.106.ebuild,v 1.12 2011/06/30 10:25:56 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/xmess-0.106.ebuild,v 1.13 2011/07/08 10:53:23 ssuominen Exp $
 EAPI=2
 
 inherit flag-o-matic toolchain-funcs eutils games
@@ -223,12 +223,12 @@ src_install() {
 pkg_postinst() {
 	games_pkg_postinst
 	elog "Your available MAME binaries are: ${TARGET}"
-	if useq opengl || useq X || useq dga || useq xv ; then
+	if use opengl || use X || use dga || use xv ; then
 		elog " ${TARGET}.x11"
 	fi
-	useq sdl    && elog " ${TARGET}.SDL"
-	#useq ggi    && elog " ${TARGET}.ggi"
-	useq svga   && elog " ${TARGET}.svgalib"
+	use sdl    && elog " ${TARGET}.SDL"
+	#use ggi    && elog " ${TARGET}.ggi"
+	use svga   && elog " ${TARGET}.svgalib"
 
 	elog "Helper utilities are located in $(games_get_libdir)/${PN}."
 }
