@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.4.8.ebuild,v 1.1 2011/07/08 12:23:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.4.8.ebuild,v 1.2 2011/07/08 13:55:54 ssuominen Exp $
 
 EAPI=4
 
@@ -21,7 +21,11 @@ DEPEND="${RDEPEND}
 	app-arch/xz-utils"
 
 src_prepare() {
-	use apng && epatch "${WORKDIR}"/${PN}-1.4.7-apng.patch
+	if use apng; then
+		epatch "${WORKDIR}"/${PN}-1.4.7-apng.patch
+		epatch "${FILESDIR}"/${P}-build.patch
+	fi
+
 	elibtoolize
 }
 
