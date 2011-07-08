@@ -1,6 +1,9 @@
 # ChangeLog for games-action/d2x
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/ChangeLog,v 1.25 2010/02/10 03:46:47 josejx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/d2x/ChangeLog,v 1.26 2011/07/08 11:10:06 ssuominen Exp $
+
+  08 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> d2x-0.2.5-r3.ebuild:
+  Convert from "useq" to "use".
 
   10 Feb 2010; Joseph Jezak <josejx@gentoo.org> d2x-0.2.5-r3.ebuild:
   Marked ppc stable for bug #294889.
