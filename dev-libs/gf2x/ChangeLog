@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/gf2x
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gf2x/ChangeLog,v 1.10 2011/05/14 09:56:27 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gf2x/ChangeLog,v 1.11 2011/07/08 11:25:31 tomka Exp $
+
+*gf2x-1.0-r1 (08 Jul 2011)
+
+  08 Jul 2011; Thomas Kahle <tomka@gentoo.org> +gf2x-1.0-r1.ebuild:
+  Adding Francois Bissey's fix for bug 366945 
 
 *gf2x-1.0 (14 May 2011)
 
