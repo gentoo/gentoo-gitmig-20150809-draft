@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.80.02.05.ebuild,v 1.1 2009/11/29 09:33:16 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/hsfmodem-7.80.02.05.ebuild,v 1.2 2011/07/08 11:08:21 ssuominen Exp $
 
 inherit eutils linux-info
 
@@ -26,9 +26,9 @@ S="${WORKDIR}"
 
 pkg_setup() {
 	linux-info_pkg_setup
-	if useq x86; then
+	if use x86; then
 		MY_ARCH_S="${S}/${P}full"
-	elif useq amd64; then
+	elif use amd64; then
 		MY_ARCH_S="${S}/${P}x86_64full"
 	fi
 
