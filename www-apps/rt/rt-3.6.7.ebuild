@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.6.7.ebuild,v 1.1 2008/07/01 16:48:46 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.6.7.ebuild,v 1.2 2011/07/08 10:23:32 ssuominen Exp $
 
 inherit webapp eutils depend.apache confutils
 
@@ -183,7 +183,7 @@ src_compile() {
 		$(enable_extension_withonly fastcgi fastcgi) \
 		$(enable_extension_withonly fastcgi lighttpd)" \
 
-	if ! useq fastcgi && ! useq lighttpd; then
+	if ! use fastcgi && ! use lighttpd; then
 		myconf="${myconf} --with-modperl2"
 	fi
 
