@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/odbtp/odbtp-1.1.4.ebuild,v 1.4 2010/03/31 21:39:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/odbtp/odbtp-1.1.4.ebuild,v 1.5 2011/07/08 10:18:44 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
@@ -33,7 +33,7 @@ src_install() {
 
 	# Install various documentation
 	dodoc AUTHORS INSTALL NEWS README*
-	if useq doc ; then
+	if use doc ; then
 		dohtml -r docs/*
 	fi
 }
