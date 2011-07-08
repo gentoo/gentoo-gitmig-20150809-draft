@@ -1,6 +1,17 @@
 # ChangeLog for net-libs/telepathy-glib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.79 2011/07/01 21:18:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.80 2011/07/08 15:43:34 pacho Exp $
+
+*telepathy-glib-0.14.9 (08 Jul 2011)
+
+  08 Jul 2011; Pacho Ramos <pacho@gentoo.org> -telepathy-glib-0.14.8.ebuild,
+  +telepathy-glib-0.14.9.ebuild:
+  Version bump: This release reverts the patch introduced in 0.14.8 changing
+  the default value of the TpChannelIface:handle-type property. While being
+  correct, this fix introduces assertion errors in some connection managers and
+  so was not appropriate for a stable branch and, because of this, we drop
+  0.14.8 from the tree as it won't go to stable ever. This version also fixes
+  tests.
 
   01 Jul 2011; Markos Chandras <hwoarang@gentoo.org>
   telepathy-glib-0.14.7.ebuild:
