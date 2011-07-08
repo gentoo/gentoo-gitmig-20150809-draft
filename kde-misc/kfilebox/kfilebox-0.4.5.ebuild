@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kfilebox/kfilebox-0.4.5.ebuild,v 1.1 2011/06/19 12:41:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kfilebox/kfilebox-0.4.5.ebuild,v 1.2 2011/07/08 10:09:05 ssuominen Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ src_install() {
 	MAKEOPTS="${MAKEOPTS} -j1" qt4-r2_src_install
 
 	for lang in ${LANGS}; do
-		if ! hasq ${lang} ${LINGUAS}; then
+		if ! has ${lang} ${LINGUAS}; then
 			rm -rf "${D}"/usr/share/locale/${lang} || die
 		fi
 	done
