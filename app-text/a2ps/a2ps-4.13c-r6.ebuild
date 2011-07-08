@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r6.ebuild,v 1.15 2010/12/02 01:15:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r6.ebuild,v 1.16 2011/07/08 11:05:40 ssuominen Exp $
 
 inherit eutils autotools elisp-common
 
@@ -85,7 +85,7 @@ src_compile() {
 	#export YACC=yacc
 	econf --sysconfdir=/etc/a2ps \
 		--includedir=/usr/include \
-		$(useq emacs || echo EMACS=no) \
+		$(use emacs || echo EMACS=no) \
 		$(use_enable nls) || die "econf failed"
 
 	export LANG=C
