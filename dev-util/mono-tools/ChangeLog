@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/mono-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.83 2011/05/11 19:30:27 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.84 2011/07/08 10:02:58 pacho Exp $
+
+  08 Jul 2011; Pacho Ramos <pacho@gentoo.org>
+  -files/mono-tools-2.4-html-renderer-fixes.patch, -mono-tools-2.8.ebuild:
+  Remove old.
 
   11 May 2011; Christoph Mende <angelos@gentoo.org> mono-tools-2.10.ebuild:
   Stable on amd64 wrt bug #359651
