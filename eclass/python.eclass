@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.117 2011/07/04 11:28:24 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.118 2011/07/08 07:37:49 djc Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -2139,21 +2139,27 @@ python_get_library() {
 }
 
 # @FUNCTION: python_get_version
-# @USAGE: [-f|--final-ABI] [--full] [--major] [--minor] [--micro]
+# @USAGE: [-f|--final-ABI] [-l|--language] [--full] [--major] [--minor] [--micro]
 # @DESCRIPTION:
 # Print Python version.
 # --full, --major, --minor and --micro options cannot be specified simultaneously.
 # If --full, --major, --minor and --micro options are not specified, then "${major_version}.${minor_version}" is printed.
+# If --language option is specified, then Python language version is printed.
+# --language and --full options cannot be specified simultaneously.
+# --language and --micro options cannot be specified simultaneously.
 # If --final-ABI option is specified, then final ABI from the list of enabled ABIs is used.
 python_get_version() {
 	_python_check_python_pkg_setup_execution
 
-	local final_ABI="0" full="0" major="0" minor="0" micro="0" python_command
+	local final_ABI="0" language="0" language_version full="0" major="0" minor="0" micro="0" PYTHON_ABI="${PYTHON_ABI}" python_command
 
 	while (($#)); do
 		case "$1" in
 			-f|--final-ABI)
 				final_ABI="1"
+				;;
+			-l|--language)
+				language="1"
 				;;
 			--full)
 				full="1"
@@ -2177,40 +2183,64 @@ python_get_version() {
 		shift
 	done
 
-	if [[ "$((${full} + ${major} + ${minor} + ${micro}))" -gt 1 ]]; then
-		die "${FUNCNAME}(): '--full', '--major', '--minor' or '--micro' options cannot be specified simultaneously"
-	fi
-
-	if [[ "${full}" == "1" ]]; then
-		python_command="from sys import version_info; print('.'.join(str(x) for x in version_info[:3]))"
-	elif [[ "${major}" == "1" ]]; then
-		python_command="from sys import version_info; print(version_info[0])"
-	elif [[ "${minor}" == "1" ]]; then
-		python_command="from sys import version_info; print(version_info[1])"
-	elif [[ "${micro}" == "1" ]]; then
-		python_command="from sys import version_info; print(version_info[2])"
-	else
-		if [[ -n "${PYTHON_ABI}" && "${final_ABI}" == "0" ]]; then
-			if [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "CPython" ]]; then
-				echo "${PYTHON_ABI}"
-			elif [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "Jython" ]]; then
-				echo "${PYTHON_ABI%-jython}"
-			fi
-			return
-		fi
-		python_command="from sys import version_info; print('.'.join(str(x) for x in version_info[:2]))"
-	fi
-
 	if [[ "${final_ABI}" == "1" ]]; then
 		if ! _python_package_supporting_installation_for_multiple_python_abis; then
 			die "${FUNCNAME}(): '--final-ABI' option cannot be used in ebuilds of packages not supporting installation for multiple Python ABIs"
 		fi
-		"$(PYTHON -f)" -c "${python_command}"
 	else
 		if _python_package_supporting_installation_for_multiple_python_abis && ! _python_abi-specific_local_scope; then
 			die "${FUNCNAME}() should be used in ABI-specific local scope"
 		fi
-		"$(PYTHON ${PYTHON_ABI})" -c "${python_command}"
+	fi
+
+	if [[ "$((${full} + ${major} + ${minor} + ${micro}))" -gt 1 ]]; then
+		die "${FUNCNAME}(): '--full', '--major', '--minor' or '--micro' options cannot be specified simultaneously"
+	fi
+
+	if [[ "${language}" == "1" ]]; then
+		if [[ "${final_ABI}" == "1" ]]; then
+			PYTHON_ABI="$(PYTHON -f --ABI)"
+		elif [[ -z "${PYTHON_ABI}" ]]; then
+			PYTHON_ABI="$(PYTHON --ABI)"
+		fi
+		language_version="${PYTHON_ABI%%-*}"
+		if [[ "${full}" == "1" ]]; then
+			die "${FUNCNAME}(): '--language' and '--full' options cannot be specified simultaneously"
+		elif [[ "${major}" == "1" ]]; then
+			echo "${language_version%.*}"
+		elif [[ "${minor}" == "1" ]]; then
+			echo "${language_version#*.}"
+		elif [[ "${micro}" == "1" ]]; then
+			die "${FUNCNAME}(): '--language' and '--micro' options cannot be specified simultaneously"
+		else
+			echo "${language_version}"
+		fi
+	else
+		if [[ "${full}" == "1" ]]; then
+			python_command="from sys import version_info; print('.'.join(str(x) for x in version_info[:3]))"
+		elif [[ "${major}" == "1" ]]; then
+			python_command="from sys import version_info; print(version_info[0])"
+		elif [[ "${minor}" == "1" ]]; then
+			python_command="from sys import version_info; print(version_info[1])"
+		elif [[ "${micro}" == "1" ]]; then
+			python_command="from sys import version_info; print(version_info[2])"
+		else
+			if [[ -n "${PYTHON_ABI}" && "${final_ABI}" == "0" ]]; then
+				if [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "CPython" ]]; then
+					echo "${PYTHON_ABI}"
+				elif [[ "$(_python_get_implementation "${PYTHON_ABI}")" == "Jython" ]]; then
+					echo "${PYTHON_ABI%-jython}"
+				fi
+				return
+			fi
+			python_command="from sys import version_info; print('.'.join(str(x) for x in version_info[:2]))"
+		fi
+
+		if [[ "${final_ABI}" == "1" ]]; then
+			"$(PYTHON -f)" -c "${python_command}"
+		else
+			"$(PYTHON ${PYTHON_ABI})" -c "${python_command}"
+		fi
 	fi
 }
 
