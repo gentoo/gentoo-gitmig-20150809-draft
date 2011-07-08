@@ -1,6 +1,10 @@
 # ChangeLog for app-text/texlive
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.74 2011/06/14 05:46:50 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.75 2011/07/08 01:50:34 aballier Exp $
+
+  08 Jul 2011; Alexis Ballier <aballier@gentoo.org> texlive-2010.ebuild,
+  texlive-2010-r1.ebuild, texlive-2010-r2.ebuild:
+  remove dialog dep, if its needed packages should depend on it
 
   14 Jun 2011; Matt Turner <mattst88@gentoo.org> texlive-2010-r1.ebuild,
   texlive-2010-r2.ebuild:
