@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.2.ebuild,v 1.7 2011/06/28 04:30:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.0.2.ebuild,v 1.8 2011/07/08 10:11:58 ssuominen Exp $
 
 inherit eutils multilib
 
@@ -159,7 +159,7 @@ src_install() {
 
 		# Special-case uglyness... For people updating from lib32 -> lib amd64
 		# profiles, keep lib32 in the search path while it's around
-		if has_multilib_profile && [ -d "${ROOT}"lib32 -o -d "${ROOT}"lib32 ] && ! hasq lib32 ${libdirs}; then
+		if has_multilib_profile && [ -d "${ROOT}"lib32 -o -d "${ROOT}"lib32 ] && ! has lib32 ${libdirs}; then
 			libdirs_env="${libdirs_env}:/lib32:/usr/lib32:/usr/local/lib32"
 		fi
 		echo "LDPATH=\"${libdirs_env}\"" > "${T}"/04multilib
