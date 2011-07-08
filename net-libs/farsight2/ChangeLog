@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/farsight2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/ChangeLog,v 1.49 2011/06/30 09:40:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/ChangeLog,v 1.50 2011/07/08 10:01:30 ssuominen Exp $
+
+  08 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> farsight2-0.0.17.ebuild,
+  farsight2-0.0.20.ebuild:
+  Convert from "hasq" to "has".
 
   30 Jun 2011; Markos Chandras <hwoarang@gentoo.org> farsight2-0.0.26.ebuild:
   Stable on amd64 wrt bug #373393

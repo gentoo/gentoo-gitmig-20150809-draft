@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/farsight2-0.0.17.ebuild,v 1.10 2011/02/25 22:13:14 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/farsight2-0.0.17.ebuild,v 1.11 2011/07/08 10:01:30 ssuominen Exp $
 
 EAPI="2"
 
@@ -56,7 +56,7 @@ src_test()
 {
 	use msn || { einfo "Tests disabled without msn use flag"; return ;}
 	if ! emake -j1 check; then
-		hasq test $FEATURES && die "Make check failed. See above for details."
-		hasq test $FEATURES || eerror "Make check failed. See above for details."
+		has test $FEATURES && die "Make check failed. See above for details."
+		has test $FEATURES || eerror "Make check failed. See above for details."
 	fi
 }
