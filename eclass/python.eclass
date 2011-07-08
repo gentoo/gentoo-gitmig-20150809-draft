@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.119 2011/07/08 07:39:03 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.120 2011/07/08 07:40:02 djc Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -23,6 +23,8 @@ _PYTHON_GLOBALLY_SUPPORTED_ABIS=(${_CPYTHON2_GLOBALLY_SUPPORTED_ABIS[@]} ${_CPYT
 # ================================================================================================
 # ===================================== HANDLING OF METADATA =====================================
 # ================================================================================================
+
+_PYTHON_ABI_PATTERN_REGEX="([[:alnum:]]|\.|-|\*|\[|\])+"
 
 _python_check_python_abi_matching() {
 	local pattern patterns patterns_list="0" PYTHON_ABI
@@ -822,7 +824,7 @@ _python_prepare_flags() {
 			if [[ "$(declare -p ${prefix}${variable} 2> /dev/null)" == "declare -a ${prefix}${variable}="* ]]; then
 				eval "array=(\"\${${prefix}${variable}[@]}\")"
 				for element in "${array[@]}"; do
-					if [[ "${element}" =~ ^([[:alnum:]]|\.|-|\*|\[|\])+\ (\+|-)\ .+ ]]; then
+					if [[ "${element}" =~ ^${_PYTHON_ABI_PATTERN_REGEX}\ (\+|-)\ .+ ]]; then
 						pattern="${element%% *}"
 						element="${element#* }"
 						operator="${element%% *}"
