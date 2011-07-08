@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/zzuf/zzuf-0.13-r1.ebuild,v 1.1 2010/03/02 19:28:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/zzuf/zzuf-0.13-r1.ebuild,v 1.2 2011/07/08 10:04:09 ssuominen Exp $
 
 EAPI="2"
 
@@ -48,7 +48,7 @@ src_compile() {
 # This could be removed in next versions if my patches will be applied
 # by Sam. -- Diego 'Flameeyes'
 src_test() {
-	if hasq sandbox ${FEATURES}; then
+	if has sandbox ${FEATURES}; then
 		ewarn "zzuf tests don't work correctly when sandbox is enabled,"
 		ewarn "skipping tests. If you want to run the testsuite, please"
 		ewarn "disable sandbox for this build."
