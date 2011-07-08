@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bittorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.138 2011/04/05 21:08:34 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.139 2011/07/08 00:23:29 aballier Exp $
+
+  08 Jul 2011; Alexis Ballier <aballier@gentoo.org> bittorrent-4.4.0-r2.ebuild:
+  keyword ~x86-fbsd, bug #359313
 
   05 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   bittorrent-4.4.0-r1.ebuild, bittorrent-5.0.9-r1.ebuild,
