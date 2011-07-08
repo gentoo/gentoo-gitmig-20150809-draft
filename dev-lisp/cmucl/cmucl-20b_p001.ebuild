@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-20b_p001.ebuild,v 1.1 2011/04/28 20:21:33 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-20b_p001.ebuild,v 1.2 2011/07/08 11:07:32 ssuominen Exp $
 
 EAPI=3
 inherit eutils toolchain-funcs
@@ -33,7 +33,7 @@ glo_usev() {
 		die "${0}: wrong number of arguments: $#"
 	fi
 	local if_yes="${2:-${1}}" if_no="${3}"
-	if useq ${1} ; then
+	if use ${1} ; then
 		printf "%s" "${if_yes}"
 		return 0
 	else
