@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.4.417_pre20101104.ebuild,v 1.1 2010/11/07 11:01:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.4.417_pre20101104.ebuild,v 1.2 2011/07/08 10:55:43 ssuominen Exp $
 
 EAPI=3
 
@@ -31,14 +31,14 @@ src_configure() {
 }
 
 src_compile() {
-	emake all-en $(useq linguas_ja && echo all-ja) || die "emake failed"
+	emake all-en $(use linguas_ja && echo all-ja) || die "emake failed"
 }
 
 src_install() {
 	emake lispdir="${ED}${SITELISP}/${PN}" \
 		infodir="${ED}/usr/share/info" \
 		ICONDIR="${ED}${SITEETC}/${PN}" \
-		install-en $(useq linguas_ja && echo install-ja) install-icons \
+		install-en $(use linguas_ja && echo install-ja) install-icons \
 		|| die "emake install failed"
 
 	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die

@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/emacs-w3m
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/ChangeLog,v 1.72 2011/03/12 22:34:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/ChangeLog,v 1.73 2011/07/08 10:55:43 ssuominen Exp $
+
+  08 Jul 2011; Samuli Suominen <ssuominen@gentoo.org>
+  emacs-w3m-1.4.417_pre20101104.ebuild, emacs-w3m-1.4.437_pre20110310.ebuild:
+  Convert from "useq" to "use".
 
 *emacs-w3m-1.4.437_pre20110310 (12 Mar 2011)
 
