@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.36 2011/07/08 19:12:15 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.37 2011/07/08 20:55:31 mattst88 Exp $
 
 # Kacper Kowalik <xarthisius@gentoo.org> (20 May 2011)
 # depends on dev-libs/dmalloc which is not keyworded
@@ -80,10 +80,6 @@ x11-libs/vte glade
 # Matt Turner <mattst88@gentoo.org> (06 Dec 2010)
 # dev-db/tokyocabinet not keyworded
 mail-client/mutt tokyocabinet
-
-# Matt Turner <mattst88@gentoo.org> (06 Dec 2010)
-# dev-perl/GSSAPI not keyworded
-dev-perl/Authen-SASL kerberos
 
 # Matt Turner <mattst88@gentoo.org> (26 Dec 2010)
 # dev-lang/spidermonkey not keyworded
