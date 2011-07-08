@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.14 2011/03/18 20:25:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.15 2011/07/08 15:38:29 ssuominen Exp $
 
 toolchain-glibc_src_install() {
 	local GBUILDDIR
@@ -192,7 +192,7 @@ src_strip() {
 	# gdb is lame and requires some debugging information to remain in
 	# libpthread, so we need to strip it by hand.  libthread_db makes no
 	# sense stripped as it is only used when debugging.
-	local pthread=$(hasq splitdebug ${FEATURES} && echo "libthread_db" || echo "lib{pthread,thread_db}")
+	local pthread=$(has splitdebug ${FEATURES} && echo "libthread_db" || echo "lib{pthread,thread_db}")
 	env \
 		-uRESTRICT \
 		CHOST=${CTARGET} \
@@ -200,7 +200,7 @@ src_strip() {
 		prepallstrip
 	# if user has stripping enabled and does not have split debug turned on,
 	# then leave the debugging sections in libpthread.
-	if ! hasq nostrip ${FEATURES} && ! hasq splitdebug ${FEATURES} ; then
+	if ! has nostrip ${FEATURES} && ! has splitdebug ${FEATURES} ; then
 		${STRIP:-${CTARGET}-strip} --strip-debug "${D}"/*/libpthread-*.so
 	fi
 }
