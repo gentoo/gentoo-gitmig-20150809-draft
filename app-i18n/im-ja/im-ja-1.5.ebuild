@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.5.ebuild,v 1.12 2011/03/27 10:46:55 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-1.5.ebuild,v 1.13 2011/07/08 11:04:36 ssuominen Exp $
 
 EAPI="1"
 
@@ -39,7 +39,7 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS README ChangeLog TODO"
 
 get_gtk_confdir() {
-	if useq amd64 || ( [ "${CONF_LIBDIR}" == "lib32" ] && useq x86 ) ; then
+	if use amd64 || ( [ "${CONF_LIBDIR}" == "lib32" ] && use x86 ) ; then
 		echo "/etc/gtk-2.0/${CHOST}"
 	else
 		echo "/etc/gtk-2.0"

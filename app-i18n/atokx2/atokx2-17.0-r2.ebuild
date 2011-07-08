@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/atokx2-17.0-r2.ebuild,v 1.7 2011/03/27 10:36:00 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx2/atokx2-17.0-r2.ebuild,v 1.8 2011/07/08 11:01:49 ssuominen Exp $
 
 EAPI="1"
 
@@ -79,7 +79,7 @@ src_install() {
 }
 
 get_gtk_confdir() {
-	if useq amd64 || ( [ "${CONF_LIBDIR}" == "lib32" ] && useq x86 ) ; then
+	if use amd64 || ( [ "${CONF_LIBDIR}" == "lib32" ] && use x86 ) ; then
 		echo "/etc/gtk-2.0/${CHOST}"
 	else
 		echo "/etc/gtk-2.0"
