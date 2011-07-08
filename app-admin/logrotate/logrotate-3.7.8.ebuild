@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.8.ebuild,v 1.13 2009/11/04 15:47:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.8.ebuild,v 1.14 2011/07/08 10:15:59 ssuominen Exp $
 
 EAPI="2"
 
@@ -42,7 +42,7 @@ src_configure() {
 src_compile() {
 	local myconf
 	myconf="CC=$(tc-getCC)"
-	useq selinux && myconf="${myconf} WITH_SELINUX=yes"
+	use selinux && myconf="${myconf} WITH_SELINUX=yes"
 	use elibc_FreeBSD && append-flags -DNO_ALLOCA_H
 	emake ${myconf} RPM_OPT_FLAGS="${CFLAGS}" || die "emake failed"
 }

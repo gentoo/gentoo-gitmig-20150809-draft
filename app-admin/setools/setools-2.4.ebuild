@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-2.4.ebuild,v 1.5 2011/04/04 21:44:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-2.4.ebuild,v 1.6 2011/07/08 10:17:36 ssuominen Exp $
 
 inherit eutils
 
@@ -40,10 +40,10 @@ src_unpack() {
 	epatch "${FILESDIR}/apol_tcl_fc.c.diff"
 
 	# enable debug if requested
-	useq debug && sed -i -e '/^DEBUG/s/0/1/' "${S}/Makefile"
+	use debug && sed -i -e '/^DEBUG/s/0/1/' "${S}/Makefile"
 
 	# dont do findcon, replcon, searchcon, or indexcon if USE=-selinux
-	if ! useq selinux; then
+	if ! use selinux; then
 		sed -i -e '/^USE_LIBSELINUX/s/1/0/' "${S}/Makefile"
 		sed -i -e '/^SE_CMDS/s/replcon//' \
 			-e '/^SE_CMDS/s/findcon//' \
@@ -57,7 +57,7 @@ src_unpack() {
 }
 
 src_compile() {
-	if useq X; then
+	if use X; then
 		make all || die
 	else
 		make all-nogui || die
