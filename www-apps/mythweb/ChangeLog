@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mythweb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.85 2010/10/14 14:43:06 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.86 2011/07/08 16:55:19 cardoe Exp $
+
+  08 Jul 2011; Doug Goldstein <cardoe@gentoo.org> mythweb-0.23.1_p25396.ebuild:
+  Mark the latest 0.23.1 as stable since I've been running it on both x86 and
+  amd64 stable machines for a long time.
 
   14 Oct 2010; Christian Faulhammer <fauli@gentoo.org>
   mythweb-0.22_p22763-r1.ebuild:
