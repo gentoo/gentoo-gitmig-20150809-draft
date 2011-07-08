@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.123 2011/07/08 07:44:52 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.124 2011/07/08 07:46:53 djc Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -1000,7 +1000,7 @@ python_execute_function() {
 	for PYTHON_ABI in ${iterated_PYTHON_ABIS}; do
 		if [[ "${EBUILD_PHASE}" == "test" ]] && _python_check_python_abi_matching --patterns-list "${PYTHON_ABI}" "${PYTHON_TESTS_RESTRICTED_ABIS}"; then
 			if [[ "${quiet}" == "0" ]]; then
-				echo " ${_GREEN}*${_NORMAL} ${_BLUE}Testing of ${CATEGORY}/${PF} with $(python_get_implementation) $(python_get_version) skipped${_NORMAL}"
+				echo " ${_GREEN}*${_NORMAL} ${_BLUE}Testing of ${CATEGORY}/${PF} with $(python_get_implementation_and_version) skipped${_NORMAL}"
 			fi
 			continue
 		fi
@@ -1011,7 +1011,7 @@ python_execute_function() {
 			if [[ -n "${action_message_template}" ]]; then
 				eval "action_message=\"${action_message_template}\""
 			else
-				action_message="${action} of ${CATEGORY}/${PF} with $(python_get_implementation) $(python_get_version)..."
+				action_message="${action} of ${CATEGORY}/${PF} with $(python_get_implementation_and_version)..."
 			fi
 			echo " ${_GREEN}*${_NORMAL} ${_BLUE}${action_message}${_NORMAL}"
 		fi
@@ -1045,7 +1045,7 @@ python_execute_function() {
 			if [[ -n "${failure_message_template}" ]]; then
 				eval "failure_message=\"${failure_message_template}\""
 			else
-				failure_message="${action} failed with $(python_get_implementation) $(python_get_version) in ${function}() function"
+				failure_message="${action} failed with $(python_get_implementation_and_version) in ${function}() function"
 			fi
 
 			if [[ "${nonfatal}" == "1" ]]; then
@@ -2143,10 +2143,10 @@ python_get_library() {
 # @FUNCTION: python_get_version
 # @USAGE: [-f|--final-ABI] [-l|--language] [--full] [--major] [--minor] [--micro]
 # @DESCRIPTION:
-# Print Python version.
+# Print version of Python implementation.
 # --full, --major, --minor and --micro options cannot be specified simultaneously.
 # If --full, --major, --minor and --micro options are not specified, then "${major_version}.${minor_version}" is printed.
-# If --language option is specified, then Python language version is printed.
+# If --language option is specified, then version of Python language is printed.
 # --language and --full options cannot be specified simultaneously.
 # --language and --micro options cannot be specified simultaneously.
 # If --final-ABI option is specified, then final ABI from the list of enabled ABIs is used.
@@ -2243,6 +2243,55 @@ python_get_version() {
 		else
 			"$(PYTHON ${PYTHON_ABI})" -c "${python_command}"
 		fi
+	fi
+}
+
+# @FUNCTION: python_get_implementation_and_version
+# @USAGE: [-f|--final-ABI]
+# @DESCRIPTION:
+# Print name and version of Python implementation.
+# If version of Python implementation is not bound to version of Python language, then
+# version of Python language is additionally printed.
+# If --final-ABI option is specified, then final ABI from the list of enabled ABIs is used.
+python_get_implementation_and_version() {
+	_python_check_python_pkg_setup_execution
+
+	local final_ABI="0" PYTHON_ABI="${PYTHON_ABI}"
+
+	while (($#)); do
+		case "$1" in
+			-f|--final-ABI)
+				final_ABI="1"
+				;;
+			-*)
+				die "${FUNCNAME}(): Unrecognized option '$1'"
+				;;
+			*)
+				die "${FUNCNAME}(): Invalid usage"
+				;;
+		esac
+		shift
+	done
+
+	if [[ "${final_ABI}" == "1" ]]; then
+		if ! _python_package_supporting_installation_for_multiple_python_abis; then
+			die "${FUNCNAME}(): '--final-ABI' option cannot be used in ebuilds of packages not supporting installation for multiple Python ABIs"
+		fi
+		PYTHON_ABI="$(PYTHON -f --ABI)"
+	else
+		if _python_package_supporting_installation_for_multiple_python_abis; then
+			if ! _python_abi-specific_local_scope; then
+				die "${FUNCNAME}() should be used in ABI-specific local scope"
+			fi
+		else
+			PYTHON_ABI="${PYTHON_ABI:-$(PYTHON --ABI)}"
+		fi
+	fi
+
+	if [[ "${PYTHON_ABI}" =~ ^[[:digit:]]+\.[[:digit:]]+-[[:alnum:]]+-[[:digit:]]+\.[[:digit:]]+$ ]]; then
+		echo "$(_python_get_implementation "${PYTHON_ABI}") ${PYTHON_ABI##*-} (Python ${PYTHON_ABI%%-*})"
+	else
+		echo "$(_python_get_implementation "${PYTHON_ABI}") ${PYTHON_ABI%%-*}"
 	fi
 }
 
@@ -2704,7 +2753,7 @@ python_mod_optimize() {
 			if ((${#site_packages_dirs[@]})) || ((${#site_packages_files[@]})) || ((${#evaluated_dirs[@]})) || ((${#evaluated_files[@]})); then
 				return_code="0"
 				stderr=""
-				ebegin "Compilation and optimization of Python modules for $(python_get_implementation) $(python_get_version)"
+				ebegin "Compilation and optimization of Python modules for $(python_get_implementation_and_version)"
 				if ((${#site_packages_dirs[@]})) || ((${#evaluated_dirs[@]})); then
 					for dir in "${site_packages_dirs[@]}"; do
 						dirs+=("${root}$(python_get_sitedir)/${dir}")
@@ -2733,7 +2782,7 @@ python_mod_optimize() {
 				fi
 				eend "${return_code}"
 				if [[ -n "${stderr}" ]]; then
-					eerror "Syntax errors / warnings in Python modules for $(python_get_implementation) $(python_get_version):" &> /dev/null
+					eerror "Syntax errors / warnings in Python modules for $(python_get_implementation_and_version):" &> /dev/null
 					while read stderr_line; do
 						eerror "    ${stderr_line}"
 					done <<< "${stderr}"
@@ -2754,7 +2803,7 @@ python_mod_optimize() {
 		if ((${#other_dirs[@]})) || ((${#other_files[@]})); then
 			return_code="0"
 			stderr=""
-			ebegin "Compilation and optimization of Python modules placed outside of site-packages directories for $(python_get_implementation) $(python_get_version)"
+			ebegin "Compilation and optimization of Python modules placed outside of site-packages directories for $(python_get_implementation_and_version)"
 			if ((${#other_dirs[@]})); then
 				stderr+="${stderr:+$'\n'}$("$(PYTHON ${PYTHON_ABI})" "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${other_dirs[@]}" 2>&1)" || return_code="1"
 				if [[ "$(_python_get_implementation "${PYTHON_ABI}")" != "Jython" ]]; then
@@ -2771,7 +2820,7 @@ python_mod_optimize() {
 			fi
 			eend "${return_code}"
 			if [[ -n "${stderr}" ]]; then
-				eerror "Syntax errors / warnings in Python modules placed outside of site-packages directories for $(python_get_implementation) $(python_get_version):" &> /dev/null
+				eerror "Syntax errors / warnings in Python modules placed outside of site-packages directories for $(python_get_implementation_and_version):" &> /dev/null
 				while read stderr_line; do
 					eerror "    ${stderr_line}"
 				done <<< "${stderr}"
