@@ -14,6 +14,9 @@
 	<flag name="gconf">Add support for setting of default browser using
 		<pkg>gnome-base/gconf</pkg>. Useful only for GNOME 2 users.</flag>
 	<flag name='mailclient'>Build Mozilla's Mail client (default on)</flag>
+	<flag name="methodjit">Enable JIT for JavaScript using MethodJIT for faster
+		JS performance. Hardened users can disable this USE-flag to use MPROTECT
+		on grsecurity kernels.</flag>
 	<flag name='roaming'>Build roaming extension support (default on)</flag>
 	<flag name='system-sqlite'>Use the system-wide <pkg>dev-db/sqlite</pkg>
 		installation with secure-delete enabled</flag>
