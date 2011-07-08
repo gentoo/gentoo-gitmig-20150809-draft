@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.331 2011/07/07 21:28:52 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.332 2011/07/08 10:07:05 ssuominen Exp $
+
+  08 Jul 2011; Samuli Suominen <ssuominen@gentoo.org>
+  mythtv-0.22_p23069.ebuild, mythtv-0.22_p24255.ebuild,
+  mythtv-0.23_p25051.ebuild, mythtv-0.23_p25073.ebuild,
+  mythtv-0.23.1_p25423.ebuild, mythtv-0.23.1_p25427.ebuild,
+  mythtv-0.23.1_p25496.ebuild, mythtv-0.23.1_p26437.ebuild,
+  mythtv-0.23.1_p27077.ebuild:
+  Convert from "hasq" to "has".
 
   07 Jul 2011; Doug Goldstein <cardoe@gentoo.org> mythtv-0.23.1_p27077.ebuild:
   Mark the latest 0.23.1 as stable since I've been running it on both x86 and

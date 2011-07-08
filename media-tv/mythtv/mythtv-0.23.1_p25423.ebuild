@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.23.1_p25423.ebuild,v 1.2 2010/07/30 03:54:49 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.23.1_p25423.ebuild,v 1.3 2011/07/08 10:07:05 ssuominen Exp $
 
 EAPI=2
 inherit flag-o-matic multilib eutils qt4 mythtv toolchain-funcs python
@@ -168,8 +168,8 @@ src_configure() {
 	fi
 
 #	myconf="${myconf} --extra-cxxflags=\"${CXXFLAGS}\" --extra-cflags=\"${CFLAGS}\""
-	hasq distcc ${FEATURES} || myconf="${myconf} --disable-distcc"
-	hasq ccache ${FEATURES} || myconf="${myconf} --disable-ccache"
+	has distcc ${FEATURES} || myconf="${myconf} --disable-distcc"
+	has ccache ${FEATURES} || myconf="${myconf} --disable-ccache"
 
 	# let MythTV come up with our CFLAGS. Upstream will support this
 	unset CFLAGS
