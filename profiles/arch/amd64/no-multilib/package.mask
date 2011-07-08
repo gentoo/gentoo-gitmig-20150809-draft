@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.102 2011/05/24 03:24:26 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.103 2011/07/08 14:46:01 mr_bones_ Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -36,6 +36,7 @@ app-emulation/emul-linux-x86-soundlibs
 app-emulation/emul-linux-x86-xlibs
 app-emulation/emul-linux-x86-java
 app-emulation/wine
+app-emulation/winetricks
 app-emulation/wine-doors
 app-text/acroread
 app-text/bibus
