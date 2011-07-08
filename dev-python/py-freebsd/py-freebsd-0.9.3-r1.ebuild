@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-freebsd/py-freebsd-0.9.3-r1.ebuild,v 1.3 2010/12/30 21:27:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-freebsd/py-freebsd-0.9.3-r1.ebuild,v 1.4 2011/07/08 00:03:28 aballier Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -28,6 +28,7 @@ src_prepare() {
 	distutils_src_prepare
 	epatch "${FILESDIR}/fbsd7-netstat.patch"
 	epatch "${FILESDIR}/process-fix.patch"
+	epatch "${FILESDIR}/freebsd8_patch-src-jail.c"
 }
 
 src_test() {

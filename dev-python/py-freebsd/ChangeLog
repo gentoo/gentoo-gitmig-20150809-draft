@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/py-freebsd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-freebsd/ChangeLog,v 1.6 2010/12/30 21:27:48 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-freebsd/ChangeLog,v 1.7 2011/07/08 00:03:28 aballier Exp $
+
+  08 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  +files/freebsd8_patch-src-jail.c, py-freebsd-0.9.3-r1.ebuild:
+  fix build on FreeBSD 8, by Dmitri Bogomolov, bug #364605
 
   30 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   py-freebsd-0.9.3-r1.ebuild:
