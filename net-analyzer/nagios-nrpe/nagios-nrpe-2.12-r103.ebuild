@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.12-r103.ebuild,v 1.3 2010/11/04 20:08:19 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/nagios-nrpe-2.12-r103.ebuild,v 1.4 2011/07/08 11:10:48 ssuominen Exp $
 
 EAPI=2
 
@@ -39,7 +39,7 @@ src_configure() {
 					  $(use_enable command-args)"
 
 	# Generate the dh.h header file for better security (2005 Mar 20 eldad)
-	if useq ssl ; then
+	if use ssl ; then
 		openssl dhparam -C 512 | sed -n '1,/BEGIN DH PARAMETERS/p' | grep -v "BEGIN DH PARAMETERS" > "${S}"/src/dh.h
 	fi
 
@@ -93,7 +93,7 @@ pkg_postinst() {
 	einfo "the config file /etc/nagios/nrpe.cfg"
 	einfo
 
-	if useq command-args ; then
+	if use command-args ; then
 		ewarn "You have enabled command-args for NRPE. This enables"
 		ewarn "the ability for clients to supply arguments to commands"
 		ewarn "which should be run. "

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/traffic-vis
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/ChangeLog,v 1.19 2010/09/10 05:14:31 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traffic-vis/ChangeLog,v 1.20 2011/07/08 11:09:11 ssuominen Exp $
+
+  08 Jul 2011; Samuli Suominen <ssuominen@gentoo.org>
+  traffic-vis-0.35-r1.ebuild, traffic-vis-0.35-r2.ebuild:
+  Convert from "useq" to "use".
 
 *traffic-vis-0.35-r2 (10 Sep 2010)
 
