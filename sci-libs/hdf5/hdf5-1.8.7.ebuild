@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.7.ebuild,v 1.7 2011/07/06 15:00:48 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.7.ebuild,v 1.8 2011/07/08 11:24:29 xarthisius Exp $
 
 EAPI=4
 
@@ -36,6 +36,8 @@ pkg_setup() {
 			ewarn "Simultaneous mpi and cxx is not supported by ${PN}"
 			ewarn "Will disable cxx interface"
 		fi
+		export CC=mpicc
+		use fortran && export FC=mpif90
 	elif has_version 'sci-libs/hdf5[mpi]'; then
 		ewarn "Installing hdf5 with mpi disabled while having hdf5 installed with mpi enabled may fail."
 		ewarn "Try to uninstall the current hdf5 prior to disabling mpi support."
