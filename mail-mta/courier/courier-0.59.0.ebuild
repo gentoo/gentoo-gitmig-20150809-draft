@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.59.0.ebuild,v 1.21 2011/04/16 11:14:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.59.0.ebuild,v 1.22 2011/07/08 10:03:11 ssuominen Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -244,13 +244,13 @@ src_install() {
 src_test() {
 	addpredict /
 	echo ">>> Test phase [check]: ${CATEGORY}/${PF}"
-	if hasq userpriv "${FEATURES}" ; then
+	if has userpriv "${FEATURES}" ; then
 		if ! emake -j1 check; then
-			hasq test "${FEATURES}" && die "Make check failed. See above for details."
-			hasq test "${FEATURES}" || eerror "Make check failed. See above for details."
+			has test "${FEATURES}" && die "Make check failed. See above for details."
+			has test "${FEATURES}" || eerror "Make check failed. See above for details."
 		fi
 	else
-		hasq test "${FEATURES}" && eerror "Make check needs FEATURES="userpriv" to work."
+		has test "${FEATURES}" && eerror "Make check needs FEATURES="userpriv" to work."
 	fi
 	SANDBOX_PREDICT="${SANDBOX_PREDICT%:/}"
 }
