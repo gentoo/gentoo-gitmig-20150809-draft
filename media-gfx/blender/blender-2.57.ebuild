@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.57.ebuild,v 1.3 2011/05/17 17:50:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.57.ebuild,v 1.4 2011/07/08 10:22:39 ssuominen Exp $
 
 PYTHON_DEPEND="3:3.2"
 
@@ -84,7 +84,7 @@ fi
 blend_with() {
 	local UWORD="$2"
 	[ -z "${UWORD}" ] && UWORD="$1"
-	if useq $1; then
+	if use $1; then
 		echo "WITH_BF_${UWORD}=1" | tr '[:lower:]' '[:upper:]' \
 			>> "${S}"/user-config.py
 	else
