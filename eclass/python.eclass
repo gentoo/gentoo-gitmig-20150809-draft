@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.121 2011/07/08 07:41:56 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.122 2011/07/08 07:43:38 djc Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -1256,7 +1256,9 @@ if EPYTHON:
 		sys.exit(1)
 else:
 	try:
-		eselect_process = subprocess.Popen(["${EPREFIX}/usr/bin/eselect", "python", "show"${eselect_python_option:+, $(echo "\"")}${eselect_python_option}${eselect_python_option:+$(echo "\"")}], stdout=subprocess.PIPE)
+		environment = os.environ.copy()
+		environment["ROOT"] = "/"
+		eselect_process = subprocess.Popen(["${EPREFIX}/usr/bin/eselect", "python", "show"${eselect_python_option:+, $(echo "\"")}${eselect_python_option}${eselect_python_option:+$(echo "\"")}], env=environment, stdout=subprocess.PIPE)
 		if eselect_process.wait() != 0:
 			raise ValueError
 	except (OSError, ValueError):
@@ -1286,7 +1288,9 @@ EOF
 		else
 			cat << EOF >> "${file}"
 try:
-	eselect_process = subprocess.Popen(["${EPREFIX}/usr/bin/eselect", "python", "show"${eselect_python_option:+, $(echo "\"")}${eselect_python_option}${eselect_python_option:+$(echo "\"")}], stdout=subprocess.PIPE)
+	environment = os.environ.copy()
+	environment["ROOT"] = "/"
+	eselect_process = subprocess.Popen(["${EPREFIX}/usr/bin/eselect", "python", "show"${eselect_python_option:+, $(echo "\"")}${eselect_python_option}${eselect_python_option:+$(echo "\"")}], env=environment, stdout=subprocess.PIPE)
 	if eselect_process.wait() != 0:
 		raise ValueError
 except (OSError, ValueError):
@@ -1758,14 +1762,14 @@ PYTHON() {
 			_python_calculate_PYTHON_ABIS
 			PYTHON_ABI="${PYTHON_ABIS##* }"
 		elif [[ "${python2}" == "1" ]]; then
-			PYTHON_ABI="$(eselect python show --python2 --ABI)"
+			PYTHON_ABI="$(ROOT="/" eselect python show --python2 --ABI)"
 			if [[ -z "${PYTHON_ABI}" ]]; then
 				die "${FUNCNAME}(): Active version of CPython 2 not set"
 			elif [[ "${PYTHON_ABI}" != "2."* ]]; then
 				die "${FUNCNAME}(): Internal error in \`eselect python show --python2\`"
 			fi
 		elif [[ "${python3}" == "1" ]]; then
-			PYTHON_ABI="$(eselect python show --python3 --ABI)"
+			PYTHON_ABI="$(ROOT="/" eselect python show --python3 --ABI)"
 			if [[ -z "${PYTHON_ABI}" ]]; then
 				die "${FUNCNAME}(): Active version of CPython 3 not set"
 			elif [[ "${PYTHON_ABI}" != "3."* ]]; then
