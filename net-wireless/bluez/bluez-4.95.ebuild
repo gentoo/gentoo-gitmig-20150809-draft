@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.94-r1.ebuild,v 1.2 2011/06/13 15:22:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.95.ebuild,v 1.1 2011/07/08 19:32:58 pacho Exp $
 
 EAPI="4"
 
-inherit multilib eutils
+inherit multilib eutils systemd
 
 DESCRIPTION="Bluetooth Tools and System Daemons for Linux"
 HOMEPAGE="http://www.bluez.org/"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.bluez.org/"
 # Because of oui.txt changing from time to time without noticement, we need to supply it
 # ourselves instead of using http://standards.ieee.org/regauth/oui/oui.txt directly.
 # See bugs #345263 and #349473 for reference.
-OUIDATE="20110605"
+OUIDATE="20110708"
 SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.gz
 	http://dev.gentoo.org/~pacho/bluez/oui-${OUIDATE}.txt.xz"
 LICENSE="GPL-2 LGPL-2.1"
@@ -23,11 +23,11 @@ IUSE="alsa caps +consolekit cups debug gstreamer maemo6 health old-daemons pcmci
 
 CDEPEND="
 	>=dev-libs/glib-2.14:2
-	media-libs/libsndfile
 	sys-apps/dbus
-	>=sys-fs/udev-169
+	>=sys-fs/udev-146[extras]
 	alsa? (
 		media-libs/alsa-lib[alsa_pcm_plugins_extplug,alsa_pcm_plugins_ioplug]
+		media-libs/libsndfile
 	)
 	caps? ( >=sys-libs/libcap-ng-0.6.2 )
 	cups? ( net-print/cups )
@@ -74,33 +74,32 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		$(use_enable caps capng) \
+		--enable-audio \
+		--enable-bccmd \
+		--enable-datafiles \
+		--enable-dfutool \
+		--enable-input \
 		--enable-network \
 		--enable-serial \
-		--enable-input \
-		--enable-audio \
 		--enable-service \
-		$(use_enable gstreamer) \
-		$(use_enable alsa) \
-		$(use_enable usb) \
 		--enable-tools \
-		--enable-bccmd \
-		--enable-dfutool \
+		--disable-hal \
+		--localstatedir=/var \
+		--with-systemdunitdir="$(systemd_get_unitdir)" \
+		$(use_enable alsa) \
+		$(use_enable caps capng) \
+		$(use_enable cups) \
+		$(use_enable debug) \
+		$(use_enable gstreamer) \
+		$(use_enable health) \
+		$(use_enable maemo6) \
+		$(use_enable old-daemons dund) \
 		$(use_enable old-daemons hidd) \
 		$(use_enable old-daemons pand) \
-		$(use_enable old-daemons dund) \
-		$(use_enable health) \
-		$(use_enable pnat) \
-		$(use_enable maemo6) \
-		$(use_enable cups) \
-		$(use_enable test-programs test) \
-		--enable-udevrules \
-		--enable-configfiles \
 		$(use_enable pcmcia) \
-		$(use_enable debug) \
-		--localstatedir=/var \
-		--disable-hal \
-		--enable-hid2hci
+		$(use_enable pnat) \
+		$(use_enable test-programs test) \
+		$(use_enable usb)
 }
 
 src_install() {

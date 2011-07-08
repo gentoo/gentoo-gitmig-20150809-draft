@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.91.ebuild,v 1.7 2011/05/24 21:01:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.95-r1.ebuild,v 1.1 2011/07/08 19:32:58 pacho Exp $
 
 EAPI="4"
 
-inherit multilib eutils
+inherit multilib eutils systemd
 
 DESCRIPTION="Bluetooth Tools and System Daemons for Linux"
 HOMEPAGE="http://www.bluez.org/"
@@ -12,22 +12,22 @@ HOMEPAGE="http://www.bluez.org/"
 # Because of oui.txt changing from time to time without noticement, we need to supply it
 # ourselves instead of using http://standards.ieee.org/regauth/oui/oui.txt directly.
 # See bugs #345263 and #349473 for reference.
-OUIDATE="20110330"
+OUIDATE="20110708"
 SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.gz
-	http://dev.gentoo.org/~pacho/bluez/oui-${OUIDATE}.txt"
+	http://dev.gentoo.org/~pacho/bluez/oui-${OUIDATE}.txt.xz"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 
-IUSE="alsa attrib caps +consolekit cups debug gstreamer maemo6 health old-daemons pcmcia pnat test-programs usb"
+IUSE="alsa caps +consolekit cups debug gstreamer maemo6 health old-daemons pcmcia pnat test-programs usb"
 
 CDEPEND="
 	>=dev-libs/glib-2.14:2
-	media-libs/libsndfile
 	sys-apps/dbus
-	>=sys-fs/udev-146[extras]
+	>=sys-fs/udev-169
 	alsa? (
 		media-libs/alsa-lib[alsa_pcm_plugins_extplug,alsa_pcm_plugins_ioplug]
+		media-libs/libsndfile
 	)
 	caps? ( >=sys-libs/libcap-ng-0.6.2 )
 	cups? ( net-print/cups )
@@ -74,33 +74,33 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		$(use_enable caps capng) \
+		--enable-audio \
+		--enable-bccmd \
+		--enable-datafiles \
+		--enable-dfutool \
+		--enable-hid2hci \
+		--enable-input \
 		--enable-network \
 		--enable-serial \
-		--enable-input \
-		--enable-audio \
 		--enable-service \
-		$(use_enable gstreamer) \
-		$(use_enable alsa) \
-		$(use_enable usb) \
 		--enable-tools \
-		--enable-bccmd \
-		--enable-dfutool \
+		--disable-hal \
+		--localstatedir=/var \
+		--with-systemdunitdir="$(systemd_get_unitdir)" \
+		$(use_enable alsa) \
+		$(use_enable caps capng) \
+		$(use_enable cups) \
+		$(use_enable debug) \
+		$(use_enable gstreamer) \
+		$(use_enable health) \
+		$(use_enable maemo6) \
+		$(use_enable old-daemons dund) \
 		$(use_enable old-daemons hidd) \
 		$(use_enable old-daemons pand) \
-		$(use_enable old-daemons dund) \
-		$(use_enable attrib) \
-		$(use_enable health) \
-		$(use_enable pnat) \
-		$(use_enable maemo6) \
-		$(use_enable cups) \
-		$(use_enable test-programs test) \
-		--enable-udevrules \
-		--enable-configfiles \
 		$(use_enable pcmcia) \
-		$(use_enable debug) \
-		--localstatedir=/var \
-		--disable-hal
+		$(use_enable pnat) \
+		$(use_enable test-programs test) \
+		$(use_enable usb)
 }
 
 src_install() {
@@ -144,7 +144,7 @@ src_install() {
 
 	# Install oui.txt as requested in bug #283791 and approved by upstream
 	insinto /var/lib/misc
-	newins "${DISTDIR}/oui-${OUIDATE}.txt" oui.txt
+	newins "${WORKDIR}/oui-${OUIDATE}.txt" oui.txt
 
 	find "${ED}" -name "*.la" -delete
 }
