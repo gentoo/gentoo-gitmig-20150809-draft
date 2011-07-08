@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.122 2011/07/08 07:43:38 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.123 2011/07/08 07:44:52 djc Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -1252,7 +1252,7 @@ EPYTHON = os.environ.get("EPYTHON")
 if EPYTHON:
 	PYTHON_ABI = get_PYTHON_ABI(EPYTHON)
 	if PYTHON_ABI is None:
-		sys.stderr.write("EPYTHON variable has unrecognized value '%s'\n" % EPYTHON)
+		sys.stderr.write("%s: EPYTHON variable has unrecognized value '%s'\n" % (sys.argv[0], EPYTHON))
 		sys.exit(1)
 else:
 	try:
@@ -1262,7 +1262,7 @@ else:
 		if eselect_process.wait() != 0:
 			raise ValueError
 	except (OSError, ValueError):
-		sys.stderr.write("Execution of 'eselect python show${eselect_python_option:+ }${eselect_python_option}' failed\n")
+		sys.stderr.write("%s: Execution of 'eselect python show${eselect_python_option:+ }${eselect_python_option}' failed\n" % sys.argv[0])
 		sys.exit(1)
 
 	EPYTHON = eselect_process.stdout.read()
@@ -1273,13 +1273,13 @@ else:
 
 	PYTHON_ABI = get_PYTHON_ABI(EPYTHON)
 	if PYTHON_ABI is None:
-		sys.stderr.write("'eselect python show${eselect_python_option:+ }${eselect_python_option}' printed unrecognized value '%s'\n" % EPYTHON)
+		sys.stderr.write("%s: 'eselect python show${eselect_python_option:+ }${eselect_python_option}' printed unrecognized value '%s'\n" % (sys.argv[0], EPYTHON))
 		sys.exit(1)
 
 wrapper_script_path = os.path.realpath(sys.argv[0])
 target_executable_path = "%s-%s" % (wrapper_script_path, PYTHON_ABI)
 if not os.path.exists(target_executable_path):
-	sys.stderr.write("'%s' does not exist\n" % target_executable_path)
+	sys.stderr.write("%s: '%s' does not exist\n" % (sys.argv[0], target_executable_path))
 	sys.exit(1)
 EOF
 			if [[ "$?" != "0" ]]; then
@@ -1294,7 +1294,7 @@ try:
 	if eselect_process.wait() != 0:
 		raise ValueError
 except (OSError, ValueError):
-	sys.stderr.write("Execution of 'eselect python show${eselect_python_option:+ }${eselect_python_option}' failed\n")
+	sys.stderr.write("%s: Execution of 'eselect python show${eselect_python_option:+ }${eselect_python_option}' failed\n" % sys.argv[0])
 	sys.exit(1)
 
 EPYTHON = eselect_process.stdout.read()
@@ -1305,7 +1305,7 @@ EPYTHON = EPYTHON.rstrip("\n")
 
 PYTHON_ABI = get_PYTHON_ABI(EPYTHON)
 if PYTHON_ABI is None:
-	sys.stderr.write("'eselect python show${eselect_python_option:+ }${eselect_python_option}' printed unrecognized value '%s'\n" % EPYTHON)
+	sys.stderr.write("%s: 'eselect python show${eselect_python_option:+ }${eselect_python_option}' printed unrecognized value '%s'\n" % (sys.argv[0], EPYTHON))
 	sys.exit(1)
 
 wrapper_script_path = os.path.realpath(sys.argv[0])
@@ -1314,7 +1314,7 @@ for PYTHON_ABI in [PYTHON_ABI, ${PYTHON_ABIS_list}]:
 	if os.path.exists(target_executable_path):
 		break
 else:
-	sys.stderr.write("No target script exists for '%s'\n" % wrapper_script_path)
+	sys.stderr.write("%s: No target script exists for '%s'\n" % (sys.argv[0], wrapper_script_path))
 	sys.exit(1)
 EOF
 			if [[ "$?" != "0" ]]; then
