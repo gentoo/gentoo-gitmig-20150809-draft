@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gobject-introspection
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.37 2011/06/14 05:37:51 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.38 2011/07/08 00:21:27 aballier Exp $
+
+  08 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  gobject-introspection-0.10.8.ebuild:
+  keyword ~x86-fbsd, bug #364693
 
   14 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   -gobject-introspection-0.10.2.ebuild, -gobject-introspection-0.10.7.ebuild:
