@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.24.1.ebuild,v 1.1 2011/07/07 12:18:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/gtkmm-2.24.2.ebuild,v 1.1 2011/07/08 15:56:18 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -25,7 +25,6 @@ RDEPEND=">=dev-cpp/glibmm-2.24:2
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? (
-		>=dev-cpp/mm-common-0.9.3
 		media-gfx/graphviz
 		dev-libs/libxslt
 		app-doc/doxygen )"
