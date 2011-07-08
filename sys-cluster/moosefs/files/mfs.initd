@@ -15,14 +15,45 @@ chkconfig() {
 	return 0
 }
 
+autorestore() {
+	einfo "AUTORESTORE set, trying to restore metadata files"
+	mfsmetarestore -a &>/dev/null
+	return $?
+}
+
+start_role() {
+	local ROLE=$1
+	local RETURN=0
+
+	ebegin "${ROLE}"
+	start-stop-daemon -q --start --exec "${ROLE}" -- start >/dev/null
+	RETURN=$?
+	eend ${RETURN}
+
+	return ${RETURN}
+}
+
 start_roles() {
+	local RETURN=0
+
 	eindent
 	for ROLE in ${ROLES}; do
-		einfo "${ROLE}"
-		"${ROLE}" start 2>&1 | logger -s -p daemon.info -t mfs
+
+		start_role ${ROLE} || RETURN=$?
+		eend ${RETURN}
+
+		if [ "${RETURN}" != "0" ] && [ "${ROLE}" == "mfsmaster" ] && [ ${AUTORESTORE} -eq 1 ]; then
+			eindent
+			autorestore && start_role ${ROLE}
+			RETURN=$?
+			eoutdent
+		fi
+
+		[ "${RETURN}" != "0" ] && break
 	done
 	eoutdent
-	return 0
+
+	return ${RETURN}
 }
 
 start() {
@@ -32,12 +63,17 @@ start() {
 }
 
 stop() {
+	local RETURN=0
+
 	ebegin "Stopping mfs node"
 	eindent
-	for ROLE in ${ROLES}; do
-		einfo "${ROLE}"
-		"${ROLE}" stop 2>&1 | logger -s -p daemon.info -t mfs
+	local REVERSE=$(echo ${ROLES} | tac -s' ')
+	for ROLE in ${REVERSE}; do
+		ebegin "${ROLE}"
+		start-stop-daemon -q --stop -n ${ROLE} || RETURN=$?
+		eend ${RETURN}
 	done
 	eoutdent
-	eend 0
+
+	eend ${RETURN}
 }

@@ -1,10 +1,10 @@
 # ChangeLog for sys-cluster/moosefs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/moosefs/ChangeLog,v 1.1 2011/07/05 07:45:36 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/moosefs/ChangeLog,v 1.2 2011/07/08 15:29:35 ultrabug Exp $
 
-*moosefs-1.6.20 (05 Jul 2011)
+*moosefs-1.6.20-r1 (08 Jul 2011)
 
-  05 Jul 2011; Ultrabug <ultrabug@gentoo.org> +moosefs-1.6.20.ebuild,
-  +files/mfs.confd, +files/mfs.initd, +metadata.xml:
-  Initial import. Thanks to Mike Kazantsev for his initial work on bug #338004.
+  08 Jul 2011; Ultrabug <ultrabug@gentoo.org> -moosefs-1.6.20.ebuild,
+  +moosefs-1.6.20-r1.ebuild, files/mfs.confd, files/mfs.initd:
+  Enhanced init script, add an autorestore functionnality. Drop old.
 
