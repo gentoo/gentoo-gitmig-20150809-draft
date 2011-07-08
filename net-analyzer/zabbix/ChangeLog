@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.50 2011/07/02 22:09:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.51 2011/07/08 10:20:59 ssuominen Exp $
+
+  08 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> zabbix-1.6.9.ebuild,
+  zabbix-1.8.3.ebuild, zabbix-1.8.4.ebuild, zabbix-1.8.5.ebuild,
+  zabbix-1.9.3.ebuild:
+  Convert from "useq" to "use".
 
   02 Jul 2011; Markos Chandras <hwoarang@gentoo.org> zabbix-1.8.5.ebuild:
   Stable on amd64 wrt bug #370239
