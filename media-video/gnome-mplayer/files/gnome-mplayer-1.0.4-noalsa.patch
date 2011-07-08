@@ -1,0 +1,13 @@
+http://code.google.com/p/gnome-mplayer/issues/detail?id=535
+
+--- src/gui.c
++++ src/gui.c
+@@ -5073,7 +5073,7 @@
+     gtk_spin_button_set_value(GTK_SPIN_BUTTON(config_volume), gm_pref_store_get_int(gm_store, VOLUME));
+     gm_pref_store_free(gm_store);
+     gtk_entry_set_width_chars(GTK_ENTRY(config_volume), 6);
+-    gtk_entry_set_editable(GTK_ENTRY(config_volume), FALSE);
++    gtk_editable_set_editable(GTK_EDITABLE(config_volume), FALSE);
+     gtk_entry_set_alignment(GTK_ENTRY(config_volume), 1);
+     gtk_widget_show(config_volume);
+     i++;
