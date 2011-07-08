@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-proxy/mysql-proxy-0.8.0-r1.ebuild,v 1.1 2010/05/29 20:45:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-proxy/mysql-proxy-0.8.0-r1.ebuild,v 1.2 2011/07/08 11:06:44 ssuominen Exp $
 
 EAPI=2
 
@@ -34,7 +34,7 @@ src_install() {
 	newinitd "${FILESDIR}"/${PN}.initd ${PN} || die
 	newconfd "${FILESDIR}"/${PN}.confd-0.8.0-r1 ${PN} || die
 	dodoc ChangeLog NEWS README
-	if useq examples; then
+	if use examples; then
 		docinto examples
 		dodoc examples/*.lua || die
 		dodoc lib/*.lua || die
