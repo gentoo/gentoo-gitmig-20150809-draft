@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-3.2.12.ebuild,v 1.6 2011/06/30 15:53:49 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-3.2.12.ebuild,v 1.7 2011/07/08 10:56:36 ssuominen Exp $
 
 inherit eutils linux-mod
 
@@ -160,7 +160,7 @@ src_install() {
 
 pkg_postinst() {
 	linux-mod_pkg_postinst
-	if ! useq X ; then
+	if ! use X ; then
 		elog "use flag X is off, enable it to install the"
 		elog "X Window System input and video drivers"
 	fi
