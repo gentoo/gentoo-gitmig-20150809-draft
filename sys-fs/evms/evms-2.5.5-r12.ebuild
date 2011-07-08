@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r12.ebuild,v 1.1 2011/07/03 19:43:57 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r12.ebuild,v 1.2 2011/07/08 10:00:27 ssuominen Exp $
 
 EAPI=4
 
@@ -127,11 +127,11 @@ src_test() {
 		einfo "The disk has to be at least 4GB!"
 		einfo "To deactivate the loop-device afterwards:"
 		einfo "- losetup -d /dev/loop0"
-		hasq userpriv ${FEATURES} && ewarn "These tests have to run as root. Disable userpriv!"
+		has userpriv ${FEATURES} && ewarn "These tests have to run as root. Disable userpriv!"
 		die "need test-volume"
 	fi
 
-	if hasq userpriv ${FEATURES} ; then
+	if has userpriv ${FEATURES} ; then
 		eerror "These tests need root privileges. Disable userpriv!"
 		die "userpriv is not supported"
 	fi
