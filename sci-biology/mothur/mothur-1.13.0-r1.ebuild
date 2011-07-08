@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mothur/mothur-1.13.0-r1.ebuild,v 1.1 2010/10/05 08:27:06 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mothur/mothur-1.13.0-r1.ebuild,v 1.2 2011/07/08 10:58:34 ssuominen Exp $
 
 EAPI="2"
 
@@ -31,7 +31,7 @@ src_prepare() {
 }
 
 use_yn() {
-	useq $1 && echo "yes" || echo "no"
+	use $1 && echo "yes" || echo "no"
 }
 
 src_compile() {
