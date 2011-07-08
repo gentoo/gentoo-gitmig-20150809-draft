@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/glproto
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.84 2011/07/01 23:56:02 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/ChangeLog,v 1.85 2011/07/08 22:42:15 abcd Exp $
+
+  08 Jul 2011; Jonathan Callen <abcd@gentoo.org> glproto-1.4.14.ebuild:
+  Fix prefix support again
 
 *glproto-1.4.14 (01 Jul 2011)
 

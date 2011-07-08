@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/glproto-1.4.14.ebuild,v 1.1 2011/07/01 23:56:02 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/glproto/glproto-1.4.14.ebuild,v 1.2 2011/07/08 22:42:15 abcd Exp $
 
 EAPI=4
 inherit xorg-2
@@ -28,9 +28,9 @@ dynamic_libgl_install() {
 		dodir /usr/$(get_libdir)/opengl/xorg-x11/include
 		local x=""
 		# glext.h added for #54984
-		for x in "${D}"/usr/include/GL/{glxtokens.h,glxmd.h,glxproto.h}; do
+		for x in "${ED}"/usr/include/GL/{glxtokens.h,glxmd.h,glxproto.h}; do
 			if [[ -f ${x} || -L ${x} ]]; then
-				mv -f "${x}" "${D}"/usr/$(get_libdir)/opengl/xorg-x11/include
+				mv -f "${x}" "${ED}"/usr/$(get_libdir)/opengl/xorg-x11/include
 			fi
 		done
 	eend 0
