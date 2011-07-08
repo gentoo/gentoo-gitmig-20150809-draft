@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.3-r1.ebuild,v 1.18 2011/04/12 17:41:54 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.3-r1.ebuild,v 1.19 2011/07/08 10:19:55 ssuominen Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.5"
@@ -93,12 +93,12 @@ src_configure() {
 	pkg_conf="${pkg_conf} --enable-shared=yes --with-pic \
 		--with-libgrass=no --without-libtool --with-expat=${EPREFIX}/usr"
 
-	if useq hdf && useq netcdf; then
+	if use hdf && use netcdf; then
 		ewarn "Netcdf and HDF4 are incompatible due to certain tools in"
 		ewarn "common; HDF5 is now the preferred choice for HDF data."
 		ewarn "Disabling hdf4 in favor of NetCDF..."
 		use_conf="--with-netcdf --with-hdf4=no"
-	elif useq hdf && ! useq netcdf; then
+	elif use hdf && ! use netcdf; then
 		use_conf="--with-netcdf=no --with-hdf4"
 	else
 		use_conf="$(use_with netcdf)"
@@ -112,21 +112,21 @@ src_configure() {
 	    $(use_with jpeg2k jasper) $(use_with odbc) $(use_enable debug)"
 
 	# It can't find this
-	if useq ogdi ; then
+	if use ogdi ; then
 	    use_conf="--with-ogdi=${EPREFIX}/usr ${use_conf}"
 	fi
 
-	if useq mysql ; then
+	if use mysql ; then
 	    use_conf="--with-mysql=${EPREFIX}/usr/bin/mysql_config ${use_conf}"
 	fi
 
-	if useq gif ; then
+	if use gif ; then
 	    use_conf="--with-gif=internal ${use_conf}"
 	else
 	    use_conf="--with-gif=no ${use_conf}"
 	fi
 
-	if useq python ; then
+	if use python ; then
 	    use_conf="--with-pymoddir=${EPREFIX}/$(python_get_sitedir) \
 		${use_conf}"
 	fi
@@ -147,7 +147,7 @@ src_configure() {
 src_compile() {
 	local i
 	for i in perl ruby python; do
-		if useq $i; then
+		if use $i; then
 			rm "${S}"/swig/$i/*_wrap.cpp
 			emake -C "${S}"/swig/$i generate || \
 				die "make generate failed for swig/$i"
@@ -158,28 +158,28 @@ src_compile() {
 	# also failing with gcc4 in libcsf
 	emake -j1 || die "emake failed"
 
-	if useq python; then
+	if use python; then
 	    sed -i -e "s#library_dirs = #library_dirs = ${EPREFIX}/usr/$(get_libdir):#g" \
 		swig/python/setup.cfg || die "sed python setup.cfg failed"
 	    sed -i -e "s:\$(DESTDIR)\$(prefix):\$(DESTDIR)\$(INST_PREFIX):g" \
 		swig/python/GNUmakefile || die "sed python makefile failed"
 	fi
 
-	if useq perl ; then
+	if use perl ; then
 	    cd "${S}"/swig/perl
 	    perl-module_src_prep
 	    perl-module_src_compile
 	    cd "${S}"
 	fi
 
-	if useq doc ; then
+	if use doc ; then
 	    make docs || die "make docs failed"
 	fi
 }
 
 src_install() {
 
-	if useq perl ; then
+	if use perl ; then
 	    cd "${S}"/swig/perl
 	    perl-module_src_install
 	    sed -i -e "s:BINDINGS        =       python ruby perl:BINDINGS        =       python ruby:g" \
@@ -193,13 +193,13 @@ src_install() {
 
 	dodoc Doxyfile HOWTO-RELEASE NEWS
 
-	if useq doc ; then
+	if use doc ; then
 	    dohtml html/* || die "install html failed"
 	    docinto ogr
 	    dohtml ogr/html/* || die "install ogr html failed"
 	fi
 
-	if useq python; then
+	if use python; then
 	    newdoc swig/python/README.txt README-python.txt
 	    dodir /usr/share/${PN}/samples
 	    insinto /usr/share/${PN}/samples
