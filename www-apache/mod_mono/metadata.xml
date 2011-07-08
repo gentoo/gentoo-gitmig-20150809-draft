@@ -8,8 +8,4 @@
 		pages by proxying the requests to a slightly modified version of our XSP
 		called mod-mono-server that is installed along with XSP.
 	</longdescription>
-	<use>
-		<flag name='aspnet2'>Handle all applications using ASP.NET 2.0 engine by
-			default</flag>
-	</use>
 </pkgmetadata>
