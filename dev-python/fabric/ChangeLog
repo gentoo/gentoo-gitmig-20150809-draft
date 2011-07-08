@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/fabric
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.16 2011/05/06 22:19:04 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.17 2011/07/08 21:37:47 neurogeek Exp $
+
+  08 Jul 2011; Jesus Rivero <neurogeek@gentoo.org> +fabric-1.1.1.ebuild:
+  Version bump. Closes bug #373619 and #371316
+
+*fabric-1.1.1 (08 Jul 2011)
+
+  08 Jul 2011; Jesus Rivero <neurogeek@gentoo.org> +fabric-1.1.1.ebuild:
+  Version bump. Close bug #373619 and #371316
 
 *fabric-0.9.6 (06 May 2011)
 
