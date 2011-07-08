@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.14 2011/06/13 21:44:09 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.15 2011/07/08 10:10:59 ssuominen Exp $
 
 EAPI=3
 
@@ -120,8 +120,8 @@ src_test() {
 
 	echo ">>> Test phase [test]: ${CATEGORY}/${PF}"
 	if ! emake -j1 VERBOSE=1 test; then
-		hasq test $FEATURES && die "Make test failed. See above for details."
-		hasq test $FEATURES || eerror "Make test failed. See above for details."
+		has test $FEATURES && die "Make test failed. See above for details."
+		has test $FEATURES || eerror "Make test failed. See above for details."
 	fi
 }
 
