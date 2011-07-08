@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/mythnews
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythnews/ChangeLog,v 1.52 2010/08/01 11:26:17 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythnews/ChangeLog,v 1.53 2011/07/08 16:40:11 cardoe Exp $
+
+  08 Jul 2011; Doug Goldstein <cardoe@gentoo.org>
+  mythnews-0.23.1_p25396.ebuild:
+  Mark the latest 0.23.1 as stable since I've been running it on both x86 and
+  amd64 stable machines for a long time.
 
   01 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   mythnews-0.22_p22991.ebuild:

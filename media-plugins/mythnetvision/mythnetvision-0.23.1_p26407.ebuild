@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythnetvision/mythnetvision-0.23.1_p26407.ebuild,v 1.1 2010/10/01 03:31:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythnetvision/mythnetvision-0.23.1_p26407.ebuild,v 1.2 2011/07/08 16:39:24 cardoe Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ inherit qt4 mythtv-plugins python
 
 DESCRIPTION="MythTV Plugin for watching internet content"
 IUSE=""
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 RDEPEND=">=dev-python/pycurl-7.19.0
 		>=dev-python/imdbpy-3.8

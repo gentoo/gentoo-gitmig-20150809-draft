@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.23.1_p25396.ebuild,v 1.1 2010/07/27 15:29:08 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.23.1_p25396.ebuild,v 1.2 2011/07/08 16:34:29 cardoe Exp $
 
 EAPI=2
 inherit qt4 mythtv-plugins
 
 DESCRIPTION="Music player module for MythTV."
 IUSE="cdr fftw libvisual opengl sdl"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 
 RDEPEND=">=media-sound/cdparanoia-3.9.8
 	>=media-libs/libcdaudio-0.99.6

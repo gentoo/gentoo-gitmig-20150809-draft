@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/mythgame
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgame/ChangeLog,v 1.62 2010/08/01 11:24:17 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgame/ChangeLog,v 1.63 2011/07/08 16:33:24 cardoe Exp $
+
+  08 Jul 2011; Doug Goldstein <cardoe@gentoo.org>
+  mythgame-0.23.1_p25396.ebuild:
+  Mark the latest 0.23.1 as stable since I've been running it on both x86 and
+  amd64 stable machines for a long time.
 
   01 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   mythgame-0.22_p22763.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/mythvideo-0.23.1_p26407.ebuild,v 1.2 2011/03/31 15:24:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/mythvideo-0.23.1_p26407.ebuild,v 1.3 2011/07/08 16:44:15 cardoe Exp $
 
 EAPI=2
 
@@ -8,7 +8,7 @@ inherit qt4 mythtv-plugins
 
 DESCRIPTION="Video player module for MythTV."
 IUSE="+jamu"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 
 RDEPEND="dev-perl/libwww-perl
 	dev-perl/HTML-Parser
