@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.120 2011/07/08 07:40:02 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.121 2011/07/08 07:41:56 djc Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -80,6 +80,18 @@ _python_check_python_abi_matching() {
 		done <<< "${patterns}"
 
 		return 1
+	fi
+}
+
+_python_package_supporting_installation_for_multiple_python_abis() {
+	if has "${EAPI:-0}" 0 1 2 3 4; then
+		if [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
+			return 0
+		else
+			return 1
+		fi
+	else
+		die "${FUNCNAME}(): Support for EAPI=\"${EAPI}\" not implemented"
 	fi
 }
 
@@ -284,22 +296,6 @@ _python_implementation() {
 		return 0
 	else
 		return 1
-	fi
-}
-
-_python_package_supporting_installation_for_multiple_python_abis() {
-	if [[ "${EBUILD_PHASE}" == "depend" ]]; then
-		die "${FUNCNAME}() cannot be used in global scope"
-	fi
-
-	if has "${EAPI:-0}" 0 1 2 3 4; then
-		if [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
-			return 0
-		else
-			return 1
-		fi
-	else
-		die "${FUNCNAME}(): Support for EAPI=\"${EAPI}\" not implemented"
 	fi
 }
 
