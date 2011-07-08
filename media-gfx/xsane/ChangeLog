@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/xsane
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.85 2011/03/02 10:13:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.86 2011/07/08 13:04:13 pacho Exp $
+
+*xsane-0.998 (08 Jul 2011)
+
+  08 Jul 2011; Pacho Ramos <pacho@gentoo.org> +xsane-0.998.ebuild,
+  metadata.xml:
+  Version bump and apply a lot of fixes from different distributions, taking
+  this (with printing and graphics herds as backup) as this looks a bit orphan
+  for a long time.
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> xsane-0.996.ebuild,
   xsane-0.997.ebuild:
