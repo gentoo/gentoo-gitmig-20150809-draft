@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/libwpd-0.9.1.ebuild,v 1.7 2011/07/08 11:16:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/libwpd-0.9.2.ebuild,v 1.1 2011/07/08 11:16:52 pacho Exp $
 
 EAPI="4"
 
@@ -28,15 +28,13 @@ src_prepare() {
 	# Do not abort build for warnings
 	sed -i -e 's:-Werror::g' configure.in configure || die
 
-	epatch "${FILESDIR}/${P}-gcc46.patch"
-
-	# Skip stream tests when it's disabled, bug #373757
+	# Skip stream tests when it's disabled, bug #373757, upstream bug #13104
 	if ! use tools; then
 		sed -i -e '/src\/test/d' Makefile.{am,in} || die
 	fi
 
-	# Do not build tests if not needed (and no before the lib itself)
-	epatch "${FILESDIR}/${P}-test-build.patch"
+	# Do not build tests if not needed (and no before the lib itself), upstream bug #13103
+	epatch "${FILESDIR}/${PN}-0.9.1-test-build.patch"
 	eautoreconf
 }
 
