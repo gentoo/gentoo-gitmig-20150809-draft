@@ -1,13 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.0.11.ebuild,v 1.1 2011/07/05 07:28:53 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.0.11.ebuild,v 1.2 2011/07/08 14:02:02 xarthisius Exp $
 
 EAPI="2"
 
-MY_PN="Pacemaker"
-MY_P="${MY_PN}-${PV}"
+MY_PN=Pacemaker
+MY_P=${MY_PN}-${PV}
 PYTHON_DEPEND="2"
-inherit python autotools multilib eutils base flag-o-matic
+
+inherit autotools base python
 
 DESCRIPTION="Pacemaker CRM"
 HOMEPAGE="http://www.clusterlabs.org/"
@@ -18,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="+ais heartbeat smtp snmp static-libs"
 
-RDEPEND="
+DEPEND="
 	dev-libs/libxslt
 	sys-cluster/cluster-glue
 	sys-cluster/resource-agents
@@ -28,14 +29,14 @@ RDEPEND="
 	snmp? ( net-analyzer/net-snmp )
 	!heartbeat? ( !ais? ( sys-cluster/openais ) )
 "
-DEPEND="${RDEPEND}"
+RDEPEND="${DEPEND}"
 
 PATCHES=(
 	"${FILESDIR}/${PN}-1.0.10-asneeded.patch"
 	"${FILESDIR}/${PN}-1.0.10-installpaths.patch"
 )
 
-S="${WORKDIR}/${MY_PN}-1-0-${MY_P}"
+S=${WORKDIR}/${MY_PN}-1-0-${MY_P}
 
 pkg_setup() {
 	if ! use ais && ! use heartbeat; then
@@ -56,7 +57,9 @@ src_prepare() {
 src_configure() {
 	local myopts=""
 
-	use heartbeat || use ais || myopts="--with-ais"
+	if ! use ais && ! use heartbeat; then
+		myopts="--with-ais"
+	fi
 	# appends lib to localstatedir automatically
 	econf \
 		--localstatedir=/var \

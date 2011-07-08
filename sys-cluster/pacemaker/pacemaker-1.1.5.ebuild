@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.5.ebuild,v 1.1 2011/07/08 13:47:33 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.5.ebuild,v 1.2 2011/07/08 14:02:02 xarthisius Exp $
 
 EAPI=3
 
-inherit autotools base eutils flag-o-matic multilib python
+inherit autotools base python
 
-MY_PN="Pacemaker"
-MY_P="${MY_PN}-${PV}"
+MY_PN=Pacemaker
+MY_P=${MY_PN}-${PV}
 PYTHON_DEPEND="2"
 
 DESCRIPTION="Pacemaker CRM"
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="acl heartbeat smtp snmp static-libs"
 
-RDEPEND="
+DEPEND="
 	dev-libs/libxslt
 	sys-cluster/corosync
 	sys-cluster/cluster-glue
@@ -28,7 +28,7 @@ RDEPEND="
 	smtp? ( net-libs/libesmtp )
 	snmp? ( net-analyzer/net-snmp )
 "
-DEPEND="${RDEPEND}"
+RDEPEND="${DEPEND}"
 
 PATCHES=(
 	"${FILESDIR}/${P}-autotools.patch"
@@ -67,9 +67,9 @@ src_configure() {
 
 src_install() {
 	base_src_install
-	newinitd "${FILESDIR}/pacemaker.initd" pacemaker || die
+	newinitd "${FILESDIR}/${PN}.initd" ${PN} || die
 	insinto /etc/corosync/service.d
-	newins "${FILESDIR}/pacemaker.service" pacemaker || die
+	newins "${FILESDIR}/${PN}.service" ${PN} || die
 }
 
 pkg_postinst() {
