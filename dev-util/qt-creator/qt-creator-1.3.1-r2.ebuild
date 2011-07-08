@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.3.1-r2.ebuild,v 1.1 2011/04/04 07:59:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.3.1-r2.ebuild,v 1.2 2011/07/08 10:08:20 ssuominen Exp $
 
 EAPI="2"
 LANGS="de es fr it ja pl ru sl"
@@ -108,7 +108,7 @@ src_install() {
 
 	# install translations
 	for lang in ${LANGS};do
-		if ! hasq ${lang} ${LINGUAS}; then
+		if ! has ${lang} ${LINGUAS}; then
 			rm "${D}"/usr/share/${MY_PN}/translations/${MY_PN}_${lang}.qm \
 					|| die "failed to remove ${lang} translation"
 		fi
