@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.60 2009/01/06 19:25:20 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.61 2011/07/08 11:36:00 ssuominen Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -115,7 +115,7 @@ tetex_src_compile() {
 
 	local xdvik
 
-	if useq X ; then
+	if use X ; then
 		addwrite /var/cache/fonts
 		xdvik="--with-xdvik --with-oxdvik"
 		#xdvik="$xdvik --with-system-t1lib"
@@ -197,7 +197,7 @@ tetex_src_install() {
 			#dodoc BUGS FAQ README*
 
 			# move docs to /usr/share/doc/${PF}
-			if useq doc ; then
+			if use doc ; then
 				dodir /usr/share/doc/${PF}
 				mv ${D}/usr/share/texmf/doc/* \
 					${D}/usr/share/doc/${PF} \

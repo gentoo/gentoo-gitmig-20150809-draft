@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf-2.eclass,v 1.20 2011/07/04 19:26:42 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozcoreconf-2.eclass,v 1.21 2011/07/08 11:36:00 ssuominen Exp $
 #
 # mozcoreconf.eclass : core options for mozilla
 # inherit mozconfig-2 if you need USE flags
@@ -38,7 +38,7 @@ mozconfig_annotate() {
 # => ac_add_options --enable-freetype2 # +truetype
 mozconfig_use_enable() {
 	declare flag=$(use_enable "$@")
-	mozconfig_annotate "$(useq $1 && echo +$1 || echo -$1)" "${flag}"
+	mozconfig_annotate "$(use $1 && echo +$1 || echo -$1)" "${flag}"
 }
 
 # mozconfig_use_with: add a line to .mozconfig based on a USE-flag
@@ -48,7 +48,7 @@ mozconfig_use_enable() {
 # => ac_add_options --with-gss-api=/usr/lib # +kerberos
 mozconfig_use_with() {
 	declare flag=$(use_with "$@")
-	mozconfig_annotate "$(useq $1 && echo +$1 || echo -$1)" "${flag}"
+	mozconfig_annotate "$(use $1 && echo +$1 || echo -$1)" "${flag}"
 }
 
 # mozconfig_use_extension: enable or disable an extension based on a USE-flag
@@ -57,7 +57,7 @@ mozconfig_use_with() {
 # mozconfig_use_extension gnome gnomevfs
 # => ac_add_options --enable-extensions=gnomevfs
 mozconfig_use_extension() {
-	declare minus=$(useq $1 || echo -)
+	declare minus=$(use $1 || echo -)
 	mozconfig_annotate "${minus:-+}$1" --enable-extensions=${minus}${2}
 }
 

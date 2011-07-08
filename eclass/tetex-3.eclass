@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-3.eclass,v 1.21 2010/10/10 17:23:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-3.eclass,v 1.22 2011/07/08 11:36:00 ssuominen Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -174,7 +174,7 @@ tetex-3_src_install() {
 	mv ${D}/etc/texmf/web2c/texmf.cnf ${D}/etc/texmf/texmf.d/00texmf.cnf
 
 	# xdvi
-	if useq X ; then
+	if use X ; then
 		dodir /etc/X11/app-defaults /etc/texmf/xdvi
 		mv ${D}${TEXMF_PATH}/xdvi/XDvi ${D}/etc/X11/app-defaults || die "mv XDvi failed"
 		dosym /etc/X11/app-defaults/XDvi ${TEXMF_PATH}/xdvi/XDvi

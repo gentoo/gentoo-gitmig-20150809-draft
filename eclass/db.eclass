@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.41 2010/10/18 17:39:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.42 2011/07/08 11:36:00 ssuominen Exp $
 # This is a common location for functions used in the sys-libs/db ebuilds
 #
 # Bugs: pauldv@gentoo.org
@@ -148,7 +148,7 @@ db_src_test() {
 		return 0
 	fi
 
-	if useq tcl; then
+	if use tcl; then
 		einfo "Running sys-libs/db testsuite"
 		ewarn "This can take 6+ hours on modern machines"
 		# Fix stuff that fails with relative paths, and upstream moving files
