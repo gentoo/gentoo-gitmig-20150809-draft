@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.8.3.ebuild,v 1.9 2011/01/10 19:26:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.8.3.ebuild,v 1.10 2011/07/08 10:24:22 ssuominen Exp $
 
 EAPI=3
 inherit eutils flag-o-matic multilib
@@ -38,7 +38,7 @@ src_prepare() {
 }
 
 src_configure() {
-	useq debug && append-flags -DDEBUG
+	use debug && append-flags -DDEBUG
 	econf \
 		--enable-taskstats \
 		--enable-unicode
