@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mono-basic
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono-basic/ChangeLog,v 1.38 2011/05/11 19:28:54 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono-basic/ChangeLog,v 1.39 2011/07/08 10:01:13 pacho Exp $
+
+  08 Jul 2011; Pacho Ramos <pacho@gentoo.org> -mono-basic-2.6.2.ebuild,
+  -mono-basic-2.8.ebuild:
+  Remove old.
 
   11 May 2011; Christoph Mende <angelos@gentoo.org> mono-basic-2.10.ebuild:
   Stable on amd64 wrt bug #359651
