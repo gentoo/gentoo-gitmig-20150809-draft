@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/unifdef
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.17 2011/06/05 11:43:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/unifdef/ChangeLog,v 1.18 2011/07/09 09:14:31 xarthisius Exp $
+
+  09 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> unifdef-2.3.ebuild:
+  ppc64 stable wrt #367271
 
   05 Jun 2011; Raúl Porcel <armin76@gentoo.org> unifdef-2.3.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #367271
