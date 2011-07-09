@@ -1,6 +1,12 @@
 # ChangeLog for virtual/ruby-ffi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.7 2010/12/03 18:28:26 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.8 2011/07/09 10:33:27 graaff Exp $
+
+*ruby-ffi-1 (09 Jul 2011)
+
+  09 Jul 2011; Hans de Graaff <graaff@gentoo.org> ruby-ffi-0.ebuild,
+  +ruby-ffi-1.ebuild:
+  Revision bump to create stable candidate without ruby19.
 
   03 Dec 2010; Fabian Groffen <grobian@gentoo.org> ruby-ffi-0.ebuild:
   Added Prefix keywords
