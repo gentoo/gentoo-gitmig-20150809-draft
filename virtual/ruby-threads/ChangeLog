@@ -1,6 +1,10 @@
 # ChangeLog for virtual/ruby-threads
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-threads/ChangeLog,v 1.1 2011/06/05 09:10:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-threads/ChangeLog,v 1.2 2011/07/09 10:30:42 graaff Exp $
+
+  09 Jul 2011; Hans de Graaff <graaff@gentoo.org> ruby-threads-0.ebuild,
+  ruby-threads-2.ebuild, ruby-threads-3.ebuild:
+  Mark stable for amd64 where underlying dependency is already stable.
 
 *ruby-threads-3 (05 Jun 2011)
 *ruby-threads-2 (05 Jun 2011)
