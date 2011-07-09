@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.236 2011/07/09 19:49:54 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.237 2011/07/09 19:54:34 ford_prefect Exp $
+
+  09 Jul 2011; Arun Raghavan <ford_prefect@gentoo.org>
+  pulseaudio-0.9.23.ebuild:
+  Remove redundant trailing backslash
 
 *pulseaudio-0.9.23 (09 Jul 2011)
 
