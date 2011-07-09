@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/htop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.95 2011/07/08 10:24:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/ChangeLog,v 1.96 2011/07/09 21:01:46 ssuominen Exp $
+
+*htop-0.9-r1 (09 Jul 2011)
+
+  09 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> +htop-0.9-r1.ebuild,
+  +files/htop-0.9-uclibc.patch:
+  Fix building with uClibc wrt #374595 by Pinkbyte. Revision bump to avoid
+  problems in stable and newly introduced eautoreconf.
 
   08 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> htop-0.8.3.ebuild:
   Convert from "useq" to "use".
