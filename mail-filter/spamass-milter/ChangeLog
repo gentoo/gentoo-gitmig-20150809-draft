@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/spamass-milter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/ChangeLog,v 1.26 2011/06/13 09:50:38 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/ChangeLog,v 1.27 2011/07/09 12:06:53 eras Exp $
+
+*spamass-milter-0.3.1-r5 (09 Jul 2011)
+
+  09 Jul 2011; Eray Aslan <eras@gentoo.org>
+  +files/spamass-milter-popen-r1.patch, +spamass-milter-0.3.1-r5.ebuild:
+  Bump for revized version of popen() patch that does not generate zombie
+  processes.
 
   13 Jun 2011; Eray Aslan <eras@gentoo.org> -spamass-milter-0.3.1-r1.ebuild,
   -spamass-milter-0.3.1-r2.ebuild, -spamass-milter-0.3.1-r3.ebuild:
