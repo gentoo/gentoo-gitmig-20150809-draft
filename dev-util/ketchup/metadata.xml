@@ -3,11 +3,11 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>psomas@gentoo.org</email>
 	</maintainer>
 	<longdescription>
 		Ketchup allows quick and easy following of/or switching between stable,
-		-git, -rc, -mm, -rt (Ingo Molnar's realtime kernel), -tiny (Matt 
-		Mackall's -tiny tree for small systems) and other kernel source trees
+		-git, -rc, -mm, -rt (Ingo Molnar's realtime kernel), -ck, and other
+		kernel source trees
 	</longdescription>
 </pkgmetadata>
