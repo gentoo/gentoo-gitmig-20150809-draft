@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12896 2011/07/08 09:32:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12897 2011/07/09 23:17:20 idl0r Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Christian Ruppert <idl0r@gentoo.org> (10 Jul 2011)
+# Masked for removal in 30 days.
+# Upstream seems dead, more recent versions depend on HAL. Please use
+# app-laptop/batti instead.
+app-laptop/batterymon
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (08 Jul 2011)
 # Seems to work unreliably between reboots, waiting to hear from
