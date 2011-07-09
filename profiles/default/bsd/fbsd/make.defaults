@@ -1,9 +1,9 @@
-# Copyright 2004-2009 Gentoo Foundation.
+# Copyright 1999-2011 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/make.defaults,v 1.6 2010/10/21 18:59:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/make.defaults,v 1.7 2011/07/09 21:20:22 aballier Exp $
 
-# Sandbox should work now, leaving commented for testing.
-# FEATURES="-sandbox"
+# Last building sandbox breaks gfind, bug #374425
+FEATURES="-sandbox"
 
 USERLAND="BSD"
 KERNEL="FreeBSD"

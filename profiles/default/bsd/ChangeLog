@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.58 2011/07/06 05:56:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.59 2011/07/09 21:20:22 aballier Exp $
+
+  09 Jul 2011; Alexis Ballier <aballier@gentoo.org> fbsd/make.defaults:
+  disable sandbox by default, bug #374425
 
   06 Jul 2011; Alexis Ballier <aballier@gentoo.org>
   +fbsd/amd64/8.2/make.defaults, +fbsd/amd64/8.2/parent,
