@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.3_p3.ebuild,v 1.4 2011/07/09 08:34:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.3_p3.ebuild,v 1.5 2011/07/09 14:43:36 jer Exp $
 
 EAPI="3"
 
@@ -29,7 +29,7 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86"
 IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads
 	resolvconf urandom xml geoip gssapi sdb-ldap"
 
