@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.234 2011/06/28 21:20:37 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.235 2011/07/09 16:58:34 armin76 Exp $
+
+  09 Jul 2011; Raúl Porcel <armin76@gentoo.org> pulseaudio-0.9.22-r2.ebuild:
+  alpha/ia64/sh/sparc/x86 stable wrt #372355
 
   28 Jun 2011; Arun Raghavan <ford_prefect@gentoo.org> pulseaudio-9999.ebuild:
   Fix live ebuild deps
