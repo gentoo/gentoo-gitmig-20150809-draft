@@ -1,18 +1,17 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/cxterm/cxterm-5.2.3-r1.ebuild,v 1.1 2010/09/19 02:36:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/cxterm/cxterm-5.2.3-r1.ebuild,v 1.2 2011/07/09 17:40:30 ssuominen Exp $
 
-EAPI="2"
-
+EAPI=4
 inherit autotools
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 HOMEPAGE="http://cxterm.sourceforge.net/"
 DESCRIPTION="A Chinese/Japanese/Korean X-Terminal"
-LICENSE="BSD"
 
+LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
@@ -28,20 +27,20 @@ src_prepare() {
 	sed -i utils/Makefile.am \
 		-e '/ -c /s|gcc|$(COMPILE)|g' \
 		-e '/ -o /s|gcc|$(LINK)|g' \
-		|| die "sed utils/Makefile.am"
+		|| die
 	# ...remove these redefinitions, probably the reason why the original
 	# Makefile.am above had plain `gcc' as -O[N>0] would then fail
 	sed -i utils/tit2cit.c \
 		-e '/extern char.*malloc.*calloc.*realloc/d' \
-		|| die "sed utils/tit2cit.c"
+		|| die
+
+	# Fix include guard with recent libX11 wrt #349448
+	sed -i -e 's:_XLIB_H_:_X11&:' cxterm/HZtable.h || die
+
 	eautoreconf
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc README* INSTALL-5.2 Doc/*
-	docinto tutorial-1
-	dodoc Doc/tutorial-1/*
-	docinto tutorial-2
-	dodoc Doc/tutorial-2/*
+	emake DESTDIR="${D}" install
+	dodoc -r ChangeLog README* INSTALL-5.2 Doc/*
 }
