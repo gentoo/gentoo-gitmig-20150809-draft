@@ -1,14 +1,14 @@
 #!/bin/bash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/profile.bashrc,v 1.10 2011/07/08 15:06:22 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/profile.bashrc,v 1.11 2011/07/09 21:04:44 aballier Exp $
 
 alias make=gmake
 alias patch=gpatch
 alias sed=gsed
 alias awk=gawk
 # findutils stuff
-type -P gfind && alias find=gfind
-type -P gxargs && alias xargs=gxargs
+type -P gfind > /dev/null && alias find=gfind
+type -P gxargs > /dev/null && alias xargs=gxargs
 
 # Attempt to point the default SHELL used by configure scripts to bash.
 # while most should work with BSD's bourne just fine, the extra scripts
