@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/tuxpaint
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/ChangeLog,v 1.61 2011/05/18 07:03:46 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/ChangeLog,v 1.62 2011/07/09 15:50:35 xarthisius Exp $
+
+  09 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> tuxpaint-0.9.21.ebuild:
+  ppc stable wrt #367323
 
   18 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> tuxpaint-0.9.21.ebuild:
   x86 stable wrt bug #367323
