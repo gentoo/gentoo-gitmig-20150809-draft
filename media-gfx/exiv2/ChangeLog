@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/exiv2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.92 2011/04/02 23:46:37 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/ChangeLog,v 1.93 2011/07/09 23:46:14 sbriesen Exp $
+
+*exiv2-0.21.1-r1 (09 Jul 2011)
+
+  09 Jul 2011; Stefan Briesenick <sbriesen@gentoo.org> +exiv2-0.21.1-r1.ebuild,
+  +files/exiv2-0.21.1-time-fix.patch:
+  added patch for off by 1 hour date error (bug #368419).
 
 *exiv2-0.21.1 (02 Apr 2011)
 
