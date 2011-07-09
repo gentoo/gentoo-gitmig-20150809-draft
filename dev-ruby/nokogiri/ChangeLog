@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.55 2011/07/09 09:48:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.56 2011/07/09 10:15:44 graaff Exp $
+
+*nokogiri-1.5.0 (09 Jul 2011)
+
+  09 Jul 2011; Hans de Graaff <graaff@gentoo.org> +nokogiri-1.5.0.ebuild:
+  Version bump. The ffi interface is no longer supported, so jruby has been
+  dropped. It should be possible to add that back later by building the native
+  jruby support.
 
   09 Jul 2011; Hans de Graaff <graaff@gentoo.org> -nokogiri-1.4.4.ebuild:
   Remove old version.
