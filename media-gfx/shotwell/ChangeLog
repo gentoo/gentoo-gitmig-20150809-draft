@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/shotwell
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.20 2011/06/23 10:39:13 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.21 2011/07/09 21:39:58 angelos Exp $
+
+  09 Jul 2011; Christoph Mende <angelos@gentoo.org> -shotwell-0.10.ebuild,
+  shotwell-0.10.1.ebuild, +files/shotwell-0.10.1-libraw-config.patch:
+  Fix compilation with current libraw (bug #374409, patch by Tim Harder)
 
   23 Jun 2011; Christoph Mende <angelos@gentoo.org> shotwell-0.10.1.ebuild:
   Re-add accidentally removed GCONF_DEBUG
