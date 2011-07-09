@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ffi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.18 2011/06/08 05:46:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.19 2011/07/09 10:26:04 graaff Exp $
+
+  09 Jul 2011; Hans de Graaff <graaff@gentoo.org> -ffi-0.6.3-r1.ebuild,
+  -ffi-1.0.7.ebuild:
+  Remove old versions.
 
   08 Jun 2011; Hans de Graaff <graaff@gentoo.org> ffi-1.0.9.ebuild:
   Fix github source directory for EAPI=4, closing bug 370547.
