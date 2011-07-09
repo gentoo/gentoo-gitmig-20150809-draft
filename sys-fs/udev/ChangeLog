@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.600 2011/07/07 19:30:44 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.601 2011/07/09 17:24:03 xarthisius Exp $
+
+  09 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> udev-164-r2.ebuild:
+  ppc/ppc64 stable wrt #352827
 
   07 Jul 2011; Matthias Schwarzott <zzam@gentoo.org> udev-171-r1.ebuild,
   udev-9999.ebuild:
