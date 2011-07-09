@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.9 2011/06/28 21:20:37 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.10 2011/07/09 20:28:49 ford_prefect Exp $
 
 EAPI=4
 
@@ -111,7 +111,7 @@ src_configure() {
 		--localstatedir="${EPREFIX}"/var \
 		--disable-per-user-esound-socket \
 		--with-database=gdbm \
-		--with-udev-rules-dir="${EPREFIX}/$(get_libdir)/udev/rules.d"
+		--with-udev-rules-dir="${EPREFIX}/lib/udev/rules.d"
 
 	if use doc; then
 		pushd doxygen

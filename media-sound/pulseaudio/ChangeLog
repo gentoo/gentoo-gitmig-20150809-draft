@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.237 2011/07/09 19:54:34 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.238 2011/07/09 20:28:49 ford_prefect Exp $
+
+*pulseaudio-0.9.23-r1 (09 Jul 2011)
+
+  09 Jul 2011; Arun Raghavan <ford_prefect@gentoo.org>
+  -pulseaudio-0.9.23.ebuild, +pulseaudio-0.9.23-r1.ebuild,
+  pulseaudio-9999.ebuild:
+  Fix udev rules to go to /lib not /$(get_libdir) (thanks to Samuli for
+  pointing this out)
 
   09 Jul 2011; Arun Raghavan <ford_prefect@gentoo.org>
   pulseaudio-0.9.23.ebuild:
