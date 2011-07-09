@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.54 2011/05/23 20:57:32 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.55 2011/07/09 09:48:59 graaff Exp $
+
+  09 Jul 2011; Hans de Graaff <graaff@gentoo.org> -nokogiri-1.4.4.ebuild:
+  Remove old version.
 
   23 May 2011; Thomas Kahle <tomka@gentoo.org> nokogiri-1.4.4-r1.ebuild:
   ~x86 per bug 365417
