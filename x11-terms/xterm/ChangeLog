@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.323 2011/06/28 20:09:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.324 2011/07/09 11:53:07 ssuominen Exp $
+
+*xterm-270 (09 Jul 2011)
+
+  09 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> +xterm-270.ebuild:
+  Version bump.
 
   28 Jun 2011; Brent Baude <ranger@gentoo.org> xterm-269.ebuild:
   Marking xterm-269 ppc stable for bug 363965
