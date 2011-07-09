@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rack-mount
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/ChangeLog,v 1.9 2011/07/04 09:24:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/ChangeLog,v 1.10 2011/07/09 07:00:49 graaff Exp $
+
+*rack-mount-0.7.4 (09 Jul 2011)
+
+  09 Jul 2011; Hans de Graaff <graaff@gentoo.org> +rack-mount-0.7.4.ebuild:
+  Version bump.
 
   04 Jul 2011; Hans de Graaff <graaff@gentoo.org> rack-mount-0.6.14.ebuild,
   rack-mount-0.7.3.ebuild:
