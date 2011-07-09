@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/atk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.224 2011/07/06 23:30:58 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.225 2011/07/09 16:05:45 armin76 Exp $
+
+  09 Jul 2011; Raúl Porcel <armin76@gentoo.org> atk-1.32.0-r1.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #371320
 
   06 Jul 2011; Mark Loeser <halcy0n@gentoo.org> atk-1.32.0-r1.ebuild:
   Stable for ppc64; bug #371320
