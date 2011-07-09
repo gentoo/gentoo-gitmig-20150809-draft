@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.286 2011/07/06 20:05:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.287 2011/07/09 15:14:25 alexxy Exp $
+
+*kopete-4.6.5 (09 Jul 2011)
+
+  09 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +kopete-4.6.5.ebuild:
+  Version bump KDE SC 4.6.5
 
   06 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org> -kopete-4.6.2.ebuild:
   Drop KDE 4.6.2

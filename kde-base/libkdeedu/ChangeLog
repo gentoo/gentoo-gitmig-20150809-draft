@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libkdeedu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdeedu/ChangeLog,v 1.179 2011/07/06 20:05:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdeedu/ChangeLog,v 1.180 2011/07/09 15:14:02 alexxy Exp $
+
+*libkdeedu-4.6.5 (09 Jul 2011)
+
+  09 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +libkdeedu-4.6.5.ebuild:
+  Version bump KDE SC 4.6.5
 
   06 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -libkdeedu-4.6.2.ebuild:

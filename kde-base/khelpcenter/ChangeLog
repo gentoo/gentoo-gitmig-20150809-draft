@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/khelpcenter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.191 2011/07/06 20:05:23 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.192 2011/07/09 15:13:56 alexxy Exp $
+
+*khelpcenter-4.6.5 (09 Jul 2011)
+
+  09 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +khelpcenter-4.6.5.ebuild:
+  Version bump KDE SC 4.6.5
 
   06 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -khelpcenter-4.6.2.ebuild:

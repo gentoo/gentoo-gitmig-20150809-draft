@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kfloppy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfloppy/ChangeLog,v 1.167 2011/07/06 20:05:34 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfloppy/ChangeLog,v 1.168 2011/07/09 15:14:26 alexxy Exp $
+
+*kfloppy-4.6.5 (09 Jul 2011)
+
+  09 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +kfloppy-4.6.5.ebuild:
+  Version bump KDE SC 4.6.5
 
   06 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org> -kfloppy-4.6.2.ebuild:
   Drop KDE 4.6.2
