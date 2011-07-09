@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/zsi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/ChangeLog,v 1.19 2011/07/09 22:06:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/zsi/ChangeLog,v 1.20 2011/07/09 22:11:31 angelos Exp $
+
+  09 Jul 2011; Christoph Mende <angelos@gentoo.org> -zsi-2.0.ebuild:
+  Remove old (bug #367753)
 
   09 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> zsi-2.0.ebuild,
   zsi-2.1_alpha1.ebuild:
