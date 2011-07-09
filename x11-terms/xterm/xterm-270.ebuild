@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-270.ebuild,v 1.1 2011/07/09 11:53:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-270.ebuild,v 1.2 2011/07/09 12:02:49 ssuominen Exp $
 
 EAPI=4
-inherit multilib
+inherit eutils multilib
 
 DESCRIPTION="Terminal Emulator for X Windows"
 HOMEPAGE="http://dickey.his.com/xterm/"
@@ -71,6 +71,7 @@ src_install() {
 	emake DESTDIR="${D}" install
 	dodoc README{,.i18n} ctlseqs.txt
 	dohtml xterm.log.html
+	domenu *.desktop
 
 	# Fix permissions -- it grabs them from live system, and they can
 	# be suid or sgid like they were in pre-unix98 pty or pre-utempter days,
