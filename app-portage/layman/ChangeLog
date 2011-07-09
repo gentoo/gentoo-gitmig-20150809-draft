@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.137 2011/04/28 03:25:03 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.138 2011/07/09 11:23:47 xarthisius Exp $
+
+  09 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> layman-1.4.1.ebuild:
+  ppc64 stable wrt #343309
 
 *layman-1.4.2-r2 (28 Apr 2011)
 
