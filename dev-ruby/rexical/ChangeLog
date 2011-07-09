@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rexical
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.14 2011/02/16 07:30:36 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.15 2011/07/09 10:35:36 graaff Exp $
+
+*rexical-1.0.5-r1 (09 Jul 2011)
+
+  09 Jul 2011; Hans de Graaff <graaff@gentoo.org> rexical-1.0.5.ebuild,
+  +rexical-1.0.5-r1.ebuild:
+  Revision bump to create stable candidate without ruby19.
 
   16 Feb 2011; Hans de Graaff <graaff@gentoo.org> -rexical-1.0.4-r1.ebuild:
   Remove old version.
