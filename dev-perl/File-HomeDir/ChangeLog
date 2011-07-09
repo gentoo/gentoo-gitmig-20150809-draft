@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/File-HomeDir
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-HomeDir/ChangeLog,v 1.75 2011/04/03 06:33:53 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-HomeDir/ChangeLog,v 1.76 2011/07/09 07:44:53 tove Exp $
+
+*File-HomeDir-0.980.0 (09 Jul 2011)
+
+  09 Jul 2011; Torsten Veller <tove@gentoo.org> +File-HomeDir-0.980.0.ebuild:
+  Version bump
 
   03 Apr 2011; Torsten Veller <tove@gentoo.org> -File-HomeDir-0.950.ebuild:
   Cleanup
