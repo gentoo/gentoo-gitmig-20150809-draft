@@ -1,6 +1,16 @@
 # ChangeLog for sys-process/cronie
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/ChangeLog,v 1.14 2010/11/08 13:21:51 bangert Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/ChangeLog,v 1.15 2011/07/10 19:41:09 polynomial-c Exp $
+
+*cronie-1.4.8 (10 Jul 2011)
+*cronie-1.4.4-r1 (10 Jul 2011)
+
+  10 Jul 2011; Lars Wendler <polynomial-c@gentoo.org> -cronie-1.4.4.ebuild,
+  +cronie-1.4.4-r1.ebuild, cronie-1.4.6.ebuild, +cronie-1.4.8.ebuild,
+  metadata.xml:
+  Fixed "crontab -e" permission bug reported by Mike Gilbert (bug #365651) who
+  also provided a complete fix. Committed a fixed revision straight to stable.
+  Version bump (bug #374011). Added myself as new package maintainer.
 
 *cronie-1.4.6 (08 Nov 2010)
 

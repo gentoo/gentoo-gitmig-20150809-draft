@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/cronie-1.4.4.ebuild,v 1.2 2010/08/12 08:21:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/cronie-1.4.8.ebuild,v 1.1 2011/07/10 19:41:09 polynomial-c Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit cron eutils pam
 
@@ -11,7 +11,7 @@ SRC_URI="https://fedorahosted.org/releases/c/r/cronie/${P}.tar.gz"
 HOMEPAGE="https://fedorahosted.org/cronie/wiki"
 
 LICENSE="ISC BSD BSD-2"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="inotify pam"
 
 DEPEND="pam? ( virtual/pam )"
@@ -19,6 +19,10 @@ RDEPEND="${DEPEND}"
 
 #cronie supports /etc/crontab
 CRON_SYSTEM_CRONTAB="yes"
+
+pkg_setup() {
+	enewgroup crontab
+}
 
 src_configure() {
 	SPOOL_DIR="/var/spool/cron/crontabs" econf \
@@ -32,9 +36,9 @@ src_configure() {
 src_install() {
 	emake install DESTDIR="${D}" || die "install failed"
 
-	docrondir
-	fowners root:cron /usr/bin/crontab
-	fperms 2750 /usr/bin/crontab
+	docrondir -m 1730 -o root -g crontab
+	fowners root:crontab /usr/bin/crontab
+	fperms 2751 /usr/bin/crontab
 
 	insinto /etc
 	newins "${FILESDIR}/${PN}-1.2-crontab" crontab
