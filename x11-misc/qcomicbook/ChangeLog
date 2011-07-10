@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/qcomicbook
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.38 2011/07/08 13:20:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.39 2011/07/10 08:04:13 hwoarang Exp $
+
+  10 Jul 2011; Markos Chandras <hwoarang@gentoo.org> qcomicbook-0.7.2.ebuild:
+  Stable on amd64 wrt bug #374441
 
 *qcomicbook-0.8.1 (08 Jul 2011)
 
