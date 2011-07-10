@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libharu/libharu-2.1.0.ebuild,v 1.2 2008/10/25 22:33:38 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libharu/libharu-2.1.0.ebuild,v 1.3 2011/07/10 15:49:38 jlec Exp $
 
 DESCRIPTION="C/C++ library for PDF generation"
 HOMEPAGE="http://www.libharu.org/"
@@ -9,10 +9,10 @@ SRC_URI="http://libharu.org/files/${P}.tar.bz2"
 LICENSE="ZLIB"
 SLOT="2"
 KEYWORDS="~amd64 ~ppc ~x86"
-
 IUSE="png zlib examples"
 
-DEPEND="png? ( media-libs/libpng )
+DEPEND="
+	png? ( media-libs/libpng )
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}"
 
