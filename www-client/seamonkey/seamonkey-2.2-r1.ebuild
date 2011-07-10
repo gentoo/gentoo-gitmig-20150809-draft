@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.2.ebuild,v 1.2 2011/07/09 23:09:52 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.2-r1.ebuild,v 1.1 2011/07/10 21:51:41 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -161,7 +161,7 @@ src_prepare() {
 	if use crypt ; then
 		mv "${WORKDIR}"/enigmail "${S}"/mailnews/extensions/enigmail
 		cd "${S}"/mailnews/extensions/enigmail || die
-		epatch "${FILESDIR}"/enigmail/enigmail-1.2-seamonkey-2.2-versionfix.patch
+		epatch "${FILESDIR}"/enigmail/enigmail-update.patch
 		./makemake -r 2&>/dev/null
 		sed -e 's:@srcdir@:${S}/mailnews/extensions/enigmail:' \
 			-i Makefile.in || die

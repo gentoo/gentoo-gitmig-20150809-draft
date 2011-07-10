@@ -1,0 +1,186 @@
+diff -urN enigmail/package/enigmail.js enigmail-new/package/enigmail.js
+--- enigmail/package/enigmail.js	2011-06-25 10:54:32.000000000 -0500
++++ enigmail-new/package/enigmail.js	2011-07-06 10:22:33.000000000 -0500
+@@ -922,10 +922,14 @@
+     if (this.gpgAgentProcess != null) {
+       Ec.DEBUG_LOG("enigmail.js: Enigmail.finalize: stopping gpg-agent PID="+this.gpgAgentProcess+"\n");
+       try {
+-        var installLoc = Components.classes[NS_EXTENSION_MANAGER_CONTRACTID]
+-                 .getService(Components.interfaces.nsIExtensionManager)
+-                 .getInstallLocation(ENIGMAIL_EXTENSION_ID);
+-        var extensionLoc = installLoc.getItemFile(ENIGMAIL_EXTENSION_ID, "wrappers");
++        var directoryService =
++          Components.classes["@mozilla.org/file/directory_service;1"].
++          getService(Components.interfaces.nsIProperties);
++
++        var extensionLoc = directoryService.get("ProfD", Components.interfaces.nsIFile);
++        extensionLoc.append("extensions");
++        extensionLoc.append(ENIGMAIL_EXTENSION_ID);
++        extensionLoc.append("wrappers");
+         extensionLoc.append("gpg-agent-wrapper.sh");
+         try {
+           extensionLoc.permissions=0755;
+@@ -1056,7 +1060,7 @@
+ 
+     if (matches && (matches.length > 1)) {
+       gLogLevel = matches[1];
+-      WARNING_LOG("enigmail.js: Enigmail: gLogLevel="+gLogLevel+"\n");
++      Ec.WARNING_LOG("enigmail.js: Enigmail: gLogLevel="+gLogLevel+"\n");
+     }
+ 
+     // Initialize global environment variables list
+@@ -1452,10 +1456,14 @@
+                   "--max-cache-ttl", "999999" ];  // ca. 11 days
+ 
+           try {
+-            var installLoc = Components.classes[NS_EXTENSION_MANAGER_CONTRACTID]
+-                     .getService(Components.interfaces.nsIExtensionManager)
+-                     .getInstallLocation(ENIGMAIL_EXTENSION_ID);
+-            var extensionLoc = installLoc.getItemFile(ENIGMAIL_EXTENSION_ID, "wrappers");
++            var directoryService =
++                Components.classes["@mozilla.org/file/directory_service;1"].
++                getService(Components.interfaces.nsIProperties);
++            var extensionLoc =
++                directoryService.get("ProfD", Components.interfaces.nsIFile);
++            extensionLoc.append("extensions");
++            extensionLoc.append(ENIGMAIL_EXTENSION_ID);
++            extensionLoc.append("wrappers");
+             extensionLoc.append("gpg-agent-wrapper.sh");
+             try {
+               extensionLoc.permissions=0755;
+@@ -1625,12 +1633,12 @@
+       }
+     }
+     if ((this.agentType == "gpg") && (exitCode == 256)) {
+-      WARNING_LOG("enigmail.js: Enigmail.fixExitCode: Using gpg and exit code is 256. You seem to use cygwin-gpg, activating countermeasures.\n");
++      Ec.WARNING_LOG("enigmail.js: Enigmail.fixExitCode: Using gpg and exit code is 256. You seem to use cygwin-gpg, activating countermeasures.\n");
+       if (statusFlags & (nsIEnigmail.BAD_PASSPHRASE | nsIEnigmail.UNVERIFIED_SIGNATURE)) {
+-        WARNING_LOG("enigmail.js: Enigmail.fixExitCode: Changing exitCode 256->2\n");
++        Ec.WARNING_LOG("enigmail.js: Enigmail.fixExitCode: Changing exitCode 256->2\n");
+         exitCode = 2;
+       } else {
+-        WARNING_LOG("enigmail.js: Enigmail.fixExitCode: Changing exitCode 256->0\n");
++        Ec.WARNING_LOG("enigmail.js: Enigmail.fixExitCode: Changing exitCode 256->0\n");
+         exitCode = 0;
+       }
+     }
+@@ -1643,7 +1651,7 @@
+                                 nsIEnigmail.DECRYPTION_FAILED |
+                                 nsIEnigmail.NO_PUBKEY |
+                                 nsIEnigmail.NO_SECKEY)))) {
+-        WARNING_LOG("enigmail.js: Enigmail.fixExitCode: Using gpg version "+this.agentVersion+", activating countermeasures for file renaming bug.\n");
++        Ec.WARNING_LOG("enigmail.js: Enigmail.fixExitCode: Using gpg version "+this.agentVersion+", activating countermeasures for file renaming bug.\n");
+         exitCode = 0;
+       }
+     }
+@@ -4773,7 +4781,7 @@
+   }
+   else if (keyEdit.doCheck(GET_LINE, "sign_uid.class" )) {
+     ret.exitCode = 0;
+-    ret.writeTxt = inputData.trustLevel;
++    ret.writeTxt = new String(inputData.trustLevel);
+   }
+   else if (keyEdit.doCheck(GET_HIDDEN, "passphrase.adminpin.ask")) {
+     GetPin(inputData.parent, Ec.getString("enterAdminPin"), ret);
+@@ -4798,7 +4806,7 @@
+ 
+   if (keyEdit.doCheck(GET_LINE, "edit_ownertrust.value" )) {
+     ret.exitCode = 0;
+-    ret.writeTxt = inputData.trustLevel;
++    ret.writeTxt = new String(inputData.trustLevel);
+   }
+   else if (keyEdit.doCheck(GET_BOOL, "edit_ownertrust.set_ultimate.okay")) {
+     ret.exitCode = 0;
+@@ -4883,7 +4891,7 @@
+ 
+   if (keyEdit.doCheck(GET_LINE, "ask_revocation_reason.code" )) {
+     ret.exitCode = 0;
+-    ret.writeTxt = inputData.reasonCode;
++    ret.writeTxt = new String(inputData.reasonCode);
+   }
+   else if (keyEdit.doCheck(GET_LINE, "ask_revocation_reason.text" )) {
+     ret.exitCode = 0;
+@@ -4949,7 +4957,7 @@
+   }
+   else if (keyEdit.doCheck(GET_LINE, "ask_revocation_reason.code" )) {
+     ret.exitCode = 0;
+-    ret.writeTxt = inputData.reasonCode;
++    ret.writeTxt = new String(inputData.reasonCode);
+   }
+   else if (keyEdit.doCheck(GET_LINE, "ask_revocation_reason.text" )) {
+     ret.exitCode = 0;
+@@ -5225,7 +5233,7 @@
+   else if (keyEdit.doCheck(GET_LINE, "cardedit.genkeys.backup_enc") ||
+            keyEdit.doCheck(GET_BOOL, "cardedit.genkeys.backup_enc")) {
+     ret.exitCode = 0;
+-    ret.writeTxt = inputData.backupKey;
++    ret.writeTxt = new String(inputData.backupKey);
+   }
+   else if (keyEdit.doCheck(GET_BOOL, "cardedit.genkeys.replace_keys")) {
+     ret.exitCode = 0;
+@@ -5243,7 +5251,7 @@
+   }
+   else if (keyEdit.doCheck(GET_LINE, "keygen.valid")) {
+     ret.exitCode = 0;
+-    ret.writeTxt = inputData.expiry;
++    ret.writeTxt = new String(inputData.expiry);
+   }
+   else if (keyEdit.doCheck(GET_LINE, "cardedit.genkeys.size")) {
+     ret.exitCode = 0;
+diff -urN enigmail/package/install.rdf enigmail-new/package/install.rdf
+--- enigmail/package/install.rdf	2011-06-25 11:04:12.000000000 -0500
++++ enigmail-new/package/install.rdf	2011-07-08 16:28:53.000000000 -0500
+@@ -16,15 +16,15 @@
+       <Description>
+         <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
+         <em:minVersion>5.0b1</em:minVersion>
+-        <em:maxVersion>5.0.*</em:maxVersion>
++        <em:maxVersion>5.*</em:maxVersion>
+       </Description>
+     </em:targetApplication>
+     <em:targetApplication>
+       <!-- Seamonkey -->
+       <Description>
+         <em:id>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</em:id>
+-        <em:minVersion>2.1a1pre</em:minVersion>
+-        <em:maxVersion>2.1.*</em:maxVersion>
++        <em:minVersion>2.2</em:minVersion>
++        <em:maxVersion>2.2.*</em:maxVersion>
+       </Description>
+     </em:targetApplication>
+     <!-- em:targetApplication>
+diff -urN enigmail/ui/content/enigmailCommon.js enigmail-new/ui/content/enigmailCommon.js
+--- enigmail/ui/content/enigmailCommon.js	2011-01-31 07:26:33.000000000 -0600
++++ enigmail-new/ui/content/enigmailCommon.js	2011-07-02 10:56:03.000000000 -0500
+@@ -435,7 +435,7 @@
+ }
+ 
+ function EnigFormatFpr(fingerprint) {
+-  EnigmailFuncs.formatFpr(fingerprint);
++  return EnigmailFuncs.formatFpr(fingerprint);
+ }
+ 
+ /////////////////////////
+diff -urN enigmail/ui/content/enigmailMessengerOverlay.js enigmail-new/ui/content/enigmailMessengerOverlay.js
+--- enigmail/ui/content/enigmailMessengerOverlay.js	2011-05-24 16:18:41.000000000 -0500
++++ enigmail-new/ui/content/enigmailMessengerOverlay.js	2011-07-02 11:19:50.000000000 -0500
+@@ -1071,7 +1071,7 @@
+           }
+           if (foundIndex >= 0) {
+             // EnigmailCommon.DEBUG_LOG("enigmailMessengerOverlay.js: innerHTML='"+node.innerHTML+"'\n");
+-            node.innerHTML = EnigmailFuncs.formatPlaintextMsg(EnigmailCommon.convertToUnicode(messageContent, "UTF-8"));
++            node.innerHTML = EnigmailFuncs.formatPlaintextMsg(EnigmailCommon.convertToUnicode(messageContent, charset));
+             return;
+           }
+         }
+diff -urN enigmail/ui/content/enigmailMsgHdrViewOverlay.js enigmail-new/ui/content/enigmailMsgHdrViewOverlay.js
+--- enigmail/ui/content/enigmailMsgHdrViewOverlay.js	2011-02-15 13:44:27.000000000 -0600
++++ enigmail-new/ui/content/enigmailMsgHdrViewOverlay.js	2011-07-02 11:40:56.000000000 -0500
+@@ -72,6 +72,7 @@
+       this.statusBar.removeAttribute("signed");
+       this.statusBar.removeAttribute("encrypted");
+       this.enigmailBox.setAttribute("collapsed", "true")
++      Enigmail.msg.setAttachmentReveal(null);
+     }
+     catch (ex) {}
+   },
