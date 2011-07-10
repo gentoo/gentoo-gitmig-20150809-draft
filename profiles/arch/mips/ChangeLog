@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.68 2011/07/08 20:55:31 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.69 2011/07/10 23:47:32 mattst88 Exp $
+
+  10 Jul 2011; Matt Turner <mattst88@gentoo.org> use.mask:
+  Remove policykit from use.mask now that polkit is keyworded, bug 296548
 
   08 Jul 2011; Matt Turner <mattst88@gentoo.org> package.use.mask:
   Remove 'dev-perl/Authen-SASL kerberos' from package.use.mask now that

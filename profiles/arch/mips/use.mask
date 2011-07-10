@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.39 2011/06/28 19:23:05 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.40 2011/07/10 23:47:32 mattst88 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -361,10 +361,6 @@ ocaml
 # Matt Turner <mattst88@gentoo.org> (13 Dec 2010)
 # We don't have sys-devel/llvm
 llvm
-
-# Mart Raudsepp <leio@gentoo.org> (7 Apr 2011)
-# Mask policykit for now, to get other keywording going first
-policykit
 
 # Matt Turner <mattst88@gentoo.org (14 Jun 2011)
 # pdfannotextractor needs java
