@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/text-format
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-format/ChangeLog,v 1.53 2011/04/01 07:34:20 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-format/ChangeLog,v 1.54 2011/07/10 23:17:23 halcy0n Exp $
+
+  10 Jul 2011; Mark Loeser <halcy0n@gentoo.org> text-format-1.0.0-r2.ebuild:
+  Stable for ppc64; bug #353130
 
   01 Apr 2011; Michael Weber <xmw@gentoo.org> text-format-1.0.0-r2.ebuild:
   sparc stable (bug 353130)
