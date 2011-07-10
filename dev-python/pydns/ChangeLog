@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pydns
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/ChangeLog,v 1.9 2010/02/23 11:20:48 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/ChangeLog,v 1.10 2011/07/10 00:51:10 sbriesen Exp $
+
+*pydns-2.3.5 (10 Jul 2011)
+
+  10 Jul 2011; Stefan Briesenick <sbriesen@gentoo.org> +pydns-2.3.5.ebuild:
+  version bump. Solves bug #364031
 
   23 Feb 2010; Christian Faulhammer <fauli@gentoo.org> pydns-2.3.4.ebuild:
   stable x86, bug 303247
