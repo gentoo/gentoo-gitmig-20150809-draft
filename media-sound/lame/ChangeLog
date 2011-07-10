@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lame
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.131 2011/07/10 10:48:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.132 2011/07/10 15:09:54 armin76 Exp $
+
+  10 Jul 2011; Raúl Porcel <armin76@gentoo.org> lame-3.98.4.ebuild:
+  sh/sparc stable wrt #365273
 
   10 Jul 2011; Markus Meier <maekke@gentoo.org> lame-3.98.4.ebuild:
   arm stable, bug #365273
