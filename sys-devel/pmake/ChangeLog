@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/pmake
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/ChangeLog,v 1.40 2011/07/09 07:37:15 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/ChangeLog,v 1.41 2011/07/10 10:31:45 maekke Exp $
+
+  10 Jul 2011; Markus Meier <maekke@gentoo.org> pmake-1.111.3.1.ebuild:
+  arm stable, bug #367891
 
   09 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> pmake-1.111.3.1.ebuild:
   ppc/ppc64 stable wrt #367891
