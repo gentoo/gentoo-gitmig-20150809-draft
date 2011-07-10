@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.68 2011/07/06 05:59:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.69 2011/07/10 15:07:26 aballier Exp $
+
+  10 Jul 2011; Alexis Ballier <aballier@gentoo.org> freebsd-ubin-8.2.ebuild:
+  create /var/spool/lock/ directory for tip, by Jose Quinteiro, bug #200700
 
 *freebsd-ubin-8.2 (06 Jul 2011)
 

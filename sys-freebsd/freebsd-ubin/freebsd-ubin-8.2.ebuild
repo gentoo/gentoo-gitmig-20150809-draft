@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-8.2.ebuild,v 1.1 2011/07/06 05:59:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-8.2.ebuild,v 1.2 2011/07/10 15:07:26 aballier Exp $
 
 EAPI=2
 
@@ -128,6 +128,9 @@ src_install() {
 
 	exeinto /etc/cron.daily
 	newexe "${FILESDIR}/locate-updatedb-cron" locate.updatedb || die
+
+	# tip requires /var/spool/lock/, bug #200700
+	keepdir /var/spool/lock
 }
 
 pkg_postinst() {
