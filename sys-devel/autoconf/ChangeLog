@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.161 2011/07/02 15:14:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.162 2011/07/10 10:46:49 maekke Exp $
+
+  10 Jul 2011; Markus Meier <maekke@gentoo.org> autoconf-2.67.ebuild,
+  autoconf-2.68.ebuild:
+  arm stable, bug #372601
 
   02 Jul 2011; Markos Chandras <hwoarang@gentoo.org> autoconf-2.67.ebuild,
   autoconf-2.68.ebuild:
