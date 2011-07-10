@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.9-r1.ebuild,v 1.4 2011/07/05 14:52:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.9-r1.ebuild,v 1.5 2011/07/10 07:32:16 fauli Exp $
 
 EAPI="2"
 
@@ -45,6 +45,7 @@ PLUGIN_NAMES="acpi-notifier address_keeper archive att-remover attachwarner clam
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}_notify_crash.patch
+	epatch "${FILESDIR}"/${P}-fix-nossl.patch
 }
 
 src_configure() {

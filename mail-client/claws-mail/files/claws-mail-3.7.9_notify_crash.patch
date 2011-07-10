@@ -1,10 +1,11 @@
-Fixes crash with libnotify, reported upstream
+Fixes crash with libnotify, fixed in versions after 3.7.9
 
-http://bugs.gentoo.org/show_bug.cgi?id=362297
+Gentoo bug: http://bugs.gentoo.org/show_bug.cgi?id=362297
+Upstream bug: http://www.thewildbeast.co.uk/claws-mail/bugzilla/show_bug.cgi?id=2414
 
 
---- src/main.c.orig	2011-04-30 20:18:09.853235001 +0200
-+++ src/main.c	2011-04-30 20:18:26.993660501 +0200
+--- src/main.c.orig
++++ src/main.c
 @@ -331,7 +331,7 @@
  		gtk_widget_show(hack);
  	}

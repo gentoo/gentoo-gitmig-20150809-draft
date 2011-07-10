@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.178 2011/07/05 14:52:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.179 2011/07/10 07:32:16 fauli Exp $
+
+  10 Jul 2011; Christian Faulhammer <fauli@gentoo.org>
+  claws-mail-3.7.9-r1.ebuild, +files/claws-mail-3.7.9-fix-nossl.patch,
+  files/claws-mail-3.7.9_notify_crash.patch:
+  Fix building with USE="-ssl -gnutls" as reported by orlFaustus <ovm AT cs DOT
+  bg DOT ac DOT il> in bug 373611; update patch comments
 
   05 Jul 2011; Jeroen Roovers <jer@gentoo.org> claws-mail-3.7.9-r1.ebuild:
   Stable for HPPA (bug #372957).
