@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kalgebra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/ChangeLog,v 1.92 2011/07/09 15:14:11 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/ChangeLog,v 1.93 2011/07/10 20:39:47 tampakrap Exp $
+
+  10 Jul 2011; Theo Chatzimichos <tampakrap@gentoo.org> kalgebra-4.6.5.ebuild:
+  Add missing patch
 
 *kalgebra-4.6.5 (09 Jul 2011)
 
