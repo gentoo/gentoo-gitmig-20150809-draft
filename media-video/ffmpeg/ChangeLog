@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.432 2011/07/10 17:34:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.433 2011/07/10 19:24:56 aballier Exp $
+
+  10 Jul 2011; Alexis Ballier <aballier@gentoo.org> -ffmpeg-0.6.ebuild,
+  -ffmpeg-0.6_p25767.ebuild, -ffmpeg-0.6.90_rc0-r2.ebuild,
+  -files/avparser.patch, -files/avutil_aes_sha_h.patch:
+  remove old
 
   10 Jul 2011; Raúl Porcel <armin76@gentoo.org> ffmpeg-0.7_rc1.ebuild:
   ia64/sparc stable wrt #365273
