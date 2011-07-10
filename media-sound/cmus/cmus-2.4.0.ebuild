@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.4.0.ebuild,v 1.1 2011/04/25 12:55:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.4.0.ebuild,v 1.2 2011/07/10 07:30:52 fauli Exp $
 
 EAPI=4
 inherit eutils multilib
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="aac alsa ao debug examples flac mad mikmod modplug mp4 musepack oss
 pidgin pulseaudio unicode vorbis wavpack wma zsh-completion"
 
-DEPEND="sys-libs/ncurses[unicode?]
+CDEPEND="sys-libs/ncurses[unicode?]
 	aac? ( media-libs/faad2 )
 	alsa? ( >=media-libs/alsa-lib-1.0.11 )
 	ao? (  media-libs/libao )
@@ -31,7 +31,9 @@ DEPEND="sys-libs/ncurses[unicode?]
 	vorbis? ( >=media-libs/libvorbis-1.0 )
 	wavpack? ( media-sound/wavpack )
 	wma? ( virtual/ffmpeg )"
-RDEPEND="${DEPEND}
+DEPEND="${CDEPEND}
+	dev-util/pkgconfig"
+RDEPEND="${CDEPEND}
 	zsh-completion? ( app-shells/zsh )
 	pidgin? ( net-im/pidgin
 		dev-python/dbus-python )"
