@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.93 2011/07/06 05:45:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.94 2011/07/10 17:47:59 aballier Exp $
+
+*freebsd-lib-8.2-r1 (10 Jul 2011)
+
+  10 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  +files/freebsd-lib-bsdxml2expat.patch, +freebsd-lib-8.2-r1.ebuild:
+  do not build nor install libbsdxml which is a pale copy of libexpat; symlink
+  the .so so that -lbsdxml still works
 
 *freebsd-lib-8.2 (06 Jul 2011)
 
