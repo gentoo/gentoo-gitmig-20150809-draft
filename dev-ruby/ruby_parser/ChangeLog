@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby_parser
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.25 2011/04/16 17:16:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.26 2011/07/10 23:01:38 halcy0n Exp $
+
+  10 Jul 2011; Mark Loeser <halcy0n@gentoo.org> ruby_parser-2.0.5.ebuild:
+  Stable for ppc64; bug #355299
 
   16 Apr 2011; Raúl Porcel <armin76@gentoo.org> ruby_parser-2.0.5.ebuild:
   ia64 stable wrt #355299
