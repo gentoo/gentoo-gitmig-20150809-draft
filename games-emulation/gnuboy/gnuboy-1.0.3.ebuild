@@ -1,12 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnuboy/gnuboy-1.0.3.ebuild,v 1.13 2007/07/06 18:48:05 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gnuboy/gnuboy-1.0.3.ebuild,v 1.14 2011/07/10 02:16:07 mr_bones_ Exp $
 
+EAPI=2
 inherit autotools eutils games
 
 DESCRIPTION="Gameboy emulator with multiple renderers"
-HOMEPAGE="http://gnuboy.unix-fu.org/"
-SRC_URI="http://gnuboy.unix-fu.org/src/${P}.tar.gz"
+HOMEPAGE="http://code.google.com/p/gnuboy/"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,16 +23,14 @@ DEPEND="${RDEPEND}
 	X? ( x11-proto/xextproto
 		x11-proto/xproto )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-exec-stack.patch \
 		"${FILESDIR}"/${P}-linux-headers.patch
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 
 	if ! use X && ! use svga && ! use fbcon; then
@@ -47,7 +46,6 @@ src_compile() {
 		${myconf} \
 		--disable-arch \
 		--disable-optimize
-	emake || die "emake failed"
 }
 
 src_install() {
