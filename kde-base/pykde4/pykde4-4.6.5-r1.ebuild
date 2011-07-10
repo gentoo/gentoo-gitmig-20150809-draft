@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.6.5-r1.ebuild,v 1.1 2011/07/09 15:14:06 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.6.5-r1.ebuild,v 1.2 2011/07/10 22:47:18 abcd Exp $
 
 EAPI=3
 
@@ -138,7 +138,7 @@ src_install() {
 	}
 	python_execute_function installation
 
-	python_merge_intermediate_installation_images "${T}/images/${PYTHON_ABI}"
+	python_merge_intermediate_installation_images "${T}/images"
 
 	# As we don't call the eclass's src_install, we have to install the docs manually
 	DOCS=("${S}"/${KMMODULE}/{AUTHORS,NEWS,README})
