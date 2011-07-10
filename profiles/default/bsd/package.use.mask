@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.18 2011/05/09 14:19:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.19 2011/07/10 17:38:20 aballier Exp $
 
 # Sebastian Pipping <sping@gentoo.org> (22 Feb 2011)
 # No dev-util/source-highlight or media-sound/lilypond here, yet (bug #356069, bug #344289)
@@ -51,7 +51,8 @@ media-video/vlc dc1394 ieee1394
 
 # Alexis Ballier <aballier@gentoo.org> (8 Aug 2008)
 # Depends on torque which is a linux only thing
-sys-cluster/openmpi pbs
+# lksctp-tools is linux only too
+sys-cluster/openmpi pbs sctp
 
 # Alexis Ballier <aballier@gentoo.org> (25 Sep 2008)
 # elf -> dev-libs/elfutils is too tight to the gnu libc

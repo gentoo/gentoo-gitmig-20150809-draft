@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.59 2011/07/09 21:20:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.60 2011/07/10 17:38:20 aballier Exp $
+
+  10 Jul 2011; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  mask sctp for openmpi, linux only
 
   09 Jul 2011; Alexis Ballier <aballier@gentoo.org> fbsd/make.defaults:
   disable sandbox by default, bug #374425
