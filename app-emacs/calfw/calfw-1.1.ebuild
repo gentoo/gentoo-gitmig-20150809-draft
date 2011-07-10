@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/calfw/calfw-0.1-r1.ebuild,v 1.1 2011/04/12 05:40:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/calfw/calfw-1.1.ebuild,v 1.1 2011/07/10 03:16:06 naota Exp $
 
 EAPI=3
 NEED_EMACS=22
@@ -27,7 +27,5 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.1-cl.patch
-	epatch "${FILESDIR}"/${PN}-0.1-howm-menu.patch
 	use howm || rm -f calfw-howm.el
 }
