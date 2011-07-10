@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/highline
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.51 2011/05/14 05:53:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/highline/ChangeLog,v 1.52 2011/07/10 23:06:54 halcy0n Exp $
+
+  10 Jul 2011; Mark Loeser <halcy0n@gentoo.org> highline-1.6.1.ebuild:
+  Stable for ppc64; bug #357491
 
 *highline-1.6.2 (14 May 2011)
 
