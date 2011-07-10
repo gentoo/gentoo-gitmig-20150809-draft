@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/blohg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/ChangeLog,v 1.6 2011/06/26 18:10:08 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/blohg/ChangeLog,v 1.7 2011/07/10 05:31:21 rafaelmartins Exp $
+
+*blohg-0.6 (10 Jul 2011)
+
+  10 Jul 2011; Rafael G. Martins <rafaelmartins@gentoo.org> +blohg-0.6.ebuild,
+  blohg-9999.ebuild:
+  Version bump. Fixed flask dependency for the live ebuild.
 
 *blohg-9999 (26 Jun 2011)
 
