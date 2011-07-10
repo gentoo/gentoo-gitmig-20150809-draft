@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-io
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/ChangeLog,v 1.51 2011/03/17 09:31:41 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-io/ChangeLog,v 1.52 2011/07/10 21:50:03 halcy0n Exp $
+
+  10 Jul 2011; Mark Loeser <halcy0n@gentoo.org> commons-io-2.0.1.ebuild:
+  Stable for ppc/ppc64; bug #356551
 
   17 Mar 2011; Thomas Kahle <tomka@gentoo.org> commons-io-2.0.1.ebuild:
   x86 stable per bug 356551
