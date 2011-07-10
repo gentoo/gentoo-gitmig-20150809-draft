@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils-config
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.43 2011/04/23 16:49:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.44 2011/07/10 23:39:04 halcy0n Exp $
+
+  10 Jul 2011; Mark Loeser <halcy0n@gentoo.org> binutils-config-2-r1.ebuild:
+  Stable for ppc64; bug #361849
 
   23 Apr 2011; Raúl Porcel <armin76@gentoo.org> binutils-config-2-r1.ebuild:
   alpha/ia64/m68k/s390/sh/sparc/x86 stable wrt #361849
