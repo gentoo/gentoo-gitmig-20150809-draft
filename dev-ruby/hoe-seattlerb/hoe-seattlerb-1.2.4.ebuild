@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/hoe-seattlerb-1.2.4.ebuild,v 1.8 2011/04/16 17:11:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/hoe-seattlerb-1.2.4.ebuild,v 1.9 2011/07/10 22:51:21 halcy0n Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 jruby"
@@ -19,7 +19,7 @@ HOMEPAGE="http://seattlerb.rubyforge.org/hoe-seattlerb"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ia64 ppc ~ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 ~hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE=""
 
 ruby_add_rdepend '>=dev-ruby/hoe-2.8.0 >=dev-ruby/minitest-2.0.0'
