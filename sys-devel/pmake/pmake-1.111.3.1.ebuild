@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.111.3.1.ebuild,v 1.5 2011/07/10 14:20:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/pmake/pmake-1.111.3.1.ebuild,v 1.6 2011/07/10 14:29:24 armin76 Exp $
 
 inherit eutils toolchain-funcs versionator
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://debian/pool/main/p/pmake/${DEBIAN_SOURCE}
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~ia64 ~mips ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 arm ia64 ~mips ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=""
