@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-aacenc/vo-aacenc-0.1.1.ebuild,v 1.9 2011/06/29 14:52:50 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-aacenc/vo-aacenc-0.1.1.ebuild,v 1.10 2011/07/10 10:20:45 maekke Exp $
 
 EAPI=4
 
@@ -31,6 +31,7 @@ SLOT="0"
 IUSE="examples static-libs neon"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-neon.patch
 	[[ ${PV} == *9999 ]] && eautoreconf
 }
 
