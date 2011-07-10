@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/terminal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.66 2011/06/27 11:05:36 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.67 2011/07/10 10:35:34 maekke Exp $
+
+  10 Jul 2011; Markus Meier <maekke@gentoo.org> terminal-0.4.8.ebuild:
+  arm stable, bug #372989
 
   27 Jun 2011; Christoph Mende <angelos@gentoo.org> terminal-0.4.8.ebuild:
   Stable on amd64 wrt bug #372989
