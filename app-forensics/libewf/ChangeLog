@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/libewf
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/ChangeLog,v 1.8 2010/02/27 10:25:19 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/ChangeLog,v 1.9 2011/07/10 15:44:18 hwoarang Exp $
+
+  10 Jul 2011; Markos Chandras <hwoarang@gentoo.org> libewf-20100226.ebuild:
+  Stable on amd64 wrt bug #374321
 
   27 Feb 2010; Patrick Lauer <patrick@gentoo.org> libewf-20100226.ebuild:
   Improving rawio useflag for #307043. Thanks to Kalin KOZHUHAROV
