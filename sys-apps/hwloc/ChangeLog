@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwloc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.8 2011/07/02 16:26:37 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/ChangeLog,v 1.9 2011/07/10 16:23:49 aballier Exp $
+
+  10 Jul 2011; Alexis Ballier <aballier@gentoo.org> hwloc-1.1.1-r1.ebuild:
+  keyword ~x86-fbsd, bug #372885
 
 *hwloc-1.1.1-r1 (02 Jul 2011)
 
