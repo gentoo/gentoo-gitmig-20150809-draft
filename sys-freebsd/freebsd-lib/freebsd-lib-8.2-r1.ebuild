@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-8.2-r1.ebuild,v 1.1 2011/07/10 17:47:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-8.2-r1.ebuild,v 1.2 2011/07/10 17:49:25 aballier Exp $
 
 EAPI=2
 
@@ -78,7 +78,7 @@ pkg_setup() {
 	fi
 }
 
-PATCHES=( 
+PATCHES=(
 	"${FILESDIR}/${PN}-6.0-pmc.patch"
 	"${FILESDIR}/${PN}-6.0-gccfloat.patch"
 	"${FILESDIR}/${PN}-6.0-flex-2.5.31.patch"
