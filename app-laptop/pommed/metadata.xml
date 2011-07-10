@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>cedk@gentoo.org</email>
+  <email>naota@gentoo.org</email>
 </maintainer>
 <longdescription> pommed handles the hotkeys found on the Apple MacBook Pro,
 MacBook and PowerBook laptops and adjusts the LCD backlight, sound volume,

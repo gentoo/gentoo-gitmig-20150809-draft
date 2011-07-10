@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/pommed
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.52 2011/03/27 11:45:20 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.53 2011/07/10 03:49:45 naota Exp $
+
+  10 Jul 2011; Naohiro Aota <naota@gentoo.org> metadata.xml:
+  Change maintainer to me
 
   27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> pommed-1.21-r1.ebuild,
   pommed-1.30.ebuild, pommed-1.31.ebuild:
