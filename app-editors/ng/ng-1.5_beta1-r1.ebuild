@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ng/ng-1.5_beta1-r1.ebuild,v 1.2 2010/06/28 18:04:38 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ng/ng-1.5_beta1-r1.ebuild,v 1.3 2011/07/10 16:40:38 naota Exp $
 
 inherit eutils
 
@@ -27,7 +27,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${MY_P}-ncurses.patch"
+	epatch "${FILESDIR}/${MY_P}-configure.patch"
 	sed -i -e "/NO_BACKUP/s/undef/define/" config.h || die "sed failed"
+
+	autoconf sys/unix/configure.in > configure
 }
 
 src_compile() {
