@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/tsmuxer-1.10.6-r1.ebuild,v 1.3 2011/01/06 03:35:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/tsmuxer-1.10.6-r1.ebuild,v 1.4 2011/07/10 02:24:10 sbriesen Exp $
 
 EAPI="2"
 
@@ -8,7 +8,8 @@ inherit base qt4-r2
 
 DESCRIPTION="Utility to create and demux TS and M2TS files"
 HOMEPAGE="http://www.smlabs.net/tsmuxer_en.html"
-SRC_URI="http://www.smlabs.net/tsMuxer/tsMuxeR_shared_${PV}.tar.gz"
+SRC_URI="http://www.smlabs.net/tsMuxer/tsMuxeR_shared_${PV}.tar.gz
+	http://sbriesen.de/gentoo/distfiles/tsmuxer-icon.png"
 LICENSE="SmartLabs"
 SLOT="0"
 
@@ -55,7 +56,7 @@ src_install() {
 	if use qt4; then
 		doexe tsMuxerGUI
 		dosym ../${PN}/bin/tsMuxerGUI /opt/bin
-		newicon "${FILESDIR}/icon.png" "${PN}.png"
+		newicon "${DISTDIR}/${PN}-icon.png" "${PN}.png"
 		make_desktop_entry tsMuxerGUI "tsMuxeR GUI" "${PN}" "Qt;AudioVideo;Video"
 	fi
 
