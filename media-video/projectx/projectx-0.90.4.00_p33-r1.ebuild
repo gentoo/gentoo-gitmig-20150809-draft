@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.90.4.00_p33-r1.ebuild,v 1.3 2010/08/14 03:02:11 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.90.4.00_p33-r1.ebuild,v 1.4 2011/07/10 02:46:21 sbriesen Exp $
 
 EAPI="3"
 
@@ -14,7 +14,8 @@ DESCRIPTION="Converts, splits and demuxes DVB and other MPEG recordings"
 HOMEPAGE="http://project-x.sourceforge.net/"
 SRC_URI="http://sbriesen.de/gentoo/distfiles/${P}.tar.xz
 	http://sbriesen.de/gentoo/distfiles/${PN}-idctfast.tar.xz
-	http://sbriesen.de/gentoo/distfiles/${XDG_P}.java.xz"
+	http://sbriesen.de/gentoo/distfiles/${XDG_P}.java.xz
+	http://sbriesen.de/gentoo/distfiles/${PN}-icon.png"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -117,7 +118,7 @@ src_install() {
 		java-pkg_dolauncher ${PN}_gui --main $(mainclass) \
 			--java_args "-Xmx256m"
 		dosym ${PN}_gui /usr/bin/${PN} || die
-		newicon "${FILESDIR}/icon.png" "${PN}.png"
+		newicon "${DISTDIR}/${PN}-icon.png" "${PN}.png"
 		domenu *.desktop || die
 	else
 		dosym ${PN}_cli /usr/bin/${PN} || die

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/projectx
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.46 2010/11/10 19:17:49 billie Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.47 2011/07/10 02:46:21 sbriesen Exp $
+
+  10 Jul 2011; Stefan Briesenick <sbriesen@gentoo.org>
+  projectx-0.90.4.00_p33-r1.ebuild, -files/icon.png:
+  icon.png moved to distfiles
 
   10 Nov 2010; Daniel Pielmeier <billie@gentoo.org>
   -projectx-0.90.4.00_p32.ebuild,
