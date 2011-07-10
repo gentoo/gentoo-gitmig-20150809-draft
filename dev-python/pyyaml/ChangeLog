@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyyaml
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyyaml/ChangeLog,v 1.22 2010/09/30 09:06:43 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyyaml/ChangeLog,v 1.23 2011/07/10 12:31:55 sbriesen Exp $
+
+*pyyaml-3.10 (10 Jul 2011)
+
+  10 Jul 2011; Stefan Briesenick <sbriesen@gentoo.org> +pyyaml-3.10.ebuild:
+  version bump. new version supports python 3.2. solving bug #318925.
 
   30 Sep 2010; Fabian Groffen <grobian@gentoo.org> pyyaml-3.09.ebuild:
   Marked ~ppc-macos, ~x86-solaris
