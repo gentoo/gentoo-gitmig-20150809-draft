@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/cronie
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/ChangeLog,v 1.15 2011/07/10 19:41:09 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/ChangeLog,v 1.16 2011/07/10 19:53:23 polynomial-c Exp $
+
+  10 Jul 2011; Lars Wendler <polynomial-c@gentoo.org> cronie-1.4.6.ebuild:
+  Fixed typo
 
 *cronie-1.4.8 (10 Jul 2011)
 *cronie-1.4.4-r1 (10 Jul 2011)
