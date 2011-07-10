@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/autofs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.112 2011/07/01 11:24:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.113 2011/07/10 10:29:57 maekke Exp $
+
+  10 Jul 2011; Markus Meier <maekke@gentoo.org> autofs-5.0.5-r4.ebuild:
+  arm stable, bug #372835
 
 *autofs-5.0.6-r1 (01 Jul 2011)
 
