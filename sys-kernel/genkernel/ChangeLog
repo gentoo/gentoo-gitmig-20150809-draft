@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.255 2011/07/03 22:38:48 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.256 2011/07/10 08:13:48 hwoarang Exp $
+
+  10 Jul 2011; Markos Chandras <hwoarang@gentoo.org> genkernel-3.4.16.ebuild:
+  Stable on amd64 wrt bug #369409
 
 *genkernel-3.4.17 (03 Jul 2011)
 
