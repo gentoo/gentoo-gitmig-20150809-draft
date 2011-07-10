@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/pianobar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pianobar/ChangeLog,v 1.2 2011/05/07 01:12:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pianobar/ChangeLog,v 1.3 2011/07/10 06:07:55 radhermit Exp $
+
+*pianobar-2011.07.09 (10 Jul 2011)
+
+  10 Jul 2011; Tim Harder <radhermit@gentoo.org> -pianobar-2011.04.27.ebuild,
+  -files/pianobar-2011.04.27-linking.patch, +pianobar-2011.07.09.ebuild:
+  Version bump and remove old.
 
   07 May 2011; Tim Harder <radhermit@gentoo.org> pianobar-2011.04.27.ebuild:
   Use docinto/dodoc instead of insinto/doins.
