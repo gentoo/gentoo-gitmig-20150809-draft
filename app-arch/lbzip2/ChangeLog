@@ -1,9 +1,9 @@
 # ChangeLog for app-arch/lbzip2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.13 2011/07/10 17:33:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.14 2011/07/10 17:34:39 armin76 Exp $
 
   10 Jul 2011; Raúl Porcel <armin76@gentoo.org> lbzip2-0.23-r1.ebuild:
-  Add ~ia64/~s390/~sh/~sparc wrt #370685
+  Add ~ia64/~m68k/~s390/~sh/~sparc wrt #370685
 
   12 Jun 2011; Markus Meier <maekke@gentoo.org> lbzip2-0.23-r1.ebuild:
   add ~arm, bug #370685
