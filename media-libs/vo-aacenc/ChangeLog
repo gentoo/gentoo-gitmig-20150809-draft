@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vo-aacenc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-aacenc/ChangeLog,v 1.14 2011/07/10 10:45:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-aacenc/ChangeLog,v 1.15 2011/07/10 14:45:45 armin76 Exp $
+
+  10 Jul 2011; Raúl Porcel <armin76@gentoo.org> vo-aacenc-0.1.1.ebuild:
+  ia64/sparc stable wrt #365273
 
   10 Jul 2011; Markus Meier <maekke@gentoo.org> vo-aacenc-0.1.1.ebuild:
   arm stable, bug #365273
