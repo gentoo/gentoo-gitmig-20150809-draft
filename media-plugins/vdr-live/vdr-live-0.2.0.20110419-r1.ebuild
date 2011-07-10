@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.2.0.20110419.ebuild,v 1.1 2011/07/03 12:13:15 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-live/vdr-live-0.2.0.20110419-r1.ebuild,v 1.1 2011/07/10 03:40:52 hd_brummy Exp $
 
 EAPI="3"
 
@@ -14,12 +14,12 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="pcre ssl"
+IUSE="ssl"
 
 DEPEND="media-video/vdr
 	>=dev-libs/tntnet-2.0[ssl=,sdk]
 	>=dev-libs/cxxtools-2.0
-	pcre? ( >=dev-libs/libpcre-8.12 )"
+	>=dev-libs/libpcre-8.12[cxx]"
 
 RDEPEND="${DEPEND}"
 
@@ -51,9 +51,7 @@ src_prepare() {
 
 	sed -e "s/ERROR:/WARNING:/" -i tntconfig.cpp
 
-	if ! use pcre; then
-		sed -i "s:^HAVE_LIBPCRECPP:#HAVE_LIBPCRECPP:" Makefile
-	fi
+	sed -i "s:^HAVE_LIBPCRECPP:#HAVE_LIBPCRECPP:" Makefile
 
 	if ! has_version ">=media-video/vdr-1.7.13"; then
 	sed -i "s:-include \$(VDRDIR)/Make.global:#-include \$(VDRDIR)/Make.global:" Makefile
