@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-ssl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ssl/ChangeLog,v 1.1 2010/08/13 23:37:28 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ssl/ChangeLog,v 1.2 2011/07/11 18:41:53 grobian Exp $
+
+  11 Jul 2011; Fabian Groffen <grobian@gentoo.org> ruby-ssl-0.ebuild:
+  Add Prefix keywords, bug #374763
 
 *ruby-ssl-3 (13 Aug 2010)
 *ruby-ssl-2 (13 Aug 2010)
