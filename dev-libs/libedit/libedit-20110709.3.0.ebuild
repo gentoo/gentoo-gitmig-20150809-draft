@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/libedit-20110709.3.0.ebuild,v 1.1 2011/07/11 19:23:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/libedit-20110709.3.0.ebuild,v 1.2 2011/07/11 22:33:42 aballier Exp $
 
 EAPI=2
 
@@ -25,7 +25,11 @@ RDEPEND=${DEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-PATCHES=( "${FILESDIR}/${PN}-ncursesprivate.patch" )
+PATCHES=(
+	"${FILESDIR}/${PN}-ncursesprivate.patch"
+	"${FILESDIR}/${PN}-20100424.3.0-bsd.patch"
+	"${FILESDIR}/${PN}-20110709.3.0-weak-reference.patch"
+	)
 
 src_configure() {
 	econf \
