@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libgamin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/ChangeLog,v 1.25 2010/06/16 18:43:43 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/ChangeLog,v 1.26 2011/07/11 04:16:29 ssuominen Exp $
+
+  11 Jul 2011; Samuli Suominen <ssuominen@gentoo.org>
+  libgamin-0.1.10-r2.ebuild:
+  Stop depending on dev-util/pkgconfig wrt #374775 by dragos240. USE="static-libs"
+  and remove libtool archive.
 
   16 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   libgamin-0.1.10-r2.ebuild,
