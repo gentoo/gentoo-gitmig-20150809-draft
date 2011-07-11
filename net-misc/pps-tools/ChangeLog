@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/pps-tools
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pps-tools/ChangeLog,v 1.1 2011/07/11 04:29:38 robbat2 Exp $
+
+*pps-tools-0.0.20110710 (11 Jul 2011)
+
+  11 Jul 2011; Robin H. Johnson <robbat2@gentoo.org>
+  +pps-tools-0.0.20110710.ebuild, +metadata.xml:
+  New package requested by bug #374613. Initial ebuild by Robin H. Johnson
+  <robbat2@gentoo.org>.
+
