@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libproccpuinfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libproccpuinfo/ChangeLog,v 1.22 2011/05/07 04:01:12 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libproccpuinfo/ChangeLog,v 1.23 2011/07/11 15:36:38 mattst88 Exp $
+
+  11 Jul 2011; Matt Turner <mattst88@gentoo.org> libproccpuinfo-0.0.8.ebuild:
+  Added ~mips
 
   07 May 2011; Matt Turner <mattst88@gentoo.org>
   libproccpuinfo-0.0.8.ebuild:
