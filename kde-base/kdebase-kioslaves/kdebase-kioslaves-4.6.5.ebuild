@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-4.6.5.ebuild,v 1.1 2011/07/09 15:13:56 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-kioslaves/kdebase-kioslaves-4.6.5.ebuild,v 1.2 2011/07/11 19:38:22 dilfridge Exp $
 
 EAPI=4
 
@@ -36,6 +36,8 @@ KMEXTRA="
 	kioexec
 	kdeeject
 "
+
+PATCHES=( "${FILESDIR}/${PN}-4.6.4-nfs.patch" )
 
 src_configure() {
 	mycmakeargs=(
