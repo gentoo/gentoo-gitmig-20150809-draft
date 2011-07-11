@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-MakeMaker/ExtUtils-MakeMaker-6.580.0.ebuild,v 1.1 2011/07/09 17:37:47 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-MakeMaker/ExtUtils-MakeMaker-6.580.0.ebuild,v 1.2 2011/07/11 09:59:28 tove Exp $
 
 EAPI=4
 MODULE_VERSION="6.58"
@@ -14,15 +14,17 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="
-	>=virtual/perl-CPAN-Meta-2.110.930
 	>=virtual/perl-ExtUtils-Command-1.16
 	>=virtual/perl-ExtUtils-Install-1.52
 	>=virtual/perl-ExtUtils-Manifest-1.58
-	>=virtual/perl-Parse-CPAN-Meta-1.440.100
 	>=virtual/perl-File-Spec-0.8
 "
 RDEPEND="${DEPEND}
 	!!<dev-lang/perl-5.8.8-r7"
+PDEPEND="
+	>=virtual/perl-CPAN-Meta-2.110.930
+	>=virtual/perl-Parse-CPAN-Meta-1.440.100
+"
 
 PATCHES=(
 	"${FILESDIR}/6.58-delete_packlist_podlocal.patch"
