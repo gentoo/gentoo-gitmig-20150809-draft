@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.12.26-r1.ebuild,v 1.2 2011/05/27 06:32:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.12.33.ebuild,v 1.1 2011/07/11 21:15:22 scarabeus Exp $
 
 EAPI=4
 
-inherit flag-o-matic depend.apache eutils wxwidgets autotools autotools-utils
+inherit flag-o-matic eutils wxwidgets autotools base
 
 DESCRIPTION="The Berkeley Open Infrastructure for Network Computing"
 HOMEPAGE="http://boinc.ssl.berkeley.edu/"
@@ -44,8 +44,8 @@ DEPEND="${RDEPEND}
 "
 
 PATCHES=(
-	"${FILESDIR}/${PV}-fix_subdirs.patch"
-	"${FILESDIR}/${PV}-libnotify-0.7.patch"
+	"${FILESDIR}/6.12.26-fix_subdirs.patch"
+	"${FILESDIR}/6.12.26-libnotify-0.7.patch"
 )
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
@@ -53,12 +53,12 @@ AUTOTOOLS_IN_SOURCE_BUILD=1
 src_prepare() {
 	# use system ssl certificates
 	mkdir "${S}"/curl
-	cp /etc/ssl/certs/ca-certificates.crt "${S}"/curl/ca-bundle.crt
+	ln -s /etc/ssl/certs/ca-certificates.crt "${S}"/curl/ca-bundle.crt
 
 	# prevent bad changes in compile flags, bug 286701
 	sed -i -e "s:BOINC_SET_COMPILE_FLAGS::" configure.ac || die "sed failed"
 
-	autotools-utils_src_prepare
+	base_src_prepare
 
 	eautoreconf
 }
@@ -66,8 +66,6 @@ src_prepare() {
 src_configure() {
 	local wxconf=""
 
-	# define preferable CFLAGS (recommended by upstream)
-	append-flags -O3 -funroll-loops -fforce-addr -ffast-math
 	# add gtk includes
 	append-flags "$(pkg-config --cflags gtk+-2.0)"
 
@@ -80,23 +78,21 @@ src_configure() {
 		wxconf+=" --without-wxdir"
 	fi
 
-	myeconfargs=(
-		--disable-server
-		--enable-client
-		--enable-dynamic-client-linkage
-		--disable-static
-		--enable-unicode
-		--with-ssl
-		$(use_with X x)
-		$(use_enable X manager)
+	econf \
+		--disable-server \
+		--enable-client \
+		--enable-dynamic-client-linkage \
+		--disable-static \
+		--enable-unicode \
+		--with-ssl \
+		$(use_with X x) \
+		$(use_enable X manager) \
 		${wxconf}
-	)
-	autotools-utils_src_configure
 }
 
 src_install() {
-	autotools-utils_src_install
-	remove_libtool_files all
+	default
+	find "${ED}" -name '*.la' -exec rm -f {} +
 
 	dodir /var/lib/${PN}/
 	keepdir /var/lib/${PN}/
