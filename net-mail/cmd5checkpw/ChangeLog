@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/cmd5checkpw
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/ChangeLog,v 1.56 2009/02/07 14:40:04 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cmd5checkpw/ChangeLog,v 1.57 2011/07/11 15:17:04 aballier Exp $
+
+  11 Jul 2011; Alexis Ballier <aballier@gentoo.org> cmd5checkpw-0.30-r1.ebuild:
+  keyword ~x86-fbsd
 
   07 Feb 2009; Raúl Porcel <armin76@gentoo.org> cmd5checkpw-0.30-r1.ebuild:
   arm/ia64/s390/sh stable wrt #253864

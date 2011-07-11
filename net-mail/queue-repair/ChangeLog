@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/queue-repair
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-repair/ChangeLog,v 1.11 2011/02/06 10:26:16 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-repair/ChangeLog,v 1.12 2011/07/11 15:15:31 aballier Exp $
+
+  11 Jul 2011; Alexis Ballier <aballier@gentoo.org> queue-repair-0.9.0.ebuild:
+  keyword ~x86-fbsd
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> queue-repair-0.9.0.ebuild:
   Drop to ~mips
