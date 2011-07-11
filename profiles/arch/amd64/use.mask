@@ -1,11 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.25 2011/07/01 21:54:28 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.26 2011/07/11 15:12:29 ssuominen Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -amd64
 
 # SECTION: Unmask
+
+# 2011/07/11 - Samuli Suominen <ssuominen@gentoo.org>
+# Unmask amd64/x86 only opencl support for nvidia-cuda-toolkit
+-opencl
 
 # 2011/07/01 - Alexey Shvetsov <alexxy@gentoo.org>
 # Infiniband stuff works here
