@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.9.ebuild,v 1.3 2011/05/07 18:00:52 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.9.ebuild,v 1.4 2011/07/11 18:51:40 jlec Exp $
 
 EAPI=2
+
 PYTHON_DEPEND="2:2.6"
 
 inherit cmake-utils fdo-mime multilib python
@@ -20,14 +21,15 @@ COMMON_DEPEND="
 	dev-libs/hyphen
 	dev-libs/libxml2
 	media-libs/fontconfig
-	>=media-libs/freetype-2
-	virtual/jpeg
-	=media-libs/lcms-1*
+	media-libs/freetype:2
+	media-libs/lcms:0
 	media-libs/libpng
 	media-libs/tiff
 	net-print/cups
 	sys-libs/zlib
+	x11-libs/qt-core:4
 	x11-libs/qt-gui:4
+	virtual/jpeg
 	spell? ( app-text/aspell )
 	pdf? ( app-text/podofo )
 	cairo? ( x11-libs/cairo[X,svg] )"

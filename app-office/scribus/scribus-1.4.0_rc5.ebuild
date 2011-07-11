@@ -1,13 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.0_rc5.ebuild,v 1.1 2011/06/22 22:11:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.0_rc5.ebuild,v 1.2 2011/07/11 18:51:40 jlec Exp $
 
 EAPI=2
+
 PYTHON_DEPEND="2:2.6"
 
 inherit cmake-utils fdo-mime multilib python
 
 MY_P="${P/_/.}"
+
 DESCRIPTION="Desktop publishing (DTP) and layout program"
 HOMEPAGE="http://www.scribus.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
@@ -22,14 +24,14 @@ COMMON_DEPEND="
 	dev-libs/libxml2
 	media-libs/fontconfig
 	media-libs/freetype:2
-	virtual/jpeg
 	media-libs/lcms:0
 	media-libs/libpng
 	media-libs/tiff
 	net-print/cups
 	sys-libs/zlib
-	x11-libs/qt-gui:4
 	x11-libs/qt-core:4
+	x11-libs/qt-gui:4
+	virtual/jpeg
 	spell? ( app-text/aspell )
 	pdf? ( app-text/podofo )
 	cairo? ( x11-libs/cairo[X,svg] )"
