@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libpng
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.290 2011/07/11 08:39:55 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.291 2011/07/11 18:49:21 grobian Exp $
+
+  11 Jul 2011; Fabian Groffen <grobian@gentoo.org> libpng-1.4.8-r1.ebuild:
+  Marked ~m68k-mint, bug #374155
 
   11 Jul 2011; Tony Vroon <chainsaw@gentoo.org> libpng-1.2.45.ebuild,
   libpng-1.4.8.ebuild:
