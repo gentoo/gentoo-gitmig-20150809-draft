@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-pam
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.46 2010/08/09 17:35:16 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.47 2011/07/11 05:03:33 mattst88 Exp $
+
+  11 Jul 2011; Matt Turner <mattst88@gentoo.org> kdebase-pam-7.ebuild:
+  Drop ~mips
 
   09 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org> kdebase-pam-7.ebuild:
   Drop alpha ia64 and sparc per the AT Lead permission.
