@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/pdftex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/ChangeLog,v 1.32 2011/02/27 16:47:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/ChangeLog,v 1.33 2011/07/11 19:06:34 aballier Exp $
+
+  11 Jul 2011; Alexis Ballier <aballier@gentoo.org> pdftex-1.40.11.ebuild:
+  keyword ~x86-fbsd, bug #347461
 
   27 Feb 2011; Raúl Porcel <armin76@gentoo.org> pdftex-1.40.11.ebuild:
   Add ~alpha/~ia64/~s390/~sh/~sparc wrt #347461
