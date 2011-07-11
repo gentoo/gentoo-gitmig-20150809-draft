@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.00.ebuild,v 1.12 2010/12/05 17:50:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-3.00.ebuild,v 1.13 2011/07/11 20:32:02 billie Exp $
 
 EAPI=2
 
@@ -67,6 +67,10 @@ src_prepare() {
 		ln -s i586-linux-cc.rul ${t}-linux-cc.rul || die
 		ln -s i586-linux-gcc.rul ${t}-linux-gcc.rul || die
 	done
+
+	# amd64-fbsd support
+	ln -s i386-freebsd-cc.rul amd64-freebsd-cc.rul || die
+	ln -s i386-freebsd-gcc.rul amd64-freebsd-gcc.rul || die
 
 	# Schily make setup.
 	cd "${S}"/DEFAULTS
