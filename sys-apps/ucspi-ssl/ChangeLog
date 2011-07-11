@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ucspi-ssl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ChangeLog,v 1.24 2011/01/13 21:57:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ChangeLog,v 1.25 2011/07/11 16:08:59 aballier Exp $
+
+  11 Jul 2011; Alexis Ballier <aballier@gentoo.org> ucspi-ssl-0.70-r1.ebuild:
+  keyword ~x86-fbsd
 
   13 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   ucspi-ssl-0.70-r1.ebuild:
