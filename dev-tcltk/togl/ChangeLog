@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/togl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/togl/ChangeLog,v 1.17 2010/09/30 17:20:25 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/togl/ChangeLog,v 1.18 2011/07/11 15:05:08 mattst88 Exp $
+
+  11 Jul 2011; Matt Turner <mattst88@gentoo.org> togl-2.0-r1.ebuild:
+  Added ~mips, bug 298612
 
   30 Sep 2010; Justin Lecher <jlec@gentoo.org> togl-2.0-r1.ebuild:
   keyworded for ~-linux prefix
