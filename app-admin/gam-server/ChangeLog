@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gam-server
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gam-server/ChangeLog,v 1.9 2009/09/25 10:50:13 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gam-server/ChangeLog,v 1.10 2011/07/11 04:25:40 ssuominen Exp $
+
+  11 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> gam-server-0.1.10.ebuild:
+  Stop depending on dev-util/pkgconfig wrt #374775 by dragos240
 
   25 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   -files/gamin-0.1.9-freebsd.patch, gam-server-0.1.10.ebuild:
