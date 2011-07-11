@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/xnec2c
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xnec2c/ChangeLog,v 1.5 2011/06/02 13:23:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xnec2c/ChangeLog,v 1.6 2011/07/11 13:50:28 tomjbe Exp $
+
+*xnec2c-1.5 (11 Jul 2011)
+
+  11 Jul 2011; Thomas Beierlein <tomjbe@gentoo.org> +xnec2c-1.5.ebuild:
+  Version bump.
 
   02 Jun 2011; Markus Meier <maekke@gentoo.org> xnec2c-1.4.ebuild:
   x86 stable, bug #368375
