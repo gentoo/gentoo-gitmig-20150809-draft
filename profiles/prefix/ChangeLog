@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.286 2011/07/07 11:22:05 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.287 2011/07/11 07:36:02 grobian Exp $
+
+  11 Jul 2011; Fabian Groffen <grobian@gentoo.org>
+  darwin/macos/10.4/package.mask:
+  Mask lsof on OSX 10.4 (Tiger), bug #357649
 
   07 Jul 2011; Fabian Groffen <grobian@gentoo.org> sunos/solaris/package.mask:
   Mask boost(-build) 1.45.0 and 1.46.1 since we cannot unpack the tars
