@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.110 2011/04/21 13:53:15 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.111 2011/07/11 10:08:28 gurligebis Exp $
+
+  11 Jul 2011; <gurligebis@gentoo.org> hostapd-0.7.3.ebuild:
+  Adding ~mips keyword, fixing bug #374733
 
   21 Apr 2011; Thomas Kahle <tomka@gentoo.org> hostapd-0.7.3.ebuild:
   x86 stable per bug 360997
