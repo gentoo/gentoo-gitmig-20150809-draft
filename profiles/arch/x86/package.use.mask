@@ -1,8 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.60 2011/07/03 23:36:32 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.61 2011/07/11 04:55:07 robbat2 Exp $
 
 # This file requires >=portage-2.1.1
+
+# Robin H. Johnson <robbat2@gentoo.org> (10 Jul 2011)
+# PPS should work on all arches, but only keyworded on amd64/x86
+>=net-misc/ntp-4.2.6_p3-r1 -parse-clocks
 
 # Alexey Shvetsov <alexxy@gentoo.org> (4 Jul 2011)
 # unmask maui use flag for torque
