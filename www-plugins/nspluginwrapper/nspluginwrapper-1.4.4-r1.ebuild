@@ -1,26 +1,25 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/nspluginwrapper-1.3.0.ebuild,v 1.4 2011/03/27 10:16:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/nspluginwrapper-1.4.4-r1.ebuild,v 1.1 2011/07/11 15:00:41 chutzpah Exp $
 
 EAPI=2
 
-inherit eutils nsplugins multilib flag-o-matic
+inherit eutils multilib nsplugins flag-o-matic
 
 DESCRIPTION="Netscape Plugin Wrapper - Load 32bit plugins on 64bit browser"
-HOMEPAGE="http://www.gibix.net/projects/nspluginwrapper/"
-#SRC_URI="http://www.gibix.net/projects/${PN}/files/${P}.tar.bz2"
-SRC_URI="mirror://debian/pool/contrib/n/${PN}/${P/-/_}.orig.tar.gz"
+HOMEPAGE="http://nspluginwrapper.org/"
+SRC_URI="http://web.mit.edu/davidben/Public/nspluginwrapper/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2:2
 	net-misc/curl
 	app-emulation/emul-linux-x86-xlibs
 	app-emulation/emul-linux-x86-gtklibs
-	|| ( >=sys-apps/util-linux-2.13 sys-apps/setarch )"
+	>=sys-apps/util-linux-2.13"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -45,12 +44,10 @@ autoinstall() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-gdk-native-windows.patch"
-	epatch "${FILESDIR}/${P}-inst-crash.patch"
-	epatch "${FILESDIR}/${P}-fix-npident-array-sending.patch"
-	epatch "${FILESDIR}/${P}-fortify.patch"
-	epatch "${FILESDIR}/${P}-offsetof.patch"
-	epatch "${FILESDIR}/${P}-asneeded.patch"
+	epatch "${FILESDIR}/${PN}-1.3.0-gdk-native-windows.patch"
+	epatch "${FILESDIR}/${PN}-1.4.2-parallel-make.patch"
+	epatch "${FILESDIR}/${P}-compile-on-hardened.patch"
+	sed -i -r "s:^libnoxshm_LDFLAGS = :libnoxshm_LDFLAGS = -L/usr/$(ABI=x86 get_libdir)/ :" Makefile
 }
 
 src_configure() {
@@ -68,12 +65,12 @@ src_compile() {
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
-	inst_plugin "/usr/$(get_libdir)/${PN}/x86_64/linux/npwrapper.so"
 	dosym "/usr/$(get_libdir)/${PN}/x86_64/linux/npconfig" "/usr/bin/${PN}"
+	keepdir "/usr/$(get_libdir)/${PLUGINS_DIR}"
 
-	dodoc NEWS README TODO ChangeLog
+	dodoc NEWS README TODO
 }
 
 pkg_postinst() {
