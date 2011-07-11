@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libedit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.51 2011/05/26 17:50:45 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.52 2011/07/11 19:23:35 aballier Exp $
+
+*libedit-20110709.3.0 (11 Jul 2011)
+
+  11 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  +libedit-20110709.3.0.ebuild, +files/libedit-ncursesprivate.patch:
+  version bump, depend on ncurses[static-libs?], bug #341733, move ncurses to
+  Libs.private, bug #336841
 
   26 May 2011; Naohiro Aota <naota@gentoo.org>
   -files/libedit-20050531-debian-to-gentoo.patch, -libedit-20050930.ebuild,
