@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.193 2011/07/06 16:40:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.194 2011/07/11 04:35:37 mattst88 Exp $
+
+  11 Jul 2011; Matt Turner <mattst88@gentoo.org> ocaml-3.12.1.ebuild:
+  Added ~mips, bug 319649
 
   06 Jul 2011; Alexis Ballier <aballier@gentoo.org> -ocaml-3.12.0.ebuild,
   -ocaml-3.12.0-r1.ebuild, -ocaml-3.12.1_rc1.ebuild:
