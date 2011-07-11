@@ -1,18 +1,18 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.14.0_beta1.ebuild,v 1.1 2011/07/11 01:52:14 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/pgadmin3-1.14.0_beta1.ebuild,v 1.2 2011/07/11 17:30:22 scarabeus Exp $
 
-EAPI="4"
+EAPI=4
 
 WX_GTK_VER="2.8"
+MY_PV=${PV/_/-}
+MY_P=${PN}-${MY_PV}
 
-inherit autotools multilib versionator wxwidgets
-
-MY_PV=$(replace_version_separator 3 '-')
+inherit autotools wxwidgets
 
 DESCRIPTION="wxWidgets GUI for PostgreSQL."
 HOMEPAGE="http://www.pgadmin.org/"
-SRC_URI="mirror://postgresql/${PN}/release/v${PV}/src/${PN}-${MY_PV}.tar.gz"
+SRC_URI="mirror://postgresql/${PN}/release/v${MY_PV}/src/${MY_P}.tar.gz"
 
 LICENSE="Artistic"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
@@ -25,9 +25,9 @@ DEPEND="x11-libs/wxGTK:2.8[X]
 	>=dev-libs/libxslt-1.1"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${PN}-${MY_PV}"
+S="${WORKDIR}/${MY_P}"
 
-pkg_setup() {
+pkg_pretend() {
 	local pgslot=$(postgresql-config show)
 
 	if [[ ${pgslot//.} < 84 ]] ; then
@@ -43,12 +43,13 @@ src_prepare() {
 }
 
 src_configure() {
-	econf --with-wx-version=2.8 \
+	econf \
+		--with-wx-version=2.8 \
 		$(use_enable debug)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	default
 
 	newicon "${S}/pgadmin/include/images/pgAdmin3.png" ${PN}.png
 
