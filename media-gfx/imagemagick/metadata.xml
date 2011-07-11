@@ -23,6 +23,9 @@
 		<flag name='lqr'>
 			enable experimental liquid rescale support
 		</flag>
+		<flag name='opencl'>
+			Enable OpenCL support
+		</flag>
 		<flag name='q32'>
 			set quantum depth to 32
 		</flag>
