@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/daemontools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools/ChangeLog,v 1.17 2010/10/17 03:46:48 leio Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools/ChangeLog,v 1.18 2011/07/11 15:26:11 aballier Exp $
+
+  11 Jul 2011; Alexis Ballier <aballier@gentoo.org> daemontools-0.76-r7.ebuild:
+  keyword ~x86-fbsd
 
   17 Oct 2010; Mart Raudsepp <leio@gentoo.org> daemontools-0.76-r5.ebuild:
   Drop to ~mips
