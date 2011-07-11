@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.40 2011/07/10 23:47:32 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.41 2011/07/11 04:31:32 mattst88 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -365,6 +365,10 @@ llvm
 # Matt Turner <mattst88@gentoo.org (14 Jun 2011)
 # pdfannotextractor needs java
 pdfannotextractor
+
+# Matt Turner <mattst88@gentoo.org) (11 Jul 2011)
+# xemacs dependencies not keyworded
+xemacs
 
 # Mips USE flags
 -n32
