@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.271 2011/07/07 14:11:36 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.272 2011/07/11 13:08:59 eras Exp $
+
+*postfix-2.7.5 (11 Jul 2011)
+
+  11 Jul 2011; Eray Aslan <eras@gentoo.org> +postfix-2.7.5.ebuild:
+  version bump
 
 *postfix-2.9_pre20110706 (07 Jul 2011)
 
