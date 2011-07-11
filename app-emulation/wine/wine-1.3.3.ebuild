@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.3.3.ebuild,v 1.8 2011/07/05 00:18:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.3.3.ebuild,v 1.9 2011/07/11 03:34:37 vapier Exp $
 
 EAPI="2"
 
@@ -44,6 +44,7 @@ MLIB_DEPS="amd64? (
 	)
 	openal? ( app-emulation/emul-linux-x86-sdl )
 	opengl? ( app-emulation/emul-linux-x86-opengl )
+	v4l? ( app-emulation/emul-linux-x86-medialibs )
 	app-emulation/emul-linux-x86-baselibs
 	>=sys-kernel/linux-headers-2.6
 	)"
