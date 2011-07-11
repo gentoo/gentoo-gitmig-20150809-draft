@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-2.0.1-r3.ebuild,v 1.8 2010/03/09 22:04:59 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-2.0.1-r3.ebuild,v 1.9 2011/07/11 19:52:51 aballier Exp $
 
-inherit eutils libtool
+inherit eutils libtool toolchain-funcs
 
 DESCRIPTION="XML parsing libraries"
 HOMEPAGE="http://expat.sourceforge.net/"
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/expat/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
-IUSE=""
+IUSE="elibc_FreeBSD"
 
 src_unpack() {
 	unpack ${A}
@@ -29,6 +29,9 @@ src_unpack() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die
+	# libgeom in /lib and ifconfig in /sbin require it on FreeBSD since we
+	# stripped the libbsdxml copy starting from freebsd-lib-8.2-r1
+	use elibc_FreeBSD && gen_usr_ldscript -a expat
 	dodoc Changes README || die
 	dohtml doc/* || die
 }
