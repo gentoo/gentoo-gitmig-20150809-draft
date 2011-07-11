@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.3.4-r3.ebuild,v 1.8 2010/07/09 02:26:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.3.4-r3.ebuild,v 1.9 2011/07/11 22:43:40 radhermit Exp $
 
 EAPI=2
 
@@ -63,6 +63,8 @@ pkg_postinst() {
 	elog "To enable it, edit /etc/cron.daily/rkhunter and follow the"
 	elog "directions."
 	elog "If you want ${PN} to send mail, you will need to install"
-	elog "virtual/mailx as well."
+	elog "virtual/mailx or alter the EMAIL_CMD variable in the"
+	elog "cron script and possibly the MAIL_CMD variable in the"
+	elog "${PN}.conf file to use another mail client."
 	bash-completion_pkg_postinst
 }
