@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/supybot-0.83.4.1-r1.ebuild,v 1.8 2010/11/04 12:48:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot/supybot-0.83.4.1-r1.ebuild,v 1.9 2011/07/11 12:23:47 neurogeek Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -30,7 +30,7 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
-DOCS="ACKS RELNOTES docs/*"
+DOCS="ACKS RELNOTES docs/[!man]*"
 
 src_install() {
 	distutils_src_install
