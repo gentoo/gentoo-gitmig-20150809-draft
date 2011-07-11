@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/xchat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.300 2011/07/11 00:01:13 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.301 2011/07/11 13:29:09 polynomial-c Exp $
+
+  11 Jul 2011; Lars Wendler <polynomial-c@gentoo.org> xchat-2.8.8-r1.ebuild,
+  xchat-2.8.8-r2.ebuild, +files/xchat-2.8.8-dbus.patch:
+  Fixed segfault with "+dbus -gtk" USE flags being set. Thanks to Claudio
+  Roberto França Pereira who reported this issue in bug #373975 and to Nathan
+  Phillip Brink for a working patch.
 
   11 Jul 2011; Matt Turner <mattst88@gentoo.org> xchat-2.8.8-r2.ebuild:
   Added ~mips, bug 313589

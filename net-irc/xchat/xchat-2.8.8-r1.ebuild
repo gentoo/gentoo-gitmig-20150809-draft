@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.8-r1.ebuild,v 1.7 2011/03/22 09:54:15 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.8-r1.ebuild,v 1.8 2011/07/11 13:29:09 polynomial-c Exp $
 
 EAPI=2
 
@@ -42,7 +42,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-input-box4.patch
+	epatch "${FILESDIR}"/${PN}-input-box4.patch \
+		"${FILESDIR}"/${P}-dbus.patch
 
 	use xchatdccserver && epatch "${DISTDIR}"/xchat-dccserver-0.6.patch.bz2
 
