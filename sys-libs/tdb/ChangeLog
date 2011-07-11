@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/tdb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.37 2011/07/07 04:30:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/ChangeLog,v 1.38 2011/07/11 00:16:00 halcy0n Exp $
+
+  11 Jul 2011; Mark Loeser <halcy0n@gentoo.org> tdb-1.2.7-r1.ebuild:
+  Stable on ppc/ppc64; bug #361055
 
   07 Jul 2011; Alexis Ballier <aballier@gentoo.org> tdb-1.2.9.ebuild:
   keyword ~x86-fbsd
