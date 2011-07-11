@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lsw/lsw-0.2.ebuild,v 1.1 2011/06/20 18:39:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lsw/lsw-0.2-r1.ebuild,v 1.1 2011/07/11 10:19:28 jer Exp $
 
 EAPI="4"
 
@@ -34,6 +34,6 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/share/man/man1
-	emake DESTDIR="${D}" PREFIX="/usr"
+	doman ${PN}.1
+	dobin ${PN}
 }
