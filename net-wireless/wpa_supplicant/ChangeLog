@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.161 2011/07/08 07:06:21 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.162 2011/07/11 10:06:34 gurligebis Exp $
+
+  11 Jul 2011; <gurligebis@gentoo.org> wpa_supplicant-0.7.3-r5.ebuild:
+  Adding ~mips keyword, fixing bug #374729
 
 *wpa_supplicant-0.7.3-r5 (08 Jul 2011)
 
