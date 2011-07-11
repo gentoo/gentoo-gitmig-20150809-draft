@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.95 2011/07/11 21:06:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.96 2011/07/11 21:08:18 aballier Exp $
+
+  11 Jul 2011; Alexis Ballier <aballier@gentoo.org> -freebsd-lib-8.2.ebuild:
+  remove old
 
   11 Jul 2011; Alexis Ballier <aballier@gentoo.org> freebsd-lib-8.2-r1.ebuild:
   fix cross compilation, build and install libthr/libpthread when cross
