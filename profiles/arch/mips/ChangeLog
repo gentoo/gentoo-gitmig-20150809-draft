@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.70 2011/07/11 04:31:32 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.71 2011/07/11 04:33:15 mattst88 Exp $
+
+  11 Jul 2011; Matt Turner <mattst88@gentoo.org> use.mask:
+  Add ocamlopt to use.mask
 
   11 Jul 2011; Matt Turner <mattst88@gentoo.org> use.mask:
   Add xemacs to use.mask
