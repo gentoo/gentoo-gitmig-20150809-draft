@@ -1,6 +1,17 @@
 # ChangeLog for sys-boot/plymouth-openrc-plugin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth-openrc-plugin/ChangeLog,v 1.3 2011/07/03 11:44:51 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth-openrc-plugin/ChangeLog,v 1.4 2011/07/11 12:50:06 aidecoe Exp $
+
+*plymouth-openrc-plugin-0.1.2 (11 Jul 2011)
+
+  11 Jul 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +plymouth-openrc-plugin-0.1.2.ebuild:
+  Version bump to 0.1.2. Fixes bug #374025.
+
+  v0.1.2 changes:
+
+  * Checking at runtime if /run/plymouth subdirectory exists and if doesn't,
+  it's being created.
 
   03 Jul 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
   plymouth-openrc-plugin-0.1.1.ebuild:
