@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kalzium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.193 2011/07/09 15:14:25 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.194 2011/07/11 03:31:41 tampakrap Exp $
+
+  11 Jul 2011; Theo Chatzimichos <tampakrap@gentoo.org> kalzium-4.6.5.ebuild,
+  -files/kalzium-4.6.49.9999-nolib.patch:
+  Remove unneeded patch
 
 *kalzium-4.6.5 (09 Jul 2011)
 

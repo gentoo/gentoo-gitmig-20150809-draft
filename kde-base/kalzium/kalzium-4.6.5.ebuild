@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/kalzium-4.6.5.ebuild,v 1.1 2011/07/09 15:14:25 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/kalzium-4.6.5.ebuild,v 1.2 2011/07/11 03:31:41 tampakrap Exp $
 
 EAPI=4
 
@@ -33,10 +33,6 @@ KMEXTRACTONLY="
 	libkdeedu/kdeeduui/
 	kalzium/libscience/
 "
-
-PATCHES=(
-	"${FILESDIR}"/${PN}-4.6.49.9999-nolib.patch
-)
 
 src_configure(){
 	# Fix missing finite()
