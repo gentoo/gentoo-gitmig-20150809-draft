@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/qjackctl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.69 2011/04/17 12:49:49 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.70 2011/07/11 18:43:16 aballier Exp $
+
+*qjackctl-0.3.8 (11 Jul 2011)
+
+  11 Jul 2011; Alexis Ballier <aballier@gentoo.org> +qjackctl-0.3.8.ebuild:
+  version bump, bug #374281
 
   17 Apr 2011; Thomas Kahle <tomka@gentoo.org> qjackctl-0.3.2.ebuild:
   Dropping to ~x86 b/c of bugs 331157, 363915.
