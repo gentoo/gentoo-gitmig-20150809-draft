@@ -1,6 +1,15 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.79 2011/07/10 02:30:17 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.80 2011/07/11 01:59:36 blueness Exp $
+
+  11 Jul 2011; Anthony G. Basile <blueness@gentoo.org>
+  -files/selinux-base-policy-20070329.diff,
+  -selinux-base-policy-20080525.ebuild,
+  -selinux-base-policy-20080525-r1.ebuild, -files/modules.conf.strict,
+  -files/modules.conf.strict.20070928, -files/modules.conf.strict.20080525,
+  -files/modules.conf.targeted, -files/modules.conf.targeted.20070928,
+  -files/modules.conf.targeted.20080525:
+  Removed all pre 2.20xx base policies
 
 *selinux-base-policy-2.20101213-r18 (10 Jul 2011)
 
