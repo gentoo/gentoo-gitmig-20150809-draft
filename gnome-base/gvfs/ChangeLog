@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.145 2011/06/27 11:41:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.146 2011/07/11 00:08:46 mattst88 Exp $
+
+  11 Jul 2011; Matt Turner <mattst88@gentoo.org> gvfs-1.6.7-r1.ebuild:
+  Added ~mips, bug 269287
 
 *gvfs-1.6.7-r1 (27 Jun 2011)
 
