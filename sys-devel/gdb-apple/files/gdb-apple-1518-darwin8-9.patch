@@ -1,0 +1,35 @@
+--- src/gdb/macosx/macosx-nat-dyld.c
++++ src/gdb/macosx/macosx-nat-dyld.c
+@@ -2083,7 +2083,9 @@
+     case MH_DYLIB:
+     case MH_DYLINKER:
+     case MH_BUNDLE:
++#ifdef MH_KEXT_BUNDLE
+     case MH_KEXT_BUNDLE:
++#endif
+       break;
+     case MH_FVMLIB:
+     case MH_PRELOAD:
+@@ -2412,7 +2414,9 @@
+       break;
+     case MH_DYLINKER:
+     case MH_BUNDLE:
++#ifdef MH_KEXT_BUNDLE
+     case MH_KEXT_BUNDLE:
++#endif
+       entry->reason = dyld_reason_dyld;
+       break;
+     default:
+--- src/gdb/macosx/macosx-nat-dyld-process.c
++++ src/gdb/macosx/macosx-nat-dyld-process.c
+@@ -407,7 +407,9 @@
+     case MH_DYLIB:
+       break;
+     case MH_BUNDLE:
++#ifdef MH_KEXT_BUNDLE
+     case MH_KEXT_BUNDLE:
++#endif
+       break;
+     default:
+       return;
+       return;
