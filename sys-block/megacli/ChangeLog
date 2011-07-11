@@ -1,6 +1,14 @@
 # ChangeLog for sys-block/megacli
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/ChangeLog,v 1.7 2011/05/26 18:12:27 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/ChangeLog,v 1.8 2011/07/11 18:42:13 idl0r Exp $
+
+*megacli-8.01.06 (11 Jul 2011)
+
+  11 Jul 2011; Christian Ruppert <idl0r@gentoo.org> -megacli-8.00.46.ebuild,
+  +megacli-8.01.06.ebuild, -files/1.01.40_Linux_Cli.txt,
+  -files/2.00.15_Linux_MegaCLI.txt, -files/4.00.11_Linux_MegaCLI.txt:
+  Version bump. Fixes bug 371375. Remove bundled sysfsutils. Some QA fixes.
+  Remove fixed DT_RPATH.
 
 *megacli-8.00.46 (26 May 2011)
 
