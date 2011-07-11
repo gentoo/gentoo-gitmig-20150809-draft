@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.103 2011/07/11 17:16:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.104 2011/07/11 18:27:32 dilfridge Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -621,7 +621,6 @@ debug-print "${LINENO} ${ECLASS} ${FUNCNAME}: SRC_URI is ${SRC_URI}"
 # Do some basic settings
 kde4-base_pkg_setup() {
 	debug-print-function ${FUNCNAME} "$@"
-	local gccversion
 
 	if has kdeprefix ${IUSE//+} && use kdeprefix; then
 		eerror "Sorry, kdeprefix support has been removed."
@@ -645,8 +644,8 @@ kde4-base_pkg_setup() {
 	# and for others we do just quick scan in pkg_setup because pkg_pretend
 	# executions consume quite some time.
 	if [[ ${MERGE_TYPE} != binary ]]; then
-		gccversion=$(gcc-major-version)$(gcc-minor-version)
-		[[ ${gccversion} < 43 ]] \
+		[[ $(gcc-major-version) -lt 4 ]] || \
+				( [[ $(gcc-major-version) -eq 4 && $(gcc-minor-version) -le 3 ]] ) \
 			&& die "Sorry, but gcc-4.3 and earlier wont work for KDE (see bug 354837)."
 	fi
 
