@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-8.2-r1.ebuild,v 1.3 2011/07/11 21:06:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-8.2-r1.ebuild,v 1.4 2011/07/11 21:27:30 aballier Exp $
 
 EAPI=2
 
@@ -321,13 +321,8 @@ src_install() {
 		return 0
 	fi
 
-	# Add symlinks (-> libthr) for legacy threading libraries, since these are
-	# not built by us (they are disabled in FreeBSD-7 anyway).
-	dosym libthr.a /usr/${mylibdir}/libpthread.a
-	dosym libthr.so /usr/${mylibdir}/libpthread.so
-	dosym libthr.a /usr/${mylibdir}/libc_r.a
-	dosym libthr.so /usr/${mylibdir}/libc_r.so
-	# Symlink libbsdxml to libexpat
+	# Symlink libbsdxml to libexpat as we use expat in favor of the renaming done
+	# on FreeBSD.
 	dosym libexpat.so /usr/${mylibdir}/libbsdxml.so
 
 	# install libstand files
