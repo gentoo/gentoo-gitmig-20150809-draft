@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/assogiate/assogiate-0.2.1.ebuild,v 1.6 2011/03/29 06:02:32 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/assogiate/assogiate-0.2.1.ebuild,v 1.7 2011/07/12 11:26:09 pacho Exp $
 
-EAPI="3"
+EAPI="4"
+GCONF_DEBUG="yes"
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="assoGiate is an editor of the file types database for GNOME"
 HOMEPAGE="http://www.kdau.com/projects/assogiate"
@@ -26,3 +27,13 @@ DEPEND="${RDEPEND}
 	dev-util/intltool"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
+
+src_prepare() {
+	gnome2_src_prepare
+
+	# Fix desktop file
+	epatch "${FILESDIR}/${P}-desktop.patch"
+
+	# Fix compilation, bug #374911
+	epatch "${FILESDIR}/${P}-typedialog.patch"
+}
