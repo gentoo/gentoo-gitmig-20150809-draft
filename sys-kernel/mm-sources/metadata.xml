@@ -3,8 +3,8 @@
 <pkgmetadata>
 	<herd>kernel</herd>
 	<maintainer>
-		<email>kernel@gentoo.org</email>
-		<name>Gentoo kernel herd</name>
+		<email>psomas@gentoo.org</email>
+		<name>Stratos Psomadakis</name>
 	</maintainer>
 	<longdescription>
 		Andrew Morton's patchset for 2.6. It contains experimental features,
@@ -12,5 +12,5 @@
 	</longdescription>
 	<use>
 		<flag name='deblob'>Remove binary blobs from kernel sources to provide libre license compliance.</flag>
-  	</use>
+	</use>
 </pkgmetadata>
