@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/widelands
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.33 2011/04/26 12:12:49 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/ChangeLog,v 1.34 2011/07/12 19:34:21 tupone Exp $
+
+*widelands-0.16 (12 Jul 2011)
+
+  12 Jul 2011; Tupone Alfredo <tupone@gentoo.org> +widelands-0.16.ebuild,
+  +files/widelands-0.16-goldmine.patch:
+  Version bump to 0.16 Bug #361983 by Marshall Banana
 
   26 Apr 2011; Tupone Alfredo <tupone@gentoo.org> widelands-0.15.ebuild,
   +files/widelands-0.15-gcc46.patch:
