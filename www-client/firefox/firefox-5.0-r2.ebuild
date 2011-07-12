@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-5.0-r2.ebuild,v 1.1 2011/07/06 05:14:18 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-5.0-r2.ebuild,v 1.2 2011/07/12 14:10:23 darkside Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -219,8 +219,8 @@ src_configure() {
 	# It doesn't compile on alpha without this LDFLAGS
 	use alpha && append-ldflags "-Wl,--no-relax"
 
-	mozconfig_annotate '' --prefix=/usr
-	mozconfig_annotate '' --libdir=/usr/$(get_libdir)
+	mozconfig_annotate '' --prefix="${EPREFIX}"/usr
+	mozconfig_annotate '' --libdir="${EPREFIX}"/usr/$(get_libdir)
 	mozconfig_annotate '' --enable-extensions="${MEXTENSIONS}"
 	mozconfig_annotate '' --disable-gconf
 	mozconfig_annotate '' --disable-mailnews
