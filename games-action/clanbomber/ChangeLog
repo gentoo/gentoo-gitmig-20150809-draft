@@ -1,6 +1,9 @@
 # ChangeLog for games-action/clanbomber
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/ChangeLog,v 1.14 2011/07/05 05:40:33 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/clanbomber/ChangeLog,v 1.15 2011/07/12 17:42:51 mr_bones_ Exp $
+
+  12 Jul 2011; Michael Sterrett <mr_bones_@gentoo.org> clanbomber-2.1.1.ebuild:
+  clean up deps and install (bug #374865)
 
 *clanbomber-2.1.1 (05 Jul 2011)
 
