@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.93 2011/07/03 09:13:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.94 2011/07/12 21:08:12 maekke Exp $
+
+  12 Jul 2011; Markus Meier <maekke@gentoo.org> py-1.4.3.ebuild:
+  arm stable, bug #373363
 
   03 Jul 2011; Markos Chandras <hwoarang@gentoo.org> py-1.4.3.ebuild:
   Stable on amd64 wrt bug #373363

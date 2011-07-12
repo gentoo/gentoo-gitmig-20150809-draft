@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytest
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.28 2011/07/07 07:29:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytest/ChangeLog,v 1.29 2011/07/12 21:06:20 maekke Exp $
+
+  12 Jul 2011; Markus Meier <maekke@gentoo.org> pytest-2.0.3.ebuild:
+  arm stable, bug #373363
 
   07 Jul 2011; Markos Chandras <hwoarang@gentoo.org>
   -files/pytest-2.0.0-nose-1.0+python-3.patch:
