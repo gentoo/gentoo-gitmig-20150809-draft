@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.8-r2.ebuild,v 1.6 2011/07/11 13:29:09 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.8-r2.ebuild,v 1.7 2011/07/12 07:39:59 polynomial-c Exp $
 
 EAPI=3
 
@@ -111,17 +111,28 @@ src_install() {
 		# Replace default pixmap icon
 		cp "48x48/xchat.png" "${D}/usr/share/pixmaps" || die
 	fi
+
+	# remove useless desktop entry when gtk USE flag is unset
+	if ! use gtk ; then
+		rm "${ED}"/usr/share/applications -rf
+	fi
 }
 
 pkg_postinst() {
-	elog
-	elog "XChat binary has been renamed from xchat-2 to xchat."
-	elog
-
-	if has_version net-irc/xchat-systray
-	then
-		elog "XChat now includes it's own systray icon, you may want to remove net-irc/xchat-systray."
+	if use gtk ; then
 		elog
+		elog "XChat binary has been renamed from xchat-2 to xchat."
+		elog
+
+		if has_version net-irc/xchat-systray
+		then
+			elog "XChat now includes it's own systray icon, you may want to remove net-irc/xchat-systray."
+			elog
+		fi
+	else
+		elog "You have disabled the gtk USE flag. This means you don't have"
+		elog "the GTK-GUI for xchat but only a text interface called \"xchat-text\"."
 	fi
+
 	gnome2_icon_cache_update
 }
