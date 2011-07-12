@@ -1,0 +1,12 @@
+# ChangeLog for x11-wm/i3
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/ChangeLog,v 1.1 2011/07/12 13:06:07 xarthisius Exp $
+
+*i3-3e_p3 (12 Jul 2011)
+
+  12 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> +files/i3-gentoo.diff,
+  +i3-3e_p3.ebuild, +metadata.xml:
+  Initial import. Ebuild based on extensive work done by Ondrej Sukup (mimi_vx)
+  <mimi.vx@gmail.com> and Andre-Patrick Bubel (moredread) <code@andre-bubel.de>
+  in sunrise overlay. Fixes bug 267476
+
