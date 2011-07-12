@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.151 2011/07/12 03:58:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.152 2011/07/12 04:08:52 vapier Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -404,11 +404,11 @@ test-flag-PROG() {
 	local comp=$1
 	local flags="$2"
 
-	[[ -z ${comp} || -z ${flags} ]] && \
-		return 1
+	[[ -z ${comp} || -z ${flags} ]] && return 1
 
+	# use -c so we can test the assembler as well
 	local PROG=$(tc-get${comp})
-	${PROG} ${flags} -S -o /dev/null -xc /dev/null \
+	${PROG} ${flags} -c -o /dev/null -xc /dev/null \
 		> /dev/null 2>&1
 }
 
