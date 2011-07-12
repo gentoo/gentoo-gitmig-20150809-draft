@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/realtime-base
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/realtime-base/ChangeLog,v 1.1 2011/06/07 20:27:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/realtime-base/ChangeLog,v 1.2 2011/07/12 21:11:16 maekke Exp $
+
+  12 Jul 2011; Markus Meier <maekke@gentoo.org> realtime-base-0.1.ebuild:
+  add ~arm, bug #370859
 
 *realtime-base-0.1 (07 Jun 2011)
 
