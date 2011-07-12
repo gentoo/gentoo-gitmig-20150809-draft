@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/codeblocks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/ChangeLog,v 1.20 2011/03/08 02:46:57 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/ChangeLog,v 1.21 2011/07/12 00:03:51 dirtyepic Exp $
+
+  12 Jul 2011; Ryan Hill <dirtyepic@gentoo.org> codeblocks-9999.ebuild:
+  Add dependency on libgamin (bug #366827 by Sven Eden). Explicitly call
+  subversion_src_unpack because eclass auto-exports suck (bug #374557 by
+  Geraint Yang).
 
   08 Mar 2011; Ryan Hill <dirtyepic@gentoo.org> -codeblocks-8.02-r1.ebuild:
   Remove old.

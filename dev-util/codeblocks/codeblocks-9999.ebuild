@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/codeblocks-9999.ebuild,v 1.1 2010/07/02 23:23:04 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/codeblocks-9999.ebuild,v 1.2 2011/07/12 00:03:51 dirtyepic Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -19,7 +19,12 @@ IUSE="contrib debug pch static-libs"
 RDEPEND="x11-libs/wxGTK:2.8[X]"
 DEPEND="${RDEPEND}
 	app-arch/zip
+	dev-libs/libgamin
 	sys-devel/libtool:2"
+
+src_unpack(){
+	subversion_src_unpack
+}
 
 src_prepare() {
 	# Let's make the autorevision work.
