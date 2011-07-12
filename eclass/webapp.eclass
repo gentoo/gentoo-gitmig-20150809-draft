@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.66 2011/05/19 12:05:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.67 2011/07/12 07:48:01 lxnay Exp $
 
 # @ECLASS: webapp.eclass
 # @MAINTAINER:
@@ -121,14 +121,21 @@ webapp_getinstalltype() {
 			if [[ "${my_pvr}" != "${PVR}" ]]; then
 				elog "This is an upgrade"
 				IS_UPGRADE=1
+				# for binpkgs, reset status, var declared in global scope
+				IS_REPLACE=0
 			else
 				elog "This is a re-installation"
 				IS_REPLACE=1
+				# for binpkgs, reset status, var declared in global scope
+				IS_UPGRADE=0
 			fi
 		else
 			elog "${my_output} is installed there"
 		fi
 	else
+		# for binpkgs, reset status, var declared in global scope
+		IS_REPLACE=0
+		IS_UPGRADE=0
 		elog "This is an installation"
 	fi
 }
@@ -541,7 +548,7 @@ webapp_pkg_prerm() {
 			if [[ -f "${x}"/.webapp ]]; then
 				. "${x}"/.webapp
 				if [[ -n "${WEB_HOSTNAME}" && -n "${WEB_INSTALLDIR}" ]]; then
-					${WEBAPP_CONFIG} -C -h ${WEB_HOSTNAME} -d ${WEB_INSTALLDIR}
+					${WEBAPP_CONFIG} -C -h ${WEB_HOSTNAME} -d ${WEB_INSTALLDIR} ${PN} ${PVR}
 				fi
 			else
 				ewarn "Cannot find file ${x}/.webapp"
