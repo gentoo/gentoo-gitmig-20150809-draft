@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.344 2011/06/17 19:06:41 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.345 2011/07/12 03:32:10 vapier Exp $
+
+*util-linux-2.19.1-r1 (12 Jul 2011)
+
+  12 Jul 2011; Mike Frysinger <vapier@gentoo.org> +util-linux-2.19.1-r1.ebuild,
+  +files/util-linux-2.19.1-mount-a-segv.patch,
+  +files/util-linux-2.19.1-umount-l-nfs.patch:
+  Add fixes from upstream for `mount -a` segfault #366213 and `umount -l`
+  stalls #370051 by Pacho Ramos.
 
   17 Jun 2011; Dane Smith <c1pher@gentoo.org> util-linux-2.19.1.ebuild,
   metadata.xml:
