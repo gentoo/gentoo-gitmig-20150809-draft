@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.97 2011/07/11 21:27:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.98 2011/07/12 14:32:29 aballier Exp $
+
+  12 Jul 2011; Alexis Ballier <aballier@gentoo.org> freebsd-lib-8.2-r1.ebuild:
+  remove amd64 hacks now that tc-arch-kernel returns the right value for
+  x86_64-fbsd
 
   11 Jul 2011; Alexis Ballier <aballier@gentoo.org> freebsd-lib-8.2-r1.ebuild:
   remove legacy symlinks: libc_r -> libthr, libpthread -> libthr, the build

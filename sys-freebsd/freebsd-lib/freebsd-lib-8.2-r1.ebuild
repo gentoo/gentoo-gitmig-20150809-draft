@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-8.2-r1.ebuild,v 1.4 2011/07/11 21:27:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-8.2-r1.ebuild,v 1.5 2011/07/12 14:32:29 aballier Exp $
 
 EAPI=2
 
@@ -335,11 +335,7 @@ src_install() {
 	doins auth.conf nls.alias mac.conf netconfig
 
 	# Install ttys file
-	if [[ $(tc-arch-kernel) == "x86_64" ]]; then
-		local MACHINE="amd64"
-	else
-		local MACHINE="$(tc-arch-kernel)"
-	fi
+	local MACHINE="$(tc-arch-kernel)"
 	doins "etc.${MACHINE}"/*
 
 	# Generate ldscripts, otherwise bad thigs are supposed to happen
@@ -415,11 +411,7 @@ install_includes()
 	[[ -d "${DESTDIR}${INCLUDEDIR}" ]] || die "dodir or mkdir ${INCLUDEDIR} before using install_includes."
 	cd "${WORKDIR}/include"
 
-	if [[ $(tc-arch-kernel) == "x86_64" ]]; then
-		local MACHINE="amd64"
-	else
-		local MACHINE="$(tc-arch-kernel)"
-	fi
+	local MACHINE="$(tc-arch-kernel)"
 
 	einfo "Installing includes into ${INCLUDEDIR} as ${BINOWN}:${BINGRP}..."
 	$(freebsd_get_bmake) installincludes \
