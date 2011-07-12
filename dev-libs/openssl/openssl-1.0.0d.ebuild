@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0d.ebuild,v 1.12 2011/07/07 23:50:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0d.ebuild,v 1.13 2011/07/12 04:10:48 vapier Exp $
 
 EAPI="2"
 
@@ -36,6 +36,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.0.0a-ldflags.patch #327421
 	epatch "${FILESDIR}"/${PN}-1.0.0d-alpha-typo.patch #364699
 	epatch "${FILESDIR}"/${PN}-1.0.0d-fbsd-amd64.patch #363089
+	epatch "${FILESDIR}"/${PN}-1.0.0d-windres.patch #373743
 	epatch_user #332661
 
 	# disable fips in the build
@@ -58,7 +59,7 @@ src_prepare() {
 	chmod a+rx gentoo.config
 
 	append-flags -fno-strict-aliasing
-	append-flags -Wa,--noexecstack
+	append-flags $(test-flags-CC -Wa,--noexecstack)
 
 	sed -i '1s,^:$,#!/usr/bin/perl,' Configure #141906
 	./config --test-sanity || die "I AM NOT SANE"
@@ -68,7 +69,7 @@ src_configure() {
 	unset APPS #197996
 	unset SCRIPTS #312551
 
-	tc-export CC AR RANLIB
+	tc-export CC AR RANLIB RC
 
 	# Clean out patent-or-otherwise-encumbered code
 	# Camellia: Royalty Free            http://en.wikipedia.org/wiki/Camellia_(cipher)
