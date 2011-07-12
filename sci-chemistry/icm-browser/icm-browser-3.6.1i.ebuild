@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm-browser/icm-browser-3.6.1i.ebuild,v 1.1 2010/05/21 12:33:55 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm-browser/icm-browser-3.6.1i.ebuild,v 1.2 2011/07/12 21:58:38 alexxy Exp $
 
 EAPI="3"
 
@@ -52,7 +52,7 @@ src_install () {
 	dosym "${instdir}/txdoc"  /opt/bin/txdoc || die
 	dosym "${instdir}/lmhostid"  /opt/bin/lmhostid || die
 	# make desktop entry
-	doicon "${FILESDIR}"/${PN}.png
+	doicon "${FILESDIR}"/${PN}.xpm
 	make_desktop_entry "icmbrowserpro -g" "ICM Browser" ${PN} Chemistry
 }
 
