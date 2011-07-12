@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/Xaw3d-1.5-r1.ebuild,v 1.39 2011/02/06 10:33:12 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/Xaw3d-1.5-r1.ebuild,v 1.40 2011/07/12 18:02:12 mattst88 Exp $
 
 # Ok, hopefully this will resolv the problem with the version of libXaw3d that
 # gets created.
@@ -39,7 +39,8 @@ RDEPEND="x11-libs/libXt
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	x11-misc/imake
-	x11-misc/gccmakedep"
+	x11-misc/gccmakedep
+	sys-devel/flex"
 
 src_unpack() {
 	unpack ${P}.tar.gz
