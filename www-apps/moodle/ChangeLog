@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/moodle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/ChangeLog,v 1.8 2011/07/09 20:25:29 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/ChangeLog,v 1.9 2011/07/12 21:11:45 blueness Exp $
+
+  12 Jul 2011; Anthony G. Basile <blueness@gentoo.org> moodle-1.9.12.ebuild,
+  moodle-2.0.3.ebuild, moodle-2.1.ebuild:
+  Make moodle depend on either php[gd] or php[gd-external], bug #374605
 
 *moodle-2.1 (09 Jul 2011)
 

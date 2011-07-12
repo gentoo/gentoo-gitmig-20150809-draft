@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/moodle-1.9.12.ebuild,v 1.1 2011/05/11 19:14:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moodle/moodle-1.9.12.ebuild,v 1.2 2011/07/12 21:11:45 blueness Exp $
 
 EAPI="2"
 
@@ -26,7 +26,8 @@ AUTHFLAGS="imap?,ldap?,odbc?"
 AUTHMODES=${AUTHFLAGS//\?/}
 AUTHMODES=${AUTHMODES//,/ }
 
-PHPFLAGS="ctype,curl,gd,iconv,ssl,tokenizer,xml,xmlrpc,zlib"
+PHPFLAGS_A="ctype,curl,gd,iconv,ssl,tokenizer,xml,xmlrpc,zlib"
+PHPFLAGS_B="ctype,curl,gd-external,iconv,ssl,tokenizer,xml,xmlrpc,zlib"
 
 IUSE="${DBTYPES} ${AUTHMODES} vhosts"
 
@@ -35,7 +36,11 @@ IUSE="${DBTYPES} ${AUTHMODES} vhosts"
 #  postgres? ( dev-db/postgresql-server-7* )
 # which may live on another server
 DEPEND=""
-RDEPEND=">=dev-lang/php-4.3.0[${DBFLAGS},${AUTHFLAGS},${PHPFLAGS}]
+RDEPEND="
+	|| (
+		>=dev-lang/php-4.3.0[${DBFLAGS},${AUTHFLAGS},${PHPFLAGS_A}]
+		>=dev-lang/php-4.3.0[${DBFLAGS},${AUTHFLAGS},${PHPFLAGS_B}]
+	)
 	virtual/httpd-php
 	virtual/cron"
 
