@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9103.509.ebuild,v 1.4 2010/02/23 10:04:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9103.509.ebuild,v 1.5 2011/07/12 15:23:56 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils
 
 MAJ_PV=${PV:0:6}
@@ -23,11 +24,15 @@ RDEPEND="net-dns/bind-tools"
 
 QA_PRESTRIPPED="opt/distributed.net/dnetc"
 
-if use amd64; then
-	S="${WORKDIR}/dnetc${MIN_PV}-linux-amd64-elf"
-elif use x86; then
-	S="${WORKDIR}/dnetc${MIN_PV}-linux-x86-elf-uclibc"
-fi
+S=${WORKDIR}/dnetc
+
+src_prepare() {
+	if use amd64; then
+		mv dnetc${MIN_PV}-linux-amd64-elf dnetc
+	elif use x86; then
+		mv dnetc${MIN_PV}-linux-x86-elf-uclibc dnetc
+	fi
+}
 
 src_install() {
 	exeinto /opt/distributed.net
