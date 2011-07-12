@@ -1,6 +1,9 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.18 2011/06/21 07:55:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.19 2011/07/12 16:50:30 mattst88 Exp $
+
+  12 Jul 2011; Matt Turner <mattst88@gentoo.org> libav-0.7.ebuild:
+  Added ~mips, bug 154882
 
 *libav-0.7.9999 (21 Jun 2011)
 *libav-0.7 (21 Jun 2011)
