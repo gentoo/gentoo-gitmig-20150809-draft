@@ -1,6 +1,10 @@
 # ChangeLog for app-text/texlive
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.75 2011/07/08 01:50:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.76 2011/07/12 19:24:14 aballier Exp $
+
+  12 Jul 2011; Alexis Ballier <aballier@gentoo.org> texlive-2010-r2.ebuild:
+  bump luatex dep to make sure people use the latest version as it fixes
+  problems on some arches wrt largefile stuff
 
   08 Jul 2011; Alexis Ballier <aballier@gentoo.org> texlive-2010.ebuild,
   texlive-2010-r1.ebuild, texlive-2010-r2.ebuild:
