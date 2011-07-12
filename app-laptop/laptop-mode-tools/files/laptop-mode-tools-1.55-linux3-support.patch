@@ -1,0 +1,40 @@
+Add support for Linux 3.0 kernels
+
+Signed-off-by: Robin H. Johnson <robbat2@gentoo.org>
+
+diff -Nuar --exclude '*~' laptop-mode-tools_1.55.orig//usr/sbin/laptop_mode laptop-mode-tools_1.55/usr/sbin/laptop_mode
+--- laptop-mode-tools_1.55.orig//usr/sbin/laptop_mode	2010-05-26 08:54:44.000000000 -0700
++++ laptop-mode-tools_1.55/usr/sbin/laptop_mode	2011-07-12 13:29:38.000000000 -0700
+@@ -496,6 +496,7 @@
+ case "$KLEVEL" in
+ 	"2.4" ) ;;
+ 	"2.6" ) ;;
++	"3.0" ) ;;
+ 	*)
+ 		log "ERR" "Unhandled kernel version: $KLEVEL ('uname -r' = '$(uname -r)')" >&2
+ 		exit 1
+diff -Nuar --exclude '*~' laptop-mode-tools_1.55.orig//usr/share/laptop-mode-tools/modules/laptop-mode laptop-mode-tools_1.55/usr/share/laptop-mode-tools/modules/laptop-mode
+--- laptop-mode-tools_1.55.orig//usr/share/laptop-mode-tools/modules/laptop-mode	2010-05-26 08:54:44.000000000 -0700
++++ laptop-mode-tools_1.55/usr/share/laptop-mode-tools/modules/laptop-mode	2011-07-12 13:29:20.000000000 -0700
+@@ -193,8 +193,8 @@
+ 			set_sysctl /proc/sys/vm/laptop_mode   1
+ 			set_sysctl /proc/sys/vm/bdflush       "30 500 0 0 $AGE $AGE 60 20 0"
+ 			;;
+-		"2.6")
+-			log "VERBOSE" "Adjusting 2.6 kernel parameters to enable laptop mode."
++		"2.6"|"3.0")
++			log "VERBOSE" "Adjusting $KLEVEL kernel parameters to enable laptop mode."
+ 			set_sysctl /proc/sys/vm/laptop_mode		  "$LM_SECONDS_BEFORE_SYNC"
+ 			set_sysctl /proc/sys/vm/dirty_writeback_centisecs "$AGE"
+ 			set_sysctl /proc/sys/vm/dirty_expire_centisecs    "$AGE"
+@@ -321,8 +321,8 @@
+ 			log "VERBOSE" "Adjusting 2.4 kernel parameters to disable laptop mode."
+ 			set_sysctl /proc/sys/vm/bdflush "30 500 0 0 $U_AGE $B_AGE 60 20 0"
+ 			;;
+-		"2.6")
+-			log "VERBOSE" "Adjusting 2.6 kernel parameters to disable laptop mode."
++		"2.6"|"3.0")
++			log "VERBOSE" "Adjusting $KLEVEL kernel parameters to disable laptop mode."
+ 			set_sysctl /proc/sys/vm/dirty_writeback_centisecs   "$U_AGE"
+ 			set_sysctl /proc/sys/vm/dirty_expire_centisecs      "$B_AGE"
+ 			set_sysctl /proc/sys/vm/dirty_ratio		    "$NOLM_DIRTY_RATIO"
