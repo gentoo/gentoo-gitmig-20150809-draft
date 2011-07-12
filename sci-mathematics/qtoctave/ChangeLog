@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/qtoctave
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtoctave/ChangeLog,v 1.15 2010/11/13 12:22:56 tomka Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtoctave/ChangeLog,v 1.16 2011/07/12 21:33:37 rafaelmartins Exp $
+
+*qtoctave-0.10.1 (12 Jul 2011)
+
+  12 Jul 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +qtoctave-0.10.1.ebuild:
+  Version bump. Thanks to Fabio Rossi for reporting (bug #374891)
 
   13 Nov 2010; Thomas Kahle <tomka@gentoo.org> qtoctave-0.9.1-r1.ebuild:
   x86 stable per bug #344511
