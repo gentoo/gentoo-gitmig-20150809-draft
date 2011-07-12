@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surfraw/surfraw-2.2.8.ebuild,v 1.1 2011/07/12 15:34:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surfraw/surfraw-2.2.8.ebuild,v 1.2 2011/07/12 15:38:31 jer Exp $
 
 EAPI="4"
 
@@ -27,7 +27,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	default
 	dodoc AUTHORS ChangeLog HACKING NEWS README TODO
 
 	dobashcompletion surfraw-bash-completion
