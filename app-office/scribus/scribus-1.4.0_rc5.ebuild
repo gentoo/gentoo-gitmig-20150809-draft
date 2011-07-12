@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.0_rc5.ebuild,v 1.2 2011/07/11 18:51:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.0_rc5.ebuild,v 1.3 2011/07/12 09:59:33 jlec Exp $
 
-EAPI=2
+EAPI=3
 
 PYTHON_DEPEND="2:2.6"
 
@@ -17,14 +17,14 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="cairo debug +minimal +pdf spell"
+IUSE="cairo debug examples +minimal +pdf spell templates"
 
 COMMON_DEPEND="
 	dev-libs/hyphen
 	dev-libs/libxml2
 	media-libs/fontconfig
 	media-libs/freetype:2
-	media-libs/lcms:0
+	media-libs/lcms:2
 	media-libs/libpng
 	media-libs/tiff
 	net-print/cups
@@ -40,12 +40,22 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	dev-libs/boost"
 
-DOCS="AUTHORS ChangeLog* LINKS NEWS README TODO TRANSLATION"
+PATCHES=(
+	"${FILESDIR}"/${P}-docs.patch
+	)
 
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	python_set_active_version 2
+}
+
+src_prepare() {
+	use templates || \
+		sed '/ADD_SUBDIRECTORY(resources\/templates)/d' -i CMakeLists.txt
+	use examples || \
+		sed '/ADD_SUBDIRECTORY(samples)/d' -i scribus/plugins/scriptplugin/CMakeLists.txt
+	base_src_prepare
 }
 
 src_configure() {
@@ -56,6 +66,7 @@ src_configure() {
 		"-DWANT_NORPATH=ON"
 		"-DWANT_QTARTHUR=ON"
 		"-DWANT_QT3SUPPORT=OFF"
+		"-DGENTOOVERSION=${PVR}"
 		$(cmake-utils_use_has spell ASPELL)
 		$(cmake-utils_use_has pdf PODOFO)
 		$(cmake-utils_use_want cairo)
@@ -68,9 +79,8 @@ src_configure() {
 src_install() {
 	cmake-utils_src_install
 
-	# Use one directory for documentation
-	mv "${D}"/usr/share/doc/${PN}/* "${D}"/usr/share/doc/${PF}/
-	rmdir "${D}"/usr/share/doc/${PN}
+	mv "${ED}"/usr/share/doc/${PF}/{en,html}
+	ln -sf html "${ED}"/usr/share/doc/${PF}/en
 
 	doicon resources/icons/scribus.png
 	domenu scribus.desktop

@@ -6,7 +6,12 @@
 		<email>hanno@gentoo.org</email>
 		<name>Hanno Boeck</name>
 	</maintainer>
+	<maintainer>
+		<email>jlec@gentoo.org</email>
+		<name>Justin Lecher</name>
+	</maintainer>
 	<use>
 		<flag name="minimal">Don't install headers (only required for e.g. plug-in developers)</flag>
+		<flag name="templates">Document tamplates</flag>
 	</use>
 </pkgmetadata>

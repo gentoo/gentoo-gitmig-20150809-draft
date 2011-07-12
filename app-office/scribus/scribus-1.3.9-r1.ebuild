@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.0_rc3.ebuild,v 1.2 2011/07/11 18:51:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.9-r1.ebuild,v 1.1 2011/07/12 09:59:33 jlec Exp $
 
 EAPI=2
 
@@ -8,16 +8,14 @@ PYTHON_DEPEND="2:2.6"
 
 inherit cmake-utils fdo-mime multilib python
 
-MY_P="${P/_/.}"
-
 DESCRIPTION="Desktop publishing (DTP) and layout program"
 HOMEPAGE="http://www.scribus.net/"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="cairo debug +minimal +pdf spell"
+IUSE="cairo debug examples +minimal +pdf spell templates"
 
 COMMON_DEPEND="
 	dev-libs/hyphen
@@ -40,12 +38,22 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	dev-libs/boost"
 
-DOCS="AUTHORS ChangeLog* LINKS NEWS README TODO TRANSLATION"
+PATCHES=(
+	"${FILESDIR}/${PN}-1.3.5.1-system-hyphen.patch"
+	)
 
-S=${WORKDIR}/${MY_P}
+DOCS="AUTHORS ChangeLog* LINKS NEWS README TODO TRANSLATION"
 
 pkg_setup() {
 	python_set_active_version 2
+}
+
+src_prepare() {
+	use templates || \
+		sed '/ADD_SUBDIRECTORY(resources\/templates)/d' -i CMakeLists.txt
+	use examples || \
+		sed '/ADD_SUBDIRECTORY(samples)/d' -i scribus/plugins/scriptplugin/CMakeLists.txt
+	base_src_prepare
 }
 
 src_configure() {
@@ -67,10 +75,6 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
-
-	# Use one directory for documentation
-	mv "${D}"/usr/share/doc/${PN}/* "${D}"/usr/share/doc/${PF}/
-	rmdir "${D}"/usr/share/doc/${PN}
 
 	doicon resources/icons/scribus.png
 	domenu scribus.desktop
