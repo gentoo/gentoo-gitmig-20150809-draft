@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.4.0-r1.ebuild,v 1.2 2011/06/13 22:39:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.4.0-r2.ebuild,v 1.1 2011/07/12 20:52:00 rafaelmartins Exp $
 
 EAPI=4
 inherit eutils base autotools
@@ -47,7 +47,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-{gcc46,pkgbuilddir,fltk,help}.patch
+	epatch "${FILESDIR}"/${P}-{gcc46,pkgbuilddir,fltk,help,fftshift}.patch
 	eautoreconf
 }
 
