@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/qiv-2.2.4.ebuild,v 1.1 2011/06/09 07:58:10 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qiv/qiv-2.2.4.ebuild,v 1.2 2011/07/12 06:23:55 radhermit Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -34,7 +34,7 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)"
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}"
 }
 
 src_install() {
