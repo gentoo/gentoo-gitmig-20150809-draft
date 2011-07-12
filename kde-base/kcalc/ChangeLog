@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcalc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/ChangeLog,v 1.180 2011/07/09 15:14:04 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/ChangeLog,v 1.181 2011/07/12 17:51:21 tampakrap Exp $
+
+  12 Jul 2011; Theo Chatzimichos <tampakrap@gentoo.org> kcalc-4.6.5.ebuild,
+  +files/kcalc-4.6.5-fix-kbd-ui.patch:
+  Revert a faulty upstream commit in UI that broke keybindings, bug 374959
 
 *kcalc-4.6.5 (09 Jul 2011)
 
