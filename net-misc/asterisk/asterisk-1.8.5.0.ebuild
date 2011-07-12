@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.5.0.ebuild,v 1.1 2011/07/12 12:03:49 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.5.0.ebuild,v 1.2 2011/07/12 16:39:20 eras Exp $
 
 EAPI=3
 inherit autotools base eutils linux-info multilib
@@ -37,7 +37,7 @@ RDEPEND="sys-libs/ncurses
 	freetds? ( dev-db/freetds )
 	gtalk? ( dev-libs/iksemel )
 	h323? ( net-libs/openh323 )
-	http? ( dev-libs/gmime:0 )
+	http? ( dev-libs/gmime )
 	iconv? ( virtual/libiconv )
 	jabber? ( dev-libs/iksemel )
 	jingle? ( dev-libs/iksemel )
