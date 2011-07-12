@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.331 2011/07/06 09:13:18 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.332 2011/07/12 12:03:49 chainsaw Exp $
+
+*asterisk-1.8.5.0 (12 Jul 2011)
+
+  12 Jul 2011; Tony Vroon <chainsaw@gentoo.org> +asterisk-1.8.5.0.ebuild:
+  Version bump; PUBLISH fixes now upstream. The channel variable backward
+  compatibility patch no longer applies and has been dropped. Fixes a deadlock
+  on attended transfer, thread blocking issue in SIP TCP/TLS, chanspy channel
+  leak, MeetMe PIN prompts, stuck AGI scripts, lost MWI notifications & a
+  conference crosstalk issue during the leader wait.
 
 *asterisk-1.6.2.19-r2 (06 Jul 2011)
 
