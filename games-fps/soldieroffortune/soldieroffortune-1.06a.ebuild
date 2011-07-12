@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.25 2009/04/14 07:29:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune/soldieroffortune-1.06a.ebuild,v 1.26 2011/07/12 17:45:22 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -71,6 +71,9 @@ src_install() {
 	find "${Ddir}" -exec touch '{}' \;
 
 	games_make_wrapper sof ./sof "${dir}" "${dir}"
+	sed -i \
+		-e 's/^exec /__GL_ExtensionStringVersion=17700 exec /'
+		"${D}/${GAMES_BINDIR}/sof" || die
 	doicon "${CDROM_ROOT}"/sof.xpm
 	make_desktop_entry sof "Soldier of Fortune" sof
 
