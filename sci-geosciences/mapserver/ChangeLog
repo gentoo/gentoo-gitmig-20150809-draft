@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/mapserver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.41 2011/06/28 15:22:38 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.42 2011/07/12 12:31:33 lxnay Exp $
+
+  12 Jul 2011; Fabio Erculiani <lxnay@gentoo.org>
+  +files/6.0.0-fix-mapunion-macro.patch, mapserver-6.0.0.ebuild:
+  backport patch from trunk, fixing macro definition (compile issue), see
+  http://trac.osgeo.org/mapserver/ticket/3877
 
   28 Jun 2011; Ole Markus With <olemarkus@gentoo.org> -mapserver-5.6.6.ebuild:
   Non-maintainer commit: Removing ebuild depending on older PHP versions. Bug

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.0.ebuild,v 1.2 2011/06/11 15:08:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.0.ebuild,v 1.3 2011/07/12 12:31:33 lxnay Exp $
 
 EAPI=3
 
@@ -117,7 +117,8 @@ src_unpack() {
 src_prepare() {
 	epatch "${FILESDIR}/6.0.0_rc1-ldflags.patch" \
 		"${FILESDIR}/6.0.0_rc1-bool.patch" \
-		"${FILESDIR}/6.0.0_rc1-php_ldflags.patch"
+		"${FILESDIR}/6.0.0_rc1-php_ldflags.patch" \
+		"${FILESDIR}/6.0.0-fix-mapunion-macro.patch"
 	eautoreconf
 }
 
