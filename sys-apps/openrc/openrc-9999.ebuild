@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.84 2011/06/05 22:46:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.85 2011/07/12 18:30:17 williamh Exp $
 
 EAPI=4
 
@@ -35,7 +35,7 @@ DEPEND="${RDEPEND}
 make_args() {
 	unset LIBDIR #266688
 
-	MAKE_ARGS="${MAKE_ARGS} LIBNAME=$(get_libdir) LIBEXECDIR=/$(get_libdir)/rc"
+	MAKE_ARGS="${MAKE_ARGS} LIBNAME=$(get_libdir) LIBEXECDIR=/lib/rc"
 	MAKE_ARGS="${MAKE_ARGS} MKOLDNET=yes"
 
 	local brand="Unknown"

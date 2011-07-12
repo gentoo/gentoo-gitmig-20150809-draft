@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.163 2011/07/12 15:04:27 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.164 2011/07/12 18:30:17 williamh Exp $
+
+  12 Jul 2011; William Hubbs <williamh@gentoo.org> openrc-9999.ebuild:
+  libexecdir should use "lib" instead of "$(get_libdir)"
 
   12 Jul 2011; William Hubbs <williamh@gentoo.org> -openrc-0.8.2-r1.ebuild:
   remove old version
