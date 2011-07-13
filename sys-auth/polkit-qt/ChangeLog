@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/polkit-qt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/ChangeLog,v 1.19 2011/06/01 19:33:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-qt/ChangeLog,v 1.20 2011/07/13 13:40:15 xarthisius Exp $
+
+  13 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> polkit-qt-0.99.0.ebuild:
+  ppc64 stable wrt #354033
 
   01 Jun 2011; Brent Baude <ranger@gentoo.org> polkit-qt-0.99.0.ebuild:
   Marking polkit-qt-0.99.0 ppc stable for bug 354033
