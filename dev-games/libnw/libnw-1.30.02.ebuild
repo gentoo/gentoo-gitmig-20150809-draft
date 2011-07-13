@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libnw/libnw-1.30.02.ebuild,v 1.4 2009/03/18 22:35:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libnw/libnw-1.30.02.ebuild,v 1.5 2011/07/13 14:30:43 mr_bones_ Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND="sys-devel/bison
 	sys-devel/flex"
-RDEPEND=""
+RDEPEND="!sci-biology/newick-utils"
 
 src_prepare() {
 	sed -i \
