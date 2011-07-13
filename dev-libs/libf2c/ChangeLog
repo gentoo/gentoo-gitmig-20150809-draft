@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libf2c
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.42 2011/06/01 19:46:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.43 2011/07/13 14:36:38 xarthisius Exp $
+
+  13 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  libf2c-20090407-r1.ebuild:
+  ppc64 stable wrt #354033
 
   01 Jun 2011; Brent Baude <ranger@gentoo.org> libf2c-20090407-r1.ebuild:
   Marking libf2c-20090407-r1 ppc stable for bug 354033

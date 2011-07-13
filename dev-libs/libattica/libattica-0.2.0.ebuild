@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libattica/libattica-0.2.0.ebuild,v 1.5 2011/06/01 19:30:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libattica/libattica-0.2.0.ebuild,v 1.6 2011/07/13 14:32:49 xarthisius Exp $
 
 EAPI=3
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://kde.org/"
 SRC_URI="mirror://kde/stable/${MY_PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="amd64 ~arm ppc ~ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ppc ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 SLOT="0"
 IUSE="debug"
 
