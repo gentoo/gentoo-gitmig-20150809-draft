@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.886 2011/07/13 12:35:29 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.887 2011/07/13 13:36:23 xarthisius Exp $
+
+  13 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  vanilla-sources-2.6.38.7.ebuild:
+  ppc stable wrt #368609, thanks to Federico Moro <zayer@frikis.org> for
+  testing
 
   13 Jul 2011; Mike Pagano <mpagano@gentoo.org> Manifest:
   Fix manifest for 2.6.39 deblob script. bug #374095
