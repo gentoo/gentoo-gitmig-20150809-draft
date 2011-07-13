@@ -1,0 +1,10 @@
+# ChangeLog for net-print/dymo-cups-drivers
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/dymo-cups-drivers/ChangeLog,v 1.1 2011/07/13 18:04:02 flameeyes Exp $
+
+*dymo-cups-drivers-1.2.0 (13 Jul 2011)
+
+  13 Jul 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +dymo-cups-drivers-1.2.0.ebuild, +metadata.xml:
+  Initial import of the Dymo SDK for Linux (actually, mostly the CUPS drivers).
+
