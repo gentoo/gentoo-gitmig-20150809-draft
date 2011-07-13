@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/fwbuilder
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.104 2011/06/20 12:00:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.105 2011/07/13 19:44:58 maekke Exp $
+
+  13 Jul 2011; Markus Meier <maekke@gentoo.org> fwbuilder-4.2.2.3541.ebuild:
+  x86 stable, bug #371011
 
   20 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
   fwbuilder-4.2.2.3541.ebuild:
