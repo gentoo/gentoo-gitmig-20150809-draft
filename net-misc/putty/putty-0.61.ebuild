@@ -1,16 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.60_p20110509.ebuild,v 1.1 2011/05/10 19:36:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.61.ebuild,v 1.1 2011/07/13 14:35:51 jer Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit autotools toolchain-funcs
 
-MY_P="${P/_p*/}-2011-05-09"
-
 DESCRIPTION="UNIX port of the famous Telnet and SSH client"
 HOMEPAGE="http://www.chiark.greenend.org.uk/~sgtatham/putty/"
-SRC_URI="http://tartarus.org/~simon/putty-snapshots/${MY_P}.tar.gz"
+SRC_URI="http://the.earth.li/~sgtatham/${PN}/latest/${P}.tar.gz"
 LICENSE="MIT"
 
 SLOT="0"
@@ -28,8 +26,6 @@ RDEPEND="
 "
 DEPEND="${RDEPEND} dev-lang/perl"
 
-S="${WORKDIR}/${MY_P}"
-
 src_prepare() {
 	cd "${S}"/unix || die "cd unix failed"
 	sed \
@@ -41,29 +37,24 @@ src_prepare() {
 
 src_configure() {
 	cd "${S}"/unix || die "cd failed"
-	econf \
-		$(use_with kerberos gssapi) \
-		|| die "econf failed"
+	econf $(use_with kerberos gssapi)
 }
 
 src_compile() {
 	cd "${S}"/unix || die "cd unix failed"
-	emake \
-		$(use ipv6 || echo COMPAT=-DNO_IPV6) \
-		VER=-DSNAPSHOT=${PV} \
-		|| die "emake failed"
+	emake $(use ipv6 || echo COMPAT=-DNO_IPV6)
 }
 
 src_install() {
 	if use doc; then
-		dodoc doc/puttydoc.txt || die "dodoc failed"
-		dohtml doc/*.html || die "dohtml failed"
+		dodoc doc/puttydoc.txt
+		dohtml doc/*.html
 	fi
 
 	cd "${S}"/unix
-	emake DESTDIR="${D}" install || die "install failed"
+	default
 
 	# install desktop file provided by Gustav Schaffter in #49577
 	doicon "${FILESDIR}"/${PN}.xpm
-	make_desktop_entry "putty" "PuTTY" putty "Network"
+	make_desktop_entry putty PuTTY putty Network
 }
