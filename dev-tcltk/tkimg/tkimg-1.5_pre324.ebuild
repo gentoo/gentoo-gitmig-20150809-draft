@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.5_pre324.ebuild,v 1.1 2011/07/13 07:25:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.5_pre324.ebuild,v 1.2 2011/07/13 15:42:37 mr_bones_ Exp $
 
 EAPI=3
 
@@ -30,7 +30,6 @@ DEPEND="${RDEPEND}
 		x11-apps/xhost
 		media-fonts/font-misc-misc
 		media-fonts/font-cursor-misc )"
-
 
 src_test() {
 	Xmake test || die "Xmake failed"
