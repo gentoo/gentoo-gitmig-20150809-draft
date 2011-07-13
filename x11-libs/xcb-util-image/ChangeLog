@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xcb-util-image
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-image/ChangeLog,v 1.4 2011/06/28 20:09:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-image/ChangeLog,v 1.5 2011/07/13 19:52:57 maekke Exp $
+
+  13 Jul 2011; Markus Meier <maekke@gentoo.org> xcb-util-image-0.3.8.ebuild:
+  x86 stable, bug #371857
 
   28 Jun 2011; Brent Baude <ranger@gentoo.org> xcb-util-image-0.3.8.ebuild:
   Marking xcb-util-image-0.3.8 ppc stable for bug 372333
