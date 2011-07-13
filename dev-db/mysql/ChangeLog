@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.579 2011/07/13 07:37:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.580 2011/07/13 07:45:33 robbat2 Exp $
+
+*mysql-5.0.92 (13 Jul 2011)
+
+  13 Jul 2011; Robin H. Johnson <robbat2@gentoo.org> +mysql-5.0.92.ebuild:
+  Security version bump for users unable to upgrade to 5.1 series. Will not be
+  stabilized as not all vulerabilities are fixable in 5.0 series. Users should
+  migrate to 5.1 series for full security coverage.
 
 *mysql-5.1.58 (13 Jul 2011)
 *mysql-5.1.57 (13 Jul 2011)
