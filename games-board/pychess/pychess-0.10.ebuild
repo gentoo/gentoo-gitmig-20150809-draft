@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/pychess-0.10.ebuild,v 1.4 2011/04/12 02:46:35 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/pychess-0.10.ebuild,v 1.5 2011/07/13 16:54:11 mr_bones_ Exp $
 
 PYTHON_DEPEND="2"
 EAPI=3
@@ -19,6 +19,7 @@ DEPEND="dev-python/librsvg-python
 	dev-python/pycairo
 	dev-python/pygobject
 	dev-python/pygtk
+	dev-python/pygtksourceview
 	dev-python/pysqlite
 	gstreamer? ( dev-python/gst-python )
 	dev-python/gconf-python
