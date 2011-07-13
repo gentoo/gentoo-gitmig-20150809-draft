@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.14.ebuild,v 1.3 2011/06/18 18:38:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.14.ebuild,v 1.4 2011/07/13 06:04:53 vapier Exp $
 
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib
 
@@ -25,7 +25,7 @@ fi
 MANPAGE_VER=""                                 # pregenerated manpages
 INFOPAGE_VER=""                                # pregenerated infopages
 LIBIDN_VER=""                                  # it's integrated into the main tarball now
-PATCH_VER="3"                                  # Gentoo patchset
+PATCH_VER="4"                                  # Gentoo patchset
 PORTS_VER=""                                   # version of glibc ports addon
 LT_VER=""                                      # version of linuxthreads addon
 NPTL_KERN_VER=${NPTL_KERN_VER:-"2.6.9"}        # min kernel version nptl requires
