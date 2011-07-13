@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.7.2.ebuild,v 1.8 2011/06/05 12:18:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/qt-gui-4.7.2.ebuild,v 1.9 2011/07/13 12:49:21 xarthisius Exp $
 
 EAPI="3"
 inherit confutils qt4-build
 
 DESCRIPTION="The GUI module for the Qt toolkit"
 SLOT="4"
-KEYWORDS="amd64 arm ~hppa ~ia64 ~mips ppc ~ppc64 -sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 arm ~hppa ~ia64 ~mips ppc ppc64 -sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE="+accessibility cups dbus egl +glib gtkstyle mng nas nis private-headers qt3support raster tiff trace xinerama"
 
 RDEPEND="media-libs/fontconfig
