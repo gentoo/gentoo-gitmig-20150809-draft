@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.197 2011/07/13 01:06:31 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.198 2011/07/13 04:22:33 lack Exp $
 
 # Authors:
 # 	Jim Ramsay <lack@gentoo.org>
@@ -262,7 +262,12 @@ vim_src_prepare() {
 		cvs_src_unpack
 	else
 		# Apply any patches available from vim.org for this version
-		[[ -n "$VIM_ORG_PATCHES" ]] && apply_vim_patches
+		if [[ $VIM_ORG_PATCHES == *.patch.bz2 ]]; then
+			einfo "Applying monolithic patch ${VIM_ORG_PATCHES}"
+			epatch "${WORKDIR}/${VIM_ORG_PATCHES%.bz2}"
+		else
+			apply_vim_patches
+		fi
 
 		# Unpack the runtime snapshot if available (only for vim-core)
 		if [[ -n "$VIM_RUNTIME_SNAP" ]] ; then
@@ -273,8 +278,7 @@ vim_src_prepare() {
 			# some reason on freebsd.
 			#  --spb, 2004/12/18
 			tar xjf "${DISTDIR}"/${VIM_RUNTIME_SNAP}
-			assert  # this will check both parts of the pipeline; eend would not
-			eend 0
+			eend $?
 		fi
 	fi
 
