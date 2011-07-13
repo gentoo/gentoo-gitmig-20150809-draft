@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.7.ebuild,v 1.8 2011/07/08 11:24:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.7.ebuild,v 1.9 2011/07/13 15:49:01 xarthisius Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.hdfgroup.org/ftp/HDF5/current/src/${P}.tar.bz2"
 
 LICENSE="NCSA-HDF"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="cxx debug examples fortran mpi szip threads zlib"
 
 RDEPEND="
@@ -86,7 +86,7 @@ src_configure() {
 	econf \
 		--disable-sharedlib-rpath \
 		--enable-production \
-		--docdir=/usr/share/doc/${PF} \
+		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		--enable-deprecated-symbols \
 		--enable-shared \
 		--disable-silent-rules \
