@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/webmock-1.6.4.ebuild,v 1.1 2011/05/20 05:47:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/webmock-1.6.4.ebuild,v 1.2 2011/07/13 05:54:35 graaff Exp $
 
 EAPI=2
 
-USE_RUBY="ruby18 ruby19 ree18"
+USE_RUBY="ruby18 ruby19 ree18 jruby"
 
 RUBY_FAKEGEM_TASK_TEST="test spec NO_CONNECTION=true"
 
@@ -27,13 +27,15 @@ ruby_add_bdepend "test? (
 	virtual/ruby-test-unit
 	dev-ruby/rspec:2
 	>=dev-ruby/httpclient-2.1.5.2
-	>=dev-ruby/patron-0.4.9-r1
-	>=dev-ruby/em-http-request-0.2.14
 	)"
+
+# These are not supported for jruby.
+USE_RUBY="ruby18 ruby19 ree18" ruby_add_bdepend "test? ( >=dev-ruby/patron-0.4.9-r1 >=dev-ruby/em-http-request-0.2.14 )"
 
 all_ruby_prepare() {
 	# Remove bundler support
 	rm Gemfile || die
+	sed -i -e '/[Bb]undler/d' Rakefile || die
 
 	# There is now optional support for curb which we don't have in
 	# Gentoo yet.
