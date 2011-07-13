@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.333 2011/07/12 16:39:20 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.334 2011/07/13 10:38:47 chainsaw Exp $
+
+*asterisk-1.8.5.0-r1 (13 Jul 2011)
+
+  13 Jul 2011; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.5.0.ebuild,
+  +asterisk-1.8.5.0-r1.ebuild:
+  Rediffed & revived backward compatibility patch by Erik Wallin closes bug
+  #374947. Double-free and resulting segmentation fault reported by Jaco Kroon
+  and fixed upstream by kpfleming, closes bug #375009. Old ebuild killed as it
+  is unusable if HTTP is enabled on the management interface.
 
   12 Jul 2011; Eray Aslan <eras@gentoo.org> asterisk-1.8.5.0.ebuild:
   Support gmime-2.4 - bug #373505
