@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kde-l10n
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.97 2011/07/09 15:13:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.98 2011/07/13 16:17:04 dilfridge Exp $
+
+*kde-l10n-4.6.5-r1 (13 Jul 2011)
+*kde-l10n-4.6.4-r1 (13 Jul 2011)
+*kde-l10n-4.6.3-r2 (13 Jul 2011)
+
+  13 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kde-l10n-4.6.3-r2.ebuild, +kde-l10n-4.6.4-r1.ebuild,
+  +kde-l10n-4.6.5-r1.ebuild:
+  Dont install kdepim files if they are included in the tarballs, bug 366353
 
 *kde-l10n-4.6.5 (09 Jul 2011)
 
