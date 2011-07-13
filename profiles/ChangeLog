@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5523 2011/07/11 16:08:48 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5524 2011/07/13 07:18:41 jlec Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Jul 2011; Justin Lecher <jlec@gentoo.org> package.mask:
+  mask dev-tcltk/tkimg-1.5*, fails with libjpeg-turbo on tests
 
   11 Jul 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   arch/amd64/no-multilib/package.mask:

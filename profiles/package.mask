@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12900 2011/07/11 07:26:22 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12901 2011/07/13 07:18:41 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Justin Lecher <jlec@gentoo.org> (13 Jul 2011)
+# fails with libjpeg-turbo on tests
+>=dev-tcltk/tkimg-1.5*
 
 # Aaron W. Swenson <titanofold@gentoo.org> (10 Jul 2011)
 # Beta Release
