@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.6.2b.ebuild,v 1.10 2010/11/06 01:45:36 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.6.2b.ebuild,v 1.11 2011/07/13 13:34:58 tupone Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -41,7 +41,8 @@ S=${WORKDIR}/${MY_P}
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-gcc43.patch \
-		"${FILESDIR}"/${P}-dups.patch
+		"${FILESDIR}"/${P}-dups.patch \
+		"${FILESDIR}"/${P}-gcc46.patch
 	sed -i \
 		-e 's/ILvoid/void/g' \
 		ImageCodecModules/DevILImageCodec/CEGUIDevILImageCodec.cpp \
