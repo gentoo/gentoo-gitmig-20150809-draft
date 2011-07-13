@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.2.0-r10.ebuild,v 1.5 2011/06/21 16:12:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.2.0-r10.ebuild,v 1.6 2011/07/13 20:03:06 dilfridge Exp $
 
 EAPI=3
 
@@ -78,6 +78,7 @@ PATCHES=(
 	"${FILESDIR}/${P}-use_system_libs.patch"
 	"${FILESDIR}/${P}-v4l_2.6.38.patch"
 	"${FILESDIR}/${P}-findnpp.patch"
+	"${FILESDIR}/${P}-findblas.patch"
 )
 
 CMAKE_BUILD_TYPE="Release"
