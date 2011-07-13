@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-bad.eclass,v 1.38 2011/05/04 02:32:35 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-bad.eclass,v 1.39 2011/07/13 06:10:47 leio Exp $
 
 #
 # Original Author: Saleem Abdulrasool <compnerd@gentoo.org>
@@ -16,10 +16,23 @@ my_gst_plugins_bad="directsound directdraw osx_video quicktime vcd
 assrender amrwb apexsink bz2 cdaudio celt cog dc1394 directfb dirac dts divx
 faac faad fbdev flite gsm jp2k kate ladspa lv2 libmms
 modplug mimic mpeg2enc mplex musepack musicbrainz mythtv nas neon ofa rsvg
-timidity wildmidi sdl sdltest sndfile soundtouch spc gme swfdec theoradec xvid
+timidity wildmidi sdl sdltest sndfile soundtouch spc gme swfdec xvid
 dvb wininet acm vdpau schro zbar resindvd vp8"
 
 # When adding conditionals like below, be careful about having leading spaces
+
+# Changes in 0.10.22:
+# New curlsink element in a new curl plugin
+# New Blackmagic Decklink source and sink
+# New Linear Systems SDI plugin
+if version_is_at_least "0.10.22"; then
+	my_gst_plugins_bad+=" curl decklink linsys"
+fi
+
+# Unused ancient theora decoder, better one in -base long ago
+if ! version_is_at_least "0.10.22"; then
+	my_gst_plugins_bad+=" theoradec"
+fi
 
 # Changes in 0.10.21:
 # New opencv and apple_media plugins
