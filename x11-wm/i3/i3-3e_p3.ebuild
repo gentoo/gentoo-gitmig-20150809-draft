@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-3e_p3.ebuild,v 1.1 2011/07/12 13:06:07 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-3e_p3.ebuild,v 1.2 2011/07/13 08:52:04 xarthisius Exp $
 
 EAPI=4
 
@@ -24,6 +24,7 @@ CDEPEND="dev-libs/libev
 	x11-libs/libX11
 	x11-libs/xcb-util"
 DEPEND="${CDEPEND}
+	dev-util/pkgconfig
 	sys-devel/flex
 	sys-devel/bison
 	x11-proto/xcb-proto"
