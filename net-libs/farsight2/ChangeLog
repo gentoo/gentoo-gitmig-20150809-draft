@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/farsight2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/ChangeLog,v 1.50 2011/07/08 10:01:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/ChangeLog,v 1.51 2011/07/13 09:31:12 tomka Exp $
+
+  13 Jul 2011; Thomas Kahle <tomka@gentoo.org> farsight2-0.0.26.ebuild:
+  x86 stable per bug 373393
 
   08 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> farsight2-0.0.17.ebuild,
   farsight2-0.0.20.ebuild:
