@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/alock-94.ebuild,v 1.5 2011/06/18 14:13:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/alock-94.ebuild,v 1.6 2011/07/13 19:49:48 maekke Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -12,7 +12,7 @@ SRC_URI="http://alock.googlecode.com/files/alock-svn-${PV}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="imlib pam"
 
 DEPEND="x11-libs/libX11
