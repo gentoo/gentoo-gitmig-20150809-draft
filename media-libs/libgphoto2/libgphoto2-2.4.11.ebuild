@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.11.ebuild,v 1.1 2011/06/20 16:29:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.11.ebuild,v 1.2 2011/07/13 14:27:00 pacho Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -139,7 +139,7 @@ src_configure() {
 		--with-html-dir=/usr/share/doc/${PF}/html \
 		--with-hotplug-doc-dir=/usr/share/doc/${PF}/hotplug \
 		--with-rpmbuild=$(type -P true) \
-		udevscriptdir=/$(get_libdir)/udev \
+		udevscriptdir=/lib/udev \
 		${myconf}
 
 # FIXME: gtk-doc is currently broken
@@ -172,7 +172,7 @@ src_install() {
 	fi
 	# end fixup
 
-	UDEV_RULES="/$(get_libdir)/udev/rules.d/70-libgphoto2.rules"
+	UDEV_RULES="/lib/udev/rules.d/70-libgphoto2.rules"
 	CAM_LIST="/usr/$(get_libdir)/libgphoto2/print-camera-list"
 
 	if [ -x "${D}"${CAM_LIST} ]; then
