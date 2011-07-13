@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.598 2011/07/09 13:12:36 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.599 2011/07/13 20:05:46 maekke Exp $
+
+  13 Jul 2011; Markus Meier <maekke@gentoo.org> xorg-server-1.10.2.ebuild:
+  x86 stable, bug #371857
 
 *xorg-server-1.10.3 (09 Jul 2011)
 
