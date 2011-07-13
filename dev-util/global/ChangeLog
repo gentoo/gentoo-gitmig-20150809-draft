@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/global
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.85 2011/06/26 15:01:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.86 2011/07/13 20:09:15 maekke Exp $
+
+  13 Jul 2011; Markus Meier <maekke@gentoo.org> global-5.9.5.ebuild:
+  x86 stable, bug #372303
 
   26 Jun 2011; Brent Baude <ranger@gentoo.org> global-5.9.5.ebuild:
   Marking global-5.9.5 ppc for bug 372303
