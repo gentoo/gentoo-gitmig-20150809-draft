@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.96 2011/06/27 19:56:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.97 2011/07/13 07:03:15 mduft Exp $
+
+  13 Jul 2011; Markus Duft <mduft@gentoo.org> git-1.7.6.ebuild,
+  +files/git-1.7.6-interix.patch:
+  re-added interix prefix specific patch, as some things didnt make it into the
+  current release.
 
 *git-1.7.6 (27 Jun 2011)
 

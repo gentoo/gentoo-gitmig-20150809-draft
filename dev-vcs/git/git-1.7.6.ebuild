@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.6.ebuild,v 1.1 2011/06/27 19:56:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.6.ebuild,v 1.2 2011/07/13 07:03:15 mduft Exp $
 
 EAPI=3
 
@@ -246,6 +246,8 @@ src_prepare() {
 
 	# merged upstream
 	#epatch "${FILESDIR}"/git-1.7.5-interix.patch
+	# but only one of two hunks made it into the release ... :(
+	epatch "${FILESDIR}"/git-1.7.6-interix.patch
 }
 
 git_emake() {
