@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-good.eclass,v 1.24 2011/05/04 03:19:27 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-good.eclass,v 1.25 2011/07/13 05:12:56 leio Exp $
 
 # Author : foser <foser@gentoo.org>, zaheerm <zaheerm@gentoo.org>
 
@@ -37,6 +37,11 @@ aalib aalibtest annodex cairo esd esdtest flac gconf gdk_pixbuf hal jpeg
 libcaca libdv libpng pulse dv1394 shout2 shout2test soup speex taglib wavpack"
 
 # When adding conditionals like below, be careful about having leading spaces in concat
+
+# cairooverlay added to the cairo plugin under cairo_gobject
+if version_is_at_least "0.10.29"; then
+	my_gst_plugins_good+=" cairo_gobject"
+fi
 
 # ext/jack moved here since 0.10.27
 if version_is_at_least "0.10.27"; then
