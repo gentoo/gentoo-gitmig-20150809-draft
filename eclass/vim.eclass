@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.196 2011/03/28 06:47:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.197 2011/07/13 01:06:31 lack Exp $
 
 # Authors:
-# 	Jim Ramsay <i.am@gentoo.org>
+# 	Jim Ramsay <lack@gentoo.org>
 # 	Ryan Phillips <rphillips@gentoo.org>
 # 	Seemant Kulleen <seemant@gentoo.org>
 # 	Aron Griffis <agriffis@gentoo.org>
@@ -574,7 +574,7 @@ vim_src_install() {
 		# These files might have slight security issues, so we won't
 		# install them. See bug #77841. We don't mind if these don't
 		# exist.
-		rm "${ED}${vimfiles}"/tools/{vimspell.sh,tcltags}
+		rm "${ED}${vimfiles}"/tools/{vimspell.sh,tcltags} 2>/dev/null
 
 	elif [[ ${MY_PN} == gvim ]] ; then
 		dobin src/gvim
