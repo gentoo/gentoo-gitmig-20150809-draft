@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.2.ebuild,v 1.1 2011/07/11 19:53:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.2.ebuild,v 1.2 2011/07/13 20:51:44 radhermit Exp $
 
 EAPI=4
 inherit eutils flag-o-matic autotools gnome2
@@ -84,7 +84,8 @@ src_prepare() {
 	gnome2_src_prepare
 	epatch "${FILESDIR}"/${PN}-0.48.0-spell.patch \
 		"${FILESDIR}"/${PN}-0.48.1-libpng15.patch \
-		"${FILESDIR}"/${PN}-0.48.1-lcms.patch
+		"${FILESDIR}"/${PN}-0.48.1-lcms.patch \
+		"${FILESDIR}"/${P}-libwpg.patch
 	eautoreconf
 }
 
