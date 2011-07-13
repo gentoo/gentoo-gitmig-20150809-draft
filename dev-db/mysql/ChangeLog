@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.578 2011/07/08 10:05:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.579 2011/07/13 07:37:01 robbat2 Exp $
+
+*mysql-5.1.58 (13 Jul 2011)
+*mysql-5.1.57 (13 Jul 2011)
+*mysql-5.1.56-r1 (13 Jul 2011)
+
+  13 Jul 2011; Robin H. Johnson <robbat2@gentoo.org> +mysql-5.1.56-r1.ebuild,
+  +mysql-5.1.57.ebuild, +mysql-5.1.58.ebuild:
+  Version bump of MySQL. Many thanks to Jorge Manuel B. S. Vicetto
+  <jmbsvicetto@gentoo.org> for all the effort on the mysql-v2 eclass.
 
   08 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> mysql-4.1.22-r1.ebuild:
   Convert from "hasq" to "has".
