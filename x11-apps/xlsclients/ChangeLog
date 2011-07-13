@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xlsclients
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlsclients/ChangeLog,v 1.58 2011/06/28 21:21:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlsclients/ChangeLog,v 1.59 2011/07/13 19:58:38 maekke Exp $
+
+  13 Jul 2011; Markus Meier <maekke@gentoo.org> xlsclients-1.1.2.ebuild:
+  x86 stable, bug #371857
 
   28 Jun 2011; Brent Baude <ranger@gentoo.org> xlsclients-1.1.2.ebuild:
   Marking xlsclients-1.1.2 ppc stable for bug 371857
