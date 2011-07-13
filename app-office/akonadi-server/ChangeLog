@@ -1,6 +1,10 @@
 # ChangeLog for app-office/akonadi-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.56 2011/06/01 19:30:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.57 2011/07/13 14:41:51 xarthisius Exp $
+
+  13 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  akonadi-server-1.5.2.ebuild:
+  ppc64 stable wrt #354033
 
   01 Jun 2011; Brent Baude <ranger@gentoo.org> akonadi-server-1.5.2.ebuild:
   Marking akonadi-server-1.5.2 ppc stable for bug 354033
