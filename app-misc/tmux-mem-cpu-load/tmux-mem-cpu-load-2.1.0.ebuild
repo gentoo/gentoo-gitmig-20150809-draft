@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux-mem-cpu-load/tmux-mem-cpu-load-2.1.0.ebuild,v 1.2 2011/07/02 15:22:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux-mem-cpu-load/tmux-mem-cpu-load-2.1.0.ebuild,v 1.3 2011/07/13 19:45:41 maekke Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ if [[ ${PV} == *9999* ]]; then
 	KEYWORDS=""
 	SRC_URI=""
 else
-	KEYWORDS="amd64 ~x86"
+	KEYWORDS="amd64 x86"
 	SRC_URI="http://www.github.com/thewtex/${PN}/tarball/v${PV} -> ${P}.tar.gz"
 fi
 
