@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.1.ebuild,v 1.4 2011/07/14 10:59:40 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.1.ebuild,v 1.5 2011/07/14 19:13:01 suka Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ PYTHON_USE_WITH="threads"
 
 inherit autotools check-reqs db-use eutils fdo-mime flag-o-matic gnome2-utils java-pkg-opt-2 kde4-base multilib pax-utils prefix python toolchain-funcs
 
-IUSE="binfilter cups -custom-cflags dbus debug eds gnome gstreamer gtk kde ldap nsplugin odk offlinehelp opengl"
+IUSE="binfilter cups -custom-cflags dbus debug eds gnome gstreamer gtk kde ldap nsplugin odk offlinehelp opengl templates"
 
 MY_PV=3.4.1.3
 MY_P="${PN}-build-${MY_PV}"
@@ -22,6 +22,7 @@ PATCHLEVEL=OOO320
 SRC=OOo_${PV}_src
 S="${WORKDIR}/${PN}-bootstrap-${MY_PV}"
 DEVPATH="http://download.documentfoundation.org/libreoffice/src"
+EXT_SRC="http://ooo.itc.hu/oxygenoffice/download/libreoffice"
 CONFFILE=${S}/distro-configs/Gentoo.conf
 BASIS=basis3.3
 
@@ -107,6 +108,17 @@ SPELL_DIRS_DEPEND=""
 for X in ${SPELL_DIRS} ; do
 	SPELL_DIRS_DEPEND+=" linguas_${X}? ( app-dicts/myspell-${X} )"
 done
+
+TDEPEND="${EXT_SRC}/472ffb92d82cf502be039203c606643d-Sun-ODF-Template-Pack-en-US_1.0.0.oxt"
+TDEPEND+=" linguas_de? ( ${EXT_SRC}/53ca5e56ccd4cab3693ad32c6bd13343-Sun-ODF-Template-Pack-de_1.0.0.oxt )"
+TDEPEND+=" linguas_en_GB? ( ${EXT_SRC}/472ffb92d82cf502be039203c606643d-Sun-ODF-Template-Pack-en-US_1.0.0.oxt )"
+TDEPEND+=" linguas_en_ZA? ( ${EXT_SRC}/472ffb92d82cf502be039203c606643d-Sun-ODF-Template-Pack-en-US_1.0.0.oxt )"
+TDEPEND+=" linguas_es? ( ${EXT_SRC}/4ad003e7bbda5715f5f38fde1f707af2-Sun-ODF-Template-Pack-es_1.0.0.oxt )"
+TDEPEND+=" linguas_fr? ( ${EXT_SRC}/a53080dc876edcddb26eb4c3c7537469-Sun-ODF-Template-Pack-fr_1.0.0.oxt )"
+TDEPEND+=" linguas_hu? ( ${EXT_SRC}/09ec2dac030e1dcd5ef7fa1692691dc0-Sun-ODF-Template-Pack-hu_1.0.0.oxt )"
+TDEPEND+=" linguas_it? ( ${EXT_SRC}/b33775feda3bcf823cad7ac361fd49a6-Sun-ODF-Template-Pack-it_1.0.0.oxt )"
+
+SRC_URI+=" templates? ( ${TDEPEND} )"
 
 LICENSE="LGPL-3"
 SLOT="0"
@@ -213,6 +225,23 @@ src_unpack() {
 	cp "${FILESDIR}"/wrapper.in "${T}"
 	eprefixify "${T}"/wrapper.in
 
+	# copy extension templates; o what fun ...
+	if use templates; then
+		local dest="${S}/extras/source/extensions"
+		mkdir -p "${dest}"
+
+		for template in ${TDEPEND}; do
+			if [[ ${template: -3:3} == oxt ]]; then
+				tmplfile="${DISTDIR}/$(basename ${template})"
+				tmplname="$(echo "${template}" | \
+					cut -f 2- -s -d - | cut -f 1 -d _)"
+
+				[ -f ${tmplfile} ] && [ ! -f "${dest}/${tmplname}".oxt ] \
+					&& { cp -v "${tmplfile}" "${dest}/${tmplname}".oxt || die; }
+			fi
+		done
+	fi
+
 }
 
 src_prepare() {
@@ -304,7 +333,7 @@ src_prepare() {
 	echo $(use_with ldap openldap) >> ${CONFFILE}
 	echo $(use_with offlinehelp helppack-integration) >> ${CONFFILE}
 	echo $(use_with java) >> ${CONFFILE}
-	echo "--without-sun-templates" >> ${CONFFILE}
+	echo $(use_with templates sun-templates) >> ${CONFFILE}
 	echo $(use_enable debug crashdump) >> ${CONFFILE}
 	echo $(use_enable !debug strip-solver) >> ${CONFFILE}
 	echo $(use_enable odk) >> ${CONFFILE}
