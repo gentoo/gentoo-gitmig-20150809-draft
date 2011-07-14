@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.6.16.ebuild,v 1.2 2011/07/01 21:15:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.6.16.ebuild,v 1.3 2011/07/14 10:42:58 tomka Exp $
 
 EAPI="3"
 GNOME_TARBALL_SUFFIX="xz"
@@ -13,7 +13,7 @@ DESCRIPTION="Clutter is a library for creating graphical user interfaces"
 
 SLOT="1.0"
 IUSE="debug doc +introspection"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 
 # NOTE: glx flavour uses libdrm + >=mesa-7.3
 # We always use the gdk-pixbuf backend now since it's been split out
