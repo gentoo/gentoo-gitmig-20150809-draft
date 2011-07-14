@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/packages.build,v 1.5 2011/06/28 01:49:11 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/packages.build,v 1.6 2011/07/14 01:18:53 jmbsvicetto Exp $
 
 # This file describes the packages needed to build a stage1 based on this
 # profile.  Packages in this file are built in order.
@@ -42,3 +42,4 @@ virtual/libc
 virtual/os-headers
 virtual/package-manager
 sys-fs/udev
+sys-apps/shadow

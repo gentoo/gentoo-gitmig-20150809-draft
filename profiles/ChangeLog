@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5524 2011/07/13 07:18:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5525 2011/07/14 01:18:53 jmbsvicetto Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Jul 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  default/linux/packages.build:
+  Added sys-apps/shadow to packages.build as we need it on stage1.
 
   13 Jul 2011; Justin Lecher <jlec@gentoo.org> package.mask:
   mask dev-tcltk/tkimg-1.5*, fails with libjpeg-turbo on tests
