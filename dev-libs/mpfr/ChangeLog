@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/mpfr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.135 2011/07/14 18:33:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.136 2011/07/14 18:36:49 vapier Exp $
+
+*mpfr-3.0.1_p4 (14 Jul 2011)
+
+  14 Jul 2011; Mike Frysinger <vapier@gentoo.org> +files/3.0.1/patch01,
+  +files/3.0.1/patch02, +files/3.0.1/patch04, +mpfr-3.0.1_p4.ebuild,
+  +files/3.0.1/patch03:
+  Version bump.
 
   14 Jul 2011; Mike Frysinger <vapier@gentoo.org> mpfr-2.4.2_p3.ebuild,
   mpfr-3.0.0_p3.ebuild, mpfr-3.0.1.ebuild:
