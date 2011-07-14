@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/imageworsener
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imageworsener/ChangeLog,v 1.6 2011/05/26 19:13:21 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imageworsener/ChangeLog,v 1.7 2011/07/14 17:07:40 ken69267 Exp $
+
+*imageworsener-0.9.3 (14 Jul 2011)
+
+  14 Jul 2011; Kenneth Prugh <ken69267@gentoo.org> +imageworsener-0.9.3.ebuild:
+  version bump
 
   26 May 2011; Kenneth Prugh <ken69267@gentoo.org> -imageworsener-0.9.1.ebuild:
   drop old version
