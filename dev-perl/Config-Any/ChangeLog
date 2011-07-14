@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Config-Any
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Any/ChangeLog,v 1.9 2011/07/06 13:32:29 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Any/ChangeLog,v 1.10 2011/07/14 14:02:56 tove Exp $
+
+*Config-Any-0.230.0 (14 Jul 2011)
+
+  14 Jul 2011; Torsten Veller <tove@gentoo.org> +Config-Any-0.230.0.ebuild:
+  Version bump
 
 *Config-Any-0.220.0 (06 Jul 2011)
 
