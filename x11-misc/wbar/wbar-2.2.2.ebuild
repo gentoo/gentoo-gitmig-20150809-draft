@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/wbar-2.2.2.ebuild,v 1.1 2011/06/19 18:58:46 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wbar/wbar-2.2.2.ebuild,v 1.2 2011/07/14 11:18:31 xarthisius Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gtk"
 
-RDEPEND="media-libs/imlib2
+RDEPEND="media-libs/imlib2[X]
 	x11-libs/libX11
 	gtk? ( dev-libs/atk
 		dev-libs/glib:2
@@ -27,13 +27,13 @@ RDEPEND="media-libs/imlib2
 		x11-libs/gdk-pixbuf
 		x11-libs/gtk+:2 )"
 DEPEND="${RDEPEND}
-	dev-util/intltool"
+	dev-util/intltool
+	dev-util/pkgconfig"
 
 src_prepare() {
 	if ! use gtk; then
 		# Remove wbar-config from default cfg.
-		sed -i -e '5,8d' \
-			etc/wbar.cfg.in || die "Removing wbar-config from cfg"
+		sed -i -e '5,8d' etc/wbar.cfg.in || die
 	fi
 	sed -i -e '/Werror/d' src/Makefile.am || die
 	eautoreconf
