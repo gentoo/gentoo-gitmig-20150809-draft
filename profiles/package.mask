@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12903 2011/07/14 05:58:31 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12904 2011/07/14 17:29:23 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (14 Jul 2011)
+# Upstream doesn't maintain it for a long time, nothing uses it
+# anymore and bundles a copy of sqlite3, bug #252540
+# Removal in 30 days
+=gnome-extra/libgda-3*
 
 # Justin Lecher <jlec@gentoo.org> (13 Jul 2011)
 # fails with libjpeg-turbo on tests
