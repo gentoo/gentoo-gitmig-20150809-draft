@@ -1,14 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.39 2011/07/14 18:03:54 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.40 2011/07/14 18:04:51 mattst88 Exp $
 
 # Kacper Kowalik <xarthisius@gentoo.org> (20 May 2011)
 # depends on dev-libs/dmalloc which is not keyworded
 net-nds/ypbind debug
-
-# Jim Ramsay <lack@gentoo.org> (5 Nov 2008)
-# app-admin/gkrellm may pull in net-libs/libntlm, which is not keyworded
-app-admin/gkrellm ntlm
 
 # Peter Alfredsen <loki_val@gentoo.org> (20 Jun 2008)
 # cppunit is not keyworded, needed by test. Bug 228559.
