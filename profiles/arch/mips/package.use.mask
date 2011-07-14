@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.38 2011/07/14 17:53:06 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.39 2011/07/14 18:03:54 mattst88 Exp $
 
 # Kacper Kowalik <xarthisius@gentoo.org> (20 May 2011)
 # depends on dev-libs/dmalloc which is not keyworded
@@ -42,10 +42,6 @@ media-video/mplayer bidi bl cddb cdio cdparanoia cpudetection dga dv dvb enca es
 # Steve Dibb <beandog@gentoo.org> (01 Nov 2007)
 # needs media-libs/ladspa-sdk keyworded
 media-video/mplayer ladspa
-
-# Stuart Longland <redhatter@gentoo.org> (23 Dec 2007)
-# Don't know if ATM works, can't test.
-net-dialup/ppp atm
 
 # Richard Brown <rbrown@gentoo.org> (23 Dec 2007)
 # app-xemacs/ruby-modes is not keyworded on this arch
