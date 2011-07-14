@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.289 2011/07/13 00:45:45 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.290 2011/07/14 03:05:22 lack Exp $
+
+  14 Jul 2011; Jim Ramsay <lack@gentoo.org> fluxbox-9999.ebuild:
+  Updating live ebuild to use git-2 eclass
 
   13 Jul 2011; Jim Ramsay <lack@gentoo.org> -fluxbox-1.0.0.ebuild,
   -fluxbox-1.0.0-r2.ebuild, -fluxbox-1.1.0.1.ebuild, -fluxbox-1.1.1-r1.ebuild,

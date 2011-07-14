@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-9999.ebuild,v 1.8 2011/04/16 18:22:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-9999.ebuild,v 1.9 2011/07/14 03:05:22 lack Exp $
 
 EAPI=3
-inherit eutils git prefix
+inherit eutils git-2 prefix
 
 IUSE="nls xinerama bidi +truetype gnome +imlib +slit +toolbar vim-syntax"
 
@@ -39,13 +39,7 @@ SLOT="0"
 LICENSE="MIT"
 KEYWORDS=""
 
-src_unpack() {
-	git_src_unpack
-}
-
 src_prepare() {
-	git_src_prepare
-	cd "${S}"
 	./autogen.sh
 
 	# We need to be able to include directories rather than just plain
