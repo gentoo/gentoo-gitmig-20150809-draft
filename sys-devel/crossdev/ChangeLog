@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/crossdev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.78 2011/07/05 06:49:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.79 2011/07/14 04:13:36 vapier Exp $
+
+  14 Jul 2011; Mike Frysinger <vapier@gentoo.org> crossdev-99999999.ebuild:
+  Encode the git version into crossdev so the log output is useful.
 
 *crossdev-20110705 (05 Jul 2011)
 
