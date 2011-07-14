@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.851 2011/07/14 01:59:42 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.852 2011/07/14 22:53:14 jer Exp $
+
+  14 Jul 2011; Jeroen Roovers <jer@gentoo.org> portage-2.1.10.3.ebuild:
+  Stable for HPPA (bug #373523).
 
 *portage-2.2.0_alpha45 (14 Jul 2011)
 
