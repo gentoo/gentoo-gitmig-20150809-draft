@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/gourmet-0.15.9.ebuild,v 1.3 2011/06/19 13:47:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/gourmet-0.15.9.ebuild,v 1.4 2011/07/14 12:46:02 pacho Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -18,7 +18,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="gnome-print pdf rtf"
 
-RDEPEND=">=dev-python/pygtk-2.3.93
+RDEPEND=">=dev-python/pygtk-2.3.93:2
+	dev-python/pygobject:2
 	>=dev-python/libgnome-python-2
 	>=gnome-base/libglade-2
 	|| ( =dev-lang/python-2*[sqlite] dev-python/pysqlite:2 )
@@ -29,7 +30,7 @@ RDEPEND=">=dev-python/pygtk-2.3.93
 	dev-db/metakit[python]
 	pdf? ( dev-python/reportlab dev-python/python-poppler )
 	rtf? ( dev-python/pyrtf )
-	gnome-print? ( dev-python/gnome-python-extras
+	gnome-print? ( dev-python/libgnomeprint-python
 	               dev-python/python-poppler )"
 DEPEND="${RDEPEND}"
 

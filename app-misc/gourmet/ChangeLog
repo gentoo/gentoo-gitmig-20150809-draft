@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gourmet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.31 2011/06/19 13:47:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gourmet/ChangeLog,v 1.32 2011/07/14 12:46:02 pacho Exp $
+
+  14 Jul 2011; Pacho Ramos <pacho@gentoo.org> -gourmet-0.15.7-r1.ebuild,
+  -gourmet-0.15.8.ebuild, gourmet-0.15.9.ebuild:
+  Fix python dependencies and remove old versions still using meta that we are
+  going to drop.
 
   19 Jun 2011; Markus Meier <maekke@gentoo.org> gourmet-0.15.9.ebuild:
   x86 stable, bug #370527
