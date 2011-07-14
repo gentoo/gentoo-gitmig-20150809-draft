@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/phonon-vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/ChangeLog,v 1.7 2011/06/21 11:58:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/ChangeLog,v 1.8 2011/07/14 10:57:02 dilfridge Exp $
+
+  14 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  phonon-vlc-0.3.2.ebuild, phonon-vlc-0.4.0.ebuild, phonon-vlc-9999.ebuild:
+  Require ogg and vorbis support in vlc, bug 372833
 
   21 Jun 2011; Markos Chandras <hwoarang@gentoo.org> phonon-vlc-0.4.0.ebuild:
   Stable on amd64 wrt bug #371187
