@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.37 2011/07/14 19:13:01 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.38 2011/07/14 20:55:30 suka Exp $
+
+  14 Jul 2011; Andreas Proschofsky <suka@gentoo.org> libreoffice-3.4.1.ebuild:
+  Extensions now build fine again without java
 
   14 Jul 2011; Andreas Proschofsky <suka@gentoo.org> libreoffice-3.4.1.ebuild:
   Bring back templates support. The credit for this really goes to geki!

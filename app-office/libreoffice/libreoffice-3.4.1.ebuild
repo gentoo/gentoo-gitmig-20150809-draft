@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.1.ebuild,v 1.5 2011/07/14 19:13:01 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.1.ebuild,v 1.6 2011/07/14 20:55:30 suka Exp $
 
 EAPI="3"
 
@@ -24,7 +24,6 @@ S="${WORKDIR}/${PN}-bootstrap-${MY_PV}"
 DEVPATH="http://download.documentfoundation.org/libreoffice/src"
 EXT_SRC="http://ooo.itc.hu/oxygenoffice/download/libreoffice"
 CONFFILE=${S}/distro-configs/Gentoo.conf
-BASIS=basis3.3
 
 DESCRIPTION="LibreOffice, a full office productivity suite."
 HOMEPAGE="http://www.libreoffice.org"
@@ -338,13 +337,10 @@ src_prepare() {
 	echo $(use_enable !debug strip-solver) >> ${CONFFILE}
 	echo $(use_enable odk) >> ${CONFFILE}
 
-	# Extension stuff, disabled when building without java for bug #352812
-	if use java; then
-		echo "--with-extension-integration" >> ${CONFFILE}
-		echo "--enable-ext-pdfimport" >> ${CONFFILE}
-		echo "--enable-ext-presenter-console" >> ${CONFFILE}
-		echo "--enable-ext-presenter-minimizer" >> ${CONFFILE}
-	fi
+	echo "--with-extension-integration" >> ${CONFFILE}
+	echo "--enable-ext-pdfimport" >> ${CONFFILE}
+	echo "--enable-ext-presenter-console" >> ${CONFFILE}
+	echo "--enable-ext-presenter-minimizer" >> ${CONFFILE}
 
 	# Misc stuff
 	echo "--prefix="${EPREFIX}"/usr" >> ${CONFFILE}
