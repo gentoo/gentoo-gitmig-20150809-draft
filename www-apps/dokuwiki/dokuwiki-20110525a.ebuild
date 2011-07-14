@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20101107.ebuild,v 1.2 2011/05/26 18:17:59 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20110525a.ebuild,v 1.1 2011/07/14 16:25:43 ramereth Exp $
+
+EAPI="4"
 
 inherit webapp depend.php
 
@@ -13,31 +15,22 @@ HOMEPAGE="http://wiki.splitbrain.org/wiki:dokuwiki"
 SRC_URI="http://www.splitbrain.org/_media/projects/${PN}/${PN}-${MY_PV}.tgz"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~sparc x86"
-IUSE=""
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+IUSE="gd"
 
 DEPEND=""
-RDEPEND=""
+RDEPEND="
+	|| ( <dev-lang/php-5.3[xml,spl] >=dev-lang/php-5.3[xml] )
+	gd? ( || ( dev-lang/php[gd]
+		media-gfx/imagemagick )
+	)"
 
 need_httpd_cgi
 need_php_httpd
 
-S="${WORKDIR}/${PN}-${MY_BASE_PV}"
+S="${WORKDIR}/${PN}-${MY_PV}"
 
-pkg_setup() {
-	webapp_pkg_setup
-	has_php
-	if [[ ${PHP_VERSION} == "4" ]] ; then
-		require_php_with_use cli expat
-	else
-		require_php_with_use cli xml
-	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# create initial changes file
 	touch data/changes.log
 }
