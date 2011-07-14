@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.582 2011/07/14 03:55:11 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.583 2011/07/14 03:58:44 jmbsvicetto Exp $
+
+  14 Jul 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -mysql-5.4.3_beta.ebuild, -mysql-5.5.1_alpha_pre2.ebuild,
+  mysql-5.5.14.ebuild:
+  [dev-db/mysql-5.5.14] Don't use live version of mysql_extras.
+  Drop old versions.
 
 *mysql-5.5.14 (14 Jul 2011)
 
