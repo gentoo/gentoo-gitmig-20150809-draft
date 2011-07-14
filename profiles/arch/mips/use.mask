@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.43 2011/07/14 17:53:06 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.44 2011/07/14 18:02:35 mattst88 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -279,7 +279,6 @@ php
 djbfft
 glitz
 pike
-ocaml
 timidity
 
 # Mask all non-mips arch keywords
@@ -349,10 +348,6 @@ bluetooth
 # Matt Turner <mattst88@gentoo.org> (13 Dec 2010)
 # We don't have net-libs/libsmi keyworded
 smi
-
-# Matt Turner <mattst88@gentoo.org> (13 Dec 2010)
-# We don't have dev-libs/ocaml
-ocaml
 
 # Matt Turner <mattst88@gentoo.org> (13 Dec 2010)
 # We don't have sys-devel/llvm
