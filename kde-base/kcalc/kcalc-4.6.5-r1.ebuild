@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/kcalc-4.6.5.ebuild,v 1.3 2011/07/14 10:25:21 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcalc/kcalc-4.6.5-r1.ebuild,v 1.1 2011/07/14 10:25:21 tampakrap Exp $
 
 EAPI=4
 
@@ -20,6 +20,7 @@ RDEPEND="${DEPEND}"
 
 PATCHES=(
 	"${FILESDIR}"/${PN}-4.3.2-solaris-knumber_priv.patch
+	"${FILESDIR}"/${P}-fix-kbd-ui.patch
 )
 
 src_test() {
