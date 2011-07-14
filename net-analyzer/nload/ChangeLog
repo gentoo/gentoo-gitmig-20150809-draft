@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nload
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.32 2011/06/12 18:00:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/ChangeLog,v 1.33 2011/07/14 21:29:50 hwoarang Exp $
+
+  14 Jul 2011; Markos Chandras <hwoarang@gentoo.org> nload-0.7.3.ebuild:
+  Stable on amd64 wrt bug #374661
 
 *nload-0.7.3 (12 Jun 2011)
 
