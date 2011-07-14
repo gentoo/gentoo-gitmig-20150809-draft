@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.59 2011/07/09 19:28:52 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.60 2011/07/14 17:35:39 pacho Exp $
+
+  14 Jul 2011; Pacho Ramos <pacho@gentoo.org> libproxy-0.4.6-r3.ebuild:
+  amd64 stable, bug #372813
 
   09 Jul 2011; Matt Turner <mattst88@gentoo.org> libproxy-0.4.6-r3.ebuild:
   Added ~mips, bug 365331
