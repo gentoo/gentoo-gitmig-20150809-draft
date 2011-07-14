@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/uqm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/ChangeLog,v 1.28 2011/06/24 11:31:11 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/ChangeLog,v 1.29 2011/07/14 19:25:02 mr_bones_ Exp $
+
+*uqm-0.7.0 (14 Jul 2011)
+
+  14 Jul 2011; Michael Sterrett <mr_bones_@gentoo.org> +uqm-0.7.0.ebuild:
+  version bump (bug #375177)
 
   24 Jun 2011; Tupone Alfredo <tupone@gentoo.org> uqm-0.6.2.ebuild:
   Fix dodoc call on a directory. Bug #369961 by Diego Elio Pettenò
