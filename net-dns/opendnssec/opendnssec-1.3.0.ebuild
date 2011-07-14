@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.0_rc3.ebuild,v 1.1 2011/07/01 19:21:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.0.ebuild,v 1.1 2011/07/14 21:52:53 scarabeus Exp $
 
 EAPI=4
 
