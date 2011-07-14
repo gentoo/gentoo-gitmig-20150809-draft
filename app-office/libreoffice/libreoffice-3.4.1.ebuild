@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.1.ebuild,v 1.3 2011/07/06 22:05:53 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.1.ebuild,v 1.4 2011/07/14 10:59:40 suka Exp $
 
 EAPI="3"
 
@@ -304,7 +304,7 @@ src_prepare() {
 	echo $(use_with ldap openldap) >> ${CONFFILE}
 	echo $(use_with offlinehelp helppack-integration) >> ${CONFFILE}
 	echo $(use_with java) >> ${CONFFILE}
-	echo $(use_with templates sun-templates) >> ${CONFFILE}
+	echo "--without-sun-templates" >> ${CONFFILE}
 	echo $(use_enable debug crashdump) >> ${CONFFILE}
 	echo $(use_enable !debug strip-solver) >> ${CONFFILE}
 	echo $(use_enable odk) >> ${CONFFILE}
@@ -354,7 +354,7 @@ src_prepare() {
 	echo "--with-system-xrender-headers" >> ${CONFFILE}
 	echo "--with-system-zlib" >> ${CONFFILE}
 	echo "--with-unix-wrapper=libreoffice" >> ${CONFFILE}
-	echo "--with-vendor=\\\"Gentoo Foundation\\\"" >> ${CONFFILE}
+	echo "--with-vendor=Gentoo Foundation" >> ${CONFFILE}
 	echo "--without-afms" >> ${CONFFILE}
 	echo "--without-fonts" >> ${CONFFILE}
 	echo "--without-junit" >> ${CONFFILE}
