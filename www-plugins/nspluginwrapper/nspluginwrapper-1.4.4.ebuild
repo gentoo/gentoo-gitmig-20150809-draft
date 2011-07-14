@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/nspluginwrapper-1.4.4.ebuild,v 1.3 2011/07/05 07:49:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/nspluginwrapper-1.4.4.ebuild,v 1.4 2011/07/14 16:09:41 chutzpah Exp $
 
 EAPI=2
 
@@ -45,7 +45,7 @@ autoinstall() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.3.0-gdk-native-windows.patch"
-	epatch "${FILESDIR}/${PN}-1.4.2-parallel-make.patch"
+	epatch "${FILESDIR}/${P}-parallel-make.patch"
 	epatch "${FILESDIR}/${P}-compile-on-hardened.patch"
 }
 
