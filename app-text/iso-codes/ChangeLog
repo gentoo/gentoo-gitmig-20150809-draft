@@ -1,6 +1,9 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.107 2011/07/01 21:06:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.108 2011/07/14 10:03:04 tomka Exp $
+
+  14 Jul 2011; Thomas Kahle <tomka@gentoo.org> iso-codes-3.24.2.ebuild:
+  x86 stable per bug 369909
 
   01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> iso-codes-3.24.2.ebuild:
   Stable on amd64 wrt bug #278255
