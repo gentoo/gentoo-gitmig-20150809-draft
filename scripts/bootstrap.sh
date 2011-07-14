@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.92 2011/07/14 01:24:53 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.93 2011/07/14 19:19:02 zmedico Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -52,7 +52,7 @@ v_echo() {
 	env "$@"
 }
 
-cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.92 2011/07/14 01:24:53 jmbsvicetto Exp $"
+cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.93 2011/07/14 19:19:02 zmedico Exp $"
 cvsver=${cvsver##*,v }
 cvsver=${cvsver%%Exp*}
 cvsyear=${cvsver#* }
@@ -151,9 +151,6 @@ unset TMP TMPDIR TEMP
 
 cleanup() {
 	if [[ -n ${STRAP_RUN} ]] ; then
-		if [[ -f /etc/make.conf.build ]] ; then
-			mv -f /etc/make.conf.build /etc/make.conf
-		fi
 		if [ ${BOOTSTRAP_STAGE} -le 2 ] ; then
 			cp -f /var/cache/edb/mtimedb /var/run/bootstrap-mtimedb
 		else
@@ -167,10 +164,6 @@ pycmd() {
 	[[ ${DEBUG} = "1" ]] && echo /usr/bin/python -c "$@" > /dev/stderr
 	/usr/bin/python -c "$@"
 }
-
-# Trap ctrl-c and stuff.  This should fix the users make.conf
-# not being restored.
-[[ -n ${STRAP_RUN} ]] && cp -f /etc/make.conf /etc/make.conf.build
 
 # TSTP messes ^Z of bootstrap up, so we don't trap it anymore.
 trap "cleanup" TERM KILL INT QUIT ABRT
@@ -296,17 +289,6 @@ einfo "Using zlib       : ${myZLIB}"
 einfo "Using ncurses    : ${myNCURSES}"
 echo -------------------------------------------------------------------------------
 show_status 1 Configuring environment
-
-# Get correct CFLAGS, CHOST, CXXFLAGS, MAKEOPTS since make.conf will be
-# overwritten.
-
-export ENV_EXPORTS="GENTOO_MIRRORS PORTDIR DISTDIR PKGDIR PORTAGE_TMPDIR
-	CFLAGS CHOST CXXFLAGS MAKEOPTS ACCEPT_KEYWORDS PROXY HTTP_PROXY
-	FTP_PROXY FEATURES STAGE1_USE"
-
-eval $(python -c 'import portage, os, sys; sys.stdout.write("".join(["export %s=\"%s\"; [[ -z \"%s\" ]] || einfo %s=\\\"%s\\\";\n" % (k, portage.settings[k], portage.settings[k], k, portage.settings[k]) for k in os.getenv("ENV_EXPORTS").split()]))')
-unset ENV_EXPORTS
-
 echo -------------------------------------------------------------------------------
 
 [[ -x /usr/sbin/gcc-config ]] && GCC_CONFIG="/usr/sbin/gcc-config"
@@ -321,6 +303,9 @@ export CONFIG_PROTECT="-*"
 
 # disable collision-protection
 export FEATURES="${FEATURES} -collision-protect"
+
+# query STAGE1_USE from the profile
+STAGE1_USE=$(portageq envvar STAGE1_USE)
 
 if [ ${BOOTSTRAP_STAGE} -le 1 ] ; then
 	show_status 2 Updating portage
@@ -370,5 +355,4 @@ if [[ -n ${STRAP_RUN} ]] ; then
 	echo
 fi
 
-# Restore original make.conf
 cleanup 0
