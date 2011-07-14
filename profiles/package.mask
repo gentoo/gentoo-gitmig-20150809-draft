@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12902 2011/07/13 07:20:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12903 2011/07/14 05:58:31 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -296,12 +296,6 @@ net-misc/gateway6
 # Masked until bug #370163 is resolved.
 >=sys-block/parted-3.0
 >=dev-python/pyparted-3.8
-
-# Eray Aslan <eras@gentoo.org> (4 Jun 2011)
-# Dead upstream. Not needed as Google supports
-# IMAP access to mailboxes now. Bug #151470
-# Removal in 30 days
-net-mail/gml
 
 # Tim Harder <radhermit@gentoo.org> (3 Jun 2011)
 # Mask release candidates

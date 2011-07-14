@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5525 2011/07/14 01:18:53 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5526 2011/07/14 05:58:31 eras Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Jul 2011; Eray Aslan <eras@gentoo.org> package.mask:
+  remove mask against net-mail/gml. no longer in the tree
 
   14 Jul 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   default/linux/packages.build:
