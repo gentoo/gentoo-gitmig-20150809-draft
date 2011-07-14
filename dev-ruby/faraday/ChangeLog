@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/faraday
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/ChangeLog,v 1.7 2010/10/20 17:48:29 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/ChangeLog,v 1.8 2011/07/14 06:58:55 graaff Exp $
+
+*faraday-0.7.4 (14 Jul 2011)
+
+  14 Jul 2011; Hans de Graaff <graaff@gentoo.org> +faraday-0.7.4.ebuild:
+  Version bump. Dropped x86 keyword due to new dependency: bug 375153.
 
   20 Oct 2010; Hans de Graaff <graaff@gentoo.org> -faraday-0.4.5.ebuild:
   Remove old version.
