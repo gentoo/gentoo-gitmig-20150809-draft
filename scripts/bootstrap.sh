@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.91 2011/05/20 03:05:33 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.92 2011/07/14 01:24:53 jmbsvicetto Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -52,7 +52,7 @@ v_echo() {
 	env "$@"
 }
 
-cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.91 2011/05/20 03:05:33 jmbsvicetto Exp $"
+cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.92 2011/07/14 01:24:53 jmbsvicetto Exp $"
 cvsver=${cvsver##*,v }
 cvsver=${cvsver%%Exp*}
 cvsyear=${cvsver#* }
@@ -262,7 +262,6 @@ n=${n%%-[0-9]*}; echo "my$(tr a-z- A-Z_ <<<$n)=$p; "; done)
 
 # This stuff should never fail but will if not enough is installed.
 [[ -z ${myBASELAYOUT} ]] && myBASELAYOUT=">=$(portageq best_version / sys-apps/baselayout)"
-[[ -z ${mySHADOW}     ]] && mySHADOW=">=$(portageq best_version / sys-apps/shadow)"
 [[ -z ${myPORTAGE}    ]] && myPORTAGE="portage"
 [[ -z ${myBINUTILS}   ]] && myBINUTILS="binutils"
 [[ -z ${myGCC}        ]] && myGCC="gcc"
@@ -286,7 +285,6 @@ fi
 [[ -z ${myOS_HEADERS} ]] && myOS_HEADERS="virtual/os-headers"
 
 einfo "Using baselayout : ${myBASELAYOUT}"
-einfo "Using shadow     : ${mySHADOW}"
 einfo "Using portage    : ${myPORTAGE}"
 einfo "Using os-headers : ${myOS_HEADERS}"
 einfo "Using binutils   : ${myBINUTILS}"
@@ -347,7 +345,7 @@ if [ ${BOOTSTRAP_STAGE} -le 2 ] ; then
 		:
 	fi
 	${V_ECHO} emerge ${STRAP_EMERGE_OPTS} ${myOS_HEADERS} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} \
-		${myGCC} ${myLIBC} ${myBASELAYOUT} ${mySHADOW} ${myZLIB} || cleanup 1
+		${myGCC} ${myLIBC} ${myBASELAYOUT} ${myZLIB} || cleanup 1
 	echo -------------------------------------------------------------------------------
 	set_bootstrap_stage 3
 fi
