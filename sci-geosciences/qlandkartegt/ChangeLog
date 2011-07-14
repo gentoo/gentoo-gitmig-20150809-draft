@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/qlandkartegt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt/ChangeLog,v 1.14 2011/06/30 12:20:03 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/qlandkartegt/ChangeLog,v 1.15 2011/07/14 20:47:13 scarabeus Exp $
+
+*qlandkartegt-1.2.2 (14 Jul 2011)
+
+  14 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/1.1.2-fix_automagicness.patch, -qlandkartegt-1.2.1.ebuild,
+  +qlandkartegt-1.2.2.ebuild:
+  Version bump. Drop older. Drop patch applied by upstream.
 
 *qlandkartegt-1.2.1 (30 Jun 2011)
 
