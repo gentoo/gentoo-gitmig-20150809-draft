@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-11.04.ebuild,v 1.1 2011/04/05 18:54:04 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotoxx/fotoxx-11.07.ebuild,v 1.1 2011/07/14 15:41:02 grozin Exp $
 EAPI=3
 inherit eutils toolchain-funcs
 
@@ -22,23 +22,18 @@ RDEPEND="${DEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PF}-makefile.patch
+	epatch "${FILESDIR}"/${PF}-docdir.patch
 }
 
 src_compile() {
 	tc-export CXX
-	emake PREFIX=/usr || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	pushd doc > /dev/null
-	mv ${PN}.man ${PN}.1
-	doman ${PN}.1
-	rm COPYING ${PN}.1
-	bzip2 -9 userguide-changes
-	popd > /dev/null
 	# For the Help menu items to work, *.html must be in /usr/share/doc/${PF},
 	# and README, CHANGES, TRANSLATIONS must not be compressed
-	emake DESTDIR="${D}" PREFIX=/usr install || die
+	emake DESTDIR="${D}" install || die "emake install failed"
 	make_desktop_entry ${PN} "Fotoxx" /usr/share/${PN}/icons/${PN}.png \
 		"Application;Graphics;2DGraphics"
 }
