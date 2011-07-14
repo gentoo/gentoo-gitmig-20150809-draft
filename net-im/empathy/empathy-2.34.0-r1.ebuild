@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.34.0-r1.ebuild,v 1.2 2011/07/01 21:16:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.34.0-r1.ebuild,v 1.3 2011/07/14 10:47:09 tomka Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="http://live.gnome.org/Empathy"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 # FIXME: Add location support once geoclue stops being idiotic with automagic deps
 IUSE="eds map nautilus networkmanager spell test webkit"
 
