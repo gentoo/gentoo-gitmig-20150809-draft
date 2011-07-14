@@ -1,0 +1,23 @@
+jimtcl's ./configure reimplementtaion dislikes --datadir / --libdir
+
+./configure --prefix=/usr --build=x86_64-pc-linux-gnu --host=x86_64-pc-linux-gnu --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib --libdir=/usr/lib64 --with-jim-shared --with-jim-ext=nvp
+Host System...x86_64-pc-linux-gnu
+Build System...x86_64-pc-linux-gnu
+C compiler... x86_64-pc-linux-gnu-gcc -g -O2
+C++ compiler... x86_64-pc-linux-gnu-c++ -g -O2
+Checking for stdlib.h...ok
+Error: Unknown option --datadir
+Try: 'configure --help' for options
+diff --git a/autosetup/system.tcl b/autosetup/system.tcl
+index 3a2221a..7e534f1 100644
+--- a/autosetup/system.tcl
++++ b/autosetup/system.tcl
+@@ -25,6 +25,8 @@ module-options {
+ 	libexecdir:
+ 	sysconfdir:
+ 	localstatedir:
++	datadir:
++	libdir:
+ 
+ 	maintainer-mode=0
+ 	dependency-tracking=0
