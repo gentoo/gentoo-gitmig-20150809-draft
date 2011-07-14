@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/faraday-0.7.4.ebuild,v 1.1 2011/07/14 06:58:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/faraday-0.7.4.ebuild,v 1.2 2011/07/14 14:30:23 graaff Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ IUSE=""
 ruby_add_rdepend ">=dev-ruby/rack-1.1.0
 	>=dev-ruby/addressable-2.2.6
 	>=dev-ruby/multipart-post-1.1.0"
-ruby_add_bdepend "test? ( >=dev-ruby/test-unit-2.3 >=dev-ruby/webmock-1.6 )"
+ruby_add_bdepend "test? ( >=dev-ruby/test-unit-2.2 >=dev-ruby/webmock-1.6 )"
 
 all_ruby_prepare() {
 	# Remove bundler support.
