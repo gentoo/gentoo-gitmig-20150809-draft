@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.71 2011/07/11 04:33:15 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.72 2011/07/14 17:53:06 mattst88 Exp $
+
+  14 Jul 2011; Matt Turner <mattst88@gentoo.org> package.use.mask, use.mask:
+  Remove kerberos from package.use.mask and use.mask
 
   11 Jul 2011; Matt Turner <mattst88@gentoo.org> use.mask:
   Add ocamlopt to use.mask

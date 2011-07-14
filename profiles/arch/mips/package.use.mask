@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.37 2011/07/08 20:55:31 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.38 2011/07/14 17:53:06 mattst88 Exp $
 
 # Kacper Kowalik <xarthisius@gentoo.org> (20 May 2011)
 # depends on dev-libs/dmalloc which is not keyworded
@@ -21,12 +21,6 @@ dev-ruby/rubygems server
 # Wolfram Schlich <wschlich@gentoo.org> (20 Nov 2007)
 # dependency can't be fulfilled at the moment
 net-im/mcabber otr
-
-# Chris Gianelloni <cgianelloni@gentoo.org> (22 Sep 2007)
-# dependency can't be fulfilled at the moment
-kde-base/kdelibs kerberos
-dev-vcs/cvs kerberos
-net-mail/fetchmail kerberos
 
 # Jim Ramsay <lack@gentoo.org> (7 Sep 2007)
 # app-admin/gkrellm may pull in hddtemp, which is not yet available here
@@ -60,7 +54,6 @@ dev-lang/ruby xemacs
 # Sebastian Pipping <sping@gentoo.org> (27 Jan 2010)
 # dev-vcs/bzr is not keyworded on this arch
 # dev-vcs/darcs is not keyworded on this arch
-# dev-vcs/mercurial is not keyworded on this arch
 app-portage/layman bazaar
 app-portage/layman darcs
 

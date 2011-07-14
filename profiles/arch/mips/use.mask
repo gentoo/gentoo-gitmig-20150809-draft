@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.42 2011/07/11 04:33:15 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.43 2011/07/14 17:53:06 mattst88 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -332,10 +332,6 @@ battery
 # kumba (02 Jun 2007)
 # pulseaudio hasn't been tested on mips; maybe someday
 pulseaudio
-
-# Chris Gianelloni <wolf31o2@gentoo.org> (22 Sep 2007)
-# We don't have anything that can satisfy this virtual
-kerberos
 
 # kumba (01 Nov 2007)
 # mask ladspa USE
