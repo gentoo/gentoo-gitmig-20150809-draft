@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/gnome-panel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.335 2011/07/14 10:24:08 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.336 2011/07/14 12:34:22 pacho Exp $
+
+*gnome-panel-2.32.1-r3 (14 Jul 2011)
+
+  14 Jul 2011; Pacho Ramos <pacho@gentoo.org> +gnome-panel-2.32.1-r3.ebuild,
+  +files/gnome-panel-2.32.1-evo-month.patch:
+  Pass the correct month to Evolution command line from clock applet, thanks to
+  walt for noticing.
 
   14 Jul 2011; Thomas Kahle <tomka@gentoo.org> gnome-panel-2.32.1-r2.ebuild:
   x86 stable per bug 369909
