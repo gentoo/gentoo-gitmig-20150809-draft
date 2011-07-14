@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.581 2011/07/13 07:48:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.582 2011/07/14 03:55:11 jmbsvicetto Exp $
+
+*mysql-5.5.14 (14 Jul 2011)
+
+  14 Jul 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +mysql-5.5.14.ebuild:
+  [dev-db/mysql] Adding mysql-5.5.14 from the overlay.
 
   13 Jul 2011; Robin H. Johnson <robbat2@gentoo.org> -mysql-5.0.70-r1.ebuild,
   -mysql-5.0.72.ebuild, -mysql-5.0.72-r1.ebuild, -mysql-5.0.76.ebuild,
