@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2/libgit2-0.13.0.ebuild,v 1.1 2011/06/30 21:02:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2/libgit2-0.14.0.ebuild,v 1.1 2011/07/14 06:54:12 radhermit Exp $
 
 EAPI=4
 
@@ -19,7 +19,6 @@ RDEPEND="sys-libs/zlib"
 DEPEND="${RDEPEND}"
 
 DOCS=( README.md )
-PATCHES=( "${FILESDIR}"/${P}-system-zlib.patch )
 
 src_configure() {
 	local mycmakeargs=(
