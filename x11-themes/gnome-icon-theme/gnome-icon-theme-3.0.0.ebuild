@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/gnome-icon-theme-3.0.0.ebuild,v 1.3 2011/07/01 21:19:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/gnome-icon-theme-3.0.0.ebuild,v 1.4 2011/07/14 11:01:17 tomka Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -16,7 +16,7 @@ SRC_URI="${SRC_URI}
 LICENSE="LGPL-3 CCPL-Attribution-ShareAlike-3.0
 	branding? ( CCPL-Sampling-Plus-1.0 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="branding"
 
 RDEPEND=">=x11-themes/hicolor-icon-theme-0.10"
