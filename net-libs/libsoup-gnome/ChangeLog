@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsoup-gnome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.53 2011/07/10 23:53:26 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.54 2011/07/15 11:09:36 xarthisius Exp $
+
+  15 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  libsoup-gnome-2.34.2.ebuild:
+  Marked ~ppc/~ppc64 wrt #365331
 
   10 Jul 2011; Matt Turner <mattst88@gentoo.org> libsoup-gnome-2.34.2.ebuild:
   Added ~mips, bug 365331
