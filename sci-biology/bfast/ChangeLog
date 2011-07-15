@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/bfast
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bfast/ChangeLog,v 1.4 2011/05/18 16:11:49 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bfast/ChangeLog,v 1.5 2011/07/15 15:38:43 xarthisius Exp $
+
+  15 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> -bfast-0.6.4c.ebuild,
+  -bfast-0.6.4d.ebuild:
+  Drop old. Files not available upstream anymore
 
 *bfast-0.6.5a (18 May 2011)
 
