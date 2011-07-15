@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/analog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.67 2011/05/29 16:52:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.68 2011/07/15 15:25:21 xarthisius Exp $
+
+  15 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> -analog-6.0-r3.ebuild,
+  analog-6.0-r4.ebuild:
+  ppc/ppc64 stable wrt #362807. Drop old.
 
   29 May 2011; Raúl Porcel <armin76@gentoo.org> analog-6.0-r4.ebuild:
   alpha/sparc stable wrt #362807
