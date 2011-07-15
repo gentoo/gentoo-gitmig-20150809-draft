@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/w3af
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/w3af/ChangeLog,v 1.10 2011/06/30 09:44:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/w3af/ChangeLog,v 1.11 2011/07/15 20:18:14 maekke Exp $
+
+  15 Jul 2011; Markus Meier <maekke@gentoo.org> w3af-1.0.ebuild:
+  x86 stable, bug #372809
 
   30 Jun 2011; Markos Chandras <hwoarang@gentoo.org> w3af-1.0.ebuild:
   Stable on amd64 wrt bug #372809
