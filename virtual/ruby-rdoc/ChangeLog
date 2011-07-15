@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-rdoc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-rdoc/ChangeLog,v 1.2 2011/07/11 18:34:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-rdoc/ChangeLog,v 1.3 2011/07/15 17:35:29 mattst88 Exp $
+
+  15 Jul 2011; Matt Turner <mattst88@gentoo.org> ruby-rdoc-1.ebuild:
+  Added ~mips, bug 332593
 
   11 Jul 2011; Fabian Groffen <grobian@gentoo.org> ruby-rdoc-0.ebuild:
   Add Prefix keywords, bug #374765
