@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.0a-r5.ebuild,v 1.1 2011/06/01 21:24:10 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-7.0a-r5.ebuild,v 1.2 2011/07/15 13:10:37 c1pher Exp $
 
 EAPI="2"
 
@@ -9,7 +9,8 @@ inherit flag-o-matic linux-info multilib toolchain-funcs wxwidgets eutils \
 
 DESCRIPTION="Free open-source disk encryption software"
 HOMEPAGE="http://www.truecrypt.org/"
-SRC_URI="${P}.tar.gz"
+SRC_URI="${P}.tar.gz\
+	mirror://gentoo/${PN}-pkcs11.h.bz2"
 
 LICENSE="truecrypt-3.0"
 SLOT="0"
@@ -54,6 +55,11 @@ src_prepare() {
 
 	epatch "${FILESDIR}/makefile-archdetect.diff"
 	epatch "${FILESDIR}/execstack-fix.diff"
+	if ! has_version dev-libs/pkcs11-helper && \
+		has_version "=dev-libs/opensc-0.12*"; then
+		mkdir pkcs11 || die
+		cp "${WORKDIR}"/truecrypt-pkcs11.h pkcs11/pkcs11.h || die
+	fi
 }
 
 src_compile() {
@@ -63,6 +69,9 @@ src_compile() {
 
 	if has_version dev-libs/pkcs11-helper; then
 		pkcs11_include_directory="/usr/include/pkcs11-helper-1.0"
+	elif has_version "=dev-libs/opensc-0.12*"; then
+		pkcs11_include_directory="/usr/include/opensc"
+		append-flags -I"${S}"/pkcs11
 	else
 		pkcs11_include_directory="/usr/include/opensc"
 	fi

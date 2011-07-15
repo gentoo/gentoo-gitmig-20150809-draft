@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.64 2011/06/01 21:24:10 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.65 2011/07/15 13:10:37 c1pher Exp $
+
+  15 Jul 2011; Dane Smith <c1pher@gentoo.org> truecrypt-7.0a-r5.ebuild:
+  Allow for the inclusion of our own pkcs11.h if using >=opensc-0.12 wrt
+  bug 369781. No revbump. Thanks to Alon Bar-Lev and Diego Elio Petteno
+  for help with the fix.
 
 *truecrypt-7.0a-r5 (01 Jun 2011)
 
