@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5527 2011/07/14 17:29:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5528 2011/07/15 11:40:29 jmbsvicetto Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Jul 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  base/packages, package.mask:
+  [package.mask] Masked ~dev-db/mariadb-5.1.55 until we get some feedback on
+  the unit tests as they build for me but fail for Robin.
 
   14 Jul 2011; Pacho Ramos <pacho@gentoo.org> package.mask:
   Mask gnome-extra/libgda:3 for removal, bug #252540.
