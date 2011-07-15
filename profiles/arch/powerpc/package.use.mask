@@ -1,15 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.87 2011/06/30 19:35:06 pacho Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.88 2011/07/15 11:24:26 xarthisius Exp $
 
 # Brent Baude <ranger@gentoo.org> (25 June  2011)
 # kde-base/krossjava fails to build on ppc
-=kde-base/kdebindings-meta-4.6.3 java
-
-# Kacper Kowalik <xarthisius@gentoo.org> (2 June 2011)
-# kde-base/krossjava fails to build wrt #354033
-=kde-base/kdebindings-meta-4.6.2 java
+kde-base/kdebindings-meta java
 
 # Brent Baude <ranger@gentoo.org> (1 June  2011)
 # dev-util/kdevplatform masking reviewboard USE
