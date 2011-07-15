@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xrootconsole
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/ChangeLog,v 1.27 2011/06/29 19:24:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/ChangeLog,v 1.28 2011/07/15 08:17:22 xarthisius Exp $
+
+  15 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  -xrootconsole-0.4-r1.ebuild, xrootconsole-0.6.ebuild:
+  ppc stable wrt 371797. Drop old
 
   29 Jun 2011; Markus Meier <maekke@gentoo.org> xrootconsole-0.6.ebuild:
   x86 stable, bug #371797
