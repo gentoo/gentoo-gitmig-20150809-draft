@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mariadb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.9 2010/10/07 19:05:47 robbat2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.10 2011/07/15 11:51:40 jmbsvicetto Exp $
+
+*mariadb-5.2.7 (15 Jul 2011)
+*mariadb-5.1.55 (15 Jul 2011)
+
+  15 Jul 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +mariadb-5.1.55.ebuild, +mariadb-5.2.7.ebuild, metadata.xml:
+  [dev-db/mariadb] Add 5.1.55 and 5.2.7 bumps from the mysql overlay.
 
   07 Oct 2010; Robin H. Johnson <robbat2@gentoo.org> mariadb-5.1.50.ebuild:
   We need a newer libtool now, bug #339717 comment #3.
