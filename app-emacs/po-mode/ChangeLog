@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/po-mode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/po-mode/ChangeLog,v 1.24 2011/05/26 20:09:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/po-mode/ChangeLog,v 1.25 2011/07/15 14:28:20 xarthisius Exp $
+
+  15 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> po-mode-0.18.1.1.ebuild:
+  ppc64 stable wrt #361635
 
   26 May 2011; Brent Baude <ranger@gentoo.org> po-mode-0.18.1.1.ebuild:
   Marking po-mode-0.18.1.1 ppc for bug 361635
