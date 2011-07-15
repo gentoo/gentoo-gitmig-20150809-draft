@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.325 2011/07/09 12:02:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.326 2011/07/15 17:03:55 xarthisius Exp $
+
+  15 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> xterm-269.ebuild:
+  ppc64 stable wrt #363965
 
   09 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> xterm-270.ebuild:
   Install xterm.desktop and uxterm.desktop wrt #350545 by Michelangelo
