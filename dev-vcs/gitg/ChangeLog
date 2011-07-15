@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/gitg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.11 2011/04/12 00:51:16 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.12 2011/07/15 13:56:36 sping Exp $
+
+*gitg-0.2.2 (15 Jul 2011)
+
+  15 Jul 2011; Sebastian Pipping <sping@gentoo.org>
+  +files/gitg-0.2.1-fix-disable-debug.patch, +gitg-0.2.2.ebuild:
+  Insert 0.2.2 from gnome overlay (bug #360659)
 
   12 Apr 2011; Sebastian Pipping <sping@gentoo.org> gitg-0.1.2.ebuild:
   Remove -Werror (bug #363009)
