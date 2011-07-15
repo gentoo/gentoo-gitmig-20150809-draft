@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.43.ebuild,v 1.1 2011/03/28 19:00:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.47.ebuild,v 1.1 2011/07/15 22:19:11 radhermit Exp $
 
 EAPI="4"
 
-inherit autotools-utils multilib eutils
+inherit autotools multilib eutils
 
 MY_PN="MediaInfo"
 DESCRIPTION="MediaInfo libraries"
@@ -17,20 +17,19 @@ KEYWORDS="~amd64 ~x86"
 IUSE="curl debug doc libmms static-libs"
 
 RDEPEND="sys-libs/zlib
-	>=media-libs/libzen-0.4.18[static-libs=]
+	>=media-libs/libzen-0.4.20[static-libs=]
 	curl? ( net-misc/curl )
 	libmms? ( >=media-libs/libmms-0.6.1[static-libs=] )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )"
 
-AUTOTOOLS_IN_SOURCE_BUILD=1
-
 S="${WORKDIR}/${MY_PN}Lib/Project/GNU/Library"
 
 src_prepare() {
-	# Fix linking problem for bug #343125
-	EPATCH_OPTS="-p1 -d ${WORKDIR}/${MY_PN}Lib" epatch "${FILESDIR}"/${PN}-0.7.41-curl.patch
+	pushd "${WORKDIR}"/${MY_PN}Lib > /dev/null
+	epatch "${FILESDIR}"/${PN}-0.7.44-libmms.patch
+	popd > /dev/null
 
 	# Don't force -O2 by default
 	sed -i -e "s:-O2::" configure.ac
@@ -39,17 +38,18 @@ src_prepare() {
 }
 
 src_configure() {
-	local myeconfargs
-	myeconfargs=(
-		$(use_with curl libcurl)
-		$(use_with libmms)
+	econf \
+		--enable-shared \
+		$(use_with curl libcurl) \
+		$(use_enable debug) \
+		$(use_with libmms) \
+		$(use_enable static-libs static) \
 		$(use_enable static-libs staticlibs)
-	)
-	autotools-utils_src_configure
 }
 
 src_compile() {
-	autotools-utils_src_compile
+	default
+
 	if use doc; then
 		cd "${WORKDIR}/${MY_PN}Lib/Source/Doc"
 		doxygen Doxyfile || die
@@ -57,7 +57,7 @@ src_compile() {
 }
 
 src_install() {
-	autotools-utils_src_install
+	default
 
 	insinto /usr/$(get_libdir)/pkgconfig
 	doins "${S}"/${PN}.pc
@@ -67,8 +67,13 @@ src_install() {
 		doins "${WORKDIR}"/${MY_PN}Lib/Source/${MY_PN}/${x}/*.h
 	done
 
+	insinto /usr/include/${MY_PN}DLL
+	doins "${WORKDIR}"/${MY_PN}Lib/Source/${MY_PN}DLL/*.h
+
 	dodoc "${WORKDIR}"/${MY_PN}Lib/*.txt
 	if use doc; then
 		dohtml -r "${WORKDIR}"/${MY_PN}Lib/Doc/*
 	fi
+
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
