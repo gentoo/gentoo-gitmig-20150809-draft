@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-nouveau
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/ChangeLog,v 1.30 2011/06/28 20:06:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/ChangeLog,v 1.31 2011/07/15 17:18:41 xarthisius Exp $
+
+  15 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  xf86-video-nouveau-0.0.16_pre20110323.ebuild:
+  ppc64 stable wrt #363965
 
   28 Jun 2011; Brent Baude <ranger@gentoo.org>
   xf86-video-nouveau-0.0.16_pre20110323.ebuild:
