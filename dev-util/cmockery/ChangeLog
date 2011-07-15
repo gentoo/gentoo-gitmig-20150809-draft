@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmockery
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmockery/ChangeLog,v 1.3 2011/07/12 21:14:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmockery/ChangeLog,v 1.4 2011/07/15 01:34:29 jer Exp $
+
+  15 Jul 2011; Jeroen Roovers <jer@gentoo.org> cmockery-0.1.2.ebuild:
+  Marked ~hppa (bug #374401).
 
   12 Jul 2011; Markus Meier <maekke@gentoo.org> cmockery-0.1.2.ebuild:
   add ~arm, bug #374401

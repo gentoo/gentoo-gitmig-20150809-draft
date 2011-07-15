@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmockery/cmockery-0.1.2.ebuild,v 1.3 2011/07/12 21:14:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmockery/cmockery-0.1.2.ebuild,v 1.4 2011/07/15 01:34:29 jer Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://cmockery.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~x86"
 IUSE="examples static-libs"
 
 DEPEND=""
