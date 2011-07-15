@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cabextract
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.68 2011/06/26 19:52:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.69 2011/07/15 20:14:28 maekke Exp $
+
+  15 Jul 2011; Markus Meier <maekke@gentoo.org> cabextract-1.4.ebuild:
+  x86 stable, bug #372597
 
   26 Jun 2011; Markus Meier <maekke@gentoo.org> cabextract-1.4.ebuild:
   arm stable, bug #372597
