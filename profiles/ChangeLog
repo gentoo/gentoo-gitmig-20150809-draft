@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5528 2011/07/15 11:40:29 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5529 2011/07/15 11:43:46 jmbsvicetto Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Jul 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  base/packages:
+  [base/packages] Revert unintentional commit about bug 221311 - will apply it
+  later when I finish testing it.
 
   15 Jul 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   base/packages, package.mask:
