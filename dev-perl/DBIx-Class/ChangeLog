@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/DBIx-Class
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Class/ChangeLog,v 1.30 2011/06/04 08:37:50 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Class/ChangeLog,v 1.31 2011/07/15 17:24:43 tove Exp $
+
+*DBIx-Class-0.81.930 (15 Jul 2011)
+
+  15 Jul 2011; Torsten Veller <tove@gentoo.org> +DBIx-Class-0.81.930.ebuild:
+  Version bump
 
 *DBIx-Class-0.81.920 (04 Jun 2011)
 
