@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/tig
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tig/ChangeLog,v 1.6 2011/06/26 08:10:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tig/ChangeLog,v 1.7 2011/07/15 20:19:32 maekke Exp $
+
+  15 Jul 2011; Markus Meier <maekke@gentoo.org> tig-0.17.ebuild:
+  x86 stable, bug #372771
 
   26 Jun 2011; Markos Chandras <hwoarang@gentoo.org> tig-0.17.ebuild:
   Stable on amd64 wrt bug #372771
