@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/postgresql-base
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.127 2011/07/09 13:47:50 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.128 2011/07/15 12:12:59 titanofold Exp $
+
+*postgresql-base-9.1_beta3 (15 Jul 2011)
+
+  15 Jul 2011; Aaron W. Swenson <titanofold@gentoo.org>
+  +postgresql-base-9.1_beta3.ebuild:
+  Version bump
 
 *postgresql-base-9.1_beta1-r3 (09 Jul 2011)
 
