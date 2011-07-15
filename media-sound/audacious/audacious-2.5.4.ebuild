@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-2.5.1.ebuild,v 1.1 2011/06/06 13:58:44 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-2.5.4.ebuild,v 1.1 2011/07/15 13:29:00 chainsaw Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ MY_P="${P/_/-}"
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Audacious Player - Your music, your way, no exceptions"
 HOMEPAGE="http://audacious-media-player.org/"
-SRC_URI="http://distfiles.atheme.org/${MY_P}.tgz
+SRC_URI="http://distfiles.atheme.org/${MY_P}.tar.gz
 	 mirror://gentoo/gentoo_ice-xmms-0.2.tar.bz2"
 
 LICENSE="GPL-2"
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 	chardet? ( app-i18n/libguess )
 	nls? ( dev-util/intltool )"
 
-PDEPEND=">=media-plugins/audacious-plugins-2.5.1"
+PDEPEND=">=media-plugins/audacious-plugins-2.5.4"
 
 src_configure() {
 	# D-Bus is a mandatory dependency, remote control,
