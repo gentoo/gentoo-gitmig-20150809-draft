@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspiceui/gspiceui-0.9.99-r1.ebuild,v 1.1 2011/04/28 15:58:00 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspiceui/gspiceui-0.9.99-r1.ebuild,v 1.2 2011/07/15 22:56:38 calchan Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ IUSE="examples schematics waveform"
 DEPEND="x11-libs/wxGTK:2.8[X]
 	sci-electronics/electronics-menu"
 RDEPEND="${DEPEND}
-	|| ( sci-electronics/ng-spice-rework sci-electronics/gnucap )
+	|| ( sci-electronics/ngspice sci-electronics/gnucap )
 	waveform? ( sci-electronics/gwave )
 	schematics? ( sci-electronics/geda )"
 

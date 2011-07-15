@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/gspiceui
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspiceui/ChangeLog,v 1.5 2011/04/28 15:58:00 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspiceui/ChangeLog,v 1.6 2011/07/15 22:56:38 calchan Exp $
+
+  15 Jul 2011; Denis Dupeyron <calchan@gentoo.org> gspiceui-0.9.99.ebuild,
+  gspiceui-0.9.99-r1.ebuild:
+  Changed dependency on sci-electronics/ng-spice-rework to
+  sci-electronics/ngspice due to move.
 
 *gspiceui-0.9.99-r1 (28 Apr 2011)
 
