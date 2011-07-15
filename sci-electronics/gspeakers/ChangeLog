@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/gspeakers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspeakers/ChangeLog,v 1.11 2011/03/02 20:17:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspeakers/ChangeLog,v 1.12 2011/07/15 23:36:18 calchan Exp $
+
+  15 Jul 2011; Denis Dupeyron <calchan@gentoo.org> gspeakers-0.11.ebuild,
+  gspeakers-0.11-r1.ebuild:
+  Changed dependency on sci-electronics/ng-spice-rework to
+  sci-electronics/ngspice due to move.
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> gspeakers-0.11.ebuild,
   gspeakers-0.11-r1.ebuild:
