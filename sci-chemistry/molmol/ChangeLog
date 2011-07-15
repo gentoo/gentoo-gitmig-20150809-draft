@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/molmol
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/ChangeLog,v 1.25 2011/07/02 21:54:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/ChangeLog,v 1.26 2011/07/15 20:37:54 maekke Exp $
+
+  15 Jul 2011; Markus Meier <maekke@gentoo.org> molmol-2k_p2-r2.ebuild:
+  x86 stable, bug #373091
 
   02 Jul 2011; Markos Chandras <hwoarang@gentoo.org> molmol-2k_p2-r2.ebuild:
   Stable on amd64 wrt bug #373091
