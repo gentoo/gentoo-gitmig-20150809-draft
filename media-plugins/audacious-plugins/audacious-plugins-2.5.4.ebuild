@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.5.1.ebuild,v 1.1 2011/06/06 13:59:05 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.5.4.ebuild,v 1.1 2011/07/15 13:29:01 chainsaw Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ MY_P="${P/_/-}"
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Audacious Player - Your music, your way, no exceptions"
 HOMEPAGE="http://audacious-media-player.org/"
-SRC_URI="http://distfiles.atheme.org/${MY_P}.tgz"
+SRC_URI="http://distfiles.atheme.org/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -21,7 +21,7 @@ lame libnotify libsamplerate lirc midi mms mp3 mtp nls oss pulseaudio scrobbler 
 RDEPEND="app-arch/unzip
 	>=dev-libs/dbus-glib-0.60
 	dev-libs/libxml2:2
-	>=media-sound/audacious-2.5.1
+	>=media-sound/audacious-2.5.4
 	>=net-libs/neon-0.26.4
 	>=x11-libs/gtk+-2.14:2
 	aac? ( >=media-libs/faad2-2.7 )
