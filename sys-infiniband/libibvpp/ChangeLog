@@ -1,6 +1,9 @@
 # ChangeLog for sys-infiniband/libibvpp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libibvpp/ChangeLog,v 1.2 2011/07/02 20:30:16 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-infiniband/libibvpp/ChangeLog,v 1.3 2011/07/15 15:53:36 xarthisius Exp $
+
+  15 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> libibvpp-0.1.ebuild:
+  Fix SRC_URI and HOMEPAGE, fix order of vars
 
   02 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> libibvpp-0.1.ebuild:
   Drop old dep
