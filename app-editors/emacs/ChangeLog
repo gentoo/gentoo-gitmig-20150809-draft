@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.421 2011/07/02 17:21:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.422 2011/07/15 16:09:26 xarthisius Exp $
+
+  15 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> emacs-23.3.ebuild:
+  ppc64 stable wrt #363633
 
   02 Jul 2011; Ulrich Mueller <ulm@gentoo.org> -emacs-21.4-r22.ebuild,
   -emacs-22.3-r6.ebuild, -emacs-23.2-r3.ebuild:
