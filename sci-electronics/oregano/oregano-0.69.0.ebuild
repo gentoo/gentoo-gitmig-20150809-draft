@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.69.0.ebuild,v 1.8 2011/04/25 15:10:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.69.0.ebuild,v 1.9 2011/07/15 23:43:29 calchan Exp $
 
 EAPI="1"
 inherit eutils fdo-mime
@@ -48,6 +48,6 @@ src_install() {
 pkg_postinst() {
 	fdo-mime_desktop_database_update
 	elog "You'll need to emerge your prefered simulation backend"
-	elog "such as spice, ng-spice-rework or gnucap for simulation"
+	elog "such as spice, ngspice or gnucap for simulation"
 	elog "to work."
 }

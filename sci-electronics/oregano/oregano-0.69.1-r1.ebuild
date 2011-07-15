@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.69.1-r1.ebuild,v 1.5 2011/07/05 10:38:17 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/oregano-0.69.1-r1.ebuild,v 1.6 2011/07/15 23:43:29 calchan Exp $
 
 EAPI="4"
 
@@ -52,7 +52,7 @@ src_install() {
 pkg_postinst() {
 	fdo-mime_desktop_database_update
 	elog "You'll need to emerge your prefered simulation backend"
-	elog "such ng-spice-rework or gnucap for simulation to work."
+	elog "such ngspice or gnucap for simulation to work."
 	elog "As an alternative generate a netlist and use sci-electronics/spice"
 	elog "from the command line for simulation."
 }

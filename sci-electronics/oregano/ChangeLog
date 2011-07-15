@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/oregano
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.48 2011/07/05 10:38:17 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.49 2011/07/15 23:43:29 calchan Exp $
+
+  15 Jul 2011; Denis Dupeyron <calchan@gentoo.org> oregano-0.69.0.ebuild,
+  oregano-0.69.0-r1.ebuild, oregano-0.69.1.ebuild, oregano-0.69.1-r1.ebuild:
+  Changed about ng-spice-rework to ngspice due to move.
 
   05 Jul 2011; Thomas Beierlein <tomjbe@gentoo.org> oregano-0.69.1-r1.ebuild:
   strip unsupported flags (bug 369875). Thanks for reporting to R. Cernansky
