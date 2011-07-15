@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.2.17.ebuild,v 1.2 2011/07/01 09:24:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.2.17.ebuild,v 1.3 2011/07/15 21:08:51 maekke Exp $
 
 EAPI="2"
 inherit eutils multilib python
@@ -11,7 +11,7 @@ SRC_URI="http://www.dbmail.org/download/2.2/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="ldap mysql postgres sieve +sqlite static python"
 
 DEPEND="postgres? ( dev-db/postgresql-server )
