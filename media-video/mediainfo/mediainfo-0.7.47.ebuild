@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/mediainfo-0.7.44.ebuild,v 1.1 2011/04/26 07:17:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/mediainfo-0.7.47.ebuild,v 1.1 2011/07/15 22:22:37 radhermit Exp $
 
 EAPI="4"
 WX_GTK_VER="2.8"
@@ -69,5 +69,5 @@ src_install() {
 		fi
 	done
 
-	dodoc "${S}"/*.html
+	dohtml "${S}"/ReadMe.html
 }
