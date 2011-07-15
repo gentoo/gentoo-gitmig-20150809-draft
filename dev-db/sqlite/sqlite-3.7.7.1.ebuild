@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.7.7.1.ebuild,v 1.1 2011/07/01 21:44:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.7.7.1.ebuild,v 1.2 2011/07/15 14:04:41 mduft Exp $
 
 EAPI="3"
 
@@ -48,6 +48,10 @@ pkg_setup() {
 }
 
 src_prepare() {
+	if amalgamation; then
+		epatch "${FILESDIR}"/${P}-interix-amalgamation.patch
+	fi
+
 	epunt_cxx
 }
 
