@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-9999.ebuild,v 1.8 2011/07/14 21:15:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-9999.ebuild,v 1.9 2011/07/15 11:12:09 hwoarang Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="1.9"
@@ -23,11 +23,10 @@ RDEPEND="dev-libs/glib:2
 	x11-libs/libXt
 	>=x11-libs/pango-1.8[X]
 	imlib? ( media-libs/imlib2 )
-	sys-devel/gettext
 	startup-notification? ( >=x11-libs/startup-notification-0.8 )
 	x11-libs/libXinerama"
 DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext )
+	sys-devel/gettext
 	app-text/docbook2X
 	dev-util/pkgconfig
 	x11-proto/xextproto
