@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/emacs-common-gentoo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.43 2011/06/14 04:18:40 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.44 2011/07/15 14:29:24 xarthisius Exp $
+
+  15 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  emacs-common-gentoo-1.2-r2.ebuild:
+  ppc64 stable wrt #361651
 
   14 Jun 2011; Matt Turner <mattst88@gentoo.org>
   emacs-common-gentoo-1.2-r2.ebuild:
