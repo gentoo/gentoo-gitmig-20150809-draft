@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-indicator-plugin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-indicator-plugin/ChangeLog,v 1.4 2011/05/07 07:49:34 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-indicator-plugin/ChangeLog,v 1.5 2011/07/15 08:49:04 angelos Exp $
+
+*xfce4-indicator-plugin-0.3.0.0 (15 Jul 2011)
+
+  15 Jul 2011; Christoph Mende <angelos@gentoo.org>
+  +xfce4-indicator-plugin-0.3.0.0.ebuild:
+  Version bump
 
 *xfce4-indicator-plugin-0.2.1 (07 May 2011)
 
