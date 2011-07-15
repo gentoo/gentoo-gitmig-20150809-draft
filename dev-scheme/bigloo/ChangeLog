@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/bigloo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.44 2011/06/21 11:49:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.45 2011/07/15 10:05:34 xarthisius Exp $
+
+  15 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> bigloo-3.6a.ebuild:
+  ppc stable wrt #368071
 
   21 Jun 2011; Markos Chandras <hwoarang@gentoo.org> bigloo-3.6a.ebuild:
   Stable on amd64 wrt bug #368071
