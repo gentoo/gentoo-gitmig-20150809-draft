@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.599 2011/07/13 20:05:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.600 2011/07/15 17:06:33 xarthisius Exp $
+
+  15 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> xorg-server-1.9.5.ebuild:
+  ppc64 stable wrt #363965
 
   13 Jul 2011; Markus Meier <maekke@gentoo.org> xorg-server-1.10.2.ebuild:
   x86 stable, bug #371857
