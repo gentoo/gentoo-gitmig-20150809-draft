@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdoc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.61 2011/07/11 18:28:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.62 2011/07/15 17:23:48 mattst88 Exp $
+
+  15 Jul 2011; Matt Turner <mattst88@gentoo.org> rdoc-3.6.1.ebuild:
+  Added ~mips, bug 332593
 
   11 Jul 2011; Fabian Groffen <grobian@gentoo.org> rdoc-3.6.1.ebuild:
   Marked ~x86-linux, bug #374765
