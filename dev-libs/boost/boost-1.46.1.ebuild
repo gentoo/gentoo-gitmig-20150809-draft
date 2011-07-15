@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.46.1.ebuild,v 1.5 2011/05/15 19:59:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.46.1.ebuild,v 1.6 2011/07/15 16:27:59 mattst88 Exp $
 
 EAPI="2"
 
@@ -160,7 +160,7 @@ __EOF__
 	use python || OPTIONS="${OPTIONS} --without-python"
 
 	# https://svn.boost.org/trac/boost/attachment/ticket/2597/add-disable-long-double.patch
-	if use sparc || use mips || use hppa || use arm || use x86-fbsd || use sh; then
+	if use sparc || { use mips && [[ ${ABI} = "o32" ]]; } || use hppa || use arm || use x86-fbsd || use sh; then
 		OPTIONS="${OPTIONS} --disable-long-double"
 	fi
 
