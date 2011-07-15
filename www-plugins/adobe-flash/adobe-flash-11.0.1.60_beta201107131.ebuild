@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.0.1.60_beta201107131.ebuild,v 1.1 2011/07/14 23:54:56 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.0.1.60_beta201107131.ebuild,v 1.2 2011/07/15 11:49:18 lack Exp $
 
 EAPI=4
 inherit nsplugins multilib toolchain-funcs versionator
@@ -29,7 +29,7 @@ IUSE="multilib +32bit +64bit vdpau bindist kde"
 SLOT="0"
 
 KEYWORDS="-* ~amd64 ~x86"
-LICENSE="AdobeFlash-10.1"
+LICENSE="AdobeFlash-11_beta"
 RESTRICT="strip mirror"
 
 S="${WORKDIR}"
