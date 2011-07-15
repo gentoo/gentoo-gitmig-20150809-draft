@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/qrencode-3.1.1.ebuild,v 1.6 2011/01/31 08:37:00 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qrencode/qrencode-3.1.1.ebuild,v 1.7 2011/07/15 15:44:14 jlec Exp $
 
 EAPI=2
+
 inherit autotools eutils
 
 DESCRIPTION="C library for encoding data in a QR Code symbol"
@@ -14,7 +15,9 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-RDEPEND="media-libs/libpng"
+RDEPEND="
+	dev-python/imaging
+	media-libs/libpng"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
