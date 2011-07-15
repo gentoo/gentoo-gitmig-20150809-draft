@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.65 2011/07/15 13:10:37 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.66 2011/07/15 17:53:07 c1pher Exp $
+
+*truecrypt-7.0a-r6 (15 Jul 2011)
+
+  15 Jul 2011; Dane Smith <c1pher@gentoo.org> +truecrypt-7.0a-r6.ebuild:
+  Rev bump. Include our own headers by default. Removed dependency on a
+  pkcs11 implementation. Should work with any of them now. Thanks Alon
+  Bar-Lev for the help. Bump to EAPI 4. Bug 369781
 
   15 Jul 2011; Dane Smith <c1pher@gentoo.org> truecrypt-7.0a-r5.ebuild:
   Allow for the inclusion of our own pkcs11.h if using >=opensc-0.12 wrt
