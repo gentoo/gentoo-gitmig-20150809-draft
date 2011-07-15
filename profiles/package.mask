@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12905 2011/07/15 11:40:29 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12906 2011/07/15 13:58:27 xarthisius Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -362,16 +362,6 @@ www-client/opera-next
 # Removal on 2011-07-12.
 net-irc/oer
 net-irc/oer-mysql
-
-# Justin Bronder <jsbronder@gentoo.org> (09 May 2011)
-#
-# Out of tree kernel module and upstream does not closely
-# track kernel release (current 2.8.2 only supports up to
-# 2.6.32).  There are alternatives already accepted in
-# the kernel such as Ceph or OCFS2. (#337374)
-#
-# Removal on 2011-07-09
-sys-cluster/pvfs2
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (06 May 2011)
 #  on behalf of QA team
