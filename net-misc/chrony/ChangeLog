@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/chrony
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.79 2011/07/15 04:05:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.80 2011/07/15 04:06:59 jer Exp $
+
+  15 Jul 2011; Jeroen Roovers <jer@gentoo.org> -files/chrony-1.21-hppa.patch,
+  -chrony-1.24-r2.ebuild:
+  ^
 
 *chrony-1.26 (15 Jul 2011)
 
