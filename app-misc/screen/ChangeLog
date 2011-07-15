@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.161 2011/04/23 18:37:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.162 2011/07/15 14:31:00 xarthisius Exp $
+
+  15 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> screen-4.0.3-r4.ebuild:
+  ppc64 stable wrt #361823
 
   23 Apr 2011; Raúl Porcel <armin76@gentoo.org> screen-4.0.3-r4.ebuild:
   alpha/ia64/m68k/s390/sh stable wrt #361823
