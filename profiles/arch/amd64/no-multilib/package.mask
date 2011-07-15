@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.104 2011/07/11 16:08:49 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.105 2011/07/15 11:18:51 xarthisius Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -180,16 +180,10 @@ sys-block/hpacucli
 sys-libs/lib-compat-loki
 <www-client/firefox-bin-5.0
 <www-client/seamonkey-bin-2.2
-<www-plugins/adobe-flash-10.0.20.7_alpha
-=www-plugins/adobe-flash-10.1*
-=www-plugins/adobe-flash-10.2.152.27
-=www-plugins/adobe-flash-10.2.153.1
-=www-plugins/adobe-flash-10.2.159.1
-~www-plugins/adobe-flash-10.3.181.14
+<www-plugins/adobe-flash-11.0.1.60_beta201107131
 www-plugins/nspluginwrapper
 www-plugins/google-talkplugin
 
 # AMD64 Team; <amd64@gentoo.org>
 # grub is not available on no-multilib-profiles; use sys-boot/grub-static
 sys-boot/grub
-
