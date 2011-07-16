@@ -1,0 +1,10 @@
+# ChangeLog for sci-libs/ssm
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ssm/ChangeLog,v 1.1 2011/07/16 11:57:28 jlec Exp $
+
+*ssm-1.1 (16 Jul 2011)
+
+  16 Jul 2011; Justin Lecher <jlec@gentoo.org> +ssm-1.1.ebuild,
+  +files/ssm-1.1-mmdb.patch, +files/ssm-1.1-pc.patch, +metadata.xml:
+  Import from sci-overlay
+
