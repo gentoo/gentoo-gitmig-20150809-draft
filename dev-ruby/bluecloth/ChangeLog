@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bluecloth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.48 2011/06/12 14:30:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.49 2011/07/16 09:39:41 xarthisius Exp $
+
+  16 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> bluecloth-2.0.7.ebuild:
+  ppc stable wrt #364215
 
   12 Jun 2011; Raúl Porcel <armin76@gentoo.org> bluecloth-2.0.7.ebuild:
   ia64 stable wrt #364215
