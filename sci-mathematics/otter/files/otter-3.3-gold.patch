@@ -10,7 +10,7 @@ index 39eaae5..7526c03 100644
  # The following works on a RedHat 7.3 computer
  
 -XLIBS = -L/usr/X11R6/lib -lXaw 
-+XLIBS = -L/usr/X11R6/lib -lXaw -lXm -lXt -lX11
++XLIBS = -L/usr/X11R6/lib -lXaw -lXt -lX11
  
  formed: formed.o display.o callback.o
  	$(CC) $(CFLAGS) $(LDFLAGS) formed.o display.o callback.o \

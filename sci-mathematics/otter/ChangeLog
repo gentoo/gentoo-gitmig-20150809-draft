@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/otter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/otter/ChangeLog,v 1.14 2011/06/03 08:58:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/otter/ChangeLog,v 1.15 2011/07/16 17:08:50 jlec Exp $
+
+  16 Jul 2011; Justin Lecher <jlec@gentoo.org> files/otter-3.3-gold.patch:
+  Remove unneeded linking against libXm, #373701
 
   03 Jun 2011; Justin Lecher <jlec@gentoo.org> otter-3.3-r1.ebuild,
   otter-3.3-r2.ebuild, +files/otter-3.3-gold.patch:
