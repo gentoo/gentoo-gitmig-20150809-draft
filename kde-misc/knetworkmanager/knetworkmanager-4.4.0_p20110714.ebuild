@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/knetworkmanager-4.4.0_p20110714.ebuild,v 1.1 2011/07/14 10:31:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/knetworkmanager-4.4.0_p20110714.ebuild,v 1.2 2011/07/16 11:18:11 dilfridge Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ DESCRIPTION="KDE frontend for NetworkManager"
 HOMEPAGE="http://kde.org/"
 
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 SLOT="4"
 IUSE="consolekit debug"
 
