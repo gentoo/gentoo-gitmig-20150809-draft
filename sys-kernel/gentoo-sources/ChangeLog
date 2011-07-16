@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.867 2011/07/14 10:09:48 psomas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.868 2011/07/16 17:24:48 hwoarang Exp $
+
+  16 Jul 2011; Markos Chandras <hwoarang@gentoo.org>
+  gentoo-sources-2.6.39-r3.ebuild:
+  Stable on amd64 wrt bug #375279
 
 *gentoo-sources-2.6.32-r33 (14 Jul 2011)
 
