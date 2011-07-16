@@ -1,0 +1,10 @@
+# ChangeLog for sci-biology/prodigal
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prodigal/ChangeLog,v 1.1 2011/07/16 20:37:51 weaver Exp $
+
+*prodigal-2.50 (16 Jul 2011)
+
+  16 Jul 2011; Andrey Kislyuk <weaver@gentoo.org> +prodigal-2.50.ebuild,
+  +metadata.xml:
+  New package, ebuild written by me
+
