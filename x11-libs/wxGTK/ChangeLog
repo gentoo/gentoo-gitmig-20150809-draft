@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.268 2011/06/28 19:36:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.269 2011/07/16 09:32:34 xarthisius Exp $
+
+  16 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> wxGTK-2.8.11.0.ebuild:
+  ppc64 stable wrt #364203
 
   28 Jun 2011; Brent Baude <ranger@gentoo.org> wxGTK-2.8.11.0.ebuild:
   Marking wxGTK-2.8.11.0 ppc for bug 364203
