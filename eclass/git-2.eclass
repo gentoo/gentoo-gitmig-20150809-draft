@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.11 2011/06/08 15:18:13 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.12 2011/07/16 13:11:54 mgorny Exp $
 
 # @ECLASS: git-2.eclass
 # @MAINTAINER:
@@ -521,5 +521,9 @@ git-2_src_unpack() {
 
 	# Users can specify some SRC_URI and we should
 	# unpack the files too.
-	default_src_unpack
+	if has ${EAPI:-0} 0 1; then
+		[[ -n ${A} ]] && unpack ${A}
+	else
+		default_src_unpack
+	fi
 }
