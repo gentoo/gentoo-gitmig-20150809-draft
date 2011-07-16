@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r9.ebuild,v 1.4 2011/06/21 16:07:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r9.ebuild,v 1.5 2011/07/16 12:43:00 jlec Exp $
 
-EAPI="3"
+EAPI=3
 
 PYTHON_DEPEND="2"
 
@@ -10,26 +10,14 @@ inherit autotools eutils fortran-2 flag-o-matic gnuconfig python toolchain-funcs
 
 MY_P="${PN/-apps}-${PV}"
 
-SRC="ftp://ftp.ccp4.ac.uk/ccp4"
-
 #UPDATE="04_03_09"
 #PATCHDATE="090511"
 
 PATCH_TOT="0"
-# Here's a little scriptlet to generate this list from the provided
-# index.patches file
-#
-# i=1; while read -a line; do [[ ${line//#} != ${line} ]] && continue;
-# echo "PATCH${i}=( ${line[1]}"; echo "${line[0]} )"; (( i++ )); done <
-# index.patches
-#PATCH1=( src/topp_
-#topp.f-r1.16.2.5-r1.16.2.6.diff )
-#PATCH2=( .
-#configure-r1.372.2.18-r1.372.2.19.diff )
 
 DESCRIPTION="Protein X-ray crystallography toolkit"
 HOMEPAGE="http://www.ccp4.ac.uk/"
-RESTRICT="mirror"
+SRC="ftp://ftp.ccp4.ac.uk/ccp4"
 SRC_URI="
 	${SRC}/${PV}/${MY_P}-core-src.tar.gz
 	http://dev.gentooexperimental.org/~jlec/distfiles/${PV}-oasis4.0.patch.bz2"
@@ -100,6 +88,8 @@ DEPEND="${RDEPEND}
 		x11-proto/xextproto
 	)"
 PDEPEND="${SCIAPPS}"
+
+RESTRICT="mirror"
 
 S="${WORKDIR}/${MY_P}"
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r7.ebuild,v 1.4 2011/06/21 16:07:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r10.ebuild,v 1.1 2011/07/16 12:43:00 jlec Exp $
 
-EAPI="3"
+EAPI=3
 
 PYTHON_DEPEND="2"
 
@@ -10,26 +10,14 @@ inherit autotools eutils fortran-2 flag-o-matic gnuconfig python toolchain-funcs
 
 MY_P="${PN/-apps}-${PV}"
 
-SRC="ftp://ftp.ccp4.ac.uk/ccp4"
-
 #UPDATE="04_03_09"
 #PATCHDATE="090511"
 
 PATCH_TOT="0"
-# Here's a little scriptlet to generate this list from the provided
-# index.patches file
-#
-# i=1; while read -a line; do [[ ${line//#} != ${line} ]] && continue;
-# echo "PATCH${i}=( ${line[1]}"; echo "${line[0]} )"; (( i++ )); done <
-# index.patches
-#PATCH1=( src/topp_
-#topp.f-r1.16.2.5-r1.16.2.6.diff )
-#PATCH2=( .
-#configure-r1.372.2.18-r1.372.2.19.diff )
 
 DESCRIPTION="Protein X-ray crystallography toolkit"
 HOMEPAGE="http://www.ccp4.ac.uk/"
-RESTRICT="mirror"
+SRC="ftp://ftp.ccp4.ac.uk/ccp4"
 SRC_URI="
 	${SRC}/${PV}/${MY_P}-core-src.tar.gz
 	http://dev.gentooexperimental.org/~jlec/distfiles/${PV}-oasis4.0.patch.bz2"
@@ -67,10 +55,11 @@ TKDEPS="
 
 SCILIBS="
 	~sci-libs/ccp4-libs-${PV}
-	>=sci-libs/ccp4-libs-${PVR}
+	>=sci-libs/ccp4-libs-${PV}-r7
 	sci-libs/clipper
 	sci-libs/fftw:2.1
 	sci-libs/mmdb
+	sci-libs/ssm
 	virtual/blas
 	virtual/lapack"
 
@@ -100,6 +89,8 @@ DEPEND="${RDEPEND}
 		x11-proto/xextproto
 	)"
 PDEPEND="${SCIAPPS}"
+
+RESTRICT="mirror"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -135,16 +126,6 @@ src_prepare() {
 	# libraries come from sci-libs/ccp4-libs
 	ccp_patch "${FILESDIR}"/${PV}-dont-build-libs.patch
 
-	# coreutils fortran-2 installs a binary called truncate
-#	ccp_patch "${FILESDIR}"/${PV}-rename-truncate.patch
-#	mv ./doc/truncate.doc ./doc/ftruncate.doc || die
-#	mv ./html/truncate.html ./html/ftruncate.html || die
-
-	# conflicts with media-libs/raptor
-#	ccp_patch "${FILESDIR}"/${PV}-rename-rapper.patch
-#	mv ./doc/rapper.doc ./doc/rappermc.doc || die
-#	mv ./html/rapper.html ./html/rappermc.html || die
-
 	# We have seperate ebuilds for those
 	for bin in molref xia scala imosflm balbes; do
 		ccp_patch "${FILESDIR}"/${PV}-dont-build-${bin}.patch
@@ -165,31 +146,41 @@ src_prepare() {
 	# Fix upstreams code
 	ccp_patch "${FILESDIR}"/${PV}-impl-dec.patch
 
+	# Not renaming, but unbundling libs
+	ccp_patch "${FILESDIR}"/${PV}-rename-rapper-ng.patch
+
+	# Use pkg-config to detect BLAS/LAPCK
+	ccp_patch "${FILESDIR}"/${PV}-lapack.patch
+
 	# Update things for oasis 4 usage
 	epatch "${WORKDIR}"/${PV}-oasis4.0.patch
 	sed 's: oasis : :g' -i src/Makefile.in || die
 
+	# unbundle libs
+	ccp_patch "${FILESDIR}"/${PV}-unbundle.patch
+
 	einfo "Done." # done applying Gentoo patches
 	echo
 
+	find ./lib/src/mmdb ./lib/ssm ./lib/clipper ./lib/fftw lib/lapack -delete
+
+	sed \
+		-e "s:/usr:${EPREFIX}/usr:g" \
+		-e 's:-Wl,-rpath,$CLIB::g' \
+		-e 's: -rpath $CLIB::g' \
+		-e 's: -I${srcdir}/include/cpp_c_headers::g' \
+		-e 's:sleep 1:sleep .2:g' \
+		-i configure || die
+
+	find "${S}" -name "Makefile.*" \
+		-exec sed -e 's|_FLAGS-|_FLAGS:-|g' -e "s:\(eval \$([[:alnum:]]*)\):\1 \$(GENTOOLDFLAGS):g" -i '{}' \;
+
 	# Don't build refmac, sfcheck, balbes, molrep binaries; available from the standalone version
-	sed -i -e "/^REFMACTARGETS/s:^.*:REFMACTARGETS="":g" configure
+	sed -i -e "/^REFMACTARGETS/s:^.*:REFMACTARGETS="":g" configure || die
 
 	# Rapper bundles libxml2 and boehm-gc. Don't build, use or install those.
 	pushd src/rapper 2>/dev/null
-	sed -i \
-		-e '/^AC_CONFIG_SUBDIRS(\[gc7.0 libxml2\])/d' \
-		configure.ac
-	sed -i \
-		-e '/^SUBDIRS/s:libxml2 gc7.0::g' \
-		Makefile.am
-	sed -i \
-		-e '/^rapper_LDADD/s:../gc7.0/libgc.la ../libxml2/libxml2.la:-lgc -lxml2:g' \
-		LOOP/Makefile.am
-	sed -i \
-		-e "/^INCLUDES/s:-I../gc7.0/include -I../libxml2/include:-I${EPREFIX}/usr/include/gc -I${EPREFIX}/usr/include/libxml2:g" \
-		LOOP/Makefile.am
-	eautoreconf
+		eautoreconf
 	popd 2>/dev/null
 
 	gnuconfig_update
@@ -199,6 +190,7 @@ src_prepare() {
 
 src_configure() {
 	# Build system is broken if we set LDFLAGS
+	export GENTOOLDFLAGS="${LDFLAGS}"
 	unset LDFLAGS
 
 	# These are broken with ./src/procheck/ps.f
@@ -252,6 +244,7 @@ src_configure() {
 	export BINSORT_SCR="${T}"
 	export CCP4_MASTER="${WORKDIR}"
 	export CCP4I_TCLTK="${EPREFIX}/usr/bin"
+	export MAKE="make ${MAKEOPTS} ${EXTRA_EMAKE}"
 
 	# Can't use econf, configure rejects unknown options like --prefix
 	./configure \
@@ -264,6 +257,7 @@ src_configure() {
 		--disable-phaser \
 		--disable-diffractionImg \
 		--disable-clipper \
+		--disable-ssm \
 		--disable-mosflm \
 		--disable-mrbump \
 		--tmpdir="${TMPDIR}" \
