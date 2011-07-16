@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/lightspark
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.31 2011/06/15 13:16:55 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.32 2011/07/16 13:30:16 chithanh Exp $
+
+  16 Jul 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  lightspark-0.4.8.1.ebuild, -files/lightspark-0.4.8.1-cmakelists.patch:
+  Drop obsolete patch that caused build failure, bug #375363.
 
 *lightspark-0.4.8.1 (15 Jun 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.4.8.1.ebuild,v 1.1 2011/06/15 13:16:55 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.4.8.1.ebuild,v 1.2 2011/07/16 13:30:16 chithanh Exp $
 
 EAPI=3
 inherit cmake-utils nsplugins multilib versionator
@@ -44,7 +44,6 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${P/_rc*/}
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-0.4.8.1-cmakelists.patch
 	"${FILESDIR}"/${PN}-0.4.8.1-allow-disabling-pulseaudio.patch
 )
 
