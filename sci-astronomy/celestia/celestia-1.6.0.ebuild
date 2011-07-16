@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.6.0.ebuild,v 1.19 2011/03/02 21:34:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.6.0.ebuild,v 1.20 2011/07/16 17:47:20 jlec Exp $
 
 EAPI=2
+
 inherit eutils flag-o-matic gnome2 autotools
 
 DESCRIPTION="OpenGL 3D space simulator"
@@ -14,7 +15,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="cairo gnome gtk nls pch theora threads"
 
-RDEPEND="virtual/opengl
+RDEPEND="
+	virtual/opengl
 	virtual/jpeg
 	media-libs/libpng
 	>=dev-lang/lua-5.0

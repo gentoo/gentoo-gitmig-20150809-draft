@@ -1,0 +1,23 @@
+ src/celestia/Makefile.am |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+diff --git a/src/celestia/Makefile.am b/src/celestia/Makefile.am
+index b1e4b3f..b0809a5 100644
+--- a/src/celestia/Makefile.am
++++ b/src/celestia/Makefile.am
+@@ -62,6 +62,7 @@ endif
+ 
+ if ENABLE_GLUT
+ GLUTSOURCES = glutmain.cpp
++GLUTLIBS = -lGL
+ endif
+ 
+ if ENABLE_THEORA
+@@ -83,6 +84,7 @@ celestia_LDADD = \
+ 	$(DL_LIBS) \
+ 	$(LUA_LIBS) \
+ 	$(THEORA_LIBS) \
++	$(GLUTLIBS) \
+ 	../celengine/libcelengine.a \
+ 	../celtxf/libceltxf.a \
+ 	../cel3ds/libcel3ds.a \
