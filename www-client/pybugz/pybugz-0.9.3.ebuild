@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/pybugz-0.9.3.ebuild,v 1.3 2011/07/16 17:45:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/pybugz-0.9.3.ebuild,v 1.4 2011/07/16 17:56:21 xarthisius Exp $
 
 EAPI=3
 PYTHON_DEPEND="2:2.7"
@@ -12,7 +12,7 @@ if [ "${PV}" = "9999" ]; then
 	vcs=git-2
 else
 	SRC_URI="http://www.github.com/williamh/${PN}/tarball/${PV} -> ${P}.tar.gz"
-	KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ~ppc ~ppc64 sparc x86 ~ppc-aix ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+	KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ppc ppc64 sparc x86 ~ppc-aix ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 	GITHUB_COMMIT=573903e
 	S="${WORKDIR}/williamh-pybugz-${GITHUB_COMMIT}"
 fi
