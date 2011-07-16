@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.23.ebuild,v 1.5 2011/05/28 17:49:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.23.ebuild,v 1.6 2011/07/16 09:56:38 xarthisius Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://kernel/linux/utils/net/NIS/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ppc64 x86"
 IUSE="slp"
 
 DEPEND=">=sys-libs/gdbm-1.8.0
