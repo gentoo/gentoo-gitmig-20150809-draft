@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.6-r3.ebuild,v 1.3 2011/07/14 17:35:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.4.6-r3.ebuild,v 1.4 2011/07/16 22:10:00 nirbheek Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2:2.6"
@@ -14,7 +14,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="gnome kde mono networkmanager perl python test vala"
+IUSE="gnome kde mono networkmanager perl python test"
 
 # FIXME: Disable webkit support due problems like bug #366791
 # FIXME: Also disable xulrunner support due bug #360893, will be readded
@@ -24,8 +24,7 @@ RDEPEND="gnome? ( gnome-base/gconf:2 )
 	kde? ( >=kde-base/kdelibs-4.4.5 )
 	mono? ( dev-lang/mono )
 	networkmanager? ( net-misc/networkmanager )
-	perl? (	dev-lang/perl )
-	vala? ( dev-lang/vala:0.10 )"
+	perl? (	dev-lang/perl )"
 #	xulrunner? ( >=net-libs/xulrunner-1.9.1:1.9 )
 #	webkit? ( net-libs/webkit-gtk:2 )
 DEPEND="${RDEPEND}
@@ -49,6 +48,8 @@ pkg_setup() {
 }
 
 src_configure() {
+	# WITH_VALA just copies the .vapi file over and needs no deps,
+	# hence always enable it unconditionally
 	local mycmakeargs=(
 			-DPERL_VENDORINSTALL=ON
 			-DCMAKE_C_FLAGS="${CFLAGS}"
@@ -59,7 +60,7 @@ src_configure() {
 			$(cmake-utils_use_with networkmanager NM)
 			$(cmake-utils_use_with perl PERL)
 			$(cmake-utils_use_with python PYTHON)
-			$(cmake-utils_use_with vala VALA)
+			-DWITH_VALA=ON
 			-DWITH_WEBKIT=OFF
 			-DWITH_MOZJS=OFF
 			$(cmake-utils_use test BUILD_TESTING)
