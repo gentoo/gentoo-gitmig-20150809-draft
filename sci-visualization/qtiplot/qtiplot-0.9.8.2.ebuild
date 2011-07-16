@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.2.ebuild,v 1.8 2010/10/22 17:14:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.2.ebuild,v 1.9 2011/07/16 16:44:27 jlec Exp $
 
 EAPI=3
 
@@ -46,8 +46,9 @@ CDEPEND="
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig
 	python? ( >=dev-python/sip-4.9 )
-	doc? ( app-text/docbook-sgml-utils
-		   >=app-text/docbook-xml-dtd-4.4-r2:4.4 )"
+	doc? (
+		app-text/docbook-sgml-utils
+	   >=app-text/docbook-xml-dtd-4.4-r2:4.4 )"
 
 RDEPEND="${CDEPEND}
 	python? ( dev-python/PyQt4[X] )"

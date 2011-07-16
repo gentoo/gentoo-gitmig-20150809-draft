@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.4.ebuild,v 1.2 2011/07/16 16:44:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.8.7.ebuild,v 1.1 2011/07/16 16:44:27 jlec Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="bindist doc latex png python"
+IUSE="bindist doc mono latex png python zlib"
 
 LANGS="cn cz de es fr ja ro ru sv"
 for l in ${LANGS}; do
@@ -27,6 +27,8 @@ done
 # qwtplot3d much modified from original upstream
 # >=x11-libs/qwt-5.3 they are using trunk checkouts
 CDEPEND="
+	x11-libs/qt-assistant
+	x11-libs/qt-gui
 	x11-libs/qt-opengl:4
 	x11-libs/qt-qt3support:4
 	|| ( >=x11-libs/qt-assistant-4.7.0:4[compat] <x11-libs/qt-assistant-4.7.0:4 )
@@ -37,8 +39,9 @@ CDEPEND="
 	sci-libs/gsl
 	sci-libs/tamu_anova
 	latex? ( dev-tex/qtexengine )
-	png? ( media-libs/libpng )"
-
+	mono? ( dev-dotnet/libgdiplus )
+	png? ( media-libs/libpng )
+	zlib? ( dev-libs/quazip )"
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig
 	python? ( >=dev-python/sip-4.9 )
@@ -52,6 +55,8 @@ RDEPEND="${CDEPEND}
 PATCHES=(
 	"${FILESDIR}/${PN}-0.9.7.12-system-gl2ps.patch"
 	"${FILESDIR}/${PN}-0.9.7.10-dont-install-qwt.patch"
+	"${FILESDIR}/${PN}-0.9.8.6-gold.patch"
+	"${FILESDIR}/${P}-kde.patch"
 	)
 
 pkg_setup() {
@@ -59,6 +64,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	local mylibs
+
 	qt4-r2_src_prepare
 
 	rm -rf 3rdparty/{liborigin,QTeXEngine,/qwtplot3d/3rdparty/gl2ps/,boost} || die
@@ -66,6 +73,9 @@ src_prepare() {
 		-e "s:dll:static:g" \
 		-e "/INSTALLS/d" \
 		-i 3rdparty/qwtplot3d/*.pro
+
+	use zlib && mylibs="${mylibs} -lquazip"
+	use mono && mylibs="${mylibs} $(pkg-config --libs libgdiplus)"
 
 	# Check build.conf for changes on bump.
 	cat > build.conf <<-EOF
@@ -80,7 +90,7 @@ src_prepare() {
 	QWT_LIBS = \$\$QTI_ROOT/3rdparty/qwt/lib/libqwt.a
 	QWT3D_INCLUDEPATH = \$\$QTI_ROOT/3rdparty/qwtplot3d/include
 	QWT3D_LIBS = \$\$QTI_ROOT/3rdparty/qwtplot3d/lib/libqwtplot3d.a
-	SYS_LIBS = -lgl2ps
+	SYS_LIBS = -lgl2ps ${mylibs}
 
 	PYTHON = python
 	LUPDATE = lupdate
@@ -102,13 +112,18 @@ src_prepare() {
 	echo "TAMUANOVA_LIBS = -ltamuanova" >> build.conf && \
 	echo "TAMUANOVA_INCLUDEPATH = \"${EPREFIX}/usr/include/tamu_anova\"" >> build.conf
 
-	sed -e "s:doc/${PN}/manual:doc/${PN}/html:" \
-		-e "s:/usr/local/${PN}:$(python_get_sitedir)/qtiplot:" \
-			-i qtiplot/qtiplot.pro || die
-
-	sed -e '/INSTALLS.*documentation/d' \
+	sed \
+		-e "s:doc/${PN}/manual:doc/${PN}/html:" \
+		-e "s:/usr/local/${PN}:${EPREFIX}$(python_get_sitedir)/qtiplot:" \
+		-e '/INSTALLS.*documentation/d' \
 		-e '/INSTALLS.*manual/d' \
-			-i qtiplot/qtiplot.pro || die
+		-e "/INSTALLBASE/s: /usr: ${EPREFIX}/usr:g" \
+		-e 's:/usr/local/qtiplot:$$INSTALLBASE:g' \
+		-i qtiplot/qtiplot.pro || die
+
+	sed \
+		-e "/^target.path/s:/usr:${EPREFIX}/usr:g" \
+		-i fitPlugins/*/*.pro || die
 
 	sed -e '/manual/d' -i qtiplot.pro || die
 
