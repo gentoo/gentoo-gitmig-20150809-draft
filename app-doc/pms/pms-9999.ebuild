@@ -1,10 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/pms-9999.ebuild,v 1.1 2010/06/11 13:48:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/pms-9999.ebuild,v 1.2 2011/07/16 14:04:46 mgorny Exp $
 
-inherit git
+EAPI=4
+inherit git-2
 
-EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/pms.git"
+EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/${PN}.git
+	http://git.overlays.gentoo.org/gitroot/proj/${PN}.git"
 
 DESCRIPTION="Gentoo Package Manager Specification (draft)"
 HOMEPAGE="http://www.gentoo.org/proj/en/qa/pms.xml"
@@ -25,15 +27,11 @@ DEPEND="html? ( >=dev-tex/tex4ht-20090115_p0029 )
 RDEPEND=""
 
 src_compile() {
-	emake || die
-	if use html; then
-		emake html || die
-	fi
+	emake
+	use html && emake html
 }
 
 src_install() {
-	dodoc pms.pdf || die
-	if use html; then
-		dohtml *.html pms.css $(shopt -s nullglob; echo *.png) || die
-	fi
+	dodoc pms.pdf
+	use html && dohtml *.html pms.css $(shopt -s nullglob; echo *.png)
 }
