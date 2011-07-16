@@ -1,22 +1,23 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.6-r2.ebuild,v 1.4 2011/05/07 10:35:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.6-r2.ebuild,v 1.5 2011/07/16 16:58:23 jlec Exp $
 
 EAPI=2
 
 inherit autotools elisp-common eutils multilib wxwidgets
 
 MY_P="${P/_/-}"
+
 DESCRIPTION="Command-line driven interactive plotting program"
 HOMEPAGE="http://www.gnuplot.info/"
-SRC_URI="mirror://sourceforge/gnuplot/${MY_P}.tar.gz
+SRC_URI="
+	mirror://sourceforge/gnuplot/${MY_P}.tar.gz
 	mirror://gentoo/${PN}-4.2.5-lua-term.patch.bz2"
 
 LICENSE="gnuplot GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd"
-IUSE="doc emacs +gd ggi latex lua plotutils readline svga wxwidgets X xemacs"
-RESTRICT="wxwidgets? ( test )"
+IUSE="doc emacs examples +gd ggi latex lua plotutils readline svga wxwidgets X xemacs"
 
 RDEPEND="
 	xemacs? ( app-editors/xemacs app-xemacs/xemacs-base )
@@ -24,24 +25,31 @@ RDEPEND="
 	lua? ( >=dev-lang/lua-5.1 )
 	ggi? ( media-libs/libggi )
 	gd? ( >=media-libs/gd-2[png] )
-	latex? ( virtual/latex-base
-		lua? ( dev-tex/pgf
+	latex? (
+		virtual/latex-base
+		lua? (
+			dev-tex/pgf
 			>=dev-texlive/texlive-latexrecommended-2008-r2 ) )
 	X? ( x11-libs/libXaw )
 	svga? ( media-libs/svgalib )
 	readline? ( >=sys-libs/readline-4.2 )
 	plotutils? ( media-libs/plotutils )
-	wxwidgets? ( x11-libs/wxGTK:2.8[X]
+	wxwidgets? (
+		x11-libs/wxGTK:2.8[X]
 		>=x11-libs/cairo-0.9
 		>=x11-libs/pango-1.10.3
 		x11-libs/gtk+:2 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	doc? ( virtual/latex-base
+	doc? (
+		virtual/latex-base
 		app-text/ghostscript-gpl )
 	!emacs? ( xemacs? ( app-xemacs/texinfo ) )"
 
+RESTRICT="wxwidgets? ( test )"
+
 S="${WORKDIR}/${MY_P}"
+
 E_SITEFILE="50${PN}-gentoo.el"
 TEXMF="/usr/share/texmf-site"
 
@@ -178,10 +186,12 @@ src_install () {
 		TODO VERSION
 	use lua && newdoc term/lua/README README-lua
 
-	if use doc; then
+	if use examples; then
 		# Demo files
 		insinto /usr/share/${PN}/demo
 		doins demo/*
+	fi
+	if use doc; then
 		# Manual
 		dodoc docs/gnuplot.pdf
 		# Tutorial
