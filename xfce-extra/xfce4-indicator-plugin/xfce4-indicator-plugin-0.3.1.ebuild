@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-indicator-plugin/xfce4-indicator-plugin-0.3.0.0.ebuild,v 1.1 2011/07/15 08:49:04 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-indicator-plugin/xfce4-indicator-plugin-0.3.1.ebuild,v 1.1 2011/07/16 15:23:41 angelos Exp $
 
 EAPI=4
 inherit xfconf
