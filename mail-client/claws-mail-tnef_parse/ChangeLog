@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-tnef_parse
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-tnef_parse/ChangeLog,v 1.34 2011/06/29 19:58:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-tnef_parse/ChangeLog,v 1.35 2011/07/16 18:18:18 hwoarang Exp $
+
+  16 Jul 2011; Markos Chandras <hwoarang@gentoo.org>
+  claws-mail-tnef_parse-0.3.10.ebuild:
+  Stable on amd64 wrt bug #372957
 
   29 Jun 2011; Markus Meier <maekke@gentoo.org>
   claws-mail-tnef_parse-0.3.10.ebuild:
