@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ssm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ssm/ChangeLog,v 1.1 2011/07/16 11:57:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ssm/ChangeLog,v 1.2 2011/07/16 13:02:53 jlec Exp $
+
+  16 Jul 2011; Justin Lecher <jlec@gentoo.org> files/ssm-1.1-pc.patch:
+  Correct pc file because include/ssm was missing in Cflags
 
 *ssm-1.1 (16 Jul 2011)
 
