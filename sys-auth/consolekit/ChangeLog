@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/consolekit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.106 2011/07/10 23:44:01 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.107 2011/07/16 17:44:18 hwoarang Exp $
+
+  16 Jul 2011; Markos Chandras <hwoarang@gentoo.org>
+  consolekit-0.4.5-r1.ebuild:
+  Stable on amd64 wrt bug #374687
 
   10 Jul 2011; Matt Turner <mattst88@gentoo.org> consolekit-0.4.5-r1.ebuild:
   Added ~mips, bug 296548
