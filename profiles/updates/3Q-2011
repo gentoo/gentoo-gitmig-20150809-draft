@@ -1,2 +1,3 @@
 slotmove =dev-ruby/rack-mount-0.6.14 0 0.6
 slotmove =dev-ruby/rack-mount-0.7.3  0 0.7
+move sci-electronics/ng-spice-rework sci-electronics/ngspice
