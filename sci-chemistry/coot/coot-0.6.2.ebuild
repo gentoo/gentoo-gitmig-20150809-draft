@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.2.ebuild,v 1.3 2011/06/29 13:31:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.2.ebuild,v 1.4 2011/07/16 13:14:36 jlec Exp $
 
 EAPI=3
 
@@ -31,6 +31,7 @@ SCIDEPS="
 	>=sci-libs/coot-data-2
 	>=sci-libs/gsl-1.3
 	>=sci-libs/mmdb-1.23
+	sci-libs/ssm
 	<sci-libs/monomer-db-1
 	sci-chemistry/reduce
 	<sci-chemistry/refmac-5.6
@@ -78,6 +79,7 @@ PATCHES=(
 	"${FILESDIR}"/${PV}-mmdb-config.patch
 	"${FILESDIR}"/${PV}-gl.patch
 	"${FILESDIR}"/${PV}-test.patch
+	"${FILESDIR}"/${PV}-ssm.patch
 	)
 
 src_prepare() {
@@ -92,7 +94,6 @@ src_configure() {
 	econf \
 		--includedir='${prefix}/include/coot' \
 		--with-gtkcanvas-prefix="${EPREFIX}/usr" \
-		--with-ssmlib-prefix="${EPREFIX}/usr" \
 		--with-gtkgl-prefix="${EPREFIX}/usr" \
 		--with-guile \
 		--with-python="${EPREFIX}/usr" \
