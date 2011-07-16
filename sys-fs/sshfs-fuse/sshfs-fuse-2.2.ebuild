@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/sshfs-fuse-2.2.ebuild,v 1.7 2011/02/09 19:18:55 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/sshfs-fuse-2.2.ebuild,v 1.8 2011/07/16 00:44:29 radhermit Exp $
 
 EAPI="2"
 
@@ -15,10 +15,12 @@ KEYWORDS="amd64 ~arm ~hppa ppc ppc64 sparc x86 ~x86-fbsd"
 SLOT="0"
 IUSE=""
 
-DEPEND=">=sys-fs/fuse-2.6.0_pre3
+CDEPEND=">=sys-fs/fuse-2.6.0_pre3
 	>=dev-libs/glib-2.4.2"
-RDEPEND="${DEPEND}
+RDEPEND="${CDEPEND}
 	>=net-misc/openssh-4.3"
+DEPEND="${CDEPEND}
+	dev-util/pkgconfig"
 
 src_configure() {
 	# hack not needed with >=net-misc/openssh-4.3
