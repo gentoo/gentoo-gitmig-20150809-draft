@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r9.ebuild,v 1.6 2011/07/16 12:21:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r10.ebuild,v 1.1 2011/07/16 12:21:05 jlec Exp $
 
 EAPI=3
 
@@ -33,19 +33,19 @@ done
 
 LICENSE="ccp4"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
 	!<sci-chemistry/ccp4-6.1.3
 	!<sci-chemistry/ccp4-apps-${PVR}
-	!sci-libs/ssm
 	app-shells/tcsh
 	dev-lang/tcl
 	sci-libs/cbflib
 	sci-libs/fftw:2.1
 	sci-libs/mmdb
 	sci-libs/monomer-db
+	sci-libs/ssm
 	virtual/fortran
 	virtual/jpeg
 	virtual/lapack
@@ -91,7 +91,7 @@ src_prepare() {
 	ccp_patch "${FILESDIR}"/${PV}-dont-build-mmdb.patch
 
 	# unbundle libjpeg and cbflib
-	ccp_patch "${FILESDIR}"/${PV}-unbundle-libs-ng.patch
+	ccp_patch "${FILESDIR}"/${PV}-unbundle-libs-ng2.patch
 
 	# Fix missing DESTIDR
 	# not installing during build
@@ -122,11 +122,15 @@ src_prepare() {
 
 	gnuconfig_update
 
-	for i in lib/DiffractionImage lib/ssm src/rapper src/pisa; do
+	for i in lib/DiffractionImage src/rapper src/pisa; do
 		pushd ${i} > /dev/null
 			eautoreconf
 		popd > /dev/null
 	done
+
+	## unbundle libssm
+	sed '/libdir/s:ssm::g' -i Makefile.in
+	find ./lib/src/mmdb ./lib/ssm ./lib/clipper ./lib/fftw lib/lapack -delete
 }
 
 src_configure() {
@@ -195,6 +199,7 @@ src_configure() {
 		--with-warnings \
 		--disable-cctbx \
 		--disable-clipper \
+		--disable-ssm \
 		--tmpdir="${TMPDIR}" \
 		--bindir="${EPREFIX}/usr/libexec/ccp4/bin/" \
 		--libdir="${EPREFIX}/usr/$(get_libdir)" \

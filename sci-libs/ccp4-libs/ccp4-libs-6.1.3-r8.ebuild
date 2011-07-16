@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r8.ebuild,v 1.4 2011/06/28 17:46:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r8.ebuild,v 1.5 2011/07/16 12:21:05 jlec Exp $
 
-EAPI="3"
+EAPI=3
 
 inherit eutils fortran-2 gnuconfig multilib toolchain-funcs
 
@@ -14,16 +14,6 @@ SRC="ftp://ftp.ccp4.ac.uk/ccp4"
 MY_P="${P/-libs}"
 
 PATCH_TOT="0"
-# Here's a little scriptlet to generate this list from the provided
-# index.patches file
-#
-# i=1; while read -a line; do [[ ${line//#} != ${line} ]] && continue;
-# echo "PATCH${i}=( ${line[1]}"; echo "${line[0]} )"; (( i++ )); done <
-# index.patches
-#PATCH1=( src/topp_
-#topp.f-r1.16.2.5-r1.16.2.6.diff )
-#PATCH2=( .
-#configure-r1.372.2.18-r1.372.2.19.diff )
 
 DESCRIPTION="Protein X-ray crystallography toolkit - Libraries"
 HOMEPAGE="http://www.ccp4.ac.uk/"
@@ -45,15 +35,16 @@ KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
-	virtual/fortran
-	dev-lang/tcl
-	app-shells/tcsh
 	!<sci-chemistry/ccp4-6.1.3
 	!<sci-chemistry/ccp4-apps-${PVR}
+	!sci-libs/ssm
+	app-shells/tcsh
+	dev-lang/tcl
 	sci-libs/cbflib
 	sci-libs/fftw:2.1
 	sci-libs/mmdb
 	sci-libs/monomer-db
+	virtual/fortran
 	virtual/jpeg
 	virtual/lapack
 	virtual/blas"
@@ -120,7 +111,6 @@ src_prepare() {
 }
 
 src_configure() {
-
 	rm -rf lib/DiffractionImage/{jpg,CBFlib} || die
 
 	# Build system is broken if we set LDFLAGS
@@ -174,8 +164,6 @@ src_configure() {
 	export FC=$(tc-getFC)
 	export FOPTIM=${FFLAGS:- -O2}
 
-	# Fix linking
-#	$(tc-getCC) ${userldflags} -shared -Wl,-soname,libmmdb.so -o libmmdb.so \${MMDBOBJS} $(gcc-config -L | awk -F: '{for(i=1; i<=NF; i++) printf " -L%s", $i}') -lm -lstdc++ && \
 	export SHARE_LIB="\
 		$(tc-getCC) ${userldflags} -shared -Wl,-soname,libccp4c.so -o libccp4c.so \${CORELIBOBJS} \${CGENERALOBJS} \${CUCOBJS} \${CMTZOBJS} \${CMAPOBJS} \${CSYMOBJS} -L../ccif/ -lccif $(gcc-config -L | awk -F: '{for(i=1; i<=NF; i++) printf " -L%s", $i}') -lm && \
 		$(tc-getFC) ${userldflags} -shared -Wl,-soname,libccp4f.so -o libccp4f.so \${FORTRANLOBJS} \${FINTERFACEOBJS} -L../ccif/ -lccif -L. -lccp4c -lmmdb $(gcc-config -L | awk -F: '{for(i=1; i<=NF; i++) printf " -L%s", $i}') -lstdc++ -lgfortran -lm"
