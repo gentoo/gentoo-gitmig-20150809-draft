@@ -1,6 +1,9 @@
 # ChangeLog for www-client/pybugz
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.89 2011/07/11 03:01:13 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.90 2011/07/16 17:42:17 hwoarang Exp $
+
+  16 Jul 2011; Markos Chandras <hwoarang@gentoo.org> pybugz-0.9.3.ebuild:
+  Stable on amd64 wrt bug #375137
 
 *pybugz-0.9.3 (11 Jul 2011)
 
