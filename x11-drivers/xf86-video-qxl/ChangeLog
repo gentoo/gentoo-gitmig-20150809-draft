@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-qxl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-qxl/ChangeLog,v 1.4 2011/07/16 22:44:31 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-qxl/ChangeLog,v 1.5 2011/07/16 22:48:55 chithanh Exp $
+
+  16 Jul 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xf86-video-qxl-0.0.14.ebuild:
+  Add dependency on spice-protocol that was forgotten in last commit.
 
 *xf86-video-qxl-0.0.14 (16 Jul 2011)
 
