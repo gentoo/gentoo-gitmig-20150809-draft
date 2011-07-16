@@ -1,6 +1,11 @@
 # ChangeLog for games-misc/opengfx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/opengfx/ChangeLog,v 1.8 2011/05/04 17:23:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/opengfx/ChangeLog,v 1.9 2011/07/16 22:10:30 mr_bones_ Exp $
+
+*opengfx-0.3.4 (16 Jul 2011)
+
+  16 Jul 2011; Michael Sterrett <mr_bones_@gentoo.org> +opengfx-0.3.4.ebuild:
+  version bump
 
 *opengfx-0.3.3 (04 May 2011)
 
