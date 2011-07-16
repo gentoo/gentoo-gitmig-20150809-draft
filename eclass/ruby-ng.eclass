@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.33 2011/07/08 11:35:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.34 2011/07/16 09:50:05 graaff Exp $
 #
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -55,6 +55,19 @@
 # unpacking. This defaults to the name of the package. Note that this
 # variable supports a wildcard mechanism to help with github tarballs
 # that contain the commit hash as part of the directory name.
+
+# @ECLASS-VARIABLE: RUBY_QA_ALLOWED_LIBS
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# If defined this variable contains a whitelist of shared objects that
+# are allowed to exist even if they don't link to libruby. This avoids
+# the QA check that makes this mandatory. This is most likely not what
+# you are looking for if you get the related "Missing links" QA warning,
+# since the proper fix is almost always to make sure the shared object
+# is linked against libruby. There are cases were this is not the case
+# and the shared object is generic code to be used in some other way
+# (e.g. selenium's firefox driver extension). When set this argument is
+# passed to "grep -E" to remove reporting of these shared objects.
 
 inherit eutils toolchain-funcs
 
@@ -456,6 +469,7 @@ _each_ruby_check_install() {
 	# positives now that Ruby 1.9.2 installs with the same sitedir as 1.8)
 	${scancmd} -qnR "${D}${sitelibdir}" "${D}${sitelibdir/site_ruby/gems}" \
 		| fgrep -v "${libruby_soname}" \
+		| grep -E -v "${RUBY_QA_ALLOWED_LIBS}" \
 		> "${T}"/ruby-ng-${_ruby_implementation}-mislink.log
 
 	if [[ -s "${T}"/ruby-ng-${_ruby_implementation}-mislink.log ]]; then
