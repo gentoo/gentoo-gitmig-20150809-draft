@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5530 2011/07/15 13:58:27 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5531 2011/07/16 11:56:43 jlec Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Jul 2011; Justin Lecher <jlec@gentoo.org> package.mask:
+  Unmask sci-libs/mmdb as I found the solution for the inline changes
 
   15 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> package.mask:
   Removed obsolete pmask on sys-cluster/pvfs2
