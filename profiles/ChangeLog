@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5532 2011/07/16 18:10:41 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5533 2011/07/16 19:06:47 robbat2 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Jul 2011; Robin H. Johnson <robbat2@gentoo.org> package.mask:
+  Mask sys-libs/db-5.2 for testing. Update db-5.1 mask.
 
   16 Jul 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   base/packages:
