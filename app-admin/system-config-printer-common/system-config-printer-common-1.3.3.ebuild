@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.3.ebuild,v 1.1 2011/06/13 20:24:58 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.3.ebuild,v 1.2 2011/07/16 12:48:07 reavertm Exp $
 
 EAPI="3"
 
@@ -30,7 +30,7 @@ COMMON_DEPEND="
 	dev-python/dbus-python
 	>=dev-python/pycups-1.9.53
 	>=dev-python/pygobject-2.21.5
-	net-print/cups[dbus]
+	>=net-print/cups-1.4.6[dbus]
 	sys-fs/udev
 "
 DEPEND="${COMMON_DEPEND}
