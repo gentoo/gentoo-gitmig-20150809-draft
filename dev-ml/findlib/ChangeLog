@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/findlib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/ChangeLog,v 1.74 2011/04/19 18:18:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/findlib/ChangeLog,v 1.75 2011/07/16 17:43:15 hwoarang Exp $
+
+  16 Jul 2011; Markos Chandras <hwoarang@gentoo.org> findlib-1.2.7.ebuild:
+  Stable on amd64 wrt bug #374967
 
 *findlib-1.2.7 (19 Apr 2011)
 
