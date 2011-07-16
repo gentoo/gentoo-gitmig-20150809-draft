@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.21.3-r3.ebuild,v 1.8 2010/10/10 17:27:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/hippodraw-1.21.3-r3.ebuild,v 1.9 2011/07/16 19:38:27 jlec Exp $
 
-EAPI="3"
+EAPI=3
 
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="threads"
@@ -25,12 +25,14 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc examples +fits +numpy root wcs"
 
 CDEPEND="
+	app-text/poppler[qt4]
 	dev-libs/boost[python]
 	media-libs/netpbm
 	virtual/latex-base
 	|| ( >=x11-libs/qt-assistant-4.7.0:4[compat] <x11-libs/qt-assistant-4.7.0:4 )
 	x11-libs/qt-gui:4
 	x11-libs/qt-qt3support:4
+	x11-libs/qt-xmlpatterns:4
 	fits? ( sci-libs/cfitsio )
 	numpy? ( dev-python/numpy )
 	root? ( >=sci-physics/root-5 )
@@ -46,16 +48,18 @@ RDEPEND="${CDEPEND}
 S="${WORKDIR}"/${MY_PN}-${PV}
 
 PATCHES=(
-		"${WORKDIR}"/${P}-gcc4.3.patch \
-		"${WORKDIR}"/${P}-gcc4.4.patch \
-		"${WORKDIR}"/${P}-gcc45.patch \
-		"${WORKDIR}"/${P}-numarray.patch \
-		"${WORKDIR}"/${P}-test-fix.patch \
-		"${WORKDIR}"/${P}-minuit2.patch \
-		"${WORKDIR}"/${P}-wcslib.patch \
-		"${WORKDIR}"/${P}-qt4.patch \
-		"${WORKDIR}"/${P}-autoconf-2.64.patch \
-		"${WORKDIR}"/${P}-automake-1.11.patch )
+		"${WORKDIR}"/${P}-gcc4.3.patch
+		"${WORKDIR}"/${P}-gcc4.4.patch
+		"${WORKDIR}"/${P}-gcc45.patch
+		"${WORKDIR}"/${P}-numarray.patch
+		"${WORKDIR}"/${P}-test-fix.patch
+		"${WORKDIR}"/${P}-minuit2.patch
+		"${WORKDIR}"/${P}-wcslib.patch
+		"${WORKDIR}"/${P}-qt4.patch
+		"${WORKDIR}"/${P}-autoconf-2.64.patch
+		"${WORKDIR}"/${P}-automake-1.11.patch
+		"${FILESDIR}"/${P}-gold.patch
+		)
 
 pkg_setup() {
 	python_pkg_setup
@@ -125,7 +129,7 @@ src_configure() {
 src_compile() {
 	emake || die "emake failed"
 	if use doc; then
-		emake docs || die "emake docs failed"
+		emake -j1 docs || die "emake docs failed"
 	fi
 	python_copy_sources python
 	compilation() {

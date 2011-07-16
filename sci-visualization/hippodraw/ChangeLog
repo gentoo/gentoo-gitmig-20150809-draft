@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/hippodraw
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/ChangeLog,v 1.23 2010/10/10 17:27:35 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/hippodraw/ChangeLog,v 1.24 2011/07/16 19:38:27 jlec Exp $
+
+  16 Jul 2011; Justin Lecher <jlec@gentoo.org> hippodraw-1.21.3-r3.ebuild,
+  +files/hippodraw-1.21.3-gold.patch, metadata.xml:
+  Make it gold resistant, #369295
 
   10 Oct 2010; Justin Lecher <jlec@gentoo.org> hippodraw-1.21.3-r3.ebuild:
   Fix DEP to || ( >=x11-libs/qt-assistant-4.7.0:4[compat]

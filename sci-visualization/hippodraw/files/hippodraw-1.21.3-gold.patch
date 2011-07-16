@@ -1,0 +1,17 @@
+ qt/app/Makefile.am |    3 ++-
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
+diff --git a/qt/app/Makefile.am b/qt/app/Makefile.am
+index 9cb1f98..0dc364e 100644
+--- a/qt/app/Makefile.am
++++ b/qt/app/Makefile.am
+@@ -49,7 +49,8 @@ EXTRA_DIST =					\
+ 
+ hippodraw_LDADD =				\
+ 	$(top_builddir)/qt/libhippoqt.la	\
+-	$(top_builddir)/lib/libhippo.la
++	$(top_builddir)/lib/libhippo.la \
++	-lQtXml
+ 
+ hippodraw_LDFLAGS = $(CFITSIO_LDFLAGS) $(MINUIT_LDFLAGS)	\
+ 	$(MINUIT2_LDFLAGS) $(ROOTLDFLAGS) $(wCSLIB_LDFLAGS)
