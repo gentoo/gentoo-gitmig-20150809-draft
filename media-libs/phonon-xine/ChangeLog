@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/phonon-xine
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-xine/ChangeLog,v 1.4 2011/05/22 14:53:35 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-xine/ChangeLog,v 1.5 2011/07/17 08:50:04 dilfridge Exp $
+
+  17 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  phonon-xine-4.4.4.ebuild, phonon-xine-9999.ebuild:
+  Require at least ogg and vorbis support, otherwise strange things may happen,
+  e.g. bug 326393?
 
   22 May 2011; Joseph Jezak <josejx@gentoo.org> phonon-xine-4.4.4.ebuild:
   Marked ~ppc/~ppc64.

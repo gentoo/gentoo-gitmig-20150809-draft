@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/phonon-gstreamer-9999.ebuild,v 1.5 2011/04/20 11:03:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-gstreamer/phonon-gstreamer-9999.ebuild,v 1.6 2011/07/17 08:46:31 dilfridge Exp $
 
 EAPI=4
 
@@ -27,7 +27,7 @@ IUSE="alsa debug"
 
 RDEPEND="
 	media-libs/gstreamer
-	media-plugins/gst-plugins-meta[alsa?]
+	media-plugins/gst-plugins-meta[alsa?,ogg,vorbis]
 	>=media-libs/phonon-4.5.0
 	>=x11-libs/qt-core-4.6.0:4[glib]
 	>=x11-libs/qt-gui-4.6.0:4[glib]
