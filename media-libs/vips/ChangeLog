@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/vips
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/ChangeLog,v 1.40 2011/03/28 07:20:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/ChangeLog,v 1.41 2011/07/17 20:07:54 pva Exp $
+
+*vips-7.24.7 (17 Jul 2011)
+
+  17 Jul 2011; Peter Volkov <pva@gentoo.org> +vips-7.24.7.ebuild:
+  Version bump.
 
 *vips-7.24.4 (28 Mar 2011)
 
