@@ -1,6 +1,11 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.92 2011/07/15 11:49:18 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.93 2011/07/17 02:41:35 lack Exp $
+
+  17 Jul 2011; Jim Ramsay <lack@gentoo.org> adobe-flash-10.3.181.26.ebuild,
+  adobe-flash-10.3.181.34.ebuild, adobe-flash-11.0.1.60_beta201107131.ebuild:
+  Fixing KDE install in 11.1 (Bug #375283), plus fixing up QA warnings as
+  mentioned in bug #375239.
 
   15 Jul 2011; Jim Ramsay <lack@gentoo.org>
   adobe-flash-11.0.1.60_beta201107131.ebuild:
