@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qmmp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.69 2011/07/13 19:51:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.70 2011/07/17 16:11:42 pacho Exp $
+
+  17 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  mms USE flag is now global.
 
   13 Jul 2011; Markus Meier <maekke@gentoo.org> qmmp-0.5.1.ebuild:
   x86 stable, bug #372163

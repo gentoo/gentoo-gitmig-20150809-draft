@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xmms2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.14 2011/04/03 21:12:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.15 2011/07/17 16:12:50 pacho Exp $
+
+  17 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  mms USE flag is now global.
 
   03 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> xmms2-0.7-r2.ebuild,
   xmms2-0.7-r3.ebuild:
