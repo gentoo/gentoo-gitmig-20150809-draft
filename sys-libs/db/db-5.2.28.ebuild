@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-5.2.28.ebuild,v 1.1 2011/07/16 19:43:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-5.2.28.ebuild,v 1.2 2011/07/17 13:26:41 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils db flag-o-matic java-pkg-opt-2 autotools libtool
@@ -207,7 +207,7 @@ src_test() {
 	#     Repmgr018.c: Run some transactions at master.
 	#         Rep_test: btree 20 key/data pairs starting at 0
 	#         Rep_test.a: put/get loop
-	# FAIL:07:05:59 (00:00:00) perm_no_failed_stat: expected 0, got 1 
+	# FAIL:07:05:59 (00:00:00) perm_no_failed_stat: expected 0, got 1
 	sed -ri \
 		-e '/set parms.*repmgr018/d' \
 		-e 's/repmgr018//g' \
