@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gconfmm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.86 2011/07/16 17:47:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.87 2011/07/17 21:30:01 maekke Exp $
+
+  17 Jul 2011; Markus Meier <maekke@gentoo.org> gconfmm-2.28.2-r1.ebuild:
+  arm stable, bug #372353
 
   16 Jul 2011; Markus Meier <maekke@gentoo.org> gconfmm-2.28.2-r1.ebuild:
   x86 stable, bug #372353
