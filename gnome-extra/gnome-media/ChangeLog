@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-media
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.241 2011/07/14 10:32:15 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/ChangeLog,v 1.242 2011/07/17 21:01:33 maekke Exp $
+
+  17 Jul 2011; Markus Meier <maekke@gentoo.org> gnome-media-2.32.0-r1.ebuild:
+  arm stable, bug #369909
 
   14 Jul 2011; Thomas Kahle <tomka@gentoo.org> gnome-media-2.32.0-r1.ebuild:
   x86 stable per bug 369909
