@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgail-gnome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/ChangeLog,v 1.123 2011/07/16 17:37:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/ChangeLog,v 1.124 2011/07/17 21:26:24 maekke Exp $
+
+  17 Jul 2011; Markus Meier <maekke@gentoo.org> libgail-gnome-1.20.4.ebuild:
+  arm stable, bug #372351
 
   16 Jul 2011; Markus Meier <maekke@gentoo.org> libgail-gnome-1.20.4.ebuild:
   x86 stable, bug #372351
