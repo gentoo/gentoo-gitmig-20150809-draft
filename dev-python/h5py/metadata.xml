@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>python</herd>
+<herd>sci</herd>
 <longdescription lang="en">
   HDF5 for Python (h5py) is a general-purpose simple Python interface to the
   Hierarchical Data Format library, version 5. Existing Python and
