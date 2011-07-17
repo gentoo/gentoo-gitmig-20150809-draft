@@ -1,13 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.0.8.ebuild,v 1.2 2011/06/30 04:11:55 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.0.12.ebuild,v 1.1 2011/07/17 21:04:32 polynomial-c Exp $
 
 EAPI=2
 
 inherit eutils fdo-mime pax-utils
 
-MY_PV=${PV}-71778
+MY_PV=${PV}-72916
 SDK_PV=${MY_PV}
+EXTP_PV=${MY_PV}
 MY_P=VirtualBox-${MY_PV}-Linux
 EXTP_PN=Oracle_VM_VirtualBox_Extension_Pack
 
@@ -16,7 +17,7 @@ HOMEPAGE="http://www.virtualbox.org/"
 SRC_URI="amd64? ( http://download.virtualbox.org/virtualbox/${PV}/${MY_P}_amd64.run )
 	x86? ( http://download.virtualbox.org/virtualbox/${PV}/${MY_P}_x86.run )
 	sdk? ( http://download.virtualbox.org/virtualbox/${PV}/VirtualBoxSDK-${SDK_PV}.zip )
-	http://download.virtualbox.org/virtualbox/${PV}/${EXTP_PN}-${MY_PV}.vbox-extpack -> ${EXTP_PN}-${MY_PV}.tar.gz"
+	http://download.virtualbox.org/virtualbox/${PV}/${EXTP_PN}-${EXTP_PV}.vbox-extpack -> ${EXTP_PN}-${EXTP_PV}.tar.gz"
 
 LICENSE="GPL-2 PUEL"
 SLOT="0"
@@ -162,7 +163,7 @@ src_unpack() {
 
 	mkdir "${S}"/${EXTP_PN} || die
 	pushd "${S}"/${EXTP_PN} &>/dev/null || die
-	unpack ${EXTP_PN}-${MY_PV}.tar.gz
+	unpack ${EXTP_PN}-${EXTP_PV}.tar.gz
 	popd &>/dev/null || die
 
 	if use sdk; then
