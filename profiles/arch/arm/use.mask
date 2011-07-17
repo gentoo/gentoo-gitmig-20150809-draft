@@ -111,7 +111,7 @@ lapack
 cblas
 prolog
 sid
-libmms
+mms
 mtp
 ieee1394
 sctp

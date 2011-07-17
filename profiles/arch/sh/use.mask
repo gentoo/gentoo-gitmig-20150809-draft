@@ -79,7 +79,7 @@ webkit
 prolog
 timidity
 fluidsynth
-libmms
+mms
 sid
 autotrace
 lqr
