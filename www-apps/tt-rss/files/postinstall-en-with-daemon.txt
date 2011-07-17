@@ -1,0 +1,14 @@
+Please read http://tt-rss.org/redmine/wiki/tt-rss/InstallationNotes
+
+Once you have configured TT-RSS, put the path to this instance into
+the INSTANCE_DIRS variable in /etc/conf.d/ttrssd. Make sure that
+the ttrssd user can access the path, and then start the update daemon
+with
+
+  /etc/init.d/ttrssd start
+
+to get your feeds updated. Add the daemon to your default runlevel,
+so that it gets launched after a system restart:
+
+  rc-update add ttrssd default
+

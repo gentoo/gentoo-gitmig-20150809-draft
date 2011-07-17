@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/tt-rss
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.1 2011/07/03 12:37:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.2 2011/07/17 15:09:07 hwoarang Exp $
+
+*tt-rss-1.5.5 (17 Jul 2011)
+
+  17 Jul 2011; Markos Chandras <hwoarang@gentoo.org> +tt-rss-1.5.5.ebuild,
+  +files/postinstall-en-with-daemon.txt, +files/ttrssd.confd,
+  +files/ttrssd.initd, +files/ttrssd.logrotated:
+  Version bump. Introducing init script and logrotate file. Thanks to Patrick
+  Nagel <mail@patrick-nagel.net>
 
 *tt-rss-1.5.4 (03 Jul 2011)
 

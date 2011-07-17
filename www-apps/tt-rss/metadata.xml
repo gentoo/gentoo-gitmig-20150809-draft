@@ -12,4 +12,7 @@
      <name>Patrick Nagel</name>
      <description>Maintainer. Assign bugs to him</description>
 </maintainer>
+<use>
+	<flag name="daemon">Install additional init scripts for automated RSS updates</flag>
+</use>
 </pkgmetadata>
