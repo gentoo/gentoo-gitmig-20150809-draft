@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.61 2011/07/16 22:10:00 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.62 2011/07/17 14:34:24 maekke Exp $
+
+  17 Jul 2011; Markus Meier <maekke@gentoo.org> libproxy-0.4.6-r3.ebuild:
+  x86 stable, bug #372813
 
   16 Jul 2011; Nirbheek Chauhan <nirbheek@gentoo.org> libproxy-0.4.6-r3.ebuild:
   Always install the vapi file since it needs no deps and is only 333 bytes in
