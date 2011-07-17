@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libgtop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/ChangeLog,v 1.248 2011/07/14 10:27:18 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/ChangeLog,v 1.249 2011/07/17 20:57:21 maekke Exp $
+
+  17 Jul 2011; Markus Meier <maekke@gentoo.org> libgtop-2.28.3.ebuild:
+  arm stable, bug #369909
 
   14 Jul 2011; Thomas Kahle <tomka@gentoo.org> libgtop-2.28.3.ebuild:
   x86 stable per bug 369909

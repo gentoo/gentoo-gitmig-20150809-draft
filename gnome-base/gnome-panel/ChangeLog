@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-panel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.336 2011/07/14 12:34:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.337 2011/07/17 20:54:52 maekke Exp $
+
+  17 Jul 2011; Markus Meier <maekke@gentoo.org> gnome-panel-2.32.1-r2.ebuild:
+  arm stable, bug #369909
 
 *gnome-panel-2.32.1-r3 (14 Jul 2011)
 
