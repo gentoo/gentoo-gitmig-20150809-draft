@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/pyrad
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/pyrad/ChangeLog,v 1.1 2011/07/17 16:55:11 dilfridge Exp $
+
+*pyrad-0.5.3-r1 (17 Jul 2011)
+
+  17 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +pyrad-0.5.3-r1.ebuild, +metadata.xml:
+  New package, bug 298675. Thanks to Arne Babenhauserheide for the ebuild.
+
