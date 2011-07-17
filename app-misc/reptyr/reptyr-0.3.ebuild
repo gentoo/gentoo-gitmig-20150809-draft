@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/reptyr/reptyr-0.3.ebuild,v 1.2 2011/06/02 00:56:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/reptyr/reptyr-0.3.ebuild,v 1.3 2011/07/17 09:54:30 jlec Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/nelhage/${PN}/tarball/${P} -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 src_unpack() {
@@ -26,6 +26,6 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" PREFIX=/usr install
+	emake DESTDIR="${D}" PREFIX="${EPREFIX}"/usr install
 	dodoc ChangeLog NOTES README
 }
