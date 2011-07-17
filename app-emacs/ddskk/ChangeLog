@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/ddskk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.35 2011/05/14 23:14:07 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.36 2011/07/17 23:15:11 naota Exp $
+
+*ddskk-14.3 (17 Jul 2011)
+
+  17 Jul 2011; Naohiro Aota <naota@gentoo.org> +ddskk-14.3.ebuild:
+  Version bumped.
 
 *ddskk-14.2 (14 May 2011)
 
