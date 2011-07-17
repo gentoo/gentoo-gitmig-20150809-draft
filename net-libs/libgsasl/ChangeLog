@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libgsasl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.62 2011/06/24 16:34:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.63 2011/07/17 22:34:09 halcy0n Exp $
+
+  17 Jul 2011; Mark Loeser <halcy0n@gentoo.org> libgsasl-1.6.1.ebuild:
+  Stable for ppc64; bug #370633
 
   24 Jun 2011; Raúl Porcel <armin76@gentoo.org> libgsasl-1.6.1.ebuild:
   alpha/ia64/sparc stable wrt #370633
