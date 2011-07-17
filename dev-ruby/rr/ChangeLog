@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rr/ChangeLog,v 1.17 2011/07/17 07:55:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rr/ChangeLog,v 1.18 2011/07/17 07:56:42 graaff Exp $
+
+  17 Jul 2011; Hans de Graaff <graaff@gentoo.org> -rr-0.10.11.ebuild,
+  -rr-1.0.0.ebuild:
+  Remove old versions.
 
 *rr-1.0.3 (17 Jul 2011)
 
