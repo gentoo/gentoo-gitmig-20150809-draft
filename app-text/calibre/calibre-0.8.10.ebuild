@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.6.ebuild,v 1.1 2011/06/20 19:41:50 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.10.ebuild,v 1.1 2011/07/17 20:18:50 zmedico Exp $
 
 EAPI=3
 PYTHON_DEPEND=2:2.7
@@ -55,9 +55,9 @@ pkg_setup() {
 
 src_prepare() {
 	# Fix outdated version constant.
-	sed -e "s#\\(^numeric_version =\\).*#\\1 (${PV//./, })#" \
-		-i src/calibre/constants.py || \
-		die "sed failed to patch constants.py"
+	#sed -e "s#\\(^numeric_version =\\).*#\\1 (${PV//./, })#" \
+	#	-i src/calibre/constants.py || \
+	#	die "sed failed to patch constants.py"
 
 	# Avoid sandbox violation in /usr/share/gnome/apps when linux.py
 	# calls xdg-* (bug #258938).
