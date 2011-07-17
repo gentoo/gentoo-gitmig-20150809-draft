@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5537 2011/07/17 11:42:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5538 2011/07/17 15:58:02 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Jul 2011; Pacho Ramos <pacho@gentoo.org> use.desc:
+  Add mms USE flag description.
 
   17 Jul 2011; Christian Faulhammer <fauli@gentoo.org> package.mask:
   Add bzr-git to incompatible Bazaar tools...we still wait for bzr-svn to get

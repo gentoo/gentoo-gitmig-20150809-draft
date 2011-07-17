@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.461 2011/06/30 20:46:33 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.462 2011/07/17 15:58:02 pacho Exp $
 
 # Keep them sorted
 
@@ -214,6 +214,7 @@ milter - Adds sendmail mail filter (milter) support
 mime - Adds MIME support
 minimal - Install a very minimal build (disables, for example, plugins, fonts, most drivers, non-critical features)
 mmap - Adds mmap (memory map) support
+mms - Support for Microsoft Media Server (MMS) streams
 mmx - Adds support for optimizations for Pentium MMX and Athlon class processors
 mng - Adds support for libmng (MNG images)
 modplug - Adds libmodplug support
