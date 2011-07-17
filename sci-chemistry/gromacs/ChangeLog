@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.91 2011/06/26 08:32:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.92 2011/07/17 19:19:44 ottxor Exp $
+
+  17 Jul 2011; Christoph Junghans <ottxor@gentoo.org> gromacs-4.5.4-r2.ebuild:
+  corrected libdir (bug #375473)
 
   26 Jun 2011; Justin Lecher <jlec@gentoo.org> gromacs-4.5.4-r1.ebuild,
   gromacs-4.5.4-r2.ebuild, metadata.xml:
