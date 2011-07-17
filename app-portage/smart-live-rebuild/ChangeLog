@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/smart-live-rebuild
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.22 2011/07/17 13:21:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.23 2011/07/17 22:36:32 mgorny Exp $
+
+*smart-live-rebuild-1.1.1 (17 Jul 2011)
+
+  17 Jul 2011; Michał Górny <mgorny@gentoo.org>
+  -smart-live-rebuild-1.1.ebuild, +smart-live-rebuild-1.1.1.ebuild:
+  Version bump. The new version fixes compat with newer gentoopm, in order to
+  fix bug #375463.
 
   17 Jul 2011; Michał Górny <mgorny@gentoo.org>
   smart-live-rebuild-1.1.ebuild:

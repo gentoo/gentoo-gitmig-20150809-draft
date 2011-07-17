@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/smart-live-rebuild-1.1.ebuild,v 1.2 2011/07/17 13:21:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/smart-live-rebuild-1.1.1.ebuild,v 1.1 2011/07/17 22:36:32 mgorny Exp $
 
 EAPI=3
 
 PYTHON_DEPEND='*:2.6'
 SUPPORT_PYTHON_ABIS=1
 RESTRICT_PYTHON_ABIS='2.4 2.5'
-DISTUTILS_SRC_TEST=setup.py
+#DISTUTILS_SRC_TEST=setup.py
 
 inherit base distutils
 
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="~app-portage/gentoopm-0.1"
+RDEPEND="app-portage/gentoopm"
 
 PYTHON_MODNAME=smartliverebuild
 
