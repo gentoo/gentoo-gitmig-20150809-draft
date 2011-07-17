@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squidclamav
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidclamav/ChangeLog,v 1.13 2011/07/06 22:43:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidclamav/ChangeLog,v 1.14 2011/07/17 20:36:46 maekke Exp $
+
+  17 Jul 2011; Markus Meier <maekke@gentoo.org> squidclamav-6.1.ebuild:
+  x86 stable, bug #374283
 
 *squidclamav-6.3 (06 Jul 2011)
 
