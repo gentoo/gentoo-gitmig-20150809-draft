@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12910 2011/07/17 11:33:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12911 2011/07/17 11:40:04 fauli Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -537,6 +537,7 @@ dev-util/perf
 >=dev-vcs/qbzr-0.20.0
 >=dev-vcs/bzr-gtk-0.100.0
 >=dev-vcs/bzr-rewrite-0.6.2
+>=dev-vcs/bzr-git-0.6.0
 >=dev-vcs/bzr-svn-1.0.5
 
 # Ryan Hill <dirtyepic@gentoo.org> (30 Mar 2011)
