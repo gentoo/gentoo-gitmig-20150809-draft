@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.258 2011/07/14 10:16:14 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.259 2011/07/17 20:48:15 maekke Exp $
+
+  17 Jul 2011; Markus Meier <maekke@gentoo.org> pygtk-2.24.0-r1.ebuild:
+  arm stable, bug #369909
 
   14 Jul 2011; Thomas Kahle <tomka@gentoo.org> pygtk-2.24.0-r1.ebuild:
   x86 stable per bug 369909
