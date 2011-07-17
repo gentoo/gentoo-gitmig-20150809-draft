@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.91 2011/07/08 13:30:32 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.92 2011/07/17 19:55:00 halcy0n Exp $
+
+  17 Jul 2011; Mark Loeser <halcy0n@gentoo.org> wicd-1.7.1_beta2-r4.ebuild:
+  Stable on ppc/ppc64; bug #370525
 
   08 Jul 2011; Thomas Kahle <tomka@gentoo.org> wicd-1.7.1_beta2-r4.ebuild:
   Update post-inst messages to reflect OpenRC. (bug 371559). Thanks Luca Molari
