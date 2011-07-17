@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.86 2011/05/28 11:57:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.87 2011/07/17 11:52:36 xarthisius Exp $
+
+  17 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> ipython-0.10.2.ebuild:
+  ppc64 stable wrt #366667
 
   28 May 2011; Brent Baude <ranger@gentoo.org> ipython-0.10.2.ebuild:
   Marking ipython-0.10.2 ppc for bug 366669
