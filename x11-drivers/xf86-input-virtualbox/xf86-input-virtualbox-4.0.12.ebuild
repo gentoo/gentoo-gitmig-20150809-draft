@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-4.0.8.ebuild,v 1.1 2011/05/18 21:37:05 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-4.0.12.ebuild,v 1.1 2011/07/17 21:09:17 polynomial-c Exp $
 
 EAPI=2
 
