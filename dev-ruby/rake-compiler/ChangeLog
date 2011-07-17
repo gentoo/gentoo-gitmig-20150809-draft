@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rake-compiler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/ChangeLog,v 1.39 2011/06/08 18:27:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake-compiler/ChangeLog,v 1.40 2011/07/17 18:21:47 halcy0n Exp $
+
+  17 Jul 2011; Mark Loeser <halcy0n@gentoo.org> rake-compiler-0.7.5.ebuild:
+  Stable for ppc64; bug #357489
 
   08 Jun 2011; Hans de Graaff <graaff@gentoo.org> -rake-compiler-0.7.6.ebuild,
   -rake-compiler-0.7.7.ebuild:
