@@ -1,6 +1,9 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.108 2011/07/14 10:03:04 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.109 2011/07/17 20:41:23 maekke Exp $
+
+  17 Jul 2011; Markus Meier <maekke@gentoo.org> iso-codes-3.24.2.ebuild:
+  arm stable, bug #369909
 
   14 Jul 2011; Thomas Kahle <tomka@gentoo.org> iso-codes-3.24.2.ebuild:
   x86 stable per bug 369909
