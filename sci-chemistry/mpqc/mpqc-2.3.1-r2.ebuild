@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.3.1-r2.ebuild,v 1.4 2010/12/16 15:19:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/mpqc-2.3.1-r2.ebuild,v 1.5 2011/07/17 12:50:56 jlec Exp $
 
 EAPI=2
 
@@ -23,18 +23,20 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	sys-devel/flex
-	>=sys-apps/sed-4
-	doc? ( app-doc/doxygen
+	sys-apps/sed
+	doc? (
+		app-doc/doxygen
 		media-gfx/graphviz )"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-as-needed.patch"
-	epatch "${FILESDIR}/${P}-respect-ldflags.patch"
-	# it's a nasty workaround rather than patch
-	epatch "${FILESDIR}/${P}-test-failure-hack.patch"
+	epatch \
+		"${FILESDIR}"/${P}-as-needed.patch \
+		"${FILESDIR}"/${P}-respect-ldflags.patch \
+		"${FILESDIR}"/${P}-test-failure-hack.patch
 	# do not install tkmolrender if not requested
 	if ! use tk; then
-		sed -e "s:.*/bin/molrender/tkmolrender.*::" \
+		sed \
+			-e "s:.*/bin/molrender/tkmolrender.*::" \
 			-e "s:.*\$(INSTALLBINOPT) tkmolrender.*::" \
 			-e "s:/bin/rm -f tkmolrender::" \
 			-i "./src/bin/molrender/Makefile" \
@@ -44,8 +46,7 @@ src_prepare() {
 }
 
 src_configure() {
-	tc-export CC
-	tc-export CXX
+	tc-export CC CXX
 	if use mpi; then
 		export CC=mpicc
 		export CXX=mpicxx
@@ -56,7 +57,8 @@ src_configure() {
 		--enable-shared \
 		${myconf}
 
-	sed -i -e "s:^CFLAGS =.*$:CFLAGS=${CFLAGS}:" \
+	sed \
+		-e "s:^CFLAGS =.*$:CFLAGS=${CFLAGS}:" \
 		-e "s:^FFLAGS =.*$:FFLAGS=${FFLAGS:- -O2}:" \
 		-e "s:^CXXFLAGS =.*$:CXXFLAGS=${CXXFLAGS}:" \
 		lib/LocalMakefile
@@ -68,7 +70,7 @@ src_test() {
 	# we'll only run the small test set, since the
 	# medium and large ones take >10h and >24h on my
 	# 1.8Ghz P4M
-	make check0 || die "failed in test routines"
+	emake -j1 check0 || die "failed in test routines"
 }
 
 src_install() {
@@ -80,8 +82,8 @@ src_install() {
 	# make extended docs
 	if use doc; then
 		cd "${S}"/doc
-		make all || die "failed to generate documentation"
-		doman man/man1/* && doman man/man3/* || \
+		emake -j1 all || die "failed to generate documentation"
+		doman man/man1/* man/man3/* || \
 			die "failed to install man pages"
 		dohtml -r html/
 	fi

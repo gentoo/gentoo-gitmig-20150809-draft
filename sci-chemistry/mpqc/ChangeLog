@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/mpqc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/ChangeLog,v 1.22 2010/12/16 15:19:28 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mpqc/ChangeLog,v 1.23 2011/07/17 12:50:56 jlec Exp $
+
+*mpqc-2.3.1-r3 (17 Jul 2011)
+
+  17 Jul 2011; Justin Lecher <jlec@gentoo.org> mpqc-2.3.1-r1.ebuild,
+  mpqc-2.3.1-r2.ebuild, +mpqc-2.3.1-r3.ebuild, +files/mpqc-2.3.1-blas.patch,
+  metadata.xml:
+  Use pkg-config for blas/lapack detection, #262143
 
   16 Dec 2010; Justin Lecher <jlec@gentoo.org> mpqc-2.3.1-r1.ebuild,
   mpqc-2.3.1-r2.ebuild:
