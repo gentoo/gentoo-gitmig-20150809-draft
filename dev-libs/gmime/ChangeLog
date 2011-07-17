@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.151 2011/07/14 10:07:34 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.152 2011/07/17 20:44:00 maekke Exp $
+
+  17 Jul 2011; Markus Meier <maekke@gentoo.org> gmime-2.2.27.ebuild:
+  arm stable, bug #369909
 
   14 Jul 2011; Thomas Kahle <tomka@gentoo.org> gmime-2.2.27.ebuild,
   gmime-2.4.24.ebuild:
