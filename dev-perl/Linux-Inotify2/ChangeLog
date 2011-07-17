@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Linux-Inotify2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Linux-Inotify2/ChangeLog,v 1.7 2011/01/14 09:32:13 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Linux-Inotify2/ChangeLog,v 1.8 2011/07/17 08:36:49 tove Exp $
+
+*Linux-Inotify2-1.220.0 (17 Jul 2011)
+
+  17 Jul 2011; Torsten Veller <tove@gentoo.org> +Linux-Inotify2-1.220.0.ebuild:
+  Version bump
 
 *Linux-Inotify2-1.210 (14 Jan 2011)
 
