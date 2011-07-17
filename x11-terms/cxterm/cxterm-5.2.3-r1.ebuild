@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/cxterm/cxterm-5.2.3-r1.ebuild,v 1.2 2011/07/09 17:40:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/cxterm/cxterm-5.2.3-r1.ebuild,v 1.3 2011/07/17 20:35:28 maekke Exp $
 
 EAPI=4
 inherit autotools
@@ -11,7 +11,7 @@ DESCRIPTION="A Chinese/Japanese/Korean X-Terminal"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND="
