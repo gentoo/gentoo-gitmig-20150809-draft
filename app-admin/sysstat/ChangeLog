@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.198 2011/06/23 20:05:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.199 2011/07/17 09:04:18 xarthisius Exp $
+
+  17 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> sysstat-10.0.0.ebuild:
+  ppc64 stable wrt #364435
 
   23 Jun 2011; Brent Baude <ranger@gentoo.org> sysstat-10.0.0.ebuild:
   Marking sysstat-10.0.0 ppc for bug 364435
