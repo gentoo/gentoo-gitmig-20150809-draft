@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.11-r2.ebuild,v 1.1 2011/07/14 17:25:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.11-r3.ebuild,v 1.1 2011/07/17 22:35:26 scarabeus Exp $
 
 EAPI=4
 
@@ -59,10 +59,11 @@ src_prepare() {
 
 	# update OSM icon paths
 	sed -i \
-		-e "s|icons/map-icons|osm|g" \
+		-e "s:icons/map-icons:osm:g" \
 		cmake/Modules/DefineInstallationPaths.cmake \
 		scripts/osm/perl_lib/Geo/Gpsdrive/DB_Defaults.pm \
 		scripts/osm/perl_lib/Geo/Gpsdrive/OSM.pm \
+		src/gpsdrive_config.c \
 		src/icons.c \
 		|| die "sed failed"
 
