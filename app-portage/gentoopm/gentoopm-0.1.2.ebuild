@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/gentoopm-0.1.ebuild,v 1.1 2011/07/15 19:05:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/gentoopm-0.1.2.ebuild,v 1.1 2011/07/17 22:36:33 mgorny Exp $
 
 EAPI=3
 
-PYTHON_DEPEND='*:2.6'
+PYTHON_DEPEND='2:2.6'
 SUPPORT_PYTHON_ABIS=1
-RESTRICT_PYTHON_ABIS='2.4 2.5'
+RESTRICT_PYTHON_ABIS='2.4 2.5 3.*'
 DISTUTILS_SRC_TEST=setup.py
 
 inherit base distutils
