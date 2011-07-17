@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xprop/xprop-1.2.1.ebuild,v 1.1 2011/07/01 23:54:33 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xprop/xprop-1.2.1.ebuild,v 1.2 2011/07/17 07:05:17 leio Exp $
 
 EAPI=4
 inherit xorg-2
@@ -11,4 +11,6 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE=""
 
 RDEPEND="x11-libs/libX11"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	>=x11-proto/xproto-7.0.17
+"

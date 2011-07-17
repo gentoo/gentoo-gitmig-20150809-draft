@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xprop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xprop/ChangeLog,v 1.64 2011/07/01 23:54:33 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xprop/ChangeLog,v 1.65 2011/07/17 07:05:17 leio Exp $
+
+  17 Jul 2011; Mart Raudsepp <leio@gentoo.org> xprop-1.2.1.ebuild:
+  Add missing xproto dependency, bug 375417
 
 *xprop-1.2.1 (01 Jul 2011)
 
