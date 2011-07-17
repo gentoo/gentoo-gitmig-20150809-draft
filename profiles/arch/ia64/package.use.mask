@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.52 2011/07/03 15:10:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.53 2011/07/17 16:22:25 pacho Exp $
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (4 Apr 2011)
 # Needs sci-libs/umfpack keyworded. Bug #361947.
@@ -75,4 +75,4 @@ dev-lisp/clisp hyperspec pari svm
 media-video/mplayer ladspa
 
 # missing keywords
-media-plugins/gst-plugins-meta dv lame taglib vcd wavpack
+media-plugins/gst-plugins-meta dv lame mms taglib vcd wavpack
