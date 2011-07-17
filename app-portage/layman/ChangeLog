@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.138 2011/07/09 11:23:47 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.139 2011/07/17 20:52:18 idl0r Exp $
+
+*layman-2.0.0_rc1-r1 (17 Jul 2011)
+
+  17 Jul 2011; Christian Ruppert <idl0r@gentoo.org> -layman-1.2.3.ebuild,
+  -layman-1.3.3.ebuild, -layman-1.3.4.ebuild, +layman-2.0.0_rc1-r1.ebuild,
+  +files/layman-2.0.0_rc1-fix-mistracking-success.patch:
+  Version bump. Remove 1.2* and 1.3* ebuilds.
 
   09 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> layman-1.4.1.ebuild:
   ppc64 stable wrt #343309

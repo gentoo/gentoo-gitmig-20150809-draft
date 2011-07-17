@@ -1,0 +1,69 @@
+From c5c3121331d8f2f2b39b8f41b91d705d197be250 Mon Sep 17 00:00:00 2001
+From: dol-sen <brian.dolbec@gmail.com>
+Date: Tue, 12 Jul 2011 12:01:43 -0700
+Subject: [PATCH] fix mistracking success adding an overlay.
+
+---
+ layman/api.py |   17 +++++++++--------
+ layman/db.py  |    4 +++-
+ 2 files changed, 12 insertions(+), 9 deletions(-)
+
+diff --git a/layman/api.py b/layman/api.py
+index 8e54d7d..a924ead 100644
+--- a/layman/api.py
++++ b/layman/api.py
+@@ -114,14 +114,14 @@ class LaymanAPI(object):
+                 self._error("Repository '"+ovl+"' was not installed")
+                 results.append(False)
+                 continue
++            success = False
+             try:
+-                self._get_installed_db().delete(
++                success = self._get_installed_db().delete(
+                     self._get_installed_db().select(ovl))
+-                results.append(True)
+             except Exception as e:
+                 self._error(
+-                        "Failed to disable repository '"+ovl+"':\n"+str(e))
+-                results.append(False)
++                        "Exception caught disabling repository '"+ovl+"':\n"+str(e))
++            results.append(success)
+             self.get_installed(dbreload=True)
+         if False in results:
+             return False
+@@ -147,12 +147,13 @@ class LaymanAPI(object):
+                 self._error(UnknownOverlayMessage(ovl))
+                 results.append(False)
+                 continue
++            success = False
+             try:
+-                self._get_installed_db().add(self._get_remote_db().select(ovl), quiet=True)
+-                results.append(True)
++                success = self._get_installed_db().add(
++                    self._get_remote_db().select(ovl), quiet=True)
+             except Exception as e:
+-                self._error("Failed to enable repository '"+ovl+"' : "+str(e))
+-                results.append(False)
++                self._error("Exception caught enabling repository '"+ovl+"' : "+str(e))
++            results.append(success)
+             self.get_installed(dbreload=True)
+         if False in results:
+             return False
+diff --git a/layman/db.py b/layman/db.py
+index 3ed5cc6..b1df906 100644
+--- a/layman/db.py
++++ b/layman/db.py
+@@ -206,7 +206,9 @@ class DB(DbBase):
+             self.write(self.path)
+             make_conf.delete(overlay)
+         else:
+-            raise Exception('No local overlay named "' + overlay.name + '"!')
++            self.output.error('No local overlay named "' + overlay.name + '"!')
++            return False
++        return True
+ 
+     def sync(self, overlay_name, quiet = False):
+         '''Synchronize the given overlay.'''
+-- 
+1.7.6
+

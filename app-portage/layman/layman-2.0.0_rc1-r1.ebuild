@@ -1,20 +1,20 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-1.3.3.ebuild,v 1.7 2011/04/14 20:13:00 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.0.0_rc1-r1.ebuild,v 1.1 2011/07/17 20:52:18 idl0r Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
 
 inherit eutils distutils
 
-DESCRIPTION="A python script for retrieving gentoo overlays."
-HOMEPAGE="http://layman.sourceforge.net"
+DESCRIPTION="Tool to manage Gentoo overlays"
+HOMEPAGE="http://layman.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="bazaar cvs darcs git mercurial subversion test"
 
 COMMON_DEPS="dev-lang/python[xml]"
@@ -33,6 +33,10 @@ RDEPEND="${COMMON_DEPS}
 		)
 	)"
 RESTRICT_PYTHON_ABIS="2.4 3.*"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-fix-mistracking-success.patch"
+}
 
 src_test() {
 	testing() {
