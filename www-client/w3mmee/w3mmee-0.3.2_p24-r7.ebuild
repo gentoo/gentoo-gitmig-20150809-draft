@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/w3mmee-0.3.2_p24-r7.ebuild,v 1.1 2011/07/17 05:34:33 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/w3mmee-0.3.2_p24-r7.ebuild,v 1.2 2011/07/17 05:46:37 naota Exp $
 
 inherit alternatives eutils
 
@@ -27,6 +27,7 @@ DEPEND=">=sys-libs/ncurses-5.2-r3
 	gpm? ( >=sys-libs/gpm-1.19.3-r5 )
 	nls? ( sys-devel/gettext )
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 

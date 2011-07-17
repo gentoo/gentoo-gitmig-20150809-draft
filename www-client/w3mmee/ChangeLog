@@ -1,6 +1,9 @@
 # ChangeLog for www-client/w3mmee
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/ChangeLog,v 1.15 2011/07/17 05:34:33 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/ChangeLog,v 1.16 2011/07/17 05:46:37 naota Exp $
+
+  17 Jul 2011; Naohiro Aota <naota@gentoo.org> w3mmee-0.3.2_p24-r7.ebuild:
+  Explicitly define RDEPEND
 
 *w3mmee-0.3.2_p24-r7 (17 Jul 2011)
 
