@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/sleuthkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.48 2011/07/10 15:44:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.49 2011/07/17 20:39:47 maekke Exp $
+
+  17 Jul 2011; Markus Meier <maekke@gentoo.org> sleuthkit-3.2.1.ebuild:
+  x86 stable, bug #374321
 
   10 Jul 2011; Markos Chandras <hwoarang@gentoo.org> sleuthkit-3.2.1.ebuild:
   Stable on amd64 wrt bug #374321

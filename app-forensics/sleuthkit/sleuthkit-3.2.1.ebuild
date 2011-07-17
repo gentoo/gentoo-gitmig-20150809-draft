@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-3.2.1.ebuild,v 1.3 2011/07/10 15:44:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-3.2.1.ebuild,v 1.4 2011/07/17 20:39:47 maekke Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2 IBM"
 SLOT=0
-KEYWORDS="amd64 ~arm ~hppa ~ppc ~s390 ~sparc ~x86"
+KEYWORDS="amd64 ~arm ~hppa ~ppc ~s390 ~sparc x86"
 IUSE="aff ewf"
 
 DEPEND="ewf? ( app-forensics/libewf )
