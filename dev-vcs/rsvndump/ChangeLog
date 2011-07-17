@@ -1,6 +1,14 @@
 # ChangeLog for dev-vcs/rsvndump
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rsvndump/ChangeLog,v 1.6 2011/03/05 16:16:08 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rsvndump/ChangeLog,v 1.7 2011/07/17 23:21:07 sping Exp $
+
+*rsvndump-0.5.6 (17 Jul 2011)
+
+  17 Jul 2011; Sebastian Pipping <sping@gentoo.org> +rsvndump-0.5.6.ebuild,
+  +files/rsvndump-0.5.6-compile-flags.patch:
+  Bump to 0.5.6. Upstream changes: now depends on dev-libs/apr-util, test suite
+  got removed (questioned at SF.net bug #3369630), compile flags are no longer
+  respected (patched, SF.net bug #3369622)
 
 *rsvndump-0.5.5 (05 Mar 2011)
 
