@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.4-r4.ebuild,v 1.5 2011/07/17 14:40:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.4-r4.ebuild,v 1.6 2011/07/17 19:24:33 scarabeus Exp $
 
 EAPI=4
 
@@ -26,8 +26,10 @@ RDEPEND="app-text/ghostscript-gpl
 	sys-libs/zlib
 	x11-libs/gdk-pixbuf:2[X?]
 	virtual/jpeg
-	expat? ( dev-libs/expat )
-	xml? (  dev-libs/libxml2 )
+	xml? (
+		expat? ( dev-libs/expat )
+		!expat? (  dev-libs/libxml2 )
+	)
 	X? (
 		x11-libs/libICE
 		x11-libs/libSM
@@ -42,7 +44,7 @@ DEPEND="${RDEPEND}
 	)"
 # plotutils are not really supported yet, so looks like that's it
 
-REQUIRED_USE="xml? ( !expat ) expat? ( !xml )"
+REQUIRED_USE="expat? ( xml )"
 
 DOCS=( README AUTHORS CREDITS ChangeLog NEWS TODO )
 
@@ -62,15 +64,22 @@ src_prepare() {
 }
 
 src_configure() {
+	local myconf
 	# NOTE: The gd that is included is gd-2.0.0. Even with --with-sys-gd, that gd is built
 	# and included in libwmf. Since nothing in-tree seems to use media-libs/libwmf[gd],
 	# we're explicitly disabling gd use w.r.t. bug 268161
+	if use expat; then
+		myconf+=" --disable-libxml2"
+	else
+		myconf+=$(use_with xml libxml2)
+	fi
+
 	econf \
 		--disable-static \
 		$(use_enable debug) \
 		$(use_with X x) \
 		$(use_with expat) \
-		$(use_with xml libxml2) \
+		${myconf} \
 		--disable-gd \
 		--with-sys-gd \
 		--with-gsfontdir="${EPREFIX}"/usr/share/ghostscript/fonts \
