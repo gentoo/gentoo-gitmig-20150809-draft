@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5534 2011/07/17 09:02:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5535 2011/07/17 11:33:16 fauli Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Jul 2011; <fauli@gentoo.org> package.mask:
+  Raise version match for Bazaar programs for 2.3 compatability
 
   17 Jul 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Masking new version of www-apps/tt-rss for testing

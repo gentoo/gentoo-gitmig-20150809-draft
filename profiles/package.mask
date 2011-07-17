@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12909 2011/07/17 09:02:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12910 2011/07/17 11:33:16 fauli Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -534,10 +534,10 @@ dev-util/perf
 # compatible with new version, upstream is notified.
 >=dev-vcs/bzr-2.3.0
 >=dev-vcs/bzrtools-2.3.0
-~dev-vcs/qbzr-0.20.0
-~dev-vcs/bzr-gtk-0.100.0
-~dev-vcs/bzr-rewrite-0.6.2
-~dev-vcs/bzr-svn-1.1.0
+>=dev-vcs/qbzr-0.20.0
+>=dev-vcs/bzr-gtk-0.100.0
+>=dev-vcs/bzr-rewrite-0.6.2
+>=dev-vcs/bzr-svn-1.0.5
 
 # Ryan Hill <dirtyepic@gentoo.org> (30 Mar 2011)
 # Masked indefinitely (until 0.40 is released).
