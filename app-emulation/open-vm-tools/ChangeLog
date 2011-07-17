@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/open-vm-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.51 2011/07/16 12:57:42 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.52 2011/07/17 13:23:00 vadimk Exp $
+
+  17 Jul 2011; Vadim Kuznetsov <vadimk@gentoo.org> files/open-vm-tools.initd:
+  chuid is deprecated
 
 *open-vm-tools-0.0.20110627.437995 (16 Jul 2011)
 
