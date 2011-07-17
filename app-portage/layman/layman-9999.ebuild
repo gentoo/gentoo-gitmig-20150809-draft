@@ -1,14 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.17 2011/04/14 20:13:00 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.18 2011/07/17 21:01:42 idl0r Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit eutils distutils git
+inherit eutils distutils git-2
 
-DESCRIPTION="A python script for retrieving gentoo overlays."
+DESCRIPTION="Tool to manage Gentoo overlays"
 HOMEPAGE="http://layman.sourceforge.net"
 SRC_URI=""
 EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/layman.git"

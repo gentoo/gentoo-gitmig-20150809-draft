@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.139 2011/07/17 20:52:18 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.140 2011/07/17 21:01:42 idl0r Exp $
+
+  17 Jul 2011; Christian Ruppert <idl0r@gentoo.org> layman-2.0.0_rc1-r1.ebuild,
+  layman-9999.ebuild:
+  Update layman-9999, use git-2 eclass. Use insinto/doins instead of dodir/cp.
 
 *layman-2.0.0_rc1-r1 (17 Jul 2011)
 

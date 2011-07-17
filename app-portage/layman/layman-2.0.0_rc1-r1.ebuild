@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.0.0_rc1-r1.ebuild,v 1.1 2011/07/17 20:52:18 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.0.0_rc1-r1.ebuild,v 1.2 2011/07/17 21:01:42 idl0r Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -51,9 +51,8 @@ src_test() {
 src_install() {
 	distutils_src_install
 
-	dodir /etc/layman
-
-	cp etc/* "${D}"/etc/layman/
+	insinto /etc/layman
+	doins etc/layman.cfg || die
 
 	doman doc/layman.8
 	dohtml doc/layman.8.html
