@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/vala
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.58 2011/07/14 11:03:43 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.59 2011/07/17 20:42:15 maekke Exp $
+
+  17 Jul 2011; Markus Meier <maekke@gentoo.org> vala-0.10.4-r1.ebuild:
+  arm stable, bug #369909
 
   14 Jul 2011; Thomas Kahle <tomka@gentoo.org> vala-0.10.4-r1.ebuild,
   vala-0.12.1.ebuild:
