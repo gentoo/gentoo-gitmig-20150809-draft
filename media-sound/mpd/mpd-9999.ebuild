@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-9999.ebuild,v 1.1 2011/07/17 15:37:10 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-9999.ebuild,v 1.2 2011/07/17 16:08:37 angelos Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic linux-info multilib git-2
@@ -13,9 +13,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
 IUSE="aac +alsa ao audiofile bzip2 cdio cue +curl debug +fifo +ffmpeg flac
-fluidsynth profile +id3tag inotify ipv6 jack lame lastfmradio libmms libsamplerate
-+mad mikmod modplug mpg123 musepack +network ogg openal oss pipe pulseaudio sid
-sndfile sqlite tcpd twolame unicode vorbis wavpack wildmidi zeroconf zip"
+fluidsynth profile +id3tag inotify ipv6 jack lame lastfmradio libsamplerate
++mad mikmod modplug mpg123 mms musepack +network ogg openal oss pipe pulseaudio
+sid sndfile sqlite tcpd twolame unicode vorbis wavpack wildmidi zeroconf zip"
 
 REQUIRED_USE="|| ( alsa ao fifo jack network openal oss pipe pulseaudio )
 	|| ( aac audiofile ffmpeg flac fluidsynth mad mikmod modplug mpg123 musepack
@@ -41,10 +41,10 @@ RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	id3tag? ( media-libs/libid3tag )
 	jack? ( media-sound/jack-audio-connection-kit )
 	lame? ( network? ( media-sound/lame ) )
-	libmms? ( media-libs/libmms )
 	libsamplerate? ( media-libs/libsamplerate )
 	mad? ( media-libs/libmad )
 	mikmod? ( media-libs/libmikmod )
+	mms? ( media-libs/libmms )
 	modplug? ( media-libs/libmodplug )
 	mpg123? ( >=media-sound/mpg123-1.12.2 )
 	musepack? ( media-sound/musepack-tools )
@@ -129,10 +129,10 @@ src_configure() {
 		$(use_enable ipv6) \
 		$(use_enable jack) \
 		$(use_enable lastfmradio lastfm) \
-		$(use_enable libmms mms) \
 		$(use_enable libsamplerate lsr) \
 		$(use_enable mad) \
 		$(use_enable mikmod) \
+		$(use_enable mms) \
 		$(use_enable modplug) \
 		$(use_enable mpg123) \
 		$(use_enable musepack mpc) \

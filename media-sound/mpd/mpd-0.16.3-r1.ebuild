@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.3-r1.ebuild,v 1.1 2011/07/03 10:30:35 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.16.3-r1.ebuild,v 1.2 2011/07/17 16:08:37 angelos Exp $
 
 EAPI=4
 inherit eutils flag-o-matic linux-info multilib
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="aac +alsa ao audiofile bzip2 cdio cue +curl debug +fifo +ffmpeg flac
-fluidsynth profile +id3tag inotify ipv6 jack lame lastfmradio libmms libsamplerate
+fluidsynth profile +id3tag inotify ipv6 jack lame lastfmradio mms libsamplerate
 +mad mikmod modplug mpg123 musepack +network ogg openal oss pipe pulseaudio sid
 sndfile sqlite tcpd twolame unicode vorbis wavpack wildmidi zeroconf zip"
 
@@ -41,7 +41,7 @@ RDEPEND="!<sys-cluster/mpich2-1.4_rc2
 	id3tag? ( media-libs/libid3tag )
 	jack? ( media-sound/jack-audio-connection-kit )
 	lame? ( network? ( media-sound/lame ) )
-	libmms? ( media-libs/libmms )
+	mms? ( media-libs/libmms )
 	libsamplerate? ( media-libs/libsamplerate )
 	mad? ( media-libs/libmad )
 	mikmod? ( media-libs/libmikmod )
@@ -127,7 +127,7 @@ src_configure() {
 		$(use_enable ipv6) \
 		$(use_enable jack) \
 		$(use_enable lastfmradio lastfm) \
-		$(use_enable libmms mms) \
+		$(use_enable mms) \
 		$(use_enable libsamplerate lsr) \
 		$(use_enable mad) \
 		$(use_enable mikmod) \

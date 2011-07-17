@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.259 2011/07/17 15:37:10 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.260 2011/07/17 16:08:37 angelos Exp $
+
+  17 Jul 2011; Christoph Mende <angelos@gentoo.org> mpd-0.15.8.ebuild,
+  mpd-0.15.15.ebuild, mpd-0.15.16.ebuild, mpd-0.16.2.ebuild, mpd-0.16.3.ebuild,
+  mpd-0.16.3-r1.ebuild, mpd-9999.ebuild, metadata.xml:
+  Use global mms USE flag
 
 *mpd-9999 (17 Jul 2011)
 
