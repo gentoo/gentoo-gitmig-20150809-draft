@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.6-r1.ebuild,v 1.9 2011/06/12 11:26:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giflib/giflib-4.1.6-r2.ebuild,v 1.1 2011/07/17 22:48:34 scarabeus Exp $
 
 EAPI=4
 
@@ -15,14 +15,14 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="rle static-libs X"
 
-DEPEND="
-	X? (
+DEPEND="X? (
 		x11-libs/libXt
 		x11-libs/libX11
 		x11-libs/libICE
 		x11-libs/libSM
 	)
 	rle? ( media-libs/urt )"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gif2rle.patch
@@ -50,7 +50,8 @@ src_configure() {
 
 src_install() {
 	default
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	# for static libs the .la file is required if build with +rle or +X
+	use static-libs || find "${ED}" -name '*.la' -exec rm -f {} +
 	dodoc AUTHORS BUGS ChangeLog NEWS ONEWS README TODO doc/*.txt
 	dohtml -r doc
 }
