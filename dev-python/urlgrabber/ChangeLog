@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/urlgrabber
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urlgrabber/ChangeLog,v 1.36 2011/05/28 13:49:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urlgrabber/ChangeLog,v 1.37 2011/07/17 11:50:16 xarthisius Exp $
+
+  17 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  urlgrabber-3.9.1-r1.ebuild:
+  ppc64 stable wrt #366663
 
   28 May 2011; Brent Baude <ranger@gentoo.org> urlgrabber-3.9.1-r1.ebuild:
   Marking urlgrabber-3.9.1-r1 ppc for bug 366663
