@@ -1,23 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.6.ebuild,v 1.6 2011/06/22 19:36:33 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.6.ebuild,v 1.7 2011/07/17 00:29:56 mattst88 Exp $
 
-# catalyst-9999         -> latest SVN
-# catalyst-9999.REV     -> use SVN REV
+# catalyst-9999         -> latest Git
+# catalyst-2.9999       -> catalyst_2 branch from Git
 # catalyst-VER          -> normal catalyst release
 
-if [[ ${PV} == 9999* ]]
-then
-	[[ ${PV} == 9999.* ]] && ESVN_UPDATE_CMD="svn up -r ${PV/9999./}"
-	ESVN_REPO_URI="svn://anonsvn.gentoo.org/catalyst/trunk"
-	inherit subversion eutils multilib
-	SRC_URI=""
-	S=${WORKDIR}/trunk
-else
-	inherit eutils multilib
-	SRC_URI="mirror://gentoo/${P}.tar.bz2
-		http://wolf31o2.org/sources/${PN}/${P}.tar.bz2"
-fi
+inherit eutils multilib
+SRC_URI="mirror://gentoo/${P}.tar.bz2
+	http://wolf31o2.org/sources/${PN}/${P}.tar.bz2"
 
 DESCRIPTION="release metatool used for creating releases based on Gentoo Linux"
 HOMEPAGE="http://www.gentoo.org/proj/en/releng/catalyst/"
@@ -54,12 +45,8 @@ pkg_setup() {
 }
 
 src_unpack() {
-	if [[ ${PV} == 9999* ]] ; then
-		subversion_src_unpack
-	else
-		unpack ${A}
-		cd "${S}"
-	fi
+	unpack ${A}
+	cd "${S}"
 }
 
 src_install() {

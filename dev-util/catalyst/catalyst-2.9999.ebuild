@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.6.918.ebuild,v 1.2 2011/07/17 00:29:56 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.9999.ebuild,v 1.1 2011/07/17 00:29:56 mattst88 Exp $
 
 # catalyst-9999         -> latest Git
 # catalyst-2.9999       -> catalyst_2 branch from Git
@@ -10,6 +10,7 @@ EAPI=2
 
 if [[ ${PV} == 9999* || ${PV} == 2.9999* ]]; then
 	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/catalyst.git"
+	EGIT_BRANCH="catalyst_2"
 	inherit git-2
 	SRC_URI=""
 	S="${WORKDIR}/${PN}"

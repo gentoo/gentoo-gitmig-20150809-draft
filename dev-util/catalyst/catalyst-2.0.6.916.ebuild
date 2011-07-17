@@ -1,21 +1,21 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.6.916.ebuild,v 1.4 2011/06/27 05:04:18 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.6.916.ebuild,v 1.5 2011/07/17 00:29:56 mattst88 Exp $
 
 # catalyst-9999         -> latest Git
+# catalyst-2.9999       -> catalyst_2 branch from Git
 # catalyst-VER          -> normal catalyst release
 
 EAPI=2
 
-if [[ ${PV} == 9999* ]]; then
+if [[ ${PV} == 9999* || ${PV} == 2.9999* ]]; then
 	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/catalyst.git"
 	inherit git-2
 	SRC_URI=""
 	S="${WORKDIR}/${PN}"
 	KEYWORDS=""
 else
-	SRC_URI="mirror://gentoo/${P}.tar.bz2
-		http://wolf31o2.org/sources/${PN}/${P}.tar.bz2"
+	SRC_URI="mirror://gentoo/${P}.tar.bz2"
 	KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 fi
 inherit eutils multilib
@@ -50,11 +50,13 @@ pkg_setup() {
 	einfo "and they are considered to be the authorative source of information"
 	einfo "on catalyst."
 	echo
-	ewarn "The git master branch (what you get with this -9999 ebuild) for catalyst"
-	ewarn "now contains the work-in-progress code for catalyst-3.x. Be aware that"
-	ewarn "it's very likely that it will not be in a working state at any given"
-	ewarn "point. Please do not file bugs until you have posted on the gentoo-catalyst"
-	ewarn "mailing list and we have asked you to do so."
+	if [[ ${PV} == 9999* || ${PV} == 2.9999* ]]; then
+		ewarn "The ${EGIT_BRANCH:-master} branch (what you get with this ${PV} ebuild) contains"
+		ewarn "work-in-progress code. Be aware that it's likely that it will not"
+		ewarn "be in a working state at any given point. Please do not file bugs"
+		ewarn "until you have posted on the gentoo-catalyst mailing list and we"
+		ewarn "have asked you to do so."
+	fi
 }
 
 src_install() {
@@ -63,9 +65,6 @@ src_install() {
 	doexe catalyst || die "copying catalyst"
 	if [[ ${PV} == 9999* ]]; then
 		doins -r modules files || die "copying files"
-
-		# arch files don't live in modules/ in catalyst_2
-		[[ ${EGIT_BRANCH} == "catalyst_2" ]] && { doins -r arch || die "copying files"; }
 	else
 		doins -r arch modules livecd || die "copying files"
 	fi
