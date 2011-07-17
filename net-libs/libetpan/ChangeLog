@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.87 2011/07/13 08:15:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.88 2011/07/17 14:37:01 maekke Exp $
+
+  17 Jul 2011; Markus Meier <maekke@gentoo.org> libetpan-1.0.ebuild:
+  x86 stable, bug #373687
 
 *libetpan-1.1 (13 Jul 2011)
 
