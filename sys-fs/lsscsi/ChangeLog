@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lsscsi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.61 2011/06/24 16:38:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.62 2011/07/17 22:38:32 halcy0n Exp $
+
+  17 Jul 2011; Mark Loeser <halcy0n@gentoo.org> lsscsi-0.24.ebuild:
+  Stable for ppc/ppc64; bug #371697
 
   24 Jun 2011; Raúl Porcel <armin76@gentoo.org> lsscsi-0.24.ebuild:
   alpha/ia64/sparc stable wrt #371697
