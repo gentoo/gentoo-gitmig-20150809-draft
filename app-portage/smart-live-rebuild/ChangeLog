@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/smart-live-rebuild
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.21 2011/07/15 19:21:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.22 2011/07/17 13:21:25 mgorny Exp $
+
+  17 Jul 2011; Michał Górny <mgorny@gentoo.org>
+  smart-live-rebuild-1.1.ebuild:
+  Restrict gentoopm RDEP due to API change in -9999.
 
 *smart-live-rebuild-1.1 (15 Jul 2011)
 
