@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rr/rr-1.0.3.ebuild,v 1.1 2011/07/17 07:55:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rr/rr-1.0.3.ebuild,v 1.2 2011/07/17 13:26:08 mr_bones_ Exp $
 
 EAPI=2
 
@@ -30,4 +30,3 @@ all_ruby_prepare() {
 	rm Gemfile || die
 	sed -i -e '/bundler/d' spec/spec_suite.rb || die
 }
-
