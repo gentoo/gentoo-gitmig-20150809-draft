@@ -7,8 +7,6 @@
   <name>Steve Arnold</name>
 </maintainer>
 <use>
-  <flag name='garmin'>Adds specific support for Garmin GPS receivers (pre-2.10 
-    only)</flag>
   <flag name='gdal'>Include gdal and ogr support for format conversions.</flag>
   <flag name='kismet'>Include support for kismet wifi mapping.</flag>
   <flag name='mapnik'>Include mapnik support for custom map creation.</flag>

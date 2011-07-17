@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gpsdrive
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.48 2011/07/17 22:35:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.49 2011/07/17 22:49:43 scarabeus Exp $
+
+  17 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Punt unused local desc.
 
 *gpsdrive-2.11-r3 (17 Jul 2011)
 
