@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmediainfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/ChangeLog,v 1.18 2011/07/15 22:19:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/ChangeLog,v 1.19 2011/07/17 16:00:46 pacho Exp $
+
+  17 Jul 2011; Pacho Ramos <pacho@gentoo.org> libmediainfo-0.7.41.ebuild,
+  libmediainfo-0.7.45.ebuild, libmediainfo-0.7.46.ebuild,
+  libmediainfo-0.7.47.ebuild, metadata.xml:
+  Move to global mms USE flag.
 
 *libmediainfo-0.7.47 (15 Jul 2011)
 

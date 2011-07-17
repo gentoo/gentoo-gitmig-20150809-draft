@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.41.ebuild,v 1.3 2011/03/24 08:48:01 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.41.ebuild,v 1.4 2011/07/17 16:00:46 pacho Exp $
 
 EAPI="3"
 
@@ -14,12 +14,12 @@ SRC_URI="mirror://sourceforge/mediainfo/source/${PN}/${PV}/${PN}_${PV}.tar.bz2"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="curl debug doc libmms static-libs"
+IUSE="curl debug doc mms static-libs"
 
 RDEPEND="sys-libs/zlib
 	>=media-libs/libzen-0.4.14[static-libs=]
 	curl? ( net-misc/curl )
-	libmms? ( >=media-libs/libmms-0.6.1[static-libs=] )"
+	mms? ( >=media-libs/libmms-0.6.1[static-libs=] )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )"
@@ -36,7 +36,7 @@ src_configure() {
 	local myconf
 	use debug && myconf="${myconf} --enable-debug"
 	use curl && myconf="${myconf} --with-libcurl"
-	use libmms && myconf="${myconf} --with-libmms"
+	use mms && myconf="${myconf} --with-libmms"
 	use static-libs && myconf="${myconf} --enable-staticlibs"
 
 	econf \
