@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc-am
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.63 2011/07/14 10:18:12 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.64 2011/07/17 20:49:54 maekke Exp $
+
+  17 Jul 2011; Markus Meier <maekke@gentoo.org> gtk-doc-am-1.17.ebuild:
+  arm stable, bug #369909
 
   14 Jul 2011; Thomas Kahle <tomka@gentoo.org> gtk-doc-am-1.17.ebuild:
   x86 stable per bug 369909
