@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/antlr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.87 2011/06/23 17:15:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.88 2011/07/17 11:44:47 xarthisius Exp $
+
+  17 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> antlr-2.7.7-r2.ebuild:
+  ppc64 stable wrt #366423
 
   23 Jun 2011; Brent Baude <ranger@gentoo.org> antlr-2.7.7-r2.ebuild:
   Marking antlr-2.7.7-r2 ppc for bug 366423
