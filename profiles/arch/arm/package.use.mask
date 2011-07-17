@@ -1,6 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.53 2011/07/03 15:10:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.54 2011/07/17 16:08:17 angelos Exp $
+
+# Christoph Mende <angelos@gentoo.org> (17 Jul 2011)
+# media-libs/libmms is not keyworded
+media-sound/mpd mms
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (08 Apr 2011)
 # x11-libs/qscintilla still needs arm keywords, so...
