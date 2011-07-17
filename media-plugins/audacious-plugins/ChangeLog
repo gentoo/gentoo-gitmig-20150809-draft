@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.212 2011/07/15 13:29:01 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.213 2011/07/17 16:02:22 pacho Exp $
+
+  17 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  mms USE flag is now global.
 
 *audacious-plugins-2.5.4 (15 Jul 2011)
 
