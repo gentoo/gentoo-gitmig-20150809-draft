@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facets/facets-2.8.4-r1.ebuild,v 1.4 2011/05/15 17:28:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facets/facets-2.8.4-r1.ebuild,v 1.5 2011/07/17 18:27:13 halcy0n Exp $
 
 EAPI=2
 # ree18 -> test failure on hash ordering
@@ -17,7 +17,7 @@ HOMEPAGE="http://facets.rubyforge.org/"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="amd64 ia64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="amd64 ia64 ~ppc ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
 all_ruby_prepare() {
