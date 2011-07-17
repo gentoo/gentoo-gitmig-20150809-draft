@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.113 2011/06/23 15:28:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.114 2011/07/17 11:47:43 xarthisius Exp $
+
+  17 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> -pytz-2011d.ebuild,
+  pytz-2011e.ebuild:
+  ppc64 stable wrt #366659, drop old
 
   23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> +pytz-2011d.ebuild:
   Bring back deleted file which was stable for ppc64
