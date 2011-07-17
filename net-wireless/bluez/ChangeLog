@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.97 2011/07/08 19:32:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.98 2011/07/17 20:58:59 halcy0n Exp $
+
+  17 Jul 2011; Mark Loeser <halcy0n@gentoo.org> bluez-4.93.ebuild:
+  Stable on ppc/ppc64; bug #370707
 
 *bluez-4.95-r1 (08 Jul 2011)
 *bluez-4.95 (08 Jul 2011)
