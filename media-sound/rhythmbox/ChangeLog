@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.205 2011/06/26 15:02:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.206 2011/07/17 15:47:51 pacho Exp $
+
+  17 Jul 2011; Pacho Ramos <pacho@gentoo.org> rhythmbox-0.12.8-r1.ebuild:
+  Rhythmbox 0.12.x uses both musicbrainz slots (bug #357189 by dolphinling).
 
   26 Jun 2011; Brent Baude <ranger@gentoo.org> rhythmbox-0.12.8-r1.ebuild:
   Marking rhythmbox-0.12.8-r1 ppc for bug 370661

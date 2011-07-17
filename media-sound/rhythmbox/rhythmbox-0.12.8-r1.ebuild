@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8-r1.ebuild,v 1.15 2011/06/26 15:02:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8-r1.ebuild,v 1.16 2011/07/17 15:47:51 pacho Exp $
 
 EAPI="2"
 
@@ -41,7 +41,8 @@ COMMON_DEPEND=">=dev-libs/glib-2.18:2
 		|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-145[extras] ) )
 	libnotify? ( >=x11-libs/libnotify-0.4.1 )
 	lirc? ( app-misc/lirc )
-	musicbrainz? ( media-libs/musicbrainz:3 )
+	musicbrainz? ( media-libs/musicbrainz:3
+			media-libs/musicbrainz:1 )
 	python? (
 		>=dev-lang/python-2.4.2
 		|| (
