@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.101 2011/07/08 10:15:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.102 2011/07/18 17:57:34 dang Exp $
+
+  18 Jul 2011; Daniel Gryniewicz <dang@gentoo.org> logrotate-3.8.0.ebuild,
+  files/logrotate-3.8.0-atomic-create.patch,
+  +files/logrotate-3.8.0-noasprintf.patch:
+  Fix bug #374407 and bug #374869
 
   08 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> logrotate-3.7.8.ebuild,
   logrotate-3.7.9.ebuild, logrotate-3.7.9-r1.ebuild, logrotate-3.7.9-r2.ebuild,

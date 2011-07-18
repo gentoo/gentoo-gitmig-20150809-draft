@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.8.0.ebuild,v 1.2 2011/07/08 10:15:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.8.0.ebuild,v 1.3 2011/07/18 17:57:34 dang Exp $
 
 EAPI="2"
 
@@ -33,7 +33,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-3.7.7-datehack.patch \
 		"${FILESDIR}"/${PN}-3.8.0-ignore-hidden.patch \
 		"${FILESDIR}"/${PN}-3.8.0-fbsd.patch \
-		"${FILESDIR}"/${PN}-3.8.0-atomic-create.patch
+		"${FILESDIR}"/${PN}-3.8.0-atomic-create.patch \
+		"${FILESDIR}"/${PN}-3.8.0-noasprintf.patch
 }
 
 src_configure() {
