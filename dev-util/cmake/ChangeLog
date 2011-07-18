@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.169 2011/07/11 16:50:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.170 2011/07/18 09:03:45 dilfridge Exp $
+
+*cmake-2.8.5-r2 (18 Jul 2011)
+
+  18 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org> cmake-2.8.4-r1.ebuild,
+  cmake-2.8.5.ebuild, +cmake-2.8.5-r2.ebuild,
+  +files/cmake-2.8.5-FindBLAS.patch, +files/cmake-2.8.5-FindLAPACK.patch:
+  Patch FindBLAS and FindLAPACK to try PkgConfig first and skip all other tests
+  if that succeeds; prepare for additional eclass feature of automated cmake
+  module removal in $S, which should NOT happen in the cmake ebuild itself.
 
 *cmake-2.8.5 (11 Jul 2011)
 

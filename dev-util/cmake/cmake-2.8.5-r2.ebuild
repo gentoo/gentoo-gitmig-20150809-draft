@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.5.ebuild,v 1.2 2011/07/18 09:03:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.5-r2.ebuild,v 1.1 2011/07/18 09:03:45 dilfridge Exp $
 
 EAPI=4
 
@@ -22,6 +22,7 @@ DEPEND="
 	>=app-arch/libarchive-2.8.0
 	>=net-misc/curl-7.20.0-r1[ssl]
 	>=dev-libs/expat-2.0.1
+	dev-util/pkgconfig
 	sys-libs/zlib
 	ncurses? ( sys-libs/ncurses )
 	qt4? ( x11-libs/qt-gui:4 )
@@ -56,6 +57,8 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-2.8.3-more-no_host_paths.patch
 	"${FILESDIR}"/${PN}-2.8.3-ruby_libname.patch
 	"${FILESDIR}"/${PN}-2.8.4-FindBoost.patch
+	"${FILESDIR}"/${PN}-2.8.5-FindBLAS.patch
+	"${FILESDIR}"/${PN}-2.8.5-FindLAPACK.patch
 )
 cmake_src_bootstrap() {
 	# Cleanup args to extract only JOBS.

@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.4-r1.ebuild,v 1.4 2011/05/07 16:52:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.4-r1.ebuild,v 1.5 2011/07/18 09:03:45 dilfridge Exp $
 
 EAPI=4
 
+CMAKE_REMOVE_MODULES="no"
 inherit elisp-common toolchain-funcs eutils versionator flag-o-matic base cmake-utils virtualx
 
 MY_P="${PN}-$(replace_version_separator 3 - ${MY_PV})"
