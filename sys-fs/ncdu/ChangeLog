@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ncdu
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ncdu/ChangeLog,v 1.21 2010/11/21 16:54:03 sping Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ncdu/ChangeLog,v 1.22 2011/07/18 09:06:27 hwoarang Exp $
+
+  18 Jul 2011; Markos Chandras <hwoarang@gentoo.org> ncdu-1.7.ebuild:
+  Stable on amd64 wrt bug #375437
 
 *ncdu-1.7 (21 Nov 2010)
 
