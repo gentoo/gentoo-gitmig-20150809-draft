@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.114 2011/07/16 17:45:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.115 2011/07/18 14:33:43 scarabeus Exp $
+
+  18 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org> gdal-1.8.0-r1.ebuild:
+  Silence the pkgcore warning.
 
   16 Jul 2011; Justin Lecher <jlec@gentoo.org> gdal-1.6.3-r1.ebuild,
   gdal-1.8.0-r1.ebuild, metadata.xml:

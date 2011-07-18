@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.8.0-r1.ebuild,v 1.5 2011/07/16 17:45:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.8.0-r1.ebuild,v 1.6 2011/07/18 14:33:43 scarabeus Exp $
 
 EAPI=2
 
@@ -106,7 +106,7 @@ src_configure() {
 	fi
 
 	# pcidsk is internal, because there is no such library yet released
-	# 	also that thing is developed by the gdal people
+	#     also that thing is developed by the gdal people
 	# kakadu, mrsid jp2mrsid - another jpeg2k stuff, ignore
 	# bsb - legal issues
 	# oracle - disabled, i dont have and can't test
