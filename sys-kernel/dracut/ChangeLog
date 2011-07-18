@@ -1,6 +1,19 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.26 2011/06/30 21:39:37 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.27 2011/07/18 17:49:19 aidecoe Exp $
+
+*dracut-011 (18 Jul 2011)
+
+  18 Jul 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-011.ebuild,
+  +files/dracut-011-multipath-udev-rules.patch:
+  Version bump.
+
+  This version provides new modules:
+  - crypt-gpg
+  - shutdown
+
+  sys-fs/udev version was restricted to 168 and above and
+  sys-apps/module-init-tools to 3.8 or above.
 
   30 Jun 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-010.ebuild,
   -dracut-010-r1.ebuild, -dracut-010-r2.ebuild:
