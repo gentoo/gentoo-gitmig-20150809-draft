@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.16 2011/07/16 03:33:17 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.17 2011/07/18 21:27:16 fuzzyray Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -11,7 +11,7 @@ PYTHON_NONVERSIONED_EXECUTABLES=(".*")
 EGIT_MASTER="gentoolkit"
 EGIT_BRANCH="gentoolkit"
 
-inherit distutils python git
+inherit distutils python git-2
 
 EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/gentoolkit.git"
 
