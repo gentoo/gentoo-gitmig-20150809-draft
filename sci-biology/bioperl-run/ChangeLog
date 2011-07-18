@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/bioperl-run
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/ChangeLog,v 1.20 2010/10/17 22:18:33 weaver Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/ChangeLog,v 1.21 2011/07/18 06:30:59 weaver Exp $
+
+*bioperl-run-1.6.9 (18 Jul 2011)
+
+  18 Jul 2011; Andrey Kislyuk <weaver@gentoo.org> -bioperl-run-1.4.ebuild,
+  +bioperl-run-1.6.9.ebuild:
+  Version bump, drop old
 
 *bioperl-run-9999-r1 (17 Oct 2010)
 
