@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+  <email>maksbotan@gentoo.org</email>
+  <description>Proxy maintainer</description>
+</maintainer>
+<maintainer>
+  <email>pinkbyte@mail.ru</email>
+</maintainer>
+</pkgmetadata>
