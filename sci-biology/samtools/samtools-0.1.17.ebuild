@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/samtools-0.1.12a-r1.ebuild,v 1.3 2011/07/18 01:50:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/samtools-0.1.17.ebuild,v 1.1 2011/07/18 01:50:51 jlec Exp $
 
-EAPI=2
+EAPI=4
 
-inherit toolchain-funcs multilib
+inherit multilib toolchain-funcs
 
 DESCRIPTION="Utilities for SAM (Sequence Alignment/Map), a format for large nucleotide sequence alignments"
 HOMEPAGE="http://samtools.sourceforge.net/"
@@ -30,18 +30,19 @@ src_compile() {
 }
 
 src_install() {
-	dobin samtools || die
-	dobin $(find misc -type f -executable) || die
-	dolib.so libbam.so.1 || die
-	dosym libbam.so.1 /usr/$(get_libdir)/libbam.so || die
-	insinto /usr/include/bam
-	doins bam.h bgzf.h faidx.h kaln.h khash.h kprobaln.h kseq.h ksort.h sam.h || die
+	dobin samtools $(find misc -type f -executable)
 
-	doman ${PN}.1 || die
+	dolib.so libbam.so.1
+	dosym libbam.so.1 /usr/$(get_libdir)/libbam.so
+
+	insinto /usr/include/bam
+	doins bam.h bgzf.h faidx.h kaln.h khash.h kprobaln.h kseq.h ksort.h sam.h
+
+	doman ${PN}.1
 	dodoc AUTHORS ChangeLog NEWS
 
 	if use examples; then
 		insinto /usr/share/${PN}
-		doins -r examples || die
+		doins -r examples
 	fi
 }
