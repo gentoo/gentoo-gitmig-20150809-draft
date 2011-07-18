@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-jmf
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-jmf/ChangeLog,v 1.23 2010/11/05 02:53:07 halcy0n Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-jmf/ChangeLog,v 1.24 2011/07/18 06:27:28 xarthisius Exp $
+
+  18 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> ant-jmf-1.8.1.ebuild:
+  ppc stable wrt #305929
 
   05 Nov 2010; Mark Loeser <halcy0n@gentoo.org> ant-jmf-1.8.1.ebuild:
   Stable for ppc64; bug #305929

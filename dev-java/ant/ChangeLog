@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.128 2011/05/03 19:11:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.129 2011/07/18 06:29:25 xarthisius Exp $
+
+  18 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> ant-1.8.1.ebuild:
+  ppc stable wrt #305929
 
   03 May 2011; Fabian Groffen <grobian@gentoo.org> ant-1.8.1.ebuild:
   Marked ~x64-freebsd
