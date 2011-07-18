@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/indirect
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/indirect/ChangeLog,v 1.1 2011/01/30 23:21:41 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/indirect/ChangeLog,v 1.2 2011/07/18 10:45:01 tove Exp $
+
+*indirect-0.240.0 (18 Jul 2011)
+
+  18 Jul 2011; Torsten Veller <tove@gentoo.org> +indirect-0.240.0.ebuild:
+  Version bump
 
 *indirect-0.23 (30 Jan 2011)
 
