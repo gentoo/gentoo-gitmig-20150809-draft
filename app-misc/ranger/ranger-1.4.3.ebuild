@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ranger/ranger-1.4.3.ebuild,v 1.2 2011/04/27 18:12:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ranger/ranger-1.4.3.ebuild,v 1.3 2011/07/18 08:51:25 radhermit Exp $
 
 EAPI=3
 PYTHON_DEPEND="2:2.6 3:3.1"
 PYTHON_USE_WITH="ncurses"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="A vim-inspired file manager for the console"
 HOMEPAGE="http://ranger.nongnu.org/"
@@ -19,7 +19,9 @@ IUSE=""
 
 RDEPEND="sys-apps/less"
 
-RESTRICT="test"
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-fix-tests.patch
+}
 
 pkg_postinst() {
 	distutils_pkg_postinst

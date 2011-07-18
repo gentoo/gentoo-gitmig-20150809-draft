@@ -1,0 +1,11 @@
+--- ranger-1.4.3/test/tc_loader.py.orig
++++ ranger-1.4.3/test/tc_loader.py
+@@ -35,7 +35,7 @@
+ class Test1(unittest.TestCase):
+ 	def test_loader(self):
+ 		loader = Loader()
+-		fm = OpenStruct(loader=loader)
++		fm = OpenStruct(loader=loader, update_preview=lambda path: None)
+ 		SettingsAware.settings = Fake()
+ 		FileManagerAware.fm = fm
+ 
