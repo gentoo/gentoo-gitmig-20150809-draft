@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.72 2011/06/17 11:12:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.73 2011/07/18 07:09:17 scarabeus Exp $
+
+  18 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org> gpsd-2.96-r1.ebuild:
+  Add sys-devel/bc as test dep. Fixes bug #363203.
 
   17 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/40-usb-serial.rules, -files/99-gpsd-usb.rules, -gpsd-2.32.ebuild,

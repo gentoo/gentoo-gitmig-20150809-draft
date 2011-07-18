@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.96-r1.ebuild,v 1.1 2011/06/17 09:39:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.96-r1.ebuild,v 1.2 2011/07/18 07:09:17 scarabeus Exp $
 
 EAPI=3
 
@@ -24,7 +24,7 @@ for protocol in ${GPSD_PROTOCOLS}; do
 	IUSE_GPSD_PROTOCOLS+=" gpsd_protocols_${protocol}"
 done
 
-IUSE="${IUSE_GPSD_PROTOCOLS} dbus ipv6 ntp qt4 udev"
+IUSE="${IUSE_GPSD_PROTOCOLS} dbus ipv6 ntp qt4 test udev"
 
 # those harddeps are de-facto automagicall
 RDEPEND="
@@ -40,7 +40,8 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	app-text/xmlto
-	=app-text/docbook-xml-dtd-4.1*"
+	=app-text/docbook-xml-dtd-4.1*
+	test? ( sys-devel/bc )"
 
 PATCHES=(
 	"${FILESDIR}/2.95-disable-strip.patch"
