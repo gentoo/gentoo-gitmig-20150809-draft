@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/dmake-4.11-r1.ebuild,v 1.2 2011/06/13 22:08:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/dmake-4.11-r1.ebuild,v 1.3 2011/07/18 23:46:31 scarabeus Exp $
 
 EAPI="2"
 
@@ -28,7 +28,7 @@ src_prepare() {
 		-e "s/gcc/$(tc-getCC) ${CFLAGS}/g" \
 		-e "s|-O\( -o dmake\)|${LDFLAGS}\1|g" \
 		|| die "sed failed"
-	sed -i -e "s|\$(DMAKEROOT)|$(ROOTDIR)/usr/share/dmake/startup|" \
+	sed -i -e "s|\$(DMAKEROOT)|\$(ROOTDIR)/usr/share/dmake/startup|" \
 		unix/startup.h || die "sed failed" #360323
 }
 
