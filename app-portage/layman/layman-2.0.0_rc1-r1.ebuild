@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.0.0_rc1-r1.ebuild,v 1.2 2011/07/17 21:01:42 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.0.0_rc1-r1.ebuild,v 1.3 2011/07/18 10:54:30 idl0r Exp $
 
 EAPI="3"
-PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
+PYTHON_DEPEND="2:2.6"
+RESTRICT_PYTHON_ABIS="2.4 2.5 3.*"
 
 inherit eutils distutils
 
