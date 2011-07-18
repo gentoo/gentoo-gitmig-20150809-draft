@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molscript/molscript-2.1.2-r1.ebuild,v 1.6 2010/11/15 22:44:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molscript/molscript-2.1.2-r1.ebuild,v 1.7 2011/07/18 08:27:40 xarthisius Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="${P}.tar.gz"
 
 LICENSE="glut molscript"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 RESTRICT="fetch"
 IUSE=""
 
