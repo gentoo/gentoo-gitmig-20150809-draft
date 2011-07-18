@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.92 2011/07/17 19:19:44 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.93 2011/07/18 18:20:14 ottxor Exp $
+
+  18 Jul 2011; Christoph Junghans <ottxor@gentoo.org> gromacs-4.5.4-r2.ebuild:
+  fix for external blas/lapack (bug #373559)
 
   17 Jul 2011; Christoph Junghans <ottxor@gentoo.org> gromacs-4.5.4-r2.ebuild:
   corrected libdir (bug #375473)

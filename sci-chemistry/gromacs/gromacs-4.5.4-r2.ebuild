@@ -1,11 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.4-r2.ebuild,v 1.6 2011/07/17 19:19:44 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.4-r2.ebuild,v 1.7 2011/07/18 18:20:14 ottxor Exp $
 
 EAPI="4"
 
 TEST_PV="4.0.4"
 MANUAL_PV="4.5.4"
+
+#to find external blas/lapack
+CMAKE_MIN_VERSION="2.8.5-r2"
 
 inherit bash-completion cmake-utils eutils fortran-2 multilib toolchain-funcs
 
