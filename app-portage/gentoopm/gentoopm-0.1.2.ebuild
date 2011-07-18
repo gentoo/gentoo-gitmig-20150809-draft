@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/gentoopm-0.1.2.ebuild,v 1.1 2011/07/17 22:36:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/gentoopm-0.1.2.ebuild,v 1.2 2011/07/18 12:33:07 mgorny Exp $
 
 EAPI=3
 
@@ -23,7 +23,7 @@ IUSE="doc"
 RDEPEND="|| ( >=sys-apps/portage-2.1.8.3
 		sys-apps/pkgcore
 		>=sys-apps/paludis-0.64.2[python-bindings] )"
-DEPEND="dev-python/epydoc"
+DEPEND="doc? ( dev-python/epydoc )"
 PDEPEND="app-admin/eselect-package-manager"
 
 src_prepare() {

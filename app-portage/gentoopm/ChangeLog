@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoopm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.3 2011/07/17 22:36:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.4 2011/07/18 12:33:07 mgorny Exp $
+
+  18 Jul 2011; Michał Górny <mgorny@gentoo.org> gentoopm-0.1.2.ebuild:
+  DEPEND on epydoc only when building doc. Thanks to Николай
+  Шуйский for reporting.
 
 *gentoopm-0.1.2 (17 Jul 2011)
 
