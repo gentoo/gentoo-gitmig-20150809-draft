@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.2.0-r10.ebuild,v 1.6 2011/07/13 20:03:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.2.0-r10.ebuild,v 1.7 2011/07/18 09:31:50 dilfridge Exp $
 
 EAPI=3
 
@@ -61,6 +61,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen[-nodot] )
+	>=dev-util/cmake-2.8.5-r2
 	dev-util/pkgconfig
 "
 
