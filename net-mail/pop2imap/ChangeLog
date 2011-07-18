@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/pop2imap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pop2imap/ChangeLog,v 1.7 2011/06/11 13:26:28 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop2imap/ChangeLog,v 1.8 2011/07/18 15:22:58 hwoarang Exp $
+
+  18 Jul 2011; Markos Chandras <hwoarang@gentoo.org> pop2imap-1.18.ebuild:
+  keyworded for amd64. Bug #371003
 
   11 Jun 2011; Eray Aslan <eras@gentoo.org> pop2imap-1.18.ebuild:
   EAPI bump.
