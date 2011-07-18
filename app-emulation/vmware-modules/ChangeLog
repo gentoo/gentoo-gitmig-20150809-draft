@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.77 2011/04/15 12:32:45 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.78 2011/07/18 15:28:48 vadimk Exp $
+
+  18 Jul 2011; Vadim Kuznetsov <vadimk@gentoo.org>
+  -vmware-modules-238.3-r8.ebuild:
+  bug 374599
 
 *vmware-modules-238.4 (15 Apr 2011)
 
