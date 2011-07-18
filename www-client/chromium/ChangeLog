@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.398 2011/07/17 23:06:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.399 2011/07/18 17:12:11 phajdan.jr Exp $
+
+  18 Jul 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-12.0.742.112.ebuild, chromium-13.0.782.41.ebuild,
+  chromium-13.0.782.41-r1.ebuild, chromium-14.0.803.0.ebuild,
+  chromium-14.0.814.0.ebuild, chromium-9999-r1.ebuild:
+  Add sys-devel/bison to DEPEND, bug #375451 by Albert W. Hopkins.
 
 *chromium-13.0.782.41-r1 (17 Jul 2011)
 
