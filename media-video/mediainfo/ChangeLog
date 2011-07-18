@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mediainfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/ChangeLog,v 1.23 2011/07/17 16:14:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/ChangeLog,v 1.24 2011/07/18 21:26:02 radhermit Exp $
+
+  18 Jul 2011; Tim Harder <radhermit@gentoo.org> mediainfo-0.7.45.ebuild,
+  mediainfo-0.7.46.ebuild, mediainfo-0.7.47.ebuild:
+  Drop debug use flag.
 
   17 Jul 2011; Pacho Ramos <pacho@gentoo.org> mediainfo-0.7.41.ebuild,
   mediainfo-0.7.45.ebuild, mediainfo-0.7.46.ebuild, mediainfo-0.7.47.ebuild,
