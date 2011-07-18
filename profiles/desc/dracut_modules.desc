@@ -1,6 +1,6 @@
-# Copyright 2011-2011 Gentoo Foundation.
+# Copyright 1999-2011 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/dracut_modules.desc,v 1.3 2011/03/28 21:24:56 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/dracut_modules.desc,v 1.4 2011/07/18 17:18:50 aidecoe Exp $
 
 # This file contains descriptions of DRACUT_MODULES USE_EXPAND flags.
 
@@ -8,6 +8,7 @@ biosdevname - Name devices with names returned by BIOS
 btrfs - Scan for Btrfs on block devices
 caps - Load kernel modules and drop this privilege for real init
 crypt - Decrypt devices encrypted with cryptsetup/LUKS
+crypt-gpg - Support for GPG-encrypted keys for crypt module
 dmraid - Support dmraid devices, also known as ATA-RAID, or Fake RAID
 dmsquash-live - Module which might be used for Live CDs
 gensplash - Framebuffer splash (media-gfx/splashutils)
