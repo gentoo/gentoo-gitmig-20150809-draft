@@ -1,6 +1,17 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.38 2011/07/14 20:55:30 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.39 2011/07/18 14:22:33 scarabeus Exp $
+
+  18 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-3.4.1.ebuild:
+  Non-maintainer commit. Remove double environment calls, cleanup global
+  variables by unsetting them where possible, add missing dies during install,
+  run eautoreconf and econf instead of autogen.sh, sort the deps
+  alphabetically, add base eclass and PATCHES array support (and epatch_user),
+  run emake instead of make. Mostly fixed all issues i had during the time i
+  compiled it. Still good idea would be to migrate most parts of this ebuild to
+  elbits. PS: debuging something in package that builds for 3 hours is major
+  pita.
 
   14 Jul 2011; Andreas Proschofsky <suka@gentoo.org> libreoffice-3.4.1.ebuild:
   Extensions now build fine again without java
