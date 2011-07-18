@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.112 2011/07/18 09:17:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.113 2011/07/18 10:27:35 graaff Exp $
+
+  18 Jul 2011; Hans de Graaff <graaff@gentoo.org> gtk-gnutella-0.97.ebuild:
+  Touch the nm file so that it has a later date than the stripped version to
+  avoid a warning at startup.
 
 *gtk-gnutella-0.97 (18 Jul 2011)
 
