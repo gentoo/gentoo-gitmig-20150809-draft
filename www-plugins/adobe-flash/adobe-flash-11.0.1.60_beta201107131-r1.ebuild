@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.0.1.60_beta201107131.ebuild,v 1.3 2011/07/17 02:41:35 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.0.1.60_beta201107131-r1.ebuild,v 1.1 2011/07/18 18:00:00 lack Exp $
 
 EAPI=4
 inherit nsplugins multilib toolchain-funcs versionator
@@ -157,6 +157,7 @@ src_install() {
 		insinto usr/share/applications
 		sed -i usr/share/applications/flash-player-properties.desktop \
 			-e "s:^Exec=:Exec=/${BASE}/bin/:" || die "sed of .desktop file failed"
+		doins usr/share/applications/flash-player-properties.desktop
 	fi
 
 	if [[ $need_lahf_wrapper ]]; then
