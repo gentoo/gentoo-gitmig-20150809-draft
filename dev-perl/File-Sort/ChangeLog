@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/File-Sort
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Sort/ChangeLog,v 1.1 2011/07/18 06:06:21 weaver Exp $
+
+*File-Sort-1.01 (18 Jul 2011)
+
+  18 Jul 2011; Andrey Kislyuk <weaver@gentoo.org> +File-Sort-1.01.ebuild,
+  +metadata.xml:
+  New package, ebuild written by me, dependency of sci-biology/bioperl-run
+
