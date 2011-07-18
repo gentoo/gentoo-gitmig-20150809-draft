@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.88 2011/07/17 14:37:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.89 2011/07/18 04:23:38 radhermit Exp $
+
+  18 Jul 2011; Tim Harder <radhermit@gentoo.org> libetpan-1.1.ebuild:
+  Update soname warning.
 
   17 Jul 2011; Markus Meier <maekke@gentoo.org> libetpan-1.0.ebuild:
   x86 stable, bug #373687
