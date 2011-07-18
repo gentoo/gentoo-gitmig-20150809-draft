@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/collectd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.21 2011/04/24 21:16:04 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.22 2011/07/18 10:13:02 dilfridge Exp $
+
+  18 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  collectd-5.0.0-r1.ebuild, +files/collectd-5.0.0-yajl2.patch, metadata.xml:
+  Add upstream compatibility patch for yajl-v2, bug 374411; add Johan
+  Bergström as proxied maintainer
 
   24 Apr 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   collectd-4.10.3-r1.ebuild, +files/collectd-4.10.3-werror.patch,

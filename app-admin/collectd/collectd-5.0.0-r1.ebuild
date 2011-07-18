@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.0.0-r1.ebuild,v 1.2 2011/04/24 21:16:04 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.0.0-r1.ebuild,v 1.3 2011/07/18 10:13:02 dilfridge Exp $
 
 EAPI=4
 
@@ -104,6 +104,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.10.1"-{libperl,libiptc,noowniptc}.patch
 	"${FILESDIR}/${PN}-4.10.2"-{libocci,libnotify-0.7,nohal}.patch
 	"${FILESDIR}/${PN}-4.10.3"-{lt,werror}.patch
+	"${FILESDIR}/${PN}-5.0.0"-yajl2.patch
 	)
 
 # @FUNCTION: collectd_plugin_kernel_linux
