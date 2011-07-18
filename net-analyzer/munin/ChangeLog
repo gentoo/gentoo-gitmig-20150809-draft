@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.54 2011/06/19 16:55:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.55 2011/07/18 21:31:03 darkside Exp $
+
+  18 Jul 2011; Jeremy Olexa <darkside@gentoo.org> -munin-1.4.5.ebuild,
+  -munin-1.4.5-r1.ebuild, munin-1.4.5-r3.ebuild:
+  Mark ppc, bug 367721. Remove older versions
 
   19 Jun 2011; Raúl Porcel <armin76@gentoo.org> munin-1.4.5-r3.ebuild:
   sparc stable wrt #367721
