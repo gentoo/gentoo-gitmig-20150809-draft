@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/qt-creator
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.84 2011/07/13 14:51:51 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.85 2011/07/18 11:22:02 hwoarang Exp $
+
+*qt-creator-2.3.0_beta (18 Jul 2011)
+
+  18 Jul 2011; Markos Chandras <hwoarang@gentoo.org>
+  +qt-creator-2.3.0_beta.ebuild:
+  Bump to 2.3.0 beta
 
   13 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> qt-creator-2.1.0.ebuild:
   ppc64 stable wrt #354033
