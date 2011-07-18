@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmediainfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/ChangeLog,v 1.19 2011/07/17 16:00:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/ChangeLog,v 1.20 2011/07/18 21:24:15 radhermit Exp $
+
+  18 Jul 2011; Tim Harder <radhermit@gentoo.org> libmediainfo-0.7.45.ebuild,
+  libmediainfo-0.7.46.ebuild, libmediainfo-0.7.47.ebuild:
+  Drop debug use flag.
 
   17 Jul 2011; Pacho Ramos <pacho@gentoo.org> libmediainfo-0.7.41.ebuild,
   libmediainfo-0.7.45.ebuild, libmediainfo-0.7.46.ebuild,

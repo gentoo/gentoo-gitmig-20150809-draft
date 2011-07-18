@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.46.ebuild,v 1.2 2011/07/17 16:00:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.46.ebuild,v 1.3 2011/07/18 21:24:15 radhermit Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/mediainfo/source/${PN}/${PV}/${PN}_${PV}.tar.bz2"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="curl debug doc mms static-libs"
+IUSE="curl doc mms static-libs"
 
 RDEPEND="sys-libs/zlib
 	>=media-libs/libzen-0.4.20[static-libs=]
@@ -41,7 +41,6 @@ src_configure() {
 	econf \
 		--enable-shared \
 		$(use_with curl libcurl) \
-		$(use_enable debug) \
 		$(use_with mms libmms) \
 		$(use_enable static-libs static) \
 		$(use_enable static-libs staticlibs)
