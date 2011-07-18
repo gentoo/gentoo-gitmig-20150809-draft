@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.378 2011/07/17 20:59:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.379 2011/07/18 11:52:57 pacho Exp $
+
+  18 Jul 2011; Pacho Ramos <pacho@gentoo.org> nautilus-2.32.2.1-r1.ebuild:
+  Raise glib version in RDEPEND, bug #375477 by gentoo at jesshaas dot com.
 
   17 Jul 2011; Markus Meier <maekke@gentoo.org> nautilus-2.32.2.1-r1.ebuild:
   arm stable, bug #369909
