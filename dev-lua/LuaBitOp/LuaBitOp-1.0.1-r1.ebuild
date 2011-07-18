@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/LuaBitOp/LuaBitOp-1.0.1-r1.ebuild,v 1.1 2011/04/07 15:07:00 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/LuaBitOp/LuaBitOp-1.0.1-r1.ebuild,v 1.2 2011/07/18 15:21:28 hwoarang Exp $
 
 EAPI="4"
 inherit multilib
@@ -11,7 +11,7 @@ SRC_URI="http://bitop.luajit.org/download/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="=dev-lang/lua-5.1*"
