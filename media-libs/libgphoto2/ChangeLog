@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.192 2011/07/13 14:27:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.193 2011/07/18 18:52:31 pacho Exp $
+
+*libgphoto2-2.4.11-r1 (18 Jul 2011)
+
+  18 Jul 2011; Pacho Ramos <pacho@gentoo.org> +libgphoto2-2.4.11-r1.ebuild,
+  +files/libgphoto2-2.4.11-fix-automagic.patch:
+  Fix automagic dependencies on jpeg and gd, bug #374371 by Enlik. Thanks also
+  to marcusmeissner.
 
   13 Jul 2011; Pacho Ramos <pacho@gentoo.org> libgphoto2-2.4.11.ebuild:
   Fix udev location rules, bug #374989 by Jonathan Callen.
