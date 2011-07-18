@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/libofx-0.9.2.ebuild,v 1.1 2011/03/01 18:20:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/libofx-0.9.2.ebuild,v 1.2 2011/07/18 15:06:45 dilfridge Exp $
 
 EAPI=4
 
@@ -11,13 +11,14 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="static-libs"
+IUSE="static-libs test"
 
 RDEPEND=">=app-text/opensp-1.5
 	dev-cpp/libxmlpp:0
 	>=net-misc/curl-7.9.7"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	test? ( app-crypt/gnupg )"
 
 src_prepare() {
 	# Be sure DTD gets installed in correct path after redefining docdir in install
