@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gsasl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.43 2011/06/24 15:20:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gsasl/ChangeLog,v 1.44 2011/07/19 19:46:22 maekke Exp $
+
+  19 Jul 2011; Markus Meier <maekke@gentoo.org> gsasl-1.6.1.ebuild:
+  x86 stable, bug #364523
 
   24 Jun 2011; Raúl Porcel <armin76@gentoo.org> gsasl-0.2.4.ebuild,
   gsasl-0.2.29.ebuild, gsasl-1.1.ebuild, gsasl-1.4.1.ebuild,
