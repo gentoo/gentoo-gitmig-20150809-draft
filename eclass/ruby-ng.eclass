@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.34 2011/07/16 09:50:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.35 2011/07/19 05:48:09 graaff Exp $
 #
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -287,6 +287,13 @@ _ruby_invoke_environment() {
 	# we allow the star glob to just expand to whatever directory it's
 	# called.
 	if [[ ${sub_S} = *"*"* ]]; then
+		case ${EAPI} in
+			2|3)
+				#The old method of setting S depends on undefined package
+				# manager behaviour, so encourage upgrading to EAPI=4.
+				eqawarn "Using * expansion of S is deprecated. Use EAPI and RUBY_S instead."
+				;;
+		esac
 		pushd "${WORKDIR}"/all &>/dev/null
 		sub_S=$(eval ls -d ${sub_S} 2>/dev/null)
 		popd &>/dev/null
