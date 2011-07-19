@@ -34,6 +34,8 @@
     of the internal Lisp implementations</flag>
   <flag name='toolkit-scroll-bars'>Use the selected toolkit's scrollbars in
     preference to Emacs' own scrollbars</flag>
-  <flag name='wide-int'>Prefer wide Emacs integers (typically 62-bit)</flag>
+  <flag name='wide-int'>Prefer wide Emacs integers (typically 62-bit).
+    This option has an effect only on architectures where "long" and
+    "long long" types have different size.</flag>
 </use>
 </pkgmetadata>

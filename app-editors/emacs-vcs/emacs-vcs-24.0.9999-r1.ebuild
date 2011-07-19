@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999-r1.ebuild,v 1.10 2011/07/01 18:39:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999-r1.ebuild,v 1.11 2011/07/19 07:28:32 ulm Exp $
 
 EAPI=4
 
@@ -188,7 +188,7 @@ src_configure() {
 			fi
 		elif use Xaw3d; then
 			einfo "Configuring to build with Xaw3d (Athena/Lucid) toolkit"
-			myconf="${myconf} --with-x-toolkit=athena"
+			myconf="${myconf} --with-x-toolkit=lucid"
 		elif use motif; then
 			einfo "Configuring to build with Motif toolkit"
 			myconf="${myconf} --with-x-toolkit=motif"
