@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/require_relative
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/require_relative/ChangeLog,v 1.1 2011/07/19 06:29:07 graaff Exp $
+
+*require_relative-1.0.2 (19 Jul 2011)
+
+  19 Jul 2011; Hans de Graaff <graaff@gentoo.org>
+  +require_relative-1.0.2.ebuild, +metadata.xml:
+  Initial import. Required for new versions of dev-ruby/linecache.
+
