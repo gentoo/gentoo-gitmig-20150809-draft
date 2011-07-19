@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/libassa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libassa/ChangeLog,v 1.12 2011/03/20 19:17:39 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libassa/ChangeLog,v 1.13 2011/07/19 20:33:31 angelos Exp $
+
+  19 Jul 2011; Christoph Mende <angelos@gentoo.org> libassa-3.5.0.ebuild,
+  +files/libassa-3.5.0-link-dynamically.patch:
+  Add USE=doc to control docs installation and fix insecure rpaths by linking
+  dynamically
 
   20 Mar 2011; Christoph Mende <angelos@gentoo.org> libassa-3.5.0.ebuild:
   Made building of static libraries optional and removed .la files
