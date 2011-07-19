@@ -3,8 +3,7 @@
 <pkgmetadata>
   <herd>no-herd</herd>
   <maintainer>
-    <email>mrpouet@gentoo.org</email>
-    <name>Romain Perier</name>
+    <email>maintainer-needed@gentoo.org</email>
   </maintainer>
   <use>
     <flag name='epiphany'>Install epiphany extensions</flag>
