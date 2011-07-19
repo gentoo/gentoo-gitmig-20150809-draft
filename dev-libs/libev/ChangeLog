@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.34 2011/07/13 19:54:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.35 2011/07/19 19:54:03 maekke Exp $
+
+  19 Jul 2011; Markus Meier <maekke@gentoo.org> libev-4.04.ebuild:
+  amd64/x86 stable, bug #373957
 
   13 Jul 2011; Markus Meier <maekke@gentoo.org> libev-4.04.ebuild:
   arm stable, bug #373957
