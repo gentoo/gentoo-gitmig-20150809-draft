@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/mosflm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/ChangeLog,v 1.12 2011/06/28 20:07:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/ChangeLog,v 1.13 2011/07/19 19:45:36 maekke Exp $
+
+  19 Jul 2011; Markus Meier <maekke@gentoo.org> mosflm-7.0.6-r2.ebuild:
+  x86 stable, bug #352112
 
   28 Jun 2011; Brent Baude <ranger@gentoo.org> mosflm-7.0.6-r2.ebuild:
   Marking mosflm-7.0.6-r2 ppc for bug 352112
