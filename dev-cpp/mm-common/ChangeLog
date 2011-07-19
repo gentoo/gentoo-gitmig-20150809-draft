@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/mm-common
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/mm-common/ChangeLog,v 1.9 2011/07/17 21:29:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/mm-common/ChangeLog,v 1.10 2011/07/19 17:14:35 pacho Exp $
+
+  19 Jul 2011; Pacho Ramos <pacho@gentoo.org> -mm-common-0.8.ebuild,
+  -mm-common-0.9.4.ebuild, mm-common-0.9.5.ebuild:
+  Clean dependencies (bug #337706 by David King), remove old.
 
   17 Jul 2011; Markus Meier <maekke@gentoo.org> mm-common-0.9.5.ebuild:
   arm stable, bug #372353
