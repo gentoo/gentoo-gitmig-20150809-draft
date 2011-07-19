@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/xf86-video-nouveau-0.0.16_pre20110711.ebuild,v 1.1 2011/07/15 20:25:19 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-nouveau/xf86-video-nouveau-0.0.16_pre20110711.ebuild,v 1.2 2011/07/19 15:59:14 chithanh Exp $
 
 EAPI=4
 XORG_EAUTORECONF="yes"
+XORG_DRI="always"
 inherit linux-info xorg-2
 
 DESCRIPTION="Accelerated Open Source driver for nVidia cards"
