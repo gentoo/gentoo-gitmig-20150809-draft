@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/speex
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.95 2010/08/24 02:54:21 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.96 2011/07/19 17:47:18 ssuominen Exp $
+
+  19 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> speex-1.2_rc1.ebuild:
+  Missing dev-util/pkgconfig DEPEND wrt #373617 by Malte Starostik
 
   24 Aug 2010; Samuli Suominen <ssuominen@gentoo.org> speex-1.2_rc1.ebuild:
   Use append-lfs-flags. USE static-libs and punt .la files.
