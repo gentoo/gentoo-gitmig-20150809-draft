@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/grfcodec/grfcodec-5.1.1.ebuild,v 1.3 2011/05/06 17:08:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/grfcodec/grfcodec-5.1.1.ebuild,v 1.4 2011/07/19 08:07:27 hwoarang Exp $
 
 EAPI=3
 
@@ -23,7 +23,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE=""
 
 if [ "${PV%9999}" != "${PV}" ] ; then

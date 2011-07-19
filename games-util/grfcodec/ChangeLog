@@ -1,6 +1,9 @@
 # ChangeLog for games-util/grfcodec
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/grfcodec/ChangeLog,v 1.7 2011/05/05 00:01:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/grfcodec/ChangeLog,v 1.8 2011/07/19 08:07:27 hwoarang Exp $
+
+  19 Jul 2011; Markos Chandras <hwoarang@gentoo.org> grfcodec-5.1.1.ebuild:
+  Stable on amd64 wrt bug #375387
 
   05 May 2011; Michael Sterrett <mr_bones_@gentoo.org>
   grfcodec-5.1.1.ebuild:
