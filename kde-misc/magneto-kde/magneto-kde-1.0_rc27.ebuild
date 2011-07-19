@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/magneto-kde/magneto-kde-1.0_rc27.ebuild,v 1.1 2011/07/19 13:04:59 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/magneto-kde/magneto-kde-1.0_rc27.ebuild,v 1.2 2011/07/19 13:15:29 lxnay Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 inherit eutils python multilib
 
-DESCRIPTION="Official Sabayon Linux Entropy Notification Applet (KDE/Qt version)"
+DESCRIPTION="Entropy Package Manager notification applet KDE frontend"
 HOMEPAGE="http://www.sabayon.org"
 LICENSE="GPL-2"
 
