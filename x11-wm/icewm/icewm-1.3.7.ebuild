@@ -1,24 +1,19 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.34.ebuild,v 1.1 2008/01/24 20:30:40 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.3.7.ebuild,v 1.1 2011/07/19 13:17:01 jer Exp $
 
-inherit eutils
+EAPI="4"
 
 DESCRIPTION="Ice Window Manager with Themes"
-
 HOMEPAGE="http://www.icewm.org/"
+LICENSE="GPL-2"
+SRC_URI="mirror://sourceforge/${PN}/${P/_}.tar.gz"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+IUSE="debug esd gnome minimal nls truetype uclibc xinerama"
 
 #fix for icewm preversion package names
 S=${WORKDIR}/${P/_}
-
-SRC_URI="mirror://sourceforge/${PN}/${P/_}.tar.gz"
-
-LICENSE="GPL-2"
-SLOT="0"
-
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-
-IUSE="esd imlib nls spell truetype xinerama minimal debug uclibc"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXrandr
@@ -30,7 +25,7 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libICE
 	xinerama? ( x11-libs/libXinerama )
 	esd? ( media-sound/esound )
-	imlib? ( >=media-libs/imlib-1.9.10-r1 )
+	gnome? ( gnome-base/gnome-desktop:2 )
 	nls? ( sys-devel/gettext )
 	truetype? ( >=media-libs/freetype-2.0.9 )
 	media-libs/giflib"
@@ -49,21 +44,18 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	cd "${S}/src"
-
 	use uclibc && epatch "${FILESDIR}/icewm-uclibc.patch"
 
 	echo "#!/bin/sh" > "$T/icewm"
 	echo "/usr/bin/icewm-session" >> "$T/icewm"
 }
 
-src_compile() {
-
+src_configure() {
 	if use truetype
 	then
-		myconf="${myconf} --enable-gradients --enable-shape --enable-movesize-fx --enable-shaped-decorations"
+		myconf="${myconf} --enable-gradients --enable-shape --enable-shaped-decorations"
 	else
 		myconf="${myconf} --disable-xfreetype --enable-corefonts
 			$(use_enable minimal lite)"
@@ -73,25 +65,22 @@ src_compile() {
 		--with-libdir=/usr/share/icewm
 		--with-cfgdir=/etc/icewm
 		--with-docdir=/usr/share/doc/${PF}/html
-		$(use_with esd esd-config /usr/bin/esd-config)
-		$(use_enable nls)
+		$(use_enable debug)
+		$(use_enable gnome menus-gnome2)
 		$(use_enable nls i18n)
-		$(use_with imlib)
-		$(use_enable spell GtkSpell)
+		$(use_enable nls)
 		$(use_enable x86 x86-asm)
 		$(use_enable xinerama)
-		$(use_enable debug)"
+		$(use_with esd esd-config /usr/bin/esd-config)"
 
-	CXXFLAGS="${CXXFLAGS}" econf ${myconf} || die "configure failed"
+	CXXFLAGS="${CXXFLAGS}" econf ${myconf}
 
 	sed -i "s:/icewm-\$(VERSION)::" src/Makefile || die "patch failed"
 	sed -i "s:ungif:gif:" src/Makefile || die "libungif fix failed"
-
-	emake || die "emake failed"
 }
 
 src_install(){
-	emake DESTDIR="${D}" install || die "make install failed"
+	default
 
 	dodoc AUTHORS BUGS CHANGES PLATFORMS README* TODO VERSION
 	dohtml -a html,sgml doc/*
@@ -101,4 +90,12 @@ src_install(){
 
 	insinto /usr/share/xsessions
 	doins "${FILESDIR}/IceWM.desktop"
+}
+
+pkg_postinst() {
+	if use gnome; then
+		elog "You have enabled gnome USE flag which provides icewm-menu-gnome2 ."
+		elog "It is used internally and generates IceWM program menus from"
+		elog "FreeDesktop .desktop files"
+	fi
 }
