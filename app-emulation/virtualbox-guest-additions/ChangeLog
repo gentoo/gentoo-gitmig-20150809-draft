@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox-guest-additions
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.72 2011/07/17 21:10:03 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.73 2011/07/19 22:28:45 polynomial-c Exp $
+
+*virtualbox-guest-additions-4.1.0 (19 Jul 2011)
+
+  19 Jul 2011; Lars Wendler <polynomial-c@gentoo.org>
+  +virtualbox-guest-additions-4.1.0.ebuild,
+  +files/vboxguest-4.1.0-log-use-c99.patch:
+  Added 4.1 version branch
 
 *virtualbox-guest-additions-4.0.12 (17 Jul 2011)
 
