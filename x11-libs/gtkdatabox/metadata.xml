@@ -3,8 +3,7 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>mrpouet@gentoo.org</email>
-		<name>Romain Perier</name>
+		<email>maintainer-needed@gentoo.org</email>
 		<description>Gtk+ Widgets for live display fluctuating numerical data</description>
 	</maintainer>
 	<use>

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkdatabox
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkdatabox/ChangeLog,v 1.4 2010/12/16 18:42:07 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkdatabox/ChangeLog,v 1.5 2011/07/19 17:28:51 pacho Exp $
+
+  19 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop to maintainer-needed due retirement, bug #266794
 
   16 Dec 2010; Pacho Ramos <pacho@gentoo.org> gtkdatabox-0.9.1.1.ebuild:
   Remove -D.*DISABLE_DEPRECATED cflags (bug #323923 by Konstantin Likhomanov
