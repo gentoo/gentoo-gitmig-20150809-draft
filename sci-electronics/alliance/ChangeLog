@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/alliance
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/ChangeLog,v 1.14 2010/10/15 14:50:42 tomjbe Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/alliance/ChangeLog,v 1.15 2011/07/19 12:17:34 tomjbe Exp $
+
+  19 Jul 2011; Thomas Beierlein <tomjbe@gentoo.org>
+  alliance-5.0.20070718.ebuild:
+  Fix missing dependency (bug #369101). Thanks for reporting Piotr Szymaniak.
 
   15 Oct 2010; Thomas Beierlein <tomjbe@gentoo.org>
   alliance-5.0.20070718.ebuild, +files/alliance-5.0.20070718-overun.patch,
