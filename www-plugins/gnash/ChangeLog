@@ -1,6 +1,9 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.64 2011/07/02 21:09:02 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.65 2011/07/19 17:31:38 pacho Exp $
+
+  19 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #266794
 
   02 Jul 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   gnash-0.8.9.ebuild,
