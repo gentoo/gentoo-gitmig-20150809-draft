@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/inspircd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.38 2011/06/20 16:55:57 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.39 2011/07/19 11:57:50 c1pher Exp $
+
+*inspircd-2.0.5 (19 Jul 2011)
+
+  19 Jul 2011; Dane Smith <c1pher@gentoo.org> +inspircd-2.0.5.ebuild:
+  Version bump. Thanks Chema Alonso.
 
 *inspircd-2.0.4 (20 Jun 2011)
 
