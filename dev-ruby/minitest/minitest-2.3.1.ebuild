@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/minitest-2.3.1.ebuild,v 1.2 2011/07/15 17:33:58 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/minitest-2.3.1.ebuild,v 1.3 2011/07/19 08:25:36 graaff Exp $
 
 EAPI=2
 # jruby → tests fail, reported upstream
@@ -29,10 +29,13 @@ ruby_add_bdepend "
 		dev-ruby/hoe
 	)"
 
-each_ruby_test() {
+each_ruby_prepare() {
 	case ${RUBY} in
 		*jruby)
-				eqawarn "Skipping tests on JRuby, bug 321055."
+			# Remove failing tests. Upstream claims that these are all
+			# bugs in jruby. By removing the failing tests we can at
+			# least run the remainder. See bug 321055 for details.
+			rm -f test/test_minitest_unit.rb || die
 				;;
 		*)
 				each_fakegem_test
