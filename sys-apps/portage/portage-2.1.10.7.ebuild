@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.10.4.ebuild,v 1.1 2011/07/03 17:28:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.10.7.ebuild,v 1.1 2011/07/19 22:11:44 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -14,12 +14,14 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 SLOT="0"
 IUSE="build doc epydoc +ipc +less linguas_pl python2 python3 selinux"
 
+# Import of the io module in python-2.6 raises ImportError for the
+# thread module if threading is disabled.
 python_dep="python3? ( =dev-lang/python-3* )
 	!python2? ( !python3? (
-		build? ( || ( dev-lang/python:2.7 dev-lang/python:2.6 ) )
-		!build? ( || ( dev-lang/python:2.7 dev-lang/python:2.6 >=dev-lang/python-3 ) )
+		build? ( || ( dev-lang/python:2.7 dev-lang/python:2.6[threads] ) )
+		!build? ( || ( dev-lang/python:2.7 dev-lang/python:2.6[threads] >=dev-lang/python-3 ) )
 	) )
-	python2? ( !python3? ( || ( dev-lang/python:2.7 dev-lang/python:2.6 ) ) )"
+	python2? ( !python3? ( || ( dev-lang/python:2.7 dev-lang/python:2.6[threads] ) ) )"
 
 # The pysqlite blocker is for bug #282760.
 DEPEND="${python_dep}
@@ -175,8 +177,7 @@ src_compile() {
 src_test() {
 	# make files executable, in case they were created by patch
 	find bin -type f | xargs chmod +x
-	PYTHONPATH=${S}/pym:${PYTHONPATH:+:}${PYTHONPATH} \
-		./pym/portage/tests/runTests || die "test(s) failed"
+	./pym/portage/tests/runTests || die "test(s) failed"
 }
 
 src_install() {
@@ -241,6 +242,18 @@ src_install() {
 		fi
 	done
 
+	# We install some minimal tests for use as a preinst sanity check.
+	# These tests must be able to run without a full source tree and
+	# without relying on a previous portage instance being installed.
+	cd "$S" || die "cd failed"
+	exeinto $portage_base/pym/portage/tests || die
+	doexe pym/portage/tests/runTests || die
+	insinto $portage_base/pym/portage/tests || die
+	doins pym/portage/tests/*.py || die
+	insinto $portage_base/pym/portage/tests/lint || die
+	doins pym/portage/tests/lint/*.py || die
+	doins pym/portage/tests/lint/__test__ || die
+
 	# Symlinks to directories cause up/downgrade issues and the use of these
 	# modules outside of portage is probably negligible.
 	for x in "${D}${portage_base}/pym/"{cache,elog_modules} ; do
@@ -284,6 +297,15 @@ src_install() {
 }
 
 pkg_preinst() {
+	if [[ $ROOT == / ]] ; then
+		# Run some minimal tests as a sanity check.
+		local test_runner=$(find "$D" -name runTests)
+		if [[ -n $test_runner && -x $test_runner ]] ; then
+			einfo "Running preinst sanity tests..."
+			"$test_runner" || die "preinst sanity tests failed"
+		fi
+	fi
+
 	if ! use build && ! has_version dev-python/pycrypto && \
 		! has_version '>=dev-lang/python-2.6[ssl]' ; then
 		ewarn "If you are an ebuild developer and you plan to commit ebuilds"

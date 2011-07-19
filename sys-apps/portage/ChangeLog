@@ -1,6 +1,27 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.852 2011/07/14 22:53:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.853 2011/07/19 22:11:44 zmedico Exp $
+
+*portage-2.2.0_alpha46 (19 Jul 2011)
+
+  19 Jul 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha46.ebuild:
+  2.2.0_alpha46 version bump. This includes all of the fixes in
+  portage-2.1.10.7, and also fixes bug #289180 (preserve-libs preserves
+  redundant libraries if soname has multiple providers). Bug #210077 tracks
+  all bugs fixed since portage-2.1.x.
+
+*portage-2.1.10.7 (19 Jul 2011)
+
+  19 Jul 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.7.ebuild:
+  2.1.10.7 version bump. This fixes bug #375331 (only allow one fetch thread
+  at a time with parallel-fetch and --jobs=1) and bug #375571 (fix emerge
+  --noreplace bugs by making --noreplace identical to --selective).
+  Bug #373933 tracks all bugs fixed since portage-2.1.10.3.
+
+  19 Jul 2011; Zac Medico <zmedico@gentoo.org> -portage-2.1.9.50.ebuild,
+  -portage-2.1.10.4.ebuild, -portage-2.2.0_alpha41.ebuild,
+  -portage-2.2.0_alpha43.ebuild:
+  Remove old versions.
 
   14 Jul 2011; Jeroen Roovers <jer@gentoo.org> portage-2.1.10.3.ebuild:
   Stable for HPPA (bug #373523).
