@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12913 2011/07/19 21:55:09 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12914 2011/07/19 21:57:37 polynomial-c Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,7 +31,7 @@
 
 #--- END OF EXAMPLES ---
 
-# Lars Wendler <polynomial-c@gentoo.org> (18 Jul 2011)
+# Lars Wendler <polynomial-c@gentoo.org> (19 Jul 2011)
 # Masked until 4.0.12 release went stable (see bug #371935)
 =app-emulation/virtualbox-4.1*
 =app-emulation/virtualbox-additions-4.1*
