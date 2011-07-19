@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-Format-Builder
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Builder/ChangeLog,v 1.6 2011/04/24 15:44:27 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Builder/ChangeLog,v 1.7 2011/07/19 19:50:38 maekke Exp $
+
+  19 Jul 2011; Markus Meier <maekke@gentoo.org>
+  DateTime-Format-Builder-0.80.ebuild:
+  amd64/x86 stable, bug #374479
 
   24 Apr 2011; Fabian Groffen <grobian@gentoo.org>
   DateTime-Format-Builder-0.80.ebuild:

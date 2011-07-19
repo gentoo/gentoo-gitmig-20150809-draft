@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-Format-Strptime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Strptime/ChangeLog,v 1.16 2011/04/24 15:43:41 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Strptime/ChangeLog,v 1.17 2011/07/19 19:50:02 maekke Exp $
+
+  19 Jul 2011; Markus Meier <maekke@gentoo.org>
+  DateTime-Format-Strptime-1.500.0.ebuild:
+  amd64/x86 stable, bug #374479
 
   24 Apr 2011; Fabian Groffen <grobian@gentoo.org>
   DateTime-Format-Strptime-1.500.0.ebuild:
