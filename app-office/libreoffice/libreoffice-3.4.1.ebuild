@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.1.ebuild,v 1.7 2011/07/18 14:22:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.1.ebuild,v 1.8 2011/07/19 09:28:39 scarabeus Exp $
 
 EAPI=3
 
@@ -284,7 +284,7 @@ src_unpack() {
 				tmplfile="${DISTDIR}/$(basename ${template})"
 				tmplname="$(echo "${template}" | \
 					cut -f 2- -s -d - | cut -f 1 -d _)"
-				if [[ -f ${tmplname} && ! -f "${dest}/${tmplname}.oxt" ]]; then
+				if [[ -f ${tmplfile} && ! -f "${dest}/${tmplname}.oxt" ]]; then
 					cp -v "${tmplfile}" "${dest}/${tmplname}.oxt" || die
 				fi
 			fi
