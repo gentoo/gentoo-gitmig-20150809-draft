@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/equo/equo-1.0_rc27.ebuild,v 1.1 2011/07/19 12:26:46 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/equo/equo-1.0_rc27.ebuild,v 1.2 2011/07/19 12:38:04 lxnay Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 inherit eutils multilib python bash-completion
 
-DESCRIPTION="Official Sabayon Linux Package Manager Client"
+DESCRIPTION="Entropy Package Manager text-based client"
 HOMEPAGE="http://www.sabayon.org"
 LICENSE="GPL-2"
 
