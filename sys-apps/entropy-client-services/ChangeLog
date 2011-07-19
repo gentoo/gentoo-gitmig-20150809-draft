@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/entropy-client-services
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy-client-services/ChangeLog,v 1.1 2011/07/19 12:32:50 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy-client-services/ChangeLog,v 1.2 2011/07/19 12:39:29 lxnay Exp $
+
+  19 Jul 2011; Fabio Erculiani <lxnay@gentoo.org>
+  entropy-client-services-1.0_rc27.ebuild:
+  update DESCRIPTION
 
 *entropy-client-services-1.0_rc27 (19 Jul 2011)
 
