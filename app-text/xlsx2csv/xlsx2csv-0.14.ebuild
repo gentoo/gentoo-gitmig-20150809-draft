@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xlsx2csv/xlsx2csv-0.12.ebuild,v 1.1 2011/02/06 03:14:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xlsx2csv/xlsx2csv-0.14.ebuild,v 1.1 2011/07/19 19:12:20 radhermit Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ DESCRIPTION="Convert MS Office xlsx files to CSV"
 HOMEPAGE="https://github.com/dilshod/xlsx2csv"
 SRC_URI="https://github.com/downloads/dilshod/${PN}/${P}.zip"
 
-LICENSE="as-is"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
@@ -23,7 +23,11 @@ src_test() {
 	local failure=0
 	for i in test/*.xlsx ; do
 		echo -n "test: $i "
-		./xlsx2csv.py "$i" | diff -u "test/$(basename "$i" .xlsx).csv" - >/dev/null
+		if [[ $(basename $i) == "sheets.xlsx" ]] ; then
+			./xlsx2csv.py -s 0 "$i" | diff -u "test/$(basename "$i" .xlsx).csv" - >/dev/null
+		else
+			./xlsx2csv.py -i "$i" | diff -u "test/$(basename "$i" .xlsx).csv" - >/dev/null
+		fi
 		if [[ $? -ne 0 ]] ; then
 			echo "FAILED"
 			failure=1
