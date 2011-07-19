@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/syobon/syobon-1.0.1.ebuild,v 1.3 2011/07/16 17:37:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/syobon/syobon-1.0.1.ebuild,v 1.4 2011/07/19 19:45:49 maekke Exp $
 
 EAPI=2
 inherit games
@@ -13,7 +13,7 @@ SRC_URI="http://download.zapek.com/software/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="media-libs/libsdl[audio,video,joystick]
