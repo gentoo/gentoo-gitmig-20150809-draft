@@ -1,6 +1,10 @@
 # ChangeLog for games-util/xgamer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xgamer/ChangeLog,v 1.5 2011/05/08 00:37:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xgamer/ChangeLog,v 1.6 2011/07/19 15:44:05 mr_bones_ Exp $
+
+  19 Jul 2011; Michael Sterrett <mr_bones_@gentoo.org> xgamer-0.3.0.ebuild:
+  newer version uses dev-perl/XML-Twig - pointed out by Agostino Sarubbo via
+  bug #375497
 
 *xgamer-0.3.0 (08 May 2011)
 
