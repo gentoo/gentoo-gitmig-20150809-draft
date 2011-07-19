@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/nginx-syntax
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/nginx-syntax/ChangeLog,v 1.7 2011/07/14 21:32:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/nginx-syntax/ChangeLog,v 1.8 2011/07/19 20:22:15 maekke Exp $
+
+  19 Jul 2011; Markus Meier <maekke@gentoo.org> nginx-syntax-0.3.2.ebuild:
+  x86 stable, bug #374693
 
   14 Jul 2011; Markos Chandras <hwoarang@gentoo.org> nginx-syntax-0.3.2.ebuild:
   Stable on amd64 wrt bug #374693
