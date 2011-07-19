@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gnome-scan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-scan/ChangeLog,v 1.6 2011/04/01 10:47:22 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-scan/ChangeLog,v 1.7 2011/07/19 17:33:01 pacho Exp $
+
+  19 Jul 2011; Pacho Ramos <pacho@gentoo.org> -gnome-scan-0.6.2.ebuild,
+  metadata.xml:
+  Drop maintainer due retirement, bug #266794. Drop old.
 
   01 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   gnome-scan-0.7.2.ebuild, +files/gnome-scan-0.7.2-babl-0.1.0-port.patch:
