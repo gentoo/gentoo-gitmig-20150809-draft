@@ -1,6 +1,19 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.129 2011/04/09 16:04:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.130 2011/07/19 13:14:46 pacho Exp $
+
+*brasero-2.32.1-r1 (19 Jul 2011)
+
+  19 Jul 2011; Pacho Ramos <pacho@gentoo.org> +brasero-2.32.1-r1.ebuild,
+  +files/brasero-2.32.1-fix-size.patch,
+  +files/brasero-2.32.1-useless-dialog.patch,
+  +files/brasero-2.32.1-warning-silenced.patch,
+  +files/brasero-2.32.1-warning-silenced2.patch:
+  Apply upstream patches silencing some warnings, fixing a bug causing unproper
+  sizes to be displayed in some circumstances, stop showing useless dialog
+  warning about medium. Also handles better dvd and vcd runtime dependencies
+  (bug #372007 by David King) and no longer installs .la files (bug #362957 by
+  Stéphane Pagnon).
 
   09 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org> -brasero-2.30.2.ebuild,
   -brasero-2.30.3.ebuild:
