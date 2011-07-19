@@ -9,8 +9,8 @@
 # Alpha Profiles
 alpha           default/linux/alpha/10.0                        stable
 alpha           default/linux/alpha/10.0/desktop                stable
-alpha		default/linux/alpha/10.0/desktop/gnome		stable
-alpha           default/linux/alpha/10.0/desktop/kde	        stable
+alpha           default/linux/alpha/10.0/desktop/gnome          stable
+alpha           default/linux/alpha/10.0/desktop/kde            stable
 alpha           default/linux/alpha/10.0/developer              stable
 alpha           default/linux/alpha/10.0/server                 stable
 
@@ -57,17 +57,17 @@ m68k            default/linux/m68k/10.0/server                  dev
 
 # MIPS Profiles
 mips            default/linux/mips/10.0                                         exp
+mips            default/linux/mips/10.0/n32                                     exp
+mips            default/linux/mips/10.0/n64                                     exp
+mips            default/linux/mips/10.0/multilib                                exp
+mips            default/linux/mips/10.0/multilib/n32                            exp
+mips            default/linux/mips/10.0/multilib/n64                            exp
 mips            default/linux/mips/10.0/mipsel                                  exp
 mips            default/linux/mips/10.0/mipsel/n32                              exp
 mips            default/linux/mips/10.0/mipsel/n64                              exp
 mips            default/linux/mips/10.0/mipsel/multilib                         exp
 mips            default/linux/mips/10.0/mipsel/multilib/n32                     exp
 mips            default/linux/mips/10.0/mipsel/multilib/n64                     exp
-mips            default/linux/mips/10.0/n32                                     exp
-mips            default/linux/mips/10.0/n64                                     exp
-mips            default/linux/mips/10.0/multilib                                exp
-mips            default/linux/mips/10.0/multilib/n32                            exp
-mips            default/linux/mips/10.0/multilib/n64                            exp
 
 # PPC32 Profiles
 ppc             default/linux/powerpc/ppc32/10.0                stable

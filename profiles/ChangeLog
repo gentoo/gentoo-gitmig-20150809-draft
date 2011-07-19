@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5545 2011/07/19 13:14:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5546 2011/07/19 16:20:25 mattst88 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Jul 2011; Matt Turner <mattst88@gentoo.org> profiles.desc:
+  Sort mips profiles by endianness first, alphabetically second.
 
   19 Jul 2011; Pacho Ramos <pacho@gentoo.org> arch/alpha/package.use.mask,
   arch/arm/package.use.mask, arch/ia64/package.use.mask,
