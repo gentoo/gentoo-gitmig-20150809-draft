@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycups
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.31 2011/07/18 08:48:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.32 2011/07/19 19:42:59 maekke Exp $
+
+  19 Jul 2011; Markus Meier <maekke@gentoo.org> pycups-1.9.57.ebuild:
+  x86 stable, bug #349496
 
   18 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> pycups-1.9.57.ebuild:
   ppc/ppc64 stable wrt #349496
