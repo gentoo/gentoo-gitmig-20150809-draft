@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/wordwarvi/wordwarvi-1.00.ebuild,v 1.2 2011/07/16 18:50:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/wordwarvi/wordwarvi-1.00.ebuild,v 1.3 2011/07/19 19:57:51 maekke Exp $
 
 EAPI=2
 inherit eutils games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/wordwarvi/${P}.tar.gz"
 
 LICENSE="GPL-2 CCPL-Attribution-2.0 CCPL-Attribution-ShareAlike-3.0"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="portaudio"
 
 RDEPEND="x11-libs/gtk+:2
