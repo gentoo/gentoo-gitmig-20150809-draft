@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5544 2011/07/18 17:18:50 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5545 2011/07/19 13:14:07 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Jul 2011; Pacho Ramos <pacho@gentoo.org> arch/alpha/package.use.mask,
+  arch/arm/package.use.mask, arch/ia64/package.use.mask,
+  arch/powerpc/package.use.mask, arch/sparc/package.use.mask:
+  Mask 'vcd' and 'dvd' USE flags on different arches not having needed
+  dependencies keyworded yet.
 
   18 Jul 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
   desc/dracut_modules.desc:

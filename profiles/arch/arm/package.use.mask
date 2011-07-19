@@ -1,6 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.55 2011/07/17 16:17:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.56 2011/07/19 13:14:07 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (19 Jul 2011)
+# Missing keywords on dependencies
+app-cdr/brasero vcd
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (08 Apr 2011)
 # x11-libs/qscintilla still needs arm keywords, so...

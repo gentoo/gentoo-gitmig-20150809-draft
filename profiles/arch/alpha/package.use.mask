@@ -1,6 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.62 2011/07/03 15:09:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.63 2011/07/19 13:14:07 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (19 Jul 2011)
+# Missing keywords on dependencies
+app-cdr/brasero dvd vcd
 
 # Pacho Ramos <pacho@gentoo.org> (30 Jun 2011)
 # Needed plugins are not keyworded on this arch
