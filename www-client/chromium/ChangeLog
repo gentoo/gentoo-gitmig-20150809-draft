@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.400 2011/07/19 16:42:46 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.401 2011/07/19 21:56:17 phajdan.jr Exp $
+
+  19 Jul 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-14.0.825.0.ebuild, chromium-9999-r1.ebuild:
+  The dependency on libXinerama is now mandatory.
 
 *chromium-14.0.825.0 (19 Jul 2011)
 

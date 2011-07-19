@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-14.0.825.0.ebuild,v 1.1 2011/07/19 16:42:46 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-14.0.825.0.ebuild,v 1.2 2011/07/19 21:56:17 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -15,7 +15,7 @@ SRC_URI="http://build.chromium.org/official/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cups gnome gnome-keyring kerberos xinerama"
+IUSE="cups gnome gnome-keyring kerberos"
 
 # en_US is ommitted on purpose from the list below. It must always be available.
 LANGS="am ar bg bn ca cs da de el en_GB es es_LA et fa fi fil fr gu he hi hr
@@ -44,6 +44,7 @@ RDEPEND="app-arch/bzip2
 	cups? ( >=net-print/cups-1.3.11 )
 	sys-libs/zlib
 	x11-libs/gtk+:2
+	x11-libs/libXinerama
 	x11-libs/libXScrnSaver
 	x11-libs/libXtst"
 DEPEND="${RDEPEND}
@@ -54,7 +55,6 @@ DEPEND="${RDEPEND}
 	>=sys-devel/bison-2.4.3
 	sys-devel/flex
 	>=sys-devel/make-3.81-r2
-	x11-libs/libXinerama
 	test? (
 		dev-python/pyftpdlib
 		dev-python/simplejson
@@ -62,7 +62,6 @@ DEPEND="${RDEPEND}
 	)"
 RDEPEND+="
 	kerberos? ( virtual/krb5 )
-	xinerama? ( x11-libs/libXinerama )
 	x11-misc/xdg-utils
 	virtual/ttf-fonts"
 
