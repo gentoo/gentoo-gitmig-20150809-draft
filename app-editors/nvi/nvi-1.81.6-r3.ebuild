@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.6-r3.ebuild,v 1.11 2010/11/13 14:33:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.6-r3.ebuild,v 1.12 2011/07/20 16:40:43 pacho Exp $
 
 EAPI=1
 
@@ -21,7 +21,7 @@ do
 done
 
 DESCRIPTION="Vi clone"
-HOMEPAGE="http://www.bostic.com/vi/"
+HOMEPAGE="https://sites.google.com/a/bostic.com/keithbostic/nvi"
 SRC_URI="http://www.kotnet.org/~skimo/nvi/devel/${P}.tar.bz2"
 
 LICENSE="BSD"
