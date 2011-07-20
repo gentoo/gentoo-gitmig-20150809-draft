@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eclass-manpages
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/ChangeLog,v 1.21 2011/02/10 07:26:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/ChangeLog,v 1.22 2011/07/20 03:11:05 vapier Exp $
+
+  20 Jul 2011; Mike Frysinger <vapier@gentoo.org> files/eclass-to-manpage.awk:
+  Add @INTERNAL support #375545 by Ralph Sennhauser.
 
   10 Feb 2011; Ulrich Mueller <ulm@gentoo.org> files/eclass-to-manpage.awk:
   Add UTF-8 coding tag, bug 244499.
