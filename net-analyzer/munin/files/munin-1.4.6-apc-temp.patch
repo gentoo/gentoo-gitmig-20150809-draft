@@ -1,0 +1,48 @@
+From e86ab027ab37bfb541e4d20dadcaac64e8ab3a7e Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Diego=20Elio=20Petten=C3=B2?= <flameeyes@gmail.com>
+Date: Mon, 4 Apr 2011 16:23:52 +0200
+Subject: [PATCH 1/2] apc_nis plugin: add UPS's internal temperature to the
+ graph.
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Some APC UPS, such as the SmartUPS series, provide the internal
+temperature of the system, which is then exposed by apcupsd.
+
+This is pretty important because overheating UPSs simply shut off without
+warning.
+
+Signed-off-by: Diego Elio Pettenò <flameeyes@gmail.com>
+Upstream: http://munin-monitoring.org/ticket/1057
+---
+ plugins/node.d/apc_nis.in |    6 ++++++
+ 1 files changed, 6 insertions(+), 0 deletions(-)
+
+diff --git a/plugins/node.d/apc_nis.in b/plugins/node.d/apc_nis.in
+index 63ec390..6c06459 100644
+--- a/plugins/node.d/apc_nis.in
++++ b/plugins/node.d/apc_nis.in
+@@ -44,6 +44,9 @@ if($ARGV[0] and $ARGV[0] eq "config") {
+ 	print "time_left.label time left (min)\n";
+ 	print "time_left.type GAUGE\n";
+ 	print "time_left.max 200\n";
++        print "temperature.label internal temperature (celsius)\n";
++        print "temperature.type GAUGE\n";
++        print "temperature.max 100\n";
+     exit 0;
+ }
+ 
+@@ -81,6 +84,9 @@ do {
+ 	} elsif($line =~ /\WTIMELEFT /) {
+ 		$line =~ s/.* (\d+.\d+).*/$1/;
+ 		print "time_left.value $line\n";
++	} elsif($line =~ /\WITEMP /) {
++		$line =~ s/.* (\d+.\d+).*/$1/;
++		print "temperature.value $line\n";
+ 	}
+ } while(!($line =~ /END APC/));
+ 
+-- 
+1.7.5.3
+

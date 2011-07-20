@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.56 2011/07/18 21:42:23 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.57 2011/07/20 21:14:29 darkside Exp $
+
+*munin-1.4.6-r1 (20 Jul 2011)
+
+  20 Jul 2011; Jeremy Olexa <darkside@gentoo.org> -munin-1.4.6.ebuild,
+  +munin-1.4.6-r1.ebuild, +files/munin-1.4.6-apc-temp.patch,
+  +files/munin-1.4.6-munin-version-identifier.patch:
+  Revision bump to add patches as reported upstream, bug 370131 by Diego Elio
+  Pettenò & Christian Ruppert
 
 *munin-1.4.6 (18 Jul 2011)
 

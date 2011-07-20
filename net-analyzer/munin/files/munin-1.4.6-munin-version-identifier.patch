@@ -1,0 +1,258 @@
+From cb3a59fb3249a2f3aa5433b6590f71563e6cba29 Mon Sep 17 00:00:00 2001
+From: Christian Ruppert <idl0r@gentoo.org>
+Date: Fri, 1 Apr 2011 17:52:33 +0200
+Subject: [PATCH 2/2] Use "munin/$version (libwww-perl/$version)" instead of
+ just "libwww-perl/$version"
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+
+Signed-off-by: Diego Elio Pettenò <flameeyes@gmail.com>
+Upstream: http://munin-monitoring.org/ticket/1109
+---
+ plugins/node.d/apache_accesses.in  |    6 ++++--
+ plugins/node.d/apache_processes.in |    6 ++++--
+ plugins/node.d/apache_volume.in    |    6 ++++--
+ plugins/node.d/haproxy_.in         |    3 ++-
+ plugins/node.d/nginx_request.in    |    6 ++++--
+ plugins/node.d/nginx_status.in     |    6 ++++--
+ plugins/node.d/tomcat_access.in    |    6 ++++--
+ plugins/node.d/tomcat_jvm.in       |    6 ++++--
+ plugins/node.d/tomcat_threads.in   |    6 ++++--
+ plugins/node.d/tomcat_volume.in    |    6 ++++--
+ 10 files changed, 38 insertions(+), 19 deletions(-)
+
+diff --git a/plugins/node.d/apache_accesses.in b/plugins/node.d/apache_accesses.in
+index 233e941..dff2b54 100755
+--- a/plugins/node.d/apache_accesses.in
++++ b/plugins/node.d/apache_accesses.in
+@@ -98,7 +98,8 @@ if ( defined $ARGV[0] and $ARGV[0] eq "autoconf" )
+ 		exit 0;
+ 	}
+ 
+-	my $ua = LWP::UserAgent->new(timeout => 30);
++	my $ua = LWP::UserAgent->new(timeout => 30,
++			agent => sprintf("munin/%s (libwww-perl/%s)", $Munin::Common::Defaults::MUNIN_VERSION, $LWP::VERSION));
+ 
+ 	foreach my $port (@PORTS) {
+ 		my $url = sprintf $URL, $port;
+@@ -144,7 +145,8 @@ if ( defined $ARGV[0] and $ARGV[0] eq "config" )
+ 	exit 0;
+ }
+ 
+-my $ua = LWP::UserAgent->new(timeout => 30);
++my $ua = LWP::UserAgent->new(timeout => 30,
++		agent => sprintf("munin/%s (libwww-perl/%s)", $Munin::Common::Defaults::MUNIN_VERSION, $LWP::VERSION));
+ 
+ foreach my $port (@PORTS) {
+ 	my $url = sprintf $URL, $port;
+diff --git a/plugins/node.d/apache_processes.in b/plugins/node.d/apache_processes.in
+index 45310e4..00fe2ce 100755
+--- a/plugins/node.d/apache_processes.in
++++ b/plugins/node.d/apache_processes.in
+@@ -103,7 +103,8 @@ if ( defined $ARGV[0] and $ARGV[0] eq "autoconf" )
+ 		print "no ($ret)\n";
+ 		exit 0;
+ 	}
+-	my $ua = LWP::UserAgent->new(timeout => 30);
++	my $ua = LWP::UserAgent->new(timeout => 30,
++			agent => sprintf("munin/%s (libwww-perl/%s)", $Munin::Common::Defaults::MUNIN_VERSION, $LWP::VERSION));
+ 
+         foreach my $port (@PORTS) {
+                 my $url = sprintf $URL, $port;
+@@ -170,7 +171,8 @@ if ( defined $ARGV[0] and $ARGV[0] eq "config" )
+ 
+ foreach my $port (@PORTS)
+ {
+-    my $ua = LWP::UserAgent->new(timeout => 30);
++    my $ua = LWP::UserAgent->new(timeout => 30,
++			agent => sprintf("munin/%s (libwww-perl/%s)", $Munin::Common::Defaults::MUNIN_VERSION, $LWP::VERSION));
+     my $url = sprintf $URL, $port;
+     my $response = $ua->request(HTTP::Request->new('GET',$url));
+     if ($response->content =~ /^Busy(?:Servers|Workers):\s+(.+)$/im) {
+diff --git a/plugins/node.d/apache_volume.in b/plugins/node.d/apache_volume.in
+index b81c9bf..f26f574 100755
+--- a/plugins/node.d/apache_volume.in
++++ b/plugins/node.d/apache_volume.in
+@@ -98,7 +98,8 @@ if ( defined $ARGV[0] and $ARGV[0] eq "autoconf" )
+ 		exit 0;
+ 	}
+ 	
+-	my $ua = LWP::UserAgent->new(timeout => 30);
++	my $ua = LWP::UserAgent->new(timeout => 30,
++			agent => sprintf("munin/%s (libwww-perl/%s)", $Munin::Common::Defaults::MUNIN_VERSION, $LWP::VERSION));
+ 
+ 	foreach my $port (@PORTS) {
+ 		my $url = sprintf $URL, $port;
+@@ -143,7 +144,8 @@ if ( defined $ARGV[0] and $ARGV[0] eq "config" )
+ 	exit 0;
+ }
+ 
+-my $ua = LWP::UserAgent->new(timeout => 30);
++my $ua = LWP::UserAgent->new(timeout => 30,
++		agent => sprintf("munin/%s (libwww-perl/%s)", $Munin::Common::Defaults::MUNIN_VERSION, $LWP::VERSION));
+ 
+ foreach my $port (@PORTS) {
+ 	my $url = sprintf $URL, $port;
+diff --git a/plugins/node.d/haproxy_.in b/plugins/node.d/haproxy_.in
+index 74ec2a0..82847d6 100755
+--- a/plugins/node.d/haproxy_.in
++++ b/plugins/node.d/haproxy_.in
+@@ -60,7 +60,8 @@ if (! eval "require LWP::UserAgent;")
+ 
+ my $URL = exists $ENV{'url'} ? $ENV{'url'} : "http://localhost/haproxy-status;csv;norefresh";
+ 
+-my $ua = LWP::UserAgent->new(timeout => 30);
++my $ua = LWP::UserAgent->new(timeout => 30,
++		agent => sprintf("munin/%s (libwww-perl/%s)", $Munin::Common::Defaults::MUNIN_VERSION, $LWP::VERSION));
+ 
+ my $url = $URL;
+ my $response = $ua->request(HTTP::Request->new('GET',$url));
+diff --git a/plugins/node.d/nginx_request.in b/plugins/node.d/nginx_request.in
+index d8bb8ee..f43ee7f 100644
+--- a/plugins/node.d/nginx_request.in
++++ b/plugins/node.d/nginx_request.in
+@@ -73,7 +73,8 @@ if ( exists $ARGV[0] and $ARGV[0] eq "autoconf" )
+ 		exit 0;
+ 	}
+ 	
+-	my $ua = LWP::UserAgent->new(timeout => 30);
++	my $ua = LWP::UserAgent->new(timeout => 30,
++			agent => sprintf("munin/%s (libwww-perl/%s)", $Munin::Common::Defaults::MUNIN_VERSION, $LWP::VERSION));
+     my $response = $ua->request(HTTP::Request->new('GET',$URL));
+ 
+ 	unless ($response->is_success and $response->content =~ /server/im)
+@@ -103,7 +104,8 @@ if ( exists $ARGV[0] and $ARGV[0] eq "config" )
+ 	exit 0;
+ }
+ 
+-my $ua = LWP::UserAgent->new(timeout => 30);
++my $ua = LWP::UserAgent->new(timeout => 30,
++		agent => sprintf("munin/%s (libwww-perl/%s)", $Munin::Common::Defaults::MUNIN_VERSION, $LWP::VERSION));
+ 
+ my $response = $ua->request(HTTP::Request->new('GET',$URL));
+ 
+diff --git a/plugins/node.d/nginx_status.in b/plugins/node.d/nginx_status.in
+index c61eae2..735f815 100644
+--- a/plugins/node.d/nginx_status.in
++++ b/plugins/node.d/nginx_status.in
+@@ -69,7 +69,8 @@ if ( exists $ARGV[0] and $ARGV[0] eq "autoconf" ) {
+ 	exit 0;
+     }
+ 
+-    my $ua = LWP::UserAgent->new(timeout => 30);
++    my $ua = LWP::UserAgent->new(timeout => 30,
++			agent => sprintf("munin/%s (libwww-perl/%s)", $Munin::Common::Defaults::MUNIN_VERSION, $LWP::VERSION));
+     my $response = $ua->request(HTTP::Request->new('GET',$URL));
+ 
+     unless ($response->is_success and $response->content =~ /server/im) {
+@@ -106,7 +107,8 @@ if ( exists $ARGV[0] and $ARGV[0] eq "config" ) {
+     exit 0;
+ }
+ 
+-my $ua = LWP::UserAgent->new(timeout => 30);
++my $ua = LWP::UserAgent->new(timeout => 30,
++		agent => sprintf("munin/%s (libwww-perl/%s)", $Munin::Common::Defaults::MUNIN_VERSION, $LWP::VERSION));
+ 
+ my $response = $ua->request(HTTP::Request->new('GET',$URL));
+ 
+diff --git a/plugins/node.d/tomcat_access.in b/plugins/node.d/tomcat_access.in
+index d226ea7..cf5ad12 100755
+--- a/plugins/node.d/tomcat_access.in
++++ b/plugins/node.d/tomcat_access.in
+@@ -76,7 +76,8 @@ if(exists $ARGV[0] and $ARGV[0] eq "autoconf") {
+ 	print "no ($ret)\n";
+ 	exit 0;
+     }
+-    my $au = LWP::UserAgent->new(timeout => $TIMEOUT);
++    my $au = LWP::UserAgent->new(timeout => $TIMEOUT,
++			agent => sprintf("munin/%s (libwww-perl/%s)", $Munin::Common::Defaults::MUNIN_VERSION, $LWP::VERSION));
+     my $repsonse = $au->request(HTTP::Request->new('GET',$url));
+     if($repsonse->is_success and $repsonse->content =~ /<status>.*<\/status>/im) {
+ 	print "yes\n";
+@@ -99,7 +100,8 @@ if(exists $ARGV[0] and $ARGV[0] eq "config") {
+     exit 0;
+ }
+ 
+-my $ua = LWP::UserAgent->new(timeout => $TIMEOUT);
++my $ua = LWP::UserAgent->new(timeout => $TIMEOUT,
++		agent => sprintf("munin/%s (libwww-perl/%s)", $Munin::Common::Defaults::MUNIN_VERSION, $LWP::VERSION));
+ my $xs = new XML::Simple;
+ my $response = $ua->request(HTTP::Request->new('GET',$url));
+ my %options = ( KeyAttr => { connector => 'name' }, ForceArray => 1 );
+diff --git a/plugins/node.d/tomcat_jvm.in b/plugins/node.d/tomcat_jvm.in
+index 2407603..c8b9a47 100755
+--- a/plugins/node.d/tomcat_jvm.in
++++ b/plugins/node.d/tomcat_jvm.in
+@@ -88,7 +88,8 @@ if(exists $ARGV[0] and $ARGV[0] eq "autoconf") {
+ 	print "no ($ret)\n";
+ 	exit 0;
+     }
+-    my $au = LWP::UserAgent->new(timeout => $TIMEOUT);
++    my $au = LWP::UserAgent->new(timeout => $TIMEOUT,
++			agent => sprintf("munin/%s (libwww-perl/%s)", $Munin::Common::Defaults::MUNIN_VERSION, $LWP::VERSION));
+     my $repsonse = $au->request(HTTP::Request->new('GET',$url));
+     if($repsonse->is_success and $repsonse->content =~ /<status>.*<\/status>/im) {
+ 	print "yes\n";
+@@ -114,7 +115,8 @@ if(exists $ARGV[0] and $ARGV[0] eq "config") {
+     exit 0;
+ }
+ 
+-my $ua = LWP::UserAgent->new(timeout => $TIMEOUT);
++my $ua = LWP::UserAgent->new(timeout => $TIMEOUT,
++		agent => sprintf("munin/%s (libwww-perl/%s)", $Munin::Common::Defaults::MUNIN_VERSION, $LWP::VERSION));
+ my $xs = new XML::Simple;
+ my $response = $ua->request(HTTP::Request->new('GET',$url));
+ my $xml = $xs->XMLin($response->content);
+diff --git a/plugins/node.d/tomcat_threads.in b/plugins/node.d/tomcat_threads.in
+index 2aba651..8ae2540 100755
+--- a/plugins/node.d/tomcat_threads.in
++++ b/plugins/node.d/tomcat_threads.in
+@@ -75,7 +75,8 @@ if(exists $ARGV[0] and $ARGV[0] eq "autoconf") {
+ 	print "no ($ret)\n";
+ 	exit 0;
+     }
+-    my $au = LWP::UserAgent->new(timeout => $TIMEOUT);
++    my $au = LWP::UserAgent->new(timeout => $TIMEOUT,
++			agent => sprintf("munin/%s (libwww-perl/%s)", $Munin::Common::Defaults::MUNIN_VERSION, $LWP::VERSION));
+     my $repsonse = $au->request(HTTP::Request->new('GET',$url));
+     if($repsonse->is_success and $repsonse->content =~ /<status>.*<\/status>/im) {
+ 	print "yes\n";
+@@ -100,7 +101,8 @@ if(exists $ARGV[0] and $ARGV[0] eq "config") {
+     exit 0;
+ }
+ 
+-my $ua = LWP::UserAgent->new(timeout => $TIMEOUT);
++my $ua = LWP::UserAgent->new(timeout => $TIMEOUT,
++		agent => sprintf("munin/%s (libwww-perl/%s)", $Munin::Common::Defaults::MUNIN_VERSION, $LWP::VERSION));
+ my $xs = new XML::Simple;
+ my $response = $ua->request(HTTP::Request->new('GET',$url));
+ my %options = ( KeyAttr => { connector => 'name' }, ForceArray => 1 );
+diff --git a/plugins/node.d/tomcat_volume.in b/plugins/node.d/tomcat_volume.in
+index f32b874..33caf74 100755
+--- a/plugins/node.d/tomcat_volume.in
++++ b/plugins/node.d/tomcat_volume.in
+@@ -96,7 +96,8 @@ if(exists $ARGV[0] and $ARGV[0] eq "autoconf") {
+ 	print "no ($ret)\n";
+ 	exit 0;
+     }
+-    my $au = LWP::UserAgent->new(timeout => $TIMEOUT);
++    my $au = LWP::UserAgent->new(timeout => $TIMEOUT,
++			agent => sprintf("munin/%s (libwww-perl/%s)", $Munin::Common::Defaults::MUNIN_VERSION, $LWP::VERSION));
+     my $repsonse = $au->request(HTTP::Request->new('GET',$url));
+     if($repsonse->is_success and $repsonse->content =~ /<status>.*<\/status>/im) {
+ 	print "yes\n";
+@@ -119,7 +120,8 @@ if(exists $ARGV[0] and $ARGV[0] eq "config") {
+     exit 0;
+ }
+ 
+-my $ua = LWP::UserAgent->new(timeout => $TIMEOUT);
++my $ua = LWP::UserAgent->new(timeout => $TIMEOUT,
++		agent => sprintf("munin/%s (libwww-perl/%s)", $Munin::Common::Defaults::MUNIN_VERSION, $LWP::VERSION));
+ my $xs = new XML::Simple;
+ my $response = $ua->request(HTTP::Request->new('GET',$url));
+ my %options = ( KeyAttr => { connector => 'name' }, ForceArray => 1 );
+-- 
+1.7.5.3
+

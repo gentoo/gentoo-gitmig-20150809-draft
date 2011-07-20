@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.4.6.ebuild,v 1.1 2011/07/18 21:42:23 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.4.6-r1.ebuild,v 1.1 2011/07/20 21:14:29 darkside Exp $
 
 EAPI=2
 
@@ -60,6 +60,9 @@ src_prepare() {
 	# upstream needs a lot of DESTDIR loving
 	# and Gentoo location support
 	epatch "${FILESDIR}"/${PN}-1.4.4-Makefile.patch
+
+	epatch "${FILESDIR}"/${PN}-1.4.6-apc-temp.patch
+	epatch "${FILESDIR}"/${PN}-1.4.6-munin-version-identifier.patch
 
 	# Don't build java plugins if not requested via USE.
 	if ! use java; then
