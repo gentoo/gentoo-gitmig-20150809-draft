@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.11_rc1-r1.ebuild,v 1.1 2011/07/10 10:17:14 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.11_rc2.ebuild,v 1.1 2011/07/20 15:22:27 chithanh Exp $
 
 EAPI=3
 
@@ -133,6 +133,8 @@ src_prepare() {
 		EPATCH_SUFFIX="patch" \
 		epatch
 	fi
+	# fix colors, bug #374671
+	sed -i "s/GL_RGBA,/GL_BGRA,/" src/mesa/state_tracker/st_manager.c || die
 
 	# fix for hardened, bug 240956
 	[[ ${PV} != 9999* ]] && epatch "${FILESDIR}"/glx_ro_text_segm.patch

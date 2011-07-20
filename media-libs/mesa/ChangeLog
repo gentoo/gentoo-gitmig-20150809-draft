@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.347 2011/07/15 17:05:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.348 2011/07/20 15:22:27 chithanh Exp $
+
+*mesa-7.11_rc2 (20 Jul 2011)
+
+  20 Jul 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -mesa-7.11_rc1-r1.ebuild, +mesa-7.11_rc2.ebuild:
+  Bump to new prerelease. Apply fix for bug #374671, upstream #39375.
 
   15 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> mesa-7.10.2.ebuild:
   ppc64 stable wrt #363965
