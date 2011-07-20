@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.402 2011/07/20 09:04:40 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.403 2011/07/20 12:02:45 grobian Exp $
+
+  20 Jul 2011; Fabian Groffen <grobian@gentoo.org>
+  chromium-13.0.782.41-r1.ebuild, chromium-14.0.825.0.ebuild,
+  chromium-9999-r1.ebuild:
+  Fix for Prefix, bug #367651
 
   20 Jul 2011; Alex Alexander <wired@gentoo.org>
   +files/chromium-icu-compatibility-r0.patch, chromium-14.0.825.0.ebuild:

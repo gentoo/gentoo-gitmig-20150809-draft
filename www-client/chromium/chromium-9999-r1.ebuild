@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.37 2011/07/19 21:56:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.38 2011/07/20 12:02:45 grobian Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -321,11 +321,11 @@ src_install() {
 
 	newexe "${FILESDIR}"/chromium-launcher-r2.sh chromium-launcher.sh || die
 	sed "s:chromium-browser:chromium-browser${SUFFIX}:g" \
-		-i "${D}"/"${CHROMIUM_HOME}"/chromium-launcher.sh || die
+		-i "${ED}"/"${CHROMIUM_HOME}"/chromium-launcher.sh || die
 	sed "s:chromium.desktop:chromium${SUFFIX}.desktop:g" \
-		-i "${D}"/"${CHROMIUM_HOME}"/chromium-launcher.sh || die
+		-i "${ED}"/"${CHROMIUM_HOME}"/chromium-launcher.sh || die
 	sed "s:plugins:plugins --user-data-dir=\${HOME}/.config/chromium${SUFFIX}:" \
-		-i "${D}"/"${CHROMIUM_HOME}"/chromium-launcher.sh || die
+		-i "${ED}"/"${CHROMIUM_HOME}"/chromium-launcher.sh || die
 
 	# It is important that we name the target "chromium-browser",
 	# xdg-utils expect it; bug #355517.
@@ -406,7 +406,7 @@ src_install() {
 	make_desktop_entry chromium-browser${SUFFIX} "Chromium ${SLOT}" chromium-browser${SUFFIX} \
 		"Network;WebBrowser"
 		"MimeType=${mime_types}\nStartupWMClass=chromium-browser"
-	sed -e "/^Exec/s/$/ %U/" -i "${D}"/usr/share/applications/*.desktop || die
+	sed -e "/^Exec/s/$/ %U/" -i "${ED}"/usr/share/applications/*.desktop || die
 
 	# Install GNOME default application entry (bug #303100).
 	if use gnome; then
@@ -414,7 +414,7 @@ src_install() {
 		insinto /usr/share/gnome-control-center/default-apps
 		newins "${FILESDIR}"/chromium-browser.xml chromium-browser${SUFFIX}.xml || die
 		sed "s:chromium-browser:chromium-browser${SUFFIX}:g" -i \
-			"${D}"/usr/share/gnome-control-center/default-apps/chromium-browser${SUFFIX}.xml
+			"${ED}"/usr/share/gnome-control-center/default-apps/chromium-browser${SUFFIX}.xml
 	fi
 }
 

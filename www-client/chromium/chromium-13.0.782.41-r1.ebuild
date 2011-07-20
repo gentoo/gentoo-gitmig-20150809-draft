@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-13.0.782.41-r1.ebuild,v 1.2 2011/07/18 17:12:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-13.0.782.41-r1.ebuild,v 1.3 2011/07/20 12:02:45 grobian Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -380,7 +380,7 @@ src_install() {
 	make_desktop_entry chromium-browser "Chromium" chromium-browser \
 		"Network;WebBrowser"
 		"MimeType=${mime_types}\nStartupWMClass=chromium-browser"
-	sed -e "/^Exec/s/$/ %U/" -i "${D}"/usr/share/applications/*.desktop || die
+	sed -e "/^Exec/s/$/ %U/" -i "${ED}"/usr/share/applications/*.desktop || die
 
 	# Install GNOME default application entry (bug #303100).
 	if use gnome; then
