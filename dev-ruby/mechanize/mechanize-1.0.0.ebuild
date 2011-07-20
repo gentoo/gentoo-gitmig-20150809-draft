@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mechanize/mechanize-1.0.0.ebuild,v 1.1 2010/04/04 07:02:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mechanize/mechanize-1.0.0.ebuild,v 1.2 2011/07/20 14:57:21 tomka Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://mechanize.rubyforge.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~amd64 ~ppc ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
 ruby_add_bdepend ">=dev-ruby/hoe-2.3.3"
