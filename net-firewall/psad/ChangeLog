@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/psad
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/ChangeLog,v 1.55 2011/03/09 11:51:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/psad/ChangeLog,v 1.56 2011/07/20 15:40:19 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #34864
 
   09 Mar 2011; Justin Lecher <jlec@gentoo.org> -psad-1.4.8.ebuild:
   Removed old, because off collision, #248231

@@ -2,8 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>hardened</herd>
-	<maintainer>
-		<email>battousai@gentoo.org</email>
-	</maintainer>
 	<longdescription>PSAD provides port scanning attack detection and protection.</longdescription>
 </pkgmetadata>
