@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>qmail</herd>
-<maintainer>
-	<email>bangert@gentoo.org</email>
-	<name>Thilo Bangert</name>
-</maintainer>
 <longdescription lang="en">
 This program allows the body and/or envelope of a message to be filtered
 through a series of filters before being passed to the real qmail-queue

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailfront
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/ChangeLog,v 1.27 2010/04/13 10:31:42 bangert Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/ChangeLog,v 1.28 2011/07/20 17:23:02 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #118937
 
 *mailfront-1.16 (13 Apr 2010)
 

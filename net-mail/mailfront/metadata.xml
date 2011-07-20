@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>qmail</herd>
-<maintainer>
-  <email>bangert@gentoo.org</email>
-  <name>Thilo Bangert</name>
-</maintainer>
 <longdescription lang="en">
 This is mailfront, a package containing customizeable network front-ends
 for mail servers.  It contains complete SMTP, QMQP, QMTP, and POP3
