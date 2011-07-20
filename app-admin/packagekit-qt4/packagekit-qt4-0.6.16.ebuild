@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-qt4/packagekit-qt4-0.6.16.ebuild,v 1.1 2011/07/19 19:13:43 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-qt4/packagekit-qt4-0.6.16.ebuild,v 1.2 2011/07/20 10:29:01 lxnay Exp $
 
 EAPI="3"
 
@@ -42,7 +42,6 @@ src_configure() {
 		--disable-debuginfo-install \
 		--disable-gstreamer-plugin \
 		--disable-service-packs \
-		--disable-managed \
 		--disable-man-pages \
 		--disable-cron \
 		--disable-gtk-module \
