@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath-bin/ekopath-bin-4.0.10_pre20110717.ebuild,v 1.1 2011/07/20 07:28:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath-bin/ekopath-bin-4.0.10_pre20110717.ebuild,v 1.2 2011/07/20 07:29:08 xarthisius Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ DATE=${DATE:0:4}-${DATE:4:2}-${DATE:6}
 DESCRIPTION="PathScale EKOPath Compiler Suite"
 HOMEPAGE="http://www.pathscale.com/ekopath-compiler-suite"
 SRC_URI="http://c591116.r16.cf2.rackcdn.com/${MY_PN}/nightly/Linux/${MY_PN}-${DATE}-installer.run
-   -> ${P}.run"
+	-> ${P}.run"
 
 LICENSE="GPL-3"
 SLOT="0"
