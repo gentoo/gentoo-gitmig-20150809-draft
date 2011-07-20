@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-2.0.1-r1.ebuild,v 1.1 2011/07/19 15:41:51 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-2.0.1-r1.ebuild,v 1.2 2011/07/20 14:19:44 darkside Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -36,7 +36,7 @@ src_install () {
 	distutils_src_install \
 		--standard-lib \
 		--no-version-script \
-		--install-data /usr/share
+		--install-data "${EPREFIX}"/usr/share
 
 	if use doc; then
 		insinto /usr/share/doc/${PF}
