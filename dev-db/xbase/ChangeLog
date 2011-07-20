@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/xbase
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/ChangeLog,v 1.19 2009/01/10 19:04:23 halcy0n Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xbase/ChangeLog,v 1.20 2011/07/20 15:45:42 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #47265
 
   10 Jan 2009; Mark Loeser <halcy0n@gentoo.org>
   +files/xbase-2.0.0-gcc43.patch, xbase-2.0.0.ebuild:
