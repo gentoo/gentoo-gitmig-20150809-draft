@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/gibbler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gibbler/ChangeLog,v 1.15 2011/02/12 08:36:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gibbler/ChangeLog,v 1.16 2011/07/20 09:20:22 graaff Exp $
+
+  20 Jul 2011; Hans de Graaff <graaff@gentoo.org> -gibbler-0.8.6.ebuild,
+  -gibbler-0.8.7.ebuild:
+  Remove old versions.
 
 *gibbler-0.8.9 (12 Feb 2011)
 
