@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tinc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.21 2010/09/17 09:48:50 robbat2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tinc/ChangeLog,v 1.22 2011/07/20 14:57:54 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> -tinc-1.0.8.ebuild,
+  -tinc-1.0.9.ebuild, -tinc-1.0.11.ebuild, metadata.xml:
+  Drop maintainer due retirement, bug #34534; remove old.
 
   17 Sep 2010; Robin H. Johnson <robbat2@gentoo.org> tinc-1.0.8.ebuild,
   tinc-1.0.9.ebuild, tinc-1.0.11.ebuild, tinc-1.0.13.ebuild:
