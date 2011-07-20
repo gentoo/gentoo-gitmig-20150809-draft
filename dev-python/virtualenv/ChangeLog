@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/virtualenv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.60 2011/06/27 20:29:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.61 2011/07/20 22:46:22 halcy0n Exp $
+
+  20 Jul 2011; Mark Loeser <halcy0n@gentoo.org> virtualenv-1.6.1.ebuild:
+  Stable for ppc64; bug #370513
 
   27 Jun 2011; Brent Baude <ranger@gentoo.org> virtualenv-1.6.1.ebuild:
   Marking virtualenv-1.6.1 ppc for bug 370513
