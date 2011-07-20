@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/nullmailer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.39 2011/07/20 17:18:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/ChangeLog,v 1.40 2011/07/20 18:44:55 robbat2 Exp $
+
+*nullmailer-1.05 (20 Jul 2011)
+
+  20 Jul 2011; Robin H. Johnson <robbat2@gentoo.org> +nullmailer-1.05.ebuild,
+  +nullmailer-1.05.ebuild~:
+  Version bump, bug #321401.
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #118937
