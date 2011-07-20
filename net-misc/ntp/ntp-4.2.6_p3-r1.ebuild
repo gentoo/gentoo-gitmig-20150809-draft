@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.6_p3-r1.ebuild,v 1.1 2011/07/11 04:56:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.6_p3-r1.ebuild,v 1.2 2011/07/20 03:52:34 vapier Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-${PV:0:3}/${MY_P}.tar
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="caps debug ipv6 openntpd parse-clocks selinux snmp ssl vim-syntax zeroconf"
+IUSE="caps debug ipv6 openntpd parse-clocks samba selinux snmp ssl vim-syntax zeroconf"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	>=sys-libs/readline-4.1
@@ -56,6 +56,7 @@ src_configure() {
 		$(use_enable parse-clocks) \
 		$(use_enable ipv6) \
 		$(use_enable debug debugging) \
+		$(use_with samba ntp-signd) \
 		$(use_with snmp ntpsnmpd) \
 		$(use_with ssl crypto)
 }

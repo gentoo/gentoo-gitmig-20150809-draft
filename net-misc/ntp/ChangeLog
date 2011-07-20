@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.171 2011/07/11 04:56:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.172 2011/07/20 03:52:34 vapier Exp $
+
+  20 Jul 2011; Mike Frysinger <vapier@gentoo.org> ntp-4.2.6_p3-r1.ebuild,
+  metadata.xml:
+  Add USE=samba to control building of ntp signing daemon #375159.
 
 *ntp-4.2.6_p3-r1 (11 Jul 2011)
 
