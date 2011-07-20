@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libstatgrab
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstatgrab/ChangeLog,v 1.18 2009/01/03 15:06:57 angelos Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstatgrab/ChangeLog,v 1.19 2011/07/20 15:04:25 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> -libstatgrab-0.15.ebuild,
+  metadata.xml:
+  Drop maintainer due retirement, bug #34534; remove old.
 
   03 Jan 2009; Christoph Mende <angelos@gentoo.org>
   libstatgrab-0.10.3.ebuild, libstatgrab-0.15.ebuild,
