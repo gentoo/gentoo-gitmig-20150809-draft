@@ -28,7 +28,7 @@
  	fi
 -	echo "transferring metadata/cache"
 -	emerge metadata
-+	if hasq metadata-transfer ${FEATURES} ; then
++	if has metadata-transfer ${FEATURES} ; then
 +		echo "transferring metadata/cache"
 +		emerge --metadata
 +	fi
