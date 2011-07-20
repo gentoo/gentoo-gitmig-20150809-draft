@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Bio-SamTools
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-SamTools/ChangeLog,v 1.1 2011/07/20 00:43:13 weaver Exp $
+
+*Bio-SamTools-1.29 (20 Jul 2011)
+
+  20 Jul 2011; Andrey Kislyuk <weaver@gentoo.org> +Bio-SamTools-1.29.ebuild,
+  +metadata.xml:
+  New package, ebuild written by me, dependency of sci-biology/GBrowse
+
