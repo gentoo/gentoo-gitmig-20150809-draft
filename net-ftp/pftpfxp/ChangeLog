@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/pftpfxp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pftpfxp/ChangeLog,v 1.14 2009/04/03 15:17:32 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pftpfxp/ChangeLog,v 1.15 2011/07/20 14:46:26 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #34534
 
   03 Apr 2009; Patrick Lauer <patrick@gentoo.org> +files/1.11-gcc43.patch,
   pftpfxp-1.11.ebuild:
