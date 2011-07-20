@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>bangert@gentoo.org</email>
+  <email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription lang="en">
 libSieve provides a library to interpret Sieve scripts, and to execute those
