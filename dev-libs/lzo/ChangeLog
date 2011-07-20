@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/lzo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.57 2011/03/23 17:58:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.58 2011/07/20 14:00:09 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #34534
 
   23 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> lzo-2.04.ebuild:
   ppc64 stable wrt #353842

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mdsplib
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mdsplib/ChangeLog,v 1.6 2009/08/06 10:34:42 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mdsplib/ChangeLog,v 1.7 2011/07/20 14:01:42 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #34534
 
   06 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> mdsplib-0.11.ebuild,
   +files/mdsplib-0.11-gentoo.patch:

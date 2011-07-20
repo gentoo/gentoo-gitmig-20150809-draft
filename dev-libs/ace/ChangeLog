@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ace
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.60 2010/07/13 00:19:11 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ace/ChangeLog,v 1.61 2011/07/20 13:56:04 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #34534
 
   13 Jul 2010; Samuli Suominen <ssuominen@gentoo.org> ace-5.7.2.ebuild:
   Fix OpenSSL >= 1.0.0 detection (broken m4/tls.m4 check) wrt #328027.

@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>cpp</herd>
-	<maintainer>
-		<email>dragonheart@gentoo.org</email>
-		<description>Guilty of overmaintaince. feel free to take over</description>
-	</maintainer>
 </pkgmetadata>
