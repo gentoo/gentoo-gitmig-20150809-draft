@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslogread
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/ChangeLog,v 1.9 2011/04/07 07:51:57 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/ChangeLog,v 1.10 2011/07/20 17:10:53 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #118937
 
   07 Apr 2011; Ultrabug <ultrabug@gentoo.org> syslogread-0.92.ebuild:
   migrate ebuilds to new-style virtual, wrt #358881

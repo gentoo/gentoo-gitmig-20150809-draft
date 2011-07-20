@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/smolt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/smolt/ChangeLog,v 1.8 2011/04/16 19:31:27 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/smolt/ChangeLog,v 1.9 2011/07/20 17:09:15 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #118937
 
   16 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   smolt-1.4.3.ebuild:

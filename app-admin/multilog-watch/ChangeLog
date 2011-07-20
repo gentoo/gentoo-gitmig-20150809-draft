@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/multilog-watch
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/multilog-watch/ChangeLog,v 1.3 2008/01/25 23:34:04 bangert Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/multilog-watch/ChangeLog,v 1.4 2011/07/20 17:08:33 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #118937
 
   25 Jan 2008; Thilo Bangert <bangert@gentoo.org>
   multilog-watch-1.12.ebuild:
