@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/ranpwd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ranpwd/ChangeLog,v 1.11 2010/04/15 21:15:48 idl0r Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ranpwd/ChangeLog,v 1.12 2011/07/20 13:40:03 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #34534
 
   15 Apr 2010; Christian Ruppert <idl0r@gentoo.org> ranpwd-1.1.ebuild,
   ranpwd-1.2.ebuild:
