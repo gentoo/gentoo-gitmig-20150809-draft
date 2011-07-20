@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.2.1.ebuild,v 1.7 2011/07/08 10:57:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-1.2.1.ebuild,v 1.8 2011/07/20 13:26:19 tomka Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib wxwidgets
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/crystal/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="3ds alsa cal3d cegui cg doc javascript jpeg mng ode png python
 sdl truetype vorbis wxwidgets"
 

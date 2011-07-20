@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/crystalspace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.51 2011/07/08 10:57:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.52 2011/07/20 13:26:19 tomka Exp $
+
+  20 Jul 2011; Thomas Kahle <tomka@gentoo.org> crystalspace-1.2.1.ebuild:
+  Dropping to ~x86 wrt to bug 335921
 
   08 Jul 2011; Samuli Suominen <ssuominen@gentoo.org>
   crystalspace-1.2.1.ebuild:
