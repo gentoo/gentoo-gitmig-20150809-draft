@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/dhcpdump
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dhcpdump/ChangeLog,v 1.4 2011/07/20 17:19:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dhcpdump/ChangeLog,v 1.5 2011/07/20 17:24:24 jer Exp $
+
+  20 Jul 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Add netmon herd.
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> -dhcpdump-1.7.ebuild,
   metadata.xml:
