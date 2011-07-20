@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/freepops
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/ChangeLog,v 1.45 2009/01/03 07:13:39 dragonheart Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/freepops/ChangeLog,v 1.46 2011/07/20 14:51:25 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #34534
 
 *freepops-0.2.9 (03 Jan 2009)
 
