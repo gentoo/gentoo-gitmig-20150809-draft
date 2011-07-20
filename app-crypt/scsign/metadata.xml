@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>crypto</herd>
-<maintainer>
-  <email>dragonheart@gentoo.org</email>
-    <name>Daniel Black</name>
-</maintainer>
 <longdescription>Scsign is a small command-line utility to digitally sign a file
 using smartcards.</longdescription>
 </pkgmetadata>
