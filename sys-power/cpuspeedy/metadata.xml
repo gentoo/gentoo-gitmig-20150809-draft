@@ -3,9 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-	<email>dragonheart@gentoo.org</email>
-	<name>Daniel Black</name>
-	<description>If someone wants to take this over they can</description>
+	<email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription>
 Cpuspeedy is a simple tool written in Python which allows you to change the clock speed and voltage of the CPUs 
