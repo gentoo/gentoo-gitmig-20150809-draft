@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r4.ebuild,v 1.29 2011/02/06 11:33:20 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r4.ebuild,v 1.30 2011/07/20 08:58:35 dirtyepic Exp $
 
 inherit eutils flag-o-matic libtool versionator
 
@@ -92,7 +92,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/${P}-manpages.tar.bz2
 	mirror://gentoo/${P}-tls-update.patch.bz2"
 
-DESCRIPTION="The GNU Compiler Collection.  Includes C/C++ and java compilers"
+DESCRIPTION="The GNU Compiler Collection"
 HOMEPAGE="http://gcc.gnu.org/"
 
 LICENSE="GPL-2 LGPL-2.1"
@@ -154,8 +154,8 @@ chk_gcc_version() {
 version_patch() {
 	[ ! -f "$1" ] && return 1
 
-	sed -e "s:@PV@:${PVR}:g" ${1} > ${T}/${1##*/}
-	epatch ${T}/${1##*/}
+	sed -e "s:@PV@:${PVR}:g" ${1} > "${T}"/${1##*/}
+	epatch "${T}"/${1##*/}
 }
 
 src_unpack() {
@@ -173,7 +173,7 @@ src_unpack() {
 
 	unpack protector-${PP_VER2}.tar.gz
 
-	cd ${S}
+	cd "${S}"
 	# Fixup libtool to correctly generate .la files with portage
 	elibtoolize --portage --shallow
 
@@ -182,75 +182,75 @@ src_unpack() {
 	# Branch update ...
 	if [ -n "${BRANCH_UPDATE}" ]
 	then
-		epatch ${DISTDIR}/${PN}-${GCC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2
+		epatch "${DISTDIR}"/${PN}-${GCC_RELEASE_VER}-branch-update-${BRANCH_UPDATE}.patch.bz2
 	fi
 
 	# Do bulk patches included in ${P}-patches-${PATCH_VER}.tar.bz2
 	if [ -n "${PATCH_VER}" ]
 	then
-		epatch ${WORKDIR}/patch
+		epatch "${WORKDIR}"/patch
 	fi
 
 	# Update to support TLS and __thread
-	epatch ${DISTDIR}/${P}-tls-update.patch.bz2
+	epatch "${DISTDIR}"/${P}-tls-update.patch.bz2
 
 	# Make gcc's version info specific to Gentoo
-	version_patch ${FILESDIR}/3.2.3/gcc323-gentoo-branding.patch
+	version_patch "${FILESDIR}"/3.2.3/gcc323-gentoo-branding.patch
 
 	# ProPolice Stack Smashing protection
 	# ProPolice does not work on archs where the stack grows upward (HPPA)
 	if [ ${ARCH} != "hppa" ]
 	then
-		epatch ${WORKDIR}/protector.dif
-		cp ${WORKDIR}/protector.c ${WORKDIR}/${P}/gcc/ || die "protector.c not found"
-		cp ${WORKDIR}/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
-		version_patch ${FILESDIR}/3.2.3/gcc-323-propolice-version.patch
+		epatch "${WORKDIR}"/protector.dif
+		cp "${WORKDIR}"/protector.c "${WORKDIR}"/${P}/gcc/ || die "protector.c not found"
+		cp "${WORKDIR}"/protector.h "${WORKDIR}"/${P}/gcc/ || die "protector.h not found"
+		version_patch "${FILESDIR}"/3.2.3/gcc-323-propolice-version.patch
 
-		epatch ${FILESDIR}/3.2.3/gcc-3.2.3-move-propolice-into-glibc.patch
+		epatch "${FILESDIR}"/3.2.3/gcc-3.2.3-move-propolice-into-glibc.patch
 	fi
 
 	# Patches from Mandrake/Suse ...
-	epatch ${FILESDIR}/3.2.1/gcc31-loop-load-final-value.patch
-	epatch ${FILESDIR}/3.2.1/gcc32-strip-dotdot.patch
-	epatch ${FILESDIR}/3.2.1/gcc32-athlon-alignment.patch
-	epatch ${FILESDIR}/3.2.3/gcc32-c++-classfn-member-template.patch
-	epatch ${FILESDIR}/3.2.3/gcc32-mklibgcc-serialize-crtfiles.patch
+	epatch "${FILESDIR}"/3.2.1/gcc31-loop-load-final-value.patch
+	epatch "${FILESDIR}"/3.2.1/gcc32-strip-dotdot.patch
+	epatch "${FILESDIR}"/3.2.1/gcc32-athlon-alignment.patch
+	epatch "${FILESDIR}"/3.2.3/gcc32-c++-classfn-member-template.patch
+	epatch "${FILESDIR}"/3.2.3/gcc32-mklibgcc-serialize-crtfiles.patch
 
 	# GCC bugfixes ...
-	epatch ${FILESDIR}/3.2.2/gcc32-pr7768.patch
-	epatch ${FILESDIR}/3.2.2/gcc32-pr8213.patch
-	epatch ${FILESDIR}/3.2.3/gcc-3.2.3-poisoned-malloc.patch #225743
+	epatch "${FILESDIR}"/3.2.2/gcc32-pr7768.patch
+	epatch "${FILESDIR}"/3.2.2/gcc32-pr8213.patch
+	epatch "${FILESDIR}"/3.2.3/gcc-3.2.3-poisoned-malloc.patch #225743
 
 	# Get gcc to decreases the number of times the collector has to be run
 	# by increasing its memory workspace, bug #16548.
-	epatch ${FILESDIR}/3.2.2/gcc322-ggc_page-speedup.patch
+	epatch "${FILESDIR}"/3.2.2/gcc322-ggc_page-speedup.patch
 
 	# sparc patches from Redhat ...
-	use sparc && epatch ${FILESDIR}/3.2.1/gcc32-sparc32-hack.patch
+	use sparc && epatch "${FILESDIR}"/3.2.1/gcc32-sparc32-hack.patch
 
 	# Patches from debian-arm
 	if use arm
 	then
-		epatch ${FILESDIR}/3.2.1/gcc32-arm-disable-mathf.patch
-		epatch ${FILESDIR}/3.2.1/gcc32-arm-reload1-fix.patch
+		epatch "${FILESDIR}"/3.2.1/gcc32-arm-disable-mathf.patch
+		epatch "${FILESDIR}"/3.2.1/gcc32-arm-reload1-fix.patch
 	fi
 	#ppc mergel miscompilation workaround
 	if use ppc
 	then
-		epatch ${FILESDIR}/3.2.3/gcc-3.2.3-mergel-fix.patch
+		epatch "${FILESDIR}"/3.2.3/gcc-3.2.3-mergel-fix.patch
 	fi
 	if use hppa
 	then
 		# There exists a bug in the ebuild patched gcc that prevents hppa from
 		# getting build because of default_assemble_visibility is not compiled.
 		# Alexander Gabert <pappy@nikita.ath.cx> (14 Jul 2003).
-		epatch ${FILESDIR}/3.2.3/gcc323-hppa-default_assemble_visibility.patch
+		epatch "${FILESDIR}"/3.2.3/gcc323-hppa-default_assemble_visibility.patch
 	fi
 
 	# Install our pre generated manpages if we do not have perl ...
 	if [ ! -x /usr/bin/perl ]
 	then
-		cd ${S}; unpack ${P}-manpages.tar.bz2
+		cd "${S}"; unpack ${P}-manpages.tar.bz2
 	fi
 
 	# Currently if any path is changed via the configure script, it breaks
@@ -258,7 +258,7 @@ src_unpack() {
 	# absolute paths, as some modules then gets rebuild with the wrong
 	# paths.  Thus we use $FAKE_ROOT.
 	einfo "Fixing Makefiles..."
-	cd ${S}
+	cd "${S}"
 	for x in $(find . -name Makefile.in)
 	do
 		# Fix --datadir=
@@ -316,12 +316,12 @@ src_compile() {
 	do_filter_flags
 
 	# Build in a separate build tree
-	mkdir -p ${WORKDIR}/build
-	cd ${WORKDIR}/build
+	mkdir -p "${WORKDIR}"/build
+	cd "${WORKDIR}"/build
 
 	einfo "Configuring GCC..."
 	addwrite "/dev/zero"
-	${S}/configure --prefix=${LOC} \
+	"${S}"/configure --prefix=${LOC} \
 		--bindir=${BINPATH} \
 		--includedir=${LIBPATH}/include \
 		--datadir=${DATAPATH} \
@@ -343,12 +343,12 @@ src_compile() {
 		--with-local-prefix=${LOC}/local \
 		${myconf} || die
 
-	touch ${S}/gcc/c-gperf.h
+	touch "${S}"/gcc/c-gperf.h
 
 	# Do not make manpages if we do not have perl ...
 	if [ ! -x /usr/bin/perl ]
 	then
-		find ${S} -name '*.[17]' -exec touch {} \; || :
+		find "${S}" -name '*.[17]' -exec touch {} \; || :
 	fi
 
 	einfo "Building GCC..."
@@ -375,7 +375,7 @@ src_compile() {
 src_install() {
 	# Do allow symlinks in ${LOC}/lib/gcc-lib/${CHOST}/${PV}/include as
 	# this can break the build.
-	for x in cd ${WORKDIR}/build/gcc/include/*
+	for x in cd "${WORKDIR}"/build/gcc/include/*
 	do
 		if [ -L ${x} ]
 		then
@@ -384,7 +384,7 @@ src_install() {
 	done
 	# Remove generated headers, as they can cause things to break
 	# (ncurses, openssl, etc).
-	for x in `find ${WORKDIR}/build/gcc/include/ -name '*.h'`
+	for x in `find "${WORKDIR}"/build/gcc/include/ -name '*.h'`
 	do
 		if grep -q 'It has been auto-edited by fixincludes from' ${x}
 		then
@@ -394,31 +394,31 @@ src_install() {
 
 	einfo "Installing GCC..."
 	# Do the 'make install' from the build directory
-	cd ${WORKDIR}/build
+	cd "${WORKDIR}"/build
 	S="${WORKDIR}/build" \
-	make prefix=${D}${LOC} \
-		bindir=${D}${BINPATH} \
-		includedir=${D}${LIBPATH}/include \
-		datadir=${D}${DATAPATH} \
-		mandir=${D}${DATAPATH}/man \
-		infodir=${D}${DATAPATH}/info \
+	make prefix="${D}"${LOC} \
+		bindir="${D}"${BINPATH} \
+		includedir="${D}"${LIBPATH}/include \
+		datadir="${D}"${DATAPATH} \
+		mandir="${D}"${DATAPATH}/man \
+		infodir="${D}"${DATAPATH}/info \
 		LIBPATH="${LIBPATH}" \
 		FAKE_ROOT="${D}" \
 		install || die
 
-	[ -r ${D}${BINPATH}/gcc ] || die "gcc not found in ${D}"
+	[ -r "${D}"${BINPATH}/gcc ] || die "gcc not found in ${D}"
 
 	dodir /lib /usr/bin
 	dodir /etc/env.d/gcc
-	echo "PATH=\"${BINPATH}\"" > ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
-	echo "ROOTPATH=\"${BINPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
-	echo "LDPATH=\"${LIBPATH}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
-	echo "MANPATH=\"${DATAPATH}/man\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
-	echo "INFOPATH=\"${DATAPATH}/info\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
-	echo "STDCXX_INCDIR=\"${STDCXX_INCDIR##*/}\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
+	echo "PATH=\"${BINPATH}\"" > "${D}"/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
+	echo "ROOTPATH=\"${BINPATH}\"" >> "${D}"/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
+	echo "LDPATH=\"${LIBPATH}\"" >> "${D}"/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
+	echo "MANPATH=\"${DATAPATH}/man\"" >> "${D}"/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
+	echo "INFOPATH=\"${DATAPATH}/info\"" >> "${D}"/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
+	echo "STDCXX_INCDIR=\"${STDCXX_INCDIR##*/}\"" >> "${D}"/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
 	# Also set CC and CXX
-	echo "CC=\"gcc\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
-	echo "CXX=\"g++\"" >> ${D}/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
+	echo "CC=\"gcc\"" >> "${D}"/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
+	echo "CXX=\"g++\"" >> "${D}"/etc/env.d/gcc/${CCHOST}-${GCC_RELEASE_VER}
 
 	# Install wrappers
 # Handled by gcc-config now ...
@@ -431,55 +431,55 @@ src_install() {
 	# can nuke multiple versions of gcc
 	if ! use build
 	then
-		cd ${D}${LIBPATH}
+		cd "${D}"${LIBPATH}
 
 		# Tell libtool files where real libraries are
-		for LA in ${D}${LOC}/lib/*.la ${D}${LIBPATH}/../*.la
+		for LA in "${D}"${LOC}/lib/*.la "${D}"${LIBPATH}/../*.la
 		do
 			if [ -f ${LA} ]
 			then
 				sed -e "s:/usr/lib:${LIBPATH}:" ${LA} > ${LA}.hacked
 				mv ${LA}.hacked ${LA}
-				mv ${LA} ${D}${LIBPATH}
+				mv ${LA} "${D}"${LIBPATH}
 			fi
 		done
 
 		# Move all the libraries to version specific libdir.
-		for x in ${D}${LOC}/lib/*.{so,a}* ${D}${LIBPATH}/../*.{so,a}*
+		for x in "${D}"${LOC}/lib/*.{so,a}* "${D}"${LIBPATH}/../*.{so,a}*
 		do
-			[ -f ${x} ] && mv -f ${x} ${D}${LIBPATH}
+			[ -f ${x} ] && mv -f ${x} "${D}"${LIBPATH}
 		done
 
 		# Move Java headers to compiler-specific dir
-		for x in ${D}${LOC}/include/gc*.h ${D}${LOC}/include/j*.h
+		for x in "${D}"${LOC}/include/gc*.h "${D}"${LOC}/include/j*.h
 		do
-			[ -f ${x} ] && mv -f ${x} ${D}${LIBPATH}/include/
+			[ -f ${x} ] && mv -f ${x} "${D}"${LIBPATH}/include/
 		done
 		for x in gcj gnu java javax org
 		do
-			if [ -d ${D}${LOC}/include/${x} ]
+			if [ -d "${D}"${LOC}/include/${x} ]
 			then
 				dodir /${LIBPATH}/include/${x}
-				mv -f ${D}${LOC}/include/${x}/* ${D}${LIBPATH}/include/${x}/
-				rm -rf ${D}${LOC}/include/${x}
+				mv -f "${D}"${LOC}/include/${x}/* "${D}"${LIBPATH}/include/${x}/
+				rm -rf "${D}"${LOC}/include/${x}
 			fi
 		done
 
 		# Move libgcj.spec to compiler-specific directories
-		[ -f ${D}${LOC}/lib/libgcj.spec ] && \
-			mv -f ${D}${LOC}/lib/libgcj.spec ${D}${LIBPATH}/libgcj.spec
+		[ -f "${D}"${LOC}/lib/libgcj.spec ] && \
+			mv -f "${D}"${LOC}/lib/libgcj.spec "${D}"${LIBPATH}/libgcj.spec
 
 		# Rename jar because it could clash with Kaffe's jar if this gcc is
 		# primary compiler (aka don't have the -<version> extension)
-		cd ${D}${LOC}/${CCHOST}/gcc-bin/${GCC_BRANCH_VER}
+		cd "${D}"${LOC}/${CCHOST}/gcc-bin/${GCC_BRANCH_VER}
 		[ -f jar ] && mv -f jar gcj-jar
 
 		# Move <cxxabi.h> to compiler-specific directories
-		[ -f ${D}${STDCXX_INCDIR}/cxxabi.h ] && \
-			mv -f ${D}${STDCXX_INCDIR}/cxxabi.h ${D}${LIBPATH}/include/
+		[ -f "${D}"${STDCXX_INCDIR}/cxxabi.h ] && \
+			mv -f "${D}"${STDCXX_INCDIR}/cxxabi.h "${D}"${LIBPATH}/include/
 
 		# These should be symlinks
-		cd ${D}${BINPATH}
+		cd "${D}"${BINPATH}
 		rm -f ${CCHOST}-{gcc,g++,c++,g77}
 		[ -f gcc ] && ln -sf gcc ${CCHOST}-gcc
 		[ -f g++ ] && ln -sf g++ ${CCHOST}-g++
@@ -488,40 +488,40 @@ src_install() {
 	fi
 
 	# This one comes with binutils
-	if [ -f ${D}${LOC}/lib/libiberty.a ]
+	if [ -f "${D}"${LOC}/lib/libiberty.a ]
 	then
-		rm -f ${D}${LOC}/lib/libiberty.a
+		rm -f "${D}"${LOC}/lib/libiberty.a
 	fi
 
-	cd ${S}
+	cd "${S}"
 	if ! use build
 	then
-		cd ${S}
+		cd "${S}"
 		docinto /${CCHOST}
 		dodoc ChangeLog FAQ GNATS MAINTAINERS README
 		docinto ${CCHOST}/html
 		dohtml *.html
-		cd ${S}/boehm-gc
+		cd "${S}"/boehm-gc
 		docinto ${CCHOST}/boehm-gc
 		dodoc ChangeLog doc/{README*,barrett_diagram}
 		docinto ${CCHOST}/boehm-gc/html
 		dohtml doc/*.html
-		cd ${S}/gcc
+		cd "${S}"/gcc
 		docinto ${CCHOST}/gcc
 		dodoc ChangeLog* FSFChangeLog* LANGUAGES NEWS ONEWS README* SERVICE
-		cd ${S}/libf2c
+		cd "${S}"/libf2c
 		docinto ${CCHOST}/libf2c
 		dodoc ChangeLog README TODO *.netlib
-		cd ${S}/libffi
+		cd "${S}"/libffi
 		docinto ${CCHOST}/libffi
 		dodoc ChangeLog* README
-		cd ${S}/libiberty
+		cd "${S}"/libiberty
 		docinto ${CCHOST}/libiberty
 		dodoc ChangeLog README
-		cd ${S}/libobjc
+		cd "${S}"/libobjc
 		docinto ${CCHOST}/libobjc
 		dodoc ChangeLog README* THREADS*
-		cd ${S}/libstdc++-v3
+		cd "${S}"/libstdc++-v3
 		docinto ${CCHOST}/libstdc++-v3
 		dodoc ChangeLog* README
 		docinto ${CCHOST}/libstdc++-v3/html
@@ -529,10 +529,10 @@ src_install() {
 
 		if use java
 		then
-			cd ${S}/fastjar
+			cd "${S}"/fastjar
 			docinto ${CCHOST}/fastjar
 			dodoc AUTHORS CHANGES ChangeLog NEWS README
-			cd ${S}/libjava
+			cd "${S}"/libjava
 			docinto ${CCHOST}/libjava
 			dodoc ChangeLog* HACKING LIBGCJ_LICENSE NEWS README THANKS
 		fi
@@ -540,19 +540,19 @@ src_install() {
 		prepman ${DATAPATH}
 		prepinfo ${DATAPATH}
 	else
-		rm -rf ${D}/usr/share/{man,info}
-		rm -rf ${D}${DATAPATH}/{man,info}
+		rm -rf "${D}"/usr/share/{man,info}
+		rm -rf "${D}"${DATAPATH}/{man,info}
 	fi
 
 	# Rather install the script, else portage with changing $FILESDIR
 	# between binary and source package borks things ....
 	insinto /lib/rcscripts/awk
-	doins ${FILESDIR}/awk/fixlafiles.awk
+	doins "${FILESDIR}"/awk/fixlafiles.awk
 	exeinto /sbin
-	doexe ${FILESDIR}/fix_libtool_files.sh
+	doexe "${FILESDIR}"/fix_libtool_files.sh
 
 	# Fix ncurses b0rking
-	find ${D}/ -name '*curses.h' -exec rm -f {} \;
+	find "${D}"/ -name '*curses.h' -exec rm -f {} \;
 }
 
 pkg_preinst() {
@@ -564,7 +564,7 @@ pkg_preinst() {
 	# Make again sure that the linker "should" be able to locate
 	# libstdc++.so ...
 	export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
-	${ROOT}/sbin/ldconfig
+	"${ROOT}"/sbin/ldconfig
 }
 
 pkg_postinst() {
@@ -600,5 +600,5 @@ pkg_postinst() {
 	fi
 
 	# Fix ncurses b0rking (if r5 isn't unmerged)
-	find ${ROOT}/usr/lib/gcc-lib -name '*curses.h' -exec rm -f {} \;
+	find "${ROOT}"/usr/lib/gcc-lib -name '*curses.h' -exec rm -f {} \;
 }

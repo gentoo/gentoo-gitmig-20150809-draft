@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r9.ebuild,v 1.7 2008/03/20 20:39:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r9.ebuild,v 1.8 2011/07/20 08:58:35 dirtyepic Exp $
 
 inherit eutils flag-o-matic toolchain-funcs versionator fixheadtails gnuconfig
 
@@ -53,7 +53,7 @@ DATAPATH="${LOC}/share/gcc-data/${CTARGET}/${GCC_BRANCH_VER}"
 STDCXX_INCDIR="${LIBPATH}/include/g++"
 
 PATCH_VER=1.2
-DESCRIPTION="Modern C/C++ compiler written by the GNU people"
+DESCRIPTION="The GNU Compiler Collection"
 HOMEPAGE="http://gcc.gnu.org/"
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz
 	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
@@ -150,9 +150,9 @@ src_compile() {
 		${EXTRA_ECONF}"
 	echo ./configure "${myconf}"
 	addwrite "/dev/zero"
-	${S}/configure ${myconf} || die "configure failed"
+	"${S}"/configure ${myconf} || die "configure failed"
 
-	touch ${S}/gcc/c-gperf.h
+	touch "${S}"/gcc/c-gperf.h
 
 	if ! use static ; then
 		# Fix for our libtool-portage.patch
@@ -171,12 +171,12 @@ src_compile() {
 src_install() {
 	# Do allow symlinks in ${LOC}/lib/gcc-lib/${CHOST}/${PV}/include as
 	# this can break the build.
-	for x in ${WORKDIR}/build/gcc/include/* ; do
+	for x in "${WORKDIR}"/build/gcc/include/* ; do
 		[[ -L ${x} ]] && rm -f "${x}"
 	done
 
 	# Do the 'make install' from the build directory
-	cd ${WORKDIR}/build
+	cd "${WORKDIR}"/build
 	S="${WORKDIR}/build" \
 	make \
 		prefix=${D}${LOC} \
@@ -192,7 +192,7 @@ src_install() {
 
 	dodir /lib /usr/bin
 	dodir /etc/env.d/gcc
-	cat << EOF > ${D}/etc/env.d/gcc/${CTARGET}-${GCC_RELEASE_VER}
+	cat << EOF > "${D}"/etc/env.d/gcc/${CTARGET}-${GCC_RELEASE_VER}
 PATH="${BINPATH}"
 ROOTPATH="${BINPATH}"
 LDPATH="${LIBPATH}"
@@ -207,7 +207,7 @@ EOF
 		cd "${D}"${LIBPATH}
 
 		# Tell libtool files where real libraries are
-		for LA in ${D}${LOC}/lib/*.la ${D}${LIBPATH}/../*.la ; do
+		for LA in "${D}"${LOC}/lib/*.la "${D}"${LIBPATH}/../*.la ; do
 			if [[ -f ${LA} ]] ; then
 				sed -i -e "s:/usr/lib:${LIBPATH}:" "${LA}"
 				mv "${LA}" "${D}"${LIBPATH}
@@ -215,7 +215,7 @@ EOF
 		done
 
 		# Move all the libraries to version specific libdir.
-		for x in ${D}${LOC}/lib/*.{so,a}* ${D}${LIBPATH}/../*.{so,a}* ; do
+		for x in "${D}"${LOC}/lib/*.{so,a}* "${D}"${LIBPATH}/../*.{so,a}* ; do
 			[[ -f ${x} ]] && mv -f "${x}" "${D}"${LIBPATH}
 		done
 
@@ -233,28 +233,28 @@ EOF
 	fi
 
 	# This one comes with binutils
-	rm -f ${D}${LOC}/lib/libiberty.a
+	rm -f "${D}"${LOC}/lib/libiberty.a
 
-	cd ${S}
+	cd "${S}"
 	if use build ; then
 		rm -r "${D}"/usr/share/{man,info}
 		rm -r "${D}"/${DATAPATH}/{man,info}
 	elif ! has nodoc ${FEATURES} ; then
-		cd ${S}
+		cd "${S}"
 		docinto /
 		dodoc README* FAQ MAINTAINERS
 		docinto html
 		dodoc faq.html
 		docinto gcc
-		cd ${S}/gcc
+		cd "${S}"/gcc
 		dodoc BUGS ChangeLog* FSFChangeLog* LANGUAGES NEWS PROBLEMS README* SERVICE TESTS.FLUNK
-		cd ${S}/libchill
+		cd "${S}"/libchill
 		docinto libchill
 		dodoc ChangeLog
-		cd ${S}/libf2c
+		cd "${S}"/libf2c
 		docinto libf2c
 		dodoc ChangeLog changes.netlib README TODO
-		cd ${S}/libio
+		cd "${S}"/libio
 		docinto libio
 		dodoc ChangeLog NEWS README
 		cd dbz
@@ -263,10 +263,10 @@ EOF
 		cd ../stdio
 		docinto libio/stdio
 		dodoc ChangeLog*
-		cd ${S}/libobjc
+		cd "${S}"/libobjc
 		docinto libobjc
 		dodoc ChangeLog README* THREADS*
-		cd ${S}/libstdc++
+		cd "${S}"/libstdc++
 		docinto libstdc++
 		dodoc ChangeLog NEWS
 	fi

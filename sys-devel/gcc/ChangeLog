@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.817 2011/07/20 06:40:18 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.818 2011/07/20 08:58:35 dirtyepic Exp $
+
+  20 Jul 2011; Ryan Hill <dirtyepic@gentoo.org> gcc-2.95.3-r9.ebuild,
+  gcc-2.95.3-r10.ebuild, gcc-3.1.1-r2.ebuild, gcc-3.2.2.ebuild,
+  gcc-3.2.3-r4.ebuild, gcc-3.3.6-r1.ebuild, gcc-3.4.6-r2.ebuild,
+  gcc-4.0.4.ebuild, gcc-4.1.2.ebuild, gcc-4.2.4-r1.ebuild, gcc-4.3.3-r2.ebuild,
+  gcc-4.4.2.ebuild, gcc-4.4.3-r3.ebuild:
+  Repoman talks too much.
 
 *gcc-4.4.6 (20 Jul 2011)
 

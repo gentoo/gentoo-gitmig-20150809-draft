@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.6-r2.ebuild,v 1.25 2011/03/08 03:05:44 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.6-r2.ebuild,v 1.26 2011/07/20 08:58:35 dirtyepic Exp $
 
 MAN_VER=""
 PATCH_VER="1.6"
@@ -39,10 +39,10 @@ SPLIT_SPECS=${SPLIT_SPECS-true}
 
 inherit toolchain eutils
 
-DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
+DESCRIPTION="The GNU Compiler Collection"
 
 KEYWORDS="-* alpha amd64 arm ~ia64 ~mips ppc ppc64 ~s390 sh sparc x86 ~x86-fbsd"
-IUSE="ip28 ip32r10k"
+IUSE="ip28 ip32r10k n32 n64"
 
 # we need a proper glibc version for the Scrt1.o provided to the pie-ssp specs
 # NOTE: we SHOULD be using at least binutils 2.15.90.0.1 everywhere for proper
@@ -112,8 +112,8 @@ src_unpack() {
 		mips)
 			# If mips, and we DON'T want multilib, then rig gcc to only use n32 OR n64
 			if ! is_multilib; then
-				use n32 && epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n32only.patch
-				use n64 && epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n64only.patch
+				use n32 && epatch "${FILESDIR}"/3.4.1/gcc-3.4.1-mips-n32only.patch
+				use n64 && epatch "${FILESDIR}"/3.4.1/gcc-3.4.1-mips-n64only.patch
 			fi
 
 			# Patch forward-ported from a gcc-3.0.x patch that adds -march=r10000 and
@@ -121,7 +121,7 @@ src_unpack() {
 			# take advantage of R10k's second ALU, perform shifts, etc..
 			#
 			# Needs re-porting to DFA in gcc-4.0 - Any Volunteers? :)
-			epatch ${FILESDIR}/3.4.2/gcc-3.4.x-mips-add-march-r10k.patch
+			epatch "${FILESDIR}"/3.4.2/gcc-3.4.x-mips-add-march-r10k.patch
 
 			# This is a very special patch -- it allows us to build semi-usable kernels
 			# on SGI IP28 (Indigo2 Impact R10000) systems.  The patch is henceforth
@@ -134,7 +134,7 @@ src_unpack() {
 			# to be enabled by passing -mip28-cache-barrier.  Only used to build kernels,
 			# There is the possibility it may be used for very specific userland apps too.
 			if use ip28 || use ip32r10k; then
-				epatch ${FILESDIR}/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v4.patch
+				epatch "${FILESDIR}"/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers-v4.patch
 			fi
 			;;
 		amd64)
