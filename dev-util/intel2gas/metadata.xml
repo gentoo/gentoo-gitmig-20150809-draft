@@ -3,8 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>dragonheart@gentoo.org</email>
-  <description>I realy don't want to maintain this so feel free to take over - simple ebuild though</description>
+  <email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription>Intel2GAS is a converter that will convert assembler source files written for 
 NASM to files that can be assembled using the GNU Assembler (GAS), on the i386 platform. It 
