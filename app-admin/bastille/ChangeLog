@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/bastille
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.22 2009/01/09 00:36:14 battousai Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bastille/ChangeLog,v 1.23 2011/07/20 15:39:23 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #34864
 
 *bastille-3.0.9 (08 Jan 2009)
 

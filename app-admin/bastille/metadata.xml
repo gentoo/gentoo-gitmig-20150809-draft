@@ -2,8 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>hardened</herd>
-	<maintainer>
-		<email>battousai@gentoo.org</email>
-	</maintainer>
 	<longdescription>The Bastille Hardening System attempts to "harden" or "tighten" Unix operating systems.</longdescription>
 </pkgmetadata>
