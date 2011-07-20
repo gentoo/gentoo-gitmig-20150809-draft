@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/metagen
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.26 2010/09/13 15:08:59 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.27 2011/07/20 13:25:37 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #28480
 
   13 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -metagen-0.3.ebuild, -metagen-0.5.ebuild:
