@@ -3,9 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>dragonheart@gentoo.org</email>
-    <name>Daniel Black</name>
-    <description>A cool application that I decided to add. I you want to version bump it go ahead.</description>
+  <email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription>Chiron Filesystem. It is a Fuse based filesystem. It's main purpose is to guarantee filesystem availability using replication of filesystem.</longdescription>
 </pkgmetadata>
