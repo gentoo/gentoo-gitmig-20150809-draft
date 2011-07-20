@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/packagekit-gtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-gtk/ChangeLog,v 1.2 2011/07/20 10:30:25 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-gtk/ChangeLog,v 1.3 2011/07/20 10:34:48 lxnay Exp $
+
+  20 Jul 2011; Fabio Erculiani <lxnay@gentoo.org> packagekit-gtk-0.6.16.ebuild:
+  add missing dependency against gtk3
 
   20 Jul 2011; Fabio Erculiani <lxnay@gentoo.org> packagekit-gtk-0.6.16.ebuild:
   remove --disable-managed
