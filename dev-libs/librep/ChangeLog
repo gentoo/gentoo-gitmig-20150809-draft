@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/librep
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.56 2010/06/05 21:00:33 truedfx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.57 2011/07/20 16:27:43 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> -librep-0.17-r1.ebuild,
+  -librep-0.17_p20070101.ebuild, -librep-0.90.3.ebuild, -librep-0.90.5.ebuild,
+  metadata.xml:
+  Drop maintainer due retirement, bug #81177; remove old.
 
 *librep-0.90.6 (05 Jun 2010)
 
