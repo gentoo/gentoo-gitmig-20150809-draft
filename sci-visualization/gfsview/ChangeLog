@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/gfsview
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gfsview/ChangeLog,v 1.7 2011/03/02 13:37:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gfsview/ChangeLog,v 1.8 2011/07/20 17:02:22 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #105599
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> gfsview-20091219.ebuild,
   gfsview-20100407.ebuild:

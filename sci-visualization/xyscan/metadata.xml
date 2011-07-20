@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>sci</herd>
-  <maintainer>
-    <email>markusle@gentoo.org</email>
-    <name>Markus Dittrich</name>
-  </maintainer>
 <longdescription lang="en">
   xyscan is a tool for scientist in the need to extract data points,
   i.e. numeric values, from a plot. It allows to scan the plots and
