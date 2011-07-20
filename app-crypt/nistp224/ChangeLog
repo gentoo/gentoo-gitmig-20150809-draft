@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/nistp224
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/nistp224/ChangeLog,v 1.3 2009/03/16 11:14:03 bangert Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/nistp224/ChangeLog,v 1.4 2011/07/20 17:13:55 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> -nistp224-0.75.ebuild,
+  metadata.xml:
+  Drop maintainer due retirement, bug #118937; remove old.
 
 *nistp224-0.75-r1 (16 Mar 2009)
 
