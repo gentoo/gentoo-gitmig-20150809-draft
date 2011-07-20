@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/eclass-manpages-20100821.ebuild,v 1.2 2010/10/19 11:20:40 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/eclass-manpages-20100821.ebuild,v 1.3 2011/07/20 02:56:01 vapier Exp $
 
 DESCRIPTION="collection of Gentoo eclass manpages"
 HOMEPAGE="http://www.gentoo.org/"
@@ -19,7 +19,10 @@ S=${WORKDIR}
 src_compile() {
 	local e
 	for e in "${ECLASSDIR}"/*.eclass ; do
-		gawk -f "${FILESDIR}"/eclass-to-manpage.awk ${e} > ${e##*/}.5 || rm -f ${e##*/}.5
+		gawk \
+			-vPORTDIR="${PORTDIR}" \
+			-f "${FILESDIR}"/eclass-to-manpage.awk \
+			${e} > ${e##*/}.5 || rm -f ${e##*/}.5
 	done
 }
 
