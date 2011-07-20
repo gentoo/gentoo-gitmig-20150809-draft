@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5547 2011/07/20 02:40:42 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5548 2011/07/20 14:53:49 dev-zero Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Jul 2011; Tiziano Müller <dev-zero@gentoo.org> package.mask:
+  Remove mask for php-libvirt since that package is gone
 
   20 Jul 2011; Nathan Phillip Brink <binki@gentoo.org> package.mask:
   Add package.mask for net-irc/atheme-services as requested by atheme upstream.
