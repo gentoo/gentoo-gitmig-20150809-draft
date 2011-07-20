@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/gamess
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.52 2011/06/21 16:03:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/ChangeLog,v 1.53 2011/07/20 16:55:51 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #105599
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> gamess-20101001.3.ebuild:
   Add dependency on virtual/fortran

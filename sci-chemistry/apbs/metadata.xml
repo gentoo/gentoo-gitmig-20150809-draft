@@ -3,10 +3,6 @@
 <pkgmetadata>
 	<herd>sci-chemistry</herd>
 	<maintainer>
-		<email>markusle@gentoo.org</email>
-		<name>Markus Dittrich</name>
-	</maintainer>
-	<maintainer>
 		<email>jlec@gentoo.org</email>
 		<name>Justin Lecher</name>
 		<description>Ebuild Crasher</description>
