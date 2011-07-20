@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/valtz
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/valtz/ChangeLog,v 1.4 2009/12/03 11:39:32 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/valtz/ChangeLog,v 1.5 2011/07/20 17:21:25 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #118937
 
   03 Dec 2009; Markus Meier <maekke@gentoo.org> valtz-0.7.ebuild:
   add ~amd64, bug #289412

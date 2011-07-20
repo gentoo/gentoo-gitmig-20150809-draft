@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/tinystats
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/tinystats/ChangeLog,v 1.4 2010/03/23 12:54:58 bangert Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/tinystats/ChangeLog,v 1.5 2011/07/20 17:20:40 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #118937
 
   23 Mar 2010; Thilo Bangert <bangert@gentoo.org> tinystats-1.1.ebuild:
   honour LDFLAGS - fix URLs (#309119)
