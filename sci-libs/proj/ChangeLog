@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/proj
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/ChangeLog,v 1.28 2011/06/21 15:06:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/ChangeLog,v 1.29 2011/07/20 16:49:21 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #104313
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> proj-4.4.9.ebuild,
   proj-4.5.0.ebuild, proj-4.6.0.ebuild, proj-4.6.1.ebuild, proj-4.7.0.ebuild:
