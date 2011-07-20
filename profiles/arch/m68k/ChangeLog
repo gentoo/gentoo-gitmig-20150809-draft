@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/ChangeLog,v 1.11 2011/03/31 08:31:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/ChangeLog,v 1.12 2011/07/20 08:53:44 dirtyepic Exp $
+
+  20 Jul 2011; Ryan Hill <dirtyepic@gentoo.org> package.use.mask:
+  Mask sys-devel/gcc USE graphite and lto due to unkeyworded dependencies.
 
   31 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.use.mask:
   Drop mask on non-existant portage version.

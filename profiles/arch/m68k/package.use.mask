@@ -1,6 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/package.use.mask,v 1.7 2011/05/09 14:27:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/m68k/package.use.mask,v 1.8 2011/07/20 08:53:44 dirtyepic Exp $
+
+# Ryan Hill <dirtyepic@gentoo.org> (20 Jul 2011)
+# graphite requires dev-libs/ppl & dev-libs/cloog-ppl
+# (bugs #269087 and #269088)
+# lto in 4.5 requires dev-libs/elfutils (bug #375737)
+sys-devel/gcc graphite lto
 
 # Mike Frysinger <vapier@gentoo.org> (10 Feb 2011)
 # Waiting for keywording #354309
