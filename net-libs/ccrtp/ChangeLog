@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ccrtp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ccrtp/ChangeLog,v 1.17 2009/04/26 15:02:33 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ccrtp/ChangeLog,v 1.18 2011/07/20 14:47:19 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #34534
 
   26 Apr 2009; Brent Baude <ranger@gentoo.org> ccrtp-1.6.0.ebuild:
   stable ppc, bug 264505

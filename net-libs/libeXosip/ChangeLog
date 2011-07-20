@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libeXosip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libeXosip/ChangeLog,v 1.22 2011/05/14 09:33:42 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libeXosip/ChangeLog,v 1.23 2011/07/20 14:48:54 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #34534
 
   14 May 2011; Thomas Kahle <tomka@gentoo.org> libeXosip-3.5.0.ebuild:
   x86 stable per bug 363311
