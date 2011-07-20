@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/yakuake
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/ChangeLog,v 1.47 2011/06/01 22:20:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/ChangeLog,v 1.48 2011/07/20 15:59:59 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #70723
 
   01 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> -yakuake-2.9.7.ebuild:
   Remove old
