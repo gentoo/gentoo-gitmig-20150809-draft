@@ -1,6 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/package.use.mask,v 1.25 2011/06/30 19:40:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/package.use.mask,v 1.26 2011/07/20 08:55:12 dirtyepic Exp $
+
+# 20 Jul 2011; Ryan Hill <dirtyepic@gentoo.org> package.use.mask:
+# Mask gcc [lto] due to unkeyworded dependencies (bug #375737).
+sys-devel/gcc lto
 
 # Pacho Ramos <pacho@gentoo> (18 Mar 2011)
 # Missing keywords on deps (GNOME related packages)
