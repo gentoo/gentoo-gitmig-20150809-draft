@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.91 2011/06/25 18:17:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.92 2011/07/20 22:06:26 halcy0n Exp $
+
+  18 Jul 2011; Mark Loeser <halcy0n@gentoo.org> gv-3.7.1-r1.ebuild:
+  Stable for ppc/ppc64; bug #371807
 
   25 Jun 2011; Raúl Porcel <armin76@gentoo.org> gv-3.7.1-r1.ebuild:
   alpha/sparc stable wrt #371807
