@@ -2,11 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>media-optical</herd>
-<maintainer>
-	<email>dragonheart@gentoo.org</email>
-	<name>Daniel Black</name>
-	<description>If someone wants to take this over they can</description>
-</maintainer>
 <longdescription>
 sync2cd is an incremental archiving tool. It allows backing up complete filesystem hierarchies to multiple backup 
 media (e.g. CD-R). Files are archived incrementally, i.e. only new or changed files are stored during an archive 
