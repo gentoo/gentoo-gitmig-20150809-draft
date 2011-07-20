@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.1 2011/05/31 11:45:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.2 2011/07/20 05:44:45 radhermit Exp $
+
+*pip-1.0.2 (20 Jul 2011)
+
+  20 Jul 2011; Tim Harder <radhermit@gentoo.org> +pip-1.0.2.ebuild:
+  Version bump.
 
 *pip-1.0.1 (31 May 2011)
 
