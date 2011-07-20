@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tendra
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tendra/ChangeLog,v 1.9 2009/12/23 19:53:47 truedfx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tendra/ChangeLog,v 1.10 2011/07/20 16:25:27 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #81177
 
   23 Dec 2009; Harald van Dĳk <truedfx@gentoo.org>
   tendra-5.0_pre20070510-r2.ebuild:
