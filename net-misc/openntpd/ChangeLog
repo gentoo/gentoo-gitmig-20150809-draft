@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.49 2011/07/10 23:53:26 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.50 2011/07/20 17:28:52 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> -openntpd-3.9_p1-r1.ebuild,
+  -openntpd-3.9_p1-r2.ebuild, metadata.xml:
+  Drop maintainer due retirement, bug #118937; remove old.
 
   10 Jul 2011; Mark Loeser <halcy0n@gentoo.org> openntpd-3.9_p1-r3.ebuild:
   Stable on ppc/ppc64; bug #362385

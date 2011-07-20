@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ipsvd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsvd/ChangeLog,v 1.9 2011/04/16 19:12:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsvd/ChangeLog,v 1.10 2011/07/20 17:26:39 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> -ipsvd-1.0.0.ebuild,
+  metadata.xml:
+  Drop maintainer due retirement, bug #118937; remove old.
 
   16 Apr 2011; Ulrich Mueller <ulm@gentoo.org> ipsvd-1.0.0.ebuild,
   ipsvd-1.0.0-r1.ebuild:
