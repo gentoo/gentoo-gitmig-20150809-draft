@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/clockspeed
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/ChangeLog,v 1.27 2011/04/26 16:31:56 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/ChangeLog,v 1.28 2011/07/20 17:25:33 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #118937
 
   26 Apr 2011; Jeremy Olexa <darkside@gentoo.org> clockspeed-0.62-r6.ebuild:
   The ntpclockset command requires dnsip(1) from net-dns/djbdns

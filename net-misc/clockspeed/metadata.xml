@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>bangert@gentoo.org</email>
+  <email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription lang="en">
 clockspeed uses a hardware tick counter to compensate for a persistently fast or
