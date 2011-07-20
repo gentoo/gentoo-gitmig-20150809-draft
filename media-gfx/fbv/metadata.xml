@@ -3,11 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>dragonheart@gentoo.org</email>
-    <name>Daniel Black</name>
-    <description>A ebuild that I put a little bit of effort into maintaining and got lumped with it. 
-	Please take over if you want it (or not)
-    </description>
+  <email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription></longdescription>
 </pkgmetadata>
