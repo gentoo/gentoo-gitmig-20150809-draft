@@ -1,0 +1,30 @@
+http://www.thc.org/thc-hydra/hydra-6.5-fix.diff
+
+--- hydra-http-form.c	2011-07-15 12:17:01.707621600 +0200
++++ hydra-http-form.c	2011-07-15 16:59:21.044146200 +0200
+@@ -323,13 +323,13 @@
+ 
+       if (strcmp(type, "POST") == 0) {
+         sprintf(buffer,
+-                "POST %.600s HTTP/1.0\r\nHost: %s\r\nUser-Agent: Mozilla/4.0 (Hydra)\r\nContent-Type: application/x-www-form-urlencoded\r\nContent-Length: %d\r\n%s%s\r\n%s",
++                "POST %.600s HTTP/1.0\r\nHost: %s\r\nUser-Agent: Mozilla/5.0 (Hydra)\r\nContent-Type: application/x-www-form-urlencoded\r\nContent-Length: %d\r\n%s%s\r\n%s",
+                 url, webtarget, (int) strlen(upd3variables), header, userheader, upd3variables);
+         if (hydra_send(s, buffer, strlen(buffer), 0) < 0) {
+           return 1;
+         }
+       } else {
+-        sprintf(buffer, "GET http://%.600s?%s HTTP/1.0\r\nHost: %s\r\nUser-Agent: Mozilla/4.0 (Hydra)\r\n%s%s\r\n", url, upd3variables, webtarget, header, userheader);
++        sprintf(buffer, "GET %.600s?%s HTTP/1.0\r\nHost: %s\r\nUser-Agent: Mozilla/5.0 (Hydra)\r\n%s%s\r\n", url, upd3variables, webtarget, header, userheader);
+         if (hydra_send(s, buffer, strlen(buffer), 0) < 0) {
+           return 1;
+         }
+--- hydra.c	2011-07-15 12:17:01.737623300 +0200
++++ hydra.c	2011-07-15 16:52:39.029152300 +0200
+@@ -1757,7 +1757,6 @@
+       url = strtok(bufferurl, ":");
+       variables = strtok(NULL, ":");
+       cond = strtok(NULL, ":");
+-      optional1 = strtok(NULL, ":");
+       if (strstr(variables, "^USER^") == NULL && strstr(variables, "^PASS^") == NULL) {
+ 	fprintf(stderr, "ERROR: the variables argument needs at least the strings ^USER^ or ^PASS^: %s\n", variables);
+         exit(-1);
