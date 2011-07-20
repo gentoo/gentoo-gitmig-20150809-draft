@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>sci</herd>
-  <maintainer>
-    <email>cryos@gentoo.org</email>
-  </maintainer>
   <longdescription>
     Quickplot is a fast interactive 2D plotter with infinite zooming, value
     picking, pipe input, and unlimited plots displayed.  Quickplot is meant for

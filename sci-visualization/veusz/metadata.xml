@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sci</herd>
-<maintainer>
-  <email>cryos@gentoo.org</email>
-</maintainer>
 <longdescription lang="en">
   A Qt based scientific plotting package written in Python using PyQt. It is
   designed to produce publication ready Postscript output. It provides a GUI,
