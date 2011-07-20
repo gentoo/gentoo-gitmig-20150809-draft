@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>base-system</herd>
-<maintainer>
-	<email>bangert@gentoo.org</email>
-	<name>Thilo Bangert</name>
-</maintainer>
 <longdescription lang="en">
 This package contains a proxy program that passes data back and forth
 between two connections set up by a UCSPI server and a UCSPI client.
