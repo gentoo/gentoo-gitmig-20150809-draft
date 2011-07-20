@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/atheme-services
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.7 2011/06/24 03:08:33 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.8 2011/07/20 02:24:17 binki Exp $
+
+*atheme-services-6.0.8-r1 (20 Jul 2011)
+
+  20 Jul 2011; Nathan Phillip Brink <binki@gentoo.org>
+  -atheme-services-6.0.8.ebuild, +atheme-services-6.0.8-r1.ebuild,
+  +files/atheme-services.initd, -files/atheme-services.initd.in:
+  Fix initial permissions of /var/run/atheme and remove bad prefix-support
+  logic from init script. Reported by the_mgt/ich.
 
   24 Jun 2011; Nathan Phillip Brink <binki@gentoo.org>
   atheme-services-6.0.8.ebuild:
