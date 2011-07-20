@@ -3,10 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>dragonheart@gentoo.org</email>
-    <name>Daniel Black</name>
-    <description>A package I felt obliged to include. Please bump/correct if you see the need. 
-</description>
+  <email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription>This package distributes the ICANN DNSSEC root key</longdescription>
 </pkgmetadata>
