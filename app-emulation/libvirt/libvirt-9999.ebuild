@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.7 2011/06/14 09:16:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.8 2011/07/20 14:51:41 cardoe Exp $
 
 #BACKPORTS=1
 
@@ -8,7 +8,7 @@ EAPI="2"
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://libvirt.org/libvirt.git"
-	GIT_ECLASS="git"
+	GIT_ECLASS="git-2"
 	AUTOTOOLIZE=yes
 fi
 
