@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/httplib2
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/ChangeLog,v 1.24 2010/10/09 10:38:55 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/ChangeLog,v 1.25 2011/07/20 05:11:29 radhermit Exp $
+
+*httplib2-0.7.1 (20 Jul 2011)
+
+  20 Jul 2011; Tim Harder <radhermit@gentoo.org> +httplib2-0.7.1.ebuild:
+  Version bump (imported from python overlay).
 
   09 Oct 2010; Samuli Suominen <ssuominen@gentoo.org> httplib2-0.6.0.ebuild:
   ppc64 stable wrt #324077
