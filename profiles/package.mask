@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12917 2011/07/20 15:37:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12918 2011/07/20 16:01:19 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Eray Aslan <eras@gentoo.org> (20 Jul 2011)
+# Dead upstream.  Does not compile.  Bugs 205442, 354865, 370459.
+# Removal in 30 days.
+net-mail/freepops
 
 # Pacho Ramos <pacho@gentoo.org> (20 Jul 2011)
 # Dead project and not maintained for ages, removal in 30 days.
