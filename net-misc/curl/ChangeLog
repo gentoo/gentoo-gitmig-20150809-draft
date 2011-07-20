@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.184 2011/07/20 14:52:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.185 2011/07/20 16:14:50 angelos Exp $
+
+*curl-7.21.7 (20 Jul 2011)
+
+  20 Jul 2011; Christoph Mende <angelos@gentoo.org>
+  +files/curl-respect-cflags-2.patch, +curl-7.21.7.ebuild, metadata.xml:
+  Version bump and take over maintainership
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #34534
