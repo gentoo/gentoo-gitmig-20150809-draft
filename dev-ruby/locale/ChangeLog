@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/locale
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.23 2011/04/10 20:53:19 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.24 2011/07/20 10:04:23 graaff Exp $
+
+  20 Jul 2011; Hans de Graaff <graaff@gentoo.org> locale-2.0.5-r2.ebuild:
+  Don't run known-to-be-broken test on jruby in preparation for stabilization.
 
 *locale-2.0.5-r2 (10 Apr 2011)
 

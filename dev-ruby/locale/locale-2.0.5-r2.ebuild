@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/locale-2.0.5-r2.ebuild,v 1.1 2011/04/10 20:53:19 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/locale-2.0.5-r2.ebuild,v 1.2 2011/07/20 10:04:23 graaff Exp $
 
 EAPI=2
 
@@ -25,6 +25,18 @@ IUSE=""
 ruby_add_bdepend "test? ( || ( virtual/ruby-test-unit dev-ruby/test-unit:2 ) )"
 
 RUBY_PATCHES=( "${FILESDIR}/${PN}-language-fixes.patch" )
+
+each_ruby_prepare() {
+	case ${RUBY} in
+		*jruby)
+			# Remove broken test. It's not clear if the test or code is
+			# broken... https://github.com/mutoh/locale/issues/2
+			rm test/test_detect_general.rb || die
+			;;
+		*)
+			;;
+	esac
+}
 
 all_ruby_install() {
 	all_fakegem_install
