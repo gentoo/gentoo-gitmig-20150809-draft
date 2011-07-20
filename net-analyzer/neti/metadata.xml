@@ -6,9 +6,5 @@
   <email>netmon@gentoo.org</email>
     <name>Netmon herd</name>
 </maintainer>
-<maintainer>
-  <email>dragonheart@gentoo.org</email>
-    <name>Daniel Black</name>
-</maintainer>
 <longdescription></longdescription>
 </pkgmetadata>

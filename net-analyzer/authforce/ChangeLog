@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/authforce
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/authforce/ChangeLog,v 1.14 2009/06/09 15:49:40 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/authforce/ChangeLog,v 1.15 2011/07/20 14:35:31 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #34534
 
   09 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   authforce-0.9.9.ebuild:
