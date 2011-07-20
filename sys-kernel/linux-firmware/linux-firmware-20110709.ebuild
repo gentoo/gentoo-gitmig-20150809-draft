@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-99999999.ebuild,v 1.10 2011/07/20 10:23:35 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-20110709.ebuild,v 1.1 2011/07/20 10:23:35 chithanh Exp $
 
 EAPI=3
 inherit savedconfig
@@ -17,7 +17,7 @@ DESCRIPTION="Linux firmware files"
 HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/dwmw2/firmware"
 
 LICENSE="GPL-1 GPL-2 GPL-3 BSD freedist"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~x86"
 SLOT="0"
 IUSE="savedconfig"
 

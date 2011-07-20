@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.18 2011/06/15 21:48:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.19 2011/07/20 10:23:35 chithanh Exp $
+
+*linux-firmware-20110709 (20 Jul 2011)
+
+  20 Jul 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  linux-firmware-20110604.ebuild, +linux-firmware-20110709.ebuild,
+  linux-firmware-99999999.ebuild:
+  New snapshot. Add iwl6005-ucode to blockers.
 
   15 Jun 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   linux-firmware-20110604.ebuild, linux-firmware-99999999.ebuild:
