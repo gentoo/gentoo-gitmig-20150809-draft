@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>www-servers</herd>
-<maintainer>
-  <email>bangert@gentoo.org</email>
-</maintainer>
 <longdescription lang="en">
 Varnish is an HTTP accelerator. An HTTP accelerator (often called Reverse Proxy)
 is an application that stores (caches) documents that have been requested over
