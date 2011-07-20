@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ted
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ChangeLog,v 1.38 2011/03/27 10:21:33 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ChangeLog,v 1.39 2011/07/20 16:20:46 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #81177
 
   27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> ted-2.20.ebuild,
   ted-2.21.ebuild:
