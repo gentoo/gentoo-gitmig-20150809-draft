@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/notoccite
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/notoccite/ChangeLog,v 1.1 2007/05/27 13:48:06 cryos Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/notoccite/ChangeLog,v 1.2 2011/07/20 15:58:58 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #70723
 
 *notoccite-20000720 (27 May 2007)
 
