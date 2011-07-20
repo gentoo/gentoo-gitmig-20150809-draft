@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/daemontools-encore
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools-encore/ChangeLog,v 1.4 2011/01/30 19:39:03 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/daemontools-encore/ChangeLog,v 1.5 2011/07/20 17:35:53 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #118937
 
   30 Jan 2011; Thilo Bangert <bangert@gentoo.org>
   -daemontools-encore-1.02.ebuild, -daemontools-encore-1.04.ebuild:
