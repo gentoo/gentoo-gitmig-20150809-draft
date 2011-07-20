@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/bodr
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/bodr/ChangeLog,v 1.8 2010/10/25 06:09:07 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/bodr/ChangeLog,v 1.9 2011/07/20 16:02:22 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #70723
 
   25 Oct 2010; Fabian Groffen <grobian@gentoo.org> bodr-9-r1.ebuild:
   Marked ~ppc-macos, bug #342367

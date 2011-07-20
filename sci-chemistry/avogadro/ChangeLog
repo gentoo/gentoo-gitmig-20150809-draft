@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/avogadro
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.38 2011/04/28 14:22:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.39 2011/07/20 16:01:41 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #70723
 
   28 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> avogadro-1.0.3.ebuild:
   Cleanup the cmake-utils usage.
