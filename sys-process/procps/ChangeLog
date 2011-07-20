@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.48 2011/06/14 20:35:27 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.49 2011/07/20 05:47:41 vapier Exp $
+
+*procps-3.2.8_p10 (20 Jul 2011)
+
+  20 Jul 2011; Mike Frysinger <vapier@gentoo.org>
+  files/procps-3.2.3-noproc.patch, +procps-3.2.8_p10.ebuild,
+  +files/procps-3.2.8-r1-forest-prefix.patch:
+  Start using Debian patchset #375275 by Dieter Ries.
 
   14 Jun 2011; Matt Turner <mattst88@gentoo.org>
   -files/procps-3.2.6-mips-n32_isnt_usable_on_mips64_yet.patch,
