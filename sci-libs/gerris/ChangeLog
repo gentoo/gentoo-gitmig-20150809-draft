@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gerris
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/ChangeLog,v 1.12 2011/03/02 19:59:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gerris/ChangeLog,v 1.13 2011/07/20 16:59:00 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #105599
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> gerris-0.8.0.ebuild,
   gerris-0.9.2.ebuild, gerris-20080929.ebuild, gerris-20100114.ebuild,

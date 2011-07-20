@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gts
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.17 2011/06/21 15:18:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gts/ChangeLog,v 1.18 2011/07/20 16:59:45 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #105599
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> gts-20081607.ebuild,
   gts-20090909.ebuild, gts-20100321-r1.ebuild, gts-20100321-r2.ebuild:
