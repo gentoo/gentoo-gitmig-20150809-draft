@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>python</herd>
-	<maintainer>
-		<email>pythonhead@gentoo.org</email>
-		<name>Rob Cakebread</name>
-	</maintainer>
 	<longdescription lang="en">
 		yolk-portage is a plugin for dev-python/yolk
 		You can use yolk -l --portage to see which Python packages were
