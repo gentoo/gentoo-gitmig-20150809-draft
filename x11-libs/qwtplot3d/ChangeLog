@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qwtplot3d
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.21 2010/02/20 17:29:40 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.22 2011/07/20 16:09:40 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #70723
 
   20 Feb 2010; Raúl Porcel <armin76@gentoo.org> qwtplot3d-0.2.7-r1.ebuild:
   Add ~alpha wrt #303679
