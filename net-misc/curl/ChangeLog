@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.183 2011/06/12 16:45:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.184 2011/07/20 14:52:31 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #34534
 
   12 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> -curl-7.20.0-r2.ebuild,
   -files/curl-7.20.0-libcurlm4.patch, -files/curl-7.21.3-buffer-overflow.patch:
