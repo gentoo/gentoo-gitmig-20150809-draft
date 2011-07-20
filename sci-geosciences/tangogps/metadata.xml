@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sci-geosciences</herd>
-<maintainer>
-  <email>bangert@gentoo.org</email>
-  <name>Thilo Bangert</name>
-</maintainer>
 <longdescription>
 tangogps is an easy to use, fast and lightweight mapping application for use with or without GPS.
 

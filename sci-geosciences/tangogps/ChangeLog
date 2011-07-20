@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/tangogps
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/tangogps/ChangeLog,v 1.10 2011/03/02 20:54:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/tangogps/ChangeLog,v 1.11 2011/07/20 17:31:55 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #118937
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> tangogps-0.99.1.ebuild,
   tangogps-0.99.2.ebuild, tangogps-0.99.3.ebuild, tangogps-0.99.4.ebuild:
