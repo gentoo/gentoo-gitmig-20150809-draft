@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>forensics</herd>
-<maintainer>
-  <email>dragonheart@gentoo.org</email>
-    <name>Daniel Black</name>
-</maintainer>
 <longdescription>
 The purpose of disktype is to detect the content format of a disk or disk image. It knows about common file systems, 
 partition tables, and boot codes.

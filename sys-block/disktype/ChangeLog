@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/disktype
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/disktype/ChangeLog,v 1.13 2009/09/23 20:30:12 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/disktype/ChangeLog,v 1.14 2011/07/20 14:58:47 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #34534
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> disktype-8.ebuild,
   disktype-9.ebuild:
