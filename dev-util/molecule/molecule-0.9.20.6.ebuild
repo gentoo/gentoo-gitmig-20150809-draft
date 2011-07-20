@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/molecule/molecule-0.9.20.5.ebuild,v 1.2 2011/04/25 20:15:55 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/molecule/molecule-0.9.20.6.ebuild,v 1.1 2011/07/20 22:01:33 lxnay Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
@@ -9,7 +9,7 @@ inherit multilib python
 
 DESCRIPTION="Release metatool used for creating Sabayon (and Gentoo) releases"
 HOMEPAGE="http://www.sabayon.org"
-SRC_URI="http://distfiles.sabayon.org/dev-util/${P}.tar.bz2"
+SRC_URI="mirror://sabayon/${CATEGORY}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
