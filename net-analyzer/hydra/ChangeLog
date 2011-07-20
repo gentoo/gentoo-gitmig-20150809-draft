@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/hydra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.59 2011/07/20 15:34:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.60 2011/07/20 15:46:47 jer Exp $
+
+  20 Jul 2011; Jeroen Roovers <jer@gentoo.org> hydra-6.5.ebuild,
+  hydra-6.5-r1.ebuild:
+  Do not install non-existant TODO.
 
 *hydra-6.5-r1 (20 Jul 2011)
 
