@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/cal3d-0.11.0-r1.ebuild,v 1.8 2008/10/14 02:13:01 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cal3d/cal3d-0.11.0-r1.ebuild,v 1.9 2011/07/20 10:00:41 tupone Exp $
 
-inherit eutils autotools
+EAPI=2
+inherit eutils base autotools
 
 DESCRIPTION="Cal3D is a skeletal based character animation library"
 HOMEPAGE="http://home.gna.org/cal3d"
@@ -19,10 +20,12 @@ DEPEND="doc? (
 	)"
 RDEPEND=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gcc43.patch
+DOCS=( AUTHORS ChangeLog README TODO )
+use doc && HTML_DOCS=( docs/html/api docs/html/guide )
+PATCHES=( "${FILESDIR}"/${P}-gcc43.patch )
+
+src_prepare() {
+	base_src_prepare
 	if use doc; then
 		sed -i \
 			-e "s:db2html:docbook2html:g" \
@@ -33,12 +36,15 @@ src_unpack() {
 	fi
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		$(use_enable debug) \
 		$(use_enable 16bit-indices) \
 		|| die
-	emake || die
+}
+
+src_compile() {
+	base_src_compile
 	if use doc; then
 		cd docs
 		emake doc-api || die "Failed making doc-api"
@@ -47,10 +53,4 @@ src_compile() {
 		mv *.{html,gif} html/guide/
 		mv api/html/* html/api/
 	fi
-}
-
-src_install() {
-	dodoc AUTHORS ChangeLog README TODO
-	einstall || die
-	use doc && dohtml -r docs/html/*
 }
