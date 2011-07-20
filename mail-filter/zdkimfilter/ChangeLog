@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/zdkimfilter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/zdkimfilter/ChangeLog,v 1.4 2011/06/27 18:15:16 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/zdkimfilter/ChangeLog,v 1.5 2011/07/20 14:30:53 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #34534
 
   27 Jun 2011; Eray Aslan <eras@gentoo.org> metadata.xml:
   Herd from no-herd to net-mail

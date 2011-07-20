@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/dkim-milter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/ChangeLog,v 1.35 2011/06/27 18:12:59 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/ChangeLog,v 1.36 2011/07/20 14:27:12 pacho Exp $
+
+  20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #34534
 
   27 Jun 2011; Eray Aslan <eras@gentoo.org> metadata.xml:
   Herd from no-herd to net-mail

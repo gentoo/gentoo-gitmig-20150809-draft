@@ -3,10 +3,6 @@
 <pkgmetadata>
 <herd>net-mail</herd>
 <maintainer>
-  <email>dragonheart@gentoo.org</email>
-    <name>Daniel Black</name>
-</maintainer>
-<maintainer>
   <email>mrness@gentoo.org</email>
     <name>Alin Năstac</name>
 </maintainer>
