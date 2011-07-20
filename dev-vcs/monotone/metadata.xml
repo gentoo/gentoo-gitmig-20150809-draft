@@ -3,10 +3,6 @@
 <pkgmetadata>
 <herd>no-herd</herd>
   <maintainer>
-    <email>dragonheart@gentoo.org</email>
-    <name>Daniel Black</name>
-  </maintainer>
-  <maintainer>
     <email>johnny@localmomentum.net</email>
     <name>Jonny</name>
 	<description>Future Maintainer</description>
