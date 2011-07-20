@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.98 2011/07/11 04:54:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.99 2011/07/20 13:47:17 lack Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -40,8 +40,8 @@ x11-libs/qt-sql -firebird
 gnustep-base/gnustep-make -libobjc2
 
 # Jim Ramsay <lack@gentoo.org> (14 May 2011)
-# Mask 'kde' flag for adobe-flash, since the KCM plugin is 32-bit only.
-www-plugins/adobe-flash kde
+# Mask 'kde' flag for adobe-flash, since the KCM plugin in 10.3 is 32-bit only.
+<www-plugins/adobe-flash-11 kde
 
 # Markos Chandras <hwoarang@gentoo.org> (03 May 2011)
 # Unmask firebird only for php
