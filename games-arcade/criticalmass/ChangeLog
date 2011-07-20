@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/criticalmass
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/ChangeLog,v 1.20 2011/05/06 18:21:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/ChangeLog,v 1.21 2011/07/20 15:26:53 mr_bones_ Exp $
+
+  20 Jul 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  criticalmass-1.0.2.ebuild, +files/criticalmass-1.0.2-cflags.patch:
+  respect compile flags (bug #375739)
 
   06 May 2011; Michael Sterrett <mr_bones_@gentoo.org>
   +criticalmass-1.0.2.ebuild, +files/criticalmass-1.0.2-gcc43.patch,
