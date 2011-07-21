@@ -1,6 +1,12 @@
 # ChangeLog for sci-physics/cernlib-montecarlo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/ChangeLog,v 1.15 2011/06/21 14:40:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/ChangeLog,v 1.16 2011/07/21 16:49:43 bicatali Exp $
+
+*cernlib-montecarlo-2006-r3 (21 Jul 2011)
+
+  21 Jul 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  +cernlib-montecarlo-2006-r3.ebuild:
+  New debian patch set. Switch to EAPI4
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org>
   cernlib-montecarlo-2006-r2.ebuild:

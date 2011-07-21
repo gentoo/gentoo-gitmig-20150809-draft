@@ -1,6 +1,12 @@
 # ChangeLog for sci-physics/geant
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.52 2011/06/28 13:34:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.53 2011/07/21 16:50:54 bicatali Exp $
+
+*geant-3.21.14-r3 (21 Jul 2011)
+
+  21 Jul 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  +geant-3.21.14-r3.ebuild:
+  New debian patch set. Switch to EAPI4
 
   28 Jun 2011; Justin Lecher <jlec@gentoo.org> geant-3.21.14-r2.ebuild,
   geant-4.9.2_p02.ebuild, geant-4.9.3_p02-r1.ebuild, geant-4.9.4_p01.ebuild,
