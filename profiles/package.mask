@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12925 2011/07/21 17:24:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12926 2011/07/21 17:33:01 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -114,13 +114,6 @@ app-laptop/batterymon
 # upstream.
 =sys-apps/pcsc-lite-1.7.4
 =app-crypt/ccid-1.4.4
-
-# Samuli Suominen <ssuominen@gentoo.org> (06 Jul 2011)
-# Fails to build with current mono wrt #340375
-# Needs a maintainer and a bump wrt #370049
-# The package was masked with different message for 6+ months
-# prior to this, so removal in about 7 days.
-www-plugins/moonlight
 
 # Andreas Proschofsky <suka@gentoo.org> (06 Jul 2011)
 # Mask Libreoffice 3.4.1 for some additional testing

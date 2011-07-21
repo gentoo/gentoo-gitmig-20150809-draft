@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5555 2011/07/21 17:24:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5556 2011/07/21 17:33:01 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Jul 2011; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Remove moonlight mask entry.
 
   21 Jul 2011; Pacho Ramos <pacho@gentoo.org> package.mask:
   Mask libcanberra version that is prepared to work with Gnome3 dropping gnome2
