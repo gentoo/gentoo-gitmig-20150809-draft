@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.49 2011/07/21 21:08:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.50 2011/07/21 21:39:41 cardoe Exp $
+
+*virt-manager-0.8.7-r3 (21 Jul 2011)
+
+  21 Jul 2011; Doug Goldstein <cardoe@gentoo.org>
+  +virt-manager-0.8.7-r3.ebuild, metadata.xml:
+  Removed installation of the TUI version of virt-manager. Support SPICE
+  virtual machines. Patch from Malte Starostik <m-starostik@versanet.de>.
+  bug #356825
 
   21 Jul 2011; Doug Goldstein <cardoe@gentoo.org> virt-manager-9999.ebuild:
   Switch to git-2 eclass from git eclass.
