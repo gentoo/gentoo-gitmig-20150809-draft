@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.75.ebuild,v 1.1 2011/06/16 12:11:51 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.75.ebuild,v 1.2 2011/07/21 08:11:49 dagger Exp $
 
 EAPI="2"
 
@@ -67,7 +67,7 @@ src_configure() {
 		--disable-portal \
 		--disable-meego \
 		--disable-openconnect \
-		--with-systemdunitdir="$(systemd_get_unitdir)"
+		"$(systemd_with_unitdir systemdunitdir)"
 }
 
 src_install() {
