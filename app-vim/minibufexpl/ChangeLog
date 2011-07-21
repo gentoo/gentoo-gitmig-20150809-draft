@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/minibufexpl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/minibufexpl/ChangeLog,v 1.27 2011/07/21 00:50:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/minibufexpl/ChangeLog,v 1.28 2011/07/21 00:51:51 radhermit Exp $
+
+  21 Jul 2011; Tim Harder <radhermit@gentoo.org> -minibufexpl-6.4.1_p4.ebuild,
+  -minibufexpl-6.4.1_p5.ebuild:
+  Remove old.
 
 *minibufexpl-6.4.2 (21 Jul 2011)
 
