@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/proj
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/ChangeLog,v 1.29 2011/07/20 16:49:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/ChangeLog,v 1.30 2011/07/21 07:02:26 jlec Exp $
+
+  21 Jul 2011; Justin Lecher <jlec@gentoo.org> proj-4.4.9.ebuild,
+  proj-4.5.0.ebuild, proj-4.6.0.ebuild, proj-4.6.1.ebuild, proj-4.7.0.ebuild,
+  metadata.xml:
+  Dropped fortran stuff as it is not needed for this package
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #104313

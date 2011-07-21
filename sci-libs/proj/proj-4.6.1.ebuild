@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/proj-4.6.1.ebuild,v 1.5 2011/06/21 15:06:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/proj-4.6.1.ebuild,v 1.6 2011/07/21 07:02:26 jlec Exp $
 
-inherit eutils fortran-2
+inherit eutils
 
 DESCRIPTION="Proj.4 cartographic projection software with updated NAD27 grids"
 HOMEPAGE="http://trac.osgeo.org/proj/"
@@ -14,9 +14,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE=""
 
-RDEPEND="
-	virtual/fortran
-	"
+RDEPEND=""
 DEPEND="app-arch/unzip"
 
 src_unpack() {
