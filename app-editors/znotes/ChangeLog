@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/znotes
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/znotes/ChangeLog,v 1.6 2010/10/06 20:19:11 chiiph Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/znotes/ChangeLog,v 1.7 2011/07/21 00:35:39 chiiph Exp $
+
+*znotes-0.4.4 (21 Jul 2011)
+
+  21 Jul 2011; Tomas Touceda <chiiph@gentoo.org> -znotes-0.4.0.ebuild,
+  +znotes-0.4.4.ebuild:
+  Version bump wrt bug 356651 and remove old
 
 *znotes-0.4.3 (06 Oct 2010)
 

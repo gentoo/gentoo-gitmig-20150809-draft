@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/znotes/znotes-0.4.0.ebuild,v 1.1 2010/02/04 16:42:42 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/znotes/znotes-0.4.4.ebuild,v 1.1 2011/07/21 00:35:39 chiiph Exp $
 
 EAPI="2"
 inherit qt4-r2
