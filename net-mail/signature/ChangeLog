@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/signature
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/signature/ChangeLog,v 1.1 2008/06/15 12:38:27 dertobi123 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/signature/ChangeLog,v 1.2 2011/07/21 16:13:28 eras Exp $
+
+  21 Jul 2011; Eray Aslan <eras@gentoo.org> -signature-0.14.ebuild:
+  remove from tree - bug #370227
 
 *signature-0.14 (15 Jun 2008)
 
