@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.11_rc2.ebuild,v 1.1 2011/07/20 15:22:27 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.11_rc2.ebuild,v 1.2 2011/07/21 16:29:36 mattst88 Exp $
 
 EAPI=3
 
@@ -91,6 +91,8 @@ done
 DEPEND="${RDEPEND}
 	=dev-lang/python-2*
 	dev-util/pkgconfig
+	sys-devel/bison
+	sys-devel/flex
 	x11-misc/makedepend
 	x11-proto/inputproto
 	>=x11-proto/xextproto-7.0.99.1
