@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.28-r2.ebuild,v 1.3 2011/07/10 18:44:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.28-r3.ebuild,v 1.1 2011/07/21 17:26:29 pacho Exp $
 
 EAPI="4"
 
@@ -37,6 +37,9 @@ REQUIRED_USE="udev? ( alsa )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-underlinking.patch
+
+	# We need to revert this change to let it work ok with Gnome2
+	epatch "${FILESDIR}/${PN}-0.28-revert-gsettings.patch"
 
 	# gconf-2.m4 is needed for autoconf, bug #374561
 	if ! use gtk && ! use gtk3 ; then

@@ -1,0 +1,28 @@
+
+++ libcanberra-0.28/debian/patches/92_revert_gsettings_use.patch
+
+# Description: go back to use gconf keys since that's what our GNOME writes
+diff --git a/src/libcanberra-login-sound.desktop.in b/src/libcanberra-login-sound.desktop.in
+index aa0a3a3..210d2c1 100644
+--- a/src/libcanberra-login-sound.desktop.in
++++ b/src/libcanberra-login-sound.desktop.in
+@@ -4,6 +4,6 @@ Name=GNOME Login Sound
+ Comment=Plays a sound whenever you log in
+ Exec=@bindir@/canberra-gtk-play --id="desktop-login" --description="GNOME Login"
+ OnlyShowIn=GNOME;
+-AutostartCondition=GSettings org.gnome.desktop.sound event-sounds
++AutostartCondition=GNOME /desktop/gnome/sound/event_sounds
+ X-GNOME-Autostart-Phase=Application
+ X-GNOME-Provides=login-sound
+diff --git a/src/libcanberra-ready-sound.desktop.in b/src/libcanberra-ready-sound.desktop.in
+index bf3470b..4e6a606 100644
+--- a/src/libcanberra-ready-sound.desktop.in
++++ b/src/libcanberra-ready-sound.desktop.in
+@@ -4,6 +4,6 @@ Name=GNOME System Ready Sound
+ Comment=Plays a sound whenever your system is ready for login
+ Exec=@bindir@/canberra-gtk-play --id="system-ready" --description="GNOME System Ready"
+ OnlyShowIn=GNOME;
+-AutostartCondition=GSettings org.gnome.desktop.sound event-sounds
++AutostartCondition=GNOME /desktop/gnome/sound/event_sounds
+ X-GNOME-Autostart-Phase=Application
+ X-GNOME-Provides=login-sound
