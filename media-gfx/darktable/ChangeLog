@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/darktable
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.1 2011/07/19 19:11:57 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.2 2011/07/21 08:55:05 radhermit Exp $
+
+*darktable-0.9-r1 (21 Jul 2011)
+
+  21 Jul 2011; Tim Harder <radhermit@gentoo.org> +darktable-0.9-r1.ebuild,
+  +files/darktable-0.9-automagic-deps.patch, +files/darktable-0.9-cflags.patch,
+  +files/darktable-0.9-system-libraw.patch, metadata.xml:
+  Revision bump. Fix automagic deps, respect CFLAGS (fixes bug #375755), use
+  system libraw library, and add the following use flags: debug, flickr, kde,
+  nls, and slideshow. Add the graphics herd to metadata.
 
 *darktable-9999 (19 Jul 2011)
 *darktable-0.9 (19 Jul 2011)

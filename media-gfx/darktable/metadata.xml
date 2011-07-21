@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>no-herd</herd>
+	<herd>graphics</herd>
 	<maintainer>
 		<email>c1pher@gentoo.org</email>
 		<name>Dane Smith</name>
 	</maintainer>
 	<use>
+		<flag name="flickr">Add support for uploading photos to flickr</flag>
 		<flag name="gconf">Add support for the gconf backend</flag>
+		<flag name="slideshow">Build the opengl slideshow viewer</flag>
 	</use>
 </pkgmetadata>
 
