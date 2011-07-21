@@ -1,6 +1,13 @@
 # ChangeLog for dev-tcltk/tkimg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.25 2011/07/13 07:25:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.26 2011/07/21 18:51:14 jlec Exp $
+
+*tkimg-1.4-r1 (21 Jul 2011)
+
+  21 Jul 2011; Justin Lecher <jlec@gentoo.org> +tkimg-1.4-r1.ebuild,
+  +files/tkimg-1.4-nojbig.patch:
+  Added patch for disabled jbig in bundled tiff, 356907; thanks Jesper Saxtorph
+  for the patch; Probably also fixes 343525
 
 *tkimg-1.5_pre324-r1 (13 Jul 2011)
 *tkimg-1.5_pre324 (13 Jul 2011)
