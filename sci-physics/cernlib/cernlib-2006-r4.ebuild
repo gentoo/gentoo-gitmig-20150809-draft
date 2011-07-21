@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006-r4.ebuild,v 1.1 2011/07/21 16:08:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006-r4.ebuild,v 1.2 2011/07/21 16:47:55 bicatali Exp $
 
 EAPI=4
 inherit eutils fortran-2 toolchain-funcs
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 	x11-misc/makedepend
 	dev-util/pkgconfig"
 
-IUSE="static-libs"
+IUSE=""
 
 S="${WORKDIR}/${DEB_PN}-${DEB_PV}"
 
@@ -96,7 +96,6 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${D}" install
-	use static-libs || rm -f "${ED}"usr/$(get_libdir)/lib*.a
 	cd debian
 	dodoc changelog README.* deadpool.txt NEWS copyright
 	newdoc add-ons/README README.add-ons
