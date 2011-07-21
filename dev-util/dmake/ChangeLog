@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/dmake
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/ChangeLog,v 1.23 2011/07/18 23:46:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dmake/ChangeLog,v 1.24 2011/07/21 11:59:53 scarabeus Exp $
+
+*dmake-4.12 (21 Jul 2011)
+
+  21 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/4.12-fix-overlapping-stcpys.patch, -dmake-4.11.ebuild,
+  -dmake-4.11-r1.ebuild, +dmake-4.12.ebuild:
+  Version bump to latest dmake (should build libreoffice). Drop overshadowed
+  versions.
 
   18 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org> dmake-4.11-r1.ebuild:
   Escape the variable to avoid undefined command during src_prepare phase.
