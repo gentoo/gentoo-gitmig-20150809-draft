@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/IO-All
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-All/ChangeLog,v 1.4 2011/07/19 13:07:40 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-All/ChangeLog,v 1.5 2011/07/21 17:51:23 tove Exp $
+
+*IO-All-0.430.0 (21 Jul 2011)
+
+  21 Jul 2011; Torsten Veller <tove@gentoo.org> +IO-All-0.430.0.ebuild:
+  Version bump
 
 *IO-All-0.420.0 (19 Jul 2011)
 
