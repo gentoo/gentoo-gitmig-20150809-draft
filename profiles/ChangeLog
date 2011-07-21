@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5550 2011/07/20 16:01:19 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5551 2011/07/21 16:10:41 eras Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Jul 2011; Eray Aslan <eras@gentoo.org> package.mask:
+  remove mask for net-mail/vm-pop3d as it is no longer in the tree
 
   20 Jul 2011; Eray Aslan <eras@gentoo.org> package.mask:
   mask net-mail/freepops for removal

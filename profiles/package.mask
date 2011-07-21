@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12920 2011/07/21 12:42:37 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12921 2011/07/21 16:10:41 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -272,12 +272,6 @@ app-pda/gpixpod
 # clients provide this service now.
 # Removal in 30 days
 net-mail/signature
-
-# Eray Aslan <eras@gentoo.org> (14 Jun 2011)
-# Dead upstream. Does not work properly - bug #179497 #370145.
-# Several good alternatives, including dovecot, cyrus, mailutils.
-# Removal in 30 days
-net-mail/vm-pop3d
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (14 Jun 2011)
 # GNOME 3.1.x pre-releases for libraries in the tree
