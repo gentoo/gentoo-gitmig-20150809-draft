@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/nullmodem
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nullmodem/ChangeLog,v 1.4 2011/07/20 17:16:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nullmodem/ChangeLog,v 1.5 2011/07/21 16:32:50 tomjbe Exp $
+
+  21 Jul 2011; Thomas Beierlein <tomjbe@gentoo.org> metadata.xml:
+  Take maintainership
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> -nullmodem-0.0.4.ebuild,
   -nullmodem-0.0.5.ebuild, metadata.xml:
