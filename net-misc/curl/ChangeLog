@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.185 2011/07/20 16:14:50 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.186 2011/07/21 08:11:48 angelos Exp $
+
+  21 Jul 2011; Christoph Mende <angelos@gentoo.org> curl-7.21.7.ebuild:
+  Bump c-ares dep to 1.6 (bug #369501)
 
 *curl-7.21.7 (20 Jul 2011)
 
