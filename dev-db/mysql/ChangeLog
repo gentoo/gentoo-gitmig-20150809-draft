@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.583 2011/07/14 03:58:44 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.584 2011/07/21 05:59:30 jmbsvicetto Exp $
+
+*mysql-5.1.58-r1 (21 Jul 2011)
+
+  21 Jul 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +mysql-5.1.58-r1.ebuild:
+  [dev-db/mysql-5.1.58-r1] Bumped mysql-5.1.58 to fix all the issues related to
+  the ebuild and the mysql-v2 eclass. Fixes bug 375063.
 
   14 Jul 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   -mysql-5.4.3_beta.ebuild, -mysql-5.5.1_alpha_pre2.ebuild,
