@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.3.8.ebuild,v 1.1 2011/02/13 20:32:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.4.10.ebuild,v 1.1 2011/07/21 11:07:18 patrick Exp $
 
 EAPI="2"
 
-# omgwtf :)
-RESTRICT="test"
-
 inherit eutils
+
+# omgwtf
+RESTRICT="test"
 
 DESCRIPTION="Evented IO for V8 Javascript"
 HOMEPAGE="http://nodejs.org/"
