@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>no-herd</herd>
-  <maintainer>
-  	<email>blueness@gentoo.org</email>
-  	<name>Anthony G. Basile</name>
-  </maintainer>
-  <maintainer>
-  	<email>chiiph@gentoo.org</email>
-  	<name>Tomás Touceda</name>
-  </maintainer>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>blueness@gentoo.org</email>
+		<name>Anthony G. Basile</name>
+	</maintainer>
+	<maintainer>
+		<email>chiiph@gentoo.org</email>
+		<name>Tomás Touceda</name>
+	</maintainer>
+	<use>
+		<flag name='tor-hardening'>Compile tor with hardening on vanilla compilers/linkers</flag>
+		<flag name='transparent-proxy'>Enable transparent proxying</flag>
+		<flag name='bufferevents'>Use Libevent's buffered IO</flag>
+		<flag name='nat-pmp'>Enable NAT Port Mapping Protocol</flag>
+		<flag name='upnp'>Enable Universal Plug and Play</flag>
+	</use>
 </pkgmetadata>
