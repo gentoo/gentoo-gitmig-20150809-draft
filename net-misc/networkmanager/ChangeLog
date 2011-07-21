@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.106 2011/06/09 01:41:03 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.107 2011/07/21 08:05:28 dagger Exp $
+
+*networkmanager-0.8.4.0-r2 (21 Jul 2011)
+
+  21 Jul 2011; Robert Piasek <dagger@gentoo.org>
+  -networkmanager-0.8.4.0-r1.ebuild, +networkmanager-0.8.4.0-r2.ebuild,
+  metadata.xml:
+  Add systemd eclass support (bug #366113)
+  Make mobile broadband optional (bug #374727)
 
   09 Jun 2011; Sebastian Pipping <sping@gentoo.org>
   networkmanager-0.8-r1.ebuild, networkmanager-0.8.1-r6.ebuild,

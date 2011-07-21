@@ -23,6 +23,7 @@
 		<flag name="dhclient">Use dhclient from <pkg>net-misc/dhcp</pkg> for getting ip.</flag>
 		<flag name="dhcpcd">Use <pkg>net-misc/dhcpcd</pkg> for getting ip.</flag>
 		<flag name="nss">Use <pkg>dev-libs/nss</pkg> for cryptography.</flag>
+                <flag name="ppp">Enable support for mobile broadband and PPPoE connections using <pkg>net-dialup/ppp</pkg>.</flag>
 		<flag name="resolvconf">Use <pkg>net-dns/openresolv</pkg> for managing DNS information</flag>
 		<flag name="connection-sharing">Use <pkg>net-dns/dnsmasq</pkg> and <pkg>net-firewall/iptables</pkg> for connection sharing </flag>
 	</use>
