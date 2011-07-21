@@ -1,6 +1,11 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.19 2011/07/12 16:50:30 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.20 2011/07/21 21:38:10 mattst88 Exp $
+
+  21 Jul 2011; Matt Turner <mattst88@gentoo.org> libav-0.7.9999.ebuild,
+  libav-9999.ebuild:
+  Add ~mips to 7.9999 and 9999 ebuilds so that the keyword doesn't get lost
+  again.
 
   12 Jul 2011; Matt Turner <mattst88@gentoo.org> libav-0.7.ebuild:
   Added ~mips, bug 154882
