@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/oasis-4.0-r2.ebuild,v 1.6 2011/06/21 16:02:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/oasis-4.0-r2.ebuild,v 1.7 2011/07/21 19:17:24 jlec Exp $
 
-EAPI="3"
+EAPI=3
 
 inherit eutils fortran-2 multilib toolchain-funcs
 
@@ -18,9 +18,6 @@ LICENSE="ccp4 oasis"
 IUSE="examples +minimal"
 
 RDEPEND="
-	virtual/fortran
-
-	${RDEPEND}
 	sci-chemistry/ccp4-apps
 	sci-chemistry/pymol
 	sci-libs/mmdb
@@ -29,7 +26,9 @@ RDEPEND="
 		sci-chemistry/solve-resolve-bin
 		sci-chemistry/arp-warp-bin
 	)"
-DEPEND="sci-libs/ccp4-libs"
+DEPEND="${RDEPEND}
+	virtual/fortran
+	sci-libs/ccp4-libs"
 
 S="${WORKDIR}"/${MY_P}
 
