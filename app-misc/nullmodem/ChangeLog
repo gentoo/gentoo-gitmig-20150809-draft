@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/nullmodem
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nullmodem/ChangeLog,v 1.5 2011/07/21 16:32:50 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nullmodem/ChangeLog,v 1.6 2011/07/21 17:25:40 tomjbe Exp $
+
+  21 Jul 2011; Thomas Beierlein <tomjbe@gentoo.org> nullmodem-0.0.6.ebuild:
+  tested ~amd64, adding keyword. cleanup ebuild.
 
   21 Jul 2011; Thomas Beierlein <tomjbe@gentoo.org> metadata.xml:
   Take maintainership
