@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.21.7.ebuild,v 1.2 2011/07/21 08:11:48 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.21.7.ebuild,v 1.3 2011/07/21 16:27:15 xarthisius Exp $
 
 # NOTE: If you bump this ebuild, make sure you bump dev-python/pycurl!
 
@@ -14,7 +14,7 @@ SRC_URI="http://curl.haxx.se/download/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="ares gnutls idn ipv6 kerberos ldap libssh2 nss ssl static-libs test threads"
 
 RDEPEND="ldap? ( net-nds/openldap )
