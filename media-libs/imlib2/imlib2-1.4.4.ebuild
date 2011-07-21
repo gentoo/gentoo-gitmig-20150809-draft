@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.4.4.ebuild,v 1.10 2011/03/19 19:26:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.4.4.ebuild,v 1.11 2011/07/21 04:01:44 vapier Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.enlightenment.org/"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="X bzip2 gif jpeg mmx mp3 png tiff zlib"
 
-DEPEND="=media-libs/freetype-2*
+RDEPEND="=media-libs/freetype-2*
 	bzip2? ( app-arch/bzip2 )
 	zlib? ( sys-libs/zlib )
 	gif? ( >=media-libs/giflib-4.1.0 )
@@ -22,6 +22,8 @@ DEPEND="=media-libs/freetype-2*
 	tiff? ( >=media-libs/tiff-3.5.5 )
 	X? ( x11-libs/libXext x11-proto/xextproto )
 	mp3? ( media-libs/libid3tag )"
+DEPEND="${RDEPEND}
+	png? ( dev-util/pkgconfig )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-libpng-1.5.patch #354989
