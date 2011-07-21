@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.584 2011/07/21 05:59:30 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.585 2011/07/21 06:08:08 jmbsvicetto Exp $
+
+  21 Jul 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -mysql-5.1.58.ebuild:
+  Dropped broken mysql-5.1.58 ebuild.
 
 *mysql-5.1.58-r1 (21 Jul 2011)
 
