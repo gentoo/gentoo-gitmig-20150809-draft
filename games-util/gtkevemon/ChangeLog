@@ -1,0 +1,12 @@
+# ChangeLog for games-util/gtkevemon
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/gtkevemon/ChangeLog,v 1.1 2011/07/21 15:03:58 wired Exp $
+
+*gtkevemon-9999 (21 Jul 2011)
+*gtkevemon-1.8-r1 (21 Jul 2011)
+
+  21 Jul 2011; Alex Alexander <wired@gentoo.org> +gtkevemon-1.8-r1.ebuild,
+  +files/gtkevemon-1.8-learning.patch.gz, +files/gtkevemon-1.8-portrait.patch,
+  +gtkevemon-9999.ebuild, +metadata.xml:
+  first commit. based on the sunrise ebuilds by Andre Schulz.
+
