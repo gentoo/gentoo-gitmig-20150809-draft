@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath-bin/ekopath-bin-4.0.10_pre20110717.ebuild,v 1.2 2011/07/20 07:29:08 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath-bin/ekopath-bin-4.0.10_pre20110717.ebuild,v 1.3 2011/07/21 07:50:52 xarthisius Exp $
 
 EAPI=4
 
@@ -43,6 +43,11 @@ pkg_pretend() {
 	fi
 }
 
+src_unpack() {
+	cp "${DISTDIR}"/${A} "${S}" || die
+	chmod +x "${S}"/${P}.run
+}
+
 src_prepare() {
 	cat > "99${PN}" <<-EOF
 		PATH=/opt/${P}/bin
@@ -52,7 +57,7 @@ src_prepare() {
 }
 
 src_install() {
-	"${DISTDIR}"/${P}.run \
+	./${P}.run \
 		--prefix "${D}/opt/${P}" \
 		--mode unattended || die
 	rm -rf "${D}"/opt/${P}/uninstall || die
