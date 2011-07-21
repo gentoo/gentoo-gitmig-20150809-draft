@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dhcpdump/dhcpdump-1.8.ebuild,v 1.1 2008/11/04 19:38:42 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dhcpdump/dhcpdump-1.8.ebuild,v 1.2 2011/07/21 01:50:53 jer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,8 +13,9 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND="net-libs/libpcap"
-RDEPEND="${DEPEND}"
+CDEPEND="net-libs/libpcap"
+DEPEND="dev-lang/perl"
+RDEPEND="${CDEPEND}"
 
 src_unpack() {
 	unpack ${A}
