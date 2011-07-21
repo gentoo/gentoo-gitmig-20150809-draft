@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.57 2011/06/11 04:29:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.58 2011/07/21 20:52:11 cardoe Exp $
+
+*qemu-kvm-0.14.1-r2 (21 Jul 2011)
+
+  21 Jul 2011; Doug Goldstein <cardoe@gentoo.org> +qemu-kvm-0.14.1-r2.ebuild:
+  Fix for qxl/spice support. Fix for CVE-2011-2212 & CVE-2011-2512. Drop the
+  number of targets we build by default to just the minimal for qemu-kvm. bug
+  #372411, bug #372691
 
   11 Jun 2011; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-0.14.1-r1.ebuild:
   Make USE=vhost-net the default. bug #370939
