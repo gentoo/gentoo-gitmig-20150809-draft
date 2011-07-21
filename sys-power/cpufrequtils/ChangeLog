@@ -1,6 +1,15 @@
 # ChangeLog for sys-power/cpufrequtils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.55 2010/08/13 14:03:56 josejx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.56 2011/07/21 20:04:49 mattst88 Exp $
+
+*cpufrequtils-008-r1 (21 Jul 2011)
+
+  21 Jul 2011; Matt Turner <mattst88@gentoo.org> +cpufrequtils-008-r1.ebuild,
+  +files/cpufrequtils-008-cpuid.patch,
+  +files/cpufrequtils-008-fix-msr-read.patch,
+  +files/cpufrequtils-008-increase-MAX_LINE_LEN.patch:
+  Add a few upstream fixes patches, one of which allows us to use cpufrequtils
+  on mips.
 
   13 Aug 2010; Joseph Jezak <josejx@gentoo.org> cpufrequtils-007.ebuild:
   Marked ppc/ppc64 stable for bug #327035.
