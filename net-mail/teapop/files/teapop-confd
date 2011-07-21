@@ -1,8 +1,0 @@
-# TEAPOP command-line options.
-#
-# Please refer to 'man teapop' for a complete list of options.
-#
-# -s for standalone mode.
-
-TEAPOP_OPTS="-s"
-
