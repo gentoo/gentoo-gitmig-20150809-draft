@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/molecule/molecule-0.9.20.6.ebuild,v 1.1 2011/07/20 22:01:33 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/molecule/molecule-0.9.20.7.ebuild,v 1.1 2011/07/21 12:03:16 lxnay Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
@@ -20,6 +20,7 @@ DEPEND="dev-util/intltool
 	sys-devel/gettext"
 RDEPEND="net-misc/rsync
 	sys-fs/squashfs-tools
+	sys-process/lsof
 	virtual/cdrtools"
 
 src_install() {
