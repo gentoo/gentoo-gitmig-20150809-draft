@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/flickcurl
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flickcurl/ChangeLog,v 1.1 2011/07/21 08:31:34 radhermit Exp $
+
+*flickcurl-1.21 (21 Jul 2011)
+
+  21 Jul 2011; Tim Harder <radhermit@gentoo.org> +flickcurl-1.21.ebuild,
+  +metadata.xml:
+  Initial import (bug #350109).
+
