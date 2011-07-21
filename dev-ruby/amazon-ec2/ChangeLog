@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/amazon-ec2
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amazon-ec2/ChangeLog,v 1.9 2010/08/15 19:14:35 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amazon-ec2/ChangeLog,v 1.10 2011/07/21 10:00:37 graaff Exp $
+
+*amazon-ec2-0.9.17 (21 Jul 2011)
+
+  21 Jul 2011; Hans de Graaff <graaff@gentoo.org> +amazon-ec2-0.9.17.ebuild:
+  Version bump. Fix tests breaking due to missing yard, bug 339261.
 
   15 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   amazon-ec2-0.9.15.ebuild:
