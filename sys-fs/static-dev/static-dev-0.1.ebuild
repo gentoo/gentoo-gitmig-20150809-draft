@@ -1,8 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/static-dev/static-dev-0.1.ebuild,v 1.13 2011/04/15 21:57:05 ulm Exp $
-
-inherit toolchain-funcs
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/static-dev/static-dev-0.1.ebuild,v 1.14 2011/07/21 01:56:04 vapier Exp $
 
 DESCRIPTION="A skeleton, statically managed /dev"
 HOMEPAGE="http://bugs.gentoo.org/107875"
@@ -13,7 +11,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
-RDEPEND="|| ( sys-apps/makedev =sys-apps/baselayout-1* )"
+RDEPEND="sys-apps/makedev"
 
 pkg_preinst() {
 	if [[ -d ${ROOT}/dev/.udev || -c ${ROOT}/dev/.devfs ]] ; then
@@ -30,29 +28,6 @@ pkg_preinst() {
 	fi
 }
 
-src_install() {
-	dodir /dev
-	cd "${D}"/dev/ || die "Unable to descend into /dev"
-
-	# keep in sync with sys-apps/baselayout
-	local suffix=""
-	case $(tc-arch) in
-		arm*)    suffix=-arm ;;
-		alpha)   suffix=-alpha ;;
-		amd64)   suffix=-i386 ;;
-		hppa)    suffix=-hppa ;;
-		ia64)    suffix=-ia64 ;;
-		m68k)    suffix=-m68k ;;
-		mips*)   suffix=-mips ;;
-		ppc*)    suffix=-powerpc ;;
-		s390*)   suffix=-s390 ;;
-		sh*)     suffix=-sh ;;
-		sparc*)  suffix=-sparc ;;
-		x86)     suffix=-i386 ;;
-	esac
-
-	einfo "Using generic${suffix} to make $(tc-arch) device nodes..."
-
-	MAKEDEV -d "${D}"/dev generic${suffix} || die
-	MAKEDEV -d "${D}"/dev sg scd rtc hde hdf hdg hdh input audio video || die
+pkg_postinst() {
+	MAKEDEV -d "${ROOT}"/dev generic sg scd rtc hde hdf hdg hdh input audio video
 }
