@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/vm-pop3d
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vm-pop3d/ChangeLog,v 1.19 2009/09/23 19:15:49 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vm-pop3d/ChangeLog,v 1.20 2011/07/21 16:05:11 eras Exp $
+
+  21 Jul 2011; Eray Aslan <eras@gentoo.org> -vm-pop3d-1.1.6-r1.ebuild,
+  -vm-pop3d-1.1.6-r2.ebuild:
+  remove from tree - bug #370145
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> vm-pop3d-1.1.6-r1.ebuild,
   vm-pop3d-1.1.6-r2.ebuild:
