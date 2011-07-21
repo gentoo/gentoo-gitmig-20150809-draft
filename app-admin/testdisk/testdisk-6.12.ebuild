@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.12.ebuild,v 1.2 2011/07/08 10:16:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.12.ebuild,v 1.3 2011/07/21 18:12:26 c1pher Exp $
 
 EAPI=2
 inherit eutils flag-o-matic
@@ -46,8 +46,8 @@ src_configure() {
 	econf ${myconf} || die
 
 	# perform safety checks for NTFS and REISERFS
-	if use ntfs && egrep -q 'undef HAVE_LIBNTFS\>' "${S}"/config.h ; then
-		die "Failed to find NTFS library."
+	if use ntfs && ! egrep -q '^#define HAVE_LIBNTFS(3G)? 1$' "${S}"/config.h ; then
+		die "Failed to find either NTFS or NTFS-3G library."
 	fi
 	if use reiserfs && egrep -q 'undef HAVE_LIBREISERFS\>' "${S}"/config.h ; then
 		die "Failed to find reiserfs library."
