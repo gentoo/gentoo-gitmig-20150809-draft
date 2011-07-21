@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/pdb-extract
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-extract/ChangeLog,v 1.16 2010/06/15 14:45:45 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-extract/ChangeLog,v 1.17 2011/07/21 19:04:04 jlec Exp $
+
+  21 Jul 2011; Justin Lecher <jlec@gentoo.org> pdb-extract-1.700.ebuild,
+  pdb-extract-3.004-r1.ebuild, pdb-extract-3.004-r2.ebuild, metadata.xml:
+  Some cleanup
 
 *pdb-extract-3.004-r2 (15 Jun 2010)
 
