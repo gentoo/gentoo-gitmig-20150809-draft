@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.3e.ebuild,v 1.6 2011/04/11 17:40:42 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.3e.ebuild,v 1.7 2011/07/21 17:16:12 blueness Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -26,7 +26,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 sparc x86"
-IUSE="acl authfile ban +caps case clamav +ctrls deflate doc exec hardened ifsession ident ipv6 kerberos ldap mysql ncurses nls pam postgres radius ratio readme rewrite selinux sftp shaper sitemisc softquota ssl tcpd trace vroot xinetd"
+IUSE="acl authfile ban +caps case clamav +ctrls deflate doc exec ifsession ident ipv6 kerberos ldap mysql ncurses nls pam postgres radius ratio readme rewrite selinux sftp shaper sitemisc softquota ssl tcpd trace vroot xinetd"
 
 DEPEND="acl? ( sys-apps/acl sys-apps/attr )
 	caps? ( sys-libs/libcap )
