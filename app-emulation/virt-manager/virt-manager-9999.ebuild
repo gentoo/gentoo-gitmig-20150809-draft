@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-9999.ebuild,v 1.4 2011/03/28 08:40:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-9999.ebuild,v 1.5 2011/07/21 21:08:12 cardoe Exp $
 
 #BACKPORTS=1
 
@@ -67,7 +67,7 @@ src_prepare() {
 		intltoolize --automake --copy --force
 		perl -i -p -e 's,^DATADIRNAME.*$,DATADIRNAME = share,' po/Makefile.in.in
 		perl -i -p -e 's,^GETTEXT_PACKAGE.*$,GETTEXT_PACKAGE = virt-manager,' \
-			po/Makefile.in.i
+			po/Makefile.in.in
 		eautoreconf
 	fi
 

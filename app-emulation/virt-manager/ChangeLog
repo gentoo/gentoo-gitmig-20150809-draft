@@ -1,12 +1,15 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.47 2011/06/29 19:20:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.48 2011/07/21 21:08:12 cardoe Exp $
 
   29 Jun 2011; Markus Meier <maekke@gentoo.org> virt-manager-0.8.7.ebuild:
   x86 stable, bug #370497
 
   19 Jun 2011; Markos Chandras <hwoarang@gentoo.org> virt-manager-0.8.7.ebuild:
   Stable on amd64 wrt bug #370497
+
+  07 Jun 2011; Doug Goldstein <cardoe@gentoo.org> virt-manager-9999.ebuild:
+  Fix typo with Makefile.in.in. bug #361193
 
 *virt-manager-0.8.7-r2 (07 Jun 2011)
 
