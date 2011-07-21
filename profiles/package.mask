@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12923 2011/07/21 16:26:54 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12924 2011/07/21 16:34:37 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -225,12 +225,6 @@ sci-chemistry/webmo
 >=virtual/mysql-5.5
 =dev-db/mariadb-5.2*
 =virtual/mysql-5.2*
-
-# Eray Aslan <eras@gentoo.org> (18 Jun 2011)
-# Dead upstream.  Lots of alternatives including mailx,
-# nail, ssmtp, postfix...
-# Removal in 30 days
-mail-client/smtpclient
 
 # Torsten Veller <tove@gentoo.org> (18 Jun 2011)
 # Mask perl-5.14. See tracker bug #356171
