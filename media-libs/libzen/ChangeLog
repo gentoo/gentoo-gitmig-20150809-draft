@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libzen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.14 2011/07/21 10:38:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.15 2011/07/21 23:15:54 radhermit Exp $
+
+  21 Jul 2011; Tim Harder <radhermit@gentoo.org> -libzen-0.4.16.ebuild,
+  -libzen-0.4.17.ebuild, -libzen-0.4.18.ebuild, -libzen-0.4.19.ebuild:
+  Remove old.
 
   21 Jul 2011; Markus Meier <maekke@gentoo.org> libzen-0.4.20.ebuild:
   amd64/x86 stable, bug #375515
