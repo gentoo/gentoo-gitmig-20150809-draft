@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.50 2011/07/21 21:39:41 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.51 2011/07/21 21:47:00 cardoe Exp $
+
+  21 Jul 2011; Doug Goldstein <cardoe@gentoo.org> -virt-manager-0.8.6.ebuild:
+  Remove old version
 
 *virt-manager-0.8.7-r3 (21 Jul 2011)
 
