@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-008.ebuild,v 1.1 2010/07/05 19:43:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-008.ebuild,v 1.2 2011/07/21 19:47:14 mattst88 Exp $
 
 EAPI="3"
 
@@ -15,13 +15,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug nls"
 
-DEPEND="sys-fs/sysfsutils"
+DEPEND=""
+RDEPEND=""
 
 ft() { use $1 && echo true || echo false ; }
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-007-build.patch
 	epatch "${FILESDIR}"/${PN}-007-nls.patch #205576 #292246
+	epatch "${FILESDIR}"/${PN}-008-remove-pipe-from-CFLAGS.patch #362523
 }
 
 src_configure() {

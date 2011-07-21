@@ -1,9 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/files/cpufrequtils-init.d-006,v 1.1 2010/01/15 07:41:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/files/cpufrequtils-init.d-006,v 1.2 2011/07/21 19:47:14 mattst88 Exp $
 
-affect_change() {
+change() {
 	local c ret=0 opts="$1"
 	shift
 	ebegin "Running cpufreq-set ${opts}"
@@ -33,9 +33,9 @@ affect_change() {
 }
 
 start() {
-	affect_change "${START_OPTS}" ${SYSFS_EXTRA}
+	change "${START_OPTS}" ${SYSFS_EXTRA}
 }
 
 stop() {
-	affect_change "${STOP_OPTS}"
+	change "${STOP_OPTS}"
 }
