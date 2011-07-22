@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.8.0-r1.ebuild,v 1.6 2011/07/18 14:33:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.8.1.ebuild,v 1.1 2011/07/22 22:55:24 scarabeus Exp $
 
 EAPI=2
 
@@ -85,7 +85,6 @@ src_prepare() {
 		swig/python/GNUmakefile || die
 
 	epatch "${FILESDIR}"/1.7.2-ruby_cflags.patch
-	epatch "${FILESDIR}"/gdal-png-1.5.patch
 
 	# -soname is only accepted by GNU ld/ELF
 	[[ ${CHOST} == *-darwin* ]] \
