@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyspf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.12 2011/07/20 14:02:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.13 2011/07/22 12:06:45 neurogeek Exp $
+
+  22 Jul 2011; Jesus Rivero <neurogeek@gentoo.org> metadata.xml:
+  Changed herd to python
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #34534
