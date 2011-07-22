@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.89 2011/07/18 04:23:38 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.90 2011/07/22 14:08:57 jer Exp $
+
+  22 Jul 2011; Jeroen Roovers <jer@gentoo.org> libetpan-1.0.ebuild:
+  Stable for HPPA (bug #373687).
 
   18 Jul 2011; Tim Harder <radhermit@gentoo.org> libetpan-1.1.ebuild:
   Update soname warning.
