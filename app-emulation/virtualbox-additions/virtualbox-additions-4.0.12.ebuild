@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-additions/virtualbox-additions-4.0.12.ebuild,v 1.2 2011/07/22 10:31:54 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-additions/virtualbox-additions-4.0.12.ebuild,v 1.3 2011/07/22 16:57:38 hwoarang Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SRC_URI="http://download.virtualbox.org/virtualbox/${PV}/${MY_P}.iso"
 
 LICENSE="PUEL"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="mirror"
 
