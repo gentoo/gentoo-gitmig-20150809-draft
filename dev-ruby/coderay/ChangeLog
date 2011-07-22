@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/coderay
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.36 2011/05/01 07:30:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.37 2011/07/22 13:40:07 xarthisius Exp $
+
+  22 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> coderay-0.9.6.ebuild:
+  ppc64 stable wrt #371259, comment out line invoking USE=ruby19
 
 *coderay-0.9.8 (01 May 2011)
 
