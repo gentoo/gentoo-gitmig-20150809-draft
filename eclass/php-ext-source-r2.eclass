@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.11 2011/07/22 09:19:15 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.12 2011/07/22 12:13:27 olemarkus Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -225,12 +225,14 @@ php-ext-source-r2_buildinilist() {
 		PHPSAPILIST="apache2 cli cgi fpm"
 	fi
 
+	PHPINIFILELIST=""
 	local x
 	for x in ${PHPSAPILIST} ; do
 		if [[ -f "/etc/php/${x}-${1}/php.ini" ]] ; then
 			PHPINIFILELIST="${PHPINIFILELIST} etc/php/${x}-${1}/ext/${PHP_EXT_NAME}.ini"
 		fi
 	done
+	PHPFULLINIFILELIST="${PHPFULLINIFILELIST} ${PHPINIFILELIST}"
 }
 
 # @FUNCTION: php-ext-source-r2_createinifiles
@@ -245,22 +247,36 @@ php-ext-source-r2_createinifiles() {
 		# Build the list of <ext>.ini files to edit/add to
 		php-ext-source-r2_buildinilist ${slot}
 
+		PHPFULLINIFILELISTbak="${PHPFULLINIFILELIST}"
+		PHPFULLINIFILELIST="${PHPINIFILELIST}"
 		# Add the needed lines to the <ext>.ini files
 		if [[ "${PHP_EXT_INI}" = "yes" ]] ; then
 			php-ext-source-r2_addextension "${PHP_EXT_NAME}.so"
 		fi
+		
+		PHPFULLINIFILELIST=${PHPFULLINIFILELISTbak}
 
 		# Symlink the <ext>.ini files from ext/ to ext-active/
 		for inifile in ${PHPINIFILELIST} ; do
+			if [[ -n "${PHP_EXT_INIFILE}" ]]; then
+				cat "${FILESDIR}/${PHP_EXT_INIFILE}" >> "${D}/${inifile}"
+				einfo "Added content of ${FILESDIR}/${PHP_EXT_INIFILE} to ${inifile}"
+			fi
+
+
+
+
 			inidir="${inifile/${PHP_EXT_NAME}.ini/}"
 			inidir="${inidir/ext/ext-active}"
 			dodir "/${inidir}"
 			dosym "/${inifile}" "/${inifile/ext/ext-active}"
 		done
 
+
 		# Add support for installing PHP files into a version dependant directory
 		PHP_EXT_SHARED_DIR="/usr/share/php/${PHP_EXT_NAME}"
 	done
+	
 }
 
 php-ext-source-r2_addextension() {
@@ -348,7 +364,7 @@ php-ext-source-r2_addtoinifile() {
 # @CODE
 php-ext-source-r2_addtoinifiles() {
 	local x
-	for x in ${PHPINIFILELIST} ; do
+	for x in ${PHPFULLINIFILELIST} ; do
 		php-ext-source-r2_addtoinifile "${1}" "${2}" "${x}" "${3}"
 	done
 }
