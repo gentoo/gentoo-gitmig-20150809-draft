@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phppgadmin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.91 2011/01/06 06:28:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.92 2011/07/22 17:30:34 hwoarang Exp $
+
+  22 Jul 2011; Markos Chandras <hwoarang@gentoo.org> phppgadmin-5.0.2.ebuild:
+  Stable on amd64 wrt bug #375775
 
   06 Jan 2011; Tim Harder <radhermit@gentoo.org> phppgadmin-5.0.2.ebuild:
   Fix mistake as the LICENSE file was previously removed properly.
