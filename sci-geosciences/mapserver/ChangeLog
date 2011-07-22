@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/mapserver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.42 2011/07/12 12:31:33 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.43 2011/07/22 22:52:45 scarabeus Exp $
+
+*mapserver-6.0.1 (22 Jul 2011)
+
+  22 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/6.0.0-fix-mapunion-macro.patch, -mapserver-6.0.0.ebuild,
+  +mapserver-6.0.1.ebuild:
+  Version bump to latest. Punt older.
 
   12 Jul 2011; Fabio Erculiani <lxnay@gentoo.org>
   +files/6.0.0-fix-mapunion-macro.patch, mapserver-6.0.0.ebuild:
