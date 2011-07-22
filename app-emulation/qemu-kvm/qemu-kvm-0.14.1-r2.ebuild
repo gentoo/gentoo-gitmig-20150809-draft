@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.14.1-r2.ebuild,v 1.1 2011/07/21 20:52:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.14.1-r2.ebuild,v 1.2 2011/07/22 14:57:51 cardoe Exp $
 
 BACKPORTS=2
 
@@ -34,16 +34,19 @@ png pulseaudio qemu-ifup rbd sasl sdl spice ssl threads vde \
 # static, depends on libsdl being built with USE=static-libs, which can not
 # be expressed in current EAPI's
 
-COMMON_TARGETS="arm cris m68k microblaze mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64"
+COMMON_TARGETS="i386 x86_64 arm cris m68k microblaze mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64"
 IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} mips64 mips64el ppcemb"
-IUSE_USER_TARGETS="${COMMON_TARGETS} i386 x86_64 alpha armeb ppc64abi32 sparc32plus"
+IUSE_USER_TARGETS="${COMMON_TARGETS} alpha armeb ppc64abi32 sparc32plus"
 
 # Setup the default SoftMMU targets, while using the loops
-# below to setup the other targets. i386 & x86_64 should be the only
+# below to setup the other targets. x86_64 should be the only
 # defaults on for qemu-kvm
-IUSE="${IUSE} +qemu_softmmu_targets_i386 +qemu_softmmu_targets_x86_64"
+IUSE="${IUSE} +qemu_softmmu_targets_x86_64"
 
 for target in ${IUSE_SOFTMMU_TARGETS}; do
+	if [ "x${target}" = "xx86_64" ]; then
+		continue
+	fi
 	IUSE="${IUSE} qemu_softmmu_targets_${target}"
 done
 
@@ -98,7 +101,13 @@ kvm_kern_warn() {
 }
 
 pkg_setup() {
-	use qemu_softmmu_targets_x86_64 || ewarn "You disabled default target QEMU_SOFTMMU_TARGETS=x86_64"
+	if ! use qemu_softmmu_targets_x86_64 && use x86_64 ; then
+		eerror "You disabled default target QEMU_SOFTMMU_TARGETS=x86_64"
+	fi
+
+	if ! use qemu_softmmu_targets_x86_64 && use x86 ; then
+		eerror "You disabled default target QEMU_SOFTMMU_TARGETS=x86_64"
+	fi
 
 	if kernel_is lt 2 6 25; then
 		eerror "This version of KVM requres a host kernel of 2.6.25 or higher."
@@ -154,7 +163,8 @@ src_configure() {
 	done
 
 	if [ -z "${softmmu_targets}" ]; then
-		conf_opts="${conf_opts} --disable-system"
+		eerror "All SoftMMU targets are disabled. This is invalid for qemu-kvm"
+		die "At least 1 SoftMMU target must be enabled"
 	else
 		einfo "Building the following softmmu targets: ${softmmu_targets}"
 	fi
