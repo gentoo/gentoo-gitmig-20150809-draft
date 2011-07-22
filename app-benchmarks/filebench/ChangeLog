@@ -1,6 +1,11 @@
 # ChangeLog for app-benchmarks/filebench
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/filebench/ChangeLog,v 1.3 2009/04/30 17:24:10 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/filebench/ChangeLog,v 1.4 2011/07/22 18:55:35 patrick Exp $
+
+*filebench-1.4.9 (22 Jul 2011)
+
+  22 Jul 2011; Patrick Lauer <patrick@gentoo.org> +filebench-1.4.9.ebuild:
+  Bump, fixes #331769
 
   30 Apr 2009; Patrick Lauer <patrick@gentoo.org> -filebench-1.2.4.ebuild:
   Remove old
