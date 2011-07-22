@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/edict
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/edict/ChangeLog,v 1.18 2011/07/03 07:57:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/edict/ChangeLog,v 1.19 2011/07/22 11:24:58 xarthisius Exp $
+
+  22 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> edict-1.17.ebuild:
+  ppc64 stable wrt #369897
 
   03 Jul 2011; Markos Chandras <hwoarang@gentoo.org> edict-1.17.ebuild:
   Stable on amd64 wrt bug #369897

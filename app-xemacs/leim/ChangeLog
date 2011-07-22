@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/leim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/leim/ChangeLog,v 1.21 2011/07/03 08:04:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/leim/ChangeLog,v 1.22 2011/07/22 11:25:06 xarthisius Exp $
+
+  22 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> leim-1.31.ebuild:
+  ppc64 stable wrt #369897
 
   03 Jul 2011; Markos Chandras <hwoarang@gentoo.org> leim-1.31.ebuild:
   Stable on amd64 wrt bug #369897

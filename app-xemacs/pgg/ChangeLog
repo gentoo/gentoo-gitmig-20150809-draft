@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/pgg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/pgg/ChangeLog,v 1.18 2011/07/03 08:07:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/pgg/ChangeLog,v 1.19 2011/07/22 11:25:07 xarthisius Exp $
+
+  22 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> pgg-1.07.ebuild:
+  ppc64 stable wrt #369897
 
   03 Jul 2011; Markos Chandras <hwoarang@gentoo.org> pgg-1.07.ebuild:
   Stable on amd64 wrt bug #369897

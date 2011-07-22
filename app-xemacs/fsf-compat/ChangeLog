@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/fsf-compat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/fsf-compat/ChangeLog,v 1.23 2011/07/03 08:00:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/fsf-compat/ChangeLog,v 1.24 2011/07/22 11:25:05 xarthisius Exp $
+
+  22 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> fsf-compat-1.19.ebuild:
+  ppc64 stable wrt #369897
 
   03 Jul 2011; Markos Chandras <hwoarang@gentoo.org> fsf-compat-1.19.ebuild:
   Stable on amd64 wrt bug #369897

@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/sun
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/sun/ChangeLog,v 1.6 2008/05/05 13:29:28 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/sun/ChangeLog,v 1.7 2011/07/22 11:25:03 xarthisius Exp $
+
+  22 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> sun-1.16.ebuild:
+  ppc64 stable wrt #369897
 
   05 May 2008; Raúl Porcel <armin76@gentoo.org> sun-1.16.ebuild:
   alpha/sparc stable wrt #219332
