@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.500 2011/07/15 17:25:03 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.501 2011/07/22 12:04:58 graaff Exp $
+
+*ruby-1.8.7_p334-r2 (22 Jul 2011)
+
+  22 Jul 2011; Hans de Graaff <graaff@gentoo.org> +ruby-1.8.7_p334-r2.ebuild:
+  Add patch to fix threading bug on ppc64, bug 375075. Thanks to Kacper Kowalik
+  for chasing down upstream and us.
 
   15 Jul 2011; Matt Turner <mattst88@gentoo.org> ruby-1.9.2-r1.ebuild:
   Added ~mips, bug 332593
