@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.154 2011/05/20 20:25:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.155 2011/07/22 13:41:10 jer Exp $
+
+  22 Jul 2011; Jeroen Roovers <jer@gentoo.org> apache-2.2.17.ebuild:
+  Stable for HPPA (bug #360625).
+
+  22 Jul 2011; Jeroen Roovers <jer@gentoo.org> apache-2.2.17.ebuild:
+  Stable for HPPA (bug #360625).
 
   20 May 2011; Kacper Kowalik <xarthisius@gentoo.org> apache-2.2.17.ebuild:
   ppc64 stable wrt #360625
