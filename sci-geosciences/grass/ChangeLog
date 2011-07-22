@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.105 2011/07/19 19:47:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.106 2011/07/22 11:14:58 scarabeus Exp $
+
+  22 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org> -grass-6.3.0.ebuild,
+  -files/grass-6.3.0-gcc44.patch, -files/grass-6.3.0-html-nonviz.patch,
+  -files/grass-6.3.0-o_creat.patch, -files/grass_icon.png:
+  old
 
   19 Jul 2011; Markus Meier <maekke@gentoo.org> grass-6.4.1.ebuild:
   x86 stable, bug #362987
