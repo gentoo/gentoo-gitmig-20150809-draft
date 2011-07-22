@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/IO-Interface
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Interface/ChangeLog,v 1.21 2009/05/25 16:30:24 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Interface/ChangeLog,v 1.22 2011/07/22 18:25:22 tove Exp $
+
+*IO-Interface-1.60.0 (22 Jul 2011)
+
+  22 Jul 2011; Torsten Veller <tove@gentoo.org> +IO-Interface-1.60.0.ebuild:
+  Version bump
 
   25 May 2009; Brent Baude <ranger@gentoo.org> IO-Interface-1.05.ebuild:
   keyworded ~arch for ppc64, bug 270821
