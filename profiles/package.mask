@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12927 2011/07/21 17:38:53 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12928 2011/07/22 03:05:52 binki Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -878,7 +878,6 @@ dev-lang/nemerle
 # per QA team policy, all these need to be kept masked by default, if
 # available in the tree.
 media-tv/v4l-dvb-hg
-net-irc/irssi-svn
 ~app-i18n/skk-jisyo-9999
 net-misc/netcomics-cvs
 app-portage/layman-dbtools

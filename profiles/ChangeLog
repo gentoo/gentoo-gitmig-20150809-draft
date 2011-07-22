@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5557 2011/07/22 02:21:17 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5558 2011/07/22 03:05:52 binki Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Jul 2011; Nathan Phillip Brink <binki@gentoo.org> package.mask:
+  Remove irssi-svn from the list of live ebuilds since it's now called
+  irssi-999.
 
   22 Jul 2011; Nathan Phillip Brink <binki@gentoo.org> updates/3Q-2011:
   Move net-irc/irssi-svn-0.3 to net-irc/irssi-999.
