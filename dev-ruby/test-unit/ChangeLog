@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.41 2011/07/15 17:35:01 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.42 2011/07/22 07:36:16 graaff Exp $
+
+*test-unit-2.3.0 (22 Jul 2011)
+
+  22 Jul 2011; Hans de Graaff <graaff@gentoo.org> +test-unit-2.3.0.ebuild,
+  +files/test-unit-2.3.0-jruby-tests.patch,
+  +files/test-unit-2.3.0-ree18-tests.patch:
+  Version bump.
 
   15 Jul 2011; Matt Turner <mattst88@gentoo.org> test-unit-1.2.3.ebuild:
   Added ~mips, bug 332593
