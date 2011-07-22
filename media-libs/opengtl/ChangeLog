@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/opengtl
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opengtl/ChangeLog,v 1.1 2011/07/22 15:09:07 dilfridge Exp $
+
+*opengtl-0.9.15.1 (22 Jul 2011)
+
+  22 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +opengtl-0.9.15.1.ebuild, +metadata.xml:
+  New library, dependency of app-office/calligra
+
