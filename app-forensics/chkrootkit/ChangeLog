@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/chkrootkit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.58 2010/07/24 14:33:48 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.59 2011/07/22 19:12:14 patrick Exp $
+
+  22 Jul 2011; Patrick Lauer <patrick@gentoo.org>
+  -files/chkrootkit-0.47-add-missing-includes.diff,
+  -files/chkrootkit-0.47-makefile.diff:
+  Removing stale files for #341049
 
 *chkrootkit-0.49 (24 Jul 2010)
 
