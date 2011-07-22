@@ -1,22 +1,24 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20100915.ebuild,v 1.2 2010/10/04 12:51:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20110722.ebuild,v 1.1 2011/07/22 19:17:41 pacho Exp $
+
+EAPI="4"
 
 inherit emul-linux-x86
 
 LICENSE="GPL-3 GPL-2 LGPL-2 LGPL-2.1 FTL MIT || ( LGPL-2.1 MPL-1.1 )"
-KEYWORDS="-* amd64"
-
-IUSE=""
+KEYWORDS="-* ~amd64"
 
 DEPEND=""
 RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
-	~app-emulation/emul-linux-x86-xlibs-${PV}"
+	~app-emulation/emul-linux-x86-xlibs-${PV}
+	~app-emulation/emul-linux-x86-opengl-${PV}"
+# RDEPEND on opengl stuff shouldn't be needed, but add it anyway until bug #354943 is properly solved
 
-src_unpack() {
+src_prepare() {
 	query_tools="${S}/usr/bin/gtk-query-immodules-2.0|${S}/usr/bin/gdk-pixbuf-query-loaders|${S}/usr/bin/pango-querymodules"
 	ALLOWED="(${S}/etc/env.d|${S}/etc/gtk-2.0|${S}/etc/pango/i686-pc-linux-gnu|${query_tools})"
-	emul-linux-x86_src_unpack
+	emul-linux-x86_src_prepare
 
 	# these tools generate an index in /etc/{pango,gtk-2.0}/${CHOST}
 	mv -f "${S}/usr/bin/pango-querymodules"{,32} || die
@@ -43,7 +45,7 @@ pkg_postinst() {
 	einfo "Generating gtk+ immodules/gdk-pixbuf loaders listing..."
 	mkdir -p ${GTK2_CONFDIR}
 	gtk-query-immodules-2.0-32 > "${ROOT}${GTK2_CONFDIR}/gtk.immodules"
-	gdk-pixbuf-query-loaders32 > "${ROOT}${GTK2_CONFDIR}/gdk-pixbuf.loaders"
+	gdk-pixbuf-query-loaders32 > "${ROOT}usr/lib32/gdk-pixbuf-2.0/2.10.0/loaders.cache"
 
 	# gdk-pixbuf.loaders should be in their CHOST directories respectively.
 	if [[ -e ${ROOT}/etc/gtk-2.0/gdk-pixbuf.loaders ]] ; then
