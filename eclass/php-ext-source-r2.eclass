@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.10 2011/06/29 07:04:43 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.11 2011/07/22 09:19:15 olemarkus Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -225,7 +225,6 @@ php-ext-source-r2_buildinilist() {
 		PHPSAPILIST="apache2 cli cgi fpm"
 	fi
 
-	PHPINIFILELIST=""
 	local x
 	for x in ${PHPSAPILIST} ; do
 		if [[ -f "/etc/php/${x}-${1}/php.ini" ]] ; then
