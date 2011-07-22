@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.36 2011/07/22 09:08:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.37 2011/07/22 09:10:22 graaff Exp $
 #
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -255,6 +255,17 @@ ruby_add_bdepend() {
 
 	DEPEND="${DEPEND} $dependency"
 	RDEPEND="${RDEPEND}"
+}
+
+# @FUNCTION: ruby_get_use_implementations
+# @DESCRIPTION:
+# Gets an array of ruby use targets enabled by the user
+ruby_get_use_implementations() {
+	local i implementation
+	for implementation in ${USE_RUBY}; do
+		use ruby_targets_${implementation} && i+=" ${implementation}"
+	done
+	echo $i
 }
 
 # @FUNCTION: ruby_get_use_targets
