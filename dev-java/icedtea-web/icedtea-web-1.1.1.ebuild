@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.0.1.ebuild,v 1.3 2011/03/30 19:54:38 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.1.1.ebuild,v 1.1 2011/07/22 09:08:37 caster Exp $
 # Build written by Andrew John Hughes (ahughes@redhat.com)
 
 EAPI="2"
@@ -15,9 +15,9 @@ DESCRIPTION="FOSS Java browser plugin and Web Start implementation"
 SRC_URI="http://icedtea.classpath.org/download/source/${P}.tar.gz"
 HOMEPAGE="http://icedtea.classpath.org"
 
-IUSE="doc +nsplugin"
+IUSE="build doc +nsplugin"
 
-RDEPEND="dev-java/icedtea:6
+RDEPEND="dev-java/icedtea:${SLOT}
 	 nsplugin? ( >=net-libs/xulrunner-1.9.1 )"
 DEPEND="${RDEPEND}"
 
@@ -31,8 +31,8 @@ pkg_setup() {
 	# to limit supported VM's for building and their preferred order
 	if [[ -n "${JAVA_PKG_FORCE_VM}" ]]; then
 		einfo "Honoring user-set JAVA_PKG_FORCE_VM"
-	elif has_version dev-java/icedtea:6; then
-		JAVA_PKG_FORCE_VM="icedtea6"
+	elif has_version dev-java/icedtea:${SLOT}; then
+		JAVA_PKG_FORCE_VM="icedtea${SLOT}"
 	else
 		JAVA_PKG_FORCE_VM=""
 		# don't die just yet if merging a binpkg - bug #258423
@@ -52,11 +52,6 @@ unset_vars() {
 	unset JAVA_HOME JDK_HOME CLASSPATH JAVAC JAVACFLAGS
 }
 
-src_compile() {
-	# we need this to override the src_compile from java-pkg-2
-	default
-}
-
 src_unpack() {
 	if [[ -n ${DIE_IF_NOT_BINPKG} ]]; then
 		die "Unable to find a supported VM for building"
@@ -67,39 +62,61 @@ src_unpack() {
 
 src_configure() {
 	local vmhome=$(java-config -O)
-	local icedtea6dir="${ROOT}usr/$(get_libdir)/icedtea6"
+
+	if use build; then
+		icedteadir="${ICEDTEA_BIN_DIR}"
+		installdir="/opt/icedtea${SLOT}-web-bin"
+	else
+		icedteadir="/usr/$(get_libdir)/icedtea${SLOT}"
+		installdir="/usr/$(get_libdir)/icedtea${SLOT}-web"
+	fi
 
 	unset_vars
 
-	if [[ ${vmhome} == ${icedtea6dir} ]] ; then
-		installdir=${vmhome}
-		VMHANDLE="icedtea6"
+	if use build || [[ ${vmhome} == ${icedteadir} ]] ; then
+		VMHANDLE="icedtea${SLOT}"
 	else
-		die "Unexpected install location of IcedTea6"
+		die "Unexpected install location of IcedTea${SLOT}"
 	fi
 
-	elog "Installing IcedTea-Web in ${installdir}"
-	if [ ! -e ${installdir} ] ; then
-		eerror "Could not find JDK install directory ${installdir}."
+	einfo "Installing IcedTea-Web in ${installdir}"
+	einfo "Installing IcedTea-Web for Icedtea${SLOT} in ${icedteadir}"
+	if [ ! -e ${vmhome} ] ; then
+		eerror "Could not find JDK install directory ${vmhome}."
+		die
 	fi
 
+	# we need to override all *dir variables that econf sets
+	# man page (javaws) is installed directly to icedteadir because it's easier than symlinking, as we don't know
+	# the suffix the man page will end up compressed with, anyway
 	econf \
-		--prefix=${installdir} \
-		--with-jdk-home=${vmhome} \
+		--prefix=${installdir} --mandir=${icedteadir}/man --infodir=${installdir}/share/info --datadir=${installdir}/share \
+		--with-jdk-home=${icedteadir} \
 		$(use_enable doc docs) \
 		$(use_enable nsplugin plugin) \
 		|| die "configure failed"
 }
 
+src_compile() {
+	# we need this to override the src_compile from java-pkg-2
+	default
+}
+
 src_install() {
-	emake DESTDIR="${D}" install || die "Install failed"
+	# parallel make problem bug #372235
+	emake -j1 DESTDIR="${D}" install || die "Install failed"
 	dodoc AUTHORS README NEWS || die
 
 	if use nsplugin; then
 		local arch=${ARCH};
 		use x86 && arch=i386;
-		install_mozilla_plugin "${installdir}/jre/lib/${arch}/IcedTeaPlugin.so";
+		install_mozilla_plugin "${installdir}/$(get_libdir)/IcedTeaPlugin.so";
 	fi
+
+	for binary in javaws itweb-settings; do
+		dosym ${installdir}/bin/${binary} ${icedteadir}/bin/${binary}
+		dosym ${installdir}/bin/${binary} ${icedteadir}/jre/bin/${binary}
+	done
 }
 
 pkg_postinst() {
