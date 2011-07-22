@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/redcloth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.60 2011/04/16 17:29:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.61 2011/07/22 13:07:41 xarthisius Exp $
+
+  22 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> redcloth-4.2.3-r1.ebuild:
+  ppc64 stable wrt #352483
 
   16 Apr 2011; Raúl Porcel <armin76@gentoo.org> redcloth-4.2.3-r1.ebuild:
   ia64 stable wrt #352483
