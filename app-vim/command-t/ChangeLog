@@ -1,6 +1,13 @@
 # ChangeLog for app-vim/command-t
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/command-t/ChangeLog,v 1.1 2011/06/02 11:58:10 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/command-t/ChangeLog,v 1.2 2011/07/22 00:58:26 radhermit Exp $
+
+*command-t-1.2.1-r1 (22 Jul 2011)
+
+  22 Jul 2011; Tim Harder <radhermit@gentoo.org> -command-t-1.2.1.ebuild,
+  +command-t-1.2.1-r1.ebuild:
+  Revision bump and remove old. Install all ruby files in ruby specific
+  directories.
 
 *command-t-1.2.1 (02 Jun 2011)
 
