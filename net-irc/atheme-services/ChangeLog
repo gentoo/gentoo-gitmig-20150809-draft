@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/atheme-services
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.8 2011/07/20 02:24:17 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.9 2011/07/22 03:22:12 binki Exp $
+
+*atheme-services-6.0.8-r2 (22 Jul 2011)
+
+  22 Jul 2011; Nathan Phillip Brink <binki@gentoo.org>
+  -atheme-services-6.0.8-r1.ebuild, +atheme-services-6.0.8-r2.ebuild,
+  files/atheme-services.initd:
+  Use --pidfile and --user in the initscript, recommended by the_mgt/ich.
 
 *atheme-services-6.0.8-r1 (20 Jul 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-6.0.8-r1.ebuild,v 1.1 2011/07/20 02:24:17 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-6.0.8-r2.ebuild,v 1.1 2011/07/22 03:22:12 binki Exp $
 
 EAPI=4
 
