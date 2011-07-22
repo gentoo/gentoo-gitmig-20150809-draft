@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/newt_syrup
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/newt_syrup/ChangeLog,v 1.1 2011/07/21 23:59:25 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/newt_syrup/ChangeLog,v 1.2 2011/07/22 15:59:33 cardoe Exp $
+
+  22 Jul 2011; Doug Goldstein <cardoe@gentoo.org> newt_syrup-0.1.2.ebuild:
+  Add ~amd64 keyword
 
 *newt_syrup-0.1.2 (21 Jul 2011)
 

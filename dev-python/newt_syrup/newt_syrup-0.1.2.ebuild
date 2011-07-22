@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/newt_syrup/newt_syrup-0.1.2.ebuild,v 1.1 2011/07/21 23:59:25 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/newt_syrup/newt_syrup-0.1.2.ebuild,v 1.2 2011/07/22 15:59:33 cardoe Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -14,7 +14,7 @@ SRC_URI="http://mcpierce.fedorapeople.org/rpms/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
