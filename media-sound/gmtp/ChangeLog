@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/gmtp
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmtp/ChangeLog,v 1.1 2011/07/22 22:58:07 tomka Exp $
+
+*gmtp-1.1.0 (22 Jul 2011)
+
+  22 Jul 2011; Thomas Kahle <tomka@gentoo.org> +gmtp-1.1.0.ebuild,
+  +files/makefile-gentoo.patch, +metadata.xml:
+  initial upload
+

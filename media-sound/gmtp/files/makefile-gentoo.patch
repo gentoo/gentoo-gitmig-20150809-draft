@@ -1,0 +1,70 @@
+diff -U 3 -dHrN gMTP-orig/Makefile gMTP/Makefile
+--- gMTP-orig/Makefile	2011-07-22 22:43:46.000000000 +0100
++++ gMTP/Makefile	2011-07-22 23:47:35.000000000 +0100
+@@ -1,7 +1,7 @@
+ # gMTP Sync tool
+ 
+ PKG_NAME = gmtp
+-PREFIX ?= /usr/local
++PREFIX ?= /usr
+ VER = 1.1.0
+ # Note: If you update above, please update the config.h and pkginfo file as well.
+ 
+@@ -28,7 +28,7 @@
+ GCONFTOOL = gconftool-2
+ TAR = tar
+ 
+-CFLAGS += -c -g -O
++CFLAGS += -c
+ LDFLAGS += 
+ LIBS +=
+ 
+@@ -115,7 +115,7 @@
+ 	$(INSTALL) -d $(DESTDIR)$(PREFIX)/share/applications
+ 	$(INSTALL) -d $(DESTDIR)$(PREFIX)/share/pixmaps
+ 	$(INSTALL) -d $(DESTDIR)$(PREFIX)/share/gconf
+-	$(INSTALL) -d $(DESTDIR)$(PREFIX)/share/gconf/schemas
++	$(INSTALL) -d $(DESTDIR)/etc/gconf/schemas
+ 	$(INSTALL) -d $(DESTDIR)$(PREFIX)/share/locale
+ 	$(INSTALL) -d $(DESTDIR)$(PREFIX)/share/locale/es
+ 	$(INSTALL) -d $(DESTDIR)$(PREFIX)/share/locale/it
+@@ -143,17 +143,17 @@
+ 	$(INSTALL) -m 644 images/view-refresh.png $(DESTDIR)$(PREFIX)/share/$(PKG_NAME)
+ 	$(INSTALL) -m 644 misc/gMTP.desktop $(DESTDIR)$(PREFIX)/share/applications
+ 	$(INSTALL) -m 644 images/icon.png $(DESTDIR)$(PREFIX)/share/pixmaps
+-	$(INSTALL) -m 644 misc/gMTP.schemas $(DESTDIR)$(PREFIX)/share/gconf/schemas
++	$(INSTALL) -m 644 misc/gMTP.schemas $(DESTDIR)/etc/gconf/schemas
+ 	mv $(DESTDIR)$(PREFIX)/share/pixmaps/icon.png $(DESTDIR)$(PREFIX)/share/pixmaps/gMTPicon.png
+ 	cp po/es.mo $(DESTDIR)$(PREFIX)/share/locale/es/LC_MESSAGES/gmtp.mo
+ 	cp po/fr.mo $(DESTDIR)$(PREFIX)/share/locale/fr/LC_MESSAGES/gmtp.mo
+ 	cp po/it.mo $(DESTDIR)$(PREFIX)/share/locale/it/LC_MESSAGES/gmtp.mo
+ 	cp po/da.mo $(DESTDIR)$(PREFIX)/share/locale/da/LC_MESSAGES/gmtp.mo
+ 	cp po/de.mo $(DESTDIR)$(PREFIX)/share/locale/de/LC_MESSAGES/gmtp.mo
+-	mv $(DESTDIR)$(PREFIX)/share/gconf/schemas/gMTP.schemas $(DESTDIR)$(PREFIX)/share/gconf/schemas/gmtp.schemas
++	mv $(DESTDIR)/etc/gconf/schemas/gMTP.schemas $(DESTDIR)/etc/gconf/schemas/gmtp.schemas
+ 
+ register-gconf-schemas: install
+-	GCONF_CONFIG_SOURCE=`$(GCONFTOOL) --get-default-source` $(GCONFTOOL) --makefile-install-rule $(DESTDIR)$(PREFIX)/share/gconf/schemas/gmtp.schemas
++	GCONF_CONFIG_SOURCE=`$(GCONFTOOL) --get-default-source` $(GCONFTOOL) --makefile-install-rule $(DESTDIR)/etc/gconf/schemas/gmtp.schemas
+ 
+ install-gtk3: gmtp $(catalogues)
+ 	$(INSTALL) -d $(DESTDIR)$(PREFIX)
+@@ -215,7 +215,7 @@
+ 	rm -f  $(DESTDIR)$(PREFIX)/share/$(PKG_NAME)/*
+ 	rm -f  $(DESTDIR)$(PREFIX)/share/applications/gMTP.desktop
+ 	rm -f  $(DESTDIR)$(PREFIX)/share/pixmaps/gMTPicon.png
+-	rm -f  $(DESTDIR)$(PREFIX)/share/gconf/schemas/gmtp.schemas
++	rm -f  $(DESTDIR)/etc/gconf/schemas/gmtp.schemas
+ 	rm -f  $(DESTDIR)$(PREFIX)/share/glib-2.0/schemas/org.gnome.gMTP.gschema.xml
+ 	rm -f  $(DESTDIR)$(PREFIX)/share/locale/es/LC_MESSAGES/gmtp.mo
+ 	rm -f  $(DESTDIR)$(PREFIX)/share/locale/fr/LC_MESSAGES/gmtp.mo
+diff -U 3 -dHrN gMTP-orig/pkginfo gMTP/pkginfo
+--- gMTP-orig/pkginfo	2011-07-22 22:43:46.000000000 +0100
++++ gMTP/pkginfo	2011-07-22 22:44:02.000000000 +0100
+@@ -1,5 +1,5 @@
+ CLASSES=none
+-BASEDIR=/usr/local
++BASEDIR=/usr
+ TZ=PST
+ PATH=/sbin:/usr/sbin:/usr/bin:/usr/sadm/install/bin
+ PKG=gmtp
