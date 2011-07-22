@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-extpack-oracle/virtualbox-extpack-oracle-4.0.12.ebuild,v 1.1 2011/07/17 21:07:03 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-extpack-oracle/virtualbox-extpack-oracle-4.0.12.ebuild,v 1.2 2011/07/22 10:34:21 tomka Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ SRC_URI="http://download.virtualbox.org/virtualbox/${PV}/${MY_P}.vbox-extpack ->
 
 LICENSE="PUEL"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 RESTRICT="mirror strip"
 
