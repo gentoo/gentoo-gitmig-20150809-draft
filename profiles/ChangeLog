@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5560 2011/07/22 04:45:02 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5561 2011/07/22 08:04:27 angelos Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Jul 2011; Christoph Mende <angelos@gentoo.org>
+  arch/amd64/package.use.mask:
+  Remove invalid USE unmask
 
   22 Jul 2011; Nathan Phillip Brink <binki@gentoo.org> package.mask:
   Drop net-irc/oer for bug #339545, bug #240918, and upstream abandoning the
