@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12928 2011/07/22 03:05:52 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12929 2011/07/22 04:41:09 binki Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -369,7 +369,6 @@ www-client/opera-next
 #
 # Removal on 2011-07-12.
 net-irc/oer
-net-irc/oer-mysql
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (06 May 2011)
 #  on behalf of QA team
