@@ -1,9 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/piedock/piedock-1.3.1.ebuild,v 1.1 2011/06/20 12:20:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/piedock/piedock-1.3.3.ebuild,v 1.1 2011/07/22 17:29:20 hwoarang Exp $
 
-EAPI=2
-inherit base
+EAPI=4
 
 MY_PN=PieDock
 MY_P=${MY_PN}-${PV}
@@ -17,10 +16,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="media-libs/libpng
+DEPEND="
+	media-libs/freetype:2
+	media-libs/libpng
 	x11-libs/libX11
 	x11-libs/libXft
-	media-libs/freetype:2"
+	x11-libs/libXmu
+	x11-libs/libXrender
+"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
