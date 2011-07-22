@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.29.ebuild,v 1.7 2011/03/27 12:11:23 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.29.ebuild,v 1.8 2011/07/22 12:06:53 xarthisius Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ DESCRIPTION="user space driver and tools for use with mobile phones"
 HOMEPAGE="http://www.gnokii.org/"
 if [ "$PV" != "9999" ]; then
 	SRC_URI="http://www.gnokii.org/download/${PN}/${P}.tar.bz2"
-	KEYWORDS="amd64 hppa ~ppc ~ppc64 sparc x86"
+	KEYWORDS="amd64 hppa ppc ppc64 sparc x86"
 else
 	SRC_URI=""
 	KEYWORDS=""
