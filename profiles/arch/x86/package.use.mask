@@ -1,8 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.61 2011/07/11 04:55:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.62 2011/07/22 18:09:02 blueness Exp $
 
 # This file requires >=portage-2.1.1
+
+# Anthony G. Basile <blueness@gentoo.org> (22 Jul 2011)
+# nat-pmp and upnp are only stable on amd64/x86 for this package
+>=net-misc/tor-0.2.3 -nat-pmp -upnp
 
 # Robin H. Johnson <robbat2@gentoo.org> (10 Jul 2011)
 # PPS should work on all arches, but only keyworded on amd64/x86

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.138 2011/07/20 13:47:17 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.139 2011/07/22 18:11:45 blueness Exp $
+
+  22 Jul 2011; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
+  Unmask USE="nat-pmp" and "upnp" here.
 
   20 Jul 2011; Jim Ramsay <lack@gentoo.org> package.use.mask:
   Unmask the KCM plugin (kde USE flag) for adobe-flash-11 and later which has a
