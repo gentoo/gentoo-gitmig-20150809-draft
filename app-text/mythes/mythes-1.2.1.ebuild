@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mythes/mythes-1.2.1.ebuild,v 1.1 2011/07/21 12:03:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mythes/mythes-1.2.1.ebuild,v 1.2 2011/07/22 21:50:04 scarabeus Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ DESCRIPTION="A simple thesaurus for Libreoffice"
 HOMEPAGE="http://hunspell.sourceforge.net/"
 SRC_URI="mirror://sourceforge/hunspell/MyThes/${PV}/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="static-libs"
