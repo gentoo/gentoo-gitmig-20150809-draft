@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/esearch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.62 2011/02/23 17:01:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.63 2011/07/22 18:59:39 fuzzyray Exp $
+
+*esearch-0.7.2 (22 Jul 2011)
+
+  22 Jul 2011; Paul Varner <fuzzyray@gentoo.org> +esearch-0.7.2.ebuild:
+  Version bump to fix bugs 139528, 259082, 261935, 304313 and 342609.
+  The source code for this release is hosted at:
+  https://github.com/fuzzyray/esearch
 
   23 Feb 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   esearch-0.7.1-r8.ebuild:
