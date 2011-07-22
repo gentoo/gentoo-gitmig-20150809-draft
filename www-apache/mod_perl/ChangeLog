@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_perl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.91 2011/07/04 22:07:57 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.92 2011/07/22 13:46:52 jer Exp $
+
+  22 Jul 2011; Jeroen Roovers <jer@gentoo.org> mod_perl-2.0.5.ebuild:
+  Marked ~hppa (bug #359047).
 
   04 Jul 2011; Christian Ruppert <idl0r@gentoo.org> mod_perl-2.0.5.ebuild:
   Fix apache/perl dependencies again, bug 373943.
