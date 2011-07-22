@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/smart-live-rebuild
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.24 2011/07/20 08:27:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.25 2011/07/22 13:33:25 mgorny Exp $
+
+*smart-live-rebuild-1.1.2 (22 Jul 2011)
+
+  22 Jul 2011; Michał Górny <mgorny@gentoo.org>
+  -smart-live-rebuild-1.1.1.ebuild, +smart-live-rebuild-1.1.2.ebuild:
+  Version bump. The new version uses new gentoopm API and fixes quickpkg
+  invocation.
 
   20 Jul 2011; Michał Górny <mgorny@gentoo.org>
   smart-live-rebuild-1.1.1.ebuild:

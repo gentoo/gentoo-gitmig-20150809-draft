@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/smart-live-rebuild-1.1.1.ebuild,v 1.2 2011/07/20 08:27:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/smart-live-rebuild-1.1.2.ebuild,v 1.1 2011/07/22 13:33:25 mgorny Exp $
 
 EAPI=3
 
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="<app-portage/gentoopm-0.1.3"
+RDEPEND=">=app-portage/gentoopm-0.1.3"
 
 PYTHON_MODNAME=smartliverebuild
 
