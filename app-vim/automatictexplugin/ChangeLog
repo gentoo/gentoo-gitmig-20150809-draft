@@ -1,6 +1,13 @@
 # ChangeLog for app-vim/automatictexplugin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/automatictexplugin/ChangeLog,v 1.7 2011/07/15 06:02:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/automatictexplugin/ChangeLog,v 1.8 2011/07/22 18:39:40 radhermit Exp $
+
+*automatictexplugin-9.7.4 (22 Jul 2011)
+
+  22 Jul 2011; Tim Harder <radhermit@gentoo.org>
+  -automatictexplugin-9.6.ebuild, -automatictexplugin-9.6.1.ebuild,
+  +automatictexplugin-9.7.4.ebuild:
+  Version bump and remove old.
 
 *automatictexplugin-9.7.1 (15 Jul 2011)
 
