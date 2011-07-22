@@ -1,0 +1,8 @@
+
+
+*libnatpmp-20110715 (22 Jul 2011)
+
+  22 Jul 2011; Anthony G. Basile <blueness@gentoo.org>
+  +libnatpmp-20110715.ebuild, +files/respect-FLAGS.patch, +metadata.xml:
+  Initial commit to satisfy tor's net-pmp USE flag
+
