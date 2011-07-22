@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.262 2011/07/21 14:20:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.263 2011/07/22 20:01:31 blueness Exp $
+
+*tor-0.2.3.2_alpha-r2 (22 Jul 2011)
+
+  22 Jul 2011; Anthony G. Basile <blueness@gentoo.org>
+  -tor-0.2.3.2_alpha-r1.ebuild, +tor-0.2.3.2_alpha-r2.ebuild,
+  +files/tor-0.2.3.2_alpha-fix-asneeded.patch:
+  Address bug #375955
 
 *tor-0.2.3.2_alpha-r1 (21 Jul 2011)
 *tor-0.2.2.30_rc-r1 (21 Jul 2011)

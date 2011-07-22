@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.3.2_alpha-r1.ebuild,v 1.1 2011/07/21 14:20:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.3.2_alpha-r2.ebuild,v 1.1 2011/07/22 20:01:31 blueness Exp $
 
 EAPI=4
 
@@ -17,9 +17,11 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="+bufferevents doc nat-pmp tor-hardening transparent-proxy threads upnp"
-
 DEPEND="dev-libs/openssl
-	>=dev-libs/libevent-2.0"
+	>=dev-libs/libevent-2.0
+	nat-pmp? ( net-libs/libnatpmp )
+	upnp? ( net-libs/miniupnpc )"
+
 # The tordns patch for tsocks avoids some leakage of information thus raising anonymity
 RDEPEND="${DEPEND}
 	net-proxy/tsocks[tordns]"
@@ -32,6 +34,7 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/torrc.sample-0.1.2.6.patch
 	epatch "${FILESDIR}"/${PN}-0.2.1.19-logrotate.patch
+	epatch "${FILESDIR}"/${PN}-0.2.3.2_alpha-fix-asneeded.patch
 
 	einfo "Regenerating autotools files ..."
 	epatch "${FILESDIR}"/${PN}-0.2.2.24_alpha-respect-CFLAGS.patch
