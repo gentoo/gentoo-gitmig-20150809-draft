@@ -2,10 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>sci-chemistry</herd>
-<maintainer>
-  <email>jlec@gentoo.org</email>
-</maintainer>
-<longdescription>
+	<maintainer>
+		<email>jlec@gentoo.org</email>
+	</maintainer>
+	<longdescription>
 	BALBES is a system for solving protein structures using x-ray 
 	crystalographic data. Molecular Replacement(MR) is its core 
 	scientific method. BALBES aims to integrate all components, 

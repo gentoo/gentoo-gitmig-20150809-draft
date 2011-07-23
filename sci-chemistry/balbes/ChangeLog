@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/balbes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/balbes/ChangeLog,v 1.8 2011/06/21 16:05:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/balbes/ChangeLog,v 1.9 2011/07/23 12:29:01 jlec Exp $
+
+*balbes-1.0.0_p100317-r2 (23 Jul 2011)
+
+  23 Jul 2011; Justin Lecher <jlec@gentoo.org>
+  +files/pyxml-0.8.4-python-2.6.patch, -balbes-1.0.0_p100317-r1.ebuild,
+  +balbes-1.0.0_p100317-r2.ebuild, metadata.xml:
+  Fix for missing StripXml, #375903
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> balbes-1.0.0_p100317-r1.ebuild:
   Add dependency on virtual/fortran
