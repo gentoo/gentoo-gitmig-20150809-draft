@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.162 2011/07/22 13:38:32 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.163 2011/07/23 11:29:09 maekke Exp $
+
+  23 Jul 2011; Markus Meier <maekke@gentoo.org> gnuplot-4.4.3-r1.ebuild:
+  x86 stable, bug #375445
 
   22 Jul 2011; Ulrich Mueller <ulm@gentoo.org> gnuplot-4.4.3-r1.ebuild:
   Add build-time dependency on texlive-latexextra, bug 375647.
