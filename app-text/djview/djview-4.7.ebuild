@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djview/djview-4.7.ebuild,v 1.4 2011/07/15 20:10:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djview/djview-4.7.ebuild,v 1.5 2011/07/23 18:10:30 xarthisius Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/djvu/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 x86"
 IUSE="debug nsplugin"
 
 RDEPEND="
