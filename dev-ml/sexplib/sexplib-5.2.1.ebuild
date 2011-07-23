@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/sexplib/sexplib-5.2.1.ebuild,v 1.1 2011/06/25 18:56:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/sexplib/sexplib-5.2.1.ebuild,v 1.2 2011/07/23 15:44:59 tomka Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.janestreet.com/ocaml/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug doc +ocamlopt"
 
 RDEPEND=">=dev-lang/ocaml-3.12[ocamlopt?]

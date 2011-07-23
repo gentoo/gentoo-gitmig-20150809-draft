@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/type-conv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/type-conv/ChangeLog,v 1.11 2011/07/06 18:38:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/type-conv/ChangeLog,v 1.12 2011/07/23 15:43:07 tomka Exp $
+
+  23 Jul 2011; Thomas Kahle <tomka@gentoo.org> type-conv-2.3.0.ebuild:
+  ~x86 per bug 373149
 
   06 Jul 2011; Alexis Ballier <aballier@gentoo.org> -type-conv-1.7.1.ebuild,
   -type-conv-2.0.0.ebuild, -type-conv-2.0.1.ebuild, -type-conv-2.0.2.ebuild:

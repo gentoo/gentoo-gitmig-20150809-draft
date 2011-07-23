@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/type-conv/type-conv-2.3.0.ebuild,v 1.1 2011/06/25 18:55:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/type-conv/type-conv-2.3.0.ebuild,v 1.2 2011/07/23 15:43:07 tomka Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.janestreet.com/ocaml/${P}.tar.gz"
 
 LICENSE="LGPL-2.1-linking-exception"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug doc +ocamlopt"
 
 RDEPEND=">=dev-lang/ocaml-3.12[ocamlopt?]"
