@@ -4,3 +4,5 @@ move sci-electronics/ng-spice-rework sci-electronics/ngspice
 move dev-php5/PEAR-PHP_Timer dev-php/php-timer
 move net-irc/irssi-svn net-irc/irssi
 move dev-php5/pecl-apc dev-php/pecl-apc
+slotmove =dev-ruby/rack-test-0.5.7 0 0.5
+slotmove =dev-ruby/rack-test-0.6.0 0 0.6
