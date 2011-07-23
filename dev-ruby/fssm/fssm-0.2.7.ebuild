@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/fssm-0.2.7.ebuild,v 1.1 2011/06/03 08:53:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/fssm-0.2.7.ebuild,v 1.2 2011/07/23 20:43:14 xarthisius Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://github.com/ttilley/fssm"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 ruby_add_bdepend "test? ( >=dev-ruby/rspec-2.4.0:2 )"
