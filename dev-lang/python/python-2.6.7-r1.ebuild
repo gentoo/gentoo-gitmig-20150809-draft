@@ -1,18 +1,17 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.ebuild,v 1.5 2011/06/27 09:19:45 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.7-r1.ebuild,v 1.1 2011/07/23 00:53:21 neurogeek Exp $
 
-EAPI="3"
+EAPI="2"
 WANT_AUTOMAKE="none"
 
 inherit autotools eutils flag-o-matic multilib python toolchain-funcs
 
 if [[ "${PV}" == *_pre* ]]; then
-	inherit subversion
+	inherit mercurial
 
-	ESVN_PROJECT="python"
-	ESVN_REPO_URI="http://svn.python.org/projects/python/branches/release32-maint"
-	ESVN_REVISION=""
+	EHG_REPO_URI="http://hg.python.org/cpython"
+	EHG_REVISION=""
 else
 	MY_PV="${PV%_p*}"
 	MY_P="Python-${MY_PV}"
@@ -25,38 +24,46 @@ HOMEPAGE="http://www.python.org/"
 if [[ "${PV}" == *_pre* ]]; then
 	SRC_URI=""
 else
-	SRC_URI="http://www.python.org/ftp/python/${MY_PV}/${MY_P}.tar.xz
+	SRC_URI="http://www.python.org/ftp/python/${MY_PV}/${MY_P}.tar.bz2
 		mirror://gentoo/python-gentoo-patches-${MY_PV}$([[ "${PATCHSET_REVISION}" != "0" ]] && echo "-r${PATCHSET_REVISION}").tar.bz2"
 fi
 
 LICENSE="PSF-2.2"
-SLOT="3.2"
+SLOT="2.6"
 PYTHON_ABI="${SLOT}"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="build doc elibc_uclibc examples gdbm ipv6 +ncurses +readline sqlite +ssl +threads tk +wide-unicode wininst +xml"
+IUSE="-berkdb build doc elibc_uclibc examples gdbm ipv6 +ncurses +readline sqlite +ssl +threads tk +wide-unicode wininst +xml"
 
 RDEPEND=">=app-admin/eselect-python-20091230
+		app-arch/bzip2
 		>=sys-libs/zlib-1.1.3
 		virtual/libffi
 		virtual/libintl
 		!build? (
+			berkdb? ( || (
+				sys-libs/db:4.7
+				sys-libs/db:4.6
+				sys-libs/db:4.5
+				sys-libs/db:4.4
+				sys-libs/db:4.3
+				sys-libs/db:4.2
+			) )
 			gdbm? ( sys-libs/gdbm )
 			ncurses? (
 				>=sys-libs/ncurses-5.2
 				readline? ( >=sys-libs/readline-4.1 )
 			)
-			sqlite? ( >=dev-db/sqlite-3.3.8:3[extensions] )
+			sqlite? ( >=dev-db/sqlite-3.3.3:3 )
 			ssl? ( dev-libs/openssl )
 			tk? (
 				>=dev-lang/tk-8.0
 				dev-tcltk/blt
 			)
 			xml? ( >=dev-libs/expat-2 )
-		)"
-DEPEND=">=sys-devel/autoconf-2.65
-		${RDEPEND}
+		)
+		!!<sys-apps/portage-2.1.9"
+DEPEND="${RDEPEND}
 		$([[ "${PV}" == *_pre* ]] && echo "=${CATEGORY}/${PN}-${PV%%.*}*")
-		$([[ "${PV}" != *_pre* ]] && echo "app-arch/xz-utils")
 		dev-util/pkgconfig
 		$([[ "${PV}" =~ ^[[:digit:]]+\.[[:digit:]]+_pre ]] && echo "doc? ( dev-python/sphinx )")
 		!sys-devel/gcc[libffi]"
@@ -70,6 +77,18 @@ fi
 
 pkg_setup() {
 	python_pkg_setup
+
+	if use berkdb; then
+		ewarn "\"bsddb\" module is out-of-date and no longer maintained inside dev-lang/python."
+		ewarn "\"bsddb\" and \"dbhash\" modules have been additionally removed in Python 3."
+		ewarn "You should use external, still maintained \"bsddb3\" module provided by dev-python/bsddb3,"
+		ewarn "which supports both Python 2 and Python 3."
+	else
+		if has_version "=${CATEGORY}/${PN}-${PV%%.*}*[berkdb]"; then
+			ewarn "You are migrating from =${CATEGORY}/${PN}-${PV%%.*}*[berkdb] to =${CATEGORY}/${PN}-${PV%%.*}*[-berkdb]."
+			ewarn "You might need to migrate your databases."
+		fi
+	fi
 }
 
 src_prepare() {
@@ -78,7 +97,17 @@ src_prepare() {
 	rm -fr Modules/_ctypes/libffi*
 	rm -fr Modules/zlib
 
+	if [[ "${PV}" =~ ^[[:digit:]]+\.[[:digit:]]+_pre ]]; then
+		if [[ "$(hg branch)" != "default" ]]; then
+			die "Invalid EHG_REVISION"
+		fi
+	fi
+
 	if [[ "${PV}" =~ ^[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+_pre ]]; then
+		if [[ "$(hg branch)" != "${SLOT}" ]]; then
+			die "Invalid EHG_REVISION"
+		fi
+
 		if grep -Eq '#define PY_RELEASE_LEVEL[[:space:]]+PY_RELEASE_LEVEL_FINAL' Include/patchlevel.h; then
 			# Update micro version, release level and version string.
 			local micro_version="${PV%_pre*}"
@@ -110,27 +139,10 @@ src_prepare() {
 		Lib/distutils/command/install.py \
 		Lib/distutils/sysconfig.py \
 		Lib/site.py \
-		Lib/sysconfig.py \
-		Lib/test/test_site.py \
 		Makefile.pre.in \
 		Modules/Setup.dist \
 		Modules/getpath.c \
 		setup.py || die "sed failed to replace @@GENTOO_LIBDIR@@"
-
-	if ! use wininst; then
-		# Remove Microsoft Windows executables.
-		rm Lib/distutils/command/wininst-*.exe
-	fi
-
-	# Support versions of Autoconf other than 2.65.
-	sed -e "/version_required(2\.65)/d" -i configure.in || die "sed failed"
-
-	# Disable ABI flags.
-	sed -e "s/ABIFLAGS=\"\${ABIFLAGS}.*\"/:/" -i configure.in || die "sed failed"
-
-	if [[ "${PV}" == *_pre* ]]; then
-		sed -e "s/\(-DSVNVERSION=\).*\( -o\)/\1\\\\\"${ESVN_REVISION}\\\\\"\2/" -i Makefile.pre.in || die "sed failed"
-	fi
 
 	eautoreconf
 }
@@ -138,10 +150,14 @@ src_prepare() {
 src_configure() {
 	if use build; then
 		# Disable extraneous modules with extra dependencies.
-		export PYTHON_DISABLE_MODULES="gdbm _curses _curses_panel readline _sqlite3 _tkinter _elementtree pyexpat"
+		export PYTHON_DISABLE_MODULES="dbm _bsddb gdbm _curses _curses_panel readline _sqlite3 _tkinter _elementtree pyexpat"
 		export PYTHON_DISABLE_SSL="1"
 	else
+		# dbm module can be linked against berkdb or gdbm.
+		# Defaults to gdbm when both are enabled, #204343.
 		local disable
+		use berkdb   || use gdbm || disable+=" dbm"
+		use berkdb   || disable+=" _bsddb"
 		use gdbm     || disable+=" gdbm"
 		use ncurses  || disable+=" _curses _curses_panel"
 		use readline || disable+=" readline"
@@ -189,37 +205,28 @@ src_configure() {
 			Makefile.pre.in || die "sed failed"
 	fi
 
-	# Export CXX so it ends up in /usr/lib/python3.X/config/Makefile.
+	# Export CXX so it ends up in /usr/lib/python2.X/config/Makefile.
 	tc-export CXX
 
-	# Set LDFLAGS so we link modules with -lpython3.2 correctly.
-	# Needed on FreeBSD unless Python 3.2 is already installed.
+	# Set LDFLAGS so we link modules with -lpython2.6 correctly.
+	# Needed on FreeBSD unless Python 2.6 is already installed.
 	# Please query BSD team before removing this!
 	append-ldflags "-L."
-
-	local dbmliborder
-	if use gdbm; then
-		dbmliborder+="${dbmliborder:+:}gdbm"
-	fi
 
 	OPT="" econf \
 		--with-fpectl \
 		--enable-shared \
 		$(use_enable ipv6) \
 		$(use_with threads) \
-		$(use_with wide-unicode) \
+		$(use wide-unicode && echo "--enable-unicode=ucs4" || echo "--enable-unicode=ucs2") \
 		--infodir='${prefix}/share/info' \
 		--mandir='${prefix}/share/man' \
-		--with-computed-gotos \
-		--with-dbmliborder="${dbmliborder}" \
 		--with-libc="" \
-		--enable-loadable-sqlite-extensions \
-		--with-system-expat \
 		--with-system-ffi
 }
 
 src_compile() {
-	emake EPYTHON="python${PV%%.*}" CPPFLAGS="" CFLAGS="" LDFLAGS="" || die "emake failed"
+	emake EPYTHON="python${PV%%.*}" || die "emake failed"
 }
 
 src_test() {
@@ -234,22 +241,22 @@ src_test() {
 	python_enable_pyc
 
 	# Skip failing tests.
-	local skip_tests="distutils gdb"
+	local skipped_tests="distutils tcl"
 
-	for test in ${skip_tests}; do
+	for test in ${skipped_tests}; do
 		mv "${S}/Lib/test/test_${test}.py" "${T}"
 	done
 
 	# Rerun failed tests in verbose mode (regrtest -w).
-	emake test EXTRATESTOPTS="-w" CPPFLAGS="" CFLAGS="" LDFLAGS="" < /dev/tty
+	emake test EXTRATESTOPTS="-w" < /dev/tty
 	local result="$?"
 
-	for test in ${skip_tests}; do
+	for test in ${skipped_tests}; do
 		mv "${T}/test_${test}.py" "${S}/Lib/test/test_${test}.py"
 	done
 
 	elog "The following tests have been skipped:"
-	for test in ${skip_tests}; do
+	for test in ${skipped_tests}; do
 		elog "test_${test}.py"
 	done
 
@@ -265,25 +272,31 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" altinstall || die "emake altinstall failed"
-	python_clean_installation_image -q
+	[[ -z "${ED}" ]] && ED="${D%/}${EPREFIX}/"
 
-	sed \
-		-e "s/\(CONFIGURE_LDFLAGS=\).*/\1/" \
-		-e "s/\(PY_LDFLAGS=\).*/\1/" \
-		-i "${ED}$(python_get_libdir)/config-${SLOT}/Makefile" || die "sed failed"
+	emake DESTDIR="${D}" altinstall maninstall || die "emake altinstall maninstall failed"
+	python_clean_installation_image -q
 
 	mv "${ED}usr/bin/python${SLOT}-config" "${ED}usr/bin/python-config-${SLOT}"
 
+	# Fix collisions between different slots of Python.
+	mv "${ED}usr/bin/2to3" "${ED}usr/bin/2to3-${SLOT}"
+	mv "${ED}usr/bin/pydoc" "${ED}usr/bin/pydoc${SLOT}"
+	mv "${ED}usr/bin/idle" "${ED}usr/bin/idle${SLOT}"
+	mv "${ED}usr/share/man/man1/python.1" "${ED}usr/share/man/man1/python${SLOT}.1"
+	rm -f "${ED}usr/bin/smtpd.py"
+
 	if use build; then
-		rm -fr "${ED}usr/bin/idle${SLOT}" "${ED}$(python_get_libdir)/"{idlelib,sqlite3,test,tkinter}
+		rm -fr "${ED}usr/bin/idle${SLOT}" "${ED}$(python_get_libdir)/"{bsddb,dbhash.py,idlelib,lib-tk,sqlite3,test}
 	else
-		use elibc_uclibc && rm -fr "${ED}$(python_get_libdir)/test"
+		use elibc_uclibc && rm -fr "${ED}$(python_get_libdir)/"{bsddb/test,test}
+		use berkdb || rm -fr "${ED}$(python_get_libdir)/"{bsddb,dbhash.py,test/test_bsddb*}
 		use sqlite || rm -fr "${ED}$(python_get_libdir)/"{sqlite3,test/test_sqlite*}
-		use tk || rm -fr "${ED}usr/bin/idle${SLOT}" "${ED}$(python_get_libdir)/"{idlelib,tkinter,test/test_tk*}
+		use tk || rm -fr "${ED}usr/bin/idle${SLOT}" "${ED}$(python_get_libdir)/"{idlelib,lib-tk}
 	fi
 
 	use threads || rm -fr "${ED}$(python_get_libdir)/multiprocessing"
+	use wininst || rm -f "${ED}$(python_get_libdir)/distutils/command/"wininst-*.exe
 
 	dodoc Misc/{ACKS,HISTORY,NEWS} || die "dodoc failed"
 
@@ -294,16 +307,29 @@ src_install() {
 
 	newconfd "${FILESDIR}/pydoc.conf" pydoc-${SLOT} || die "newconfd failed"
 	newinitd "${FILESDIR}/pydoc.init" pydoc-${SLOT} || die "newinitd failed"
-	sed -e "s:@PYDOC@:pydoc${SLOT}:" -i "${ED}etc/init.d/pydoc-${SLOT}" || die "sed failed"
+
+	#Linux-3 compat. Bug #374579 (upstream issue12571)
+	cp -r "${ED}$(python_get_libdir)/plat-linux2" \
+			"${ED}$(python_get_libdir)/plat-linux3" || die "copy plat-linux failed"
+
+	sed \
+		-e "s:@PYDOC_PORT_VARIABLE@:PYDOC${SLOT/./_}_PORT:" \
+		-e "s:@PYDOC@:pydoc${SLOT}:" \
+		-i "${ED}etc/conf.d/pydoc-${SLOT}" "${ED}etc/init.d/pydoc-${SLOT}" || die "sed failed"
+
+	# Do not install empty directory.
+	rmdir "${ED}$(python_get_libdir)/lib-old"
 }
 
 pkg_preinst() {
-	if has_version "<${CATEGORY}/${PN}-${SLOT}" && ! has_version ">=${CATEGORY}/${PN}-${SLOT}_alpha"; then
+	if has_version "<${CATEGORY}/${PN}-${SLOT}" && ! has_version "${CATEGORY}/${PN}:2.6" && ! has_version "${CATEGORY}/${PN}:2.7"; then
 		python_updater_warning="1"
 	fi
 }
 
 eselect_python_update() {
+	[[ -z "${EROOT}" || (! -d "${EROOT}" && -d "${ROOT}") ]] && EROOT="${ROOT%/}${EPREFIX}/"
+
 	if [[ -z "$(eselect python show)" || ! -f "${EROOT}usr/bin/$(eselect python show)" ]]; then
 		eselect python update
 	fi
@@ -323,7 +349,8 @@ pkg_postinst() {
 		ewarn "\e[1;31m************************************************************************\e[0m"
 		ewarn
 		ewarn "You have just upgraded from an older version of Python."
-		ewarn "You should run 'python-updater \${options}' to rebuild Python modules."
+		ewarn "You should switch active version of Python ${PV%%.*} and run"
+		ewarn "'python-updater \${options}' to rebuild Python modules."
 		ewarn
 		ewarn "\e[1;31m************************************************************************\e[0m"
 		ewarn
@@ -333,6 +360,13 @@ pkg_postinst() {
 			echo -ne "\a"
 			sleep 1
 		done
+	fi
+
+	if [[ "${PV}" != *_pre* ]]; then
+		elog
+		elog "If you want to help in testing of recent changes in Python, then you can use"
+		elog "snapshots of Python from python overlay."
+		elog
 	fi
 }
 
