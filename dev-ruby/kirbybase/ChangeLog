@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/kirbybase
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kirbybase/ChangeLog,v 1.14 2010/06/26 06:38:25 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/kirbybase/ChangeLog,v 1.15 2011/07/23 11:25:00 maekke Exp $
+
+  23 Jul 2011; Markus Meier <maekke@gentoo.org> kirbybase-2.6-r1.ebuild:
+  x86 stable, bug #375831
 
 *kirbybase-2.6-r1 (26 Jun 2010)
 
