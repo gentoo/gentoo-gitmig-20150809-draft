@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/balbes-db/balbes-db-6.1.3.ebuild,v 1.6 2011/01/18 16:27:55 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/balbes-db/balbes-db-6.1.3-r1.ebuild,v 1.1 2011/07/23 11:28:37 jlec Exp $
 
 EAPI="3"
 
@@ -37,7 +37,7 @@ src_install() {
 	find "${ED}"/usr/share/balbes/BALBES_0.0.1/ \
 		-type f \
 		-exec chmod 664 '{}' \;
-	dosym ../../../ccp4/data/monomers /usr/share/balbes/BALBES_0.0.1/dic || die
+	dosym ../../ccp4/data/monomers /usr/share/balbes/BALBES_0.0.1/dic || die
 
 	cat >> "${T}"/20balbes <<- EOF
 	BALBES_ROOT="${EPREFIX}/usr/share/balbes/BALBES_0.0.1/"
