@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/openglad
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/openglad/ChangeLog,v 1.8 2008/04/30 23:45:33 nyhm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/openglad/ChangeLog,v 1.9 2011/07/23 20:31:05 tupone Exp $
+
+  23 Jul 2011; Tupone Alfredo <tupone@gentoo.org> openglad-0.98.ebuild,
+  +files/openglad-0.98-ovfl.patch:
+  Fix buffer overflow. Bug #208327 by Billy DeVincentis
 
   30 Apr 2008; Tristan Heaven <nyhm@gentoo.org>
   +files/openglad-0.98-gcc43.patch, openglad-0.98.ebuild:
