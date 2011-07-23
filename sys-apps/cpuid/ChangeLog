@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/cpuid
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpuid/ChangeLog,v 1.1 2011/06/15 12:11:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpuid/ChangeLog,v 1.2 2011/07/23 15:28:56 tomka Exp $
+
+  23 Jul 2011; Thomas Kahle <tomka@gentoo.org> cpuid-20110305.ebuild:
+  ~x86 per bug 371755
 
 *cpuid-20110305 (15 Jun 2011)
 
