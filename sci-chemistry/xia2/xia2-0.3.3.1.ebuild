@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xia2/xia2-0.3.3.1.ebuild,v 1.1 2011/06/25 18:02:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xia2/xia2-0.3.3.1.ebuild,v 1.2 2011/07/23 13:17:37 jlec Exp $
 
-EAPI="3"
+EAPI=3
 
 PYTHON_DEPEND="2"
 
@@ -48,10 +48,10 @@ src_install() {
 	chmod 644 "${ED}"/usr/share/ccp4/XIAROOT/${P}/Applications/*.py || die
 
 	cat >> "${T}"/23XIA <<- EOF
-	XIA2_HOME="${EPREFIX}"/usr/share/ccp4/XIAROOT
-	XIA2CORE_ROOT="${EPREFIX}"/usr/share/ccp4/XIAROOT/xia2core-${PV}
-	XIA2_ROOT="${EPREFIX}"/usr/share/ccp4/XIAROOT/xia2-${PV}
-	PATH="${EPREFIX}"/usr/share/ccp4/XIAROOT/xia2-${PV}/Applications
+	XIA2_HOME="${EPREFIX}/usr/share/ccp4/XIAROOT"
+	XIA2CORE_ROOT="${EPREFIX}/usr/share/ccp4/XIAROOT/xia2core-${PV}"
+	XIA2_ROOT="${EPREFIX}/usr/share/ccp4/XIAROOT/xia2-${PV}"
+	PATH="${EPREFIX}/usr/share/ccp4/XIAROOT/xia2-${PV}/Applications"
 	EOF
 
 	doenvd "${T}"/23XIA
@@ -59,6 +59,10 @@ src_install() {
 
 pkg_postinst() {
 	python_mod_optimize /usr/share/ccp4/XIAROOT
+	echo ""
+	elog "In order to use the package, you need to"
+	elog "\t source ${EPREFIX}/etc/profile"
+	echo ""
 }
 
 pkg_postrm() {
