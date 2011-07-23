@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.7_rc1.ebuild,v 1.2 2011/06/22 14:42:24 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.7_rc3.ebuild,v 1.1 2011/07/23 14:25:23 pva Exp $
 
 EAPI=2
 inherit eutils linux-info java-pkg-opt-2
