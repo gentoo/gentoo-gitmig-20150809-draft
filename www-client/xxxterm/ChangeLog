@@ -1,0 +1,10 @@
+# ChangeLog for www-client/xxxterm
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/ChangeLog,v 1.1 2011/07/23 02:37:01 rafaelmartins Exp $
+
+*xxxterm-1.425 (23 Jul 2011)
+
+  23 Jul 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +xxxterm-1.425.ebuild, +metadata.xml:
+  Initial commit.
+
