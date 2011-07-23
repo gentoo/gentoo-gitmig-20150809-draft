@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mime-types
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.17 2011/07/20 09:42:36 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.18 2011/07/23 14:19:28 xarthisius Exp $
+
+  23 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  mime-types-1.16-r2.ebuild:
+  ppc64 stable wrt #375741
 
 *mime-types-1.16-r3 (20 Jul 2011)
 
