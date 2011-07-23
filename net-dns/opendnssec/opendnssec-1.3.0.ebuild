@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.0.ebuild,v 1.1 2011/07/14 21:52:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/opendnssec/opendnssec-1.3.0.ebuild,v 1.2 2011/07/23 20:34:33 scarabeus Exp $
 
 EAPI=4
 
@@ -39,9 +39,9 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	test? (
 		app-text/trang
-		dev-util/cunit
 	)
 "
+# test? dev-util/cunit # Requires running test DB
 
 REQUIRED_USE="
 	^^ ( mysql sqlite )
@@ -129,13 +129,14 @@ src_prepare() {
 }
 
 src_configure() {
+	# $(use_with test cunit "${EPREFIX}/usr/") \
 	econf \
+		--without-cunit \
 		--localstatedir="${EPREFIX}/var/" \
 		--disable-static \
 		--with-database-backend=$(use mysql && echo "mysql")$(use sqlite && echo "sqlite3") \
 		--with-pkcs11-${PKCS11_LIB}=${PKCS11_PATH} \
 		$(use_with curl) \
-		$(use_with test cunit) \
 		$(use_enable auditor) \
 		$(use_enable debug timeshift) \
 		$(use_enable eppclient) \
