@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/mongrel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/ChangeLog,v 1.44 2011/07/23 11:32:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/ChangeLog,v 1.45 2011/07/23 14:12:12 xarthisius Exp $
+
+  23 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> mongrel-1.1.5-r3.ebuild:
+  ppc/ppc64 stable wrt #375435
 
   23 Jul 2011; Markus Meier <maekke@gentoo.org> mongrel-1.1.5-r3.ebuild:
   amd64/x86 stable, bug #375435
