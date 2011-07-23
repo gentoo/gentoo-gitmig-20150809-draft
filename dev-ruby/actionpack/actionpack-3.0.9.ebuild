@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/actionpack-3.0.9.ebuild,v 1.1 2011/07/04 09:34:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/actionpack-3.0.9.ebuild,v 1.2 2011/07/23 07:34:11 graaff Exp $
 
 EAPI=2
 
@@ -36,7 +36,7 @@ ruby_add_rdepend "
 	>=dev-ruby/i18n-0.5.0:0.5
 	>=dev-ruby/rack-1.2.1:1.2
 	>=dev-ruby/rack-mount-0.6.14:0.6
-	>=dev-ruby/rack-test-0.5.7
+	>=dev-ruby/rack-test-0.5.7:0.5
 	>=dev-ruby/tzinfo-0.3.23"
 
 ruby_add_bdepend "
