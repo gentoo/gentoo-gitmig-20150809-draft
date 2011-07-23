@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ssm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ssm/ChangeLog,v 1.3 2011/07/19 16:05:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ssm/ChangeLog,v 1.4 2011/07/23 19:37:06 jlec Exp $
+
+  23 Jul 2011; Justin Lecher <jlec@gentoo.org> ssm-1.1.ebuild:
+  Add blocker against <sci-libs/ccp4-libs-6.1.3-r10, #376131
 
   19 Jul 2011; Justin Lecher <jlec@gentoo.org> ssm-1.1.ebuild:
   Keyworded for *-linux prefix
