@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.35 2011/07/19 19:54:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libev/ChangeLog,v 1.36 2011/07/23 19:14:06 armin76 Exp $
+
+  23 Jul 2011; Raúl Porcel <armin76@gentoo.org> libev-4.04.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #373957
 
   19 Jul 2011; Markus Meier <maekke@gentoo.org> libev-4.04.ebuild:
   amd64/x86 stable, bug #373957
