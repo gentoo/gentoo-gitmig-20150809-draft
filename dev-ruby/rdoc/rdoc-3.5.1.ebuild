@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-3.5.1.ebuild,v 1.7 2011/07/16 09:38:51 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/rdoc-3.5.1.ebuild,v 1.8 2011/07/23 07:47:00 graaff Exp $
 
 EAPI=3
 USE_RUBY="ruby18 ree18 jruby"
@@ -32,9 +32,6 @@ ruby_add_bdepend "
 # This ebuild replaces rdoc in ruby-1.9.2 and later.
 # ruby 1.8.6 is no longer supported.
 RDEPEND="${RDEPEND}
-	ruby_targets_ruby19? (
-		>=dev-lang/ruby-1.9.2:1.9
-	)
 	ruby_targets_ruby18? (
 		>=dev-lang/ruby-1.8.7:1.8
 	)"
@@ -66,11 +63,5 @@ all_ruby_install() {
 
 	for bin in rdoc ri; do
 		ruby_fakegem_binwrapper $bin /usr/bin/$bin-2
-
-		if use ruby_targets_ruby19; then
-			ruby_fakegem_binwrapper $bin /usr/bin/${bin}19
-			sed -i -e "1s/env ruby/ruby19/" \
-				"${ED}/usr/bin/${bin}19" || die
-		fi
 	done
 }
