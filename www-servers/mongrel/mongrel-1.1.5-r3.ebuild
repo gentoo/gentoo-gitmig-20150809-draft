@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/mongrel-1.1.5-r3.ebuild,v 1.1 2011/06/07 08:19:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/mongrel-1.1.5-r3.ebuild,v 1.2 2011/07/23 11:32:06 maekke Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://mongrel.rubyforge.org/"
 
 LICENSE="|| ( mongrel GPL-2 )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 RDEPEND=""
