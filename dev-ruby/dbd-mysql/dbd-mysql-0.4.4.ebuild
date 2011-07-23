@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-mysql/dbd-mysql-0.4.4.ebuild,v 1.4 2011/01/09 18:06:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-mysql/dbd-mysql-0.4.4.ebuild,v 1.5 2011/07/23 12:18:50 xarthisius Exp $
 
 EAPI=2
 USE_RUBY="ruby18"  # Upstream says mysql is not ruby19 ready yet (for 0.4.3)
@@ -13,7 +13,7 @@ SRC_URI="mirror://rubyforge/ruby-dbi/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ia64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ia64 ppc ~sparc x86"
 IUSE="test"
 
 ruby_add_rdepend "

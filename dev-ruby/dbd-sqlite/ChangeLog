@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/dbd-sqlite
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-sqlite/ChangeLog,v 1.8 2010/09/05 16:17:47 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-sqlite/ChangeLog,v 1.9 2011/07/23 12:23:11 xarthisius Exp $
+
+  23 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> dbd-sqlite-0.1.2.ebuild:
+  ppc stable wrt #333087
 
   05 Sep 2010; Raúl Porcel <armin76@gentoo.org> dbd-sqlite-0.1.2.ebuild:
   ia64 stable wrt #333087

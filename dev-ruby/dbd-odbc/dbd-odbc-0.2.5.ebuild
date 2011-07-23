@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-odbc/dbd-odbc-0.2.5.ebuild,v 1.7 2010/09/05 16:16:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-odbc/dbd-odbc-0.2.5.ebuild,v 1.8 2011/07/23 12:22:24 xarthisius Exp $
 
 inherit "ruby"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://rubyforge/ruby-dbi/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ia64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ia64 ppc ~sparc x86"
 IUSE="test"
 
 RDEPEND="

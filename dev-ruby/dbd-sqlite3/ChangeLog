@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/dbd-sqlite3
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-sqlite3/ChangeLog,v 1.9 2011/02/12 16:09:03 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-sqlite3/ChangeLog,v 1.10 2011/07/23 12:23:57 xarthisius Exp $
+
+  23 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> dbd-sqlite3-1.2.5.ebuild:
+  ppc stable wrt #333087
 
   12 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org>
   dbd-sqlite3-1.2.5-r1.ebuild:
