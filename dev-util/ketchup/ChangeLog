@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/ketchup
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ketchup/ChangeLog,v 1.23 2011/07/09 14:47:50 psomas Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ketchup/ChangeLog,v 1.24 2011/07/23 17:47:47 psomas Exp $
+
+*ketchup-1.1_beta2 (23 Jul 2011)
+
+  23 Jul 2011; Stratos Psomadakis <psomas@gentoo.org>
+  +ketchup-1.1_beta2.ebuild:
+  Version bump, with fixes for 3.0 kenels
 
 *ketchup-1.1_beta (09 Jul 2011)
 
