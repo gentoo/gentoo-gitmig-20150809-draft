@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-ffi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.9 2011/07/20 14:54:49 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.10 2011/07/23 14:24:31 xarthisius Exp $
+
+  23 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> ruby-ffi-0.ebuild:
+  ppc stable wrt #348510
 
   20 Jul 2011; Thomas Kahle <tomka@gentoo.org> ruby-ffi-0.ebuild:
   x86 stable per bug 348510
