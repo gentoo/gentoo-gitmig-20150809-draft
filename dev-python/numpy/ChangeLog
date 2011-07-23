@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.149 2011/07/10 18:54:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.150 2011/07/23 17:26:08 xarthisius Exp $
+
+  23 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> numpy-1.6.0.ebuild:
+  ppc64 stable wrt #371673
 
   10 Jul 2011; Raúl Porcel <armin76@gentoo.org> numpy-1.6.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #371673
