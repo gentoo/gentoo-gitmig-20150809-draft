@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4i/ccp4i-6.1.3-r3.ebuild,v 1.2 2011/01/16 12:25:31 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4i/ccp4i-6.1.3-r3.ebuild,v 1.3 2011/07/23 10:12:00 jlec Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
 
-inherit base multilib python
+inherit base multilib python virtualx
 
 MY_PN="${PN%i}"
 MY_P="${MY_PN}-${PV}"
@@ -78,8 +78,24 @@ src_install() {
 	doins -r "${S}"/ccp4i || die
 	exeinto /usr/$(get_libdir)/ccp4/ccp4i/bin
 	doexe "${S}"/ccp4i/bin/* || die
+	dosym ../$(get_libdir)/ccp4/ccp4i/bin/ccp4i /usr/bin/ccp4i
+
+	dodir /usr/$(get_libdir)/ccp4/ccp4i/unix
 
 	# dbccp4i
 	insinto /usr/share/ccp4
 	doins -r "${S}"/share/dbccp4i || die
+}
+
+pkg_postinst() {
+	_ccp4-setup() {
+		source "${EPREFIX}/etc/profile"
+		export USER=root
+		ccp4i -h > /dev/null
+	}
+	_ccp4-setup
+	echo ""
+	elog "ccp4i needs some enviromental settings. So please"
+	elog "\t source ${EPREFIX}/etc/profile"
+	echo ""
 }

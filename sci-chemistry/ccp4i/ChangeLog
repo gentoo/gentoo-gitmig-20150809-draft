@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/ccp4i
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4i/ChangeLog,v 1.6 2011/01/16 12:25:31 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4i/ChangeLog,v 1.7 2011/07/23 10:12:00 jlec Exp $
+
+  23 Jul 2011; Justin Lecher <jlec@gentoo.org> ccp4i-6.1.3-r3.ebuild,
+  metadata.xml:
+  Add verbose postinst msg, #375907
 
   16 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> ccp4i-6.1.3-r3.ebuild:
   marked ~ppc wrt #303931
