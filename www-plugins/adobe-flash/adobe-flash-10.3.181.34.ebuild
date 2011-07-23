@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.3.181.34.ebuild,v 1.3 2011/07/17 03:46:46 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.3.181.34.ebuild,v 1.4 2011/07/23 11:29:07 maekke Exp $
 
 EAPI=4
 inherit nsplugins rpm multilib toolchain-funcs
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.adobe.com/flashplayer"
 IUSE="vdpau kde"
 SLOT="0"
 
-KEYWORDS="-* amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 LICENSE="AdobeFlash-10.3"
 RESTRICT="strip mirror"
 
