@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.2.8_p10.ebuild,v 1.1 2011/07/20 05:47:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.2.8_p10.ebuild,v 1.2 2011/07/23 01:09:35 vapier Exp $
 
 EAPI="2"
 
@@ -24,7 +24,14 @@ RDEPEND=">=sys-libs/ncurses-5.2-r2"
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	local d="${WORKDIR}"/debian/patches
+	local p d="${WORKDIR}"/debian/patches
+	pushd "${d}" >/dev/null
+	# makefile_dev_null: this bug is actually in gcc and is already fixed
+	for p in $(use unicode || echo watch_{unicode,ansi_colour}) makefile_dev_null ; do
+		rm ${p}.patch || die
+		sed -i "/^${p}/d" series || die
+	done
+	popd >/dev/null
 	EPATCH_SOURCE="${d}" \
 	epatch $(<"${d}"/series)
 	# fixup debian watch_exec_beep.patch
