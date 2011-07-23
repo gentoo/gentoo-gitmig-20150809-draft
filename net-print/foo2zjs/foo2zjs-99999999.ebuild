@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-99999999.ebuild,v 1.3 2011/06/02 15:15:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-99999999.ebuild,v 1.4 2011/07/23 22:04:37 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://foo2zjs.rkkda.com/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE=""
+IUSE="test"
 
 RESTRICT="bindist"
 
@@ -23,7 +23,8 @@ RDEPEND="net-print/cups
 DEPEND="${RDEPEND}
 	app-arch/unzip
 	net-misc/wget
-	sys-devel/bc"
+	sys-devel/bc
+	test? ( sys-process/time )"
 
 S="${WORKDIR}/${PN}"
 

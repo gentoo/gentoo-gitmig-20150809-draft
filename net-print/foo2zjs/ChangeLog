@@ -1,6 +1,9 @@
 # ChangeLog for net-print/foo2zjs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.43 2011/06/08 14:08:23 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.44 2011/07/23 22:04:37 phajdan.jr Exp $
+
+  23 Jul 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> foo2zjs-99999999.ebuild:
+  Add sys-process/time dependency for tests.
 
   08 Jun 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   -foo2zjs-20080225.ebuild, -files/foo2zjs-Makefile-20080225.diff,
