@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/postgresql-ocaml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/postgresql-ocaml/ChangeLog,v 1.22 2011/05/24 13:57:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/postgresql-ocaml/ChangeLog,v 1.23 2011/07/23 11:24:17 maekke Exp $
+
+  23 Jul 2011; Markus Meier <maekke@gentoo.org> postgresql-ocaml-1.16.0.ebuild:
+  x86 stable, bug #374975
 
 *postgresql-ocaml-1.16.0 (24 May 2011)
 
