@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/gnome-icon-theme-3.0.0.ebuild,v 1.5 2011/07/17 21:25:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-icon-theme/gnome-icon-theme-3.0.0.ebuild,v 1.6 2011/07/23 10:21:51 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 
 inherit gnome2 eutils autotools
 
-DESCRIPTION="GNOME default icon themes"
+DESCRIPTION="GNOME default icon theme"
 HOMEPAGE="http://www.gnome.org/ http://people.freedesktop.org/~jimmac/icons/#git"
 
 SRC_URI="${SRC_URI}
