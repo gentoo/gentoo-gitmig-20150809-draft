@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.200 2011/06/21 20:10:31 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.201 2011/07/23 20:12:06 halcy0n Exp $
+
+  23 Jul 2011; Mark Loeser <halcy0n@gentoo.org> bugzilla-3.4.11.ebuild,
+  bugzilla-3.6.4.ebuild:
+  Drop ppc/ppc64; bug #352794
 
   21 Jun 2011; Christian Ruppert <idl0r@gentoo.org> bugzilla-4.0.1.ebuild:
   Fix test dependencies.
