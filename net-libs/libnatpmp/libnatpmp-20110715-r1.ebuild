@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnatpmp/libnatpmp-20110715-r1.ebuild,v 1.1 2011/07/23 10:33:26 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnatpmp/libnatpmp-20110715-r1.ebuild,v 1.2 2011/07/23 15:17:49 blueness Exp $
 
 EAPI=4
 
@@ -25,4 +25,7 @@ src_prepare() {
 
 src_install() {
 	emake PREFIX="${D}" install
+
+	dodoc Changelog.txt README
+	doman natpmpc.1
 }
