@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-3.0.3.ebuild,v 1.2 2011/07/16 17:34:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-3.0.3.ebuild,v 1.3 2011/07/23 18:26:59 radhermit Exp $
 
 EAPI="4"
 inherit eutils multilib
@@ -61,6 +61,8 @@ src_prepare() {
 	sed -i \
 		-e "s@mozilla-nss@nss@g" \
 		configure || die "sed failed in configure"
+
+	epatch "${FILESDIR}"/${PN}-3.0-configure.patch
 }
 
 src_configure() {
