@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.496 2011/07/20 12:41:38 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.497 2011/07/23 10:14:46 olemarkus Exp $
+
+*php-5.3.7_rc3 (23 Jul 2011)
+
+  23 Jul 2011; Ole Markus With <olemarkus@gentoo.org> +files/php-fpm-r0.conf,
+  +files/php-fpm-r1.conf, +files/php-fpm-r4.init,
+  files/eblits/src_install-v2.eblit, +php-5.3.7_rc3.ebuild:
+  New rc. Includes new init script with better pid handling
 
   20 Jul 2011; <olemarkus@gentoo.org> files/eblits/src_install-v3.eblit:
   Removed some 'security' fixes for php.ini.
