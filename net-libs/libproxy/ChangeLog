@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.62 2011/07/17 14:34:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.63 2011/07/23 11:36:26 maekke Exp $
+
+  23 Jul 2011; Markus Meier <maekke@gentoo.org> libproxy-0.4.6-r3.ebuild:
+  arm stable, bug #372813
 
   17 Jul 2011; Markus Meier <maekke@gentoo.org> libproxy-0.4.6-r3.ebuild:
   x86 stable, bug #372813
