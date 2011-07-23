@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.189 2011/07/21 21:11:24 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.190 2011/07/23 11:43:48 angelos Exp $
+
+  23 Jul 2011; Christoph Mende <angelos@gentoo.org> curl-7.21.7.ebuild,
+  curl-7.21.7-r2.ebuild, +files/curl-7.21.7-examples-fix-headers.patch:
+  Fix test suite (bug #376025)
 
 *curl-7.21.7-r2 (21 Jul 2011)
 
