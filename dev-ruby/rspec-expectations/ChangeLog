@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rspec-expectations
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-expectations/ChangeLog,v 1.10 2011/05/31 19:22:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-expectations/ChangeLog,v 1.11 2011/07/23 14:37:27 xarthisius Exp $
+
+  23 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  rspec-expectations-2.6.0.ebuild:
+  ppc stable wrt #369573
 
   31 May 2011; Hans de Graaff <graaff@gentoo.org>
   rspec-expectations-2.5.0.ebuild:
