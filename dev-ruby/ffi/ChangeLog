@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ffi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.21 2011/07/20 14:54:02 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.22 2011/07/23 14:25:54 xarthisius Exp $
+
+  23 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> ffi-1.0.9.ebuild:
+  ppc stable wrt #348510
 
   20 Jul 2011; Thomas Kahle <tomka@gentoo.org> ffi-1.0.9.ebuild:
   x86 stable per bug 348510
