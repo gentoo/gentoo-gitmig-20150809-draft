@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/coccinelle-0.2.5-r2.ebuild,v 1.1 2011/06/26 19:45:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/coccinelle-0.2.5-r2.ebuild,v 1.2 2011/07/23 15:47:43 tomka Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://coccinelle.lip6.fr/distrib/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc +ocamlopt python ocaml"
 
 # ocaml enables ocaml scripting (uses findlib)

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/coccinelle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.8 2011/06/26 19:45:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.9 2011/07/23 15:47:43 tomka Exp $
+
+  23 Jul 2011; Thomas Kahle <tomka@gentoo.org> coccinelle-0.2.5-r2.ebuild:
+  ~x86 per bug 373149
 
 *coccinelle-0.2.5-r2 (26 Jun 2011)
 
