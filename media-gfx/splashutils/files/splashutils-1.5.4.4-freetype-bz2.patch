@@ -1,0 +1,11 @@
+--- fbtruetype/Makefile.old	2011-07-12 16:57:03.110616657 +0300
++++ fbtruetype/Makefile	2011-07-12 16:48:31.656254788 +0300
+@@ -23,7 +23,7 @@
+ OBJECTS  = fbtruetype.o messages.o console.o ttf.o luxisri.o
+ 
+ LDFLAGS  += -L$(LIBDIR)
+-LIBSS    = $(LIBDIR)/libfreetype.a $(LIBDIR)/libz.a -lm
++LIBSS    = $(LIBDIR)/libfreetype.a $(LIBDIR)/libz.a $(LIBDIR)/libbz2.a -lm
+ LIBSD    = -lfreetype -lm
+ 
+ CFLAGS   += -I/usr/include/freetype2
