@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rack-test
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-test/ChangeLog,v 1.11 2011/07/19 09:13:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-test/ChangeLog,v 1.12 2011/07/23 07:28:25 graaff Exp $
+
+  23 Jul 2011; Hans de Graaff <graaff@gentoo.org> rack-test-0.5.7.ebuild,
+  rack-test-0.6.0.ebuild:
+  Move rack-test into slots because that is what dependencies expect.
 
 *rack-test-0.6.0 (19 Jul 2011)
 
