@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libevent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.180 2011/07/22 18:16:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/ChangeLog,v 1.181 2011/07/23 11:30:00 maekke Exp $
+
+  23 Jul 2011; Markus Meier <maekke@gentoo.org> libevent-2.0.12.ebuild:
+  x86 stable, bug #375097
 
   22 Jul 2011; Markos Chandras <hwoarang@gentoo.org> libevent-2.0.12.ebuild:
   Stable on amd64 wrt bug #375097
