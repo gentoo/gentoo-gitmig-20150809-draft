@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.95 2011/07/17 14:38:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.96 2011/07/23 15:32:28 xarthisius Exp $
+
+  23 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> pkgconfig-0.26.ebuild:
+  ppc/ppc64 stable wrt #374681
 
   17 Jul 2011; Markus Meier <maekke@gentoo.org> pkgconfig-0.26.ebuild:
   arm/x86 stable, bug #374681
