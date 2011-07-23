@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/nvidia-cuda-toolkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.37 2011/06/12 14:19:04 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.38 2011/07/23 20:41:24 spock Exp $
+
+  23 Jul 2011; Michał Januszewski <spock@gentoo.org>
+  nvidia-cuda-toolkit-2.2-r3.ebuild, nvidia-cuda-toolkit-2.3.ebuild,
+  nvidia-cuda-toolkit-3.0.ebuild, nvidia-cuda-toolkit-3.1.ebuild,
+  nvidia-cuda-toolkit-3.2.ebuild, nvidia-cuda-toolkit-4.0.ebuild:
+  Remove block on nvidia-cuda-profiler (now removed from the tree).
 
   12 Jun 2011; Michał Januszewski <spock@gentoo.org>
   nvidia-cuda-toolkit-4.0.ebuild:
