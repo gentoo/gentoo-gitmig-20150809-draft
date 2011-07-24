@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/gdl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.63 2011/07/11 15:40:59 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.64 2011/07/24 14:05:31 eva Exp $
+
+*gdl-3.0.2 (24 Jul 2011)
+
+  24 Jul 2011; Gilles Dartiguelongue <eva@gentoo.org> +gdl-3.0.2.ebuild:
+  Version bump.
 
   11 Jul 2011; Matt Turner <mattst88@gentoo.org> gdl-3.0.1.ebuild:
   Added ~mips, bug 364693
