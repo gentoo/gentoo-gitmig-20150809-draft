@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/terminal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.67 2011/07/10 10:35:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.68 2011/07/24 13:00:39 xarthisius Exp $
+
+  24 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> terminal-0.4.8.ebuild:
+  ppc/ppc64 stable wrt #372989
 
   10 Jul 2011; Markus Meier <maekke@gentoo.org> terminal-0.4.8.ebuild:
   arm stable, bug #372989
