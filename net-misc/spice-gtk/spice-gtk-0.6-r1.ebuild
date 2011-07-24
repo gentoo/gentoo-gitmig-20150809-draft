@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.6-r1.ebuild,v 1.1 2011/05/11 11:45:02 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.6-r1.ebuild,v 1.2 2011/07/24 21:03:11 tomka Exp $
 
 EAPI=3
 
@@ -14,7 +14,7 @@ SRC_URI="http://spice-space.org/download/gtk/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="+cairo doc gnome gstreamer gtk3 introspection kde +pulseaudio python sasl static-libs"
 
 RDEPEND="pulseaudio? ( !gstreamer? ( media-sound/pulseaudio ) )
