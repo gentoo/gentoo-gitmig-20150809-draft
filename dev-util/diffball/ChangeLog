@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/diffball
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/ChangeLog,v 1.34 2010/10/19 05:25:05 leio Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/ChangeLog,v 1.35 2011/07/24 03:02:16 ferringb Exp $
+
+  24 Jul 2011; Brian Harring <ferringb@gentoo.org> diffball-1.0.ebuild:
+  update the homepage/file url to it's new googlecode location.
 
   19 Oct 2010; Mart Raudsepp <leio@gentoo.org> diffball-1.0.ebuild:
   Drop to ~mips
