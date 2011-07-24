@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/rack-1.1.0.ebuild,v 1.11 2011/07/23 13:11:42 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/rack-1.1.0.ebuild,v 1.12 2011/07/24 17:16:15 armin76 Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ree18 jruby"
@@ -15,7 +15,7 @@ SRC_URI="mirror://rubyforge/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ppc64 ~sparc x86 ~amd64-linux ~ia64-linux ~x86-linux ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ia64 ppc ppc64 sparc x86 ~amd64-linux ~ia64-linux ~x86-linux ~x64-solaris ~x86-solaris"
 IUSE=""
 
 # The gem has automagic dependencies over mongrel, ruby-openid,
