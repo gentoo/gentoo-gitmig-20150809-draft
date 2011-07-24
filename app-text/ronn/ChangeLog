@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ronn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ronn/ChangeLog,v 1.3 2011/06/02 14:12:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ronn/ChangeLog,v 1.4 2011/07/24 09:32:14 xarthisius Exp $
+
+  24 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> ronn-0.7.3.ebuild:
+  Marked ~ppc/~ppc64 wrt #351835
 
   02 Jun 2011; Markus Meier <maekke@gentoo.org> ronn-0.7.3.ebuild:
   add ~x86, bug #368983
