@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/libapreq2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/ChangeLog,v 1.45 2011/07/15 20:46:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/ChangeLog,v 1.46 2011/07/24 13:35:46 xarthisius Exp $
+
+  24 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> libapreq2-2.13.ebuild:
+  ppc/ppc64 stable wrt #373317
 
   15 Jul 2011; Markus Meier <maekke@gentoo.org> libapreq2-2.13.ebuild:
   x86 stable, bug #373317
