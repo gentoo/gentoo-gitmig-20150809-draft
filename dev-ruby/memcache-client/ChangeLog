@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/memcache-client
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/memcache-client/ChangeLog,v 1.4 2011/02/13 21:22:20 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/memcache-client/ChangeLog,v 1.5 2011/07/24 07:59:55 graaff Exp $
+
+  24 Jul 2011; Hans de Graaff <graaff@gentoo.org> memcache-client-1.8.5.ebuild:
+  Add missing flexmock dependency, reported by xarthisius.
 
   13 Feb 2011; Thomas Kahle <tomka@gentoo.org> memcache-client-1.8.5.ebuild:
   keyworded ~x86 per bug 351835
