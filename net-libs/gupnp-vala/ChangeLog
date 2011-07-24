@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gupnp-vala
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-vala/ChangeLog,v 1.6 2011/02/22 23:20:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-vala/ChangeLog,v 1.7 2011/07/24 14:59:24 eva Exp $
+
+*gupnp-vala-0.8.0 (24 Jul 2011)
+
+  24 Jul 2011; Gilles Dartiguelongue <eva@gentoo.org> +gupnp-vala-0.8.0.ebuild:
+  Version bump. Moves 0.7 release to stable.
 
 *gupnp-vala-0.7.5 (22 Feb 2011)
 
