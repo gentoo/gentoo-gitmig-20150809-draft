@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/session-3.1.0-r1.ebuild,v 1.1 2011/02/15 18:36:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/session/session-3.1.0-r1.ebuild,v 1.2 2011/07/24 18:05:54 armin76 Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://codeforpeople.com/lib/ruby/session/"
 # by author.
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE="test"
 
 ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
