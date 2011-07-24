@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/gnome-web-photo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-web-photo/ChangeLog,v 1.13 2011/04/14 21:36:46 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-web-photo/ChangeLog,v 1.14 2011/07/24 13:18:45 eva Exp $
+
+*gnome-web-photo-0.10.2 (24 Jul 2011)
+
+  24 Jul 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-web-photo-0.10.ebuild, +gnome-web-photo-0.10.2.ebuild:
+  Version bump. Translation updates.
 
 *gnome-web-photo-0.10.1 (14 Apr 2011)
 
