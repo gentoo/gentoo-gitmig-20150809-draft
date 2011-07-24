@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-rails
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-rails/ChangeLog,v 1.42 2011/07/23 12:47:18 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-rails/ChangeLog,v 1.43 2011/07/24 17:14:09 armin76 Exp $
+
+  24 Jul 2011; Raúl Porcel <armin76@gentoo.org> eselect-rails-0.16.ebuild:
+  ia64/sparc stable wrt #372391
 
   23 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   eselect-rails-0.16.ebuild:
