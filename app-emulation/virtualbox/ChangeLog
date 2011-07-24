@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.77 2011/07/22 10:30:56 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.78 2011/07/24 00:26:44 polynomial-c Exp $
+
+  24 Jul 2011; Lars Wendler <polynomial-c@gentoo.org> virtualbox-4.0.10.ebuild,
+  virtualbox-4.0.12.ebuild, virtualbox-4.1.0.ebuild:
+  Made pam support optional (bug #351404). Marked 4.0.12 version as stable on
+  amd64 (was forgotten by the arch team) for bug #371935.
 
   22 Jul 2011; Thomas Kahle <tomka@gentoo.org> virtualbox-4.0.12.ebuild:
   x86 stable per bug 371935

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.0.ebuild,v 1.1 2011/07/19 22:27:10 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.0.ebuild,v 1.2 2011/07/24 00:26:44 polynomial-c Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.virtualbox.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+additions alsa doc extensions headless java pulseaudio +opengl python +qt4 +sdk vboxwebsrv vnc"
+IUSE="+additions alsa doc extensions headless java pam pulseaudio +opengl python +qt4 +sdk vboxwebsrv vnc"
 
 RDEPEND="!app-emulation/virtualbox-bin
 	~app-emulation/virtualbox-modules-${PV}
@@ -56,7 +56,7 @@ DEPEND="${RDEPEND}
 	sys-devel/dev86
 	sys-power/iasl
 	media-libs/libpng
-	sys-libs/pam
+	pam? ( sys-libs/pam )
 	sys-libs/libcap
 	doc? (
 		dev-texlive/texlive-basic
@@ -161,6 +161,9 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-4.0.2-restore_old_machines_dir.patch"
 
 	epatch "${FILESDIR}"/${P}-vboxpci-build.patch
+
+	# Make pam optional (bug #351404)
+	use pam || { sed '/VBOX_WITH_PAM =/s@1@0@' -i Config.kmk || die ; }
 
 	# add correct java path
 	if use java ; then
