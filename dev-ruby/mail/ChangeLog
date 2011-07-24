@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mail/ChangeLog,v 1.13 2011/07/24 09:48:33 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mail/ChangeLog,v 1.14 2011/07/24 18:04:40 armin76 Exp $
+
+  24 Jul 2011; Raúl Porcel <armin76@gentoo.org> mail-2.2.18.ebuild,
+  mail-2.2.19.ebuild:
+  Add ~ia64/~sparc wrt #351835
 
   24 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> mail-2.2.19.ebuild:
   Marked ~ppc/~ppc64 wrt #351835
