@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/arj
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.43 2011/03/30 20:37:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.44 2011/07/24 21:33:32 hwoarang Exp $
+
+  24 Jul 2011; Markos Chandras <hwoarang@gentoo.org> arj-3.10.22-r3.ebuild:
+  Stable on amd64 wrt bug #375923
 
   30 Mar 2011; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
   Adopted package
