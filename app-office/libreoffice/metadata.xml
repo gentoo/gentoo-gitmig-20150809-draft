@@ -8,11 +8,13 @@ compilation can take up to a day depending on the speed of your
 computer. It will however make a snappier openoffice than the binary 
 version</longdescription>
 <use>
-  <flag name='binfilter'>Enable support for legacy StarOffice 5.x and earlier
-    file formats</flag>
-  <flag name='odk'>Build the Office Development Kit</flag>
-  <flag name='offlinehelp'>Install help files locally instead of
-    using the LibreOffice Wiki</flag>
-  <flag name='templates'>Enable installation of Sun templates</flag>
+	<flag name='binfilter'>Enable support for legacy StarOffice 5.x and earlier
+		file formats</flag>
+	<flag name='odk'>Build the Office Development Kit</flag>
+	<flag name='offlinehelp'>Install help files locally instead of
+		using the LibreOffice Wiki</flag>
+	<flag name='templates'>Enable installation of Sun templates</flag>
+	<flag name='webdav'>Adds support for HTTP repositories via
+		<pkg>net-libs/neon</pkg></flag>
 </use>
 </pkgmetadata>
