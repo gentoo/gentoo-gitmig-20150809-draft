@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/c-ares
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/c-ares/ChangeLog,v 1.65 2011/07/21 16:01:34 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/c-ares/ChangeLog,v 1.66 2011/07/24 11:26:10 armin76 Exp $
+
+  24 Jul 2011; Raúl Porcel <armin76@gentoo.org> c-ares-1.7.4.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #369501
 
   21 Jul 2011; Christoph Mende <angelos@gentoo.org> metadata.xml:
   Take over maintainership
