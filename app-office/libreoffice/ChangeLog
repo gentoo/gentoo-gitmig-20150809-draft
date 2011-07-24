@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.44 2011/07/24 16:40:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.45 2011/07/24 21:32:42 scarabeus Exp $
+
+  24 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-3.4.2.2.ebuild, +files/libreoffice-svx.patch:
+  Quick&Dirty hack to fix svx build crash i observed on my desktop (definitely
+  not a solution for upstream).
 
   24 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   libreoffice-3.4.2.2.ebuild:
