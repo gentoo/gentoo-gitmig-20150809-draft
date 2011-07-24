@@ -6,6 +6,7 @@ X11LIB      = `pkg-config --libs x11`
 LIBPTHREAD  = -lpthread
 RM   = rm -f
 MAKE = make
+MKDIR = mkdir -p
 WIN32LIB   =
 
 #DRAWGEOMGL= 

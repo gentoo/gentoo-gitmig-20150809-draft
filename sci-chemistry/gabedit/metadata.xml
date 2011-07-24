@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci-chemistry</herd>
-<maintainer>
-	<email>jlec@gentoo.org</email>
-	<description>Tree Proxy for Max</description>
-</maintainer>
-<maintainer>
-	<email>max-braeu@gmx.de</email>
-	<description>Maintainer, please CC to bugs</description>
-</maintainer>
+	<herd>sci-chemistry</herd>
+	<maintainer>
+		<email>jlec@gentoo.org</email>
+		<description>Tree Proxy for Max</description>
+	</maintainer>
+	<maintainer>
+		<email>max-braeu@gmx.de</email>
+		<description>Maintainer, please CC to bugs</description>
+	</maintainer>
 </pkgmetadata>
