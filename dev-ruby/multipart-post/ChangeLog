@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/multipart-post
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multipart-post/ChangeLog,v 1.4 2011/07/14 06:45:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multipart-post/ChangeLog,v 1.5 2011/07/24 20:08:21 tomka Exp $
+
+  24 Jul 2011; Thomas Kahle <tomka@gentoo.org> multipart-post-1.1.2.ebuild:
+  ~x86 per bug 375153
 
   14 Jul 2011; Hans de Graaff <graaff@gentoo.org> -multipart-post-1.1.0.ebuild,
   -multipart-post-1.1.1.ebuild:
