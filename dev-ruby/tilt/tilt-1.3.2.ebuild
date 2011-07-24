@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tilt/tilt-1.3.2.ebuild,v 1.1 2011/05/28 07:00:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tilt/tilt-1.3.2.ebuild,v 1.2 2011/07/24 09:42:16 xarthisius Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://github.com/rtomayko/tilt"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
