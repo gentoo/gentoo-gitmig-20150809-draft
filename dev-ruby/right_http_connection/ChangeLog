@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/right_http_connection
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/right_http_connection/ChangeLog,v 1.6 2010/08/31 19:53:38 a3li Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/right_http_connection/ChangeLog,v 1.7 2011/07/24 09:37:52 xarthisius Exp $
+
+  24 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  right_http_connection-1.2.4-r1.ebuild:
+  Marked ~ppc64 wrt #351835
 
   31 Aug 2010; Alex Legler <a3li@gentoo.org>
   right_http_connection-1.2.4-r1.ebuild:
