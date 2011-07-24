@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.7-r1.ebuild,v 1.1 2011/07/23 00:53:21 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.7.2-r2.ebuild,v 1.1 2011/07/24 15:06:30 neurogeek Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="none"
@@ -29,7 +29,7 @@ else
 fi
 
 LICENSE="PSF-2.2"
-SLOT="2.6"
+SLOT="2.7"
 PYTHON_ABI="${SLOT}"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="-berkdb build doc elibc_uclibc examples gdbm ipv6 +ncurses +readline sqlite +ssl +threads tk +wide-unicode wininst +xml"
@@ -41,6 +41,7 @@ RDEPEND=">=app-admin/eselect-python-20091230
 		virtual/libintl
 		!build? (
 			berkdb? ( || (
+				sys-libs/db:4.8
 				sys-libs/db:4.7
 				sys-libs/db:4.6
 				sys-libs/db:4.5
@@ -53,7 +54,7 @@ RDEPEND=">=app-admin/eselect-python-20091230
 				>=sys-libs/ncurses-5.2
 				readline? ( >=sys-libs/readline-4.1 )
 			)
-			sqlite? ( >=dev-db/sqlite-3.3.3:3 )
+			sqlite? ( >=dev-db/sqlite-3.3.8:3[extensions] )
 			ssl? ( dev-libs/openssl )
 			tk? (
 				>=dev-lang/tk-8.0
@@ -62,7 +63,8 @@ RDEPEND=">=app-admin/eselect-python-20091230
 			xml? ( >=dev-libs/expat-2 )
 		)
 		!!<sys-apps/portage-2.1.9"
-DEPEND="${RDEPEND}
+DEPEND=">=sys-devel/autoconf-2.65
+		${RDEPEND}
 		$([[ "${PV}" == *_pre* ]] && echo "=${CATEGORY}/${PN}-${PV%%.*}*")
 		dev-util/pkgconfig
 		$([[ "${PV}" =~ ^[[:digit:]]+\.[[:digit:]]+_pre ]] && echo "doc? ( dev-python/sphinx )")
@@ -139,10 +141,15 @@ src_prepare() {
 		Lib/distutils/command/install.py \
 		Lib/distutils/sysconfig.py \
 		Lib/site.py \
+		Lib/sysconfig.py \
+		Lib/test/test_site.py \
 		Makefile.pre.in \
 		Modules/Setup.dist \
 		Modules/getpath.c \
 		setup.py || die "sed failed to replace @@GENTOO_LIBDIR@@"
+
+	#Linux-3 compat. Bug #374579 (upstream issue12571)
+	cp -r "${S}/Lib/plat-linux2" "${S}/Lib/plat-linux3" || die "copy plat-linux failed"
 
 	eautoreconf
 }
@@ -208,10 +215,18 @@ src_configure() {
 	# Export CXX so it ends up in /usr/lib/python2.X/config/Makefile.
 	tc-export CXX
 
-	# Set LDFLAGS so we link modules with -lpython2.6 correctly.
-	# Needed on FreeBSD unless Python 2.6 is already installed.
+	# Set LDFLAGS so we link modules with -lpython2.7 correctly.
+	# Needed on FreeBSD unless Python 2.7 is already installed.
 	# Please query BSD team before removing this!
 	append-ldflags "-L."
+
+	local dbmliborder
+	if use gdbm; then
+		dbmliborder+="${dbmliborder:+:}gdbm"
+	fi
+	if use berkdb; then
+		dbmliborder+="${dbmliborder:+:}bdb"
+	fi
 
 	OPT="" econf \
 		--with-fpectl \
@@ -221,7 +236,10 @@ src_configure() {
 		$(use wide-unicode && echo "--enable-unicode=ucs4" || echo "--enable-unicode=ucs2") \
 		--infodir='${prefix}/share/info' \
 		--mandir='${prefix}/share/man' \
+		--with-dbmliborder="${dbmliborder}" \
 		--with-libc="" \
+		--enable-loadable-sqlite-extensions \
+		--with-system-expat \
 		--with-system-ffi
 }
 
@@ -241,7 +259,7 @@ src_test() {
 	python_enable_pyc
 
 	# Skip failing tests.
-	local skipped_tests="distutils tcl"
+	local skipped_tests="distutils gdb"
 
 	for test in ${skipped_tests}; do
 		mv "${S}/Lib/test/test_${test}.py" "${T}"
@@ -277,13 +295,14 @@ src_install() {
 	emake DESTDIR="${D}" altinstall maninstall || die "emake altinstall maninstall failed"
 	python_clean_installation_image -q
 
+	sed -e "s/\(LDFLAGS=\).*/\1/" -i "${ED}$(python_get_libdir)/config/Makefile" || die "sed failed"
+
 	mv "${ED}usr/bin/python${SLOT}-config" "${ED}usr/bin/python-config-${SLOT}"
 
 	# Fix collisions between different slots of Python.
 	mv "${ED}usr/bin/2to3" "${ED}usr/bin/2to3-${SLOT}"
 	mv "${ED}usr/bin/pydoc" "${ED}usr/bin/pydoc${SLOT}"
 	mv "${ED}usr/bin/idle" "${ED}usr/bin/idle${SLOT}"
-	mv "${ED}usr/share/man/man1/python.1" "${ED}usr/share/man/man1/python${SLOT}.1"
 	rm -f "${ED}usr/bin/smtpd.py"
 
 	if use build; then
@@ -308,21 +327,22 @@ src_install() {
 	newconfd "${FILESDIR}/pydoc.conf" pydoc-${SLOT} || die "newconfd failed"
 	newinitd "${FILESDIR}/pydoc.init" pydoc-${SLOT} || die "newinitd failed"
 
-	#Linux-3 compat. Bug #374579 (upstream issue12571)
-	cp -r "${ED}$(python_get_libdir)/plat-linux2" \
+	if [ -d "${ED}$(python_get_libdir)/plat-linux2" ];then
+		cp -r "${ED}$(python_get_libdir)/plat-linux2" \
 			"${ED}$(python_get_libdir)/plat-linux3" || die "copy plat-linux failed"
+	else
+		cp -r "${ED}$(python_get_libdir)/plat-linux3" \
+			"${ED}$(python_get_libdir)/plat-linux2" || die "copy plat-linux failed"
+	fi
 
 	sed \
 		-e "s:@PYDOC_PORT_VARIABLE@:PYDOC${SLOT/./_}_PORT:" \
 		-e "s:@PYDOC@:pydoc${SLOT}:" \
 		-i "${ED}etc/conf.d/pydoc-${SLOT}" "${ED}etc/init.d/pydoc-${SLOT}" || die "sed failed"
-
-	# Do not install empty directory.
-	rmdir "${ED}$(python_get_libdir)/lib-old"
 }
 
 pkg_preinst() {
-	if has_version "<${CATEGORY}/${PN}-${SLOT}" && ! has_version "${CATEGORY}/${PN}:2.6" && ! has_version "${CATEGORY}/${PN}:2.7"; then
+	if has_version "<${CATEGORY}/${PN}-${SLOT}" && ! has_version "${CATEGORY}/${PN}:2.7"; then
 		python_updater_warning="1"
 	fi
 }
