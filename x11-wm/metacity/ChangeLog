@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.270 2011/04/05 13:27:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.271 2011/07/24 13:37:23 eva Exp $
+
+*metacity-2.34.1 (24 Jul 2011)
+
+  24 Jul 2011; Gilles Dartiguelongue <eva@gentoo.org> +metacity-2.34.1.ebuild:
+  Version bump. Fix a crasher bug, include freebsd fix, translation updates.
 
 *metacity-2.34.0 (05 Apr 2011)
 
