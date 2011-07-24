@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thor/thor-0.14.6.ebuild,v 1.2 2011/06/29 19:48:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thor/thor-0.14.6.ebuild,v 1.3 2011/07/24 09:39:01 xarthisius Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 ruby19"
@@ -21,7 +21,7 @@ S="${WORKDIR}/wycats-${PN}-*"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-solaris"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-solaris"
 IUSE="doc"
 
 ruby_add_bdepend "

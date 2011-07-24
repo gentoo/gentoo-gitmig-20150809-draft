@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql2/mysql2-0.2.7.ebuild,v 1.2 2011/06/08 18:42:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql2/mysql2-0.2.7.ebuild,v 1.3 2011/07/24 09:57:40 xarthisius Exp $
 
 EAPI="3"
 USE_RUBY="ruby18 ree18"
@@ -19,7 +19,7 @@ HOMEPAGE="https://github.com/brianmario/mysql2"
 
 LICENSE="MIT"
 SLOT="0.2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND="${DEPEND} virtual/mysql[-static]"

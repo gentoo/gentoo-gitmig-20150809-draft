@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mustache
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mustache/ChangeLog,v 1.10 2011/06/02 14:11:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mustache/ChangeLog,v 1.11 2011/07/24 09:31:44 xarthisius Exp $
+
+  24 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> mustache-0.99.4.ebuild:
+  Marked ~ppc/~ppc64 wrt #351835
 
   02 Jun 2011; Markus Meier <maekke@gentoo.org> mustache-0.99.4.ebuild:
   add ~x86, bug #368983

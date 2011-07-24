@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/railties
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.10 2011/07/07 04:39:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.11 2011/07/24 09:56:50 xarthisius Exp $
+
+  24 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> railties-3.0.9.ebuild:
+  Marked ~ppc/~ppc64 wrt #351835
 
   07 Jul 2011; Hans de Graaff <graaff@gentoo.org> railties-3.0.9.ebuild:
   Add missing dependency on rdoc as reported in bug 374175.

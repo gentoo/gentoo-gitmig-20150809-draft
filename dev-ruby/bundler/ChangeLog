@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bundler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.21 2011/06/29 19:43:35 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.22 2011/07/24 09:49:13 xarthisius Exp $
+
+  24 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> bundler-1.0.15.ebuild:
+  Marked ~ppc/~ppc64 wrt #351835
 
   29 Jun 2011; Fabian Groffen <grobian@gentoo.org> bundler-1.0.15.ebuild:
   Marked ~x86-solaris
