@@ -1,0 +1,10 @@
+--- viking-1.2.1-orig/src/osm-traces.c	2011-07-24 12:00:31.556958069 +0200
++++ viking-1.2.1/src/osm-traces.c	2011-07-24 12:00:44.180631910 +0200
+@@ -27,7 +27,6 @@
+ #include <errno.h>
+ 
+ #include <curl/curl.h>
+-#include <curl/types.h>
+ #include <curl/easy.h>
+ 
+ #include <glib.h>
