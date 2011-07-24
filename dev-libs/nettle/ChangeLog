@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.41 2011/07/23 19:18:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.42 2011/07/24 10:29:52 armin76 Exp $
+
+  24 Jul 2011; Raúl Porcel <armin76@gentoo.org> nettle-2.1.ebuild:
+  sh stable wrt #337160
 
   23 Jul 2011; Raúl Porcel <armin76@gentoo.org> nettle-2.1.ebuild:
   ia64/s390 stable wrt #337160
