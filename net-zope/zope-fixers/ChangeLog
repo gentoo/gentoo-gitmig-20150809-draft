@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-fixers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-fixers/ChangeLog,v 1.5 2011/07/23 18:41:22 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-fixers/ChangeLog,v 1.6 2011/07/24 19:23:42 tomka Exp $
+
+  24 Jul 2011; Thomas Kahle <tomka@gentoo.org> zope-fixers-1.0.ebuild:
+  x86 stable per bug 374581
 
   23 Jul 2011; Mark Loeser <halcy0n@gentoo.org> zope-fixers-1.0.ebuild:
   Stable for ppc/ppc64; bug #374581
