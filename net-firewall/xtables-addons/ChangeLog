@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/xtables-addons
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/ChangeLog,v 1.18 2011/06/20 08:26:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/ChangeLog,v 1.19 2011/07/24 10:24:39 pva Exp $
+
+*xtables-addons-1.37 (24 Jul 2011)
+
+  24 Jul 2011; Peter Volkov <pva@gentoo.org> +xtables-addons-1.37.ebuild:
+  Version bump.
 
   20 Jun 2011; Peter Volkov <pva@gentoo.org> xtables-addons-1.36.ebuild,
   +files/xtables-addons-1.36-absolute-M.patch,
