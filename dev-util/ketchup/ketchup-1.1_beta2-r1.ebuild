@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ketchup/ketchup-1.1_beta2.ebuild,v 1.1 2011/07/23 17:47:47 psomas Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ketchup/ketchup-1.1_beta2-r1.ebuild,v 1.1 2011/07/24 15:53:32 psomas Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="Tool for updating or switching between versions of the Linux kernel source"
 HOMEPAGE="http://github.com/psomas/ketchup"
-SRC_URI="http://dev.gentoo.org/~psomas/${P}.tar.gz"
+SRC_URI="http://dev.gentoo.org/~psomas/${PF}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
