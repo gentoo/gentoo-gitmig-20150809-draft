@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.853 2011/07/19 22:11:44 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.854 2011/07/24 08:53:59 zmedico Exp $
+
+*portage-2.2.0_alpha47 (24 Jul 2011)
+
+  24 Jul 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha47.ebuild:
+  2.2.0_alpha47 version bump. This fixes bug #326685 (improved handling for
+  ebuilds that replace a directory with a symlink), bug #338959 (@installed
+  pulls in unwanted new slots), and bug #375835 (SELinux support for fetching
+  from binhost). This also includes memory and performance optimizations for
+  preserve-libs and @preserved-rebuild. Bug #210077 tracks all bugs fixed
+  since portage-2.1.x.
 
 *portage-2.2.0_alpha46 (19 Jul 2011)
 
