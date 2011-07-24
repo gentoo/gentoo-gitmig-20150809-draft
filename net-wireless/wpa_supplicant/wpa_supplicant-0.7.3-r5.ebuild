@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r5.ebuild,v 1.2 2011/07/11 10:06:34 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r5.ebuild,v 1.3 2011/07/24 11:10:19 gurligebis Exp $
 
 EAPI="2"
 
@@ -86,7 +86,7 @@ src_prepare() {
 
 src_configure() {
 	# Toolchain setup
-	echo "CC = $(tc-getCC)" > .config
+	tc-export CC
 
 	# Basic setup
 	echo "CONFIG_CTRL_IFACE=y" >> .config
