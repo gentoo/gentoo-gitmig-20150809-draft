@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-99999999.ebuild,v 1.5 2011/07/23 22:37:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/foo2zjs-99999999.ebuild,v 1.6 2011/07/24 03:24:05 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -22,6 +22,7 @@ RDEPEND="net-print/cups
 	sys-fs/udev"
 DEPEND="${RDEPEND}
 	app-arch/unzip
+	app-editors/vim
 	net-misc/wget
 	sys-apps/ed
 	sys-devel/bc

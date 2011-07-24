@@ -1,6 +1,9 @@
 # ChangeLog for net-print/foo2zjs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.45 2011/07/23 22:37:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foo2zjs/ChangeLog,v 1.46 2011/07/24 03:24:05 phajdan.jr Exp $
+
+  24 Jul 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> foo2zjs-99999999.ebuild:
+  Add app-editors/vim dependency for ex, bug #375397.
 
   23 Jul 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> foo2zjs-99999999.ebuild:
   Add install-hotplug to src_install, and other installation fixes; bug #375397
