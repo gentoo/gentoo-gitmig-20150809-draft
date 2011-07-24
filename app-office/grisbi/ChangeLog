@@ -1,6 +1,10 @@
 # ChangeLog for app-office/grisbi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.48 2011/07/16 17:43:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.49 2011/07/24 11:03:24 armin76 Exp $
+
+  24 Jul 2011; Raúl Porcel <armin76@gentoo.org> grisbi-0.6.0_rc2.ebuild,
+  grisbi-0.6.0.ebuild, grisbi-0.8.1.ebuild, grisbi-0.8.2.ebuild:
+  Drop sparc keyword
 
   16 Jul 2011; Markus Meier <maekke@gentoo.org> grisbi-0.8.2.ebuild:
   x86 stable, bug #372349
