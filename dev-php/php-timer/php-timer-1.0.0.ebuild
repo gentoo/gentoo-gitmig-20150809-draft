@@ -1,7 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-timer/php-timer-1.0.0.ebuild,v 1.1 2011/07/21 11:33:08 olemarkus Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-timer/php-timer-1.0.0.ebuild,v 1.2 2011/07/24 23:06:27 mr_bones_ Exp $
 
 PHP_PEAR_CHANNEL="${FILESDIR}/channel.xml"
 PHP_PEAR_URI="pear.phpunit.de"
