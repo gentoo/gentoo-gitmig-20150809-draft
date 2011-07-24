@@ -1,9 +1,9 @@
 # ChangeLog for dev-ruby/daemons
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.62 2011/07/24 17:30:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.63 2011/07/24 17:33:21 armin76 Exp $
 
   24 Jul 2011; Raúl Porcel <armin76@gentoo.org> daemons-1.1.3.ebuild:
-  ia64 stable wrt #372115
+  ia64/sparc stable wrt #372115
 
   23 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> daemons-1.1.3.ebuild:
   ppc/ppc64 stable wrt #372115
