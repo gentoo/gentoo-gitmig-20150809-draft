@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/color-tools/color-tools-1.3.0-r1.ebuild,v 1.2 2011/07/23 14:20:52 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/color-tools/color-tools-1.3.0-r1.ebuild,v 1.3 2011/07/24 06:36:34 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -25,4 +25,7 @@ all_ruby_prepare() {
 
 	# Remove unsupported verbose task conditional
 	sed -i -e '/t.verbose/d' Rakefile || die
+
+	# Remove dependency that is unneeded for our purpose
+	sed -i -e '/minitar/d' Rakefile || die
 }
