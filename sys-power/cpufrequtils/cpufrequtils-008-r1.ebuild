@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-008-r1.ebuild,v 1.1 2011/07/21 20:04:49 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-008-r1.ebuild,v 1.2 2011/07/24 21:31:40 hwoarang Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://kernel/linux/utils/kernel/cpufreq/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug nls"
 
 DEPEND=""
