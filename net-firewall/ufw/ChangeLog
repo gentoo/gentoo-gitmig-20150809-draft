@@ -1,0 +1,11 @@
+# ChangeLog for net-firewall/ufw
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw/ChangeLog,v 1.1 2011/07/24 11:18:22 pva Exp $
+
+*ufw-0.30.1-r2 (24 Jul 2011)
+
+  24 Jul 2011; Peter Volkov <pva@gentoo.org> +ufw-0.30.1-r2.ebuild,
+  +files/ufw-2.initd, +files/ufw.confd, +files/ufw-dont-check-iptables.patch,
+  +files/ufw-move-path.patch, +metadata.xml:
+  Initial import, bug #264912, thank Sławomir Nizio for this job.
+
