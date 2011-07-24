@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.10.12.ebuild,v 1.1 2011/05/09 22:27:13 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.10.21.ebuild,v 1.1 2011/07/24 10:31:22 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -26,6 +26,7 @@ RESTRICT="test"
 RDEPEND="
 	>=app-i18n/enca-1.9
 	>=dev-db/sqlite-3.7[threadsafe]
+	>=dev-libs/dbus-glib-0.82-r1
 	>=dev-libs/glib-2.26:2
 	>=dev-libs/icu-4
 	|| (

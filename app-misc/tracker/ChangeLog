@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.109 2011/06/07 20:56:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.110 2011/07/24 10:31:22 eva Exp $
+
+*tracker-0.10.21 (24 Jul 2011)
+
+  24 Jul 2011; Gilles Dartiguelongue <eva@gentoo.org> -tracker-0.10.12.ebuild,
+  +tracker-0.10.21.ebuild, tracker-9999.ebuild:
+  Version bump, bug #375665. Re-add dbus-glib to R/DEPEND, it is needed for
+  libtracker-client at least.
 
 *tracker-0.10.16 (07 Jun 2011)
 
