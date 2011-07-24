@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/json-glib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-glib/ChangeLog,v 1.20 2011/07/14 10:10:30 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-glib/ChangeLog,v 1.21 2011/07/24 11:19:34 eva Exp $
+
+*json-glib-0.13.4 (24 Jul 2011)
+
+  24 Jul 2011; Gilles Dartiguelongue <eva@gentoo.org> json-glib-0.12.6.ebuild,
+  +json-glib-0.13.4.ebuild:
+  Add development release for testing purpose.
 
   14 Jul 2011; Thomas Kahle <tomka@gentoo.org> json-glib-0.12.4.ebuild:
   x86 stable per bug 369909
