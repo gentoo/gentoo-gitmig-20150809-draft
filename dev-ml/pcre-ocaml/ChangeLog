@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/pcre-ocaml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/ChangeLog,v 1.38 2011/07/24 09:25:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/ChangeLog,v 1.39 2011/07/24 19:50:42 tomka Exp $
+
+  24 Jul 2011; Thomas Kahle <tomka@gentoo.org> pcre-ocaml-6.2.2.ebuild:
+  x86 stable per bug 374971
 
   24 Jul 2011; Markos Chandras <hwoarang@gentoo.org> pcre-ocaml-6.2.2.ebuild:
   Stable on amd64 wrt bug #374971
