@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.2.3.ebuild,v 1.4 2011/07/17 20:47:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.2.3.ebuild,v 1.5 2011/07/24 18:26:19 armin76 Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/nagios/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ~hppa ~ppc ~ppc64 sparc x86"
 IUSE="debug lighttpd perl +web vim-syntax"
 DEPEND="virtual/mailx
 	web? (
