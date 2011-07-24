@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kiwix/kiwix-0.9_beta1.ebuild,v 1.1 2011/07/23 17:29:24 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kiwix/kiwix-0.9_beta1.ebuild,v 1.2 2011/07/24 01:00:56 chithanh Exp $
 
 EAPI=3
 
@@ -17,7 +17,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-# sys-apps/portage botches upgrade, bug #326685
+# No upgrade from 0.9_alpha possible, because a directory would be replaced
+# with a symlink, which PMS section 13.4 forbids. Bug #326685.
 RDEPEND="app-arch/xz-utils
 	dev-lang/perl
 	dev-libs/icu
