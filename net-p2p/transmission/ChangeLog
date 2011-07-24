@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.154 2011/06/16 09:30:23 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.155 2011/07/24 08:54:10 pva Exp $
+
+*transmission-2.33 (24 Jul 2011)
+
+  24 Jul 2011; Peter Volkov <pva@gentoo.org> +transmission-2.33.ebuild,
+  +files/transmission-2.33-0001-configure.ac.patch,
+  +files/transmission-2.33-0002-config.in-4-qt.pro.patch,
+  +files/transmission-2.33-0003-system-miniupnpc.patch:
+  Version bump, bug #376121 thank Alessandro Guido for report.
 
   16 Jun 2011; Peter Volkov <pva@gentoo.org>
   -files/0001-configure.ac-Drop-redudant-code-indentation.patch,
