@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.4.20.ebuild,v 1.10 2010/10/24 17:01:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.4.20.ebuild,v 1.11 2011/07/24 08:56:50 angelos Exp $
 
 EAPI=2
 inherit eutils libtool
@@ -24,6 +24,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-2.0.3-curl-headers.patch
 	epunt_cxx
 	elibtoolize # Required by FreeBSD .so versioning
 }

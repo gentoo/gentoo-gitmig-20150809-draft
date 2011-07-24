@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/raptor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.95 2011/07/09 07:57:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.96 2011/07/24 08:56:50 angelos Exp $
+
+  24 Jul 2011; Christoph Mende <angelos@gentoo.org> raptor-1.4.20.ebuild,
+  -raptor-1.4.21.ebuild, raptor-1.4.21-r1.ebuild, -raptor-2.0.0.ebuild,
+  -raptor-2.0.2.ebuild, raptor-2.0.3.ebuild,
+  +files/raptor-2.0.3-curl-headers.patch:
+  Fix compilation with curl-7.21.7 (bug #376001)
 
 *raptor-2.0.3 (09 Jul 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-2.0.3.ebuild,v 1.1 2011/07/09 07:57:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-2.0.3.ebuild,v 1.2 2011/07/24 08:56:50 angelos Exp $
 
 EAPI=4
 inherit eutils libtool
@@ -32,6 +32,7 @@ S=${WORKDIR}/${MY_P}
 DOCS=( AUTHORS ChangeLog NEWS NOTICE README )
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-curl-headers.patch
 	epunt_cxx
 	elibtoolize
 }
