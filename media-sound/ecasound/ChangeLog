@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ecasound
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ChangeLog,v 1.59 2011/06/28 04:21:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ChangeLog,v 1.60 2011/07/24 18:15:44 armin76 Exp $
+
+  24 Jul 2011; Raúl Porcel <armin76@gentoo.org> ecasound-2.6.0.ebuild:
+  Drop sparc keyword
 
 *ecasound-2.8.1 (28 Jun 2011)
 
