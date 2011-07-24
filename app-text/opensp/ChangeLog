@@ -1,6 +1,10 @@
 # ChangeLog for app-text/opensp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.53 2011/01/08 13:47:05 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.54 2011/07/24 08:47:44 pva Exp $
+
+  24 Jul 2011; Peter Volkov <pva@gentoo.org> opensp-1.5.2-r2.ebuild:
+  Add app-text/sgml-common as a test dependency, thank Jakub Januszkiewicz and
+  Nikoli for report in bug #273681.
 
   08 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -opensp-1.5.1.ebuild, -files/opensp-1.5.1-gcc41.patch,
