@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-4.1.4.ebuild,v 1.4 2011/05/15 10:58:21 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-4.1.4.ebuild,v 1.5 2011/07/24 13:02:59 pva Exp $
 
 EAPI="4"
 
@@ -61,6 +61,10 @@ src_prepare() {
 }
 
 src_configure() {
+	# work around bug #355975 (mount modifies timestamp of /etc/mtab)
+	# with >=sys-apps/util-linux-2.19,
+	addpredict "/etc/mtab"
+
 	econf \
 		$(use_with ldap openldap) \
 		$(use_with hesiod)
