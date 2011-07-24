@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/cabextract
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.70 2011/07/16 16:32:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/ChangeLog,v 1.71 2011/07/24 12:16:35 xarthisius Exp $
+
+  24 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> cabextract-1.4.ebuild:
+  ppc64 stable wrt #372597
 
   16 Jul 2011; Raúl Porcel <armin76@gentoo.org> cabextract-1.4.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #372597
