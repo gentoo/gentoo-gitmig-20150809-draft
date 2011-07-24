@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.2.ebuild,v 1.1 2011/07/24 12:25:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.2.ebuild,v 1.2 2011/07/24 12:30:38 scarabeus Exp $
 
 EAPI=3
 
@@ -81,17 +81,6 @@ ADDONS_SRC+=" http://download.go-oo.org/extern/b4cae0700aa1c2aef7eb7f345365e6f1-
 ADDONS_SRC+=" http://www.numbertext.org/linux/881af2b7dca9b8259abbca00bbbc004d-LinLibertineG-20110101.zip"
 SRC_URI+=" ${ADDONS_SRC}"
 
-# translations
-LANGUAGES="af ar as ast be bg bn bo br brx bs ca ca_XV cs cy da de dgo dz el
-en en_GB en_ZA eo es et eu fa fi fr ga gl gu he hi hr hu id is it ja ka kk km
-kn kok ko ks ku lo lt lv mai mk ml mn mni mr my nb ne nl nn nr nso oc or
-pa_IN pl pt pt_BR ro ru rw sat sd sh sk sl sq sr ss st sv sw_TZ ta te tg
-th tn tr ts ug uk uz ve vi xh zh_CN zh_TW zu"
-for X in ${LANGUAGES} ; do
-	IUSE+=" linguas_${X}"
-done
-unset X
-
 # intersection of available linguas and app-dicts/myspell-* dictionaries
 SPELL_DIRS="af bg ca cs cy da de el en eo es et fr ga gl he hr hu it ku lt mk nb
 nl nn pl pt ru sk sl sv tn zu"
@@ -114,11 +103,22 @@ unset ADDONS_URI
 unset EXT_URI
 unset ADDONS_SRC
 
-IUSE+=" binfilter cups custom-cflags dbus debug eds gnome gstreamer
+IUSE="binfilter cups custom-cflags dbus debug eds gnome gstreamer
 gtk kde ldap mysql nsplugin odk offlinehelp opengl pch python templates webdav"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+
+# translations
+LANGUAGES="af ar as ast be bg bn bo br brx bs ca ca_XV cs cy da de dgo dz el
+en en_GB en_ZA eo es et eu fa fi fr ga gl gu he hi hr hu id is it ja ka kk km
+kn kok ko ks ku lo lt lv mai mk ml mn mni mr my nb ne nl nn nr nso oc or
+pa_IN pl pt pt_BR ro ru rw sat sd sh sk sl sq sr ss st sv sw_TZ ta te tg
+th tn tr ts ug uk uz ve vi xh zh_CN zh_TW zu"
+for X in ${LANGUAGES} ; do
+	IUSE+=" linguas_${X}"
+done
+unset X
 
 COMMON_DEPEND="
 	app-arch/zip
@@ -371,10 +371,10 @@ src_configure() {
 		"
 	else
 		java_opts="
-			--with-ant-home=${ANT_HOME}
+			--with-ant-home="${ANT_HOME}"
 			--with-jdk-home=$(java-config --jdk-home 2>/dev/null)
 			--with-java-target-version=$(java-pkg_get-target)
-			--with-jvm-path=${EPREFIX}/usr/$(get_libdir)/
+			--with-jvm-path="${EPREFIX}/usr/$(get_libdir)/"
 			--with-beanshell-jar=$(java-pkg_getjar bsh bsh.jar)
 			--with-lucene-core-jar=$(java-pkg_getjar lucene-2.9 lucene-core.jar)
 			--with-lucene-analyzers-jar=$(java-pkg_getjar lucene-analyzers-2.3 lucene-analyzers.jar)
