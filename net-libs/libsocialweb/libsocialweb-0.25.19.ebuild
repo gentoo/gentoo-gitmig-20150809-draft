@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/libsocialweb-0.25.17.ebuild,v 1.1 2011/05/14 17:02:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/libsocialweb-0.25.19.ebuild,v 1.1 2011/07/24 15:25:17 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
+GNOME_TARBALL_SUFFIX="xz"
 PYTHON_DEPEND="2"
 
 inherit gnome2 python
