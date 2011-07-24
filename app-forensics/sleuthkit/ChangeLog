@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/sleuthkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.49 2011/07/17 20:39:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.50 2011/07/24 18:22:23 armin76 Exp $
+
+  24 Jul 2011; Raúl Porcel <armin76@gentoo.org> sleuthkit-2.09.ebuild,
+  sleuthkit-3.0.0-r1.ebuild, sleuthkit-3.1.0.ebuild, sleuthkit-3.2.1.ebuild,
+  sleuthkit-3.2.2.ebuild:
+  Drop arm/s390/sparc keywords
 
   17 Jul 2011; Markus Meier <maekke@gentoo.org> sleuthkit-3.2.1.ebuild:
   x86 stable, bug #374321

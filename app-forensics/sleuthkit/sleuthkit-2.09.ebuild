@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-2.09.ebuild,v 1.7 2007/12/11 09:23:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-2.09.ebuild,v 1.8 2011/07/24 18:22:23 armin76 Exp $
 
 inherit toolchain-funcs eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/sleuthkit/${P}.tar.gz
 
 LICENSE="GPL-2 IBM"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ppc s390 sparc x86"
+KEYWORDS="amd64 hppa ppc x86"
 IUSE="dbtool"
 
 RDEPEND="dev-perl/DateManip"

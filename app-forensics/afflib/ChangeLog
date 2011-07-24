@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/afflib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/ChangeLog,v 1.12 2011/07/17 20:39:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/ChangeLog,v 1.13 2011/07/24 18:23:44 armin76 Exp $
+
+  24 Jul 2011; Raúl Porcel <armin76@gentoo.org> afflib-3.3.4.ebuild,
+  afflib-3.5.2.ebuild, afflib-3.5.8.ebuild, afflib-3.6.8.ebuild,
+  afflib-3.6.12.ebuild:
+  Drop arm/s390/sparc keywords
 
   17 Jul 2011; Markus Meier <maekke@gentoo.org> afflib-3.6.8.ebuild:
   x86 stable, bug #374321

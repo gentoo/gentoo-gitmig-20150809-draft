@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-3.0.0-r1.ebuild,v 1.5 2009/05/01 19:08:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/sleuthkit-3.0.0-r1.ebuild,v 1.6 2011/07/24 18:22:23 armin76 Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.sleuthkit.org/sleuthkit/"
 SRC_URI="mirror://sourceforge/sleuthkit/${P}.tar.gz"
 
 LICENSE="GPL-2 IBM"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~s390 ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 
 DEPEND="ewf? ( app-forensics/libewf )
 	aff? ( app-forensics/afflib )"

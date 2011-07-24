@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/libewf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/ChangeLog,v 1.10 2011/07/17 20:38:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/ChangeLog,v 1.11 2011/07/24 18:24:51 armin76 Exp $
+
+  24 Jul 2011; Raúl Porcel <armin76@gentoo.org> libewf-20090209.ebuild,
+  libewf-20091108.ebuild, libewf-20100226.ebuild:
+  Drop arm/s390/sparc keywords
 
   17 Jul 2011; Markus Meier <maekke@gentoo.org> libewf-20100226.ebuild:
   x86 stable, bug #374321
