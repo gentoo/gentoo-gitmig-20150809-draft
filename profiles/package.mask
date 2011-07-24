@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12935 2011/07/24 11:17:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12936 2011/07/24 11:45:40 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -736,10 +736,6 @@ app-crypt/hmaccalc
 # Masked for testing, and some testsuite failures.
 # Bug 313769
 =sys-libs/db-5.0*
-
-# Tomáš Chvátal <scarabeus@gentoo.org> (27 Apr 2010)
-# Replaced by >sci-libs/netcdf-4.0
-sci-libs/libnc-dap
 
 # Michael Sterrett <mr_bones_@gentoo.org> (14 Apr 2010)
 # gtk+-1 is old and nasty.
