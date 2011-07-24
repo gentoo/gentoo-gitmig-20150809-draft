@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audacity
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.156 2011/07/15 20:15:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.157 2011/07/24 00:58:57 radhermit Exp $
+
+  24 Jul 2011; Tim Harder <radhermit@gentoo.org> audacity-1.3.13.ebuild,
+  +files/audacity-1.3.13-ffmpeg.patch:
+  Apply patch to fix build with newer versions of ffmpeg/libav (bug #373213).
 
   15 Jul 2011; Markus Meier <maekke@gentoo.org> audacity-1.3.13.ebuild:
   x86 stable, bug #372757
