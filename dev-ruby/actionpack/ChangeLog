@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.184 2011/07/24 09:58:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.185 2011/07/24 17:36:50 armin76 Exp $
+
+  24 Jul 2011; Raúl Porcel <armin76@gentoo.org> actionpack-2.3.12.ebuild:
+  ia64/sparc stable wrt #372391
 
   24 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> actionpack-3.0.9.ebuild:
   Marked ~ppc/~ppc64 wrt #351835
