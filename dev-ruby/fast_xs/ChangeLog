@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/fast_xs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_xs/ChangeLog,v 1.1 2011/07/25 08:56:25 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast_xs/ChangeLog,v 1.2 2011/07/25 17:53:33 graaff Exp $
+
+*fast_xs-0.7.3-r1 (25 Jul 2011)
+
+  25 Jul 2011; Hans de Graaff <graaff@gentoo.org> +fast_xs-0.7.3-r1.ebuild:
+  Install documentation. Run tests. Add ree18.
 
 *fast_xs-0.7.3 (25 Jul 2011)
 
