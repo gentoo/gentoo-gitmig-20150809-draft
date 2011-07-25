@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/pyephem-3.7.4.1.ebuild,v 1.1 2011/05/03 16:52:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/pyephem-3.7.4.1.ebuild,v 1.2 2011/07/25 23:00:57 bicatali Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.5"
@@ -11,7 +11,7 @@ inherit distutils eutils
 
 DESCRIPTION="Astronomical routines for the python programming language"
 LICENSE="LGPL-3"
-HOMEPAGE="http://rhodesmill.org/pyephem/pyephem.html"
+HOMEPAGE="http://rhodesmill.org/pyephem/"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 SLOT="0"
