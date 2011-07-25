@@ -1,0 +1,21 @@
+# ChangeLog for sec-policy/selinux-haveged
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-haveged/ChangeLog,v 1.1 2011/07/25 22:58:54 blueness Exp $
+
+*selinux-haveged-2.20101213-r1 (25 Jul 2011)
+
+  25 Jul 2011; Anthony G. Basile <blueness@gentoo.org>
+  +files/fix-services-haveged-r1.patch, +selinux-haveged-2.20101213-r1.ebuild,
+  +selinux-haveged-2.20101213-r2.ebuild, +metadata.xml:
+  Initial commit to tree
+
+*selinux-haveged-2.20101213-r2 (21 Jul 2011)
+
+  21 Jul 2011; <swift@gentoo.org> +selinux-haveged-2.20101213-r2.ebuild:
+  Do not use a haveged domain, but refer to audio-entropyd
+
+  17 Jul 2011; <swift@gentoo.org> +files/fix-services-haveged-r1.patch,
+  +selinux-haveged-2.20101213-r1.ebuild, +metadata.xml:
+  Initial support for haveged
+
+
