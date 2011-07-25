@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/vmware-view-open-client
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-view-open-client/ChangeLog,v 1.9 2011/06/15 22:15:57 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-view-open-client/ChangeLog,v 1.10 2011/07/25 10:35:12 angelos Exp $
+
+  25 Jul 2011; Christoph Mende <angelos@gentoo.org>
+  vmware-view-open-client-4.5.0.297975-r1.ebuild,
+  +files/vmware-view-open-client-4.5.0.297975-curl-headers.patch:
+  Fix compilation against curl-7.21.7 (bug #376227)
 
 *vmware-view-open-client-4.5.0.297975-r1 (15 Jun 2011)
 

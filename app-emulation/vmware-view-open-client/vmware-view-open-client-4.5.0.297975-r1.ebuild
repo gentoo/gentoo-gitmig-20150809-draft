@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-view-open-client/vmware-view-open-client-4.5.0.297975-r1.ebuild,v 1.1 2011/06/15 22:15:57 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-view-open-client/vmware-view-open-client-4.5.0.297975-r1.ebuild,v 1.2 2011/07/25 10:35:12 angelos Exp $
 
 EAPI="4"
 
@@ -39,7 +39,8 @@ RDEPEND="${COMMON_DEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-linking.patch"
+	epatch "${FILESDIR}/${P}-linking.patch" \
+		"${FILESDIR}"/${P}-curl-headers.patch
 	sed -e "s:e.x.p:$(get_version_component_range 1-3):" \
 		-e "s:00000:$(get_version_component_range 4):" \
 		-i configure.ac
