@@ -14,6 +14,8 @@ version</longdescription>
 	<flag name='offlinehelp'>Install help files locally instead of
 		using the LibreOffice Wiki</flag>
 	<flag name='templates'>Enable installation of Sun templates</flag>
+	<flag name='vba'>Enable support for VBA compatibility and ActiveX
+		embedding</flag>
 	<flag name='webdav'>Adds support for HTTP repositories via
 		<pkg>net-libs/neon</pkg></flag>
 </use>

@@ -1,6 +1,12 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.51 2011/07/25 17:21:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.52 2011/07/25 18:15:43 scarabeus Exp $
+
+  25 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-3.4.2.2.ebuild, -files/libreoffice-unfigured-options.txt,
+  metadata.xml:
+  Make vba scripting optional. Punt undecided.txt file with unknown opts as we
+  set all those that we require.
 
   25 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   libreoffice-3.4.2.2.ebuild:
