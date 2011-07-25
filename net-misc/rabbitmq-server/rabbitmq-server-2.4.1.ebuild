@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-2.4.1.ebuild,v 1.1 2011/04/08 07:00:32 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-2.4.1.ebuild,v 1.2 2011/07/25 09:36:33 hollow Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-lang/erlang"
+RDEPEND="<=dev-lang/erlang-14.2.2-r1"
 DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd:4.5
 	app-text/xmlto
