@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-tvtv
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-tvtv/ChangeLog,v 1.9 2008/04/28 09:03:26 zzam Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-tvtv/ChangeLog,v 1.10 2011/07/25 10:42:37 angelos Exp $
+
+  25 Jul 2011; Christoph Mende <angelos@gentoo.org> vdr-tvtv-0.2.12.ebuild,
+  vdr-tvtv-0.3.2.ebuild, vdr-tvtv-0.3.3.ebuild, vdr-tvtv-0.3.3-r1.ebuild,
+  +files/vdr-tvtv-0.3.3-curl-headers.patch:
+  Fix compilation against curl-7.21.7 (bug #376143)
 
   28 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
   vdr-tvtv-0.3.3-r1.ebuild:

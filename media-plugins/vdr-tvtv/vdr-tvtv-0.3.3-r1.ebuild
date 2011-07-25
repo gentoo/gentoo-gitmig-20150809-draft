@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-tvtv/vdr-tvtv-0.3.3-r1.ebuild,v 1.3 2008/04/28 09:03:26 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-tvtv/vdr-tvtv-0.3.3-r1.ebuild,v 1.4 2011/07/25 10:42:37 angelos Exp $
 
 inherit vdr-plugin
 
@@ -16,4 +16,5 @@ IUSE=""
 DEPEND=">=media-video/vdr-1.2.6
 	net-misc/curl"
 
-PATCHES=("${FILESDIR}/${P}-vdr-1.6.0.diff")
+PATCHES=( "${FILESDIR}/${P}-vdr-1.6.0.diff"
+	"${FILESDIR}"/${PN}-0.3.3-curl-headers.patch )
