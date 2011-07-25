@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.90 2011/07/22 14:08:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.91 2011/07/25 13:20:14 xarthisius Exp $
+
+  25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> libetpan-1.0.ebuild:
+  ppc/ppc64 stable wrt #373687
 
   22 Jul 2011; Jeroen Roovers <jer@gentoo.org> libetpan-1.0.ebuild:
   Stable for HPPA (bug #373687).
