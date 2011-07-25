@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/diffball
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/ChangeLog,v 1.35 2011/07/24 03:02:16 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/ChangeLog,v 1.36 2011/07/25 09:47:55 naota Exp $
+
+  25 Jul 2011; Naohiro Aota <naota@gentoo.org> diffball-1.0.ebuild:
+  Add keyword ~x86-fbsd
 
   24 Jul 2011; Brian Harring <ferringb@gentoo.org> diffball-1.0.ebuild:
   update the homepage/file url to it's new googlecode location.
