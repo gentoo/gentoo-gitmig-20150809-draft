@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/myspell-cs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-cs/ChangeLog,v 1.22 2011/06/20 14:08:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-cs/ChangeLog,v 1.23 2011/07/25 12:59:59 scarabeus Exp $
+
+  25 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -myspell-cs-20060316.ebuild, myspell-cs-20070926.ebuild:
+  Stabilise everywhere myspell-cs that actualy works with current libreoffice.
+  Drop older.
 
   20 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   myspell-cs-20070926.ebuild:
