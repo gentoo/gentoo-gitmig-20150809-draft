@@ -1,6 +1,10 @@
 # ChangeLog for games-action/openlierox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openlierox/ChangeLog,v 1.6 2011/03/22 17:55:15 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/openlierox/ChangeLog,v 1.7 2011/07/25 04:15:06 sping Exp $
+
+  25 Jul 2011; Sebastian Pipping <sping@gentoo.org>
+  openlierox-0.58_rc1-r1.ebuild, +files/openlierox-0.58_rc1-curl.patch:
+  Integrate patch for curl 7.21.7 (bug #376215)
 
 *openlierox-0.58_rc1-r1 (22 Mar 2011)
 

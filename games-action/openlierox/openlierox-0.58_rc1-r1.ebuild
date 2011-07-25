@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openlierox/openlierox-0.58_rc1-r1.ebuild,v 1.1 2011/03/22 17:55:15 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/openlierox/openlierox-0.58_rc1-r1.ebuild,v 1.2 2011/07/25 04:15:06 sping Exp $
 
 EAPI="2"
 
@@ -33,7 +33,8 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${MY_PN}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-icu.patch
+	epatch "${FILESDIR}"/${P}-icu.patch \
+			"${FILESDIR}"/${P}-curl.patch
 }
 
 src_configure() {
