@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/vicious
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/vicious/ChangeLog,v 1.5 2011/07/25 14:21:56 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/vicious/ChangeLog,v 1.6 2011/07/25 20:39:08 wired Exp $
+
+  25 Jul 2011; Alex Alexander <wired@gentoo.org> vicious-2.0.3.ebuild:
+  updated SRC_URI
 
 *vicious-2.0.3 (25 Jul 2011)
 
