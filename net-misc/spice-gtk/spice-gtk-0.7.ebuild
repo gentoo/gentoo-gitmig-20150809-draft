@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.6.ebuild,v 1.1 2011/04/27 14:17:06 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.7.ebuild,v 1.1 2011/07/25 12:32:11 dev-zero Exp $
 
 EAPI=3
 
-inherit python gnome2-utils
+inherit eutils python gnome2-utils
 
 PYTHON_DEPEND="python? 2"
 
@@ -14,7 +14,7 @@ SRC_URI="http://spice-space.org/download/gtk/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="+cairo doc gnome gstreamer gtk3 introspection kde +pulseaudio python sasl static-libs"
 
 RDEPEND="pulseaudio? ( !gstreamer? ( media-sound/pulseaudio ) )
@@ -25,7 +25,7 @@ RDEPEND="pulseaudio? ( !gstreamer? ( media-sound/pulseaudio ) )
 	dev-libs/openssl
 	gtk3? ( x11-libs/gtk+:3[introspection?] )
 	!gtk3? ( x11-libs/gtk+:2[introspection?] )
-	dev-libs/glib:2
+	>=dev-libs/glib-2.26:2
 	>=x11-libs/cairo-1.2
 	virtual/jpeg
 	sys-libs/zlib
@@ -61,18 +61,20 @@ src_configure() {
 		$(use_with !cairo x11) \
 		$(use_with python) \
 		$(use_with sasl) \
-		--with-gtk="${gtk}"
-
+		--with-gtk="${gtk}" \
+		--disable-smartcard
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	use static-libs || rm -rf "${D}"/usr/lib*/*.la
 	use python && rm -rf "${D}"/usr/lib*/python*/site-packages/*.la
 	use doc || rm -rf "${D}/usr/share/gtk-doc"
 
 	dodoc AUTHORS NEWS README TODO
+
+	make_desktop_entry spicy Spicy "" net
 
 	if use gnome ; then
 		insinto /etc/gconf/schemas
