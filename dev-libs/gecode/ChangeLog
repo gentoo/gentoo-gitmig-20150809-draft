@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/gecode
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gecode/ChangeLog,v 1.1 2011/07/25 08:33:42 hollow Exp $
+
+*gecode-3.6.0 (25 Jul 2011)
+
+  25 Jul 2011; Benedikt Böhm <hollow@gentoo.org> +gecode-3.6.0.ebuild,
+  +metadata.xml:
+  initial ebuild. required by dev-ruby/dep_selector. fixes #285095.
+
