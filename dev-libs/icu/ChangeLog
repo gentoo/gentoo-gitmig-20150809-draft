@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.153 2011/07/24 19:48:21 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.154 2011/07/25 18:34:42 xarthisius Exp $
+
+  25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> icu-4.8.ebuild:
+  ppc/ppc64 stable wrt #374589
 
   24 Jul 2011; Thomas Kahle <tomka@gentoo.org> icu-4.8.ebuild:
   x86 stable per bug 374589
