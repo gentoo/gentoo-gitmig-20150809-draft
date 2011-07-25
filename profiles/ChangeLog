@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5572 2011/07/25 11:39:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5573 2011/07/25 11:42:49 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Jul 2011; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Mask dev-libs/libsigc++:1.0 for removal , bug 358587
 
   25 Jul 2011; Pacho Ramos <pacho@gentoo.org> package.mask:
   Mask net-libs/libicq2000 for removal, bug #358589.
