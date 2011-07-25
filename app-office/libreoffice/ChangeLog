@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.46 2011/07/25 07:26:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.47 2011/07/25 10:42:13 scarabeus Exp $
+
+  25 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-3.4.2.2.ebuild, +files/libreoffice-solenv-build-crash.patch,
+  +files/libreoffice-vbaobj-visibility-fix.patch:
+  Add build fixes for crash in solenv and vbahelper fix for gcc-4.6.
 
   25 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   libreoffice-3.4.2.2.ebuild:

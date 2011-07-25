@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.2.ebuild,v 1.6 2011/07/25 07:26:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.2.ebuild,v 1.7 2011/07/25 10:42:13 scarabeus Exp $
 
 EAPI=3
 
@@ -215,6 +215,8 @@ PATCHES=(
 	"${FILESDIR}/${PN}-3.4.1-salfix.diff"
 	"${FILESDIR}/sdext-presenter.diff"
 	"${FILESDIR}/${PN}-svx.patch"
+	"${FILESDIR}/${PN}-vbaobj-visibility-fix.patch"
+	"${FILESDIR}/${PN}-solenv-build-crash.patch"
 )
 
 # Uncoment me when updating to eapi4
