@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-api/chef-server-api-0.9.8.ebuild,v 1.2 2010/09/20 09:30:31 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-server-webui/chef-server-webui-0.10.2.ebuild,v 1.1 2011/07/25 09:13:38 hollow Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -18,14 +18,19 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-ruby_add_rdepend "~app-admin/chef-${PV}
+RDEPEND=">=dev-db/couchdb-0.10.0
+	>=net-misc/rabbitmq-server-1.7.0"
+
+ruby_add_rdepend "dev-ruby/coderay
+	dev-ruby/haml
 	>=dev-ruby/json-1.4.4
-	>=dev-ruby/mixlib-authentication-1.1.3
+	<=dev-ruby/json-1.4.6
 	>=dev-ruby/merb-assets-1.1.0
 	>=dev-ruby/merb-core-1.1.0
+	>=dev-ruby/merb-haml-1.1.0
 	>=dev-ruby/merb-helpers-1.1.0
 	>=dev-ruby/merb-param-protection-1.1.0
-	>=dev-ruby/uuidtools-2.1.1
+	dev-ruby/ruby-openid
 	www-servers/thin"
 
 pkg_setup() {
@@ -37,33 +42,32 @@ each_ruby_install() {
 	each_fakegem_install
 	ruby_fakegem_doins -r app
 	ruby_fakegem_doins -r config
+	ruby_fakegem_doins config.ru
 	ruby_fakegem_doins -r public
 
 	# create unversioned path for passenger/rack integration
 	dodir /var/lib/chef/rack
-	dosym $(ruby_fakegem_gemsdir)/gems/${P} /var/lib/chef/rack/api
+	dosym $(ruby_fakegem_gemsdir)/gems/${P} /var/lib/chef/rack/webui
 }
 
 all_ruby_install() {
 	all_fakegem_install
 
-	doinitd "${FILESDIR}/initd/chef-server-api"
-	doconfd "${FILESDIR}/confd/chef-server-api"
+	doinitd "${FILESDIR}/initd/chef-server-webui"
+	doconfd "${FILESDIR}/confd/chef-server-webui"
 
-	keepdir /etc/chef /var/lib/chef /var/log/chef /var/run/chef \
-		/etc/chef/certificates
+	keepdir /etc/chef /var/lib/chef /var/log/chef /var/run/chef
 
 	insinto /etc/chef
-	doins "${FILESDIR}/server.rb"
+	doins "${FILESDIR}/webui.rb"
 
-	fperms 0700 /etc/chef/certificates
-	fowners chef:chef /etc/chef/{,server.rb,certificates}
+	fowners chef:chef /etc/chef/{,webui.rb}
 	fowners chef:chef /var/{lib,log,run}/chef
 }
 
 pkg_postinst() {
 	elog
-	elog "You should edit /etc/chef/server.rb before starting the service with"
-	elog "/etc/init.d/chef-server-api start"
+	elog "You should edit or create /etc/chef/webui.rb before starting the service"
+	elog "with /etc/init.d/chef-server-webui start"
 	elog
 }
