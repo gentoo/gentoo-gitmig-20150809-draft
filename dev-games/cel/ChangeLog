@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/cel
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/ChangeLog,v 1.28 2010/10/25 11:35:35 tupone Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/ChangeLog,v 1.29 2011/07/25 17:02:32 mr_bones_ Exp $
+
+  25 Jul 2011; Michael Sterrett <mr_bones_@gentoo.org> cel-1.2.1.ebuild:
+  drop to ~x86 to match dev-games/crystalspace
 
   25 Oct 2010; Tupone Alfredo <tupone@gentoo.org> cel-1.2.1.ebuild:
   Fix build as per bug #327867 by flameeyes@gentoo.org
