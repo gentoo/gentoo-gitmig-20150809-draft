@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/psi-themes
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/ChangeLog,v 1.26 2010/05/22 11:02:33 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/psi-themes/ChangeLog,v 1.27 2011/07/25 16:50:00 halcy0n Exp $
+
+  25 Jul 2011; Mark Loeser <halcy0n@gentoo.org> psi-themes-0.9.3_p1-r2.ebuild:
+  Drop sparc, as net-im/psi has been dropped already
 
   22 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove humpback from metadata.xml (#34793)
