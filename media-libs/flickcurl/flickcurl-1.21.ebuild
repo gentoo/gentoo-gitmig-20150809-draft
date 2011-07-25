@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flickcurl/flickcurl-1.21.ebuild,v 1.1 2011/07/21 08:31:34 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flickcurl/flickcurl-1.21.ebuild,v 1.2 2011/07/25 10:28:48 angelos Exp $
 
 EAPI="4"
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="C library for the Flickr API"
 HOMEPAGE="http://librdf.org/flickcurl/"
@@ -32,6 +32,8 @@ src_prepare() {
 		# Install html docs in the correct directory
 		sed -i -e '/^TARGET_DIR/s:/$(DOC_MODULE)::' gtk-doc.make || die
 	fi
+
+	epatch "${FILESDIR}"/${P}-curl-headers.patch
 
 	eautoreconf
 }
