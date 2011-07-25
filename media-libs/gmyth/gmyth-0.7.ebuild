@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gmyth/gmyth-0.7.ebuild,v 1.8 2010/06/24 10:03:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gmyth/gmyth-0.7.ebuild,v 1.9 2011/07/25 10:32:35 angelos Exp $
 
 inherit libtool autotools eutils
 
@@ -23,7 +23,8 @@ S="${WORKDIR}/${PN}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-as-needed.patch
+	epatch "${FILESDIR}"/${P}-as-needed.patch \
+		"${FILESDIR}"/${P}-curl-headers.patch
 	AT_M4DIR="m4" eautoreconf
 }
 

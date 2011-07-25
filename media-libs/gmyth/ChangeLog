@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gmyth
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gmyth/ChangeLog,v 1.10 2010/06/24 10:03:00 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gmyth/ChangeLog,v 1.11 2011/07/25 10:32:35 angelos Exp $
+
+  25 Jul 2011; Christoph Mende <angelos@gentoo.org> gmyth-0.7.ebuild,
+  +files/gmyth-0.7-curl-headers.patch:
+  Fix compilation against curl-7.21.7 (bug #376145)
 
   24 Jun 2010; Markos Chandras <hwoarang@gentoo.org> gmyth-0.7.ebuild,
   +files/gmyth-0.7-as-needed.patch:
