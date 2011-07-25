@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.157 2011/07/21 10:41:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.158 2011/07/25 20:38:19 xarthisius Exp $
+
+  25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> PyQt4-4.8.4.ebuild:
+  ppc/ppc64 stable wrt #374591
 
   21 Jul 2011; Markus Meier <maekke@gentoo.org> PyQt4-4.8.4.ebuild:
   x86 stable, bug #374591
