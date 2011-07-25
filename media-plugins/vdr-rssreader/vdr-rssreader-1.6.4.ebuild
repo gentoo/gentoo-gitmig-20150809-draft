@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-rssreader/vdr-rssreader-1.6.4.ebuild,v 1.1 2010/09/24 00:28:16 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-rssreader/vdr-rssreader-1.6.4.ebuild,v 1.2 2011/07/25 10:45:47 angelos Exp $
 
 EAPI="2"
 
@@ -21,7 +21,8 @@ DEPEND=">=media-video/vdr-1.6.0
 
 RDEPEND="${DEPEND}"
 
-PATCHES=("${FILESDIR}/${P}-gentoo-rss.diff")
+PATCHES=( "${FILESDIR}/${P}-gentoo-rss.diff"
+	"${FILESDIR}/${P}-curl-headers.patch" )
 
 src_install() {
 	vdr-plugin_src_install
