@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtorrentviewer/gtorrentviewer-0.2b.ebuild,v 1.7 2011/03/28 14:25:03 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtorrentviewer/gtorrentviewer-0.2b.ebuild,v 1.8 2011/07/25 10:38:00 angelos Exp $
 
-EAPI="1"
+EAPI=2
 
 inherit eutils gnome2
 
@@ -25,3 +25,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 DOCS="AUTHORS ChangeLog INSTALL NEWS README"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-curl-headers.patch
+}
