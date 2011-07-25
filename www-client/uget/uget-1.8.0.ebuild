@@ -1,20 +1,18 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-9999.ebuild,v 1.5 2011/07/25 09:46:22 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uget/uget-1.8.0.ebuild,v 1.1 2011/07/25 09:46:22 wired Exp $
 
 EAPI="4"
 
-inherit autotools git-2
+inherit base
 
 DESCRIPTION="Download manager using gtk+ and libcurl"
 HOMEPAGE="http://urlget.sourceforge.net/"
-SRC_URI=""
-
-EGIT_REPO_URI="git://urlget.git.sourceforge.net/gitroot/urlget/uget"
+SRC_URI="mirror://sourceforge/urlget/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="aria2 +curl gstreamer gtk3 hide-temp-files libnotify nls"
 
 REQUIRED_USE="|| ( aria2 curl )"
@@ -41,10 +39,6 @@ src_prepare() {
 	# add missing file, fix tests, bug #376203
 	echo "uglib/UgPlugin-aria2.c" >> po/POTFILES.in ||
 		die "echo in po/POTFILES.in failed"
-
-	eautoreconf
-	intltoolize || die "intltoolize failed"
-	eautoreconf
 }
 
 src_configure() {
@@ -54,7 +48,7 @@ src_configure() {
 		  $(use_enable aria2 plugin-aria2) \
 		  $(use_enable gstreamer) \
 		  $(use_enable hide-temp-files hidden) \
-		  $(use_enable libnotify notify) || die "econf failed"
+		  $(use_enable libnotify notify)
 }
 
 src_compile() {
@@ -62,12 +56,12 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 
 	# the build system forgets this :p
-	dobin uget-cmd/uget-cmd || die "uget-cmd install failed"
+	dobin uget-cmd/uget-cmd
 
-	dodoc AUTHORS ChangeLog README || die "dodoc failed"
+	dodoc AUTHORS ChangeLog NEWS README
 }
 
 pkg_postinst() {
