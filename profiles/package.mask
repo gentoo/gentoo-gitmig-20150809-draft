@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12938 2011/07/24 23:35:02 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12939 2011/07/25 11:39:32 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,7 +31,12 @@
 
 #--- END OF EXAMPLES ---
 
-# Tomáš Chvátal <scarabeus@gentoo.org> (24 Jun 2011)
+# Pacho Ramos <pacho@gentoo.org> (25 Jul 2011)
+# No new release since 2002, doesn't respect LDFLAGS and
+# still needing old libsigc++:1.0. Removal in 30 days. (#358589)
+net-libs/libicq2000
+
+# Tomáš Chvátal <scarabeus@gentoo.org> (24 Jul 2011)
 # Mask for removal packages that are obsoleted.
 # To be removed in 30 days.
 # tangogps -> foxtrotgps
