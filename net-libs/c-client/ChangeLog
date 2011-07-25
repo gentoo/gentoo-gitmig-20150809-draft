@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/c-client
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.77 2011/07/17 21:31:11 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.78 2011/07/25 13:22:21 eras Exp $
+
+  25 Jul 2011; Eray Aslan <eras@gentoo.org> -c-client-2007e.ebuild,
+  -c-client-2007e-r1.ebuild:
+  remove old
 
   17 Jul 2011; Mark Loeser <halcy0n@gentoo.org> c-client-2007e-r2.ebuild:
   Stable for ppc64; bug #368585
