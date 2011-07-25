@@ -1,6 +1,17 @@
 # ChangeLog for dev-libs/libunique
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.42 2011/07/11 15:40:12 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.43 2011/07/25 15:18:41 pacho Exp $
+
+*libunique-1.1.6-r1 (25 Jul 2011)
+
+  25 Jul 2011; Pacho Ramos <pacho@gentoo.org> +libunique-1.1.6-r1.ebuild,
+  +files/libunique-1.1.6-G_CONST_RETURN.patch,
+  +files/libunique-1.1.6-compiler-warnings.patch,
+  +files/libunique-1.1.6-fix-test.patch,
+  +files/libunique-1.1.6-include-terminator.patch, -libunique-3.0.0.ebuild:
+  Include upstream patches committed to 1.1 branch and backport by tetromino
+  for working ok with latest glib-2.29.x (bug #376259 by Alexandre Rostovtsev).
+  Remove old.
 
   11 Jul 2011; Matt Turner <mattst88@gentoo.org> libunique-3.0.2.ebuild:
   Added ~mips, bug 364693
