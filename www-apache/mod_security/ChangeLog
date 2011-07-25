@@ -1,6 +1,14 @@
 # ChangeLog for www-apache/mod_security
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.56 2011/07/07 06:38:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.57 2011/07/25 10:34:57 flameeyes Exp $
+
+*mod_security-2.6.1 (25 Jul 2011)
+
+  25 Jul 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -mod_security-2.6.0.ebuild, -mod_security-2.6.1_rc1.ebuild,
+  +mod_security-2.6.1.ebuild:
+  Version bump to final 2.6.1; remove 2.6.0 and rc1. Use SF.net mirrors
+  directly from now on to avoid one redirect and respect users' choices.
 
 *mod_security-2.6.1_rc1 (07 Jul 2011)
 

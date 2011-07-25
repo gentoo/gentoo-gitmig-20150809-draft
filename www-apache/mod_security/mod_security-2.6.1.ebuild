@@ -1,16 +1,18 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.6.1_rc1.ebuild,v 1.1 2011/07/07 06:38:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.6.1.ebuild,v 1.1 2011/07/25 10:34:57 flameeyes Exp $
 
 EAPI=4
 
 inherit apache-module autotools
 
-MY_P=modsecurity-apache_${PV/_rc/-rc}
+MY_PN=modsecurity-apache
+MY_PV=${PV/_rc/-rc}
+MY_P=${MY_PN}_${MY_PV}
 
 DESCRIPTION="Web application firewall and Intrusion Detection System for Apache."
 HOMEPAGE="http://www.modsecurity.org/"
-SRC_URI="http://www.modsecurity.org/download/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/project/mod-security/${MY_PN}/${MY_PV}/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
