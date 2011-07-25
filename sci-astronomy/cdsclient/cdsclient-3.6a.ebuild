@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cdsclient/cdsclient-3.5.ebuild,v 1.1 2010/07/13 16:34:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/cdsclient/cdsclient-3.6a.ebuild,v 1.1 2011/07/25 22:57:26 bicatali Exp $
 
 EAPI=2
 inherit eutils
@@ -15,6 +15,7 @@ IUSE=""
 DEPEND=""
 RDEPEND="app-shells/tcsh"
 
+S="${WORKDIR}/${PN}-3.6"
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-makefile.in.patch
 	# remove non standard "mantex" page
