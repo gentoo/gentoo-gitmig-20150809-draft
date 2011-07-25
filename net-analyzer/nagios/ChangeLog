@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.101 2011/07/24 18:27:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/ChangeLog,v 1.102 2011/07/25 16:27:02 xarthisius Exp $
+
+  25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> nagios-3.2.3.ebuild:
+  ppc/ppc64 stable wrt #374553
 
   24 Jul 2011; Raúl Porcel <armin76@gentoo.org> nagios-3.2.3.ebuild:
   alpha/sparc stable wrt #374553
