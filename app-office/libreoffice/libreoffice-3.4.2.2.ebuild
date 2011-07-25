@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.2.ebuild,v 1.9 2011/07/25 14:54:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.2.ebuild,v 1.10 2011/07/25 15:42:31 mr_bones_ Exp $
 
 EAPI=3
 
@@ -97,7 +97,7 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="binfilter cups custom-cflags dbus debug eds gnome gstreamer
-gtk kde ldap mysql nsplugin odk offlinehelp opengl pch python templates webdav"
+gtk kde ldap mysql nsplugin odk offlinehelp opengl pch python templates test webdav"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
