@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/chef-0.9.8.ebuild,v 1.1 2010/09/19 14:23:43 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef/chef-0.10.2.ebuild,v 1.1 2011/07/25 09:06:18 hollow Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -23,15 +23,19 @@ ruby_add_rdepend ">=dev-ruby/bunny-0.6.0
 	dev-ruby/extlib
 	dev-ruby/highline
 	>=dev-ruby/json-1.4.4
+	<=dev-ruby/json-1.5.2
 	>=dev-ruby/mixlib-authentication-1.1.0
 	>=dev-ruby/mixlib-cli-1.1.0
-	>=dev-ruby/mixlib-config-1.1.0
-	>=dev-ruby/mixlib-log-1.1.0
+	>=dev-ruby/mixlib-config-1.1.2
+	>=dev-ruby/mixlib-log-1.3.0
 	dev-ruby/moneta
-	>=dev-ruby/ohai-0.5.6
+	>=dev-ruby/net-ssh-2.1.3
+	>=dev-ruby/net-ssh-multi-1.0.1
+	>=dev-ruby/ohai-0.6.0
 	>=dev-ruby/rest-client-1.0.4
-	<=dev-ruby/rest-client-1.5.1
+	<dev-ruby/rest-client-1.7.0
 	dev-ruby/ruby-shadow
+	>=dev-ruby/treetop-1.4.9
 	dev-ruby/uuidtools"
 
 all_ruby_install() {
@@ -45,6 +49,11 @@ all_ruby_install() {
 	insinto /etc/chef
 	doins "${FILESDIR}/client.rb"
 	doins "${FILESDIR}/solo.rb"
+}
+
+pkg_setup() {
+	enewgroup chef
+	enewuser chef -1 -1 /var/lib/chef chef
 }
 
 pkg_postinst() {
