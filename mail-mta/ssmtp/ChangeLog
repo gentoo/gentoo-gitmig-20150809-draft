@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/ssmtp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.119 2011/07/17 22:30:05 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/ssmtp/ChangeLog,v 1.120 2011/07/25 13:32:10 eras Exp $
+
+  25 Jul 2011; Eray Aslan <eras@gentoo.org> -ssmtp-2.64-r1.ebuild:
+  remove old
 
   17 Jul 2011; Mark Loeser <halcy0n@gentoo.org> ssmtp-2.64-r2.ebuild:
   Stable for ppc64; bug #370649
