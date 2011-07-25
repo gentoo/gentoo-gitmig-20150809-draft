@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.8.1.ebuild,v 1.1 2011/07/22 22:55:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.8.1.ebuild,v 1.2 2011/07/25 17:12:17 scarabeus Exp $
 
 EAPI=2
 
@@ -249,9 +249,8 @@ src_install() {
 
 pkg_postinst() {
 	if use python; then
-		    python_need_rebuild
-		    python_mod_optimize $(python_get_sitedir)/${PN}.py \
-			    $(python_get_sitedir)/ogr.py
+		python_need_rebuild
+		python_mod_optimize ${PN}.py ogr.py
 	fi
 	echo
 	elog "Check available image and data formats after building with"
