@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-008-r1.ebuild,v 1.2 2011/07/24 21:31:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-008-r1.ebuild,v 1.3 2011/07/25 23:08:19 zmedico Exp $
 
 EAPI="3"
 
@@ -32,9 +32,9 @@ src_prepare() {
 src_configure() {
 	export DEBUG=$(ft debug) V=true NLS=$(ft nls)
 	unset bindir sbindir includedir localedir confdir
-	export mandir="${EPREFIX}/usr/share/man"
-	export libdir="${EPREFIX}/usr/$(get_libdir)"
-	export docdir="${EPREFIX}/usr/share/doc/${PF}"
+	export mandir="/usr/share/man"
+	export libdir="/usr/$(get_libdir)"
+	export docdir="/usr/share/doc/${PF}"
 }
 
 src_compile() {
@@ -50,7 +50,9 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	# There's no configure script, so in this case we have to use emake
+	# DESTDIR="${ED}" instead of the usual econf --prefix="${EPREFIX}".
+	emake DESTDIR="${ED}" install || die
 	dodoc AUTHORS README
 
 	newinitd "${FILESDIR}"/${PN}-init.d-006 ${PN} || die
