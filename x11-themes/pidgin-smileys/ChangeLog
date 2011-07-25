@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/pidgin-smileys
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/pidgin-smileys/ChangeLog,v 1.7 2010/08/21 12:15:05 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/pidgin-smileys/ChangeLog,v 1.8 2011/07/25 19:32:01 xarthisius Exp $
+
+  25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  pidgin-smileys-20100821.ebuild:
+  ppc/ppc64 stable wrt #376409
 
 *pidgin-smileys-20100821 (21 Aug 2010)
 
