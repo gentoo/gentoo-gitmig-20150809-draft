@@ -1,6 +1,9 @@
 # ChangeLog for dev-php5/PEAR-PHP_Timer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-timer/ChangeLog,v 1.1 2011/07/21 11:33:08 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-timer/ChangeLog,v 1.2 2011/07/25 13:03:33 olemarkus Exp $
+
+  25 Jul 2011; Ole Markus With <olemarkus@gentoo.org> +files/channel.xml:
+  Added missing channel.xml file
 
   24 May 2011; Markos Chandras <hwoarang@gentoo.org>
   PEAR-PHP_Timer-1.0.0.ebuild:
