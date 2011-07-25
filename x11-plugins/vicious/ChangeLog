@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/vicious
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/vicious/ChangeLog,v 1.4 2011/06/11 21:08:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/vicious/ChangeLog,v 1.5 2011/07/25 14:21:56 wired Exp $
+
+*vicious-2.0.3 (25 Jul 2011)
+
+  25 Jul 2011; Alex Alexander <wired@gentoo.org> +vicious-2.0.3.ebuild:
+  version bump
 
   11 Jun 2011; Markus Meier <maekke@gentoo.org> vicious-2.0.2.ebuild:
   add ~arm, bug #359139
