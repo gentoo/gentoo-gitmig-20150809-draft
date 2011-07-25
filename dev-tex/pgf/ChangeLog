@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/pgf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.61 2011/07/23 19:09:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.62 2011/07/25 13:08:41 xarthisius Exp $
+
+  25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> pgf-2.10.ebuild:
+  ppc/ppc64 stable wrt #373415
 
   23 Jul 2011; Raúl Porcel <armin76@gentoo.org> pgf-2.10.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #373415
