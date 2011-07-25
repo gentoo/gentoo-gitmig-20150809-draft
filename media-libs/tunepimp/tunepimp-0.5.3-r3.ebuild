@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.5.3-r3.ebuild,v 1.2 2011/02/22 23:59:07 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.5.3-r3.ebuild,v 1.3 2011/07/25 10:25:40 angelos Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -51,7 +51,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-libtool.patch \
 		"${FILESDIR}"/${P}-build-fix.patch \
 		"${FILESDIR}"/${P}-gcc44.patch \
-		"${FILESDIR}"/${P}-new_libmp4v2.patch
+		"${FILESDIR}"/${P}-new_libmp4v2.patch \
+		"${FILESDIR}"/${P}-curl-headers.patch
 
 	sed -i -e "s: tta::" configure.in || die "sed failed"
 
