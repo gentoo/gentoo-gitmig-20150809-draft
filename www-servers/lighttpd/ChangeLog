@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.252 2011/07/19 19:55:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.253 2011/07/25 15:56:14 xarthisius Exp $
+
+  25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  lighttpd-1.4.28-r2.ebuild:
+  ppc/ppc64 stable wrt #373917
 
   19 Jul 2011; Markus Meier <maekke@gentoo.org> lighttpd-1.4.28-r2.ebuild:
   amd64/x86 stable, bug #373917
