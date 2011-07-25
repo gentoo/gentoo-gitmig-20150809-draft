@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-dvb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dvb/ChangeLog,v 1.42 2011/06/05 10:43:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dvb/ChangeLog,v 1.43 2011/07/25 18:07:09 xarthisius Exp $
+
+  25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  gst-plugins-dvb-0.10.21.ebuild:
+  ppc/ppc64 stable wrt #368281
 
   05 Jun 2011; Markus Meier <maekke@gentoo.org> gst-plugins-dvb-0.10.21.ebuild:
   arm stable, bug #368281

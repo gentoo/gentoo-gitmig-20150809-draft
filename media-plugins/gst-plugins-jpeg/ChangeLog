@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-jpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-jpeg/ChangeLog,v 1.102 2011/06/09 16:08:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-jpeg/ChangeLog,v 1.103 2011/07/25 18:07:12 xarthisius Exp $
+
+  25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  gst-plugins-jpeg-0.10.28.ebuild:
+  ppc/ppc64 stable wrt #368281
 
   09 Jun 2011; Jeroen Roovers <jer@gentoo.org> gst-plugins-jpeg-0.10.28.ebuild:
   Stable for HPPA (bug #368281).
