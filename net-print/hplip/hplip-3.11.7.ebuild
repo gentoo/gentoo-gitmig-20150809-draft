@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.5-r1.ebuild,v 1.1 2011/06/19 11:34:59 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.7.ebuild,v 1.1 2011/07/25 18:17:55 billie Exp $
 
 EAPI=3
 
@@ -129,7 +129,7 @@ src_prepare() {
 
 	# SYSFS deprecated but kept upstream for compatibility reasons
 	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/346390
-	epatch "${FILESDIR}"/${PN}-3.11.1-udev-attrs.patch
+	epatch "${FILESDIR}"/${P}-udev-attrs.patch
 
 	# CVE-2010-4267 SNMP Response Processing Buffer Overflow Vulnerability
 	# http://secunia.com/advisories/42956/
