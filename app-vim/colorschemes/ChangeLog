@@ -1,6 +1,12 @@
 # ChangeLog for app-vim/colorschemes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/ChangeLog,v 1.58 2011/07/23 17:38:22 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/ChangeLog,v 1.59 2011/07/25 18:33:44 radhermit Exp $
+
+*colorschemes-20110506-r1 (25 Jul 2011)
+
+  25 Jul 2011; Tim Harder <radhermit@gentoo.org> -colorschemes-20110506.ebuild,
+  +colorschemes-20110506-r1.ebuild:
+  Revbump to fix line endings (bug #376193). Remove old.
 
   23 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   colorschemes-20110506.ebuild:
