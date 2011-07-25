@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.49 2011/07/25 12:12:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.50 2011/07/25 14:54:33 scarabeus Exp $
+
+  25 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-3.4.2.2.ebuild:
+  Do not pre-strip the binaries, check for proper reqs, update install phase to
+  use distro-pack-install (smaller yay).
 
   25 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   files/libreoffice-solenv-build-crash.patch:

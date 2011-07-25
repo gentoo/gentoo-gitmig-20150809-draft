@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.2.ebuild,v 1.8 2011/07/25 11:19:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.2.ebuild,v 1.9 2011/07/25 14:54:33 scarabeus Exp $
 
 EAPI=3
 
@@ -271,8 +271,8 @@ pkg_setup() {
 	ewarn "If you encounter errors try yourself to disable parallel build."
 
 	# Check if we have enough RAM and free diskspace to build this beast
-	CHECKREQS_MEMORY="512"
-	use debug && CHECKREQS_DISK_BUILD="12288" || CHECKREQS_DISK_BUILD="7144"
+	CHECKREQS_MEMORY="1024"
+	use debug && CHECKREQS_DISK_BUILD="15360" || CHECKREQS_DISK_BUILD="9216"
 	check_reqs
 }
 
@@ -457,7 +457,6 @@ src_configure() {
 		$(use_enable cups) \
 		$(use_enable dbus) \
 		$(use_enable debug crashdump) \
-		$(use_enable !debug strip-solver) \
 		$(use_enable eds evolution2) \
 		$(use_enable gnome gconf) \
 		$(use_enable gnome gio) \
@@ -491,52 +490,8 @@ src_compile() {
 }
 
 src_install() {
-	local SIZE desk app
-
-	export PYTHONPATH=""
-
-	emake DESTDIR="${D}" install || die
-
-	# Fix the permissions for security reasons
-	use prefix || chown -RP root:0 "${ED}"
-
-	# Desktop files
-	pushd "${ED}"/usr/$(get_libdir)/${PN}/share/xdg/ > /dev/null
-	for i in *; do
-		mv ${i}.desktop ${PN}-${i}.desktop
-	done
-	popd > /dev/null
-	sed -i \
-		-e s/libreoffice3.4/${PN}/g \
-		-e s/libreoffice34/${PN}/g \
-		"${ED}"/usr/$(get_libdir)/${PN}/share/xdg/*.desktop || die111
-	use java || rm "${ED}"/usr/$(get_libdir)/${PN}/share/xdg/javafilter.desktop
-	domenu "${ED}"/usr/$(get_libdir)/${PN}/share/xdg/*.desktop
-
-	# install icons
-	insinto /usr/share/icons/
-	doins -r "${S}"/sysui/desktop/icons/hicolor
-
-	# app icon names are too generic, have to make them unique
-	for SIZE in 16 32 48 128 ; do
-		cd "${ED}"/usr/share/icons/hicolor/${SIZE}x${SIZE}/apps
-		for app in base calc draw impress main math startcenter writer ; do
-			mv ${app}.png ${PN}-${app}.png || die
-		done
-	done
-
-	# install mime package
-	dodir /usr/share/mime/packages
-	cp sysui/*.pro/misc/${PN}/openoffice.org.xml \
-		"${ED}"/usr/share/mime/packages/${PN}.xml
-
-	# Install wrapper script
-	sed -i -e s/LIBDIR/$(get_libdir)/g "${T}/wrapper.in" || die
-	newbin "${T}/wrapper.in" ${PN} || die
-
-	# Cleanup after playing
-	rm "${ED}"/gid_Module_*
-
+	# This is not Makefile so no buildserver
+	make DESTDIR="${D}" distro-pack-install || die
 }
 
 pkg_preinst() {
