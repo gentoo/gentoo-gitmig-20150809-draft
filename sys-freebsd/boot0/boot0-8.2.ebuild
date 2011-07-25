@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/boot0-8.2.ebuild,v 1.1 2011/07/06 05:42:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/boot0-8.2.ebuild,v 1.2 2011/07/25 10:26:26 naota Exp $
 
 EAPI=2
 
@@ -19,6 +19,8 @@ DEPEND="=sys-freebsd/freebsd-mk-defs-${RV}*
 	=sys-freebsd/freebsd-lib-${RV}*"
 
 S="${WORKDIR}/sys/boot"
+
+PATCHES=( "${FILESDIR}"/${P}-zfsboot-makefile.patch )
 
 boot0_use_enable() {
 	use ${1} && mymakeopts="${mymakeopts} LOADER_${2}_SUPPORT=\"yes\""

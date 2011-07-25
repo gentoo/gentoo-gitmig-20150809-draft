@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/boot0
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/ChangeLog,v 1.26 2011/07/06 05:42:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/ChangeLog,v 1.27 2011/07/25 10:26:26 naota Exp $
+
+  25 Jul 2011; Naohiro Aota <naota@gentoo.org> boot0-8.2.ebuild,
+  +files/boot0-8.2-zfsboot-makefile.patch:
+  Add a patch to fix parallel make bug
 
 *boot0-8.2 (06 Jul 2011)
 
