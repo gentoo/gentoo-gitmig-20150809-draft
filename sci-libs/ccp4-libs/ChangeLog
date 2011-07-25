@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/ccp4-libs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ChangeLog,v 1.37 2011/07/16 12:21:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ChangeLog,v 1.38 2011/07/25 19:42:49 jlec Exp $
+
+  25 Jul 2011; Justin Lecher <jlec@gentoo.org> ccp4-libs-6.1.3-r10.ebuild:
+  Don't always build debug symbols
 
 *ccp4-libs-6.1.3-r10 (16 Jul 2011)
 

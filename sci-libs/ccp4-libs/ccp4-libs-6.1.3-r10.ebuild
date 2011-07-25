@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r10.ebuild,v 1.1 2011/07/16 12:21:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ccp4-libs-6.1.3-r10.ebuild,v 1.2 2011/07/25 19:42:49 jlec Exp $
 
 EAPI=3
 
@@ -124,6 +124,7 @@ src_prepare() {
 
 	for i in lib/DiffractionImage src/rapper src/pisa; do
 		pushd ${i} > /dev/null
+			sed 's:-g::g' -i configure* || die
 			eautoreconf
 		popd > /dev/null
 	done
