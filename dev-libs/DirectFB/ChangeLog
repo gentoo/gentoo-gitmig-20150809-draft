@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.122 2011/07/13 15:45:55 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.123 2011/07/25 20:46:10 xarthisius Exp $
+
+  25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> DirectFB-1.4.9-r1.ebuild:
+  ppc/ppc64 stable wrt #375499
 
   13 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> DirectFB-1.4.9.ebuild:
   ppc64 stable wrt #360709
