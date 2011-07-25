@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.2.ebuild,v 1.5 2011/07/24 21:32:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.2.ebuild,v 1.6 2011/07/25 07:26:43 scarabeus Exp $
 
 EAPI=3
 
@@ -374,8 +374,12 @@ src_configure() {
 			--with-lucene-core-jar=$(java-pkg_getjar lucene-2.9 lucene-core.jar)
 			--with-lucene-analyzers-jar=$(java-pkg_getjar lucene-analyzers-2.3 lucene-analyzers.jar)
 			--with-saxon-jar=$(java-pkg_getjar saxon saxon8.jar)
-			$(use_with test junit $(java-pkg_getjar junit-4 junit.jar))
 		"
+		if use test; then
+			java_opts+=" --with-junit=$(java-pkg_getjar junit-4 junit.jar)"
+		else
+			java_opts+=" --without-junit"
+		fi
 	fi
 
 	# TODO: create gentoo branding on the about/intro screens
