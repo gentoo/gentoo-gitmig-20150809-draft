@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.4-r1.ebuild,v 1.10 2011/03/20 20:01:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.4-r1.ebuild,v 1.11 2011/07/25 10:13:48 angelos Exp $
 
 EAPI="2"
 inherit flag-o-matic xemacs-elisp-common autotools
@@ -47,11 +47,12 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-3.2.0_parallel_make.patch
-	epatch "${FILESDIR}"/${PN}-3.2.0_as_needed.patch
-	epatch "${FILESDIR}"/${PN}-3.2.4-imread.patch
-	epatch "${FILESDIR}"/${PN}-3.2.4-ldflags.patch
-	epatch "${FILESDIR}"/${PN}-3.2.4-fltk-magic.patch
+	epatch "${FILESDIR}"/${PN}-3.2.0_parallel_make.patch \
+		"${FILESDIR}"/${PN}-3.2.0_as_needed.patch \
+		"${FILESDIR}"/${PN}-3.2.4-imread.patch \
+		"${FILESDIR}"/${PN}-3.2.4-ldflags.patch \
+		"${FILESDIR}"/${PN}-3.2.4-fltk-magic.patch \
+		"${FILESDIR}"/${P}-curl-headers.patch
 	eautoreconf
 }
 

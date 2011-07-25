@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.4-r3.ebuild,v 1.4 2011/03/20 20:01:35 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.4-r3.ebuild,v 1.5 2011/07/25 10:13:48 angelos Exp $
 
 EAPI="2"
 inherit flag-o-matic xemacs-elisp-common autotools
@@ -48,18 +48,19 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-3.2.0_parallel_make.patch
-	epatch "${FILESDIR}"/${PN}-3.2.0_as_needed.patch
-	epatch "${FILESDIR}"/${PN}-3.2.4-imread.patch
-	epatch "${FILESDIR}"/${PN}-3.2.4-ldflags.patch
-	epatch "${FILESDIR}"/${PN}-3.2.4-fltk-magic.patch
-	epatch "${FILESDIR}"/${PN}-3.2.4-dlmread-speedup.patch
-	epatch "${FILESDIR}"/${PN}-3.2.4-addpath.patch
-	epatch "${FILESDIR}"/${PN}-3.2.4-filter-empty-vector.patch
-	epatch "${FILESDIR}"/${PN}-3.2.4-imshow.patch
-	epatch "${FILESDIR}"/${PN}-3.2.4-interp2.patch
-	epatch "${FILESDIR}"/${PN}-3.2.4-no-helvetica.patch
-	epatch "${FILESDIR}"/${PN}-3.2.4-normal-marker-size.patch
+	epatch "${FILESDIR}"/${PN}-3.2.0_parallel_make.patch \
+		"${FILESDIR}"/${PN}-3.2.0_as_needed.patch \
+		"${FILESDIR}"/${PN}-3.2.4-imread.patch \
+		"${FILESDIR}"/${PN}-3.2.4-ldflags.patch \
+		"${FILESDIR}"/${PN}-3.2.4-fltk-magic.patch \
+		"${FILESDIR}"/${PN}-3.2.4-dlmread-speedup.patch \
+		"${FILESDIR}"/${PN}-3.2.4-addpath.patch \
+		"${FILESDIR}"/${PN}-3.2.4-filter-empty-vector.patch \
+		"${FILESDIR}"/${PN}-3.2.4-imshow.patch \
+		"${FILESDIR}"/${PN}-3.2.4-interp2.patch \
+		"${FILESDIR}"/${PN}-3.2.4-no-helvetica.patch \
+		"${FILESDIR}"/${PN}-3.2.4-normal-marker-size.patch \
+		"${FILESDIR}"/${P}-curl-headers.patch
 	has_version ">=x11-libs/fltk-1.3_rc1" && \
 		epatch "${FILESDIR}"/${PN}-3.2.4-fltk-1.3.patch
 	eautoreconf
