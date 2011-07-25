@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-9999.ebuild,v 1.22 2011/07/25 10:05:58 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-2011.07.17.ebuild,v 1.1 2011/07/25 10:05:58 wired Exp $
 
 EAPI="4"
 
@@ -89,6 +89,11 @@ pkg_setup() {
 		einfo "You have enabled the *helpers* USE flag that installs"
 		einfo "various optional applications used by uzbl's extra scripts."
 	fi
+	echo
+	ewarn "There's a window sizing bug in this release. Upstream is deciding on"
+	ewarn "a solution, until then you can work around it by adding"
+	ewarn "  set scrollbars_visible = 1"
+	ewarn "to the bottom of your config file."
 }
 
 src_unpack() {
