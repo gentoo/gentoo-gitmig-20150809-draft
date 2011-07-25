@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/xmlrpc-c
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.95 2010/01/15 12:25:42 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.96 2011/07/25 10:21:06 angelos Exp $
+
+  25 Jul 2011; Christoph Mende <angelos@gentoo.org> xmlrpc-c-1.06.27.ebuild,
+  +files/xmlrpc-c-1.06.27-curl-headers.patch, xmlrpc-c-1.18.02.ebuild,
+  +files/xmlrpc-c-1.18.02/curl-headers.patch:
+  Fix compilation against curl-7.21.7 (bug #376101)
 
   15 Jan 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   xmlrpc-c-1.18.02.ebuild:

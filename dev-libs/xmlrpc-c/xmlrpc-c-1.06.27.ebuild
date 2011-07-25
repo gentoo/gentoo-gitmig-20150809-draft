@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.06.27.ebuild,v 1.10 2008/11/04 09:13:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.06.27.ebuild,v 1.11 2011/07/25 10:21:06 angelos Exp $
 
 EAPI=1
 
@@ -36,6 +36,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-gcc43-test-fix.patch
 	epatch "${FILESDIR}"/${PN}-1.06.09-asneeded.patch
 	epatch "${FILESDIR}"/${PN}-1.05-pic.patch
+	epatch "${FILESDIR}"/${P}-curl-headers.patch
 
 	# Respect the user's CFLAGS/CXXFLAGS.
 	sed -i -e "/CFLAGS_COMMON/s:-g -O3$:${CFLAGS}:" Makefile.common

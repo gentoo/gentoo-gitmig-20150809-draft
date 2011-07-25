@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.18.02.ebuild,v 1.17 2010/12/14 03:46:30 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.18.02.ebuild,v 1.18 2011/07/25 10:21:06 angelos Exp $
 
 EAPI=2
 
@@ -38,6 +38,7 @@ PATCHES=(
 	"${FILESDIR}/${P}/dumpvalue.patch"
 	"${FILESDIR}/${P}/cpp-depends.patch"
 	"${FILESDIR}/${P}/dump-symlinks.patch"
+	"${FILESDIR}/${P}/curl-headers.patch"
 	)
 
 src_prepare() {
