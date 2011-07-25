@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/gst-plugins-good-0.10.28.ebuild,v 1.7 2011/06/09 16:07:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/gst-plugins-good-0.10.28.ebuild,v 1.8 2011/07/25 18:09:50 xarthisius Exp $
 
 EAPI=1
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://gstreamer.net/"
 SRC_URI="http://gstreamer.freedesktop.org/src/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="+orc"
 
 RDEPEND=">=media-libs/gst-plugins-base-0.10.32
