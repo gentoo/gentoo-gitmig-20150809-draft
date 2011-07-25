@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/gtkevemon/gtkevemon-1.8-r1.ebuild,v 1.1 2011/07/21 15:03:58 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/gtkevemon/gtkevemon-1.8-r1.ebuild,v 1.2 2011/07/25 20:47:25 wired Exp $
 
 EAPI=4
 
@@ -14,7 +14,8 @@ if [[ ${PV} == *9999* ]]; then
 	SRC_URI=""
 else
 	KEYWORDS="~amd64 ~x86"
-	SRC_URI="http://gtkevemon.battleclinic.com/releases/${P}-source.tar.gz"
+	SRC_URI="http://gtkevemon.battleclinic.com/releases/${P}-source.tar.gz
+		http://dev.gentoo.org/~wired/distfiles/${P}-learning.patch.gz"
 fi
 
 DESCRIPTION="A standalone skill monitoring application for EVE Online"
@@ -38,7 +39,7 @@ src_prepare() {
 	# upstream fix for new character portrait URL
 	epatch "${FILESDIR}/${P}-portrait.patch"
 	# upstream fix for remap calculation after learning skills removal
-	epatch "${FILESDIR}/${P}-learning.patch.gz"
+	epatch "${DISTDIR}/${P}-learning.patch.gz"
 }
 
 src_install() {

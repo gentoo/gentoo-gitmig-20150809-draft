@@ -1,6 +1,10 @@
 # ChangeLog for games-util/gtkevemon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/gtkevemon/ChangeLog,v 1.1 2011/07/21 15:03:58 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/gtkevemon/ChangeLog,v 1.2 2011/07/25 20:47:25 wired Exp $
+
+  25 Jul 2011; Alex Alexander <wired@gentoo.org> gtkevemon-1.8-r1.ebuild,
+  -files/gtkevemon-1.8-learning.patch.gz:
+  moved gziped patch to distfiles
 
 *gtkevemon-9999 (21 Jul 2011)
 *gtkevemon-1.8-r1 (21 Jul 2011)
