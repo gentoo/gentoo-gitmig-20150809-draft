@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5574 2011/07/25 22:48:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5575 2011/07/25 22:56:46 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Jul 2011; Anthony G. Basile <blueness@gentoo.org> base/package.mask,
+  features/selinux/package.mask, selinux/package.mask:
+  Added maskings and unmaskings for sec-policy/selinux-haveged
 
   25 Jul 2011; Anthony G. Basile <blueness@gentoo.org> base/package.mask,
   features/selinux/package.mask, selinux/package.mask:
