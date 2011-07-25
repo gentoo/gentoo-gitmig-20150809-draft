@@ -1,6 +1,12 @@
 # ChangeLog for net-im/climm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/climm/ChangeLog,v 1.14 2010/05/16 19:54:57 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/climm/ChangeLog,v 1.15 2011/07/25 12:12:00 pva Exp $
+
+*climm-0.7.1 (25 Jul 2011)
+
+  25 Jul 2011; Peter Volkov <pva@gentoo.org> -climm-0.6.3.ebuild,
+  -climm-0.6.4.ebuild, +climm-0.7.1.ebuild, metadata.xml:
+  Version bump, bug #375213 thank pavel sanda for report. Drop old.
 
   16 May 2010; Markus Meier <maekke@gentoo.org> climm-0.7.ebuild:
   amd64/x86 stable, bug #311855

@@ -7,7 +7,6 @@
   <name>Markus Ullmann</name>
 </maintainer>
 <use>
-	<flag name='gloox'>Enable support for Jabber/XMPP using gloox</flag>
 	<flag name='otr'>Enable encrypted conversations</flag>
 </use>
 </pkgmetadata>
