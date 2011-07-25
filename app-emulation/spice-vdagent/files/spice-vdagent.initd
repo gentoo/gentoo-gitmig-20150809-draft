@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-vdagent/files/spice-vdagent.initd,v 1.1 2011/05/11 09:02:31 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-vdagent/files/spice-vdagent.initd,v 1.2 2011/07/25 09:24:52 dev-zero Exp $
 
 depend() {
     after dbus
@@ -25,6 +25,9 @@ start() {
         return 1
     fi
     eend 0
+
+    # recreate the directory since /var/run may reside on a ramdisk
+    mkdir -p /var/run/spice-vdagentd
 
     # cleanup stalled socket
     rm -f /var/run/spice-vdagentd/spice-vdagent-sock
