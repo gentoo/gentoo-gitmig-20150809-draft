@@ -1,6 +1,10 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.174 2011/02/16 14:56:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.175 2011/07/25 10:23:11 angelos Exp $
+
+  25 Jul 2011; Christoph Mende <angelos@gentoo.org> xine-ui-0.99.6.ebuild,
+  +files/xine-ui-0.99.6-curl-headers.patch:
+  Fix compilation against curl-7.21.7 (bug #376109)
 
   16 Feb 2011; Alexis Ballier <aballier@gentoo.org> xine-ui-0.99.6.ebuild,
   +files/xine-ui-0.99.6-libpng15.patch:

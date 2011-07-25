@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.6.ebuild,v 1.12 2011/02/16 14:56:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.6.ebuild,v 1.13 2011/07/25 10:23:11 angelos Exp $
 
 EAPI=3
 inherit fdo-mime gnome2-utils eutils
@@ -43,7 +43,8 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	rm -f misc/xine-bugreport
-	epatch "${FILESDIR}/${P}-libpng15.patch"
+	epatch "${FILESDIR}/${P}-libpng15.patch" \
+		"${FILESDIR}/${P}-curl-headers.patch"
 }
 
 src_configure() {
