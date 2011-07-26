@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.235 2011/06/22 18:11:44 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.236 2011/07/26 13:56:53 xarthisius Exp $
+
+  26 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  graphviz-2.26.3-r3.ebuild:
+  ppc/ppc64 stable wrt #376437
 
   22 Jun 2011; Fabian Groffen <grobian@gentoo.org> graphviz-2.26.3-r3.ebuild:
   Marked ~x64-macos, bug #371861
