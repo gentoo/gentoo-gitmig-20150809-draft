@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-3.3.0.ebuild,v 1.3 2011/07/17 11:48:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-3.3.0.ebuild,v 1.4 2011/07/26 20:28:07 zmedico Exp $
 
-EAPI=2
+EAPI=3
 inherit eutils linux-info toolchain-funcs multilib
 
 DESCRIPTION="Hardware Monitoring user-space utilities"
@@ -47,7 +47,12 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" PREFIX=/usr MANDIR=/usr/share/man LIBDIR=/usr/$(get_libdir) \
+	emake \
+		DESTDIR="${D}" \
+		PREFIX="${EPREFIX}/usr" \
+		MANDIR="${EPREFIX}/usr/share/man" \
+		ETCDIR="${EPREFIX}/etc" \
+		LIBDIR="${EPREFIX}/usr/$(get_libdir)" \
 		install || die
 
 	newinitd "${FILESDIR}"/lm_sensors-3-init.d lm_sensors || die
