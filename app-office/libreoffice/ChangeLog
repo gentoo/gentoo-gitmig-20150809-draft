@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.56 2011/07/26 17:05:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.57 2011/07/26 18:20:01 scarabeus Exp $
+
+  26 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-3.4.2.2.ebuild:
+  Introduce branding useflag, yay gentoo screen and about, Thanx to Ian Whyman
+  for this.
 
   26 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   files/libreoffice-fix-sandbox-install.patch:
