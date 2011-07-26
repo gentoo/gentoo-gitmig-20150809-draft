@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/hwinfo-18.5.ebuild,v 1.1 2011/05/01 10:42:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/hwinfo-18.5.ebuild,v 1.2 2011/07/26 23:32:06 zmedico Exp $
 
 EAPI=4
 inherit multilib rpm toolchain-funcs
@@ -48,7 +48,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" LIBDIR="/usr/$(get_libdir)" install
+	emake DESTDIR="${ED}" LIBDIR="/usr/$(get_libdir)" install
 
 	dodoc changelog README
 	doman doc/hwinfo.8
