@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sk1libs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/ChangeLog,v 1.6 2011/06/24 15:36:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/ChangeLog,v 1.7 2011/07/26 08:00:37 xarthisius Exp $
+
+  26 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> sk1libs-0.9.1.ebuild:
+  Marked ~ppc64 wrt #356243
 
   24 Jun 2011; Brent Baude <ranger@gentoo.org> sk1libs-0.9.1.ebuild:
   Marking sk1libs-0.9.1 ~ppc for bug 356243
