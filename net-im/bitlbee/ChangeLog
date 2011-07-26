@@ -1,6 +1,9 @@
 # ChangeLog for net-im/bitlbee
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.143 2011/07/23 18:26:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.144 2011/07/26 21:13:56 maekke Exp $
+
+  26 Jul 2011; Markus Meier <maekke@gentoo.org> bitlbee-3.0.3.ebuild:
+  x86 stable, bug #375155
 
   23 Jul 2011; Tim Harder <radhermit@gentoo.org> bitlbee-3.0.3.ebuild:
   Fix tests.
