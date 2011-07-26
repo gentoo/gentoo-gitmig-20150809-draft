@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.214 2011/07/25 12:52:30 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.215 2011/07/26 09:27:55 chainsaw Exp $
+
+  26 Jul 2011; Tony Vroon <chainsaw@gentoo.org>
+  -audacious-plugins-2.5.3.ebuild:
+  Clean up old ebuild; 2.5.4 is the new stable target.
 
 *audacious-plugins-3.0 (25 Jul 2011)
 
