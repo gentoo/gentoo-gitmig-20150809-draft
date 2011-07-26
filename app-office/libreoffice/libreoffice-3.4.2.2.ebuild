@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.2.ebuild,v 1.16 2011/07/26 18:20:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.2.ebuild,v 1.17 2011/07/26 19:06:15 scarabeus Exp $
 
 EAPI=3
 
@@ -69,7 +69,6 @@ ADDONS_SRC+=" ${ADDONS_URI}/47e1edaa44269bc537ae8cabebb0f638-JLanguageTool-1.0.0
 ADDONS_SRC+=" ${ADDONS_URI}/90401bca927835b6fbae4a707ed187c8-nlpsolver-0.9.tar.bz2"
 ADDONS_SRC+=" ${ADDONS_URI}/0f63ee487fda8f21fafa767b3c447ac9-ixion-0.2.0.tar.gz"
 ADDONS_SRC+=" ${ADDONS_URI}/71474203939fafbe271e1263e61d083e-nss-3.12.8-with-nspr-4.8.6.tar.gz"
-ADDONS_SRC+=" ${ADDONS_URI}/0625a7d661f899a8ce263fc8a9879108-graphite2-0.9.2.tgz"
 ADDONS_SRC+=" http://download.go-oo.org/extern/185d60944ea767075d27247c3162b3bc-unowinreg.dll"
 ADDONS_SRC+=" http://download.go-oo.org/extern/b4cae0700aa1c2aef7eb7f345365e6f1-translate-toolkit-1.8.1.tar.bz2"
 ADDONS_SRC+=" http://www.numbertext.org/linux/881af2b7dca9b8259abbca00bbbc004d-LinLibertineG-20110101.zip"
@@ -97,9 +96,9 @@ unset ADDONS_URI
 unset EXT_URI
 unset ADDONS_SRC
 
-IUSE="binfilter +branding cups custom-cflags dbus debug eds gnome gstreamer gtk
-kde ldap mysql nsplugin odk offlinehelp opengl python templates test +vba
-webdav"
+IUSE="binfilter +branding cups custom-cflags dbus debug eds gnome graphite
+gstreamer gtk kde ldap mysql nsplugin odk offlinehelp opengl python templates
+test +vba webdav"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
@@ -152,6 +151,7 @@ COMMON_DEPEND="
 		gnome-base/gconf:2
 	)
 	gtk? ( >=x11-libs/gtk+-2.10:2 )
+	graphite? ( media-gfx/graphite2 )
 	gstreamer? (
 		>=media-libs/gstreamer-0.10
 		>=media-libs/gst-plugins-base-0.10
@@ -441,7 +441,6 @@ src_configure() {
 		--disable-epm \
 		--disable-fetch-external \
 		--disable-gnome-vfs \
-		--disable-graphite \
 		--disable-kdeab \
 		--disable-kde \
 		--disable-online-update \
@@ -477,6 +476,7 @@ src_configure() {
 		$(use_enable gnome gconf) \
 		$(use_enable gnome gio) \
 		$(use_enable gnome lockdown) \
+		$(use_enable graphite) \
 		$(use_enable gstreamer) \
 		$(use_enable gtk) \
 		$(use_enable gtk systray) \
