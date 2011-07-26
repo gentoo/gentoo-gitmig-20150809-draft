@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.161 2011/07/17 21:26:43 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.162 2011/07/26 16:29:31 armin76 Exp $
+
+  26 Jul 2011; Raúl Porcel <armin76@gentoo.org> mjpegtools-2.0.0-r1.ebuild:
+  alpha/sparc stable wrt #372139
 
   17 Jul 2011; Mark Loeser <halcy0n@gentoo.org> mjpegtools-2.0.0-r1.ebuild:
   Stable on ppc/ppc64; bug #372139
