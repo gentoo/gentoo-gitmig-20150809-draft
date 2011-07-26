@@ -5,7 +5,4 @@
 <maintainer>
   <email>ulm@gentoo.org</email>
 </maintainer>
-<use>
-	<flag name='xrc'>Add support for infiniband xrc</flag>
-</use>
 </pkgmetadata>
