@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.2.18.ebuild,v 1.1 2011/06/23 11:07:25 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.2.18.ebuild,v 1.2 2011/07/26 17:02:29 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -79,6 +79,16 @@ src_prepare() {
 	# fix double symbols due to double -ljemalloc
 	sed -i -e '/^LIBS += $(JEMALLOC_LIBS)/s/^/#/' \
 		xulrunner/stub/Makefile.in || die
+
+	#Fix compilation with curl-7.21.7 bug 376027
+	sed -e '/#include <curl\/types\.h>/d' \
+		-i "${S}"/toolkit/crashreporter/google-breakpad/src/common/linux/libcurl_wrapper.cc \
+		-i "${S}"/toolkit/crashreporter/google-breakpad/src/common/linux/http_upload.cc \
+			|| die
+	sed -e '/curl\/types\.h/d' \
+		-i "${S}"/config/system-headers \
+		-i "${S}"/js/src/config/system-headers \
+			|| die
 
 	# Allow user to apply additional patches without modifing ebuild
 	epatch_user

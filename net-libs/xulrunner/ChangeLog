@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.425 2011/07/06 05:14:14 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.426 2011/07/26 17:02:29 polynomial-c Exp $
+
+  26 Jul 2011; Lars Wendler <polynomial-c@gentoo.org>
+  xulrunner-1.9.2.12.ebuild, xulrunner-1.9.2.17.ebuild,
+  xulrunner-1.9.2.18.ebuild, xulrunner-2.0.1-r1.ebuild:
+  Fixed compilation with >=curl-7.21.7 (bug #375899).
 
   06 Jul 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   xulrunner-1.9.2.12.ebuild:
