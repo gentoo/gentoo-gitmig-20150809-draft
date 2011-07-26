@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-008-r1.ebuild,v 1.4 2011/07/26 16:47:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-008-r1.ebuild,v 1.5 2011/07/26 23:30:07 mattst88 Exp $
 
 EAPI="3"
 
@@ -27,6 +27,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-008-cpuid.patch
 	epatch "${FILESDIR}"/${PN}-008-fix-msr-read.patch
 	epatch "${FILESDIR}"/${PN}-008-increase-MAX_LINE_LEN.patch
+	epatch "${FILESDIR}"/${PN}-008-fix-compilation-on-x86-32-with-fPIC.patch #375967
 }
 
 src_configure() {

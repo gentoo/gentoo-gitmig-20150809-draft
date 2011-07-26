@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/cpufrequtils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.59 2011/07/26 16:47:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.60 2011/07/26 23:30:07 mattst88 Exp $
+
+  26 Jul 2011; Matt Turner <mattst88@gentoo.org> cpufrequtils-008-r1.ebuild,
+  +files/cpufrequtils-008-fix-compilation-on-x86-32-with-fPIC.patch:
+  Fix compilatin on x86-32 with -fPIC (for hardened), bug 375967.
 
   26 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   cpufrequtils-008-r1.ebuild:
