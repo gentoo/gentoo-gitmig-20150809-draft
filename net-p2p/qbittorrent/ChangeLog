@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/qbittorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.162 2011/07/21 09:31:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.163 2011/07/26 07:34:14 hwoarang Exp $
+
+  26 Jul 2011; Markos Chandras <hwoarang@gentoo.org> qbittorrent-9999.ebuild:
+  Move repository to gitorious. Bug 376235
 
   21 Jul 2011; Markos Chandras <hwoarang@gentoo.org> qbittorrent-2.8.2.ebuild:
   Stable on amd64 wrt bug #375543

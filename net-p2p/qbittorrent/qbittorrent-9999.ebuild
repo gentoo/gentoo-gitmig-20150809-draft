@@ -1,18 +1,20 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-9999.ebuild,v 1.4 2011/04/30 18:51:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-9999.ebuild,v 1.5 2011/07/26 07:34:14 hwoarang Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
 
-inherit python qt4-r2 versionator subversion
+EGIT_REPO_URI="git://gitorious.org/${PN}/${PN}.git
+http://git.gitorious.org/${PN}/${PN}.git"
+
+inherit python qt4-r2 versionator git-2
 
 DESCRIPTION="BitTorrent client in C++ and Qt"
 HOMEPAGE="http://www.qbittorrent.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-ESVN_REPO_URI="https://qbittorrent.svn.sourceforge.net/svnroot/qbittorrent/trunk"
 KEYWORDS=""
 
 IUSE="dbus +X geoip"
