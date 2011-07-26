@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.2.ebuild,v 1.19 2011/07/26 20:47:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.2.ebuild,v 1.20 2011/07/26 21:11:11 scarabeus Exp $
 
 EAPI=3
 
@@ -199,7 +199,6 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/flex
 	sys-libs/zlib
 	x11-libs/libXtst
-	x11-proto/printproto
 	x11-proto/randrproto
 	x11-proto/xextproto
 	x11-proto/xineramaproto
