@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-3.0.7.ebuild,v 1.1 2011/05/07 18:23:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-3.0.7.ebuild,v 1.2 2011/07/26 20:04:39 armin76 Exp $
 
 EAPI="2"
 WANT_AUTOCONF=2.5
@@ -125,7 +125,6 @@ src_install() {
 	if use doc ; then
 		cd "${S}"/distrib
 		dodoc ChangeLog *.txt
-		dohtml *.html
 
 		insinto /usr/share/doc/${PF}/scripts
 		doins kill_mldonkey mldonkey_command mldonkey_previewer make_buginfo
