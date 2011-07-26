@@ -1,6 +1,11 @@
 # ChangeLog for lxde-base/lxshortcut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxshortcut/ChangeLog,v 1.9 2011/03/07 20:32:05 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxshortcut/ChangeLog,v 1.10 2011/07/26 22:22:04 hwoarang Exp $
+
+*lxshortcut-0.1.2 (26 Jul 2011)
+
+  26 Jul 2011; Markos Chandras <hwoarang@gentoo.org> +lxshortcut-0.1.2.ebuild:
+  Version bump
 
   07 Mar 2011; Tobias Klausmann <klausman@gentoo.org> lxshortcut-0.1.1.ebuild:
   Keyworded on alpha, bug #330911
