@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.2.ebuild,v 1.14 2011/07/26 13:11:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.2.ebuild,v 1.15 2011/07/26 16:20:59 scarabeus Exp $
 
 EAPI=3
 
@@ -218,7 +218,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-vbaobj-visibility-fix.patch"
 	"${FILESDIR}/${PN}-solenv-build-crash.patch"
 	"${FILESDIR}/${PN}-as-needed-gtk.patch"
-	"${FILESDIR}/${PN}-as-needed-gtk-2.patch"
+	"${FILESDIR}/${PN}-fix-sandbox-install.patch"
 )
 
 # Uncoment me when updating to eapi4
@@ -440,6 +440,7 @@ src_configure() {
 		--disable-pch \
 		--disable-rpath \
 		--disable-static-gtk \
+		--disable-strip-solver \
 		--disable-zenity \
 		--with-alloc=system \
 		--with-build-version="Gentoo official package" \

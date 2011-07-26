@@ -1,27 +1,19 @@
-From 7d59c9f0e6768418d1ee791b6a5bec6d7b15a4d1 Mon Sep 17 00:00:00 2001
-From: Bjoern Michaelsen <bjoern.michaelsen@canonical.com>
-Date: Tue, 26 Jul 2011 12:51:35 +0000
-Subject: add gtk external
-
----
-diff --git a/RepositoryExternal.mk b/RepositoryExternal.mk
-index ee65d9e..f30526c 100644
---- a/RepositoryExternal.mk
-+++ b/RepositoryExternal.mk
-@@ -437,5 +437,14 @@ endef
+diff -urN libreoffice-libs-core-3.4.2.2.old//sfx2/Library_qstart.mk libreoffice-libs-core-3.4.2.2/sfx2/Library_qstart.mk
+--- libreoffice-libs-core-3.4.2.2.old//sfx2/Library_qstart.mk	2011-07-26 14:28:50.000000000 +0200
++++ libreoffice-libs-core-3.4.2.2/sfx2/Library_qstart.mk	2011-07-26 14:31:09.000000000 +0200
+@@ -58,7 +58,6 @@
  
- endif # SYSTEM_OPENSSL
+ $(eval $(call gb_Library_set_ldflags,qstart_gtk,\
+     $$(LDFLAGS) \
+-    $(GTK_LIBS) \
+ ))
  
-+define gb_LinkTarget__use_gtk
-+$(call gb_LinkTarget_set_include,$(1),\
-+	$$(INCLUDE) \
-+	$(GTK_CFLAGS) \
-+)
-+
-+$(call gb_LinkTarget_add_libs,$(1),$(GTK_LIBS))
-+
-+endef
+ $(eval $(call gb_Library_add_linked_libs,qstart_gtk,\
+@@ -80,6 +79,7 @@
+     vcl \
+     xml2 \
+     sfx \
++    $(GTK_LIBS) \
+ ))
  
- # vim: set noet sw=4 ts=4:
---
-cgit v0.8.3-6-g21f6
+ $(eval $(call gb_Library_add_exception_objects,qstart_gtk,\

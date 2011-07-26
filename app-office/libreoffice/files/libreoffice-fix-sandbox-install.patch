@@ -1,0 +1,19 @@
+diff -urN libreoffice-bootstrap-3.4.2.2.old/bin/distro-install-desktop-integration libreoffice-bootstrap-3.4.2.2/bin/distro-install-desktop-integration
+--- libreoffice-bootstrap-3.4.2.2.old/bin/distro-install-desktop-integration	2011-07-26 16:52:39.000000000 +0200
++++ libreoffice-bootstrap-3.4.2.2/bin/distro-install-desktop-integration	2011-07-26 16:55:22.000000000 +0200
+@@ -78,7 +78,7 @@
+ }
+ 
+ # install desktop integration from plain packages
+-sysui_temp=`mktemp -d /tmp/distro-pack-desktop-integration-XXXXXX`
++sysui_temp=`mktemp -d $DESTDIR/tmp/distro-pack-desktop-integration-XXXXXX`
+ cp -a sysui/unxlng*/misc/libreoffice/* "$sysui_temp"
+ cp -a sysui/desktop/share/create_tree.sh "$sysui_temp"
+ builddir=`pwd`
+@@ -178,4 +178,4 @@
+ chmod 755 "$DESTDIR$INSTALLDIR/basis$PRODUCTVERSION/program/java-set-classpath"
+ test -f $DESTDIR/gid_Module_Root_Brand && echo "$INSTALLDIR/basis$PRODUCTVERSION/program/java-set-classpath" >>$DESTDIR/gid_Module_Root_Brand
+ 
+-exit 0
+\ Chybí znak konce řádku na konci souboru
++exit 0
