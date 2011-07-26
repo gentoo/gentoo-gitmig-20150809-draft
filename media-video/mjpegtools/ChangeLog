@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.163 2011/07/26 16:37:15 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.164 2011/07/26 16:39:27 billie Exp $
+
+  26 Jul 2011; Daniel Pielmeier <billie@gentoo.org> metadata.xml:
+  Remove unused use flag.
 
   26 Jul 2011; Daniel Pielmeier <billie@gentoo.org>
   -mjpegtools-1.9.0-r1.ebuild, -files/mjpegtools-1.9.0-glibc-2.10.patch,

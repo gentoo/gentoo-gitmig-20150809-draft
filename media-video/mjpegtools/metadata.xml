@@ -8,7 +8,6 @@
 		<name>Daniel Pielmeier</name>
 	</maintainer>
 	<use>
-		<flag name="yv12">Enables support for the YV12 pixel format</flag>
 		<flag name="sdlgfx">Enables y4mhist to display a graphical histogram</flag>
 	</use> 
 </pkgmetadata>
