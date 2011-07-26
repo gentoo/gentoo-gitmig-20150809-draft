@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.217 2011/07/25 13:04:30 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.218 2011/07/26 21:19:07 maekke Exp $
+
+  26 Jul 2011; Markus Meier <maekke@gentoo.org> mc-4.7.5.2.ebuild:
+  arm stable, bug #373225
 
   25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> mc-4.7.5.2.ebuild:
   ppc/ppc64 stable wrt #373225
