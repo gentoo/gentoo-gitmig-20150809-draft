@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Version-Requirements
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Version-Requirements/ChangeLog,v 1.10 2011/07/07 04:05:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Version-Requirements/ChangeLog,v 1.11 2011/07/26 18:30:33 xarthisius Exp $
+
+  26 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  perl-Version-Requirements-0.101.20-r2.ebuild:
+  Marked ~ppc/~ppc64 wrt #357599
 
   07 Jul 2011; Alexis Ballier <aballier@gentoo.org>
   perl-Version-Requirements-0.101.20-r2.ebuild:
