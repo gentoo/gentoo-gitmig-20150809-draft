@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.235 2011/07/25 12:52:28 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.236 2011/07/26 09:27:54 chainsaw Exp $
+
+  26 Jul 2011; Tony Vroon <chainsaw@gentoo.org> -audacious-2.5.3.ebuild:
+  Clean up old ebuild; 2.5.4 is the new stable target.
 
 *audacious-3.0 (25 Jul 2011)
 
