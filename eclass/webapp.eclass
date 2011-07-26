@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.67 2011/07/12 07:48:01 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.68 2011/07/26 19:25:19 lxnay Exp $
 
 # @ECLASS: webapp.eclass
 # @MAINTAINER:
@@ -59,7 +59,12 @@ webapp_read_config() {
 	if has_version '>=app-admin/webapp-config-1.50'; then
 		ENVVAR=$(${WEBAPP_CONFIG} --query ${PN} ${PVR}) || die "Could not read settings from webapp-config!"
 		eval ${ENVVAR}
-	else
+	elif [[ "${WEBAPP_OPTIONAL}" != "yes" ]]; then
+		# ETC_CONFIG might not be available
+		. ${ETC_CONFIG} || die "Unable to read ${ETC_CONFIG}"
+	elif [[ -f "${ETC_CONFIG}" ]]; then
+		# WEBAPP_OPTIONAL is set to yes
+		# and this must run only if ETC_CONFIG actually exists
 		. ${ETC_CONFIG} || die "Unable to read ${ETC_CONFIG}"
 	fi
 }
