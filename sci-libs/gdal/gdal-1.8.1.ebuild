@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.8.1.ebuild,v 1.2 2011/07/25 17:12:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.8.1.ebuild,v 1.3 2011/07/26 16:21:29 neurogeek Exp $
 
 EAPI=2
 
@@ -255,4 +255,10 @@ pkg_postinst() {
 	echo
 	elog "Check available image and data formats after building with"
 	elog "gdalinfo and ogrinfo (using the --formats switch)."
+}
+
+pkg_postrm() {
+	if use python; then
+		python_mod_cleanup ${PN}.py ogr.py
+	fi
 }

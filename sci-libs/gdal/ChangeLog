@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.117 2011/07/25 17:12:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.118 2011/07/26 16:21:29 neurogeek Exp $
+
+  26 Jul 2011; Jesus Rivero <neurogeek@gentoo.org> gdal-1.8.1.ebuild:
+  Added python_mod_cleanup in pkg_postrm
 
   25 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org> gdal-1.8.1.ebuild:
   Shutup python warning. Fixes bug #376295.
