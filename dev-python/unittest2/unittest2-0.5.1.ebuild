@@ -1,9 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/unittest2-0.5.1.ebuild,v 1.17 2011/04/29 19:50:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/unittest2-0.5.1.ebuild,v 1.18 2011/07/26 16:26:56 neurogeek Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
+# http://hg.python.org/unittest2/rev/d2be68aedc8e
+PYTHON_TESTS_RESTRICTED_ABIS="2.4"
 
 inherit distutils
 
