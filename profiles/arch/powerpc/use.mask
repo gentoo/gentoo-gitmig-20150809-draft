@@ -172,3 +172,7 @@ lirc
 # Matt Turner <mattst88@gmail.com> (06 May 2011)
 # media-sound/mumble not keyworded on ppc
 mumble
+
+# Kacper Kowalik <xarthisius@gentoo.org> (26 Jul 2011)
+# ppc keywords were dropped for dev-libs/prelude
+prelude
