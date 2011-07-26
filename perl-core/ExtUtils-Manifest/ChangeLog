@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/ExtUtils-Manifest
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-Manifest/ChangeLog,v 1.10 2011/05/21 06:26:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-Manifest/ChangeLog,v 1.11 2011/07/26 18:21:50 xarthisius Exp $
+
+  26 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  ExtUtils-Manifest-1.580.0.ebuild:
+  Marked ~ppc64 wrt #357599
 
 *ExtUtils-Manifest-1.580.0 (21 May 2011)
 

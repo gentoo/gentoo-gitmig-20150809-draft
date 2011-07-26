@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/IO
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/IO/ChangeLog,v 1.25 2011/07/07 04:23:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/IO/ChangeLog,v 1.26 2011/07/26 18:21:04 xarthisius Exp $
+
+  26 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> IO-1.25.ebuild:
+  Marked ~ppc64 wrt #357599
 
   07 Jul 2011; Alexis Ballier <aballier@gentoo.org> IO-1.25.ebuild:
   keyword ~x86-fbsd
