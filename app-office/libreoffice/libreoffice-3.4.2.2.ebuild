@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.2.ebuild,v 1.17 2011/07/26 19:06:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.2.ebuild,v 1.18 2011/07/26 20:39:13 scarabeus Exp $
 
 EAPI=3
 
@@ -221,6 +221,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-solenv-build-crash.patch"
 	"${FILESDIR}/${PN}-as-needed-gtk.patch"
 	"${FILESDIR}/${PN}-fix-sandbox-install.patch"
+	"${FILESDIR}/${PN}-translate-toolkit-parallel-solenv.patch"
 )
 
 # Uncoment me when updating to eapi4
