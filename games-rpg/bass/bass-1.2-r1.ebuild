@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/bass/bass-1.2-r1.ebuild,v 1.4 2011/02/13 17:54:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/bass/bass-1.2-r1.ebuild,v 1.5 2011/07/26 10:28:31 tupone Exp $
 
 inherit eutils games
 
@@ -22,7 +22,8 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/bass-cd-${PV}
 
 src_install() {
-	games_make_wrapper bass "scummvm -f -p \"${GAMES_DATADIR}/${PN}\" sky" .
+	games_make_wrapper bass "scummvm -f -p \"${GAMES_DATADIR}/${PN}\" -q\$(scummvmGetLang.sh) sky" .
+	dogamesbin "${FILESDIR}"/scummvmGetLang.sh
 	insinto "${GAMES_DATADIR}"/${PN}
 	doins sky.* || die "doins failed"
 	dodoc readme.txt
