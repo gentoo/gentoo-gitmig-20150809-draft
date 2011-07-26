@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/emboss
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/ChangeLog,v 1.64 2011/04/04 16:01:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/ChangeLog,v 1.65 2011/07/26 19:28:04 xarthisius Exp $
+
+  26 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> emboss-6.0.1.ebuild,
+  emboss-6.1.0.ebuild, emboss-6.1.0-r1.ebuild, emboss-6.3.1_p4.ebuild:
+  ppc64 keyword dropped
 
   04 Apr 2011; Justin Lecher <jlec@gentoo.org> -emboss-4.0.0.ebuild,
   emboss-6.0.1.ebuild, emboss-6.1.0.ebuild:
