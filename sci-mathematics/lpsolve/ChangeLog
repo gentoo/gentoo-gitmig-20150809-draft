@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/lpsolve
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/lpsolve/ChangeLog,v 1.1 2011/07/24 11:43:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/lpsolve/ChangeLog,v 1.2 2011/07/26 20:23:42 scarabeus Exp $
+
+  26 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org> lpsolve-5.5.2.0.ebuild:
+  Fix duplication of the README per bug #376513. Add switch for static libs.
+  Punt .la file for shared lib.
 
 *lpsolve-5.5.2.0 (24 Jul 2011)
 
