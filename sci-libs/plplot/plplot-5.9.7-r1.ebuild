@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.7-r1.ebuild,v 1.5 2011/06/21 15:06:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.7-r1.ebuild,v 1.6 2011/07/26 19:42:08 xarthisius Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="ada cairo d doc dynamic examples fortran gd java jpeg latex lua ocaml octave
 	 pdf perl png python qhull qt4 svg tcl test threads tk truetype wxwidgets X"
 
