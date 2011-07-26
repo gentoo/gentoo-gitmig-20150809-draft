@@ -1,6 +1,6 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.336 2011/07/26 13:37:11 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.337 2011/07/26 13:53:33 chainsaw Exp $
 
 *asterisk-1.8.5.0-r3 (26 Jul 2011)
 
@@ -8,7 +8,8 @@
   Patch from Jaco Kroon allows setvar from users.conf to work for chan_dahdi
   again, closes bug #374195. Patch from upstream bug #ASTERISK-18082 resolves a
   segmentation fault or deadlock that can occur for multiple simultaneous
-  attended transfers.
+  attended transfers. The pri-missing-keyword.patch was already applied upstream 
+  but in a different location; dropped as per Erik Wallin in bug #375291.
 
 *asterisk-1.8.5.0-r2 (14 Jul 2011)
 
