@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86emu/libx86emu-1.1.ebuild,v 1.5 2010/11/01 17:54:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libx86emu/libx86emu-1.1.ebuild,v 1.6 2011/07/26 21:48:28 zmedico Exp $
 
-EAPI=2
+EAPI=3
 inherit multilib rpm toolchain-funcs
 
 DESCRIPTION="A library for emulating x86"
@@ -27,6 +27,6 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" LIBDIR="/usr/$(get_libdir)" install || die
+	emake DESTDIR="${ED}" LIBDIR="/usr/$(get_libdir)" install || die
 	dodoc Changelog README
 }
