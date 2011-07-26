@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/progressbar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/progressbar/ChangeLog,v 1.1 2011/05/30 11:51:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/progressbar/ChangeLog,v 1.2 2011/07/26 16:05:44 neurogeek Exp $
+
+  26 Jul 2011; Jesus Rivero <neurogeek@gentoo.org> progressbar-2.3.ebuild:
+  HOMEPAGE fix
 
 *progressbar-2.3 (30 May 2011)
 

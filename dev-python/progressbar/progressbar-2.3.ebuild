@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/progressbar/progressbar-2.3.ebuild,v 1.1 2011/05/30 11:51:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/progressbar/progressbar-2.3.ebuild,v 1.2 2011/07/26 16:05:44 neurogeek Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
@@ -9,7 +9,7 @@ SUPPORT_PYTHON_ABIS="1"
 inherit distutils
 
 DESCRIPTION="Text progressbar library for python"
-HOMEPAGE="http://code.google.com/p/python-progressbar/"
+HOMEPAGE="http://code.google.com/p/python-progressbar/ http://pypi.python.org/pypi/progressbar"
 SRC_URI="http://python-${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="|| ( LGPL-2.1 BSD )"
