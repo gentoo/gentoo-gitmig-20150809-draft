@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/savedconfig.eclass,v 1.14 2010/10/05 19:51:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/savedconfig.eclass,v 1.15 2011/07/26 17:35:12 zmedico Exp $
 
 # @ECLASS: savedconfig.eclass
 # @MAINTAINER:
@@ -29,16 +29,17 @@ save_config() {
 	if [[ ${EBUILD_PHASE} != "install" ]]; then
 		die "Bad package!  save_config only for use in src_install functions!"
 	fi
+	[[ -z "${ED}" ]] && ED=${D}
 	case $# in
 		0) die "Tell me what to save"
 		    ;;
 		1) if [[ -f "$1" ]]; then
 				dodir /etc/portage/savedconfig/${CATEGORY}
-				cp "$1" "${D}"/etc/portage/savedconfig/${CATEGORY}/${PF} \
+				cp "$1" "${ED}"/etc/portage/savedconfig/${CATEGORY}/${PF} \
 					|| die "Failed to save $1"
 			else
 				dodir /etc/portage/savedconfig/${CATEGORY}/${PF}
-				treecopy "$1" "${D}"/etc/portage/savedconfig/${CATEGORY}/${PF} \
+				treecopy "$1" "${ED}"/etc/portage/savedconfig/${CATEGORY}/${PF} \
 					|| die "Failed to save $1"
 			fi
 			;;
