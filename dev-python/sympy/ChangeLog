@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sympy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.14 2011/06/29 17:04:42 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.15 2011/07/26 16:11:57 neurogeek Exp $
+
+  26 Jul 2011; Jesus Rivero <neurogeek@gentoo.org> sympy-0.7.0.ebuild:
+  Added test DEPEND
 
 *sympy-0.7.0 (29 Jun 2011)
 
