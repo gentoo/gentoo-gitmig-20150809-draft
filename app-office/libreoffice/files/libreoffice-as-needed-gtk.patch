@@ -1,0 +1,27 @@
+From 7d59c9f0e6768418d1ee791b6a5bec6d7b15a4d1 Mon Sep 17 00:00:00 2001
+From: Bjoern Michaelsen <bjoern.michaelsen@canonical.com>
+Date: Tue, 26 Jul 2011 12:51:35 +0000
+Subject: add gtk external
+
+---
+diff --git a/RepositoryExternal.mk b/RepositoryExternal.mk
+index ee65d9e..f30526c 100644
+--- a/RepositoryExternal.mk
++++ b/RepositoryExternal.mk
+@@ -437,5 +437,14 @@ endef
+ 
+ endif # SYSTEM_OPENSSL
+ 
++define gb_LinkTarget__use_gtk
++$(call gb_LinkTarget_set_include,$(1),\
++	$$(INCLUDE) \
++	$(GTK_CFLAGS) \
++)
++
++$(call gb_LinkTarget_add_libs,$(1),$(GTK_LIBS))
++
++endef
+ 
+ # vim: set noet sw=4 ts=4:
+--
+cgit v0.8.3-6-g21f6

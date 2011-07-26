@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>
+<head>
+<title>libreoffice/libs-core - Libraries shared amon applications</title>
+<meta name='generator' content='cgit v0.8.3.1'/>
+<meta name='robots' content='index, nofollow'/>
+<link rel='stylesheet' type='text/css' href='http://cgit.freedesktop.org/cgit.css'/>
+<link rel='alternate' title='Atom feed' href='http://cgit.freedesktop.org/libreoffice/libs-core/atom/?h=master' type='application/atom+xml'/>
+</head>
+<body>
+<div id='cgit'><table id='header'>
+<tr>
+<td class='logo' rowspan='2'><a href='/'><img src='http://cgit.freedesktop.org/logo.png' alt='cgit logo'/></a></td>
+<td class='main'><a href='/'>index</a> : <a title='libreoffice/libs-core' href='/libreoffice/libs-core/'>libreoffice/libs-core</a></td><td class='form'><form method='get' action=''>
+<input type='hidden' name='id' value='24e5e18ccd413797f143b27945a226597a1c42b1'/><select name='h' onchange='this.form.submit();'>
+<option value='feature/bootstrap-build'>feature/bootstrap-build</option>
+<option value='feature/calc-multiline-input'>feature/calc-multiline-input</option>
+<option value='feature/currency-64bit'>feature/currency-64bit</option>
+<option value='feature/gnumake4'>feature/gnumake4</option>
+<option value='feature/gsoc2011_wizards'>feature/gsoc2011_wizards</option>
+<option value='feature/helppack'>feature/helppack</option>
+<option value='feature/layout'>feature/layout</option>
+<option value='feature/pptx-export-ooxml11'>feature/pptx-export-ooxml11</option>
+<option value='feature/rodatastrings'>feature/rodatastrings</option>
+<option value='feature/sqlite'>feature/sqlite</option>
+<option value='feature/winshrink'>feature/winshrink</option>
+<option value='gr2'>gr2</option>
+<option value='integration/dev300_m101'>integration/dev300_m101</option>
+<option value='integration/dev300_m106'>integration/dev300_m106</option>
+<option value='integration/dev300_m98'>integration/dev300_m98</option>
+<option value='libreoffice-3-3'>libreoffice-3-3</option>
+<option value='libreoffice-3-3-0'>libreoffice-3-3-0</option>
+<option value='libreoffice-3-3-1'>libreoffice-3-3-1</option>
+<option value='libreoffice-3-3-2'>libreoffice-3-3-2</option>
+<option value='libreoffice-3-3-3'>libreoffice-3-3-3</option>
+<option value='libreoffice-3-4'>libreoffice-3-4</option>
+<option value='libreoffice-3-4-0'>libreoffice-3-4-0</option>
+<option value='libreoffice-3-4-1'>libreoffice-3-4-1</option>
+<option value='libreoffice-3-4-2'>libreoffice-3-4-2</option>
+<option value='master' selected='selected'>master</option>
+</select> <input type='submit' name='' value='switch'/></form></td></tr>
+<tr><td class='sub'>Libraries shared amon applications</td><td class='sub right'>root</td></tr></table>
+<table class='tabs'><tr><td>
+<a href='/libreoffice/libs-core/'>summary</a><a href='/libreoffice/libs-core/refs/?id=24e5e18ccd413797f143b27945a226597a1c42b1'>refs</a><a href='/libreoffice/libs-core/log/'>log</a><a href='/libreoffice/libs-core/tree/?id=24e5e18ccd413797f143b27945a226597a1c42b1'>tree</a><a class='active' href='/libreoffice/libs-core/commit/?id=24e5e18ccd413797f143b27945a226597a1c42b1'>commit</a><a href='/libreoffice/libs-core/diff/?id=24e5e18ccd413797f143b27945a226597a1c42b1'>diff</a></td><td class='form'><form class='right' method='get' action='/libreoffice/libs-core/log/'>
+<input type='hidden' name='id' value='24e5e18ccd413797f143b27945a226597a1c42b1'/><select name='qt'>
+<option value='grep'>log msg</option>
+<option value='author'>author</option>
+<option value='committer'>committer</option>
+</select>
+<input class='txt' type='text' size='10' name='q' value=''/>
+<input type='submit' value='search'/>
+</form>
+</td></tr></table>
+<div class='content'><table summary='commit info' class='commit-info'>
+<tr><th>author</th><td>Bjoern Michaelsen &lt;bjoern.michaelsen@canonical.com&gt;</td><td class='right'>2011-07-26 12:52:45 (GMT)</td></tr>
+<tr><th>committer</th><td> Bjoern Michaelsen &lt;bjoern.michaelsen@canonical.com&gt;</td><td class='right'>2011-07-26 12:53:55 (GMT)</td></tr>
+<tr><th>commit</th><td colspan='2' class='sha1'><a href='/libreoffice/libs-core/commit/?id=24e5e18ccd413797f143b27945a226597a1c42b1'>24e5e18ccd413797f143b27945a226597a1c42b1</a> (<a href='/libreoffice/libs-core/patch/?id=24e5e18ccd413797f143b27945a226597a1c42b1'>patch</a>)</td></tr>
+<tr><th>tree</th><td colspan='2' class='sha1'><a href='/libreoffice/libs-core/tree/?id=24e5e18ccd413797f143b27945a226597a1c42b1'>8938832137d91ba264c3d04b1a7efb10065bc2bf</a></td></tr>
+<tr><th>parent</th><td colspan='2' class='sha1'><a href='/libreoffice/libs-core/commit/?id=2829346208ebf2c6e0337e1b4d95d13716410823'>2829346208ebf2c6e0337e1b4d95d13716410823</a> (<a href='/libreoffice/libs-core/diff/?id=24e5e18ccd413797f143b27945a226597a1c42b1&amp;id2=2829346208ebf2c6e0337e1b4d95d13716410823'>diff</a>)</td></tr><tr><th>download</th><td colspan='2' class='sha1'><a href='/libreoffice/libs-core/snapshot/libs-core-24e5e18ccd413797f143b27945a226597a1c42b1.zip'>libs-core-24e5e18ccd413797f143b27945a226597a1c42b1.zip</a><br/><a href='/libreoffice/libs-core/snapshot/libs-core-24e5e18ccd413797f143b27945a226597a1c42b1.tar.gz'>libs-core-24e5e18ccd413797f143b27945a226597a1c42b1.tar.gz</a><br/><a href='/libreoffice/libs-core/snapshot/libs-core-24e5e18ccd413797f143b27945a226597a1c42b1.tar.bz2'>libs-core-24e5e18ccd413797f143b27945a226597a1c42b1.tar.bz2</a><br/></td></tr></table>
+<div class='commit-subject'>use gtk external in qstart<a class='branch-deco' href='/libreoffice/libs-core/log/'>master</a></div><div class='commit-msg'></div><div class='diffstat-header'><a href='/libreoffice/libs-core/diff/?id=24e5e18ccd413797f143b27945a226597a1c42b1'>Diffstat</a></div><table summary='diffstat' class='diffstat'><tr><td class='mode'>-rwxr-xr-x</td><td class='upd'><a href='/libreoffice/libs-core/diff/sfx2/Library_qstart.mk?id=24e5e18ccd413797f143b27945a226597a1c42b1'>sfx2/Library_qstart.mk</a></td><td class='right'>14</td><td class='graph'><table summary='file diffstat' width='14%'><tr><td class='add' style='width: 28.6%;'/><td class='rem' style='width: 71.4%;'/><td class='none' style='width: 0.0%;'/></tr></table></td></tr>
+</table><div class='diffstat-summary'>1 files changed, 4 insertions, 10 deletions</div><table summary='diff' class='diff'><tr><td><div class='head'>diff --git a/sfx2/Library_qstart.mk b/sfx2/Library_qstart.mk<br/>index 13842f7..8819829 100755<br/>--- a/<a href='/libreoffice/libs-core/tree/sfx2/Library_qstart.mk?id=2829346208ebf2c6e0337e1b4d95d13716410823'>sfx2/Library_qstart.mk</a><br/>+++ b/<a href='/libreoffice/libs-core/tree/sfx2/Library_qstart.mk?id=24e5e18ccd413797f143b27945a226597a1c42b1'>sfx2/Library_qstart.mk</a></div><div class='hunk'>@@ -34,7 +34,6 @@ $(eval $(call gb_Library_set_include,qstart_gtk,\</div><div class='ctx'>     -I$(SRCDIR)/sfx2/inc/sfx2 \</div><div class='ctx'>     -I$(SRCDIR)/sfx2/inc/pch \</div><div class='ctx'>     -I$(OUTDIR)/inc \</div><div class='del'>-    $(filter -I%,$(GTK_CFLAGS)) \</div><div class='ctx'> ))</div><div class='ctx'> </div><div class='ctx'> $(eval $(call gb_Library_add_api,qstart_gtk,\</div><div class='hunk'>@@ -53,14 +52,6 @@ $(eval $(call gb_Library_add_defs,qstart_gtk,\</div><div class='ctx'> ))</div><div class='ctx'> endif</div><div class='ctx'> </div><div class='del'>-$(eval $(call gb_Library_add_cflags,qstart_gtk,\</div><div class='del'>-    $(filter-out -I%,$(GTK_CFLAGS)) \</div><div class='del'>-))</div><div class='del'>-</div><div class='del'>-$(eval $(call gb_Library_add_libs,qstart_gtk,\</div><div class='del'>-    $(GTK_LIBS) \</div><div class='del'>-))</div><div class='del'>-</div><div class='ctx'> $(eval $(call gb_Library_add_linked_libs,qstart_gtk,\</div><div class='ctx'>     comphelper \</div><div class='ctx'>     cppu \</div><div class='hunk'>@@ -81,7 +72,10 @@ $(eval $(call gb_Library_add_linked_libs,qstart_gtk,\</div><div class='ctx'>     sfx \</div><div class='ctx'> ))</div><div class='ctx'> </div><div class='del'>-$(eval $(call gb_Library_use_external,qstart_gtk,libxml2))</div><div class='add'>+$(eval $(call gb_Library_use_externals,qstart_gtk,\</div><div class='add'>+	gtk \</div><div class='add'>+	libxml2 \</div><div class='add'>+))</div><div class='ctx'> </div><div class='ctx'> $(eval $(call gb_Library_add_exception_objects,qstart_gtk,\</div><div class='ctx'>     sfx2/source/appl/shutdowniconunx \</div></td></tr></table></div> <!-- class=content -->
+<div class='footer'>generated  by cgit v0.8.3.1 at 2011-07-26 12:56:40 (GMT)</div>
+</div> <!-- id=cgit -->
+</body>
+</html>
