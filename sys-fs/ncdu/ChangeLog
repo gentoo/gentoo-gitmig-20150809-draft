@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ncdu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ncdu/ChangeLog,v 1.24 2011/07/25 20:42:18 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ncdu/ChangeLog,v 1.25 2011/07/26 20:51:02 xmw Exp $
+
+  26 Jul 2011; Michael Weber <xmw@gentoo.org> ncdu-1.7.ebuild:
+  sparc stable (bug 375437)
 
   25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> ncdu-1.7.ebuild:
   ppc/ppc64 stable wrt #375437
