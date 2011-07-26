@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/miniupnpc-1.4.20101209.ebuild,v 1.1 2010/12/20 13:54:45 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/miniupnpc-1.6.ebuild,v 1.1 2011/07/26 20:47:08 mgorny Exp $
 
-EAPI="2"
-SUPPORT_PYTHON_ABIS="1"
+EAPI=3
+SUPPORT_PYTHON_ABIS=1
 PYTHON_DEPEND="python? 2"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit distutils eutils toolchain-funcs
+inherit base distutils eutils toolchain-funcs
 
 DESCRIPTION="UPnP client library and a simple UPnP client"
 HOMEPAGE="http://miniupnp.free.fr/"
@@ -22,6 +22,8 @@ DEPEND="sys-apps/lsb-release"
 RDEPEND=""
 
 src_prepare() {
+	base_src_prepare
+
 	sed \
 		-e 's/^CFLAGS ?= -O -Wall /CFLAGS += /' \
 		-i Makefile || die
@@ -35,6 +37,9 @@ src_prepare() {
 
 	use python && distutils_src_prepare
 }
+
+# Upstream cmake causes more trouble than it fixes,
+# so we'll just stay with the Makefile for now.
 
 src_compile() {
 	emake CC=$(tc-getCC) || die
