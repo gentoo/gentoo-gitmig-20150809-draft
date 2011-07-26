@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/prelude-lml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.42 2011/05/29 16:17:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.43 2011/07/26 07:42:29 xarthisius Exp $
+
+  26 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> prelude-lml-0.9.1.ebuild,
+  prelude-lml-0.9.10.1.ebuild, prelude-lml-0.9.14.ebuild,
+  prelude-lml-1.0.0.ebuild:
+  Drop ppc keywords
 
   29 May 2011; Raúl Porcel <armin76@gentoo.org> prelude-lml-0.9.1.ebuild,
   prelude-lml-0.9.10.1.ebuild, prelude-lml-0.9.14.ebuild,
