@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.206 2011/07/17 15:47:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.207 2011/07/26 16:28:51 neurogeek Exp $
+
+  26 Jul 2011; Jesus Rivero <neurogeek@gentoo.org>
+  rhythmbox-0.12.8-r1.ebuild:
+  Added python_mod_cleanup in pkg_postrm
 
   17 Jul 2011; Pacho Ramos <pacho@gentoo.org> rhythmbox-0.12.8-r1.ebuild:
   Rhythmbox 0.12.x uses both musicbrainz slots (bug #357189 by dolphinling).

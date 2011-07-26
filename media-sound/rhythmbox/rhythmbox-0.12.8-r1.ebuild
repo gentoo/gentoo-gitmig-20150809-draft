@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8-r1.ebuild,v 1.16 2011/07/17 15:47:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.8-r1.ebuild,v 1.17 2011/07/26 16:28:51 neurogeek Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils gnome2 python multilib virtualx
 
@@ -186,5 +186,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_mod_cleanup /usr/$(get_libdir)/rhythmbox/plugins
+	use python && python_mod_cleanup /usr/$(get_libdir)/rhythmbox/plugins
 }
