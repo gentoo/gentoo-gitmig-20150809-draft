@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.19.1-r1.ebuild,v 1.1 2011/07/12 03:32:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.19.1-r1.ebuild,v 1.2 2011/07/26 19:17:23 zmedico Exp $
 
-EAPI="2"
+EAPI="3"
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux/util-linux.git"
 inherit eutils toolchain-funcs libtool flag-o-matic
@@ -99,14 +99,14 @@ src_install() {
 	dodoc AUTHORS NEWS README* TODO docs/*
 
 	if ! use perl ; then #284093
-		rm "${D}"/usr/bin/chkdupexe || die
-		rm "${D}"/usr/share/man/man1/chkdupexe.1 || die
+		rm "${ED}"/usr/bin/chkdupexe || die
+		rm "${ED}"/usr/share/man/man1/chkdupexe.1 || die
 	fi
 
 	# need the libs in /
 	gen_usr_ldscript -a blkid uuid
 	# e2fsprogs-libs didnt install .la files, and .pc work fine
-	rm -f "${D}"/usr/$(get_libdir)/*.la
+	rm -f "${ED}"/usr/$(get_libdir)/*.la
 
 	if use crypt ; then
 		newinitd "${FILESDIR}"/crypto-loop.initd crypto-loop || die
