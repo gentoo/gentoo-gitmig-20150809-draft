@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Module-Build
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Build/ChangeLog,v 1.49 2011/07/07 04:42:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Build/ChangeLog,v 1.50 2011/07/26 18:34:52 xarthisius Exp $
+
+  26 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  Module-Build-0.380.0.ebuild:
+  Marked ~ppc/~ppc64 wrt #357599
 
   07 Jul 2011; Alexis Ballier <aballier@gentoo.org>
   Module-Build-0.380.0.ebuild:
