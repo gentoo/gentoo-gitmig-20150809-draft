@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.83 2011/07/01 12:51:21 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.84 2011/07/26 03:21:18 anarchy Exp $
+
+  26 Jul 2011; Jory A. Pratt <anarchy@gentoo.org> thunderbird-5.0.ebuild:
+  Fix compilation with curl-7.21.7, bug #375899
 
 *thunderbird-5.0 (01 Jul 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-5.0.ebuild,v 1.2 2011/07/07 05:46:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-5.0.ebuild,v 1.3 2011/07/26 03:21:18 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -132,6 +132,13 @@ src_prepare() {
 		sed -i -e 's:@srcdir@:${S}/mailnews/extensions/enigmail:' Makefile.in
 		cd "${S}"
 	fi
+
+	#Fix compilation with curl-7.21.7 bug 376027
+	sed -e '/#include <curl\/types.h>/d'  \
+		-i "${S}"/mozilla/toolkit/crashreporter/google-breakpad/src/common/linux/http_upload.cc \
+		-i "${S}"/mozilla/toolkit/crashreporter/google-breakpad/src/common/linux/libcurl_wrapper.cc \
+		-i "${S}"/mozilla/config/system-headers \
+		-i "${S}"/mozilla/js/src/config/system-headers || die "Sed failed"
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user
