@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.51 2011/07/21 21:47:00 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.52 2011/07/26 16:33:23 cardoe Exp $
+
+  26 Jul 2011; Doug Goldstein <cardoe@gentoo.org> virt-manager-0.8.7-r3.ebuild:
+  Add back ~x86 keyword since net-misc/spice-gtk is now ~arch keyworded on x86.
 
   21 Jul 2011; Doug Goldstein <cardoe@gentoo.org> -virt-manager-0.8.6.ebuild:
   Remove old version
