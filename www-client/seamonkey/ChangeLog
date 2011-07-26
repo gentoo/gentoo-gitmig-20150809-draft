@@ -1,6 +1,12 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.321 2011/07/11 07:47:48 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.322 2011/07/26 12:27:51 polynomial-c Exp $
+
+  26 Jul 2011; Lars Wendler <polynomial-c@gentoo.org>
+  seamonkey-2.0.14-r1.ebuild,
+  +files/seamonkey-2.0.14-curl7217-includes-fix.patch, seamonkey-2.1.ebuild,
+  seamonkey-2.2-r1.ebuild, +files/seamonkey-2.2-curl7217-includes-fix.patch:
+  Fixed compilation with >=curl-7.21.7 (bug #375899).
 
   11 Jul 2011; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.2-r1.ebuild:
   Fixed patchname

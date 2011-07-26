@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.2-r1.ebuild,v 1.2 2011/07/11 07:47:48 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.2-r1.ebuild,v 1.3 2011/07/26 12:27:51 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -153,7 +153,8 @@ src_prepare() {
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/patch"
 
-	epatch "${FILESDIR}"/${PN}-2.1b3-restore-tabbar-scrolling-from-2.1b2.diff
+	epatch "${FILESDIR}"/${PN}-2.1b3-restore-tabbar-scrolling-from-2.1b2.diff \
+		"${FILESDIR}"/${PN}-2.2-curl7217-includes-fix.patch
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user
