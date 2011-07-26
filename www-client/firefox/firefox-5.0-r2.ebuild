@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-5.0-r2.ebuild,v 1.2 2011/07/12 14:10:23 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-5.0-r2.ebuild,v 1.3 2011/07/26 03:18:33 anarchy Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -196,6 +196,13 @@ src_prepare() {
 		-i "${S}"/js/src/config/rules.mk \
 		-i "${S}"/nsprpub/configure{.in,} \
 		|| die
+
+	#Fix compilation with curl-7.21.7 bug 376027
+	sed -e '/#include <curl\/types.h>/d'  \
+		-i "${S}"/toolkit/crashreporter/google-breakpad/src/common/linux/http_upload.cc \
+		-i "${S}"/toolkit/crashreporter/google-breakpad/src/common/linux/libcurl_wrapper.cc \
+		-i "${S}"/config/system-headers \
+		-i "${S}"/js/src/config/system-headers || die "Sed failed"
 
 	eautoreconf
 
