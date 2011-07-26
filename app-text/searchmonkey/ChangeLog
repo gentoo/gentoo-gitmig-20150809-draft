@@ -1,6 +1,9 @@
 # ChangeLog for app-text/searchmonkey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/searchmonkey/ChangeLog,v 1.5 2011/03/27 12:22:21 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/searchmonkey/ChangeLog,v 1.6 2011/07/26 18:34:41 armin76 Exp $
+
+  26 Jul 2011; Raúl Porcel <armin76@gentoo.org> metadata.xml:
+  Move to maintainer-needed
 
   27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   searchmonkey-0.8.1.ebuild:
