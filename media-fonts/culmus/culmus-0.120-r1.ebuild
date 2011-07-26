@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/culmus-0.120-r1.ebuild,v 1.1 2011/04/19 16:01:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/culmus-0.120-r1.ebuild,v 1.2 2011/07/26 11:10:07 pva Exp $
 
 EAPI="2"
 
@@ -82,7 +82,7 @@ src_compile() {
 		popd >/dev/null
 
 		pushd ${PN}-type1-${TYPE1_PV}
-		mv *.afm *.pfa *.ttf "${FONT_S}"
+		mv *.afm *.pfa "${FONT_S}"
 		popd >/dev/null
 
 		pushd ${PN}-src-${PV}
@@ -116,7 +116,7 @@ src_compile() {
 		popd >/dev/null
 
 		pushd ${PN}-type1-${TYPE1_PV}
-		mv *.afm *.pfa *.ttf "${FONT_S}"
+		mv *.afm *.pfa "${FONT_S}"
 		popd >/dev/null
 
 		if use ancient; then

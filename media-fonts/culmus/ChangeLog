@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/culmus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.62 2011/04/19 16:01:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.63 2011/07/26 11:10:07 pva Exp $
+
+  26 Jul 2011; Peter Volkov <pva@gentoo.org> culmus-0.120-r1.ebuild:
+  Fix mv: cannot stat `*.ttf\' warning, reported in bug #376347 by Agostino
+  Sarubbo.
 
 *culmus-0.120-r1 (19 Apr 2011)
 
