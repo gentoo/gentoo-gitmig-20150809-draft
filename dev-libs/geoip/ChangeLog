@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.119 2011/07/25 16:13:21 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.120 2011/07/26 09:55:27 tomka Exp $
+
+  26 Jul 2011; Thomas Kahle <tomka@gentoo.org> geoip-1.4.8.ebuild:
+  x86 stable per bug 374241
 
   25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> geoip-1.4.8.ebuild:
   ppc/ppc64 stable wrt #374241
