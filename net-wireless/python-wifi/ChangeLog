@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/python-wifi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/python-wifi/ChangeLog,v 1.7 2011/07/09 05:00:48 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/python-wifi/ChangeLog,v 1.8 2011/07/26 19:17:38 xarthisius Exp $
+
+  26 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  python-wifi-0.5.0-r1.ebuild:
+  Marked ~ppc wrt #357619
 
   09 Jul 2011; Matt Turner <mattst88@gentoo.org> python-wifi-0.5.0-r1.ebuild:
   Added ~mips, bug 357619
