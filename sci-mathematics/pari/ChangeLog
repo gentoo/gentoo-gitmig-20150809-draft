@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.82 2011/04/24 15:49:42 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.83 2011/07/26 19:30:38 bicatali Exp $
+
+*pari-2.5.0 (26 Jul 2011)
+
+  26 Jul 2011; Sébastien Fabbro <bicatali@gentoo.org> +pari-2.5.0.ebuild:
+  Version bump
 
   24 Apr 2011; Fabian Groffen <grobian@gentoo.org> pari-2.3.5.ebuild:
   Marked ~x86-solaris, bug #296509
