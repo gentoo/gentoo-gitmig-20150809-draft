@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/lxsession-0.4.6.ebuild,v 1.1 2011/07/26 22:06:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/lxsession-0.4.6.ebuild,v 1.2 2011/07/26 22:12:42 hwoarang Exp $
 
-EAPI="2"
+EAPI="4"
 
 DESCRIPTION="LXDE session manager (lite version)"
 HOMEPAGE="http://lxde.sf.net/"
@@ -35,6 +35,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog README || die
+	emake DESTDIR="${D}" install
+	dodoc AUTHORS ChangeLog README
 }
