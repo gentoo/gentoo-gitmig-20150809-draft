@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.2.1.ebuild,v 1.11 2011/04/03 17:52:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.2.1.ebuild,v 1.12 2011/07/26 18:22:27 pacho Exp $
 
 EAPI="3"
+PYTHON_DEPEND="python? 2"
 
-inherit eutils multilib autotools java-pkg-opt-2
+inherit eutils multilib autotools java-pkg-opt-2 python
 
 DESCRIPTION="general-purpose cryptography library"
 HOMEPAGE="http://sourceforge.net/projects/beecrypt/"
@@ -15,8 +16,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="java nocxx python threads doc"
 
-COMMONDEPEND="python? ( >=dev-lang/python-2.2 )
-	!<app-arch/rpm-4.2.1
+COMMONDEPEND="!<app-arch/rpm-4.2.1
 	!nocxx? ( threads? ( >=dev-libs/icu-2.8 ) )"
 
 DEPEND="${COMMONDEPEND}
@@ -28,8 +28,14 @@ DEPEND="${COMMONDEPEND}
 RDEPEND="${COMMONDEPEND}
 	java? ( >=virtual/jre-1.4 )"
 
+pkg_setup() {
+	use python && python_set_active_version 2
+}
+
 src_prepare() {
 	java-pkg-opt-2_src_prepare
+
+	use python && python_convert_shebangs -r 2 .
 
 	epatch "${FILESDIR}"/${P}-build-system.patch
 	eautoreconf
@@ -40,7 +46,7 @@ src_configure() {
 	econf \
 		--disable-expert-mode \
 		$(use_enable threads) \
-		$(use_with python python "${EPREFIX}"/usr/bin/python) \
+		$(use_with python python "${EPREFIX}"/usr/bin/python2) \
 		$(use threads && use_with !nocxx cplusplus || echo --without-cplusplus) \
 		$(use_with java)
 }
@@ -58,8 +64,8 @@ src_compile() {
 src_test() {
 	export BEECRYPT_CONF_FILE="${T}/beecrypt-test.conf"
 	echo "provider.1=${S}/c++/provider/.libs/base.so" > "${BEECRYPT_CONF_FILE}"
-	make check || die "self test failed"
-	make bench || die "self benchmark test failed"
+	emake check || die "self test failed"
+	emake bench || die "self benchmark test failed"
 }
 
 src_install() {

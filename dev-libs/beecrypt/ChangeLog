@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/beecrypt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.75 2011/04/03 17:52:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.76 2011/07/26 18:22:27 pacho Exp $
+
+  26 Jul 2011; Pacho Ramos <pacho@gentoo.org> -beecrypt-4.1.2-r1.ebuild,
+  -beecrypt-4.1.2-r2.ebuild, -files/beecrypt-4.1.2-base64.patch,
+  -files/beecrypt-4.1.2-build.patch, -files/beecrypt-4.1.2-gcc4.patch,
+  -files/beecrypt-4.1.2-python-Makefile-am.patch,
+  -files/beecrypt-4.1.2-python-debug-py-c.patch,
+  -files/beecrypt-4.1.2-threads.patch, beecrypt-4.2.1.ebuild:
+  This needs python2 (bug #312153 and #362497 by Arfrever and Vadim), remove
+  old.
 
   03 Apr 2011; Raúl Porcel <armin76@gentoo.org> beecrypt-4.2.1.ebuild:
   ia64/s390/sh stable wrt #342387
