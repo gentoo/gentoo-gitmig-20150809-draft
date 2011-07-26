@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.59 2011/07/26 20:39:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.60 2011/07/26 20:47:56 scarabeus Exp $
+
+  26 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-3.4.2.2.ebuild, +files/libreoffice-gbuild-use-cxxflags.patch:
+  Force proper variable usage. Just saw this in gekis overlay so adding to main
+  tree too.
 
   26 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   libreoffice-3.4.2.2.ebuild,

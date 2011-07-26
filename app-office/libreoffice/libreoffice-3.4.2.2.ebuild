@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.2.ebuild,v 1.18 2011/07/26 20:39:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.2.ebuild,v 1.19 2011/07/26 20:47:56 scarabeus Exp $
 
 EAPI=3
 
@@ -222,6 +222,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-as-needed-gtk.patch"
 	"${FILESDIR}/${PN}-fix-sandbox-install.patch"
 	"${FILESDIR}/${PN}-translate-toolkit-parallel-solenv.patch"
+	"${FILESDIR}/${PN}-gbuild-use-cxxflags.patch"
 )
 
 # Uncoment me when updating to eapi4
