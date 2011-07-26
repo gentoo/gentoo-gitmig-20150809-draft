@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bzr.eclass,v 1.14 2011/04/20 17:16:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bzr.eclass,v 1.15 2011/07/26 23:22:35 ulm Exp $
 #
 # @ECLASS: bzr.eclass
 # @MAINTAINER:
@@ -255,9 +255,8 @@ bzr_fetch() {
 
 	cd "${branch_dir}" || die "${EBZR}: can't chdir to ${branch_dir}"
 
-	# Save some variables in environment. #311101
+	# Save revision number in environment. #311101
 	export EBZR_REVNO=$(${EBZR_REVNO_CMD})
-	export EBZR_WC_PATH=${branch_dir}
 
 	einfo "exporting ..."
 	${EBZR_EXPORT_CMD} ${EBZR_REVISION:+-r ${EBZR_REVISION}} \
