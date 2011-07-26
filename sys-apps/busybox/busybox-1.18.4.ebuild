@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.18.4.ebuild,v 1.2 2011/07/03 16:59:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.18.4.ebuild,v 1.3 2011/07/26 17:53:57 zmedico Exp $
 
-EAPI="2"
+EAPI="3"
 inherit eutils flag-o-matic savedconfig toolchain-funcs
 
 ################################################################################
@@ -211,7 +211,7 @@ src_install() {
 	if use mdev ; then
 		dodir /$(get_libdir)/mdev/
 		use make-symlinks || dosym /bin/bb /sbin/mdev
-		cp "${S}"/examples/mdev_fat.conf "${D}"/etc/mdev.conf
+		cp "${S}"/examples/mdev_fat.conf "${ED}"/etc/mdev.conf
 
 		exeinto /$(get_libdir)/mdev/
 		doexe "${FILESDIR}"/mdev/*
@@ -222,7 +222,7 @@ src_install() {
 	fi
 
 	# bundle up the symlink files for use later
-	emake install || die
+	emake DESTDIR="${ED}" install || die
 	rm _install/bin/busybox
 	tar cf busybox-links.tar -C _install . || : #;die
 	insinto /usr/share/${PN}
@@ -257,7 +257,7 @@ pkg_preinst() {
 	fi
 
 	if use make-symlinks ; then
-		mv "${D}"/usr/share/${PN}/busybox-links.tar "${T}"/ || die
+		mv "${ED}"/usr/share/${PN}/busybox-links.tar "${T}"/ || die
 	fi
 }
 
