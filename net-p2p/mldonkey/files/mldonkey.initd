@@ -29,7 +29,7 @@ start() {
 	ebegin "Starting ${SVCNAME}"
 	cd "${MLDONKEY_DIR}"
 	export MLDONKEY_DIR
-	start-stop-daemon --start --chuid "${USER}" --nice "${NICE}" \
+	start-stop-daemon --start --user "${USER}" --nice "${NICE}" \
 		--exec "${MLDONKEY_BINARY}" --pidfile /var/run/"${SVCNAME}".pid \
 		--background --make-pidfile
 	eend $?
