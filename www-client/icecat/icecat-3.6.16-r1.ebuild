@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.16-r1.ebuild,v 1.5 2011/06/21 12:34:27 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.16-r1.ebuild,v 1.6 2011/07/26 13:11:03 polynomial-c Exp $
 EAPI="3"
 WANT_AUTOCONF="2.1"
 
@@ -128,6 +128,8 @@ src_unpack() {
 src_prepare() {
 	# Make this a 3.6.17 version
 	epatch "${DISTDIR}"/ff3617.diff.xz
+
+	epatch "${FILESDIR}"/${PN}-3.6.16-curl7217-includes-fix.patch
 
 	# Integrate rebranding
 	sed -i "s|/firefox|/icecat|" \

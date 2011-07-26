@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-5.0-r1.ebuild,v 1.1 2011/07/06 23:43:49 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-5.0-r1.ebuild,v 1.2 2011/07/26 13:11:03 polynomial-c Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -148,7 +148,8 @@ src_prepare() {
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"
 
-	epatch "${FILESDIR}"/2000-icecat-5_gentoo_install_dirs.patch
+	epatch "${FILESDIR}"/2000-icecat-5_gentoo_install_dirs.patch \
+		"${FILESDIR}"/${PN}-5.0-curl7217-includes-fix.patch
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user

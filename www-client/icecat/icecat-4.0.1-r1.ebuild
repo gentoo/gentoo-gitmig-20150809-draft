@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-4.0.1-r1.ebuild,v 1.3 2011/06/21 12:34:27 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-4.0.1-r1.ebuild,v 1.4 2011/07/26 13:11:03 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -124,8 +124,9 @@ src_prepare() {
 	epatch "${WORKDIR}"
 
 	epatch "${FILESDIR}"/2000-icecat_gentoo_install_dirs.patch \
-		"${FILESDIR}"/5001_fix-prefs-directory.patch
-	epatch "${FILESDIR}"/fix-preferences-gentoo.patch
+		"${FILESDIR}"/5001_fix-prefs-directory.patch \
+		"${FILESDIR}"/fix-preferences-gentoo.patch \
+		"${FILESDIR}"/${PN}-5.0-curl7217-includes-fix.patch
 
 	# Fix rebranding
 	sed -i 's|\$(DIST)/bin/firefox|\$(DIST)/bin/icecat|' browser/app/Makefile.in

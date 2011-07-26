@@ -1,0 +1,40 @@
+--- icecat-3.6.16/config/system-headers
++++ icecat-3.6.16/config/system-headers
+@@ -203,7 +203,6 @@
+ ctype.h
+ curl/curl.h
+ curl/easy.h
+-curl/types.h
+ curses.h
+ cxxabi.h
+ DateTimeUtils.h
+--- icecat-3.6.16/js/src/config/system-headers
++++ icecat-3.6.16/js/src/config/system-headers
+@@ -203,7 +203,6 @@
+ ctype.h
+ curl/curl.h
+ curl/easy.h
+-curl/types.h
+ curses.h
+ cxxabi.h
+ DateTimeUtils.h
+--- icecat-3.6.16/toolkit/crashreporter/google-breakpad/src/common/linux/http_upload.cc
++++ icecat-3.6.16/toolkit/crashreporter/google-breakpad/src/common/linux/http_upload.cc
+@@ -31,7 +31,6 @@
+ #include <dlfcn.h>
+ #include <curl/curl.h>
+ #include <curl/easy.h>
+-#include <curl/types.h>
+ 
+ #include "common/linux/http_upload.h"
+ 
+--- icecat-3.6.16/toolkit/crashreporter/google-breakpad/src/common/linux/libcurl_wrapper.cc
++++ icecat-3.6.16/toolkit/crashreporter/google-breakpad/src/common/linux/libcurl_wrapper.cc
+@@ -29,7 +29,6 @@
+ 
+ #include <curl/curl.h>
+ #include <curl/easy.h>
+-#include <curl/types.h>
+ #include <dlfcn.h>
+ 
+ #include <string>
