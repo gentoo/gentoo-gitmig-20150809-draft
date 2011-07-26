@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/lsyncd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/lsyncd/ChangeLog,v 1.15 2011/06/02 13:29:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lsyncd/ChangeLog,v 1.16 2011/07/26 15:09:26 darkside Exp $
+
+  26 Jul 2011; Jeremy Olexa <darkside@gentoo.org> -lsyncd-2.0.3.ebuild:
+  remove old version
 
   02 Jun 2011; Markus Meier <maekke@gentoo.org> lsyncd-2.0.4.ebuild:
   x86 stable, bug #368593
