@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-0.9.4.ebuild,v 1.3 2011/07/27 10:06:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-0.9.4-r1.ebuild,v 1.1 2011/07/27 15:51:25 scarabeus Exp $
 
 EAPI=4
 
@@ -31,6 +31,7 @@ DEPEND="${RDEPEND}
 PATCHES=(
 	"${FILESDIR}/${PN}-includes-libs-perl.patch"
 	"${FILESDIR}/${PN}-disablefonttest.patch"
+	"${FILESDIR}/${PN}-multilib-strict.patch"
 )
 
 pkg_setup() {

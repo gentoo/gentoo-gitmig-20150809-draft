@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/graphite2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/ChangeLog,v 1.3 2011/07/27 10:06:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/ChangeLog,v 1.4 2011/07/27 15:51:25 scarabeus Exp $
+
+*graphite2-0.9.4-r1 (27 Jul 2011)
+
+  27 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/graphite2-multilib-strict.patch, -graphite2-0.9.4.ebuild,
+  +graphite2-0.9.4-r1.ebuild:
+  Revision bump to fix multilib strictness. Fixes bug #376627.
 
   27 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org> graphite2-0.9.4.ebuild:
   Fix CFLAGS parameters. Should fix build on gcc-4.6. Fixes bug #376567.
