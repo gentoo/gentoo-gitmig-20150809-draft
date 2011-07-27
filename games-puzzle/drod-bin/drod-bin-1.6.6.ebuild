@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/drod-bin-1.6.6.ebuild,v 1.6 2008/03/07 18:29:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/drod-bin-1.6.6.ebuild,v 1.7 2011/07/27 17:51:26 pacho Exp $
 
 inherit eutils games
 
@@ -28,6 +28,10 @@ src_install() {
 		|| die "install.sh failed"
 	dodir "${GAMES_BINDIR}"
 	dosym "${GDIR}/drod" "${GAMES_BINDIR}/drod"
+
+	newicon Data/Bitmaps/Icon.bmp ${PN}.bmp
+	make_desktop_entry drod "Deadly Rooms of Death" /usr/share/pixmaps/${PN}.bmp
+
 	prepgamesdirs
 }
 
