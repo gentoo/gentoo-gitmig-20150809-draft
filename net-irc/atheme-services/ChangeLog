@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/atheme-services
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.9 2011/07/22 03:22:12 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/ChangeLog,v 1.10 2011/07/27 15:11:36 binki Exp $
+
+*atheme-services-7.0.0_alpha6 (27 Jul 2011)
+
+  27 Jul 2011; Nathan Phillip Brink <binki@gentoo.org>
+  +atheme-services-7.0.0_alpha6.ebuild,
+  +files/atheme-services-7.0.0_alpha6-destdir-perl.patch:
+  Bump to atheme-7.0.0_alpha6 which has perl scripting support.
 
 *atheme-services-6.0.8-r2 (22 Jul 2011)
 
