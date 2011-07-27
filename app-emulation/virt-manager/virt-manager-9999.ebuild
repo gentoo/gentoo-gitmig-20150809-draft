@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-9999.ebuild,v 1.6 2011/07/21 21:08:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-9999.ebuild,v 1.7 2011/07/27 15:37:30 cardoe Exp $
 
-#BACKPORTS=1
+#BACKPORTS=
 
 EAPI=2
 
@@ -33,7 +33,7 @@ DESCRIPTION="A graphical tool for administering virtual machines (KVM/Xen)"
 HOMEPAGE="http://virt-manager.org/"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="gnome-keyring policykit sasl"
+IUSE="gnome-keyring policykit sasl spice"
 RDEPEND=">=dev-python/pygtk-1.99.12
 	>=app-emulation/libvirt-0.7.0[python,sasl?]
 	>=dev-libs/libxml2-2.6.23[python]
@@ -45,10 +45,15 @@ RDEPEND=">=dev-python/pygtk-1.99.12
 	>=dev-python/gconf-python-1.99.11
 	dev-python/urlgrabber
 	gnome-keyring? ( dev-python/gnome-keyring-python )
-	policykit? ( sys-auth/polkit )"
+	policykit? ( sys-auth/polkit )
+	spice? ( >=net-misc/spice-gtk-0.6[python,sasl?,-gtk3] )"
 DEPEND="${RDEPEND}
 	app-text/rarian
 	dev-util/intltool"
+
+# The TUI (terminal UI) requires newt_syrup which is not packaged on
+# Gentoo. bug #356711
+G2CONF="--without-tui"
 
 src_prepare() {
 	sed -e "s/python/python2/" -i src/virt-manager.in || \
@@ -63,7 +68,7 @@ src_prepare() {
 		# unless we do this
 		touch config.rpath
 
-		rm -f config.status
+		rm -rf config.status
 		intltoolize --automake --copy --force
 		perl -i -p -e 's,^DATADIRNAME.*$,DATADIRNAME = share,' po/Makefile.in.in
 		perl -i -p -e 's,^GETTEXT_PACKAGE.*$,GETTEXT_PACKAGE = virt-manager,' \
