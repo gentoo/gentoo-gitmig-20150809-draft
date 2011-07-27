@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ekopath-4.0.10_pre20110717.ebuild,v 1.1 2011/07/25 18:25:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ekopath-4.0.10_pre20110717.ebuild,v 1.2 2011/07/27 09:34:06 xarthisius Exp $
 
 EAPI=4
 
@@ -53,7 +53,7 @@ src_prepare() {
 	cat > "99${PN}" <<-EOF
 		PATH=/opt/${P}/bin
 		ROOTPATH=/opt/${P}/bin
-		LDPATH=/opt/${P}/lib
+		LDPATH=/opt/${P}/lib:/opt/${P}/lib/${MY_PV}/x8664/64
 	EOF
 }
 
