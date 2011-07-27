@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.86 2011/06/26 16:59:45 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.87 2011/07/27 12:41:19 binki Exp $
+
+*unrealircd-3.2.9_rc2 (27 Jul 2011)
+
+  27 Jul 2011; Nathan Phillip Brink <binki@gentoo.org>
+  +unrealircd-3.2.9_rc2.ebuild, +files/unrealircd.confd-r1,
+  +files/unrealircd.initd, metadata.xml:
+  Bump to unrealircd-3.2.9_rc2 with a refactored ebuild using EAPI=4, taking
+  advantage of a somewhat-fixed ./configure, and new initscripts.
 
   26 Jun 2011; Nathan Phillip Brink <binki@gentoo.org> metadata.xml:
   Set myself (binki) as unrealircd's maintainer.
