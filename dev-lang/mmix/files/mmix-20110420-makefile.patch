@@ -1,5 +1,5 @@
---- /var/tmp/portage/dev-lang/mmix-20110420/work/Makefile	2011-03-30 01:47:08.000000000 +0200
-+++ /tmp/Makefile	2011-05-10 12:16:32.752503223 +0200
+--- Makefile
++++ Makefile
 @@ -27,23 +27,23 @@
  	if test -r $*.ch; then cweave $*.w $*.ch; else cweave $*.w; fi
  
