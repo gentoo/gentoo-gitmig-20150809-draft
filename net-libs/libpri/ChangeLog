@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libpri
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.90 2011/07/08 15:46:46 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.91 2011/07/27 09:04:41 xarthisius Exp $
+
+  27 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> libpri-1.4.11.4.ebuild,
+  libpri-1.4.11.5.ebuild, libpri-1.4.12_beta2.ebuild,
+  libpri-1.4.12_beta3.ebuild, libpri-1.4.12.ebuild:
+  Drop ppc keywords wrt #376573
 
 *libpri-1.4.12 (08 Jul 2011)
 

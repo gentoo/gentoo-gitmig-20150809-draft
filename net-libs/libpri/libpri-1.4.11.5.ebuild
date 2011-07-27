@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/libpri-1.4.11.5.ebuild,v 1.1 2011/05/05 08:04:29 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/libpri-1.4.11.5.ebuild,v 1.2 2011/07/27 09:04:41 xarthisius Exp $
 
 EAPI=3
 inherit base
@@ -11,7 +11,7 @@ SRC_URI="http://downloads.asterisk.org/pub/telephony/${PN}/releases/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 
 PATCHES=(
