@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/shared-desktop-ontologies
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/shared-desktop-ontologies/ChangeLog,v 1.16 2011/07/13 13:41:11 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/shared-desktop-ontologies/ChangeLog,v 1.17 2011/07/27 13:39:30 alexxy Exp $
+
+*shared-desktop-ontologies-0.7.0 (27 Jul 2011)
+
+  27 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org>
+  +shared-desktop-ontologies-0.7.0.ebuild:
+  Version bump for KDE SC 4.7.0
 
   13 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   shared-desktop-ontologies-0.5.ebuild:
