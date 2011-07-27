@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.107 2011/05/27 13:50:51 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.108 2011/07/27 07:26:00 eras Exp $
+
+  27 Jul 2011; Eray Aslan <eras@gentoo.org> maildrop-2.5.4.ebuild:
+  Tie colliding files to tools USE flag - bugs #61116 #374009
 
 *maildrop-2.5.4 (27 May 2011)
 

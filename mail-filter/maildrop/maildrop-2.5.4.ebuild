@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.5.4.ebuild,v 1.1 2011/05/27 13:50:51 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.5.4.ebuild,v 1.2 2011/07/27 07:26:00 eras Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.courier-mta.org/maildrop/"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="berkdb debug fam gdbm ldap mysql postgres authlib"
+IUSE="berkdb debug fam gdbm ldap mysql postgres authlib +tools"
 
 CDEPEND="!mail-mta/courier
 	net-mail/mailbase
@@ -28,9 +28,12 @@ CDEPEND="!mail-mta/courier
 	authlib?  ( net-libs/courier-authlib )
 	fam?      ( virtual/fam )
 	!gdbm? (
-		berkdb? (
-			>=sys-libs/db-3
-		)
+		berkdb? ( >=sys-libs/db-3 )
+	)
+	tools? (
+		!mail-mta/netqmail
+		!net-mail/courier-imap
+		!mail-mta/mini-qmail
 	)"
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig"
@@ -107,6 +110,16 @@ src_install() {
 	dodoc unicode/README
 	docinto maildir
 	dodoc maildir/AUTHORS maildir/INSTALL maildir/README*.txt
+
+	# bugs #61116 #374009
+	if ! use tools ; then
+		for tool in "maildirmake" "deliverquota"; do
+			rm "${D}/usr/bin/${tool}"
+			rm "${D}/usr/share/man/man"[0-9]"/${tool}."[0-9]
+			rm "${D}/usr/share/maildrop/html/${tool}.html"
+		done
+		rm "${D}/usr/share/man/man5/maildir.5"
+	fi
 
 	dodir "/usr/share/doc/${PF}"
 	mv "${D}/usr/share/maildrop/html" "${D}/usr/share/doc/${PF}/"

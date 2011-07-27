@@ -4,5 +4,6 @@
   <herd>net-mail</herd>
   <use>
     <flag name="authlib">Add courier-authlib support</flag>
+    <flag name="tools">Install maildirmake and deliverquota tools</flag>
   </use>
 </pkgmetadata>
