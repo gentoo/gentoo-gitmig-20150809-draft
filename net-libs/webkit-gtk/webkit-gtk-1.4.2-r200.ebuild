@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.4.2-r200.ebuild,v 1.1 2011/07/24 21:39:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.4.2-r200.ebuild,v 1.2 2011/07/27 09:30:05 pacho Exp $
 
 EAPI="4"
 
@@ -44,6 +44,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=sys-devel/flex-2.5.33
 	sys-devel/gettext
+	sys-devel/bison
 	dev-util/gperf
 	dev-util/pkgconfig
 	dev-util/gtk-doc-am
