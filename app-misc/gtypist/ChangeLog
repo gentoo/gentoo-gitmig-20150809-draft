@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gtypist
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/ChangeLog,v 1.26 2011/06/19 15:41:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/ChangeLog,v 1.27 2011/07/27 00:49:00 xmw Exp $
+
+  27 Jul 2011; Michael Weber <xmw@gentoo.org> -gtypist-2.8.3.ebuild:
+  Drop old version
 
   19 Jun 2011; Markus Meier <maekke@gentoo.org> gtypist-2.8.5.ebuild:
   x86 stable, bug #371745
