@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.32 2011/07/20 15:59:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.33 2011/07/27 15:27:01 jer Exp $
+
+*opera-next-12.00.1033 (27 Jul 2011)
+
+  27 Jul 2011; Jeroen Roovers <jer@gentoo.org> +opera-next-12.00.1033.ebuild:
+  http://my.opera.com/desktopteam/blog/2011/07/27/latency-microdata-qresync
 
 *opera-next-12.00.1027 (20 Jul 2011)
 
