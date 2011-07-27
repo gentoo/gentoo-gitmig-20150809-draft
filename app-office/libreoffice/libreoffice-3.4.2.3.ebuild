@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.2 2011/07/27 20:09:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.3 2011/07/27 20:35:04 mattst88 Exp $
 
 EAPI=3
 
@@ -413,7 +413,6 @@ src_configure() {
 	# --enable-unix-qstart-libpng: use libpng splashscreen that is faster
 	# --disable-broffice: do not use brazillian brand just be uniform
 	# --enable-cairo: ensure that cairo is always required
-	# --disable-graphite: no package in gentoo
 	# --enable-*-link: link to the library rather than just dlopen on runtime
 	# --disable-fetch-external: prevent dowloading during compile phase
 	# --disable-gnome-vfs: old gnome virtual fs support
