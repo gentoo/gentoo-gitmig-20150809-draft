@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.4 2011/07/27 20:50:35 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.5 2011/07/27 23:37:47 scarabeus Exp $
 
 EAPI=3
 
@@ -15,11 +15,13 @@ DEV_EXP_URI="http://dev-builds.libreoffice.org/pre-releases/src"
 EXT_URI="http://ooo.itc.hu/oxygenoffice/download/libreoffice"
 ADDONS_URI="http://dev-www.libreoffice.org/src/"
 
-inherit base autotools check-reqs eutils java-pkg-opt-2 kde4-base pax-utils prefix python multilib toolchain-funcs flag-o-matic
+BRANDING="${PN}-branding-gentoo-0.2.tar.xz"
+
+inherit base autotools check-reqs eutils java-pkg-opt-2 kde4-base pax-utils prefix python multilib toolchain-funcs flag-o-matic nsplugins
 
 DESCRIPTION="LibreOffice, a full office productivity suite."
 HOMEPAGE="http://www.libreoffice.org"
-SRC_URI="branding? ( http://dev.gentooexperimental.org/~scarabeus/${PN}-branding-gentoo-0.2.tar.xz )"
+SRC_URI="branding? ( http://dev.gentooexperimental.org/~scarabeus/${BRANDING} )"
 
 # Shiny split sources with so many packages...
 MODULES="artwork base calc components extensions extras filters help
@@ -290,7 +292,7 @@ src_unpack() {
 	local mod dest tmplfile tmplname
 
 	if use branding; then
-		unpack "${PN}-branding-gentoo-0.2.tar.xz"
+		unpack "${BRANDING}"
 	fi
 
 	#first the bootstrap files
@@ -515,6 +517,11 @@ src_compile() {
 src_install() {
 	# This is not Makefile so no buildserver
 	make DESTDIR="${D}" distro-pack-install || die
+
+	# symlink the plugin to system location
+	if use nsplugin; then
+		inst_plugin /usr/$(get_libdir)/libreoffice/program/libnpsoplugin.so
+	fi
 
 	if use branding; then
 		insinto /usr/$(get_libdir)/${PN}/program

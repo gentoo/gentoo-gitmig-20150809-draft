@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.67 2011/07/27 20:50:35 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.68 2011/07/27 23:37:47 scarabeus Exp $
+
+  27 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-3.4.2.3.ebuild:
+  When building nsplugin symlink it to system location. Fixes bug #375299. Also
+  put branding only into one location.
 
   27 Jul 2011; Matt Turner <mattst88@gentoo.org> libreoffice-3.4.2.3.ebuild:
   Update branding version.
