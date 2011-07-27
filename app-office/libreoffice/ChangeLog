@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.63 2011/07/27 11:48:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.64 2011/07/27 19:27:24 scarabeus Exp $
+
+  27 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  files/libreoffice-as-needed-gtk.patch:
+  Use proper gb call to add GTK_LIBS, this should fix bug #376609.
 
 *libreoffice-3.4.2.3 (27 Jul 2011)
 

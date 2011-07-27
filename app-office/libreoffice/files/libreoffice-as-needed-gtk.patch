@@ -1,19 +1,13 @@
-diff -urN libreoffice-libs-core-3.4.2.2.old//sfx2/Library_qstart.mk libreoffice-libs-core-3.4.2.2/sfx2/Library_qstart.mk
---- libreoffice-libs-core-3.4.2.2.old//sfx2/Library_qstart.mk	2011-07-26 14:28:50.000000000 +0200
-+++ libreoffice-libs-core-3.4.2.2/sfx2/Library_qstart.mk	2011-07-26 14:31:09.000000000 +0200
-@@ -58,7 +58,6 @@
- 
- $(eval $(call gb_Library_set_ldflags,qstart_gtk,\
-     $$(LDFLAGS) \
--    $(GTK_LIBS) \
+diff -urN libreoffice-libs-core-3.4.2.3.old/sfx2/Library_qstart.mk libreoffice-libs-core-3.4.2.3/sfx2/Library_qstart.mk
+--- libreoffice-libs-core-3.4.2.3.old/sfx2/Library_qstart.mk	2011-07-27 21:22:27.879153559 +0200
++++ libreoffice-libs-core-3.4.2.3/sfx2/Library_qstart.mk	2011-07-27 21:24:26.450155394 +0200
+@@ -56,8 +56,7 @@
+     $(filter-out -I%,$(GTK_CFLAGS)) \
  ))
  
- $(eval $(call gb_Library_add_linked_libs,qstart_gtk,\
-@@ -80,6 +79,7 @@
-     vcl \
-     xml2 \
-     sfx \
-+    $(GTK_LIBS) \
+-$(eval $(call gb_Library_set_ldflags,qstart_gtk,\
+-    $$(LDFLAGS) \
++$(eval $(call gb_Library_add_libs,qstart_gtk,\
+     $(GTK_LIBS) \
  ))
  
- $(eval $(call gb_Library_add_exception_objects,qstart_gtk,\
