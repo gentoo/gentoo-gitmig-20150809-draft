@@ -1,6 +1,13 @@
 # ChangeLog for lxde-base/lxpanel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/ChangeLog,v 1.30 2011/07/26 22:34:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/ChangeLog,v 1.31 2011/07/27 16:34:07 vostorga Exp $
+
+*lxpanel-0.5.7-r1 (27 Jul 2011)
+
+  27 Jul 2011; <vostorga@gentoo.org> -lxpanel-0.5.7.ebuild,
+  +lxpanel-0.5.7-r1.ebuild, +files/lxpanel-0.5.7-requisition.patch,
+  +files/lxpanel-0.5.7-tooltip-netstatus.patch:
+  Fix usage of GtkRequisition and tooltip
 
 *lxpanel-0.5.7 (26 Jul 2011)
 

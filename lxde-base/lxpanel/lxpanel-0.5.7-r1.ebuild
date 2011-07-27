@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.5.7.ebuild,v 1.1 2011/07/26 22:34:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/lxpanel-0.5.7-r1.ebuild,v 1.1 2011/07/27 16:34:07 vostorga Exp $
 
 EAPI="4"
 
@@ -29,6 +29,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.5.1-sandbox.patch
 	epatch "${FILESDIR}"/${PN}-0.5.6-broken-apps.patch
+	epatch "${FILESDIR}"/${P}-requisition.patch
+	epatch "${FILESDIR}"/${P}-tooltip-netstatus.patch
 	eautoreconf
 }
 
