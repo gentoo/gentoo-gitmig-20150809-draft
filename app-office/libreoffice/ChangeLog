@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.64 2011/07/27 19:27:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.65 2011/07/27 20:09:21 scarabeus Exp $
+
+  27 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-3.4.2.3.ebuild:
+  Bump branding as there was borked sofficerc in the 0.1.
 
   27 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   files/libreoffice-as-needed-gtk.patch:

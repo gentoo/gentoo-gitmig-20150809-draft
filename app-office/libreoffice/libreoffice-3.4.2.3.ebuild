@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.1 2011/07/27 11:48:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.2 2011/07/27 20:09:21 scarabeus Exp $
 
 EAPI=3
 
@@ -19,7 +19,7 @@ inherit base autotools check-reqs eutils java-pkg-opt-2 kde4-base pax-utils pref
 
 DESCRIPTION="LibreOffice, a full office productivity suite."
 HOMEPAGE="http://www.libreoffice.org"
-SRC_URI="branding? ( http://dev.gentooexperimental.org/~scarabeus/${PN}-branding-gentoo-0.1.tar.xz )"
+SRC_URI="branding? ( http://dev.gentooexperimental.org/~scarabeus/${PN}-branding-gentoo-0.2.tar.xz )"
 
 # Shiny split sources with so many packages...
 MODULES="artwork base calc components extensions extras filters help
