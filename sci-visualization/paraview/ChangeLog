@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.58 2011/07/27 17:11:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.59 2011/07/27 17:38:47 xarthisius Exp $
+
+  27 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> paraview-3.6.2.ebuild:
+  Fix for python 2.7 wrt #348151
 
   27 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> paraview-3.6.2.ebuild:
   Fix dependency on qt-assistant wrt bug 335831
