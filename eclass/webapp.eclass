@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.68 2011/07/26 19:25:19 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.69 2011/07/27 07:50:39 lxnay Exp $
 
 # @ECLASS: webapp.eclass
 # @MAINTAINER:
@@ -506,7 +506,7 @@ webapp_pkg_postinst() {
 			${my_cmd}
 
 			echo
-			local cleaner="${WEBAPP_CLEANER} -p -C ${PN}"
+			local cleaner="${WEBAPP_CLEANER} -p -C /${PN}"
 			einfo "Running ${cleaner}"
 			${cleaner}
 		else
