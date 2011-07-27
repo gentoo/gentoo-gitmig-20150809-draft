@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.104 2011/07/11 18:27:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.105 2011/07/27 09:30:46 alexxy Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -439,15 +439,22 @@ _calculate_src_uri() {
 				4.[456].8[05] | 4.[456].9[023568])
 					# Unstable KDE SC releases
 					SRC_URI="mirror://kde/unstable/${PV}/src/${_kmname_pv}.tar.bz2"
-					# KDEPIM IS SPECIAL
-					[[ ${KMNAME} == "kdepim" || ${KMNAME} == "kdepim-runtime" ]] && SRC_URI="mirror://kde/unstable/kdepim/${PV}/${_kmname_pv}.tar.bz2"
+					if ! version_is_at_least 4.6.80 ${PV}
+					then
+						# KDEPIM IS SPECIAL
+						[[ ${KMNAME} == "kdepim" || ${KMNAME} == "kdepim-runtime" ]] && SRC_URI="mirror://kde/unstable/kdepim/${PV}/${_kmname_pv}.tar.bz2"
+					fi
 					;;
 				*)
 					# Stable KDE SC releases
 					SRC_URI="mirror://kde/stable/${PV}/src/${_kmname_pv}.tar.bz2"
-					# KDEPIM IS SPECIAL
-					[[ ${KMNAME} == "kdepim" || ${KMNAME} == "kdepim-runtime" ]] && SRC_URI="mirror://kde/stable/kdepim-${PV}/src/${_kmname_pv}.tar.bz2"
-					;;
+					if ! version_is_at_least 4.6.80 ${PV}
+					then
+						# KDEPIM IS SPECIAL
+						# TODO: It might not be with KDE 4.7 (see above)
+						[[ ${KMNAME} == "kdepim" || ${KMNAME} == "kdepim-runtime" ]] && SRC_URI="mirror://kde/stable/kdepim-${PV}/src/${_kmname_pv}.tar.bz2"
+					fi
+						;;
 			esac
 			;;
 		koffice)
