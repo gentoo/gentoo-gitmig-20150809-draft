@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/common-sense/common-sense-3.400.ebuild,v 1.1 2011/01/15 08:44:13 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/common-sense/common-sense-3.400.0.ebuild,v 1.1 2011/07/27 12:13:55 tove Exp $
 
 EAPI=3
 
