@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12940 2011/07/25 11:42:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12941 2011/07/27 10:52:11 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tomáš Chvátal <scarabeus@gentoo.org> (27 Jul 2011)
+# Old replaced packages. Will be removed in 30 days.
+# app-office/openoffice -> app-office/libreoffice
+# app-office/openoffice-bin -> app-office/libreoffice-bin
+# app-text/wpd2sxw -> app-text/wpd2odt
+app-office/openoffice
+app-office/openoffice-bin
+app-text/wpd2sxw
 
 # Pacho Ramos <pacho@gentoo.org> (25 Jul 2011)
 # Old and unmaintained for a long time, bug #358587.

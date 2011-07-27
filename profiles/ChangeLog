@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5576 2011/07/25 23:03:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5577 2011/07/27 10:52:11 scarabeus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
+  Mask openoffice{,-bin} and wpd2sxw for removal. Substitutes are in main tree.
 
   25 Jul 2011; Anthony G. Basile <blueness@gentoo.org> base/package.mask,
   features/selinux/package.mask, selinux/package.mask:
