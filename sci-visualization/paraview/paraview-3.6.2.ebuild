@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.2.ebuild,v 1.14 2011/04/10 22:36:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.2.ebuild,v 1.15 2011/07/27 17:11:12 xarthisius Exp $
 
 EAPI="3"
 
@@ -28,7 +28,8 @@ RDEPEND="sci-libs/hdf5[mpi=]
 	gui? ( x11-libs/qt-gui:4
 			x11-libs/qt-qt3support:4
 			x11-libs/qt-opengl:4
-			x11-libs/qt-assistant:4 )
+			|| ( >=x11-libs/qt-assistant-4.7.0:4[compat]
+				<x11-libs/qt-assistant-4.7.0:4 ) )
 	mysql? ( virtual/mysql )
 	postgres? ( dev-db/postgresql-base )
 	odbc? ( dev-db/unixODBC )
