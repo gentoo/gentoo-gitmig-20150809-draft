@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12941 2011/07/27 10:52:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12942 2011/07/27 11:51:09 dagger Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Robert Piasek <dagger@gentoo.org> (27 July 2011)  
+# Masking for testing
+=net-fs/samba-3.6.0_rc3
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (27 Jul 2011)
 # Old replaced packages. Will be removed in 30 days.
@@ -207,10 +211,6 @@ net-libs/clinkcc
 # against glibc-2.14 ( bug #371157 ). Masked for removal
 # in 30 days
 app-arch/upm
-
-# Robert Piasek <dagger@gentoo.org> (30 Jun 2011)
-# Masking for testing
-=net-fs/samba-3.6.0_rc2
 
 # Pacho Ramos <pacho@gentoo.org> (29 Jun 2011)
 # Mask for removal in 30 days x11-libs/gtksourceview:1.0
