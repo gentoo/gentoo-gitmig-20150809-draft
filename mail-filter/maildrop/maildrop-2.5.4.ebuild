@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.5.4.ebuild,v 1.2 2011/07/27 07:26:00 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.5.4.ebuild,v 1.3 2011/07/27 14:58:22 eras Exp $
 
 EAPI=4
 
@@ -62,8 +62,8 @@ src_prepare() {
 
 src_configure() {
 	local myconf
-	local mytrustedusers="apache dspam root mail fetchmail \
-		daemon postmaster qmaild mmdf vmail alias"
+	local mytrustedusers="apache dspam root mail fetchmail"
+	mytrustedusers+=" daemon postmaster qmaild mmdf vmail alias"
 
 	# These flags make maildrop cry
 	replace-flags -Os -O2
@@ -81,7 +81,8 @@ src_configure() {
 		myconf="${myconf} --disable-authlib"
 	fi
 
-	econf \
+	# Default mailbox is $HOME/.maildir/ for Gentoo
+	maildrop_cv_SYS_INSTALL_MBOXDIR="./.maildir" econf \
 		$(use_enable fam) \
 		--disable-dependency-tracker \
 		--with-devel \
@@ -93,7 +94,6 @@ src_configure() {
 		--enable-trusted-users="${mytrustedusers}" \
 		--enable-maildrop-uid=root \
 		--enable-maildrop-gid=mail \
-		--with-default-maildrop=./.maildir/ \
 		--enable-sendmail=/usr/sbin/sendmail \
 		--cache-file="${S}"/configuring.cache \
 		${myconf}
