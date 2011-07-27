@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.85.ebuild,v 1.1 2011/05/02 06:27:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.85.ebuild,v 1.2 2011/07/27 08:01:51 zmedico Exp $
 
-EAPI=2
+EAPI=3
 inherit eutils multilib toolchain-funcs autotools linux-info
 
 DESCRIPTION="User-land utilities for LVM2 (device-mapper) software."
@@ -154,17 +154,18 @@ src_configure() {
 	fi
 
 	myconf="${myconf}
-			--sbindir=/sbin
-			--with-staticdir=/sbin
 			--with-dmeventd-path=/sbin/dmeventd"
 	econf $(use_enable readline) \
 		$(use_enable selinux) \
 		--enable-pkgconfig \
-		--libdir=/$(get_libdir) \
-		--with-usrlibdir=/usr/$(get_libdir) \
+		--with-confdir="${EPREFIX}/etc" \
+		--sbindir="${EPREFIX}/sbin" \
+		--with-staticdir="${EPREFIX}/sbin" \
+		--libdir="${EPREFIX}/$(get_libdir)" \
+		--with-usrlibdir="${EPREFIX}/usr/$(get_libdir)" \
 		--enable-udev_rules \
 		--enable-udev_sync \
-		--with-udevdir=/lib/udev/rules.d/ \
+		--with-udevdir="${EPREFIX}/lib/udev/rules.d/" \
 		${myconf} \
 		CLDFLAGS="${LDFLAGS}" || die
 }
@@ -249,7 +250,7 @@ src_install() {
 	#newins "${FILESDIR}"/64-device-mapper.rules-2.02.56-r3 64-device-mapper.rules || die
 
 	# do not rely on /lib -> /libXX link
-	sed -e "s-/lib/rcscripts/-/$(get_libdir)/rcscripts/-" -i "${D}"/etc/init.d/*
+	sed -e "s-/lib/rcscripts/-/$(get_libdir)/rcscripts/-" -i "${ED}"/etc/init.d/*
 
 	elog "USE flag nocman is deprecated and replaced"
 	elog "with the cman USE flag."
