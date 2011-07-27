@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/soprano
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.72 2011/07/13 14:33:43 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.73 2011/07/27 12:06:19 alexxy Exp $
+
+*soprano-2.6.51 (27 Jul 2011)
+
+  27 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +soprano-2.6.51.ebuild:
+  Version bump for KDE SC 4.7.0
 
   13 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> soprano-2.6.0.ebuild:
   ppc64 stable wrt #354033
