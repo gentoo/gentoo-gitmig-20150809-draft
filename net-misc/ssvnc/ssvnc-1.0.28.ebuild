@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ssvnc-1.0.28.ebuild,v 1.2 2011/02/26 22:05:51 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ssvnc-1.0.28.ebuild,v 1.3 2011/07/27 00:50:35 zmedico Exp $
 
-EAPI="2"
+EAPI="3"
 inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="VNC viewer that adds encryption security to VNC connections"
@@ -56,6 +56,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" install || \
+		die "make install failed"
 	dodoc README
 }
