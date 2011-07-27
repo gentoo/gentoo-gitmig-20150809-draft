@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.4.8.1.ebuild,v 1.2 2011/07/16 13:30:16 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/lightspark-0.5.0.ebuild,v 1.1 2011/07/27 15:36:36 chithanh Exp $
 
-EAPI=3
+EAPI=4
 inherit cmake-utils nsplugins multilib versionator
 
 DESCRIPTION="High performance flash player"
@@ -12,7 +12,7 @@ SRC_URI="http://launchpad.net/${PN}/trunk/${PN}-$(get_version_component_range 1-
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="nsplugin pulseaudio"
+IUSE="nsplugin openal profile pulseaudio rtmp sdl"
 
 RDEPEND=">=dev-cpp/libxmlpp-2.33.1:2.6
 	>=dev-libs/boost-1.42
@@ -23,8 +23,14 @@ RDEPEND=">=dev-cpp/libxmlpp-2.33.1:2.6
 	media-libs/ftgl
 	>=media-libs/glew-1.5.3
 	media-libs/libsdl
+	openal? (
+		media-libs/openal
+	)
 	pulseaudio? (
 		media-sound/pulseaudio
+	)
+	rtmp? (
+		media-video/rtmpdump
 	)
 	net-misc/curl
 	>=sys-devel/gcc-4.4
@@ -40,19 +46,20 @@ RDEPEND=">=dev-cpp/libxmlpp-2.33.1:2.6
 DEPEND="${RDEPEND}
 	dev-lang/nasm
 	dev-util/pkgconfig"
+REQUIRED_USE="openal? ( pulseaudio )"
 
 S=${WORKDIR}/${P/_rc*/}
 
-PATCHES=(
-	"${FILESDIR}"/${PN}-0.4.8.1-allow-disabling-pulseaudio.patch
-)
-
 src_configure() {
 	local audiobackends
-	use pulseaudio && audiobackends=pulse
+	use openal && audiobackends+="openal"
+	use pulseaudio && audiobackends+="pulse"
+	use sdl && audiobackends+="sdl"
 
 	local mycmakeargs=(
 		$(cmake-utils_use nsplugin COMPILE_PLUGIN)
+		$(cmake-utils_use profile ENABLE_PROFILING)
+		$(cmake-utils_use rtmp ENABLE_RTMP)
 		-DAUDIO_BACKEND="${audiobackends}"
 		-DPLUGIN_DIRECTORY=/usr/$(get_libdir)/${PN}/plugins
 	)

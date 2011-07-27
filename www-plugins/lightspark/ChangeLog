@@ -1,6 +1,15 @@
 # ChangeLog for www-plugins/lightspark
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.32 2011/07/16 13:30:16 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.33 2011/07/27 15:36:37 chithanh Exp $
+
+*lightspark-0.5.0 (27 Jul 2011)
+
+  27 Jul 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -lightspark-0.4.8.1.ebuild,
+  -files/lightspark-0.4.8.1-allow-disabling-pulseaudio.patch,
+  +lightspark-0.5.0.ebuild, metadata.xml:
+  Version bump, bug #375727. Allow enabling of individual audio backends, bug
+  #342763.
 
   16 Jul 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   lightspark-0.4.8.1.ebuild, -files/lightspark-0.4.8.1-cmakelists.patch:

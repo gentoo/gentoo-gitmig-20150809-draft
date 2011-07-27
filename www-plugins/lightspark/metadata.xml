@@ -6,5 +6,8 @@
 		<email>chithanh@gentoo.org</email>
 		<name>Chí-Thanh Christopher Nguyễn</name>
 	</maintainer>
+	<use>
+		<flag name='rtmp'>Enable Real Time Messaging Protocol using librtmp</flag>
+	</use>
 </pkgmetadata>
 
