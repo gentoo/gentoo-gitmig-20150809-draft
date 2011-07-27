@@ -1,0 +1,10 @@
+# ChangeLog for sci-mathematics/pari-data
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari-data/ChangeLog,v 1.1 2011/07/27 19:03:15 bicatali Exp $
+
+*pari-data-20110727 (27 Jul 2011)
+
+  27 Jul 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  +pari-data-20110727.ebuild, +metadata.xml:
+  Initial import. Ebuild initially submitted by Francois Bissey
+
