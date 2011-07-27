@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptexenc/ptexenc-1.2.0_p20110705.ebuild,v 1.1 2011/07/27 12:59:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptexenc/ptexenc-1.2.0_p20110705.ebuild,v 1.2 2011/07/27 19:48:11 aballier Exp $
 
 EAPI=3
 
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~ppc-macos"
 IUSE="iconv static-libs"
 
-DEPEND="iconv? ( virtual/libiconv )"
+DEPEND="iconv? ( virtual/libiconv )
+	dev-libs/kpathsea"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/texlive-${PV#*_p}-source/texk/${PN}
