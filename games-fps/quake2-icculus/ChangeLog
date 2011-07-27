@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake2-icculus
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.41 2010/09/15 10:56:43 tupone Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.42 2011/07/27 10:24:01 tupone Exp $
+
+  27 Jul 2011; Tupone Alfredo <tupone@gentoo.org>
+  quake2-icculus-0.16.1-r1.ebuild:
+  Fix installing with qmax. Bug #219976 by rubik's cube
 
   15 Sep 2010; Tupone Alfredo <tupone@gentoo.org>
   quake2-icculus-0.16.1-r1.ebuild,

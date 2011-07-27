@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.22 2010/09/15 10:56:43 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.23 2011/07/27 10:24:01 tupone Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -107,7 +107,7 @@ src_compile() {
 	# rogue fails to build
 	local libsuffix
 	for BUILD_QMAX in YES NO ; do
-		use qmax && [[ ${BUILD_QMAX} == "NO" ]] && continue
+		! use qmax && [[ ${BUILD_QMAX} == "YES" ]] && continue
 		[[ ${BUILD_QMAX} == "YES" ]] \
 			&& libsuffix=-qmax \
 			|| libsuffix=
@@ -172,8 +172,10 @@ src_install() {
 		dodir "${q2maxdir}"
 		cp -rf my-rel-YES/* "${D}/${q2maxdir}"/ || die
 		newgamesbin "${D}/${q2maxdir}"/quake2 quake2-qmax || die
-		newgamesbin "${D}/${q2maxdir}"/q2ded q2ded-qmax || die
-		rm "${D}/${q2maxdir}"/{quake2,q2ded}
+		rm "${D}/${q2maxdir}"/quake2
+		use dedicated \
+			&& newgamesbin "${D}/${q2maxdir}"/q2ded q2ded-qmax \
+			&& rm "${D}/${q2maxdir}"/q2ded
 		use sdl \
 			&& newgamesbin "${D}/${q2maxdir}"/sdlquake2 sdlquake2-qmax \
 			&& rm "${D}/${q2maxdir}"/sdlquake2
