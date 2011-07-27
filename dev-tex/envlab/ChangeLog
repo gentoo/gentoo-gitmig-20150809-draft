@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/envlab
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/envlab/ChangeLog,v 1.27 2010/01/03 11:29:59 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/envlab/ChangeLog,v 1.28 2011/07/27 13:45:43 aballier Exp $
+
+  27 Jul 2011; Alexis Ballier <aballier@gentoo.org> -envlab-1.2.ebuild:
+  remove old
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> envlab-1.2-r1.ebuild:
   Transfer Prefix keywords
