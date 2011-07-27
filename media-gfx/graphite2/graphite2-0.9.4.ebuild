@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-0.9.4.ebuild,v 1.2 2011/07/27 09:59:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-0.9.4.ebuild,v 1.3 2011/07/27 10:06:52 scarabeus Exp $
 
 EAPI=4
 
@@ -39,6 +39,11 @@ pkg_setup() {
 
 src_prepare() {
 	base_src_prepare
+
+	# fix CFLAGS
+	sed -i \
+		-e 's:-nodefaultlibs -nostdlibs::' \
+		src/CMakeLists.txt || die
 
 	# fix perl linking
 	if use perl; then
