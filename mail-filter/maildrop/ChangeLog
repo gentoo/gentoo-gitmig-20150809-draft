@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.110 2011/07/27 15:35:26 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.111 2011/07/27 18:24:29 eras Exp $
+
+*maildrop-2.4.2-r1 (27 Jul 2011)
+
+  27 Jul 2011; Eray Aslan <eras@gentoo.org> +maildrop-2.4.2-r1.ebuild:
+  backport some fixes from 2.5.4 for testing
 
   27 Jul 2011; Eray Aslan <eras@gentoo.org> maildrop-2.5.4.ebuild:
   Hopefully fix default mailbox for real now
