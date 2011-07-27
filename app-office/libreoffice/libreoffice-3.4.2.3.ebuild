@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.3 2011/07/27 20:35:04 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.4 2011/07/27 20:50:35 mattst88 Exp $
 
 EAPI=3
 
@@ -290,7 +290,7 @@ src_unpack() {
 	local mod dest tmplfile tmplname
 
 	if use branding; then
-		unpack "${PN}-branding-gentoo-0.1.tar.xz"
+		unpack "${PN}-branding-gentoo-0.2.tar.xz"
 	fi
 
 	#first the bootstrap files
