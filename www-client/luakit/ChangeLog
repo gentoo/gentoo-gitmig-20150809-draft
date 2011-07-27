@@ -1,6 +1,11 @@
 # ChangeLog for www-client/luakit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/ChangeLog,v 1.25 2011/07/22 14:13:08 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/ChangeLog,v 1.26 2011/07/27 10:36:29 wired Exp $
+
+*luakit-2011.07.22_p1 (27 Jul 2011)
+
+  27 Jul 2011; Alex Alexander <wired@gentoo.org> +luakit-2011.07.22_p1.ebuild:
+  version bump
 
 *luakit-2011.07.22 (22 Jul 2011)
 
