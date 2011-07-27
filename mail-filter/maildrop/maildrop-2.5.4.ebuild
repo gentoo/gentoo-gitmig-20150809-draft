@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.5.4.ebuild,v 1.3 2011/07/27 14:58:22 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.5.4.ebuild,v 1.4 2011/07/27 15:35:26 eras Exp $
 
 EAPI=4
 
@@ -57,6 +57,11 @@ src_prepare() {
 		epatch "${FILESDIR}"/${PN}-1.8.1-disable-fam.patch
 	fi
 
+	# no need to error out if no default - it will be given to configure anyway
+	sed -i -e \
+		's~AC_MSG_ERROR(Cannot determine default mailbox)~SPOOLDIR="./.maildir"~' \
+		"${S}"/maildrop/configure.in
+
 	eautoreconf
 }
 
@@ -81,7 +86,7 @@ src_configure() {
 		myconf="${myconf} --disable-authlib"
 	fi
 
-	# Default mailbox is $HOME/.maildir/ for Gentoo
+	# Default mailbox is $HOME/.maildir for Gentoo
 	maildrop_cv_SYS_INSTALL_MBOXDIR="./.maildir" econf \
 		$(use_enable fam) \
 		--disable-dependency-tracker \
