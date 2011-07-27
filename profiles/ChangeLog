@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5579 2011/07/27 14:10:09 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5580 2011/07/27 19:28:52 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Remove kde-4.7 mask as it has been released
 
   27 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
   Mask KDE SC 4.7.0 untill official release
