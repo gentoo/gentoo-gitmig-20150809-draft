@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.2.ebuild,v 1.21 2011/07/26 22:36:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.1 2011/07/27 11:48:22 scarabeus Exp $
 
 EAPI=3
 
@@ -11,6 +11,7 @@ PYTHON_DEPEND="2"
 PYTHON_USE_WITH="threads,xml"
 
 DEV_URI="http://download.documentfoundation.org/libreoffice/src"
+DEV_EXP_URI="http://dev-builds.libreoffice.org/pre-releases/src"
 EXT_URI="http://ooo.itc.hu/oxygenoffice/download/libreoffice"
 ADDONS_URI="http://dev-www.libreoffice.org/src/"
 
@@ -24,12 +25,15 @@ SRC_URI="branding? ( http://dev.gentooexperimental.org/~scarabeus/${PN}-branding
 MODULES="artwork base calc components extensions extras filters help
 impress libs-core libs-extern libs-extern-sys libs-gui postprocess sdk testing
 ure writer translations"
-# split out as bootstrap is required to be done first
-SRC_URI+=" ${DEV_URI}/${PN}-bootstrap-${PV}.tar.bz2"
-for mod in ${MODULES}; do
-	SRC_URI+=" ${DEV_URI}/${PN}-${mod}-${PV}.tar.bz2"
+for i in ${DEV_URI} ${DEV_EXP_URI}; do
+	# split out as bootstrap is required to be done first
+	SRC_URI+=" ${i}/${PN}-bootstrap-${PV}.tar.bz2"
+	for mod in ${MODULES}; do
+		SRC_URI+=" ${i}/${PN}-${mod}-${PV}.tar.bz2"
+	done
+	unset mod
 done
-unset mod
+unset i
 
 # addons
 # FIXME: actually review which one of these are used
