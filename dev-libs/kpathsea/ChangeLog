@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/kpathsea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.13 2011/06/28 15:51:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.14 2011/07/27 12:35:53 aballier Exp $
+
+*kpathsea-6.0.1_p20110705 (27 Jul 2011)
+
+  27 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  +kpathsea-6.0.1_p20110705.ebuild:
+  bump to kpathsea from texlive 2011
 
 *kpathsea-6.0.1_p20110627 (28 Jun 2011)
 
