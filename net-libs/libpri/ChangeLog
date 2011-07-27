@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libpri
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.92 2011/07/27 09:46:10 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.93 2011/07/27 11:33:24 chainsaw Exp $
+
+  27 Jul 2011; Tony Vroon <chainsaw@gentoo.org> libpri-1.4.12-r1.ebuild:
+  Mark stable on AMD64 based on arch testing by Agostino "ago" Sarubbo; for bug
+  #376573.
 
 *libpri-1.4.12-r1 (27 Jul 2011)
 
