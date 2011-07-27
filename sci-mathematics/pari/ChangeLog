@@ -1,6 +1,15 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.83 2011/07/26 19:30:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.84 2011/07/27 19:03:56 bicatali Exp $
+
+*pari-2.5.0-r1 (27 Jul 2011)
+
+  27 Jul 2011; Sébastien Fabbro <bicatali@gentoo.org> -pari-2.5.0.ebuild,
+  +pari-2.5.0-r1.ebuild, +files/pari-2.5.0-doc-make.patch,
+  +files/pari-2.5.0-macos.patch, +files/pari-2.5.0-mp.c.patch:
+  Split up data to another pari-data packages, due to upstream not updating its
+  package names. Added a few patches submitted by Francois Bissey: one for
+  parallel make, one for sage compatibility and one for ppc-macos
 
 *pari-2.5.0 (26 Jul 2011)
 
