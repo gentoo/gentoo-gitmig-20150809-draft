@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/cppcheck-1.46.1.ebuild,v 1.2 2011/01/08 20:18:03 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/cppcheck-1.49.ebuild,v 1.1 2011/07/27 23:38:38 xmw Exp $
 
 EAPI="3"
 PYTHON_DEPEND="htmlreport? 2"
@@ -17,9 +17,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE="htmlreport qt4"
 
 DEPEND="htmlreport? ( dev-python/pygments )
-		qt4? ( x11-libs/qt-gui:4
-			x11-libs/qt-assistant:4 )"
+	qt4? ( x11-libs/qt-gui:4
+		x11-libs/qt-assistant:4 )"
 RDEPEND="${DEPEND}"
+
+DISTUTILS_SETUP_FILES=("htmlreport|setup.py")
 
 pkg_setup() {
 	if use htmlreport ; then
@@ -53,11 +55,7 @@ src_compile() {
 		qt4-r2_src_compile
 		popd
 	fi
-	if use htmlreport ; then
-		pushd htmlreport
-		distutils_src_compile
-		popd
-	fi
+	use htmlreport && distutils_src_compile
 }
 
 src_install() {
@@ -67,11 +65,7 @@ src_install() {
 		dobin gui/${PN}-gui || die
 		dodoc readme_gui.txt gui/{projectfile.txt,gui.cppcheck} || die
 	fi
-	if use htmlreport ; then
-		pushd htmlreport
-		distutils_src_install
-		popd
-	fi
+	use htmlreport && distutils_src_install
 }
 
 pkg_postinst() {
