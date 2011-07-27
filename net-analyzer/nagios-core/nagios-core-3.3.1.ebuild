@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.2.0.ebuild,v 1.4 2010/05/09 17:14:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.3.1.ebuild,v 1.1 2011/07/27 16:14:39 dertobi123 Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/nagios/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug lighttpd perl +web vim-syntax"
 DEPEND="virtual/mailx
 	web? (
@@ -27,7 +27,7 @@ RDEPEND="${DEPEND}
 
 want_apache2
 
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/${PN/-core}"
 
 pkg_setup() {
 	depend.apache_pkg_setup
@@ -37,6 +37,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}/nagios-3.3.1-htmlmakefile.patch"
 	local strip="$(echo '$(MAKE) strip-post-install')"
 	sed -i -e "s:${strip}::" {cgi,base}/Makefile.in || die "sed failed in Makefile.in"
 }
@@ -102,6 +103,7 @@ src_install() {
 	emake DESTDIR="${D}" install
 	emake DESTDIR="${D}" install-config
 	emake DESTDIR="${D}" install-commandmode
+	emake DESTDIR="${D}" install-classicui
 
 	newinitd "${FILESDIR}"/nagios3 nagios
 	newconfd "${FILESDIR}"/conf.d nagios
@@ -125,6 +127,8 @@ src_install() {
 	for dir in etc/nagios var/nagios ; do
 		chown -R nagios:nagios "${D}/${dir}" || die "Failed chown of ${D}/${dir}"
 	done
+
+	dosbin p1.pl
 
 	chown -R root:root "${D}"/usr/$(get_libdir)/nagios
 	find "${D}"/usr/$(get_libdir)/nagios -type d -print0 | xargs -0 chmod 755

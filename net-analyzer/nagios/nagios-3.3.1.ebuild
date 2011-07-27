@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/nagios-3.2.0.ebuild,v 1.4 2010/05/09 17:15:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/nagios-3.3.1.ebuild,v 1.1 2011/07/27 16:16:39 dertobi123 Exp $
 
 inherit multilib
 
@@ -9,12 +9,12 @@ HOMEPAGE="http://www.nagios.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="~net-analyzer/nagios-core-${PV}
 	>=net-analyzer/nagios-plugins-1.4.13-r1
-	>=net-analyzer/nagios-imagepack-1.0-r100"
+	!net-analyzer/nagios-imagepack"
 
 pkg_setup() {
 	# Avoid upgrading from Nagios <3 as the directory structure has changed
