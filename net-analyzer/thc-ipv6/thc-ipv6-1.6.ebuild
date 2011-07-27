@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thc-ipv6/thc-ipv6-1.2.ebuild,v 1.1 2010/09/15 01:49:58 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thc-ipv6/thc-ipv6-1.6.ebuild,v 1.1 2011/07/27 02:05:36 xmw Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://freeworld.thc.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="net-libs/libpcap
@@ -20,10 +20,7 @@ DEPEND="net-libs/libpcap
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	rm Makefile || die
-	cp "${FILESDIR}"/${P}-Makefile Makefile || die
-
-	epatch "${FILESDIR}"/${P}-header.patch
+	epatch "${FILESDIR}"/${PN}-1.4-Makefile.patch
 }
 
 src_compile() {
