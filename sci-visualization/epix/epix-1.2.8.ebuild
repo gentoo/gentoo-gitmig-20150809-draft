@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.8.ebuild,v 1.1 2011/07/27 21:32:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.8.ebuild,v 1.2 2011/07/27 21:51:05 bicatali Exp $
 
 EAPI=4
 inherit elisp-common bash-completion autotools
@@ -32,7 +32,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--docdir=/usr/share/doc/${PF} \
+		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		--disable-epix-el
 }
 
