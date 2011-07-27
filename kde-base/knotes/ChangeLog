@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/knotes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.176 2011/07/11 14:01:20 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.177 2011/07/27 14:04:25 alexxy Exp $
+
+*knotes-4.7.0 (27 Jul 2011)
+
+  27 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +knotes-4.7.0.ebuild:
+  Version bump KDE SC 4.7.0
 
 *knotes-4.6.1 (11 Jul 2011)
 

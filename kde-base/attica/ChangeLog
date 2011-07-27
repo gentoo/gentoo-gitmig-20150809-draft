@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/attica
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/attica/ChangeLog,v 1.42 2011/07/09 15:14:13 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/attica/ChangeLog,v 1.43 2011/07/27 14:04:36 alexxy Exp $
+
+*attica-4.7.0 (27 Jul 2011)
+
+  27 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +attica-4.7.0.ebuild:
+  Version bump KDE SC 4.7.0
 
 *attica-4.6.5 (09 Jul 2011)
 

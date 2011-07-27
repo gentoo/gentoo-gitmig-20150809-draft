@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/rocs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/ChangeLog,v 1.39 2011/07/09 15:13:55 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/ChangeLog,v 1.40 2011/07/27 14:04:34 alexxy Exp $
+
+*rocs-4.7.0 (27 Jul 2011)
+
+  27 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +rocs-4.7.0.ebuild:
+  Version bump KDE SC 4.7.0
 
 *rocs-4.6.5 (09 Jul 2011)
 

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kstars
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.194 2011/07/09 15:14:10 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.195 2011/07/27 14:04:42 alexxy Exp $
+
+*kstars-4.7.0 (27 Jul 2011)
+
+  27 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +kstars-4.7.0.ebuild:
+  Version bump KDE SC 4.7.0
 
 *kstars-4.6.5 (09 Jul 2011)
 

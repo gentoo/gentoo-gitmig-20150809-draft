@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libkworkspace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/ChangeLog,v 1.101 2011/07/09 15:14:29 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/ChangeLog,v 1.102 2011/07/27 14:04:52 alexxy Exp $
+
+*libkworkspace-4.7.0 (27 Jul 2011)
+
+  27 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +libkworkspace-4.7.0.ebuild:
+  Version bump KDE SC 4.7.0
 
 *libkworkspace-4.6.5 (09 Jul 2011)
 

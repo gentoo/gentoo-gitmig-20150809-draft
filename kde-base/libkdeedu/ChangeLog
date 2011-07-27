@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libkdeedu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdeedu/ChangeLog,v 1.181 2011/07/10 18:18:30 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdeedu/ChangeLog,v 1.182 2011/07/27 14:04:34 alexxy Exp $
+
+*libkdeedu-4.7.0 (27 Jul 2011)
+
+  27 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +libkdeedu-4.7.0.ebuild:
+  Version bump KDE SC 4.7.0
 
   10 Jul 2011; Theo Chatzimichos <tampakrap@gentoo.org> libkdeedu-4.6.5.ebuild:
   Add kvtml-data blocker to prevent collisions

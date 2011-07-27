@@ -1,0 +1,10 @@
+# ChangeLog for kde-base/qtruby
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.86 2011/07/27 14:04:31 alexxy Exp $
+
+*qtruby-4.7.0 (27 Jul 2011)
+
+  27 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +qtruby-4.7.0.ebuild,
+  +metadata.xml:
+  Version bump KDE SC 4.7.0
+

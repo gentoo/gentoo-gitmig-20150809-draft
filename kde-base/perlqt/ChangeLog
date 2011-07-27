@@ -1,0 +1,10 @@
+# ChangeLog for kde-base/perlqt
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/ChangeLog,v 1.1 2011/07/27 14:04:34 alexxy Exp $
+
+*perlqt-4.7.0 (27 Jul 2011)
+
+  27 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +perlqt-4.7.0.ebuild,
+  +metadata.xml:
+  Version bump KDE SC 4.7.0
+

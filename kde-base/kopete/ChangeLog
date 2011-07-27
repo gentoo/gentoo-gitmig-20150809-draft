@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.287 2011/07/09 15:14:25 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.288 2011/07/27 14:04:51 alexxy Exp $
+
+*kopete-4.7.0 (27 Jul 2011)
+
+  27 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +kopete-4.7.0.ebuild:
+  Version bump KDE SC 4.7.0
 
 *kopete-4.6.5 (09 Jul 2011)
 

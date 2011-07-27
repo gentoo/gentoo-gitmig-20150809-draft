@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/amor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/amor/ChangeLog,v 1.182 2011/07/09 15:14:13 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/amor/ChangeLog,v 1.183 2011/07/27 14:04:41 alexxy Exp $
+
+*amor-4.7.0 (27 Jul 2011)
+
+  27 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +amor-4.7.0.ebuild:
+  Version bump KDE SC 4.7.0
 
 *amor-4.6.5 (09 Jul 2011)
 

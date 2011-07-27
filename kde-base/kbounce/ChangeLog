@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kbounce
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/ChangeLog,v 1.176 2011/07/09 15:14:08 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/ChangeLog,v 1.177 2011/07/27 14:04:37 alexxy Exp $
+
+*kbounce-4.7.0 (27 Jul 2011)
+
+  27 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +kbounce-4.7.0.ebuild:
+  Version bump KDE SC 4.7.0
 
 *kbounce-4.6.5 (09 Jul 2011)
 

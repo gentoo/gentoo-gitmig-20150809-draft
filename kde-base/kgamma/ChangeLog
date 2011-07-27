@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kgamma
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.179 2011/07/09 15:14:09 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.180 2011/07/27 14:04:43 alexxy Exp $
+
+*kgamma-4.7.0 (27 Jul 2011)
+
+  27 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +kgamma-4.7.0.ebuild:
+  Version bump KDE SC 4.7.0
 
 *kgamma-4.6.5 (09 Jul 2011)
 

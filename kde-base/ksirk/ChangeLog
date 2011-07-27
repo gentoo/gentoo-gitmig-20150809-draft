@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ksirk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirk/ChangeLog,v 1.76 2011/07/09 15:14:15 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirk/ChangeLog,v 1.77 2011/07/27 14:04:43 alexxy Exp $
+
+*ksirk-4.7.0 (27 Jul 2011)
+
+  27 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +ksirk-4.7.0.ebuild:
+  Version bump KDE SC 4.7.0
 
 *ksirk-4.6.5 (09 Jul 2011)
 
