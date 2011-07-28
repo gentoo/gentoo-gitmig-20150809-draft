@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.2.0-r1.ebuild,v 1.1 2011/05/01 10:40:19 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.2.0-r1.ebuild,v 1.2 2011/07/28 13:25:53 zmedico Exp $
 
 EAPI=4
 
@@ -63,7 +63,7 @@ src_configure() {
 		$(use_enable ssl) \
 		$(use_enable ssl crypto) \
 		$(use_enable iproute2) \
-		--docdir="${DESTDIR}/usr/share/doc/${PF}"
+		--docdir="${EPREFIX}/usr/share/doc/${PF}"
 }
 
 src_compile() {
@@ -113,7 +113,7 @@ src_install() {
 	doenvd "${FILESDIR}/65openvpn" # config-protect easy-rsa
 	if ! use minimal ; then
 		cd easy-rsa/2.0
-		make install "DESTDIR=${D}/usr/share/${PN}/easy-rsa"
+		make install "DESTDIR=${D}" "PREFIX=${EPREFIX}/usr/share/${PN}/easy-rsa"
 		cd ../..
 
 		exeinto "/usr/$(get_libdir)/${PN}"
