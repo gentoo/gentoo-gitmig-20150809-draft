@@ -1,6 +1,15 @@
 # ChangeLog for virtual/mysql
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.28 2011/04/20 12:26:25 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mysql/ChangeLog,v 1.29 2011/07/28 11:45:07 jmbsvicetto Exp $
+
+*mysql-5.3 (28 Jul 2011)
+*mysql-5.2 (28 Jul 2011)
+
+  28 Jul 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +mysql-5.2.ebuild, +mysql-5.3.ebuild, -mysql-5.4.ebuild:
+  [virtual/mysql] Added missing virtual for 5.2 from the overlay.
+  Added virtual for 5.3 now that mariadb has a first beta 5.3.0 release.
+  Dropped virtual for 5.4 as all mysql-5.4 ebuilds were dropped from the tree.
 
   20 Apr 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   mysql-5.1.ebuild, mysql-5.5.ebuild:
