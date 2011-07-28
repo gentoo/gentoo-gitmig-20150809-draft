@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.6 2011/07/28 10:31:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.7 2011/07/28 10:43:23 scarabeus Exp $
 
 EAPI=3
 
@@ -10,8 +10,14 @@ CMAKE_REQUIRED="never"
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="threads,xml"
 
-DEV_URI="http://download.documentfoundation.org/libreoffice/src"
-DEV_EXP_URI="http://dev-builds.libreoffice.org/pre-releases/src"
+# experimental ; release ; old
+# Usually the tarballs are moved a lot so this should make
+# everyone happy.
+DEV_URI="
+	http://dev-builds.libreoffice.org/pre-releases/src 
+	http://download.documentfoundation.org/libreoffice/src
+	http://download.documentfoundation.org/libreoffice/old/src
+"
 EXT_URI="http://ooo.itc.hu/oxygenoffice/download/libreoffice"
 ADDONS_URI="http://dev-www.libreoffice.org/src/"
 
@@ -27,7 +33,7 @@ SRC_URI="branding? ( http://dev.gentooexperimental.org/~scarabeus/${BRANDING} )"
 MODULES="artwork base calc components extensions extras filters help
 impress libs-core libs-extern libs-extern-sys libs-gui postprocess sdk testing
 ure writer translations"
-for i in ${DEV_URI} ${DEV_EXP_URI}; do
+for i in ${DEV_URI}; do
 	# split out as bootstrap is required to be done first
 	SRC_URI+=" ${i}/${PN}-bootstrap-${PV}.tar.bz2"
 	for mod in ${MODULES}; do
@@ -36,6 +42,7 @@ for i in ${DEV_URI} ${DEV_EXP_URI}; do
 	unset mod
 done
 unset i
+unset DEV_URI
 
 # addons
 # FIXME: actually review which one of these are used
