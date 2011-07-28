@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.6 2011/06/24 13:13:24 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.7 2011/07/28 13:47:50 zmedico Exp $
 
 # @ECLASS: systemd.eclass
 # @MAINTAINER:
@@ -47,10 +47,12 @@ systemd_get_unitdir() {
 # Install systemd unit(s). Uses doins, thus it is fatal in EAPI 4
 # and non-fatal in earlier EAPIs.
 systemd_dounit() {
+	has "${EAPI:-0}" 0 1 2 && ! use prefix && EPREFIX=
 	debug-print-function ${FUNCNAME} "${@}"
 
 	(
-		insinto "$(systemd_get_unitdir)"
+		local ud=$(systemd_get_unitdir)
+		insinto "${ud#${EPREFIX}}"
 		doins "${@}"
 	)
 }
