@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/redshift-1.7.ebuild,v 1.1 2011/07/28 14:40:12 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/redshift-1.7.ebuild,v 1.2 2011/07/28 18:14:45 sping Exp $
 
 EAPI=3
 
@@ -20,6 +20,7 @@ IUSE="geoclue gnome gtk nls"
 COMMON_DEPEND=">=x11-libs/libX11-1.4
 	x11-libs/libXxf86vm
 	x11-libs/libxcb
+	geoclue? ( app-misc/geoclue )
 	gnome? ( dev-libs/glib:2
 		>=gnome-base/gconf-2 )"
 RDEPEND="${COMMON_DEPEND}

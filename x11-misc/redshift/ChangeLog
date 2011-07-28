@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/redshift
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.9 2011/07/28 14:40:12 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.10 2011/07/28 18:14:45 sping Exp $
+
+  28 Jul 2011; Sebastian Pipping <sping@gentoo.org> redshift-1.7.ebuild:
+  Add missing dependency app-misc/geoclue
 
 *redshift-1.7 (28 Jul 2011)
 
