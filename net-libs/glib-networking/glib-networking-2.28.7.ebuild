@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.28.7.ebuild,v 1.7 2011/07/15 11:07:22 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.28.7.ebuild,v 1.8 2011/07/28 18:35:49 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -18,7 +18,7 @@ IUSE="+gnome +libproxy +ssl"
 
 RDEPEND=">=dev-libs/glib-2.27.90:2
 	gnome? ( gnome-base/gsettings-desktop-schemas )
-	libproxy? ( >=net-libs/libproxy-0.3.1 )
+	libproxy? ( >=net-libs/libproxy-0.4.6-r3 )
 	ssl? ( >=net-libs/gnutls-2.1.7 )
 "
 DEPEND="${RDEPEND}
