@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-99999999.ebuild,v 1.6 2011/04/06 19:58:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-99999999.ebuild,v 1.7 2011/07/28 09:52:50 zmedico Exp $
 
 EAPI="3"
 
@@ -53,7 +53,7 @@ src_compile() {
 
 src_install() {
 	cd "${S}"*
-	emake $(makeopts) install DESTDIR="${D}" || die
+	emake $(makeopts) install DESTDIR="${ED}" || die
 	dodoc *.txt
 	newdoc mkfs.ubifs/README README.mkfs.ubifs
 	# TODO: check ubi-utils for docs+scripts
