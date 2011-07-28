@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/camd/camd-2.2.2.ebuild,v 1.2 2011/06/26 11:08:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/camd/camd-2.2.2.ebuild,v 1.3 2011/07/28 20:33:19 bicatali Exp $
 
 EAPI=4
 
@@ -15,12 +15,12 @@ SRC_URI="http://www.cise.ufl.edu/research/sparse/${PN}/${MY_PN}-${PV}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~x86-macos"
-IUSE="doc"
+IUSE="doc static-libs"
 
 DEPEND="sci-libs/ufconfig"
 RDEPEND="${DEPEND}"
 
-DOCS="dodoc README.txt Doc/ChangeLog"
+DOCS="README.txt Doc/ChangeLog"
 
 S="${WORKDIR}/${MY_PN}"
 
@@ -29,10 +29,11 @@ src_prepare() {
 	eautoreconf
 }
 
+src_configure() {
+	econf $(use_enable static-libs static)
+}
+
 src_install() {
 	default
-
-	use doc && \
-		insinto /usr/share/doc/${PF} && \
-		doins Doc/CAMD_UserGuide.pdf
+	use doc && dodoc Doc/CAMD_UserGuide.pdf
 }
