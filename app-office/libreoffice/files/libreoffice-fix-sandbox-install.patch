@@ -6,7 +6,7 @@ diff -urN libreoffice-bootstrap-3.4.2.2.old/bin/distro-install-desktop-integrati
  
  # install desktop integration from plain packages
 -sysui_temp=`mktemp -d /tmp/distro-pack-desktop-integration-XXXXXX`
-+sysui_temp=`mktemp -t -d distro-pack-desktop-integration-XXXXXX`
++sysui_temp=`mktemp --tmpdir -d distro-pack-desktop-integration-XXXXXX`
  cp -a sysui/unxlng*/misc/libreoffice/* "$sysui_temp"
  cp -a sysui/desktop/share/create_tree.sh "$sysui_temp"
  builddir=`pwd`
@@ -17,3 +17,16 @@ diff -urN libreoffice-bootstrap-3.4.2.2.old/bin/distro-install-desktop-integrati
 -exit 0
 \ Chybí znak konce řádku na konci souboru
 +exit 0
+
+--- libreoffice-bootstrap-3.4.2.2.old/sysui/desktop/share/create_tree.sh	2011-07-28 09:36:19.113673572 +0000
++++ libreoffice-bootstrap-3.4.2.2/sysui/desktop/share/create_tree.sh	2011-07-28 09:36:08.795995995 +0000
+@@ -50,7 +50,7 @@
+ ln -sf ${office_root}/program/soffice ${DESTDIR}/usr/bin/${PREFIX}
+ 
+ cp printeradmin.sh ${DESTDIR}/usr/bin/${PREFIX}-printeradmin
+-chmod 0755 ${DESTDIR}/usr/bin/${PREFIX} ${DESTDIR}/usr/bin/${PREFIX}-printeradmin
++chmod 0755 ${DESTDIR}/usr/bin/${PREFIX}-printeradmin
+ 
+ if test "${PREFIX}" != libreoffice${PRODUCTVERSION} ; then
+     # compat symlinks
+
