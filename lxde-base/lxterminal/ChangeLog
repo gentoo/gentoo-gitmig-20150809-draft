@@ -1,6 +1,13 @@
 # ChangeLog for lxde-base/lxterminal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxterminal/ChangeLog,v 1.21 2011/07/26 22:04:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxterminal/ChangeLog,v 1.22 2011/07/28 07:16:29 hwoarang Exp $
+
+*lxterminal-0.1.11 (28 Jul 2011)
+
+  28 Jul 2011; Markos Chandras <hwoarang@gentoo.org> -lxterminal-0.1.10.ebuild,
+  +lxterminal-0.1.11.ebuild:
+  Version bump to 0.1.11 which fixes two regressions since 0.1.10. Remove old
+  ebuild
 
 *lxterminal-0.1.10 (26 Jul 2011)
 
