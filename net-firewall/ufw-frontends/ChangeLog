@@ -1,0 +1,10 @@
+# ChangeLog for net-firewall/ufw-frontends
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw-frontends/ChangeLog,v 1.1 2011/07/28 07:20:19 pva Exp $
+
+*ufw-frontends-0.2.0 (28 Jul 2011)
+
+  28 Jul 2011; Peter Volkov <pva@gentoo.org> +ufw-frontends-0.2.0.ebuild,
+  +metadata.xml:
+  Initial import, bug #264912, thank Sławomir Nizio for this job.
+
