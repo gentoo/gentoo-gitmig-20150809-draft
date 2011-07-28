@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyopengl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.64 2011/07/11 15:05:42 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.65 2011/07/28 22:13:37 patrick Exp $
+
+  28 Jul 2011; Patrick Lauer <patrick@gentoo.org> pyopengl-3.0.1.ebuild:
+  Removing SF mirrors for #372213
 
   11 Jul 2011; Matt Turner <mattst88@gentoo.org> pyopengl-3.0.1.ebuild:
   Added ~mips, bug 298612
