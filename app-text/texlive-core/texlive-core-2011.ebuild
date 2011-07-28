@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2011.ebuild,v 1.1 2011/07/28 11:59:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2011.ebuild,v 1.2 2011/07/28 12:03:10 aballier Exp $
 
 EAPI=3
 
@@ -88,8 +88,8 @@ COMMON_DEPEND="${MODULAR_X_DEPEND}
 		media-libs/freetype:2
 		media-libs/silgraphite
 	)
-	>=dev-libs/kpathsea-6.0.1_p20110627
-	cjk? ( dev-libs/ptexenc )"
+	>=dev-libs/kpathsea-6.0.1_p20110705
+	cjk? ( >=dev-libs/ptexenc-1.2.0_p20110705 )"
 
 DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
@@ -98,9 +98,9 @@ DEPEND="${COMMON_DEPEND}
 	app-arch/xz-utils"
 
 RDEPEND="${COMMON_DEPEND}
-	app-text/ps2pkm
-	app-text/dvipsk
-	dev-tex/bibtexu
+	>=app-text/ps2pkm-1.5_p20110705
+	>=app-text/dvipsk-5.991_p20110705
+	>=dev-tex/bibtexu-3.71_p20110705
 	xetex? ( >=app-text/xdvipdfmx-0.7.8 )
 	tk? ( dev-perl/perl-tk )"
 
