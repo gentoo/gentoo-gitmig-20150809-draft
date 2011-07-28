@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/redshift
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.8 2011/05/04 06:33:06 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/redshift/ChangeLog,v 1.9 2011/07/28 14:40:12 sping Exp $
+
+*redshift-1.7 (28 Jul 2011)
+
+  28 Jul 2011; Sebastian Pipping <sping@gentoo.org> +redshift-1.7.ebuild,
+  metadata.xml:
+  Bump to 1.7. Patch got applied upstream, geoclue support added
 
 *redshift-1.6-r1 (04 May 2011)
 
