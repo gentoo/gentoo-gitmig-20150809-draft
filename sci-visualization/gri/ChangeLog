@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/gri
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gri/ChangeLog,v 1.6 2011/06/15 05:55:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gri/ChangeLog,v 1.7 2011/07/28 00:10:12 bicatali Exp $
+
+*gri-2.12.23 (28 Jul 2011)
+
+  28 Jul 2011; Sébastien Fabbro <bicatali@gentoo.org> +gri-2.12.23.ebuild:
+  Version bump. Switched to EAPI4. Fixed bug #248372 and bug #314373
 
   15 Jun 2011; Justin Lecher <jlec@gentoo.org> gri-2.12.19.ebuild:
   Depend on media-gfx/imagemagick[png], #371583
