@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-7.2.ebuild,v 1.1 2011/05/27 21:24:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-7.7.ebuild,v 1.1 2011/07/28 08:51:23 pva Exp $
 
 EAPI=4
 
