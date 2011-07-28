@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.20 2011/07/06 13:37:38 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.21 2011/07/28 10:38:31 chainsaw Exp $
+
+  28 Jul 2011; Tony Vroon <chainsaw@gentoo.org> dahdi-2.4.1-r1.ebuild:
+  Mark stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
+  "idella4" Delaney in bug #376423. This will work with 2.6.39 kernels.
 
   06 Jul 2011; Tony Vroon <chainsaw@gentoo.org> dahdi-2.4.1-r1.ebuild:
   CONFIG_MODULES check was faulty, as pointed out by Stefan "stkn" Knoblich on
