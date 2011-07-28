@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libva
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.22 2011/07/06 18:11:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.23 2011/07/28 12:35:59 aballier Exp $
+
+*libva-1.0.14 (28 Jul 2011)
+
+  28 Jul 2011; Alexis Ballier <aballier@gentoo.org> +libva-1.0.14.ebuild:
+  version bump, the fdo version should be better now
 
   06 Jul 2011; Alexis Ballier <aballier@gentoo.org> -libva-0.31.1_p4.ebuild,
   -libva-0.31.1_p5.ebuild, -libva-0.32.0_p1.ebuild:
