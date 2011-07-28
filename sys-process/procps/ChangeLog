@@ -1,6 +1,12 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.50 2011/07/23 01:09:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.51 2011/07/28 14:01:48 mgorny Exp $
+
+*procps-3.2.8_p10-r1 (28 Jul 2011)
+
+  28 Jul 2011; Michał Górny <mgorny@gentoo.org> -procps-3.2.8_p10.ebuild,
+  +procps-3.2.8_p10-r1.ebuild:
+  Fix libproc.so symlink, per bug #376299. Reviewed by Tony Vroon.
 
   23 Jul 2011; Mike Frysinger <vapier@gentoo.org> procps-3.2.8_p10.ebuild:
   Delete Debian unicode patches when USE=-unicode.

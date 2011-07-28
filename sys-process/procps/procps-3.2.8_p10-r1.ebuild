@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.2.8_p10.ebuild,v 1.2 2011/07/23 01:09:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.2.8_p10-r1.ebuild,v 1.1 2011/07/28 14:01:48 mgorny Exp $
 
 EAPI="2"
 
@@ -86,5 +86,5 @@ src_install() {
 	dodoc sysctl.conf BUGS NEWS TODO ps/HACKING
 
 	# compat symlink so people who shouldnt be using libproc can #170077
-	dosym libproc-${PV}.so /$(get_libdir)/libproc.so || die
+	dosym libproc-${MY_PV}.so /$(get_libdir)/libproc.so || die
 }
