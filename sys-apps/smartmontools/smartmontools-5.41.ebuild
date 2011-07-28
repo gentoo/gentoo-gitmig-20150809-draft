@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.41.ebuild,v 1.1 2011/06/13 22:30:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.41.ebuild,v 1.2 2011/07/28 02:13:32 zmedico Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit flag-o-matic
 if [[ ${PV} == "9999" ]] ; then
@@ -56,7 +56,7 @@ src_configure() {
 	fi
 
 	econf \
-		--with-docdir="/usr/share/doc/${PF}" \
+		--with-docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--with-initscriptdir="/toss-it-away" \
 		${myconf} \
 		|| die
