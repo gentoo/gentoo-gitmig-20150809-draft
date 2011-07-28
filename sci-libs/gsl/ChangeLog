@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/gsl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/ChangeLog,v 1.81 2011/06/12 17:00:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/ChangeLog,v 1.82 2011/07/28 21:29:26 bicatali Exp $
+
+  28 Jul 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  files/gsl-1.15-cblas.patch:
+  Adapated cblas patch to respect upstream policy about pkg-config, fixing
+  tests (bug #370317)
 
   12 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> gsl-1.15.ebuild:
   Move to eapi4. Punt .la files. Run eselect only if really required for
