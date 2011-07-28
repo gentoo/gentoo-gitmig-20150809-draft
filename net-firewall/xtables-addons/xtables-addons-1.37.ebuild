@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.37.ebuild,v 1.1 2011/07/24 10:24:39 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.37.ebuild,v 1.2 2011/07/28 16:43:53 pva Exp $
 
 EAPI="4"
 inherit eutils linux-info linux-mod multilib autotools
@@ -54,6 +54,14 @@ pkg_setup()	{
 			die "${PN} with ipset requires kernel version >= 2.6.29"
 		fi
 		kernel_is -lt 2 6 29 && die "${PN} requires kernel version >= 2.6.29"
+		if use xtables_addons_tee && kernel_is -gt 2 6 35; then
+			CONFIG_CHECK="NETFILTER_XT_TARGET_TEE"
+			ERROR_NETFILTER_XT_TARGET_TEE="Please enable TEE target in your kernel."
+			# SKIP_MODULES in case we need to disable building of everything
+			# like having this USE disabled
+			SKIP_MODULES="tee"
+			ewarn "TEE modules is provided by kernel. Skipping its build..."
+		fi
 	fi
 }
 
@@ -115,6 +123,7 @@ src_prepare() {
 		MODULE_NAMES="compat_xtables(xtables_addons:${S}/extensions:)"
 	fi
 	for mod in ${MODULES}; do
+		has ${mod} ${SKIP_MODULES} && continue
 		if use xtables_addons_${mod}; then
 			sed "s/\(build_${mod}=\).*/\1m/I" -i mconfig || die
 			if use modules; then
