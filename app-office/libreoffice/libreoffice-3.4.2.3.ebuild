@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.9 2011/07/28 14:22:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.10 2011/07/28 17:58:39 halcy0n Exp $
 
 EAPI=3
 
@@ -470,7 +470,7 @@ src_configure() {
 		--with-external-tar="${DISTDIR}" \
 		--with-lang="${LINGUAS_OOO}" \
 		--with-max-jobs=${jbs} \
-		--with-num-cpus=${jbs} \
+		--with-num-cpus=1 \
 		--with-theme="${themes}" \
 		--with-unix-wrapper=libreoffice \
 		--with-vendor="Gentoo Foundation" \
