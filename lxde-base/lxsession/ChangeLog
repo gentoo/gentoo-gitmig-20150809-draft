@@ -1,6 +1,13 @@
 # ChangeLog for lxde-base/lxsession
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.32 2011/07/27 14:14:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/ChangeLog,v 1.33 2011/07/28 07:13:46 hwoarang Exp $
+
+*lxsession-0.4.6.1 (28 Jul 2011)
+
+  28 Jul 2011; Markos Chandras <hwoarang@gentoo.org>
+  -lxsession-0.4.6-r1.ebuild, +lxsession-0.4.6.1.ebuild,
+  -files/lxsession-0.4.6-fix-segfault.patch:
+  Version bump to 0.4.6.1 which includes the segfault patch. Remove old ebuild
 
 *lxsession-0.4.6-r1 (27 Jul 2011)
 

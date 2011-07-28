@@ -1,10 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/lxsession-0.4.6-r1.ebuild,v 1.1 2011/07/27 14:14:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession/lxsession-0.4.6.1.ebuild,v 1.1 2011/07/28 07:13:46 hwoarang Exp $
 
 EAPI="4"
-
-inherit eutils
 
 DESCRIPTION="LXDE session manager (lite version)"
 HOMEPAGE="http://lxde.sf.net/"
@@ -27,10 +25,6 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext
 	x11-proto/xproto"
-
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-fix-segfault.patch
-}
 
 src_configure() {
 	econf \
