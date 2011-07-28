@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.98 2011/07/17 20:58:59 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.99 2011/07/28 15:33:24 pva Exp $
+
+*bluez-4.95-r3 (28 Jul 2011)
+*bluez-4.95-r2 (28 Jul 2011)
+
+  28 Jul 2011; Peter Volkov <pva@gentoo.org> +bluez-4.95-r2.ebuild,
+  +bluez-4.95-r3.ebuild, +files/bluez-4.95-high-cpu-usage.patch:
+  Fix high CPU usage, bug #376677.
 
   17 Jul 2011; Mark Loeser <halcy0n@gentoo.org> bluez-4.93.ebuild:
   Stable on ppc/ppc64; bug #370707
