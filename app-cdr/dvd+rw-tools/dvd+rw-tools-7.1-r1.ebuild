@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/dvd+rw-tools-7.1-r1.ebuild,v 1.9 2011/07/28 12:25:01 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/dvd+rw-tools-7.1-r1.ebuild,v 1.10 2011/07/28 12:30:28 grobian Exp $
 
 EAPI=3
 
@@ -37,11 +37,11 @@ src_prepare() {
 }
 
 src_compile() {
-	emake SHELL=/bin/bash CC="$(tc-getCC)" CXX="$(tc-getCXX)" || die
+	emake SHELL="${EPREFIX}"/bin/bash CC="$(tc-getCC)" CXX="$(tc-getCXX)" || die
 }
 
 src_install() {
-	emake SHELL=/bin/bash prefix="${ED}/usr" install || die
+	emake SHELL="${EPREFIX}"/bin/bash prefix="${ED}/usr" install || die
 	dohtml index.html
 }
 
