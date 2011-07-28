@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dissy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dissy/ChangeLog,v 1.5 2011/05/08 02:02:55 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dissy/ChangeLog,v 1.6 2011/07/28 23:27:01 patrick Exp $
+
+  28 Jul 2011; Patrick Lauer <patrick@gentoo.org> dissy-10.ebuild:
+  Dep fix for #366647
 
 *dissy-10 (08 May 2011)
 
