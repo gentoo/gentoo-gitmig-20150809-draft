@@ -1,0 +1,10 @@
+# ChangeLog for sys-devel/ucpp
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/ucpp/ChangeLog,v 1.1 2011/07/28 13:18:23 alexxy Exp $
+
+*ucpp-1.3 (28 Jul 2011)
+
+  28 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +ucpp-1.3.ebuild,
+  +files/tune.h.patch, +metadata.xml:
+  Initial import to tree
+
