@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12945 2011/07/28 06:28:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12946 2011/07/28 07:13:44 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -507,10 +507,6 @@ app-crypt/scsign
 # Ryan Hill <dirtyepic@gentoo.org> (23 Apr 2011)
 # Masked for removal on 20110523.
 app-text/gnochm
-
-# Peter Volkov <pva@gentoo.org> (20 Apr 2011)
-# Mask beta version
-=net-analyzer/httping-1.5.1*
 
 # Alexis Ballier <aballier@gentoo.org> (20 Apr 2011)
 # Breaks net-voip/sflphone, non maintainer update, but is needed by

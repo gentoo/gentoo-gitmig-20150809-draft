@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5581 2011/07/28 06:28:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5582 2011/07/28 07:13:44 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Jul 2011; Peter Volkov <pva@gentoo.org> package.mask:
+  Unmask =net-analyzer/httping-1.5.1* - it is released and 1.5.1_beta1 dropped
+  from the tree.
 
   28 Jul 2011; Alexis Ballier <aballier@gentoo.org> package.mask:
   mask TeX Live 2011 for testing
