@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ooo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ooo/ChangeLog,v 1.1 2011/03/16 22:17:59 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ooo/ChangeLog,v 1.2 2011/07/28 16:49:38 mr_bones_ Exp $
+
+  28 Jul 2011; Michael Sterrett <mr_bones_@gentoo.org> ooo-0.ebuild:
+  sparc doesn't have openoffice at all
 
 *ooo-0 (16 Mar 2011)
 
