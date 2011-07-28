@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.333 2011/07/28 20:58:43 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.334 2011/07/28 21:10:59 neurogeek Exp $
+
+  28 Jul 2011; Jesus Rivero <neurogeek@gentoo.org>
+  mythtv-0.23.1_p27077.ebuild:
+  EAPI change. Fixed calls to python_mod_{optimize,cleanup}
 
   28 Jul 2011; Doug Goldstein <cardoe@gentoo.org> -mythtv-0.22_p23069.ebuild,
   -mythtv-0.22_p24255.ebuild, -mythtv-0.23_p25051.ebuild,

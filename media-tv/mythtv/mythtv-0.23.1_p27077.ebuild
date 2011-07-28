@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.23.1_p27077.ebuild,v 1.3 2011/07/08 10:07:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.23.1_p27077.ebuild,v 1.4 2011/07/28 21:10:59 neurogeek Exp $
 
-EAPI=2
+EAPI=3
 inherit flag-o-matic multilib eutils qt4 mythtv toolchain-funcs python
 
 DESCRIPTION="Homebrew PVR project"
@@ -288,7 +288,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	use python && python_mod_optimize $(python_get_sitedir)/MythTV
+	use python && python_mod_optimize MythTV
 
 	elog
 	elog "To always have MythBackend running and available run the following:"
@@ -328,7 +328,7 @@ pkg_postinst() {
 
 pkg_postrm()
 {
-	use python && python_mod_cleanup $(python_get_sitedir)/MythTV
+	use python && python_mod_cleanup MythTV
 }
 
 pkg_info() {
