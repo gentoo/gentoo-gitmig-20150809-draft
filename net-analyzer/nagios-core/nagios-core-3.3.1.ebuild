@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.3.1.ebuild,v 1.1 2011/07/27 16:14:39 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.3.1.ebuild,v 1.2 2011/07/28 19:45:21 dertobi123 Exp $
 
 EAPI="2"
 
@@ -23,6 +23,7 @@ DEPEND="virtual/mailx
 	)
 	perl? ( >=dev-lang/perl-5.6.1-r7 )"
 RDEPEND="${DEPEND}
+	!net-analyzer/nagios-imagepack
 	vim-syntax? ( app-vim/nagios-syntax )"
 
 want_apache2
