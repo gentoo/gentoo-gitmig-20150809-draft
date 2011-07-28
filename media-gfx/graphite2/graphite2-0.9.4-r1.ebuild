@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-0.9.4-r1.ebuild,v 1.1 2011/07/27 15:51:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-0.9.4-r1.ebuild,v 1.2 2011/07/28 10:22:41 scarabeus Exp $
 
 EAPI=4
 
@@ -65,7 +65,7 @@ src_configure() {
 
 src_compile() {
 	cmake-utils_src_compile
-	use doc && Icmake-utils_src_compile docs
+	use doc && cmake-utils_src_compile docs
 	if use perl; then
 		cd perl
 		perl-module_src_prep
