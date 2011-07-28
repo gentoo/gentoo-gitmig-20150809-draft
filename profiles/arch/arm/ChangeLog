@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.127 2011/07/03 15:10:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.128 2011/07/28 21:21:47 dilfridge Exp $
+
+  28 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Add kde-base/kdepim-l10n to kde-4.7 package mask
 
   03 Jul 2011; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   P.use.mask =sys-apps/portage-2.1.10* python3
