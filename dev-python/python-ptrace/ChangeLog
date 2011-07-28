@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-ptrace
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ptrace/ChangeLog,v 1.6 2010/02/08 08:44:19 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ptrace/ChangeLog,v 1.7 2011/07/28 20:19:22 patrick Exp $
+
+*python-ptrace-0.6.3 (28 Jul 2011)
+
+  28 Jul 2011; Patrick Lauer <patrick@gentoo.org> +python-ptrace-0.6.3.ebuild:
+  Bump for #375895
 
   08 Feb 2010; Peter Volkov <pva@gentoo.org> python-ptrace-0.6.ebuild,
   python-ptrace-0.6.2.ebuild:
