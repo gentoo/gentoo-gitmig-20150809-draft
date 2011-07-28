@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/dosfstools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.80 2011/01/07 20:34:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.81 2011/07/28 12:08:06 zmedico Exp $
+
+  28 Jul 2011; Zac Medico <zmedico@gentoo.org> dosfstools-3.0.11.ebuild:
+  Bump to EAPI 3 and fix for prefix.
 
 *dosfstools-3.0.11 (07 Jan 2011)
 

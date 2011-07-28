@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/dosfstools-3.0.11.ebuild,v 1.1 2011/01/07 20:34:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/dosfstools-3.0.11.ebuild,v 1.2 2011/07/28 12:08:06 zmedico Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit toolchain-funcs flag-o-matic
 
@@ -27,9 +27,9 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" install || die
 	dodir /sbin
-	mv "${D}"/usr/sbin/*fsck* "${D}"/sbin/ || die
-	mv "${D}"/usr/share/doc/{${PN},${PF}} || die
+	mv "${ED}"/usr/sbin/*fsck* "${ED}"/sbin/ || die
+	mv "${ED}"/usr/share/doc/{${PN},${PF}} || die
 	prepalldocs
 }
