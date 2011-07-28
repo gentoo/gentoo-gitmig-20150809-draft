@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.0.10.ebuild,v 1.1 2011/06/02 15:30:25 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.0.12.ebuild,v 1.1 2011/07/28 18:04:54 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit eutils flag-o-matic gnome.org gnome2-utils libtool virtualx
 
@@ -14,8 +14,10 @@ SLOT="3"
 # NOTE: This gtk+ has multi-gdk-backend support, see:
 #  * http://blogs.gnome.org/kris/2010/12/29/gdk-3-0-on-mac-os-x/
 #  * http://mail.gnome.org/archives/gtk-devel-list/2010-November/msg00099.html
+# I tried this and got it all compiling, but the end result is unusable as it
+# horribly mixes up the backends -- grobian
 IUSE="aqua cups debug doc examples +introspection test vim-syntax xinerama"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 
 # FIXME: introspection data is built against system installation of gtk+:3
 # NOTE: cairo[svg] dep is due to bug 291283 (not patched to avoid eautoreconf)
@@ -111,6 +113,8 @@ src_prepare() {
 
 	# http://mail.gnome.org/archives/commits-list/2011-March/msg04372.html
 	epatch "${FILESDIR}"/${PN}-3.0.8-darwin-quartz.patch
+	# fix building with gir #372953
+	epatch "${FILESDIR}"/${PN}-3.0.11-darwin-quartz-introspection.patch
 }
 
 src_configure() {
@@ -148,14 +152,12 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Installation failed"
+	emake DESTDIR="${D}" install
 
-	# see bug #133241
-	echo 'gtk-fallback-icon-theme = "gnome"' > "${T}/gtkrc"
 	insinto /etc/gtk-3.0
-	doins "${T}"/gtkrc || die "doins gtkrc failed"
+	doins "${FILESDIR}"/settings.ini
 
-	dodoc AUTHORS ChangeLog* HACKING NEWS* README* || die "dodoc failed"
+	dodoc AUTHORS ChangeLog* HACKING NEWS* README*
 
 	# Remove unneeded *.la files
 	find "${ED}" -name "*.la" -delete
@@ -180,7 +182,7 @@ pkg_postinst() {
 	if ! has_version "app-text/evince"; then
 		elog "Please install app-text/evince for print preview functionality."
 		elog "Alternatively, check \"gtk-print-preview-command\" documentation and"
-		elog "add it to your gtkrc."
+		elog "add it to your settings.ini file."
 	fi
 }
 
