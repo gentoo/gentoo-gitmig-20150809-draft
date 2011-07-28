@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.7-r1.ebuild,v 1.6 2011/07/26 19:42:08 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.7-r1.ebuild,v 1.7 2011/07/28 23:28:40 bicatali Exp $
 
 EAPI="3"
 
@@ -134,7 +134,7 @@ src_configure() {
 		$(cmake-utils_pld qt4 pdfqt)
 		$(cmake-utils_pld qt4 pngqt)
 		$(cmake-utils_pld qt4 ppmqt)
-		$(cmake-utils_pld qt4 qtwidgets)
+		$(cmake-utils_pld qt4 qtwidget)
 		$(cmake-utils_pld qt4 svgqt)
 		$(cmake-utils_pld qt4 tiffqt)
 		$(cmake-utils_pld wxwidgets wxwidgets)
