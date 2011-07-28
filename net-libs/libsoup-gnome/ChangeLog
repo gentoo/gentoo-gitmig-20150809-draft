@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libsoup-gnome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.54 2011/07/15 11:09:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.55 2011/07/28 18:33:02 pacho Exp $
+
+*libsoup-gnome-2.34.3 (28 Jul 2011)
+
+  28 Jul 2011; Pacho Ramos <pacho@gentoo.org>
+  -files/libsoup-gnome-2.30.1-system-lib.patch, -libsoup-gnome-2.30.2.ebuild,
+  -libsoup-gnome-2.34.1.ebuild, +libsoup-gnome-2.34.3.ebuild:
+  Version bump: fix CVE-2011-2524 and memleak. Remove old.
 
   15 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   libsoup-gnome-2.34.2.ebuild:

@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.256 2011/07/15 11:08:46 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.257 2011/07/28 18:30:39 pacho Exp $
+
+*libsoup-2.34.3 (28 Jul 2011)
+
+  28 Jul 2011; Pacho Ramos <pacho@gentoo.org> -libsoup-2.30.2-r1.ebuild,
+  -files/libsoup-2.30.2-disable-tls1.2.patch, -libsoup-2.34.1.ebuild,
+  +libsoup-2.34.3.ebuild:
+  Version bump: fix CVE-2011-2524 and memleak. Remove old.
 
   15 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> libsoup-2.34.2.ebuild:
   Marked ~ppc/~ppc64 wrt #365331
