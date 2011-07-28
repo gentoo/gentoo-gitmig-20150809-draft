@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.7.0.ebuild,v 1.1 2011/07/27 14:04:48 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.7.0.ebuild,v 1.2 2011/07/28 20:02:13 alexxy Exp $
 
 EAPI=3
 
@@ -28,7 +28,10 @@ RDEPEND="${DEPEND}
 	!sci-geosciences/marble
 "
 
-PATCHES=( "${FILESDIR}/${PN}-4.7-magic.patch" )
+PATCHES=( 
+			"${FILESDIR}/${PN}-4.7-magic.patch"
+			"${FILESDIR}/${PN}-4.5.5-gpsd.patch"
+		)
 # note that this patch will not work if we ever make a qt-only build
 
 pkg_setup() {

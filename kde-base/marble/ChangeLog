@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.101 2011/07/27 14:04:48 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.102 2011/07/28 20:02:13 alexxy Exp $
+
+  28 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org>
+  +files/marble-4.5.5-gpsd.patch, marble-4.7.0.ebuild:
+  Fix bug #367571
 
 *marble-4.7.0 (27 Jul 2011)
 
