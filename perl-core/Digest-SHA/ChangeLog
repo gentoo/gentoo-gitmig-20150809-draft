@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Digest-SHA
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-SHA/ChangeLog,v 1.22 2011/05/15 09:01:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-SHA/ChangeLog,v 1.23 2011/07/28 13:39:18 haubi Exp $
+
+  28 Jul 2011; Michael Haubenwallner <haubi@gentoo.org>
+  Digest-SHA-5.620.0.ebuild:
+  more prefix keywords: ~ppc-aix ~hppa-hpux ~ia64-hpux
 
 *Digest-SHA-5.620.0 (15 May 2011)
 
