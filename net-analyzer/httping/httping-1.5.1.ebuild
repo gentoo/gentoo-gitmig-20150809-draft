@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/httping-1.5.1_beta1.ebuild,v 1.1 2011/04/19 22:44:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/httping-1.5.1.ebuild,v 1.1 2011/07/28 07:09:46 pva Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit flag-o-matic toolchain-funcs
 
@@ -24,16 +24,14 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}"/${MY_P}
 
 src_compile() {
-	append-flags -D_GNU_SOURCE
 	emake \
 		CC="$(tc-getCC)" \
 		$(use ssl && echo SSL=yes || echo SSL=no) \
-		$(use debug && echo DEBUG=yes || echo DEBUG=no) \
-			|| die "emake failed"
+		$(use debug && echo DEBUG=yes || echo DEBUG=no)
 }
 
 src_install() {
-	dobin httping || die "dobin failed"
-	doman httping.1 || die "doman failed"
-	dodoc readme.txt || die "dodoc failed"
+	dobin httping
+	doman httping.1
+	dodoc readme.txt
 }
