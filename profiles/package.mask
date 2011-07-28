@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12944 2011/07/27 19:28:53 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12945 2011/07/28 06:28:10 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,98 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexis Ballier <aballier@gentoo.org> (28 Jul 2011)
+# Mask TeX Live 2011 for testing
+>=app-text/texlive-core-2011
+>=app-text/texlive-2011
+>=dev-texlive/texlive-basic-2011
+>=dev-texlive/texlive-bibtexextra-2011
+>=dev-texlive/texlive-context-2011
+>=dev-texlive/texlive-documentation-arabic-2011
+>=dev-texlive/texlive-documentation-base-2011
+>=dev-texlive/texlive-documentation-bulgarian-2011
+>=dev-texlive/texlive-documentation-chinese-2011
+>=dev-texlive/texlive-documentation-czechslovak-2011
+>=dev-texlive/texlive-documentation-dutch-2011
+>=dev-texlive/texlive-documentation-english-2011
+>=dev-texlive/texlive-documentation-finnish-2011
+>=dev-texlive/texlive-documentation-french-2011
+>=dev-texlive/texlive-documentation-german-2011
+>=dev-texlive/texlive-documentation-greek-2011
+>=dev-texlive/texlive-documentation-italian-2011
+>=dev-texlive/texlive-documentation-japanese-2011
+>=dev-texlive/texlive-documentation-korean-2011
+>=dev-texlive/texlive-documentation-mongolian-2011
+>=dev-texlive/texlive-documentation-polish-2011
+>=dev-texlive/texlive-documentation-portuguese-2011
+>=dev-texlive/texlive-documentation-russian-2011
+>=dev-texlive/texlive-documentation-serbian-2011
+>=dev-texlive/texlive-documentation-slovenian-2011
+>=dev-texlive/texlive-documentation-spanish-2011
+>=dev-texlive/texlive-documentation-thai-2011
+>=dev-texlive/texlive-documentation-turkish-2011
+>=dev-texlive/texlive-documentation-ukrainian-2011
+>=dev-texlive/texlive-documentation-vietnamese-2011
+>=dev-texlive/texlive-fontsextra-2011
+>=dev-texlive/texlive-fontsrecommended-2011
+>=dev-texlive/texlive-fontutils-2011
+>=dev-texlive/texlive-formatsextra-2011
+>=dev-texlive/texlive-games-2011
+>=dev-texlive/texlive-genericextra-2011
+>=dev-texlive/texlive-genericrecommended-2011
+>=dev-texlive/texlive-htmlxml-2011
+>=dev-texlive/texlive-humanities-2011
+>=dev-texlive/texlive-langafrican-2011
+>=dev-texlive/texlive-langarab-2011
+>=dev-texlive/texlive-langarabic-2011
+>=dev-texlive/texlive-langarmenian-2011
+>=dev-texlive/texlive-langcjk-2011
+>=dev-texlive/texlive-langcroatian-2011
+>=dev-texlive/texlive-langcyrillic-2011
+>=dev-texlive/texlive-langczechslovak-2011
+>=dev-texlive/texlive-langdanish-2011
+>=dev-texlive/texlive-langdutch-2011
+>=dev-texlive/texlive-langenglish-2011
+>=dev-texlive/texlive-langfinnish-2011
+>=dev-texlive/texlive-langfrench-2011
+>=dev-texlive/texlive-langgerman-2011
+>=dev-texlive/texlive-langgreek-2011
+>=dev-texlive/texlive-langhebrew-2011
+>=dev-texlive/texlive-langhungarian-2011
+>=dev-texlive/texlive-langindic-2011
+>=dev-texlive/texlive-langitalian-2011
+>=dev-texlive/texlive-langlatin-2011
+>=dev-texlive/texlive-langlatvian-2011
+>=dev-texlive/texlive-langlithuanian-2011
+>=dev-texlive/texlive-langmongolian-2011
+>=dev-texlive/texlive-langnorwegian-2011
+>=dev-texlive/texlive-langother-2011
+>=dev-texlive/texlive-langpolish-2011
+>=dev-texlive/texlive-langportuguese-2011
+>=dev-texlive/texlive-langspanish-2011
+>=dev-texlive/texlive-langswedish-2011
+>=dev-texlive/texlive-langtibetan-2011
+>=dev-texlive/texlive-langturkmen-2011
+>=dev-texlive/texlive-langukenglish-2011
+>=dev-texlive/texlive-langvietnamese-2011
+>=dev-texlive/texlive-latex-2011
+>=dev-texlive/texlive-latex3-2011
+>=dev-texlive/texlive-latexextra-2011
+>=dev-texlive/texlive-latexrecommended-2011
+>=dev-texlive/texlive-luatex-2011
+>=dev-texlive/texlive-mathextra-2011
+>=dev-texlive/texlive-metapost-2011
+>=dev-texlive/texlive-music-2011
+>=dev-texlive/texlive-omega-2011
+>=dev-texlive/texlive-pictures-2011
+>=dev-texlive/texlive-plainextra-2011
+>=dev-texlive/texlive-pstricks-2011
+>=dev-texlive/texlive-psutils-2011
+>=dev-texlive/texlive-publishers-2011
+>=dev-texlive/texlive-science-2011
+>=dev-texlive/texlive-texinfo-2011
+>=dev-texlive/texlive-xetex-2011
 
 # Robert Piasek <dagger@gentoo.org> (27 July 2011)  
 # Masking for testing
