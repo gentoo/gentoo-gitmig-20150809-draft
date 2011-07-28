@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/warmux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warmux/ChangeLog,v 1.6 2011/05/05 15:30:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warmux/ChangeLog,v 1.7 2011/07/28 13:20:15 tupone Exp $
+
+  28 Jul 2011; Tupone Alfredo <tupone@gentoo.org>
+  files/warmux-11.04.1-gentoo.patch:
+  Fix build with debug use flag. Bug #375381 by Agostino Sarubbo (amd64 AT)
 
 *warmux-11.04.1 (05 May 2011)
 

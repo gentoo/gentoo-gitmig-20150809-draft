@@ -10,19 +10,19 @@ diff -ru warmux-11.04.orig/configure.ac warmux-11.04/configure.ac
  # ==========================================================================
  # == Set flags for various environments                                    =
  # ==========================================================================
-@@ -348,14 +346,7 @@
+@@ -348,14 +346,9 @@
    exit 1
  fi
  
 -dnl === Add Werror flag for gcc/g++ if debug mode is enabled, ==============
 -dnl === but allow RTTI (ie dynamic_cast, typeid/typeinfo unavailable) ======
 -if test "x${debug}" = "xyes"; then
++if test "x${debug}" != "xyes"; then
 -  CFLAGS="$CFLAGS -Werror"
 -  CXXFLAGS="$CXXFLAGS -Werror"
 -else
--  CXXFLAGS="$CXXFLAGS -fno-rtti"
--fi
-+CXXFLAGS="$CXXFLAGS -fno-rtti"
+   CXXFLAGS="$CXXFLAGS -fno-rtti"
+ fi
  
  dnl === Forbid exceptions (Android platform requirement) ===================
  CXXFLAGS="$CXXFLAGS -fno-exceptions"
