@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.20.ebuild,v 1.1 2011/07/27 14:45:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.20.ebuild,v 1.2 2011/07/28 06:05:29 jer Exp $
 
 EAPI="2"
 
@@ -265,8 +265,6 @@ src_prepare() {
 			-e 's:-Wpointer-arith::g' \
 			-e 's:-Wsign-compare::g' \
 			"${NV_SRC}"/Makefile.kbuild
-
-		epatch "${FILESDIR}"/${PN}-173.14.30-2.6.39.patch #368939
 
 		# If you set this then it's your own fault when stuff breaks :)
 		use custom-cflags && sed -i "s:-O:${CFLAGS}:" "${NV_SRC}"/Makefile.*
