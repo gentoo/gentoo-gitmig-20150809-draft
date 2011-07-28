@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/xz-utils-9999.ebuild,v 1.7 2011/01/06 02:49:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/xz-utils-9999.ebuild,v 1.8 2011/07/28 14:05:03 mgorny Exp $
 
 # Remember: we cannot leverage autotools in this ebuild in order
 #           to avoid circular deps with autotools
@@ -8,8 +8,8 @@
 EAPI="2"
 
 if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="git://ctrl.tukaani.org/xz.git"
-	inherit git autotools
+	EGIT_REPO_URI="http://git.tukaani.org/xz.git"
+	inherit git-2 autotools
 	SRC_URI=""
 	EXTRA_DEPEND="sys-devel/gettext dev-vcs/cvs >=sys-devel/libtool-2" #272880 286068
 else
