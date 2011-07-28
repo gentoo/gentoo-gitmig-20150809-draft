@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-5.0.3.ebuild,v 1.2 2011/07/18 08:46:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-5.0.3.ebuild,v 1.3 2011/07/28 08:37:56 tupone Exp $
 
 EAPI=2
 inherit cmake-utils
@@ -22,27 +22,21 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	physfs? ( dev-games/physfs )
 	png? ( >=media-libs/libpng-1.4 )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.15 )
-	truetype? ( >=media-libs/freetype-2
-		sys-libs/zlib )
+	truetype? ( >=media-libs/freetype-2 )
 	vorbis? ( media-libs/libvorbis )
-	X? (
-		x11-libs/libXext
-		x11-libs/libXcursor
-		x11-libs/libXxf86vm
-		x11-libs/libXrandr
-		x11-libs/libX11
-		x11-libs/libXpm
-		gtk? ( x11-libs/gtk+:2 )
-		virtual/opengl
-		xinerama? ( x11-libs/libXinerama )
-	)"
+	x11-libs/libXcursor
+	x11-libs/libXxf86vm
+	x11-libs/libXrandr
+	x11-libs/libX11
+	gtk? ( x11-libs/gtk+:2 )
+	virtual/opengl
+	xinerama? ( x11-libs/libXinerama )"
+
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	X? (
-		x11-proto/xextproto
-		x11-proto/xf86vidmodeproto
-		x11-proto/xproto
-	)"
+	x11-proto/xextproto
+	x11-proto/xf86vidmodeproto
+	x11-proto/xproto"
 
 PATCHES=( "${FILESDIR}"/${P}-underlink.patch )
 
@@ -62,22 +56,10 @@ src_configure() {
 		$(cmake-utils_use_want test TESTS)
 		$(cmake-utils_use_want truetype TTF)
 		$(cmake-utils_use_want vorbis)
-		$(cmake-utils_use_want X X11)
-		)
-
-	if use X; then
-		mycmakeargs+=(
-			$(cmake-utils_use_want gtk NATIVE_DIALOG)
-			$(cmake-utils_use_want X opengl)
-			$(cmake-utils_use_want xinerama X11_XINERAMA)
-			)
-	else
-		mycmakeargs+=(
-			-DWANT_NATIVE_DIALOG=OFF
-			-DWANT_OPENGL=OFF
-			-DWANT_X11_XINERAMA=OFF
-			)
-	fi
+		$(cmake-utils_use_want gtk NATIVE_DIALOG)
+		$(cmake-utils_use_want X opengl)
+		$(cmake-utils_use_want xinerama X11_XINERAMA)
+	)
 
 	cmake-utils_src_configure
 }
