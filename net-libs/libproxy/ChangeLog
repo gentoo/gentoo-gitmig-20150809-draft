@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.65 2011/07/24 12:54:07 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.66 2011/07/28 18:38:58 pacho Exp $
+
+  28 Jul 2011; Pacho Ramos <pacho@gentoo.org> -libproxy-0.4.6-r2.ebuild:
+  Remove old.
 
   24 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> libproxy-0.4.6-r3.ebuild:
   ppc/ppc64 stable wrt #372813
