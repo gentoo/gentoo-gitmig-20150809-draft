@@ -20,3 +20,4 @@ Index: src/kernel/gmp/mp.c
 -  mp_set_memory_functions((void *(*)(size_t)) pari_malloc, gmp_realloc, gmp_free);
    return 0;
  }
+ 

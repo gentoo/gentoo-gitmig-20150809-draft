@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.5.0-r1.ebuild,v 1.1 2011/07/27 19:03:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.5.0-r2.ebuild,v 1.1 2011/07/28 17:56:00 bicatali Exp $
 
 EAPI="4"
 

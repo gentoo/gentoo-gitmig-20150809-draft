@@ -1,6 +1,6 @@
---- config/DOC_Make.SH.orig	2010-09-07 07:26:42.000000000 +1200
-+++ config/DOC_Make.SH	2010-09-26 14:56:35.445516459 +1300
-@@ -11,7 +11,8 @@
+--- config/DOC_Make.SH.orig	2011-07-28 14:11:34.430896929 +1200
++++ config/DOC_Make.SH	2011-07-28 14:11:39.832738158 +1200
+@@ -21,7 +21,8 @@
  
  doc all: develop.dvi libpari.dvi users.dvi refcard.ps tutorial.dvi
  docps: develop.ps libpari.ps refcard.ps tutorial.ps users.ps INSTALL.ps
@@ -10,9 +10,9 @@
  
  .SUFFIXES: .tex .ipf .pod .inf .dumbpod .3 .html
  
-@@ -30,27 +31,49 @@
- usersch3.tex: ../src/desc/doc_make ../src/desc/pari.desc usersFUNCS.tex
- 	cd ../src/desc && \$(PERL) doc_make > ../../doc/usersch3.tex
+@@ -37,27 +38,49 @@
+ %.dvi: %.tex \$(MACROS)
+ 	tex \$<
  
 +pass1: \$(PARI_TEX) \$(USERS_TEX) develop.tex tutorial.tex \$(MACROS)
 +	-rm -f *.std
@@ -54,7 +54,7 @@
  	pdftex develop
  	pdftex develop
 -	make develop.std; pdftex develop; rm -f develop.std
-+	\$(MAKE) develop.std; pdftex develop; rm -f develop.std
++	\$(MAKE)make develop.std; pdftex develop; rm -f develop.std
  develop.dvi: develop.tex \$(MACROS)
  	-rm -f develop.std
  	tex develop
@@ -64,7 +64,7 @@
  
  tutorial.pdf: tutorial.tex \$(MACROS)
  	-rm -f tutorial.std
-@@ -78,13 +101,13 @@
+@@ -85,13 +108,13 @@
  	-rm -f users.std
  	tex users
  	tex users
