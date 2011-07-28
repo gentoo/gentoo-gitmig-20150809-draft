@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-qxl/xf86-video-qxl-0.0.16.ebuild,v 1.1 2011/07/28 09:19:02 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-qxl/xf86-video-qxl-0.0.16.ebuild,v 1.2 2011/07/28 14:05:13 mr_bones_ Exp $
 
 EAPI=4
 inherit xorg-2
@@ -22,4 +22,3 @@ pkg_setup() {
 		$(use_enable xspice)
 	)
 }
-
