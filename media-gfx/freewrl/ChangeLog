@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/freewrl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.35 2011/07/28 16:28:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.36 2011/07/28 16:44:09 patrick Exp $
+
+  28 Jul 2011; Patrick Lauer <patrick@gentoo.org> -freewrl-1.22.9.ebuild,
+  -freewrl-1.22.10.ebuild:
+  Remove old
 
 *freewrl-1.22.12_pre2 (28 Jul 2011)
 
