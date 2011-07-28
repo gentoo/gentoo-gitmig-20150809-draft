@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dropbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.2 2011/07/10 05:14:40 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.3 2011/07/28 09:19:58 pva Exp $
+
+  28 Jul 2011; Peter Volkov <pva@gentoo.org> dropbox-1.2.13-r1.ebuild:
+  Avoid LDFLAGS notice, bump EAPI.
 
 *dropbox-1.2.13-r1 (10 Jul 2011)
 

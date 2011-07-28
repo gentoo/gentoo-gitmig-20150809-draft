@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/dropbox-1.2.13-r1.ebuild,v 1.1 2011/07/10 05:14:40 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/dropbox-1.2.13-r1.ebuild,v 1.2 2011/07/28 09:19:58 pva Exp $
 
-EAPI='3'
+EAPI="4"
 
 DESCRIPTION="Dropbox daemon (pretends to be GUI-less)."
 HOMEPAGE="http://dropbox.com/"
@@ -15,6 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RESTRICT="mirror strip"
 
+QA_DT_HASH="opt/${PN}/.*"
 QA_EXECSTACK_x86="opt/dropbox/_ctypes.so"
 QA_EXECSTACK_amd64="opt/dropbox/_ctypes.so"
 
@@ -28,11 +29,11 @@ src_unpack() {
 
 src_install() {
 	local targetdir="/opt/dropbox"
-	insinto "${targetdir}" || die
-	doins -r icons || die
+	insinto "${targetdir}"
+	doins -r icons
 	rm -rf icons || die
-	doins -r * || die
-	fperms a+x "${targetdir}/dropbox" || die
-	fperms a+x "${targetdir}/dropboxd" || die
-	dosym "${targetdir}/dropboxd" "/opt/bin/dropbox" || die
+	doins -r *
+	fperms a+x "${targetdir}/dropbox"
+	fperms a+x "${targetdir}/dropboxd"
+	dosym "${targetdir}/dropboxd" "/opt/bin/dropbox"
 }
