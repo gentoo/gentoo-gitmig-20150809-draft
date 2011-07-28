@@ -1,10 +1,17 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5582 2011/07/28 07:13:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5583 2011/07/28 11:48:35 jmbsvicetto Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Jul 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  package.mask:
+  [package.mask] Update the mysql/mariadb mask.
+  Dropped 5.4 from the mask as it's no longer in the tree.
+  Added virtual/mysql-5.3 now that mariadb did it's first beta release of
+  5.3.0.
 
   28 Jul 2011; Peter Volkov <pva@gentoo.org> package.mask:
   Unmask =net-analyzer/httping-1.5.1* - it is released and 1.5.1_beta1 dropped
