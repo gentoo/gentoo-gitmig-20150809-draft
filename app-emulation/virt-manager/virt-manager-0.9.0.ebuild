@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.9.0.ebuild,v 1.1 2011/07/28 19:27:33 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-0.9.0.ebuild,v 1.2 2011/07/28 22:04:11 cardoe Exp $
 
 #BACKPORTS=
 
@@ -75,8 +75,6 @@ src_prepare() {
 			po/Makefile.in.in
 		eautoreconf
 	fi
-
-	epatch "${FILESDIR}/${P}-vcpu-stats.patch"
 
 	gnome2_src_prepare
 }
