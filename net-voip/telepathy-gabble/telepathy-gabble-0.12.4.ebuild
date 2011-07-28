@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.12.2.ebuild,v 1.1 2011/06/20 11:36:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.12.4.ebuild,v 1.1 2011/07/28 19:16:53 pacho Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
