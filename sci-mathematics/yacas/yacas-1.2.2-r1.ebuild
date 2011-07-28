@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.2.2-r1.ebuild,v 1.1 2011/04/17 09:58:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/yacas-1.2.2-r1.ebuild,v 1.2 2011/07/28 20:18:54 bicatali Exp $
 
 EAPI="4"
 
-inherit eutils java-pkg-opt-2
+inherit eutils java-pkg-opt-2 autotools
 
-DESCRIPTION="Powerful general purpose computer algebra system"
+DESCRIPTION="General purpose computer algebra system"
 HOMEPAGE="http://yacas.sourceforge.net/"
 SRC_URI="http://${PN}.sourceforge.net/backups/${P}.tar.gz"
 
@@ -23,7 +23,10 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-gcc43.patch \
 		"${FILESDIR}"/${P}-gcc46.patch \
-		"${FILESDIR}"/${P}-makefixes.patch
+		"${FILESDIR}"/${P}-makefixes.patch \
+		"${FILESDIR}"/${P}-tests.patch
+	# needs to rebuild because tests include file modify Makefile.am
+	eautoreconf
 }
 
 src_configure() {
