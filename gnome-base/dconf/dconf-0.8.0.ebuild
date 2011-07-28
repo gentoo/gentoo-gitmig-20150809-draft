@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/dconf-0.8.0.ebuild,v 1.1 2011/07/27 16:53:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/dconf-0.8.0.ebuild,v 1.2 2011/07/28 10:59:12 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -37,7 +37,6 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.8.0-automagic-vala.patch"
 
 	mkdir -p m4 || die
-	AT_M4DIR="." eautoreconf
 	eautoreconf
 }
 
