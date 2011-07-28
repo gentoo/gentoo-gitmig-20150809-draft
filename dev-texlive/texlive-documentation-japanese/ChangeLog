@@ -1,6 +1,12 @@
 # ChangeLog for dev-texlive/texlive-documentation-japanese
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-japanese/ChangeLog,v 1.31 2010/10/24 18:11:57 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-japanese/ChangeLog,v 1.32 2011/07/28 13:09:17 aballier Exp $
+
+*texlive-documentation-japanese-2011 (28 Jul 2011)
+
+  28 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  +texlive-documentation-japanese-2011.ebuild:
+  Bump to TeX Live 2011
 
 *texlive-documentation-japanese-2010 (24 Oct 2010)
 

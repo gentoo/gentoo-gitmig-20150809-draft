@@ -1,6 +1,12 @@
 # ChangeLog for dev-texlive/texlive-latexextra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexextra/ChangeLog,v 1.45 2011/05/18 14:52:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexextra/ChangeLog,v 1.46 2011/07/28 13:30:31 aballier Exp $
+
+*texlive-latexextra-2011 (28 Jul 2011)
+
+  28 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  +texlive-latexextra-2011.ebuild:
+  Bump to TeX Live 2011
 
 *texlive-latexextra-2010-r2 (18 May 2011)
 

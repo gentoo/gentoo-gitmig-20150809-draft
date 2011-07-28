@@ -1,6 +1,11 @@
 # ChangeLog for dev-texlive/texlive-games
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-games/ChangeLog,v 1.32 2010/10/24 18:11:53 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-games/ChangeLog,v 1.33 2011/07/28 13:15:51 aballier Exp $
+
+*texlive-games-2011 (28 Jul 2011)
+
+  28 Jul 2011; Alexis Ballier <aballier@gentoo.org> +texlive-games-2011.ebuild:
+  Bump to TeX Live 2011
 
 *texlive-games-2010 (24 Oct 2010)
 

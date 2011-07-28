@@ -1,6 +1,12 @@
 # ChangeLog for dev-texlive/texlive-langhungarian
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langhungarian/ChangeLog,v 1.31 2010/10/24 18:11:57 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langhungarian/ChangeLog,v 1.32 2011/07/28 13:23:31 aballier Exp $
+
+*texlive-langhungarian-2011 (28 Jul 2011)
+
+  28 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  +texlive-langhungarian-2011.ebuild:
+  Bump to TeX Live 2011
 
 *texlive-langhungarian-2010 (24 Oct 2010)
 

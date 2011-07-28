@@ -1,6 +1,12 @@
 # ChangeLog for dev-texlive/texlive-langlithuanian
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langlithuanian/ChangeLog,v 1.11 2010/10/24 18:11:56 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langlithuanian/ChangeLog,v 1.12 2011/07/28 13:25:26 aballier Exp $
+
+*texlive-langlithuanian-2011 (28 Jul 2011)
+
+  28 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  +texlive-langlithuanian-2011.ebuild:
+  Bump to TeX Live 2011
 
 *texlive-langlithuanian-2010 (24 Oct 2010)
 

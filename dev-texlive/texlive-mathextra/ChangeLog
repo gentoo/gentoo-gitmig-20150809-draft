@@ -1,6 +1,12 @@
 # ChangeLog for dev-texlive/texlive-mathextra
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-mathextra/ChangeLog,v 1.34 2010/12/17 20:35:12 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-mathextra/ChangeLog,v 1.35 2011/07/28 13:32:13 aballier Exp $
+
+*texlive-mathextra-2011 (28 Jul 2011)
+
+  28 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  +texlive-mathextra-2011.ebuild:
+  Bump to TeX Live 2011
 
   17 Dec 2010; Fabian Groffen <grobian@gentoo.org>
   texlive-mathextra-2010.ebuild:

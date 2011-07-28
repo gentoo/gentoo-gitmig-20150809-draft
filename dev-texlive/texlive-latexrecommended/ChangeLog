@@ -1,6 +1,12 @@
 # ChangeLog for dev-texlive/texlive-latexrecommended
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexrecommended/ChangeLog,v 1.43 2011/02/17 14:01:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexrecommended/ChangeLog,v 1.44 2011/07/28 13:31:20 aballier Exp $
+
+*texlive-latexrecommended-2011 (28 Jul 2011)
+
+  28 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  +texlive-latexrecommended-2011.ebuild:
+  Bump to TeX Live 2011
 
   17 Feb 2011; Alexis Ballier <aballier@gentoo.org>
   texlive-latexrecommended-2010.ebuild, +files/thumbpdf_invocation.patch:

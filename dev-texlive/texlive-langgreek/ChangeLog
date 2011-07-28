@@ -1,6 +1,12 @@
 # ChangeLog for dev-texlive/texlive-langgreek
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langgreek/ChangeLog,v 1.32 2010/10/24 18:11:56 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langgreek/ChangeLog,v 1.33 2011/07/28 13:22:45 aballier Exp $
+
+*texlive-langgreek-2011 (28 Jul 2011)
+
+  28 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  +texlive-langgreek-2011.ebuild:
+  Bump to TeX Live 2011
 
 *texlive-langgreek-2010 (24 Oct 2010)
 

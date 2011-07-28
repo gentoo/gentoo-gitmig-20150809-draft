@@ -1,6 +1,12 @@
 # ChangeLog for dev-texlive/texlive-langitalian
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langitalian/ChangeLog,v 1.31 2010/10/24 18:11:52 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langitalian/ChangeLog,v 1.32 2011/07/28 13:24:18 aballier Exp $
+
+*texlive-langitalian-2011 (28 Jul 2011)
+
+  28 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  +texlive-langitalian-2011.ebuild, metadata.xml:
+  Bump to TeX Live 2011
 
 *texlive-langitalian-2010 (24 Oct 2010)
 

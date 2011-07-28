@@ -1,6 +1,12 @@
 # ChangeLog for dev-texlive/texlive-luatex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-luatex/ChangeLog,v 1.13 2011/05/19 11:25:35 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-luatex/ChangeLog,v 1.14 2011/07/28 13:31:46 aballier Exp $
+
+*texlive-luatex-2011 (28 Jul 2011)
+
+  28 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  +texlive-luatex-2011.ebuild:
+  Bump to TeX Live 2011
 
 *texlive-luatex-2010-r1 (18 May 2011)
 
