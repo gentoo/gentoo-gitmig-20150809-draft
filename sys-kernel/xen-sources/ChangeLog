@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/xen-sources
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.73 2010/10/14 13:33:21 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xen-sources/ChangeLog,v 1.74 2011/07/28 16:39:14 patrick Exp $
+
+*xen-sources-2.6.38 (28 Jul 2011)
+
+  28 Jul 2011; Patrick Lauer <patrick@gentoo.org> +xen-sources-2.6.38.ebuild:
+  Bump for #366323, last standalone xen-sources before kernel 3.0 (or so we
+  hope)
 
 *xen-sources-2.6.34-r4 (14 Oct 2010)
 
