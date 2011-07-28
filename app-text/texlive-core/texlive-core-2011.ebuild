@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2011.ebuild,v 1.2 2011/07/28 12:03:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2011.ebuild,v 1.3 2011/07/28 15:44:28 aballier Exp $
 
 EAPI=3
 
@@ -174,6 +174,7 @@ src_configure() {
 		--disable-largefile \
 		$(use_enable xetex) \
 		$(use_enable cjk ptex) \
+		$(use_enable cjk eptex) \
 		$(use_enable cjk mendexk) \
 		$(use_enable cjk makejvf) \
 		$(use_with X x)
