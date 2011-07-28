@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-0.9.4-r1.ebuild,v 1.2 2011/07/28 10:22:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-0.9.4-r1.ebuild,v 1.3 2011/07/28 19:26:22 scarabeus Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/silgraphite/${PN}/${P}.tgz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
-IUSE="doc perl"
+IUSE="perl"
 
 RDEPEND="
 	dev-libs/glib:2
@@ -21,10 +21,6 @@ RDEPEND="
 	perl? ( dev-lang/perl )
 "
 DEPEND="${RDEPEND}
-	doc? (
-		app-doc/doxygen
-		dev-texlive/texlive-latex
-	)
 	perl? ( virtual/perl-Module-Build )
 "
 
@@ -65,7 +61,6 @@ src_configure() {
 
 src_compile() {
 	cmake-utils_src_compile
-	use doc && cmake-utils_src_compile docs
 	if use perl; then
 		cd perl
 		perl-module_src_prep
@@ -91,5 +86,4 @@ src_install() {
 
 	find "${ED}" -name '*.la' -exec rm -f {} +
 
-	use doc && dodoc ${CMAKE_BUILD_DIR}/{manual.html,doxygen/latex/refman.pdf}
 }
