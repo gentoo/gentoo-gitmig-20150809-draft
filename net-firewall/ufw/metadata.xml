@@ -3,12 +3,18 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-<email>slawomir.nizio@sabayon.org</email>
-<name>Sławomir Nizio</name>
+	<email>slawomir.nizio@sabayon.org</email>
+	<name>Sławomir Nizio</name>
 </maintainer>
 <maintainer>
 	<email>pva@gentoo.org</email>
 	<name>Peter Volkov</name>
 </maintainer>
+<longdescription lang="en">
+	The Uncomplicated Firewall (ufw) is a frontend for iptables and is
+	particularly well-suited for host-based firewalls. It provides a framework
+	for managing netfilter, as well as an easy to use command-line interface for
+	manipulating the firewall.
+</longdescription>
 </pkgmetadata>
 

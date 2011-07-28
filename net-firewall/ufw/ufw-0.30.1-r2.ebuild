@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw/ufw-0.30.1-r2.ebuild,v 1.1 2011/07/24 11:18:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw/ufw-0.30.1-r2.ebuild,v 1.2 2011/07/28 07:22:42 pva Exp $
 
 EAPI=3
 PYTHON_DEPEND="2:2.5"
@@ -20,6 +20,7 @@ IUSE="examples"
 DEPEND=""
 RDEPEND=">=net-firewall/iptables-1.4"
 
+# tests fail; upstream bug: https://bugs.launchpad.net/ufw/+bug/815982
 RESTRICT="test"
 
 pkg_setup() {
@@ -34,6 +35,8 @@ pkg_setup() {
 	fi
 
 	check_extra_config
+	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
@@ -65,8 +68,8 @@ pkg_postinst() {
 	if path_exists -o "${EROOT}"lib/ufw/user{,6}.rules; then
 		ewarn "Attention!"
 		ewarn "User configuration from /lib/ufw is now placed in /etc/ufw/user."
-		ewarn "Please stop ufw, copy .rules files from \"${EROOT}\"lib/ufw" \
-			"to \"${EROOT}\"etc/ufw/user/ and start ufw again."
+		ewarn "Please stop ufw, copy .rules files from ${EROOT}lib/ufw"
+		ewarn "to ${EROOT}etc/ufw/user/ and start ufw again."
 	fi
 	echo
 	elog "Remember to enable ufw add it to your boot sequence:"
