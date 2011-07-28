@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.7 2011/07/28 10:43:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.8 2011/07/28 14:04:41 mr_bones_ Exp $
 
 EAPI=3
 
@@ -14,7 +14,7 @@ PYTHON_USE_WITH="threads,xml"
 # Usually the tarballs are moved a lot so this should make
 # everyone happy.
 DEV_URI="
-	http://dev-builds.libreoffice.org/pre-releases/src 
+	http://dev-builds.libreoffice.org/pre-releases/src
 	http://download.documentfoundation.org/libreoffice/src
 	http://download.documentfoundation.org/libreoffice/old/src
 "
