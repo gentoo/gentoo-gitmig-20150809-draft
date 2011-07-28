@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/mh
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/mh/ChangeLog,v 1.22 2010/10/25 01:12:57 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/mh/ChangeLog,v 1.23 2011/07/28 07:20:16 aballier Exp $
+
+  28 Jul 2011; Alexis Ballier <aballier@gentoo.org> mh-20080903.ebuild,
+  mh-20101024.ebuild:
+  tl-latex3 has been merged to tl-latexrecommended in TeX Live 2011
 
 *mh-20101024 (25 Oct 2010)
 
