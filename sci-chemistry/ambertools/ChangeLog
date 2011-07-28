@@ -1,0 +1,10 @@
+# ChangeLog for sci-chemistry/ambertools
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ambertools/ChangeLog,v 1.1 2011/07/28 13:19:06 alexxy Exp $
+
+*ambertools-1.5-r1 (28 Jul 2011)
+
+  28 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +ambertools-1.5-r1.ebuild,
+  +files/ambertools-1.5-gentoo.patch, +metadata.xml:
+  Initial import to tree
+
