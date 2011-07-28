@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdepim-meta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.188 2011/07/27 14:04:36 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.189 2011/07/28 21:31:04 dilfridge Exp $
+
+*kdepim-meta-4.7.0-r1 (28 Jul 2011)
+
+  28 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kdepim-meta-4.7.0-r1.ebuild:
+  Split kdepim translations out again
 
 *kdepim-meta-4.7.0 (27 Jul 2011)
 
