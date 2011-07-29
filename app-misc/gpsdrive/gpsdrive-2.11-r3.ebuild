@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.11-r3.ebuild,v 1.1 2011/07/17 22:35:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.11-r3.ebuild,v 1.2 2011/07/29 03:32:11 nerdboy Exp $
 
 EAPI=4
 
-inherit cmake-utils eutils fdo-mime versionator
+inherit cmake-utils eutils fdo-mime flag-o-matic versionator
 
 DESCRIPTION="GPS navigation system with NMEA and Garmin support, zoomable map display, waypoints, etc."
 HOMEPAGE="http://www.gpsdrive.de/"
@@ -85,6 +85,12 @@ src_configure() {
 		cmake_policy(SET CMP0003 NEW) # or cmake_policy(VERSION 2.6)
 _EOF_
 
+	if use mapnik ; then
+		local PGINC="-DPOSTGRESQL_INCLUDE_DIR=$(pg_config --includedir)"
+		elog "using PG include dir: ${PGINC}"
+		append-flags -DBOOST_FILESYSTEM_VERSION=2
+	fi
+
 	local mycmakeargs=(
 		$(cmake-utils_use_with scripts SCRIPTS)
 		$(cmake-utils_use_with mapnik MAPNIK)
@@ -93,7 +99,7 @@ _EOF_
 		$(cmake-utils_use_with dbus DBUS)
 		$(cmake-utils_use_with speech SPEECH)
 		$(cmake-utils_use_with gdal GDAL)
-		-DWITH_GDA3=OFF
+		-DWITH_GDA3=OFF ${PGINC}
 	)
 	cmake-utils_src_configure
 }

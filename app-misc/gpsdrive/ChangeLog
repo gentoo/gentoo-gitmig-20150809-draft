@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gpsdrive
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.49 2011/07/17 22:49:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.50 2011/07/29 03:32:11 nerdboy Exp $
+
+  29 Jul 2011; Steve Arnold <nerdboy@gentoo.org> gpsdrive-2.11-r3.ebuild:
+  Updated for pgsql includes (see bug #372991) and newer boost interface.
 
   17 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Punt unused local desc.
