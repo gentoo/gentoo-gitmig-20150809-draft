@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.155 2011/07/29 15:45:27 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.156 2011/07/29 21:51:22 neurogeek Exp $
+
+  29 Jul 2011; Jesus Rivero <neurogeek@gentoo.org> metadata.xml:
+  Changed Arfrever email and added myself
 
 *icu-4.8.1 (29 Jul 2011)
 
