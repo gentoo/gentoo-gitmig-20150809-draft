@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gpm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.87 2010/12/24 20:39:33 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.88 2011/07/29 08:15:20 robbat2 Exp $
+
+  29 Jul 2011; Robin H. Johnson <robbat2@gentoo.org> gpm-1.20.6.ebuild:
+  Bug #376861: fix missing bison/yacc DEPEND.
 
   24 Dec 2010; Mike Frysinger <vapier@gentoo.org>
   +files/0001-fixup-make-warnings.patch, gpm-1.20.6.ebuild:

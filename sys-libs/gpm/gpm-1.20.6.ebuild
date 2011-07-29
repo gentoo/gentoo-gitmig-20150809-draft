@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.6.ebuild,v 1.13 2010/12/24 20:39:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.6.ebuild,v 1.14 2011/07/29 08:15:20 robbat2 Exp $
 
 # emacs support disabled due to #99533 #335900
 
@@ -18,7 +18,8 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="selinux"
 
 DEPEND="sys-libs/ncurses
-	app-arch/xz-utils"
+	app-arch/xz-utils
+	|| ( sys-devel/bison dev-util/yacc )"
 RDEPEND="selinux? ( sec-policy/selinux-gpm )"
 
 src_prepare() {
