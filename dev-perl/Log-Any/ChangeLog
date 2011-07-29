@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Log-Any
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Any/ChangeLog,v 1.3 2011/03/24 06:51:51 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Any/ChangeLog,v 1.4 2011/07/29 18:26:19 tove Exp $
+
+  29 Jul 2011; Torsten Veller <tove@gentoo.org> -Log-Any-0.11.ebuild:
+  Cleanup
 
 *Log-Any-0.120.0 (24 Mar 2011)
 
