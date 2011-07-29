@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.5.ebuild,v 1.1 2011/04/08 11:11:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.5.ebuild,v 1.2 2011/07/29 09:15:29 ssuominen Exp $
 
-EAPI=2
-inherit eutils multilib
+EAPI=4
+inherit eutils multilib flag-o-matic toolchain-funcs
 
 DESCRIPTION="Advanced drum machine"
 HOMEPAGE="http://www.hydrogen-music.org/"
@@ -24,14 +24,21 @@ RDEPEND="x11-libs/qt-gui:4 x11-libs/qt-core:4
 	lash? ( media-sound/lash )
 	portaudio? ( >=media-libs/portaudio-19_pre )"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	dev-util/scons"
 
 src_prepare() {
 	sed -i -e '/cppflags +=/d' Sconstruct || die
-	epatch patches/portaudio.patch
+	epatch \
+		patches/portaudio.patch \
+		"${FILESDIR}"/${P}-use_lrdf_pkgconfig.patch
 }
 
 src_compile() {
+	# FIXME: The -I/usr/include/raptor2 gets lost in middle of build
+	# despite -use_lrdf_pkgconfig.patch
+	use ladspa && append-flags $($(tc-getPKG_CONFIG) --cflags lrdf)
+
 	export QTDIR="/usr/$(get_libdir)"
 	local myconf='portmidi=0' #90614
 
@@ -51,9 +58,9 @@ src_compile() {
 }
 
 src_install() {
-	dobin hydrogen || die
+	dobin hydrogen
 	insinto /usr/share/hydrogen
-	doins -r data || die
+	doins -r data
 	doicon data/img/gray/h2-icon.svg
 	domenu hydrogen.desktop
 	dosym /usr/share/hydrogen/data/doc /usr/share/doc/${PF}/html
