@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.0-r1.ebuild,v 1.2 2011/04/05 21:25:03 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.0-r1.ebuild,v 1.3 2011/07/29 11:50:11 patrick Exp $
 
 EAPI="3"
 
@@ -17,6 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc debug screen custom-cflags pygrub hvm api acm flask ioemu"
 
 CDEPEND="dev-lang/python
+	dev-python/lxml
 	sys-libs/zlib
 	hvm? ( media-libs/libsdl
 		sys-power/iasl )
