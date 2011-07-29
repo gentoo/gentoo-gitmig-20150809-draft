@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/aqualung
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/ChangeLog,v 1.17 2011/05/31 18:10:40 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/ChangeLog,v 1.18 2011/07/29 07:58:04 ssuominen Exp $
+
+  29 Jul 2011; Samuli Suominen <ssuominen@gentoo.org>
+  aqualung-0.9_beta11-r1.ebuild,
+  +files/aqualung-0.9_beta11-use_lrdf_cflags.patch:
+  Use lrdf_CFLAGS to gain -I/usr/include/raptor2 for raptor.h; required with
+  liblrdf-0.4.0-r20.
 
   31 May 2011; Daniel Pielmeier <billie@gentoo.org> aqualung-0.9_beta11.ebuild,
   aqualung-0.9_beta11-r1.ebuild:
