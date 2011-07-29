@@ -1,11 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/jack-rack-1.4.7-r1.ebuild,v 1.5 2011/03/29 05:53:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/jack-rack-1.4.7-r1.ebuild,v 1.6 2011/07/29 09:58:51 ssuominen Exp $
 
-EAPI=2
-WANT_AUTOMAKE="1.9"
-
-inherit autotools eutils
+EAPI=4
+inherit autotools eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="JACK Rack is an effects rack for the JACK low latency audio API."
 HOMEPAGE="http://jack-rack.sourceforge.net/"
@@ -29,14 +27,18 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
+DOCS=( AUTHORS BUGS ChangeLog NEWS README THANKS TODO WISHLIST )
+
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.4.5-asneeded.patch
-	epatch "${FILESDIR}"/${PN}-1.4.6-noalsa.patch
-	eautomake
+	epatch \
+		"${FILESDIR}"/${PN}-1.4.5-asneeded.patch \
+		"${FILESDIR}"/${PN}-1.4.6-noalsa.patch
+	eautoreconf
 }
 
 src_configure() {
-	local myconf="--disable-ladcca --enable-desktop-inst"
+	# Use lrdf.pc to get -I/usr/include/raptor2 (lrdf.h -> raptor.h)
+	use xml && append-cppflags $($(tc-getPKG_CONFIG) --cflags lrdf)
 
 	econf \
 		$(use_enable alsa aseq) \
@@ -44,12 +46,5 @@ src_configure() {
 		$(use_enable lash) \
 		$(use_enable nls) \
 		$(use_enable xml) \
-		$(use_enable xml lrdf ) \
-		--disable-dependency-tracking \
-		${myconf}
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS BUGS ChangeLog NEWS README THANKS TODO WISHLIST
+		$(use_enable xml lrdf)
 }

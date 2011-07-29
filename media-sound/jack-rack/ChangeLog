@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/jack-rack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.36 2011/03/29 05:53:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.37 2011/07/29 09:58:51 ssuominen Exp $
+
+  29 Jul 2011; Samuli Suominen <ssuominen@gentoo.org>
+  jack-rack-1.4.7-r1.ebuild:
+  Use lrdf.pc to gain -I/usr/include/raptor2 (lrdf.h -> raptor.h)
 
   29 Mar 2011; Tim Harder <radhermit@gentoo.org> jack-rack-1.4.6.ebuild,
   jack-rack-1.4.7-r1.ebuild:
