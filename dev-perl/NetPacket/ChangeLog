@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/NetPacket
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetPacket/ChangeLog,v 1.36 2011/02/21 11:01:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetPacket/ChangeLog,v 1.37 2011/07/29 17:30:37 tove Exp $
+
+  29 Jul 2011; Torsten Veller <tove@gentoo.org> -NetPacket-1.0.1.ebuild,
+  -NetPacket-1.1.0.ebuild:
+  Cleanup
 
 *NetPacket-1.1.1 (21 Feb 2011)
 

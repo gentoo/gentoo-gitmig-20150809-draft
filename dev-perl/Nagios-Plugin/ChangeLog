@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Nagios-Plugin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Nagios-Plugin/ChangeLog,v 1.6 2011/01/12 18:00:26 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Nagios-Plugin/ChangeLog,v 1.7 2011/07/29 17:41:29 tove Exp $
+
+  29 Jul 2011; Torsten Veller <tove@gentoo.org> -Nagios-Plugin-0.33.ebuild,
+  -Nagios-Plugin-0.34.ebuild:
+  Cleanup
 
 *Nagios-Plugin-0.350 (12 Jan 2011)
 

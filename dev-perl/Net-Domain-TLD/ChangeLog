@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Domain-TLD
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Domain-TLD/ChangeLog,v 1.21 2011/04/19 17:06:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Domain-TLD/ChangeLog,v 1.22 2011/07/29 17:39:05 tove Exp $
+
+  29 Jul 2011; Torsten Veller <tove@gentoo.org> -Net-Domain-TLD-1.68.ebuild:
+  Cleanup
 
 *Net-Domain-TLD-1.690.0 (19 Apr 2011)
 

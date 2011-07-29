@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Sys-SigAction
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-SigAction/ChangeLog,v 1.3 2011/07/06 13:08:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-SigAction/ChangeLog,v 1.4 2011/07/29 17:02:37 tove Exp $
+
+  29 Jul 2011; Torsten Veller <tove@gentoo.org> -Sys-SigAction-0.11.ebuild,
+  -Sys-SigAction-0.130.0.ebuild:
+  Cleanup
 
 *Sys-SigAction-0.150.0 (06 Jul 2011)
 
