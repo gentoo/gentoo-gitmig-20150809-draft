@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.52 2011/07/13 20:00:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.53 2011/07/29 10:53:12 xarthisius Exp $
+
+  29 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> xorg-drivers-1.10.ebuild:
+  ppc64 stable wrt #371857
 
   13 Jul 2011; Markus Meier <maekke@gentoo.org> xorg-drivers-1.10.ebuild:
   x86 stable, bug #371857
