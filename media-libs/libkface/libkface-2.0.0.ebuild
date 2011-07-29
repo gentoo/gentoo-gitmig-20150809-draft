@@ -1,12 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkface/libkface-2.0.0_rc.ebuild,v 1.1 2011/07/27 19:53:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkface/libkface-2.0.0.ebuild,v 1.1 2011/07/29 19:10:04 dilfridge Exp $
 
 EAPI=4
 
 DIGIKAMPN=digikam
 
 KDE_LINGUAS=""
+KDE_MINIMAL="4.7"
 
 CMAKE_MIN_VERSION=2.8
 
