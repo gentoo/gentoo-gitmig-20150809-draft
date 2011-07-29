@@ -1,0 +1,14 @@
+# ChangeLog for media-plugins/gst-plugins-assrender
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-assrender/ChangeLog,v 1.1 2011/07/29 07:41:42 leio Exp $
+
+*gst-plugins-assrender-0.10.22 (29 Jul 2011)
+
+  29 Jul 2011; Mart Raudsepp <leio@gentoo.org> +metadata.xml,
+  +gst-plugins-assrender-0.10.22.ebuild:
+  Add the assrender plugin/element from gst-plugins-bad for ASS/SSA
+  subtitles rendering with libass. ssaparse from gst-plugins-base already
+  supported these in text form, but this one overlays on top of the video
+  and hence supports styling, effects, karaoke features and other advanced
+  features of Advanced SubStation Alpha
+
