@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/ardour
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.94 2011/05/01 12:04:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.95 2011/07/29 07:23:17 ssuominen Exp $
+
+*ardour-2.8.11-r20 (29 Jul 2011)
+
+  29 Jul 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +ardour-2.8.11-r20.ebuild, +files/ardour-2.8.11-raptor2.patch:
+  Use raptor2 instead of raptor wrt #375027
 
   01 May 2011; Tim Harder <radhermit@gentoo.org> ardour-2.8.11-r1.ebuild:
   Conditionally apply the gcc-4.6 patch (bug #365437).
