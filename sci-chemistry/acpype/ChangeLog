@@ -1,0 +1,10 @@
+# ChangeLog for sci-chemistry/acpype
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/acpype/ChangeLog,v 1.1 2011/07/29 08:27:31 alexxy Exp $
+
+*acpype-366 (29 Jul 2011)
+
+  29 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org> +acpype-366.ebuild,
+  +files/acpype.patch, +metadata.xml:
+  Initial import
+
