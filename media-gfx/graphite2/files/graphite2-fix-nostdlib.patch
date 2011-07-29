@@ -1,0 +1,29 @@
+diff --git a/gr2fonttest/CMakeLists.txt b/gr2fonttest/CMakeLists.txt
+index 4e11217..89f97e4 100644
+--- a/gr2fonttest/CMakeLists.txt
++++ b/gr2fonttest/CMakeLists.txt
+@@ -45,7 +45,7 @@ endif (${CMAKE_SYSTEM_NAME} STREQUAL "Windows")
+ if  (${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
+     # -lgcc LINKER_LANGUAGE C
+     add_definitions(-fno-rtti -fno-exceptions)
+-    set_target_properties(gr2fonttest PROPERTIES LINK_FLAGS "-nostdlibs -nodefaultlibs" )
++    set_target_properties(gr2fonttest PROPERTIES LINK_FLAGS "-nostdlib -nodefaultlibs" )
+     set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "")
+     # This script just fails
+     nolib_test(stdc++ $<TARGET_FILE:gr2fonttest>)
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index 9c31e35..775a83b 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -164,9 +164,9 @@ set_target_properties(graphite2 PROPERTIES LT_VERSION_AGE ${GRAPHITE_API_AGE})
+ if  (${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
+     add_definitions(-Wall -Wno-unknown-pragmas -Wparentheses -Wextra -Wendif-labels
+      -Wshadow -Wno-ctor-dtor-privacy -Wno-non-virtual-dtor -fdiagnostics-show-option
+-     -fno-rtti -fno-exceptions -nodefaultlibs -nostdlibs
++     -fno-rtti -fno-exceptions -nodefaultlibs -nostdlib
+      -fvisibility=hidden -fvisibility-inlines-hidden -fno-stack-protector)
+-    set_target_properties(graphite2 PROPERTIES LINK_FLAGS "-nostdlibs -nodefaultlibs" LINKER_LANGUAGE C)
++    set_target_properties(graphite2 PROPERTIES LINK_FLAGS "-nostdlib -nodefaultlibs" LINKER_LANGUAGE C)
+     if (${CMAKE_CXX_COMPILER} MATCHES  ".*mingw.*")
+         target_link_libraries(graphite2 "-lkernel32 -lmsvcr90 -lmingw32 -lgcc -luser32")
+     else (${CMAKE_CXX_COMPILER} MATCHES  ".*mingw.*")

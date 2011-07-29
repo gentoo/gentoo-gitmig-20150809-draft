@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/graphite2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/ChangeLog,v 1.6 2011/07/28 19:26:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/ChangeLog,v 1.7 2011/07/29 10:14:59 scarabeus Exp $
+
+  29 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/graphite2-fix-nostdlib.patch, graphite2-0.9.4-r1.ebuild:
+  Fix nostdlibs typo correctly everywhere, fixes part of the bug #376799.
 
   28 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   graphite2-0.9.4-r1.ebuild:

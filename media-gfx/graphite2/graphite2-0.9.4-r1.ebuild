@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-0.9.4-r1.ebuild,v 1.3 2011/07/28 19:26:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-0.9.4-r1.ebuild,v 1.4 2011/07/29 10:14:59 scarabeus Exp $
 
 EAPI=4
 
@@ -28,6 +28,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-includes-libs-perl.patch"
 	"${FILESDIR}/${PN}-disablefonttest.patch"
 	"${FILESDIR}/${PN}-multilib-strict.patch"
+	"${FILESDIR}/${PN}-fix-nostdlib.patch"
 )
 
 pkg_setup() {
@@ -36,11 +37,6 @@ pkg_setup() {
 
 src_prepare() {
 	base_src_prepare
-
-	# fix CFLAGS
-	sed -i \
-		-e 's:-nodefaultlibs -nostdlibs::' \
-		src/CMakeLists.txt || die
 
 	# fix perl linking
 	if use perl; then
