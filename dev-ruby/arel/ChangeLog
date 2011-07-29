@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/arel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/arel/ChangeLog,v 1.10 2011/07/29 04:46:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/arel/ChangeLog,v 1.11 2011/07/29 04:47:11 graaff Exp $
+
+  29 Jul 2011; Hans de Graaff <graaff@gentoo.org> -arel-2.0.4.ebuild,
+  -arel-2.1.1.ebuild:
+  Remove old versions.
 
 *arel-2.1.4 (29 Jul 2011)
 
