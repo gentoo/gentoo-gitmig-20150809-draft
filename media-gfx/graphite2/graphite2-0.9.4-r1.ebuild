@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-0.9.4-r1.ebuild,v 1.4 2011/07/29 10:14:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-0.9.4-r1.ebuild,v 1.5 2011/07/29 11:11:10 scarabeus Exp $
 
 EAPI=4
 
@@ -29,6 +29,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-disablefonttest.patch"
 	"${FILESDIR}/${PN}-multilib-strict.patch"
 	"${FILESDIR}/${PN}-fix-nostdlib.patch"
+	"${FILESDIR}/${PN}-fix_wrong_linker_opts.patch"
 )
 
 pkg_setup() {
