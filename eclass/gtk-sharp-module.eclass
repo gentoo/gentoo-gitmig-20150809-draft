@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.30 2011/05/06 04:24:31 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.31 2011/07/29 13:57:29 darkside Exp $
 
 # @ECLASS: gtk-sharp-module.eclass
 # @MAINTAINER:
@@ -15,6 +15,11 @@ WANT_AUTOMAKE=none
 WANT_AUTOCONF=none
 
 inherit eutils mono multilib libtool autotools base versionator
+
+case ${EAPI:-0} in
+	2|3|4) ;;
+	*) die "Unknown EAPI." ;;
+esac
 
 # @ECLASS-VARIABLE: GTK_SHARP_MODULE
 # @DESCRIPTION:
@@ -412,6 +417,7 @@ pkg_check_modules_override() {
 # local assemblies to the installed ones. Is only called by src_prepare when
 # $GTK_SHARP_MODULE is a member of $gtk_sharp_module_list.
 gtk-sharp-tarball-post_src_prepare() {
+	has "${EAPI:-0}" 2 && ! use prefix && EPREFIX=
 	cd "${S}/${GTK_SHARP_MODULE_DIR}"
 	sed -i \
 		-e "s; \$(srcdir)/../glib/glib-api.xml; $(get_sharp_apis --bare glib-sharp-2.0);"			\
@@ -424,8 +430,8 @@ gtk-sharp-tarball-post_src_prepare() {
 		-e "s; \.\./atk/atk-sharp.dll; $(get_sharp_assemblies --bare atk-sharp-2.0);g"				\
 		-e "s; \.\./gdk/gdk-sharp.dll; $(get_sharp_assemblies --bare gdk-sharp-2.0);g"				\
 		-e "s; \.\./gtk/gtk-sharp.dll; $(get_sharp_assemblies --bare gtk-sharp-2.0);g"				\
-		-e "s;\$(RUNTIME) \$(top_builddir)/parser/gapi-fixup.exe;/usr/bin/gapi2-fixup;"				\
-		-e "s;\$(RUNTIME) \$(top_builddir)/generator/gapi_codegen.exe;/usr/bin/gapi2-codegen;"			\
+		-e "s;\$(RUNTIME) \$(top_builddir)/parser/gapi-fixup.exe;${EPREFIX}/usr/bin/gapi2-fixup;"				\
+		-e "s;\$(RUNTIME) \$(top_builddir)/generator/gapi_codegen.exe;${EPREFIX}/usr/bin/gapi2-codegen;"			\
 		-e "s:\$(SYMBOLS) \$(top_builddir)/parser/gapi-fixup.exe:\$(SYMBOLS):"					\
 		-e "s:\$(INCLUDE_API) \$(top_builddir)/generator/gapi_codegen.exe:\$(INCLUDE_API):"			\
 		$(find . -name Makefile.in) || die "failed to fix ${TARBALL}-tarball makefiles"
@@ -487,11 +493,12 @@ gtk-sharp-tarball_src_configure() {
 # Is only called by gtk-sharp-module_src_configure when $GTK_SHARP_MODULE
 # is a member of $gnome_sharp_module_list.
 gnome-sharp-tarball_src_configure() {
+	has "${EAPI:-0}" 2 && ! use prefix && EPREFIX=
 	pkg_check_modules_override GLADESHARP glade-sharp-2.0
 	pkg_check_modules_override GAPI gapi-2.0
-	ac_path_prog_override GAPI_PARSER /usr/bin/gapi2-parser
-	ac_path_prog_override GAPI_CODEGEN /usr/bin/gapi2-codegen
-	ac_path_prog_override GAPI_FIXUP /usr/bin/gapi2-fixup
+	ac_path_prog_override GAPI_PARSER "${EPREFIX}"/usr/bin/gapi2-parser
+	ac_path_prog_override GAPI_CODEGEN "${EPREFIX}"/usr/bin/gapi2-codegen
+	ac_path_prog_override GAPI_FIXUP "${EPREFIX}"/usr/bin/gapi2-fixup
 }
 
 # @FUNCTION: gtk-sharp-module_src_configure
