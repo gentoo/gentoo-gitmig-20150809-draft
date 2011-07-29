@@ -1,6 +1,9 @@
 # ChangeLog for media-video/pymp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pymp/ChangeLog,v 1.6 2009/07/16 08:08:58 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/pymp/ChangeLog,v 1.7 2011/07/29 16:07:58 neurogeek Exp $
+
+  29 Jul 2011; Jesus Rivero <neurogeek@gentoo.org> pymp-1.1.ebuild:
+  Python related improvements wrt bug #315061
 
 *pymp-1.1 (16 Jul 2009)
 

@@ -1,8 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pymp/pymp-1.1.ebuild,v 1.1 2009/07/16 08:08:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pymp/pymp-1.1.ebuild,v 1.2 2011/07/29 16:07:58 neurogeek Exp $
 
-EAPI=2
+EAPI=3
+PYTHON_DEPEND="2:2.5"
 inherit eutils multilib python
 
 DESCRIPTION="a lean, flexible frontend to mplayer written in python"
@@ -15,12 +16,16 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="media-video/mplayer
-	dev-python/pygtk
-	>=dev-lang/python-2.5"
+	dev-python/pygtk"
 DEPEND="sys-apps/sed"
 
+pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+}
+
 src_prepare() {
-	sed -i -e "s:PREFIX/lib:/usr/$(get_libdir):" pymp || die "sed failed"
+	sed -i -e "s/python/python2/" -e "s:PREFIX/lib:/usr/$(get_libdir):" pymp || die "sed failed"
 }
 
 src_compile() { :; }
