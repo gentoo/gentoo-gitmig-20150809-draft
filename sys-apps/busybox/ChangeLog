@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.274 2011/07/26 17:53:57 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.275 2011/07/29 07:52:36 zmedico Exp $
+
+  29 Jul 2011; Zac Medico <zmedico@gentoo.org> busybox-1.18.4.ebuild:
+  Add ~x86-linux keyword.
 
   26 Jul 2011; Zac Medico <zmedico@gentoo.org> busybox-1.18.4.ebuild:
   Bump to EAPI 3 and fix for prefix.
