@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.139 2011/07/22 18:11:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.140 2011/07/29 17:44:40 xarthisius Exp $
+
+  29 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
+  Mask dev-lang/path64[assembler] as it currently fails to build
 
   22 Jul 2011; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
   Unmask USE="nat-pmp" and "upnp" here.
