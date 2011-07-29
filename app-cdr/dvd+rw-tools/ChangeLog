@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/dvd+rw-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/ChangeLog,v 1.76 2011/07/28 12:30:28 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd+rw-tools/ChangeLog,v 1.77 2011/07/29 03:48:21 zmedico Exp $
+
+  29 Jul 2011; Zac Medico <zmedico@gentoo.org> dvd+rw-tools-7.1-r1.ebuild:
+  Add ~x86-linux keyword.
 
   28 Jul 2011; Fabian Groffen <grobian@gentoo.org> dvd+rw-tools-7.1-r1.ebuild:
   Complete Prefix fixes
