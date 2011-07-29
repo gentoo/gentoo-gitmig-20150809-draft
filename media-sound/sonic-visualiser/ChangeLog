@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sonic-visualiser
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/ChangeLog,v 1.19 2011/05/21 10:43:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/ChangeLog,v 1.20 2011/07/29 09:35:13 ssuominen Exp $
+
+  29 Jul 2011; Samuli Suominen <ssuominen@gentoo.org>
+  sonic-visualiser-1.8.ebuild:
+  Remove check for raptor and let liblrdf, or redland pull it for us. This
+  allows raptor2 to be used.
 
 *sonic-visualiser-1.8 (21 May 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/sonic-visualiser-1.8.ebuild,v 1.1 2011/05/21 10:43:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/sonic-visualiser-1.8.ebuild,v 1.2 2011/07/29 09:35:13 ssuominen Exp $
 
 EAPI=4
 inherit eutils qt4-r2 autotools fdo-mime
@@ -21,7 +21,6 @@ RDEPEND="x11-libs/qt-core:4
 	fftw? ( sci-libs/fftw:3.0 )
 	app-arch/bzip2
 	>=media-libs/dssi-0.9.1
-	media-libs/raptor:0
 	media-libs/liblrdf
 	dev-libs/redland
 	media-libs/ladspa-sdk
@@ -49,6 +48,9 @@ sv_disable_opt() {
 }
 
 src_prepare() {
+	# remove unnecessary check for raptor: http://code.soundsoftware.ac.uk/issues/136
+	sv_disable_opt raptor
+
 	epatch "${FILESDIR}"/${P}-configure.patch
 	epatch "${FILESDIR}"/${P}-gcc46.patch
 	cd svcore
