@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-bad.eclass,v 1.39 2011/07/13 06:10:47 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-bad.eclass,v 1.40 2011/07/29 07:01:40 leio Exp $
 
 #
 # Original Author: Saleem Abdulrasool <compnerd@gentoo.org>
@@ -36,9 +36,14 @@ fi
 
 # Changes in 0.10.21:
 # New opencv and apple_media plugins
-# exif for a specific jifmux tests purpose only
 if version_is_at_least "0.10.21"; then
-	my_gst_plugins_bad+=" opencv apple_media exif"
+	my_gst_plugins_bad+=" opencv apple_media"
+fi
+
+# exif for a specific jifmux tests purpose only.
+# Made automagic in 0.10.22, which is fine as a non-installed test
+if [ ${PV} == "0.10.21" ]; then
+	my_gst_plugins_bad+=" exif"
 fi
 
 # jack moved to -good, metadata removed (functionality in base classes)
