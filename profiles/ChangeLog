@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5587 2011/07/29 07:24:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5588 2011/07/29 14:10:50 nirbheek Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Jul 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  features/64bit-native/package.mask:
+  Unmask tb/fx/sm-bin on 64bit-native since they now install 64-bit binary
+  tarballs on amd64, bug 374757
 
   29 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask -r20 of ardour and liblrdf for testing; uses raptor2 instead of raptor

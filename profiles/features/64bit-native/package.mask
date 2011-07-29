@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.72 2011/07/15 11:22:06 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/package.mask,v 1.73 2011/07/29 14:10:50 nirbheek Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -144,7 +144,7 @@ games-strategy/savage-bin
 games-strategy/smac
 games-strategy/x2
 games-strategy/x2-demo
-mail-client/thunderbird-bin
+<mail-client/thunderbird-bin-5.0
 media-fonts/acroread-asianfonts
 media-gfx/picasa
 media-libs/realcodecs
@@ -175,8 +175,8 @@ sys-apps/memtest86
 sys-apps/memtest86+
 sys-block/hpacucli
 sys-libs/lib-compat-loki
-www-client/firefox-bin
-www-client/seamonkey-bin
+<www-client/firefox-bin-5.0
+<www-client/seamonkey-bin-2.2
 <www-plugins/adobe-flash-11.0.1.60_beta201107131
 www-plugins/nspluginwrapper
 www-plugins/google-talkplugin
