@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/jack-rack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.37 2011/07/29 09:58:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.38 2011/07/29 12:05:32 ssuominen Exp $
+
+  29 Jul 2011; Samuli Suominen <ssuominen@gentoo.org>
+  jack-rack-1.4.7-r1.ebuild, +files/jack-rack-1.4.7-disable_deprecated.patch:
+  Stop using GTK+ related deprecation CPPFLAGS wrt #376899 by Agostino Sarubbo
 
   29 Jul 2011; Samuli Suominen <ssuominen@gentoo.org>
   jack-rack-1.4.7-r1.ebuild:

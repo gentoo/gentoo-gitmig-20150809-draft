@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/jack-rack-1.4.7-r1.ebuild,v 1.6 2011/07/29 09:58:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/jack-rack-1.4.7-r1.ebuild,v 1.7 2011/07/29 12:05:32 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic toolchain-funcs
@@ -32,7 +32,9 @@ DOCS=( AUTHORS BUGS ChangeLog NEWS README THANKS TODO WISHLIST )
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-1.4.5-asneeded.patch \
-		"${FILESDIR}"/${PN}-1.4.6-noalsa.patch
+		"${FILESDIR}"/${PN}-1.4.6-noalsa.patch \
+		"${FILESDIR}"/${PN}-1.4.7-disable_deprecated.patch
+
 	eautoreconf
 }
 
