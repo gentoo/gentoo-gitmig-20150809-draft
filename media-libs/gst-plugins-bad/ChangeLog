@@ -1,6 +1,22 @@
 # ChangeLog for media-libs/gst-plugins-bad
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.83 2011/07/25 18:11:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.84 2011/07/29 05:56:34 leio Exp $
+
+*gst-plugins-bad-0.10.22 (29 Jul 2011)
+
+  29 Jul 2011; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-bad-0.10.22.ebuild:
+  Version bump. Audioparsers moved to gst-plugins-good-0.10.29, make sure to
+  upgrade.  New elements:
+  * hlsdemux - HTTP live streaming parser/demuxer element
+  * fieldanalysis - Analyse fields from video frames to identify if they are
+    progressive/telecined/interlaced
+  * h263parse - Parses H.263 streams
+  * zebrastripe - Overlays zebra striping on overexposed areas of video
+  * patchdetect - Detects color patches from a color calibration chart
+  * scenechange - Detects scene changes in video
+  * sdimux and sdidemux - Multiplex raw audio/video to SDI and vice-versa
+  * tsdemux - new (not-yet autoplugged) MPEG TS demuxer rewrite
 
   25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gst-plugins-bad-0.10.21.ebuild:
