@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/gst-plugins-good
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/ChangeLog,v 1.120 2011/07/25 18:09:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-good/ChangeLog,v 1.121 2011/07/29 09:43:55 leio Exp $
+
+*gst-plugins-good-0.10.30 (29 Jul 2011)
+
+  29 Jul 2011; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-good-0.10.30.ebuild:
+  Version bump. Audioparsers and ISO MP4 muxers moved here from -bad,
+  signifying sufficient quality. New matroskaparse element. rtpsession
+  supports RTCP Early Feedback (the AVPF profile). Other bug fixes and
+  improvements.
 
   25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gst-plugins-good-0.10.28.ebuild:
