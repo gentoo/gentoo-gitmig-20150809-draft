@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.351 2011/07/29 10:41:06 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.352 2011/07/29 22:10:44 remi Exp $
+
+*mesa-7.11_rc4 (29 Jul 2011)
+
+  29 Jul 2011; Rémi Cardona <remi@gentoo.org> +mesa-7.11_rc4.ebuild:
+  Bump to 7.11_rc4, remove hacks needed for rc2
 
   29 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> mesa-7.10.3.ebuild:
   ppc64 stable wrt #371857
