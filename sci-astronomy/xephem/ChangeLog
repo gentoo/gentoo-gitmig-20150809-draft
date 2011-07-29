@@ -1,6 +1,11 @@
 # ChangeLog for sci-astronomy/xephem
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/ChangeLog,v 1.35 2010/11/08 17:10:14 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xephem/ChangeLog,v 1.36 2011/07/29 15:09:17 bicatali Exp $
+
+*xephem-3.7.5 (29 Jul 2011)
+
+  29 Jul 2011; Sébastien Fabbro <bicatali@gentoo.org> +xephem-3.7.5.ebuild:
+  Version bump. Simplify ebuild and switch to EAPI4
 
   08 Nov 2010; Kacper Kowalik <xarthisius@gentoo.org> xephem-3.7.3.ebuild,
   xephem-3.7.4-r1.ebuild:
