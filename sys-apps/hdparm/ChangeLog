@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.225 2011/05/07 17:32:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.226 2011/07/29 04:49:19 zmedico Exp $
+
+  29 Jul 2011; Zac Medico <zmedico@gentoo.org> hdparm-9.37.ebuild:
+  Add ~x86-linux keyword.
 
   07 May 2011; Raúl Porcel <armin76@gentoo.org> hdparm-9.36.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #360799
