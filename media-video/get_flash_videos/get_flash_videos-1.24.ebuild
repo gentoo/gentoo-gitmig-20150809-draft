@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/get_flash_videos/get_flash_videos-1.24.ebuild,v 1.3 2011/03/18 09:10:59 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/get_flash_videos/get_flash_videos-1.24.ebuild,v 1.4 2011/07/29 22:16:43 zmedico Exp $
 
 EAPI=2
 inherit perl-module
@@ -14,7 +14,7 @@ SRC_URI="http://get-flash-videos.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~x86-linux"
 IUSE="test"
 
 RDEPEND="dev-perl/WWW-Mechanize
