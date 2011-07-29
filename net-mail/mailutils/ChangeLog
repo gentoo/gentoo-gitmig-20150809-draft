@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.48 2011/06/14 19:33:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.49 2011/07/29 18:50:17 grobian Exp $
+
+  29 Jul 2011; Fabian Groffen <grobian@gentoo.org> mailutils-2.2.ebuild:
+  Marked ~*-macos
 
   14 Jun 2011; Markus Meier <maekke@gentoo.org> mailutils-2.2.ebuild:
   x86 stable, bug #370319

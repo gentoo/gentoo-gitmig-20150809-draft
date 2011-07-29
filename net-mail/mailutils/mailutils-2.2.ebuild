@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-2.2.ebuild,v 1.4 2011/06/14 19:33:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-2.2.ebuild,v 1.5 2011/07/29 18:50:17 grobian Exp $
 
-EAPI="2"
+EAPI="3"
 
-inherit eutils flag-o-matic python
+inherit eutils flag-o-matic libtool python
 
 DESCRIPTION="A useful collection of mail servers, clients, and filters."
 HOMEPAGE="http://www.gnu.org/software/mailutils/mailutils.html"
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.gnu.org/gnu/mailutils/${P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 
-KEYWORDS="~alpha amd64 ~hppa ~ppc ~sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ~ppc ~sparc x86 ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="bidi gdbm guile ldap mysql nls pam postgres python test tokyocabinet"
 
 RDEPEND="!mail-client/nmh
@@ -34,13 +34,14 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.1-python.patch
+	elibtoolize  # for Darwin bundles
 }
 
 src_configure() {
 	# TODO: Fix this breakage, starting in examples/cpp/
 	append-ldflags $(no-as-needed)
 
-	local myconf="--localstatedir=/var --sharedstatedir=/var"
+	local myconf="--localstatedir=${EPREFIX}/var --sharedstatedir=${EPREFIX}/var"
 	myconf="${myconf} --enable-mh"
 
 	# We need sendmail or compiling will fail
