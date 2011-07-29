@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.163 2011/07/20 13:37:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.164 2011/07/29 06:40:00 angelos Exp $
+
+  29 Jul 2011; Christoph Mende <angelos@gentoo.org> conky-1.8.0-r1.ebuild,
+  conky-1.8.1-r2.ebuild, +files/conky-1.8.1-curl-headers.patch:
+  Fix compilation against curl-7.21.7 (bug #376833)
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #34534

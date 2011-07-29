@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.8.1-r2.ebuild,v 1.6 2011/03/06 12:11:08 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.8.1-r2.ebuild,v 1.7 2011/07/29 06:40:00 angelos Exp $
 
 EAPI=2
 
@@ -53,10 +53,11 @@ DEPEND="
 	"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-nvidia-x.patch"
-	epatch "${FILESDIR}/${P}-xmms2.patch"
-	epatch "${FILESDIR}/${P}-secunia-SA43225.patch"
-	epatch "${FILESDIR}/${P}-acpitemp.patch"
+	epatch "${FILESDIR}/${P}-nvidia-x.patch" \
+		"${FILESDIR}/${P}-xmms2.patch" \
+		"${FILESDIR}/${P}-secunia-SA43225.patch" \
+		"${FILESDIR}/${P}-acpitemp.patch" \
+		"${FILESDIR}/${P}-curl-headers.patch"
 }
 
 src_configure() {
