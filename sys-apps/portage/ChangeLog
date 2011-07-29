@@ -1,6 +1,19 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.856 2011/07/26 16:24:30 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.857 2011/07/29 19:54:06 zmedico Exp $
+
+*portage-2.2.0_alpha48 (29 Jul 2011)
+
+  29 Jul 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha48.ebuild:
+  2.2.0_alpha48 version bump. This includes all of the fixes in
+  portage-2.1.10.8. Bug #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.10.8 (29 Jul 2011)
+
+  29 Jul 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.8.ebuild:
+  2.1.10.8 version bump. This fixes bug #326685 (handle collision between
+  directory and symlink), and bug #375835 (SELinux support for fetch from
+  binhost). Bug #373933 tracks all bugs fixed since portage-2.1.10.3.
 
   26 Jul 2011; Zac Medico <zmedico@gentoo.org> portage-2.1.10.7.ebuild,
   portage-2.2.0_alpha46.ebuild, portage-2.2.0_alpha47.ebuild,
