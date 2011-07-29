@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/libbonobo-2.24.3.ebuild,v 1.11 2011/04/10 13:09:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/libbonobo-2.24.3.ebuild,v 1.12 2011/07/29 18:05:20 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -23,6 +23,7 @@ RDEPEND=">=dev-libs/glib-2.14:2
 	>=dev-libs/popt-1.5
 	!gnome-base/bonobo-activation"
 DEPEND="${RDEPEND}
+	|| ( sys-devel/bison dev-util/yacc )
 	sys-devel/flex
 	x11-apps/xrdb
 	>=dev-util/pkgconfig-0.9

@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/libbonobo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/ChangeLog,v 1.196 2011/04/10 13:09:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonobo/ChangeLog,v 1.197 2011/07/29 18:05:20 pacho Exp $
+
+  29 Jul 2011; Pacho Ramos <pacho@gentoo.org> libbonobo-2.24.3.ebuild,
+  libbonobo-2.32.1.ebuild:
+  A yacc provider is needed at buildtime, bug #376907 by Samuli Suominen.
 
 *libbonobo-2.32.1 (10 Apr 2011)
 
