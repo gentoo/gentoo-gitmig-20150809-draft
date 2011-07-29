@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12948 2011/07/28 13:42:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12949 2011/07/29 06:47:11 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (29 Jul 2011)
+# Masked for testing wrt #375029, watch out for dev-libs/soprano
+>=dev-libs/rasqal-0.9.20
+>=dev-libs/redland-1.0.12
+>=media-libs/liblrdf-0.4.0-r20
 
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (28 Jul 2011)
 # A new update of the mysql / mariadb mask
@@ -665,12 +671,6 @@ net-analyzer/ncrack
 # Jeroen Roovers <jer@gentoo.org> (25 Oct 2010)
 # Masked until reverse dependencies are sorted out (bug #342461)
 >dev-libs/libnl-2
-
-# Samuli Suominen <ssuominen@gentoo.org> (16 Oct 2010)
-# dev-libs/soprano with USE redland is unported to raptor2 API
-# see bug 341237
->=dev-libs/rasqal-0.9.20
->=dev-libs/redland-1.0.12
 
 # Robin H. Johnson <robbat2@gentoo.org> (08 Oct 2010)
 # Masked for testing, and some testsuite failures.
