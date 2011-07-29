@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/miniupnpd-1.6_pre20110623.ebuild,v 1.1 2011/06/30 20:02:17 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/miniupnpd-1.6.ebuild,v 1.1 2011/07/29 19:36:58 gurligebis Exp $
 
 EAPI=2
-inherit eutils linux-info toolchain-funcs
+inherit eutils toolchain-funcs
 
-MY_PV=1.5.20110623
+MY_PV=1.6
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 DESCRIPTION="MiniUPnP IGD Daemon"
@@ -27,8 +27,9 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	mv Makefile.linux Makefile
 	epatch "${FILESDIR}/${PN}-1.3-Makefile_fix.diff"
+	epatch "${FILESDIR}/${PN}-nf_nat-fix.diff"
 	sed -i \
-		-e "s#^CFLAGS = .*-D#CPPFLAGS += -I${KERNEL_DIR}/include -D#" \
+		-e "s#^CFLAGS = .*-D#CPPFLAGS += -I/usr/include -D#" \
 		-e '/^CFLAGS :=/s/CFLAGS/CPPFLAGS/g' \
 		-e "s/LIBS = -liptc/LIBS = -lip4tc/g" \
 		-e 's/genuuid||//' \
