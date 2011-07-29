@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/spyder-2.0.12.ebuild,v 1.1 2011/07/29 22:56:39 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/spyder-2.0.12.ebuild,v 1.2 2011/07/29 23:10:01 bicatali Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -41,13 +41,15 @@ src_compile() {
 
 	if use doc; then
 		einfo "Generation of documentation"
-		PYTHONPATH="build-$(PYTHON -f --ABI)" sphinx-build doc doc_output || die "Generation of documentation failed"
+		PYTHONPATH="build-$(PYTHON -f --ABI)" \
+			sphinx-build doc doc_output || die "Generation of documentation failed"
 	fi
 }
 
 src_install() {
 	distutils_src_install
-
+	doicon spyderlib/images/spyder.svg || die
+	make_desktop_entry spyder Spyder spyder "Development;IDE"
 	if use doc; then
 		pushd doc_output > /dev/null
 		insinto /usr/share/doc/${PF}/html
