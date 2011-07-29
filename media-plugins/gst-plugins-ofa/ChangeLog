@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-ofa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ofa/ChangeLog,v 1.1 2011/06/09 19:34:40 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ofa/ChangeLog,v 1.2 2011/07/29 10:54:41 leio Exp $
+
+*gst-plugins-ofa-0.10.22 (29 Jul 2011)
+
+  29 Jul 2011; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-ofa-0.10.21.ebuild, +gst-plugins-ofa-0.10.22.ebuild:
+  Version bump to be in sync with the rest; no code changes
 
 *gst-plugins-ofa-0.10.21 (09 Jun 2011)
 
