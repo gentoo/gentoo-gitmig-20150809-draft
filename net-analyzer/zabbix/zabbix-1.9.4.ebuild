@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.9.4.ebuild,v 1.1 2011/07/28 20:31:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.9.4.ebuild,v 1.2 2011/07/29 22:39:39 patrick Exp $
 
 EAPI="2"
 
@@ -39,7 +39,7 @@ RDEPEND="${COMMON_DEPEND}
 		media-libs/gd[png]
 		app-admin/webapp-config )"
 DEPEND="${COMMON_DEPEND}
-	jabber? ( dev-util/pkgconfig )"
+	dev-util/pkgconfig"
 
 use frontend && need_php_httpd
 
