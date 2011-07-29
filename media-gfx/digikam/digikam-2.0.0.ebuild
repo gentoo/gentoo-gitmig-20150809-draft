@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-2.0.0_rc.ebuild,v 1.1 2011/07/27 20:51:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-2.0.0.ebuild,v 1.1 2011/07/29 19:28:45 dilfridge Exp $
 
 EAPI=4
 
-KDE_LINGUAS=""
-#KDE_LINGUAS="be ca ca@valencia de el en_GB eo es et eu fi fr he hi hne hu is it km
-#	ko lt lv nds nn pa pl pt pt_BR ro se sl sv th tr vi zh_CN zh_TW"
-#the release candidate has no internationalization
+KDE_LINGUAS="ar az be bg bn br bs ca cs csb cy da de el en_GB eo es et eu fa fi fo fr fy ga
+gl ha he hi hr hsb hu id is it ja ka kk km ko ku lb lo lt lv mi mk mn ms mt nb nds ne nl nn
+nso oc pa pl pt pt_BR ro ru rw se sk sl sq sr ss sv ta te tg th tr tt uk uz ven vi wa xh
+zh_CN zh_HK zh_TW zu"
 
 KDE_HANDBOOK="optional"
 CMAKE_MIN_VERSION="2.8"
@@ -38,12 +38,11 @@ CDEPEND="
 	media-libs/lcms:0
 	>=media-libs/lensfun-0.2.5
 	>=media-libs/libkface-${PV}
-	>=media-libs/libkmap-${PV}
+	>=media-libs/libkgeomap-${PV}
 	media-libs/liblqr
-	>=media-libs/libpgf-6.11.24
+	>=media-libs/libpgf-6.11.28
 	media-libs/libpng
 	media-libs/tiff
-	media-plugins/kipi-plugins
 	virtual/jpeg
 	x11-libs/qt-gui[qt3support]
 	|| ( >=sci-libs/clapack-3.2.1-r6 sci-libs/lapack-atlas )
@@ -54,6 +53,7 @@ CDEPEND="
 "
 RDEPEND="${CDEPEND}
 	$(add_kdebase_dep kreadconfig)
+	media-plugins/kipi-plugins
 	video? (
 		|| (
 			$(add_kdebase_dep mplayerthumbs)
@@ -66,21 +66,22 @@ DEPEND="${CDEPEND}
 	doc? ( app-doc/doxygen )
 "
 
-PATCHES=(
-	"${FILESDIR}/${PN}-2.0.0_rc-oldpgf.patch"
-	"${FILESDIR}/${PN}-2.0.0_rc-officialpgf.patch"
-	"${FILESDIR}/${PN}-2.0.0_rc-officialpgf2.patch"
-)
-
 S="${WORKDIR}/${MY_P}/core"
 
 src_prepare() {
 	# just to make absolutely sure
 	rm -rf "${WORKDIR}/${MY_P}/extra" || die
 
+	# prepare the handbook
 	mv "${WORKDIR}/${MY_P}/doc/${PN}" doc || die
 	echo "add_subdirectory( digikam )" > doc/CMakeLists.txt
 	echo "add_subdirectory( showfoto )" >> doc/CMakeLists.txt
+
+	# prepare the translations
+	mv "${WORKDIR}/${MY_P}/po" po || die
+	find po -name "kipiplugin_*.po" -exec rm {} +
+
+	echo "add_subdirectory( po )" >> CMakeLists.txt
 
 	kde4-base_src_prepare
 
