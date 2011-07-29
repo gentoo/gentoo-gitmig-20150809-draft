@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/redland-bindings
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/ChangeLog,v 1.22 2011/03/27 15:46:36 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/ChangeLog,v 1.23 2011/07/29 11:14:04 ssuominen Exp $
+
+*redland-bindings-1.0.13.1 (29 Jul 2011)
+
+  29 Jul 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +redland-bindings-1.0.13.1.ebuild:
+  Version bump wrt #360671 by Arfrever Frehtes Taifersar Arahesis
 
   27 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   redland-bindings-1.0.10.1-r1.ebuild:
