@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-2.1.7.0.ebuild,v 1.2 2011/07/02 00:49:51 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-2.1.7.0.ebuild,v 1.3 2011/07/29 16:58:08 ottxor Exp $
 
 EAPI=4
 
@@ -89,7 +89,10 @@ src_unpack() {
 }
 
 src_install() {
-	dodoc ./usr/share/doc/google-talkplugin/changelog.Debian
+	#workaround for bug #376741
+	[[ -f ./usr/share/doc/google-talkplugin/changelog.Debian ]] && \
+		dodoc ./usr/share/doc/google-talkplugin/changelog.Debian
+	[[ -f ${WORKDIR}/changelog.Debian ]] && dodoc "${WORKDIR}/changelog.Debian"
 
 	exeinto "${INSTALL_BASE}"
 	doexe "${INSTALL_BASE#/}"/GoogleTalkPlugin
