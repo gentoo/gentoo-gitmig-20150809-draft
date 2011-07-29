@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12951 2011/07/29 15:50:29 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12952 2011/07/29 16:02:20 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -47,6 +47,7 @@
 =media-libs/libcanberra-0.28-r4
 >=net-libs/gtk-vnc-0.4.3-r300
 >=x11-libs/gdk-pixbuf-2.23
+>=x11-misc/notification-daemon-0.7
 # Core Applications
 >=app-accessibility/orca-3.0
 >=gnome-base/gdm-3.0
@@ -510,11 +511,6 @@ app-crypt/scsign
 =dev-lang/php-5.3.7_rc3
 >=dev-lang/php-5.4.0_alpha1
 
-# Nirbheek Chauhan <nirbheek@gentoo.org> (30 Apr 2011)
-# GTK3 version of notification-daemon, added for testing
-# Will be unmasked once we're sure it works well with everything
->=x11-misc/notification-daemon-0.7
-
 # Ryan Hill <dirtyepic@gentoo.org> (23 Apr 2011)
 # Masked for removal on 20110523.
 app-text/gnochm
@@ -541,9 +537,6 @@ sys-kernel/usermode-sources
 # Patrick Lauer <patrick@gentoo.org> (12 Apr 2011)
 # lacks most features and sanity, waiting for upstream to improve it
 >=sys-power/powertop-1.90
-
-# Nirbheek Chauhan <nirbheek@gentoo.org> (12 Apr 2011)
-# GNOME 3 mask, things will be added here slowly
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (8 Apr 2011)
 
