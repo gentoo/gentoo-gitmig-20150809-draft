@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Override/Sub-Override-0.08.ebuild,v 1.12 2010/02/02 17:57:00 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Override/Sub-Override-0.08.ebuild,v 1.13 2011/07/29 22:21:17 zmedico Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ inherit perl-module
 DESCRIPTION="Perl extension for easily overriding subroutines"
 
 SLOT="0"
-KEYWORDS="amd64 ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ia64 ppc ~ppc64 sparc x86 ~x86-linux"
 IUSE="test"
 
 RDEPEND=""
