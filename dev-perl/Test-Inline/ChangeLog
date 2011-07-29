@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Inline
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/ChangeLog,v 1.67 2010/11/22 15:35:13 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Inline/ChangeLog,v 1.68 2011/07/29 12:53:20 tove Exp $
+
+  29 Jul 2011; Torsten Veller <tove@gentoo.org> -Test-Inline-2.211.ebuild:
+  Cleanup
 
 *Test-Inline-2.212 (22 Nov 2010)
 
