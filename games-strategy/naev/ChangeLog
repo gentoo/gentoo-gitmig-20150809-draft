@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/naev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/naev/ChangeLog,v 1.6 2011/07/19 20:08:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/naev/ChangeLog,v 1.7 2011/07/29 19:42:07 ssuominen Exp $
+
+  29 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> naev-0.5.0.ebuild,
+  +files/naev-0.5.0-libpng15.patch:
+  Fix missing zlib.h include for Z_DEFAULT_COMPRESSION after libpng headers got
+  cleaned up.
 
   19 Jul 2011; Markus Meier <maekke@gentoo.org> naev-0.5.0.ebuild:
   amd64/x86 stable, bug #375489
