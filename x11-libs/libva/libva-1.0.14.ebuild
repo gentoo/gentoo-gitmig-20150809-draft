@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-1.0.14.ebuild,v 1.1 2011/07/28 12:35:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-1.0.14.ebuild,v 1.2 2011/07/29 01:10:12 zmedico Exp $
 
-EAPI="2"
+EAPI="3"
 
 SCM=""
 if [ "${PV%9999}" != "${PV}" ] ; then # Live ebuild
@@ -25,7 +25,7 @@ fi
 LICENSE="MIT"
 SLOT="0"
 if [ "${PV%9999}" = "${PV}" ] ; then
-	KEYWORDS="~amd64 ~x86 ~amd64-linux"
+	KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 else
 	KEYWORDS=""
 fi
@@ -55,7 +55,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--with-drivers-path=/usr/$(get_libdir)/va/drivers \
+		--with-drivers-path="${EPREFIX}/usr/$(get_libdir)/va/drivers" \
 		$(use_enable video_cards_dummy dummy-driver) \
 		$(use_enable video_cards_dummy dummy-backend) \
 		$(use_enable video_cards_intel i965-driver) \

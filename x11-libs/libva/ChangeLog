@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libva
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.23 2011/07/28 12:35:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.24 2011/07/29 01:10:12 zmedico Exp $
+
+  29 Jul 2011; Zac Medico <zmedico@gentoo.org> libva-1.0.14.ebuild,
+  libva-9999.ebuild:
+  Bump to EAPI 3, fix for prefix, and add ~x86-linux keyword.
 
 *libva-1.0.14 (28 Jul 2011)
 
