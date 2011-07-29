@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/liblrdf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.39 2011/07/29 06:47:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.40 2011/07/29 07:48:54 ssuominen Exp $
+
+  29 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> liblrdf-0.4.0-r20.ebuild,
+  +files/liblrdf-0.4.0-raptor2-pkgconfig.patch:
+  Fix missing -I/usr/include/raptor2 in lrdf.pc; as noticed when building
+  rosegarden.
 
 *liblrdf-0.4.0-r20 (29 Jul 2011)
 
