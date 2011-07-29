@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/mapnik
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.25 2011/04/11 07:05:31 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.26 2011/07/29 02:33:46 nerdboy Exp $
+
+  29 Jul 2011; Steve Arnold <nerdboy@gentoo.org> mapnik-0.7.1-r1.ebuild:
+  Updated with API doc workaround (see bug #370575) and a missing dep
+  (nothing to do with the former bug).  The API doc build has a bogus
+  dep on mod_python that's only triggered on certain boxes.  Ugh...
 
   11 Apr 2011; Steve Arnold <nerdboy@gentoo.org> mapnik-0.7.1-r1.ebuild:
   Updated for new boost 1.46 to force the older filesystem interface until

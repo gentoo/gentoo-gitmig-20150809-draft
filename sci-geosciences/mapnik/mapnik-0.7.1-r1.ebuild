@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.7.1-r1.ebuild,v 1.6 2011/04/11 07:05:31 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.7.1-r1.ebuild,v 1.7 2011/07/29 02:33:46 nerdboy Exp $
 
 EAPI=3
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="cairo curl debug doc +gdal postgres python sqlite"
+IUSE="-doc cairo curl debug +gdal postgres python sqlite"
 
 RDEPEND="dev-libs/boost
 	dev-libs/icu
@@ -29,6 +29,7 @@ RDEPEND="dev-libs/boost
 	cairo? (
 		x11-libs/cairo
 		dev-cpp/cairomm
+		python? ( dev-python/pycairo )
 	)
 	curl? ( net-misc/curl )
 	gdal? ( sci-libs/gdal )
@@ -69,6 +70,7 @@ src_configure() {
 	use cairo  || EMAKEOPTS="${EMAKEOPTS} CAIRO=false"
 	use python || EMAKEOPTS="${EMAKEOPTS} BINDINGS=none"
 	use debug  && EMAKEOPTS="${EMAKEOPTS} DEBUG=yes"
+	EMAKEOPTS="${EMAKEOPTS} DESTDIR=${D}"
 
 	use postgres && use sqlite && EMAKEOPTS="${EMAKEOPTS} PGSQL2SQLITE=yes"
 
@@ -111,10 +113,12 @@ src_compile() {
 	scons CC="$(tc-getCC)" CXX="$(tc-getCXX)" \
 		shared=1 || die "scons make failed"
 
+	# this is known to depend on mod_python and should not have a
+	# "die" after the epydoc script (see bug #370575)
 	if use doc; then
 		export PYTHONPATH="${S}/bindings/python:$(python_get_sitedir)"
 		cd docs/epydoc_config
-		./build_epydoc.sh || die "API doc generation failed"
+		./build_epydoc.sh
 		cd -
 	fi
 }
@@ -123,10 +127,10 @@ src_install() {
 	scons DESTDIR="${D}" install || die "scons install failed"
 
 	if use python ; then
-	    fperms 0755 "$(python_get_sitedir)"/mapnik/paths.py
-	    dobin utils/stats/mapdef_stats.py
-	    insinto /usr/share/doc/${PF}/examples
-	    doins utils/ogcserver/*
+		fperms 0755 "$(python_get_sitedir)"/mapnik/paths.py
+		dobin utils/stats/mapdef_stats.py
+		insinto /usr/share/doc/${PF}/examples
+		doins utils/ogcserver/*
 	fi
 
 	dodoc AUTHORS CHANGELOG README || die
@@ -135,7 +139,7 @@ src_install() {
 
 pkg_postinst() {
 	elog ""
-	elog "See the home page or the OpenStreetMap wiki for more info, and"
-	elog "the installed examples for the default mapnik ogcserver config."
+	elog "See the home page or wiki (http://trac.mapnik.org/) for more info"
+	elog "or the installed examples for the default mapnik ogcserver config."
 	elog ""
 }
