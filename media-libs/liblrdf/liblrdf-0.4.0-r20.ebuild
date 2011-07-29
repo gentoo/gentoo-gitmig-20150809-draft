@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/liblrdf-0.4.0-r20.ebuild,v 1.2 2011/07/29 07:48:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/liblrdf-0.4.0-r20.ebuild,v 1.3 2011/07/29 17:03:32 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -22,7 +22,11 @@ DEPEND="${RDEPEND}
 DOCS=( AUTHORS ChangeLog README )
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-{dontbuild-tests,raptor2{,-pkgconfig}}.patch
+	epatch \
+		"${FILESDIR}"/${P}-dontbuild-tests.patch \
+		"${FILESDIR}"/${P}-raptor2{,-pkgconfig}.patch \
+		"${FILESDIR}"/${P}-rename_clashing_md5_symbols.patch
+
 	eautoreconf
 }
 
