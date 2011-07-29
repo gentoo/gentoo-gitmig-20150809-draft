@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.74 2011/07/28 17:58:39 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.75 2011/07/29 18:56:50 scarabeus Exp $
+
+  29 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-3.4.2.3.ebuild,
+  +files/libreoffice-installed-files-permissions.patch:
+  Fix permissions of installed files to be more sane.
 
   28 Jul 2011; Mark Loeser <halcy0n@gentoo.org> libreoffice-3.4.2.3.ebuild:
   Set num_cpus to 1, and max_jobs to the jobs from MAKEOPTS, otherwise you end
