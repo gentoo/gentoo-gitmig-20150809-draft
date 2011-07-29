@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5589 2011/07/29 15:50:29 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5590 2011/07/29 19:15:08 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org> updates/3Q-2011:
+  libkmap becomes libkgeomap
 
   29 Jul 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.mask:
   Add preliminary GNOME 3 package mask, will be removed after everything is in

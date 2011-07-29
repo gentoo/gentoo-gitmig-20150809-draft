@@ -7,3 +7,4 @@ move dev-php5/pecl-apc dev-php/pecl-apc
 slotmove =dev-ruby/rack-test-0.5.7 0 0.5
 slotmove =dev-ruby/rack-test-0.6.0 0 0.6
 move dev-lang/ekopath-bin dev-lang/ekopath
+move media-libs/libkmap media-libs/libkgeomap
