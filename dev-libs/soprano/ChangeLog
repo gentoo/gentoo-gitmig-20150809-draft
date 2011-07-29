@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/soprano
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.73 2011/07/27 12:06:19 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.74 2011/07/29 06:02:31 ssuominen Exp $
+
+  29 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> soprano-2.6.0.ebuild,
+  soprano-2.6.51.ebuild:
+  Fix media-libs/raptor depend to use old SLOTs; no raptor2 support in 2.6.51
 
 *soprano-2.6.51 (27 Jul 2011)
 
