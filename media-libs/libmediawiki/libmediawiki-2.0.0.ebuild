@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediawiki/libmediawiki-2.0.0_rc.ebuild,v 1.2 2011/07/28 21:43:30 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediawiki/libmediawiki-2.0.0.ebuild,v 1.1 2011/07/29 19:17:37 dilfridge Exp $
 
 EAPI=4
 
