@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/geoip-python
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/geoip-python/ChangeLog,v 1.21 2010/09/28 21:48:48 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/geoip-python/ChangeLog,v 1.22 2011/07/29 22:45:46 bicatali Exp $
+
+*geoip-python-1.2.5 (29 Jul 2011)
+
+  29 Jul 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  +geoip-python-1.2.5.ebuild:
+  Version bump
 
   28 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -geoip-python-0.2.0.ebuild, -geoip-python-1.2.0.ebuild,
