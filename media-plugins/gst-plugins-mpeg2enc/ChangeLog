@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-mpeg2enc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mpeg2enc/ChangeLog,v 1.2 2011/04/13 09:58:28 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mpeg2enc/ChangeLog,v 1.3 2011/07/29 08:46:04 leio Exp $
+
+*gst-plugins-mpeg2enc-0.10.22 (29 Jul 2011)
+
+  29 Jul 2011; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-mpeg2enc-0.10.22.ebuild:
+  Version bump. Auto-plugging rank lowered due to issues in properties and
+  format negotiation
 
 *gst-plugins-mpeg2enc-0.10.21 (13 Apr 2011)
 
