@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.11_rc4.ebuild,v 1.1 2011/07/29 22:10:44 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.11_rc4.ebuild,v 1.2 2011/07/29 23:11:17 mattst88 Exp $
 
 EAPI=3
 
@@ -191,7 +191,7 @@ src_configure() {
 	if use egl; then
 		use shared-glapi || die "egl needs shared-glapi. Please either enable shared-glapi or disable the egl use flag ."
 		myconf+="
-			--with-egl-platforms=drm,x11
+			--with-egl-platforms=x11,drm
 			$(use_enable gallium gallium-egl)
 		"
 	fi
