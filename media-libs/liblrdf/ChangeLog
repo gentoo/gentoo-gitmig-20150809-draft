@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/liblrdf
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.38 2010/10/24 16:58:22 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.39 2011/07/29 06:47:40 ssuominen Exp $
+
+*liblrdf-0.4.0-r20 (29 Jul 2011)
+
+  29 Jul 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +liblrdf-0.4.0-r20.ebuild, +files/liblrdf-0.4.0-raptor2.patch:
+  Use raptor2 instead of raptor wrt bug #375025
 
   24 Oct 2010; Raúl Porcel <armin76@gentoo.org> liblrdf-0.4.0.ebuild:
   Drop sparc keywords
