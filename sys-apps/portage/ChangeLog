@@ -1,6 +1,20 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.857 2011/07/29 19:54:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.858 2011/07/29 20:43:07 zmedico Exp $
+
+*portage-2.2.0_alpha49 (29 Jul 2011)
+
+  29 Jul 2011; Zac Medico <zmedico@gentoo.org> -portage-2.2.0_alpha48.ebuild,
+  +portage-2.2.0_alpha49.ebuild:
+  2.2.0_alpha49 version bump. This fixes a false alarm error message about symlinks
+  to directories, produced by portage-2.2.0_alpha48.
+
+*portage-2.1.10.9 (29 Jul 2011)
+
+  29 Jul 2011; Zac Medico <zmedico@gentoo.org> -portage-2.1.10.8.ebuild,
+  +portage-2.1.10.9.ebuild:
+  2.1.10.9 version bump. This fixes a false alarm error message about symlinks
+  to directories, produced by portage-2.1.10.8.
 
 *portage-2.2.0_alpha48 (29 Jul 2011)
 
