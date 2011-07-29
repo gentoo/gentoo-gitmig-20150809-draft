@@ -1,15 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.7.1.ebuild,v 1.4 2011/05/03 07:41:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.7.1.ebuild,v 1.5 2011/07/29 11:49:33 scarabeus Exp $
 
-EAPI=4
+EAPI=3
 
 MY_P=${P}-src
 inherit base cmake-utils multilib
 
 DESCRIPTION="C++ computer vision library with emphasize on customizable algorithms and data structures"
-HOMEPAGE="http://kogs-www.informatik.uni-hamburg.de/~koethe/vigra/"
-SRC_URI="http://kogs-www.informatik.uni-hamburg.de/~koethe/vigra/${MY_P}.tar.gz"
+HOMEPAGE="http://hci.iwr.uni-heidelberg.de/vigra/"
+SRC_URI="http://hci.iwr.uni-heidelberg.de/vigra/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
@@ -18,12 +18,17 @@ IUSE="doc fftw hdf5 jpeg png test tiff"
 
 RDEPEND="
 	dev-libs/boost
+	fftw? ( >=sci-libs/fftw-3 )
+	hdf5? ( sci-libs/hdf5[-mpi] )
+	jpeg? ( virtual/jpeg )
 	png? ( media-libs/libpng )
 	tiff? ( media-libs/tiff )
-	jpeg? ( virtual/jpeg )
-	hdf5? ( sci-libs/hdf5 )
-	fftw? ( >=sci-libs/fftw-3 )"
-DEPEND="${RDEPEND}"
+"
+DEPEND="${RDEPEND}
+	doc? (
+		app-doc/doxygen
+	)
+"
 
 PATCHES=(
 	"${FILESDIR}/1.7.1-png-1.5.patch"
@@ -32,23 +37,25 @@ PATCHES=(
 	"${FILESDIR}/1.7.1-gcc4.6.patch"
 )
 
-# Tests fail because they have hardcoded dependencies on those
-# optional in source so restrict them for now.
-# Possibly could be fixed and sent upstream
+# Restrict tests due to miscompilations
 RESTRICT="test"
 
 src_configure() {
 	local libdir=$(get_libdir)
 
+	# required for ddocdir
+	_check_build_dir init
 	# vigranumpy needs python so i can't test
 	# doc needs doxygen and python
 	# walgrind no use for us since we restrict test
 	# $(cmake-utils_use_with valgrind VALGRIND)
 	local mycmakeargs=(
+		"-DDOCDIR=${CMAKE_BUILD_DIR}/doc"
 		"-DLIBDIR_SUFFIX=${libdir/lib}"
 		"-DDOCINSTALL=share/doc/${PF}"
-		"-DENABLE_DOC=OFF"
+		"-DWITH_VALGRIND=OFF"
 		"-DWITH_VIGRANUMPY=OFF"
+		$(cmake-utils_use_enable doc DOC)
 		$(cmake-utils_use_with png)
 		$(cmake-utils_use_with jpeg)
 		$(cmake-utils_use_with tiff)
@@ -60,6 +67,11 @@ src_configure() {
 	)
 
 	cmake-utils_src_configure
+}
+
+src_compile() {
+	cmake-utils_src_compile
+	use doc && cmake-utils_src_make doc
 }
 
 src_install() {
