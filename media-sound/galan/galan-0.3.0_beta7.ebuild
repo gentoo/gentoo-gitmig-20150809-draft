@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.3.0_beta7.ebuild,v 1.4 2011/03/23 17:31:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/galan-0.3.0_beta7.ebuild,v 1.5 2011/07/29 09:47:27 ssuominen Exp $
 
-EAPI=2
+EAPI=4
+inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="gAlan - Graphical Audio Language"
 HOMEPAGE="http://galan.sourceforge.net/"
@@ -27,7 +28,15 @@ RDEPEND="x11-libs/gtk+:2
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+DOCS=( AUTHORS NEWS NOTES README TODO )
+
+src_configure() {
+	# Use lrdf.pc to get -I/usr/include/raptor2 (lrdf.h -> raptor.h)
+	append-cppflags $($(tc-getPKG_CONFIG) --cflags lrdf)
+	econf --disable-static
+}
+
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
-	dodoc AUTHORS ChangeLog NEWS README TODO doc/
+	default
+	find "${D}" -name '*.la' -exec rm -f {} +
 }
