@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/mhash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/ChangeLog,v 1.57 2011/02/06 05:28:23 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/ChangeLog,v 1.58 2011/07/29 06:23:45 ssuominen Exp $
+
+  29 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> mhash-0.9.9.9.ebuild:
+  USE="static-libs" and remove unnecessary libtool archive. Missing
+  dev-lang/perl DEPEND for pod2html.
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> mhash-0.9.9.ebuild:
   Drop to ~mips
