@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.7.0.ebuild,v 1.1 2011/07/27 14:04:32 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.7.0.ebuild,v 1.2 2011/07/30 12:47:33 dilfridge Exp $
 
 EAPI=4
 
@@ -54,6 +54,7 @@ KMEXTRACTONLY="
 
 add_blocker kcontrol '<4.3.98'
 add_blocker konqueror '<4.4.70'
+add_blocker kdeaccessibility-colorschemes '<4.6.50'
 
 PATCHES=( "${FILESDIR}/${PN}-4.4.2-xinerama_cmake_automagic.patch" )
 
