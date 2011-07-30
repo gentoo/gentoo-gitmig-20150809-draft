@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.0.ebuild,v 1.1 2011/07/23 22:26:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.0.ebuild,v 1.2 2011/07/30 09:59:10 swegener Exp $
 
 EAPI=2
-inherit eutils multilib
+
+inherit eutils multilib autotools
 
 DESCRIPTION="The PowerDNS Daemon"
 SRC_URI="http://downloads.powerdns.com/releases/${P}.tar.gz"
@@ -20,9 +21,14 @@ RDEPEND="mysql? ( virtual/mysql )
 	sqlite? ( =dev-db/sqlite-2.8* )
 	sqlite3? ( =dev-db/sqlite-3* )
 	opendbx? ( dev-db/opendbx )
-	>=dev-libs/boost-1.31"
+	>=dev-libs/boost-1.34"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-lua-config.patch
+	eautoreconf
+}
 
 src_configure() {
 	local modules="pipe geo" myconf=""
@@ -45,6 +51,7 @@ src_configure() {
 		--with-pgsql-lib=/usr/$(get_libdir) \
 		--with-mysql-lib=/usr/$(get_libdir) \
 		--with-sqlite-lib=/usr/$(get_libdir) \
+		--without-lua \
 		$(use_enable static static-binaries) \
 		${myconf} \
 		|| die "econf failed"
