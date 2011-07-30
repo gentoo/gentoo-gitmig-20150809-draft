@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.12 2011/07/16 13:11:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.13 2011/07/30 15:10:34 scarabeus Exp $
 
 # @ECLASS: git-2.eclass
 # @MAINTAINER:
@@ -57,7 +57,7 @@ DEPEND="dev-vcs/git"
 # @ECLASS-VARIABLE: EGIT_DIR
 # @DESCRIPTION:
 # Directory where we want to store the git data.
-# This should not be overriden unless really required.
+# This variable should not be overriden.
 #
 # EGIT_DIR="${EGIT_STORE_DIR}/${EGIT_PROJECT}"
 
@@ -112,6 +112,12 @@ DEPEND="dev-vcs/git"
 # If non-empty this variable specifies that all checkouts will be done using
 # non bare repositories. This is useful if you can't operate with bare
 # checkouts for some reason.
+
+# @ECLASS-VARIABLE: EGIT_NOUNPACK
+# @DEFAULT_UNSET
+# @DESCRIPTION:
+# If non-empty this variable bans unpacking of ${A} content into the srcdir.
+# Default behaviour is to unpack ${A} content.
 
 # @FUNCTION: git-2_init_variables
 # @DESCRIPTION:
@@ -185,6 +191,8 @@ git-2_submodules() {
 git-2_branch() {
 	debug-print-function ${FUNCNAME} "$@"
 
+	local branchname src
+
 	debug-print "${FUNCNAME}: working in \"${EGIT_SOURCEDIR}\""
 	pushd "${EGIT_SOURCEDIR}" > /dev/null
 
@@ -198,8 +206,6 @@ git-2_branch() {
 		|| die "${FUNCNAME}: changing the branch failed"
 
 	popd > /dev/null
-
-	unset branchname src
 }
 
 # @FUNCTION: git-2_gc
@@ -208,10 +214,11 @@ git-2_branch() {
 git-2_gc() {
 	debug-print-function ${FUNCNAME} "$@"
 
+	local args
+
 	pushd "${EGIT_DIR}" > /dev/null
 	if [[ -n ${EGIT_REPACK} || -n ${EGIT_PRUNE} ]]; then
 		ebegin "Garbage collecting the repository"
-		local args
 		[[ -n ${EGIT_PRUNE} ]] && args='--prune'
 		debug-print "${FUNCNAME}: git gc ${args}"
 		git gc ${args}
@@ -281,8 +288,8 @@ git-2_initial_clone() {
 
 	EGIT_REPO_URI_SELECTED=""
 	for repo_uri in ${EGIT_REPO_URI}; do
-		debug-print "${FUNCNAME}: git clone ${EGIT_OPTIONS} \"${repo_uri}\" \"${EGIT_DIR}\""
-		git clone ${EGIT_OPTIONS} "${repo_uri}" "${EGIT_DIR}"
+		debug-print "${FUNCNAME}: git clone ${EGIT_LOCAL_OPTIONS} \"${repo_uri}\" \"${EGIT_DIR}\""
+		git clone ${EGIT_LOCAL_OPTIONS} "${repo_uri}" "${EGIT_DIR}"
 		if [[ $? -eq 0 ]]; then
 			# global variable containing the repo_name we will be using
 			debug-print "${FUNCNAME}: EGIT_REPO_URI_SELECTED=\"${repo_uri}\""
@@ -304,7 +311,7 @@ git-2_update_repo() {
 
 	local repo_uri
 
-	if [[ -n ${EGIT_NONBARE} ]]; then
+	if [[ -n ${EGIT_LOCAL_NONBARE} ]]; then
 		# checkout master branch and drop all other local branches
 		git checkout ${EGIT_MASTER} || die "${FUNCNAME}: can't checkout master branch ${EGIT_MASTER}"
 		for x in $(git branch | grep -v "* ${EGIT_MASTER}" | tr '\n' ' '); do
@@ -342,7 +349,7 @@ git-2_fetch() {
 
 	local oldsha cursha repo_type
 
-	[[ -n ${EGIT_NONBARE} ]] && repo_type="non-bare repository" || repo_type="bare repository"
+	[[ -n ${EGIT_LOCAL_NONBARE} ]] && repo_type="non-bare repository" || repo_type="bare repository"
 
 	if [[ ! -d ${EGIT_DIR} ]]; then
 		git-2_initial_clone
@@ -438,6 +445,8 @@ git-2_bootstrap() {
 # Internal function migrating between bare and normal checkout repository.
 # This is based on usage of EGIT_SUBMODULES, at least until they
 # start to work with bare checkouts sanely.
+# This function also set some global variables that differ between
+# bare and non-bare checkout.
 git-2_migrate_repository() {
 	debug-print-function ${FUNCNAME} "$@"
 
@@ -449,7 +458,11 @@ git-2_migrate_repository() {
 	else
 		target="full"
 	fi
-	[[ -n ${EGIT_NONBARE} ]] && target="full"
+	# check if user didn't specify that we want non-bare repo
+	if [[ -n ${EGIT_NONBARE} ]]; then
+		target="full"
+		EGIT_LOCAL_NONBARE="true"
+	fi
 
 	# test if we already have some repo and if so find out if we have
 	# to migrate the data
@@ -489,17 +502,38 @@ git-2_migrate_repository() {
 	# set various options to work with both targets
 	if [[ ${target} == bare ]]; then
 		debug-print "${FUNCNAME}: working in bare repository for \"${EGIT_DIR}\""
-		EGIT_OPTIONS+=" --bare"
+		EGIT_LOCAL_OPTIONS+="${EGIT_OPTIONS} --bare"
 		MOVE_COMMAND="git clone -l -s -n ${EGIT_DIR// /\\ }"
 		EGIT_UPDATE_CMD="git fetch -t -f -u origin ${EGIT_BRANCH}:${EGIT_BRANCH}"
 		UPSTREAM_BRANCH="${EGIT_BRANCH}"
 	else
 		debug-print "${FUNCNAME}: working in bare repository for non-bare \"${EGIT_DIR}\""
 		MOVE_COMMAND="cp -pPR ."
+		EGIT_LOCAL_OPTIONS="${EGIT_OPTIONS}"
 		EGIT_UPDATE_CMD="git pull -f -u ${EGIT_OPTIONS}"
 		UPSTREAM_BRANCH="origin/${EGIT_BRANCH}"
-		EGIT_NONBARE="true"
+		EGIT_LOCAL_NONBARE="true"
 	fi
+}
+
+# @FUNCTION: git-2_cleanup
+# @DESCRIPTION:
+# Internal function cleaning up all the global variables
+# that are not required after the unpack has been done.
+git-2_cleanup() {
+	debug-print-function ${FUNCNAME} "$@"
+
+	# Here we can unset only variables that are GLOBAL
+	# defined by the eclass, BUT NOT subject to change
+	# by user (like EGIT_PROJECT).
+	# If ebuild writer polutes his environment it is
+	# his problem only.
+	unset EGIT_DIR
+	unset MOVE_COMMAND
+	unset EGIT_LOCAL_OPTIONS
+	unset EGIT_UPDATE_CMD
+	unset UPSTREAM_BRANCH
+	unset EGIT_LOCAL_NONBARE
 }
 
 # @FUNCTION: git-2_src_unpack
@@ -517,13 +551,16 @@ git-2_src_unpack() {
 	git-2_move_source
 	git-2_branch
 	git-2_bootstrap
+	git-2_cleanup
 	echo ">>> Unpacked to ${EGIT_SOURCEDIR}"
 
 	# Users can specify some SRC_URI and we should
 	# unpack the files too.
-	if has ${EAPI:-0} 0 1; then
-		[[ -n ${A} ]] && unpack ${A}
-	else
-		default_src_unpack
+	if [[ -z ${EGIT_NOUNPACK} ]]; then
+		if has ${EAPI:-0} 0 1; then
+			[[ -n ${A} ]] && unpack ${A}
+		else
+			default_src_unpack
+		fi
 	fi
 }
