@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/pdns
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.68 2011/07/30 09:59:10 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.69 2011/07/30 12:58:36 swegener Exp $
+
+  30 Jul 2011; Sven Wegener <swegener@gentoo.org>
+  files/pdns-3.0-lua-config.patch:
+  Explicitly check for pkg-config.
 
   30 Jul 2011; Sven Wegener <swegener@gentoo.org> pdns-3.0.ebuild,
   +files/pdns-3.0-lua-config.patch:

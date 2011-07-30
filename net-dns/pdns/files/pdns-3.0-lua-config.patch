@@ -2,7 +2,15 @@ Index: configure.ac
 ===================================================================
 --- configure.ac	(revision 2250)
 +++ configure.ac	(working copy)
-@@ -26,7 +26,7 @@
+@@ -16,6 +16,7 @@
+ AC_PROG_MAKE_SET
+ AC_PROG_LIBTOOL 
+ AC_LANG_CPLUSPLUS
++PKG_PROG_PKG_CONFIG
+ 
+ BOOST_REQUIRE([1.34])
+ BOOST_FOREACH
+@@ -26,7 +27,7 @@
  
  dnl Check for lua
  AC_MSG_CHECKING(if with lua)
