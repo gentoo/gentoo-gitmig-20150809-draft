@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/chameleon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chameleon/ChangeLog,v 1.1 2011/07/29 23:59:01 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chameleon/ChangeLog,v 1.2 2011/07/30 00:26:24 rafaelmartins Exp $
+
+*chameleon-2.2-r1 (30 Jul 2011)
+
+  30 Jul 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  -chameleon-2.2.ebuild, +chameleon-2.2-r1.ebuild:
+  Improved test handling. Removed tests dependencies, they are just needed for
+  benchmarks, that we don't support for now.
 
 *chameleon-2.2 (29 Jul 2011)
 
