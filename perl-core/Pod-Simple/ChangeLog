@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/Pod-Simple
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Pod-Simple/ChangeLog,v 1.28 2011/07/17 08:44:17 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Pod-Simple/ChangeLog,v 1.29 2011/07/30 12:23:01 tove Exp $
+
+  30 Jul 2011; Torsten Veller <tove@gentoo.org> Pod-Simple-3.14.ebuild,
+  Pod-Simple-3.15.ebuild, Pod-Simple-3.160.0.ebuild, Pod-Simple-3.170.0.ebuild,
+  Pod-Simple-3.180.0.ebuild:
+  Drop ~sparc-fbsd KEYWORD
 
 *Pod-Simple-3.180.0 (17 Jul 2011)
 
