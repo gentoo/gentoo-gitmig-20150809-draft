@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-xvid
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-xvid/ChangeLog,v 1.10 2011/05/23 14:59:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-xvid/ChangeLog,v 1.11 2011/07/30 19:55:20 leio Exp $
+
+*gst-plugins-xvid-0.10.22 (30 Jul 2011)
+
+  30 Jul 2011; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-xvid-0.10.22.ebuild:
+  Version bump. Assorted bug fixes
 
   23 May 2011; Markos Chandras <hwoarang@gentoo.org>
   gst-plugins-xvid-0.10.21.ebuild:
