@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari-data/pari-data-20110727.ebuild,v 1.1 2011/07/27 19:03:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari-data/pari-data-20110727.ebuild,v 1.2 2011/07/30 13:49:47 bicatali Exp $
 
 EAPI="4"
 
@@ -16,8 +16,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-macos ~x86-solaris"
 IUSE=""
 
-RDEPEND=""
-DEPEND=""
+RDEPEND="!<sci-libs/pari-2.5.0-r1"
+DEPEND="${RDEPEND}"
 S="${WORKDIR}"
 
 src_install() {
