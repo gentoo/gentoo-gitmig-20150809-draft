@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xkeyboard-config
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.134 2011/07/15 17:02:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.135 2011/07/30 02:44:37 mattst88 Exp $
+
+  30 Jul 2011; Matt Turner <mattst88@gentoo.org> xkeyboard-config-2.1.ebuild,
+  xkeyboard-config-2.2.1-r1.ebuild, xkeyboard-config-2.3.ebuild:
+  Update xkbcomp dependency to >=1.2.1. Bug 375547.
 
   15 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   xkeyboard-config-2.2.1-r1.ebuild:
