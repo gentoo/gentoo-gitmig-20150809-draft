@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.601 2011/07/29 10:54:14 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.602 2011/07/30 10:57:53 armin76 Exp $
+
+  30 Jul 2011; Raúl Porcel <armin76@gentoo.org> xorg-server-1.10.2.ebuild:
+  alpha/ia64/sh/sparc stable wrt #371857
 
   29 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   xorg-server-1.10.2.ebuild:
