@@ -1,6 +1,10 @@
 # ChangeLog for virtual/linux-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/ChangeLog,v 1.4 2011/07/26 13:16:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/ChangeLog,v 1.5 2011/07/30 09:27:18 blueness Exp $
+
+  30 Jul 2011; Anthony G. Basile <blueness@gentoo.org>
+  linux-sources-2.6.ebuild:
+  Remove hardened use flag, bug #375873
 
   26 Jul 2011; Ulrich Mueller <ulm@gentoo.org> linux-sources-2.6.ebuild,
   -linux-sources-3.ebuild, metadata.xml:
