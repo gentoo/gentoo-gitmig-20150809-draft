@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/varnish
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.35 2011/07/20 17:40:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.36 2011/07/30 22:27:28 patrick Exp $
+
+*varnish-3.0.0 (30 Jul 2011)
+
+  30 Jul 2011; Patrick Lauer <patrick@gentoo.org> +varnish-3.0.0.ebuild:
+  Bump for #372281
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #118937
