@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/sdl-mixer
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.81 2010/07/27 05:25:15 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.82 2011/07/30 17:03:27 mr_bones_ Exp $
+
+  30 Jul 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  sdl-mixer-1.2.11-r1.ebuild, +files/sdl-mixer-1.2.11-multilib.patch:
+  add multilib patch from Nathan Phillip (bug #376717)
 
   27 Jul 2010; Michael Sterrett <mr_bones_@gentoo.org>
   sdl-mixer-1.2.11-r1.ebuild:
