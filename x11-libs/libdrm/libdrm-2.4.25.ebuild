@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/libdrm-2.4.25.ebuild,v 1.9 2011/07/15 16:58:42 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/libdrm-2.4.25.ebuild,v 1.10 2011/07/30 02:22:42 mattst88 Exp $
 
 EAPI=4
 inherit xorg-2
@@ -24,7 +24,8 @@ done
 IUSE="${IUSE_VIDEO_CARDS} +libkms"
 RESTRICT="test" # see bug #236845
 
-RDEPEND="dev-libs/libpthread-stubs"
+RDEPEND="dev-libs/libpthread-stubs
+	video_cards_intel? ( >=x11-libs/libpciaccess-0.10 )"
 DEPEND="${RDEPEND}
 	>=x11-libs/libpciaccess-0.10"
 
