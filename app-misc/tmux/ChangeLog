@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/tmux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.64 2011/07/13 09:20:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.65 2011/07/30 11:58:51 grobian Exp $
+
+  30 Jul 2011; Fabian Groffen <grobian@gentoo.org> tmux-1.5.ebuild,
+  +files/tmux-1.5-darwin.patch, tmux-9999.ebuild:
+  Fix for Darwin (bug #376045) and Prefix
 
 *tmux-1.5 (13 Jul 2011)
 

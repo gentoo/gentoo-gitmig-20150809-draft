@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-9999.ebuild,v 1.4 2011/06/02 18:06:50 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-9999.ebuild,v 1.5 2011/07/30 11:58:51 grobian Exp $
 
 EAPI=3
 
@@ -30,6 +30,10 @@ S="${WORKDIR}"/${PN}
 
 src_prepare() {
 	eautoreconf
+	# look for config file in the prefix
+	sed -i -e '/SYSTEM_CFG/s:"/etc:"'"${EPREFIX}"'/etc:' tmux.h || die
+	# and don't just add some includes
+	sed -i -e 's:-I/usr/local/include::' Makefile.in || die
 }
 
 src_configure() {

@@ -1,0 +1,78 @@
+http://sourceforge.net/tracker/?func=detail&aid=3376684&group_id=200378&atid=973262
+
+
+--- configure.ac
++++ configure.ac
+@@ -124,6 +124,7 @@
+ # Look for networking libraries.
+ AC_SEARCH_LIBS(b64_ntop, resolv)
+ AC_SEARCH_LIBS(__b64_ntop, resolv)
++AC_SEARCH_LIBS(res_9_b64_ntop, resolv)
+ AC_SEARCH_LIBS(inet_ntoa, nsl)
+ AC_SEARCH_LIBS(socket, socket)
+ AC_CHECK_LIB(xnet, socket)
+--- configure
++++ configure
+@@ -4718,6 +4718,62 @@
+ 
+ fi
+ 
++{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for library containing res_9_b64_ntop" >&5
++$as_echo_n "checking for library containing res_9_b64_ntop... " >&6; }
++if test "${ac_cv_search_res_9_b64_ntop+set}" = set; then :
++  $as_echo_n "(cached) " >&6
++else
++  ac_func_search_save_LIBS=$LIBS
++cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
++
++/* Override any GCC internal prototype to avoid an error.
++   Use char because int might match the return type of a GCC
++   builtin and then its argument prototype would still apply.  */
++#ifdef __cplusplus
++extern "C"
++#endif
++char res_9_b64_ntop ();
++int
++main ()
++{
++return res_9_b64_ntop ();
++  ;
++  return 0;
++}
++_ACEOF
++for ac_lib in '' resolv; do
++  if test -z "$ac_lib"; then
++    ac_res="none required"
++  else
++    ac_res=-l$ac_lib
++    LIBS="-l$ac_lib  $ac_func_search_save_LIBS"
++  fi
++  if ac_fn_c_try_link "$LINENO"; then :
++  ac_cv_search_res_9_b64_ntop=$ac_res
++fi
++rm -f core conftest.err conftest.$ac_objext \
++    conftest$ac_exeext
++  if test "${ac_cv_search_res_9_b64_ntop+set}" = set; then :
++  break
++fi
++done
++if test "${ac_cv_search_res_9_b64_ntop+set}" = set; then :
++
++else
++  ac_cv_search_res_9_b64_ntop=no
++fi
++rm conftest.$ac_ext
++LIBS=$ac_func_search_save_LIBS
++fi
++{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_search_res_9_b64_ntop" >&5
++$as_echo "$ac_cv_search_res_9_b64_ntop" >&6; }
++ac_res=$ac_cv_search_res_9_b64_ntop
++if test "$ac_res" != no; then :
++  test "$ac_res" = "none required" || LIBS="$ac_res $LIBS"
++
++fi
++
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for library containing inet_ntoa" >&5
+ $as_echo_n "checking for library containing inet_ntoa... " >&6; }
+ if test "${ac_cv_search_inet_ntoa+set}" = set; then :

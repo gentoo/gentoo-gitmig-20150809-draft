@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-1.5.ebuild,v 1.1 2011/07/13 09:20:03 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/tmux-1.5.ebuild,v 1.2 2011/07/30 11:58:51 grobian Exp $
 
 EAPI=4
+
+inherit eutils autotools
 
 DESCRIPTION="Terminal multiplexer"
 HOMEPAGE="http://tmux.sourceforge.net"
@@ -39,6 +41,15 @@ pkg_setup() {
 		ewarn "to temporarily downgrade to tmux 1.2 to access them."
 		echo
 	fi
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-darwin.patch  # drop on next release
+	eautoreconf  # for darwin patch
+	# look for config file in the prefix
+	sed -i -e '/SYSTEM_CFG/s:"/etc:"'"${EPREFIX}"'/etc:' tmux.h || die
+	# and don't just add some includes
+	sed -i -e 's:-I/usr/local/include::' Makefile.in || die
 }
 
 src_install() {
