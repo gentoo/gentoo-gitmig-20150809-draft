@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/pmacct
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/ChangeLog,v 1.73 2010/12/29 16:57:29 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/ChangeLog,v 1.74 2011/07/30 21:07:54 patrick Exp $
+
+*pmacct-0.12.5-r1 (30 Jul 2011)
+
+  30 Jul 2011; Patrick Lauer <patrick@gentoo.org> +pmacct-0.12.5-r1.ebuild:
+  Config file location fix for #354649
 
 *pmacct-0.12.5 (29 Dec 2010)
 
