@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/translationstring
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/translationstring/ChangeLog,v 1.1 2011/07/30 00:41:22 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/translationstring/ChangeLog,v 1.2 2011/07/30 00:47:27 rafaelmartins Exp $
+
+  30 Jul 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  translationstring-0.3.ebuild:
+  Re-added missing USE flag: test
 
 *translationstring-0.3 (30 Jul 2011)
 

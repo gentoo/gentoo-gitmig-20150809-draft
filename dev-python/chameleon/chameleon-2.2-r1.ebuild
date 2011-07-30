@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chameleon/chameleon-2.2-r1.ebuild,v 1.1 2011/07/30 00:26:24 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chameleon/chameleon-2.2-r1.ebuild,v 1.2 2011/07/30 00:45:12 rafaelmartins Exp $
 
 EAPI=3
 
@@ -21,7 +21,7 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="repoze"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc"
+IUSE="doc test"
 
 DEPEND="doc? ( dev-python/sphinx )"
 RDEPEND=""

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/translationstring/translationstring-0.3.ebuild,v 1.1 2011/07/30 00:41:22 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/translationstring/translationstring-0.3.ebuild,v 1.2 2011/07/30 00:47:27 rafaelmartins Exp $
 
 EAPI=3
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 LICENSE="repoze"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc"
+IUSE="doc test"
 
 src_compile() {
 	distutils_src_compile
