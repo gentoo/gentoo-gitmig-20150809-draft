@@ -1,6 +1,16 @@
 # ChangeLog for dev-db/mysql-connector-c++
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-connector-c++/ChangeLog,v 1.4 2010/03/25 18:59:39 robbat2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-connector-c++/ChangeLog,v 1.5 2011/07/30 12:20:51 scarabeus Exp $
+
+*mysql-connector-c++-1.1.0 (30 Jul 2011)
+
+  30 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -mysql-connector-c++-1.1.0_pre814.ebuild, +mysql-connector-c++-1.1.0.ebuild,
+  +files/mysql-connector-c++-1.1.0-disable-tests.patch,
+  +files/mysql-connector-c++-1.1.0-fix-cmake.patch,
+  -files/mysql-connector-c++-1.1.0_pre814-libdir.patch:
+  Version bump to 1.1.0 ebuild and cmake patch from Jorge (jmbsvicetto) updated
+  by me to not cause any error. Tested and confirmed working with libreoffice.
 
   25 Mar 2010; Robin H. Johnson <robbat2@gentoo.org>
   mysql-connector-c++-1.1.0_pre814.ebuild:
