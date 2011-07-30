@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-aiptek
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-aiptek/ChangeLog,v 1.65 2011/07/29 10:48:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-aiptek/ChangeLog,v 1.66 2011/07/30 10:45:18 armin76 Exp $
+
+  30 Jul 2011; Raúl Porcel <armin76@gentoo.org>
+  xf86-input-aiptek-1.4.0.ebuild:
+  alpha/ia64/sh/sparc stable wrt #371857
 
   29 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   xf86-input-aiptek-1.4.0.ebuild:

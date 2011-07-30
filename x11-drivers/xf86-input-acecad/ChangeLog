@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-acecad
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-acecad/ChangeLog,v 1.72 2011/07/29 10:47:59 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-acecad/ChangeLog,v 1.73 2011/07/30 10:43:56 armin76 Exp $
+
+  30 Jul 2011; Raúl Porcel <armin76@gentoo.org>
+  xf86-input-acecad-1.5.0.ebuild:
+  alpha/ia64/sh/sparc stable wrt #371857
 
   29 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   xf86-input-acecad-1.5.0.ebuild:
