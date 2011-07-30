@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.155 2011/07/29 10:46:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.156 2011/07/30 10:48:00 armin76 Exp $
+
+  30 Jul 2011; Raúl Porcel <armin76@gentoo.org> xf86-video-ati-6.14.2.ebuild:
+  alpha/ia64/sparc stable wrt #371857
 
   29 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   xf86-video-ati-6.14.2.ebuild:
