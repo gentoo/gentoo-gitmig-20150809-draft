@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/lightspark
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.33 2011/07/27 15:36:37 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/lightspark/ChangeLog,v 1.34 2011/07/30 21:08:42 chithanh Exp $
+
+  30 Jul 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  lightspark-0.5.0.ebuild:
+  Drop non-functional openal support, bug #377005.
 
 *lightspark-0.5.0 (27 Jul 2011)
 
