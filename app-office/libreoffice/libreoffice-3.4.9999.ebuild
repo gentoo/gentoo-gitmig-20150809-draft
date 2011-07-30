@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.12 2011/07/30 15:16:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999.ebuild,v 1.1 2011/07/30 15:16:28 scarabeus Exp $
 
 EAPI=3
 
@@ -234,7 +234,6 @@ PATCHES=(
 	"${FILESDIR}/${PN}-vbaobj-visibility-fix.patch"
 	"${FILESDIR}/${PN}-solenv-build-crash.patch"
 	"${FILESDIR}/${PN}-as-needed-gtk.patch"
-	"${FILESDIR}/${PN}-fix-sandbox-install.patch"
 	"${FILESDIR}/${PN}-translate-toolkit-parallel-solenv.patch"
 	"${FILESDIR}/${PN}-gbuild-use-cxxflags.patch"
 	"${FILESDIR}/${PN}-installed-files-permissions.patch"
