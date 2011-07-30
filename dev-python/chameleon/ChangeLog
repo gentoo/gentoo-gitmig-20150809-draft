@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/chameleon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chameleon/ChangeLog,v 1.3 2011/07/30 00:45:12 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chameleon/ChangeLog,v 1.4 2011/07/30 01:04:26 rafaelmartins Exp $
+
+  30 Jul 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  chameleon-2.2-r1.ebuild:
+  Added setuptools dependency.
 
   30 Jul 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
   chameleon-2.2-r1.ebuild:
