@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-<email>maintainer-needed@gentoo.org</email>
-</maintainer>
-<longdescription lang="en">OpenNTPD is a FREE, easy to use implementation of the
-Network Time Protocol. It provides the ability to sync the local clock to remote
-NTP servers and can act as NTP server itself, redistributing the local clock.
-</longdescription>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>nelchael@gentoo.org</email>
+		<name>Krzysztof Pawlik</name>
+	</maintainer>
+	<longdescription lang="en">
+		OpenNTPD is a FREE, easy to use implementation of the Network Time
+		Protocol. It provides the ability to sync the local clock to remote
+		NTP servers and can act as NTP server itself, redistributing the
+		local clock.
+	</longdescription>
 </pkgmetadata>
