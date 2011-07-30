@@ -14,11 +14,6 @@
 		<description>Please CC on all bugs</description>
 	</maintainer>
 	<use>
-		<!-- flashrom 0.9.2 only -->
-		<flag name="buspiratespi">Enable Bus Pirate SPI programmer</flag>
-		<flag name="ftdi">Enable ftdi programmer, flashing through FTDI/SPI USB interface</flag>
-		<flag name="nvidia">Enable NVIDIA programmer</flag>
-
 		<flag name="atahpt">Highpoint (HPT) ATA/RAID controller support</flag>
 		<flag name="bitbang_spi">Bitbanging SPI infrastructure</flag>
 		<flag name="buspirate_spi">Enable Bus Pirate SPI programmer</flag>
@@ -29,11 +24,14 @@
 		<flag name="gfxnvidia">Enable NVIDIA programmer</flag>
 		<flag name="internal">Enable internal/onboard support</flag>
 		<flag name="nic3com">Enable 3Com NIC programmer</flag>
+		<flag name="nicintel">Support for Intel NICs</flag>
 		<flag name="nicintel_spi">Support for SPI on Intel NICs</flag>
 		<flag name="nicnatsemi">Support for National Semiconductor NICs</flag>
 		<flag name="nicrealtek">Support for Realtek NICs</flag>
+		<flag name="ogp_spi">Enable support for OGP (Open Graphics Project) SPI flashing</flag>
 		<flag name="rayer_spi">RayeR SPIPGM hardware support</flag>
 		<flag name="satasii">Enable programmer for SiI SATA controllers</flag>
+		<flag name="satamv">Enable programmer for Marvell SATA controllers</flag>
 		<flag name="serprog">Enable Serial Flasher programmer</flag>
 		<flag name="wiki">Enable wiki informations, like supported devices etc.</flag>
 	</use>
