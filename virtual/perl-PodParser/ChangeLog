@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-PodParser
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-PodParser/ChangeLog,v 1.47 2011/06/18 20:20:47 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-PodParser/ChangeLog,v 1.48 2011/07/30 11:58:48 tove Exp $
+
+  30 Jul 2011; Torsten Veller <tove@gentoo.org>
+  perl-PodParser-1.380.0-r2.ebuild:
+  Drop ~sparc-fbsd KEYWORD
 
 *perl-PodParser-1.380.0-r2 (18 Jun 2011)
 

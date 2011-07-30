@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Time-Piece
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Piece/ChangeLog,v 1.20 2011/04/24 15:28:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Piece/ChangeLog,v 1.21 2011/07/30 12:04:56 tove Exp $
+
+  30 Jul 2011; Torsten Veller <tove@gentoo.org> perl-Time-Piece-1.15.ebuild,
+  perl-Time-Piece-1.20.ebuild:
+  Drop ~sparc-fbsd KEYWORD
 
   24 Apr 2011; Fabian Groffen <grobian@gentoo.org> perl-Time-Piece-1.20.ebuild:
   Marked ~x86-solaris, bug #296509

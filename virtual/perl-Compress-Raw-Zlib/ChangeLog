@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Compress-Raw-Zlib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Compress-Raw-Zlib/ChangeLog,v 1.47 2011/06/28 19:55:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Compress-Raw-Zlib/ChangeLog,v 1.48 2011/07/30 11:45:28 tove Exp $
+
+  30 Jul 2011; Torsten Veller <tove@gentoo.org>
+  perl-Compress-Raw-Zlib-2.024.ebuild, perl-Compress-Raw-Zlib-2.33.ebuild,
+  perl-Compress-Raw-Zlib-2.35.0.ebuild, perl-Compress-Raw-Zlib-2.36.0.ebuild,
+  perl-Compress-Raw-Zlib-2.37.0.ebuild:
+  Drop ~sparc-fbsd KEYWORD
 
   28 Jun 2011; Torsten Veller <tove@gentoo.org>
   perl-Compress-Raw-Zlib-2.024.ebuild:
