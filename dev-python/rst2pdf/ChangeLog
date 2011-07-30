@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/rst2pdf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.15 2011/01/15 18:13:56 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rst2pdf/ChangeLog,v 1.16 2011/07/30 04:39:42 rafaelmartins Exp $
+
+*rst2pdf-0.16-r1 (30 Jul 2011)
+
+  30 Jul 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +rst2pdf-0.16-r1.ebuild, +files/rst2pdf-0.16_docutils-0.8.patch:
+  Revision bump. Fixed runtime errors when using >=docutils-0.8 (bug #369943).
 
   15 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -rst2pdf-0.15.ebuild:
