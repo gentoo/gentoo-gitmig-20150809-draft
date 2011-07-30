@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999.ebuild,v 1.1 2011/07/30 15:16:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999.ebuild,v 1.2 2011/07/30 17:03:07 scarabeus Exp $
 
 EAPI=3
 
@@ -349,8 +349,6 @@ src_unpack() {
 }
 
 src_prepare() {
-	eprefixify "${T}"/wrapper.in
-
 	strip-linguas ${LANGUAGES}
 	LINGUAS_OOO=$(echo ${LINGUAS} | sed -e 's/\ben\b/en_US/;s/_/-/g')
 
