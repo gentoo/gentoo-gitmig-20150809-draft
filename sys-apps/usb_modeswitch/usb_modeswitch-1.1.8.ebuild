@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/usb_modeswitch-1.1.6.ebuild,v 1.1 2011/02/12 18:15:49 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/usb_modeswitch-1.1.8.ebuild,v 1.1 2011/07/30 23:01:20 rafaelmartins Exp $
 
-EAPI="2"
+EAPI="4"
 inherit multilib toolchain-funcs
 
 MY_PN="${PN/_/-}"
 MY_P="${MY_PN}-${PV}"
-DATA_VER="20101222"
+DATA_VER="20110714"
 
 DESCRIPTION="USB_ModeSwitch is a tool for controlling 'flip flop' (multiple devices) USB gear like UMTS sticks"
 HOMEPAGE="http://www.draisberghof.de/usb_modeswitch/"
@@ -25,15 +25,18 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
+src_prepare() {
+	sed -i -e 's/-s //' Makefile || die 'sed failed.'
+}
+
 src_compile() {
-	emake CC="$(tc-getCC)" || die
+	emake CC="$(tc-getCC)"
 }
 
 src_install() {
 	local udevdir="${D}/$(get_libdir)/udev"
-	emake DESTDIR="${D}" UDEVDIR="${udevdir}" install || die
+	emake DESTDIR="${D}" UDEVDIR="${udevdir}" install
 
 	cd ../"${MY_PN}-data-${DATA_VER}"
-	emake DESTDIR="${D}" RULESDIR="${udevdir}/rules.d" files-install db-install \
-		|| die 'emake install failed.d'
+	emake DESTDIR="${D}" RULESDIR="${udevdir}/rules.d" files-install db-install
 }
