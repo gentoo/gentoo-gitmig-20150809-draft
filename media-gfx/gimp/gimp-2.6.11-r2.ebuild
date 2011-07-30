@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.6.11-r2.ebuild,v 1.1 2011/04/19 20:08:45 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.6.11-r2.ebuild,v 1.2 2011/07/30 16:03:01 angelos Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -93,6 +93,10 @@ src_prepare() {
 	# fixes for libpng 1.5 (incomplete), see
 	# https://bugzilla.gnome.org/show_bug.cgi?id=640409
 	epatch "${FILESDIR}"/gimp-libpng15-v2.diff
+
+	# don't use empty, removed header
+	# https://bugs.gentoo.org/show_bug.cgi?id=377075
+	epatch "${FILESDIR}"/gimp-curl-headers.diff
 
 	echo '#!/bin/sh' > py-compile
 	gnome2_src_prepare
