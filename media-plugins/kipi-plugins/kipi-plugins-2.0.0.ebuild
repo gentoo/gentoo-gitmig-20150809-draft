@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-2.0.0.ebuild,v 1.1 2011/07/29 19:20:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-2.0.0.ebuild,v 1.2 2011/07/30 12:14:01 dilfridge Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ LICENSE="GPL-2
 	handbook? ( FDL-1.2 )"
 KEYWORDS="~amd64 ~x86"
 SLOT="4"
-IUSE="cdr calendar crypt debug expoblending handbook +imagemagick ipod mjpeg redeyes scanner"
+IUSE="cdr calendar crypt debug expoblending gpssync handbook +imagemagick ipod +mediawiki mjpeg redeyes scanner"
 
 DEPEND="
 	$(add_kdebase_dep libkipi)
@@ -35,8 +35,8 @@ DEPEND="
 	dev-libs/libxml2
 	dev-libs/libxslt
 	dev-libs/qjson
-	>=media-libs/libkgeomap-${PV}
-	>=media-libs/libmediawiki-${PV}
+	gpssync?	( >=media-libs/libkgeomap-${PV} )
+	mediawiki?	( >=media-libs/libmediawiki-${PV} )
 	media-libs/libpng
 	media-libs/tiff
 	virtual/jpeg
@@ -91,6 +91,8 @@ src_configure() {
 		$(cmake-utils_use_with ipod Gdk)
 		$(cmake-utils_use_with ipod Gpod)
 		$(cmake-utils_use_with calendar KdepimLibs)
+		$(cmake-utils_use_with mediawiki Mediawiki)
+		$(cmake-utils_use_with gpssync KGeoMap)
 		$(cmake-utils_use_with redeyes OpenCV)
 		$(cmake-utils_use_with opengl OpenGL)
 		$(cmake-utils_use_with crypt QCA2)
