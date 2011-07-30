@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/man-pages-pl-20070628-r1.ebuild,v 1.1 2011/07/30 17:08:55 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/man-pages-pl-20070628-r1.ebuild,v 1.2 2011/07/30 21:18:05 nelchael Exp $
 
 inherit autotools
 
@@ -33,7 +33,7 @@ src_unpack() {
 	# bug #375623:
 	mans="${mans} manpath.5 catman.8 mandb.8 zsoelim.1 manpath.1"
 	for page in ${mans} ; do
-		sed -i -e "/\\t${page}/ d" man${page: -1}/Makefile.am
+		sed -i -e "/\\t${page}/d; \$s,\\\,,;" man${page: -1}/Makefile.am
 	done
 
 	eautoreconf || die

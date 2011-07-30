@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/man-pages-pl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/ChangeLog,v 1.14 2011/07/30 17:08:55 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-pl/ChangeLog,v 1.15 2011/07/30 21:18:05 nelchael Exp $
+
+  30 Jul 2011; Krzysztof Pawlik <nelchael@gentoo.org>
+  man-pages-pl-20070628-r1.ebuild:
+  Modify sed expression to remove trailing slash on last line, this was causing
+  automake error.
 
 *man-pages-pl-20070628-r1 (30 Jul 2011)
 
