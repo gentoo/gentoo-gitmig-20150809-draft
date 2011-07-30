@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Data-ObjectDriver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-ObjectDriver/ChangeLog,v 1.14 2011/03/18 06:46:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-ObjectDriver/ChangeLog,v 1.15 2011/07/30 08:39:24 tove Exp $
+
+  30 Jul 2011; Torsten Veller <tove@gentoo.org> -Data-ObjectDriver-0.80.ebuild:
+  Cleanup
 
 *Data-ObjectDriver-0.90.0 (18 Mar 2011)
 

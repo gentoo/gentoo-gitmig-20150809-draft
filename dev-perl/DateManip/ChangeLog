@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateManip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/ChangeLog,v 1.75 2011/07/07 23:31:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/ChangeLog,v 1.76 2011/07/30 08:37:26 tove Exp $
+
+  30 Jul 2011; Torsten Veller <tove@gentoo.org> -DateManip-6.210.ebuild,
+  -DateManip-6.220.0.ebuild, -DateManip-6.230.0.ebuild:
+  Cleanup
 
   07 Jul 2011; Alexis Ballier <aballier@gentoo.org> DateManip-6.240.0.ebuild:
   keyword ~x86-fbsd, bug #341969

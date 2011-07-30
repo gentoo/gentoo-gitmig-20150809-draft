@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Devel-Declare
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Declare/ChangeLog,v 1.14 2011/07/09 07:48:10 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Declare/ChangeLog,v 1.15 2011/07/30 08:29:07 tove Exp $
+
+  30 Jul 2011; Torsten Veller <tove@gentoo.org> -Devel-Declare-0.6.1.ebuild,
+  -Devel-Declare-0.6.2.ebuild, -Devel-Declare-0.6.3.ebuild,
+  -Devel-Declare-0.6.4.ebuild:
+  Cleanup
 
 *Devel-Declare-0.6.5 (09 Jul 2011)
 

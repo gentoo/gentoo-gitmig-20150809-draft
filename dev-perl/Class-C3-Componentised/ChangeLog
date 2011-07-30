@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Class-C3-Componentised
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-C3-Componentised/ChangeLog,v 1.9 2011/03/20 07:40:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-C3-Componentised/ChangeLog,v 1.10 2011/07/30 08:52:27 tove Exp $
+
+  30 Jul 2011; Torsten Veller <tove@gentoo.org>
+  -Class-C3-Componentised-1.0.600.ebuild,
+  -Class-C3-Componentised-1.0.800.ebuild:
+  Cleanup
 
 *Class-C3-Componentised-1.0.900 (20 Mar 2011)
 

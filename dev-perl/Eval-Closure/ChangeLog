@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Eval-Closure
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eval-Closure/ChangeLog,v 1.4 2011/06/06 17:21:49 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eval-Closure/ChangeLog,v 1.5 2011/07/30 08:23:23 tove Exp $
+
+  30 Jul 2011; Torsten Veller <tove@gentoo.org> -Eval-Closure-0.30.0.ebuild,
+  -Eval-Closure-0.40.0.ebuild, -Eval-Closure-0.50.0.ebuild:
+  Cleanup
 
 *Eval-Closure-0.60.0 (06 Jun 2011)
 

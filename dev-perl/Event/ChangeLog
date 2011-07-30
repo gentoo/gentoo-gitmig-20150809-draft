@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Event
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.73 2011/07/25 09:11:14 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.74 2011/07/30 08:22:34 tove Exp $
+
+  30 Jul 2011; Torsten Veller <tove@gentoo.org> -Event-1.13.ebuild,
+  -Event-1.150.0.ebuild, -Event-1.170.0.ebuild, -Event-1.180.0.ebuild:
+  Cleanup
 
 *Event-1.190.0 (25 Jul 2011)
 

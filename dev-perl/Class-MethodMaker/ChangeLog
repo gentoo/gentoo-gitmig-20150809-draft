@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-MethodMaker
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MethodMaker/ChangeLog,v 1.75 2011/05/16 12:54:36 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MethodMaker/ChangeLog,v 1.76 2011/07/30 08:51:33 tove Exp $
+
+  30 Jul 2011; Torsten Veller <tove@gentoo.org>
+  -Class-MethodMaker-2.170.0.ebuild:
+  Cleanup
 
 *Class-MethodMaker-2.180.0 (16 May 2011)
 
