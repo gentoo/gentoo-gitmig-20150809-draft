@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/B-Utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Utils/ChangeLog,v 1.10 2011/04/19 17:00:01 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Utils/ChangeLog,v 1.11 2011/07/30 09:14:39 tove Exp $
+
+  30 Jul 2011; Torsten Veller <tove@gentoo.org> -B-Utils-0.140.0.ebuild:
+  Cleanup
 
 *B-Utils-0.150.0 (19 Apr 2011)
 

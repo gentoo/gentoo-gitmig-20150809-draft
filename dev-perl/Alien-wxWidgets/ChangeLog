@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Alien-wxWidgets
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/ChangeLog,v 1.31 2011/07/05 19:32:23 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/ChangeLog,v 1.32 2011/07/30 09:20:40 tove Exp $
+
+  30 Jul 2011; Torsten Veller <tove@gentoo.org> -Alien-wxWidgets-0.51.ebuild:
+  Cleanup
 
   05 Jul 2011; Torsten Veller <tove@gentoo.org> Alien-wxWidgets-0.47.ebuild,
   Alien-wxWidgets-0.51.ebuild, Alien-wxWidgets-0.520.0.ebuild:
