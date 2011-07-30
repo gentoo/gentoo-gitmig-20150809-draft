@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/translationstring/translationstring-0.3.ebuild,v 1.4 2011/07/30 01:06:02 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/translationstring/translationstring-0.3.ebuild,v 1.5 2011/07/30 01:27:30 rafaelmartins Exp $
 
 EAPI=3
 
@@ -21,7 +21,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc test"
 
 DEPEND="dev-python/setuptools
-	doc? ( dev-python/jinja )
+	doc? ( dev-python/sphinx )
 	test? ( dev-python/Babel )"
 RDEPEND=""
 
