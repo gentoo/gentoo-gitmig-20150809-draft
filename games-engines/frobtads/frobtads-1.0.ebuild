@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/frobtads/frobtads-1.0.ebuild,v 1.1 2011/07/30 07:38:24 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/frobtads/frobtads-1.0.ebuild,v 1.2 2011/07/30 17:11:15 mr_bones_ Exp $
 
 EAPI=2
 inherit flag-o-matic games
@@ -18,8 +18,7 @@ IUSE="debug tads2compiler tads3compiler"
 
 RESTRICT="!tads3compiler? ( test )"
 
-RDEPEND="sys-libs/ncurses"
-DEPEND="${RDEPEND}"
+DEPEND="sys-libs/ncurses"
 
 src_unpack() {
 	unpack ${A}
