@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.5.4.ebuild,v 1.4 2011/07/27 15:35:26 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.5.4.ebuild,v 1.5 2011/07/30 11:56:42 eras Exp $
 
 EAPI=4
 
@@ -60,8 +60,8 @@ src_prepare() {
 	# no need to error out if no default - it will be given to configure anyway
 	sed -i -e \
 		's~AC_MSG_ERROR(Cannot determine default mailbox)~SPOOLDIR="./.maildir"~' \
-		"${S}"/maildrop/configure.in
-
+		"${S}"/maildrop/configure.in || die "sed failed"
+	epatch "${FILESDIR}"/${PN}-testsuite.patch
 	eautoreconf
 }
 
@@ -127,7 +127,7 @@ src_install() {
 	fi
 
 	dodir "/usr/share/doc/${PF}"
-	mv "${D}/usr/share/maildrop/html" "${D}/usr/share/doc/${PF}/"
+	mv "${D}/usr/share/maildrop/html" "${D}/usr/share/doc/${PF}/" || die
 	rm -rf "${D}"/usr/share/maildrop
 
 	dohtml *.html maildir/*.html
