@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/TermReadKey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/TermReadKey/ChangeLog,v 1.32 2011/02/09 16:57:57 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TermReadKey/ChangeLog,v 1.33 2011/07/30 10:43:22 tove Exp $
+
+  30 Jul 2011; Torsten Veller <tove@gentoo.org> TermReadKey-2.30.ebuild:
+  Drop ~sparc-fbsd KEYWORD
 
   09 Mar 2010; Markus Duft <mduft@gentoo.org> TermReadKey-2.30.ebuild:
   keyworded ~x86-interix

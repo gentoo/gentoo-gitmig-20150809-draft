@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-String
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-String/ChangeLog,v 1.47 2010/01/21 12:02:28 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-String/ChangeLog,v 1.48 2011/07/30 10:34:34 tove Exp $
+
+  30 Jul 2011; Torsten Veller <tove@gentoo.org> IO-String-1.08.ebuild:
+  Drop ~sparc-fbsd KEYWORD
 
   21 Jan 2010; Torsten Veller <tove@gentoo.org> IO-String-1.08.ebuild:
   Ebuild maintenance. mips->~mips. Fix LICENSE
