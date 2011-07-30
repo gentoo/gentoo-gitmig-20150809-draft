@@ -1,6 +1,9 @@
 # ChangeLog for games-action/supertuxkart
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.26 2011/06/22 12:59:19 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.27 2011/07/30 18:27:54 mr_bones_ Exp $
+
+  30 Jul 2011; Michael Sterrett <mr_bones_@gentoo.org> supertuxkart-0.7.ebuild:
+  add dev-libs/fribidi to RDEPEND (bug #375569)
 
   22 Jun 2011; Tupone Alfredo <tupone@gentoo.org> supertuxkart-0.7.ebuild,
   +files/supertuxkart-0.7-underlink.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/supertuxkart-0.7.ebuild,v 1.5 2011/06/22 12:59:19 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/supertuxkart-0.7.ebuild,v 1.6 2011/07/30 18:27:54 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools flag-o-matic eutils games
@@ -22,6 +22,7 @@ RDEPEND=">=dev-games/irrlicht-1.7.2
 	net-libs/enet:0
 	media-libs/libvorbis
 	media-libs/openal
+	nls? ( dev-libs/fribidi )
 	virtual/libintl"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
