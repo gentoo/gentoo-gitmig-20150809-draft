@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.98 2011/07/29 10:58:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.99 2011/07/30 11:23:45 armin76 Exp $
+
+  30 Jul 2011; Raúl Porcel <armin76@gentoo.org>
+  tigervnc-1.0.1_p20110618.ebuild:
+  alpha/ia64/sh/sparc stable wrt #372205
 
   29 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   tigervnc-1.0.1_p20110618.ebuild:
