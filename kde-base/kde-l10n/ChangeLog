@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kde-l10n
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.100 2011/07/28 20:54:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.101 2011/07/30 11:39:40 dilfridge Exp $
+
+*kde-l10n-4.7.0-r2 (30 Jul 2011)
+
+  30 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kde-l10n-4.7.0-r2.ebuild:
+  Add better code to remove kdepim translations / docs
 
 *kde-l10n-4.7.0-r1 (28 Jul 2011)
 
