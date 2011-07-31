@@ -1,6 +1,12 @@
 # ChangeLog for app-text/crm114
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.46 2011/07/31 09:13:07 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.47 2011/07/31 20:10:14 steev Exp $
+
+  31 Jul 2011; Steev Klimaszewsk <steev@gentoo.org> crm114-20100106.ebuild:
+  Remove static as a default useflag. This closes Bug 299503, and also fix the
+  static/!static use dependencies. Without static, we don't actually care if
+  static-libs is set on 
+  tre.
 
   31 Jul 2011; Steev Klimaszewsk <steev@gentoo.org> crm114-20100106.ebuild:
   By default, crm114 is built +static, however tre is not built +static-libs.

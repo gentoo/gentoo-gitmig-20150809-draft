@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20100106.ebuild,v 1.2 2011/07/31 09:13:07 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20100106.ebuild,v 1.3 2011/07/31 20:10:14 steev Exp $
 
 EAPI=2
 
@@ -15,11 +15,11 @@ SRC_URI="http://crm114.sourceforge.net/tarballs/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
-IUSE="mew mimencode nls normalizemime +static test"
+IUSE="mew mimencode nls normalizemime static test"
 
 RDEPEND="
 	static? ( dev-libs/tre[static-libs] )
-	!static? ( dev-libs/tre[-static-libs] )
+	!static? ( dev-libs/tre )
 	mew? ( app-emacs/mew )
 	mimencode? ( net-mail/metamail )
 	normalizemime? ( mail-filter/normalizemime )"
