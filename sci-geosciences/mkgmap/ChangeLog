@@ -1,6 +1,12 @@
 # ChangeLog for sci-geosciences/mkgmap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mkgmap/ChangeLog,v 1.17 2011/07/11 17:39:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mkgmap/ChangeLog,v 1.18 2011/07/31 14:08:53 scarabeus Exp $
+
+*mkgmap-2009 (31 Jul 2011)
+
+  31 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org> -mkgmap-1985.ebuild,
+  +mkgmap-2009.ebuild:
+  Version bump to latest. Drop older.
 
 *mkgmap-1985 (11 Jul 2011)
 

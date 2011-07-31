@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/josm-4201.ebuild,v 1.1 2011/07/06 12:23:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/josm-4203.ebuild,v 1.1 2011/07/31 14:10:38 scarabeus Exp $
 
 EAPI=4
 
