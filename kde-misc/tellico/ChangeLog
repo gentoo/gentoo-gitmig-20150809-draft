@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/tellico
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.99 2011/05/14 13:56:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.100 2011/07/31 17:45:10 dilfridge Exp $
+
+  31 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org> tellico-2.3.3.ebuild,
+  +files/tellico-2.3.3-tests.patch:
+  Disable all tests that fetch files from the network, should also fix bug
+  329069
 
   14 May 2011; Andreas K. Huettel <dilfridge@gentoo.org> tellico-2.3.3.ebuild:
   Raise libv4l version dependency to work around missing v4l-1 support in

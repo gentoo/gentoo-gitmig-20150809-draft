@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-2.3.3.ebuild,v 1.2 2011/05/14 13:56:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-2.3.3.ebuild,v 1.3 2011/07/31 17:45:10 dilfridge Exp $
 
 EAPI=4
 
@@ -39,7 +39,7 @@ RDEPEND="${DEPEND}"
 
 DOCS=( AUTHORS ChangeLog README )
 
-RESTRICT="test"
+PATCHES=( "${FILESDIR}/${P}-tests.patch" )
 
 src_configure() {
 	mycmakeargs=(
