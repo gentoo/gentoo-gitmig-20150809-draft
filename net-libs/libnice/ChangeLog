@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/ChangeLog,v 1.28 2011/07/13 09:29:52 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/ChangeLog,v 1.29 2011/07/31 15:25:28 armin76 Exp $
+
+  31 Jul 2011; Raúl Porcel <armin76@gentoo.org> libnice-0.1.0.ebuild:
+  alpha/ia64/sparc stable wrt #373393
 
   13 Jul 2011; Thomas Kahle <tomka@gentoo.org> libnice-0.1.0.ebuild:
   x86 stable per bug 373393
