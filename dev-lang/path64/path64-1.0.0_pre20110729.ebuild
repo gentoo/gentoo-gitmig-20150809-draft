@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/path64/path64-1.0.0_pre20110729.ebuild,v 1.1 2011/07/29 17:40:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/path64/path64-1.0.0_pre20110729.ebuild,v 1.2 2011/07/31 07:46:21 xarthisius Exp $
 
 EAPI=4
 CMAKE_VERBOSE=1
@@ -48,7 +48,8 @@ src_prepare() {
 }
 
 src_configure() {
-	local linker=$($(tc-getCC) --help -v 2>&1 >/dev/null | grep	'\-dynamic\-linker' | cut -f7 -d' ')
+	local linker=$($(tc-getCC) --help -v 2>&1 >/dev/null | \
+		sed -n -e '/dynamic-linker/s:.* -dynamic-linker \([^ ]\+\) .*:\1:p')
 	local libgcc=$($(tc-getCC) -print-libgcc-file-name)
 	local crt=$($(tc-getCC) -print-file-name=crt1.o)
 	use custom-cflags && flags=(
