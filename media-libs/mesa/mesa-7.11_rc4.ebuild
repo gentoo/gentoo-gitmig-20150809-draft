@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.11_rc4.ebuild,v 1.2 2011/07/29 23:11:17 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.11_rc4.ebuild,v 1.3 2011/07/31 16:09:15 mattst88 Exp $
 
 EAPI=3
 
@@ -62,7 +62,6 @@ RDEPEND="${EXTERNAL_DEPEND}
 	gallium? ( app-admin/eselect-mesa )
 	app-admin/eselect-opengl
 	dev-libs/expat
-	dev-libs/libxml2[python]
 	x11-libs/libICE
 	>=x11-libs/libX11-1.3.99.901
 	x11-libs/libXdamage
@@ -90,6 +89,7 @@ done
 
 DEPEND="${RDEPEND}
 	=dev-lang/python-2*
+	dev-libs/libxml2[python]
 	dev-util/pkgconfig
 	sys-devel/bison
 	sys-devel/flex

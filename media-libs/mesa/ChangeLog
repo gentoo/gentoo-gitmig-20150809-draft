@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.354 2011/07/30 10:31:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.355 2011/07/31 16:09:15 mattst88 Exp $
+
+  31 Jul 2011; Matt Turner <mattst88@gentoo.org> mesa-7.11_rc2.ebuild,
+  mesa-7.11_rc4.ebuild:
+  Move libxml2 from RDEPEND to DEPEND, Bug 376015.
 
   30 Jul 2011; Raúl Porcel <armin76@gentoo.org> mesa-7.10.3.ebuild:
   alpha/ia64/sh/sparc stable wrt #371857
