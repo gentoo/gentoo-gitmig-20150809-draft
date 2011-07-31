@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/leafnode-1.11.6.ebuild,v 1.1 2007/03/23 11:37:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/leafnode/leafnode-1.11.8.ebuild,v 1.1 2011/07/31 12:34:45 patrick Exp $
 
 DESCRIPTION="A USENET software package designed for small sites"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
