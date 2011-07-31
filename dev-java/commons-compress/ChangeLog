@@ -1,0 +1,15 @@
+# ChangeLog for dev-java/commons-compress
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-compress/ChangeLog,v 1.1 2011/07/31 14:21:09 tommy Exp $
+
+  31 Jul 2011; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +commons-compress-1.1.ebuild, +files/MANIFEST.MF, +files/build.xml,
+  +metadata.xml:
+  Initial commit, fixes bug 172791, thanks for the ebuild to sera from
+  #gentoo-java
+
+*commons-compress-1.1 (24 Jul 2011)
+
+  24 Jul 2011; Ralph Sennhauser <gentoo.sera@bluewin.ch>
+  +commons-cpmpress-1.1.ebuild:
+  Initial package
