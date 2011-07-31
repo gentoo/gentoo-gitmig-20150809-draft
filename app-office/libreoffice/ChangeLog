@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.78 2011/07/31 00:28:46 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.79 2011/07/31 16:03:50 mattst88 Exp $
+
+  31 Jul 2011; Matt Turner <mattst88@gentoo.org> libreoffice-3.4.9999.ebuild:
+  Remove seemingly unnecessary fonts from -3.4.9999 also.
 
   31 Jul 2011; Matt Turner <mattst88@gentoo.org> libreoffice-3.4.2.3.ebuild:
   Remove seemingly unnecessary fonts.
