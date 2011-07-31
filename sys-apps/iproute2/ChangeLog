@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.172 2011/06/11 13:18:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.173 2011/07/31 18:33:22 mattst88 Exp $
+
+  31 Jul 2011; Matt Turner <mattst88@gentoo.org> iproute2-2.6.29.1-r1.ebuild,
+  iproute2-2.6.35-r2.ebuild, iproute2-2.6.35-r3.ebuild, iproute2-2.6.38.ebuild,
+  iproute2-9999.ebuild:
+  Add missing bison and flex dependencies, bug 376343.
 
 *iproute2-2.6.38 (11 Jun 2011)
 

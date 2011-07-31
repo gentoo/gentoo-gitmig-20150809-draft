@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.35-r2.ebuild,v 1.9 2011/04/14 09:46:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.35-r2.ebuild,v 1.10 2011/07/31 18:33:22 mattst88 Exp $
 
 EAPI="2"
 
@@ -35,6 +35,7 @@ RDEPEND="!net-misc/arpd
 	atm? ( net-dialup/linux-atm )"
 DEPEND="${RDEPEND}
 	elibc_glibc? ( >=sys-libs/glibc-2.7 )
+	sys-devel/bison
 	sys-devel/flex
 	>=sys-kernel/linux-headers-2.6.27"
 
