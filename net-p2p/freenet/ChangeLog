@@ -1,6 +1,16 @@
 # ChangeLog for net-p2p/freenet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.133 2011/07/16 10:25:24 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.134 2011/07/31 18:45:48 tommy Exp $
+
+*freenet-0.7.5_p1389 (31 Jul 2011)
+
+  31 Jul 2011; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -freenet-0.7.5_p1384.ebuild, +freenet-0.7.5_p1389.ebuild,
+  +files/freenet-0.7.5_p1384-libraryloader-just-try-loading.patch,
+  +files/freenet-0.7.5_p1384-nativebiginteger-no-nativedoublevalue.patch,
+  +files/freenet-0.7.5_p1389-wrapper.conf, freenet-9999.ebuild:
+  Version bump, drop old, update live ebuild, fixes bug 376973, bug 376975 and
+  bug 376277
 
 *freenet-0.7.5_p1384 (16 Jul 2011)
 

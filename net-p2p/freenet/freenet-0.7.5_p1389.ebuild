@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1384.ebuild,v 1.1 2011/07/16 10:25:24 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1389.ebuild,v 1.1 2011/07/31 18:45:48 tommy Exp $
 
 EAPI="2"
-DATE=20110715
+DATE=20110731
 JAVA_PKG_IUSE="doc source"
 
 inherit eutils java-pkg-2 java-ant-2 multilib
@@ -19,12 +19,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="freemail test"
 
-CDEPEND="dev-db/db-je:3.3
+CDEPEND="freemail? ( dev-java/bcprov )
+	dev-java/commons-compress
+	dev-db/db-je:3.3
 	dev-java/fec
 	dev-java/java-service-wrapper
 	dev-java/db4o-jdk11
 	dev-java/db4o-jdk12
 	dev-java/db4o-jdk5
+	dev-java/jbitcollider-core
 	dev-java/lzma
 	dev-java/lzmajio
 	dev-java/mersennetwister"
@@ -37,13 +40,12 @@ DEPEND="app-arch/unzip
 RDEPEND=">=virtual/jre-1.6
 	net-libs/nativebiginteger
 	${CDEPEND}"
-PDEPEND="net-libs/NativeThread
-	freemail? ( dev-java/bcprov )"
+PDEPEND="net-libs/NativeThread"
 
 EANT_BUILD_TARGET="package"
 EANT_TEST_TARGET="unit"
 EANT_BUILD_XML="build-clean.xml"
-EANT_GENTOO_CLASSPATH="db4o-jdk5 db4o-jdk12 db4o-jdk11 db-je-3.3 fec java-service-wrapper lzma lzmajio mersennetwister"
+EANT_GENTOO_CLASSPATH="commons-compress db4o-jdk5 db4o-jdk12 db4o-jdk11 db-je-3.3 fec java-service-wrapper jbitcollider-core lzma lzmajio mersennetwister"
 EANT_EXTRA_ARGS="-Dsuppress.gjs=true -Dlib.contrib.present=true -Dlib.junit.present=true"
 export EANT_EXTRA_ARGS+=" -Dtest.skip=true"
 
@@ -65,22 +67,40 @@ src_unpack() {
 }
 
 src_prepare() {
-	cp "${FILESDIR}"/wrapper1.conf freenet-wrapper.conf || die
+	cp "${FILESDIR}"/freenet-0.7.5_p1389-wrapper.conf freenet-wrapper.conf || die
 	cp "${FILESDIR}"/run.sh-20090501 run.sh || die
-	epatch "${FILESDIR}"/0.7.5_p1302-ext.patch
-	epatch "${FILESDIR}"/strip-openjdk-check.patch
+	epatch "${FILESDIR}"/0.7.5_p1302-ext.patch \
+		"${FILESDIR}"/strip-openjdk-check.patch \
+		"${FILESDIR}"/freenet-0.7.5_p1384-libraryloader-just-try-loading.patch \
+		"${FILESDIR}"/freenet-0.7.5_p1384-nativebiginteger-no-nativedoublevalue.patch
+
 	sed -i -e "s:=/usr/lib:=/usr/$(get_libdir):g" \
-		-e "s:/usr/share/ant-core/lib/ant.jar:/usr/share/freenet/lib/ant.jar:g" \
 		freenet-wrapper.conf || die "sed failed"
-	use freemail && echo "wrapper.java.classpath.12=/usr/share/bcprov/lib/bcprov.jar" >> freenet-wrapper.conf
+
+	echo "wrapper.java.classpath.1=/usr/share/freenet/lib/freenet.jar" >> freenet-wrapper.conf
+
+	local i=2 pkg jars jar
+	for pkg in ${EANT_GENTOO_CLASSPATH} ; do
+		jars="$(java-pkg_getjars ${pkg})"
+		for jar in ${jars} ; do
+			echo "wrapper.java.classpath.$((i++))=${jar}" >> freenet-wrapper.conf
+		done
+	done
+	echo "wrapper.java.classpath.$((i++))=/usr/share/freenet/lib/ant.jar" >> freenet-wrapper.conf
+
+	if use freemail ; then
+		jars="$(java-pkg_getjars bcprov)"
+		for jar in ${jars} ; do
+			echo "wrapper.java.classpath.$((i++))=${jar}" >> freenet-wrapper.conf
+		done
+	fi
+
 	java-ant_rewrite-classpath "${EANT_BUILD_XML}"
-	cp "${DISTDIR}"/freenet-ant-1.7.1.jar lib/ant.jar || die
 	java-pkg-2_src_prepare
+	cp "${DISTDIR}"/freenet-ant-1.7.1.jar lib/ant.jar || die
 }
 
 src_test() {
-#	java-pkg_jar-from --into lib junit
-#	java-pkg_jar-from --into lib ant-junit
 	java-pkg_jar-from --into lib fec
 	java-pkg_jar-from --into lib java-service-wrapper
 	java-pkg_jar-from --into lib mersennetwister
