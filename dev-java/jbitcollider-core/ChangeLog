@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jbitcollider-core
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jbitcollider-core/ChangeLog,v 1.1 2011/07/31 14:53:59 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jbitcollider-core/ChangeLog,v 1.2 2011/07/31 16:14:58 tommy Exp $
+
+  31 Jul 2011; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  jbitcollider-core-0.8.ebuild:
+  Remove accidently commited ~ia64 keyword
 
 *jbitcollider-core-0.8 (31 Jul 2011)
 
