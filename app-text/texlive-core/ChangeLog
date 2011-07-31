@@ -1,6 +1,13 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.143 2011/07/30 20:11:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.144 2011/07/31 07:32:29 aballier Exp $
+
+*texlive-core-2011-r2 (31 Jul 2011)
+
+  31 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  -texlive-core-2011-r1.ebuild, +texlive-core-2011-r2.ebuild:
+  do not "build" biber, its a prebuilt binary -> not for us, well see about
+  making an ebuild for it later, by Rafał Mużyło in bug
 
 *texlive-core-2011-r1 (30 Jul 2011)
 *texlive-core-2010-r4 (30 Jul 2011)
