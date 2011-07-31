@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.66 2011/07/28 18:38:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.67 2011/07/31 18:46:25 jer Exp $
+
+  31 Jul 2011; Jeroen Roovers <jer@gentoo.org> libproxy-0.4.6-r3.ebuild:
+  Stable for HPPA (bug #372813).
 
   28 Jul 2011; Pacho Ramos <pacho@gentoo.org> -libproxy-0.4.6-r2.ebuild:
   Remove old.
