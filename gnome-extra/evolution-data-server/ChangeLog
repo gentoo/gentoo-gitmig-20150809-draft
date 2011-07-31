@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.305 2011/07/17 21:00:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.306 2011/07/31 18:28:55 pacho Exp $
+
+*evolution-data-server-2.32.3-r1 (31 Jul 2011)
+
+  31 Jul 2011; Pacho Ramos <pacho@gentoo.org>
+  +evolution-data-server-2.32.3-r1.ebuild:
+  Remove patches causing evolution to close when creating an appointment (bug
+  #372651), that patches look to be no longer needed as told by original author
+  in upstream report (https://bugzilla.gnome.org/show_bug.cgi?id=649787#c5).
 
   17 Jul 2011; Markus Meier <maekke@gentoo.org>
   evolution-data-server-2.32.2-r1.ebuild:
