@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/libxml-2.0.5.ebuild,v 1.5 2011/07/24 21:26:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/libxml-2.0.5.ebuild,v 1.6 2011/07/31 19:05:43 jer Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://libxml.rubyforge.org"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="${RDEPEND} dev-libs/libxml2"
