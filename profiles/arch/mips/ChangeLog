@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.75 2011/07/14 18:04:51 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.76 2011/07/31 06:09:00 mattst88 Exp $
+
+  31 Jul 2011; Matt Turner <mattst88@gentoo.org> package.use.mask:
+  mplayer has no 'teletext' USE flag anymore.
 
   14 Jul 2011; Matt Turner <mattst88@gentoo.org> package.use.mask:
   Remove 'app-admin/gkrellm ntlm' from package.use.mask now that libntlm is
