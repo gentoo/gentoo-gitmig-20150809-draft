@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.220 2011/07/30 17:07:49 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.221 2011/07/31 20:07:58 jer Exp $
+
+  31 Jul 2011; Jeroen Roovers <jer@gentoo.org> mc-4.7.5.2.ebuild:
+  Stable for HPPA (bug #373225).
 
   30 Jul 2011; Sergei Trofimovich <slyfox@gentoo.org> -mc-4.7.0.9.ebuild,
   -mc-4.7.4-r1.ebuild, -mc-4.7.5.ebuild, -mc-4.7.5.1.ebuild:
