@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-2.0.0.ebuild,v 1.1 2011/07/29 19:28:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-2.0.0.ebuild,v 1.2 2011/07/31 20:21:12 dilfridge Exp $
 
 EAPI=4
 
@@ -67,6 +67,13 @@ DEPEND="${CDEPEND}
 "
 
 S="${WORKDIR}/${MY_P}/core"
+
+PATCHES=(
+	"${FILESDIR}/${P}-tests-1.patch"
+)
+
+RESTRICT=test
+# bug 366505
 
 src_prepare() {
 	# just to make absolutely sure
