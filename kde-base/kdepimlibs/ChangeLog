@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepimlibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.106 2011/07/27 14:04:34 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.107 2011/07/31 20:33:33 dilfridge Exp $
+
+  31 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdepimlibs-4.7.0.ebuild:
+  Boost is only DEPEND, bug 368787
 
 *kdepimlibs-4.7.0 (27 Jul 2011)
 
