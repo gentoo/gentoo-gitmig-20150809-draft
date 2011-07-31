@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.5.ebuild,v 1.1 2011/06/25 20:27:04 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.6.ebuild,v 1.1 2011/07/31 07:03:37 dirtyepic Exp $
 
 EAPI="4"
 

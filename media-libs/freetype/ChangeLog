@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.293 2011/06/25 20:27:04 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.294 2011/07/31 07:03:37 dirtyepic Exp $
+
+*freetype-2.4.6 (31 Jul 2011)
+
+  31 Jul 2011; Ryan Hill <dirtyepic@gentoo.org> -freetype-2.4.4.ebuild,
+  -freetype-2.4.5.ebuild, +freetype-2.4.6.ebuild:
+  Version bump. This version fixes CVE-2011-0226 which allows an attacker to
+  execute arbitrary code. All users must upgrade ASAP. (bug #377143)
+
+  http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2011-0226
+
+  Remove vulnerable versions.
 
 *freetype-2.4.5 (25 Jun 2011)
 
