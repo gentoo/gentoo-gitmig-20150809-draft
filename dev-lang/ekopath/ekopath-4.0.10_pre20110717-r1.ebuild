@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ekopath-4.0.10_pre20110717.ebuild,v 1.2 2011/07/27 09:34:06 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ekopath-4.0.10_pre20110717-r1.ebuild,v 1.1 2011/07/31 07:52:56 xarthisius Exp $
 
 EAPI=4
 
@@ -25,7 +25,7 @@ RESTRICT="mirror"
 
 S=${WORKDIR}
 
-PATHSCALE_SDP_DIR=/opt/${P}
+PATHSCALE_SDP_DIR=/opt/${PN}
 
 QA_PREBUILT="
 	${PATHSCALE_SDP_DIR}/lib/${MY_PV}/x8664/*
@@ -51,16 +51,16 @@ src_unpack() {
 
 src_prepare() {
 	cat > "99${PN}" <<-EOF
-		PATH=/opt/${P}/bin
-		ROOTPATH=/opt/${P}/bin
-		LDPATH=/opt/${P}/lib:/opt/${P}/lib/${MY_PV}/x8664/64
+		PATH=/opt/${PN}/bin
+		ROOTPATH=/opt/${PN}/bin
+		LDPATH=/opt/${PN}/lib:/opt/${PN}/lib/${MY_PV}/x8664/64
 	EOF
 }
 
 src_install() {
 	./${P}.run \
-		--prefix "${D}/opt/${P}" \
+		--prefix "${D}/opt/${PN}" \
 		--mode unattended || die
-	rm -rf "${D}"/opt/${P}/uninstall || die
+	rm -rf "${D}"/opt/${PN}/uninstall || die
 	doenvd "99${PN}"
 }

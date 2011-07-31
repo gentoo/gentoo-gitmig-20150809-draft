@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/ekopath
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ChangeLog,v 1.2 2011/07/27 09:34:06 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ChangeLog,v 1.3 2011/07/31 07:52:56 xarthisius Exp $
+
+*ekopath-4.0.10_pre20110717-r1 (31 Jul 2011)
+
+  31 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  -ekopath-4.0.10_pre20110717.ebuild, +ekopath-4.0.10_pre20110717-r1.ebuild:
+  Use PN rather than P in path, in order not to break things relying on
+  compiler location on every update. Fixes bug 377113 by Diego Elio Pettenò
+  <flameeyes@gentoo.org>
 
   27 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   ekopath-4.0.10_pre20110717.ebuild:
