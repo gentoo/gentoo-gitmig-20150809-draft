@@ -1,10 +1,18 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5590 2011/07/29 19:15:08 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5591 2011/07/31 08:17:11 steev Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Jul 2011; Steev Klimaszewsk <steev@gentoo.org> package.mask:
+
+
+  Mask net-misc/dhcdbd. This package has been obsolete since NetworkManager
+  0.7. NetworkManager 0.8 is in the tree as the oldest version so we can remove
+  this in 30 days.
+
 
   29 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org> updates/3Q-2011:
   libkmap becomes libkgeomap

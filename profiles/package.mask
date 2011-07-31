@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12953 2011/07/29 21:22:26 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12954 2011/07/31 08:17:11 steev Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Steev Klimaszewski <steev@gentoo.org> (31 Jul 2011)
+# This package is old and obsolete.  Mask for removal.
+net-misc/dhcdbd
 
 # Jesus Rivero <neurogeek@gentoo.org> (29 Jul 2011)
 # This package had wrong versioning. Masked to enforce upgrade on the
