@@ -1,6 +1,13 @@
 # ChangeLog for app-text/crm114
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.45 2011/01/12 07:28:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.46 2011/07/31 09:13:07 steev Exp $
+
+  31 Jul 2011; Steev Klimaszewsk <steev@gentoo.org> crm114-20100106.ebuild:
+  By default, crm114 is built +static, however tre is not built +static-libs.
+  Because of this, crm114 is failing to build, reporting that it can't find
+  -ltre. Fix the use 
+  dependencies, so that it should build correctly. This fixes bug 372471.
+  Thanks to Piotr Szymaniak for reporting.
 
   12 Jan 2011; Justin Lecher <jlec@gentoo.org> -crm114-20070810.ebuild:
   Removed old
