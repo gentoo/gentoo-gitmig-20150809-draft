@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.83 2011/06/30 18:49:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.84 2011/07/31 16:29:32 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
@@ -71,11 +71,6 @@ dev-python/PyQt4 multimedia
 media-gfx/imagemagick openmp
 
 # Jeroen Roovers <jer@gentoo.org> (06 May 2009)
-# dev-lang/swi-prolog fails some tests but would be pulled in by dev-libs/ppl
-# (bug #269556)
-dev-libs/ppl prolog
-
-# Jeroen Roovers <jer@gentoo.org> (06 May 2009)
 # Mask webkit-gtk dependency for net-libs/libproxy:
 net-libs/libproxy webkit
 
@@ -108,13 +103,6 @@ net-analyzer/nagios-plugins ups
 # Mart Raudsepp <leio@gentoo.org> (02 Apr 2008)
 # media-plugins/gst-plugins-{mythtv,dvb,fluendo-mpegdemux,bad} not keyworded
 media-plugins/gst-plugins-meta dvb mythtv
-
-# Jeroen Roovers <jer@gentoo.org> (19 Nov 2007)
-# This pulls in dev-scheme/drscheme which needs the (yet unported) libffi to
-# build or dev-lisp/clisp which has similar build issues.
-# dev-scheme/chicken appears to be a horrible mess while compiling and not only
-#  causes segfaults but issues illegal instructions as well.
-dev-lang/swig mzscheme clisp chicken
 
 # Jeroen Roovers <jer@gentoo.org> (12 Apr 2007)
 # Mask until fixed.
