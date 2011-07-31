@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.102 2011/07/28 20:02:13 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.103 2011/07/31 18:24:35 dilfridge Exp $
+
+*marble-4.7.0-r1 (31 Jul 2011)
+
+  31 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +files/marble-4.7-magic-r1.patch, +marble-4.7.0-r1.ebuild:
+  Add support for qt-only build, bug 356457
 
   28 Jul 2011; Alexey Shvetsov <alexxy@gentoo.org>
   +files/marble-4.5.5-gpsd.patch, marble-4.7.0.ebuild:
