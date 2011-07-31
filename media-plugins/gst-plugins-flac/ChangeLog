@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-flac
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-flac/ChangeLog,v 1.163 2011/07/25 18:07:10 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-flac/ChangeLog,v 1.164 2011/07/31 03:28:13 leio Exp $
+
+*gst-plugins-flac-0.10.30 (31 Jul 2011)
+
+  31 Jul 2011; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-flac-0.10.30.ebuild:
+  Version bump. Fixes issues in decoder with large metadata blocks when
+  streaming unframed flac. Image and image preview tag encoding support.
 
   25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gst-plugins-flac-0.10.28.ebuild:
