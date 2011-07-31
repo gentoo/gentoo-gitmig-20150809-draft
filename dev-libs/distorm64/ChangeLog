@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/distorm64
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/distorm64/ChangeLog,v 1.4 2009/11/22 18:55:26 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/distorm64/ChangeLog,v 1.5 2011/07/31 11:47:57 patrick Exp $
+
+*distorm64-3.1 (31 Jul 2011)
+
+  31 Jul 2011; Patrick Lauer <patrick@gentoo.org> +distorm64-3.1.ebuild:
+  Bump for #352078
 
   22 Nov 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   distorm64-1.7.30-r1.ebuild:
