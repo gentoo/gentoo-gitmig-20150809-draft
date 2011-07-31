@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.35.ebuild,v 1.12 2010/06/08 19:00:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.35.ebuild,v 1.13 2011/07/31 18:36:50 mattst88 Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="nls static"
 
-DEPEND="nls? ( sys-devel/gettext )"
+DEPEND="sys-devel/m4
+	nls? ( sys-devel/gettext )"
 RDEPEND=""
 
 src_unpack() {
