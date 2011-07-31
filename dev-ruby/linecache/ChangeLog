@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/linecache
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/linecache/ChangeLog,v 1.15 2011/07/24 10:35:46 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/linecache/ChangeLog,v 1.16 2011/07/31 16:50:10 armin76 Exp $
+
+  31 Jul 2011; Raúl Porcel <armin76@gentoo.org> linecache-0.43-r2.ebuild,
+  linecache-0.45.ebuild, linecache-0.46.ebuild:
+  Add ~ia64/~sparc
 
   24 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> linecache-0.46.ebuild:
   Marked ~ppc/~ppc64 wrt #376053
