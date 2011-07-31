@@ -7,4 +7,9 @@
     <name>Patrick Lauer</name>
     <description>Maintainer</description>
 </maintainer>
+<maintainer>
+  <email>ikelos@gentoo.org</email>
+  <name>Mike Auty</name>
+  <description>Maintainer</description>
+</maintainer>
 </pkgmetadata>

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/distorm64
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/distorm64/ChangeLog,v 1.5 2011/07/31 11:47:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/distorm64/ChangeLog,v 1.6 2011/07/31 17:11:56 ikelos Exp $
+
+  31 Jul 2011; Mike Auty <ikelos@gentoo.org> distorm64-3.1.ebuild,
+  metadata.xml:
+  Fix minor repoman error and add myself to the maintainer list.
 
 *distorm64-3.1 (31 Jul 2011)
 

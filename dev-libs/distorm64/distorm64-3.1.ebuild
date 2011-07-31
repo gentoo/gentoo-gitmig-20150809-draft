@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/distorm64/distorm64-3.1.ebuild,v 1.1 2011/07/31 11:47:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/distorm64/distorm64-3.1.ebuild,v 1.2 2011/07/31 17:11:56 ikelos Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -20,7 +20,6 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-
 
 pkg_setup() {
 	python_pkg_setup
