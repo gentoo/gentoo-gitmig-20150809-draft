@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lzop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.36 2011/07/20 13:41:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.37 2011/07/31 13:10:12 maekke Exp $
+
+  31 Jul 2011; Markus Meier <maekke@gentoo.org> lzop-1.03.ebuild:
+  add ~arm, bug #375485
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #34534
