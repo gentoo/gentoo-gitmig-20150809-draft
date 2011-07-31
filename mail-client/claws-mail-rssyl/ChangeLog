@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-rssyl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-rssyl/ChangeLog,v 1.91 2011/07/30 11:25:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-rssyl/ChangeLog,v 1.92 2011/07/31 09:12:57 fauli Exp $
+
+  31 Jul 2011; Christian Faulhammer <fauli@gentoo.org>
+  -claws-mail-rssyl-0.29.ebuild:
+  clean up
 
   30 Jul 2011; Raúl Porcel <armin76@gentoo.org> claws-mail-rssyl-0.30.ebuild:
   alpha stable wrt #372957
