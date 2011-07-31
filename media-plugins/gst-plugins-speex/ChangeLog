@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-speex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-speex/ChangeLog,v 1.105 2011/07/25 18:07:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-speex/ChangeLog,v 1.106 2011/07/31 03:46:06 leio Exp $
+
+*gst-plugins-speex-0.10.30 (31 Jul 2011)
+
+  31 Jul 2011; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-speex-0.10.30.ebuild:
+  Version bump. Encoder uses speex internal silence detection. Small decoder
+  improvements
 
   25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gst-plugins-speex-0.10.28.ebuild:
