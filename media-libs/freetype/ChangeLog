@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.294 2011/07/31 07:03:37 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.295 2011/07/31 09:22:37 mr_bones_ Exp $
+
+  31 Jul 2011; Michael Sterrett <mr_bones_@gentoo.org> +freetype-2.4.4.ebuild:
+  Breaking stable deps isn't allowed. Resurrected stable ebuild until the
+  new version is marked stable.
 
 *freetype-2.4.6 (31 Jul 2011)
 
