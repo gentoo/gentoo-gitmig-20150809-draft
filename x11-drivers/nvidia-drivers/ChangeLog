@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.293 2011/07/28 06:05:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.294 2011/07/31 13:05:31 maekke Exp $
+
+  31 Jul 2011; Markus Meier <maekke@gentoo.org>
+  nvidia-drivers-173.14.30.ebuild:
+  x86 stable, bug #371779
 
   28 Jul 2011; Jeroen Roovers <jer@gentoo.org> nvidia-drivers-96.43.20.ebuild:
   Patch does not apply to 96.
