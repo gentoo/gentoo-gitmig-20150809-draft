@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/goffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.97 2011/07/24 11:04:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/ChangeLog,v 1.98 2011/07/31 18:13:26 pacho Exp $
+
+*goffice-0.8.17 (31 Jul 2011)
+
+  31 Jul 2011; Pacho Ramos <pacho@gentoo.org> -goffice-0.8.15.ebuild,
+  +goffice-0.8.17.ebuild:
+  Version bump, remove old.
 
   24 Jul 2011; Raúl Porcel <armin76@gentoo.org> goffice-0.8.16.ebuild:
   alpha/ia64/sparc stable wrt #372349

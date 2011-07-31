@@ -1,14 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.8.15.ebuild,v 1.1 2011/05/25 01:32:17 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.8.17.ebuild,v 1.1 2011/07/31 18:13:26 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 
 inherit eutils gnome2 flag-o-matic
 
 DESCRIPTION="A library of document-centric objects and utilities"
-HOMEPAGE="http://freshmeat.net/projects/goffice/"
+HOMEPAGE="http://git.gnome.org/browse/goffice/"
 
 LICENSE="GPL-2"
 SLOT="0.8"
@@ -47,9 +48,4 @@ pkg_setup() {
 		--with-gtk"
 
 	filter-flags -ffast-math
-}
-
-src_install() {
-	gnome2_src_install
-	find "${ED}" -name "*.la" -delete || die
 }
