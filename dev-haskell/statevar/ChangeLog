@@ -1,0 +1,11 @@
+# ChangeLog for dev-haskell/statevar
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/statevar/ChangeLog,v 1.1 2011/07/31 15:59:31 slyfox Exp $
+
+*statevar-1.0.0.0 (31 Jul 2011)
+
+  31 Jul 2011; Sergei Trofimovich <slyfox@gentoo.org> +statevar-1.0.0.0.ebuild,
+  +metadata.xml:
+  Initial import. Package contains state variables, which are references in the
+  IO monad.
+
