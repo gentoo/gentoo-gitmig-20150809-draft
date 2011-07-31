@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.10.ebuild,v 1.1 2011/05/13 21:13:30 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.10.ebuild,v 1.2 2011/07/31 14:29:19 anarchy Exp $
 
 EAPI=3
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -51,6 +51,10 @@ src_prepare() {
 		lib/ssl/config.mk || die
 	sed -i -e "/CRYPTOLIB/s:\$(SOFTOKEN_LIB_DIR):../../lib/freebl/\$(OBJDIR):" \
 		cmd/platlibs.mk || die
+
+	# Support Linux 3.0, bug #372001
+	cd  "${S}"/mozilla/security/coreconf/
+	ln -sf Linux2.6.mk Linux3.0.mk || die "failed to symlink Linux2.6.mk"
 }
 
 src_compile() {
