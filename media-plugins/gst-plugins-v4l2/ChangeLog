@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-v4l2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l2/ChangeLog,v 1.82 2011/07/25 18:07:10 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l2/ChangeLog,v 1.83 2011/07/31 04:03:32 leio Exp $
+
+*gst-plugins-v4l2-0.10.30 (31 Jul 2011)
+
+  31 Jul 2011; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-v4l2-0.10.28.ebuild, +gst-plugins-v4l2-0.10.30.ebuild:
+  Version bump. New v4l2radio element to control radio devices. Adds PJPG
+  mapping; fixes interlaced set_format configuration.
 
   25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gst-plugins-v4l2-0.10.28-r1.ebuild:
