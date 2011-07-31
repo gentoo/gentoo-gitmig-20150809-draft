@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcjk/texlive-langcjk-2011.ebuild,v 1.1 2011/07/28 13:18:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcjk/texlive-langcjk-2011.ebuild,v 1.2 2011/07/31 07:46:35 aballier Exp $
 
 EAPI="3"
 
@@ -17,5 +17,6 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE=""
 DEPEND=">=dev-texlive/texlive-basic-2011
 >=app-text/texlive-core-2010[cjk]
+dev-texlive/texlive-latex
 "
 RDEPEND="${DEPEND} "

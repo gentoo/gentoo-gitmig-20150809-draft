@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langcjk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcjk/ChangeLog,v 1.37 2011/07/28 13:18:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcjk/ChangeLog,v 1.38 2011/07/31 07:46:35 aballier Exp $
+
+  31 Jul 2011; Alexis Ballier <aballier@gentoo.org>
+  texlive-langcjk-2011.ebuild:
+  Depend on texlive-latex as we build platex, bug #377007 by fkhp
 
 *texlive-langcjk-2011 (28 Jul 2011)
 
