@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.84 2011/07/26 03:21:18 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.85 2011/07/31 14:58:39 anarchy Exp $
+
+  31 Jul 2011; Jory A. Pratt <anarchy@gentoo.org> thunderbird-5.0.ebuild:
+  Fix system-sqlite dep, bug #374705
 
   26 Jul 2011; Jory A. Pratt <anarchy@gentoo.org> thunderbird-5.0.ebuild:
   Fix compilation with curl-7.21.7, bug #375899
