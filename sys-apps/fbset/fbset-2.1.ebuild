@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fbset/fbset-2.1.ebuild,v 1.32 2007/03/17 00:15:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fbset/fbset-2.1.ebuild,v 1.33 2011/07/31 18:28:34 mattst88 Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86"
 IUSE="static"
 
-DEPEND=""
+DEPEND="sys-devel/bison"
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
