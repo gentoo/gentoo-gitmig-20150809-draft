@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-debug-base
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug-base/ChangeLog,v 1.18 2011/05/07 08:27:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug-base/ChangeLog,v 1.19 2011/07/31 16:52:22 armin76 Exp $
+
+  31 Jul 2011; Raúl Porcel <armin76@gentoo.org>
+  ruby-debug-base-0.10.3-r1.ebuild, ruby-debug-base-0.10.3-r2.ebuild,
+  ruby-debug-base-0.10.4.ebuild:
+  Add ~ia64
 
   07 May 2011; Hans de Graaff <graaff@gentoo.org>
   ruby-debug-base-0.10.4.ebuild:
