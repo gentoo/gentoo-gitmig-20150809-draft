@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/mmdb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/ChangeLog,v 1.20 2011/07/24 09:29:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mmdb/ChangeLog,v 1.21 2011/08/01 20:25:28 maekke Exp $
+
+  01 Aug 2011; Markus Meier <maekke@gentoo.org> mmdb-1.23.2.2.ebuild:
+  x86 stable, bug #375909
 
   24 Jul 2011; Markos Chandras <hwoarang@gentoo.org> mmdb-1.23.2.2.ebuild:
   Stable on amd64 wrt bug #375909
