@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/libidn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.144 2011/07/18 00:51:11 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.145 2011/08/01 20:58:28 jer Exp $
+
+  01 Aug 2011; Jeroen Roovers <jer@gentoo.org> -libidn-1.19.ebuild,
+  -libidn-1.20.ebuild, -libidn-1.21.ebuild:
+  ^
 
   18 Jul 2011; Mark Loeser <halcy0n@gentoo.org> libidn-1.22.ebuild:
   Stable for ppc64; bug #371169
