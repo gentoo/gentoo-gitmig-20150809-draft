@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/mksh-40b.ebuild,v 1.1 2011/07/21 10:51:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/mksh/mksh-40b.ebuild,v 1.2 2011/08/01 15:49:06 patrick Exp $
 
 inherit eutils
 
@@ -24,7 +24,8 @@ src_unpack() {
 
 src_compile() {
 	tc-export CC
-	sh Build.sh -r || die
+	# we can't assume lto existing/enabled, so we add a fallback
+	sh Build.sh -r -c lto || sh Rebuild.sh || die
 }
 
 src_install() {
