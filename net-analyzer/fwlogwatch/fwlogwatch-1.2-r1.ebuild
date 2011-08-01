@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fwlogwatch/fwlogwatch-1.2.ebuild,v 1.1 2010/11/30 21:02:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fwlogwatch/fwlogwatch-1.2-r1.ebuild,v 1.1 2011/08/01 02:31:27 jer Exp $
 
-EAPI="2"
+EAPI="4"
 
-inherit toolchain-funcs eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A packet filter and firewall log analyzer"
 HOMEPAGE="http://fwlogwatch.inside-security.de/"
@@ -16,12 +16,14 @@ SLOT="0"
 IUSE=""
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-1.1-make.patch"
+	epatch \
+		"${FILESDIR}"/${PN}-1.1-make.patch \
+		"${FILESDIR}"/${PN}-1.2-overflow.patch
 }
 
 src_compile() {
 	tc-export CC
-	emake || die "emake failed"
+	default
 }
 
 src_install() {
