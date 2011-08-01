@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/aqualung-0.9_beta11-r1.ebuild,v 1.5 2011/07/29 07:58:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/aqualung-0.9_beta11-r1.ebuild,v 1.6 2011/08/01 18:21:59 billie Exp $
 
-EAPI=2
+EAPI=4
 
 inherit autotools eutils versionator
 
@@ -48,7 +48,10 @@ S=${WORKDIR}/${PN}-${MY_PV}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-use_lrdf_cflags.patch
-	sed -i -e 's:$(pkgdatadir)/doc:/usr/share/doc/${PF}:' doc/Makefile.am
+	sed -i -e 's:$(pkgdatadir)/doc:/usr/share/doc/${PF}:' \
+		doc/Makefile.am || die
+	sed -i -e 's:BUILD_CFLAGS="-O2":BUILD_CFLAGS="":' \
+		configure.ac || die
 	eautoreconf
 }
 
@@ -84,8 +87,8 @@ src_configure() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
-	dodoc AUTHORS README ChangeLog || die
-	newicon src/img/icon_64.png aqualung.png || die
+	default
+
+	newicon src/img/icon_64.png aqualung.png
 	make_desktop_entry aqualung Aqualung
 }
