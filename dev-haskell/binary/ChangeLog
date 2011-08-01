@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/binary
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/ChangeLog,v 1.13 2011/04/10 18:51:44 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/binary/ChangeLog,v 1.14 2011/08/01 20:24:32 slyfox Exp $
+
+  01 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> binary-0.5.0.2.ebuild,
+  +files/binary-0.5.0.2-ghc-7.patch:
+  Added build fix for ghc-7.
 
   10 Apr 2011; Fabian Groffen <grobian@gentoo.org> binary-0.5.0.2.ebuild:
   Marked ~x86-macos
