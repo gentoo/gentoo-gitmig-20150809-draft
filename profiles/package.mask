@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12954 2011/07/31 08:17:11 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12955 2011/08/01 19:11:44 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -297,46 +297,6 @@ app-laptop/batterymon
 # Nirbheek Chauhan <nirbheek@gentoo.org> (03 Jul 2011)
 # Mask js185 release, changes pkgconfig file, soname, etc
 >=dev-lang/spidermonkey-1.8.5
-
-# Markos Chandras <hwoarang@gentoo.org> (01 Jul 2011)
-# Does not build against gcc-4.5. Bug #319679
-# Masked for removal in 30 days
-app-crypt/steghide
-
-# Markos Chandras <hwoarang@gentoo.org> (01 Jul 2011)
-# Does not build against gcc-4.5. Bug #320337.
-# Masked for removal in 30 days
-app-emulation/pearpc
-
-# Markos Chandras <hwoarang@gentoo.org> (01 Jul 2011)
-# Does not respect LDFLAGS (bug #333505). 
-# The core functionality has been replaced by 
-# app-emulation/qemu
-# Masked for removal in 30 days
-app-emulation/gdb-armulator
-
-# Markos Chandras <hwoarang@gentoo.org> (01 Jul 2011)
-# The whole suite seems abandoned. 
-# QA and compilation problems ( bug #236286 ).
-# Has been replaced by sys-apps/pcmciautils
-# Masked for removal in 30 days
-sys-apps/pcmcia-cs
-sys-apps/pcmcia-cs-cis
-sys-apps/pcmcia-cs-modules
-sys-apps/pcmcia-cs-pnptools
-=virtual/pcmcia-2.4
-=virtual/pcmcia-2.6
-
-# Markos Chandras <hwoarang@gentoo.org> (01 Jul 2011)
-# Does not build against gcc-4.5. Bug #323061
-# Masked for removal in 30 days
-net-libs/clinkcc
-
-# Markos Chandras <hwoarang@gentoo.org> (01 Jul 2011)
-# Dead upstream, no updates since 2002. Does not build
-# against glibc-2.14 ( bug #371157 ). Masked for removal
-# in 30 days
-app-arch/upm
 
 # Pacho Ramos <pacho@gentoo.org> (29 Jun 2011)
 # Mask for removal in 30 days x11-libs/gtksourceview:1.0
