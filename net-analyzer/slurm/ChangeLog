@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/slurm
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/slurm/ChangeLog,v 1.17 2009/06/02 11:59:40 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/slurm/ChangeLog,v 1.18 2011/08/01 15:32:40 jer Exp $
+
+*slurm-0.3.3-r1 (01 Aug 2011)
+
+  01 Aug 2011; Jeroen Roovers <jer@gentoo.org> +slurm-0.3.3-r1.ebuild,
+  +files/slurm-0.3.3-overflow.patch:
+  Fix buffer overflows (bug #337436).
 
   02 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org> slurm-0.3.3.ebuild,
   +files/slurm-0.3.3-asneeded.patch:
