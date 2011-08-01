@@ -1,29 +1,27 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.4.0.90.ebuild,v 1.5 2011/05/08 16:21:45 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.4.3.ebuild,v 1.1 2011/08/01 10:59:27 tampakrap Exp $
 
-EAPI="3"
+EAPI=4
 
-# Translations are only in the tarballs, not the git repo
-if [[ ${PV} != *9999* ]]; then
-	KDE_LINGUAS="bg ca cs da de en_GB es et eu fi fr it ja km nb nds nl
-	pa pl pt pt_BR ru sl sr sr@latin sv th tr uk wa zh_TW"
-	SRC_URI="mirror://kde/unstable/${PN}/${PV}/src/${P}.tar.bz2"
-	KEYWORDS="~amd64 ~x86"
-else
-	KDE_SCM="git"
-	KEYWORDS=""
-fi
-
+KDE_LINGUAS="bg ca cs da de en_GB es et eu fi fr it ja km nb nds nl pa
+pl pt pt_BR ru sl sr sr@latin sv th tr uk wa zh_TW"
+KDE_SCM="git"
 KDE_REQUIRED="never"
 inherit flag-o-matic kde4-base
 
 DESCRIPTION="Advanced audio player based on KDE framework."
 HOMEPAGE="http://amarok.kde.org/"
+if [[ ${PV} != *9999* ]]; then
+	SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.bz2"
+	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+else
+	KEYWORDS=""
+fi
 
 LICENSE="GPL-2"
 SLOT="4"
-IUSE="cdda daap debug +embedded handbook ipod lastfm mp3tunes mtp opengl playdar +player semantic-desktop upnp +utils"
+IUSE="cdda daap debug +embedded ipod lastfm mp3tunes mtp opengl +player semantic-desktop +utils"
 
 # Tests require gmock - http://code.google.com/p/gmock/
 # It's not in the tree yet
@@ -38,13 +36,19 @@ COMMONDEPEND="
 		>=app-misc/strigi-0.5.7[dbus,qt4]
 		$(add_kdebase_dep kdelibs 'opengl?,semantic-desktop?')
 		sys-libs/zlib
-		>=virtual/mysql-5.1[embedded?]
+		>=virtual/mysql-5.1
 		x11-libs/qt-script
 		>=x11-libs/qtscriptgenerator-0.1.0
 		cdda? (
 			$(add_kdebase_dep libkcddb)
 			$(add_kdebase_dep libkcompactdisc)
 			$(add_kdebase_dep kdemultimedia-kioslaves)
+		)
+		embedded? (
+			|| (
+				>=dev-db/mysql-5.1.50-r3[embedded]
+				>=dev-db/mariadb-5.1.50[embedded]
+			)
 		)
 		ipod? ( >=media-libs/libgpod-0.7.0[gtk] )
 		lastfm? ( >=media-libs/liblastfm-0.3.0 )
@@ -58,8 +62,6 @@ COMMONDEPEND="
 		)
 		mtp? ( >=media-libs/libmtp-1.0.0 )
 		opengl? ( virtual/opengl )
-		playdar? ( dev-libs/qjson )
-		upnp? ( kde-misc/kio-upnp-ms )
 	)
 	utils? (
 		x11-libs/qt-core
@@ -75,13 +77,6 @@ RDEPEND="${COMMONDEPEND}
 	!media-sound/amarok-utils
 	player? ( $(add_kdebase_dep phonon-kde) )
 "
-
-# Upstream patch to fix the plugin detection on startup
-# https://projects.kde.org/projects/extragear/multimedia/amarok/repository/revisions/37eda947bd8181a73ad0fffc88e66c25ddd69f28
-PATCHES=(
-	"${FILESDIR}/${PN}-fix-upnp-dep.patch"
-	"${FILESDIR}/${P}-fix-plugin-detection.patch"
-)
 
 src_prepare() {
 	if ! use player; then
@@ -100,6 +95,7 @@ src_prepare() {
 src_configure() {
 	# Append minimal-toc cflag for ppc64, see bug 280552 and 292707
 	use ppc64 && append-flags -mminimal-toc
+	local mycmakeargs
 
 	if use player; then
 		mycmakeargs=(
@@ -111,8 +107,6 @@ src_configure() {
 			$(cmake-utils_use_with lastfm LibLastFm)
 			$(cmake-utils_use_with mtp)
 			$(cmake-utils_use_with mp3tunes MP3Tunes)
-			$(cmake-utils_use_with playdar QJSON)
-			$(cmake-utils_use_with upnp HUpnp)
 		)
 	else
 		mycmakeargs=(
@@ -150,7 +144,7 @@ pkg_postinst() {
 			elog "to configure the external db and migrate your data from the embedded database."
 			echo
 
-			if has_version "virtual/mysql[minimal]"; then
+			if has_version "dev-db/mysql[minimal]"; then
 				elog "You built mysql with the minimal use flag, so it doesn't include the server."
 				elog "You won't be able to use the local mysql installation to store your amarok collection."
 				echo
