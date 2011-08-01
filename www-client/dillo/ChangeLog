@@ -1,6 +1,11 @@
 # ChangeLog for www-client/dillo
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.93 2010/11/08 12:38:58 nelchael Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.94 2011/08/01 15:38:08 patrick Exp $
+
+*dillo-2.2.1 (01 Aug 2011)
+
+  01 Aug 2011; Patrick Lauer <patrick@gentoo.org> +dillo-2.2.1.ebuild:
+  Bump for #376559
 
   08 Nov 2010; Krzysztof Pawlik <nelchael@gentoo.org> dillo-2.2.ebuild,
   dillo-9999.ebuild:
