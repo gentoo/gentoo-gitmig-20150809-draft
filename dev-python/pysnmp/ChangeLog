@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysnmp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.44 2011/06/23 15:03:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.45 2011/08/01 13:58:01 neurogeek Exp $
+
+  01 Aug 2011; Jesus Rivero <neurogeek@gentoo.org> pysnmp-4.1.16a.ebuild:
+  Fixed dep on dev-python/pyasn1
 
 *pysnmp-3.4.4 (23 Jun 2011)
 
