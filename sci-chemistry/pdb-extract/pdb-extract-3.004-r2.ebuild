@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-extract/pdb-extract-3.004-r2.ebuild,v 1.2 2011/07/21 19:04:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-extract/pdb-extract-3.004-r2.ebuild,v 1.3 2011/08/01 19:27:59 maekke Exp $
 
 EAPI=3
 
@@ -14,7 +14,7 @@ SRC_URI="http://sw-tools.pdb.org/apps/PDB_EXTRACT/${MY_P}.tar.gz"
 
 LICENSE="PDB"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="!<app-text/html-xml-utils-5.3"

@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/pdb-extract
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-extract/ChangeLog,v 1.17 2011/07/21 19:04:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-extract/ChangeLog,v 1.18 2011/08/01 19:27:59 maekke Exp $
+
+  01 Aug 2011; Markus Meier <maekke@gentoo.org> pdb-extract-3.004-r2.ebuild:
+  amd64/x86 stable, bug #375901
 
   21 Jul 2011; Justin Lecher <jlec@gentoo.org> pdb-extract-1.700.ebuild,
   pdb-extract-3.004-r1.ebuild, pdb-extract-3.004-r2.ebuild, metadata.xml:
