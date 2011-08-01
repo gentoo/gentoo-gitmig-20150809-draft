@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.11.ebuild,v 1.1 2011/08/01 22:35:44 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.11.ebuild,v 1.2 2011/08/01 23:50:29 chithanh Exp $
 
 EAPI=3
 
@@ -136,7 +136,7 @@ src_prepare() {
 		EPATCH_SUFFIX="patch" \
 		epatch
 	fi
-	# fix for hardened, bug 240956
+	# fix for hardened pax_kernel, bug 240956
 	[[ ${PV} != 9999* ]] && epatch "${FILESDIR}"/glx_ro_text_segm.patch
 
 	# FreeBSD 6.* doesn't have posix_memalign().
@@ -213,8 +213,8 @@ src_configure() {
 		gallium_enable video_cards_radeon r300 r600
 	fi
 
-	# x86 hardened needs glx-rts, bug 240956
-	if use hardened; then
+	# x86 hardened pax_kernel needs glx-rts, bug 240956
+	if use pax_kernel; then
 		myconf+="
 			$(use_enable x86 glx-rts)
 		"
