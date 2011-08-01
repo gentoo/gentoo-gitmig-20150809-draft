@@ -1,5 +1,5 @@
---- src/bigeye.c.org	2011-08-01 03:11:16.779811941 +0200
-+++ src/bigeye.c	2011-08-01 03:13:34.830778894 +0200
+--- a/src/bigeye.c
++++ b/src/bigeye.c
 @@ -787,7 +787,7 @@
  	local.sin_family = 	AF_INET;
  	local.sin_port   =	htons(porta);
