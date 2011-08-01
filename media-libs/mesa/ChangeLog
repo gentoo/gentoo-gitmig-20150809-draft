@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.355 2011/07/31 16:09:15 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.356 2011/08/01 22:35:44 chithanh Exp $
+
+*mesa-7.11 (01 Aug 2011)
+
+  01 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -mesa-7.11_rc2.ebuild, -mesa-7.11_rc4.ebuild, +mesa-7.11.ebuild,
+  metadata.xml:
+  Version bump. Make gbm optional, bug #376679.
 
   31 Jul 2011; Matt Turner <mattst88@gentoo.org> mesa-7.11_rc2.ebuild,
   mesa-7.11_rc4.ebuild:
