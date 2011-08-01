@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.106 2011/07/28 08:37:56 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.107 2011/08/01 19:07:57 maekke Exp $
+
+  01 Aug 2011; Markus Meier <maekke@gentoo.org> allegro-5.0.3.ebuild:
+  x86 stable, bug #375491
 
   28 Jul 2011; Tupone Alfredo <tupone@gentoo.org> allegro-5.0.3.ebuild:
   Drop USE="-X". Fix bug #375577 by Myckel Habets
