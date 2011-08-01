@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nikto
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/ChangeLog,v 1.25 2010/05/26 16:38:56 abcd Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nikto/ChangeLog,v 1.26 2011/08/01 14:51:59 patrick Exp $
+
+*nikto-2.1.4 (01 Aug 2011)
+
+  01 Aug 2011; Patrick Lauer <patrick@gentoo.org> +nikto-2.1.4.ebuild:
+  Bump, fixes #292312. Thanks to everyone who worked on it
 
   26 May 2010; Jonathan Callen <abcd@gentoo.org> nikto-2.03.ebuild:
   Bump to EAPI=3, add prefix keywords, cleanup QA issues
