@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-2.0.1-r5.ebuild,v 1.1 2011/08/01 10:14:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-2.0.1-r5.ebuild,v 1.2 2011/08/01 10:22:06 ssuominen Exp $
 
 EAPI=4
 inherit eutils libtool toolchain-funcs
@@ -40,11 +40,11 @@ src_configure() {
 }
 
 src_compile() {
-	cd "${S}-build"
+	cd "${S}"-build
 	emake
-	cd "${S}-buildu"
+	cd "${S}"-buildu
 	emake buildlib LIBRARY=libexpatu.la
-	cd "${S}-buildw"
+	cd "${S}"-buildw
 	emake buildlib LIBRARY=libexpatw.la
 }
 
@@ -57,11 +57,11 @@ src_install() {
 		doins examples/*.c
 	fi
 
-	cd "${S}-build"
-	emake DESTDIR="${D}" install
-	cd "${S}-buildu"
+	cd "${S}"-build
+	emake install DESTDIR="${D}"
+	cd "${S}"-buildu
 	emake installlib DESTDIR="${D}" LIBRARY=libexpatu.la
-	cd "${S}-buildw"
+	cd "${S}"-buildw
 	emake installlib DESTDIR="${D}" LIBRARY=libexpatw.la
 
 	use static-libs || rm -f "${D}"usr/lib*/libexpat{,u,w}.la
