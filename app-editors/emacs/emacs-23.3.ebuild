@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.3.ebuild,v 1.10 2011/07/15 16:09:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.3.ebuild,v 1.11 2011/08/01 06:33:39 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnu.org/software/emacs/"
 SRC_URI="mirror://gnu/emacs/${P}.tar.bz2
 	mirror://gentoo/${P}-patches-1.tar.bz2"
 
-LICENSE="GPL-3 FDL-1.3 BSD as-is MIT W3C unicode"
+LICENSE="GPL-3 FDL-1.3 BSD as-is MIT W3C unicode PSF-2"
 SLOT="23"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="alsa aqua dbus gconf gif gpm gtk gzip-el hesiod jpeg kerberos m17n-lib motif png sound source svg tiff toolkit-scroll-bars X Xaw3d xft +xpm"
