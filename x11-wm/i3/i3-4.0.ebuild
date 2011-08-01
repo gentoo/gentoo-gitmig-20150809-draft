@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.0.ebuild,v 1.1 2011/08/01 06:17:07 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.0.ebuild,v 1.2 2011/08/01 16:27:46 xarthisius Exp $
 
 EAPI=4
 
@@ -21,6 +21,7 @@ CDEPEND="dev-libs/libev
 	x11-libs/libX11
 	x11-libs/xcb-util"
 DEPEND="${CDEPEND}
+	app-text/asciidoc
 	dev-util/pkgconfig
 	sys-devel/flex
 	sys-devel/bison
