@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bigeye/bigeye-0.3-r2.ebuild,v 1.1 2010/08/28 04:26:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bigeye/bigeye-0.3-r3.ebuild,v 1.1 2011/08/01 01:41:43 jer Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit eutils toolchain-funcs
 
@@ -19,19 +19,21 @@ IUSE=""
 DEPEND=""
 
 src_prepare() {
-	epatch "${WORKDIR}"/${P}-gcc34.diff
+	epatch \
+		"${WORKDIR}"/${P}-gcc34.diff \
+		"${FILESDIR}"/${P}-overflow.patch
 	sed -i README \
 		-e "s|-- /messages/|-- /usr/share/bigeye/messages/|g" \
 		|| die "sed README"
 }
 
 src_compile() {
-	cd src
+	cd src || die
 	$(tc-getCC) ${CFLAGS} ${LDFLAGS} bigeye.c emulate.c -o bigeye || die
 }
 
 src_install() {
-	dobin src/bigeye || die
+	dobin src/bigeye
 
 	insinto /usr/share/bigeye
 	doins sig.file

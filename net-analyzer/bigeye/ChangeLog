@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/bigeye
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bigeye/ChangeLog,v 1.15 2010/08/28 04:26:56 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bigeye/ChangeLog,v 1.16 2011/08/01 01:41:43 jer Exp $
+
+*bigeye-0.3-r3 (01 Aug 2011)
+
+  01 Aug 2011; Jeroen Roovers <jer@gentoo.org> -bigeye-0.3-r2.ebuild,
+  +bigeye-0.3-r3.ebuild, +files/bigeye-0.3-overflow.patch:
+  Fix overflow (bug #342309).
 
 *bigeye-0.3-r2 (28 Aug 2010)
 
