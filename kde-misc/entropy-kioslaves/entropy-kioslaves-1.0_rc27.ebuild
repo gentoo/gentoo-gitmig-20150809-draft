@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/entropy-kioslaves/entropy-kioslaves-1.0_rc27.ebuild,v 1.1 2011/07/19 12:49:12 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/entropy-kioslaves/entropy-kioslaves-1.0_rc27.ebuild,v 1.2 2011/08/01 09:21:52 lxnay Exp $
 
 EAPI="3"
 KDE_MINIMAL="4.2"
@@ -10,7 +10,7 @@ DESCRIPTION="Entropy Package Manager KDE kioslaves support"
 HOMEPAGE="http://www.sabayon.org"
 LICENSE="GPL-2"
 
-SLOT="0"
+SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
