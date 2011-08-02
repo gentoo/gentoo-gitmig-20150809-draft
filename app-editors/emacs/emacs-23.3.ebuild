@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.3.ebuild,v 1.12 2011/08/02 05:41:31 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.3.ebuild,v 1.13 2011/08/02 17:44:03 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -9,7 +9,7 @@ inherit autotools elisp-common eutils flag-o-matic multilib
 
 DESCRIPTION="The extensible, customizable, self-documenting real-time display editor"
 HOMEPAGE="http://www.gnu.org/software/emacs/"
-SRC_URI="mirror://gnu/emacs/${P}.tar.bz2
+SRC_URI="mirror://gnu/emacs/${P}a.tar.bz2
 	mirror://gentoo/${P}-patches-1.tar.bz2"
 
 LICENSE="GPL-3 FDL-1.3 BSD as-is MIT W3C unicode PSF-2"
