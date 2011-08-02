@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/optipng
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.62 2011/01/30 09:23:07 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/ChangeLog,v 1.63 2011/08/02 15:10:47 sping Exp $
+
+*optipng-0.6.5 (02 Aug 2011)
+
+  02 Aug 2011; Sebastian Pipping <sping@gentoo.org> +optipng-0.6.5.ebuild,
+  +files/optipng-0.6.5-libpng-1.4.8.patch:
+  Bump to 0.6.5, fix compilation for libpng 1.4.8, deny compilation against
+  libpng 1.5 from ebuild to match upstream's changes in configure script
 
   30 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> optipng-0.6.4.ebuild:
   Add ~ppc64 wrt #346383
