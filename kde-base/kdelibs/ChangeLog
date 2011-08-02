@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.776 2011/07/27 14:04:40 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.777 2011/08/02 19:43:22 dilfridge Exp $
+
+*kdelibs-4.6.5-r1 (02 Aug 2011)
+
+  02 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kdelibs-4.6.5-r1.ebuild, +files/kdelibs-4.6.5-cardinality.patch:
+  Backport patch so kdepim-4.4 and kdepim-4.6 builds with
+  shared-desktop-ontologies-0.7
 
 *kdelibs-4.7.0 (27 Jul 2011)
 
