@@ -1,6 +1,10 @@
 # ChangeLog for games-board/xboard
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.40 2011/05/22 21:35:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.41 2011/08/02 05:45:58 mattst88 Exp $
+
+  02 Aug 2011; Matt Turner <mattst88@gentoo.org> xboard-4.4.4.ebuild,
+  xboard-4.5.1.ebuild, xboard-4.5.2a.ebuild:
+  Renamed x11-libs/Xaw3d to x11-libs/libXaw3d.
 
 *xboard-4.5.2a (22 May 2011)
 

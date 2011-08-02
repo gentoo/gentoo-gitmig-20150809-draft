@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xfrisk/xfrisk-1.2.ebuild,v 1.9 2010/09/17 06:28:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xfrisk/xfrisk-1.2.ebuild,v 1.10 2011/08/02 05:46:50 mattst88 Exp $
 
 EAPI=2
 inherit games
@@ -15,7 +15,7 @@ SLOT="0"
 IUSE=""
 
 RDEPEND="x11-libs/libXmu
-	x11-libs/Xaw3d"
+	x11-libs/libXaw3d"
 DEPEND="${RDEPEND}
 	x11-libs/libXaw"
 

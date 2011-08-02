@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.4.4.ebuild,v 1.4 2010/10/15 13:47:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.4.4.ebuild,v 1.5 2011/08/02 05:45:58 mattst88 Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE="Xaw3d +default-font zippy"
 RESTRICT="test" #124112
 
-RDEPEND="Xaw3d? ( x11-libs/Xaw3d )
+RDEPEND="Xaw3d? ( x11-libs/libXaw3d )
 	x11-libs/libXpm
 	x11-libs/libXaw
 	x11-libs/libSM
