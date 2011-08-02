@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.5b-r1.ebuild,v 1.8 2011/05/01 10:11:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xfig/xfig-3.2.5b-r1.ebuild,v 1.9 2011/08/02 05:48:12 mattst88 Exp $
 
 EAPI="2"
 inherit eutils multilib
@@ -18,7 +18,7 @@ IUSE=""
 
 RDEPEND="x11-libs/libXaw
 		x11-libs/libXp
-		x11-libs/Xaw3d
+		x11-libs/libXaw3d
 		x11-libs/libXi
 		virtual/jpeg
 		media-libs/libpng
@@ -53,8 +53,8 @@ sed_Imakefile() {
 		sed -i "s:^\(XCOMM\)*[[:space:]]*${varname}[[:space:]]*=.*$:${varname} = ${varval}:" "$@"
 	done
 	sed -i "s:^\(XCOMM\)*[[:space:]]*\(#define I18N\).*$:\2:" "$@"
-	if has_version '>=x11-libs/Xaw3d-1.5e'; then
-		einfo "x11-libs/Xaw3d 1.5e and abover installed"
+	if has_version '>=x11-libs/libXaw3d-1.5e'; then
+		einfo "x11-libs/libXaw3d 1.5e and abover installed"
 		sed -i "s:^\(XCOMM\)*[[:space:]]*\(#define XAW3D1_5E\).*$:\2:" "$@"
 	fi
 }
