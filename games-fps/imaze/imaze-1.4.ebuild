@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/imaze/imaze-1.4.ebuild,v 1.15 2008/12/02 20:11:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/imaze/imaze-1.4.ebuild,v 1.16 2011/08/02 05:46:56 mattst88 Exp $
 
 inherit games
 
@@ -17,7 +17,7 @@ RDEPEND="x11-libs/libXmu
 	x11-libs/libX11
 	x11-libs/libXaw
 	x11-libs/libXt
-	x11-libs/Xaw3d"
+	x11-libs/libXaw3d"
 DEPEND="${RDEPEND}
 	x11-proto/xproto"
 

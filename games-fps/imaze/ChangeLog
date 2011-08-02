@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/imaze
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/imaze/ChangeLog,v 1.15 2008/12/02 20:11:57 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/imaze/ChangeLog,v 1.16 2011/08/02 05:46:56 mattst88 Exp $
+
+  02 Aug 2011; Matt Turner <mattst88@gentoo.org> imaze-1.4.ebuild:
+  Renamed x11-libs/Xaw3d to x11-libs/libXaw3d.
 
   02 Dec 2008; <ssuominen@gentoo.org> imaze-1.4.ebuild:
   Remove deprecated XFree86 -time library support, xview, from imaze ebuild
