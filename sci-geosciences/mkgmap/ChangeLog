@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/mkgmap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mkgmap/ChangeLog,v 1.18 2011/07/31 14:08:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mkgmap/ChangeLog,v 1.19 2011/08/02 16:45:45 scarabeus Exp $
+
+*mkgmap-1995 (02 Aug 2011)
+
+  02 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> +mkgmap-1995.ebuild,
+  -mkgmap-2009.ebuild:
+  Downgrade back to version 1995 which does not show compilation issues. New
+  version will be added when it compiles again. Fixes bug #377197.
 
 *mkgmap-2009 (31 Jul 2011)
 
