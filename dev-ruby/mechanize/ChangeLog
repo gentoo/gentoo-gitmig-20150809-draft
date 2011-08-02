@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mechanize
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mechanize/ChangeLog,v 1.28 2011/07/23 14:28:27 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mechanize/ChangeLog,v 1.29 2011/08/02 16:32:23 hwoarang Exp $
+
+  02 Aug 2011; Markos Chandras <hwoarang@gentoo.org> mechanize-1.0.0.ebuild:
+  Stable on amd64 wrt bug #348510
 
   23 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> mechanize-1.0.0.ebuild:
   ppc stable wrt #348510
