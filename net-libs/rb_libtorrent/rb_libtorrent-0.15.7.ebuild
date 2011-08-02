@@ -1,9 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.14.9-r1.ebuild,v 1.4 2010/11/11 15:27:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.15.7.ebuild,v 1.1 2011/08/02 14:18:30 hwoarang Exp $
 
 EAPI="2"
-inherit autotools eutils flag-o-matic versionator
+PYTHON_DEPEND="python? 2:2.6"
+PYTHON_USE_WITH="threads"
+
+inherit eutils versionator python
 
 MY_P=${P/rb_/}
 MY_P=${MY_P/torrent/torrent-rasterbar}
@@ -15,37 +18,32 @@ SRC_URI="http://libtorrent.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~x86-fbsd"
-IUSE="debug doc examples python test"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE="debug doc examples python ssl"
 RESTRICT="test"
 
-DEPEND="|| ( >=dev-libs/boost-1.35
-		( ~dev-libs/boost-1.34.1 dev-cpp/asio ) )
-	python? ( >=dev-libs/boost-1.35.0-r5[python] dev-lang/python:2.6[threads] )
+DEPEND=">=dev-libs/boost-1.36[python?]
 	>=sys-devel/libtool-2.2
 	sys-libs/zlib
-	examples? ( !net-p2p/mldonkey )"  #292998
+	examples? ( !net-p2p/mldonkey )
+	ssl? ( dev-libs/openssl )"
+
 RDEPEND="${DEPEND}"
 
+pkg_setup() {
+	use python && python_set_active_version 2
+}
+
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.14.9-as-needed-fix.patch  #276873
-	epatch "${FILESDIR}"/${PN}-0.14.8-boost-detect.patch   #295474
-	rm ltmain.sh  #298069
-	eautoreconf
+	use python && python_convert_shebangs -r 2 .
 }
 
 src_configure() {
-	append-ldflags -pthread
-
 	# use multi-threading versions of boost libs
 	local BOOST_LIBS="--with-boost-system=boost_system-mt \
-		--with-boost-asio=boost_system-mt \
 		--with-boost-filesystem=boost_filesystem-mt \
 		--with-boost-thread=boost_thread-mt \
-		--with-boost-regex=boost_regex-mt \
-		--with-boost-python=boost_python-mt \
-		--with-boost-program_options=boost_program_options-mt"
-
+		--with-boost-python=boost_python-mt"
 	# detect boost version and location, bug 295474
 	BOOST_PKG="$(best_version ">=dev-libs/boost-1.34.1")"
 	BOOST_VER="$(get_version_component_range 1-2 "${BOOST_PKG/*boost-/}")"
@@ -54,14 +52,14 @@ src_configure() {
 	BOOST_LIB="/usr/$(get_libdir)/boost-${BOOST_VER}"
 
 	local LOGGING
-	use debug && LOGGING="--with-logging=verbose"
+	use debug && LOGGING="--enable-logging=verbose"
 
 	econf $(use_enable debug) \
 		$(use_enable test tests) \
 		$(use_enable examples) \
 		$(use_enable python python-binding) \
+		$(use_enable ssl encryption) \
 		--with-zlib=system \
-		--with-asio=system \
 		${LOGGING} \
 		--with-boost=${BOOST_INC} \
 		--with-boost-libdir=${BOOST_LIB} \
