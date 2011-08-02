@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxpuck/tuxpuck-0.8.2-r1.ebuild,v 1.6 2011/02/25 22:00:30 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxpuck/tuxpuck-0.8.2-r1.ebuild,v 1.7 2011/08/02 18:12:45 zmedico Exp $
 
 EAPI=2
 inherit eutils games
@@ -22,7 +22,11 @@ DEPEND="${RDEPEND}
 	media-libs/freetype:2"
 
 src_prepare() {
-	unpack ./man/${PN}.6.gz
+	# Bug #376741 - Make unpack call compatible with both
+	# PMS and <sys-apps/portage-2.1.10.10.
+	cd man || die
+	unpack ./${PN}.6.gz
+	cd .. || die
 	sed -i \
 		-e 's/-Werror//' \
 		-e '/^CC/d' \
