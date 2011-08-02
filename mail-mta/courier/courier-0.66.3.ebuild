@@ -1,29 +1,23 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.59.0.ebuild,v 1.22 2011/07/08 10:03:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.66.3.ebuild,v 1.1 2011/08/02 18:44:26 hanno Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
-
-inherit eutils flag-o-matic autotools
+inherit eutils flag-o-matic multilib
 
 DESCRIPTION="An MTA designed specifically for maildirs"
-[ -z "${PV/?.??/}" ] && SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
-[ -z "${PV/?.??.?/}" ] && SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
-[ -z "${SRC_URI}" ] && SRC_URI="http://www.courier-mta.org/beta/courier/${P%%_pre}.tar.bz2"
+SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
 HOMEPAGE="http://www.courier-mta.org/"
-S="${WORKDIR}/${P%%_pre}"
-
 SLOT="0"
 LICENSE="GPL-2"
 # not in keywords due to missing dependencies: ~arm ~s390 ~ppc64
-KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE="postgres ldap mysql pam nls ipv6 spell fax crypt norewrite \
-	fam web webmail"
+	fam web webmail gnutls"
 
 DEPEND="
-	>=net-libs/courier-authlib-0.59
-	>=dev-libs/openssl-0.9.6
+	>=net-libs/courier-authlib-0.61.0
+	!gnutls? ( >=dev-libs/openssl-0.9.6 )
+	gnutls? ( net-libs/gnutls )
 	>=sys-libs/gdbm-1.8.0
 	dev-libs/libpcre
 	app-misc/mime-types
@@ -63,39 +57,28 @@ RDEPEND="${RDEPEND}
 PDEPEND="pam? ( net-mail/mailbase )
 	crypt? ( >=app-crypt/gnupg-1.0.4 )"
 
-filter-flags '-fomit-frame-pointer'
-
 src_unpack() {
-	use fam || (
-		ewarn "File Alteration Monitor (FAM) is disabled"
-		ewarn "courier-imap will fall back to 60 second polls."
-		ewarn 'add "fam" to your USE flags to build as usual'
-		ebeep 4
-		epause 4 )
 	unpack ${A}
 	cd "${S}"
 	use norewrite && epatch "${FILESDIR}/norewrite.patch"
-
-	epatch "${FILESDIR}/${P}-asneeded.patch"
-	cd "${S}/gdbmobj/"
-	eautoreconf
 }
 
 src_compile() {
+	filter-flags '-fomit-frame-pointer'
+
 	local myconf
-	myconf="`use_with ipv6` \
-		`use_with ldap ldapaliasd` `use_enable ldap maildropldap`"
+	myconf=""
 
 	use ldap && myconf="${myconf} --with-ldapconfig=/etc/courier/maildropldap.conf"
-	use spell || myconf="${myconf} --without-ispell"
 
-	myconf="${myconf} --enable-mimetypes=/etc/mime.types"
-
-	myconf="${myconf} $(use_with fam)"
-
-	einfo "Configuring courier: $(echo ${myconf} | xargs echo)"
-
-	econf \
+	econf ${myconf} \
+		$(use_with fam) \
+		$(use_with ipv6) \
+		$(use_with spell ispell) \
+		$(use_with ldap ldapaliasd) \
+		$(use_enable ldap maildroldap) \
+		$(use_with gnutls) \
+		--enable-mimetypes=/etc/mime.types \
 		--prefix=/usr \
 		--disable-root-check \
 		--mandir=/usr/share/man \
@@ -112,7 +95,7 @@ src_compile() {
 		--with-db=gdbm \
 		--disable-autorenamesent \
 		--cache-file="${S}/configuring.cache" \
-		--host="${CHOST}" ${myconf} debug=true || die "./configure"
+		--host="${CHOST}" debug=true || die "./configure"
 	sed -e'/^install-perms-local:/a\	sed -e\"s|^|'"${D}"'|g\" -i permissions.dat' -i Makefile
 	emake || die "Compile problem"
 }
@@ -145,20 +128,26 @@ src_install() {
 
 	# Get rid of files we dont want
 	if ! use webmail ; then
-		cd "${D}"
-		cat "${FILESDIR}/webmail_files" | xargs rm -rf
+		rm -rf "${D}/usr/$(get_libdir)/courier/courier/webmail" \
+			"${D}/usr/$(get_libdir)/courier/courier/sqwebmaild" \
+			"${D}/usr/share/courier/sqwebmail/" \
+			"${D}/usr/sbin/webmaild" \
+			"${D}/usr/sbin/webgpg" \
+			"${D}/etc/courier/webmail.authpam" \
+			"${D}/var/lib/courier/webmail-logincache" \
+			"${D}"/etc/courier/sqwebmaild*
 	fi
 
 	if ! use web ; then
-		cd "${D}"
-		cat "${FILESDIR}/webadmin_files" | xargs rm -rf
+		rm -rf "${D}/usr/share/courier/courierwebadmin/" \
+			"${D}/etc/courier/webadmin"
 	fi
 
 	for dir2keep in $(cd "${D}" && find ./var/lib/courier -type d) ; do
 		keepdir "$dir2keep" || die "failed running keepdir: $dir2keep"
 	done
 
-	newinitd "${FILESDIR}/courier-init-r1" "courier"
+	newinitd "${FILESDIR}/courier-init-r3" "courier"
 	use fam || sed -i -e's|^.*use famd$||g' "${D}/etc/init.d/courier"
 
 	cd "${D}/etc/courier"
@@ -196,7 +185,6 @@ src_install() {
 
 	# Fix for a sandbox violation on subsequential merges
 	# - ticho@gentoo.org, 2005-07-10
-	rm "${D}"/usr/sbin/{pop3d,imapd}{,-ssl}
 	dosym /usr/share/courier/pop3d /usr/sbin/courier-pop3d
 	dosym /usr/share/courier/pop3d-ssl /usr/sbin/courier-pop3d-ssl
 	dosym /usr/share/courier/imapd /usr/sbin/courier-imapd
@@ -207,7 +195,7 @@ src_install() {
 	use nls && cp unicode/README README.unicode
 	dodoc AUTHORS BENCHMARKS COPYING* ChangeLog* INSTALL NEWS README* TODO courier/doc/*.txt
 	dodoc tcpd/README.couriertls
-	mv "${D}/usr/share/courier/htmldoc" "${D}/usr/share/doc/${P}/html"
+	mv "${D}/usr/share/courier/htmldoc" "${D}/usr/share/doc/${PF}/html"
 
 	if use webmail ; then
 		insinto /usr/$(get_libdir)/courier/courier
@@ -242,17 +230,12 @@ src_install() {
 }
 
 src_test() {
-	addpredict /
-	echo ">>> Test phase [check]: ${CATEGORY}/${PF}"
-	if has userpriv "${FEATURES}" ; then
-		if ! emake -j1 check; then
-			has test "${FEATURES}" && die "Make check failed. See above for details."
-			has test "${FEATURES}" || eerror "Make check failed. See above for details."
-		fi
+	if [ `whoami` != 'root' ]; then
+		emake -j1 check || die "Make check failed."
 	else
-		has test "${FEATURES}" && eerror "Make check needs FEATURES="userpriv" to work."
+		einfo "make check skipped, can't run as root."
+		einfo "You can enable it with FEATURES=\"userpriv\""
 	fi
-	SANDBOX_PREDICT="${SANDBOX_PREDICT%:/}"
 }
 
 pkg_postinst() {

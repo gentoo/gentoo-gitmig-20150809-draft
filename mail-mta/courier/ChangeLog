@@ -1,6 +1,16 @@
 # ChangeLog for mail-mta/courier
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.149 2011/07/08 10:03:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.150 2011/08/02 18:44:26 hanno Exp $
+
+  02 Aug 2011; Hanno Boeck <hanno@gentoo.org> -courier-0.59.0.ebuild,
+  -files/courier-0.59.0-asneeded.patch, -courier-0.62.2.ebuild,
+  -courier-0.64.1.ebuild, +courier-0.66.3.ebuild, -files/courier-init-r1:
+  Remove old versions after stabilizing 0.65.2-r1.
+
+*courier-0.66.3 (02 Aug 2011)
+
+  02 Aug 2011; Hanno Boeck <hanno@gentoo.org> +courier-0.66.3.ebuild:
+  Version bump.
 
   08 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> courier-0.59.0.ebuild:
   Convert from "hasq" to "has".
