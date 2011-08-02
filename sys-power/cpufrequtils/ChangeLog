@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/cpufrequtils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.61 2011/07/26 23:32:46 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.62 2011/08/02 18:09:38 mattst88 Exp $
+
+  02 Aug 2011; Matt Turner <mattst88@gentoo.org> metadata.xml:
+  Add myself as maintainer.
 
   26 Jul 2011; Matt Turner <mattst88@gentoo.org> cpufrequtils-008-r1.ebuild:
   Added ~mips. Works on Yeeloong.
