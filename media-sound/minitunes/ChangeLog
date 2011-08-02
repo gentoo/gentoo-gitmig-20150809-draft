@@ -1,0 +1,12 @@
+# ChangeLog for media-sound/minitunes
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/minitunes/ChangeLog,v 1.1 2011/08/02 14:39:46 hwoarang Exp $
+
+*minitunes-9999 (02 Aug 2011)
+*minitunes-1.0 (02 Aug 2011)
+
+  02 Aug 2011; Markos Chandras <hwoarang@gentoo.org> +minitunes-1.0.ebuild,
+  +minitunes-9999.ebuild, +metadata.xml:
+  Moved from multimedia overlay. Thanks to Nikoli <nikoli@lavabit.com> for the
+  initial ebuilds. Bug #334007
+
