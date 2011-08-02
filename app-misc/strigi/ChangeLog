@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.69 2011/07/17 12:17:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.70 2011/08/02 21:30:40 dilfridge Exp $
+
+*strigi-0.7.5-r2 (02 Aug 2011)
+
+  02 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +strigi-0.7.5-r2.ebuild, +files/strigi-0.7.5-ffmpeg.patch:
+  Add upstream fix for new ffmpeg / libav, bug 376189
 
 *strigi-0.7.5-r1 (17 Jul 2011)
 
