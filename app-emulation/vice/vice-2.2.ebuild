@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.2.ebuild,v 1.6 2011/03/31 15:35:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.2.ebuild,v 1.7 2011/08/02 05:44:43 mattst88 Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -23,7 +23,7 @@ RDEPEND="
 	x11-libs/libXt
 	x11-libs/libXxf86vm
 	x11-apps/xset
-	Xaw3d? ( x11-libs/Xaw3d )
+	Xaw3d? ( x11-libs/libXaw3d )
 	!Xaw3d? ( !gnome? ( x11-libs/libXaw ) )
 	alsa? ( media-libs/alsa-lib )
 	gnome? (

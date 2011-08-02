@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.75 2011/07/29 04:57:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.76 2011/08/02 05:44:43 mattst88 Exp $
+
+  02 Aug 2011; Matt Turner <mattst88@gentoo.org> vice-2.2.ebuild,
+  vice-2.3.ebuild:
+  Renamed x11-libs/Xaw3d to x11-libs/libXaw3d.
 
 *vice-2.3 (29 Jul 2011)
 
