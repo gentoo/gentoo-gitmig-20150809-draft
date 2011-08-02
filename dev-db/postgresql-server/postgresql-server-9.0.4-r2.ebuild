@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.0.4-r2.ebuild,v 1.1 2011/08/02 02:13:49 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.0.4-r2.ebuild,v 1.2 2011/08/02 10:14:04 titanofold Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -59,8 +59,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${WORKDIR}/autoconf.patch" "${FILESDIR}/bool.patch" \
-		"${FILESDIR}/pg_ctl-exit-status.patch" "${WORKDIR}/server.patch"
+	epatch "${WORKDIR}/autoconf.patch" "${WORKDIR}/bool.patch" \
+		"${WORKDIR}/pg_ctl-exit-status.patch" "${WORKDIR}/server.patch"
 
 	eprefixify src/include/pg_config_manual.h
 
