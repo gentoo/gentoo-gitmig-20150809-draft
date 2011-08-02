@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/ghc-paths
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ghc-paths/ChangeLog,v 1.4 2011/08/02 08:33:01 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ghc-paths/ChangeLog,v 1.5 2011/08/02 08:34:18 slyfox Exp $
+
+  02 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  -ghc-paths-0.1.0.6.ebuild:
+  Removed old.
 
 *ghc-paths-0.1.0.8 (02 Aug 2011)
 
