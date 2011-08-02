@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/ambertools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ambertools/ChangeLog,v 1.1 2011/07/28 13:19:06 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ambertools/ChangeLog,v 1.2 2011/08/02 14:42:37 alexxy Exp $
+
+  02 Aug 2011; Alexey Shvetsov <alexxy@gentoo.org> ambertools-1.5-r1.ebuild:
+  Add ~amd64-linux keyword
 
 *ambertools-1.5-r1 (28 Jul 2011)
 
