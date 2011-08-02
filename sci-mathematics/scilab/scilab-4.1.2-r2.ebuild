@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.2-r2.ebuild,v 1.11 2011/06/28 13:56:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.2-r2.ebuild,v 1.12 2011/08/02 05:49:16 mattst88 Exp $
 
 EAPI=4
 
@@ -31,7 +31,7 @@ RDEPEND="
 	)
 	>=dev-lang/tk-8.4
 	>=dev-lang/tcl-8.4
-	Xaw3d? ( x11-libs/Xaw3d )
+	Xaw3d? ( x11-libs/libXaw3d )
 	ocaml? ( dev-lang/ocaml )
 	java? ( >=virtual/jdk-1.4 )"
 

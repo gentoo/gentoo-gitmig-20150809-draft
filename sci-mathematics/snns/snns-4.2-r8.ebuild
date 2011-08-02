@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/snns-4.2-r8.ebuild,v 1.9 2010/08/14 08:38:24 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/snns-4.2-r8.ebuild,v 1.10 2011/08/02 05:49:20 mattst88 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -27,7 +27,7 @@ KEYWORDS="amd64 ppc x86"
 SLOT="0"
 IUSE="X doc python"
 
-RDEPEND="X? ( x11-libs/Xaw3d )"
+RDEPEND="X? ( x11-libs/libXaw3d )"
 DEPEND="${RDEPEND}
 	X? ( x11-proto/xproto )"
 
