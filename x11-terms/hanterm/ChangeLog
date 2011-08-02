@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/hanterm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.27 2010/08/10 20:55:07 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/ChangeLog,v 1.28 2011/08/02 05:51:11 mattst88 Exp $
+
+  02 Aug 2011; Matt Turner <mattst88@gentoo.org> hanterm-3.1.6-r2.ebuild,
+  hanterm-3.1.6-r4.ebuild:
+  Renamed x11-libs/Xaw3d to x11-libs/libXaw3d.
 
   10 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   hanterm-3.1.6-r4.ebuild:

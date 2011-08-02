@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r2.ebuild,v 1.26 2010/02/11 16:10:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r2.ebuild,v 1.27 2011/08/02 05:51:11 mattst88 Exp $
 
 DESCRIPTION="Hanterm -- Korean terminal"
 HOMEPAGE="http://www.hanterm.org/"
@@ -14,7 +14,7 @@ IUSE=""
 DEPEND="x11-libs/libXmu
 	x11-libs/libICE
 	x11-libs/libXaw
-	>=x11-libs/Xaw3d-1.5"
+	>=x11-libs/libXaw3d-1.5"
 RDEPEND="${DEPEND}
 	media-fonts/baekmuk-fonts"
 

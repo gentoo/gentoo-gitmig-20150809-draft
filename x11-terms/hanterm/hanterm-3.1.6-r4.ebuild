@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r4.ebuild,v 1.3 2010/08/10 20:55:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r4.ebuild,v 1.4 2011/08/02 05:51:11 mattst88 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -17,7 +17,7 @@ DEPEND="x11-libs/libXmu
 	x11-libs/libICE
 	x11-libs/libXaw
 	utempter? ( sys-libs/libutempter )
-	>=x11-libs/Xaw3d-1.5"
+	>=x11-libs/libXaw3d-1.5"
 RDEPEND="${DEPEND}
 	media-fonts/baekmuk-fonts"
 

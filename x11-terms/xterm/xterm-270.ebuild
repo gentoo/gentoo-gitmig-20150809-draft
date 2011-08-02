@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-270.ebuild,v 1.2 2011/07/09 12:02:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-270.ebuild,v 1.3 2011/08/02 05:52:27 mattst88 Exp $
 
 EAPI=4
 inherit eutils multilib
@@ -24,7 +24,7 @@ COMMON_DEPEND="sys-libs/libutempter
 	x11-libs/libXrender
 	x11-libs/libXt
 	unicode? ( x11-apps/luit )
-	Xaw3d? ( x11-libs/Xaw3d )"
+	Xaw3d? ( x11-libs/libXaw3d )"
 RDEPEND="${COMMON_DEPEND}
 	media-fonts/font-misc-misc"
 DEPEND="${COMMON_DEPEND}
