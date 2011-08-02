@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/scite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.118 2011/07/20 13:23:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.119 2011/08/02 14:49:34 hwoarang Exp $
+
+  02 Aug 2011; Markos Chandras <hwoarang@gentoo.org> scite-2.27.ebuild:
+  Stable on amd64 wrt bug #377087
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #28480
