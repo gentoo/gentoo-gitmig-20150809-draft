@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-5.2.12-r1.ebuild,v 1.3 2011/07/29 09:01:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-5.2.12-r1.ebuild,v 1.4 2011/08/02 21:16:25 mgorny Exp $
 
 EAPI=4
 
@@ -91,4 +91,14 @@ pkg_postinst() {
 	elog "Also, users upgrading from 4.0 series should be aware that"
 	elog "the -N, -R and -Y command line options no longer exist."
 	elog "These are controled now by nohook options in dhcpcd.conf."
+
+	# Mea culpa, feel free to remove that after some time --mgorny.
+	if [[ -e "${ROOT}"/etc/systemd/system/network.target.wants/${PN}.service ]]
+	then
+		ebegin "Moving ${PN}.service to multi-user.target"
+		mv "${ROOT}"/etc/systemd/system/network.target.wants/${PN}.service \
+			"${ROOT}"/etc/systemd/system/multi-user.target.wants/
+		eend ${?} \
+			"Please try to re-enable dhcpcd.service"
+	fi
 }

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.323 2011/07/29 09:01:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.324 2011/08/02 21:16:25 mgorny Exp $
+
+  02 Aug 2011; Michał Górny <mgorny@gentoo.org> dhcpcd-5.2.12-r1.ebuild,
+  files/dhcpcd.service:
+  Fix systemd service target. Thanks to Tom Gundersen for explaining this.
 
   29 Jul 2011; Zac Medico <zmedico@gentoo.org> dhcpcd-5.2.12-r1.ebuild:
   Add ~x86-linux keyword.
