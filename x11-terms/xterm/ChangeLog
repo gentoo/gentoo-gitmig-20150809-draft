@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.327 2011/08/02 05:52:28 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.328 2011/08/02 18:56:53 mattst88 Exp $
+
+*xterm-271 (02 Aug 2011)
+
+  02 Aug 2011; Matt Turner <mattst88@gentoo.org> +xterm-271.ebuild:
+  Version bump.
 
   02 Aug 2011; Matt Turner <mattst88@gentoo.org> xterm-267.ebuild,
   xterm-269.ebuild, xterm-270.ebuild:
