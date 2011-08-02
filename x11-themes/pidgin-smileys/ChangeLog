@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/pidgin-smileys
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/pidgin-smileys/ChangeLog,v 1.8 2011/07/25 19:32:01 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/pidgin-smileys/ChangeLog,v 1.9 2011/08/02 14:50:18 hwoarang Exp $
+
+  02 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
+  pidgin-smileys-20100821.ebuild:
+  Stable on amd64 wrt bug #376409
 
   25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   pidgin-smileys-20100821.ebuild:
