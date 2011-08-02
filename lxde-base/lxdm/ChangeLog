@@ -1,6 +1,11 @@
 # ChangeLog for lxde-base/lxdm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/ChangeLog,v 1.7 2011/08/02 16:35:32 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/ChangeLog,v 1.8 2011/08/02 16:39:24 lxnay Exp $
+
+  02 Aug 2011; Fabio Erculiani <lxnay@gentoo.org>
+  -files/lxdm-0.4.0-pam_console-disable.patch,
+  +files/lxdm-0.4.1-pam_console-disable.patch:
+  fix epatch
 
 *lxdm-0.4.1 (02 Aug 2011)
 
