@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/ucpp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/ucpp/ChangeLog,v 1.1 2011/07/28 13:18:23 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/ucpp/ChangeLog,v 1.2 2011/08/02 14:19:29 alexxy Exp $
+
+  02 Aug 2011; Alexey Shvetsov <alexxy@gentoo.org> ucpp-1.3.ebuild:
+  Add ~amd64-linux keyword
 
 *ucpp-1.3 (28 Jul 2011)
 
