@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qwtpolar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtpolar/ChangeLog,v 1.3 2011/07/04 10:39:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtpolar/ChangeLog,v 1.4 2011/08/02 14:56:53 hwoarang Exp $
+
+  02 Aug 2011; Markos Chandras <hwoarang@gentoo.org> qwtpolar-0.1.0-r1.ebuild:
+  Stable on amd64 wrt bug #375989
 
 *qwtpolar-0.1.0-r1 (04 Jul 2011)
 
