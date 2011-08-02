@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.2-r2.ebuild,v 1.13 2011/08/01 06:33:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.2-r2.ebuild,v 1.14 2011/08/02 05:41:31 mattst88 Exp $
 
 EAPI=2
 
@@ -61,7 +61,7 @@ RDEPEND="sys-libs/ncurses
 		)
 		gtk? ( x11-libs/gtk+:2 )
 		!gtk? (
-			Xaw3d? ( x11-libs/Xaw3d )
+			Xaw3d? ( x11-libs/libXaw3d )
 			!Xaw3d? ( motif? ( >=x11-libs/openmotif-2.3:0 ) )
 		)
 	)"
