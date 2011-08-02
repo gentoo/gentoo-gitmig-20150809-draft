@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/diffball
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/ChangeLog,v 1.37 2011/08/02 05:31:16 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffball/ChangeLog,v 1.38 2011/08/02 05:48:20 rafaelmartins Exp $
+
+  02 Aug 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  diffball-1.0.1.ebuild:
+  added dev-util/pkgconfig to DEPEND. ${PN}-${PV} == ${P}
 
 *diffball-1.0.1 (02 Aug 2011)
 
