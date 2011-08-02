@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/etpan-ng/etpan-ng-0.7.1.ebuild,v 1.4 2007/02/07 20:32:33 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/etpan-ng/etpan-ng-0.7.1.ebuild,v 1.5 2011/08/02 06:22:19 mattst88 Exp $
 
 DESCRIPTION="etPan is a console mail client that is based on libEtPan!"
 HOMEPAGE="http://libetpan.sourceforge.net/etpan/"
@@ -10,9 +10,10 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE="debug ldap"
 
-DEPEND=">=net-libs/libetpan-0.35
+RDEPEND=">=net-libs/libetpan-0.35
 	sys-libs/ncurses
-	ldap? ( net-nds/openldap )
+	ldap? ( net-nds/openldap )"
+DEPEND="${RDEPEND}
 	|| ( sys-devel/bison dev-util/yacc dev-util/byacc )"
 
 src_compile() {
@@ -25,6 +26,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc Changelog NEWS README TODO contrib/etpan-make-vtree.pl doc/*
 }

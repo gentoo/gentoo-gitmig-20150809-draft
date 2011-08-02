@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/etpan-ng/etpan-ng-0.7.1-r1.ebuild,v 1.1 2010/04/20 19:08:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/etpan-ng/etpan-ng-0.7.1-r1.ebuild,v 1.2 2011/08/02 06:22:19 mattst88 Exp $
 
 inherit eutils autotools
 
@@ -12,9 +12,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug ldap"
 
-DEPEND=">=net-libs/libetpan-0.35
+RDEPEND=">=net-libs/libetpan-0.35
 	sys-libs/ncurses
-	ldap? ( net-nds/openldap )
+	ldap? ( net-nds/openldap )"
+DEPEND="${RDEPEND}
 	|| ( sys-devel/bison dev-util/yacc dev-util/byacc )"
 
 src_unpack() {
