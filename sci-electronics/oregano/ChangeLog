@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/oregano
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.50 2011/07/15 23:46:09 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/oregano/ChangeLog,v 1.51 2011/08/02 16:23:27 tomjbe Exp $
+
+  02 Aug 2011; Thomas Beierlein <tomjbe@gentoo.org>
+  -files/oregano-0.60.0-dont-run-update-mime-database.patch,
+  -oregano-0.69.0.ebuild, -oregano-0.69.0-r1.ebuild,
+  -files/oregano-0.69.0-ldflags.diff:
+  remove oregano-0.69.0 (pending 22 Jul 2011), see #354241 for reference
 
   15 Jul 2011; Denis Dupeyron <calchan@gentoo.org> oregano-0.69.0.ebuild,
   oregano-0.69.0-r1.ebuild, oregano-0.69.1.ebuild, oregano-0.69.1-r1.ebuild:
