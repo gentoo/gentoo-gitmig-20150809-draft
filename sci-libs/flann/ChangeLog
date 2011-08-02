@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/flann
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/ChangeLog,v 1.7 2011/06/26 10:29:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/ChangeLog,v 1.8 2011/08/02 19:09:42 dilfridge Exp $
+
+  02 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> flann-1.6.10.ebuild:
+  Fix tests by prepackaging the test data, bug 366477
 
   26 Jun 2011; Justin Lecher <jlec@gentoo.org> flann-1.6.8.ebuild,
   flann-1.6.10.ebuild, metadata.xml:
