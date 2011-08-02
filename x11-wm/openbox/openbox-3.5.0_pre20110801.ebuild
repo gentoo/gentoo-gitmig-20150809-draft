@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.0_pre20110313.ebuild,v 1.6 2011/08/02 11:03:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.0_pre20110801.ebuild,v 1.1 2011/08/02 11:03:07 hwoarang Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="1.9"
