@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-3.eclass,v 1.22 2011/07/08 11:36:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex-3.eclass,v 1.23 2011/08/02 05:52:04 mattst88 Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -19,7 +19,7 @@ IUSE="X Xaw3d motif neXt"
 
 DEPEND="X? ( motif? ( >=x11-libs/openmotif-2.3 )
 		!motif? ( neXt? ( x11-libs/neXtaw )
-			!neXt? ( Xaw3d? ( x11-libs/Xaw3d ) ) )
+			!neXt? ( Xaw3d? ( x11-libs/libXaw3d ) ) )
 		!app-text/xdvik
 	)
 	!dev-tex/memoir
