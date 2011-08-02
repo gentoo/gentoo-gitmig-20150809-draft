@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.15.ebuild,v 1.7 2011/06/21 16:02:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mopac7/mopac7-1.15.ebuild,v 1.8 2011/08/02 14:32:12 alexxy Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ SRC_URI="
 
 LICENSE="mopac7"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~amd64-linux"
 IUSE="gmxmopac7 static-libs"
 
 DEPEND="
