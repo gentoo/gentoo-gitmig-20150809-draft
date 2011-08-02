@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.4.0.ebuild,v 1.12 2011/05/15 15:26:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/xdtv-2.4.0.ebuild,v 1.13 2011/08/02 05:48:28 mattst88 Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs autotools
 
@@ -31,7 +31,7 @@ KEYWORDS="~amd64 ~ppc x86"
 
 COMMON_DEPEND="zvbi? ( >=media-libs/zvbi-0.2.4 )
 	neXt? ( x11-libs/neXtaw )
-	Xaw3d? ( !neXt? ( x11-libs/Xaw3d ) )
+	Xaw3d? ( !neXt? ( x11-libs/libXaw3d ) )
 	!neXt? ( !Xaw3d? ( x11-libs/libXaw ) )
 	xvid? ( >=media-libs/xvid-1.1 )
 	encode? ( >=media-sound/lame-3.93 )

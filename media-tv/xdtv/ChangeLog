@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xdtv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.59 2011/05/15 15:26:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xdtv/ChangeLog,v 1.60 2011/08/02 05:48:28 mattst88 Exp $
+
+  02 Aug 2011; Matt Turner <mattst88@gentoo.org> xdtv-2.4.0.ebuild:
+  Renamed x11-libs/Xaw3d to x11-libs/libXaw3d.
 
   15 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> xdtv-2.4.0.ebuild:
   Depend on virtual/ffmpeg.
