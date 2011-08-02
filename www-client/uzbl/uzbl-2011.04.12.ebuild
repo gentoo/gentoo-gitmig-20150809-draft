@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-2011.04.12.ebuild,v 1.1 2011/04/14 21:29:09 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-2011.04.12.ebuild,v 1.2 2011/08/02 16:09:00 hwoarang Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ if [[ ${PV} == *9999* ]]; then
 		EGIT_BRANCH="experimental" &&
 		EGIT_COMMIT="experimental"
 else
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 ~x86"
 	SRC_URI="http://github.com/Dieterbe/${PN}/tarball/${PV} -> ${P}.tar.gz"
 fi
 
