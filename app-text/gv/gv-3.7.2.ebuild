@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.7.2.ebuild,v 1.2 2011/06/12 12:17:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.7.2.ebuild,v 1.3 2011/08/02 05:44:53 mattst88 Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -21,7 +21,7 @@ DEPEND="x11-libs/libX11
 	x11-libs/libXt
 	x11-libs/libXmu
 	x11-libs/libXpm
-	x11-libs/Xaw3d
+	x11-libs/libXaw3d
 	app-text/ghostscript-gpl
 	xinerama? ( x11-libs/libXinerama )"
 
