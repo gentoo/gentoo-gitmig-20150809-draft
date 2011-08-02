@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/libxml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.45 2011/07/31 19:05:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.46 2011/08/02 06:01:11 graaff Exp $
+
+*libxml-2.1.1 (02 Aug 2011)
+
+  02 Aug 2011; Hans de Graaff <graaff@gentoo.org> +libxml-2.1.1.ebuild:
+  Version bump.
 
   31 Jul 2011; Jeroen Roovers <jer@gentoo.org> libxml-2.0.5.ebuild:
   Stable for HPPA (bug #370399).
