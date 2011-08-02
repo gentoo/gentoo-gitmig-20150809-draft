@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/moosefs/moosefs-1.6.20-r1.ebuild,v 1.1 2011/07/08 15:29:35 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/moosefs/moosefs-1.6.20-r2.ebuild,v 1.1 2011/08/02 08:47:31 ultrabug Exp $
 
 EAPI=4
 
@@ -51,6 +51,10 @@ src_install() {
 
 	newinitd "${FILESDIR}/mfs.initd" mfs
 	newconfd "${FILESDIR}/mfs.confd" mfs
+	if use cgi; then
+		newinitd "${FILESDIR}/mfscgiserver.initd" mfscgiserver
+		newconfd "${FILESDIR}/mfscgiserver.confd" mfscgiserver
+	fi
 
 	chown -R mfs:mfs "${D}/var/lib/mfs" || die
 	chmod 750 "${D}/var/lib/mfs" || die
