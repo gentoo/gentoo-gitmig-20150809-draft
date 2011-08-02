@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Probe-Perl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Probe-Perl/ChangeLog,v 1.10 2011/07/07 05:40:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Probe-Perl/ChangeLog,v 1.11 2011/08/02 06:08:27 mattst88 Exp $
+
+  02 Aug 2011; Matt Turner <mattst88@gentoo.org> Probe-Perl-0.01.ebuild:
+  Added ~mips, bug 285343.
 
   07 Jul 2011; Alexis Ballier <aballier@gentoo.org> Probe-Perl-0.01.ebuild:
   keyword ~x86-fbsd
