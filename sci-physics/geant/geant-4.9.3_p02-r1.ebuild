@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.3_p02-r1.ebuild,v 1.7 2011/06/28 13:34:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.3_p02-r1.ebuild,v 1.8 2011/08/02 05:50:11 mattst88 Exp $
 
 EAPI=4
 
@@ -41,7 +41,7 @@ RDEPEND="
 	openinventor? ( >=media-libs/openinventor-2.1.5.10-r3 )
 	raytracerx? ( x11-libs/libX11 x11-libs/libXmu )
 	opengl? ( virtual/opengl
-			  athena? ( x11-libs/Xaw3d )
+			  athena? ( x11-libs/libXaw3d )
 			  qt4? ( x11-libs/qt-opengl:4 ) )
 	gdml? ( dev-libs/xerces-c )
 	geant3? ( sci-physics/geant:3 )

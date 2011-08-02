@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.2_p02.ebuild,v 1.15 2011/06/28 13:34:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.2_p02.ebuild,v 1.16 2011/08/02 05:50:11 mattst88 Exp $
 
 EAPI=2
 
@@ -43,7 +43,7 @@ RDEPEND="
 		x11-libs/libXmu )
 	opengl? (
 		virtual/opengl
-		athena? ( x11-libs/Xaw3d )
+		athena? ( x11-libs/libXaw3d )
 		qt4? ( x11-libs/qt-opengl:4 ) )
 	gdml? ( dev-libs/xerces-c )
 	geant3? ( sci-physics/geant:3 )
