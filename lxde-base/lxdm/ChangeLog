@@ -1,6 +1,10 @@
 # ChangeLog for lxde-base/lxdm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/ChangeLog,v 1.8 2011/08/02 16:39:24 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/ChangeLog,v 1.9 2011/08/02 16:44:29 lxnay Exp $
+
+  02 Aug 2011; Fabio Erculiani <lxnay@gentoo.org> lxdm-0.4.1.ebuild,
+  +files/lxdm-0.4.1-git-fix-null-pointer-deref.patch:
+  backport NULL pointer dereference patch from git
 
   02 Aug 2011; Fabio Erculiani <lxnay@gentoo.org>
   -files/lxdm-0.4.0-pam_console-disable.patch,
