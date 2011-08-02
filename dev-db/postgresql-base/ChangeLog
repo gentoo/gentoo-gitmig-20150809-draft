@@ -1,6 +1,18 @@
 # ChangeLog for dev-db/postgresql-base
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.130 2011/07/23 17:04:54 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.131 2011/08/02 02:51:02 titanofold Exp $
+
+*postgresql-base-9.1_beta3-r1 (02 Aug 2011)
+*postgresql-base-9.0.4-r3 (02 Aug 2011)
+*postgresql-base-8.4.8-r3 (02 Aug 2011)
+*postgresql-base-8.3.15-r3 (02 Aug 2011)
+*postgresql-base-8.2.21-r3 (02 Aug 2011)
+
+  02 Aug 2011; Aaron W. Swenson <titanofold@gentoo.org>
+  +postgresql-base-8.2.21-r3.ebuild, +postgresql-base-8.3.15-r3.ebuild,
+  +postgresql-base-8.4.8-r3.ebuild, +postgresql-base-9.0.4-r3.ebuild,
+  +postgresql-base-9.1_beta3-r1.ebuild:
+  Hopefully fixes bug 341729
 
   23 Jul 2011; Aaron W. Swenson <titanofold@gentoo.org>
   -postgresql-base-8.2.21-r1.ebuild, -postgresql-base-8.3.15-r1.ebuild,
