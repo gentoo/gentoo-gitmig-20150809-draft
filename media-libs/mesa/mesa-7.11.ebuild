@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.11.ebuild,v 1.2 2011/08/01 23:50:29 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.11.ebuild,v 1.3 2011/08/02 14:58:44 zorry Exp $
 
 EAPI=3
 
@@ -44,7 +44,7 @@ for card in ${VIDEO_CARDS}; do
 done
 
 IUSE="${IUSE_VIDEO_CARDS}
-	bindist +classic debug +egl +gallium gbm gles +llvm motif +nptl openvg pic selinux shared-dricore +shared-glapi kernel_FreeBSD"
+	bindist +classic debug +egl +gallium gbm gles +llvm motif +nptl openvg pic pax_kernel selinux shared-dricore +shared-glapi kernel_FreeBSD"
 
 LIBDRM_DEPSTRING=">=x11-libs/libdrm-2.4.24"
 # not a runtime dependency of this package, but dependency of packages which

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.357 2011/08/01 23:50:29 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.358 2011/08/02 14:58:44 zorry Exp $
+
+  02 Aug 2011; Magnus Granberg <zorry@gentoo.org> mesa-7.11.ebuild,
+  metadata.xml:
+  Added pax_kernel as local use flag
 
   01 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   mesa-7.11.ebuild:
