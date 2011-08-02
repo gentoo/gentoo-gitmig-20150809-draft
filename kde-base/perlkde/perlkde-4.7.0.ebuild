@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/perlkde/perlkde-4.7.0.ebuild,v 1.1 2011/07/27 14:04:42 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/perlkde/perlkde-4.7.0.ebuild,v 1.2 2011/08/02 21:47:07 dilfridge Exp $
 
 EAPI=4
 
@@ -9,13 +9,14 @@ inherit kde4-base
 
 DESCRIPTION="KDE Perl bindings"
 KEYWORDS="~amd64 ~x86"
-IUSE="akonadi attica debug kate okular semantic-desktop"
+IUSE="akonadi attica debug kate okular semantic-desktop test"
 
 DEPEND="
 	>=dev-lang/perl-5.10.1
 	$(add_kdebase_dep perlqt)
 	$(add_kdebase_dep smokekde 'akonadi?,attica?,kate?,okular?,semantic-desktop=')
 	semantic-desktop? ( >=dev-libs/soprano-2.6.51 )
+	test? ( dev-perl/List-MoreUtils )
 "
 RDEPEND="${DEPEND}"
 

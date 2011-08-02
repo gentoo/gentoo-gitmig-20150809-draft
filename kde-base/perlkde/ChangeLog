@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/perlkde
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/perlkde/ChangeLog,v 1.1 2011/07/27 14:04:42 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/perlkde/ChangeLog,v 1.2 2011/08/02 21:47:07 dilfridge Exp $
+
+  02 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> perlkde-4.7.0.ebuild:
+  Fix tests, bug 376959
 
 *perlkde-4.7.0 (27 Jul 2011)
 
