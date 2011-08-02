@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/boa-0.94.14_rc21.ebuild,v 1.5 2008/05/12 07:31:03 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/boa/boa-0.94.14_rc21.ebuild,v 1.6 2011/08/02 06:23:01 mattst88 Exp $
 
 inherit eutils
 
@@ -15,8 +15,8 @@ SLOT="0"
 IUSE="doc"
 S=${WORKDIR}/${PN}-${MY_PV}
 
-RDEPEND="sys-devel/bison"
-DEPEND="${RDEPEND}
+RDEPEND=""
+DEPEND="sys-devel/bison
 	sys-devel/flex
 	doc? ( virtual/latex-base )"
 
