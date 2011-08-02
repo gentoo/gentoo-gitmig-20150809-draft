@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.1.ebuild,v 1.1 2011/07/06 08:40:13 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.2.ebuild,v 1.1 2011/08/02 11:30:34 suka Exp $
 
 EAPI="3"
 
@@ -10,8 +10,8 @@ IUSE="gnome java offlinehelp"
 
 MY_PV="${PV/_/-}"
 MY_PV2="${PV}rc3"
-BVER="3.4.1-103"
-BVER2="3.4-103"
+BVER="3.4.2-203"
+BVER2="3.4-203"
 BASIS="libobasis3.4"
 BASIS2="basis3.4"
 NM="libreoffice"
