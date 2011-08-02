@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r5.ebuild,v 1.3 2011/07/24 11:10:19 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r5.ebuild,v 1.4 2011/08/02 21:19:28 mgorny Exp $
 
 EAPI="2"
 
@@ -252,7 +252,7 @@ src_install() {
 		keepdir /var/run/wpa_supplicant
 	fi
 
-	# SystemD stuff
+	# systemd stuff
 	systemd_dounit "${FILESDIR}"/wpa_supplicant.service
 	systemd_newunit "${FILESDIR}"/wpa_supplicant_at.service 'wpa_supplicant@.service' || die
 }
@@ -277,4 +277,17 @@ pkg_postinst() {
 		einfo "madwifi-old, madwifi-ng or madwifi-ng-tools."
 		einfo "You should re-emerge ${PN} after upgrading these packages."
 	fi
+
+	# Mea culpa, feel free to remove that after some time --mgorny.
+	local fn
+	for fn in wpa_supplicant{,@wlan0}.service; do
+		if [[ -e "${ROOT}"/etc/systemd/system/network.target.wants/${fn} ]]
+		then
+			ebegin "Moving ${fn} to multi-user.target"
+			mv "${ROOT}"/etc/systemd/system/network.target.wants/${fn} \
+				"${ROOT}"/etc/systemd/system/multi-user.target.wants/
+			eend ${?} \
+				"Please try to re-enable ${fn}"
+		fi
+	done
 }

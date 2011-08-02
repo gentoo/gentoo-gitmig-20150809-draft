@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.163 2011/07/24 11:10:19 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.164 2011/08/02 21:19:28 mgorny Exp $
+
+  02 Aug 2011; Michał Górny <mgorny@gentoo.org>
+  wpa_supplicant-0.7.3-r5.ebuild, files/wpa_supplicant.service,
+  files/wpa_supplicant_at.service:
+  Fix systemd service target. Thanks to Tom Gundersen for explaining this.
 
   24 Jul 2011; <gurligebis@gentoo.org> wpa_supplicant-0.7.3-r2.ebuild,
   wpa_supplicant-0.7.3-r5.ebuild:
