@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.4.0.ebuild,v 1.1 2011/08/02 16:29:55 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.4.1.ebuild,v 1.1 2011/08/02 16:35:32 lxnay Exp $
 
 EAPI="2"
 
