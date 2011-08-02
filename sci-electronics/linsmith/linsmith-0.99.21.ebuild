@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/linsmith/linsmith-0.99.21.ebuild,v 1.1 2011/03/22 06:29:22 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/linsmith/linsmith-0.99.21.ebuild,v 1.2 2011/08/02 16:10:24 hwoarang Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="doc examples"
 
 RDEPEND="

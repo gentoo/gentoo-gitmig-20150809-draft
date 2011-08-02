@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/linsmith
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/linsmith/ChangeLog,v 1.3 2011/03/22 06:29:22 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/linsmith/ChangeLog,v 1.4 2011/08/02 16:10:24 hwoarang Exp $
+
+  02 Aug 2011; Markos Chandras <hwoarang@gentoo.org> linsmith-0.99.21.ebuild:
+  Stable on amd64 wrt bug #376929
 
 *linsmith-0.99.21 (22 Mar 2011)
 
