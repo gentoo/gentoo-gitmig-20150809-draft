@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/gentoopm-0.1.3.ebuild,v 1.1 2011/07/22 13:33:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/gentoopm-0.1.4.ebuild,v 1.1 2011/08/02 16:59:37 mgorny Exp $
 
 EAPI=3
 
