@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/envisage
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/envisage/ChangeLog,v 1.1 2011/08/03 23:47:33 bicatali Exp $
+
+*envisage-4.0.0 (03 Aug 2011)
+
+  03 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> +envisage-4.0.0.ebuild,
+  +metadata.xml:
+  Initial import
+
