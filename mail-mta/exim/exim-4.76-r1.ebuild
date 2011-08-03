@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.74-r1.ebuild,v 1.10 2011/04/22 16:07:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.76-r1.ebuild,v 1.1 2011/08/03 19:19:12 grobian Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.exim.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 DEPEND=">=sys-apps/sed-4.0.5
 	>=sys-libs/db-3.2
@@ -51,7 +51,8 @@ RDEPEND="${DEPEND}
 	!mail-mta/courier
 	!mail-mta/esmtp
 	!mail-mta/mini-qmail
-	!mail-mta/msmtp
+	!<mail-mta/msmtp-1.4.19-r1
+	!>=mail-mta/msmtp-1.4.19-r1[mta]
 	!mail-mta/nbsmtp
 	!mail-mta/netqmail
 	!mail-mta/nullmailer
@@ -68,16 +69,20 @@ RDEPEND="${DEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/exim-4.14-tail.patch
-	epatch "${FILESDIR}"/exim-4.43-r2-localscan_dlopen.patch
+	epatch "${FILESDIR}"/exim-4.74-localscan_dlopen.patch
 	epatch "${FILESDIR}"/exim-4.69-r1.27021.patch
 	epatch "${FILESDIR}"/exim-4.74-radius-db-ENV-clash.patch # 287426
-	# from upstream
-	epatch "${FILESDIR}"/${P}-pcre.patch
-	epatch "${FILESDIR}"/${P}-makefile-posix.patch
-	epatch "${FILESDIR}"/${P}-makefile-command-envs.patch
+	epatch "${FILESDIR}"/exim-4.75-makefile-freebsd.patch
+	epatch "${FILESDIR}"/exim-4.76-as-needed.patch # 352265
+	epatch "${FILESDIR}"/exim-4.76-crosscompile.patch # 266591
 
 	use maildir && epatch "${FILESDIR}"/exim-4.20-maildir.patch
-	use dsn && epatch "${DISTDIR}"/exim_${DSN_EXIM_V}_dsn_${DSN_V}.patch
+
+	if use dsn ; then
+		cp "${DISTDIR}"/exim_${DSN_EXIM_V}_dsn_${DSN_V}.patch . || die
+		epatch "${FILESDIR}"/${P}-dsn.patch
+		epatch exim_${DSN_EXIM_V}_dsn_${DSN_V}.patch
+	fi
 }
 
 src_configure() {
@@ -86,14 +91,11 @@ src_configure() {
 	sed -i "/SYSTEM_ALIASES_FILE/ s'SYSTEM_ALIASES_FILE'${EPREFIX}/etc/mail/aliases'" "${S}"/src/configure.default
 	cp "${S}"/src/configure.default "${S}"/src/configure.default.orig
 
+	sed -i -e 's/^buildname=.*/buildname=exim-gentoo/g' Makefile
+
 	sed -e "48i\CFLAGS=${CFLAGS}" \
-		-e "s:# AUTH_CRAM_MD5=yes:AUTH_CRAM_MD5=yes:" \
-		-e "s:# AUTH_PLAINTEXT=yes:AUTH_PLAINTEXT=yes:" \
 		-e "s:BIN_DIRECTORY=/usr/exim/bin:BIN_DIRECTORY=${EPREFIX}/usr/sbin:" \
-		-e "s:COMPRESS_COMMAND=/usr/bin/gzip:COMPRESS_COMMAND=${EPREFIX}/bin/gzip:" \
-		-e "s:ZCAT_COMMAND=/usr/bin/zcat:ZCAT_COMMAND=${EPREFIX}/bin/zcat:" \
 		-e "s:CONFIGURE_FILE=/usr/exim/configure:CONFIGURE_FILE=${EPREFIX}/etc/exim/exim.conf:" \
-		-e "s:EXIM_MONITOR=eximon.bin:# EXIM_MONITOR=eximon.bin:" \
 		-e "s:# INFO_DIRECTORY=/usr/local/info:INFO_DIRECTORY=${EPREFIX}/usr/share/info:" \
 		-e "s:# LOG_FILE_PATH=/var/log/exim_%slog:LOG_FILE_PATH=${EPREFIX}/var/log/exim/exim_%s.log:" \
 		-e "s:# PID_FILE_PATH=/var/lock/exim.pid:PID_FILE_PATH=${EPREFIX}/var/run/exim.pid:" \
@@ -102,14 +104,20 @@ src_configure() {
 		-e "s:# SUPPORT_MAILSTORE=yes:SUPPORT_MAILSTORE=yes:" \
 		-e "s:EXIM_USER=:EXIM_USER=mail:" \
 		-e "s:# AUTH_SPA=yes:AUTH_SPA=yes:" \
-		-e "s:^ZCAT_COMMAND.*$:ZCAT_COMMAND=${EPREFIX}/bin/zcat:" \
+		-e "s:# AUTH_CRAM_MD5=yes:AUTH_CRAM_MD5=yes:" \
+		-e "s:# AUTH_PLAINTEXT=yes:AUTH_PLAINTEXT=yes:" \
 		-e "s:# LOOKUP_PASSWD=yes:LOOKUP_PASSWD=yes:" \
+		-e "s:EXIM_MONITOR=eximon.bin:# EXIM_MONITOR=eximon.bin:" \
+		-e "s:ZCAT_COMMAND=.*$:ZCAT_COMMAND=${EPREFIX}/bin/zcat:" \
+		-e "s:COMPRESS_COMMAND=.*$:COMPRESS_COMMAND=${EPREFIX}/bin/gzip:" \
 		src/EDITME > Local/Makefile
+
+	cd Local
 
 	# exiscan-acl is now integrated - enable it when use-flag set
 	if use exiscan-acl; then
-		sed -i "s:# WITH_CONTENT_SCAN=yes:WITH_CONTENT_SCAN=yes:" Local/Makefile
-		sed -i "s:# WITH_OLD_DEMIME=yes:WITH_OLD_DEMIME=yes:" Local/Makefile
+		sed -i "s:# WITH_CONTENT_SCAN=yes:WITH_CONTENT_SCAN=yes:" Makefile
+		sed -i "s:# WITH_OLD_DEMIME=yes:WITH_OLD_DEMIME=yes:" Makefile
 	elif (use spf || use srs ) then
 		eerror SPF and SRS support require exiscan-acl to be enabled, please add
 		eerror to your USE settings.
@@ -118,15 +126,14 @@ src_configure() {
 
 	if use spf; then
 		myconf="${myconf} -lspf2"
-		sed -i "s:# EXPERIMENTAL_SPF=yes:EXPERIMENTAL_SPF=yes:" Local/Makefile
+		sed -i "s:# EXPERIMENTAL_SPF=yes:EXPERIMENTAL_SPF=yes:" Makefile
 		mycflags="${mycflags} -DEXPERIMENTAL_SPF"
 	fi
 	if use srs; then
 		myconf="${myconf} -lsrs_alt"
-		sed -i "s:# EXPERIMENTAL_SRS=yes:EXPERIMENTAL_SRS=yes:" Local/Makefile
+		sed -i "s:# EXPERIMENTAL_SRS=yes:EXPERIMENTAL_SRS=yes:" Makefile
 	fi
 
-	cd Local
 	# enable optional exim_monitor support via X use flag bug #46778
 	if use X; then
 		einfo "Configuring eximon"
@@ -154,7 +161,7 @@ src_configure() {
 		myconf="${myconf} -lwrap"
 	fi
 	if use lmtp; then
-		sed -i "s:# \(TRANSPORT_LMTP=yes\):\1:" Makefile
+		sed -i "s:# TRANSPORT_LMTP=yes:TRANSPORT_LMTP=yes:" Makefile
 	fi
 	if use ipv6; then
 		echo "HAVE_IPV6=YES" >> Makefile
@@ -169,24 +176,23 @@ src_configure() {
 		sed -i "s:# RADIUS_CONFIG_FILE=/etc/radiusclient/radiusclient.conf:RADIUS_CONFIG_FILE=${EPREFIX}/etc/radiusclient/radiusclient.conf:" Makefile
 		sed -i "s:# RADIUS_LIB_TYPE=RADIUSCLIENT$:RADIUS_LIB_TYPE=RADIUSCLIENT:" Makefile
 	fi
-	echo "EXTRALIBS=${myconf} ${LDFLAGS}" >> Makefile
+	echo "EXTRALIBS=${myconf}" >> Makefile
 
 	# make iconv usage explicit
 	echo "HAVE_ICONV=yes" >> Makefile
 	# if we use libiconv, now is the time to tell so
 	use !elibc_glibc && echo "EXTRALIBS_EXIM=-liconv" >> Makefile
 
-	cd "${S}"
 	if use ssl; then
 		sed -i \
-			-e "s:# \(SUPPORT_TLS=yes\):\1:" Local/Makefile
+			-e "s:# \(SUPPORT_TLS=yes\):\1:" Makefile
 		if use gnutls; then
 			sed -i \
 				-e "s:# \(USE_GNUTLS=yes\):\1:" \
-				-e "s:# \(TLS_LIBS=-lgnutls -ltasn1 -lgcrypt\):\1:" Local/Makefile
+				-e "s:# \(TLS_LIBS=-lgnutls -ltasn1 -lgcrypt\):\1:" Makefile
 		else
 			sed -i \
-				-e "s:# \(TLS_LIBS=-lssl -lcrypto\):\1:" Local/Makefile
+				-e "s:# \(TLS_LIBS=-lssl -lcrypto\):\1:" Makefile
 		fi
 	fi
 
@@ -196,72 +202,71 @@ src_configure() {
 	if use ldap; then
 		sed -i \
 			-e "s:# \(LOOKUP_LDAP=yes\):\1:" \
-			-e "s:# \(LDAP_LIB_TYPE=OPENLDAP2\):\1:" Local/Makefile
+			-e "s:# \(LDAP_LIB_TYPE=OPENLDAP2\):\1:" Makefile
 		LOOKUP_INCLUDE="-I${EROOT}usr/include/ldap"
 		LOOKUP_LIBS="-lldap -llber"
 	fi
 
 	if use mysql; then
-		sed -i "s:# LOOKUP_MYSQL=yes:LOOKUP_MYSQL=yes:" Local/Makefile
+		sed -i "s:# LOOKUP_MYSQL=yes:LOOKUP_MYSQL=yes:" Makefile
 		LOOKUP_INCLUDE="$LOOKUP_INCLUDE -I${EROOT}usr/include/mysql"
 		LOOKUP_LIBS="$LOOKUP_LIBS -lmysqlclient"
 	fi
 
 	if use postgres; then
-		sed -i "s:# LOOKUP_PGSQL=yes:LOOKUP_PGSQL=yes:" Local/Makefile
+		sed -i "s:# LOOKUP_PGSQL=yes:LOOKUP_PGSQL=yes:" Makefile
 		LOOKUP_INCLUDE="$LOOKUP_INCLUDE -I${EROOT}usr/include/postgresql"
 		LOOKUP_LIBS="$LOOKUP_LIBS -lpq"
 	fi
 
 	if use sqlite; then
-		sed -i "s:# LOOKUP_SQLITE=yes: LOOKUP_SQLITE=yes:" Local/Makefile
+		sed -i "s:# LOOKUP_SQLITE=yes: LOOKUP_SQLITE=yes:" Makefile
 		LOOKUP_INCLUDE="$LOOKUP_INCLUDE -I${EROOT}usr/include/sqlite"
 		LOOKUP_LIBS="$LOOKUP_LIBS -lsqlite3"
 	fi
 
 	if [[ -n ${LOOKUP_INCLUDE} ]]; then
 		sed -i "s:# LOOKUP_INCLUDE=-I /usr/local/ldap/include -I /usr/local/mysql/include -I /usr/local/pgsql/include:LOOKUP_INCLUDE=$LOOKUP_INCLUDE:" \
-			Local/Makefile
+			Makefile
 	fi
 
 	if [[ -n ${LOOKUP_LIBS} ]]; then
 		sed -i "s:# LOOKUP_LIBS=-L/usr/local/lib -lldap -llber -lmysqlclient -lpq -lgds -lsqlite3:LOOKUP_LIBS=$LOOKUP_LIBS:" \
-			Local/Makefile
+			Makefile
 	fi
 
-	sed -i -e 's/^buildname=.*/buildname=exim-gentoo/g' Makefile
-
-	sed -i "s:# LOOKUP_DSEARCH=yes:LOOKUP_DSEARCH=yes:" Local/Makefile
+	sed -i "s:# LOOKUP_DSEARCH=yes:LOOKUP_DSEARCH=yes:" Makefile
 
 	if use dnsdb; then
-		sed -i "s:# LOOKUP_DNSDB=yes:LOOKUP_DNSDB=yes:" Local/Makefile
+		sed -i "s:# LOOKUP_DNSDB=yes:LOOKUP_DNSDB=yes:" Makefile
 	fi
-	sed -i "s:# LOOKUP_CDB=yes:LOOKUP_CDB=yes:" Local/Makefile
+	sed -i "s:# LOOKUP_CDB=yes:LOOKUP_CDB=yes:" Makefile
 
 	if use nis; then
 		sed -i -e "s:# LOOKUP_NIS=yes:LOOKUP_NIS=yes:" \
-			-e "s:# LOOKUP_NISPLUS=yes:LOOKUP_NISPLUS=yes:" Local/Makefile
+			-e "s:# LOOKUP_NISPLUS=yes:LOOKUP_NISPLUS=yes:" Makefile
 	fi
 	if use syslog; then
-		sed -i "s:LOG_FILE_PATH=/var/log/exim/exim_%s.log:LOG_FILE_PATH=syslog:" Local/Makefile
+		sed -i "s:LOG_FILE_PATH=/var/log/exim/exim_%s.log:LOG_FILE_PATH=syslog:" Makefile
 	fi
 	if ! use dkim; then
 		# DKIM is enabled by default. We have to explicitly disable it.
-		echo "DISABLE_DKIM=yes">> Local/Makefile
+		echo "DISABLE_DKIM=yes">> Makefile
 	fi
 	if use dcc; then
-		echo "EXPERIMENTAL_DCC=yes">> Local/Makefile
+		echo "EXPERIMENTAL_DCC=yes">> Makefile
 	fi
 	if use dsn; then
-		sed -i -e "s:#define SUPPORT_DSN:define SUPPORT_DSN:" Local/Makefile
+		sed -i -e "s:#define SUPPORT_DSN:define SUPPORT_DSN:" Makefile
 	fi
 
 	# use the "native" interface to the DBM library
-	echo "USE_DB=yes" >> Local/Makefile
+	echo "USE_DB=yes" >> Makefile
 }
 
 src_compile() {
-	emake -j1 CC="$(tc-getCC)" FULLECHO='' || die "make failed"
+	emake -j1 CC="$(tc-getCC)" HOSTCC="$(tc-getCC $CBUILD)" FULLECHO='' \
+		|| die "make failed"
 }
 
 src_install () {
@@ -309,7 +314,7 @@ src_install () {
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}/exim.logrotate" exim
 
-	newinitd "${FILESDIR}"/exim.rc6 exim
+	newinitd "${FILESDIR}"/exim.rc7 exim
 
 	newconfd "${FILESDIR}"/exim.confd exim
 
