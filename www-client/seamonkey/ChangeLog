@@ -1,6 +1,12 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.322 2011/07/26 12:27:51 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.323 2011/08/03 06:55:39 polynomial-c Exp $
+
+*seamonkey-2.2-r2 (03 Aug 2011)
+
+  03 Aug 2011; Lars Wendler <polynomial-c@gentoo.org> -seamonkey-2.2-r1.ebuild,
+  +seamonkey-2.2-r2.ebuild, -files/enigmail/enigmail-updates.patch:
+  Updated enigmail version to 1.2.1
 
   26 Jul 2011; Lars Wendler <polynomial-c@gentoo.org>
   seamonkey-2.0.14-r1.ebuild,
