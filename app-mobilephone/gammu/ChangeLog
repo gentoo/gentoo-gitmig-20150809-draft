@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/gammu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.89 2011/04/10 16:24:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.90 2011/08/03 18:24:20 sping Exp $
+
+*gammu-1.30.0 (03 Aug 2011)
+
+  03 Aug 2011; Sebastian Pipping <sping@gentoo.org> +gammu-1.30.0.ebuild:
+  Bump to 1.30.0, add use flag to control bash-completion
 
 *gammu-1.29.0 (10 Apr 2011)
 
