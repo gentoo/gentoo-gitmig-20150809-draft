@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/time
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/time/ChangeLog,v 1.23 2010/07/11 15:45:55 slyfox Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/time/ChangeLog,v 1.24 2011/08/03 13:28:30 slyfox Exp $
+
+*time-1.2.0.3 (03 Aug 2011)
+
+  03 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> +time-1.2.0.3.ebuild:
+  Version bump (bundled with ghc-7).
 
   11 Jul 2010; Sergei Trofimovich <slyfox@gentoo.org> time-1.1.2.0.ebuild,
   +files/time-1.1.2.0-remove-werror.patch, time-1.1.2.4.ebuild,
