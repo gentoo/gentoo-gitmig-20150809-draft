@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.8.0.ebuild,v 1.4 2011/08/03 11:25:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.8.0.ebuild,v 1.5 2011/08/03 23:54:06 dang Exp $
 
 EAPI="2"
 
@@ -53,7 +53,7 @@ src_install() {
 	insinto /usr
 	dosbin logrotate
 	doman logrotate.8
-	dodoc examples/logrotate*
+	dodoc CHANGES examples/logrotate*
 
 	exeinto /etc/cron.daily
 	doexe "${FILESDIR}"/logrotate.cron
