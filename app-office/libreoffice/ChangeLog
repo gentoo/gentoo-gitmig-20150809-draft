@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.81 2011/08/03 17:23:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.82 2011/08/03 20:21:09 scarabeus Exp $
+
+  03 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  files/libreoffice-32b-qt4-libdir.patch:
+  Update the qt patch as the 3.4 branch lacks quite few commits.
 
   03 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   libreoffice-3.4.2.3.ebuild, libreoffice-3.4.9999.ebuild,
