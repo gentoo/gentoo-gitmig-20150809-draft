@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/uncrustify
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/ChangeLog,v 1.10 2010/12/20 13:35:30 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/ChangeLog,v 1.11 2011/08/03 11:23:44 grobian Exp $
+
+*uncrustify-0.58 (03 Aug 2011)
+
+  03 Aug 2011; Fabian Groffen <grobian@gentoo.org> +uncrustify-0.58.ebuild:
+  Version bump to 0.58
 
 *uncrustify-0.57 (20 Dec 2010)
 
