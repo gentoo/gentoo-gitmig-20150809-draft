@@ -97,29 +97,28 @@
  	for dir in $(SUBDIRS); do \
  		$(MAKE) -C $$dir install; \
  	done
-+	$(MAKE) -C man
++	$(MAKE) -C man install
  
  dist: distclean
  	[ ! -d i3-${VERSION} ] || rm -rf i3-${VERSION}
 --- a/man/Makefile
 +++ b/man/Makefile
-@@ -1,6 +1,8 @@
+@@ -1,6 +1,9 @@
  A2M:=a2x -f manpage --asciidoc-opts="-f asciidoc.conf"
++include ../common.mk
  
 -all: i3.1 i3-msg.1 i3-input.1 i3-nagbar.1 i3-wsbar.1 i3-config-wizard.1 i3-migrate-config-to-v4.1
-+mans=i3.1 i3-msg.1 i3-input.1 i3-nagbar.1 i3-wsbar.1 i3-config-wizard.1 i3-migrate-config-to-v4.1
++MANS=i3.1 i3-msg.1 i3-input.1 i3-nagbar.1 i3-wsbar.1 i3-config-wizard.1 i3-migrate-config-to-v4.1
 +
-+all: $(mans)
++all: $(MANS)
  
  %.1: %.man asciidoc.conf
  	${A2M} $<
-@@ -16,3 +18,9 @@
+@@ -16,3 +19,7 @@
  
  distclean: clean
  	rm -f *.1
 +
 +install:
 +	$(INSTALL) -d -m 0755 $(DESTDIR)$(PREFIX)/share/man/man1
-+	for man in $(mans); do \
-+		$(INSTALL) -m 0644 $$man $(DESTDIR)$(PREFIX)/share/man/man1
-+	done
++	$(INSTALL) -m 0644 *.1 $(DESTDIR)$(PREFIX)/share/man/man1

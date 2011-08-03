@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/i3
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/ChangeLog,v 1.5 2011/08/02 04:55:28 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/ChangeLog,v 1.6 2011/08/03 20:42:45 xarthisius Exp $
+
+*i3-4.0.1-r1 (03 Aug 2011)
+
+  03 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> -i3-4.0.1.ebuild,
+  +i3-4.0.1-r1.ebuild, -files/i3-4.0.1-gentoo.diff,
+  +files/i3-4.0.1-gentoo-r1.diff:
+  Fix man installation wrt bug 377453 by Lasse Lindner
+  <gentoo@lasse-lindner.de>
 
 *i3-4.0.1 (02 Aug 2011)
 
