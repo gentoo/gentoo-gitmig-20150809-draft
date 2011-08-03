@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/cfitsio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.50 2011/06/28 10:43:39 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.51 2011/08/03 21:03:26 bicatali Exp $
+
+*cfitsio-3.280 (03 Aug 2011)
+
+  03 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  -cfitsio-3.250-r1.ebuild, +cfitsio-3.280.ebuild:
+  Version bump. All changes from upstream are in the modified tar ball
 
   28 Jun 2011; Fabian Groffen <grobian@gentoo.org> cfitsio-3.270.ebuild:
   Fix linking against zlib (don't force zlib from host system) in Prefix

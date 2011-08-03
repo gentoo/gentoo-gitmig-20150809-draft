@@ -1,21 +1,22 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.250-r1.ebuild,v 1.3 2011/05/03 09:38:45 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.280.ebuild,v 1.1 2011/08/03 21:03:26 bicatali Exp $
 
-EAPI=3
+EAPI=4
 inherit autotools-utils
 
 DESCRIPTION="C and Fortran library for manipulating FITS files"
 HOMEPAGE="http://heasarc.gsfc.nasa.gov/docs/software/fitsio/fitsio.html"
-SRC_URI="mirror://gentoo/${P}.tar.gz"
+SRC_URI="http://dev.gentoo.org/~bicatali/${P}.tar.gz"
 
-LICENSE="BSD GPL-2"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x64-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris"
 IUSE="doc fortran static-libs threads"
 
-DEPEND="fortran? ( dev-lang/cfortran )"
-RDEPEND=""
+RDEPEND="sys-libs/zlib"
+DEPEND="${RDEPEND}
+	fortran? ( dev-lang/cfortran )"
 
 src_prepare() {
 	# avoid internal cfortran
@@ -30,6 +31,7 @@ src_configure() {
 	myeconfargs=(
 		$(use_enable threads)
 		$(use_enable fortran)
+		"--with-zlib=${EPREFIX}/usr"
 	)
 	autotools-utils_src_configure
 }
@@ -38,11 +40,8 @@ src_install () {
 	insinto /usr/share/doc/${PF}/examples
 	doins cookbook.c testprog.c speed.c smem.c
 	use fortran && doins cookbook.f testf77.f && dodoc fitsio.doc
-	dodoc changes.txt README cfitsio.doc
-	if use doc; then
-		insinto /usr/share/doc/${PF}
-		doins quick.ps cfitsio.ps fpackguide.pdf
-		use fortran && doins fitsio.ps
-	fi
+	dodoc changes.txt README.repack cfitsio.doc
+	use doc && dodoc quick.pdf cfitsio.pdf fpackguide.pdf
+	use doc && use fortran && doins fitsio.pdf
 	autotools-utils_src_install
 }
