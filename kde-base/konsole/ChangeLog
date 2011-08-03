@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konsole
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.199 2011/07/27 14:04:29 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.200 2011/08/03 21:07:44 dilfridge Exp $
+
+  03 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> konsole-4.7.0.ebuild,
+  +files/konsole-4.7.0-tests.patch:
+  Disable test requiring session dbus, bug 376935
 
 *konsole-4.7.0 (27 Jul 2011)
 
