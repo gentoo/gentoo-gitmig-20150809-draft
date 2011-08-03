@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/telnet-bsd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.40 2011/04/06 12:46:36 cbrannon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.41 2011/08/03 23:55:01 zmedico Exp $
+
+  03 Aug 2011; Zac Medico <zmedico@gentoo.org> telnet-bsd-1.2-r1.ebuild:
+  Add ~x86-linux keyword.
 
   06 Apr 2011; Christopher Brannon <cbrannon@gentoo.org> metadata.xml:
   Added myself as maintainer.
