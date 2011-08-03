@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/g15daemon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.36 2011/04/16 22:56:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.37 2011/08/03 07:49:50 robbat2 Exp $
+
+*g15daemon-1.9.5.3-r4 (03 Aug 2011)
+
+  03 Aug 2011; Robin H. Johnson <robbat2@gentoo.org> +files/20g15daemon,
+  +g15daemon-1.9.5.3-r4.ebuild, files/g15daemon-hotplug,
+  +files/g15daemon-1.9.5.3-overflow-fix.patch:
+  Bug #354921, #343133: Fix overflow for amd64. Bug #301340: Fix suspend
+  behavior. Bug #366863: Improve udev interaction.
 
   16 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   g15daemon-1.9.5.3-r3.ebuild:

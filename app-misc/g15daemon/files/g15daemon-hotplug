@@ -1,11 +1,13 @@
 #!/bin/sh
 
+export IN_HOTPLUG=1
+
 case "$ACTION" in
     "add")
-        /etc/init.d/g15daemon restart
+        /etc/init.d/g15daemon --quiet restart
         ;;
     "remove")
-        /etc/init.d/g15daemon stop
+        /etc/init.d/g15daemon --quiet stop
         ;;
     *)
         exit 0
