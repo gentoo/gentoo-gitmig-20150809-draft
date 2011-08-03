@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.102 2011/07/18 17:57:34 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.103 2011/08/03 11:25:41 xarthisius Exp $
+
+  03 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> logrotate-3.8.0.ebuild:
+  ppc/ppc64 stable wrt #372973
 
   18 Jul 2011; Daniel Gryniewicz <dang@gentoo.org> logrotate-3.8.0.ebuild,
   files/logrotate-3.8.0-atomic-create.patch,
