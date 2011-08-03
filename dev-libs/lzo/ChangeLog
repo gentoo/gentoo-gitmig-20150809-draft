@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/lzo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.58 2011/07/20 14:00:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lzo/ChangeLog,v 1.59 2011/08/03 18:02:56 sping Exp $
+
+*lzo-2.05 (03 Aug 2011)
+
+  03 Aug 2011; Sebastian Pipping <sping@gentoo.org> +lzo-2.05.ebuild:
+  Bump to 2.05 (bug #365407)
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #34534
