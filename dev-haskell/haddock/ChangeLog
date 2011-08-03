@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/haddock
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.84 2011/06/05 12:20:59 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.85 2011/08/03 13:14:54 slyfox Exp $
+
+*haddock-2.9.2 (03 Aug 2011)
+
+  03 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> +haddock-2.9.2.ebuild:
+  Version bump (ghc-7 compatible).
 
   05 Jun 2011; Sergei Trofimovich <slyfox@gentoo.org> -haddock-0.8.ebuild,
   -haddock-0.9.ebuild, -haddock-2.4.1.ebuild:
