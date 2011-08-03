@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/xhtml
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.18 2010/07/01 19:59:41 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.19 2011/08/03 08:38:49 slyfox Exp $
+
+  03 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> xhtml-3000.2.0.1.ebuild:
+  Disable USE=haddock for upcoming haddock.
 
   01 Jul 2010; Jeroen Roovers <jer@gentoo.org> xhtml-3000.0.2.1.ebuild,
   xhtml-3000.2.0.1.ebuild:
