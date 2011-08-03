@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/ghc-paths
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ghc-paths/ChangeLog,v 1.5 2011/08/02 08:34:18 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ghc-paths/ChangeLog,v 1.6 2011/08/03 12:53:52 slyfox Exp $
+
+  03 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> ghc-paths-0.1.0.8.ebuild:
+  keyworded alpha/ia64/ppc/ppc64/sparc/x86-fbsd (set of constants for haddock)
 
   02 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org>
   -ghc-paths-0.1.0.6.ebuild:
