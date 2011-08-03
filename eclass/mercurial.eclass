@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.15 2010/11/17 18:42:03 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mercurial.eclass,v 1.16 2011/08/03 19:01:16 nelchael Exp $
 
 # @ECLASS: mercurial.eclass
 # @MAINTAINER:
@@ -27,8 +27,8 @@ DEPEND="dev-vcs/mercurial"
 # @DESCRIPTION:
 # Create working directory for specified revision, defaults to tip.
 #
-# EHG_REVISION is passed as a value for --rev parameter, so it can be more than
-# just a revision, please consult `hg help revisions' for more details.
+# EHG_REVISION is passed as a value for --updaterev parameter, so it can be more
+# than just a revision, please consult `hg help revisions' for more details.
 [[ -z "${EHG_REVISION}" ]] && EHG_REVISION="tip"
 
 # @ECLASS-VARIABLE: EHG_STORE_DIR
@@ -120,7 +120,7 @@ function mercurial_fetch {
 	einfo "Creating working directory in ${sourcedir} (target revision: ${EHG_REVISION})"
 	hg clone \
 		${EHG_QUIET_CMD_OPT} \
-		--rev="${EHG_REVISION}" \
+		--updaterev="${EHG_REVISION}" \
 		"${EHG_STORE_DIR}/${EHG_PROJECT}/${module}" \
 		"${sourcedir}" || die "hg clone failed"
 	# An exact revision helps a lot for testing purposes, so have some output...
