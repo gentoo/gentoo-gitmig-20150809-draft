@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/httping-1.5.1.ebuild,v 1.1 2011/07/28 07:09:46 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/httping-1.5.2.ebuild,v 1.1 2011/08/03 22:31:59 pva Exp $
 
 EAPI="4"
 

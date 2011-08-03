@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/httping
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/ChangeLog,v 1.69 2011/08/03 11:27:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/ChangeLog,v 1.70 2011/08/03 22:31:59 pva Exp $
+
+*httping-1.5.2 (03 Aug 2011)
+
+  03 Aug 2011; Peter Volkov <pva@gentoo.org> -httping-1.5.1.ebuild,
+  -httping-1.5.1-r1.ebuild, -files/httping-1.5.1-bind.patch,
+  +httping-1.5.2.ebuild:
+  Version bump.
 
 *httping-1.5.1-r1 (03 Aug 2011)
 
