@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-2.1.7.0.ebuild,v 1.3 2011/07/29 16:58:08 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/google-talkplugin/google-talkplugin-2.1.7.0.ebuild,v 1.4 2011/08/03 17:00:51 ottxor Exp $
 
 EAPI=4
 
@@ -72,7 +72,7 @@ QA_EXECSTACK="${INSTALL_BASE#/}/GoogleTalkPlugin"
 
 QA_TEXTRELS="${INSTALL_BASE#/}/libnpg*.so"
 
-QA_DT_HASH="${INSTALL_BASE#/}/libnpg*.so
+QA_DT_HASH="${INSTALL_BASE#/}/libnpg.*so
 	${INSTALL_BASE#/}/GoogleTalkPlugin"
 
 S="${WORKDIR}"
@@ -85,14 +85,15 @@ pkg_nofetch() {
 }
 
 src_unpack() {
-	unpack ${A} ./data.tar.gz ./usr/share/doc/google-talkplugin/changelog.Debian.gz
+	unpack ${A} ./data.tar.gz
 }
 
 src_install() {
 	#workaround for bug #376741
-	[[ -f ./usr/share/doc/google-talkplugin/changelog.Debian ]] && \
-		dodoc ./usr/share/doc/google-talkplugin/changelog.Debian
-	[[ -f ${WORKDIR}/changelog.Debian ]] && dodoc "${WORKDIR}/changelog.Debian"
+	cd usr/share/doc/google-talkplugin || die
+	unpack ./changelog.Debian.gz
+	dodoc changelog.Debian
+	cd -
 
 	exeinto "${INSTALL_BASE}"
 	doexe "${INSTALL_BASE#/}"/GoogleTalkPlugin
