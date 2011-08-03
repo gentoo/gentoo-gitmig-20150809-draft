@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.206 2011/07/05 18:30:32 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.207 2011/08/03 12:35:20 slyfox Exp $
+
+*ghc-7.0.4 (03 Aug 2011)
+
+  03 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/ghc-7.0.2-CHOST.patch, +ghc-7.0.4.ebuild,
+  +files/ghc-7.0.4-CHOST-prefix.patch, +files/ghc-7.0.4-CHOST-softfloat.patch,
+  +files/ghc-7.0.4-darwin8.patch, metadata.xml:
+  Version bump. Bump request by Alexandru Scvortov (bug #352498)
 
   05 Jul 2011; Sergei Trofimovich <slyfox@gentoo.org> ghc-6.12.3.ebuild,
   ghc-6.12.3-r2.ebuild:
