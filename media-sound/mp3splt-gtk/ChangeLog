@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/mp3splt-gtk
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt-gtk/ChangeLog,v 1.18 2010/10/10 18:42:44 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt-gtk/ChangeLog,v 1.19 2011/08/03 21:16:19 sping Exp $
+
+*mp3splt-gtk-0.7 (03 Aug 2011)
+
+  03 Aug 2011; Sebastian Pipping <sping@gentoo.org> +mp3splt-gtk-0.7.ebuild:
+  Bump to 0.7, enable gnome support, restrict Audacious support to <3.0 due to
+  build failurs with mixed GTK 2 and 3
 
   10 Oct 2010; Raúl Porcel <armin76@gentoo.org> mp3splt-gtk-0.5.9.ebuild:
   sparc stable wrt #326139
