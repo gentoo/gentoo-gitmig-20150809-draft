@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pms-test-suite/pms-test-suite-0.0.2.ebuild,v 1.1 2011/07/18 07:02:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pms-test-suite/pms-test-suite-0.0.3.ebuild,v 1.1 2011/08/03 20:23:47 mgorny Exp $
 
 EAPI=3
 
@@ -22,11 +22,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc test"
 
-RDEPEND="app-portage/gentoopm
+RDEPEND=">=app-portage/gentoopm-0.1.4
 	dev-python/dbus-python
 	dev-python/pygobject"
-DEPEND="doc? ( dev-python/epydoc
-		dev-python/markdown )
+DEPEND="doc? ( dev-python/epydoc )
 	test? ( >=sys-apps/portage-2.1.8.3
 		sys-apps/pkgcore
 		>=sys-apps/paludis-0.64.2[python-bindings] )"
@@ -55,7 +54,6 @@ src_install() {
 	distutils_src_install
 
 	if use doc; then
-		dohtml doc/*.html doc/*.css || die
-		dohtml -r doc/html || die
+		dohtml -r doc/* || die
 	fi
 }
