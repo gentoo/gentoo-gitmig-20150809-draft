@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kalzium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.195 2011/07/27 14:04:51 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/ChangeLog,v 1.196 2011/08/03 21:17:03 dilfridge Exp $
+
+  03 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> kalzium-4.7.0.ebuild:
+  Disabling tests, see bug 376911
 
 *kalzium-4.7.0 (27 Jul 2011)
 
