@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/checkpolicy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.59 2011/07/15 20:54:05 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.60 2011/08/03 09:38:17 blueness Exp $
+
+*checkpolicy-2.1.0 (03 Aug 2011)
+
+  03 Aug 2011; Anthony G. Basile <blueness@gentoo.org>
+  +checkpolicy-2.1.0.ebuild:
+  Bump to 20110727 SELinux userspace
 
 *checkpolicy-2.0.23 (15 Jul 2011)
 
