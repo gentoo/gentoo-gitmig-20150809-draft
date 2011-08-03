@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mp3splt-gtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt-gtk/ChangeLog,v 1.19 2011/08/03 21:16:19 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt-gtk/ChangeLog,v 1.20 2011/08/03 21:35:24 sping Exp $
+
+  03 Aug 2011; Sebastian Pipping <sping@gentoo.org> mp3splt-gtk-0.7.ebuild,
+  +files/mp3splt-gtk-0.7-disable-docs.patch:
+  Disable generation of source documentation
 
 *mp3splt-gtk-0.7 (03 Aug 2011)
 

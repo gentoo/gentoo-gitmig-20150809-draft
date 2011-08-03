@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt-gtk/mp3splt-gtk-0.7.ebuild,v 1.1 2011/08/03 21:16:19 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt-gtk/mp3splt-gtk-0.7.ebuild,v 1.2 2011/08/03 21:35:24 sping Exp $
 
 EAPI=2
 inherit autotools multilib
@@ -29,8 +29,10 @@ src_prepare() {
 		sed -i \
 			-e 's:@AUDACIOUS_LIBS@:-laudclient &:' \
 			src/Makefile.am || die
-		eautoreconf
 	fi
+
+	epatch "${FILESDIR}"/${P}-disable-docs.patch
+	eautoreconf
 }
 
 src_configure() {
