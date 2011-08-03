@@ -5,5 +5,9 @@
     <email>fuzzyray@gentoo.org</email>
     <name>Paul Varner</name>
 </maintainer>
+<maintainer>
+    <email>sping@gentoo.org</email>
+    <name>Sebastian Pipping</name>
+</maintainer>
 <herd>tools-portage</herd>
 </pkgmetadata>
