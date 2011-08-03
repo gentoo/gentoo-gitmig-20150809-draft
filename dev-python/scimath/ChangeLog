@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/scimath
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scimath/ChangeLog,v 1.8 2011/01/30 15:27:32 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scimath/ChangeLog,v 1.9 2011/08/03 23:54:04 bicatali Exp $
+
+*scimath-4.0.0 (03 Aug 2011)
+
+  03 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> +scimath-4.0.0.ebuild:
+  Version bump. Possible API break.
 
 *scimath-3.0.7 (30 Jan 2011)
 

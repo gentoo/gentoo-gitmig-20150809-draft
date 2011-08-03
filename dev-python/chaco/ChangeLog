@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/chaco
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chaco/ChangeLog,v 1.10 2011/01/30 21:46:17 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chaco/ChangeLog,v 1.11 2011/08/03 23:57:08 bicatali Exp $
+
+*chaco-4.0.0 (03 Aug 2011)
+
+  03 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> +chaco-4.0.0.ebuild:
+  Version bump. Possible API break.
 
 *chaco-3.4.0 (30 Jan 2011)
 
