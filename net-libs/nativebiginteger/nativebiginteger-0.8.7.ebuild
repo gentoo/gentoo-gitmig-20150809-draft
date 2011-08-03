@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nativebiginteger/nativebiginteger-0.8.7.ebuild,v 1.1 2011/07/31 18:20:59 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nativebiginteger/nativebiginteger-0.8.7.ebuild,v 1.2 2011/08/03 17:49:53 tommy Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://mirror.i2p2.de/i2psource_${PV}.tar.bz2"
 
 LICENSE="|| ( public-domain BSD MIT )"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~ia64"
 
 IUSE="test"
 
@@ -56,20 +56,13 @@ src_test() {
 src_install() {
 	local os arch
 
-	dolib c/jbigi/jbigi/src/libjbigi.so || die
-	( use amd64 || use x86 ) && dolib c/jcpuid/lib/freenet/support/CPUInformation/libjcpuid-x86-linux.so || die
+	dolib c/jbigi/jbigi/src/libjbigi.so
+	( use amd64 || use x86 ) && dolib c/jcpuid/lib/freenet/support/CPUInformation/libjcpuid-x86-linux.so
 
 	## The following is needed for compatibility with earlier versions of NativeBigInteger ##
 
-	# os list found by: grep 'jbigi-' core/java/src/net/i2p/util/NativeBigInteger.java
-	case ${CHOST} in
-		*-fbsd) os=freebsd ;;
-		*-darwin) os=osx ;;
-		*-mingw*|*-cygwin) os=windows ;;
-		*) os=linux ;;
-	esac
 	# arch list found by "none" + grep 'JBIGI_OPTIMIZATION_.*=' core/java/src/net/i2p/util/NativeBigInteger.java
 	for arch in none arm k6 k62 k63 athlon x86_64 x86_64_32 pentium pentiummmx pentium2 pentium3 pentium4 ppc ; do
-		dosym libjbigi.so /usr/$(get_libdir)/libjbigi-$os-$arch.so || die
+		dosym libjbigi.so /usr/$(get_libdir)/libjbigi-linux-$arch.so
 	done
 }

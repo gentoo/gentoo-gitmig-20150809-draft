@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/nativebiginteger
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nativebiginteger/ChangeLog,v 1.7 2011/07/31 18:20:59 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nativebiginteger/ChangeLog,v 1.8 2011/08/03 17:49:53 tommy Exp $
+
+  03 Aug 2011; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  nativebiginteger-0.8.7.ebuild:
+  Drop unneeded die calls for EAPI-4, remove some unneeded code for unsupported
+  targets
 
 *nativebiginteger-0.8.7 (31 Jul 2011)
 
