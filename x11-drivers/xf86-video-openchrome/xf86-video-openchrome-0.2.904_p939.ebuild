@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/xf86-video-openchrome-0.2.904_p939.ebuild,v 1.1 2011/08/03 18:46:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-openchrome/xf86-video-openchrome-0.2.904_p939.ebuild,v 1.2 2011/08/03 18:49:16 jer Exp $
 
 EAPI="4"
 
@@ -44,7 +44,7 @@ pkg_postinst() {
 	elog "P4M900/VN896 (VT3364), VX800 (VT3353) VX855 (VT3409)"
 	elog
 	elog "The driver name is 'openchrome', and this is what you need"
-	elog "to use in your xorg.conf now (instead of 'via')."
+	elog "to use in your xorg.conf (and not 'via')."
 	elog
 	elog "See the ChangeLog and release notes for more information."
 }
