@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.4.1.ebuild,v 1.2 2011/08/02 16:44:29 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/lxdm-0.4.1-r1.ebuild,v 1.1 2011/08/03 16:07:53 lxnay Exp $
 
 EAPI="2"
 
@@ -38,6 +38,9 @@ src_configure() {
 }
 
 src_prepare() {
+	# Upstream bug, tarball contains pre-made lxdm.conf
+	rm "${S}"/data/lxdm.conf || die
+
 	# There is consolekit
 	epatch "${FILESDIR}/${P}-pam_console-disable.patch"
 	# Fix null pointer dereference, backported from git

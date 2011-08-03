@@ -1,6 +1,13 @@
 # ChangeLog for lxde-base/lxdm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/ChangeLog,v 1.9 2011/08/02 16:44:29 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/ChangeLog,v 1.10 2011/08/03 16:07:53 lxnay Exp $
+
+*lxdm-0.4.1-r1 (03 Aug 2011)
+
+  03 Aug 2011; Fabio Erculiani <lxnay@gentoo.org> -lxdm-0.4.1.ebuild,
+  +lxdm-0.4.1-r1.ebuild:
+  fix upstream bug, tarball contains pre-made lxdm.conf, making greeter=
+  pointing to /usr/local
 
   02 Aug 2011; Fabio Erculiani <lxnay@gentoo.org> lxdm-0.4.1.ebuild,
   +files/lxdm-0.4.1-git-fix-null-pointer-deref.patch:
