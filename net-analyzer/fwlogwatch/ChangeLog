@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fwlogwatch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fwlogwatch/ChangeLog,v 1.22 2011/08/01 02:31:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fwlogwatch/ChangeLog,v 1.23 2011/08/03 14:32:31 jer Exp $
+
+  03 Aug 2011; Jeroen Roovers <jer@gentoo.org> fwlogwatch-1.2-r1.ebuild:
+  Remove "doins contrib" by Tobias Klausmann (bug #377509).
 
 *fwlogwatch-1.2-r1 (01 Aug 2011)
 
