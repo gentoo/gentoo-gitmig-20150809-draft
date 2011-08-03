@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.87 2011/07/15 23:29:30 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.88 2011/08/03 10:18:27 blueness Exp $
+
+*policycoreutils-2.1.0 (03 Aug 2011)
+
+  03 Aug 2011; Anthony G. Basile <blueness@gentoo.org>
+  +policycoreutils-2.1.0.ebuild:
+  Bump to 20110727 SELinux userspace release
 
 *policycoreutils-2.0.85 (15 Jul 2011)
 
