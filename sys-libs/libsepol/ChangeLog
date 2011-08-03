@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libsepol
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/ChangeLog,v 1.41 2011/07/15 21:03:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/ChangeLog,v 1.42 2011/08/03 09:27:32 blueness Exp $
+
+*libsepol-2.1.0 (03 Aug 2011)
+
+  03 Aug 2011; Anthony G. Basile <blueness@gentoo.org> +libsepol-2.1.0.ebuild:
+  Bump to 20110727 SELinux userspace release
 
 *libsepol-2.0.42 (15 Jul 2011)
 
