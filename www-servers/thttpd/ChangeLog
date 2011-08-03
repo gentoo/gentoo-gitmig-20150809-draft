@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/thttpd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.31 2010/10/28 22:25:24 bangert Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/ChangeLog,v 1.32 2011/08/03 20:34:00 zmedico Exp $
+
+  03 Aug 2011; Zac Medico <zmedico@gentoo.org> thttpd-2.25b-r8.ebuild:
+  Fix for prefix.
 
 *thttpd-2.25b-r8 (28 Oct 2010)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.25b-r8.ebuild,v 1.1 2010/10/28 22:25:24 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.25b-r8.ebuild,v 1.2 2011/08/03 20:34:00 zmedico Exp $
 
 EAPI="3"
 
@@ -50,14 +50,14 @@ src_compile() {
 
 src_install () {
 	dodir /usr/share/man/man1
-	make prefix="${D}"/usr \
-		MANDIR="${D}"/usr/share/man \
+	make prefix="${ED}"/usr \
+		MANDIR="${ED}"/usr/share/man \
 		WEBGROUP=${THTTPD_GROUP} \
-		WEBDIR="${D}"/var/www/localhost \
+		WEBDIR="${ED}"/var/www/localhost \
 		"$@" install || die "make install failed"
 
-	mv "${D}"/usr/sbin/{,th_}htpasswd
-	mv "${D}"/usr/share/man/man1/{,th_}htpasswd.1
+	mv "${ED}"/usr/sbin/{,th_}htpasswd
+	mv "${ED}"/usr/share/man/man1/{,th_}htpasswd.1
 
 	newinitd "${FILESDIR}"/${MY_P}/thttpd.init thttpd
 	newconfd "${FILESDIR}"/${MY_P}/thttpd.confd thttpd
