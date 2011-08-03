@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.129 2011/07/28 21:20:53 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.130 2011/08/03 13:01:39 slyfox Exp $
+
+  03 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> ppc64/package.use.mask:
+  masked dev-lang/ghc[llvm]
 
   28 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Add kde-base/kdepim-l10n to kde-4.7 package mask

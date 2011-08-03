@@ -1,6 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.41 2011/06/02 20:10:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.42 2011/08/03 13:01:39 slyfox Exp $
+
+# Sergei Trofimovich <slyfox@gentoo.org> (03 Aug 2011)
+# sys-devel/llvm has no ppc64 keywords yet (bug #320221)
+dev-lang/ghc llvm
 
 # Kacper Kowalik <xarthisius@gentoo.org> (22 Mar 2011)
 # Mask polkit[kde] wrt #354509
