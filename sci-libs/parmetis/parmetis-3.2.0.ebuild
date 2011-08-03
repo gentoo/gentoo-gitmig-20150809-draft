@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/parmetis/parmetis-3.1.1.ebuild,v 1.3 2011/08/03 20:23:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/parmetis/parmetis-3.2.0.ebuild,v 1.1 2011/08/03 20:23:43 bicatali Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils autotools
 
 MYP=ParMetis-${PV}
@@ -23,7 +23,9 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${MYP}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-autotools.patch
+	epatch "${FILESDIR}"/${PN}-3.1.1-autotools.patch
+	sed -i -e "s/3.1.1/${PV}/" configure.ac || die
+	sed -i -e 's/order.c//' -e 's/lmatch.c//' ParMETISLib/Makefile.am || die
 	eautoreconf
 	export CC=mpicc
 }
@@ -33,10 +35,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc README CHANGES
-	if use doc; then
-		insinto /usr/share/doc/${PF}
-		doins Manual/*.pdf || die
-	fi
+	default
+	use doc && dodoc Manual/*.pdf
 }

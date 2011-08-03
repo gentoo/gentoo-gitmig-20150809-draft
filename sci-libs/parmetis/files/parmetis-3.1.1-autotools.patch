@@ -1,6 +1,5 @@
-diff -Nur ParMetis-3.1.1.orig/configure.ac ParMetis-3.1.1/configure.ac
---- ParMetis-3.1.1.orig/configure.ac	1970-01-01 01:00:00.000000000 +0100
-+++ ParMetis-3.1.1/configure.ac	2009-03-14 11:37:58.804041439 +0000
+--- configure.ac	1970-01-01 01:00:00.000000000 +0100
++++ configure.ac	2009-03-14 11:37:58.804041439 +0000
 @@ -0,0 +1,18 @@
 +# -*- Autoconf -*-
 +AC_PREREQ(2.59)
@@ -20,18 +19,16 @@ diff -Nur ParMetis-3.1.1.orig/configure.ac ParMetis-3.1.1/configure.ac
 +		 METISLib/Makefile
 +		 Programs/Makefile])
 +AC_OUTPUT
-diff -Nur ParMetis-3.1.1.orig/Makefile.am ParMetis-3.1.1/Makefile.am
---- ParMetis-3.1.1.orig/Makefile.am	1970-01-01 01:00:00.000000000 +0100
-+++ ParMetis-3.1.1/Makefile.am	2009-03-14 11:37:15.700900498 +0000
+--- Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ Makefile.am	2009-03-14 11:37:15.700900498 +0000
 @@ -0,0 +1,5 @@
 +SUBDIRS = METISLib ParMETISLib Programs
 +EXTRA_DIST = CHANGES VERSION parmetis.pc.in metis.pc.in
 +include_HEADERS = parmetis.h
 +pkgconfigdir = $(libdir)/pkgconfig
 +pkgconfig_DATA = metis.pc parmetis.pc
-diff -Nur ParMetis-3.1.1.orig/METISLib/Makefile.am ParMetis-3.1.1/METISLib/Makefile.am
---- ParMetis-3.1.1.orig/METISLib/Makefile.am	1970-01-01 01:00:00.000000000 +0100
-+++ ParMetis-3.1.1/METISLib/Makefile.am	2009-03-14 11:37:15.700900498 +0000
+--- METISLib/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ METISLib/Makefile.am	2009-03-14 11:37:15.700900498 +0000
 @@ -0,0 +1,18 @@
 +pkginclude_HEADERS = defs.h macros.h metis.h proto.h rename.h \
 +	stdheaders.h struct.h
@@ -51,9 +48,8 @@ diff -Nur ParMetis-3.1.1.orig/METISLib/Makefile.am ParMetis-3.1.1/METISLib/Makef
 +	kvmetis.c kwayvolrefine.c kwayvolfm.c subdomains.c \
 +	mfm.c memory.c mrefine.c checkgraph.c
 +libmetis_la_LDFLAGS = -no-undefined -version-info 4:1:0 
-diff -Nur ParMetis-3.1.1.orig/metis.pc.in ParMetis-3.1.1/metis.pc.in
---- ParMetis-3.1.1.orig/metis.pc.in	1970-01-01 01:00:00.000000000 +0100
-+++ ParMetis-3.1.1/metis.pc.in	2009-03-14 11:37:15.700900498 +0000
+--- metis.pc.in	1970-01-01 01:00:00.000000000 +0100
++++ metis.pc.in	2009-03-14 11:37:15.700900498 +0000
 @@ -0,0 +1,10 @@
 +prefix=@prefix@
 +exec_prefix=@exec_prefix@
@@ -65,9 +61,8 @@ diff -Nur ParMetis-3.1.1.orig/metis.pc.in ParMetis-3.1.1/metis.pc.in
 +Version: @VERSION@
 +Libs: -L${libdir} -lmetis
 +Cflags: -I${includedir}/metis
-diff -Nur ParMetis-3.1.1.orig/ParMETISLib/Makefile.am ParMetis-3.1.1/ParMETISLib/Makefile.am
---- ParMetis-3.1.1.orig/ParMETISLib/Makefile.am	1970-01-01 01:00:00.000000000 +0100
-+++ ParMetis-3.1.1/ParMETISLib/Makefile.am	2009-03-14 11:57:08.006017954 +0000
+--- ParMETISLib/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ ParMETISLib/Makefile.am	2009-03-14 11:57:08.006017954 +0000
 @@ -0,0 +1,21 @@
 +pkginclude_HEADERS = defs.h macros.h parmetislib.h proto.h \
 +	rename.h stdheaders.h struct.h
@@ -90,9 +85,8 @@ diff -Nur ParMetis-3.1.1.orig/ParMETISLib/Makefile.am ParMetis-3.1.1/ParMETISLib
 +	mmetis.c mesh.c memory.c weird.c backcompat.c
 +libparmetis_la_LDFLAGS = -no-undefined -version-info 3:1:1
 +libparmetis_la_LIBADD = @MPILIBS@ $(top_builddir)/METISLib/libmetis.la
-diff -Nur ParMetis-3.1.1.orig/parmetis.pc.in ParMetis-3.1.1/parmetis.pc.in
---- ParMetis-3.1.1.orig/parmetis.pc.in	1970-01-01 01:00:00.000000000 +0100
-+++ ParMetis-3.1.1/parmetis.pc.in	2009-03-14 11:37:15.700900498 +0000
+--- parmetis.pc.in	1970-01-01 01:00:00.000000000 +0100
++++ parmetis.pc.in	2009-03-14 11:37:15.700900498 +0000
 @@ -0,0 +1,11 @@
 +prefix=@prefix@
 +exec_prefix=@exec_prefix@
@@ -105,9 +99,8 @@ diff -Nur ParMetis-3.1.1.orig/parmetis.pc.in ParMetis-3.1.1/parmetis.pc.in
 +Requires: metis
 +Libs: -L${libdir} -lparmetis
 +Cflags: -I${includedir}
-diff -Nur ParMetis-3.1.1.orig/Programs/Makefile.am ParMetis-3.1.1/Programs/Makefile.am
---- ParMetis-3.1.1.orig/Programs/Makefile.am	1970-01-01 01:00:00.000000000 +0100
-+++ ParMetis-3.1.1/Programs/Makefile.am	2009-03-14 11:37:15.700900498 +0000
+--- Programs/Makefile.am	1970-01-01 01:00:00.000000000 +0100
++++ Programs/Makefile.am	2009-03-14 11:37:15.700900498 +0000
 @@ -0,0 +1,13 @@
 +AM_CPPFLAGS = -I$(top_srcdir)/ParMETISLib
 +LDADD = $(top_builddir)/METISLib/libmetis.la \
@@ -122,9 +115,8 @@ diff -Nur ParMetis-3.1.1.orig/Programs/Makefile.am ParMetis-3.1.1/Programs/Makef
 +check-local: $(check_PROGRAMS)
 +	$(MPIRUN) ptest ../Graphs/rotor.graph
 +	$(MPIRUN) mtest ../Graphs/bricks.hex3d 2
-diff -Nur ParMetis-3.1.1.orig/ax_mpi.m4 ParMetis-3.1.1/ax_mpi.m4
---- ParMetis-3.1.1.orig/ax_mpi.m4	1970-01-01 01:00:00.000000000 +0100
-+++ ParMetis-3.1.1/ax_mpi.m4	2010-01-20 20:33:15.000000000 +0000
+--- ax_mpi.m4	1970-01-01 01:00:00.000000000 +0100
++++ ax_mpi.m4	2010-01-20 20:33:15.000000000 +0000
 @@ -0,0 +1,178 @@
 +# ===========================================================================
 +#             http://www.nongnu.org/autoconf-archive/ax_mpi.html
