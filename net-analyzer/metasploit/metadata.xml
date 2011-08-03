@@ -14,4 +14,7 @@
 		Framework was designed to facilitate research and experimentation with
 		new technologies.
 	</longdescription>
+	<use>
+		<flag name='gui'>Enable Java GUI</flag>
+	</use>
 </pkgmetadata>
