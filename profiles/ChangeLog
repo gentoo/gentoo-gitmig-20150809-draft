@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5594 2011/08/03 04:04:27 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5595 2011/08/03 06:10:47 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Aug 2011; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Mask dev-ruby/capistrano-launcher as it is no longer needed by capistrano.
 
   03 Aug 2011; Arun Raghavan <ford_prefect@gentoo.org> package.mask:
   Mask media-sound/pulseaudio prereleases
