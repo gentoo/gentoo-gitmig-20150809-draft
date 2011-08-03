@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/capistrano
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/ChangeLog,v 1.70 2011/08/03 06:18:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/ChangeLog,v 1.71 2011/08/03 06:19:46 graaff Exp $
+
+  03 Aug 2011; Hans de Graaff <graaff@gentoo.org> capistrano-2.5.20.ebuild,
+  capistrano-2.6.0.ebuild:
+  Remove blocker on capistrano-launcher now that it is masked.
 
 *capistrano-2.8.0 (03 Aug 2011)
 
