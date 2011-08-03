@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.9.5.3-r4.ebuild,v 1.1 2011/08/03 07:49:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/g15daemon-1.9.5.3-r4.ebuild,v 1.2 2011/08/03 07:50:45 robbat2 Exp $
 
 EAPI=3
 GENTOO_DEPEND_ON_PERL="no"
@@ -28,8 +28,8 @@ DEPEND="virtual/libusb:0
 	)"
 RDEPEND="${DEPEND}"
 
-PATCHES=( 
-"${FILESDIR}/${P}-forgotten-open-mode.patch" 
+PATCHES=(
+"${FILESDIR}/${P}-forgotten-open-mode.patch"
 "${FILESDIR}/${P}-overflow-fix.patch"
 )
 uinput_check() {
