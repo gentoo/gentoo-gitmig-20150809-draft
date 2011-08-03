@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/heroes-0.21-r1.ebuild,v 1.9 2011/06/10 10:07:40 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heroes/heroes-0.21-r1.ebuild,v 1.10 2011/08/03 17:53:11 mr_bones_ Exp $
 EAPI=2
 
 inherit eutils autotools games
@@ -20,6 +20,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE="sdl nls ggi"
+RESTRICT="test"
 
 RDEPEND="nls? ( virtual/libintl )
 	sdl? ( media-libs/libsdl media-libs/sdl-mixer )
