@@ -1,0 +1,28 @@
+From 13f456a5763cd6f5f95b661c3034ddd844feb088 Mon Sep 17 00:00:00 2001
+Message-Id: <13f456a5763cd6f5f95b661c3034ddd844feb088.1299803526.git.johannes@schlatow.name>
+From: Johannes Schlatow <johannes@schlatow.name>
+Date: Fri, 11 Mar 2011 00:54:43 +0100
+Subject: [PATCH] Merge/Uri support
+
+- fixed autopush bug where e.g. 'ssh://' was omitted
+  (Uri::parse() was wrongly modifying the data member)
+---
+ src/Uri.cpp |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/src/Uri.cpp b/src/Uri.cpp
+index 6695b94..36791ff 100644
+--- a/src/Uri.cpp
++++ b/src/Uri.cpp
+@@ -198,7 +198,7 @@ void Uri::parse ()
+   }
+ 
+   std::string::size_type pos;
+-  std::string uripart;
++  std::string data = this->data;
+   std::string pathDelimiter = "/";
+ 
+   user = "";
+-- 
+1.7.4.1
+
