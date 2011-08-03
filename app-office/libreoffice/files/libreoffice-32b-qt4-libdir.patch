@@ -1,0 +1,30 @@
+From d1c187bd6005339ba260c166b2539791628e4702 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Tom=C3=A1=C5=A1=20Chv=C3=A1tal?= <tomas.chvatal@gmail.com>
+Date: Wed, 3 Aug 2011 13:02:38 +0200
+Subject: [PATCH] Add one more libdir path for detection with qt4 on 32b platform to be same with 64b. Fixes gentoo bug #377377.
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+
+Signed-off-by: Tomáš Chvátal <tomas.chvatal@gmail.com>
+---
+ configure.in |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/configure.in b/configure.in
+index f4363db..cf308dc 100755
+--- a/configure.in
++++ b/configure.in
+@@ -7310,7 +7310,7 @@ KDE_GLIB_LIBS=""
+ KDE_HAVE_GLIB=""
+ if test "$test_kde4" = "yes" -a "$ENABLE_KDE4" = "TRUE" ; then
+     qt_incdirs="$QT4INC /usr/include/qt4 /usr/include $x_includes"
+-    qt_libdirs="$QT4LIB /usr/lib $x_libraries"
++    qt_libdirs="$QT4LIB /usr/lib/qt4 /usr/lib $x_libraries"
+ 
+     kde_incdirs="/usr/include /usr/include/kde4 $x_includes"
+     kde_libdirs="/usr/lib /usr/lib/kde4 /usr/lib/kde4/devel $x_libraries"
+-- 
+1.7.3.4
+

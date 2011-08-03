@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.80 2011/08/01 15:51:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.81 2011/08/03 17:23:04 scarabeus Exp $
+
+  03 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-3.4.2.3.ebuild, libreoffice-3.4.9999.ebuild,
+  +files/libreoffice-32b-qt4-libdir.patch:
+  Fix finding qt libraries on 32b platform. Fixes bug #377377.
 
   01 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   libreoffice-3.4.2.3.ebuild, +files/libreoffice-append-no-avx.patch:

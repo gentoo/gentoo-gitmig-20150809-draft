@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.15 2011/08/01 15:51:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.16 2011/08/03 17:23:04 scarabeus Exp $
 
 EAPI=3
 
@@ -237,6 +237,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-gbuild-use-cxxflags.patch"
 	"${FILESDIR}/${PN}-installed-files-permissions.patch"
 	"${FILESDIR}/${PN}-append-no-avx.patch"
+	"${FILESDIR}/${PN}-32b-qt4-libdir.patch"
 )
 
 # Uncoment me when updating to eapi4
