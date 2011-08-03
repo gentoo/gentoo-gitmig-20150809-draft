@@ -1,5 +1,9 @@
 
 
+  03 Aug 2011; Anthony G. Basile <blueness@gentoo.org>
+  libnatpmp-20110715-r1.ebuild:
+  Fix HOMEPAGE
+
   23 Jul 2011; Anthony G. Basile <blueness@gentoo.org>
   -libnatpmp-20110715.ebuild, libnatpmp-20110715-r1.ebuild:
   Removed old version and added docs

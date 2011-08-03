@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnatpmp/libnatpmp-20110715-r1.ebuild,v 1.2 2011/07/23 15:17:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnatpmp/libnatpmp-20110715-r1.ebuild,v 1.3 2011/08/03 08:55:15 blueness Exp $
 
 EAPI=4
 
 inherit eutils
 
 DESCRIPTION="An alternative protocol to UPnP IGD specification."
-HOMEPAGE="http://miniupnp.free.fr/nat-pmp.html"
+HOMEPAGE="http://miniupnp.free.fr/libnatpmp.html"
 SRC_URI="http://miniupnp.free.fr/files/download.php?file=${P}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD"
