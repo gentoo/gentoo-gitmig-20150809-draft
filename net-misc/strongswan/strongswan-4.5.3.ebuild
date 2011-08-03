@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.5.1.ebuild,v 1.1 2011/02/12 16:08:59 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.5.3.ebuild,v 1.1 2011/08/03 09:55:40 gurligebis Exp $
 
 EAPI=2
 inherit eutils linux-info
