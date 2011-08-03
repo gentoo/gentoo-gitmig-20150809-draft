@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ekopath-4.0.10_pre20110728.ebuild,v 1.1 2011/07/31 08:04:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ekopath-4.0.10_pre20110728.ebuild,v 1.2 2011/08/03 14:00:25 blueness Exp $
 
 EAPI=4
 
@@ -58,9 +58,21 @@ src_prepare() {
 }
 
 src_install() {
+	# You must paxmark -m EI_PAX (not PT_PAX) to run the installer
+	# on a pax enabled kernel.  Adding PT_PAX breaks the binary.
+	/usr/bin/scanelf -Xxz m ${P}.run >> /dev/null
+
 	./${P}.run \
 		--prefix "${D}/opt/${PN}" \
 		--mode unattended || die
+
+	# This is a temporary/partial fix to remove a RWX GNU STACK header
+	# from libstl.so.  It still leaves libstl.a in bad shape.
+	# The correct fix is in the assembly atomic-cxx.S, which we don't get
+	#   See http://www.gentoo.org/proj/en/hardened/gnu-stack.xml
+	#   Section 6.  How to fix the stack (in practice)
+	/usr/bin/scanelf -Xe "${D}/opt/ekopath/lib/4.0.11/x8664/64/libstl.so"
+
 	rm -rf "${D}"/opt/${PN}/uninstall || die
 	doenvd "99${PN}"
 }

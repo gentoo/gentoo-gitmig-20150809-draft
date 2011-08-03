@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ekopath
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ChangeLog,v 1.4 2011/07/31 08:04:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ChangeLog,v 1.5 2011/08/03 14:00:24 blueness Exp $
+
+  03 Aug 2011; Anthony G. Basile <blueness@gentoo.org>
+  ekopath-4.0.10_pre20110728.ebuild:
+  Fix a) paxmarkings on installer and b) RWX GNU STACK on libstl.so
+  This is for pax enabled kernels, but tested and safe on vanilla.
 
 *ekopath-4.0.10_pre20110728 (31 Jul 2011)
 
