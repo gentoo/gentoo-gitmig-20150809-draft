@@ -1,6 +1,11 @@
 # ChangeLog for lxde-base/lxpanel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/ChangeLog,v 1.31 2011/07/27 16:34:07 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/ChangeLog,v 1.32 2011/08/03 09:19:57 hwoarang Exp $
+
+*lxpanel-0.5.8 (03 Aug 2011)
+
+  03 Aug 2011; Markos Chandras <hwoarang@gentoo.org> +lxpanel-0.5.8.ebuild:
+  Version bump
 
 *lxpanel-0.5.7-r1 (27 Jul 2011)
 
