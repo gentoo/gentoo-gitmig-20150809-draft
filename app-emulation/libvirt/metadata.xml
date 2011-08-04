@@ -63,9 +63,10 @@
       Support auto learning IP addreses for routing
     </flag>
     <flag name='macvtap'>
-      Support for MAC-based TAP (macvlan/macvtap). For networking instead of the normal TUN/TAP. It
-      has its advantages and disadvantages. macvtap support requires very new kernels and is
-      currently evolving. Support for this is experimental at best
+		Support for MAC-based TAP (macvlan/macvtap). For networking instead
+		of the normal TUN/TAP. It has its advantages and disadvantages.
+		macvtap support requires very new kernels and is
+		currently evolving. Support for this is experimental at best.
     </flag>
     <flag name='json'>
       Support QEmu 0.13 JSON-based interface, using <pkg>dev-libs/yajl</pkg>.
@@ -74,8 +75,10 @@
 		Enable virtual networking (NAT) support for guests. Includes all
 		the dependencies for NATed network mode. Effectively any network
 		setup that relies on libvirt to setup and configure network
-		interfaces on your host. This does not include bridged or
-		routed networks.
+		interfaces on your host. This can include bridged and routed
+		networks ONLY if you are allowing libvirt to create and manage
+		the underlying devices for you. In some cases this requires
+		enabling the 'netcf' USE flag (currently unavailable).
 	</flag>
   </use>
 </pkgmetadata>
