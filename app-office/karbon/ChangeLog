@@ -1,6 +1,9 @@
 # ChangeLog for app-office/karbon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/ChangeLog,v 1.124 2011/06/01 21:45:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/ChangeLog,v 1.125 2011/08/04 16:29:59 scarabeus Exp $
+
+  04 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> karbon-2.3.3.ebuild:
+  media-libs/libwpg app-text/libwpg
 
   01 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org> -karbon-2.2.2.ebuild:
   Remove old

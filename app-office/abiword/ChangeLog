@@ -1,6 +1,9 @@
 # ChangeLog for app-office/abiword
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.244 2011/04/24 17:24:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.245 2011/08/04 16:29:45 scarabeus Exp $
+
+  04 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> abiword-2.8.6-r1.ebuild:
+  media-libs/libwpg app-text/libwpg
 
   24 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org> abiword-2.8.6-r1.ebuild:
   Use slotted revisions of libwpd and libwpg.
