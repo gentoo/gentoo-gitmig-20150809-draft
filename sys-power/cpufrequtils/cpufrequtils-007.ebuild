@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-007.ebuild,v 1.6 2010/08/13 14:03:56 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-007.ebuild,v 1.7 2011/08/04 15:26:01 mattst88 Exp $
 
 EAPI=3
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="amd64 arm ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux"
 IUSE="debug nls"
 
-DEPEND="sys-fs/sysfsutils"
+DEPEND=""
+RDEPEND=""
 
 ft() { use $1 && echo true || echo false ; }
 
