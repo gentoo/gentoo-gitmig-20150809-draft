@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/doom3-roe
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-roe/ChangeLog,v 1.10 2008/09/26 18:07:42 zmedico Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-roe/ChangeLog,v 1.11 2011/08/04 22:31:05 mr_bones_ Exp $
+
+  04 Aug 2011; Michael Sterrett <mr_bones_@gentoo.org> doom3-roe-1.ebuild:
+  Add CDROM_ROOT quoting with patch from Jared (bug #371483)
 
   26 Sep 2008; Zac Medico <zmedico@gentoo.org> doom3-roe-1.ebuild:
   Set PROPERTIES=interactive since src_unpack() calls cdrom_get_cds() and
