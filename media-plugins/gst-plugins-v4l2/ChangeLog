@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-v4l2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l2/ChangeLog,v 1.83 2011/07/31 04:03:32 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l2/ChangeLog,v 1.84 2011/08/04 09:43:29 ssuominen Exp $
+
+  04 Aug 2011; Samuli Suominen <ssuominen@gentoo.org>
+  gst-plugins-v4l2-0.10.30.ebuild:
+  Move libv4l from DEPEND to RDEPEND wrt #370671
 
 *gst-plugins-v4l2-0.10.30 (31 Jul 2011)
 
