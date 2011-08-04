@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12960 2011/08/03 15:31:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12961 2011/08/04 05:18:37 mattst88 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Matt Turner <mattst88@gentoo.org) (04 Aug 2011)
+# libots is only used by Compaq's C compiler, which was tree
+# cleaned years ago. Masked for removal in 30 days.
+dev-libs/libots
 
 # Hans de Graaff <graaff@gentoo.org> (03 Aug 2011)
 # No longer needed now that we have a single slot again for
