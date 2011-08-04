@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hsql-odbc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-odbc/ChangeLog,v 1.10 2011/08/04 12:44:55 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql-odbc/ChangeLog,v 1.11 2011/08/04 13:04:39 slyfox Exp $
+
+  04 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> -hsql-odbc-1.7.ebuild:
+  Removed old.
 
 *hsql-odbc-1.8.1.1 (04 Aug 2011)
 
