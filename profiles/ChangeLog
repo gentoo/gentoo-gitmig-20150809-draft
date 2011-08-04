@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5596 2011/08/04 05:18:37 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5597 2011/08/04 15:08:48 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Aug 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Masking net-misc/vget for removal
 
   04 Aug 2011; Matt Turner <mattst88@gentoo.org> package.mask:
   Mask dev-libs/libots for removal.
