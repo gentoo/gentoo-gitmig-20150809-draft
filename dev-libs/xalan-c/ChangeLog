@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/xalan-c
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/ChangeLog,v 1.27 2011/02/25 17:15:29 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/ChangeLog,v 1.28 2011/08/04 12:34:59 dev-zero Exp $
+
+*xalan-c-1.11.0_pre1153059 (04 Aug 2011)
+
+  04 Aug 2011; Tiziano Müller <dev-zero@gentoo.org>
+  +xalan-c-1.11.0_pre1153059.ebuild:
+  Version bump, fixes compilation with gcc-4.6 (bug #363531). Also fixed
+  compilation with USE=-nls (bug #373035) and use EAPI-4.
 
   25 Feb 2011; Tiziano Müller <dev-zero@gentoo.org>
   xalan-c-1.11.0_pre797991.ebuild:
