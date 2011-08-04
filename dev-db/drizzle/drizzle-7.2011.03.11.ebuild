@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-7.2011.03.11.ebuild,v 1.1 2011/03/04 18:28:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/drizzle/drizzle-7.2011.03.11.ebuild,v 1.2 2011/08/04 11:33:32 hwoarang Exp $
 
 EAPI=2
 
@@ -63,6 +63,9 @@ src_configure() {
 	# while I applaud upstreams goal of 0 compiler warnings
 	# the 1412 release didn't achieve it.
 	append-flags -Wno-error
+
+	# Bug #362901
+	append-flags -DBOOST_FILESYSTEM_VERSION=2
 
 	# NOTE disable-all and without-all no longer recognized options
 	# NOTE using --enable on some plugins can cause test failures.
