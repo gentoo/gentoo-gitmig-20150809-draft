@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-4.0.0.ebuild,v 1.1 2011/08/03 05:56:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-4.0.0-r1.ebuild,v 1.1 2011/08/04 22:03:37 patrick Exp $
 
 EAPI="3"
 inherit eutils
@@ -39,6 +39,9 @@ QA_WX_LOAD="
 S=${WORKDIR}/msf3
 
 src_configure() {
+	# upstream makes weird tarbllz
+	find "${S}" -type d -name ".svn" -print0 | xargs -0 -n1 rm -R
+
 	rm "${S}"/msfupdate
 	chmod +x "${S}"/msf*
 
@@ -69,6 +72,11 @@ src_install() {
 			metasploit \
 			'GNOME;System;Network;' &&
 		doicon "${FILESDIR}"/metasploit.xpm
+
+	# Avoid useless revdep-rebuild trigger #377617
+	dodir /etc/revdep-rebuild/
+	echo "SEARCH_DIRS_MASK=\"/usr/lib*/${PN}${SLOT}/data/john\"" > \
+		${D}/etc/revdep-rebuild/70-${PN}-${SLOT}
 }
 
 pkg_postinst() {
