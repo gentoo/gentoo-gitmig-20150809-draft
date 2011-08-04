@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/dante
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/ChangeLog,v 1.58 2011/08/02 03:01:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/ChangeLog,v 1.59 2011/08/04 16:33:12 radhermit Exp $
+
+*dante-1.3.2 (04 Aug 2011)
+
+  04 Aug 2011; Tim Harder <radhermit@gentoo.org> +dante-1.3.2.ebuild:
+  Version bump.
 
 *dante-1.3.1-r1 (02 Aug 2011)
 
