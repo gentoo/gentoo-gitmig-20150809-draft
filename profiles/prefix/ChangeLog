@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.287 2011/07/11 07:36:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.288 2011/08/04 22:04:27 abcd Exp $
+
+  04 Aug 2011; Jonathan Callen <abcd@gentoo.org>
+  +bsd/freebsd/8.2/x86/make.defaults, +bsd/freebsd/8.2/x86/parent:
+  Add a x86 freebsd 8.2 profile
 
   11 Jul 2011; Fabian Groffen <grobian@gentoo.org>
   darwin/macos/10.4/package.mask:
