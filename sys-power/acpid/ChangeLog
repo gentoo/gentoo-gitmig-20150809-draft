@@ -1,6 +1,6 @@
 # ChangeLog for sys-power/acpid
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.67 2011/08/04 17:03:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.68 2011/08/04 17:14:44 ssuominen Exp $
 
   04 Aug 2011; Samuli Suominen <ssuominen@gentoo.org> -acpid-2.0.6.ebuild,
   -acpid-2.0.10.ebuild:
@@ -11,8 +11,8 @@
   04 Aug 2011; Samuli Suominen <ssuominen@gentoo.org> +acpid-2.0.11.ebuild,
   +files/acpid-2.0.11-init.d, +files/acpid.service:
   Version bump. Install systemd unit file wrt #375269 by Michał Górny. Remove
-  deprecated --oknodo from initd script wrt #377761. Remove support for
-  sys-apps/hal and drop "before hald" from initd script.
+  deprecated --oknodo from initd script wrt #377761 by Michael Mair-Keimberger.
+  Remove support for sys-apps/hal and drop "before hald" from initd script.
 
   12 Jun 2011; Raúl Porcel <armin76@gentoo.org> acpid-2.0.9.ebuild:
   ia64 stable wrt #368233
