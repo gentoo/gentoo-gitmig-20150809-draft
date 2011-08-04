@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/corosync
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/ChangeLog,v 1.17 2011/08/03 08:06:08 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/corosync/ChangeLog,v 1.18 2011/08/04 12:55:24 naota Exp $
+
+  04 Aug 2011; Naohiro Aota <naota@gentoo.org> corosync-1.3.3.ebuild:
+  Add ~x86-fbsd keyword
 
 *corosync-1.3.3 (03 Aug 2011)
 
