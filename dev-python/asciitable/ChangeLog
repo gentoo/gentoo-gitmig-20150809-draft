@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/asciitable
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/asciitable/ChangeLog,v 1.10 2011/04/18 22:37:00 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/asciitable/ChangeLog,v 1.11 2011/08/04 18:41:11 bicatali Exp $
+
+  04 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
+  Switched herd to sci-astronomy
 
 *asciitable-0.5.2 (18 Apr 2011)
 

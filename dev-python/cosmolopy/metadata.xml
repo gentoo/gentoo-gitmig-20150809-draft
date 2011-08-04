@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>python</herd>
-<herd>sci</herd>
+<herd>sci-astronomy</herd>
 <longdescription lang="en">
   CosmoloPy is a package of cosmology routines built on NumPy/SciPy.
 </longdescription>
