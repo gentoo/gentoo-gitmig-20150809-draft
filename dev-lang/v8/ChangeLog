@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.70 2011/08/03 22:47:10 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.71 2011/08/04 14:52:45 hwoarang Exp $
+
+  04 Aug 2011; Markos Chandras <hwoarang@gentoo.org> v8-3.3.10.22.ebuild:
+  Stable on amd64 wrt bug #377629
 
 *v8-3.3.10.22 (03 Aug 2011)
 
