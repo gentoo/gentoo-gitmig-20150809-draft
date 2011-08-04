@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/xml-security-c
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xml-security-c/ChangeLog,v 1.2 2009/07/27 09:54:18 dev-zero Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xml-security-c/ChangeLog,v 1.3 2011/08/04 13:53:11 dev-zero Exp $
+
+*xml-security-c-1.6.1 (04 Aug 2011)
+
+  04 Aug 2011; Tiziano Müller <dev-zero@gentoo.org>
+  +files/1.6.1-nss-compilation-fix.patch, +xml-security-c-1.6.1.ebuild,
+  metadata.xml:
+  Version bump (seems to fix bug #356041), use apache-mirror, added USE-flag to
+  use dev-libs/nss, use EAPI-4.
 
   27 Jul 2009; Tiziano Müller <dev-zero@gentoo.org>
   xml-security-c-1.5.1.ebuild, +files/1.5.1-xalan-c-1.11-compat.patch:
