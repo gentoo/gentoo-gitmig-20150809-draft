@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/eagle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.48 2011/06/09 22:56:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.49 2011/08/04 02:55:24 nixphoeni Exp $
+
+  04 Aug 2011; Joe Sapp <nixphoeni@gentoo.org> -eagle-5.6.0.ebuild,
+  -eagle-5.9.0.ebuild:
+  Removed old versions
 
   09 Jun 2011; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   Switched sci -> sci-electronics as main herd
