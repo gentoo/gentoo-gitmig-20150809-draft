@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ekopath-4.0.11_pre20110804.ebuild,v 1.1 2011/08/04 10:56:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ekopath-4.0.11_pre20110804-r1.ebuild,v 1.1 2011/08/04 16:54:41 xarthisius Exp $
 
 EAPI=4
 
@@ -64,7 +64,6 @@ src_install() {
 
 	./${P}.run \
 		--prefix "${D}/opt/${PN}" \
-		--disable-components subscriptionmanager \
 		--mode unattended || die
 
 	# This is a temporary/partial fix to remove a RWX GNU STACK header
