@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ekopath-4.0.10_pre20110803.ebuild,v 1.1 2011/08/04 08:51:38 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ekopath-4.0.11_pre20110804.ebuild,v 1.1 2011/08/04 10:56:26 xarthisius Exp $
 
 EAPI=4
 
@@ -25,13 +25,13 @@ RESTRICT="mirror"
 
 S=${WORKDIR}
 
-PATHSCALE_SDP_DIR=/opt/${PN}
-
 QA_PREBUILT="
-	${PATHSCALE_SDP_DIR}/lib/${MY_PV}/x8664/*
-	${PATHSCALE_SDP_DIR}/bin/pathcc*
-	${PATHSCALE_SDP_DIR}/bin/pathas
-	${PATHSCALE_SDP_DIR}/bin/assign"
+	opt/${PN}/lib/${MY_PV}/x8664/*
+	opt/${PN}/bin/path*
+	opt/${PN}/bin/funclookup
+	opt/${PN}/bin/doctool
+	opt/${PN}/bin/subclient
+	opt/${PN}/bin/assign"
 
 pkg_pretend() {
 	if has_version app-arch/rpm ; then
@@ -64,6 +64,7 @@ src_install() {
 
 	./${P}.run \
 		--prefix "${D}/opt/${PN}" \
+		--disable-components subscriptionmanager \
 		--mode unattended || die
 
 	# This is a temporary/partial fix to remove a RWX GNU STACK header

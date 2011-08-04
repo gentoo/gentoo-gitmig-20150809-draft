@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ekopath
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ChangeLog,v 1.6 2011/08/04 08:51:38 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ChangeLog,v 1.7 2011/08/04 10:56:26 xarthisius Exp $
+
+*ekopath-4.0.11_pre20110804 (04 Aug 2011)
+
+  04 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  -ekopath-4.0.10_pre20110803.ebuild, +ekopath-4.0.11_pre20110804.ebuild:
+  Fix sandbox violation and bump
 
 *ekopath-4.0.10_pre20110803 (04 Aug 2011)
 
