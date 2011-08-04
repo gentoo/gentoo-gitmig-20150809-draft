@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wpd2odt/wpd2odt-0.8.0.ebuild,v 1.1 2011/07/27 10:48:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wpd2odt/wpd2odt-0.8.0.ebuild,v 1.2 2011/08/04 16:27:55 scarabeus Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND="
 	app-text/libwpd:0.9
-	media-libs/libwpg:0.2
+	app-text/libwpg:0.2
 	gnome-extra/libgsf
 "
 DEPEND="${RDEPEND}

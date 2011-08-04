@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wpd2odt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wpd2odt/ChangeLog,v 1.1 2011/07/27 10:48:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wpd2odt/ChangeLog,v 1.2 2011/08/04 16:27:55 scarabeus Exp $
+
+  04 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> wpd2odt-0.8.0.ebuild:
+  media-libs/libwpg app-text/libwpg
 
 *wpd2odt-0.8.0 (27 Jul 2011)
 
