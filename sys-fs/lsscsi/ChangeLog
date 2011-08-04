@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/lsscsi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.62 2011/07/17 22:38:32 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lsscsi/ChangeLog,v 1.63 2011/08/04 14:29:06 ssuominen Exp $
+
+  04 Aug 2011; Samuli Suominen <ssuominen@gentoo.org> lsscsi-0.23.ebuild,
+  lsscsi-0.24.ebuild, lsscsi-0.25.ebuild:
+  Remove unnecessary sys-fs/sysfsutils RDEPEND wrt #377705 by Anthony Basile
+  and Jeroen Roovers
 
   17 Jul 2011; Mark Loeser <halcy0n@gentoo.org> lsscsi-0.24.ebuild:
   Stable for ppc/ppc64; bug #371697
