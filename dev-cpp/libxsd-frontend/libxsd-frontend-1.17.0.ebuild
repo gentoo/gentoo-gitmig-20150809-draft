@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxsd-frontend/libxsd-frontend-1.17.0.ebuild,v 1.1 2010/10/20 06:02:17 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxsd-frontend/libxsd-frontend-1.17.0.ebuild,v 1.2 2011/08/04 10:25:18 hwoarang Exp $
 
 EAPI="2"
 
-inherit toolchain-funcs versionator
+inherit flag-o-matic toolchain-funcs versionator
 
 DESCRIPTION="A compiler frontend for the W3C XML Schema definition language."
 HOMEPAGE="http://www.codesynthesis.com/projects/libxsd-frontend/"
@@ -20,6 +20,10 @@ RDEPEND=">=dev-libs/xerces-c-3
 	>=dev-cpp/libfrontend-elements-1.1.4"
 DEPEND="${RDEPEND}
 	dev-util/build:0.3"
+
+src_prepare() {
+	append-flags -DBOOST_FILESYSTEM_VERSION=2
+}
 
 src_configure() {
 	BOOST_PKG="$(best_version ">=dev-libs/boost-1.35.0-r5")"

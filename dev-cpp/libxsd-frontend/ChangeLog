@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libxsd-frontend
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxsd-frontend/ChangeLog,v 1.1 2010/10/20 06:02:17 dev-zero Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxsd-frontend/ChangeLog,v 1.2 2011/08/04 10:25:18 hwoarang Exp $
+
+  04 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
+  libxsd-frontend-1.17.0.ebuild:
+  Append -DBOOST_FILESYSTEM_VERSION=2 to C{XX}FLAGS. Bug #362911
 
 *libxsd-frontend-1.17.0 (20 Oct 2010)
 
