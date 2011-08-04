@@ -1,0 +1,35 @@
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsparisc/lsparisc-0.3-r1.ebuild,v 1.1 2011/08/04 13:59:08 jer Exp $
+
+inherit eutils toolchain-funcs
+
+DESCRIPTION="Like lspci but for PARISC devices"
+HOMEPAGE="http://packages.debian.org/unstable/utils/lsparisc"
+SRC_URI="mirror://debian/pool/main/l/${PN}/${P/-/_}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="-* hppa"
+IUSE=""
+
+DEPEND="sys-fs/sysfsutils"
+RDEPEND="${DEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	sed -e 's|"0.2"|"0.3"|g' -i lsparisc.c
+	epatch "${FILESDIR}"/${P}-compile.patch
+}
+
+src_compile() {
+	emake CC=$(tc-getCC) || die "emake failed"
+}
+
+src_install() {
+	dobin lsparisc || die "Installing lsparisc executable failed."
+	doman lsparisc.8 || die "Installing lsparisc man page failed."
+	dodoc AUTHORS
+}

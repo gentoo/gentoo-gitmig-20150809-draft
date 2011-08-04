@@ -9,7 +9,7 @@
  
  ${PROG}: ${OBJS}
 -	$(CC) -o ${PROG} ${OBJS} ${LIBS} ${CFLAGS}
-+	$(CC) -o ${PROG} ${OBJS} ${LIBS} $(CFLAGS) $(LDFLAGS)
++	$(CC) -o ${PROG} $(CFLAGS) $(LDFLAGS) ${OBJS} ${LIBS}
  
  clean:
  	rm -f ${OBJS}
