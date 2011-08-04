@@ -1,6 +1,9 @@
 # ChangeLog for app-office/calligra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.1 2011/07/22 15:10:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.2 2011/08/04 16:30:59 scarabeus Exp $
+
+  04 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> calligra-2.3.73.ebuild:
+  media-libs/libwpg to app-text/libwpg
 
 *calligra-2.3.73 (22 Jul 2011)
 
