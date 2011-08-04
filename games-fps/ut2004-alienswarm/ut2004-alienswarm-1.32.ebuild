@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-alienswarm/ut2004-alienswarm-1.32.ebuild,v 1.4 2009/10/09 02:02:10 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-alienswarm/ut2004-alienswarm-1.32.ebuild,v 1.5 2011/08/04 07:32:55 tupone Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ IAF_SRC="http://www.iaf-database.com/maps"
 
 HOMEPAGE="http://www.blackcatgames.com/swarm/"
 SRC_URI="${N_SRC}/AlienSwarm-v${AS_V}.zip
-	${IAF_SRC}/phalanxaswcampaign${PC_V}.zip
+	mirror://gentoo/phalanxaswcampaign${PC_V}.zip
 	${IAF_SRC}/TelicCampaign_${TC_V}.zip
 	http://www.bliny.co.uk/mirror/swarm/TelicCampaign_${TC_V}.zip
 	${N_SRC}/AlienSwarm_13_or_131_to_${MY_PV}_Patch.zip"
