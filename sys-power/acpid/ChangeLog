@@ -1,10 +1,10 @@
 # ChangeLog for sys-power/acpid
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.69 2011/08/04 17:30:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.70 2011/08/04 18:01:50 ssuominen Exp $
 
   04 Aug 2011; Samuli Suominen <ssuominen@gentoo.org>
   files/acpid-2.0.11-init.d:
-  Rename opts="reload" as extra_commands="reload" for baselayout-2.
+  Improve init.d script more for baselayout-2.
 
   04 Aug 2011; Samuli Suominen <ssuominen@gentoo.org> -acpid-2.0.6.ebuild,
   -acpid-2.0.10.ebuild:
