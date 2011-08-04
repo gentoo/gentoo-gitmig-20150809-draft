@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latex/texlive-latex-2011.ebuild,v 1.1 2011/07/28 13:29:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latex/texlive-latex-2011.ebuild,v 1.2 2011/08/04 05:59:32 aballier Exp $
 
 EAPI="3"
 
@@ -19,7 +19,6 @@ DEPEND=">=dev-texlive/texlive-basic-2011
 >=dev-tex/luatex-0.45
 !<dev-texlive/texlive-context-2010
 !<dev-texlive/texlive-latexrecommended-2009
-!<dev-texlive/texlive-langcjk-2011
 "
 RDEPEND="${DEPEND} "
 TEXLIVE_MODULE_BINSCRIPTS="texmf-dist/scripts/oberdiek/pdfatfi.pl texmf-dist/scripts/context/perl/mptopdf.pl"
