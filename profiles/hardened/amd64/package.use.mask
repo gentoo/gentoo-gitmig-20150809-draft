@@ -1,3 +1,7 @@
+# Kacper Kowalik <xarthisius@gentoo.org> (29 Jul 2011)
+# mask assembler as it currently doesn't work
+dev-lang/path64 assembler
+
 # Bernard Cafarelli <voyageur@gentoo.org> (20 Mar 2009)
 # Depends on packages not yet keyworded for amd64, cf bug #22042
 app-backup/backup-manager s3
