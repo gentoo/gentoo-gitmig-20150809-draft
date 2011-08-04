@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.08.ebuild,v 1.1 2011/08/04 10:51:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.08.ebuild,v 1.2 2011/08/04 10:54:29 ssuominen Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? *"
@@ -14,7 +14,7 @@ HOMEPAGE="ftp://ftp.astron.com/pub/file/"
 SRC_URI="ftp://ftp.astron.com/pub/file/${P}.tar.gz
 	ftp://ftp.gw.com/mirrors/pub/unix/file/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="python static-libs zlib"
