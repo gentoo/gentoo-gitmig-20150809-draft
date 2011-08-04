@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/umfpack-5.5.1.ebuild,v 1.3 2011/06/21 14:45:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/umfpack-5.5.1.ebuild,v 1.4 2011/08/04 17:36:44 bicatali Exp $
 
-EAPI=2
+EAPI=4
 inherit autotools eutils fortran-2
 
 MY_PN=UMFPACK
@@ -26,9 +26,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_PN}"
 
 src_prepare() {
-	cd "${WORKDIR}"
-	epatch "${FILESDIR}"/${PN}-5.5.0-autotools.patch
-	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-autotools.patch
 	eautoreconf
 }
 
@@ -40,10 +38,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc README.txt Doc/ChangeLog || die "dodoc failed"
-	if use doc; then
-		insinto /usr/share/doc/${PF}
-		doins Doc/*.pdf || die "doins failed"
-	fi
+	default
+	dodoc README.txt Doc/ChangeLog
+	use doc && dodoc Doc/*.pdf
 }
