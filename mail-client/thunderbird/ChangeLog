@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.85 2011/07/31 14:58:39 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.86 2011/08/04 13:26:03 polynomial-c Exp $
+
+  04 Aug 2011; Lars Wendler <polynomial-c@gentoo.org>
+  files/icon/thunderbird.desktop, files/icon/thunderbird-unbranded.desktop:
+  Added %U to Exec field of .desktop files. Thanks to Brad Laue for reporting
+  this in bug #365461.
 
   31 Jul 2011; Jory A. Pratt <anarchy@gentoo.org> thunderbird-5.0.ebuild:
   Fix system-sqlite dep, bug #374705

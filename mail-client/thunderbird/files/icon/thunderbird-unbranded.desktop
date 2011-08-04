@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Mozilla Thunderbird
 Comment=Mail & News Reader
-Exec=/usr/bin/thunderbird
+Exec=/usr/bin/thunderbird %U
 Icon=thunderbird-icon-unbranded
 Terminal=false
 Type=Application
