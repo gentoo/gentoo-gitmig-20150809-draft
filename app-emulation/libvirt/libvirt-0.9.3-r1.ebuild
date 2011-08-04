@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.3-r1.ebuild,v 1.4 2011/08/02 21:47:39 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.3-r1.ebuild,v 1.5 2011/08/04 14:16:50 cardoe Exp $
 
 BACKPORTS=2
 AUTOTOOLIZE=yes
@@ -61,7 +61,7 @@ RDEPEND="sys-libs/readline
 	pcap? ( >=net-libs/libpcap-1.0.0 )
 	phyp? ( net-libs/libssh2 )
 	policykit? ( >=sys-auth/polkit-0.9 )
-	qemu? ( || ( app-emulation/qemu-kvm >=app-emulation/qemu-0.10.0 app-emulation/qemu-kvm-spice ) )
+	qemu? ( || ( app-emulation/qemu-kvm >=app-emulation/qemu-0.10.0 ) )
 	sasl? ( dev-libs/cyrus-sasl )
 	selinux? ( >=sys-libs/libselinux-2.0.85 )
 	virtualbox? ( || ( app-emulation/virtualbox >=app-emulation/virtualbox-bin-2.2.0 ) )

@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.127 2011/08/04 14:14:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.128 2011/08/04 14:16:50 cardoe Exp $
+
+  04 Aug 2011; Doug Goldstein <cardoe@gentoo.org> -libvirt-0.9.3.ebuild,
+  libvirt-0.9.3-r1.ebuild, libvirt-0.9.4.ebuild:
+  Clean up qemu-kvm-spice depends since that package is finally gone.
 
   04 Aug 2011; Doug Goldstein <cardoe@gentoo.org> libvirt-0.9.4.ebuild:
   Remove depend on sys-fs/sysfsutils since its no longer needed
