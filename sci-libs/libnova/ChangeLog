@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libnova
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnova/ChangeLog,v 1.12 2010/01/19 00:47:21 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnova/ChangeLog,v 1.13 2011/08/04 18:46:05 bicatali Exp $
+
+  04 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
+  Switched herd to sci-astronomy
 
   19 Jan 2010; Jeroen Roovers <jer@gentoo.org> libnova-0.12.3.ebuild:
   Stable for HPPA too.
