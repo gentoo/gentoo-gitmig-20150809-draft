@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/traits
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/ChangeLog,v 1.25 2011/08/03 23:30:34 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/ChangeLog,v 1.26 2011/08/04 00:05:56 bicatali Exp $
+
+  04 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> traits-4.0.0.ebuild:
+  Typo
 
 *traits-4.0.0 (03 Aug 2011)
 
