@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/cdemud-1.3.0.ebuild,v 1.2 2010/11/01 10:34:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemud/cdemud-1.3.0.ebuild,v 1.3 2011/08/04 15:34:33 ssuominen Exp $
 
 EAPI="2"
 
@@ -17,8 +17,7 @@ RDEPEND=">dev-libs/dbus-glib-0.6
 	>=dev-libs/libdaemon-0.10
 	>=dev-libs/libmirage-1.3.0
 	media-libs/libao[alsa?,pulseaudio?]
-	>=sys-fs/vhba-20101015
-	>=sys-fs/sysfsutils-2.1.0"
+	>=sys-fs/vhba-20101015"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/cdemu-daemon-${PV}
