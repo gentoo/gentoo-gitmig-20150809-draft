@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sfftobmp/sfftobmp-3.1.2.ebuild,v 1.3 2010/11/08 23:02:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sfftobmp/sfftobmp-3.1.2.ebuild,v 1.4 2011/08/04 10:09:35 hwoarang Exp $
 
 EAPI=2
-inherit autotools eutils
+inherit autotools eutils flag-o-matic
 
 MY_P=${PN}${PV//./_}
 
@@ -26,6 +26,7 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.1.1-gcc44-and-boost-1_37.patch
+	append-flags -DBOOST_FILESYSTEM_VERSION=2
 	eautoreconf
 }
 
