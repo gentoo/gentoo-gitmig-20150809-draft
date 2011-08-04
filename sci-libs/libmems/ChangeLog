@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libmems
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libmems/ChangeLog,v 1.1 2009/04/03 16:36:24 weaver Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libmems/ChangeLog,v 1.2 2011/08/04 10:05:49 hwoarang Exp $
+
+  04 Aug 2011; Markos Chandras <hwoarang@gentoo.org> libmems-1.6.ebuild:
+  Restrict newer boost versions. Bug #301687 and Bug 362915
 
   03 Apr 2009; Andrey Kislyuk <weaver@gentoo.org> ChangeLog:
   New package sci-libs/libmems, ebuild written by me

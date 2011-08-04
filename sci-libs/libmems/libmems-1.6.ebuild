@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libmems/libmems-1.6.ebuild,v 1.1 2009/04/03 16:36:24 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libmems/libmems-1.6.ebuild,v 1.2 2011/08/04 10:05:49 hwoarang Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ KEYWORDS="~amd64 ~x86"
 
 CDEPEND=">=sci-libs/libgenome-1.3
 	>=sci-libs/libmuscle-3.7
-	dev-libs/boost"
+	<dev-libs/boost-1.42"
 DEPEND="${CDEPEND}
 	doc? ( app-doc/doxygen )"
 RDEPEND="${CDEPEND}"
