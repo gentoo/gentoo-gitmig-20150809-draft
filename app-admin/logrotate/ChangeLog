@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.104 2011/08/03 23:54:06 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.105 2011/08/04 14:49:50 hwoarang Exp $
+
+  04 Aug 2011; Markos Chandras <hwoarang@gentoo.org> logrotate-3.8.0.ebuild:
+  Stable on amd64 wrt bug #372973
 
   03 Aug 2011; Daniel Gryniewicz <dang@gentoo.org> logrotate-3.8.0.ebuild:
   Install the CHANGES file. Bug #377483
