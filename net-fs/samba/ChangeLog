@@ -1,6 +1,17 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.475 2011/07/27 11:51:12 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.476 2011/08/04 18:52:26 maksbotan Exp $
+
+*samba-3.6.0_rc3-r1 (04 Aug 2011)
+*samba-3.5.9-r1 (04 Aug 2011)
+*samba-3.5.8-r2 (04 Aug 2011)
+*samba-3.4.13-r1 (04 Aug 2011)
+*samba-3.4.12-r1 (04 Aug 2011)
+
+  04 Aug 2011; Maxim Koltsov (maksbotan) <maksbotan@gentoo.org>
+  +samba-3.4.12-r1.ebuild, +samba-3.4.13-r1.ebuild, +samba-3.5.8-r2.ebuild,
+  +samba-3.5.9-r1.ebuild, +samba-3.6.0_rc3-r1.ebuild:
+  Bumped revisions to add sys-libs/ldb dependency, bug #372747
 
 *samba-3.6.0_rc3 (27 Jul 2011)
 
