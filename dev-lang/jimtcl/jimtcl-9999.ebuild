@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/jimtcl-9999.ebuild,v 1.2 2011/07/14 18:08:36 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/jimtcl-9999.ebuild,v 1.3 2011/08/04 12:15:28 slyfox Exp $
 
 EAPI="2"
 
-inherit eutils git-2
+inherit git-2
 
 DESCRIPTION="Small footprint implementation of Tcl programming language"
 HOMEPAGE="http://jim.berlios.de/"
@@ -14,10 +14,6 @@ LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS=""
 IUSE="static-libs"
-
-src_prepare() {
-	epatch "${FILESDIR}/${P}-more-autobits.patch"
-}
 
 src_configure() {
 	! use static-libs && myconf=--with-jim-shared
