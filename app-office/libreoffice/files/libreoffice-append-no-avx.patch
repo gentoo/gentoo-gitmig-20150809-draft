@@ -1,207 +1,65 @@
-From 7424b4357b24736ddad75e2449839bf0ecc8e09b Mon Sep 17 00:00:00 2001
+From 16d4258863c936538ef3b7ff13a95f7567a62044 Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?Tom=C3=A1=C5=A1=20Chv=C3=A1tal?= <tomas.chvatal@gmail.com>
 Date: Mon, 1 Aug 2011 17:41:29 +0200
 Subject: [PATCH] Fix segmentation fault when linking -mavx on new CPUs is enabled by explicitly adding -mno-avx to CXXFLAGS.
 
 ---
- .../source/cpp_uno/gcc3_linux_alpha/makefile.mk    |    2 +-
- bridges/source/cpp_uno/gcc3_linux_arm/makefile.mk  |    2 +-
- bridges/source/cpp_uno/gcc3_linux_hppa/makefile.mk |    2 +-
- bridges/source/cpp_uno/gcc3_linux_ia64/makefile.mk |    2 +-
- .../source/cpp_uno/gcc3_linux_intel/makefile.mk    |    2 +-
- bridges/source/cpp_uno/gcc3_linux_m68k/makefile.mk |    2 +-
- bridges/source/cpp_uno/gcc3_linux_mips/makefile.mk |    2 +-
- .../source/cpp_uno/gcc3_linux_powerpc/makefile.mk  |    2 +-
- .../cpp_uno/gcc3_linux_powerpc64/makefile.mk       |    2 +-
- bridges/source/cpp_uno/gcc3_linux_s390/makefile.mk |    2 +-
- .../source/cpp_uno/gcc3_linux_s390x/makefile.mk    |    2 +-
- .../source/cpp_uno/gcc3_linux_sparc/makefile.mk    |    2 +-
- .../source/cpp_uno/gcc3_linux_x86-64/makefile.mk   |    2 +-
- bridges/source/cpp_uno/mingw_intel/makefile.mk     |    2 +-
- 14 files changed, 14 insertions(+), 14 deletions(-)
+ .../source/cpp_uno/gcc3_linux_intel/makefile.mk    |    6 ++++++
+ .../source/cpp_uno/gcc3_linux_x86-64/makefile.mk   |    6 ++++++
+ bridges/source/cpp_uno/mingw_intel/makefile.mk     |    6 ++++++
+ 3 files changed, 18 insertions(+), 0 deletions(-)
 
-diff --git a/bridges/source/cpp_uno/gcc3_linux_alpha/makefile.mk b/bridges/source/cpp_uno/gcc3_linux_alpha/makefile.mk
-index 5376b39..dabd2dc 100644
---- a/bridges/source/cpp_uno/gcc3_linux_alpha/makefile.mk
-+++ b/bridges/source/cpp_uno/gcc3_linux_alpha/makefile.mk
-@@ -46,7 +46,7 @@ CFLAGS += -DLEAK_STATIC_DATA
- 
- # In case someone enabled the non-standard -fomit-frame-pointer which does not
- # work with the .cxx sources in this directory:
--CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing
-+CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing -mno-avx
- 
- CFLAGSNOOPT=-O0
- 
-diff --git a/bridges/source/cpp_uno/gcc3_linux_arm/makefile.mk b/bridges/source/cpp_uno/gcc3_linux_arm/makefile.mk
-index 2c42dec..92cad3a 100644
---- a/bridges/source/cpp_uno/gcc3_linux_arm/makefile.mk
-+++ b/bridges/source/cpp_uno/gcc3_linux_arm/makefile.mk
-@@ -45,7 +45,7 @@ NO_BSYMBOLIC=TRUE
- CFLAGS += -DLEAK_STATIC_DATA
- .ENDIF
- 
--CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing
-+CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing -mno-avx
- 
- NOOPTFILES= \
-     $(SLO)$/cpp2uno.obj \
-diff --git a/bridges/source/cpp_uno/gcc3_linux_hppa/makefile.mk b/bridges/source/cpp_uno/gcc3_linux_hppa/makefile.mk
-index 6fab7a4..a7c2824 100644
---- a/bridges/source/cpp_uno/gcc3_linux_hppa/makefile.mk
-+++ b/bridges/source/cpp_uno/gcc3_linux_hppa/makefile.mk
-@@ -45,7 +45,7 @@ NO_BSYMBOLIC=TRUE
- CFLAGS += -DLEAK_STATIC_DATA
- .ENDIF
- 
--CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing
-+CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing -mno-avx
- 
- NOOPTFILES= \
-     $(SLO)$/cpp2uno.obj \
-diff --git a/bridges/source/cpp_uno/gcc3_linux_ia64/makefile.mk b/bridges/source/cpp_uno/gcc3_linux_ia64/makefile.mk
-index 1e82cfa..667ffd6 100644
---- a/bridges/source/cpp_uno/gcc3_linux_ia64/makefile.mk
-+++ b/bridges/source/cpp_uno/gcc3_linux_ia64/makefile.mk
-@@ -46,7 +46,7 @@ CFLAGS += -DLEAK_STATIC_DATA
- 
- # In case someone enabled the non-standard -fomit-frame-pointer which does not
- # work with the .cxx sources in this directory:
--CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing
-+CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing -mno-avx
- 
- NOOPTFILES= \
-     $(SLO)$/uno2cpp.obj \
 diff --git a/bridges/source/cpp_uno/gcc3_linux_intel/makefile.mk b/bridges/source/cpp_uno/gcc3_linux_intel/makefile.mk
-index beedf9d..eae6df4 100644
+index beedf9d..609e09a 100644
 --- a/bridges/source/cpp_uno/gcc3_linux_intel/makefile.mk
 +++ b/bridges/source/cpp_uno/gcc3_linux_intel/makefile.mk
-@@ -50,7 +50,7 @@ CFLAGS += -DLEAK_STATIC_DATA
- 
- # In case someone enabled the non-standard -fomit-frame-pointer which does not
+@@ -52,6 +52,12 @@ CFLAGS += -DLEAK_STATIC_DATA
  # work with the .cxx sources in this directory:
--CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing
-+CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing -mno-avx
+ CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing
  
++# In case the compiler supports AVX this code segfaults so specifically turn
++# it off.
++.IF "$(HAVE_GCC_AVX)" == "YES"
++    CFLAGSCXX+= -mno-avx
++.ENDIF
++
  CFLAGSNOOPT=-O0
- 
-diff --git a/bridges/source/cpp_uno/gcc3_linux_m68k/makefile.mk b/bridges/source/cpp_uno/gcc3_linux_m68k/makefile.mk
-index 3978bda..bf04770 100644
---- a/bridges/source/cpp_uno/gcc3_linux_m68k/makefile.mk
-+++ b/bridges/source/cpp_uno/gcc3_linux_m68k/makefile.mk
-@@ -45,7 +45,7 @@ NO_BSYMBOLIC=TRUE
- CFLAGS += -DLEAK_STATIC_DATA
- .ENDIF
- 
--CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing
-+CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing -mno-avx
- 
- NOOPTFILES= \
-     $(SLO)$/cpp2uno.obj \
-diff --git a/bridges/source/cpp_uno/gcc3_linux_mips/makefile.mk b/bridges/source/cpp_uno/gcc3_linux_mips/makefile.mk
-index f71750e..c7ca5f9 100644
---- a/bridges/source/cpp_uno/gcc3_linux_mips/makefile.mk
-+++ b/bridges/source/cpp_uno/gcc3_linux_mips/makefile.mk
-@@ -46,7 +46,7 @@ CFLAGS += -DLEAK_STATIC_DATA
- 
- # In case someone enabled the non-standard -fomit-frame-pointer which does not
- # work with the .cxx sources in this directory:
--CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing
-+CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing -mno-avx
- 
- CFLAGSNOOPT=-O0
- 
-diff --git a/bridges/source/cpp_uno/gcc3_linux_powerpc/makefile.mk b/bridges/source/cpp_uno/gcc3_linux_powerpc/makefile.mk
-index 9a75200..3b86ee7 100644
---- a/bridges/source/cpp_uno/gcc3_linux_powerpc/makefile.mk
-+++ b/bridges/source/cpp_uno/gcc3_linux_powerpc/makefile.mk
-@@ -45,7 +45,7 @@ CFLAGS += -DLEAK_STATIC_DATA
- 
- # In case someone enabled the non-standard -fomit-frame-pointer which does not
- # work with the .cxx sources in this directory:
--CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing
-+CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing -mno-avx
- 
- NOOPTFILES= \
-     $(SLO)$/uno2cpp.obj
-diff --git a/bridges/source/cpp_uno/gcc3_linux_powerpc64/makefile.mk b/bridges/source/cpp_uno/gcc3_linux_powerpc64/makefile.mk
-index 77763d7..b21194c 100644
---- a/bridges/source/cpp_uno/gcc3_linux_powerpc64/makefile.mk
-+++ b/bridges/source/cpp_uno/gcc3_linux_powerpc64/makefile.mk
-@@ -46,7 +46,7 @@ CFLAGS += -DLEAK_STATIC_DATA
- 
- # In case someone enabled the non-standard -fomit-frame-pointer which does not
- # work with the .cxx sources in this directory:
--CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing
-+CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing -mno-avx
- 
- NOOPTFILES= \
-     $(SLO)$/uno2cpp.obj \
-diff --git a/bridges/source/cpp_uno/gcc3_linux_s390/makefile.mk b/bridges/source/cpp_uno/gcc3_linux_s390/makefile.mk
-index bda85f3..0f40c1c 100644
---- a/bridges/source/cpp_uno/gcc3_linux_s390/makefile.mk
-+++ b/bridges/source/cpp_uno/gcc3_linux_s390/makefile.mk
-@@ -46,7 +46,7 @@ CFLAGS += -DLEAK_STATIC_DATA
- 
- # In case someone enabled the non-standard -fomit-frame-pointer which does not
- # work with the .cxx sources in this directory:
--CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing
-+CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing -mno-avx
- 
- CFLAGSNOOPT=-O0
- 
-diff --git a/bridges/source/cpp_uno/gcc3_linux_s390x/makefile.mk b/bridges/source/cpp_uno/gcc3_linux_s390x/makefile.mk
-index 9539dd6..aa47f6b 100644
---- a/bridges/source/cpp_uno/gcc3_linux_s390x/makefile.mk
-+++ b/bridges/source/cpp_uno/gcc3_linux_s390x/makefile.mk
-@@ -46,7 +46,7 @@ CFLAGS += -DLEAK_STATIC_DATA
- 
- # In case someone enabled the non-standard -fomit-frame-pointer which does not
- # work with the .cxx sources in this directory:
--CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing
-+CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing -mno-avx
- 
- CFLAGSNOOPT=-O0
- 
-diff --git a/bridges/source/cpp_uno/gcc3_linux_sparc/makefile.mk b/bridges/source/cpp_uno/gcc3_linux_sparc/makefile.mk
-index 3940038..2ee35bb 100644
---- a/bridges/source/cpp_uno/gcc3_linux_sparc/makefile.mk
-+++ b/bridges/source/cpp_uno/gcc3_linux_sparc/makefile.mk
-@@ -45,7 +45,7 @@ CFLAGS += -DLEAK_STATIC_DATA
- 
- # In case someone enabled the non-standard -fomit-frame-pointer which does not
- # # work with the .cxx sources in this directory:
--CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing
-+CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing -mno-avx
- 
- CFLAGSNOOPT=-O0
- 
-diff --git a/bridges/source/cpp_uno/gcc3_linux_x86-64/makefile.mk b/bridges/source/cpp_uno/gcc3_linux_x86-64/makefile.mk
-index dd35432..ad5de1a 100644
---- a/bridges/source/cpp_uno/gcc3_linux_x86-64/makefile.mk
-+++ b/bridges/source/cpp_uno/gcc3_linux_x86-64/makefile.mk
-@@ -50,7 +50,7 @@ CFLAGS += -DLEAK_STATIC_DATA
- 
- # In case someone enabled the non-standard -fomit-frame-pointer which does not
- # work with the .cxx sources in this directory:
--CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing
-+CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing -mno-avx
  
  SLOFILES= \
+diff --git a/bridges/source/cpp_uno/gcc3_linux_x86-64/makefile.mk b/bridges/source/cpp_uno/gcc3_linux_x86-64/makefile.mk
+index dd35432..e519105 100644
+--- a/bridges/source/cpp_uno/gcc3_linux_x86-64/makefile.mk
++++ b/bridges/source/cpp_uno/gcc3_linux_x86-64/makefile.mk
+@@ -52,6 +52,12 @@ CFLAGS += -DLEAK_STATIC_DATA
+ # work with the .cxx sources in this directory:
+ CFLAGSCXX += -fno-omit-frame-pointer -fno-strict-aliasing
+ 
++# In case the compiler supports AVX this code segfaults so specifically turn
++# it off.
++.IF "$(HAVE_GCC_AVX)" == "YES"
++    CFLAGSCXX+= -mno-avx
++.ENDIF
++
+ SLOFILES= \
      $(SLO)$/abi.obj			\
+     $(SLO)$/except.obj		\
 diff --git a/bridges/source/cpp_uno/mingw_intel/makefile.mk b/bridges/source/cpp_uno/mingw_intel/makefile.mk
-index 2c7a8da..a3c2b2a 100644
+index 2c7a8da..d2b0809 100644
 --- a/bridges/source/cpp_uno/mingw_intel/makefile.mk
 +++ b/bridges/source/cpp_uno/mingw_intel/makefile.mk
-@@ -49,7 +49,7 @@ CFLAGS += -DBROKEN_ALLOCA
- 
- # In case someone enabled the non-standard -fomit-frame-pointer which does not
+@@ -51,6 +51,12 @@ CFLAGS += -DBROKEN_ALLOCA
  # work with the .cxx sources in this directory:
--CFLAGSCXX += -fno-omit-frame-pointer
-+CFLAGSCXX += -fno-omit-frame-pointer -mno-avx
+ CFLAGSCXX += -fno-omit-frame-pointer
  
++# In case the compiler supports AVX this code segfaults so specifically turn
++# it off.
++.IF "$(HAVE_GCC_AVX)" == "YES"
++    CFLAGSCXX+= -mno-avx
++.ENDIF
++
  NOOPTFILES= \
      $(SLO)$/uno2cpp.obj
+ 
 -- 
 1.7.3.4
 
