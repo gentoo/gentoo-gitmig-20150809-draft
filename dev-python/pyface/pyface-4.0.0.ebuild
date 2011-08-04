@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyface/pyface-4.0.0.ebuild,v 1.1 2011/08/03 23:48:32 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyface/pyface-4.0.0.ebuild,v 1.2 2011/08/04 19:31:03 mr_bones_ Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -28,7 +28,6 @@ DEPEND="dev-python/setuptools
 		media-fonts/font-cursor-misc
 		media-fonts/font-misc-misc
 	)"
-
 
 DOCS="docs/*.txt"
 
