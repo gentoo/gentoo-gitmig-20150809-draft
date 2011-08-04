@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.4.0.ebuild,v 1.1 2011/07/04 04:39:45 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.4.0.ebuild,v 1.2 2011/08/04 03:33:59 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -53,7 +53,7 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS TODO ChangeLog BUGS PORTING DEVINFO NEWS README* RELNOTES
+	dodoc AUTHORS TODO ChangeLog BUGS PORTING DEVINFO NEWS README*
 
 	if use sdl || ! use dedicated ; then
 		newicon "data/bzflag-48x48.png" ${PN}.png
