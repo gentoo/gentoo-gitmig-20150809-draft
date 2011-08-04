@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/cwm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.15 2011/08/04 21:29:29 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.16 2011/08/04 22:27:34 xmw Exp $
+
+*cwm-20110726 (04 Aug 2011)
+
+  04 Aug 2011; Michael Weber <xmw@gentoo.org> +cwm-20110726.ebuild,
+  +files/cwm-20110726-Makefile.patch, cwm-99999999.ebuild:
+  Adapted changes in Makefile, Version bump to new tarball, remove old version,
+  ebuild cleanup
 
   04 Aug 2011; Michael Weber <xmw@gentoo.org> cwm-20110515.ebuild:
   Fix HOMEPAGE
