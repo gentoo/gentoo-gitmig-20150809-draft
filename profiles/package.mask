@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12962 2011/08/04 15:08:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12963 2011/08/04 15:14:12 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (04 Aug 2011)
+# No maintainer. Security problems
+# Removal in 30 days. Bug #340357
+app-emulation/frodo
 
 # Markos Chandras <hwoarang@gentoo.org> (04 Aug 2011)
 # Does not work with veoh.com and upstream is dead.
