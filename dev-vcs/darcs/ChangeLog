@@ -1,6 +1,15 @@
 # ChangeLog for dev-vcs/darcs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.21 2011/06/05 12:10:57 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/darcs/ChangeLog,v 1.22 2011/08/04 21:04:18 slyfox Exp $
+
+*darcs-2.5.2 (04 Aug 2011)
+
+  04 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> +darcs-2.5.2.ebuild,
+  +files/darcs-2.5.2-ghc-7.2.patch,
+  +files/darcs-2.5.2-relax-regex-libs-deps.patch,
+  +files/darcs-2.5.2-tests-ghc-7.2.patch:
+  Version bump (ghc-7 support). Dropped ~alpha/~ia64/~ppc/~ppc64/~sparc
+  keywords until deps are keyworded.
 
   05 Jun 2011; Sergei Trofimovich <slyfox@gentoo.org> darcs-2.4.4-r1.ebuild:
   restored lost ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris
