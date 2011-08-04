@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2011-r2.ebuild,v 1.2 2011/07/31 07:36:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2011-r3.ebuild,v 1.1 2011/08/04 06:09:59 aballier Exp $
 
 EAPI=3
 
@@ -39,8 +39,8 @@ TL_CORE_BINEXTRA_DOC_MODULES="
 	"
 TL_CORE_BINEXTRA_SRC_MODULES="hyphenex.source listings-ext.source mkjobtexmf.source"
 
-TL_CORE_EXTRA_MODULES="tetex hyphen-base texconfig gsftopk ${TL_CORE_BINEXTRA_MODULES}"
-TL_CORE_EXTRA_DOC_MODULES="tetex.doc texconfig.doc gsftopk.doc ${TL_CORE_BINEXTRA_DOC_MODULES}"
+TL_CORE_EXTRA_MODULES="tetex hyphen-base texconfig gsftopk texlive.infra ${TL_CORE_BINEXTRA_MODULES}"
+TL_CORE_EXTRA_DOC_MODULES="tetex.doc texconfig.doc gsftopk.doc texlive.infra.doc ${TL_CORE_BINEXTRA_DOC_MODULES}"
 TL_CORE_EXTRA_SRC_MODULES="${TL_CORE_BINEXTRA_SRC_MODULES}"
 
 for i in ${TL_CORE_EXTRA_MODULES}; do
@@ -101,6 +101,7 @@ RDEPEND="${COMMON_DEPEND}
 	>=app-text/ps2pkm-1.5_p20110705
 	>=app-text/dvipsk-5.991_p20110705
 	>=dev-tex/bibtexu-3.71_p20110705
+	virtual/perl-Getopt-Long
 	xetex? ( >=app-text/xdvipdfmx-0.7.8 )
 	tk? ( dev-perl/perl-tk )"
 
@@ -212,9 +213,7 @@ src_install() {
 
 	dodir /usr/share # just in case
 	cp -pR texmf{,-dist} "${D}/usr/share/" || die "failed to install texmf trees"
-	if use source ; then
-		cp -pR "${WORKDIR}"/tlpkg "${D}/usr/share/" || die "failed to install tlpkg files"
-	fi
+	cp -pR "${WORKDIR}"/tlpkg "${D}/usr/share/" || die "failed to install tlpkg files"
 
 	newsbin "${FILESDIR}/texmf-update2010" texmf-update
 

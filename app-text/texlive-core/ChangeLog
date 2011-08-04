@@ -1,6 +1,13 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.145 2011/07/31 07:36:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.146 2011/08/04 06:09:59 aballier Exp $
+
+*texlive-core-2011-r3 (04 Aug 2011)
+
+  04 Aug 2011; Alexis Ballier <aballier@gentoo.org>
+  -texlive-core-2011-r2.ebuild, +texlive-core-2011-r3.ebuild:
+  Add texlive.infra module, required by updmap now, by Thomas Witt in bug
+  #377609; missing dep on perl-getopt-long for updmap too
 
   31 Jul 2011; Alexis Ballier <aballier@gentoo.org>
   texlive-core-2011-r2.ebuild:
