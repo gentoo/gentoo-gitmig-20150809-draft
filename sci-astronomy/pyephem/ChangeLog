@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/pyephem
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/ChangeLog,v 1.12 2011/07/25 23:00:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/ChangeLog,v 1.13 2011/08/04 18:32:07 bicatali Exp $
+
+  04 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
+  Switched herd to sci-astronomy
 
   25 Jul 2011; Sébastien Fabbro <bicatali@gentoo.org> -pyephem-3.7.3.4.ebuild,
   pyephem-3.7.4.1.ebuild:

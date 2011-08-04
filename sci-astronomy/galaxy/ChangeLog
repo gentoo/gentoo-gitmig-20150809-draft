@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/galaxy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/galaxy/ChangeLog,v 1.2 2011/03/02 21:35:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/galaxy/ChangeLog,v 1.3 2011/08/04 18:30:46 bicatali Exp $
+
+  04 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
+  Switched herd to sci-astronomy
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> galaxy-1.8.ebuild:
   Correct Slots for gtk 3 introduction to tree

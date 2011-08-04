@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci</herd>
+<herd>sci-astronomy</herd>
 <longdescription lang="en">
   Astronomers often need to relate positions on an image of the sky to
   positions on the real sky to identify catalogued objects in images,

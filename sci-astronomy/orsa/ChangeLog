@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/orsa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/ChangeLog,v 1.20 2011/04/25 15:04:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/orsa/ChangeLog,v 1.21 2011/08/04 18:31:33 bicatali Exp $
+
+  04 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
+  Switched herd to sci-astronomy
 
   25 Apr 2011; Raúl Porcel <armin76@gentoo.org> orsa-0.6.1.ebuild,
   orsa-0.7.0.ebuild:

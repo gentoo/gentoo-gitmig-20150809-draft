@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/sextractor
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/sextractor/ChangeLog,v 1.2 2009/07/28 17:39:02 bicatali Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/sextractor/ChangeLog,v 1.3 2011/08/04 18:32:38 bicatali Exp $
+
+  04 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
+  Switched herd to sci-astronomy
 
 *sextractor-2.8.6 (28 Jul 2009)
 

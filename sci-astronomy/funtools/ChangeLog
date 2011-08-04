@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/funtools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/funtools/ChangeLog,v 1.6 2010/01/29 18:27:33 bicatali Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/funtools/ChangeLog,v 1.7 2011/08/04 18:30:32 bicatali Exp $
+
+  04 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
+  Switched herd to sci-astronomy
 
 *funtools-1.4.4-r1 (29 Jan 2010)
 

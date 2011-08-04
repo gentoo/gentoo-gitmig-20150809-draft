@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci</herd>
+<herd>sci-astronomy</herd>
 <longdescription lang="en">
   SWarp takes astronomical FITS images with a WCS-like projection,
   resample and stack them all.

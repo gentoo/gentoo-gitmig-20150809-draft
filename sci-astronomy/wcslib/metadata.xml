@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci</herd>
+<herd>sci-astronomy</herd>
 <longdescription lang="en">
   WCSLIB is a C library, supplied with a full set of Fortran wrappers,
   that implements the "World Coordinate System" (WCS) convention in FITS
