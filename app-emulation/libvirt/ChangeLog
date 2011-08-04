@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.126 2011/08/03 15:53:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.127 2011/08/04 14:14:01 cardoe Exp $
+
+  04 Aug 2011; Doug Goldstein <cardoe@gentoo.org> libvirt-0.9.4.ebuild:
+  Remove depend on sys-fs/sysfsutils since its no longer needed
 
 *libvirt-0.9.4 (03 Aug 2011)
 
