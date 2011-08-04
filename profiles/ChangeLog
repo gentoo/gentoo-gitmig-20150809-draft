@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5599 2011/08/04 16:29:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5600 2011/08/04 18:20:59 scarabeus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
+  Unleash the libreoffice-3.4
 
   04 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> updates/3Q-2011:
   Move media-libs/libwpg to app-text/libwpg even tho it is not text tool the 2
