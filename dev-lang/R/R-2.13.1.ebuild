@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.13.1.ebuild,v 1.1 2011/07/20 19:56:35 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.13.1.ebuild,v 1.2 2011/08/04 11:38:27 naota Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ IUSE="cairo doc java jpeg lapack minimal nls openmp perl png profile readline st
 CDEPEND="app-arch/bzip2
 	app-text/ghostscript-gpl
 	dev-libs/libpcre
-	|| ( >=net-libs/libtirpc-0.2.2-r1 <sys-libs/glibc-2.14 )
+	|| ( >=net-libs/libtirpc-0.2.2-r1 <sys-libs/glibc-2.14 sys-freebsd/freebsd-lib )
 	virtual/blas
 	cairo? ( x11-libs/cairo[X]
 		|| ( >=x11-libs/pango-1.20[X] <x11-libs/pango-1.20 ) )
