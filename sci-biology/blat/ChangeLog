@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/blat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/blat/ChangeLog,v 1.3 2011/06/20 07:59:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/blat/ChangeLog,v 1.4 2011/08/04 19:46:21 grobian Exp $
+
+  04 Aug 2011; Fabian Groffen <grobian@gentoo.org> blat-34-r1.ebuild:
+  Marked ~x64-macos, bug #375521
 
 *blat-34-r1 (20 Jun 2011)
 
