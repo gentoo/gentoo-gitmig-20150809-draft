@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.6.1.ebuild,v 1.3 2011/04/25 09:51:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.6.1.ebuild,v 1.4 2011/08/04 19:25:48 grobian Exp $
 
 EAPI="3"
 
@@ -166,8 +166,8 @@ src_configure() {
 	if use python; then
 		mycmakeargs+=(
 			-DVTK_WRAP_PYTHON=ON
-			-DPYTHON_INCLUDE_PATH=$(python_get_includedir)
-			-DPYTHON_LIBRARY=$(python_get_library)
+			-DPYTHON_INCLUDE_PATH=${EPREFIX}$(python_get_includedir)
+			-DPYTHON_LIBRARY=${EPREFIX}$(python_get_library)
 			-DVTK_PYTHON_SETUP_ARGS:STRING=--root="${D}")
 	fi
 

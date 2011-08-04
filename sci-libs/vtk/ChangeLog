@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.86 2011/07/20 17:01:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.87 2011/08/04 19:25:48 grobian Exp $
+
+  04 Aug 2011; Fabian Groffen <grobian@gentoo.org> vtk-5.6.1.ebuild:
+  Allow to find Python from Prefix, bug #376917
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #105599
