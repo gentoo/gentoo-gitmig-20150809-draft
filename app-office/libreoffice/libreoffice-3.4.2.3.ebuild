@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.18 2011/08/04 16:31:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.19 2011/08/04 17:56:40 dilfridge Exp $
 
 EAPI=3
 
@@ -239,6 +239,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-check-for-avx.patch"
 	"${FILESDIR}/${PN}-append-no-avx.patch"
 	"${FILESDIR}/${PN}-32b-qt4-libdir.patch"
+	"${FILESDIR}/${PN}-binfilter-as-needed.patch"
 )
 
 # Uncoment me when updating to eapi4

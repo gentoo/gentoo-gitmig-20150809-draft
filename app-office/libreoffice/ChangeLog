@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.84 2011/08/04 16:31:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.85 2011/08/04 17:56:40 dilfridge Exp $
+
+  04 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  libreoffice-3.4.2.3.ebuild, +files/libreoffice-binfilter-as-needed.patch:
+  Add as-needed patch, on request from scarabeus; fixes bug 376985
 
   04 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   libreoffice-3.4.2.3.ebuild, libreoffice-3.4.9999.ebuild:
