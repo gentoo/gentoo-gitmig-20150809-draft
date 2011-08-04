@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.1-r1.ebuild,v 1.1 2011/04/29 09:30:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.48.1-r1.ebuild,v 1.2 2011/08/04 16:27:36 scarabeus Exp $
 
 EAPI=2
 inherit eutils flag-o-matic autotools gnome2
@@ -35,7 +35,7 @@ COMMON_DEPEND="
 	media-libs/freetype:2
 	>=media-libs/libpng-1.2
 	app-text/libwpd:0.9
-	media-libs/libwpg:0.2
+	app-text/libwpg:0.2
 	sci-libs/gsl
 	x11-libs/libXft
 	>=x11-libs/gtk+-2.10.7:2
