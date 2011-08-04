@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/openais
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openais/ChangeLog,v 1.14 2011/02/21 08:36:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openais/ChangeLog,v 1.15 2011/08/04 13:37:48 naota Exp $
+
+  04 Aug 2011; Naohiro Aota <naota@gentoo.org> openais-1.1.4.ebuild:
+  Add ~x86-fbsd keyword
 
   21 Feb 2011; Jeroen Roovers <jer@gentoo.org> openais-1.1.4.ebuild:
   Stable for HPPA (bug #354461).
