@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-basic
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-basic/ChangeLog,v 1.44 2011/07/28 12:47:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-basic/ChangeLog,v 1.45 2011/08/04 05:58:31 aballier Exp $
+
+  04 Aug 2011; Alexis Ballier <aballier@gentoo.org> texlive-basic-2011.ebuild:
+  block texlive-langcjk < 2011 to keep upgrade path sane, bug #376905
 
 *texlive-basic-2011 (28 Jul 2011)
 

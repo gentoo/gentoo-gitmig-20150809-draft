@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-basic/texlive-basic-2011.ebuild,v 1.1 2011/07/28 12:47:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-basic/texlive-basic-2011.ebuild,v 1.2 2011/08/04 05:58:31 aballier Exp $
 
 EAPI="3"
 
@@ -20,6 +20,7 @@ DEPEND=">=dev-texlive/texlive-documentation-base-2011
 !<app-text/texlive-core-2009
 !<dev-texlive/texlive-latex-2009
 !<dev-texlive/texlive-latexrecommended-2009
+!<dev-texlive/texlive-langcjk-2011
 "
 RDEPEND="${DEPEND} "
 TEXLIVE_MODULE_BINSCRIPTS="texmf/scripts/simpdftex/simpdftex texmf/scripts/texlive/rungs.tlu"
