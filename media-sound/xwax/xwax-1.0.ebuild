@@ -1,19 +1,16 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/xwax-0.10_beta1.ebuild,v 1.1 2011/05/07 17:58:08 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/xwax-1.0.ebuild,v 1.1 2011/08/04 02:43:12 nixphoeni Exp $
 
 EAPI=4
-inherit toolchain-funcs versionator
-
-MY_PV="${PV/_/-}"
-TYPE="$(version_format_string '$3')"
+inherit toolchain-funcs
 
 DESCRIPTION="Digital vinyl emulation software"
 HOMEPAGE="http://www.xwax.co.uk/"
-SRC_URI="http://www.xwax.co.uk/testing/${PN}-${MY_PV}.tar.gz"
+SRC_URI="http://www.xwax.co.uk/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="testing"
+SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="alsa jack oss cdda mp3 +fallback"
 REQUIRED_USE="|| ( cdda mp3 fallback )
@@ -29,14 +26,7 @@ RDEPEND="media-libs/libsdl
 	fallback? ( virtual/ffmpeg )"
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${PN}-${MY_PV}"
-
 DOCS="README CHANGES"
-
-pkg_setup() {
-	ewarn "Please note that XWAX_DECODERS is deprecated in favor of USE flags."
-	ewarn "Sorry for the inconvenience."
-}
 
 src_prepare() {
 	# Remove the forced optimization from 'CFLAGS' and 'LDFLAGS' in
@@ -46,11 +36,6 @@ src_prepare() {
 		-e 's:\(^LDFLAGS.*\)-O[0-9]\(.*\):\1\2:' \
 		-e "s:\(^VERSION =\).*:\1 ${PV}:" \
 		Makefile || die "sed failed"
-
-	# Fix name for importer and scanner
-	sed -i -e "s:\(xwax-import\):\1-${TYPE}:g" \
-		-e "s:\(xwax-scan\):\1-${TYPE}:g" \
-		xwax.c || die "patching xwax.c failed"
 
 	# Replace any decoder commands in the import script, if necessary
 	if [[ `use mp3` ]]; then
@@ -88,15 +73,10 @@ src_install() {
 	# This is easier than setting all the environment variables
 	# needed, running the sed script required to get the man directory
 	# correct, and removing the GPL-2 after a 'make install' run
-	newbin xwax xwax-${TYPE} || die "failed to install xwax"
-	newbin import xwax-import-${TYPE} || die "failed to install xwax-import"
-	newbin scan xwax-scan-${TYPE} || die "failed to install xwax-scan"
-	newman xwax.1 xwax-${TYPE}.1 || die "failed to install man page"
+	dobin xwax || die "failed to install xwax"
+	newbin import xwax-import || die "failed to install xwax-import"
+	newbin scan xwax-scan || die "failed to install xwax-scan"
+	doman xwax.1 || die "failed to install man page"
 
 	dodoc ${DOCS} || die "failed to install docs"
-}
-
-pkg_postinst() {
-	ewarn "Note that this is a testing package and is probably unsuitable for"
-	ewarn "live shows."
 }
