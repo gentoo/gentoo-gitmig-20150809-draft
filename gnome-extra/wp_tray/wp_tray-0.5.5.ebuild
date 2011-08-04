@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/wp_tray/wp_tray-0.5.5.ebuild,v 1.7 2011/03/26 20:05:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/wp_tray/wp_tray-0.5.5.ebuild,v 1.8 2011/08/04 10:42:25 hwoarang Exp $
 
 EAPI=2
 GCONF_DEBUG=no
-inherit eutils gnome2 multilib
+inherit eutils flag-o-matic gnome2 multilib
 
 DESCRIPTION="Wallpaper Manager for the Gnome Desktop"
 HOMEPAGE="http://planetearthworm.com/projects/wp_tray"
@@ -36,7 +36,7 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-gcc45.patch \
 		"${FILESDIR}"/${P}-libnotify-0.7.patch
-
+	append-flags -DBOOST_FILESYSTEM_VERSION=2
 	gnome2_src_prepare
 }
 
