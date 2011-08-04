@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/aplpy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/aplpy/ChangeLog,v 1.2 2011/06/07 22:15:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/aplpy/ChangeLog,v 1.3 2011/08/04 18:48:34 bicatali Exp $
+
+  04 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
+  Switched herd to sci-astronomy
 
 *aplpy-0.9.6 (07 Jun 2011)
 

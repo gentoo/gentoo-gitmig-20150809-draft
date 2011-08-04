@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>python</herd>
+<herd>sci-astronomy</herd>
 <longdescription lang="en">
   APLpy (the Astronomical Plotting Library in Python) is a Python
   module aimed at producing publication-quality plots of astronomical
