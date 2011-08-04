@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.425 2011/08/02 17:44:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.426 2011/08/04 17:00:32 ulm Exp $
+
+*emacs-23.3-r1 (04 Aug 2011)
+
+  04 Aug 2011; Ulrich Mueller <ulm@gentoo.org> -emacs-23.3.ebuild,
+  +emacs-23.3-r1.ebuild:
+  Revision bump to ensure that users update to the new tarballs, which install
+  (but not use) the CEDET grammars in the etc/grammars subdirectory.
 
   02 Aug 2011; Ulrich Mueller <ulm@gentoo.org> emacs-23.2-r2.ebuild,
   emacs-23.3.ebuild:
