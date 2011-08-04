@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.416 2011/07/03 23:23:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.417 2011/08/04 23:09:20 robbat2 Exp $
+
+*gnupg-2.0.18 (04 Aug 2011)
+
+  04 Aug 2011; Robin H. Johnson <robbat2@gentoo.org> +gnupg-2.0.18.ebuild:
+  Version bump.
 
 *gnupg-2.0.17-r3 (03 Jul 2011)
 
