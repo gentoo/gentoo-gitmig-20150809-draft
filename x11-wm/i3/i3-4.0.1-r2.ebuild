@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.0.1-r1.ebuild,v 1.1 2011/08/03 20:42:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.0.1-r2.ebuild,v 1.1 2011/08/04 08:59:41 xarthisius Exp $
 
 EAPI=4
 
@@ -53,6 +53,7 @@ src_prepare() {
 src_install() {
 	base_src_install
 	dohtml -r docs/*
+	doman i3bar/doc/i3bar.1
 }
 
 pkg_postinst() {
