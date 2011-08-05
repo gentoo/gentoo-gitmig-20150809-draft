@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.21-r1.ebuild,v 1.10 2011/02/25 08:52:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.21-r1.ebuild,v 1.11 2011/08/05 09:31:25 voyageur Exp $
 
 EAPI="1"
 
@@ -161,6 +161,8 @@ src_unpack() {
 	EOF
 	epatch "${DISTDIR}/${P}-i18n.patch"
 	epatch "${FILESDIR}/xerox-grey.patch"
+	# Bug #356919
+	epatch "${FILESDIR}"/${PN}-1.0.22-libv4l-0.8.3.patch
 }
 
 src_compile() {
