@@ -1,8 +1,8 @@
 diff --git a/configure.in b/configure.in
-index 65813cb..5f5085e 100755
+index 65813cb..bfa612c 100755
 --- a/configure.in
 +++ b/configure.in
-@@ -1984,6 +1984,36 @@ if test "$GCC" = "yes"; then
+@@ -1984,6 +1984,41 @@ if test "$GCC" = "yes"; then
  fi
  AC_SUBST(HAVE_LD_BSYMBOLIC_FUNCTIONS)
  
@@ -34,7 +34,12 @@ index 65813cb..5f5085e 100755
 +}], have_avx_intrinsics=yes)
 +CFLAGS=$avx_save_CFLAGS
 +AC_MSG_RESULT([$have_avx_intrinsics])
-+AM_CONDITIONAL(HAVE_GCC_AVX, [test "x$have_avx_intrinsics" = "xyes"])
++AS_IF([test "x$have_avx_intrinsics" = "xyes"], [
++    HAVE_GCC_AVX=TRUE
++], [
++    HAVE_GCC_AVX=FALSE
++])
++AC_SUBST(HAVE_GCC_AVX)
 +
  dnl ===================================================================
  dnl Set the ENABLE_PCH variable. (Activate --enable-pch)

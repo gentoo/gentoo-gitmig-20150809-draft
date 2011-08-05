@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.85 2011/08/04 17:56:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.86 2011/08/05 07:41:11 mgorny Exp $
+
+  05 Aug 2011; Michał Górny <mgorny@gentoo.org>
+  files/libreoffice-check-for-avx.patch:
+  Fix avx patch wrt bug #377845. Proxied for scarabeus.
 
   04 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   libreoffice-3.4.2.3.ebuild, +files/libreoffice-binfilter-as-needed.patch:
