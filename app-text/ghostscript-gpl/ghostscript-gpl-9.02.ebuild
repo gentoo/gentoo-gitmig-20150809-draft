@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.02.ebuild,v 1.2 2011/06/05 21:16:28 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.02.ebuild,v 1.3 2011/08/05 10:55:25 naota Exp $
 
 EAPI=3
 inherit autotools eutils versionator flag-o-matic
@@ -79,6 +79,9 @@ src_prepare() {
 
 	# apply libpng-1.5 patch
 	epatch "${FILESDIR}/${PN}-9.02-libpng15.patch"
+
+	# byteswap detection bug 367119
+	epatch "${FILESDIR}"/${P}-byteswap.patch
 
 	# apply various patches, many borrowed from Fedora
 	# http://pkgs.fedoraproject.org/gitweb/?p=ghostscript.git

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.113 2011/06/05 21:16:28 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.114 2011/08/05 10:55:25 naota Exp $
+
+  05 Aug 2011; Naohiro Aota <naota@gentoo.org> ghostscript-gpl-9.02.ebuild,
+  +files/ghostscript-gpl-9.02-byteswap.patch:
+  Handle FreeBSD byteswap function. Fix bug #367119
 
   05 Jun 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   ghostscript-gpl-9.02.ebuild, +files/ghostscript-gpl-9.02-libpng15.patch:
