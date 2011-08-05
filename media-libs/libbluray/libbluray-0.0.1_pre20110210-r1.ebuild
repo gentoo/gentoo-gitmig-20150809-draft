@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.0.1_pre20110210-r1.ebuild,v 1.1 2011/08/05 21:41:10 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.0.1_pre20110210-r1.ebuild,v 1.2 2011/08/05 22:13:53 radhermit Exp $
 
 EAPI=4
 
@@ -32,7 +32,7 @@ DEPEND="
 	dev-util/pkgconfig
 "
 PDEPEND="
-	xine? ( media-libs/libbluray-xine )
+	xine? ( ~media-libs/libbluray-xine-${PV} )
 "
 
 REQUIRED_USE="utils? ( static-libs )"
