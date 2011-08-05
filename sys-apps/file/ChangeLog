@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.202 2011/08/04 10:54:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.203 2011/08/05 19:07:48 jer Exp $
+
+  05 Aug 2011; Jeroen Roovers <jer@gentoo.org> file-5.07-r3.ebuild:
+  Stable for HPPA (bug #377723).
 
   04 Aug 2011; Samuli Suominen <ssuominen@gentoo.org> file-5.08.ebuild:
   Change license from as-is to BSD-2 per COPYING wrt #263551 by Justin Bronder
