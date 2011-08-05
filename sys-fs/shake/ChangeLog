@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/shake
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/shake/ChangeLog,v 1.6 2011/03/19 20:30:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/shake/ChangeLog,v 1.7 2011/08/05 09:58:47 voyageur Exp $
+
+*shake-0.999 (05 Aug 2011)
+
+  05 Aug 2011; Bernard Cafarelli <voyageur@gentoo.org> +shake-0.999.ebuild:
+  Version bump, thanks basti in bug #372289
 
   19 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   qa: Fix whitespace typo <tab> to <space> in metadata.xml
