@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-10.2.ebuild,v 1.4 2011/01/11 12:31:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-10.2.ebuild,v 1.5 2011/08/05 21:28:38 mattst88 Exp $
 
 EAPI="2"
 DESCRIPTION="3ware SATA+PATA RAID controller Command Line Interface tool"
-HOMEPAGE="http://www.3ware.com/kb/article.aspx?id=14847"
+HOMEPAGE="https://www.3ware.com/3warekb/article.aspx?id=14847"
 LICENSE="3ware"
 SLOT="0"
 # binary packages
