@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-9999.ebuild,v 1.4 2011/02/04 19:51:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-9999.ebuild,v 1.5 2011/08/05 22:31:56 radhermit Exp $
 
 EAPI=4
 
-inherit autotools java-pkg-opt-2 git flag-o-matic
+inherit autotools java-pkg-opt-2 git-2 flag-o-matic
 
 EGIT_REPO_URI="git://git.videolan.org/libbluray.git"
 
@@ -18,7 +18,6 @@ IUSE="aacs java static-libs utils xine"
 
 COMMON_DEPEND="
 	dev-libs/libxml2
-	xine? ( media-libs/xine-lib )
 "
 RDEPEND="
 	${COMMON_DEPEND}
@@ -33,8 +32,13 @@ DEPEND="
 	)
 	dev-util/pkgconfig
 "
+PDEPEND="
+	xine? ( ~media-libs/libbluray-xine-${PV} )
+"
 
-DOCS="doc/README README.txt TODO.txt"
+REQUIRED_USE="utils? ( static-libs )"
+
+DOCS=( doc/README README.txt TODO.txt )
 
 src_prepare() {
 	use java && export JDK_HOME="$(java-config -g JAVA_HOME)"
@@ -54,22 +58,12 @@ src_configure() {
 	econf \
 		$(use_enable java bdjava) \
 		$(use_enable static-libs static) \
-		$(use_enable utils static) \
 		$(use_enable utils examples) \
-		$myconf
-}
-
-src_compile() {
-	emake
-
-	if use xine; then
-		cd player_wrappers/xine
-		emake
-	fi
+		${myconf}
 }
 
 src_install() {
-	default_src_install
+	default
 
 	if use utils; then
 		cd src/examples/
@@ -86,9 +80,5 @@ src_install() {
 		doenvd "${FILESDIR}"/90${PN}
 	fi
 
-	if use xine; then
-		cd "${S}"/player_wrappers/xine
-		emake DESTDIR="${D}" install
-		newdoc HOWTO README.xine
-	fi
+	use static-libs || find "${ED}" -name '*.la' -exec rm -f '{}' +
 }
