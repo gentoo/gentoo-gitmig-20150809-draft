@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.138 2011/03/23 19:05:10 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.139 2011/08/05 08:20:20 naota Exp $
+
+  05 Aug 2011; Naohiro Aota <naota@gentoo.org> tcl-8.5.9.ebuild,
+  +files/tcl-8.5.9-gentoo-fbsd.patch:
+  Apply shared object versioning policy on Gentoo/FreeBSD. Bug 354067
 
   23 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> tcl-8.5.9.ebuild:
   ppc64 stable wrt #353854

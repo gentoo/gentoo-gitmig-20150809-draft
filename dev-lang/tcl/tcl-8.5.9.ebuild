@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.9.ebuild,v 1.8 2011/03/23 19:05:10 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.9.ebuild,v 1.9 2011/08/05 08:20:20 naota Exp $
 
 EAPI="3"
 
@@ -36,6 +36,9 @@ src_prepare() {
 
 	# Bug 125971
 	epatch "${FILESDIR}"/${PN}-8.5_alpha6-tclm4-soname.patch
+
+	# Bug 354067
+	epatch "${FILESDIR}"/${PN}-8.5.9-gentoo-fbsd.patch
 
 	cd "${S}"/unix
 	eautoreconf
