@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/POE-Test-Loops
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE-Test-Loops/ChangeLog,v 1.21 2011/07/29 17:24:33 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE-Test-Loops/ChangeLog,v 1.22 2011/08/05 17:02:10 tove Exp $
+
+*POE-Test-Loops-1.312.0 (05 Aug 2011)
+
+  05 Aug 2011; Torsten Veller <tove@gentoo.org> +POE-Test-Loops-1.312.0.ebuild:
+  Version bump
 
   29 Jul 2011; Torsten Veller <tove@gentoo.org> -POE-Test-Loops-1.036.ebuild,
   -POE-Test-Loops-1.40.ebuild, -POE-Test-Loops-1.50.0.ebuild:
