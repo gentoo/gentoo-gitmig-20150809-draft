@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-1.4.3.ebuild,v 1.1 2011/05/16 11:58:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-1.5.ebuild,v 1.1 2011/08/05 23:36:56 hwoarang Exp $
 
-EAPI="2"
+EAPI="4"
 LANGS="ar es pt_BR pt_PT uk"
 LANGSLONG="bg_BG cs_CZ de_DE el_GR es he_IL hr_HR hu_HU fr_FR fi_FI it_IT
 ja_JP nl_NL nb_NO pl_PL ro_RO ru_RU tr_TR"
@@ -35,21 +35,19 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${PN}"
 
 src_install() {
-	dobin build/target/minitube || die "dobin failed"
-	newicon images/app.png minitube.png || die "doicon failed"
-	make_desktop_entry minitube MiniTube minitube "Qt;AudioVideo;Video" \
-		|| die "make_desktop_entry failed"
+	emake INSTALL_ROOT="${D}" install
+	newicon images/app.png minitube.png
 	#translations
 	insinto "/usr/share/${PN}/locale/"
 	for lang in ${LINGUAS}; do
 		for x in ${LANGS}; do
 			if [[ ${x} == ${lang} ]]; then
-				doins "build/target/locale/${x}.qm" || die "doins failed"
+				doins "build/target/locale/${x}.qm"
 			fi
 		done
 		for x in ${LANGSLONG}; do
 			if [[ ${x%_*} == ${lang} ]]; then
-				doins "build/target/locale/${x}.qm" || die "doins failed"
+				doins "build/target/locale/${x}.qm"
 			fi
 		done
 	done
