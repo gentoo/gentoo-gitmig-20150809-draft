@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.215 2011/06/13 09:46:05 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.216 2011/08/05 07:13:35 eras Exp $
+
+  05 Aug 2011; Eray Aslan <eras@gentoo.org> files/fetchmail.new:
+  fix deprecated chuid option in init script - bug #377777
 
   13 Jun 2011; Eray Aslan <eras@gentoo.org> -fetchmail-6.3.19.ebuild:
   Remove vulnerable version
