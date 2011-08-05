@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/perlqt-4.7.0.ebuild,v 1.2 2011/08/03 20:59:53 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/perlqt-4.7.0.ebuild,v 1.3 2011/08/05 03:41:11 mr_bones_ Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ inherit kde4-base
 
 DESCRIPTION="Qt Perl bindings"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug phonon qimageblitz qscintilla qwt webkit"
+IUSE="debug phonon qimageblitz qscintilla qwt test webkit"
 
 RDEPEND="
 	>=dev-lang/perl-5.10.1
