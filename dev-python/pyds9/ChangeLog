@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pyds9
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyds9/ChangeLog,v 1.1 2011/08/05 21:55:30 bicatali Exp $
+
+*pyds9-1.2 (05 Aug 2011)
+
+  05 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> +pyds9-1.2.ebuild,
+  +metadata.xml:
+  Initial import
+
