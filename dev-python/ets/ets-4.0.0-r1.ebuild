@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ets/ets-4.0.0.ebuild,v 1.1 2011/08/04 00:27:01 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ets/ets-4.0.0-r1.ebuild,v 1.1 2011/08/05 22:18:34 bicatali Exp $
 
 EAPI="3"
 
@@ -25,5 +25,4 @@ RDEPEND="
 	>=sci-visualization/mayavi-${PV}[examples?]
 	>=dev-python/scimath-${PV}[doc?]
 	>=dev-python/traits-${PV}[doc?,examples?]
-	>=dev-python/traitsui-${PV}[doc?,examples?]
-	>=dev-python/etsproxy-0.1"
+	>=dev-python/traitsui-${PV}[doc?,examples?]"
