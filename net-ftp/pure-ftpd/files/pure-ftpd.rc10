@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/files/pure-ftpd.rc10,v 1.1 2010/08/19 08:07:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/files/pure-ftpd.rc10,v 1.2 2011/08/05 09:30:34 polynomial-c Exp $
 
 ftpd_pidfile="/var/run/pure-ftpd.pid"
 script_pidfile="/var/run/pure-uploadscript.pid"
@@ -35,13 +35,11 @@ start() {
 	fi
 
 	UPSCRIPT=""
-	OKNODO=""
 	if [ -n "$UPLOADSCRIPT" ] ; then
 		UPSCRIPT="--uploadscript"
-		OKNODO="--oknodo"
 	fi
 	ebegin "Starting Pure-FTPd"
-	start-stop-daemon --start --quiet --pidfile ${ftpd_pidfile} $OKNODO --exec /usr/sbin/pure-ftpd ${WAIT} -- --pidfile ${ftpd_pidfile} $SERVER $MAX_CONN $MAX_CONN_IP $DAEMON $DISK_FULL $USE_NAT $AUTH $LOG $TIMEOUT $CHARCONV $MISC_OTHER $UPSCRIPT
+	start-stop-daemon --start --quiet --pidfile ${ftpd_pidfile} --exec /usr/sbin/pure-ftpd ${WAIT} -- --pidfile ${ftpd_pidfile} $SERVER $MAX_CONN $MAX_CONN_IP $DAEMON $DISK_FULL $USE_NAT $AUTH $LOG $TIMEOUT $CHARCONV $MISC_OTHER $UPSCRIPT
 	result=$?
 	if [ $result -ne 0 ] ; then
 		eend 1 "Could not launch Pure-FTPd"
