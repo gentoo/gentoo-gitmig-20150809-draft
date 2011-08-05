@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/obconf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.83 2011/08/05 15:53:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.84 2011/08/05 16:07:07 hwoarang Exp $
+
+  05 Aug 2011; Markos Chandras <hwoarang@gentoo.org> obconf-9999.ebuild:
+  Patch applied upstream
 
   05 Aug 2011; Markos Chandras <hwoarang@gentoo.org> obconf-9999.ebuild:
   Sync with 2.0.3_p* ebuilds
