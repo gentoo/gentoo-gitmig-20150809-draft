@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/cyberjack
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/ChangeLog,v 1.14 2010/07/25 12:45:21 wschlich Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/ChangeLog,v 1.15 2011/08/05 19:08:23 ssuominen Exp $
+
+*cyberjack-3.99.5_p02 (05 Aug 2011)
+
+  05 Aug 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +cyberjack-3.99.5_p02.ebuild:
+  Version bump wrt #365553 and remove sys-fs/sysfsutils depend wrt #377683 by
+  Anthony Basile.
 
 *cyberjack-3.3.5-r2 (25 Jul 2010)
 
