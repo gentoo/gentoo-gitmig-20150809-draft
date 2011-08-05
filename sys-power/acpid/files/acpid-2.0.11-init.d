@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/files/acpid-2.0.11-init.d,v 1.5 2011/08/04 18:04:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/files/acpid-2.0.11-init.d,v 1.6 2011/08/05 08:47:40 ssuominen Exp $
 
 extra_commands="reload"
 command="/usr/sbin/acpid"
@@ -10,15 +10,16 @@ start_stop_daemon_args="--quiet"
 description="Daemon for Advanced Configuration and Power Interface"
 
 depend() {
-	if [ ! -f /etc/init.d/sysfs ]; then
-		eerror "The $SVCNAME init-script is written for baselayout-2!"
-		eerror "Please do not use it with baselayout-1!".
-		return 1
-	fi
-
 	need localmount
 	use logger
 }
+
+if [ "${RC_VERSION:-0}" = "0" ]; then
+	start() {
+		eerror "This script cannot be used for baselayout-1."
+		return 1
+	}
+fi
 
 reload() {
 	ebegin "Reloading acpid configuration"
