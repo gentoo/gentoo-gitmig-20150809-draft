@@ -1,11 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygraphviz/pygraphviz-1.1.ebuild,v 1.1 2011/07/29 23:21:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygraphviz/pygraphviz-1.1-r1.ebuild,v 1.1 2011/08/05 17:05:11 bicatali Exp $
 
 EAPI="3"
-PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 inherit distutils eutils
 
@@ -24,6 +23,7 @@ DEPEND="${RDEPEND}"
 src_prepare() {
 	distutils_src_prepare
 	epatch "${FILESDIR}"/${PN}-1.0-setup.py.patch
+	epatch "${FILESDIR}"/${P}-avoid_tests.patch
 }
 
 src_test() {
