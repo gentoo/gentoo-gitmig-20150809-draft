@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-9999.ebuild,v 1.6 2011/08/05 09:17:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-9999.ebuild,v 1.7 2011/08/05 09:39:16 hwoarang Exp $
 
 EAPI="3"
 ESVN_REPO_URI="http://svn.berlios.de/svnroot/repos/griffith/trunk"
@@ -40,7 +40,9 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	subversion_src_unpack
+}
 
+src_prepare() {
 	cd "${S}"
 	sed -i \
 		-e 's#/pl/#/pl.UTF-8/#' \

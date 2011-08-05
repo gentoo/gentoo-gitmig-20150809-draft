@@ -1,6 +1,9 @@
 # ChangeLog for media-video/griffith
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.56 2011/08/05 09:17:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.57 2011/08/05 09:39:16 hwoarang Exp $
+
+  05 Aug 2011; Markos Chandras <hwoarang@gentoo.org> griffith-9999.ebuild:
+  Comply with EAPI3 standards
 
   05 Aug 2011; Markos Chandras <hwoarang@gentoo.org> griffith-0.12.1.ebuild,
   +files/griffith-0.12.1-sqlalchemy-0.7.patch, griffith-9999.ebuild:
