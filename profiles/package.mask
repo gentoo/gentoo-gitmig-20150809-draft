@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12964 2011/08/04 18:20:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12965 2011/08/05 01:47:09 xmw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -328,7 +328,7 @@ app-laptop/batterymon
 # and reverse dependencies, bug #354241
 =x11-libs/gtksourceview-1.8.5-r1
 app-editors/conglomerate
-app-editors/mlview
+=app-editors/mlview-0.9.0
 app-editors/screem
 dev-python/gtksourceview-python
 app-editors/scribes
