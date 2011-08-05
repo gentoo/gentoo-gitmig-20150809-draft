@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.10.0.ebuild,v 1.1 2011/08/05 06:42:42 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.10.0.ebuild,v 1.2 2011/08/05 06:46:32 eras Exp $
 
 EAPI=4
 
@@ -192,7 +192,7 @@ src_install() {
 	exeinto /usr/bin
 	newexe contrib/dspam_maintenance/dspam_maintenance.sh dspam_maintenance
 	exeinto /etc/cron.daily
-	newexe "${FILESDIR}/dspam.cron" dspam
+	newexe "${FILESDIR}/dspam.cron-r4" dspam
 
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}/dspam.logrotate" dspam

@@ -30,5 +30,14 @@
 	<flag name='virtual-users'>
 		Build with virtual-users support
 	</flag>
+	<flag name='domain-scale'>
+		Build with domain scale setups
+	</flag>
+	<flag name='large-scale'>
+		Build with large scale setups
+	</flag>
+	<flag name='hash'>
+		Enable support for the file-orientated hash driver
+	</flag>
 </use>
 </pkgmetadata>
