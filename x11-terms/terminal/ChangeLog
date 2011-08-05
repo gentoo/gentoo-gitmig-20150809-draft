@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/terminal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.69 2011/08/04 21:36:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.70 2011/08/05 11:51:04 ssuominen Exp $
+
+  05 Aug 2011; Samuli Suominen <ssuominen@gentoo.org> terminal-0.4.6.ebuild,
+  terminal-0.4.8.ebuild:
+  Block gnustep-apps/terminal until upstream has renamed binary to something
+  different wrt #376257 by Diego Elio Pettenò
 
   04 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> terminal-0.4.8.ebuild:
   x86 stable wrt bug #372989
