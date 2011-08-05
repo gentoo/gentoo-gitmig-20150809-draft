@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-BaseDir
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-BaseDir/ChangeLog,v 1.30 2011/07/31 16:38:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-BaseDir/ChangeLog,v 1.31 2011/08/05 12:10:05 naota Exp $
+
+  05 Aug 2011; Naohiro Aota <naota@gentoo.org> File-BaseDir-0.03.ebuild:
+  Add ~x86-fbsd
 
   31 Jul 2011; Raúl Porcel <armin76@gentoo.org> File-BaseDir-0.03.ebuild:
   s390/sh stable
