@@ -1,6 +1,11 @@
 # ChangeLog for gnustep-apps/batmon
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/batmon/ChangeLog,v 1.2 2010/06/15 23:48:13 voyageur Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/batmon/ChangeLog,v 1.3 2011/08/05 11:44:22 voyageur Exp $
+
+*batmon-0.6 (05 Aug 2011)
+
+  05 Aug 2011; Bernard Cafarelli <voyageur@gentoo.org> +batmon-0.6.ebuild:
+  Version bump, bug fixes
 
 *batmon-0.5 (15 Jun 2010)
 
