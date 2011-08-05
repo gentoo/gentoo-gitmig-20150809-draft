@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/libbluray-xine
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray-xine/ChangeLog,v 1.1 2011/08/05 21:27:38 radhermit Exp $
+
+*libbluray-xine-0.0.1_pre20110210 (05 Aug 2011)
+
+  05 Aug 2011; Tim Harder <radhermit@gentoo.org>
+  +libbluray-xine-0.0.1_pre20110210.ebuild, +metadata.xml:
+  Initial import. New package to fix build issues with libbluray (bug #355331).
+  Ebuild from Martin von Gagern.
+
