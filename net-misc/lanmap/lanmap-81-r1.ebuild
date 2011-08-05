@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lanmap/lanmap-81-r1.ebuild,v 1.1 2009/12/26 03:16:13 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lanmap/lanmap-81-r1.ebuild,v 1.2 2011/08/05 04:59:21 zmedico Exp $
 
-EAPI=2
+EAPI=3
 
 inherit toolchain-funcs eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.parseerror.com/${PN}/rev/${PN}-2006-03-07-rev${PV}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-linux"
 IUSE=""
 
 RDEPEND="net-libs/libpcap
@@ -23,6 +23,7 @@ S="${WORKDIR}"/${PN}
 
 src_prepare() {
 	epatch "${FILESDIR}"/makefile.patch
+	sed -e 's:install -m 0644 -d:install -m 0755 -d:' -i Makefile.in || die
 	chmod +x configure || die
 }
 
@@ -31,6 +32,6 @@ src_compile() {
 }
 
 src_install() {
-	emake prefix="${D}"/usr install || die
+	emake prefix="${ED}"/usr install || die
 	dodoc {README,TODO}.txt || die
 }
