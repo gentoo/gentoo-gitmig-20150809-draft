@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/tcptrack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrack/ChangeLog,v 1.21 2011/03/06 20:13:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptrack/ChangeLog,v 1.22 2011/08/05 20:34:17 jer Exp $
+
+*tcptrack-1.4.2 (05 Aug 2011)
+
+  05 Aug 2011; Jeroen Roovers <jer@gentoo.org> -tcptrack-1.2.0.ebuild,
+  +tcptrack-1.4.2.ebuild:
+  Version bump. Remove -Werror from CFLAGS.
 
 *tcptrack-1.4.0 (06 Mar 2011)
 
