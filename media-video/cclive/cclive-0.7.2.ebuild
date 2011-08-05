@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/cclive-0.7.2.ebuild,v 1.4 2011/05/02 13:26:11 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/cclive-0.7.2.ebuild,v 1.5 2011/08/05 14:21:07 hwoarang Exp $
 
 EAPI=2
 CMAKE_MIN_VERSION="2.8.3"
 
-inherit versionator cmake-utils
+inherit flag-o-matic versionator cmake-utils
 
 DESCRIPTION="Command line tool for extracting videos from various websites"
 HOMEPAGE="http://cclive.sourceforge.net/"
@@ -24,3 +24,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 DOCS="ChangeLog* NEWS README"
+
+src_prepare() {
+	append-flags -DBOOST_FILESYSTEM_VERSION=2
+}
