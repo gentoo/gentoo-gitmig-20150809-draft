@@ -1,6 +1,14 @@
 # ChangeLog for gnustep-apps/sudoku
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/sudoku/ChangeLog,v 1.4 2008/03/08 13:50:02 coldwind Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/sudoku/ChangeLog,v 1.5 2011/08/05 11:39:24 voyageur Exp $
+
+*sudoku-0.7 (05 Aug 2011)
+*sudoku-0.6 (05 Aug 2011)
+
+  05 Aug 2011; Bernard Cafarelli <voyageur@gentoo.org> +sudoku-0.6.ebuild,
+  +sudoku-0.7.ebuild, -sudoku-6.ebuild:
+  Version bump, new homepage. Rename old ebuild for new versioning, use Gentoo
+  mirror for old distfile
 
   08 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> sudoku-6.ebuild:
   amd64 stable wrt bug #207381
