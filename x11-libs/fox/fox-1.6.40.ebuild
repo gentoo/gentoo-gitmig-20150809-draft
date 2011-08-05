@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.6.40.ebuild,v 1.8 2011/02/26 22:34:32 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.6.40.ebuild,v 1.9 2011/08/05 19:00:34 ssuominen Exp $
 
 EAPI="2"
 
-inherit fox
+inherit eutils fox
 
 LICENSE="LGPL-2.1"
 SLOT="1.6"
@@ -33,3 +33,8 @@ FOXCONF="$(use_enable bzip2 bz2lib) \
 	$(use_enable tiff) \
 	$(use_with truetype xft) \
 	$(use_enable zlib)"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libpng15.patch
+	fox_src_prepare
+}
