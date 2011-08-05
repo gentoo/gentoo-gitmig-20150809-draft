@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/MooseX-Types
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types/ChangeLog,v 1.23 2011/07/29 17:43:22 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types/ChangeLog,v 1.24 2011/08/05 17:05:33 tove Exp $
+
+*MooseX-Types-0.280.0 (05 Aug 2011)
+
+  05 Aug 2011; Torsten Veller <tove@gentoo.org> +MooseX-Types-0.280.0.ebuild:
+  Version bump
 
   29 Jul 2011; Torsten Veller <tove@gentoo.org> -MooseX-Types-0.250.ebuild,
   -MooseX-Types-0.260.0.ebuild:
