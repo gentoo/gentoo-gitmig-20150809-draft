@@ -3,7 +3,8 @@
 <pkgmetadata>
   <herd>no-herd</herd>
   <maintainer>
-    <email>maintainer-needed@gentoo.org</email>
+    <email>xmw@gentoo.org</email>
+	<name>Michael Weber</name>
   </maintainer>
   <longdescription>
     The MlView project is an on going effort to develop an xml editor
