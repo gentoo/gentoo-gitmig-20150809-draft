@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/gupnp-av-0.8.0.ebuild,v 1.1 2011/07/24 14:49:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/gupnp-av-0.8.0.ebuild,v 1.2 2011/08/05 10:52:31 flameeyes Exp $
 
 EAPI=3
 
@@ -21,9 +21,9 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	econf \
-	    $(use_enable introspection) \
+		$(use_enable introspection) \
 		--disable-dependency-tracking \
-		--disable-static
+		--disable-static \
 		--disable-gtk-doc \
 		--disable-gtk-doc-html \
 		--disable-gtk-doc-pdf
