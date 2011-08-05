@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/schroot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.26 2011/03/22 06:56:01 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.27 2011/08/05 14:28:42 hwoarang Exp $
+
+  05 Aug 2011; Markos Chandras <hwoarang@gentoo.org> schroot-1.4.14.ebuild:
+  Append -DBOOST_FILESYSTEM_VERSION=2 to C{XX}FLAGS to compile with new boost
+  releases. Bug #377795
 
 *schroot-1.4.21 (22 Mar 2011)
 

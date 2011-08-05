@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.4.14.ebuild,v 1.5 2011/01/25 15:15:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.4.14.ebuild,v 1.6 2011/08/05 14:28:42 hwoarang Exp $
 
 EAPI="3"
 WANT_AUTOMAKE="1.11"
 
-inherit autotools base pam
+inherit autotools base flag-o-matic pam
 
 MY_P=${PN}_${PV}
 
@@ -48,6 +48,8 @@ PATCHES=(
 
 src_prepare() {
 	base_src_prepare
+
+	append-flags -DBOOST_FILESYSTEM_VERSION=2
 
 	# Don't depend on cppunit unless we are testing
 	use test || sed -i '/AM_PATH_CPPUNIT/d' configure.ac
