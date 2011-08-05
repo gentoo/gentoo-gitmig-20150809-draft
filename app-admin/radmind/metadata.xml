@@ -2,4 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
+<longdescription>A suite of Unix command-line tools and a server designed to remotely administer
+the file systems of multiple Unix machines.</longdescription>
 </pkgmetadata>

@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/radmind
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/radmind/ChangeLog,v 1.12 2010/06/03 08:23:42 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/radmind/ChangeLog,v 1.13 2011/08/05 21:06:54 jer Exp $
+
+*radmind-1.14.0 (05 Aug 2011)
+
+  05 Aug 2011; Jeroen Roovers <jer@gentoo.org> +radmind-1.14.0.ebuild,
+  +files/radmind-1.14.0-parallel-make.patch, metadata.xml:
+  Version bump. Remove IUSE=ssl as it will not compile without SSL anyway. Fix
+  parallel make issue properly (bug #239862). Shorten DESCRIPTION and put the
+  long one in metadata.xml.
 
 *radmind-1.13.0 (03 Jun 2010)
 
