@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpa/xpa-2.1.13.ebuild,v 1.1 2011/05/03 17:25:13 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpa/xpa-2.1.13.ebuild,v 1.2 2011/08/05 20:58:18 bicatali Exp $
 
 EAPI=4
 
@@ -13,17 +13,16 @@ SRC_URI="http://hea-www.harvard.edu/saord/download/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="doc"
+IUSE="doc static-libs"
 
-RDEPEND="
-	dev-lang/tcl
+RDEPEND="dev-lang/tcl
 	x11-libs/libXt
 	!<sci-astronomy/ds9-5.3"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.1.8-makefile.patch
-	sed -i -e "s:\${LINK}:\${LINK} ${LDFLAGS}:" mklib
+	sed -i -e "s:\${LINK}:\${LINK} ${LDFLAGS}:" mklib || die
 	eautoconf
 }
 
@@ -37,22 +36,19 @@ src_configure() {
 }
 
 src_compile() {
-	emake shlib tclxpa || die "emake failed"
+	emake shlib tclxpa
 }
 
 src_install () {
 	dodir /usr/$(get_libdir)
-	emake INSTALL_ROOT="${D}" install || die "emake install failed"
+	emake INSTALL_ROOT="${D}" install
 	insinto /usr/$(get_libdir)/tclxpa
 	doins pkgIndex.tcl
-	mv "${D}"/usr/$(get_libdir)/libtclxpa* "${D}"/usr/$(get_libdir)/tclxpa/
-
+	mv  "${ED}"/usr/$(get_libdir)/libtclxpa* \
+		"${ED}"/usr/$(get_libdir)/tclxpa/ || die
 	dodoc README
-	if use doc; then
-		cd doc
-		insinto /usr/share/doc/${PF}
-		doins *.pdf || die
-		insinto /usr/share/doc/${PF}/html
-		doins *.html || die
-	fi
+	use doc && dodoc doc/*.pdf && dohtml doc/*.html
+	# build system so crappy not worth patching to a non respondant upstream
+	# and builds static with PIC
+	use static-libs || rm -f "${ED}"/usr/$(get_libdir)/*.a
 }
