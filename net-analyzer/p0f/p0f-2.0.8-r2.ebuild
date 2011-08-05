@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-2.0.8-r2.ebuild,v 1.1 2010/08/30 04:00:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-2.0.8-r2.ebuild,v 1.2 2011/08/05 05:56:12 zmedico Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils toolchain-funcs
 
@@ -28,6 +28,13 @@ src_prepare() {
 		-e 's|^CFLAGS.*=.*|CFLAGS += \\|g' \
 		-e '/$(CC).* -o /s|$(CFLAGS)|& $(LDFLAGS)|g' \
 		|| die "sed makefiles"
+
+	sed -i Build -e "s|\"/usr/|\"${EPREFIX}/usr/|g" || die "sed Build"
+
+	sed -i config.h \
+		-e "s|\"/etc/|\"${EPREFIX}/etc/|g" \
+		-e "s|\"/var/|\"${EPREFIX}/var/|g" \
+		|| die "sed config.h"
 }
 
 src_compile() {
