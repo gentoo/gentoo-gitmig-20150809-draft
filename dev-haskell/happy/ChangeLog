@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/happy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.51 2011/08/02 10:15:09 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.52 2011/08/05 10:53:54 slyfox Exp $
+
+  05 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> happy-1.18.6.ebuild:
+  Fix build failure for USE=-doc case. Discovered and fixed by Yvan Royon, bug
+  #377827.
 
 *happy-1.18.6 (02 Aug 2011)
 
