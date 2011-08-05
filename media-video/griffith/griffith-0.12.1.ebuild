@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.12.1.ebuild,v 1.4 2011/06/04 17:36:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.12.1.ebuild,v 1.5 2011/08/05 09:17:45 hwoarang Exp $
 
-EAPI="2"
+EAPI="3"
 
 PYTHON_DEPEND="2"
 
@@ -46,6 +46,11 @@ src_prepare() {
 		-e 's/ISO-8859-1/UTF-8/' \
 		"${S}"/lib/gconsole.py || die "sed failed"
 	epatch "${FILESDIR}/0.10-fix_lib_path.patch"
+
+	#bug 377789
+	if has_version ">=dev-python/sqlalchemy-0.7.1"; then
+		epatch ${FILESDIR}/${P}-sqlalchemy-0.7.patch
+	fi
 }
 
 src_compile() {
@@ -67,6 +72,12 @@ src_install() {
 
 pkg_postinst() {
 	python_mod_optimize /usr/$(get_libdir)/${PN}
+	einfo
+	einfo "${PN} can make use of the following optional dependencies"
+	einfo "dev-python/chardet: CSV file encoding detections"
+	einfo "dev-python/mysql-python: Python interface for MySQL connectivity"
+	einfo ">=dev-python/psycopg-2.4: Python interface for PostgreSQL connectivity"
+	einfo
 }
 
 pkg_postrm() {

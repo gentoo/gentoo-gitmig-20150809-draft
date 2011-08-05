@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-9999.ebuild,v 1.5 2011/06/04 17:36:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-9999.ebuild,v 1.6 2011/08/05 09:17:45 hwoarang Exp $
 
-EAPI="1"
+EAPI="3"
 ESVN_REPO_URI="http://svn.berlios.de/svnroot/repos/griffith/trunk"
 
 inherit eutils python multilib subversion
@@ -78,6 +78,12 @@ src_install() {
 
 pkg_postinst() {
 	python_mod_optimize /usr/$(get_libdir)/${PN}
+	einfo
+	einfo "${PN} can make use of the following optional dependencies"
+	einfo "dev-python/chardet: CSV file encoding detections"
+	einfo "dev-python/mysql-python: Python interface for MySQL connectivity"
+	einfo ">=dev-python/psycopg-2.4: Python interface for PostgreSQL connectivity"
+	einfo
 }
 
 pkg_postrm() {
