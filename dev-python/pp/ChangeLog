@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pp/ChangeLog,v 1.10 2011/07/29 21:39:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pp/ChangeLog,v 1.11 2011/08/05 22:51:00 hwoarang Exp $
+
+  05 Aug 2011; Markos Chandras <hwoarang@gentoo.org> -pp-1.5.7.ebuild:
+  Remove old ebuild. Requested by Arfrever
 
 *pp-1.6.1 (29 Jul 2011)
 

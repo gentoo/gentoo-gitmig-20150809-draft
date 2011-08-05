@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygraphviz
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygraphviz/ChangeLog,v 1.12 2011/08/05 18:05:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygraphviz/ChangeLog,v 1.13 2011/08/05 22:52:38 hwoarang Exp $
+
+  05 Aug 2011; Markos Chandras <hwoarang@gentoo.org> -pygraphviz-1.0-r1.ebuild,
+  -files/pygraphviz-1.0-avoid_tests.patch:
+  Remove old ebuild. Requested by Arfrever
 
   05 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org>
   pygraphviz-1.1-r1.ebuild:

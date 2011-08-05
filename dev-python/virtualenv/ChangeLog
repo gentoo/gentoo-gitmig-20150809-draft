@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/virtualenv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.61 2011/07/20 22:46:22 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.62 2011/08/05 22:39:51 hwoarang Exp $
+
+  05 Aug 2011; Markos Chandras <hwoarang@gentoo.org> -virtualenv-1.6.ebuild:
+  Remove old ebuild. Requested by Arfrever
 
   20 Jul 2011; Mark Loeser <halcy0n@gentoo.org> virtualenv-1.6.1.ebuild:
   Stable for ppc64; bug #370513
