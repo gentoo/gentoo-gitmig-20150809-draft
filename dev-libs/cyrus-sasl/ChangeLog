@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.227 2011/07/24 17:53:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.228 2011/08/05 07:21:46 eras Exp $
+
+  05 Aug 2011; Eray Aslan <eras@gentoo.org> files/pwcheck.rc6:
+  remove deprecated oknodo from init script - bug #377767
 
   24 Jul 2011; Raúl Porcel <armin76@gentoo.org> cyrus-sasl-2.1.23-r4.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #372435
