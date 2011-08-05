@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/tuxonice-userui-1.0.ebuild,v 1.6 2010/12/26 09:29:06 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/tuxonice-userui-1.0.ebuild,v 1.7 2011/08/05 21:02:42 nelchael Exp $
 
 EAPI="2"
 
@@ -19,11 +19,14 @@ DEPEND="fbsplash? ( >=media-gfx/splashutils-1.5.2.1
 	media-libs/libmng[lcms]
 	|| ( >=media-libs/libpng-1.4.4[static-libs]
 		<media-libs/libpng-1.4.4:0 )
+	app-arch/bzip2[static]
 	media-libs/lcms:0[static-libs] )"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-Makefiles.patch"
+
+	sed -i -e 's/-lfreetype/-lfreetype -lbz2/' "${S}/Makefile" || die
 }
 
 src_compile() {

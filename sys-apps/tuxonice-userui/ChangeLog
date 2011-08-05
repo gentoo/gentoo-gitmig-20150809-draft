@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/tuxonice-userui
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/ChangeLog,v 1.19 2010/12/26 09:29:06 nelchael Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/ChangeLog,v 1.20 2011/08/05 21:02:42 nelchael Exp $
+
+  05 Aug 2011; Krzysztof Pawlik <nelchael@gentoo.org>
+  tuxonice-userui-1.0.ebuild:
+  Fix linking with static bzip2 (from freetype) when building tuxonice userui
+  with fbsplash enabled, see bug #375243.
 
   26 Dec 2010; Krzysztof Pawlik <nelchael@gentoo.org>
   tuxonice-userui-1.0.ebuild:
