@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmforkplop
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmforkplop/ChangeLog,v 1.2 2010/01/07 16:00:12 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmforkplop/ChangeLog,v 1.3 2011/08/05 13:12:35 voyageur Exp $
+
+  05 Aug 2011; Bernard Cafarelli <voyageur@gentoo.org> wmforkplop-0.9.3.ebuild:
+  Depend on imlib2 with X, thanks Piotr Szymaniak in bug #373057
 
   07 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   wmforkplop-0.9.3.ebuild:
