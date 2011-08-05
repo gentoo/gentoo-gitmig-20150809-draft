@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-4.4.0.ebuild,v 1.6 2011/05/28 11:48:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-4.4.0.ebuild,v 1.7 2011/08/05 13:56:25 hwoarang Exp $
 
 EAPI=3
 
-inherit wxwidgets
+inherit flag-o-matic wxwidgets
 
 DESCRIPTION="Tools to create, alter, and inspect Matroska files"
 HOMEPAGE="http://www.bunkus.org/videotools/mkvtoolnix"
@@ -34,6 +34,7 @@ DEPEND="${RDEPEND}
 "
 
 src_configure() {
+	append-flags -DBOOST_FILESYSTEM_VERSION=2
 	local myconf
 
 	use pch || myconf="${myconf} --disable-precompiled-headers"
