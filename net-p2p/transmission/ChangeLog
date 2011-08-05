@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.155 2011/07/24 08:54:10 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.156 2011/08/05 21:00:38 pva Exp $
+
+*transmission-2.33-r1 (05 Aug 2011)
+
+  05 Aug 2011; Peter Volkov <pva@gentoo.org> +transmission-2.33-r1.ebuild,
+  files/transmission-2.33-0003-system-miniupnpc.patch:
+  Make compatible with system miniupnpc-1.6, bug #376795 wrt Oleg.
 
 *transmission-2.33 (24 Jul 2011)
 
