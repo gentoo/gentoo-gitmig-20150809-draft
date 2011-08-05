@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.0.1_p20100914-r6.ebuild,v 1.8 2011/07/15 17:31:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.0.1_p20100914-r6.ebuild,v 1.9 2011/08/05 17:03:02 armin76 Exp $
 
 EAPI="1"
 
@@ -13,6 +13,7 @@ DESCRIPTION="Remote desktop viewer display system"
 HOMEPAGE="http://www.tigervnc.org"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
 	http://dev.gentoo.org/~armin76/dist/${P}.tar.bz2
+	mirror://gentoo/${PN}.png
 	server? ( ftp://ftp.freedesktop.org/pub/xorg/individual/xserver/xorg-server-${XSERVER_VERSION}.tar.bz2	)"
 
 LICENSE="GPL-2"
@@ -150,7 +151,7 @@ src_install() {
 	newman vncviewer/vncviewer.man vncviewer.1
 	dodoc README
 
-	doicon "${FILESDIR}"/vncviewer.png
+	newicon "${DISTDIR}"/tigervnc.png vncviewer.png
 	make_desktop_entry vncviewer vncviewer vncviewer Network
 
 	if use server ; then
