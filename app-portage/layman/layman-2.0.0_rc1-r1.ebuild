@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.0.0_rc1-r1.ebuild,v 1.4 2011/07/18 14:52:55 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.0.0_rc1-r1.ebuild,v 1.5 2011/08/05 19:57:46 darkside Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_DEPEND="2:2.6"
 RESTRICT_PYTHON_ABIS="2.4 2.5 3.*"
 
-inherit eutils distutils
+inherit eutils distutils prefix
 
 DESCRIPTION="Tool to manage Gentoo overlays"
 HOMEPAGE="http://layman.sourceforge.net/"
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~ppc-aix ~x86-fbsd ~hppa-hpux ~ia64-hpux ~x86-interix ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="bazaar cvs darcs git mercurial subversion test"
 
 COMMON_DEPS="dev-lang/python[xml]"
@@ -37,6 +37,8 @@ RESTRICT_PYTHON_ABIS="2.4 3.*"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-fix-mistracking-success.patch"
+	sed -i -e 's#/var/lib/layman#@GENTOO_PORTAGE_EPREFIX@/var/lib/layman#' etc/layman.cfg || die
+	eprefixify etc/layman.cfg
 }
 
 src_test() {
