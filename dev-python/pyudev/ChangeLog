@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyudev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/ChangeLog,v 1.6 2011/07/10 01:53:08 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/ChangeLog,v 1.7 2011/08/05 22:27:53 hwoarang Exp $
+
+  05 Aug 2011; Markos Chandras <hwoarang@gentoo.org> -pyudev-0.10.ebuild:
+  Remove old ebuild. Requested by Arfrever
 
   10 Jul 2011; Stefan Briesenick <sbriesen@gentoo.org> -pyudev-0.9.ebuild:
   removed old version
