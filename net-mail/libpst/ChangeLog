@@ -1,6 +1,15 @@
 # ChangeLog for net-mail/libpst
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.23 2011/05/28 23:43:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.24 2011/08/05 05:07:48 radhermit Exp $
+
+*libpst-0.6.53 (05 Aug 2011)
+
+  05 Aug 2011; Tim Harder <radhermit@gentoo.org>
+  -files/libpst-0.4.1-gentoo.diff, -files/libpst-0.5.1-gentoo.diff,
+  -libpst-0.6.37.ebuild, -libpst-0.6.38.ebuild, -libpst-0.6.41.ebuild,
+  -files/libpst-0.6.41-asneeded.patch, +libpst-0.6.53.ebuild,
+  +files/libpst-0.6.53-pkgconfig-static.patch:
+  Version bump and remove old.
 
 *libpst-0.6.52 (28 May 2011)
 
