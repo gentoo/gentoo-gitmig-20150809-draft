@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.308 2011/05/28 17:42:28 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.309 2011/08/05 07:05:46 eras Exp $
+
+  05 Aug 2011; Eray Aslan <eras@gentoo.org> files/dovecot-1.2.init,
+  files/dovecot.init-r2:
+  remove deprecated oknodo option - bug #377763
 
   28 May 2011; Eray Aslan <eras@gentoo.org> -dovecot-1.2.16.ebuild,
   -dovecot-2.0.11.ebuild, -dovecot-2.0.12.ebuild, -dovecot-2.0.12-r1.ebuild,
