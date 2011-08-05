@@ -1,6 +1,9 @@
 # ChangeLog for games-action/bzflag
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/ChangeLog,v 1.53 2011/08/04 03:33:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/ChangeLog,v 1.54 2011/08/05 21:10:34 hwoarang Exp $
+
+  05 Aug 2011; Markos Chandras <hwoarang@gentoo.org> bzflag-2.4.0.ebuild:
+  Stable on amd64 wrt bug #377575
 
   04 Aug 2011; Michael Sterrett <mr_bones_@gentoo.org> bzflag-2.4.0.ebuild:
   skip dodoc for non-existent file (bug #377585)
