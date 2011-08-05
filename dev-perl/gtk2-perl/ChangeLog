@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/gtk2-perl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.124 2011/05/11 08:41:41 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.125 2011/08/05 18:15:04 tove Exp $
+
+*gtk2-perl-1.224.0 (05 Aug 2011)
+
+  05 Aug 2011; Torsten Veller <tove@gentoo.org> +gtk2-perl-1.224.0.ebuild:
+  Version bump
 
   11 May 2011; Michael Weber <xmw@gentoo.org> gtk2-perl-1.223.0.ebuild:
   added ~arm keyword (bug 264983)
