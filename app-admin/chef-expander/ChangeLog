@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/chef-expander
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-expander/ChangeLog,v 1.1 2011/07/25 09:11:46 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chef-expander/ChangeLog,v 1.2 2011/08/06 14:23:51 graaff Exp $
+
+  06 Aug 2011; Hans de Graaff <graaff@gentoo.org> chef-expander-0.10.2.ebuild:
+  Fix dev-ruby/amqp dependency to refer to the slot mentioned in the gemspec.
 
 *chef-expander-0.10.2 (25 Jul 2011)
 
