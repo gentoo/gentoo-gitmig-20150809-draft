@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.821 2011/08/06 01:00:22 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.822 2011/08/06 01:12:44 dirtyepic Exp $
+
+*gcc-4.5.3 (06 Aug 2011)
+
+  06 Aug 2011; Ryan Hill <dirtyepic@gentoo.org> +gcc-4.5.3.ebuild:
+  Version bump (bug #365935). Also fixes HPPA miscompile (bug #322831) and IA64
+  ICE (bug #365045).
 
   06 Aug 2011; Ryan Hill <dirtyepic@gentoo.org> gcc-4.5.1-r1.ebuild,
   gcc-4.5.2.ebuild:
