@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/clhep
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/ChangeLog,v 1.35 2011/06/28 20:00:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/clhep/ChangeLog,v 1.36 2011/08/06 20:50:27 bicatali Exp $
+
+*clhep-2.1.1.0 (06 Aug 2011)
+
+  06 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> +clhep-2.1.1.0.ebuild:
+  Version bump
 
   28 Jun 2011; Brent Baude <ranger@gentoo.org> clhep-2.1.0.1.ebuild:
   Marking clhep-2.1.0.1 ppc for bug 354009
