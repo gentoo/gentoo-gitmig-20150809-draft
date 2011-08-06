@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/orc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.18 2011/05/03 03:16:36 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.19 2011/08/06 08:53:24 zmedico Exp $
+
+  06 Aug 2011; Zac Medico <zmedico@gentoo.org> orc-0.4.14.ebuild:
+  Add ~x86-linux keyword.
 
 *orc-0.4.14 (03 May 2011)
 
