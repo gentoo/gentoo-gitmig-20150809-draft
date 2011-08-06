@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-4.5.3.ebuild,v 1.4 2011/03/27 22:45:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-4.5.3.ebuild,v 1.5 2011/08/06 20:20:58 dilfridge Exp $
 
 EAPI=3
 
@@ -44,6 +44,8 @@ DEPEND="${COMMON_DEPEND}
 	doc? ( app-doc/doxygen )
 	test? ( dev-util/cppunit )
 "
+
+PATCHES=( "${FILESDIR}/${P}-underlinking.patch" )
 
 src_configure() {
 	mycmakeargs=(
