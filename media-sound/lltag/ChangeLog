@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/lltag
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lltag/ChangeLog,v 1.20 2010/07/29 23:48:43 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lltag/ChangeLog,v 1.21 2011/08/06 18:02:52 sping Exp $
+
+*lltag-0.14.4 (06 Aug 2011)
+
+  06 Aug 2011; Sebastian Pipping <sping@gentoo.org> +lltag-0.14.4.ebuild:
+  Bump to 0.14.4, looks trivial
 
 *lltag-0.14.3 (29 Jul 2010)
 
