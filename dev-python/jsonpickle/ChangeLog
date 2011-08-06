@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/jsonpickle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/ChangeLog,v 1.8 2011/08/05 22:54:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/ChangeLog,v 1.9 2011/08/06 16:24:57 hwoarang Exp $
+
+  06 Aug 2011; Markos Chandras <hwoarang@gentoo.org> jsonpickle-0.4.0.ebuild:
+  Ignore test failures with Jython. Fix dependencies. Run tests requiring
+  dev-python/feedparser. Patch by Arfrever.
 
   05 Aug 2011; Markos Chandras <hwoarang@gentoo.org> -jsonpickle-0.3.1.ebuild:
   Remove old ebuild. Requested by Arfrever
