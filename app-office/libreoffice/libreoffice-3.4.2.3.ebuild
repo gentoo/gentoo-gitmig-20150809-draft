@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.19 2011/08/04 17:56:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.20 2011/08/06 08:49:09 scarabeus Exp $
 
 EAPI=3
 
@@ -21,7 +21,7 @@ DEV_URI="
 EXT_URI="http://ooo.itc.hu/oxygenoffice/download/libreoffice"
 ADDONS_URI="http://dev-www.libreoffice.org/src/"
 
-BRANDING="${PN}-branding-gentoo-0.2.tar.xz"
+BRANDING="${PN}-branding-gentoo-0.3.tar.xz"
 
 [[ ${PV} == *9999* ]] && SCM_ECLASS="git-2"
 inherit base autotools check-reqs eutils java-pkg-opt-2 kde4-base pax-utils prefix python multilib toolchain-funcs flag-o-matic nsplugins ${SCM_ECLASS}

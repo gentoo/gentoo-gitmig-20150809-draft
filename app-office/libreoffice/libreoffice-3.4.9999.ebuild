@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999.ebuild,v 1.5 2011/08/04 16:31:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999.ebuild,v 1.6 2011/08/06 08:49:09 scarabeus Exp $
 
 EAPI=3
 
@@ -21,7 +21,7 @@ DEV_URI="
 EXT_URI="http://ooo.itc.hu/oxygenoffice/download/libreoffice"
 ADDONS_URI="http://dev-www.libreoffice.org/src/"
 
-BRANDING="${PN}-branding-gentoo-0.2.tar.xz"
+BRANDING="${PN}-branding-gentoo-0.3.tar.xz"
 
 [[ ${PV} == *9999* ]] && SCM_ECLASS="git-2"
 inherit base autotools check-reqs eutils java-pkg-opt-2 kde4-base pax-utils prefix python multilib toolchain-funcs flag-o-matic nsplugins ${SCM_ECLASS}
@@ -235,7 +235,10 @@ PATCHES=(
 	"${FILESDIR}/${PN}-translate-toolkit-parallel-solenv.patch"
 	"${FILESDIR}/${PN}-gbuild-use-cxxflags.patch"
 	"${FILESDIR}/${PN}-installed-files-permissions.patch"
+	"${FILESDIR}/${PN}-check-for-avx.patch"
+	"${FILESDIR}/${PN}-append-no-avx.patch"
 	"${FILESDIR}/${PN}-32b-qt4-libdir.patch"
+	"${FILESDIR}/${PN}-binfilter-as-needed.patch"
 )
 
 # Uncoment me when updating to eapi4
@@ -349,7 +352,19 @@ src_unpack() {
 
 src_prepare() {
 	strip-linguas ${LANGUAGES}
-	LINGUAS_OOO=$(echo ${LINGUAS} | sed -e 's/\ben\b/en_US/;s/_/-/g')
+
+	# HACK: linguas needs special parsing until fixed upstream
+	if [[ -z ${LINGUAS} || ${LINGUAS} == en ]]; then
+		# if empty or just english we want empty
+		LO_LANGUAGES=
+	elif [[ ${LINGUAS} =~ en( |$) ]]; then
+		# otherwise if more then one language and english we
+		# replace en to en-US
+		LO_LANGUAGES="$(sed -e 's/\ben\b/en_US/;s/_/-/g' <<< ${LINGUAS})"
+	else
+		# and finally if no en is set we add en-US
+		LO_LANGUAGES="en-US ${LINGUAS//_/-}"
+	fi
 
 	# Now for our optimization flags ...
 	export ARCH_FLAGS="${CXXFLAGS}"
