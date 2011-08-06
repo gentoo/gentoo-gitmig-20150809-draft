@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.295 2011/07/25 17:48:35 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.296 2011/08/06 08:25:45 zmedico Exp $
+
+  06 Aug 2011; Zac Medico <zmedico@gentoo.org> gstreamer-0.10.35.ebuild:
+  Bump to EAPI 3, fix for prefix, and add ~x86-linux keyword.
 
   25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gstreamer-0.10.32-r1.ebuild:

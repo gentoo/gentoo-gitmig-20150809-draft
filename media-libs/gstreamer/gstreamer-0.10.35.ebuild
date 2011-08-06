@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.35.ebuild,v 1.1 2011/06/30 11:16:43 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.35.ebuild,v 1.2 2011/08/06 08:25:45 zmedico Exp $
 
-EAPI=2
+EAPI=3
 
 inherit eutils multilib versionator
 
@@ -15,7 +15,7 @@ SRC_URI="http://${PN}.freedesktop.org/src/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT=${PV_MAJ_MIN}
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-linux"
 IUSE="+introspection nls test"
 
 RDEPEND=">=dev-libs/glib-2.22:2
@@ -51,7 +51,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS MAINTAINERS README RELEASE
 
 	# Remove unversioned binaries to allow SLOT installations in future
-	cd "${D}"/usr/bin
+	cd "${ED}"/usr/bin || die
 	local gst_bins
 	for gst_bins in $(ls *-${PV_MAJ_MIN}); do
 		rm -f ${gst_bins/-${PV_MAJ_MIN}/}
