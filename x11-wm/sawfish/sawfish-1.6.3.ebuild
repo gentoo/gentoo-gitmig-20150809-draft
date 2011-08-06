@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.6.3.ebuild,v 1.3 2011/08/02 14:48:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.6.3.ebuild,v 1.4 2011/08/06 12:34:12 maekke Exp $
 
 EAPI="1"
 
@@ -24,7 +24,7 @@ fi
 
 LICENSE="GPL-2 Artistic-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="nls xinerama"
 
 RDEPEND=">=dev-libs/librep-0.90.5
