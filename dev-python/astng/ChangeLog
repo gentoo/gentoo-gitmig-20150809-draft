@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/astng
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.52 2011/07/29 22:27:34 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.53 2011/08/06 16:29:23 hwoarang Exp $
+
+  06 Aug 2011; Markos Chandras <hwoarang@gentoo.org> astng-0.22.0.ebuild:
+  Use PYTHON_TESTS_FAILURES_TOLERANT_ABIS. Don't directly call 2to3, since
+  build system now internally uses lib2to3. Patch by Arfrever
 
 *astng-0.22.0 (29 Jul 2011)
 
