@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/finchtv/finchtv-1.3.1-r1.ebuild,v 1.3 2011/07/24 10:53:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/finchtv/finchtv-1.3.1-r1.ebuild,v 1.4 2011/08/06 12:30:49 maekke Exp $
 
 MY_PV="${PV//./_}"
 MY_P=${PN}_${MY_PV}
@@ -11,7 +11,7 @@ SRC_URI="http://www.geospiza.com/finchtv/download/programs/linux/${MY_P}.tar.gz"
 
 LICENSE="finchtv"
 SLOT="0"
-KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 S="${WORKDIR}/${MY_P}"
