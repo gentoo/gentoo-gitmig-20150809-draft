@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.4.8-r1.ebuild,v 1.6 2009/11/13 01:01:06 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.4.8-r1.ebuild,v 1.7 2011/08/06 08:12:30 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -19,7 +19,6 @@ RDEPEND="|| (
 		>=sys-fs/device-mapper-1.00.19-r1
 	)
 	>=sys-fs/udev-124
-	sys-fs/sysfsutils
 	dev-libs/libaio"
 DEPEND="${RDEPEND}"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.4.9-r2.ebuild,v 1.1 2011/06/03 21:35:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/multipath-tools-0.4.9-r2.ebuild,v 1.2 2011/08/06 08:12:30 ssuominen Exp $
 
 EAPI="2"
 
@@ -20,7 +20,6 @@ RDEPEND="|| (
 		>=sys-fs/device-mapper-1.00.19-r1
 	)
 	>=sys-fs/udev-124
-	sys-fs/sysfsutils
 	dev-libs/libaio
 	!<sys-apps/baselayout-2"
 DEPEND="${RDEPEND}"

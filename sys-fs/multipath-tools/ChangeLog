@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/multipath-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.36 2011/06/03 21:35:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.37 2011/08/06 08:12:30 ssuominen Exp $
+
+  06 Aug 2011; Samuli Suominen <ssuominen@gentoo.org>
+  multipath-tools-0.4.8.ebuild, multipath-tools-0.4.8-r1.ebuild,
+  multipath-tools-0.4.9-r1.ebuild, multipath-tools-0.4.9-r2.ebuild:
+  Remove sys-fs/sysfsutils depend from >= 0.4.8 wrt #377709 by Anthony Basile
 
 *multipath-tools-0.4.9-r2 (03 Jun 2011)
 
