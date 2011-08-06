@@ -1,6 +1,11 @@
 # ChangeLog for virtual/perl-CGI
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.95 2011/05/21 07:53:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.96 2011/08/06 07:33:00 tove Exp $
+
+*perl-CGI-3.550.0 (06 Aug 2011)
+
+  06 Aug 2011; Torsten Veller <tove@gentoo.org> +perl-CGI-3.550.0.ebuild:
+  Version bump
 
 *perl-CGI-3.540.0 (21 May 2011)
 
