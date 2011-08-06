@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/kdepim-wizards-4.4.11.1.ebuild,v 1.5 2011/06/01 19:39:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/kdepim-wizards-4.4.11.1.ebuild,v 1.6 2011/08/06 17:14:37 dilfridge Exp $
 
 EAPI=4
 
@@ -26,6 +26,8 @@ KMEXTRACTONLY="
 	kresources/kolab/
 	kresources/slox/
 "
+
+PATCHES=( "${FILESDIR}/${P}-underlinking.patch" )
 
 src_prepare() {
 	ln -s "${EKDEDIR}"/include/kdepim-kresources/{kabcsloxprefs.h,kcalsloxprefs.h} \
