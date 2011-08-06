@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.203 2011/04/06 20:09:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.204 2011/08/06 09:41:21 zmedico Exp $
+
+  06 Aug 2011; Zac Medico <zmedico@gentoo.org> avahi-0.6.30.ebuild:
+  Fix for prefix and add ~x86-linux keyword.
 
 *avahi-0.6.30 (06 Apr 2011)
 

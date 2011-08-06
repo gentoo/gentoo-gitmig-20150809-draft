@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.30.ebuild,v 1.1 2011/04/06 20:09:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.30.ebuild,v 1.2 2011/08/06 09:41:21 zmedico Exp $
 
 EAPI="3"
 
@@ -16,7 +16,7 @@ SRC_URI="http://avahi.org/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-linux"
 IUSE="autoipd bookmarks dbus doc gdbm gtk howl-compat ipv6 kernel_linux mdnsresponder-compat mono python qt4 test "
 
 DBUS_DEPEND=">=sys-apps/dbus-0.30"
@@ -122,7 +122,7 @@ src_configure() {
 	# >=gobject-introspection-0.9, so we disable introspection for now.
 	# http://avahi.org/ticket/318
 	econf \
-		--localstatedir=/var \
+		--localstatedir="${EPREFIX}/var" \
 		--with-distro=gentoo \
 		--disable-python-dbus \
 		--disable-pygtk \
@@ -155,10 +155,10 @@ src_compile() {
 src_install() {
 	emake install py_compile=true DESTDIR="${D}" || die "make install failed"
 	use bookmarks && use python && use dbus && use gtk || \
-		rm -f "${D}"/usr/bin/avahi-bookmarks
+		rm -f "${ED}"/usr/bin/avahi-bookmarks
 
-	use howl-compat && ln -s avahi-compat-howl.pc "${D}"/usr/$(get_libdir)/pkgconfig/howl.pc
-	use mdnsresponder-compat && ln -s avahi-compat-libdns_sd/dns_sd.h "${D}"/usr/include/dns_sd.h
+	use howl-compat && ln -s avahi-compat-howl.pc "${ED}"/usr/$(get_libdir)/pkgconfig/howl.pc
+	use mdnsresponder-compat && ln -s avahi-compat-libdns_sd/dns_sd.h "${ED}"/usr/include/dns_sd.h
 
 	if use autoipd; then
 		insinto /$(get_libdir)/rcscripts/net
