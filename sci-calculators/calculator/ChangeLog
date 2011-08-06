@@ -1,6 +1,12 @@
 # ChangeLog for sci-calculators/calculator
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calculator/ChangeLog,v 1.31 2010/09/29 19:33:52 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/calculator/ChangeLog,v 1.32 2011/08/06 21:33:45 bicatali Exp $
+
+*calculator-1.6.43 (06 Aug 2011)
+
+  06 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  +calculator-1.6.43.ebuild, metadata.xml:
+  Bump and verbosed metadata
 
   29 Sep 2010; Michael Sterrett <mr_bones_@gentoo.org>
   -calculator-1.6.34.ebuild, -calculator-1.6.35.ebuild:
