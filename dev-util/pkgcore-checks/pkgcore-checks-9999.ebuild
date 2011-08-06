@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-9999.ebuild,v 1.1 2011/08/06 09:06:39 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-9999.ebuild,v 1.2 2011/08/06 21:31:34 ferringb Exp $
 
 EAPI="3"
 DISTUTILS_SRC_TEST="setup.py"
 
-EGIT_REPO_URI="http://googlecode.com/p/pkgcore-checks/"
+EGIT_REPO_URI="https://code.google.com/p/pkgcore-checks/"
 inherit distutils git-2
 
 DESCRIPTION="pkgcore developmental repoman replacement"
