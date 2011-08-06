@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.22-r3.ebuild,v 1.2 2011/07/24 21:33:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/arj-3.10.22-r3.ebuild,v 1.3 2011/08/06 12:29:34 maekke Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://debian/pool/main/a/arj/${P/-/_}.orig.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
+KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
 IUSE=""
 
 src_prepare() {
