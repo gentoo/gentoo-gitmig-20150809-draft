@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/libmp3splt-0.7.ebuild,v 1.1 2011/08/03 19:31:12 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/libmp3splt-0.7.ebuild,v 1.2 2011/08/06 17:04:08 sping Exp $
 
 EAPI=2
 inherit autotools multilib
@@ -27,7 +27,7 @@ src_prepare() {
 	if ! use doc ; then
 		epatch "${FILESDIR}"/${P}-disable-docs.patch
 	fi
-	epatch "${FILESDIR}"/${P}-flags.patch
+	epatch "${FILESDIR}"/${P}-{flags,maintainer-mode}.patch
 
 	eautoconf
 }

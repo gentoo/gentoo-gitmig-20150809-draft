@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmp3splt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/ChangeLog,v 1.18 2011/08/03 19:31:12 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/ChangeLog,v 1.19 2011/08/06 17:04:08 sping Exp $
+
+  06 Aug 2011; Sebastian Pipping <sping@gentoo.org> libmp3splt-0.7.ebuild,
+  +files/libmp3splt-0.7-maintainer-mode.patch:
+  Disable maintainer mode (bug #377999)
 
 *libmp3splt-0.7 (03 Aug 2011)
 
