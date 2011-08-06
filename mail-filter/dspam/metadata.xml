@@ -30,11 +30,14 @@
 	<flag name='virtual-users'>
 		Build with virtual-users support
 	</flag>
+	<flag name='small-scale'>
+		Build for small scale setups - puts data to $HOME/data/user
+	</flag>
 	<flag name='domain-scale'>
-		Build with domain scale setups
+		Build for domain scale setups - puts data to $HOME/data/domain.com/user
 	</flag>
 	<flag name='large-scale'>
-		Build with large scale setups
+		Build for large scale setups - puts data to $HOME/data/u/s/user
 	</flag>
 	<flag name='hash'>
 		Enable support for the file-orientated hash driver
