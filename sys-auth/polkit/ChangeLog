@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/polkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.50 2011/07/10 23:42:27 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/ChangeLog,v 1.51 2011/08/06 08:56:06 ssuominen Exp $
+
+*polkit-0.102 (06 Aug 2011)
+
+  06 Aug 2011; Samuli Suominen <ssuominen@gentoo.org> +polkit-0.102.ebuild:
+  Version bump.
 
   10 Jul 2011; Matt Turner <mattst88@gentoo.org> polkit-0.101-r1.ebuild:
   Added ~mips, bug 296548
