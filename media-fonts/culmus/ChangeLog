@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/culmus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.65 2011/08/02 15:09:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.66 2011/08/06 12:39:28 maekke Exp $
+
+  06 Aug 2011; Markus Meier <maekke@gentoo.org> culmus-0.120-r1.ebuild:
+  x86 stable, bug #376347
 
   02 Aug 2011; Markos Chandras <hwoarang@gentoo.org> culmus-0.120-r1.ebuild:
   Stable on amd64 wrt bug #376347
