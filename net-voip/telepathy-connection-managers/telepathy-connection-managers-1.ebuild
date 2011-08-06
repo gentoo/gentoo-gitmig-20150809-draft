@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-connection-managers/telepathy-connection-managers-1.ebuild,v 1.11 2010/09/11 09:05:05 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-connection-managers/telepathy-connection-managers-1.ebuild,v 1.12 2011/08/06 10:03:28 zmedico Exp $
 
 DESCRIPTION="Meta-package for Telepathy Connection Managers"
 
@@ -9,7 +9,7 @@ SRC_URI=""
 LICENSE="as-is"
 SLOT="0"
 
-KEYWORDS="alpha amd64 ia64 ppc sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc sparc x86 ~x86-linux"
 
 IUSE="msn irc yahoo icq jabber sip zeroconf"
 
