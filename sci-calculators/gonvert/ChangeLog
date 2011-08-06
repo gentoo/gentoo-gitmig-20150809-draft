@@ -1,6 +1,12 @@
 # ChangeLog for sci-calculators/gonvert
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/gonvert/ChangeLog,v 1.10 2011/03/02 21:19:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/gonvert/ChangeLog,v 1.11 2011/08/06 21:20:51 bicatali Exp $
+
+*gonvert-0.2.25 (06 Aug 2011)
+
+  06 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> +gonvert-0.2.25.ebuild,
+  metadata.xml:
+  Bump
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> gonvert-0.2.15-r1.ebuild,
   gonvert-0.2.19.ebuild, gonvert-0.2.23.ebuild:
