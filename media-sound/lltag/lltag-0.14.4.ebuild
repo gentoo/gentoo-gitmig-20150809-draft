@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lltag/lltag-0.14.4.ebuild,v 1.1 2011/08/06 18:02:52 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lltag/lltag-0.14.4.ebuild,v 1.2 2011/08/06 19:13:59 sping Exp $
 
 EAPI=2
 inherit perl-module
@@ -16,7 +16,7 @@ IUSE="flac mp3 ogg readline"
 
 RDEPEND="dev-lang/perl
 	dev-perl/libwww-perl
-	mp3? ( || ( media-sound/mp3info dev-perl/MP3-Tag ) )
+	mp3? ( media-sound/mp3info dev-perl/MP3-Tag )
 	ogg? ( media-sound/vorbis-tools )
 	flac? ( media-libs/flac )
 	readline? ( dev-perl/Term-ReadLine-Perl )"

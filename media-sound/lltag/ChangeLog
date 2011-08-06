@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/lltag
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lltag/ChangeLog,v 1.21 2011/08/06 18:02:52 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lltag/ChangeLog,v 1.22 2011/08/06 19:13:59 sping Exp $
+
+  06 Aug 2011; Sebastian Pipping <sping@gentoo.org> lltag-0.14.4.ebuild:
+  With dev-perl/MP3-Tag installed alone mp3 files cannot be handled. Making
+  media-sound/mp3info a hard requirement for mp3, therefore.
 
 *lltag-0.14.4 (06 Aug 2011)
 
