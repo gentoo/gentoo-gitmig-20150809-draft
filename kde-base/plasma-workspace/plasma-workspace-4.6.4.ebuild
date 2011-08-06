@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.6.4.ebuild,v 1.1 2011/06/10 18:00:06 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.6.4.ebuild,v 1.2 2011/08/06 16:32:09 dilfridge Exp $
 
 EAPI=3
 
@@ -42,7 +42,7 @@ COMMONDEPEND="
 	xinerama? ( x11-libs/libXinerama )
 "
 DEPEND="${COMMONDEPEND}
-	dev-libs/boost
+	rss? ( dev-libs/boost )
 	x11-proto/compositeproto
 	x11-proto/damageproto
 	x11-proto/fixesproto
