@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-4.0.0.ebuild,v 1.1 2011/08/04 00:02:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-4.0.0.ebuild,v 1.2 2011/08/06 16:36:10 bicatali Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -22,6 +22,7 @@ IUSE="examples test"
 RDEPEND="dev-python/configobj
 	dev-python/ipython
 	>=dev-python/pyface-4.0
+	>=dev-python/traitsui-4.0
 	dev-python/numpy
 	>=sci-libs/vtk-5[python]"
 
@@ -31,7 +32,6 @@ DEPEND="dev-python/setuptools
 		dev-python/wxpython[opengl]
 		media-fonts/font-cursor-misc
 		media-fonts/font-misc-misc
-		x11-apps/xhost
 	)"
 
 DOCS="docs/*.txt"

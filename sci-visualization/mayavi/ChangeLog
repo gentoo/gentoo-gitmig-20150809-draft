@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/mayavi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.21 2011/08/04 00:02:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.22 2011/08/06 16:36:10 bicatali Exp $
+
+  06 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> mayavi-4.0.0.ebuild:
+  Added dependencies to traitsui
 
 *mayavi-4.0.0 (04 Aug 2011)
 
