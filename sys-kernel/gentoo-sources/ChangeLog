@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.871 2011/07/30 11:40:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.872 2011/08/06 12:24:51 maekke Exp $
+
+  06 Aug 2011; Markus Meier <maekke@gentoo.org>
+  gentoo-sources-2.6.39-r3.ebuild:
+  x86 stable, bug #375279
 
   30 Jul 2011; Raúl Porcel <armin76@gentoo.org>
   gentoo-sources-2.6.39-r3.ebuild:
