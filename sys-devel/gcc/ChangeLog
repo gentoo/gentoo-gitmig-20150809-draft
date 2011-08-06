@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.819 2011/07/21 02:05:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.820 2011/08/06 00:55:14 dirtyepic Exp $
+
+  06 Aug 2011; Ryan Hill <dirtyepic@gentoo.org> gcc-4.6.0.ebuild,
+  gcc-4.6.1.ebuild:
+  Drop softfloat patches for 4.6 (bug #372199).
 
   21 Jul 2011; Jeroen Roovers <jer@gentoo.org> gcc-4.4.6.ebuild:
   Stable for HPPA (bug #374465).
