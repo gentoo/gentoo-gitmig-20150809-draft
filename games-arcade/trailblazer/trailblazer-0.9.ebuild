@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/trailblazer/trailblazer-0.9.ebuild,v 1.5 2011/06/20 18:54:31 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/trailblazer/trailblazer-0.9.ebuild,v 1.6 2011/08/06 13:44:51 flameeyes Exp $
 
 EAPI=2
 inherit eutils games
@@ -17,6 +17,9 @@ IUSE=""
 DEPEND=">=media-libs/libsdl-1.2.7[video]"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-ldflags.patch \
+		"${FILESDIR}"/${P}-underlink.patch
+
 	sed -i \
 		-e "s:-O2:${CFLAGS}:" \
 		Makefile || die "sed Makefile failed"
@@ -25,8 +28,6 @@ src_prepare() {
 		-e "s:/usr/share/trailblazer/trail\.dat:${GAMES_DATADIR}/${PN}/trail.dat:" \
 		-e "s:/usr/share/trailblazer/trail\.time:${GAMES_STATEDIR}/trail.time:" \
 		map.c || die "sed map.c failed"
-	epatch "${FILESDIR}"/${P}-ldflags.patch \
-		"${FILESDIR}"/${P}-underlink.patch
 }
 
 src_install() {
