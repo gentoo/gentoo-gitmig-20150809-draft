@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/docutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.134 2011/05/19 19:19:43 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.135 2011/08/06 16:34:39 hwoarang Exp $
+
+*docutils-0.8 (06 Aug 2011)
+
+  06 Aug 2011; Markos Chandras <hwoarang@gentoo.org> +docutils-0.8.ebuild:
+  Version bump. Ebuild by Arfrever. Backported from python overlay
 
 *docutils-0.8_pre7038 (19 May 2011)
 
