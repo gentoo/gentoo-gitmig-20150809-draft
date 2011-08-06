@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.5.2-r1.ebuild,v 1.2 2011/08/06 03:27:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.5.2-r1.ebuild,v 1.3 2011/08/06 03:51:55 jer Exp $
 
 EAPI="4"
 
@@ -27,14 +27,14 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	sed -i -e "s/ -B .OLD//" Makefile.global.in || die
+	sed -i -e "s: -B .OLD::" Makefile.global.in || die
 
 	# Do not treat LDFLAGS as if it contained libraries to link to
-	sed -i m4/python.m4 -e 's|LDFLAGS||g' || die
+	sed -i m4/python.m4 -e 's:LDFLAGS::g' || die
 
 	# We do not have the biff service, but we do have comsat
 	sed -i tests/lib/getnameinfo-t.c \
-		-e 's|"biff"|"comsat"|g' \
+		-e 's:"biff":"comsat":g' \
 		|| die
 
 	eautoreconf
@@ -230,12 +230,12 @@ pkg_config() {
 	fi
 
 	INNCFG_INODES=$(
-		sed -e '/innwatchspoolnodes/ ! d' /etc/news/inn.conf |
-			sed -e 's/[^ ]*[ ]*\([^ ]*\)/\1/' \
+		sed /etc/news/inn.conf \
+			-e '/innwatchspoolnodes/ ! d; s:[^ ]*[ ]*\([^ ]*\):\1:'
 	)
 	INNSPOOL_INODES=$(
 		df -Pi ${NEWSSPOOL_DIR} | \
-			sed -e 's/[^ ]*[ ]*\([^ ]*\).*/\1/' | sed -e '1 d'
+			sed -e 's:[^ ]*[ ]*\([^ ]*\).*:\1:; 1 d'
 	)
 	if [[ ${INNCFG_INODES} -gt ${INNSPOOL_INODES} ]]; then
 		ewarn "Setting innwatchspoolinodes to zero, because the filesystem behind"
@@ -244,7 +244,7 @@ pkg_config() {
 		cp /etc/news/inn.conf /etc/news/inn.conf.OLD
 		einfo "A copy of your old inn.conf has been saved to /etc/news/inn.conf.OLD."
 		sed -i /etc/news/inn.conf \
-			-e '/innwatchspoolnodes/ s/\([^ ]*\)\([ ]*\).*/\1\20/'
+			-e '/innwatchspoolnodes/ s:\([^ ]*\)\([ ]*\).*:\1\20:'
 		chown news:news /etc/news/inn.conf
 		chmod 644 /etc/news/inn.conf
 	fi
