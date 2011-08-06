@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/telepathy-gabble
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.81 2011/07/28 19:16:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.82 2011/08/06 09:16:28 zmedico Exp $
+
+  06 Aug 2011; Zac Medico <zmedico@gentoo.org> telepathy-gabble-0.12.4.ebuild:
+  Fix for prefix and add ~x86-linux keyword.
 
 *telepathy-gabble-0.12.4 (28 Jul 2011)
 
