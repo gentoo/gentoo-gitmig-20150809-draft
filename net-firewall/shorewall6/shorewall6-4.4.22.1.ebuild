@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/shorewall6-4.4.20.3.ebuild,v 1.1 2011/06/19 14:55:58 constanze Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/shorewall6-4.4.22.1.ebuild,v 1.1 2011/08/06 15:47:29 constanze Exp $
 
 EAPI="4"
 
@@ -54,4 +54,5 @@ src_install() {
 		cd "${WORKDIR}/${MY_P_DOCS}"
 		dohtml -r *
 	fi
+	dodir /var/lock/subsys
 }
