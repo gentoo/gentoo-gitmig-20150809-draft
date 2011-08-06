@@ -1,6 +1,11 @@
 # ChangeLog for xfce-extra/xfce4-notifyd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notifyd/ChangeLog,v 1.13 2011/08/06 18:16:06 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-notifyd/ChangeLog,v 1.14 2011/08/06 23:48:56 ssuominen Exp $
+
+  06 Aug 2011; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-notifyd-0.2.2.ebuild:
+  amd64/x86 stable for renamed dbus service file (note: last snapshot was
+  almost same as 0.2.2)
 
 *xfce4-notifyd-0.2.2 (06 Aug 2011)
 
