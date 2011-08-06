@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/dep_selector
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dep_selector/ChangeLog,v 1.1 2011/07/25 08:38:10 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dep_selector/ChangeLog,v 1.2 2011/08/06 14:01:54 graaff Exp $
+
+  06 Aug 2011; Hans de Graaff <graaff@gentoo.org> dep_selector-0.0.8.ebuild:
+  Fix dependencies to be safe wrt. ruby-fakegem's handling.
 
 *dep_selector-0.0.8 (25 Jul 2011)
 

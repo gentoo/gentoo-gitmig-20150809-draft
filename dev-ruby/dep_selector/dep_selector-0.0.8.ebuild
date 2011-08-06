@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dep_selector/dep_selector-0.0.8.ebuild,v 1.1 2011/07/25 08:38:10 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dep_selector/dep_selector-0.0.8.ebuild,v 1.2 2011/08/06 14:01:54 graaff Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -18,8 +18,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-libs/gecode-3.5.0"
-RDEPEND="${DEPEND}"
+DEPEND="${DEPEND} >=dev-libs/gecode-3.5.0"
+RDEPEND="${RDEPEND} >=dev-libs/gecode-3.5.0"
 
 each_ruby_configure() {
 	${RUBY} -Cext/dep_gecode extconf.rb || die "extconf.rb failed"
