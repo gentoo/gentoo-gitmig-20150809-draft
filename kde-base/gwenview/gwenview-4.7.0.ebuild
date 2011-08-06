@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/gwenview-4.7.0.ebuild,v 1.1 2011/07/27 14:04:37 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/gwenview-4.7.0.ebuild,v 1.2 2011/08/06 16:21:20 dilfridge Exp $
 
 EAPI=4
 
@@ -47,4 +47,6 @@ pkg_postinst() {
 	echo
 	elog "For SVG support, emerge -va kde-base/svgpart"
 	echo
+	use kipi && elog "The plugins for the KIPI inteface can be found in media-plugins/kipi-plugins"
+	use kipi && echo
 }
