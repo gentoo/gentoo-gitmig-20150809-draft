@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/snakeoil-0.4.ebuild,v 1.2 2011/04/27 16:40:53 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/snakeoil-0.4.ebuild,v 1.3 2011/08/06 08:51:38 ferringb Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -8,8 +8,8 @@ SUPPORT_PYTHON_ABIS="1"
 inherit eutils distutils
 
 DESCRIPTION="Miscellaneous python utility code."
-HOMEPAGE="http://www.pkgcore.org/"
-SRC_URI="http://www.pkgcore.org/releases/${PN}/${P}.tar.bz2"
+HOMEPAGE="http://snakeoil.googlecode.com/"
+SRC_URI="http://snakeoil.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"

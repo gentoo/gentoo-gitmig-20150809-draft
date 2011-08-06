@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/snakeoil
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.41 2011/06/22 22:00:07 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.42 2011/08/06 08:51:38 ferringb Exp $
+
+*snakeoil-9999 (06 Aug 2011)
+
+  06 Aug 2011; Brian Harring <ferringb@gentoo.org> snakeoil-0.4.ebuild,
+  snakeoil-0.4.1.ebuild, +snakeoil-9999.ebuild:
+  Update urls to snakeoils new home, add -9999 build for people running
+  bleeding edge.
 
 *snakeoil-0.4.1 (22 Jun 2011)
 
