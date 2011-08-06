@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kpovmodeler/kpovmodeler-1.1.3.ebuild,v 1.2 2011/02/02 03:26:58 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kpovmodeler/kpovmodeler-1.1.3.ebuild,v 1.3 2011/08/06 20:42:28 dilfridge Exp $
 
 EAPI=3
 KDE_LINGUAS="af ar be bg br ca cs cy da de el en_GB es et eu fa fi fr ga gl he
@@ -24,3 +24,5 @@ DEPEND="media-gfx/povray"
 S=${WORKDIR}/${MY_P}
 
 DOCS=( AUTHORS BUGS ChangeLog README StyleConvention TODO )
+
+PATCHES=( "${FILESDIR}/${P}-underlinking.patch" )
