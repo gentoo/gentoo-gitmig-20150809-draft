@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.820 2011/08/06 00:55:14 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.821 2011/08/06 01:00:22 dirtyepic Exp $
+
+  06 Aug 2011; Ryan Hill <dirtyepic@gentoo.org> gcc-4.5.1-r1.ebuild,
+  gcc-4.5.2.ebuild:
+  Allow dev-libs/libelf as an alternative to elfutils for LTO support in 4.5
+  (bug #375737).
 
   06 Aug 2011; Ryan Hill <dirtyepic@gentoo.org> gcc-4.6.0.ebuild,
   gcc-4.6.1.ebuild:
