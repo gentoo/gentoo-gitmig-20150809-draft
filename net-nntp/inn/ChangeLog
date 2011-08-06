@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/inn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.38 2011/08/06 03:01:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.39 2011/08/06 03:27:10 jer Exp $
+
+  06 Aug 2011; Jeroen Roovers <jer@gentoo.org> inn-2.5.2-r1.ebuild:
+  Fix pkg_config. Make it more verbose.
 
 *inn-2.5.2-r1 (06 Aug 2011)
 

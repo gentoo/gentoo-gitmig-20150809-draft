@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.5.2-r1.ebuild,v 1.1 2011/08/06 03:01:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.5.2-r1.ebuild,v 1.2 2011/08/06 03:27:10 jer Exp $
 
 EAPI="4"
 
@@ -172,55 +172,49 @@ pkg_postrm() {
 
 pkg_config() {
 	NEWSSPOOL_DIR="${ROOT}/var/spool/news"
-	NEWS_SHELL="`awk -F':' '/^news:/ {print $7;}' ${ROOT}/etc/passwd`"
+	NEWS_SHELL="$( awk -F':' '/^news:/ {print $7;}' ${ROOT}/etc/passwd )"
 	NEWS_ERRFLAG="0"
 
-	if [[ ${NEWS_SHELL} == /bin/false || ${NEWS_SHELL} == /dev/null ]]
-	then
-		if [ ${UID} -eq 0 ]
-		then
-			einfo "Changing shell to /bin/bash for user news..."
-			usermod -s /bin/bash news
-		else
-			NEWS_ERRFLAG=1
-			eerror
-			eerror "Could not change shell for user news."
-			eerror "Please run 'usermod -s /bin/bash news' as root."
-		fi
+	if [[ ${NEWS_SHELL} == /bin/false || ${NEWS_SHELL} == /dev/null ]]; then
+		einfo "Changing shell to /bin/bash for user news..."
+		usermod -s /bin/bash news
 	else
 		einfo "Shell for user news unchanged ('${NEWS_SHELL}')."
-		if [[ ${NEWS_SHELL} != /bin/sh && ${NEWS_SHELL} != /bin/bash ]]
-		then
+		if [[ ${NEWS_SHELL} != /bin/sh && ${NEWS_SHELL} != /bin/bash ]]; then
 			ewarn "You might want to change it to '/bin/bash', though."
 		fi
 	fi
 
-	if [[ ! -e ${NEWSSPOOL_DIR}/db/history ]]
-	then
+	if [[ ! -e ${NEWSSPOOL_DIR}/db/history ]]; then
 		if [[ ! -f ${NEWSSPOOL_DIR}/db/history.dir \
 			&& ! -f ${NEWSSPOOL_DIR}/db/history.pag \
 			&& ! -f ${NEWSSPOOL_DIR}/db/history.hash \
 			&& ! -f ${NEWSSPOOL_DIR}/db/history.index ]]
 		then
-			einfo "Building history database..."
+			einfo "Building history database ..."
 
 			touch "${NEWSSPOOL_DIR}"/db/history
 			chown news:news "${NEWSSPOOL_DIR}"/db/history
 			chmod 644 "${NEWSSPOOL_DIR}"/db/history
 
+			einfo "Running makedbz -i ..."
 			su - news -c "/usr/$(get_libdir)/news/bin/makedbz -i"
+
+			einfo "Moving files into place ..."
 			[[ -f ${NEWSSPOOL_DIR}/db/history.n.dir ]] && \
-				mv -f "${NEWSSPOOL_DIR}"/db/history.n.dir \
+				mv -vf "${NEWSSPOOL_DIR}"/db/history.n.dir \
 				"${NEWSSPOOL_DIR}"/db/history.dir
 			[[ -f ${NEWSSPOOL_DIR}/db/history.n.pag ]] && \
-				mv -f "${NEWSSPOOL_DIR}"/db/history.n.pag \
+				mv -vf "${NEWSSPOOL_DIR}"/db/history.n.pag \
 				"${NEWSSPOOL_DIR}"/db/history.pag
 			[[ -f ${NEWSSPOOL_DIR}/db/history.n.hash ]] && \
-				mv -f "${NEWSSPOOL_DIR}"/db/history.n.hash \
+				mv -vf "${NEWSSPOOL_DIR}"/db/history.n.hash \
 				"${NEWSSPOOL_DIR}"/db/history.hash
 			[[ -f ${NEWSSPOOL_DIR}/db/history.n.index ]] && \
-				mv -f "${NEWSSPOOL_DIR}"/db/history.n.index \
+				mv -vf "${NEWSSPOOL_DIR}"/db/history.n.index \
 				"${NEWSSPOOL_DIR}"/db/history.index
+
+			einfo "Running makehistory ..."
 			su - news -c /usr/$(get_libdir)/news/bin/makehistory
 		else
 			NEWS_ERRFLAG="1"
@@ -236,14 +230,12 @@ pkg_config() {
 	fi
 
 	INNCFG_INODES=$(
-		sed -e '/innwatchspoolnodes/ ! d' | \
-		sed -e 's/[^ ]*[ ]*\([^ ]*\)/\1/' \
-		/etc/news/inn.conf
+		sed -e '/innwatchspoolnodes/ ! d' /etc/news/inn.conf |
+			sed -e 's/[^ ]*[ ]*\([^ ]*\)/\1/' \
 	)
 	INNSPOOL_INODES=$(
 		df -Pi ${NEWSSPOOL_DIR} | \
-			sed -e 's/[^ ]*[ ]*\([^ ]*\).*/\1/' | \
-			sed -e '1 d'
+			sed -e 's/[^ ]*[ ]*\([^ ]*\).*/\1/' | sed -e '1 d'
 	)
 	if [[ ${INNCFG_INODES} -gt ${INNSPOOL_INODES} ]]; then
 		ewarn "Setting innwatchspoolinodes to zero, because the filesystem behind"
@@ -268,13 +260,11 @@ pkg_config() {
 	fi
 
 	if [[ ${NEWS_ERRFLAG} -gt 0 ]]; then
-		eerror
 		eerror "There were one or more errors/warnings checking your"
 		eerror "configuration. Please read inn's documentation and"
 		eerror "fix them accordingly."
 	else
-		einfo
-		einfo "Inn configuration tests passed successfully."
+		einfo "INN configuration tests passed successfully."
 		ewarn "Please ensure you have configured inn properly."
 	fi
 }
