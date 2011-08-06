@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-0.4.14.ebuild,v 1.1 2011/04/25 03:11:35 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-0.4.14.ebuild,v 1.2 2011/08/06 09:06:39 ferringb Exp $
 
 EAPI="3"
 DISTUTILS_SRC_TEST="setup.py"
@@ -8,8 +8,8 @@ DISTUTILS_SRC_TEST="setup.py"
 inherit distutils
 
 DESCRIPTION="pkgcore developmental repoman replacement"
-HOMEPAGE="http://www.pkgcore.org/"
-SRC_URI="http://www.pkgcore.org/releases/${PN}/${P}.tar.bz2"
+HOMEPAGE="http://pkgcore-checks.googlecode.com/"
+SRC_URI="http://pkgcore-checks.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
