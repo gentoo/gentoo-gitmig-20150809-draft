@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ffmpeg2theora
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.45 2011/04/14 12:34:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ChangeLog,v 1.46 2011/08/06 13:50:12 aballier Exp $
+
+*ffmpeg2theora-0.28 (06 Aug 2011)
+
+  06 Aug 2011; Alexis Ballier <aballier@gentoo.org> +ffmpeg2theora-0.28.ebuild:
+  version bump
 
   14 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   ffmpeg2theora-0.25.ebuild, ffmpeg2theora-0.26.ebuild,
