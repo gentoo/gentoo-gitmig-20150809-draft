@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/opendkim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.25 2011/07/20 14:28:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.26 2011/08/06 11:33:22 eras Exp $
+
+*opendkim-2.4.2 (06 Aug 2011)
+
+  06 Aug 2011; Eray Aslan <eras@gentoo.org> +opendkim-2.4.2.ebuild:
+  version bump
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #34534
