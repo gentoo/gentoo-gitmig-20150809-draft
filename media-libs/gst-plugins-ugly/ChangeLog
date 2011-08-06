@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/gst-plugins-ugly
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/ChangeLog,v 1.88 2011/07/25 18:10:47 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-ugly/ChangeLog,v 1.89 2011/08/06 16:34:47 leio Exp $
+
+*gst-plugins-ugly-0.10.18 (06 Aug 2011)
+
+  06 Aug 2011; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-ugly-0.10.18.ebuild:
+  Version bump. Improvements in DVD subtitle decoder, MPEG system stream
+  parser, and more.
 
   25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gst-plugins-ugly-0.10.17.ebuild:
