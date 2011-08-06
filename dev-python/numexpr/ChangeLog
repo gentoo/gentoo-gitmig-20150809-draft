@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/numexpr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numexpr/ChangeLog,v 1.4 2011/01/29 09:36:37 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numexpr/ChangeLog,v 1.5 2011/08/06 20:28:31 bicatali Exp $
+
+  06 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> numexpr-1.4.2.ebuild,
+  metadata.xml:
+  Fixed mkl flag for x86 temporarily. Verbosed metadata
 
 *numexpr-1.4.2 (29 Jan 2011)
 
