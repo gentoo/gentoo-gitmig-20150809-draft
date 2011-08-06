@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-pg-qt/kdevelop-pg-qt-0.9.5.ebuild,v 1.1 2011/05/05 14:30:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-pg-qt/kdevelop-pg-qt-0.9.5.ebuild,v 1.2 2011/08/06 20:48:30 dilfridge Exp $
 
 EAPI=4
 
@@ -21,3 +21,5 @@ DEPEND="
 	sys-devel/bison
 	sys-devel/flex
 "
+
+PATCHES=( "${FILESDIR}/${P}-underlinking.patch" )

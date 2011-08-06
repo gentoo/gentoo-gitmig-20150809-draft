@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdevelop-pg-qt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-pg-qt/ChangeLog,v 1.3 2011/05/05 14:30:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-pg-qt/ChangeLog,v 1.4 2011/08/06 20:48:30 dilfridge Exp $
+
+  06 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdevelop-pg-qt-0.9.5.ebuild, +files/kdevelop-pg-qt-0.9.5-underlinking.patch:
+  Fix underlinking in tests, bug 370161
 
 *kdevelop-pg-qt-0.9.5 (05 May 2011)
 
