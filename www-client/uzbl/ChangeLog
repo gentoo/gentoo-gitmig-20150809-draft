@@ -1,6 +1,9 @@
 # ChangeLog for www-client/uzbl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.43 2011/08/02 16:09:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.44 2011/08/06 12:27:03 maekke Exp $
+
+  06 Aug 2011; Markus Meier <maekke@gentoo.org> uzbl-2011.04.12.ebuild:
+  x86 stable, bug #368237
 
   02 Aug 2011; Markos Chandras <hwoarang@gentoo.org> uzbl-2011.04.12.ebuild:
   Stable on amd64 wrt bug #368237
