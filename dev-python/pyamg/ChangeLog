@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyamg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyamg/ChangeLog,v 1.1 2011/07/26 19:09:17 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyamg/ChangeLog,v 1.2 2011/08/06 19:37:36 bicatali Exp $
+
+  06 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/2.0.0-stencil.patch, pyamg-2.0.0.ebuild:
+  upstream patch for newer numpy, bug #376597
 
   26 Jul 2011; Sébastien Fabbro <bicatali@gentoo.org> +pyamg-2.0.0.ebuild,
   +metadata.xml:
