@@ -1,14 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-ParseXS/ExtUtils-ParseXS-2.22.06.ebuild,v 1.4 2011/08/06 07:51:24 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-ParseXS/ExtUtils-ParseXS-3.20.0.ebuild,v 1.1 2011/08/06 07:51:24 tove Exp $
 
-EAPI=3
+EAPI=4
 
-inherit versionator
-MY_P=${PN}-$(delete_version_separator 2 )
-MODULE_VERSION=2.2206
-S=${WORKDIR}/${MY_P}
-MODULE_AUTHOR=DAGOLDEN
+MODULE_AUTHOR=SMUELLER
+MODULE_VERSION=3.02
 inherit perl-module
 
 DESCRIPTION="Converts Perl XS code into C code"
