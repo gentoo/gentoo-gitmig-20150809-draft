@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-dvdread
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dvdread/ChangeLog,v 1.106 2011/07/25 18:07:11 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dvdread/ChangeLog,v 1.107 2011/08/06 16:56:59 leio Exp $
+
+*gst-plugins-dvdread-0.10.18 (06 Aug 2011)
+
+  06 Aug 2011; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-dvdread-0.10.18.ebuild:
+  Version bump. No noteworthy changes.
 
   25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gst-plugins-dvdread-0.10.17.ebuild:
