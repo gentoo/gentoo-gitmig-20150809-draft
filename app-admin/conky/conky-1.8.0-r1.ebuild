@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.8.0-r1.ebuild,v 1.9 2011/07/29 06:40:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.8.0-r1.ebuild,v 1.10 2011/08/06 23:14:18 billie Exp $
 
 EAPI="2"
 
@@ -54,7 +54,8 @@ DEPEND="
 src_prepare() {
 	epatch "${FILESDIR}/conky-1.8.0-ncurses.patch" \
 		"${FILESDIR}/conky-1.8.0-audacious-2.3.patch" \
-		"${FILESDIR}/${PN}-1.8.1-curl-headers.patch"
+		"${FILESDIR}/${PN}-1.8.1-curl-headers.patch" \
+		"${FILESDIR}/${PN}-1.8.1-maxinterfaces.patch"
 	eautoreconf
 }
 

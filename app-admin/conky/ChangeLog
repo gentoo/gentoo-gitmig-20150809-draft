@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.164 2011/07/29 06:40:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.165 2011/08/06 23:14:18 billie Exp $
+
+  06 Aug 2011; Daniel Pielmeier <billie@gentoo.org> conky-1.8.0-r1.ebuild,
+  conky-1.8.1-r2.ebuild, +files/conky-1.8.1-maxinterfaces.patch:
+  Add patch to increase the number of maximum network devices. This fixes bug
+  #365287. Thanks to Markos Chandras for the report.
 
   29 Jul 2011; Christoph Mende <angelos@gentoo.org> conky-1.8.0-r1.ebuild,
   conky-1.8.1-r2.ebuild, +files/conky-1.8.1-curl-headers.patch:

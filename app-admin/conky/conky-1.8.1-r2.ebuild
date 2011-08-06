@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.8.1-r2.ebuild,v 1.7 2011/07/29 06:40:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.8.1-r2.ebuild,v 1.8 2011/08/06 23:14:18 billie Exp $
 
 EAPI=2
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="An advanced, highly configurable system monitor for X"
 HOMEPAGE="http://conky.sourceforge.net/"
@@ -57,7 +57,9 @@ src_prepare() {
 		"${FILESDIR}/${P}-xmms2.patch" \
 		"${FILESDIR}/${P}-secunia-SA43225.patch" \
 		"${FILESDIR}/${P}-acpitemp.patch" \
-		"${FILESDIR}/${P}-curl-headers.patch"
+		"${FILESDIR}/${P}-curl-headers.patch" \
+		"${FILESDIR}/${P}-maxinterfaces.patch"
+	eautoreconf
 }
 
 src_configure() {

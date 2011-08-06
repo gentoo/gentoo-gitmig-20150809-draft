@@ -1,0 +1,13 @@
+Index: conky-1.8.1/configure.ac
+===================================================================
+--- conky-1.8.1.orig/configure.ac
++++ conky-1.8.1/configure.ac
+@@ -790,7 +790,7 @@ AC_DEFINE(CONFIG_FILE, "$HOME/.conkyrc",
+ AC_DEFINE(MAX_SPECIALS_DEFAULT, 512, [Default maximum number of special things, e.g. fonts, offsets, aligns, etc.])
+ AC_DEFINE(MAX_USER_TEXT_DEFAULT, 16384, [Default maximum size of config TEXT buffer, i.e. below TEXT line.])
+ AC_DEFINE(DEFAULT_TEXT_BUFFER_SIZE, 256, [Default size used for temporary, static text buffers])
+-AC_DEFINE(MAX_NET_INTERFACES, 16, [Maximum number of network devices])
++AC_DEFINE(MAX_NET_INTERFACES, 64, [Maximum number of network devices])
+ 
+ dnl
+ dnl Some functions
