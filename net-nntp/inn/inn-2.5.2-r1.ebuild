@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.5.1.ebuild,v 1.9 2010/12/29 15:46:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/inn-2.5.2-r1.ebuild,v 1.1 2011/08/06 03:01:33 jer Exp $
 
-EAPI="2"
+EAPI="4"
 
-inherit autotools eutils fixheadtails multilib ssl-cert
+inherit autotools multilib ssl-cert
 
 DESCRIPTION="The Internet News daemon, fully featured NNTP server"
 HOMEPAGE="https://www.isc.org/software/inn"
@@ -12,10 +12,10 @@ SRC_URI="ftp://ftp.isc.org/isc/inn/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="as-is BSD GPL-2"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="berkdb innkeywords inntaggedhash ipv6 kerberos perl python sasl ssl"
 
-RDEPEND="
+DEPEND="
 	virtual/mta
 	dev-perl/MIME-tools
 	kerberos? ( virtual/krb5 )
@@ -24,19 +24,18 @@ RDEPEND="
 	python? ( dev-lang/python )
 	berkdb? ( sys-libs/db )
 "
-DEPEND="${RDEPEND}"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
-	#ht_fix_file configure.in support/fixscript.in
-	sed -i -e "s/ -B .OLD//" Makefile.global.in || die "sed failed"
+	sed -i -e "s/ -B .OLD//" Makefile.global.in || die
 
 	# Do not treat LDFLAGS as if it contained libraries to link to
-	sed -i m4/python.m4 -e 's|LDFLAGS||g' || die "sed python.m4 failed"
+	sed -i m4/python.m4 -e 's|LDFLAGS||g' || die
 
 	# We do not have the biff service, but we do have comsat
 	sed -i tests/lib/getnameinfo-t.c \
 		-e 's|"biff"|"comsat"|g' \
-		|| die "sed getnameinfo-t.c failed"
+		|| die
 
 	eautoreconf
 }
@@ -73,14 +72,23 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}/" P="" SPECIAL="" install || die "make install failed"
+	emake DESTDIR="${D}/" P="" SPECIAL="" install
 
-	chown -R root:0 "${D}"/usr/{$(get_libdir)/news/{lib,include},share/{doc,man}}
-	chmod 644 "${D}"/etc/news/*
-	for file in control.ctl expire.ctl incoming.conf nntpsend.ctl passwd.nntp readers.conf
-	do
-		chmod 640 "${D}"/etc/news/${file}
-	done
+	chown -R root:0 \
+		"${D}"/usr/$(get_libdir)/news/$(get_libdir) \
+		"${D}"/usr/$(get_libdir)/news/include \
+		"${D}"/usr/share/doc \
+		"${D}"/usr/share/man \
+		|| die
+	chmod 644 "${D}"/etc/news/* || die
+	chmod 640 \
+		"${D}"/etc/news/control.ctl \
+		"${D}"/etc/news/expire.ctl \
+		"${D}"/etc/news/incoming.conf \
+		"${D}"/etc/news/nntpsend.ctl \
+		"${D}"/etc/news/passwd.nntp \
+		"${D}"/etc/news/readers.conf \
+		|| die
 
 	# Prevent old db/* files from being overwritten
 	insinto /usr/share/inn/dbexamples
@@ -88,13 +96,22 @@ src_install() {
 	newins site/newsgroups.minimal newsgroups
 
 	keepdir \
-		/var/{log,run}/news \
-		/var/spool/news/{,archive,articles,db,incoming{,/bad},innfeed,outgoing,overview,tmp}
+		/var/log/news \
+		/var/run/news \
+		/var/spool/news/archive \
+		/var/spool/news/articles \
+		/var/spool/news/db \
+		/var/spool/news/incoming \
+		/var/spool/news/incoming/bad \
+		/var/spool/news/innfeed \
+		/var/spool/news/outgoing \
+		/var/spool/news/overview \
+		/var/spool/news/tmp
 
 	dodoc ChangeLog MANIFEST README* doc/checklist
 	use ipv6 && dodoc doc/IPv6-info
 
-	# So other programs can build against INN. (eg. Suck)
+	# So other programs can build against INN
 	insinto /usr/$(get_libdir)/news/include
 	doins include/*.h
 
@@ -108,7 +125,8 @@ pkg_postinst() {
 
 		if [[ -f ${ROOT}/usr/share/inn/dbexamples/${db_file} ]]
 		then
-			cp "${ROOT}"/usr/share/inn/dbexamples/${db_file} "${ROOT}"/var/spool/news/db/${db_file}
+			cp "${ROOT}"/usr/share/inn/dbexamples/${db_file} \
+				"${ROOT}"/var/spool/news/db/${db_file}
 		else
 			touch "${ROOT}"/var/spool/news/db/${db_file}
 		fi
@@ -130,7 +148,8 @@ pkg_postinst() {
 	if use ssl
 	then
 		install_cert /etc/news/cert/cert
-		chown news:news "${ROOT}"/etc/news/cert/cert.{crt,csr,key,pem}
+		chown news:news \
+			"${ROOT}"/etc/news/cert/cert.{crt,csr,key,pem}
 
 		elog
 		elog "You may want to start nnrpd manually for native ssl support."
@@ -190,14 +209,21 @@ pkg_config() {
 			chmod 644 "${NEWSSPOOL_DIR}"/db/history
 
 			su - news -c "/usr/$(get_libdir)/news/bin/makedbz -i"
-			[[ -f ${NEWSSPOOL_DIR}/db/history.n.dir ]] && mv -f "${NEWSSPOOL_DIR}"/db/history.n.dir "${NEWSSPOOL_DIR}"/db/history.dir
-			[[ -f ${NEWSSPOOL_DIR}/db/history.n.pag ]] && mv -f "${NEWSSPOOL_DIR}"/db/history.n.pag "${NEWSSPOOL_DIR}"/db/history.pag
-			[[ -f ${NEWSSPOOL_DIR}/db/history.n.hash ]] && mv -f "${NEWSSPOOL_DIR}"/db/history.n.hash "${NEWSSPOOL_DIR}"/db/history.hash
-			[[ -f ${NEWSSPOOL_DIR}/db/history.n.index ]] && mv -f "${NEWSSPOOL_DIR}"/db/history.n.index "${NEWSSPOOL_DIR}"/db/history.index
+			[[ -f ${NEWSSPOOL_DIR}/db/history.n.dir ]] && \
+				mv -f "${NEWSSPOOL_DIR}"/db/history.n.dir \
+				"${NEWSSPOOL_DIR}"/db/history.dir
+			[[ -f ${NEWSSPOOL_DIR}/db/history.n.pag ]] && \
+				mv -f "${NEWSSPOOL_DIR}"/db/history.n.pag \
+				"${NEWSSPOOL_DIR}"/db/history.pag
+			[[ -f ${NEWSSPOOL_DIR}/db/history.n.hash ]] && \
+				mv -f "${NEWSSPOOL_DIR}"/db/history.n.hash \
+				"${NEWSSPOOL_DIR}"/db/history.hash
+			[[ -f ${NEWSSPOOL_DIR}/db/history.n.index ]] && \
+				mv -f "${NEWSSPOOL_DIR}"/db/history.n.index \
+				"${NEWSSPOOL_DIR}"/db/history.index
 			su - news -c /usr/$(get_libdir)/news/bin/makehistory
 		else
 			NEWS_ERRFLAG="1"
-			eerror
 			eerror "Your installation seems to be screwed up."
 			eerror "${NEWSSPOOL_DIR}/db/history does not exist, but there's"
 			eerror "one of the files history.dir, history.hash or history.index"
@@ -205,41 +231,50 @@ pkg_config() {
 			eerror "Use your backup to restore the history database."
 		fi
 	else
-		einfo "${NEWSSPOOL_DIR}/db/history found. Leaving history database as it is."
+		einfo "${NEWSSPOOL_DIR}/db/history found."
+		einfo "Leaving history database as it is."
 	fi
 
-	INNCFG_INODES="$(sed -e '/innwatchspoolnodes/ ! d' /etc/news/inn.conf | sed -e 's/[^ ]*[ ]*\([^ ]*\)/\1/')"
-	INNSPOOL_INODES="$(df -Pi ${NEWSSPOOL_DIR} | sed -e 's/[^ ]*[ ]*\([^ ]*\).*/\1/' | sed -e '1 d')"
-	if [[ ${INNCFG_INODES} -gt ${INNSPOOL_INODES} ]]
-	then
+	INNCFG_INODES=$(
+		sed -e '/innwatchspoolnodes/ ! d' | \
+		sed -e 's/[^ ]*[ ]*\([^ ]*\)/\1/' \
+		/etc/news/inn.conf
+	)
+	INNSPOOL_INODES=$(
+		df -Pi ${NEWSSPOOL_DIR} | \
+			sed -e 's/[^ ]*[ ]*\([^ ]*\).*/\1/' | \
+			sed -e '1 d'
+	)
+	if [[ ${INNCFG_INODES} -gt ${INNSPOOL_INODES} ]]; then
 		ewarn "Setting innwatchspoolinodes to zero, because the filesystem behind"
 		ewarn "$NEWSSPOOL_DIR works without inodes."
 		ewarn
 		cp /etc/news/inn.conf /etc/news/inn.conf.OLD
 		einfo "A copy of your old inn.conf has been saved to /etc/news/inn.conf.OLD."
-		sed -i -e '/innwatchspoolnodes/ s/\([^ ]*\)\([ ]*\).*/\1\20/' /etc/news/inn.conf
+		sed -i /etc/news/inn.conf \
+			-e '/innwatchspoolnodes/ s/\([^ ]*\)\([ ]*\).*/\1\20/'
 		chown news:news /etc/news/inn.conf
 		chmod 644 /etc/news/inn.conf
 	fi
 
-	INNCHECK_LINES="$(su - news -c "/usr/$(get_libdir)/news/bin/inncheck | wc -l")"
-	if [[ ${INNCHECK_LINES} -gt 0 ]]
-	then
+	INNCHECK_LINES=$(
+		su - news -c "/usr/$(get_libdir)/news/bin/inncheck | wc -l"
+	)
+	if [[ ${INNCHECK_LINES} -gt 0 ]]; then
 		NEWS_ERRFLAG="1"
 		ewarn "inncheck most certainly found an error."
 		ewarn "Please check its output:"
 		eerror "`su - news -c /usr/$(get_libdir)/news/bin/inncheck`"
 	fi
 
-	if [[ ${NEWS_ERRFLAG} -gt 0 ]]
-	then
+	if [[ ${NEWS_ERRFLAG} -gt 0 ]]; then
 		eerror
-		eerror "There were one or more errors/warnings checking your configuration."
-		eerror "Please read inn's documentation and fix them accordingly."
+		eerror "There were one or more errors/warnings checking your"
+		eerror "configuration. Please read inn's documentation and"
+		eerror "fix them accordingly."
 	else
 		einfo
 		einfo "Inn configuration tests passed successfully."
-		einfo
-		ewarn "Please ensure you configured inn properly."
+		ewarn "Please ensure you have configured inn properly."
 	fi
 }

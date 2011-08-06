@@ -1,6 +1,15 @@
 # ChangeLog for net-nntp/inn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.37 2011/06/22 21:22:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.38 2011/08/06 03:01:33 jer Exp $
+
+*inn-2.5.2-r1 (06 Aug 2011)
+
+  06 Aug 2011; Jeroen Roovers <jer@gentoo.org> -files/inn-2.4.3-berkdb45.patch,
+  -files/inn-2.4.3-configure.patch, -files/inn-2.4.3-runtests.patch,
+  -inn-2.5.1.ebuild, +inn-2.5.2-r1.ebuild:
+  Clean up ebuild: fix chown arguments by Agostino Sarubbo (bug #362617), long
+  lines, nearly incomprehensible brace expansion arguments, spelling, die()
+  more often, remove unused eclass.
 
   22 Jun 2011; Brent Baude <ranger@gentoo.org> inn-2.5.2.ebuild:
   Marking inn-2.5.2 ppc for bug 362517
