@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/telepathy-sofiasip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-sofiasip/ChangeLog,v 1.24 2011/06/15 19:38:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-sofiasip/ChangeLog,v 1.25 2011/08/06 09:00:16 zmedico Exp $
+
+  06 Aug 2011; Zac Medico <zmedico@gentoo.org> telepathy-sofiasip-0.6.8.ebuild:
+  Add ~x86-linux keyword.
 
 *telepathy-sofiasip-0.6.8 (15 Jun 2011)
 
