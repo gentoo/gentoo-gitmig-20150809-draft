@@ -1,18 +1,18 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.10.0.ebuild,v 1.2 2011/08/05 06:46:32 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.10.0.ebuild,v 1.3 2011/08/06 03:45:01 radhermit Exp $
 
 EAPI=4
 
 inherit eutils
 
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 DESCRIPTION="A statistical-algorithmic hybrid anti-spam filter"
 HOMEPAGE="http://dspam.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
-DRIVERS_IUSE="hash mysql postgres sqlite"
+DRIVERS_IUSE="+hash mysql postgres sqlite"
 SCALES_IUSE="domain-scale large-scale"
 IUSE="clamav daemon debug ldap static-libs syslog virtual-users user-homedirs ${DRIVERS_IUSE} ${SCALES_IUSE}"
 
@@ -37,8 +37,8 @@ RDEPEND="
 # - user-homedirs does not work with virtual-users
 # - virtual-users does not work with hash or sqlite
 REQUIRED_USE="
-	|| ( ${DRIVERS_IUSE} )
-	static-libs? ( ^^ ( ${DRIVERS_IUSE} ) )
+	|| ( ${DRIVERS_IUSE//+} )
+	static-libs? ( ^^ ( ${DRIVERS_IUSE//+} ) )
 	domain-scale? ( !large-scale )
 	large-scale? ( !domain-scale )
 	virtual-users? ( !user-homedirs )
