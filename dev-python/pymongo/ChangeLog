@@ -1,10 +1,27 @@
 # ChangeLog for dev-python/pymongo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/ChangeLog,v 1.4 2011/07/06 14:30:30 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/ChangeLog,v 1.5 2011/08/06 16:23:33 hwoarang Exp $
+
+  06 Aug 2011; Markos Chandras <hwoarang@gentoo.org> ChangeLog:
+  Restore Changelog history
 
 *pymongo-1.11-r1 (06 Jul 2011)
 
   06 Jul 2011; Ultrabug <ultrabug@gentoo.org> +pymongo-1.11-r1.ebuild,
   metadata.xml:
   Add mod_wsgi to IUSE to fix working problems with mod_wsgi.
+
+*pymongo-1.11 (12 May 2011)
+
+  12 May 2011; Ultrabug <ultrabug@gentoo.org> +pymongo-1.11.ebuild:
+  Version bump, thanks to Mohamed Elmi Guessod for spotting.
+
+  26 Apr 2011; Ultrabug <ultrabug@gentoo.org> pymongo-1.10.1.ebuild:
+  Add a warning for test phase, wrt #364671.
+
+*pymongo-1.10.1 (11 Apr 2011)
+
+  11 Apr 2011; Ultrabug <ultrabug@gentoo.org> +pymongo-1.10.1.ebuild,
+  +metadata.xml:
+  initial import from sunrise, ebuild written by Johan Bergström.
 
