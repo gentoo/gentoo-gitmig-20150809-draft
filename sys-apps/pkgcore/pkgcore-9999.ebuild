@@ -1,19 +1,20 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.6.5-r1.ebuild,v 1.2 2011/08/06 08:59:27 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-9999.ebuild,v 1.1 2011/08/06 08:59:27 ferringb Exp $
 
 EAPI="3"
 DISTUTILS_SRC_TEST="setup.py"
 
-inherit eutils distutils
+EGIT_REPO_URI="http://googlecode.com/p/pkgcore"
+inherit distutils git-2
 
 DESCRIPTION="pkgcore package manager"
 HOMEPAGE="http://pkgcore.googlecode.com/"
-SRC_URI="http://pkgcore.googlecode.com/files/${P}.tar.bz2"
+SRC_URI=""
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS=""
 IUSE="doc"
 
 RDEPEND=">=dev-lang/python-2.4
@@ -29,10 +30,6 @@ pkg_setup() {
 	# disable snakeoil 2to3 caching...
 	unset PY2TO3_CACHEDIR
 	python_pkg_setup
-}
-
-src_prepare() {
-	epatch "${FILESDIR}/0.6.5-fix-screwup-in-incrementals-removal.patch"
 }
 
 src_compile() {
