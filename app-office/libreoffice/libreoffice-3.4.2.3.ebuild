@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.20 2011/08/06 08:49:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.21 2011/08/06 16:48:01 mattst88 Exp $
 
 EAPI=3
 
@@ -496,7 +496,7 @@ src_configure() {
 		--with-external-hyph-dir="${EPREFIX}/usr/share/myspell" \
 		--with-external-thes-dir="${EPREFIX}/usr/share/myspell" \
 		--with-external-tar="${DISTDIR}" \
-		--with-lang="${LINGUAS_OOO}" \
+		--with-lang="${LO_LANGUAGES}" \
 		--with-max-jobs=${jbs} \
 		--with-num-cpus=1 \
 		--with-theme="${themes}" \
