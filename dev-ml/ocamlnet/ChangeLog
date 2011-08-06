@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/ocamlnet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.51 2011/06/26 17:12:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ChangeLog,v 1.52 2011/08/06 09:46:27 aballier Exp $
+
+*ocamlnet-3.3.7 (06 Aug 2011)
+
+  06 Aug 2011; Alexis Ballier <aballier@gentoo.org> +ocamlnet-3.3.7.ebuild:
+  version bump
 
   26 Jun 2011; Alexis Ballier <aballier@gentoo.org>
   -ocamlnet-3.3.0_beta1.ebuild:
