@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/enable-4.0.0.ebuild,v 1.1 2011/08/03 23:52:32 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/enable-4.0.0.ebuild,v 1.2 2011/08/06 16:46:42 bicatali Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -49,10 +49,7 @@ src_compile() {
 }
 
 src_test() {
-	testing() {
-		PYTHONPATH="$(ls -d ${S}/build-${PYTHON_ABI}/lib*)" distutils_src_test
-	}
-	VIRTUALX_COMMAND="testing" virtualmake
+	VIRTUALX_COMMAND="distutils_src_make" virtualmake
 }
 
 src_install() {
