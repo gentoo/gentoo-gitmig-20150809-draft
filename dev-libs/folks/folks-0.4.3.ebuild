@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.4.3.ebuild,v 1.3 2011/07/14 10:04:55 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.4.3.ebuild,v 1.4 2011/08/06 11:17:39 zmedico Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -12,7 +12,7 @@ HOMEPAGE="http://telepathy.freedesktop.org/wiki/Folks"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc x86 ~x86-linux"
 IUSE=""
 
 # FIXME: links against system libfolks instead of the built one
