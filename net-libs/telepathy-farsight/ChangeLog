@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/telepathy-farsight
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farsight/ChangeLog,v 1.24 2011/07/14 10:51:27 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farsight/ChangeLog,v 1.25 2011/08/06 11:21:11 zmedico Exp $
+
+  06 Aug 2011; Zac Medico <zmedico@gentoo.org>
+  telepathy-farsight-0.0.17.ebuild:
+  Add ~x86-linux keyword.
 
   14 Jul 2011; Thomas Kahle <tomka@gentoo.org>
   telepathy-farsight-0.0.17.ebuild:
