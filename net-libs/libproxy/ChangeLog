@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.67 2011/07/31 18:46:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.68 2011/08/06 09:05:25 zmedico Exp $
+
+  06 Aug 2011; Zac Medico <zmedico@gentoo.org> libproxy-0.4.6-r3.ebuild:
+  Add ~x86-linux keyword.
 
   31 Jul 2011; Jeroen Roovers <jer@gentoo.org> libproxy-0.4.6-r3.ebuild:
   Stable for HPPA (bug #372813).
