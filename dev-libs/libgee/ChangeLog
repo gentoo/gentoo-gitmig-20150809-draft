@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgee
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/ChangeLog,v 1.25 2011/03/22 18:53:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/ChangeLog,v 1.26 2011/08/06 10:52:16 zmedico Exp $
+
+  06 Aug 2011; Zac Medico <zmedico@gentoo.org> libgee-0.6.1.ebuild:
+  Add ~x86-linux keyword.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> libgee-0.6.1.ebuild:
   Marking libgee-0.6.1 ppc stable for bug 353436
