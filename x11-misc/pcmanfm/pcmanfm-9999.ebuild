@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-9999.ebuild,v 1.9 2011/06/25 18:19:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-9999.ebuild,v 1.10 2011/08/06 07:20:00 zmedico Exp $
 
-EAPI=2
+EAPI=3
 
 if [[ ${PV} == 9999 ]]; then
 	EGIT_REPO_URI="git://pcmanfm.git.sourceforge.net/gitroot/pcmanfm/${PN}"
@@ -10,7 +10,7 @@ if [[ ${PV} == 9999 ]]; then
 	SRC_URI=""
 else
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm ~ppc ~x86"
+	KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-linux"
 fi
 
 inherit fdo-mime
@@ -42,7 +42,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--sysconfdir=/etc \
+		--sysconfdir="${EPREFIX}/etc" \
 		$(use_enable debug)
 }
 
