@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rb-inotify
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-inotify/ChangeLog,v 1.2 2011/06/08 19:28:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-inotify/ChangeLog,v 1.3 2011/08/06 06:18:30 graaff Exp $
+
+*rb-inotify-0.8.6 (06 Aug 2011)
+
+  06 Aug 2011; Hans de Graaff <graaff@gentoo.org> +rb-inotify-0.8.6.ebuild:
+  Version bump.
 
   08 Jun 2011; Hans de Graaff <graaff@gentoo.org> rb-inotify-0.8.5.ebuild:
   Add jruby
