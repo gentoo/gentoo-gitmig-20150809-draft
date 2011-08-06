@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/amqp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amqp/ChangeLog,v 1.1 2011/07/25 08:58:40 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amqp/ChangeLog,v 1.2 2011/08/06 14:08:11 graaff Exp $
+
+*amqp-0.6.7-r1 (06 Aug 2011)
+
+  06 Aug 2011; Hans de Graaff <graaff@gentoo.org> +amqp-0.6.7-r1.ebuild:
+  Run specs. Install documentation and examples. Add ree18.
 
 *amqp-0.6.7 (25 Jul 2011)
 
