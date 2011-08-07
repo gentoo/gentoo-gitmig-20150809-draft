@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.274 2011/08/07 12:05:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.275 2011/08/07 15:25:11 maekke Exp $
+
+  07 Aug 2011; Markus Meier <maekke@gentoo.org> postfix-2.8.3-r2.ebuild:
+  arm stable, bug #376373
 
   07 Aug 2011; Markus Meier <maekke@gentoo.org> postfix-2.8.3-r2.ebuild:
   x86 stable, bug #376373
