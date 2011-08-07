@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-hcidump
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/ChangeLog,v 1.50 2011/08/02 15:02:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/ChangeLog,v 1.51 2011/08/07 03:15:55 phajdan.jr Exp $
+
+  07 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  bluez-hcidump-2.0.ebuild:
+  x86 stable wrt bug #377029
 
   02 Aug 2011; Markos Chandras <hwoarang@gentoo.org> bluez-hcidump-2.0.ebuild:
   Stable on amd64 wrt bug #377029
