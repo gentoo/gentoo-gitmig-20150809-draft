@@ -1,17 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-1.0.0_beta1.ebuild,v 1.3 2011/02/02 04:54:05 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-1.0.0.ebuild,v 1.1 2011/08/07 17:39:12 dilfridge Exp $
 
-EAPI=3
+EAPI=4
 
 inherit kde4-base
 
-MY_PV="0.9.90"
-MY_P="${PN}-${MY_PV}"
-
-DESCRIPTION="A frontend to various audio converters"
+DESCRIPTION="Frontend to various audio converters"
 HOMEPAGE="http://www.kde-apps.org/content/show.php/soundKonverter?content=29024"
-SRC_URI="https://api.opensuse.org/public/source/home:HessiJames/${PN}-kde4/${MY_P}.tar.bz2"
+SRC_URI="http://kde-apps.org/CONTENT/content-files/29024-${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="4"
@@ -25,5 +22,3 @@ DEPEND="
 	media-sound/cdparanoia
 "
 RDEPEND="${DEPEND}"
-
-S=${WORKDIR}/${MY_P}
