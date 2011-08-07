@@ -1,0 +1,9 @@
+
+
+*selinux-pan-2.20101213-r1 (07 Aug 2011)
+
+  07 Aug 2011; Anthony G. Basile <blueness@gentoo.org>
+  +files/fix-apps-pan-r1.patch, +selinux-pan-2.20101213-r1.ebuild,
+  +metadata.xml:
+  Initial commit policy for pan
+
