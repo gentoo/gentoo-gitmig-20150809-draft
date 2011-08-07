@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdiscid
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdiscid/ChangeLog,v 1.18 2010/01/21 21:49:56 abcd Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdiscid/ChangeLog,v 1.19 2011/08/07 19:45:50 radhermit Exp $
+
+  07 Aug 2011; Tim Harder <radhermit@gentoo.org> libdiscid-0.1.1.ebuild,
+  libdiscid-0.2.2.ebuild:
+  Update HOMEPAGE
 
   21 Jan 2010; Jonathan Callen <abcd@gentoo.org> libdiscid-0.2.2.ebuild:
   Keyword ~amd64-linux/~x86-linux

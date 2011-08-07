@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdiscid/libdiscid-0.2.2.ebuild,v 1.5 2010/01/21 21:49:56 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdiscid/libdiscid-0.2.2.ebuild,v 1.6 2011/08/07 19:45:50 radhermit Exp $
 
 DESCRIPTION="Client library to create MusicBrainz enabled tagging applications"
-HOMEPAGE="http://musicbrainz.org/products/libdiscid/"
+HOMEPAGE="http://musicbrainz.org/doc/libdiscid"
 SRC_URI="http://users.musicbrainz.org/~matt/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
