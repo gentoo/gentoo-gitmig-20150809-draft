@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/mongrel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/ChangeLog,v 1.45 2011/07/23 14:12:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel/ChangeLog,v 1.46 2011/08/07 14:50:31 armin76 Exp $
+
+  07 Aug 2011; Raúl Porcel <armin76@gentoo.org> mongrel-1.1.5-r2.ebuild,
+  mongrel-1.1.5-r3.ebuild:
+  Drop sparc keyword
 
   23 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> mongrel-1.1.5-r3.ebuild:
   ppc/ppc64 stable wrt #375435
