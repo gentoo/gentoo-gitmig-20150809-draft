@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bison
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.106 2011/07/31 17:26:47 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.107 2011/08/07 23:08:38 vapier Exp $
+
+  07 Aug 2011; Mike Frysinger <vapier@gentoo.org> bison-2.5.ebuild:
+  Clean up dead yacc symlink on unmerge #377469 by Michael.
 
   31 Jul 2011; Matt Turner <mattst88@gentoo.org> bison-2.5.ebuild:
   Bump m4 requirement to 1.4.16, bug 375637. Also move it from RDEPEND back to
