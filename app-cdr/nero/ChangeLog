@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/nero
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.49 2010/03/23 21:35:07 beandog Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.50 2011/08/07 13:42:12 xarthisius Exp $
+
+*nero-4.0.0.0b (07 Aug 2011)
+
+  07 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> -nero-4.0.0.0-r1.ebuild,
+  +nero-4.0.0.0b.ebuild:
+  Version bump wrt #349594 by Martin Mokrejš <mmokrejs@fold.natur.cuni.cz>,
+  fix QA warning wrt #311025 by Doktor Notor <notordoktor@gmail.com>. Drop old
 
 *nero-4.0.0.0-r1 (23 Mar 2010)
 
