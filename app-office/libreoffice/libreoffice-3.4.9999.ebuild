@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999.ebuild,v 1.10 2011/08/07 14:39:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999.ebuild,v 1.11 2011/08/07 19:01:01 scarabeus Exp $
 
 EAPI=3
 
@@ -31,9 +31,11 @@ DESCRIPTION="LibreOffice, a full office productivity suite."
 HOMEPAGE="http://www.libreoffice.org"
 SRC_URI="branding? ( http://dev.gentooexperimental.org/~scarabeus/${BRANDING} )"
 
-# Split modules following git/tarballs
-# Core MUST be first!
-MODULES="core binfilter dictionaries help translations"
+# Shiny split sources with so many packages...
+# Bootstrap MUST be first!
+MODULES="bootstrap artwork base calc components extensions extras filters help
+impress libs-core libs-extern libs-extern-sys libs-gui postprocess sdk testing
+ure writer translations"
 # Only release has the tarballs
 if [[ ${PV} != *9999* ]]; then
 	for i in ${DEV_URI}; do
@@ -247,7 +249,7 @@ PATCHES=(
 #	nsplugin? ( gtk )
 #"
 
-S="${WORKDIR}/${PN}-core-${PV}"
+S="${WORKDIR}/${PN}-bootstrap-${PV}"
 
 pkg_setup() {
 	java-pkg-opt-2_pkg_setup
@@ -308,7 +310,7 @@ src_unpack() {
 	if [[ ${PV} != *9999* ]]; then
 		for mod in ${MODULES}; do
 			unpack "${PN}-${mod}-${PV}.tar.bz2"
-			if [[ ${mod} != core ]]; then
+			if [[ ${mod} != bootstrap ]]; then
 				mv -n "${WORKDIR}/${PN}-${mod}-${PV}"/* "${S}"
 				rm -rf "${WORKDIR}/${PN}-${mod}-${PV}"
 			fi
@@ -322,7 +324,7 @@ src_unpack() {
 			EGIT_REPO_URI="git://anongit.freedesktop.org/${PN}/${mod}"
 			EGIT_NOUNPACK="true"
 			git-2_src_unpack
-			if [[ ${mod} != core ]]; then
+			if [[ ${mod} != bootstrap ]]; then
 				mv -n "${WORKDIR}/${PN}-${mod}-${PV}"/* "${S}"
 				rm -rf "${WORKDIR}/${PN}-${mod}-${PV}"
 			fi
