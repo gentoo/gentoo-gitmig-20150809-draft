@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgintex/pidgintex-1.1.1.ebuild,v 1.3 2010/01/08 17:08:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgintex/pidgintex-1.1.1.ebuild,v 1.4 2011/08/07 10:41:22 hwoarang Exp $
 
 EAPI="2"
 inherit toolchain-funcs multilib
@@ -13,7 +13,7 @@ SRC_URI="http://pidgintex.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND="net-im/pidgin[gtk]

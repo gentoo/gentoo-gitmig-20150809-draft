@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/pidgintex
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgintex/ChangeLog,v 1.2 2010/01/08 09:11:06 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgintex/ChangeLog,v 1.3 2011/08/07 10:41:22 hwoarang Exp $
+
+  07 Aug 2011; Markos Chandras <hwoarang@gentoo.org> pidgintex-1.1.1.ebuild:
+  Stable on amd64 wrt bug #377911
 
   08 Jan 2010; Peter Volkov <pva@gentoo.org> pidgintex-1.1.1.ebuild:
   Added elog for possible cause why this plugin may not work.
