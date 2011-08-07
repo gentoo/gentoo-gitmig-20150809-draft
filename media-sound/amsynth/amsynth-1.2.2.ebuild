@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.2.2.ebuild,v 1.2 2011/03/28 18:17:43 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.2.2.ebuild,v 1.3 2011/08/07 17:29:57 armin76 Exp $
 
 EAPI=2
 MY_P=${P/ams/amS}
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/amsynthe/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="alsa debug jack oss sndfile"
 
 RDEPEND="dev-cpp/gtkmm:2.4
