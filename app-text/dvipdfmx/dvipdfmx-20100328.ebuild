@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20100328.ebuild,v 1.7 2011/02/08 17:57:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfmx/dvipdfmx-20100328.ebuild,v 1.8 2011/08/07 17:49:07 armin76 Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="http://project.ktug.or.kr/${PN}/snapshot/latest/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ppc ppc64 ~s390 ~sh sparc x86"
 IUSE=""
 
 DEPEND="app-text/libpaper
