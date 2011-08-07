@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/linecache
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/linecache/ChangeLog,v 1.16 2011/07/31 16:50:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/linecache/ChangeLog,v 1.17 2011/08/07 12:07:36 maekke Exp $
+
+  07 Aug 2011; Markus Meier <maekke@gentoo.org> linecache-0.45.ebuild,
+  linecache-0.46.ebuild:
+  add ~x86, bug #376053
 
   31 Jul 2011; Raúl Porcel <armin76@gentoo.org> linecache-0.43-r2.ebuild,
   linecache-0.45.ebuild, linecache-0.46.ebuild:
