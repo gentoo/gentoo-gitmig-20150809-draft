@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librapi2/librapi2-0.15.2.ebuild,v 1.3 2011/05/21 05:33:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librapi2/librapi2-0.15.2.ebuild,v 1.4 2011/08/07 11:40:11 ssuominen Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="python? 2:2.6"
 
-inherit python
+inherit autotools eutils python
 
 DESCRIPTION="A library for SynCE"
 HOMEPAGE="http://www.synce.org/"
@@ -28,6 +28,11 @@ pkg_setup() {
 		python_set_active_version 2
 		python_pkg_setup
 	fi
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-underlinking.patch
+	AT_M4DIR="m4" eautoreconf
 }
 
 src_configure() {
