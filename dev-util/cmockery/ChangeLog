@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmockery
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmockery/ChangeLog,v 1.5 2011/07/15 10:42:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmockery/ChangeLog,v 1.6 2011/08/07 14:19:52 armin76 Exp $
+
+  07 Aug 2011; Raúl Porcel <armin76@gentoo.org> cmockery-0.1.2.ebuild:
+  Add ~s390/~sparc wrt #374401
 
   15 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> cmockery-0.1.2.ebuild:
   Marked ~ppc/~ppc64 wrt #374401
