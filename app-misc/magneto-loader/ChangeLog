@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/magneto-loader
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/magneto-loader/ChangeLog,v 1.2 2011/08/02 16:56:38 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/magneto-loader/ChangeLog,v 1.3 2011/08/07 16:48:44 lxnay Exp $
+
+*magneto-loader-1.0_rc34 (07 Aug 2011)
+
+  07 Aug 2011; Fabio Erculiani <lxnay@gentoo.org>
+  +magneto-loader-1.0_rc34.ebuild:
+  version bump
 
 *magneto-loader-1.0_rc29 (02 Aug 2011)
 
