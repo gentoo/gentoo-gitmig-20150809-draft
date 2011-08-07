@@ -1,6 +1,9 @@
 # ChangeLog for www-client/pybugz
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.92 2011/07/16 17:56:21 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.93 2011/08/07 15:53:33 jer Exp $
+
+  07 Aug 2011; Jeroen Roovers <jer@gentoo.org> pybugz-0.9.3.ebuild:
+  Stable for HPPA (bug #375137).
 
   16 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> pybugz-0.9.3.ebuild:
   ppc/ppc64 stable wrt #375137
