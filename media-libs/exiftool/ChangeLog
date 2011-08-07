@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/exiftool
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/ChangeLog,v 1.99 2011/07/24 13:03:03 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/ChangeLog,v 1.100 2011/08/07 14:57:55 armin76 Exp $
+
+  07 Aug 2011; Raúl Porcel <armin76@gentoo.org> exiftool-8.50.ebuild:
+  sparc stable wrt #373077
 
   24 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> exiftool-8.50.ebuild:
   ppc64 stable wrt #373077
