@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.0_rc3-r1.ebuild,v 1.2 2011/08/07 20:12:39 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.11.ebuild,v 1.1 2011/08/07 20:12:39 polynomial-c Exp $
 
 EAPI=4
 
@@ -11,29 +11,29 @@ MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="Library bits of the samba network filesystem"
 HOMEPAGE="http://www.samba.org/"
-SRC_URI="mirror://samba/rc/${MY_P}.tar.gz"
+SRC_URI="mirror://samba/${P}.tar.gz
+	http://dev.gentoo.org/~dagger/files/smb_traffic_analyzer_v2.diff.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="acl addns ads +aio avahi caps +client cluster cups debug doc examples fam
-	ldap ldb +netapi pam quota +readline +server +smbclient smbsharemodes
+	ldap ldb +netapi pam quota +readline +server +smbclient smbsharemodes smbtav2
 	swat syslog winbind"
 
 DEPEND="dev-libs/popt
 	!net-fs/samba-client
 	!net-fs/samba-libs
 	!net-fs/samba-server
-	>=sys-libs/talloc-2.0.5
-	>=sys-libs/tdb-1.2.9
+	!net-fs/cifs-utils
+	sys-libs/talloc
+	sys-libs/tdb
 	virtual/libiconv
 	ads? ( virtual/krb5 sys-fs/e2fsprogs
-		client? ( sys-apps/keyutils
-			net-fs/cifs-utils[ads] ) )
+		client? ( sys-apps/keyutils ) )
 	avahi? ( net-dns/avahi[dbus] )
 	caps? ( sys-libs/libcap )
 	client? ( !net-fs/mount-cifs
-		dev-libs/iniparser
-		net-fs/cifs-utils )
+		dev-libs/iniparser )
 	cluster? ( >=dev-db/ctdb-1.0.114_p1 )
 	cups? ( net-print/cups )
 	debug? ( dev-libs/dmalloc )
@@ -75,8 +75,9 @@ pkg_setup() {
 	if use server ; then
 		SBINPROGS="${SBINPROGS} bin/smbd bin/nmbd"
 		BINPROGS="${BINPROGS} bin/testparm bin/smbstatus bin/smbcontrol bin/pdbedit
-			bin/profiles bin/sharesec bin/eventlogadm bin/smbta-util"
+			bin/profiles bin/sharesec bin/eventlogadm"
 
+		use smbtav2 && BINPROGS="${BINPROGS} bin/smbta-util"
 		use swat && SBINPROGS="${SBINPROGS} bin/swat"
 		use winbind && SBINPROGS="${SBINPROGS} bin/winbindd"
 		use ads && use winbind && KRBPLUGIN="${KRBPLUGIN} bin/winbind_krb5_locator"
@@ -87,6 +88,7 @@ pkg_setup() {
 			bin/nmblookup bin/smbpasswd bin/rpcclient bin/smbcacls bin/smbcquotas
 			bin/ntlm_auth"
 
+		use ads && SBINPROGS="${SBINPROGS} bin/cifs.upcall"
 	fi
 
 	use cups && BINPROGS="${BINPROGS} bin/smbspool"
@@ -117,7 +119,11 @@ src_prepare() {
 	sed -i \
 		-e 's|LDSHFLAGS="|LDSHFLAGS="\\${LDFLAGS} |g' \
 		configure || die "sed failed"
-	cd "${WORKDIR}/${MY_P}" && epatch "${CONFDIR}"/smb.conf.default.patch
+
+	epatch "${CONFDIR}"/${PN}-3.5.6-kerberos-dummy.patch
+	use smbtav2 && cd "${WORKDIR}/${P}" && epatch "${WORKDIR}"/smb_traffic_analyzer_v2.diff
+	cd "${WORKDIR}/${MY_P}" && epatch "${CONFDIR}"/${PN}-3.5.8-uclib-build.patch
+	epatch "${CONFDIR}"/smb.conf.default.patch
 }
 
 src_configure() {
@@ -128,6 +134,13 @@ src_configure() {
 
 	# Upstream refuses to make this configurable
 	use caps && export ac_cv_header_sys_capability_h=yes || export ac_cv_header_sys_capability_h=no
+
+	# use_with doesn't accept 2 USE-flags
+	if use client && use ads ; then
+		myconf+=" --with-cifsupcall"
+	else
+		myconf+=" --without-cifsupcall"
+	fi
 
 	# Notes:
 	# - automount is only needed in conjunction with NIS and we don't have that
@@ -165,6 +178,8 @@ src_configure() {
 		$(use_with ads krb5 /usr) \
 		$(use_with ads dnsupdate) \
 		--without-automount \
+		$(use_with client cifsmount) \
+		$(use_with client cifsumount) \
 		$(use_with pam) \
 		$(use_with pam pam_smbpass) \
 		$(use_with syslog) \
@@ -236,6 +251,10 @@ src_compile() {
 		emake ${KRBPLUGIN}${PLUGINEXT}
 	fi
 
+	if use client ; then
+		einfo "make {,u}mount.cifs"
+		emake bin/{,u}mount.cifs
+	fi
 }
 
 src_install() {
@@ -356,7 +375,14 @@ src_install() {
 			script/installswat.sh "${D}" "${ROOT}/usr/share/doc/${PF}/swat" "${S}"
 		fi
 
-		dodoc ../MAINTAINERS.txt ../README* ../Roadmap ../WHATSNEW.txt ../docs/THANKS
+		dodoc ../MAINTAINERS ../README* ../Roadmap ../WHATSNEW.txt ../docs/THANKS
+	fi
+
+	# install client files ({u,}mount.cifs into /)
+	if use client ; then
+		into /
+		dosbin bin/{u,}mount.cifs
+		doman ../docs/manpages/{u,}mount.cifs.8
 	fi
 
 	# install the spooler to cups
