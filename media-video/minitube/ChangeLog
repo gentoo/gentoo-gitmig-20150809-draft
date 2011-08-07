@@ -1,6 +1,14 @@
 # ChangeLog for media-video/minitube
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.55 2011/08/07 12:09:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.56 2011/08/07 13:46:37 hwoarang Exp $
+
+*minitube-1.5-r1 (07 Aug 2011)
+
+  07 Aug 2011; Markos Chandras <hwoarang@gentoo.org> -minitube-1.5.ebuild,
+  +minitube-1.5-r1.ebuild, -files/minitube-1.5-non-static-filename.patch,
+  +files/minitube-1.5-use-correct-env-variable.patch:
+  Remove security fix due to regressions. Use temporary patch to override the
+  wrong environmental variable. Force revbump to stable
 
   07 Aug 2011; Markos Chandras <hwoarang@gentoo.org> -minitube-1.4.ebuild,
   minitube-1.5.ebuild, +files/minitube-1.5-non-static-filename.patch:

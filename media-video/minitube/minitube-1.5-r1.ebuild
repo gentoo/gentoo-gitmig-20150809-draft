@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-1.5.ebuild,v 1.3 2011/08/07 12:09:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-1.5-r1.ebuild,v 1.1 2011/08/07 13:46:37 hwoarang Exp $
 
 EAPI="4"
 LANGS="ar es pt_BR pt_PT uk"
@@ -35,7 +35,7 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${PN}"
 
 PATCHES=(
-	"${FILESDIR}"/${P}-non-static-filename.patch
+	"${FILESDIR}"/${P}-use-correct-env-variable.patch
 )
 
 src_install() {
