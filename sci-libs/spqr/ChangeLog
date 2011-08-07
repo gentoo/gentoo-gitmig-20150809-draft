@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/spqr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/spqr/ChangeLog,v 1.6 2011/02/23 20:16:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/spqr/ChangeLog,v 1.7 2011/08/07 03:47:10 bicatali Exp $
+
+*spqr-1.2.2 (07 Aug 2011)
+
+  07 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  +files/1.2.2-autotools.patch, -spqr-1.1.0.ebuild, -spqr-1.1.2.ebuild,
+  -spqr-1.2.0.ebuild, +spqr-1.2.2.ebuild:
+  Version bump
 
 *spqr-1.2.1 (23 Feb 2011)
 

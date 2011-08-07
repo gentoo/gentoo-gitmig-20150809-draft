@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/spqr/spqr-1.2.0.ebuild,v 1.2 2010/12/25 18:51:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/spqr/spqr-1.2.2.ebuild,v 1.1 2011/08/07 03:47:10 bicatali Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils autotools
 
 MY_PN=SPQR
@@ -23,10 +23,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_PN}"
 
 src_prepare() {
-	cd "${WORKDIR}"
-	epatch "${FILESDIR}"/${PN}-1.1.0-autotools.patch
-	epatch "${FILESDIR}"/${PN}-1.1.0-gcc43.patch
-	cd "${S}"
+	epatch "${FILESDIR}"/${PV}-autotools.patch
 	eautoreconf
 }
 
@@ -38,10 +35,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc README.txt Doc/ChangeLog || die "dodoc failed"
-	if use doc; then
-		insinto /usr/share/doc/${PF}
-		doins Doc/*.pdf || die
-	fi
+	default
+	dodoc README.txt Doc/ChangeLog
+	use doc && doins Doc/*.pdf
 }
