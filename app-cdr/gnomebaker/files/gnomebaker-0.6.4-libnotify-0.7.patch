@@ -1,5 +1,5 @@
---- src/gblibnotify.c
-+++ src/gblibnotify.c
+--- a/src/gblibnotify.c
++++ b/src/gblibnotify.c
 @@ -87,7 +87,15 @@
  #ifdef HAVE_LIBNOTIFY
  #if (LIBNOTIFY_VERSION_MINOR >= 3)

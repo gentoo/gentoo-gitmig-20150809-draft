@@ -1,6 +1,17 @@
 # ChangeLog for app-cdr/gnomebaker
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/ChangeLog,v 1.58 2011/03/27 09:59:46 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gnomebaker/ChangeLog,v 1.59 2011/08/07 16:48:41 xarthisius Exp $
+
+*gnomebaker-0.6.4-r1 (07 Aug 2011)
+
+  07 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  +gnomebaker-0.6.4-r1.ebuild, +files/gnomebaker-0.6.4-implicits.patch,
+  +files/gnomebaker-0.6.4-ldadd.patch,
+  files/gnomebaker-0.6.4-libnotify-0.7.patch,
+  +files/gnomebaker-0.6.4-mimetype.patch,
+  +files/gnomebaker-0.6.4-seldata.patch:
+  Apply fedora patches, fix implicits, simplify deps, bump to EAPI4. Fixes bug
+  272006
 
   27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   gnomebaker-0.6.4.ebuild:
