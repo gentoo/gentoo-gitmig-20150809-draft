@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.157 2011/02/11 18:50:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.158 2011/08/07 10:30:12 ssuominen Exp $
+
+*pwlib-1.10.10-r3 (07 Aug 2011)
+
+  07 Aug 2011; Samuli Suominen <ssuominen@gentoo.org> +pwlib-1.10.10-r3.ebuild:
+  Fix building with USE="v4l2" and linux-headers-2.6.38. Remove USE="v4l
+  ieee1394" wrt #290062, #359595 and #367085.
 
   11 Feb 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   As talked with the rest of the team, none of us is willing to maintain this.
