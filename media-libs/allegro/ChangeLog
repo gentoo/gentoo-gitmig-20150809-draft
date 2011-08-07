@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.107 2011/08/01 19:07:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.108 2011/08/07 17:08:59 armin76 Exp $
+
+  07 Aug 2011; Raúl Porcel <armin76@gentoo.org> allegro-4.4.1.1-r1.ebuild,
+  allegro-5.0.1.ebuild, allegro-5.0.3.ebuild:
+  Drop alpha/sparc keyword
 
   01 Aug 2011; Markus Meier <maekke@gentoo.org> allegro-5.0.3.ebuild:
   x86 stable, bug #375491
