@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.8.6-r1.ebuild,v 1.10 2011/08/04 16:29:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.8.6-r1.ebuild,v 1.11 2011/08/07 08:59:48 ssuominen Exp $
 
 EAPI="3"
 
-inherit alternatives gnome2 versionator
+inherit alternatives eutils gnome2 versionator
 
 MY_MAJORV=$(get_version_component_range 1-2)
 
@@ -27,7 +27,7 @@ RDEPEND="
 	>=gnome-base/librsvg-2.16:2
 	>=gnome-extra/libgsf-1.14.15
 	>=media-libs/libpng-1.2
-	virtual/jpeg:0
+	virtual/jpeg
 	>=x11-libs/cairo-1.8[X]
 	>=x11-libs/gtk+-2.14:2[cups?]
 	gnome? (
@@ -117,6 +117,8 @@ src_configure() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-libpng15.patch
+
 	gnome2_src_prepare
 
 	# install icon to pixmaps (bug #220097)
