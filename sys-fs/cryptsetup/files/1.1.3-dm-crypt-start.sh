@@ -266,6 +266,9 @@ if [[ -f ${conf_file} ]] && [[ -x /sbin/cryptsetup ]] ; then
 		# skip comments and blank lines
 		[[ ${targetline}\# == \#* ]] && continue
 
+		# skip service-specific openrc configs #377927
+		[[ ${targetline} == rc_* ]] && continue
+
 		# check for the start of a new target/swap
 		case ${targetline} in
 			target=*|swap=*)
