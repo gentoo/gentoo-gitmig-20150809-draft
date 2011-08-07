@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999.ebuild,v 1.8 2011/08/07 11:36:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999.ebuild,v 1.1 2011/08/07 11:36:07 scarabeus Exp $
 
 EAPI=3
 
@@ -30,7 +30,6 @@ unset SCM_ECLASS
 DESCRIPTION="LibreOffice, a full office productivity suite."
 HOMEPAGE="http://www.libreoffice.org"
 SRC_URI="branding? ( http://dev.gentooexperimental.org/~scarabeus/${BRANDING} )"
-
 
 # Split modules following git/tarballs
 # Core MUST be first!
@@ -109,7 +108,7 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="binfilter +branding cups custom-cflags dbus debug eds gnome graphite
-gstreamer gtk kde ldap mysql nsplugin odk offlinehelp opengl python templates
+gstreamer gtk kde ldap mysql nsplugin odk offlinehelp opengl svg templates
 test +vba webdav"
 LICENSE="LGPL-3"
 SLOT="0"
@@ -151,7 +150,6 @@ COMMON_DEPEND="
 	>=sys-libs/db-4.8
 	virtual/jpeg
 	>=x11-libs/cairo-1.0.2
-	x11-libs/libXaw
 	x11-libs/libXinerama
 	x11-libs/libXrandr
 	x11-libs/libXrender
@@ -162,7 +160,10 @@ COMMON_DEPEND="
 		>=x11-libs/gtk+-2.10:2
 		gnome-base/gconf:2
 	)
-	gtk? ( >=x11-libs/gtk+-2.10:2 )
+	gtk? (
+		>=x11-libs/gtk+-2.10:2
+		x11-libs/gtk+:3
+	)
 	graphite? ( media-gfx/graphite2 )
 	gstreamer? (
 		>=media-libs/gstreamer-0.10
@@ -182,6 +183,7 @@ COMMON_DEPEND="
 		>=dev-libs/nss-3.11-r1
 	)
 	opengl? ( virtual/opengl )
+	svg? ( gnome-base/librsvg )
 	webdav? ( net-libs/neon )
 "
 
@@ -209,6 +211,7 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/bison
 	sys-apps/coreutils
 	sys-devel/flex
+	sys-devel/gettext
 	sys-libs/zlib
 	x11-libs/libXtst
 	x11-proto/randrproto
@@ -229,14 +232,8 @@ PATCHES=(
 	"${FILESDIR}/sdext-presenter.diff"
 	"${FILESDIR}/${PN}-svx.patch"
 	"${FILESDIR}/${PN}-vbaobj-visibility-fix.patch"
-	"${FILESDIR}/${PN}-solenv-build-crash.patch"
-	"${FILESDIR}/${PN}-as-needed-gtk.patch"
-	"${FILESDIR}/${PN}-translate-toolkit-parallel-solenv.patch"
 	"${FILESDIR}/${PN}-gbuild-use-cxxflags.patch"
 	"${FILESDIR}/${PN}-installed-files-permissions.patch"
-	"${FILESDIR}/${PN}-check-for-avx.patch"
-	"${FILESDIR}/${PN}-append-no-avx.patch"
-	"${FILESDIR}/${PN}-32b-qt4-libdir.patch"
 	"${FILESDIR}/${PN}-binfilter-as-needed.patch"
 )
 
@@ -444,9 +441,9 @@ src_configure() {
 	#   only expections are mozilla and odbc/sane/xrender-header(s).
 	#   for jars the exception is db.jar controlled by --with-system-db
 	# --enable-unix-qstart-libpng: use libpng splashscreen that is faster
-	# --disable-broffice: do not use brazillian brand just be uniform
 	# --enable-cairo: ensure that cairo is always required
 	# --enable-*-link: link to the library rather than just dlopen on runtime
+	# --enable-release-build: build the libreoffice as release
 	# --disable-fetch-external: prevent dowloading during compile phase
 	# --disable-gnome-vfs: old gnome virtual fs support
 	# --disable-kdeab: kde3 adressbook
@@ -454,6 +451,7 @@ src_configure() {
 	# --disable-pch: precompiled headers cause build crashes
 	# --disable-rpath: relative runtime path is not desired
 	# --disable-static-gtk: ensure that gtk is linked dynamically
+	# --disable-ugly: disable ugly pieces of code
 	# --disable-zenity: disable build icon
 	# --with-extension-integration: enable any extension integration support
 	# --with-{max-jobs,num-cpus}: ensuring parallel building
@@ -465,15 +463,13 @@ src_configure() {
 		--with-system-jars \
 		--with-system-db \
 		--with-system-dicts \
-		--enable-cairo \
-		--enable-fontconfig \
+		--enable-cairo-canvas \
 		--enable-largefile \
 		--enable-randr \
 		--enable-randr-link \
+		--enable-release-build \
 		--enable-unix-qstart-libpng \
-		--enable-Xaw \
 		--enable-xrender-link \
-		--disable-broffice \
 		--disable-crashdump \
 		--disable-dependency-tracking \
 		--disable-epm \
@@ -486,6 +482,7 @@ src_configure() {
 		--disable-rpath \
 		--disable-static-gtk \
 		--disable-strip-solver \
+		--disable-ugly \
 		--disable-zenity \
 		--with-alloc=system \
 		--with-build-version="Gentoo official package" \
@@ -517,6 +514,7 @@ src_configure() {
 		$(use_enable graphite) \
 		$(use_enable gstreamer) \
 		$(use_enable gtk) \
+		$(use_enable gtk gtk3) \
 		$(use_enable gtk systray) \
 		$(use_enable java ext-scripting-beanshell) \
 		$(use_enable kde kde4) \
@@ -525,8 +523,8 @@ src_configure() {
 		$(use_enable nsplugin mozilla) \
 		$(use_enable odk) \
 		$(use_enable opengl) \
-		$(use_enable python) \
-		$(use_enable python ext-scripting-python) \
+		$(use_enable python python system) \
+		$(use_enable svg librsvg system) \
 		$(use_enable vba) \
 		$(use_enable vba activex-component) \
 		$(use_enable webdav neon) \

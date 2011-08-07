@@ -1,6 +1,13 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.88 2011/08/06 16:48:01 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.89 2011/08/07 11:36:07 scarabeus Exp $
+
+*libreoffice-9999 (07 Aug 2011)
+
+  07 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-3.4.9999.ebuild, +libreoffice-9999.ebuild:
+  Add live master branch ebuild (WON'T WORK, bugs only with attached patches),
+  adapt the live branch ebuild for new repo layout.
 
   06 Aug 2011; Matt Turner <mattst88@gentoo.org> libreoffice-3.4.2.3.ebuild,
   libreoffice-3.4.9999.ebuild:
