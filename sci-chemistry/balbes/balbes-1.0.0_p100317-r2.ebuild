@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/balbes/balbes-1.0.0_p100317-r2.ebuild,v 1.2 2011/08/07 03:07:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/balbes/balbes-1.0.0_p100317-r2.ebuild,v 1.3 2011/08/07 10:42:36 hwoarang Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ SRC_URI="
 	ftp://ftp.ccp4.ac.uk/ccp4/${CCP4VER}/ccp4-${CCP4VER}-core-src.tar.gz"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 LICENSE="ccp4"
 IUSE=""
 
