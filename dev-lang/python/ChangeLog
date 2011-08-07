@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.541 2011/08/05 11:39:01 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.542 2011/08/07 09:58:09 naota Exp $
+
+  07 Aug 2011; Naohiro Aota <naota@gentoo.org> python-2.6.7-r2.ebuild,
+  python-2.7.2-r2.ebuild, python-3.1.4-r2.ebuild, python-3.2-r2.ebuild:
+  Move more linux3 compat hack into kernel_linux check. Bug #374579
 
   05 Aug 2011; Naohiro Aota <naota@gentoo.org> python-2.6.7-r2.ebuild,
   python-2.7.2-r2.ebuild, python-3.1.4-r2.ebuild, python-3.2-r2.ebuild:
