@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amazon-ec2/amazon-ec2-0.9.17.ebuild,v 1.1 2011/07/21 10:00:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amazon-ec2/amazon-ec2-0.9.17.ebuild,v 1.2 2011/08/07 00:14:46 flameeyes Exp $
 
 EAPI=2
 
@@ -29,23 +29,17 @@ USE_RUBY=ruby18 \
 
 ruby_add_bdepend "
 	test? (
-		virtual/ruby-test-unit
+		dev-ruby/test-unit:2
 		>=dev-ruby/test-spec-0.10.0
 		>=dev-ruby/mocha-0.9.8
 		dev-ruby/yard
 	)"
-ruby_add_rdepend '>=dev-ruby/xml-simple-1.0.12'
+ruby_add_rdepend '
+	>=dev-ruby/xml-simple-1.0.12
+	virtual/ruby-ssl'
 
-each_ruby_prepare() {
-	case ${RUBY} in
-		*ruby19)
-			;;
-		*)
-			# Remove the reference to test-unit gem, since it's only
-			# available on Ruby 1.9.
-			sed -i -e '/^gem/s:^:#:' test/test_helper.rb || die
-			;;
-	esac
+all_ruby_prepare() {
+	epatch "${FILESDIR}"/${P}+ruby-1.9.2.patch
 
 	rm Gemfile || die
 	sed -i -e '/[Bb]undler/d' Rakefile || die
