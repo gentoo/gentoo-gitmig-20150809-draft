@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/cpufrequtils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.64 2011/08/06 12:28:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.65 2011/08/07 12:08:20 maekke Exp $
+
+  07 Aug 2011; Markus Meier <maekke@gentoo.org> cpufrequtils-008-r1.ebuild:
+  arm stable, bug #375921
 
   06 Aug 2011; Markus Meier <maekke@gentoo.org> cpufrequtils-008-r1.ebuild:
   x86 stable, bug #375921
