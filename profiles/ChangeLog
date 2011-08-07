@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5602 2011/08/07 00:37:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5603 2011/08/07 11:07:08 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Aug 2011; Anthony G. Basile <blueness@gentoo.org> base/package.mask,
+  features/selinux/package.mask, selinux/package.mask:
+  Added maskings and unmaskings for sec-policy/selinux-pan
 
   07 Aug 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Unmask some raptor:2 reverse dependencies like liblrdf and redland.
