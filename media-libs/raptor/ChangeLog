@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/raptor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.101 2011/08/05 20:12:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.102 2011/08/07 15:28:57 maekke Exp $
+
+  07 Aug 2011; Markus Meier <maekke@gentoo.org> raptor-1.4.21-r1.ebuild:
+  x86 stable, bug #376893
 
   05 Aug 2011; Jeroen Roovers <jer@gentoo.org> raptor-1.4.21-r1.ebuild:
   Stable for HPPA (bug #376893).
