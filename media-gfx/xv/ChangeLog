@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/xv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.102 2011/02/26 18:31:17 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.103 2011/08/07 09:55:19 ssuominen Exp $
+
+*xv-3.10a-r16 (07 Aug 2011)
+
+  07 Aug 2011; Samuli Suominen <ssuominen@gentoo.org> +xv-3.10a-r16.ebuild,
+  +files/xv-3.10a-libpng15.patch:
+  Fix building with libpng15 wrt #355883 by Mike Frysinger
 
   26 Feb 2011; Kevin McCarthy <signals@gentoo.org> xv-3.10a-r15.ebuild:
   Updated depends from media-libs/jpeg to virtual/jpeg
