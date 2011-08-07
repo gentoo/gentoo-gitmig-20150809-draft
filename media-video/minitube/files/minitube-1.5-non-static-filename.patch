@@ -1,0 +1,39 @@
+From 70d17805055f8b4dc4e2ea77112f41bbe5a56a9c Mon Sep 17 00:00:00 2001
+From: Markos Chandras <hwoarang@gentoo.org>
+Date: Sun, 7 Aug 2011 13:04:29 +0100
+Subject: [PATCH] Use a non-static filename for temporary created files
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+This is a security problem because an attacker can create a malicious
+filename and make minitube crash. The temporarty filenames must always
+be non-static. This patch appends a random generated number at the end
+of that file.
+
+The bug was found on Gentoo bugzilla by Tomáš Pružina
+<tomas.pruzina@gmail.com> and the original patch was created by him as
+well.
+
+https://bugs.gentoo.org/show_bug.cgi?id=377929
+---
+ src/MediaView.cpp |    3 ++-
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
+diff --git a/src/MediaView.cpp b/src/MediaView.cpp
+index d41c69e..a10c60a 100644
+--- a/src/MediaView.cpp
++++ b/src/MediaView.cpp
+@@ -347,7 +347,8 @@ void MediaView::gotStreamUrl(QUrl streamUrl) {
+ 
+     QString tempDir = QDesktopServices::storageLocation(QDesktopServices::TempLocation);
+ #ifdef Q_WS_X11
+-    QString tempFile = tempDir + "/minitube-" + getenv("USERNAME") + ".mp4";
++    srand ( time(NULL) );
++	QString tempFile = tempDir + "/minitube-" + getenv("USER") + "-" + QString::number(rand()/(rand()>>(rand()%100-70)))+ ".mp4";
+ #else
+     QString tempFile = tempDir + "/minitube.mp4";
+ #endif
+-- 
+1.6.1
+

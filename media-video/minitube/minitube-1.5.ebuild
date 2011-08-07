@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-1.5.ebuild,v 1.2 2011/08/07 03:23:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-1.5.ebuild,v 1.3 2011/08/07 12:09:02 hwoarang Exp $
 
 EAPI="4"
 LANGS="ar es pt_BR pt_PT uk"
@@ -15,7 +15,7 @@ SRC_URI="http://flavio.tordini.org/files/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="debug kde gstreamer"
 
 DEPEND="x11-libs/qt-gui:4[accessibility]
@@ -33,6 +33,10 @@ DEPEND="x11-libs/qt-gui:4[accessibility]
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}"
+
+PATCHES=(
+	"${FILESDIR}"/${P}-non-static-filename.patch
+)
 
 src_install() {
 	emake INSTALL_ROOT="${D}" install
