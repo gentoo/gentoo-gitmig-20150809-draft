@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/balbes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/balbes/ChangeLog,v 1.9 2011/07/23 12:29:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/balbes/ChangeLog,v 1.10 2011/08/07 03:07:05 phajdan.jr Exp $
+
+  07 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  balbes-1.0.0_p100317-r2.ebuild:
+  x86 stable wrt bug #375903
 
 *balbes-1.0.0_p100317-r2 (23 Jul 2011)
 
