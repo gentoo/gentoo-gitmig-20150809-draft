@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.359 2011/07/20 05:46:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.360 2011/08/07 23:35:28 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -382,9 +382,14 @@ epatch() {
 			echo "PATCH COMMAND:  patch -p${count} ${EPATCH_OPTS} < '${PATCH_TARGET}'"
 			echo
 			_epatch_draw_line "***** ${patchname} *****"
+			patch -p${count} ${EPATCH_OPTS} --dry-run -f < "${PATCH_TARGET}" 2>&1
+			ret=$?
+			echo
+			echo "patch program exited with status ${ret}"
+			exit ${ret}
 			) >> "${STDERR_TARGET}"
 
-			if (patch -p${count} ${EPATCH_OPTS} --dry-run -f < "${PATCH_TARGET}") >> "${STDERR_TARGET}" 2>&1 ; then
+			if [ $? -eq 0 ] ; then
 				(
 				_epatch_draw_line "***** ${patchname} *****"
 				echo
@@ -392,6 +397,10 @@ epatch() {
 				echo
 				_epatch_draw_line "***** ${patchname} *****"
 				patch -p${count} ${EPATCH_OPTS} < "${PATCH_TARGET}" 2>&1
+				ret=$?
+				echo
+				echo "patch program exited with status ${ret}"
+				exit ${ret}
 				) >> "${STDERR_TARGET}"
 
 				if [ $? -ne 0 ] ; then
