@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.15-r3.ebuild,v 1.1 2011/03/28 17:54:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib/imlib-1.9.15-r3.ebuild,v 1.2 2011/08/07 16:43:23 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -34,6 +34,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-bpp16-CVE-2007-3568.patch # security #201887
 	epatch "${FILESDIR}"/${P}-fix-rendering.patch #197489
 	epatch "${FILESDIR}"/${P}-asneeded.patch #207638
+	epatch "${FILESDIR}"/${P}-libpng15.patch #357167
 
 	mkdir m4 && cp "${WORKDIR}"/gtk-1-for-imlib.m4 m4
 
