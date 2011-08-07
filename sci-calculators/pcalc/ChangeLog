@@ -1,6 +1,10 @@
 # ChangeLog for sci-calculators/pcalc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-calculators/pcalc/ChangeLog,v 1.23 2009/12/13 07:52:26 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-calculators/pcalc/ChangeLog,v 1.24 2011/08/07 13:08:55 vapier Exp $
+
+  07 Aug 2011; Mike Frysinger <vapier@gentoo.org> pcalc-1.3.ebuild,
+  pcalc-2.ebuild:
+  We need to link against flex at build time.
 
 *pcalc-2 (13 Dec 2009)
 
