@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ldb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.1 2011/08/04 18:33:24 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.2 2011/08/07 21:10:07 maksbotan Exp $
+
+  07 Aug 2011; <maks@gentoo.org> ldb-1.1.0.ebuild:
+  Fix missing dependency and test problems, thanks slepnoga. Bug 377881
 
 *ldb-1.1.0 (04 Aug 2011)
 
