@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.18.3.ebuild,v 1.2 2011/03/27 04:48:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.18.5.ebuild,v 1.1 2011/08/07 21:08:47 vapier Exp $
 
-EAPI=2
+EAPI="3"
 inherit eutils flag-o-matic savedconfig toolchain-funcs
 
 ################################################################################
@@ -57,12 +57,14 @@ else
 fi
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="debug ipv6 make-symlinks +mdev -pam selinux static elibc_glibc"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-linux"
+IUSE="debug ipv6 make-symlinks +mdev nfs -pam selinux static elibc_glibc"
 RESTRICT="test"
 
-DEPEND="selinux? ( sys-libs/libselinux )
+RDEPEND="selinux? ( sys-libs/libselinux )
 	pam? ( sys-libs/pam )"
+DEPEND="${RDEPEND}
+	nfs? ( || ( <sys-libs/glibc-2.13 >=net-libs/libtirpc-0.2.2-r1 ) )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -82,10 +84,11 @@ busybox_config_option() {
 src_prepare() {
 	unset KBUILD_OUTPUT #88088
 	append-flags -fno-strict-aliasing #310413
+	append-cppflags $($(tc-getPKG_CONFIG) libtirpc --cflags)
 
 	# patches go here!
 	epatch "${FILESDIR}"/busybox-1.18.0-bb.patch
-	epatch "${FILESDIR}"/busybox-${PV}-*.patch
+	#epatch "${FILESDIR}"/busybox-${PV}-*.patch
 
 	# flag cleanup
 	sed -i -r \
@@ -138,6 +141,7 @@ src_configure() {
 	if use static && use pam ; then
 		ewarn "You cannot have USE='static pam'.  Assuming static is more important."
 	fi
+	busybox_config_option nfs FEATURE_MOUNT_NFS
 	use static \
 		&& busybox_config_option n PAM \
 		|| busybox_config_option pam PAM
@@ -153,16 +157,19 @@ src_configure() {
 	# default a bunch of uncommon options to off
 	local opt
 	for opt in \
+		ADD_SHELL \
+		BEEP BOOTCHARTD \
 		CRONTAB \
-		DC DEVFSD DNSD DPKG \
-		FAKEIDENTD FBSPLASH FOLD FTP{GET,PUT} \
+		DC DEVFSD DNSD DPKG{,_DEB} \
+		FAKEIDENTD FBSPLASH FOLD FSCK_MINIX FTP{GET,PUT} \
+		FEATURE_DEVFS \
 		HOSTID HUSH \
 		INETD INOTIFYD IPCALC \
 		LASH LOCALE_SUPPORT LOGNAME LPD \
-		MSH \
+		MAKEMIME MKFS_MINIX MSH \
 		OD \
-		RFKILL \
-		SLATTACH SULOGIN \
+		RDEV READPROFILE REFORMIME REMOVE_SHELL RFKILL RUN_PARTS RUNSV{,DIR} \
+		SLATTACH SMEMCAP SULOGIN SV{,LOGD} \
 		TASKSET TCPSVD \
 		RPM RPM2CPIO \
 		UDPSVD UUDECODE UUENCODE
@@ -204,7 +211,7 @@ src_install() {
 	if use mdev ; then
 		dodir /$(get_libdir)/mdev/
 		use make-symlinks || dosym /bin/bb /sbin/mdev
-		cp "${S}"/examples/mdev_fat.conf "${D}"/etc/mdev.conf
+		cp "${S}"/examples/mdev_fat.conf "${ED}"/etc/mdev.conf
 
 		exeinto /$(get_libdir)/mdev/
 		doexe "${FILESDIR}"/mdev/*
@@ -215,7 +222,7 @@ src_install() {
 	fi
 
 	# bundle up the symlink files for use later
-	emake install || die
+	emake DESTDIR="${ED}" install || die
 	rm _install/bin/busybox
 	tar cf busybox-links.tar -C _install . || : #;die
 	insinto /usr/share/${PN}
@@ -250,7 +257,7 @@ pkg_preinst() {
 	fi
 
 	if use make-symlinks ; then
-		mv "${D}"/usr/share/${PN}/busybox-links.tar "${T}"/ || die
+		mv "${ED}"/usr/share/${PN}/busybox-links.tar "${T}"/ || die
 	fi
 }
 
