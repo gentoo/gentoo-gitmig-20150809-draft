@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/arpon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpon/ChangeLog,v 1.6 2011/07/28 13:00:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpon/ChangeLog,v 1.7 2011/08/07 13:48:14 armin76 Exp $
+
+  07 Aug 2011; Raúl Porcel <armin76@gentoo.org> arpon-2.1-r1.ebuild,
+  arpon-2.6-r1.ebuild, arpon-2.7.ebuild:
+  This was never tested by the sparc team
 
 *arpon-2.7 (28 Jul 2011)
 
