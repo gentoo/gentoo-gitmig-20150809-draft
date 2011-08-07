@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/abuse-0.7.1.ebuild,v 1.13 2011/03/14 11:10:27 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/abuse-0.7.1.ebuild,v 1.14 2011/08/07 14:27:37 armin76 Exp $
 
 EAPI=2
 inherit eutils games
@@ -17,7 +17,7 @@ SRC_URI="${ZOY}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="demo levels sound"
 
 RDEPEND=">=media-libs/libsdl-1.1.6[audio,opengl,video]
