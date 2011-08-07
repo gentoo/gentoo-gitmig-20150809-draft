@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.998.ebuild,v 1.1 2011/07/08 13:04:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.998.ebuild,v 1.2 2011/08/07 16:54:27 ssuominen Exp $
 
 EAPI="4"
 
@@ -42,6 +42,9 @@ pkg_setup() {
 src_prepare() {
 	# Apply multiple fixes from different distributions
 	epatch "${WORKDIR}/${P}-patches"/*.patch
+
+	# Fix compability with libpng15 wrt #377363
+	sed -i -e 's:png_ptr->jmpbuf:png_jmpbuf(png_ptr):' src/xsane-save.c || die
 }
 
 src_configure() {
