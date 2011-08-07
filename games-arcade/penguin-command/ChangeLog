@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/penguin-command
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/ChangeLog,v 1.16 2008/02/29 18:47:20 carlo Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/penguin-command/ChangeLog,v 1.17 2011/08/07 19:07:49 mr_bones_ Exp $
+
+  07 Aug 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  penguin-command-1.6.11.ebuild:
+  EAPI=2; add use deps
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org>
   penguin-command-1.6.11.ebuild:
