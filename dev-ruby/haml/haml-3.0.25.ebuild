@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/haml-3.0.25.ebuild,v 1.1 2011/01/02 10:05:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/haml-3.0.25.ebuild,v 1.2 2011/08/07 14:23:12 armin76 Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://haml.hamptoncatlin.com/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 # TODO: haml has some emacs modes that it could be installing, in case
 IUSE=""
