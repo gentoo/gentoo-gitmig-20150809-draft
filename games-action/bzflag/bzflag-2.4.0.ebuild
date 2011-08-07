@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.4.0.ebuild,v 1.3 2011/08/05 21:10:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bzflag/bzflag-2.4.0.ebuild,v 1.4 2011/08/07 03:20:22 phajdan.jr Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="dedicated sdl"
 
 UIDEPEND="virtual/opengl
