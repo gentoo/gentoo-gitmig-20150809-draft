@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/lensfun
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.26 2011/07/13 14:38:06 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.27 2011/08/07 09:10:19 ssuominen Exp $
+
+*lensfun-0.2.5-r2 (07 Aug 2011)
+
+  07 Aug 2011; Samuli Suominen <ssuominen@gentoo.org> +lensfun-0.2.5-r2.ebuild,
+  +files/lensfun-0.2.5-libpng15.patch:
+  Fix building with libpng15 wrt #368315 with NetBSD patch.
 
   13 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> lensfun-0.2.5-r1.ebuild:
   ppc64 stable wrt #354033
