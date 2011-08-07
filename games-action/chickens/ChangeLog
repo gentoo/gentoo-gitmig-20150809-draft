@@ -1,6 +1,9 @@
 # ChangeLog for games-action/chickens
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/ChangeLog,v 1.16 2011/03/26 17:29:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/ChangeLog,v 1.17 2011/08/07 17:07:41 armin76 Exp $
+
+  07 Aug 2011; Raúl Porcel <armin76@gentoo.org> chickens-0.2.4.ebuild:
+  Drop alpha keyword
 
   26 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> chickens-0.2.4.ebuild:
   Pin media-libs/allegro to old version.
