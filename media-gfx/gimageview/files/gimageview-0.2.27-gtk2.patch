@@ -1,6 +1,5 @@
-diff -ur gimageview-0.2.27.orig/src/gimv_cell_pixmap.c gimageview-0.2.27/src/gimv_cell_pixmap.c
---- gimageview-0.2.27.orig/src/gimv_cell_pixmap.c	2004-05-23 17:07:54.000000000 +0300
-+++ gimageview-0.2.27/src/gimv_cell_pixmap.c	2008-12-21 15:01:34.000000000 +0200
+--- src/gimv_cell_pixmap.c
++++ src/gimv_cell_pixmap.c
 @@ -25,10 +25,6 @@
   *  Copyright (C) 2000  Red Hat, Inc.,  Jonathan Blandford <jrb@redhat.com>
   */
@@ -12,9 +11,8 @@ diff -ur gimageview-0.2.27.orig/src/gimv_cell_pixmap.c gimageview-0.2.27/src/gim
  #include "gimv_cell_pixmap.h"
  
  #if (GTK_MAJOR_VERSION >= 2)
-diff -ur gimageview-0.2.27.orig/src/gimv_image.c gimageview-0.2.27/src/gimv_image.c
---- gimageview-0.2.27.orig/src/gimv_image.c	2004-09-21 11:44:31.000000000 +0300
-+++ gimageview-0.2.27/src/gimv_image.c	2008-12-21 15:01:59.000000000 +0200
+--- src/gimv_image.c
++++ src/gimv_image.c
 @@ -35,7 +35,7 @@
  #include "gimv_io.h"
  #include "gimv_image_saver.h"

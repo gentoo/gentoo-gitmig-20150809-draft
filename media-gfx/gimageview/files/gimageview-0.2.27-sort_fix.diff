@@ -1,6 +1,5 @@
-diff -Nur gimageview-0.2.27-bak/src/gimv_thumb_view.c gimageview-0.2.27/src/gimv_thumb_view.c
---- gimageview-0.2.27-bak/src/gimv_thumb_view.c	2004-12-20 20:07:31.000000000 +0900
-+++ gimageview-0.2.27/src/gimv_thumb_view.c	2005-01-11 20:00:00.039241976 +0900
+--- src/gimv_thumb_view.c
++++ src/gimv_thumb_view.c
 @@ -1533,9 +1533,13 @@
  
     gimv_thumb_view_sort_data (tv);

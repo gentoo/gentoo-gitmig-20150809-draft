@@ -1,6 +1,5 @@
-diff -Nur gimageview-0.2.27-bak/src/gimv_thumb_win.c gimageview-0.2.27/src/gimv_thumb_win.c
---- gimageview-0.2.27-bak/src/gimv_thumb_win.c	2004-12-21 03:18:30.000000000 +0900
-+++ gimageview-0.2.27/src/gimv_thumb_win.c	2005-01-07 13:46:40.805458176 +0900
+--- src/gimv_thumb_win.c
++++ src/gimv_thumb_win.c
 @@ -2542,7 +2542,7 @@
  {
     if (tw && tw->priv)
