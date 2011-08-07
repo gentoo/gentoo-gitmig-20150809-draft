@@ -3,6 +3,10 @@
 <pkgmetadata>
 <herd>no-herd</herd>
   <maintainer>
+    <email>polynomial-c@gentoo.org</email>
+    <name>Lars Wendler</name>
+  </maintainer>
+  <maintainer>
     <email>patrick@gentoo.org</email>
     <name>Patrick Lauer</name>
   </maintainer>
@@ -10,8 +14,4 @@
   <email>swapon@gmail.com</email>
   <name>Alessio Cassibba</name>
 </maintainer>
-  <maintainer>
-    <email>polynomial-c@gentoo.org</email>
-    <name>Lars Wendler</name>
-  </maintainer>
 </pkgmetadata>

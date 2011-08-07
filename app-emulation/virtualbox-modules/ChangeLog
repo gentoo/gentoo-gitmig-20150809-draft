@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/virtualbox-modules
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.86 2011/07/22 16:58:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.87 2011/08/07 11:18:29 polynomial-c Exp $
+
+*virtualbox-modules-4.1.0-r1 (07 Aug 2011)
+
+  07 Aug 2011; Lars Wendler <polynomial-c@gentoo.org>
+  +virtualbox-modules-4.1.0-r1.ebuild,
+  +files/virtualbox-modules-4.1.0-vboxbug9305.patch, metadata.xml:
+  Fixed kernel panic on suspend. Thanks to Martin Atenreit for reporting this
+  in bug #377229.
 
   22 Jul 2011; Markos Chandras <hwoarang@gentoo.org>
   virtualbox-modules-4.0.12.ebuild:
