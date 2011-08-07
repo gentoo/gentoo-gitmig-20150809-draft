@@ -1,6 +1,13 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.36 2011/08/05 16:00:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.37 2011/08/07 03:02:03 jer Exp $
+
+*opera-next-12.00.1042-r1 (07 Aug 2011)
+
+  07 Aug 2011; Jeroen Roovers <jer@gentoo.org>
+  +opera-next-12.00.1042-r1.ebuild:
+  Apply substitutions to all desktop files. Change Name in desktop files to
+  "Opera Next" when appropriate.
 
 *opera-next-12.00.1042 (05 Aug 2011)
 
