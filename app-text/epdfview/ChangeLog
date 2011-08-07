@@ -1,6 +1,9 @@
 # ChangeLog for app-text/epdfview
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.41 2011/08/07 17:04:16 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/epdfview/ChangeLog,v 1.42 2011/08/07 18:16:45 billie Exp $
+
+  07 Aug 2011; Daniel Pielmeier <billie@gentoo.org> metadata.xml:
+  Add myself as maintainer.
 
   07 Aug 2011; Daniel Pielmeier <billie@gentoo.org> epdfview-0.1.8.ebuild:
   Switch to EAPI 4 and fdo-mime instead of gnome2 eclass. Restrict test and
