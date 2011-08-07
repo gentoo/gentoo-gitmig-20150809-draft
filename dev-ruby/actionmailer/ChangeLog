@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/actionmailer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.164 2011/07/24 17:35:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionmailer/ChangeLog,v 1.165 2011/08/07 18:26:59 armin76 Exp $
+
+  07 Aug 2011; Raúl Porcel <armin76@gentoo.org> actionmailer-3.0.9.ebuild:
+  Add ~ia64/~sparc wrt #351835
 
   24 Jul 2011; Raúl Porcel <armin76@gentoo.org> actionmailer-2.3.12.ebuild:
   ia64/sparc stable wrt #372391
