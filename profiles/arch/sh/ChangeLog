@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sh profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/ChangeLog,v 1.65 2011/07/03 15:13:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/ChangeLog,v 1.66 2011/08/07 13:51:07 armin76 Exp $
+
+  07 Aug 2011; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask webp
 
   03 Jul 2011; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   P.use.mask =sys-apps/portage-2.1.10* python3

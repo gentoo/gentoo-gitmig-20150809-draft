@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.135 2011/08/03 15:53:51 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.136 2011/08/07 13:54:30 armin76 Exp $
+
+  07 Aug 2011; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask webp
 
   03 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> package.use.mask:
   masked dev-lang/ghc[llvm]

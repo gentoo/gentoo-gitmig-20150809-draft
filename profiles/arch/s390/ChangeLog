@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/s390 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/ChangeLog,v 1.40 2011/07/03 15:12:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/ChangeLog,v 1.41 2011/08/07 13:50:33 armin76 Exp $
+
+  07 Aug 2011; Raúl Porcel <armin76@gentoo.org> use.mask:
+  Use.mask webp
 
   03 Jul 2011; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   P.use.mask =sys-apps/portage-2.1.10* python3
