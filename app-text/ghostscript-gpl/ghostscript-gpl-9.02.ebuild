@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.02.ebuild,v 1.3 2011/08/05 10:55:25 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.02.ebuild,v 1.4 2011/08/07 23:50:17 flameeyes Exp $
 
 EAPI=3
 inherit autotools eutils versionator flag-o-matic
@@ -177,7 +177,8 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install-so install || die "emake install failed"
+	# -j1 -> see bug #356303
+	emake -j1 DESTDIR="${D}" install-so install || die "emake install failed"
 
 	if ! use bindist && use djvu ; then
 		dobin gsdjvu || die "dobin gsdjvu install failed"

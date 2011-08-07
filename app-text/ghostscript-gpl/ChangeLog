@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.114 2011/08/05 10:55:25 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.115 2011/08/07 23:50:17 flameeyes Exp $
+
+  07 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  ghostscript-gpl-9.02.ebuild:
+  Use -j1 for install as well, see bug #356303.
 
   05 Aug 2011; Naohiro Aota <naota@gentoo.org> ghostscript-gpl-9.02.ebuild,
   +files/ghostscript-gpl-9.02-byteswap.patch:
