@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-xvmc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-xvmc/ChangeLog,v 1.14 2011/08/06 12:31:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-xvmc/ChangeLog,v 1.15 2011/08/07 15:19:08 maekke Exp $
+
+  07 Aug 2011; Markus Meier <maekke@gentoo.org> eselect-xvmc-0.2.ebuild:
+  arm stable, bug #376283
 
   06 Aug 2011; Markus Meier <maekke@gentoo.org> eselect-xvmc-0.2.ebuild:
   x86 stable, bug #376283
