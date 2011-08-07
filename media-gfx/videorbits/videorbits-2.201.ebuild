@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/videorbits/videorbits-2.201.ebuild,v 1.16 2011/02/26 18:29:10 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/videorbits/videorbits-2.201.ebuild,v 1.17 2011/08/07 23:39:53 ssuominen Exp $
 
-EAPI=2
-inherit toolchain-funcs
+EAPI=4
+inherit eutils toolchain-funcs
 
 DESCRIPTION="a collection of programs for creating high dynamic range images"
 HOMEPAGE="http://comparametric.sourceforge.net/"
@@ -14,27 +14,27 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
-DEPEND="x11-libs/libX11
+RDEPEND="x11-libs/libX11
 	sys-libs/zlib
 	media-libs/libpng
 	virtual/jpeg"
+DEPEND="${RDEPEND}"
+
+DOCS=( AUTHORS README README.MORE )
 
 src_prepare() {
-	cd "${S}"/images
-	mv Makefile.in Makefile.in-orig
-	sed -e "s:\$(prefix)/images:\$(prefix)/share/${PN}/images:" Makefile.in-orig > Makefile.in
+	epatch "${FILESDIR}"/${P}-libpng15.patch
 
-	cd "${S}"/lookuptables
-	mv Makefile.in Makefile.in-orig
-	sed -e "s:\$(prefix)/lookuptables:\$(prefix)/share/${PN}/lookuptables:" Makefile.in-orig > Makefile.in
+	sed -i \
+		-e "s:\$(prefix)/images:\$(prefix)/share/${PN}/images:" \
+		images/Makefile.in || die
+
+	sed -i \
+		-e "s:\$(prefix)/lookuptables:\$(prefix)/share/${PN}/lookuptables:" \
+		lookuptables/Makefile.in || die
 }
 
 src_configure() {
 	tc-export CC
 	econf
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README README.MORE
 }
