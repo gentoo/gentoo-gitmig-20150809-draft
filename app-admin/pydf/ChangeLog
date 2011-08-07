@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pydf
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.33 2010/09/18 16:36:20 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.34 2011/08/07 11:50:16 xarthisius Exp $
+
+  07 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> pydf-9.ebuild:
+  ppc/ppc64 stable wrt #329087
 
   18 Sep 2010; Raúl Porcel <armin76@gentoo.org> pydf-9.ebuild:
   sparc stable wrt #329087
