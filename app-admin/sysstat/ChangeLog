@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.201 2011/08/05 21:08:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.202 2011/08/07 03:18:30 phajdan.jr Exp $
+
+  07 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> sysstat-10.0.1.ebuild:
+  x86 stable wrt bug #377433
 
   05 Aug 2011; Markos Chandras <hwoarang@gentoo.org> sysstat-10.0.1.ebuild:
   Stable on amd64 wrt bug #377433
