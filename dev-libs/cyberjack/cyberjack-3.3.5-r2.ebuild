@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-3.3.5-r2.ebuild,v 1.3 2011/08/05 21:42:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-3.3.5-r2.ebuild,v 1.4 2011/08/07 02:57:17 phajdan.jr Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic
@@ -13,7 +13,7 @@ SRC_URI="http://support.reiner-sct.de/downloads/LINUX/V${PV}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="fox pcsc-lite +udev"
 
 RDEPEND="virtual/libusb:1
