@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.149 2011/07/25 13:14:28 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.150 2011/08/07 17:33:58 armin76 Exp $
+
+  07 Aug 2011; Raúl Porcel <armin76@gentoo.org> enlightenment-1.0.8.ebuild:
+  alpha/ia64/sh/sparc stable wrt #373681
 
   25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   enlightenment-1.0.8.ebuild:
