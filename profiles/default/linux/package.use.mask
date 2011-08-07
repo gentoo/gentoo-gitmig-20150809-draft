@@ -1,14 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.21 2011/08/07 21:07:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.22 2011/08/07 21:09:31 hwoarang Exp $
+
+sys-devel/gcc hardened
+sys-libs/glibc hardened
 
 # Markos Chandras <hwoarang@gentoo.org> (07 Aug 2011)
 # doc flag is not ready yet for media-video/mplayer2.
 # See bug #361075
 <media-video/mplayer2-9999 doc
-
-sys-devel/gcc hardened
-sys-libs/glibc hardened
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (20 Aug 2009)
 #
