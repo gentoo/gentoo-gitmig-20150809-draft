@@ -1,0 +1,9 @@
+
+
+*libnatpmp-20110715 (07 Aug 2011)
+
+  07 Aug 2011; Anthony G. Basile <blueness@gentoo.org>
+  +libnatpmp-20110715.ebuild, +files/link-against-system-lib.patch,
+  +metadata.xml:
+  Initial commit
+
