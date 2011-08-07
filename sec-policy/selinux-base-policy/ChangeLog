@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.81 2011/07/25 22:13:22 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.82 2011/08/07 10:53:56 blueness Exp $
+
+*selinux-base-policy-2.20101213-r22 (07 Aug 2011)
+
+  07 Aug 2011; Anthony G. Basile <blueness@gentoo.org>
+  +selinux-base-policy-2.20101213-r22.ebuild:
+  Fix patchbundle issue with portage patch
 
 *selinux-base-policy-2.20101213-r21 (25 Jul 2011)
 *selinux-base-policy-2.20101213-r20 (25 Jul 2011)
