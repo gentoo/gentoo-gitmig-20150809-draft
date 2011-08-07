@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/netbeans-platform
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-platform/ChangeLog,v 1.5 2011/08/05 09:42:25 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-platform/ChangeLog,v 1.6 2011/08/07 17:07:12 fordfrog Exp $
+
+  07 Aug 2011; Miroslav Šulc <fordfrog@gentoo.org>
+  netbeans-platform-7.0.ebuild, netbeans-platform-7.0.1.ebuild:
+  Fixed compilation on systems where it fails when DISPLAY is set
 
 *netbeans-platform-7.0.1 (05 Aug 2011)
 
