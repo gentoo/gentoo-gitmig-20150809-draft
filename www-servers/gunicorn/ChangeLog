@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/gunicorn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/ChangeLog,v 1.8 2011/08/07 03:17:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/ChangeLog,v 1.9 2011/08/07 07:07:39 rafaelmartins Exp $
+
+  07 Aug 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  -gunicorn-0.12.0.ebuild, -gunicorn-0.12.1.ebuild:
+  Remove old.
 
   07 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> gunicorn-0.12.2.ebuild:
   x86 stable wrt bug #377367
