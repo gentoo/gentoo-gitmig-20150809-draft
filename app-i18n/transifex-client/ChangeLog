@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/transifex-client
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/transifex-client/ChangeLog,v 1.8 2011/08/07 03:22:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/transifex-client/ChangeLog,v 1.9 2011/08/07 10:21:36 hwoarang Exp $
+
+  07 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
+  -transifex-client-0.4.1.ebuild, -transifex-client-0.5.ebuild,
+  transifex-client-0.5.2.ebuild:
+  Stable on amd64 wrt bug #377893. Remove old
 
   07 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   transifex-client-0.5.2.ebuild:
