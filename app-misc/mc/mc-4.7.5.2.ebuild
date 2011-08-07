@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.7.5.2.ebuild,v 1.6 2011/08/01 19:03:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.7.5.2.ebuild,v 1.7 2011/08/07 17:01:28 armin76 Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.midnight-commander.org/downloads/${MY_P}.tar.lzma"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x86-solaris"
 IUSE="+edit gpm +ncurses nls samba slang X"
 
 REQUIRED_USE="^^ ( ncurses slang )"
