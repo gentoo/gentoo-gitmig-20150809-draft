@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.22 2011/08/03 20:11:49 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.23 2011/08/07 12:04:15 maekke Exp $
+
+  07 Aug 2011; Markus Meier <maekke@gentoo.org> linux-firmware-20110604.ebuild:
+  arm stable, bug #375753
 
 *linux-firmware-20110731 (03 Aug 2011)
 
