@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/aqualung-0.9_beta11-r1.ebuild,v 1.6 2011/08/01 18:21:59 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/aqualung-0.9_beta11-r1.ebuild,v 1.7 2011/08/07 10:57:08 ssuominen Exp $
 
 EAPI=4
 
@@ -48,9 +48,12 @@ S=${WORKDIR}/${PN}-${MY_PV}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-use_lrdf_cflags.patch
-	sed -i -e 's:$(pkgdatadir)/doc:/usr/share/doc/${PF}:' \
+	sed -i \
+		-e 's:$(pkgdatadir)/doc:/usr/share/doc/${PF}:' \
 		doc/Makefile.am || die
-	sed -i -e 's:BUILD_CFLAGS="-O2":BUILD_CFLAGS="":' \
+	sed -i \
+		-e '/BUILD_CFLAGS/s:-O2::' \
+		-e '/BUILD_CFLAGS/s: -ggdb -g -O0::' \
 		configure.ac || die
 	eautoreconf
 }
