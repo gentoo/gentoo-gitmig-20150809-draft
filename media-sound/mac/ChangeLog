@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mac
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/ChangeLog,v 1.21 2011/06/09 18:57:47 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/ChangeLog,v 1.22 2011/08/07 13:14:45 billie Exp $
+
+  07 Aug 2011; Daniel Pielmeier <billie@gentoo.org> mac-3.99.4.5.7.ebuild:
+  Switch to EAPI 4. Add static libs USE flag. Using --enable/disable-mmx is
+  enough.
 
   09 Jun 2011; Daniel Pielmeier <billie@gentoo.org> -mac-3.99.4.5.6.ebuild:
   Remove old.

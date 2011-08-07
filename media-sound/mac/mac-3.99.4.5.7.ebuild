@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/mac-3.99.4.5.7.ebuild,v 1.7 2011/03/06 12:10:26 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/mac-3.99.4.5.7.ebuild,v 1.8 2011/08/07 13:14:45 billie Exp $
 
-EAPI=2
+EAPI=4
 
-inherit eutils flag-o-matic multilib versionator
+inherit flag-o-matic versionator
 
 MY_PV=$(version_format_string '$1.$2-u$3-b$4')
 PATCH=s$(get_version_component_range 5)
@@ -17,7 +17,7 @@ SRC_URI="http://etree.org/shnutils/shntool/support/formats/ape/unix/${MY_PV}-${P
 LICENSE="mac"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc x86"
-IUSE="mmx"
+IUSE="mmx static-libs"
 
 RDEPEND=""
 DEPEND="sys-apps/sed
@@ -37,18 +37,16 @@ pkg_setup() {
 }
 
 src_configure() {
-	local mmx=no
-	use mmx && mmx=yes
-
 	econf \
-		--disable-dependency-tracking \
-		--disable-static \
-		--enable-assembly=${mmx}
+		$(use_enable static-libs static) \
+		$(use_enable mmx assembly)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog* NEWS README TODO src/*.txt || die
-	dohtml src/Readme.htm || die
-	find "${D}"/usr/$(get_libdir) -name '*.la' -delete || die
+	default
+
+	dodoc ChangeLog.shntool src/*.txt
+	dohtml src/Readme.htm
+
+	find "${D}" -name '*.la' -exec rm -rf '{}' '+' || die
 }
