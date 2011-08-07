@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/arel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/arel/ChangeLog,v 1.11 2011/07/29 04:47:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/arel/ChangeLog,v 1.12 2011/08/07 14:50:47 armin76 Exp $
+
+  07 Aug 2011; Raúl Porcel <armin76@gentoo.org> arel-2.0.10-r1.ebuild:
+  Add ~ia64/~sparc wrt #351835
 
   29 Jul 2011; Hans de Graaff <graaff@gentoo.org> -arel-2.0.4.ebuild,
   -arel-2.1.1.ebuild:
