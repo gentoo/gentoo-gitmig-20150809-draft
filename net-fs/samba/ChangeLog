@@ -1,13 +1,13 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.477 2011/08/07 20:12:39 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.478 2011/08/07 20:14:55 polynomial-c Exp $
 
 *samba-3.5.11 (07 Aug 2011)
 
   07 Aug 2011; Lars Wendler <polynomial-c@gentoo.org> files/3.4/samba.confd,
   +samba-3.5.11.ebuild, files/3.5/samba.confd, samba-3.6.0_rc3-r1.ebuild,
   files/3.6/samba.confd:
-  Non-maintaner commit: 3.5.11 version bump (bug #377909), removed --oknodo
+  Non-maintainer commit: 3.5.11 version bump (bug #377909), removed --oknodo
   from confd files (see bug #377843 as reference), install pam_winbind.conf
   when "pam" and "winbind" USE flags are enabled (bug #376853).
 
