@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rdiscount
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdiscount/ChangeLog,v 1.4 2011/07/24 09:30:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdiscount/ChangeLog,v 1.5 2011/08/07 18:58:43 armin76 Exp $
+
+  07 Aug 2011; Raúl Porcel <armin76@gentoo.org> rdiscount-1.6.5.ebuild,
+  rdiscount-1.6.8.ebuild:
+  Add ~ia64/~sparc
 
   24 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> rdiscount-1.6.8.ebuild:
   Marked ~ppc/~ppc64 wrt #351835
