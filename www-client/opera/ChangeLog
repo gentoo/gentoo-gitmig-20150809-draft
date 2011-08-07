@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.642 2011/06/30 16:45:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.643 2011/08/07 03:07:54 jer Exp $
+
+*opera-11.50.1074-r1 (07 Aug 2011)
+
+  07 Aug 2011; Jeroen Roovers <jer@gentoo.org> +opera-11.50.1074-r1.ebuild:
+  Expose www-client/opera-next ebuild changes to a wider audience.
 
   30 Jun 2011; Jeroen Roovers <jer@gentoo.org> -opera-11.11.2109.ebuild:
   ^
