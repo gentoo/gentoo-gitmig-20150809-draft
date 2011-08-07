@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/fssm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/ChangeLog,v 1.8 2011/07/23 20:43:14 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/ChangeLog,v 1.9 2011/08/07 14:13:32 armin76 Exp $
+
+  07 Aug 2011; Raúl Porcel <armin76@gentoo.org> fssm-0.2.5.ebuild,
+  fssm-0.2.7.ebuild:
+  Add ~ia64/~sparc
 
   23 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> fssm-0.2.7.ebuild:
   Marked ~ppc64 wrt #351212
