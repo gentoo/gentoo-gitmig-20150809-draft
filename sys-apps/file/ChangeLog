@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.205 2011/08/07 10:17:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.206 2011/08/07 17:48:44 armin76 Exp $
+
+  07 Aug 2011; Raúl Porcel <armin76@gentoo.org> file-5.07-r3.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #377723
 
   07 Aug 2011; Markos Chandras <hwoarang@gentoo.org> file-5.07-r3.ebuild:
   Stable on amd64 wrt bug #377723
