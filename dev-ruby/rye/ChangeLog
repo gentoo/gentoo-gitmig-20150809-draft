@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rye
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rye/ChangeLog,v 1.16 2011/02/15 06:46:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rye/ChangeLog,v 1.17 2011/08/07 12:24:58 flameeyes Exp $
+
+  07 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org> rye-0.9.4.ebuild:
+  Add missing dependency over virtual/ruby-ssl.
 
 *rye-0.9.4 (15 Feb 2011)
 

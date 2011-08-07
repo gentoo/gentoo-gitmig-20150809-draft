@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-s3/aws-s3-0.6.2-r1.ebuild,v 1.5 2010/09/18 09:09:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-s3/aws-s3-0.6.2-r1.ebuild,v 1.6 2011/08/07 12:31:09 flameeyes Exp $
 
 EAPI=2
 
@@ -24,7 +24,8 @@ IUSE=""
 
 ruby_add_rdepend "dev-ruby/xml-simple
 				dev-ruby/builder
-				dev-ruby/mime-types"
+				dev-ruby/mime-types
+				virtual/ruby-ssl"
 ruby_add_bdepend test "virtual/ruby-test-unit dev-ruby/ruby-debug dev-ruby/flexmock"
 
 all_ruby_prepare() {

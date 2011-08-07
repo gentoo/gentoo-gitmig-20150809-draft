@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rye/rye-0.9.4.ebuild,v 1.1 2011/02/15 06:46:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rye/rye-0.9.4.ebuild,v 1.2 2011/08/07 12:24:58 flameeyes Exp $
 
 EAPI=2
 
@@ -31,7 +31,8 @@ ruby_add_rdepend "
 	>=dev-ruby/sysinfo-0.7.3
 	dev-ruby/annoy
 	dev-ruby/storable
-	>=dev-ruby/sysinfo-0.7.0"
+	>=dev-ruby/sysinfo-0.7.0
+	virtual/ruby-ssl"
 
 #ruby_add_bdepend "test? ( dev-ruby/tryouts:2 )"
 
