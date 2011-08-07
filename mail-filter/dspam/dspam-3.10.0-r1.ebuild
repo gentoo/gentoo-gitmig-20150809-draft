@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.10.0-r1.ebuild,v 1.1 2011/08/06 10:16:52 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.10.0-r1.ebuild,v 1.2 2011/08/07 14:49:51 eras Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 DRIVERS_IUSE="+hash mysql postgres sqlite"
-SCALES_IUSE="+small-scale domain-scale large-scale"
+SCALES_IUSE="small-scale +domain-scale large-scale"
 IUSE="clamav daemon debug ldap static-libs syslog virtual-users user-homedirs ${DRIVERS_IUSE} ${SCALES_IUSE}"
 
 DEPEND="
@@ -32,7 +32,7 @@ RDEPEND="
 # Demands on sane USE flags:
 # - find out what driver to use: select at least one
 # - if static-libs is set, only one driver may be selected
-# - find out what scale to use: choose at most one
+# - find out what scale to use: select exactly one
 # - user-homedirs does not work with virtual-users
 # - virtual-users does not work with hash or sqlite
 REQUIRED_USE="
@@ -61,12 +61,6 @@ pkg_setup() {
 }
 
 src_configure() {
-	local myconf=""
-	if ! use large-scale && ! use domain-scale ; then
-		# default to domain-scale
-		myconf="--disable-large-scale --enable-domain-scale"
-	fi
-
 	econf \
 	--sysconfdir=${DSPAM_CONF} \
 	--with-dspam-home=${DSPAM_HOME} \
@@ -90,8 +84,7 @@ src_configure() {
 	$(use_enable virtual-users) \
 	--with-storage-driver=${DSPAM_DRIVERS} ${DSPAM_DRIVERS_EXTRAS} \
 	$(use mysql || use postgres && echo "--enable-preferences-extension") \
-	$(use syslog || echo "--with-logfile=${DSPAM_LOG}/dspam.log") \
-	${myconf}
+	$(use syslog || echo "--with-logfile=${DSPAM_LOG}/dspam.log")
 }
 
 dspam_setup_user() {
