@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-13.0.782.107-r1.ebuild,v 1.1 2011/08/05 21:10:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-13.0.782.107-r1.ebuild,v 1.2 2011/08/08 17:34:54 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -14,7 +14,7 @@ SRC_URI="http://build.chromium.org/official/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="cups gnome gnome-keyring kerberos xinerama"
 
 # en_US is ommitted on purpose from the list below. It must always be available.
@@ -41,7 +41,10 @@ RDEPEND="app-arch/bzip2
 	>=media-libs/libvpx-0.9.5
 	>=media-libs/libwebp-0.1.2
 	media-libs/speex
-	cups? ( >=net-print/cups-1.3.11 )
+	cups? (
+		dev-libs/libgcrypt
+		>=net-print/cups-1.3.11
+	)
 	sys-libs/zlib
 	x11-libs/gtk+:2
 	x11-libs/libXScrnSaver
