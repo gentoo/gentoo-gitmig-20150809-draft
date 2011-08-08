@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fping
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.36 2011/06/13 20:22:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.37 2011/08/08 21:06:49 jer Exp $
+
+  08 Aug 2011; Jeroen Roovers <jer@gentoo.org> fping-2.4_beta2_p161-r1.ebuild:
+  Fix HOMEPAGE thanks to kahrl (bug #378365).
 
   13 Jun 2011; Jeroen Roovers <jer@gentoo.org> -fping-2.4_beta2-r2.ebuild,
   -fping-2.4_beta2_p161.ebuild:

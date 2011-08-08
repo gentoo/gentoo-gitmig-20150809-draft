@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/fping-2.4_beta2_p161-r1.ebuild,v 1.6 2011/06/12 15:08:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/fping-2.4_beta2_p161-r1.ebuild,v 1.7 2011/08/08 21:06:49 jer Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ SRC_URI="
 	mirror://debian/pool/main/f/${PN}/${PN}_2.4b2-to-ipv6.orig.tar.gz
 	mirror://debian/pool/main/f/${PN}/${PN}_2.4b2-to-ipv6-16.1.diff.gz
 	"
-HOMEPAGE="http://www.fping.com/"
+HOMEPAGE="http://fping.sourceforge.net/ http://packages.qa.debian.org/f/fping.html"
 
 SLOT="0"
 LICENSE="fping"
