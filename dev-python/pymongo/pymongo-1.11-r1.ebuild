@@ -1,44 +1,50 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-1.11-r1.ebuild,v 1.1 2011/07/06 14:30:30 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-1.11-r1.ebuild,v 1.2 2011/08/08 18:24:42 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
+PYTHON_TESTS_FAILURES_TOLERANT_ABIS="*-jython"
 DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils
 
 DESCRIPTION="Python driver for MongoDB"
-HOMEPAGE="http://github.com/mongodb/mongo-python-driver"
+HOMEPAGE="http://github.com/mongodb/mongo-python-driver http://pypi.python.org/pypi/pymongo"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc mod_wsgi test"
+IUSE="doc mod_wsgi"
 
-RDEPEND="|| ( dev-lang/python:2.7 dev-lang/python:2.6 dev-lang/python:2.5 >=dev-python/celementtree-1.0.5 )"
+RDEPEND="dev-db/mongodb"
 DEPEND="${RDEPEND}
 	dev-python/setuptools
-	doc?  ( dev-python/sphinx )
-	test? ( dev-db/mongodb )"
+	doc? ( dev-python/sphinx )"
 
-pkg_setup() {
-	if use test; then
-		ewarn "WARNING: You need a running instance of mongod in order to test this package !"
-		sleep 3
-	fi
-}
+PYTHON_MODNAME="bson gridfs pymongo"
 
 src_compile() {
 	distutils_src_compile
 
 	if use doc; then
+		einfo "Generation of documentation"
 		mkdir html
-		sphinx-build doc html || die "building docs failed"
+		sphinx-build doc html || die "Generation of documentation failed"
 	fi
+}
+
+distutils_src_test_pre_hook() {
+	mkdir -p "${T}/tests-${PYTHON_ABI}/mongo.db"
+	mongod --dbpath "${T}/tests-${PYTHON_ABI}/mongo.db" --fork --logpath "${T}/tests-${PYTHON_ABI}/mongo.log"
+}
+
+src_test() {
+	distutils_src_test
+	killall -u "$(id -nu)" mongod
 }
 
 src_install() {
@@ -46,10 +52,7 @@ src_install() {
 	# In order to work with mod_wsgi, we need to disable the C extension.
 	# See [1] for more information.
 	# [1] http://api.mongodb.org/python/current/faq.html#does-pymongo-work-with-mod-wsgi
-	local myopts=""
-	use mod_wsgi && myopts="--no_ext"
-
-	distutils_src_install ${myopts}
+	distutils_src_install $(use mod_wsgi && echo --no_ext)
 
 	if use doc; then
 		dohtml -r html/* || die "Error installing docs"

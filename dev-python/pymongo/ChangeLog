@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pymongo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/ChangeLog,v 1.5 2011/08/06 16:23:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/ChangeLog,v 1.6 2011/08/08 18:24:42 hwoarang Exp $
+
+  08 Aug 2011; Markos Chandras <hwoarang@gentoo.org> pymongo-1.11-r1.ebuild:
+  Ignore test failures with Jython. Update HOMEPAGE. Fix dependencies. Set
+  PYTHON_MODNAME. Improve src_test(). Simplify src_install(). Patch by
+  Arfrever. Backported from python overlay
 
   06 Aug 2011; Markos Chandras <hwoarang@gentoo.org> ChangeLog:
   Restore Changelog history
