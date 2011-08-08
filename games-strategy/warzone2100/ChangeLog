@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/warzone2100
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.65 2011/05/24 15:25:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.66 2011/08/08 16:21:21 phajdan.jr Exp $
+
+  08 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  warzone2100-2.3.8.ebuild:
+  x86 stable wrt bug #375377
 
   24 May 2011; Michael Sterrett <mr_bones_@gentoo.org>
   warzone2100-2.3.8.ebuild:
