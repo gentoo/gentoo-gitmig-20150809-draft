@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.894 2011/08/06 12:26:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.895 2011/08/08 23:16:51 mpagano Exp $
+
+*vanilla-sources-3.0.0 (08 Aug 2011)
+
+  08 Aug 2011; Michael Pagano <mpagano@gentoo.org> -vanilla-sources-3.0.ebuild,
+  +vanilla-sources-3.0.0.ebuild, vanilla-sources-3.0.1.ebuild:
+  Commit proper 3.0.0 ebuild, as eclass support for 3.X kernels updated. Add
+  deblob support to 3.0.0 and 3.0.1 as eclass deblob support for 3.X also
+  updated.
 
   06 Aug 2011; Markus Meier <maekke@gentoo.org>
   vanilla-sources-2.6.39.3.ebuild:
