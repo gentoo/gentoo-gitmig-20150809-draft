@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gri/gri-2.12.23.ebuild,v 1.1 2011/07/28 00:10:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gri/gri-2.12.23.ebuild,v 1.2 2011/08/08 16:44:56 bicatali Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc emacs examples"
 
-DEPEND="sci-libs/netcdf
+DEPEND=">=sci-libs/netcdf-4
 	virtual/latex-base
 	|| ( media-gfx/imagemagick[png] media-gfx/graphicsmagick[png] )
 	app-text/ghostscript-gpl
