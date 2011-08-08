@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xautolock
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/ChangeLog,v 1.21 2010/08/09 16:44:42 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/ChangeLog,v 1.22 2011/08/08 09:12:49 hwoarang Exp $
+
+  08 Aug 2011; Markos Chandras <hwoarang@gentoo.org> xautolock-2.1-r1.ebuild,
+  xautolock-2.2.ebuild:
+  Add missing xlock applications. Bug #377965 and bug #347729
 
   09 Aug 2010; Kacper Kowalik <xarthisius@gentoo.org>
   xautolock-2.1-r1.ebuild, xautolock-2.2.ebuild:
