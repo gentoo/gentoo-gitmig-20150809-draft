@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcore/libcore-2.1.1.ebuild,v 1.1 2011/08/07 00:03:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcore/libcore-2.1.1-r1.ebuild,v 1.1 2011/08/08 18:51:41 bicatali Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs versionator
@@ -62,13 +62,14 @@ src_install(){
 	use static-libs && dolib.a lib/*.a
 
 	insinto /usr/include
-	doins ./inc/*
+	doins inc/CORE.h
+	insinto /usr/include/CORE
+	doins inc/CORE/*.h
 
 	dodoc FAQs README
 	if use doc; then
 		dodoc doc/*.txt
-		insinto /usr/share/doc/${PF}
-		doins doc/papers/* doc/tutorial/tutorial.pdf
-		doins -r doc/doxy/html doc/doxy/latex/*pdf
+		dodoc doc/tutorial/tutorial.pdf doc/doxy/latex/*pdf
+		dohtml -r doc/doxy/html/*
 	fi
 }

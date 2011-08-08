@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/libcore
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcore/ChangeLog,v 1.7 2011/08/07 00:03:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcore/ChangeLog,v 1.8 2011/08/08 18:51:41 bicatali Exp $
+
+*libcore-2.1.1-r1 (08 Aug 2011)
+
+  08 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> -libcore-2.1.1.ebuild,
+  +libcore-2.1.1-r1.ebuild:
+  Do not install buggy docs, bug #378117. Install proper include files, bug
+  #378339
 
 *libcore-2.1.1 (07 Aug 2011)
 
