@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.253 2011/06/03 20:20:23 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.254 2011/08/08 14:14:15 mpagano Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -117,10 +117,30 @@ handle_genpatches() {
 	local tarball
 	[[ -z ${K_WANT_GENPATCHES} || -z ${K_GENPATCHES_VER} ]] && return 1
 
+	debug-print "Inside handle_genpatches"
+	local oldifs=${IFS}
+	export IFS="."
+	local OKV_ARRAY=( $OKV )
+	export IFS=${oldifs}
+
+	# for > 3.0 kernels, handle genpatches tarball name
+	# genpatches for 3.0 and 3.0.1 might be named
+	# genpatches-3.0-1.base.tar.bz2 and genpatches-3.0-2.base.tar.bz2
+	# respectively.  Handle this.
+
 	for i in ${K_WANT_GENPATCHES} ; do
+	if [[ ${KV_MAJOR} -ge 3 ]]; then
+		if [[ ${#OKV_ARRAY[@]} -ge 3 ]]; then
+			tarball="genpatches-${KV_MAJOR}.${KV_MINOR}-${K_GENPATCHES_VER}.${i}.tar.bz2"
+		else
+			tarball="genpatches-${KV_MAJOR}.${KV_PATCH}-${K_GENPATCHES_VER}.${i}.tar.bz2"
+		fi
+	else
 		tarball="genpatches-${OKV}-${K_GENPATCHES_VER}.${i}.tar.bz2"
-		GENPATCHES_URI="${GENPATCHES_URI} mirror://gentoo/${tarball}"
-		UNIPATCH_LIST_GENPATCHES="${UNIPATCH_LIST_GENPATCHES} ${DISTDIR}/${tarball}"
+	fi
+	debug-print "genpatches tarball: $tarball"
+	GENPATCHES_URI="${GENPATCHES_URI} mirror://gentoo/${tarball}"
+	UNIPATCH_LIST_GENPATCHES="${UNIPATCH_LIST_GENPATCHES} ${DISTDIR}/${tarball}"
 	done
 }
 
@@ -151,9 +171,15 @@ detect_version() {
 	OKV=${OKV/_p*}
 
 	KV_MAJOR=$(get_version_component_range 1 ${OKV})
+	# handle if OKV is X.Y or X.Y.Z (e.g. 3.0 or 3.0.1)
+	local oldifs=${IFS}
+	export IFS="."
+	local OKV_ARRAY=( $OKV )
+	export IFS=${oldifs}
 
 	# if KV_MAJOR >= 3, then we have no more KV_MINOR
-	if [[ ${KV_MAJOR} -lt 3 ]]; then
+	#if [[ ${KV_MAJOR} -lt 3 ]]; then
+	if [[ ${#OKV_ARRAY[@]} -ge 3 ]]; then
 		KV_MINOR=$(get_version_component_range 2 ${OKV})
 		KV_PATCH=$(get_version_component_range 3 ${OKV})
 		if [[ ${KV_MAJOR}${KV_MINOR}${KV_PATCH} -ge 269 ]]; then
@@ -168,10 +194,13 @@ detect_version() {
 		KV_EXTRA=${KV_EXTRA/[-_]*}
 	fi
 
+	debug-print "KV_EXTRA is ${KV_EXTRA}"
+
 	KV_PATCH=${KV_PATCH/[-_]*}
 
 	local v n=0 missing
-	if [[ ${KV_MAJOR} -lt 3 ]]; then
+	#if [[ ${KV_MAJOR} -lt 3 ]]; then
+	if [[ ${#OKV_ARRAY[@]} -ge 3 ]]; then
 		for v in CKV OKV KV_{MAJOR,MINOR,PATCH} ; do
 			[[ -z ${!v} ]] && n=1 && missing="${missing}${v} ";
 		done
@@ -186,18 +215,37 @@ detect_version() {
 		die "Failed to extract kernel version (try explicit CKV in ebuild)!"
 	unset v n missing
 
-	if [[ ${KV_MAJOR} -ge 3 ]]; then
+#	if [[ ${KV_MAJOR} -ge 3 ]]; then
+	if [[ ${#OKV_ARRAY[@]} -lt 3 ]]; then
 		KV_PATCH_ARR=(${KV_PATCH//\./ })
-		KERNEL_BASE_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_PATCH_ARR}"
+
+		# at this point 080811, Linus is putting 3.1 kernels in 3.0 directory
+		# revisit when 3.1 is released 
+		if [[ ${KV_PATCH} -gt 0 ]]; then
+			KERNEL_BASE_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.$((${KV_PATCH_ARR} - 1))"
+		else
+			KERNEL_BASE_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_PATCH_ARR}"
+		fi
+		# KERNEL_BASE_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_PATCH_ARR}"
 		[[ -n "${K_LONGTERM}" ]] &&
 			KERNEL_BASE_URI="${KERNEL_BASE_URI}/longterm/v${KV_MAJOR}.${KV_PATCH_ARR}"
 	else
-		KERNEL_BASE_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}"
+		KERNEL_BASE_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.0"
+		#KERNEL_BASE_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}"
 		[[ -n "${K_LONGTERM}" ]] &&
 			KERNEL_BASE_URI="${KERNEL_BASE_URI}/longterm/v${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
 	fi
 
-	KERNEL_URI="${KERNEL_BASE_URI}/linux-${OKV}.tar.bz2"
+	if [[ ${#OKV_ARRAY[@]} -ge 3 ]] && [[ ${KV_MAJOR} -ge 3 ]]; then
+		# handle vanilla-sources-3.x.y correctly
+		if [[ ${PN/-*} == "vanilla" && ${KV_PATCH} -gt 0 ]]; then
+			KERNEL_URI="${KERNEL_BASE_URI}/patch-${OKV}.bz2"
+			UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${CKV}.bz2"
+		fi
+		KERNEL_URI="${KERNEL_URI} ${KERNEL_BASE_URI}/linux-${KV_MAJOR}.${KV_MINOR}.tar.bz2"
+	else
+		KERNEL_URI="${KERNEL_BASE_URI}/linux-${OKV}.tar.bz2"
+	fi
 
 	RELEASE=${CKV/${OKV}}
 	RELEASE=${RELEASE/_beta}
@@ -215,7 +263,7 @@ detect_version() {
 	# first of all, we add the release
 	EXTRAVERSION="${RELEASE}"
 	debug-print "0 EXTRAVERSION:${EXTRAVERSION}"
-	[[ -n ${KV_EXTRA} ]] && EXTRAVERSION=".${KV_EXTRA}${EXTRAVERSION}"
+	[[ -n ${KV_EXTRA} ]] && [[ ${KV_MAJOR} -lt 3 ]] && EXTRAVERSION=".${KV_EXTRA}${EXTRAVERSION}"
 
 	debug-print "1 EXTRAVERSION:${EXTRAVERSION}"
 	if [[ -n "${K_NOUSEPR}" ]]; then
@@ -513,13 +561,37 @@ unpack_2_6() {
 }
 
 universal_unpack() {
+	debug-print "Inside universal_unpack"
+
+	local oldifs=${IFS}
+	export IFS="."
+	local OKV_ARRAY=( $OKV )
+	export IFS=${oldifs}
+
 	cd "${WORKDIR}"
-	unpack linux-${OKV}.tar.bz2
+	if [[ ${#OKV_ARRAY[@]} -ge 3 ]] && [[ ${KV_MAJOR} -ge 3 ]]; then
+		unpack linux-${KV_MAJOR}.${KV_MINOR}.tar.bz2
+	else
+		unpack linux-${OKV}.tar.bz2
+	fi
+
 	if [[ -d "linux" ]]; then
+		debug-print "Moving linux to linux-${KV_FULL}"
 		mv linux linux-${KV_FULL} \
 			|| die "Unable to move source tree to ${KV_FULL}."
 	elif [[ "${OKV}" != "${KV_FULL}" ]]; then
-		mv linux-${OKV} linux-${KV_FULL} \
+		if [[ ${#OKV_ARRAY[@]} -ge 3 ]] && [[ ${KV_MAJOR} -ge 3 ]] &&
+			[[ "${ETYPE}" = "sources" ]]; then
+			debug-print "moving linux-${KV_MAJOR}.${KV_MINOR} to linux-${KV_FULL} "
+			mv linux-${KV_MAJOR}.${KV_MINOR} linux-${KV_FULL} \
+				|| die "Unable to move source tree to ${KV_FULL}."
+		else
+			debug-print "moving linux-${OKV} to linux-${KV_FULL} "
+			mv linux-${OKV} linux-${KV_FULL} \
+				|| die "Unable to move source tree to ${KV_FULL}."
+		fi
+	elif [[ ${#OKV_ARRAY[@]} -ge 3 ]] && [[ ${KV_MAJOR} -ge 3 ]]; then
+		mv linux-${KV_MAJOR}.${KV_MINOR} linux-${KV_FULL} \
 			|| die "Unable to move source tree to ${KV_FULL}."
 	fi
 	cd "${S}"
