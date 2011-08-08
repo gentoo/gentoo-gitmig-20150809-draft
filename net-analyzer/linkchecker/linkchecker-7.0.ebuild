@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-7.0.ebuild,v 1.3 2011/07/11 21:25:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-7.0.ebuild,v 1.4 2011/08/08 17:14:03 hwoarang Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="2.4 2.5 3.*"
 PYTHON_MODNAME="linkcheck"
 
 inherit bash-completion distutils eutils
@@ -14,7 +14,7 @@ inherit bash-completion distutils eutils
 MY_P="${P/linkchecker/LinkChecker}"
 
 DESCRIPTION="Check websites for broken links"
-HOMEPAGE="http://linkchecker.sourceforge.net/"
+HOMEPAGE="http://linkchecker.sourceforge.net/ http://pypi.python.org/pypi/linkchecker"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
