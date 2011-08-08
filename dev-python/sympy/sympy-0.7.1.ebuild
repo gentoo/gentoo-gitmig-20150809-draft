@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.7.1.ebuild,v 1.1 2011/08/05 11:21:17 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.7.1.ebuild,v 1.2 2011/08/08 18:37:35 hwoarang Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 3.*"
+RESTRICT_PYTHON_ABIS="2.4 3.* *-jython"
 DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils eutils
@@ -36,11 +36,12 @@ RDEPEND="
 	imaging? ( dev-python/imaging )
 	>=dev-python/pexpect-2.0
 	~dev-python/mpmath-0.17"
-DEPEND="doc? ( dev-python/sphinx )
-	test? ( >=dev-python/py-0.9.0 )
-	~dev-python/mpmath-0.17"
+DEPEND="${RDEPEND}
+	doc? ( dev-python/sphinx )
+	test? ( dev-python/pytest )"
 
 pkg_setup() {
+	python_pkg_setup
 	export DOT_SAGE="${S}"
 }
 

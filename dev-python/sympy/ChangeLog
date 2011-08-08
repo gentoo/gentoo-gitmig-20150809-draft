@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sympy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.16 2011/08/05 11:21:17 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.17 2011/08/08 18:37:35 hwoarang Exp $
+
+  08 Aug 2011; Markos Chandras <hwoarang@gentoo.org> sympy-0.7.1.ebuild:
+  Restrict Jython ABIs. Fix dependencies. Call python_pkg_setup(). Patch by
+  Arfrever.
 
 *sympy-0.7.1 (05 Aug 2011)
 
