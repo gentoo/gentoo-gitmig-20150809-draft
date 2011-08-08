@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vo/vo-0.7.ebuild,v 1.2 2011/08/04 00:04:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vo/vo-0.7.ebuild,v 1.3 2011/08/08 18:35:34 hwoarang Exp $
 
 EAPI=3
 
-PYTHON_DEPEND="*:2.5"
+PYTHON_DEPEND="*:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4"
+RESTRICT_PYTHON_ABIS="2.4 2.5 *-jython"
 
 inherit distutils eutils
 
@@ -22,15 +22,17 @@ LICENSE="BSD"
 RDEPEND="dev-libs/expat"
 DEPEND="${RDEPEND}"
 
+PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
+
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.6-expat.patch
 }
 
 src_test() {
 	cd test
+
 	testing() {
-		PYTHONPATH="$(ls -d ${S}/build-${PYTHON_ABI}/lib*)"  \
-			"$(PYTHON)" benchmarks.py || die "test failed with Python ${PYTHON_ABI}"
+		PYTHONPATH="$(ls -d ../build-${PYTHON_ABI}/lib.*)" "$(PYTHON)" benchmarks.py
 	}
 	python_execute_function testing
 }
