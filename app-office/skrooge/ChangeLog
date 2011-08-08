@@ -1,6 +1,10 @@
 # ChangeLog for app-office/skrooge
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/ChangeLog,v 1.17 2011/06/19 13:01:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/ChangeLog,v 1.18 2011/08/08 21:25:32 dilfridge Exp $
+
+  08 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> skrooge-0.9.0.ebuild:
+  Hard-disable tests, as the required directories are not included in the
+  tarball... bug 372315
 
 *skrooge-0.9.0 (19 Jun 2011)
 
