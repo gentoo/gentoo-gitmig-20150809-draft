@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/tremulous
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/ChangeLog,v 1.21 2011/05/18 19:30:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/ChangeLog,v 1.22 2011/08/08 22:46:43 mr_bones_ Exp $
+
+  08 Aug 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  tremulous-1.1.0-r4.ebuild:
+  Avoid parallel make (bug #298453)
 
   18 May 2011; Michael Sterrett <mr_bones_@gentoo.org>
   tremulous-1.1.0-r4.ebuild:

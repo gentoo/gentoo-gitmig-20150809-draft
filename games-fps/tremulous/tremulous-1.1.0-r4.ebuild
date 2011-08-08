@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/tremulous-1.1.0-r4.ebuild,v 1.7 2011/05/18 19:30:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tremulous/tremulous-1.1.0-r4.ebuild,v 1.8 2011/08/08 22:46:43 mr_bones_ Exp $
 
 EAPI=2
 
@@ -67,6 +67,7 @@ src_compile() {
 	fi
 
 	emake \
+		-j1 \
 		$(use amd64 && echo ARCH=x86_64) \
 		BUILD_CLIENT=${client} \
 		BUILD_CLIENT_SMP=${client} \
