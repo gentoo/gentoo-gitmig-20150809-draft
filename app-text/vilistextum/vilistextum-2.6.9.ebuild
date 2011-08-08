@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/vilistextum-2.6.9.ebuild,v 1.12 2011/02/12 18:49:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/vilistextum-2.6.9.ebuild,v 1.13 2011/08/08 20:20:51 grobian Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://bhaak.dyndns.org/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 #IUSE="unicode kde"
 IUSE="unicode"
 
@@ -24,7 +24,8 @@ RDEPEND=""
 src_prepare() {
 	epatch \
 		"${FILESDIR}/${P}-gentoo.diff" \
-		"${FILESDIR}/${P}-prefix.patch"
+		"${FILESDIR}/${P}-prefix.patch" \
+		"${FILESDIR}/${P}-darwin11.patch"
 	eautoreconf
 }
 

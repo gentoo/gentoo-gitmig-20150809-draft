@@ -1,6 +1,10 @@
 # ChangeLog for app-text/vilistextum
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.36 2011/03/27 21:57:11 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.37 2011/08/08 20:20:51 grobian Exp $
+
+  08 Aug 2011; Fabian Groffen <grobian@gentoo.org> vilistextum-2.6.9.ebuild,
+  +files/vilistextum-2.6.9-darwin11.patch:
+  Fixed for OSX Lion (10.7), marked ~x64-macos
 
   27 Mar 2011; Jeremy Olexa <darkside@gentoo.org> -vilistextum-2.6.7.ebuild,
   -vilistextum-2.6.7-r1.ebuild:
