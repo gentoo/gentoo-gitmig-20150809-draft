@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.2.0_pre1-r2.ebuild,v 1.2 2011/03/28 16:49:16 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.2.0_pre1-r2.ebuild,v 1.3 2011/08/08 17:15:56 ssuominen Exp $
 
 EAPI=3
 inherit eutils toolchain-funcs
@@ -25,14 +25,20 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${P/_/}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-4.diff \
+	epatch \
+		"${FILESDIR}"/${P}-4.diff \
 		"${FILESDIR}"/traypatch.diff \
 		"${FILESDIR}"/${P}-desktop-entry.patch \
 		"${FILESDIR}"/${P}-new-gtk-object-system.diff \
 		"${FILESDIR}"/${P}-fix-array-boundaries.patch \
-		"${FILESDIR}"/${P}-fix-segfault-comment.patch
-		#Bug 325879
-		sed -i -e '1i #pragma GCC optimize ("O0")' src/comment.c || die
+		"${FILESDIR}"/${P}-fix-segfault-comment.patch \
+		"${FILESDIR}"/${P}-libpng15.patch
+
+	# $X_LIBS fails to bring in -lX11 and the build fails with undefined
+	# references with strict linker
+	sed -i -e 's:view_LDADD =:view_LDADD = -lX11:' src/Makefile.{am,in} || die
+	#Bug 325879
+	sed -i -e '1i #pragma GCC optimize ("O0")' src/comment.c || die
 }
 
 src_configure() {
