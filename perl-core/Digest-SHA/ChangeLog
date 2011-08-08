@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Digest-SHA
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-SHA/ChangeLog,v 1.23 2011/07/28 13:39:18 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-SHA/ChangeLog,v 1.24 2011/08/08 19:55:41 grobian Exp $
+
+  08 Aug 2011; Fabian Groffen <grobian@gentoo.org> Digest-SHA-5.620.0.ebuild:
+  Marked ~x64-macos
 
   28 Jul 2011; Michael Haubenwallner <haubi@gentoo.org>
   Digest-SHA-5.620.0.ebuild:
