@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.498 2011/07/26 16:47:11 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.499 2011/08/08 16:15:47 olemarkus Exp $
+
+*php-5.4.0_alpha3 (08 Aug 2011)
+
+  08 Aug 2011; Ole Markus With <olemarkus@gentoo.org> +php-5.4.0_alpha3.ebuild:
+  Bumping 5.4 to alpha3
 
   26 Jul 2011; <olemarkus@gentoo.org> files/eblits/pkg_postinst-v2.eblit:
   Removed some unnecessary warnings
