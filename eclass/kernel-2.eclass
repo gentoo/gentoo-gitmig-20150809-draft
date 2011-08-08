@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.254 2011/08/08 14:14:15 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.255 2011/08/08 23:14:56 mpagano Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -458,6 +458,10 @@ if [[ ${ETYPE} == sources ]]; then
 				DEBLOB_PV="${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
 			else
 				DEBLOB_PV="${KV_MAJOR}.${KV_PATCH}"
+			fi
+
+			if [[ ${KV_MAJOR} -ge 3 ]]; then
+				DEBLOB_PV="${KV_MAJOR}.${KV_MINOR}"
 			fi
 
 			DEBLOB_A="deblob-${DEBLOB_PV}"
