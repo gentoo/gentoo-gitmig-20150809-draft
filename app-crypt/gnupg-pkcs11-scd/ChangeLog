@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/gnupg-pkcs11-scd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg-pkcs11-scd/ChangeLog,v 1.12 2011/04/09 17:25:59 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg-pkcs11-scd/ChangeLog,v 1.13 2011/08/08 18:30:48 hwoarang Exp $
+
+*gnupg-pkcs11-scd-0.7.3 (08 Aug 2011)
+
+  08 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
+  +gnupg-pkcs11-scd-0.7.3.ebuild:
+  Version bump. Ebuild by Arfrever
 
 *gnupg-pkcs11-scd-0.7.2 (09 Apr 2011)
 
