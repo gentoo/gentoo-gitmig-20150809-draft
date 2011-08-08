@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/nxnode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.62 2011/05/22 14:03:45 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.63 2011/08/08 14:41:53 voyageur Exp $
+
+*nxnode-3.5.0.4 (08 Aug 2011)
+
+  08 Aug 2011; Bernard Cafarelli <voyageur@gentoo.org> nxnode-3.4.0.6.ebuild,
+  nxnode-3.4.0.16-r1.ebuild, nxnode-3.5.0.3.ebuild, +nxnode-3.5.0.4.ebuild:
+  Maintenance release bump, fix security issue on nxconfigure.sh script and may
+  fix bug #282117. Drop obsolete net-misc/vnc dependency
 
 *nxnode-3.5.0.3 (22 May 2011)
 
