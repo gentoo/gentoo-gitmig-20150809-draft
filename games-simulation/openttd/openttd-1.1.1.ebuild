@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-1.1.1.ebuild,v 1.2 2011/08/08 16:23:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-1.1.1.ebuild,v 1.3 2011/08/08 16:29:31 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -39,6 +39,7 @@ PDEPEND="
 	)
 	openmedia? ( games-misc/opengfx )
 	"
+PATCHES=( "${FILESDIR}"/${P}-cflags.patch )
 
 src_configure() {
 	# there is an allegro interface available as well as sdl, but

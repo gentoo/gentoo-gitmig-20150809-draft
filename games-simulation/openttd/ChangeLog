@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.110 2011/08/08 16:23:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.111 2011/08/08 16:29:31 mr_bones_ Exp $
+
+  08 Aug 2011; Michael Sterrett <mr_bones_@gentoo.org> openttd-1.1.1.ebuild,
+  +files/openttd-1.1.1-cflags.patch:
+  Add patch to avoid mangling CFLAGS (reported in bug #378141)
 
   08 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> openttd-1.1.1.ebuild:
   x86 stable wrt bug #378141
