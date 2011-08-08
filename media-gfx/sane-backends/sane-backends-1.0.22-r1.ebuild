@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.22-r1.ebuild,v 1.2 2011/08/05 09:31:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.22-r1.ebuild,v 1.3 2011/08/08 17:58:57 voyageur Exp $
 
 EAPI="4"
 
@@ -208,10 +208,10 @@ src_install () {
 		exeinto /etc/hotplug/usb
 		doins tools/hotplug/libsane.usermap
 		doexe tools/hotplug/libusbscanner
-		newdoc tools/hotplug/README tools/hotplug/README.hotplug
+		newdoc tools/hotplug/README README.hotplug
 		echo >> "${D}"/etc/env.d/30sane "USB_DEVFS_PATH=/dev/bus/usb"
 	fi
-	insinto /$(get_libdir)/udev/rules.d
+	insinto /lib/udev/rules.d
 	newins tools/udev/libsane.rules 41-libsane.rules
 
 	dodoc NEWS AUTHORS ChangeLog* README README.linux

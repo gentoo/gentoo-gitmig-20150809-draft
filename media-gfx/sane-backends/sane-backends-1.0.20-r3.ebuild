@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.20-r3.ebuild,v 1.7 2011/08/05 09:31:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.20-r3.ebuild,v 1.8 2011/08/08 17:58:57 voyageur Exp $
 
 EAPI="1"
 
@@ -205,8 +205,8 @@ src_install () {
 		cd ../..
 	fi
 	cd tools/udev
-	dodir /$(get_libdir)/udev/rules.d
-	insinto /$(get_libdir)/udev/rules.d
+	dodir /lib/udev/rules.d
+	insinto /lib/udev/rules.d
 	newins libsane.rules 70-libsane.rules
 	cd ../..
 	dodoc NEWS AUTHORS ChangeLog* README README.linux

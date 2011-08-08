@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.186 2011/08/05 09:41:16 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.187 2011/08/08 17:58:57 voyageur Exp $
+
+  08 Aug 2011; Bernard Cafarelli <voyageur@gentoo.org>
+  sane-backends-1.0.18-r6.ebuild, sane-backends-1.0.19-r2.ebuild,
+  sane-backends-1.0.20-r3.ebuild, sane-backends-1.0.21-r1.ebuild,
+  sane-backends-1.0.22-r1.ebuild:
+  udev rules go in /lib/udev instead of /$(get_libdir)/udev, reported by
+  ssuominen. Fix doc installation, bug #367515
 
   05 Aug 2011; Bernard Cafarelli <voyageur@gentoo.org>
   sane-backends-1.0.20-r3.ebuild, -sane-backends-1.0.21.ebuild,
