@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virt-manager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.56 2011/07/28 22:04:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/ChangeLog,v 1.57 2011/08/08 18:26:29 cardoe Exp $
+
+*virt-manager-0.9.0-r1 (08 Aug 2011)
+
+  08 Aug 2011; Doug Goldstein <cardoe@gentoo.org>
+  +virt-manager-0.9.0-r1.ebuild:
+  Fix issue where network stat I/O wasn't being displayed and the debug console
+  was spewing errors
 
   28 Jul 2011; Doug Goldstein <cardoe@gentoo.org> virt-manager-0.9.0.ebuild:
   Remove bad patch reference
