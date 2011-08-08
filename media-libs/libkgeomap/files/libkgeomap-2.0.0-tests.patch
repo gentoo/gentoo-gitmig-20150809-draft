@@ -1,0 +1,12 @@
+diff -ruN digikam-2.0.0.orig/extra/libkgeomap/test/CMakeLists.txt digikam-2.0.0/extra/libkgeomap/test/CMakeLists.txt
+--- digikam-2.0.0.orig/extra/libkgeomap/test/CMakeLists.txt	2011-07-28 01:27:44.000000000 +0200
++++ digikam-2.0.0/extra/libkgeomap/test/CMakeLists.txt	2011-08-08 23:40:38.077189447 +0200
+@@ -59,7 +59,7 @@
+         test_tileindex.cpp
+        )
+     KDE4_ADD_EXECUTABLE(kgeomap_test_tileindex ${test_tileindex_sources})
+-    TARGET_LINK_LIBRARIES(kgeomap_test_tileindex kgeomap ${QT_QTTEST_LIBRARY})
++    TARGET_LINK_LIBRARIES(kgeomap_test_tileindex kgeomap ${QT_QTTEST_LIBRARY} ${KDE4_KDECORE_LIBS})
+     ADD_TEST(kgeomap_test_tileindex ${EXECUTABLE_OUTPUT_PATH}/kgeomap_test_tileindex)
+ 
+     # test the LookupAltitudeGeonames class

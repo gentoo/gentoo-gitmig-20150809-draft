@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkgeomap/libkgeomap-2.0.0.ebuild,v 1.1 2011/07/29 19:13:27 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkgeomap/libkgeomap-2.0.0.ebuild,v 1.2 2011/08/08 21:44:02 dilfridge Exp $
 
 EAPI=4
 
@@ -29,5 +29,7 @@ RDEPEND=${DEPEND}
 
 S="${WORKDIR}/${MY_P}/extra/${PN}"
 
+PATCHES=( "${FILESDIR}/${P}-tests.patch" )
+
 # bug 376763
-RESTRICT="test"
+#RESTRICT="test"
