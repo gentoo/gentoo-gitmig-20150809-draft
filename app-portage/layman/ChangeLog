@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.143 2011/08/05 19:57:46 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.144 2011/08/08 16:28:35 darkside Exp $
+
+  08 Aug 2011; Jeremy Olexa <darkside@gentoo.org> layman-2.0.0_rc1-r1.ebuild:
+  add ~amd64-linux kw as well
 
   05 Aug 2011; Jeremy Olexa <darkside@gentoo.org> layman-2.0.0_rc1-r1.ebuild:
   Import Gentoo Prefix mods. Add KEYWORDS, small fix to etc file, call
