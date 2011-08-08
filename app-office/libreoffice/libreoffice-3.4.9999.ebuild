@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999.ebuild,v 1.12 2011/08/07 19:02:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999.ebuild,v 1.13 2011/08/08 09:27:15 scarabeus Exp $
 
 EAPI=3
 
 KDE_REQUIRED="optional"
+KDE_SCM="git"
 CMAKE_REQUIRED="never"
 
 PYTHON_DEPEND="2"
