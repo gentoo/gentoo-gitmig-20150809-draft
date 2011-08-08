@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Digest-SHA
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-SHA/ChangeLog,v 1.33 2011/07/28 13:40:45 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-SHA/ChangeLog,v 1.34 2011/08/08 19:58:10 grobian Exp $
+
+  08 Aug 2011; Fabian Groffen <grobian@gentoo.org>
+  perl-Digest-SHA-5.620.0.ebuild:
+  Marked ~x64-macos
 
   28 Jul 2011; Michael Haubenwallner <haubi@gentoo.org>
   perl-Digest-SHA-5.620.0.ebuild:
