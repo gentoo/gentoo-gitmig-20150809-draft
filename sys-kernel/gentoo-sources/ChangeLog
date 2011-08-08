@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.874 2011/08/08 18:52:40 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.875 2011/08/08 23:32:51 mpagano Exp $
+
+*gentoo-sources-3.0.0 (08 Aug 2011)
+
+  08 Aug 2011; Michael Pagano <mpagano@gentoo.org> -gentoo-sources-3.0.ebuild,
+  +gentoo-sources-3.0.0.ebuild, gentoo-sources-3.0.1.ebuild:
+  Commit properly named gentoo-sources-3.0.0 ebuild, as eclass support for 3.X
+  kernels updated. Add deblob support to 3.0.0 and 3.0.1 as eclass deblob
+  support for 3.X also updated.
 
 *gentoo-sources-3.0.1 (08 Aug 2011)
 
