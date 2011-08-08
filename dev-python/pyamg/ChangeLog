@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyamg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyamg/ChangeLog,v 1.2 2011/08/06 19:37:36 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyamg/ChangeLog,v 1.3 2011/08/08 18:32:44 hwoarang Exp $
+
+  08 Aug 2011; Markos Chandras <hwoarang@gentoo.org> pyamg-2.0.0.ebuild:
+  Fix dependencies. Patch by Arfrever.
 
   06 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org>
   +files/2.0.0-stencil.patch, pyamg-2.0.0.ebuild:

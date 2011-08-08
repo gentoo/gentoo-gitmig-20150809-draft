@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/pysnmp-4.1.16a.ebuild,v 1.4 2011/08/01 13:58:01 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/pysnmp-4.1.16a.ebuild,v 1.5 2011/08/08 18:34:12 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ppc ~sparc x86"
 IUSE="examples"
 
-RDEPEND=">=dev-python/pyasn1-0.0.13_beta
+RDEPEND=">=dev-python/pyasn1-0.0.13_alpha
 	dev-python/pycrypto"
 DEPEND="${RDEPEND}
 	dev-python/setuptools"

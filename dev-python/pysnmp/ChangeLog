@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysnmp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.46 2011/08/01 14:21:34 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp/ChangeLog,v 1.47 2011/08/08 18:34:12 hwoarang Exp $
+
+  08 Aug 2011; Markos Chandras <hwoarang@gentoo.org> pysnmp-4.1.16a.ebuild:
+  Fix dependencies. Patch by Arfrever.
 
   01 Aug 2011; Jesus Rivero <neurogeek@gentoo.org> ChangeLog:
   Force Manifest signing
