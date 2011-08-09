@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.76 2011/07/29 22:41:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.77 2011/08/09 17:27:29 alexxy Exp $
+
+  09 Aug 2011; Alexey Shvetsov <alexxy@gentoo.org> xen-9999.ebuild:
+  Sync 9999 and 4.1.1
 
 *xen-4.1.1 (29 Jul 2011)
 

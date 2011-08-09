@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-9999.ebuild,v 1.2 2011/04/11 14:54:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-9999.ebuild,v 1.3 2011/08/09 17:27:29 alexxy Exp $
 
 EAPI="3"
 
@@ -66,13 +66,6 @@ src_prepare() {
 			-e 's/CFLAGS\(.*\)=\(.*\)-O2\(.*\)/CFLAGS\1=\2\3/' \
 			-i {} \;
 	fi
-	# fix for gcc-4.6
-	sed \
-		-e "s:-Werror::g" \
-		-i xen/arch/x86/boot/build32.mk \
-		-i xen/arch/x86/Rules.mk \
-		-i xen/include/Makefile \
-		|| die
 }
 
 src_configure() {
