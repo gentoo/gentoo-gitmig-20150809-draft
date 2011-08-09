@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-3.0.3.ebuild,v 1.4 2011/07/26 21:13:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/bitlbee-3.0.3.ebuild,v 1.5 2011/08/09 21:08:45 radhermit Exp $
 
 EAPI="4"
 inherit eutils multilib
@@ -118,7 +118,6 @@ src_configure() {
 		--strip=0 ${myconf} || die "econf failed"
 
 	sed -i \
-		-e "s/CFLAGS=.*$/CFLAGS=${CFLAGS}/" \
 		-e "/^EFLAGS/s:=:&${LDFLAGS} :" \
 		Makefile.settings || die "sed failed"
 }
