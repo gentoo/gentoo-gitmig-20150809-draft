@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/stimg/stimg-0.1.0.ebuild,v 1.11 2010/11/08 23:20:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/stimg/stimg-0.1.0.ebuild,v 1.12 2011/08/09 09:10:30 ssuominen Exp $
 
-EAPI=2
-inherit toolchain-funcs
+EAPI=4
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Simple and tiny image loading library"
 HOMEPAGE="http://homepage3.nifty.com/slokar/fb/"
@@ -19,16 +19,19 @@ RDEPEND="media-libs/libpng
 	virtual/jpeg"
 DEPEND="${RDEPEND}"
 
+DOCS=( AUTHORS )
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libpng15.patch
+}
+
 src_configure() {
 	tc-export CC
-	econf \
-		$(use_enable static-libs static)
+	econf $(use_enable static-libs static)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	find "${D}" -name '*.la' -delete
-
-	dodoc AUTHORS
+	default
+	find "${D}" -name '*.la' -exec rm -f {} +
 	use linguas_ja && dodoc README.ja
 }

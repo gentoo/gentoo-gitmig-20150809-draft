@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/stimg
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/stimg/ChangeLog,v 1.11 2010/11/08 23:20:19 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/stimg/ChangeLog,v 1.12 2011/08/09 09:10:30 ssuominen Exp $
+
+  09 Aug 2011; Samuli Suominen <ssuominen@gentoo.org> stimg-0.1.0.ebuild,
+  +files/stimg-0.1.0-libpng15.patch:
+  Fix building with libpng15 wrt #378355 by Diego Elio Pettenò
 
   08 Nov 2010; Markus Meier <maekke@gentoo.org> stimg-0.1.0.ebuild:
   change jpeg dep to virtual/jpeg
