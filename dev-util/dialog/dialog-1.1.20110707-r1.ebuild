@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.1.20110707-r1.ebuild,v 1.1 2011/07/21 16:51:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.1.20110707-r1.ebuild,v 1.2 2011/08/09 04:31:06 jer Exp $
 
 EAPI="2"
+
+inherit autotools-utils multilib
 
 MY_PV="${PV/1.1./1.1-}"
 S=${WORKDIR}/${PN}-${MY_PV}
@@ -13,7 +15,7 @@ SRC_URI="ftp://invisible-island.net/${PN}/${PN}-${MY_PV}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="examples minimal nls unicode"
+IUSE="examples minimal nls static-libs unicode"
 
 RDEPEND="
 	>=app-shells/bash-2.04-r3
@@ -51,5 +53,12 @@ src_install() {
 	if use examples; then
 		docinto samples
 		dodoc samples/*
+	fi
+
+	if ! use static-libs; then
+		rm \
+			"${D}"usr/$(get_libdir)/libdialog.a \
+			"${D}"usr/$(get_libdir)/libdialog.la \
+			|| die
 	fi
 }
