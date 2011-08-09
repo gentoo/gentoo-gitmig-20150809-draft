@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.2-r3.ebuild,v 1.6 2011/05/27 11:28:39 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.2-r3.ebuild,v 1.7 2011/08/09 17:38:39 ssuominen Exp $
 
 EAPI=2
 
@@ -40,12 +40,12 @@ src_prepare() {
 		-r -e "s:^LDFLAGS=(.*):LDFLAGS=\1 ${LDFLAGS}:" \
 		Makefile || die "sed failed in Makefile"
 	# Our Gentoo-specific config changes
-	epatch "${FILESDIR}/${PN}-1.3.2-r2-config.diff"
+	epatch "${FILESDIR}"/${PN}-1.3.2-r2-config.diff
 
 	if use elibc_FreeBSD; then
 		sed -i -e "s/CUSTOM=-DHAVE_SHADOW/CUSTOM=-DNEEDS_BASENAME/" Makefile \
 			|| die "sed failed in Makefile"
-		epatch "${FILESDIR}/${PN}-1.3.2-bsd-install.patch"
+		epatch "${FILESDIR}"/${PN}-1.3.2-bsd-install.patch
 	fi
 
 	if use branding; then
@@ -53,15 +53,17 @@ src_prepare() {
 	fi
 
 	# Gentoo bug 297655
-	epatch "${FILESDIR}/14509-fix-keyboard-in-tty-from-which-${PN}-is-lauched.patch"
+	epatch "${FILESDIR}"/14509-fix-keyboard-in-tty-from-which-${PN}-is-lauched.patch
 	# Upstream bug #15287
-	epatch "${FILESDIR}/15287-fix-pam-authentication-with-pam_unix2.patch"
+	epatch "${FILESDIR}"/15287-fix-pam-authentication-with-pam_unix2.patch
 	# Gentoo Bug 261713
-	epatch "${FILESDIR}/261713-restart-xserver-if-killed.patch"
+	epatch "${FILESDIR}"/261713-restart-xserver-if-killed.patch
 	# Gentoo bug 261359, upstream 15326
-	epatch "${FILESDIR}/261359-fix-SIGTERM-freeze.patch"
+	epatch "${FILESDIR}"/261359-fix-SIGTERM-freeze.patch
 	# Gentoo bug 346037
-	epatch "${FILESDIR}/346037-stop_setting_host_for_pam_ck_connector_so.patch"
+	epatch "${FILESDIR}"/346037-stop_setting_host_for_pam_ck_connector_so.patch
+	# Gentoo bug 378505
+	epatch "${FILESDIR}"/${P}-libpng15.patch
 }
 
 src_compile() {
