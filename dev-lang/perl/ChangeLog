@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.370 2011/06/24 14:48:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.371 2011/08/09 11:42:18 tove Exp $
+
+*perl-5.14.1-r1 (09 Aug 2011)
+*perl-5.12.4-r1 (09 Aug 2011)
+
+  09 Aug 2011; Torsten Veller <tove@gentoo.org> -perl-5.12.2-r6.ebuild,
+  -perl-5.12.3.ebuild, +perl-5.12.4-r1.ebuild, +perl-5.14.1-r1.ebuild:
+  Add xsubpp to the dual-life scripts list. Cleanup
 
 *perl-5.12.4 (24 Jun 2011)
 

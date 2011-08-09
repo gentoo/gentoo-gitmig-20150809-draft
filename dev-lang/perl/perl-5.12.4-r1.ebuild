@@ -1,14 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.12.3.ebuild,v 1.2 2011/03/07 11:35:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.12.4-r1.ebuild,v 1.1 2011/08/09 11:42:18 tove Exp $
 
-EAPI=3
+EAPI=4
 
 inherit eutils alternatives flag-o-matic toolchain-funcs multilib
 
 PATCH_VER=1
 
-PERL_OLDVERSEN="5.12.2 5.12.1 5.12.0"
+PERL_OLDVERSEN="5.12.3 5.12.2 5.12.1 5.12.0"
 
 SHORT_PV="${PV%.*}"
 MY_P="perl-${PV/_rc/-RC}"
@@ -18,9 +18,9 @@ DESCRIPTION="Larry Wall's Practical Extraction and Report Language"
 
 SRC_URI="
 	mirror://cpan/src/${MY_P}.tar.bz2
-	mirror://cpan/authors/id/R/RJ/RJBS/${MY_P}.tar.bz2
+	mirror://cpan/authors/id/L/LB/LBROCARD/${MY_P}.tar.bz2
 	mirror://gentoo/${MY_P}-${PATCH_VER}.tar.bz2
-	http://dev.gentoo.org/~tove/files/${MY_P}-${PATCH_VER}.tar.bz2"
+	http://dev.gentoo.org/~tove/distfiles/${CATEGORY}/${PN}/${MY_P}-${PATCH_VER}.tar.bz2"
 #	mirror://cpan/src/${MY_P}.tar.bz2
 #	mirror://gentoo/${MY_P}-${PATCH_VER}.tar.bz2
 HOMEPAGE="http://www.perl.org/"
@@ -44,17 +44,18 @@ PDEPEND=">=app-admin/perl-cleaner-2.5"
 S="${WORKDIR}/${MY_P}"
 
 dual_scripts() {
-	src_remove_dual_scripts perl-core/Archive-Tar        1.54    ptar ptardiff
-	src_remove_dual_scripts perl-core/Digest-SHA         5.47    shasum
-	src_remove_dual_scripts perl-core/CPAN               1.9456  cpan
-	src_remove_dual_scripts perl-core/CPANPLUS           0.90    cpanp cpan2dist cpanp-run-perl
-	src_remove_dual_scripts perl-core/Encode             2.39    enc2xs piconv
-	src_remove_dual_scripts perl-core/ExtUtils-MakeMaker 6.56    instmodsh
-	src_remove_dual_scripts perl-core/Module-Build       0.3603  config_data
-	src_remove_dual_scripts perl-core/Module-CoreList    2.43    corelist
-	src_remove_dual_scripts perl-core/PodParser          1.37    pod2usage podchecker podselect
-	src_remove_dual_scripts perl-core/Test-Harness       3.17    prove
-	src_remove_dual_scripts perl-core/podlators          2.3.1   pod2man pod2text
+	src_remove_dual_scripts perl-core/Archive-Tar        1.54      ptar ptardiff
+	src_remove_dual_scripts perl-core/Digest-SHA         5.47      shasum
+	src_remove_dual_scripts perl-core/CPAN               1.945.600 cpan
+	src_remove_dual_scripts perl-core/CPANPLUS           0.900.0   cpanp cpan2dist cpanp-run-perl
+	src_remove_dual_scripts perl-core/Encode             2.39      enc2xs piconv
+	src_remove_dual_scripts perl-core/ExtUtils-MakeMaker 6.56      instmodsh
+	src_remove_dual_scripts perl-core/ExtUtils-ParseXS   2.210.0   xsubpp
+	src_remove_dual_scripts perl-core/Module-Build       0.3603    config_data
+	src_remove_dual_scripts perl-core/Module-CoreList    2.500.0   corelist
+	src_remove_dual_scripts perl-core/PodParser          1.370.0   pod2usage podchecker podselect
+	src_remove_dual_scripts perl-core/Test-Harness       3.17      prove
+	src_remove_dual_scripts perl-core/podlators          2.3.1     pod2man pod2text
 }
 
 pkg_setup() {
