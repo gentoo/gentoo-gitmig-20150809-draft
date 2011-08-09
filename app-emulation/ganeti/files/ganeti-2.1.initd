@@ -1,45 +1,28 @@
 #!/sbin/runscript
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/files/ganeti-2.1.initd,v 1.3 2010/03/07 20:56:02 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/files/ganeti-2.1.initd,v 1.4 2011/08/09 06:57:04 ramereth Exp $
 
 depend() {
     need localmount
     after bootmisc
 }
 
-NODED="ganeti-noded"
-MASTERD="ganeti-masterd"
-CONFD="ganeti-confd"
-RAPI="ganeti-rapi"
 DAEMON_UTIL="/usr/lib/ganeti/daemon-util"
 
 check_config() {
-    for fname in /var/lib/ganeti/server.pem
-    do
-        if [[ ! -f "$fname" ]]
-        then
-            eerror "Config file $fname not found, will not run."
-            return 1
-        fi
-    done
-
-    return 0
+    if ! $DAEMON_UTIL check-config ; then
+        eend 0 "Incomplete configuration, will not run."
+    fi
 }
 
 check_exitcode() {
     RC=${1}
-    case ${RC} in
-        0)  
-            eend 0
-            ;;
-        11) 
-            eend 0 "not master"
-            ;;
-        *)  
-            eend 1 "exit code $RC"
-            ;;
-    esac
+    if errmsg=$(${DAEMON_UTIL} check-exitcode ${RC}) ; then
+        eend 0 "${errmsg}"
+    else
+        eend 1 "${errmsg}"
+    fi
 }
 
 start_action() {
@@ -69,7 +52,7 @@ maybe_do() {
 
 start_all() {
     check_config
-    for i in ${NODED} ${MASTERD} ${CONFD} ${RAPI}; do \
+    for i in $($DAEMON_UTIL list-start-daemons); do \
         case "${i}" in
             ganeti-masterd)
                 GANETI_OPTS="${GANETI_OPTS} ${GANETI_MASTERD_OPTS}"
@@ -83,7 +66,7 @@ start_all() {
 }
 
 stop_all() {
-    for i in ${RAPI} ${CONFD} ${MASTERD} ${NODED}; do \
+    for i in $($DAEMON_UTIL list-stop-daemons) ; do \
         maybe_do "${1}" stop_action ${i}
     done
 }
