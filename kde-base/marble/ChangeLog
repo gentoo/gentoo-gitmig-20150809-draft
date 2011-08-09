@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.103 2011/07/31 18:24:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.104 2011/08/09 17:12:36 hwoarang Exp $
+
+  09 Aug 2011; Markos Chandras <hwoarang@gentoo.org> marble-4.6.5.ebuild:
+  Stable on amd64 wrt bug #377465
 
 *marble-4.7.0-r1 (31 Jul 2011)
 

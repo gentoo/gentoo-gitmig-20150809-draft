@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/printer-applet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/printer-applet/ChangeLog,v 1.52 2011/07/27 14:04:35 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/printer-applet/ChangeLog,v 1.53 2011/08/09 17:12:19 hwoarang Exp $
+
+  09 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
+  printer-applet-4.6.5.ebuild:
+  Stable on amd64 wrt bug #377465
 
 *printer-applet-4.7.0 (27 Jul 2011)
 

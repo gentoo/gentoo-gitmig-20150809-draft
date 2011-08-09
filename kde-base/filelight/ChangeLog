@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/filelight
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/filelight/ChangeLog,v 1.19 2011/07/27 14:04:31 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/filelight/ChangeLog,v 1.20 2011/08/09 17:12:15 hwoarang Exp $
+
+  09 Aug 2011; Markos Chandras <hwoarang@gentoo.org> filelight-4.6.5.ebuild:
+  Stable on amd64 wrt bug #377465
 
 *filelight-4.7.0 (27 Jul 2011)
 

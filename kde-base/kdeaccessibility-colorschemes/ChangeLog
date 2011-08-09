@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaccessibility-colorschemes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-colorschemes/ChangeLog,v 1.85 2011/07/09 15:14:24 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-colorschemes/ChangeLog,v 1.86 2011/08/09 17:12:36 hwoarang Exp $
+
+  09 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
+  kdeaccessibility-colorschemes-4.6.5.ebuild:
+  Stable on amd64 wrt bug #377465
 
 *kdeaccessibility-colorschemes-4.6.5 (09 Jul 2011)
 
