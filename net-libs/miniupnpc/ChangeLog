@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/miniupnpc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.14 2011/08/09 13:34:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.15 2011/08/09 17:47:19 mgorny Exp $
+
+*miniupnpc-1.6-r1 (09 Aug 2011)
+
+  09 Aug 2011; Michał Górny <mgorny@gentoo.org> -miniupnpc-1.6.ebuild,
+  +miniupnpc-1.6-r1.ebuild:
+  Split the Python module into separate dev-python/miniupnpc. Bump EAPI,
+  cleanup.
 
   09 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> miniupnpc-1.6.ebuild:
   Marked ~ppc64 wrt #377513
