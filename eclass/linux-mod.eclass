@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.102 2011/06/01 06:51:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.103 2011/08/09 22:11:53 vapier Exp $
 
 # Author(s): John Mylchreest <johnm@gentoo.org>,
 #            Stefan Schweizer <genstef@gentoo.org>
@@ -124,11 +124,6 @@
 # @ECLASS-VARIABLE: KV_OBJ
 # @DESCRIPTION:
 # It's a read-only variable. It contains the extension of the kernel modules.
-
-# The order of these is important as both of linux-info and eutils contain
-# set_arch_to_kernel and set_arch_to_portage functions and the ones in eutils
-# are deprecated in favor of the ones in linux-info.
-# See http://bugs.gentoo.org/show_bug.cgi?id=127506
 
 inherit eutils linux-info multilib
 EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst src_install src_compile pkg_postrm
