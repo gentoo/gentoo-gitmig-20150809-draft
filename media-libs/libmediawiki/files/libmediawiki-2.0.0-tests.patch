@@ -1,0 +1,12 @@
+diff -ruN digikam-2.0.0.orig/extra/libmediawiki/tests/CMakeLists.txt digikam-2.0.0/extra/libmediawiki/tests/CMakeLists.txt
+--- digikam-2.0.0.orig/extra/libmediawiki/tests/CMakeLists.txt	2011-07-28 01:27:42.000000000 +0200
++++ digikam-2.0.0/extra/libmediawiki/tests/CMakeLists.txt	2011-08-09 08:38:44.669186537 +0200
+@@ -42,6 +42,7 @@
+         parsetest.rc
+        )
+ 
+-    INSTALL(FILES ${ressources_RC} DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
++    # INSTALL(FILES ${ressources_RC} DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
++    # ??? these files should not end up in the installation! what is the intention here?
+ 
+ ENDIF( KDE4_BUILD_TESTS )
