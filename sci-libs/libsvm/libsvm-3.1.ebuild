@@ -1,31 +1,41 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/libsvm-2.91.ebuild,v 1.1 2010/08/05 20:25:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/libsvm-3.1.ebuild,v 1.1 2011/08/09 04:46:36 bicatali Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit eutils java-pkg-opt-2 python
+inherit eutils java-pkg-opt-2 python flag-o-matic toolchain-funcs
 
-MY_P="${PN}-${PV%0}"
-
-DESCRIPTION="Library for Support Vector Machines"
+DESCRIPTION="Library for Support Vector Mahcines"
 HOMEPAGE="http://www.csie.ntu.edu.tw/~cjlin/libsvm/"
-SRC_URI="http://www.csie.ntu.edu.tw/~cjlin/libsvm/${MY_P}.tar.gz"
+SRC_URI="http://www.csie.ntu.edu.tw/~cjlin/libsvm/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="java python tools"
+IUSE="java openmp python tools"
 
 DEPEND="java? ( >=virtual/jdk-1.4 )"
 RDEPEND="${DEPEND}
 	tools? ( sci-visualization/gnuplot )"
 
-S="${WORKDIR}"/${MY_P}
+pkg_setup() {
+	if use openmp; then
+		if [[ $(tc-getCC)$ == *gcc* ]] && ! tc-has-openmp; then
+			ewarn "You are using gcc and OpenMP is only available with gcc >= 4.2 "
+			die "Need an OpenMP capable compiler"
+		else
+			append-ldflags -fopenmp
+			append-cxxflags -fopenmp
+		fi
+		append-cxxflags -DOPENMP
+	fi
+}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PV}-makefile.patch
+	epatch "${FILESDIR}"/3.0-makefile.patch
+	epatch "${FILESDIR}"/${PV}-openmp.patch
 	sed -i -e "s@\.\./@${EPREFIX}/usr/bin/@g" tools/*.py \
 		|| die "Failed to fix paths in python files"
 	if use java; then

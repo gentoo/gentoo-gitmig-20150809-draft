@@ -1,0 +1,36 @@
+--- svm.cpp.orig	2011-03-08 08:25:57.000000000 -0500
++++ svm.cpp	2011-04-25 18:07:09.000000000 -0400
+@@ -1267,6 +1267,9 @@ public:
+ 		int start, j;
+ 		if((start = cache->get_data(i,&data,len)) < len)
+ 		{
++#ifdef OPENMP
++#pragma omp parallel for private(j)
++#endif
+ 			for(j=start;j<len;j++)
+ 				data[j] = (Qfloat)(y[i]*y[j]*(this->*kernel_function)(i,j));
+ 		}
+@@ -2445,8 +2448,11 @@ double svm_predict_values(const svm_mode
+ 	   model->param.svm_type == NU_SVR)
+ 	{
+ 		double *sv_coef = model->sv_coef[0];
+-		double sum = 0;
+-		for(int i=0;i<model->l;i++)
++		double sum = 0; int i;
++#ifdef OPENMP
++#pragma omp parallel for private(i) reduction(+:sum)
++#endif
++		for(i=0;i<model->l;i++)
+ 			sum += sv_coef[i] * Kernel::k_function(x,model->SV[i],model->param);
+ 		sum -= model->rho[0];
+ 		*dec_values = sum;
+@@ -2463,6 +2469,9 @@ double svm_predict_values(const svm_mode
+ 		int l = model->l;
+ 		
+ 		double *kvalue = Malloc(double,l);
++#ifdef OPENMP
++#pragma omp parallel for private(i)
++#endif
+ 		for(i=0;i<l;i++)
+ 			kvalue[i] = Kernel::k_function(x,model->SV[i],model->param);
+ 
