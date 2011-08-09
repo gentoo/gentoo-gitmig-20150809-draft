@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Digest-SHA
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-SHA/ChangeLog,v 1.34 2011/08/08 19:58:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Digest-SHA/ChangeLog,v 1.35 2011/08/09 11:08:16 mduft Exp $
+
+  09 Aug 2011; Markus Duft <mduft@gentoo.org> perl-Digest-SHA-5.620.0.ebuild:
+  added ~x86-interix prefix keyword
 
   08 Aug 2011; Fabian Groffen <grobian@gentoo.org>
   perl-Digest-SHA-5.620.0.ebuild:
