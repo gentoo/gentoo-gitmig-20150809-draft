@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/cutg-160.ebuild,v 1.5 2011/04/06 13:46:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/cutg/cutg-160.ebuild,v 1.6 2011/08/09 15:36:16 xarthisius Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ LICENSE="public-domain"
 # Minimal build keeps only the indexed files (if applicable) and the
 # documentation. The non-indexed database is not installed.
 IUSE="emboss minimal"
-KEYWORDS="amd64 ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
 
 DEPEND="emboss? ( sci-biology/emboss )"
 RDEPEND="${DEPEND}"

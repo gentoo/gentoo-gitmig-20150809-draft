@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/prints
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prints/ChangeLog,v 1.24 2011/03/13 12:54:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prints/ChangeLog,v 1.25 2011/08/09 15:36:16 xarthisius Exp $
+
+  09 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> prints-38.0.ebuild,
+  prints-39.0.ebuild:
+  ppc64 keyword dropped
 
   13 Mar 2011; Raúl Porcel <armin76@gentoo.org> prints-38.0.ebuild,
   prints-39.0.ebuild:
