@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-1.11.2.ebuild,v 1.1 2011/06/04 18:05:45 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-1.11.2.ebuild,v 1.2 2011/08/09 08:49:44 ssuominen Exp $
 
 EAPI=3
 
@@ -9,7 +9,7 @@ PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit autotools wxwidgets python versionator toolchain-funcs
+inherit autotools eutils wxwidgets python versionator toolchain-funcs
 
 DESCRIPTION="Math Graphics Library"
 HOMEPAGE="http://mathgl.sourceforge.net/"
@@ -21,6 +21,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc fltk gif glut gsl hdf5 jpeg octave python qt4 wxwidgets"
 
 RDEPEND="media-libs/libpng
+	sys-libs/zlib
 	virtual/opengl
 	python? ( dev-python/numpy )
 	glut? ( media-libs/freeglut )
@@ -64,6 +65,9 @@ src_prepare() {
 
 	# bug #358245
 	epatch "${FILESDIR}"/${PN}-octave-3.4.patch
+
+	# bug #378255
+	epatch "${FILESDIR}"/${PN}-1.11.2-zlib.patch
 
 	# correct location of numpy/arrayobject.h
 	if use python; then

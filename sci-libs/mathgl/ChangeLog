@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/mathgl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/ChangeLog,v 1.24 2011/06/04 18:05:45 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/ChangeLog,v 1.25 2011/08/09 08:49:44 ssuominen Exp $
+
+  09 Aug 2011; Samuli Suominen <ssuominen@gentoo.org> mathgl-1.11.2.ebuild,
+  +files/mathgl-1.11.2-zlib.patch:
+  Missing -lz since for example, gzopen is used. Missing zlib.h include wrt
+  #378255 by Diego Elio Pettenò
 
 *mathgl-1.11.2 (04 Jun 2011)
 
