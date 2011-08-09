@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/selinux/packages,v 1.1 2011/05/17 10:46:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/selinux/packages,v 1.2 2011/08/09 04:29:55 zmedico Exp $
 
 # This file extends the base packages file for the default profile that all
 # architectures will enjoy.  Please note that default is what most architectures
@@ -14,13 +14,6 @@
 ##############################################################################
 # Basic SELinux required versionings
 
-# Core Packages
->=sys-apps/portage-2.0.49-r15
->=sys-apps/baselayout-1.8.6.12-r2
->=sys-libs/glibc-2.3
->=sys-libs/uclibc-0.9.26-r8
->=sys-kernel/linux-headers-2.4.20
-
 # Base SELinux packages
 *sys-libs/libsepol
 *sys-libs/libselinux
@@ -30,25 +23,5 @@
 *sec-policy/selinux-base-policy
 
 # SELinux-aware packages
->=net-misc/openssh-3.7.1_p2
->=sys-apps/coreutils-5.0.91
->=sys-apps/findutils-4.1.20-r1
->=sys-apps/shadow-4.0.3-r7
 *>=sys-apps/util-linux-2.12
 *>=sys-libs/pam-0.77
->=sys-process/procps-3.1.15
->=sys-process/psmisc-21.2-r4
-
-# optional SELinux-aware programs:
->=app-admin/logrotate-3.6.5-r1
->=gnome-base/gdm-2.4.4.7
->=sys-process/fcron-2.9.4
->=sys-fs/udev-055
->=sys-process/vixie-cron-3.0.1-r2
-
-# SELinux is integrated in 2.6
->=sys-kernel/vanilla-sources-2.6.0
-
-# Critical xattr fixes:
->=sys-boot/grub-0.94
->=sys-boot/grub-static-0.94

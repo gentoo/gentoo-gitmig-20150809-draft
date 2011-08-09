@@ -1,5 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ia64/package.mask,v 1.2 2009/07/31 11:11:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ia64/package.mask,v 1.3 2011/08/09 04:29:55 zmedico Exp $
+
+# Zac Medico <zmedico@gentoo.org> (09 Aug 2011)
+# Bug #377907 - Use package.mask for compatibility with PMS section 5.2.7, and
+# future versions of sys-apps/portage.
+<sys-devel/binutils-2.13.90.0.4
+<x11-base/xorg-x11-6.8.0-r4
 
 <sys-kernel/linux-headers-2.5
