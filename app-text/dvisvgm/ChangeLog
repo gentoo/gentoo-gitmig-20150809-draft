@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvisvgm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.14 2011/06/14 03:25:21 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.15 2011/08/09 21:38:25 hwoarang Exp $
+
+  09 Aug 2011; Markos Chandras <hwoarang@gentoo.org> dvisvgm-1.0.8.ebuild:
+  Stable on amd64 wrt bug #355085
 
   14 Jun 2011; Matt Turner <mattst88@gentoo.org> dvisvgm-1.0.8.ebuild:
   Added ~mips, bug 342513
