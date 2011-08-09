@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.1.0.ebuild,v 1.2 2011/05/12 13:55:40 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.1.0.ebuild,v 1.3 2011/08/09 17:35:54 alexxy Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="
 		http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz
 		http://alpha.gnu.org/gnu/grub/grub-0.97.tar.gz
 		http://downloads.sourceforge.net/project/libpng/zlib/1.2.3/zlib-1.2.3.tar.gz
-		ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/pciutils-2.2.9.tar.gz
+		http://www.kernel.org/pub/software/utils/pciutils/pciutils-2.2.9.tar.bz2
 		http://download.savannah.gnu.org/releases/lwip/lwip-1.3.0.tar.gz
 		ftp://sources.redhat.com/pub/newlib/newlib-1.16.0.tar.gz
 		"
