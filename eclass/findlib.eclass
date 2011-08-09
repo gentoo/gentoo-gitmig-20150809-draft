@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/findlib.eclass,v 1.9 2009/02/08 21:30:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/findlib.eclass,v 1.10 2011/08/09 19:06:37 darkside Exp $
 
 # @ECLASS: findlib.eclass
 # @MAINTAINER:
@@ -20,7 +20,7 @@ DEPEND=">=dev-ml/findlib-1.0.4-r1"
 [[ ${FINDLIB_USE} ]] && DEPEND="${FINDLIB_USE}? ( ${DEPEND} )"
 
 check_ocamlfind() {
-	if [ ! -x /usr/bin/ocamlfind ]
+	if [ ! -x "${EPREFIX}"/usr/bin/ocamlfind ]
 	then
 		eerror "In findlib.eclass: could not find the ocamlfind executable"
 		eerror "Please report this bug on gentoo's bugzilla, assigning to ml@gentoo.org"
@@ -34,13 +34,18 @@ check_ocamlfind() {
 # We use the stublibs style, so no ld.conf needs to be
 # updated when a package installs C shared libraries.
 findlib_src_preinst() {
+	has "${EAPI:-0}" 0 1 2 && ! use prefix && EPREFIX=
+	has "${EAPI:-0}" 0 1 2 && use !prefix && ED="${D}"
 	check_ocamlfind
 
 	# destdir is the ocaml sitelib
 	local destdir=`ocamlfind printconf destdir`
 
+	# strip off prefix
+	destdir=${destdir#${EPREFIX}}
+
 	dodir ${destdir} || die "dodir failed"
-	export OCAMLFIND_DESTDIR=${D}${destdir}
+	export OCAMLFIND_DESTDIR=${ED}${destdir}
 
 	# stublibs style
 	dodir ${destdir}/stublibs || die "dodir failed"
