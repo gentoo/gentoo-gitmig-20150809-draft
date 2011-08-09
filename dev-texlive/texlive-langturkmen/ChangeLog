@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langturkmen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langturkmen/ChangeLog,v 1.7 2011/07/28 13:28:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langturkmen/ChangeLog,v 1.8 2011/08/09 21:28:44 hwoarang Exp $
+
+  09 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
+  texlive-langturkmen-2010.ebuild:
+  Stable on amd64 wrt bug #355085
 
 *texlive-langturkmen-2011 (28 Jul 2011)
 

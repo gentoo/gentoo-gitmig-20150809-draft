@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-mathextra/texlive-mathextra-2010.ebuild,v 1.2 2010/12/17 20:35:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-mathextra/texlive-mathextra-2010.ebuild,v 1.3 2011/08/09 21:31:34 hwoarang Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ DESCRIPTION="TeXLive Advanced math typesetting"
 
 LICENSE="GPL-2 as-is BSD GPL-1 LGPL-2 LPPL-1.3 public-domain TeX "
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~ppc-macos"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~ppc-macos"
 IUSE=""
 DEPEND=">=dev-texlive/texlive-fontsrecommended-2010
 >=dev-texlive/texlive-latex-2010

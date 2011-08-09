@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-texinfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-texinfo/ChangeLog,v 1.38 2011/07/28 13:36:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-texinfo/ChangeLog,v 1.39 2011/08/09 21:35:09 hwoarang Exp $
+
+  09 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
+  texlive-texinfo-2010.ebuild:
+  Stable on amd64 wrt bug #355085
 
 *texlive-texinfo-2011 (28 Jul 2011)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-music
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-music/ChangeLog,v 1.33 2011/07/28 13:33:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-music/ChangeLog,v 1.34 2011/08/09 21:32:39 hwoarang Exp $
+
+  09 Aug 2011; Markos Chandras <hwoarang@gentoo.org> texlive-music-2010.ebuild:
+  Stable on amd64 wrt bug #355085
 
 *texlive-music-2011 (28 Jul 2011)
 

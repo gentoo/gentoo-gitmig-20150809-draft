@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-documentation-bulgarian
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-bulgarian/ChangeLog,v 1.32 2011/07/28 12:49:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-bulgarian/ChangeLog,v 1.33 2011/08/09 20:53:48 hwoarang Exp $
+
+  09 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
+  texlive-documentation-bulgarian-2010.ebuild:
+  Stable on amd64 wrt bug #355085
 
 *texlive-documentation-bulgarian-2011 (28 Jul 2011)
 

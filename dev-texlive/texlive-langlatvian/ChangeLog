@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langlatvian
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langlatvian/ChangeLog,v 1.12 2011/07/28 13:25:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langlatvian/ChangeLog,v 1.13 2011/08/09 21:26:00 hwoarang Exp $
+
+  09 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
+  texlive-langlatvian-2010.ebuild:
+  Stable on amd64 wrt bug #355085
 
 *texlive-langlatvian-2011 (28 Jul 2011)
 

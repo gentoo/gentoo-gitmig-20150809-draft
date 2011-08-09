@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-formatsextra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-formatsextra/ChangeLog,v 1.36 2011/07/28 13:15:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-formatsextra/ChangeLog,v 1.37 2011/08/09 21:29:31 hwoarang Exp $
+
+  09 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
+  texlive-formatsextra-2010.ebuild:
+  Stable on amd64 wrt bug #355085
 
 *texlive-formatsextra-2011 (28 Jul 2011)
 

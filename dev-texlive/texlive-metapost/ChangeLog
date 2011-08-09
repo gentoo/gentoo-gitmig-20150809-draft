@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-metapost
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-metapost/ChangeLog,v 1.38 2011/07/28 13:32:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-metapost/ChangeLog,v 1.39 2011/08/09 21:32:00 hwoarang Exp $
+
+  09 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
+  texlive-metapost-2010.ebuild:
+  Stable on amd64 wrt bug #355085
 
 *texlive-metapost-2011 (28 Jul 2011)
 
