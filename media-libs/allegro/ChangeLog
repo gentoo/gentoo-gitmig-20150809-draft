@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.108 2011/08/07 17:08:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.109 2011/08/09 12:29:55 xarthisius Exp $
+
+  09 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> allegro-5.0.3.ebuild:
+  ppc/ppc64 stable wrt #375491
 
   07 Aug 2011; Raúl Porcel <armin76@gentoo.org> allegro-4.4.1.1-r1.ebuild,
   allegro-5.0.1.ebuild, allegro-5.0.3.ebuild:
