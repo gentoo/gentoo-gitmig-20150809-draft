@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.129 2011/01/30 08:18:42 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.130 2011/08/09 11:48:31 tove Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 
@@ -54,12 +54,11 @@ DESCRIPTION="Based on the $ECLASS eclass"
 
 LICENSE="${LICENSE:-|| ( Artistic GPL-1 GPL-2 GPL-3 )}"
 
-# TODO: Document variables: MODULE_VERSION, MODULE_A, MODULE_A_EXT,
-# MODULE_AUTHOR, MODULE_SECTION, GENTOO_DEPEND_ON_PERL, PREFER_BUILDPL
 if [[ -n ${MY_PN} || -n ${MY_PV} || -n ${MODULE_VERSION} ]] ; then
 	: ${MY_P:=${MY_PN:-${PN}}-${MY_PV:-${MODULE_VERSION:-${PV}}}}
 	S=${MY_S:-${WORKDIR}/${MY_P}}
 fi
+
 [[ -z "${SRC_URI}" && -z "${MODULE_A}" ]] && \
 	MODULE_A="${MY_P:-${P}}.${MODULE_A_EXT:-tar.gz}"
 [[ -z "${SRC_URI}" && -n "${MODULE_AUTHOR}" ]] && \
@@ -100,7 +99,7 @@ perl-module_src_prep() {
 	perl_set_version
 	perl_set_eprefix
 
-	export PERL_MM_USE_DEFAULT=1
+	[[ -z ${pm_echovar} ]] && export PERL_MM_USE_DEFAULT=1
 	# Disable ExtUtils::AutoInstall from prompting
 	export PERL_EXTUTILS_AUTOINSTALL="--skipdeps"
 
@@ -370,19 +369,23 @@ perl_link_duallife_scripts() {
 	local i ff
 	if has "${EBUILD_PHASE:-none}" "postinst" "postrm" ; then
 		for i in "${DUALLIFESCRIPTS[@]}" ; do
-			alternatives_auto_makesym "/usr/bin/${i}" "/usr/bin/${i}-[0-9]*"
-			ff=`echo "${EROOT}"/usr/share/man/man1/${i}-${PV}-${P}.1*`
+			alternatives_auto_makesym "/${i}" "/${i}-[0-9]*"
+		done
+		for i in "${DUALLIFEMAN[@]}" ; do
+			ff=`echo "${EROOT}"/${i%.1}-${PV}-${P}.1*`
 			ff=${ff##*.1}
-			alternatives_auto_makesym "/usr/share/man/man1/${i}.1${ff}" "/usr/share/man/man1/${i}-[0-9]*"
+			alternatives_auto_makesym "/${i}${ff}" "/${i%.1}-[0-9]*"
 		done
 	else
 		pushd "${ED}" > /dev/null
 		for i in $(find usr/bin -maxdepth 1 -type f 2>/dev/null) ; do
 			mv ${i}{,-${PV}-${P}} || die
-			DUALLIFESCRIPTS[${#DUALLIFESCRIPTS[*]}]=${i##*/}
-			if [[ -f usr/share/man/man1/${i##*/}.1 ]] ; then
-				mv usr/share/man/man1/${i##*/}{.1,-${PV}-${P}.1} || die
-			fi
+			#DUALLIFESCRIPTS[${#DUALLIFESCRIPTS[*]}]=${i##*/}
+			DUALLIFESCRIPTS[${#DUALLIFESCRIPTS[*]}]=${i}
+		done
+		for i in $(find usr/share/man/man1 -maxdepth 1 -type f 2>/dev/null) ; do
+			mv ${i} ${i%.1}-${PV}-${P}.1 || die
+			DUALLIFEMAN[${#DUALLIFEMAN[*]}]=${i}
 		done
 		popd > /dev/null
 	fi
