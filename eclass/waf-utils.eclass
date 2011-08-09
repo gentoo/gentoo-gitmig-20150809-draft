@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.5 2011/03/01 23:02:08 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/waf-utils.eclass,v 1.6 2011/08/09 18:53:06 jer Exp $
 
 # @ECLASS: waf-utils.eclass
 # @MAINTAINER:
@@ -17,7 +17,7 @@
 # waf-based packages much easier.
 # Its main features are support of common portage default settings.
 
-inherit base eutils multilib
+inherit base eutils multilib toolchain-funcs
 
 case ${EAPI:-0} in
 	4|3) EXPORT_FUNCTIONS src_configure src_compile src_install ;;
@@ -35,6 +35,7 @@ waf-utils_src_configure() {
 	# Eclass can use different waf executable. Usually it is located in "${S}/waf".
 	: ${WAF_BINARY:="${S}/waf"}
 
+	tc-export AR CC CPP CXX RANLIB
 	echo "CCFLAGS=\"${CFLAGS}\" LINKFLAGS=\"${LDFLAGS}\" \"${WAF_BINARY}\" --prefix=${EPREFIX}/usr --libdir=${EPREFIX}/usr/$(get_libdir) $@ configure"
 
 	CCFLAGS="${CFLAGS}" LINKFLAGS="${LDFLAGS}" "${WAF_BINARY}" \
