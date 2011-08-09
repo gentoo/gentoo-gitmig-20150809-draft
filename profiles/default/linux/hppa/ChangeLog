@@ -1,6 +1,13 @@
 # ChangeLog for profiles/default/linux/hppa
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/hppa/ChangeLog,v 1.8 2010/07/25 19:07:28 nirbheek Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/hppa/ChangeLog,v 1.9 2011/08/09 12:54:38 ssuominen Exp $
+
+  09 Aug 2011; Samuli Suominen <ssuominen@gentoo.org> -2008.0/deprecated,
+  -2008.0/desktop/deprecated, -2008.0/desktop/make.defaults,
+  -2008.0/desktop/parent, -2008.0/developer/deprecated,
+  -2008.0/developer/parent, -2008.0/parent, -2008.0/server/deprecated,
+  -2008.0/server/parent:
+  Remove 2008.0 profile.
 
   25 Jul 2010; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
   Fix atom for pkgmove from www-client/mozilla-firefox -> www-client/firefox
