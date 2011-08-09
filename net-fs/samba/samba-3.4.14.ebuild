@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.4.13-r1.ebuild,v 1.1 2011/08/04 18:52:26 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.4.14.ebuild,v 1.1 2011/08/09 17:14:39 vostorga Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.samba.org/"
 SRC_URI="mirror://samba/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="acl addns ads aio avahi caps +client cluster cups debug doc examples fam
 	ldap ldb +netapi pam quota +readline +server +smbclient smbsharemodes swat
 	syslog winbind "
@@ -38,7 +38,6 @@ DEPEND="dev-libs/popt
 	debug? ( dev-libs/dmalloc )
 	fam? ( virtual/fam )
 	ldap? ( net-nds/openldap )
-	ldb? ( sys-libs/ldb )
 	pam? ( virtual/pam
 		winbind? ( dev-libs/iniparser ) )
 	readline? ( >=sys-libs/readline-5.2 )
@@ -71,7 +70,7 @@ if use client ; then
 fi
 
 use cups && BINPROGS="${BINPROGS} bin/smbspool"
-#use ldb && BINPROGS="${BINPROGS} bin/ldbedit bin/ldbsearch bin/ldbadd bin/ldbdel bin/ldbmodify bin/ldbrename";
+use ldb && BINPROGS="${BINPROGS} bin/ldbedit bin/ldbsearch bin/ldbadd bin/ldbdel bin/ldbmodify bin/ldbrename";
 
 if use winbind ; then
 	BINPROGS="${BINPROGS} bin/wbinfo"
