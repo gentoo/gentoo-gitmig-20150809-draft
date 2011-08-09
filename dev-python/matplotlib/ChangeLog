@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.106 2011/04/14 20:10:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.107 2011/08/09 05:40:01 bicatali Exp $
+
+  09 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org>
+  matplotlib-1.0.1-r1.ebuild, +files/matplotlib-1.0.1-linux3.patch:
+  Added linux patches, bug #375255, thanks robbat2 for the look up
 
   14 Apr 2011; Brent Baude <ranger@gentoo.org> matplotlib-1.0.1-r1.ebuild:
   Marking matplotlib-1.0.1-r1 ppc for bug 360635

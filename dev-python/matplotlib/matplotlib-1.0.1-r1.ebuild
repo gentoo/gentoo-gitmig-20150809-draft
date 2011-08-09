@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.0.1-r1.ebuild,v 1.5 2011/04/14 20:10:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.0.1-r1.ebuild,v 1.6 2011/08/09 05:40:01 bicatali Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -151,6 +151,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${P}-libpng15.patch
 	epatch "${FILESDIR}"/${P}-sphinx.patch
+	epatch "${FILESDIR}"/${P}-linux3.patch
 }
 
 src_compile() {
