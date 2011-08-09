@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/atlas-0.3.1_p20101101.ebuild,v 1.2 2011/02/26 13:35:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/atlas-0.3.1_p20101101.ebuild,v 1.3 2011/08/09 17:29:42 ssuominen Exp $
 
 EAPI=2
-inherit autotools games
+inherit autotools eutils games
 
 DESCRIPTION="Chart Program to use with Flightgear Flight Simulator"
 HOMEPAGE="http://atlas.sourceforge.net/"
@@ -31,6 +31,7 @@ DEPEND=">=games-simulation/flightgear-2
 	x11-libs/libXmu"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-libpng15.patch
 	eautoreconf
 }
 
