@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libwebp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/ChangeLog,v 1.12 2011/08/07 13:58:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwebp/ChangeLog,v 1.13 2011/08/09 16:20:54 xarthisius Exp $
+
+  09 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> libwebp-0.1.2.ebuild:
+  Marked ~ppc64 wrt #359963
 
   07 Aug 2011; Raúl Porcel <armin76@gentoo.org> libwebp-0.1.2.ebuild:
   Add ~ia64 wrt #359963
