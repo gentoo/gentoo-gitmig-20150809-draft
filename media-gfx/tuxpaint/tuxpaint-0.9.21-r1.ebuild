@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.20-r1.ebuild,v 1.4 2010/01/31 18:12:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/tuxpaint-0.9.21-r1.ebuild,v 1.1 2011/08/09 19:18:58 pva Exp $
 
 EAPI="2"
 
@@ -12,12 +12,13 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 IUSE="nls"
 
 DEPEND="
 	app-text/libpaper
+	dev-libs/fribidi
 	gnome-base/librsvg
 	>=media-libs/libpng-1.2
 	>=media-libs/freetype-2
@@ -31,7 +32,10 @@ DEPEND="
 
 src_prepare() {
 	# Sanitize the Makefile and correct a few other issues.
-	epatch "${FILESDIR}/${P}-gentoo.patch"
+	epatch "${FILESDIR}/${PN}-0.9.20-gentoo.patch"
+	epatch "${FILESDIR}/${P}-libpng1.5.patch" #378199
+	epatch "${FILESDIR}/${P}-LDFLAGS.patch" #334571
+
 	sed -i \
 		-e "s|linux_PREFIX:=/usr/local|linux_PREFIX:=/usr|" \
 		-e "s:/lib/:/$(get_libdir)/:" \
@@ -40,20 +44,14 @@ src_prepare() {
 }
 
 src_compile() {
-	local myopts=""
-
-	use nls && myopts="${myopts} ENABLE_GETTEXT=1"
-
 	# emake may break things
-	make CC="$(tc-getCC)" ${myopts} || die "Compilation failed"
+	make CC="$(tc-getCC)" \
+		$(use nls && echo ENABLE_GETTEXT=1) || die "Compilation failed"
 }
 
 src_install () {
-	local myopts=""
-
-	use nls && myopts="${myopts} ENABLE_GETTEXT=1"
-
-	make PKG_ROOT="${D}" ${myopts} install || die "Installation failed"
+	make PKG_ROOT="${D}" \
+		$(use nls && echo ENABLE_GETTEXT=1) install || die "Installation failed"
 
 	rm -f docs/COPYING.txt docs/INSTALL.txt
 	dodoc docs/*.txt

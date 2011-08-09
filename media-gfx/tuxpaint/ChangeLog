@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/tuxpaint
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/ChangeLog,v 1.62 2011/07/09 15:50:35 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tuxpaint/ChangeLog,v 1.63 2011/08/09 19:18:58 pva Exp $
+
+*tuxpaint-0.9.21-r1 (09 Aug 2011)
+
+  09 Aug 2011; Peter Volkov <pva@gentoo.org> -tuxpaint-0.9.20-r1.ebuild,
+  +tuxpaint-0.9.21-r1.ebuild, +files/tuxpaint-0.9.21-LDFLAGS.patch,
+  +files/tuxpaint-0.9.21-libpng1.5.patch:
+  Respect LDFLAGS, bug #334571; build with libpng-1.5, bug #378199 thank Diego
+  Elio Pettenò for reporting both. Drop old.
 
   09 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> tuxpaint-0.9.21.ebuild:
   ppc stable wrt #367323
