@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.361 2011/08/08 02:01:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.362 2011/08/09 00:43:48 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -472,7 +472,7 @@ epatch_user() {
 	[[ $# -ne 0 ]] && die "epatch_user takes no options"
 
 	# Allow multiple calls to this function; ignore all but the first
-	local applied="${T}/epach_user.applied"
+	local applied="${T}/epatch_user.applied"
 	[[ -e ${applied} ]] && return 2
 
 	# don't clobber any EPATCH vars that the parent might want
