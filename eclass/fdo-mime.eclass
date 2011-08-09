@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fdo-mime.eclass,v 1.12 2011/08/09 18:50:43 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fdo-mime.eclass,v 1.13 2011/08/09 19:01:29 darkside Exp $
 
 # @ECLASS: fdo-mime.eclass
 # @MAINTAINER: freedesktop-bugs@gentoo.org
@@ -20,7 +20,7 @@ fdo-mime_desktop_database_update() {
 	if [ -x "${EPREFIX}/usr/bin/update-desktop-database" ]
 	then
 		einfo "Updating desktop mime database ..."
-		"${EPREFIX}/usr/bin/update-desktop-database" -q "${EROOT}/usr/share/applications"
+		"${EPREFIX}/usr/bin/update-desktop-database" -q "${EROOT}usr/share/applications"
 	fi
 }
 
@@ -34,6 +34,6 @@ fdo-mime_mime_database_update() {
 	if [ -x "${EPREFIX}/usr/bin/update-mime-database" ]
 	then
 		einfo "Updating shared mime info database ..."
-		"${EPREFIX}/usr/bin/update-mime-database" "${EROOT%/}/usr/share/mime"
+		"${EPREFIX}/usr/bin/update-mime-database" "${EROOT}usr/share/mime"
 	fi
 }
