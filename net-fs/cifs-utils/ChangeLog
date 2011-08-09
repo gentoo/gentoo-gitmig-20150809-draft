@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/cifs-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.13 2011/08/07 14:10:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.14 2011/08/09 13:42:37 xarthisius Exp $
+
+  09 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> cifs-utils-5.0.ebuild:
+  Marked ~ppc64 wrt #358401
 
   07 Aug 2011; Raúl Porcel <armin76@gentoo.org> cifs-utils-5.0.ebuild:
   Add ~ia64/~s390/~sh/~sparc wrt #358401
