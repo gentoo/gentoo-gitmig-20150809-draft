@@ -1,6 +1,9 @@
 # ChangeLog for app-text/llpp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.9 2011/08/09 03:36:53 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.10 2011/08/09 19:19:37 xmw Exp $
+
+  09 Aug 2011; Michael Weber <xmw@gentoo.org> llpp-9999.ebuild:
+  add help.ml to src_compile
 
   09 Aug 2011; Michael Weber <xmw@gentoo.org> llpp-9999.ebuild:
   Update to git-2 eclass, fix src_compile

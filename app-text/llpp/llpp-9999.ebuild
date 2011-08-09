@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-9999.ebuild,v 1.6 2011/08/09 03:36:53 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-9999.ebuild,v 1.7 2011/08/09 19:19:37 xmw Exp $
 
 EAPI=3
 
@@ -25,14 +25,17 @@ RDEPEND=">=app-text/mupdf-0.8.165
 DEPEND="${RDEPEND}"
 
 src_compile() {
+	ocaml keystoml.ml KEYS > help.ml || die
+	echo "let version =\"$(git describe --tags)\";;" >> help.ml
 	ocamlopt -c -o link.o -ccopt -O link.c || die
-	ocamlopt -c -o parser.cmo parser.ml || die
-	ocamlopt -c -o main.cmo -I +lablGL main.ml || die
+	ocamlopt -c -o help.cmx help.ml || die
+	ocamlopt -c -o parser.cmx parser.ml || die
+	ocamlopt -c -o main.cmx -I +lablGL main.ml || die
 
 	ocamlopt -o llpp \
 		-I +lablGL str.cmxa unix.cmxa lablgl.cmxa lablglut.cmxa link.o \
 		-cclib "-lmupdf -lfitz -lz -ljpeg -lopenjpeg -ljbig2dec -lfreetype -lpthread" \
-		parser.cmx main.cmx || die
+		help.cmx parser.cmx main.cmx || die
 }
 
 src_install() {
