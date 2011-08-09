@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rutorrent/rutorrent-3.2.ebuild,v 1.1 2010/12/08 17:33:25 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rutorrent/rutorrent-3.3.ebuild,v 1.1 2011/08/09 13:33:33 alexxy Exp $
+
+EAPI="4"
 
 inherit webapp eutils depend.php
 
@@ -17,18 +19,12 @@ IUSE=""
 need_httpd_cgi
 need_php_httpd
 
+DEPEND="
+	|| ( dev-lang/php[xml,gd] dev-lang/php[xml,gd-external] )
+"
+
 pkg_setup() {
 	webapp_pkg_setup
-	has_php
-	if [[ ${PHP_VERSION} == "4" ]] ; then
-		local flags="expat"
-	else
-		local flags="xml"
-	fi
-	if ! PHPCHECKNODIE="yes" require_php_with_use ${flags} \
-		|| ! PHPCHECKNODIE="yes" require_php_with_any_use gd gd-external ; then
-			die "Re-install ${PHP_PKG} with ${flags} and either gd or gd-external"
-	fi
 }
 
 src_install() {
