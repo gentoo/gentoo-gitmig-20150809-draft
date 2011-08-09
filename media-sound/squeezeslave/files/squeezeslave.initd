@@ -1,0 +1,23 @@
+#!/sbin/runscript
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeslave/files/squeezeslave.initd,v 1.1 2011/08/09 08:01:28 radhermit Exp $
+
+depend() {
+	need net
+	use squeezeboxserver
+}
+
+start() {
+	ebegin "Starting squeezeslave"
+	start-stop-daemon --start --quiet --background --pidfile /var/run/squeezeslave.pid \
+		--make-pidfile --exec /usr/bin/squeezeslave -- \
+		--daemonize "${SS_LOG}" --mac ${SS_MAC} --retry ${SBS_HOST} ${SS_OPTS}
+	eend $? "Failed to start squeezeslave"
+}
+
+stop() {
+	ebegin "Stopping squeezeslave"
+	start-stop-daemon --stop --pid /var/run/squeezeslave.pid
+	eend $? "Failed to stop squeezeslave"
+}
