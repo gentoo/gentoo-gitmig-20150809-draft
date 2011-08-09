@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-9999.ebuild,v 1.1 2011/04/06 22:14:51 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-9999.ebuild,v 1.2 2011/08/09 17:30:59 alexxy Exp $
 
 EAPI="3"
 
@@ -18,6 +18,7 @@ KEYWORDS=""
 IUSE="doc debug screen custom-cflags pygrub hvm api acm flask ioemu"
 
 CDEPEND="dev-lang/python
+	dev-python/lxml
 	sys-libs/zlib
 	hvm? ( media-libs/libsdl
 		sys-power/iasl )
@@ -57,6 +58,8 @@ QA_EXECSTACK="usr/share/xen/qemu/openbios-sparc32
 	usr/share/xen/qemu/openbios-sparc64"
 
 pkg_setup() {
+	export "CONFIG_LOMOUNT=y"
+
 	if use ioemu; then
 		export "CONFIG_IOEMU=y"
 	else
@@ -144,6 +147,9 @@ src_prepare() {
 	sed -e "s:-Werror::g" -i  tools/xenstat/xentop/Makefile
 	# Fix network broadcast on bridged networks
 	epatch "${FILESDIR}/${PN}-3.4.0-network-bridge-broadcast.patch"
+
+	# Do not strip binaries
+	epatch "${FILESDIR}/${PN}-3.3.0-nostrip.patch"
 }
 
 src_compile() {
