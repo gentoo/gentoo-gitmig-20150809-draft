@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTTP-Daemon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Daemon/ChangeLog,v 1.7 2011/07/07 05:02:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Daemon/ChangeLog,v 1.8 2011/08/09 16:14:47 xarthisius Exp $
+
+  09 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> HTTP-Daemon-6.0.0.ebuild:
+  Marked ~ppc/~ppc64 wrt #358079
 
   07 Jul 2011; Alexis Ballier <aballier@gentoo.org> HTTP-Daemon-6.0.0.ebuild:
   keyword ~x86-fbsd, bug #358079

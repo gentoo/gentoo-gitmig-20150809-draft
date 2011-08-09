@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Encode-Locale
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-Locale/ChangeLog,v 1.10 2011/07/30 08:25:08 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-Locale/ChangeLog,v 1.11 2011/08/09 16:04:55 xarthisius Exp $
+
+  09 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  Encode-Locale-1.20.0.ebuild:
+  Marked ~ppc/~ppc64 wrt #358079
 
   30 Jul 2011; Torsten Veller <tove@gentoo.org> -Encode-Locale-1.10.0.ebuild:
   Cleanup
