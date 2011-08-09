@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dvipsk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipsk/ChangeLog,v 1.11 2011/07/27 14:04:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipsk/ChangeLog,v 1.12 2011/08/09 20:51:22 hwoarang Exp $
+
+  09 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
+  dvipsk-5.99_p20100722.ebuild:
+  Stable on amd64 wrt bug #355085
 
 *dvipsk-5.991_p20110705 (27 Jul 2011)
 

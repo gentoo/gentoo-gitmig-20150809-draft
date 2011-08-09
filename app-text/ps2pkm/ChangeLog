@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ps2pkm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ps2pkm/ChangeLog,v 1.10 2011/07/27 13:57:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ps2pkm/ChangeLog,v 1.11 2011/08/09 20:50:35 hwoarang Exp $
+
+  09 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
+  ps2pkm-1.5_p20100722.ebuild:
+  Stable on amd64 wrt bug #355085
 
 *ps2pkm-1.5_p20110705 (27 Jul 2011)
 
