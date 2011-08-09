@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-5.1.1.ebuild,v 1.9 2011/03/20 08:19:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/dos2unix-5.3.1.ebuild,v 1.1 2011/08/09 22:12:39 polynomial-c Exp $
 
 EAPI="3"
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Convert DOS or MAC text files to UNIX format or vice versa"
 HOMEPAGE="http://www.xs4all.nl/~waterlan/dos2unix.html http://sourceforge.net/projects/dos2unix/"
@@ -14,8 +14,8 @@ SRC_URI="
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris"
-IUSE="nls"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris"
+IUSE="debug nls"
 
 RDEPEND="
 	!app-text/hd2u
@@ -31,8 +31,10 @@ src_prepare() {
 		-e '/^CC/s|=|?=|' \
 		-e '/CFLAGS_OS \+=/d' \
 		-e '/LDFLAGS_EXTRA \+=/d' \
+		-e "/^CFLAGS/s|-O2|${CFLAGS}|" \
 		-i "${S}"/Makefile || die
 	tc-export CC
+	use debug && sed "/DEBUG/s:0:1:g" -i Makefile
 }
 
 lintl() {
