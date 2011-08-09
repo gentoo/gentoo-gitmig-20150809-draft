@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel_cluster/mongrel_cluster-1.0.5-r1.ebuild,v 1.1 2010/07/17 08:02:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel_cluster/mongrel_cluster-1.0.5-r1.ebuild,v 1.2 2011/08/09 15:42:35 halcy0n Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -18,7 +18,7 @@ HOMEPAGE="http://mongrel.rubyforge.org/docs/mongrel_cluster.html"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 ruby_add_rdepend ">=www-servers/mongrel-1.0.2
