@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ldb-1.1.0.ebuild,v 1.2 2011/08/07 21:10:07 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ldb-1.1.0.ebuild,v 1.3 2011/08/09 18:23:20 maksbotan Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -20,7 +20,8 @@ RDEPEND="dev-libs/popt
 	>=sys-libs/talloc-2.0.0[python]
 	sys-libs/tdb[python]
 	sys-libs/tevent
-	net-nds/openldap"
+	net-nds/openldap
+	!!net-fs/samba[ldb]"
 
 DEPEND="dev-libs/libxslt
 	doc? ( app-doc/doxygen )
