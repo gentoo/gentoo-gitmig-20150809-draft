@@ -1,0 +1,39 @@
+From ddf4a4dcec27393e3c0c9efb032032cdb6b69d10 Mon Sep 17 00:00:00 2001
+From: Tim Waugh <twaugh@redhat.com>
+Date: Mon, 1 Aug 2011 10:42:57 +0100
+Subject: [PATCH 2/4] Make PackageKit optional in cupshelpers (bug #726996, Ubuntu #819000).
+
+---
+ cupshelpers/cupshelpers.py |    8 ++++++--
+ 1 files changed, 6 insertions(+), 2 deletions(-)
+
+diff --git a/cupshelpers/cupshelpers.py b/cupshelpers/cupshelpers.py
+index 251e0ee..3b95e2f 100755
+--- a/cupshelpers/cupshelpers.py
++++ b/cupshelpers/cupshelpers.py
+@@ -21,8 +21,12 @@
+ 
+ import cups, pprint, os, tempfile, re, string
+ import locale
+-import packagekit.client, packagekit.enums
+ from . import _debugprint
++try:
++    import packagekit.client, packagekit.enums
++    HAVE_PACKAGEKIT=True
++except ImportError:
++    HAVE_PACKAGEKIT=False
+ 
+ class Printer:
+     _flags_blacklist = ["options", "local"]
+@@ -830,7 +834,7 @@ def missingPackagesAndExecutables(ppd):
+     """
+     executables = missingExecutables(ppd)
+     packages = []
+-    if executables:
++    if executables and HAVE_PACKAGEKIT:
+         unresolved_executables = []
+         client = packagekit.client.PackageKitClient ()
+         for executable in executables:
+-- 
+1.7.3.4
+

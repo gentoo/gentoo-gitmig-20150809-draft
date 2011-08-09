@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.2.2.ebuild,v 1.7 2011/06/01 16:05:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.5.ebuild,v 1.1 2011/08/09 23:55:19 reavertm Exp $
 
 EAPI="3"
 
@@ -12,10 +12,10 @@ MY_P="${PN%-common}-${PV}"
 
 DESCRIPTION="Common modules of Red Hat's printer administration tool"
 HOMEPAGE="http://cyberelk.net/tim/software/system-config-printer/"
-SRC_URI="http://cyberelk.net/tim/data/system-config-printer/1.2/${MY_P}.tar.xz"
+SRC_URI="http://cyberelk.net/tim/data/system-config-printer/1.3/${MY_P}.tar.xz"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ~ppc64 ~sh ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 SLOT="0"
 IUSE="doc policykit"
 
@@ -24,12 +24,13 @@ RESTRICT="test"
 
 # system-config-printer split since 1.1.3
 COMMON_DEPEND="
+	dev-libs/glib:2
 	dev-libs/libusb
 	dev-libs/libxml2[python]
 	dev-python/dbus-python
-	dev-python/pycups
-	dev-python/pygobject
-	net-print/cups[dbus]
+	>=dev-python/pycups-1.9.53
+	>=dev-python/pygobject-2.21.5
+	>=net-print/cups-1.4.6[dbus]
 	sys-fs/udev
 "
 DEPEND="${COMMON_DEPEND}
@@ -49,7 +50,10 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-split.patch"
+	epatch "${FILESDIR}/${PN}-1.3.5-split.patch"
+	# Picked up from master just after tagging, remove for next release
+	epatch "${FILESDIR}/0002-Make-PackageKit-optional-in-cupshelpers-bug-726996-U.patch"
+	epatch "${FILESDIR}/0004-Removed-PackageKit-client-code-in-missingPackagesAnd.patch"
 
 	eautoreconf
 }
@@ -74,9 +78,12 @@ src_install() {
 		dohtml -r html/ || die "installing html docs failed"
 	fi
 
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${ED}" install \
+		udevrulesdir=/lib/udev/rules.d \
+		udevhelperdir=/lib/udev \
+		|| die "emake install failed"
 
-	python_convert_shebangs -q -r $(python_get_version) "${D}"
+	python_convert_shebangs -q -r $(python_get_version) "${ED}"
 }
 
 pkg_postinst() {

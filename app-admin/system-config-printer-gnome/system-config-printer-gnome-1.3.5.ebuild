@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.2.2.ebuild,v 1.9 2011/02/16 19:00:09 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.3.5.ebuild,v 1.1 2011/08/09 23:56:08 reavertm Exp $
 
 EAPI="3"
 
@@ -13,10 +13,10 @@ MY_P="${PN%-gnome}-${PV}"
 
 DESCRIPTION="GNOME frontend for a Red Hat's printer administration tool"
 HOMEPAGE="http://cyberelk.net/tim/software/system-config-printer/"
-SRC_URI="http://cyberelk.net/tim/data/system-config-printer/1.2/${MY_P}.tar.xz"
+SRC_URI="http://cyberelk.net/tim/data/system-config-printer/1.3/${MY_P}.tar.xz"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~sh ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 SLOT="0"
 IUSE="gnome-keyring"
 
@@ -36,9 +36,9 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 "
 
-APP_LINGUAS="ar as bg bn_IN bn bs ca cs cy da de el en_GB es et fa fi fr gu he
-hi hr hu hy id is it ja ka kn ko lo lv mai mk ml mr ms nb nl nn or pa pl pt_BR
-pt ro ru si sk sl sr@latin sr sv ta te th tr uk vi zh_CN zh_TW"
+APP_LINGUAS="ar as bg bn_IN bn br bs ca cs cy da de el en_GB es et fa fi fr gu
+he hi hr hu hy id is it ja ka kn ko lo lv mai mk ml mr ms nb nl nn or pa pl
+pt_BR pt ro ru si sk sl sr@latin sr sv ta te th tr uk vi zh_CN zh_TW"
 for X in ${APP_LINGUAS}; do
 	IUSE="${IUSE} linguas_${X}"
 done
@@ -50,10 +50,10 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-split.patch"
-
-	# Upstream bug #587744
-	epatch "${FILESDIR}/${P}-cupspk-fileget-tmp.patch"
+	epatch "${FILESDIR}/${PN}-1.3.5-split.patch"
+	# Picked up from master just after tagging, remove for next release
+	epatch "${FILESDIR}/0001-Avoid-global-name-dbus-is-not-defined-traceback-in-s.patch"
+	epatch "${FILESDIR}/0003-Properties-dialog-make-OK-button-sensitive-even-when.patch"
 
 	eautoreconf
 }
@@ -68,15 +68,18 @@ src_configure() {
 		myconf="${myconf} --enable-nls"
 	fi
 
-	econf ${myconf}
+	econf \
+		--with-desktop-vendor=Gentoo \
+		--without-udev-rules \
+		${myconf}
 }
 
 src_install() {
 	dodoc AUTHORS ChangeLog README || die "dodoc failed"
 
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${ED}" install || die "emake install failed"
 
-	python_convert_shebangs -q -r $(python_get_version) "${D}"
+	python_convert_shebangs -q -r $(python_get_version) "${ED}"
 }
 
 pkg_postrm() {

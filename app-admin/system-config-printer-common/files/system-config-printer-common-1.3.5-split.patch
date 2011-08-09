@@ -1,76 +1,79 @@
-diff -ru ../system-config-printer-1.1.12/configure.in ./configure.in
---- ../system-config-printer-1.1.12/configure.in	2009-08-25 18:01:27.000000000 +0200
-+++ ./configure.in	2009-08-28 18:32:45.000000000 +0200
-@@ -1,6 +1,6 @@
- AC_INIT(system-config-printer, 1.1.12)
- AC_CONFIG_SRCDIR(system-config-printer.py)
--AM_INIT_AUTOMAKE([dist-xz dist-bzip2 subdir-objects 1.6])
-+AM_INIT_AUTOMAKE([dist-bzip2 subdir-objects 1.6])
- IT_PROG_INTLTOOL
- AM_GNU_GETTEXT([external])
- AM_PATH_PYTHON
-diff -ru ../system-config-printer-1.1.12/Makefile.am ./Makefile.am
---- ../system-config-printer-1.1.12/Makefile.am	2009-08-25 18:01:27.000000000 +0200
-+++ ./Makefile.am	2009-08-28 18:57:38.000000000 +0200
-@@ -70,84 +70,22 @@
+diff -ruN system-config-printer-1.3.5/Makefile.am my/Makefile.am
+--- system-config-printer-1.3.5/Makefile.am	2011-07-28 18:04:13.000000000 +0200
++++ my/Makefile.am	2011-08-10 00:56:28.296077828 +0200
+@@ -1,4 +1,4 @@
+-CFLAGS=-g -O2 -Wall
++CFLAGS=-Wall
+ 
+ SUBDIRS=po
+ 
+@@ -83,99 +83,21 @@
  	rm -f .stamp-distutils-in-builddir
  
  nobase_pkgdata_SCRIPTS=				\
--	my-default-printer.py			\
+-	check-device-ids.py			\
 -	pysmb.py				\
+-	scp-dbus-service.py			\
 -	system-config-printer.py		\
 -	troubleshoot/__init__.py		\
 -	applet.py
 +	pysmb.py
  
  nobase_pkgdata_DATA=					\
--	AdvancedServerSettings.py			\
+-	asyncconn.py					\
+-	asyncipp.py					\
+-	asyncpk1.py					\
 -	authconn.py					\
  	config.py					\
 -	cupspk.py					\
  	debug.py					\
+ 	dnssdresolve.py					\
 -	errordialogs.py					\
 -	HIG.py						\
--	glade.py					\
--	GroupsPane.py					\
--	GroupsPaneModel.py				\
+ 	firewall.py					\
+-	gui.py						\
 -	gtkinklevel.py					\
 -	gtkspinner.py					\
  	installpackage.py				\
 -	jobviewer.py					\
  	monitor.py					\
+-	newprinter.py					\
 -	options.py					\
 -	optionwidgets.py				\
  	PhysicalDevice.py				\
+-	ppdcache.py					\
  	ppdippstr.py					\
+-	ppdsloader.py					\
+-	printerproperties.py				\
  	probe_printer.py				\
 -	gtk_label_autowrap.py				\
  	SearchCriterion.py				\
+-	serversettings.py				\
  	smburi.py					\
- 	statereason.py					\
+-	statereason.py					\
 -	timedops.py					\
 -	ToolbarSearchEntry.py				\
 -	userdefault.py					\
- 	XmlHelper.py					\
--	glade/AboutDialog.glade				\
--	glade/ConnectDialog.glade				\
--	glade/ConnectingDialog.glade			\
--	glade/InstallDialog.glade				\
--	glade/JobsWindow.glade				\
--	glade/NewPrinterName.glade				\
--	glade/NewPrinterWindow.glade			\
--	glade/PrinterPropertiesDialog.glade		\
--	glade/PrintersWindow.glade				\
--	glade/ServerSettingsDialog.glade			\
--	glade/SMBBrowseDialog.glade			\
--	glade/statusicon_popupmenu.glade			\
--	glade/WaitWindow.glade				\
+-	ui/AboutDialog.ui				\
+-	ui/ConnectDialog.ui				\
+-	ui/ConnectingDialog.ui				\
+-	ui/InstallDialog.ui				\
+-	ui/JobsWindow.ui				\
+-	ui/NewPrinterName.ui				\
+-	ui/NewPrinterWindow.ui				\
+-	ui/PrinterPropertiesDialog.ui			\
+-	ui/PrintersWindow.ui				\
+-	ui/ServerSettingsDialog.ui			\
+-	ui/SMBBrowseDialog.ui				\
+-	ui/statusicon_popupmenu.ui			\
+-	ui/WaitWindow.ui				\
 -	icons/i-network-printer.png			\
 -	troubleshoot/base.py				\
 -	troubleshoot/CheckLocalServerPublishing.py	\
 -	troubleshoot/CheckNetworkServerSanity.py	\
 -	troubleshoot/CheckPPDSanity.py			\
 -	troubleshoot/CheckPrinterSanity.py		\
+-	troubleshoot/CheckSELinux.py			\
 -	troubleshoot/CheckUSBPermissions.py		\
 -	troubleshoot/ChooseNetworkPrinter.py		\
 -	troubleshoot/ChoosePrinter.py			\
@@ -89,34 +92,47 @@ diff -ru ../system-config-printer-1.1.12/Makefile.am ./Makefile.am
 -	troubleshoot/SchedulerNotRunning.py		\
 -	troubleshoot/ServerFirewalled.py		\
 -	troubleshoot/Shrug.py				\
--	troubleshoot/Welcome.py
+-	troubleshoot/VerifyPackages.py			\
+-	troubleshoot/Welcome.py				\
+-	xml/preferreddrivers.rng			\
+-	xml/validate.py
 -
--bin_SCRIPTS=\
+-cupshelpersdir=$(sysconfdir)/cupshelpers
+-cupshelpers_DATA=\
+-	xml/preferreddrivers.xml
+-
+-bin_SCRIPTS=					\
 -	system-config-printer			\
 -	system-config-printer-applet		\
--	my-default-printer
-+	smburi.py					\
+-	dbus/scp-dbus-service
 +	statereason.py
  
  if UDEV_RULES
  udevrulesdir=$(sysconfdir)/udev/rules.d
-@@ -162,61 +100,16 @@
- 	udev/udev-add-printer
+@@ -201,56 +123,17 @@
+ 
  endif
  
 -man_MANS=					\
 -	man/system-config-printer.1		\
 -	man/system-config-printer-applet.1
 -
- dbus_DATA =\
- 	newprinternotification.conf
+ dbus_DATA =					\
+ 	dbus/com.redhat.NewPrinterNotification.conf		\
+ 	dbus/com.redhat.PrinterDriversInstaller.conf
  dbusdir = $(sysconfdir)/dbus-1/system.d/
  
+-dbusinterfaces_DATA =				\
+-	dbus/org.fedoraproject.Config.Printing.xml
+-dbusinterfacesdir = $(datadir)/dbus-1/interfaces/
+-
+-dbusservices_DATA =				\
+-	dbus/org.fedoraproject.Config.Printing.service
+-dbusservicesdir = $(datadir)/dbus-1/services/
+-
 -desktop_DATA =\
 -	system-config-printer.desktop \
--	print-applet.desktop \
--	manage-print-jobs.desktop \
--	my-default-printer.desktop
+-	print-applet.desktop
  desktopdir = $(datadir)/applications/
  autostartdir = $(sysconfdir)/xdg/autostart/
  
@@ -135,18 +151,6 @@ diff -ru ../system-config-printer-1.1.12/Makefile.am ./Makefile.am
 -	  --add-category GTK			\
 -	  system-config-printer.desktop
 -	desktop-file-install $(DESKTOP_VENDOR)	\
--	  --dir $(DESTDIR)$(desktopdir)		\
--	  --add-category System			\
--	  --add-category Monitor		\
--	  --add-category GTK			\
--	  manage-print-jobs.desktop
--	desktop-file-install $(DESKTOP_VENDOR)	\
--	  --dir $(DESTDIR)$(desktopdir)		\
--	  --add-category Settings		\
--	  --add-category HardwareSettings	\
--	  --add-category GTK			\
--	  my-default-printer.desktop
--	desktop-file-install $(DESKTOP_VENDOR)	\
 -	  --dir $(DESTDIR)$(autostartdir)	\
 -	  --add-category System			\
 -	  --add-category Monitor		\
@@ -155,9 +159,9 @@ diff -ru ../system-config-printer-1.1.12/Makefile.am ./Makefile.am
 -
 -uninstall-desktopDATA:
 -	rm -f $(DESTDIR)$(desktopdir)/$(DESKTOP_PREFIX)system-config-printer.desktop
--	rm -f $(DESTDIR)$(desktopdir)/$(DESKTOP_PREFIX)manage-print-jobs.desktop
--	rm -f $(DESTDIR)$(desktopdir)/$(DESKTOP_PREFIX)my-default-printer.desktop
 -	rm -f $(DESTDIR)$(autostartdir)/$(DESKTOP_PREFIX)print-applet.desktop
+-
+-desktop_in_files = $(desktop_DATA:.desktop=.desktop.in)
 -
  EXTRA_DIST=\
  	$(nobase_pkgdata_SCRIPTS) \

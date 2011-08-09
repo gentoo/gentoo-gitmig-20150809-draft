@@ -1,0 +1,39 @@
+From 4ede66364b6987cb3013fa447fcdec09b3a638cb Mon Sep 17 00:00:00 2001
+From: Tim Waugh <twaugh@redhat.com>
+Date: Mon, 1 Aug 2011 14:04:49 +0100
+Subject: [PATCH 3/4] Properties dialog: make OK button sensitive even when no changes to save (Ubuntu #444280).
+
+Only becomes insensitive when there are conflicts.
+---
+ printerproperties.py |    8 +++++---
+ 1 files changed, 5 insertions(+), 3 deletions(-)
+
+diff --git a/printerproperties.py b/printerproperties.py
+index ca40f31..9c055f9 100755
+--- a/printerproperties.py
++++ b/printerproperties.py
+@@ -619,7 +619,10 @@ class PrinterPropertiesDialog(GtkGUI):
+ 
+         if (response == gtk.RESPONSE_OK or
+             response == gtk.RESPONSE_APPLY):
+-            failed = self.save_printer (self.printer)
++            if (response == gtk.RESPONSE_OK and len (self.changed) == 0):
++                failed = False
++            else:
++                failed = self.save_printer (self.printer)
+ 
+         if response == gtk.RESPONSE_APPLY and not failed:
+             try:
+@@ -957,8 +960,7 @@ class PrinterPropertiesDialog(GtkGUI):
+ 
+         self.btnPrinterPropertiesApply.set_sensitive (len (self.changed) > 0 and
+                                                       not self.conflicts)
+-        self.btnPrinterPropertiesOK.set_sensitive (len (self.changed) > 0 and
+-                                                   not self.conflicts)
++        self.btnPrinterPropertiesOK.set_sensitive (not self.conflicts)
+ 
+     def save_printer(self, printer, saveall=False, parent=None):
+         if parent == None:
+-- 
+1.7.3.4
+
