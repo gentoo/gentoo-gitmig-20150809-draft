@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surf/surf-0.4.1.ebuild,v 1.6 2011/06/10 15:15:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surf/surf-0.4.1.ebuild,v 1.7 2011/08/09 18:51:08 jer Exp $
 
 EAPI="2"
 
@@ -15,7 +15,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=net-libs/webkit-gtk-1.1.14:2"
+DEPEND="
+	dev-libs/glib
+	net-libs/libsoup
+	net-libs/webkit-gtk:2
+	x11-libs/gtk+:2
+	x11-libs/libX11
+"
 RDEPEND="
 	!sci-chemistry/surf
 	!savedconfig? ( net-misc/wget x11-terms/xterm )
