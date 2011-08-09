@@ -1,5 +1,11 @@
 
 
+*libnatpmp-20110808 (09 Aug 2011)
+
+  09 Aug 2011; Anthony G. Basile <blueness@gentoo.org>
+  +libnatpmp-20110808.ebuild:
+  Version bump
+
   03 Aug 2011; Anthony G. Basile <blueness@gentoo.org>
   libnatpmp-20110715-r1.ebuild:
   Fix HOMEPAGE
