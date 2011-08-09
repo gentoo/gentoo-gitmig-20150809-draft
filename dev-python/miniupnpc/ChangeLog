@@ -1,0 +1,12 @@
+# ChangeLog for dev-python/miniupnpc
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/miniupnpc/ChangeLog,v 1.1 2011/08/09 17:41:19 mgorny Exp $
+
+*miniupnpc-1.6 (09 Aug 2011)
+
+  09 Aug 2011; Michał Górny <mgorny@gentoo.org> +miniupnpc-1.6.ebuild,
+  +files/0001-Link-Python-module-against-the-shared-library.patch,
+  +metadata.xml:
+  Split the Python module in net-libs/miniupnpc into separate
+  dev-python/miniupnpc; link the Python module against shared libminiupnpc.
+
