@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/packagekit-base-0.6.17.ebuild,v 1.1 2011/08/02 05:45:08 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/packagekit-base-0.6.17-r1.ebuild,v 1.1 2011/08/09 10:54:23 lxnay Exp $
 
 EAPI="3"
 
@@ -66,6 +66,10 @@ RESTRICT="test" # tests are failing atm
 # UPSTREAM:
 # documentation/website with --enable-doc-install
 # failing tests
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-entropy-extra-downloads-support.patch"
+}
 
 src_configure() {
 	local myconf=""

@@ -1,0 +1,41 @@
+commit 5d6419ac83883e4d2161032f65d565df8eb007ac
+Author: Fabio Erculiani <lxnay@sabayon.org>
+Date:   Tue Aug 9 12:48:16 2011 +0200
+
+    entropy: properly account package size when "extra" downloads are available
+
+diff --git a/backends/entropy/entropyBackend.py b/backends/entropy/entropyBackend.py
+index 02b83a7..fe8c609 100755
+--- a/backends/entropy/entropyBackend.py
++++ b/backends/entropy/entropyBackend.py
+@@ -244,10 +244,28 @@ class PackageKitEntropyMixin(object):
+         packages, the on-disk size is returned instead.
+         """
+         pkg_id, c_repo = pkg_match
++        size = 0
+         if c_repo is self._entropy.installed_repository():
+-            return c_repo.retrieveOnDiskSize(pkg_id)
++            size += c_repo.retrieveOnDiskSize(pkg_id)
+         else:
+-            return c_repo.retrieveSize(pkg_id)
++            size += c_repo.retrieveSize(pkg_id)
++
++        supports_extra_download = hasattr(c_repo, "retrieveExtraDownload")
++        if not supports_extra_download:
++            return size
++
++        cl_id = etpConst['system_settings_plugins_ids']['client_plugin']
++        debug = self._settings[cl_id]['misc']['splitdebug']
++        extra_downloads = c_repo.retrieveExtraDownload(pkg_id)
++        for extra_download in extra_downloads:
++            if (not debug) and (extra_download['type'] == "debug") and \
++                (c_repo is not self._entropy.installed_repository()):
++                continue
++            if c_repo is self._entropy.installed_repository():
++                size += extra_download['disksize']
++            else:
++                size += extra_download['size']
++        return size
+ 
+     def _pk_feed_sorted_pkgs(self, pkgs):
+         """
