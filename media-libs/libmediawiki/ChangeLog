@@ -1,14 +1,10 @@
 # ChangeLog for media-libs/libmediawiki
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediawiki/ChangeLog,v 1.5 2011/08/09 06:49:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediawiki/ChangeLog,v 1.6 2011/08/09 06:55:01 dilfridge Exp $
 
   09 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   libmediawiki-2.0.0.ebuild, +files/libmediawiki-2.0.0-tests.patch:
   Test files should of course NOT be installed anywhere, bug 376761
-
-  09 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
-  libmediawiki-2.0.0.ebuild, +files/libmediawiki-2.0.0-tests.patch:
-  Test files should of course be installed anywhere, bug 376761
 
 *libmediawiki-2.0.0 (29 Jul 2011)
 
