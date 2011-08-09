@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-4.0.0.ebuild,v 1.2 2011/08/06 16:36:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-4.0.0.ebuild,v 1.3 2011/08/09 04:22:22 bicatali Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -22,6 +22,9 @@ IUSE="examples test"
 RDEPEND="dev-python/configobj
 	dev-python/ipython
 	>=dev-python/pyface-4.0
+	>=dev-python/traitsui-4.0
+	>=dev-python/envisage-4.0
+	>=dev-python/apptools-4.0
 	>=dev-python/traitsui-4.0
 	dev-python/numpy
 	>=sci-libs/vtk-5[python]"
