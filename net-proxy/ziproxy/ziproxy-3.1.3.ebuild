@@ -1,9 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ziproxy-3.1.3.ebuild,v 1.2 2011/02/26 22:11:49 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ziproxy-3.1.3.ebuild,v 1.3 2011/08/09 11:15:13 ssuominen Exp $
 
-EAPI="2"
-
+EAPI=4
 inherit autotools eutils
 
 DESCRIPTION="A forwarding, non-caching, compressing web proxy server"
@@ -20,7 +19,6 @@ DEPEND="media-libs/giflib
 	virtual/jpeg
 	sys-libs/zlib
 	jpeg2k? ( media-libs/jasper )"
-
 RDEPEND="${DEPEND}
 	xinetd? ( virtual/inetd )"
 
@@ -30,6 +28,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-libpng15.patch
+
 	# fix sample config file
 	sed -i \
 		-e "s:/var/ziproxy/:/var/lib/ziproxy/:g" \
@@ -56,12 +56,12 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 
 	dodir /usr/sbin
 	mv -vf "${D}"usr/{,s}bin/ziproxy || die
 
-	dobin src/tools/ziproxy_genhtml_stats.sh || die
+	dobin src/tools/ziproxy_genhtml_stats.sh
 
 	newinitd "${FILESDIR}"/${PN}.initd ${PN}
 	newconfd "${FILESDIR}"/${PN}.confd ${PN}
@@ -70,14 +70,14 @@ src_install() {
 	use jpeg2k && dodoc JPEG2000.txt
 
 	insinto /etc
-	doins -r etc/ziproxy || die
+	doins -r etc/ziproxy
 
 	insinto /var/lib/ziproxy/error
-	doins var/ziproxy/error/*.html || die
+	doins var/ziproxy/error/*.html
 
 	if use xinetd; then
 		insinto /etc/xinetd.d
-		doins etc/xinetd.d/ziproxy || die
+		doins etc/xinetd.d/ziproxy
 	fi
 
 	diropts -m0750 -o ziproxy -g ziproxy
