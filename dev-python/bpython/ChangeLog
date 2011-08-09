@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/bpython
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.27 2011/07/26 09:20:39 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.28 2011/08/09 13:30:55 grozin Exp $
+
+*bpython-0.10.1 (09 Aug 2011)
+
+  09 Aug 2011; Andrey Grozin <grozin@gentoo.org> -bpython-0.10.ebuild,
+  +bpython-0.10.1.ebuild:
+  Version bump to fix bug #376615
 
 *bpython-0.10 (26 Jul 2011)
 
