@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.0_rc3-r1.ebuild,v 1.2 2011/08/07 20:12:39 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.0.ebuild,v 1.1 2011/08/09 13:22:46 dagger Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="Library bits of the samba network filesystem"
 HOMEPAGE="http://www.samba.org/"
-SRC_URI="mirror://samba/rc/${MY_P}.tar.gz"
+SRC_URI="mirror://samba/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
