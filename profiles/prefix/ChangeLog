@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.288 2011/08/04 22:04:27 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.289 2011/08/09 12:36:57 mduft Exp $
+
+  09 Aug 2011; Markus Duft <mduft@gentoo.org> windows/interix/package.use.mask:
+  add required USE masks for interix (apr and gettext)
 
   04 Aug 2011; Jonathan Callen <abcd@gentoo.org>
   +bsd/freebsd/8.2/x86/make.defaults, +bsd/freebsd/8.2/x86/parent:
