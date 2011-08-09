@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fdo-mime.eclass,v 1.11 2011/08/09 18:43:05 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fdo-mime.eclass,v 1.12 2011/08/09 18:50:43 darkside Exp $
 
 # @ECLASS: fdo-mime.eclass
 # @MAINTAINER: freedesktop-bugs@gentoo.org
@@ -16,6 +16,7 @@
 # Generates a list of mimetypes linked to applications that can handle them
 fdo-mime_desktop_database_update() {
 	has "${EAPI:-0}" 0 1 2 && ! use prefix && EPREFIX=
+	has "${EAPI:-0}" 0 1 2 && ! use prefix && EROOT="${ROOT}"
 	if [ -x "${EPREFIX}/usr/bin/update-desktop-database" ]
 	then
 		einfo "Updating desktop mime database ..."
@@ -29,6 +30,7 @@ fdo-mime_desktop_database_update() {
 # Creates a general list of mime types from several sources
 fdo-mime_mime_database_update() {
 	has "${EAPI:-0}" 0 1 2 && ! use prefix && EPREFIX=
+	has "${EAPI:-0}" 0 1 2 && ! use prefix && EROOT="${ROOT}"
 	if [ -x "${EPREFIX}/usr/bin/update-mime-database" ]
 	then
 		einfo "Updating shared mime info database ..."
