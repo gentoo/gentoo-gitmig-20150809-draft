@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.80 2011/07/25 08:34:19 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.81 2011/08/09 10:45:15 polynomial-c Exp $
+
+  09 Aug 2011; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-3.2.12-r4.ebuild, -files/virtualbox-ose-3-localconfig,
+  -files/virtualbox-4.0.4-gcc46.patch, -virtualbox-4.0.10.ebuild,
+  -files/virtualbox-4-vnc.patch, -files/virtualbox-ose-asneeded.patch,
+  -files/virtualbox-ose-vnc.patch:
+  Removed old versions.
 
   25 Jul 2011; Lars Wendler <polynomial-c@gentoo.org> virtualbox-4.0.10.ebuild,
   virtualbox-4.0.12.ebuild, virtualbox-4.1.0.ebuild:
