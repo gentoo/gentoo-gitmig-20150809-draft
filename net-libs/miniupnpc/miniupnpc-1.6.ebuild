@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/miniupnpc-1.6.ebuild,v 1.2 2011/08/03 10:02:10 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/miniupnpc-1.6.ebuild,v 1.3 2011/08/09 13:34:36 xarthisius Exp $
 
 EAPI=3
 SUPPORT_PYTHON_ABIS=1
@@ -15,7 +15,7 @@ SRC_URI="http://miniupnp.free.fr/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="python static-libs"
 
 DEPEND="sys-apps/lsb-release"

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/miniupnpc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.13 2011/08/03 10:02:10 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.14 2011/08/09 13:34:36 xarthisius Exp $
+
+  09 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> miniupnpc-1.6.ebuild:
+  Marked ~ppc64 wrt #377513
 
   03 Aug 2011; Anthony G. Basile <blueness@gentoo.org> miniupnpc-1.6.ebuild:
   Builds on ppc, adding KEYWORD
