@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.101 2011/08/07 17:13:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.102 2011/08/10 07:05:34 polynomial-c Exp $
+
+  10 Aug 2011; Lars Wendler <polynomial-c@gentoo.org>
+  files/ntop-4.0.3-gentoo.patch:
+  non-maintainer commit: Added missing gunzip line for GeoIPASNum.dat file (bug
+  #376453). Fixed patch committed with kind permission from hwoarang.
 
   07 Aug 2011; Jeroen Roovers <jer@gentoo.org> -ntop-3.3.10-r2.ebuild,
   -files/ntop-3.3.10-CVE-2009-2732.patch, -files/ntop-3.3.10-gentoo.patch:
