@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycups
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.34 2011/08/07 14:52:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/ChangeLog,v 1.35 2011/08/10 21:03:44 maekke Exp $
+
+  10 Aug 2011; Markus Meier <maekke@gentoo.org> pycups-1.9.57.ebuild:
+  arm stable, bug #349496
 
   07 Aug 2011; Raúl Porcel <armin76@gentoo.org> pycups-1.9.57.ebuild:
   alpha/ia64/sparc stable wrt #349496
