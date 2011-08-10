@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/flann
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/ChangeLog,v 1.9 2011/08/07 00:57:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/ChangeLog,v 1.10 2011/08/10 16:14:36 xarthisius Exp $
+
+  10 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> flann-1.6.11.ebuild:
+  Marked ~ppc wrt #365451
 
 *flann-1.6.11 (07 Aug 2011)
 

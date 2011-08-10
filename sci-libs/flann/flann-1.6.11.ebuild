@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.6.11.ebuild,v 1.1 2011/08/07 00:57:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.6.11.ebuild,v 1.2 2011/08/10 16:14:36 xarthisius Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ SRC_URI="http://people.cs.ubc.ca/~mariusm/uploads/FLANN/${P}-src.zip
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc mpi octave python static-libs test"
 
 RDEPEND="
