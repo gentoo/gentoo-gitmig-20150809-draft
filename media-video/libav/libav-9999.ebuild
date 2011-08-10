@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.13 2011/07/21 21:38:10 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.14 2011/08/10 01:06:20 lu_zero Exp $
 
 EAPI=4
 
@@ -109,7 +109,7 @@ src_configure() {
 		use ${i} || myconf+=" --disable-${i}"
 	done
 	use bzip2 || myconf+=" --disable-bzlib"
-	use sdl || myconf+=" --disable-ffplay"
+	use sdl || myconf+=" --disable-avplay"
 
 	use custom-cflags && myconf+=" --disable-optimizations"
 	use cpudetection && myconf+=" --enable-runtime-cpudetect"
@@ -253,6 +253,18 @@ src_install() {
 	if use qt-faststart; then
 		dobin tools/qt-faststart
 	fi
+
+	for i in avplay avserver avprobe; do
+		dosym  ${i} "$EPREFIX"/usr/bin/${i/av/ff}
+	done
+}
+
+pkg_postinst() {
+	elog "Please note that the programs formerly known as ffplay, ffserver"
+	elog "and ffprobe are now called avplay, avserver and avprobe."
+	elog
+	elog "ffmpeg had been replaced by the feature incompatible avconv thus"
+	elog "the legacy ffmpeg is provided for compatibility with older scripts"
 }
 
 src_test() {
