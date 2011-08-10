@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.450 2011/08/09 17:48:49 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.451 2011/08/10 11:25:11 blueness Exp $
+
+  10 Aug 2011; Anthony G. Basile <blueness@gentoo.org>
+  -hardened-sources-2.6.39-r9.ebuild:
+  Remove broken kernel, bug #378449
 
   09 Aug 2011; Anthony G. Basile <blueness@gentoo.org>
   -hardened-sources-2.6.32-r56.ebuild, -hardened-sources-2.6.32-r57.ebuild,
