@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.224 2011/08/10 18:32:12 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.225 2011/08/10 19:04:00 vadimk Exp $
+
+  10 Aug 2011; Vadim Kuznetsov <vadimk@gentoo.org>
+  vmware-workstation-7.1.4.385536.ebuild:
+  Bug 377345 (a bit more)
 
   10 Aug 2011; Vadim Kuznetsov <vadimk@gentoo.org>
   vmware-workstation-7.1.4.385536.ebuild:
