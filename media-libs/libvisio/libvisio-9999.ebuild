@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-9999.ebuild,v 1.1 2011/08/09 18:13:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/libvisio-9999.ebuild,v 1.2 2011/08/10 08:59:17 scarabeus Exp $
 
 EAPI=4
 
@@ -34,6 +34,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		--disable-static \
+		--disable-werror \
 		$(use_with doc docs)
 }
 

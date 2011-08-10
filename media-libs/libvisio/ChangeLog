@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libvisio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/ChangeLog,v 1.1 2011/08/09 18:13:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisio/ChangeLog,v 1.2 2011/08/10 08:59:17 scarabeus Exp $
+
+  10 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> libvisio-9999.ebuild:
+  Update ebuild to not build with werror, option so fare just in live ebuild,
+  thus fixed with next release.
 
 *libvisio-9999 (09 Aug 2011)
 *libvisio-0.0.4 (09 Aug 2011)
