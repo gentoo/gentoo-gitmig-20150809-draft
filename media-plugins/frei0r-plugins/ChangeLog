@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/frei0r-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/frei0r-plugins/ChangeLog,v 1.11 2011/06/26 14:56:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/frei0r-plugins/ChangeLog,v 1.12 2011/08/10 16:53:33 xarthisius Exp $
+
+  10 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  frei0r-plugins-1.1.22-r1.ebuild, frei0r-plugins-1.1.22-r2.ebuild:
+  Marked ~ppc, dropped ppc64 wrt #365451
 
   26 Jun 2011; Brent Baude <ranger@gentoo.org> frei0r-plugins-1.1.22-r1.ebuild:
   Marking frei0r-plugins-1.1.22-r1 ppc for bug 365273
