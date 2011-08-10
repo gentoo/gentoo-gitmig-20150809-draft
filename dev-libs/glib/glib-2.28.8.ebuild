@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.28.8.ebuild,v 1.11 2011/08/10 20:07:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.28.8.ebuild,v 1.12 2011/08/10 20:14:18 ssuominen Exp $
 
 EAPI="3"
 GNOME_TARBALL_SUFFIX="xz"
 PYTHON_DEPEND="2"
 
-inherit autotools gnome.org libtool eutils flag-o-matic pax-utils python virtualx
+inherit autotools gnome.org libtool eutils multilib flag-o-matic pax-utils python virtualx
 
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://www.gtk.org/"
