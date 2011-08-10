@@ -3,11 +3,12 @@
 <pkgmetadata>
 	<herd>vmware</herd>
 	<maintainer>
-	    <email>matt@whitlock.name</email>
-		<name>Matt Whitlock</name>
+	    <email>vadimk@gentoo.org</email>
 	</maintainer>
 	<maintainer>
-	    <email>vadimk@gentoo.org</email>
+	    <email>matt@whitlock.name</email>
+		<name>Matt Whitlock</name>
+		<description>proxied co-maintainer</description>
 	</maintainer>
 	<longdescription lang="en">
 		VMware Player - free desktop virtualization software application - makes it 
