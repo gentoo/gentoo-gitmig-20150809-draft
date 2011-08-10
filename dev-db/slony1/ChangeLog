@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/slony1
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/ChangeLog,v 1.24 2011/08/08 09:38:04 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/slony1/ChangeLog,v 1.25 2011/08/10 22:47:31 titanofold Exp $
+
+*slony1-2.0.7-r1 (10 Aug 2011)
+
+  10 Aug 2011; Aaron W. Swenson <titanofold@gentoo.org>
+  +slony1-2.0.7-r1.ebuild, +files/ldflags.patch:
+  Fix LDFLAGS not being respected
 
 *slony1-2.0.7 (08 Aug 2011)
 
