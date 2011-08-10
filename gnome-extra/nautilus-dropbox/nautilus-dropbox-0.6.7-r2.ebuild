@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-dropbox/nautilus-dropbox-0.6.7.ebuild,v 1.3 2011/05/06 21:52:43 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-dropbox/nautilus-dropbox-0.6.7-r2.ebuild,v 1.1 2011/08/10 10:45:15 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
-inherit eutils python linux-info gnome2
+inherit autotools eutils python linux-info gnome2
 
 DESCRIPTION="Store, Sync and Share Files Online"
 HOMEPAGE="http://www.dropbox.com/"
@@ -18,6 +18,7 @@ IUSE="debug"
 RDEPEND="gnome-base/nautilus
 	dev-libs/glib:2
 	dev-python/pygtk:2
+	net-misc/dropbox
 	x11-libs/gtk+:2
 	x11-libs/libnotify
 	x11-libs/libXinerama"
@@ -41,6 +42,16 @@ pkg_setup () {
 src_prepare() {
 	gnome2_src_prepare
 	python_convert_shebangs 2 dropbox.in
+
+	# Use system rst2man.py.
+	sed -e "s/python rst2man.py/rst2man.py/" -i Makefile.am || die "sed failed"
+
+	# use sysem dropbox
+	sed -e "s|~/[.]dropbox-dist|/opt/dropbox|" \
+		-e 's|\(DROPBOXD_PATH = \).*|\1"/opt/dropbox/dropboxd"|' \
+			-i dropbox.in || die
+
+	eautoreconf
 }
 
 src_install () {
