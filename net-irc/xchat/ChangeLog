@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/xchat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.302 2011/07/12 07:39:59 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.303 2011/08/10 13:53:32 polynomial-c Exp $
+
+  10 Aug 2011; Lars Wendler <polynomial-c@gentoo.org> xchat-2.8.8-r2.ebuild,
+  +files/xchat-2.8.8-cflags.patch:
+  Don't force "-g -pipe" on CFLAGS (bug #378647).
 
   12 Jul 2011; Lars Wendler <polynomial-c@gentoo.org> xchat-2.8.8-r1.ebuild,
   xchat-2.8.8-r2.ebuild:
