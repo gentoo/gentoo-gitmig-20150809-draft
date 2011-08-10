@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kabcclient
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kabcclient/ChangeLog,v 1.68 2011/07/27 14:04:53 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kabcclient/ChangeLog,v 1.69 2011/08/10 22:08:15 dilfridge Exp $
+
+  10 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kabcclient-4.6.0.ebuild:
+  Drop kdepim-4.6.0
 
 *kabcclient-4.7.0 (27 Jul 2011)
 

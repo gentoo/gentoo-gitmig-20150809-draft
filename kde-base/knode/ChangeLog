@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/ChangeLog,v 1.184 2011/07/27 14:04:44 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/ChangeLog,v 1.185 2011/08/10 22:11:27 dilfridge Exp $
+
+  10 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> -knode-4.6.0.ebuild:
+  Drop kdepim-4.6.0
 
 *knode-4.7.0 (27 Jul 2011)
 

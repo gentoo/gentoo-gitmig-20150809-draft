@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/blogilo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/ChangeLog,v 1.42 2011/07/27 14:04:53 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/ChangeLog,v 1.43 2011/08/10 22:08:01 dilfridge Exp $
+
+  10 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> -blogilo-4.6.0.ebuild:
+  Drop kdepim-4.6.0
 
 *blogilo-4.7.0 (27 Jul 2011)
 

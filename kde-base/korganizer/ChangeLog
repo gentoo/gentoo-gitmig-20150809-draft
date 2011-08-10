@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/korganizer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.198 2011/07/27 14:04:50 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.199 2011/08/10 22:12:19 dilfridge Exp $
+
+  10 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -korganizer-4.6.0.ebuild:
+  Drop kdepim-4.6.0
 
 *korganizer-4.7.0 (27 Jul 2011)
 
