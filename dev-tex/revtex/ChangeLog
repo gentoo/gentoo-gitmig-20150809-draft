@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/revtex
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/revtex/ChangeLog,v 1.1 2010/10/02 17:37:33 dilfridge Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/revtex/ChangeLog,v 1.2 2011/08/10 16:42:53 hwoarang Exp $
+
+  10 Aug 2011; Markos Chandras <hwoarang@gentoo.org> revtex-4.1_p2-r1.ebuild:
+  Stable on amd64 wrt bug #371711
 
 *revtex-4.1_p2-r1 (02 Oct 2010)
 
