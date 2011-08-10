@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.5-r1.ebuild,v 1.2 2011/06/27 06:36:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.5-r1.ebuild,v 1.3 2011/08/10 20:12:09 ssuominen Exp $
 
 EAPI="3"
 GNOME2_LA_PUNT="yes"
@@ -201,6 +201,8 @@ src_install() {
 	done
 
 	python_convert_shebangs 2 "${ED}"usr/bin/gtk-builder-convert
+
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
 
 pkg_postinst() {
