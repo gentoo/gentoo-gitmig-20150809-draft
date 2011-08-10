@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12971 2011/08/09 13:25:57 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12972 2011/08/10 19:00:53 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -304,14 +304,6 @@ net-irc/atheme-services
 # Aaron W. Swenson <titanofold@gentoo.org> (10 Jul 2011)
 # Beta Release
 >=dev-db/pgadmin3-1.14.0_beta1
-
-# Markos Chandras <hwoarang@gentoo.org> (10 Jul 2011)
-# Dead upstream. Bugs #353788 and #348232
-# Alternatives:
-# net-misc/dibbler
-# net-misc/dhcp[ipv6]
-# Masked for removal in 30 days
-net-misc/dhcpv6
 
 # Christian Ruppert <idl0r@gentoo.org> (10 Jul 2011)
 # Masked for removal in 30 days.
