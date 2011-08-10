@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/drbd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.110 2011/08/08 16:22:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.111 2011/08/10 16:45:24 hwoarang Exp $
+
+  10 Aug 2011; Markos Chandras <hwoarang@gentoo.org> drbd-8.3.10.ebuild:
+  Stable on amd64 wrt bug #377419
 
   08 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> drbd-8.3.10.ebuild:
   x86 stable wrt bug #377419
