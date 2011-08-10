@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/files/squeezeboxserver.init.d,v 1.6 2011/06/05 16:06:47 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/files/squeezeboxserver.init.d,v 1.7 2011/08/10 23:58:34 lavajoe Exp $
 
 # These fit the Squeezebox Server ebuild and so shouldn't need to be changed;
 # user-servicable parts go in /etc/conf.d/squeezeboxserver.
@@ -26,7 +26,7 @@ start() {
 	start-stop-daemon \
 		--start --exec /usr/sbin/${scname} \
 		--pidfile ${pidfile} \
-		--chuid ${scuser} \
+		--user ${scuser} \
 		--background \
 		-- \
 		--quiet \
