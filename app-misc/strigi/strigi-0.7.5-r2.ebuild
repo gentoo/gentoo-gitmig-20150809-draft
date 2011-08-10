@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.5-r2.ebuild,v 1.1 2011/08/02 21:30:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.5-r2.ebuild,v 1.2 2011/08/10 21:46:01 dilfridge Exp $
 
 EAPI=4
 
@@ -60,6 +60,7 @@ src_configure() {
 		-DFORCE_DEPS=ON
 		-DENABLE_CPPUNIT=OFF
 		-DENABLE_REGENERATEXSD=OFF
+		-DENABLE_XINE=OFF
 		$(cmake-utils_use_enable clucene)
 		$(cmake-utils_use_enable dbus)
 		$(cmake-utils_use_enable exif EXIV2)
@@ -70,7 +71,6 @@ src_configure() {
 		$(cmake-utils_use_enable log LOG4CXX)
 		$(cmake-utils_use_enable qt4)
 		$(cmake-utils_use_enable test CPPUNIT)
-		$(cmake-utils_use_disable xine)
 	)
 
 	if use qt4; then
