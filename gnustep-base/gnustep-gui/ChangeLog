@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-base/gnustep-gui
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.89 2011/04/20 17:46:21 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.90 2011/08/10 09:08:01 grobian Exp $
+
+  10 Aug 2011; Fabian Groffen <grobian@gentoo.org> gnustep-gui-0.20.0.ebuild:
+  Remove -Werror from OBJ_CFLAGS, bug #378179
 
 *gnustep-gui-0.20.0 (20 Apr 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.20.0.ebuild,v 1.1 2011/04/20 17:46:21 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.20.0.ebuild,v 1.2 2011/08/10 09:08:01 grobian Exp $
 
 EAPI="3"
 
@@ -27,6 +27,15 @@ DEPEND="${GNUSTEP_CORE_DEPEND}
 	media-libs/audiofile
 	app-text/aspell"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	gnustep-base_src_prepare
+	# remove hardcoded -g -Werror, bug #378179
+	sed -i -e 's/-g -Werror//' \
+		Tools/say/GNUmakefile \
+		Tools/speech/GNUmakefile \
+		|| die
+}
 
 src_configure() {
 	egnustep_env
