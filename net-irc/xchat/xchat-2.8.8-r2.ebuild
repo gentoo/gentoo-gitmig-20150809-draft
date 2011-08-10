@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.8-r2.ebuild,v 1.8 2011/08/10 13:53:32 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.8-r2.ebuild,v 1.9 2011/08/10 14:06:39 polynomial-c Exp $
 
 EAPI=3
 
@@ -117,6 +117,9 @@ src_install() {
 	if ! use gtk ; then
 		rm "${ED}"/usr/share/applications -rf
 	fi
+
+	# Don't install .la files
+	find "${ED}" -name '*.la' -delete
 }
 
 pkg_postinst() {
