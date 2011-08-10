@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/iniparse
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/iniparse/ChangeLog,v 1.1 2011/08/10 15:05:57 scarabeus Exp $
+
+*iniparse-0.4 (10 Aug 2011)
+
+  10 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> +iniparse-0.4.ebuild,
+  +metadata.xml:
+  Initial commit. Fixes bug #279529. Ebuild from sabayon overlay.
+
