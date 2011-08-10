@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.16.ebuild,v 1.1 2011/08/10 11:29:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-0.1.16.ebuild,v 1.2 2011/08/10 11:42:06 hwoarang Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${P}.tar.gz"
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~x86 ~x86-linux"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="debug doc examples udev"
+IUSE="debug examples udev"
 
 COMMON_DEPEND=">=dev-libs/glib-2.18:2
 	>=x11-libs/gtk+-2.16:2
@@ -24,20 +24,13 @@ RDEPEND="${COMMON_DEPEND}
 	udev? ( sys-fs/udisks )"
 DEPEND="${COMMON_DEPEND}
 	dev-util/gtk-doc-am
-	doc? (
-		dev-util/gtk-doc
-	)
 	>=dev-util/intltool-0.40
 	dev-util/pkgconfig
 	sys-devel/gettext"
 
 src_prepare() {
-	if ! use doc; then
-		sed -ie '/SUBDIRS=/s#docs##' "${S}"/Makefile.am || die "sed failed"
-		sed -ie '/^[[:space:]]*docs/d' configure.ac || die "sed failed"
-	else
-		gtkdocize --copy || die
-	fi
+	sed -ie '/SUBDIRS=/s#docs##' "${S}"/Makefile.am || die "sed failed"
+	sed -ie '/^[[:space:]]*docs/d' configure.ac || die "sed failed"
 	eautoreconf
 }
 
