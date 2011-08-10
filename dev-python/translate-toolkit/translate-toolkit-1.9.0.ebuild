@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/translate-toolkit/translate-toolkit-1.9.0.ebuild,v 1.1 2011/08/10 14:59:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/translate-toolkit/translate-toolkit-1.9.0.ebuild,v 1.2 2011/08/10 15:13:15 scarabeus Exp $
 
 EAPI=3
 
@@ -16,18 +16,18 @@ SRC_URI="mirror://sourceforge/translate/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
-IUSE="doc html ical ini subtitles"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+IUSE="doc +html +ical +ini psyco +subtitles"
 
 RDEPEND="
 	app-text/iso-codes
 	dev-python/lxml
-	dev-python/psyco
 	dev-python/python-levenshtein
 	sys-devel/gettext
 	html? ( dev-python/utidylib )
 	ical? ( dev-python/vobject )
 	ini? ( dev-python/iniparse )
+	psyco? ( dev-python/psyco )
 	subtitles? ( media-video/gaupol )
 "
 DEPEND="${RDEPEND}"
