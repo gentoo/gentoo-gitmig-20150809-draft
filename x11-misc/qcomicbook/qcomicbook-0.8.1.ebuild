@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.8.1.ebuild,v 1.1 2011/07/08 13:20:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.8.1.ebuild,v 1.2 2011/08/10 16:44:12 hwoarang Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://${PN}.linux-projects.net/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="debug"
 
 DEPEND="x11-libs/qt-gui:4
