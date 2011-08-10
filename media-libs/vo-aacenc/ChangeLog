@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vo-aacenc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-aacenc/ChangeLog,v 1.17 2011/07/29 01:23:58 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vo-aacenc/ChangeLog,v 1.18 2011/08/10 15:12:37 xarthisius Exp $
+
+  10 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> vo-aacenc-0.1.1.ebuild:
+  ppc64 stable to lift mask from bug 365273
 
   29 Jul 2011; Zac Medico <zmedico@gentoo.org> vo-aacenc-0.1.1.ebuild,
   vo-aacenc-9999.ebuild:
