@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.42 2011/07/18 09:31:50 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.43 2011/08/10 16:49:17 xarthisius Exp $
+
+  10 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> opencv-2.1.0.ebuild,
+  opencv-2.2.0-r10.ebuild:
+  Marked ~ppc, dropped ppc64 wrt #365451
 
   18 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   opencv-2.2.0-r10.ebuild:
