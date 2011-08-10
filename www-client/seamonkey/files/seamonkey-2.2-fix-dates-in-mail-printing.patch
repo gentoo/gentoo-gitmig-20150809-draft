@@ -1,0 +1,120 @@
+
+# HG changeset patch
+# User Jim Porter <squibblyflabbetydoo@gmail.com>
+# Date 1312470116 -3600
+# Node ID 65095963557ab64b5de9e462e1daa7a2fd09a43a
+# Parent  5ba3c4ec69922759882709ad4d05ac51813bf52a
+Bug 669385 - Wrong date format in print preview (and on paper) of today's messages; r=Standard8
+
+diff --git a/mailnews/mime/emitters/src/nsMimeBaseEmitter.cpp b/mailnews/mime/emitters/src/nsMimeBaseEmitter.cpp
+--- a/mailnews/mime/emitters/src/nsMimeBaseEmitter.cpp
++++ b/mailnews/mime/emitters/src/nsMimeBaseEmitter.cpp
+@@ -694,17 +694,19 @@ nsMimeBaseEmitter::AddAllHeaders(const n
+ }
+ 
+ ////////////////////////////////////////////////////////////////////////////////
+ // The following code is responsible for formatting headers in a manner that is
+ // identical to the normal XUL output.
+ ////////////////////////////////////////////////////////////////////////////////
+ 
+ nsresult
+-nsMimeBaseEmitter::GenerateDateString(const char * dateString, nsACString &formattedDate)
++nsMimeBaseEmitter::GenerateDateString(const char * dateString,
++                                      nsACString &formattedDate,
++                                      PRBool showDateForToday)
+ {
+   nsresult rv = NS_OK;
+ 
+   if (!mDateFormatter) {
+     mDateFormatter = do_CreateInstance(NS_DATETIMEFORMAT_CONTRACTID, &rv);
+     NS_ENSURE_SUCCESS(rv, rv);
+   }
+ 
+@@ -745,21 +747,21 @@ nsMimeBaseEmitter::GenerateDateString(co
+   if (displaySenderTimezone)
+     explodedCompTime = explodedMsgTime;
+   else
+     PR_ExplodeTime(PR_ImplodeTime(&explodedMsgTime), PR_LocalTimeParameters, &explodedCompTime);
+ 
+   PRExplodedTime explodedCurrentTime;
+   PR_ExplodeTime(PR_Now(), PR_LocalTimeParameters, &explodedCurrentTime);
+ 
+-  // if the message is from today, don't show the date, only the time. (i.e. 3:15 pm)
+-  // if the message is from the last week, show the day of the week.   (i.e. Mon 3:15 pm)
+-  // in all other cases, show the full date (03/19/01 3:15 pm)
++  // If we want short dates, check if the message is from today, and if so
++  // only show the time (e.g. 3:15 pm).
+   nsDateFormatSelector dateFormat = kDateFormatShort;
+-  if (explodedCurrentTime.tm_year == explodedCompTime.tm_year &&
++  if (!showDateForToday &&
++      explodedCurrentTime.tm_year == explodedCompTime.tm_year &&
+       explodedCurrentTime.tm_month == explodedCompTime.tm_month &&
+       explodedCurrentTime.tm_mday == explodedCompTime.tm_mday)
+   {
+     // same day...
+     dateFormat = kDateFormatNone;
+   }
+ 
+   nsAutoString formattedDateString;
+@@ -804,17 +806,17 @@ nsMimeBaseEmitter::GetLocalizedDateStrin
+ 
+   if (prefBranch)
+     prefBranch->GetBoolPref("mailnews.display.original_date",
+                             &displayOriginalDate);
+ 
+   if (!displayOriginalDate)
+   {
+     nsCAutoString convertedDateString;
+-    nsresult rv = GenerateDateString(dateString, convertedDateString);
++    nsresult rv = GenerateDateString(dateString, convertedDateString, true);
+     if (NS_SUCCEEDED(rv))
+       i18nValue = strdup(convertedDateString.get());
+     else
+       i18nValue = strdup(dateString);
+   }
+   else
+     i18nValue = strdup(dateString);
+ 
+diff --git a/mailnews/mime/emitters/src/nsMimeBaseEmitter.h b/mailnews/mime/emitters/src/nsMimeBaseEmitter.h
+--- a/mailnews/mime/emitters/src/nsMimeBaseEmitter.h
++++ b/mailnews/mime/emitters/src/nsMimeBaseEmitter.h
+@@ -168,14 +168,15 @@ protected:
+ 
+   // For the format being used...
+   PRInt32             mFormat;
+ 
+   // For I18N Conversion...
+   nsCOMPtr<nsIMimeConverter> mUnicodeConverter;
+   nsString            mCharset;
+   nsCOMPtr<nsIDateTimeFormat> mDateFormatter;
+-  nsresult GenerateDateString(const char * dateString, nsACString& formattedDate);
++  nsresult GenerateDateString(const char * dateString, nsACString& formattedDate,
++                              PRBool showDateForToday);
+   // The caller is expected to free the result of GetLocalizedDateString
+   char* GetLocalizedDateString(const char * dateString);
+ };
+ 
+ #endif /* _nsMimeBaseEmitter_h_ */
+diff --git a/mailnews/mime/emitters/src/nsMimeHtmlEmitter.cpp b/mailnews/mime/emitters/src/nsMimeHtmlEmitter.cpp
+--- a/mailnews/mime/emitters/src/nsMimeHtmlEmitter.cpp
++++ b/mailnews/mime/emitters/src/nsMimeHtmlEmitter.cpp
+@@ -243,17 +243,17 @@ nsresult nsMimeHtmlDisplayEmitter::Broad
+          (!extraExpandedHeadersArray.Length() || (ToLowerCase(headerStr),
+             extraExpandedHeadersArray.IndexOf(headerStr) ==
+             extraExpandedHeadersArray.NoIndex)))
+             continue;
+     }
+ 
+     if (!PL_strcasecmp("Date", headerInfo->name))
+     {
+-      GenerateDateString(headerValue, convertedDateString);
++      GenerateDateString(headerValue, convertedDateString, false);
+       headerValueEnumerator->Append(convertedDateString);
+     }
+     else // append the header value as is
+       headerValueEnumerator->Append(headerValue);
+ 
+     headerNameEnumerator->Append(headerInfo->name);
+   }
+ 
+

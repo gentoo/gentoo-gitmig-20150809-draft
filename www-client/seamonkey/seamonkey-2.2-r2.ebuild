@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.2-r2.ebuild,v 1.1 2011/08/03 06:55:39 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.2-r2.ebuild,v 1.2 2011/08/10 07:27:18 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -155,6 +155,11 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${PN}-2.1b3-restore-tabbar-scrolling-from-2.1b2.diff \
 		"${FILESDIR}"/${PN}-2.2-curl7217-includes-fix.patch
+
+	# mailnews patches go here
+	pushd "${S}"/mailnews &>/dev/null || die
+	epatch "${FILESDIR}"/${PN}-2.2-fix-dates-in-mail-printing.patch
+	popd &>/dev/null || die
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user

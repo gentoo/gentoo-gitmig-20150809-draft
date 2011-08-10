@@ -1,6 +1,11 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.323 2011/08/03 06:55:39 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.324 2011/08/10 07:27:18 polynomial-c Exp $
+
+  10 Aug 2011; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.2-r2.ebuild,
+  +files/seamonkey-2.2-fix-dates-in-mail-printing.patch:
+  Fixed dates when printing mails (mozilla bug #669385). Thanks to Martin
+  Mokrejs for reporting this via mail.
 
 *seamonkey-2.2-r2 (03 Aug 2011)
 
