@@ -4,6 +4,10 @@
 directfb
 krb4
 
+# Kacper Kowalik <xarthisius@gentoo.org> (10 Aug 2011)
+# Masking frei0r wrt bug #365451
+frei0r
+
 pda
 prelude
 mzscheme
