@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ldb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.5 2011/08/10 17:54:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.6 2011/08/10 18:16:56 vostorga Exp $
+
+  10 Aug 2011; Víctor Ostorga <vostorga@gentoo.org> ldb-1.1.0.ebuild:
+  Using waf-utils_src_configure, fixing DEPEND on >=sys-libs/tdb-1.2.9
 
   10 Aug 2011; Jeroen Roovers <jer@gentoo.org> ldb-1.1.0.ebuild:
   Revert. It does not work as intended.

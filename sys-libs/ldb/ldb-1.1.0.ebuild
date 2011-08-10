@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ldb-1.1.0.ebuild,v 1.5 2011/08/10 17:54:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ldb-1.1.0.ebuild,v 1.6 2011/08/10 18:16:56 vostorga Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -20,6 +20,7 @@ RDEPEND="dev-libs/popt
 	>=sys-libs/talloc-2.0.0[python]
 	sys-libs/tdb[python]
 	sys-libs/tevent
+	>=sys-libs/tdb-1.2.9
 	net-nds/openldap
 	!!net-fs/samba[ldb]"
 
@@ -36,13 +37,10 @@ pkg_setup() {
 }
 
 src_configure() {
-	econf \
-		--disable-rpath \
-		--disable-rpath-install \
-		--bundled-libraries=NONE \
-		--with-modulesdir="${EPRFIX}"/usr/$(get_libdir)/ldb/modules \
-		--with-privatelibdir="${EPRFIX}"/usr/$(get_libdir)/ldb \
-		--builtin-libraries=NONE ||die
+	waf-utils_src_configure --disable-rpath \
+	--disable-rpath-install --bundled-libraries=NONE \
+	--with-modulesdir="${EPRFIX}"/usr/$(get_libdir)/ldb/modules \
+	--builtin-libraries=NONE
 }
 
 src_compile(){
