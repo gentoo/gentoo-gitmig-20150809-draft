@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.28.8.ebuild,v 1.10 2011/07/29 04:13:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.28.8.ebuild,v 1.11 2011/08/10 20:07:52 ssuominen Exp $
 
 EAPI="3"
 GNOME_TARBALL_SUFFIX="xz"
@@ -29,8 +29,7 @@ DEPEND="${RDEPEND}
 		>=dev-libs/libxslt-1.0
 		>=dev-util/gtk-doc-1.13
 		~app-text/docbook-xml-dtd-4.1.2 )
-	test? ( dev-util/pkgconfig
-		>=sys-apps/dbus-1.2.14 )
+	test? ( >=sys-apps/dbus-1.2.14 )
 	!<dev-util/gtk-doc-1.15-r2"
 PDEPEND="introspection? ( dev-libs/gobject-introspection )
 	!<gnome-base/gvfs-1.6.4-r990" # Earlier versions do not work with glib
@@ -113,6 +112,12 @@ src_prepare() {
 }
 
 src_configure() {
+	# Avoid circular depend with dev-util/pkgconfig
+	if ! has_version dev-util/pkgconfig; then
+		export DBUS1_CFLAGS="-I/usr/include/dbus-1.0 -I/usr/$(get_libdir)/dbus-1.0/include"
+		export DBUS1_LIBS="-ldbus-1"
+	fi
+
 	local myconf
 
 	# Building with --disable-debug highly unrecommended.  It will build glib in
@@ -153,6 +158,9 @@ src_install() {
 		newins "${ED}/etc/bash_completion.d/${f}-bash-completion.sh" ${f} || die
 	done
 	rm -rf "${ED}/etc"
+
+	# Redudant with pkg-config files in place
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
 
 src_test() {
