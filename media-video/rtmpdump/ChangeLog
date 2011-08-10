@@ -1,6 +1,13 @@
 # ChangeLog for media-video/rtmpdump
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/ChangeLog,v 1.18 2011/07/07 03:57:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/rtmpdump/ChangeLog,v 1.19 2011/08/10 10:41:25 hwoarang Exp $
+
+*rtmpdump-9999 (10 Aug 2011)
+*rtmpdump-2.4 (10 Aug 2011)
+
+  10 Aug 2011; Markos Chandras <hwoarang@gentoo.org> +rtmpdump-2.4.ebuild,
+  +rtmpdump-9999.ebuild:
+  Version bump per bug #376551 and live ebuild inclusion
 
   07 Jul 2011; Alexis Ballier <aballier@gentoo.org> rtmpdump-2.3.ebuild:
   keyword ~x86-fbsd
