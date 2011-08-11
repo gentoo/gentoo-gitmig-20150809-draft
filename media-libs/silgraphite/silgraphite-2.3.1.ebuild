@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/silgraphite/silgraphite-2.3.1.ebuild,v 1.18 2011/08/09 21:39:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/silgraphite/silgraphite-2.3.1.ebuild,v 1.19 2011/08/11 08:55:35 scarabeus Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit eutils
 
@@ -13,11 +13,12 @@ SRC_URI="mirror://sourceforge/${PN}/${PV}/${P}.tar.gz"
 LICENSE="|| ( CPL-0.5 LGPL-2.1 )"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="pango truetype xft"
+IUSE="pango static-libs truetype xft"
 
-RDEPEND="xft? ( x11-libs/libXft )
+RDEPEND="
+	pango? ( x11-libs/pango media-libs/fontconfig )
 	truetype? ( media-libs/freetype:2 )
-	pango? ( x11-libs/pango media-libs/fontconfig )"
+	xft? ( x11-libs/libXft )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -27,12 +28,13 @@ src_prepare() {
 
 src_configure() {
 	econf \
+		$(use_enable static-libs static) \
 		$(use_with xft) \
 		$(use_with truetype freetype) \
 		$(use_with pango pangographite)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc README
+	default
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }

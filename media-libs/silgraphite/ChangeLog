@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/silgraphite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/silgraphite/ChangeLog,v 1.18 2011/08/09 21:39:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/silgraphite/ChangeLog,v 1.19 2011/08/11 08:55:35 scarabeus Exp $
+
+  11 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  silgraphite-2.3.1.ebuild:
+  Update to eapi4. Add switch for static libs. Punt .la files.
 
   09 Aug 2011; Markos Chandras <hwoarang@gentoo.org> silgraphite-2.3.1.ebuild:
   Stable on amd64 wrt bug #355085
