@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-1.0.0.ebuild,v 1.1 2011/08/07 17:39:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-1.0.0.ebuild,v 1.2 2011/08/11 19:46:09 dilfridge Exp $
 
 EAPI=4
 
@@ -22,3 +22,5 @@ DEPEND="
 	media-sound/cdparanoia
 "
 RDEPEND="${DEPEND}"
+
+PATCHES=( "${FILESDIR}/${P}-underlinking.patch" )

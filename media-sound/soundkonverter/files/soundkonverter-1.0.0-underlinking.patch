@@ -1,0 +1,12 @@
+diff -ruN soundkonverter-1.0.0.orig/CMakeLists.txt soundkonverter-1.0.0/CMakeLists.txt
+--- soundkonverter-1.0.0.orig/CMakeLists.txt	2011-04-07 15:35:10.000000000 +0200
++++ soundkonverter-1.0.0/CMakeLists.txt	2011-08-11 21:43:37.837295872 +0200
+@@ -132,7 +132,7 @@
+ 
+ kde4_add_executable(soundkonverter ${soundkonverter_SRCS})
+ 
+-target_link_libraries(soundkonverter ${KDE4_KDEUI_LIBS} ${KDE4_KFILE_LIBS} ${KDE4_KIO_LIBS} ${KDE4_SOLID_LIBRARY} ${TAGLIB_LIBRARIES} kcddb ${CDPARANOIA_LIBRARIES} soundkonvertercore)
++target_link_libraries(soundkonverter ${KDE4_KDEUI_LIBS} ${KDE4_KFILE_LIBS} ${KDE4_KIO_LIBS} ${KDE4_SOLID_LIBS} ${TAGLIB_LIBRARIES} kcddb ${CDPARANOIA_LIBRARIES} soundkonvertercore)
+ 
+ install(TARGETS soundkonverter DESTINATION ${BIN_INSTALL_DIR})
+ 
