@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/zile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.146 2011/05/29 17:30:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.147 2011/08/11 07:04:45 ulm Exp $
+
+*zile-2.3.24-r1 (11 Aug 2011)
+
+  11 Aug 2011; Ulrich Mueller <ulm@gentoo.org> +zile-2.3.24-r1.ebuild,
+  +files/zile-2.3.24-userhome.patch:
+  Fix canonicalisation of user home directory. Reported by flameeyes.
 
   29 May 2011; Ulrich Mueller <ulm@gentoo.org> -zile-2.3.20.ebuild:
   Remove old.
