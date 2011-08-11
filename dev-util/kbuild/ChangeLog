@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kbuild
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.17 2011/01/19 15:02:00 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.18 2011/08/11 02:32:21 vapier Exp $
+
+  11 Aug 2011; Mike Frysinger <vapier@gentoo.org> kbuild-0.1.5-r1.ebuild,
+  kbuild-0.1.5_p2.ebuild, kbuild-0.1.5_p2-r1.ebuild, kbuild-9999.ebuild:
+  Use pull in virtual/yacc #278006 by Eric Smith.
 
 *kbuild-0.1.5_p2-r1 (19 Jan 2011)
 
