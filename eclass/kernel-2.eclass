@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.255 2011/08/08 23:14:56 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.256 2011/08/11 14:09:56 mpagano Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -70,7 +70,7 @@
 #						  order, so they are applied in the order passed
 
 inherit eutils toolchain-funcs versionator multilib
-EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_test src_install pkg_preinst pkg_postinst
+EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_test src_install pkg_preinst pkg_postinst pkg_postrm
 
 # Added by Daniel Ostrow <dostrow@gentoo.org>
 # This is an ugly hack to get around an issue with a 32-bit userland on ppc64.
@@ -1295,3 +1295,14 @@ kernel-2_pkg_setup() {
 	[[ ${ETYPE} == headers ]] && setup_headers
 	[[ ${ETYPE} == sources ]] && echo ">>> Preparing to unpack ..."
 }
+
+kernel-2_pkg_postrm() {
+	echo
+	ewarn "Note: Even though you have successfully unmerged "
+	ewarn "your kernel package, directories in kernel source location: "
+	ewarn "${ROOT}usr/src/linux-${KV_FULL}"
+	ewarn "with modified files will remain behind. By design, package managers"
+	ewarn "will not remove these modified files and the directories they reside in."
+	echo
+}
+
