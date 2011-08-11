@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.7.2.ebuild,v 1.4 2011/04/20 11:12:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.7.2.ebuild,v 1.5 2011/08/11 23:05:43 binki Exp $
 
 EAPI=4
 
@@ -135,7 +135,7 @@ pkg_postinst() {
 	fi
 
 	# temporary info mesage
-	if use server && [[ $(get_minor_version ${REPLACING_VERSIONS}) -lt 7 ]]; then
+	if use server && [[ $(get_version_component_range 2 ${REPLACING_VERSIONS}) -lt 7 ]]; then
 		echo
 		ewarn "Please note that all configuration moved from"
 		ewarn "/home/\${QUASSEL_USER}/.config/quassel-irc.org/"
