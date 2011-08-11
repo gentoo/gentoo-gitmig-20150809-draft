@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/harfbuzz
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.1 2011/08/11 09:16:24 scarabeus Exp $
+
+*harfbuzz-0.6.0 (11 Aug 2011)
+
+  11 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> +harfbuzz-0.6.0.ebuild,
+  +metadata.xml:
+  Intial commit. Library required by graphite2.
+
