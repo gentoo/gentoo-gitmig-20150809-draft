@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.1_p2.ebuild,v 1.1 2011/05/18 01:29:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.1_p2.ebuild,v 1.2 2011/08/11 10:58:35 ulm Exp $
 
 EAPI=4
 
@@ -36,7 +36,7 @@ DEPEND="pam? ( virtual/pam )
 		>=net-nds/openldap-2.1.30-r1
 		dev-libs/cyrus-sasl
 	)
-	app-editors/gentoo-editor
+	>=app-misc/editor-wrapper-3
 	virtual/editor
 	virtual/mta"
 RDEPEND="selinux? ( sec-policy/selinux-sudo )
@@ -112,7 +112,7 @@ src_configure() {
 	# audit: somebody got to explain me how I can test this before I
 	# enable it.. — Diego
 	econf --with-secure-path="${ROOTPATH}" \
-		--with-editor=/usr/libexec/gentoo-editor \
+		--with-editor=/usr/libexec/editor \
 		--with-env-editor \
 		$(use_with offensive insults) \
 		$(use_with offensive all-insults) \

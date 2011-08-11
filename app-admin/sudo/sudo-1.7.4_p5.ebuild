@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.4_p5.ebuild,v 1.7 2011/01/15 12:32:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.4_p5.ebuild,v 1.8 2011/08/11 10:58:35 ulm Exp $
 
 inherit eutils pam
 
@@ -35,7 +35,7 @@ DEPEND="pam? ( virtual/pam )
 		dev-libs/cyrus-sasl
 	)
 	!pam? ( skey? ( >=sys-auth/skey-1.1.5-r1 ) )
-	app-editors/gentoo-editor
+	app-misc/editor-wrapper
 	virtual/editor
 	virtual/mta"
 RDEPEND="selinux? ( sec-policy/selinux-sudo )

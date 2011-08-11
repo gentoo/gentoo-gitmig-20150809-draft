@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.270 2011/05/18 01:29:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.271 2011/08/11 10:58:35 ulm Exp $
+
+  11 Aug 2011; Ulrich Mueller <ulm@gentoo.org> sudo-1.7.4_p4.ebuild,
+  sudo-1.7.4_p5.ebuild, sudo-1.8.1_p2.ebuild:
+  Update dependency following package move of editor-wrapper.
 
 *sudo-1.8.1_p2 (18 May 2011)
 
