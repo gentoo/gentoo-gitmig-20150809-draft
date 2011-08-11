@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.289 2011/08/09 12:36:57 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.290 2011/08/11 06:41:29 grobian Exp $
+
+  11 Aug 2011; Fabian Groffen <grobian@gentoo.org>
+  sunos/solaris/5.10/sparc/package.mask,
+  sunos/solaris/5.10/sparc64/package.mask:
+  Drop masks for >=gcc-4.4 on Solaris/Sparc, compilation has been fixed
 
   09 Aug 2011; Markus Duft <mduft@gentoo.org> windows/interix/package.use.mask:
   add required USE masks for interix (apr and gettext)
