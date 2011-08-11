@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.0.1.60_beta201108082.ebuild,v 1.1 2011/08/11 01:18:16 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.0.1.60_beta201108082.ebuild,v 1.2 2011/08/11 14:31:46 lack Exp $
 
 EAPI=4
 inherit nsplugins multilib toolchain-funcs versionator
@@ -61,10 +61,8 @@ RDEPEND="x86? ( $NATIVE_DEPS )
 # Where should this all go? (Bug #328639)
 INSTALL_BASE="opt/Adobe/flash-player"
 
-# Ignore QA warnings in these binary closed-source libraries, since we can't fix
-# them:
-QA_TEXTRELS="${INSTALL_BASE}/plugin/libflashplayer.so
-	${INSTALL_BASE}32/libflashplayer.so"
+# Ignore QA warnings in these closed-source binaries, since we can't fix them:
+QA_PREBUILT="opt/*"
 
 pkg_setup() {
 	einfo "Date is $EBUILD_DATE suffix is $DATE_SUFFIX"
@@ -137,8 +135,10 @@ src_install() {
 
 		# The optional KDE4 KCM plugin
 		if use kde; then
-			exeinto /usr/$(get_libdir)/kde4/
+			exeinto /${BASE}/bin/
 			doexe usr/lib/kde4/kcm_adobe_flash_player.so
+			dosym /${BASE}/bin/kcm_adobe_flash_player.so \
+				/usr/$(get_libdir)/kde4/
 			insinto /usr/share/kde4/services
 			doins usr/share/kde4/services/kcm_adobe_flash_player.desktop
 		else

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.3.181.26.ebuild,v 1.4 2011/07/17 02:41:35 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.3.181.26.ebuild,v 1.5 2011/08/11 14:31:46 lack Exp $
 
 EAPI=4
 inherit nsplugins rpm multilib toolchain-funcs
@@ -41,13 +41,8 @@ RDEPEND="x86? ( $NATIVE_DEPS )
 INSTALL_BASE="opt/Adobe/flash-player"
 INSTALL_BASE32="${INSTALL_BASE}32"
 
-# Ignore QA warnings in these binary closed-source libraries, since we can't fix
-# them:
-QA_EXECSTACK="${INSTALL_BASE}/plugin/libflashplayer.so
-	${INSTALL_BASE32}/plugin/libflashplayer.so"
-
-QA_DT_HASH="${INSTALL_BASE}/plugin/libflashplayer.so
-	${INSTALL_BASE32}/plugin/libflashplayer.so"
+# Ignore QA warnings in these closed-source binaries, since we can't fix them:
+QA_PREBUILT="opt/* usr/lib*/kde4/*"
 
 src_install() {
 	if use amd64; then
