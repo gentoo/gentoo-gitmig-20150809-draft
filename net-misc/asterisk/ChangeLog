@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.338 2011/08/11 15:41:48 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.339 2011/08/11 15:48:44 chainsaw Exp $
+
+  11 Aug 2011; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.6.2.19-r1.ebuild,
+  -asterisk-1.8.4.4-r1.ebuild, -asterisk-1.8.5.0-r2.ebuild:
+  Initial clean-up before X86 keywording. The 1.6.2 branch is dead,
+  development-wise. Please upgrade at your earliest convenience.
 
   11 Aug 2011; Tony Vroon <chainsaw@gentoo.org> asterisk-1.8.5.0-r3.ebuild:
   Mark stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in bug
