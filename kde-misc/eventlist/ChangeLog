@@ -1,0 +1,11 @@
+# ChangeLog for kde-misc/eventlist
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/eventlist/ChangeLog,v 1.1 2011/08/11 21:03:40 dilfridge Exp $
+
+*eventlist-0.4.95 (11 Aug 2011)
+
+  11 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +eventlist-0.4.95.ebuild, +metadata.xml:
+  New package, bug 377567; thanks to krytzz for the initial ebuild in the kde
+  overlay
+
