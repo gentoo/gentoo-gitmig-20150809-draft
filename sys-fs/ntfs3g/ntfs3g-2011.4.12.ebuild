@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2011.4.12.ebuild,v 1.2 2011/05/30 14:34:22 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2011.4.12.ebuild,v 1.3 2011/08/11 22:49:13 chutzpah Exp $
 
 EAPI=2
 inherit linux-info
@@ -15,7 +15,7 @@ SRC_URI="http://tuxera.com/opensource/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86"
-IUSE="acl crypt debug ntfsprogs suid xattr +udev +external-fuse"
+IUSE="acl crypt debug ntfsprogs suid static-libs xattr +udev +external-fuse"
 
 RDEPEND="external-fuse? ( >=sys-fs/fuse-2.8.0 )
 	ntfsprogs? ( !!sys-fs/ntfsprogs )
@@ -48,6 +48,7 @@ src_configure() {
 		$(use_enable crypt crypto) \
 		$(use_enable acl posix-acls) \
 		$(use_enable xattr xattr-mappings)	\
+		$(use_enable static-libs static) \
 		$(use_enable debug)
 }
 
@@ -62,6 +63,8 @@ src_install() {
 		insinto /etc/udev/rules.d/
 		doins "${FILESDIR}/99-ntfs3g.rules"
 	fi
+
+	find "${D}" -name '*.la' -delete
 }
 
 pkg_postinst() {
