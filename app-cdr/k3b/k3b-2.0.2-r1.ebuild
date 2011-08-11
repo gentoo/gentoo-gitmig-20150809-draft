@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.2-r1.ebuild,v 1.7 2011/08/10 21:59:55 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.2-r1.ebuild,v 1.8 2011/08/11 09:37:25 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
 MULTIMEDIA_REQUIRED=always
 WEBKIT_REQUIRED=always
 KMNAME="extragear/multimedia"
-KDE_HANDBOOK="always"
+KDE_HANDBOOK="optional"
 
 # Translations are only in the tarballs, not in the svn repo
 if [[ ${PV} != *9999* ]]; then
