@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libetpan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.92 2011/08/07 16:44:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.93 2011/08/11 19:03:53 eras Exp $
+
+  11 Aug 2011; Eray Aslan <eras@gentoo.org> -libetpan-0.57.ebuild,
+  -libetpan-0.57-r1.ebuild:
+  remove old
 
   07 Aug 2011; Raúl Porcel <armin76@gentoo.org> libetpan-1.0.ebuild:
   alpha/sparc stable wrt #373687
