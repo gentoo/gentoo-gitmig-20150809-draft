@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/spice/spice-3.5.5-r1.ebuild,v 1.3 2010/10/03 14:39:52 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/spice/spice-3.5.5-r1.ebuild,v 1.4 2011/08/11 11:09:52 ulm Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -17,7 +17,7 @@ KEYWORDS="amd64 ~ppc x86"
 
 RDEPEND="sys-libs/ncurses
 	x11-libs/libXaw
-	app-editors/gentoo-editor"
+	app-misc/editor-wrapper"
 
 DEPEND="${RDEPEND}
 	x11-proto/xproto"
