@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/nmh-1.3-r3.ebuild,v 1.2 2010/12/29 15:55:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/nmh-1.3-r3.ebuild,v 1.3 2011/08/11 11:04:01 ulm Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ DEPEND="gdbm? ( sys-libs/gdbm )
 	!gdbm? ( sys-libs/db )
 	>=sys-libs/ncurses-5.2
 	net-libs/liblockfile
-	app-editors/gentoo-editor
+	>=app-misc/editor-wrapper-3
 	!!media-gfx/pixie" # Bug #295996 media-gfx/pixie also uses show
 RDEPEND="${DEPEND}"
 
@@ -38,11 +38,6 @@ src_prepare() {
 }
 
 src_configure() {
-	[ -z "${PAGER}" ] && export PAGER="/usr/bin/more"
-
-	# strip options from ${PAGER} (quoting not good enough) (Bug #262150)
-	PAGER=${PAGER%% *}
-
 	# Bug 348816 & Bug 341741: The previous ebuild default of
 	# /usr/bin caused unnecessary conflicts with other
 	# packages. However, the default nmh libdir location causes
@@ -62,8 +57,9 @@ src_configure() {
 		fi
 	fi
 
-	# use gentoo-editor to avoid implicit dependencies (Bug #294762)
-	EDITOR=/usr/libexec/gentoo-editor
+	# use wrapper scripts to avoid implicit dependencies (Bug #294762)
+	EDITOR=/usr/libexec/editor
+	PAGER=/usr/libexec/pager
 
 	econf \
 		--prefix=/usr \
