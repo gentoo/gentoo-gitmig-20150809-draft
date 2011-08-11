@@ -1,12 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.16 2011/03/28 03:31:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.17 2011/08/11 19:25:59 cardoe Exp $
 
-EAPI="2"
+#BACKPORTS=2
+
+EAPI="3"
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/virt/kvm/qemu-kvm.git"
-	GIT_ECLASS="git"
+	GIT_ECLASS="git-2"
 fi
 
 inherit eutils flag-o-matic ${GIT_ECLASS} linux-info toolchain-funcs multilib
@@ -16,7 +18,7 @@ if [[ ${PV} = *9999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="mirror://sourceforge/kvm/${PN}/${P}.tar.gz
-		${BACKPORTS:+mirror://gentoo/${P}-backports-${BACKPORTS}.tar.bz2}"
+	${BACKPORTS:+http://dev.gentoo.org/~cardoe/distfiles/${P}-backports-${BACKPORTS}.tar.bz2}"
 	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 fi
 
@@ -26,23 +28,30 @@ HOMEPAGE="http://www.linux-kvm.org"
 LICENSE="GPL-2"
 SLOT="0"
 # xen is disabled until the deps are fixed
-IUSE="+aio alsa bluetooth brltty curl esd fdt hardened jpeg ncurses \
-png pulseaudio qemu-ifup rbd sasl sdl ssl spice static vde vhost-net xen"
+IUSE="+aio alsa bluetooth brltty curl debug esd fdt hardened jpeg ncurses \
+png pulseaudio qemu-ifup rbd sasl sdl spice ssl threads vde \
++vhost-net xen"
+# static, depends on libsdl being built with USE=static-libs, which can not
+# be expressed in current EAPI's
 
-# Updated targets to use the only supported upstream target - x86_64-softmmu
-COMMON_TARGETS=""
-IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} x86_64"
-IUSE_USER_TARGETS=""
-#COMMON_TARGETS="i386 arm cris m68k microblaze mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64"
-#IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} x86_64 mips64 mips64el ppcemb"
-#IUSE_USER_TARGETS="${COMMON_TARGETS} alpha armeb ppc64abi32 sparc32plus"
+COMMON_TARGETS="i386 x86_64 arm cris m68k microblaze mips mipsel ppc ppc64 sh4 sh4eb sparc sparc64"
+IUSE_SOFTMMU_TARGETS="${COMMON_TARGETS} mips64 mips64el ppcemb"
+IUSE_USER_TARGETS="${COMMON_TARGETS} alpha armeb ppc64abi32 sparc32plus"
+
+# Setup the default SoftMMU targets, while using the loops
+# below to setup the other targets. x86_64 should be the only
+# defaults on for qemu-kvm
+IUSE="${IUSE} +qemu_softmmu_targets_x86_64"
 
 for target in ${IUSE_SOFTMMU_TARGETS}; do
-	IUSE="${IUSE} +qemu_softmmu_targets_${target}"
+	if [ "x${target}" = "xx86_64" ]; then
+		continue
+	fi
+	IUSE="${IUSE} qemu_softmmu_targets_${target}"
 done
 
 for target in ${IUSE_USER_TARGETS}; do
-	IUSE="${IUSE} +qemu_user_targets_${target}"
+	IUSE="${IUSE} qemu_user_targets_${target}"
 done
 
 RESTRICT="test"
@@ -62,7 +71,7 @@ RDEPEND="
 	brltty? ( app-accessibility/brltty )
 	curl? ( net-misc/curl )
 	esd? ( media-sound/esound )
-	fdt? ( sys-apps/dtc )
+	fdt? ( >=sys-apps/dtc-1.2.0 )
 	jpeg? ( virtual/jpeg )
 	ncurses? ( sys-libs/ncurses )
 	png? ( media-libs/libpng )
@@ -92,18 +101,17 @@ kvm_kern_warn() {
 }
 
 pkg_setup() {
-	local counter="0" check
+	if ! use qemu_softmmu_targets_x86_64 && use x86_64 ; then
+		eerror "You disabled default target QEMU_SOFTMMU_TARGETS=x86_64"
+	fi
 
-	use qemu_softmmu_targets_x86_64 || ewarn "You disabled default target QEMU_SOFTMMU_TARGETS=x86_64"
-	for check in ${IUSE_SOFTMMU_TARGETS} ; do
-		use "qemu_softmmu_targets_${check}" && counter="1"
-	done
-	[[ ${counter} == 0 ]] && die "You need to set at least 1 target in QEMU_SOFTMMU_TARGETS"
+	if ! use qemu_softmmu_targets_x86_64 && use x86 ; then
+		eerror "You disabled default target QEMU_SOFTMMU_TARGETS=x86_64"
+	fi
 
 	if kernel_is lt 2 6 25; then
 		eerror "This version of KVM requres a host kernel of 2.6.25 or higher."
 		eerror "Either upgrade your kernel"
-		die "qemu-kvm version not compatible"
 	else
 		if ! linux_config_exists; then
 			eerror "Unable to check your kernel for KVM support"
@@ -112,7 +120,8 @@ pkg_setup() {
 			kvm_kern_warn
 		fi
 		if use vhost-net && ! linux_chkconfig_present VHOST_NET ; then
-			ewarn "You have to enable CONFIG_VHOST_NET in the kernel to get vhost-net support."
+			ewarn "You have to enable CONFIG_VHOST_NET in the kernel"
+			ewarn "to have vhost-net support."
 		fi
 	fi
 
@@ -131,11 +140,17 @@ src_prepare() {
 	# remove part to make udev happy
 	sed -e 's~NAME="%k", ~~' -i kvm/scripts/65-kvm.rules || die
 
+	# ${PN}-guest-hang-on-usb-add.patch was sent by Timothy Jones
+	# to the qemu-devel ml - bug 337988
 	epatch "${FILESDIR}/qemu-0.11.0-mips64-user-fix.patch"
+
+	[[ -n ${BACKPORTS} ]] && \
+		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
+			epatch
 }
 
 src_configure() {
-	local conf_opts audio_opts softmmu_targets user_targets
+	local conf_opts audio_opts user_targets
 
 	for target in ${IUSE_SOFTMMU_TARGETS} ; do
 		use "qemu_softmmu_targets_${target}" && \
@@ -147,7 +162,10 @@ src_configure() {
 		user_targets="${user_targets} ${target}-linux-user"
 	done
 
-	if [ ! -z "${softmmu_targets}" ]; then
+	if [ -z "${softmmu_targets}" ]; then
+		eerror "All SoftMMU targets are disabled. This is invalid for qemu-kvm"
+		die "At least 1 SoftMMU target must be enabled"
+	else
 		einfo "Building the following softmmu targets: ${softmmu_targets}"
 	fi
 
@@ -162,7 +180,10 @@ src_configure() {
 	conf_opts="${conf_opts} --extra-ldflags=-Wl,-z,execheap"
 
 	# Add support for static builds
-	use static && conf_opts="${conf_opts} --static"
+	#use static && conf_opts="${conf_opts} --static"
+
+	# Support debug USE flag
+	use debug && conf_opts="${conf_opts} --enable-debug --disable-strip"
 
 	# Fix the $(prefix)/etc issue
 	conf_opts="${conf_opts} --sysconfdir=/etc"
@@ -180,12 +201,12 @@ src_configure() {
 	conf_opts="${conf_opts} $(use_enable rbd)"
 	conf_opts="${conf_opts} $(use_enable sasl vnc-sasl)"
 	conf_opts="${conf_opts} $(use_enable sdl)"
-	conf_opts="${conf_opts} $(use_enable ssl vnc-tls)"
 	conf_opts="${conf_opts} $(use_enable spice)"
+	conf_opts="${conf_opts} $(use_enable ssl vnc-tls)"
+	conf_opts="${conf_opts} $(use_enable threads vnc-thread)"
 	conf_opts="${conf_opts} $(use_enable vde)"
 	conf_opts="${conf_opts} $(use_enable vhost-net)"
 	conf_opts="${conf_opts} $(use_enable xen)"
-#	conf_opts="${conf_opts} --disable-xen"
 	conf_opts="${conf_opts} --disable-darwin-user --disable-bsd-user"
 
 	# audio options
@@ -211,27 +232,29 @@ src_configure() {
 		# in development and broken
 		# the kvm project has its own support for threaded IO
 		# which is always on and works
-#		--enable-io-thread \
+		# --enable-io-thread \
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
-	insinto /$(get_libdir)/udev/rules.d/
-	doins kvm/scripts/65-kvm.rules || die
+	if [ ! -z "${softmmu_targets}" ]; then
+		insinto /$(get_libdir)/udev/rules.d/
+		doins kvm/scripts/65-kvm.rules || die
 
-	if use qemu-ifup; then
-		insinto /etc/qemu/
-		insopts -m0755
-		doins kvm/scripts/qemu-ifup || die
-	fi
+		if use qemu-ifup; then
+			insinto /etc/qemu/
+			insopts -m0755
+			doins kvm/scripts/qemu-ifup || die
+		fi
 
-	if use qemu_softmmu_targets_x86_64 ; then
-		dobin "${FILESDIR}"/qemu-kvm
-		dosym /usr/bin/qemu-kvm /usr/bin/kvm
-	else
-		elog "You disabled QEMU_SOFTMMU_TARGETS=x86_64, this disables install"
-		elog "of /usr/bin/qemu-kvm and /usr/bin/kvm"
+		if use qemu_softmmu_targets_x86_64 ; then
+			dobin "${FILESDIR}"/qemu-kvm
+			dosym /usr/bin/qemu-kvm /usr/bin/kvm
+		else
+			elog "You disabled QEMU_SOFTMMU_TARGETS=x86_64, this disables install"
+			elog "of /usr/bin/qemu-kvm and /usr/bin/kvm"
+		fi
 	fi
 
 	dodoc Changelog MAINTAINERS TODO pci-ids.txt || die
@@ -240,22 +263,24 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "If you don't have kvm compiled into the kernel, make sure you have"
-	elog "the kernel module loaded before running kvm. The easiest way to"
-	elog "ensure that the kernel module is loaded is to load it on boot."
-	elog "For AMD CPUs the module is called 'kvm-amd'"
-	elog "For Intel CPUs the module is called 'kvm-intel'"
-	elog "Please review /etc/conf.d/modules for how to load these"
-	elog
-	elog "Make sure your user is in the 'kvm' group"
-	elog "Just run 'gpasswd -a <USER> kvm', then have <USER> re-login."
-	elog
-	elog "You will need the Universal TUN/TAP driver compiled into your"
-	elog "kernel or loaded as a module to use the virtual network device"
-	elog "if using -net tap.  You will also need support for 802.1d"
-	elog "Ethernet Bridging and a configured bridge if using the provided"
-	elog "kvm-ifup script from /etc/kvm."
-	elog
-	elog "The gnutls use flag was renamed to ssl, so adjust your use flags."
-	echo
+
+	if [ ! -z "${softmmu_targets}" ]; then
+		elog "If you don't have kvm compiled into the kernel, make sure you have"
+		elog "the kernel module loaded before running kvm. The easiest way to"
+		elog "ensure that the kernel module is loaded is to load it on boot."
+		elog "For AMD CPUs the module is called 'kvm-amd'"
+		elog "For Intel CPUs the module is called 'kvm-intel'"
+		elog "Please review /etc/conf.d/modules for how to load these"
+		elog
+		elog "Make sure your user is in the 'kvm' group"
+		elog "Just run 'gpasswd -a <USER> kvm', then have <USER> re-login."
+		elog
+		elog "You will need the Universal TUN/TAP driver compiled into your"
+		elog "kernel or loaded as a module to use the virtual network device"
+		elog "if using -net tap.  You will also need support for 802.1d"
+		elog "Ethernet Bridging and a configured bridge if using the provided"
+		elog "kvm-ifup script from /etc/kvm."
+		elog
+		elog "The gnutls use flag was renamed to ssl, so adjust your use flags."
+	fi
 }
