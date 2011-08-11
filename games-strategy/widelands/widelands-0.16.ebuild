@@ -1,10 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.16.ebuild,v 1.1 2011/07/12 19:34:21 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.16.ebuild,v 1.2 2011/08/11 21:40:00 mr_bones_ Exp $
 
 EAPI=3
-
-inherit versionator games cmake-utils
+inherit versionator cmake-utils games
 
 MY_PV=build$(get_version_component_range 2)
 MY_P=${PN}-${MY_PV}-src
@@ -28,10 +27,10 @@ RDEPEND="dev-games/ggz-client-libs
 DEPEND="${RDEPEND}
 	dev-libs/boost"
 
-S="${WORKDIR}"/${MY_P}
+S=${WORKDIR}/${MY_P}
 
 CMAKE_BUILD_TYPE=Release
-PREFIX="${GAMES_DATADIR}/${PN}"
+PREFIX=${GAMES_DATADIR}/${PN}
 
 src_prepare() {
 	sed -i \
@@ -49,6 +48,10 @@ src_configure() {
 		"-DWL_INSTALL_BINDIR=${GAMES_BINDIR}"
 	)
 	cmake-utils_src_configure
+}
+
+src_compile() {
+	cmake-utils_src_compile
 }
 
 src_install() {
