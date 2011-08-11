@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/osptoolkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/ChangeLog,v 1.15 2011/03/24 14:34:40 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/ChangeLog,v 1.16 2011/08/11 15:40:26 chainsaw Exp $
+
+  11 Aug 2011; Tony Vroon <chainsaw@gentoo.org> osptoolkit-3.5.0.ebuild:
+  Mark stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in bug
+  #378757.
 
   24 Mar 2011; Christoph Mende <angelos@gentoo.org> osptoolkit-3.5.0.ebuild:
   Keyworded on amd64 wrt bug #360137
