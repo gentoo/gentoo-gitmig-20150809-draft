@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.877 2011/08/11 13:05:17 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.878 2011/08/11 17:19:46 mpagano Exp $
+
+  11 Aug 2011; Mike Pagano <mpagano@gentoo.org>
+  gentoo-sources-2.6.32-r29.ebuild, gentoo-sources-2.6.32-r32.ebuild,
+  gentoo-sources-2.6.32-r33.ebuild, gentoo-sources-2.6.32-r34.ebuild,
+  gentoo-sources-2.6.37-r4.ebuild, gentoo-sources-2.6.37-r6.ebuild,
+  gentoo-sources-2.6.38-r6.ebuild, gentoo-sources-2.6.38-r7.ebuild,
+  gentoo-sources-2.6.39-r3.ebuild, gentoo-sources-2.6.39-r4.ebuild,
+  gentoo-sources-3.0.0.ebuild, gentoo-sources-3.0.1.ebuild:
+  Add ewarn message in pkg_postrm. Bug #378611
 
   11 Aug 2011; Mike Pagano <mpagano@gentoo.org>
   -gentoo-sources-2.6.35-r15.ebuild, -gentoo-sources-2.6.36-r8.ebuild,
