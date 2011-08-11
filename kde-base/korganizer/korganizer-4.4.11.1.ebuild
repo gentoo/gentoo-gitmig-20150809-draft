@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-4.4.11.1.ebuild,v 1.5 2011/06/01 19:43:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-4.4.11.1.ebuild,v 1.6 2011/08/11 19:01:07 dilfridge Exp $
 
 EAPI=4
 
@@ -29,6 +29,9 @@ KMEXTRACTONLY="
 	kmail/
 	knode/org.kde.knode.xml
 "
+
+# bug 378151
+RESTRICT=test
 
 src_unpack() {
 	if use kontact; then

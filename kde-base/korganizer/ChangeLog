@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/korganizer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.199 2011/08/10 22:12:19 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.200 2011/08/11 19:01:07 dilfridge Exp $
+
+  11 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  korganizer-4.4.11.1.ebuild:
+  Restrict tests, bug 378151
 
   10 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -korganizer-4.6.0.ebuild:
