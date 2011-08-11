@@ -1,6 +1,10 @@
 # ChangeLog for games-action/violetland
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/violetland/ChangeLog,v 1.18 2011/07/10 21:32:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/violetland/ChangeLog,v 1.19 2011/08/11 16:36:44 chainsaw Exp $
+
+  11 Aug 2011; Tony Vroon <chainsaw@gentoo.org> violetland-0.4.2.ebuild:
+  Marked 0.4.2 stable on AMD64 based on arch testing by Agostino "ago" Sarubbo
+  in bug #378727.
 
 *violetland-0.4.2 (10 Jul 2011)
 
