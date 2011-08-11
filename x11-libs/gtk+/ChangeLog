@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.526 2011/08/10 20:12:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.527 2011/08/11 09:06:56 mduft Exp $
+
+  11 Aug 2011; Markus Duft <mduft@gentoo.org> gtk+-2.24.5-r1.ebuild,
+  gtk+-3.0.12.ebuild:
+  removed obsolete dependency for interix prefix
 
   10 Aug 2011; Samuli Suominen <ssuominen@gentoo.org> gtk+-2.24.5-r1.ebuild:
   Remove libtool files (again, see ChangeLog entry from 10 Apr 2011)

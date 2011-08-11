@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.0.12.ebuild,v 1.1 2011/07/28 18:04:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.0.12.ebuild,v 1.2 2011/08/11 09:06:56 mduft Exp $
 
 EAPI="4"
 
@@ -58,9 +58,6 @@ DEPEND="${COMMON_DEPEND}
 		x11-proto/inputproto
 		x11-proto/damageproto
 	)
-	x86-interix? (
-		sys-libs/itx-bind
-	)
 	xinerama? ( x11-proto/xineramaproto )
 	>=dev-util/gtk-doc-am-1.11
 	doc? (
@@ -92,12 +89,6 @@ src_prepare() {
 		-i gtk/tests/testing.c || die "sed 1 failed"
 	sed '\%/recent-manager/add%,/recent_manager_purge/ d' \
 		-i gtk/tests/recentmanager.c || die "sed 2 failed"
-
-	if use x86-interix; then
-		# activate the itx-bind package...
-		append-flags "-I${EPREFIX}/usr/include/bind"
-		append-ldflags "-L${EPREFIX}/usr/lib/bind"
-	fi
 
 	if ! use test; then
 		# don't waste time building tests

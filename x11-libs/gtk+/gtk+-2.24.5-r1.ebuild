@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.5-r1.ebuild,v 1.3 2011/08/10 20:12:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.5-r1.ebuild,v 1.4 2011/08/11 09:06:56 mduft Exp $
 
 EAPI="3"
 GNOME2_LA_PUNT="yes"
@@ -53,9 +53,6 @@ DEPEND="${RDEPEND}
 		x11-proto/xproto
 		x11-proto/inputproto
 		x11-proto/damageproto
-	)
-	x86-interix? (
-		sys-libs/itx-bind
 	)
 	xinerama? ( x11-proto/xineramaproto )
 	>=dev-util/gtk-doc-am-1.11
@@ -121,12 +118,6 @@ src_prepare() {
 		|| die "failed to disable recentmanager test (2)"
 	sed 's:\({ "GtkFileChooserButton".*},\):/*\1*/:g' -i gtk/tests/object.c \
 		|| die "failed to disable recentmanager test (3)"
-
-	if use x86-interix; then
-		# activate the itx-bind package...
-		append-flags "-I${EPREFIX}/usr/include/bind"
-		append-ldflags "-L${EPREFIX}/usr/lib/bind"
-	fi
 
 	if ! use test; then
 		# don't waste time building tests
