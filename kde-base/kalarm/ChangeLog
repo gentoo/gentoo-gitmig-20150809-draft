@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kalarm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/ChangeLog,v 1.183 2011/08/10 22:08:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/ChangeLog,v 1.184 2011/08/11 19:56:13 dilfridge Exp $
+
+  11 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kalarm-4.4.11.1.ebuild:
+  Remove old
 
   10 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> -kalarm-4.6.0.ebuild:
   Drop kdepim-4.6.0
