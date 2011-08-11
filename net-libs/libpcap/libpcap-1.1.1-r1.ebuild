@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-1.1.1-r1.ebuild,v 1.3 2011/04/02 12:57:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-1.1.1-r1.ebuild,v 1.4 2011/08/11 02:35:58 vapier Exp $
 
 EAPI=2
 inherit autotools eutils multilib toolchain-funcs
@@ -18,7 +18,8 @@ IUSE="bluetooth ipv6 libnl"
 RDEPEND="bluetooth? ( net-wireless/bluez )
 	libnl? ( dev-libs/libnl )"
 DEPEND="${RDEPEND}
-	sys-devel/flex"
+	sys-devel/flex
+	virtual/yacc"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.1-cross-linux.patch"
