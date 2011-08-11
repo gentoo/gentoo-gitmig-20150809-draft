@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/shaaft
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/ChangeLog,v 1.11 2010/03/10 21:34:58 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/ChangeLog,v 1.12 2011/08/11 04:32:11 mr_bones_ Exp $
+
+  11 Aug 2011; Michael Sterrett <mr_bones_@gentoo.org> shaaft-0.5.0.ebuild:
+  Add use deps; respect CXXFLAGS; use a non-404 HOMEPAGE (bug #371689)
 
   10 Mar 2010; Samuli Suominen <ssuominen@gentoo.org> shaaft-0.5.0.ebuild:
   Fix libpng14 detection wrt #308887 by Locke Shinseiko.

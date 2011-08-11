@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/shaaft-0.5.0.ebuild,v 1.13 2010/03/10 21:34:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/shaaft-0.5.0.ebuild,v 1.14 2011/08/11 04:32:11 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
 
 DESCRIPTION="A falling block game similar to Blockout"
-HOMEPAGE="http://criticalmass.sourceforge.net/shaaft.php"
+HOMEPAGE="http://packages.gentoo.org/package/games-puzzle/shaaft"
 SRC_URI="mirror://sourceforge/criticalmass/${P/s/S}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -17,9 +17,9 @@ IUSE=""
 DEPEND="virtual/opengl
 	sys-libs/zlib
 	media-libs/libpng
-	media-libs/libsdl
-	media-libs/sdl-mixer
-	media-libs/sdl-image"
+	media-libs/libsdl[audio,opengl,video]
+	media-libs/sdl-mixer[mikmod]
+	media-libs/sdl-image[png]"
 
 S=${WORKDIR}/${P/s/S}
 
@@ -31,6 +31,8 @@ src_prepare() {
 
 	sed -i \
 		-e 's:png12:png:g' \
+		-e '/^CFLAGS=""/d' \
+		-e '/^CXXFLAGS=""/d' \
 		configure.in || die
 
 	epatch \
@@ -41,8 +43,14 @@ src_prepare() {
 	eautoreconf
 }
 
+src_configure() {
+	egamesconf \
+		--disable-dependency-tracking \
+		--disable-optimize
+}
+
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 	rm -f "${D}/${GAMES_BINDIR}"/Packer
 	dodoc TODO.txt
 	prepgamesdirs
