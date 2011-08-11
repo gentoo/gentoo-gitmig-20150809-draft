@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/fslurp
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fslurp/ChangeLog,v 1.1 2011/08/11 07:08:30 radhermit Exp $
+
+*fslurp-0.7 (11 Aug 2011)
+
+  11 Aug 2011; Tim Harder <radhermit@gentoo.org> +fslurp-0.7.ebuild,
+  +files/fslurp-0.7-makefile.patch, +metadata.xml:
+  Initial import.
+
