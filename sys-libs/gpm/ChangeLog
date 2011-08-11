@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gpm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.88 2011/07/29 08:15:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/ChangeLog,v 1.89 2011/08/11 02:25:13 vapier Exp $
+
+  11 Aug 2011; Mike Frysinger <vapier@gentoo.org> gpm-1.20.6.ebuild:
+  Use virtual/yacc instead of hardcoding list ourselves.
 
   29 Jul 2011; Robin H. Johnson <robbat2@gentoo.org> gpm-1.20.6.ebuild:
   Bug #376861: fix missing bison/yacc DEPEND.
