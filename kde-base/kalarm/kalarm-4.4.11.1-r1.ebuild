@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/kalarm-4.4.11.1-r1.ebuild,v 1.4 2011/06/01 19:37:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalarm/kalarm-4.4.11.1-r1.ebuild,v 1.5 2011/08/11 20:05:44 dilfridge Exp $
 
 EAPI=4
 
@@ -24,7 +24,10 @@ KMEXTRACTONLY="
 	kmail/
 "
 
-PATCHES=( "${FILESDIR}/${PN}-4.4.11.1-crash.patch" )
+PATCHES=(
+	"${FILESDIR}/${PN}-4.4.11.1-crash.patch"
+	"${FILESDIR}/${PN}-4.4.11.1-underlinking.patch"
+)
 
 src_configure() {
 	mycmakeargs=(
