@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.305 2011/08/11 16:54:47 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.306 2011/08/11 19:30:25 xarthisius Exp $
+
+  11 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> xchat-2.8.8-r2.ebuild:
+  ppc/ppc64 stable wrt #378665
 
   11 Aug 2011; Tony Vroon <chainsaw@gentoo.org> xchat-2.8.8-r2.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in bug
