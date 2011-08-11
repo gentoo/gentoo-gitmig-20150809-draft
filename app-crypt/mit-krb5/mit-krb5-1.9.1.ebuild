@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.9.1.ebuild,v 1.8 2011/08/07 16:46:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.9.1.ebuild,v 1.9 2011/08/11 02:26:48 vapier Exp $
 
 EAPI=3
 
@@ -23,7 +23,7 @@ RDEPEND="!!app-crypt/heimdal
 	openldap? ( net-nds/openldap )
 	xinetd? ( sys-apps/xinetd )"
 DEPEND="${RDEPEND}
-	|| ( sys-devel/bison dev-util/yacc )
+	virtual/yacc
 	doc? ( virtual/latex-base )
 	test? ( dev-lang/tcl
 	        dev-lang/python

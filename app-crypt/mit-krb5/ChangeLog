@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.288 2011/08/07 16:46:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.289 2011/08/11 02:26:48 vapier Exp $
+
+  11 Aug 2011; Mike Frysinger <vapier@gentoo.org> mit-krb5-1.9.1.ebuild:
+  Use virtual/yacc instead of hardcoding list ourselves.
 
   07 Aug 2011; Raúl Porcel <armin76@gentoo.org> mit-krb5-1.9.1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #374119
