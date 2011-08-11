@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/milter-regex
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/ChangeLog,v 1.8 2010/09/24 20:35:56 mrness Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/ChangeLog,v 1.9 2011/08/11 02:29:24 vapier Exp $
+
+  11 Aug 2011; Mike Frysinger <vapier@gentoo.org> milter-regex-1.7-r2.ebuild,
+  milter-regex-1.8.ebuild:
+  Use virtual/yacc instead of hardcoding list ourselves.
 
 *milter-regex-1.8 (24 Sep 2010)
 

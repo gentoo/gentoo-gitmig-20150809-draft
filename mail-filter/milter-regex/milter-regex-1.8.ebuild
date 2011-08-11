@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/milter-regex-1.8.ebuild,v 1.1 2010/09/24 20:35:56 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/milter-regex-1.8.ebuild,v 1.2 2011/08/11 02:29:20 vapier Exp $
 
 EAPI="2"
 
@@ -16,8 +16,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="|| ( mail-filter/libmilter mail-mta/sendmail )"
-DEPEND="|| ( sys-devel/bison dev-util/yacc )
-	${RDEPEND}"
+DEPEND="${RDEPEND}
+	virtual/yacc"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
