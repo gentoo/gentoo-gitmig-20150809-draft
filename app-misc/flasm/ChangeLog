@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/flasm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/flasm/ChangeLog,v 1.10 2010/08/30 23:37:30 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/flasm/ChangeLog,v 1.11 2011/08/11 02:28:20 vapier Exp $
+
+  11 Aug 2011; Mike Frysinger <vapier@gentoo.org> flasm-1.62.ebuild,
+  flasm-1.63.ebuild:
+  Use virtual/yacc instead of hardcoding list ourselves.
 
 *flasm-1.63 (30 Aug 2010)
 

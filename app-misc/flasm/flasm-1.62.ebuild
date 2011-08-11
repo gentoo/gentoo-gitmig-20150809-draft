@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/flasm/flasm-1.62.ebuild,v 1.2 2010/08/30 23:37:30 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/flasm/flasm-1.62.ebuild,v 1.3 2011/08/11 02:28:20 vapier Exp $
 
 inherit eutils versionator toolchain-funcs
 
@@ -19,7 +19,7 @@ RDEPEND="sys-libs/zlib"
 DEPEND="${RDEPEND}
 	app-arch/unzip
 	sys-devel/flex
-	sys-devel/bison
+	virtual/yacc
 	dev-util/gperf"
 
 S="${WORKDIR}"
