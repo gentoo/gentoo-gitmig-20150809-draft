@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.413 2011/08/09 03:33:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.414 2011/08/11 18:50:22 phajdan.jr Exp $
+
+*chromium-14.0.835.35 (11 Aug 2011)
+
+  11 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-14.0.835.18.ebuild, +chromium-14.0.835.35.ebuild,
+  chromium-9999-r1.ebuild:
+  Version bump for dev channel release. Drop WebRTC support temporarily so that
+  we don't need to depend on PulseAudio, bug #377847 by octoploid. Remove old.
 
 *chromium-14.0.835.29 (09 Aug 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.42 2011/08/08 17:34:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.43 2011/08/11 18:50:22 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -41,7 +41,6 @@ RDEPEND="app-arch/bzip2
 	media-libs/libpng
 	>=media-libs/libwebp-0.1.2
 	media-libs/speex
-	media-sound/pulseaudio
 	cups? (
 		dev-libs/libgcrypt
 		>=net-print/cups-1.3.11
@@ -197,6 +196,10 @@ src_configure() {
 
 	# Disable NaCl temporarily, this tarball doesn't have IRT.
 	myconf+=" -Ddisable_nacl=1"
+
+	# Disable WebRTC until they make PulseAudio dependency optional,
+	# bug #377847.
+	myconf+=" -Denable_webrtc=0"
 
 	# Use system-provided libraries.
 	# TODO: use_system_ffmpeg
