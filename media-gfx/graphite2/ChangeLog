@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/graphite2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/ChangeLog,v 1.8 2011/07/29 11:11:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/ChangeLog,v 1.9 2011/08/11 09:30:31 scarabeus Exp $
+
+*graphite2-1.0.1 (11 Aug 2011)
+
+  11 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/graphite2-disablefonttest.patch, -files/graphite2-fix-nostdlib.patch,
+  -files/graphite2-multilib-strict.patch,
+  files/graphite2-fix_wrong_linker_opts.patch, -graphite2-0.9.4-r1.ebuild,
+  files/graphite2-includes-libs-perl.patch, +graphite2-1.0.1.ebuild:
+  Version bump to 1.0.1, add few missing dependencies.
 
   29 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   +files/graphite2-fix_wrong_linker_opts.patch, graphite2-0.9.4-r1.ebuild:

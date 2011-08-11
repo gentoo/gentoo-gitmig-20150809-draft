@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-0.9.4-r1.ebuild,v 1.5 2011/07/29 11:11:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.0.1.ebuild,v 1.1 2011/08/11 09:30:31 scarabeus Exp $
 
 EAPI=4
 
@@ -18,6 +18,8 @@ IUSE="perl"
 RDEPEND="
 	dev-libs/glib:2
 	media-libs/fontconfig
+	media-libs/harfbuzz
+	media-libs/silgraphite
 	perl? ( dev-lang/perl )
 "
 DEPEND="${RDEPEND}
@@ -26,9 +28,6 @@ DEPEND="${RDEPEND}
 
 PATCHES=(
 	"${FILESDIR}/${PN}-includes-libs-perl.patch"
-	"${FILESDIR}/${PN}-disablefonttest.patch"
-	"${FILESDIR}/${PN}-multilib-strict.patch"
-	"${FILESDIR}/${PN}-fix-nostdlib.patch"
 	"${FILESDIR}/${PN}-fix_wrong_linker_opts.patch"
 )
 
@@ -44,7 +43,7 @@ src_prepare() {
 		_check_build_dir init
 		sed -i \
 			-e "s:@BUILD_DIR@:\"${CMAKE_BUILD_DIR}/src\":" \
-			perl/Build.PL || die
+			contrib/perl/Build.PL || die
 	fi
 }
 
@@ -59,7 +58,7 @@ src_configure() {
 src_compile() {
 	cmake-utils_src_compile
 	if use perl; then
-		cd perl
+		cd contrib/perl
 		perl-module_src_prep
 		perl-module_src_compile
 	fi
@@ -68,7 +67,7 @@ src_compile() {
 src_test() {
 	cmake-utils_src_test
 	if use perl; then
-		cd perl
+		cd contrib/perl
 		perl-module_src_test
 	fi
 }
@@ -76,7 +75,7 @@ src_test() {
 src_install() {
 	cmake-utils_src_install
 	if use perl; then
-		cd perl
+		cd contrib/perl
 		perl-module_src_install
 		fixlocalpod
 	fi

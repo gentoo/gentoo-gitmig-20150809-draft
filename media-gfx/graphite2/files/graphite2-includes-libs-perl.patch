@@ -1,5 +1,5 @@
---- graphite2-0.9.3.orig/perl/Build.PL
-+++ graphite2-0.9.3/perl/Build.PL
+--- graphite2-0.9.3.orig/contrib/perl/Build.PL
++++ graphite2-0.9.3/contrib/perl/Build.PL
 @@ -8,8 +8,8 @@ my $builder = Module::Build->new(
      dist_author         => 'Simon Cozens <simon@cpan.org>',
      dist_version_from   => 'lib/Text/Graphite2.pm',
