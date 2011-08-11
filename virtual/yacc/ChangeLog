@@ -1,0 +1,10 @@
+# ChangeLog for virtual/yacc
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/yacc/ChangeLog,v 1.1 2011/08/11 02:17:36 vapier Exp $
+
+*yacc-0 (11 Aug 2011)
+
+  11 Aug 2011; Mike Frysinger <vapier@gentoo.org> +yacc-0.ebuild,
+  +metadata.xml:
+  Initial yacc virtual.
+
