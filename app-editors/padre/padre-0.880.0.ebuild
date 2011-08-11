@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/padre/padre-0.880.0.ebuild,v 1.1 2011/08/09 20:01:31 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/padre/padre-0.880.0.ebuild,v 1.2 2011/08/11 10:30:07 tove Exp $
 
 EAPI=4
 
@@ -18,7 +18,6 @@ IUSE=""
 
 # Test Deps
 TDEPEND="
-	>=dev-perl/Capture-Tiny-0.06
 	>=dev-perl/Test-MockObject-1.09
 	>=dev-perl/Test-Script-1.07
 	>=dev-perl/Test-Exception-0.27
@@ -31,6 +30,7 @@ TDEPEND="
 #	>=virtual/perl-Pod-Perldoc-3.15
 RDEPEND="
 	>=dev-lang/perl-5.10.1
+	>=dev-perl/Capture-Tiny-0.06
 	>=dev-perl/Class-Adapter-1.05
 	>=dev-perl/Class-Inspector-1.22
 	>=dev-perl/Class-Unload-0.03
