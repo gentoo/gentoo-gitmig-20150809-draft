@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/arb-5.2.ebuild,v 1.2 2011/07/15 15:55:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/arb-5.2.ebuild,v 1.3 2011/08/11 21:36:06 xarthisius Exp $
 
 EAPI=4
 
@@ -17,8 +17,7 @@ LICENSE="arb"
 IUSE="+opengl"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND="
-	app-text/sablotron
+CDEPEND="app-text/sablotron
 	media-libs/libpng
 	media-libs/tiff
 	www-client/lynx
@@ -29,7 +28,9 @@ DEPEND="
 		media-libs/glew
 		media-libs/freeglut
 		media-libs/mesa[motif] )"
-RDEPEND="${DEPEND}
+DEPEND="${CDEPEND}
+	sys-process/time"
+RDEPEND="${CDEPEND}
 	sci-visualization/gnuplot"
 # Recommended: libmotif3 gv xfig xterm treetool java
 
@@ -42,7 +43,8 @@ src_prepare() {
 	epatch \
 		"${WORKDIR}"/${P}-linker.patch \
 		"${FILESDIR}"/5.1-libs.patch \
-		"${FILESDIR}"/5.1-bfr-overflow.patch
+		"${FILESDIR}"/5.1-bfr-overflow.patch \
+		"${FILESDIR}"/${PV}-libpng15.patch
 	sed -i \
 		-e 's/all: checks/all:/' \
 		-e "s/GCC:=.*/GCC=$(tc-getCC) ${CFLAGS}/" \
