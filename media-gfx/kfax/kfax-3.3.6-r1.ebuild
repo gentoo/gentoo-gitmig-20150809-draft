@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kfax/kfax-3.3.6-r1.ebuild,v 1.1 2010/11/13 23:20:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kfax/kfax-3.3.6-r1.ebuild,v 1.2 2011/08/11 19:34:50 dilfridge Exp $
 
 EAPI=3
 
@@ -31,4 +31,7 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-PATCHES=( "${FILESDIR}/${P}-kde45.patch" )
+PATCHES=(
+	"${FILESDIR}/${P}-kde45.patch"
+	"${FILESDIR}/${P}-underlinking.patch"
+)

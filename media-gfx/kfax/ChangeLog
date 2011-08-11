@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/kfax
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kfax/ChangeLog,v 1.4 2011/02/02 03:00:51 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kfax/ChangeLog,v 1.5 2011/08/11 19:34:50 dilfridge Exp $
+
+  11 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> kfax-3.3.6-r1.ebuild,
+  +files/kfax-3.3.6-underlinking.patch:
+  Fix underlinking, bug 369645
 
   02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org> -kfax-3.3.6.ebuild:
   remove old
