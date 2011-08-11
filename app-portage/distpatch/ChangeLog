@@ -1,0 +1,10 @@
+# ChangeLog for app-portage/distpatch
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/distpatch/ChangeLog,v 1.1 2011/08/11 03:35:10 rafaelmartins Exp $
+
+*distpatch-0.1 (11 Aug 2011)
+
+  11 Aug 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  +distpatch-0.1.ebuild, +metadata.xml:
+  Initial commit.
+
