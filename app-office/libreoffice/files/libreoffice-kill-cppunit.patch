@@ -1,38 +1,12 @@
-diff -urN libreoffice-libs-extern-3.4.2.3.old/cppunit/kill_switch.patch libreoffice-libs-extern-3.4.2.3/cppunit/kill_switch.patch
---- libreoffice-libs-extern-3.4.2.3.old/cppunit/kill_switch.patch	1970-01-01 01:00:00.000000000 +0100
-+++ libreoffice-libs-extern-3.4.2.3/cppunit/kill_switch.patch	2011-08-11 12:11:50.319812105 +0200
-@@ -0,0 +1,22 @@
-+diff -urN cppunit-1.12.1/src/DllPlugInTester/DllPlugInTester.cpp cppunit-1.12.1.new/src/DllPlugInTester/DllPlugInTester.cpp
-+--- cppunit-1.12.1/src/DllPlugInTester/DllPlugInTester.cpp	2004-06-25 13:11:45.000000000 +0200
-++++ cppunit-1.12.1.new/src/DllPlugInTester/DllPlugInTester.cpp	2011-08-11 12:08:33.597271474 +0200
-+@@ -207,6 +207,7 @@
-+ main( int argc, 
-+       const char *argv[] )
-+ {
-++	return 0;
-+   const int successReturnCode = 0;
-+   const int failureReturnCode = 1;
-+   const int badCommadLineReturnCode = 2;
-+diff -urN cppunit-1.12.1/src/DllPlugInTester/DllPlugInTesterTest.cpp cppunit-1.12.1.new/src/DllPlugInTester/DllPlugInTesterTest.cpp
-+--- cppunit-1.12.1/src/DllPlugInTester/DllPlugInTesterTest.cpp	2004-06-25 12:41:27.000000000 +0200
-++++ cppunit-1.12.1.new/src/DllPlugInTester/DllPlugInTesterTest.cpp	2011-08-11 12:08:50.338062186 +0200
-+@@ -5,6 +5,7 @@
-+ 
-+ int main(int argc, char* argv[])
-+ {
-++  return 0;
-+   CPPUNIT_NS::Test *suite = CPPUNIT_NS::TestFactoryRegistry::getRegistry().makeTest();
-+   CPPUNIT_NS::TextUi::TestRunner runner;
-+   runner.addTest( suite );
-diff -urN libreoffice-libs-extern-3.4.2.3.old/cppunit/makefile.mk libreoffice-libs-extern-3.4.2.3/cppunit/makefile.mk
---- libreoffice-libs-extern-3.4.2.3.old/cppunit/makefile.mk	2011-08-11 12:11:13.141276903 +0200
-+++ libreoffice-libs-extern-3.4.2.3/cppunit/makefile.mk	2011-08-11 12:12:10.071565172 +0200
-@@ -34,7 +34,7 @@
-     # from <https://sourceforge.net/projects/cppunit/files/cppunit/1.12.1/
-     #  cppunit-1.12.1.tar.gz/download>
+diff -urN libreoffice-ure-3.4.2.3.old/sal/cppunittester/cppunittester.cxx libreoffice-ure-3.4.2.3/sal/cppunittester/cppunittester.cxx
+--- libreoffice-ure-3.4.2.3.old/sal/cppunittester/cppunittester.cxx	2011-08-11 20:03:27.877207705 +0200
++++ libreoffice-ure-3.4.2.3/sal/cppunittester/cppunittester.cxx	2011-08-11 20:03:55.351864224 +0200
+@@ -94,6 +94,8 @@
+     SetErrorMode(SEM_NOGPFAULTERRORBOX|dwMode);
+ #endif
  
--PATCH_FILES = solarisfinite.patch warnings.patch windows.patch ldflags.patch aix.patch avoid-synthetised-destructor.patch
-+PATCH_FILES = solarisfinite.patch warnings.patch windows.patch ldflags.patch aix.patch avoid-synthetised-destructor.patch kill_switch.patch
-     # solarisfinite.patch: see <https://sourceforge.net/tracker/?func=detail&
-     #  aid=2912590&group_id=11795&atid=311795>
-     # warnings.patch: see <https://sourceforge.net/tracker/?func=detail&
++    return 0;
++
+     CppUnit::TestResult result;
+     sal_uInt32 index = 0;
+     for (; index < rtl_getAppCommandArgCount(); index += 3) {
