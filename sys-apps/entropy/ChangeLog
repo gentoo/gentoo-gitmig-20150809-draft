@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/entropy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/ChangeLog,v 1.4 2011/08/07 16:44:17 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/ChangeLog,v 1.5 2011/08/11 11:27:52 lxnay Exp $
+
+*entropy-1.0_rc37 (11 Aug 2011)
+
+  11 Aug 2011; Fabio Erculiani <lxnay@gentoo.org> +entropy-1.0_rc37.ebuild:
+  version bump
 
 *entropy-1.0_rc34 (07 Aug 2011)
 
