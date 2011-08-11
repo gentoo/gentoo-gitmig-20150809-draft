@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcptraceroute
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.47 2008/07/01 02:07:42 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.48 2011/08/11 02:55:28 zmedico Exp $
+
+  05 Aug 2011; Zac Medico <zmedico@gentoo.org>
+  tcptraceroute-1.5_beta7-r1.ebuild:
+  Add ~x86-linux keyword.
 
   01 Jul 2008; Jeroen Roovers <jer@gentoo.org>
   tcptraceroute-1.5_beta7-r1.ebuild:
