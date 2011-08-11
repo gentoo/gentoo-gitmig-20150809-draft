@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/sslh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sslh/ChangeLog,v 1.2 2011/05/01 21:59:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sslh/ChangeLog,v 1.3 2011/08/11 02:10:45 radhermit Exp $
+
+*sslh-1.9 (11 Aug 2011)
+
+  11 Aug 2011; Tim Harder <radhermit@gentoo.org> +sslh-1.9.ebuild:
+  Version bump
 
   01 May 2011; Mike Frysinger <vapier@gentoo.org> sslh-1.7a.ebuild:
   Tweak USE=-tcpd build flag #365575 by El Goretto.
