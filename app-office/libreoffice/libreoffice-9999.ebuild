@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999.ebuild,v 1.10 2011/08/11 10:00:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999.ebuild,v 1.11 2011/08/11 10:15:27 scarabeus Exp $
 
 EAPI=3
 
@@ -50,6 +50,7 @@ unset DEV_URI
 # addons
 # FIXME: actually review which one of these are used
 ADDONS_SRC+=" ${ADDONS_URI}/17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip"
+ADDONS_SRC+=" ${ADDONS_URI}/bd30e9cf5523cdfc019b94f5e1d7fd19-cppunit-1.12.1.tar.gz"
 ADDONS_SRC+=" ${ADDONS_URI}/1756c4fa6c616ae15973c104cd8cb256-Adobe-Core35_AFMs-314.tar.gz"
 ADDONS_SRC+=" ${ADDONS_URI}/1f24ab1d39f4a51faf22244c94a6203f-xmlsec1-1.2.14.tar.gz"
 ADDONS_SRC+=" ${ADDONS_URI}/24be19595acad0a2cae931af77a0148a-LICENSE_source-9.0.0.7-bj.html"
@@ -233,6 +234,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-svx.patch"
 	"${FILESDIR}/${PN}-installed-files-permissions.patch"
 	"${FILESDIR}/${PN}-binfilter-as-needed.patch"
+	"${FILESDIR}/${PN}-kill-cppunit.patch"
 )
 
 # Uncoment me when updating to eapi4
@@ -397,8 +399,11 @@ src_configure() {
 
 	# hsqldb: requires just 1.8.0 not 1.8.1 which we don't ship at all
 	# dmake: not worth of splitting out
+	# cppunit: patched not to run anything, just main() { return 0; }
+	#          workaround to upstream running the tests during build
 	internal_libs+="
 		--without-system-hsqldb
+		--without-system-cppunit
 	"
 
 	# When building without java some things needs to be done
