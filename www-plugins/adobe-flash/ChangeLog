@@ -1,6 +1,11 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.98 2011/08/11 14:31:46 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.99 2011/08/11 14:40:29 lack Exp $
+
+  11 Aug 2011; Jim Ramsay <lack@gentoo.org>
+  adobe-flash-11.0.1.60_beta201107131-r1.ebuild,
+  adobe-flash-11.0.1.60_beta201108082.ebuild:
+  Fixed unpack for 32-bit-only on amd64 (Bug #376091)
 
   11 Aug 2011; Jim Ramsay <lack@gentoo.org> adobe-flash-10.3.181.26.ebuild,
   adobe-flash-10.3.181.34.ebuild, adobe-flash-10.3.183.5.ebuild,

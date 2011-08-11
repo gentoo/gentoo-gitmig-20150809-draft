@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.0.1.60_beta201107131-r1.ebuild,v 1.2 2011/08/11 14:31:46 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.0.1.60_beta201107131-r1.ebuild,v 1.3 2011/08/11 14:40:29 lack Exp $
 
 EAPI=4
 inherit nsplugins multilib toolchain-funcs versionator
@@ -104,7 +104,9 @@ src_unpack() {
 		# elsewhere:
 		local my_32b_src=${MY_32B_URI##*/}
 		local my_64b_src=${MY_64B_URI##*/}
-		unpack $my_64b_src
+		if [[ $native_install ]]; then
+			unpack $my_64b_src
+		fi
 		mkdir 32bit
 		pushd 32bit >/dev/null
 		unpack $my_32b_src
