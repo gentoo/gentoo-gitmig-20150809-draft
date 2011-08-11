@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/xautolock-2.2.ebuild,v 1.3 2011/08/08 09:12:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xautolock/xautolock-2.2.ebuild,v 1.4 2011/08/11 19:36:23 xarthisius Exp $
 
 inherit toolchain-funcs
 
@@ -16,9 +16,9 @@ RDEPEND="|| ( x11-misc/alock
 	x11-misc/i3lock
 	x11-misc/slock
 	x11-misc/xlockmore
-	x11-misc/xtrlock )"
+	x11-misc/xtrlock )
+	x11-libs/libXScrnSaver"
 DEPEND="${RDEPEND}
-	x11-libs/libXScrnSaver
 	x11-misc/imake
 	app-text/rman
 	x11-proto/scrnsaverproto"
