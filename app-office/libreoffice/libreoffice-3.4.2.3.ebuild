@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.24 2011/08/11 10:15:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.25 2011/08/11 10:21:56 scarabeus Exp $
 
 EAPI=3
 
@@ -250,6 +250,9 @@ PATCHES=(
 #	gnome? ( gtk )
 #	nsplugin? ( gtk )
 #"
+
+# Needs lots and lots of work and compiling
+RESTRICT="test"
 
 S="${WORKDIR}/${PN}-bootstrap-${PV}"
 
