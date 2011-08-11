@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.6-r1.ebuild,v 1.7 2010/09/13 05:46:23 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/fcron/fcron-3.0.6-r1.ebuild,v 1.8 2011/08/11 10:57:54 ulm Exp $
 
 inherit cron pam eutils
 
@@ -19,7 +19,7 @@ DEPEND="selinux? ( sys-libs/libselinux )
 # see bug 282214 for the reason to depend on bash
 RDEPEND="${DEPEND}
 	app-shells/bash
-	app-editors/gentoo-editor
+	app-misc/editor-wrapper
 	pam? ( >=sys-auth/pambase-20100310 )"
 
 S="${WORKDIR}/${MY_P}"
