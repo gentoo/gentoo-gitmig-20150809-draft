@@ -1,6 +1,11 @@
 # ChangeLog for dev-texlive/texlive-latexrecommended
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexrecommended/ChangeLog,v 1.47 2011/08/12 15:58:39 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexrecommended/ChangeLog,v 1.48 2011/08/12 21:26:48 aballier Exp $
+
+  12 Aug 2011; Alexis Ballier <aballier@gentoo.org>
+  texlive-latexrecommended-2011.ebuild:
+  block older texlive-xetex versions, they collide, by Rafał Mużyło in bug
+  #378911
 
   12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
   texlive-latexrecommended-2010.ebuild:

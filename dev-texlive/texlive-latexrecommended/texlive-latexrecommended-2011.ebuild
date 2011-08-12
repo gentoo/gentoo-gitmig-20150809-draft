@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexrecommended/texlive-latexrecommended-2011.ebuild,v 1.1 2011/07/28 13:31:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexrecommended/texlive-latexrecommended-2011.ebuild,v 1.2 2011/08/12 21:26:48 aballier Exp $
 
 EAPI="3"
 
@@ -22,7 +22,7 @@ DEPEND=">=dev-texlive/texlive-latex-2011
 !dev-tex/listings
 !<dev-texlive/texlive-latexextra-2011
 !=app-text/texlive-core-2007*
-!=dev-texlive/texlive-xetex-2008*
+!<dev-texlive/texlive-xetex-2011
 !dev-texlive/texlive-latex3
 "
 RDEPEND="${DEPEND} "
