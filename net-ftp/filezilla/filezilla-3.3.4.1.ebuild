@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/filezilla-3.3.4.1.ebuild,v 1.5 2011/04/26 10:59:43 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/filezilla-3.3.4.1.ebuild,v 1.6 2011/08/12 21:31:10 xarthisius Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}_src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc sparc x86"
+KEYWORDS="amd64 ~ia64 ppc sparc x86"
 IUSE="dbus nls test"
 
 RDEPEND=">=app-admin/eselect-wxwidgets-0.7-r1
