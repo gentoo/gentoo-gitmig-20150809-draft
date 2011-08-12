@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12973 2011/08/11 19:39:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12974 2011/08/12 07:27:11 olemarkus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -500,6 +500,7 @@ app-crypt/scsign
 =dev-lang/php-5.3.7_rc1
 =dev-lang/php-5.3.7_rc2
 =dev-lang/php-5.3.7_rc3
+=dev-lang/php-5.3.7_rc5
 >=dev-lang/php-5.4.0_alpha1
 
 # Ryan Hill <dirtyepic@gentoo.org> (23 Apr 2011)
