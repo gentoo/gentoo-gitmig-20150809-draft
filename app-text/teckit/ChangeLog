@@ -1,6 +1,9 @@
 # ChangeLog for app-text/teckit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/teckit/ChangeLog,v 1.17 2011/08/09 20:50:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/teckit/ChangeLog,v 1.18 2011/08/12 10:59:21 tomka Exp $
+
+  12 Aug 2011; Thomas Kahle <tomka@gentoo.org> teckit-2.5.1.ebuild:
+  x86 stable per bug 355085
 
   09 Aug 2011; Markos Chandras <hwoarang@gentoo.org> teckit-2.5.1.ebuild:
   Stable on amd64 wrt bug #355085
