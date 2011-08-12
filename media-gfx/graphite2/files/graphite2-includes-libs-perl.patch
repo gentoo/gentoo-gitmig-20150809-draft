@@ -7,7 +7,7 @@
 -    extra_linker_flags  => '-lgraphite2',
 -    include_dirs        => ['.'],
 +    extra_linker_flags  => '-L @BUILD_DIR@ -lgraphite2',
-+    include_dirs        => ['.', '../include'],
++    include_dirs        => ['.', '../../include'],
      requires => {
          'Test::More' => 0,
      },
