@@ -1,21 +1,20 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.44 2011/08/12 23:29:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-15.0.849.0.ebuild,v 1.1 2011/08/12 23:29:22 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
 
 inherit eutils fdo-mime flag-o-matic gnome2-utils linux-info multilib \
-	pax-utils portability python subversion toolchain-funcs versionator virtualx
+	pax-utils portability python toolchain-funcs versionator virtualx
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
-# subversion eclass fetches gclient, which will then fetch chromium itself
-ESVN_REPO_URI="http://src.chromium.org/svn/trunk/tools/depot_tools"
+SRC_URI="http://build.chromium.org/official/${P}.tar.bz2"
 
 LICENSE="BSD"
-SLOT="live"
-KEYWORDS=""
+SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE="cups gnome gnome-keyring kerberos"
 
 # en_US is ommitted on purpose from the list below. It must always be available.
@@ -63,36 +62,9 @@ DEPEND="${RDEPEND}
 		virtual/krb5
 	)"
 RDEPEND+="
-	!=www-client/chromium-9999
 	kerberos? ( virtual/krb5 )
 	x11-misc/xdg-utils
 	virtual/ttf-fonts"
-
-src_unpack() {
-	subversion_src_unpack
-	mv "${S}" "${WORKDIR}"/depot_tools || die
-
-	mkdir -p "${ESVN_STORE_DIR}/${PN}" || die
-	cd "${ESVN_STORE_DIR}/${PN}" || die
-
-	einfo "gclient config -->"
-	cp -f "${FILESDIR}/dot-gclient" .gclient || die
-	cat .gclient || die
-
-	einfo "gclient sync start -->"
-	"${WORKDIR}/depot_tools/gclient" sync --force --nohooks || die
-	"$(PYTHON)" src/build/download_nacl_irt.py || die  # bug #366413
-	einfo "   working copy: ${ESVN_STORE_DIR}/${PN}"
-
-	mkdir -p "${S}" || die
-	rsync -rlpgo --exclude=".svn/" src/ "${S}" || die
-
-	# Display correct svn revision in about box, and log new version.
-	CREV=$(subversion__svn_info "src" "Revision")
-	echo ${CREV} > "${S}"/build/LASTCHANGE.in || die
-	. src/chrome/VERSION
-	elog "Installing/updating to version ${MAJOR}.${MINOR}.${BUILD}.${PATCH} (Developer Build ${CREV})"
-}
 
 gyp_use() {
 	if [[ $# -lt 2 ]]; then
@@ -119,8 +91,7 @@ chromium_lang() {
 }
 
 pkg_setup() {
-	SUFFIX="-${SLOT}"
-	CHROMIUM_HOME="/usr/$(get_libdir)/chromium-browser${SUFFIX}"
+	CHROMIUM_HOME="/usr/$(get_libdir)/chromium-browser"
 
 	# Make sure the build system will use the right tools, bug #340795.
 	tc-export AR CC CXX RANLIB
@@ -145,6 +116,9 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Fix build with system libevent, to be upstreamed.
+	epatch "${FILESDIR}/${PN}-system-libevent-r1.patch"
+
 	# Remove most bundled libraries. Some are still needed.
 	find third_party -type f \! -iname '*.gyp*' \
 		\! -path 'third_party/WebKit/*' \
@@ -327,18 +301,12 @@ src_install() {
 	# esac
 
 	newexe "${FILESDIR}"/chromium-launcher-r2.sh chromium-launcher.sh || die
-	sed "s:chromium-browser:chromium-browser${SUFFIX}:g" \
-		-i "${ED}"/"${CHROMIUM_HOME}"/chromium-launcher.sh || die
-	sed "s:chromium.desktop:chromium${SUFFIX}.desktop:g" \
-		-i "${ED}"/"${CHROMIUM_HOME}"/chromium-launcher.sh || die
-	sed "s:plugins:plugins --user-data-dir=\${HOME}/.config/chromium${SUFFIX}:" \
-		-i "${ED}"/"${CHROMIUM_HOME}"/chromium-launcher.sh || die
 
 	# It is important that we name the target "chromium-browser",
 	# xdg-utils expect it; bug #355517.
-	dosym "${CHROMIUM_HOME}/chromium-launcher.sh" /usr/bin/chromium-browser${SUFFIX} || die
+	dosym "${CHROMIUM_HOME}/chromium-launcher.sh" /usr/bin/chromium-browser || die
 	# keep the old symlink around for consistency
-	dosym "${CHROMIUM_HOME}/chromium-launcher.sh" /usr/bin/chromium${SUFFIX} || die
+	dosym "${CHROMIUM_HOME}/chromium-launcher.sh" /usr/bin/chromium || die
 
 	# Allow users to override command-line options, bug #357629.
 	dodir /etc/chromium || die
@@ -390,8 +358,8 @@ src_install() {
 	doins -r out/Release/locales || die
 	doins -r out/Release/resources || die
 
-	newman out/Release/chrome.1 chromium${SUFFIX}.1 || die
-	newman out/Release/chrome.1 chromium-browser${SUFFIX}.1 || die
+	newman out/Release/chrome.1 chromium.1 || die
+	newman out/Release/chrome.1 chromium-browser.1 || die
 
 	# Chromium looks for these in its folder
 	# See media_posix.cc and base_paths_linux.cc
@@ -405,11 +373,11 @@ src_install() {
 	for SIZE in 16 22 24 32 48 128 256 ; do
 		insinto /usr/share/icons/hicolor/${SIZE}x${SIZE}/apps
 		newins chrome/app/theme/chromium/product_logo_${SIZE}.png \
-			chromium-browser${SUFFIX}.png || die
+			chromium-browser.png || die
 	done
 	local mime_types="text/html;text/xml;application/xhtml+xml;"
 	mime_types+="x-scheme-handler/http;x-scheme-handler/https;" # bug #360797
-	make_desktop_entry chromium-browser${SUFFIX} "Chromium ${SLOT}" chromium-browser${SUFFIX} \
+	make_desktop_entry chromium-browser "Chromium" chromium-browser \
 		"Network;WebBrowser" \
 		"MimeType=${mime_types}\nStartupWMClass=chromium-browser"
 	sed -e "/^Exec/s/$/ %U/" -i "${ED}"/usr/share/applications/*.desktop || die
@@ -418,9 +386,7 @@ src_install() {
 	if use gnome; then
 		dodir /usr/share/gnome-control-center/default-apps || die
 		insinto /usr/share/gnome-control-center/default-apps
-		newins "${FILESDIR}"/chromium-browser.xml chromium-browser${SUFFIX}.xml || die
-		sed "s:chromium-browser:chromium-browser${SUFFIX}:g" -i \
-			"${ED}"/usr/share/gnome-control-center/default-apps/chromium-browser${SUFFIX}.xml
+		doins "${FILESDIR}"/chromium-browser.xml || die
 	fi
 }
 
@@ -456,16 +422,6 @@ pkg_postinst() {
 	elog " - media-fonts/takao-fonts"
 	elog " - media-fonts/wqy-microhei"
 	elog " - media-fonts/wqy-zenhei"
-
-	elog
-	elog "The live ebuild of chromium is now in its own slot."
-	elog "This means that you can have it installed alongside a versioned"
-	elog "release and it has its own configuration folder, located at"
-	elog "	\${HOME}/.config/chromium-live"
-	elog "If you want to use any existing, old configuration, you'll have to"
-	elog "rename the old config directory *before* launching chromium-live:"
-	elog "	mv \${HOME}/.config/chromium \${HOME}/.config/chromium-live"
-	elog "To run, execute chromium-live or chromium-browser-live."
 }
 
 pkg_postrm() {
