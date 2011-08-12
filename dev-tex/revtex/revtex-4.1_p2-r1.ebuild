@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/revtex/revtex-4.1_p2-r1.ebuild,v 1.2 2011/08/10 16:42:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/revtex/revtex-4.1_p2-r1.ebuild,v 1.3 2011/08/12 17:36:04 tomka Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SRC_URI="http://authors.aps.org/revtex4/${MY_P}.zip -> ${P}.zip"
 
 LICENSE="LPPL-1.3c"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 RDEPEND=">=dev-tex/natbib-8.31a"
 DEPEND="app-arch/unzip"

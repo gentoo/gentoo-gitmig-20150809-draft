@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/natbib/natbib-8.31b.ebuild,v 1.2 2011/08/10 16:39:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/natbib/natbib-8.31b.ebuild,v 1.3 2011/08/12 17:35:13 tomka Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ LICENSE="LPPL-1.2"
 SLOT="0"
 IUSE=""
 
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 DEPEND="app-arch/unzip"
 RDEPEND=""
 
