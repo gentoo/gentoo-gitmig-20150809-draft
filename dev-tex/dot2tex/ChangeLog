@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/dot2tex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2tex/ChangeLog,v 1.20 2011/06/14 05:20:39 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2tex/ChangeLog,v 1.21 2011/08/12 15:35:45 xarthisius Exp $
+
+  12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> dot2tex-2.8.7.ebuild:
+  ppc/ppc64 stable wrt #355085
 
   14 Jun 2011; Matt Turner <mattst88@gentoo.org> dot2tex-2.8.7.ebuild:
   Added ~mips, bug 352300

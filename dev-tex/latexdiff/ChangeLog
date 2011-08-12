@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latexdiff
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexdiff/ChangeLog,v 1.20 2011/06/13 21:43:38 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexdiff/ChangeLog,v 1.21 2011/08/12 15:35:44 xarthisius Exp $
+
+  12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> latexdiff-0.5.ebuild:
+  ppc/ppc64 stable wrt #355085
 
   13 Jun 2011; Matt Turner <mattst88@gentoo.org> latexdiff-0.5.ebuild:
   Added ~mips, bug 342513
