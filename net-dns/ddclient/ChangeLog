@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/ddclient
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.40 2009/02/24 20:53:58 gentoofan23 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.41 2011/08/12 12:29:42 titanofold Exp $
+
+*ddclient-3.8.1 (12 Aug 2011)
+
+  12 Aug 2011; Aaron W. Swenson <titanofold@gentoo.org> +ddclient-3.8.1.ebuild,
+  +files/ddclient.initd-r1, metadata.xml:
+  Version bump. Fixes bugs 186271, 212840, 296598 and 373183
 
   24 Feb 2009; Thomas Anderson <gentoofan23@gentoo.org>
   ddclient-3.7.3-r1.ebuild, ddclient-3.8.0.ebuild:

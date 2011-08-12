@@ -3,12 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-	<email>matthewsmith@iinet.net.au</email>
-	<name>Matthew Smith</name>
-	<description>Once maintained this indirectly through seemant. He retired. CC on bugs till further notice.</description>
-</maintainer>
-<maintainer>
-	<email>tanderson@gentoo.org</email>
-	<name>Thomas Anderson</name>
+	<email>titanofold@gentoo.org</email>
+	<name>Aaron W. Swenson</name>
 </maintainer>
 </pkgmetadata>
