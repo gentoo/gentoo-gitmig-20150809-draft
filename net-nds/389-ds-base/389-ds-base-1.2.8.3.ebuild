@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.8.3.ebuild,v 1.1 2011/06/14 19:02:24 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.8.3.ebuild,v 1.2 2011/08/12 08:49:55 lxnay Exp $
 
 EAPI=2
 
@@ -61,7 +61,6 @@ src_prepare() {
 	use amd64 && export USE_64=1
 
 	sed -i -e 's/nobody/dirsrv/g' configure.ac || die "sed failed on configure.ac"
-	use selinux && epatch "${FILESDIR}/1.2.6"/*selinux*.patch
 	eautoreconf
 
 	# enable nsslapd-allow-unauthenticated-binds by default
