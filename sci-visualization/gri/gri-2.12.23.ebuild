@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gri/gri-2.12.23.ebuild,v 1.2 2011/08/08 16:44:56 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gri/gri-2.12.23.ebuild,v 1.3 2011/08/12 16:29:57 bicatali Exp $
 
 EAPI=4
 
@@ -26,6 +26,9 @@ SITEFILE="50gri-gentoo.el"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.12.18-postscript.patch
+	# Makefile.am contains a call to the missing script that triggers gentoo qa
+	sed -i -e 's|${SHELL} ../missing --run tex|tex|g' \
+		doc/Makefile.in || die
 }
 
 src_compile() {
@@ -36,25 +39,26 @@ src_compile() {
 src_install() {
 	default
 	# license text not necessary
-	rm "${ED}"/usr/share/gri/doc/license.txt
+	rm "${ED}"/usr/share/gri/doc/license.txt || die
 
 	# install target installs it always and in the wrong location
 	# remove it here and call elisp-install in case of USE=emacs below
-	rm -rf "${ED}"/usr/share/emacs
+	rm -rf "${ED}"/usr/share/emacs || die
 
 	if ! use doc; then
-		sed -i -e "s/Manual at.*//" "${ED}"/usr/share/gri/startup.msg
-		rm "${ED}"/usr/share/gri/doc/{cmd,}refcard.ps
-		rm -rf "${D}"/usr/share/gri/doc/html
+		sed -i -e "s/Manual at.*//" "${ED}"/usr/share/gri/startup.msg || die
+		rm "${ED}"/usr/share/gri/doc/{cmd,}refcard.ps || die
+		rm -rf "${ED}"/usr/share/gri/doc/html || die
 	fi
 	if ! use examples; then
-		sed -i -e "s/Examples at.*//" "${ED}"/usr/share/gri/startup.msg
-		rm -rf "${ED}"/usr/share/gri/doc/examples
+		sed -i -e "s/Examples at.*//" "${ED}"/usr/share/gri/startup.msg || die
+		rm -rf "${ED}"/usr/share/gri/doc/examples || die
 	fi
-
 	#move docs to the proper place
-	mv "${ED}"/usr/share/gri/doc/* "${ED}"/usr/share/doc/${PF}
-	rmdir "${ED}"/usr/share/gri/doc
+	use doc || use examples && \
+		mv -f "${ED}"/usr/share/gri/doc/* "${ED}"/usr/share/doc/${PF}
+	rm -rf "${ED}"/usr/share/gri/doc || die
+
 
 	if use emacs; then
 		cd src
