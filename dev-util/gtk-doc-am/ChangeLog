@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc-am
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.64 2011/07/17 20:49:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.65 2011/08/12 17:38:58 xarthisius Exp $
+
+  12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> gtk-doc-am-1.17.ebuild:
+  ppc/ppc64 stable to break circular dependecy glib->gtk-doc-am->pkgconfig
 
   17 Jul 2011; Markus Meier <maekke@gentoo.org> gtk-doc-am-1.17.ebuild:
   arm stable, bug #369909
