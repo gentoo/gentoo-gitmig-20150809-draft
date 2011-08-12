@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.15.0.ebuild,v 1.1 2011/08/11 19:22:36 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.15.0.ebuild,v 1.2 2011/08/12 15:41:01 cardoe Exp $
 
 #BACKPORTS=2
 
@@ -62,6 +62,7 @@ RDEPEND="
 	!app-emulation/qemu-softmmu
 	!app-emulation/qemu-user
 	!app-emulation/qemu-kvm-spice
+	>=dev-libs/glib-2.0
 	sys-apps/pciutils
 	>=sys-apps/util-linux-2.16.0
 	sys-libs/zlib
@@ -69,7 +70,7 @@ RDEPEND="
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
 	bluetooth? ( net-wireless/bluez )
 	brltty? ( app-accessibility/brltty )
-	curl? ( net-misc/curl )
+	curl? ( >=net-misc/curl-7.15.4 )
 	esd? ( media-sound/esound )
 	fdt? ( >=sys-apps/dtc-1.2.0 )
 	jpeg? ( virtual/jpeg )
@@ -80,7 +81,7 @@ RDEPEND="
 	rbd? ( sys-cluster/ceph )
 	sasl? ( dev-libs/cyrus-sasl )
 	sdl? ( >=media-libs/libsdl-1.2.11[X] )
-	spice? ( app-emulation/spice )
+	spice? ( >=app-emulation/spice-0.6.0 )
 	ssl? ( net-libs/gnutls )
 	vde? ( net-misc/vde )
 	xen? ( app-emulation/xen )
