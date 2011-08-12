@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwrited
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrited/ChangeLog,v 1.75 2011/08/09 17:12:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrited/ChangeLog,v 1.76 2011/08/12 19:19:36 dilfridge Exp $
+
+  12 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> -kwrited-4.6.4.ebuild:
+  Drop KDE 4.6.4
 
   09 Aug 2011; Markos Chandras <hwoarang@gentoo.org> kwrited-4.6.5.ebuild:
   Stable on amd64 wrt bug #377465

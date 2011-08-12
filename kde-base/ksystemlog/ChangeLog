@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksystemlog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystemlog/ChangeLog,v 1.82 2011/08/10 22:21:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystemlog/ChangeLog,v 1.83 2011/08/12 19:19:37 dilfridge Exp $
+
+  12 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -ksystemlog-4.6.4.ebuild:
+  Drop KDE 4.6.4
 
   10 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   ksystemlog-4.6.5.ebuild, ksystemlog-4.7.0.ebuild:

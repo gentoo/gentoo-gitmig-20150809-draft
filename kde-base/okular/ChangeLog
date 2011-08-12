@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.108 2011/08/09 17:12:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.109 2011/08/12 19:19:42 dilfridge Exp $
+
+  12 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> -okular-4.6.4.ebuild,
+  -okular-4.6.4-r1.ebuild:
+  Drop KDE 4.6.4
 
   09 Aug 2011; Markos Chandras <hwoarang@gentoo.org> okular-4.6.5.ebuild:
   Stable on amd64 wrt bug #377465
