@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/google-perftools-1.8.1.ebuild,v 1.1 2011/08/06 14:03:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/google-perftools-1.8.2.ebuild,v 1.1 2011/08/12 00:01:51 flameeyes Exp $
 
 EAPI=4
 

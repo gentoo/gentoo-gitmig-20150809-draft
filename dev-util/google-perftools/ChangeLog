@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/google-perftools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/ChangeLog,v 1.10 2011/08/06 14:03:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/google-perftools/ChangeLog,v 1.11 2011/08/12 00:01:51 flameeyes Exp $
+
+*google-perftools-1.8.2 (12 Aug 2011)
+
+  12 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -google-perftools-1.8.1.ebuild, +google-perftools-1.8.2.ebuild:
+  Bump to new version (even if there should be no big changes).
 
 *google-perftools-1.8.1 (06 Aug 2011)
 
