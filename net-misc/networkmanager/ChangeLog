@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.107 2011/07/21 08:05:28 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.108 2011/08/12 07:36:11 qiaomuf Exp $
+
+  12 Aug 2011; Mu Qiao <qiaomuf@gentoo.org> networkmanager-0.8.4.0-r2.ebuild:
+  Fix building with USE="-ppp" (bug #377183)
+
+  Thanks to Mart Raudsepp for spotting the problem.
 
 *networkmanager-0.8.4.0-r2 (21 Jul 2011)
 

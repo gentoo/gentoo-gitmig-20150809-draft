@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.4.0-r2.ebuild,v 1.1 2011/07/21 08:05:28 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.4.0-r2.ebuild,v 1.2 2011/08/12 07:36:11 qiaomuf Exp $
 
 EAPI="2"
 
@@ -96,6 +96,7 @@ src_configure() {
 		--with-iptables=/sbin/iptables
 		$(use_enable doc gtk-doc)
 		$(use_with doc docs)
+		$(use_enable ppp)
 		$(use_with resolvconf)
 		$(systemd_with_unitdir)"
 
