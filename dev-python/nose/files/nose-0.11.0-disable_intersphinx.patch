@@ -1,5 +1,5 @@
---- nose-0.11.0/doc/conf.py.orig	2009-05-07 03:12:35.000000000 +0200
-+++ nose-0.11.0/doc/conf.py	2009-05-13 10:13:12.588540888 +0200
+--- doc/conf.py.orig	2009-05-07 03:12:35.000000000 +0200
++++ doc/conf.py	2009-05-13 10:13:12.588540888 +0200
 @@ -31,7 +31,7 @@
  
  # Add any Sphinx extension module names here, as strings. They can be extensions
