@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gri/gri-2.12.23.ebuild,v 1.3 2011/08/12 16:29:57 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gri/gri-2.12.23.ebuild,v 1.4 2011/08/12 20:42:47 mr_bones_ Exp $
 
 EAPI=4
 
@@ -58,7 +58,6 @@ src_install() {
 	use doc || use examples && \
 		mv -f "${ED}"/usr/share/gri/doc/* "${ED}"/usr/share/doc/${PF}
 	rm -rf "${ED}"/usr/share/gri/doc || die
-
 
 	if use emacs; then
 		cd src
