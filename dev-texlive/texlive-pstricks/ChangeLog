@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-pstricks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pstricks/ChangeLog,v 1.40 2011/08/12 14:46:14 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pstricks/ChangeLog,v 1.41 2011/08/12 15:58:32 xarthisius Exp $
+
+  12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  texlive-pstricks-2010.ebuild:
+  ppc/ppc64 stable wrt #355085
 
   12 Aug 2011; Thomas Kahle <tomka@gentoo.org> texlive-pstricks-2010.ebuild:
   x86 stable per bug 355085

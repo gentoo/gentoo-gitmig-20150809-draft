@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langtibetan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langtibetan/ChangeLog,v 1.34 2011/08/12 14:23:13 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langtibetan/ChangeLog,v 1.35 2011/08/12 15:58:34 xarthisius Exp $
+
+  12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  texlive-langtibetan-2010.ebuild:
+  ppc/ppc64 stable wrt #355085
 
   12 Aug 2011; Thomas Kahle <tomka@gentoo.org> texlive-langtibetan-2010.ebuild:
   x86 stable per bug 355085

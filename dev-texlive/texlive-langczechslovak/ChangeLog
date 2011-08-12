@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langczechslovak
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langczechslovak/ChangeLog,v 1.34 2011/08/12 13:35:38 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langczechslovak/ChangeLog,v 1.35 2011/08/12 15:58:39 xarthisius Exp $
+
+  12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  texlive-langczechslovak-2010.ebuild:
+  ppc/ppc64 stable wrt #355085
 
   12 Aug 2011; Thomas Kahle <tomka@gentoo.org>
   texlive-langczechslovak-2010.ebuild:
