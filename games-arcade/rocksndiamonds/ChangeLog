@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/rocksndiamonds
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/ChangeLog,v 1.41 2010/12/20 12:38:15 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/ChangeLog,v 1.42 2011/08/12 18:57:27 xarthisius Exp $
+
+  12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  rocksndiamonds-3.3.0.1.ebuild:
+  ppc stable wrt #332789
 
   20 Dec 2010; Markos Chandras <hwoarang@gentoo.org>
   rocksndiamonds-3.3.0.1.ebuild:
