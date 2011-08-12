@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-4.0.ebuild,v 1.9 2011/08/07 15:56:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-4.0.ebuild,v 1.10 2011/08/12 15:46:37 ssuominen Exp $
 
 EAPI=2
 
@@ -43,7 +43,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-libpng1{4,5}.patch
+	epatch "${FILESDIR}"/${P}-libpng14.patch
+
+	# 378677, temp workaround
+	has_version ">=media-libs/libpng-1.5" && epatch \
+		"${FILESDIR}"/${P}-libpng15.patch
 }
 
 src_configure() {
