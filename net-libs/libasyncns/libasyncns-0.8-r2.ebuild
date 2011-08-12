@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libasyncns/libasyncns-0.8.ebuild,v 1.2 2011/03/28 04:37:12 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libasyncns/libasyncns-0.8-r2.ebuild,v 1.1 2011/08/12 14:19:43 flameeyes Exp $
 
 EAPI=3
 inherit eutils libtool flag-o-matic
@@ -20,6 +20,8 @@ RDEPEND=""
 DEPEND="doc? ( app-doc/doxygen )"
 
 src_prepare() {
+	# fix libdir in pkgconfig file
+	epatch "${FILESDIR}/${P}-libdir.patch"
 	elibtoolize
 }
 
@@ -31,7 +33,8 @@ src_configure() {
 		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		--htmldir="${EPREFIX}"/usr/share/doc/${PF}/html \
 		--disable-dependency-tracking \
-		--disable-lynx
+		--disable-lynx \
+		--disable-static
 }
 
 src_compile() {
@@ -44,6 +47,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+	find "${D}" -name '*.la' -delete
 
 	if use doc; then
 		docinto apidocs
