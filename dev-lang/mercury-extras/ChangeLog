@@ -1,6 +1,20 @@
 # ChangeLog for dev-lang/mercury-extras
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.97 2011/08/12 21:37:35 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury-extras/ChangeLog,v 1.98 2011/08/12 23:12:17 keri Exp $
+
+  12 Aug 2011; <keri@gentoo.org> -mercury-extras-0.13.1-r1.ebuild,
+  -files/mercury-extras-0.13.1-curs.patch,
+  -files/mercury-extras-0.13.1-dynamic_linking.patch,
+  -files/mercury-extras-0.13.1-iodbc.patch,
+  -files/mercury-extras-0.13.1-lex.patch,
+  -files/mercury-extras-0.13.1-mercury_glut.patch,
+  -files/mercury-extras-0.13.1-mercury_opengl.patch,
+  -files/mercury-extras-0.13.1-mercury_tcltk.patch,
+  -files/mercury-extras-0.13.1-odbc.patch,
+  -files/mercury-extras-0.13.1-posix.patch, -mercury-extras-10.04.ebuild,
+  -mercury-extras-10.04-r1.ebuild, -mercury-extras-10.04.1.ebuild,
+  -mercury-extras-11.01_beta1.ebuild:
+  Remove old versions
 
   12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
   mercury-extras-0.13.1-r1.ebuild, mercury-extras-10.04.ebuild,
