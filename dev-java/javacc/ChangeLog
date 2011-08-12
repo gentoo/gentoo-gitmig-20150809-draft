@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/javacc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.34 2011/02/20 14:40:20 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.35 2011/08/12 16:02:22 xarthisius Exp $
+
+  12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> javacc-4.0-r4.ebuild:
+  ppc64 stable wrt #355085
 
   20 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> javacc-4.2.ebuild:
   Marked ~ppc64 wrt #355353
