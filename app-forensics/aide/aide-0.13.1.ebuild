@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.13.1.ebuild,v 1.15 2011/02/13 12:21:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/aide-0.13.1.ebuild,v 1.16 2011/08/12 21:25:29 xarthisius Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/aide/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 x86"
 IUSE="acl curl mhash nls postgres selinux static xattr zlib"
 #IUSE="acl audit curl mhash nls postgres selinux static xattr zlib"
 
