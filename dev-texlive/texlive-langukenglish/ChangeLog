@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langukenglish
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langukenglish/ChangeLog,v 1.32 2011/08/09 21:28:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langukenglish/ChangeLog,v 1.33 2011/08/12 14:25:40 tomka Exp $
+
+  12 Aug 2011; Thomas Kahle <tomka@gentoo.org>
+  texlive-langukenglish-2009.ebuild:
+  x86 stable per bug 355085
 
   09 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
   texlive-langukenglish-2009.ebuild:

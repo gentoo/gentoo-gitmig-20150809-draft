@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-context
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/ChangeLog,v 1.42 2011/08/09 21:32:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/ChangeLog,v 1.43 2011/08/12 14:39:40 tomka Exp $
+
+  12 Aug 2011; Thomas Kahle <tomka@gentoo.org> texlive-context-2010-r1.ebuild:
+  x86 stable per bug 355085
 
   09 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
   texlive-context-2010-r1.ebuild:
