@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.10.ebuild,v 1.6 2010/05/23 18:14:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.10.ebuild,v 1.7 2011/08/12 21:15:44 xarthisius Exp $
 
 PYTHON_DEPEND="2"
 inherit autotools eutils multilib python
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 x86 ~x86-fbsd"
 IUSE="doc python tcl"
 
 RESTRICT="test"
