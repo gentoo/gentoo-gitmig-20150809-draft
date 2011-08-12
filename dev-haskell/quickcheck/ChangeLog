@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/quickcheck
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/ChangeLog,v 1.48 2011/06/05 16:11:42 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/ChangeLog,v 1.49 2011/08/12 11:12:13 slyfox Exp $
+
+*quickcheck-2.1.1.1 (12 Aug 2011)
+
+  12 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  +quickcheck-2.1.1.1.ebuild, +files/quickcheck-2.1.1.1-ghc-7.patch:
+  Version bump to support ghc-7. Fixes bug #378887 by Thomas Kahle.
 
   05 Jun 2011; Sergei Trofimovich <slyfox@gentoo.org> -quickcheck-1.0.ebuild,
   -quickcheck-1.0.1.ebuild:
