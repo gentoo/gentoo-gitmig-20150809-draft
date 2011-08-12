@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qjackctl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.70 2011/07/11 18:43:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.71 2011/08/12 18:51:07 xarthisius Exp $
+
+  12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> qjackctl-0.3.2.ebuild,
+  qjackctl-0.3.7.ebuild, qjackctl-0.3.8.ebuild:
+  Drop ppc keyword wrt #331157
 
 *qjackctl-0.3.8 (11 Jul 2011)
 
