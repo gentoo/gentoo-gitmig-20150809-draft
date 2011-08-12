@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mmv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/ChangeLog,v 1.26 2011/01/05 16:19:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mmv/ChangeLog,v 1.27 2011/08/12 21:23:38 xarthisius Exp $
+
+  12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> mmv-1.01b_p15.ebuild:
+  ppc stable wrt #341945
 
   05 Jan 2011; Justin Lecher <jlec@gentoo.org> mmv-1.01b_p14.ebuild,
   mmv-1.01b_p15.ebuild:
