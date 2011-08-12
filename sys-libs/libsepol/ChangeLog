@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libsepol
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/ChangeLog,v 1.42 2011/08/03 09:27:32 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/ChangeLog,v 1.43 2011/08/12 18:37:42 blueness Exp $
+
+  12 Aug 2011; Anthony G. Basile <blueness@gentoo.org> -libsepol-2.0.32.ebuild,
+  -files/libsepol-2.0.32-expand_rule.diff, -libsepol-2.0.37.ebuild:
+  Removed deprecated versions
 
 *libsepol-2.1.0 (03 Aug 2011)
 
