@@ -1,4 +1,0 @@
---- mercury-compiler-0.13.1.orig/Mmake.params	2006-12-01 15:35:18.000000000 +0000
-+++ mercury-compiler-0.13.1/Mmake.params	2008-08-20 04:15:41.000000000 +0000
-@@ -0,0 +1 @@
-+GRADE=none.gc

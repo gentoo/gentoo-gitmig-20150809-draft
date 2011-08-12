@@ -1,6 +1,19 @@
 # ChangeLog for dev-lang/mercury
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.142 2011/08/12 21:38:37 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mercury/ChangeLog,v 1.143 2011/08/12 23:28:17 keri Exp $
+
+  12 Aug 2011; <keri@gentoo.org> -mercury-0.13.1-r2.ebuild,
+  -files/mercury-0.13.1-docs.patch, -files/mercury-0.13.1-libgrades.patch,
+  -files/mercury-0.13.1-mmake-params.patch,
+  -files/mercury-0.13.1-multilib.patch, -files/mercury-0.13.1-no-reconf.patch,
+  -files/mercury-0.13.1-rebuild-mslice.patch,
+  -files/mercury-0.13.1-tests-dir_test.patch,
+  -files/mercury-0.13.1-tests-ho_and_type_spec_bug.patch,
+  -files/mercury-0.13.1-tests-string_format.patch,
+  -files/mercury-0.13.1-tests-workspace.patch, -mercury-10.04.ebuild,
+  -mercury-10.04-r1.ebuild, -mercury-10.04.1.ebuild, -mercury-10.04.2.ebuild,
+  -mercury-10.04.2-r1.ebuild, -mercury-11.01_beta1.ebuild:
+  Remove old versions
 
   12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> mercury-0.13.1-r2.ebuild,
   mercury-10.04.ebuild, mercury-10.04-r1.ebuild, mercury-10.04.1.ebuild,
