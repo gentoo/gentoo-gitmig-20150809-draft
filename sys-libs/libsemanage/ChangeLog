@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libsemanage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.38 2011/08/03 09:35:26 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.39 2011/08/12 18:30:08 blueness Exp $
+
+  12 Aug 2011; Anthony G. Basile <blueness@gentoo.org>
+  -libsemanage-2.0.27.ebuild, -libsemanage-2.0.33.ebuild,
+  -libsemanage-2.0.33-r1.ebuild, -files/libsemanage-2.0.33-bzip.diff:
+  Removed deprecated versions
 
 *libsemanage-2.1.0 (03 Aug 2011)
 
