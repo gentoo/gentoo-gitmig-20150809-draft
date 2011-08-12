@@ -1,6 +1,24 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.860 2011/08/08 09:28:47 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.861 2011/08/12 12:51:48 zmedico Exp $
+
+*portage-2.2.0_alpha51 (12 Aug 2011)
+
+  12 Aug 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha51.ebuild:
+  2.2.0_alpha51 version bump. This includes all of the fixes in
+  portage-2.1.10.11. Bug #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.10.11 (12 Aug 2011)
+
+  12 Aug 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.11.ebuild:
+  2.1.10.11 version bump. This fixes bug #323213 (clean up empty info dirs
+  for packages like binutils), bug #377907 (remove "masked by: profile"
+  support, which was legacy behavior according to PMS section 5.2.7), and
+  bug #378403 (bail out early if $PORTAGE_TMPDIR/portage is a symlink and
+  sandbox is enabled). This also includes a new repoman --if-modified option
+  which can be used to limit checks to packages with uncommitted
+  modifications, useful especially for category or repo-level commits.
+  Bug #373933 tracks all bugs fixed since portage-2.1.10.3.
 
   08 Aug 2011; Zac Medico <zmedico@gentoo.org> -portage-2.1.10.9.ebuild,
   -portage-2.2.0_alpha47.ebuild, -portage-2.2.0_alpha49.ebuild:
