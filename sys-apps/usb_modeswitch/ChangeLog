@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/usb_modeswitch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/ChangeLog,v 1.18 2011/08/07 03:16:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usb_modeswitch/ChangeLog,v 1.19 2011/08/12 09:59:02 hanno Exp $
+
+*usb_modeswitch-1.1.9 (12 Aug 2011)
+
+  12 Aug 2011; Hanno Boeck <hanno@gentoo.org> +usb_modeswitch-1.1.9.ebuild:
+  Version bump.
 
   07 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   usb_modeswitch-1.1.7.ebuild:
