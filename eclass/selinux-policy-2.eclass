@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.7 2011/08/07 10:47:00 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.8 2011/08/12 20:01:29 swift Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the reference-policy based modules.
@@ -55,7 +55,7 @@ HOMEPAGE="http://www.gentoo.org/proj/en/hardened/selinux/"
 if [[ -n ${BASEPOL} ]];
 then
 	SRC_URI="http://oss.tresys.com/files/refpolicy/refpolicy-${PV}.tar.bz2
-		http://dev.gentoo.org/~blueness/patchbundle-selinux-base-policy/patchbundle-selinux-base-policy-${BASEPOL}.tar.bz2"
+		http://dev.gentoo.org/~swift/patches/selinux-base-policy/patchbundle-selinux-base-policy-${BASEPOL}.tar.bz2"
 else
 	SRC_URI="http://oss.tresys.com/files/refpolicy/refpolicy-${PV}.tar.bz2"
 fi
