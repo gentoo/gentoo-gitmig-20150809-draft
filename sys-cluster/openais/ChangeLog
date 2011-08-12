@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/openais
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openais/ChangeLog,v 1.15 2011/08/04 13:37:48 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openais/ChangeLog,v 1.16 2011/08/12 10:18:32 ultrabug Exp $
+
+*openais-1.1.4-r1 (12 Aug 2011)
+
+  12 Aug 2011; Ultrabug <ultrabug@gentoo.org> +openais-1.1.4-r1.ebuild:
+  Add static-libs to IUSE, fix #378773.
 
   04 Aug 2011; Naohiro Aota <naota@gentoo.org> openais-1.1.4.ebuild:
   Add ~x86-fbsd keyword
