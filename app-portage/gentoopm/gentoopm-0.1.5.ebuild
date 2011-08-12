@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/gentoopm-0.1.4.ebuild,v 1.1 2011/08/02 16:59:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/gentoopm-0.1.5.ebuild,v 1.1 2011/08/12 21:19:05 mgorny Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ DISTUTILS_SRC_TEST=setup.py
 inherit base distutils
 
 DESCRIPTION="A common interface to Gentoo package managers"
-HOMEPAGE="https://github.com/gentoopm/"
+HOMEPAGE="https://github.com/mgorny/gentoopm/"
 SRC_URI="http://cloud.github.com/downloads/mgorny/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD-2"
@@ -20,7 +20,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-RDEPEND="|| ( >=sys-apps/portage-2.1.8.3
+RDEPEND="|| ( >=sys-apps/portage-2.1.10.3
 		sys-apps/pkgcore
 		>=sys-apps/paludis-0.64.2[python-bindings] )"
 DEPEND="doc? ( dev-python/epydoc )"
