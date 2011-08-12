@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5617 2011/08/12 07:27:10 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5618 2011/08/12 20:35:12 scarabeus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  desc/grub_platforms.desc:
+  Add loongson to the list of grub platforms.
 
   12 Aug 2011; Ole Markus With <olemarkus@gentoo.org> package.mask:
   Added another RC to PHP 5.3.7
