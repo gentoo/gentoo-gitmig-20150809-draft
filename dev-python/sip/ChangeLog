@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.199 2011/07/25 20:37:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/ChangeLog,v 1.200 2011/08/12 10:01:12 djc Exp $
+
+  12 Aug 2011; Dirkjan Ochtman <djc@gentoo.org> -sip-4.10.2.ebuild,
+  -sip-4.12.1.ebuild, -sip-4.12.3.ebuild:
+  Remove redundant old versions.
 
   25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> sip-4.12.3-r2.ebuild:
   ppc/ppc64 stable wrt #374591
