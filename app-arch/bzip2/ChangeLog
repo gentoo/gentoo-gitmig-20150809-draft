@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/bzip2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.86 2011/05/16 03:31:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.87 2011/08/12 21:42:37 vapier Exp $
+
+*bzip2-1.0.6-r3 (12 Aug 2011)
+
+  12 Aug 2011; Mike Frysinger <vapier@gentoo.org> +bzip2-1.0.6-r3.ebuild:
+  Add USE=static-libs support #378211 by Agostino Sarubbo.
 
 *bzip2-1.0.6-r2 (16 May 2011)
 
