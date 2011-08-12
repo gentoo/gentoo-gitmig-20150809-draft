@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999.ebuild,v 1.17 2011/08/11 10:21:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999.ebuild,v 1.18 2011/08/12 09:57:21 scarabeus Exp $
 
 EAPI=3
 
@@ -199,12 +199,10 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-libs/libxml2-2.0
 	dev-libs/libxslt
 	dev-perl/Archive-Zip
-	dev-util/cppunit
 	>=dev-util/gperf-3
 	dev-util/intltool
 	dev-util/mdds
 	dev-util/pkgconfig
-	media-gfx/sane-backends
 	>=net-misc/curl-7.12
 	>=sys-apps/findutils-4.1.20-r1
 	sys-devel/bison
@@ -410,9 +408,12 @@ src_configure() {
 	# dmake: not worth of splitting out
 	# cppunit: patched not to run anything, just main() { return 0; }
 	#          workaround to upstream running the tests during build
+	# sane: just sane.h header that is used for scan in writer, not
+	#       linked or anything else, worthless to depend on
 	internal_libs+="
 		--without-system-hsqldb
 		--without-system-cppunit
+		--without-system-sane
 	"
 
 	# When building without java some things needs to be done
