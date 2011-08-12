@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtest
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtest/ChangeLog,v 1.14 2011/06/13 21:00:43 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtest/ChangeLog,v 1.15 2011/08/12 15:25:09 xarthisius Exp $
+
+  12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> gtest-1.5.0.ebuild:
+  ppc/ppc64 stable wrt #355085
 
   13 Jun 2011; Matt Turner <mattst88@gentoo.org> gtest-1.5.0.ebuild:
   Added ~mips, bug 342513
