@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cdecl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cdecl/ChangeLog,v 1.18 2010/11/04 12:39:44 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cdecl/ChangeLog,v 1.19 2011/08/12 19:03:03 xarthisius Exp $
+
+  12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> cdecl-2.5-r2.ebuild:
+  ppc stable wrt #333451
 
   04 Nov 2010; Markos Chandras <hwoarang@gentoo.org> cdecl-2.5-r2.ebuild:
   Stable on amd64 wrt bug #333451

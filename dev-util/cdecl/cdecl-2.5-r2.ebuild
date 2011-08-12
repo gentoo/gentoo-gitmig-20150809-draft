@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cdecl/cdecl-2.5-r2.ebuild,v 1.2 2010/11/04 12:39:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cdecl/cdecl-2.5-r2.ebuild,v 1.3 2011/08/12 19:03:03 xarthisius Exp $
 
 inherit eutils toolchain-funcs
 
@@ -8,7 +8,7 @@ DESCRIPTION="Turn English phrases to C or C++ declarations"
 SRC_URI="ftp://ftp.netsw.org/softeng/lang/c/tools/cdecl/${P}.tar.gz"
 HOMEPAGE="http://www.boutell.com/lsm/lsmbyid.cgi/002103"
 
-KEYWORDS="amd64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~mips ppc ~sparc ~x86"
 LICENSE="public-domain"
 SLOT="0"
 
