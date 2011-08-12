@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.103 2011/08/07 09:55:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.104 2011/08/12 21:04:50 lavajoe Exp $
+
+  12 Aug 2011; Joe Peterson <lavajoe@gentoo.org> xv-3.10a-r16.ebuild:
+  Mask xv-3.10a-r16, since it breaks saving PNG files (see bug #355883)
 
 *xv-3.10a-r16 (07 Aug 2011)
 
