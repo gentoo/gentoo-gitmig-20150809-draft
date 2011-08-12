@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/ldb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.8 2011/08/10 18:42:47 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.9 2011/08/12 22:43:08 jer Exp $
 
   10 Aug 2011; Víctor Ostorga <vostorga@gentoo.org> ldb-1.1.0.ebuild:
   Fixing sys-libs/talloc sys-libs/tevent sys-libs/tdb DEPENDs 
@@ -10,7 +10,7 @@
   Revert. It does not work as intended.
 
   10 Aug 2011; Jeroen Roovers <jer@gentoo.org> ldb-1.1.0.ebuild:
-  Run waf-utils_src_compile, not econf.
+  Run waf-utils_src_configure, not econf.
 
   09 Aug 2011; <maks@gentoo.org> ldb-1.1.0.ebuild:
   Add blocker for samba[ldb] until bug 377809 is done.
