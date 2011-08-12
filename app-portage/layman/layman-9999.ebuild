@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.20 2011/07/18 14:52:55 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.21 2011/08/12 01:46:26 fuzzyray Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_DEPEND="2:2.6"
-RESTRICT_PYTHON_ABIS="2.4 2.5 3.*"
+RESTRICT_PYTHON_ABIS="2.4 3.*"
 
-inherit eutils distutils git-2
+inherit eutils distutils git-2 prefix
 
 DESCRIPTION="Tool to manage Gentoo overlays"
 HOMEPAGE="http://layman.sourceforge.net"
@@ -35,7 +35,10 @@ RDEPEND="${COMMON_DEPS}
 			>=dev-vcs/subversion-1.5.4[webdav-serf]
 		)
 	)"
-RESTRICT_PYTHON_ABIS="2.4 3.*"
+
+src_prepare() {
+	eprefixify etc/layman.cfg layman/config.py
+}
 
 src_test() {
 	testing() {
