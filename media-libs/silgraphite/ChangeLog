@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/silgraphite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/silgraphite/ChangeLog,v 1.19 2011/08/11 08:55:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/silgraphite/ChangeLog,v 1.20 2011/08/12 15:06:14 tomka Exp $
+
+  12 Aug 2011; Thomas Kahle <tomka@gentoo.org> silgraphite-2.3.1.ebuild:
+  x86 stable per bug 355085
 
   11 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   silgraphite-2.3.1.ebuild:
