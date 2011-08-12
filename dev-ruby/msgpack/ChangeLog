@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/msgpack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/msgpack/ChangeLog,v 1.10 2011/05/10 14:19:37 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/msgpack/ChangeLog,v 1.11 2011/08/12 18:02:13 graaff Exp $
+
+  12 Aug 2011; Hans de Graaff <graaff@gentoo.org> -msgpack-0.4.2.ebuild,
+  -msgpack-0.4.3.ebuild, -msgpack-0.4.4.ebuild:
+  Remove old versions.
 
 *msgpack-0.4.5 (10 May 2011)
 
