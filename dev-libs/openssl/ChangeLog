@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.399 2011/07/12 04:10:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.400 2011/08/12 19:35:30 slyfox Exp $
+
+  12 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> openssl-1.0.0d.ebuild,
+  +files/openssl-1.0.0d-alpha-fix-unalign.patch:
+  Fix unaligned access on alpha (bug #371561 by Tobias Klausmann). Thanks to
+  Andy Polyakov <appro@openssl.org> for the fix.
 
   12 Jul 2011; Mike Frysinger <vapier@gentoo.org> files/gentoo.config-1.0.0,
   openssl-1.0.0d.ebuild, +files/openssl-1.0.0d-windres.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0d.ebuild,v 1.13 2011/07/12 04:10:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0d.ebuild,v 1.14 2011/08/12 19:35:30 slyfox Exp $
 
 EAPI="2"
 
@@ -37,6 +37,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.0.0d-alpha-typo.patch #364699
 	epatch "${FILESDIR}"/${PN}-1.0.0d-fbsd-amd64.patch #363089
 	epatch "${FILESDIR}"/${PN}-1.0.0d-windres.patch #373743
+	epatch "${FILESDIR}"/${PN}-1.0.0d-alpha-fix-unalign.patch #371561
 	epatch_user #332661
 
 	# disable fips in the build
