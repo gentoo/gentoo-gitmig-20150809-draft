@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/binutils-config
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.44 2011/07/10 23:39:04 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.45 2011/08/12 20:26:09 vapier Exp $
+
+*binutils-config-3 (12 Aug 2011)
+
+  12 Aug 2011; Mike Frysinger <vapier@gentoo.org> +files/binutils-config-3,
+  +binutils-config-3.ebuild, files/binutils-config.8:
+  Add options to switch the linker on the fly between gold and bfd, and clean
+  up the tangled profile/target logic.
 
   10 Jul 2011; Mark Loeser <halcy0n@gentoo.org> binutils-config-2-r1.ebuild:
   Stable for ppc64; bug #361849
