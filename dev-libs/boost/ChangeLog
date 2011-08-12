@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.221 2011/07/15 16:27:59 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.222 2011/08/12 17:37:11 tomka Exp $
+
+  12 Aug 2011; Thomas Kahle <tomka@gentoo.org> boost-1.46.1.ebuild:
+  x86 stable per bug 377805
 
   15 Jul 2011; Matt Turner <mattst88@gentoo.org> boost-1.41.0-r3.ebuild,
   boost-1.42.0.ebuild, boost-1.42.0-r1.ebuild, boost-1.42.0-r2.ebuild,
