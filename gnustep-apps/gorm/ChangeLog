@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/gorm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/ChangeLog,v 1.38 2010/08/22 12:52:01 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/ChangeLog,v 1.39 2011/08/12 18:54:15 xarthisius Exp $
+
+  12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> gorm-1.2.8.ebuild,
+  gorm-1.2.10.ebuild, gorm-1.2.12.ebuild:
+  Drop ppc keyword wrt #332259
 
   22 Aug 2010; Markus Meier <maekke@gentoo.org> gorm-1.2.12.ebuild:
   amd64/x86 stable, bug #332259
