@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.73 2011/08/03 09:33:19 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.74 2011/08/12 18:24:45 blueness Exp $
+
+  12 Aug 2011; Anthony G. Basile <blueness@gentoo.org>
+  -libselinux-2.0.71.ebuild, -libselinux-2.0.85.ebuild,
+  -files/libselinux-2.0.85-headers.patch, -files/compat.py:
+  Removed deprecated versions
 
 *libselinux-2.1.0 (03 Aug 2011)
 
