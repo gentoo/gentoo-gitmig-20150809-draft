@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.8.3.ebuild,v 1.2 2011/08/12 08:49:55 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-ds-base/389-ds-base-1.2.8.3.ebuild,v 1.3 2011/08/13 06:08:30 lxnay Exp $
 
 EAPI=2
 
@@ -56,6 +56,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}/selinux.patch"
 
 	# as per 389 documentation, when 64bit, export USE_64
 	use amd64 && export USE_64=1
