@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXfont
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.148 2011/08/12 18:31:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.149 2011/08/13 07:09:14 xarthisius Exp $
+
+  13 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> libXfont-1.4.4.ebuild:
+  ppc64 stable wrt #378797
 
   12 Aug 2011; Brent Baude <ranger@gentoo.org> libXfont-1.4.4.ebuild:
   Marking libXfont-1.4.4 ppc for bug 378797
