@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gfan/gfan-0.5.ebuild,v 1.1 2011/01/23 22:03:35 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gfan/gfan-0.5.ebuild,v 1.2 2011/08/13 07:13:05 xarthisius Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.math.tu-berlin.de/~jensen/software/gfan/${PN}${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-libs/gmp[-nocxx]

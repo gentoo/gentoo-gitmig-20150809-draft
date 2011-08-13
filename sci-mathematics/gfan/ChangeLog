@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/gfan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gfan/ChangeLog,v 1.4 2011/01/23 22:03:35 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gfan/ChangeLog,v 1.5 2011/08/13 07:13:05 xarthisius Exp $
+
+  13 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> gfan-0.4-r1.ebuild,
+  gfan-0.5.ebuild:
+  Dropped ppc keywords wrt #349167
 
 *gfan-0.5 (23 Jan 2011)
 
