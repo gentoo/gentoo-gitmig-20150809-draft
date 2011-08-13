@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/gentoopm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.7 2011/08/12 21:19:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.8 2011/08/13 11:28:28 mgorny Exp $
+
+*gentoopm-0.2 (13 Aug 2011)
+*gentoopm-0.1.6 (13 Aug 2011)
+
+  13 Aug 2011; Michał Górny <mgorny@gentoo.org> -gentoopm-0.1.5.ebuild,
+  +gentoopm-0.1.6.ebuild, +gentoopm-0.2.ebuild:
+  Version bump. 0.1.6 is a bugfix, 0.2 drops deprecated APIs.
 
 *gentoopm-0.1.5 (12 Aug 2011)
 
