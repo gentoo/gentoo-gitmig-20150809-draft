@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/molecule/molecule-0.9.20.7.ebuild,v 1.1 2011/07/21 12:03:16 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/molecule/molecule-0.9.20.7.ebuild,v 1.2 2011/08/13 14:03:16 lxnay Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
 
-inherit multilib python
+inherit python
 
 DESCRIPTION="Release metatool used for creating Sabayon (and Gentoo) releases"
 HOMEPAGE="http://www.sabayon.org"
@@ -24,15 +24,15 @@ RDEPEND="net-misc/rsync
 	virtual/cdrtools"
 
 src_install() {
-	emake DESTDIR="${D}" LIBDIR="/usr/$(get_libdir)" \
+	emake DESTDIR="${D}" LIBDIR="/usr/lib" \
 		PREFIX="/usr" SYSCONFDIR="/etc" install \
 		|| die "emake install failed"
 }
 
 pkg_postinst() {
-	python_mod_optimize "/usr/$(get_libdir)/molecule"
+	python_mod_optimize "/usr/lib/molecule"
 }
 
 pkg_postrm() {
-	python_mod_cleanup "/usr/$(get_libdir)/molecule"
+	python_mod_cleanup "/usr/lib/molecule"
 }
