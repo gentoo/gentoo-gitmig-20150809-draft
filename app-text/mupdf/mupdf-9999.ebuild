@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.3 2011/03/29 14:13:56 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-9999.ebuild,v 1.4 2011/08/13 02:53:03 xmw Exp $
 
 EAPI=2
 
@@ -27,21 +27,22 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.8.15-buildsystem.patch
+	epatch "${FILESDIR}"/${PN}-0.8.165-buildsystem.patch
 
-	use vanilla || epatch "${FILESDIR}"/${PN}-0.8.15-zoom.patch
+	use vanilla || epatch "${FILESDIR}"/${PN}-0.8.165-zoom.patch
 }
 
 src_compile() {
-	local my_pdfexe=
-	use X || my_pdfexe="PDFVIEW_EXE="
+	local my_nox11=
+	use X || my_nox11="NOX11=yes MUPDF= "
 
-	emake build=debug ${my_pdfexe} CC="$(tc-getCC)" verbose=true -j1 || die
+	emake CC="$(tc-getCC)" \
+		build=debug verbose=true ${my_nox11} -j1 || die
 }
 
 src_install() {
-	emake build=debug ${my_pdfexe} prefix="${D}usr" \
-		LIBDIR="${D}usr/$(get_libdir)" verbose=true install || die
+	emake prefix="${D}usr" LIBDIR="${D}usr/$(get_libdir)" \
+		build=debug verbose=true ${my_nox11} install || die
 
 	insinto /usr/$(get_libdir)/pkgconfig
 	doins debian/mupdf.pc || die

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.17 2011/08/10 16:48:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.18 2011/08/13 02:53:03 xmw Exp $
+
+  13 Aug 2011; Michael Weber <xmw@gentoo.org> mupdf-9999.ebuild:
+  Update to newer patchset, thanks to Jan Psota for the hint (bug 378983)
 
   10 Aug 2011; Markos Chandras <hwoarang@gentoo.org> mupdf-0.8.165.ebuild:
   Stable on amd64 wrt bug #378427
