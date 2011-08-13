@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/libgnomecups-0.2.3-r1.ebuild,v 1.5 2011/07/17 21:23:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/libgnomecups/libgnomecups-0.2.3-r1.ebuild,v 1.6 2011/08/13 18:19:29 armin76 Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ~ppc ~ppc64 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2:2
