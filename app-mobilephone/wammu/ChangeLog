@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/wammu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.50 2011/04/10 16:34:50 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.51 2011/08/13 07:15:07 xarthisius Exp $
+
+  13 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> wammu-0.30.1.ebuild,
+  wammu-0.34.ebuild, wammu-0.35.ebuild:
+  Dropped ppc keywords wrt #350079
 
   10 Apr 2011; Christian Faulhammer <fauli@gentoo.org> wammu-0.35.ebuild:
   Use gnome-bluetooth if USE=gnome is activated, see bug 328955 by Kobboi

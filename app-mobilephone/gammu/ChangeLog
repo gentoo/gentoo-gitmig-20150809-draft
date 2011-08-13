@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/gammu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.90 2011/08/03 18:24:20 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.91 2011/08/13 07:15:53 xarthisius Exp $
+
+  13 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> gammu-1.25.0-r1.ebuild,
+  gammu-1.28.0.ebuild, gammu-1.29.0.ebuild, gammu-1.30.0.ebuild:
+  Dropped ppc keywords wrt #350079
 
 *gammu-1.30.0 (03 Aug 2011)
 
