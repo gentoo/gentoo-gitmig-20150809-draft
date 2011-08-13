@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.2.ebuild,v 1.12 2011/04/04 22:45:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.2.ebuild,v 1.13 2011/08/13 17:49:23 vapier Exp $
 
 EAPI="3"
 
@@ -49,6 +49,7 @@ RDEPEND=">=sys-libs/ncurses-5.2-r2
 	python? ( =dev-lang/python-2* )"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
+	virtual/yacc
 	test? ( dev-util/dejagnu )
 	nls? ( sys-devel/gettext )"
 
