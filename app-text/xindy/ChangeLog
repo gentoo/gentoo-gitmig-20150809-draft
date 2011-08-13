@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xindy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xindy/ChangeLog,v 1.16 2011/03/20 11:58:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xindy/ChangeLog,v 1.17 2011/08/13 06:29:35 xarthisius Exp $
+
+  13 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> xindy-2.4.ebuild:
+  ppc stable wrt #356789
 
   20 Mar 2011; Raúl Porcel <armin76@gentoo.org> xindy-2.4.ebuild:
   ia64 stable wrt #356789
