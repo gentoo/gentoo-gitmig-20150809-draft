@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.188 2011/08/02 05:23:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.189 2011/08/13 18:07:11 armin76 Exp $
+
+  13 Aug 2011; Raúl Porcel <armin76@gentoo.org> libtool-2.4-r1.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #375579
 
   02 Aug 2011; Jeroen Roovers <jer@gentoo.org> libtool-2.4-r1.ebuild:
   Stable for HPPA (bug #375579).
