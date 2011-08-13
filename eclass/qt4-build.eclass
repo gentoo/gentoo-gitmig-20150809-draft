@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.91 2011/07/08 11:35:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.92 2011/08/13 11:31:03 hwoarang Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -137,15 +137,27 @@ qt4-build_pkg_setup() {
 # Unpacks the sources
 qt4-build_src_unpack() {
 	setqtenv
+	local unpack_p="${MY_P}"
+	case "${PV}" in
+		4.8.0_beta*)
+			unpack_p="qt-everywhere-opensource-src-${PV/_*}"
+		;;
+	esac
 	local target targets=
 	for target in configure LICENSE.GPL3 LICENSE.LGPL projects.pro \
 		src/{qbase,qt_targets,qt_install}.pri bin config.tests mkspecs qmake \
 		${QT4_EXTRACT_DIRECTORIES}; do
-			targets+=" ${MY_P}/${target}"
+			targets+=" ${unpack_p}/${target}"
 	done
 
 	echo tar xzf "${DISTDIR}"/${MY_P}.tar.gz ${targets}
 	tar xzf "${DISTDIR}"/${MY_P}.tar.gz ${targets} || die
+	case "${PV}" in
+		4.8.0_beta*)
+			mv ${WORKDIR}/qt-everywhere-opensource-src-${PV/_*} \
+				${WORKDIR}/qt-everywhere-opensource-src-${MY_PV}
+		;;
+	esac
 }
 
 # @ECLASS-VARIABLE: PATCHES
