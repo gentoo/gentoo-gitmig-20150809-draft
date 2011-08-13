@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/metagen-9999.ebuild,v 1.2 2010/06/11 22:13:10 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/metagen-9999.ebuild,v 1.3 2011/08/13 22:22:06 neurogeek Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit distutils git
+inherit distutils git-2
 
 DESCRIPTION="metadata.xml generator for ebuilds"
 HOMEPAGE="http://git.overlays.gentoo.org/gitweb/?p=proj/metagen.git;a=summary"
@@ -19,7 +19,9 @@ SLOT="0"
 KEYWORDS=""
 
 IUSE=""
-DEPEND=">=dev-python/jaxml-3.01"
+DEPEND=">=dev-python/jaxml-3.01
+		>=sys-apps/portage-2.1.9.42"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	distutils_src_prepare
