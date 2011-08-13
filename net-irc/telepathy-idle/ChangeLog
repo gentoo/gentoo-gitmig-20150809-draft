@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/telepathy-idle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/telepathy-idle/ChangeLog,v 1.32 2011/08/06 08:30:57 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/telepathy-idle/ChangeLog,v 1.33 2011/08/13 18:16:59 armin76 Exp $
+
+  13 Aug 2011; Raúl Porcel <armin76@gentoo.org> telepathy-idle-0.1.10.ebuild:
+  alpha/ia64/sparc stable wrt #369909
 
   06 Aug 2011; Zac Medico <zmedico@gentoo.org> telepathy-idle-0.1.10.ebuild:
   Add ~x86-linux keyword.
