@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cddlib/cddlib-094f-r2.ebuild,v 1.3 2011/01/02 09:18:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cddlib/cddlib-094f-r2.ebuild,v 1.4 2011/08/13 07:12:13 xarthisius Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.ifor.math.ethz.ch/pub/fukuda/cdd/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
 IUSE="doc static-libs"
 
 DEPEND=">=dev-libs/gmp-4.2.2"
