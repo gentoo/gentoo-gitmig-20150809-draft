@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.3.9999.ebuild,v 1.8 2011/08/02 05:43:10 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.3.9999.ebuild,v 1.9 2011/08/13 21:47:45 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -32,7 +32,6 @@ LICENSE="GPL-3 FDL-1.3 BSD as-is MIT W3C unicode PSF-2"
 SLOT="23"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="alsa dbus gconf gif gpm gtk gzip-el hesiod jpeg kerberos m17n-lib motif png sound source svg tiff toolkit-scroll-bars X Xaw3d xft +xpm"
-RESTRICT="strip"
 
 RDEPEND="sys-libs/ncurses
 	>=app-admin/eselect-emacs-1.2
