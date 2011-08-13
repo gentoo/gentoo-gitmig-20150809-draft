@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.297 2011/07/14 09:57:47 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.298 2011/08/13 16:31:07 armin76 Exp $
+
+  13 Aug 2011; Raúl Porcel <armin76@gentoo.org> file-roller-2.32.2.ebuild:
+  alpha/ia64/sparc stable wrt #369909
 
   14 Jul 2011; Thomas Kahle <tomka@gentoo.org> file-roller-2.32.2.ebuild:
   x86 stable per bug 369909
