@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.69 2011/07/10 15:07:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.70 2011/08/13 03:05:39 the_paya Exp $
+
+  13 Aug 2011; Javier Villavicencio <the_paya@gentoo.org>
+  freebsd-ubin-8.2.ebuild:
+  Move printf binary to /bin. Fixes bug #377277
 
   10 Jul 2011; Alexis Ballier <aballier@gentoo.org> freebsd-ubin-8.2.ebuild:
   create /var/spool/lock/ directory for tip, by Jose Quinteiro, bug #200700
