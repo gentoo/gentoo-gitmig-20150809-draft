@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-5.0-r2.ebuild,v 1.3 2011/07/26 03:18:33 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-5.0-r2.ebuild,v 1.4 2011/08/13 17:26:09 armin76 Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -171,6 +171,10 @@ src_prepare() {
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"
+
+	# Patches needed for ARM, bug 362237
+	epatch "${FILESDIR}/arm-bug-644136.patch"
+	epatch "${FILESDIR}/mozilla-2.0_arm_respect_cflags.patch"
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user

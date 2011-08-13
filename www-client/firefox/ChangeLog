@@ -1,6 +1,11 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.81 2011/07/26 03:18:33 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.82 2011/08/13 17:26:09 armin76 Exp $
+
+  13 Aug 2011; Raúl Porcel <armin76@gentoo.org>
+  +files/mozilla-2.0_arm_respect_cflags.patch, firefox-5.0-r2.ebuild,
+  +files/arm-bug-644136.patch:
+  Add patches for arm to fix bug #362237
 
   26 Jul 2011; Jory A. Pratt <anarchy@gentoo.org> firefox-5.0-r2.ebuild:
   Fix compilation with curl-7.21.7, bug #375899
