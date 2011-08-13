@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgdata
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/ChangeLog,v 1.33 2011/07/17 20:45:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/ChangeLog,v 1.34 2011/08/13 16:49:29 armin76 Exp $
+
+  13 Aug 2011; Raúl Porcel <armin76@gentoo.org> libgdata-0.8.1.ebuild:
+  alpha/ia64/sparc stable wrt #369909
 
   17 Jul 2011; Markus Meier <maekke@gentoo.org> libgdata-0.8.1.ebuild:
   arm stable, bug #369909

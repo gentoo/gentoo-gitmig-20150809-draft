@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liboobs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboobs/ChangeLog,v 1.20 2011/07/14 10:12:11 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liboobs/ChangeLog,v 1.21 2011/08/13 16:50:38 armin76 Exp $
+
+  13 Aug 2011; Raúl Porcel <armin76@gentoo.org> liboobs-3.0.0.ebuild:
+  alpha/ia64/sparc stable wrt #369909
 
   14 Jul 2011; Thomas Kahle <tomka@gentoo.org> liboobs-3.0.0.ebuild:
   x86 stable per bug 369909
