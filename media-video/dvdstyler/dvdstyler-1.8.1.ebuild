@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.8.1.ebuild,v 1.1 2010/07/18 06:06:50 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.8.1.ebuild,v 1.2 2011/08/13 07:42:26 xarthisius Exp $
 
 EAPI=2
 inherit wxwidgets
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/dvdstyler/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug gnome"
 
 COMMON_DEPEND=">=media-video/ffmpeg-0.5[encode]

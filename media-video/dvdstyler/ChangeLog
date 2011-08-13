@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvdstyler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.43 2011/07/20 14:34:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.44 2011/08/13 07:42:26 xarthisius Exp $
+
+  13 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> dvdstyler-1.7.4.ebuild,
+  dvdstyler-1.8.1_beta1.ebuild, dvdstyler-1.8.1.ebuild:
+  Dropped ppc keywords wrt #361737
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #34534
