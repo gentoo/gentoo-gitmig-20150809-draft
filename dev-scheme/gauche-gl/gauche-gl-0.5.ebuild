@@ -1,70 +1,54 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gl/gauche-gl-0.5.ebuild,v 1.2 2011/08/13 10:13:50 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gl/gauche-gl-0.5.ebuild,v 1.3 2011/08/13 10:27:18 hattya Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit eutils
-
-IUSE="cg examples"
 
 MY_P="${P/g/G}"
 
 DESCRIPTION="OpenGL binding for Gauche"
-HOMEPAGE="http://practical-scheme.net/gauche"
+HOMEPAGE="http://practical-scheme.net/gauche/"
 SRC_URI="mirror://sourceforge/gauche/${MY_P}.tgz"
 
 LICENSE="BSD"
-KEYWORDS="~ppc x86"
 SLOT="0"
-S="${WORKDIR}/${MY_P}"
+KEYWORDS="~ppc x86"
+IUSE="cg examples"
 
-DEPEND=">=dev-scheme/gauche-0.9.1
+RDEPEND=">=dev-scheme/gauche-0.9.1
 	virtual/opengl
 	media-libs/freeglut
 	cg? ( media-gfx/nvidia-cg-toolkit )"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}"
+S="${WORKDIR}/${MY_P}"
 
 src_configure() {
 	local myconf
 	use cg && myconf="--enable-cg"
 
-	econf ${myconf} || die
+	econf ${myconf}
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc README ChangeLog || die
+	emake DESTDIR="${D}" install
+	dodoc ChangeLog README
 
 	if use examples; then
+		docompress -x /usr/share/doc/${PF}/examples
 		docinto examples
 		dodoc examples/*.scm
-
 		# install simple
-		docinto examples/simple
-		dodoc examples/simple/*
-
+		dodoc -r examples/simple
 		# install glbook
-		docinto examples/glbook
-		dodoc examples/glbook/*
-
-		docinto examples/images
-		dodoc examples/images/*
-
+		dodoc -r examples/glbook
+		dodoc -r examples/images
 		# install slbook
-		docinto examples/slbook
-		dodoc examples/slbook/*
-
-		docinto examples/slbook/ogl2brick
-		dodoc examples/slbook/ogl2brick/*
-
-		docinto examples/slbook/ogl2particle
-		dodoc examples/slbook/ogl2particle/*
-
+		dodoc -r examples/slbook
 		# install cg examples
 		if use cg; then
-			docinto examples/cg
-			dodoc examples/cg/*
+			dodoc -r examples/cg
 		fi
 	fi
 }
