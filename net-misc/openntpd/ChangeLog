@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.51 2011/07/30 15:49:34 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.52 2011/08/13 15:38:31 nelchael Exp $
+
+*openntpd-3.9_p1-r4 (13 Aug 2011)
+
+  13 Aug 2011; Krzysztof Pawlik <nelchael@gentoo.org>
+  +files/openntpd.conf.d-3.9_p1-r4, +files/openntpd.init.d-3.9_p1-r4,
+  +openntpd-3.9_p1-r4.ebuild,
+  -files/openntpd-3.9p1_reconnect_on_sendto_EINVAL.diff,
+  -files/openntpd.conf.d, -files/openntpd.rc:
+  Revision bump to fix bug #241002 (OpenRC related improvements) and bug
+  #363051 (hardcoded ntp directory in init.d script).
 
   30 Jul 2011; Krzysztof Pawlik <nelchael@gentoo.org> metadata.xml:
   Add myself as maintainer.
