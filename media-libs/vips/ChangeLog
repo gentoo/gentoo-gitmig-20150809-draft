@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/vips
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/ChangeLog,v 1.41 2011/07/17 20:07:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/ChangeLog,v 1.42 2011/08/13 07:30:57 xarthisius Exp $
+
+  13 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> vips-7.22.4.ebuild,
+  vips-7.22.5.ebuild:
+  Dropped ppc keywords wrt #358075
 
 *vips-7.24.7 (17 Jul 2011)
 
