@@ -1,6 +1,17 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.822 2011/08/06 01:12:44 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.823 2011/08/13 03:55:39 dirtyepic Exp $
+
+*gcc-4.6.1-r1 (13 Aug 2011)
+*gcc-4.5.3-r1 (13 Aug 2011)
+*gcc-4.4.6-r1 (13 Aug 2011)
+*gcc-4.3.6-r1 (13 Aug 2011)
+
+  13 Aug 2011; Ryan Hill <dirtyepic@gentoo.org> -gcc-4.3.6.ebuild,
+  +gcc-4.3.6-r1.ebuild, -gcc-4.4.6.ebuild, +gcc-4.4.6-r1.ebuild,
+  -gcc-4.5.3.ebuild, +gcc-4.5.3-r1.ebuild, -gcc-4.6.1.ebuild,
+  +gcc-4.6.1-r1.ebuild:
+  Rev bumps to force fix for bug #377633. No other changes.
 
 *gcc-4.5.3 (06 Aug 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.3.6.ebuild,v 1.1 2011/07/01 07:27:56 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.4.6-r1.ebuild,v 1.1 2011/08/13 03:55:39 dirtyepic Exp $
 
 PATCH_VER="1.0"
 UCLIBC_VER="1.0"
@@ -8,32 +8,35 @@ UCLIBC_VER="1.0"
 ETYPE="gcc-compiler"
 
 # Hardened gcc 4 stuff
-PIE_VER="10.1.5"
-SPECS_VER="0.9.4"
-
-# arch/libc configurations known to be stable or untested with {PIE,SSP,FORTIFY}-by-default
-PIE_GLIBC_STABLE="x86 amd64 ppc ppc64 arm sparc"
-PIE_UCLIBC_STABLE="x86 arm"
-#SSP_STABLE="amd64 x86 ppc ppc64 ~arm ~sparc"
-#SSP_UCLIBC_STABLE=""
-
-# whether we should split out specs files for multiple {PIE,SSP}-by-default
-# and vanilla configurations.
-SPLIT_SPECS=no #${SPLIT_SPECS-true} hard disable until #106690 is fixed
+PIE_VER="0.4.5"
+SPECS_VER="0.2.0"
+SPECS_GCC_VER="4.4.3"
+# arch/libc configurations known to be stable with {PIE,SSP}-by-default
+PIE_GLIBC_STABLE="x86 amd64 ppc ppc64 arm ia64"
+PIE_UCLIBC_STABLE="x86 arm amd64 ppc ppc64"
+SSP_STABLE="amd64 x86 ppc ppc64 arm"
+# uclibc need tls and nptl support for SSP support
+SSP_UCLIBC_STABLE=""
+#end Hardened stuff
 
 inherit toolchain
 
 DESCRIPTION="The GNU Compiler Collection"
 
-LICENSE="GPL-3 LGPL-3 || ( GPL-3 libgcc libstdc++ ) FDL-1.2"
-KEYWORDS="~alpha ~amd64 ~arm -hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+LICENSE="GPL-3 LGPL-3 || ( GPL-3 libgcc libstdc++ gcc-runtime-library-exception-3.1 ) FDL-1.2"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+
 IUSE=""
 
 RDEPEND=">=sys-libs/zlib-1.1.4
 	>=sys-devel/gcc-config-1.4
 	virtual/libiconv
 	>=dev-libs/gmp-4.2.1
-	>=dev-libs/mpfr-2.3
+	>=dev-libs/mpfr-2.3.2
+	graphite? (
+		>=dev-libs/ppl-0.10
+		>=dev-libs/cloog-ppl-0.15.4
+	)
 	!build? (
 		gcj? (
 			gtk? (
@@ -53,10 +56,9 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 		nls? ( sys-devel/gettext )
 	)"
 DEPEND="${RDEPEND}
-	test? ( sys-devel/autogen dev-util/dejagnu )
-	>=sys-apps/texinfo-4.2-r4
+	test? ( >=dev-util/dejagnu-1.4.4 >=sys-devel/autogen-5.5.4 )
+	>=sys-apps/texinfo-4.8
 	>=sys-devel/bison-1.875
-	sys-devel/flex
 	elibc_glibc? ( >=sys-libs/glibc-2.8 )
 	amd64? ( multilib? ( gcj? ( app-emulation/emul-linux-x86-xlibs ) ) )
 	ppc? ( >=${CATEGORY}/binutils-2.17 )
@@ -69,12 +71,19 @@ fi
 
 src_unpack() {
 	gcc_src_unpack
-
 	use vanilla && return 0
 
 	sed -i 's/use_fixproto=yes/:/' gcc/config.gcc #PR33200
 
 	[[ ${CHOST} == ${CTARGET} ]] && epatch "${FILESDIR}"/gcc-spec-env.patch
+	[[ ${CTARGET} == *-softfloat-* ]] && epatch "${FILESDIR}"/4.4.0/gcc-4.4.0-softfloat.patch
+}
 
-	[[ ${CTARGET} == *-softfloat-* ]] && epatch "${FILESDIR}"/4.3.2/gcc-4.3.2-softfloat.patch
+pkg_setup() {
+	gcc_pkg_setup
+
+	if use graphite ; then
+		ewarn "Graphite support is still experimental and unstable."
+		ewarn "Any bugs resulting from the use of Graphite will not be fixed."
+	fi
 }
