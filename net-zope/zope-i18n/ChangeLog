@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-i18n
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-i18n/ChangeLog,v 1.7 2010/07/08 19:32:20 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-i18n/ChangeLog,v 1.8 2011/08/13 09:35:11 djc Exp $
+
+  13 Aug 2011; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove python herd from metadata.
 
 *zope-i18n-3.7.4 (08 Jul 2010)
 

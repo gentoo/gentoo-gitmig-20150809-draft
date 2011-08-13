@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-dublincore
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-dublincore/ChangeLog,v 1.9 2011/02/19 17:56:45 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-dublincore/ChangeLog,v 1.10 2011/08/13 09:28:45 djc Exp $
+
+  13 Aug 2011; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove python herd from metadata.
 
 *zope-dublincore-3.8.2 (19 Feb 2011)
 

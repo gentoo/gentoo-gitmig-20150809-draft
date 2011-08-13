@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-i18nmessageid
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-i18nmessageid/ChangeLog,v 1.7 2010/09/11 21:32:39 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-i18nmessageid/ChangeLog,v 1.8 2011/08/13 09:36:12 djc Exp $
+
+  13 Aug 2011; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove python herd from metadata.
 
 *zope-i18nmessageid-3.5.3 (11 Sep 2010)
 

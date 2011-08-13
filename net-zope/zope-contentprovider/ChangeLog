@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-contentprovider
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-contentprovider/ChangeLog,v 1.7 2010/05/30 18:55:03 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-contentprovider/ChangeLog,v 1.8 2011/08/13 09:25:28 djc Exp $
+
+  13 Aug 2011; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove python herd from metadata.
 
 *zope-contentprovider-3.7.2 (30 May 2010)
 

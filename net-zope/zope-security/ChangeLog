@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-security
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-security/ChangeLog,v 1.10 2011/05/04 20:11:14 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-security/ChangeLog,v 1.11 2011/08/13 09:49:04 djc Exp $
+
+  13 Aug 2011; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove python herd from metadata.
 
 *zope-security-3.8.1 (04 May 2011)
 

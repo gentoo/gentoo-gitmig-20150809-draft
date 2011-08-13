@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-hookable
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-hookable/ChangeLog,v 1.4 2010/02/14 19:16:48 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-hookable/ChangeLog,v 1.5 2011/08/13 09:34:28 djc Exp $
+
+  13 Aug 2011; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove python herd from metadata.
 
   14 Feb 2010; Raúl Porcel <armin76@gentoo.org> zope-hookable-3.4.1.ebuild:
   Add ~alpha/~sparc wrt #297734

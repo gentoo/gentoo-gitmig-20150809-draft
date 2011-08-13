@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-structuredtext
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-structuredtext/ChangeLog,v 1.6 2010/12/07 14:12:01 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-structuredtext/ChangeLog,v 1.7 2011/08/13 09:55:05 djc Exp $
+
+  13 Aug 2011; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove python herd from metadata.
 
 *zope-structuredtext-3.5.1 (07 Dec 2010)
 

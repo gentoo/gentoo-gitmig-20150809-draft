@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-sendmail
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-sendmail/ChangeLog,v 1.9 2010/12/05 19:02:16 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-sendmail/ChangeLog,v 1.10 2011/08/13 09:49:57 djc Exp $
+
+  13 Aug 2011; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove python herd from metadata.
 
   05 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   zope-sendmail-3.6.1.ebuild, zope-sendmail-3.7.4.ebuild:
