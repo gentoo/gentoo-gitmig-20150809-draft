@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tcldom
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcldom/ChangeLog,v 1.16 2011/01/05 20:37:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcldom/ChangeLog,v 1.17 2011/08/13 06:35:00 xarthisius Exp $
+
+  13 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> tcldom-3.1.ebuild:
+  ppc stable wrt #348027
 
   05 Jan 2011; Markos Chandras <hwoarang@gentoo.org> tcldom-3.1.ebuild:
   Stable on amd64 wrt bug #348027
