@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ibm-jre-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.167 2011/08/03 22:27:12 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.168 2011/08/13 07:03:52 xarthisius Exp $
+
+  13 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  ibm-jre-bin-1.5.0.12_p5.ebuild, ibm-jre-bin-1.6.0.9_p2.ebuild:
+  ppc/ppc64 stable wrt #377623
 
 *ibm-jre-bin-1.6.0.9_p2 (03 Aug 2011)
 *ibm-jre-bin-1.5.0.12_p5 (03 Aug 2011)
