@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/wxsvg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/ChangeLog,v 1.26 2011/05/06 07:11:05 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/ChangeLog,v 1.27 2011/08/13 07:43:44 xarthisius Exp $
+
+  13 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> wxsvg-1.0.ebuild,
+  wxsvg-1.0.5.ebuild, wxsvg-1.0.8.ebuild:
+  Dropped ppc keywords wrt #361737
 
   06 May 2011; Thomas Kahle <tomka@gentoo.org> wxsvg-1.0.8.ebuild:
   x86 stable per bug 361737
