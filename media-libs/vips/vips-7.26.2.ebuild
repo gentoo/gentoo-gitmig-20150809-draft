@@ -1,14 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/vips-7.24.3.ebuild,v 1.1 2011/03/11 16:52:58 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/vips-7.26.2.ebuild,v 1.1 2011/08/13 14:11:31 pva Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2"
 inherit eutils versionator python
 
 # TODO:
-# matio? ( sci-libs/matio ) - in sunrise
-# cimg support?
+# matio? ( sci-libs/matio ) - in science overlay #269598 (wait for new release
+# after 1.3.4) or until somebody adds it to the tree.
 
 DESCRIPTION="VIPS Image Processing Library"
 SRC_URI="http://www.vips.ecs.soton.ac.uk/supported/$(get_version_component_range 1-2)/${P}.tar.gz"
@@ -17,7 +17,7 @@ HOMEPAGE="http://vips.sourceforge.net"
 LICENSE="LGPL-2.1"
 SLOT="1"
 KEYWORDS="~amd64 ~x86"
-IUSE="exif fits fftw imagemagick jpeg lcms openexr +orc png python static-libs tiff v4l"
+IUSE="debug exif fits fftw imagemagick jpeg lcms openexr +orc png python static-libs tiff"
 
 RDEPEND=">=dev-libs/glib-2.6:2
 	>=dev-libs/liboil-0.3
@@ -33,7 +33,7 @@ RDEPEND=">=dev-libs/glib-2.6:2
 	tiff? ( media-libs/tiff )
 	jpeg? ( virtual/jpeg )
 	fits? ( sci-libs/cfitsio )
-	png? ( media-libs/libpng )
+	png? ( >=media-libs/libpng-1.2.9 )
 	orc? ( >=dev-lang/orc-0.4.11 )"
 DEPEND="${RDEPEND}
 	dev-util/gtk-doc-am"
@@ -47,6 +47,7 @@ pkg_setup() {
 
 src_configure() {
 	econf \
+		$(use_enable debug) \
 		$(use_with fftw fftw3) \
 		$(use_with lcms) \
 		$(use_with openexr OpenEXR) \
@@ -58,7 +59,6 @@ src_configure() {
 		$(use_with jpeg) \
 		$(use_with orc) \
 		$(use_with python) \
-		$(use_with v4l) \
 		$(use_enable static-libs static)
 }
 
