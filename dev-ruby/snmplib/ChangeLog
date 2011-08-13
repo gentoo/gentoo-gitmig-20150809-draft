@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/snmplib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/ChangeLog,v 1.29 2011/08/13 08:38:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/ChangeLog,v 1.30 2011/08/13 08:39:34 graaff Exp $
+
+  13 Aug 2011; Hans de Graaff <graaff@gentoo.org> snmplib-1.0.3.ebuild:
+  Whitespace.
 
   13 Aug 2011; Hans de Graaff <graaff@gentoo.org> snmplib-1.0.3.ebuild:
   Fix broken tests, bug 323423.
