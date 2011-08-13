@@ -1,6 +1,5 @@
-diff -urN compface-1.5.1.orig/Makefile.in compface-1.5.1/Makefile.in
---- compface-1.5.1.orig/Makefile.in	2005-01-26 17:00:32.140000192 +0900
-+++ compface-1.5.1/Makefile.in	2005-01-26 17:00:17.788182000 +0900
+--- compface-1.5.1.orig/Makefile.in
++++ compface-1.5.1/Makefile.in
 @@ -71,18 +71,16 @@
  		$(RM) -rf `cat .fname` .fname
  
