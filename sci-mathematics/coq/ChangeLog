@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/coq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.65 2011/07/06 18:41:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/ChangeLog,v 1.66 2011/08/13 12:53:00 tomka Exp $
+
+*coq-8.3_p2 (13 Aug 2011)
+
+  13 Aug 2011; Thomas Kahle <tomka@gentoo.org> +coq-8.3_p2.ebuild:
+  bump to pl2
 
   06 Jul 2011; Alexis Ballier <aballier@gentoo.org> -coq-8.2_p1-r1.ebuild,
   -coq-8.2_p2.ebuild, -files/coq-8.2_p2-camlp5-6-compat.patch,
