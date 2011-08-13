@@ -1,54 +1,44 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.6.0.ebuild,v 1.9 2011/03/23 20:44:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.6.0.ebuild,v 1.10 2011/08/13 11:23:51 hattya Exp $
 
-EAPI="1"
+EAPI="4"
 
 inherit autotools eutils
-
-IUSE="crypt ipv6 ldap nls pda spell ssl xface"
 
 DESCRIPTION="A lightweight email client and newsreader"
 HOMEPAGE="http://sylpheed.sraoss.jp/"
 SRC_URI="http://sylpheed.sraoss.jp/${PN}/v${PV%.*}/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 SLOT="0"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+IUSE="crypt ipv6 ldap nls pda spell ssl xface"
 
-COMMON_DEPEND=">=x11-libs/gtk+-2.4:2
-	nls? ( >=sys-devel/gettext-0.12.1 )
-	crypt? ( >=app-crypt/gpgme-0.4.5 )
-	ldap? ( >=net-nds/openldap-2.0.11 )
+CDEPEND="x11-libs/gtk+:2
+	nls? ( sys-devel/gettext )
+	crypt? ( app-crypt/gpgme )
+	ldap? ( net-nds/openldap )
 	pda? ( app-pda/jpilot )
 	spell? ( app-text/gtkspell )
 	ssl? ( dev-libs/openssl )"
-DEPEND="${COMMON_DEPEND}
-	dev-util/pkgconfig
-	xface? ( >=media-libs/compface-1.4 )"
-RDEPEND="${COMMON_DEPEND}
+RDEPEND="${CDEPEND}
 	app-misc/mime-types
 	x11-misc/shared-mime-info"
+DEPEND="${CDEPEND}
+	dev-util/pkgconfig
+	xface? ( media-libs/compface )"
 
 AT_M4DIR="ac"
 
-src_unpack() {
-
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.[145]-*.diff
-
 	use crypt || cp ac/missing/gpgme.m4 ac
-
 	eautoreconf
-
 }
 
-src_compile() {
-
+src_configure() {
 	local htmldir=/usr/share/doc/${PF}/html
-
 	econf \
 		$(use_enable crypt gpgme) \
 		$(use_enable ipv6) \
@@ -59,18 +49,13 @@ src_compile() {
 		$(use_enable ssl) \
 		$(use_enable xface compface) \
 		--with-manualdir=${htmldir}/manual \
-		--with-faqdir=${htmldir}/faq \
-		|| die
-	emake || die
-
+		--with-faqdir=${htmldir}/faq
 }
 
 src_install() {
-
-	emake DESTDIR="${D}" install || die
-
+	emake DESTDIR="${D}" install
 	dodoc AUTHORS ChangeLog* NEWS* README* TODO*
+
 	doicon *.png
 	domenu *.desktop
-
 }

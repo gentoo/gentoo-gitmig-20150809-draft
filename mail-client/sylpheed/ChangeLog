@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/sylpheed
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.290 2011/05/07 16:45:02 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.291 2011/08/13 11:23:51 hattya Exp $
+
+  13 Aug 2011; Akinori Hattori <hattya@gentoo.org>
+  files/sylpheed-2.1-shared-mime-info.diff, files/sylpheed-2.4-firefox.diff,
+  sylpheed-2.6.0.ebuild, -files/sylpheed-2.7-shared-mime-info.diff,
+  -sylpheed-3.0.3.ebuild, -files/sylpheed-3.0-enchant.diff,
+  sylpheed-3.1.1.ebuild:
+  stable on x86. update to EAPI 4.
 
   07 May 2011; Akinori Hattori <hattya@gentoo.org> -sylpheed-3.0.2.ebuild,
   sylpheed-3.0.3.ebuild:

@@ -1,6 +1,5 @@
-diff -Naur sylpheed-2.4.1.orig/libsylph/defs.h sylpheed-2.4.1/libsylph/defs.h
---- sylpheed-2.4.1.orig/libsylph/defs.h	2006-09-22 11:58:56.000000000 +0900
-+++ sylpheed-2.4.1/libsylph/defs.h	2007-05-07 17:25:18.000000000 +0900
+--- sylpheed-2.4.1.orig/libsylph/defs.h
++++ sylpheed-2.4.1/libsylph/defs.h
 @@ -92,7 +92,7 @@
  /* #define DEFAULT_INC_PATH	"/usr/bin/imget" */
  /* #define DEFAULT_INC_PROGRAM	"imget" */
