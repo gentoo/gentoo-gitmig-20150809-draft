@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-broken
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-broken/ChangeLog,v 1.5 2010/02/14 19:17:08 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-broken/ChangeLog,v 1.6 2011/08/13 09:17:08 djc Exp $
+
+  13 Aug 2011; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove python herd from metadata.
 
   14 Feb 2010; Raúl Porcel <armin76@gentoo.org> zope-broken-3.6.0.ebuild:
   Add ~alpha/~sparc wrt #297734

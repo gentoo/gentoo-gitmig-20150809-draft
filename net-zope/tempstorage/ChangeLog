@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/tempstorage
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/tempstorage/ChangeLog,v 1.8 2010/11/29 02:12:19 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/tempstorage/ChangeLog,v 1.9 2011/08/13 08:56:16 djc Exp $
+
+  13 Aug 2011; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove python herd from metadata.
 
   29 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   tempstorage-2.12.1.ebuild:

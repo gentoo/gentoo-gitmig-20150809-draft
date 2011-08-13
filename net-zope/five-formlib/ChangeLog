@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/five-formlib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/five-formlib/ChangeLog,v 1.7 2011/02/06 22:09:33 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/five-formlib/ChangeLog,v 1.8 2011/08/13 08:54:39 djc Exp $
+
+  13 Aug 2011; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove python herd from metadata.
 
 *five-formlib-1.0.4 (06 Feb 2011)
 

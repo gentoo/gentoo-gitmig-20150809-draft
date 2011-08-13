@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-app-form
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-form/ChangeLog,v 1.8 2010/03/12 19:10:39 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-form/ChangeLog,v 1.9 2011/08/13 09:11:17 djc Exp $
+
+  13 Aug 2011; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove python herd from metadata.
 
   12 Mar 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -zope-app-form-4.0.1.ebuild, +zope-app-form-4.0.2.ebuild:

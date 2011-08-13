@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-app-publisher
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-publisher/ChangeLog,v 1.7 2010/09/17 15:07:22 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-app-publisher/ChangeLog,v 1.8 2011/08/13 09:14:15 djc Exp $
+
+  13 Aug 2011; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove python herd from metadata.
 
 *zope-app-publisher-3.10.2 (17 Sep 2010)
 

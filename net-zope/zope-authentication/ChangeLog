@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-authentication
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-authentication/ChangeLog,v 1.5 2010/05/29 20:17:50 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-authentication/ChangeLog,v 1.6 2011/08/13 09:16:21 djc Exp $
+
+  13 Aug 2011; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove python herd from metadata.
 
 *zope-authentication-3.7.1 (29 May 2010)
 
