@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.71 2011/02/19 10:12:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.72 2011/08/13 12:19:39 ulm Exp $
 #
 # Copyright 2002-2004 Matthew Kennedy <mkennedy@gentoo.org>
 # Copyright 2003      Jeremy Maitin-Shepard <jbms@attbi.com>
@@ -171,10 +171,16 @@ BYTECOMPFLAGS="-L ."
 # Output version of currently active Emacs.
 
 elisp-emacs-version() {
+	local ret
 	# The following will work for at least versions 18-23.
 	echo "(princ emacs-version)" >"${T}"/emacs-version.el
 	${EMACS} ${EMACSFLAGS} -l "${T}"/emacs-version.el
+	ret=$?
 	rm -f "${T}"/emacs-version.el
+	if [[ ${ret} -ne 0 ]]; then
+		eerror "elisp-emacs-version: Failed to run ${EMACS}"
+	fi
+	return ${ret}
 }
 
 # @FUNCTION: elisp-need-emacs
@@ -185,8 +191,8 @@ elisp-emacs-version() {
 # specified as argument.
 
 elisp-need-emacs() {
-	local need_emacs=$1
-	local have_emacs=$(elisp-emacs-version)
+	local need_emacs=$1 have_emacs
+	have_emacs=$(elisp-emacs-version) || return
 	einfo "Emacs version: ${have_emacs}"
 	if ! [[ ${have_emacs%%.*} -ge ${need_emacs%%.*} ]]; then
 		eerror "This package needs at least Emacs ${need_emacs%%.*}."
