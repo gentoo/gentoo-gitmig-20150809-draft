@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/snmplib-1.0.3.ebuild,v 1.2 2010/07/08 19:06:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/snmplib-1.0.3.ebuild,v 1.3 2011/08/13 08:38:04 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18"
@@ -22,7 +22,15 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 LICENSE="Ruby"
 SLOT="0"
 
+
 ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
+
+all_ruby_prepare() {
+	# Use the fully qualified class name to avoid problems with other
+	# Integer class definitions. Should fix
+	# https://bugs.gentoo.org/show_bug.cgi?id=323423
+	sed -i -e 's/\sInteger/ SNMP::Integer/' test/* || die
+}
 
 all_ruby_install() {
 	all_fakegem_install
