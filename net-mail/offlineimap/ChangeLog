@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/offlineimap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.69 2011/06/16 05:55:29 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/ChangeLog,v 1.70 2011/08/13 12:15:28 tomka Exp $
+
+*offlineimap-6.3.4 (13 Aug 2011)
+
+  13 Aug 2011; Thomas Kahle <tomka@gentoo.org> -offlineimap-6.3.4_rc2.ebuild,
+  +offlineimap-6.3.4.ebuild,
+  +files/offlineimap-6.3.4-fix-manpage-headings.patch:
+  bump to 6.3.4, remove rc
 
   16 Jun 2011; Thomas Kahle <tomka@gentoo.org> offlineimap-6.3.4_rc2.ebuild:
   Fix keywords
