@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.136 2011/08/11 19:00:19 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.137 2011/08/13 04:19:26 eras Exp $
+
+  13 Aug 2011; Eray Aslan <eras@gentoo.org> dspam-3.10.1.ebuild:
+  stop logwatch from complaining - bug #378877
 
 *dspam-3.10.1 (11 Aug 2011)
 

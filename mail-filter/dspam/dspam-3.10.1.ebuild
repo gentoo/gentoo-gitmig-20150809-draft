@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.10.1.ebuild,v 1.1 2011/08/11 19:00:19 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.10.1.ebuild,v 1.2 2011/08/13 04:19:26 eras Exp $
 
 EAPI=4
 
@@ -189,12 +189,17 @@ src_install() {
 	newins "${FILESDIR}/dspam.logrotate" dspam
 
 	dodoc CHANGELOG README* RELEASE.NOTES UPGRADING doc/*.txt
+
+	# stop logrotate-3.8 from complaining
+	dodir /var/log/dspam
+	fowners dspam:dspam /var/log/dspam
+	fperms 0750 /var/log/dspam
 }
 
 pkg_preinst() {
 	# dspam-3.10.0: config dir change, should be removed at some later point
-	ewarn "The configuration directory of DSPAM has been relocated from /etc/mail/dspam to ${DSPAM_CONF}."
 	if [ -d "${ROOT}/etc/mail/dspam" ]; then
+		ewarn "The configuration directory of DSPAM has been relocated from /etc/mail/dspam to ${DSPAM_CONF}."
 		if [ -h "${ROOT}${DSPAM_CONF}" ]; then
 			# symlink, this is the setup in older ebuilds
 			ewarn "Moving contents of /etc/mail/dspam to ${DSPAM_CONF} ..."
