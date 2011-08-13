@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-2.0.1-r1.ebuild,v 1.6 2011/07/26 17:02:29 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-2.0.1-r1.ebuild,v 1.7 2011/08/13 17:20:43 armin76 Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -70,8 +70,12 @@ src_prepare() {
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"
 
-	#64bit big indian support
+	#64bit big endian support
 	epatch "${FILESDIR}/mozilla-2.0_support_64bit_big_endian.patch"
+
+	# Patches needed for ARM, bug 362237
+	epatch "${FILESDIR}/arm-bug-644136.patch"
+	epatch "${FILESDIR}/mozilla-2.0_arm_respect_cflags.patch"
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user
