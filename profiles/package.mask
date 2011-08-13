@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12974 2011/08/12 07:27:11 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12975 2011/08/13 12:51:07 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -354,10 +354,6 @@ sci-chemistry/webmo
 # Eray Aslan <eras@gentoo.org> (21 Jun 2011)
 # Mask prerelease software
 =app-crypt/heimdal-1.5_pre*
-
-# Peter Volkov <pva@gentoo.org> (18 Jun 2011)
-# Mask release candidate
-=dev-util/oprofile-0.9.7_rc*
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (18 Jun 2011)
 # Mask cups-1.5, too new and still needs a lot of testing
