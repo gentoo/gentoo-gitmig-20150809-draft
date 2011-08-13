@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/extensionclass
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/extensionclass/ChangeLog,v 1.10 2010/11/28 22:10:16 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/extensionclass/ChangeLog,v 1.11 2011/08/13 08:53:37 djc Exp $
+
+  13 Aug 2011; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove python herd from metadata.
 
   28 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   extensionclass-2.13.2.ebuild:
