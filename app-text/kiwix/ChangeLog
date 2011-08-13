@@ -1,6 +1,13 @@
 # ChangeLog for app-text/kiwix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kiwix/ChangeLog,v 1.4 2011/07/23 17:29:24 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kiwix/ChangeLog,v 1.5 2011/08/13 03:51:42 chithanh Exp $
+
+*kiwix-0.9_beta2 (13 Aug 2011)
+
+  13 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -kiwix-0.9_alpha7.ebuild, -kiwix-0.9_beta1.ebuild, +kiwix-0.9_beta2.ebuild,
+  -files/kiwix-0.9-custom-flags.patch, -files/kiwix-0.9-find-xulrunner.patch:
+  Version bump. Remove old.
 
 *kiwix-0.9_beta1 (23 Jul 2011)
 
