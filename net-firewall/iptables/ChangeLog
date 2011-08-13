@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.244 2011/08/07 03:12:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.245 2011/08/13 17:21:16 maekke Exp $
+
+  13 Aug 2011; Markus Meier <maekke@gentoo.org> iptables-1.4.11.1-r2.ebuild:
+  arm stable, bug #376881
 
   07 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   iptables-1.4.11.1-r2.ebuild:
