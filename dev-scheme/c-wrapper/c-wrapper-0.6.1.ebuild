@@ -1,47 +1,40 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/c-wrapper/c-wrapper-0.6.1.ebuild,v 1.1 2009/08/16 07:12:45 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/c-wrapper/c-wrapper-0.6.1.ebuild,v 1.2 2011/08/13 11:41:37 hattya Exp $
 
-IUSE="examples"
+EAPI="4"
+
+inherit autotools eutils
 
 DESCRIPTION="Foreign function interface for C and Objective-C libraries"
 HOMEPAGE="http://homepage.mac.com/naoki.koguro/prog/c-wrapper/"
 SRC_URI="http://homepage.mac.com/naoki.koguro/prog/${PN}/${P}.tgz"
 
 LICENSE="MIT"
-KEYWORDS="~x86"
 SLOT="0"
+KEYWORDS="~x86"
+IUSE="examples"
 
-DEPEND=">=dev-scheme/gauche-0.8.14"
-RDEPEND="${DEPEND}"
+RDEPEND="dev-scheme/gauche
+	dev-libs/libffi"
+DEPEND="${RDEPEND}"
 
-src_compile() {
-
-	econf || die
-	emake -j1 || die
-
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-system-libffi.diff
+	eautoreconf
 }
 
 src_test() {
-
-	emake -j1 -s check || die
-
+	emake -j1 -s check
 }
 
 src_install() {
-
-	emake DESTDIR="${D}" install || die
-
-	dodoc README ChangeLog
+	emake DESTDIR="${D}" install
+	dodoc ChangeLog README
 	dohtml doc/*
 
 	if use examples; then
-		local d
-
-		for d in examples/*; do
-			docinto ${d}
-			dodoc ${d}/*
-		done
+		docompress -x /usr/share/doc/${PF}/examples
+		dodoc -r examples
 	fi
-
 }
