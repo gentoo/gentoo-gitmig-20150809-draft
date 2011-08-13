@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/tokyocabinet-1.4.47.ebuild,v 1.6 2011/04/25 14:33:05 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tokyocabinet/tokyocabinet-1.4.47.ebuild,v 1.7 2011/08/13 08:10:42 patrick Exp $
 
 EAPI="2"
 
@@ -27,6 +27,8 @@ src_prepare() {
 	# cflags fix - remove -O2 at end of line and -fomit-frame-pointer
 	sed -i -e 's/-O3"$/"/' configure.in || die
 	sed -i -e 's/-fomit-frame-pointer//' configure.in || die
+	# flag only works on x86 derivatives, remove everywhere else
+	if ! use x86 && ! use amd64; then sed -i -e 's/ -minline-all-stringops//' configure.in; fi
 	eautoreconf || die
 }
 
