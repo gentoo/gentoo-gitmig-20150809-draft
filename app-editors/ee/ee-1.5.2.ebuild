@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ee/ee-1.5.2.ebuild,v 1.2 2011/05/07 21:12:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ee/ee-1.5.2.ebuild,v 1.3 2011/08/13 12:29:33 hattya Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit eutils toolchain-funcs
 
@@ -16,39 +16,30 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-interix ~amd64-
 IUSE=""
 
 RDEPEND="!app-editors/ersatz-emacs"
-
 S="${WORKDIR}/easyedit-${PV}"
 
 src_prepare() {
-
 	epatch "${FILESDIR}"/${PN}-*.diff
 
 	sed -i \
 		-e "s/make -/\$(MAKE) -/g" \
 		-e "/^buildee/s/$/ localmake/" \
-		Makefile \
-		|| die
+		Makefile
 
 	sed -i \
 		-e "s/\tcc /\t\\\\\$(CC) /" \
 		-e "/CFLAGS =/s/\" >/ \\\\\$(LDFLAGS)\" >/" \
 		-e "/other_cflag/s/ *-s//" \
-		create.make \
-		|| die
-
+		create.make
 }
 
 src_compile() {
-
-	emake CC="$(tc-getCC)" || die
-
+	emake CC="$(tc-getCC)"
 }
 
 src_install() {
-
 	dobin ee
 	doman ee.1
 	dodoc Changes README.ee ee.i18n.guide ee.msg
-	dodir /usr/share/${PN}
-
+	keepdir /usr/share/${PN}
 }

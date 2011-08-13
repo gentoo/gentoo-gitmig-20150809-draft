@@ -1,4 +1,3 @@
-diff -ur easyedit-1.5.2.orig/ee.1 easyedit-1.5.2/ee.1
 --- easyedit-1.5.2.orig/ee.1
 +++ easyedit-1.5.2/ee.1
 @@ -406,7 +406,7 @@
@@ -28,7 +27,6 @@ diff -ur easyedit-1.5.2.orig/ee.1 easyedit-1.5.2/ee.1
  .br
  .I $HOME/.init.ee
  .br
-diff -ur easyedit-1.5.2.orig/ee.c easyedit-1.5.2/ee.c
 --- easyedit-1.5.2.orig/ee.c
 +++ easyedit-1.5.2/ee.c
 @@ -4124,7 +4124,7 @@
