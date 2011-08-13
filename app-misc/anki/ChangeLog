@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/anki
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.35 2011/04/02 13:20:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.36 2011/08/13 22:38:32 tomka Exp $
+
+*anki-1.2.9 (13 Aug 2011)
+
+  13 Aug 2011; Thomas Kahle <tomka@gentoo.org> -anki-0.9.9.8.6-r1.ebuild,
+  -files/anki-0.9.9.8.6-sqlalchemy-0.6.patch, -anki-1.0.ebuild,
+  -anki-1.0.1.ebuild, -anki-1.2.2.ebuild, -anki-1.2.7.ebuild,
+  -anki-1.2.8.ebuild, +anki-1.2.9.ebuild:
+  Bump to 1.2.9 fixing bug 377207, remove old
 
 *anki-1.2.8 (02 Apr 2011)
 
