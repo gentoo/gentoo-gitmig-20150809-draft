@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5619 2011/08/12 20:41:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5620 2011/08/13 10:11:05 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Aug 2011; Anthony G. Basile <blueness@gentoo.org> base/package.mask,
+  features/selinux/package.mask, selinux/package.mask:
+  Added maskings and unmaskings for sys-libs/libsepol
 
   12 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> base/make.defaults:
   Add grub_platforms by default empty to the make_defaults, this is preparation

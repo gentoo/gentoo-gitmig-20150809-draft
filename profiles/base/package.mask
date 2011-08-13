@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.mask,v 1.23 2011/08/07 11:07:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.mask,v 1.24 2011/08/13 10:11:06 blueness Exp $
 
 # Diego Elio Pettenò <flameeyes@gentoo.org> (8 Feb 2011)
 #  on behalf of QA team <qa@gentoo.org
@@ -25,6 +25,7 @@ sys-apps/checkpolicy
 sys-apps/policycoreutils
 sys-libs/libselinux
 sys-libs/libsemanage
+sys-libs/libsepol
 sec-policy/selinux-acct
 sec-policy/selinux-acpi
 sec-policy/selinux-ada
