@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/endeavour
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.34 2011/04/21 11:42:49 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.35 2011/08/13 07:35:26 xarthisius Exp $
+
+  13 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> endeavour-2.7.3.ebuild,
+  endeavour-2.7.3-r1.ebuild:
+  Dropped ppc keywords wrt #360947
 
   21 Apr 2011; Thomas Kahle <tomka@gentoo.org> endeavour-2.7.3-r1.ebuild:
   x86 stable per bug 360947

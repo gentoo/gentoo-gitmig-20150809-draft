@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.7.3.ebuild,v 1.7 2011/03/28 16:19:20 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.7.3.ebuild,v 1.8 2011/08/13 07:35:26 xarthisius Exp $
 
 EAPI=1
 inherit eutils
@@ -13,7 +13,7 @@ SRC_URI="ftp://wolfpack.twu.net/users/wolfpack/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 x86"
 IUSE="joystick"
 
 DEPEND="app-arch/bzip2
