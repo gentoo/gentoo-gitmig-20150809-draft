@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/preferences/preferences-1.3.0_pre20100523.ebuild,v 1.3 2011/04/25 12:51:47 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/preferences/preferences-1.3.0_pre20100523.ebuild,v 1.4 2011/08/13 07:37:52 xarthisius Exp $
 
 EAPI=3
 inherit gnustep-2
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.nongnu.org/backbone/apps.html"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 IUSE=""
 
