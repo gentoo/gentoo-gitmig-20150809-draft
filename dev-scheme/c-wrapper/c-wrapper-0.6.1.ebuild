@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/c-wrapper/c-wrapper-0.6.1.ebuild,v 1.2 2011/08/13 11:41:37 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/c-wrapper/c-wrapper-0.6.1.ebuild,v 1.3 2011/08/13 11:44:04 hattya Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://homepage.mac.com/naoki.koguro/prog/${PN}/${P}.tgz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="examples"
 
 RDEPEND="dev-scheme/gauche
