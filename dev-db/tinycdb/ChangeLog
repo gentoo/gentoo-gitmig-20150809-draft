@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/tinycdb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/ChangeLog,v 1.25 2010/04/11 08:26:13 hattya Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tinycdb/ChangeLog,v 1.26 2011/08/13 12:03:15 hattya Exp $
+
+*tinycdb-0.77-r1 (13 Aug 2011)
+
+  13 Aug 2011; Akinori Hattori <hattya@gentoo.org> +tinycdb-0.77-r1.ebuild,
+  +files/tinycdb-0.77-gentoo.diff:
+  add static-libs use flag. fixes bug #359557.
 
   11 Apr 2010; Akinori Hattori <hattya@gentoo.org> -tinycdb-0.74.ebuild,
   -tinycdb-0.76.ebuild, -files/tinycdb-libbase.diff:
