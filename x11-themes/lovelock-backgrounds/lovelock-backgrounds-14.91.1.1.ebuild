@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/lovelock-backgrounds/lovelock-backgrounds-14.90.1.3.ebuild,v 1.1 2011/03/09 22:23:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/lovelock-backgrounds/lovelock-backgrounds-14.91.1.1.ebuild,v 1.1 2011/08/13 23:35:53 flameeyes Exp $
 
 EAPI=3
 
 inherit versionator rpm
 
-SRC_PATH=development/15/source/SRPMS
+SRC_PATH=releases/15/Fedora/source/SRPMS
 FEDORA=15
 
 MY_P="${PN}-$(get_version_component_range 1-3)"
