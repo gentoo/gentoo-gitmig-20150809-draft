@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Dist-CheckConflicts
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Dist-CheckConflicts/ChangeLog,v 1.3 2011/03/27 08:39:04 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Dist-CheckConflicts/ChangeLog,v 1.4 2011/08/13 09:09:10 xarthisius Exp $
+
+  13 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  Dist-CheckConflicts-0.20.ebuild:
+  ppc stable wrt #350853
 
   27 Mar 2011; Torsten Veller <tove@gentoo.org>
   Dist-CheckConflicts-0.20.ebuild:
