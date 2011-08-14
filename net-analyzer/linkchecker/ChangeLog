@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/linkchecker
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.57 2011/08/08 17:14:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.58 2011/08/14 11:57:25 jlec Exp $
+
+*linkchecker-7.1 (14 Aug 2011)
+
+  14 Aug 2011; Justin Lecher <jlec@gentoo.org> +linkchecker-7.1.ebuild:
+  Version Bump
 
   08 Aug 2011; Markos Chandras <hwoarang@gentoo.org> linkchecker-7.0.ebuild:
   Restrict 2.4 and 2.5 Python ABIs. Update HOMEPAGE. Patch by Arfrever.
