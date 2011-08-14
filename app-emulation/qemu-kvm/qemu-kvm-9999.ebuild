@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.18 2011/08/12 15:41:01 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.19 2011/08/14 12:37:14 flameeyes Exp $
 
 #BACKPORTS=2
 
@@ -28,7 +28,7 @@ HOMEPAGE="http://www.linux-kvm.org"
 LICENSE="GPL-2"
 SLOT="0"
 # xen is disabled until the deps are fixed
-IUSE="+aio alsa bluetooth brltty curl debug esd fdt hardened jpeg ncurses \
+IUSE="+aio alsa bluetooth brltty curl debug esd fdt hardened jpeg ncurses nss \
 png pulseaudio qemu-ifup rbd sasl sdl spice ssl threads vde \
 +vhost-net xen"
 # static, depends on libsdl being built with USE=static-libs, which can not
@@ -75,6 +75,7 @@ RDEPEND="
 	fdt? ( >=sys-apps/dtc-1.2.0 )
 	jpeg? ( virtual/jpeg )
 	ncurses? ( sys-libs/ncurses )
+	nss? ( dev-libs/nss )
 	png? ( media-libs/libpng )
 	pulseaudio? ( media-sound/pulseaudio )
 	qemu-ifup? ( sys-apps/iproute2 net-misc/bridge-utils )
@@ -198,6 +199,7 @@ src_configure() {
 	conf_opts="${conf_opts} $(use_enable hardened user-pie)"
 	conf_opts="${conf_opts} $(use_enable jpeg vnc-jpeg)"
 	conf_opts="${conf_opts} $(use_enable ncurses curses)"
+	conf_opts="${conf_opts} $(use_enable nss smartcard-nss)"
 	conf_opts="${conf_opts} $(use_enable png vnc-png)"
 	conf_opts="${conf_opts} $(use_enable rbd)"
 	conf_opts="${conf_opts} $(use_enable sasl vnc-sasl)"
