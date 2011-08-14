@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gupnp-vala
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-vala/ChangeLog,v 1.7 2011/07/24 14:59:24 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-vala/ChangeLog,v 1.8 2011/08/14 10:28:58 nirbheek Exp $
+
+  14 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> -gupnp-vala-0.6.2.ebuild,
+  -gupnp-vala-0.6.12.ebuild, -gupnp-vala-0.7.5.ebuild, gupnp-vala-0.8.0.ebuild:
+  Remove old, use EAPI 4
 
 *gupnp-vala-0.8.0 (24 Jul 2011)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-vala/gupnp-vala-0.8.0.ebuild,v 1.1 2011/07/24 14:59:24 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-vala/gupnp-vala-0.8.0.ebuild,v 1.2 2011/08/14 10:28:58 nirbheek Exp $
 
-EAPI=3
+EAPI="4"
 
 DESCRIPTION="Vala bindings for the GUPnP framework"
 HOMEPAGE="http://gupnp.org/"
@@ -22,13 +22,10 @@ RDEPEND=">=dev-lang/vala-0.11.3:0.12[vapigen]
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+DOCS="AUTHORS ChangeLog NEWS README"
+
 src_configure() {
 	econf \
 		VALAC=$(type -p valac-0.12) \
 		VAPIGEN=$(type -p vapigen-0.12)
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README
 }
