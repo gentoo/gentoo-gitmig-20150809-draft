@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-test/rack-test-0.5.7.ebuild,v 1.5 2011/08/07 14:48:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-test/rack-test-0.5.7.ebuild,v 1.6 2011/08/14 09:40:48 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -23,9 +23,11 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-solaris"
 IUSE=""
 
 ruby_add_rdepend '>=dev-ruby/rack-1.0'
-ruby_add_bdepend "test? ( dev-ruby/rspec:2 dev-ruby/sinatra )"
+ruby_add_bdepend "test? ( dev-ruby/rspec:2 >=dev-ruby/sinatra-1.2.0 )"
 
 all_ruby_prepare() {
 	# Remove Bundler related code.
 	rm Gemfile Gemfile.lock || die "Unable to clean unneeded Bundler items."
+
+	sed -i -e 's:== "text/html":=~ /^text\\\/html/:' spec/rack/test_spec.rb || die
 }
