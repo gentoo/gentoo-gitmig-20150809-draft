@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.155 2011/08/13 16:46:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.156 2011/08/14 04:36:55 nirbheek Exp $
+
+  14 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gmime-2.4.25.ebuild:
+  USE=static-libs support, bug 378769
 
   13 Aug 2011; Raúl Porcel <armin76@gentoo.org> gmime-2.4.24.ebuild:
   alpha/ia64/sparc stable wrt #369909
