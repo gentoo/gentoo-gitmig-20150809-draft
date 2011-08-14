@@ -1,6 +1,15 @@
 # ChangeLog for sci-chemistry/avogadro
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.39 2011/07/20 16:01:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.40 2011/08/14 17:18:19 alexxy Exp $
+
+*avogadro-1.0.3-r1 (14 Aug 2011)
+
+  14 Aug 2011; Alexey Shvetsov <alexxy@gentoo.org>
+  -files/avogadro-0.9.7-shader-include.patch, -avogadro-1.0.0.ebuild,
+  -files/avogadro-1.0.0-sip-4.10.patch, -avogadro-1.0.1.ebuild,
+  -files/avogadro-1.0.1-sip-backport.patch, -avogadro-1.0.3.ebuild,
+  +avogadro-1.0.3-r1.ebuild:
+  Drop old versions and make it respect qt_mkspec
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #70723

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-1.0.3.ebuild,v 1.3 2011/04/28 14:22:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-1.0.3-r1.ebuild,v 1.1 2011/08/14 17:18:19 alexxy Exp $
 
 EAPI=3
 
@@ -45,6 +45,8 @@ src_configure() {
 		"-DENABLE_THREADGL=FALSE"
 		"-DENABLE_RPATH=OFF"
 		"-DENABLE_UPDATE_CHECKER=OFF"
+		"-DQT_MKSPECS_DIR=${EPREFIX}/usr/share/qt4/mkspecs"
+		"-DQT_MKSPECS_RELATIVE=share/qt4/mkspecs"
 		$(cmake-utils_use_enable glsl)
 		$(cmake-utils_use_with sse2 SSE2)
 		$(cmake-utils_use_enable python)
