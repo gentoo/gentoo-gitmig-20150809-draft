@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xvideoservicethief/xvideoservicethief-2.4.1-r1.ebuild,v 1.1 2011/08/14 13:11:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xvideoservicethief/xvideoservicethief-2.4.1-r1.ebuild,v 1.2 2011/08/14 22:38:13 hwoarang Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/xviservicethief/${MY_P}.zip"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug doc"
 
 DEPEND="app-arch/unzip
