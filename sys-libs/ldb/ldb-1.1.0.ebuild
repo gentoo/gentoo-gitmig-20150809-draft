@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ldb-1.1.0.ebuild,v 1.8 2011/08/10 18:42:47 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ldb-1.1.0.ebuild,v 1.9 2011/08/14 11:00:04 xarthisius Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -13,7 +13,7 @@ SRC_URI="http://www.samba.org/ftp/pub/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc"
 
 RDEPEND="dev-libs/popt
@@ -38,7 +38,7 @@ pkg_setup() {
 src_configure() {
 	waf-utils_src_configure --disable-rpath \
 	--disable-rpath-install --bundled-libraries=NONE \
-	--with-modulesdir="${EPRFIX}"/usr/$(get_libdir)/ldb/modules \
+	--with-modulesdir="${EPREFIX}"/usr/$(get_libdir)/ldb/modules \
 	--builtin-libraries=NONE
 }
 
@@ -50,7 +50,7 @@ src_compile(){
 src_test() {
 	WAF_MAKE=1 \
 	PATH=buildtools/bin:../../../buildtools/bin:$PATH:"${S}"/bin/shared/private/ \
-	LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/"${S}"/bin/shared/private/ waf test || die
+	LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"${S}"/bin/shared/private/:"${S}"/bin/shared waf test || die
 }
 
 src_install() {
