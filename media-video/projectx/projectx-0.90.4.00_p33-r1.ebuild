@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.90.4.00_p33-r1.ebuild,v 1.4 2011/07/10 02:46:21 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/projectx-0.90.4.00_p33-r1.ebuild,v 1.5 2011/08/14 22:46:53 hwoarang Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ SRC_URI="http://sbriesen.de/gentoo/distfiles/${P}.tar.xz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE="X mmx sse"
 
 COMMON_DEP="dev-java/commons-net
