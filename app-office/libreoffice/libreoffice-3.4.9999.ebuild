@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999.ebuild,v 1.19 2011/08/14 06:48:45 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999.ebuild,v 1.20 2011/08/14 18:48:55 scarabeus Exp $
 
 EAPI=3
 
@@ -130,7 +130,7 @@ unset X
 COMMON_DEPEND="
 	app-arch/zip
 	app-arch/unzip
-	>=app-text/hunspell-1.1.4-r1
+	>=app-text/hunspell-1.3.2
 	app-text/mythes
 	app-text/libwpd:0.9[tools]
 	app-text/libwpg:0.2
@@ -146,24 +146,21 @@ COMMON_DEPEND="
 	dev-libs/redland[ssl]
 	media-libs/freetype:2
 	>=media-libs/fontconfig-2.3.0
-	>=media-libs/vigra-1.4
-	media-libs/libpng
+	>=media-libs/vigra-1.7
+	>=media-libs/libpng-1.4
 	sci-mathematics/lpsolve
 	>=sys-libs/db-4.8
 	virtual/jpeg
-	>=x11-libs/cairo-1.0.2
+	>=x11-libs/cairo-1.10.0
 	x11-libs/libXaw
 	x11-libs/libXinerama
 	x11-libs/libXrandr
 	x11-libs/libXrender
 	cups? ( net-print/cups )
-	dbus? ( >=dev-libs/dbus-glib-0.71 )
-	eds? ( >=gnome-extra/evolution-data-server-1.2 )
-	gnome? (
-		>=x11-libs/gtk+-2.10:2
-		gnome-base/gconf:2
-	)
-	gtk? ( >=x11-libs/gtk+-2.10:2 )
+	dbus? ( >=dev-libs/dbus-glib-0.94 )
+	eds? ( gnome-extra/evolution-data-server )
+	gnome? ( gnome-base/gconf:2 )
+	gtk? ( >=x11-libs/gtk+-2.24:2 )
 	graphite? ( media-gfx/graphite2 )
 	gstreamer? (
 		>=media-libs/gstreamer-0.10
@@ -176,11 +173,11 @@ COMMON_DEPEND="
 		dev-java/saxon:0
 	)
 	ldap? ( net-nds/openldap )
-	mysql? ( dev-db/mysql-connector-c++ )
+	mysql? ( >=dev-db/mysql-connector-c++-1.1.0 )
 	nsplugin? (
 		net-libs/xulrunner:1.9
-		>=dev-libs/nspr-4.6.6
-		>=dev-libs/nss-3.11-r1
+		>=dev-libs/nspr-4.8.8
+		>=dev-libs/nss-3.12.9
 	)
 	opengl? ( virtual/opengl )
 	webdav? ( net-libs/neon )
@@ -190,21 +187,21 @@ RDEPEND="${COMMON_DEPEND}
 	!app-office/libreoffice-bin
 	!app-office/openoffice-bin
 	!app-office/openoffice
-	java? ( >=virtual/jre-1.5 )
+	java? ( >=virtual/jre-1.6 )
 	${SPELL_DIRS_DEPEND}
 "
 
 DEPEND="${COMMON_DEPEND}
-	>=dev-libs/boost-1.36
-	>=dev-libs/libxml2-2.0
+	>=dev-libs/boost-1.46
+	>=dev-libs/libxml2-2.7.8
 	dev-libs/libxslt
 	dev-perl/Archive-Zip
 	>=dev-util/gperf-3
 	dev-util/intltool
 	dev-util/mdds
-	dev-util/pkgconfig
-	>=net-misc/curl-7.12
-	>=sys-apps/findutils-4.1.20-r1
+	>=dev-util/pkgconfig-0.26
+	>=net-misc/curl-7.21.7
+	>=sys-apps/findutils-4.5.9
 	sys-devel/bison
 	sys-apps/coreutils
 	sys-devel/flex
