@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyparsing
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.69 2011/06/14 05:17:24 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparsing/ChangeLog,v 1.70 2011/08/14 18:31:14 maekke Exp $
+
+  14 Aug 2011; Markus Meier <maekke@gentoo.org> pyparsing-1.5.5.ebuild:
+  arm stable, bug #355085
 
   14 Jun 2011; Matt Turner <mattst88@gentoo.org> pyparsing-1.5.5.ebuild:
   Added ~mips, bug 352300
