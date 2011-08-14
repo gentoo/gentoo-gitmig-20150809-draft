@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/prll/prll-0.6.ebuild,v 1.2 2011/05/22 13:40:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/prll/prll-0.6.ebuild,v 1.3 2011/08/14 14:30:24 jlec Exp $
 
 EAPI=4
 
@@ -16,6 +16,11 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 src_prepare() {
+	sed \
+		-e '/then sh/d' \
+		-e '/then zsh/d' \
+		-e '/then dash/d' \
+		-i tests/Makefile || die
 	tc-export CC
 }
 

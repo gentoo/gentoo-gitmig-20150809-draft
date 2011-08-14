@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/prll
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/prll/ChangeLog,v 1.9 2011/05/22 13:40:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/prll/ChangeLog,v 1.10 2011/08/14 14:30:24 jlec Exp $
+
+  14 Aug 2011; Justin Lecher <jlec@gentoo.org> prll-0.6.ebuild, metadata.xml:
+  Don't test with random shells, but with bash, #378563
 
   22 May 2011; Justin Lecher <jlec@gentoo.org> prll-0.6.ebuild:
   Removed unnessacerry DEP and correct DESCRIPTION, #368347
