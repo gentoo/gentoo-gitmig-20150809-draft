@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.284 2011/07/22 18:05:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.285 2011/08/14 10:30:38 nirbheek Exp $
+
+  14 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
+  Unmask USE=introspection on gupnp-related packages and gstreamer
 
   22 Jul 2011; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
   Mask USE="nat-pmp" and "upnp" here and unmask it in amd64 and x86 profiles.

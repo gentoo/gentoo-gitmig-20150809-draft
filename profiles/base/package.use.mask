@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.253 2011/07/22 18:05:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.254 2011/08/14 10:30:38 nirbheek Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -38,7 +38,13 @@ gnustep-base/gnustep-make libobjc2
 >=dev-libs/json-glib-0.12 -introspection
 >=media-libs/clutter-1.6 -introspection
 >=media-libs/clutter-gtk-1 -introspection
+>=media-libs/gstreamer-0.10.33 -introspection
+>=media-libs/gst-plugins-base-0.10.33 -introspection
+>=media-libs/gupnp-dlna-0.8 -introspection
 >=media-libs/libchamplain-0.8 -introspection
+>=net-libs/gssdp-0.9 -introspection
+>=net-libs/gupnp-0.15 -introspection
+>=net-libs/gupnp-av-0.6 -introspection
 >=net-libs/libsoup-2.34 -introspection
 >=net-libs/libsoup-gnome-2.34 -introspection
 >=net-libs/webkit-gtk-1.4 -introspection
