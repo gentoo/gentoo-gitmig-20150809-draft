@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.5_pre324.ebuild,v 1.2 2011/07/13 15:42:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.5_pre324.ebuild,v 1.3 2011/08/14 14:41:10 jlec Exp $
 
 EAPI=3
 
@@ -22,7 +22,7 @@ KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux"
 RDEPEND="
 	dev-lang/tk
 	>=dev-tcltk/tcllib-1.11
-	>=media-libs/libpng-1.4.7
+	=media-libs/libpng-1.4*
 	virtual/jpeg
 	media-libs/tiff"
 DEPEND="${RDEPEND}

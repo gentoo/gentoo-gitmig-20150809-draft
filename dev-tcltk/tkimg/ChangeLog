@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/tkimg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.26 2011/07/21 18:51:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.27 2011/08/14 14:41:10 jlec Exp $
+
+  14 Aug 2011; Justin Lecher <jlec@gentoo.org> tkimg-1.4.ebuild,
+  tkimg-1.4-r1.ebuild, tkimg-1.4.20100510.ebuild, tkimg-1.5_pre324.ebuild,
+  tkimg-1.5_pre324-r1.ebuild:
+  Fixed libpng version to 1.4*, #378261
 
 *tkimg-1.4-r1 (21 Jul 2011)
 
