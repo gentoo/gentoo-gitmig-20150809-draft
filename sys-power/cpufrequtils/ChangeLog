@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/cpufrequtils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.67 2011/08/14 02:56:38 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.68 2011/08/14 03:08:12 mattst88 Exp $
+
+  14 Aug 2011; Matt Turner <mattst88@gentoo.org>
+  files/cpufrequtils-007-nls.patch:
+  Fix authorship of a patch.
 
   14 Aug 2011; Matt Turner <mattst88@gentoo.org>
   -files/cpufrequtils-conf.d-005, -files/cpufrequtils-init.d-005,

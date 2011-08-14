@@ -1,7 +1,7 @@
 make nls/gettext support optional
 
 patch by
-Jos van der Ende <seraph@xs4all.nl>
+Sergey Dryabzhinsky <sergey.dryabzhinsky@gmail.com>
 Lars Wendler <polynomial-c@gentoo.org>
 
 http://bugs.gentoo.org/205576
