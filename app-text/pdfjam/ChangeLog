@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pdfjam
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdfjam/ChangeLog,v 1.31 2011/08/12 15:39:51 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdfjam/ChangeLog,v 1.32 2011/08/14 18:35:26 maekke Exp $
+
+  14 Aug 2011; Markus Meier <maekke@gentoo.org> pdfjam-2.05.ebuild:
+  arm stable, bug #355085
 
   12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> pdfjam-2.05.ebuild:
   ppc/ppc64 stable wrt #355085
