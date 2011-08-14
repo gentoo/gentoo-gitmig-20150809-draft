@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/grilo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/ChangeLog,v 1.2 2011/06/15 16:37:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/ChangeLog,v 1.3 2011/08/14 10:52:25 nirbheek Exp $
+
+*grilo-0.1.16 (14 Aug 2011)
+
+  14 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +grilo-0.1.16.ebuild,
+  +files/grilo-0.1.16-constants.py,
+  +files/grilo-0.1.16-fix-automagic-test-ui.patch,
+  +files/grilo-0.1.16-media-source-infinite-loop.patch:
+  Bump to 0.1.16, bug 377651
 
   15 Jun 2011; Pacho Ramos <pacho@gentoo.org> grilo-0.1.15.ebuild:
   Prepare to set 'xz' as default compressor for eapi4.
