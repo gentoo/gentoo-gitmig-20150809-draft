@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/lbzip2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.16 2011/08/06 19:19:45 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.17 2011/08/14 23:35:13 mattst88 Exp $
+
+  14 Aug 2011; Matt Turner <mattst88@gentoo.org> +files/0.23-test.sh.patch,
+  lbzip2-0.23-r2.ebuild:
+  Don't use lfs.sh from test.sh. Should help BSD.
 
 *lbzip2-0.23-r2 (06 Aug 2011)
 
