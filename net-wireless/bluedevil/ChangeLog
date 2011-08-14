@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluedevil
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/ChangeLog,v 1.13 2011/05/30 09:58:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/ChangeLog,v 1.14 2011/08/14 17:55:19 maekke Exp $
+
+  14 Aug 2011; Markus Meier <maekke@gentoo.org> bluedevil-1.1-r2.ebuild:
+  add ~arm, bug #376613
 
 *bluedevil-1.1-r2 (30 May 2011)
 
