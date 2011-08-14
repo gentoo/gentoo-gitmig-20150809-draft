@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/votca-csg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/ChangeLog,v 1.6 2011/07/17 12:46:17 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/ChangeLog,v 1.7 2011/08/14 15:17:01 ottxor Exp $
+
+  14 Aug 2011; Christoph Junghans <ottxor@gentoo.org> -votca-csg-1.1.1.ebuild,
+  -votca-csg-1.1.2.ebuild, votca-csg-1.2.ebuild, metadata.xml:
+  renamed boost useflag to system-boost and removed old
 
   17 Jul 2011; Christoph Junghans <ottxor@gentoo.org> votca-csg-1.2.ebuild:
   Added IUSE=examples

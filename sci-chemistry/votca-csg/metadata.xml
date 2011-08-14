@@ -7,7 +7,7 @@
 		<name>Christoph Junghans</name>
 	</maintainer>
 	<use>
-		<flag name='boost'>Compile against external boost headers (dev-libs/boost)</flag>
-		<flag name='gromacs'>Add support for file formats from <pkg>sci-chemistry/gromacs</pkg></flag>
+		<flag name='gromacs'>Add support for gromacs file formats through <pkg>sci-chemistry/gromacs</pkg></flag>
+		<flag name='system-boost'>Use system boost (<pkg>dev-libs/boost</pkg>) instead of bundled one</flag>
 	</use>
 </pkgmetadata>
