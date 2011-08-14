@@ -1,10 +1,23 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5622 2011/08/14 17:54:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5623 2011/08/14 21:44:50 maekke Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Aug 2011; Markus Meier <maekke@gentoo.org>
+  default/linux/arm/10.0/armv4/desktop/gnome/parent,
+  default/linux/arm/10.0/armv4/desktop/kde/parent,
+  default/linux/arm/10.0/armv4t/desktop/gnome/parent,
+  default/linux/arm/10.0/armv4t/desktop/kde/parent,
+  default/linux/arm/10.0/armv5te/desktop/gnome/parent,
+  default/linux/arm/10.0/armv5te/desktop/kde/parent,
+  default/linux/arm/10.0/armv6j/desktop/gnome/parent,
+  default/linux/arm/10.0/armv6j/desktop/kde/parent,
+  default/linux/arm/10.0/armv7a/desktop/gnome/parent,
+  default/linux/arm/10.0/armv7a/desktop/kde/parent:
+  fix gnome/kde parents in arm subprofiles, spotted by mr_bones_
 
   14 Aug 2011; Markus Meier <maekke@gentoo.org>
   +default/linux/arm/10.0/armv4/desktop/eapi,
