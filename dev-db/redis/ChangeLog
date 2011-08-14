@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.21 2011/07/04 08:17:29 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.22 2011/08/14 12:32:55 lu_zero Exp $
+
+*redis-2.2.12 (14 Aug 2011)
+
+  14 Aug 2011; Luca Barbato <lu_zero@gentoo.org> +redis-2.2.12.ebuild,
+  +files/redis-2.2-as-needed.patch:
+  New version
 
 *redis-2.2.11 (04 Jul 2011)
 
