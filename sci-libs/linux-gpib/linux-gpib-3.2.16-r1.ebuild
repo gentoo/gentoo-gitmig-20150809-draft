@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/linux-gpib-3.2.15.ebuild,v 1.1 2011/01/31 22:29:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/linux-gpib/linux-gpib-3.2.16-r1.ebuild,v 1.1 2011/08/14 11:22:30 dilfridge Exp $
 
-EAPI=3
+EAPI=4
+PERL_EXPORT_PHASE_FUNCTIONS=no
 
-inherit base linux-mod autotools
+inherit base linux-mod autotools perl-module
 
 DESCRIPTION="Kernel module and driver library for GPIB (IEEE 488.2) hardware"
 HOMEPAGE="http://linux-gpib.sourceforge.net/"
@@ -16,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="pcmcia static debug guile perl php python tcl doc firmware"
 
-RDEPEND="
+COMMONDEPEND="
 	tcl? ( dev-lang/tcl )
 	guile? ( dev-scheme/guile )
 	perl? ( dev-lang/perl )
@@ -24,21 +25,26 @@ RDEPEND="
 	python? ( dev-lang/python )
 	firmware? ( sys-apps/fxload )
 "
-
-DEPEND="${RDEPEND}
+RDEPEND="${COMMONDEPEND}"
+DEPEND="${COMMONDEPEND}
 	sys-kernel/module-rebuild
 	doc? ( app-text/docbook-sgml-utils )
+	perl? ( virtual/perl-ExtUtils-MakeMaker )
 "
 
-PATCHES=( "${FILESDIR}/${P}-build.patch" )
+PATCHES=(
+	"${FILESDIR}/${PN}-3.2.15-build.patch"
+	"${FILESDIR}/${PN}-3.2.16-perl.patch"
+)
 
 pkg_setup () {
+	perl-module_pkg_setup
 	linux-mod_pkg_setup
 
 	case ${KV_MINOR} in
 		4) die "This version of Linux-GPIB requires a version 2.6.x of the Linux kernel. 2.4.x kernels are supported by Linux-GPIB versions 3.1.x." ;;
 		6) ;;
-		*) die "Unsupported kernel version '${KV}'." ;;
+		*) die "Unsupported kernel version '${KV_FULL}'." ;;
 	esac
 
 	if [ ${KV_PATCH} -lt 8 ] ; then
@@ -63,30 +69,36 @@ src_configure() {
 		$(use_enable python python-binding) \
 		$(use_enable tcl tcl-binding) \
 		$(use_enable doc documentation) \
-		--with-linux-srcdir=${KV_DIR} \
-		|| die
+		--with-linux-srcdir=${KV_DIR}
 }
 
 src_compile() {
-	emake || die
-}
-
-src_install () {
-
+	set_arch_to_kernel
 	FIRM_DIR=/usr/share/usb
-
-	# Here I changed the sbindir in order to install the gpib_config to /sbin,
-	# not /usr/sbin. This is done to enable running gpib_config from
-	# the modprobe.conf file: if /usr is not in the root file system,
-	# but a mounted partition then gpib_congig cannot be found in the moment when
-	# modprobe is run.
-	make \
+	emake \
 		DESTDIR=${D} \
 		INSTALL_MOD_PATH=${D} \
 		HOTPLUG_USB_CONF_DIR=${D}/etc/hotplug/usb \
 		USB_FIRMWARE_DIR=${D}${FIRM_DIR} \
-		docdir=/usr/share/doc/${PF}/html \
-		install || die "install problem"
+		docdir=/usr/share/doc/${PF}/html
+}
+
+src_install () {
+	set_arch_to_kernel
+	FIRM_DIR=/usr/share/usb
+	emake \
+		DESTDIR=${D} \
+		INSTALL_MOD_PATH=${D} \
+		HOTPLUG_USB_CONF_DIR=${D}/etc/hotplug/usb \
+		USB_FIRMWARE_DIR=${D}${FIRM_DIR} \
+		docdir=/usr/share/doc/${PF}/html install
+
+	if use perl; then
+		einfo "Installing perl module"
+		cd "${S}/language/perl" || die
+		DESTDIR=${D} perl-module_src_install
+		cd "${S}" || die
+	fi
 
 	echo "KERNEL==\"gpib[0-9]*\",	MODE=\"0660\", GROUP=\"gpib\"" >> 99-gpib.rules
 	insinto /etc/udev/rules.d/
@@ -105,29 +117,26 @@ src_install () {
 	fi
 
 	if use firmware ; then
-
-		dodir "${FIRM_DIR}/agilent_8237a"
 		insinto "${FIRM_DIR}/agilent_8237a"
 		doins "${WORKDIR}"/gpib_firmware-2006-11-12/agilent_8237a/*
 
-		dodir "${FIRM_DIR}/ni_gpib_usb_b"
 		insinto "${FIRM_DIR}/ni_gpib_usb_b"
 		doins "${WORKDIR}"/gpib_firmware-2006-11-12/ni_gpib_usb_b/*
 
-		dodir "/usr/share/linux-gpib/hp_82341"
 		insinto "/usr/share/linux-gpib/hp_82341"
 		doins "${WORKDIR}"/gpib_firmware-2006-11-12/hp_82341/*
-
 	fi
 }
 
 pkg_preinst () {
 	linux-mod_pkg_preinst
+	perl-module_pkg_preinst
 	enewgroup gpib
 }
 
 pkg_postinst () {
 	linux-mod_pkg_postinst
+	perl-module_pkg_postinst
 
 	einfo "You need to run the 'gpib_config' utility to setup the driver before"
 	einfo "you can use it. In order to do it automatically you can add to your"
