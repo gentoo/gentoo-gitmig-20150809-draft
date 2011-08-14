@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latexmk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.30 2011/08/12 15:49:43 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.31 2011/08/14 19:56:52 maekke Exp $
+
+  14 Aug 2011; Markus Meier <maekke@gentoo.org> latexmk-423a.ebuild:
+  arm stable, bug #355085
 
   12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> latexmk-423a.ebuild:
   ppc/ppc64 stable wrt #355085
