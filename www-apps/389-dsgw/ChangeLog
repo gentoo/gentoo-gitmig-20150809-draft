@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/389-dsgw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/389-dsgw/ChangeLog,v 1.2 2011/01/11 23:38:34 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/389-dsgw/ChangeLog,v 1.3 2011/08/14 09:33:10 lxnay Exp $
+
+*389-dsgw-1.1.7 (14 Aug 2011)
+
+  14 Aug 2011; Fabio Erculiani <lxnay@gentoo.org> +389-dsgw-1.1.7.ebuild:
+  version bump
 
 *389-dsgw-1.1.6 (11 Jan 2011)
 
