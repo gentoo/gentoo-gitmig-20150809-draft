@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.16.1.ebuild,v 1.1 2011/06/05 21:38:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.16.1.ebuild,v 1.2 2011/08/14 10:21:05 nirbheek Exp $
 
-EAPI=3
+EAPI="4"
 
-DESCRIPTION="an object-oriented framework for creating UPnP devs and control points."
+DESCRIPTION="An object-oriented framework for creating UPnP devs and control points"
 HOMEPAGE="http://gupnp.org/"
 SRC_URI="http://gupnp.org/sites/all/files/sources/${P}.tar.gz"
 
@@ -24,6 +24,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
 
+DOCS="AUTHORS ChangeLog NEWS README"
+
 src_configure() {
 	local backend=unix
 	use networkmanager && backend=network-manager
@@ -34,9 +36,4 @@ src_configure() {
 		--disable-gtk-doc \
 		--with-context-manager=${backend} \
 		--with-html-dir=/usr/share/doc/${PF}/html
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README
 }

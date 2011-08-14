@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/gupnp-av-0.8.0.ebuild,v 1.2 2011/08/05 10:52:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-av/gupnp-av-0.8.0.ebuild,v 1.3 2011/08/14 10:20:59 nirbheek Exp $
 
-EAPI=3
+EAPI="4"
 
-DESCRIPTION="a small utility library that aims to ease the handling UPnP A/V profiles."
+DESCRIPTION="A small utility library that aims to ease the handling UPnP A/V profiles"
 HOMEPAGE="http://gupnp.org/"
 SRC_URI="http://gupnp.org/sites/all/files/sources/${P}.tar.gz"
 
@@ -14,10 +14,14 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="+introspection"
 
 RDEPEND=">=dev-libs/glib-2.16:2
+	>=net-libs/gssdp-0.9.2[introspection?]
+	>=net-libs/libsoup-2.28.2:2.4[introspection?]
 	>=net-libs/gupnp-0.13[introspection?]
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+DOCS="AUTHORS ChangeLog NEWS README"
 
 src_configure() {
 	econf \
@@ -30,7 +34,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake failed"
-	dodoc AUTHORS ChangeLog NEWS README || die "dodoc failed"
-	find "${D}" -type f -name "*.la" -delete
+	default
+	# Remove pointless .la files
+	find "${D}" -name '*.la' -exec rm -f {} + || die
 }
