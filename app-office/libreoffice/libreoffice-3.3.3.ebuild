@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.3.ebuild,v 1.3 2011/08/11 14:16:30 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.3.ebuild,v 1.4 2011/08/14 15:24:52 hwoarang Exp $
 
 EAPI="3"
 
@@ -118,7 +118,7 @@ done
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc ~x86 ~amd64-linux ~x86-linux"
 
 COMMON_DEPEND="!app-office/libreoffice-bin
 	!app-office/openoffice-bin
