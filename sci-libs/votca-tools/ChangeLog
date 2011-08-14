@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/votca-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/ChangeLog,v 1.6 2011/07/06 14:43:39 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/ChangeLog,v 1.7 2011/08/14 15:16:00 ottxor Exp $
+
+  14 Aug 2011; Christoph Junghans <ottxor@gentoo.org>
+  -votca-tools-1.1.1.ebuild, -votca-tools-1.1.2.ebuild, votca-tools-1.2.ebuild,
+  metadata.xml:
+  renamed boost useflag to system-boost and removed old
 
   06 Jul 2011; Christoph Junghans <ottxor@gentoo.org> votca-tools-1.2.ebuild:
   pristine tarball has wrong ${S} (bug #374165)

@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/votca-tools-1.2.ebuild,v 1.2 2011/07/06 14:43:39 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/votca-tools-1.2.ebuild,v 1.3 2011/08/14 15:16:00 ottxor Exp $
 
 EAPI="3"
 
-inherit eutils cmake-utils
+inherit cmake-utils eutils
 
 if [ "${PV}" != "9999" ]; then
 	SRC_URI="http://votca.googlecode.com/files/${PF}.tar.gz"
@@ -23,12 +23,12 @@ HOMEPAGE="http://www.votca.org"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="-boost doc +fftw +gsl sqlite"
+IUSE="doc +fftw +gsl sqlite +system-boost"
 
 RDEPEND="fftw? ( sci-libs/fftw:3.0 )
 	dev-libs/expat
 	gsl? ( sci-libs/gsl )
-	boost? ( dev-libs/boost )
+	system-boost? ( dev-libs/boost )
 	sqlite? ( dev-db/sqlite:3 )"
 
 DEPEND="${RDEPEND}
@@ -41,14 +41,14 @@ src_prepare() {
 	use fftw || ewarn "Disabling fftw will lead to reduced functionality"
 
 	#remove bundled libs
-	if use boost; then
+	if use system-boost; then
 		rm -rf src/libboost
 	fi
 }
 
 src_configure() {
 	mycmakeargs=(
-		$(cmake-utils_use boost EXTERNAL_BOOST)
+		$(cmake-utils_use system-boost EXTERNAL_BOOST)
 		$(cmake-utils_use_with gsl GSL)
 		$(cmake-utils_use_with fftw FFTW)
 		$(cmake-utils_use_with sqlite SQLITE3)
