@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdevelop-php-docs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php-docs/ChangeLog,v 1.20 2011/08/08 19:24:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop-php-docs/ChangeLog,v 1.21 2011/08/14 17:01:42 maekke Exp $
+
+  14 Aug 2011; Markus Meier <maekke@gentoo.org> kdevelop-php-docs-1.2.3.ebuild:
+  x86 stable, bug #368739
 
   08 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
   kdevelop-php-docs-1.2.3.ebuild:
