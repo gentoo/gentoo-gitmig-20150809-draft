@@ -1,0 +1,10 @@
+# ChangeLog for media-video/gnome-video-effects
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-video-effects/ChangeLog,v 1.1 2011/08/14 14:06:32 nirbheek Exp $
+
+*gnome-video-effects-0.3.0 (14 Aug 2011)
+
+  14 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +gnome-video-effects-0.3.0.ebuild, +metadata.xml:
+  Move from gnome overlay for GNOME 3
+
