@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.7.5.3.ebuild,v 1.1 2011/07/30 17:01:51 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.7.5.3.ebuild,v 1.2 2011/08/14 19:59:14 grobian Exp $
 
 EAPI=4
 
-inherit base
+inherit base flag-o-matic
 
 MY_P=${P/_/-}
 
@@ -40,6 +40,7 @@ S=${WORKDIR}/${MY_P}
 src_configure() {
 	local myscreen=ncurses
 	use slang && myscreen=slang
+	[[ ${CHOST} == *-solaris* ]] && append-ldflags "-lnsl -lsocket"
 
 	econf \
 		--disable-dependency-tracking \
