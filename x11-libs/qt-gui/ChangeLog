@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.148 2011/07/13 12:49:21 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.149 2011/08/14 17:57:54 dilfridge Exp $
+
+*qt-gui-4.7.3-r1 (14 Aug 2011)
+
+  14 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +qt-gui-4.7.3-r1.ebuild, +files/qt-gui-4.7.3-cups.patch:
+  Add patch by Kevin Kofler to obtain default printer settings from cups, bug
+  323257. OK'ed by tampakrap.
 
   13 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> qt-gui-4.7.2.ebuild:
   ppc64 stable wrt #354033
