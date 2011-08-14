@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.98 2011/07/15 17:31:37 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.99 2011/08/14 03:46:33 nirbheek Exp $
 
 # @ECLASS: gnome2.eclass
 # @MAINTAINER:
@@ -175,7 +175,9 @@ gnome2_src_install() {
 	# Delete all .la files
 	if [[ "${GNOME2_LA_PUNT}" != "no" ]]; then
 		ebegin "Removing .la files"
-		find "${D}" -name '*.la' -exec rm -f {} + || die "la file removal failed"
+		if ! { has static-libs ${IUSE//+} && use static-libs; }; then
+			find "${D}" -name '*.la' -exec rm -f {} + || die "la file removal failed"
+		fi
 		eend
 	fi
 }
