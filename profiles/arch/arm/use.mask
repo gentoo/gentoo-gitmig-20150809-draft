@@ -1,9 +1,6 @@
 # Unmask the flag which corresponds to ARCH.
 -arm
 
-# Unmask arm arch specific USE flags
--neon
-
 # Markus Meier <maekke@gentoo.org> (22 Aug 2010)
 # net-wireless/wimax not tested
 wimax

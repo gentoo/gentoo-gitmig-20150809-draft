@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.130 2011/08/14 17:44:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.131 2011/08/14 19:56:03 maekke Exp $
+
+  14 Aug 2011; Markus Meier <maekke@gentoo.org> use.mask:
+  remove -neon from common use.mask since it's unmasked in armv7a subprofile
 
   14 Aug 2011; Markus Meier <maekke@gentoo.org> +armv4/make.defaults,
   +armv4/parent, +armv4t/make.defaults, +armv4t/parent, +armv5te/make.defaults,
