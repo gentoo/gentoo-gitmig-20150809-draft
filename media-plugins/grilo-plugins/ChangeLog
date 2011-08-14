@@ -1,6 +1,17 @@
 # ChangeLog for media-plugins/grilo-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/ChangeLog,v 1.2 2011/06/15 16:43:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/ChangeLog,v 1.3 2011/08/14 10:52:41 nirbheek Exp $
+
+*grilo-plugins-0.1.16 (14 Aug 2011)
+
+  14 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +grilo-plugins-0.1.16.ebuild,
+  +files/grilo-plugins-0.1.16-local-metadata-leak.patch,
+  +files/grilo-plugins-0.1.16-youtube-c90.patch,
+  +files/grilo-plugins-0.1.16-youtube-libgdata-0.9.patch,
+  +files/grilo-plugins-0.1.16-youtube-missing-case.patch,
+  +files/grilo-plugins-0.1.16-youtube-variable-shadowing.patch:
+  Bump to 0.1.16, bug 377651
 
   15 Jun 2011; Pacho Ramos <pacho@gentoo.org> grilo-plugins-0.1.15.ebuild:
   Prepare to set 'xz' as default compressor for eapi4.
