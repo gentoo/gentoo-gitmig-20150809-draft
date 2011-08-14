@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/GeoRuby/GeoRuby-1.3.4.ebuild,v 1.2 2010/08/19 04:07:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/GeoRuby/GeoRuby-1.3.4.ebuild,v 1.3 2011/08/14 15:06:01 hwoarang Exp $
 
 EAPI=2
 
@@ -21,5 +21,5 @@ HOMEPAGE="http://github.com/nofxx/georuby"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
