@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.8.3-r2.ebuild,v 1.4 2011/08/07 15:25:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.8.3-r2.ebuild,v 1.5 2011/08/14 08:02:14 eras Exp $
 
 EAPI=4
 
@@ -25,6 +25,7 @@ IUSE="cdb doc dovecot-sasl hardened ipv6 ldap ldap-bind mbox mysql nis pam postg
 
 DEPEND=">=sys-libs/db-3.2
 	>=dev-libs/libpcre-3.4
+	dev-lang/perl
 	cdb? ( || ( >=dev-db/tinycdb-0.76 >=dev-db/cdb-0.75-r1 ) )
 	ldap? ( net-nds/openldap )
 	ldap-bind? ( net-nds/openldap[sasl] )
