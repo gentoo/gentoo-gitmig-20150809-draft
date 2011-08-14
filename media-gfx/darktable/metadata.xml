@@ -9,6 +9,7 @@
 	<use>
 		<flag name="flickr">Add support for uploading photos to flickr</flag>
 		<flag name="gconf">Add support for the gconf backend</flag>
+		<flag name="rawspeed">Enable the rawspeed backend</flag>
 		<flag name="slideshow">Build the opengl slideshow viewer</flag>
 	</use>
 </pkgmetadata>

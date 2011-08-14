@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/darktable
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.3 2011/07/28 06:57:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.4 2011/08/14 23:38:26 radhermit Exp $
+
+*darktable-0.9.1-r1 (14 Aug 2011)
+
+  14 Aug 2011; Tim Harder <radhermit@gentoo.org> +darktable-0.9.1-r1.ebuild,
+  +files/darktable-0.9.1-no-rawspeed.patch, metadata.xml:
+  Revision bump. Add rawspeed flag to allow for libraw backend only support
+  (bug #378571).
 
 *darktable-0.9.1 (28 Jul 2011)
 
