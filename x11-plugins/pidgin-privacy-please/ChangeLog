@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/pidgin-privacy-please
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-privacy-please/ChangeLog,v 1.3 2011/03/21 19:54:19 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-privacy-please/ChangeLog,v 1.4 2011/08/14 00:40:12 xmw Exp $
+
+*pidgin-privacy-please-0.7.1 (14 Aug 2011)
+
+  14 Aug 2011; Michael Weber <xmw@gentoo.org>
+  -pidgin-privacy-please-0.6.3.ebuild, pidgin-privacy-please-0.6.4.ebuild,
+  +pidgin-privacy-please-0.7.1.ebuild:
+  Remove old version, add use dep gtk (thanks to Piotr Szymaniak, bug 373041),
+  version bump
 
   21 Mar 2011; Christoph Mende <angelos@gentoo.org>
   pidgin-privacy-please-0.6.4.ebuild:

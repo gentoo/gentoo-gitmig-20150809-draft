@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-privacy-please/pidgin-privacy-please-0.6.3.ebuild,v 1.1 2010/10/26 22:58:41 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-privacy-please/pidgin-privacy-please-0.7.1.ebuild,v 1.1 2011/08/14 00:40:12 xmw Exp $
 
 EAPI=2
 
@@ -13,9 +13,9 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="linguas_de"
+IUSE="linguas_de linguas_pl linguas_ru"
 
-RDEPEND="<net-im/pidgin-3"
+RDEPEND="<net-im/pidgin-3[gtk]"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
