@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Algorithm-Diff
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Diff/ChangeLog,v 1.38 2011/06/13 20:49:40 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Diff/ChangeLog,v 1.39 2011/08/14 18:36:16 maekke Exp $
+
+  14 Aug 2011; Markus Meier <maekke@gentoo.org>
+  Algorithm-Diff-1.190.200.ebuild:
+  arm stable, bug #355085
 
   13 Jun 2011; Matt Turner <mattst88@gentoo.org>
   Algorithm-Diff-1.190.200.ebuild:
