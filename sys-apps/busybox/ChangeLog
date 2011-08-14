@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.276 2011/08/07 21:08:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.277 2011/08/14 20:00:31 vapier Exp $
+
+  14 Aug 2011; Mike Frysinger <vapier@gentoo.org> busybox-1.18.5.ebuild:
+  Use elog for user facing messages #378585 by William Throwe.
 
 *busybox-1.18.5 (07 Aug 2011)
 

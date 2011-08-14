@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.18.5.ebuild,v 1.1 2011/08/07 21:08:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.18.5.ebuild,v 1.2 2011/08/14 20:00:31 vapier Exp $
 
 EAPI="3"
 inherit eutils flag-o-matic savedconfig toolchain-funcs
@@ -269,9 +269,7 @@ pkg_postinst() {
 		cp -vpPR _install/* "${ROOT}"/ || die "copying links for ${x} failed"
 	fi
 
-	echo
-	einfo "This ebuild has support for user defined configs"
-	einfo "Please read this ebuild for more details and re-emerge as needed"
-	einfo "if you want to add or remove functionality for ${PN}"
-	echo
+	elog "This ebuild has support for user defined configs"
+	elog "Please read this ebuild for more details and re-emerge as needed"
+	elog "if you want to add or remove functionality for ${PN}"
 }
