@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+	<email>spamslepnoga@inbox.ru</email>
+</maintainer>
+<maintainer>
+	<email>maksbotan@gentoo.org</email>
+</maintainer>
+<use>
+	<flag name="locator">Install sssd's Kerberos plugin</flag>
+	<flag name="logrotate">Install logrotate.d file</flag>
+	<flag name="openssl">Enable <pkg>dev-libs/openssl</pkg> support instead of <pkg>dev-libs/nss</pkg></flag>
+</use>
+</pkgmetadata>
