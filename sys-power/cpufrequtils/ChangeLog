@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/cpufrequtils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.66 2011/08/07 17:52:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/ChangeLog,v 1.67 2011/08/14 02:56:38 mattst88 Exp $
+
+  14 Aug 2011; Matt Turner <mattst88@gentoo.org>
+  -files/cpufrequtils-conf.d-005, -files/cpufrequtils-init.d-005,
+  -cpufrequtils-005-r1.ebuild, -files/cpufrequtils-005-build.patch,
+  -files/cpufrequtils-005-nls.patch, -cpufrequtils-007.ebuild,
+  -cpufrequtils-008.ebuild:
+  Remove old ebuilds and patches.
 
   07 Aug 2011; Raúl Porcel <armin76@gentoo.org> cpufrequtils-008-r1.ebuild:
   ia64/sparc stable wrt #375921
