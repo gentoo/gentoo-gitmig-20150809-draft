@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.28.8.ebuild,v 1.14 2011/08/13 18:44:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.28.8.ebuild,v 1.15 2011/08/14 03:08:11 nirbheek Exp $
 
 EAPI="3"
 GNOME_TARBALL_SUFFIX="xz"
@@ -159,8 +159,10 @@ src_install() {
 	done
 	rm -rf "${ED}/etc"
 
-	# Redudant with pkg-config files in place
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	if ! use static-libs; then
+		# Redudant with pkg-config files in place
+		find "${ED}" -name '*.la' -exec rm -f {} + || die
+	fi
 }
 
 src_test() {
