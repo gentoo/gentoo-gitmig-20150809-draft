@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/conglomerate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/conglomerate/ChangeLog,v 1.20 2011/03/07 00:03:17 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/conglomerate/ChangeLog,v 1.21 2011/08/14 10:39:17 nirbheek Exp $
+
+  14 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  conglomerate-0.9.0.ebuild, conglomerate-0.9.1.ebuild:
+  Don't call use_enable in global scope
 
   06 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   conglomerate-0.9.0.ebuild, conglomerate-0.9.1.ebuild:

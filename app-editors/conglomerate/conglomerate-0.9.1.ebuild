@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/conglomerate/conglomerate-0.9.1.ebuild,v 1.3 2011/03/07 00:03:17 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/conglomerate/conglomerate-0.9.1.ebuild,v 1.4 2011/08/14 10:39:18 nirbheek Exp $
 
 EAPI="2"
 
@@ -35,6 +35,10 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	doc? ( >=dev-util/gtk-doc-1 )"
 
-DOCS="AUTHORS BUGS ChangeLog INSTALL NEWS README* TODO"
+src_prepare() {
+	DOCS="AUTHORS BUGS ChangeLog INSTALL NEWS README* TODO"
 
-G2CONF="${G2CONF} $(use_enable spell enchant) --enable-printing"
+	G2CONF="${G2CONF}
+		$(use_enable spell enchant)
+		--enable-printing"
+}
