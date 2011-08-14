@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-wallpapers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-wallpapers/ChangeLog,v 1.34 2011/07/30 12:53:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-wallpapers/ChangeLog,v 1.35 2011/08/14 17:04:46 maekke Exp $
+
+  14 Aug 2011; Markus Meier <maekke@gentoo.org> kde-wallpapers-4.7.0.ebuild:
+  add ~arm, bug #376613
 
   30 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   kde-wallpapers-4.7.0.ebuild:

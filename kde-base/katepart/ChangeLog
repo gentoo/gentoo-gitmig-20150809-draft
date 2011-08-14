@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/katepart
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/katepart/ChangeLog,v 1.1 2011/07/27 14:04:37 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/katepart/ChangeLog,v 1.2 2011/08/14 17:06:06 maekke Exp $
+
+  14 Aug 2011; Markus Meier <maekke@gentoo.org> katepart-4.7.0.ebuild:
+  add ~arm, bug #376613
 
 *katepart-4.7.0 (27 Jul 2011)
 
