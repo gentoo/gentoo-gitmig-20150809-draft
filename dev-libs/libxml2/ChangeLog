@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.311 2011/07/03 11:19:19 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.312 2011/08/14 04:45:52 nirbheek Exp $
+
+*libxml2-2.7.8-r2 (14 Aug 2011)
+
+  14 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +libxml2-2.7.8-r2.ebuild:
+  USE=static-libs support, bug 378249
 
   03 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> libxml2-2.7.8-r1.ebuild:
   ppc64 stable wrt #370715
