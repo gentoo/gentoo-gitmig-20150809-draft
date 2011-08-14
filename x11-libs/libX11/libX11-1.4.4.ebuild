@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-1.4.4.ebuild,v 1.1 2011/08/01 21:16:39 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/libX11-1.4.4.ebuild,v 1.2 2011/08/14 02:21:06 mattst88 Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ IUSE="ipv6 test"
 
 RDEPEND=">=x11-libs/libxcb-1.1.92
 	x11-libs/xtrans
-	>=x11-proto/xproto-7.0.13
+	>=x11-proto/xproto-7.0.17
 	x11-proto/xf86bigfontproto
 	x11-proto/inputproto
 	x11-proto/kbproto
