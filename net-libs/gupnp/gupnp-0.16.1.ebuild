@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.16.1.ebuild,v 1.2 2011/08/14 10:21:05 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.16.1.ebuild,v 1.3 2011/08/14 10:25:50 nirbheek Exp $
 
 EAPI="4"
 
@@ -32,8 +32,15 @@ src_configure() {
 
 	econf \
 		$(use_enable introspection) \
+		--disable-static \
 		--disable-dependency-tracking \
 		--disable-gtk-doc \
 		--with-context-manager=${backend} \
 		--with-html-dir=/usr/share/doc/${PF}/html
+}
+
+src_install() {
+	default
+	# Remove pointless .la files
+	find "${D}" -name '*.la' -exec rm -f {} + || die
 }
