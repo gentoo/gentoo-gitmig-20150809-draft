@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/soundconverter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/ChangeLog,v 1.18 2011/01/27 22:16:55 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/ChangeLog,v 1.19 2011/08/14 16:59:58 leio Exp $
+
+  14 Aug 2011; Mart Raudsepp <leio@gentoo.org> soundconverter-1.5.4.ebuild:
+  Remove redundant USE=debug
 
 *soundconverter-1.5.4 (27 Jan 2011)
 
