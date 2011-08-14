@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.90.0.ebuild,v 1.1 2011/05/27 07:56:00 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.90.0-r1.ebuild,v 1.1 2011/08/14 11:04:46 pva Exp $
 
 EAPI="4"
 inherit fixheadtails
@@ -22,6 +22,11 @@ src_prepare() {
 
 src_configure() {
 	econf $(use_enable geoip)
+}
+
+src_compile() {
+	# Disable default CFLAGS (-O2 and -g)
+	emake DEFAULT_CFLAGS=""
 }
 
 src_install() {
