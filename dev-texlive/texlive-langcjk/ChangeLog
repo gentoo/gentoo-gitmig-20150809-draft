@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-langcjk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcjk/ChangeLog,v 1.41 2011/08/12 15:58:35 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcjk/ChangeLog,v 1.42 2011/08/14 17:42:28 maekke Exp $
+
+  14 Aug 2011; Markus Meier <maekke@gentoo.org> texlive-langcjk-2010.ebuild:
+  arm stable, bug #355085
 
   12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
   texlive-langcjk-2010.ebuild:

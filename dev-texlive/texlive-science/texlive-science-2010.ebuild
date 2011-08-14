@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-science/texlive-science-2010.ebuild,v 1.5 2011/08/12 15:58:33 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-science/texlive-science-2010.ebuild,v 1.6 2011/08/14 18:21:42 maekke Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ DESCRIPTION="TeXLive Typesetting for natural and computer sciences"
 
 LICENSE="GPL-2 as-is GPL-1 LGPL-2 LPPL-1.2 LPPL-1.3 public-domain "
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~ppc-macos"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd ~ppc-macos"
 IUSE=""
 DEPEND=">=dev-texlive/texlive-latex-2010
 !dev-tex/SIunits
