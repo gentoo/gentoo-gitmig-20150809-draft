@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/libIDL-0.8.14.ebuild,v 1.8 2010/09/11 10:47:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libIDL/libIDL-0.8.14.ebuild,v 1.9 2011/08/14 07:25:13 nirbheek Exp $
+
+GNOME2_LA_PUNT="yes"
 
 inherit eutils gnome2
 
@@ -15,10 +17,11 @@ IUSE=""
 RDEPEND=">=dev-libs/glib-2.4"
 DEPEND="${RDEPEND}
 	sys-devel/flex
-	sys-devel/bison
+	virtual/yacc
 	dev-util/pkgconfig"
 
 DOCS="AUTHORS BUGS ChangeLog HACKING MAINTAINERS NEWS README"
+G2CONF="--disable-static"
 
 src_unpack() {
 	gnome2_src_unpack
