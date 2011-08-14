@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/libxml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.48 2011/08/10 04:59:14 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.49 2011/08/14 19:01:52 graaff Exp $
+
+  14 Aug 2011; Hans de Graaff <graaff@gentoo.org> libxml-2.2.0.ebuild:
+  Add missing rdoc dependency, fixes bug 379171.
 
 *libxml-2.2.0 (10 Aug 2011)
 
