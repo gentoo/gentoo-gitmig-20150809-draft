@@ -1,10 +1,68 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5621 2011/08/14 06:19:18 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5622 2011/08/14 17:54:27 maekke Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Aug 2011; Markus Meier <maekke@gentoo.org>
+  +default/linux/arm/10.0/armv4/desktop/eapi,
+  +default/linux/arm/10.0/armv4/desktop/gnome/eapi,
+  +default/linux/arm/10.0/armv4/desktop/gnome/parent,
+  +default/linux/arm/10.0/armv4/desktop/kde/eapi,
+  +default/linux/arm/10.0/armv4/desktop/kde/parent,
+  +default/linux/arm/10.0/armv4/desktop/parent,
+  +default/linux/arm/10.0/armv4/developer/eapi,
+  +default/linux/arm/10.0/armv4/developer/parent,
+  +default/linux/arm/10.0/armv4/eapi, +default/linux/arm/10.0/armv4/parent,
+  +default/linux/arm/10.0/armv4/server/eapi,
+  +default/linux/arm/10.0/armv4/server/parent,
+  +default/linux/arm/10.0/armv4t/desktop/eapi,
+  +default/linux/arm/10.0/armv4t/desktop/gnome/eapi,
+  +default/linux/arm/10.0/armv4t/desktop/gnome/parent,
+  +default/linux/arm/10.0/armv4t/desktop/kde/eapi,
+  +default/linux/arm/10.0/armv4t/desktop/kde/parent,
+  +default/linux/arm/10.0/armv4t/desktop/parent,
+  +default/linux/arm/10.0/armv4t/developer/eapi,
+  +default/linux/arm/10.0/armv4t/developer/parent,
+  +default/linux/arm/10.0/armv4t/eapi, +default/linux/arm/10.0/armv4t/parent,
+  +default/linux/arm/10.0/armv4t/server/eapi,
+  +default/linux/arm/10.0/armv4t/server/parent,
+  +default/linux/arm/10.0/armv5te/desktop/eapi,
+  +default/linux/arm/10.0/armv5te/desktop/gnome/eapi,
+  +default/linux/arm/10.0/armv5te/desktop/gnome/parent,
+  +default/linux/arm/10.0/armv5te/desktop/kde/eapi,
+  +default/linux/arm/10.0/armv5te/desktop/kde/parent,
+  +default/linux/arm/10.0/armv5te/desktop/parent,
+  +default/linux/arm/10.0/armv5te/developer/eapi,
+  +default/linux/arm/10.0/armv5te/developer/parent,
+  +default/linux/arm/10.0/armv5te/eapi, +default/linux/arm/10.0/armv5te/parent,
+  +default/linux/arm/10.0/armv5te/server/eapi,
+  +default/linux/arm/10.0/armv5te/server/parent,
+  +default/linux/arm/10.0/armv6j/desktop/eapi,
+  +default/linux/arm/10.0/armv6j/desktop/gnome/eapi,
+  +default/linux/arm/10.0/armv6j/desktop/gnome/parent,
+  +default/linux/arm/10.0/armv6j/desktop/kde/eapi,
+  +default/linux/arm/10.0/armv6j/desktop/kde/parent,
+  +default/linux/arm/10.0/armv6j/desktop/parent,
+  +default/linux/arm/10.0/armv6j/developer/eapi,
+  +default/linux/arm/10.0/armv6j/developer/parent,
+  +default/linux/arm/10.0/armv6j/eapi, +default/linux/arm/10.0/armv6j/parent,
+  +default/linux/arm/10.0/armv6j/server/eapi,
+  +default/linux/arm/10.0/armv6j/server/parent,
+  +default/linux/arm/10.0/armv7a/desktop/eapi,
+  +default/linux/arm/10.0/armv7a/desktop/gnome/eapi,
+  +default/linux/arm/10.0/armv7a/desktop/gnome/parent,
+  +default/linux/arm/10.0/armv7a/desktop/kde/eapi,
+  +default/linux/arm/10.0/armv7a/desktop/kde/parent,
+  +default/linux/arm/10.0/armv7a/desktop/parent,
+  +default/linux/arm/10.0/armv7a/developer/eapi,
+  +default/linux/arm/10.0/armv7a/developer/parent,
+  +default/linux/arm/10.0/armv7a/eapi, +default/linux/arm/10.0/armv7a/parent,
+  +default/linux/arm/10.0/armv7a/server/eapi,
+  +default/linux/arm/10.0/armv7a/server/parent, profiles.desc:
+  add armv4, armv4t, armv5re, armv6j and armv7a subprofiles
 
   14 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.mask:
   Add libgweather to GNOME 3 mask
