@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ptexenc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptexenc/ChangeLog,v 1.14 2011/08/12 15:24:11 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptexenc/ChangeLog,v 1.15 2011/08/14 17:08:50 maekke Exp $
+
+  14 Aug 2011; Markus Meier <maekke@gentoo.org> ptexenc-1.1.0_p20100722.ebuild:
+  arm stable, bug #355085
 
   12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
   ptexenc-1.1.0_p20100722.ebuild:
