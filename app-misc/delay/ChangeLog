@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/delay
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/delay/ChangeLog,v 1.21 2011/01/04 17:49:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/delay/ChangeLog,v 1.22 2011/08/14 14:36:54 jlec Exp $
+
+*delay-1.6-r1 (14 Aug 2011)
+
+  14 Aug 2011; Justin Lecher <jlec@gentoo.org> +delay-1.6-r1.ebuild:
+  Enhanced ebuild based on patch proposed by Agostino Sarubbo, #379029
 
   04 Jan 2011; Justin Lecher <jlec@gentoo.org> delay-1.6.ebuild:
   Some Clean up
