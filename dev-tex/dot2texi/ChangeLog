@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/dot2texi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2texi/ChangeLog,v 1.13 2011/08/12 15:35:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2texi/ChangeLog,v 1.14 2011/08/14 18:33:46 maekke Exp $
+
+  14 Aug 2011; Markus Meier <maekke@gentoo.org> dot2texi-3.0.ebuild:
+  arm stable, bug #355085
 
   12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> dot2texi-3.0.ebuild:
   ppc/ppc64 stable wrt #355085

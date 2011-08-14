@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latexdiff
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexdiff/ChangeLog,v 1.21 2011/08/12 15:35:44 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexdiff/ChangeLog,v 1.22 2011/08/14 18:37:05 maekke Exp $
+
+  14 Aug 2011; Markus Meier <maekke@gentoo.org> latexdiff-0.5.ebuild:
+  arm stable, bug #355085
 
   12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> latexdiff-0.5.ebuild:
   ppc/ppc64 stable wrt #355085
