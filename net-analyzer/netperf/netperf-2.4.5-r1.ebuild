@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.4.5-r1.ebuild,v 1.2 2011/07/30 15:40:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.4.5-r1.ebuild,v 1.3 2011/08/14 12:57:34 lxnay Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ SLOT="0"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4"
-RDEPEND="!sci-mathematics/snns"
+RDEPEND=""
 
 src_prepare() {
 	epatch \

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/netperf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.47 2011/07/30 15:40:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.48 2011/08/14 12:57:34 lxnay Exp $
+
+  14 Aug 2011; Fabio Erculiani <lxnay@gentoo.org> netperf-2.4.4.ebuild,
+  netperf-2.4.5-r1.ebuild, netperf-2.5.0.ebuild:
+  sci-mathematics/snns blocker is no longer required as per bug 248322
 
 *netperf-2.5.0 (30 Jul 2011)
 
