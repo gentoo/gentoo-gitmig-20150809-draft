@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.14 2011/07/07 05:46:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-9999.ebuild,v 1.15 2011/08/14 06:48:39 mgorny Exp $
 
 EAPI=4
 
@@ -97,15 +97,6 @@ src_configure() {
 	append-flags -finline-limit=1200
 
 	use X && myopts+=" --enable-tee=yes"
-	if use drm; then
-		myopts+="
-			$(use_enable xcb xcb-drm)
-		"
-	else
-		myopts+="
-			--disable-xcb-drm
-		"
-	fi
 
 	# --disable-xcb-lib:
 	#	do not override good xlib backed by hardforcing rendering over xcb
