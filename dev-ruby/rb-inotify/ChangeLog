@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rb-inotify
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-inotify/ChangeLog,v 1.4 2011/08/14 07:11:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-inotify/ChangeLog,v 1.5 2011/08/14 10:17:17 xarthisius Exp $
+
+  14 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  rb-inotify-0.8.6-r1.ebuild:
+  Marked ~ppc/~ppc64 wrt #379131
 
 *rb-inotify-0.8.6-r1 (14 Aug 2011)
 
