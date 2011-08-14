@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.116 2011/08/11 22:49:13 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.117 2011/08/14 14:56:00 hwoarang Exp $
+
+  14 Aug 2011; Markos Chandras <hwoarang@gentoo.org> ntfs3g-2011.4.12.ebuild:
+  Stable on amd64 wrt bug #378829
 
   11 Aug 2011; Patrick McLean <chutzpah@gentoo.org> ntfs3g-2011.4.12.ebuild:
   Remove .la files and add static-libs USE flag.
