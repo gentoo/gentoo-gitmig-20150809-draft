@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.15.0.ebuild,v 1.3 2011/08/14 12:37:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.15.0.ebuild,v 1.4 2011/08/14 12:45:23 flameeyes Exp $
 
 #BACKPORTS=2
 
@@ -30,7 +30,7 @@ SLOT="0"
 # xen is disabled until the deps are fixed
 IUSE="+aio alsa bluetooth brltty curl debug esd fdt hardened jpeg ncurses nss \
 png pulseaudio qemu-ifup rbd sasl sdl spice ssl threads vde \
-+vhost-net xen"
++vhost-net xattr xen"
 # static, depends on libsdl being built with USE=static-libs, which can not
 # be expressed in current EAPI's
 
@@ -85,6 +85,7 @@ RDEPEND="
 	spice? ( >=app-emulation/spice-0.6.0 )
 	ssl? ( net-libs/gnutls )
 	vde? ( net-misc/vde )
+	xattr? ( sys-apps/attr )
 	xen? ( app-emulation/xen )
 "
 
@@ -210,6 +211,7 @@ src_configure() {
 	conf_opts="${conf_opts} $(use_enable vde)"
 	conf_opts="${conf_opts} $(use_enable vhost-net)"
 	conf_opts="${conf_opts} $(use_enable xen)"
+	conf_opts="${conf_opts} $(use_enable xattr attr)"
 	conf_opts="${conf_opts} --disable-darwin-user --disable-bsd-user"
 
 	# audio options

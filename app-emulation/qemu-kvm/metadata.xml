@@ -21,6 +21,10 @@
     <flag name='ssl'>Enable TLS support for the VNC console server</flag>
     <flag name='vde'>Enable VDE-based networking</flag>
     <flag name='vhost-net'>Enable accelerated networking using vhost-net, see http://www.linux-kvm.org/page/VhostNet</flag>
+    <flag name='xattr'>
+      Add support for getting and setting POSIX extended attributes, through
+      <pkg>sys-apps/attr</pkg>. Requisite for the virtfs backend.
+    </flag>
     <flag name='xen'>Enables support for Xen backends</flag>
 </use>
 </pkgmetadata>
