@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.204 2011/08/06 09:41:21 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.205 2011/08/14 12:52:06 nirbheek Exp $
+
+*avahi-0.6.30-r1 (14 Aug 2011)
+
+  14 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +avahi-0.6.30-r1.ebuild,
+  +files/avahi-0.6.30-optional-gtk-utils.patch:
+  Add gtk3 and introspection support, make utilities optional, reorder deps to
+  use COMMON_DEPEND, remove static libraries and .la files
 
   06 Aug 2011; Zac Medico <zmedico@gentoo.org> avahi-0.6.30.ebuild:
   Fix for prefix and add ~x86-linux keyword.
