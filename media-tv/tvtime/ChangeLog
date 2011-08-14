@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/tvtime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.50 2011/06/02 11:41:44 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.51 2011/08/14 10:42:15 a3li Exp $
+
+*tvtime-1.0.2_p20110131-r1 (14 Aug 2011)
+
+  14 Aug 2011; Alex Legler <a3li@gentoo.org> +tvtime-1.0.2_p20110131-r1.ebuild:
+  Revision bump. Fixes underlinking, bug 370025 by flameeyes; Adds alsa
+  patches, bug 323797 by Henrik Johansson; Renames desktop file, bug 308297 by
+  Florian Scandella. Add dependency on alsa, and die more.
 
   02 Jun 2011; Alex Legler <a3li@gentoo.org> tvtime-1.0.2_p20110131.ebuild,
   +files/tvtime-libpng-1.5.patch:
