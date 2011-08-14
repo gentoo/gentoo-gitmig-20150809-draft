@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/atk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.226 2011/07/11 00:03:33 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.227 2011/08/14 13:04:58 nirbheek Exp $
+
+*atk-2.0.1 (14 Aug 2011)
+
+  14 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +atk-2.0.1.ebuild:
+  Bump to 2.0.1, for GNOME 3
 
   11 Jul 2011; Matt Turner <mattst88@gentoo.org> atk-1.32.0-r1.ebuild:
   Added ~mips, bug 364693
