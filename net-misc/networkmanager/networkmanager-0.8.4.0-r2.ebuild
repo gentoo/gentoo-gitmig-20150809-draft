@@ -1,18 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.4.0-r2.ebuild,v 1.2 2011/08/12 07:36:11 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.4.0-r2.ebuild,v 1.3 2011/08/14 09:04:08 nirbheek Exp $
 
-EAPI="2"
+EAPI="3"
+GNOME_ORG_MODULE="NetworkManager"
 
 inherit autotools eutils gnome.org linux-info systemd
 
-# NetworkManager likes itself with capital letters
-MY_PN=${PN/networkmanager/NetworkManager}
-MY_P=${MY_PN}-${PV}
-
 DESCRIPTION="Network configuration and management in an easy way. Desktop environment independent."
 HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
-SRC_URI="${SRC_URI//${PN}/${MY_PN}}"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -51,8 +47,6 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	doc? ( >=dev-util/gtk-doc-1.8 )"
 
-S=${WORKDIR}/${MY_P}
-
 sysfs_deprecated_check() {
 	ebegin "Checking for SYSFS_DEPRECATED support"
 
@@ -89,6 +83,7 @@ src_prepare() {
 
 src_configure() {
 	ECONF="--disable-more-warnings
+		--disable-static
 		--localstatedir=/var
 		--with-distro=gentoo
 		--with-dbus-sys-dir=/etc/dbus-1/system.d
@@ -141,6 +136,9 @@ src_install() {
 	insinto /etc/NetworkManager
 	newins "${FILESDIR}/nm-system-settings.conf-ifnet" nm-system-settings.conf \
 		|| die "newins failed"
+
+	# Remove useless .la files
+	find "${D}" -name '*.la' -exec rm -f {} + || die "la file removal failed"
 }
 
 pkg_postinst() {
