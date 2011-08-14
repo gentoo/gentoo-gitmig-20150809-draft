@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.4.2-r300.ebuild,v 1.2 2011/07/27 09:30:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.4.2-r300.ebuild,v 1.3 2011/08/14 06:25:31 nirbheek Exp $
 
 EAPI="4"
 
@@ -16,6 +16,8 @@ SLOT="3"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
 # geoclue
 IUSE="aqua coverage debug doc +gstreamer +introspection +jit spell"
+# bug 372493
+REQUIRED_USE="introspection? ( gstreamer )"
 
 # use sqlite, svg by default
 # dependency on >=x11-libs/gtk+-2.13:2 for gail

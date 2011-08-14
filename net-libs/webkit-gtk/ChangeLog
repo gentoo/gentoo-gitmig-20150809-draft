@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.116 2011/07/27 09:30:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.117 2011/08/14 06:25:31 nirbheek Exp $
+
+  14 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  webkit-gtk-1.4.2-r200.ebuild, webkit-gtk-1.4.2-r300.ebuild:
+  Require USE=gstreamer for USE=introspection, bug 372493
 
   27 Jul 2011; Pacho Ramos <pacho@gentoo.org> webkit-gtk-1.4.2-r200.ebuild,
   webkit-gtk-1.4.2-r300.ebuild:
