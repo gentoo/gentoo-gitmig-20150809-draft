@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-3.0.7.ebuild,v 1.1 2011/08/15 14:17:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-3.0.7.ebuild,v 1.2 2011/08/15 16:27:45 mr_bones_ Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ IUSE="apache2 fastcgi +gd ldap mod_perl +mysql pdf postgres soap"
 SLOT="0"
 #WEBAPP_MANUAL_SLOT="yes"
 
-# FIXME add oracle/mssql/DB2 DB support 
+# FIXME add oracle/mssql/DB2 DB support
 # FIXME #cjk? ( >=dev-perl/Encode-HanExtra-0.23 ) unsatisfied dep
 
 DEPEND=""
