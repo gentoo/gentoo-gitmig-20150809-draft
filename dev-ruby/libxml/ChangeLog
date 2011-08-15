@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/libxml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.52 2011/08/15 06:04:02 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.53 2011/08/15 16:03:02 graaff Exp $
+
+  15 Aug 2011; Hans de Graaff <graaff@gentoo.org> libxml-2.1.1.ebuild:
+  Fix typo: ruby_add_depend does not exist.
 
 *libxml-2.2.1 (15 Aug 2011)
 
