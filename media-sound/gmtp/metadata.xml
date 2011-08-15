@@ -5,7 +5,7 @@
   <email>tomka@gentoo.org</email>
   <name>Thomas Kahle</name>
 </maintainer>
-<herd>media-sound</herd>
+<herd>sound</herd>
 <longdescription lang="en">
 gMTP is a graphical frontend to libmtp. It allows to transfer files to mtp devices like mp3 players or android tablets.
 </longdescription>
