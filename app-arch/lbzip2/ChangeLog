@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/lbzip2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.17 2011/08/14 23:35:13 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.18 2011/08/15 14:48:39 mattst88 Exp $
+
+  15 Aug 2011; Matt Turner <mattst88@gentoo.org> -files/0.20-Makefile.patch,
+  -lbzip2-0.20.ebuild, -lbzip2-0.22.ebuild, -lbzip2-0.23.ebuild,
+  -lbzip2-0.23-r1.ebuild, -files/0.22-Makefile.patch, lbzip2-0.23-r2.ebuild:
+  Remove old versions.
 
   14 Aug 2011; Matt Turner <mattst88@gentoo.org> +files/0.23-test.sh.patch,
   lbzip2-0.23-r2.ebuild:

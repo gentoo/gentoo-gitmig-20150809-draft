@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/lbzip2-0.23-r2.ebuild,v 1.2 2011/08/14 23:35:13 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/lbzip2-0.23-r2.ebuild,v 1.3 2011/08/15 14:48:39 mattst88 Exp $
 
 EAPI="3"
 
@@ -26,7 +26,7 @@ DEPEND="${REDEPEND}
 S=${WORKDIR}/${PN}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PV}-s_isreg.patch
+	epatch "${FILESDIR}"/0.23-s_isreg.patch
 	epatch "${FILESDIR}"/0.23-Makefile.patch
 	epatch "${FILESDIR}"/0.23-test.sh.patch
 }
