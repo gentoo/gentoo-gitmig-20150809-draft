@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/ccp4-libs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ChangeLog,v 1.40 2011/08/02 16:04:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ChangeLog,v 1.41 2011/08/15 19:57:04 xarthisius Exp $
+
+  15 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  ccp4-libs-6.1.3-r10.ebuild:
+  Marked ~ppc for sci-chemistry/pointless
 
   02 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
   ccp4-libs-6.1.3-r10.ebuild:
