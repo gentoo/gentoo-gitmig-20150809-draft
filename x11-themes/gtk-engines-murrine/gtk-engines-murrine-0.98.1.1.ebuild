@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-murrine/gtk-engines-murrine-0.98.1.1.ebuild,v 1.1 2011/04/04 23:24:53 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-murrine/gtk-engines-murrine-0.98.1.1.ebuild,v 1.2 2011/08/15 12:10:39 nirbheek Exp $
 
-EAPI="2"
+EAPI="4"
 GNOME_ORG_MODULE="murrine"
+GNOME_TARBALL_SUFFIX="bz2"
 
-inherit eutils gnome.org
+inherit gnome.org
 
-MY_PN="${GNOME_ORG_MODULE}"
 DESCRIPTION="Murrine GTK+2 Cairo Engine"
 
 HOMEPAGE="http://www.cimitan.com/murrine/"
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-util/pkgconfig"
 
-S="${WORKDIR}/${MY_PN}-${PV}"
+DOCS="AUTHORS ChangeLog NEWS TODO"
 
 src_configure() {
 	econf --enable-animation \
@@ -35,7 +35,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-
-	dodoc AUTHORS ChangeLog NEWS TODO
+	default
+	# Remove useless .la files
+	find "${D}" -name '*.la' -exec rm -f {} + || die
 }
