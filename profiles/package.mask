@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12979 2011/08/14 21:44:17 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12980 2011/08/15 10:23:05 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -191,7 +191,6 @@ net-misc/dhcdbd
 >=net-misc/networkmanager-openvpn-0.8.99
 >=net-misc/networkmanager-openswan-0.8.99
 >=net-misc/networkmanager-vpnc-0.8.99
->=net-misc/modemmanager-0.4.99
 >=gnome-extra/nm-applet-0.8.99
 # Meta packages
 >=gnome-base/gnome-core-apps-3.0

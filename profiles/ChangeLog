@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5623 2011/08/14 21:44:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5624 2011/08/15 10:23:05 nirbheek Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.mask:
+  Remove modemmanager from mask, it works with the 0.8 series too
 
   14 Aug 2011; Markus Meier <maekke@gentoo.org>
   default/linux/arm/10.0/armv4/desktop/gnome/parent,
