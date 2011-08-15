@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kio-upnp-ms
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-upnp-ms/ChangeLog,v 1.8 2011/06/25 13:23:53 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-upnp-ms/ChangeLog,v 1.9 2011/08/15 16:56:36 ottxor Exp $
+
+  15 Aug 2011; Christoph Junghans <ottxor@gentoo.org>
+  -kio-upnp-ms-0.8.0_p20110313.ebuild, -kio-upnp-ms-0.8.0_p20110503.ebuild,
+  -files/FindHUpnp.cmake:
+  remove old
 
 *kio-upnp-ms-1.0.0_p20110602 (25 Jun 2011)
 
