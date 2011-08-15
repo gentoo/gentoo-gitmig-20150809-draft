@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-29-r1.ebuild,v 1.2 2011/06/24 20:56:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-29-r2.ebuild,v 1.1 2011/08/15 07:48:11 mgorny Exp $
 
 EAPI=4
 
@@ -32,7 +32,7 @@ COMMON_DEPEND=">=sys-apps/dbus-1.4.10
 	tcpd? ( sys-apps/tcp-wrappers )"
 
 # Vala-0.10 doesn't work with libnotify 0.7.1
-VALASLOT="0.12"
+VALASLOT="0.14"
 # A little higher than upstream requires
 # but I had real trouble with 2.6.37 and systemd.
 MINKV="2.6.38"
@@ -41,18 +41,10 @@ MINKV="2.6.38"
 # blocker on old packages to avoid collisions with above
 # openrc blocker to avoid udev rules starting openrc scripts
 RDEPEND="${COMMON_DEPEND}
-	!!sys-apps/systemd-dbus
-	!!sys-apps/systemd-udev
 	!<sys-apps/openrc-0.8.3"
 DEPEND="${COMMON_DEPEND}
 	gtk? ( dev-lang/vala:${VALASLOT} )
 	>=sys-kernel/linux-headers-${MINKV}"
-
-pkg_pretend() {
-	local CONFIG_CHECK="AUTOFS4_FS CGROUPS DEVTMPFS ~FANOTIFY ~IPV6"
-	linux-info_pkg_setup
-	kernel_is -ge ${MINKV//./ } || die "Kernel version at least ${MINKV} required"
-}
 
 pkg_setup() {
 	enewgroup lock # used by var-lock.mount
@@ -104,11 +96,17 @@ src_install() {
 		mv ${i}.8 systemd.${i}.8 || die
 	done
 
-	# Drop the .pc file to avoid automagic depends.
-	# This a temporary workaround for gx86 packages.
-	rm -f "${D}"/usr/share/pkgconfig/systemd.pc || die
-
 	keepdir /run
+}
+
+pkg_preinst() {
+	local CONFIG_CHECK="~AUTOFS4_FS ~CGROUPS ~DEVTMPFS ~FANOTIFY ~IPV6"
+	kernel_is -ge ${MINKV//./ } || ewarn "Kernel version at least ${MINKV} required"
+	check_extra_config
+}
+
+optfeature() {
+	elog "	[$(has_version ${1} && echo I || echo ' ')] ${1} (${2})"
 }
 
 pkg_postinst() {
@@ -124,6 +122,12 @@ pkg_postinst() {
 	elog "to work, see the systemd manpages for loading modules and handling tmpfiles:"
 	elog "	$ man modules-load.d"
 	elog "	$ man tmpfiles.d"
+	elog
+
+	elog "To get additional features, a number of optional runtime dependencies may"
+	elog "be installed:"
+	optfeature 'dev-python/dbus-python' 'for systemd-analyze'
+	optfeature 'dev-python/pycairo[svg]' 'for systemd-analyze plotting ability'
 	elog
 
 	ewarn "Please note this is a work-in-progress and many packages in Gentoo"
