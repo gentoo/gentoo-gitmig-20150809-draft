@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.12 2011/07/22 12:13:27 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.13 2011/08/15 12:48:27 olemarkus Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -247,19 +247,21 @@ php-ext-source-r2_createinifiles() {
 		# Build the list of <ext>.ini files to edit/add to
 		php-ext-source-r2_buildinilist ${slot}
 
-		PHPFULLINIFILELISTbak="${PHPFULLINIFILELIST}"
-		PHPFULLINIFILELIST="${PHPINIFILELIST}"
+
 		# Add the needed lines to the <ext>.ini files
+		local file
 		if [[ "${PHP_EXT_INI}" = "yes" ]] ; then
-			php-ext-source-r2_addextension "${PHP_EXT_NAME}.so"
+			for file in ${PHPINIFILELIST}; do 
+				php-ext-source-r2_addextension "${PHP_EXT_NAME}.so" "${file}"
+			done
 		fi
 		
-		PHPFULLINIFILELIST=${PHPFULLINIFILELISTbak}
 
 		# Symlink the <ext>.ini files from ext/ to ext-active/
+		local inifile
 		for inifile in ${PHPINIFILELIST} ; do
 			if [[ -n "${PHP_EXT_INIFILE}" ]]; then
-				cat "${FILESDIR}/${PHP_EXT_INIFILE}" >> "${D}/${inifile}"
+				cat "${FILESDIR}/${PHP_EXT_INIFILE}" > "${inifile}"
 				einfo "Added content of ${FILESDIR}/${PHP_EXT_INIFILE} to ${inifile}"
 			fi
 
@@ -271,7 +273,6 @@ php-ext-source-r2_createinifiles() {
 			dodir "/${inidir}"
 			dosym "/${inifile}" "/${inifile/ext/ext-active}"
 		done
-
 
 		# Add support for installing PHP files into a version dependant directory
 		PHP_EXT_SHARED_DIR="/usr/share/php/${PHP_EXT_NAME}"
@@ -312,7 +313,7 @@ php-ext-source-r2_addextension() {
 		ext_file="${1}"
 	fi
 
-	php-ext-source-r2_addtoinifiles "${ext_type}" "${ext_file}" "Extension added"
+	php-ext-source-r2_addtoinifile "${ext_type}" "${ext_file}" "${2}" "Extension added"
 }
 
 # $1 - Setting name
@@ -320,16 +321,17 @@ php-ext-source-r2_addextension() {
 # $3 - File to add to
 # $4 - Sanitized text to output
 php-ext-source-r2_addtoinifile() {
-	if [[ ! -d $(dirname ${3}) ]] ; then
-		mkdir -p $(dirname ${3})
+	local inifile="${WORKDIR}/${3}"
+	if [[ ! -d $(dirname ${inifile}) ]] ; then
+		mkdir -p $(dirname ${inifile})
 	fi
 
 	# Are we adding the name of a section?
 	if [[ ${1:0:1} == "[" ]] ; then
-		echo "${1}" >> "${3}"
+		echo "${1}" >> "${inifile}"
 		my_added="${1}"
 	else
-		echo "${1}=${2}" >> "${3}"
+		echo "${1}=${2}" >> "${inifile}"
 		my_added="${1}=${2}"
 	fi
 
@@ -340,7 +342,7 @@ php-ext-source-r2_addtoinifile() {
 	fi
 
 	insinto /$(dirname ${3})
-	doins "${3}"
+	doins "${inifile}"
 }
 
 # @FUNCTION: php-ext-source-r2_addtoinifiles
