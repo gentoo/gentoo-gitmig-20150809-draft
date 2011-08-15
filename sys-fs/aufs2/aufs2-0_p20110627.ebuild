@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20110627.ebuild,v 1.2 2011/08/15 18:49:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20110627.ebuild,v 1.3 2011/08/15 19:11:32 jlec Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug fuse hardened hfs inotify kernel-patch nfs ramfs"
+IUSE="debug fuse pax_kernel hfs inotify kernel-patch nfs ramfs"
 
 DEPEND="dev-vcs/git"
 RDEPEND="
@@ -84,7 +84,7 @@ src_prepare() {
 	use nfs && use amd64 && set_config INO_T_64
 	use ramfs && set_config BR_RAMFS
 
-	if use hardened ; then
+	if use pax_kernel ; then
 		epatch "${FILESDIR}"/pax.patch
 	fi
 
