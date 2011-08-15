@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5625 2011/08/15 12:37:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5626 2011/08/15 15:22:53 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Aug 2011; Jeremy Olexa <darkside@gentoo.org> thirdpartymirrors:
+  fix ftp.halifax.rwth-aachen.de entry
 
   15 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Add package.mask for knetworkmanager versions requiring ~networkmanager-0.9
