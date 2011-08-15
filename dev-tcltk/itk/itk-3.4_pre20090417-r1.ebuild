@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/itk-3.4_pre20090417.ebuild,v 1.11 2011/08/15 17:32:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/itk-3.4_pre20090417-r1.ebuild,v 1.1 2011/08/15 17:32:55 jlec Exp $
 
-EAPI=3
+EAPI=4
 
-inherit multilib versionator
+inherit autotools eutils multilib versionator
 
 MY_PN="incrTcl"
 MY_P="${MY_PN}-${PV}"
@@ -16,7 +16,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 IUSE=""
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="alpha amd64 ia64 ppc sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux"
 
 DEPEND="
 	dev-lang/tk
@@ -25,17 +25,22 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_PN}/${PN}"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-install.patch
+	AT_M4DIR=.. eautoconf
+	sed 's:-pipe::g' -i configure || die
+}
+
 src_compile() {
-	sed 's:-pipe::g' -i Makefile || die
-	emake CFLAGS_DEFAULT="${CFLAGS}" || die "emake failed"
+	emake CFLAGS_DEFAULT="${CFLAGS}"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	default
 	dodoc ../{CHANGES,ChangeLog,INCOMPATIBLE,README,TODO}
 
 	cat >> "${T}"/34${PN} <<- EOF
 	LDPATH="${EPREFIX}/usr/$(get_libdir)/${PN}$(get_version_component_range 1-2)/"
 	EOF
-	doenvd "${T}"/34${PN} || die
+	doenvd "${T}"/34${PN}
 }
