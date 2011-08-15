@@ -1,0 +1,10 @@
+# ChangeLog for x11-libs/libyui-qt
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libyui-qt/ChangeLog,v 1.1 2011/08/15 09:35:40 miska Exp $
+
+*libyui-qt-2.21.1 (15 Aug 2011)
+
+  15 Aug 2011; Michal Hrusecky <miska@gentoo.org> +libyui-qt-2.21.1.ebuild,
+  +metadata.xml:
+  New ebuild for libyui-qt. Ebuild written by me.
+
