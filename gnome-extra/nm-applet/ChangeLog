@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/nm-applet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.63 2011/08/15 15:06:45 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.64 2011/08/15 19:10:31 nirbheek Exp $
+
+  15 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> nm-applet-0.8.4.ebuild,
+  nm-applet-0.9_rc3.ebuild:
+  Fix issues pointed out in bug 369901#c9 -- debug, static libs, la files
 
 *nm-applet-0.9_rc3 (15 Aug 2011)
 

@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9_rc3.ebuild,v 1.1 2011/08/15 15:06:45 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9_rc3.ebuild,v 1.2 2011/08/15 19:10:31 nirbheek Exp $
 
 EAPI="4"
+GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 GNOME_TARBALL_SUFFIX="bz2"
 GNOME_ORG_MODULE="network-manager-applet"
@@ -46,6 +47,7 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		--with-gtkver=3
 		--disable-more-warnings
+		--disable-static
 		--localstatedir=/var
 		$(use_with bluetooth)"
 }
