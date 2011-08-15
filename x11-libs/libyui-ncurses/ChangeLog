@@ -1,0 +1,10 @@
+# ChangeLog for x11-libs/libyui-ncurses
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libyui-ncurses/ChangeLog,v 1.1 2011/08/15 09:30:11 miska Exp $
+
+*libyui-ncurses-2.21.1 (15 Aug 2011)
+
+  15 Aug 2011; Michal Hrusecky <miska@gentoo.org>
+  +libyui-ncurses-2.21.1.ebuild, +metadata.xml:
+  New ebuild for libyui-ncurses. Ebuild written by me.
+
