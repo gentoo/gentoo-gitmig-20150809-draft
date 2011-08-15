@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.134 2011/07/07 11:00:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.135 2011/08/15 12:57:19 nirbheek Exp $
+
+*anjuta-3.0.3.0 (15 Aug 2011)
+
+  15 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +anjuta-3.0.3.0.ebuild:
+  Bump to 3.0.3.0, from gnome overlay for GNOME 3
 
   07 Jul 2011; Pacho Ramos <pacho@gentoo.org> anjuta-2.32.1.1.ebuild:
   Add a message to explain people about how to create vala projects since we
