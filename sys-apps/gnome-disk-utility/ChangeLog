@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/gnome-disk-utility
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.52 2011/08/13 18:23:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.53 2011/08/15 12:26:09 nirbheek Exp $
+
+*gnome-disk-utility-3.0.2 (15 Aug 2011)
+
+  15 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +files/gnome-disk-utility-2.91.6-optional-avahi.patch,
+  +gnome-disk-utility-3.0.2.ebuild:
+  Bump to 3.0.2, from gnome overlay for GNOME 3
 
   13 Aug 2011; Raúl Porcel <armin76@gentoo.org>
   gnome-disk-utility-2.32.1-r1.ebuild:
