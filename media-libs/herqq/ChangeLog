@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/herqq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/herqq/ChangeLog,v 1.5 2011/04/28 20:25:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/herqq/ChangeLog,v 1.6 2011/08/15 17:02:20 ottxor Exp $
+
+  15 Aug 2011; Christoph Junghans <ottxor@gentoo.org> herqq-1.0.0-r1.ebuild:
+  fixed deps (bug #378853)
 
   28 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> -herqq-0.8.0-r1.ebuild,
   herqq-1.0.0-r1.ebuild:
