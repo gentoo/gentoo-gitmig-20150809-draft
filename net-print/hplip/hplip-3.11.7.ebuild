@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.7.ebuild,v 1.1 2011/07/25 18:17:55 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.7.ebuild,v 1.2 2011/08/15 19:09:46 billie Exp $
 
 EAPI=3
 
@@ -31,7 +31,7 @@ COMMON_DEPEND="
 		dev-libs/openssl
 	)
 	!minimal? (
-		net-print/cups
+		>=net-print/cups-1.4.0
 		virtual/libusb:0
 		scanner? ( >=media-gfx/sane-backends-1.0.19-r1 )
 		fax? ( sys-apps/dbus )
@@ -42,7 +42,6 @@ DEPEND="${COMMON_DEPEND}
 
 RDEPEND="${COMMON_DEPEND}
 	>=app-text/ghostscript-gpl-8.71-r3
-	!static-ppds? ( || ( >=net-print/cups-1.4.0 net-print/cupsddk ) )
 	!minimal? (
 		dev-python/pygobject
 		kernel_linux? ( >=sys-fs/udev-114 )
