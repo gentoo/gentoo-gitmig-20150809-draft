@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.51.00-r1.ebuild,v 1.1 2010/09/22 22:09:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.51.00-r1.ebuild,v 1.2 2011/08/15 03:39:29 vapier Exp $
 
 EAPI="3"
 
@@ -8,7 +8,8 @@ inherit toolchain-funcs eutils multilib
 
 DESCRIPTION="A set of utilities for converting to/from the netpbm (and related) formats"
 HOMEPAGE="http://netpbm.sourceforge.net/"
-SRC_URI="mirror://gentoo/${P}.tar.xz"
+SRC_URI="mirror://gentoo/${P}.tar.xz
+	mirror://gentoo/${P}-libpng-1.5.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -81,6 +82,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/netpbm-10.31-build.patch
 	epatch "${FILESDIR}"/${P}-ppmtompeg-free.patch
 	epatch "${FILESDIR}"/${P}-pnmconvol-nooffset.patch #338230
+	epatch "${WORKDIR}"/${P}-libpng-1.5.patch #355025
 
 	# make sure we use system urt
 	sed -i '/SUPPORT_SUBDIRS/s:urt::' GNUmakefile || die
