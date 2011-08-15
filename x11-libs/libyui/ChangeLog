@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libyui
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libyui/ChangeLog,v 1.1 2011/08/15 09:27:51 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libyui/ChangeLog,v 1.2 2011/08/15 17:08:20 miska Exp $
+
+  15 Aug 2011; Michal Hrusecky <miska@gentoo.org> libyui-2.21.1.ebuild:
+  Disabling ~x86 for now, enabled by accident
 
 *libyui-2.21.1 (15 Aug 2011)
 
