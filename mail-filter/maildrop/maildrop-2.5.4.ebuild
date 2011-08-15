@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.5.4.ebuild,v 1.8 2011/08/09 12:53:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.5.4.ebuild,v 1.9 2011/08/15 07:23:57 eras Exp $
 
 EAPI=4
 
@@ -62,6 +62,7 @@ src_prepare() {
 		's~AC_MSG_ERROR(Cannot determine default mailbox)~SPOOLDIR="./.maildir"~' \
 		"${S}"/maildrop/configure.in || die "sed failed"
 	epatch "${FILESDIR}"/${PN}-testsuite.patch
+	epatch "${FILESDIR}/${P}-reformime.patch"
 	eautoreconf
 }
 

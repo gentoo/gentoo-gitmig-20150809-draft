@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.115 2011/08/09 12:53:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.116 2011/08/15 07:23:57 eras Exp $
+
+  15 Aug 2011; Eray Aslan <eras@gentoo.org> maildrop-2.5.4.ebuild,
+  +files/maildrop-2.5.4-reformime.patch:
+  Fix segfault in reformime on some arches - bug #379101
 
   09 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> maildrop-2.5.4.ebuild:
   ppc/ppc64 stable wrt #376563

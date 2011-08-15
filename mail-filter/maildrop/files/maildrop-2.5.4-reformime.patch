@@ -1,0 +1,14 @@
+some arches put argv into readonly memory - bug #379101
+Index: rfc2045/reformime.c
+===================================================================
+--- rfc2045/reformime.c	(revision 102)
++++ rfc2045/reformime.c	(working copy)
+@@ -996,7 +996,7 @@
+ 		case 's':
+ 			if (!optarg && argn < argc)
+ 				optarg=argv[argn++];
+-			if (optarg && *optarg)	section=optarg;
++			if (optarg && *optarg)	section=strdup(optarg);
+ 			break;
+ 		case 'i':
+ 			doinfo=1;
