@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/pointless
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pointless/ChangeLog,v 1.21 2011/08/14 13:47:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pointless/ChangeLog,v 1.22 2011/08/15 19:58:20 xarthisius Exp $
+
+  15 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> pointless-1.6.2.ebuild:
+  Marked ~ppc for sci-chemistry/xia2
 
 *pointless-1.6.2 (14 Aug 2011)
 
