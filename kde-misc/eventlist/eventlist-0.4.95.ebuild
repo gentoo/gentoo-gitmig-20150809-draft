@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/eventlist/eventlist-0.4.95.ebuild,v 1.1 2011/08/11 21:03:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/eventlist/eventlist-0.4.95.ebuild,v 1.2 2011/08/15 14:13:25 dilfridge Exp $
 
 EAPI=4
 
@@ -19,7 +19,8 @@ IUSE="debug"
 
 RDEPEND="
 	$(add_kdebase_dep kdepimlibs)
-	$(add_kdebase_dep akonadi)
+	|| ( ( $(add_kdebase_dep akonadi) )
+	     ( $(add_kdebase_dep kdepim-common-libs) ) )
 "
 DEPEND="${RDEPEND}"
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/eventlist
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/eventlist/ChangeLog,v 1.1 2011/08/11 21:03:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/eventlist/ChangeLog,v 1.2 2011/08/15 14:13:25 dilfridge Exp $
+
+  15 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  eventlist-0.4.95.ebuild:
+  Correct dependencies for kdepim-4.6 and later, bug 379207
 
 *eventlist-0.4.95 (11 Aug 2011)
 
