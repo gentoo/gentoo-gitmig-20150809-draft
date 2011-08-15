@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXfont
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.151 2011/08/14 14:50:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.152 2011/08/15 03:05:58 phajdan.jr Exp $
+
+  15 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> libXfont-1.4.4.ebuild:
+  x86 stable wrt security bug #378797
 
   14 Aug 2011; Markos Chandras <hwoarang@gentoo.org> libXfont-1.4.4.ebuild:
   Stable on amd64 wrt bug #378797
