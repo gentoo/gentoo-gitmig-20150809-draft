@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/identica-mode/identica-mode-1.1-r1.ebuild,v 1.2 2011/08/15 11:07:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/identica-mode/identica-mode-1.1-r1.ebuild,v 1.3 2011/08/15 11:22:53 ulm Exp $
 
-EAPI=3
+EAPI=4
 NEED_EMACS=23
 
 inherit elisp
