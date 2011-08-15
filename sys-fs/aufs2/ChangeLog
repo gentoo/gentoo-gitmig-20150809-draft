@@ -1,6 +1,20 @@
 # ChangeLog for sys-fs/aufs2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/ChangeLog,v 1.38 2011/06/27 08:12:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/ChangeLog,v 1.39 2011/08/15 18:49:16 jlec Exp $
+
+*aufs2-2.2_p20110815 (15 Aug 2011)
+
+  15 Aug 2011; Justin Lecher <jlec@gentoo.org> -aufs2-0_p20100809.ebuild,
+  -aufs2-0_p20101122.ebuild, -aufs2-0_p20110120.ebuild,
+  -aufs2-0_p20110120-r1.ebuild, -aufs2-0_p20110327.ebuild,
+  -aufs2-0_p20110605.ebuild, -aufs2-0_p20110620.ebuild,
+  aufs2-0_p20110627.ebuild, +aufs2-2.2_p20110815.ebuild,
+  +files/2.2/aufs2-base-35.patch, +files/2.2/aufs2-standalone-35.patch,
+  +files/2.2/aufs2-base-36.patch, +files/2.2/aufs2-standalone-36.patch,
+  +files/2.2/aufs2-base-37.patch, +files/2.2/aufs2-standalone-37.patch,
+  +files/2.2/aufs2-base-38.patch, +files/2.2/aufs2-standalone-38.patch,
+  +files/2.2/aufs2-base-39.patch, +files/2.2/aufs2-standalone-39.patch:
+  Version Bump
 
 *aufs2-0_p20110627 (27 Jun 2011)
 

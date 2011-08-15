@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20110627.ebuild,v 1.1 2011/06/27 08:12:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20110627.ebuild,v 1.2 2011/08/15 18:49:16 jlec Exp $
 
-EAPI="4"
+EAPI=4
 
 inherit linux-mod multilib toolchain-funcs
 
@@ -16,7 +16,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug fuse hardened hfs inotify kernel-patch nfs ramfs"
 
 DEPEND="dev-vcs/git"
-RDEPEND="!sys-fs/aufs"
+RDEPEND="
+	!sys-fs/aufs
+	!sys-fs/aufs3"
 
 S="${WORKDIR}"/${PN}-standalone
 
@@ -29,7 +31,7 @@ pkg_setup() {
 	use fuse && CONFIG_CHECK="${CONFIG_CHECK} ~FUSE_FS"
 	use hfs && CONFIG_CHECK="${CONFIG_CHECK} ~HFSPLUS_FS"
 
-	# this is needed so merging a binpkg aufs2 is possible w/out a kernel unpacked on the system
+	# this is needed so merging a binpkg ${PN} is possible w/out a kernel unpacked on the system
 	[ -n "$PKG_SETUP_HAS_BEEN_RAN" ] && return
 
 	get_version
@@ -37,21 +39,21 @@ pkg_setup() {
 	kernel_is gt 2 6 39 && die "kernel too new"
 
 	linux-mod_pkg_setup
-	if ! ( patch -p1 --dry-run --force -R -d ${KV_DIR} < "${FILESDIR}"/aufs2-standalone-${KV_PATCH}.patch >/dev/null && \
-		patch -p1 --dry-run --force -R -d ${KV_DIR} < "${FILESDIR}"/aufs2-base-${KV_PATCH}.patch >/dev/null ); then
+	if ! ( patch -p1 --dry-run --force -R -d ${KV_DIR} < "${FILESDIR}"/${PN}-standalone-${KV_PATCH}.patch >/dev/null && \
+		patch -p1 --dry-run --force -R -d ${KV_DIR} < "${FILESDIR}"/${PN}-base-${KV_PATCH}.patch >/dev/null ); then
 		if use kernel-patch; then
 			cd ${KV_DIR}
 			ewarn "Patching your kernel..."
-			patch --no-backup-if-mismatch --force -p1 -R -d ${KV_DIR} < "${FILESDIR}"/aufs2-standalone-${KV_PATCH}.patch >/dev/null
-			patch --no-backup-if-mismatch --force -p1 -R -d ${KV_DIR} < "${FILESDIR}"/aufs2-base-${KV_PATCH}.patch >/dev/null
-			epatch "${FILESDIR}"/aufs2-{base,standalone}-${KV_PATCH}.patch
+			patch --no-backup-if-mismatch --force -p1 -R -d ${KV_DIR} < "${FILESDIR}"/${PN}-standalone-${KV_PATCH}.patch >/dev/null
+			patch --no-backup-if-mismatch --force -p1 -R -d ${KV_DIR} < "${FILESDIR}"/${PN}-base-${KV_PATCH}.patch >/dev/null
+			epatch "${FILESDIR}"/${PN}-{base,standalone}-${KV_PATCH}.patch
 			ewarn "You need to compile your kernel with the applied patch"
 			ewarn "to be able to load and use the aufs kernel module"
 		else
-			eerror "You need to apply a patch to your kernel to compile and run the aufs2 module"
+			eerror "You need to apply a patch to your kernel to compile and run the ${PN} module"
 			eerror "Either enable the kernel-patch useflag to do it with this ebuild"
-			eerror "or apply ${FILESDIR}/aufs2-base-${KV_PATCH}.patch and"
-			eerror "${FILESDIR}/aufs2-standalone-${KV_PATCH}.patch by hand"
+			eerror "or apply ${FILESDIR}/${PN}-base-${KV_PATCH}.patch and"
+			eerror "${FILESDIR}/${PN}-standalone-${KV_PATCH}.patch by hand"
 			die "missing kernel patch, please apply it first"
 		fi
 	fi
