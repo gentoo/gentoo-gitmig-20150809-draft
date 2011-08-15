@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.8.7-r3.ebuild,v 1.1 2011/05/09 21:34:21 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.8.7-r4.ebuild,v 1.1 2011/08/15 19:44:03 sochotnicky Exp $
 
 EAPI=2
 
@@ -44,6 +44,7 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS README TODO doc/rtorrent.rc
+	doman doc/rtorrent.1
 
 	if use daemon; then
 		newinitd "${FILESDIR}/rtorrentd.init" rtorrentd || die "newinitd failed"
