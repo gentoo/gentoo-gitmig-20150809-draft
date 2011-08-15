@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/osc-9999.ebuild,v 1.1 2011/06/20 09:49:58 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/osc/osc-9999.ebuild,v 1.2 2011/08/15 09:02:09 miska Exp $
 
 EAPI=3
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://en.opensuse.org/openSUSE:OSC"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-[[ "${PV}" == "9999" ]] || KEYWORDS="~amd64"
+[[ "${PV}" == "9999" ]] || KEYWORDS="~amd64 ~x86"
 
 DEPEND="dev-python/urlgrabber
 	dev-python/pyxml

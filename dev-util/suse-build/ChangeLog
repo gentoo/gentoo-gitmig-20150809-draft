@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/suse-build
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/ChangeLog,v 1.2 2011/06/18 20:20:50 miska Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/ChangeLog,v 1.3 2011/08/15 09:04:56 miska Exp $
+
+  08 Jul 2011; Michal Hrusecky <miska@gentoo.org> suse-build-2011.01.20.ebuild,
+  suse-build-9999.ebuild:
+  Tested on x86, adding keyword
 
   18 Jun 2011; Michal Hrusecky <miska@gentoo.org> metadata.xml:
   Fixed metadata to include me as a maintainer
