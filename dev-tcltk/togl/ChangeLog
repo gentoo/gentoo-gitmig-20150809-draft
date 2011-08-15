@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/togl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/togl/ChangeLog,v 1.18 2011/07/11 15:05:08 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/togl/ChangeLog,v 1.19 2011/08/15 17:15:10 jlec Exp $
+
+*togl-2.0-r2 (15 Aug 2011)
+
+  15 Aug 2011; Justin Lecher <jlec@gentoo.org> togl-2.0-r1.ebuild,
+  +togl-2.0-r2.ebuild, metadata.xml:
+  Make multilib compatible, #378991; respect CFLAGS
 
   11 Jul 2011; Matt Turner <mattst88@gentoo.org> togl-2.0-r1.ebuild:
   Added ~mips, bug 298612
