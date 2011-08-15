@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Guard
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Guard/ChangeLog,v 1.1 2011/08/15 14:11:26 patrick Exp $
+
+*Guard-1.021 (15 Aug 2011)
+
+  15 Aug 2011; Patrick Lauer <patrick@gentoo.org> +Guard-1.021.ebuild,
+  +metadata.xml:
+  Initial import from Rion overlay, ebuilds by the respective authors
+

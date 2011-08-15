@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Encode-HanExtra
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-HanExtra/ChangeLog,v 1.1 2011/08/15 14:10:46 patrick Exp $
+
+*Encode-HanExtra-0.23 (15 Aug 2011)
+
+  15 Aug 2011; Patrick Lauer <patrick@gentoo.org> +Encode-HanExtra-0.23.ebuild,
+  +metadata.xml:
+  Initial import from Rion overlay, ebuilds by the respective authors
+
