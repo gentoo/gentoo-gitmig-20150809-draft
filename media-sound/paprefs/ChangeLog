@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/paprefs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/paprefs/ChangeLog,v 1.22 2011/03/28 18:25:34 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/paprefs/ChangeLog,v 1.23 2011/08/15 10:35:04 ford_prefect Exp $
+
+*paprefs-0.9.9-r1 (15 Aug 2011)
+
+  15 Aug 2011; Arun Raghavan <ford_prefect@gentoo.org>
+  +paprefs-0.9.9-r1.ebuild:
+  Add USE-depend on pulseaudio[gnome], since paprefs requires module-gconf to
+  work. Thanks to dagger for pointing this out. Bump to EAPI-4 while we're at
+  it.
 
   28 Mar 2011; Christoph Mende <angelos@gentoo.org> paprefs-0.9.9.ebuild:
   Fixed slot deps
