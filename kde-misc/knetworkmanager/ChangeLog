@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/knetworkmanager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/ChangeLog,v 1.31 2011/07/16 11:18:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/ChangeLog,v 1.32 2011/08/15 15:11:21 dilfridge Exp $
+
+*knetworkmanager-4.4.0_p30110815 (15 Aug 2011)
+
+  15 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +knetworkmanager-4.4.0_p30110815.ebuild:
+  Add a snapshot from the nm09 branch for networkmanager-0.9 support. The 3 in
+  the patchlevel is NOT a typo.
 
   16 Jul 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   knetworkmanager-4.4.0_p20110714.ebuild:
