@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mpir/mpir-2.4.0.ebuild,v 1.1 2011/08/07 01:23:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mpir/mpir-2.4.0.ebuild,v 1.2 2011/08/15 09:22:11 tomka Exp $
 
 EAPI=4
 
-inherit eutils autotools
+inherit eutils autotools-utils
 
 DESCRIPTION="Library for arbitrary precision integer arithmetic derived from version 4.2.1 of gmp"
 HOMEPAGE="http://www.mpir.org/"
@@ -23,11 +23,11 @@ src_prepare(){
 	epatch \
 		"${FILESDIR}/${PN}-2.2.0-yasm.patch" \
 		"${FILESDIR}/${PN}-1.3.0-ABI-multilib.patch"
+
 	# In the same way there was QA regarding executable stacks
 	# with GMP we have some here as well. We cannot apply the
 	# GMP solution as yasm is used, at least on x86/amd64.
 	# Furthermore we are able to patch config.ac.
-
 	ebegin "Patching assembler files to remove executable sections"
 	local i
 	for i in $(find . -type f -name '*.asm') ; do
@@ -52,9 +52,10 @@ src_prepare(){
 src_configure() {
 # beware that cpudetection aka fat binaries is x86/amd64 only.
 # Place mpir in profiles/arch/$arch/package.use.mask when making it available on $arch.
-	econf \
-		$(use_enable cxx) \
-		$(use_enable cpudetection fat) \
+	myeconfargs=(
+		$(use_enable cxx)
+		$(use_enable cpudetection fat)
 		$(use_enable static-libs static)
-
+	)
+	autotools-utils_src_configure
 }
