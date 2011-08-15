@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gupnp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/ChangeLog,v 1.37 2011/08/14 10:25:50 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/ChangeLog,v 1.38 2011/08/15 17:03:28 armin76 Exp $
+
+  15 Aug 2011; Raúl Porcel <armin76@gentoo.org> gupnp-0.13.4.ebuild:
+  alpha stable
 
   14 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gupnp-0.16.1.ebuild:
   Remove .la files and static libraries
