@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.481 2011/08/15 13:28:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.482 2011/08/15 17:14:37 vostorga Exp $
+
+  15 Aug 2011; Víctor Ostorga <vostorga@gentoo.org> samba-3.5.11.ebuild:
+  Disabling dmalloc support in samba, it crashes due to re-definition of many
+  structures, bug #318285
 
   15 Aug 2011; Jeroen Roovers <jer@gentoo.org> samba-3.5.11.ebuild:
   Stable for HPPA (bug #377909).

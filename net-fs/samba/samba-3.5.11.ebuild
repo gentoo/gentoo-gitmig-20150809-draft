@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.11.ebuild,v 1.3 2011/08/15 13:28:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.11.ebuild,v 1.4 2011/08/15 17:14:37 vostorga Exp $
 
 EAPI=4
 
@@ -36,7 +36,6 @@ DEPEND="dev-libs/popt
 		dev-libs/iniparser )
 	cluster? ( >=dev-db/ctdb-1.0.114_p1 )
 	cups? ( net-print/cups )
-	debug? ( dev-libs/dmalloc )
 	fam? ( virtual/fam )
 	ldap? ( net-nds/openldap )
 	pam? ( virtual/pam
@@ -154,7 +153,6 @@ src_configure() {
 		--enable-socket-wrapper \
 		--enable-nss-wrapper \
 		$(use_enable swat) \
-		$(use_enable debug dmalloc) \
 		$(use_enable cups) \
 		--disable-iprint \
 		$(use_enable fam) \
