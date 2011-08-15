@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/lucene
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.78 2011/03/20 17:44:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.79 2011/08/15 16:46:27 xarthisius Exp $
+
+  12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> lucene-2.1.0-r1.ebuild:
+  ppc64 stable wrt #355085
 
   20 Mar 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> lucene-2.9.4.ebuild,
   lucene-3.0.3.ebuild:
