@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.109 2011/08/14 09:04:08 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.110 2011/08/15 14:58:42 nirbheek Exp $
+
+*networkmanager-0.9_rc3 (15 Aug 2011)
+
+  15 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +networkmanager-0.9_rc3.ebuild,
+  +files/networkmanager-0.9_rc3-fix-tests.patch, metadata.xml:
+  Bump to 0.9_rc3, from gnome overlay for great justice (and GNOME 3)
 
   14 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   networkmanager-0.8.4.0-r2.ebuild:
