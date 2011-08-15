@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ed
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.85 2010/10/02 17:39:45 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.86 2011/08/15 03:11:06 vapier Exp $
+
+  15 Aug 2011; Mike Frysinger <vapier@gentoo.org> ed-1.5.ebuild:
+  Ignore EXTRA_ECONF #379111 by Navid Zamani.
 
   02 Oct 2010; Raúl Porcel <armin76@gentoo.org> ed-1.4.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #336277

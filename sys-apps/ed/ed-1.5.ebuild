@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ed-1.5.ebuild,v 1.2 2010/09/12 20:29:52 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ed-1.5.ebuild,v 1.3 2011/08/15 03:11:06 vapier Exp $
 
 EAPI="3"
 
@@ -27,9 +27,7 @@ src_configure() {
 	# custom configure script ... econf wont work
 	./configure \
 		--prefix="${EPREFIX}"/ \
-		--datadir="${EPREFIX}"/usr/share \
-		${EXTRA_ECONF} \
-		|| die
+		--datadir="${EPREFIX}"/usr/share
 }
 
 src_install() {
