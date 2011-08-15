@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/identica-mode/identica-mode-1.1-r1.ebuild,v 1.1 2011/03/07 17:23:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/identica-mode/identica-mode-1.1-r1.ebuild,v 1.2 2011/08/15 11:07:39 ulm Exp $
 
 EAPI=3
 NEED_EMACS=23
@@ -19,12 +19,6 @@ IUSE=""
 
 ELISP_TEXINFO="doc/${PN}.texi"
 SITEFILE="50${PN}-gentoo.el"
-
-src_compile() {
-	elisp-compile ${PN}.el || die
-	cd doc
-	makeinfo ${ELISP_TEXINFO##*/} || die
-}
 
 pkg_postinst() {
 	elisp-site-regen
