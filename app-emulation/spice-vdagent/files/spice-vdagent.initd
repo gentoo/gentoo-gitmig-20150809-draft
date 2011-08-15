@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-vdagent/files/spice-vdagent.initd,v 1.2 2011/07/25 09:24:52 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-vdagent/files/spice-vdagent.initd,v 1.3 2011/08/15 00:42:13 jer Exp $
 
 depend() {
     after dbus
@@ -33,7 +33,7 @@ start() {
     rm -f /var/run/spice-vdagentd/spice-vdagent-sock
 
     ebegin "Starting spice VD agent daemon"
-    start-stop-daemon
+    start-stop-daemon \
         --start \
         --pidfile "${PIDFILE}" \
         --exec /usr/sbin/spice-vdagentd \
@@ -43,7 +43,7 @@ start() {
 
 stop() {
     ebegin "Stopping spice VD agent daemon"
-    start-stop-daemon
+    start-stop-daemon \
         --stop \
         --pidfile "${PIDFILE}"
     eend $?
