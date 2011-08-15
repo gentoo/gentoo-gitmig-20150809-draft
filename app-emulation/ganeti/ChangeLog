@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/ganeti
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.50 2011/08/10 17:43:07 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ChangeLog,v 1.51 2011/08/15 16:06:44 ramereth Exp $
+
+*ganeti-2.5.0_beta1 (15 Aug 2011)
+
+  15 Aug 2011; Lance Albertson <ramereth@gentoo.org> ganeti-2.4.2.ebuild,
+  +ganeti-2.5.0_beta1.ebuild, metadata.xml:
+  Version bump, mark 2.4.2 stable
 
   10 Aug 2011; Lance Albertson <ramereth@gentoo.org> ganeti-2.4.3.ebuild:
   Add missing dependency for baselayout-2.0
