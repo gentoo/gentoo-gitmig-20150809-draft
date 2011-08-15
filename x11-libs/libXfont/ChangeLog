@@ -1,9 +1,9 @@
 # ChangeLog for x11-libs/libXfont
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.153 2011/08/15 15:24:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.154 2011/08/15 15:26:25 armin76 Exp $
 
   15 Aug 2011; Raúl Porcel <armin76@gentoo.org> libXfont-1.4.4.ebuild:
-  alpha/ia64/s390/sh/sparc stable wrt #378797
+  alpha/arm/ia64/s390/sh/sparc stable wrt #378797
 
   15 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> libXfont-1.4.4.ebuild:
   x86 stable wrt security bug #378797
