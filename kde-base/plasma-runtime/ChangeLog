@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/plasma-runtime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-runtime/ChangeLog,v 1.68 2011/08/12 19:19:23 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-runtime/ChangeLog,v 1.69 2011/08/15 19:13:17 maekke Exp $
+
+  15 Aug 2011; Markus Meier <maekke@gentoo.org> plasma-runtime-4.6.5.ebuild:
+  x86 stable, bug #377465
 
   12 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -plasma-runtime-4.6.4.ebuild:

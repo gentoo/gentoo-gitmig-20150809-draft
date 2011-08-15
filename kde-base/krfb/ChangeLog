@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krfb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.184 2011/08/12 19:19:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.185 2011/08/15 20:07:49 maekke Exp $
+
+  15 Aug 2011; Markus Meier <maekke@gentoo.org> krfb-4.6.5.ebuild:
+  x86 stable, bug #377465
 
   12 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> -krfb-4.6.4.ebuild:
   Drop KDE 4.6.4

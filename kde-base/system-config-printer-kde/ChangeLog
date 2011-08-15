@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/system-config-printer-kde
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/system-config-printer-kde/ChangeLog,v 1.52 2011/08/12 19:19:26 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/system-config-printer-kde/ChangeLog,v 1.53 2011/08/15 21:41:25 maekke Exp $
+
+  15 Aug 2011; Markus Meier <maekke@gentoo.org>
+  system-config-printer-kde-4.6.5.ebuild:
+  x86 stable, bug #377465
 
   12 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -system-config-printer-kde-4.6.4.ebuild:

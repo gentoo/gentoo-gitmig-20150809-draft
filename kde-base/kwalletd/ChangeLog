@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwalletd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/ChangeLog,v 1.77 2011/08/12 19:19:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/ChangeLog,v 1.78 2011/08/15 19:09:49 maekke Exp $
+
+  15 Aug 2011; Markus Meier <maekke@gentoo.org> kwalletd-4.6.5.ebuild:
+  x86 stable, bug #377465
 
   12 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -kwalletd-4.6.4.ebuild:

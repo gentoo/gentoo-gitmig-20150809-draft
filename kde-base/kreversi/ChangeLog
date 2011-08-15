@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kreversi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kreversi/ChangeLog,v 1.183 2011/08/12 19:19:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kreversi/ChangeLog,v 1.184 2011/08/15 21:11:13 maekke Exp $
+
+  15 Aug 2011; Markus Meier <maekke@gentoo.org> kreversi-4.6.5.ebuild:
+  x86 stable, bug #377465
 
   12 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -kreversi-4.6.4.ebuild:

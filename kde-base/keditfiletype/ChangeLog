@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/keditfiletype
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/keditfiletype/ChangeLog,v 1.67 2011/08/12 19:19:22 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/keditfiletype/ChangeLog,v 1.68 2011/08/15 19:48:46 maekke Exp $
+
+  15 Aug 2011; Markus Meier <maekke@gentoo.org> keditfiletype-4.6.5.ebuild:
+  x86 stable, bug #377465
 
   12 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -keditfiletype-4.6.4.ebuild:

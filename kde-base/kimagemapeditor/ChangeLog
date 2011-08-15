@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kimagemapeditor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kimagemapeditor/ChangeLog,v 1.173 2011/08/12 19:19:42 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kimagemapeditor/ChangeLog,v 1.174 2011/08/15 19:55:24 maekke Exp $
+
+  15 Aug 2011; Markus Meier <maekke@gentoo.org> kimagemapeditor-4.6.5.ebuild:
+  x86 stable, bug #377465
 
   12 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -kimagemapeditor-4.6.4.ebuild:

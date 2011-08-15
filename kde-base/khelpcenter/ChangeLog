@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/khelpcenter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.195 2011/08/12 19:19:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.196 2011/08/15 18:39:27 maekke Exp $
+
+  15 Aug 2011; Markus Meier <maekke@gentoo.org> khelpcenter-4.6.5.ebuild:
+  x86 stable, bug #377465
 
   12 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -khelpcenter-4.6.4.ebuild:

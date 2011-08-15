@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/palapeli
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/palapeli/ChangeLog,v 1.38 2011/08/12 19:19:41 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/palapeli/ChangeLog,v 1.39 2011/08/15 21:22:04 maekke Exp $
+
+  15 Aug 2011; Markus Meier <maekke@gentoo.org> palapeli-4.6.5.ebuild:
+  x86 stable, bug #377465
 
   12 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -palapeli-4.6.4.ebuild:

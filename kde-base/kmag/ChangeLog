@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmag
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmag/ChangeLog,v 1.176 2011/08/12 19:19:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmag/ChangeLog,v 1.177 2011/08/15 21:03:17 maekke Exp $
+
+  15 Aug 2011; Markus Meier <maekke@gentoo.org> kmag-4.6.5.ebuild:
+  x86 stable, bug #377465
 
   12 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> -kmag-4.6.4.ebuild:
   Drop KDE 4.6.4

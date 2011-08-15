@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkdcraw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/ChangeLog,v 1.87 2011/08/12 19:19:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdcraw/ChangeLog,v 1.88 2011/08/15 19:10:41 maekke Exp $
+
+  15 Aug 2011; Markus Meier <maekke@gentoo.org> libkdcraw-4.6.5.ebuild:
+  x86 stable, bug #377465
 
   12 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -libkdcraw-4.6.4.ebuild:

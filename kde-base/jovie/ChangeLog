@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/jovie
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/jovie/ChangeLog,v 1.24 2011/08/12 19:19:30 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/jovie/ChangeLog,v 1.25 2011/08/15 19:23:42 maekke Exp $
+
+  15 Aug 2011; Markus Meier <maekke@gentoo.org> jovie-4.6.5.ebuild:
+  x86 stable, bug #377465
 
   12 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> -jovie-4.6.4.ebuild:
   Drop KDE 4.6.4

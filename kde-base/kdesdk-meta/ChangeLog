@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesdk-meta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/ChangeLog,v 1.174 2011/08/12 19:19:22 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/ChangeLog,v 1.175 2011/08/15 21:54:31 maekke Exp $
+
+  15 Aug 2011; Markus Meier <maekke@gentoo.org> kdesdk-meta-4.6.5.ebuild:
+  x86 stable, bug #377465
 
   12 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -kdesdk-meta-4.6.4.ebuild:

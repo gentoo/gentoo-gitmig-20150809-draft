@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kinfocenter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kinfocenter/ChangeLog,v 1.91 2011/08/12 19:19:27 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kinfocenter/ChangeLog,v 1.92 2011/08/15 21:50:41 maekke Exp $
+
+  15 Aug 2011; Markus Meier <maekke@gentoo.org> kinfocenter-4.6.5.ebuild:
+  x86 stable, bug #377465
 
   12 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -kinfocenter-4.6.4.ebuild:
