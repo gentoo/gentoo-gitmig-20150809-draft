@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12982 2011/08/15 16:13:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12983 2011/08/15 22:22:06 vapier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,12 +30,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Diego Elio Pettenò <flameeyes@gentoo.org> (08 Jul 2011)
-#  on behalf of QA team
-# 
-# Missing distfile.
-~sys-devel/gnuconfig-20110814
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (15 Aug 2011)
 # Mask for testing, depends on masked networkmanager
