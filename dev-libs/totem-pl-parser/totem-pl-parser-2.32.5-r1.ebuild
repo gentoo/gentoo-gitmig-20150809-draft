@@ -1,9 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.32.4.ebuild,v 1.2 2011/04/02 11:37:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.32.5-r1.ebuild,v 1.1 2011/08/16 22:28:25 nirbheek Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
+GNOME_TARBALL_SUFFIX="bz2"
 
 inherit gnome2
 
@@ -16,13 +18,14 @@ HOMEPAGE="http://projects.gnome.org/totem/"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="doc +quvi +introspection"
+IUSE="archive doc +introspection +quvi"
 
 RDEPEND=">=dev-libs/glib-2.24:2
 	dev-libs/gmime:2.4
 	>=net-libs/libsoup-gnome-2.30:2.4
+	archive? ( >=app-arch/libarchive-2.8.4 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
-	quvi? ( >=media-libs/quvi-0.2.14-r1 )"
+	quvi? ( >=media-libs/quvi-0.2.15 )"
 DEPEND="${RDEPEND}
 	!<media-video/totem-2.21
 	>=sys-devel/gettext-0.17
@@ -34,6 +37,7 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	G2CONF="${G2CONF}
 		--disable-static
+		$(use_enable archive libarchive)
 		$(use_enable quvi)
 		$(use_enable introspection)"
 	DOCS="AUTHORS ChangeLog NEWS"
