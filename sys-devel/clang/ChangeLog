@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.40 2011/07/08 10:10:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.41 2011/08/16 09:33:41 flameeyes Exp $
+
+*clang-2.9-r1 (16 Aug 2011)
+
+  16 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org> +clang-2.9-r1.ebuild,
+  +files/clang-2.9-gccversions.patch:
+  Add patch to check for a few more GCC versions; thanks to Amir Aupov, Richard
+  and Josh in bug #377949.
 
   08 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> clang-2.8-r3.ebuild,
   clang-2.9.ebuild, clang-9999.ebuild:
