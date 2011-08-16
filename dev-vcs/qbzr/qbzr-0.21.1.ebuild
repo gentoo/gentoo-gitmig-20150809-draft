@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/qbzr-0.20.0.ebuild,v 1.1 2011/02/11 23:32:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/qbzr-0.21.1.ebuild,v 1.1 2011/08/16 11:59:58 fauli Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -20,7 +20,7 @@ IUSE=""
 
 # bzr version comes from NEWS file. It's lowest version required for some
 # features to work.
-DEPEND=">=dev-vcs/bzr-2.3
+DEPEND=">=dev-vcs/bzr-2.4
 		>=dev-python/PyQt4-4.1[X]"
 RDEPEND="${DEPEND}"
 
