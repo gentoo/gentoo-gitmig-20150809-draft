@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/radmind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/radmind/ChangeLog,v 1.14 2011/08/05 21:30:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/radmind/ChangeLog,v 1.15 2011/08/16 21:03:44 jer Exp $
+
+*radmind-1.14.1 (16 Aug 2011)
+
+  16 Aug 2011; Jeroen Roovers <jer@gentoo.org> +radmind-1.14.1.ebuild:
+  Version bump.
 
   05 Aug 2011; Jeroen Roovers <jer@gentoo.org> radmind-1.14.0.ebuild:
   We still need dev-libs/openssl. 8-)
