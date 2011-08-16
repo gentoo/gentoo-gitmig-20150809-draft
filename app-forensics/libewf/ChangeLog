@@ -1,6 +1,12 @@
 # ChangeLog for app-forensics/libewf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/ChangeLog,v 1.11 2011/07/24 18:24:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/ChangeLog,v 1.12 2011/08/16 13:17:53 patrick Exp $
+
+*libewf-20100226-r1 (16 Aug 2011)
+
+  16 Aug 2011; Patrick Lauer <patrick@gentoo.org> +libewf-20100226-r1.ebuild,
+  metadata.xml:
+  Small improvements from pentoo overlay
 
   24 Jul 2011; Raúl Porcel <armin76@gentoo.org> libewf-20090209.ebuild,
   libewf-20091108.ebuild, libewf-20100226.ebuild:
