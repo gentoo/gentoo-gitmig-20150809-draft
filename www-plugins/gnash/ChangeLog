@@ -1,6 +1,11 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.65 2011/07/19 17:31:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.66 2011/08/16 12:56:26 chithanh Exp $
+
+  16 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  gnash-0.8.9.ebuild:
+  Add tslib dependency that was previously automagic. warn user against
+  multiple boost versions, bug #366407.
 
   19 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #266794

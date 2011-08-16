@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.9.ebuild,v 1.7 2011/07/02 21:09:02 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.9.ebuild,v 1.8 2011/08/16 12:56:26 chithanh Exp $
 
 EAPI=3
 CMAKE_REQUIRED="never"
@@ -45,6 +45,9 @@ RDEPEND=">=dev-libs/boost-1.41.0
 		>=app-text/docbook2X-0.8.8
 		app-text/docbook-sgml-utils
 	)
+	fbcon? (
+		x11-libs/tslib
+	)
 	ffmpeg? (
 		virtual/ffmpeg[vaapi?]
 	)
@@ -88,6 +91,12 @@ DEPEND="${RDEPEND}
 RESTRICT="test"
 
 pkg_setup() {
+	if has_version ">=dev-libs/boost-1.46" && has_version "<dev-libs/boost-1.46"; then
+		ewarn "If you have multiple versions of boost installed, gnash may attempt to"
+		ewarn "compile against the older version and link against newer version, which can"
+		ewarn "cause the build to fail. Unmerge of the old version of boost is recommended."
+	fi
+
 	if use !ffmpeg && use !gstreamer; then
 		ewarn "You are trying to build Gnash without choosing a media handler."
 		ewarn "Sound and video playback will not work."
