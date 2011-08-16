@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.241 2011/08/16 10:37:51 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.242 2011/08/16 10:54:31 ford_prefect Exp $
+
+*pulseaudio-0.99.2 (16 Aug 2011)
+
+  16 Aug 2011; Arun Raghavan <ford_prefect@gentoo.org>
+  -pulseaudio-0.99.1.ebuild, +pulseaudio-0.99.2.ebuild:
+  Bump to 0.99.2 (aka 1.0 RC2). Bunch of bug fixes, support for passthrough
+  formats in alsa-sink, and more.
 
   16 Aug 2011; Arun Raghavan <ford_prefect@gentoo.org> pulseaudio-9999.ebuild:
   Fix JACK dep, drop copying ChangeLog.

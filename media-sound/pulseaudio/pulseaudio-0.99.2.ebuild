@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.99.1.ebuild,v 1.1 2011/08/03 04:10:40 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.99.2.ebuild,v 1.1 2011/08/16 10:54:31 ford_prefect Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://freedesktop.org/software/pulseaudio/releases/${P}.tar.gz"
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+alsa avahi +caps equalizer jack lirc oss tcpd +X dbus libsamplerate gnome bluetooth +asyncns +glib test doc +udev ipv6 system-wide realtime +orc"
 
 RDEPEND="app-admin/eselect-esd
@@ -30,7 +30,7 @@ RDEPEND="app-admin/eselect-esd
 	alsa? ( >=media-libs/alsa-lib-1.0.19 )
 	glib? ( >=dev-libs/glib-2.4.0 )
 	avahi? ( >=net-dns/avahi-0.6.12[dbus] )
-	jack? ( >=media-sound/jack-audio-connection-kit-0.100 )
+	jack? ( >=media-sound/jack-audio-connection-kit-0.117 )
 	tcpd? ( sys-apps/tcp-wrappers )
 	lirc? ( app-misc/lirc )
 	dbus? ( >=sys-apps/dbus-1.0.0 )
