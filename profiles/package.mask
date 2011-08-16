@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12987 2011/08/16 18:32:21 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12988 2011/08/16 18:38:32 sping Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -710,11 +710,6 @@ dev-haskell/hsshellscript
 # Use the split horde ebuilds instaed.
 www-apps/horde-webmail
 www-apps/horde-groupware
-
-# Sebastian Pipping <sping@gentoo.org> (27 Nov 2010)
-# Test suite gives one error, previous version did not.
-# Upcoming bump seems too risky for ~arch right now.
-~app-text/xmlstarlet-1.0.3
 
 # Alexis Ballier <aballier@gentoo.org> (13 Nov 2010)
 # Last rites: app-text/ptex
