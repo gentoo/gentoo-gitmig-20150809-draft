@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9_rc3.ebuild,v 1.1 2011/08/15 14:58:42 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9_rc3.ebuild,v 1.2 2011/08/16 10:07:01 nirbheek Exp $
 
 EAPI="4"
-GNOME_ORG_MODULE="NetworkManager"
 PATCHSET="${PN}-0.9-patches-0.1"
+GNOME_ORG_MODULE="NetworkManager"
+GNOME_ORG_PVP="0.8"
 REAL_PV="0.8.9997"
 
 inherit autotools eutils gnome.org linux-info systemd

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/networkmanager-vpnc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/ChangeLog,v 1.13 2011/08/15 14:57:42 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/ChangeLog,v 1.14 2011/08/16 10:06:55 nirbheek Exp $
+
+  16 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  networkmanager-vpnc-0.9_rc2.ebuild:
+  Fix SRC_URI, silly NM versioning
 
 *networkmanager-vpnc-0.9_rc2 (15 Aug 2011)
 

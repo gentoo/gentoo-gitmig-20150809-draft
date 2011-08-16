@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/networkmanager-openvpn-0.9_rc3.ebuild,v 1.1 2011/08/15 14:57:42 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/networkmanager-openvpn-0.9_rc3.ebuild,v 1.2 2011/08/16 10:07:06 nirbheek Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager-${PN##*-}"
+GNOME_ORG_PVP="0.8"
 REAL_PV="0.8.9997"
 
 inherit gnome.org
