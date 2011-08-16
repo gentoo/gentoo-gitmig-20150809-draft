@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.101 2011/03/22 20:03:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.102 2011/08/16 13:11:31 nirbheek Exp $
+
+*orca-3.0.3 (16 Aug 2011)
+
+  16 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +orca-3.0.3.ebuild:
+  Bump to 3.0.3, from gnome overlay for GNOME 3
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> orca-2.32.1.ebuild:
   Marking orca-2.32.1 ppc stable for bug 353436
