@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.3.3.ebuild,v 1.1 2011/05/29 10:03:00 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.4.0.ebuild,v 1.1 2011/08/16 15:24:55 fauli Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -21,9 +21,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
 IUSE="curl doc emacs +sftp test"
-
-# Disable until https://bugs.launchpad.net/bzr/+bug/656170 is fixed.
-RESTRICT="test"
 
 RDEPEND="|| ( dev-lang/python:2.7[xml] dev-lang/python:2.6[xml] dev-lang/python:2.5[xml] dev-python/celementtree )
 	curl? ( dev-python/pycurl )
@@ -49,10 +46,7 @@ src_prepare() {
 	distutils_src_prepare
 
 	# Don't regenerate .c files from .pyx when pyrex is found.
-	epatch "${FILESDIR}/${PN}-2.2.0-no-pyrex-citon.patch"
-	# Don't run lock permission tests when running as root
-	# Has to be backported, tests are restricted anyway
-#	epatch "${FILESDIR}/${PN}-0.90-tests-fix_root.patch"
+	epatch "${FILESDIR}/${PN}-2.4.0-no-pyrex-citon.patch"
 	# Fix permission errors when run under directories with setgid set.
 	epatch "${FILESDIR}/${PN}-0.90-tests-sgid.patch"
 }
@@ -71,10 +65,11 @@ src_test() {
 
 	# Define tests which are known to fail below.
 	local skip_tests="("
-	# https://bugs.launchpad.net/bzr/+bug/456471
-	skip_tests+="bzrlib.tests.blackbox.test_version.*|"
 	# https://bugs.launchpad.net/bzr/+bug/392127
-	skip_tests+="test_http.*"
+#	skip_tests+="test_http.*|"
+	# libcurl cannot verify SSL certs
+	# https://bugs.launchpad.net/bzr/+bug/82086
+	skip_tests+="per_transport.TransportTests.test_clone|per_transport.TransportTests.test_connection_sharing|per_transport.TransportTests.test_copy_to|per_transport.TransportTests.test_get|per_transport.TransportTests.test_get_bytes|per_transport.TransportTests.test_get_bytes_unknown_file|per_transport.TransportTests.test_get_directory_read_gives_ReadError|per_transport.TransportTests.test_get_unknown_file|per_transport.TransportTests.test_has|per_transport.TransportTests.test_has_root_works|per_transport.TransportTests.test_readv|per_transport.TransportTests.test_readv_out_of_order|per_transport.TransportTests.test_readv_short_read|per_transport.TransportTests.test_readv_with_adjust_for_latency|per_transport.TransportTests.test_readv_with_adjust_for_latency_with_big_file|per_transport.TransportTests.test_reuse_connection_for_various_paths|test_read_bundle.TestReadMergeableBundleFromURL.test_read_mergeable_respects_possible_transports|test_read_bundle.TestReadMergeableBundleFromURL.test_read_mergeable_from_url|test_read_bundle.TestReadMergeableBundleFromURL.test_read_fail|test_http.TestActivity.test_readv|test_http.TestActivity.test_post|test_http.TestActivity.test_has|test_http.TestActivity.test_get"
 	skip_tests+=")"
 	if [[ -n ${skip_tests} ]]; then
 		einfo "Skipping tests known to fail: ${skip_tests}"
