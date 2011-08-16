@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.4.3-r1.ebuild,v 1.1 2011/08/16 14:28:58 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/gtk-vnc-0.4.3-r1.ebuild,v 1.2 2011/08/16 14:30:09 nirbheek Exp $
 
 EAPI="3"
 
@@ -26,6 +26,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.10:2
 	introspection? ( >=dev-libs/gobject-introspection-0.9.4 )
 	python? ( >=dev-python/pygtk-2:2 )
 	sasl? ( dev-libs/cyrus-sasl )"
+RDEPEND="${COMMON_DEPEND}"
 DEPEND="${COMMON_DEPEND}
 	>=dev-lang/perl-5
 	dev-util/pkgconfig
