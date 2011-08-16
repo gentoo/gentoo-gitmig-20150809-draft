@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9_pre20110706.ebuild,v 1.2 2011/08/14 08:02:14 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9_pre20110814.ebuild,v 1.1 2011/08/16 06:18:59 eras Exp $
 
 EAPI=4
 
@@ -175,6 +175,9 @@ src_configure() {
 	if use hardened ; then
 		[[ "$(gcc-version)" == "3.4" ]] && replace-flags -O? -Os
 	fi
+
+	# Remove annoying C++ comment style warnings - bug #378099
+	append-flags -Wno-comment
 
 	emake DEBUG="" CC="$(tc-getCC)" OPT="${CFLAGS}" CCARGS="${mycc}" AUXLIBS="${mylibs}" makefiles
 }
