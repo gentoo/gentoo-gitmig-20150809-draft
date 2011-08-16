@@ -1,9 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.257 2011/08/16 16:29:45 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.258 2011/08/16 18:55:55 nirbheek Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Nirbheek Chauhan <nirbheek@gentoo.org> (16 Aug 2011)
+# dev-libs/seed is a messy and unstable package.
+# Let's mask the ebuild use-flags that pull it in.
+dev-libs/libpeas seed
+gnome-extra/gnome-games seed
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (16 Aug 2011)
 # Mask introspection on ebuilds that went stable before it was unmasked.
