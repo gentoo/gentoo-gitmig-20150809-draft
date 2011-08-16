@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.28 2011/07/11 00:06:54 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.29 2011/08/16 22:28:13 nirbheek Exp $
+
+*gdk-pixbuf-2.23.5 (16 Aug 2011)
+
+  16 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -gdk-pixbuf-2.22.1.ebuild, -gdk-pixbuf-2.22.1-r1.ebuild,
+  +gdk-pixbuf-2.23.5.ebuild:
+  Bump to 2.23.5, from gnome overlay for GNOME 3, remove old
 
   11 Jul 2011; Matt Turner <mattst88@gentoo.org> gdk-pixbuf-2.22.1-r2.ebuild:
   Added ~mips, bug 364693
