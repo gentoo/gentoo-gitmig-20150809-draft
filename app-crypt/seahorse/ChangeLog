@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.149 2011/04/10 11:47:43 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.150 2011/08/16 23:22:14 nirbheek Exp $
+
+*seahorse-3.0.2 (16 Aug 2011)
+
+  16 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +seahorse-3.0.2.ebuild:
+  Bump to 3.0.2, from gnome overlay for GNOME 3
 
   10 Apr 2011; Gilles Dartiguelongue <eva@gentoo.org> -seahorse-2.30.1.ebuild:
   Clean up old revision.
