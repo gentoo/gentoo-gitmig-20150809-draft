@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-008-r1.ebuild,v 1.9 2011/08/07 17:52:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufrequtils/cpufrequtils-008-r1.ebuild,v 1.10 2011/08/16 02:51:38 mattst88 Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit eutils toolchain-funcs multilib
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 arm ia64 ~mips ppc ppc64 sparc x86 ~amd64-linux ~x86-linux"
 IUSE="debug nls"
 
-DEPEND=""
+DEPEND="nls? ( virtual/libintl )"
 RDEPEND=""
 
 ft() { use $1 && echo true || echo false ; }
@@ -46,16 +46,15 @@ src_compile() {
 		STRIP=: \
 		RANLIB="$(tc-getRANLIB)" \
 		LIBTOOL="${EPREFIX}"/usr/bin/libtool \
-		INSTALL="${EPREFIX}"/usr/bin/install \
-		|| die
+		INSTALL="${EPREFIX}"/usr/bin/install
 }
 
 src_install() {
 	# There's no configure script, so in this case we have to use emake
 	# DESTDIR="${ED}" instead of the usual econf --prefix="${EPREFIX}".
-	emake DESTDIR="${ED}" install || die
+	emake DESTDIR="${ED}" install
 	dodoc AUTHORS README
 
-	newinitd "${FILESDIR}"/${PN}-init.d-006 ${PN} || die
+	newinitd "${FILESDIR}"/${PN}-init.d-006 ${PN}
 	newconfd "${FILESDIR}"/${PN}-conf.d-006 ${PN}
 }
