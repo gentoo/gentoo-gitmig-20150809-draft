@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/nm-applet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.64 2011/08/15 19:10:31 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.65 2011/08/16 10:16:20 nirbheek Exp $
+
+  16 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> nm-applet-0.9_rc3.ebuild:
+  Fix SRC_URI, silly NM versioning
 
   15 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> nm-applet-0.8.4.ebuild,
   nm-applet-0.9_rc3.ebuild:
