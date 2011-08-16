@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/389-admin/389-admin-1.1.23.ebuild,v 1.1 2011/08/14 09:23:45 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/389-admin/389-admin-1.1.23.ebuild,v 1.2 2011/08/16 20:15:51 lxnay Exp $
 
 EAPI="2"
 
@@ -123,11 +123,11 @@ src_install () {
 
 	if use selinux; then
 		local POLICY_TYPES="targeted"
-		cd "${S}"/selinux-build
-		cp /usr/share/selinux/${POLICY_TYPES}/include/Makefile  .
+		cd "${S}"/selinux || die
+		cp /usr/share/selinux/${POLICY_TYPES}/include/Makefile  . || die
 		make || die "selinux policy compile failed"
 		insinto /usr/share/selinux/${POLICY_TYPES}
-		doins -r "${S}/selinux-build/"*.pp
+		doins -r "${S}/selinux/"*.pp
 	fi
 
 }
