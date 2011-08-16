@@ -1,9 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.4.ebuild,v 1.8 2011/07/09 16:21:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.4.ebuild,v 1.9 2011/08/16 16:09:00 nirbheek Exp $
 
 EAPI="3"
-GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="2:2.4"
 
 inherit eutils flag-o-matic gnome.org libtool python virtualx autotools

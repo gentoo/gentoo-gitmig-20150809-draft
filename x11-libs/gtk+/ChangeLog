@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.527 2011/08/11 09:06:56 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.528 2011/08/16 16:09:00 nirbheek Exp $
+
+  16 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gtk+-2.24.4.ebuild,
+  gtk+-2.24.5-r1.ebuild:
+  Remove misleading GNOME2_LA_PUNT variable export; we don't inherit
+  gnome2.eclass, bug 379373
 
   11 Aug 2011; Markus Duft <mduft@gentoo.org> gtk+-2.24.5-r1.ebuild,
   gtk+-3.0.12.ebuild:
