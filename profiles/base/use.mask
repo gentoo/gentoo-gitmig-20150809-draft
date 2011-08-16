@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.121 2011/07/11 15:10:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.122 2011/08/16 15:52:44 nirbheek Exp $
 
 # nvidia-cuda-toolkit is amd64/x86 only
 opencl
@@ -273,9 +273,3 @@ ruby_targets_ree18
 # Diego E. Pettenò <flameeyes@gentoo.org> (19 oct 2010)
 # masking flags that only apply to FreeBSD
 kqueue
-
-# Nirbheek Chauahn <nirbheek@gentoo.org> (17 Mar 2011)
-# Nirbheek Chauhan <nirbheek@gentoo.org> (30 Dec 2009)
-# gobject-introspection USE-flag
-# introspection still has some kinks to iron out
-introspection

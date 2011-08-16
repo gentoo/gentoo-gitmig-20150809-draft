@@ -1,9 +1,52 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.255 2011/08/14 15:18:42 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.256 2011/08/16 15:52:44 nirbheek Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Nirbheek Chauhan <nirbheek@gentoo.org> (16 Aug 2011)
+# Mask introspection on ebuilds that went stable before it was unmasked.
+# As these ebuilds are cleaned from the tree, the masks can be removed.
+<dev-libs/atk-1.32.0-r1 introspection
+<app-cdr/brasero-2.32.1-r1 introspection
+<app-crypt/seahorse-2.32.0-r1 introspection
+<app-text/evince-2.32.0-r4 introspection
+<dev-libs/json-glib-0.12 introspection
+<dev-libs/libgee-0.6.1-r1 introspection
+<dev-libs/libunique-1.1.6-r1 introspection
+<dev-libs/totem-pl-parser-2.32.5-r1 introspection
+<dev-python/pygobject-2.28 introspection
+<dev-util/anjuta-2.32.1.1-r1 introspection
+<gnome-base/dconf-0.5.1-r3 introspection
+<gnome-base/gconf-2.32.4 introspection
+<gnome-base/gnome-menus-2.30.5-r1 introspection
+<gnome-base/gnome-panel-2.32.1-r3 introspection
+<gnome-base/nautilus-2.32.2.1-r2 introspection
+<gnome-extra/gucharmap-2.32.1-r1 introspection
+<gnome-extra/libgda-4.2.7-r1 introspection
+<media-libs/clutter-1.6 introspection
+<media-libs/clutter-gtk-1 introspection
+<media-libs/gstreamer-0.10.33 introspection
+<media-libs/gst-plugins-base-0.10.33 introspection
+<media-libs/libchamplain-0.9 introspection
+<net-im/telepathy-logger-0.2.10-r1 introspection
+<net-libs/gtk-vnc-0.4.3-r1 introspection
+<net-libs/gssdp-0.8 introspection
+<net-libs/gupnp-0.15 introspection
+<net-libs/libsoup-2.34 introspection
+<net-libs/libsoup-gnome-2.34 introspection
+<net-libs/webkit-gtk-1.3 introspection
+<net-libs/telepathy-glib-0.14 introspection
+<net-wireless/gnome-bluetooth-2.32.0-r1 introspection
+<sys-auth/polkit-0.101-r1 introspection
+<sys-power/upower-0.9.12 introspection
+<www-client/epiphany-3 introspection
+<x11-libs/gdk-pixbuf-2.22.1-r1 introspection
+<x11-libs/libnotify-0.7.3 introspection
+<x11-libs/libwnck-2.30.6-r1 introspection
+<x11-libs/pango-1.28.4 introspection
+<x11-libs/vte-0.28 introspection
 
 # Anthony G. Basile <blueness@gentoo.org> (22 Jul 2011)
 # nat-pmp and upnp are only stable on amd64/x86 for this package
@@ -24,37 +67,6 @@ sys-apps/systemd audit
 # Bernard Cafarelli <voyageur@gentoo.org> (6 Jun 2011)
 # libobjc2/clang only works on some arches
 gnustep-base/gnustep-make libobjc2
-
-# Nirbheek Chauhan <nirbheek@gentoo.org> (24 Apr 2011)
-# Unmask introspection for specific packages. The migration to unmasking of
-# USE=introspection will be done this way
->=x11-libs/gdk-pixbuf-2.22.1-r1 -introspection
->=x11-libs/pango-1.28.4 -introspection
->=dev-libs/atk-1.32.0-r1 -introspection
->=x11-libs/gtk+-3 -introspection
->=x11-libs/gtk+-2.24 -introspection
->=dev-libs/libunique-3 -introspection
->=dev-libs/gdl-3 -introspection
->=dev-libs/json-glib-0.12 -introspection
->=gnome-base/gconf-2.32.4 -introspection
->=media-libs/clutter-1.6 -introspection
->=media-libs/clutter-gtk-1 -introspection
->=media-libs/gstreamer-0.10.33 -introspection
->=media-libs/gst-plugins-base-0.10.33 -introspection
->=media-libs/gupnp-dlna-0.8 -introspection
->=media-libs/libchamplain-0.8 -introspection
->=net-libs/gssdp-0.9 -introspection
->=net-libs/gupnp-0.15 -introspection
->=net-libs/gupnp-av-0.6 -introspection
->=net-libs/libsoup-2.34 -introspection
->=net-libs/libsoup-gnome-2.34 -introspection
->=net-libs/webkit-gtk-1.4 -introspection
->=net-libs/telepathy-glib-0.14 -introspection
->=x11-libs/vte-0.28 -introspection
->=x11-libs/libwnck-3 -introspection
-media-libs/memphis -introspection
-net-libs/rest -introspection
-net-libs/libsocialweb -introspection
 
 # Andrey Grozin <grozin@gentoo.org> (29 Mar 2011)
 # dev-lang/swig-2.0.2 with -octave generated .cpp files
@@ -138,7 +150,7 @@ dev-lang/ruby-enterprise fastthreading
 >=www-plugins/gnash-0.8.7_p20100706 lirc
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (29 Jun 2010)
-# Mask clutter till introspection is unmasked
+# Mask clutter till clutter games are usable
 =gnome-extra/gnome-games-2.3* clutter
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (26 Jun 2010)
