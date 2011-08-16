@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/gedit-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.15 2011/06/24 13:31:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.16 2011/08/16 22:09:44 nirbheek Exp $
+
+*gedit-plugins-3.0.7 (16 Aug 2011)
+
+  16 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +gedit-plugins-3.0.7.ebuild, metadata.xml:
+  Bump to 3.0.7, from gnome overlay for GNOME 3
 
 *gedit-plugins-2.32.0 (24 Jun 2011)
 
