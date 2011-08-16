@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.205 2011/08/03 19:19:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.206 2011/08/16 16:51:36 idl0r Exp $
+
+  16 Aug 2011; Christian Ruppert <idl0r@gentoo.org> files/exim.rc7:
+  Get a rid of the deprecated start-stop-daemon commands, bug 372671.
 
 *exim-4.76-r1 (03 Aug 2011)
 

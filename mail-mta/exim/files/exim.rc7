@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/files/exim.rc7,v 1.1 2011/08/03 19:19:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/files/exim.rc7,v 1.2 2011/08/16 16:51:36 idl0r Exp $
 
 opts="${opts} reload"
 
@@ -25,6 +25,6 @@ stop() {
 
 reload() {
 	ebegin "Reloading ${SVCNAME}"
-	start-stop-daemon --stop --signal HUP --oknodo --quiet --pidfile /var/run/${SVCNAME}.pid --name exim
+	start-stop-daemon --signal HUP --pidfile /var/run/${SVCNAME}.pid --name exim
 	eend $?
 }
