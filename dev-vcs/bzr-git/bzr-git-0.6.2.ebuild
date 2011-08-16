@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-git/bzr-git-0.5.4.ebuild,v 1.1 2011/02/12 15:49:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-git/bzr-git-0.6.2.ebuild,v 1.1 2011/08/16 12:30:02 fauli Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -34,4 +34,4 @@ RESTRICT="test"
 # The file should be fairly straightforward to understand.
 DEPEND=""
 RDEPEND=">=dev-python/dulwich-0.5.0
-	>=dev-vcs/bzr-1.15_rc1"
+	>=dev-vcs/bzr-2.3.0"
