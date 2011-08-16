@@ -1,0 +1,21 @@
+fix build failure on Alpha
+
+    $ alpha-unknown-linux-gnu-g++ -mieee -pipe -O2 -mcpu=ev4 -mieee -pipe -O2 ... -c intmeter.cc -o intmeter.o
+    intmeter.cc:16:21: fatal error: asm/irq.h: No such file or directory
+    compilation terminated.
+    make[1]: *** [intmeter.o] Error 1
+
+Patch by Kazuyoshi Furutaka <furutaka@jb3.so-net.ne.jp>
+diff -uNr xosview-1.8.3.orig/linux/intmeter.cc xosview-1.8.3/linux/intmeter.cc
+--- xosview-1.8.3.orig/linux/intmeter.cc	2006-02-18 13:33:06.000000000 +0900
++++ xosview-1.8.3/linux/intmeter.cc	2010-10-02 21:04:14.000000000 +0900
+@@ -12,9 +12,6 @@
+ #include <fstream>
+ #include <sstream>
+ #include <stdlib.h>
+-#ifdef __alpha__
+-#include <asm/irq.h>
+-#endif
+ 
+ 
+ static const char *INTFILE     = "/proc/interrupts";

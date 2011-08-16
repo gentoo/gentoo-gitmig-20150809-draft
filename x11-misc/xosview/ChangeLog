@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xosview
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.42 2009/12/23 16:16:17 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.43 2011/08/16 06:15:27 slyfox Exp $
+
+  16 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> xosview-1.8.3-r1.ebuild,
+  +files/xosview-1.8.3-alpha-build-fix.patch:
+  Fixed build on alpha (bug #339462). Report and fix by Kazuyoshi Furutaka.
 
 *xosview-1.8.3-r1 (23 Dec 2009)
 
