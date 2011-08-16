@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-3.0.2.ebuild,v 1.1 2011/06/02 15:39:42 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-3.0.2.ebuild,v 1.2 2011/08/16 09:53:58 mduft Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -23,13 +23,13 @@ RDEPEND=">=x11-libs/gtk+-3.0:3[introspection?]
 	x11-libs/libXres
 	x11-libs/libXext
 	introspection? ( >=dev-libs/gobject-introspection-0.6.14 )
-	startup-notification? ( >=x11-libs/startup-notification-0.4 )"
+	startup-notification? ( >=x11-libs/startup-notification-0.4 )
+	x86-interix? ( sys-libs/itx-bind )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.40
-	doc? ( >=dev-util/gtk-doc-1.9 )
-	x86-interix? ( sys-libs/itx-bind )"
+	doc? ( >=dev-util/gtk-doc-1.9 )"
 # eautoreconf needs
 #	dev-util/gtk-doc-am
 #	gnome-base/gnome-common
