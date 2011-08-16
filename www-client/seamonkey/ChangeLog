@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.326 2011/08/15 08:54:42 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.327 2011/08/16 04:50:01 polynomial-c Exp $
+
+  16 Aug 2011; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.3.ebuild:
+  Fixed dependency on nss and nspr (bug #379341).
 
   15 Aug 2011; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.3.ebuild:
   Use mozilla's FTP mirror as long as the releases server doesn't contain the
