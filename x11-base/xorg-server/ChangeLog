@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.603 2011/08/08 12:57:27 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.604 2011/08/16 23:53:59 mattst88 Exp $
+
+  16 Aug 2011; Matt Turner <mattst88@gentoo.org>
+  xorg-server-1.10.99.901.ebuild, xorg-server-1.10.99.902.ebuild:
+  Remove xcalibrate, since it's been removed upstream.
 
 *xorg-server-1.10.99.902 (08 Aug 2011)
 

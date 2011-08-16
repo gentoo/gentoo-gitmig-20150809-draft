@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.10.99.901.ebuild,v 1.2 2011/06/09 21:40:37 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.10.99.901.ebuild,v 1.3 2011/08/16 23:53:59 mattst88 Exp $
 
 EAPI=4
 
@@ -51,7 +51,7 @@ RDEPEND=">=app-admin/eselect-opengl-1.0.8
 		>=x11-libs/libXext-1.0.5
 		>=media-libs/mesa-7.8_rc[nptl=]
 	)
-	tslib? ( >=x11-libs/tslib-1.0 x11-proto/xcalibrateproto )
+	tslib? ( >=x11-libs/tslib-1.0 )
 	udev? ( >=sys-fs/udev-150 )
 	>=x11-apps/xinit-1.3"
 
@@ -126,7 +126,6 @@ pkg_setup() {
 		$(use_enable kdrive kdrive-mouse)
 		$(use_enable kdrive kdrive-evdev)
 		$(use_enable tslib)
-		$(use_enable tslib xcalibrate)
 		$(use_enable !minimal record)
 		$(use_enable !minimal xfree86-utils)
 		$(use_enable !minimal install-libxf86config)
