@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.256 2011/08/16 15:52:44 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.257 2011/08/16 16:29:45 nirbheek Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -13,6 +13,7 @@
 <app-crypt/seahorse-2.32.0-r1 introspection
 <app-text/evince-2.32.0-r4 introspection
 <dev-libs/json-glib-0.12 introspection
+<dev-libs/libgdata-0.8.1-r1 introspection
 <dev-libs/libgee-0.6.1-r1 introspection
 <dev-libs/libunique-1.1.6-r1 introspection
 <dev-libs/totem-pl-parser-2.32.5-r1 introspection

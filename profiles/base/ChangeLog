@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.286 2011/08/16 15:52:44 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.287 2011/08/16 16:29:45 nirbheek Exp $
+
+  16 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
+  Add libgdata to the introspection mask, pointed out by Mr_Bones_
 
   16 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask,
   use.mask:
