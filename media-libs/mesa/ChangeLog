@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.358 2011/08/02 14:58:44 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.359 2011/08/16 02:23:25 mattst88 Exp $
+
+  16 Aug 2011; Matt Turner <mattst88@gentoo.org> metadata.xml:
+  Correct metadata.xml about which USE flags are related to Gallium3D.
 
   02 Aug 2011; Magnus Granberg <zorry@gentoo.org> mesa-7.11.ebuild,
   metadata.xml:
