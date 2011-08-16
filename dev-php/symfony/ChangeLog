@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/symfony
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/symfony/ChangeLog,v 1.4 2011/08/07 03:05:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/symfony/ChangeLog,v 1.5 2011/08/16 13:21:09 chainsaw Exp $
+
+  16 Aug 2011; Tony Vroon <chainsaw@gentoo.org> symfony-1.4.11.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo, Ian
+  Delaney, Elijah El Lazkani & Tomas Pruzina in bug #373543.
 
   07 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> symfony-1.4.11.ebuild:
   x86 stable wrt bug #373543
