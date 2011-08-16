@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.240 2011/08/03 04:10:40 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.241 2011/08/16 10:37:51 ford_prefect Exp $
+
+  16 Aug 2011; Arun Raghavan <ford_prefect@gentoo.org> pulseaudio-9999.ebuild:
+  Fix JACK dep, drop copying ChangeLog.
 
 *pulseaudio-0.99.1 (03 Aug 2011)
 

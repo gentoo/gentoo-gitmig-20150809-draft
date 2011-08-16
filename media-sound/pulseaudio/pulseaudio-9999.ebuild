@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.10 2011/07/09 20:28:49 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.11 2011/08/16 10:37:51 ford_prefect Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ RDEPEND="app-admin/eselect-esd
 	alsa? ( >=media-libs/alsa-lib-1.0.19 )
 	glib? ( >=dev-libs/glib-2.4.0 )
 	avahi? ( >=net-dns/avahi-0.6.12[dbus] )
-	jack? ( >=media-sound/jack-audio-connection-kit-0.100 )
+	jack? ( >=media-sound/jack-audio-connection-kit-0.117 )
 	tcpd? ( sys-apps/tcp-wrappers )
 	lirc? ( app-misc/lirc )
 	dbus? ( >=sys-apps/dbus-1.0.0 )
@@ -154,7 +154,7 @@ src_install() {
 
 	use avahi && sed -i -e '/module-zeroconf-publish/s:^#::' "${ED}/etc/pulse/default.pa"
 
-	dodoc README ChangeLog todo
+	dodoc README todo
 
 	if use doc; then
 		pushd doxygen/html
