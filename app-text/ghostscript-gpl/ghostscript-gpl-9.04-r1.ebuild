@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.02.ebuild,v 1.4 2011/08/07 23:50:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.04-r1.ebuild,v 1.1 2011/08/16 18:41:44 tgurr Exp $
 
 EAPI=3
 inherit autotools eutils versionator flag-o-matic
@@ -13,12 +13,12 @@ GSDJVU_PV=1.4
 PVM=$(get_version_component_range 1-2)
 SRC_URI="!bindist? ( djvu? ( mirror://sourceforge/djvu/gsdjvu-${GSDJVU_PV}.tar.gz ) )
 	mirror://sourceforge/ghostscript/${MY_P}.tar.bz2
-	mirror://gentoo/${P}-patchset-1.tar.bz2"
+	mirror://gentoo/${P}-patchset-2.tar.bz2"
 
 LICENSE="GPL-3 CPL-1.0"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="bindist cups dbus djvu gtk idn jpeg2k X"
+IUSE="bindist cups dbus djvu gtk idn jpeg2k static-libs X"
 
 COMMON_DEPEND="app-text/libpaper
 	media-libs/fontconfig
@@ -37,7 +37,6 @@ COMMON_DEPEND="app-text/libpaper
 	X? ( x11-libs/libXt x11-libs/libXext )"
 
 DEPEND="${COMMON_DEPEND}
-	app-arch/xz-utils
 	dev-util/pkgconfig"
 
 RDEPEND="${COMMON_DEPEND}
@@ -64,24 +63,18 @@ pkg_setup() {
 
 src_prepare() {
 	# remove internal copies of various libraries
-	rm -rf "${S}/expat"
-	rm -rf "${S}/freetype"
-	rm -rf "${S}/jasper"
-	rm -rf "${S}/jpeg"
-	rm -rf "${S}/lcms"
-	rm -rf "${S}/libpng"
-	rm -rf "${S}/tiff"
-	rm -rf "${S}/zlib"
+	rm -rf "${S}"/expat
+	rm -rf "${S}"/freetype
+	rm -rf "${S}"/jasper
+	rm -rf "${S}"/jpeg
+	rm -rf "${S}"/lcms{,2}
+	rm -rf "${S}"/libpng
+	rm -rf "${S}"/tiff
+	rm -rf "${S}"/zlib
 	# remove internal urw-fonts
-	rm -rf "${S}/Resource/Font"
+	rm -rf "${S}"/Resource/Font
 	# remove internal CMaps (CMaps from poppler-data are used instead)
-	rm -rf "${S}/Resource/CMap"
-
-	# apply libpng-1.5 patch
-	epatch "${FILESDIR}/${PN}-9.02-libpng15.patch"
-
-	# byteswap detection bug 367119
-	epatch "${FILESDIR}"/${P}-byteswap.patch
+	rm -rf "${S}"/Resource/CMap
 
 	# apply various patches, many borrowed from Fedora
 	# http://pkgs.fedoraproject.org/gitweb/?p=ghostscript.git
@@ -95,6 +88,7 @@ src_prepare() {
 		cp gsdjvu-${GSDJVU_PV}/gdevdjvu.c "${S}/base"
 		epatch "${WORKDIR}/patches-gsdjvu/gsdjvu-1.3-${PN}-8.64.patch"
 		epatch "${WORKDIR}/patches-gsdjvu/gsdjvu-1.4-${PN}-9.00-upstream-buildfixes.patch"
+		epatch "${WORKDIR}/patches-gsdjvu/gsdjvu-1.4-${PN}-9.04.patch"
 		cp gsdjvu-${GSDJVU_PV}/ps2utf8.ps "${S}/lib"
 		cp "${S}/base/contrib.mak" "${S}/base/contrib.mak.gsdjvu"
 		grep -q djvusep "${S}/base/contrib.mak" || \
@@ -143,30 +137,34 @@ src_configure() {
 	done
 
 	econf \
-		$(use_enable cups) \
-		$(use_enable dbus) \
-		$(use_enable gtk) \
-		$(use_with cups pdftoraster) \
-		$(use_with idn libidn) \
-		$(use_with jpeg2k jasper) \
-		$(use_with X x) \
-		--disable-compile-inits \
 		--enable-dynamic \
 		--enable-freetype \
 		--enable-fontconfig \
+		--disable-compile-inits \
 		--with-drivers=ALL \
 		--with-fontpath="$FONTPATH" \
 		--with-ijs \
 		--with-jbig2dec \
 		--with-libpaper \
-		--with-system-libtiff
+		--with-system-libtiff \
+		--without-luratech \
+		$(use_enable cups) \
+		$(use_enable dbus) \
+		$(use_enable gtk) \
+		$(use_with cups install-cups) \
+		$(use_with cups pdftoraster) \
+		$(use_with idn libidn) \
+		$(use_with jpeg2k jasper) \
+		$(use_with X x)
 
 	if ! use bindist && use djvu ; then
 		sed -i -e 's!$(DD)bbox.dev!& $(DD)djvumask.dev $(DD)djvusep.dev!g' Makefile
 	fi
 
 	cd "${S}/ijs"
-	econf
+	econf \
+		--enable-shared \
+		$(use_enable static-libs static)
 }
 
 src_compile() {
@@ -205,4 +203,6 @@ src_install() {
 			doins "${WORKDIR}/fontmaps/cidfmap.${X}" || die "doins cidfmap.${X} failed"
 		fi
 	done
+
+	use static-libs || find "${D}" -name '*.la' -delete
 }
