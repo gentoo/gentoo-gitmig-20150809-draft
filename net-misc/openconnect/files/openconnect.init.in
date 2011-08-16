@@ -1,0 +1,24 @@
+#!/sbin/runscript
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/files/openconnect.init.in,v 1.1 2011/08/16 09:15:47 dagger Exp $
+
+depend() {
+	before netmount
+}
+
+start() {
+	ebegin "Starting OpenConnect"
+   
+	start-stop-daemon --start --quiet --make-pidfile --pidfile /var/run/openconnect.pid --exec /usr/bin/openconnect \
+		-- ${VPNOPTS} ${SERVER} <<< ${PASSWORD}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping OpenConnect"
+	start-stop-daemon --quiet --pidfile /var/run/openconnect.pid --stop /usr/bin/openconnect
+	eend $?
+}
+
+# vim: set ft=gentoo-init-d ts=3 sw=3 et:

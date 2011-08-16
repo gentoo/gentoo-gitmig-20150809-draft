@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/openconnect
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.1 2011/08/16 09:15:47 dagger Exp $
+
+*openconnect-3.11 (16 Aug 2011)
+
+  16 Aug 2011; Robert Piasek <dagger@gentoo.org> +openconnect-3.11.ebuild,
+  +files/openconnect.conf.in, +files/openconnect.init.in:
+  Add OpenConnect 3.11
+

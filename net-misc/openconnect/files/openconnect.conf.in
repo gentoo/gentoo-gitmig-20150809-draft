@@ -1,0 +1,4 @@
+SERVER="vpn.server.tld"
+PASSWORD="YOUR_PASSWD"
+# Any OPENCONNECT options my go here (see openconnect --help)
+VPNOPTS="-b -l --passwd-on-stdin --user=YOUR_USER --script=/etc/openconnect/openconnect.sh"
