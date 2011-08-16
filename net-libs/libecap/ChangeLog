@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libecap
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libecap/ChangeLog,v 1.13 2010/09/06 20:24:22 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libecap/ChangeLog,v 1.14 2011/08/16 23:33:23 jer Exp $
+
+*libecap-0.2.0 (16 Aug 2011)
+*libecap-0.0.3 (16 Aug 2011)
+
+  16 Aug 2011; Jeroen Roovers <jer@gentoo.org> +libecap-0.0.3.ebuild,
+  +libecap-0.2.0.ebuild:
+  Version bumps thanks to Adam Carter (bug #379343).
 
   06 Sep 2010; Brent Baude <ranger@gentoo.org> libecap-0.0.2.ebuild:
   Marking libecap-0.0.2 ppc64 for bug 301828
