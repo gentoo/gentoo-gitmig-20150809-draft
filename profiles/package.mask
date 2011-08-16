@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12986 2011/08/16 13:52:23 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12987 2011/08/16 18:32:21 sping Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -424,10 +424,6 @@ net-misc/gateway6
 # Diego E. Pettenò <flameeyes@gentoo.org> (8 Jun 2011)
 # Broken upstream
 =net-libs/libtirpc-0.2.2
-
-# Sebastian Pipping <sping@gentoo.org> (7 Jun 2011)
-# Experimental bump (bug #340425)
-~sys-block/open-iscsi-2.0.872
 
 # Bernard Cafarelli <voyageur@gentoo.org> (6 Jun 2011)
 # Support for libobjc2, for adventurous people only for now
