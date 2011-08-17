@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/talloc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.25 2011/07/07 04:16:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.26 2011/08/17 16:50:59 chithanh Exp $
+
+  17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  talloc-2.0.5.ebuild:
+  keyword ~sparc-solaris
 
   07 Jul 2011; Alexis Ballier <aballier@gentoo.org> talloc-2.0.5.ebuild:
   keyword ~x86-fbsd
