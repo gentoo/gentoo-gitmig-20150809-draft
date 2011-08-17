@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.154 2011/08/17 17:59:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.155 2011/08/17 18:20:59 vapier Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -184,6 +184,7 @@ append-fflags() {
 # Add flags that enable Large File Support.
 append-lfs-flags() {
 	[[ $# -ne 0 ]] && die "append-lfs-flags takes no arguments"
+	# see comments in filter-lfs-flags func for meaning of these
 	append-cppflags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE
 }
 
