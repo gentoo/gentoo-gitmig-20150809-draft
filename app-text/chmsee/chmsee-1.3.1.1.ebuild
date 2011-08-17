@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chmsee/chmsee-1.2.0.ebuild,v 1.1 2010/08/14 03:16:14 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chmsee/chmsee-1.3.1.1.ebuild,v 1.1 2011/08/17 04:29:59 dirtyepic Exp $
 
 EAPI="3"
 
