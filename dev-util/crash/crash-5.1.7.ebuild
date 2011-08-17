@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/crash/crash-5.1.7.ebuild,v 1.1 2011/08/16 19:45:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/crash/crash-5.1.7.ebuild,v 1.2 2011/08/17 14:49:31 cardoe Exp $
 
 EAPI=4
 
@@ -19,5 +19,5 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-install-fix.patch
+	epatch "${FILESDIR}"/${PN}-5.1.1-install-fix.patch
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/crash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/crash/ChangeLog,v 1.2 2011/08/16 19:45:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/crash/ChangeLog,v 1.3 2011/08/17 14:49:31 cardoe Exp $
+
+  17 Aug 2011; Doug Goldstein <cardoe@gentoo.org> crash-5.1.7.ebuild:
+  Compile fix
 
 *crash-5.1.7 (16 Aug 2011)
 
