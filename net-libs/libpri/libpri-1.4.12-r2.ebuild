@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/libpri-1.4.12_beta3.ebuild,v 1.2 2011/07/27 09:04:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/libpri-1.4.12-r2.ebuild,v 1.1 2011/08/17 10:27:06 chainsaw Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit base
 
@@ -16,17 +16,15 @@ SRC_URI="http://downloads.asterisk.org/pub/telephony/${PN}/releases/${MY_P}.tar.
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~sparc ~x86"
-IUSE=""
+IUSE="static-libs"
 
 PATCHES=(
 	"${FILESDIR}/${PN}-1.4.12-multilib.patch"
-	"${FILESDIR}/${PN}-1.4.12-respect-cflags.patch"
-	"${FILESDIR}/${PN}-1.4.12-respect-ldflags.patch"
+	"${FILESDIR}/${PN}-1.4.12-respect-user-flags.patch"
 )
 
 src_install() {
-	emake INSTALL_PREFIX="${D}" LIBDIR="${D}/usr/$(get_libdir)" install \
-		|| die "emake install failed"
-
-	dodoc ChangeLog README TODO || die "dodoc failed"
+	emake INSTALL_PREFIX="${D}" LIBDIR="${D}/usr/$(get_libdir)" install
+	use static-libs || find "${D}" -name '*.a' -delete
+	dodoc ChangeLog README TODO
 }

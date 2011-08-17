@@ -1,6 +1,21 @@
 # ChangeLog for net-libs/libpri
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.94 2011/08/07 15:25:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.95 2011/08/17 10:27:06 chainsaw Exp $
+
+*libpri-1.4.12-r2 (17 Aug 2011)
+
+  17 Aug 2011; Tony Vroon <chainsaw@gentoo.org>
+  -files/libpri-1.4.11.1-multilib.patch,
+  -files/libpri-1.4.11.1-respect-cflags.patch,
+  -files/libpri-1.4.11.1-respect-ldflags.patch,
+  -files/libpri-1.4.11.1-werror-is-ill-advised.patch, -libpri-1.4.11.4.ebuild,
+  -libpri-1.4.11.5.ebuild, -libpri-1.4.12_beta2.ebuild,
+  -libpri-1.4.12_beta3.ebuild, -libpri-1.4.12.ebuild, +libpri-1.4.12-r2.ebuild,
+  -files/libpri-1.4.12-released-respect-cflags.patch,
+  -files/libpri-1.4.12-respect-cflags.patch,
+  -files/libpri-1.4.12-respect-ldflags.patch:
+  Incorporate USE="static-libs" functionality and bump to EAPI 4 as suggested
+  by Agostino "ago" Sarubbo in bug #377603. Remove old ebuilds & patches.
 
   07 Aug 2011; Markus Meier <maekke@gentoo.org> libpri-1.4.12-r1.ebuild:
   x86 stable, bug #376573
