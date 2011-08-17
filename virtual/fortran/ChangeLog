@@ -1,6 +1,10 @@
 # ChangeLog for virtual/fortran
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/fortran/ChangeLog,v 1.4 2011/06/21 08:01:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/fortran/ChangeLog,v 1.5 2011/08/17 16:52:55 chithanh Exp $
+
+  17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  fortran-0.ebuild:
+  keyword ~sparc-solaris
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> fortran-0.ebuild:
   Added openmp support
