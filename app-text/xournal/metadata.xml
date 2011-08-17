@@ -6,6 +6,9 @@
 		<email>rbu@gentoo.org</email>
 		<name>Robert Buchholz</name>
 	</maintainer>
+	<maintainer>
+		<email>dilfridge@gentoo.org</email>
+	</maintainer>
 	<longdescription lang="en">
 		Xournal is an application for notetaking, sketching, keeping
 		a journal using a stylus. It is free software (GNU GPL)
