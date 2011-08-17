@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.139 2011/03/27 11:00:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.140 2011/08/17 16:41:23 chithanh Exp $
+
+  17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  p7zip-9.20.1.ebuild:
+  keyword ~sparc-solaris
 
   27 Mar 2011; Justin Lecher <jlec@gentoo.org> p7zip-9.20.1.ebuild:
   Added missing dep on dev-lang/*asm, #360743
