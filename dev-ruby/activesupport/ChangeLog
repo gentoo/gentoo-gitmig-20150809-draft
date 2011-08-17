@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.147 2011/08/07 18:04:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.148 2011/08/17 08:37:33 graaff Exp $
+
+*activesupport-2.3.14 (17 Aug 2011)
+
+  17 Aug 2011; Hans de Graaff <graaff@gentoo.org> +activesupport-2.3.14.ebuild:
+  Version bump.
 
   07 Aug 2011; Raúl Porcel <armin76@gentoo.org> activesupport-3.0.9.ebuild:
   Add ~ia64/~sparc wrt #351835
