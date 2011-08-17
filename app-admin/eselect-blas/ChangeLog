@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-blas
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-blas/ChangeLog,v 1.22 2010/10/02 12:23:11 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-blas/ChangeLog,v 1.23 2011/08/17 16:40:20 chithanh Exp $
+
+  17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  eselect-blas-0.1.ebuild:
+  keyword ~sparc-solaris
 
   02 Oct 2010; Fabian Groffen <grobian@gentoo.org> eselect-blas-0.1.ebuild:
   Marked ~x64-macos, bug #333981
