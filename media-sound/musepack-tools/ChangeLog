@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/musepack-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.60 2011/03/16 17:33:39 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.61 2011/08/17 17:03:09 chithanh Exp $
+
+  17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  musepack-tools-465.ebuild:
+  keyword ~sparc-solaris
 
   16 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org>
   musepack-tools-465.ebuild:
