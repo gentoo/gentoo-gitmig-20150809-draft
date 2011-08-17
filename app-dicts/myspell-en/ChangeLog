@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/myspell-en
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-en/ChangeLog,v 1.29 2011/07/26 20:30:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-en/ChangeLog,v 1.30 2011/08/17 16:42:58 chithanh Exp $
+
+  17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  myspell-en-20081002.ebuild:
+  keyword ~sparc-solaris
 
   26 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -myspell-en-20060316.ebuild:
