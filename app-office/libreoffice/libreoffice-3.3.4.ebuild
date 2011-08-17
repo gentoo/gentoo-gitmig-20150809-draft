@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.1.ebuild,v 1.9 2011/03/27 09:48:47 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.4.ebuild,v 1.1 2011/08/17 18:15:06 scarabeus Exp $
 
 EAPI="3"
 
@@ -14,18 +14,19 @@ PYTHON_USE_WITH="threads"
 
 inherit autotools bash-completion check-reqs db-use eutils fdo-mime flag-o-matic gnome2-utils java-pkg-opt-2 kde4-base multilib pax-utils python toolchain-funcs
 
-IUSE="binfilter cups dbus debug eds gnome gstreamer gtk kde ldap nsplugin odk opengl templates"
+IUSE="binfilter cups -custom-cflags dbus debug eds gnome gstreamer gtk kde ldap nsplugin odk opengl templates"
 
-MY_PV=3.3.1.2
+MY_PV=3.3.4.1
 MY_P="${PN}-build-${MY_PV}"
 PATCHLEVEL=OOO320
 SRC=OOo_${PV}_src
-DEVPATH="http://download.documentfoundation.org/libreoffice/src"
 S="${WORKDIR}/${MY_P}"
+DEVPATH="http://download.documentfoundation.org/libreoffice/src/${PV}/"
 CONFFILE=${S}/distro-configs/Gentoo.conf.in
 BASIS=basis3.3
-DESCRIPTION="LibreOffice, a full office productivity suite."
 
+DESCRIPTION="LibreOffice, a full office productivity suite."
+HOMEPAGE="http://www.libreoffice.org"
 SRC_URI="${DEVPATH}/${PN}-build-${MY_PV}.tar.gz
 	templates? (
 		http://extensions.services.openoffice.org/files/273/0/Sun_ODF_Template_Pack_en-US.oxt
@@ -115,81 +116,78 @@ for X in ${SPELL_DIRS} ; do
 	SPELL_DIRS_DEPEND+=" linguas_${X}? ( app-dicts/myspell-${X} )"
 done
 
-HOMEPAGE="http://www.libreoffice.org"
-
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 
 COMMON_DEPEND="!app-office/libreoffice-bin
 	!app-office/openoffice-bin
 	!app-office/openoffice
-	x11-libs/libXaw
-	x11-libs/libXinerama
-	x11-libs/libXrandr
-	>=dev-lang/perl-5.0
-	>=dev-libs/glib-2.18
+	cups? ( net-print/cups )
 	dbus? ( >=dev-libs/dbus-glib-0.71 )
-	gnome? ( >=x11-libs/gtk+-2.10:2
-		gnome-base/gconf:2
-		>=x11-libs/cairo-1.0.2 )
-	gtk? ( >=x11-libs/gtk+-2.10:2
-		>=x11-libs/cairo-1.0.2 )
 	eds? ( >=gnome-extra/evolution-data-server-1.2 )
+	gnome? ( >=x11-libs/gtk+-2.10:2
+		gnome-base/gconf:2 )
+	gtk? ( >=x11-libs/gtk+-2.10:2 )
 	gstreamer? ( >=media-libs/gstreamer-0.10
 			>=media-libs/gst-plugins-base-0.10 )
 	java? ( >=dev-java/bsh-2.0_beta4
 		dev-java/lucene:2.3
 		dev-java/lucene-analyzers:2.3 )
+	ldap? ( net-nds/openldap )
 	nsplugin? ( net-libs/xulrunner:1.9
 		>=dev-libs/nspr-4.6.6
 		>=dev-libs/nss-3.11-r1 )
 	opengl? ( virtual/opengl )
-	>=net-libs/neon-0.24.7
-	>=dev-libs/openssl-0.9.8g
-	>=media-libs/freetype-2.1.10-r2
-	>=media-libs/fontconfig-2.3.0
-	cups? ( net-print/cups )
-	  dev-libs/redland[ssl]
-	virtual/jpeg
-	media-libs/libpng
 	app-arch/zip
 	app-arch/unzip
 	>=app-text/hunspell-1.1.4-r1
+	>=app-text/poppler-0.12.3-r3[xpdf-headers]
 	dev-libs/expat
+	>=dev-libs/glib-2.18
 	>=dev-libs/icu-4.0
-	>=sys-libs/db-4.3
+	>=dev-lang/perl-5.0
+	>=net-libs/neon-0.24.7
+	>=dev-libs/openssl-0.9.8g
+	dev-libs/redland[ssl]
+	>=media-libs/freetype-2.1.10-r2
+	>=media-libs/fontconfig-2.3.0
 	>=media-libs/vigra-1.4
-	>=app-text/poppler-0.12.3-r3[xpdf-headers]"
+	media-libs/libpng
+	>=sys-libs/db-4.3
+	virtual/jpeg
+	>=x11-libs/cairo-1.0.2
+	x11-libs/libXaw
+	x11-libs/libXinerama
+	x11-libs/libXrandr"
 
 RDEPEND="java? ( >=virtual/jre-1.5 )
 	${SPELL_DIRS_DEPEND}
 	${COMMON_DEPEND}"
 
 DEPEND="${COMMON_DEPEND}
+	java? ( || ( =virtual/jdk-1.6* =virtual/jdk-1.5* )
+		>=dev-java/ant-core-1.7 )
+	>=dev-libs/boost-1.36
+	>=dev-libs/libxml2-2.0
+	dev-perl/Archive-Zip
+	dev-libs/libxslt
+	dev-util/cppunit
+	>=dev-util/gperf-3
+	dev-util/intltool
+	dev-util/pkgconfig
+	>=net-misc/curl-7.12
+	>=sys-apps/findutils-4.1.20-r1
+	sys-devel/bison
+	sys-apps/coreutils
+	sys-devel/flex
+	sys-libs/zlib
 	x11-libs/libXrender
 	x11-libs/libXtst
 	x11-proto/printproto
 	x11-proto/xextproto
-	x11-proto/xproto
 	x11-proto/xineramaproto
-	>=sys-apps/findutils-4.1.20-r1
-	dev-perl/Archive-Zip
-	dev-util/pkgconfig
-	dev-util/intltool
-	>=dev-libs/boost-1.36
-	sys-devel/flex
-	sys-devel/bison
-	dev-libs/libxslt
-	>=dev-libs/libxml2-2.0
-	>=dev-util/gperf-3
-	>=net-misc/curl-7.12
-	sys-libs/zlib
-	sys-apps/coreutils
-	dev-util/cppunit
-	java? ( || ( =virtual/jdk-1.6* =virtual/jdk-1.5* )
-		>=dev-java/ant-core-1.7 )
-	ldap? ( net-nds/openldap )"
+	x11-proto/xproto"
 
 pkg_setup() {
 
@@ -213,14 +211,17 @@ src_unpack() {
 
 src_prepare() {
 
+	if use custom-cflags; then
+		ewarn " You are using custom CFLAGS, which is NOT supported and can cause "
+		ewarn " all sorts of build and runtime errors. "
+		ewarn
+		ewarn " Before reporting a bug, please make sure you rebuild and try with "
+		ewarn " basic CFLAGS, otherwise the bug will not be accepted. "
+		ewarn
+	fi
+
 	ewarn
-	ewarn " It is important to note that LibreOffice is a very fragile  "
-	ewarn " build when it comes to CFLAGS.  A number of flags have already "
-	ewarn " been filtered out.  If you experience difficulty merging this  "
-	ewarn " package and use aggressive CFLAGS, lower the CFLAGS and try to  "
-	ewarn " merge again. "
-	ewarn
-	ewarn " Also if you experience a build break, please make sure to retry "
+	ewarn " If you experience a build break, please make sure to retry "
 	ewarn " with MAKEOPTS="-j1" before filing a bug. "
 	ewarn
 
@@ -255,27 +256,19 @@ src_prepare() {
 		ewarn
 	fi
 
-	if is-flagq -ffast-math ; then
-		eerror " You are using -ffast-math, which is known to cause problems. "
-		eerror " Please remove it from your CFLAGS, using this globally causes "
-		eerror " all sorts of problems. "
-		eerror " After that you will also have to - at least - rebuild python otherwise "
-		eerror " the LibreOffice build will break. "
-		die
-	fi
-
-	#Some fixes for our patchset
-	cd "${S}"
-	epatch "${FILESDIR}/gentoo-${PV}.diff"
+	# Some fixes for our patchset
+	epatch "${FILESDIR}/gentoo-3.3.2.diff"
 	epatch "${FILESDIR}/gentoo-pythonpath.diff"
 	epatch "${FILESDIR}/env_log.diff"
 	epatch "${FILESDIR}/fix-ooo-collision.diff"
 	epatch "${FILESDIR}/scrap-pixmap-links.diff"
 	epatch "${FILESDIR}/enable-startup-notification.diff"
 	use java && cp -f "${FILESDIR}/sdext-presenter.diff" "${S}/patches/hotfixes"
-	cp -f "${FILESDIR}/libreoffice-3.3.0_libxmlsec_fix_extern_c.diff" "${S}/patches/hotfixes"
-	cp -f "${FILESDIR}/libreoffice-3.3-libpng-1.5.diff" "${S}/patches/hotfixes"
-	cp -f "${FILESDIR}/libreoffice-3.3.1-neon_remove_SSPI_support.diff" "${S}/patches/hotfixes"
+	cp -f "${FILESDIR}/${PN}-3.3.0_libxmlsec_fix_extern_c.diff" "${S}/patches/hotfixes"
+	cp -f "${FILESDIR}/${PN}-3.3-libpng-1.5.diff" "${S}/patches/hotfixes"
+	cp -f "${FILESDIR}/${PN}-3.3.1-neon_remove_SSPI_support.diff" "${S}/patches/hotfixes"
+	cp -f "${FILESDIR}/${PN}-libdb5-fix-check.diff" "${S}/patches/hotfixes"
+	cp -f "${FILESDIR}/${PN}-3.3.2-bison25.diff" "${S}/patches/hotfixes"
 
 	#Use flag checks
 	if use java ; then
@@ -343,14 +336,11 @@ src_configure() {
 	# Use multiprocessing by default now, it gets tested by upstream
 	export JOBS=$(echo "${MAKEOPTS}" | sed -e "s/.*-j\([0-9]\+\).*/\1/")
 
-	# Compile problems with these ...
-	filter-flags "-funroll-loops"
-	filter-flags "-fprefetch-loop-arrays"
-	filter-flags "-fno-default-inline"
-	filter-flags "-ftracer"
-	filter-flags "-fforce-addr"
-
-	filter-flags "-O[s2-9]"
+	# compiler flags
+	use custom-cflags || strip-flags
+	use debug || filter-flags "-g*"
+	# silent miscompiles; LO/OOo adds -O2/1/0 where appropriate
+	filter-flags "-O*"
 
 	if [[ $(gcc-major-version) -lt 4 ]]; then
 		filter-flags "-fstack-protector"
@@ -358,16 +348,13 @@ src_configure() {
 		replace-flags "-fomit-frame-pointer" "-momit-leaf-frame-pointer"
 	fi
 
-	# Build with NVidia cards breaks otherwise
-	use opengl && append-flags "-DGL_GLEXT_PROTOTYPES"
-
 	# Now for our optimization flags ...
 	export ARCH_FLAGS="${CXXFLAGS}"
 	use debug || export LINKFLAGSOPTIMIZE="${LDFLAGS}"
 
 	# Make sure gnome-users get gtk-support
-	local GTKFLAG="--disable-gtk --disable-cairo --without-system-cairo"
-	{ use gtk || use gnome; } && GTKFLAG="--enable-gtk --enable-cairo --with-system-cairo"
+	local GTKFLAG="--disable-gtk"
+	{ use gtk || use gnome; } && GTKFLAG="--enable-gtk"
 
 	cd "${S}"
 	./configure --with-distro="Gentoo" \
@@ -383,6 +370,8 @@ src_configure() {
 		--without-git \
 		--with-split \
 		${GTKFLAG} \
+		--enable-cairo \
+		--with-system-cairo \
 		--disable-mono \
 		--disable-kde \
 		$(use_enable kde kde4) \
