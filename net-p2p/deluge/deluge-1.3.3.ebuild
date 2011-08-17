@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.3.3.ebuild,v 1.1 2011/08/07 11:54:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.3.3.ebuild,v 1.2 2011/08/17 13:52:12 armin76 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -17,7 +17,8 @@ KEYWORDS="~amd64 ~arm ~ppc ~sparc ~x86"
 IUSE="gtk libnotify webinterface"
 
 DEPEND=">=net-libs/rb_libtorrent-0.14.9[python]
-	dev-python/setuptools"
+	dev-python/setuptools
+	dev-util/intltool"
 RDEPEND="${DEPEND}
 	dev-python/chardet
 	dev-python/pyopenssl
