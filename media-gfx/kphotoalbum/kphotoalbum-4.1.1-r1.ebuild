@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-4.1.1-r1.ebuild,v 1.1 2011/02/27 13:54:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-4.1.1-r1.ebuild,v 1.2 2011/08/17 16:29:35 hwoarang Exp $
 
 EAPI=3
 KDE_LINGUAS="ar be bg ca cs da de el en_GB eo es et fi fr ga gl hi hne is it ja
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.kphotoalbum.org/"
 SRC_URI="http://www.kphotoalbum.org/data/download/${P}.tar.bz2"
 
 LICENSE="GPL-2 FDL-1.2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 SLOT="4"
 IUSE="debug +exif +geolocation +kipi +raw +semantic-desktop"
 
