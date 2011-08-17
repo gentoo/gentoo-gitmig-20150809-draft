@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome-keyring/libgnome-keyring-3.0.3-r1.ebuild,v 1.1 2011/08/14 15:13:08 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome-keyring/libgnome-keyring-3.0.3-r1.ebuild,v 1.2 2011/08/17 16:47:43 chithanh Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="http://live.gnome.org/GnomeKeyring"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~sparc-solaris"
 IUSE="debug doc test"
 
 RDEPEND=">=sys-apps/dbus-1.0

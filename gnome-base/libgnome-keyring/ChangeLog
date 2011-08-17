@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/libgnome-keyring
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome-keyring/ChangeLog,v 1.26 2011/08/14 15:13:08 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome-keyring/ChangeLog,v 1.27 2011/08/17 16:47:43 chithanh Exp $
+
+  17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  libgnome-keyring-2.32.0.ebuild, libgnome-keyring-3.0.3-r1.ebuild:
+  keyword ~sparc-solaris
 
 *libgnome-keyring-3.0.3-r1 (14 Aug 2011)
 
