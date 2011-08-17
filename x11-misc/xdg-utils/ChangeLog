@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xdg-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.81 2011/07/24 17:49:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-utils/ChangeLog,v 1.82 2011/08/17 17:00:30 chithanh Exp $
+
+  17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xdg-utils-1.1.0_rc1_p20110519.ebuild:
+  keyword ~sparc-solaris
 
   24 Jul 2011; Raúl Porcel <armin76@gentoo.org>
   xdg-utils-1.1.0_rc1_p20110519.ebuild:
