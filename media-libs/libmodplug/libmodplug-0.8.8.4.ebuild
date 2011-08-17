@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/libmodplug-0.8.8.3.ebuild,v 1.1 2011/05/10 16:16:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/libmodplug-0.8.8.4.ebuild,v 1.1 2011/08/17 11:18:51 chainsaw Exp $
 
-EAPI=2
-inherit autotools eutils
+EAPI=4
+inherit autotools base
 
 DESCRIPTION="Library for playing MOD-like music files"
 SRC_URI="mirror://sourceforge/modplug-xmms/${P}.tar.gz"
@@ -17,25 +17,21 @@ IUSE="static-libs"
 RDEPEND=""
 DEPEND="dev-util/pkgconfig"
 
+PATCHES=(  "${FILESDIR}/${PN}-0.8.4-timidity-patches.patch"
+	   "${FILESDIR}/${P}-no-fast-math.patch" )
+
 src_prepare() {
-	sed -i \
-		-e '/CXXFLAGS/s:-ffast-math::' \
-		configure.in || die
-
-	epatch "${FILESDIR}"/${PN}-0.8.4-timidity-patches.patch
-
+	base_src_prepare
 	eautoreconf
 }
 
 src_configure() {
 	econf \
-		--disable-dependency-tracking \
 		$(use_enable static-libs static)
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README TODO
-
 	find "${D}" -name '*.la' -delete
 }
