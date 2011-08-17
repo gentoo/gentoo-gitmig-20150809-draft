@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.198 2011/08/07 19:03:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.199 2011/08/17 08:54:13 graaff Exp $
+
+*rails-2.3.14 (17 Aug 2011)
+
+  17 Aug 2011; Hans de Graaff <graaff@gentoo.org> +rails-2.3.14.ebuild:
+  Version bump.
 
   07 Aug 2011; Raúl Porcel <armin76@gentoo.org> rails-3.0.9.ebuild:
   Add ~ia64/~sparc wrt #351835
