@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>openoffice</herd>
-<longdescription>LibreOffice is a fork of OpenOffice.org. 
+	<herd>openoffice</herd>
+	<longdescription>LibreOffice is a fork of OpenOffice.org. 
 This ebuild allows you to compile it yourself. Unfortunately this 
 compilation can take up to a day depending on the speed of your 
 computer. It will however make a snappier openoffice than the binary 
 version</longdescription>
-<use>
-	<flag name='binfilter'>Enable support for legacy StarOffice 5.x and earlier
+	<use>
+		<flag name="binfilter">Enable support for legacy StarOffice 5.x and earlier
 		file formats</flag>
-	<flag name='graphite'>Enable support for non-Roman fonts via
+		<flag name="graphite">Enable support for non-Roman fonts via
 		<pkg>media-gfx/graphite2</pkg></flag>
-	<flag name='odk'>Build the Office Development Kit</flag>
-	<flag name='offlinehelp'>Install help files locally instead of
+		<flag name="odk">Build the Office Development Kit</flag>
+		<flag name="offlinehelp">Install help files locally instead of
 		using the LibreOffice Wiki</flag>
-	<flag name='templates'>Enable installation of Sun templates</flag>
-	<flag name='vba'>Enable support for VBA compatibility and ActiveX
+		<flag name="templates">Enable installation of Sun templates</flag>
+		<flag name="vba">Enable support for VBA compatibility and ActiveX
 		embedding</flag>
-	<flag name='webdav'>Adds support for HTTP repositories via
+		<flag name="webdav">Adds support for HTTP repositories via
 		<pkg>net-libs/neon</pkg></flag>
-</use>
+	</use>
 </pkgmetadata>
