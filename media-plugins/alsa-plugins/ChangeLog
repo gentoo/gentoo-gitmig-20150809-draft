@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.134 2011/04/10 20:21:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.135 2011/08/17 13:16:17 chainsaw Exp $
+
+  17 Aug 2011; Tony Vroon <chainsaw@gentoo.org> alsa-plugins-1.0.24.ebuild:
+  Mark stable on AMD64 based on my own testing; related to the packages in bug
+  #379423 filed by Arun Raghavan.
 
   10 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   alsa-plugins-1.0.20.ebuild, alsa-plugins-1.0.21.ebuild,
