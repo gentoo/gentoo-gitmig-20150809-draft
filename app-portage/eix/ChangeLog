@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.369 2011/08/12 19:06:28 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.370 2011/08/17 23:00:32 hwoarang Exp $
+
+  17 Aug 2011; Markos Chandras <hwoarang@gentoo.org> eix-0.22.11.ebuild:
+  Stable on amd64 wrt bug #379603
 
 *eix-0.22.11 (12 Aug 2011)
 
