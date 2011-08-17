@@ -1,6 +1,13 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.27 2011/08/02 11:30:34 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.28 2011/08/17 19:34:44 scarabeus Exp $
+
+*libreoffice-bin-3.3.4 (17 Aug 2011)
+
+  17 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libreoffice-bin-3.3.1.ebuild, +libreoffice-bin-3.3.4.ebuild:
+  Bugfix release for 3.3 series. Just go directly to stable as it is just bunch
+  of fixes.
 
 *libreoffice-bin-3.4.2 (02 Aug 2011)
 
