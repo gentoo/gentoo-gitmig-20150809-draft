@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.41 2011/08/17 11:50:51 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.42 2011/08/17 15:02:12 hwoarang Exp $
+
+  17 Aug 2011; Markos Chandras <hwoarang@gentoo.org> subversion-1.6.17.ebuild:
+  Stable on amd64 wrt bug #369065
 
 *subversion-1.6.17 (17 Aug 2011)
 
