@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/gnupg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gnupg/ChangeLog,v 1.1 2011/08/11 07:25:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gnupg/ChangeLog,v 1.2 2011/08/17 03:42:47 radhermit Exp $
+
+*gnupg-2.2 (17 Aug 2011)
+
+  17 Aug 2011; Tim Harder <radhermit@gentoo.org> +gnupg-2.2.ebuild:
+  Version bump
 
 *gnupg-2.1 (11 Aug 2011)
 
