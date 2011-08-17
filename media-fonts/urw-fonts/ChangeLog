@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/urw-fonts
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.58 2011/05/29 17:53:50 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.59 2011/08/17 16:48:16 chithanh Exp $
+
+  17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  urw-fonts-2.4.9.ebuild:
+  keyword ~sparc-solaris
 
   29 May 2011; Fabian Groffen <grobian@gentoo.org> urw-fonts-2.4.9.ebuild:
   Marked ~m68k-mint, bug #365205
