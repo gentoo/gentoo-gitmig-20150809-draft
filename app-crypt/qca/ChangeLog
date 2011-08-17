@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/qca
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.90 2011/08/05 22:31:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.91 2011/08/17 16:42:26 chithanh Exp $
+
+  17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  qca-2.0.3.ebuild:
+  keyword ~sparc-solaris
 
   05 Aug 2011; Markos Chandras <hwoarang@gentoo.org> -qca-2.0.2-r2.ebuild:
   Remove old ebuild. Requested by Arfrever
