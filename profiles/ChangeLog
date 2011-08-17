@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5634 2011/08/17 07:13:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5635 2011/08/17 07:32:36 jlec Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Aug 2011; Justin Lecher <jlec@gentoo.org> package.mask:
+  Correct: Invalid atom in profiles/package.mask:
+  >=app-office/libreoffice-3.4.3*
 
   17 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
   Mask RCs for 3.4.3 libreoffice release
