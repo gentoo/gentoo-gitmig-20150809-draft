@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.128 2011/08/11 23:05:43 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.129 2011/08/17 16:49:17 chithanh Exp $
+
+  17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  quassel-0.7.2.ebuild:
+  keyword ~sparc-solaris
 
   11 Aug 2011; Nathan Phillip Brink <binki@gentoo.org> quassel-0.7.2.ebuild:
   Use an existing versionator function to determine the minor version, fixes
