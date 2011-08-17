@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-DesktopEntry
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DesktopEntry/ChangeLog,v 1.25 2011/08/05 13:05:42 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DesktopEntry/ChangeLog,v 1.26 2011/08/17 16:45:31 chithanh Exp $
+
+  17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  File-DesktopEntry-0.04.ebuild:
+  keyword ~sparc-solaris
 
   05 Aug 2011; Naohiro Aota <naota@gentoo.org> File-DesktopEntry-0.04.ebuild:
   Add ~x86-fbsd.

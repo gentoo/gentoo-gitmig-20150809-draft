@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-MimeInfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/ChangeLog,v 1.64 2011/07/31 16:36:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MimeInfo/ChangeLog,v 1.65 2011/08/17 16:46:03 chithanh Exp $
+
+  17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  File-MimeInfo-0.15-r1.ebuild:
+  keyword ~sparc-solaris
 
   31 Jul 2011; Raúl Porcel <armin76@gentoo.org> File-MimeInfo-0.15-r1.ebuild:
   s390/sh stable
