@@ -36,11 +36,11 @@ inherit eutils
 DESCRIPTION="This is a sample skeleton ebuild file"
 
 # Homepage, not used by Portage directly but handy for developer reference
-HOMEPAGE="http://foo.bar.com/"
+HOMEPAGE="http://foo.example.org/"
 
 # Point to any required sources; these will be automatically downloaded by
 # Portage.
-SRC_URI="ftp://foo.bar.com/${P}.tar.gz"
+SRC_URI="ftp://foo.example.org/${P}.tar.gz"
 
 
 # License of the package.  This must match the name of file(s) in
