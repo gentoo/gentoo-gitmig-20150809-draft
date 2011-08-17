@@ -13,3 +13,4 @@ move x11-libs/Xaw3d x11-libs/libXaw3d
 move media-libs/libwpg app-text/libwpg
 slotmove =kde-misc/steamcompanion-0.2.2 0 4
 move app-editors/gentoo-editor app-misc/editor-wrapper
+move dev-php5/pecl-memcache dev-php/pecl-memcache
