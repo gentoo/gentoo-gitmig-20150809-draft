@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-xmlpatterns
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-xmlpatterns/ChangeLog,v 1.89 2011/07/13 12:51:08 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-xmlpatterns/ChangeLog,v 1.90 2011/08/17 16:59:58 chithanh Exp $
+
+  17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  qt-xmlpatterns-4.6.3.ebuild:
+  keyword ~sparc-solaris
 
   13 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   qt-xmlpatterns-4.7.2.ebuild:

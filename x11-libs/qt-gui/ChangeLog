@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.149 2011/08/14 17:57:54 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.150 2011/08/17 16:56:00 chithanh Exp $
+
+  17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  qt-gui-4.6.3-r2.ebuild:
+  keyword ~sparc-solaris
 
 *qt-gui-4.7.3-r1 (14 Aug 2011)
 

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-sql
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/ChangeLog,v 1.111 2011/07/13 12:44:39 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-sql/ChangeLog,v 1.112 2011/08/17 16:58:19 chithanh Exp $
+
+  17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  qt-sql-4.6.3-r2.ebuild:
+  keyword ~sparc-solaris
 
   13 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> qt-sql-4.7.2.ebuild:
   ppc64 stable wrt #354033
