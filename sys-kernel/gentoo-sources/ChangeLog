@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.878 2011/08/11 17:19:46 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.879 2011/08/17 21:43:42 psomas Exp $
+
+*gentoo-sources-3.0.3 (17 Aug 2011)
+
+  17 Aug 2011; Stratos Psomadakis <psomas@gentoo.org>
+  +gentoo-sources-3.0.3.ebuild:
+  Linux patch 3.0.2 and 3.0.3, and a patch to fix zcache build error
 
   11 Aug 2011; Mike Pagano <mpagano@gentoo.org>
   gentoo-sources-2.6.32-r29.ebuild, gentoo-sources-2.6.32-r32.ebuild,
