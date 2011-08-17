@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gforth
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/ChangeLog,v 1.33 2010/09/11 12:24:17 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/ChangeLog,v 1.34 2011/08/17 16:43:22 chithanh Exp $
+
+  17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  gforth-0.7.0.ebuild:
+  keyword ~sparc-solaris
 
   11 Sep 2010; Ulrich Mueller <ulm@gentoo.org> gforth-0.7.0.ebuild,
   +files/gforth-0.7.0-make-elc.patch:
