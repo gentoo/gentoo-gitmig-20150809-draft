@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.0.1.ebuild,v 1.1 2011/08/11 09:30:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.0.2.ebuild,v 1.1 2011/08/17 19:36:18 scarabeus Exp $
 
 EAPI=4
 
