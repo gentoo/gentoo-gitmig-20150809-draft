@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-firmware
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.102 2011/03/28 00:46:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.103 2011/08/17 13:10:19 chainsaw Exp $
+
+  17 Aug 2011; Tony Vroon <chainsaw@gentoo.org> alsa-firmware-1.0.24.1.ebuild:
+  Marked stable on AMD64 as requested by Tomas Pruzina in bug #379423 filed by
+  Arun Raghavan.
 
   28 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
   alsa-firmware-1.0.23.ebuild, alsa-firmware-1.0.24.1.ebuild:
