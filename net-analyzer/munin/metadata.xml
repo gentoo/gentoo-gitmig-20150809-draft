@@ -17,6 +17,7 @@
 		easy to see how you're doing capacity wise on all limited resources. 
 	</longdescription>
 	<use>
+		<flag name='asterisk'>installs deps for monitoring Asterisk</flag>
 		<flag name='irc'>installs deps for monitoring IRC</flag>
 		<flag name='memcached'>installs deps for monitoring memcached</flag>
 	</use>

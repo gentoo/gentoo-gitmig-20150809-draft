@@ -1,0 +1,188 @@
+From 5a1fdd0cbea24bf6775072866cbd5aa7e9b0458b Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Diego=20Elio=20Petten=C3=B2?= <flameeyes@gmail.com>
+Date: Fri, 12 Aug 2011 20:39:52 +0200
+Subject: [PATCH] Fix Asterisk plugins.
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Some of the commands have been renamed in 1.6 and 1.8 series (which are the
+only versions that are still security-supported and that should be in use),
+so use the new syntax without requiring the admin to set up command
+aliases.
+
+Also make sure to exhaust the read buffer of the socket before terminating
+the plugin's execution, otherwise the asterisk logs will be full of "Broken
+Pipe" error messages, each time a plugin is executed.
+
+Signed-off-by: Diego Elio Pettenò <flameeyes@gmail.com>
+---
+ plugins/node.d/asterisk_channels.in      |    5 ++++-
+ plugins/node.d/asterisk_channelstypes.in |    5 ++++-
+ plugins/node.d/asterisk_codecs.in        |    3 +++
+ plugins/node.d/asterisk_meetme.in        |    5 ++++-
+ plugins/node.d/asterisk_meetmeusers.in   |    5 ++++-
+ plugins/node.d/asterisk_sipchannels.in   |    3 +++
+ plugins/node.d/asterisk_sippeers.in      |    3 +++
+ plugins/node.d/asterisk_voicemail.in     |    5 ++++-
+ 8 files changed, 29 insertions(+), 5 deletions(-)
+
+diff --git a/plugins/node.d/asterisk_channels.in b/plugins/node.d/asterisk_channels.in
+index b4e9860..35de2a2 100644
+--- a/plugins/node.d/asterisk_channels.in
++++ b/plugins/node.d/asterisk_channels.in
+@@ -104,7 +104,7 @@ $pop->print("");
+ 
+ ## Request status of messages.
+ $pop->print("Action: command");
+-$pop->print("Command: show channels");
++$pop->print("Command: core show channels");
+ $pop->print("");
+ my $result;
+ while (($line = $pop->getline) and ($line !~ /END COMMAND/o))
+@@ -117,6 +117,9 @@ my $nb = (split ' ',$result)[0];
+ $pop->print("Action: logoff");
+ $pop->print("");
+ 
++## Exhaust buffer before closing (to avoid polluting Asterisk's logs)
++while ($line = $pop->getline) {}
++
+ print "channels.value $nb\n";
+ 
+ # vim:syntax=perl
+diff --git a/plugins/node.d/asterisk_channelstypes.in b/plugins/node.d/asterisk_channelstypes.in
+index 06ab280..a23007b 100644
+--- a/plugins/node.d/asterisk_channelstypes.in
++++ b/plugins/node.d/asterisk_channelstypes.in
+@@ -120,7 +120,7 @@ $pop->print("");
+ 
+ ## Request status of messages.
+ $pop->print("Action: command");
+-$pop->print("Command: show channels");
++$pop->print("Command: core show channels");
+ $pop->print("");
+ 
+ #Response: Follows
+@@ -157,6 +157,9 @@ while (($line = $pop->getline) and ($line !~ /active channels/o))
+ $pop->print("Action: logoff");
+ $pop->print("");
+ 
++## Exhaust buffer before closing (to avoid polluting Asterisk's logs)
++while ($line = $pop->getline) {}
++
+ $i = 0;
+ foreach my $channel (@CHANNELS) {
+     print "$channel.value $results[$i]\n";
+diff --git a/plugins/node.d/asterisk_codecs.in b/plugins/node.d/asterisk_codecs.in
+index 434d4e6..93bd87a 100644
+--- a/plugins/node.d/asterisk_codecs.in
++++ b/plugins/node.d/asterisk_codecs.in
+@@ -217,6 +217,9 @@ while (($line = $pop->getline) and ($line !~ /active IAX channel/o))
+ $pop->print("Action: logoff");
+ $pop->print("");
+ 
++## Exhaust buffer before closing (to avoid polluting Asterisk's logs)
++while ($line = $pop->getline) {}
++
+ $i = 0;
+ foreach my $codec (@CODECS) {
+     print "$codec.value $results[$i]\n";
+diff --git a/plugins/node.d/asterisk_meetme.in b/plugins/node.d/asterisk_meetme.in
+index 72ce10d..091f384 100644
+--- a/plugins/node.d/asterisk_meetme.in
++++ b/plugins/node.d/asterisk_meetme.in
+@@ -104,7 +104,7 @@ $pop->print("");
+ 
+ ## Request status of messages.
+ $pop->print("Action: command");
+-$pop->print("Command: meetme");
++$pop->print("Command: meetme list");
+ $pop->print("");
+ 
+ 
+@@ -129,6 +129,9 @@ while (($line = $pop->getline) and ($line !~ /Total number|No active MeetMe/o))
+ $pop->print("Action: logoff");
+ $pop->print("");
+ 
++## Exhaust buffer before closing (to avoid polluting Asterisk's logs)
++while ($line = $pop->getline) {}
++
+ print "confs.value $confs\n";
+ 
+ # vim:syntax=perl
+diff --git a/plugins/node.d/asterisk_meetmeusers.in b/plugins/node.d/asterisk_meetmeusers.in
+index 1a0c565..0d6a169 100644
+--- a/plugins/node.d/asterisk_meetmeusers.in
++++ b/plugins/node.d/asterisk_meetmeusers.in
+@@ -106,7 +106,7 @@ $pop->print("");
+ 
+ ## Request status of messages.
+ $pop->print("Action: command");
+-$pop->print("Command: meetme");
++$pop->print("Command: meetme list");
+ $pop->print("");
+ 
+ my $nb = 0;
+@@ -125,6 +125,9 @@ while (($line = $pop->getline) and ($line !~ /END COMMAND/o))
+ $pop->print("Action: logoff");
+ $pop->print("");
+ 
++## Exhaust buffer before closing (to avoid polluting Asterisk's logs)
++while ($line = $pop->getline) {}
++
+ print "users.value $nb\n";
+ 
+ # vim:syntax=perl
+diff --git a/plugins/node.d/asterisk_sipchannels.in b/plugins/node.d/asterisk_sipchannels.in
+index a4750c3..9309575 100644
+--- a/plugins/node.d/asterisk_sipchannels.in
++++ b/plugins/node.d/asterisk_sipchannels.in
+@@ -176,6 +176,9 @@ while (($line = $pop->getline) and ($line !~ /active SIP channel/o))
+ $pop->print("Action: logoff");
+ $pop->print("");
+ 
++## Exhaust buffer before closing (to avoid polluting Asterisk's logs)
++while ($line = $pop->getline) {}
++
+ $i = 0;
+ foreach my $codec (@CODECS) {
+     print "$codec.value $results[$i]\n";
+diff --git a/plugins/node.d/asterisk_sippeers.in b/plugins/node.d/asterisk_sippeers.in
+index 138ef2c..395881f 100644
+--- a/plugins/node.d/asterisk_sippeers.in
++++ b/plugins/node.d/asterisk_sippeers.in
+@@ -152,6 +152,9 @@ while (($line = $pop->getline) and ($line !~ /END COMMAND/o))
+ $pop->print("Action: logoff");
+ $pop->print("");
+ 
++## Exhaust buffer before closing (to avoid polluting Asterisk's logs)
++while ($line = $pop->getline) {}
++
+ #print "peers.value $peers\n";
+ print "mon.value $monitor_online\n";
+ print "moff.value $monitor_offline\n";
+diff --git a/plugins/node.d/asterisk_voicemail.in b/plugins/node.d/asterisk_voicemail.in
+index 7fa76a0..f8bae21 100644
+--- a/plugins/node.d/asterisk_voicemail.in
++++ b/plugins/node.d/asterisk_voicemail.in
+@@ -109,7 +109,7 @@ $pop->print("");
+ 
+ ## Request status of messages.
+ $pop->print("Action: command");
+-$pop->print("Command: show voicemail users");
++$pop->print("Command: voicemail show users");
+ $pop->print("");
+ 
+ #Context    Mbox  User                      Zone       NewMsg
+@@ -133,5 +133,8 @@ while (($line = $pop->getline)  and ($line !~ /--END/o))
+ $pop->print("Action: logoff");
+ $pop->print("");
+ 
++## Exhaust buffer before closing (to avoid polluting Asterisk's logs)
++while ($line = $pop->getline) {}
++
+ print "messages.value $results\n";
+ # vim:syntax=perl
+-- 
+1.7.6
+

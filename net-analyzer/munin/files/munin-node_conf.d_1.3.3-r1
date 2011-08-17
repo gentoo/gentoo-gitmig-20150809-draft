@@ -1,8 +1,0 @@
-# Copyright 1999-2006 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/files/munin-node_conf.d_1.3.3-r1,v 1.1 2007/05/13 06:07:48 robbat2 Exp $
-
-# Set to the nice level for daemon
-NICE_LEVEL=1
-
-# vim: filetype=gentoo-conf-d:

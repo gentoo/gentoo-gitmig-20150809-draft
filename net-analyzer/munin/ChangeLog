@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.57 2011/07/20 21:14:29 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.58 2011/08/17 15:45:54 darkside Exp $
+
+*munin-1.4.6-r2 (17 Aug 2011)
+
+  17 Aug 2011; Jeremy Olexa <darkside@gentoo.org> -munin-1.4.6-r1.ebuild,
+  +munin-1.4.6-r2.ebuild, +files/munin-1.4.6-fix-asterisk-plugins.patch,
+  +files/munin-node_conf.d_1.4.6-r2, +files/munin-node_init.d_1.4.6-r2,
+  -files/munin-node_conf.d_1.3.3-r1, -files/munin-node_init.d_1.3.3-r1,
+  metadata.xml:
+  Revision bump to fix bugs: 367785, 378583, 378003. Patches by Diego Elio
+  Pettenò
 
 *munin-1.4.6-r1 (20 Jul 2011)
 
