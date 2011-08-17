@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.04-r1.ebuild,v 1.1 2011/08/16 18:41:44 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.04-r2.ebuild,v 1.1 2011/08/17 18:34:14 tgurr Exp $
 
 EAPI=3
 inherit autotools eutils versionator flag-o-matic
@@ -9,7 +9,7 @@ DESCRIPTION="Ghostscript is an interpreter for the PostScript language and for P
 HOMEPAGE="http://ghostscript.com/"
 
 MY_P=${P/-gpl}
-GSDJVU_PV=1.4
+GSDJVU_PV=1.5
 PVM=$(get_version_component_range 1-2)
 SRC_URI="!bindist? ( djvu? ( mirror://sourceforge/djvu/gsdjvu-${GSDJVU_PV}.tar.gz ) )
 	mirror://sourceforge/ghostscript/${MY_P}.tar.bz2
@@ -87,8 +87,6 @@ src_prepare() {
 		cp gsdjvu-${GSDJVU_PV}/gsdjvu "${S}"
 		cp gsdjvu-${GSDJVU_PV}/gdevdjvu.c "${S}/base"
 		epatch "${WORKDIR}/patches-gsdjvu/gsdjvu-1.3-${PN}-8.64.patch"
-		epatch "${WORKDIR}/patches-gsdjvu/gsdjvu-1.4-${PN}-9.00-upstream-buildfixes.patch"
-		epatch "${WORKDIR}/patches-gsdjvu/gsdjvu-1.4-${PN}-9.04.patch"
 		cp gsdjvu-${GSDJVU_PV}/ps2utf8.ps "${S}/lib"
 		cp "${S}/base/contrib.mak" "${S}/base/contrib.mak.gsdjvu"
 		grep -q djvusep "${S}/base/contrib.mak" || \
