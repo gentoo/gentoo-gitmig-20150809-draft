@@ -1,6 +1,14 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.40 2011/03/06 11:48:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.41 2011/08/17 11:50:51 chainsaw Exp $
+
+*subversion-1.6.17 (17 Aug 2011)
+
+  17 Aug 2011; Tony Vroon <chainsaw@gentoo.org> +subversion-1.6.17.ebuild,
+  metadata.xml:
+  Version bump for security bug #369065 by Tim Sammut. Took maintainership,
+  added use of base eclass and PATCHES bash array. EAPI 4 usage made impossible
+  by python eclass.
 
   06 Mar 2011; Markos Chandras <hwoarang@gentoo.org> subversion-1.6.16.ebuild:
   Stable on amd64 wrt bug #356741
