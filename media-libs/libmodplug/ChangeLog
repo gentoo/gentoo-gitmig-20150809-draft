@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmodplug
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/ChangeLog,v 1.67 2011/08/17 13:24:23 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/ChangeLog,v 1.68 2011/08/17 17:01:02 chithanh Exp $
+
+  17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  libmodplug-0.8.8.4.ebuild:
+  keyword ~sparc-solaris
 
   17 Aug 2011; Tony Vroon <chainsaw@gentoo.org> libmodplug-0.8.8.4.ebuild:
   Mark stable on AMD64 and remove stray die statement as per arch testing by

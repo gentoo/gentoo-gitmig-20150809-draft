@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libreplaygain
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libreplaygain/ChangeLog,v 1.26 2011/03/16 17:32:07 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libreplaygain/ChangeLog,v 1.27 2011/08/17 17:01:35 chithanh Exp $
+
+  17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  libreplaygain-465.ebuild:
+  keyword ~sparc-solaris
 
   16 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> libreplaygain-465.ebuild:
   ppc/ppc64 stable wrt #348512
