@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/webmock
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/ChangeLog,v 1.21 2011/07/13 05:54:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/ChangeLog,v 1.22 2011/08/17 07:14:13 graaff Exp $
+
+  17 Aug 2011; Hans de Graaff <graaff@gentoo.org> -webmock-1.6.1.ebuild,
+  -webmock-1.6.2.ebuild:
+  Remove old versions.
 
   13 Jul 2011; Hans de Graaff <graaff@gentoo.org> webmock-1.6.4.ebuild:
   Add jruby support.
