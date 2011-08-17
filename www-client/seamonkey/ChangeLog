@@ -1,6 +1,13 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.327 2011/08/16 04:50:01 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.328 2011/08/17 16:51:46 polynomial-c Exp $
+
+*seamonkey-2.3-r1 (17 Aug 2011)
+
+  17 Aug 2011; Lars Wendler <polynomial-c@gentoo.org>
+  -files/enigmail/enigmail-1.2-seamonkey-2.1-lowercaseequalsliteralfix.patch,
+  -seamonkey-2.1.ebuild, +seamonkey-2.3-r1.ebuild:
+  Revbumped to enigmail-1.3. Removed 2.1 version.
 
   16 Aug 2011; Lars Wendler <polynomial-c@gentoo.org> seamonkey-2.3.ebuild:
   Fixed dependency on nss and nspr (bug #379341).
