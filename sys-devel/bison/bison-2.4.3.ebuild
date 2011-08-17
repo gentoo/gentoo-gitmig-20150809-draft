@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-2.4.3.ebuild,v 1.9 2011/06/08 13:15:01 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-2.4.3.ebuild,v 1.10 2011/08/17 03:43:40 mattst88 Exp $
 
 EAPI="2"
 
@@ -15,8 +15,9 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="nls static"
 
-DEPEND="nls? ( sys-devel/gettext )"
 RDEPEND="sys-devel/m4"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-uclibc-sched_param-def.patch

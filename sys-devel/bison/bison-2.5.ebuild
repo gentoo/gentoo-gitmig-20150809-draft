@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-2.5.ebuild,v 1.3 2011/08/07 23:08:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-2.5.ebuild,v 1.4 2011/08/17 03:43:40 mattst88 Exp $
 
 EAPI="2"
 
@@ -15,9 +15,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="nls static"
 
-RDEPEND=""
-DEPEND="nls? ( sys-devel/gettext )
-	>=sys-devel/m4-1.4.16"
+RDEPEND=">=sys-devel/m4-1.4.16"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_configure() {
 	use static && append-ldflags -static
