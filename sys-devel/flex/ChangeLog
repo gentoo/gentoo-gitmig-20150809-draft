@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/flex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.85 2011/07/31 18:36:50 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.86 2011/08/17 03:46:34 mattst88 Exp $
+
+  17 Aug 2011; Matt Turner <mattst88@gentoo.org> flex-2.5.35.ebuild,
+  flex-2.5.35_p10.ebuild:
+  Add m4 to RDEPEND as well, bug 379355.
 
   31 Jul 2011; Matt Turner <mattst88@gentoo.org> flex-2.5.35.ebuild,
   flex-2.5.35_p10.ebuild:
