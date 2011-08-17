@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/kbuild
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.18 2011/08/11 02:32:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.19 2011/08/17 23:26:20 polynomial-c Exp $
+
+*kbuild-0.1.9998_pre20110817 (17 Aug 2011)
+
+  17 Aug 2011; Lars Wendler <polynomial-c@gentoo.org>
+  +kbuild-0.1.9998_pre20110817.ebuild,
+  +files/kbuild-0.1.9998_pre20110817-kash-link-pthread.patch:
+  Added snapshot version as >=0.1.999 is required by >=virtualbox-4.1.2
 
   11 Aug 2011; Mike Frysinger <vapier@gentoo.org> kbuild-0.1.5-r1.ebuild,
   kbuild-0.1.5_p2.ebuild, kbuild-0.1.5_p2-r1.ebuild, kbuild-9999.ebuild:
