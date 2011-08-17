@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20110525a.ebuild,v 1.1 2011/07/14 16:25:43 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/dokuwiki-20110525a.ebuild,v 1.2 2011/08/17 23:01:35 hwoarang Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://wiki.splitbrain.org/wiki:dokuwiki"
 SRC_URI="http://www.splitbrain.org/_media/projects/${PN}/${PN}-${MY_PV}.tgz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE="gd"
 
 DEPEND=""
