@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.1.20100428.ebuild,v 1.9 2011/03/21 11:40:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.1.20100428.ebuild,v 1.10 2011/08/17 16:15:43 vapier Exp $
 
 EAPI=2
 
@@ -21,7 +21,8 @@ RDEPEND=">=app-shells/bash-2.04-r3
 	!unicode? ( >=sys-libs/ncurses-5.2-r5 )
 	unicode? ( >=sys-libs/ncurses-5.2-r5[unicode] )"
 DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	!minimal? ( sys-devel/libtool )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-shared.patch
