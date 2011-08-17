@@ -1,6 +1,13 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.426 2011/08/07 14:04:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.427 2011/08/17 20:28:56 dilfridge Exp $
+
+*cups-1.5.0 (17 Aug 2011)
+*cups-1.4.8 (17 Aug 2011)
+
+  17 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> +cups-1.4.8.ebuild,
+  -cups-1.5_rc1.ebuild, +cups-1.5.0.ebuild:
+  Version bump; cups-1.5 remains package-masked
 
   07 Aug 2011; Raúl Porcel <armin76@gentoo.org> cups-1.4.6-r2.ebuild:
   ia64/m68k/s390/sh/sparc stable wrt #333781
