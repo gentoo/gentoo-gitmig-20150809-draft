@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.0.ebuild,v 1.1 2011/08/05 15:16:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.0.ebuild,v 1.2 2011/08/17 22:56:33 hwoarang Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="1.9"
@@ -28,7 +28,6 @@ RDEPEND="dev-libs/glib:2
 	x11-libs/libXinerama"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	app-text/docbook2X
 	dev-util/pkgconfig
 	x11-proto/xextproto
 	x11-proto/xf86vidmodeproto
