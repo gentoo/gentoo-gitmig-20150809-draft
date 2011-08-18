@@ -1,6 +1,20 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.274 2011/07/21 17:16:12 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.275 2011/08/18 14:40:44 voyageur Exp $
+
+*proftpd-1.3.4_rc2-r2 (18 Aug 2011)
+
+  18 Aug 2011; Bernard Cafarelli <voyageur@gentoo.org>
+  -proftpd-1.3.4_rc2.ebuild, -proftpd-1.3.4_rc2-r1.ebuild,
+  +proftpd-1.3.4_rc2-r2.ebuild:
+  Proxy commit:
+  * Bump mod_case to 0.7.
+  * Remove ~amd64-fbsd keyword until all ProFTPD dependencies are keyworded for
+  ~amd64-fbsd.
+  * Remove memcache support. ProFTPD requires dev-libs/libmemcached >= 0.41
+  which is not in the portage tree yet. See Gentoo Bugs #378881 and #354261.
+  * Set dependency for USE=acl to virtual/acl.
+  * Some stylistic changes.
 
   21 Jul 2011; Anthony G. Basile <blueness@gentoo.org>
   proftpd-1.3.3d-r1.ebuild, proftpd-1.3.3e.ebuild:

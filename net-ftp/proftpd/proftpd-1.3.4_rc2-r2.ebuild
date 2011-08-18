@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.4_rc2.ebuild,v 1.1 2011/04/04 20:56:08 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.4_rc2-r2.ebuild,v 1.1 2011/08/18 14:40:44 voyageur Exp $
 
 EAPI=4
 inherit eutils autotools
 
-MOD_CASE="0.4"
+MOD_CASE="0.7"
 MOD_CLAMAV="0.11rc"
 MOD_DISKUSE="0.9"
 MOD_GSS="1.3.3"
@@ -25,17 +25,16 @@ SRC_URI="ftp://ftp.proftpd.org/distrib/source/${P/_/}.tar.bz2
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~amd64-fbsd ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="acl authfile ban +caps case clamav copy ctrls deflate diskuse doc exec ifsession ifversion ident
-	ipv6 kerberos ldap memcache mysql ncurses nls pam +pcre postgres qos radius ratio readme rewrite
-	selinux sftp shaper sitemisc softquota sqlite ssl tcpd trace vroot xinetd"
+	ipv6 kerberos ldap mysql ncurses nls pam +pcre postgres qos radius ratio readme rewrite selinux
+	sftp shaper sitemisc softquota sqlite ssl tcpd trace vroot xinetd"
 
-DEPEND="acl? ( sys-apps/acl sys-apps/attr )
+DEPEND="acl? ( virtual/acl )
 	caps? ( sys-libs/libcap )
 	clamav? ( app-antivirus/clamav )
 	kerberos? ( virtual/krb5 )
 	ldap? ( net-nds/openldap )
-	memcache? ( >=dev-libs/libmemcached-0.37 )
 	mysql? ( virtual/mysql )
 	nls? ( virtual/libiconv )
 	ncurses? ( sys-libs/ncurses )
@@ -69,6 +68,9 @@ src_prepare() {
 
 	sed -i -e "s/utils install-conf install/utils install/g" Makefile.in
 	sed -i -e "s/ @INSTALL_STRIP@//g" Make.rules.in
+
+	# Fix Gentoo Bug #363293 / ProFTPD Bug #3642
+	epatch "${FILESDIR}"/${P}-sql-groupsetfast-null-pointer.patch
 
 	# Support new versions of mit-krb5 (Gentoo Bugs #284853, #324903)
 	if use kerberos ; then
@@ -149,10 +151,7 @@ src_configure() {
 		use radius && mym="${mym}:mod_quotatab_radius"
 		use mysql || use postgres || use sqlite && mym="${mym}:mod_quotatab_sql"
 	fi
-	if use ssl ; then
-		mym="${mym}:mod_tls:mod_tls_shmcache"
-		use memcache && mym="${mym}:mod_tls_memcache"
-	fi
+	use ssl && mym="${mym}:mod_tls:mod_tls_shmcache"
 	if use tcpd ; then
 		mym="${mym}:mod_wrap2:mod_wrap2_file"
 		use mysql || use postgres || use sqlite && mym="${mym}:mod_wrap2_sql"
@@ -166,7 +165,6 @@ src_configure() {
 		$(use_enable caps cap) \
 		$(use_enable ident) \
 		$(use_enable ipv6) \
-		$(use_enable memcache) \
 		$(use_enable ncurses) \
 		$(use_enable nls) \
 		$(use_enable pam auth-pam) \
@@ -178,7 +176,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${ED}" install
+	default
 	newinitd "${FILESDIR}"/proftpd.initd proftpd
 	insinto /etc/proftpd
 	doins "${FILESDIR}"/proftpd.conf.sample
