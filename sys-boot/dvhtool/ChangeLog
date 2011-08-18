@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/dvhtool
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/dvhtool/ChangeLog,v 1.13 2009/03/01 23:26:14 kumba Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/dvhtool/ChangeLog,v 1.14 2011/08/18 03:35:05 mattst88 Exp $
+
+  18 Aug 2011; Matt Turner <mattst88@gentoo.org> dvhtool-1.0.1-r2.ebuild,
+  files/dvhtool-1.0.1-debian.diff:
+  Don't patch generated autotools files, bug 226827. Bump to EAPI4.
 
   01 Mar 2009; Joshua Kinard <kumba@gentoo.org> dvhtool-1.0.1-r2.ebuild:
   Make dvhtool cross-compilable via toolchain-funcs
