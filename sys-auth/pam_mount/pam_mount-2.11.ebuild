@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/pam_mount-2.11.ebuild,v 1.1 2011/08/14 18:31:29 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/pam_mount-2.11.ebuild,v 1.2 2011/08/18 00:03:00 mattst88 Exp $
 
 EAPI=4
 
-inherit multilib
+inherit eutils multilib
 
 DESCRIPTION="A PAM module that can mount volumes for a user session"
 HOMEPAGE="http://pam-mount.sourceforge.net"
@@ -26,6 +26,10 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	app-arch/xz-utils"
 RDEPEND="${COMMON_DEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-fix-build-without-cryptsetup.patch
+}
 
 src_configure() {
 	econf --with-slibdir="/$(get_libdir)" \

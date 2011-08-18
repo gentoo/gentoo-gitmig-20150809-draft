@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_mount
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/ChangeLog,v 1.55 2011/08/14 18:31:29 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/ChangeLog,v 1.56 2011/08/18 00:03:00 mattst88 Exp $
+
+  18 Aug 2011; Matt Turner <mattst88@gentoo.org> pam_mount-2.11.ebuild,
+  +files/pam_mount-2.11-fix-build-without-cryptsetup.patch:
+  Fix build with USE=-crypt, bug 379267
 
 *pam_mount-2.11 (14 Aug 2011)
 
