@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-14.3.1.ebuild,v 1.4 2011/04/03 11:07:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-14.3.1.ebuild,v 1.5 2011/08/18 20:43:52 mattst88 Exp $
 
 EAPI=2
 inherit eutils flag-o-matic
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/sox/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
-IUSE="alsa amr ao debug encode ffmpeg flac id3tag ladspa mad ogg oss png pulseaudio sndfile wavpack"
+IUSE="alsa amr ao debug encode ffmpeg flac id3tag ladspa mad ogg openmp oss png pulseaudio sndfile wavpack"
 
 # libtool required for libltdl
 RDEPEND="sys-devel/libtool
@@ -46,6 +46,7 @@ src_configure() {
 	econf \
 		$(use_with alsa) \
 		$(use_enable debug) \
+		$(use_enable openmp gomp) \
 		$(use_with ao) \
 		$(use_with oss) \
 		$(use_with encode lame) \

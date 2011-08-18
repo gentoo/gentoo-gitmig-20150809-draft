@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.126 2011/06/14 04:45:07 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.127 2011/08/18 20:43:52 mattst88 Exp $
+
+  18 Aug 2011; Matt Turner <mattst88@gentoo.org> sox-14.3.0.ebuild,
+  sox-14.3.1.ebuild, sox-14.3.2.ebuild:
+  Add openmp USE flag, bug 371549.
 
   14 Jun 2011; Matt Turner <mattst88@gentoo.org> sox-14.3.2.ebuild:
   Added ~mips, bug 260095
