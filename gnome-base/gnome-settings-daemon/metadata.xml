@@ -6,6 +6,6 @@
 		<flag name="packagekit">Enable support for the distro-neutral package
 			manager GUI <pkg>app-admin/packagekit</pkg></flag>
 		<flag name="short-touchpad-timeout">Change the touchpad timeout so that 
-			it's effective for slow typists</flag>
+			it's effective for fast typists</flag>
 	</use>
 </pkgmetadata>
