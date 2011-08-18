@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.28 2011/08/17 19:34:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.29 2011/08/18 09:06:30 patrick Exp $
+
+  18 Aug 2011; Patrick Lauer <patrick@gentoo.org> libreoffice-bin-3.3.4.ebuild:
+  Fix requested by scarabeus
 
 *libreoffice-bin-3.3.4 (17 Aug 2011)
 

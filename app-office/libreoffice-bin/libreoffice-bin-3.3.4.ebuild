@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.4.ebuild,v 1.1 2011/08/17 19:34:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.4.ebuild,v 1.2 2011/08/18 09:06:30 patrick Exp $
 
 EAPI="3"
 
@@ -9,10 +9,10 @@ inherit eutils fdo-mime gnome2-utils pax-utils prefix rpm multilib
 IUSE="gnome java offlinehelp"
 
 MY_PV="${PV/_/-}"
-MY_PV2="${PV}rc2"
-BVER="3.3.1-8"
-BVER2="3.3-8"
-UREVER="1.7.0-8"
+MY_PV2="${PV}rc1"
+BVER="3.3.4-401"
+BVER2="3.3-401"
+UREVER="1.7.0-401"
 BASIS="libobasis3.3"
 BASIS2="basis3.3"
 NM="libreoffice"
