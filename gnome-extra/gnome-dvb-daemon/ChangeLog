@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-dvb-daemon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-dvb-daemon/ChangeLog,v 1.1 2011/08/17 20:57:14 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-dvb-daemon/ChangeLog,v 1.2 2011/08/18 15:51:52 halcy0n Exp $
+
+  18 Aug 2011; Mark Loeser <halcy0n@gentoo.org> Manifest:
+  Fix Manifest
 
 *gnome-dvb-daemon-0.2.2 (17 Aug 2011)
 
