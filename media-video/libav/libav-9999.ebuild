@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.14 2011/08/10 01:06:20 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.15 2011/08/18 08:21:46 lu_zero Exp $
 
 EAPI=4
 
@@ -255,7 +255,7 @@ src_install() {
 	fi
 
 	for i in avplay avserver avprobe; do
-		dosym  ${i} "$EPREFIX"/usr/bin/${i/av/ff}
+		dosym  ${i} /usr/bin/${i/av/ff}
 	done
 }
 
