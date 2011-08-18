@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pwgen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.55 2011/02/06 05:19:15 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.56 2011/08/18 19:24:53 grobian Exp $
+
+  18 Aug 2011; Fabian Groffen <grobian@gentoo.org> pwgen-2.06-r1.ebuild:
+  Marked ~x64-macos
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> pwgen-2.04.ebuild:
   Drop to ~mips
