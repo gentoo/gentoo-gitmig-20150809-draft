@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.439 2011/08/17 13:07:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.440 2011/08/18 10:18:29 chainsaw Exp $
+
+  18 Aug 2011; Tony Vroon <chainsaw@gentoo.org> ffmpeg-0.7.3.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in
+  security bug #378801.
 
   17 Aug 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-0.7_rc1.ebuild,
   ffmpeg-0.7.3.ebuild, ffmpeg-0.8.2.ebuild, ffmpeg-9999.ebuild:
