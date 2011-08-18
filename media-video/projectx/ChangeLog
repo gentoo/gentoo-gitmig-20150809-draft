@@ -1,6 +1,11 @@
 # ChangeLog for media-video/projectx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.49 2011/08/17 10:51:06 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.50 2011/08/18 18:54:42 billie Exp $
+
+*projectx-0.91.0.02 (18 Aug 2011)
+
+  18 Aug 2011; Daniel Pielmeier <billie@gentoo.org> +projectx-0.91.0.02.ebuild:
+  Version bump. Switch to EAPI 4.
 
   17 Aug 2011; Thomas Kahle <tomka@gentoo.org>
   projectx-0.90.4.00_p33-r1.ebuild:
