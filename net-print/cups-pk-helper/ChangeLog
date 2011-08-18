@@ -1,0 +1,10 @@
+# ChangeLog for net-print/cups-pk-helper
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-pk-helper/ChangeLog,v 1.1 2011/08/18 05:09:22 nirbheek Exp $
+
+*cups-pk-helper-0.1.3 (18 Aug 2011)
+
+  18 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +cups-pk-helper-0.1.3.ebuild, +metadata.xml:
+  Move from gnome overlay for GNOME 3
+
