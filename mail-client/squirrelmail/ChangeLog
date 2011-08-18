@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/squirrelmail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.161 2011/08/18 06:17:48 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.162 2011/08/18 10:14:39 chainsaw Exp $
+
+  18 Aug 2011; Tony Vroon <chainsaw@gentoo.org> squirrelmail-1.4.22.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in
+  security bug #378811.
 
   18 Aug 2011; Eray Aslan <eras@gentoo.org> squirrelmail-1.4.22.ebuild:
   QA - bug #379629
