@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mono
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.226 2011/07/14 08:29:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.227 2011/08/18 09:09:58 ali_bush Exp $
+
+*mono-2.10.4 (18 Aug 2011)
+
+  18 Aug 2011; Alistair Bush <ali_bush@gentoo.org> +mono-2.10.4.ebuild:
+  Version Bump.
 
   14 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> mono-2.10.2-r1.ebuild:
   ppc stable wrt #372983
