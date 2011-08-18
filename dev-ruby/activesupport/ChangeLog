@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.148 2011/08/17 08:37:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.149 2011/08/18 10:00:21 chainsaw Exp $
+
+  18 Aug 2011; Tony Vroon <chainsaw@gentoo.org> activesupport-2.3.14.ebuild:
+  Marked stable as a dependency of dev-ruby/rails based on arch testing by
+  Agostino "ago" Sarubbo in security bug #379511 filed by Hans de Graaff.
 
 *activesupport-2.3.14 (17 Aug 2011)
 
