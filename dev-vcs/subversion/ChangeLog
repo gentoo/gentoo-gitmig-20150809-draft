@@ -1,6 +1,18 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.43 2011/08/18 09:33:01 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.44 2011/08/18 09:51:23 chainsaw Exp $
+
+*subversion-1.6.17-r1 (18 Aug 2011)
+
+  18 Aug 2011; Tony Vroon <chainsaw@gentoo.org> +files/47_mod_dav_svn.conf,
+  +files/80subversion-extras, +subversion-1.6.17-r1.ebuild,
+  +files/svnserve.initd2:
+  Cut down extraneous einfo as requested by Gokdeniz Karadag in bug #268633.
+  Removed USE=threadsafe requirement for sqlite as per Alan Hourihane in bug
+  #323951. Stop use of --chuid in init script as per Michael Mair-Keimberger in
+  bug #377781. Removed overengineered testing facilities; unmaintainable in
+  current state. Moved remaining inline configuration files to FILESDIR.
+  Removed custom inline print function.
 
   18 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> subversion-1.6.17.ebuild:
   ppc/ppc64 stable wrt #69065

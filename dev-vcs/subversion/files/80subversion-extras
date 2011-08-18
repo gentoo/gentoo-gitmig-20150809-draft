@@ -1,0 +1,3 @@
+PATH="${EPREFIX}/usr/$(get_libdir)/subversion/bin"
+ROOTPATH="${EPREFIX}/usr/$(get_libdir)/subversion/bin"
+
