@@ -1,0 +1,25 @@
+From 4e9a34b8703bda7ff54bc45c7a7de21c1562888a Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?"J.=20David=20Ib=C3=A1=C3=B1ez"?= <jdavid.ibp@gmail.com>
+Date: Thu, 18 Aug 2011 01:26:09 +0200
+Subject: [PATCH] Fix segfault on Repository_write
+
+This likely fixes issue #44
+---
+ pygit2.c |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+diff --git a/pygit2.c b/pygit2.c
+index 7cc0890..1fd016f 100644
+--- a/pygit2.c
++++ b/pygit2.c
+@@ -26,6 +26,7 @@
+  * Boston, MA 02110-1301, USA.
+  */
+ 
++#define PY_SSIZE_T_CLEAN
+ #include <Python.h>
+ #include <git2.h>
+ 
+-- 
+1.7.6
+

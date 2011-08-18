@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pygit2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygit2/ChangeLog,v 1.1 2011/08/18 22:31:30 radhermit Exp $
+
+*pygit2-0.14.0 (18 Aug 2011)
+
+  18 Aug 2011; Tim Harder <radhermit@gentoo.org> +pygit2-0.14.0.ebuild,
+  +files/pygit2-0.14.0-fix-write.patch, +metadata.xml:
+  Initial import
+
