@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>gnome</herd>
+	<herd>gnome</herd>
+	<use>
+		<flag name="cheese">Add support for taking pictures for the user
+			accounts panel using <pkg>media-video/cheese</pkg></flag>
+		<flag name="socialweb">Add support for configuring social web service
+			settings using <pkg>net-libs/libsocialweb</pkg></flag>
+	</use>
 </pkgmetadata>
