@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.38 2010/09/29 18:33:00 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/horde.eclass,v 1.39 2011/08/18 14:58:57 vapier Exp $
 #
 # Help manage the horde project http://www.horde.org/
 #
@@ -152,7 +152,7 @@ horde_pkg_postinst() {
 	if [ -e ${ROOT}/usr/share/doc/${PF}/INSTALL* ] ; then
 		elog "Please read the INSTALL file in /usr/share/doc/${PF}."
 	fi
-	
+
 	einfo "Before this package will work, you have to setup the configuration files."
 	einfo "Please review the config/ subdirectory of ${HORDE_PN} in the webroot."
 

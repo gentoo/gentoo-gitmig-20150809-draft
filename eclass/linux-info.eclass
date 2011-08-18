@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.88 2011/03/29 19:57:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.89 2011/08/18 14:58:57 vapier Exp $
 #
 # Original author: John Mylchreest <johnm@gentoo.org>
 # Maintainer: kernel-misc@gentoo.org
@@ -42,7 +42,7 @@
 #
 #   e.g.: CONFIG_CHECK="!MTRR"
 #
-# To simply warn about a missing option, prepend a '~'. 
+# To simply warn about a missing option, prepend a '~'.
 # It may be combined with '!'.
 #
 # In general, most checks should be non-fatal. The only time fatal checks should
@@ -209,7 +209,7 @@ getfilevar_noexec() {
 	else
 		${mycat} "${2}" | \
 		sed -n \
-		-e "/^[[:space:]]*${1}[[:space:]]*:\\?=[[:space:]]*\(.*\)\$/{ 
+		-e "/^[[:space:]]*${1}[[:space:]]*:\\?=[[:space:]]*\(.*\)\$/{
 			s,^[^=]*[[:space:]]*=[[:space:]]*,,g ;
 			s,[[:space:]]*\$,,g ;
 			p
@@ -497,7 +497,7 @@ get_version() {
 
 	# keep track of it
 	KERNEL_MAKEFILE="${KV_DIR}/Makefile"
-	
+
 	# Decide the function used to extract makefile variables.
 	mkfunc="$(get_makefile_extract_function "${KERNEL_MAKEFILE}")"
 

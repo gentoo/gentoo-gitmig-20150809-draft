@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.91 2011/07/08 11:35:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.92 2011/08/18 14:58:57 vapier Exp $
 
 # @ECLASS: multilib.eclass
 # @MAINTAINER:
@@ -202,7 +202,7 @@ get_install_abis() {
 }
 
 # @FUNCTION: get_all_abis
-# @DESCRIPTION: 
+# @DESCRIPTION:
 # Return a list of the ABIs supported by this profile.
 # the last one in the list being the default.
 get_all_abis() {
