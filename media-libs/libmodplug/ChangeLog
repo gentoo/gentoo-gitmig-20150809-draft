@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmodplug
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/ChangeLog,v 1.68 2011/08/17 17:01:02 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/ChangeLog,v 1.69 2011/08/18 17:18:59 xarthisius Exp $
+
+  18 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  libmodplug-0.8.8.4.ebuild:
+  ppc/ppc64 stable wrt #379557
 
   17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   libmodplug-0.8.8.4.ebuild:
