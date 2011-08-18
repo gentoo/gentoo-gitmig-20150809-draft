@@ -1,6 +1,11 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.23 2011/08/18 08:21:46 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.24 2011/08/18 08:46:35 lu_zero Exp $
+
+*libav-0.8_pre20110818 (18 Aug 2011)
+
+  18 Aug 2011; Luca Barbato <lu_zero@gentoo.org> +libav-0.8_pre20110818.ebuild:
+  New snapshot
 
   18 Aug 2011; Luca Barbato <lu_zero@gentoo.org> libav-9999.ebuild:
   Fix eprefix usage, dosym already adds it
