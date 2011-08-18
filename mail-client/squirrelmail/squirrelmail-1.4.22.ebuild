@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.22.ebuild,v 1.1 2011/07/13 18:50:27 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.22.ebuild,v 1.2 2011/08/18 06:17:48 eras Exp $
 
 EAPI=2
 
@@ -59,13 +59,8 @@ src_unpack() {
 
 	mv config/config_default.php config/config.php || die
 
-	sed -i "s:'/var/local/squirrelmail/data/':SM_PATH . 'data/':" \
-		config/config.php || die
-
 	# Now do the plugins
 	cd "${S}/plugins" || die
-
-	sed -i 's:/usr/games/fortune:/usr/bin/fortune:g' fortune/setup.php || die "Unable to fix fortunes plugin."
 
 	unpack compatibility-${COMPATIBILITY_VER}.tar.gz
 
@@ -78,9 +73,7 @@ src_unpack() {
 		mv amavisnewsql/config.php.dist amavisnewsql/config.php
 
 	use ldap &&
-		unpack ldapuserdata-${LDAP_USERDATA_VER}.tar.gz &&
-		epatch "${FILESDIR}"/ldapuserdata-${LDAP_USERDATA_VER}-gentoo.patch &&
-		mv ldapuserdata/config_sample.php ldapuserdata/config.php
+		unpack ldapuserdata-${LDAP_USERDATA_VER}.tar.gz
 
 	use ssl &&
 		unpack secure_login-${SECURELOGIN_VER}.tar.gz &&
@@ -91,6 +84,17 @@ src_unpack() {
 	use nls &&
 		cd "${S}" &&
 		unpack all_locales-${LOCALES_VER}.tar.bz2
+}
+
+src_prepare() {
+	sed -i "s:'/var/local/squirrelmail/data/':SM_PATH . 'data/':" \
+		config/config.php || die
+
+	cd "${S}/plugins" || die
+	if use ldap; then
+		epatch "${FILESDIR}"/ldapuserdata-${LDAP_USERDATA_VER}-gentoo.patch
+		mv ldapuserdata/config_sample.php ldapuserdata/config.php || die
+	fi
 }
 
 src_configure() {
