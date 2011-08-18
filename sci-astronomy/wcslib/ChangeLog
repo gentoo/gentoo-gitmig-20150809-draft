@@ -1,6 +1,13 @@
 # ChangeLog for sci-astronomy/wcslib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/ChangeLog,v 1.18 2011/08/04 18:33:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/ChangeLog,v 1.19 2011/08/18 05:45:59 bicatali Exp $
+
+*wcslib-4.8 (18 Aug 2011)
+
+  18 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> -wcslib-4.6.3.ebuild,
+  -files/wcslib-4.6.3-autoconf.patch, -files/wcslib-4.6.3-destdir.patch,
+  -files/wcslib-4.6.3-ldflags.patch, +wcslib-4.8.ebuild:
+  Version bump. Remove old. Now does not need X display for testing anymore
 
   04 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   Switched herd to sci-astronomy
