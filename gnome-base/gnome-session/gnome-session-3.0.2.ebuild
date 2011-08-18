@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-3.0.2.ebuild,v 1.1 2011/08/18 05:04:13 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-3.0.2.ebuild,v 1.2 2011/08/18 18:21:09 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -96,6 +96,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	gnome2_pkg_postinst
+
 	if ! has_version gnome-base/gdm && ! has_version kde-base/kdm; then
 		ewarn "If you use a custom .xinitrc for your X session,"
 		ewarn "make sure that the commands in the xinitrc.d scripts are run."
