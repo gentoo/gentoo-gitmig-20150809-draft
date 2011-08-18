@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/jasspa-microemacs-20091011-r1.ebuild,v 1.5 2010/10/17 15:56:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/jasspa-microemacs-20091011-r1.ebuild,v 1.6 2011/08/18 21:26:25 ulm Exp $
 
 EAPI=3
 
@@ -42,6 +42,7 @@ src_unpack() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PV}-ncurses.patch"
+	epatch "${FILESDIR}/${PV}-linux3.patch"
 
 	# allow for some variables to be passed to make
 	sed -i '/make/s/\$OPTIONS/& CC="$CC" COPTIMISE="$CFLAGS" LDFLAGS="$LDFLAGS" STRIP=true/' \
