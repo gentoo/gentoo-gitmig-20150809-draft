@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.272 2011/08/18 15:58:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.273 2011/08/18 18:32:29 flameeyes Exp $
+
+  18 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org> sudo-1.8.1_p2.ebuild,
+  sudo-1.8.2.ebuild:
+  Add back skey dependency that was dropped (when?).
 
 *sudo-1.8.2 (18 Aug 2011)
 
