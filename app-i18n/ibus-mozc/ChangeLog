@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/ibus-mozc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-mozc/ChangeLog,v 1.18 2011/07/20 14:52:13 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-mozc/ChangeLog,v 1.19 2011/08/18 15:18:44 matsuu Exp $
+
+*ibus-mozc-1.2.809.102 (18 Aug 2011)
+
+  18 Aug 2011; MATSUU Takuto <matsuu@gentoo.org> +ibus-mozc-1.2.809.102.ebuild,
+  +files/ibus-mozc-1.2.809.102-gentoo.patch:
+  Version bumped.
 
 *ibus-mozc-1.1.773.102 (20 Jul 2011)
 *ibus-mozc-1.1.758.102 (20 Jul 2011)
