@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/go-mono.eclass,v 1.10 2010/10/19 21:21:36 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/go-mono.eclass,v 1.11 2011/08/18 09:05:54 ali_bush Exp $
 
 # @ECLASS: go-mono.eclass
 # @MAINTAINER:
@@ -44,7 +44,7 @@ then
 	inherit autotools git
 else
 	GO_MONO_P=${P}
-	SRC_URI="http://ftp.novell.com/pub/mono/sources/${PN}/${P}.tar.bz2"
+	SRC_URI="http://download.mono-project.com/sources/${PN}/${P}.tar.bz2"
 fi
 
 
