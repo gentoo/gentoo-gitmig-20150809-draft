@@ -1,6 +1,14 @@
 # ChangeLog for app-doc/elisp-manual
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/ChangeLog,v 1.30 2011/02/12 18:56:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/ChangeLog,v 1.31 2011/08/18 17:58:51 ulm Exp $
+
+*elisp-manual-23.3 (18 Aug 2011)
+
+  18 Aug 2011; Ulrich Mueller <ulm@gentoo.org> +elisp-manual-23.3.ebuild,
+  +files/elisp-manual-23.3-direntry.patch:
+  Version bump. This corresponds to Emacs 23.3, and is actually an upgrade.
+  Drop separate version number of the Lisp manual, because it was not increased
+  through three upstream releases. Use corresponding Emacs version instead.
 
   12 Feb 2011; Christian Faulhammer <fauli@gentoo.org>
   -elisp-manual-23.3.0.ebuild:
