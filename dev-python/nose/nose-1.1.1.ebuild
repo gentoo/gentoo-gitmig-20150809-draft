@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-1.1.1.ebuild,v 1.1 2011/08/12 08:07:34 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-1.1.1.ebuild,v 1.2 2011/08/18 15:46:27 patrick Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -33,6 +33,8 @@ src_prepare() {
 		-e "s/test_raises_bad_return/_&/g" \
 		-e "s/test_raises_twisted_error/_&/g" \
 		-i unit_tests/test_twisted.py || die "sed failed"
+	# Disable versioning of nosetests script to avoid collision with versioning performed by distutils_src_install().
+	sed -e "/'nosetests%s = nose:run_exit' % py_vers_tag,/d" -i setup.py || die "sed failed"
 }
 
 src_compile() {
@@ -61,7 +63,7 @@ src_install() {
 	distutils_src_install --install-data "${EPREFIX}/usr/share"
 	python_generate_wrapper_scripts -E -f -q "${ED}usr/bin/nosetests"
 	if use doc; then
-		dohtml -r -A txt doc/html/* || die "Installation of documentation failed"
+		dohtml -r -A txt doc/.build/html/* || die "Installation of documentation failed"
 	fi
 	if use examples; then
 		insinto /usr/share/doc/${PF}
