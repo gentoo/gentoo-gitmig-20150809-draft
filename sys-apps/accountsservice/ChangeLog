@@ -1,0 +1,15 @@
+# ChangeLog for sys-apps/accountsservice
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/ChangeLog,v 1.1 2011/08/18 05:11:39 nirbheek Exp $
+
+*accountsservice-0.6.13 (18 Aug 2011)
+
+  18 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +accountsservice-0.6.13.ebuild,
+  +files/accountsservice-0.6.13-PATH_GDM_CUSTOM.patch,
+  +files/accountsservice-0.6.13-SetAutomaticLogin-false.patch,
+  +files/accountsservice-0.6.13-etc-passwd-timeout.patch,
+  +files/accountsservice-0.6.13-monitor-etc-gdm-custom.conf.patch,
+  +metadata.xml:
+  Move from gnome overlay for GNOME 3
+
