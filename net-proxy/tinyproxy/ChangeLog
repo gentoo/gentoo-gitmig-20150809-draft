@@ -1,7 +1,10 @@
 
 # ChangeLog for net-proxy/tinyproxy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.33 2011/08/17 13:02:55 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tinyproxy/ChangeLog,v 1.34 2011/08/18 07:31:55 xarthisius Exp $
+
+  18 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> tinyproxy-1.8.3.ebuild:
+  ppc stable wrt #363425
 
   17 Aug 2011; Tony Vroon <chainsaw@gentoo.org> tinyproxy-1.8.3.ebuild:
   1.8.3 marked stable on AMD64 based on arch testing by Elijah El Lazkani &
