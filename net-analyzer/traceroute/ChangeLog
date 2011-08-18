@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/traceroute
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.83 2011/08/05 06:09:15 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.84 2011/08/18 17:35:47 vapier Exp $
+
+*traceroute-2.0.18 (18 Aug 2011)
+
+  18 Aug 2011; Mike Frysinger <vapier@gentoo.org> +traceroute-2.0.18.ebuild:
+  Version bump.
 
   05 Aug 2011; Zac Medico <zmedico@gentoo.org> traceroute-2.0.17.ebuild:
   Bump to EAPI 3, fix for prefix, and add ~x86-linux keyword.
