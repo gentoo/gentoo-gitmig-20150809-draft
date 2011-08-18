@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12992 2011/08/17 10:49:13 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12993 2011/08/18 06:21:43 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -142,6 +142,7 @@ net-misc/dhcdbd
 >=gnome-base/gnome-panel-3.0
 >=gnome-base/gnome-session-3.0
 >=gnome-base/gnome-settings-daemon-3.0
+>=gnome-base/gnome-control-center-3.0
 >=gnome-base/gnome-shell-3.0
 >=gnome-base/gvfs-1.8
 >=gnome-base/libgnome-keyring-3.0
