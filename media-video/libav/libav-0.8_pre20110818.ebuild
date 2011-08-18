@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8_pre20110818.ebuild,v 1.2 2011/08/18 08:50:41 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.8_pre20110818.ebuild,v 1.3 2011/08/18 09:40:05 lu_zero Exp $
 
 EAPI=4
 
@@ -80,10 +80,11 @@ DEPEND="${RDEPEND}
 
 # faac can't be binary distributed
 # faac and aac are concurent implementations
-# amr and aac require gpl
+# amr and aac require at least lgpl3
 REQUIRED_USE="bindist? ( !faac )
-	faac? ( !aac ) aac? ( !faac )
 	amr? ( gpl ) aac? ( gpl )"
+
+RESTRICT="test"
 
 src_prepare() {
 	# if we have snapshot then we need to hardcode the version

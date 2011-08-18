@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.15 2011/08/18 08:21:46 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.16 2011/08/18 09:40:05 lu_zero Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://libav.org/"
 if [[ ${PV} == *9999 ]] ; then
 	SRC_URI=""
 elif [[ ${PV%_p*} != ${PV} ]] ; then # Gentoo snapshot
-	SRC_URI="mirror://gentoo/${P}.tar.xz"
+	SRC_URI="http://dev.gentoo.org/~lu_zero/libav/${P}.tar.xz"
 else # Official release
 	SRC_URI="http://${PN}.org/releases/${P}.tar.xz"
 fi
@@ -80,10 +80,11 @@ DEPEND="${RDEPEND}
 
 # faac can't be binary distributed
 # faac and aac are concurent implementations
-# amr and aac require gpl
+# amr and aac require at least lgpl3
 REQUIRED_USE="bindist? ( !faac )
-	faac? ( !aac ) aac? ( !faac )
 	amr? ( gpl ) aac? ( gpl )"
+
+RESTRICT="test"
 
 src_prepare() {
 	# if we have snapshot then we need to hardcode the version
