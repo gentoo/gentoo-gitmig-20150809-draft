@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/phrack
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/phrack/ChangeLog,v 1.19 2010/10/19 08:03:21 leio Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/phrack/ChangeLog,v 1.20 2011/08/18 21:53:53 vapier Exp $
+
+*phrack-67 (18 Aug 2011)
+
+  18 Aug 2011; Mike Frysinger <vapier@gentoo.org> +phrack-67.ebuild:
+  Version bump.
 
   19 Oct 2010; Mart Raudsepp <leio@gentoo.org> phrack-01.ebuild,
   phrack-02.ebuild, phrack-03.ebuild, phrack-04.ebuild, phrack-05.ebuild,
