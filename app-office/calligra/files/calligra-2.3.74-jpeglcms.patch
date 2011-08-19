@@ -1,0 +1,26 @@
+From: Boudewijn Rempt <boud@valdyas.org>
+Date: Tue, 16 Aug 2011 15:50:16 +0000
+Subject: Allow jpeg filter to build with both versions of lcms
+X-Git-Url: http://quickgit.kde.org/?p=calligra.git&amp;a=commitdiff&amp;h=0b4a019f25a7098c8899d3920db2e1901833aaf7
+---
+Allow jpeg filter to build with both versions of lcms
+
+Use HAVE_LCMS, not LCMS_FOUND.
+---
+
+
+--- a/krita/plugins/formats/CMakeLists.txt
++++ b/krita/plugins/formats/CMakeLists.txt
+@@ -31,9 +31,9 @@ if(KDCRAW_FOUND)
+     add_subdirectory( raw )
+ endif(KDCRAW_FOUND)
+ 
+-if(JPEG_FOUND AND LCMS_FOUND)
++if(JPEG_FOUND AND HAVE_LCMS)
+ 	add_subdirectory(jpeg)
+-endif(JPEG_FOUND AND LCMS_FOUND)
++endif(JPEG_FOUND AND HAVE_LCMS)
+ 
+ if(TIFF_FOUND)
+ 	add_subdirectory(tiff)
+

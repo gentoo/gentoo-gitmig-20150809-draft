@@ -1,0 +1,21 @@
+diff -ruN calligra-2.3.74.orig/krita/plugins/formats/jpeg/CMakeLists.txt calligra-2.3.74/krita/plugins/formats/jpeg/CMakeLists.txt
+--- calligra-2.3.74.orig/krita/plugins/formats/jpeg/CMakeLists.txt	2011-08-12 15:51:32.000000000 +0200
++++ calligra-2.3.74/krita/plugins/formats/jpeg/CMakeLists.txt	2011-08-19 23:41:02.000000000 +0200
+@@ -16,7 +16,7 @@
+ 
+ kde4_add_plugin(kritajpegimport ${kritajpegimport_PART_SRCS})
+ 
+-target_link_libraries(kritajpegimport kritaui jpeg ${LCMS_LIBRARIES} ${EXIV2_LIBRARIES} )
++target_link_libraries(kritajpegimport kritaui jpeg ${LCMS2_LIBRARIES} ${EXIV2_LIBRARIES} )
+ 
+ install(TARGETS kritajpegimport  DESTINATION ${PLUGIN_INSTALL_DIR})
+ 
+@@ -31,7 +31,7 @@
+ 
+ kde4_add_plugin(kritajpegexport ${kritajpegexport_PART_SRCS})
+ 
+-target_link_libraries(kritajpegexport kritaui jpeg ${LCMS_LIBRARIES} ${EXIV2_LIBRARIES} )
++target_link_libraries(kritajpegexport kritaui jpeg ${LCMS2_LIBRARIES} ${EXIV2_LIBRARIES} )
+ 
+ install(TARGETS kritajpegexport  DESTINATION ${PLUGIN_INSTALL_DIR})
+ 
