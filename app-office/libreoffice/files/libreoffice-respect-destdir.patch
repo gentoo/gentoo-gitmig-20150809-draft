@@ -1,0 +1,30 @@
+From 989934ab08a5ef9e6e95c87ea78db495f2abcee4 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Tom=C3=A1=C5=A1=20Chv=C3=A1tal?= <tchvatal@suse.cz>
+Date: Wed, 17 Aug 2011 11:33:55 +0200
+Subject: [PATCH] Fixup non-respecting DESTDIR for DOCDIR chmod.
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+
+Signed-off-by: Tomáš Chvátal <tchvatal@suse.cz>
+---
+ bin/distro-install-clean-up |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/bin/distro-install-clean-up b/bin/distro-install-clean-up
+index df7ac9d..229b7e8 100755
+--- a/bin/distro-install-clean-up
++++ b/bin/distro-install-clean-up
+@@ -59,7 +59,7 @@ if test -f $DESTDIR$INSTALLDIR/help/en/sbasic.cfg -a \
+ fi
+ 
+ echo "Fixing permissions..."
+-for dir in $DOCDIR $DESTDIR$INSTALLDIR/basis$PRODUCTVERSION/sdk/examples ; do
++for dir in $DESTDIR$DOCDIR $DESTDIR$INSTALLDIR/basis$PRODUCTVERSION/sdk/examples ; do
+     if test -d $dir -a -w $dir ; then
+ 	find "$dir" -type f \( -name "*.txt" -o -name "*.java" -o -name "*.xml"    -o \
+ 			       -name "*.xcu" -o -name "*.xcs"  -o -name "*.html"   -o \
+-- 
+1.7.6
+
