@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/iniparse
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/iniparse/ChangeLog,v 1.1 2011/08/10 15:05:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/iniparse/ChangeLog,v 1.2 2011/08/19 19:48:45 hwoarang Exp $
+
+  19 Aug 2011; Markos Chandras <hwoarang@gentoo.org> iniparse-0.4.ebuild:
+  Fix dependencies, HOMEPAGE and LICENSE. Add src_test(). Patch by Arfrever.
 
 *iniparse-0.4 (10 Aug 2011)
 
