@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/openscap-0.7.3.ebuild,v 1.2 2011/08/19 14:20:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/openscap-0.7.3.ebuild,v 1.3 2011/08/19 18:18:54 hwoarang Exp $
 
 EAPI=3
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.open-scap.org/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="bash-completion doc nss perl python sql"
 RESTRICT="test"
 
