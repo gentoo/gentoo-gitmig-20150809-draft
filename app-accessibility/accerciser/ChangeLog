@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/accerciser
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/ChangeLog,v 1.21 2011/04/04 09:57:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/ChangeLog,v 1.22 2011/08/19 11:21:53 nirbheek Exp $
+
+  19 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> accerciser-1.12.1.ebuild:
+  Fix slot deps on pygtk, pygobject, at-spi
 
   04 Apr 2011; Pacho Ramos <pacho@gentoo.org> -accerciser-1.10.1.ebuild,
   -files/accerciser-1.10.1-fix-es_ES.patch:

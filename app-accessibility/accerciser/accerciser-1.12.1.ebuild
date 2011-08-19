@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/accerciser-1.12.1.ebuild,v 1.5 2011/03/22 20:01:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/accerciser-1.12.1.ebuild,v 1.6 2011/08/19 11:21:53 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -17,16 +17,16 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND="dev-python/ipython
-	dev-python/pygtk
-	dev-python/pygobject
+	dev-python/pygtk:2
+	dev-python/pygobject:2
 	dev-python/pycairo
 	dev-python/libgnome-python
 	dev-python/libwnck-python
 	dev-python/pygtksourceview
 	dev-python/gconf-python
 	dev-python/librsvg-python
-	>=gnome-extra/at-spi-1.7
-	>=dev-libs/glib-2"
+	>=gnome-extra/at-spi-1.7:1
+	dev-libs/glib:2"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/intltool-0.35
