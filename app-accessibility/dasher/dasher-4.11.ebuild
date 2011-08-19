@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-4.11.ebuild,v 1.11 2011/03/06 22:53:06 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-4.11.ebuild,v 1.12 2011/08/19 11:23:19 nirbheek Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ RDEPEND=">=dev-libs/glib-2.16:2
 		>=gnome-base/libbonobo-2
 		>=gnome-base/orbit-2
 		>=gnome-base/libgnomeui-2
-		>=gnome-extra/at-spi-1
+		gnome-extra/at-spi:1
 		dev-libs/atk )
 	cairo? ( >=x11-libs/gtk+-2.8:2 )
 	gnome? (

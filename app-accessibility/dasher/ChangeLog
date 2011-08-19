@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/dasher
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.162 2011/03/06 22:53:06 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.163 2011/08/19 11:23:19 nirbheek Exp $
+
+  19 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> dasher-4.11.ebuild:
+  Fix slot dep on at-spi
 
   06 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> dasher-4.11.ebuild:
   Fix slot-deps on gtk+ and other libs
