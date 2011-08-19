@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/rt-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rt-sources/ChangeLog,v 1.1 2011/08/17 15:06:25 psomas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rt-sources/ChangeLog,v 1.2 2011/08/19 13:59:04 psomas Exp $
+
+  19 Aug 2011; Stratos Psomadakis <psomas@gentoo.org>
+  rt-sources-3.0.1_p11.ebuild, metadata.xml:
+  Correct SRC_URI for the rt patch
 
 *rt-sources-3.0.1_p11 (17 Aug 2011)
 

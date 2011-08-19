@@ -17,7 +17,7 @@ RT_PATCHSET="${PV/*_p}"
 RT_KERNEL="${PV/_p[0-9]*}"
 RT_KERNEL="${RT_KERNEL/_/-}"
 RT_FILE="patch-${RT_KERNEL}-rt${RT_PATCHSET}.patch${COMPRESSTYPE}"
-RT_URI="mirror://kernel/linux/kernel/projects/rt/${RT_KERNEL}/${RT_FILE}"
+RT_URI="mirror://kernel/linux/kernel/projects/rt/${RT_FILE}"
 
 DESCRIPTION="Real-time patchset for the Linux Kernel"
 HOMEPAGE="http://www.kernel.org/pub/linux/kernel/projects/rt/"
