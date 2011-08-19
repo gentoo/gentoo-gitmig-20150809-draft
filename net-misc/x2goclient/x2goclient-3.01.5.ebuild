@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/x2goclient-3.01.5.ebuild,v 1.1 2010/04/29 13:40:04 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/x2goclient-3.01.5.ebuild,v 1.2 2011/08/19 09:55:55 voyageur Exp $
 
 EAPI="3"
 inherit qt4-r2 versionator
@@ -17,10 +17,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE="cups ldap"
 
 DEPEND="net-misc/nx
+	net-print/cups
 	x11-libs/qt-core:4
 	x11-libs/qt-gui:4
 	x11-libs/qt-svg:4
-	cups? ( net-print/cups )
 	ldap? ( net-nds/openldap )"
 RDEPEND="${DEPEND}"
 

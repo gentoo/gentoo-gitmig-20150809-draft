@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/x2goclient
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/ChangeLog,v 1.5 2010/04/29 13:40:04 voyageur Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x2goclient/ChangeLog,v 1.6 2011/08/19 09:55:55 voyageur Exp $
+
+  19 Aug 2011; Bernard Cafarelli <voyageur@gentoo.org>
+  x2goclient-3.01.5.ebuild:
+  cups is mandatory, patch welcome to make it optional (and not colliding with
+  no-ldap patch). Bug #372631
 
 *x2goclient-3.01.5 (29 Apr 2010)
 
