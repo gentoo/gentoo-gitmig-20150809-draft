@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/wxhexeditor
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/wxhexeditor/ChangeLog,v 1.1 2010/08/31 04:16:58 dirtyepic Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/wxhexeditor/ChangeLog,v 1.2 2011/08/19 04:44:27 dirtyepic Exp $
+
+*wxhexeditor-0.11 (19 Aug 2011)
+
+  19 Aug 2011; Ryan Hill <dirtyepic@gentoo.org> +wxhexeditor-0.11.ebuild,
+  +files/wxhexeditor-0.11-makefile.patch:
+  Version bump (bug #373665 by Gary Hunt). Also respect compiler flags, fix
+  parallel build, and use system version of udis86.
 
 *wxhexeditor-0.09 (31 Aug 2010)
 
