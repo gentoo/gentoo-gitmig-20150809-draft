@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.308 2011/04/25 21:17:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.309 2011/08/19 12:51:19 nirbheek Exp $
+
+*gnome-games-3.0.2 (19 Aug 2011)
+
+  19 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +files/gnome-games-2.91.90-fix-conditional-ac-prog-cxx.patch,
+  +gnome-games-3.0.2.ebuild, +files/gnome-games-fix-staging-games.patch,
+  metadata.xml:
+  Bump to 3.0.2, from gnome overlay for GNOME 3
 
   25 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   gnome-games-2.28.2.ebuild, gnome-games-2.30.2-r1.ebuild:
