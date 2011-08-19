@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12993 2011/08/18 06:21:43 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12994 2011/08/19 05:00:11 dirtyepic Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -507,10 +507,6 @@ app-crypt/scsign
 =dev-lang/php-5.3.7_rc3
 =dev-lang/php-5.3.7_rc5
 >=dev-lang/php-5.4.0_alpha1
-
-# Ryan Hill <dirtyepic@gentoo.org> (23 Apr 2011)
-# Masked for removal on 20110523.
-app-text/gnochm
 
 # Alexis Ballier <aballier@gentoo.org> (20 Apr 2011)
 # Breaks net-voip/sflphone, non maintainer update, but is needed by
