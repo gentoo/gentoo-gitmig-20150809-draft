@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.782 2011/07/13 06:15:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.783 2011/08/19 23:03:11 vapier Exp $
+
+  19 Aug 2011; Mike Frysinger <vapier@gentoo.org> files/eblits/common.eblit:
+  Make sync_fetch_and_add warnings a little more user friendly.
 
 *glibc-2.13-r4 (13 Jul 2011)
 
