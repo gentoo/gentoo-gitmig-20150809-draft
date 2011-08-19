@@ -1,6 +1,10 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.150 2011/08/14 17:14:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.151 2011/08/19 18:50:49 aballier Exp $
+
+  19 Aug 2011; Alexis Ballier <aballier@gentoo.org>
+  texlive-core-2010-r4.ebuild, texlive-core-2011-r3.ebuild:
+  add patch to fix textrels, bug #195688 by Magnus Granberg
 
   14 Aug 2011; Markus Meier <maekke@gentoo.org> texlive-core-2010-r4.ebuild:
   arm stable, bug #355085
