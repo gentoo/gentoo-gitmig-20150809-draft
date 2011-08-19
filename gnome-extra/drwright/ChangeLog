@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/drwright
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/ChangeLog,v 1.15 2011/03/23 07:59:18 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/drwright/ChangeLog,v 1.16 2011/08/19 11:10:13 nirbheek Exp $
+
+*drwright-3.0.2 (19 Aug 2011)
+
+  19 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +drwright-3.0.2.ebuild:
+  Bump to 3.0.2, from gnome overlay for GNOME 3. ~sparc, ~ppc dropped, bug
+  379651
 
   23 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> drwright-0.17.ebuild:
   Fix slot-deps on gnome libs
