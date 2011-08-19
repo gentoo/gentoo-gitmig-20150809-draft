@@ -16,5 +16,8 @@ that allow a user to:
 	* for example useful for people that have to use their pointing
 	* hardware not only for the computer
 </longdescription>
+<use>
+	<flag name="applet">Build the <pkg>gnome-base/gnome-panel</pkg> applet</flag>
+</use>
 </pkgmetadata>
 
