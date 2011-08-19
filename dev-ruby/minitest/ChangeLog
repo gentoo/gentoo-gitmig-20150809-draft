@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.49 2011/07/19 08:25:36 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.50 2011/08/19 07:17:48 graaff Exp $
+
+*minitest-2.5.0 (19 Aug 2011)
+
+  19 Aug 2011; Hans de Graaff <graaff@gentoo.org> +minitest-2.5.0.ebuild:
+  Version bump.
 
   19 Jul 2011; Hans de Graaff <graaff@gentoo.org> minitest-2.3.1.ebuild:
   Run all jruby tests that we can since tests won't be fixed upstream.
