@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.3-r1.ebuild,v 1.5 2011/08/04 14:16:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.3-r1.ebuild,v 1.6 2011/08/19 19:55:03 hwoarang Exp $
 
 BACKPORTS=2
 AUTOTOOLIZE=yes
@@ -26,7 +26,7 @@ S="${WORKDIR}/${P%_rc*}"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="avahi caps debug iscsi +json +libvirtd lvm +lxc macvtap nfs \
 	nls numa openvz parted pcap phyp policykit python qemu sasl selinux udev \
 	uml virtualbox virt-network xen elibc_glibc"
