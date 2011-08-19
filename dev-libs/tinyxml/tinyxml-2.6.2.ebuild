@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml/tinyxml-2.6.2.ebuild,v 1.1 2011/08/19 12:58:31 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml/tinyxml-2.6.2.ebuild,v 1.2 2011/08/19 16:35:30 voyageur Exp $
 
 EAPI=4
-inherit flag-o-matic toolchain-funcs
+inherit flag-o-matic toolchain-funcs eutils
 
 DESCRIPTION="a simple, small, C++ XML parser that can be easily integrating into other programs"
 HOMEPAGE="http://www.grinninglizard.com/tinyxml/index.html"
@@ -28,7 +28,7 @@ src_prepare() {
 	    -e "s:@MINOR_V@:$minor_v:" \
 		"${FILESDIR}"/Makefile-2 > Makefile || die
 
-	epatch "${FILESDIR}"/${P}-entity.patch
+	epatch "${FILESDIR}"/${PN}-2.6.1-entity.patch
 
 	use debug && append-cppflags -DDEBUG
 	use stl && append-cppflags -DTIXML_USE_STL
