@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12994 2011/08/19 05:00:11 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12995 2011/08/19 14:25:42 xarthisius Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Kacper Kowalik <xarthisius@gentoo.org> (19 Aug 2011)
+# Ancient, obsolete, last release 2006
+# and practically unmaintained
+# Bugs: 198621
+# Pending removal in 30 days
+sys-block/iscsi-initiator-core-tools
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (17 Aug 2011)
 # RCs for new release
