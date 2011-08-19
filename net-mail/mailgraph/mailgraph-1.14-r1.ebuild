@@ -1,15 +1,18 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/mailgraph-1.14-r1.ebuild,v 1.1 2011/07/07 15:08:14 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/mailgraph-1.14-r1.ebuild,v 1.2 2011/08/19 18:54:44 eras Exp $
 
 EAPI=4
-inherit eutils webapp
+inherit eutils
 
 DESCRIPTION="A mail statistics RRDtool frontend for Postfix"
 HOMEPAGE="http://mailgraph.schweikert.ch/"
 SRC_URI="http://mailgraph.schweikert.ch//pub/${P}.tar.gz"
 
 LICENSE="GPL-2"
+# Change SLOT to 0 when appropriate
+# This is NOT ${PV}
+SLOT="1.14"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
@@ -18,18 +21,13 @@ RDEPEND="dev-lang/perl
 	>=net-analyzer/rrdtool-1.2.2[perl]"
 DEPEND=">=sys-apps/sed-4"
 
-user_group_setup() {
+pkg_setup() {
 	# add user and group for mailgraph daemon
 	# also add mgraph to the group adm so it's able to
 	# read syslog logfile /var/log/messages (should be owned by
 	# root:adm with permission 0640)
 	enewgroup mgraph
 	enewuser mgraph -1 -1 /var/empty mgraph,adm
-}
-
-pkg_setup() {
-	webapp_pkg_setup
-	user_group_setup
 }
 
 src_prepare() {
@@ -40,11 +38,6 @@ src_prepare() {
 }
 
 src_install() {
-	webapp_src_preinst
-	# be sure to run webapp_src_install *before* doing the directories below
-	# because it cripples all other permissions :-(
-	webapp_src_install
-
 	# for the RRDs
 	dodir /var/lib
 	diropts -omgraph -gmgraph -m0750
@@ -70,8 +63,10 @@ src_install() {
 	newbin mailgraph.pl mailgraph
 
 	# mailgraph CGI script
-	exeinto ${MY_CGIBINDIR}
+	exeinto /usr/share/${PN}
 	doexe mailgraph.cgi
+	insinto  /usr/share/${PN}
+	doins mailgraph.css
 
 	# init/conf files for mailgraph daemon
 	newinitd "${FILESDIR}"/mailgraph.initd-new mailgraph
@@ -81,15 +76,10 @@ src_install() {
 	dodoc README CHANGES
 }
 
-pkg_preinst() {
-	has_version "<=${CATEGORY}/${PN}-1.12"
-	previous_less_or_equal_to_1_12=$?
-}
-
 pkg_postinst() {
 	# Fix ownerships - previous versions installed these with
 	# root as owner
-	if [[ $previous_less_or_equal_to_1_12 = 0 ]] ; then
+	if [[ ${REPLACING_VERSIONS} < 1.13 ]] ; then
 		if [[ -d /var/lib/mailgraph ]] ; then
 			chown mgraph:mgraph /var/lib/mailgraph
 		fi
@@ -100,14 +90,10 @@ pkg_postinst() {
 			chown mgraph:adm /var/run/mailgraph
 		fi
 	fi
-	elog
 	elog "Mailgraph will run as user mgraph with group adm by default."
 	elog "This can be changed in /etc/conf.d/mailgraph if it doesn't fit."
 	elog "Remember to adjust MG_DAEMON_LOG, MG_DAEMON_PID and MG_DAEMON_RRD"
 	elog "as well!"
-	elog
-	elog
-	ewarn
 	ewarn "Please make sure the MG_LOGFILE (default: /var/log/messages) is readable"
 	ewarn "by group adm or change MG_DAEMON_GID in /etc/conf.d/mailgraph accordingly!"
 	ewarn
@@ -115,15 +101,11 @@ pkg_postinst() {
 	ewarn "go to the file /var/log/messages or change MG_LOGFILE in"
 	ewarn "/etc/conf.d/mailgraph accordingly! Otherwise mailgraph won't get to know"
 	ewarn "the corresponding events (virus/spam mail found etc.)."
-	ewarn
-	ewarn
 	elog
-	elog "Checking for user apache"
+	elog "Checking for user apache:"
 	if egetent passwd apache >&/dev/null; then
-		elog
 		elog "Adding user apache to group mgraph so the included"
 		elog "CGI script is able to read the mailgraph RRD files"
-		elog
 		if ! gpasswd -a apache mgraph >&/dev/null; then
 			eerror "Failed to add user apache to group mgraph!"
 			eerror "Please check manually."
@@ -137,6 +119,8 @@ pkg_postinst() {
 		elog "CGI script to read the mailgraph RRD files:"
 		elog
 		elog "\tgpasswd -a <user> mgraph"
-		elog
 	fi
+	ewarn
+	ewarn "mailgraph.cgi is installed in /usr/share/${PN}/"
+	ewarn "You need to put it somewhere accessible though a web-server."
 }

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailgraph
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/ChangeLog,v 1.36 2011/07/07 15:08:14 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/ChangeLog,v 1.37 2011/08/19 18:54:44 eras Exp $
+
+  19 Aug 2011; Eray Aslan <eras@gentoo.org> mailgraph-1.14-r1.ebuild:
+  Drop webapps eclass - bug #379535
 
 *mailgraph-1.14-r1 (07 Jul 2011)
 
