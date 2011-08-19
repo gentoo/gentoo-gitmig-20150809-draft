@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/gnome-bluetooth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.98 2011/05/14 16:29:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.99 2011/08/19 15:19:10 nirbheek Exp $
+
+*gnome-bluetooth-3.0.1 (19 Aug 2011)
+
+  19 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +gnome-bluetooth-3.0.1.ebuild, metadata.xml:
+  Bump to 3.0.1, from gnome overlay for GNOME 3, drop ~ppc, bug 379651
 
   14 May 2011; Gilles Dartiguelongue <eva@gentoo.org>
   gnome-bluetooth-2.32.0.ebuild:
