@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.4.0.ebuild,v 1.1 2011/08/16 15:24:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.4.0.ebuild,v 1.2 2011/08/19 19:17:32 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -76,7 +76,7 @@ src_test() {
 	fi
 
 	testing() {
-		LC_ALL="C" "$(PYTHON -2)" bzr --no-plugins selftest ${skip_tests:+-x} ${skip_tests}
+		LC_ALL="C" "$(PYTHON)" bzr --no-plugins selftest ${skip_tests:+-x} ${skip_tests}
 	}
 	python_execute_function testing
 

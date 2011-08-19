@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/bzr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.30 2011/08/16 15:24:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.31 2011/08/19 19:17:32 hwoarang Exp $
+
+  19 Aug 2011; Markos Chandras <hwoarang@gentoo.org> bzr-2.2.2-r1.ebuild,
+  bzr-2.2.4.ebuild, bzr-2.3.4.ebuild, bzr-2.4.0.ebuild:
+  Run tests with correct version of Python. Patch by Arfrever.
 
 *bzr-2.4.0 (16 Aug 2011)
 
