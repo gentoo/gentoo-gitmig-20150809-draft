@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-pecl-r2.eclass,v 1.4 2011/01/28 13:33:53 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-pecl-r2.eclass,v 1.5 2011/08/19 09:14:06 olemarkus Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Luca Longinotti <chtekk@gentoo.org>
@@ -37,8 +37,11 @@
 
 [[ -z "${PHP_EXT_PECL_PKG}" ]] && PHP_EXT_PECL_PKG="${PN/pecl-/}"
 
+
+[[ -z ${MY_PV} ]] && MY_PV=${PV}
+
 PECL_PKG="${PHP_EXT_PECL_PKG}"
-MY_PV="${PV/_/}"
+MY_PV="${MY_PV/_/}"
 PECL_PKG_V="${PECL_PKG}-${MY_PV}"
 
 [[ -z "${PHP_EXT_NAME}" ]] && PHP_EXT_NAME="${PECL_PKG}"
