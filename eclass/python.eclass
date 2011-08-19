@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.128 2011/08/19 10:10:03 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.129 2011/08/19 10:18:59 lxnay Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -400,7 +400,8 @@ _python_check_python_pkg_setup_execution() {
 # @DESCRIPTION:
 # Perform sanity checks and initialize environment.
 #
-# This function is exported in EAPI 2 and 3. Calling of this function is mandatory in EAPI >=4.
+# This function is exported in EAPI 2 and 3 when PYTHON_USE_WITH or PYTHON_USE_WITH_OR variable
+# is set and always in EAPI >=4. Calling of this function is mandatory in EAPI >=4.
 python_pkg_setup() {
 	if [[ "${EBUILD_PHASE}" != "setup" ]]; then
 		die "${FUNCNAME}() can be used only in pkg_setup() phase"
@@ -418,6 +419,47 @@ python_pkg_setup() {
 		export EPYTHON="$(PYTHON -f)"
 	else
 		PYTHON_ABI="${PYTHON_ABI:-$(PYTHON --ABI)}"
+	fi
+
+	if has "${EAPI:-0}" 0 1 && [[ -n "${PYTHON_USE_WITH}" || -n "${PYTHON_USE_WITH_OR}" ]]; then
+		if [[ "${PYTHON_USE_WITH_OPT}" ]]; then
+			if [[ "${PYTHON_USE_WITH_OPT}" == !* ]]; then
+				use ${PYTHON_USE_WITH_OPT#!} && return
+			else
+				use !${PYTHON_USE_WITH_OPT} && return
+			fi
+		fi
+
+		python_pkg_setup_check_USE_flags() {
+			local python_atom USE_flag
+			python_atom="$(python_get_implementational_package)"
+
+			for USE_flag in ${PYTHON_USE_WITH}; do
+				if ! has_version "${python_atom}[${USE_flag}]"; then
+					eerror "Please rebuild ${python_atom} with the following USE flags enabled: ${PYTHON_USE_WITH}"
+					die "Please rebuild ${python_atom} with the following USE flags enabled: ${PYTHON_USE_WITH}"
+				fi
+			done
+
+			for USE_flag in ${PYTHON_USE_WITH_OR}; do
+				if has_version "${python_atom}[${USE_flag}]"; then
+					return
+				fi
+			done
+
+			if [[ ${PYTHON_USE_WITH_OR} ]]; then
+				eerror "Please rebuild ${python_atom} with at least one of the following USE flags enabled: ${PYTHON_USE_WITH_OR}"
+				die "Please rebuild ${python_atom} with at least one of the following USE flags enabled: ${PYTHON_USE_WITH_OR}"
+			fi
+		}
+
+		if _python_package_supporting_installation_for_multiple_python_abis; then
+			PYTHON_SKIP_SANITY_CHECKS="1" python_execute_function -q python_pkg_setup_check_USE_flags
+		else
+			python_pkg_setup_check_USE_flags
+		fi
+
+		unset -f python_pkg_setup_check_USE_flags
 	fi
 
 	PYTHON_PKG_SETUP_EXECUTED="1"
