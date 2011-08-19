@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.288 2011/08/16 18:55:55 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.289 2011/08/19 14:45:10 nirbheek Exp $
+
+  19 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
+  Mask USE=introspection on glib because it's mostly useless for now, and
+  causes an extra gobject-introspection dep on systems
 
   16 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
   Use-mask seed, broken package

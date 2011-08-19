@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.258 2011/08/16 18:55:55 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.259 2011/08/19 14:45:10 nirbheek Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -14,6 +14,7 @@ gnome-extra/gnome-games seed
 # Nirbheek Chauhan <nirbheek@gentoo.org> (16 Aug 2011)
 # Mask introspection on ebuilds that went stable before it was unmasked.
 # As these ebuilds are cleaned from the tree, the masks can be removed.
+dev-libs/glib introspection
 <dev-libs/atk-1.32.0-r1 introspection
 <app-cdr/brasero-2.32.1-r1 introspection
 <app-crypt/seahorse-2.32.0-r1 introspection
