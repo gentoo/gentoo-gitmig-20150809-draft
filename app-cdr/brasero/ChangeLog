@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.130 2011/07/19 13:14:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.131 2011/08/19 15:19:22 nirbheek Exp $
+
+*brasero-3.0.0 (19 Aug 2011)
+
+  19 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +files/brasero-2.91.6-build-plugins-against-local-library.patch,
+  +brasero-3.0.0.ebuild, metadata.xml:
+  Bump to 3.0.0, from gnome overlay for GNOME 3, drop keywords, bug 379651
 
 *brasero-2.32.1-r1 (19 Jul 2011)
 
