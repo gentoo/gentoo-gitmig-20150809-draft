@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.18.ebuild,v 1.1 2011/08/04 23:09:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.0.18.ebuild,v 1.2 2011/08/19 19:31:56 hwoarang Exp $
 
 EAPI="4"
 
@@ -25,7 +25,7 @@ COMMON_DEPEND_LIBS="
 	>=net-misc/curl-7.10
 	adns? ( >=net-libs/adns-1.4 )
 	bzip2? ( app-arch/bzip2 )
-	smartcard? ( usb? ( =virtual/libusb-0* ) )
+	smartcard? ( usb? ( virtual/libusb:0 ) )
 	ldap? ( net-nds/openldap )"
 COMMON_DEPEND_BINS="|| ( app-crypt/pinentry app-crypt/pinentry-qt )"
 
@@ -53,8 +53,6 @@ REQUIRED_USE="smartcard? ( !static )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.0.17-gpgsm-gencert.patch
-	# Merged upstream
-	#epatch "${FILESDIR}"/${PN}-2.0.17-libgrcrypt150-bugfix.patch
 }
 
 src_configure() {
