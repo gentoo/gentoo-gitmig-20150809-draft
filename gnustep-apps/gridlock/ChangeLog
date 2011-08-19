@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/gridlock
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gridlock/ChangeLog,v 1.14 2008/03/08 13:32:44 coldwind Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gridlock/ChangeLog,v 1.15 2011/08/19 09:43:40 voyageur Exp $
+
+  19 Aug 2011; Bernard Cafarelli <voyageur@gentoo.org> gridlock-1.10.ebuild,
+  +files/gridlock-1.10-objcruntime.patch:
+  Fix runtime headers inclusion, from debian bug 629202. Fixes bug #374951
 
   08 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> gridlock-1.10.ebuild:
   amd64 stable wrt bug #207381
