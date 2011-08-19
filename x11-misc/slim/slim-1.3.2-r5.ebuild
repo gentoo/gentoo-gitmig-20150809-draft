@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.2-r4.ebuild,v 1.1 2011/08/16 02:18:37 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/slim/slim-1.3.2-r5.ebuild,v 1.1 2011/08/19 19:55:10 darkside Exp $
 
 EAPI=2
 
@@ -110,9 +110,20 @@ pkg_postinst() {
 	elog "/usr/share/doc/${PF} and change your login_cmd in /etc/slim.conf"
 	elog "accordingly."
 	elog
+	ewarn "Please note that the slim session start script now supports consolekit"
+	ewarn "directly, via xinitrc.d scripts.  Please remove any existing work-arounds to"
+	ewarn "avoid multiple calls to ck-launch-session."
+	if has_version "<=sys-auth/pambase-20101024[consolekit]" ; then
+		ewarn
+		ewarn "You should also remove the 'nox11' flag from the pam_ck_connector.so module "
+		ewarn "in /etc/pam.d/system-login if you have not already done so."
+		ewarn "(this is safe, it will be default in the next version of pambase)"
+	fi
+	elog
 	if ! use pam; then
 		elog "You have merged ${PN} without USE=pam, this will cause ${PN} to fall back to"
 		elog "the console when restarting your window manager. If this is not"
 		elog "desired, then please remerge ${PN} with USE=pam"
+		elog
 	fi
 }
