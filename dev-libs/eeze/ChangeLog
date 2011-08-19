@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/eeze
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eeze/ChangeLog,v 1.4 2011/05/29 16:21:49 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eeze/ChangeLog,v 1.5 2011/08/19 15:17:17 tommy Exp $
+
+*eeze-1.0.2 (19 Aug 2011)
+
+  19 Aug 2011; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> -eeze-1.0.0.ebuild,
+  -eeze-1.0.1.ebuild, +eeze-1.0.2.ebuild:
+  Version bump, drop old
 
 *eeze-1.0.1 (29 May 2011)
 

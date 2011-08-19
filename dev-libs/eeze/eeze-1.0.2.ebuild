@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eeze/eeze-1.0.0.ebuild,v 1.1 2011/01/30 15:01:18 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eeze/eeze-1.0.2.ebuild,v 1.1 2011/08/19 15:17:17 tommy Exp $
 
 inherit enlightenment
 
