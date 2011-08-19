@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.161 2011/07/08 11:35:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.162 2011/08/19 20:06:12 jmbsvicetto Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -130,7 +130,8 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6d )
 		>=sys-apps/sed-4
 		>=sys-apps/texinfo-4.7-r1
 		>=sys-libs/readline-4.1
-		>=sys-libs/zlib-1.2.3"
+		>=sys-libs/zlib-1.2.3
+		virtual/yacc"
 
 [[ "${PN}" == "mariadb" ]] \
 && DEPEND="${DEPEND} libevent? ( >=dev-libs/libevent-1.4 )"
