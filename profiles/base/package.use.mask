@@ -1,9 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.261 2011/08/19 18:27:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.262 2011/08/19 20:20:55 hwoarang Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Markos Chandras <hwoarang@gentoo.org> (19 Aug 2011)
+# Masking xen useflag from app-emulation/libvirt per
+# bug #379815
+app-emulation/libvirt xen
 
 # Markos Chandras <hwoarang@gentoo.org> (19 Aug 2011)
 # Masking rbd spice from qemu-kvm per bug #364889
