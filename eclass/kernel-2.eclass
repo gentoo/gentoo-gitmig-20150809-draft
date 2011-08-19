@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.258 2011/08/18 14:58:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.259 2011/08/19 13:26:12 mpagano Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -106,7 +106,7 @@ RESTRICT="binchecks strip"
 debug-print-kernel2-variables() {
 	for v in PVR CKV OKV KV KV_FULL KV_MAJOR KV_MINOR KV_PATCH RELEASETYPE \
 			RELEASE UNIPATCH_LIST_DEFAULT UNIPATCH_LIST_GENPATCHES \
-			UNIPATCH_LIST S KERNEL_URI ; do
+			UNIPATCH_LIST S KERNEL_URI K_WANT_GENPATCHES ; do
 		debug-print "${v}: ${!v}"
 	done
 }
@@ -220,7 +220,7 @@ detect_version() {
 		KV_PATCH_ARR=(${KV_PATCH//\./ })
 
 		# at this point 080811, Linus is putting 3.1 kernels in 3.0 directory
-		# revisit when 3.1 is released
+		# revisit when 3.1 is released 
 		if [[ ${KV_PATCH} -gt 0 ]]; then
 			KERNEL_BASE_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.$((${KV_PATCH_ARR} - 1))"
 		else
@@ -239,8 +239,8 @@ detect_version() {
 	debug-print "KERNEL_BASE_URI is ${KERNEL_BASE_URI}"
 
 	if [[ ${#OKV_ARRAY[@]} -ge 3 ]] && [[ ${KV_MAJOR} -ge 3 ]]; then
-		# handle vanilla-sources-3.x.y correctly
-		if [[ ${PN/-*} == "vanilla" && ${KV_PATCH} -gt 0 ]]; then
+		# handle non genpatch using sources correctly
+		if [[ -z ${K_WANT_GENPATCHES} && -z ${K_GENPATCHES_VER} && ${KV_PATCH} -gt 0 ]]; then
 			KERNEL_URI="${KERNEL_BASE_URI}/patch-${OKV}.bz2"
 			UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${CKV}.bz2"
 		fi
