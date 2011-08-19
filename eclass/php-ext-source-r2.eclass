@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.13 2011/08/15 12:48:27 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.14 2011/08/19 09:15:51 olemarkus Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -146,10 +146,7 @@ php-ext-source-r2_src_configure() {
 	for slot in $(php_get_slots); do
 		php_init_slot_env ${slot}
 		# Set the correct config options
-		# We cannot use econf here, phpize/php-config deals with setting
-		# --prefix etc to whatever the php slot was configured to use
-		echo ./configure --with-php-config=${PHPCONFIG} ${my_conf}
-		./configure --with-php-config=${PHPCONFIG} ${my_conf}  || die "Unable to configure code to compile"
+		econf --with-php-config=${PHPCONFIG} ${my_conf}  || die "Unable to configure code to compile"
 	done
 }
 
@@ -190,6 +187,7 @@ php-ext-source-r2_src_install() {
 			[[ -s ${doc} ]] && dodoc ${doc}
 		done
 
+		INSTALL_ROOT="${D}" emake install-headers
 	done
 	php-ext-source-r2_createinifiles
 }
