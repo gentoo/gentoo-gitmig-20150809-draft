@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-2.2.6.ebuild,v 1.2 2009/05/26 17:08:02 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-2.2.6.ebuild,v 1.3 2011/08/19 14:19:37 xarthisius Exp $
 
 inherit webapp eutils depend.apache
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://otrs.org/"
 SRC_URI="ftp://ftp.otrs.org/pub/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="mysql postgres fastcgi ldap gd pdf"
 
 RDEPEND="${DEPEND}
