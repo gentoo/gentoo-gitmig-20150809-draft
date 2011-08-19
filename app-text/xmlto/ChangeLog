@@ -1,6 +1,13 @@
 # ChangeLog for app-text/xmlto
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.68 2011/07/30 22:10:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.69 2011/08/19 15:23:41 vapier Exp $
+
+*xmlto-0.0.24-r1 (19 Aug 2011)
+
+  19 Aug 2011; Mike Frysinger <vapier@gentoo.org> +xmlto-0.0.24-r1.ebuild,
+  +files/xmlto-0.0.24-parallelmake.patch:
+  Use portable fix for parallel make, include man pages in the dist to avoid
+  CBUILD vs CHOST issues, and drop autotool regeneration to speed things up.
 
 *xmlto-0.0.24 (30 Jul 2011)
 
