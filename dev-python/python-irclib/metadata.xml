@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>radek@gentoo.org</email>
+  <email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription>
 This project includes an event-driven IRC client framework written in Python,

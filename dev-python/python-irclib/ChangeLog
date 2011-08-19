@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-irclib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-irclib/ChangeLog,v 1.9 2011/02/07 17:15:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-irclib/ChangeLog,v 1.10 2011/08/19 17:21:31 hwoarang Exp $
+
+  19 Aug 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  remove radek from metadata.xml
 
   15 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   python-irclib-0.4.8.ebuild:
