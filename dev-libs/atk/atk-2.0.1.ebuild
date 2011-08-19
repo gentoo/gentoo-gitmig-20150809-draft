@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/atk-2.0.1.ebuild,v 1.1 2011/08/14 13:04:58 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/atk-2.0.1.ebuild,v 1.2 2011/08/19 14:02:27 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 
 inherit gnome2
 
@@ -24,7 +25,9 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 pkg_setup() {
-	G2CONF="${G2CONF} $(use_enable introspection)"
+	G2CONF="${G2CONF}
+		--disable-static
+		$(use_enable introspection)"
 	DOCS="AUTHORS ChangeLog NEWS README"
 }
 
