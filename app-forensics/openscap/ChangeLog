@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/openscap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/ChangeLog,v 1.6 2011/07/05 08:00:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/ChangeLog,v 1.7 2011/08/19 14:20:17 hwoarang Exp $
+
+  19 Aug 2011; Markos Chandras <hwoarang@gentoo.org> openscap-0.7.3.ebuild:
+  Remove la files #379707 and restrict tests #379705
 
 *openscap-0.7.3 (05 Jul 2011)
 
