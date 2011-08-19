@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.4.4-r2.ebuild,v 1.3 2011/04/25 20:48:28 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.4.4-r2.ebuild,v 1.4 2011/08/19 19:18:35 nirbheek Exp $
 
 EAPI=2
 
@@ -18,18 +18,18 @@ IUSE="doc +introspection"
 RESTRICT="test"
 
 # For the dependency on dev-libs/libdbusmenu see launchpad-bug #552667
-RDEPEND="dev-libs/glib:2[introspection=]
+RDEPEND="dev-libs/glib:2
 	dev-libs/dbus-glib
-	<dev-libs/libdbusmenu-0.3.50[introspection=]
+	<dev-libs/libdbusmenu-0.3.50[introspection?]
 	dev-libs/libxml2:2
 	x11-libs/gtk+:2
-	dev-python/pygtk
+	dev-python/pygtk:2
 	dev-dotnet/gtk-sharp
-	dev-dotnet/gtk-sharp-gapi"
+	dev-dotnet/gtk-sharp-gapi
+	introspection? ( >=dev-libs/gobject-introspection-0.6.3 )"
 DEPEND="${RDEPEND}
 	app-text/gnome-doc-utils
 	doc? ( dev-util/gtk-doc )
-	introspection? ( >=dev-libs/gobject-introspection-0.6.3 )
 	dev-util/gtk-doc-am
 	dev-util/pkgconfig"
 

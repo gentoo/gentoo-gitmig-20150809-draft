@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libindicate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.16 2011/07/19 17:34:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.17 2011/08/19 19:18:35 nirbheek Exp $
+
+  19 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  libindicate-0.4.4-r1.ebuild, libindicate-0.4.4-r2.ebuild:
+  Fix dependency on glib[introspection] -- the use-flag was masked. Pointed out
+  by Mr_Bones_
 
   19 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #266794
