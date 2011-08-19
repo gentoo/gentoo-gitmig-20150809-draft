@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/gnome-mag-0.16.3.ebuild,v 1.6 2011/03/22 20:02:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/gnome-mag-0.16.3.ebuild,v 1.7 2011/08/19 11:26:34 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -31,7 +31,7 @@ RDEPEND=">=dev-libs/glib-2.11.1:2
 
 RDEPEND="${RDEPEND}
 	>=gnome-base/libbonobo-1.107
-	>=gnome-extra/at-spi-1.5.2
+	>=gnome-extra/at-spi-1.5.2:1
 	>=gnome-base/orbit-2.3.100
 
 	dev-libs/dbus-glib

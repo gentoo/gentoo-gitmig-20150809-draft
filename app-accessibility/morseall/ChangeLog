@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/morseall
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/morseall/ChangeLog,v 1.3 2009/08/12 18:20:10 williamh Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/morseall/ChangeLog,v 1.4 2011/08/19 11:30:44 nirbheek Exp $
+
+  19 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> morseall-0.4.8.ebuild:
+  Fix slot dep on at-spi, remove old
 
   12 Aug 2009; William Hubbs <williamh@gentoo.org> morseall-0.4.8.ebuild:
   fixed description and dependencies
