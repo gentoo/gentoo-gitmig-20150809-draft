@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/setools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.69 2011/08/19 17:16:46 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.70 2011/08/19 19:38:44 swift Exp $
+
+  19 Aug 2011; <swift@gentoo.org> -setools-2.4.ebuild, -setools-3.3.4.ebuild,
+  -setools-3.3.5.ebuild, -setools-3.3.6.ebuild,
+  -files/setools-3.3.6-headers.diff, -files/apol_tcl_fc.c.diff:
+  Remove obsoleted versions of setools
 
 *setools-3.3.7-r1 (19 Aug 2011)
 
