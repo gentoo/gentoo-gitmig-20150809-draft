@@ -1,6 +1,15 @@
 # ChangeLog for gnustep-apps/cenon
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cenon/ChangeLog,v 1.9 2010/09/01 12:01:50 voyageur Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cenon/ChangeLog,v 1.10 2011/08/19 12:38:23 voyageur Exp $
+
+*cenon-3.9.4 (19 Aug 2011)
+*cenon-3.8.2 (19 Aug 2011)
+
+  19 Aug 2011; Bernard Cafarelli <voyageur@gentoo.org> +cenon-3.8.2.ebuild,
+  +cenon-3.9.4.ebuild, +files/cenon-3.9.4-install.patch, -cenon-3.82.ebuild,
+  -cenon-3.90.ebuild, -files/cenon-3.90-install.patch, -cenon-3.91.ebuild,
+  -files/cenon-3.91-install.patch:
+  Version bump, move stable to new versioning
 
 *cenon-3.91 (01 Sep 2010)
 
