@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/setools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.68 2011/07/08 10:17:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.69 2011/08/19 17:16:46 swift Exp $
+
+*setools-3.3.7-r1 (19 Aug 2011)
+
+  19 Aug 2011; <swift@gentoo.org>
+  +files/fix-check-role_set_expand-libsepol-2.1.0.patch,
+  +setools-3.3.7-r1.ebuild, +files/fix-implicit-def-fstat.patch:
+  Fix #378943 where setools fails to build with new selinux userspace
 
   08 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> setools-2.4.ebuild:
   Convert from "useq" to "use".
