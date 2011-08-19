@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mariadb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.10 2011/07/15 11:51:40 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.11 2011/08/19 15:47:28 jmbsvicetto Exp $
+
+  19 Aug 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  mariadb-5.2.7.ebuild:
+  Added patch by Diego to fix the multiple install of files - fixes bug 379059.
 
 *mariadb-5.2.7 (15 Jul 2011)
 *mariadb-5.1.55 (15 Jul 2011)
