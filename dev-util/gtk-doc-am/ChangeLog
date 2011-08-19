@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc-am
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.67 2011/08/13 18:46:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.68 2011/08/19 16:47:10 gmsoft Exp $
+
+  19 Aug 2011; Guy Martin <gmsoft@gentoo.org> gtk-doc-am-1.17.ebuild:
+  hppa stable, bug #369909
 
   13 Aug 2011; Raúl Porcel <armin76@gentoo.org> gtk-doc-am-1.17.ebuild:
   m68k stable wrt #369909
