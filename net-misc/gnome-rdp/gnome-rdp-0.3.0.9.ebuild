@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-rdp/gnome-rdp-0.3.0.5.ebuild,v 1.2 2011/03/12 12:02:23 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-rdp/gnome-rdp-0.3.0.9.ebuild,v 1.1 2011/08/19 11:36:00 voyageur Exp $
 
-EAPI=3
+EAPI=4
 
 inherit eutils mono
 
@@ -28,13 +28,8 @@ RDEPEND="dev-db/sqlite:3
 		vnc? ( >=net-misc/tightvnc-1.2 )"
 DEPEND="${RDEPEND}"
 
-src_compile() {
-	emake -C gnome-rdp-dockyplugin || die "dockyplugin compilation failed"
-	emake || die "compilation failed"
-}
-
 src_install() {
-	emake DESTDIR="${D}" install|| die "install failed"
+	emake DESTDIR="${D}" install
 	dodoc ChangeLog
 	doicon Menu/${PN}.png
 	domenu Menu/${PN}.desktop

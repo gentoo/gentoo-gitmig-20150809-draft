@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/gnome-rdp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-rdp/ChangeLog,v 1.6 2011/03/23 16:59:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnome-rdp/ChangeLog,v 1.7 2011/08/19 11:36:00 voyageur Exp $
+
+*gnome-rdp-0.3.0.9 (19 Aug 2011)
+
+  19 Aug 2011; Bernard Cafarelli <voyageur@gentoo.org>
+  -gnome-rdp-0.2.3-r1.ebuild, -files/gnome-rdp-0.2.3-mono-2.8.patch,
+  -gnome-rdp-0.3.0.5.ebuild, +gnome-rdp-0.3.0.9.ebuild:
+  Version bump, fixes bug #353469. Remove old versions
 
   23 Mar 2011; Samuli Suominen <ssuominen@gentoo.org>
   gnome-rdp-0.2.3-r1.ebuild:
