@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mousetrap/gnome-mousetrap-0.3.ebuild,v 1.4 2011/02/24 20:52:56 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mousetrap/gnome-mousetrap-0.3.ebuild,v 1.5 2011/08/19 11:35:04 nirbheek Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -21,7 +21,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="doc"
 
-RDEPEND="gnome-extra/at-spi
+RDEPEND="gnome-extra/at-spi:1
 	media-libs/opencv[python]
 	dev-python/libgnome-python
 	dev-python/python-xlib"

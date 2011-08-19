@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/java-access-bridge
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/ChangeLog,v 1.49 2011/03/22 20:03:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/java-access-bridge/ChangeLog,v 1.50 2011/08/19 11:32:00 nirbheek Exp $
+
+  19 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  java-access-bridge-1.6.0.ebuild, java-access-bridge-1.6.0-r2.ebuild,
+  java-access-bridge-1.24.2.ebuild, java-access-bridge-1.26.0.ebuild:
+  Fix slot dep on at-spi
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org>
   java-access-bridge-1.26.0.ebuild:
