@@ -1,11 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-3.0.5-r1.ebuild,v 1.7 2008/04/23 21:18:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-3.0.5-r1.ebuild,v 1.8 2011/08/19 11:45:27 xarthisius Exp $
 
 inherit eutils
 
 DESCRIPTION="Configurable and full featured theme for FVWM, with lots of transparency."
-HOMEPAGE="http://fvwm-crystal.org/"
+HOMEPAGE="http://gna.org/projects/fvwm-crystal/"
 SRC_URI="http://download.gna.org/${PN}/${PV}/${P}.tar.gz
 	mirror://gentoo/${P}-envfix.patch.bz2"
 LICENSE="GPL-2"
