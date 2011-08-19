@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.129 2011/08/19 10:18:59 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.130 2011/08/19 12:16:56 lxnay Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -421,7 +421,7 @@ python_pkg_setup() {
 		PYTHON_ABI="${PYTHON_ABI:-$(PYTHON --ABI)}"
 	fi
 
-	if has "${EAPI:-0}" 0 1 && [[ -n "${PYTHON_USE_WITH}" || -n "${PYTHON_USE_WITH_OR}" ]]; then
+	if ! has "${EAPI:-0}" 0 1 && [[ -n "${PYTHON_USE_WITH}" || -n "${PYTHON_USE_WITH_OR}" ]]; then
 		if [[ "${PYTHON_USE_WITH_OPT}" ]]; then
 			if [[ "${PYTHON_USE_WITH_OPT}" == !* ]]; then
 				use ${PYTHON_USE_WITH_OPT#!} && return
