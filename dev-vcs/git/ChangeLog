@@ -1,6 +1,15 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.97 2011/07/13 07:03:15 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.98 2011/08/19 18:43:47 darkside Exp $
+
+  19 Aug 2011; Jeremy Olexa <darkside@gentoo.org> git-1.7.2.5.ebuild,
+  git-1.7.3.4-r1.ebuild, git-1.7.3.5.ebuild, git-1.7.3.5-r1.ebuild,
+  git-1.7.3.5-r2.ebuild, git-1.7.4.ebuild, git-1.7.4.1.ebuild,
+  git-1.7.4.4.ebuild, git-1.7.4.5.ebuild, git-1.7.5_rc1.ebuild,
+  git-1.7.5_rc3.ebuild, git-1.7.5.3.ebuild, git-1.7.6.ebuild, git-9999.ebuild:
+  Remove useless/redundant built_with_use check for subversion[perl] since the
+  addition of USE-deps. Signed off by maintainer. Tangentially related to bug
+  250179
 
   13 Jul 2011; Markus Duft <mduft@gentoo.org> git-1.7.6.ebuild,
   +files/git-1.7.6-interix.patch:

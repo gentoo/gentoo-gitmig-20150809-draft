@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.2.5.ebuild,v 1.12 2011/04/04 08:58:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/git-1.7.2.5.ebuild,v 1.13 2011/08/19 18:43:47 darkside Exp $
 
 EAPI=3
 
@@ -457,10 +457,6 @@ showpkgdeps() {
 
 pkg_postinst() {
 	use emacs && elisp-site-regen
-	if use subversion && has_version dev-vcs/subversion && ! built_with_use --missing false dev-vcs/subversion perl ; then
-		ewarn "You must build dev-vcs/subversion with USE=perl"
-		ewarn "to get the full functionality of git-svn!"
-	fi
 	elog "These additional scripts need some dependencies:"
 	echo
 	showpkgdeps git-quiltimport "dev-util/quilt"
