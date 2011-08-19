@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.19.0.ebuild,v 1.1 2011/08/19 14:11:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.19.0.ebuild,v 1.2 2011/08/19 16:52:19 xarthisius Exp $
 
 EAPI="3"
 inherit eutils flag-o-matic savedconfig toolchain-funcs
@@ -57,7 +57,7 @@ else
 fi
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~x86-linux"
 IUSE="debug ipv6 make-symlinks +mdev nfs -pam selinux static elibc_glibc"
 RESTRICT="test"
 
@@ -84,6 +84,7 @@ busybox_config_option() {
 src_prepare() {
 	unset KBUILD_OUTPUT #88088
 	append-flags -fno-strict-aliasing #310413
+	use ppc64 && append-flags -mminimal-toc #130943
 	append-cppflags $($(tc-getPKG_CONFIG) libtirpc --cflags)
 
 	# patches go here!
@@ -252,7 +253,7 @@ pkg_preinst() {
 		ewarn "setting USE=make-symlinks and emerging to / is very dangerous."
 		ewarn "it WILL overwrite lots of system programs like: ls bash awk grep (bug 60805 for full list)."
 		ewarn "If you are creating a binary only and not merging this is probably ok."
-		ewarn "set env VERY_BRAVE_OR_VERY_DUMB=yes if this is realy what you want."
+		ewarn "set env VERY_BRAVE_OR_VERY_DUMB=yes if this is really what you want."
 		die "silly options will destroy your system"
 	fi
 
