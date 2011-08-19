@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.6.17-r1.ebuild,v 1.1 2011/08/18 09:51:23 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.6.17-r2.ebuild,v 1.1 2011/08/19 10:40:53 chainsaw Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -61,11 +61,6 @@ PATCHES=(
 want_apache
 
 pkg_setup() {
-	if use kde && ! use nls; then
-		eerror "Support for KWallet (KDE) requires Native Language Support (NLS)."
-		die "Enable \"nls\" USE flag"
-	fi
-
 	if use berkdb; then
 		einfo
 		if [[ -z "${SVN_BDB_VERSION}" ]]; then
@@ -138,6 +133,12 @@ src_configure() {
 		myconf+=" --without-junit"
 	fi
 
+	if use kde || use nls; then
+		myconf+=" --enable-nls"
+	else
+		myconf+=" --disable-nls"
+	fi
+
 	econf --libdir="${EPREFIX}/usr/$(get_libdir)" \
 		$(use_with apache2 apxs "${APXS}") \
 		$(use_with berkdb berkeley-db "db.h:${EPREFIX}/usr/include/db${SVN_BDB_VERSION}::db-${SVN_BDB_VERSION}") \
@@ -147,7 +148,6 @@ src_configure() {
 		$(use_enable java javahl) \
 		$(use_with java jdk "${JAVA_HOME}") \
 		$(use_with kde kwallet) \
-		$(use_enable nls) \
 		$(use_with sasl) \
 		$(use_with webdav-neon neon) \
 		$(use_with webdav-serf serf "${EPREFIX}/usr") \
@@ -337,7 +337,11 @@ src_install() {
 
 	# Install extra files.
 	if use extras; then
-		doenvd "${FILESDIR}/80subversion-extras"
+		cat << EOF > 80subversion-extras
+PATH="${EPREFIX}/usr/$(get_libdir)/subversion/bin"
+ROOTPATH="${EPREFIX}/usr/$(get_libdir)/subversion/bin"
+EOF
+		doenvd 80subversion-extras
 
 		emake DESTDIR="${D}" contribdir="/usr/$(get_libdir)/subversion/bin" install-contrib || die "Installation of contrib failed"
 		emake DESTDIR="${D}" toolsdir="/usr/$(get_libdir)/subversion/bin" install-tools || die "Installation of tools failed"
@@ -356,9 +360,7 @@ src_install() {
 	if use doc; then
 		dohtml -r doc/doxygen/html/* || die "Installation of Subversion HTML documentation failed"
 
-		insinto /usr/share/doc/${PF}
-		doins -r notes
-		ecompressdir /usr/share/doc/${PF}/notes
+		dodoc -r notes
 
 		if use java; then
 			java-pkg_dojavadoc doc/javadoc
@@ -405,6 +407,8 @@ pkg_postinst() {
 		ewarn "    db4_recover -h ${SVN_REPOS_LOC}/repos"
 		ewarn "    chown -Rf apache:apache ${SVN_REPOS_LOC}/repos"
 	fi
+
+	ewarn "If you run subversion as a daemon, you will need to restart it to avoid module mismatches."
 }
 
 pkg_postrm() {

@@ -1,6 +1,19 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.45 2011/08/18 16:48:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.46 2011/08/19 10:40:53 chainsaw Exp $
+
+*subversion-1.6.17-r2 (19 Aug 2011)
+
+  19 Aug 2011; Tony Vroon <chainsaw@gentoo.org> -files/80subversion-extras,
+  -subversion-1.6.17-r1.ebuild, +subversion-1.6.17-r2.ebuild:
+  More gracefully handle dependency between KDE & NLS USE-flags, as requested
+  by Jeroen Roovers in bug #330941. Perfection would require EAPI=4, which I
+  can not use yet. Tell user to restart daemon after upgrade, as requested by
+  Joel Koglin in bug #337042. Use recursive dodoc instead of ecompressdir as
+  requested by Ulrich Müller in bug #356503. Move the environment config back
+  to inline for now, as Kent Fredric reports that variable substitution broke
+  and caused env-update failures. Closes bug #379819. Killed old -r1 ebuild due
+  to this problem.
 
   18 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   subversion-1.6.17.ebuild:
