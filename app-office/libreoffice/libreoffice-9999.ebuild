@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999.ebuild,v 1.16 2011/08/15 17:52:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999.ebuild,v 1.17 2011/08/19 09:56:20 scarabeus Exp $
 
 EAPI=3
 
@@ -458,6 +458,7 @@ src_configure() {
 	# --without-{afms,fonts,myspell-dicts,ppsd}: prevent install of sys pkgs
 	# --without-stlport: disable deprecated extensions framework
 	econf \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}/" \
 		--with-system-headers \
 		--with-system-libs \
 		--with-system-jars \
