@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.289 2011/08/19 14:45:10 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.290 2011/08/19 18:12:10 hwoarang Exp $
+
+  19 Aug 2011; Markos Chandras <hwoarang@gentoo.org> package.use.mask:
+  Masking rbd for app-emulation/qemu-kvm per bug #364889
 
   19 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
   Mask USE=introspection on glib because it's mostly useless for now, and
