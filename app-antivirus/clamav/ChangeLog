@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.396 2011/08/18 17:16:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.397 2011/08/19 17:14:59 phajdan.jr Exp $
+
+  19 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> clamav-0.97.2.ebuild:
+  x86 stable wrt security bug #378815
 
   18 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> clamav-0.97.2.ebuild:
   ppc/ppc64 stable wrt #378815
