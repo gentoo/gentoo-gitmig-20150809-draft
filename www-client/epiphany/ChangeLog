@@ -1,6 +1,12 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.273 2011/04/30 17:38:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.274 2011/08/19 14:55:22 nirbheek Exp $
+
+*epiphany-3.0.4 (19 Aug 2011)
+
+  19 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> -epiphany-2.30.6.ebuild,
+  +epiphany-3.0.4.ebuild:
+  Bump to 3.0.4, from gnome overlay for GNOME 3, remove old
 
   30 Apr 2011; Raúl Porcel <armin76@gentoo.org> epiphany-2.30.6-r1.ebuild:
   alpha/ia64/sparc stable wrt #364973
