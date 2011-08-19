@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.265 2011/08/05 11:29:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.266 2011/08/19 10:54:21 blueness Exp $
+
+*tor-0.2.2.31_rc (19 Aug 2011)
+
+  19 Aug 2011; Anthony G. Basile <blueness@gentoo.org> -tor-0.2.2.30_rc.ebuild,
+  -tor-0.2.2.30_rc-r1.ebuild, +tor-0.2.2.31_rc.ebuild,
+  -tor-0.2.3.2_alpha.ebuild:
+  Version bump RC and remove deprecated
 
   05 Aug 2011; Anthony G. Basile <blueness@gentoo.org> files/tor.initd-r4:
   Removed deprecated -oknodo, bug #377773
