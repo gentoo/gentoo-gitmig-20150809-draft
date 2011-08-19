@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/tinyxml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml/ChangeLog,v 1.10 2011/08/02 16:23:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml/ChangeLog,v 1.11 2011/08/19 12:58:31 voyageur Exp $
+
+*tinyxml-2.6.2 (19 Aug 2011)
+
+  19 Aug 2011; Bernard Cafarelli <voyageur@gentoo.org> -tinyxml-2.6.1.ebuild,
+  +tinyxml-2.6.2.ebuild:
+  Version bump and with ebuild updates thanks to radhermit, bug #379513. Also
+  remove broken 2.6.1
 
   02 Aug 2011; Markos Chandras <hwoarang@gentoo.org> tinyxml-2.6.1-r1.ebuild:
   Stable on amd64 wrt bug #375503

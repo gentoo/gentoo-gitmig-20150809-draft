@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml/tinyxml-2.6.1.ebuild,v 1.3 2011/02/11 18:43:31 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml/tinyxml-2.6.2.ebuild,v 1.1 2011/08/19 12:58:31 voyageur Exp $
 
-EAPI=2
+EAPI=4
 inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="a simple, small, C++ XML parser that can be easily integrating into other programs"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV//./_}.tar.gz"
 LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
-IUSE="debug doc +stl"
+IUSE="debug doc static-libs stl"
 
 RDEPEND=""
 DEPEND="doc? ( app-doc/doxygen )"
@@ -27,27 +27,25 @@ src_prepare() {
 	sed -e "s:@MAJOR_V@:$major_v:" \
 	    -e "s:@MINOR_V@:$minor_v:" \
 		"${FILESDIR}"/Makefile-2 > Makefile || die
-}
 
-src_compile() {
+	epatch "${FILESDIR}"/${P}-entity.patch
+
 	use debug && append-cppflags -DDEBUG
 	use stl && append-cppflags -DTIXML_USE_STL
 
 	tc-export AR CXX RANLIB
-
-	emake || die "emake failed"
 }
 
 src_install() {
-	dolib.so *.so* || die "dolib.so failed"
-	dolib.a *.a || die "dolib.a failed"
+	dolib.so *.so*
+	use static-libs && dolib.a *.a
 
 	insinto /usr/include
-	doins *.h || die "doins failed"
+	doins *.h
 
-	dodoc {changes,readme}.txt || die "dodoc failed"
+	dodoc {changes,readme}.txt
 
 	if use doc; then
-		dohtml -r docs/* || die "dohtml failed"
+		dohtml -r docs/*
 	fi
 }
