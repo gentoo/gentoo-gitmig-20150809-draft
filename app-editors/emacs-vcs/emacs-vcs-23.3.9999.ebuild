@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.3.9999.ebuild,v 1.9 2011/08/13 21:47:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.3.9999.ebuild,v 1.10 2011/08/19 17:27:26 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -94,6 +94,7 @@ src_prepare() {
 		[ "${FULL_VERSION}" ] || die "Cannot determine current Emacs version"
 		echo
 		einfo "Emacs branch: ${EBZR_BRANCH}"
+		einfo "Revision: ${EBZR_REVISION:-${EBZR_REVNO}}"
 		einfo "Emacs version number: ${FULL_VERSION}"
 		[[ ${FULL_VERSION} =~ ^${PV%.*}(\..*)?$ ]] \
 			|| die "Upstream version number changed to ${FULL_VERSION}"
@@ -194,6 +195,11 @@ src_configure() {
 		myconf="${myconf} --without-x"
 	fi
 
+	if [ "${PV##*.}" = "9999" ]; then
+		# This will be saved in system-configuration-options
+		myconf="${myconf} EBZR_BRANCH=${EBZR_BRANCH} EBZR_REVNO=${EBZR_REVNO}"
+	fi
+
 	# According to configure, this option is only used for GNU/Linux
 	# (x86_64 and s390). For Gentoo Prefix we have to explicitly spell
 	# out the location because $(get_libdir) does not necessarily return
@@ -219,6 +225,8 @@ src_compile() {
 		# cleanup, otherwise emacs will be dumped again in src_install
 		(cd src; emake versionclean)
 	fi
+	# set last component of emacs-version to (package revision + 1)
+	touch src/emacs-${FULL_VERSION}.${PR#r}
 	emake CC="$(tc-getCC)"
 }
 
