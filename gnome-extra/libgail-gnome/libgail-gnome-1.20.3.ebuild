@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/libgail-gnome-1.20.3.ebuild,v 1.11 2011/03/06 23:02:04 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgail-gnome/libgail-gnome-1.20.3.ebuild,v 1.12 2011/08/19 11:33:40 nirbheek Exp $
 
 EAPI="3"
 inherit gnome2
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/atk-1.7.2
 	>=gnome-base/libgnomeui-1.1
 	|| ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 )
 	>=gnome-base/gconf-2:2
-	>=gnome-extra/at-spi-0.10"
+	>=gnome-extra/at-spi-0.10:1"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"
 
