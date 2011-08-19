@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.7-r3.ebuild,v 1.1 2011/08/18 19:21:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.7-r3.ebuild,v 1.2 2011/08/19 17:26:46 mr_bones_ Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -48,7 +48,6 @@ make_shared_lib_macho() {
 		-force_load "${archive}" \
 		-o $(dirname "${archive}")/"${soname}" || return 1
 }
-
 
 pkg_setup() {
 	java-pkg-2_pkg_setup
