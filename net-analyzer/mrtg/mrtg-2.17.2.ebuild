@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.17.2.ebuild,v 1.1 2011/06/20 10:15:57 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.17.2.ebuild,v 1.2 2011/08/20 20:19:51 jer Exp $
 
 EAPI="4"
 
-inherit eutils autotools
+inherit eutils
 
 DESCRIPTION="A tool to monitor the traffic load on network-links"
 HOMEPAGE="http://oss.oetiker.ch/mrtg/"

@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/mrtg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.111 2011/06/20 10:15:57 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.112 2011/08/20 20:19:51 jer Exp $
+
+  20 Aug 2011; Jeroen Roovers <jer@gentoo.org> mrtg-2.17.2.ebuild,
+  metadata.xml:
+  Remove useless maintainer tag. Remove unused eclass inherit from ebuild.
 
 *mrtg-2.17.2 (20 Jun 2011)
 
