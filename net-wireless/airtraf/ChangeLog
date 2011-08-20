@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/airtraf
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/ChangeLog,v 1.17 2010/09/17 03:28:08 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/airtraf/ChangeLog,v 1.18 2011/08/20 21:05:36 jer Exp $
+
+  20 Aug 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Remove useless maintainer tag.
 
 *airtraf-1.1-r1 (17 Sep 2010)
 
