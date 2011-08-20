@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/farsight2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/ChangeLog,v 1.52 2011/07/31 16:28:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/ChangeLog,v 1.53 2011/08/20 17:46:04 jer Exp $
+
+  20 Aug 2011; Jeroen Roovers <jer@gentoo.org> farsight2-0.0.26.ebuild:
+  Stable for HPPA (bug #373393).
 
   31 Jul 2011; Raúl Porcel <armin76@gentoo.org> farsight2-0.0.26.ebuild:
   alpha/ia64/sparc stable wrt #373393
