@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/topal
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/topal/ChangeLog,v 1.6 2010/09/09 06:02:45 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/topal/ChangeLog,v 1.7 2011/08/20 20:49:37 tomka Exp $
+
+  20 Aug 2011; Thomas Kahle <tomka@gentoo.org> topal-72.ebuild:
+  x86 stable per bug 379983
 
   09 Sep 2010; Torsten Veller <tove@gentoo.org> files/72-Makefile.patch,
   metadata.xml:

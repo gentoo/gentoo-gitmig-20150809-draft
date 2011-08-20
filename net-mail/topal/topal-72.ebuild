@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/topal/topal-72.ebuild,v 1.1 2010/03/05 12:03:53 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/topal/topal-72.ebuild,v 1.2 2011/08/20 20:49:37 tomka Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://homepage.ntlworld.com/phil.brooke/topal/rel-${PV}/topal-package-
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND=">=app-crypt/gnupg-2.0.7-r1
