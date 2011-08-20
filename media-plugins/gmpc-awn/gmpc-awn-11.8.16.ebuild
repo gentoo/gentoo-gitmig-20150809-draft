@@ -1,14 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-albumview/gmpc-albumview-11.8.16.ebuild,v 1.2 2011/08/20 11:31:24 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-awn/gmpc-awn-11.8.16.ebuild,v 1.1 2011/08/20 11:36:55 angelos Exp $
 
 EAPI=4
+inherit autotools
 
-DESCRIPTION="This plugin shows your music collection in albums"
-HOMEPAGE="http://gmpc.wikia.com/wiki/GMPC_PLUGIN_ALBUMVIEW"
+DESCRIPTION="This plugin integrates GMPC with the Avant Window Navigator"
+HOMEPAGE="http://gmpc.wikia.com/wiki/GMPC_PLUGIN_AWN"
 SRC_URI="http://download.sarine.nl/Programs/gmpc/11.8/${P}.tar.gz"
 
-LICENSE="LGPL-2"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="nls"
@@ -18,6 +19,11 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( dev-util/intltool
 		sys-devel/gettext )"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-0.20.0-multilib.patch
+	eautoreconf
+}
 
 src_configure() {
 	econf $(use_enable nls)
