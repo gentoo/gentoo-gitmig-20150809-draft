@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mailutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.49 2011/07/29 18:50:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.50 2011/08/20 06:48:42 eras Exp $
+
+  20 Aug 2011; Eray Aslan <eras@gentoo.org> mailutils-2.2.ebuild:
+  Use Python 2. Don't install *.pyc, *.pyo, *.a and *.la files in Python
+  site-packages directories. Properly call python_mod_optimize() and
+  python_mod_cleanup() (bug #377215). Patch by Arfrever.
 
   29 Jul 2011; Fabian Groffen <grobian@gentoo.org> mailutils-2.2.ebuild:
   Marked ~*-macos

@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-2.2.ebuild,v 1.5 2011/07/29 18:50:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/mailutils-2.2.ebuild,v 1.6 2011/08/20 06:48:42 eras Exp $
 
 EAPI="3"
+PYTHON_DEPEND="python? 2"
 
 inherit eutils flag-o-matic libtool python
 
@@ -32,9 +33,19 @@ RDEPEND="!mail-client/nmh
 DEPEND="${RDEPEND}
 	test? ( dev-util/dejagnu )"
 
+pkg_setup() {
+	if use python; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
+}
+
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.1-python.patch
 	elibtoolize  # for Darwin bundles
+
+	# Disable bytecompilation of Python modules.
+	echo "#!/bin/sh" > build-aux/py-compile
 }
 
 src_configure() {
@@ -57,8 +68,7 @@ src_configure() {
 		$(use_enable pam) \
 		$(use_with postgres) \
 		$(use_with python) \
-		$(use_with tokyocabinet) \
-		|| die "configure failed"
+		$(use_with tokyocabinet)
 }
 
 src_install() {
@@ -66,8 +76,21 @@ src_install() {
 	# mail.rc stolen from mailx, resolve bug #37302.
 	insinto /etc
 	doins "${FILESDIR}/mail.rc"
+
+	if use python; then
+		python_clean_installation_image
+		rm -f "${ED}$(python_get_sitedir)/mailutils/c_api.a"
+	fi
 }
 
 pkg_postinst() {
-	python_mod_optimize "$(python_get_libdir)/site-packages/mailutils"
+	if use python; then
+		python_mod_optimize mailutils
+	fi
+}
+
+pkg_postrm() {
+	if use python; then
+		python_mod_cleanup mailutils
+	fi
 }
