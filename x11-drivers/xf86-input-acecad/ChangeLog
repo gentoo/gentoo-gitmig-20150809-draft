@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-input-acecad
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-acecad/ChangeLog,v 1.73 2011/07/30 10:43:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-acecad/ChangeLog,v 1.74 2011/08/20 15:46:12 jer Exp $
+
+  20 Aug 2011; Jeroen Roovers <jer@gentoo.org> xf86-input-acecad-1.5.0.ebuild:
+  Stable for HPPA (bug #371857).
 
   30 Jul 2011; Raúl Porcel <armin76@gentoo.org>
   xf86-input-acecad-1.5.0.ebuild:
