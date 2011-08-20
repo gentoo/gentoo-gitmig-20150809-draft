@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.24 2011/08/08 20:59:51 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.25 2011/08/20 14:39:59 chithanh Exp $
+
+*linux-firmware-20110818 (20 Aug 2011)
+
+  20 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  linux-firmware-20110604.ebuild, linux-firmware-20110709.ebuild,
+  linux-firmware-20110731.ebuild, +linux-firmware-20110818.ebuild,
+  linux-firmware-99999999.ebuild:
+  New snapshot.
 
   08 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -linux-firmware-20110429.ebuild, -linux-firmware-20110601.ebuild:
