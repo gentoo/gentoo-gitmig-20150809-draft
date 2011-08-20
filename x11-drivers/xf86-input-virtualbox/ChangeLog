@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-virtualbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/ChangeLog,v 1.71 2011/08/17 23:39:33 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/ChangeLog,v 1.72 2011/08/20 21:07:14 polynomial-c Exp $
+
+  20 Aug 2011; Lars Wendler <polynomial-c@gentoo.org>
+  xf86-input-virtualbox-4.0.12.ebuild:
+  Fixed dependency on kbuild
 
 *xf86-input-virtualbox-4.1.2 (17 Aug 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.0.12.ebuild,v 1.3 2011/07/22 16:59:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.0.12.ebuild,v 1.4 2011/08/20 21:06:47 polynomial-c Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ IUSE="dri"
 
 RDEPEND="x11-base/xorg-server[-minimal]"
 DEPEND="${RDEPEND}
-		>=dev-util/kbuild-0.1.5-r1
+		=dev-util/kbuild-0.1.5*
 		=dev-lang/python-2*
 		>=dev-lang/yasm-0.6.2
 		sys-devel/dev86
