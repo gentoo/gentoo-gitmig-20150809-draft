@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.261 2011/03/07 11:04:25 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.262 2011/08/20 05:20:14 ulm Exp $
+
+  20 Aug 2011; Ulrich Mueller <ulm@gentoo.org> openmotif-2.3.2-r2.ebuild:
+  Call dosym with proper second argument. Add static-libs USE flag.
 
   07 Mar 2011; Ulrich Mueller <ulm@gentoo.org> openmotif-2.2.3-r11.ebuild,
   openmotif-2.3.2-r2.ebuild, openmotif-2.3.3.ebuild:
