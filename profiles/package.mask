@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12995 2011/08/19 14:25:42 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12996 2011/08/20 08:13:01 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexis Ballier <aballier@gentoo.org> (20 Aug 2011)
+# dev-tex/pdftex-1.40.11 is 100% identical to the one in TeX Live 2010;
+# TeX Live 2011 has a newer version, which makes the standalone package useless;
+# mask it for now, we'll see about removing it later.
+dev-tex/pdftex
 
 # Kacper Kowalik <xarthisius@gentoo.org> (19 Aug 2011)
 # Ancient, obsolete, last release 2006
