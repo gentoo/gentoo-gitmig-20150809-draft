@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-<maintainer>
-  <email>netmon@gentoo.org</email>
-</maintainer>
-  <longdescription>Console application which monitors network traffic and bandwidth usage in real time</longdescription>
 </pkgmetadata>

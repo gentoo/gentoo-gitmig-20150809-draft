@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ngrep
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.69 2011/01/10 18:50:32 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ChangeLog,v 1.70 2011/08/20 20:33:23 jer Exp $
+
+  20 Aug 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Remove useless maintainer and longdescription tag.
 
   10 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org> ngrep-1.45-r3.ebuild:
   ppc64 stable wrt #299040
