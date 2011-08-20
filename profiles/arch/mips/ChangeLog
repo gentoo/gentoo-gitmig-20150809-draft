@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.76 2011/07/31 06:09:00 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.77 2011/08/20 22:57:42 mattst88 Exp $
+
+  20 Aug 2011; Matt Turner <mattst88@gentoo.org> use.mask:
+  Remove hal from use.mask. It's masked by base/use.mask now.
 
   31 Jul 2011; Matt Turner <mattst88@gentoo.org> package.use.mask:
   mplayer has no 'teletext' USE flag anymore.

@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.44 2011/07/14 18:02:35 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.45 2011/08/20 22:57:42 mattst88 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -163,10 +163,6 @@ video_cards_ast
 # Diego Pettenò <flameeyes@gentoo.org>
 # Until xine-lib's keywording can be maintained, please leave it masked.
 xine
-
-# Stephen P. Becker <geoman@gentoo.org>
-# remasking hal because of numerous dependency issues
-hal
 
 # Stephen P. Becker <geoman@gentoo.org>
 # masking mono because it doesn't work on mips
