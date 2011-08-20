@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libwmf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.77 2011/07/25 14:43:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.78 2011/08/20 16:04:43 jer Exp $
+
+  20 Aug 2011; Jeroen Roovers <jer@gentoo.org> libwmf-0.2.8.4-r4.ebuild:
+  Stable for HPPA (bug #373889).
 
   25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> libwmf-0.2.8.4-r4.ebuild:
   ppc/ppc64 stable wrt #373889
