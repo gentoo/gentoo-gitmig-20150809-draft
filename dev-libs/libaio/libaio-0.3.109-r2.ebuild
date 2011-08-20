@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.109-r2.ebuild,v 1.1 2010/11/09 08:19:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.109-r2.ebuild,v 1.2 2011/08/20 19:35:29 vapier Exp $
 
 EAPI="3"
 
@@ -26,6 +26,7 @@ src_prepare() {
 	sed -i \
 		-e "/^libdir=/s:lib$:$(get_libdir):" \
 		-e "/^prefix=/s:/usr:${EPREFIX}/usr:" \
+		-e '/:=.*strip.*shell.*git/s:=.*:=:' \
 		src/Makefile Makefile || die
 }
 
