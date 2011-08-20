@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/monodevelop-vala
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-vala/ChangeLog,v 1.12 2011/05/11 19:30:59 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-vala/ChangeLog,v 1.13 2011/08/20 08:47:27 ali_bush Exp $
+
+*monodevelop-vala-2.5.93 (20 Aug 2011)
+
+  20 Aug 2011; Alistair Bush <ali_bush@gentoo.org>
+  +monodevelop-vala-2.5.93.ebuild:
+  Version Bump.
 
   11 May 2011; Christoph Mende <angelos@gentoo.org>
   monodevelop-vala-2.4-r1.ebuild:
