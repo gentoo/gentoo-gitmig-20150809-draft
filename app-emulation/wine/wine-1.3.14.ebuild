@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.3.14.ebuild,v 1.10 2011/08/20 19:16:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.3.14.ebuild,v 1.11 2011/08/20 19:19:05 vapier Exp $
 
 EAPI="2"
 
@@ -99,7 +99,7 @@ DEPEND="${RDEPEND}
 		x11-proto/xf86vidmodeproto
 	)
 	xinerama? ( x11-proto/xineramaproto )
-	sys-devel/bison
+	virtual/yacc
 	sys-devel/flex"
 
 src_unpack() {
