@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.22 2011/08/20 21:30:37 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.23 2011/08/20 21:51:25 anarchy Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -27,8 +27,7 @@ RDEPEND="app-arch/zip
 	dbus? ( >=dev-libs/dbus-glib-0.72 )
 	libnotify? ( >=x11-libs/libnotify-0.4 )
 	startup-notification? ( >=x11-libs/startup-notification-0.8 )
-	wifi? ( net-wireless/wireless-tools )
-	crashreporter? ( net-misc/curl )"
+	wifi? ( net-wireless/wireless-tools )"
 DEPEND="${RDEPEND}"
 
 mozconfig_config() {
