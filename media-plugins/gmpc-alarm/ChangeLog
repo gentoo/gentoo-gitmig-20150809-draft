@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gmpc-alarm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-alarm/ChangeLog,v 1.21 2011/03/19 15:58:05 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-alarm/ChangeLog,v 1.22 2011/08/20 11:28:47 angelos Exp $
+
+*gmpc-alarm-11.8.16 (20 Aug 2011)
+
+  20 Aug 2011; Christoph Mende <angelos@gentoo.org> +gmpc-alarm-11.8.16.ebuild:
+  Version bump
 
   19 Mar 2011; Christoph Mende <angelos@gentoo.org> gmpc-alarm-0.20.0.ebuild:
   Remove .la file
