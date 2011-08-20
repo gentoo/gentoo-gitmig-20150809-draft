@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/resourceproto
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/resourceproto/ChangeLog,v 1.51 2011/07/30 11:19:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/resourceproto/ChangeLog,v 1.52 2011/08/20 15:55:26 jer Exp $
+
+  20 Aug 2011; Jeroen Roovers <jer@gentoo.org> resourceproto-1.2.0.ebuild:
+  Stable for HPPA (bug #371857).
 
   30 Jul 2011; Raúl Porcel <armin76@gentoo.org> resourceproto-1.2.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #371857
