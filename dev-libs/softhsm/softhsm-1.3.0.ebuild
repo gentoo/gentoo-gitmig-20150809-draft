@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/softhsm/softhsm-1.2.1.ebuild,v 1.1 2011/06/02 10:24:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/softhsm/softhsm-1.3.0.ebuild,v 1.1 2011/08/20 14:18:51 scarabeus Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ LICENSE="BSD"
 
 RDEPEND="
 	dev-db/sqlite:3
-	>=dev-libs/botan-1.8.10[threads]
+	>=dev-libs/botan-1.10.1[threads]
 "
 DEPEND="${RDEPEND}"
 
@@ -24,6 +24,7 @@ DOCS=( AUTHORS NEWS README )
 src_configure() {
 	econf \
 		--disable-static \
+		--with-botan="${EPREFIX}/usr/" \
 		$(use_enable amd64 64bit) \
 		$(use debug && echo "--with-loglevel=4")
 }
