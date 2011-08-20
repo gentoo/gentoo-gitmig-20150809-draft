@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/botan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.70 2011/07/08 11:11:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.71 2011/08/20 14:11:55 scarabeus Exp $
+
+*botan-1.10.1 (20 Aug 2011)
+
+  20 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> +botan-1.10.1.ebuild:
+  Version bump botan. Used by softhsm.
 
   08 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> botan-1.8.11.ebuild:
   Convert from "useq" to "use".
