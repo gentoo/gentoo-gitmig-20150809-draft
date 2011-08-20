@@ -7,6 +7,7 @@
 	<name>Christoph Mende</name>
 </maintainer>
 <use>
-	<flag name='xspf'>Enable support for reading and saving XSPF playlists</flag>
+	<flag name="unique">Enable single instance support using <pkg>dev-libs/libunique</pkg></flag>
+	<flag name="xspf">Enable support for reading and saving XSPF playlists</flag>
 </use>
 </pkgmetadata>
