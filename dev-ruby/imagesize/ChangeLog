@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/imagesize
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/imagesize/ChangeLog,v 1.6 2011/07/21 10:37:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/imagesize/ChangeLog,v 1.7 2011/08/20 12:45:01 graaff Exp $
+
+  20 Aug 2011; Hans de Graaff <graaff@gentoo.org> -imagesize-0.1.1.ebuild:
+  Remove old version.
 
   21 Jul 2011; Hans de Graaff <graaff@gentoo.org> imagesize-0.1.1-r1.ebuild:
   Move stable keywords forward since the only change is the eclass installing

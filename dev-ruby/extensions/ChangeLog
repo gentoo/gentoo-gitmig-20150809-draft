@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/extensions
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/extensions/ChangeLog,v 1.10 2011/07/21 08:29:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/extensions/ChangeLog,v 1.11 2011/08/20 12:44:18 graaff Exp $
+
+  20 Aug 2011; Hans de Graaff <graaff@gentoo.org> -extensions-0.6.0.ebuild:
+  Remove old version.
 
   21 Jul 2011; Hans de Graaff <graaff@gentoo.org> extensions-0.6.0-r1.ebuild:
   Move stable keywords forward since the only change is the eclass installing

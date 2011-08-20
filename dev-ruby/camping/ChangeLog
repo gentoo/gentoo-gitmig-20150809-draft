@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/camping
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/camping/ChangeLog,v 1.22 2011/07/23 10:51:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/camping/ChangeLog,v 1.23 2011/08/20 12:42:23 graaff Exp $
+
+  20 Aug 2011; Hans de Graaff <graaff@gentoo.org> -camping-1.5.ebuild:
+  Remove old version.
 
   23 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> camping-1.5.ebuild:
   Drop stable ppc64 keyword
