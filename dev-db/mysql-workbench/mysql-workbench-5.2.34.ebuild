@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.34.ebuild,v 1.2 2011/08/20 18:51:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.34.ebuild,v 1.3 2011/08/20 19:10:17 graaff Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
+PYTHON_DEPEND=2
 
 inherit gnome2 eutils flag-o-matic python autotools
 
@@ -17,8 +18,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug doc nls readline static-libs"
-
-PYTHON_DEPEND=2
 
 CDEPEND="dev-db/sqlite:3
 	>=x11-libs/gtk+-2.6:2

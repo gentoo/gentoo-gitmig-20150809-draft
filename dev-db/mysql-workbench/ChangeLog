@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql-workbench
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.40 2011/08/20 18:51:32 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.41 2011/08/20 19:10:17 graaff Exp $
+
+  20 Aug 2011; Hans de Graaff <graaff@gentoo.org>
+  mysql-workbench-5.2.34.ebuild:
+  Set PYTHON_DEPEND before inheriting.
 
   20 Aug 2011; Hans de Graaff <graaff@gentoo.org>
   mysql-workbench-5.2.34.ebuild:
