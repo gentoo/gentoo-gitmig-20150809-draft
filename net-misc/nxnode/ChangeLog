@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nxnode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.63 2011/08/08 14:41:53 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.64 2011/08/20 04:24:29 phajdan.jr Exp $
+
+  20 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> nxnode-3.5.0.4.ebuild:
+  x86 stable wrt security bug #378345
 
 *nxnode-3.5.0.4 (08 Aug 2011)
 

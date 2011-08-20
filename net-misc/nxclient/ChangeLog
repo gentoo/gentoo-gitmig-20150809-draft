@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nxclient
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.92 2011/06/29 09:06:47 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.93 2011/08/20 04:23:28 phajdan.jr Exp $
+
+  20 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> nxclient-3.5.0.7.ebuild:
+  x86 stable wrt security bug #378345
 
 *nxclient-3.5.0.7 (28 Jun 2011)
 
