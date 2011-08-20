@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.193 2011/08/20 20:07:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.194 2011/08/20 20:10:25 jer Exp $
+
+*shorewall-4.4.22.3 (20 Aug 2011)
+
+  20 Aug 2011; Jeroen Roovers <jer@gentoo.org> +shorewall-4.4.22.3.ebuild:
+  Version bump.
 
   20 Aug 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Remove useless maintainer tag.
