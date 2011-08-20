@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/noip-updater
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.39 2011/07/20 14:41:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/noip-updater/ChangeLog,v 1.40 2011/08/20 13:20:33 polynomial-c Exp $
+
+  20 Aug 2011; Lars Wendler <polynomial-c@gentoo.org> files/noip2.start:
+  non-maintainer commit: Removed --oknodo from init script. Thanks to Marcin
+  Mirosław who reported this in bug #379437.
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #34534

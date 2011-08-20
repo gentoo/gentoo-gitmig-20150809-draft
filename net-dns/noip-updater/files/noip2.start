@@ -23,7 +23,7 @@ start() {
 
 stop() {
 	ebegin "Stopping noip"
-	start-stop-daemon --oknodo --quiet --stop -x /usr/sbin/noip2
+	start-stop-daemon --quiet --stop -x /usr/sbin/noip2
 	noip_ecode=$?
 	eend $noip_ecode "Error stopping the noip daemon, error $noip_ecode"
 	checkconfig || return 1
