@@ -6,6 +6,9 @@
 <name>Thomas Kahle</name>
 </maintainer>
 <herd>sci-mathematics</herd>
+<use>
+  <flag name="libpolymake">Build the polymake library to build applications using the C++ interface.</flag>
+</use>
 <longdescription lang="en">
 Polymake started out as a tool for the algorithmic treatment of convex
 polyhedra. By now it also deals with finite simplicial complexes,
