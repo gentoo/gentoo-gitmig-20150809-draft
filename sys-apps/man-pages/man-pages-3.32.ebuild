@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-3.32.ebuild,v 1.1 2010/12/05 18:23:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-3.32.ebuild,v 1.2 2011/08/20 17:49:23 vapier Exp $
 
 EAPI=3
 
@@ -19,7 +19,8 @@ IUSE_LINGUAS=" cs da de fr it ja nl pl ro ru zh_CN"
 IUSE="nls ${IUSE_LINGUAS// / linguas_}"
 RESTRICT="binchecks"
 
-RDEPEND="virtual/man"
+RDEPEND="virtual/man
+	!<dev-libs/libaio-0.3.109-r2" #341953
 PDEPEND="nls? (
 	linguas_cs? ( app-i18n/man-pages-cs )
 	linguas_da? ( app-i18n/man-pages-da )
