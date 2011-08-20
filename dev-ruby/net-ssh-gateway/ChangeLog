@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/net-ssh-gateway
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh-gateway/ChangeLog,v 1.21 2011/07/22 20:55:24 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh-gateway/ChangeLog,v 1.22 2011/08/20 17:25:53 graaff Exp $
+
+  20 Aug 2011; Hans de Graaff <graaff@gentoo.org>
+  -net-ssh-gateway-1.0.1.ebuild:
+  Remove old version.
 
   22 Jul 2011; Mark Loeser <halcy0n@gentoo.org>
   net-ssh-gateway-1.0.1-r1.ebuild:

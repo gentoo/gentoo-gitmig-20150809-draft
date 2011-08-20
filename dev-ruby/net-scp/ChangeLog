@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/net-scp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/ChangeLog,v 1.28 2011/07/22 20:56:32 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/ChangeLog,v 1.29 2011/08/20 17:23:46 graaff Exp $
+
+  20 Aug 2011; Hans de Graaff <graaff@gentoo.org> -net-scp-1.0.2.ebuild:
+  Remove old version.
 
   22 Jul 2011; Mark Loeser <halcy0n@gentoo.org> net-scp-1.0.4.ebuild:
   Stable for ppc/ppc64; bug #321103

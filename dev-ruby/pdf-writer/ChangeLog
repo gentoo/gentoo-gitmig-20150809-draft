@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/pdf-writer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-writer/ChangeLog,v 1.22 2011/08/07 07:09:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-writer/ChangeLog,v 1.23 2011/08/20 17:26:50 graaff Exp $
+
+  20 Aug 2011; Hans de Graaff <graaff@gentoo.org> -pdf-writer-1.1.8.ebuild:
+  Remove old version.
 
   07 Aug 2011; Hans de Graaff <graaff@gentoo.org> pdf-writer-1.1.8-r1.ebuild:
   Move stable keywords forward since only the eclass installing the files
