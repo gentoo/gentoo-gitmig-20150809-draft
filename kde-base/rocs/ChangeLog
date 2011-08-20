@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/rocs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/ChangeLog,v 1.43 2011/08/15 20:23:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/ChangeLog,v 1.44 2011/08/20 20:52:49 dilfridge Exp $
+
+  20 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> rocs-4.7.0.ebuild:
+  Restrict tests, bug 376909
 
   15 Aug 2011; Markus Meier <maekke@gentoo.org> rocs-4.6.5.ebuild:
   x86 stable, bug #377465

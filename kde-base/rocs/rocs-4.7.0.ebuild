@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/rocs-4.7.0.ebuild,v 1.1 2011/07/27 14:04:34 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/rocs-4.7.0.ebuild,v 1.2 2011/08/20 20:52:49 dilfridge Exp $
 
 EAPI=4
 
@@ -16,3 +16,6 @@ DEPEND="
 	>=dev-cpp/eigen-2.0.3:2
 "
 RDEPEND=""
+
+RESTRICT="test"
+# bug 376909
