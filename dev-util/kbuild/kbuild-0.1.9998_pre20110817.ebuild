@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/kbuild-0.1.9998_pre20110817.ebuild,v 1.1 2011/08/17 23:26:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/kbuild-0.1.9998_pre20110817.ebuild,v 1.2 2011/08/20 13:09:50 polynomial-c Exp $
 
 EAPI=2
 
@@ -19,7 +19,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="sys-devel/gettext
+DEPEND="sys-devel/flex
+	sys-devel/gettext
 	virtual/yacc"
 RDEPEND=""
 

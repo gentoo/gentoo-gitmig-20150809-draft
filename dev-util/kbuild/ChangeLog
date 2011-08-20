@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kbuild
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.19 2011/08/17 23:26:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.20 2011/08/20 13:09:50 polynomial-c Exp $
+
+  20 Aug 2011; Lars Wendler <polynomial-c@gentoo.org>
+  kbuild-0.1.9998_pre20110817.ebuild:
+  Added sys-devel/flex to DEPEND (bug #379889).
 
 *kbuild-0.1.9998_pre20110817 (17 Aug 2011)
 
