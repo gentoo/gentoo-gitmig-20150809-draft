@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-2.5.93.ebuild,v 1.1 2011/08/20 08:35:44 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-2.5.93.ebuild,v 1.2 2011/08/20 08:39:23 ali_bush Exp $
 
 EAPI=2
 
@@ -72,11 +72,10 @@ pkg_postinst() {
 	fdo-mime_mime_database_update
 	fdo-mime_desktop_database_update
 	elog "These optional plugins currently exist:"
-	elog " - dev-util/monodevelop-boo"
+	elog " - dev-util/monodevelop-python"
 	elog " - dev-util/monodevelop-java"
 	elog " - dev-util/monodevelop-database"
 	elog " - dev-util/monodevelop-debugger-gdb"
-	elog " - dev-util/monodevelop-debugger-mdb"
 	elog " - dev-util/monodevelop-vala"
 	elog "To enable their (self-explanatory) functionality, just emerge them."
 	elog "Read more here:"
