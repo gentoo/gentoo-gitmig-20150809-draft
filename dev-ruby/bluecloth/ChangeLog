@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/bluecloth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.52 2011/08/07 14:09:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bluecloth/ChangeLog,v 1.53 2011/08/20 12:40:25 graaff Exp $
+
+  20 Aug 2011; Hans de Graaff <graaff@gentoo.org> -bluecloth-2.0.5.ebuild,
+  -bluecloth-2.0.11.ebuild:
+  Remove old versions.
 
   07 Aug 2011; Raúl Porcel <armin76@gentoo.org> bluecloth-2.0.5.ebuild,
   bluecloth-2.0.7.ebuild, bluecloth-2.0.11.ebuild, bluecloth-2.1.0.ebuild:
