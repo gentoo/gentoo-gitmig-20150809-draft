@@ -1,14 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ruby_parser-2.1.0.ebuild,v 1.1 2011/08/20 09:10:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ruby_parser-2.1.0.ebuild,v 1.2 2011/08/20 09:18:53 graaff Exp $
 
 EAPI=2
 
-USE_RUBY="ruby18 ree18"
-
-# Don't run tests, since they require the testcase from ParseTree;
-# ParseTree _is_ the testcase for ruby_parse
-RUBY_FAKEGEM_TASK_TEST=""
+USE_RUBY="ruby18 ree18 jruby"
 
 RUBY_FAKEGEM_TASK_DOC="docs"
 RUBY_FAKEGEM_DOCDIR="doc"
@@ -26,6 +22,7 @@ IUSE=""
 
 ruby_add_rdepend ">=dev-ruby/sexp-processor-3.0.1"
 ruby_add_bdepend "doc? ( >=dev-ruby/hoe-2.9.1 )"
+ruby_add_bdepend "test? ( virtual/ruby-test-unit >=dev-ruby/sexp-processor-3.0.6 )"
 
 all_ruby_prepare() {
 	# Remove reference to perforce method that is not in a released
