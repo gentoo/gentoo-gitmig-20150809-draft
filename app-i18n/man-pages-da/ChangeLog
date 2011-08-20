@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/man-pages-da
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-da/ChangeLog,v 1.4 2010/10/19 09:16:25 leio Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-da/ChangeLog,v 1.5 2011/08/20 18:16:52 mattst88 Exp $
+
+*man-pages-da-0.1.2 (20 Aug 2011)
+
+  20 Aug 2011; Matt Turner <mattst88@gentoo.org> +man-pages-da-0.1.2.ebuild:
+  Version bump, noticed with euscan.
 
   19 Oct 2010; Mart Raudsepp <leio@gentoo.org> man-pages-da-0.1.1.ebuild:
   Drop to ~mips
