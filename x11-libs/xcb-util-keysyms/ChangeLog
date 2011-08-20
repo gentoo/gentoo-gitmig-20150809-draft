@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/xcb-util-keysyms
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-keysyms/ChangeLog,v 1.7 2011/07/30 11:09:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xcb-util-keysyms/ChangeLog,v 1.8 2011/08/20 15:48:34 jer Exp $
+
+  20 Aug 2011; Jeroen Roovers <jer@gentoo.org> xcb-util-keysyms-0.3.8.ebuild:
+  Stable for HPPA (bug #371857).
 
   30 Jul 2011; Raúl Porcel <armin76@gentoo.org> xcb-util-keysyms-0.3.8.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #371857

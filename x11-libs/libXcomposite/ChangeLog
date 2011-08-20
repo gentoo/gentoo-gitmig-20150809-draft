@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXcomposite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcomposite/ChangeLog,v 1.88 2011/07/30 10:50:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXcomposite/ChangeLog,v 1.89 2011/08/20 15:52:45 jer Exp $
+
+  20 Aug 2011; Jeroen Roovers <jer@gentoo.org> libXcomposite-0.4.3-r1.ebuild:
+  Stable for HPPA (bug #371857).
 
   30 Jul 2011; Raúl Porcel <armin76@gentoo.org> libXcomposite-0.4.3-r1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #371857
