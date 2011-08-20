@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.2.1.ebuild,v 1.2 2011/08/17 16:01:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.2.1.ebuild,v 1.3 2011/08/20 00:28:18 hwoarang Exp $
 
 EAPI="4"
 LANGS="cs de es fr hu it ja pl ru sl uk zh_CN"
@@ -20,7 +20,8 @@ KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE="bazaar bineditor bookmarks +cmake cvs debug doc examples fakevim git
 	mercurial perforce +qml qtscript rss subversion"
 QTVER="4.7.1:4"
-DEPEND=">=x11-libs/qt-assistant-${QTVER}[doc?]
+DEPEND="app-arch/unzip
+	>=x11-libs/qt-assistant-${QTVER}[doc?]
 	>=x11-libs/qt-sql-${QTVER}
 	>=x11-libs/qt-svg-${QTVER}
 	debug? ( >=x11-libs/qt-test-${QTVER} )
