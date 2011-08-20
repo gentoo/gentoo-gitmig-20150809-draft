@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/libsmbios-2.2.26.ebuild,v 1.3 2011/08/20 21:41:23 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/libsmbios-2.2.28.ebuild,v 1.1 2011/08/20 21:41:23 polynomial-c Exp $
 
 EAPI=2
 PYTHON_DEPEND="python? *:2.4"
@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 	test? ( >=dev-util/cppunit-1.9.6 )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-2.2.26-gcc46.patch \
+	epatch "${FILESDIR}"/${PN}-2.2.28-gcc46.patch \
 		"${FILESDIR}"/${PN}-fix-pie.patch
 	rm pkg/py-compile
 	ln -s "$(type -P true)" pkg/py-compile || die
