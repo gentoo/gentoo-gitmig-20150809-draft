@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.3.1-r1.ebuild,v 1.5 2011/04/02 17:45:50 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.3.1-r1.ebuild,v 1.6 2011/08/20 08:08:34 aballier Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -47,7 +47,6 @@ RDEPEND="!dedicated? (
 DEPEND="${RDEPEND}
 	doc? (
 		virtual/latex-base
-		dev-tex/pdftex
 		dev-texlive/texlive-latexextra
 	)"
 
