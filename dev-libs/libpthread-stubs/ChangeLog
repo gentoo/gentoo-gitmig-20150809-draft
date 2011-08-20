@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpthread-stubs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpthread-stubs/ChangeLog,v 1.23 2011/07/30 10:29:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpthread-stubs/ChangeLog,v 1.24 2011/08/20 15:44:16 jer Exp $
+
+  20 Aug 2011; Jeroen Roovers <jer@gentoo.org> libpthread-stubs-0.3.ebuild:
+  Stable for HPPA (bug #371857).
 
   30 Jul 2011; Raúl Porcel <armin76@gentoo.org> libpthread-stubs-0.3.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #371857
