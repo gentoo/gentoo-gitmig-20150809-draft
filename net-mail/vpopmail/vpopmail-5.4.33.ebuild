@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.33.ebuild,v 1.2 2011/08/09 13:02:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.33.ebuild,v 1.3 2011/08/20 07:28:13 eras Exp $
 
 EAPI=4
 
@@ -65,14 +65,16 @@ src_prepare() {
 src_configure() {
 	vpopmail_set_homedir
 
+	local authopts
 	if use mysql; then
-		authopts=" \
-			--enable-auth-module=mysql \
-			--enable-libdir=/usr/lib/mysql \
-			--enable-sql-logging \
-			--enable-valias \
-			--disable-mysql-replication \
-			--enable-mysql-limits"
+		authopts="$(mysql_config --include)"
+		authopts="--enable-incdir=${authopts#-I}"
+		authopts+=" --enable-auth-module=mysql"
+		authopts+="	--enable-libdir=/usr/$(get_libdir)/mysql"
+		authopts+="	--enable-sql-logging"
+		authopts+=" --enable-valias"
+		authopts+="	--disable-mysql-replication"
+		authopts+="	--enable-mysql-limits"
 	else
 		authopts="--enable-auth-module=cdb"
 	fi
