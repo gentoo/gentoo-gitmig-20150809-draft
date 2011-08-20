@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.199 2011/08/18 02:48:43 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.200 2011/08/20 15:46:21 lack Exp $
 
 # Authors:
 # 	Jim Ramsay <lack@gentoo.org>
@@ -359,7 +359,7 @@ END
 
 	# Bug #378107 - Build properly with >=perl-core/ExtUtils-ParseXS-3.20.0
 	if version_is_at_least 7.3; then
-		sed -i 's:\$(PERLLIB)/ExtUtils/xsubpp:/usr/bin/xsubpp:'	\
+		sed -i "s:\\\$(PERLLIB)/ExtUtils/xsubpp:${EPREFIX}/usr/bin/xsubpp:"	\
 			"${S}"/src/Makefile || die 'sed for ExtUtils-ParseXS failed'
 	fi
 }
