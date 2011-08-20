@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.5.12-r1.ebuild,v 1.1 2011/08/20 13:00:20 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.5.12-r1.ebuild,v 1.2 2011/08/20 19:06:47 maksbotan Exp $
 
 EAPI=3
 
@@ -64,7 +64,7 @@ src_configure(){
 		$(use_with selinux)
 		$(use_with selinux semanage)
 		--with-libnl
-		--with-ldb-lib-dir="${EPREFIX}"/usr/$(get_libdir)/ldb/modules/
+		--with-ldb-lib-dir="${EPREFIX}"/usr/$(get_libdir)/ldb/modules/ldb
 		$(use_with python python-bindings)
 		--without-nscd
 		$(use_enable locator krb5-locator-plugin)
@@ -78,7 +78,7 @@ src_install(){
 	autotools-utils_src_install
 
 	rm "${ED}/$(get_libdir)/"libnss_sss.la || die
-	rm "${ED}/usr/$(get_libdir)/ldb/modules/ldb/"*.la || die
+	rm "${ED}/usr/$(get_libdir)/"ldb/modules/ldb/*.la || die
 
 	insinto /etc/sssd
 	insopts -m600
