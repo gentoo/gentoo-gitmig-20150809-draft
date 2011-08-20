@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/testtools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.30 2011/07/03 14:50:32 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.31 2011/08/20 09:04:48 fauli Exp $
+
+  20 Aug 2011; Christian Faulhammer <fauli@gentoo.org> testtools-0.9.11.ebuild:
+  enable Python APIs again as reported in bug 379755 by Martin von Gagern
 
 *testtools-0.9.11 (03 Jul 2011)
 
