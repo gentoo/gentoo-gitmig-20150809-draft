@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.5.0.ebuild,v 1.7 2010/06/03 09:51:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.5.0.ebuild,v 1.8 2011/08/20 14:59:00 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -51,7 +51,7 @@ src_configure() {
 	egamesconf \
 		--disable-dependency-tracking \
 		--enable-gl \
-		$(use_enable x86 i386-asm) \
+		--disable-i386-asm \
 		--disable-cpu-opt \
 		--with-waddir="${GAMES_DATADIR}/doom-data"
 }
@@ -73,7 +73,7 @@ pkg_postinst() {
 	elog
 	elog "doom1.wad is the shareware demo wad consisting of 1 episode,"
 	elog "and doom.wad is the full Doom 1 set of 3 episodes"
-	elog "(or 4 in the Final Doom wad)."
+	elog "(or 4 in the Ultimate Doom wad)."
 	elog
 	elog "You can even emerge doom-data and/or freedoom to play for free."
 }
