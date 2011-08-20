@@ -1,6 +1,12 @@
 # ChangeLog for net-firewall/shorewall-lite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.86 2011/08/06 15:46:48 constanze Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-lite/ChangeLog,v 1.87 2011/08/20 23:10:58 jer Exp $
+
+*shorewall-lite-4.4.22.3 (20 Aug 2011)
+
+  20 Aug 2011; Jeroen Roovers <jer@gentoo.org> +shorewall-lite-4.4.22.3.ebuild:
+  Version bump. Document funky src_compile(). Exchange R/DEPEND as DEPEND is
+  not needed.
 
 *shorewall-lite-4.4.22.1 (06 Aug 2011)
 
