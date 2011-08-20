@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.0.12.ebuild,v 1.3 2011/07/22 16:58:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.0.12.ebuild,v 1.4 2011/08/20 21:06:18 polynomial-c Exp $
 
 EAPI=2
 
@@ -29,7 +29,7 @@ RDEPEND="X? ( ~x11-drivers/xf86-video-virtualbox-${PV}
 			 x11-libs/libSM
 			 x11-libs/libICE )"
 DEPEND="${RDEPEND}
-		>=dev-util/kbuild-0.1.5-r1
+		=dev-util/kbuild-0.1.5*
 		>=dev-lang/yasm-0.6.2
 		sys-devel/bin86
 		sys-devel/dev86
