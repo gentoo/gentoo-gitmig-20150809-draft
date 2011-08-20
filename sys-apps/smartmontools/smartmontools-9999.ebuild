@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-9999.ebuild,v 1.6 2011/07/29 08:27:43 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-9999.ebuild,v 1.7 2011/08/20 04:12:28 vapier Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ if [[ ${PV} == "9999" ]] ; then
 	SRC_URI=""
 else
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-	KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd ~x86-linux"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-linux"
 fi
 
 DESCRIPTION="Self-Monitoring, Analysis and Reporting Technology System (S.M.A.R.T.) monitoring tools"
@@ -22,19 +22,9 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="static minimal caps"
 
-RDEPEND="!minimal? (
-		virtual/mailx
-		caps? ( sys-libs/libcap-ng )
-	)"
-DEPEND=""
-
-src_unpack() {
-	if [[ ${PV} == "9999" ]] ; then
-		subversion_src_unpack
-	else
-		unpack ${A}
-	fi
-}
+DEPEND="!minimal? ( caps? ( sys-libs/libcap-ng ) )"
+RDEPEND="${DEPEND}
+	!minimal? ( virtual/mailx )"
 
 src_prepare() {
 	if [[ ${PV} == "9999" ]] ; then

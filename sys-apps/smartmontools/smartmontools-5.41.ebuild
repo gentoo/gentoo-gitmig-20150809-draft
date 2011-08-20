@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.41.ebuild,v 1.3 2011/07/29 08:27:43 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.41.ebuild,v 1.4 2011/08/20 04:12:28 vapier Exp $
 
 EAPI="3"
 
@@ -22,19 +22,9 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="static minimal caps"
 
-RDEPEND="!minimal? (
-		virtual/mailx
-		caps? ( sys-libs/libcap-ng )
-	)"
-DEPEND=""
-
-src_unpack() {
-	if [[ ${PV} == "9999" ]] ; then
-		subversion_src_unpack
-	else
-		unpack ${A}
-	fi
-}
+DEPEND="!minimal? ( caps? ( sys-libs/libcap-ng ) )"
+RDEPEND="${DEPEND}
+	!minimal? ( virtual/mailx )"
 
 src_prepare() {
 	if [[ ${PV} == "9999" ]] ; then

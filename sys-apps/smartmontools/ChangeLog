@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/smartmontools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.103 2011/07/29 08:27:43 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.104 2011/08/20 04:12:28 vapier Exp $
+
+  20 Aug 2011; Mike Frysinger <vapier@gentoo.org> smartmontools-5.41.ebuild,
+  smartmontools-9999.ebuild:
+  Add libcap-ng to DEPEND too #379401.
 
   29 Jul 2011; Zac Medico <zmedico@gentoo.org> smartmontools-5.41.ebuild,
   smartmontools-9999.ebuild:
