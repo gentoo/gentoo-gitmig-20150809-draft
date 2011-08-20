@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.70 2011/07/18 09:08:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.71 2011/08/20 21:43:25 dilfridge Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -439,7 +439,7 @@ enable_cmake-utils_src_test() {
 	[[ -e CTestTestfile.cmake ]] || { echo "No tests found. Skipping."; return 0 ; }
 
 	[[ -n ${TEST_VERBOSE} ]] && ctestargs="--extra-verbose --output-on-failure"
-	ctest ${ctestargs} "$@" || die "Tests failed."
+	ctest ${ctestargs} "$@" || die "Tests failed. When you file a bug, please attach the following file: \n\t${CMAKE_BUILD_DIR}/Testing/Temporary/LastTest.log"
 	popd > /dev/null
 }
 
