@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/kaya/kaya-0.4.ebuild,v 1.2 2011/01/31 15:54:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/kaya/kaya-0.4.ebuild,v 1.3 2011/08/20 19:05:34 dilfridge Exp $
 
 EAPI=3
 USE_RUBY="ruby18"
@@ -20,10 +20,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
+DEPEND=""
 RDEPEND=""
-ruby_add_rdepend "kde-base/kdebindings-ruby"
+ruby_add_rdepend "|| ( kde-base/kdebindings-ruby kde-base/korundum )"
 ruby_add_rdepend "dev-ruby/builder"
-DEPEND="${RDEPEND}"
 
 pkg_setup() {
 	ruby-ng_pkg_setup
