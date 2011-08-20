@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libindicate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.17 2011/08/19 19:18:35 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.18 2011/08/20 10:39:30 jlec Exp $
+
+  20 Aug 2011; Justin Lecher <jlec@gentoo.org> libindicate-0.4.4-r2.ebuild,
+  metadata.xml:
+  Fix for failed detection of vapigen with USE=introspection, #379641
 
   19 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   libindicate-0.4.4-r1.ebuild, libindicate-0.4.4-r2.ebuild:

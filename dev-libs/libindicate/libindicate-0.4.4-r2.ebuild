@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.4.4-r2.ebuild,v 1.4 2011/08/19 19:18:35 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.4.4-r2.ebuild,v 1.5 2011/08/20 10:39:30 jlec Exp $
 
 EAPI=2
 
@@ -60,6 +60,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-mono-parallel-make.patch"
 	# Drop -Werror in a release
 	sed -e 's:-Werror::g' -i libindicate/Makefile.am libindicate-gtk/Makefile.am || die "sed failed"
+	# Find slotted vapigen
+	sed -e 's:vapigen:vapigen-0.12:g' -i configure.ac || die
 	eautoreconf
 }
 
