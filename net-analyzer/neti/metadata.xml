@@ -2,9 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-<maintainer>
-  <email>netmon@gentoo.org</email>
-    <name>Netmon herd</name>
-</maintainer>
-<longdescription></longdescription>
 </pkgmetadata>
