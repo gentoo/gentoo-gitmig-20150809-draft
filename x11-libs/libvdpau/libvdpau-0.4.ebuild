@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/libvdpau-0.4.ebuild,v 1.3 2010/07/07 12:24:27 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/libvdpau-0.4.ebuild,v 1.4 2011/08/20 08:10:27 aballier Exp $
 
 EAPI=2
 inherit multilib
@@ -32,7 +32,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto
 	doc? ( app-doc/doxygen
 		media-gfx/graphviz
-		dev-tex/pdftex )"
+		virtual/latex-base )"
 
 src_configure() {
 	econf \
