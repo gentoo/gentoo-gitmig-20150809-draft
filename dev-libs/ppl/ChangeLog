@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/ppl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.35 2011/03/16 01:02:49 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.36 2011/08/20 09:13:02 chithanh Exp $
+
+  20 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  ppl-0.11.2.ebuild:
+  keyword ~sparc-solaris
 
   16 Mar 2011; Ryan Hill <dirtyepic@gentoo.org> -ppl-0.11.1.ebuild:
   Remove broken version.
