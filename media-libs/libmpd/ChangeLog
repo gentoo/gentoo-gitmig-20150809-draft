@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/ChangeLog,v 1.60 2011/07/17 16:02:12 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/ChangeLog,v 1.61 2011/08/20 10:58:39 angelos Exp $
+
+*libmpd-11.8.17 (20 Aug 2011)
+
+  20 Aug 2011; Christoph Mende <angelos@gentoo.org> +libmpd-11.8.17.ebuild:
+  Version bump
 
 *libmpd-9999 (17 Jul 2011)
 
