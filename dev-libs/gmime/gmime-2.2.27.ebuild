@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.2.27.ebuild,v 1.7 2011/08/13 16:45:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.2.27.ebuild,v 1.8 2011/08/20 18:34:13 jer Exp $
 
 EAPI="4"
 GNOME_TARBALL_SUFFIX="bz2"
@@ -15,7 +15,7 @@ SRC_URI="${SRC_URI} http://dev.gentoo.org/~pacho/gnome/gmime-sharp.snk"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc mono"
 
 RDEPEND=">=dev-libs/glib-2:2
