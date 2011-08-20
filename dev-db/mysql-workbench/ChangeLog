@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql-workbench
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.38 2011/05/30 19:15:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.39 2011/08/20 17:48:47 graaff Exp $
+
+  20 Aug 2011; Hans de Graaff <graaff@gentoo.org>
+  -mysql-workbench-5.2.31.ebuild, -mysql-workbench-5.2.33.ebuild:
+  Remove old versions.
 
 *mysql-workbench-5.2.34 (30 May 2011)
 
