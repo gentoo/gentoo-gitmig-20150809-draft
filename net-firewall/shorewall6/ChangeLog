@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/shorewall6
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/ChangeLog,v 1.40 2011/08/06 15:47:29 constanze Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6/ChangeLog,v 1.41 2011/08/20 23:16:13 jer Exp $
+
+*shorewall6-4.4.22.3 (20 Aug 2011)
+
+  20 Aug 2011; Jeroen Roovers <jer@gentoo.org> +shorewall6-4.4.22.3.ebuild:
+  Version bump. Exchange R/DEPEND. Use keepdir, not dodir.
 
 *shorewall6-4.4.22.1 (06 Aug 2011)
 
