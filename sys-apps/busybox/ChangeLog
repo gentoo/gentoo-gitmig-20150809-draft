@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.280 2011/08/19 17:44:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.281 2011/08/20 12:59:26 gmsoft Exp $
+
+  20 Aug 2011; Guy Martin <gmsoft@gentoo.org> busybox-1.19.0.ebuild:
+  hppa stable wrt bug #379857
 
   19 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> busybox-1.19.0.ebuild:
   x86 stable wrt security bug #379857
