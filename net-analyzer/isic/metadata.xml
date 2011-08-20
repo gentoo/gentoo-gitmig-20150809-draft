@@ -2,9 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-<maintainer>
-	<email>netmon@gentoo.org</email>
-	<name>Network Monitoring Herd</name>
-</maintainer>
 <longdescription>IP Stack Integrity Checker</longdescription>
 </pkgmetadata>
