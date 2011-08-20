@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/monodevelop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.88 2011/01/29 17:06:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.89 2011/08/20 08:35:44 ali_bush Exp $
+
+*monodevelop-2.5.93 (20 Aug 2011)
+
+  20 Aug 2011; Alistair Bush <ali_bush@gentoo.org> +monodevelop-2.5.93.ebuild:
+  Version Bump.
 
   29 Jan 2011; Markos Chandras <hwoarang@gentoo.org> monodevelop-2.4.2.ebuild:
   Stable on amd64 wrt bug #352808

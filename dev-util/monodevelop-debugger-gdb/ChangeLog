@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/monodevelop-debugger-gdb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-debugger-gdb/ChangeLog,v 1.10 2010/11/27 16:09:35 loki_val Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-debugger-gdb/ChangeLog,v 1.11 2011/08/20 08:37:06 ali_bush Exp $
+
+*monodevelop-debugger-gdb-2.5.93 (20 Aug 2011)
+
+  20 Aug 2011; Alistair Bush <ali_bush@gentoo.org>
+  +monodevelop-debugger-gdb-2.5.93.ebuild:
+  Version Bump.
 
   27 Nov 2010; Peter Alfredsen <loki_val@gentoo.org>
   monodevelop-debugger-gdb-2.4.ebuild:
