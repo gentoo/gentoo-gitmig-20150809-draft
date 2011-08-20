@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libssh2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.37 2011/05/10 20:00:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.38 2011/08/20 23:04:44 jer Exp $
+
+*libssh2-1.2.9 (20 Aug 2011)
+
+  20 Aug 2011; Jeroen Roovers <jer@gentoo.org> +libssh2-1.2.9.ebuild:
+  Version bump.
 
 *libssh2-1.2.8-r1 (10 May 2011)
 
