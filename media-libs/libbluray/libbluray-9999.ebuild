@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-9999.ebuild,v 1.5 2011/08/05 22:31:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-9999.ebuild,v 1.6 2011/08/21 06:35:00 radhermit Exp $
 
 EAPI=4
 
@@ -56,6 +56,8 @@ src_configure() {
 	fi
 
 	econf \
+		--disable-debug \
+		--disable-optimizations \
 		$(use_enable java bdjava) \
 		$(use_enable static-libs static) \
 		$(use_enable utils examples) \
