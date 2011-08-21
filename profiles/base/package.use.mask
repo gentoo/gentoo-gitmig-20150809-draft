@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.262 2011/08/19 20:20:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.263 2011/08/21 11:34:57 xarthisius Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -73,10 +73,6 @@ dev-libs/glib introspection
 # PPS should work on all arches, but only keyworded on amd64/x86
 >=net-misc/ntp-4.2.6_p3-r1 parse-clocks
 
-# Alexey Shvetsov <alexxy@gentoo.org> (4 Jul 2011)
-# Mask maui use flag for torque
-sys-cluster/torque maui
-
 # Michał Górny <mgorny@gentoo.org) (23 Jun 2011)
 # Requires masked >=sys-process/audit-2.
 sys-apps/systemd audit
@@ -143,11 +139,6 @@ mail-client/evolution clutter
 # Justin Lecher <jlec@gentoo.org> (17 Nov 2010)
 # Upstream didn't release patches for aria yet
 >=sci-chemistry/cns-1.3 aria
-
-# Dane Smith <c1pher@gentoo.org> (10 Nov 2010)
-# Mask valgrind use flag for net-libs/gnutls as valgrind isn't usable
-# on several of the archs gnutls is stable for.
-net-libs/gnutls valgrind
 
 # Patrick Lauer <patrick@gentoo.org> (15 Sep 2010)
 # Feature broken in dovecot-1, see #337014
