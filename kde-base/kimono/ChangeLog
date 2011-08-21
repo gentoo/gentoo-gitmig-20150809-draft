@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kimono
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kimono/ChangeLog,v 1.1 2011/07/27 14:04:32 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kimono/ChangeLog,v 1.2 2011/08/21 12:37:41 dilfridge Exp $
+
+  21 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> kimono-4.7.0.ebuild:
+  Depend on qyoto[webkit], bug 378601
 
 *kimono-4.7.0 (27 Jul 2011)
 

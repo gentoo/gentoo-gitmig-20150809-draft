@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kimono/kimono-4.7.0.ebuild,v 1.1 2011/07/27 14:04:32 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kimono/kimono-4.7.0.ebuild,v 1.2 2011/08/21 12:37:41 dilfridge Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ IUSE="akonadi debug plasma semantic-desktop"
 
 DEPEND="
 	dev-lang/mono
-	$(add_kdebase_dep qyoto)
+	$(add_kdebase_dep qyoto 'webkit')
 	$(add_kdebase_dep smokeqt)
 	$(add_kdebase_dep smokekde 'akonadi?,semantic-desktop=')
 	plasma? ( $(add_kdebase_dep smokeqt 'webkit') )
