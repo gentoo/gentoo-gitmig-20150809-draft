@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/eschalon-book-1-demo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eschalon-book-1-demo/ChangeLog,v 1.3 2011/02/20 01:18:05 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eschalon-book-1-demo/ChangeLog,v 1.4 2011/08/21 03:38:57 phajdan.jr Exp $
+
+  21 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  eschalon-book-1-demo-106.ebuild:
+  x86 stable wrt bug #379417
 
 *eschalon-book-1-demo-106 (20 Feb 2011)
 
