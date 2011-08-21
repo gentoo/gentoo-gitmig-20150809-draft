@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/libsmbios-2.2.19.ebuild,v 1.4 2010/01/06 17:37:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/libsmbios-2.2.19.ebuild,v 1.5 2011/08/21 06:21:56 polynomial-c Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="http://linux.dell.com/libsmbios/download/libsmbios/${P}/${P}.tar.bz2"
 LICENSE="GPL-2 OSL-2.0"
 SLOT="0"
 KEYWORDS="amd64 ia64 x86"
-IUSE="doc graphviz nls python test"
+IUSE="doc graphviz nls python static-libs test"
 
 RDEPEND="dev-libs/libxml2
 	sys-libs/zlib
@@ -38,7 +38,8 @@ src_configure() {
 		$(use_enable doc doxygen) \
 		$(use_enable graphviz) \
 		$(use_enable nls) \
-		$(use_enable python) || die
+		$(use_enable python) \
+		$(use_enable static-libs static) || die
 }
 
 src_install() {
@@ -51,6 +52,10 @@ src_install() {
 	doins -r src/include/smbios/
 
 	dodoc AUTHORS ChangeLog NEWS README TODO
+
+	if ! use static-libs ; then
+		find "${D}" -name '*.la' -delete || die
+	fi
 }
 
 pkg_postinst() {
