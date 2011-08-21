@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.303 2011/08/19 04:54:48 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.304 2011/08/21 19:15:53 dirtyepic Exp $
+
+  21 Aug 2011; Ryan Hill <dirtyepic@gentoo.org> freetype-2.4.6.ebuild,
+  metadata.xml:
+  Add missing app-arch/bzip2 dependency.
 
   19 Aug 2011; Ryan Hill <dirtyepic@gentoo.org> -freetype-2.4.4.ebuild:
   Remove old.

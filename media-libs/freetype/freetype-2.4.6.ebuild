@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.6.ebuild,v 1.8 2011/08/14 16:10:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.4.6.ebuild,v 1.9 2011/08/21 19:15:53 dirtyepic Exp $
 
 EAPI="4"
 
@@ -15,9 +15,10 @@ SRC_URI="mirror://sourceforge/freetype/${P/_/}.tar.bz2
 LICENSE="FTL GPL-2"
 SLOT="2"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd ~x86-linux"
-IUSE="X auto-hinter bindist debug doc fontforge static-libs utils"
+IUSE="X auto-hinter bindist bzip2 debug doc fontforge static-libs utils"
 
 DEPEND="sys-libs/zlib
+	bzip2? ( app-arch/bzip2 )
 	X?	( x11-libs/libX11
 		  x11-libs/libXau
 		  x11-libs/libXdmcp )"
@@ -73,7 +74,9 @@ src_prepare() {
 src_configure() {
 	append-flags -fno-strict-aliasing
 	type -P gmake &> /dev/null && export GNUMAKE=gmake
-	econf $(use_enable static-libs static)
+	econf \
+		$(use_enable static-libs static) \
+		$(use_with bzip2)
 }
 
 src_compile() {
