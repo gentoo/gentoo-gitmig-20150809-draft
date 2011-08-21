@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/soundconverter-1.5.4.ebuild,v 1.3 2011/08/14 22:39:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/soundconverter-1.5.4.ebuild,v 1.4 2011/08/21 03:24:30 phajdan.jr Exp $
 
 PYTHON_DEPEND="2"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ SRC_URI="mirror://berlios/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="aac flac mp3 vorbis"
 
 # upstream reported, please remove as soon as it's fixed
