@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.87 2011/08/21 17:55:30 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.88 2011/08/21 18:31:32 nirbheek Exp $
+
+  21 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> thunderbird-6.0.ebuild:
+  Port over linguas changes from firefox-6.0, and updated the language pack
+  list
 
 *thunderbird-6.0 (21 Aug 2011)
 
