@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmodplug
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/ChangeLog,v 1.70 2011/08/20 04:01:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmodplug/ChangeLog,v 1.71 2011/08/21 16:33:28 jer Exp $
+
+  21 Aug 2011; Jeroen Roovers <jer@gentoo.org> libmodplug-0.8.8.4.ebuild:
+  Stable for HPPA (bug #379557).
 
   20 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   libmodplug-0.8.8.4.ebuild:
