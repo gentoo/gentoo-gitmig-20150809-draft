@@ -1,0 +1,76 @@
+--- binwalk-0.3.8.orig/src/configure.ac
++++ binwalk-0.3.8/src/configure.ac
+@@ -7,12 +7,12 @@
+ AC_PROG_CC
+ AC_LANG(C)
+ 
+-FILE="file-5.07"
+ CFLAGS="-Wall -I./$FILE/src $CFLAGS"
+-LDFLAGS="-lz $LDFLAGS"
++LDFLAGS="-lz -lmagic $LDFLAGS"
+ 
+ AC_ARG_ENABLE([static], [  --enable-static         perform static build ], [STATIC=y], [STATIC=n])
+ 
++AC_CHECK_LIB([magic],[magic_open],[],[echo "error: missing libmagic library" && exit],[])
+ AC_CHECK_LIB([curl],[curl_easy_init],[],[echo "error: missing libcurl library" && exit],[])
+ 
+ AC_CHECK_HEADERS([arpa/inet.h fcntl.h stdlib.h string.h unistd.h curl/curl.h],[],[echo "error: missing necessary header file" && exit])
+@@ -23,20 +23,16 @@
+ 
+ AC_CHECK_FUNCS([memset strdup strstr strtol],[],AC_MSG_ERROR(["Missing necessary function"]))
+ 
+-dnl curl static libs only required if we're doing a static build
++dnl zlib and curl static libs only required if we're doing a static build
+ if test $STATIC = y
+ then
+ 	CLIBS=$(curl-config --static-libs)
+-	LDFLAGS="-static $CLIBS $LDFLAGS"
++	LDFLAGS="-static -lz $CLIBS $LDFLAGS"
+ else
+ 	LDFLAGS="-lcurl $LDFLAGS"
+ fi
+ 
+-dnl extract and run file utility configure script
+-tar -zxvf $FILE.tar.gz && cd $FILE && ./configure && cd -
+-
+ cp confdefs.h config.h
+ 
+-AC_SUBST(FILE, $FILE)
+ AC_CONFIG_FILES([Makefile])
+ AC_OUTPUT
+--- binwalk-0.3.8.orig/src/Makefile.in
++++ binwalk-0.3.8/src/Makefile.in
+@@ -1,7 +1,6 @@
+ CC=@CC@
+ CFLAGS=@CFLAGS@
+ LDFLAGS=@LDFLAGS@
+-FILE=@FILE@
+ MAGIC=magic
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+@@ -11,16 +10,9 @@
+ 
+ all: binwalk
+ 
+-binwalk: file common.o md5.o mparse.o filter.o update.o
++binwalk: common.o md5.o mparse.o filter.o update.o
+ 	$(CC) $(CFLAGS) -DMAGIC='"$(MAGICPATH).binwalk"' -DMAGIC_CAST='"$(MAGICPATH).bincast"' -DMAGIC_ARCH='"$(MAGICPATH).binarch"' binwalk.c -o binwalk *.o $(LDFLAGS)
+ 
+-file:
+-	(cd $(FILE)/src && make)
+-	(cp $(FILE)/src/*.o . && rm -f file.o)
+-	
+-common.o:
+-	$(CC) $(CFLAGS) -c common.c
+-
+ md5.o:
+ 	$(CC) $(CFLAGS) -c md5.c
+ 
+@@ -43,7 +35,6 @@
+ 	rm -f binwalk *.o
+ 
+ cleanall: clean
+-	rm -rf $(FILE)
+ 	rm -rf config.* *.cache
+ 	rm -f Makefile
+ 
