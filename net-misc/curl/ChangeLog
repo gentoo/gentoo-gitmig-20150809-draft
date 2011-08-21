@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.190 2011/07/23 11:43:48 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.191 2011/08/21 15:40:07 angelos Exp $
+
+  21 Aug 2011; Christoph Mende <angelos@gentoo.org>
+  +files/curl-respect-cflags-3.patch, curl-7.21.7-r2.ebuild:
+  Block USE=gnutls with USE=nss (bug #379541) and fix CFLAGS patch (bug
+  #379533)
 
   23 Jul 2011; Christoph Mende <angelos@gentoo.org> curl-7.21.7.ebuild,
   curl-7.21.7-r2.ebuild, +files/curl-7.21.7-examples-fix-headers.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.21.7-r2.ebuild,v 1.2 2011/07/23 11:43:48 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.21.7-r2.ebuild,v 1.3 2011/08/21 15:40:07 angelos Exp $
 
 EAPI=4
 
@@ -42,13 +42,14 @@ DEPEND="${RDEPEND}
 # one can use wether gnutls or nss if ssl is enabled
 REQUIRED_USE="threads? ( !ares )
 	gnutls? ( ssl )
-	nss? ( ssl )"
+	nss? ( ssl )
+	nss? ( !gnutls )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-7.20.0-strip-ldflags.patch \
 		"${FILESDIR}"/${PN}-7.19.7-test241.patch \
 		"${FILESDIR}"/${PN}-7.18.2-prefix.patch \
-		"${FILESDIR}"/${PN}-respect-cflags-2.patch \
+		"${FILESDIR}"/${PN}-respect-cflags-3.patch \
 		"${FILESDIR}"/${P}-examples-fix-headers.patch
 
 	eprefixify curl-config.in
