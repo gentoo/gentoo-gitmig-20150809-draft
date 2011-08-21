@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.156 2011/06/28 16:33:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.157 2011/08/21 03:18:11 mattst88 Exp $
+
+  21 Aug 2011; Matt Turner <mattst88@gentoo.org> grub-1.98.ebuild,
+  grub-1.99_rc1.ebuild, grub-9999.ebuild:
+  Add missing DEPEND on flex and bison, bug 380019.
 
   28 Jun 2011; Mike Frysinger <vapier@gentoo.org> grub-1.99_rc1.ebuild,
   grub-9999.ebuild:
