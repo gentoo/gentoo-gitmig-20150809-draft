@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man-pages
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.154 2011/08/20 17:49:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.155 2011/08/21 13:04:12 nixnut Exp $
+
+  21 Aug 2011; nixnut <nixnut@gentoo.org> man-pages-3.32.ebuild:
+  ppc stable #379917
 
   20 Aug 2011; Mike Frysinger <vapier@gentoo.org> man-pages-3.32.ebuild:
   Add blocker to autoresolve man page collision #341953.
