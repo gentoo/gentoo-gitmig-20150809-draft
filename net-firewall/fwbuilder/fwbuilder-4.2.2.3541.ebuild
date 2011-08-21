@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-4.2.2.3541.ebuild,v 1.5 2011/07/23 18:26:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-4.2.2.3541.ebuild,v 1.6 2011/08/21 09:45:32 dilfridge Exp $
 
 EAPI=4
 
@@ -22,7 +22,7 @@ DEPEND=">=x11-libs/qt-gui-4.3
 RDEPEND="${DEPEND}"
 
 PATCHES=(
-	"${FILESDIR}/${P}-ldflags.patch"
+	"${FILESDIR}/${P}-flags.patch"
 	"${FILESDIR}/${P}-ccache.patch"
 )
 

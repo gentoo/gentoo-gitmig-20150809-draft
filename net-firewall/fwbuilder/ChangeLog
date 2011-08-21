@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/fwbuilder
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.106 2011/07/23 18:26:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.107 2011/08/21 09:45:32 dilfridge Exp $
+
+  21 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  fwbuilder-4.2.2.3541.ebuild, +files/fwbuilder-4.2.2.3541-flags.patch,
+  -files/fwbuilder-4.2.2.3541-ldflags.patch:
+  Respect CFLAGS and CXXFLAGS, bug 372203
 
   23 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   fwbuilder-4.2.2.3541.ebuild:
