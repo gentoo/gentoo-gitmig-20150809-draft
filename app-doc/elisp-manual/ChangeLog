@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/elisp-manual
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/ChangeLog,v 1.32 2011/08/19 18:29:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/ChangeLog,v 1.33 2011/08/21 03:41:18 phajdan.jr Exp $
+
+  21 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  elisp-manual-23.3.ebuild:
+  x86 stable wrt bug #379761
 
   19 Aug 2011; Markos Chandras <hwoarang@gentoo.org> elisp-manual-23.3.ebuild:
   Stable on amd64 wrt bug #379761
