@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmad
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.62 2010/11/09 17:01:52 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.63 2011/08/21 03:05:59 mattst88 Exp $
+
+  21 Aug 2011; Matt Turner <mattst88@gentoo.org> libmad-0.15.1b-r7.ebuild:
+  Added USE=static-libs (bug 378325), also bump to EAPI4.
 
 *libmad-0.15.1b-r7 (09 Nov 2010)
 
