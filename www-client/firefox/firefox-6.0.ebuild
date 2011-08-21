@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-5.0-r2.ebuild,v 1.4 2011/08/13 17:26:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-6.0.ebuild,v 1.1 2011/08/21 17:13:22 anarchy Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -13,7 +13,7 @@ FF_PV="${PV/_alpha/a}" # Handle alpha for SRC_URI
 FF_PV="${FF_PV/_beta/b}" # Handle beta for SRC_URI
 FF_PV="${FF_PV/_rc/rc}" # Handle rc for SRC_URI
 CHANGESET="e56ecd8b3a68"
-PATCH="${PN}-5.0-patches-0.6"
+PATCH="${PN}-6.0-patches-0.1"
 
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.com/firefox"
@@ -21,9 +21,8 @@ HOMEPAGE="http://www.mozilla.com/firefox"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="bindist +methodjit +ipc pgo system-sqlite +webm"
+IUSE="bindist +crashreporter +methodjit +ipc pgo system-sqlite +webm"
 
-REL_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases"
 FTP_URI="ftp://ftp.mozilla.org/pub/firefox/releases/"
 # More URIs appended below...
 SRC_URI="http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.bz2"
@@ -33,15 +32,16 @@ ASM_DEPEND=">=dev-lang/yasm-1.1"
 # Mesa 7.10 needed for WebGL + bugfixes
 RDEPEND="
 	>=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.12.9
-	>=dev-libs/nspr-4.8.7
+	>=dev-libs/nss-3.12.10
+	>=dev-libs/nspr-4.8.8
 	>=dev-libs/glib-2.26
 	>=media-libs/mesa-7.10
 	media-libs/libpng[apng]
 	dev-libs/libffi
 	system-sqlite? ( >=dev-db/sqlite-3.7.4[fts3,secure-delete,unlock-notify,debug=] )
 	webm? ( media-libs/libvpx
-		media-libs/alsa-lib )"
+		media-libs/alsa-lib )
+	crashreporter? ( net-misc/curl )"
 # We don't use PYTHON_DEPEND/PYTHON_USE_WITH for some silly reason
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -62,7 +62,7 @@ elif [[ ${PV} =~ beta ]]; then
 	S="${WORKDIR}/mozilla-beta"
 else
 	SRC_URI="${SRC_URI}
-		${REL_URI}/${FF_PV}/source/firefox-${FF_PV}.source.tar.bz2"
+		${FTP_URI}/${FF_PV}/source/firefox-${FF_PV}.source.tar.bz2"
 	S="${WORKDIR}/mozilla-release"
 fi
 
@@ -79,14 +79,14 @@ if ! [[ ${PV} =~ alpha|beta ]]; then
 		# en and en_US are handled internally
 		if [[ ${X} != en ]] && [[ ${X} != en-US ]]; then
 			SRC_URI="${SRC_URI}
-				linguas_${X/-/_}? ( ${REL_URI}/${FF_PV}/linux-i686/xpi/${X}.xpi -> ${P}-${X}.xpi )"
+				linguas_${X/-/_}? ( ${FTP_URI}/${FF_PV}/linux-i686/xpi/${X}.xpi -> ${P}-${X}.xpi )"
 		fi
 		IUSE="${IUSE} linguas_${X/-/_}"
 		# Install all the specific locale xpis if there's no generic locale xpi
 		# Example: there's no pt.xpi, so install all pt-*.xpi
 		if ! has ${X%%-*} "${LANGS[@]}"; then
 			SRC_URI="${SRC_URI}
-				linguas_${X%%-*}? ( ${REL_URI}/${FF_PV}/linux-i686/xpi/${X}.xpi -> ${P}-${X}.xpi )"
+				linguas_${X%%-*}? ( ${FTP_URI}/${FF_PV}/linux-i686/xpi/${X}.xpi -> ${P}-${X}.xpi )"
 			IUSE="${IUSE} linguas_${X%%-*}"
 		fi
 	done
@@ -172,10 +172,6 @@ src_prepare() {
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"
 
-	# Patches needed for ARM, bug 362237
-	epatch "${FILESDIR}/arm-bug-644136.patch"
-	epatch "${FILESDIR}/mozilla-2.0_arm_respect_cflags.patch"
-
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user
 
@@ -255,15 +251,18 @@ src_configure() {
 
 	if [[ $(gcc-major-version) -lt 4 ]]; then
 		append-cxxflags -fno-stack-protector
-	fi
-
-	if use amd64 || use x86; then
-		append-flags -mno-avx
-	fi
+	elif [[ $(gcc-major-version) -gt 4 || $(gcc-minor-version) -gt 3 ]]; then
+		if use amd64 || use x86; then
+			append-flags -mno-avx
+		fi
+ 	fi
 }
 
 src_compile() {
 	if use pgo; then
+		addpredict /root
+		addpredict /etc/gconf
+		addpredict /dev/dri
 		CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" \
 		MOZ_MAKE_FLAGS="${MAKEOPTS}" \
 		Xemake -f client.mk profiledbuild || die "Xemake failed"
@@ -305,7 +304,7 @@ src_install() {
 		name="Tumucumaque"
 	else
 		sizes="16 22 24 32 256"
-		icon_path="${S}/other-licenses/branding/firefox"
+		icon_path="${S}/browser/branding/official"
 		icon="${PN}"
 		name="Mozilla Firefox"
 	fi

@@ -1,6 +1,13 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.83 2011/08/16 14:33:34 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.84 2011/08/21 17:13:22 anarchy Exp $
+
+*firefox-6.0 (21 Aug 2011)
+
+  21 Aug 2011; Jory A. Pratt <anarchy@gentoo.org>
+  -files/mozilla-2.0_arm_respect_cflags.patch, -firefox-4.0.1-r1.ebuild,
+  -firefox-5.0-r2.ebuild, +firefox-6.0.ebuild, -files/arm-bug-644136.patch:
+  Version bump, misc bug fixes
 
 *firefox-3.6.20 (16 Aug 2011)
 
