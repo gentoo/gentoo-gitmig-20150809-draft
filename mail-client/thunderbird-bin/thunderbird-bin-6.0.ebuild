@@ -1,27 +1,25 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-5.0.ebuild,v 1.1 2011/07/03 03:33:54 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-6.0.ebuild,v 1.1 2011/08/21 19:04:25 nirbheek Exp $
 
 EAPI="3"
 
 inherit eutils multilib mozextension
 
 # Can be updated using scripts/get_langs.sh from mozilla overlay
-# '\' at EOL is needed for ${LANG} matching in linguas() below
-LANGS="ar bg br ca cs da de en en-GB en-US es-AR es-ES et eu fi fr fy-NL ga-IE \
-gd gl he hu is it ja ko lt nb-NO nl nn-NO pa-IN pl pt-BR pt-PT rm ru si sk sl \
-sq sv-SE ta-LK tr uk zh-TW"
-NOSHORTLANGS="en-GB es-AR pt-BR zh-TW"
+LANGS=(ar be bn-BD br ca cs da de el en en-GB en-US es-AR es-ES et eu fi fr
+fy-NL ga-IE gd gl he hu id is it ja ko lt nb-NO nl nn-NO pl pt-BR pt-PT rm ru si
+sk sl sq sv-SE ta-LK tr uk)
 
 MY_PN="${PN/-bin}"
 MY_PV="${PV/_beta/b}"
 MY_P="${MY_PN}-${MY_PV}"
 
 DESCRIPTION="Thunderbird Mail Client"
-REL_URI="http://releases.mozilla.org/pub/mozilla.org/${MY_PN}/releases/"
+FTP_URI="ftp://ftp.mozilla.org/pub/mozilla.org/${MY_PN}/releases/"
 SRC_URI="
-	amd64? ( ${REL_URI}/${MY_PV}/linux-x86_64/en-US/${MY_P}.tar.bz2 -> ${PN}_x86_64-${PV}.tar.bz2 )
-	x86? ( ${REL_URI}/${MY_PV}/linux-i686/en-US/${MY_P}.tar.bz2 -> ${PN}_i686-${PV}.tar.bz2 )"
+	amd64? ( ${FTP_URI}/${MY_PV}/linux-x86_64/en-US/${MY_P}.tar.bz2 -> ${PN}_x86_64-${PV}.tar.bz2 )
+	x86? ( ${FTP_URI}/${MY_PV}/linux-i686/en-US/${MY_P}.tar.bz2 -> ${PN}_i686-${PV}.tar.bz2 )"
 HOMEPAGE="http://www.mozilla.com/firefox"
 HOMEPAGE="http://www.mozilla.com/thunderbird"
 RESTRICT="strip"
@@ -31,18 +29,18 @@ SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE=""
 
-for X in ${LANGS} ; do
-	if [ "${X}" != "en" ] && [ "${X}" != "en-US" ]; then
+for X in "${LANGS[@]}" ; do
+	# en and en_US are handled internally
+	if [[ ${X} != en ]] && [[ ${X} != en-US ]]; then
 		SRC_URI="${SRC_URI}
-			linguas_${X/-/_}? ( ${REL_URI}/${MY_PV}/linux-i686/xpi/${X}.xpi -> ${P/-bin/}-${X}.xpi )"
+			linguas_${X/-/_}? ( ${FTP_URI}/${MY_PV}/linux-i686/xpi/${X}.xpi -> ${P/-bin}-${X}.xpi )"
 	fi
 	IUSE="${IUSE} linguas_${X/-/_}"
-	# english is handled internally
-	if [ "${#X}" == 5 ] && ! has ${X} ${NOSHORTLANGS}; then
-		if [ "${X}" != "en-US" ]; then
-			SRC_URI="${SRC_URI}
-				linguas_${X%%-*}? ( ${REL_URI}/${MY_PV}/linux-i686/xpi/${X}.xpi -> ${P/-bin/}-${X}.xpi )"
-		fi
+	# Install all the specific locale xpis if there's no generic locale xpi
+	# Example: there's no pt.xpi, so install all pt-*.xpi
+	if ! has ${X%%-*} "${LANGS[@]}"; then
+		SRC_URI="${SRC_URI}
+			linguas_${X%%-*}? ( ${FTP_URI}/${MY_PV}/linux-i686/xpi/${X}.xpi -> ${P/-bin}-${X}.xpi )"
 		IUSE="${IUSE} linguas_${X%%-*}"
 	fi
 done
@@ -58,25 +56,31 @@ RDEPEND="x11-libs/libXrender
 
 S="${WORKDIR}/thunderbird"
 
+# TODO: Move all the linguas crap to an eclass
 linguas() {
-	local LANG SLANG
-	for LANG in ${LINGUAS}; do
-		if has ${LANG} en en_US; then
-			has en ${linguas} || linguas="${linguas:+"${linguas} "}en"
+	# Generate the list of language packs called "linguas"
+	# This list is used to install the xpi language packs
+	local LINGUA
+	for LINGUA in ${LINGUAS}; do
+		if has ${LINGUA} en en_US; then
+			# For mozilla products, en and en_US are handled internally
 			continue
-		elif has ${LANG} ${LANGS//-/_}; then
-			has ${LANG//_/-} ${linguas} || linguas="${linguas:+"${linguas} "}${LANG//_/-}"
+		# If this language is supported by ${P},
+		elif has ${LINGUA} "${LANGS[@]//-/_}"; then
+			# Add the language to linguas, if it isn't already there
+			has ${LINGUA//_/-} "${linguas[@]}" || linguas+=(${LINGUA//_/-})
 			continue
-		elif [[ " ${LANGS} " == *" ${LANG}-"* ]]; then
-			for X in ${LANGS}; do
-				if [[ "${X}" == "${LANG}-"* ]] && \
-					[[ " ${NOSHORTLANGS} " != *" ${X} "* ]]; then
-					has ${X} ${linguas} || linguas="${linguas:+"${linguas} "}${X}"
+		# For each short LINGUA that isn't in LANGS,
+		# add *all* long LANGS to the linguas list
+		elif ! has ${LINGUA%%-*} "${LANGS[@]}"; then
+			for LANG in "${LANGS[@]}"; do
+				if [[ ${LANG} == ${LINGUA}-* ]]; then
+					has ${LANG} "${linguas[@]}" || linguas+=(${LANG})
 					continue 2
 				fi
 			done
 		fi
-		ewarn "Sorry, but ${PN} does not support the ${LANG} LINGUA"
+		ewarn "Sorry, but ${P} does not support the ${LINGUA} locale"
 	done
 }
 
@@ -84,8 +88,8 @@ src_unpack() {
 	unpack ${A}
 
 	linguas
-	for X in ${linguas}; do
-		[[ ${X} != en ]] && xpi_unpack "${P/-bin}-${X}.xpi"
+	for X in "${linguas[@]}"; do
+		xpi_unpack "${P/-bin}-${X}.xpi"
 	done
 }
 
@@ -97,8 +101,8 @@ src_install() {
 	mv "${S}" "${D}"${MOZILLA_FIVE_HOME}
 
 	linguas
-	for X in ${linguas}; do
-		[[ ${X} != en ]] && xpi_install ${WORKDIR}/${P/-bin}-${X}
+	for X in "${linguas[@]}"; do
+		xpi_install "${WORKDIR}/${P/-bin}-${X}"
 	done
 
 	# Create /usr/bin/thunderbird-bin
