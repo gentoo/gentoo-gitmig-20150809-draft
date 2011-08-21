@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/graphviz-dot-mode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/graphviz-dot-mode/ChangeLog,v 1.9 2011/04/22 16:18:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/graphviz-dot-mode/ChangeLog,v 1.10 2011/08/21 03:42:21 phajdan.jr Exp $
+
+  21 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  graphviz-dot-mode-0.3.7.ebuild:
+  x86 stable wrt bug #379905
 
 *graphviz-dot-mode-0.3.7 (22 Apr 2011)
 
