@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/ossp-uuid
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ossp-uuid/ChangeLog,v 1.27 2011/08/20 18:42:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ossp-uuid/ChangeLog,v 1.28 2011/08/21 13:49:33 olemarkus Exp $
+
+  21 Aug 2011; Ole Markus With <olemarkus@gentoo.org> -ossp-uuid-1.6.1.ebuild,
+  -ossp-uuid-1.6.2.ebuild:
+  Non-maintainer commit: removing older ebuilds that depend on dev-lang/php:5
+  (bug 363809)
 
   20 Aug 2011; Jeroen Roovers <jer@gentoo.org> ossp-uuid-1.6.2-r1.ebuild:
   Stable for HPPA (bug #373357).
