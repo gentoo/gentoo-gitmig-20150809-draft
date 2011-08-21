@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/opencascade-6.3-r3.ebuild,v 1.2 2011/03/07 22:51:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/opencascade/opencascade-6.3-r3.ebuild,v 1.3 2011/08/21 12:25:57 dilfridge Exp $
 
 EAPI=3
 
@@ -78,6 +78,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${P}-fixed-DESTDIR.patch
 	epatch "${FILESDIR}"/${P}-missing-mode.patch
+	epatch "${FILESDIR}"/${P}-underlinking.patch
 
 	source env.ksh
 	eautoreconf
