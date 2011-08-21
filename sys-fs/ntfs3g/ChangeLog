@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.118 2011/08/21 03:30:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.119 2011/08/21 13:37:02 nixnut Exp $
+
+  21 Aug 2011; nixnut <nixnut@gentoo.org> ntfs3g-2011.4.12.ebuild:
+  ppc stable #378829
 
   21 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> ntfs3g-2011.4.12.ebuild:
   x86 stable wrt bug #378829
