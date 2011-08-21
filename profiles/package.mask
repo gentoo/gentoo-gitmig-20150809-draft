@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13000 2011/08/21 14:03:55 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13001 2011/08/21 21:33:28 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,7 +34,7 @@
 # Ole Markus With <olemarkus@gentoo.org> (21 Aug 2011)
 # Masking php:5.2. No longer maintained by upstream
 # Will be removed in a few months, depending on how much noise this will create
-=dev-lang/php-5.2.17
+#=dev-lang/php-5.2.17
 
 # Ole Markus With <olemarkus@gentoo.org> (21 Aug 2011)
 # Masking beta version
