@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/spew/spew-1.0.8.ebuild,v 1.2 2011/08/21 17:34:40 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/spew/spew-1.0.8.ebuild,v 1.3 2011/08/21 17:46:41 blueness Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install
 	dosym ${PN} /usr/bin/gorge
 	dosym ${PN} /usr/bin/regorge
 	dosym ${PN}.1.bz2 /usr/share/man/man1/gorge.1.bz2
