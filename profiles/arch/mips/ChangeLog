@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.77 2011/08/20 22:57:42 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.78 2011/08/21 02:44:46 mattst88 Exp $
+
+  21 Aug 2011; Matt Turner <mattst88@gentoo.org> use.mask:
+  Remove mad from use.mask. There are lots of other flags that pull in libmad,
+  so masking one isn't doing to job.
 
   20 Aug 2011; Matt Turner <mattst88@gentoo.org> use.mask:
   Remove hal from use.mask. It's masked by base/use.mask now.

@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.45 2011/08/20 22:57:42 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.46 2011/08/21 02:44:46 mattst88 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -186,10 +186,6 @@ pcmcia
 # John N. Laliberte <allanonjl@gentoo.org>
 # mask scanner support
 scanner
-
-# Stephen P. Becker <geoman@gentoo.org>
-# mad just spits out static on mips (ip22)
-mad
 
 # Armando Di Cianno <fafhrd@gentoo.org>
 # gnustep is currently unbuildable on mips - masking this to repair windowmaker
