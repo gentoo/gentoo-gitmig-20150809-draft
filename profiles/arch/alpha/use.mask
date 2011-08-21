@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.50 2011/05/29 16:12:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.51 2011/08/21 02:51:31 mattst88 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -129,7 +129,6 @@ video_cards_intel
 video_cards_neomagic
 video_cards_newport
 video_cards_nsc
-video_cards_radeonhd
 video_cards_sis
 video_cards_trident
 video_cards_tseng
