@@ -1,6 +1,30 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.27 2011/07/18 17:49:19 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.28 2011/08/21 12:24:31 aidecoe Exp $
+
+*dracut-013 (21 Aug 2011)
+
+  21 Aug 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-013.ebuild,
+  +files/dracut-013-livenet-gentoo-ca-bundle-path.patch,
+  +files/dracut-013-multipath-udev-rules.patch:
+  Version bump to 013 and EAPI bump to 4.
+
+  This version provides new modules:
+  - livenet
+  - fs-lib
+
+  sys-fs/udev-164 is OK after all. Some dependencies were removed, because
+  they are optional:
+  - net-misc/ifenslave
+  - net-misc/bridge-utils
+  - virtual/eject
+  dracut will warn if something optional is missing, but will continue build an
+  image without issues.
+
+  New important for bug #378863 option was introduced: --force-add
+
+  Dracut can now mount /usr if it's defined in /etc/fstab on destination
+  rootfs.
 
 *dracut-011 (18 Jul 2011)
 
