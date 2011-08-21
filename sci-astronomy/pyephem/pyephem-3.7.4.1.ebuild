@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/pyephem-3.7.4.1.ebuild,v 1.3 2011/08/21 12:08:06 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/pyephem-3.7.4.1.ebuild,v 1.4 2011/08/21 21:58:53 mr_bones_ Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.5"
@@ -16,7 +16,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="doc"
+IUSE="doc test"
 RDEPEND=""
 DEPEND="doc? ( dev-python/sphinx )
 	test? ( dev-python/setuptools )"
