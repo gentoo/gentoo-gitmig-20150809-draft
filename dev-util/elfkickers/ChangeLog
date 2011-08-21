@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/elfkickers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.36 2011/06/03 03:14:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.37 2011/08/21 16:11:12 xarthisius Exp $
+
+  21 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  elfkickers-2.0a-r4.ebuild, elfkickers-2.0a-r5.ebuild,
+  elfkickers-2.0a-r6.ebuild:
+  ppc/ppc64 keywords dropped wrt #380085
 
 *elfkickers-3.0-r1 (03 Jun 2011)
 
