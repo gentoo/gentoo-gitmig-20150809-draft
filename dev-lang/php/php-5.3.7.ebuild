@@ -1,32 +1,33 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.14.ebuild,v 1.16 2011/04/19 16:44:56 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.7.ebuild,v 1.1 2011/08/21 13:58:36 olemarkus Exp $
 
-EAPI=2
+EAPI=4
 
-PHPCONFUTILS_MISSING_DEPS="adabas birdstep db2 dbmaker empress empress-bcs esoob
-interbase msql oci8 sapdb solid"
+PHPCONFUTILS_MISSING_DEPS="adabas birdstep db2 dbmaker empress empress-bcs esoob interbase oci8 sapdb solid"
 
-# inherit autotools, because we call eautoreconf in the eblits
 inherit eutils autotools flag-o-matic versionator depend.apache apache-module db-use phpconfutils php-common-r1 libtool
 
-PHP_PATCHSET="1"
-SUHOSIN_VERSION="$PV-0.9.7"
+SUHOSIN_VERSION=""
+FPM_VERSION="builtin"
 EXPECTED_TEST_FAILURES=""
 
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 
 function php_get_uri ()
 {
 	case "${1}" in
 		"php-pre")
-			echo "http://downloads.php.net/johannes/${2}"
+			echo "http://downloads.php.net/ilia/${2}"
 		;;
 		"php")
 			echo "http://www.php.net/distributions/${2}"
 		;;
 		"suhosin")
 			echo "http://download.suhosin.org/${2}"
+		;;
+		"olemarkus")
+			echo "http://olemarkus.org/~olemarkus/gentoo/${2}"
 		;;
 		"gentoo")
 			echo "mirror://gentoo/${2}"
@@ -42,13 +43,19 @@ PHP_MV="$(get_major_version)"
 # alias, so we can handle different types of releases (finals, rcs, alphas,
 # betas, ...) w/o changing the whole ebuild
 PHP_PV="${PV/_rc/RC}"
-PHP_RELEASE="php"
+PHP_RELEASE="php-pre"
 PHP_P="${PN}-${PHP_PV}"
+
+PHP_PATCHSET_LOC="olemarkus"
+
 PHP_SRC_URI="$(php_get_uri "${PHP_RELEASE}" "${PHP_P}.tar.bz2")"
 
-PHP_PATCHSET="${PHP_PATCHSET:-${PR/r/}}"
+PHP_PATCHSET="0"
 PHP_PATCHSET_URI="
-	$(php_get_uri gentoo "php-patchset-${PV}-r${PHP_PATCHSET}.tar.bz2")"
+	$(php_get_uri "${PHP_PATCHSET_LOC}" "php-patchset-${PV}-r${PHP_PATCHSET}.tar.bz2")"
+
+PHP_FPM_INIT_VER="4"
+PHP_FPM_CONF_VER="1"
 
 if [[ ${SUHOSIN_VERSION} == *-gentoo ]]; then
 	# in some cases we use our own suhosin patch (very recent version,
@@ -58,20 +65,29 @@ else
 	SUHOSIN_TYPE="suhosin"
 fi
 
-SUHOSIN_PATCH="suhosin-patch-${SUHOSIN_VERSION}.patch"
-SUHOSIN_URI="$(php_get_uri ${SUHOSIN_TYPE} ${SUHOSIN_PATCH}.gz )"
+if [[ -n ${SUHOSIN_VERSION} ]]; then
+	SUHOSIN_PATCH="suhosin-patch-${SUHOSIN_VERSION}.patch";
+	SUHOSIN_URI="$(php_get_uri ${SUHOSIN_TYPE} ${SUHOSIN_PATCH}.gz )"
+fi
 
 SRC_URI="
 	${PHP_SRC_URI}
-	${PHP_PATCHSET_URI}
-	suhosin? ( ${SUHOSIN_URI} )"
+	${PHP_PATCHSET_URI}"
 
-DESCRIPTION="The PHP language runtime engine: CLI, CGI, Apache2 and embed SAPIs."
+if [[ -n ${SUHOSIN_VERSION} ]]; then
+	SRC_URI="${SRC_URI}
+		suhosin? ( ${SUHOSIN_URI} )"
+fi
+
+DESCRIPTION="The PHP language runtime engine: CLI, CGI, FPM/FastCGI, Apache2 and embed SAPIs."
 HOMEPAGE="http://php.net/"
 LICENSE="PHP-3"
 
+SLOT="$(get_version_component_range 1-2)"
+S="${WORKDIR}/${PHP_P}"
+
 # We can build the following SAPIs in the given order
-SAPIS="cli cgi embed apache2"
+SAPIS="embed cli cgi fpm apache2"
 
 # Gentoo-specific, common features
 IUSE="kolab"
@@ -79,23 +95,26 @@ IUSE="kolab"
 # SAPIs and SAPI-specific USE flags (cli SAPI is default on):
 IUSE="${IUSE}
 	${SAPIS/cli/+cli}
-	discard-path force-cgi-redirect
-	concurrentmodphp threads"
+	threads"
 
 IUSE="${IUSE} adabas bcmath berkdb birdstep bzip2 calendar cdb cjk
-	crypt +ctype curl curlwrappers db2 dbase dbmaker debug doc empress
-	empress-bcs esoob exif fdftk frontbase +filter firebird
+	crypt +ctype curl curlwrappers db2 dbmaker debug doc empress
+	empress-bcs enchant esoob exif frontbase +fileinfo +filter firebird
 	flatfile ftp gd gd-external gdbm gmp +hash +iconv imap inifile
-	interbase iodbc ipv6 +json kerberos ldap ldap-sasl libedit
-	mhash msql mssql mysql mysqli ncurses nls oci8
-	oci8-instant-client odbc pcntl +pcre pdo pic +posix postgres qdbm
-	readline recode +reflection sapdb +session sharedext sharedmem
-	+simplexml snmp soap sockets solid spell +spl sqlite ssl suhosin
+	interbase intl iodbc ipv6 +json kerberos ldap ldap-sasl libedit mhash
+	mssql mysql mysqlnd mysqli nls oci8
+	oci8-instant-client odbc pcntl pdo +phar pic +posix postgres qdbm
+	readline recode sapdb +session sharedext sharedmem
+	+simplexml snmp soap sockets solid spell sqlite sqlite3 ssl
 	sybase-ct sysvipc tidy +tokenizer truetype unicode wddx
-	+xml +xmlreader +xmlwriter xmlrpc xpm xsl zip zlib"
+	xml xmlreader xmlwriter xmlrpc xpm xsl zip zlib"
 
-DEPEND="app-admin/php-toolkit
-	pcre? ( >=dev-libs/libpcre-7.9[unicode] )
+# Enable suhosin if available
+[[ -n $SUHOSIN_VERSION ]] && IUSE="${IUSE} suhosin"
+
+DEPEND="!dev-lang/php:5
+	>=app-admin/eselect-php-0.6.2
+	>=dev-libs/libpcre-8.12[unicode]
 	adabas? ( >=dev-db/unixODBC-1.8.13 )
 	apache2? ( www-servers/apache[threads=] )
 	berkdb? ( =sys-libs/db-4* )
@@ -113,31 +132,32 @@ DEPEND="app-admin/php-toolkit
 	dbmaker? ( >=dev-db/unixODBC-1.8.13 )
 	empress? ( >=dev-db/unixODBC-1.8.13 )
 	empress-bcs? ( >=dev-db/unixODBC-1.8.13 )
+	enchant? ( app-text/enchant )
 	esoob? ( >=dev-db/unixODBC-1.8.13 )
 	exif? ( !gd? ( !gd-external? (
 		virtual/jpeg
 		media-libs/libpng
 		sys-libs/zlib
 	) ) )
-	fdftk? ( app-text/fdftk )
 	firebird? ( dev-db/firebird )
 	gd? ( virtual/jpeg media-libs/libpng sys-libs/zlib )
 	gd-external? ( media-libs/gd )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	gmp? ( >=dev-libs/gmp-4.1.2 )
 	iconv? ( virtual/libiconv )
-	imap? ( virtual/imap-c-client )
+	imap? ( virtual/imap-c-client[ssl=] )
+	intl? ( dev-libs/icu )
 	iodbc? ( dev-db/libiodbc )
 	kerberos? ( virtual/krb5 )
 	kolab? ( >=net-libs/c-client-2004g-r1 )
 	ldap? ( !oci8? ( >=net-nds/openldap-1.2.11 ) )
 	ldap-sasl? ( !oci8? ( dev-libs/cyrus-sasl >=net-nds/openldap-1.2.11 ) )
 	libedit? ( || ( sys-freebsd/freebsd-lib dev-libs/libedit ) )
-	mhash? ( app-crypt/mhash )
 	mssql? ( dev-db/freetds[mssql] )
-	mysql? ( virtual/mysql )
-	mysqli? ( >=virtual/mysql-4.1 )
-	ncurses? ( sys-libs/ncurses )
+	!mysqlnd? (
+		mysql? ( virtual/mysql )
+		mysqli? ( >=virtual/mysql-4.1 )
+	)
 	nls? ( sys-devel/gettext )
 	oci8-instant-client? ( dev-db/oracle-instantclient-basic )
 	odbc? ( >=dev-db/unixODBC-1.8.13 )
@@ -152,7 +172,8 @@ DEPEND="app-admin/php-toolkit
 	soap? ( >=dev-libs/libxml2-2.6.8 )
 	solid? ( >=dev-db/unixODBC-1.8.13 )
 	spell? ( >=app-text/aspell-0.50 )
-	sqlite? ( =dev-db/sqlite-2* pdo? ( =dev-db/sqlite-3* ) )
+	sqlite? ( =dev-db/sqlite-2* pdo? ( >=dev-db/sqlite-3.7.7.1 ) )
+	sqlite3? ( >=dev-db/sqlite-3.7.7.1 )
 	ssl? ( >=dev-libs/openssl-0.9.7 )
 	sybase-ct? ( dev-db/freetds )
 	tidy? ( app-text/htmltidy )
@@ -162,6 +183,7 @@ DEPEND="app-admin/php-toolkit
 		!gd? ( !gd-external? (
 			virtual/jpeg media-libs/libpng sys-libs/zlib ) )
 	)
+	unicode? ( dev-libs/oniguruma )
 	wddx? ( >=dev-libs/libxml2-2.6.8 )
 	xml? ( >=dev-libs/libxml2-2.6.8 )
 	xmlrpc? ( >=dev-libs/libxml2-2.6.8 virtual/libiconv )
@@ -179,47 +201,61 @@ DEPEND="app-admin/php-toolkit
 "
 
 php="=${CATEGORY}/${PF}"
-RDEPEND="${DEPEND}
-	truetype? ( || ( $php[gd] $php[gd-external] ) )
-	cjk? ( || ( $php[gd] $php[gd-external] ) )
-	exif? ( || ( $php[gd] $php[gd-external] ) )
 
-	xpm? ( $php[gd] )
-	gd? ( $php[zlib,-gd-external] )
-	gd-external? ( $php[-gd] )
-	simplexml? ( $php[xml] )
-	soap? ( $php[xml] )
-	wddx? ( $php[xml] )
-	xmlrpc? ( || ( $php[xml] $php[iconv] ) )
-	xmlreader? ( $php[xml] )
-	xsl? ( $php[xml] )
-	ldap-sasl? ( $php[ldap,-oci8] )
-	suhosin? ( $php[unicode] )
-	adabas? ( $php[odbc] )
-	birdstep? ( $php[odbc] )
-	dbmaker? ( $php[odbc] )
-	empress-bcs? ( $php[empress] )
-	empress? ( $php[odbc] )
-	esoob? ( $php[odbc] )
-	db2? ( $php[odbc] )
-	sapdb? ( $php[odbc] )
-	solid? ( $php[odbc] )
-	kolab? ( $php[imap] )
+REQUIRED_USE="
+	truetype? ( || ( gd gd-external ) )
+	cjk? ( || ( gd gd-external ) )
+	exif? ( || ( gd gd-external ) )
 
-	oci8? ( $php[-oci8-instant-client,-ldap-sasl] )
-	oci8-instant-client? ( $php[-oci8] )
+	xpm? ( gd )
+	gd? ( zlib !gd-external )
+	gd-external? ( !gd )
+	simplexml? ( xml )
+	soap? ( xml )
+	wddx? ( xml )
+	xmlrpc? ( || ( xml iconv ) )
+	xmlreader? ( xml )
+	xsl? ( xml )
+	ldap-sasl? ( ldap !oci8 )
+	adabas? ( odbc )
+	birdstep? ( odbc )
+	dbmaker? ( odbc )
+	empress-bcs? ( empress )
+	empress? ( odbc )
+	esoob? ( odbc )
+	db2? ( odbc )
+	sapdb? ( odbc )
+	solid? ( odbc )
+	kolab? ( imap )
+	mhash? ( hash )
+	phar? ( hash )
+	mysqlnd? ( || (
+		mysql
+		mysqli
+		pdo
+	) )
 
-	qdbm? ( $php[-gdbm] )
-	readline? ( $php[-libedit] )
-	recode? ( $php[-imap,-mysql,-mysqli] )
-	firebird? ( $php[-interbase] )
-	sharedmem? ( $php[-threads] )
+	oci8? ( !oci8-instant-client !ldap-sasl )
+	oci8-instant-client? ( !oci8 )
 
-	!cli? ( !cgi? ( !apache2? ( !embed? ( $php[cli] ) ) ) )
+	qdbm? ( !gdbm )
+	readline? ( !libedit )
+	recode? ( !imap !mysql !mysqli )
+	firebird? ( !interbase )
+	sharedmem? ( !threads )
 
-	filter? ( !dev-php${PHP_MV}/pecl-filter )
-	json? ( !dev-php${PHP_MV}/pecl-json )
-	zip? ( !dev-php${PHP_MV}/pecl-zip )"
+	!cli? ( !cgi? ( !fpm? ( !apache2? ( !embed? ( cli ) ) ) ) )"
+
+DEPEND="${DEPEND}
+	enchant? ( !dev-php5/pecl-enchant )
+	fileinfo? ( !<dev-php5/pecl-fileinfo-1.0.4-r2 )
+	filter? ( !dev-php5/pecl-filter )
+	json? ( !dev-php5/pecl-json )
+	phar? ( !dev-php5/pecl-phar )
+	zip? ( !dev-php5/pecl-zip )"
+
+[[ -n $SUHOSIN_VERSION ]] && RDEPEND="${RDEPEND} suhosin? (
+=${CATEGORY}/${PN}-${SLOT}*[unicode] )"
 
 DEPEND="${DEPEND}
 	sys-devel/flex
@@ -227,14 +263,24 @@ DEPEND="${DEPEND}
 	>=sys-devel/libtool-1.5.18"
 
 # They are in PDEPEND because we need PHP installed first!
-PDEPEND="doc? ( app-doc/php-docs )
-	suhosin? ( dev-php${PHP_MV}/suhosin )"
+PDEPEND="doc? ( app-doc/php-docs )"
 
-SLOT="${PHP_MV}"
-S="${WORKDIR}/${PHP_P}"
+# No longer depend on the extension. The suhosin USE flag only installs the
+# patch
+#[[ -n $SUHOSIN_VERSION ]] && PDEPEND="${PDEPEND} suhosin? ( dev-php${PHP_MV}/suhosin )"
 
+# Allow users to install production version if they want to
+
+case "${PHP_INI_VERSION}" in
+	production|development)
+		;;
+	*)
+		PHP_INI_VERSION="development"
+		;;
+esac
+
+PHP_INI_UPSTREAM="php.ini-${PHP_INI_VERSION}"
 PHP_INI_FILE="php.ini"
-PHP_INI_UPSTREAM="php.ini-dist"
 
 want_apache
 
@@ -298,12 +344,11 @@ eblit-pkg() {
 	eblit-core $1 $2 1
 }
 
-eblit-pkg pkg_setup v1
+eblit-pkg pkg_setup v2
 
-src_prepare() { eblit-run src_prepare v1 ; }
-src_configure() { eblit-run src_configure v52 ; }
+src_prepare() { eblit-run src_prepare v3 ; }
+src_configure() { eblit-run src_configure v2 ; }
 src_compile() { eblit-run src_compile v1 ; }
-src_install() { eblit-run src_install v1 ; }
+src_install() { eblit-run src_install v2 ; }
 src_test() { eblit-run src_test v1 ; }
-
-eblit-pkg pkg_postinst v1
+pkg_postinst() { eblit-run pkg_postinst v2 ; }
