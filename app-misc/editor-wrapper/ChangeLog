@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/editor-wrapper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/editor-wrapper/ChangeLog,v 1.4 2011/08/21 03:35:32 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/editor-wrapper/ChangeLog,v 1.5 2011/08/21 13:19:41 nixnut Exp $
+
+  21 Aug 2011; nixnut <nixnut@gentoo.org> editor-wrapper-3.ebuild:
+  ppc stable 379743
 
   21 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> editor-wrapper-3.ebuild:
   x86 stable wrt bug #379095
