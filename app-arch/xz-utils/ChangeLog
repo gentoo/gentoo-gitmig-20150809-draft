@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/xz-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.34 2011/08/17 15:58:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.35 2011/08/21 03:36:42 phajdan.jr Exp $
+
+  21 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> xz-utils-5.0.3.ebuild:
+  x86 stable wrt bug #379379
 
   17 Aug 2011; Markos Chandras <hwoarang@gentoo.org> xz-utils-5.0.3.ebuild:
   Stable on amd64 wrt bug #379379
