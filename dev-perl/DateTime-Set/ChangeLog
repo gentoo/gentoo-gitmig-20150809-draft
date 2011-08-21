@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/DateTime-Set
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Set/ChangeLog,v 1.5 2011/07/30 08:33:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Set/ChangeLog,v 1.6 2011/08/21 07:22:22 tove Exp $
+
+*DateTime-Set-0.310.0 (21 Aug 2011)
+
+  21 Aug 2011; Torsten Veller <tove@gentoo.org> +DateTime-Set-0.310.0.ebuild:
+  Version bump
 
   30 Jul 2011; Torsten Veller <tove@gentoo.org> -DateTime-Set-0.28.ebuild:
   Cleanup
