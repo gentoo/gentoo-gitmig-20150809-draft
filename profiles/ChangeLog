@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5639 2011/08/21 10:05:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5640 2011/08/21 10:59:28 aidecoe Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Aug 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  desc/dracut_modules.desc:
+  'livenet' added to dracut_modules.
 
   21 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Mask net-libs/libfwbuilder for removal
