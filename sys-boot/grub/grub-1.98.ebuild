@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.98.ebuild,v 1.10 2011/08/21 03:18:11 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.98.ebuild,v 1.11 2011/08/21 04:33:07 vapier Exp $
 
 # XXX: need to implement a grub.conf migration in pkg_postinst before we ~arch
 
@@ -28,7 +28,7 @@ RDEPEND=">=sys-libs/ncurses-5.2-r5
 	truetype? ( media-libs/freetype media-fonts/unifont )"
 DEPEND="${RDEPEND}
 	dev-lang/ruby
-	sys-devel/bison
+	virtual/yacc
 	sys-devel/flex"
 
 export STRIP_MASK="*/grub/*/*.mod"

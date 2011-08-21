@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.35 2011/08/21 03:18:11 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.36 2011/08/21 04:33:07 vapier Exp $
 
 # XXX: need to implement a grub.conf migration in pkg_postinst before we ~arch
 EAPI="2"
@@ -33,7 +33,7 @@ RDEPEND=">=sys-libs/ncurses-5.2-r5
 	truetype? ( media-libs/freetype >=media-fonts/unifont-5 )"
 DEPEND="${RDEPEND}
 	>=dev-lang/python-2.5.2
-	sys-devel/bison
+	virtual/yacc
 	sys-devel/flex"
 [[ ${PV} == "9999" ]] && DEPEND+=" >=sys-devel/autogen-5.10 sys-apps/help2man"
 
