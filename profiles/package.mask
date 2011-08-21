@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12997 2011/08/20 13:01:54 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.12998 2011/08/21 10:05:44 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (21 Aug 2011)
+# Starting with version 4.2, net-libs/libfwbuilder is integrated
+# into net-firewall/fwbuilder (its only reverse dep). Mask
+# libfwbuilder and the old fwbuilder version for removal.
+net-libs/libfwbuilder
+=net-firewall/fwbuilder-3.0.7
 
 # Alexis Ballier <aballier@gentoo.org> (20 Aug 2011)
 # dev-tex/pdftex-1.40.11 is 100% identical to the one in TeX Live 2010;
