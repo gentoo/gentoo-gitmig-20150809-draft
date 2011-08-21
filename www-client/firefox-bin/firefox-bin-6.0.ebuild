@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-6.0.ebuild,v 1.1 2011/08/21 17:45:28 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-6.0.ebuild,v 1.2 2011/08/21 18:30:34 nirbheek Exp $
 
 EAPI="3"
 
@@ -18,10 +18,10 @@ MY_PN="${PN/-bin}"
 MY_P="${MY_PN}-${MY_PV}"
 
 DESCRIPTION="Firefox Web Browser"
-REL_URI="http://ftp.mozilla.org/pub/mozilla.org/${MY_PN}/releases/"
+FTP_URI="ftp://ftp.mozilla.org/pub/mozilla.org/${MY_PN}/releases/"
 SRC_URI="
-	amd64? ( ${REL_URI}/${MY_PV}/linux-x86_64/en-US/${MY_P}.tar.bz2 -> ${PN}_x86_64-${PV}.tar.bz2 )
-	x86? ( ${REL_URI}/${MY_PV}/linux-i686/en-US/${MY_P}.tar.bz2 -> ${PN}_i686-${PV}.tar.bz2 )"
+	amd64? ( ${FTP_URI}/${MY_PV}/linux-x86_64/en-US/${MY_P}.tar.bz2 -> ${PN}_x86_64-${PV}.tar.bz2 )
+	x86? ( ${FTP_URI}/${MY_PV}/linux-i686/en-US/${MY_P}.tar.bz2 -> ${PN}_i686-${PV}.tar.bz2 )"
 HOMEPAGE="http://www.mozilla.com/firefox"
 RESTRICT="strip mirror"
 
@@ -34,14 +34,14 @@ for X in "${LANGS[@]}" ; do
 	# en and en_US are handled internally
 	if [[ ${X} != en ]] && [[ ${X} != en-US ]]; then
 		SRC_URI="${SRC_URI}
-			linguas_${X/-/_}? ( ${REL_URI}/${MY_PV}/linux-i686/xpi/${X}.xpi -> ${P/-bin/}-${X}.xpi )"
+			linguas_${X/-/_}? ( ${FTP_URI}/${MY_PV}/linux-i686/xpi/${X}.xpi -> ${P/-bin/}-${X}.xpi )"
 	fi
 	IUSE="${IUSE} linguas_${X/-/_}"
 	# Install all the specific locale xpis if there's no generic locale xpi
 	# Example: there's no pt.xpi, so install all pt-*.xpi
 	if ! has ${X%%-*} "${LANGS[@]}"; then
 		SRC_URI="${SRC_URI}
-			linguas_${X%%-*}? ( ${REL_URI}/${MY_PV}/linux-i686/xpi/${X}.xpi -> ${P/-bin/}-${X}.xpi )"
+			linguas_${X%%-*}? ( ${FTP_URI}/${MY_PV}/linux-i686/xpi/${X}.xpi -> ${P/-bin/}-${X}.xpi )"
 		IUSE="${IUSE} linguas_${X%%-*}"
 	fi
 done

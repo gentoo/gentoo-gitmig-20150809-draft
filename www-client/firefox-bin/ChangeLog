@@ -1,6 +1,10 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.63 2011/08/21 17:45:28 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.64 2011/08/21 18:30:34 nirbheek Exp $
+
+  21 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> firefox-bin-6.0.ebuild:
+  Use ftp://ftp.mozilla.org instead of releases.mozilla.org so that old
+  tarballs aren't removed from under our feet
 
 *firefox-bin-6.0 (21 Aug 2011)
 
