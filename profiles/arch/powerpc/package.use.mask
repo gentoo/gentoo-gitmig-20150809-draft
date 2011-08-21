@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.91 2011/08/10 15:36:38 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.92 2011/08/21 11:22:53 xarthisius Exp $
 
 # Kacper Kowalik <xarthisius@gentoo.org> (10 Aug 2011)
 # mask cuda dep for opencv bug 365451
@@ -145,10 +145,6 @@ sys-fs/evms hb hb2
 # Tobias Scherbaum <dertobi123@gentoo.org> (1 Feb 2008)
 # Mask mono flag for gnome as tomboy is segfaulting.
 gnome-base/gnome mono
-
-# Joseph Jezak <josejx@gentoo.org> (12 November 2008)
-# Mask the JIT for pearpc, it's x86 only
-app-emulation/pearpc jit
 
 # Alexis Ballier <aballier@gentoo.org> (14 Nov 2010)
 # building the documentation needs ptex

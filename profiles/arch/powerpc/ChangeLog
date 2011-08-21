@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.132 2011/08/10 15:36:38 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.133 2011/08/21 11:22:53 xarthisius Exp $
+
+  21 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
+  Dropping app-emulation/pearpc[jit] mask as the application was tree-cleaned
 
   10 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
   mask cuda dep for opencv bug 365451
