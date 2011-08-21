@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/telepathy-logger-0.2.9.ebuild,v 1.1 2011/05/08 11:04:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/telepathy-logger-0.2.10-r1.ebuild,v 1.1 2011/08/21 12:04:18 nirbheek Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -13,7 +13,7 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-linux"
 IUSE="doc +introspection"
 
 RDEPEND=">=dev-libs/glib-2.25.11:2
