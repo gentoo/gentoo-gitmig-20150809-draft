@@ -1,5 +1,8 @@
 
 
+  21 Aug 2011; Anthony G. Basile <blueness@gentoo.org> spew-1.0.8.ebuild:
+  Bump to EAPI=4 to avoid adding lots of dies
+
 *spew-1.0.8 (06 Apr 2011)
 
   06 Apr 2011; Anthony G. Basile <blueness@gentoo.org> +spew-1.0.8.ebuild,

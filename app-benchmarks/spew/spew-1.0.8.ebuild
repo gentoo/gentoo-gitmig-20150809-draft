@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/spew/spew-1.0.8.ebuild,v 1.1 2011/04/06 22:51:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/spew/spew-1.0.8.ebuild,v 1.2 2011/08/21 17:34:40 blueness Exp $
 
-EAPI=3
+EAPI=4
 
 inherit autotools eutils
 
@@ -25,7 +25,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_enable static static-link) || die "econf failed"
+	econf $(use_enable static static-link)
 }
 
 src_install() {
