@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/isl-0.05.1.ebuild,v 1.1 2011/01/07 23:53:27 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/isl-0.07.ebuild,v 1.1 2011/08/21 06:41:25 dirtyepic Exp $
 
 EAPI="3"
 
@@ -19,3 +19,5 @@ DEPEND="dev-libs/gmp"
 RDEPEND="${DEPEND}"
 
 DOCS=( ChangeLog AUTHORS doc/manual.pdf )
+PATCHES=( "${FILESDIR}"/${PN}-0.07-gdb-autoload-dir.patch )
+AUTOTOOLS_IN_SOURCE_BUILD="1"
