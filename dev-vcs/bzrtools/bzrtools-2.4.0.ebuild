@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzrtools/bzrtools-2.3.0.ebuild,v 1.2 2011/02/25 22:21:13 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzrtools/bzrtools-2.4.0.ebuild,v 1.1 2011/08/21 10:50:46 fauli Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -11,7 +11,7 @@ inherit distutils eutils versionator
 
 DESCRIPTION="bzrtools is a useful collection of utilities for bzr."
 HOMEPAGE="http://bazaar-vcs.org/BzrTools"
-SRC_URI="https://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.gz"
+SRC_URI="https://launchpad.net/${PN}/stable/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
