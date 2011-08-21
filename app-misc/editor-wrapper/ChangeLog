@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/editor-wrapper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/editor-wrapper/ChangeLog,v 1.3 2011/08/14 19:46:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/editor-wrapper/ChangeLog,v 1.4 2011/08/21 03:35:32 phajdan.jr Exp $
+
+  21 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> editor-wrapper-3.ebuild:
+  x86 stable wrt bug #379095
 
   14 Aug 2011; Markos Chandras <hwoarang@gentoo.org> editor-wrapper-3.ebuild:
   Stable on amd64 wrt bug #379095
