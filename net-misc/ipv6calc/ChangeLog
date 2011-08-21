@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ipv6calc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.42 2011/08/14 14:57:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.43 2011/08/21 03:34:54 phajdan.jr Exp $
+
+  21 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  ipv6calc-0.90.0-r1.ebuild:
+  x86 stable wrt bug #379063
 
   14 Aug 2011; Markos Chandras <hwoarang@gentoo.org> ipv6calc-0.90.0-r1.ebuild:
   Stable on amd64 wrt bug #379063
