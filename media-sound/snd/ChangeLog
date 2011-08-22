@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/snd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.54 2011/06/09 08:52:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.55 2011/08/22 08:45:53 radhermit Exp $
+
+*snd-12.3 (22 Aug 2011)
+
+  22 Aug 2011; Tim Harder <radhermit@gentoo.org> +snd-12.3.ebuild:
+  Version bump.
 
 *snd-12.2 (09 Jun 2011)
 
