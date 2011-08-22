@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/graphviz-dot-mode/graphviz-dot-mode-0.3.7.ebuild,v 1.2 2011/08/21 03:42:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/graphviz-dot-mode/graphviz-dot-mode-0.3.7.ebuild,v 1.3 2011/08/22 13:58:45 chainsaw Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${P}.el.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 SITEFILE="50${PN}-gentoo.el"
