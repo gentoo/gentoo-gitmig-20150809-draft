@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.130 2011/05/30 17:17:16 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.131 2011/08/22 10:02:51 voyageur Exp $
+
+  22 Aug 2011; Bernard Cafarelli <voyageur@gentoo.org> rdesktop-1.7.0.ebuild,
+  rdesktop-1.7.0-r1.ebuild:
+  Add pkgconfig to DEPEND, thanks to alex3255@mail.ru in bug #379459
 
 *rdesktop-1.7.0-r1 (30 May 2011)
 
