@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/openmsx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.38 2011/07/20 18:18:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.39 2011/08/22 14:17:03 chainsaw Exp $
+
+  22 Aug 2011; Tony Vroon <chainsaw@gentoo.org> openmsx-0.8.1.ebuild:
+  Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney in bug
+  #380179.
 
 *openmsx-0.8.1 (20 Jul 2011)
 
