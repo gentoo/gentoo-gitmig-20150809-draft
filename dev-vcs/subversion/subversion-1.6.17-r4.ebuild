@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.6.17-r2.ebuild,v 1.1 2011/08/19 10:40:53 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.6.17-r4.ebuild,v 1.1 2011/08/22 21:40:17 chainsaw Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -62,15 +62,22 @@ want_apache
 
 pkg_setup() {
 	if use berkdb; then
+		local apu_bdb_version="$(/usr/bin/apu-1-config --includes \
+			| grep -Eoe '-I/usr/include/db[[:digit:]]\.[[:digit:]]' \
+			| sed 's:.*b::')"
 		einfo
 		if [[ -z "${SVN_BDB_VERSION}" ]]; then
-			SVN_BDB_VERSION="$(db_ver_to_slot "$(db_findver sys-libs/db 2>/dev/null)")"
-			einfo "SVN_BDB_VERSION variable isn't set. You can set it to enforce using of specific version of Berkeley DB."
+			if [[ -n "${apu_bdb_version}" ]]; then
+				SVN_BDB_VERSION="${apu_bdb_version}"
+				einfo "Matching db version to apr-util"
+			else
+				SVN_BDB_VERSION="$(db_ver_to_slot "$(db_findver sys-libs/db 2>/dev/null)")"
+				einfo "SVN_BDB_VERSION variable isn't set. You can set it to enforce using of specific version of Berkeley DB."
+			fi
 		fi
 		einfo "Using: Berkeley DB ${SVN_BDB_VERSION}"
 		einfo
 
-		local apu_bdb_version="$(scanelf -nq "${EROOT}usr/$(get_libdir)/libaprutil-1.so.0" | grep -Eo "libdb-[[:digit:]]+\.[[:digit:]]+" | sed -e "s/libdb-\(.*\)/\1/")"
 		if [[ -n "${apu_bdb_version}" && "${SVN_BDB_VERSION}" != "${apu_bdb_version}" ]]; then
 			eerror "APR-Util is linked against Berkeley DB ${apu_bdb_version}, but you are trying"
 			eerror "to build Subversion with support for Berkeley DB ${SVN_BDB_VERSION}."
@@ -199,7 +206,7 @@ src_compile() {
 	fi
 
 	if use perl; then
-		emake -j1 swig-pl || die "Building of Subversion SWIG Perl bindings failed"
+		emake swig-pl || die "Building of Subversion SWIG Perl bindings failed"
 	fi
 
 	if use ruby; then
@@ -247,7 +254,7 @@ src_install() {
 		swig_python_bindings_installation() {
 			rm -f subversion/bindings/swig/python
 			ln -s python-${PYTHON_ABI} subversion/bindings/swig/python
-			emake -j1 \
+			emake \
 				DESTDIR="${D}" \
 				PYTHON_VERSION="$(python_get_version)" \
 				swig_pydir="${EPREFIX}$(python_get_sitedir)/libsvn" \
@@ -258,11 +265,6 @@ src_install() {
 			--action-message 'Installation of Subversion SWIG Python bindings with $(python_get_implementation) $(python_get_version)' \
 			--failure-message 'Installation of Subversion SWIG Python bindings failed with $(python_get_implementation) $(python_get_version)' \
 			swig_python_bindings_installation
-
-		delete_static_libraries() {
-			find "${ED}$(python_get_sitedir)" -name "*.a" -print0 | xargs -0 rm -f
-		}
-		python_execute_function -q delete_static_libraries
 	fi
 
 	if use ctypes-python || use python; then
@@ -270,18 +272,17 @@ src_install() {
 	fi
 
 	if use perl; then
-		emake -j1 DESTDIR="${D}" INSTALLDIRS="vendor" install-swig-pl || die "Installation of Subversion SWIG Perl bindings failed"
+		emake DESTDIR="${D}" INSTALLDIRS="vendor" install-swig-pl || die "Installation of Subversion SWIG Perl bindings failed"
 		fixlocalpod
 		find "${ED}" "(" -name .packlist -o -name "*.bs" ")" -print0 | xargs -0 rm -fr
 	fi
 
 	if use ruby; then
-		emake -j1 DESTDIR="${D}" install-swig-rb || die "Installation of Subversion SWIG Ruby bindings failed"
-		find "${ED}usr/$(get_libdir)/ruby" "(" -name "*.a" -o -name "*.la" ")" -print0 | xargs -0 rm -f
+		emake DESTDIR="${D}" install-swig-rb || die "Installation of Subversion SWIG Ruby bindings failed"
 	fi
 
 	if use java; then
-		emake -j1 DESTDIR="${D}" install-javahl || die "Installation of Subversion JavaHL library failed"
+		emake DESTDIR="${D}" install-javahl || die "Installation of Subversion JavaHL library failed"
 		java-pkg_regso "${ED}"usr/$(get_libdir)/libsvnjavahl*.so
 		java-pkg_dojar "${ED}"usr/$(get_libdir)/svn-javahl/svn-javahl.jar
 		rm -fr "${ED}"usr/$(get_libdir)/svn-javahl/*.jar
@@ -366,6 +367,8 @@ EOF
 			java-pkg_dojavadoc doc/javadoc
 		fi
 	fi
+
+	find "${D}" '(' -name '*.la' -o -name '*.a' ')' -print0 | xargs -0 rm -f
 }
 
 pkg_preinst() {
