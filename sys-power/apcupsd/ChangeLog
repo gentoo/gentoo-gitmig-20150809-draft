@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.70 2011/06/15 16:05:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.71 2011/08/22 14:27:25 flameeyes Exp $
+
+*apcupsd-3.14.9 (22 Aug 2011)
+
+  22 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org> +apcupsd-3.14.9.ebuild,
+  +files/apcupsd-3.14.9-aliasing.patch, files/apcupsd.init.2:
+  Version bump, require openrc, fix aliasing issues; increase wait timeout to 3
+  seconds, rather than 1.5, as it can still fail to start.
 
   15 Jun 2011; Doug Goldstein <cardoe@gentoo.org> apcupsd-3.14.8-r1.ebuild:
   Set USB to be the default mode since all APC products in recent times use the
