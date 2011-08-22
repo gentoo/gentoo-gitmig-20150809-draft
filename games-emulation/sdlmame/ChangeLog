@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/sdlmame
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.49 2011/06/15 16:39:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.50 2011/08/22 14:19:55 chainsaw Exp $
+
+  22 Aug 2011; Tony Vroon <chainsaw@gentoo.org> sdlmame-0.142_p5.ebuild:
+  Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney in bug
+  #380183.
 
 *sdlmame-0.142_p5 (15 Jun 2011)
 
