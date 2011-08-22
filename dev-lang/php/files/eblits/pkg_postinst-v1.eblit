@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/pkg_postinst-v1.eblit,v 1.4 2011/02/16 08:12:28 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/pkg_postinst-v1.eblit,v 1.5 2011/08/22 13:42:39 olemarkus Exp $
 
 eblit-php-pkg_postinst() {
 	# Output some general info to the user
@@ -71,6 +71,13 @@ eblit-php-pkg_postinst() {
 	ewarn 
 	ewarn "Please read the upgrade guide: http://www.gentoo.org/proj/en/php/php-upgrading.xml"
 	ewarn
+
+	if ( [[ -z SUHOSIN_VERSION ]] && use suhosin ) ; then
+		ewarn "The suhosin USE flag now only installs the suhosin patch!"
+		ewarn "If you want the suhosin extension, make sure you install"
+		ewarn " dev-php5/suhosin"
+		ewarn
+	fi
 }
 
 

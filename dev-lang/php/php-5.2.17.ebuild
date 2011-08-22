@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.17.ebuild,v 1.13 2011/04/19 16:44:56 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.2.17.ebuild,v 1.14 2011/08/22 13:42:39 olemarkus Exp $
 
 EAPI=2
 
@@ -236,10 +236,7 @@ DEPEND="${DEPEND}
 	>=sys-devel/libtool-1.5.18"
 
 # They are in PDEPEND because we need PHP installed first!
-PDEPEND="doc? ( app-doc/php-docs )
-	suhosin? ( dev-php${PHP_MV}/suhosin )"
-
-[[ -n $SUHOSIN_VERSION ]] && PDEPEND="${PDEPEND} suhosin? ( dev-php${PHP_MV}/suhosin )"
+PDEPEND="doc? ( app-doc/php-docs )"
 
 SLOT="$(get_version_component_range 1-2)"
 S="${WORKDIR}/${PHP_P}"
