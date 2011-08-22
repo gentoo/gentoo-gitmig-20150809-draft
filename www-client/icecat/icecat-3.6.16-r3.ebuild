@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.16-r3.ebuild,v 1.1 2011/08/17 20:51:08 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-3.6.16-r3.ebuild,v 1.2 2011/08/22 07:57:13 polynomial-c Exp $
 EAPI="3"
 WANT_AUTOCONF="2.1"
 
@@ -128,7 +128,7 @@ src_unpack() {
 }
 
 src_prepare() {
-	# Make this a 3.6.17 version
+	# Make this a 3.6.20 version
 	epatch "${DISTDIR}"/ff3617.diff.xz \
 		"${DISTDIR}"/ff3618.diff.xz \
 		"${DISTDIR}"/ff3620.diff.xz

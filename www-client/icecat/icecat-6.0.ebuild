@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-5.0-r1.ebuild,v 1.3 2011/07/31 14:48:36 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-6.0.ebuild,v 1.1 2011/08/22 07:57:13 polynomial-c Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -12,7 +12,7 @@ MAJ_FF_PV="$(get_version_component_range 1-2)" # 3.5, 3.6, 4.0, etc.
 FF_PV="${PV/_alpha/a}" # Handle alpha for SRC_URI
 FF_PV="${FF_PV/_beta/b}" # Handle beta for SRC_URI
 FF_PV="${FF_PV/_rc/rc}" # Handle rc for SRC_URI
-PATCH="firefox-5.0-patches-0.6"
+PATCH="firefox-6.0-patches-0.1"
 
 DESCRIPTION="GNU project's edition of Mozilla Firefox"
 HOMEPAGE="http://www.gnu.org/software/gnuzilla/"
@@ -20,7 +20,7 @@ HOMEPAGE="http://www.gnu.org/software/gnuzilla/"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="+methodjit +ipc pgo system-sqlite +webm"
+IUSE="+crashreporter +methodjit +ipc pgo system-sqlite +webm"
 
 # More URIs appended below...
 SRC_URI="mirror://gnu/gnuzilla/${FF_PV}/${PN}-${FF_PV}.tar.bz2
@@ -32,15 +32,16 @@ ASM_DEPEND=">=dev-lang/yasm-1.1"
 # Mesa 7.10 needed for WebGL + bugfixes
 RDEPEND="
 	>=sys-devel/binutils-2.16.1
-	>=dev-libs/nss-3.12.9
-	>=dev-libs/nspr-4.8.7
+	>=dev-libs/nss-3.12.10
+	>=dev-libs/nspr-4.8.8
 	>=dev-libs/glib-2.26
 	>=media-libs/mesa-7.10
 	media-libs/libpng[apng]
 	dev-libs/libffi
 	system-sqlite? ( >=dev-db/sqlite-3.7.4[fts3,secure-delete,unlock-notify,debug=] )
 	webm? ( media-libs/libvpx
-		media-libs/alsa-lib )"
+		media-libs/alsa-lib )
+	crashreporter? ( net-misc/curl )"
 # We don't use PYTHON_DEPEND/PYTHON_USE_WITH for some silly reason
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -142,13 +143,12 @@ src_prepare() {
 
 	# Apply our patches
 	#
-	EPATCH_EXCLUDE="2000-firefox_gentoo_install_dirs.patch
-			5001_use_system_libffi.patch" \
+	EPATCH_EXCLUDE="2000-firefox_gentoo_install_dirs.patch" \
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"
 
-	epatch "${FILESDIR}"/2000-icecat-5_gentoo_install_dirs.patch \
+	epatch "${FILESDIR}"/2000-icecat-6_gentoo_install_dirs.patch \
 		"${FILESDIR}"/${PN}-5.0-curl7217-includes-fix.patch
 
 	# Allow user to apply any additional patches without modifing ebuild
@@ -236,15 +236,18 @@ src_configure() {
 
 	if [[ $(gcc-major-version) -lt 4 ]]; then
 		append-cxxflags -fno-stack-protector
-	fi
-
-	if use amd64 || use x86; then
-		append-flags -mno-avx
+	elif [[ $(gcc-major-version) -gt 4 || $(gcc-minor-version) -gt 3 ]]; then
+		if use amd64 || use x86; then
+			append-flags -mno-avx
+		fi
 	fi
 }
 
 src_compile() {
 	if use pgo; then
+		addpredict /root
+		addpredict /etc/gconf
+		addpredict /dev/dri
 		CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" \
 		MOZ_MAKE_FLAGS="${MAKEOPTS}" \
 		Xemake -f client.mk profiledbuild || die "Xemake failed"

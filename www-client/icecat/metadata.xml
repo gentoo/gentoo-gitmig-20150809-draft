@@ -5,6 +5,8 @@
 <use>
 	<flag name='custom-optimization'>Fine-tune custom compiler
 		optimizations</flag>
+	<flag name="crashreporter">Enable crashreporter for mozilla upstream, debugging
+		symbols are not required for reporting crashes.</flag>
         <flag name="ipc">Use inter-process communication between tabs and plugins.
                 Allows for greater stability in case of plugin crashes</flag>
 	<flag name="methodjit">Enable JIT for JavaScript using MethodJIT for faster 

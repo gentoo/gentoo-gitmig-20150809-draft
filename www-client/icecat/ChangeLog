@@ -1,6 +1,16 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.95 2011/08/17 20:51:08 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.96 2011/08/22 07:57:13 polynomial-c Exp $
+
+*icecat-6.0 (22 Aug 2011)
+
+  22 Aug 2011; Lars Wendler <polynomial-c@gentoo.org> icecat-3.6.16-r3.ebuild,
+  +icecat-6.0.ebuild, -files/2000-icecat_gentoo_install_dirs.patch,
+  -files/5001_fix-prefs-directory.patch, icecat-3.6.16-r2.ebuild,
+  -icecat-4.0.1-r1.ebuild, -icecat-5.0-r1.ebuild,
+  -files/2000-icecat-5_gentoo_install_dirs.patch,
+  +files/2000-icecat-6_gentoo_install_dirs.patch, metadata.xml:
+  Version bump. Removed old.
 
 *icecat-3.6.16-r3 (17 Aug 2011)
 
