@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/larry-backgrounds/larry-backgrounds-20110822.ebuild,v 1.1 2011/08/22 13:07:40 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/larry-backgrounds/larry-backgrounds-20110822.ebuild,v 1.2 2011/08/22 13:17:23 sping Exp $
 
 EAPI="3"
 
@@ -55,7 +55,7 @@ src_install() {
 	( cd "${DISTDIR}" && doins ${A} ) || die
 
 	# Integrate with KDE 4
-	dosym ../../${share_home} /usr/share/wallpapers/larry-the-cow || die
+	dosym ../${share_home} /usr/share/wallpapers/larry-the-cow || die
 
 	# Integrate with XFCE 4
 	dodir ${backdrops}/ || die
