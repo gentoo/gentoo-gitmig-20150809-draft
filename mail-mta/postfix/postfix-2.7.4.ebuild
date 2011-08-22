@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.7.4.ebuild,v 1.7 2011/05/15 17:14:50 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.7.4.ebuild,v 1.8 2011/08/22 09:20:24 eras Exp $
 
 EAPI=3
 
@@ -47,7 +47,8 @@ RDEPEND="${DEPEND}
 	!mail-mta/qmail-ldap
 	!mail-mta/sendmail
 	!<mail-mta/ssmtp-2.64-r2
-	!>=mail-mta/ssmtp-2.64-r2[mta]"
+	!>=mail-mta/ssmtp-2.64-r2[mta]
+	!net-mail/fastforward"
 
 S="${WORKDIR}/${MY_SRC}"
 
