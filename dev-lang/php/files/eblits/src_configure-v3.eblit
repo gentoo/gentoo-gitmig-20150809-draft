@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v3.eblit,v 1.3 2011/07/02 15:14:41 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v3.eblit,v 1.4 2011/08/22 13:32:38 olemarkus Exp $
 
 eblit-php-src_configure() {
     addpredict /usr/share/snmp/mibs/.index
@@ -20,62 +20,63 @@ eblit-php-src_configure() {
 		$(use_enable threads maintainer-zts)"
 
 	#                             extension	      USE flag        shared
-	phpconfutils_extension_enable  "bcmath"       "bcmath"           1
-	phpconfutils_extension_with    "bz2"          "bzip2"            1
-	phpconfutils_extension_enable  "calendar"     "calendar"         1
-	phpconfutils_extension_disable "ctype"        "ctype"            0
-	phpconfutils_extension_with    "curl"         "curl"             1
-	phpconfutils_extension_with    "curlwrappers" "curlwrappers"     0
-	phpconfutils_extension_disable "dom"          "xml"              0
-	phpconfutils_extension_with    "enchant"      "enchant"          1 "/usr"
-	phpconfutils_extension_enable  "exif"         "exif"             1
-	phpconfutils_extension_disable "fileinfo"     "fileinfo"         1
-	phpconfutils_extension_disable "filter"       "filter"           0
-	phpconfutils_extension_enable  "ftp"          "ftp"              1
-	phpconfutils_extension_with    "gettext"      "nls"              1
-	phpconfutils_extension_with    "gmp"          "gmp"              1
-	phpconfutils_extension_disable "hash"         "hash"             0
-	phpconfutils_extension_with    "mhash"        "mhash"            0
-	phpconfutils_extension_without "iconv"        "iconv"            0
-	phpconfutils_extension_enable  "intl"         "intl"             1
-	phpconfutils_extension_disable "ipv6"         "ipv6"             0
-	phpconfutils_extension_disable "json"         "json"             0
-	phpconfutils_extension_with    "kerberos"     "kerberos"         0 "/usr"
-	phpconfutils_extension_disable "libxml"       "xml"              0
-	phpconfutils_extension_enable  "mbstring"     "unicode"          1
-	phpconfutils_extension_with    "mcrypt"       "crypt"            1
-	phpconfutils_extension_with    "mssql"        "mssql"            1
-	phpconfutils_extension_with    "onig"         "unicode"          0 "/usr"
-	phpconfutils_extension_with    "openssl"      "ssl"              0
-	phpconfutils_extension_with    "openssl-dir"  "ssl"              0 "/usr"
-	phpconfutils_extension_enable  "pcntl"        "pcntl"            1
-	phpconfutils_extension_disable "phar"         "phar"             1
-	phpconfutils_extension_disable "pdo"          "pdo"              0
-	phpconfutils_extension_with    "pgsql"        "postgres"         1
-	phpconfutils_extension_disable "posix"        "posix"            0
-	phpconfutils_extension_with    "pspell"       "spell"            1
-	phpconfutils_extension_with    "recode"       "recode"           1
-	phpconfutils_extension_disable "simplexml"    "simplexml"        0
-	phpconfutils_extension_enable  "shmop"        "sharedmem"        0
-	phpconfutils_extension_with    "snmp"         "snmp"             1
-	phpconfutils_extension_enable  "soap"         "soap"             1
-	phpconfutils_extension_enable  "sockets"      "sockets"          1
-	phpconfutils_extension_without "sqlite3"      "sqlite3"          1 "/usr"
-	phpconfutils_extension_with    "sybase-ct"    "sybase-ct"        1 "/usr"
-	phpconfutils_extension_enable  "sysvmsg"      "sysvipc"          1
-	phpconfutils_extension_enable  "sysvsem"      "sysvipc"          1
-	phpconfutils_extension_enable  "sysvshm"      "sysvipc"          1
-	phpconfutils_extension_with    "tidy"         "tidy"             1
-	phpconfutils_extension_disable "tokenizer"    "tokenizer"        0
-	phpconfutils_extension_enable  "wddx"         "wddx"             1
-	phpconfutils_extension_disable "xml"          "xml"              0
-	phpconfutils_extension_disable "xmlreader"    "xmlreader"        0
-	phpconfutils_extension_disable "xmlwriter"    "xmlwriter"        0
-	phpconfutils_extension_with    "xmlrpc"       "xmlrpc"           1
-	phpconfutils_extension_with    "xsl"          "xsl"              1
-	phpconfutils_extension_enable  "zip"          "zip"              1
-	phpconfutils_extension_with    "zlib"         "zlib"             1
-	phpconfutils_extension_enable  "debug"        "debug"            0
+	my_conf+="
+	$(use_enable bcmath bcmath )
+	$(use_with bzip2 bz2 )
+	$(use_enable calendar calendar )
+	$(use_enable ctype ctype )
+	$(use_with curl curl )
+	$(use_with curlwrappers curlwrappers )
+	$(use_enable xml dom )
+	$(use_with enchant enchant /usr)
+	$(use_enable exif exif )
+	$(use_enable fileinfo fileinfo )
+	$(use_enable filter filter )
+	$(use_enable ftp ftp )
+	$(use_with nls gettext )
+	$(use_with gmp gmp )
+	$(use_enable hash hash )
+	$(use_with mhash mhash )
+	$(use_with iconv iconv )
+	$(use_enable intl intl )
+	$(use_enable ipv6 ipv6 )
+	$(use_enable json json )
+	$(use_with kerberos kerberos /usr)
+	$(use_enable xml libxml )
+	$(use_enable unicode mbstring )
+	$(use_with crypt mcrypt )
+	$(use_with mssql mssql )
+	$(use_with unicode onig /usr)
+	$(use_with ssl openssl )
+	$(use_with ssl openssl-dir /usr)
+	$(use_enable pcntl pcntl )
+	$(use_enable phar phar )
+	$(use_enable pdo pdo )
+	$(use_with postgres pgsql )
+	$(use_enable posix posix )
+	$(use_with spell pspell )
+	$(use_with recode recode )
+	$(use_enable simplexml simplexml )
+	$(use_enable sharedmem shmop )
+	$(use_with snmp snmp )
+	$(use_enable soap soap )
+	$(use_enable sockets sockets )
+	$(use_with sqlite3 sqlite3 /usr)
+	$(use_with sybase-ct sybase-ct /usr)
+	$(use_enable sysvipc sysvmsg )
+	$(use_enable sysvipc sysvsem )
+	$(use_enable sysvipc sysvshm )
+	$(use_with tidy tidy )
+	$(use_enable tokenizer tokenizer )
+	$(use_enable wddx wddx )
+	$(use_enable xml xml )
+	$(use_enable xmlreader xmlreader )
+	$(use_enable xmlwriter xmlwriter )
+	$(use_with xmlrpc xmlrpc )
+	$(use_with xsl xsl )
+	$(use_enable zip zip )
+	$(use_with zlib zlib )
+	$(use_enable debug debug )"
 
 	# DBA support
 	if use cdb || use berkdb || use flatfile || use gdbm || use inifile \
@@ -84,65 +85,78 @@ eblit-php-src_configure() {
 	fi
 
 	# DBA drivers support
-	phpconfutils_extension_with   "cdb"        "cdb"      0
-	phpconfutils_extension_with   "db4"        "berkdb"   0
-	phpconfutils_extension_enable "flatfile"   "flatfile" 0
-	phpconfutils_extension_with   "gdbm"       "gdbm"     0
-	phpconfutils_extension_enable "inifile"    "inifile"  0
-	phpconfutils_extension_with   "qdbm"       "qdbm"     0
+	my_conf+="
+	$(use_with cdb cdb )
+	$(use_with berkdb db4 )
+	$(use_enable flatfile flatfile )
+	$(use_with gdbm gdbm )
+	$(use_enable inifile inifile )
+	$(use_with qdbm qdbm )"
 
 	# Support for the GD graphics library
-	phpconfutils_extension_with   "freetype-dir" "truetype"    0 "/usr"
-	phpconfutils_extension_with   "t1lib"        "truetype"    0 "/usr"
-	phpconfutils_extension_enable "gd-jis-conv"  "cjk"         0
-	phpconfutils_extension_with   "jpeg-dir"     "gd"          0 "/usr"
-	phpconfutils_extension_with   "png-dir"      "gd"          0 "/usr"
-	phpconfutils_extension_with   "xpm-dir"      "xpm"         0 "/usr"
+	my_conf+="
+	$(use_with truetype freetype-dir /usr)
+	$(use_with truetype t1lib /usr)
+	$(use_enable cjk gd-jis-conv )
+	$(use_with gd jpeg-dir /usr)
+	$(use_with gd png-dir /usr)
+	$(use_with xpm xpm-dir /usr)"
 	# enable gd last, so configure can pick up the previous settings
-	phpconfutils_extension_with   "gd"           "gd"          0
+	my_conf+="
+	$(use_with gd gd )"
 
 	# IMAP support
 	if use imap ; then
-		phpconfutils_extension_with "imap"     "imap" 1
-		phpconfutils_extension_with "imap-ssl" "ssl"  0
+	    my_conf+="
+		$(use_with imap imap )
+		$(use_with ssl imap-ssl )"
 	fi
 
 	# Interbase/firebird support
 	
 	if use firebird ; then
-		phpconfutils_extension_with	"interbase"	"firebird"	0 "/usr"
+	    my_conf+="
+		$(use_with firebird interbase /usr)"
 	fi
 
 	# LDAP support
 	if use ldap ; then
-		phpconfutils_extension_with "ldap"      "ldap"      1
-		phpconfutils_extension_with "ldap-sasl" "ldap-sasl" 0
+	    my_conf+="
+		$(use_with ldap ldap )
+		$(use_with ldap-sasl ldap-sasl )"
 	fi
 
 	# MySQL support
 	if use mysql ; then
 		if use mysqlnd ; then
-			phpconfutils_extension_with "mysql"      "mysql" 1 "mysqlnd"
+	        my_conf+="
+			$(use_with mysql mysql mysqlnd)"
 		else
-			phpconfutils_extension_with "mysql"      "mysql" 1 "/usr"
+	        my_conf+="
+			$(use_with mysql mysql /usr)"
 		fi
-		phpconfutils_extension_with "mysql-sock" "mysql" 0 "/var/run/mysqld/mysqld.sock"
+	    my_conf+="
+		$(use_with mysql mysql-sock /var/run/mysqld/mysqld.sock)"
 	fi
 
 	# MySQLi support
 	if use mysqlnd ; then
-		phpconfutils_extension_with "mysqli" "mysqli" 1 "mysqlnd"
+	    my_conf+="
+		$(use_with mysqli mysqli mysqlnd)"
 	else
-		phpconfutils_extension_with "mysqli" "mysqli" 1 "/usr/bin/mysql_config"
+	    my_conf+="
+		$(use_with mysqli mysqli /usr/bin/mysql_config)"
 	fi
 
 	# ODBC support
 	if use odbc ; then
-		phpconfutils_extension_with "unixODBC" "odbc"     1 "/usr"
+	    my_conf+="
+		$(use_with odbc unixODBC /usr)"
 	fi
 
 	if use iodbc ; then
-		phpconfutils_extension_with "iodbc"   "iodbc" 1 "/usr"
+	    my_conf+="
+		$(use_with iodbc iodbc /usr)"
 	fi
 
 	# Oracle support
@@ -150,37 +164,44 @@ eblit-php-src_configure() {
 		OCI8IC_PKG="$(best_version dev-db/oracle-instantclient-basic | \
 			sed -e 's|dev-db/oracle-instantclient-basic-||g' | \
 			sed -e 's|-r.*||g')"
-
-		phpconfutils_extension_with "oci8" "oci8-instant-client" 1 \
-			"instantclient,/usr/lib/oracle/${OCI8IC_PKG}/client/lib"
+    
+	    my_conf+="
+		$(use_with oci8-instant-client oci8 "instantclient,/usr/lib/oracle/${OCI8IC_PKG}/client/lib")"
 	fi
 
 	# PDO support
 	if use pdo ; then
-		phpconfutils_extension_with "pdo-dblib"  "mssql"    1
+	    my_conf+="
+		$(use_with mssql pdo-dblib )"
 		if use mysqlnd ; then
-			phpconfutils_extension_with "pdo-mysql"  "mysql"    1 "mysqlnd"
+	        my_conf+="
+			$(use_with mysql pdo-mysql mysqlnd)"
 		else
-			phpconfutils_extension_with "pdo-mysql"  "mysql"    1 "/usr"
+	        my_conf+="
+			$(use_with mysql pdo-mysql /usr)"
 		fi
-		phpconfutils_extension_with "pdo-pgsql"  "postgres"	1
-		phpconfutils_extension_with "pdo-sqlite" "sqlite3"   1 "/usr"
-		phpconfutils_extension_with "pdo-odbc"   "odbc"     1 "unixODBC,/usr"
+	    my_conf+="
+		$(use_with postgres pdo-pgsql )
+		$(use_with sqlite3 pdo-sqlite /usr)
+		$(use_with odbc pdo-odbc unixODBC,/usr)"
 		if use oci8-instant-client ; then
-			phpconfutils_extension_with "pdo-oci" "oci8-instant-client" 1 \
-				"instantclient,/usr,${OCI8IC_PKG}"
+	        my_conf+="
+			$(use_with oci8-instant-client pdo-oci "instantclient,/usr,${OCI8IC_PKG}" )"
 		fi
 	fi
 
 	# readline/libedit support
-	phpconfutils_extension_with "readline" "readline" 0
-	phpconfutils_extension_with "libedit"  "libedit"  0
+	my_conf+="
+	$(use_with readline readline )
+	$(use_with libedit libedit )"
 
 	# Session support
 	if use session ; then
-		phpconfutils_extension_with "mm" "sharedmem" 0
+	    my_conf+="
+		$(use_with sharedmem mm )"
 	else
-		phpconfutils_extension_disable "session" "session" 0
+	    my_conf+="
+		$(use_enable session session )"
 	fi
 
 	if use pic ; then
