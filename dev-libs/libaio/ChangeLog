@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libaio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.54 2011/08/20 19:35:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.55 2011/08/22 13:47:25 chainsaw Exp $
+
+  22 Aug 2011; Tony Vroon <chainsaw@gentoo.org> libaio-0.3.109-r2.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
+  "idella4" Delaney in bug #379991.
 
   20 Aug 2011; Mike Frysinger <vapier@gentoo.org> libaio-0.3.109-r2.ebuild:
   Avoid executing git #379999 by Agostino Sarubbo.
