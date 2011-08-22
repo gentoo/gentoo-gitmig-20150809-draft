@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.3.ebuild,v 1.3 2011/08/13 18:02:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.3.ebuild,v 1.4 2011/08/22 03:42:33 vapier Exp $
 
 EAPI="3"
 
@@ -91,6 +91,7 @@ src_configure() {
 		--disable-werror \
 		--enable-64-bit-bfd \
 		--with-system-readline \
+		--with-separate-debug-dir=/usr/lib/debug \
 		$(is_cross && echo --with-sysroot=/usr/${CTARGET}) \
 		$(use_with expat) \
 		$(use_enable nls) \
