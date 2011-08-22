@@ -1,0 +1,10 @@
+# ChangeLog for net-dns/resolvconf-symlink
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/resolvconf-symlink/ChangeLog,v 1.1 2011/08/22 08:37:26 mgorny Exp $
+
+*resolvconf-symlink-0 (22 Aug 2011)
+
+  22 Aug 2011; Michał Górny <mgorny@gentoo.org> +resolvconf-symlink-0.ebuild,
+  +metadata.xml:
+  Introduce the ebuild for making /etc/resolv.conf a symlink.
+
