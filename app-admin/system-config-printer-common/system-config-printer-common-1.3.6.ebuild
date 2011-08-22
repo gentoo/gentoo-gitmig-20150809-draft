@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.5.ebuild,v 1.1 2011/08/09 23:55:19 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.6.ebuild,v 1.1 2011/08/22 23:46:39 reavertm Exp $
 
 EAPI="3"
 
@@ -51,10 +51,6 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.3.5-split.patch"
-	# Picked up from master just after tagging, remove for next release
-	epatch "${FILESDIR}/0002-Make-PackageKit-optional-in-cupshelpers-bug-726996-U.patch"
-	epatch "${FILESDIR}/0004-Removed-PackageKit-client-code-in-missingPackagesAnd.patch"
-
 	eautoreconf
 }
 

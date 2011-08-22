@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.3.5.ebuild,v 1.1 2011/08/09 23:56:08 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/system-config-printer-gnome-1.3.6.ebuild,v 1.1 2011/08/22 23:47:18 reavertm Exp $
 
 EAPI="3"
 
@@ -51,10 +51,6 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.3.5-split.patch"
-	# Picked up from master just after tagging, remove for next release
-	epatch "${FILESDIR}/0001-Avoid-global-name-dbus-is-not-defined-traceback-in-s.patch"
-	epatch "${FILESDIR}/0003-Properties-dialog-make-OK-button-sensitive-even-when.patch"
-
 	eautoreconf
 }
 

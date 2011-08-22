@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/system-config-printer-gnome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/ChangeLog,v 1.29 2011/08/10 21:21:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-gnome/ChangeLog,v 1.30 2011/08/22 23:47:18 reavertm Exp $
+
+*system-config-printer-gnome-1.3.6 (22 Aug 2011)
+
+  22 Aug 2011; Maciej Mrozowski <reavertm@gentoo.org>
+  -files/0001-Avoid-global-name-dbus-is-not-defined-traceback-in-s.patch,
+  -files/0003-Properties-dialog-make-OK-button-sensitive-even-when.patch,
+  -system-config-printer-gnome-1.3.5.ebuild,
+  +system-config-printer-gnome-1.3.6.ebuild:
+  Version bump, remove old
 
   10 Aug 2011; Markus Meier <maekke@gentoo.org>
   system-config-printer-gnome-1.3.3.ebuild:
