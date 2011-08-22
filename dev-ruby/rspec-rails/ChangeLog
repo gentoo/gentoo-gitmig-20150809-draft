@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rspec-rails
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-rails/ChangeLog,v 1.44 2011/07/24 10:10:13 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-rails/ChangeLog,v 1.45 2011/08/22 14:35:42 chainsaw Exp $
+
+  22 Aug 2011; Tony Vroon <chainsaw@gentoo.org> rspec-rails-1.3.4.ebuild:
+  Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney in bug
+  #380041 filed by Hans de Graaff.
 
   24 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> rspec-rails-2.6.1.ebuild:
   Marked ~ppc/~ppc64 wrt #351837
