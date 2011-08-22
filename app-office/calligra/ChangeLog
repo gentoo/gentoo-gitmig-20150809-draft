@@ -1,6 +1,10 @@
 # ChangeLog for app-office/calligra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.3 2011/08/19 22:10:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.4 2011/08/22 21:42:22 dilfridge Exp $
+
+  22 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  calligra-2.3.74.ebuild:
+  The component active belongs to Calligra Mobile, which we dont support here
 
 *calligra-2.3.74 (19 Aug 2011)
 
