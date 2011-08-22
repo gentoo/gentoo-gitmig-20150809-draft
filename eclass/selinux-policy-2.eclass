@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.9 2011/08/22 04:46:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.10 2011/08/22 19:51:33 swift Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the reference-policy based modules.
@@ -117,7 +117,11 @@ selinux-policy-2_src_prepare() {
 	if [[ -n ${BASEPOL} ]];
 	then
 		cd "${S}"
-		epatch "${PATCHBUNDLE}"
+		EPATCH_MULTI_MSG="Applying SELinux policy updates ... " \
+		EPATCH_SUFFIX="patch" \
+		EPATCH_SOURCE="${WORKDIR}" \
+		EPATCH_FORCE="yes" \
+		epatch
 	fi
 
 	# Apply the additional patches refered to by the module ebuild.
