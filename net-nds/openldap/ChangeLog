@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.385 2011/08/11 07:56:54 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.386 2011/08/22 23:22:47 robbat2 Exp $
+
+  22 Aug 2011; Robin H. Johnson <robbat2@gentoo.org> openldap-2.3.43-r1.ebuild:
+  Backport FORCE_UPGRADE to old 2.3 major series.
 
 *openldap-2.4.25-r1 (11 Aug 2011)
 
