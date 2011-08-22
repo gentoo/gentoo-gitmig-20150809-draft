@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.294 2011/08/21 11:34:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.295 2011/08/22 21:43:33 dilfridge Exp $
+
+  22 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> make.defaults:
+  The component active belongs to Calligra Mobile, which we dont support here
 
   21 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
   Remove obsolete/invalid masks

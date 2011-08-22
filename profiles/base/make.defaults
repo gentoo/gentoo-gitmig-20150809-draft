@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.70 2011/08/19 22:08:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.71 2011/08/22 21:43:33 dilfridge Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -33,7 +33,7 @@ GRUB_PLATFORMS=""
 # Tomáš Chvátal <scarabeus@gentoo.org> (15 May 2011)
 # Andreas K. Hüttel <dilfridge@gentoo.org> (19 Aug 2011)
 # By default build all koffice / calligra features.
-CALLIGRA_FEATURES="kexi words flow plan stage tables krita karbon braindump active"
+CALLIGRA_FEATURES="kexi words flow plan stage tables krita karbon braindump"
 
 # Pacho Ramos <pacho@gentoo.org> (14 Feb 2010)
 # Enable 'ptp2' by default as it is available for most cameras.
