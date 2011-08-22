@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/leechcraft.eclass,v 1.1 2011/08/22 18:19:35 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/leechcraft.eclass,v 1.2 2011/08/22 18:20:34 maksbotan Exp $
 #
 # @ECLASS: leechcraft.eclass
 # @MAINTAINER:
-# leechcraft
+# leechcraft@gentoo.org
 # @BLURB: Common functions and setup utilities for the LeechCraft app
 # @AUTHOR:
 # 0xd34df00d@gmail.com
