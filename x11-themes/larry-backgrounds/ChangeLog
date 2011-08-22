@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/larry-backgrounds
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/larry-backgrounds/ChangeLog,v 1.1 2011/08/22 13:07:40 sping Exp $
+
+*larry-backgrounds-20110822 (22 Aug 2011)
+
+  22 Aug 2011; Sebastian Pipping <sping@gentoo.org>
+  +larry-backgrounds-20110822.ebuild, +metadata.xml:
+  New package
+
