@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/mini-qmail-1.06.ebuild,v 1.3 2011/03/28 08:46:35 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/mini-qmail-1.06.ebuild,v 1.4 2011/08/22 08:37:07 flameeyes Exp $
 
 GENQMAIL_PV=20080406
 
@@ -54,6 +54,9 @@ src_unpack() {
 src_compile() {
 	qmail_src_compile
 }
+
+# make check is actually an install-check target, see bug #364955
+src_test() { :; }
 
 qmail_base_install_hook() {
 	dosym qmail-qmqpc "${QMAIL_HOME}"/bin/qmail-queue

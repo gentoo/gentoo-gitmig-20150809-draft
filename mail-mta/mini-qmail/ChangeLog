@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/mini-qmail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/ChangeLog,v 1.13 2011/03/28 08:46:35 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/mini-qmail/ChangeLog,v 1.14 2011/08/22 08:37:07 flameeyes Exp $
+
+  22 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org> mini-qmail-1.06.ebuild:
+  QA: remove default src_test execution, bug #364955.
 
   28 Mar 2011; Eray Aslan <eras@gentoo.org> mini-qmail-1.05.ebuild,
   mini-qmail-1.05-r1.ebuild, mini-qmail-1.06.ebuild:
