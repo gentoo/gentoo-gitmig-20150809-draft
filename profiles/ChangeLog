@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5642 2011/08/21 14:03:55 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5643 2011/08/22 06:55:43 olemarkus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Aug 2011; Ole Markus With <olemarkus@gentoo.org> base/use.mask:
+  Mask the php5-2 target so we do not break RDEPEND
 
   21 Aug 2011; Ole Markus With <olemarkus@gentoo.org> package.mask:
   Masking php:5.2

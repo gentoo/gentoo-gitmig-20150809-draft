@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.122 2011/08/16 15:52:44 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.123 2011/08/22 06:55:43 olemarkus Exp $
 
 # nvidia-cuda-toolkit is amd64/x86 only
 opencl
@@ -9,8 +9,8 @@ opencl
 infiniband
 
 # These ABIs are in constant change and currently only available for SVN snapshots
+php_targets_php5-2
 php_targets_php5-4
-php_targets_php5-5
 
 # deprecated and replaced by USE="udev"
 hal
