@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-lib-r1.eclass,v 1.9 2008/01/06 19:30:24 swegener Exp $
-#
-# Author: Stuart Herbert <stuart@gentoo.org>
-# Author: Luca Longinotti <chtekk@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-lib-r1.eclass,v 1.10 2011/08/22 04:46:32 vapier Exp $
 
 # @ECLASS: php-lib-r1.eclass
 # @MAINTAINER:
 # Gentoo PHP team <php-bugs@gentoo.org>
+# @AUTHOR:
+# Author: Stuart Herbert <stuart@gentoo.org>
+# Author: Luca Longinotti <chtekk@gentoo.org>
 # @BLURB: A unified interface for adding new PHP libraries.
 # @DESCRIPTION:
 # This eclass provides a unified interface for adding new PHP libraries.

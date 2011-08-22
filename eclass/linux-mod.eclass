@@ -1,16 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.103 2011/08/09 22:11:53 vapier Exp $
-
-# Author(s): John Mylchreest <johnm@gentoo.org>,
-#            Stefan Schweizer <genstef@gentoo.org>
-# Maintainer: kernel-misc@gentoo.org
-#
-# Please direct your bugs to the current eclass maintainer :)
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.104 2011/08/22 04:46:32 vapier Exp $
 
 # @ECLASS: linux-mod.eclass
 # @MAINTAINER:
 # kernel-misc@gentoo.org
+# @AUTHOR:
+# John Mylchreest <johnm@gentoo.org>,
+# Stefan Schweizer <genstef@gentoo.org>
 # @BLURB: It provides the functionality required to install external modules against a kernel source tree.
 # @DESCRIPTION:
 # This eclass is used to interface with linux-info.eclass in such a way

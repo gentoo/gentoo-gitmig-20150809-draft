@@ -1,17 +1,14 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.38 2011/07/22 09:41:17 graaff Exp $
-#
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.39 2011/08/22 04:46:32 vapier Exp $
+
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
 # Ruby herd <ruby@gentoo.org>
-#
+# @AUTHOR:
 # Author: Diego E. Pettenò <flameeyes@gentoo.org>
-#
 # Author: Alex Legler <a3li@gentoo.org>
-#
 # Author: Hans de Graaff <graaff@gentoo.org>
-#
 # @BLURB: An eclass for installing Ruby packages with proper support for multiple Ruby slots.
 # @DESCRIPTION:
 # The Ruby eclass is designed to allow an easier installation of Ruby packages

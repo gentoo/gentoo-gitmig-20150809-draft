@@ -1,13 +1,12 @@
 # Copyright 2011 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/darcs.eclass,v 1.11 2011/01/30 10:27:20 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/darcs.eclass,v 1.12 2011/08/22 04:46:31 vapier Exp $
 
 # @ECLASS: darcs.eclass
 # @MAINTAINER:
 # "Gentoo's Haskell Language team" <haskell@gentoo.org>
-#
 # Sergei Trofimovich <slyfox@gentoo.org>
-#
+# @AUTHOR:
 # Original Author: Jeffrey Yasskin <jyasskin@mail.utexas.edu>
 # @BLURB: This eclass provides functions for fetch and unpack darcs repositories
 # @DESCRIPTION:

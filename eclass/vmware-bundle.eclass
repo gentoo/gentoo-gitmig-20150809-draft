@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vmware-bundle.eclass,v 1.1 2011/03/17 18:23:40 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vmware-bundle.eclass,v 1.2 2011/08/22 04:46:32 vapier Exp $
 
 # @ECLASS: vmware-bundle.eclass
-# @MAINTAINER: <vmware@gentoo.org>
+# @MAINTAINER:
+# vmware@gentoo.org
+# @AUTHOR:
+# Matt Whitlock <matt@whitlock.name>
 # @BLURB: Provides extract functionality for vmware products bundles
-# @DESCRIPTION:
-#
-# @AUTHOR: Matt Whitlock <matt@whitlock.name> 
 
 DEPEND="dev-libs/libxslt"
 

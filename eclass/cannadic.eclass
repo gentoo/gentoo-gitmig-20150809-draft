@@ -1,11 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cannadic.eclass,v 1.15 2008/09/10 08:15:48 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cannadic.eclass,v 1.16 2011/08/22 04:46:31 vapier Exp $
 
 # @ECLASS: cannadic.eclass
-# @MAINTAINER:
-# ???
-#
+# @AUTHOR:
 # Original author: Mamoru KOMACHI <usata@gentoo.org>
 # @BLURB: Function for Canna compatible dictionaries
 # @DESCRIPTION:
@@ -36,7 +34,7 @@ cannadir="${ROOT}/var/lib/canna/dic/canna"
 dicsdir="${ROOT}/var/lib/canna/dic/dics.d"
 
 # @FUNCTION: cannadic_pkg_setup
-# @DESCRIPTION: 
+# @DESCRIPTION:
 # Sets up cannadic dir
 cannadic_pkg_setup() {
 

@@ -1,12 +1,13 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.39 2011/07/08 11:35:01 ssuominen Exp $
-#
+# $Header: /var/cvsroot/gentoo-x86/eclass/mythtv-plugins.eclass,v 1.40 2011/08/22 04:46:32 vapier Exp $
+
 # @ECLASS: mythtv-plugins.eclass
-# @AUTHOR: Doug Goldstein <cardoe@gentoo.org>
-# @MAINTAINER: Doug Goldstein <cardoe@gentoo.org>
+# @MAINTAINER:
+# Doug Goldstein <cardoe@gentoo.org>
+# @AUTHOR:
+# Doug Goldstein <cardoe@gentoo.org>
 # @BLURB: Installs MythTV plugins along with patches from the release-${PV}-fixes branch
-#
 
 # NOTE: YOU MUST INHERIT EITHER qt3 or qt4 IN YOUR PLUGIN!
 

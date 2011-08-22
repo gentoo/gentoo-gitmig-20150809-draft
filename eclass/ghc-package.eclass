@@ -1,13 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.30 2011/05/08 15:00:43 slyfox Exp $
-#
+# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.31 2011/08/22 04:46:31 vapier Exp $
+
 # @ECLASS: ghc-package.eclass
 # @MAINTAINER:
 # "Gentoo's Haskell Language team" <haskell@gentoo.org>
-#
+# @AUTHOR:
 # Original Author: Andres Loeh <kosmikus@gentoo.org>
-#
 # @BLURB: This eclass helps with the Glasgow Haskell Compiler's package configuration utility.
 # @DESCRIPTION:
 # Helper eclass to handle ghc installation/upgrade/deinstallation process.

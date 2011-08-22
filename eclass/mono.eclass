@@ -1,12 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mono.eclass,v 1.14 2011/03/25 09:43:42 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mono.eclass,v 1.15 2011/08/22 04:46:32 vapier Exp $
 
 # @ECLASS: mono.eclass
 # @MAINTAINER:
 # dotnet@gentoo.org
-# @BLURB: common settings and functions for mono and dotnet related
-# packages
+# @BLURB: common settings and functions for mono and dotnet related packages
 # @DESCRIPTION:
 # The mono eclass contains common environment settings that are useful for
 # dotnet packages.  Currently, it provides no functions, just exports

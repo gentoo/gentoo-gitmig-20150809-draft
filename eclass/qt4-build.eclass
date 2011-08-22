@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.92 2011/08/13 11:31:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.93 2011/08/22 04:46:32 vapier Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -357,7 +357,8 @@ qt4-build_src_configure() {
 }
 
 # @FUNCTION: qt4-build_src_compile
-# @DESCRIPTION: Actual compile phase
+# @DESCRIPTION:
+# Actual compile phase
 qt4-build_src_compile() {
 	setqtenv
 
@@ -410,7 +411,7 @@ qt4-build_src_install() {
 	fix_library_files
 	fix_includes
 	# remove .la files since we are building only shared Qt libraries
-	find "${D}"${QTLIBDIR} -name "*.la" -print0 | xargs -0 rm 
+	find "${D}"${QTLIBDIR} -name "*.la" -print0 | xargs -0 rm
 }
 
 # @FUNCTION: setqtenv
@@ -568,7 +569,8 @@ install_directories() {
 : ${QCONFIG_DEFINE:=}
 
 # @FUNCTION: install_qconfigs
-# @DESCRIPTION: Install gentoo-specific mkspecs configurations
+# @DESCRIPTION:
+# Install gentoo-specific mkspecs configurations
 install_qconfigs() {
 	local x
 	if [[ -n ${QCONFIG_ADD} || -n ${QCONFIG_REMOVE} ]]; then
@@ -589,7 +591,8 @@ install_qconfigs() {
 }
 
 # @FUNCTION: generate_qconfigs
-# @DESCRIPTION: Generates gentoo-specific configurations
+# @DESCRIPTION:
+# Generates gentoo-specific configurations
 generate_qconfigs() {
 	if [[ -n ${QCONFIG_ADD} || -n ${QCONFIG_REMOVE} || -n ${QCONFIG_DEFINE} || ${CATEGORY}/${PN} == x11-libs/qt-core ]]; then
 		local x qconfig_add qconfig_remove qconfig_new
@@ -647,13 +650,15 @@ generate_qconfigs() {
 }
 
 # @FUNCTION: qt4-build_pkg_postrm
-# @DESCRIPTION: Generate configurations when the package is completely removed
+# @DESCRIPTION:
+# Generate configurations when the package is completely removed
 qt4-build_pkg_postrm() {
 	generate_qconfigs
 }
 
 # @FUNCTION: qt4-build_pkg_postinst
-# @DESCRIPTION: Generate configuration, plus throws a message about possible
+# @DESCRIPTION:
+# Generate configuration, plus throws a message about possible
 # breakages and proposed solutions.
 qt4-build_pkg_postinst() {
 	generate_qconfigs

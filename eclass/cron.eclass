@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cron.eclass,v 1.14 2011/04/26 11:37:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cron.eclass,v 1.15 2011/08/22 04:46:31 vapier Exp $
 
 # @ECLASS: cron
 # @MAINTAINER:
 # cron-bugs@gentoo.org
-#
+# @AUTHOR:
 # Original Author: Aaron Walker <ka0ttic@gentoo.org>
 # @BLURB: Some functions for cron
 # @DESCRIPTION:

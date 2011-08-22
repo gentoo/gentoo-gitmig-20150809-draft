@@ -1,15 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome.org.eclass,v 1.13 2011/06/16 07:37:20 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome.org.eclass,v 1.14 2011/08/22 04:46:31 vapier Exp $
 
 # @ECLASS: gnome.org.eclass
 # @MAINTAINER:
 # gnome@gentoo.org
-#
-# @CODE@
+# @AUTHOR:
 # Authors: Spidler <spidler@gentoo.org> with help of carparski.
 # eclass variable additions and documentation: Gilles Dartiguelongue <eva@gentoo.org>
-# @CODE@
 # @BLURB: Helper eclass for gnome.org hosted archives
 # @DESCRIPTION:
 # Provide a default SRC_URI for tarball hosted on gnome.org mirrors.

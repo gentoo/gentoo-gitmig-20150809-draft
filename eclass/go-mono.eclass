@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/go-mono.eclass,v 1.11 2011/08/18 09:05:54 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/go-mono.eclass,v 1.12 2011/08/22 04:46:32 vapier Exp $
 
 # @ECLASS: go-mono.eclass
 # @MAINTAINER:
@@ -69,7 +69,8 @@ DEPEND="${DEPEND}
 	userland_GNU? ( >=sys-apps/findutils-4.4.0 )"
 
 # @FUNCTION: go-mono_src_unpack
-# @DESCRIPTION: Runs default()
+# @DESCRIPTION:
+# Runs default()
 go-mono_src_unpack() {
 	if [[ "${PV%.9999}" != "${PV}" ||  "${PV}" == "9999" ]]
 	then
@@ -81,7 +82,8 @@ go-mono_src_unpack() {
 }
 
 # @FUNCTION: go-mono_src_prepare
-# @DESCRIPTION: Runs autopatch from base.eclass, if PATCHES is set.
+# @DESCRIPTION:
+# Runs autopatch from base.eclass, if PATCHES is set.
 go-mono_src_prepare() {
 	if [[ "${PV%.9999}" != "${PV}" ||  "${PV}" == "9999" ]]
 	then
@@ -93,7 +95,8 @@ go-mono_src_prepare() {
 }
 
 # @FUNCTION: go-mono_src_configure
-# @DESCRIPTION: Runs econf, disabling static libraries and dependency-tracking.
+# @DESCRIPTION:
+# Runs econf, disabling static libraries and dependency-tracking.
 go-mono_src_configure() {
 	econf	--disable-dependency-tracking		\
 		--disable-static			\
@@ -101,17 +104,20 @@ go-mono_src_configure() {
 }
 
 # @FUNCTION: go-mono_src_configure
-# @DESCRIPTION: Runs default()
+# @DESCRIPTION:
+# Runs default()
 go-mono_src_compile() {
 	emake "$@" || die "emake failed"
 }
 
 # @ECLASS-VARIABLE: DOCS
-# @DESCRIPTION: Insert path of docs you want installed. If more than one,
+# @DESCRIPTION:
+# Insert path of docs you want installed. If more than one,
 # consider using an array.
 
 # @FUNCTION: go-mono_src_install
-# @DESCRIPTION: Rune emake, installs common doc files, if DOCS is
+# @DESCRIPTION:
+# Rune emake, installs common doc files, if DOCS is
 # set, installs those. Gets rid of .la files.
 go-mono_src_install () {
 	emake -j1 DESTDIR="${D}" "$@" install || die "install failed"

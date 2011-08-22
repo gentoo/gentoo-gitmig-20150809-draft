@@ -1,15 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/pax-utils.eclass,v 1.14 2011/07/08 11:35:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/pax-utils.eclass,v 1.15 2011/08/22 04:46:32 vapier Exp $
 
 # @ECLASS: pax-utils.eclass
 # @MAINTAINER:
-# Maintained by
-# 	The Gentoo Linux Hardened Team <hardened@gentoo.org>
-# Original Author
-# 	Kevin F. Quinn <kevquinn@gentoo.org>
-# Modifications for bug #365825, @ ECLASS markup
-#	Anthony G. Basile <blueness@gentoo.org>
+# The Gentoo Linux Hardened Team <hardened@gentoo.org>
+# @AUTHOR:
+# Original Author: Kevin F. Quinn <kevquinn@gentoo.org>
+# Modifications for bug #365825, @ ECLASS markup: Anthony G. Basile <blueness@gentoo.org>
 # @BLURB: functions to provide pax markings
 # @DESCRIPTION:
 # This eclass provides support for manipulating PaX markings on ELF binaries,

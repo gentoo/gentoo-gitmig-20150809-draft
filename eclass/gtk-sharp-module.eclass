@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.31 2011/07/29 13:57:29 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.32 2011/08/22 04:46:32 vapier Exp $
 
 # @ECLASS: gtk-sharp-module.eclass
 # @MAINTAINER:
@@ -325,6 +325,7 @@ get_sharp_assemblies() {
 
 # @FUNCTION: phase_hook
 # @USAGE: <prefix>
+# @DESCRIPTION:
 # Looks for functions named <prefix>_caller_suffix and executes them.
 # _caller_suffix is the calling function with the prefix
 # gtk-sharp-module removed.

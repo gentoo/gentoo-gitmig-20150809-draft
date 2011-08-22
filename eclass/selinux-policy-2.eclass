@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.8 2011/08/12 20:01:29 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.9 2011/08/22 04:46:32 vapier Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the reference-policy based modules.
 
 # @ECLASS: selinux-policy-2.eclass
-# @MAINTAINER: 
+# @MAINTAINER:
 # selinux@gentoo.org
 # @BLURB: This eclass supports the deployment of the various SELinux modules in sec-policy
 # @DESCRIPTION:
@@ -14,12 +14,12 @@
 # defined in the sec-policy category. It is responsible for extracting the
 # specific bits necessary for single-module deployment (instead of full-blown
 # policy rebuilds) and applying the necessary patches.
-# 
+#
 # Also, it supports for bundling patches to make the whole thing just a bit more
 # manageable.
 
 # @ECLASS-VARIABLE: MODS
-# @DESCRIPTION: 
+# @DESCRIPTION:
 # This variable contains the (upstream) module name for the SELinux module.
 # This name is only the module name, not the category!
 : ${MODS:="_illegal"}
@@ -28,7 +28,7 @@
 # @DESCRIPTION:
 # This variable contains the version string of the selinux-base-policy package
 # that this module build depends on. It is used to patch with the appropriate
-# patch bundle(s) that are part of selinux-base-policy. 
+# patch bundle(s) that are part of selinux-base-policy.
 : ${BASEPOL:=""}
 
 # @ECLASS-VARIABLE: POLICY_PATCH
@@ -157,7 +157,7 @@ selinux-policy-2_src_prepare() {
 }
 
 # @FUNCTION: selinux-policy-2_src_compile
-# @DESCRIPTION: 
+# @DESCRIPTION:
 # Build the SELinux policy module (.pp file) for just the selected module, and
 # this for each SELinux policy mentioned in POLICY_TYPES
 selinux-policy-2_src_compile() {

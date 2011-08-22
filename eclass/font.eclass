@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.52 2010/09/30 03:46:11 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/font.eclass,v 1.53 2011/08/22 04:46:31 vapier Exp $
 
 # @ECLASS: font.eclass
 # @MAINTAINER:
-#  fonts@gentoo.org
+# fonts@gentoo.org
 # @BLURB: Eclass to make font installation uniform
 
 inherit eutils
@@ -45,7 +45,7 @@ FONT_CONF=( "" )
 # @DEFAULT_UNSET
 # @DESCRIPTION:
 # Space delimited list of docs to install.
-# We always install these: 
+# We always install these:
 # COPYRIGHT README{,.txt} NEWS AUTHORS BUGS ChangeLog FONTLOG.txt
 DOCS=${DOCS:-}
 

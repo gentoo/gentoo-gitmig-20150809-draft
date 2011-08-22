@@ -1,14 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.4 2011/06/21 14:11:31 jlec Exp $
-
-# Author Justin Lecher <jlec@gentoo.org>
-# Test functions provided by Sebastien Fabbro and Kacper Kowalik
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran-2.eclass,v 1.5 2011/08/22 04:46:31 vapier Exp $
 
 # @ECLASS: fortran-2.eclass
 # @MAINTAINER:
 # jlec@gentoo.org
 # sci@gentoo.org
+# @AUTHOR:
+# Author Justin Lecher <jlec@gentoo.org>
+# Test functions provided by Sebastien Fabbro and Kacper Kowalik
 # @BLURB: Simplify fortran compiler management
 # @DESCRIPTION:
 # If you need a fortran compiler, then you should be inheriting this eclass and
@@ -36,8 +36,9 @@
 inherit toolchain-funcs
 
 # @FUNCTION: _write_testsuite
-# @DESCRIPTION: writes fortran test code
 # @INTERNAL
+# @DESCRIPTION:
+# writes fortran test code
 _write_testsuite() {
 	local filebase=${T}/test-fortran
 
@@ -59,10 +60,10 @@ _write_testsuite() {
 }
 
 # @FUNCTION: _compile_test
+# @INTERNAL
 # @DESCRIPTION:
 # Takes fortran compiler as first argument and dialect as second.
 # Checks whether the passed fortran compiler speaks the fortran dialect
-# @INTERNAL
 _compile_test() {
 	local filebase=${T}/test-fortran
 	local fcomp=${1}
@@ -82,9 +83,9 @@ _compile_test() {
 }
 
 # @FUNCTION: _fortran-has-openmp
+# @INTERNAL
 # @DESCRIPTION:
 # See if the fortran supports OpenMP.
-# @INTERNAL
 _fortran-has-openmp() {
 	local flag
 	local filebase=${T}/test-fc-openmp
@@ -108,8 +109,9 @@ _fortran-has-openmp() {
 }
 
 # @FUNCTION: _die_msg
-# @DESCRIPTION: Detailed description how to handle fortran support
 # @INTERNAL
+# @DESCRIPTION:
+# Detailed description how to handle fortran support
 _die_msg() {
 	echo
 	eerror "Please install currently selected gcc version with USE=fortran."

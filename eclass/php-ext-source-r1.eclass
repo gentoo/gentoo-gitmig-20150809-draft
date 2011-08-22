@@ -1,15 +1,15 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r1.eclass,v 1.21 2010/07/27 13:24:39 mabi Exp $
-#
-# Author: Tal Peer <coredumb@gentoo.org>
-# Author: Stuart Herbert <stuart@gentoo.org>
-# Author: Luca Longinotti <chtekk@gentoo.org>
-# Author: Jakub Moc <jakub@gentoo.org> (documentation)
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r1.eclass,v 1.22 2011/08/22 04:46:32 vapier Exp $
 
 # @ECLASS: php-ext-src-r1.eclass
 # @MAINTAINER:
 # Gentoo PHP team <php-bugs@gentoo.org>
+# @AUTHOR:
+# Author: Tal Peer <coredumb@gentoo.org>
+# Author: Stuart Herbert <stuart@gentoo.org>
+# Author: Luca Longinotti <chtekk@gentoo.org>
+# Author: Jakub Moc <jakub@gentoo.org> (documentation)
 # @BLURB: A unified interface for compiling and installing standalone PHP extensions from source code.
 # @DESCRIPTION:
 # This eclass provides a unified interface for compiling and installing standalone
@@ -34,7 +34,7 @@ RDEPEND=""
 # @FUNCTION: php-ext-source-r1_src_unpack
 # @DESCRIPTION:
 # runs standard src_unpack + _phpize
-#
+
 # @VARIABLE: PHP_EXT_SKIP_PHPIZE
 # @DESCRIPTION:
 # phpize will be run by default for all ebuilds that use
@@ -48,7 +48,7 @@ php-ext-source-r1_src_unpack() {
 	fi
 }
 
-# @FUNCTION php-ext-source-r1_phpize
+# @FUNCTION: php-ext-source-r1_phpize
 # @DESCRIPTION:
 # Runs phpize and autotools in addition to the standard src_unpack
 php-ext-source-r1_phpize() {

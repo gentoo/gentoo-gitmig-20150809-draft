@@ -1,9 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.22 2011/04/03 18:12:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2-utils.eclass,v 1.23 2011/08/22 04:46:31 vapier Exp $
 
 # @ECLASS: gnome2-utils.eclass
-# @MAINTAINER: 
+# @MAINTAINER:
 # gnome@gentoo.org
 # @BLURB: Auxiliary functions commonly used by Gnome packages.
 # @DESCRIPTION:

@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/openib.eclass,v 1.1 2011/06/30 20:47:43 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/openib.eclass,v 1.2 2011/08/22 04:46:32 vapier Exp $
 
-#
+# @ECLASS: openib.eclass
+# @AUTHOR:
 # Original Author: Alexey Shvetsov <alexxy@gentoo.org>
-# Purpose:  Simplify working with OFED packages
-#
+# @BLURB: Simplify working with OFED packages
 
 inherit base eutils rpm versionator
 

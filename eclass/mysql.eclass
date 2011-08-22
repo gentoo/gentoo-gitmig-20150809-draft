@@ -1,13 +1,14 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.163 2011/08/21 16:14:56 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.164 2011/08/22 04:46:32 vapier Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
-# Author: Francesco Riosa (Retired) <vivo@gentoo.org>
-# Maintainers: MySQL Team <mysql-bugs@gentoo.org>
-#		- Luca Longinotti <chtekk@gentoo.org>
-#		- Robin H. Johnson <robbat2@gentoo.org>
+# MySQL Team <mysql-bugs@gentoo.org>
+# Luca Longinotti <chtekk@gentoo.org>
+# Robin H. Johnson <robbat2@gentoo.org>
+# @AUTHOR:
+# Francesco Riosa (Retired) <vivo@gentoo.org>
 # @BLURB: This eclass provides most of the functions for mysql ebuilds
 # @DESCRIPTION:
 # The mysql.eclass provides almost all the code to build the mysql ebuilds

@@ -1,11 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/check-reqs.eclass,v 1.7 2010/08/22 21:18:03 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/check-reqs.eclass,v 1.8 2011/08/22 04:46:31 vapier Exp $
 
 # @ECLASS: check-reqs.eclass
 # @MAINTAINER:
 # Bo Ørsted Andresen <zlin@gentoo.org>
-# 
+# @AUTHOR:
 # Original Author: Ciaran McCreesh <ciaranm@gentoo.org>
 # @BLURB: Provides a uniform way of handling ebuild which have very high build requirements
 # @DESCRIPTION:

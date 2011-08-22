@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.13 2011/07/30 15:10:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.14 2011/08/22 04:46:31 vapier Exp $
 
 # @ECLASS: git-2.eclass
 # @MAINTAINER:
@@ -404,7 +404,7 @@ git-2_fetch() {
 git-2_bootstrap() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	# @ECLASS_VARIABLE: EGIT_BOOTSTRAP
+	# @ECLASS-VARIABLE: EGIT_BOOTSTRAP
 	# @DESCRIPTION:
 	# Command to be executed after checkout and clone of the specified
 	# repository.

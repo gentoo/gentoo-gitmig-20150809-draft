@@ -1,12 +1,14 @@
-# Copyright 2004-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.20 2010/05/08 22:18:28 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gdesklets.eclass,v 1.21 2011/08/22 04:46:31 vapier Exp $
 
 # @ECLASS: gdesklets.eclass
 # @MAINTAINER:
 # gdesklets@gentoo.org
-# @BLURB: Installation functions for Desklets and Controls supported
-# by gDesklets
+# @AUTHOR:
+# Original author: Joe Sapp <nixphoeni@gentoo.org>
+# Original author: Mike Gardiner <obz@gentoo.org>
+# @BLURB: Installation functions for Desklets and Controls supported by gDesklets
 # @DESCRIPTION:
 # The gdesklets eclass provides a simple way to create ebuilds for
 # globally installing desktop applets ("Desklets") and supporting code
@@ -19,25 +21,22 @@
 # technically could have an ebuild that works around this limitation,
 # but no new packages should be added to the tree that do this (mainly
 # for ease of maintenance).
-#
-# Original authors:	Joe Sapp <nixphoeni@gentoo.org>
-#			Mike Gardiner <obz@gentoo.org>
 
-# @ECLASS_VARIABLE: DESKLET_NAME
+# @ECLASS-VARIABLE: DESKLET_NAME
 # @DESCRIPTION:
 # *Optional*  The name of the Desklet, if the package is one. The
 # default is to assume a Desklet with the name being ${PN} without the
 # "desklet-" prefix.
 
-# @ECLASS_VARIABLE: CONTROL_NAME
+# @ECLASS-VARIABLE: CONTROL_NAME
 # @DESCRIPTION:
 # *Optional*  The name of the Control, if the package is one.
 
-# @ECLASS_VARIABLE: DOCS
+# @ECLASS-VARIABLE: DOCS
 # @DESCRIPTION:
 # Anything (like a README) that should be dodoc'd.
 
-# @ECLASS_VARIABLE: SLOT
+# @ECLASS-VARIABLE: SLOT
 # @DESCRIPTION:
 # Set only if the package is a Control and it provides a different
 # interface (i.e. expands to a different install directory) than a

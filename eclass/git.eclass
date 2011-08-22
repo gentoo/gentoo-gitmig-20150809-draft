@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.55 2011/05/31 10:17:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.56 2011/08/22 04:46:31 vapier Exp $
 
 # @DEPRECATED
 # This eclass has been superseded by git-2 eclass.
@@ -330,7 +330,7 @@ git_fetch() {
 			${elogcmd} "   to commit:		${cursha1}"
 		else
 			${elogcmd} "   at the commit: 		${cursha1}"
-			# @ECLASS_VARIABLE: LIVE_FAIL_FETCH_IF_REPO_NOT_UPDATED
+			# @ECLASS-VARIABLE: LIVE_FAIL_FETCH_IF_REPO_NOT_UPDATED
 			# @DESCRIPTION:
 			# If this variable is set to TRUE in make.conf or somewhere in
 			# enviroment the package will fail if there is no update, thus in

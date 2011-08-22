@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.53 2010/05/27 08:09:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/base.eclass,v 1.54 2011/08/22 04:46:31 vapier Exp $
 
 # @ECLASS: base.eclass
 # @MAINTAINER:
 # QA Team <qa@gentoo.org>
-#
-# Original author Dan Armak <danarmak@gentoo.org>
+# @AUTHOR:
+# Original author: Dan Armak <danarmak@gentoo.org>
 # @BLURB: The base eclass defines some default functions and variables.
 # @DESCRIPTION:
 # The base eclass defines some default functions and variables. Nearly

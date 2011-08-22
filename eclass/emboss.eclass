@@ -1,17 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/emboss.eclass,v 1.1 2011/03/29 07:23:23 jlec Exp $
-
-# Creator of the original eclass
-# Author Olivier Fisette <ofisette@gmail.com>
-#
-# Author of the next generation eclass
-# Justin Lecher <jlec@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/eclass/emboss.eclass,v 1.2 2011/08/22 04:46:31 vapier Exp $
 
 # @ECLASS: emboss.eclass
 # @MAINTAINER:
 # sci-biology@gentoo.org
 # jlec@gentoo.org
+# @AUTHOR:
+# Original author: Author Olivier Fisette <ofisette@gmail.com>
+# Next gen author: Justin Lecher <jlec@gentoo.org>
 # @BLURB: Use this to easy install EMBOSS and EMBASSY programs (EMBOSS add-ons).
 # @DESCRIPTION:
 # The inheriting ebuild must set EAPI=4 and provide EBO_DESCRIPTION before the inherit line.

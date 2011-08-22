@@ -1,16 +1,16 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.14 2011/08/19 09:15:51 olemarkus Exp $
-#
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.15 2011/08/22 04:46:32 vapier Exp $
+
+# @ECLASS: php-ext-source-r2.eclass
+# @MAINTAINER:
+# Gentoo PHP team <php-bugs@gentoo.org>
+# @AUTHOR:
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
 # Author: Luca Longinotti <chtekk@gentoo.org>
 # Author: Jakub Moc <jakub@gentoo.org> (documentation)
 # Author: Ole Markus With <olemarkus@gentoo.org>
-
-# @ECLASS: php-ext-source-r2.eclass
-# @MAINTAINER:
-# Gentoo PHP team <php-bugs@gentoo.org>
 # @BLURB: A unified interface for compiling and installing standalone PHP extensions.
 # @DESCRIPTION:
 # This eclass provides a unified interface for compiling and installing standalone
@@ -96,7 +96,7 @@ RDEPEND="${RDEPEND}
 # @FUNCTION: php-ext-source-r2_src_unpack
 # @DESCRIPTION:
 # runs standard src_unpack + _phpize
-#
+
 # @VARIABLE: PHP_EXT_SKIP_PHPIZE
 # @DESCRIPTION:
 # phpize will be run by default for all ebuilds that use
@@ -118,7 +118,7 @@ php-ext-source-r2_src_prepare() {
 	done
 }
 
-# @FUNCTION php-ext-source-r2_phpize
+# @FUNCTION: php-ext-source-r2_phpize
 # @DESCRIPTION:
 # Runs phpize and autotools in addition to the standard src_unpack
 php-ext-source-r2_phpize() {
@@ -137,7 +137,7 @@ php-ext-source-r2_phpize() {
 # @FUNCTION: php-ext-source-r2_src_configure
 # @DESCRIPTION:
 # Takes care of standard configure for PHP extensions (modules).
-#
+
 # @VARIABLE: my_conf
 # @DESCRIPTION:
 # Set this in the ebuild to pass configure options to econf.

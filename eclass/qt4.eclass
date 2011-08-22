@@ -1,6 +1,6 @@
-# Copyright 2005-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.62 2010/08/14 22:55:27 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.63 2011/08/22 04:46:32 vapier Exp $
 
 # @DEPRECATED
 # This eclass has been superseded by qt4-r2
@@ -184,7 +184,7 @@ qt4_pkg_setup() {
 #	"${FILESDIR}/mypatch.patch"
 # 	"${FILESDIR}/mypatch2.patch"
 # )
-#
+
 # @FUNCTION: qt4_src_prepare
 # @DESCRIPTION:
 # Default src_prepare function for packages that depend on qt4. If you have to

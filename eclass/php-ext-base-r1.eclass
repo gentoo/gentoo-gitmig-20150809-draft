@@ -1,15 +1,15 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base-r1.eclass,v 1.16 2011/01/05 23:17:26 olemarkus Exp $
-#
-# Author: Tal Peer <coredumb@gentoo.org>
-# Author: Stuart Herbert <stuart@gentoo.org>
-# Author: Luca Longinotti <chtekk@gentoo.org>
-# Author: Jakub Moc <jakub@gentoo.org> (documentation)
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base-r1.eclass,v 1.17 2011/08/22 04:46:32 vapier Exp $
 
 # @ECLASS: php-ext-base-r1.eclass
 # @MAINTAINER:
 # Gentoo PHP team <php-bugs@gentoo.org>
+# @AUTHOR:
+# Author: Tal Peer <coredumb@gentoo.org>
+# Author: Stuart Herbert <stuart@gentoo.org>
+# Author: Luca Longinotti <chtekk@gentoo.org>
+# Author: Jakub Moc <jakub@gentoo.org> (documentation)
 # @BLURB: A unified interface for adding standalone PHP extensions.
 # @DESCRIPTION:
 # This eclass provides a unified interface for adding standalone

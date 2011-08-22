@@ -1,12 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.39 2011/06/09 21:42:58 mattst88 Exp $
-
-# Original author: Martin Schlemmer <azarah@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.40 2011/08/22 04:46:32 vapier Exp $
 
 # @ECLASS: virtualx.eclass
 # @MAINTAINER:
 # x11@gentoo.org
+# @AUTHOR:
+# Original author: Martin Schlemmer <azarah@gentoo.org>
 # @BLURB: This eclass can be used for packages that needs a working X environment to build.
 
 # @ECLASS-VARIABLE: VIRTUALX_REQUIRED
@@ -70,7 +70,7 @@ case ${VIRTUALX_REQUIRED} in
 esac
 
 # @FUNCTION: virtualmake
-# @DESCRIPTION: 
+# @DESCRIPTION:
 # Function which attach to running X session or start new Xvfb session
 # where the VIRTUALX_COMMAND variable content gets executed.
 virtualmake() {
@@ -164,7 +164,7 @@ virtualmake() {
 }
 
 # @FUNCTION: Xmake
-# @DESCRIPTION: 
+# @DESCRIPTION:
 # Same as "make", but set up the Xvfb hack if needed.
 # Deprecated call.
 Xmake() {
@@ -176,7 +176,7 @@ Xmake() {
 }
 
 # @FUNCTION: Xemake
-# @DESCRIPTION: 
+# @DESCRIPTION:
 # Same as "emake", but set up the Xvfb hack if needed.
 Xemake() {
 	debug-print-function ${FUNCNAME} "$@"
@@ -185,8 +185,8 @@ Xemake() {
 }
 
 # @FUNCTION: Xeconf
-# @DESCRIPTION: 
-#  Same as "econf", but set up the Xvfb hack if needed.
+# @DESCRIPTION:
+# Same as "econf", but set up the Xvfb hack if needed.
 Xeconf() {
 	debug-print-function ${FUNCNAME} "$@"
 

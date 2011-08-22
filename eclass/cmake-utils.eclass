@@ -1,17 +1,15 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.72 2011/08/21 21:19:08 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.73 2011/08/22 04:46:31 vapier Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
 # kde@gentoo.org
-#
-# @CODE
+# @AUTHOR:
 # Tomáš Chvátal <scarabeus@gentoo.org>
 # Maciej Mrozowski <reavertm@gentoo.org>
 # (undisclosed contributors)
 # Original author: Zephyrus (zephyrus@mirach.it)
-# @CODE
 # @BLURB: common ebuild functions for cmake-based packages
 # @DESCRIPTION:
 # The cmake-utils eclass is base.eclass(5) wrapper that makes creating ebuilds for

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.11 2011/03/19 16:34:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-r2.eclass,v 1.12 2011/08/22 04:46:32 vapier Exp $
 
 # @ECLASS: qt4-r2.eclass
 # @MAINTAINER:
@@ -65,7 +65,7 @@ qt4-r2_src_unpack() {
 # example:
 # PATCHES=( "${FILESDIR}"/mypatch.patch
 # 	"${FILESDIR}"/mypatch2.patch )
-#
+
 # @FUNCTION: qt4-r2_src_prepare
 # @DESCRIPTION:
 # Default src_prepare function for packages that depend on qt4. If you have to
@@ -108,12 +108,12 @@ qt4-r2_src_compile() {
 # @DESCRIPTION:
 # Use this variable if you want to install any documentation.
 # example: DOCS="README AUTHORS"
-#
+
 # @ECLASS-VARIABLE: DOCSDIR
 # @DESCRIPTION:
 # Directory containing documentation. If not specified, ${S} will be used
 # instead.
-#
+
 # @FUNCTION: qt4-r2_src_install
 # @DESCRIPTION:
 # Default src_install function for qt4-based packages. Installs compiled code,

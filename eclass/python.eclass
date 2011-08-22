@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.130 2011/08/19 12:16:56 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.131 2011/08/22 04:46:32 vapier Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -1670,7 +1670,8 @@ python_set_active_version() {
 }
 
 # @FUNCTION: python_need_rebuild
-# @DESCRIPTION: Mark current package for rebuilding by python-updater after
+# @DESCRIPTION:
+# Mark current package for rebuilding by python-updater after
 # switching of active version of Python.
 python_need_rebuild() {
 	if _python_package_supporting_installation_for_multiple_python_abis; then

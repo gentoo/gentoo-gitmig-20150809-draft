@@ -1,15 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.89 2011/08/18 14:58:57 vapier Exp $
-#
-# Original author: John Mylchreest <johnm@gentoo.org>
-# Maintainer: kernel-misc@gentoo.org
-#
-# Please direct your bugs to the current eclass maintainer :)
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.90 2011/08/22 04:46:32 vapier Exp $
 
 # @ECLASS: linux-info.eclass
 # @MAINTAINER:
 # kernel-misc@gentoo.org
+# @AUTHOR:
+# Original author: John Mylchreest <johnm@gentoo.org>
 # @BLURB: eclass used for accessing kernel related information
 # @DESCRIPTION:
 # This eclass is used as a central eclass for accessing kernel
@@ -217,7 +214,8 @@ getfilevar_noexec() {
 	fi
 }
 
-# @PRIVATE-VARIABLE: _LINUX_CONFIG_EXISTS_DONE
+# @ECLASS-VARIABLE: _LINUX_CONFIG_EXISTS_DONE
+# @INTERNAL
 # @DESCRIPTION:
 # This is only set if one of the linux_config_*exists functions has been called.
 # We use it for a QA warning that the check for a config has not been performed,

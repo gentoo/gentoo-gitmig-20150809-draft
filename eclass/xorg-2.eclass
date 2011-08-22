@@ -1,10 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.46 2011/06/20 22:22:57 chithanh Exp $
-#
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.47 2011/08/22 04:46:32 vapier Exp $
+
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
 # x11@gentoo.org
+# @AUTHOR:
+# Author: Tomáš Chvátal <scarabeus@gentoo.org>
+# Author: Donnie Berkholz <dberkholz@gentoo.org>
 # @BLURB: Reduces code duplication in the modularized X11 ebuilds.
 # @DESCRIPTION:
 # This eclass makes trivial X ebuilds possible for apps, fonts, drivers,
@@ -16,9 +19,6 @@
 # DESCRIPTION, KEYWORDS and RDEPEND/DEPEND. If your package is hosted
 # with the other X packages, you don't need to set SRC_URI. Pretty much
 # everything else should be automatic.
-
-# Author: Tomáš Chvátal <scarabeus@gentoo.org>
-# Author: Donnie Berkholz <dberkholz@gentoo.org>
 
 GIT_ECLASS=""
 if [[ ${PV} == *9999* ]]; then

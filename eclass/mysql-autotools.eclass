@@ -1,15 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-autotools.eclass,v 1.1 2011/07/13 07:07:15 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-autotools.eclass,v 1.2 2011/08/22 04:46:32 vapier Exp $
 
 # @ECLASS: mysql-autotools.eclass
 # @MAINTAINER:
-# Author: Francesco Riosa (Retired) <vivo@gentoo.org>
-# Maintainers:
-#	- MySQL Team <mysql-bugs@gentoo.org>
-#	- Robin H. Johnson <robbat2@gentoo.org>
-#	- Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
-#	- Luca Longinotti <chtekk@gentoo.org>
+# MySQL Team <mysql-bugs@gentoo.org>
+# Robin H. Johnson <robbat2@gentoo.org>
+# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+# Luca Longinotti <chtekk@gentoo.org>
+# @AUTHOR:
+# Francesco Riosa <vivo@gentoo.org> (retired)
 # @BLURB: This eclass provides support for autotools based mysql releases
 # @DESCRIPTION:
 # The mysql-autotools.eclass provides the support to build the mysql

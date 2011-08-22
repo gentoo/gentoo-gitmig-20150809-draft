@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.26 2011/04/19 04:19:47 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion.eclass,v 1.27 2011/08/22 04:46:31 vapier Exp $
 
 # @ECLASS: bash-completion.eclass
 # @MAINTAINER:
 # shell-tools@gentoo.org.
-#
+# @AUTHOR:
 # Original author: Aaron Walker <ka0ttic@gentoo.org>
 # @BLURB: An Interface for installing contributed bash-completion scripts
 # @DESCRIPTION:

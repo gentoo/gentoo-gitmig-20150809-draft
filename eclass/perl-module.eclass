@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.130 2011/08/09 11:48:31 tove Exp $
-#
-# Author: Seemant Kulleen <seemant@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.131 2011/08/22 04:46:32 vapier Exp $
 
 # @ECLASS: perl-module.eclass
 # @MAINTAINER:
 # perl@gentoo.org
+# @AUTHOR:
+# Seemant Kulleen <seemant@gentoo.org>
 # @BLURB: eclass for perl modules
 # @DESCRIPTION:
 # The perl-module eclass is designed to allow easier installation of perl

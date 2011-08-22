@@ -1,14 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/findlib.eclass,v 1.10 2011/08/09 19:06:37 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/findlib.eclass,v 1.11 2011/08/22 04:46:31 vapier Exp $
 
 # @ECLASS: findlib.eclass
 # @MAINTAINER:
 # ml@gentoo.org
-#
-# Original author : Matthieu Sozeau <mattam@gentoo.org> (retired)
-#
-# Changes: http://sources.gentoo.org/viewcvs.py/gentoo-x86/eclass/findlib.eclass?view=log
+# @AUTHOR:
+# Original author: Matthieu Sozeau <mattam@gentoo.org> (retired)
 # @BLURB: ocamlfind (a.k.a. findlib) eclass
 # @DESCRIPTION:
 # ocamlfind (a.k.a. findlib) eclass

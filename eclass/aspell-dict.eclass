@@ -1,13 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/aspell-dict.eclass,v 1.42 2011/04/16 19:53:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/aspell-dict.eclass,v 1.43 2011/08/22 04:46:31 vapier Exp $
 
 # @ECLASS: aspell-dict.eclass
 # @MAINTAINER:
 # app-dicts@gentoo.org
-#
+# @AUTHOR:
 # Original author: Seemant Kulleen
-#
 # @BLURB: An eclass to streamline the construction of ebuilds for new aspell dicts
 # @DESCRIPTION:
 # The aspell-dict eclass is designed to streamline the construction of
@@ -15,11 +14,13 @@
 # aspell-0.50. Support for aspell-0.60 has been added by Sergey Ulanov.
 
 # @ECLASS-VARIABLE: ASPELL_LANG
+# @REQUIRED
 # @DESCRIPTION:
 # Which language is the dictionary for? It's used for the DESCRIPTION of the
 # package.
 
 # @ECLASS-VARIABLE: ASPOSTFIX
+# @REQUIRED
 # @DESCRIPTION:
 # What major version of aspell is this dictionary for?
 

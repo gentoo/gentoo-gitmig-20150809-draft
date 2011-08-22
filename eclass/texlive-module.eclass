@@ -1,11 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.58 2011/02/17 13:21:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.59 2011/08/22 04:46:32 vapier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
 # tex@gentoo.org
-#
+# @AUTHOR:
 # Original Author: Alexis Ballier <aballier@gentoo.org>
 # @BLURB: Provide generic install functions so that modular texlive's texmf ebuild will only have to inherit this eclass
 # @DESCRIPTION:
