@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fastforward/fastforward-0.51-r1.ebuild,v 1.7 2008/06/28 13:02:11 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fastforward/fastforward-0.51-r1.ebuild,v 1.8 2011/08/22 08:39:03 flameeyes Exp $
 
 inherit eutils fixheadtails
 
@@ -28,6 +28,9 @@ src_unpack() {
 src_compile() {
 	emake it || die
 }
+
+# make check is actually an install-check target, see bug #283177
+src_test() { :; }
 
 src_install() {
 	dodoc ALIASES BLURB CHANGES FILES INSTALL README SYSDEPS TARGETS
