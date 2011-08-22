@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.155 2011/08/05 10:33:33 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.156 2011/08/22 12:22:11 fordfrog Exp $
+
+  22 Aug 2011; Miroslav Šulc <fordfrog@gentoo.org> -netbeans-7.0.ebuild:
+  Removed obsolete version
 
 *netbeans-7.0.1 (05 Aug 2011)
 
