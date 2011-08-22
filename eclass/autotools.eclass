@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.105 2011/08/22 18:22:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.106 2011/08/22 19:39:52 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -58,7 +58,7 @@ if [[ -n ${WANT_AUTOCONF} ]] ; then
 		2.1)        _autoconf_atom="=sys-devel/autoconf-${WANT_AUTOCONF}*" ;;
 		# if you change the “latest” version here, change also autotools_run_tool
 		latest|2.5) _autoconf_atom=">=sys-devel/autoconf-2.61" ;;
-		*)          _autoconf_atom="INCORRECT-WANT_AUTOCONF-SETTING-IN-EBUILD" ;;
+		*)          die "Invalid WANT_AUTOCONF value '${WANT_AUTOCONF}'" ;;
 	esac
 	export WANT_AUTOCONF
 fi
@@ -68,7 +68,7 @@ if [[ -n ${WANT_LIBTOOL} ]] ; then
 	case ${WANT_LIBTOOL} in
 		none)   _libtool_atom="" ;;
 		latest) ;;
-		*)      _libtool_atom="INCORRECT-WANT_LIBTOOL-SETTING-IN-EBUILD" ;;
+		*)      die "Invalid WANT_LIBTOOL value '${WANT_LIBTOOL}'" ;;
 	esac
 	export WANT_LIBTOOL
 fi
