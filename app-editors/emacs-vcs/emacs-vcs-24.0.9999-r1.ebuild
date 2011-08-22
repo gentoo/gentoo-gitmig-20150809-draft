@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999-r1.ebuild,v 1.15 2011/08/19 17:27:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-24.0.9999-r1.ebuild,v 1.16 2011/08/22 19:31:26 ulm Exp $
 
 EAPI=4
 
@@ -203,7 +203,9 @@ src_configure() {
 	fi
 
 	if [ "${PV##*.}" = "9999" ]; then
-		# This will be saved in system-configuration-options
+		# These variables are not needed for building. We add them to
+		# configure options because they are stored in the Emacs binary
+		# and available in variable "system-configuration-options".
 		myconf="${myconf} EBZR_BRANCH=${EBZR_BRANCH} EBZR_REVNO=${EBZR_REVNO}"
 	fi
 
