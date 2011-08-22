@@ -1,6 +1,10 @@
 # ChangeLog for app-text/tree
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.83 2011/07/21 16:32:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.84 2011/08/22 14:21:36 chainsaw Exp $
+
+  22 Aug 2011; Tony Vroon <chainsaw@gentoo.org> tree-1.6.0.ebuild:
+  Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney in bug
+  #380175.
 
 *tree-1.6.0 (21 Jul 2011)
 
