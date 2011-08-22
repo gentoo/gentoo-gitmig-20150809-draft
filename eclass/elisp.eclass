@@ -1,11 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp.eclass,v 1.50 2011/08/22 06:13:14 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp.eclass,v 1.51 2011/08/22 06:56:26 ulm Exp $
 #
 # @ECLASS: elisp.eclass
 # @MAINTAINER:
-# Feel free to contact the Emacs team through <emacs@gentoo.org> if you
-# have problems, suggestions or questions.
+# Gentoo Emacs team <emacs@gentoo.org>
 # @AUTHOR:
 # Matthew Kennedy <mkennedy@gentoo.org>
 # Jeremy Maitin-Shepard <jbms@attbi.com>
