@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/qrosscore
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qrosscore/ChangeLog,v 1.1 2011/08/22 17:49:35 maksbotan Exp $
+
+*qrosscore-9999 (22 Aug 2011)
+*qrosscore-0.2.0 (22 Aug 2011)
+
+  22 Aug 2011; Maxim Koltsov <maksbotan@gentoo.org> +qrosscore-0.2.0.ebuild,
+  +qrosscore-9999.ebuild, +metadata.xml:
+  Copy dev-libs/qrosscore from rion-overlay, thanks to 0xd34df00d
+
