@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/netbeans-php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-php/ChangeLog,v 1.4 2011/08/05 10:31:03 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-php/ChangeLog,v 1.5 2011/08/22 12:51:18 fordfrog Exp $
+
+  22 Aug 2011; Miroslav Šulc <fordfrog@gentoo.org> -netbeans-php-7.0.ebuild:
+  Removed obsolete version
 
 *netbeans-php-7.0.1 (05 Aug 2011)
 
