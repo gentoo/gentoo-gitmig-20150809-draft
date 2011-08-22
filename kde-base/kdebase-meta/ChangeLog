@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.199 2011/08/15 22:00:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.200 2011/08/22 22:03:41 dilfridge Exp $
+
+  22 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdebase-meta-4.7.0.ebuild, metadata.xml:
+  Make dependency on wallpapers configurable
 
   15 Aug 2011; Markus Meier <maekke@gentoo.org> kdebase-meta-4.6.5.ebuild:
   x86 stable, bug #377465

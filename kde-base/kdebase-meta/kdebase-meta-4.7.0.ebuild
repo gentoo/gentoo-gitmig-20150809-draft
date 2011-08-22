@@ -1,20 +1,20 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/kdebase-meta-4.7.0.ebuild,v 1.1 2011/07/27 14:04:36 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/kdebase-meta-4.7.0.ebuild,v 1.2 2011/08/22 22:03:41 dilfridge Exp $
 
 EAPI=4
 inherit kde4-meta-pkg
 
 DESCRIPTION="Merge this to pull in all kdebase-derived packages"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
-IUSE=""
+IUSE="+wallpapers"
 
 RDEPEND="
 	$(add_kdebase_dep dolphin)
 	$(add_kdebase_dep freespacenotifier)
 	$(add_kdebase_dep kcheckpass)
 	$(add_kdebase_dep kcminit)
-	$(add_kdebase_dep kde-wallpapers)
+	wallpapers? ( $(add_kdebase_dep kde-wallpapers) )
 	$(add_kdebase_dep kdebase-cursors)
 	$(add_kdebase_dep kdebase-runtime-meta)
 	$(add_kdebase_dep kdebase-startkde)

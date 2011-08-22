@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/kdebase-data-4.7.0.ebuild,v 1.1 2011/07/27 14:04:51 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/kdebase-data-4.7.0.ebuild,v 1.2 2011/08/22 22:00:52 dilfridge Exp $
 
 EAPI=4
 
@@ -9,11 +9,11 @@ KMNOMODULE="true"
 inherit kde4-meta
 
 DESCRIPTION="Icons, localization data and various .desktop files from kdebase."
-IUSE=""
+IUSE="+wallpapers"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 
 RDEPEND="
-	$(add_kdebase_dep kde-wallpapers)
+	wallpapers? ( $(add_kdebase_dep kde-wallpapers) )
 	$(add_kdebase_dep oxygen-icons)
 	x11-themes/hicolor-icon-theme
 "

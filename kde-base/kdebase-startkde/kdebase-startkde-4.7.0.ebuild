@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-4.7.0.ebuild,v 1.1 2011/07/27 14:04:49 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-4.7.0.ebuild,v 1.2 2011/08/22 22:05:15 dilfridge Exp $
 
 EAPI=4
 
@@ -10,14 +10,14 @@ inherit kde4-meta multilib prefix
 
 DESCRIPTION="Startkde script, which starts a complete KDE session, and associated scripts"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
-IUSE=""
+IUSE="+wallpapers"
 
 # The KDE apps called from the startkde script.
 # These provide the most minimal KDE desktop.
 RDEPEND="
 	$(add_kdebase_dep kcminit)
 	$(add_kdebase_dep kdebase-runtime-meta)
-	$(add_kdebase_dep kde-wallpapers)
+	wallpapers? ( $(add_kdebase_dep kde-wallpapers) )
 	$(add_kdebase_dep kfmclient)
 	$(add_kdebase_dep knotify)
 	$(add_kdebase_dep kreadconfig)

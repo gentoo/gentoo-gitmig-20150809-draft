@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-data
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.195 2011/08/15 19:38:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/ChangeLog,v 1.196 2011/08/22 22:00:52 dilfridge Exp $
+
+  22 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdebase-data-4.7.0.ebuild, metadata.xml:
+  Make dependency on wallpapers configurable
 
   15 Aug 2011; Markus Meier <maekke@gentoo.org> kdebase-data-4.6.5.ebuild:
   x86 stable, bug #377465
