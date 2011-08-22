@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-6.0.ebuild,v 1.2 2011/08/21 18:31:32 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-6.0.ebuild,v 1.3 2011/08/22 05:03:20 mr_bones_ Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -98,7 +98,6 @@ linguas() {
 		ewarn "Sorry, but ${P} does not support the ${LINGUA} locale"
 	done
 }
-
 
 pkg_setup() {
 	moz_pkgsetup
