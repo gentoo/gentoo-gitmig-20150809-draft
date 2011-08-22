@@ -1,0 +1,11 @@
+--- style-check-0.13/style-check.rb.orig
++++ style-check-0.13/style-check.rb
+@@ -124,7 +124,7 @@
+ PreCensored_phrases[ 
+   Regexp.new(/(table|figure|section)~\\ref/) ] = "Table, Figure, and Section refs should be capitalized"
+ PreCensored_phrases[ 
+-  Regexp.new(/\\url\{(?!http|ftp|rtsp|mailto)/) ] = "~\url{} should start with http:// (or ftp or rtsp or maybe mailto)."
++  Regexp.new(/\\url\{(?!http|ftp|rtsp|mailto)/) ] = "~\\url{} should start with http:// (or ftp or rtsp or maybe mailto)."
+ 
+ PctCensored_phrases[ 
+   Regexp.new(/[0-9]%/) ] = "a percent following a number is rarely an intended comment."

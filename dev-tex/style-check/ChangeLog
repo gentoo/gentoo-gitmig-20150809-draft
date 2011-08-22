@@ -1,6 +1,12 @@
 # ChangeLog for dev-tex/style-check
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/style-check/ChangeLog,v 1.11 2010/08/07 13:28:35 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/style-check/ChangeLog,v 1.12 2011/08/22 10:45:02 radhermit Exp $
+
+*style-check-0.13 (22 Aug 2011)
+
+  22 Aug 2011; Tim Harder <radhermit@gentoo.org> +style-check-0.13.ebuild,
+  +files/style-check-0.13-fix-msg.patch:
+  Version bump.
 
   07 Aug 2010; Hans de Graaff <graaff@gentoo.org> style-check-0.7.ebuild,
   style-check-0.12.ebuild:
