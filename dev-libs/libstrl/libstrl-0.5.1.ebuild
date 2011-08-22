@@ -1,14 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstrl/libstrl-0.4.ebuild,v 1.1 2011/06/02 17:22:06 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libstrl/libstrl-0.5.1.ebuild,v 1.1 2011/08/22 13:09:47 binki Exp $
 
-EAPI=3
+EAPI=4
 
 inherit autotools-utils multilib
 
-DESCRIPTION="Compat library for functions like strlcpy(), strlcat(), strnlen(), and getline()"
+DESCRIPTION="Compat library for functions like strlcpy(), strlcat(), strnlen(), getline(), and asprintf()"
 HOMEPAGE="http://ohnopub.net/~ohnobinki/libstrl/"
-SRC_URI="ftp://ohnopub.net/mirror/${P}.tar.bz2"
+SRC_URI="ftp://mirror.ohnopub.net/mirror/${P}.tar.bz2"
 
 LICENSE="LGPL-3"
 SLOT="0"
