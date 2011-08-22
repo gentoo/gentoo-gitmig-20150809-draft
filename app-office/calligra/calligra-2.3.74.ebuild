@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.3.74.ebuild,v 1.2 2011/08/22 21:42:22 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.3.74.ebuild,v 1.3 2011/08/22 21:48:07 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -35,9 +35,10 @@ done
 unset cal_ft
 
 REQUIRED_USE="
-	calligra_features_tables? ( eigen )
+	calligra_features_kexi? ( calligra_features_tables )
 	calligra_features_krita? ( eigen exif lcms )
 	calligra_features_plan? ( kdepim )
+	calligra_features_tables? ( eigen )
 "
 
 RDEPEND="
