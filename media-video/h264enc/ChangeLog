@@ -1,6 +1,12 @@
 # ChangeLog for media-video/h264enc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/h264enc/ChangeLog,v 1.7 2011/06/19 09:11:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/h264enc/ChangeLog,v 1.8 2011/08/22 05:09:09 radhermit Exp $
+
+*h264enc-9.4.0 (22 Aug 2011)
+
+  22 Aug 2011; Tim Harder <radhermit@gentoo.org> -h264enc-9.1.6.ebuild,
+  -h264enc-9.3.2.ebuild, +h264enc-9.4.0.ebuild:
+  Version bump and remove old.
 
 *h264enc-9.3.7 (19 Jun 2011)
 
