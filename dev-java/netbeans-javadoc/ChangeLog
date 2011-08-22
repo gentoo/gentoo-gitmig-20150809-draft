@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/netbeans-javadoc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-javadoc/ChangeLog,v 1.5 2011/08/05 10:31:46 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-javadoc/ChangeLog,v 1.6 2011/08/22 12:48:15 fordfrog Exp $
+
+  22 Aug 2011; Miroslav Šulc <fordfrog@gentoo.org>
+  -netbeans-javadoc-7.0.ebuild:
+  Removed obsolete version
 
 *netbeans-javadoc-7.0.1 (05 Aug 2011)
 
