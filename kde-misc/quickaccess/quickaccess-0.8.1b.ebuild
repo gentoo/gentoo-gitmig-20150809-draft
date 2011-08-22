@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/quickaccess/quickaccess-0.8.1b.ebuild,v 1.1 2011/08/20 21:22:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/quickaccess/quickaccess-0.8.1b.ebuild,v 1.2 2011/08/22 21:50:33 dilfridge Exp $
 
 EAPI=3
 
@@ -25,4 +25,4 @@ RDEPEND="
 
 S="${WORKDIR}/${MY_PN}-KDE4.5"
 
-PATCHES=( "${FILESDIR}/${P}-gcc46.patch" )
+PATCHES=( "${FILESDIR}/${PN}-0.8.1-gcc46.patch" )
