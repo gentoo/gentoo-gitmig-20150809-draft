@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.462 2011/08/13 03:09:40 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.463 2011/08/22 02:19:40 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1142,15 +1142,6 @@ gcc-compiler-configure() {
 			else
 				# For gcc variants where we don't want openmp (e.g. kgcc)
 				confgcc="${confgcc} --disable-libgomp"
-			fi
-		fi
-
-		# enable the cld workaround until we move things to stable.
-		# by that point, the rest of the software out there should
-		# have caught up.
-		if tc_version_is_at_least "4.3" ; then
-			if ! has ${ARCH} ${KEYWORDS} ; then
-				confgcc="${confgcc} --enable-cld"
 			fi
 		fi
 
