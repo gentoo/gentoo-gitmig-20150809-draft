@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.2.18.ebuild,v 1.2 2011/07/26 17:02:29 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.2.18.ebuild,v 1.3 2011/08/23 19:26:43 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -26,7 +26,7 @@ RDEPEND="
 	>=sys-devel/binutils-2.16.1
 	>=dev-libs/nss-3.12.8
 	>=dev-libs/nspr-4.8.6
-	system-sqlite? ( >=dev-db/sqlite-3.7.1[fts3,secure-delete] )
+	system-sqlite? ( >=dev-db/sqlite-3.7.4[fts3,secure-delete] )
 	alsa? ( media-libs/alsa-lib )
 	>=app-text/hunspell-1.2
 	>=x11-libs/cairo-1.8.8[X]

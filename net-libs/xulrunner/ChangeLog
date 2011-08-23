@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.428 2011/08/16 14:32:37 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.429 2011/08/23 19:26:43 polynomial-c Exp $
+
+  23 Aug 2011; Lars Wendler <polynomial-c@gentoo.org>
+  xulrunner-1.9.2.17.ebuild, xulrunner-1.9.2.18.ebuild,
+  xulrunner-1.9.2.20.ebuild:
+  Fixed dependency on dev-db/sqlite. Thanks to John Gibson who reported this in
+  bug #375217.
 
 *xulrunner-1.9.2.20 (16 Aug 2011)
 
