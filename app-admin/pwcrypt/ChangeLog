@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/pwcrypt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwcrypt/ChangeLog,v 1.13 2011/06/14 15:06:32 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwcrypt/ChangeLog,v 1.14 2011/08/23 12:26:58 hattya Exp $
+
+  23 Aug 2011; Akinori Hattori <hattya@gentoo.org> pwcrypt-1.2.2.ebuild,
+  pwcrypt-1.2.2-r1.ebuild:
+  update to EAPI 4.
 
   14 Jun 2011; Akinori Hattori <hattya@gentoo.org> pwcrypt-1.2.2-r1.ebuild:
   stable on x86.
