@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/arcload
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/ChangeLog,v 1.13 2011/04/10 14:13:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/ChangeLog,v 1.14 2011/08/23 00:36:13 mattst88 Exp $
+
+  23 Aug 2011; Matt Turner <mattst88@gentoo.org> -arcload-0.43-r1.ebuild,
+  -files/arcload-0.43-tweaks1.patch, arcload-0.50-r1.ebuild, metadata.xml:
+  Drop old 0.43. Bump 0.50 to EAPI=4 and clean up.
 
   10 Apr 2011; Ulrich Mueller <ulm@gentoo.org> arcload-0.43-r1.ebuild,
   arcload-0.50-r1.ebuild:

@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/arcload-0.50-r1.ebuild,v 1.3 2011/04/10 14:13:49 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/arcload-0.50-r1.ebuild,v 1.4 2011/08/23 00:36:13 mattst88 Exp $
+
+EAPI=4
 
 inherit eutils toolchain-funcs versionator
 
@@ -20,20 +22,7 @@ RESTRICT="strip"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
-pkg_setup() {
-	# See if we're on a cobalt system
-	if [ "${PROFILE_ARCH}" = "cobalt" ]; then
-		echo -e ""
-		eerror "This package is only intended for SGI systems.  It will not work on any"
-		eerror "other types of MIPS-based systems or any other architectures"
-		echo -e ""
-		die
-	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	# For gcc-4.x, quiet down some of the warnings
 	$(version_is_at_least "4.0" "$(gcc-version)") && \
 		epatch "${FILESDIR}"/${P}-shut-gcc4x-up.patch
@@ -50,21 +39,21 @@ src_compile() {
 	# on the offchance that we're cross-compiling.
 	echo -e ""
 	einfo ">>> Building the 'wreckoff' utility with $(tc-getBUILD_CC) ..."
-	make CC=$(tc-getBUILD_CC) tools_clean tools || die
+	emake CC=$(tc-getBUILD_CC) tools_clean tools
 
 	# 32bit copy (sashARCS for IP22/IP32)
 	echo -e ""
 	einfo ">>> Building 32-bit version (sashARCS) for IP22/IP32 ..."
 	cd "${S}"
-	make MODE=M32 bootloader_clean || die
-	make CC=$(tc-getCC) LD=$(tc-getLD) MODE=M32 bootloader || die
+	emake MODE=M32 bootloader_clean
+	emake CC=$(tc-getCC) LD=$(tc-getLD) MODE=M32 bootloader
 	cp "${S}"/arcload.ecoff "${WORKDIR}"/sashARCS
 
 	# 64bit copy (sash64 for IP27/IP28/IP30)
 	echo -e ""
 	einfo ">>> Building 64-bit version (sash64) for IP27/IP28/IP30 ..."
-	make MODE=M64 bootloader_clean || die
-	make CC=$(tc-getCC) LD=$(tc-getLD) MODE=M64 bootloader || die
+	emake MODE=M64 bootloader_clean
+	emake CC=$(tc-getCC) LD=$(tc-getLD) MODE=M64 bootloader
 	cp "${S}"/arcload "${WORKDIR}"/sash64
 }
 
