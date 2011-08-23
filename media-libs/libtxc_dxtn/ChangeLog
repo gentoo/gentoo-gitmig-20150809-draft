@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/libtxc_dxtn
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtxc_dxtn/ChangeLog,v 1.1 2011/08/23 17:48:10 mattst88 Exp $
+
+*libtxc_dxtn-1.0.1 (23 Aug 2011)
+
+  23 Aug 2011; Matt Turner <mattst88@gentoo.org> +libtxc_dxtn-1.0.1.ebuild,
+  +metadata.xml:
+  Add libtxc_dxtn to portage, bug 65607
+
