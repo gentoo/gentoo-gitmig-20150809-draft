@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-3.6.20.ebuild,v 1.1 2011/08/16 14:33:34 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-3.6.20.ebuild,v 1.2 2011/08/23 19:28:04 polynomial-c Exp $
 EAPI="3"
 WANT_AUTOCONF="2.1"
 
@@ -52,7 +52,7 @@ RDEPEND="
 	>=dev-libs/nss-3.12.8
 	>=dev-libs/nspr-4.8.6
 	>=app-text/hunspell-1.2
-	system-sqlite? ( >=dev-db/sqlite-3.7.1[fts3,secure-delete] )
+	system-sqlite? ( >=dev-db/sqlite-3.7.4[fts3,secure-delete] )
 	alsa? ( media-libs/alsa-lib )
 	>=x11-libs/cairo-1.8.8[X]
 	gnome? ( >=gnome-base/gnome-vfs-2.16.3
