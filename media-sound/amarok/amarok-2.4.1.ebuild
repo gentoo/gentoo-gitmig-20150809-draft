@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.4.1.ebuild,v 1.1 2011/05/08 16:21:45 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.4.1.ebuild,v 1.2 2011/08/23 21:55:04 dilfridge Exp $
 
 EAPI="3"
 
@@ -37,6 +37,7 @@ COMMONDEPEND="
 		app-crypt/qca:2
 		>=app-misc/strigi-0.5.7[dbus,qt4]
 		$(add_kdebase_dep kdelibs 'opengl?,semantic-desktop?')
+		$(add_kdebase_dep kdebase-kioslaves)
 		sys-libs/zlib
 		>=virtual/mysql-5.1[embedded?]
 		x11-libs/qt-script
