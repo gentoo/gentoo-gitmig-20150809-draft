@@ -1,6 +1,11 @@
 # ChangeLog for net-print/apsfilter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/apsfilter/ChangeLog,v 1.19 2011/06/05 20:57:22 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/apsfilter/ChangeLog,v 1.20 2011/08/23 01:49:02 radhermit Exp $
+
+*apsfilter-7.2.8 (23 Aug 2011)
+
+  23 Aug 2011; Tim Harder <radhermit@gentoo.org> +apsfilter-7.2.8.ebuild:
+  Version bump.
 
 *apsfilter-7.2.7 (05 Jun 2011)
 
