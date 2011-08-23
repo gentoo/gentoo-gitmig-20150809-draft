@@ -1,15 +1,17 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/pf-sources-3.0.2.ebuild,v 1.1 2011/08/18 19:07:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/pf-sources-3.0.2.ebuild,v 1.2 2011/08/23 19:57:01 hwoarang Exp $
 
 EAPI="2"
+
+inherit versionator
 
 COMPRESSTYPE=".bz2"
 K_USEPV="yes"
 UNIPATCH_STRICTORDER="yes"
 K_SECURITY_UNSUPPORTED="1"
 
-CKV="${PV/_p[0-9]*}"
+CKV="$(get_version_component_range 1-2)"
 ETYPE="sources"
 inherit kernel-2
 detect_version
