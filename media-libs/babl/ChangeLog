@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/babl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.28 2011/05/20 20:15:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.29 2011/08/23 15:58:24 nirbheek Exp $
+
+*babl-0.1.4-r1 (23 Aug 2011)
+
+  23 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +babl-0.1.4-r1.ebuild:
+  Bump babl to ~arch for introspection
 
   20 May 2011; Kacper Kowalik <xarthisius@gentoo.org> babl-0.1.4.ebuild:
   ppc/ppc64 stable wrt #360595
