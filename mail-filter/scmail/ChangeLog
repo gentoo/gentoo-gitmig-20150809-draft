@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/scmail
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/scmail/ChangeLog,v 1.10 2010/04/11 10:08:49 hattya Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/scmail/ChangeLog,v 1.11 2011/08/23 12:50:39 hattya Exp $
+
+  23 Aug 2011; Akinori Hattori <hattya@gentoo.org> scmail-1.3.ebuild,
+  +files/scmail-doc-encoding.diff:
+  update to EAPI 4.
 
   11 Apr 2010; Akinori Hattori <hattya@gentoo.org>
   +files/scmail-gauche-0.9.diff, scmail-1.3.ebuild:
