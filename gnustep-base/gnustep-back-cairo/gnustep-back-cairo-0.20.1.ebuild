@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/gnustep-back-cairo-0.20.1.ebuild,v 1.1 2011/05/08 19:19:48 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/gnustep-back-cairo-0.20.1.ebuild,v 1.2 2011/08/23 16:00:19 voyageur Exp $
 
 EAPI=2
 
@@ -41,7 +41,7 @@ DEPEND="${RDEPEND}
 src_configure() {
 	egnustep_env
 
-	use opengl && myconf="--enable-glx"
+	use opengl || myconf="--disable-glx"
 	myconf="$myconf $(use_enable xim)"
 	myconf="$myconf --enable-server=x11"
 	myconf="$myconf --enable-graphics=cairo"

@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-back-cairo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/ChangeLog,v 1.28 2011/05/08 19:19:48 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/ChangeLog,v 1.29 2011/08/23 16:00:19 voyageur Exp $
+
+  23 Aug 2011; Bernard Cafarelli <voyageur@gentoo.org>
+  gnustep-back-cairo-0.20.1.ebuild:
+  Fix opengl USE-flag handling, thanks to Hypnos in bug #379823
 
 *gnustep-back-cairo-0.20.1 (08 May 2011)
 
