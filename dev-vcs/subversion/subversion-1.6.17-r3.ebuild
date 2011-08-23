@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.6.17-r3.ebuild,v 1.1 2011/08/22 11:21:31 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.6.17-r3.ebuild,v 1.2 2011/08/23 08:12:07 polynomial-c Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -25,7 +25,7 @@ CDEPEND=">=dev-db/sqlite-3.4
 	>=dev-libs/apr-util-1.3:1
 	dev-libs/expat
 	sys-libs/zlib
-	berkdb? ( =sys-libs/db-4* )
+	berkdb? ( >=sys-libs/db-4.0.14 )
 	ctypes-python? ( =dev-lang/python-2* )
 	emacs? ( virtual/emacs )
 	gnome-keyring? ( dev-libs/glib:2 sys-apps/dbus gnome-base/gnome-keyring )
