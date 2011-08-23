@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/files/tor.initd-r4,v 1.6 2011/08/05 11:29:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/files/tor.initd-r4,v 1.7 2011/08/23 12:26:36 blueness Exp $
 
 opts="${opts} checkconfig reload"
 PIDFILE=/var/run/tor/tor.pid
@@ -52,6 +52,6 @@ reload() {
 	fi
 	checkconfig || return 1
 	ebegin "Reloading Tor configuration"
-	start-stop-daemon --stop --signal HUP --pidfile ${PIDFILE}
+	start-stop-daemon --signal HUP --pidfile ${PIDFILE}
 	eend $?
 }

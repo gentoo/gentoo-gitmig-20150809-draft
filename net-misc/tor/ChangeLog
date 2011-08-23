@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.266 2011/08/19 10:54:21 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.267 2011/08/23 12:26:36 blueness Exp $
+
+  23 Aug 2011; Anthony G. Basile <blueness@gentoo.org> files/tor.initd-r4:
+  Removed incorrect --stop from init script, bug #379939
 
 *tor-0.2.2.31_rc (19 Aug 2011)
 
