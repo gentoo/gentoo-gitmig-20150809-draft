@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.0.4.ebuild,v 1.2 2011/08/23 17:40:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.0.4.ebuild,v 1.3 2011/08/23 18:08:05 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -363,6 +363,7 @@ src_prepare() {
 
 		epatch "${FILESDIR}"/${PN}-7.0.4-darwin8.patch
 		epatch "${FILESDIR}"/${PN}-6.12.3-mach-o-relocation-limit.patch
+		epatch "${FILESDIR}"/${PN}-7.0.4-nxstack.patch
 
 		if use prefix; then
 			# Make configure find docbook-xsl-stylesheets from Prefix

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.208 2011/08/23 17:40:45 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.209 2011/08/23 18:08:05 slyfox Exp $
+
+  23 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> ghc-7.0.4.ebuild,
+  +files/ghc-7.0.4-nxstack.patch:
+  QA: Fixed executable stack in AdjustorAsm.o
 
   23 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> ghc-7.0.4.ebuild:
   Once again USE=unicode for ncurses is a required depend (bug #380241 by
