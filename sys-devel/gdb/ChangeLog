@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.188 2011/08/22 03:42:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.189 2011/08/23 16:21:56 vapier Exp $
+
+  23 Aug 2011; Mike Frysinger <vapier@gentoo.org> gdb-7.3.ebuild,
+  gdb-9999.ebuild:
+  Set EGIT vars before we inherit the git eclass.
 
   22 Aug 2011; Mike Frysinger <vapier@gentoo.org> gdb-7.3.ebuild,
   gdb-9999.ebuild:
