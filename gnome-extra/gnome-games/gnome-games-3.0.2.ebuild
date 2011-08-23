@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-3.0.2.ebuild,v 1.1 2011/08/19 12:51:19 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-3.0.2.ebuild,v 1.2 2011/08/23 15:40:15 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -54,7 +54,7 @@ COMMON_DEPEND="
 		x11-libs/libX11 )"
 RDEPEND="${COMMON_DEPEND}
 	sudoku? (
-		dev-libs/glib:2[introspection]
+		dev-libs/glib:2
 		dev-python/pygobject:2[introspection]
 		dev-python/pycairo
 		x11-libs/gdk-pixbuf:2[introspection]

@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.309 2011/08/19 12:51:19 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.310 2011/08/23 15:40:15 nirbheek Exp $
+
+  23 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gnome-games-3.0.2.ebuild:
+  Don't depend on glib[introspection]
 
 *gnome-games-3.0.2 (19 Aug 2011)
 
