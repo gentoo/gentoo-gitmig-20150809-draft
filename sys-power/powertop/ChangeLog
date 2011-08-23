@@ -1,6 +1,13 @@
 # ChangeLog for sys-power/powertop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.45 2011/05/03 11:34:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/ChangeLog,v 1.46 2011/08/23 22:14:16 vapier Exp $
+
+*powertop-1.98 (23 Aug 2011)
+
+  23 Aug 2011; Mike Frysinger <vapier@gentoo.org> +powertop-1.98.ebuild,
+  +files/powertop-1.98-build.patch, +files/powertop-1.98-build-cc.patch,
+  powertop-9999.ebuild:
+  Version bump and merging of live/release ebuilds.
 
   03 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> powertop-9999.ebuild:
   Move to git-2 and use eapi4 features more nicely.
