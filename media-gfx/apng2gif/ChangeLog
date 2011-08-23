@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/apng2gif
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/apng2gif/ChangeLog,v 1.2 2011/06/25 23:26:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/apng2gif/ChangeLog,v 1.3 2011/08/23 23:22:29 radhermit Exp $
+
+*apng2gif-1.3 (23 Aug 2011)
+
+  23 Aug 2011; Tim Harder <radhermit@gentoo.org> +apng2gif-1.3.ebuild:
+  Version bump.
 
 *apng2gif-1.2 (25 Jun 2011)
 
