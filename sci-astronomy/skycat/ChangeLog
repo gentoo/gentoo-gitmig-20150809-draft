@@ -1,6 +1,13 @@
 # ChangeLog for sci-astronomy/skycat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/skycat/ChangeLog,v 1.10 2011/08/23 11:48:46 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/skycat/ChangeLog,v 1.11 2011/08/23 11:51:03 xarthisius Exp $
+
+  23 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  -files/skycat-3.0.1-gcc43.patch, -files/skycat-3.0.1-m4.patch,
+  -skycat-3.0.2-r2.ebuild, -files/skycat-3.0.2-glibc-2.10.patch,
+  -files/skycat-3.0.2-makefile-qa.patch, -skycat-3.1.1.ebuild,
+  -files/skycat-3.1.1-gcc45.patch, -skycat-3.1.2.ebuild:
+  drop old
 
 *skycat-3.1.2-r1 (23 Aug 2011)
 
