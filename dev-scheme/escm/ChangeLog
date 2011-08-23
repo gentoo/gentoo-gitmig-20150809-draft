@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/escm
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/escm/ChangeLog,v 1.6 2008/06/19 15:21:05 hattya Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/escm/ChangeLog,v 1.7 2011/08/23 12:38:30 hattya Exp $
+
+  23 Aug 2011; Akinori Hattori <hattya@gentoo.org> escm-1.1.ebuild:
+  update to EAPI 4.
 
   19 Jun 2008; Akinori Hattori <hattya@gentoo.org> escm-1.1.ebuild:
   fixes bug #226561.
