@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-4.0.ebuild,v 1.3 2011/07/23 20:41:24 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-4.0.ebuild,v 1.4 2011/08/23 18:54:11 spock Exp $
 
 EAPI=2
 
@@ -29,7 +29,7 @@ RDEPEND="${DEPEND}
 	profiler? ( x86? (
 		x11-libs/qt-gui
 		x11-libs/qt-core
-		x11-libs/qt-assistant
+		x11-libs/qt-assistant[compat]
 		x11-libs/qt-sql[sqlite] )
 		media-libs/libpng:1.2
 	)
@@ -104,7 +104,7 @@ EOF
 			dosym /usr/bin/assistant ${DEST}/${target}/bin
 
 			insinto ${DEST}/${target}/bin
-			doins ${target}/bin/cudaapitrace.so
+			doins ${target}/bin/cudaapitrace32.so
 		else
 			dobin ${target}/bin/assistant
 			insinto ${DEST}/${target}/bin
