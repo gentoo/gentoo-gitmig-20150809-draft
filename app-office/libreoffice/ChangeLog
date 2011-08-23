@@ -1,6 +1,9 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.114 2011/08/19 12:40:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.115 2011/08/23 11:07:51 scarabeus Exp $
+
+  23 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> libreoffice-9999.ebuild:
+  Cups is harddep starting from 3.5.
 
   19 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   libreoffice-3.4.2.3.ebuild, libreoffice-3.4.3.1.ebuild,
