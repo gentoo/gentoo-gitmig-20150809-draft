@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-20110818.ebuild,v 1.1 2011/08/20 14:39:59 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/linux-firmware-20110818.ebuild,v 1.2 2011/08/23 00:17:16 chithanh Exp $
 
 EAPI=3
 inherit savedconfig
@@ -42,6 +42,7 @@ RDEPEND="!savedconfig? (
 		!net-wireless/iwl5150-ucode
 		!net-wireless/iwl6000-ucode
 		!net-wireless/iwl6005-ucode
+		!net-wireless/iwl6030-ucode
 		!net-wireless/iwl6050-ucode
 		!net-wireless/libertas-firmware
 		!net-wireless/rt61-firmware
