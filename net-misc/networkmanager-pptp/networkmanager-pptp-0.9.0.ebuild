@@ -1,17 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/networkmanager-pptp-0.8.1.ebuild,v 1.2 2011/03/29 12:52:08 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/networkmanager-pptp-0.9.0.ebuild,v 1.1 2011/08/23 23:18:41 nirbheek Exp $
 
-EAPI="2"
+EAPI="4"
+GNOME_ORG_MODULE="NetworkManager-${PN##*-}"
 
-inherit eutils gnome.org
-
-# NetworkManager likes itself with capital letters
-MY_PN="${PN/networkmanager/NetworkManager}"
+inherit gnome.org
 
 DESCRIPTION="NetworkManager PPTP plugin"
 HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
-SRC_URI="${SRC_URI//${PN}/${MY_PN}}"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -24,10 +21,8 @@ RDEPEND="
 	net-dialup/ppp
 	net-dialup/pptpclient
 	gnome? (
-		>=x11-libs/gtk+-2.6:2
-		gnome-base/gconf:2
+		>=x11-libs/gtk+-2.91.4:3
 		gnome-base/gnome-keyring
-		gnome-base/libglade:2.0
 	)"
 
 DEPEND="${RDEPEND}
@@ -35,18 +30,19 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig"
 
-S="${WORKDIR}/${MY_PN}-${PV}"
-
 src_configure() {
 	ECONF="--disable-more-warnings
-		$(use_with test tests)
-		$(use_with gnome)"
+		--disable-static
+		--with-dist-version=Gentoo
+		--with-gtkver=3
+		$(use_with gnome)
+		$(use_with test tests)"
 
 	econf ${ECONF}
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-
-	dodoc AUTHORS ChangeLog NEWS README || die "dodoc failed"
+	default
+	# Remove useless .la files
+	find "${D}" -name '*.la' -exec rm -f {} +
 }

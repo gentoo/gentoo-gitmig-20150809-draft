@@ -1,18 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/networkmanager-openvpn-0.9_rc3.ebuild,v 1.2 2011/08/16 10:07:06 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/networkmanager-openvpn-0.9.0.ebuild,v 1.1 2011/08/23 23:17:24 nirbheek Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager-${PN##*-}"
-GNOME_ORG_PVP="0.8"
-REAL_PV="0.8.9997"
 
 inherit gnome.org
 
 DESCRIPTION="NetworkManager OpenVPN plugin"
 HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
-# Replace our fake _rc version with the actual version
-SRC_URI="${SRC_URI//${PV}/${REAL_PV}}"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -33,9 +29,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
 	dev-util/pkgconfig"
 
-# Replace our fake _rc version with the actual version
-S="${WORKDIR}/${GNOME_ORG_MODULE}-${REAL_PV}"
-
 # FAIL: (tls-import-data) unexpected 'ca' secret value
 #RESTRICT="test"
 
@@ -43,7 +36,7 @@ src_configure() {
 	ECONF="--disable-more-warnings
 		--disable-static
 		--with-dist-version=Gentoo
-		--with-gtkver=3.0
+		--with-gtkver=3
 		$(use_with gnome)
 		$(use_with test tests)"
 
