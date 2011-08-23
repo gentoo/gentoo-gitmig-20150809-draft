@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-6.0.ebuild,v 1.1 2011/08/22 07:57:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-6.0.ebuild,v 1.2 2011/08/23 22:21:44 polynomial-c Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -211,8 +211,8 @@ src_configure() {
 	mozconfig_annotate '' --disable-official-branding
 	mozconfig_annotate '' --with-user-appdir=.icecat
 
-	mozconfig_annotate '' --prefix=/usr
-	mozconfig_annotate '' --libdir=/usr/$(get_libdir)
+	mozconfig_annotate '' --prefix="${EPREFIX}"/usr
+	mozconfig_annotate '' --libdir="${EPREFIX}"/usr/$(get_libdir)
 	mozconfig_annotate '' --enable-extensions="${MEXTENSIONS}"
 	mozconfig_annotate '' --disable-gconf
 	mozconfig_annotate '' --disable-mailnews
