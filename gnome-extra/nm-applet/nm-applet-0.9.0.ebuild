@@ -1,21 +1,16 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9_rc3.ebuild,v 1.3 2011/08/16 10:16:20 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.0.ebuild,v 1.1 2011/08/23 23:18:30 nirbheek Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-GNOME_TARBALL_SUFFIX="bz2"
 GNOME_ORG_MODULE="network-manager-applet"
-GNOME_ORG_PVP="0.8"
-REAL_PV="0.8.9997"
 
 inherit gnome2
 
 DESCRIPTION="GNOME applet for NetworkManager"
 HOMEPAGE="http://projects.gnome.org/NetworkManager/"
-# Replace our fake _rc version with the actual version
-SRC_URI="${SRC_URI//${PV}/${REAL_PV}}"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -39,9 +34,6 @@ RDEPEND=">=dev-libs/glib-2.16:2
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.40"
-
-# Replace our fake _rc version with the actual version
-S="${WORKDIR}/${GNOME_ORG_MODULE}-${REAL_PV}"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"
