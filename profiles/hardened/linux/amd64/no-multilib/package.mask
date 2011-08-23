@@ -1,7 +1,7 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/no-multilib/package.mask,v 1.1 2011/08/23 19:18:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/no-multilib/package.mask,v 1.2 2011/08/23 19:23:41 blueness Exp $
 
 # These are broken as reported by Halcy0n, Aug, 23, 2011
 games-action/shadowgrounds-bin
-sci-libs/ipp
+media-libs/opencv
