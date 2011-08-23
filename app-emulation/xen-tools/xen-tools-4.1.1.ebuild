@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1.ebuild,v 1.1 2011/07/29 22:39:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1.ebuild,v 1.2 2011/08/23 10:07:03 lxnay Exp $
 
 EAPI="3"
 
@@ -176,9 +176,6 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" DOCDIR="/usr/share/doc/${PF}" XEN_PYTHON_NATIVE_INSTALL=y install-tools  \
 		|| die "install failed"
-
-	# Remove RedHat-specific stuff
-	rm -r "${D}"/etc/default "${D}"/etc/init.d/xen* || die
 
 	dodoc README docs/README.xen-bugtool docs/ChangeLog
 	if use doc; then
