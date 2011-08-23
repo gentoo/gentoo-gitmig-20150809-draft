@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/rudel/rudel-0.3_pre20110721.ebuild,v 1.1 2011/07/22 08:20:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/rudel/rudel-0.3_pre20110721.ebuild,v 1.2 2011/08/23 17:14:37 ulm Exp $
 
 EAPI=4
 NEED_EMACS=23
@@ -11,8 +11,7 @@ DESCRIPTION="Collaborative editing environment for GNU Emacs"
 HOMEPAGE="http://rudel.sourceforge.net/
 	http://www.emacswiki.org/emacs/Rudel"
 # snapshot of bzr://rudel.bzr.sourceforge.net/bzrroot/rudel/trunk
-SRC_URI="mirror://gentoo/${P}.tar.xz
-	http://dev.gentoo.org/~ulm/distfiles/${P}.tar.xz"
+SRC_URI="mirror://gentoo/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"

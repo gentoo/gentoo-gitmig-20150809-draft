@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/rudel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/rudel/ChangeLog,v 1.1 2011/07/22 08:20:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/rudel/ChangeLog,v 1.2 2011/08/23 17:14:37 ulm Exp $
+
+  23 Aug 2011; Ulrich Mueller <ulm@gentoo.org> rudel-0.3_pre20110721.ebuild:
+  Remove redundant entry from SRC_URI.
 
 *rudel-0.3_pre20110721 (22 Jul 2011)
 
