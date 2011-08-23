@@ -1,0 +1,10 @@
+# ChangeLog for net-print/c2esp
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/c2esp/ChangeLog,v 1.1 2011/08/23 03:59:00 binki Exp $
+
+*c2esp-18 (23 Aug 2011)
+
+  23 Aug 2011; Nathan Phillip Brink <binki@gentoo.org> +c2esp-18.ebuild,
+  +files/c2esp-18-ldflags.patch, +metadata.xml:
+  Add c2esp-18, a driver for certain Canon ESP series printers.
+

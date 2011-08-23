@@ -1,0 +1,36 @@
+From: Nathan Phillip Brink <binki@gentoo.org>
+Subject: Do not ignore LDFLAGS when linking.
+
+--- a/Makefile
++++ b/Makefile
+@@ -214,7 +214,7 @@
+ #CUPSLIBS_ST	=	/usr/lib/libcups.a -lgssapi_krb5 -lgnutls -lz -lpthread -lm -lcrypt
+ 
+ c2esptst: c2esptst.o 
+-	$(CC) $(CFLAGS) -o $@ c2esptst.o -lcupsimage -lcups -lcupsdriver $(LIBJBG)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ c2esptst.o -lcupsimage -lcups -lcupsdriver $(LIBJBG)
+ #last	$(CC) $(CFLAGS) -o $@ c2esptst.o -lcupsimage  -lcups -lgssapi_krb5 -lgnutls -lz -lpthread -lm -lcrypt $(LIBJBG) libcupsdriver.a
+ #was	$(CC) $(CFLAGS) -o $@ c2esptst.o -lcupsimage $(LIBJBG) libcupsdriver.a
+ 
+@@ -222,16 +222,16 @@
+ c2esp: c2esp.o 
+ #	/usr/lib/libcupsimage.so.2 replaced by -lcupsimage
+ #	libcupsdriver.a removed
+-	$(CC) $(CFLAGS) -o $@ c2esp.o -lcupsimage -lcups -lcupsdriver $(LIBJBG)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ c2esp.o -lcupsimage -lcups -lcupsdriver $(LIBJBG)
+ #	previous version below, simplified version above
+ #	$(CC) $(CFLAGS) -o $@ c2esp.o -lcups -lgssapi_krb5 -lgnutls -lz -lpthread -lm -lcrypt /usr/lib/libcupsimage.so.2 $(LIBJBG) 
+ 
+ command2esp: command2esp.o
+ #	$(CC) $(CFLAGS) -o $@ command2esp.o -lcups -lcupsdriver
+-	$(CC) $(CFLAGS) -o $@ command2esp.o -lcups -lcupsdriver
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ command2esp.o -lcups -lcupsdriver
+ 
+ myopldecode: myopldecode.o 
+-	$(CC) $(CFLAGS) -g myopldecode.o $(LIBJBG) -o $@
++	$(CC) $(CFLAGS) -g $(LDFLAGS) myopldecode.o $(LIBJBG) -o $@
+ 
+ 
+ #
+
+Diff finished.  Sat Aug 20 18:40:17 2011
