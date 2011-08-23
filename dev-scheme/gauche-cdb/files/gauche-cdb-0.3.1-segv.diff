@@ -1,4 +1,3 @@
-diff -ur Gauche-cdb-0.3.1.orig/cdb.stub Gauche-cdb-0.3.1/cdb.stub
 --- Gauche-cdb-0.3.1.orig/cdb.stub
 +++ Gauche-cdb-0.3.1/cdb.stub
 @@ -69,7 +69,7 @@
