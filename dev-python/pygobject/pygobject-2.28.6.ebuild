@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.28.6.ebuild,v 1.6 2011/08/20 18:35:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.28.6.ebuild,v 1.7 2011/08/23 16:04:09 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 GNOME_TARBALL_SUFFIX="xz"
 SUPPORT_PYTHON_ABIS="1"
 # pygobject is partially incompatible with Python 3.
