@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9_rc3.ebuild,v 1.2 2011/08/16 10:07:01 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9_rc3.ebuild,v 1.3 2011/08/23 15:33:25 nirbheek Exp $
 
 EAPI="4"
 PATCHSET="${PN}-0.9-patches-0.1"
@@ -36,7 +36,6 @@ COMMON_DEPEND=">=sys-apps/dbus-1.2
 	>=dev-libs/glib-2.26
 	>=sys-auth/polkit-0.97
 	>=dev-libs/libnl-1.1
-	>=net-misc/modemmanager-0.4
 	>=net-wireless/wpa_supplicant-0.7.3-r3[dbus]
 	bluetooth? ( >=net-wireless/bluez-4.82 )
 	avahi? ( net-dns/avahi[autoipd] )
@@ -47,7 +46,9 @@ COMMON_DEPEND=">=sys-apps/dbus-1.2
 	dhclient? ( net-misc/dhcp )
 	dhcpcd? ( >=net-misc/dhcpcd-4.0.0_rc3 )
 	introspection? ( >=dev-libs/gobject-introspection-0.10.3 )
-	ppp? ( >=net-dialup/ppp-2.4.5 )
+	ppp? (
+		>=net-misc/modemmanager-0.4
+		>=net-dialup/ppp-2.4.5 )
 	resolvconf? ( net-dns/openresolv )
 	connection-sharing? (
 		net-dns/dnsmasq

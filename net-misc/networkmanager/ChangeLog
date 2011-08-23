@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.112 2011/08/22 13:57:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.113 2011/08/23 15:33:25 nirbheek Exp $
+
+  23 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  networkmanager-0.9_rc3.ebuild:
+  Fix bug 379835, accidental dropping of optional modemmanager
 
   22 Aug 2011; Tony Vroon <chainsaw@gentoo.org>
   networkmanager-0.8.4.0-r2.ebuild:
