@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.48 2011/08/22 21:40:17 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.49 2011/08/23 07:59:28 polynomial-c Exp $
+
+  23 Aug 2011; Lars Wendler <polynomial-c@gentoo.org>
+  subversion-1.6.17-r4.ebuild:
+  Removed version restriction on sys-libs/db with kind permission from
+  chainsaw.
 
 *subversion-1.6.17-r4 (22 Aug 2011)
 
