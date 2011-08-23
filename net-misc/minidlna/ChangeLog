@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/minidlna
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/ChangeLog,v 1.7 2011/08/22 11:23:40 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/ChangeLog,v 1.8 2011/08/23 06:32:28 flameeyes Exp $
+
+  23 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org> minidlna-1.0.21.ebuild:
+  QA: add -j1 to make, for bug #350985, until fixed.
 
   22 Aug 2011; Michael Weber <xmw@gentoo.org> -minidlna-1.0.19.ebuild,
   -minidlna-1.0.20.ebuild:

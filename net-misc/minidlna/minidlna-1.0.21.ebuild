@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.0.21.ebuild,v 1.1 2011/07/31 21:42:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.0.21.ebuild,v 1.2 2011/08/23 06:32:28 flameeyes Exp $
 
 EAPI=2
 
@@ -31,7 +31,8 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" || die
+	# bug #350985
+	emake -j1 CC="$(tc-getCC)" || die
 }
 
 src_install() {
