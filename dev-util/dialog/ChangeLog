@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/dialog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.137 2011/08/17 16:15:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.138 2011/08/23 19:46:44 jer Exp $
+
+  23 Aug 2011; Jeroen Roovers <jer@gentoo.org> dialog-1.1.20110707-r1.ebuild:
+  Fix USE=minimal case thanks to nzqr and others (bug #379891).
 
   17 Aug 2011; Mike Frysinger <vapier@gentoo.org> dialog-1.1.20100428.ebuild:
   Pull in libtool in the stable ebuild too.

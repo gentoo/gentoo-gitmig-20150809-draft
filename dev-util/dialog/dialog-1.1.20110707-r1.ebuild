@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.1.20110707-r1.ebuild,v 1.3 2011/08/15 02:47:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-1.1.20110707-r1.ebuild,v 1.4 2011/08/23 19:46:44 jer Exp $
 
 EAPI="2"
 
@@ -56,9 +56,8 @@ src_install() {
 	fi
 
 	if ! use static-libs; then
-		rm \
+		rm -f \
 			"${D}"usr/$(get_libdir)/libdialog.a \
-			"${D}"usr/$(get_libdir)/libdialog.la \
-			|| die
+			"${D}"usr/$(get_libdir)/libdialog.la
 	fi
 }
