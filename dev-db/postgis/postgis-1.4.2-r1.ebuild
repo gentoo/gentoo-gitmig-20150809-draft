@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.4.2.ebuild,v 1.1 2011/08/23 22:31:43 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.4.2-r1.ebuild,v 1.1 2011/08/23 22:56:13 titanofold Exp $
 
 EAPI="4"
 
@@ -41,6 +41,9 @@ RESTRICT="test"
 
 PGIS="$(get_version_component_range 1-2)"
 
+# not parallel safe
+MAKEOPTS+=" -j1"
+
 pkg_setup() {
 	export PGSLOT="$(postgresql-config show)"
 	if [[ ${PGSLOT//.} < 82 || ${PGSLOT//.} > 84 ]] ; then
@@ -52,30 +55,29 @@ pkg_setup() {
 
 src_configure() {
 	# Configure interprets --without-gui as being the same as --with-gui
-	if use gtk ; then
-		econf --with-gui
-	else
-		econf
-	fi
+	local myargs=""
+	use gtk && myargs+=" --with-gui"
+	econf \
+		${myargs}
 }
 
 src_compile() {
 	# Occasionally, builds fail because of out of order compilation.
 	# Otherwise, it'd be fine.
-	emake -j1
+	emake
 	cd topology/
-	emake -j1
+	emake
 
 	if use doc ; then
 		cd "${S}/doc/"
-		emake -j1
+		emake
 	fi
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" install
+	emake DESTDIR="${D}" install
 	cd topology/
-	emake -j1 DESTDIR="${D}" install
+	emake DESTDIR="${D}" install
 
 	cd "${S}"
 	dodoc CREDITS TODO loader/README.* doc/*txt
@@ -111,7 +113,7 @@ pkg_postinst() {
 
 pkg_config(){
 	source "${EROOT%/}/etc/conf.d/postgresql-${PGSLOT}"
-	source "${EROOT%/}/etc/postgis_dbs"
+	source "${EROOT%/}/etc/postgis_dbs-${PGIS}"
 	local postgis_path="${EROOT%/}/usr/share/postgresql-${PGSLOT}/contrib/postgis-${PGIS}"
 
 	if [[ -n ${configured} ]] ; then
