@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.0.4.ebuild,v 1.1 2011/08/03 12:35:20 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-7.0.4.ebuild,v 1.2 2011/08/23 17:40:45 slyfox Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -87,11 +87,13 @@ IUSE+=" binary" # don't forget about me later!
 
 RDEPEND="
 	!dev-lang/ghc-bin
-	>=sys-devel/gcc-2.95.3
-	>=sys-devel/binutils-2.17
+	!kernel_Darwin? ( >=sys-devel/gcc-2.95.3 )
+	kernel_linux? ( >=sys-devel/binutils-2.17 )
+	kernel_SunOS? ( >=sys-devel/binutils-2.17 )
 	>=dev-lang/perl-5.6.1
 	>=dev-libs/gmp-5
-	!<dev-haskell/haddock-2.4.2"
+	!<dev-haskell/haddock-2.4.2
+	sys-libs/ncurses[unicode]"
 # earlier versions than 2.4.2 of haddock only works with older ghc releases
 
 # force dependency on >=gmp-5, even if >=gmp-4.1 would be enough. this is due to
