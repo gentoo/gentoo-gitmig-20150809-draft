@@ -1,6 +1,13 @@
 # ChangeLog for dev-scheme/gauche-cdb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-cdb/ChangeLog,v 1.10 2011/08/23 13:02:18 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-cdb/ChangeLog,v 1.11 2011/08/23 13:30:27 hattya Exp $
+
+*gauche-cdb-0.3.1-r1 (23 Aug 2011)
+
+  23 Aug 2011; Akinori Hattori <hattya@gentoo.org> gauche-cdb-0.3.1.ebuild,
+  +gauche-cdb-0.3.1-r1.ebuild, +files/gauche-cdb-0.3.1-gauche-package.diff,
+  +files/gauche-cdb-0.3.1-undefined-reference.diff:
+  use gauche-package to build module. fix undefined reference.
 
   23 Aug 2011; Akinori Hattori <hattya@gentoo.org> gauche-cdb-0.3.1.ebuild,
   files/gauche-cdb-0.3.1-gpd.diff, files/gauche-cdb-0.3.1-segv.diff:
