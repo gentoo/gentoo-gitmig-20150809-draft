@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.5-r2.ebuild,v 1.1 2011/08/07 09:10:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.5-r2.ebuild,v 1.2 2011/08/23 23:00:46 radhermit Exp $
 
 EAPI=2
 inherit eutils python
@@ -18,6 +18,7 @@ RDEPEND=">=dev-libs/glib-2
 	>=media-libs/libpng-1.2"
 DEPEND="${RDEPEND}
 	=dev-lang/python-2*
+	dev-util/pkgconfig
 	doc? ( >=app-doc/doxygen-1.5.0 )"
 
 pkg_setup() {

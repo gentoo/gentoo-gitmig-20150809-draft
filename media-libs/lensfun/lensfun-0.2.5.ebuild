@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.5.ebuild,v 1.1 2010/04/02 14:24:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.5.ebuild,v 1.2 2011/08/23 23:00:46 radhermit Exp $
 
 EAPI=2
 
@@ -18,6 +18,7 @@ RDEPEND="
 	>=dev-libs/glib-2.0
 	>=media-libs/libpng-1.0"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	doc? ( >=app-doc/doxygen-1.5.0 )"
 
 src_prepare() {
