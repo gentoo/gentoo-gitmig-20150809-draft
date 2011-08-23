@@ -1,20 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9_rc3.ebuild,v 1.3 2011/08/23 15:33:25 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.0.ebuild,v 1.1 2011/08/23 23:17:09 nirbheek Exp $
 
 EAPI="4"
-PATCHSET="${PN}-0.9-patches-0.1"
 GNOME_ORG_MODULE="NetworkManager"
-GNOME_ORG_PVP="0.8"
-REAL_PV="0.8.9997"
 
 inherit autotools eutils gnome.org linux-info systemd
 
 DESCRIPTION="Network configuration and management in an easy way. Desktop environment independent."
 HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
-# Replace our fake _rc version with the actual version
-SRC_URI="${SRC_URI//${PV}/${REAL_PV}}
-	mirror://gentoo/${PATCHSET}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,7 +22,7 @@ REQUIRED_USE="
 
 # gobject-introspection-0.10.3 is needed due to gnome bug 642300
 # wpa_supplicant-0.7.3-r3 is needed due to bug 359271
-# make consolekit and/or polkit support optional ?
+# TODO: Qt support?
 COMMON_DEPEND=">=sys-apps/dbus-1.2
 	>=dev-libs/dbus-glib-0.75
 	>=net-wireless/wireless-tools-28_pre9
@@ -63,8 +57,6 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-util/intltool-0.40
 	>=sys-devel/gettext-0.17
 	doc? ( >=dev-util/gtk-doc-1.8 )"
-# Replace our fake _rc version with the actual version
-S="${WORKDIR}/${GNOME_ORG_MODULE}-${REAL_PV}"
 
 sysfs_deprecated_check() {
 	ebegin "Checking for SYSFS_DEPRECATED support"
@@ -93,12 +85,8 @@ pkg_pretend() {
 }
 
 src_prepare() {
-	# Add useful patches from upstream git (fixing crashes, SSID parsing bugs,
-	# and significant usability problems).
-	epatch "${WORKDIR}/${PATCHSET}/"*.patch
-
 	# Don't build tests
-	epatch "${FILESDIR}/${P}-fix-tests.patch"
+	epatch "${FILESDIR}/${PN}-0.9_rc3-fix-tests.patch"
 	eautoreconf
 	default
 }
