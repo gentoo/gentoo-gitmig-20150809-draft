@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-3,v 1.3 2011/08/12 20:34:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-3,v 1.4 2011/08/23 16:09:21 vapier Exp $
 
 # Format of /etc/env.d/binutils/:
 #  config-TARGET:	CURRENT=version for TARGET
@@ -389,7 +389,7 @@ while [[ $# -gt 0 ]] ; do
 		-h|--help)                 usage 0 ;;
 		-V|--version)
 			unset Header
-			cvsver="$Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-3,v 1.3 2011/08/12 20:34:00 vapier Exp $"
+			cvsver="$Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-3,v 1.4 2011/08/23 16:09:21 vapier Exp $"
 			cvsver=${cvsver##*binutils-config-}
 			bver=${cvsver%%,v *}
 			cvsver=${cvsver#* }
@@ -453,18 +453,24 @@ switch_profile|switch_linker_*)
 	if [[ -z ${PROFILE} ]] ; then
 		# User gave us a full HOST-ver
 		x=${x##*/}
-		if [[ ! -f ${ENV_D}/${x} ]] && [[ ! -f ${ENV_D}/config-${x} ]] ; then
-			# Maybe they just gave us a ver ...
-			if [[ -f ${ENV_D}/${HOST}-${x} ]] ; then
-				x=${HOST}-${x}
-			else
-				eerror "${argv0}: Could not locate '$x' in '${ENV_D}/'!"
-				exit 1
-			fi
+		if [[ -f ${ENV_D}/${x} ]] ; then
+			# Valid HOST-ver yeah!
 			PROFILE=${x}
 		else
-			# Maybe they just gave us a target ... pick active profile
-			PROFILE=$(TARGET=${x} set_current_profile)
+			# Not a valid HOST-ver ...
+			if [[ ! -f ${ENV_D}/config-${x} ]] ; then
+				# Maybe they just gave us a ver ...
+				if [[ -f ${ENV_D}/${HOST}-${x} ]] ; then
+					x=${HOST}-${x}
+				else
+					eerror "${argv0}: Could not locate '$x' in '${ENV_D}/'!"
+					exit 1
+				fi
+				PROFILE=${x}
+			else
+				# Maybe they just gave us a target ... pick active profile
+				PROFILE=$(TARGET=${x} set_current_profile)
+			fi
 		fi
 	fi
 	;;
