@@ -1,6 +1,13 @@
 # ChangeLog for sci-astronomy/skycat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/skycat/ChangeLog,v 1.9 2011/08/04 18:32:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/skycat/ChangeLog,v 1.10 2011/08/23 11:48:46 xarthisius Exp $
+
+*skycat-3.1.2-r1 (23 Aug 2011)
+
+  23 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> +skycat-3.1.2-r1.ebuild,
+  +files/skycat-3.1.2-m4.patch, +files/skycat-3.1.2-makefile-qa.patch:
+  Fix as-needed issues wrt #379943 by Sijus <sijus@freemail.lt>. Add missing
+  SONAMEs
 
   04 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   Switched herd to sci-astronomy
