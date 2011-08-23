@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.3.1.ebuild,v 1.3 2011/08/19 12:40:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.3.2.ebuild,v 1.1 2011/08/23 19:27:22 scarabeus Exp $
 
 EAPI=3
 
@@ -236,7 +236,6 @@ PATCHES=(
 	"${FILESDIR}/${PN}-32b-qt4-libdir.patch"
 	"${FILESDIR}/${PN}-binfilter-as-needed.patch"
 	"${FILESDIR}/${PN}-kill-cppunit.patch"
-	"${FILESDIR}/${PN}-respect-destdir.patch"
 )
 
 # Uncoment me when updating to eapi4
