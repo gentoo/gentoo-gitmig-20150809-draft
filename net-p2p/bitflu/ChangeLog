@@ -1,5 +1,10 @@
 
 
+*bitflu-1.38 (24 Aug 2011)
+
+  24 Aug 2011; Anthony G. Basile <blueness@gentoo.org> +bitflu-1.38.ebuild:
+  Version bump
+
   21 Aug 2011; Anthony G. Basile <blueness@gentoo.org> bitflu-1.37.ebuild:
   Added depend on dev-perl/Sys-Syscall, bug #380079
 
