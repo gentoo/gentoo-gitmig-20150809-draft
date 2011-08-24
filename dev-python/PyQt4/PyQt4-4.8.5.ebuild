@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.8.5.ebuild,v 1.1 2011/08/19 10:12:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.8.5.ebuild,v 1.2 2011/08/24 16:28:35 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="*-jython"
+RESTRICT_PYTHON_ABIS="*-jython *-pypy-*"
 
 inherit python qt4-r2 toolchain-funcs
 
@@ -47,7 +47,7 @@ DEPEND=">=dev-python/sip-4.12.2
 	xmlpatterns? ( >=x11-libs/qt-xmlpatterns-${QT_VER}:4 )"
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
 
 PATCHES=(
 	"${FILESDIR}/${PN}-4.7.2-configure.py.patch"
@@ -122,7 +122,7 @@ src_configure() {
 		"${myconf[@]}" || return 1
 
 		local mod
-		for mod in QtCore $(use X && echo QtDesigner QtGui) $(use declarative && echo QtDeclarative); do
+		for mod in QtCore $(use X && echo QtDesigner QtGui) $(use declarative && echo QtDeclarative) $(use opengl && echo QtOpenGL); do
 			# Run eqmake4 inside the qpy subdirectories to respect CC, CXX, CFLAGS, CXXFLAGS and LDFLAGS and avoid stripping.
 			pushd qpy/${mod} > /dev/null || return 1
 			eqmake4 $(ls w_qpy*.pro)
@@ -167,6 +167,10 @@ src_install() {
 
 pkg_postinst() {
 	python_mod_optimize PyQt4
+
+	ewarn "When updating dev-python/PyQt4, you usually need to rebuild packages, which depend on"
+	ewarn "dev-python/PyQt4, such as dev-python/qscintilla-python. If you have app-portage/gentoolkit"
+	ewarn "installed, you can find these packages with \`equery d dev-python/PyQt4\`."
 }
 
 pkg_postrm() {

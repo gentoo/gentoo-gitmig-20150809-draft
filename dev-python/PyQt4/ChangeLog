@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.159 2011/08/19 10:12:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.160 2011/08/24 16:28:35 hwoarang Exp $
+
+  24 Aug 2011; Markos Chandras <hwoarang@gentoo.org> PyQt4-4.8.5.ebuild:
+  Restrict PyPy ABIs. Avoid warnings about insecure runpaths (bug #376483).
+  Print useful warning in pkg_postinst(). Patch by Arfrever. Backported from
+  python overlay.
 
 *PyQt4-4.8.5 (19 Aug 2011)
 
