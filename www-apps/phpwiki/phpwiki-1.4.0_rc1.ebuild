@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwiki/phpwiki-1.4.0_rc1.ebuild,v 1.1 2011/08/22 17:45:40 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwiki/phpwiki-1.4.0_rc1.ebuild,v 1.2 2011/08/24 07:23:09 olemarkus Exp $
 
 EAPI=4
 
@@ -15,11 +15,11 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="msql mysql postgres"
+IUSE="mysql postgres"
 
 RDEPEND="
 	virtual/httpd-cgi
-	dev-lang/php[msql?,mysql?,postgres?]
+	dev-lang/php[mysql?,postgres?]
 	|| ( <dev-lang/php-5.3[pcre] >=dev-lang/php-5.3 )
 	|| ( dev-lang/php[cgi] dev-lang/php[apache2] )"
 
