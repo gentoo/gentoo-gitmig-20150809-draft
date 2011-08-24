@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/imapsync-1.404.ebuild,v 1.1 2011/03/07 20:10:30 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/imapsync/imapsync-1.404.ebuild,v 1.2 2011/08/24 08:07:12 radhermit Exp $
 
 EAPI=3
 
 DESCRIPTION="A tool allowing incremental and recursive imap transfer from one mailbox to another"
-HOMEPAGE="http://www.linux-france.org/prj/"
+HOMEPAGE="http://ks.lamiral.info/imapsync/"
 SRC_URI="https://fedorahosted.org/released/${PN}/${P}-sources.tgz"
 
 LICENSE="WTFPL-2"
