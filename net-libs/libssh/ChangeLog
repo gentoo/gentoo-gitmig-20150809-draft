@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.51 2011/08/10 22:09:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.52 2011/08/24 14:07:14 darkside Exp $
+
+  24 Aug 2011; Jeremy Olexa <darkside@gentoo.org> libssh-0.5.1.ebuild:
+  add prefix keywords, bug 374401
 
 *libssh-0.5.1 (10 Aug 2011)
 
