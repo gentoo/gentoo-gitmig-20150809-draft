@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-daemon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.47 2011/07/17 20:25:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.48 2011/08/24 20:39:51 ulm Exp $
+
+  24 Aug 2011; Ulrich Mueller <ulm@gentoo.org> emacs-daemon-0.18.ebuild:
+  Warn about problems in GTK+, bug 292471.
 
   17 Jul 2011; Ulrich Mueller <ulm@gentoo.org> -emacs-daemon-0.17.ebuild:
   Remove old.

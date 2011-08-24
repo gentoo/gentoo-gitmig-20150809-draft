@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/emacs-daemon-0.18.ebuild,v 1.7 2011/07/17 20:04:53 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/emacs-daemon-0.18.ebuild,v 1.8 2011/08/24 20:39:51 ulm Exp $
 
 inherit elisp
 
@@ -19,12 +19,26 @@ RDEPEND="${DEPEND}"
 SITEFILE="10${PN}-gentoo.el"
 
 pkg_setup() {
-	local has_daemon=$(${EMACS} ${EMACSFLAGS} \
-		--eval "(princ (fboundp 'daemonp))")
-	if [ "${has_daemon}" != t ]; then
-		ewarn "Your current Emacs version does not support running as a daemon"
-		ewarn "which is required for ${CATEGORY}/${PN}."
-		ewarn "Use \"eselect emacs\" to select an Emacs version >= 23."
+	local has_daemon has_gtk line
+	has_daemon=$(${EMACS} ${EMACSFLAGS} --eval "(princ (fboundp 'daemonp))")
+	has_gtk=$(${EMACS} ${EMACSFLAGS} --eval "(princ (featurep 'gtk))")
+
+	if [[ ${has_daemon} != t ]]; then
+		while read line; do ewarn "${line}"; done <<-EOF
+		Your current Emacs version does not support running as a daemon
+		which is required for ${CATEGORY}/${PN}.
+		Use "eselect emacs" to select an Emacs version >= 23.
+		EOF
+	elif [[ ${has_gtk} == t ]]; then
+		echo
+		while read line; do ewarn "${line}"; done <<-EOF
+		Your current Emacs is compiled with GTK+. There is a long-standing
+		bug in GTK+ that prevents Emacs from recovering from X disconnects:
+		<http://bugzilla.gnome.org/show_bug.cgi?id=85715>
+		If you run Emacs as a daemon, then it is strongly recommended that
+		you compile it with the Lucid toolkit, i.e. with USE="Xaw3d -gtk".
+		EOF
+		echo
 	fi
 }
 
