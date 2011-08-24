@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/hatari
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/ChangeLog,v 1.30 2011/08/22 14:15:04 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/ChangeLog,v 1.31 2011/08/24 19:33:45 maekke Exp $
+
+  24 Aug 2011; Markus Meier <maekke@gentoo.org> hatari-1.5.0.ebuild:
+  x86 stable, bug #380177
 
   22 Aug 2011; Tony Vroon <chainsaw@gentoo.org> hatari-1.5.0.ebuild:
   Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney in bug
