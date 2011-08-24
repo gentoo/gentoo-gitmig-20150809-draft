@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/elfkickers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.39 2011/08/22 13:50:59 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.40 2011/08/24 19:25:04 maekke Exp $
+
+  24 Aug 2011; Markus Meier <maekke@gentoo.org> elfkickers-3.0-r1.ebuild:
+  x86 stable, bug #380083
 
   22 Aug 2011; Tony Vroon <chainsaw@gentoo.org> elfkickers-3.0-r1.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
