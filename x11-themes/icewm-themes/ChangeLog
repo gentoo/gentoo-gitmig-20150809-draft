@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/icewm-themes
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/ChangeLog,v 1.19 2008/02/19 02:12:31 ingmar Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/icewm-themes/ChangeLog,v 1.20 2011/08/24 18:42:50 xarthisius Exp $
+
+  24 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  icewm-themes-0.0.1-r1.ebuild, icewm-themes-0.0.2.ebuild:
+  Drop dependency on nonexistent kde-base/kdeartwork-icewm-themes
 
   19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org>
   icewm-themes-0.0.1-r1.ebuild, icewm-themes-0.0.2.ebuild:
