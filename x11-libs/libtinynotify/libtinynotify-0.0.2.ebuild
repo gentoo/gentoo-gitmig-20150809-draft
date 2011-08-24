@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libtinynotify/libtinynotify-0.0.1.ebuild,v 1.1 2011/08/21 20:36:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libtinynotify/libtinynotify-0.0.2.ebuild,v 1.1 2011/08/24 11:28:29 mgorny Exp $
 
 EAPI=4
 inherit autotools-utils
@@ -16,6 +16,7 @@ IUSE="debug doc static-libs"
 
 RDEPEND="sys-apps/dbus"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	doc? ( dev-util/gtk-doc )"
 
 DOCS=( README )
