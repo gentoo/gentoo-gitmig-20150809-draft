@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.122 2011/06/17 03:28:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.123 2011/08/24 17:35:46 radhermit Exp $
+
+  24 Aug 2011; Tim Harder <radhermit@gentoo.org> usbutils-001.ebuild,
+  usbutils-002.ebuild, usbutils-003.ebuild:
+  Use correct dependency variable (fixes bug #380497).
 
 *usbutils-003 (17 Jun 2011)
 
