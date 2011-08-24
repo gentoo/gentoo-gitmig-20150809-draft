@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.215 2011/07/26 09:27:55 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.216 2011/08/24 21:52:16 chainsaw Exp $
+
+*audacious-plugins-3.0.2 (24 Aug 2011)
+
+  24 Aug 2011; Tony Vroon <chainsaw@gentoo.org> -audacious-plugins-3.0.ebuild,
+  +audacious-plugins-3.0.2.ebuild:
+  Version bump to newest 3.x branch ebuild. Tighten up ffmpeg dependency to
+  prevent the breakage that Alessandro Surace pointed out in bug #377671.
+  Removed old ebuild.
 
   26 Jul 2011; Tony Vroon <chainsaw@gentoo.org>
   -audacious-plugins-2.5.3.ebuild:

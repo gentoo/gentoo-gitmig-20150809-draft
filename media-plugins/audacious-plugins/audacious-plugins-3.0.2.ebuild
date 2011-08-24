@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.0.ebuild,v 1.1 2011/07/25 12:52:30 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.0.2.ebuild,v 1.1 2011/08/24 21:52:16 chainsaw Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ lame libnotify libsamplerate lirc midi mms mp3 mtp nls oss pulseaudio scrobbler 
 RDEPEND="app-arch/unzip
 	>=dev-libs/dbus-glib-0.60
 	dev-libs/libxml2:2
-	>=media-sound/audacious-3.0
+	>=media-sound/audacious-3.0.2
 	>=net-libs/neon-0.26.4
 	>=x11-libs/gtk+-2.14:2
 	aac? ( >=media-libs/faad2-2.7 )
@@ -31,7 +31,8 @@ RDEPEND="app-arch/unzip
 	cdda? ( >=media-libs/libcddb-1.2.1
 		>=dev-libs/libcdio-0.79-r1 )
 	cue? ( media-libs/libcue )
-	ffmpeg? ( media-video/ffmpeg )
+	ffmpeg? ( >=media-video/ffmpeg-0.7.3
+		  !media-video/libav )
 	flac? ( >=media-libs/libvorbis-1.0
 		>=media-libs/flac-1.2.1-r1 )
 	fluidsynth? ( media-sound/fluidsynth )
