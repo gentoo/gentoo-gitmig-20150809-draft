@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/openscap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/ChangeLog,v 1.10 2011/08/21 03:40:45 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/openscap/ChangeLog,v 1.11 2011/08/24 13:41:40 hwoarang Exp $
+
+  24 Aug 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Assign package to proxy-maintainers team
 
   21 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> openscap-0.7.3.ebuild:
   x86 stable wrt bug #379681

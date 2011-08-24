@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/ovaldi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/ovaldi/ChangeLog,v 1.1 2011/06/16 09:30:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/ovaldi/ChangeLog,v 1.2 2011/08/24 13:43:02 hwoarang Exp $
+
+  24 Aug 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Assign package to proxy-maintainers team
 
 *ovaldi-5.9.1 (16 Jun 2011)
 
