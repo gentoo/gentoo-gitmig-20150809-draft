@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/murrine-themes/murrine-themes-0.98.0.ebuild,v 1.2 2011/08/16 13:14:12 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/murrine-themes/murrine-themes-0.98.0.ebuild,v 1.3 2011/08/24 18:58:42 maekke Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ http://gnome-look.org/CONTENT/content-files/93558-Murreza.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=x11-themes/gtk-engines-murrine-0.98.0"
