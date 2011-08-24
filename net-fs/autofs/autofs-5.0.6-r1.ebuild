@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.6-r1.ebuild,v 1.2 2011/08/19 18:39:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.6-r1.ebuild,v 1.3 2011/08/24 19:11:29 maekke Exp $
 
 EAPI="4"
 inherit eutils multilib autotools linux-info
@@ -15,7 +15,7 @@ SRC_URI="mirror://kernel/linux/daemons/${PN}/v5/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE="hesiod ldap sasl"
 
 # USE="sasl" adds SASL support to the LDAP module which will not be build. If
