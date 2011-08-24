@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gwibber
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/ChangeLog,v 1.17 2011/08/14 14:53:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/ChangeLog,v 1.18 2011/08/24 19:10:03 maekke Exp $
+
+  24 Aug 2011; Markus Meier <maekke@gentoo.org> gwibber-3.1.0.ebuild:
+  x86 stable, bug #378577
 
   14 Aug 2011; Markos Chandras <hwoarang@gentoo.org> gwibber-3.1.0.ebuild:
   Stable on amd64 wrt bug #378577
