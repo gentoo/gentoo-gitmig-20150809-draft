@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gnofract4d
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnofract4d/ChangeLog,v 1.13 2011/03/04 22:28:52 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnofract4d/ChangeLog,v 1.14 2011/08/24 18:26:16 radhermit Exp $
+
+*gnofract4d-3.14 (24 Aug 2011)
+
+  24 Aug 2011; Tim Harder <radhermit@gentoo.org> +gnofract4d-3.14.ebuild:
+  Version bump.
 
   04 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -gnofract4d-3.12.ebuild:
