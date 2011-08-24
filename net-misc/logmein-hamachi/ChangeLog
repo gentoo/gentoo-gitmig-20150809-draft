@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/logmein-hamachi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logmein-hamachi/ChangeLog,v 1.2 2011/06/13 09:00:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logmein-hamachi/ChangeLog,v 1.3 2011/08/24 11:07:13 hwoarang Exp $
+
+*logmein-hamachi-2.1.0.17 (24 Aug 2011)
+
+  24 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
+  -logmein-hamachi-2.0.1.13.ebuild, -logmein-hamachi-2.0.1.15.ebuild,
+  +logmein-hamachi-2.1.0.17.ebuild, files/logmein-hamachi.initd:
+  Version bump. Bug #378969. Thanks to Simone Scanzoni <nonno.cicala@libero.it>
+  for the new initd file
 
 *logmein-hamachi-2.0.1.15 (13 Jun 2011)
 

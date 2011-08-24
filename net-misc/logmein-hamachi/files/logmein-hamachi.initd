@@ -48,9 +48,15 @@ stop()
 
 	ebegin "Stopping hamachi"
 
-	/usr/bin/hamachi logout >> /dev/null
+	/usr/bin/hamachi logout
 	start-stop-daemon --quiet --stop --exec "${DAEMON}" \
 		--pidfile "${PIDFILE}"
 
 	eend $?
+}
+
+status() {
+        service_started "${SVCNAME}" || return 1
+        /usr/bin/hamachi
+        /usr/bin/hamachi list
 }
