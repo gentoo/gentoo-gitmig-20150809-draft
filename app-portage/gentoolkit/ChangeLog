@@ -1,6 +1,15 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.229 2011/07/28 03:00:24 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.230 2011/08/24 18:18:49 fuzzyray Exp $
+
+*gentoolkit-0.3.0.4-r2 (24 Aug 2011)
+
+  24 Aug 2011; Paul Varner <fuzzyray@gentoo.org> +gentoolkit-0.3.0.4-r2.ebuild,
+  +files/0.3.0.4-gentoolkit-375293.patch, +files/0.3.0.4-euse-376393.patch,
+  +files/0.3.0.4-euse-379599.patch:
+  Revision bump.
+  Fix traversal of cascading profiles by euse (Bug 379599).
+  Fix equery changes Invalid CPV errors (Bug 375293).
 
   28 Jul 2011; Paul Varner <fuzzyray@gentoo.org>
   -files/0.3.0_rc11-cpv.py.patch, -files/0.3.0_rc11-eshowkw_indir.patch,
