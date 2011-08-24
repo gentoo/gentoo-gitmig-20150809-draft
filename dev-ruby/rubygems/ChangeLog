@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.172 2011/06/25 14:15:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.173 2011/08/24 17:09:18 a3li Exp $
+
+*rubygems-1.8.7 (24 Aug 2011)
+
+  24 Aug 2011; Alex Legler <a3li@gentoo.org> +rubygems-1.8.7.ebuild,
+  +files/rubygems-1.8.7-ruby19.patch:
+  Version bump (p.masked). Incuding a try to fix bug 336863.
 
 *rubygems-1.8.5 (25 Jun 2011)
 
