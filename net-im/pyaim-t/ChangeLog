@@ -1,6 +1,13 @@
 # ChangeLog for net-im/pyaim-t
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pyaim-t/ChangeLog,v 1.9 2010/07/06 16:06:48 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/pyaim-t/ChangeLog,v 1.10 2011/08/24 18:41:53 hanno Exp $
+
+*pyaim-t-0.8.0.1 (24 Aug 2011)
+
+  24 Aug 2011; Hanno Boeck <hanno@gentoo.org> +pyaim-t-0.8.0.1.ebuild,
+  +files/pyaim-t-0.8.0.1-python26-warnings.patch, files/pyaim-t-0.8-initd:
+  Version bump, added fix for deprecation warnings with python 2.6/2.7, don't
+  use --chuid due to warning with openrc/baselayout2, port to EAPI 3.
 
   06 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pyaim-t-0.8a.ebuild:
