@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.0.ebuild,v 1.1 2011/07/25 12:52:28 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.0.2.ebuild,v 1.1 2011/08/24 21:51:33 chainsaw Exp $
 
 EAPI=4
 
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 	chardet? ( app-i18n/libguess )
 	nls? ( dev-util/intltool )"
 
-PDEPEND=">=media-plugins/audacious-plugins-3.0"
+PDEPEND=">=media-plugins/audacious-plugins-3.0.2"
 
 src_configure() {
 	# D-Bus is a mandatory dependency, remote control,
