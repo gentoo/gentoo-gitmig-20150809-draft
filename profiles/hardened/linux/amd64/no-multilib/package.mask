@@ -1,6 +1,7 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/no-multilib/package.mask,v 1.3 2011/08/23 19:40:04 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/no-multilib/package.mask,v 1.4 2011/08/24 18:02:04 xarthisius Exp $
 
 # These are broken as reported by Halcy0n, Aug, 23, 2011
 games-action/shadowgrounds-bin
+games-action/shadowgrounds-survivor-bin
