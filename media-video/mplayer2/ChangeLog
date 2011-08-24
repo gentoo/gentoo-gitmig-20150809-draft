@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.21 2011/07/09 16:30:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.22 2011/08/24 10:35:36 chainsaw Exp $
+
+  24 Aug 2011; Tony Vroon <chainsaw@gentoo.org> mplayer2-2.0.ebuild:
+  Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney in bug
+  #365951 filed by Jeremy "darkside" Olexa.
 
   09 Jul 2011; Raúl Porcel <armin76@gentoo.org> mplayer2-2.0.ebuild:
   Add ~ia64/~sparc wrt #365953
