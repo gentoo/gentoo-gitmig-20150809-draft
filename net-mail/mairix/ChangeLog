@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mairix
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/ChangeLog,v 1.33 2010/10/24 17:16:45 radhermit Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/ChangeLog,v 1.34 2011/08/24 06:55:10 radhermit Exp $
+
+*mairix-0.23 (24 Aug 2011)
+
+  24 Aug 2011; Tim Harder <radhermit@gentoo.org> +mairix-0.23.ebuild:
+  Version bump.
 
   24 Oct 2010; Tim Harder <radhermit@gentoo.org> -mairix-0.19.ebuild,
   -mairix-0.21.ebuild:
