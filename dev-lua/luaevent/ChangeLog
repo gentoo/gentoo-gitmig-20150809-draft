@@ -1,6 +1,9 @@
 # ChangeLog for dev-lua/luaevent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luaevent/ChangeLog,v 1.5 2011/08/22 13:52:33 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luaevent/ChangeLog,v 1.6 2011/08/24 19:27:22 maekke Exp $
+
+  24 Aug 2011; Markus Meier <maekke@gentoo.org> luaevent-0.3.1.ebuild:
+  x86 stable, bug #380087
 
   22 Aug 2011; Tony Vroon <chainsaw@gentoo.org> luaevent-0.3.1.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
