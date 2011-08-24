@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-0_p20110504.ebuild,v 1.2 2011/08/10 16:49:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-0_p20110504.ebuild,v 1.3 2011/08/24 19:08:01 maekke Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=app-text/mupdf-0.8.165
