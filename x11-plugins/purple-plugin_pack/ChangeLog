@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/purple-plugin_pack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/ChangeLog,v 1.36 2011/08/07 11:04:23 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/ChangeLog,v 1.37 2011/08/24 19:50:47 maekke Exp $
+
+  24 Aug 2011; Markus Meier <maekke@gentoo.org>
+  purple-plugin_pack-2.6.3.ebuild:
+  x86 stable, bug #377911
 
   07 Aug 2011; Peter Volkov <pva@gentoo.org> purple-plugin_pack-2.6.3.ebuild:
   Filter out -g3, bug #377911#c3 by Agostino Sarubbo.
