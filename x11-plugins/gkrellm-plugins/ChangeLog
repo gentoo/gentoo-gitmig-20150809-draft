@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-plugins
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/ChangeLog,v 1.17 2010/10/17 16:34:34 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/ChangeLog,v 1.18 2011/08/24 18:40:07 xarthisius Exp $
+
+  24 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  gkrellm-plugins-2.0.ebuild:
+  Drop dependency on nonexistant atom
 
   17 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   gkrellm-plugins-2.0.ebuild:
