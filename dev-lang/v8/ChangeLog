@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.72 2011/08/07 15:20:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.73 2011/08/24 20:53:21 phajdan.jr Exp $
+
+*v8-3.3.10.30 (24 Aug 2011)
+
+  24 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> -v8-3.2.10.21.ebuild,
+  -v8-3.3.10.21.ebuild, +v8-3.3.10.30.ebuild:
+  Version bump for stable channel release. Remove old.
 
   07 Aug 2011; Markus Meier <maekke@gentoo.org> v8-3.3.10.22.ebuild:
   x86 stable, bug #377629
