@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmockery
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmockery/ChangeLog,v 1.6 2011/08/07 14:19:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmockery/ChangeLog,v 1.7 2011/08/24 14:05:48 darkside Exp $
+
+  24 Aug 2011; Jeremy Olexa <darkside@gentoo.org> cmockery-0.1.2.ebuild:
+  add prefix keywords, bug 374401
 
   07 Aug 2011; Raúl Porcel <armin76@gentoo.org> cmockery-0.1.2.ebuild:
   Add ~s390/~sparc wrt #374401
