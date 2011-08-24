@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.216 2011/08/05 07:13:35 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.217 2011/08/24 09:15:17 eras Exp $
+
+*fetchmail-6.3.21 (24 Aug 2011)
+
+  24 Aug 2011; Eray Aslan <eras@gentoo.org> +files/fetchmail.initd,
+  -files/MD5_library_pickup.patch, +fetchmail-6.3.21.ebuild,
+  -files/debian-580796.patch, +files/fetchmail.confd:
+  Version bump. Add socks USE flag - bug #380405. Allow multiple deamons - bug
+  #380371. Remove unused patches.
 
   05 Aug 2011; Eray Aslan <eras@gentoo.org> files/fetchmail.new:
   fix deprecated chuid option in init script - bug #377777
