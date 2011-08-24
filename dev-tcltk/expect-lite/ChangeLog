@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/expect-lite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect-lite/ChangeLog,v 1.9 2011/05/18 22:31:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect-lite/ChangeLog,v 1.10 2011/08/24 03:06:12 vapier Exp $
+
+*expect-lite-4.1.2 (24 Aug 2011)
+
+  24 Aug 2011; Mike Frysinger <vapier@gentoo.org> +expect-lite-4.1.2.ebuild:
+  Version bump.
 
 *expect-lite-4.1.0 (18 May 2011)
 
