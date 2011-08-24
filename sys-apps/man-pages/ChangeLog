@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man-pages
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.156 2011/08/22 13:42:08 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.157 2011/08/24 19:16:41 maekke Exp $
+
+  24 Aug 2011; Markus Meier <maekke@gentoo.org> man-pages-3.32.ebuild:
+  x86 stable, bug #379917
 
   22 Aug 2011; Tony Vroon <chainsaw@gentoo.org> man-pages-3.32.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in bug
