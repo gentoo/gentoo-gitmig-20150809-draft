@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20110722.ebuild,v 1.1 2011/07/22 19:17:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-20110722.ebuild,v 1.2 2011/08/24 10:01:24 chainsaw Exp $
 
 EAPI="4"
 
 inherit emul-linux-x86
 
 LICENSE="GPL-3 GPL-2 LGPL-2 LGPL-2.1 FTL MIT || ( LGPL-2.1 MPL-1.1 )"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 
 DEPEND=""
 RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}

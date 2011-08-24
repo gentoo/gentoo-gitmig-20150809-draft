@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-qtlibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.68 2011/07/22 19:23:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.69 2011/08/24 10:05:55 chainsaw Exp $
+
+  24 Aug 2011; Tony Vroon <chainsaw@gentoo.org>
+  emul-linux-x86-qtlibs-20110722.ebuild:
+  Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney in bug
+  #380401 filed by Chí-Thanh Christopher Nguyễn.
 
 *emul-linux-x86-qtlibs-20110722 (22 Jul 2011)
 
