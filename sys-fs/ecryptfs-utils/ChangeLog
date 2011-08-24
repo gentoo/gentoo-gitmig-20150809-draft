@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/ecryptfs-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.32 2011/03/29 07:57:50 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.33 2011/08/24 18:01:53 radhermit Exp $
+
+*ecryptfs-utils-90 (24 Aug 2011)
+
+  24 Aug 2011; Tim Harder <radhermit@gentoo.org> +ecryptfs-utils-90.ebuild:
+  Version bump (fixes bugs #373901 and #378807). Add check for kernel ECRYPT_FS
+  support (bug #376663 by Łukasz Stelmach).
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org> ecryptfs-utils-83.ebuild,
   ecryptfs-utils-85.ebuild:
