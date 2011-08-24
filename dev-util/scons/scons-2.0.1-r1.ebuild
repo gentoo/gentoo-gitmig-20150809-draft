@@ -1,11 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-2.0.1-r1.ebuild,v 1.2 2011/07/20 14:19:44 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-2.0.1-r1.ebuild,v 1.3 2011/08/24 16:35:21 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="threads"
 SUPPORT_PYTHON_ABIS=1
+RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils eutils
 
@@ -23,9 +24,8 @@ IUSE="doc"
 DEPEND=""
 RDEPEND=""
 
-RESTRICT_PYTHON_ABIS="3.*"
-
 DOCS="CHANGES.txt RELEASE.txt"
+PYTHON_MODNAME="SCons"
 
 src_prepare() {
 	distutils_src_prepare
