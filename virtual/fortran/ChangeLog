@@ -1,6 +1,9 @@
 # ChangeLog for virtual/fortran
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/fortran/ChangeLog,v 1.5 2011/08/17 16:52:55 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/fortran/ChangeLog,v 1.6 2011/08/24 18:45:22 xarthisius Exp $
+
+  24 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> fortran-0.ebuild:
+  Fix ekopath PN, add path64
 
   17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   fortran-0.ebuild:
