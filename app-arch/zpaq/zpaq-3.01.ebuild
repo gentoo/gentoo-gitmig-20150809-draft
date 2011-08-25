@@ -1,21 +1,21 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/zpaq-2.05.ebuild,v 1.2 2011/08/25 11:34:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/zpaq-3.01.ebuild,v 1.1 2011/08/25 11:34:16 mgorny Exp $
 
 EAPI=3
 inherit autotools autotools-utils
 
-MY_P=${PN}.${PV/./}
+MY_P=${PN}${PV/./}
 DESCRIPTION="A unified compressor for PAQ algorithms"
 HOMEPAGE="http://mattmahoney.net/dc/zpaq.html"
 SRC_URI="http://mattmahoney.net/dc/${MY_P}.zip"
 
-LICENSE="GPL-3"
+LICENSE="GPL-3 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug"
+IUSE="debug openmp"
 
-RDEPEND="=app-arch/libzpaq-2*"
+RDEPEND="=app-arch/libzpaq-3*"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
