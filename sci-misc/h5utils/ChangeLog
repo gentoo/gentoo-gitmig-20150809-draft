@@ -1,6 +1,14 @@
 # ChangeLog for sci-misc/h5utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/h5utils/ChangeLog,v 1.12 2011/08/25 15:57:24 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/h5utils/ChangeLog,v 1.13 2011/08/25 16:47:50 xarthisius Exp $
+
+*h5utils-1.12.1-r2 (25 Aug 2011)
+
+  25 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  -h5utils-1.12.1-r1.ebuild, +h5utils-1.12.1-r2.ebuild,
+  +files/h5utils-1.12.1-automagic.patch:
+  Remove automagic dependency on virtual/jpeg and sci-libs/hdf. Simplify logic
+  since we don't provide h4toh5
 
 *h5utils-1.12.1-r1 (25 Aug 2011)
 
