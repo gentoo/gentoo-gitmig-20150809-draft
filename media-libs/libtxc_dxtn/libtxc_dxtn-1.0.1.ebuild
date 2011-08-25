@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtxc_dxtn/libtxc_dxtn-1.0.1.ebuild,v 1.1 2011/08/23 17:48:10 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtxc_dxtn/libtxc_dxtn-1.0.1.ebuild,v 1.2 2011/08/25 17:59:01 mattst88 Exp $
 
 EAPI=3
 
@@ -15,19 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RESTRICT="bindist fetch"
-
-pkg_nofetch() {
-	eerror "Due to unclear patent situation, you have to download the package"
-	eerror "yourself. Grab it from:"
-	eerror "	${SRC_URI}"
-	eerror "and place in your distfiles directory:"
-	eerror "	${DISTDIR}"
-	eerror
-	eerror "Please notice that depending on where you live, you might need"
-	eerror "a valid license for s3tc in order to be legally allowed to use"
-	eerror "the external library."
-}
+RESTRICT="bindist"
 
 foreachabi() {
 	local ABI
