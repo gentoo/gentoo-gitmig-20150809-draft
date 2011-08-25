@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tsung/tsung-1.3.3.ebuild,v 1.1 2011/03/17 05:17:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tsung/tsung-1.3.3.ebuild,v 1.2 2011/08/25 12:02:38 maksbotan Exp $
 
 EAPI="3"
 
@@ -27,5 +27,5 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Failed installing"
+	emake -j1 DESTDIR="${D}" install || die "Failed installing"
 }
