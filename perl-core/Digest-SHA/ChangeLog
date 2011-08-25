@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/Digest-SHA
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-SHA/ChangeLog,v 1.25 2011/08/09 11:07:12 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-SHA/ChangeLog,v 1.26 2011/08/25 18:11:47 grobian Exp $
+
+  25 Aug 2011; Fabian Groffen <grobian@gentoo.org> Digest-SHA-5.620.0.ebuild:
+  Marked ~m68k-mint, bug #380531
 
   09 Aug 2011; Markus Duft <mduft@gentoo.org> Digest-SHA-5.620.0.ebuild:
   added ~x86-interix prefix keyword
