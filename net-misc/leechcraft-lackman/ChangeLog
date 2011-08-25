@@ -1,0 +1,16 @@
+# ChangeLog for net-misc/leechcraft-lackman
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-lackman/ChangeLog,v 1.1 2011/08/25 18:31:50 maksbotan Exp $
+
+*leechcraft-lackman-0.4.85 (25 Aug 2011)
+
+  25 Aug 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-lackman-0.4.85.ebuild, +leechcraft-lackman-9999.ebuild,
+  +metadata.xml:
+  Copy net-misc/leechcraft-lackman from rion-overlay, thanks to 0xd34df00d
+
+  23 Nov 2010; G. Rudoy <0xd34df00d@gmail.com>
+  +leechcraft-lackman-9999.ebuild:
+  New plugin, finally.
+
+*leechcraft-lackman-9999 ( 23 Nov 2010; G. Rudoy )
