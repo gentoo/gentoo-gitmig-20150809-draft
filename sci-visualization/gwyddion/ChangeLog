@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/gwyddion
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/ChangeLog,v 1.29 2011/07/27 23:24:33 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/ChangeLog,v 1.30 2011/08/25 11:26:30 flameeyes Exp $
+
+  25 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org> gwyddion-2.25.ebuild:
+  QA: add missing libpng dependency.
 
 *gwyddion-2.25 (27 Jul 2011)
 
