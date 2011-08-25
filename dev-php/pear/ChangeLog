@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/pear
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pear/ChangeLog,v 1.28 2011/07/25 16:17:27 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pear/ChangeLog,v 1.29 2011/08/25 11:55:58 jer Exp $
+
+  25 Aug 2011; Jeroen Roovers <jer@gentoo.org> pear-1.9.3.ebuild:
+  Stable for HPPA (bug #374447).
 
   25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> pear-1.9.3.ebuild:
   ppc/ppc64 stable wrt #374447
