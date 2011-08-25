@@ -40,7 +40,7 @@ index 0000000..d005d5e
 +zpaq_LDADD = -lzpaq $(PTHREAD_LIBS)
 +
 +zpaqopt:
-+	echo "$(CXX) $(CXXFLAGS) $$1.cpp $(LDFLAGS) @RUNTIME_LDFLAGS@ -o $$1.exe $(LIBS) -lzpaqstub" > $@
++	echo '$(CXX) $(CXXFLAGS) $(PTHREAD_CFLAGS) $$1.cpp $(LDFLAGS) @RUNTIME_LDFLAGS@ -o $$1.exe $(LIBS) $(zpaq_LDADD) -lzpaqstub' > $@
 +
 +.PHONY: zpaqopt
 +
