@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.135 2011/08/17 13:16:17 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.136 2011/08/25 12:32:16 jer Exp $
+
+  25 Aug 2011; Jeroen Roovers <jer@gentoo.org> alsa-plugins-1.0.24.ebuild:
+  Stable for HPPA (bug #379423).
 
   17 Aug 2011; Tony Vroon <chainsaw@gentoo.org> alsa-plugins-1.0.24.ebuild:
   Mark stable on AMD64 based on my own testing; related to the packages in bug
