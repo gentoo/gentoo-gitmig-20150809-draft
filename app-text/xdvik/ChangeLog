@@ -1,6 +1,11 @@
 # ChangeLog for app-text/xdvik
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.77 2011/08/02 05:45:55 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.78 2011/08/25 22:29:45 naota Exp $
+
+*xdvik-22.84.16-r1 (25 Aug 2011)
+
+  25 Aug 2011; Naohiro Aota <naota@gentoo.org> +xdvik-22.84.16-r1.ebuild:
+  Add yacc/flex dependencies. Bug #380533
 
   02 Aug 2011; Matt Turner <mattst88@gentoo.org> xdvik-22.84.16.ebuild:
   Renamed x11-libs/Xaw3d to x11-libs/libXaw3d.
