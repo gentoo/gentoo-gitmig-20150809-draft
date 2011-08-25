@@ -1,0 +1,10 @@
+# ChangeLog for media-video/leechcraft-lmp
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/leechcraft-lmp/ChangeLog,v 1.1 2011/08/25 19:58:12 maksbotan Exp $
+
+*leechcraft-lmp-9999 (25 Aug 2011)
+
+  25 Aug 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-lmp-9999.ebuild, +metadata.xml:
+  Copy media-video/leechcraft-lmp from rion-overlay, thanks to 0xd34df00d
+
