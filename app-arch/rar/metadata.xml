@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>proxy-maintainers</herd>
-<maintainer>
-<email>hwoarang@gentoo.org</email>
-<name>Markos Chandras</name>
-<description>Proxy maintainer. CC him on bugs</description>
-</maintainer>
+<herd>no-herd</herd>
 <maintainer>
 	<email>jdhore1@gmail.com</email>
 	<name>JD Horelick</name>
 	<description>Maintainer. Add bugs to him</description>
+</maintainer>
+<maintainer>
+<email>hwoarang@gentoo.org</email>
+<name>Markos Chandras</name>
+<description>Proxy maintainer. CC him on bugs</description>
 </maintainer>
 <use>
  <flag name='all_sfx'>
