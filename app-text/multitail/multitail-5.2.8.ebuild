@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/multitail-5.2.8.ebuild,v 1.3 2011/07/09 16:48:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/multitail-5.2.8.ebuild,v 1.4 2011/08/25 12:04:49 jer Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.vanheusden.com/multitail/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ia64 ~ppc sparc x86 ~x86-interix ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 hppa ia64 ~ppc sparc x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="debug doc examples"
 
 DEPEND="sys-libs/ncurses"
