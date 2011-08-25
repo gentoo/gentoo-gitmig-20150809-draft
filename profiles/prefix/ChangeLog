@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.290 2011/08/11 06:41:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.291 2011/08/25 19:44:59 grobian Exp $
+
+  25 Aug 2011; Fabian Groffen <grobian@gentoo.org> sunos/solaris/package.mask:
+  Mask gcc-4.3.[3456], since it doesn't compile, and isn't worth fixing --
+  4.5.2 is fully functional, bug #379723
 
   11 Aug 2011; Fabian Groffen <grobian@gentoo.org>
   sunos/solaris/5.10/sparc/package.mask,

@@ -1,6 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/package.mask,v 1.31 2011/07/07 11:22:05 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/package.mask,v 1.32 2011/08/25 19:44:59 grobian Exp $
+
+# Fabian Groffen <grobian@gentoo.org> (25 Aug 2011)
+# Fails to compile, and not worth fixing, bug #379723
+=sys-devel/gcc-4.3.3*
+=sys-devel/gcc-4.3.4*
+=sys-devel/gcc-4.3.5*
+=sys-devel/gcc-4.3.6*
 
 # Fabian Groffen <grobian@gentoo.org> (07 Jul 2011)
 # cannot unpack :(
@@ -23,11 +30,6 @@
 # segfaults during compilation, bug #294479
 ~app-editors/emacs-23.2
 =virtual/emacs-23
-
-# Fabian Groffen <grobian@gentoo.org> (02 Feb 2009)
-# Fails to compile, complaining about a missing target for gmon.o, maybe
-# related to http://gcc.gnu.org/ml/gcc-patches/2008-11/msg00990.html
-=sys-devel/gcc-4.3.3*
 
 # Fabian Groffen <grobian@gentoo.org> (02 Oct 2008)
 # Doesn't compile on Solaris.
