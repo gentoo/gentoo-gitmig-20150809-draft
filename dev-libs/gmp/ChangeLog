@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/gmp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.142 2011/08/05 15:27:23 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.143 2011/08/25 19:33:46 vapier Exp $
+
+*gmp-5.0.2_p1 (25 Aug 2011)
+
+  25 Aug 2011; Mike Frysinger <vapier@gentoo.org> +gmp-5.0.2_p1.ebuild,
+  +files/gmp-5.0.2-unnormalised-dividends.patch:
+  Add fix from upstream, add USE=static-libs support #378233 by Agostino
+  Sarubbo, restore USE=doc support, and trim .la files as needed.
 
   05 Aug 2011; Jeremy Olexa <darkside@gentoo.org> gmp-4.3.2.ebuild,
   gmp-5.0.1.ebuild, gmp-5.0.2.ebuild:
