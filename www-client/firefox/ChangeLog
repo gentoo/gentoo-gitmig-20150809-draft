@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.86 2011/08/24 07:29:10 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.87 2011/08/25 20:52:01 maekke Exp $
+
+  25 Aug 2011; Markus Meier <maekke@gentoo.org> firefox-6.0.ebuild:
+  add ~arm, bug #360427
 
   24 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> firefox-6.0.ebuild:
   Fix access violation, bug 380283
