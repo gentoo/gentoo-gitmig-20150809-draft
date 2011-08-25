@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gqmpeg/gqmpeg-0.91.1.ebuild,v 1.10 2011/03/12 09:42:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gqmpeg/gqmpeg-0.91.1.ebuild,v 1.11 2011/08/25 20:39:30 flameeyes Exp $
 
 EAPI=2
 
@@ -15,7 +15,8 @@ IUSE="nls"
 
 RDEPEND=">=x11-libs/gtk+-2.2:2
 	media-sound/vorbis-tools
-	media-sound/mpg123"
+	media-sound/mpg123
+	media-libs/libpng"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
