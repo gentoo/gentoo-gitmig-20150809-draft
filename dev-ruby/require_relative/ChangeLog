@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/require_relative
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/require_relative/ChangeLog,v 1.5 2011/08/25 15:36:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/require_relative/ChangeLog,v 1.6 2011/08/25 19:34:33 grobian Exp $
+
+  25 Aug 2011; Fabian Groffen <grobian@gentoo.org>
+  require_relative-1.0.2.ebuild:
+  Add Prefix keywords, bug #376053
 
   25 Aug 2011; Jeroen Roovers <jer@gentoo.org> require_relative-1.0.2.ebuild:
   Marked ~hppa (bug #376053).
