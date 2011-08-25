@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.2.ebuild,v 1.5 2011/08/21 13:56:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.2.ebuild,v 1.6 2011/08/25 19:21:43 eras Exp $
 
 EAPI=4
 
@@ -20,7 +20,8 @@ CDEPEND="bzip2? ( app-arch/bzip2 )
 	iconv? ( virtual/libiconv )
 	milter? ( || ( mail-filter/libmilter mail-mta/sendmail ) )
 	dev-libs/libtommath
-	>=sys-libs/zlib-1.2.2"
+	>=sys-libs/zlib-1.2.2
+	sys-devel/libtool"
 DEPEND="${CDEPEND}
 	>=dev-util/pkgconfig-0.20"
 RDEPEND="${CDEPEND}

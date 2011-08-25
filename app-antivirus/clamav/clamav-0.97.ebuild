@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.ebuild,v 1.10 2011/03/16 11:47:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.ebuild,v 1.11 2011/08/25 19:21:43 eras Exp $
 
 EAPI=3
 
@@ -19,7 +19,8 @@ CDEPEND="bzip2? ( app-arch/bzip2 )
 	clamdtop? ( sys-libs/ncurses )
 	iconv? ( virtual/libiconv )
 	milter? ( || ( mail-filter/libmilter mail-mta/sendmail ) )
-	>=sys-libs/zlib-1.2.2"
+	>=sys-libs/zlib-1.2.2
+	sys-devel/libtool"
 DEPEND="${CDEPEND}
 	>=dev-util/pkgconfig-0.20"
 RDEPEND="${CDEPEND}

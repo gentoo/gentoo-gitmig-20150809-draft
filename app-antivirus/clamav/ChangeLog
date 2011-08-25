@@ -1,6 +1,10 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.398 2011/08/21 13:56:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.399 2011/08/25 19:21:43 eras Exp $
+
+  25 Aug 2011; Eray Aslan <eras@gentoo.org> clamav-0.97.ebuild,
+  clamav-0.97.1.ebuild, clamav-0.97.2.ebuild:
+  add libtool dependency - bug #380265
 
   21 Aug 2011; Jeroen Roovers <jer@gentoo.org> clamav-0.97.2.ebuild:
   Stable for HPPA (bug #378815).
