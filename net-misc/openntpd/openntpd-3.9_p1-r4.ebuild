@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-3.9_p1-r4.ebuild,v 1.1 2011/08/13 15:38:31 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-3.9_p1-r4.ebuild,v 1.2 2011/08/25 14:38:20 nelchael Exp $
 
 EAPI="2"
 
@@ -22,7 +22,8 @@ RDEPEND="ssl? ( dev-libs/openssl )
 	selinux? ( sec-policy/selinux-ntp )
 	!<=net-misc/ntp-4.2.0-r2
 	!net-misc/ntp[-openntpd]"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	virtual/yacc"
 
 S=${WORKDIR}/${MY_P}
 
