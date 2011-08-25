@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.2.7.ebuild,v 1.1 2011/08/25 06:23:02 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.2.7.ebuild,v 1.2 2011/08/25 17:49:20 xarthisius Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.mantisbt.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
