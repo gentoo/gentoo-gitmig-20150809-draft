@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/reswrap
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/reswrap/ChangeLog,v 1.12 2009/09/23 17:48:09 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/reswrap/ChangeLog,v 1.13 2011/08/25 21:50:11 mabi Exp $
+
+*reswrap-4.0.0 (25 Aug 2011)
+
+  25 Aug 2011; Matti Bickel <mabi@gentoo.org> -reswrap-3.1.0.ebuild,
+  +reswrap-4.0.0.ebuild:
+  version bump for fox-1.6, remove dead version (re bug #334525)
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> reswrap-3.1.0.ebuild,
   reswrap-3.2.0.ebuild:
