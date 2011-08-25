@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/collectd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.24 2011/08/25 21:00:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.25 2011/08/25 21:02:37 dilfridge Exp $
+
+  25 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> files/collectd.initd:
+  Fix option deprecation warning in init script, bug 375731
 
   25 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   collectd-5.0.0-r1.ebuild, +files/collectd-5.0.0-yajl2-2.patch:
