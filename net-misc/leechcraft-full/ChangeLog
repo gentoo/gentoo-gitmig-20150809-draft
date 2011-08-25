@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/leechcraft-full
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.1 2011/08/25 20:03:27 maksbotan Exp $
+
+*leechcraft-full-9999 (25 Aug 2011)
+*leechcraft-full-0.4.85 (25 Aug 2011)
+
+  25 Aug 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-full-0.4.85.ebuild, +leechcraft-full-9999.ebuild, +metadata.xml:
+  Copy net-misc/leechcraft-full from rion-overlay, thanks to 0xd34df00d
+
