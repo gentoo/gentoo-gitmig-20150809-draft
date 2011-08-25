@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.379 2011/08/17 15:25:25 psomas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.380 2011/08/25 09:26:10 psomas Exp $
+
+*mm-sources-3.1_rc3 (25 Aug 2011)
+
+  25 Aug 2011; Stratos Psomadakis <psomas@gentoo.org>
+  -mm-sources-2.6.28_rc2-r1.ebuild, +mm-sources-3.1_rc3.ebuild:
+  Version bump, and cleanup old ebuild
 
 *mm-sources-3.0 (17 Aug 2011)
 

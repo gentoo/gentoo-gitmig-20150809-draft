@@ -10,7 +10,4 @@
 		Andrew Morton's patchset for 2.6. It contains experimental features,
 		cleanups, and other interesting patches.
 	</longdescription>
-	<use>
-		<flag name='deblob'>Remove binary blobs from kernel sources to provide libre license compliance.</flag>
-	</use>
 </pkgmetadata>
