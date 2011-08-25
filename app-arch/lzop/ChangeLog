@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lzop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.37 2011/07/31 13:10:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzop/ChangeLog,v 1.38 2011/08/25 20:24:32 mattst88 Exp $
+
+  25 Aug 2011; Matt Turner <mattst88@gentoo.org> lzop-1.03.ebuild:
+  Added ~mips
 
   31 Jul 2011; Markus Meier <maekke@gentoo.org> lzop-1.03.ebuild:
   add ~arm, bug #375485
