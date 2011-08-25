@@ -24,7 +24,7 @@ index 2fcc6be..b9e77b6 100755
 +++ b/esync.py
 @@ -1,4 +1,4 @@
 -#!/usr/bin/python -u
-+#!/usr/bin/env python -u
++#!/usr/bin/env python
  #
  # 'python -u' for unbuffered output, so you can call
  #   $ esync | tee esync.log
