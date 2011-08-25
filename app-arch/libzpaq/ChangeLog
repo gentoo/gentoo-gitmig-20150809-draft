@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/libzpaq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libzpaq/ChangeLog,v 1.2 2011/01/06 16:41:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libzpaq/ChangeLog,v 1.3 2011/08/25 10:24:36 mgorny Exp $
+
+*libzpaq-3.00 (25 Aug 2011)
+*libzpaq-2.02a-r1 (25 Aug 2011)
+
+  25 Aug 2011; Michał Górny <mgorny@gentoo.org> -libzpaq-2.02a.ebuild,
+  +libzpaq-2.02a-r1.ebuild, +libzpaq-3.00.ebuild,
+  files/0001-Add-autotools-files.patch:
+  Version bump. Support installing shared libs.
 
 *libzpaq-2.02a (06 Jan 2011)
 
