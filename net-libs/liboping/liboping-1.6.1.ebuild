@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liboping/liboping-1.6.1.ebuild,v 1.1 2011/08/19 22:45:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liboping/liboping-1.6.1.ebuild,v 1.2 2011/08/25 21:07:04 dilfridge Exp $
 
-EAPI=3
+EAPI=4
 
 DESCRIPTION="C library and ncurses based program to generate ICMP echo requests and ping multiple hosts at once"
 HOMEPAGE="http://verplant.org/liboping"
@@ -14,16 +14,17 @@ KEYWORDS="~amd64 ~x86"
 IUSE="perl"
 
 DEPEND="
-	sys-libs/ncurses
 	perl? ( dev-lang/perl sys-devel/libperl  )
 "
 RDEPEND=${DEPEND}
 
 src_configure() {
-	econf $(use_with perl perl-bindings INSTALLDIRS=vendor) --disable-static
+	econf \
+                $(use_with perl perl-bindings INSTALLDIRS=vendor) \
+                --disable-static
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
-	find "${D}" -name '*.la'  -delete
+	default
+	find "${D}" -name '*.la'  -delete || die
 }
