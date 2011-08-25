@@ -1,0 +1,12 @@
+# ChangeLog for www-misc/leechcraft-seekthru
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/leechcraft-seekthru/ChangeLog,v 1.1 2011/08/25 18:27:44 maksbotan Exp $
+
+*leechcraft-seekthru-9999 (25 Aug 2011)
+*leechcraft-seekthru-0.4.85 (25 Aug 2011)
+
+  25 Aug 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-seekthru-0.4.85.ebuild, +leechcraft-seekthru-9999.ebuild,
+  +metadata.xml:
+  Copy www-misc/leechcraft-seekthru from rion-overlay, thanks to 0xd34df00d
+
