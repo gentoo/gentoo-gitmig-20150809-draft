@@ -1,0 +1,7 @@
+# ChangeLog for sci-chemistry/votca-csgapps
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csgapps/ChangeLog,v 1.1 2011/08/25 20:42:53 ottxor Exp $
+
+  25 Aug 2011; Christoph Junghans <ottxor@gentoo.org> +metadata.xml:
+  initial commit
+
