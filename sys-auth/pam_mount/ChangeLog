@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam_mount
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/ChangeLog,v 1.56 2011/08/18 00:03:00 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/ChangeLog,v 1.57 2011/08/25 23:44:53 flameeyes Exp $
+
+  25 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org> pam_mount-2.11.ebuild:
+  QA: run eautoreconf to avoid maintainer-mode rebuild.
 
   18 Aug 2011; Matt Turner <mattst88@gentoo.org> pam_mount-2.11.ebuild,
   +files/pam_mount-2.11-fix-build-without-cryptsetup.patch:

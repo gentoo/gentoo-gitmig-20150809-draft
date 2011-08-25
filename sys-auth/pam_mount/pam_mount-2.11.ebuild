@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/pam_mount-2.11.ebuild,v 1.2 2011/08/18 00:03:00 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/pam_mount-2.11.ebuild,v 1.3 2011/08/25 23:44:53 flameeyes Exp $
 
 EAPI=4
 
-inherit eutils multilib
+inherit eutils multilib autotools
 
 DESCRIPTION="A PAM module that can mount volumes for a user session"
 HOMEPAGE="http://pam-mount.sourceforge.net"
@@ -29,6 +29,8 @@ RDEPEND="${COMMON_DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-fix-build-without-cryptsetup.patch
+
+	eautoreconf
 }
 
 src_configure() {
