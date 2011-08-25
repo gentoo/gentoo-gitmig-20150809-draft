@@ -1,6 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.6-r21.ebuild,v 1.2 2011/06/06 21:54:07 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.0-r1.ebuild,v 1.1 2011/08/25 01:02:49 tgurr Exp $
+
+#
+# See http://git.overlays.gentoo.org/gitweb/?p=dev/dilfridge.git;a=blob;f=net-print/cups/notes.txt;hb=HEAD
+# for some notes about the ongoing work here
+#
 
 EAPI=3
 
@@ -9,14 +14,15 @@ PYTHON_DEPEND="python? 2:2.5"
 inherit autotools eutils flag-o-matic linux-info multilib pam perl-module python versionator java-pkg-opt-2
 
 MY_P=${P/_}
+MY_PV=${PV/_}
 
 DESCRIPTION="The Common Unix Printing System"
 HOMEPAGE="http://www.cups.org/"
-SRC_URI="mirror://easysw/${PN}/${PV}/${MY_P}-source.tar.bz2"
+SRC_URI="mirror://easysw/${PN}/${MY_PV}/${MY_P}-source.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~x86"
 IUSE="acl dbus debug gnutls java +jpeg kerberos ldap pam perl php +png python samba slp +ssl static-libs +threads +tiff usb X xinetd"
 
 LANGS="da de es eu fi fr id it ja ko nl no pl pt pt_BR ru sv zh zh_TW"
@@ -45,7 +51,7 @@ RDEPEND="
 	ssl? (
 		gnutls? (
 			dev-libs/libgcrypt
-			net-libs/gnutls
+			>=net-libs/gnutls-2.11
 		)
 		!gnutls? ( >=dev-libs/openssl-0.9.8g )
 	)
@@ -129,18 +135,14 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# create a missing symlink to allow https printing via IPP, bug #217293
-	epatch "${FILESDIR}/${PN}-1.4.0-backend-https.patch"
 	# various build time fixes
 	epatch "${FILESDIR}/${PN}-1.4.4-dont-compress-manpages.patch"
 	epatch "${FILESDIR}/${PN}-1.4.4-fix-install-perms.patch"
 	epatch "${FILESDIR}/${PN}-1.4.4-nostrip.patch"
 	epatch "${FILESDIR}/${PN}-1.4.4-php-destdir.patch"
 	epatch "${FILESDIR}/${PN}-1.4.4-perl-includes.patch"
-	epatch "${FILESDIR}/${PN}-1.4.6-force-gnutls.patch"
-	epatch "${FILESDIR}/${PN}-1.4.6-serialize-gnutls.patch"
-	# interface hangs using some browsers, bug #325871
-	epatch "${FILESDIR}/${PN}-1.4.6-web-hang.patch"
+	# security fixes
+	epatch "${FILESDIR}/${PN}-1.4.8-CVE-2011-2896.patch"
 
 	AT_M4DIR=config-scripts eaclocal
 	eautoconf

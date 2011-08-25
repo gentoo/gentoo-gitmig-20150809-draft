@@ -1,11 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.0.ebuild,v 1.1 2011/08/17 20:28:56 dilfridge Exp $
-
-#
-# See http://git.overlays.gentoo.org/gitweb/?p=dev/dilfridge.git;a=blob;f=net-print/cups/notes.txt;hb=HEAD
-# for some notes about the ongoing work here
-#
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.8-r1.ebuild,v 1.1 2011/08/25 01:02:49 tgurr Exp $
 
 EAPI=3
 
@@ -14,16 +9,15 @@ PYTHON_DEPEND="python? 2:2.5"
 inherit autotools eutils flag-o-matic linux-info multilib pam perl-module python versionator java-pkg-opt-2
 
 MY_P=${P/_}
-MY_PV=${PV/_}
 
 DESCRIPTION="The Common Unix Printing System"
 HOMEPAGE="http://www.cups.org/"
-SRC_URI="mirror://easysw/${PN}/${MY_PV}/${MY_P}-source.tar.bz2"
+SRC_URI="mirror://easysw/${PN}/${PV}/${MY_P}-source.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="acl dbus debug gnutls java +jpeg kerberos ldap pam perl php +png python samba slp +ssl static-libs +threads +tiff usb X xinetd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+IUSE="acl dbus debug gnutls java +jpeg kerberos ldap pam perl php +png python samba slp +ssl static-libs +threads +tiff X xinetd"
 
 LANGS="da de es eu fi fr id it ja ko nl no pl pt pt_BR ru sv zh zh_TW"
 for X in ${LANGS} ; do
@@ -51,12 +45,11 @@ RDEPEND="
 	ssl? (
 		gnutls? (
 			dev-libs/libgcrypt
-			>=net-libs/gnutls-2.11
+			net-libs/gnutls
 		)
 		!gnutls? ( >=dev-libs/openssl-0.9.8g )
 	)
 	tiff? ( >=media-libs/tiff-3.5.5 )
-	usb? ( virtual/libusb:0 )
 	X? ( x11-misc/xdg-utils )
 	xinetd? ( sys-apps/xinetd )
 	!net-print/cupsddk
@@ -87,60 +80,38 @@ pkg_setup() {
 		python_pkg_setup
 	fi
 
-	if use usb; then
-		elog "You are going to use new libusb backed to access your usb printer."
-		elog "This interface has quite few known issues and does not report all"
-		elog "issues and just refuses to print."
-		elog "Please consider disabling usb useflag if you are having issues."
-		elog
-		elog "Please note that if you disable the usb useflag your device will be"
-		elog "still working using kernel usblp interface instead of libusb."
-		echo
-	fi
-
 	linux-info_pkg_setup
 	if  ! linux_config_exists; then
 		ewarn "Can't check the linux kernel configuration."
 		ewarn "You might have some incompatible options enabled."
 	else
-		# recheck that we don't have usblp to collide with libusb
-		if use usb; then
-			if linux_chkconfig_present USB_PRINTER; then
-				eerror "Your usb printers will be managed via libusb which collides with kernel module."
-				eerror "${P} requires the USB_PRINTER support disabled."
-				eerror "Please disable it:"
-				eerror "    CONFIG_USB_PRINTER=n"
-				eerror "in /usr/src/linux/.config or"
-				eerror "    Device Drivers --->"
-				eerror "        USB support  --->"
-				eerror "            [ ] USB Printer support"
-				eerror "Alternatively, just disable the usb useflag for cups (your printer will still work)."
-				die "USB_PRINTER module enabled"
-			fi
-		else
-			#here we should warn user that he should enable it so he can print
-			if ! linux_chkconfig_present USB_PRINTER; then
-				ewarn "If you plan to use USB printers you should enable the USB_PRINTER"
-				ewarn "support in your kernel."
-				ewarn "Please enable it:"
-				ewarn "    CONFIG_USB_PRINTER=y"
-				ewarn "in /usr/src/linux/.config or"
-				ewarn "    Device Drivers --->"
-				ewarn "        USB support  --->"
-				ewarn "            [*] USB Printer support"
-				ewarn "Alternatively, enable the usb useflag for cups and use the new, less-tested libusb code."
-			fi
+		#here we should warn user that he should enable it so he can print
+		if ! linux_chkconfig_present USB_PRINTER; then
+			ewarn "If you plan to use USB printers you should enable the USB_PRINTER"
+			ewarn "support in your kernel."
+			ewarn "Please enable it:"
+			ewarn "    CONFIG_USB_PRINTER=y"
+			ewarn "in /usr/src/linux/.config or"
+			ewarn "    Device Drivers --->"
+			ewarn "        USB support  --->"
+			ewarn "            [*] USB Printer support"
 		fi
 	fi
 }
 
 src_prepare() {
+	# create a missing symlink to allow https printing via IPP, bug #217293
+	epatch "${FILESDIR}/${PN}-1.4.0-backend-https.patch"
 	# various build time fixes
 	epatch "${FILESDIR}/${PN}-1.4.4-dont-compress-manpages.patch"
 	epatch "${FILESDIR}/${PN}-1.4.4-fix-install-perms.patch"
 	epatch "${FILESDIR}/${PN}-1.4.4-nostrip.patch"
 	epatch "${FILESDIR}/${PN}-1.4.4-php-destdir.patch"
 	epatch "${FILESDIR}/${PN}-1.4.4-perl-includes.patch"
+	epatch "${FILESDIR}/${PN}-1.4.6-force-gnutls.patch"
+	epatch "${FILESDIR}/${PN}-1.4.6-serialize-gnutls.patch"
+	# security fixes
+	epatch "${FILESDIR}/${PN}-1.4.8-CVE-2011-2896.patch"
 
 	AT_M4DIR=config-scripts eaclocal
 	eautoconf
@@ -199,13 +170,13 @@ src_configure() {
 		$(use_enable slp) \
 		$(use_enable static-libs static) \
 		$(use_enable tiff) \
-		$(use_enable usb libusb) \
 		$(use_with java) \
 		$(use_with perl) \
 		$(use_with php) \
 		$(use_with python) \
 		$(use_with xinetd xinetd /etc/xinetd.d) \
 		--enable-libpaper \
+		--disable-libusb \
 		--disable-dnssd \
 		${myconf}
 
