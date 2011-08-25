@@ -1,0 +1,12 @@
+# ChangeLog for net-ftp/leechcraft-lcftp
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/leechcraft-lcftp/ChangeLog,v 1.1 2011/08/25 15:37:50 maksbotan Exp $
+
+*leechcraft-lcftp-9999 (25 Aug 2011)
+*leechcraft-lcftp-0.4.85 (25 Aug 2011)
+
+  25 Aug 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-lcftp-0.4.85.ebuild, +leechcraft-lcftp-9999.ebuild,
+  +metadata.xml:
+  Copy net-ftp/leechctaft-lcftp from rion-overlay, thanks to 0xd34df00d
+
