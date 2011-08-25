@@ -10,7 +10,7 @@
 <maintainer>
 	<email>jdhore1@gmail.com</email>
 	<name>JD Horelick</name>
-	<description>Maintainer. CC him on bugs</description>
+	<description>Maintainer. Add bugs to him</description>
 </maintainer>
 <use>
  <flag name='all_sfx'>
