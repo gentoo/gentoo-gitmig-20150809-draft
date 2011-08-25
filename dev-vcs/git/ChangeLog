@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.98 2011/08/19 18:43:47 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.99 2011/08/25 01:45:36 robbat2 Exp $
+
+*git-1.7.6.1 (25 Aug 2011)
+
+  25 Aug 2011; Robin H. Johnson <robbat2@gentoo.org> +git-1.7.6.1.ebuild:
+  Version bump.
 
   19 Aug 2011; Jeremy Olexa <darkside@gentoo.org> git-1.7.2.5.ebuild,
   git-1.7.3.4-r1.ebuild, git-1.7.3.5.ebuild, git-1.7.3.5-r1.ebuild,
