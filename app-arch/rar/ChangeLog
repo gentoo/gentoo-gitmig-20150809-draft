@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/rar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.72 2011/08/25 14:43:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.73 2011/08/25 14:50:51 jer Exp $
+
+  25 Aug 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Add herd back.
 
   25 Aug 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Fix non-existent herd. Fix maintainer order to what appears to be preferred.
