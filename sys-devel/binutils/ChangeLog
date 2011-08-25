@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.419 2011/08/22 13:31:26 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.420 2011/08/25 18:32:57 hwoarang Exp $
+
+  25 Aug 2011; Markos Chandras <hwoarang@gentoo.org> binutils-2.21.1.ebuild,
+  binutils-2.21.1-r1.ebuild:
+  Restore ~amd64 to 2.21.1 and stabilize 2.21.1-r1 instead. Bug #378485
 
   22 Aug 2011; Tony Vroon <chainsaw@gentoo.org> binutils-2.21.1.ebuild:
   Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney &
