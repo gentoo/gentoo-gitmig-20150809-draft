@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/mpfr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.136 2011/07/14 18:36:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.137 2011/08/25 19:44:27 vapier Exp $
+
+*mpfr-3.0.1_p4-r1 (25 Aug 2011)
+
+  25 Aug 2011; Mike Frysinger <vapier@gentoo.org> +mpfr-3.0.1_p4-r1.ebuild:
+  Add support for USE=static-libs #378235 by Agostino Sarubbo.
 
 *mpfr-3.0.1_p4 (14 Jul 2011)
 
