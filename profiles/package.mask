@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13003 2011/08/22 18:20:55 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13004 2011/08/25 09:44:27 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -259,15 +259,6 @@ net-misc/dhcdbd
 =dev-db/mariadb-5.3*
 =virtual/mysql-5.3*
 
-# Tomáš Chvátal <scarabeus@gentoo.org> (27 Jul 2011)
-# Old replaced packages. Will be removed in 30 days.
-# app-office/openoffice -> app-office/libreoffice
-# app-office/openoffice-bin -> app-office/libreoffice-bin
-# app-text/wpd2sxw -> app-text/wpd2odt
-app-office/openoffice
-app-office/openoffice-bin
-app-text/wpd2sxw
-
 # Pacho Ramos <pacho@gentoo.org> (25 Jul 2011)
 # Old and unmaintained for a long time, bug #358587.
 # Removal in 30 days
@@ -277,14 +268,6 @@ app-text/wpd2sxw
 # No new release since 2002, doesn't respect LDFLAGS and
 # still needing old libsigc++:1.0. Removal in 30 days. (#358589)
 net-libs/libicq2000
-
-# Tomáš Chvátal <scarabeus@gentoo.org> (24 Jul 2011)
-# Mask for removal packages that are obsoleted.
-# To be removed in 30 days.
-# tangogps -> foxtrotgps
-# qlandkare -> qlandkartegt
-sci-geosciences/tangogps
-sci-geosciences/qlandkarte
 
 # Gilles Dartiguelongue <eva@gentoo.org> (24 Jul 2011)
 # Mask development release
