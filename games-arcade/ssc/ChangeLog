@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/ssc
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ssc/ChangeLog,v 1.7 2006/11/19 20:27:13 nyhm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ssc/ChangeLog,v 1.8 2011/08/25 11:23:13 flameeyes Exp $
+
+  25 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org> ssc-0.8.ebuild:
+  QA: add missing libpng dependency.
 
   19 Nov 2006; Tristan Heaven <nyhm@gentoo.org> +files/ssc-0.8-ode.patch,
   ssc-0.8.ebuild:

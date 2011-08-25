@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ssc/ssc-0.8.ebuild,v 1.10 2006/11/19 20:27:13 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ssc/ssc-0.8.ebuild,v 1.11 2011/08/25 11:23:13 flameeyes Exp $
 
 inherit eutils games
 
@@ -18,7 +18,8 @@ DEPEND="virtual/opengl
 	media-libs/libsdl
 	media-libs/sdl-mixer
 	dev-games/ode
-	>=media-libs/freetype-2"
+	>=media-libs/freetype-2
+	media-libs/libpng"
 
 src_unpack() {
 	unpack ${A}
