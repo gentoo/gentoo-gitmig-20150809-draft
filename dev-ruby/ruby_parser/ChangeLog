@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby_parser
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.28 2011/08/20 09:18:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.29 2011/08/25 05:40:17 graaff Exp $
+
+*ruby_parser-2.2.0 (25 Aug 2011)
+
+  25 Aug 2011; Hans de Graaff <graaff@gentoo.org> +ruby_parser-2.2.0.ebuild:
+  Version bump.
 
   20 Aug 2011; Hans de Graaff <graaff@gentoo.org> ruby_parser-2.1.0.ebuild:
   Depend on newer sexp-processor for tests so that we can run them. Add jruby.
