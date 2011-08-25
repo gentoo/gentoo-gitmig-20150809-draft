@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/conserver
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.75 2009/02/23 14:57:29 josejx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conserver/ChangeLog,v 1.76 2011/08/25 09:50:42 hwoarang Exp $
+
+*conserver-8.1.18 (24 Aug 2011)
+
+  24 Aug 2011; Markos Chandras <hwoarang@gentoo.org> +conserver-8.1.18.ebuild,
+  +files/conserver-8.1.18-dmalloc.patch, metadata.xml:
+  Version bump. Bug #379907. Thanks to Dan Weeks <dan@danweeks.net>. Assigned
+  to proxy-maintainers
 
   23 Feb 2009; Joseph Jezak <josejx@gentoo.org> conserver-8.1.16-r1.ebuild:
   Marked ~ppc/~ppc64 for bug #210799.

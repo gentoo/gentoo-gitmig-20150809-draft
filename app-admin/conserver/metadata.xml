@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>no-herd</herd>
+	<herd>proxy-maintainers</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>hwoarang@gentoo.org</email>
+		<name>Markos Chandras</name>
+		<description>Proxy maintainers. CC him on bugs</description>
+	</maintainer>
+	<maintainer>
+		<email>dan@danweeks.net</email>
+		<name>Dan Weeks</name>
+		<description>Maintainer. Assign bugs to him</description>
 	</maintainer>
 	<longdescription>
 		Conserver is an application that allows multiple users to watch a serial
