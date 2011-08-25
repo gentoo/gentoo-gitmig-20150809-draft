@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/xloadimage-4.1-r11.ebuild,v 1.2 2010/11/08 23:07:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/xloadimage-4.1-r11.ebuild,v 1.3 2011/08/25 20:51:13 dilfridge Exp $
 
 EAPI=2
 inherit autotools eutils toolchain-funcs
@@ -49,6 +49,9 @@ src_prepare() {
 	sed -i \
 		-e 's:png_set_gray_1_2_4_to_8:png_set_expand_gray_1_2_4_to_8:' \
 		png.c || die
+
+	# One of the previous patches screws up a bracket...
+	epatch "${FILESDIR}"/${P}-bracket.patch
 
 	chmod +x configure
 	eautoreconf
