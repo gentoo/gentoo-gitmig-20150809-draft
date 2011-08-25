@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/h5utils/h5utils-1.12.1-r2.ebuild,v 1.1 2011/08/25 16:47:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/h5utils/h5utils-1.12.1-r2.ebuild,v 1.2 2011/08/25 17:22:18 xarthisius Exp $
 
 EAPI=4
 
@@ -18,6 +18,7 @@ SLOT="0"
 
 DEPEND="media-libs/libpng
 	sci-libs/hdf5
+	sys-libs/zlib
 	hdf? (
 		sci-libs/hdf
 		virtual/jpeg
@@ -25,7 +26,8 @@ DEPEND="media-libs/libpng
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-automagic.patch
+	epatch "${FILESDIR}"/${P}-automagic.patch \
+		"${FILESDIR}"/${P}-png15.patch
 	eautoreconf
 }
 

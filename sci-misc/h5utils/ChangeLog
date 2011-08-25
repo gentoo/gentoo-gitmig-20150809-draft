@@ -1,6 +1,11 @@
 # ChangeLog for sci-misc/h5utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/h5utils/ChangeLog,v 1.13 2011/08/25 16:47:50 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/h5utils/ChangeLog,v 1.14 2011/08/25 17:22:18 xarthisius Exp $
+
+  25 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> h5utils-1.12.1-r2.ebuild,
+  +files/h5utils-1.12.1-png15.patch:
+  Fix building with libpng-1.5 wrt #378919 by Diego Elio Pettenò
+  <flameeyes@gentoo.org>. Add explicit dependency on sys-libs/zlib
 
 *h5utils-1.12.1-r2 (25 Aug 2011)
 
