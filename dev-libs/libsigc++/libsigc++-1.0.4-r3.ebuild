@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.0.4-r3.ebuild,v 1.16 2011/03/08 13:47:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.0.4-r3.ebuild,v 1.17 2011/08/26 01:59:16 mattst88 Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="1.0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc sh sparc x86"
 IUSE="debug"
 
-DEPEND=""
+DEPEND="sys-devel/m4"
 RDEPEND=""
 
 src_unpack() {

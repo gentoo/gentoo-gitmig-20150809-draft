@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.7.ebuild,v 1.8 2011/03/08 13:47:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-1.2.7.ebuild,v 1.9 2011/08/26 01:59:16 mattst88 Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -15,8 +15,8 @@ SLOT="1.2"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86"
 IUSE=""
 
+DEPEND="sys-devel/m4"
 RDEPEND=""
-DEPEND=""
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog FEATURES IDEAS README NEWS TODO"

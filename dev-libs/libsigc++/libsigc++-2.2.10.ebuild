@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.2.10.ebuild,v 1.1 2011/07/25 11:36:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.2.10.ebuild,v 1.2 2011/08/26 01:59:16 mattst88 Exp $
 
 EAPI="4"
 
@@ -13,6 +13,9 @@ LICENSE="LGPL-2.1"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc static-libs test"
+
+DEPEND="sys-devel/m4"
+RDEPEND=""
 
 # Needs mm-common for eautoreconf
 src_prepare() {
