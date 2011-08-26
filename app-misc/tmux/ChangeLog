@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/tmux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.66 2011/08/07 17:17:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.67 2011/08/26 09:37:36 chainsaw Exp $
+
+  26 Aug 2011; Tony Vroon <chainsaw@gentoo.org> tmux-1.5.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in bug
+  #380689 filed by Tim "radhermit" Harder.
 
   07 Aug 2011; Jeroen Roovers <jer@gentoo.org> -tmux-1.2.ebuild,
   -files/tmux-1.2-locale.patch, -tmux-1.3.ebuild:
