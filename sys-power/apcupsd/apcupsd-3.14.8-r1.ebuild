@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.8-r1.ebuild,v 1.5 2011/06/15 16:05:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.8-r1.ebuild,v 1.6 2011/08/26 10:08:01 flameeyes Exp $
 
 EAPI=3
 
@@ -23,6 +23,7 @@ DEPEND="
 		dev-libs/glib:2
 		>=gnome-base/gconf-2.0 )"
 RDEPEND="${DEPEND}
+	sys-apps/openrc
 	virtual/mailx"
 
 CONFIG_CHECK="~USB_HIDDEV ~HIDRAW"

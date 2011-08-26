@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.7.ebuild,v 1.9 2011/04/30 17:57:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.7.ebuild,v 1.10 2011/08/26 10:08:01 flameeyes Exp $
 
 WEBAPP_MANUAL_SLOT="yes"
 WEBAPP_OPTIONAL="yes"
@@ -24,6 +24,7 @@ DEPEND="
 		=dev-libs/glib-2*
 		>=gnome-base/gconf-2.0 )"
 RDEPEND="${DEPEND}
+	sys-apps/openrc
 	virtual/mailx"
 
 pkg_setup() {
