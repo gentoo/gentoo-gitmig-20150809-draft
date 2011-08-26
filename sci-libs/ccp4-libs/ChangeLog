@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/ccp4-libs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ChangeLog,v 1.42 2011/08/24 11:37:02 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccp4-libs/ChangeLog,v 1.43 2011/08/26 14:26:09 hwoarang Exp $
+
+  26 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
+  ccp4-libs-6.1.3-r10.ebuild:
+  Stable on amd64 wrt bug #376255
 
   24 Aug 2011; Thomas Kahle <tomka@gentoo.org> ccp4-libs-6.1.3-r10.ebuild:
   x86 stable per bug 376255
