@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/qmailanalog
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailanalog/ChangeLog,v 1.11 2007/02/09 04:38:32 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailanalog/ChangeLog,v 1.12 2011/08/26 14:44:03 flameeyes Exp $
+
+  26 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  qmailanalog-0.70-r1.ebuild:
+  QA: disable test function (make check is doing something else). Closes bug
+  #298325.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

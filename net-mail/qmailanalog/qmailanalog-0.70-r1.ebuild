@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailanalog/qmailanalog-0.70-r1.ebuild,v 1.6 2004/10/26 20:16:32 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmailanalog/qmailanalog-0.70-r1.ebuild,v 1.7 2011/08/26 14:44:03 flameeyes Exp $
 
 inherit eutils fixheadtails toolchain-funcs
 
@@ -30,6 +30,8 @@ src_compile() {
 	emake || die
 	$(tc-getCC) ${CFLAGS} ${FILESDIR}/tai64nfrac.c -o tai64nfrac || die
 }
+
+src_test() { :; }
 
 src_install() {
 	doman matchup.1 xqp.1 xsender.1 xrecipient.1 columnt.1
