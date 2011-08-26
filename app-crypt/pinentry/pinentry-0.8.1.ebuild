@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.1.ebuild,v 1.2 2011/03/25 23:22:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.8.1.ebuild,v 1.3 2011/08/26 15:18:08 grobian Exp $
 
 EAPI=3
 
@@ -73,6 +73,7 @@ src_configure() {
 		$(use_enable ncurses fallback-curses) \
 		$(use_enable qt4 pinentry-qt4) \
 		$(use_with caps libcap) \
+		--without-x \
 		${myconf}
 }
 
