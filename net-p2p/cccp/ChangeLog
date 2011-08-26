@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/cccp
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/cccp/ChangeLog,v 1.10 2007/01/23 15:50:17 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/cccp/ChangeLog,v 1.11 2011/08/26 18:46:43 flameeyes Exp $
+
+  26 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org> cccp-0.9.ebuild:
+  Rewrite ebuild with EAPI=4 to actually follow proper QA guidelines. Closes
+  bug #331875.
 
   23 Jan 2007; Raúl Porcel <armin76@gentoo.org> -cccp-0.8.ebuild:
   Drop old
