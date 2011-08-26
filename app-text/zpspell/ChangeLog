@@ -1,6 +1,9 @@
 # ChangeLog for app-text/zpspell
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zpspell/ChangeLog,v 1.4 2011/06/25 07:43:34 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zpspell/ChangeLog,v 1.5 2011/08/26 17:08:00 serkan Exp $
+
+  26 Aug 2011; Serkan Kaba <serkan@gentoo.org> zpspell-0.4.3.ebuild:
+  Bump EAPI to 2 to really fix bug #369651.
 
   25 Jun 2011; Serkan Kaba <serkan@gentoo.org> zpspell-0.4.3.ebuild,
   +files/add-gobject-linkage-11566.diff:
