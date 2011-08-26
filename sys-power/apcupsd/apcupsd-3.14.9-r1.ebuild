@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.9.ebuild,v 1.1 2011/08/22 14:27:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.9-r1.ebuild,v 1.1 2011/08/26 10:53:51 flameeyes Exp $
 
 EAPI=4
 
@@ -94,6 +94,12 @@ src_install() {
 	# remove hal settings, we don't really want to have it around still.
 	rm -r "${D}"/usr/share/hal
 
+	# replace it with our udev rules if we're in Linux
+	if use kernel_linux; then
+		insinto /lib/udev/rules.d
+		newins "${FILESDIR}"/apcupsd-udev.rules 60-${PN}.rules
+	fi
+
 	# Without this it'll crash at startup. When merging in ROOT= this
 	# won't be created by default, so we want to make sure we got it!
 	keepdir /var/lock
@@ -121,4 +127,11 @@ pkg_postinst() {
 	elog ''
 	elog ' \e[01m rc-update add apcupsd.powerfail shutdown \e[0m'
 	elog ''
+
+	if use kernel_linux; then
+		elog "Starting from version 3.14.9-r1, ${PN} installs udev rules"
+		elog "for persistent device naming. If you have multiple UPS"
+		elog "connected to the machine, you can point them to the devices"
+		elog "in /dev/apcups/by-id directory."
+	fi
 }
