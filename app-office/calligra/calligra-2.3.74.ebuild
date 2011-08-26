@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.3.74.ebuild,v 1.3 2011/08/22 21:48:07 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.3.74.ebuild,v 1.4 2011/08/26 19:53:41 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -42,7 +42,16 @@ REQUIRED_USE="
 "
 
 RDEPEND="
+	!app-office/karbon
+	!app-office/koffice-data
+	!app-office/koffice-l10n
 	!app-office/koffice-libs
+	!app-office/koffice-meta
+	!app-office/krita
+	!app-office/kplato
+	!app-office/kpresenter
+	!app-office/kspread
+	!app-office/kword
 	dev-db/sqlite:3
 	dev-lang/perl
 	dev-libs/boost
