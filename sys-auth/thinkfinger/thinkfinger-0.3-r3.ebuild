@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/thinkfinger-0.3-r3.ebuild,v 1.1 2011/06/16 23:55:46 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/thinkfinger-0.3-r3.ebuild,v 1.2 2011/08/26 18:25:53 flameeyes Exp $
 
 EAPI=2
 
@@ -40,13 +40,12 @@ pkg_setup() {
 	fi
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		$(use_enable pam) \
 		$(use_enable debug usb-debug) \
 		"--with-securedir=$(getpam_mod_dir)" \
 		|| die
-	emake || die
 }
 
 src_install() {

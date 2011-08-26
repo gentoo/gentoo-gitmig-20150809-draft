@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/thinkfinger
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/ChangeLog,v 1.10 2011/06/16 23:55:46 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/ChangeLog,v 1.11 2011/08/26 18:25:53 flameeyes Exp $
+
+  26 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  thinkfinger-0.3-r3.ebuild:
+  QA: do not call econf in src_compile for EAPI=2 and later. Closes bug
+  #376449.
 
 *thinkfinger-0.3-r3 (16 Jun 2011)
 
