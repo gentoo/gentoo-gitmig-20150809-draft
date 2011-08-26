@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/aqemu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/aqemu/ChangeLog,v 1.3 2011/07/29 12:06:37 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/aqemu/ChangeLog,v 1.4 2011/08/26 15:14:54 chainsaw Exp $
+
+  26 Aug 2011; Tony Vroon <chainsaw@gentoo.org> aqemu-0.8.1.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in bug
+  #380471.
 
 *aqemu-0.8.2 (29 Jul 2011)
 
