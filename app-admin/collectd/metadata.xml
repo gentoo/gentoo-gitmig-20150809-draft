@@ -5,10 +5,12 @@
 	<maintainer>
 		<email>bugs@bergstroem.nu</email>
 		<name>Johan Bergström</name>
+		<description>Proxied Maintainer. CC on bugs</description>
 	</maintainer>
 	<maintainer>
 		<email>dilfridge@gentoo.org</email>
 		<name>Andreas K. Huettel</name>
+		<description>Proxy Maintainer. Assign bugs</description>
 	</maintainer>
 	<use>
 		<flag name='collectd_plugins_apache'>Build the apache input plugin (transferred bytes, handled requests, detailed scoreboard statistics)</flag>
