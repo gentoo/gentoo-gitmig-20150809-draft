@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Crypt-Random-Source
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Random-Source/ChangeLog,v 1.1 2011/01/25 09:56:16 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Random-Source/ChangeLog,v 1.2 2011/08/26 14:54:58 chainsaw Exp $
+
+  26 Aug 2011; Tony Vroon <chainsaw@gentoo.org>
+  Crypt-Random-Source-0.70.ebuild:
+  Marked stable on AMD64 as a dependency of www-apps/bugzilla-3.6.6 based on
+  arch testing by Agostino "ago" Sarubbo in security bug #380255.
 
 *Crypt-Random-Source-0.70 (25 Jan 2011)
 

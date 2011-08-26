@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-use-ok
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-use-ok/ChangeLog,v 1.1 2009/05/14 14:34:18 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-use-ok/ChangeLog,v 1.2 2011/08/26 14:53:27 chainsaw Exp $
+
+  26 Aug 2011; Tony Vroon <chainsaw@gentoo.org> Test-use-ok-0.02.ebuild:
+  Marked stable on AMD64 as a dependency of www-apps/bugzilla-3.6.6 based on
+  arch testing by Agostino "ago" Sarubbo in security bug #380255.
 
 *Test-use-ok-0.02 (14 May 2009)
 
