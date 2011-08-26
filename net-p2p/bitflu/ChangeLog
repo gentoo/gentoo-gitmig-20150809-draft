@@ -1,5 +1,9 @@
 
 
+  26 Aug 2011; Tony Vroon <chainsaw@gentoo.org> bitflu-1.37.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah El Lazkani in bug #380079.
+
 *bitflu-1.38 (24 Aug 2011)
 
   24 Aug 2011; Anthony G. Basile <blueness@gentoo.org> +bitflu-1.38.ebuild:
