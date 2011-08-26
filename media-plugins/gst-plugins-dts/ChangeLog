@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/gst-plugins-dts
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-dts/ChangeLog,v 1.11 2011/08/26 04:03:39 ford_prefect Exp $
+
+*gst-plugins-dts-0.10.22 (26 Aug 2011)
+
+  26 Aug 2011; Arun Raghavan <ford_prefect@gentoo.org>
+  +gst-plugins-dts-0.10.22.ebuild, +metadata.xml:
+  Initial version of package -- provides a DTS decoder.
+
