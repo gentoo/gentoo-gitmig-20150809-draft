@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-2.0.0.ebuild,v 1.3 2011/08/02 20:47:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-2.0.0-r1.ebuild,v 1.1 2011/08/26 19:46:48 dilfridge Exp $
 
 EAPI=4
 
@@ -70,6 +70,7 @@ S="${WORKDIR}/${MY_P}/core"
 
 PATCHES=(
 	"${FILESDIR}/${P}-tests-1.patch"
+	"${FILESDIR}/${P}-underlinking.patch"
 )
 
 RESTRICT=test

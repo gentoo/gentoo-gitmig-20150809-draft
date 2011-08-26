@@ -1,0 +1,29 @@
+commit 772f592f639f52d0c1a991265098b46672fecb6e
+Author: Gilles Caulier <caulier.gilles@gmail.com>
+Date:   Fri Aug 26 11:58:59 2011 +0200
+
+    Fix order to link gphoto2 library with digiKam shared lib. This must be the last on linker command line...
+    CCBUGS: 258931
+    CCBUGS: 268267
+
+diff --git a/digikam/CMakeLists.txt b/digikam/CMakeLists.txt
+index 42017df..78ca1f1 100644
+--- a/digikam/CMakeLists.txt
++++ b/digikam/CMakeLists.txt
+@@ -279,13 +279,15 @@ TARGET_LINK_LIBRARIES(digikam
+ 
+         ${STRIGI_LIBRARIES}
+         ${LCMS_LIBRARIES}
+-        ${GPHOTO2_LIBRARIES}
+ 
+         digikamcore
+         digikamdatabase
+         advancedrename
+         queuemanager
+         cameragui
++
++        # See B.K.O #258931: libgphoto2 library must be the last arg for linker.
++        ${GPHOTO2_LIBRARIES}
+ )
+ 
+ IF (NOT WIN32 AND GPHOTO2_FOUND)
