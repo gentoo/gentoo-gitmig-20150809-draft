@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-1.6.5-r1.ebuild,v 1.2 2011/06/22 05:26:54 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-1.8.3.ebuild,v 1.1 2011/08/26 12:38:49 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="static-libs v8"
 
-RDEPEND="!v8? ( >=dev-lang/spidermonkey-1.8 )
+RDEPEND="!v8? ( =dev-lang/spidermonkey-1.8.2* )
 	v8? ( dev-lang/v8 )
 	dev-libs/boost
 	dev-libs/libpcre[cxx]
@@ -42,7 +42,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-1.6-fix-scons.patch"
+	epatch "${FILESDIR}/${PN}-1.8-fix-scons.patch"
+	epatch "${FILESDIR}/${PN}-linux3.patch"
 }
 
 src_compile() {
@@ -64,19 +65,19 @@ src_install() {
 
 	newinitd "${FILESDIR}/${PN}.initd" ${PN}
 	newconfd "${FILESDIR}/${PN}.confd" ${PN}
-
-	# Remove unsupported options
-	sed -i -e '/--unixSocketPrefix/d' "${D}/etc/init.d/${PN}"
-	sed -i -e 's/--journal//g' "${D}/etc/conf.d/${PN}"
+	newinitd "${FILESDIR}/${PN/db/s}.initd" ${PN/db/s}
+	newconfd "${FILESDIR}/${PN/db/s}.confd" ${PN/db/s}
 }
 
 src_test() {
-	escons ${scons_opts} smoke --smokedbprefix='testdir' test
+	escons ${scons_opts} test
+	"${S}"/test --dbpath=unittest || die
 }
 
 pkg_postinst() {
-	if [[ ${REPLACING_VERSIONS} < 1.6 ]]; then
+	if [[ ${REPLACING_VERSIONS} < 1.8 ]]; then
 		ewarn "You just upgraded from a previous version of mongodb !"
 		ewarn "Make sure you run 'mongod --upgrade' before using this version."
 	fi
+	elog "Journaling is now enabled by default, see /etc/conf.d/${PN}.conf"
 }

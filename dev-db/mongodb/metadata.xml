@@ -3,12 +3,17 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>ramereth@gentoo.org</email>
-		<name>Lance Albertson</name>
-	</maintainer>
-	<maintainer>
 		<email>ultrabug@gentoo.org</email>
 		<name>Alexys Jacob</name>
+	</maintainer>
+	<maintainer>
+		<email>bugs@bergstroem.nu</email>
+		<name>Johan Bergström</name>
+		<description>Proxy Maintainer. CC on bugs</description>
+	</maintainer>
+	<maintainer>
+		<email>ramereth@gentoo.org</email>
+		<name>Lance Albertson</name>
 	</maintainer>
 	<longdescription lang="en">
 	MongoDB (from "humongous") is a scalable, high-performance, open source,

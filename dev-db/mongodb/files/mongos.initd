@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/files/mongos.initd,v 1.1 2011/04/13 14:56:32 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/files/mongos.initd,v 1.2 2011/08/26 12:38:49 ultrabug Exp $
 
 depend() {
 	need net
@@ -21,13 +21,21 @@ start() {
 	mkdir -p ${MONGOS_RUN:-/var/run/mongodb}
 	chown ${MONGOS_USER:-mongodb}: ${MONGOS_RUN:-/var/run/mongodb}
 
+	# Listen to MONGOS_IP if configured
+	[ -z "${MONGOS_IP}" ] || MONGOS_OPTIONS="--bind_ip ${MONGOS_IP} ${MONGOS_OPTIONS}"
+
+	# Baselayout-1 user should use --chuid instead of --user
+	local USEROPT="--user"
+	if [ ! -f /etc/init.d/sysfs ]; then
+		USEROPT="--chuid"
+	fi
+
 	ebegin "Starting ${SVCNAME}"
 	start-stop-daemon --background --start --make-pidfile \
 		--pidfile ${MONGOS_RUN:-/var/run/mongodb}/${SVCNAME}.pid \
-		--chuid ${MONGOS_USER:-mongodb} \
+		${USEROPT} ${MONGOS_USER:-mongodb} \
 		--exec ${MONGOS_EXEC:-/usr/bin/mongos} \
 		-- \
-		--bind_ip ${MONGOS_IP:-127.0.0.1} \
 		--port ${MONGOS_PORT:-27018} \
 		--unixSocketPrefix ${MONGOS_RUN:-/var/run/mongodb} \
 		--logappend --logpath /var/log/mongodb/${SVCNAME}.log \
