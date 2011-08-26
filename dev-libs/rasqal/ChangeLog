@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/rasqal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.60 2011/08/13 17:24:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.61 2011/08/26 09:16:20 radhermit Exp $
+
+*rasqal-0.9.27 (26 Aug 2011)
+
+  26 Aug 2011; Tim Harder <radhermit@gentoo.org> +rasqal-0.9.27.ebuild:
+  Version bump. Add doc USE flag.
 
   13 Aug 2011; Markus Meier <maekke@gentoo.org> rasqal-0.9.19.ebuild:
   arm stable, bug #376893
