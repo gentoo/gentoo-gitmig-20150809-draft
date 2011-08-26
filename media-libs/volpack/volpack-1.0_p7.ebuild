@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/volpack/volpack-1.0_p7.ebuild,v 1.1 2009/11/23 23:46:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/volpack/volpack-1.0_p7.ebuild,v 1.2 2011/08/26 02:01:13 mattst88 Exp $
 
 EAPI=2
 inherit eutils
@@ -14,6 +14,9 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples"
+
+DEPEND="sys-devel/m4"
+RDEPEND=""
 
 S="${WORKDIR}/${MYP}"
 
