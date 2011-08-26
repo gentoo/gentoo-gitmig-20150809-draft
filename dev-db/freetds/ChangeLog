@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/freetds
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.48 2010/07/10 11:26:02 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.49 2011/08/26 20:06:13 grobian Exp $
+
+  26 Aug 2011; Fabian Groffen <grobian@gentoo.org> freetds-0.82-r3.ebuild:
+  Fix compilation on platforms without iconv in their libc, keyworded
+  ~{x86,sparc}-solaris, bug #378709
 
   10 Jul 2010; Fabian Groffen <grobian@gentoo.org> freetds-0.82-r3.ebuild:
   Fix for Prefix, marked ~ppc-macos, bug #276045
