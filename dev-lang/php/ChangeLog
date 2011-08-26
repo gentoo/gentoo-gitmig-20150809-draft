@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.507 2011/08/26 06:54:30 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.508 2011/08/26 12:29:15 olemarkus Exp $
+
+  26 Aug 2011; Ole Markus With <olemarkus@gentoo.org> metadata.xml:
+  Removed older versions
 
   26 Aug 2011; Thomas Kahle <tomka@gentoo.org> php-5.3.8.ebuild:
   x86 stable per bug 372745
