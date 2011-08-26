@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/moreutils-0.45.ebuild,v 1.1 2011/06/22 17:47:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/moreutils-0.45.ebuild,v 1.2 2011/08/26 20:31:35 grobian Exp $
 
 EAPI=4
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs prefix
 
 DESCRIPTION="a growing collection of the unix tools that nobody thought to write
 thirty years ago"
@@ -13,7 +13,7 @@ SRC_URI="mirror://debian/pool/main/${PN:0:1}/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="~amd64 ~hppa ~x86 ~x86-linux"
 IUSE="+doc +perl"
 
 RDEPEND="
@@ -33,7 +33,8 @@ DEPEND="
 S=${WORKDIR}/${PN}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.42-dtd-path.patch
+	epatch "${FILESDIR}"/${PN}-0.45-dtd-path.patch
+	eprefixify "${S}/"*.docbook
 
 	# Don't build manpages
 	if ! use doc ; then
@@ -50,9 +51,9 @@ src_prepare() {
 
 src_compile() {
 	tc-export CC
-	emake CFLAGS="${CFLAGS}" DOCBOOK2XMAN=docbook2man.pl
+	emake CFLAGS="${CFLAGS}" DOCBOOK2XMAN=docbook2man.pl PREFIX="${EPREFIX}/usr"
 }
 
 src_install() {
-	emake DESTDIR="${D}" INSTALL_BIN=install install
+	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" INSTALL_BIN=install install
 }

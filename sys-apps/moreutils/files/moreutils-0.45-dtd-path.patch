@@ -1,0 +1,96 @@
+diff -ur moreutils.orig/ifdata.docbook moreutils/ifdata.docbook
+--- moreutils.orig/ifdata.docbook	2010-07-12 11:54:30.000000000 -0700
++++ moreutils/ifdata.docbook	2010-10-22 00:00:23.541560714 -0700
+@@ -21,7 +21,7 @@
+ -->
+ 
+ <!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook V4.4//EN"
+-"file:///usr/share/xml/docbook/schema/dtd/4.4/docbookx.dtd"
++"file://@GENTOO_PORTAGE_EPREFIX@/usr/share/sgml/docbook/xml-dtd-4.4/docbookx.dtd"
+ []>
+ 
+ <refentry>
+diff -ur moreutils.orig/ifne.docbook moreutils/ifne.docbook
+--- moreutils.orig/ifne.docbook	2008-12-16 15:19:10.000000000 -0800
++++ moreutils/ifne.docbook	2010-10-22 00:00:23.541560714 -0700
+@@ -21,7 +21,7 @@
+ -->
+ 
+ <!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook V4.4//EN"
+-"file:///usr/share/xml/docbook/schema/dtd/4.4/docbookx.dtd"
++"file://@GENTOO_PORTAGE_EPREFIX@/usr/share/sgml/docbook/xml-dtd-4.4/docbookx.dtd"
+ []>
+ 
+ <refentry>
+diff -ur moreutils.orig/isutf8.docbook moreutils/isutf8.docbook
+--- moreutils.orig/isutf8.docbook	2010-07-12 11:55:50.000000000 -0700
++++ moreutils/isutf8.docbook	2010-10-22 00:00:23.541560714 -0700
+@@ -21,7 +21,7 @@
+ -->
+ 
+ <!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook V4.4//EN"
+-"file:///usr/share/xml/docbook/schema/dtd/4.4/docbookx.dtd"
++"file://@GENTOO_PORTAGE_EPREFIX@/usr/share/sgml/docbook/xml-dtd-4.4/docbookx.dtd"
+ []>
+ 
+ <refentry>
+diff -ur moreutils.orig/lckdo.docbook moreutils/lckdo.docbook
+--- moreutils.orig/lckdo.docbook	2010-07-12 11:56:34.000000000 -0700
++++ moreutils/lckdo.docbook	2010-10-22 00:00:23.541560714 -0700
+@@ -8,7 +8,7 @@
+ -->
+ 
+ <!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook V4.4//EN"
+-"file:///usr/share/xml/docbook/schema/dtd/4.4/docbookx.dtd"
++"file://@GENTOO_PORTAGE_EPREFIX@/usr/share/sgml/docbook/xml-dtd-4.4/docbookx.dtd"
+ []>
+ 
+ <refentry>
+diff -ur moreutils.orig/mispipe.docbook moreutils/mispipe.docbook
+--- moreutils.orig/mispipe.docbook	2010-07-12 11:58:00.000000000 -0700
++++ moreutils/mispipe.docbook	2010-10-22 00:00:23.542560723 -0700
+@@ -21,7 +21,7 @@
+ -->
+ 
+ <!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook V4.4//EN"
+-"file:///usr/share/xml/docbook/schema/dtd/4.4/docbookx.dtd"
++"file://@GENTOO_PORTAGE_EPREFIX@/usr/share/sgml/docbook/xml-dtd-4.4/docbookx.dtd"
+ []>
+ 
+ <refentry>
+diff -ur moreutils.orig/parallel.docbook moreutils/parallel.docbook
+--- moreutils.orig/parallel.docbook	2010-07-12 11:58:31.000000000 -0700
++++ moreutils/parallel.docbook	2010-10-22 00:01:28.913093253 -0700
+@@ -7,7 +7,7 @@
+ -->
+ 
+ <!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook V4.4//EN"
+-"file:///usr/share/xml/docbook/schema/dtd/4.4/docbookx.dtd"
++"file://@GENTOO_PORTAGE_EPREFIX@/usr/share/sgml/docbook/xml-dtd-4.4/docbookx.dtd"
+ []>
+ 
+ <refentry>
+diff -ur moreutils.orig/pee.docbook moreutils/pee.docbook
+--- moreutils.orig/pee.docbook	2010-09-07 23:09:27.000000000 -0700
++++ moreutils/pee.docbook	2010-10-22 00:00:23.542560723 -0700
+@@ -21,7 +21,7 @@
+ -->
+ 
+ <!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook V4.4//EN"
+-"file:///usr/share/xml/docbook/schema/dtd/4.4/docbookx.dtd"
++"file://@GENTOO_PORTAGE_EPREFIX@/usr/share/sgml/docbook/xml-dtd-4.4/docbookx.dtd"
+ []>
+ 
+ <refentry>
+diff -ur moreutils.orig/sponge.docbook moreutils/sponge.docbook
+--- moreutils.orig/sponge.docbook	2010-09-13 13:38:24.000000000 -0700
++++ moreutils/sponge.docbook	2010-10-22 00:00:23.542560723 -0700
+@@ -21,7 +21,7 @@
+ -->
+ 
+ <!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook V4.4//EN"
+-"file:///usr/share/xml/docbook/schema/dtd/4.4/docbookx.dtd"
++"file://@GENTOO_PORTAGE_EPREFIX@/usr/share/sgml/docbook/xml-dtd-4.4/docbookx.dtd"
+ []>
+ 
+ <refentry>

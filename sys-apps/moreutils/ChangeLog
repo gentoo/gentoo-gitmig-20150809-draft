@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/moreutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.28 2011/07/22 14:07:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.29 2011/08/26 20:31:35 grobian Exp $
+
+  26 Aug 2011; Fabian Groffen <grobian@gentoo.org> moreutils-0.45.ebuild,
+  +files/moreutils-0.45-dtd-path.patch:
+  Fixed for Prefix, marked ~x86-linux, thanks Dan Wallis in bug #376541
 
   22 Jul 2011; Jeroen Roovers <jer@gentoo.org> moreutils-0.43.ebuild:
   Stable for HPPA (bug #372773).
