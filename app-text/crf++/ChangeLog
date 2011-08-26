@@ -1,6 +1,10 @@
 # ChangeLog for app-text/crf++
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crf++/ChangeLog,v 1.12 2011/05/30 23:32:56 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crf++/ChangeLog,v 1.13 2011/08/26 15:21:18 chainsaw Exp $
+
+  26 Aug 2011; Tony Vroon <chainsaw@gentoo.org> crf++-0.54.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in bug
+  #380561 filed by Hanno Boeck.
 
 *crf++-0.54 (30 May 2011)
 
