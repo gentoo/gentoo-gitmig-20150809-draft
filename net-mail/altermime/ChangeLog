@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/altermime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/altermime/ChangeLog,v 1.21 2011/08/12 21:33:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/altermime/ChangeLog,v 1.22 2011/08/26 11:05:06 radhermit Exp $
+
+*altermime-0.3.11 (26 Aug 2011)
+
+  26 Aug 2011; Tim Harder <radhermit@gentoo.org> +altermime-0.3.11.ebuild,
+  +files/altermime-0.3.11-respect-flags.patch:
+  Version bump.
 
   12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
   altermime-0.3.10-r1.ebuild:
