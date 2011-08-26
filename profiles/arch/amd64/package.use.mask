@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.102 2011/07/29 17:44:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.103 2011/08/26 21:17:26 radhermit Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -118,10 +118,6 @@ media-gfx/k3d -cuda
 # Jean-Noël Rivasseau <elvanor@gentoo.org> (23 Sep 2009)
 # X use flag only for amd64/x86, bug 285951.
 media-gfx/iscan -X
-
-# Samuli Suominen <ssuominen@gentoo.org> (10 May 2009)
-# Broken SSE2 detection for x86_64 wrt #262405
-media-libs/libsoundtouch sse2
 
 # Bernard Cafarelli <voyageur@gentoo.org> (20 Mar 2009)
 # Depends on packages not yet keyworded for amd64, cf bug #22042

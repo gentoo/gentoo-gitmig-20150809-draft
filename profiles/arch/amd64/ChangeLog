@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.140 2011/07/29 17:44:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.141 2011/08/26 21:17:26 radhermit Exp $
+
+  26 Aug 2011; Tim Harder <radhermit@gentoo.org> package.use.mask:
+  Remove USE="sse2" mask for libsoundtouch.
 
   29 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
   Mask dev-lang/path64[assembler] as it currently fails to build
