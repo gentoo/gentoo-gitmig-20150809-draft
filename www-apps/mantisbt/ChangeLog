@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.106 2011/08/26 11:05:23 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.107 2011/08/26 11:13:32 chainsaw Exp $
+
+  26 Aug 2011; Tony Vroon <chainsaw@gentoo.org> mantisbt-1.2.7.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in
+  security bug #379739 filed by David Hicks.
 
   26 Aug 2011; Thomas Kahle <tomka@gentoo.org> mantisbt-1.2.7.ebuild:
   x86 stable per bug 379739
