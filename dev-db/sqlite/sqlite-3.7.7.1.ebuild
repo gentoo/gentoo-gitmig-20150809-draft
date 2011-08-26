@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.7.7.1.ebuild,v 1.7 2011/08/26 13:52:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.7.7.1.ebuild,v 1.8 2011/08/26 19:10:32 grobian Exp $
 
 EAPI="3"
 
@@ -52,7 +52,7 @@ src_prepare() {
 		epatch "${FILESDIR}"/${P}-interix-amalgamation.patch
 	fi
 
-	# at least x86-interix and ppc-aix need this to catch a new(er)
+	# at least x86-interix, ppc-aix and *-solaris need this to catch a new(er)
 	# libtool, as the shipped one lacks some platform support.
 	use prefix && eautoreconf
 	epunt_cxx
