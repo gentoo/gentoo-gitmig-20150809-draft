@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.109-r2.ebuild,v 1.4 2011/08/24 19:21:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/libaio-0.3.109-r2.ebuild,v 1.5 2011/08/26 14:28:22 darkside Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://kernel/linux/libs/aio/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-linux"
 IUSE="static-libs"
 
 RESTRICT="test"
@@ -41,7 +41,9 @@ src_test() {
 }
 
 src_install() {
-	emake install DESTDIR="${ED}" || die
+	# Don't use ED for emake, src_prepare already inserts EPREFIX in the correct
+	# place
+	emake install DESTDIR="${D}" || die
 	doman man/*
 	dodoc ChangeLog TODO
 
