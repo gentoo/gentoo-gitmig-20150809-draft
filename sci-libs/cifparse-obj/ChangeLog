@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cifparse-obj
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cifparse-obj/ChangeLog,v 1.12 2010/04/05 18:18:41 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cifparse-obj/ChangeLog,v 1.13 2011/08/26 16:18:55 jlec Exp $
+
+  26 Aug 2011; Justin Lecher <jlec@gentoo.org> cifparse-obj-6.302.ebuild,
+  cifparse-obj-7.025.ebuild, metadata.xml:
+  Add missing deps on flex and bison #380651
 
   05 Apr 2010; Justin Lecher <jlec@gentoo.org> cifparse-obj-7.025.ebuild:
   Keyworded for ~x86-linux ~amd64-linux, tested by me
