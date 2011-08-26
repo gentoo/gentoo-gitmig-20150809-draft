@@ -1,6 +1,17 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.421 2011/08/24 19:09:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.422 2011/08/26 20:56:05 phajdan.jr Exp $
+
+*chromium-15.0.861.0 (26 Aug 2011)
+
+  26 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-kerberos-r0.patch, -chromium-15.0.849.0.ebuild,
+  +chromium-15.0.861.0.ebuild, chromium-9999-r1.ebuild, +files/nacl.gypi,
+  metadata.xml:
+  Version bump for dev channel release. Added experimental support for
+  ChromeDriver, bug #376147 by Judson and patches by chutzpath. Made support
+  for PulseAudio optional, bug #377847 by octoploid. Fixed bug #379487 by Mike
+  Gilbert and bug #380331 by Julien Sanchez. Removed old.
 
 *chromium-14.0.835.109 (24 Aug 2011)
 

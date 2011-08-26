@@ -1,0 +1,18 @@
+Index: net/http/http_auth.cc
+diff --git a/net/http/http_auth.cc b/net/http/http_auth.cc
+index 23e26637f95242fab9b8858776c8135163fa8ffc..2e42b064a4fd707a087fa31dc327ce6c8febe706 100644
+--- a/net/http/http_auth.cc
++++ b/net/http/http_auth.cc
+@@ -9,10 +9,8 @@
+ #include "base/basictypes.h"
+ #include "base/string_util.h"
+ #include "net/base/net_errors.h"
+-#include "net/http/http_auth_handler_basic.h"
+-#include "net/http/http_auth_handler_digest.h"
+-#include "net/http/http_auth_handler_negotiate.h"
+-#include "net/http/http_auth_handler_ntlm.h"
++#include "net/http/http_auth_handler.h"
++#include "net/http/http_auth_handler_factory.h"
+ #include "net/http/http_request_headers.h"
+ #include "net/http/http_response_headers.h"
+ #include "net/http/http_util.h"
