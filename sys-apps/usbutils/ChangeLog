@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.123 2011/08/24 17:35:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.124 2011/08/26 11:34:05 radhermit Exp $
+
+*usbutils-004 (26 Aug 2011)
+
+  26 Aug 2011; Tim Harder <radhermit@gentoo.org> +usbutils-004.ebuild:
+  Version bump.
 
   24 Aug 2011; Tim Harder <radhermit@gentoo.org> usbutils-001.ebuild,
   usbutils-002.ebuild, usbutils-003.ebuild:
