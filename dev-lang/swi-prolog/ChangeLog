@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.292 2011/08/21 00:58:39 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.293 2011/08/26 20:08:40 keri Exp $
+
+*swi-prolog-5.11.26-r1 (26 Aug 2011)
+*swi-prolog-5.10.5-r1 (26 Aug 2011)
+
+  26 Aug 2011; <keri@gentoo.org> +swi-prolog-5.10.5-r1.ebuild,
+  +swi-prolog-5.11.26-r1.ebuild:
+  Specify correct include-path in swipl.pc. Closes #380661
 
 *swi-prolog-5.10.5 (21 Aug 2011)
 
