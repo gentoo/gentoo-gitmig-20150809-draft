@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/bwping
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwping/ChangeLog,v 1.3 2010/07/17 16:24:36 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwping/ChangeLog,v 1.4 2011/08/26 13:03:03 hwoarang Exp $
+
+*bwping-1.4 (26 Aug 2011)
+
+  26 Aug 2011; Markos Chandras <hwoarang@gentoo.org> +bwping-1.4.ebuild:
+  Version bump
 
   17 Jul 2010; Markos Chandras <hwoarang@gentoo.org> bwping-1.2.ebuild:
   Stable on amd64 wrt bug #328265
