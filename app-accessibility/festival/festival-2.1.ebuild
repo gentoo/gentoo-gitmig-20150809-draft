@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-2.1.ebuild,v 1.3 2011/03/22 13:36:25 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-2.1.ebuild,v 1.4 2011/08/26 19:39:05 neurogeek Exp $
 
 EAPI="2"
 inherit eutils toolchain-funcs
@@ -27,7 +27,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="~app-accessibility/speech-tools-2.1"
+DEPEND="~app-accessibility/speech-tools-2.1
+		>=sys-libs/ncurses-5.6-r2
+		>=media-libs/alsa-lib-1.0.23"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/festival
@@ -38,14 +40,14 @@ pkg_setup() {
 
 src_prepare() {
 	# tell festival to use the speech-tools we have installed.
-	sed -i -e "s:\(EST=\).*:\1/usr/share/speech-tools:" "${S}"/config/config.in
+	sed -i -e "s:\(EST=\).*:\1${EPREFIX}/usr/share/speech-tools:" "${S}"/config/config.in
 	sed -i -e "s:\$(EST)/lib:/usr/$(get_libdir):" "${S}"/config/project.mak
 
 	# fix the reference  to /usr/lib/festival
-	sed -i -e "s:\(FTLIBDIR.*=.*\)\$.*:\1/usr/share/festival:" "${S}"/config/project.mak
+	sed -i -e "s:\(FTLIBDIR.*=.*\)\$.*:\1${EPREFIX}/usr/share/festival:" "${S}"/config/project.mak
 
 	# Fix path for examples in festival.scm
-	sed -i -e "s:\.\./examples/:/usr/share/doc/${PF}/examples/:" "${S}"/lib/festival.scm
+	sed -i -e "s:\.\./examples/:${EPREFIX}/usr/share/doc/${PF}/examples/:" "${S}"/lib/festival.scm
 
 	epatch "${FILESDIR}/${P}-ldflags.patch"
 	epatch "${FILESDIR}/${P}-init-scm.patch"
