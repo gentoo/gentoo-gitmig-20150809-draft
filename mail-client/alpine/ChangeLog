@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/alpine
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/alpine/ChangeLog,v 1.10 2011/08/20 20:48:43 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/alpine/ChangeLog,v 1.11 2011/08/26 15:40:15 hwoarang Exp $
+
+  26 Aug 2011; Markos Chandras <hwoarang@gentoo.org> alpine-2.00-r4.ebuild:
+  Stable on amd64 wrt bug #317971
 
   20 Aug 2011; Thomas Kahle <tomka@gentoo.org> alpine-2.00-r4.ebuild:
   x86 stable per bug 379983
