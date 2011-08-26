@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/ucspi-tcp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.75 2011/07/11 15:21:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.76 2011/08/26 19:47:50 flameeyes Exp $
+
+  26 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -ucspi-tcp-0.88-r14.ebuild, -ucspi-tcp-0.88-r15.ebuild,
+  -ucspi-tcp-0.88-r16.ebuild:
+  Remove old versions that still rely on ucspi-tcp.
 
   11 Jul 2011; Alexis Ballier <aballier@gentoo.org> ucspi-tcp-0.88-r17.ebuild:
   keyword ~x86-fbsd
