@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/conntrack-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/ChangeLog,v 1.42 2011/05/23 10:53:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/ChangeLog,v 1.43 2011/08/26 02:05:53 mattst88 Exp $
+
+  26 Aug 2011; Matt Turner <mattst88@gentoo.org> conntrack-tools-0.9.9.ebuild,
+  conntrack-tools-0.9.14.ebuild, conntrack-tools-1.0.0.ebuild:
+  Add flex and bison to DEPEND, bug 378343.
 
 *conntrack-tools-1.0.0 (23 May 2011)
 
