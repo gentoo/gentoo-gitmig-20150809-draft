@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Danga-Socket
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Danga-Socket/ChangeLog,v 1.4 2008/12/30 15:58:45 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Danga-Socket/ChangeLog,v 1.5 2011/08/26 09:12:58 chainsaw Exp $
+
+  26 Aug 2011; Tony Vroon <chainsaw@gentoo.org> Danga-Socket-1.61.ebuild:
+  Marked stable on AMD64 as a dependency of net-p2p/bitflu based on arch
+  testing by Agostino "ago" Sarubbo and Elijah El Lazkani in bug #380079.
 
   30 Dec 2008; Torsten Veller <tove@gentoo.org> -Danga-Socket-1.57.ebuild,
   -Danga-Socket-1.59.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Sys-Syscall
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Syscall/ChangeLog,v 1.4 2010/04/23 18:23:08 robbat2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Syscall/ChangeLog,v 1.5 2011/08/26 09:12:35 chainsaw Exp $
+
+  26 Aug 2011; Tony Vroon <chainsaw@gentoo.org> Sys-Syscall-0.22.ebuild:
+  Marked stable on AMD64 as a dependency of net-p2p/bitflu based on arch
+  testing by Agostino "ago" Sarubbo and Elijah El Lazkani in bug #380079.
 
 *Sys-Syscall-0.23 (23 Apr 2010)
 
