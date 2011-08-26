@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.6.17-r4.ebuild,v 1.3 2011/08/23 08:12:07 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.6.17-r4.ebuild,v 1.4 2011/08/26 15:17:35 darkside Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -62,8 +62,8 @@ want_apache
 
 pkg_setup() {
 	if use berkdb; then
-		local apu_bdb_version="$(/usr/bin/apu-1-config --includes \
-			| grep -Eoe '-I/usr/include/db[[:digit:]]\.[[:digit:]]' \
+		local apu_bdb_version="$(${EPREFIX}/usr/bin/apu-1-config --includes \
+			| grep -Eoe '-I${EPREFIX}/usr/include/db[[:digit:]]\.[[:digit:]]' \
 			| sed 's:.*b::')"
 		einfo
 		if [[ -z "${SVN_BDB_VERSION}" ]]; then
@@ -428,16 +428,18 @@ pkg_postrm() {
 }
 
 pkg_config() {
-	einfo "Initializing the database in ${EROOT}${SVN_REPOS_LOC}..."
-	if [[ -e "${EROOT}${SVN_REPOS_LOC}/repos" ]]; then
+	# Remember: Don't use ${EROOT}${SVN_REPOS_LOC} since ${SVN_REPOS_LOC}
+	# already has EPREFIX in it
+	einfo "Initializing the database in ${ROOT}${SVN_REPOS_LOC}..."
+	if [[ -e "${ROOT}${SVN_REPOS_LOC}/repos" ]]; then
 		echo "A Subversion repository already exists and I will not overwrite it."
-		echo "Delete \"${EROOT}${SVN_REPOS_LOC}/repos\" first if you're sure you want to have a clean version."
+		echo "Delete \"${ROOT}${SVN_REPOS_LOC}/repos\" first if you're sure you want to have a clean version."
 	else
-		mkdir -p "${EROOT}${SVN_REPOS_LOC}/conf"
+		mkdir -p "${ROOT}${SVN_REPOS_LOC}/conf"
 
 		einfo "Populating repository directory..."
 		# Create initial repository.
-		"${EROOT}usr/bin/svnadmin" create "${EROOT}${SVN_REPOS_LOC}/repos"
+		"${EROOT}usr/bin/svnadmin" create "${ROOT}${SVN_REPOS_LOC}/repos"
 
 		einfo "Setting repository permissions..."
 		SVNSERVE_USER="$(. "${EROOT}etc/conf.d/svnserve"; echo "${SVNSERVE_USER}")"
@@ -451,8 +453,8 @@ pkg_config() {
 			enewgroup "${SVNSERVE_GROUP}"
 			enewuser "${SVNSERVE_USER}" -1 -1 "${SVN_REPOS_LOC}" "${SVNSERVE_GROUP}"
 		fi
-		chown -Rf "${SVNSERVE_USER}:${SVNSERVE_GROUP}" "${EROOT}${SVN_REPOS_LOC}/repos"
-		chmod -Rf go-rwx "${EROOT}${SVN_REPOS_LOC}/conf"
-		chmod -Rf o-rwx "${EROOT}${SVN_REPOS_LOC}/repos"
+		chown -Rf "${SVNSERVE_USER}:${SVNSERVE_GROUP}" "${ROOT}${SVN_REPOS_LOC}/repos"
+		chmod -Rf go-rwx "${ROOT}${SVN_REPOS_LOC}/conf"
+		chmod -Rf o-rwx "${ROOT}${SVN_REPOS_LOC}/repos"
 	fi
 }
