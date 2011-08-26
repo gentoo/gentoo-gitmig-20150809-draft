@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/cherokee
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.84 2011/05/24 07:03:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.85 2011/08/26 11:58:08 matsuu Exp $
+
+*cherokee-1.2.98 (26 Aug 2011)
+
+  26 Aug 2011; MATSUU Takuto <matsuu@gentoo.org> +files/cherokee-confd-1.2.98,
+  +files/cherokee-initd-1.2.98, +cherokee-1.2.98.ebuild,
+  +files/cherokee-1.2.98-gentoo.patch, +files/cherokee-1.2.98-linux3.patch:
+  Version bumped. Added php and static-libs USE flags. Removed fastcgi USE
+  flag. Added PYTHON_USE_WITH="theads", bug #364533. Added many fixes.
 
 *cherokee-1.2.2 (24 May 2011)
 

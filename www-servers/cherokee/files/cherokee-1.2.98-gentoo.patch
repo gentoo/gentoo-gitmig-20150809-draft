@@ -1,0 +1,26 @@
+diff -Naur cherokee-1.2.98.orig/cherokee.conf.sample.pre cherokee-1.2.98/cherokee.conf.sample.pre
+--- cherokee-1.2.98.orig/cherokee.conf.sample.pre	2011-05-03 18:01:42.000000000 +0900
++++ cherokee-1.2.98/cherokee.conf.sample.pre	2011-08-25 17:51:33.615130274 +0900
+@@ -18,6 +18,8 @@
+ server!server_tokens = full
+ server!panic_action = %prefix%/bin/cherokee-panic
+ server!pid_file = %localstatedir%/run/cherokee.pid
++server!user = cherokee
++server!group = cherokee
+ 
+ # Default virtual server
+ #
+@@ -27,11 +29,11 @@
+ 
+ vserver!1!logger = combined
+ vserver!1!logger!access!type = file
+-vserver!1!logger!access!filename = %localstatedir%/log/cherokee.access
++vserver!1!logger!access!filename = %localstatedir%/log/cherokee/cherokee.access
+ vserver!1!logger!access!buffsize = 16384
+ 
+ vserver!1!error_writer!type = file
+-vserver!1!error_writer!filename = %localstatedir%/log/cherokee.error
++vserver!1!error_writer!filename = %localstatedir%/log/cherokee/cherokee.error
+ 
+ vserver!1!rule!1!match = default
+ vserver!1!rule!1!handler = common
