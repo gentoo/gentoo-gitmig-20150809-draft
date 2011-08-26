@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/networkmanager-openconnect
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openconnect/ChangeLog,v 1.1 2011/08/17 10:51:54 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openconnect/ChangeLog,v 1.2 2011/08/26 20:00:04 nirbheek Exp $
+
+*networkmanager-openconnect-0.9.0 (26 Aug 2011)
+
+  26 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  networkmanager-openconnect-0.8.4.ebuild,
+  +networkmanager-openconnect-0.9.0.ebuild:
+  Fix bug 380641, bump to 0.9.0, add missing libxml2 dep
 
 *networkmanager-openconnect-0.9_rc2 (17 Aug 2011)
 *networkmanager-openconnect-0.8.4 (17 Aug 2011)
