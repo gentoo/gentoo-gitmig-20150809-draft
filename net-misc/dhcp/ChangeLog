@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.181 2011/08/26 02:39:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.182 2011/08/26 10:02:13 tomka Exp $
+
+  26 Aug 2011; Thomas Kahle <tomka@gentoo.org> dhcp-4.2.2.ebuild:
+  x86 stable per bug 378799
 
 *dhcp-4.2.2 (26 Aug 2011)
 
