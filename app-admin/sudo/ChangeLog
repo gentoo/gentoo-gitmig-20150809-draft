@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.277 2011/08/25 12:08:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.278 2011/08/26 01:03:47 vapier Exp $
+
+  26 Aug 2011; Mike Frysinger <vapier@gentoo.org> sudo-1.8.2.ebuild:
+  Force system zlib usage #380491 by Michael.
 
   25 Aug 2011; Jeroen Roovers <jer@gentoo.org> sudo-1.8.1_p2.ebuild:
   Stable for HPPA (bug #379743).

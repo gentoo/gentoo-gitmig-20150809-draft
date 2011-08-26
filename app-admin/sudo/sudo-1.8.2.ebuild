@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.2.ebuild,v 1.2 2011/08/18 18:32:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.2.ebuild,v 1.3 2011/08/26 01:03:47 vapier Exp $
 
 EAPI=4
 
@@ -38,6 +38,7 @@ DEPEND="pam? ( virtual/pam )
 		dev-libs/cyrus-sasl
 	)
 	>=app-misc/editor-wrapper-3
+	sys-libs/zlib
 	virtual/editor
 	virtual/mta"
 RDEPEND="selinux? ( sec-policy/selinux-sudo )
@@ -112,7 +113,9 @@ src_configure() {
 
 	# audit: somebody got to explain me how I can test this before I
 	# enable it.. — Diego
-	econf --with-secure-path="${ROOTPATH}" \
+	econf \
+		--enable-zlib=system \
+		--with-secure-path="${ROOTPATH}" \
 		--with-editor=/usr/libexec/editor \
 		--with-env-editor \
 		$(use_with offensive insults) \
