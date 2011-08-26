@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.0.0-r1.ebuild,v 1.5 2011/08/25 21:00:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.0.0-r1.ebuild,v 1.6 2011/08/26 20:36:03 dilfridge Exp $
 
 EAPI=4
 
@@ -47,6 +47,7 @@ unset plugin
 # Now come the dependencies.
 
 COMMON_DEPEND="
+	dev-libs/libgcrypt
 	sys-devel/libtool
 	perl?					( dev-lang/perl[ithreads] ( || ( sys-devel/libperl[ithreads] >=sys-devel/libperl-5.10 ) ) )
 	collectd_plugins_apache?		( net-misc/curl )
@@ -65,7 +66,6 @@ COMMON_DEPEND="
 	collectd_plugins_memcachec?		( dev-libs/libmemcached )
 	collectd_plugins_mysql?			( >=virtual/mysql-5.0 )
 	collectd_plugins_netlink?		( >=sys-apps/iproute2-2.6.34 )
-	collectd_plugins_network?		( dev-libs/libgcrypt )
 	collectd_plugins_nginx?			( net-misc/curl )
 	collectd_plugins_notify_desktop?	( x11-libs/libnotify )
 	collectd_plugins_notify_email?		( >=net-libs/libesmtp-1.0.4 dev-libs/openssl )
