@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/gtk2-traymanager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-traymanager/ChangeLog,v 1.14 2011/03/04 16:56:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-traymanager/ChangeLog,v 1.15 2011/08/27 18:58:41 tove Exp $
+
+*gtk2-traymanager-0.50.0 (27 Aug 2011)
+
+  27 Aug 2011; Torsten Veller <tove@gentoo.org>
+  +gtk2-traymanager-0.50.0.ebuild:
+  Change version scheme
 
   04 Mar 2011; Torsten Veller <tove@gentoo.org> gtk2-traymanager-0.05.ebuild:
   Maintenance. EAPI=3. Depend on x11-libs/gtk+:2
