@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fe/fe-1.8.ebuild,v 1.4 2008/02/24 17:17:01 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fe/fe-1.8.ebuild,v 1.5 2011/08/27 19:12:54 ulm Exp $
+
+EAPI=4
 
 inherit eutils
 
@@ -17,15 +19,12 @@ DEPEND="sys-libs/ncurses
 	sendmail? ( virtual/mta )"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${PN}-1.6-nostrip.patch"
+src_prepare() {
+	epatch "${FILESDIR}/${P}-makefile.patch"
 }
 
-src_compile() {
-	econf $(use_enable sendmail) || die "econf failed"
-	emake || die "emake failed"
+src_configure() {
+	econf $(use_enable sendmail)
 }
 
 src_install() {
@@ -33,8 +32,8 @@ src_install() {
 		prefix="${D}"/usr \
 		datadir="${D}"/usr/share \
 		MANDIR="${D}"/usr/share/man \
-		install || die "emake install failed"
+		install
 
-	dodoc NEWS README || die "dodoc failed"
-	dohtml fe.html || die "dohtml failed"
+	dodoc NEWS README
+	dohtml fe.html
 }

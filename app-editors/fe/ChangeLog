@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/fe
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fe/ChangeLog,v 1.7 2008/07/28 18:25:56 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fe/ChangeLog,v 1.8 2011/08/27 19:12:54 ulm Exp $
+
+  27 Aug 2011; Ulrich Mueller <ulm@gentoo.org> -files/fe-1.6-nostrip.patch,
+  fe-1.8.ebuild, +files/fe-1.8-makefile.patch:
+  Fix parallel make issue, bug 380865. EAPI bump.
 
   28 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
