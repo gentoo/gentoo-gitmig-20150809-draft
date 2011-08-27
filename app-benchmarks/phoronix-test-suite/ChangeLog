@@ -1,6 +1,12 @@
 # ChangeLog for app-benchmarks/phoronix-test-suite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/ChangeLog,v 1.14 2011/08/27 10:00:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/ChangeLog,v 1.15 2011/08/27 10:25:48 patrick Exp $
+
+*phoronix-test-suite-3.2.1 (27 Aug 2011)
+
+  27 Aug 2011; Patrick Lauer <patrick@gentoo.org>
+  +phoronix-test-suite-3.2.1.ebuild:
+  Bump for #358083 using ebuild from aluco overlay
 
   27 Aug 2011; Patrick Lauer <patrick@gentoo.org>
   -phoronix-test-suite-2.6.1.ebuild, -phoronix-test-suite-2.8.1.ebuild,
