@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.204 2011/08/26 15:07:11 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.205 2011/08/27 20:13:12 phajdan.jr Exp $
+
+  27 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> bugzilla-3.6.6.ebuild:
+  x86 stable wrt security bug #380255
 
   26 Aug 2011; Tony Vroon <chainsaw@gentoo.org> bugzilla-3.6.6.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in
