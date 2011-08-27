@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.244 2011/08/19 19:34:55 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.245 2011/08/27 09:26:43 hwoarang Exp $
+
+  27 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
+  ibm-jdk-bin-1.5.0.12_p5.ebuild, ibm-jdk-bin-1.6.0.9_p2.ebuild:
+  Stable on amd64 wrt bug #377623
 
   19 Aug 2011; Thomas Kahle <tomka@gentoo.org> ibm-jdk-bin-1.5.0.12_p5.ebuild,
   ibm-jdk-bin-1.6.0.9_p2.ebuild:
