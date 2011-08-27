@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Algorithm-C3
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-C3/ChangeLog,v 1.4 2011/04/24 16:05:45 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-C3/ChangeLog,v 1.5 2011/08/27 16:20:17 tove Exp $
+
+*Algorithm-C3-0.80.0 (27 Aug 2011)
+
+  27 Aug 2011; Torsten Veller <tove@gentoo.org> +Algorithm-C3-0.80.0.ebuild:
+  Change version scheme
 
   24 Apr 2011; Fabian Groffen <grobian@gentoo.org> Algorithm-C3-0.08.ebuild:
   Marked ~x86-solaris, bug #296509
