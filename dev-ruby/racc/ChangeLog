@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/racc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.59 2011/07/24 17:31:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.60 2011/08/27 09:51:08 grobian Exp $
+
+  27 Aug 2011; Fabian Groffen <grobian@gentoo.org> racc-1.4.6-r1.ebuild:
+  Marked ~x64-macos
 
   24 Jul 2011; Raúl Porcel <armin76@gentoo.org> racc-1.4.6.ebuild:
   alpha/ia64/sparc stable wrt #372391

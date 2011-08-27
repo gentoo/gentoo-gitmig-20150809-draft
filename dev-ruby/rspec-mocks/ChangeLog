@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rspec-mocks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-mocks/ChangeLog,v 1.14 2011/08/02 16:38:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-mocks/ChangeLog,v 1.15 2011/08/27 09:52:31 grobian Exp $
+
+  27 Aug 2011; Fabian Groffen <grobian@gentoo.org> rspec-mocks-2.6.0.ebuild:
+  Marked ~x64-macos
 
   02 Aug 2011; Markos Chandras <hwoarang@gentoo.org> rspec-mocks-2.6.0.ebuild:
   Stable on amd64 wrt bug #369573
