@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Module-Find
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Find/ChangeLog,v 1.8 2011/08/26 14:54:34 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Find/ChangeLog,v 1.9 2011/08/27 20:08:55 phajdan.jr Exp $
+
+  27 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> Module-Find-0.10.ebuild:
+  x86 stable wrt security bug #380255
 
   26 Aug 2011; Tony Vroon <chainsaw@gentoo.org> Module-Find-0.10.ebuild:
   Marked stable on AMD64 as a dependency of www-apps/bugzilla-3.6.6 based on
