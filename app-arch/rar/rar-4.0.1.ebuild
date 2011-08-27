@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-4.0.1.ebuild,v 1.1 2011/07/02 18:07:01 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/rar-4.0.1.ebuild,v 1.2 2011/08/27 09:29:43 hwoarang Exp $
 
 DESCRIPTION="RAR compressor/uncompressor"
 HOMEPAGE="http://www.rarsoft.com/"
@@ -17,7 +17,7 @@ SRC_URI="x86? ( ${URI_x86} )
 
 LICENSE="RAR"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 ~x86"
 IUSE="all_sfx static"
 
 DEPEND="all_sfx? ( app-arch/unrar )"
