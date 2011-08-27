@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/aufs2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/ChangeLog,v 1.41 2011/08/17 07:38:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/ChangeLog,v 1.42 2011/08/27 22:06:19 jlec Exp $
+
+  27 Aug 2011; Justin Lecher <jlec@gentoo.org> aufs2-2.1_p20110817.ebuild,
+  aufs2-2.2_p20110815.ebuild:
+  Make CONFIG check for EXPORTFS matadory for USE=nfs
 
 *aufs2-2.1_p20110817 (17 Aug 2011)
 

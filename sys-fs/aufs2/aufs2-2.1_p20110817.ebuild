@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-2.1_p20110817.ebuild,v 1.1 2011/08/17 07:38:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-2.1_p20110817.ebuild,v 1.2 2011/08/27 22:06:19 jlec Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ MODULE_NAMES="aufs(misc:${S})"
 pkg_setup() {
 	CONFIG_CHECK="${CONFIG_CHECK} ~EXPERIMENTAL"
 	use inotify && CONFIG_CHECK="${CONFIG_CHECK} ~FSNOTIFY"
-	use nfs && CONFIG_CHECK="${CONFIG_CHECK} ~EXPORTFS"
+	use nfs && CONFIG_CHECK="${CONFIG_CHECK} EXPORTFS"
 	use fuse && CONFIG_CHECK="${CONFIG_CHECK} ~FUSE_FS"
 	use hfs && CONFIG_CHECK="${CONFIG_CHECK} ~HFSPLUS_FS"
 
