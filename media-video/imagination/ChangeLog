@@ -1,6 +1,13 @@
 # ChangeLog for media-video/imagination
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/imagination/ChangeLog,v 1.1 2011/06/23 09:00:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/imagination/ChangeLog,v 1.2 2011/08/27 08:56:21 hwoarang Exp $
+
+*imagination-3.0-r1 (27 Aug 2011)
+
+  27 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
+  +imagination-3.0-r1.ebuild:
+  Refactor LINGUAS logic and patch for loading plugins. Bug #380011. Thanks to
+  rj rooke <rjrooke@earthlink.net> for reporting and testing
 
 *imagination-3.0 (23 Jun 2011)
 
