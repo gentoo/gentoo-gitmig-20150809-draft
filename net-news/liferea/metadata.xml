@@ -15,19 +15,14 @@
 	based on gnome and xulrunner/webkit.
 	</longdescription>
 	<use>
-		<flag name='dbus'>
-			Enables the DBUS connector for liferea, so feeds can be managed from
-			external programs
+		<flag name='ayatana'>
+			Build in support for Ayatana notification using the libindicate plugin.
 		</flag>
 		<flag name='libnotify'>
 			Enable popup notifications
 		</flag>
 		<flag name='lua'>
 			Enable lua scripting
-		</flag>
-		<flag name='networkmanager'>
-			Enable NetworkManager integration to automatically detect
-			online/offline status
 		</flag>
 	</use>
 </pkgmetadata>
