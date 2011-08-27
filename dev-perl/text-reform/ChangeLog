@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/text-reform
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-reform/ChangeLog,v 1.21 2010/12/03 00:56:40 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/text-reform/ChangeLog,v 1.22 2011/08/27 16:39:26 tove Exp $
+
+*text-reform-1.200.0 (27 Aug 2011)
+
+  27 Aug 2011; Torsten Veller <tove@gentoo.org> +text-reform-1.200.0.ebuild:
+  Change version scheme
 
   03 Dec 2010; Michael Weber <xmw@gentoo.org> text-reform-1.11.ebuild,
   text-reform-1.20.ebuild:
