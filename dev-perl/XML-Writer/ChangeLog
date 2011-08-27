@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/XML-Writer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Writer/ChangeLog,v 1.85 2011/04/24 15:30:34 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Writer/ChangeLog,v 1.86 2011/08/27 20:55:55 tove Exp $
+
+*XML-Writer-0.612.0 (27 Aug 2011)
+
+  27 Aug 2011; Torsten Veller <tove@gentoo.org> +XML-Writer-0.612.0.ebuild:
+  Change version scheme
 
   24 Apr 2011; Fabian Groffen <grobian@gentoo.org> XML-Writer-0.612.ebuild:
   Marked ~x86-solaris, bug #296509
