@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdocker/kdocker-4.6-r1.ebuild,v 1.1 2011/06/19 09:00:04 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdocker/kdocker-4.6-r1.ebuild,v 1.2 2011/08/27 21:58:24 dilfridge Exp $
 
 EAPI=3
 inherit base qt4-r2
@@ -13,6 +13,12 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+DEPEND="
+	x11-libs/qt-core
+	x11-libs/qt-gui
+"
+RDEPEND=${DEPEND}
 
 PATCHES=( "${FILESDIR}/${P}-icon.patch" )
 
