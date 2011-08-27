@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.53 2011/08/26 15:17:35 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.54 2011/08/27 11:19:28 armin76 Exp $
+
+  27 Aug 2011; Raúl Porcel <armin76@gentoo.org> subversion-1.6.17.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #369065
 
   26 Aug 2011; Jeremy Olexa <darkside@gentoo.org> subversion-1.6.17-r4.ebuild:
   Fix a few items wrt Gentoo Prefix support, signed off by maintainer
