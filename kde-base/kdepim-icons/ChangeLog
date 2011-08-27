@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-icons
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-icons/ChangeLog,v 1.82 2011/08/10 22:09:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-icons/ChangeLog,v 1.83 2011/08/27 07:39:29 dilfridge Exp $
+
+  27 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdepim-icons-4.7.0.ebuild:
+  The configure script checks for kdepimblibs, bug 379759
 
   10 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -kdepim-icons-4.6.0.ebuild:
