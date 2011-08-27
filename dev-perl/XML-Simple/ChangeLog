@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/XML-Simple
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/ChangeLog,v 1.69 2010/01/21 12:58:20 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/ChangeLog,v 1.70 2011/08/27 21:06:56 tove Exp $
+
+*XML-Simple-2.180.0 (27 Aug 2011)
+
+  27 Aug 2011; Torsten Veller <tove@gentoo.org> +XML-Simple-2.180.0.ebuild:
+  Change version scheme
 
   21 Jan 2010; Torsten Veller <tove@gentoo.org> XML-Simple-2.18.ebuild:
   Ebuild maintenance. EAPI=2. mips -> ~mips
