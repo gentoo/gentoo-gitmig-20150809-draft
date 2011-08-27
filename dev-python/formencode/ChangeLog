@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/formencode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/ChangeLog,v 1.26 2011/06/23 14:53:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/ChangeLog,v 1.27 2011/08/27 21:17:01 neurogeek Exp $
+
+  27 Aug 2011; Jesus Rivero <neurogeek@gentoo.org> formencode-1.2.4.ebuild:
+  Change to generic license
 
   23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> -formencode-1.2.2.ebuild:
   Remove old ebuilds. Requested by Arfrever

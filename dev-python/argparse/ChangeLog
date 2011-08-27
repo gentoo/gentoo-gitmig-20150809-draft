@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/argparse
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.27 2011/06/26 08:39:38 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/argparse/ChangeLog,v 1.28 2011/08/27 21:14:31 neurogeek Exp $
+
+  27 Aug 2011; Jesus Rivero <neurogeek@gentoo.org> argparse-1.2.1.ebuild:
+  Change to generic license
 
   26 Jun 2011; Naohiro Aota <naota@gentoo.org> argparse-1.2.1.ebuild:
   Add ~x86-fbsd, bug #346005
