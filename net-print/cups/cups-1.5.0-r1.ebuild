@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.0-r1.ebuild,v 1.1 2011/08/25 01:02:49 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.0-r1.ebuild,v 1.2 2011/08/27 10:46:02 dilfridge Exp $
 
 #
 # See http://git.overlays.gentoo.org/gitweb/?p=dev/dilfridge.git;a=blob;f=net-print/cups/notes.txt;hb=HEAD
@@ -115,7 +115,6 @@ pkg_setup() {
 				eerror "        USB support  --->"
 				eerror "            [ ] USB Printer support"
 				eerror "Alternatively, just disable the usb useflag for cups (your printer will still work)."
-				die "USB_PRINTER module enabled"
 			fi
 		else
 			#here we should warn user that he should enable it so he can print
@@ -142,7 +141,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.4.4-php-destdir.patch"
 	epatch "${FILESDIR}/${PN}-1.4.4-perl-includes.patch"
 	# security fixes
-	epatch "${FILESDIR}/${PN}-1.4.8-CVE-2011-2896.patch"
+	epatch "${FILESDIR}/${PN}-1.4.8-CVE-2011-3170.patch"
 
 	AT_M4DIR=config-scripts eaclocal
 	eautoconf

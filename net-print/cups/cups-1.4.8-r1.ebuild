@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.8-r1.ebuild,v 1.1 2011/08/25 01:02:49 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.8-r1.ebuild,v 1.2 2011/08/27 10:46:02 dilfridge Exp $
 
 EAPI=3
 
@@ -111,7 +111,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.4.6-force-gnutls.patch"
 	epatch "${FILESDIR}/${PN}-1.4.6-serialize-gnutls.patch"
 	# security fixes
-	epatch "${FILESDIR}/${PN}-1.4.8-CVE-2011-2896.patch"
+	epatch "${FILESDIR}/${PN}-1.4.8-CVE-2011-3170.patch"
 
 	AT_M4DIR=config-scripts eaclocal
 	eautoconf
