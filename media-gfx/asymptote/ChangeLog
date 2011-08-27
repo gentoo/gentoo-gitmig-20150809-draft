@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/asymptote
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.87 2011/06/20 18:11:24 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.88 2011/08/27 07:10:47 grozin Exp $
+
+  27 Aug 2011; Andrey Grozin <grozin@gentoo.org> asymptote-2.13.ebuild:
+  Fix bug #380251
 
 *asymptote-2.13 (20 Jun 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-2.13.ebuild,v 1.1 2011/06/20 18:11:24 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-2.13.ebuild,v 1.2 2011/08/27 07:10:47 grozin Exp $
 EAPI=3
 SUPPORT_PYTHON_ABIS=1
 PYTHON_DEPEND="python? 2"
@@ -52,6 +52,7 @@ src_configure() {
 	# for the CPPFLAGS see
 	# http://sourceforge.net/forum/forum.php?thread_id=1683277&forum_id=409349
 	econf CPPFLAGS=-DHAVE_SYS_TYPES_H \
+		CFLAGS="${CXXFLAGS}" \
 		--disable-gc-debug \
 		$(use_enable boehm-gc gc system) \
 		$(use_enable fftw) \
