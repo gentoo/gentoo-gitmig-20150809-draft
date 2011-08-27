@@ -1,6 +1,15 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.158 2011/08/21 04:33:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.159 2011/08/27 11:29:52 scarabeus Exp $
+
+*grub-1.99 (28 Aug 2011)
+
+  28 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/grub-1.96-genkernel.patch, -grub-1.98.ebuild, -grub-1.99_rc1.ebuild,
+  +grub-1.99.ebuild, -files/grub-1.99-genkernel.patch, grub-9999.ebuild,
+  +files/grub.default, -files/defaults, metadata.xml:
+  Bump to grub 1.99. Drop older grub2 versions. Take maintainership of grub:2
+  series.
 
   21 Aug 2011; Mike Frysinger <vapier@gentoo.org> grub-1.98.ebuild,
   grub-1.99_rc1.ebuild, grub-9999.ebuild:
