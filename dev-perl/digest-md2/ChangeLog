@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/digest-md2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-md2/ChangeLog,v 1.16 2011/04/24 15:54:24 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-md2/ChangeLog,v 1.17 2011/08/27 19:43:42 tove Exp $
+
+*digest-md2-2.30.0 (27 Aug 2011)
+
+  27 Aug 2011; Torsten Veller <tove@gentoo.org> +digest-md2-2.30.0.ebuild:
+  Change version scheme
 
   24 Apr 2011; Fabian Groffen <grobian@gentoo.org> digest-md2-2.03.ebuild:
   Marked ~x86-solaris, bug #296509
