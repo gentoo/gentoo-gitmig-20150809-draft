@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.863 2011/08/26 14:32:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.864 2011/08/27 11:29:59 armin76 Exp $
+
+  27 Aug 2011; Raúl Porcel <armin76@gentoo.org> portage-2.1.10.11.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc/x86 stable wrt #380677
 
   26 Aug 2011; Markos Chandras <hwoarang@gentoo.org> portage-2.1.10.11.ebuild:
   Stable on amd64 wrt bug #380677
