@@ -1,0 +1,39 @@
+diff -urN kcm-grub2-0.5.0/src/helper/helper.cpp kcm-grub2-0.5.0.new/src/helper/helper.cpp
+--- kcm-grub2-0.5.0/src/helper/helper.cpp	2011-05-09 16:17:59.000000000 +0200
++++ kcm-grub2-0.5.0.new/src/helper/helper.cpp	2011-06-29 11:23:14.321387301 +0200
+@@ -67,7 +67,7 @@
+     }
+ 
+     KProcess grub_install;
+-    grub_install.setShellCommand(QString("grub-install --root-directory=%1 %2").arg(KShell::quoteArg(mountPoint), KShell::quoteArg(partition.remove(QRegExp("\\d+")))));
++    grub_install.setShellCommand(QString("grub2-install --root-directory=%1 %2").arg(KShell::quoteArg(mountPoint), KShell::quoteArg(partition.remove(QRegExp("\\d+")))));
+     grub_install.setOutputChannelMode(KProcess::MergedChannels);
+     if (grub_install.execute() != 0) {
+         reply = ActionReply::HelperErrorReply;
+@@ -103,7 +103,7 @@
+     QStringList grubPartitions;
+     HelperSupport::progressStep(0);
+     for (int i = 0; i < mountPoints.size(); i++) {
+-        grub_probe.setShellCommand(QString("grub-probe -t drive %1").arg(KShell::quoteArg(mountPoints.at(i))));
++        grub_probe.setShellCommand(QString("grub2-probe -t drive %1").arg(KShell::quoteArg(mountPoints.at(i))));
+         grub_probe.setOutputChannelMode(KProcess::MergedChannels);
+         if (grub_probe.execute() != 0) {
+             reply = ActionReply::HelperErrorReply;
+@@ -175,7 +175,7 @@
+     }
+ 
+     KProcess grub_mkconfig;
+-    grub_mkconfig.setShellCommand(QString("grub-mkconfig -o %1").arg(KShell::quoteArg(menuFileName)));
++    grub_mkconfig.setShellCommand(QString("grub2-mkconfig -o %1").arg(KShell::quoteArg(menuFileName)));
+     grub_mkconfig.setOutputChannelMode(KProcess::MergedChannels);
+     if (grub_mkconfig.execute() != 0) {
+         reply = ActionReply::HelperErrorReply;
+@@ -184,7 +184,7 @@
+     }
+ 
+     KProcess grub_set_default;
+-    grub_set_default.setShellCommand(QString("grub-set-default %1").arg(defaultEntry));
++    grub_set_default.setShellCommand(QString("grub2-set-default %1").arg(defaultEntry));
+     grub_set_default.setOutputChannelMode(KProcess::MergedChannels);
+     if (grub_set_default.execute() != 0) {
+         reply = ActionReply::HelperErrorReply;
