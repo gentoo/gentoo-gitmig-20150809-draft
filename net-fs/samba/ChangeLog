@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.486 2011/08/25 20:45:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.487 2011/08/27 11:27:07 armin76 Exp $
+
+  27 Aug 2011; Raúl Porcel <armin76@gentoo.org> samba-3.5.11.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #377909
 
   25 Aug 2011; Markus Meier <maekke@gentoo.org> samba-3.5.11.ebuild:
   arm stable, bug #377909
