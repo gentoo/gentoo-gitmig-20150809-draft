@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.7.6.ebuild,v 1.1 2011/08/27 16:31:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.7.6.ebuild,v 1.2 2011/08/27 16:32:39 scarabeus Exp $
 
 EAPI=4
 
@@ -43,7 +43,7 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		--enable-sm
 		--disable-schemas-install
-		$(use_enable ayatana libindicate) 
+		$(use_enable ayatana libindicate)
 		$(use_enable libnotify)"
 }
 

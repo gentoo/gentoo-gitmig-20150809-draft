@@ -1,6 +1,9 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.208 2011/08/27 16:31:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.209 2011/08/27 16:32:39 scarabeus Exp $
+
+  28 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> liferea-1.7.6.ebuild:
+  Trailing whitespace fix.
 
 *liferea-1.7.6 (28 Aug 2011)
 
