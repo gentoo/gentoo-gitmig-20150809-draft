@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.180 2011/08/19 16:22:01 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.181 2011/08/27 17:38:06 armin76 Exp $
+
+  27 Aug 2011; Raúl Porcel <armin76@gentoo.org> nagios-core-3.3.1.ebuild:
+  alpha/sparc stable wrt #371302
 
   19 Aug 2011; Thomas Kahle <tomka@gentoo.org> nagios-core-3.3.1.ebuild:
   x86 stable per bug 371302
