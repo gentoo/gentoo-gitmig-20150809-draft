@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.2.2.ebuild,v 1.2 2011/08/26 10:02:13 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.2.2.ebuild,v 1.3 2011/08/27 04:58:56 vapier Exp $
 
 EAPI="2"
 
@@ -27,6 +27,7 @@ DEPEND="selinux? ( sec-policy/selinux-dhcp )
 		net-nds/openldap
 		ssl? ( dev-libs/openssl )
 	)"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -104,24 +105,21 @@ src_prepare() {
 
 	# make the bind build work
 	binddir=${S}/bind
-	cat <<-EOF > "${binddir}"/bindvar.tmp
+	cd "${binddir}" || die
+	cat <<-EOF > bindvar.tmp
 	binddir=${binddir}
 	GMAKE=${MAKE:-gmake}
 	EOF
-	sed -i '/^all:/s,$,\nfoo:,' "${binddir}"/Makefile || die
-	# since the bind source is dynamic, sed it rather than patch
-	sed -i -r \
-		-e '/CC.*ALL_CFLAGS/{
-			s:(CC):BUILD_\1:;
-			s:ALL(_CFLAGS.):BUILD\1 $(CINCLUDES):;
-			s:(LDFLAGS):BUILD_\1:
-		}' \
-		-e '/BUILD_CC/s:ISC_INCLUDES:CINCLUDES:' \
-		"${binddir}"/bind-*/lib/export/dns/Makefile.in || die
+	epatch "${FILESDIR}"/${PN}-4.2.2-bind-disable.patch
+	cd bind-*/
+	epatch "${FILESDIR}"/${PN}-4.2.2-bind-parallel-build.patch #380717
+	epatch "${FILESDIR}"/${PN}-4.2.2-bind-build-flags.patch
 }
 
 src_configure() {
-	tc-export BUILD_CC
+	# bind defaults to stupid `/usr/bin/ar`
+	tc-export AR BUILD_CC
+	export ac_cv_path_AR=${AR}
 
 	econf \
 		--enable-paranoia \
@@ -141,7 +139,9 @@ src_configure() {
 
 	# configure local bind cruft
 	cd bind/bind-*/ || die
-	eval econf $(sed -n '/ [.].configure /{s:^[^-]*::;s:>.*::;p}' ../Makefile)
+	eval econf \
+		$(sed -n '/ [.].configure /{s:^[^-]*::;s:>.*::;p}' ../Makefile) \
+		--without-make-clean
 }
 
 src_compile() {

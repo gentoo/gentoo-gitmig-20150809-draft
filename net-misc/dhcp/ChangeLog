@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.182 2011/08/26 10:02:13 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.183 2011/08/27 04:58:56 vapier Exp $
+
+  27 Aug 2011; Mike Frysinger <vapier@gentoo.org> dhcp-4.2.2.ebuild,
+  +files/dhcp-4.2.2-bind-build-flags.patch,
+  +files/dhcp-4.2.2-bind-disable.patch,
+  +files/dhcp-4.2.2-bind-parallel-build.patch:
+  Fix parallel build #380717 by Cédric Jeanneret, and clean up bind tweaks
+  with patches.
 
   26 Aug 2011; Thomas Kahle <tomka@gentoo.org> dhcp-4.2.2.ebuild:
   x86 stable per bug 378799
