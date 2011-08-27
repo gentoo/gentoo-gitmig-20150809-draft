@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5656 2011/08/27 11:13:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5657 2011/08/27 16:38:32 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Mask kde-misc/kcm_gtk for removal
 
   28 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
   Add p.mask entry for grub-1.99.

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13008 2011/08/27 11:13:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13009 2011/08/27 16:38:32 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas K. Hüttel <dilfridge@gentoo.org> (27 Aug 2011)
+# Masked for removal. Dead project since 2009, does not work well with 
+# kde-4.6. Use kde-misc/kcm-gtk-config instead.
+kde-misc/kcm_gtk
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (28 Aug 2011)
 # Masked until documentation guys consolidate the guide and approve
