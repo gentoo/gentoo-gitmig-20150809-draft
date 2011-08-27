@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/man-pages
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.157 2011/08/24 19:16:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.158 2011/08/27 16:11:20 armin76 Exp $
+
+  27 Aug 2011; Raúl Porcel <armin76@gentoo.org> man-pages-3.32.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #379917
 
   24 Aug 2011; Markus Meier <maekke@gentoo.org> man-pages-3.32.ebuild:
   x86 stable, bug #379917
