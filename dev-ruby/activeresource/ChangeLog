@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/activeresource
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.93 2011/08/24 19:19:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.94 2011/08/27 19:08:20 armin76 Exp $
+
+  27 Aug 2011; Raúl Porcel <armin76@gentoo.org> activeresource-2.3.14.ebuild:
+  ia64/sparc stable wrt #379511
 
   24 Aug 2011; Markus Meier <maekke@gentoo.org> activeresource-2.3.14.ebuild:
   x86 stable, bug #379511

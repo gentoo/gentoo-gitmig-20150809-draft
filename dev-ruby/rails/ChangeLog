@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.202 2011/08/24 19:20:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.203 2011/08/27 19:09:48 armin76 Exp $
+
+  27 Aug 2011; Raúl Porcel <armin76@gentoo.org> rails-2.3.14.ebuild:
+  ia64/sparc stable wrt #379511
 
   24 Aug 2011; Markus Meier <maekke@gentoo.org> rails-2.3.14.ebuild:
   x86 stable, bug #379511
