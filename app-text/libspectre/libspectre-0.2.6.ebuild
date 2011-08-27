@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/libspectre-0.2.6.ebuild,v 1.10 2011/05/14 12:48:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/libspectre-0.2.6.ebuild,v 1.11 2011/08/27 20:06:21 dilfridge Exp $
 
 EAPI=3
 
@@ -53,4 +53,6 @@ src_install() {
 	if use doc; then
 		dohtml -r "${S}"/doc/html/* || die "dohtml failed"
 	fi
+
+	find "${D}" -name "*.la" -exec rm -v {} + || die
 }
