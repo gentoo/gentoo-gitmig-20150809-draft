@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/gtk2-fu
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-fu/ChangeLog,v 1.29 2010/11/03 00:27:33 jmbsvicetto Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-fu/ChangeLog,v 1.30 2011/08/27 19:18:58 tove Exp $
+
+*gtk2-fu-0.110.0 (27 Aug 2011)
+
+  27 Aug 2011; Torsten Veller <tove@gentoo.org> +gtk2-fu-0.110.0.ebuild:
+  Change version scheme
 
   03 Nov 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
