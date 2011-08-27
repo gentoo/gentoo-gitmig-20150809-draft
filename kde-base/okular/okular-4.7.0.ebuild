@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/okular-4.7.0.ebuild,v 1.1 2011/07/27 14:04:27 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/okular-4.7.0.ebuild,v 1.2 2011/08/27 07:52:14 dilfridge Exp $
 
 EAPI=4
 
@@ -14,6 +14,7 @@ IUSE="chm crypt debug djvu ebook +jpeg +ps +pdf +tiff"
 
 DEPEND="
 	media-libs/freetype
+	media-libs/qimageblitz
 	sys-libs/zlib
 	chm? ( dev-libs/chmlib )
 	crypt? ( app-crypt/qca:2 )
