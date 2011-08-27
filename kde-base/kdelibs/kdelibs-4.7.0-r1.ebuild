@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.7.0-r1.ebuild,v 1.1 2011/08/07 16:54:15 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.7.0-r1.ebuild,v 1.2 2011/08/27 12:11:20 dilfridge Exp $
 
 EAPI=4
 
@@ -30,6 +30,8 @@ RESTRICT="test"
 COMMONDEPEND="
 	app-crypt/qca:2
 	>=app-misc/strigi-0.6.3
+	app-text/docbook-xml-dtd:4.2
+	app-text/docbook-xsl-stylesheets
 	>=dev-libs/libattica-0.1.90
 	>=dev-libs/libdbusmenu-qt-0.3.2
 	dev-libs/libpcre[unicode]
@@ -87,8 +89,6 @@ COMMONDEPEND="
 	)
 "
 DEPEND="${COMMONDEPEND}
-	app-text/docbook-xml-dtd:4.2
-	app-text/docbook-xsl-stylesheets
 	doc? ( app-doc/doxygen )
 	nls? ( virtual/libintl )
 "
