@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/ctdb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.22 2011/08/25 20:43:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.23 2011/08/27 11:25:17 armin76 Exp $
+
+  27 Aug 2011; Raúl Porcel <armin76@gentoo.org> ctdb-1.0.114_p1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #377909
 
   25 Aug 2011; Markus Meier <maekke@gentoo.org> ctdb-1.0.114_p1.ebuild:
   arm stable, bug #377909
