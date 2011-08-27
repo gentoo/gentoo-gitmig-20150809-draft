@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.90 2011/08/04 10:33:07 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.91 2011/08/27 05:03:22 grozin Exp $
+
+  27 Aug 2011; Andrey Grozin <grozin@gentoo.org> maxima-5.25.0.ebuild,
+  +files/maxima-ecl-ldflags.patch:
+  Fixed LDFLAGS handling in ecl (bug #378195), thanks to jez austin
+  <jezaustin@gmail.com>
 
 *maxima-5.25.0 (04 Aug 2011)
 
