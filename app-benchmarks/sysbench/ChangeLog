@@ -1,6 +1,11 @@
 # ChangeLog for app-benchmarks/sysbench
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/sysbench/ChangeLog,v 1.3 2011/08/27 08:54:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/sysbench/ChangeLog,v 1.4 2011/08/27 09:07:03 patrick Exp $
+
+*sysbench-0.4.12 (27 Aug 2011)
+
+  27 Aug 2011; Patrick Lauer <patrick@gentoo.org> +sysbench-0.4.12.ebuild:
+  Bump for #377587
 
   27 Aug 2011; Patrick Lauer <patrick@gentoo.org> sysbench-0.4.10.ebuild:
   Adding aio useflag to properly handle automagic depend, bug #380353
