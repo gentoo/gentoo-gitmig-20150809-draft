@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.106 2011/07/23 13:36:29 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.107 2011/08/27 23:18:48 hwoarang Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -186,5 +186,5 @@ www-plugins/nspluginwrapper
 www-plugins/google-talkplugin
 
 # AMD64 Team; <amd64@gentoo.org>
-# grub is not available on no-multilib-profiles; use sys-boot/grub-static
-sys-boot/grub
+# grub-1 is not available on no-multilib-profiles
+<sys-boot/grub-1.99
