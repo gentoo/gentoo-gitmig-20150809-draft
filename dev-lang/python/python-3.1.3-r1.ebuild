@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.3-r1.ebuild,v 1.8 2011/05/17 15:14:43 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.3-r1.ebuild,v 1.9 2011/08/27 21:09:43 neurogeek Exp $
 
 EAPI="3"
 WANT_AUTOMAKE="none"
@@ -29,7 +29,7 @@ else
 		mirror://gentoo/python-gentoo-patches-${MY_PV}$([[ "${PATCHSET_REVISION}" != "0" ]] && echo "-r${PATCHSET_REVISION}").tar.bz2"
 fi
 
-LICENSE="PSF-2.2"
+LICENSE="PSF-2"
 SLOT="3.1"
 PYTHON_ABI="${SLOT}"
 KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd"
