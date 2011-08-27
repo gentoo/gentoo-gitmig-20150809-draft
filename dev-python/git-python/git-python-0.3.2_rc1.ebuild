@@ -1,15 +1,17 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/git-python/git-python-0.3.2_rc1.ebuild,v 1.1 2011/08/27 14:24:18 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/git-python/git-python-0.3.2_rc1.ebuild,v 1.2 2011/08/27 21:00:30 neurogeek Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+#Tests dont make sense without a git repo
+#DISTUTILS_SRC_TESTS="nosetests"
 
 inherit distutils
 
 MY_PN="GitPython"
-MY_PV=${PV/_rc/.RC}
+MY_PV="${PV/_rc/.RC}"
 MY_P="${MY_PN}-${MY_PV}"
 
 DESCRIPTION="GitPython is a python library used to interact with Git repositories."
@@ -23,6 +25,7 @@ IUSE=""
 
 RDEPEND="dev-vcs/git"
 DEPEND="${RDEPEND}
+	>=dev-python/gitdb-0.5.4
 	dev-python/setuptools"
 RESTRICT_PYTHON_ABIS="3.*"
 
