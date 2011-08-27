@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/nokogiri-1.5.0.ebuild,v 1.1 2011/07/09 10:15:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/nokogiri-1.5.0.ebuild,v 1.2 2011/08/27 09:43:35 grobian Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ DESCRIPTION="Nokogiri is an HTML, XML, SAX, and Reader parser."
 HOMEPAGE="http://nokogiri.rubyforge.org/"
 LICENSE="MIT"
 
-KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
 SLOT="0"
 IUSE=""
 
@@ -49,7 +49,16 @@ all_ruby_prepare() {
 }
 
 each_ruby_configure() {
-	${RUBY} -Cext/${PN} extconf.rb || die "extconf.rb failed"
+	${RUBY} -Cext/${PN} extconf.rb \
+		--with-zlib-include="${EPREFIX}"/usr/include \
+		--with-zlib-lib="${EPREFIX}"/$(get_libdir) \
+		--with-iconv-include="${EPREFIX}"/usr/include \
+		--with-iconv-lib="${EPREFIX}"/$(get_libdir) \
+		--with-xml2-include="${EPREFIX}"/usr/include/libxml2 \
+		--with-xml2-lib="${EPREFIX}"/usr/$(get_libdir) \
+		--with-xslt-dir="${EPREFIX}"/usr \
+		--with-iconvlib=iconv \
+		|| die "extconf.rb failed"
 }
 
 each_ruby_compile() {
