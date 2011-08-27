@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.168 2011/08/24 19:14:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.169 2011/08/27 18:51:30 armin76 Exp $
+
+  27 Aug 2011; Raúl Porcel <armin76@gentoo.org> activerecord-2.3.14.ebuild:
+  ia64/sparc stable wrt #379511
 
   24 Aug 2011; Markus Meier <maekke@gentoo.org> activerecord-2.3.14.ebuild:
   x86 stable, bug #379511
