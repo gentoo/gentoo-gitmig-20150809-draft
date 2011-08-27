@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/httperf/httperf-0.9.0.ebuild,v 1.1 2010/01/15 23:24:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/httperf/httperf-0.9.0-r1.ebuild,v 1.1 2011/08/27 09:01:34 patrick Exp $
 
 EAPI=2
 
@@ -13,10 +13,10 @@ SRC_URI="http://httperf.googlecode.com/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~mips ~sparc ~x86"
-IUSE="debug ssl"
+IUSE="debug"
 
-DEPEND=""
-RDEPEND=""
+DEPEND="dev-libs/openssl"
+RDEPEND="dev-libs/openssl"
 
 src_prepare() {
 	eautoconf || die "autoconf failed"
@@ -24,7 +24,6 @@ src_prepare() {
 src_configure() {
 	econf --bindir=/usr/bin \
 		$(use_enable debug) \
-		$(use_enable ssl) \
 		|| die "econf failed"
 }
 src_compile() {

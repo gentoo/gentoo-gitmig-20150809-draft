@@ -1,6 +1,12 @@
 # ChangeLog for app-benchmarks/httperf
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/httperf/ChangeLog,v 1.13 2010/01/15 23:24:06 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/httperf/ChangeLog,v 1.14 2011/08/27 09:01:34 patrick Exp $
+
+*httperf-0.9.0-r1 (27 Aug 2011)
+
+  27 Aug 2011; Patrick Lauer <patrick@gentoo.org> -httperf-0.9.0.ebuild,
+  +httperf-0.9.0-r1.ebuild:
+  Fixing ssl support for #380347
 
 *httperf-0.9.0 (15 Jan 2010)
 
