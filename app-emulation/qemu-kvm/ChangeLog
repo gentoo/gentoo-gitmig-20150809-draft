@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.66 2011/08/14 13:40:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.67 2011/08/27 18:53:13 phajdan.jr Exp $
+
+  27 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  qemu-kvm-0.14.1-r2.ebuild:
+  x86 stable wrt security bug #364889
 
   14 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org> qemu-kvm-0.15.0.ebuild:
   Fix build with nss enabled and --as-needed. Closes bug #379149.

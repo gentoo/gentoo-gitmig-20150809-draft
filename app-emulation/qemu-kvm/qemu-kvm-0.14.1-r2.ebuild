@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.14.1-r2.ebuild,v 1.2 2011/07/22 14:57:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.14.1-r2.ebuild,v 1.3 2011/08/27 18:53:13 phajdan.jr Exp $
 
 BACKPORTS=2
 
@@ -19,7 +19,7 @@ if [[ ${PV} = *9999* ]]; then
 else
 	SRC_URI="mirror://sourceforge/kvm/${PN}/${P}.tar.gz
 	${BACKPORTS:+http://dev.gentoo.org/~cardoe/distfiles/${P}-backports-${BACKPORTS}.tar.bz2}"
-	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+	KEYWORDS="~amd64 ~ppc ~ppc64 x86"
 fi
 
 DESCRIPTION="QEMU + Kernel-based Virtual Machine userland tools"
