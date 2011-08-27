@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-4.0.ebuild,v 1.4 2011/08/23 18:54:11 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-4.0.ebuild,v 1.5 2011/08/27 17:53:40 spock Exp $
 
 EAPI=2
 
@@ -108,7 +108,10 @@ EOF
 		else
 			dobin ${target}/bin/assistant
 			insinto ${DEST}/${target}/bin
-			doins ${target}/bin/*.so*
+			doins ${target}/bin/*.so.?.?.?
+			for f in ${target}/bin/*.so.?; do
+				dosym $(readlink ${f}) ${DEST}/${f}
+			done
 			insinto ${DEST}/${target}/bin/sqldrivers
 			doins ${target}/bin/sqldrivers/*
 
