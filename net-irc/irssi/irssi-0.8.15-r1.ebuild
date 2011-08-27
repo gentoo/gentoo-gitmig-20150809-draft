@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.15-r1.ebuild,v 1.1 2011/06/24 05:02:45 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.15-r1.ebuild,v 1.2 2011/08/27 17:26:48 grobian Exp $
 
 EAPI=3
 
-inherit perl-module
+inherit perl-module libtool
 
 # Keep for _rc compability
 MY_P="${P/_/-}"
@@ -33,6 +33,7 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epunt_cxx
+	elibtoolize  # for Darwin bundle
 }
 
 src_configure() {

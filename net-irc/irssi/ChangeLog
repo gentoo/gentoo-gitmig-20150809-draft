@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.166 2011/07/22 02:07:04 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.167 2011/08/27 17:26:48 grobian Exp $
+
+  27 Aug 2011; Fabian Groffen <grobian@gentoo.org> irssi-0.8.15-r1.ebuild:
+  Run elibtoolize for modules on Darwin, bug #373129
 
 *irssi-9999 (22 Jul 2011)
 
