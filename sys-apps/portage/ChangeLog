@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.865 2011/08/27 17:42:55 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.866 2011/08/27 19:23:49 jer Exp $
+
+  27 Aug 2011; Jeroen Roovers <jer@gentoo.org> portage-2.1.10.11.ebuild:
+  Stable for HPPA (bug #380677).
 
   27 Aug 2011; Zac Medico <zmedico@gentoo.org> portage-2.1.10.11.ebuild:
   Initialize /var/log/portage permissions for bug #378451 and bug #377177.
