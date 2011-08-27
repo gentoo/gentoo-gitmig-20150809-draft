@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/smaragd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/smaragd/ChangeLog,v 1.1 2011/08/15 13:27:50 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/smaragd/ChangeLog,v 1.2 2011/08/27 20:16:53 dilfridge Exp $
+
+*smaragd-0.0.7 (27 Aug 2011)
+
+  27 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> +smaragd-0.0.7.ebuild:
+  Version bump
 
 *smaragd-0.0.5 (15 Aug 2011)
 
