@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.444 2011/08/27 17:49:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.445 2011/08/27 18:06:05 aballier Exp $
+
+  27 Aug 2011; Alexis Ballier <aballier@gentoo.org> -ffmpeg-0.7_rc1.ebuild:
+  remove old
 
   27 Aug 2011; Raúl Porcel <armin76@gentoo.org> ffmpeg-0.7.3.ebuild:
   alpha/ia64/sparc stable wrt #378801
