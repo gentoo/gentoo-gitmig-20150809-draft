@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.68 2011/08/25 17:46:54 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.69 2011/08/27 06:55:45 mgorny Exp $
 
 # Please report bugs or other requests at bugs.gentoo.org and assign to
 # licenses@gentoo.org
@@ -9,7 +9,7 @@
 # http://www.gentoo.org/proj/en/glep/glep-0023.html
 
 # http://www.fsf.org/licensing/licenses/
-GPL-COMPATIBLE AGPL-3 Apache-2.0 Artistic-2 as-is Boost-1.0 BSD BSD-2 CeCILL-2 Clarified-Artistic DB FTL GPL-1 GPL-2 GPL-2-with-font-exception GPL-2-with-Linden-Lab-FLOSS-exception GPL-2-with-MySQL-FLOSS-exception GPL-3 GPL-3-with-font-exception ISC LGPL-2 LGPL-2.1 LGPL-3 MIT OPENLDAP OracleDB PSF-2 PSF-2.2 PSF-2.3 PSF-2.4 public-domain PYTHON Ruby SGI-B-2.0 tanuki-community unicode UoI-NCSA vim W3C WTFPL-2 ZLIB ZPL
+GPL-COMPATIBLE AGPL-3 Apache-2.0 Artistic-2 as-is Boost-1.0 BSD BSD-2 CeCILL-2 Clarified-Artistic DB FTL GPL-1 GPL-2 GPL-2-with-font-exception GPL-2-with-Linden-Lab-FLOSS-exception GPL-2-with-MySQL-FLOSS-exception GPL-3 GPL-3-with-font-exception ISC LGPL-2 LGPL-2.1 LGPL-3 MIT OPENLDAP OracleDB PSF-2 PSF-2.2 PSF-2.3 PSF-2.4 public-domain PYTHON Ruby SGI-B-2.0 tanuki-community unicode UoI-NCSA vim W3C WTFPL-2 ZLIB ZPL zpaq
 
 FSF-APPROVED @GPL-COMPATIBLE AFL-2.0 AFL-2.1 AFL-3.0 Apache-1.1 APSL-2 BitTorrent BSD-4 CDDL CNRI CPL-1.0 EPL-1.0 IBM LPPL-1.2 MPL-1.0 MPL-1.1 Ms-PL NPL-1.1 openssl OSL-1.1 OSL-2.0 OSL-2.1 PHP-3.01 QPL QPL-1.0 SPL
 
