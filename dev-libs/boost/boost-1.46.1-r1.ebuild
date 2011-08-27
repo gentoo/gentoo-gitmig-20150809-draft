@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.46.1.ebuild,v 1.8 2011/08/22 13:11:58 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.46.1-r1.ebuild,v 1.1 2011/08/27 22:45:42 hwoarang Exp $
 
 EAPI="2"
 
@@ -156,6 +156,7 @@ __EOF__
 	# for more infomration.
 
 	use icu && OPTIONS="-sICU_PATH=/usr"
+	use icu || OPTIONS="--disable-icu"
 	use mpi || OPTIONS="${OPTIONS} --without-mpi"
 	use python || OPTIONS="${OPTIONS} --without-python"
 
