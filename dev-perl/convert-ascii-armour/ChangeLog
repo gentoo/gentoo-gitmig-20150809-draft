@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/convert-ascii-armour
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-ascii-armour/ChangeLog,v 1.23 2011/04/24 15:52:07 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/convert-ascii-armour/ChangeLog,v 1.24 2011/08/27 20:27:08 tove Exp $
+
+*convert-ascii-armour-1.400.0 (27 Aug 2011)
+
+  27 Aug 2011; Torsten Veller <tove@gentoo.org>
+  +convert-ascii-armour-1.400.0.ebuild:
+  Change version scheme
 
   24 Apr 2011; Fabian Groffen <grobian@gentoo.org>
   convert-ascii-armour-1.4.ebuild:

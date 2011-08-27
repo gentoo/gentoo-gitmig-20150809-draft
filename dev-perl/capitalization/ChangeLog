@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/capitalization
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/capitalization/ChangeLog,v 1.15 2010/01/29 12:35:01 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/capitalization/ChangeLog,v 1.16 2011/08/27 20:34:50 tove Exp $
+
+*capitalization-0.30.0 (27 Aug 2011)
+
+  27 Aug 2011; Torsten Veller <tove@gentoo.org> +capitalization-0.30.0.ebuild:
+  Change version scheme
 
   29 Jan 2010; Torsten Veller <tove@gentoo.org> capitalization-0.03.ebuild:
   Fix LICENSE: same terms as perl (#301969). Maintenance

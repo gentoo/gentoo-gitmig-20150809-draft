@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/YAML-Syck
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Syck/ChangeLog,v 1.35 2011/07/07 23:30:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-Syck/ChangeLog,v 1.36 2011/08/27 20:38:45 tove Exp $
+
+*YAML-Syck-1.170.0 (27 Aug 2011)
+
+  27 Aug 2011; Torsten Veller <tove@gentoo.org> +YAML-Syck-1.170.0.ebuild:
+  Change version scheme
 
   07 Jul 2011; Alexis Ballier <aballier@gentoo.org> YAML-Syck-1.17.ebuild:
   keyword ~x86-fbsd, bug #341969
