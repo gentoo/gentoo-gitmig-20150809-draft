@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Authen-Libwrap
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-Libwrap/ChangeLog,v 1.1 2011/08/28 12:51:25 hwoarang Exp $
+
+*Authen-Libwrap-0.22 (28 Aug 2011)
+
+  28 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
+  +Authen-Libwrap-0.22.ebuild, +metadata.xml:
+  Initial commit. Bug #380931. Thanks to PhobosK <phobosk@fastmail.fm> for the
+  ebuild
+
