@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.159 2011/08/27 11:29:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.160 2011/08/28 10:30:23 scarabeus Exp $
+
+  28 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> grub-1.99.ebuild,
+  grub-9999.ebuild, metadata.xml:
+  Add efiemu useflag for grub2. Fixes bug #380863.
 
 *grub-1.99 (28 Aug 2011)
 

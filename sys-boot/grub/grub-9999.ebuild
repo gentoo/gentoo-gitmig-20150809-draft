@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.37 2011/08/27 11:29:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.38 2011/08/28 10:30:23 scarabeus Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ HOMEPAGE="http://www.gnu.org/software/grub/"
 LICENSE="GPL-3"
 SLOT="2"
 [[ ${PV} != "9999" ]] && KEYWORDS="~amd64 ~mips ~x86"
-IUSE="custom-cflags debug device-mapper nls static sdl truetype"
+IUSE="custom-cflags debug device-mapper efiemu nls static sdl truetype"
 
 GRUB_PLATFORMS="coreboot efi-32 efi-64 emu ieee1275 multiboot pc qemu qemu-mips loongson"
 # everywhere:
@@ -134,14 +134,14 @@ grub_src_configure() {
 		--sbindir=/sbin \
 		--bindir=/bin \
 		--libdir=/$(get_libdir) \
-		--disable-efiemu \
 		--program-transform-name=s,grub,grub2, \
-		$(use_enable device-mapper) \
-		$(use_enable truetype grub-mkfont) \
-		$(use_enable nls) \
 		$(use_enable debug mm-debug) \
-		$(use sdl && use_enable debug grub-emu-sdl) \
 		$(use_enable debug grub-emu-usb) \
+		$(use_enable device-mapper) \
+		$(use_enable efiemu) \
+		$(use_enable nls) \
+		$(use_enable truetype grub-mkfont) \
+		$(use sdl && use_enable debug grub-emu-sdl) \
 		${platform}
 }
 

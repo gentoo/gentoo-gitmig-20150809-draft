@@ -8,6 +8,11 @@
 	<description>Grub 2 maintainer</description>
 </maintainer>
 <use>
-  <flag name='device-mapper'>Enable support for <pkg>sys-fs/device-mapper</pkg></flag>
+	<flag name='device-mapper'>
+		Enable support for <pkg>sys-fs/device-mapper</pkg>
+	</flag>
+	<flag name='efiemu'>
+		Build and install the efiemu runtimes
+	</flag>
 </use>
 </pkgmetadata>
