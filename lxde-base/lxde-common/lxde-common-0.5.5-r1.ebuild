@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-common/lxde-common-0.5.5.ebuild,v 1.1 2011/08/03 09:32:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-common/lxde-common-0.5.5-r1.ebuild,v 1.1 2011/08/28 21:22:30 vostorga Exp $
 
 EAPI="4"
+
+inherit eutils autotools
 
 DESCRIPTION="LXDE Session default configuration files and nuoveXT2 iconset"
 HOMEPAGE="http://lxde.sf.net/"
@@ -18,6 +20,15 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
 PDEPEND="lxde-base/lxde-icon-theme"
+
+src_prepare() {
+	#bug 380043
+	epatch "${FILESDIR}"/${P}-logout.patch
+
+	# Rerun autotools
+	einfo "Regenerating autotools files..."
+	eautoreconf
+}
 
 src_install () {
 	emake DESTDIR="${D}" install

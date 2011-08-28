@@ -1,6 +1,13 @@
 # ChangeLog for lxde-base/lxde-common
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-common/ChangeLog,v 1.25 2011/08/03 09:32:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-common/ChangeLog,v 1.26 2011/08/28 21:22:30 vostorga Exp $
+
+*lxde-common-0.5.5-r1 (28 Aug 2011)
+
+  28 Aug 2011; <vostorga@gentoo.org> -lxde-common-0.5.5.ebuild,
+  +lxde-common-0.5.5-r1.ebuild, +files/lxde-common-0.5.5-logout.patch:
+  Fixing missing lxde-logout icon, patch thanks to Markos Chandras
+  <hwoarang@gentoo.org> bug 380043
 
 *lxde-common-0.5.5 (03 Aug 2011)
 
