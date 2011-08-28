@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/pointless
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pointless/ChangeLog,v 1.23 2011/08/15 20:41:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pointless/ChangeLog,v 1.24 2011/08/28 18:25:39 jlec Exp $
+
+  28 Aug 2011; Justin Lecher <jlec@gentoo.org> pointless-1.6.2.ebuild:
+  Narrowed dep on ccp4-libs to 6.1.3-r10, #376251
 
   15 Aug 2011; Justin Lecher <jlec@gentoo.org> pointless-1.6.2.ebuild:
   Removed unneeded USE=test
