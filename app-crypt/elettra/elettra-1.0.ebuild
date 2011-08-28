@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/elettra/elettra-1.0.ebuild,v 1.1 2008/04/20 19:42:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/elettra/elettra-1.0.ebuild,v 1.2 2011/08/28 10:56:33 hwoarang Exp $
 
 inherit toolchain-funcs
 
@@ -24,12 +24,12 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${PN}"
 
 src_compile() {
-	$(tc-getCC) ${CFLAGS} -I. src/*.c \
+	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -I. src/*.c \
 		-lz `libmcrypt-config --cflags --libs` -lmhash \
-		-o elettra || die
+		-o elettra || die "compilation failed"
 }
 
 src_install() {
-	dobin elettra
-	dodoc README
+	dobin elettra || die "dobin failed"
+	dodoc README || die "dodoc failed"
 }
