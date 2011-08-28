@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dvipng
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.76 2011/06/14 03:29:05 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.77 2011/08/28 13:15:15 grobian Exp $
+
+  28 Aug 2011; Fabian Groffen <grobian@gentoo.org> dvipng-1.14.ebuild,
+  +files/dvipng-1.14-wait.patch:
+  Add patch by MATSUI Tetsushi to fix compilation on Darwin, bug #369363
 
   14 Jun 2011; Matt Turner <mattst88@gentoo.org> dvipng-1.14.ebuild:
   Added ~mips, bug 342513
