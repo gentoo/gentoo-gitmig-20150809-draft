@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.57 2011/08/27 20:14:44 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.58 2011/08/28 22:26:41 chainsaw Exp $
+
+  28 Aug 2011; Tony Vroon <chainsaw@gentoo.org> zabbix-1.8.6.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah El Lazkani in security bug #379693.
 
   27 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> zabbix-1.8.3.ebuild,
   zabbix-1.8.5.ebuild, zabbix-1.8.6.ebuild, zabbix-1.9.4.ebuild,
