@@ -1,0 +1,34 @@
+# ChangeLog for sys-fs/aufs3
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs3/ChangeLog,v 1.1 2011/08/28 09:48:57 jlec Exp $
+
+  28 Aug 2011; Justin Lecher <jlec@gentoo.org> +files/aufs3-base-0.patch,
+  +files/aufs3-standalone-0.patch, +aufs3-3_p20110815.ebuild, +files/pax.patch,
+  +metadata.xml:
+  Moved to tree, fixes bug 376175
+
+  27 Aug 2011; Justin Lecher <jlec@gentoo.org> aufs3-3_p20110815.ebuild:
+  Make CONFIG check for EXPORTFS matadory for USE=nfs
+
+  19 Aug 2011; Justin Lecher <jlec@gentoo.org> files/aufs3-standalone-0.patch,
+  -files/aufs3-base-1.patch, -files/aufs3-standalone-1.patch,
+  aufs3-3_p20110815.ebuild:
+  Cleaned some USE=doc problems
+
+  18 Aug 2011; Justin Lecher <jlec@gentoo.org> aufs3-3_p20110815.ebuild:
+  Corrected to new kernel versioning scheme
+
+  16 Aug 2011; Justin Lecher <jlec@gentoo.org> files/aufs3-standalone-1.patch:
+  Fix missing upstream export of symbols
+
+  15 Aug 2011; Justin Lecher <jlec@gentoo.org> aufs3-3_p20110815.ebuild,
+  metadata.xml:
+  Changed USE hardened to pax_kernel, #375811
+
+*aufs3-3_p20110815 (15 Aug 2011)
+
+  15 Aug 2011; Justin Lecher <jlec@gentoo.org> +files/aufs3-base-0.patch,
+  +files/aufs3-standalone-0.patch, +files/aufs3-base-1.patch,
+  +files/aufs3-standalone-1.patch, +aufs3-3_p20110815.ebuild, +metadata.xml:
+  Initial commit
+
