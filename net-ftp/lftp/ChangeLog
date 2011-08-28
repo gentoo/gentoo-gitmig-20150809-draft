@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.316 2011/08/13 17:33:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.317 2011/08/28 15:58:43 armin76 Exp $
+
+  28 Aug 2011; Raúl Porcel <armin76@gentoo.org> lftp-4.3.1.ebuild:
+  alpha/ia64/s390/sparc stable wrt #377341
 
   13 Aug 2011; Markus Meier <maekke@gentoo.org> lftp-4.3.1.ebuild:
   arm stable, bug #377341
