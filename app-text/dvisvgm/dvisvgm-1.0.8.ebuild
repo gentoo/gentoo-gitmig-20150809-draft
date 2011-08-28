@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/dvisvgm-1.0.8.ebuild,v 1.6 2011/08/14 18:34:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/dvisvgm-1.0.8.ebuild,v 1.7 2011/08/28 15:29:02 grobian Exp $
 
 EAPI=3
+
+inherit eutils
 
 DESCRIPTION="Converts DVI files to SVG"
 HOMEPAGE="http://dvisvgm.sourceforge.net/"
@@ -10,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~ppc-macos"
+KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~ppc-macos ~x64-macos"
 IUSE="test"
 # Tests don't work from $WORKDIR: kpathsea tries to search in relative
 # directories from where the binary is executed.
@@ -25,6 +27,10 @@ RDEPEND="virtual/tex-base
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	test? ( dev-util/gtest )"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-darwin.patch
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die
