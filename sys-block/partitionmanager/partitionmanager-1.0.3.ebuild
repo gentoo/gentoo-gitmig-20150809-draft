@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partitionmanager/partitionmanager-1.0.3.ebuild,v 1.3 2011/01/30 18:31:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partitionmanager/partitionmanager-1.0.3.ebuild,v 1.4 2011/08/28 14:27:09 dilfridge Exp $
 
 EAPI=3
 
@@ -20,7 +20,7 @@ SLOT="0"
 IUSE="debug"
 
 RDEPEND="
-	sys-block/parted
+	<sys-block/parted-3
 	sys-libs/e2fsprogs-libs
 "
 DEPEND="${RDEPEND}
