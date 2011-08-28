@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.12.0.ebuild,v 1.1 2011/04/04 13:38:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.13.3.ebuild,v 1.1 2011/08/28 19:03:36 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 
 inherit alternatives gnome2
 
@@ -11,8 +12,8 @@ DESCRIPTION="Vala - Compiler for the GObject type system"
 HOMEPAGE="http://live.gnome.org/Vala"
 
 LICENSE="LGPL-2.1"
-SLOT="0.12"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
+SLOT="0.14"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-linux"
 IUSE="test +vapigen"
 
 RDEPEND=">=dev-libs/glib-2.16:2"
@@ -36,7 +37,6 @@ src_install() {
 	gnome2_src_install
 	mv "${ED}"/usr/share/aclocal/vala.m4 \
 		"${ED}"/usr/share/aclocal/vala-${SLOT/./-}.m4 || die "failed to move vala m4 macro"
-	find "${ED}" -name "*.la" -delete || die "la file removal failed"
 }
 
 pkg_postinst() {

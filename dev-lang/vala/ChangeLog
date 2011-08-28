@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/vala
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.66 2011/08/20 18:33:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.67 2011/08/28 19:03:36 pacho Exp $
+
+*vala-0.13.3 (28 Aug 2011)
+
+  28 Aug 2011; Pacho Ramos <pacho@gentoo.org> -vala-0.12.0.ebuild,
+  +vala-0.13.3.ebuild:
+  Version bump, remove old.
 
   20 Aug 2011; Jeroen Roovers <jer@gentoo.org> vala-0.10.4-r1.ebuild,
   vala-0.12.1.ebuild:
