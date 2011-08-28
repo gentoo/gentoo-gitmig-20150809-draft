@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-odbc/oracle-instantclient-odbc-11.2.0.2.ebuild,v 1.1 2010/11/12 18:26:38 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-odbc/oracle-instantclient-odbc-11.2.0.2-r1.ebuild,v 1.1 2011/08/28 20:54:30 dertobi123 Exp $
 
 inherit eutils
 
@@ -52,10 +52,10 @@ src_install() {
 	dodir /usr/$(get_libdir)/oracle/${PV}/client/lib
 	cd "${S}"/instantclient_11_2
 	insinto /usr/$(get_libdir)/oracle/${PV}/client/lib
-	doins *.so.11.2
+	doins *.so.11.1
 
 	# fixes symlinks
-	dosym /usr/$(get_libdir)/oracle/${PV}/client/lib/libsqora.so.11.2 /usr/$(get_libdir)/oracle/${PV}/client/lib/libsqora.so
+	dosym /usr/$(get_libdir)/oracle/${PV}/client/lib/libsqora.so.11.1 /usr/$(get_libdir)/oracle/${PV}/client/lib/libsqora.so
 
 	# odbc_update_ini.sh
 	dodir /usr/$(get_libdir)/oracle/${PV}/client/bin
