@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/socklog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/socklog/ChangeLog,v 1.10 2011/06/15 02:47:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/socklog/ChangeLog,v 1.11 2011/08/28 22:43:50 vapier Exp $
+
+  28 Aug 2011; Mike Frysinger <vapier@gentoo.org> socklog-2.1.0.ebuild,
+  +files/socklog-2.1.0-headers.patch:
+  Clean up EAPI clean up #380249 by Michael. Add patch to fix up missing header
+  includes fo func prototypes.
 
   15 Jun 2011; Jeroen Roovers <jer@gentoo.org> -socklog-2.0.2.ebuild,
   -socklog-2.0.2-r1.ebuild, -files/socklog-2.0.2-tryto-race-fix.patch:
