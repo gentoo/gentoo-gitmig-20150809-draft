@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.30 2011/08/28 13:25:23 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.31 2011/08/28 19:13:45 pacho Exp $
+
+*gdk-pixbuf-2.24.0 (28 Aug 2011)
+
+  28 Aug 2011; Pacho Ramos <pacho@gentoo.org> +gdk-pixbuf-2.24.0.ebuild:
+  Version bump: Clean up dependencies in the .pc file, translation updates.
 
   28 Aug 2011; Fabian Groffen <grobian@gentoo.org> gdk-pixbuf-2.23.5.ebuild:
   Marked ~x64-macos
