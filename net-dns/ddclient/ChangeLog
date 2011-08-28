@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/ddclient
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.43 2011/08/23 20:52:03 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.44 2011/08/28 15:11:14 titanofold Exp $
+
+*ddclient-3.8.1-r3 (28 Aug 2011)
+
+  28 Aug 2011; Aaron W. Swenson <titanofold@gentoo.org>
+  +ddclient-3.8.1-r3.ebuild:
+  Fixes bug 380895. Removed "optional" SSL support.
 
 *ddclient-3.8.1-r2 (23 Aug 2011)
 
