@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.38 2011/08/28 10:30:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.39 2011/08/28 10:50:33 scarabeus Exp $
 
 EAPI=4
 
@@ -155,6 +155,9 @@ grub_src_install() {
 
 src_prepare() {
 	local i j archs
+
+	epatch \
+		"${FILESDIR}/1.99-call_proper_grub_probe.patch"
 
 	epatch_user
 

@@ -1,6 +1,14 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.160 2011/08/28 10:30:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.161 2011/08/28 10:50:33 scarabeus Exp $
+
+*grub-1.99-r1 (28 Aug 2011)
+
+  28 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/1.99-call_proper_grub_probe.patch, -grub-1.99.ebuild,
+  +grub-1.99-r1.ebuild, grub-9999.ebuild:
+  Fix hardcoded grub-probe call. Fixes bug #380879. Revision bump so everyone
+  gets the update.
 
   28 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> grub-1.99.ebuild,
   grub-9999.ebuild, metadata.xml:
