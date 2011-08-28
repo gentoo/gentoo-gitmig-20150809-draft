@@ -1,6 +1,9 @@
 # ChangeLog for virtual/latex-base
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/latex-base/ChangeLog,v 1.10 2010/02/22 20:44:45 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/latex-base/ChangeLog,v 1.11 2011/08/28 13:17:27 grobian Exp $
+
+  28 Aug 2011; Fabian Groffen <grobian@gentoo.org> latex-base-1.0.ebuild:
+  Marked ~x64-macos
 
   22 Feb 2010; Ulrich Mueller <ulm@gentoo.org> latex-base-1.0.ebuild:
   Add texlive-fontutils as additional dependency for TeXLive 2009, as
