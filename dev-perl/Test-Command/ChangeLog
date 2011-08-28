@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Test-Command
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Command/ChangeLog,v 1.7 2011/06/11 12:08:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Command/ChangeLog,v 1.8 2011/08/28 14:10:42 tove Exp $
+
+*Test-Command-0.80.0 (28 Aug 2011)
+
+  28 Aug 2011; Torsten Veller <tove@gentoo.org> +Test-Command-0.80.0.ebuild:
+  Change version scheme
 
   11 Jun 2011; Markus Meier <maekke@gentoo.org> Test-Command-0.08.ebuild:
   add ~arm, bug #359133

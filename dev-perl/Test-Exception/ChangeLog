@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Test-Exception
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.63 2011/07/29 16:54:22 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.64 2011/08/28 14:05:46 tove Exp $
+
+*Test-Exception-0.310.0 (28 Aug 2011)
+
+  28 Aug 2011; Torsten Veller <tove@gentoo.org> +Test-Exception-0.310.0.ebuild:
+  Change version scheme
 
   29 Jul 2011; Torsten Veller <tove@gentoo.org> -Test-Exception-0.29.ebuild:
   Cleanup

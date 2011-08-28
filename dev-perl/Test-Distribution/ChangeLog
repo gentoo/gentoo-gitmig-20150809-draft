@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Test-Distribution
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Distribution/ChangeLog,v 1.4 2011/07/19 19:51:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Distribution/ChangeLog,v 1.5 2011/08/28 14:06:34 tove Exp $
+
+*Test-Distribution-2.0.0 (28 Aug 2011)
+
+  28 Aug 2011; Torsten Veller <tove@gentoo.org>
+  +Test-Distribution-2.0.0.ebuild:
+  Change version scheme
 
   19 Jul 2011; Markus Meier <maekke@gentoo.org> Test-Distribution-2.00.ebuild:
   amd64/x86 stable, bug #374479

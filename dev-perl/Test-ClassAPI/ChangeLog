@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Test-ClassAPI
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-ClassAPI/ChangeLog,v 1.40 2010/01/14 14:21:48 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-ClassAPI/ChangeLog,v 1.41 2011/08/28 14:12:12 tove Exp $
+
+*Test-ClassAPI-1.60.0 (28 Aug 2011)
+
+  28 Aug 2011; Torsten Veller <tove@gentoo.org> +Test-ClassAPI-1.60.0.ebuild:
+  Change version scheme
 
   14 Jan 2010; Fabian Groffen <grobian@gentoo.org>
   Test-ClassAPI-1.06.ebuild:

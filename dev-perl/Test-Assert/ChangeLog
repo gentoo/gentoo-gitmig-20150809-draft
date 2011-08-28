@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Test-Assert
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Assert/ChangeLog,v 1.5 2009/12/24 19:28:03 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Assert/ChangeLog,v 1.6 2011/08/28 14:15:06 tove Exp $
+
+*Test-Assert-0.50.400 (28 Aug 2011)
+
+  28 Aug 2011; Torsten Veller <tove@gentoo.org> +Test-Assert-0.50.400.ebuild:
+  Change version scheme
 
   24 Dec 2009; Torsten Veller <tove@gentoo.org> -Test-Assert-0.0501.ebuild:
   Cleanup

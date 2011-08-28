@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Test-Manifest
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Manifest/ChangeLog,v 1.45 2010/12/03 01:49:04 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Manifest/ChangeLog,v 1.46 2011/08/28 14:02:59 tove Exp $
+
+*Test-Manifest-1.230.0 (28 Aug 2011)
+
+  28 Aug 2011; Torsten Veller <tove@gentoo.org> +Test-Manifest-1.230.0.ebuild:
+  Change version scheme
 
   03 Dec 2010; Michael Weber <xmw@gentoo.org> Test-Manifest-1.21.ebuild,
   Test-Manifest-1.22.ebuild, Test-Manifest-1.23.ebuild:

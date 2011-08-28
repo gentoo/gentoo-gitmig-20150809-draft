@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Test-Memory-Cycle
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Memory-Cycle/ChangeLog,v 1.24 2010/02/06 12:49:06 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Memory-Cycle/ChangeLog,v 1.25 2011/08/28 14:01:59 tove Exp $
+
+*Test-Memory-Cycle-1.40.0 (28 Aug 2011)
+
+  28 Aug 2011; Torsten Veller <tove@gentoo.org>
+  +Test-Memory-Cycle-1.40.0.ebuild:
+  Change version scheme
 
   06 Feb 2010; Torsten Veller <tove@gentoo.org>
   Test-Memory-Cycle-1.04.ebuild:
