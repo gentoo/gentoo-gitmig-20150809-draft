@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/libSM-1.2.0.ebuild,v 1.12 2011/06/22 18:29:20 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/libSM-1.2.0.ebuild,v 1.13 2011/08/28 12:05:00 grobian Exp $
 
 EAPI=3
 inherit xorg-2
@@ -20,23 +20,35 @@ DEPEND="${RDEPEND}
 	doc? ( app-text/xmlto )"
 
 pkg_setup() {
+	local withuuid=$(use_with uuid libuuid)
 	xorg-2_pkg_setup
 
+	# do not use uuid even if available in libc (like on FreeBSD)
+	use uuid || export ac_cv_func_uuid_create=no
+
+	if use uuid ; then
+		case ${CHOST} in
+			*-solaris*|*-darwin*)
+				if [[ ! -d ${EROOT}usr/include/uuid ]] &&
+					[[ -d ${ROOT}usr/include/uuid ]]
+				then
+					# Solaris and Darwin have uuid provided by the host
+					# system.  Since util-linux's version is based on this
+					# version, and on Darwin actually breaks host headers when
+					# installed, we can "pretend" for libSM we have libuuid
+					# installed, while in fact we don't
+					withuuid="--without-libuuid"
+					export HAVE_LIBUUID=yes
+					export LIBUUID_CFLAGS="-I${ROOT}usr/include/uuid"
+					# Darwin has uuid in libSystem
+					[[ ${CHOST} == *-solaris* ]] &&	export LIBUUID_LIBS="-luuid"
+				fi
+				;;
+		esac
+	fi
 	CONFIGURE_OPTIONS="$(use_enable ipv6)
 		$(use_enable doc docs)
 		$(use_with doc xmlto)
-		$(use_with uuid libuuid)
+		${withuuid}
 		--without-fop"
-	# do not use uuid even if available in libc (like on FreeBSD)
-	use uuid || export ac_cv_func_uuid_create=no
-	# solaris hack
-	if use uuid &&
-		[[ ${CHOST} == *-solaris* ]] &&
-		[[ ! -d ${EROOT}/usr/include/uuid ]] &&
-		[[ -d ${ROOT}/usr/include/uuid ]]
-	then
-		# ${ROOT} is proper here
-		export LIBUUID_CFLAGS="-I${ROOT}/usr/include/uuid"
-		export LIBUUID_LIBS="-luuid"
-	fi
 }
