@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.291 2011/08/25 19:44:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.292 2011/08/28 09:54:33 grobian Exp $
+
+  28 Aug 2011; Fabian Groffen <grobian@gentoo.org> darwin/use.mask:
+  Mask USE=introspection on Darwin, g-ir-tool it has a long way to go before
+  working there
 
   25 Aug 2011; Fabian Groffen <grobian@gentoo.org> sunos/solaris/package.mask:
   Mask gcc-4.3.[3456], since it doesn't compile, and isn't worth fixing --

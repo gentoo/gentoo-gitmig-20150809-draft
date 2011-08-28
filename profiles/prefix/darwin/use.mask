@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/use.mask,v 1.1 2009/06/06 03:54:45 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/use.mask,v 1.2 2011/08/28 09:54:33 grobian Exp $
 
 #Add USE flags that don't work on Darwin/OpenDarwin/OS X here
 
@@ -40,3 +40,6 @@ voodoo3
 pvm
 v4l
 v4l2
+
+# introspection is far from working on OSX
+introspection
