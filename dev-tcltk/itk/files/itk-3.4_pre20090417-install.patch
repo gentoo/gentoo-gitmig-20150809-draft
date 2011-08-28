@@ -1,4 +1,3 @@
-@@ -, +, @@ 
  itk/Makefile.in     |    2 +-
  itk/configure.in    |   23 +++++++++++++++++++++++
  itk/itkConfig.sh.in |   28 +++++++++++-----------------
