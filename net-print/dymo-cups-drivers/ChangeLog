@@ -1,6 +1,11 @@
 # ChangeLog for net-print/dymo-cups-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/dymo-cups-drivers/ChangeLog,v 1.1 2011/07/13 18:04:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/dymo-cups-drivers/ChangeLog,v 1.2 2011/08/28 13:42:11 flameeyes Exp $
+
+  28 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  dymo-cups-drivers-1.2.0.ebuild, +files/dymo-cups-drivers-1.2.0+gcc-4.6.patch:
+  Add patch to build with GCC 4.6; add missing cppunit dependency for tests,
+  but also restrict tests until they are sorted out.
 
 *dymo-cups-drivers-1.2.0 (13 Jul 2011)
 
