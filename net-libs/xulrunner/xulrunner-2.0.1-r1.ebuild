@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-2.0.1-r1.ebuild,v 1.7 2011/08/13 17:20:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-2.0.1-r1.ebuild,v 1.8 2011/08/28 11:24:42 armin76 Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -76,6 +76,9 @@ src_prepare() {
 	# Patches needed for ARM, bug 362237
 	epatch "${FILESDIR}/arm-bug-644136.patch"
 	epatch "${FILESDIR}/mozilla-2.0_arm_respect_cflags.patch"
+
+	# Allow to build without alsa USE-flag,bug #360163
+	epatch "${FILESDIR}/bug-626229.patch"
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user
