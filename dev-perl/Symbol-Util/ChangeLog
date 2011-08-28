@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Symbol-Util
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Symbol-Util/ChangeLog,v 1.1 2009/12/10 07:34:23 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Symbol-Util/ChangeLog,v 1.2 2011/08/28 18:49:47 tove Exp $
+
+*Symbol-Util-0.20.200 (28 Aug 2011)
+
+  28 Aug 2011; Torsten Veller <tove@gentoo.org> +Symbol-Util-0.20.200.ebuild:
+  Change version scheme
 
 *Symbol-Util-0.0202 (10 Dec 2009)
 
