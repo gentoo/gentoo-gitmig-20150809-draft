@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.5_pre20110620.ebuild,v 1.1 2011/06/21 08:20:04 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.5.ebuild,v 1.1 2011/08/28 09:00:24 eras Exp $
 
 EAPI=2
 # PYTHON_BDEPEND="2"
@@ -11,7 +11,7 @@ inherit autotools db-use eutils libtool python toolchain-funcs virtualx flag-o-m
 MY_P="${P}"
 DESCRIPTION="Kerberos 5 implementation from KTH"
 HOMEPAGE="http://www.h5l.org/"
-SRC_URI="http://www.h5l.org/dist/src/${MY_P}.tar.bz2"
+SRC_URI="http://www.h5l.org/dist/src/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -33,8 +33,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=sys-devel/autoconf-2.62
 	test? ( X? ( ${VIRTUALX_DEPEND} ) )"
-
-S="${WORKDIR}/${PN}"
 
 pkg_setup() {
 	python_set_active_version 2
@@ -83,11 +81,6 @@ src_compile() {
 	emake -j1 || die "emake failed"
 }
 
-src_test() {
-	einfo "Disabled check-iprop which is known to fail.  Other tests should work."
-	default_src_test
-}
-
 src_install() {
 	INSTALL_CATPAGES="no" emake DESTDIR="${D}" install || die "emake install failed"
 
@@ -129,14 +122,4 @@ src_install() {
 
 	# default database dir
 	keepdir /var/heimdal
-}
-
-pkg_preinst() {
-	if has_version "=${CATEGORY}/${PN}-1.3.2*" ; then
-		if use hdb-ldap ; then
-			ewarn "Schema name changed to hdb.schema to follow upstream."
-			ewarn "Please check your slapd conf file to make sure"
-			ewarn "that the correct schema file is included."
-		fi
-	fi
 }
