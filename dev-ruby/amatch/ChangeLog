@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/amatch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/ChangeLog,v 1.24 2011/08/06 06:08:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/ChangeLog,v 1.25 2011/08/28 19:40:48 jer Exp $
+
+  28 Aug 2011; Jeroen Roovers <jer@gentoo.org> amatch-0.2.6.ebuild,
+  amatch-0.2.7.ebuild:
+  Marked ~hppa (bug #375429).
 
 *amatch-0.2.7 (06 Aug 2011)
 
