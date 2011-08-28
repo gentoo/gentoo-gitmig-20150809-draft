@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.101-r1.ebuild,v 1.8 2011/07/10 23:42:27 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit/polkit-0.101-r1.ebuild,v 1.9 2011/08/28 23:29:20 nirbheek Exp $
 
 EAPI=3
 inherit eutils pam
@@ -28,6 +28,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.36
 	doc? ( >=dev-util/gtk-doc-1.13 )"
 PDEPEND=">=sys-auth/consolekit-0.4[policykit]
+	pam? ( sys-auth/pambase[consolekit] )
 	gtk? ( || ( >=gnome-extra/polkit-gnome-0.101 lxde-base/lxpolkit ) )
 	kde? ( || ( sys-auth/polkit-kde-agent sys-auth/polkit-kde ) )"
 
