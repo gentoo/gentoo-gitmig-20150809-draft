@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-6.0.ebuild,v 1.5 2011/08/28 00:03:08 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-6.0.ebuild,v 1.6 2011/08/28 01:03:44 anarchy Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -228,7 +228,7 @@ src_configure() {
 
 	mozconfig_annotate '' --prefix="${EPREFIX}"/usr
 	mozconfig_annotate '' --libdir="${EPREFIX}"/usr/$(get_libdir)
-	mozconfig_annotate '' --target="${target}"
+	# mozconfig_annotate '' --target="${target}"
 	mozconfig_annotate '' --enable-extensions="${MEXTENSIONS}"
 	mozconfig_annotate '' --disable-gconf
 	mozconfig_annotate '' --disable-mailnews

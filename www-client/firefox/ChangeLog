@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.88 2011/08/28 00:03:08 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.89 2011/08/28 01:03:44 anarchy Exp $
+
+  28 Aug 2011; Jory A. Pratt <anarchy@gentoo.org> firefox-6.0.ebuild:
+  revert target support
 
   27 Aug 2011; Jory A. Pratt <anarchy@gentoo.org> firefox-6.0.ebuild:
   Fix cross compiliation support, bug #380885
