@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5660 2011/08/28 02:22:53 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5661 2011/08/28 08:20:58 eras Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Aug 2011; Eray Aslan <eras@gentoo.org> package.mask:
+  Remove mask for net-mail/freepops. No longer in the tree.
 
   28 Aug 2011; Mike Gilbert <floppym@gentoo.org> package.mask:
   Mask www-client/google-chrome-15 (dev channel)

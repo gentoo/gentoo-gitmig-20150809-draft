@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13010 2011/08/28 02:22:53 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13011 2011/08/28 08:20:58 eras Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -307,11 +307,6 @@ app-emulation/vmware-server-console
 # Really old and unmaintained package. Bug #360067.
 # Removal in 30 days.
 app-accessibility/speechd
-
-# Eray Aslan <eras@gentoo.org> (20 Jul 2011)
-# Dead upstream.  Does not compile.  Bugs 205442, 354865, 370459.
-# Removal in 30 days.
-net-mail/freepops
 
 # Pacho Ramos <pacho@gentoo.org> (20 Jul 2011)
 # Dead project and not maintained for ages, removal in 30 days.
