@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-rpc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-rpc/ChangeLog,v 1.3 2011/07/10 02:39:01 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-rpc/ChangeLog,v 1.4 2011/08/28 21:13:03 swift Exp $
+
+*selinux-rpc-2.20110726-r1 (28 Aug 2011)
+
+  28 Aug 2011; <swift@gentoo.org> +selinux-rpc-2.20110726-r1.ebuild:
+  Updating policy builds to refpolicy 20110726
 
 *selinux-rpc-2.20101213-r1 (10 Jul 2011)
 

@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-mozilla
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mozilla/ChangeLog,v 1.6 2011/08/07 10:57:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mozilla/ChangeLog,v 1.7 2011/08/28 21:12:42 swift Exp $
+
+*selinux-mozilla-2.20110726-r1 (28 Aug 2011)
+
+  28 Aug 2011; <swift@gentoo.org> +selinux-mozilla-2.20110726-r1.ebuild:
+  Updating policy builds to refpolicy 20110726
 
 *selinux-mozilla-2.20101213-r4 (07 Aug 2011)
 

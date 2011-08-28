@@ -1,5 +1,10 @@
 
 
+*selinux-pan-2.20110726-r1 (28 Aug 2011)
+
+  28 Aug 2011; <swift@gentoo.org> +selinux-pan-2.20110726-r1.ebuild:
+  Updating policy builds to refpolicy 20110726
+
 *selinux-pan-2.20101213-r1 (07 Aug 2011)
 
   07 Aug 2011; Anthony G. Basile <blueness@gentoo.org>
