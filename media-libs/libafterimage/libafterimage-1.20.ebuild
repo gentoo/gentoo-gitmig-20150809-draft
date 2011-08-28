@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/libafterimage-1.20.ebuild,v 1.2 2011/03/28 18:07:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/libafterimage-1.20.ebuild,v 1.3 2011/08/28 17:51:11 grobian Exp $
 
 EAPI=3
 inherit eutils autotools
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.afterstep.org/stable/${MY_PN}/${MY_PN}-${PV}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="gif jpeg mmx nls png svg tiff examples static-libs truetype"
 
 RDEPEND="x11-libs/libSM
@@ -71,7 +71,7 @@ src_configure() {
 
 src_install() {
 	emake \
-		DESTDIR="${ED}" \
+		DESTDIR="${D}" \
 		AFTER_DOC_DIR="${ED}/usr/share/doc/${PF}" \
 		install || die "emake install failed"
 	dodoc ChangeLog README || die
