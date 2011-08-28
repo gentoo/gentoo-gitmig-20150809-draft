@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Data-OptList
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-OptList/ChangeLog,v 1.13 2011/08/26 18:53:43 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-OptList/ChangeLog,v 1.14 2011/08/28 14:10:50 naota Exp $
+
+  28 Aug 2011; Naohiro Aota <naota@gentoo.org> Data-OptList-0.107.0.ebuild:
+  Add ~x86-fbsd, bug #379449
 
   26 Aug 2011; Fabian Groffen <grobian@gentoo.org> Data-OptList-0.107.0.ebuild:
   Added Prefix keywords, bug #379449
