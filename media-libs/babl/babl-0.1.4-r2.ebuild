@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/babl-0.1.4-r1.ebuild,v 1.1 2011/08/23 15:58:24 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/babl-0.1.4-r2.ebuild,v 1.1 2011/08/28 16:24:37 jlec Exp $
 
 EAPI=3
+
+inherit autotools eutils
 
 DESCRIPTION="A dynamic, any to any, pixel format conversion library"
 HOMEPAGE="http://www.gegl.org/babl/"
@@ -15,6 +17,11 @@ IUSE="altivec +introspection sse mmx"
 
 RDEPEND="introspection? ( >=dev-libs/gobject-introspection-0.6.8 )"
 DEPEND="${RDEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-introspection.patch
+	eautoreconf
+}
 
 src_configure() {
 	# Automagic rsvg support is just for website generation we do not call,

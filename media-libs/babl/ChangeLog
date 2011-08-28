@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/babl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.29 2011/08/23 15:58:24 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.30 2011/08/28 16:24:37 jlec Exp $
+
+*babl-0.1.4-r2 (28 Aug 2011)
+
+  28 Aug 2011; Justin Lecher <jlec@gentoo.org> -babl-0.1.4-r1.ebuild,
+  +babl-0.1.4-r2.ebuild, +files/babl-0.1.4-introspection.patch, metadata.xml:
+  Fix for build with introspection adapted from upstream patch, #380115
 
 *babl-0.1.4-r1 (23 Aug 2011)
 
