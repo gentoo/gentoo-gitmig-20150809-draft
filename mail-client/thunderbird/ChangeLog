@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.88 2011/08/21 18:31:32 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.89 2011/08/28 10:17:27 polynomial-c Exp $
+
+*thunderbird-3.1.12 (28 Aug 2011)
+
+  28 Aug 2011; Lars Wendler <polynomial-c@gentoo.org>
+  +thunderbird-3.1.12.ebuild:
+  Security bump.
 
   21 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> thunderbird-6.0.ebuild:
   Port over linguas changes from firefox-6.0, and updated the language pack
