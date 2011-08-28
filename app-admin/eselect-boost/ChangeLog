@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-boost
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-boost/ChangeLog,v 1.16 2011/06/28 21:32:24 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-boost/ChangeLog,v 1.17 2011/08/28 06:48:29 ulm Exp $
+
+  28 Aug 2011; Ulrich Mueller <ulm@gentoo.org> files/boost.eselect-0.3:
+  Fix spelling, bug 290968.
 
   28 Jun 2011; Matt Turner <mattst88@gentoo.org> eselect-boost-0.3.ebuild:
   Add ~mips
