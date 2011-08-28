@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/LuaBitOp/LuaBitOp-1.0.1-r1.ebuild,v 1.2 2011/07/18 15:21:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/LuaBitOp/LuaBitOp-1.0.1-r1.ebuild,v 1.3 2011/08/28 11:24:59 hwoarang Exp $
 
 EAPI="4"
-inherit multilib
+inherit eutils multilib
 
 DESCRIPTION="Bit Operations Library for the Lua Programming Language"
 HOMEPAGE="http://bitop.luajit.org"
@@ -23,6 +23,7 @@ src_prepare()
 		-e '/^CFLAGS.*=/s/=/ +=/' \
 		-e '/^CFLAGS/s/-O2 -fomit-frame-pointer //' \
 		Makefile || die "sed failed"
+	epatch ${FILESDIR}/${PN}-ldflags.patch
 }
 
 src_compile()

@@ -1,6 +1,11 @@
 # ChangeLog for dev-lua/LuaBitOp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/LuaBitOp/ChangeLog,v 1.4 2011/07/18 15:21:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/LuaBitOp/ChangeLog,v 1.5 2011/08/28 11:24:59 hwoarang Exp $
+
+  28 Aug 2011; Markos Chandras <hwoarang@gentoo.org> LuaBitOp-1.0.1-r1.ebuild,
+  +files/LuaBitOp-ldflags.patch:
+  Respect LDFLAGS. Bug #367087. Thanks to Alexander Stein
+  <alexander.stein@informatik.tu-chemnitz.de> for the patch
 
   18 Jul 2011; Markos Chandras <hwoarang@gentoo.org> LuaBitOp-1.0.1-r1.ebuild:
   keyworded for amd64. Bug #366831
