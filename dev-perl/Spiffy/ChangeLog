@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Spiffy
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spiffy/ChangeLog,v 1.22 2010/02/05 22:28:07 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spiffy/ChangeLog,v 1.23 2011/08/28 19:33:19 tove Exp $
+
+*Spiffy-0.300.0 (28 Aug 2011)
+
+  28 Aug 2011; Torsten Veller <tove@gentoo.org> +Spiffy-0.300.0.ebuild:
+  Change version scheme
 
   05 Feb 2010; Torsten Veller <tove@gentoo.org> Spiffy-0.30.ebuild:
   Fix LICENSE (#301969). Maintenance
