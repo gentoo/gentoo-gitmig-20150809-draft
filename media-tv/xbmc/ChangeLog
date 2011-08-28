@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.95 2011/08/11 02:43:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.96 2011/08/28 22:29:15 vapier Exp $
+
+  28 Aug 2011; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Upstream xbmc now needs libplist #380785 by Michael Kirkland.
 
   11 Aug 2011; Mike Frysinger <vapier@gentoo.org> xbmc-10.1.ebuild,
   xbmc-9999.ebuild:

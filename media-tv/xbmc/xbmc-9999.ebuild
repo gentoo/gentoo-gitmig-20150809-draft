@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.85 2011/08/11 02:43:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.86 2011/08/28 22:29:15 vapier Exp $
 
 EAPI="2"
 
@@ -29,6 +29,7 @@ COMMON_DEPEND="virtual/opengl
 	app-arch/unzip
 	app-arch/zip
 	app-i18n/enca
+	app-pda/libplist
 	>=dev-lang/python-2.4
 	dev-libs/boost
 	dev-libs/fribidi
