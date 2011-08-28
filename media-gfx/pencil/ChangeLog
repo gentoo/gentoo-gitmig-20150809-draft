@@ -1,0 +1,11 @@
+# ChangeLog for media-gfx/pencil
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pencil/ChangeLog,v 1.1 2011/08/28 10:49:07 hwoarang Exp $
+
+*pencil-0.4.4_beta (28 Aug 2011)
+
+  28 Aug 2011; Markos Chandras <hwoarang@gentoo.org> +pencil-0.4.4_beta.ebuild,
+  +metadata.xml:
+  Initial commit. Bug #232673. Thanks to Samuli Suominen and Matteo 'The Peach'
+  Pescarin for the ebuilds
+
