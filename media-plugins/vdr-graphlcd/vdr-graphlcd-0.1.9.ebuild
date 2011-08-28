@@ -1,26 +1,24 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/vdr-graphlcd-0.1.5-r1.ebuild,v 1.2 2010/12/26 22:55:44 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphlcd/vdr-graphlcd-0.1.9.ebuild,v 1.1 2011/08/28 12:22:17 scarabeus Exp $
+
+EAPI="3"
 
 inherit eutils vdr-plugin
 
 DESCRIPTION="VDR Graphical LCD Plugin"
-HOMEPAGE="http://graphlcd.berlios.de/"
-SRC_URI="mirror://berlios/${PN#vdr-}/${P}.tgz"
+HOMEPAGE="http://projects.vdr-developer.org/projects/graphlcd"
+SRC_URI="http://projects.vdr-developer.org/attachments/download/502/${P}.tgz"
 
 KEYWORDS="~x86 ~amd64"
 
 SLOT="0"
 LICENSE="GPL-2"
-IUSE="truetype"
+IUSE=""
 
-DEPEND=">=media-video/vdr-1.2.6
-	>=app-misc/graphlcd-base-${PV}"
-
-PATCHES=("${FILESDIR}/${PV}/graphlcd-${PV}-span.diff"
-		"${FILESDIR}/${PV}/graphlcd-${PV}-radiotext-lcr-service.diff"
-		"${FILESDIR}/${PV}/${P}-missing-include.patch"
-		"${FILESDIR}/${PV}/graphlcd-${PV}_vdr-1.5.3.diff")
+DEPEND=">=media-video/vdr-1.6
+	>=app-misc/graphlcd-base-0.1.7"
+RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	vdr-plugin_pkg_setup
@@ -32,17 +30,29 @@ pkg_setup() {
 		elog "User vdr added to group lp"
 		gpasswd -a vdr lp
 	fi
+	if ! getent group usb | grep -q vdr; then
+		echo
+		einfo "Add user 'vdr' to group 'usb' for full user access to usb device"
+		echo
+		elog "User vdr added to group usb"
+		gpasswd -a vdr usb
+	fi
 }
 
-src_unpack() {
-	vdr-plugin_src_unpack
-
-	use truetype && epatch "${FILESDIR}/${PV}/${P}-missing-freetyp2.diff"
+src_prepare() {
+	vdr-plugin_src_prepare
 
 	sed -i "s:/usr/local:/usr:" Makefile
+
+	sed -i "s:i18n.c:i18n.h:g" Makefile
+
+	if ! has_version ">=media-video/vdr-1.7.13"; then
+		sed -i "s:include \$(VDRDIR)/Make.global:#include \$(VDRDIR)/Make.global:" Makefile
+	fi
 }
 
 src_install() {
+
 	vdr-plugin_src_install
 
 	insopts -m0644 -ovdr -gvdr
@@ -53,12 +63,10 @@ src_install() {
 	insinto /usr/share/vdr/${VDRPLUGIN}/fonts
 	doins ${VDRPLUGIN}/fonts/*.fnt
 
-	if use truetype; then
-		for font in /usr/share/fonts/corefonts/*.ttf; do
-			elog ${font}
-			dosym ${font} /usr/share/vdr/graphlcd/fonts
-		done
-	fi
+	for font in /usr/share/fonts/corefonts/*.ttf; do
+		elog ${font}
+		dosym ${font} /usr/share/vdr/graphlcd/fonts
+	done
 
 	insinto /etc/vdr/plugins/${VDRPLUGIN}
 	doins ${VDRPLUGIN}/logonames.alias.*
@@ -68,11 +76,7 @@ src_install() {
 	dosym /usr/share/vdr/${VDRPLUGIN}/logos /etc/vdr/plugins/${VDRPLUGIN}/logos
 	dosym /etc/graphlcd.conf /etc/vdr/plugins/${VDRPLUGIN}/graphlcd.conf
 
-	if has_version ">=media-video/vdr-1.3.2" ; then
-		dosym /etc/vdr/plugins/${VDRPLUGIN}/logonames.alias.1.3 /etc/vdr/plugins/${VDRPLUGIN}/logonames.alias
-	else
-		dosym /etc/vdr/plugins/${VDRPLUGIN}/logonames.alias.1.2 /etc/vdr/plugins/${VDRPLUGIN}/logonames.alias
-	fi
+	dosym /etc/vdr/plugins/${VDRPLUGIN}/logonames.alias.1.3 /etc/vdr/plugins/${VDRPLUGIN}/logonames.alias
 }
 
 pkg_preinst() {
