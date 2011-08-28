@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xdvik
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.78 2011/08/25 22:29:45 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.79 2011/08/28 15:47:25 naota Exp $
+
+  28 Aug 2011; Naohiro Aota <naota@gentoo.org> xdvik-22.84.16.ebuild,
+  -xdvik-22.84.16-r1.ebuild:
+  Move the previous change to -r0
 
 *xdvik-22.84.16-r1 (25 Aug 2011)
 
