@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-elf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-elf/ChangeLog,v 1.4 2011/07/16 01:30:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-elf/ChangeLog,v 1.5 2011/08/28 18:33:01 flameeyes Exp $
+
+*ruby-elf-1.0.6.1 (28 Aug 2011)
+
+  28 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org> -ruby-elf-1.0.5.ebuild,
+  +ruby-elf-1.0.6.1.ebuild:
+  Version bump.
 
 *ruby-elf-1.0.5 (16 Jul 2011)
 
