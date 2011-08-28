@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.4.4-r2.ebuild,v 1.5 2011/08/20 10:39:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.4.4-r2.ebuild,v 1.6 2011/08/28 17:36:11 jlec Exp $
 
 EAPI=2
 
@@ -58,6 +58,10 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-fix-python-version.patch"
 	# Fix parallel-make for mono bindings, launchpad-bug #709954
 	epatch "${FILESDIR}/${P}-mono-parallel-make.patch"
+	# Fix for forced as-needed #379543
+	epatch "${FILESDIR}/${P}-as-needed-introspection.patch"
+	# Fix for forced as-needed #354495
+	epatch "${FILESDIR}/${P}-parallel.patch"
 	# Drop -Werror in a release
 	sed -e 's:-Werror::g' -i libindicate/Makefile.am libindicate-gtk/Makefile.am || die "sed failed"
 	# Find slotted vapigen
@@ -72,12 +76,7 @@ src_configure() {
 		--disable-dependency-tracking \
 		--docdir=/usr/share/doc/${PF} \
 		$(use_enable doc) \
-		$(use_enable introspection) \
-		|| die "configure failed"
-}
-
-src_test() {
-	emake check || die "testsuite failed"
+		$(use_enable introspection)
 }
 
 src_install() {

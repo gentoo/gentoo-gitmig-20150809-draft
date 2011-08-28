@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libindicate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.18 2011/08/20 10:39:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.19 2011/08/28 17:36:11 jlec Exp $
+
+  28 Aug 2011; Justin Lecher <jlec@gentoo.org> libindicate-0.2.3-r1.ebuild,
+  libindicate-0.4.4.ebuild, libindicate-0.4.4-r1.ebuild,
+  libindicate-0.4.4-r2.ebuild,
+  +files/libindicate-0.4.4-as-needed-introspection.patch,
+  +files/libindicate-0.4.4-parallel.patch:
+  Fix for parallel build, #354495; Fix for forced as-needed with introspection,
+  #379543; removed src_test as it duplicates the default function
 
   20 Aug 2011; Justin Lecher <jlec@gentoo.org> libindicate-0.4.4-r2.ebuild,
   metadata.xml:

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.2.3-r1.ebuild,v 1.3 2010/06/06 00:37:37 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.2.3-r1.ebuild,v 1.4 2011/08/28 17:36:11 jlec Exp $
 
 EAPI=2
 
@@ -44,10 +44,6 @@ src_configure() {
 		$(use_enable gtk)
 		$(use_enable doc)"
 	econf $my_conf
-}
-
-src_test() {
-	emake check || die "testsuite failed"
 }
 
 src_install() {

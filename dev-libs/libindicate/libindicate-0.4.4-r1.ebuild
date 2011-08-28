@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.4.4-r1.ebuild,v 1.2 2011/08/19 19:18:35 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.4.4-r1.ebuild,v 1.3 2011/08/28 17:36:11 jlec Exp $
 
 EAPI=2
 
@@ -67,12 +67,7 @@ src_configure() {
 		--disable-dependency-tracking \
 		--docdir=/usr/share/doc/${PF} \
 		$(use_enable doc) \
-		$(use_enable introspection) \
-		|| die "configure failed"
-}
-
-src_test() {
-	emake check || die "testsuite failed"
+		$(use_enable introspection)
 }
 
 src_install() {
