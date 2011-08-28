@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Term-Shell
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-Shell/ChangeLog,v 1.1 2010/12/24 14:01:21 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-Shell/ChangeLog,v 1.2 2011/08/28 14:24:59 tove Exp $
+
+*Term-Shell-0.20.0 (28 Aug 2011)
+
+  28 Aug 2011; Torsten Veller <tove@gentoo.org> +Term-Shell-0.20.0.ebuild:
+  Change version scheme
 
 *Term-Shell-0.02 (24 Dec 2010)
 
