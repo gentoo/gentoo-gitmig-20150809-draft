@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-13.0.782.215_p97094.ebuild,v 1.1 2011/08/28 02:24:07 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-13.0.782.215_p97094.ebuild,v 1.2 2011/08/28 23:29:42 floppym Exp $
 
 EAPI="4"
 
@@ -125,7 +125,7 @@ src_prepare() {
 src_install() {
 	mv opt usr "${D}" || die
 
-	chmod u+s "${D}${CHROME_HOME}chrome-sandbox" || die
+	fperms u+s "/${CHROME_HOME}chrome-sandbox" || die
 
 	if use plugins ; then
 		local args='"$@"'
