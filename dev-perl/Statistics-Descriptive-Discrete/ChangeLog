@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Statistics-Descriptive-Discrete
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Statistics-Descriptive-Discrete/ChangeLog,v 1.10 2010/02/06 12:26:08 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Statistics-Descriptive-Discrete/ChangeLog,v 1.11 2011/08/28 19:22:42 tove Exp $
+
+*Statistics-Descriptive-Discrete-0.70.0 (28 Aug 2011)
+
+  28 Aug 2011; Torsten Veller <tove@gentoo.org>
+  +Statistics-Descriptive-Discrete-0.70.0.ebuild:
+  Change version scheme
 
   06 Feb 2010; Torsten Veller <tove@gentoo.org>
   Statistics-Descriptive-Discrete-0.07.ebuild:
