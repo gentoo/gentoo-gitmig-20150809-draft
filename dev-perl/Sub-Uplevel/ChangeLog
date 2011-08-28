@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Sub-Uplevel
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Uplevel/ChangeLog,v 1.65 2010/04/24 18:52:22 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Uplevel/ChangeLog,v 1.66 2011/08/28 18:55:28 tove Exp $
+
+*Sub-Uplevel-0.220.0 (28 Aug 2011)
+
+  28 Aug 2011; Torsten Veller <tove@gentoo.org> +Sub-Uplevel-0.220.0.ebuild:
+  Change version scheme
 
   24 Apr 2010; Fabian Groffen <grobian@gentoo.org> Sub-Uplevel-0.22.ebuild:
   Marked ~arch for some Prefix arches
