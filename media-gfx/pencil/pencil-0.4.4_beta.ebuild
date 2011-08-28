@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pencil/pencil-0.4.4_beta.ebuild,v 1.1 2011/08/28 10:49:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pencil/pencil-0.4.4_beta.ebuild,v 1.2 2011/08/28 10:49:57 hwoarang Exp $
 
 EAPI=2
 inherit qt4-r2
@@ -17,6 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/qt-gui:4
+	x11-libs/qt-opengl:4
 	>=media-libs/ming-0.4.3"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
