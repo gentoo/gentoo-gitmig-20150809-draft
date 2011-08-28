@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnfnetlink
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.41 2011/08/13 17:19:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.42 2011/08/28 15:54:58 armin76 Exp $
+
+  28 Aug 2011; Raúl Porcel <armin76@gentoo.org> libnfnetlink-1.0.0.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #376881
 
   13 Aug 2011; Markus Meier <maekke@gentoo.org> libnfnetlink-1.0.0.ebuild:
   arm stable, bug #376881
