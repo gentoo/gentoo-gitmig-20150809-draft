@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/markaby/markaby-0.7.2.ebuild,v 1.1 2011/08/24 06:00:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/markaby/markaby-0.7.2.ebuild,v 1.2 2011/08/28 09:29:38 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18"
@@ -28,5 +28,5 @@ ruby_add_rdepend ">=dev-ruby/builder-2.0.0"
 all_ruby_prepare() {
 	# Add missing require to fix spec. The associated failure depended
 	# on load order of the specs, bug 343693.
-	sed -i -e '1irequire "markaby/tilt"' spec/markaby/tilt_spec.rb || die
+	sed -i -e "10irequire 'markaby/tilt'" spec/spec_helper.rb || die
 }
