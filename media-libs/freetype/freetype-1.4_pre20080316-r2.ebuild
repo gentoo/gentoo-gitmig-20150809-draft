@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.4_pre20080316-r2.ebuild,v 1.7 2010/10/10 16:53:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.4_pre20080316-r2.ebuild,v 1.8 2011/08/28 17:32:21 grobian Exp $
 
 inherit autotools eutils libtool multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="FTL"
 SLOT="1"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="doc nls kpathsea"
 
 COMMON_DEPEND="kpathsea? ( virtual/tex-base )"
@@ -73,7 +73,7 @@ src_unpack() {
 }
 
 src_compile() {
-	use kpathsea && kpathseaconf="--with-kpathsea-lib=/usr/$(get_libdir) --with-kpathsea-include=/usr/include"
+	use kpathsea && kpathseaconf="--with-kpathsea-lib=${EPREFIX}/usr/$(get_libdir) --with-kpathsea-include=${EPREFIX}/usr/include"
 
 	# core
 	einfo "Building core library..."
@@ -103,13 +103,13 @@ src_install() {
 	einfo "Installing core library..."
 	cd "${S}"/lib
 	emake -f arch/unix/Makefile \
-		prefix="${D}"/usr libdir="${D}"/usr/$(get_libdir) install \
+		prefix="${ED}"/usr libdir="${ED}"/usr/$(get_libdir) install \
 			|| die "lib install failed"
 
 	# install po files
 	einfo "Installing po files..."
 	cd "${S}"/po
-	emake prefix="${D}"/usr libdir="${D}"/usr/$(get_libdir) install \
+	emake prefix="${ED}"/usr libdir="${ED}"/usr/$(get_libdir) install \
 		|| die "po install failed"
 
 	# contrib (DESTDIR now works here)

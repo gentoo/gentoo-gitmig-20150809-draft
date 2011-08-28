@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.304 2011/08/21 19:15:53 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.305 2011/08/28 17:32:21 grobian Exp $
+
+  28 Aug 2011; Fabian Groffen <grobian@gentoo.org>
+  freetype-1.4_pre20080316-r2.ebuild, freetype-2.4.6.ebuild:
+  Fix for Prefix, transfer Prefix keywords
 
   21 Aug 2011; Ryan Hill <dirtyepic@gentoo.org> freetype-2.4.6.ebuild,
   metadata.xml:
