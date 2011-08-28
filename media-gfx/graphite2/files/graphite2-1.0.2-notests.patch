@@ -1,0 +1,12 @@
+diff -ruN graphite2-1.0.2.orig/CMakeLists.txt graphite2-1.0.2/CMakeLists.txt
+--- graphite2-1.0.2.orig/CMakeLists.txt	2011-08-15 09:29:58.000000000 +0200
++++ graphite2-1.0.2/CMakeLists.txt	2011-08-29 00:18:30.346197643 +0200
+@@ -61,7 +61,7 @@
+ 
+ add_subdirectory(src)
+ add_subdirectory(gr2fonttest)
+-add_subdirectory(tests)
++# add_subdirectory(tests)
+ add_subdirectory(doc)
+ set(version 2.0.0)
+ set(libdir ${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX})
