@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/cvsutils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsutils/ChangeLog,v 1.1 2010/06/19 00:32:46 abcd Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsutils/ChangeLog,v 1.2 2011/08/28 17:56:50 grobian Exp $
+
+  28 Aug 2011; Fabian Groffen <grobian@gentoo.org> cvsutils-0.2.5.ebuild:
+  Marked ~amd64-linux, bug #365167
 
   19 Jun 2010; Jonathan Callen <abcd@gentoo.org> +cvsutils-0.2.5.ebuild,
   +metadata.xml:
