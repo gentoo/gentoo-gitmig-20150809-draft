@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.0.1-r2.ebuild,v 1.1 2011/08/04 08:59:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.0.2.ebuild,v 1.1 2011/08/28 18:24:02 xarthisius Exp $
 
 EAPI=4
 
@@ -34,7 +34,7 @@ RDEPEND="${CDEPEND}
 	x11-apps/xmessage"
 
 DOCS=( GOALS TODO RELEASE-NOTES-${PV} )
-PATCHES=( "${FILESDIR}"/${P}-gentoo-r1.diff )
+PATCHES=( "${FILESDIR}"/${PN}-4.0.1-gentoo-r1.diff )
 
 pkg_setup() {
 	tc-export CC
