@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5662 2011/08/28 09:03:16 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5663 2011/08/28 18:09:48 scarabeus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
+  Mask ExtUtils-ParseXS until bug #378783 is sorted out.
 
   28 Aug 2011; Eray Aslan <eras@gentoo.org> package.mask:
   Remove mask for app-crypt/heimdal-1.5_pre*. No longer in the tree.
