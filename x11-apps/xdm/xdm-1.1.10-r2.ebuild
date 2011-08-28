@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.1.10-r2.ebuild,v 1.2 2011/06/19 16:07:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.1.10-r2.ebuild,v 1.3 2011/08/28 07:46:04 mgorny Exp $
 
 EAPI=3
 
@@ -30,6 +30,8 @@ DEPEND="${RDEPEND}
 
 PATCHES=(
 	"${FILESDIR}"/xwilling-hang.patch
+	# bug #369531 (underlinking)
+	"${FILESDIR}"/0001-Fix-missing-linking-dependency-on-ldl.patch
 )
 
 pkg_setup() {
@@ -53,5 +55,18 @@ src_install() {
 	# Keep /var/lib/xdm. This is where authfiles are stored. See #286350.
 	keepdir /var/lib/xdm
 
-	systemd_newunit "${FILESDIR}"/xdm.service 'xdm@.service' || die
+	systemd_dounit "${FILESDIR}"/xdm.service || die
+}
+
+pkg_postinst() {
+	# Mea culpa, feel free to remove that after some time --mgorny.
+	if [[ -L "${ROOT}"/etc/systemd/system/graphical.target.wants/${PN}'@tty7'.service ]]
+	then
+		ebegin "Renaming ${PN}@tty7.service to ${PN}.service"
+		ln -s "${ROOT}"/lib/systemd/system/xdm.service \
+			"${ROOT}"/etc/systemd/system/graphical.target.wants/${PN}.service && \
+		rm -f "${ROOT}"/etc/systemd/system/graphical.target.wants/${PN}'@tty7'.service
+		eend ${?} \
+			"Please try to re-enable xdm.service"
+	fi
 }

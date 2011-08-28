@@ -1,0 +1,38 @@
+From 4014cde16310467e8b826da77f4ca5b0ae3d357f Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Fernando=20Tarl=C3=A1=20Cardoso=20Lemos?=
+ <fernandotcl@gmail.com>
+Date: Sat, 19 Feb 2011 17:53:08 -0200
+Subject: [PATCH] Fix missing linking dependency on -ldl.
+
+Recent versions of GCC ship with a linker that doesn't add the deps
+of the DSOs to the linking process. This behavior is also found in
+GNU gold. This change fixes building with those linkers.
+
+Some references:
+
+http://wiki.debian.org/ToolChain/DSOLinking
+https://fedoraproject.org/wiki/UnderstandingDSOLinkChange
+
+Signed-off-by: Alan Coopersmith <alan.coopersmith@oracle.com>
+Reviewed-by: Gaetan Nadon <memsize@videotron.ca>
+---
+ configure.ac |    3 +++
+ 1 files changed, 3 insertions(+), 0 deletions(-)
+
+diff --git a/configure.ac b/configure.ac
+index 5d0f243..d9aa26a 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -455,6 +455,9 @@ AM_CONDITIONAL(HAS_XDM_AUTH, test x$xdmauth = xyes -a x$xdmauth_enable != xno)
+ 
+ AC_SEARCH_LIBS(crypt, crypt)
+ 
++# Function dl() comes from the C library or -ldl
++AC_SEARCH_LIBS([dlopen], [dl])
++
+ AC_SUBST(XDM_CFLAGS)
+ AC_SUBST(XDM_LIBS)
+ AC_SUBST(XDM_LDFLAGS)
+-- 
+1.7.6.1
+

@@ -1,10 +1,9 @@
 [Unit]
-Description=X-Window Display Manager on %I
-Requires=dev-%i.device
-After=dev-%i.device systemd-user-sessions.service
+Description=X-Window Display Manager
+After=systemd-user-sessions.service
 
 [Service]
 ExecStart=/usr/bin/xdm -nodaemon
 
 [Install]
-Alias=graphical.target.wants/xdm@tty7.service
+Alias=graphical.target.wants/xdm.service
