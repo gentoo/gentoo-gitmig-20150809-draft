@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Text-CSV-Simple
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV-Simple/ChangeLog,v 1.5 2010/01/14 15:14:29 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV-Simple/ChangeLog,v 1.6 2011/08/28 13:15:08 tove Exp $
+
+*Text-CSV-Simple-1.0.0 (28 Aug 2011)
+
+  28 Aug 2011; Torsten Veller <tove@gentoo.org> +Text-CSV-Simple-1.0.0.ebuild:
+  Change version scheme
 
   14 Jan 2010; Fabian Groffen <grobian@gentoo.org>
   Text-CSV-Simple-1.00.ebuild:

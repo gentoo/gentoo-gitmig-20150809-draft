@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Text-Glob
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Glob/ChangeLog,v 1.37 2011/02/23 07:29:04 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Glob/ChangeLog,v 1.38 2011/08/28 13:07:59 tove Exp $
+
+*Text-Glob-0.90.0 (28 Aug 2011)
+
+  28 Aug 2011; Torsten Veller <tove@gentoo.org> +Text-Glob-0.90.0.ebuild:
+  Change version scheme
 
 *Text-Glob-0.90 (23 Feb 2011)
 
