@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sub-Install
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Install/ChangeLog,v 1.8 2010/11/15 10:36:29 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Install/ChangeLog,v 1.9 2011/08/28 13:58:32 naota Exp $
+
+  28 Aug 2011; Naohiro Aota <naota@gentoo.org> Sub-Install-0.925.ebuild:
+  Add ~x86-fbsd
 
   15 Nov 2010; Fabian Groffen <grobian@gentoo.org> Sub-Install-0.925.ebuild:
   Marked ~ppc-macos and ~x86-solaris, bug #345435
