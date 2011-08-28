@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/pdfbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.18 2011/08/12 16:02:55 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.19 2011/08/28 16:27:31 grobian Exp $
+
+  28 Aug 2011; Fabian Groffen <grobian@gentoo.org> pdfbox-0.7.3-r2.ebuild:
+  Marked ~x64-macos
 
   12 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> pdfbox-0.7.3-r2.ebuild:
   ppc64 stable wrt #355085
