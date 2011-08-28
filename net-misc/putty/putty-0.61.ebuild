@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.61.ebuild,v 1.2 2011/08/27 21:04:05 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.61.ebuild,v 1.3 2011/08/28 17:28:41 jer Exp $
 
 EAPI="4"
 
@@ -24,7 +24,11 @@ RDEPEND="
 	x11-libs/libX11
 	x11-libs/pango
 "
-DEPEND="${RDEPEND} dev-lang/perl"
+DEPEND="
+	${RDEPEND}
+	dev-lang/perl
+	dev-util/pkgconfig
+"
 
 src_prepare() {
 	cd "${S}"/unix || die "cd unix failed"
