@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-2.14.19-r1.ebuild,v 1.7 2011/08/13 17:30:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/orbit-2.14.19-r1.ebuild,v 1.8 2011/08/28 18:15:21 flameeyes Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -21,6 +21,7 @@ RDEPEND=">=dev-libs/glib-2.8:2
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.18
+	dev-util/gtk-doc-am
 	doc? ( >=dev-util/gtk-doc-1 )"
 
 pkg_setup() {

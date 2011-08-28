@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/orbit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/ChangeLog,v 1.179 2011/08/13 17:30:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/orbit/ChangeLog,v 1.180 2011/08/28 18:15:21 flameeyes Exp $
+
+  28 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  orbit-2.14.19-r1.ebuild:
+  QA: add missing gtk-doc-am dependency.
 
   13 Aug 2011; Raúl Porcel <armin76@gentoo.org> orbit-2.14.19-r1.ebuild:
   alpha/ia64/sh/sparc stable wrt #369909
