@@ -1,0 +1,10 @@
+# ChangeLog for media-fonts/lklug
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/lklug/ChangeLog,v 1.1 2011/08/28 03:46:20 matsuu Exp $
+
+*lklug-0.5.4 (28 Aug 2011)
+
+  28 Aug 2011; MATSUU Takuto <matsuu@gentoo.org> +lklug-0.5.4.ebuild,
+  +metadata.xml:
+  Intial import. The ebuild is submitted by Oschtan and Nikoli, bug #270972.
+
