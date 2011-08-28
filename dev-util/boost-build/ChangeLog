@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/boost-build
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.73 2011/08/22 13:11:07 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.74 2011/08/28 13:15:35 maekke Exp $
+
+  28 Aug 2011; Markus Meier <maekke@gentoo.org> boost-build-1.46.1.ebuild:
+  arm stable, bug #377805
 
   22 Aug 2011; Tony Vroon <chainsaw@gentoo.org> boost-build-1.46.1.ebuild:
   Marked stable on AMD64 as a dependency of dev-libs/boost-1.46.1 based on arch
