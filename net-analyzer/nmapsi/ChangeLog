@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/nmapsi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmapsi/ChangeLog,v 1.4 2010/10/08 08:04:16 wired Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmapsi/ChangeLog,v 1.5 2011/08/28 11:31:10 scarabeus Exp $
+
+*nmapsi-0.2.1 (28 Aug 2011)
+
+  28 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/0.2.1-install-binaries.patch, -nmapsi-0.2_alpha3.ebuild,
+  -nmapsi-0.2_beta3.ebuild, +nmapsi-0.2.1.ebuild,
+  -files/nmapsi-0.2_alpha3-gcc45.patch, metadata.xml:
+  Bump to latest version. Punt older. Add patch for binaries installation.
 
 *nmapsi-0.2_beta3 (08 Oct 2010)
 

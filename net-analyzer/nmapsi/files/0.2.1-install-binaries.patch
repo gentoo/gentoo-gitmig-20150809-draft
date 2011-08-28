@@ -1,0 +1,26 @@
+diff -urN nmapsi4-0.2.1.old/nmapsi4/CMakeLists.txt nmapsi4-0.2.1/nmapsi4/CMakeLists.txt
+--- nmapsi4-0.2.1.old/nmapsi4/CMakeLists.txt	2011-08-28 13:25:03.415019910 +0200
++++ nmapsi4-0.2.1/nmapsi4/CMakeLists.txt	2011-08-28 13:27:13.995019092 +0200
+@@ -120,8 +120,8 @@
+ 
+ 
+ if (Q_WS_X11)
++  install(TARGETS nmapsi4 DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
+   install(FILES ${qms} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/nmapsi4/locale)
+-  install(FILES "${CMAKE_CURRENT_BINARY_DIR}/nmapsi4" DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
+   install(FILES "kde/nmapsi4.desktop" DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications/kde/)
+   install(FILES "kde/nmapsi4-admin.desktop" DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications/kde/)
+   install(FILES "../icons/16x16/nmapsi4.png" DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/16x16/apps/)
+diff -urN nmapsi4-0.2.1.old/nmapsi4-logr/CMakeLists.txt nmapsi4-0.2.1/nmapsi4-logr/CMakeLists.txt
+--- nmapsi4-0.2.1.old/nmapsi4-logr/CMakeLists.txt	2011-08-28 13:25:03.405019910 +0200
++++ nmapsi4-0.2.1/nmapsi4-logr/CMakeLists.txt	2011-08-28 13:27:51.915018855 +0200
+@@ -66,8 +66,8 @@
+ 
+ 
+ if (Q_WS_X11)
++  install(TARGETS nmapsi4-logr DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
+   install(FILES ${qms} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/nmapsi4/locale)
+-  install(FILES "${CMAKE_CURRENT_BINARY_DIR}/nmapsi4-logr" DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
+   install(FILES "src/nmapsi4-logr.desktop" DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications/kde/)
+ #  install(FILES "src/kde/nmapsi4-admin.desktop" DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications/kde/)
+ #  install(FILES "icons/16x16/nmapsi4.png" DESTINATION ${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/16x16/apps/)
