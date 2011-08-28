@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/X500-DN
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X500-DN/ChangeLog,v 1.17 2009/05/02 09:19:57 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X500-DN/ChangeLog,v 1.18 2011/08/28 07:05:56 tove Exp $
+
+*X500-DN-0.290.0 (28 Aug 2011)
+
+  28 Aug 2011; Torsten Veller <tove@gentoo.org> +X500-DN-0.290.0.ebuild:
+  Change version scheme
 
   02 May 2009; Torsten Veller <tove@gentoo.org> -X500-DN-0.28.ebuild:
   Cleanup

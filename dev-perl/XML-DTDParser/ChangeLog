@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/XML-DTDParser
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DTDParser/ChangeLog,v 1.15 2010/02/06 13:43:22 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DTDParser/ChangeLog,v 1.16 2011/08/28 06:51:47 tove Exp $
+
+*XML-DTDParser-2.10.0 (28 Aug 2011)
+
+  28 Aug 2011; Torsten Veller <tove@gentoo.org> +XML-DTDParser-2.10.0.ebuild:
+  Change version scheme
 
   06 Feb 2010; Torsten Veller <tove@gentoo.org> XML-DTDParser-2.01.ebuild:
   Fix LICENSE (#301969). Maintenance
