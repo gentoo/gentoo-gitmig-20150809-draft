@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pdfjam
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdfjam/ChangeLog,v 1.32 2011/08/14 18:35:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdfjam/ChangeLog,v 1.33 2011/08/28 16:20:54 grobian Exp $
+
+  28 Aug 2011; Fabian Groffen <grobian@gentoo.org> pdfjam-2.05.ebuild,
+  pdfjam-2.08.ebuild:
+  Transferred Prefix keywords
 
   14 Aug 2011; Markus Meier <maekke@gentoo.org> pdfjam-2.05.ebuild:
   arm stable, bug #355085
