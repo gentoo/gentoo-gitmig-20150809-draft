@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.1.ebuild,v 1.6 2011/07/19 19:47:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.1.ebuild,v 1.7 2011/08/28 11:18:22 hwoarang Exp $
 
 EAPI=3
 
@@ -123,6 +123,8 @@ pkg_setup() {
 
 src_prepare() {
 	use opengl || epatch "${FILESDIR}"/${PN}-6.4.0-html-nonviz.patch
+	# Hackish workaround to respect LDFLAGS. Bug #375999
+	sed -i -e "s:-c:${CFLAGS} ${LDFLAGS} &:" "${S}"/tools/timer/Makefile
 	base_src_prepare
 }
 

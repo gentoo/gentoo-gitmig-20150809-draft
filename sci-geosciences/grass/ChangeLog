@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.106 2011/07/22 11:14:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.107 2011/08/28 11:18:22 hwoarang Exp $
+
+  28 Aug 2011; Markos Chandras <hwoarang@gentoo.org> grass-6.4.1.ebuild:
+  Respect LDFLAGS. bug #375999
 
   22 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org> -grass-6.3.0.ebuild,
   -files/grass-6.3.0-gcc44.patch, -files/grass-6.3.0-html-nonviz.patch,
