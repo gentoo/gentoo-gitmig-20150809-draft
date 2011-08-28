@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/XML-Filter-BufferText
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Filter-BufferText/ChangeLog,v 1.22 2010/01/21 13:12:41 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Filter-BufferText/ChangeLog,v 1.23 2011/08/28 09:55:56 tove Exp $
+
+*XML-Filter-BufferText-1.10.0 (28 Aug 2011)
+
+  28 Aug 2011; Torsten Veller <tove@gentoo.org>
+  +XML-Filter-BufferText-1.10.0.ebuild:
+  Change version scheme
 
   21 Jan 2010; Torsten Veller <tove@gentoo.org>
   XML-Filter-BufferText-1.01.ebuild:

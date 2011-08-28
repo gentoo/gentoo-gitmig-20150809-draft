@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Unicode-Map8
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map8/ChangeLog,v 1.28 2010/01/21 19:42:12 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map8/ChangeLog,v 1.29 2011/08/28 09:32:32 tove Exp $
+
+*Unicode-Map8-0.130.0 (28 Aug 2011)
+
+  28 Aug 2011; Torsten Veller <tove@gentoo.org> +Unicode-Map8-0.130.0.ebuild:
+  Change version scheme
 
 *Unicode-Map8-0.13 (21 Jan 2010)
 

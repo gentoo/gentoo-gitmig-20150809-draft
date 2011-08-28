@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/URI-Find
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI-Find/ChangeLog,v 1.6 2011/04/24 16:01:30 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI-Find/ChangeLog,v 1.7 2011/08/28 09:39:45 tove Exp $
+
+*URI-Find-20100505.0.0 (28 Aug 2011)
+
+  28 Aug 2011; Torsten Veller <tove@gentoo.org> +URI-Find-20100505.0.0.ebuild:
+  Change version scheme
 
   24 Apr 2011; Fabian Groffen <grobian@gentoo.org> URI-Find-20100505.ebuild:
   Marked ~x86-solaris, bug #296509
