@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Regexp-Shellish
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Regexp-Shellish/ChangeLog,v 1.15 2010/02/05 22:00:56 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Regexp-Shellish/ChangeLog,v 1.16 2011/08/29 09:40:07 tove Exp $
+
+*Regexp-Shellish-0.930.0 (29 Aug 2011)
+
+  29 Aug 2011; Torsten Veller <tove@gentoo.org>
+  +Regexp-Shellish-0.930.0.ebuild:
+  Change version scheme
 
   05 Feb 2010; Torsten Veller <tove@gentoo.org> Regexp-Shellish-0.93.ebuild:
   Fix LICENSE (#301969). Maintenance

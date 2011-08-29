@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Readonly
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Readonly/ChangeLog,v 1.8 2010/01/11 19:20:29 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Readonly/ChangeLog,v 1.9 2011/08/29 09:42:58 tove Exp $
+
+*Readonly-1.30.0 (29 Aug 2011)
+
+  29 Aug 2011; Torsten Veller <tove@gentoo.org> +Readonly-1.30.0.ebuild:
+  Change version scheme
 
   11 Jan 2010; Fabian Groffen <grobian@gentoo.org> Readonly-1.03.ebuild:
   Transfer Prefix keywords

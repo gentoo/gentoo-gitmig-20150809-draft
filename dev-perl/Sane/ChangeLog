@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Sane
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sane/ChangeLog,v 1.2 2009/06/15 09:39:44 dev-zero Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sane/ChangeLog,v 1.3 2011/08/29 09:29:44 tove Exp $
+
+*Sane-0.30.0 (29 Aug 2011)
+
+  29 Aug 2011; Torsten Veller <tove@gentoo.org> +Sane-0.30.0.ebuild:
+  Change version scheme
 
   15 Jun 2009; Tiziano Müller <dev-zero@gentoo.org> Sane-0.03.ebuild:
   Keyworded ~amd64

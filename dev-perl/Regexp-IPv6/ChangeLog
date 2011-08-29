@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Regexp-IPv6
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Regexp-IPv6/ChangeLog,v 1.4 2010/06/11 05:44:44 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Regexp-IPv6/ChangeLog,v 1.5 2011/08/29 09:40:40 tove Exp $
+
+*Regexp-IPv6-0.30.0 (29 Aug 2011)
+
+  29 Aug 2011; Torsten Veller <tove@gentoo.org> +Regexp-IPv6-0.30.0.ebuild:
+  Change version scheme
 
   11 Jun 2010; Torsten Veller <tove@gentoo.org> -Regexp-IPv6-0.02.ebuild:
   Cleanup

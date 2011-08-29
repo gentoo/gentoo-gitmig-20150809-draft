@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/PostScript
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PostScript/ChangeLog,v 1.4 2009/05/14 17:13:02 ken69267 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PostScript/ChangeLog,v 1.5 2011/08/29 09:55:36 tove Exp $
+
+*PostScript-0.60.0 (29 Aug 2011)
+
+  29 Aug 2011; Torsten Veller <tove@gentoo.org> +PostScript-0.60.0.ebuild:
+  Change version scheme
 
   14 May 2009; Kenneth Prugh <ken69267@gentoo.org> PostScript-0.06.ebuild:
   amd64 stable, bug #269571

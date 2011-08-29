@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Rcs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Rcs/ChangeLog,v 1.2 2010/12/08 17:41:08 chainsaw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Rcs/ChangeLog,v 1.3 2011/08/29 09:43:40 tove Exp $
+
+*Rcs-1.50.0 (29 Aug 2011)
+
+  29 Aug 2011; Torsten Veller <tove@gentoo.org> +Rcs-1.50.0.ebuild:
+  Change version scheme
 
   08 Dec 2010; <chainsaw@gentoo.org> Rcs-1.05.ebuild:
   Remove unnecessary elements of the ebuild, as per review by Torsten "tove"

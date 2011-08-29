@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Proc-Background
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-Background/ChangeLog,v 1.5 2011/04/24 16:06:26 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Proc-Background/ChangeLog,v 1.6 2011/08/29 09:51:01 tove Exp $
+
+*Proc-Background-1.100.0 (29 Aug 2011)
+
+  29 Aug 2011; Torsten Veller <tove@gentoo.org>
+  +Proc-Background-1.100.0.ebuild:
+  Change version scheme
 
   24 Apr 2011; Fabian Groffen <grobian@gentoo.org> Proc-Background-1.10.ebuild:
   Marked ~x86-solaris, bug #296509
