@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5663 2011/08/28 18:09:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5664 2011/08/29 19:12:36 williamh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Aug 2011; William Hubbs <williamh@gentoo.org> package.mask:
+  remove mask for app-accessibility/speechd since it has been removed for bug
+  #360067.
 
   28 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
   Mask ExtUtils-ParseXS until bug #378783 is sorted out.
