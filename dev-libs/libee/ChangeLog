@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/libee
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libee/ChangeLog,v 1.1 2011/08/29 19:48:16 maksbotan Exp $
+
+*libee-0.3.1 (29 Aug 2011)
+
+  29 Aug 2011; Maxim Koltsov <maksbotan@gentoo.org> +libee-0.3.1.ebuild,
+  +metadata.xml:
+  Copy dev-libs/libee from rion-overlay, thanks to Andreis Vinogradovs
+  (slepnoga). Bug #348696
+
