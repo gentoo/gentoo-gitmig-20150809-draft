@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/farsight2-0.0.25.ebuild,v 1.1 2011/02/21 07:29:38 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/farsight2-0.0.29.ebuild,v 1.1 2011/08/29 15:35:21 pacho Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -13,15 +13,17 @@ SRC_URI="http://farsight.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
-IUSE="python test msn upnp"
+IUSE="python msn upnp"
+# IUSE="python test msn upnp"
+
 SLOT="0"
 
-# Tests are broken, check again next release
+# Tests often fail due to races
 RESTRICT="test"
 
-COMMONDEPEND=">=media-libs/gstreamer-0.10.26
-	>=media-libs/gst-plugins-base-0.10.26
-	>=dev-libs/glib-2.16:2
+COMMONDEPEND=">=media-libs/gstreamer-0.10.33
+	>=media-libs/gst-plugins-base-0.10.33
+	>=dev-libs/glib-2.26:2
 	>=net-libs/libnice-0.1.0[gstreamer]
 	python? (
 		>=dev-python/pygobject-2.16:2
@@ -34,9 +36,9 @@ RDEPEND="${COMMONDEPEND}
 	msn? ( >=media-plugins/gst-plugins-mimic-0.10.17 )"
 
 DEPEND="${COMMONDEPEND}
-	test? ( media-plugins/gst-plugins-vorbis
-		media-plugins/gst-plugins-speex )
-	dev-util/pkgconfig"
+	        dev-util/pkgconfig"
+#	test? ( media-plugins/gst-plugins-vorbis
+#		media-plugins/gst-plugins-speex )
 
 pkg_setup() {
 	python_set_active_version 2
@@ -60,6 +62,7 @@ src_install() {
 }
 
 src_test() {
+	# FIXME: do an out-of-tree build for tests if USE=-msn
 	if ! use msn; then
 		elog "Tests disabled without msn use flag"
 		return
