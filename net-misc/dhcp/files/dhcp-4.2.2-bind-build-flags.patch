@@ -8,7 +8,7 @@ doesn't use them for the "gen" tool
  
  gen: ${srcdir}/gen.c
 -	${CC} ${ALL_CFLAGS} ${LDFLAGS} -o $@ ${srcdir}/gen.c ${LIBS}
-+	${BUILD_CC} ${BUILD_CFLAGS} ${CINCLUDES} ${BUILD_LDFLAGS} -o $@ ${srcdir}/gen.c ${LIBS}
++	${BUILD_CC} ${BUILD_CFLAGS} ${CINCLUDES} ${BUILD_LDFLAGS} -o $@ ${srcdir}/gen.c ${BUILD_LIBS}
  
  #We don't need rbtdb64 for this library
  #rbtdb64.@O@: rbtdb.c
