@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/libdrm-2.4.26.ebuild,v 1.9 2011/08/20 15:54:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/libdrm-2.4.26.ebuild,v 1.10 2011/08/29 04:38:29 naota Exp $
 
 EAPI=4
 inherit xorg-2
@@ -42,6 +42,8 @@ pkg_setup() {
 		$(use_enable video_cards_vmware vmwgfx-experimental-api)
 		$(use_enable libkms)
 	)
+
+	use elibc_FreeBSD && XORG_EAUTORECONF=yes
 
 	xorg-2_pkg_setup
 }
