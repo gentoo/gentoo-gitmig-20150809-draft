@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-9999.ebuild,v 1.7 2011/07/14 01:17:19 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-9999.ebuild,v 1.8 2011/08/29 15:21:59 armin76 Exp $
 
 EAPI=4
 
@@ -38,5 +38,6 @@ src_install() {
 	doinitd init.d/*
 	dosbin net-setup spind
 	into /
-	dosbin bashlogin livecd-functions.sh
+	dobin bashlogin
+	dosbin livecd-functions.sh
 }
