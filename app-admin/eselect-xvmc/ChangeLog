@@ -1,6 +1,16 @@
 # ChangeLog for app-admin/eselect-xvmc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-xvmc/ChangeLog,v 1.17 2011/08/29 06:31:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-xvmc/ChangeLog,v 1.18 2011/08/29 21:02:02 cardoe Exp $
+
+*eselect-xvmc-0.3 (29 Aug 2011)
+
+  29 Aug 2011; Doug Goldstein <cardoe@gentoo.org> +eselect-xvmc-0.3.ebuild,
+  +files/eselect-xvmc-0.3.eselect:
+  Bump version to support and fix the following:
+  * Newer Intel XvMC (i915). Based on patch from Otávio Cipriani
+  <otavio.n.cipriani@gmail.com> bug #378827
+  * Fix bad redirect. bug #314031
+  * Add unichrome support
 
   29 Aug 2011; Jeroen Roovers <jer@gentoo.org> eselect-xvmc-0.2.ebuild:
   Stable for HPPA (bug #376283).
