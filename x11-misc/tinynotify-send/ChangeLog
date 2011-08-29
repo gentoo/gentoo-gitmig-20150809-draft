@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/tinynotify-send
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tinynotify-send/ChangeLog,v 1.1 2011/08/21 21:18:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tinynotify-send/ChangeLog,v 1.2 2011/08/29 22:23:48 mgorny Exp $
+
+*tinynotify-send-1.0.0 (29 Aug 2011)
+
+  29 Aug 2011; Michał Górny <mgorny@gentoo.org> -tinynotify-send-0.2.ebuild,
+  +tinynotify-send-1.0.0.ebuild:
+  Version bump. The new version adds support for --foreground option to wait
+  for notification to close.
 
 *tinynotify-send-0.2 (21 Aug 2011)
 
