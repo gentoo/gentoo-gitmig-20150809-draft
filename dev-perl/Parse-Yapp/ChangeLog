@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Parse-Yapp
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-Yapp/ChangeLog,v 1.24 2010/02/05 21:38:19 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-Yapp/ChangeLog,v 1.25 2011/08/29 10:53:17 tove Exp $
+
+*Parse-Yapp-1.50.0 (29 Aug 2011)
+
+  29 Aug 2011; Torsten Veller <tove@gentoo.org> +Parse-Yapp-1.50.0.ebuild:
+  Change version scheme
 
   05 Feb 2010; Torsten Veller <tove@gentoo.org> Parse-Yapp-1.05-r1.ebuild:
   Fix LICENSE (#301969). Maintenance

@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-RBLClient
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-RBLClient/ChangeLog,v 1.12 2008/11/26 21:09:10 gmsoft Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-RBLClient/ChangeLog,v 1.13 2011/08/29 11:40:43 tove Exp $
+
+*Net-RBLClient-0.500.0 (29 Aug 2011)
+
+  29 Aug 2011; Torsten Veller <tove@gentoo.org> +Net-RBLClient-0.500.0.ebuild:
+  Change version scheme
 
   26 Nov 2008; Guy Martin <gmsoft@gentoo.org> Net-RBLClient-0.5.ebuild:
   hppa stable

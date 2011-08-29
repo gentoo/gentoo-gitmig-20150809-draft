@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/PAR
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR/ChangeLog,v 1.11 2011/04/24 16:03:51 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR/ChangeLog,v 1.12 2011/08/29 11:10:49 tove Exp $
+
+*PAR-1.2.0 (29 Aug 2011)
+
+  29 Aug 2011; Torsten Veller <tove@gentoo.org> +PAR-1.2.0.ebuild:
+  Change version scheme
 
   24 Apr 2011; Fabian Groffen <grobian@gentoo.org> PAR-1.002.ebuild:
   Marked ~x86-solaris, bug #296509

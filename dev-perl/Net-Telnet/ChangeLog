@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-Telnet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Telnet/ChangeLog,v 1.26 2011/02/09 16:56:00 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Telnet/ChangeLog,v 1.27 2011/08/29 11:29:30 tove Exp $
+
+*Net-Telnet-3.30.0 (29 Aug 2011)
+
+  29 Aug 2011; Torsten Veller <tove@gentoo.org> +Net-Telnet-3.30.0.ebuild:
+  Change version scheme
 
   05 Feb 2010; Torsten Veller <tove@gentoo.org> Net-Telnet-3.03-r1.ebuild:
   Fix LICENSE (#301969). Maintenance

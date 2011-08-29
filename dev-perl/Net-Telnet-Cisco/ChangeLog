@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Net-Telnet-Cisco
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Telnet-Cisco/ChangeLog,v 1.17 2009/10/22 12:48:12 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Telnet-Cisco/ChangeLog,v 1.18 2011/08/29 11:28:46 tove Exp $
+
+*Net-Telnet-Cisco-1.100.0 (29 Aug 2011)
+
+  29 Aug 2011; Torsten Veller <tove@gentoo.org>
+  +Net-Telnet-Cisco-1.100.0.ebuild:
+  Change version scheme
 
   22 Oct 2009; Torsten Veller <tove@gentoo.org>
   Net-Telnet-Cisco-1.10.ebuild:

@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/PerlIO-via-dynamic
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-via-dynamic/ChangeLog,v 1.24 2010/01/10 19:38:17 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-via-dynamic/ChangeLog,v 1.25 2011/08/29 10:44:33 tove Exp $
+
+*PerlIO-via-dynamic-0.130.0 (29 Aug 2011)
+
+  29 Aug 2011; Torsten Veller <tove@gentoo.org>
+  +PerlIO-via-dynamic-0.130.0.ebuild:
+  Change version scheme
 
   10 Jan 2010; Fabian Groffen <grobian@gentoo.org>
   PerlIO-via-dynamic-0.13.ebuild:

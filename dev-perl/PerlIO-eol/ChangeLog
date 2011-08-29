@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/PerlIO-eol
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-eol/ChangeLog,v 1.19 2010/02/05 21:41:40 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-eol/ChangeLog,v 1.20 2011/08/29 10:46:43 tove Exp $
+
+*PerlIO-eol-0.140.0 (29 Aug 2011)
+
+  29 Aug 2011; Torsten Veller <tove@gentoo.org> +PerlIO-eol-0.140.0.ebuild:
+  Change version scheme
 
   05 Feb 2010; Torsten Veller <tove@gentoo.org> PerlIO-eol-0.14.ebuild:
   Fix LICENSE (#301969). Maintenance

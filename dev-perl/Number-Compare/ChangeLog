@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Number-Compare
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Number-Compare/ChangeLog,v 1.16 2010/01/10 19:18:18 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Number-Compare/ChangeLog,v 1.17 2011/08/29 11:18:02 tove Exp $
+
+*Number-Compare-0.10.0 (29 Aug 2011)
+
+  29 Aug 2011; Torsten Veller <tove@gentoo.org> +Number-Compare-0.10.0.ebuild:
+  Change version scheme
 
   10 Jan 2010; Fabian Groffen <grobian@gentoo.org>
   Number-Compare-0.01.ebuild:

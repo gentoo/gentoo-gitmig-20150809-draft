@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/NetxAP
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetxAP/ChangeLog,v 1.1 2011/08/15 14:08:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetxAP/ChangeLog,v 1.2 2011/08/29 11:24:46 tove Exp $
+
+*NetxAP-0.20.0 (29 Aug 2011)
+
+  29 Aug 2011; Torsten Veller <tove@gentoo.org> +NetxAP-0.20.0.ebuild:
+  Change version scheme
 
 *NetxAP-0.02 (15 Aug 2011)
 

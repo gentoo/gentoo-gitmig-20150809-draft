@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/PPIx-Utilities
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPIx-Utilities/ChangeLog,v 1.9 2011/03/18 08:39:07 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPIx-Utilities/ChangeLog,v 1.10 2011/08/29 10:59:23 tove Exp $
+
+*PPIx-Utilities-1.1.0 (29 Aug 2011)
+
+  29 Aug 2011; Torsten Veller <tove@gentoo.org> +PPIx-Utilities-1.1.0.ebuild:
+  Change version scheme
 
   18 Mar 2011; Thomas Kahle <tomka@gentoo.org> PPIx-Utilities-1.001000.ebuild:
   x86 stable per bug 352842
