@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/lksctp-tools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/ChangeLog,v 1.27 2010/08/21 19:57:26 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/ChangeLog,v 1.28 2011/08/29 15:40:21 flameeyes Exp $
+
+*lksctp-tools-1.0.11-r1 (29 Aug 2011)
+
+  29 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -lksctp-tools-1.0.11.ebuild, +lksctp-tools-1.0.11-r1.ebuild:
+  Revision bump: disable strict aliasing until upstream fixes it; add
+  static-libs USE flag.
 
   21 Aug 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -files/lksctp-tools-1.0.6-as-needed.patch,
