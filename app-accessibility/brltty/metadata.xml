@@ -14,7 +14,6 @@
   <flag name="learn-mode">support for interactive command learn mode</flag>
   <flag name="midi">support the musical instrument digital interface</flag>
   <flag name="pcm">support for sound card digital audio</flag>
-  <flag name="pm">user customization of Papenmeier driver</flag>
   <flag name="speech">speech support</flag>
 </use>
 <longdescription lang="en">
