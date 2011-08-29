@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/nano
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.264 2011/05/11 15:04:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.265 2011/08/29 18:08:00 grobian Exp $
+
+*nano-2.3.1-r1 (29 Aug 2011)
+
+  29 Aug 2011; Fabian Groffen <grobian@gentoo.org> +nano-2.3.1-r1.ebuild:
+  Add fixes for Prefix, bug #361251
 
 *nano-2.3.1 (11 May 2011)
 
