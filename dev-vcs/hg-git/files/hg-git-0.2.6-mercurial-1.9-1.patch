@@ -1,0 +1,30 @@
+# HG changeset patch
+# User Mads Kiilerich <mads@kiilerich.com>
+# Date 1302003088 -7200
+# Node ID 61865ad887403865743391e682ce116ad817cd55
+# Parent  f55869b556f0532604404966c612b326e360b7ca
+compatibility with new url handling in Mercurial 1.9
+
+diff -r f55869b556f0532604404966c612b326e360b7ca -r 61865ad887403865743391e682ce116ad817cd55 hggit/__init__.py
+--- a/hggit/__init__.py	Wed Mar 23 21:31:26 2011 -0500
++++ b/hggit/__init__.py	Tue Apr 05 13:31:28 2011 +0200
+@@ -24,6 +24,7 @@
+ from mercurial import hg
+ from mercurial import localrepo
+ from mercurial import util as hgutil
++from mercurial import url
+ from mercurial.i18n import _
+ 
+ demandimport.ignore.extend([
+@@ -42,7 +43,10 @@
+ _oldlocal = hg.schemes['file']
+ 
+ def _local(path):
+-    p = hgutil.drop_scheme('file', path)
++    try:
++        p = hgutil.drop_scheme('file', path)
++    except AttributeError:
++        p = url.url(path).localpath()
+     if (os.path.exists(os.path.join(p, '.git')) and
+         not os.path.exists(os.path.join(p, '.hg'))):
+         return gitrepo

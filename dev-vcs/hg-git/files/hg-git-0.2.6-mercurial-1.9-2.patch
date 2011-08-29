@@ -1,0 +1,33 @@
+# HG changeset patch
+# User Augie Fackler <durin42@gmail.com>
+# Date 1305480363 18000
+# Node ID bcc79fa3fe09c43a011936f7d8b2c1075e0d94da
+# Parent  ed28dd69df6169396bfb72d4aa3349aac8a32ed1
+url wasn't ever published as url.url, and is now util.url
+
+diff -r ed28dd69df6169396bfb72d4aa3349aac8a32ed1 -r bcc79fa3fe09c43a011936f7d8b2c1075e0d94da hggit/__init__.py
+--- a/hggit/__init__.py	Sun May 15 12:24:25 2011 -0500
++++ b/hggit/__init__.py	Sun May 15 12:26:03 2011 -0500
+@@ -42,11 +42,18 @@
+ # support for `hg clone localgitrepo`
+ _oldlocal = hg.schemes['file']
+ 
++try:
++    urlcls = hgutil.url
++except AttributeError:
++    class urlcls(object):
++        def __init__(self, path):
++            self.p = hgutil.drop_scheme('file', path)
++
++        def localpath(self):
++            return self.p
++
+ def _local(path):
+-    try:
+-        p = hgutil.drop_scheme('file', path)
+-    except AttributeError:
+-        p = url.url(path).localpath()
++    p = urlcls(path).localpath()
+     if (os.path.exists(os.path.join(p, '.git')) and
+         not os.path.exists(os.path.join(p, '.hg'))):
+         return gitrepo

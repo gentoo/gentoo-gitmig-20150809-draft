@@ -5,5 +5,9 @@
     <email>djc@gentoo.org</email>
     <name>Dirkjan Ochtman</name>
   </maintainer>
+  <maintainer>
+    <email>grobian@gentoo.org</email>
+    <name>Fabian Groffen</name>
+  </maintainer>
   <herd>python</herd>
 </pkgmetadata>

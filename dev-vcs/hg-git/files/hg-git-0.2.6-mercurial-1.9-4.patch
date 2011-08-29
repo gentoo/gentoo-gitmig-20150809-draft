@@ -1,0 +1,43 @@
+# HG changeset patch
+# User Brendan Cully <brendan@kublai.com>
+# Date 1308853770 25200
+# Node ID 6867b01d1379cb27faca4c4cb06ed2fba38963e8
+# Parent  b8eeabb61c7b720713565a645aacffa7213128aa
+Unbreak outgoing to non-git repos with hg pre-1.9
+
+The wrapped version of findoutgoing unconditionally mangled the
+keyword arguments, but doesn't do version fixups unless the
+remote is a git repository. This change only mangles the argument
+list when the remote is a git repository.
+
+diff -r b8eeabb61c7b720713565a645aacffa7213128aa -r 6867b01d1379cb27faca4c4cb06ed2fba38963e8 hggit/__init__.py
+--- a/hggit/__init__.py	Fri Jun 17 15:01:31 2011 -0500
++++ b/hggit/__init__.py	Thu Jun 23 11:29:30 2011 -0700
+@@ -129,13 +129,13 @@
+     if getattr(discovery, 'findcommonoutgoing', None):
+         kwname = 'onlyheads'
+     def findoutgoing(orig, local, remote, *args, **kwargs):
+-        kw = {}
+-        kw.update(kwargs)
+-        for val, k in zip(args, ('base', kwname, 'force')):
+-            kw[k] = val
+         if isinstance(remote, gitrepo.gitrepo):
+             # clean up this cruft when we're 1.7-only, remoteheads and
+             # the return value change happened between 1.6 and 1.7.
++            kw = {}
++            kw.update(kwargs)
++            for val, k in zip(args, ('base', kwname, 'force')):
++                kw[k] = val
+             git = GitHandler(local, local.ui)
+             base, heads = git.get_refs(remote.path)
+             newkw = {'base': base, kwname: heads}
+@@ -146,7 +146,8 @@
+                 return [x[0] for x in r]
+             if kwname == 'onlyheads':
+                 del kw['base']
+-        return orig(local, remote, **kw)
++            return orig(local, remote, **kw)
++        return orig(local, remote, *args, **kwargs)
+     if getattr(discovery, 'findoutgoing', None):
+         extensions.wrapfunction(discovery, 'findoutgoing', findoutgoing)
+     else:
