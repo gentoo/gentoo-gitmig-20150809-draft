@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/clusterssh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clusterssh/ChangeLog,v 1.1 2011/01/19 11:05:14 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clusterssh/ChangeLog,v 1.2 2011/08/29 07:49:26 xarthisius Exp $
+
+  29 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> clusterssh-9999.ebuild:
+  add missing dependencies, thanks to mduft
 
   19 Jan 2011; Ultrabug <ultrabug@gentoo.org> +clusterssh-3.26.ebuild,
   +clusterssh-3.28.ebuild, +clusterssh-4.00_pre06.ebuild,

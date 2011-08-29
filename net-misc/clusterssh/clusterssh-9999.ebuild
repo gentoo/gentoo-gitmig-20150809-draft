@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clusterssh/clusterssh-9999.ebuild,v 1.1 2011/01/19 11:05:14 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clusterssh/clusterssh-9999.ebuild,v 1.2 2011/08/29 07:49:26 xarthisius Exp $
 
 EAPI=2
 
@@ -17,9 +17,11 @@ KEYWORDS=""
 IUSE=""
 
 RDEPEND="
+	dev-perl/Exception-Class
 	dev-perl/Test-Pod
 	dev-perl/Test-Pod-Coverage
 	dev-perl/Test-Trap
+	dev-perl/Try-Tiny
 	dev-perl/perl-tk
 	dev-perl/Config-Simple
 	dev-perl/X11-Protocol
