@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.206 2011/06/12 11:07:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.207 2011/08/29 23:55:56 sping Exp $
+
+*sound-juicer-2.32.0-r1 (29 Aug 2011)
+
+  29 Aug 2011; Sebastian Pipping <sping@gentoo.org>
+  +sound-juicer-2.32.0-r1.ebuild,
+  +files/sound-juicer-2.32.0-desktop-file.patch, metadata.xml:
+  Fix desktop icon (bug #377855)
 
   12 Jun 2011; Pacho Ramos <pacho@gentoo.org> sound-juicer-2.32.0.ebuild:
   RDEPEND on gnome-base/gvfs[cdda,udev] to prevent problems recognizing drives
