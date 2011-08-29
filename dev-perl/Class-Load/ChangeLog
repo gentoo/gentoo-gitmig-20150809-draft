@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-Load
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Load/ChangeLog,v 1.10 2011/08/26 18:56:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Load/ChangeLog,v 1.11 2011/08/29 06:36:29 jer Exp $
+
+  29 Aug 2011; Jeroen Roovers <jer@gentoo.org> Class-Load-0.80.0.ebuild:
+  Marked ~hppa (bug #379449).
 
   26 Aug 2011; Fabian Groffen <grobian@gentoo.org> Class-Load-0.80.0.ebuild:
   Added Prefix keywords, bug #379449
