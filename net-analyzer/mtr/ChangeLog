@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.106 2011/07/15 15:20:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.107 2011/08/29 17:55:48 grobian Exp $
+
+  29 Aug 2011; Fabian Groffen <grobian@gentoo.org> mtr-0.80.ebuild:
+  Generalise Darwin fix, bug #361807
 
   15 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> mtr-0.80.ebuild:
   ppc/ppc64 stable wrt #362609

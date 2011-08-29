@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.80.ebuild,v 1.8 2011/07/15 15:20:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/mtr-0.80.ebuild,v 1.9 2011/08/29 17:55:48 grobian Exp $
 
 EAPI="4"
 
@@ -34,7 +34,7 @@ src_prepare() {
 src_configure() {
 	# In the source's configure script -lresolv is commented out. Apparently it
 	# is needed for 64bit macos still.
-	use x64-macos && append-libs -lresolv
+	[[ ${CHOST} == *-darwin* ]] && append-libs -lresolv
 	econf \
 		$(use_with gtk) \
 		$(use_enable ipv6)
