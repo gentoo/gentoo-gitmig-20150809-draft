@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.7 2011/07/28 13:47:50 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.8 2011/08/29 01:28:10 vapier Exp $
 
 # @ECLASS: systemd.eclass
 # @MAINTAINER:
@@ -13,7 +13,7 @@
 #
 # @CODE
 # inherit autotools-utils systemd
-# 
+#
 # src_configure() {
 #	local myeconfargs=(
 #		--enable-foo

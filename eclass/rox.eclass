@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.33 2010/04/01 17:03:47 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rox.eclass,v 1.34 2011/08/29 01:28:10 vapier Exp $
 
 # ROX eclass Version 3
 
@@ -38,7 +38,7 @@
 #       APPMIME="a/foo-1;a/foo-2
 #                $(usemime three "a/three")
 #                text/plain"
-#    will be expanded to either "a/foo-1;a/foo-2;a/three;text/plain" if 
+#    will be expanded to either "a/foo-1;a/foo-2;a/three;text/plain" if
 #    USE=three or "a/foo-1;a/foo-2;text/plain" if not.
 #    WARNING: the 'usemime' function cannot be used in global scope. You should
 #    set APPMIME (or at least the USE-dependant parts) in your own src_install

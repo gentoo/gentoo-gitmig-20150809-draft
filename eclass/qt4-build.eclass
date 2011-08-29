@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.93 2011/08/22 04:46:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.94 2011/08/29 01:28:10 vapier Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -17,8 +17,8 @@ inherit base eutils multilib toolchain-funcs flag-o-matic versionator
 MY_PV=${PV/_/-}
 if version_is_at_least 4.5.99999999; then
 	MY_P=qt-everywhere-opensource-src-${MY_PV}
-	[[ ${CATEGORY}/${PN} != x11-libs/qt-xmlpatterns ]] && 
-		[[ ${CATEGORY}/${PN} != x11-themes/qgtkstyle ]] && 
+	[[ ${CATEGORY}/${PN} != x11-libs/qt-xmlpatterns ]] &&
+		[[ ${CATEGORY}/${PN} != x11-themes/qgtkstyle ]] &&
 			IUSE="+exceptions"
 else
 	MY_P=qt-x11-opensource-src-${MY_PV}
@@ -176,7 +176,7 @@ qt4-build_src_unpack() {
 qt4-build_src_prepare() {
 	setqtenv
 	cd "${S}"
-	
+
 	# fix qt 4.7 regression that skips -fvisibility=hidden
 	if version_is_at_least "4.7.0_beta1"; then
 		sed -e "s/^gcc|g++)/*gcc|*g++)/" \

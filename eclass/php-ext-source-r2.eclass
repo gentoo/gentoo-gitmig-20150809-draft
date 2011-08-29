@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.15 2011/08/22 04:46:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-source-r2.eclass,v 1.16 2011/08/29 01:28:10 vapier Exp $
 
 # @ECLASS: php-ext-source-r2.eclass
 # @MAINTAINER:
@@ -125,7 +125,7 @@ php-ext-source-r2_phpize() {
 	if [[ "${PHP_EXT_SKIP_PHPIZE}" != 'yes' ]] ; then
 		# Create configure out of config.m4
 		# I wish I could run this to solve #329071, but I cannot
-		#autotools_run_tool ${PHPIZE} 
+		#autotools_run_tool ${PHPIZE}
 		${PHPIZE}
 		# force run of libtoolize and regeneration of related autotools
 		# files (bug 220519)
@@ -249,11 +249,10 @@ php-ext-source-r2_createinifiles() {
 		# Add the needed lines to the <ext>.ini files
 		local file
 		if [[ "${PHP_EXT_INI}" = "yes" ]] ; then
-			for file in ${PHPINIFILELIST}; do 
+			for file in ${PHPINIFILELIST}; do
 				php-ext-source-r2_addextension "${PHP_EXT_NAME}.so" "${file}"
 			done
 		fi
-		
 
 		# Symlink the <ext>.ini files from ext/ to ext-active/
 		local inifile
@@ -275,7 +274,6 @@ php-ext-source-r2_createinifiles() {
 		# Add support for installing PHP files into a version dependant directory
 		PHP_EXT_SHARED_DIR="/usr/share/php/${PHP_EXT_NAME}"
 	done
-	
 }
 
 php-ext-source-r2_addextension() {

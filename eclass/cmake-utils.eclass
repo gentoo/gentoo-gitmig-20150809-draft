@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.74 2011/08/27 20:30:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.75 2011/08/29 01:28:10 vapier Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -33,7 +33,7 @@ CMAKE_MIN_VERSION="${CMAKE_MIN_VERSION:-2.8.4}"
 
 # @ECLASS-VARIABLE: CMAKE_REMOVE_MODULES_LIST
 # @DESCRIPTION:
-# Space-separated list of CMake modules that will be removed in $S during src_prepare, 
+# Space-separated list of CMake modules that will be removed in $S during src_prepare,
 # in order to force packages to use the system version.
 CMAKE_REMOVE_MODULES_LIST="${CMAKE_REMOVE_MODULES_LIST:-FindBLAS FindLAPACK}"
 
@@ -334,7 +334,7 @@ enable_cmake-utils_src_configure() {
 			SET(CMAKE_PREFIX_PATH "${EPREFIX}${PREFIX:-/usr}" CACHE STRING ""FORCE)
 			SET(CMAKE_SKIP_BUILD_RPATH OFF CACHE BOOL "" FORCE)
 			SET(CMAKE_SKIP_RPATH OFF CACHE BOOL "" FORCE)
-			SET(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE CACHE BOOL "" FORCE) 
+			SET(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE CACHE BOOL "" FORCE)
 			SET(CMAKE_INSTALL_RPATH "${EPREFIX}${PREFIX:-/usr}/lib;${EPREFIX}/usr/${CHOST}/lib/gcc;${EPREFIX}/usr/${CHOST}/lib;${EPREFIX}/usr/$(get_libdir);${EPREFIX}/$(get_libdir)" CACHE STRING "" FORCE)
 			SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE CACHE BOOL "" FORCE)
 			SET(CMAKE_INSTALL_NAME_DIR "${EPREFIX}${PREFIX:-/usr}/lib" CACHE STRING "" FORCE)

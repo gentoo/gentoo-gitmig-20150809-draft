@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.39 2010/01/13 15:06:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.40 2011/08/29 01:28:10 vapier Exp $
 #
 # Author: George Shapovalov <george@gentoo.org>
 # Belongs to: ada herd <ada@gentoo.org>
@@ -128,7 +128,7 @@ get_ada_dep() {
 #
 # params:
 #  $1 - the requested gnat profile in usual form (e.g. x86_64-pc-linux-gnu-gnat-gcc-4.1)
-#  $2 - Ada standard specification, as would be specified in DEPEND. 
+#  $2 - Ada standard specification, as would be specified in DEPEND.
 #       Valid  values: ada-1995, ada-2005, ada
 #
 #       This used to treat ada-1995 and ada alike, but some packages (still

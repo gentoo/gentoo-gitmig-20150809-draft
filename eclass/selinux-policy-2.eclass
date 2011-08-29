@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.10 2011/08/22 19:51:33 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy-2.eclass,v 1.11 2011/08/29 01:28:10 vapier Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the reference-policy based modules.
@@ -103,10 +103,10 @@ selinux-policy-2_src_unpack() {
 # Patch the reference policy sources with our set of enhancements. Start with
 # the base patchbundle referred to by the ebuilds through the BASEPOL variable,
 # then apply the additional patches as offered by the ebuild.
-# 
+#
 # Next, extract only those files needed for this particular module (i.e. the .te
 # and .fc files for the given module in the MODS variable).
-# 
+#
 # Finally, prepare the build environments for each of the supported SELinux
 # types (such as targeted or strict), depending on the POLICY_TYPES variable
 # content.

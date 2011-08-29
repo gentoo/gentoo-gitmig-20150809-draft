@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-common.eclass,v 1.15 2011/08/22 04:46:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-common.eclass,v 1.16 2011/08/29 01:28:10 vapier Exp $
 
 # @ECLASS: texlive-common.eclass
 # @MAINTAINER:
@@ -92,7 +92,7 @@ texlive-common_do_symlinks() {
 }
 
 # @FUNCTION: etexlinks
-# @USAGE: < file > 
+# @USAGE: < file >
 # @DESCRIPTION:
 # Mimic texlinks on a fmtutil format file
 #
@@ -110,10 +110,10 @@ etexlinks() {
 }
 
 # @FUNCTION: dobin_texmf_scripts
-# @USAGE: < file1 file2 ... > 
+# @USAGE: < file1 file2 ... >
 # @DESCRIPTION:
 # Symlinks a script from the texmf tree to /usr/bin. Requires permissions to be
-# correctly set for the file that it will point to. 
+# correctly set for the file that it will point to.
 
 dobin_texmf_scripts() {
 	while [ $# -gt 0 ] ; do

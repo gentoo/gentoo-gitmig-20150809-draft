@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.73 2011/03/13 19:06:26 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.74 2011/08/29 01:28:10 vapier Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -405,7 +405,7 @@ vdr-plugin_pkg_setup() {
 	DVB_INCLUDE_DIR="/usr/include"
 
 	TMP_LOCALE_DIR="${WORKDIR}/tmp-locale"
-	if has_version ">=media-video/vdr-1.7.17"; then   
+	if has_version ">=media-video/vdr-1.7.17"; then
 		LOCDIR="/usr/share/locale"
 	else
 		LOCDIR="/usr/share/vdr/locale"

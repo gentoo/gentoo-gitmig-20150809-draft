@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.52 2011/05/23 14:09:04 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnatbuild.eclass,v 1.53 2011/08/29 01:28:10 vapier Exp $
 #
 # Author: George Shapovalov <george@gentoo.org>
 # Belongs to: ada herd <ada@gentoo.org>
@@ -64,7 +64,7 @@ PN_GnatGpl="gnat-gpl"
 # so tc-* functions are of no use here. The present versioning scheme makes
 # GCCVER basically a part of PV, but *this may change*!!
 #
-# GCCVER can be set in the ebuild. 
+# GCCVER can be set in the ebuild.
 [[ -z ${GCCVER} ]] && GCCVER="${GNATRELEASE}"
 
 
@@ -315,7 +315,7 @@ gnatbuild_pkg_postinst() {
 
 
 gnatbuild_pkg_postrm() {
-	# "eselect gnat update" now removes the env.d file if the corresponding 
+	# "eselect gnat update" now removes the env.d file if the corresponding
 	# gnat profile was unmerged
 	eselect gnat update
 	elog "If you just unmerged the last gnat in this SLOT, your active gnat"
