@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/path64/path64-1.0.0_pre20110821.ebuild,v 1.1 2011/08/21 08:28:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/path64/path64-1.0.0_pre20110821.ebuild,v 1.2 2011/08/29 06:22:33 xarthisius Exp $
 
 EAPI=4
 CMAKE_VERBOSE=1
@@ -33,7 +33,6 @@ pkg_setup() {
 		ewarn "There is a high chance that you will utterly fail!"
 		ewarn "Unless you know what you are doing you'd better stop now"
 		ewarn "Should you decide to proceed, you are on your own..."
-		epause
 	fi
 }
 
