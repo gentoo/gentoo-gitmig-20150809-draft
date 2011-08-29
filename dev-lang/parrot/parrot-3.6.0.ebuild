@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-3.6.0.ebuild,v 1.1 2011/07/30 09:46:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-3.6.0.ebuild,v 1.2 2011/08/29 17:32:25 grobian Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.parrot.org/pub/parrot/releases/stable/${PV}/${P}.tar.bz2"
 
 LICENSE="Artistic-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="opengl nls doc examples gdbm gmp ssl +unicode pcre"
 
 RDEPEND="sys-libs/readline
@@ -27,6 +27,11 @@ RDEPEND="sys-libs/readline
 
 DEPEND="dev-lang/perl[doc?]
 	${RDEPEND}"
+
+src_prepare() {
+	# skip fink and macports detection, Gentoo Prefix is much better
+	sed -i -e '/_probe_for_libraries(/d' config/init/hints/darwin.pm || die
+}
 
 src_configure() {
 	myconf="--disable-rpath"
