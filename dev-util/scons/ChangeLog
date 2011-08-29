@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/scons
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.98 2011/08/24 16:35:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.99 2011/08/29 18:21:28 grobian Exp $
+
+  29 Aug 2011; Fabian Groffen <grobian@gentoo.org> scons-2.0.1-r1.ebuild:
+  Fix hardcoded paths to refer to those from the Prefix first, by Asfand Yar
+  Qazi, bug #361061
 
   24 Aug 2011; Markos Chandras <hwoarang@gentoo.org> scons-2.0.1-r1.ebuild:
   Set PYTHON_MODNAME. Patch by Arfrever.
