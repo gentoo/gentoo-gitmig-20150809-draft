@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.347 2011/07/29 07:42:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.348 2011/08/29 21:25:15 vapier Exp $
+
+*util-linux-2.20 (29 Aug 2011)
+
+  29 Aug 2011; Mike Frysinger <vapier@gentoo.org> +util-linux-2.20.ebuild,
+  util-linux-9999.ebuild:
+  Version bump which fixes #373381 by Chris Richards. Add USE=static-libs
+  support #378269 by Agostino Sarubbo. Sync changes between live git and stable
+  release ebuilds. Block older sysvinits since we now install the mountpoint
+  util ourselves.
 
   29 Jul 2011; Zac Medico <zmedico@gentoo.org> util-linux-2.19.1-r1.ebuild,
   util-linux-9999.ebuild:
