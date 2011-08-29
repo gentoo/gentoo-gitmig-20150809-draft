@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/chrpath
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/ChangeLog,v 1.14 2010/04/26 02:25:17 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/ChangeLog,v 1.15 2011/08/29 19:23:22 hwoarang Exp $
+
+*chrpath-0.13-r2 (29 Aug 2011)
+
+  29 Aug 2011; Markos Chandras <hwoarang@gentoo.org> -chrpath-0.13-r1.ebuild,
+  +chrpath-0.13-r2.ebuild, +files/chrpath-0.13-multilib.patch,
+  -files/chrpath-multilib.patch:
+  revbump with improved patch for prefix. Thanks to Fabian Groffen and Mario
+  Fetka for their help. Bug #365817
 
   26 Apr 2010; Mike Frysinger <vapier@gentoo.org> chrpath-0.13-r1.ebuild:
   Clean up installed paths.

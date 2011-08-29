@@ -1,24 +1,8 @@
---- a/configure.ac	2004-09-19 10:28:33.000000000 +0200
-+++ b/configure.ac	2006-02-27 16:12:00.282066250 +0100
-@@ -16,6 +16,7 @@
- dnl Checks for programs.
- AC_PROG_CC
- AC_PROG_INSTALL
-+AC_PROG_LIBTOOL
- 
- dnl Checks for libraries.
- 
-@@ -26,7 +27,6 @@
- dnl Checks for typedefs, structures, and compiler characteristics.
- AC_C_CONST
- AC_C_BIGENDIAN
--AC_CHECK_SIZEOF(void *)
- 
- dnl Checks for library functions.
- AC_CHECK_FUNCS(getopt_long)
---- a/Makefile.am	2004-09-19 10:29:28.000000000 +0200
-+++ b/Makefile.am	2006-02-27 16:57:31.166290750 +0100
-@@ -12,12 +12,19 @@
+Index: chrpath-0.13/Makefile.am
+===================================================================
+--- chrpath-0.13.orig/Makefile.am
++++ chrpath-0.13/Makefile.am
+@@ -12,12 +12,19 @@ debs:
  	fakeroot debian/rules binary
  
  chrpath_SOURCES = \
@@ -28,7 +12,7 @@
 -	elf.c		\
  	protos.h
  
-+chrpath_LDADD = -ldl
++chrpath_LDADD = $(LDLIBS)
 +
 +lib_LTLIBRARIES = libchrpath32.la libchrpath64.la
 +libchrpath32_la_SOURCES = chrpath.c killrpath.c elf.c protos.h
@@ -41,8 +25,42 @@
  EXTRA_DIST = ChangeLog.usermap $(man_MANS)
  
  CLEANFILES = *.bb *.bbg *.da *.gcov testsuite/*.bb testsuite/*.bbg
---- a/main.c	2004-09-19 10:33:37.000000000 +0200
-+++ b/main.c	2006-02-27 17:23:39.400267750 +0100
+Index: chrpath-0.13/configure.ac
+===================================================================
+--- chrpath-0.13.orig/configure.ac
++++ chrpath-0.13/configure.ac
+@@ -16,6 +16,7 @@ CHRPATH_LDRPATH_OPTION
+ dnl Checks for programs.
+ AC_PROG_CC
+ AC_PROG_INSTALL
++AC_PROG_LIBTOOL
+ 
+ dnl Checks for libraries.
+ 
+@@ -26,11 +27,18 @@ AC_CHECK_HEADERS([getopt.h elf.h fcntl.h
+ dnl Checks for typedefs, structures, and compiler characteristics.
+ AC_C_CONST
+ AC_C_BIGENDIAN
+-AC_CHECK_SIZEOF(void *)
+ 
+ dnl Checks for library functions.
+ AC_CHECK_FUNCS(getopt_long)
+ 
++dnl See if we need -ldl on this platform for dlopen
++LDLIBS=
++save_LIBS="$LIBS"
++LIBS=
++AC_SEARCH_LIBS([dlopen], [dl], [LDLIBS="-ldl"])
++LIBS="${save_LIBS}"
++AC_SUBST([LDLIBS])
++
+ if eval "test x$GCC = xyes"; then
+   for flag in \
+       -ansi \
+Index: chrpath-0.13/main.c
+===================================================================
+--- chrpath-0.13.orig/main.c
++++ chrpath-0.13/main.c
 @@ -12,13 +12,19 @@
  #  include "config.h"
  #endif
@@ -64,7 +82,7 @@
  
  #ifdef HAVE_GETOPT_LONG
  #  define GETOPT_LONG getopt_long
-@@ -61,6 +67,30 @@
+@@ -61,6 +67,30 @@ usage(char *progname)
    printf("\n");
  }
  
@@ -95,7 +113,7 @@
  int
  main(int argc, char * const argv[])
  {
-@@ -73,6 +103,9 @@
+@@ -73,6 +103,9 @@ main(int argc, char * const argv[])
  #ifdef HAVE_GETOPT_LONG
    int option_index = 0;
  #endif /* HAVE_GETOPT_LONG */
@@ -105,7 +123,7 @@
  
    if (argc < 2)
      {
-@@ -116,14 +149,31 @@
+@@ -116,14 +149,31 @@ main(int argc, char * const argv[])
        }
    } while (-1 != opt);
  

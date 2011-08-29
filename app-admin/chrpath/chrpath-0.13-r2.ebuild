@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/chrpath-0.13-r1.ebuild,v 1.3 2010/04/26 02:25:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/chrpath-0.13-r2.ebuild,v 1.1 2011/08/29 19:23:22 hwoarang Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~
 IUSE=""
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-multilib.patch
+	epatch "${FILESDIR}"/${P}-multilib.patch
 	epatch "${FILESDIR}"/${PN}-keepgoing.patch
 	epatch "${FILESDIR}"/${P}-testsuite-1.patch
 	sed -i -e '/^docdir/d' Makefile.am # use standard docdir
