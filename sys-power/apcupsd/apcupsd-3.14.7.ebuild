@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.7.ebuild,v 1.10 2011/08/26 10:08:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.7.ebuild,v 1.11 2011/08/29 13:38:55 flameeyes Exp $
 
 WEBAPP_MANUAL_SLOT="yes"
 WEBAPP_OPTIONAL="yes"
@@ -24,7 +24,6 @@ DEPEND="
 		=dev-libs/glib-2*
 		>=gnome-base/gconf-2.0 )"
 RDEPEND="${DEPEND}
-	sys-apps/openrc
 	virtual/mailx"
 
 pkg_setup() {
@@ -92,7 +91,7 @@ src_install() {
 	use cgi && webapp_src_install
 
 	rm "${D}"/etc/init.d/apcupsd
-	newinitd "${FILESDIR}/${PN}.init.2" "${PN}" || die "newinitd failed"
+	newinitd "${FILESDIR}/${PN}.init.2a" "${PN}" || die "newinitd failed"
 
 	if has_version sys-apps/openrc; then
 		newinitd "${FILESDIR}/${PN}.powerfail.init" "${PN}".powerfail || die "newinitd failed"
