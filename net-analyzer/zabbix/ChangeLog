@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.58 2011/08/28 22:26:41 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.59 2011/08/29 18:45:41 mattm Exp $
+
+  29 Aug 2011; Matthew Marlowe <mattm@gentoo.org> zabbix-1.9.4.ebuild, zabbix-1.9.5.ebuild:
+  removed keywords from 1.9 releases as they are alpha quality and only really
+  appropriate for feature previews at the moment
 
   28 Aug 2011; Tony Vroon <chainsaw@gentoo.org> zabbix-1.8.6.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
