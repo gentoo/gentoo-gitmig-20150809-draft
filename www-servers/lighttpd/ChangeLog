@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.254 2011/07/26 16:34:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.255 2011/08/29 06:39:13 jer Exp $
+
+  29 Aug 2011; Jeroen Roovers <jer@gentoo.org> lighttpd-1.4.28-r2.ebuild:
+  Stable for HPPA (bug #373917).
 
   26 Jul 2011; Raúl Porcel <armin76@gentoo.org> lighttpd-1.4.28-r2.ebuild:
   alpha/ia64/sh/sparc stable wrt #373917
