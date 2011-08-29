@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.124 2011/05/21 18:42:36 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.125 2011/08/29 17:40:29 flameeyes Exp $
+
+*libffi-3.0.10 (29 Aug 2011)
+
+  29 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org> +libffi-3.0.10.ebuild:
+  Version bump to 3.0.10 final (interix patch not necessary). Somehow this
+  lowers, rather than increase, the soversion.
 
   21 May 2011; Naohiro Aota <naota@gentoo.org> libffi-3.0.10_rc8.ebuild:
   Fix build failure bug #363275 on BSD
