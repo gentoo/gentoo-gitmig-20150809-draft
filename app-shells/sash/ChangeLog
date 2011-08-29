@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/sash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.39 2011/02/06 22:02:34 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.40 2011/08/29 06:26:39 flameeyes Exp $
+
+  29 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org> sash-3.7-r2.ebuild:
+  Fix building with GCC 4.6 by not passing broken LDFLAGS (bug #381005). Do not
+  link statically unconditionally. Use latest EAPI.
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> sash-3.7-r1.ebuild:
   Drop to ~mips
