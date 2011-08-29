@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/python-updater
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.65 2011/08/06 16:59:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.66 2011/08/29 10:28:31 naota Exp $
+
+*python-updater-0.9-r1 (29 Aug 2011)
+
+  29 Aug 2011; Naohiro Aota <naota@gentoo.org> +python-updater-0.9-r1.ebuild,
+  +files/python-updater-0.9-sed.patch:
+  Add patch to use ebuild-helper's version of sed
 
   06 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
   -files/python-updater-0.7-fix_import.patch,
