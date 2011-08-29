@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.322 2011/08/15 04:55:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.323 2011/08/29 05:09:44 vapier Exp $
+
+  29 Aug 2011; Mike Frysinger <vapier@gentoo.org>
+  linux-headers-2.6.36.1.ebuild, linux-headers-2.6.38.ebuild,
+  linux-headers-2.6.39.ebuild:
+  Split src_unpack into src_prepare for EAPI=3.
 
 *linux-headers-2.6.39 (15 Aug 2011)
 
