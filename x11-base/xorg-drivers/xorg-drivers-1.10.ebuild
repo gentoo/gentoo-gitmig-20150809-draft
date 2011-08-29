@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.10.ebuild,v 1.11 2011/08/20 15:42:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.10.ebuild,v 1.12 2011/08/29 05:48:26 chithanh Exp $
 
 EAPI=4
 
@@ -144,11 +144,11 @@ PDEPEND="
 	video_cards_voodoo?        ( x11-drivers/xf86-video-voodoo )
 
 	!x11-drivers/xf86-input-citron
-	!x11-drivers/xf86-input-elographics
-	!x11-drivers/xf86-input-fpit
-	!x11-drivers/xf86-input-hyperpen
-	!x11-drivers/xf86-input-mutouch
-	!x11-drivers/xf86-input-penmount
+	!<x11-drivers/xf86-input-elographics-1.3.0
+	!<x11-drivers/xf86-input-fpit-1.4.0
+	!<x11-drivers/xf86-input-hyperpen-1.4.1
+	!<x11-drivers/xf86-input-mutouch-1.3.0
+	!<x11-drivers/xf86-input-penmount-1.5.0
 	!x11-drivers/xf86-video-cyrix
 	!x11-drivers/xf86-video-impact
 	!x11-drivers/xf86-video-nsc
