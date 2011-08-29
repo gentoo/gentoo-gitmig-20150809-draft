@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libtinynotify/libtinynotify-0.0.2.ebuild,v 1.1 2011/08/24 11:28:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libtinynotify/libtinynotify-0.1.0.ebuild,v 1.1 2011/08/29 22:04:14 mgorny Exp $
 
 EAPI=4
 inherit autotools-utils
@@ -21,6 +21,7 @@ DEPEND="${RDEPEND}
 
 DOCS=( README )
 
+# requires gtk-doc-1.18
 RESTRICT=test
 
 src_configure() {
