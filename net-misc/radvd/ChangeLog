@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/radvd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.65 2011/06/16 22:42:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.66 2011/08/29 10:46:49 xmw Exp $
+
+*radvd-1.8.1 (29 Aug 2011)
+
+  29 Aug 2011; Michael Weber <xmw@gentoo.org> -radvd-1.1.ebuild,
+  -files/radvd-1.1-gnu-source.patch, -files/radvd-1.1-parallel-make.patch,
+  -radvd-1.5.ebuild, +radvd-1.8.1.ebuild:
+  Version bump, remove old versions
 
 *radvd-1.8 (16 Jun 2011)
 *radvd-1.7 (16 Jun 2011)

@@ -1,9 +1,0 @@
-diff -Nuar radvd-1.1.orig/Makefile.am radvd-1.1/Makefile.am
---- radvd-1.1.orig/Makefile.am	2008-01-24 02:03:17.000000000 -0800
-+++ radvd-1.1/Makefile.am	2008-11-18 15:55:59.698396162 -0800
-@@ -61,3 +61,5 @@
- 	mkdir $(distdir)/redhat
- 	cp -p $(srcdir)/redhat/radvd.init $(srcdir)/redhat/radvd.spec \
- 		$(srcdir)/redhat/radvd.sysconfig $(distdir)/redhat
-+
-+gram.h: gram.y

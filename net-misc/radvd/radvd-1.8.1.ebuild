@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-1.5.ebuild,v 1.2 2010/07/06 21:09:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-1.8.1.ebuild,v 1.1 2011/08/29 10:46:49 xmw Exp $
 
 EAPI=2
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://v6web.litech.org/radvd/dist/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="kernel_FreeBSD"
 
 DEPEND="sys-devel/bison
@@ -33,17 +33,17 @@ src_configure() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
-	dodoc CHANGES README TODO radvd.conf.example
-	dohtml INTRO.html
+	dodoc CHANGES README TODO radvd.conf.example || die
+	dohtml INTRO.html || die
 
-	newinitd "${FILESDIR}/${PN}".init "${PN}"
-	newconfd "${FILESDIR}/${PN}".conf "${PN}"
+	newinitd "${FILESDIR}/${PN}".init "${PN}" || die
+	newconfd "${FILESDIR}/${PN}".conf "${PN}" || die
 
 	# location of radvd.pid needs to be writeable by the radvd user
 	keepdir /var/run/radvd
-	chown -R radvd:radvd "${D}"/var/run/radvd
+	chown -R radvd:radvd "${D}"/var/run/radvd || die
 	fperms 755 /var/run/radvd
 
 	if use kernel_FreeBSD ; then
@@ -54,14 +54,14 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo "To use ${PN} you must create the configuration file"
-	einfo "${ROOT}/etc/radvd.conf"
-	einfo
-	einfo "An example configuration file has been installed under"
-	einfo "${ROOT}/usr/share/doc/${PF}"
-	einfo
-	einfo "grsecurity users should allow a specific group to read /proc"
-	einfo "and add the radvd user to that group, otherwise radvd may"
-	einfo "segfault on startup."
+	elog
+	elog "To use ${PN} you must create the configuration file"
+	elog "${ROOT}etc/radvd.conf"
+	elog
+	elog "An example configuration file has been installed under"
+	elog "${ROOT}usr/share/doc/${PF}"
+	elog
+	elog "grsecurity users should allow a specific group to read /proc"
+	elog "and add the radvd user to that group, otherwise radvd may"
+	elog "segfault on startup."
 }
