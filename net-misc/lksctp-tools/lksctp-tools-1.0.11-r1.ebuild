@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/lksctp-tools-1.0.11-r1.ebuild,v 1.1 2011/08/29 15:40:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lksctp-tools/lksctp-tools-1.0.11-r1.ebuild,v 1.2 2011/08/29 15:41:11 flameeyes Exp $
 
 EAPI=4
 
@@ -21,9 +21,7 @@ RDEPEND=""
 
 REQUIRED_USE="kernel_linux"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.0.8-prefix.patch #181602
 }
 
