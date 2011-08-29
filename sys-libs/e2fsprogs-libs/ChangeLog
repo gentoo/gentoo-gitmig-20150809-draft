@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/e2fsprogs-libs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.66 2011/08/14 17:13:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.67 2011/08/29 06:12:49 jer Exp $
+
+  29 Aug 2011; Jeroen Roovers <jer@gentoo.org> e2fsprogs-libs-1.41.14.ebuild:
+  Stable for HPPA (bug #378039).
 
   14 Aug 2011; Markus Meier <maekke@gentoo.org> e2fsprogs-libs-1.41.14.ebuild:
   amd64/arm/x86 stable, bug #378039
