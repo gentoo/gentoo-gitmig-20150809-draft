@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opencore-amr
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencore-amr/ChangeLog,v 1.17 2010/01/17 18:43:14 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencore-amr/ChangeLog,v 1.18 2011/08/29 17:42:13 grobian Exp $
+
+  29 Aug 2011; Fabian Groffen <grobian@gentoo.org> opencore-amr-0.1.2.ebuild:
+  Marked *-macos, bug #362691
 
   17 Jan 2010; Raúl Porcel <armin76@gentoo.org> opencore-amr-0.1.2.ebuild:
   alpha/ia64/sparc stable wrt #297855
