@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-tools/pdb-tools-0.1.4-r2.ebuild,v 1.4 2011/06/21 16:00:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb-tools/pdb-tools-0.1.4-r3.ebuild,v 1.1 2011/08/29 14:05:36 jlec Exp $
 
 EAPI=3
 
@@ -55,7 +55,7 @@ src_install() {
 		doins *.py || die
 
 		for i in pdb_*.py; do
-			cat >> ${i/.py} <<- EOF
+			cat > ${i/.py} <<- EOF
 			#!${EPREFIX}/bin/bash
 			$(PYTHON) -O "${EPREFIX}$(python_get_sitedir)/${PN}/${i}" \$@
 			EOF
