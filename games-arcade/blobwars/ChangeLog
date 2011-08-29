@@ -1,0 +1,11 @@
+# ChangeLog for games-arcade/blobwars
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobwars/ChangeLog,v 1.40 2011/08/29 18:43:08 pacho Exp $
+
+*blobwars-1.19 (29 Aug 2011)
+
+  29 Aug 2011; Pacho Ramos <pacho@gentoo.org> +blobwars-1.19.ebuild,
+  +files/blobwars-1.19-ldflags.patch, +files/blobwars-1.19-linking-order.patch,
+  +metadata.xml:
+  Initial commit, bug #260843
+
