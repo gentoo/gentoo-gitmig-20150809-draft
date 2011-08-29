@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.243 2011/08/20 15:56:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.244 2011/08/29 17:54:32 ford_prefect Exp $
+
+*pulseaudio-0.99.3 (29 Aug 2011)
+
+  29 Aug 2011; Arun Raghavan <ford_prefect@gentoo.org>
+  -pulseaudio-0.99.2.ebuild, +pulseaudio-0.99.3.ebuild:
+  Bump testing release to 0.99.3. Various ug fixes and new per-port volumes.
+  Will break your volumes if upgrading from 0.99.1 or 0.99.2.
 
   20 Aug 2011; Jeroen Roovers <jer@gentoo.org> pulseaudio-0.9.22-r2.ebuild:
   Stable for HPPA (bug #372355).
