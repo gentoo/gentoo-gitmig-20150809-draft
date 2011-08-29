@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.2.2-r1.ebuild,v 1.1 2011/08/27 15:41:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.2.2-r1.ebuild,v 1.2 2011/08/29 21:08:27 flameeyes Exp $
 
 EAPI="2"
 
@@ -22,12 +22,12 @@ IUSE="+client ipv6 kernel_linux ldap selinux +server ssl vim-syntax"
 
 DEPEND="selinux? ( sec-policy/selinux-dhcp )
 	kernel_linux? ( sys-apps/net-tools )
-	vim-syntax? ( app-vim/dhcpd-syntax )
 	ldap? (
 		net-nds/openldap
 		ssl? ( dev-libs/openssl )
 	)"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	vim-syntax? ( app-vim/dhcpd-syntax )"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -120,6 +120,11 @@ src_configure() {
 	# bind defaults to stupid `/usr/bin/ar`
 	tc-export AR BUILD_CC
 	export ac_cv_path_AR=${AR}
+
+	# this is tested for by the bind build system, and can cause trouble
+	# when cross-building; since dhcp itself doesn't make use of libcap,
+	# simply disable it.
+	export ac_cv_lib_cap_cap_set_proc=no
 
 	# Use FHS sane paths ... some of these have configure options,
 	# but not all, so just do it all here.
