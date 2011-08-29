@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.17.ebuild,v 1.8 2011/08/20 18:36:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.17.ebuild,v 1.9 2011/08/29 00:02:37 nirbheek Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -27,7 +27,7 @@ RDEPEND=">=dev-libs/glib-2.6:2
 	>=app-text/docbook-dsssl-stylesheets-1.40
 	emacs? ( virtual/emacs )
 	highlight? (
-		vim? ( app-editors/vim )
+		vim? ( || ( app-editors/vim app-editors/gvim ) )
 		!vim? ( dev-util/source-highlight )
 	)
 	!!<dev-tex/tex4ht-20090611_p1038-r1"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.159 2011/08/20 18:36:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.160 2011/08/29 00:02:37 nirbheek Exp $
+
+  29 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gtk-doc-1.17.ebuild:
+  Can use either vim or gvim for the /usr/bin/vim binary, bug 379647
 
   20 Aug 2011; Jeroen Roovers <jer@gentoo.org> gtk-doc-1.17.ebuild:
   Stable for HPPA (bug #369909).
