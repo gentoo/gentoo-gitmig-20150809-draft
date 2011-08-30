@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.1.5.ebuild,v 1.2 2011/08/30 17:11:03 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.2.0.ebuild,v 1.1 2011/08/30 17:11:03 idl0r Exp $
 
 EAPI="3"
 
@@ -38,13 +38,14 @@ S="${WORKDIR}/${MY_P}"
 src_configure() {
 	local myconf
 
-	if use mysql || use postgres ; then
-		myconf="--with-sql"
-	else
-		myconf="--without-sql"
-	fi
+#	if use mysql || use postgres ; then
+#		myconf="--with-sql"
+#	else
+#		myconf="--without-sql"
+#	fi
 
 	# BDB by default, prefer tokyocabinet above qdbm...
+	# sqlite3 has been added but stated as experimental/broken...
 	if ! use qdbm && ! use tokyocabinet; then
 		myconf="${myconf} --with-berkeleydb=/usr"
 	elif use qdbm && use tokyocabinet; then
@@ -63,10 +64,12 @@ src_configure() {
 		--with-workdir=/var/cfengine \
 		--with-pcre \
 		${myconf} \
+		$(use_with postgres postgresql) \
+		$(use_with mysql) \
 		$(use_enable selinux)
 
 	# Fix Makefile to skip inputs, see below "examples"
-	sed -i -e 's/\(SUBDIRS.*\) inputs/\1/' Makefile || die
+	#sed -i -e 's/\(SUBDIRS.*\) inputs/\1/' Makefile || die
 
 	# We install documentation through portage
 	sed -i -e 's/\(install-data-am.*\) install-docDATA/\1/' Makefile || die
@@ -78,11 +81,10 @@ src_install() {
 	newinitd "${FILESDIR}"/cf-execd.rc6 cf-execd || die
 
 	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README TODO INSTALL
+	dodoc AUTHORS ChangeLog README INSTALL
 
-	if use examples; then
-		docinto examples
-		dodoc inputs/*.cf || die
+	if ! use examples; then
+		rm -rf "${D}"/usr/share/doc/${PF}/example*
 	fi
 
 	# Create cfengine working directory
