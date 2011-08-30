@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Lingua-Stem-It
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem-It/ChangeLog,v 1.16 2010/02/04 14:19:45 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem-It/ChangeLog,v 1.17 2011/08/30 11:24:00 tove Exp $
+
+*Lingua-Stem-It-0.20.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org> +Lingua-Stem-It-0.20.0.ebuild:
+  Change version scheme
 
   04 Feb 2010; Torsten Veller <tove@gentoo.org> Lingua-Stem-It-0.02.ebuild:
   Fix LICENSE: same terms as perl (#301969). Maintenance

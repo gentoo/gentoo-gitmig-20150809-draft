@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Jcode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Jcode/ChangeLog,v 1.46 2011/02/09 16:51:01 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Jcode/ChangeLog,v 1.47 2011/08/30 11:34:17 tove Exp $
+
+*Jcode-2.70.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org> +Jcode-2.70.0.ebuild:
+  Change version scheme
 
   15 Sep 2008; Torsten Veller <tove@gentoo.org> -Jcode-2.03.ebuild:
   Cleanup

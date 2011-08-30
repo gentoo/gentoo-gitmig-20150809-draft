@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Locale-PO
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-PO/ChangeLog,v 1.51 2009/05/08 17:48:44 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-PO/ChangeLog,v 1.52 2011/08/30 11:18:41 tove Exp $
+
+*Locale-PO-0.210.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org> +Locale-PO-0.210.0.ebuild:
+  Change version scheme
 
   08 May 2009; Torsten Veller <tove@gentoo.org> -Locale-PO-0.16.ebuild,
   -Locale-PO-0.17.ebuild, -Locale-PO-0.17-r1.ebuild:

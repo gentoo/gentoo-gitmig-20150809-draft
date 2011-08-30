@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/LWP-UserAgent-Determined
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/LWP-UserAgent-Determined/ChangeLog,v 1.8 2011/04/03 06:19:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/LWP-UserAgent-Determined/ChangeLog,v 1.9 2011/08/30 11:31:19 tove Exp $
+
+*LWP-UserAgent-Determined-1.50.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org>
+  +LWP-UserAgent-Determined-1.50.0.ebuild:
+  Change version scheme
 
   03 Apr 2011; Torsten Veller <tove@gentoo.org>
   -LWP-UserAgent-Determined-1.04.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Log-Agent
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Agent/ChangeLog,v 1.25 2010/02/03 00:29:05 hanno Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Log-Agent/ChangeLog,v 1.26 2011/08/30 11:14:21 tove Exp $
+
+*Log-Agent-0.307.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org> +Log-Agent-0.307.0.ebuild:
+  Change version scheme
 
   03 Feb 2010; Hanno Boeck <hanno@gentoo.org> Log-Agent-0.307.ebuild:
   Remove LICENSE so it takes the correct from perl-module.eclass.

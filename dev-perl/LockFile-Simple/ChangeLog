@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/LockFile-Simple
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/LockFile-Simple/ChangeLog,v 1.21 2010/02/04 19:56:01 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/LockFile-Simple/ChangeLog,v 1.22 2011/08/30 11:15:46 tove Exp $
+
+*LockFile-Simple-0.207.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org>
+  +LockFile-Simple-0.207.0.ebuild:
+  Change version scheme
 
 *LockFile-Simple-0.207 (04 Feb 2010)
 
