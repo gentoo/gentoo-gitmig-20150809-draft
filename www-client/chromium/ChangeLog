@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.422 2011/08/26 20:56:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.423 2011/08/30 18:49:22 phajdan.jr Exp $
+
+*chromium-15.0.865.0 (30 Aug 2011)
+
+  30 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-kerberos-r1.patch, -chromium-15.0.854.0.ebuild,
+  +chromium-15.0.865.0.ebuild, chromium-9999-r1.ebuild:
+  Version bump for dev channel release. Link with Kerberos if requested instead
+  of dlopen. Remove old.
 
 *chromium-15.0.861.0 (26 Aug 2011)
 
