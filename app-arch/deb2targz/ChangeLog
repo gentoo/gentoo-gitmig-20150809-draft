@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/deb2targz
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/deb2targz/ChangeLog,v 1.12 2009/06/19 22:07:35 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/deb2targz/ChangeLog,v 1.13 2011/08/30 10:50:04 chainsaw Exp $
+
+*deb2targz-1-r1 (30 Aug 2011)
+
+  30 Aug 2011; Tony Vroon <chainsaw@gentoo.org>
+  +files/deb2targz-lzma-support.patch, +deb2targz-1-r1.ebuild:
+  Support for LZMA as written by Oschtan in bug #357703. Ported to EAPI 4.
 
   19 Jun 2009; Brent Baude <ranger@gentoo.org> deb2targz-1.ebuild:
   keyworded ~arch for ppc64, bug 272587

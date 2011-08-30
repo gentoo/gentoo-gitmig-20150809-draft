@@ -1,0 +1,18 @@
+--- deb2targz-old	2011-03-07 03:24:22.000000000 +0600
++++ deb2targz	2011-03-07 03:22:20.000000000 +0600
+@@ -59,4 +59,15 @@
+ 	    next FILE;
+ 	}
++	if ($name eq "data.tar.lzma") {
++            # Found it
++            $data = substr($data, 0, $len);
++            $filename =~ s/\.deb$/.tar.gz/;
++            my $fh = new IO::File(">$filename")
++                or die "can't write '$filename': $!";
++            print $fh $data;
++            $fh->close();
++            print "$0: wrote '$filename'\n";
++            next FILE;
++	}
+ 
+ 	print "$0: skipping section '$name'\n";
