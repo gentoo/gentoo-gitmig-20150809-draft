@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13019 2011/08/30 11:30:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13020 2011/08/30 16:31:50 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -469,11 +469,6 @@ net-misc/gateway6
 # Bernard Cafarelli <voyageur@gentoo.org> (6 Jun 2011)
 # Support for libobjc2, for adventurous people only for now
 =gnustep-base/gnustep-make-2.6.1-r10
-
-# Jeroen Roovers <jer@gentoo.org> (5 Jun 2011)
-# Masked until bug #370163 is resolved.
->=sys-block/parted-3.0
->=dev-python/pyparted-3.8
 
 # Tim Harder <radhermit@gentoo.org> (3 Jun 2011)
 # Mask release candidates
