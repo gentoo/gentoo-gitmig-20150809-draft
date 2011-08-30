@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-0.7.0.ebuild,v 1.5 2010/09/11 18:59:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/nzbget-0.7.0.ebuild,v 1.6 2011/08/30 21:32:40 radhermit Exp $
 
 EAPI="2"
 
-inherit eutils
+inherit eutils autotools
 
 MY_P="${P/_pre/-testing-r}"
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~ppc x86"
 IUSE="debug ssl gnutls ncurses parcheck"
 
-DEPEND="dev-libs/libxml2
+RDEPEND="dev-libs/libxml2
 	ssl? (
 		gnutls? ( net-libs/gnutls )
 		!gnutls? ( dev-libs/openssl )
@@ -27,7 +27,8 @@ DEPEND="dev-libs/libxml2
 		app-arch/libpar2
 		dev-libs/libsigc++:2
 	)"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S="${WORKDIR}"/${P/_pre*/-testing}
 
@@ -45,7 +46,10 @@ src_prepare() {
 		"${S}"/nzbget.conf.example >"${S}"/nzbgetd.conf.example \
 		|| die "sed nzbgetd.conf.example failed"
 
-	epatch "${FILESDIR}"/${P}-openssl-1.patch
+	epatch "${FILESDIR}"/${P}-openssl-1.patch \
+		"${FILESDIR}"/${P}-underlinking.patch
+
+	eautoreconf
 }
 
 src_configure() {

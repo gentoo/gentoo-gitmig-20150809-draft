@@ -1,6 +1,10 @@
 # ChangeLog for net-nntp/nzbget
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.34 2010/09/11 18:59:05 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.35 2011/08/30 21:32:40 radhermit Exp $
+
+  30 Aug 2011; Tim Harder <radhermit@gentoo.org> nzbget-0.7.0.ebuild,
+  +files/nzbget-0.7.0-underlinking.patch:
+  Fix underlinking issue (bug #372021) and add dependency on pkgconfig.
 
   11 Sep 2010; Raúl Porcel <armin76@gentoo.org> nzbget-0.7.0.ebuild:
   alpha stable wrt #329443
