@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Inline
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.39 2011/07/29 18:33:42 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.40 2011/08/30 13:08:54 tove Exp $
+
+*Inline-0.470.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org> +Inline-0.470.0.ebuild:
+  Change version scheme
 
   29 Jul 2011; Torsten Veller <tove@gentoo.org> -Inline-0.45.ebuild,
   -Inline-0.46.ebuild:
