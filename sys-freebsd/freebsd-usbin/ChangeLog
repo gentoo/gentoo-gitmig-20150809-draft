@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-usbin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.67 2011/08/29 12:04:41 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.68 2011/08/30 02:12:19 naota Exp $
+
+  30 Aug 2011; Naohiro Aota <naota@gentoo.org> freebsd-usbin-8.2-r1.ebuild:
+  Add -fno-strict-aliasing
 
 *freebsd-usbin-8.2-r1 (29 Aug 2011)
 *freebsd-usbin-8.0-r1 (29 Aug 2011)

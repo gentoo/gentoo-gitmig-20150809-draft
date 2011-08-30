@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-8.2-r1.ebuild,v 1.1 2011/08/29 12:04:41 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-8.2-r1.ebuild,v 1.2 2011/08/30 02:12:19 naota Exp $
 
 EAPI=2
 
@@ -61,6 +61,8 @@ pkg_setup() {
 	use tcpd || mymakeopts="${mymakeopts} NO_WRAP="
 
 	mymakeopts="${mymakeopts} WITHOUT_BIND_NAMED= WITHOUT_BIND_DNSSEC= WITHOUT_PF= WITHOUT_LPR= WITHOUT_SENDMAIL= WITHOUT_AUTHPF= WITHOUT_MAILWRAPPER= "
+
+	append-flags $(test-flags -fno-strict-aliasing)
 }
 
 PATCHES=( "${FILESDIR}/${PN}-7.0-nowrap.patch"
