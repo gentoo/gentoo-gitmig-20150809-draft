@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.74 2011/08/22 06:56:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.75 2011/08/30 20:10:13 ulm Exp $
 #
 # @ECLASS: elisp-common.eclass
 # @MAINTAINER:
@@ -317,12 +317,12 @@ elisp-site-regen() {
 	local sf i line null="" page=$'\f'
 	local -a sflist
 
-	if [ ! -d "${sitelisp}" ]; then
+	if [[ ! -d ${sitelisp} ]]; then
 		eerror "elisp-site-regen: Directory ${sitelisp} does not exist"
 		return 1
 	fi
 
-	if [ ! -d "${T}" ]; then
+	if [[ ! -d ${T} ]]; then
 		eerror "elisp-site-regen: Temporary directory ${T} does not exist"
 		return 1
 	fi
@@ -336,7 +336,7 @@ elisp-site-regen() {
 	for sf in "${sitelisp}"/[0-9][0-9]*-gentoo.el \
 		"${sitelisp}"/site-gentoo.d/[0-9][0-9]*.el
 	do
-		[ -r "${sf}" ] || continue
+		[[ -r ${sf} ]] || continue
 		# sort files by their basename. straight insertion sort.
 		for ((i=${#sflist[@]}; i>0; i--)); do
 			[[ ${sf##*/} < ${sflist[i-1]##*/} ]] || break
