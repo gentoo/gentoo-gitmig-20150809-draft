@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13017 2011/08/30 08:54:20 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13018 2011/08/30 10:42:58 fauli Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -42,7 +42,7 @@
 =mail-client/claws-mail-gdata-0.2
 =mail-client/claws-mail-geolocation-0.0.6
 =mail-client/claws-mail-gtkhtml-0.31
-=mail-client/claws-mail-notfication-0.28
+=mail-client/claws-mail-notification-0.28
 =mail-client/claws-mail-python-0.8
 =mail-client/claws-mail-rssyl-0.31
 =mail-client/claws-mail-spam_report-0.3.14
