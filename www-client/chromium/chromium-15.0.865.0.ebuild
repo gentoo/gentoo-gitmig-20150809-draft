@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-15.0.865.0.ebuild,v 1.1 2011/08/30 18:49:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-15.0.865.0.ebuild,v 1.2 2011/08/30 21:13:33 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -385,8 +385,7 @@ src_install() {
 	doexe out/Release/libffmpegsumo.so || die
 
 	# Install icons and desktop entry.
-	# size 64: bug #378777.
-	for SIZE in 16 22 24 32 48 128 256 ; do
+	for SIZE in 16 22 24 32 48 64 128 256 ; do
 		insinto /usr/share/icons/hicolor/${SIZE}x${SIZE}/apps
 		newins chrome/app/theme/chromium/product_logo_${SIZE}.png \
 			chromium-browser.png || die

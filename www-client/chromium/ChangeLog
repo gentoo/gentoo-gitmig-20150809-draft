@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.423 2011/08/30 18:49:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.424 2011/08/30 21:13:33 floppym Exp $
+
+  30 Aug 2011; Mike Gilbert <floppym@gentoo.org> chromium-15.0.865.0.ebuild,
+  chromium-9999-r1.ebuild:
+  Restore 64 pixel icon
 
 *chromium-15.0.865.0 (30 Aug 2011)
 
