@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/liblognorm-0.3.1.ebuild,v 1.1 2011/08/29 19:54:35 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/liblognorm-0.3.1.ebuild,v 1.2 2011/08/30 08:20:38 maksbotan Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ AUTOTOOLS_IN_SOURCE_BUILD=1
 
 inherit autotools-utils
 
-DSCRIPTION="Fast samples-based log normalization library"
+DESCRIPTION="Fast samples-based log normalization library"
 HOMEPAGE="http://www.liblognorm.com"
 SRC_URI="http://www.liblognorm.com/files/download/${P}.tar.gz"
 
