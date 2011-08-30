@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/eselect-php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.28 2011/02/28 12:34:04 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-php/ChangeLog,v 1.29 2011/08/30 10:05:05 olemarkus Exp $
+
+*eselect-php-0.6.5 (30 Aug 2011)
+
+  30 Aug 2011; Ole Markus With <olemarkus@gentoo.org>
+  +eselect-php-0.6.5.ebuild:
+  Version bump. Fixes bug 374417
 
   28 Feb 2011; Ole Markus With <olemarkus@gentoo.org>
   -eselect-php-0.6.1.ebuild, +eselect-php-0.6.4.ebuild:
