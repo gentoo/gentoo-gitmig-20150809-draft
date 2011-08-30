@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.16.ebuild,v 1.2 2011/05/31 15:37:21 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.16.ebuild,v 1.3 2011/08/30 01:43:33 mattst88 Exp $
 
 EAPI="3"
 
@@ -18,6 +18,10 @@ IUSE="examples"
 # remember: cannot dep on autoconf since it needs us
 DEPEND="app-arch/xz-utils"
 RDEPEND=""
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-fix-test-readlink.patch #376639
+}
 
 src_configure() {
 	# Disable automagic dependency over libsigsegv; see bug #278026
