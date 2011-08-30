@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/pgf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.62 2011/07/25 13:08:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/ChangeLog,v 1.63 2011/08/30 16:42:45 jer Exp $
+
+  30 Aug 2011; Jeroen Roovers <jer@gentoo.org> pgf-2.10.ebuild:
+  Stable for HPPA (bug #373415).
 
   25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> pgf-2.10.ebuild:
   ppc/ppc64 stable wrt #373415
