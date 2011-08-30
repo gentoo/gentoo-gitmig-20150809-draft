@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.98 2011/07/12 14:32:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.99 2011/08/30 05:24:33 naota Exp $
+
+  30 Aug 2011; Naohiro Aota <naota@gentoo.org> freebsd-lib-8.2-r1.ebuild,
+  +files/freebsd-lib-8.2-nlm_syscall.patch:
+  Add patch to add nml_sycall prototype from
+  http://svnweb.freebsd.org/base?view=revision&revision=216603
 
   12 Jul 2011; Alexis Ballier <aballier@gentoo.org> freebsd-lib-8.2-r1.ebuild:
   remove amd64 hacks now that tc-arch-kernel returns the right value for

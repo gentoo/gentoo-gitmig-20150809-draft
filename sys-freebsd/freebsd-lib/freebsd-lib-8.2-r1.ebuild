@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-8.2-r1.ebuild,v 1.5 2011/07/12 14:32:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-8.2-r1.ebuild,v 1.6 2011/08/30 05:24:33 naota Exp $
 
 EAPI=2
 
@@ -134,6 +134,7 @@ src_prepare() {
 	cd "${WORKDIR}"
 	epatch "${FILESDIR}/${PN}-includes.patch"
 	epatch "${FILESDIR}/${PN}-8.0-gcc45.patch"
+	epatch "${FILESDIR}/${PN}-8.2-nlm_syscall.patch"
 
 	# Don't install the hesiod man page or header
 	rm "${WORKDIR}"/include/hesiod.h || die
