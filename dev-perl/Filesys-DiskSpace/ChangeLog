@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Filesys-DiskSpace
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filesys-DiskSpace/ChangeLog,v 1.8 2007/12/27 14:09:23 ticho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filesys-DiskSpace/ChangeLog,v 1.9 2011/08/30 15:31:36 tove Exp $
+
+*Filesys-DiskSpace-0.50.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org>
+  +Filesys-DiskSpace-0.50.0.ebuild:
+  Change version scheme
 
   27 Dec 2007; Andrej Kacian <ticho@gentoo.org>
   Filesys-DiskSpace-0.05.ebuild:

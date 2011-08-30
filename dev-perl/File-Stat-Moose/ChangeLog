@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/File-Stat-Moose
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Stat-Moose/ChangeLog,v 1.4 2010/02/03 11:36:40 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Stat-Moose/ChangeLog,v 1.5 2011/08/30 15:40:21 tove Exp $
+
+*File-Stat-Moose-0.60.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org> +File-Stat-Moose-0.60.0.ebuild:
+  Change version scheme
 
   03 Feb 2010; Torsten Veller <tove@gentoo.org> File-Stat-Moose-0.06.ebuild:
   Depend on Module-Build

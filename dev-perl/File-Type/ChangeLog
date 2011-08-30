@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/File-Type
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Type/ChangeLog,v 1.18 2010/01/09 20:09:59 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Type/ChangeLog,v 1.19 2011/08/30 15:37:08 tove Exp $
+
+*File-Type-0.220.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org> +File-Type-0.220.0.ebuild:
+  Change version scheme
 
   09 Jan 2010; Fabian Groffen <grobian@gentoo.org> File-Type-0.22.ebuild:
   Transfer Prefix keywords

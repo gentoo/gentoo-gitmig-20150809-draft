@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Goo-Canvas
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Goo-Canvas/ChangeLog,v 1.5 2011/03/08 05:32:08 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Goo-Canvas/ChangeLog,v 1.6 2011/08/30 15:03:49 tove Exp $
+
+*Goo-Canvas-0.60.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org> +Goo-Canvas-0.60.0.ebuild:
+  Change version scheme
 
   08 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   Goo-Canvas-0.06.ebuild:

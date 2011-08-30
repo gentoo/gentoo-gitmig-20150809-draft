@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/GD-Graph3d
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-Graph3d/ChangeLog,v 1.21 2010/12/03 02:24:46 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-Graph3d/ChangeLog,v 1.22 2011/08/30 15:21:21 tove Exp $
+
+*GD-Graph3d-0.630.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org> +GD-Graph3d-0.630.0.ebuild:
+  Change version scheme
 
   03 Dec 2010; Michael Weber <xmw@gentoo.org> GD-Graph3d-0.63.ebuild:
   add ~arm (bug 302981)

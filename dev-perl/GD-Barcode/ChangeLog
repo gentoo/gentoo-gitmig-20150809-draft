@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/GD-Barcode
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-Barcode/ChangeLog,v 1.5 2009/04/13 10:25:30 tcunha Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-Barcode/ChangeLog,v 1.6 2011/08/30 15:23:36 tove Exp $
+
+*GD-Barcode-1.150.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org> +GD-Barcode-1.150.0.ebuild:
+  Change version scheme
 
   13 Apr 2009; Tiago Cunha <tcunha@gentoo.org> GD-Barcode-1.15.ebuild:
   stable amd64

@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/GSSAPI
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GSSAPI/ChangeLog,v 1.30 2011/07/08 20:02:08 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GSSAPI/ChangeLog,v 1.31 2011/08/30 15:15:48 tove Exp $
+
+*GSSAPI-0.280.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org> +GSSAPI-0.280.0.ebuild:
+  Change version scheme
 
   08 Jul 2011; Matt Turner <mattst88@gentoo.org> GSSAPI-0.28.ebuild:
   Added ~mips

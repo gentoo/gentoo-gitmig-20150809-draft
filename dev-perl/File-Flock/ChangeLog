@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/File-Flock
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flock/ChangeLog,v 1.9 2011/01/27 19:11:14 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Flock/ChangeLog,v 1.10 2011/08/30 15:56:34 tove Exp $
+
+*File-Flock-2008.10.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org> +File-Flock-2008.10.0.ebuild:
+  Change version scheme
 
   27 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   File-Flock-2008.01.ebuild:
