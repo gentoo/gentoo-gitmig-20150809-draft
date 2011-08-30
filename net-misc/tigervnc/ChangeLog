@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.102 2011/08/25 20:56:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.103 2011/08/30 08:46:35 chainsaw Exp $
+
+  30 Aug 2011; Tony Vroon <chainsaw@gentoo.org>
+  tigervnc-1.0.1_p20110618-r1.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in bug
+  #380983 filed by Chí-Thanh Christopher Nguyễn.
 
 *tigervnc-1.0.1_p20110618-r1 (25 Aug 2011)
 
