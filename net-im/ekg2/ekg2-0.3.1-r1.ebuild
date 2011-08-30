@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-0.3.1-r1.ebuild,v 1.1 2011/04/06 15:42:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-0.3.1-r1.ebuild,v 1.2 2011/08/30 10:13:22 mgorny Exp $
 
 EAPI=3
 inherit autotools-utils versionator
@@ -12,9 +12,9 @@ SRC_URI="http://pl.ekg2.org/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="gadu gif gnutls gpg gpm gsm gtk idn inotify jabber jpeg ncurses nls
+IUSE="gadu gif gnutls gpg gpm gsm gtk idn inotify jpeg ncurses nls
 	oracle perl python readline rss spell sqlite sqlite3 ssl threads unicode
-	xosd zlib"
+	xmpp xosd zlib"
 
 RDEPEND="
 	gpg? ( app-crypt/gpgme )
@@ -22,9 +22,9 @@ RDEPEND="
 	gtk? ( x11-libs/gtk+:2 )
 	idn? ( net-dns/libidn )
 	nls? ( virtual/libintl )
-	oracle?	( dev-db/oracle-instantclient-basic )
+	oracle? ( dev-db/oracle-instantclient-basic )
 	perl? ( dev-lang/perl )
-	python?	( dev-lang/python )
+	python? ( dev-lang/python )
 	readline? ( sys-libs/readline )
 	ssl? ( dev-libs/openssl )
 	xosd? ( x11-libs/xosd )
@@ -33,14 +33,14 @@ RDEPEND="
 	gadu? ( net-libs/libgadu
 		gif? ( media-libs/giflib )
 		jpeg? ( virtual/jpeg ) )
-	jabber? ( dev-libs/expat
-		gnutls? ( net-libs/gnutls ) )
 	ncurses? ( sys-libs/ncurses[unicode?]
 		gpm? ( sys-libs/gpm )
 		spell? ( app-text/aspell ) )
 	rss? ( dev-libs/expat )
 	sqlite3? ( dev-db/sqlite:3 )
-	!sqlite3? ( sqlite? ( dev-db/sqlite:0 ) )"
+	!sqlite3? ( sqlite? ( dev-db/sqlite:0 ) )
+	xmpp? ( dev-libs/expat
+		gnutls? ( net-libs/gnutls ) )"
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
@@ -76,14 +76,14 @@ src_configure() {
 		$(use_with gadu libgadu)
 		$(use_with gif)
 		# gnutls is jabber-specific
-		$(use jabber && use_with gnutls libgnutls || echo '--without-libgnutls')
+		$(use xmpp && use_with gnutls libgnutls || echo '--without-libgnutls')
 		$(use_with gpg)
 		$(use_with gpm gpm-mouse)
 		$(use_with gsm libgsm)
 		$(use_with gtk)
 		$(use_with idn libidn)
 		$(use_with inotify)
-		$(use jabber && echo '--with-expat' || use_with rss expat)
+		$(use xmpp && echo '--with-expat' || use_with rss expat)
 		$(use_with jpeg libjpeg)
 		$(use_with ncurses)
 		$(use_with oracle logsoracle)
