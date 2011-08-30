@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/perl-tk-804.029.ebuild,v 1.10 2010/11/27 07:09:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/perl-tk-804.029.ebuild,v 1.11 2011/08/30 09:26:55 lxnay Exp $
 
 EAPI=3
 
@@ -21,6 +21,7 @@ DEPEND="x11-libs/libX11
 	media-libs/freetype
 	>=media-libs/libpng-1.4
 	virtual/jpeg"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 

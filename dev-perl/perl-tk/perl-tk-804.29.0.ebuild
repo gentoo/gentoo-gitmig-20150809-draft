@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/perl-tk-804.29.0.ebuild,v 1.1 2011/08/27 16:57:32 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/perl-tk-804.29.0.ebuild,v 1.2 2011/08/30 09:26:55 lxnay Exp $
 
 EAPI=4
 
@@ -20,6 +20,7 @@ DEPEND="x11-libs/libX11
 	media-libs/freetype
 	>=media-libs/libpng-1.4
 	virtual/jpeg"
+RDEPEND="${DEPEND}"
 
 # No test running here, requires an X server, and fails lots anyway.
 SRC_TEST="skip"
