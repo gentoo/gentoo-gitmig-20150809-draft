@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.2_rc2-r1.ebuild,v 1.3 2011/01/06 10:10:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.2_p290.ebuild,v 1.1 2011/08/30 19:35:59 a3li Exp $
 
 EAPI=2
 
@@ -8,7 +8,9 @@ EAPI=2
 
 inherit autotools eutils flag-o-matic multilib versionator
 
-MY_P="${PN}-$(replace_version_separator 3 '-')"
+RUBYPL=$(get_version_component_range 4)
+
+MY_P="${PN}-$(get_version_component_range 1-3)-${RUBYPL:-p0}"
 S=${WORKDIR}/${MY_P}
 
 SLOT=$(get_version_component_range 1-2)
@@ -32,8 +34,8 @@ SRC_URI="mirror://ruby/${MY_P}.tar.bz2
 		 http://dev.gentoo.org/~flameeyes/ruby-team/${PN}-patches-${PATCHSET}.tar.bz2"
 
 LICENSE="|| ( Ruby GPL-2 )"
-KEYWORDS="~amd64 ~hppa ~ppc ~x86 ~x86-fbsd"
-IUSE="berkdb debug doc examples gdbm ipv6 rubytests socks5 ssl tk xemacs ncurses +readline yaml" #libedit
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+IUSE="berkdb debug doc examples gdbm ipv6 +rdoc rubytests socks5 ssl tk xemacs ncurses +readline yaml" #libedit
 
 # libedit support is removed everywhere because of this upstream bug:
 # http://redmine.ruby-lang.org/issues/show/3698
@@ -52,12 +54,15 @@ RDEPEND="
 	>=app-admin/eselect-ruby-20100402
 	!=dev-lang/ruby-cvs-${SLOT}*
 	!<dev-ruby/rdoc-2
+	!<dev-ruby/rubygems-1.3.7-r4
 	!dev-ruby/rexml"
 #	libedit? ( dev-libs/libedit )
 #	!libedit? ( readline? ( sys-libs/readline ) )
 
 DEPEND="${RDEPEND}"
-PDEPEND="xemacs? ( app-xemacs/ruby-modes )"
+PDEPEND="
+	rdoc? ( >=dev-ruby/rdoc-2.5.11[ruby_targets_ruby19] )
+	xemacs? ( app-xemacs/ruby-modes )"
 
 src_prepare() {
 	EPATCH_FORCE="yes" EPATCH_SUFFIX="patch" \
@@ -65,8 +70,7 @@ src_prepare() {
 
 	einfo "Unbundling gems..."
 	rm -r \
-		{bin,lib}/{rake,rdoc}* \
-		{lib,ext}/racc* \
+		{bin,lib}/rake \
 		ext/json \
 		bin/gem \
 		|| die "removal failed"
@@ -86,6 +90,8 @@ src_configure() {
 	# In many places aliasing rules are broken; play it safe
 	# as it's risky with newer compilers to leave it as it is.
 	append-flags -fno-strict-aliasing
+	# SuperH needs this
+	use sh && append-flags -mieee
 
 	# Socks support via dante
 	if use socks5 ; then
@@ -173,6 +179,8 @@ src_install() {
 
 	# Remove installed rubygems copy
 	rm -r "${D}/usr/$(get_libdir)/ruby/${RUBYVERSION}/rubygems" || die "rm rubygems failed"
+	rm -r "${D}/usr/$(get_libdir)/ruby/${RUBYVERSION}"/rdoc* || die "rm rdoc failed"
+	rm -r "${D}/usr/bin/"{ri,rdoc}"${MY_SUFFIX}" || die "rm rdoc bins failed"
 
 	if use doc; then
 		make DESTDIR="${D}" install-doc || die "make install-doc failed"
@@ -192,7 +200,7 @@ src_install() {
 
 	if use rubytests; then
 		pushd test
-		insinto /usr/share/${PN}-${SLOT}
+		insinto /usr/share/${PN}-${SLOT}/test
 		doins -r .
 		popd
 	fi
