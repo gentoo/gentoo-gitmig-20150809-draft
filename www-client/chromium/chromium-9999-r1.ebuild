@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.47 2011/08/30 21:13:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.48 2011/08/30 23:41:44 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -68,6 +68,17 @@ RDEPEND+="
 	x11-misc/xdg-utils
 	virtual/ttf-fonts"
 
+gclient_runhooks() {
+	# Run all hooks except gyp_chromium
+	# Moved from src_unpack to avoid repoman warning about sed
+	cp src/DEPS src/DEPS.orig || die
+	sed -e 's:"python", "src/build/gyp_chromium":"true":' -i src/DEPS || die
+	"${WORKDIR}/depot_tools/gclient" runhooks
+	local ret=$?
+	mv src/DEPS.orig src/DEPS || die
+	[[ ${ret} -eq 0 ]] || die "gclient runhooks failed"
+}
+
 src_unpack() {
 	subversion_src_unpack
 	mv "${S}" "${WORKDIR}"/depot_tools || die
@@ -81,7 +92,7 @@ src_unpack() {
 
 	einfo "gclient sync start -->"
 	"${WORKDIR}/depot_tools/gclient" sync --force --nohooks || die
-	"$(PYTHON)" src/build/download_nacl_irt.py || die  # bug #366413
+	gclient_runhooks
 	einfo "   working copy: ${ESVN_STORE_DIR}/${PN}"
 
 	mkdir -p "${S}" || die
