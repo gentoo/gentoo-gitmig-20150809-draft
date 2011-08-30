@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/aria-2.3.2.ebuild,v 1.1 2011/08/29 15:28:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/aria-2.3.2.ebuild,v 1.2 2011/08/30 13:51:56 jlec Exp $
 
 EAPI=3
 
@@ -26,7 +26,7 @@ RDEPEND="
 	sci-libs/clashscore-db
 	dev-python/numpy
 	dev-python/matplotlib[tk]
-	>=sci-chemistry/cns-1.2.1-r3[aria,openmp]
+	>=sci-chemistry/cns-1.2.1-r7[aria,openmp]
 	>=dev-lang/tk-8.3
 	>=sci-chemistry/ccpn-2.0.5
 	>=dev-tcltk/tix-8.1.4"
