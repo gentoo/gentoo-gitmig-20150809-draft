@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.81 2011/08/17 21:16:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.82 2011/08/30 01:37:01 radhermit Exp $
+
+*klibc-1.5.25 (30 Aug 2011)
+
+  30 Aug 2011; Tim Harder <radhermit@gentoo.org> +klibc-1.5.25.ebuild:
+  Version bump.
 
 *klibc-1.5.24 (17 Aug 2011)
 
