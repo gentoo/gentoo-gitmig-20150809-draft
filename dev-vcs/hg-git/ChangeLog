@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/hg-git
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/ChangeLog,v 1.26 2011/08/29 18:37:52 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/ChangeLog,v 1.27 2011/08/30 08:08:28 djc Exp $
+
+  30 Aug 2011; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  python herd probably doesn't care for this.
 
 *hg-git-0.2.6-r1 (29 Aug 2011)
 
