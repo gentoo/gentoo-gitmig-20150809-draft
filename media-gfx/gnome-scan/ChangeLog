@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gnome-scan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-scan/ChangeLog,v 1.7 2011/07/19 17:33:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-scan/ChangeLog,v 1.8 2011/08/30 07:33:24 chainsaw Exp $
+
+  30 Aug 2011; Tony Vroon <chainsaw@gentoo.org> gnome-scan-0.7.2.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in bug
+  #375669 filed by Pacho Ramos.
 
   19 Jul 2011; Pacho Ramos <pacho@gentoo.org> -gnome-scan-0.6.2.ebuild,
   metadata.xml:
