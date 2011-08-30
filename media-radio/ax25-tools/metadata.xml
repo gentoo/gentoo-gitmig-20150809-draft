@@ -4,7 +4,7 @@
 	<herd>no-herd</herd>
 	<maintainer>
 		<email>tomjbe@gentoo.org</email>
-		<name>Thomaas Beierlein</name>
+		<name>Thomas Beierlein</name>
 	</maintainer>
 	<use>
 		<flag name='X'>Enable some X based configuration tools.</flag>
