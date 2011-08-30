@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/amsynth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/ChangeLog,v 1.39 2011/08/12 10:15:54 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/ChangeLog,v 1.40 2011/08/30 09:37:04 chainsaw Exp $
+
+*amsynth-1.2.3-r1 (30 Aug 2011)
+
+  30 Aug 2011; Tony Vroon <chainsaw@gentoo.org> +amsynth-1.2.3-r1.ebuild,
+  +files/amsynth-1.2.3-respect-cflags.patch:
+  Revision bump for EAPI 4 porting and CFLAGS respect patch by Markos
+  "hwoarang" Chandros with input from Samuli Suominen in bug #376665 filed by
+  Agostino "ago" Sarubbo.
 
   10 Aug 2011; Markos Chandras <hwoarang@gentoo.org> amsynth-1.2.3.ebuild,
   -files/amsynth-1.2.3-cflags.patch:
