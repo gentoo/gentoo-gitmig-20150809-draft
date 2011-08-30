@@ -1,6 +1,14 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.54 2011/08/27 11:19:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.55 2011/08/30 11:19:41 chainsaw Exp $
+
+*subversion-1.6.17-r5 (30 Aug 2011)
+
+  30 Aug 2011; Tony Vroon <chainsaw@gentoo.org> -subversion-1.6.17-r3.ebuild,
+  +subversion-1.6.17-r5.ebuild:
+  Stop static libraries from being built entirely, instead of deleting them
+  after the fact as suggested by Rafał "galtgendo" Mużyło in bug #380891.
+  Removed old ebuild.
 
   27 Aug 2011; Raúl Porcel <armin76@gentoo.org> subversion-1.6.17.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #369065
