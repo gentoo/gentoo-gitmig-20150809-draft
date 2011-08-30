@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/claws-mail-archive
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-archive/ChangeLog,v 1.34 2011/07/31 10:17:52 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-archive/ChangeLog,v 1.35 2011/08/30 09:38:49 fauli Exp $
+
+*claws-mail-archive-0.6.10 (30 Aug 2011)
+
+  30 Aug 2011; Christian Faulhammer <fauli@gentoo.org>
+  +claws-mail-archive-0.6.10.ebuild:
+  version bump
 
   31 Jul 2011; Christian Faulhammer <fauli@gentoo.org>
   -claws-mail-archive-0.6.8.ebuild:
