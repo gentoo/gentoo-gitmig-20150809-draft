@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-2.2_p20110815.ebuild,v 1.4 2011/08/27 22:06:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-2.2_p20110815.ebuild,v 1.5 2011/08/30 07:27:38 chainsaw Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug fuse pax_kernel hfs inotify kernel-patch nfs ramfs"
 
 DEPEND="dev-vcs/git"
