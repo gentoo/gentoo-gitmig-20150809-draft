@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.32 2011/08/29 21:41:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.33 2011/08/30 19:20:10 armin76 Exp $
+
+  30 Aug 2011; Raúl Porcel <armin76@gentoo.org> bzr-2.2.2-r1.ebuild:
+  alpha stable
 
   29 Aug 2011; Christian Faulhammer <fauli@gentoo.org> -bzr-2.2.4.ebuild,
   -bzr-2.3.4.ebuild:
