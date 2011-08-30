@@ -6,4 +6,7 @@
   <email>sound@gentoo.org</email>
   <name>Gentoo Sound Team</name>
 </maintainer>
+<use>
+  <flag name="s7">Enable the s7 extension language (a version of Scheme)</flag>
+</use>
 </pkgmetadata>

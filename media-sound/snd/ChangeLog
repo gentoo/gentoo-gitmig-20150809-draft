@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/snd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.55 2011/08/22 08:45:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/snd/ChangeLog,v 1.56 2011/08/30 08:23:15 radhermit Exp $
+
+*snd-12.4 (30 Aug 2011)
+
+  30 Aug 2011; Tim Harder <radhermit@gentoo.org> +snd-12.4.ebuild,
+  metadata.xml:
+  Version bump. Add doc and s7 USE flags, install ruby scripts, and use
+  REQUIRED_USE to allow support for at most one extension language.
 
 *snd-12.3 (22 Aug 2011)
 
