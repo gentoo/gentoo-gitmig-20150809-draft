@@ -1,6 +1,12 @@
 # ChangeLog for net-nntp/nzbget
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.35 2011/08/30 21:32:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.36 2011/08/30 21:41:41 radhermit Exp $
+
+*nzbget-0.8.0_pre394 (30 Aug 2011)
+
+  30 Aug 2011; Tim Harder <radhermit@gentoo.org> +nzbget-0.8.0_pre394.ebuild,
+  metadata.xml:
+  Version bump (bug #375959). Add myself as a maintainer.
 
   30 Aug 2011; Tim Harder <radhermit@gentoo.org> nzbget-0.7.0.ebuild,
   +files/nzbget-0.7.0-underlinking.patch:
