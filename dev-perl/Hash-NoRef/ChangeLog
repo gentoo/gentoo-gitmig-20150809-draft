@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Hash-NoRef
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Hash-NoRef/ChangeLog,v 1.1 2010/02/05 16:11:15 weaver Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Hash-NoRef/ChangeLog,v 1.2 2011/08/30 13:40:17 tove Exp $
+
+*Hash-NoRef-0.30.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org> +Hash-NoRef-0.30.0.ebuild:
+  Change version scheme
 
 *Hash-NoRef-0.03 (05 Feb 2010)
 

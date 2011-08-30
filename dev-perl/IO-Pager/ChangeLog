@@ -1,6 +1,17 @@
 # ChangeLog for dev-perl/IO-Pager
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Pager/ChangeLog,v 1.18 2010/01/10 12:52:10 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Pager/ChangeLog,v 1.19 2011/08/30 13:33:09 tove Exp $
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org> +IO-Pager-0.60.0.ebuild:
+  Change version scheme
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org> +IO-Pager-0.60.0.ebuild:
+  Change version scheme
+
+*IO-Pager-0.60.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org> +IO-Pager-0.60.0.ebuild:
+  Change version scheme
 
   10 Jan 2010; Fabian Groffen <grobian@gentoo.org> IO-Pager-0.06.ebuild:
   Transfer Prefix keywords

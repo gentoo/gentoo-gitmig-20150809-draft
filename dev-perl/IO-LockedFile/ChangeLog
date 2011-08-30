@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/IO-LockedFile
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-LockedFile/ChangeLog,v 1.4 2009/04/29 15:21:09 tcunha Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-LockedFile/ChangeLog,v 1.5 2011/08/30 13:33:42 tove Exp $
+
+*IO-LockedFile-0.230.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org> +IO-LockedFile-0.230.0.ebuild:
+  Change version scheme
 
   29 Apr 2009; Tiago Cunha <tcunha@gentoo.org> IO-LockedFile-0.23.ebuild:
   stable amd64, bug 267874
