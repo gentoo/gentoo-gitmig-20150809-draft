@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Math-Vec
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Vec/ChangeLog,v 1.4 2009/08/14 21:54:16 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Vec/ChangeLog,v 1.5 2011/08/30 10:19:01 tove Exp $
+
+*Math-Vec-1.10.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org> +Math-Vec-1.10.0.ebuild:
+  Change version scheme
 
   14 Aug 2009; Markus Meier <maekke@gentoo.org> Math-Vec-1.01.ebuild:
   amd64/x86 stable, bug #281252

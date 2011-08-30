@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Math-Random
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Random/ChangeLog,v 1.4 2009/05/13 15:56:38 ken69267 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Random/ChangeLog,v 1.5 2011/08/30 10:28:18 tove Exp $
+
+*Math-Random-0.710.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org> +Math-Random-0.710.0.ebuild:
+  Change version scheme
 
   13 May 2009; Kenneth Prugh <ken69267@gentoo.org> Math-Random-0.71.ebuild:
   amd64 stable, bug #269573
