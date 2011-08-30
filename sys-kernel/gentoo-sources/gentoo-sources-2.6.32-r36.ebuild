@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.32-r35.ebuild,v 1.1 2011/08/30 07:42:01 psomas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.32-r36.ebuild,v 1.1 2011/08/30 19:18:10 psomas Exp $
 
 EAPI="2"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="42"
+K_GENPATCHES_VER="43"
 K_DEBLOB_AVAILABLE="1"
 inherit kernel-2
 detect_version
