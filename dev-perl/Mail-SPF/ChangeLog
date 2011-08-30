@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Mail-SPF
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SPF/ChangeLog,v 1.19 2011/03/30 09:55:23 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SPF/ChangeLog,v 1.20 2011/08/30 10:47:26 tove Exp $
+
+*Mail-SPF-2.7.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org> +Mail-SPF-2.7.0.ebuild:
+  Change version scheme
 
   30 Mar 2011; Michael Weber <xmw@gentoo.org> Mail-SPF-2.007-r1.ebuild:
   added ~arm (bug 302981)

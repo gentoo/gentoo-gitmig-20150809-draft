@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Mail-ClamAV
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ClamAV/ChangeLog,v 1.43 2010/06/02 06:19:40 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ClamAV/ChangeLog,v 1.44 2011/08/30 10:53:37 tove Exp $
+
+*Mail-ClamAV-0.290.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org> +Mail-ClamAV-0.290.0.ebuild:
+  Change version scheme
 
   02 Jun 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove xmerlin from metadata.xml (#69210)

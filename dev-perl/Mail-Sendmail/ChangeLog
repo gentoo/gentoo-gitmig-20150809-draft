@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Mail-Sendmail
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sendmail/ChangeLog,v 1.23 2010/01/21 12:40:22 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sendmail/ChangeLog,v 1.24 2011/08/30 10:43:36 tove Exp $
+
+*Mail-Sendmail-0.790.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org> +Mail-Sendmail-0.790.0.ebuild:
+  Change version scheme
 
   21 Jan 2010; Torsten Veller <tove@gentoo.org> Mail-Sendmail-0.79.ebuild:
   Ebuild maintenance. EAPI=2. mips -> ~mips

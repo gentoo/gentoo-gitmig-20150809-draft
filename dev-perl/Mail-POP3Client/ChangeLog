@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Mail-POP3Client
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-POP3Client/ChangeLog,v 1.29 2008/10/22 09:31:05 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-POP3Client/ChangeLog,v 1.30 2011/08/30 10:50:08 tove Exp $
+
+*Mail-POP3Client-2.180.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org>
+  +Mail-POP3Client-2.180.0.ebuild:
+  Change version scheme
 
 *Mail-POP3Client-2.18 (22 Oct 2008)
 

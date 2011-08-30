@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Mail-SpamAssassin-Plugin-GoogleSafeBrowsing
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin-Plugin-GoogleSafeBrowsing/ChangeLog,v 1.4 2010/04/23 11:47:31 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-SpamAssassin-Plugin-GoogleSafeBrowsing/ChangeLog,v 1.5 2011/08/30 10:42:46 tove Exp $
+
+*Mail-SpamAssassin-Plugin-GoogleSafeBrowsing-1.30.0 (30 Aug 2011)
+
+  30 Aug 2011; Torsten Veller <tove@gentoo.org>
+  +Mail-SpamAssassin-Plugin-GoogleSafeBrowsing-1.30.0.ebuild:
+  Change version scheme
 
   23 Apr 2010; Torsten Veller <tove@gentoo.org>
   Mail-SpamAssassin-Plugin-GoogleSafeBrowsing-1.03-r1.ebuild:
