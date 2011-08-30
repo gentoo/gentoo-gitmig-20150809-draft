@@ -6,6 +6,10 @@
 		<email>ramereth@gentoo.org</email>
 		<name>Lance Albertson</name>
 	</maintainer>
+	<maintainer>
+		<email>idl0r@gentoo.org</email>
+		<name>Christian Ruppert</name>
+	</maintainer>
 	<longdescription lang="en">
 	Gitolite is an access control layer on top of git, which allows access
 	control down to the branch level, including specifying who can and cannot
