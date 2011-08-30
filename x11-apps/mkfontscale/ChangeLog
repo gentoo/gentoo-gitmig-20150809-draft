@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/mkfontscale
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mkfontscale/ChangeLog,v 1.78 2011/07/01 23:55:39 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mkfontscale/ChangeLog,v 1.79 2011/08/30 07:45:24 chainsaw Exp $
+
+  30 Aug 2011; Tony Vroon <chainsaw@gentoo.org> mkfontscale-1.0.9.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in bug
+  #380421 filed by Chí-Thanh Christopher Nguyễn.
 
 *mkfontscale-1.0.9 (01 Jul 2011)
 

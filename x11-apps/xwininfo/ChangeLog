@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xwininfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwininfo/ChangeLog,v 1.62 2011/07/01 23:53:48 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwininfo/ChangeLog,v 1.63 2011/08/30 08:09:05 chainsaw Exp $
+
+  30 Aug 2011; Tony Vroon <chainsaw@gentoo.org> xwininfo-1.1.2.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in bug
+  #380421 filed by Chí-Thanh Christopher Nguyễn.
 
 *xwininfo-1.1.2 (01 Jul 2011)
 
