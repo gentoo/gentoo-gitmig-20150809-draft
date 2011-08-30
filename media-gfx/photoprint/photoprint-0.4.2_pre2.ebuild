@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/photoprint/photoprint-0.4.2_pre2.ebuild,v 1.1 2011/02/28 07:07:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/photoprint/photoprint-0.4.2_pre2.ebuild,v 1.2 2011/08/30 22:08:17 radhermit Exp $
 
 EAPI=4
 
@@ -33,7 +33,9 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-cups-automagic.patch
+	epatch "${FILESDIR}"/${P}-cups-automagic.patch \
+		"${FILESDIR}"/${P}-tests.patch \
+		"${FILESDIR}"/${P}-underlinking.patch
 
 	# Ships with po/Makefile.in.in from gettext-0.17
 	# which fails with >=gettext-0.18
