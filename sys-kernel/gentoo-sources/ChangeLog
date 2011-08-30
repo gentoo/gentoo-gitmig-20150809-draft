@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.879 2011/08/17 21:43:42 psomas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.880 2011/08/30 07:42:01 psomas Exp $
+
+*gentoo-sources-2.6.32-r35 (30 Aug 2011)
+
+  30 Aug 2011; Stratos Psomadakis <psomas@gentoo.org>
+  +gentoo-sources-2.6.32-r35.ebuild:
+  Linux patch 2.6.32.46, fix broken backport for IPv6 tunnels, and fix passing
+  -Wno options to gcc-4.4
 
 *gentoo-sources-3.0.3 (17 Aug 2011)
 
