@@ -1,10 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhx/libhx-3.11.ebuild,v 1.1 2011/08/14 18:28:29 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhx/libhx-3.11.ebuild,v 1.2 2011/08/30 20:28:50 mattst88 Exp $
 
-EAPI=3
-
-inherit eutils
+EAPI=4
 
 DESCRIPTION="Platform independent library providing basic system functions."
 HOMEPAGE="http://libhx.sourceforge.net"
@@ -21,11 +19,11 @@ RDEPEND=""
 S="${WORKDIR}/libHX-${PV}"
 
 src_configure() {
-	econf --docdir="/usr/share/doc/${PF}" || die "econf failed"
+	econf --docdir="/usr/share/doc/${PF}"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc doc/*.txt || die
+	default
+	dodoc doc/*.txt
 	find "${D}" -name '*.la' -delete
 }

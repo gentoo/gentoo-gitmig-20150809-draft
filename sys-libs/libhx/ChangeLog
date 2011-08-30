@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libhx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhx/ChangeLog,v 1.32 2011/08/14 18:28:29 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhx/ChangeLog,v 1.33 2011/08/30 20:28:50 mattst88 Exp $
+
+  30 Aug 2011; Matt Turner <mattst88@gentoo.org> libhx-3.11.ebuild:
+  Bump to EAPI4. Thanks to Agostino Sarubbo, bug 380965.
 
 *libhx-3.11 (14 Aug 2011)
 
