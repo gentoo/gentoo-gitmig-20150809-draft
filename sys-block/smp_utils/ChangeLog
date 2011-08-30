@@ -1,6 +1,12 @@
 # ChangeLog for sys-block/smp_utils
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/smp_utils/ChangeLog,v 1.5 2009/02/11 02:52:48 robbat2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/smp_utils/ChangeLog,v 1.6 2011/08/30 09:31:54 radhermit Exp $
+
+*smp_utils-0.96 (30 Aug 2011)
+
+  30 Aug 2011; Tim Harder <radhermit@gentoo.org> +smp_utils-0.96.ebuild,
+  +files/smp_utils-0.96-make.patch:
+  Version bump. Respect LDFLAGS (bug #334759) and update to EAPI 4.
 
   11 Feb 2009; Robin H. Johnson <robbat2@gentoo.org> smp_utils-0.91.ebuild,
   smp_utils-0.93.ebuild:
