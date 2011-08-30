@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/argus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/ChangeLog,v 1.33 2011/07/06 14:58:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/ChangeLog,v 1.34 2011/08/30 19:35:01 jer Exp $
+
+*argus-3.0.5.5 (30 Aug 2011)
+
+  30 Aug 2011; Jeroen Roovers <jer@gentoo.org> +argus-3.0.5.5.ebuild:
+  Version bump.
 
 *argus-3.0.5.4 (06 Jul 2011)
 
