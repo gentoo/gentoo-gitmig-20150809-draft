@@ -12,7 +12,6 @@
 		<flag name="gmail">Depend on net-dns/bind-tools to get gmail chats working</flag>
 		<flag name="idle">Enable idle module</flag>
 		<flag name="srv">SRV capabilities</flag>
-		<flag name="trayicon">Enable support for trayicon</flag>
 		<flag name="xhtml">Enable XHTML support</flag>
 	</use>
 </pkgmetadata>

@@ -1,6 +1,11 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.120 2011/08/15 17:23:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.121 2011/08/30 14:47:33 jlec Exp $
+
+  30 Aug 2011; Justin Lecher <jlec@gentoo.org> -gajim-0.13.3.ebuild,
+  gajim-0.14.1-r2.ebuild, metadata.xml:
+  net-im/gajim : Deprecation Warning about python_mod_cleanup() # 381171;
+  cleaned old
 
   15 Aug 2011; Justin Lecher <jlec@gentoo.org> -gajim-0.14.1-r3.ebuild,
   -gajim-0.14.3.ebuild, gajim-0.14.4.ebuild:

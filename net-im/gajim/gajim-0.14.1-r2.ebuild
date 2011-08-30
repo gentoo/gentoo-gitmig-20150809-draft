@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.14.1-r2.ebuild,v 1.11 2011/06/20 12:19:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.14.1-r2.ebuild,v 1.12 2011/08/30 14:47:33 jlec Exp $
 
-EAPI=2
+EAPI=3
 
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="sqlite xml"
@@ -96,9 +96,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_mod_optimize $(python_get_sitedir)/${PN}
+	python_mod_optimize ${PN}
 }
 
 pkg_postrm() {
-	python_mod_cleanup $(python_get_sitedir)/${PN}
+	python_mod_cleanup ${PN}
 }
