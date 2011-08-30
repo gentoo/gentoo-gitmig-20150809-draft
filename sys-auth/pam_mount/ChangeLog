@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_mount
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/ChangeLog,v 1.57 2011/08/25 23:44:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/ChangeLog,v 1.58 2011/08/30 20:37:00 mattst88 Exp $
+
+  30 Aug 2011; Matt Turner <mattst88@gentoo.org> pam_mount-2.11.ebuild:
+  Don't install selinux files with USE=-selinux. Thanks to Agostino Sarubbo for
+  noticing in bug 380783.
 
   25 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org> pam_mount-2.11.ebuild:
   QA: run eautoreconf to avoid maintainer-mode rebuild.
