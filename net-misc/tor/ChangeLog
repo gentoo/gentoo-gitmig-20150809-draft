@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.269 2011/08/28 11:15:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.270 2011/08/30 13:57:42 blueness Exp $
+
+*tor-0.2.3.2_alpha-r3 (30 Aug 2011)
+*tor-0.2.2.32-r1 (30 Aug 2011)
+
+  30 Aug 2011; Anthony G. Basile <blueness@gentoo.org> +tor-0.2.2.32-r1.ebuild,
+  +tor-0.2.3.2_alpha-r3.ebuild, +files/tor.initd-r5, +files/torrc-r1,
+  +files/torrc.sample.patch:
+  Change logging to syslog, add sanity check for /var/run/tor, bug #380117
 
   28 Aug 2011; Anthony G. Basile <blueness@gentoo.org> -tor-0.2.2.31_rc.ebuild:
   Removed old release candidate

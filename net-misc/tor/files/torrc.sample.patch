@@ -1,0 +1,30 @@
+diff -Nuar tor-0.2.2.32.orig/src/config/torrc.sample.in tor-0.2.2.32/src/config/torrc.sample.in
+--- tor-0.2.2.32.orig/src/config/torrc.sample.in	2011-08-29 23:13:09.000000000 -0400
++++ tor-0.2.2.32/src/config/torrc.sample.in	2011-08-29 23:14:19.000000000 -0400
+@@ -12,6 +12,10 @@
+ ## Tor will look for this file in various places based on your platform:
+ ## https://wiki.torproject.org/noreply/TheOnionRouter/TorFAQ#torrc
+ 
++## Default username and group the server will run as
++User tor
++
++PIDFile /var/run/tor/tor.pid
+ 
+ ## Replace this with "SocksPort 0" if you plan to run Tor only as a
+ ## relay, and not make any local application connections yourself.
+@@ -40,6 +44,7 @@
+ #Log notice syslog
+ ## To send all messages to stderr:
+ #Log debug stderr
++Log notice syslog
+ 
+ ## Uncomment this to start the process in the background... or use
+ ## --runasdaemon 1 on the command line. This is ignored on Windows;
+@@ -49,6 +54,7 @@
+ ## The directory for keeping all the keys/etc. By default, we store
+ ## things in $HOME/.tor on Unix, and in Application Data\tor on Windows.
+ #DataDirectory @LOCALSTATEDIR@/lib/tor
++DataDirectory   /var/lib/tor/data
+ 
+ ## The port on which Tor will listen for local connections from Tor
+ ## controller applications, as documented in control-spec.txt.
