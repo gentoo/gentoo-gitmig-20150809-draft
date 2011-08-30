@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/ketchup
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ketchup/ChangeLog,v 1.26 2011/08/30 08:15:19 psomas Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ketchup/ChangeLog,v 1.27 2011/08/30 10:32:51 psomas Exp $
+
+*ketchup-9999 (30 Aug 2011)
+
+  30 Aug 2011; Stratos Psomadakis <psomas@gentoo.org> +ketchup-9999.ebuild:
+  Add live ebuild
 
 *ketchup-1.1_beta3 (30 Aug 2011)
 
