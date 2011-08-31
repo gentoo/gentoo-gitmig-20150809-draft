@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.101 2011/08/12 11:13:32 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.102 2011/08/31 16:09:54 lack Exp $
+
+  31 Aug 2011; Jim Ramsay <lack@gentoo.org>
+  adobe-flash-11.0.1.60_beta201108082.ebuild:
+  Bug #380269: Fix invocation of dosym
 
   12 Aug 2011; Thomas Kahle <tomka@gentoo.org> adobe-flash-10.3.183.5.ebuild:
   x86 stable per bug 378637

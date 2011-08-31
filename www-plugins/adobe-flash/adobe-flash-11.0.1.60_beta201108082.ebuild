@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.0.1.60_beta201108082.ebuild,v 1.3 2011/08/11 14:40:29 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.0.1.60_beta201108082.ebuild,v 1.4 2011/08/31 16:09:54 lack Exp $
 
 EAPI=4
 inherit nsplugins multilib toolchain-funcs versionator
@@ -140,7 +140,7 @@ src_install() {
 			exeinto /${BASE}/bin/
 			doexe usr/lib/kde4/kcm_adobe_flash_player.so
 			dosym /${BASE}/bin/kcm_adobe_flash_player.so \
-				/usr/$(get_libdir)/kde4/
+				/usr/$(get_libdir)/kde4/kcm_adobe_flash_player.so
 			insinto /usr/share/kde4/services
 			doins usr/share/kde4/services/kcm_adobe_flash_player.desktop
 		else
