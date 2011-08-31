@@ -1,6 +1,16 @@
 # ChangeLog for sci-libs/libcmatrix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcmatrix/ChangeLog,v 1.4 2011/04/21 06:38:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libcmatrix/ChangeLog,v 1.5 2011/08/31 14:28:27 jlec Exp $
+
+  31 Aug 2011; Justin Lecher <jlec@gentoo.org> +files/3.9.0-atlas.patch,
+  +libcmatrix-3.9.0.ebuild, metadata.xml:
+  Version bump
+
+*libcmatrix-3.9.0 (31 Aug 2011)
+
+  31 Aug 2011; Justin Lecher <jlec@gentoo.org> +files/3.9.0-atlas.patch,
+  +libcmatrix-3.9.0.ebuild, metadata.xml:
+  Version bump
 
   21 Apr 2011; Justin Lecher <jlec@gentoo.org> +files/3.2.1-atlas.patch,
   files/3.2.1-shared.patch, libcmatrix-3.2.1.ebuild:
