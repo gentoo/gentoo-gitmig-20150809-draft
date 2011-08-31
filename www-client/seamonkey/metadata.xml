@@ -11,6 +11,8 @@
 	<flag name='custom-optimization'>Fine-tune custom compiler
 		optimizations</flag>
 	<flag name='composer'>Build Mozilla's HTML editor component (default on)</flag>
+	<flag name="ipc">Use inter-process communication between tabs and plugins.
+		Allows for greater stability in case of plugin crashes</flag>
 	<flag name='mailclient'>Build Mozilla's Mail client (default on)</flag>
 	<flag name="methodjit">Enable JIT for JavaScript using MethodJIT for faster
 		JS performance. Hardened users can disable this USE-flag to use MPROTECT
