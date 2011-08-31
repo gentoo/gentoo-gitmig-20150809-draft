@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/mg-20110120.ebuild,v 1.4 2011/05/26 20:03:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/mg-20110120.ebuild,v 1.5 2011/08/31 18:08:29 ulm Exp $
 
 EAPI=3
 
@@ -14,6 +14,9 @@ LICENSE="public-domain BSD"
 SLOT="0"
 KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
+
+DEPEND="sys-libs/ncurses"
+RDEPEND="${DEPEND}"
 
 src_configure() {
 	# econf won't work, as this script does not accept any parameters
