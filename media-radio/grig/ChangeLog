@@ -1,0 +1,9 @@
+# ChangeLog for media-radio/grig
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/grig/ChangeLog,v 1.1 2011/08/31 07:13:01 tomjbe Exp $
+
+*grig-0.8.0 (31 Aug 2011)
+
+  31 Aug 2011; Thomas Beierlein <tomjbe@gentoo.org> +grig-0.8.0.ebuild,
+  +metadata.xml:
+  Moved from sunrise
