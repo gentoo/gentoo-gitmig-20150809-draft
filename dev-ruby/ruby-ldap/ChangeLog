@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-ldap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.47 2011/01/10 18:26:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.48 2011/08/31 08:31:54 chainsaw Exp $
+
+  31 Aug 2011; Tony Vroon <chainsaw@gentoo.org> ruby-ldap-0.9.9-r1.ebuild:
+  Marked stable on AMD64 based on arch testing by Ian "idella" Delaney & Elijah
+  "Armageddon" El Lazkani in bug #380527 filed by Takuto Matsuu.
 
   10 Jan 2011; Hans de Graaff <graaff@gentoo.org> ruby-ldap-0.9.9-r1.ebuild:
   Keyword ~x86-macos.
