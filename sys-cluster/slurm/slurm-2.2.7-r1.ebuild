@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.2.7.ebuild,v 1.3 2011/07/04 16:09:46 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.2.7-r1.ebuild,v 1.1 2011/08/31 15:32:17 alexxy Exp $
 
 EAPI=4
 
@@ -56,8 +56,8 @@ src_configure() {
 			--with-hwloc="${EPREFIX}/usr"
 			)
 	use pam && myconf+=( --with-pam_dir=$(getpam_mod_dir) )
-	use mysql && myconf+=( --with-mysql_config="${EPREFIX}/usr/bin/mysql_config" )
-	use postgres && myconf+=( --with-pg_config="${EPREFIX}/usr/bin/pg_config" )
+	use mysql || myconf+=( --without-mysql_config )
+	use postgres || myconf+=( --without-pg_config )
 	econf "${myconf[@]}" \
 		$(use_enable pam) \
 		$(use_with ssl) \
