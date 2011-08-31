@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/phoronix-test-suite-2.8.1-r1.ebuild,v 1.2 2011/08/27 10:00:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/phoronix-test-suite-2.8.1-r1.ebuild,v 1.3 2011/08/31 06:41:09 mr_bones_ Exp $
 
 EAPI=4
 
@@ -55,7 +55,6 @@ src_install() {
 	for i in  ${D}usr/share/${PN}/pts/test-resources/*/*.sh ${D}/usr/share/${PN}/pts/base-test-resources/*/*.sh ${D}/usr/share/${PN}/pts-core/test-libraries/*.sh; do
 		fperms a+x /${i#${D}}
 	done
-
 
 	# Need to fix the cli-php config for downloading to work. Very naughty!
 	dodir /etc/php/cli-php5
