@@ -4,7 +4,7 @@
 
 EAPI=3
 
-inherit apache-module
+inherit apache-module eutils
 
 MY_P="${PN}-${PV/_/-}"
 DESCRIPTION="Token based URI access module for Apache2."
