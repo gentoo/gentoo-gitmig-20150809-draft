@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/cccp/cccp-0.9.ebuild,v 1.5 2011/08/26 18:46:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/cccp/cccp-0.9.ebuild,v 1.6 2011/08/31 06:42:16 mr_bones_ Exp $
 
 EAPI=4
 
@@ -20,7 +20,6 @@ RDEPEND=">=net-p2p/dctc-0.83"
 DEPEND=""
 
 S="${WORKDIR}/${PN}.${PV}"
-
 
 doecho() {
 	echo "$@"
