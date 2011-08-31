@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.9-r2.ebuild,v 1.1 2011/08/26 21:37:18 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.9-r2.ebuild,v 1.2 2011/08/31 06:43:23 mr_bones_ Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic multilib
@@ -43,7 +43,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-uclibc.patch #374595
 
 	# patch accepted by upstream (bug 3383385), remove on >=0.9.1
-	epatch "${FILESDIR}"/${P}-small-width.patch 
+	epatch "${FILESDIR}"/${P}-small-width.patch
 
 	eautoreconf
 }
