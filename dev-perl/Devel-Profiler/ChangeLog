@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Devel-Profiler
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Profiler/ChangeLog,v 1.13 2010/01/07 07:54:27 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Profiler/ChangeLog,v 1.14 2011/08/31 12:22:09 tove Exp $
+
+*Devel-Profiler-0.40.0 (31 Aug 2011)
+
+  31 Aug 2011; Torsten Veller <tove@gentoo.org> +Devel-Profiler-0.40.0.ebuild:
+  Change version scheme
 
   07 Jan 2010; Torsten Veller <tove@gentoo.org> +files/perl510.patch,
   Devel-Profiler-0.04.ebuild:

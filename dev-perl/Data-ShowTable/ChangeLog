@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Data-ShowTable
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-ShowTable/ChangeLog,v 1.19 2009/10/22 12:44:54 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-ShowTable/ChangeLog,v 1.20 2011/08/31 13:01:10 tove Exp $
+
+*Data-ShowTable-3.300.0 (31 Aug 2011)
+
+  31 Aug 2011; Torsten Veller <tove@gentoo.org> +Data-ShowTable-3.300.0.ebuild:
+  Change version scheme
 
   22 Oct 2009; Torsten Veller <tove@gentoo.org>
   Data-ShowTable-3.3-r2.ebuild:

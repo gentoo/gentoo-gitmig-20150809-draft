@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Date-Leapyear
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Leapyear/ChangeLog,v 1.29 2009/04/03 19:02:04 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Leapyear/ChangeLog,v 1.30 2011/08/31 12:45:21 tove Exp $
+
+*Date-Leapyear-1.720.0 (31 Aug 2011)
+
+  31 Aug 2011; Torsten Veller <tove@gentoo.org> +Date-Leapyear-1.720.0.ebuild:
+  Change version scheme
 
 *Date-Leapyear-1.72 (03 Apr 2009)
 
