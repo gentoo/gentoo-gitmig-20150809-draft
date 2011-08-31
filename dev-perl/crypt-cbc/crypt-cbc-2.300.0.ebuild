@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-cbc/crypt-cbc-2.300.0.ebuild,v 1.1 2011/08/27 20:23:04 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-cbc/crypt-cbc-2.300.0.ebuild,v 1.2 2011/08/31 06:41:43 mr_bones_ Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ IUSE="test"
 
 RDEPEND="virtual/perl-Digest-MD5"
 DEPEND="${RDEPEND}
-	test? ( 
+	test? (
 		dev-perl/Crypt-Blowfish
 		dev-perl/Crypt-DES
 		dev-perl/crypt-idea
