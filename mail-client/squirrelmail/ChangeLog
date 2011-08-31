@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/squirrelmail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.165 2011/08/27 17:40:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.166 2011/08/31 02:21:31 radhermit Exp $
+
+  31 Aug 2011; Tim Harder <radhermit@gentoo.org> -squirrelmail-1.4.21.ebuild:
+  Remove old, insecure version.
 
   27 Aug 2011; Raúl Porcel <armin76@gentoo.org> squirrelmail-1.4.22.ebuild:
   alpha/sparc stable wrt #378811
