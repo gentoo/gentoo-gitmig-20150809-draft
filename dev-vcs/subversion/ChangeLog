@@ -1,6 +1,14 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.55 2011/08/30 11:19:41 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.56 2011/08/31 18:31:04 darkside Exp $
+
+*subversion-1.6.17-r6 (31 Aug 2011)
+
+  31 Aug 2011; Jeremy Olexa <darkside@gentoo.org>
+  +files/subversion-1.5.4-interix.patch, +files/subversion-1.5.6-aix-dso.patch,
+  +files/subversion-1.6.3-hpux-dso.patch, +subversion-1.6.17-r6.ebuild:
+  Revision bump to finish Gentoo Prefix support, signed off by maintainer in
+  bug 329505
 
 *subversion-1.6.17-r5 (30 Aug 2011)
 
