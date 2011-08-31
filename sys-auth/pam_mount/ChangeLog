@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_mount
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/ChangeLog,v 1.58 2011/08/30 20:37:00 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mount/ChangeLog,v 1.59 2011/08/31 08:24:53 chainsaw Exp $
+
+  31 Aug 2011; Tony Vroon <chainsaw@gentoo.org> pam_mount-2.11.ebuild:
+  Marked stable on AMD64 based on arch testing by Ian "idella" Delaney &
+  Agostino "ago" Sarubbo in bug #380783 filed by Raphael "Falco" Marichez.
 
   30 Aug 2011; Matt Turner <mattst88@gentoo.org> pam_mount-2.11.ebuild:
   Don't install selinux files with USE=-selinux. Thanks to Agostino Sarubbo for
