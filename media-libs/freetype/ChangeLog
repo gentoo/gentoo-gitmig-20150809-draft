@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.305 2011/08/28 17:32:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.306 2011/08/31 08:35:05 mduft Exp $
+
+  31 Aug 2011; Markus Duft <mduft@gentoo.org> freetype-2.4.6.ebuild:
+  added eautoreconf for prefix platforms.
 
   28 Aug 2011; Fabian Groffen <grobian@gentoo.org>
   freetype-1.4_pre20080316-r2.ebuild, freetype-2.4.6.ebuild:
