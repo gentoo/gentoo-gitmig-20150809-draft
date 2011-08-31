@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.29 2011/08/31 09:47:13 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.30 2011/08/31 13:05:42 aidecoe Exp $
+
+  31 Aug 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-007.ebuild,
+  -files/dracut-007-dm-udev-rules.patch,
+  -files/dracut-007-multipath-udev-rules.patch, -dracut-008.ebuild,
+  -files/dracut-008-dm-udev-rules.patch,
+  -files/dracut-008-i18n-config-file-parsing-in-hostonly.patch,
+  -files/dracut-008-multipath-udev-rules.patch, -dracut-009-r1.ebuild,
+  -files/dracut-009-don-t-skip-zero-length-string-outfile.patch,
+  -files/dracut-009-multipath-udev-rules.patch, metadata.xml:
+  Removed older ebuilds (<010) with corresponding files. metadata.xml was
+  cleaned up from flags descriptions which are used no more.
 
   31 Aug 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-013.ebuild:
   Added 'crypt' requirement for 'crypt-gpg'.
