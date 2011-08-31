@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/ecryptfs-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.33 2011/08/24 18:01:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.34 2011/08/31 00:01:08 flameeyes Exp $
+
+  31 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  ecryptfs-utils-90.ebuild, +files/ecryptfs-utils-90-nss-pkgconfig.patch:
+  Use pkg-config to look up NSS. This allows a clean cross-compilation of the
+  package.
 
 *ecryptfs-utils-90 (24 Aug 2011)
 
