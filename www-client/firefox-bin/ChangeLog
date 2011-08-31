@@ -1,6 +1,14 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.65 2011/08/29 21:37:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.66 2011/08/31 20:03:14 nirbheek Exp $
+
+*firefox-bin-3.6.21 (31 Aug 2011)
+
+  31 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  firefox-bin-3.6.17.ebuild, firefox-bin-3.6.18.ebuild,
+  firefox-bin-3.6.20.ebuild, +firefox-bin-3.6.21.ebuild:
+  Bump to 3.6.21, certificate blacklisting security release. Fix SRC_URI, bug
+  375197.
 
   29 Aug 2011; Markos Chandras <hwoarang@gentoo.org> firefox-bin-3.6.20.ebuild:
   Stable on amd64 wrt bug #380913
