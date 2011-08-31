@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/File-BOM
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-BOM/ChangeLog,v 1.2 2011/04/24 16:03:30 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-BOM/ChangeLog,v 1.3 2011/08/31 10:10:45 tove Exp $
+
+*File-BOM-0.140.0 (31 Aug 2011)
+
+  31 Aug 2011; Torsten Veller <tove@gentoo.org> +File-BOM-0.140.0.ebuild:
+  Change version scheme
 
   24 Apr 2011; Fabian Groffen <grobian@gentoo.org> File-BOM-0.14.ebuild:
   Marked ~x86-solaris, bug #296509
