@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.36 2011/08/31 18:44:34 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.37 2011/08/31 19:05:35 sping Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -110,7 +110,11 @@ src_prepare() {
 	echo '#!/bin/sh' > py-compile
 	chmod a+x py-compile || die
 	sed -i -e 's:\$srcdir/configure:#:g' autogen.sh
-	./autogen.sh || die
+	local myconf
+	if ! use doc; then
+	    myconf="${myconf} --disable-gtk-doc"
+	fi
+	./autogen.sh ${myconf} || die
 	gnome2_src_prepare
 }
 
