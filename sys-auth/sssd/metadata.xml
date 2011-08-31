@@ -11,6 +11,5 @@
 <use>
 	<flag name="locator">Install sssd's Kerberos plugin</flag>
 	<flag name="logrotate">Install logrotate.d file</flag>
-	<flag name="openssl">Enable <pkg>dev-libs/openssl</pkg> support instead of <pkg>dev-libs/nss</pkg></flag>
 </use>
 </pkgmetadata>

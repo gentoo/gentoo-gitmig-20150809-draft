@@ -1,6 +1,13 @@
 # ChangeLog for sys-auth/sssd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.4 2011/08/20 19:06:47 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.5 2011/08/31 08:22:25 maksbotan Exp $
+
+*sssd-1.6.1 (31 Aug 2011)
+*sssd-1.5.13 (31 Aug 2011)
+
+  31 Aug 2011; Maxim Koltsov <maksbotan@gentoo.org> -sssd-1.5.12-r1.ebuild,
+  +sssd-1.5.13.ebuild, +sssd-1.6.1.ebuild:
+  Bumped to 1.5.13 and 1.6.1, removed old 1.5.12-r1
 
   20 Aug 2011; Maxim Koltsov <maksbotan@gentoo.org> sssd-1.5.12-r1.ebuild:
   Fix LDB path again

@@ -1,11 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.5.12-r1.ebuild,v 1.2 2011/08/20 19:06:47 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.5.13.ebuild,v 1.1 2011/08/31 08:22:24 maksbotan Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="python? 2:2.6"
-#RESTRICT="userpriv"
 
 inherit python multilib pam linux-info autotools-utils
 
@@ -16,7 +15,7 @@ SRC_URI="http://fedorahosted.org/released/${PN}/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc +locator logrotate nls openssl python selinux static-libs test"
+IUSE="doc +locator logrotate nls python selinux static-libs test"
 
 COMMON_DEP="virtual/pam
 	dev-libs/popt
@@ -30,8 +29,7 @@ COMMON_DEP="virtual/pam
 	dev-libs/libpcre
 	>=app-crypt/mit-krb5-1.9.1
 	>=net-dns/c-ares-1.7.4
-	openssl? ( dev-libs/openssl )
-	!openssl? ( >=dev-libs/nss-3.12.9 )
+	>=dev-libs/nss-3.12.9
 	selinux? ( >=sys-libs/libselinux-2.0.94 >=sys-libs/libsemanage-2.0.45 )
 	net-dns/bind-tools
 	dev-libs/cyrus-sasl
@@ -49,6 +47,7 @@ DEPEND="${COMMON_DEP}
 
 CONFIG_CHECK="~KEYS"
 AUTOTOOLS_IN_SOURCE_BUILD=1
+PATCHES=("${FILESDIR}"/allow_xdm.patch)
 
 pkg_setup(){
 	python_set_active_version 2
@@ -60,15 +59,15 @@ src_configure(){
 	local myeconfargs=(
 		--localstatedir="${EPREFIX}"/var
 		--enable-nsslibdir="${EPREFIX}"/$(get_libdir)
+		--with-plugin-path="${EPREFIX}"/usr/$(get_libdir)/sssd
 		--enable-pammoddir="${EPREFIX}"/$(getpam_mod_dir)
+		--with-ldb-lib-dir="${EPREFIX}"/usr/$(get_libdir)/ldb/modules/ldb
+		--with-libnl
+		--without-nscd
 		$(use_with selinux)
 		$(use_with selinux semanage)
-		--with-libnl
-		--with-ldb-lib-dir="${EPREFIX}"/usr/$(get_libdir)/ldb/modules/ldb
 		$(use_with python python-bindings)
-		--without-nscd
 		$(use_enable locator krb5-locator-plugin)
-		$(use_enable openssl crypto)
 		$(use_enable nls ) )
 
 	autotools-utils_src_configure
