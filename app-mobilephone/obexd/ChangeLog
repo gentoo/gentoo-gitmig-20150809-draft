@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/obexd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/ChangeLog,v 1.41 2011/08/14 17:54:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexd/ChangeLog,v 1.42 2011/08/31 22:46:15 chainsaw Exp $
+
+  31 Aug 2011; Tony Vroon <chainsaw@gentoo.org> obexd-0.42.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in bug
+  #381271 filed by Pacho Ramos.
 
   14 Aug 2011; Markus Meier <maekke@gentoo.org> obexd-0.42.ebuild:
   add ~arm, bug #376613
