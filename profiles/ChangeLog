@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5669 2011/08/31 15:28:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5670 2011/08/31 16:28:29 alexxy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Aug 2011; Alexey Shvetsov <alexxy@gentoo.org> arch/alpha/package.use.mask,
+  arch/ia64/package.use.mask, arch/powerpc/package.use.mask,
+  arch/sparc/package.use.mask:
+  Mask numa use flag for hwloc on alpha ia64 ppc and sparc
 
   31 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> updates/3Q-2011:
   Slotmove grub2 from 0 to 2 to awoid collisions with old grub2 ebuilds that
