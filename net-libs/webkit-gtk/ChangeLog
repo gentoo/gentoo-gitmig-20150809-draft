@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.118 2011/08/14 06:43:26 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.119 2011/08/31 13:11:52 pacho Exp $
+
+  31 Aug 2011; Pacho Ramos <pacho@gentoo.org> webkit-gtk-1.2.7.ebuild:
+  Parallel build fails for 1.2.x, seems fixed in 1.4.x (bug #343249).
 
   14 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   -webkit-gtk-1.4.1-r200.ebuild, -webkit-gtk-1.4.1-r300.ebuild,

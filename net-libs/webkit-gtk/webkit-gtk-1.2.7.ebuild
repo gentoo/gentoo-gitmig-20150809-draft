@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.2.7.ebuild,v 1.7 2011/04/04 20:48:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.2.7.ebuild,v 1.8 2011/08/31 13:11:52 pacho Exp $
 
 EAPI="3"
 
@@ -103,7 +103,7 @@ src_configure() {
 src_compile() {
 	# Fix sandbox error with USE="introspection"
 	# https://bugs.webkit.org/show_bug.cgi?id=35471
-	emake XDG_DATA_HOME="${T}/.local" || die "Compile failed"
+	emake -j1 XDG_DATA_HOME="${T}/.local" || die "Compile failed"
 }
 
 src_test() {
