@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libhx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhx/ChangeLog,v 1.33 2011/08/30 20:28:50 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhx/ChangeLog,v 1.34 2011/08/31 08:23:25 chainsaw Exp $
+
+  31 Aug 2011; Tony Vroon <chainsaw@gentoo.org> libhx-3.11.ebuild:
+  Marked stable as a dependency of sys-auth/pam_mount-2.11 based on arch
+  testing by Ian "idella" Delaney & Agostino "ago" Sarubbo in bug #380783 filed
+  by Raphael "Falco" Marichez.
 
   30 Aug 2011; Matt Turner <mattst88@gentoo.org> libhx-3.11.ebuild:
   Bump to EAPI4. Thanks to Agostino Sarubbo, bug 380965.
