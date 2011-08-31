@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.39 2011/08/28 10:50:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.40 2011/08/31 11:27:51 alexxy Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ else
 	S=${WORKDIR}/${MY_P}
 fi
 
-inherit mount-boot eutils flag-o-matic toolchain-funcs ${LIVE_ECLASS}
+inherit mount-boot eutils flag-o-matic pax-utils toolchain-funcs ${LIVE_ECLASS}
 unset LIVE_ECLASS
 
 DESCRIPTION="GNU GRUB boot loader"
@@ -210,6 +210,24 @@ src_install() {
 	# slot all collisions with grub legacy
 	mv "${ED}"/usr/share/info/grub.info \
 		"${ED}"/usr/share/info/grub2.info || die
+
+	# Do pax marking
+	local PAX=(
+		"sbin/grub2-probe"
+		"sbin/grub2-setup"
+		"sbin/grub2-mkdevicemap"
+		"bin/grub2-script-check"
+		"bin/grub2-fstest"
+		"bin/grub2-mklayout"
+		"bin/grub2-menulst2cfg"
+		"bin/grub2-mkrelpath"
+		"bin/grub2-mkpasswd-pbkdf2"
+		"bin/grub2-editenv"
+		"bin/grub2-mkimage"
+	)
+	for e in ${PAX[@]}; do
+		pax-mark -mpx "${ED}/${e}"
+	done
 
 	# can't be in docs array as we use defualt_src_install in different builddir
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO

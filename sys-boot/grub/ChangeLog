@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.162 2011/08/30 06:45:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.163 2011/08/31 11:27:51 alexxy Exp $
+
+  31 Aug 2011; Alexey Shvetsov <alexxy@gentoo.org> grub-1.99-r1.ebuild,
+  grub-9999.ebuild:
+  Fix grub2 install on hardened systems
 
   30 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> files/grub.default:
   Fix typo entrys -> entries.
