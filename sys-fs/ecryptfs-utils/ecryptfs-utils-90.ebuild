@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-90.ebuild,v 1.2 2011/08/31 00:01:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-90.ebuild,v 1.3 2011/08/31 01:33:13 flameeyes Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -33,7 +33,7 @@ RDEPEND=">=sys-apps/keyutils-1.0
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9.0
 	sys-devel/gettext
-	dev-util/intltool
+	>=dev-util/intltool-0.41.0
 	python? ( dev-lang/swig )"
 
 pkg_setup() {
