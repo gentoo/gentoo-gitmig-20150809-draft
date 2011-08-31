@@ -1,6 +1,11 @@
 # ChangeLog for www-plugins/nspluginwrapper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/ChangeLog,v 1.23 2011/07/14 16:09:41 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/ChangeLog,v 1.24 2011/08/31 08:26:44 chainsaw Exp $
+
+  31 Aug 2011; Tony Vroon <chainsaw@gentoo.org>
+  nspluginwrapper-1.4.4-r1.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani in bug #380733 filed by Raphael "Falco" Marichez.
 
   14 Jul 2011; Patrick McLean <chutzpah@gentoo.org>
   -files/nspluginwrapper-1.4.2-parallel-make.patch,
