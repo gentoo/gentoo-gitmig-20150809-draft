@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.100 2011/08/01 09:49:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.101 2011/08/31 22:44:33 chainsaw Exp $
+
+  31 Aug 2011; Tony Vroon <chainsaw@gentoo.org> bluez-4.96.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah "Armageddon" El Lazkani in bug #381269 filed by Pacho Ramos.
 
 *bluez-4.96-r1 (01 Aug 2011)
 *bluez-4.96 (01 Aug 2011)
