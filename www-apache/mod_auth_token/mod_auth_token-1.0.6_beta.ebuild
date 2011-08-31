@@ -29,3 +29,19 @@ S="${WORKDIR}/${PN}"
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-ap_pstrcat.patch
 }
+
+src_compile() {
+	local flag=
+	APXS2_ARGS=
+
+	for flag in ${CFLAGS}; do
+		APXS2_ARGS+=" -Wc,${flag}"
+	done
+
+	for flag in ${LDFLAGS}; do
+		APXS2_ARGS+=" -Wl,${flag}"
+	done
+
+	APXS2_ARGS="${APXS2_ARGS} -c ${PN}.c"
+	apache-module_src_compile
+}
