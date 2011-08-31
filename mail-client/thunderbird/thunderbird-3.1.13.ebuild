@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.11.ebuild,v 1.1 2011/06/23 14:08:54 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-3.1.13.ebuild,v 1.1 2011/08/31 21:14:22 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
