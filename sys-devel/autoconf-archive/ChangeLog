@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/autoconf-archive
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/ChangeLog,v 1.35 2011/05/28 14:57:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-archive/ChangeLog,v 1.36 2011/08/31 19:35:45 scarabeus Exp $
+
+*autoconf-archive-2011.07.17 (31 Aug 2011)
+
+  31 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -autoconf-archive-2011.01.02.ebuild, autoconf-archive-2011.04.12.ebuild,
+  +autoconf-archive-2011.07.17.ebuild:
+  Stabilise later, bump to latest.
 
 *autoconf-archive-2011.04.12 (28 May 2011)
 
