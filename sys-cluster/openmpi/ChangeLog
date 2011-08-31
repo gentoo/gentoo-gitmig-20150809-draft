@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.91 2011/07/10 17:03:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.92 2011/08/31 17:26:17 alexxy Exp $
+
+  31 Aug 2011; Alexey Shvetsov <alexxy@gentoo.org> +openmpi-1.5.4.ebuild:
+  Version bump
+
+*openmpi-1.5.4 (31 Aug 2011)
+
+  31 Aug 2011; Alexey Shvetsov <alexxy@gentoo.org> +openmpi-1.5.4.ebuild:
+  Version bump
 
   10 Jul 2011; Alexis Ballier <aballier@gentoo.org> openmpi-1.5.3-r2.ebuild:
   keyword ~x86-fbsd, bug #372885
