@@ -15,3 +15,4 @@ slotmove =kde-misc/steamcompanion-0.2.2 0 4
 move app-editors/gentoo-editor app-misc/editor-wrapper
 move dev-php5/pecl-memcache dev-php/pecl-memcache
 move kde-misc/smaragd x11-themes/smaragd
+slotmove >sys-boot/grub-1 0 2
