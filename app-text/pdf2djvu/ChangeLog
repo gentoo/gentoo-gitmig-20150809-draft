@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pdf2djvu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2djvu/ChangeLog,v 1.6 2011/08/31 04:18:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2djvu/ChangeLog,v 1.7 2011/08/31 04:21:08 radhermit Exp $
+
+  31 Aug 2011; Tim Harder <radhermit@gentoo.org> -pdf2djvu-0.7.7.ebuild,
+  -pdf2djvu-0.7.8.ebuild:
+  Remove old.
 
 *pdf2djvu-0.7.10 (31 Aug 2011)
 
