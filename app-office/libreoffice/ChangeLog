@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.116 2011/08/23 19:27:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.117 2011/08/31 09:11:32 scarabeus Exp $
+
+  31 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-3.4.2.3.ebuild, libreoffice-3.4.3.2.ebuild,
+  libreoffice-3.4.9999.ebuild, libreoffice-9999.ebuild:
+  Fix bash completion placement. Fixes bug #380977.
 
 *libreoffice-3.4.3.2 (23 Aug 2011)
 

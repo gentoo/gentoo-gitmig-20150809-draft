@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.30 2011/08/19 12:40:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.2.3.ebuild,v 1.31 2011/08/31 09:11:32 scarabeus Exp $
 
 EAPI=3
 
@@ -24,7 +24,7 @@ ADDONS_URI="http://dev-www.libreoffice.org/src/"
 BRANDING="${PN}-branding-gentoo-0.3.tar.xz"
 
 [[ ${PV} == *9999* ]] && SCM_ECLASS="git-2"
-inherit base autotools check-reqs eutils java-pkg-opt-2 kde4-base pax-utils prefix python multilib toolchain-funcs flag-o-matic nsplugins ${SCM_ECLASS}
+inherit base autotools bash-completion check-reqs eutils java-pkg-opt-2 kde4-base pax-utils prefix python multilib toolchain-funcs flag-o-matic nsplugins ${SCM_ECLASS}
 unset SCM_ECLASS
 
 DESCRIPTION="LibreOffice, a full office productivity suite."
@@ -559,6 +559,10 @@ src_compile() {
 src_install() {
 	# This is not Makefile so no buildserver
 	make DESTDIR="${D}" distro-pack-install || die
+
+	# Fix bash completion placement
+	dobashcompletion "${ED}"/etc/bash_completion.d/libreoffice.sh ${PN}
+	rm -rf "${ED}"/etc/
 
 	# symlink the plugin to system location
 	if use nsplugin; then
