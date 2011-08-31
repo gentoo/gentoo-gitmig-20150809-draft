@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.6.43.ebuild,v 1.1 2011/08/25 21:38:27 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.6.43.ebuild,v 1.2 2011/08/31 06:43:56 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -33,4 +33,3 @@ FOXCONF="$(use_enable bzip2 bz2lib) \
 	$(use_enable tiff) \
 	$(use_with truetype xft) \
 	$(use_enable zlib)"
-
