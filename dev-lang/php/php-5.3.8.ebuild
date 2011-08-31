@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.8.ebuild,v 1.6 2011/08/28 13:38:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.8.ebuild,v 1.7 2011/08/31 08:06:28 olemarkus Exp $
 
 EAPI=4
 
@@ -256,6 +256,8 @@ DEPEND="${DEPEND}
 
 [[ -n $SUHOSIN_VERSION ]] && RDEPEND="${RDEPEND} suhosin? (
 =${CATEGORY}/${PN}-${SLOT}*[unicode] )"
+
+RDEPEND="${DEPEND}"
 
 DEPEND="${DEPEND}
 	sys-devel/flex
