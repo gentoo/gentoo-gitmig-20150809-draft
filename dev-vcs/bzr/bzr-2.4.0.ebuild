@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.4.0.ebuild,v 1.2 2011/08/19 19:17:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.4.0.ebuild,v 1.3 2011/08/31 09:21:43 fauli Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -29,9 +29,9 @@ RDEPEND="|| ( dev-lang/python:2.7[xml] dev-lang/python:2.6[xml] dev-lang/python:
 DEPEND="emacs? ( virtual/emacs )
 	test? (
 		${RDEPEND}
-		dev-python/medusa
+		|| ( dev-python/pyftpdlib dev-python/medusa )
 		dev-python/subunit
-		dev-python/testtools
+		>=dev-python/testtools-0.9.5
 	)"
 
 S="${WORKDIR}/${MY_P}"
@@ -47,8 +47,6 @@ src_prepare() {
 
 	# Don't regenerate .c files from .pyx when pyrex is found.
 	epatch "${FILESDIR}/${PN}-2.4.0-no-pyrex-citon.patch"
-	# Fix permission errors when run under directories with setgid set.
-	epatch "${FILESDIR}/${PN}-0.90-tests-sgid.patch"
 }
 
 src_compile() {

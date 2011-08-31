@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/bzr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.33 2011/08/30 19:20:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.34 2011/08/31 09:21:43 fauli Exp $
+
+  31 Aug 2011; Christian Faulhammer <fauli@gentoo.org> bzr-2.4.0.ebuild:
+  Drop privilege setgid patch for tests, is fixed upstream. Drop
+  dev-python/medusa dependency, upstream prefers dev-python/pyftpdlib. Give a
+  version number for testtools dependency.
 
   30 Aug 2011; Raúl Porcel <armin76@gentoo.org> bzr-2.2.2-r1.ebuild:
   alpha stable
