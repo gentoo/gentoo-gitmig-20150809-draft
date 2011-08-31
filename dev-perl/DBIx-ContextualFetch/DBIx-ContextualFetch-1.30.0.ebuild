@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-ContextualFetch/DBIx-ContextualFetch-1.30.0.ebuild,v 1.1 2011/08/31 13:35:32 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-ContextualFetch/DBIx-ContextualFetch-1.30.0.ebuild,v 1.2 2011/08/31 16:06:19 mr_bones_ Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="Add contextual fetches to DBI"
 
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-solaris"
-IUSE=""
+IUSE="test"
 
 RDEPEND=">=dev-perl/DBI-1.37"
 DEPEND="${RDEPEND}
