@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-1.0_beta2323.ebuild,v 1.1 2011/08/29 00:17:00 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-1.0_beta2323.ebuild,v 1.2 2011/08/31 06:46:12 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ SRC_URI="http://download.flexget.com/unstable/${MY_P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="test"
 
 RDEPEND="dev-python/setuptools
 	dev-python/feedparser
