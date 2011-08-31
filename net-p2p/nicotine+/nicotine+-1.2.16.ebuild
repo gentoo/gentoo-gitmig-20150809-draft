@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/nicotine+-1.2.16.ebuild,v 1.5 2011/04/05 21:33:00 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/nicotine+-1.2.16.ebuild,v 1.6 2011/08/31 01:02:52 dirtyepic Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -39,7 +39,6 @@ pkg_postinst() {
 	elog "to Nicotine+:"
 	elog
 	elog "dev-python/geoip-python         Country lookup and flag display"
-	elog "dev-python/sexy-python          Spellchecking for chat rooms"
 	elog "media-libs/mutagen              Media metadata extraction"
 	elog "net-libs/miniupnpc              UPnP portmapping"
 	echo
