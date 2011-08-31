@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.2.ebuild,v 1.1 2011/08/02 11:30:34 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.3.ebuild,v 1.1 2011/08/31 11:56:52 suka Exp $
 
 EAPI="3"
 
@@ -9,9 +9,9 @@ inherit eutils fdo-mime gnome2-utils pax-utils prefix rpm multilib
 IUSE="gnome java offlinehelp"
 
 MY_PV="${PV/_/-}"
-MY_PV2="${PV}rc3"
-BVER="3.4.2-203"
-BVER2="3.4-203"
+MY_PV2="${PV}rc2"
+BVER="3.4.3-302"
+BVER2="3.4-302"
 BASIS="libobasis3.4"
 BASIS2="basis3.4"
 NM="libreoffice"
@@ -36,7 +36,7 @@ SRC_URI="amd64? ( ${FILEPATH}/x86_64/LibO_${PV}_Linux_x86-64_install-rpm_en-US.t
 
 LANGS="af ar as ast be bg bn bo br brx bs ca ca_XV cs cy da de dgo dz el en en_GB en_ZA eo es et eu fa fi fr ga gl gu he hi hr hu id is it ja ka kk km kn ko kok ks ku lo lt lv mai mk ml mn mni mr my nb ne nl nn nr nso oc om or pa_IN pl pt pt_BR ro ru rw sa_IN sat sd sh si sk sl sq sr ss st sv sw_TZ ta te tg th tn tr ts ug uk uz ve vi xh zh_CN zh_TW zu"
 
-LANGS2="bg bn bo bs ca ca_XV cs da de dz el en en_GB en_ZA eo es et eu fi fr gl gu he hi hr hu id is it ja ka km ko mk nb ne nl nn nso om pl pt pt_BR ru si sk sl sq sv tg tr ug uk vi zh_CN zh_TW"
+LANGS2="bg bn bo bs ca ca_XV cs da de dz el en en_GB en_ZA eo es et eu fi fr gl gu he hi hr hu id is it ja ka km ko mk nb ne nl nn om pl pt pt_BR ru si sk sl sq sv tg tr ug uk vi zh_CN zh_TW"
 
 for X in ${LANGS} ; do
 	[[ ${X} != "en" ]] && SRC_URI="${SRC_URI} linguas_${X}? (

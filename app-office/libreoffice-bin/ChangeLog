@@ -1,9 +1,19 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.29 2011/08/18 09:06:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.30 2011/08/31 11:56:52 suka Exp $
+
+*libreoffice-bin-3.4.3 (31 Aug 2011)
+
+  31 Aug 2011; Andreas Proschofsky <suka@gentoo.org>
+  -libreoffice-bin-3.4.2.ebuild, +libreoffice-bin-3.4.3.ebuild:
+  Bump to LibreOffice 3.4.3, usual round of bug fixes
 
   18 Aug 2011; Patrick Lauer <patrick@gentoo.org> libreoffice-bin-3.3.4.ebuild:
   Fix requested by scarabeus
+
+  18 Aug 2011; Andreas Proschofsky <suka@gentoo.org>
+  libreoffice-bin-3.3.4.ebuild:
+  Actually make libreoffice-3.3.4 work, bug #379653
 
 *libreoffice-bin-3.3.4 (17 Aug 2011)
 
