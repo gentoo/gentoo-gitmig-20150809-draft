@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyparted
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.63 2011/07/05 19:06:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.64 2011/08/31 15:22:30 jer Exp $
+
+  31 Aug 2011; Jeroen Roovers <jer@gentoo.org> pyparted-3.8-r1.ebuild:
+  Drop HPPA, PPC64 (bug #381303).
 
 *pyparted-3.8-r1 (05 Jul 2011)
 
