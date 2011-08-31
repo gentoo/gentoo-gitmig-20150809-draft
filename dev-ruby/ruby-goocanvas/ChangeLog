@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-goocanvas
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-goocanvas/ChangeLog,v 1.1 2011/05/29 13:31:52 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-goocanvas/ChangeLog,v 1.2 2011/08/31 11:15:29 a3li Exp $
+
+  31 Aug 2011; Alex Legler <a3li@gentoo.org> ruby-goocanvas-0.90.8.ebuild:
+  Depend on dev-ruby/rcairo and dev-ruby/pkg-config. Fixes bug 378685 by Kacper
+  Kowalik
 
 *ruby-goocanvas-0.90.8 (29 May 2011)
 
