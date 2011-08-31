@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/xwax-1.0.ebuild,v 1.1 2011/08/04 02:43:12 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/xwax-1.0.ebuild,v 1.2 2011/08/31 21:25:28 nixphoeni Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -16,7 +16,8 @@ IUSE="alsa jack oss cdda mp3 +fallback"
 REQUIRED_USE="|| ( cdda mp3 fallback )
 	|| ( alsa jack oss )"
 
-RDEPEND="media-libs/libsdl
+RDEPEND="sys-libs/glibc
+	media-libs/libsdl
 	media-libs/sdl-ttf
 	media-fonts/dejavu
 	alsa? ( media-libs/alsa-lib )
@@ -31,10 +32,10 @@ DOCS="README CHANGES"
 src_prepare() {
 	# Remove the forced optimization from 'CFLAGS' and 'LDFLAGS' in
 	# the Makefile
-	# Also replace VERSION so we don't have to depend on git...
-	sed -i -e 's:\(^CFLAGS.*\)-O[0-9]\(.*\):\1\2:' \
-		-e 's:\(^LDFLAGS.*\)-O[0-9]\(.*\):\1\2:' \
-		-e "s:\(^VERSION =\).*:\1 ${PV}:" \
+	# Also remove the dependency on the .version target so we don't need
+	# git just to build
+	sed -i -e 's/\(^\(LD\|C\)FLAGS.*\)-O[0-9]\(.*\)/\1\3/g' \
+		-e 's/^xwax\.o:.*\.version//' \
 		Makefile || die "sed failed"
 
 	# Replace any decoder commands in the import script, if necessary
@@ -66,7 +67,7 @@ src_configure() {
 src_compile() {
 	# EXECDIR is the default directory in which xwax will look for
 	# the 'xwax-import' and 'xwax-scan' scripts
-	emake EXECDIR="${EROOT}usr/bin"
+	emake EXECDIR="\$(BINDIR)" VERSION="${PV}"
 }
 
 src_install() {
