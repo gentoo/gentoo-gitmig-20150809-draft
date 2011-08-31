@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/sagan
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sagan/ChangeLog,v 1.1 2011/08/31 08:36:54 maksbotan Exp $
+
+*sagan-0.2.0 (31 Aug 2011)
+
+  31 Aug 2011; Maxim Koltsov <maksbotan@gentoo.org> +sagan-0.2.0.ebuild,
+  +files/sagan.confd, +files/sagan.init, +metadata.xml:
+  Copy app-admin/sagan from rion-overlay, thanks to slepnoga. Bug 341461
+
