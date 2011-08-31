@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13020 2011/08/30 16:31:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13021 2011/08/31 01:06:00 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (30 Aug 2011)
+# Mask v8 versions used for www-client/chromium dev channel releases.
+# Currently v8-3.5 versions are used for chromium-15.x versions.
+>=dev-lang/v8-3.5
 
 # Doug Goldstein <cardoe@gentoo.org> (29 Aug 2011)
 # Not intended to be used yet. If you do, changes
@@ -412,11 +417,6 @@ sci-chemistry/webmo
 # ebuilds to address numerous issues.  See bugs #336993, #336199, #369881
 # and #335307.
 =media-radio/svxlink-090426
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (17 Jun 2011)
-# Mask v8 versions used for www-client/chromium dev channel releases.
-# Currently v8-3.4 versions are used for chromium-14.x versions.
->=dev-lang/v8-3.4
 
 # Samuli Suominen <ssuominen@gentoo.org> (15 Jun 2011)
 # Retire gpixpod for bugs 221277 and 351307.   Removal in 30 days.
