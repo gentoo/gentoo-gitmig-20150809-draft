@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.28 2011/08/21 12:24:31 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.29 2011/08/31 09:47:13 aidecoe Exp $
+
+  31 Aug 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-013.ebuild:
+  Added 'crypt' requirement for 'crypt-gpg'.
 
 *dracut-013 (21 Aug 2011)
 

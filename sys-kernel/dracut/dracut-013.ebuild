@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-013.ebuild,v 1.1 2011/08/21 12:24:31 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-013.ebuild,v 1.2 2011/08/31 09:47:13 aidecoe Exp $
 
 EAPI=4
 
@@ -13,6 +13,9 @@ SRC_URI="mirror://kernel/linux/utils/boot/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
+REQUIRED_USE="dracut_modules_livenet? ( dracut_modules_dmsquash-live )
+	dracut_modules_crypt-gpg? ( dracut_modules_crypt )
+	"
 
 BASIC_MODULES="
 	"
@@ -82,8 +85,6 @@ DEPEND="
 	app-text/docbook-xml-dtd:4.5
 	>=app-text/docbook-xsl-stylesheets-1.75.2
 	"
-
-REQUIRED_USE="dracut_modules_livenet? ( dracut_modules_dmsquash-live )"
 
 #
 # Helper functions
