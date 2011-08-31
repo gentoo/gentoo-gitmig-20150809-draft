@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-dvb-daemon/gnome-dvb-daemon-0.2.2.ebuild,v 1.1 2011/08/17 20:57:14 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-dvb-daemon/gnome-dvb-daemon-0.2.2.ebuild,v 1.2 2011/08/31 23:18:27 mattst88 Exp $
 
 EAPI="3"
 
-inherit eutils python gnome2
+inherit eutils python gnome2 multilib
 
 DESCRIPTION="Setup your DVB devices, record and watch TV shows and browse EPG using GStreamer"
 HOMEPAGE="http://live.gnome.org/DVBDaemon"
@@ -40,6 +40,8 @@ pkg_setup() {
 	G2CONF="${G2CONF} \
 		$(use_enable nls)
 		$(use_enable totem totem-plugin)"
+	use totem && G2CONF="${G2CONF} \
+		--with-totem-plugin-dir=/usr/$(get_libdir)/totem/plugins"
 	python_set_active_version 2
 	python_pkg_setup
 }
