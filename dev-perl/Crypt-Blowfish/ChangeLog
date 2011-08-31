@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Crypt-Blowfish
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Blowfish/ChangeLog,v 1.29 2011/04/24 15:55:20 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Blowfish/ChangeLog,v 1.30 2011/08/31 14:20:05 tove Exp $
+
+*Crypt-Blowfish-2.120.0 (31 Aug 2011)
+
+  31 Aug 2011; Torsten Veller <tove@gentoo.org> +Crypt-Blowfish-2.120.0.ebuild:
+  Change version scheme
 
   24 Apr 2011; Fabian Groffen <grobian@gentoo.org> Crypt-Blowfish-2.12.ebuild:
   Marked ~x86-solaris, bug #296509
