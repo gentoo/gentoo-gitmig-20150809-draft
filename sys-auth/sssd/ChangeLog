@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/sssd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.5 2011/08/31 08:22:25 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.6 2011/08/31 08:25:10 maksbotan Exp $
+
+  31 Aug 2011; Maxim Koltsov <maksbotan@gentoo.org> +files/allow_xdm.patch:
+  Add forgotten patch
 
 *sssd-1.6.1 (31 Aug 2011)
 *sssd-1.5.13 (31 Aug 2011)
