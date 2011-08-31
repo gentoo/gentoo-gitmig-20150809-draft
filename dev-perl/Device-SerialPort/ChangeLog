@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Device-SerialPort
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Device-SerialPort/ChangeLog,v 1.24 2011/06/11 21:20:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Device-SerialPort/ChangeLog,v 1.25 2011/08/31 11:17:24 tove Exp $
+
+*Device-SerialPort-1.40.0 (31 Aug 2011)
+
+  31 Aug 2011; Torsten Veller <tove@gentoo.org>
+  +Device-SerialPort-1.40.0.ebuild:
+  Change version scheme
 
   11 Jun 2011; Markus Meier <maekke@gentoo.org> Device-SerialPort-1.04.ebuild:
   add ~arm, bug #364195

@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Devel-Symdump
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Symdump/ChangeLog,v 1.63 2011/07/30 10:27:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Symdump/ChangeLog,v 1.64 2011/08/31 11:18:44 tove Exp $
+
+*Devel-Symdump-2.80.0 (31 Aug 2011)
+
+  31 Aug 2011; Torsten Veller <tove@gentoo.org> +Devel-Symdump-2.80.0.ebuild:
+  Change version scheme
 
   30 Jul 2011; Torsten Veller <tove@gentoo.org> Devel-Symdump-2.08.ebuild:
   Drop ~sparc-fbsd KEYWORD
