@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.4.ebuild,v 1.3 2011/08/04 14:16:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.4.ebuild,v 1.4 2011/08/31 22:55:58 cardoe Exp $
 
 #BACKPORTS=2
 #AUTOTOOLIZE=yes
@@ -9,24 +9,35 @@ EAPI="3"
 
 MY_P="${P/_rc/-rc}"
 
+if [[ ${PV} = *9999* ]]; then
+	EGIT_REPO_URI="git://libvirt.org/libvirt.git"
+	GIT_ECLASS="git-2"
+	AUTOTOOLIZE=yes
+fi
+
 PYTHON_DEPEND="python? 2:2.4"
 #RESTRICT_PYTHON_ABIS="3.*"
 #SUPPORT_PYTHON_ABIS="1"
 
-inherit eutils python ${AUTOTOOLIZE+autotools}
+inherit eutils python ${AUTOTOOLIZE+autotools} ${GIT_ECLASS}
+
+if [[ ${PV} = *9999* ]]; then
+	SRC_URI=""
+	KEYWORDS=""
+else
+	SRC_URI="http://libvirt.org/sources/${MY_P}.tar.gz
+		ftp://libvirt.org/libvirt/${MY_P}.tar.gz
+		${BACKPORTS:+
+			http://dev.gentoo.org/~flameeyes/${PN}/${MY_P}-backports-${BACKPORTS}.tar.bz2
+			http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-backports-${BACKPORTS}.tar.bz2}"
+	KEYWORDS="~amd64 ~x86"
+fi
+S="${WORKDIR}/${P%_rc*}"
 
 DESCRIPTION="C toolkit to manipulate virtual machines"
 HOMEPAGE="http://www.libvirt.org/"
-SRC_URI="http://libvirt.org/sources/${MY_P}.tar.gz
-	ftp://libvirt.org/libvirt/${MY_P}.tar.gz
-	${BACKPORTS:+
-		http://dev.gentoo.org/~flameeyes/${PN}/${MY_P}-backports-${BACKPORTS}.tar.bz2
-		http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-backports-${BACKPORTS}.tar.bz2}"
-S="${WORKDIR}/${P%_rc*}"
-
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 IUSE="avahi caps debug iscsi +json +libvirtd lvm +lxc macvtap nfs \
 	nls numa openvz parted pcap phyp policykit python qemu sasl selinux udev \
 	uml virtualbox virt-network xen elibc_glibc"
@@ -40,7 +51,7 @@ RDEPEND="sys-libs/readline
 	>=dev-libs/libxml2-2.7.6
 	>=dev-libs/libnl-1.1
 	>=net-libs/gnutls-1.0.25
-	sys-apps/util-linux
+	>=sys-apps/util-linux-2.17
 	sys-devel/gettext
 	>=net-analyzer/netcat6-1.0-r2
 	avahi? ( >=net-dns/avahi-0.6[dbus] )

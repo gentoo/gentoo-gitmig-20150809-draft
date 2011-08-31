@@ -1,10 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.8 2011/07/20 14:51:41 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.9 2011/08/31 22:55:58 cardoe Exp $
 
-#BACKPORTS=1
+#BACKPORTS=2
+#AUTOTOOLIZE=yes
 
-EAPI="2"
+EAPI="3"
+
+MY_P="${P/_rc/-rc}"
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://libvirt.org/libvirt.git"
@@ -22,12 +25,14 @@ if [[ ${PV} = *9999* ]]; then
 	SRC_URI=""
 	KEYWORDS=""
 else
-	SRC_URI="http://libvirt.org/sources/${P}.tar.gz
-	${BACKPORTS:+
-		http://dev.gentoo.org/~flameeyes/${PN}/${P}-backports-${BACKPORTS}.tar.bz2
-		http://dev.gentoo.org/~cardoe/${PN}/${P}-backports-${BACKPORTS}.tar.bz2}"
+	SRC_URI="http://libvirt.org/sources/${MY_P}.tar.gz
+		ftp://libvirt.org/libvirt/${MY_P}.tar.gz
+		${BACKPORTS:+
+			http://dev.gentoo.org/~flameeyes/${PN}/${MY_P}-backports-${BACKPORTS}.tar.bz2
+			http://dev.gentoo.org/~cardoe/distfiles/${MY_P}-backports-${BACKPORTS}.tar.bz2}"
 	KEYWORDS="~amd64 ~x86"
 fi
+S="${WORKDIR}/${P%_rc*}"
 
 DESCRIPTION="C toolkit to manipulate virtual machines"
 HOMEPAGE="http://www.libvirt.org/"
@@ -38,14 +43,16 @@ IUSE="avahi caps debug iscsi +json +libvirtd lvm +lxc macvtap nfs \
 	uml virtualbox virt-network xen elibc_glibc"
 # IUSE=one : bug #293416 & bug #299011
 
+# gettext.sh command is used by the libvirt command wrappers, and it's
+# non-optional, so put it into RDEPEND.
 RDEPEND="sys-libs/readline
 	sys-libs/ncurses
 	>=net-misc/curl-7.18.0
 	>=dev-libs/libxml2-2.7.6
 	>=dev-libs/libnl-1.1
 	>=net-libs/gnutls-1.0.25
-	sys-fs/sysfsutils
-	sys-apps/util-linux
+	>=sys-apps/util-linux-2.17
+	sys-devel/gettext
 	>=net-analyzer/netcat6-1.0-r2
 	avahi? ( >=net-dns/avahi-0.6[dbus] )
 	caps? ( sys-libs/libcap-ng )
@@ -55,7 +62,7 @@ RDEPEND="sys-libs/readline
 	lvm? ( >=sys-fs/lvm2-2.02.48-r2 )
 	macvtap? ( >=dev-libs/libnl-1.1 )
 	nfs? ( net-fs/nfs-utils )
-	numa? ( sys-process/numactl )
+	numa? ( >sys-process/numactl-2.0.2 )
 	openvz? ( sys-kernel/openvz-sources )
 	parted? (
 		>=sys-block/parted-1.8[device-mapper]
@@ -64,7 +71,7 @@ RDEPEND="sys-libs/readline
 	pcap? ( >=net-libs/libpcap-1.0.0 )
 	phyp? ( net-libs/libssh2 )
 	policykit? ( >=sys-auth/polkit-0.9 )
-	qemu? ( || ( app-emulation/qemu-kvm >=app-emulation/qemu-0.10.0 app-emulation/qemu-kvm-spice ) )
+	qemu? ( || ( app-emulation/qemu-kvm >=app-emulation/qemu-0.10.0 ) )
 	sasl? ( dev-libs/cyrus-sasl )
 	selinux? ( >=sys-libs/libselinux-2.0.85 )
 	virtualbox? ( || ( app-emulation/virtualbox >=app-emulation/virtualbox-bin-2.2.0 ) )
@@ -77,8 +84,7 @@ RDEPEND="sys-libs/readline
 	elibc_glibc? ( || ( >=net-libs/libtirpc-0.2.2-r1 <sys-libs/glibc-2.14 ) )"
 # one? ( dev-libs/xmlrpc-c )
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	nls? ( sys-devel/gettext )"
+	dev-util/pkgconfig"
 
 pkg_setup() {
 	python_set_active_version 2
@@ -88,16 +94,6 @@ src_prepare() {
 	[[ -n ${BACKPORTS} ]] && \
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
 			epatch
-
-	# This is required to be able to run the tests when using the sandbox
-	if [[ ${LD_PRELOAD} == libsandbox.so ]]; then
-		sed -i -e '/LOGNAME/iENV:LD_PRELOAD=libsandbox.so' \
-			"${S}"/tests/commanddata/*.log || die
-		sed -i -e '/DISPLAY/aENV:LD_PRELOAD=libsandbox.so' \
-			"${S}"/tests/commanddata/test6.log || die
-		sed -i -e '/LANG/aENV:LD_PRELOAD=libsandbox.so' \
-			"${S}"/tests/commanddata/test8.log || die
-	fi
 
 	[[ -n ${AUTOTOOLIZE} ]] && eautoreconf
 }
@@ -154,7 +150,7 @@ src_configure() {
 	myconf="${myconf} $(use_with policykit polkit)"
 	myconf="${myconf} $(use_with sasl)"
 
-	# network biits
+	# network bits
 	myconf="${myconf} $(use_with macvtap)"
 	myconf="${myconf} $(use_with pcap libpcap)"
 
@@ -168,6 +164,9 @@ src_configure() {
 
 	# we use udev over hal
 	myconf="${myconf} --without-hal"
+
+	# locking support
+	myconf="${myconf} --without-sanlock"
 
 	# this is a nasty trick to work around the problem in bug
 	# #275073. The reason why we don't solve this properly is that
@@ -230,7 +229,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	use python && python_mod_optimize $(python_get_sitedir)/libvirt.py
+	use python && python_mod_optimize libvirt.py
 
 	elog
 	if use policykit && has_version sys-auth/policykit; then
@@ -264,5 +263,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	use python && python_mod_cleanup $(python_get_sitedir)/libvirt.py
+	use python && python_mod_cleanup libvirt.py
 }
