@@ -12,3 +12,16 @@ Index: rfc2045/reformime.c
  			break;
  		case 'i':
  			doinfo=1;
+Index: rfc2045/reformime.c
+===================================================================
+--- rfc2045/reformime.c	(revision 137)
++++ rfc2045/reformime.c	(working copy)
+@@ -1150,7 +1150,7 @@
+ 
+ 	if (doinfo)
+ 	{
+-		mimesection = strtok(section,",");
++		mimesection = section ? strtok(section, ","):NULL;
+ 		do {
+ 			print_info(p, mimesection);
+ 			if (do_extract)
