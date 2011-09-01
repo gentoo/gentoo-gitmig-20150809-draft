@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.27.ebuild,v 1.1 2011/09/01 13:55:10 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.27.ebuild,v 1.2 2011/09/01 19:15:34 mr_bones_ Exp $
 
 inherit versionator pax-utils java-vm-2 eutils
 
@@ -48,7 +48,6 @@ pkg_nofetch() {
 src_unpack() {
 	sh "${DISTDIR}"/${A} -noregister || die "Failed to unpack"
 }
-
 
 src_compile() {
 	# Set PaX markings on all JDK/JRE executables to allow code-generation on
