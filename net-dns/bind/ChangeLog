@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.348 2011/07/09 16:31:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.349 2011/09/01 15:20:13 idl0r Exp $
+
+*bind-9.8.1 (01 Sep 2011)
+
+  01 Sep 2011; Christian Ruppert <idl0r@gentoo.org> -bind-9.8.0_p4.ebuild,
+  +bind-9.8.1.ebuild, files/named.conf-r5:
+  Version bump to 9.8.1. Add "dnssec-validation auto" example to named.conf.
 
   09 Jul 2011; Raúl Porcel <armin76@gentoo.org> bind-9.7.3_p3.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #374201

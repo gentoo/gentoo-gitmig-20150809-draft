@@ -90,6 +90,13 @@ options {
 	//dnssec-enable yes;
 	//dnssec-validation yes;
 
+	/*
+	 * As of bind 9.8.0:
+	 * "If the root key provided has expired,
+	 * named will log the expiration and validation will not work."
+	 */
+	//dnssec-validation auto;
+
 	/* if you have problems and are behind a firewall: */
 	//query-source address * port 53;
 };
