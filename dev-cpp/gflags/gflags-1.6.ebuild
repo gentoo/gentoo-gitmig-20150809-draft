@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/gflags-1.4.ebuild,v 1.1 2010/11/08 11:20:15 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/gflags-1.6.ebuild,v 1.1 2011/09/01 15:39:35 nelchael Exp $
 
 EAPI="3"
 
