@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.56 2011/08/31 18:31:04 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.57 2011/09/01 07:42:03 chainsaw Exp $
+
+  01 Sep 2011; Tony Vroon <chainsaw@gentoo.org> -subversion-1.6.15.ebuild,
+  -subversion-1.6.16.ebuild, -subversion-1.6.17-r4.ebuild,
+  -subversion-1.6.17-r5.ebuild:
+  Remove old ebuilds. 1.6.17-r6 is the new stabilisation target in one month.
 
 *subversion-1.6.17-r6 (31 Aug 2011)
 
