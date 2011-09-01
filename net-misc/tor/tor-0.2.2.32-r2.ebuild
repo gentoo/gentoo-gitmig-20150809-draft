@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.2.32-r1.ebuild,v 1.1 2011/08/30 13:57:42 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.2.32-r2.ebuild,v 1.1 2011/09/01 15:56:55 blueness Exp $
 
 EAPI=4
 
@@ -52,17 +52,16 @@ src_configure() {
 
 src_install() {
 	newconfd "${FILESDIR}"/tor.confd tor
-	newinitd "${FILESDIR}"/tor.initd-r5 tor
+	newinitd "${FILESDIR}"/tor.initd-r6 tor
 	emake DESTDIR="${D}" install || die
-	keepdir /var/{lib,run}/tor
+	keepdir /var/lib/tor
 
 	dodoc README ChangeLog ReleaseNotes \
 		doc/{HACKING,TODO} \
 		doc/spec/README
 
 	fperms 750 /var/lib/tor
-	fperms 755 /var/run/tor
-	fowners tor:tor /var/lib/tor /var/run/tor
+	fowners tor:tor /var/lib/tor
 
 	insinto /etc/tor/
 	newins "${FILESDIR}"/torrc-r1 torrc
