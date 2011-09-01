@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/sash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.40 2011/08/29 06:26:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.41 2011/09/01 16:21:19 flameeyes Exp $
+
+*sash-3.7-r3 (01 Sep 2011)
+
+  01 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org> -sash-3.7-r2.ebuild,
+  +sash-3.7-r3.ebuild:
+  Remove readline USE flag and patch given that the patch itself is custom and
+  not vanilla, and this is orphaned.
 
   29 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org> sash-3.7-r2.ebuild:
   Fix building with GCC 4.6 by not passing broken LDFLAGS (bug #381005). Do not
