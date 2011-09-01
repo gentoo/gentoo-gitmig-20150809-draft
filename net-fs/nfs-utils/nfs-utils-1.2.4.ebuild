@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.4.ebuild,v 1.1 2011/09/01 15:19:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.4.ebuild,v 1.2 2011/09/01 23:10:15 flameeyes Exp $
 
 EAPI="2"
 
-inherit eutils flag-o-matic multilib
+inherit eutils flag-o-matic multilib autotools
 
 DESCRIPTION="NFS client and server daemons"
 HOMEPAGE="http://linux-nfs.org/"
@@ -44,6 +44,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.1.4-mtab-sym.patch
 	epatch "${FILESDIR}"/${PN}-1.2.4-exportfs-xlog.patch
 	epatch "${FILESDIR}"/${PN}-1.2.4-exportfs-skip-dir.patch
+	epatch "${FILESDIR}"/${PN}-1.2.4-conditional.patch
+	eautoreconf
 }
 
 src_configure() {

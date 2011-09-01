@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.185 2011/09/01 15:19:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.186 2011/09/01 23:10:15 flameeyes Exp $
+
+  01 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org> nfs-utils-1.2.4.ebuild,
+  +files/nfs-utils-1.2.4-conditional.patch:
+  Fix build with USE=-nfsv4, by importing two (folded) patches from git.
 
 *nfs-utils-1.2.4 (01 Sep 2011)
 
