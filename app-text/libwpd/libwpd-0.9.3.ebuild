@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/libwpd-0.9.1.ebuild,v 1.7 2011/07/08 11:16:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/libwpd-0.9.3.ebuild,v 1.1 2011/09/01 09:59:06 scarabeus Exp $
 
-EAPI="4"
+EAPI=4
 
 inherit alternatives autotools eutils
 
@@ -24,24 +24,10 @@ DEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
 	!<app-text/libwpd-0.8.14-r1"
 
-src_prepare() {
-	# Do not abort build for warnings
-	sed -i -e 's:-Werror::g' configure.in configure || die
-
-	epatch "${FILESDIR}/${P}-gcc46.patch"
-
-	# Skip stream tests when it's disabled, bug #373757
-	if ! use tools; then
-		sed -i -e '/src\/test/d' Makefile.{am,in} || die
-	fi
-
-	# Do not build tests if not needed (and no before the lib itself)
-	epatch "${FILESDIR}/${P}-test-build.patch"
-	eautoreconf
-}
-
 src_configure() {
 	econf \
+		--disable-static \
+		--disable-werror \
 		$(use_with doc docs) \
 		$(use_with tools stream) \
 		--docdir=/usr/share/doc/${PF} \
@@ -50,7 +36,7 @@ src_configure() {
 
 src_install() {
 	default
-	find "${ED}" -name '*.la' -delete
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
 
 pkg_postinst() {
