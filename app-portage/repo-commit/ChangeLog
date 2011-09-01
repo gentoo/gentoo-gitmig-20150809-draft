@@ -1,0 +1,10 @@
+# ChangeLog for app-portage/repo-commit
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/repo-commit/ChangeLog,v 1.1 2011/09/01 07:21:39 mgorny Exp $
+
+*repo-commit-0.3.1-r1 (01 Sep 2011)
+
+  01 Sep 2011; Michał Górny <mgorny@gentoo.org> +repo-commit-0.3.1-r1.ebuild,
+  +metadata.xml:
+  Introduce repo-commit-0.3.1, a repository commit helper.
+
