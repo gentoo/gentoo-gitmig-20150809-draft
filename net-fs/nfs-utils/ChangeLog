@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.184 2011/09/01 15:18:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.185 2011/09/01 15:19:35 vapier Exp $
+
+*nfs-utils-1.2.4 (01 Sep 2011)
+
+  01 Sep 2011; Mike Frysinger <vapier@gentoo.org> +nfs-utils-1.2.4.ebuild,
+  +files/nfs-utils-1.2.4-exportfs-skip-dir.patch,
+  +files/nfs-utils-1.2.4-exportfs-xlog.patch:
+  Version bump #373651 by teidakankan.
 
   01 Sep 2011; Mike Frysinger <vapier@gentoo.org> files/nfs.initd:
   Drop --oknodo usage #377765 by Michael Mair-Keimberger.
