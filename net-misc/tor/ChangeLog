@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.271 2011/09/01 15:56:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.272 2011/09/01 16:01:54 blueness Exp $
+
+  01 Sep 2011; Anthony G. Basile <blueness@gentoo.org> files/tor.initd-r6:
+  Cleaned up tor.initd-r6
 
 *tor-0.2.3.2_alpha-r4 (01 Sep 2011)
 *tor-0.2.2.32-r2 (01 Sep 2011)

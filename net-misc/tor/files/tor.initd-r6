@@ -1,12 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/files/tor.initd-r6,v 1.3 2011/09/01 15:56:56 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/files/tor.initd-r6,v 1.4 2011/09/01 16:01:54 blueness Exp $
 
-opts="${opts} checkconfig checkvarrun reload"
-PIDDIR="/var/run/tor"
-PIDFILE="${PIDDIR}/tor.pid"
-CONFFILE="/etc/tor/torrc"
+opts="${opts} checkconfig reload"
+PIDFILE=/var/run/tor/tor.pid
+CONFFILE=/etc/tor/torrc
 
 depend() {
         need net
