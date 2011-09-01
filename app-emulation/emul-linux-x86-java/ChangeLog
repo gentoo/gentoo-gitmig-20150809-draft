@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/emul-linux-x86-java
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.103 2011/06/18 11:50:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.104 2011/09/01 13:55:10 caster Exp $
+
+*emul-linux-x86-java-1.6.0.27 (01 Sep 2011)
+
+  01 Sep 2011; Vlastimil Babka <caster@gentoo.org>
+  -emul-linux-x86-java-1.6.0.24.ebuild, -emul-linux-x86-java-1.6.0.25.ebuild,
+  +emul-linux-x86-java-1.6.0.27.ebuild:
+  Version bump. Due to DLJ bundles no longer provided by Oracle, the package
+  changes license to Oracle-BCLA-JavaSE and is fetch restricted again.
 
   18 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
   emul-linux-x86-java-1.6.0.26.ebuild:

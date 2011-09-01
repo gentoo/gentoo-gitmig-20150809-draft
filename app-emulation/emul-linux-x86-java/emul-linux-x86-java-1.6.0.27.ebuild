@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.24.ebuild,v 1.3 2011/05/21 04:28:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.27.ebuild,v 1.1 2011/09/01 13:55:10 caster Exp $
 
 inherit versionator pax-utils java-vm-2 eutils
 
@@ -8,16 +8,17 @@ UPDATE="$(get_version_component_range 4)"
 UPDATE="${UPDATE#0}"
 MY_PV="$(get_version_component_range 2)u${UPDATE}"
 
-At="jdk-${MY_PV}-dlj-linux-i586.bin"
-DESCRIPTION="Sun's Java SE Runtime Environment (32bit)"
-HOMEPAGE="http://java.sun.com/javase/6/"
-#SRC_URI="http://download.java.net/dlj/binaries/${At}"
-SRC_URI="http://dlc.sun.com/dlj/binaries/${At}"
+DOWNLOAD_LINK="http://www.oracle.com/technetwork/java/javase/downloads/jre-${MY_PV}-download-440425.html"
+X86_AT="jre-${MY_PV}-linux-i586.bin"
+
+DESCRIPTION="Oracle (formerly Sun) Java SE Runtime Environment (32bit)"
+HOMEPAGE="http://www.oracle.com/technetwork/java/javase/overview/index-jsp-136246.html"
+SRC_URI="${X86_AT}"
 
 SLOT="1.6"
-LICENSE="dlj-1.1"
-KEYWORDS="-* amd64"
-RESTRICT="strip"
+LICENSE="Oracle-BCLA-JavaSE"
+KEYWORDS="-* ~amd64"
+RESTRICT="fetch strip"
 IUSE="X alsa nsplugin"
 
 JAVA_VM_NO_GENERATION1=true
@@ -33,14 +34,21 @@ QA_TEXTRELS_amd64="opt/${P}/lib/i386/motif21/libmawt.so
 	opt/${P}/lib/i386/server/libjvm.so"
 QA_DT_HASH="opt/${P}/.*"
 
-src_unpack() {
-	mkdir bundled-jdk
-	cd bundled-jdk
-	sh "${DISTDIR}"/${At} --accept-license --unpack || die "Failed to unpack"
+S="${WORKDIR}/jre$(replace_version_separator 3 _)"
 
-	cd ..
-	bash "${FILESDIR}"/construct-${SLOT}.sh  bundled-jdk sun-jdk-${PV} ${P} || die "construct-${SLOT}.sh failed"
+pkg_nofetch() {
+
+	einfo "Due to Oracle no longer providing the distro-friendly DLJ bundles, the package has become fetch restricted again."
+
+	einfo "Please download ${X86_AT} from:"
+	einfo "${DOWNLOAD_LINK}"
+	einfo "and move it to ${DISTDIR}"
 }
+
+src_unpack() {
+	sh "${DISTDIR}"/${A} -noregister || die "Failed to unpack"
+}
+
 
 src_compile() {
 	# Set PaX markings on all JDK/JRE executables to allow code-generation on
