@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.141 2011/09/01 15:15:37 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.142 2011/09/01 18:33:59 grobian Exp $
+
+  01 Sep 2011; Fabian Groffen <grobian@gentoo.org> wget-1.13.3-r1.ebuild:
+  Fix compilation on Solaris
 
 *wget-1.13.3-r1 (01 Sep 2011)
 

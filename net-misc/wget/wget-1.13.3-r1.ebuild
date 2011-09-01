@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.13.3-r1.ebuild,v 1.1 2011/09/01 15:15:37 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.13.3-r1.ebuild,v 1.2 2011/09/01 18:33:59 grobian Exp $
 
 EAPI=4
 
@@ -31,6 +31,9 @@ src_prepare() {
 src_configure() {
 	# openssl-0.9.8 now builds with -pthread on the BSD's
 	use elibc_FreeBSD && use ssl && append-ldflags -pthread
+	# fix compilation on Solaris, we need filio.h for FIONBIO as used in
+	# the included gnutls -- force ioctl.h to include this header
+	[[ ${CHOST} == *-solaris* ]] && append-flags -DBSD_COMP=1
 
 	use static && append-ldflags -static
 	econf \
