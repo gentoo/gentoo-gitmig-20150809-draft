@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.183 2011/06/19 23:04:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.184 2011/09/01 15:18:01 vapier Exp $
+
+  01 Sep 2011; Mike Frysinger <vapier@gentoo.org> files/nfs.initd:
+  Drop --oknodo usage #377765 by Michael Mair-Keimberger.
 
   19 Jun 2011; Mike Frysinger <vapier@gentoo.org> files/rpc.pipefs.initd:
   Remove shortcuts that result in silent errors #372297 by Sebastian Pipping.

@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs.initd,v 1.24 2011/04/06 22:11:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs.initd,v 1.25 2011/09/01 15:18:01 vapier Exp $
 
 opts="reload"
 
@@ -108,16 +108,14 @@ start() {
 stop() {
 	local ret=0
 
-	# Don't check NFSSERVER variable since it might have changed,
-	# instead use --oknodo to smooth things over
 	ebegin "Stopping NFS mountd"
-	start-stop-daemon --stop --oknodo --exec ${mountd}
+	start-stop-daemon --stop --exec ${mountd}
 	eend $?
 	ret=$((ret + $?))
 
 	# nfsd sets its process name to [nfsd] so don't look for $nfsd
 	ebegin "Stopping NFS daemon"
-	start-stop-daemon --stop --oknodo --name nfsd --user root --signal 2
+	start-stop-daemon --stop --name nfsd --user root --signal 2
 	eend $?
 	ret=$((ret + $?))
 	# in case things don't work out ... #228127
