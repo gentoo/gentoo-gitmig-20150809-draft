@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.85 2011/07/12 18:30:17 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.86 2011/09/01 02:59:02 williamh Exp $
 
 EAPI=4
 
 EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/${PN}.git"
 [[ ${PV} == "9999" ]] && SCM_ECLASS="git-2"
-inherit eutils flag-o-matic multilib toolchain-funcs ${SCM_ECLASS}
+inherit eutils flag-o-matic multilib pam toolchain-funcs ${SCM_ECLASS}
 unset SCM_ECLASS
 
 DESCRIPTION="OpenRC manages the services, startup and shutdown of a host"
@@ -134,6 +134,9 @@ src_install() {
 	# Support for logfile rotation
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}"/openrc.logrotate openrc
+
+	# install the gentoo pam.d file
+	newpamd "${FILESDIR}"/start-stop-daemon.pam start-stop-daemon
 }
 
 add_boot_init() {
