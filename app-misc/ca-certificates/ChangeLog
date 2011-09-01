@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/ca-certificates
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.43 2011/08/31 17:25:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.44 2011/09/01 04:30:51 robbat2 Exp $
+
+*ca-certificates-20110502-r1 (01 Sep 2011)
+
+  01 Sep 2011; Robin H. Johnson <robbat2@gentoo.org>
+  +ca-certificates-20110502-r1.ebuild:
+  One more version bump to 20110502+nmu1 that actually has the DigiNotar CA
+  removed.
 
 *ca-certificates-20110502 (31 Aug 2011)
 
