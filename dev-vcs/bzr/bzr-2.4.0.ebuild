@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.4.0.ebuild,v 1.3 2011/08/31 09:21:43 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/bzr-2.4.0.ebuild,v 1.4 2011/09/01 08:31:25 fauli Exp $
 
 EAPI="3"
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="2.[45] 3.*"
 
 inherit bash-completion distutils elisp-common eutils versionator
 
@@ -22,7 +22,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
 IUSE="curl doc emacs +sftp test"
 
-RDEPEND="|| ( dev-lang/python:2.7[xml] dev-lang/python:2.6[xml] dev-lang/python:2.5[xml] dev-python/celementtree )
+RDEPEND="|| ( dev-lang/python:2.7[xml] dev-lang/python:2.6[xml] dev-python/celementtree )
 	curl? ( dev-python/pycurl )
 	sftp? ( dev-python/paramiko )"
 
