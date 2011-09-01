@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/xz-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.36 2011/08/28 13:25:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/xz-utils/ChangeLog,v 1.37 2011/09/01 16:26:14 jer Exp $
+
+  01 Sep 2011; Jeroen Roovers <jer@gentoo.org> xz-utils-5.0.3.ebuild:
+  Stable for HPPA (bug #379379).
 
   28 Aug 2011; Markus Meier <maekke@gentoo.org> xz-utils-5.0.3.ebuild:
   arm stable, bug #379379
