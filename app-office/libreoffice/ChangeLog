@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.117 2011/08/31 09:11:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.118 2011/09/01 13:35:56 scarabeus Exp $
+
+  01 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libreoffice-3.4.2.3.ebuild, -files/libreoffice-fix-sandbox-install.patch,
+  -files/libreoffice-respect-destdir.patch:
+  Remove libreoffice-3.4.2. 3.4.3 is stable candidate.
 
   31 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   libreoffice-3.4.2.3.ebuild, libreoffice-3.4.3.2.ebuild,
