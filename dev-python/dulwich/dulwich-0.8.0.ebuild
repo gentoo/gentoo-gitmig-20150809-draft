@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/dulwich-0.8.0.ebuild,v 1.3 2011/09/01 12:14:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/dulwich-0.8.0.ebuild,v 1.4 2011/09/01 13:07:52 grobian Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -8,7 +8,7 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
 DISTUTILS_SRC_TEST="nosetests"
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Dulwich is a pure-Python implementation of the Git file formats and protocols."
 HOMEPAGE="http://samba.org/~jelmer/dulwich/ http://pypi.python.org/pypi/dulwich"
@@ -25,6 +25,7 @@ RDEPEND=""
 
 src_prepare() {
 	distutils_src_prepare
+	epatch "${FILESDIR}"/${P}-darwin.patch
 	sed -e "s/test_fetch_from_dulwich(/_&/" -i dulwich/tests/compat/server_utils.py
 }
 
