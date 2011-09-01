@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.195 2011/06/18 11:49:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.196 2011/09/01 13:45:33 caster Exp $
+
+*sun-jre-bin-1.6.0.27 (01 Sep 2011)
+
+  01 Sep 2011; Vlastimil Babka <caster@gentoo.org>
+  -sun-jre-bin-1.6.0.24.ebuild, -sun-jre-bin-1.6.0.25.ebuild,
+  +sun-jre-bin-1.6.0.27.ebuild:
+  Version bump. Due to DLJ bundles no longer provided by Oracle, the package
+  changes license to Oracle-BCLA-JavaSE and is fetch restricted again.
+  Alternatives are dev-java/icedtea6-bin and dev-java/icedtea
 
   18 Jun 2011; Markos Chandras <hwoarang@gentoo.org>
   sun-jre-bin-1.6.0.26.ebuild:

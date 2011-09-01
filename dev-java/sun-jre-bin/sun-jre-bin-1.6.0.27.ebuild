@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.24.ebuild,v 1.3 2011/02/21 18:36:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.27.ebuild,v 1.1 2011/09/01 13:45:33 caster Exp $
 
 inherit versionator pax-utils eutils java-vm-2
 
@@ -8,19 +8,19 @@ UPDATE="$(get_version_component_range 4)"
 UPDATE="${UPDATE#0}"
 MY_PV="$(get_version_component_range 2)u${UPDATE}"
 
-SUFFIX=".bin"
-X86_AT="jdk-${MY_PV}-dlj-linux-i586${SUFFIX}"
-AMD64_AT="jdk-${MY_PV}-dlj-linux-amd64${SUFFIX}"
+DOWNLOAD_LINK="http://www.oracle.com/technetwork/java/javase/downloads/jre-${MY_PV}-download-440425.html"
+X86_AT="jre-${MY_PV}-linux-i586.bin"
+AMD64_AT="jre-${MY_PV}-linux-x64.bin"
 
-DESCRIPTION="Sun's Java SE Runtime Environment"
-HOMEPAGE="http://java.sun.com/javase/6/"
-URL_BASE="http://download.java.net/dlj/binaries"
-SRC_URI="x86? ( ${URL_BASE}/${X86_AT} )
-		amd64? ( ${URL_BASE}/${AMD64_AT} )"
+DESCRIPTION="Oracle (formerly Sun) Java SE Runtime Environment"
+HOMEPAGE="http://www.oracle.com/technetwork/java/javase/overview/index-jsp-136246.html"
+SRC_URI="x86? ( ${X86_AT} )
+		amd64? ( ${AMD64_AT} )"
+
 SLOT="1.6"
-LICENSE="dlj-1.1"
-KEYWORDS="-* amd64 x86"
-RESTRICT="strip"
+LICENSE="Oracle-BCLA-JavaSE"
+KEYWORDS="-* ~amd64 ~x86"
+RESTRICT="fetch strip"
 IUSE="X alsa jce nsplugin odbc"
 
 DEPEND="jce? ( =dev-java/sun-jce-bin-1.6.0* )"
@@ -44,13 +44,26 @@ QA_TEXTRELS_x86="opt/${P}/lib/i386/client/libjvm.so
 	opt/${P}/lib/i386/libdeploy.so
 	opt/${P}/lib/i386/server/libjvm.so"
 
-src_unpack() {
-	mkdir bundled-jdk
-	cd bundled-jdk
-	sh "${DISTDIR}"/${A} --accept-license --unpack || die "Failed to unpack"
+S="${WORKDIR}/jre$(replace_version_separator 3 _)"
 
-	cd ..
-	bash "${FILESDIR}/construct-1.6.sh"  bundled-jdk sun-jdk-${PV} ${P} || die "construct.sh failed"
+pkg_nofetch() {
+
+	if use x86; then
+		AT=${X86_AT}
+	elif use amd64; then
+		AT=${AMD64_AT}
+	fi
+
+	einfo "Due to Oracle no longer providing the distro-friendly DLJ bundles, the package has become fetch restricted again."
+	einfo "Alternatives are switching to dev-java/icedtea6-bin or the source-based dev-java/icedtea:6"
+
+	einfo "Please download ${AT} from:"
+	einfo "${DOWNLOAD_LINK}"
+	einfo "and move it to ${DISTDIR}"
+}
+
+src_unpack() {
+	sh "${DISTDIR}"/${A} -noregister || die "Failed to unpack"
 }
 
 src_compile() {
