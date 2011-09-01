@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.321 2011/08/31 08:10:58 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.322 2011/09/01 14:22:09 chainsaw Exp $
+
+  01 Sep 2011; Tony Vroon <chainsaw@gentoo.org> squid-3.1.15.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
+  "idella4" Delaney in security bug #381065.
 
 *squid-3.1.15 (31 Aug 2011)
 
