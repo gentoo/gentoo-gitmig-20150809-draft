@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-virtualbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.72 2011/08/20 21:06:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.73 2011/09/01 08:14:31 polynomial-c Exp $
+
+  01 Sep 2011; Lars Wendler <polynomial-c@gentoo.org>
+  xf86-video-virtualbox-4.1.0.ebuild:
+  Again fixed dependency on kbuild. Thanks to Karel De Vriendt for reporting
+  this in bug #381397.
 
   20 Aug 2011; Lars Wendler <polynomial-c@gentoo.org>
   xf86-video-virtualbox-4.0.12.ebuild:

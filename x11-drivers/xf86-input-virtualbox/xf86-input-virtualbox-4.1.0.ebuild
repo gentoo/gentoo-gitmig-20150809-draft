@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-4.1.0.ebuild,v 1.1 2011/07/19 22:27:38 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-4.1.0.ebuild,v 1.2 2011/09/01 08:16:24 polynomial-c Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ RDEPEND="x11-base/xorg-server
 	|| ( x11-drivers/xf86-input-mouse
 	    x11-drivers/xf86-input-evdev )"
 DEPEND="${RDEPEND}
-	>=dev-util/kbuild-0.1.5-r1
+	=dev-util/kbuild-0.1.5*
 	>=dev-lang/yasm-0.6.2
 	sys-devel/dev86
 	sys-power/iasl
