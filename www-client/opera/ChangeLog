@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.646 2011/08/31 15:31:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.647 2011/09/01 14:23:52 chainsaw Exp $
+
+  01 Sep 2011; Tony Vroon <chainsaw@gentoo.org> opera-11.51.1087.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah "Armageddon" El Lazkani in security bug #381275.
 
   31 Aug 2011; Jeroen Roovers <jer@gentoo.org> opera-11.51.1087.ebuild:
   Set SRC_URI to Opera mirrors (bug #381275).
