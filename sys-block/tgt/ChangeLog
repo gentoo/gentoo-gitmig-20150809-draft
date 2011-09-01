@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/tgt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/ChangeLog,v 1.14 2011/06/30 22:10:10 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tgt/ChangeLog,v 1.15 2011/09/01 12:04:00 alexxy Exp $
+
+*tgt-1.0.18 (01 Sep 2011)
+
+  01 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org> +tgt-1.0.18.ebuild:
+  Version bump
 
   30 Jun 2011; Alexey Shvetsov <alexxy@gentoo.org> -tgt-1.0.15.ebuild:
   Drop old versions
