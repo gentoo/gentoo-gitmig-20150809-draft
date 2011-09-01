@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Algorithm-Munkres
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Munkres/ChangeLog,v 1.5 2009/05/13 16:50:22 ken69267 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Munkres/ChangeLog,v 1.6 2011/09/01 13:50:33 tove Exp $
+
+*Algorithm-Munkres-0.80.0 (01 Sep 2011)
+
+  01 Sep 2011; Torsten Veller <tove@gentoo.org>
+  +Algorithm-Munkres-0.80.0.ebuild:
+  Change version scheme
 
   13 May 2009; Kenneth Prugh <ken69267@gentoo.org>
   Algorithm-Munkres-0.08.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/AutoXS-Header
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AutoXS-Header/ChangeLog,v 1.4 2010/10/14 19:25:48 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AutoXS-Header/ChangeLog,v 1.5 2011/09/01 13:11:38 tove Exp $
+
+*AutoXS-Header-1.20.0 (01 Sep 2011)
+
+  01 Sep 2011; Torsten Veller <tove@gentoo.org> +AutoXS-Header-1.20.0.ebuild:
+  Change version scheme
 
   14 Oct 2010; Brent Baude <ranger@gentoo.org> AutoXS-Header-1.02.ebuild:
   Marking AutoXS-Header-1.02 ~ppc for bug 337974

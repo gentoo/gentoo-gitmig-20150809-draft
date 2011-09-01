@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Authen-SASL
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/ChangeLog,v 1.84 2011/07/30 10:19:50 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Authen-SASL/ChangeLog,v 1.85 2011/09/01 13:12:45 tove Exp $
+
+*Authen-SASL-2.150.0 (01 Sep 2011)
+
+  01 Sep 2011; Torsten Veller <tove@gentoo.org> +Authen-SASL-2.150.0.ebuild:
+  Change version scheme
 
   30 Jul 2011; Torsten Veller <tove@gentoo.org> Authen-SASL-2.15.ebuild:
   Drop ~sparc-fbsd KEYWORD
