@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_statsmodels/scikits_statsmodels-0.2.0.ebuild,v 1.3 2011/01/19 16:59:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_statsmodels/scikits_statsmodels-0.3.1.ebuild,v 1.1 2011/09/01 05:03:08 bicatali Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ inherit distutils
 MY_P="${P/scikits_/scikits.}"
 
 DESCRIPTION="Statistical computations and models for use with SciPy"
-HOMEPAGE="http://scikits.appspot.com/statsmodels"
+HOMEPAGE="http://statsmodels.sourceforge.net/"
 SRC_URI="mirror://pypi/${PN:0:1}/scikits.statsmodels/${MY_P}.zip"
 
 LICENSE="BSD"
