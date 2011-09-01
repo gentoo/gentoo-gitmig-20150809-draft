@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.139 2011/02/28 23:40:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.140 2011/09/01 09:24:29 chainsaw Exp $
+
+*wget-1.13.3 (01 Sep 2011)
+
+  01 Sep 2011; Tony Vroon <chainsaw@gentoo.org> +wget-1.13.3.ebuild:
+  Version bump. EAPI 4 port by Tomáš "scarabeus" Chvátal in bug #381405.
 
   28 Feb 2011; Brent Baude <ranger@gentoo.org> wget-1.12-r3.ebuild:
   stable ppc64, bug 349114
