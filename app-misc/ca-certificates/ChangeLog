@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/ca-certificates
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.45 2011/09/01 13:57:58 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.46 2011/09/01 14:14:07 chainsaw Exp $
+
+  01 Sep 2011; Tony Vroon <chainsaw@gentoo.org>
+  ca-certificates-20110502-r1.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in
+  security bug #381169 filed by Alex "a3li" Legler.
 
   01 Sep 2011; Tobias Klausmann <klausman@gentoo.org>
   ca-certificates-20110502-r1.ebuild:
