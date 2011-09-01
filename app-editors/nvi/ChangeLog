@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nvi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.85 2011/07/20 18:27:20 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.86 2011/09/01 21:53:59 neurogeek Exp $
+
+  01 Sep 2011; Jesus Rivero <neurogeek@gentoo.org> nvi-1.81.6-r3.ebuild:
+  Added sys-libs/ncurses to DEPEND wrt bug #381025
 
   20 Jul 2011; Jesus Rivero <neurogeek@gentoo.org> metadata.xml:
   Added myself as maintainer

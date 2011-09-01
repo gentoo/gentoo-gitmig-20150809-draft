@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.6-r3.ebuild,v 1.12 2011/07/20 16:40:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.6-r3.ebuild,v 1.13 2011/09/01 21:53:59 neurogeek Exp $
 
 EAPI=1
 
@@ -30,6 +30,7 @@ KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc x86"
 IUSE="perl tcl unicode"
 
 DEPEND="|| ( ${DBDEPENDS} )
+	>=sys-libs/ncurses-5.6-r2
 	perl? ( dev-lang/perl )
 	tcl? ( !unicode? ( >=dev-lang/tcl-8.5 ) )"
 RDEPEND="${DEPEND}
