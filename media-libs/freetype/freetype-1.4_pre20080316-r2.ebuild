@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.4_pre20080316-r2.ebuild,v 1.8 2011/08/28 17:32:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.4_pre20080316-r2.ebuild,v 1.9 2011/09/01 08:35:41 grobian Exp $
 
 inherit autotools eutils libtool multilib
 
@@ -73,6 +73,7 @@ src_unpack() {
 }
 
 src_compile() {
+	use prefix || EPREFIX=
 	use kpathsea && kpathseaconf="--with-kpathsea-lib=${EPREFIX}/usr/$(get_libdir) --with-kpathsea-include=${EPREFIX}/usr/include"
 
 	# core
@@ -94,6 +95,7 @@ src_compile() {
 }
 
 src_install() {
+	use prefix || ED=${D}
 	dodoc announce PATENTS README docs/*.txt docs/FAQ
 	use doc && dohtml -r docs
 
