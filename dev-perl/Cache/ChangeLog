@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Cache
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache/ChangeLog,v 1.6 2007/12/27 13:05:37 ticho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache/ChangeLog,v 1.7 2011/09/01 11:45:51 tove Exp $
+
+*Cache-2.40.0 (01 Sep 2011)
+
+  01 Sep 2011; Torsten Veller <tove@gentoo.org> +Cache-2.40.0.ebuild:
+  Change version scheme
 
   27 Dec 2007; Andrej Kacian <ticho@gentoo.org> Cache-2.04.ebuild:
   Stable on x86.

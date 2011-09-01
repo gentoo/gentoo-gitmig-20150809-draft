@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Class-Spiffy
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Spiffy/ChangeLog,v 1.15 2010/01/29 07:39:23 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Spiffy/ChangeLog,v 1.16 2011/09/01 11:00:16 tove Exp $
+
+*Class-Spiffy-0.150.0 (01 Sep 2011)
+
+  01 Sep 2011; Torsten Veller <tove@gentoo.org> +Class-Spiffy-0.150.0.ebuild:
+  Change version scheme
 
   29 Jan 2010; Torsten Veller <tove@gentoo.org> Class-Spiffy-0.15.ebuild:
   Fix LICENSE: same terms as perl (#301969). Maintenance

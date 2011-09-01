@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Class-Singleton
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Singleton/ChangeLog,v 1.26 2011/05/29 18:28:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Singleton/ChangeLog,v 1.27 2011/09/01 11:02:24 tove Exp $
+
+*Class-Singleton-1.400.0 (01 Sep 2011)
+
+  01 Sep 2011; Torsten Veller <tove@gentoo.org>
+  +Class-Singleton-1.400.0.ebuild:
+  Change version scheme
 
   29 May 2011; Fabian Groffen <grobian@gentoo.org> Class-Singleton-1.4.ebuild:
   Marked ~x64-macos, bug #368553

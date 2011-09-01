@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Convert-BinHex
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BinHex/ChangeLog,v 1.15 2010/01/02 14:48:02 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BinHex/ChangeLog,v 1.16 2011/09/01 10:40:17 tove Exp $
+
+*Convert-BinHex-1.119.0 (01 Sep 2011)
+
+  01 Sep 2011; Torsten Veller <tove@gentoo.org> +Convert-BinHex-1.119.0.ebuild:
+  Change version scheme
 
   02 Jan 2010; Brent Baude <ranger@gentoo.org> Convert-BinHex-1.119.ebuild:
   Marking Convert-BinHex-1.119 ppc64 for bug 288933

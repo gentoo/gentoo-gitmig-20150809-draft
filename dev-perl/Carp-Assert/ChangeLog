@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Carp-Assert
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Assert/ChangeLog,v 1.20 2010/01/09 16:44:04 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Assert/ChangeLog,v 1.21 2011/09/01 11:36:25 tove Exp $
+
+*Carp-Assert-0.200.0 (01 Sep 2011)
+
+  01 Sep 2011; Torsten Veller <tove@gentoo.org> +Carp-Assert-0.200.0.ebuild:
+  Change version scheme
 
   09 Jan 2010; Fabian Groffen <grobian@gentoo.org> Carp-Assert-0.20.ebuild:
   Transfer Prefix keywords

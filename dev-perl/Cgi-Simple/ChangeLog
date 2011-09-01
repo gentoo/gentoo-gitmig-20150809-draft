@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Cgi-Simple
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cgi-Simple/ChangeLog,v 1.59 2011/01/10 19:53:53 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cgi-Simple/ChangeLog,v 1.60 2011/09/01 11:33:05 tove Exp $
+
+*Cgi-Simple-1.113.0 (01 Sep 2011)
+
+  01 Sep 2011; Torsten Veller <tove@gentoo.org> +Cgi-Simple-1.113.0.ebuild:
+  Change version scheme
 
   10 Jan 2011; Torsten Veller <tove@gentoo.org> -Cgi-Simple-1.0.ebuild,
   -Cgi-Simple-1.1.05.ebuild, -Cgi-Simple-1.1.12.ebuild:

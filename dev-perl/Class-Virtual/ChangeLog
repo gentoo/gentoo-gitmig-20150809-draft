@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Class-Virtual
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Virtual/ChangeLog,v 1.20 2011/02/08 09:25:37 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Virtual/ChangeLog,v 1.21 2011/09/01 10:58:22 tove Exp $
+
+*Class-Virtual-0.60.0 (01 Sep 2011)
+
+  01 Sep 2011; Torsten Veller <tove@gentoo.org> +Class-Virtual-0.60.0.ebuild:
+  Change version scheme
 
 *Class-Virtual-0.60 (08 Feb 2011)
 

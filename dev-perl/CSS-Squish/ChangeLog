@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/CSS-Squish
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CSS-Squish/ChangeLog,v 1.7 2011/04/03 06:50:04 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CSS-Squish/ChangeLog,v 1.8 2011/09/01 11:46:43 tove Exp $
+
+*CSS-Squish-0.100.0 (01 Sep 2011)
+
+  01 Sep 2011; Torsten Veller <tove@gentoo.org> +CSS-Squish-0.100.0.ebuild:
+  Change version scheme
 
   03 Apr 2011; Torsten Veller <tove@gentoo.org> -CSS-Squish-0.09.ebuild:
   Cleanup
