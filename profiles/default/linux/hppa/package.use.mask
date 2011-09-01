@@ -1,8 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/hppa/package.use.mask,v 1.10 2011/05/09 14:20:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/hppa/package.use.mask,v 1.11 2011/09/01 16:19:22 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
+
+# Jeroen Roovers <jer@gentoo.org> (1 Sep 2011)
+# No hardware support for NUMA (bug #381313)
+sys-apps/hwloc numa
 
 # Jeroen Roovers <jer@gentoo.org> (15 Aug 2008)
 # HPPA still isn't supported with anything but -O0.
