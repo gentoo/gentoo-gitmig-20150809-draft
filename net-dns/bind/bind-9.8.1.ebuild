@@ -1,8 +1,17 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.1.ebuild,v 1.1 2011/09/01 15:20:13 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.1.ebuild,v 1.2 2011/09/01 19:34:46 idl0r Exp $
 
-EAPI="3"
+# Re dlz/mysql and threads, needs to be verified..
+# MySQL uses thread local storage in its C api. Thus MySQL
+# requires that each thread of an application execute a MySQL
+# thread initialization to setup the thread local storage.
+# This is impossible to do safely while staying within the DLZ
+# driver API. This is a limitation caused by MySQL, and not the DLZ API.
+# Because of this BIND MUST only run with a single thread when
+# using the MySQL driver.
+
+EAPI="4"
 
 inherit eutils autotools toolchain-funcs flag-o-matic multilib
 
@@ -32,8 +41,16 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads
-	resolvconf urandom xml geoip gssapi sdb-ldap"
+IUSE="berkdb caps dlz doc geoip gost gssapi idn ipv6 ldap mysql odbc pkcs11 postgres rpz sdb-ldap
+selinux ssl threads urandom xml"
+
+REQUIRED_USE="postgres? ( dlz )
+	berkdb? ( dlz )
+	mysql? ( dlz !threads )
+	odbc? ( dlz )
+	ldap? ( dlz )
+	sdb-ldap? ( dlz )
+	gost? ( ssl )"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	mysql? ( >=virtual/mysql-4.0 )
@@ -41,15 +58,15 @@ DEPEND="ssl? ( >=dev-libs/openssl-0.9.6g )
 	ldap? ( net-nds/openldap )
 	idn? ( net-dns/idnkit )
 	postgres? ( dev-db/postgresql-base )
-	threads? ( >=sys-libs/libcap-2.1.0 )
+	caps? ( >=sys-libs/libcap-2.1.0 )
 	xml? ( dev-libs/libxml2 )
 	geoip? ( >=dev-libs/geoip-1.4.6 )
 	gssapi? ( virtual/krb5 )
-	sdb-ldap? ( net-nds/openldap )"
+	sdb-ldap? ( net-nds/openldap )
+	gost? ( >=dev-libs/openssl-1.0.0 )"
 
 RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-bind )
-	resolvconf? ( net-dns/openresolv )
 	sys-process/psmisc"
 
 S="${WORKDIR}/${MY_P}"
@@ -88,20 +105,20 @@ src_prepare() {
 		if use odbc; then
 			epatch "${FILESDIR}/${PN}-9.7.3-odbc-dlz-detect.patch"
 		fi
+
+		# sdb-ldap patch as per  bug #160567
+		# Upstream URL: http://bind9-ldap.bayour.com/
+		# New patch take from bug 302735
+		if use sdb-ldap; then
+			epatch "${WORKDIR}"/${PN}-sdb-ldap-${SDB_LDAP_VER}.patch
+			cp -fp contrib/sdb/ldap/ldapdb.[ch] bin/named/
+			cp -fp contrib/sdb/ldap/{ldap2zone.1,ldap2zone.c} bin/tools/
+			cp -fp contrib/sdb/ldap/{zone2ldap.1,zone2ldap.c} bin/tools/
+		fi
 	fi
 
 	# should be installed by bind-tools
 	sed -i -r -e "s:(nsupdate|dig) ::g" bin/Makefile.in || die
-
-	# sdb-ldap patch as per  bug #160567
-	# Upstream URL: http://bind9-ldap.bayour.com/
-	# New patch take from bug 302735
-	if use sdb-ldap; then
-		epatch "${WORKDIR}"/${PN}-sdb-ldap-${SDB_LDAP_VER}.patch
-		cp -fp contrib/sdb/ldap/ldapdb.[ch] bin/named
-		cp -fp contrib/sdb/ldap/{ldap2zone.1,ldap2zone.c} bin/tools
-		cp -fp contrib/sdb/ldap/{zone2ldap.1,zone2ldap.c} bin/tools
-	fi
 
 	if use geoip; then
 		cp "${DISTDIR}"/${GEOIP_PATCH_A} "${S}" || die
@@ -112,45 +129,11 @@ src_prepare() {
 
 	# bug #220361
 	rm {aclocal,libtool}.m4
-	WANT_AUTOCONF=2.5 AT_NO_RECURSIVE=1 eautoreconf
-
-	# remove useless c++ checks
-	epunt_cxx
+	eautoreconf
 }
 
 src_configure() {
 	local myconf=""
-
-	use dlz && {
-		myconf="${myconf} --with-dlz-filesystem --with-dlz-stub"
-		use postgres && myconf="${myconf} --with-dlz-postgres"
-		use mysql && myconf="${myconf} --with-dlz-mysql"
-		use berkdb && myconf="${myconf} --with-dlz-bdb"
-		use ldap && myconf="${myconf} --with-dlz-ldap"
-		use odbc && myconf="${myconf} --with-dlz-odbc"
-	}
-
-	if use threads; then
-		if use dlz && use mysql; then
-			ewarn
-			ewarn "MySQL uses thread local storage in its C api. Thus MySQL"
-			ewarn "requires that each thread of an application execute a MySQL"
-			ewarn "\"thread initialization\" to setup the thread local storage."
-			ewarn "This is impossible to do safely while staying within the DLZ"
-			ewarn "driver API. This is a limitation caused by MySQL, and not"
-			ewarn "the DLZ API."
-			ewarn "Because of this BIND MUST only run with a single thread when"
-			ewarn "using the MySQL driver."
-			ewarn
-			myconf="${myconf} --disable-linux-caps --disable-threads"
-			ewarn "Threading support disabled"
-		else
-			myconf="${myconf} --enable-linux-caps --enable-threads"
-			einfo "Threading support enabled"
-		fi
-	else
-		myconf="${myconf} --disable-linux-caps --disable-threads"
-	fi
 
 	if use urandom; then
 		myconf="${myconf} --with-randomdev=/dev/urandom"
@@ -168,11 +151,25 @@ src_configure() {
 		--sysconfdir=/etc/bind \
 		--localstatedir=/var \
 		--with-libtool \
+		$(use_enable threads) \
+		$(use_with dlz dlopen) \
+		$(use_with dlz dlz-filesystem) \
+		$(use_with dlz dlz-stub) \
+		$(use_with postgres dlz-postgres) \
+		$(use_with mysql dlz-mysql) \
+		$(use_with berkdb dlz-bdb) \
+		$(use_with ldap dlz-ldap) \
+		$(use_with odbc dlz-odbc) \
 		$(use_with ssl openssl) \
 		$(use_with idn) \
 		$(use_enable ipv6) \
 		$(use_with xml libxml2) \
 		$(use_with gssapi) \
+		$(use_enable rpz rpz-nsip) \
+		$(use_enable rpz rpz-nsdname) \
+		$(use_with pkcs11) \
+		$(use_enable caps linux-caps) \
+		$(use_with gost) \
 		${myconf}
 
 	# bug #151839
@@ -229,7 +226,7 @@ src_install() {
 	newinitd "${FILESDIR}"/named.init-r11 named || die
 	newconfd "${FILESDIR}"/named.confd-r6 named || die
 
-	if use ssl && [ -e /usr/lib/engines/libgost.so ]; then
+	if use gost; then
 		sed -i -e 's/^OPENSSL_LIBGOST=${OPENSSL_LIBGOST:-0}$/OPENSSL_LIBGOST=${OPENSSL_LIBGOST:-1}/' "${D}/etc/init.d/named" || die
 	else
 		sed -i -e 's/^OPENSSL_LIBGOST=${OPENSSL_LIBGOST:-1}$/OPENSSL_LIBGOST=${OPENSSL_LIBGOST:-0}/' "${D}/etc/init.d/named" || die
@@ -341,7 +338,7 @@ pkg_config() {
 	mkdir -m 0750 -p ${CHROOT}/etc/bind
 	mkdir -m 0770 -p ${CHROOT}/var/{bind,{run,log}/named}
 	# As of bind 9.8.0
-	if has_version net-dns/bind[ssl] -a -e /usr/lib/engines/libgost.so; then
+	if has_version net-dns/bind[gost]; then
 		if [ "$(get_libdir)" = "lib64" ]; then
 			mkdir -m 0755 -p ${CHROOT}/usr/lib64/engines
 			ln -s lib64 ${CHROOT}/usr/lib

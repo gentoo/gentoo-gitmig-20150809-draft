@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.349 2011/09/01 15:20:13 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.350 2011/09/01 19:34:46 idl0r Exp $
+
+  01 Sep 2011; Christian Ruppert <idl0r@gentoo.org> bind-9.8.1.ebuild,
+  metadata.xml:
+  EAPI bump. Add more useflags. Make use of REQUIRED_USE for dlz/db flags.
+  Remove useless blocks. Remove useless resolvconf dependency/flag.
 
 *bind-9.8.1 (01 Sep 2011)
 
