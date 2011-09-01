@@ -1,0 +1,134 @@
+commit a7eacc181185eff1dd7bd8ceaa34a91cf86cc298
+Author: David Hicks <d@hx.id.au>
+Date:   Thu Sep 1 19:36:31 2011 +1000
+
+    Fix #13282, #13283: bug_actiongroup_ext_page.php LFI and XSS
+    
+    High-Tech Bridge SA Security Research Lab reported 2 issues with the
+    'action' parameter to bug_actiongroup_ext_page.php
+    
+    Issue #13282
+    
+    XSS issue with require_once() call failures returning an unescaped
+    user-supplied filename. There has been a fair amount of recent public
+    talk about PHP error messages being a source of XSS issues. This is an
+    example.
+    
+    Issue #12283
+    
+    Local file inclusion/path traversal vulnerability on web servers that
+    allow translations like:
+    http://example.com/directory/file.htm/../file2.htm ==>
+    http://example.com/directory/file2.htm
+    
+    Vulnerable (default configuration): Apache
+    Not vulnerable (default configuration): nginx
+    
+    This issue has _SEVERE_ consequences for people using web servers which
+    don't check each segment of a path from top to bottom for validity. It
+    shouldn't be possible to include the contents of config_inc.php to
+    retrieve MantisBT database passwords because
+    require_once('config_inc.php') will parse the document as a PHP script
+    (echoing nothing). However it may allow attackers to view private files
+    accessible to the web server user account. It also allows an attacker to
+    guess the file structure of a server (existence of installed software,
+    user accounts, etc).
+    
+    nginx will produce a 404 error when it determines that file.htm is not a
+    directory. This makes too much sense, doesn't it?
+
+diff --git a/bug_actiongroup_ext_page.php b/bug_actiongroup_ext_page.php
+index 2a599d3..0a0ab91 100644
+--- a/bug_actiongroup_ext_page.php
++++ b/bug_actiongroup_ext_page.php
+@@ -40,12 +40,18 @@
+   # redirect to view issues page if action doesn't have ext_* prefix.
+   # This should only occur if this page is called directly.
+ 	$t_external_action_prefix = 'EXT_';
+-	if ( strpos( $f_action, $t_external_action_prefix ) !== 0 ) {
++	$t_matches = array();
++	preg_match( '/^EXT_(\w+)$/', $f_action, $t_matches );
++	if ( count( $t_matches ) !== 2 ) {
+ 		print_header_redirect( 'view_all_bug_page.php' );
+-  }
++		exit;
++	}
++	$t_external_action = $t_matches[1];
++	$t_include_file = 'bug_actiongroup_' . $t_external_action . '_inc.php';
++	if ( !file_exists( $t_include_file ) ) {
++		trigger_error( ERROR_GENERIC, ERROR );
++	}
+ 
+-	$t_external_action = utf8_strtolower( utf8_substr( $f_action, utf8_strlen( $t_external_action_prefix ) ) );
+-	$t_form_fields_page = 'bug_actiongroup_' . $t_external_action . '_inc.php';
+ 	$t_form_name = 'bug_actiongroup_' . $t_external_action;
+ 
+ 	bug_group_action_print_top();
+diff --git a/core/bug_group_action_api.php b/core/bug_group_action_api.php
+index bd80ea6..30e71ed 100644
+--- a/core/bug_group_action_api.php
++++ b/core/bug_group_action_api.php
+@@ -94,7 +94,14 @@ function bug_group_action_print_hidden_fields( $p_bug_ids_array ) {
+  * @param $p_action   The custom action name without the "EXT_" prefix.
+  */
+ function bug_group_action_print_action_fields( $p_action ) {
+-	require_once( dirname( dirname( __FILE__ ) ) . DIRECTORY_SEPARATOR . 'bug_actiongroup_' . $p_action . '_inc.php' );
++	if ( !preg_match( '/^\w+$/', $p_action ) ) {
++		trigger_error( ERROR_GENERIC, ERROR );
++	}
++	$t_include_file = 'bug_actiongroup_' . $p_action . '_inc.php';
++	if ( !file_exists( $t_include_file ) ) {
++		trigger_error( ERROR_GENERIC, ERROR );
++	}
++	require_once( $t_include_file );
+ 	$t_function_name = 'action_' . $p_action . '_print_fields';
+ 	$t_function_name();
+ }
+@@ -106,7 +113,14 @@ function bug_group_action_print_action_fields( $p_action ) {
+  * @param $p_action   The custom action name without the "EXT_" prefix.
+  */
+ function bug_group_action_print_title( $p_action ) {
+-	require_once( dirname( dirname( __FILE__ ) ) . DIRECTORY_SEPARATOR . 'bug_actiongroup_' . $p_action . '_inc.php' );
++	if ( !preg_match( '/^\w+$/', $p_action ) ) {
++		trigger_error( ERROR_GENERIC, ERROR );
++	}
++	$t_include_file = 'bug_actiongroup_' . $p_action . '_inc.php';
++	if ( !file_exists( $t_include_file ) ) {
++		trigger_error( ERROR_GENERIC, ERROR );
++	}
++	require_once( $t_include_file );
+ 	$t_function_name = 'action_' . $p_action . '_print_title';
+ 	$t_function_name();
+ }
+@@ -121,7 +135,14 @@ function bug_group_action_print_title( $p_action ) {
+  * @returns true|array true if action can be applied or array of ( bug_id => reason for failure to validate )
+  */
+ function bug_group_action_validate( $p_action, $p_bug_id ) {
+-	require_once( dirname( dirname( __FILE__ ) ) . DIRECTORY_SEPARATOR . 'bug_actiongroup_' . $p_action . '_inc.php' );
++	if ( !preg_match( '/^\w+$/', $p_action ) ) {
++		trigger_error( ERROR_GENERIC, ERROR );
++	}
++	$t_include_file = 'bug_actiongroup_' . $p_action . '_inc.php';
++	if ( !file_exists( $t_include_file ) ) {
++		trigger_error( ERROR_GENERIC, ERROR );
++	}
++	require_once( $t_include_file );
+ 	$t_function_name = 'action_' . $p_action . '_validate';
+ 	return $t_function_name( $p_bug_id );
+ }
+@@ -136,7 +157,14 @@ function bug_group_action_validate( $p_action, $p_bug_id ) {
+  * @returns true|array Action can be applied., ( bug_id => reason for failure to process )
+  */
+ function bug_group_action_process( $p_action, $p_bug_id ) {
+-	require_once( dirname( dirname( __FILE__ ) ) . DIRECTORY_SEPARATOR . 'bug_actiongroup_' . $p_action . '_inc.php' );
++	if ( !preg_match( '/^\w+$/', $p_action ) ) {
++		trigger_error( ERROR_GENERIC, ERROR );
++	}
++	$t_include_file = 'bug_actiongroup_' . $p_action . '_inc.php';
++	if ( !file_exists( $t_include_file ) ) {
++		trigger_error( ERROR_GENERIC, ERROR );
++	}
++	require_once( $t_include_file );
+ 	$t_function_name = 'action_' . $p_action . '_process';
+ 	return $t_function_name( $p_bug_id );
+ }

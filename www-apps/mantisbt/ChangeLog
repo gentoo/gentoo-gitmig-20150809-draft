@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.107 2011/08/26 11:13:32 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.108 2011/09/01 19:30:23 pva Exp $
+
+*mantisbt-1.2.7-r1 (01 Sep 2011)
+
+  01 Sep 2011; Peter Volkov <pva@gentoo.org> +mantisbt-1.2.7-r1.ebuild,
+  +files/mantisbt-1.2.7-file-inclusion.patch:
+  Add patch to address local file inclusion/path traversal, bug 381417 wrt
+  David Hicks.
 
   26 Aug 2011; Tony Vroon <chainsaw@gentoo.org> mantisbt-1.2.7.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in
