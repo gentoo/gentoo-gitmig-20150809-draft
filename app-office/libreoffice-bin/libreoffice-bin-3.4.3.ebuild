@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.3.ebuild,v 1.1 2011/08/31 11:56:52 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.3.ebuild,v 1.2 2011/09/01 19:17:06 jlec Exp $
 
 EAPI="3"
 
@@ -161,7 +161,7 @@ src_install () {
 	cd "${ED}${INSTDIR}/share/xdg/"
 	for desk in base calc draw impress javafilter math printeradmin qstart startcenter writer; do
 		if [ "${desk}" = "javafilter" ] ; then
-			use java || { rm javafilter.desktop; continue; }
+			use java || { rm -f javafilter.desktop; continue; }
 		fi
 		mv ${desk}.desktop ${NM1}-${desk}.desktop
 		sed -i -e s/${NM2}/${NM}/g ${NM1}-${desk}.desktop || die

@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.30 2011/08/31 11:56:52 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.31 2011/09/01 19:17:06 jlec Exp $
+
+  01 Sep 2011; Justin Lecher <jlec@gentoo.org> libreoffice-bin-3.4.3.ebuild,
+  metadata.xml:
+  Added -f to rm in src_install to fix installation as non root on prefix
 
 *libreoffice-bin-3.4.3 (31 Aug 2011)
 
