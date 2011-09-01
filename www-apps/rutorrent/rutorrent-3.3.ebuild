@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rutorrent/rutorrent-3.3.ebuild,v 1.1 2011/08/09 13:33:33 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rutorrent/rutorrent-3.3.ebuild,v 1.2 2011/09/01 17:51:38 alexxy Exp $
 
 EAPI="4"
 
@@ -22,6 +22,8 @@ need_php_httpd
 DEPEND="
 	|| ( dev-lang/php[xml,gd] dev-lang/php[xml,gd-external] )
 "
+
+S="${WORKDIR}"
 
 pkg_setup() {
 	webapp_pkg_setup
