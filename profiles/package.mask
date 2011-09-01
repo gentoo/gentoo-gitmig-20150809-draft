@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13023 2011/08/31 14:19:15 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13024 2011/09/01 13:22:42 neurogeek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jesus Rivero <neurogeek@gentoo.org> (01 Sep 2011)
+# Masked for removal in 30 days. This package does not
+# work with any version of app-accessibility/speakup
+# anymore.
+app-accessibility/speakup-utils
 
 # Sebastian Pipping <sping@gentoo.org> (31 Aug 2011)
 # Upcoming bump, afraid of ~arch for now (bug #283152)
