@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.342 2011/09/01 13:31:41 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.343 2011/09/01 14:09:56 chainsaw Exp $
+
+*asterisk-1.8.6.0 (01 Sep 2011)
+
+  01 Sep 2011; Tony Vroon <chainsaw@gentoo.org> +files/1.8.0/asterisk.confd,
+  +files/1.8.0/asterisk.initd, +asterisk-1.8.6.0.ebuild:
+  Version bump. New & improved init script by Jaco Kroon closes bug #363267.
+  EAPI 4 porting by Agostino "ago" Sarubbo closes bug #380359.
 
   01 Sep 2011; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.6.2.18.2.ebuild,
   -asterisk-1.6.2.19-r2.ebuild:
