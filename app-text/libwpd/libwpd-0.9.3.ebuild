@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/libwpd-0.9.3.ebuild,v 1.1 2011/09/01 09:59:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/libwpd-0.9.3.ebuild,v 1.2 2011/09/02 14:14:20 darkside Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ src_configure() {
 		--disable-werror \
 		$(use_with doc docs) \
 		$(use_with tools stream) \
-		--docdir=/usr/share/doc/${PF} \
+		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		--program-suffix=-${SLOT}
 }
 
