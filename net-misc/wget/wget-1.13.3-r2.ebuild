@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.13.3-r2.ebuild,v 1.2 2011/09/02 06:58:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.13.3-r2.ebuild,v 1.3 2011/09/02 08:25:29 radhermit Exp $
 
 EAPI=4
 
@@ -49,8 +49,7 @@ src_configure() {
 		$(use_enable ipv6) \
 		$(use_enable nls) \
 		$(use_enable ntlm) \
-		$(use_enable debug) \
-		${myconf}
+		$(use_enable debug)
 }
 
 src_install() {
