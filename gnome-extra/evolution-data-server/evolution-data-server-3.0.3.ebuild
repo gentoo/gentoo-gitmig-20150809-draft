@@ -1,26 +1,19 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.0.2.1.ebuild,v 1.1 2011/08/18 07:48:34 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.0.3.ebuild,v 1.1 2011/09/02 08:20:45 nirbheek Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
 inherit autotools db-use eutils flag-o-matic gnome2 versionator virtualx
-if [[ ${PV} = 9999 ]]; then
-	inherit gnome2-live
-fi
 
 DESCRIPTION="Evolution groupware backend"
 HOMEPAGE="http://www.gnome.org/projects/evolution/"
 
 LICENSE="LGPL-2 BSD DB"
 SLOT="0"
-if [[ ${PV} = 9999 ]]; then
-	KEYWORDS=""
-else
-	KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris"
-fi
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~x86-solaris"
 IUSE="doc +introspection ipv6 ldap kerberos ssl +weather"
 
 # GNOME3: How do we slot libedataserverui-3.0.so?
@@ -98,11 +91,9 @@ src_prepare() {
 	append-cppflags "-I$(db_includedir)"
 
 	# FIXME: Fix compilation flags crazyness
+	# Touch configure.ac if doing eautoreconf
 	sed 's/^\(AM_CPPFLAGS="\)$WARNING_FLAGS/\1/' \
-		-i configure.ac configure || die "sed 3 failed"
-
-	intltoolize --force --copy --automake || die "intltoolize failed"
-	eautoreconf
+		-i configure || die "sed failed"
 }
 
 src_install() {
