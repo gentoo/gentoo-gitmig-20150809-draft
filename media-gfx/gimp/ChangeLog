@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.332 2011/08/31 19:05:35 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.333 2011/09/02 15:58:38 sping Exp $
+
+  02 Sep 2011; Sebastian Pipping <sping@gentoo.org> gimp-2.7.3.ebuild,
+  gimp-9999.ebuild:
+  Fix dependencies (bug #381389)
 
   31 Aug 2011; Sebastian Pipping <sping@gentoo.org> gimp-9999.ebuild:
   Pass --disable-gtk-doc to autogen.sh in live ebuild (bug #346341)

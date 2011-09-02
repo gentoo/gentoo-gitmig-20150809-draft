@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.37 2011/08/31 19:05:35 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.38 2011/09/02 15:58:38 sping Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -57,11 +57,10 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.22
 	>=dev-util/intltool-0.40.1
 	>=sys-devel/gettext-0.17
-	>=dev-util/gtk-doc-1
+	doc? ( >=dev-util/gtk-doc-1 )
 	>=sys-devel/libtool-1.5
 	>=sys-devel/autoconf-2.54
-	>=sys-devel/automake-1.10
-	dev-libs/libxslt"
+	>=sys-devel/automake-1.10"
 
 DOCS="AUTHORS ChangeLog* HACKING NEWS README*"
 
