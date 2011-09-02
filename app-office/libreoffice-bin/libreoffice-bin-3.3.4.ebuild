@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.4.ebuild,v 1.2 2011/08/18 09:06:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.3.4.ebuild,v 1.3 2011/09/02 10:53:52 scarabeus Exp $
 
 EAPI="3"
 
@@ -183,6 +183,9 @@ src_install () {
 
 	# Non-java weirdness see bug #99366
 	use !java && rm -f "${ED}${INSTDIR}/ure/bin/javaldx"
+
+	# install the unopkg binary
+	dosym ${INSTDIR}/program/unopkg /usr/bin/unopkg
 
 	# prevent revdep-rebuild from attempting to rebuild all the time
 	insinto /etc/revdep-rebuild && doins "${T}/50-${PN}"

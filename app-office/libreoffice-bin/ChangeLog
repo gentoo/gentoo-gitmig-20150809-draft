@@ -1,6 +1,13 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.31 2011/09/01 19:17:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.32 2011/09/02 10:53:52 scarabeus Exp $
+
+*libreoffice-bin-3.4.3-r1 (02 Sep 2011)
+
+  02 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-bin-3.3.4.ebuild, -libreoffice-bin-3.4.3.ebuild,
+  +libreoffice-bin-3.4.3-r1.ebuild:
+  Add symlink to unopkg to bin. Fixes bug #381009.
 
   01 Sep 2011; Justin Lecher <jlec@gentoo.org> libreoffice-bin-3.4.3.ebuild,
   metadata.xml:
