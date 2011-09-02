@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.0.3.ebuild,v 1.1 2011/09/02 08:20:45 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.0.3.ebuild,v 1.2 2011/09/02 08:21:52 nirbheek Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit autotools db-use eutils flag-o-matic gnome2 versionator virtualx
+inherit db-use eutils flag-o-matic gnome2 versionator virtualx
 
 DESCRIPTION="Evolution groupware backend"
 HOMEPAGE="http://www.gnome.org/projects/evolution/"
