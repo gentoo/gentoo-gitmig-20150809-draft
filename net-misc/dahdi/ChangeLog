@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.24 2011/09/02 08:41:03 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.25 2011/09/02 10:56:25 chainsaw Exp $
+
+*dahdi-2.5.0-r1 (02 Sep 2011)
+
+  02 Sep 2011; Tony Vroon <chainsaw@gentoo.org> +dahdi-2.5.0-r1.ebuild:
+  Add support for junghanns.net BRI adapters, ebuild work by Felix Tiede closes
+  bug #354321. Stop calling CC/LD directly, closes bug #376705 by Agostino
+  "ago" Sarubbo. Drop unnecessary patch from set, as per Erik Wallin in bug
+  #381335.
 
   02 Sep 2011; Tony Vroon <chainsaw@gentoo.org> -dahdi-2.1.0.4.ebuild,
   -files/dahdi-2.1.0.4-netdev-2-6-29.patch,
