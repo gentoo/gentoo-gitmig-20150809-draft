@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.156 2011/09/01 15:51:20 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.157 2011/09/02 09:10:09 chainsaw Exp $
+
+  02 Sep 2011; Tony Vroon <chainsaw@gentoo.org> apache-2.2.20.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani & Agostino "ago" Sarubbo in security bug #380475 filed by Alex "a3li"
+  Legler.
 
 *apache-2.2.20 (01 Sep 2011)
 
