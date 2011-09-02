@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ooo/ooo-0.ebuild,v 1.4 2011/07/28 16:49:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ooo/ooo-0.ebuild,v 1.5 2011/09/02 10:20:40 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
 DESCRIPTION="Virtual for OpenOffice.org/LibreOffice"
 HOMEPAGE=""
@@ -14,9 +14,9 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="|| (
-	app-office/libreoffice-bin
-	app-office/libreoffice
-	app-office/openoffice-bin
-	app-office/openoffice
-	)"
+RDEPEND="
+	|| (
+		app-office/libreoffice-bin
+		app-office/libreoffice
+	)
+"
