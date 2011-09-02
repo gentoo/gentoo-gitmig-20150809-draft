@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/esearch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.69 2011/08/25 00:28:11 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.70 2011/09/02 15:42:55 fuzzyray Exp $
+
+  02 Sep 2011; Paul Varner <fuzzyray@gentoo.org> esearch-9999.ebuild:
+  Add ewarn to run 'hash -r', due to file location changes from 0.7 versions.
 
   25 Aug 2011; Jeremy Olexa <darkside@gentoo.org> esearch-0.7.2-r2.ebuild:
   add prefix keywords as tested in prefix overlay
