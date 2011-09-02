@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/libmcs-0.7.1-r2.ebuild,v 1.9 2010/01/14 21:32:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcs/libmcs-0.7.1-r2.ebuild,v 1.10 2011/09/02 09:49:56 chainsaw Exp $
 
 DESCRIPTION="Abstracts the storage of configuration settings away from applications."
-HOMEPAGE="http://sacredspiral.co.uk/~nenolod/mcs/"
+HOMEPAGE="http://git.atheme.org/libmcs/"
 SRC_URI="http://distfiles.atheme.org/${P}.tgz"
 
 LICENSE="BSD-2"
