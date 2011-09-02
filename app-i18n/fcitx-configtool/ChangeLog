@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/fcitx-configtool
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-configtool/ChangeLog,v 1.3 2010/12/18 10:58:47 qiaomuf Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-configtool/ChangeLog,v 1.4 2011/09/02 00:55:27 qiaomuf Exp $
+
+  02 Sep 2011; Mu Qiao <qiaomuf@gentoo.org> fcitx-configtool-0.2.0.ebuild:
+  Add slot dependency for libunique
 
 *fcitx-configtool-0.2.0 (18 Dec 2010)
 
