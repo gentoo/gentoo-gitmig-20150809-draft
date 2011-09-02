@@ -1,6 +1,16 @@
 # ChangeLog for app-portage/esearch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.70 2011/09/02 15:42:55 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.71 2011/09/02 15:52:20 fuzzyray Exp $
+
+  02 Sep 2011; Paul Varner <fuzzyray@gentoo.org>
+  -files/120817-unset-emergedefaultopts.patch,
+  -files/124601-remove-deprecated-syntax.patch,
+  -files/132548-multiple-overlay.patch, -files/146555-esearch-manifest2.patch,
+  -files/186994-esync-quiet.patch, -files/231223-fix-deprecated.patch,
+  -files/253216-fix-ebuild-option.patch, -files/97462-esearch-metadata.patch,
+  -files/97969-ignore-missing-ebuilds.patch, -esearch-0.7.1-r7.ebuild,
+  -esearch-0.7.1-r8.ebuild, -esearch-0.7.2.ebuild, -esearch-0.7.2-r1.ebuild:
+  Remove unused versions.
 
   02 Sep 2011; Paul Varner <fuzzyray@gentoo.org> esearch-9999.ebuild:
   Add ewarn to run 'hash -r', due to file location changes from 0.7 versions.
