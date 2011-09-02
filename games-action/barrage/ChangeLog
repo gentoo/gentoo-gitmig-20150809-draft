@@ -1,6 +1,11 @@
 # ChangeLog for games-action/barrage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/barrage/ChangeLog,v 1.19 2011/07/29 03:17:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/barrage/ChangeLog,v 1.20 2011/09/02 09:18:57 chainsaw Exp $
+
+  02 Sep 2011; Tony Vroon <chainsaw@gentoo.org> barrage-1.0.4.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani & Agostino "ago" Sarubbo in bug #381501 filed by Michael "Mr. Bones"
+  Sterrett.
 
 *barrage-1.0.4 (29 Jul 2011)
 
