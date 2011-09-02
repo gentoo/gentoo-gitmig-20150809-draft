@@ -4,8 +4,10 @@
 <herd>net-fs</herd>
 	<longdescription>NFS client and server daemons</longdescription>
 	<use>
+		<flag name='nfsidmap'>Enable support for newer nfsidmap helper</flag>
 		<flag name='nfsv3'>Enable support for NFSv3</flag>
 		<flag name='nfsv4'>Enable support for NFSv4</flag>
+		<flag name='nfsv41'>Enable support for NFSv4.1</flag>
 		<flag name='nonfsv4'>Disable support for NFSv4</flag>
 	</use>
 </pkgmetadata>

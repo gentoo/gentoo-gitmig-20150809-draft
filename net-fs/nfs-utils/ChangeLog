@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.186 2011/09/01 23:10:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.187 2011/09/02 19:27:13 vapier Exp $
+
+  02 Sep 2011; Mike Frysinger <vapier@gentoo.org> nfs-utils-1.2.4.ebuild,
+  +files/nfs-utils-1.2.4-nfsidmap.patch, metadata.xml:
+  Add USE="nfsidmap nfsv41" to control new deps and features #381459 by
+  Krzysztof Pawlik.
 
   01 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org> nfs-utils-1.2.4.ebuild,
   +files/nfs-utils-1.2.4-conditional.patch:

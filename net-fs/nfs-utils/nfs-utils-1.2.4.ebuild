@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.4.ebuild,v 1.2 2011/09/01 23:10:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.4.ebuild,v 1.3 2011/09/02 19:27:13 vapier Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/nfs/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="caps ipv6 kerberos +nfsv3 +nfsv4 tcpd elibc_glibc"
+IUSE="caps ipv6 kerberos nfsidmap +nfsv3 +nfsv4 nfsv41 tcpd elibc_glibc"
 RESTRICT="test" #315573
 
 # kth-krb doesn't provide the right include
@@ -34,6 +34,10 @@ DEPEND_COMMON="tcpd? ( sys-apps/tcp-wrappers )
 			net-libs/libtirpc[kerberos]
 			app-crypt/mit-krb5
 		)
+		nfsidmap? (
+			>=net-libs/libnfsidmap-0.24
+			sys-apps/keyutils
+		)
 	)"
 RDEPEND="${DEPEND_COMMON} !net-nds/portmap"
 # util-linux dep is to prevent man-page collision
@@ -42,19 +46,22 @@ DEPEND="${DEPEND_COMMON}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.1.4-mtab-sym.patch
-	epatch "${FILESDIR}"/${PN}-1.2.4-exportfs-xlog.patch
-	epatch "${FILESDIR}"/${PN}-1.2.4-exportfs-skip-dir.patch
-	epatch "${FILESDIR}"/${PN}-1.2.4-conditional.patch
+	epatch "${FILESDIR}"/${P}-exportfs-xlog.patch
+	epatch "${FILESDIR}"/${P}-exportfs-skip-dir.patch
+	epatch "${FILESDIR}"/${P}-conditional.patch
+	epatch "${FILESDIR}"/${PN}-1.2.4-nfsidmap.patch
 	eautoreconf
 }
 
 src_configure() {
+	export ac_cv_header_keyutils_h=$(use nfsidmap && echo yes || echo no)
 	econf \
 		--with-statedir=/var/lib/nfs \
 		--enable-tirpc \
 		$(use_with tcpd tcp-wrappers) \
 		$(use_enable nfsv3) \
 		$(use_enable nfsv4) \
+		$(use_enable nfsv41) \
 		$(use_enable ipv6) \
 		$(use_enable caps) \
 		$(use nfsv4 && use_enable kerberos gss || echo "--disable-gss")
