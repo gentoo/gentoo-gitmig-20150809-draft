@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.13.3-r2.ebuild,v 1.1 2011/09/02 05:16:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.13.3-r2.ebuild,v 1.2 2011/09/02 06:58:11 scarabeus Exp $
 
 EAPI=4
 
@@ -16,12 +16,15 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE="debug gnutls idn ipv6 nls ntlm +ssl static"
 
 RDEPEND="idn? ( net-dns/libidn )
-	gnutls? ( net-libs/gnutls )
-	!gnutls? ( ssl? ( >=dev-libs/openssl-0.9.6b ) )"
+	ssl? (
+		gnutls? ( net-libs/gnutls )
+		!gnutls? ( >=dev-libs/openssl-0.9.6b )
+	)"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
-REQUIRED_USE="ntlm? ( !gnutls ssl )"
+REQUIRED_USE="ntlm? ( !gnutls ssl )
+	gnutls? ( ssl )"
 
 DOCS=( AUTHORS MAILING-LIST NEWS README doc/sample.wgetrc )
 
@@ -36,24 +39,12 @@ src_configure() {
 	# the included gnutls -- force ioctl.h to include this header
 	[[ ${CHOST} == *-solaris* ]] && append-flags -DBSD_COMP=1
 
-	local myconf
-	if use gnutls ; then
-		myconf+=" --with-ssl=gnutls"
-	elif use ssl ; then
-		myconf+=" --with-ssl=openssl"
-	else
-		myconf+=" --without-ssl"
-	fi
-
-	if use gnutls || use ssl ; then
-		myconf+=" --enable-opie --enable-digest"
-	else
-		myconf+=" --disable-opie --disable-digest"
-	fi
-
 	use static && append-ldflags -static
 	econf \
 		--disable-rpath \
+		$(use_with ssl ssl $(use gnutls && echo "gnutls" || echo "openssl")) \
+		$(use_enable ssl opie) \
+		$(use_enable ssl digest) \
 		$(use_enable idn iri) \
 		$(use_enable ipv6) \
 		$(use_enable nls) \

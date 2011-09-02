@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.143 2011/09/02 05:16:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.144 2011/09/02 06:58:11 scarabeus Exp $
+
+  02 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> -wget-1.13.3.ebuild,
+  -wget-1.13.3-r1.ebuild, wget-1.13.3-r2.ebuild:
+  Fix the gnutls uselfag to be wrapped around ssl one. Use use_with calls
+  instead of bash conditions.
 
 *wget-1.13.3-r2 (02 Sep 2011)
 
