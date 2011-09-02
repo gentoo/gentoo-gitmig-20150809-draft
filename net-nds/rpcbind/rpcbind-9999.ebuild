@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/rpcbind-9999.ebuild,v 1.3 2009/11/22 17:50:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/rpcbind-9999.ebuild,v 1.4 2011/09/02 20:02:53 vapier Exp $
+
+EAPI="2"
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.infradead.org/~steved/rpcbind.git"
@@ -22,21 +24,17 @@ IUSE=""
 DEPEND="net-libs/libtirpc"
 RDEPEND=${DEPEND}
 
-src_unpack() {
+src_prepare() {
 	if [[ ${PV} == "9999" ]] ; then
-		git_src_unpack
 		eautoreconf
 	else
-		unpack ${A}
-		cd "${S}"
 		# fix busted timestamps
 		find . -type f -print0 | xargs -0 touch -r .
 	fi
 }
 
-src_compile() {
-	econf --bindir=/sbin || die
-	emake || die
+src_configure() {
+	econf --bindir=/sbin
 }
 
 src_install() {
