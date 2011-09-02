@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff-compat/tiff-compat-3.9.5.ebuild,v 1.1 2011/08/31 15:14:06 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff-compat/tiff-compat-3.9.5.ebuild,v 1.2 2011/09/02 08:39:56 alexxy Exp $
 
 EAPI=3
 inherit eutils libtool
@@ -24,12 +24,6 @@ RDEPEND="jpeg? ( virtual/jpeg )
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/${P/-compat}
-
-src_prepare() {
-	epatch "${FILESDIR}"/${P/-compat}-CVE-2011-0192.patch
-	epatch "${FILESDIR}"/${P/-compat}-CVE-2011-1167.patch
-	elibtoolize
-}
 
 src_configure() {
 	econf \
