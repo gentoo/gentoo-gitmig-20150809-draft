@@ -1,6 +1,16 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.38 2011/08/16 19:59:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.39 2011/09/02 15:50:23 jer Exp $
+
+*opera-next-12.00.1054 (02 Sep 2011)
+
+  02 Sep 2011; Jeroen Roovers <jer@gentoo.org> -opera-next-11.50.1074.ebuild,
+  -opera-next-12.00.1017.ebuild, -opera-next-12.00.1020.ebuild,
+  -opera-next-12.00.1027.ebuild, -opera-next-12.00.1033.ebuild,
+  -opera-next-12.00.1033-r1.ebuild, -opera-next-12.00.1039.ebuild,
+  +opera-next-12.00.1054.ebuild:
+  http://my.opera.com/desktopteam/blog/2011/09/02/new-wahoo-12-00-build-with-up
+  dated-core-and-speed-dial
 
 *opera-next-12.00.1047 (16 Aug 2011)
 
