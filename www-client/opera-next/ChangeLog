@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.39 2011/09/02 15:50:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.40 2011/09/02 15:55:32 jer Exp $
+
+  02 Sep 2011; Jeroen Roovers <jer@gentoo.org> -opera-next-12.00.1042.ebuild,
+  -opera-next-12.00.1042-r1.ebuild, -opera-next-12.00.1047.ebuild:
+  Security bug #381275.
 
 *opera-next-12.00.1054 (02 Sep 2011)
 
