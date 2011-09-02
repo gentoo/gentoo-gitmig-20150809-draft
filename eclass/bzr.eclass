@@ -1,14 +1,16 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bzr.eclass,v 1.15 2011/07/26 23:22:35 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bzr.eclass,v 1.16 2011/09/02 21:26:58 ulm Exp $
 #
 # @ECLASS: bzr.eclass
 # @MAINTAINER:
-# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>,
-# Ulrich Müller <ulm@gentoo.org>,
-# Christian Faulhammer <fauli@gentoo.org>,
-# Mark Lee <bzr-gentoo-overlay@lazymalevolence.com>,
-# and anyone who wants to help
+# Emacs team <emacs@gentoo.org>
+# Bazaar team <bazaar@gentoo.org>
+# @AUTHOR:
+# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+# Mark Lee <bzr-gentoo-overlay@lazymalevolence.com>
+# Ulrich Müller <ulm@gentoo.org>
+# Christian Faulhammer <fauli@gentoo.org>
 # @BLURB: generic fetching functions for the Bazaar VCS
 # @DESCRIPTION:
 # The bzr.eclass provides functions to fetch, unpack, patch, and
