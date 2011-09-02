@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/pam
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.295 2011/06/14 18:32:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.296 2011/09/02 17:20:34 flameeyes Exp $
+
+*pam-1.1.4 (02 Sep 2011)
+
+  02 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org> -pam-1.1.3-r1.ebuild,
+  -files/Linux-PAM-1.1.3-nis.patch, +pam-1.1.4.ebuild:
+  Version bump; remove 1.1.3-r1 since the patch is integrated with .4 and that
+  is going to be the stable candidate. Closes bug #381485.
 
   14 Jun 2011; Diego E. Pettenò <flameeyes@gentoo.org> pam-1.1.3-r1.ebuild:
   Drop REQUIRED_USE as selinux support is still built fine without nis.
