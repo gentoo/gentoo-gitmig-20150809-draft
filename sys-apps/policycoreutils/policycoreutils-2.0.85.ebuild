@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.0.85.ebuild,v 1.1 2011/07/15 23:29:30 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.0.85.ebuild,v 1.2 2011/09/02 19:31:05 swift Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
@@ -20,6 +20,8 @@ IUSE=""
 DESCRIPTION="SELinux core utilities"
 HOMEPAGE="http://userspace.selinuxproject.org"
 SRC_URI="http://userspace.selinuxproject.org/releases/20101221/devel/${P}.tar.gz
+	http://dev.gentoo.org/~swift/patches/policycoreutils/policycoreutils-2.0.85-sesandbox.patch.gz
+	http://dev.gentoo.org/~swift/patches/policycoreutils/policycoreutils-2.0.85-fix-seunshare-vuln.patch.gz
 	mirror://gentoo/policycoreutils-extra-${EXTRAS_VER}.tar.bz2
 	mirror://gentoo/policycoreutils-2.0.85-python3.tar.gz"
 
@@ -57,11 +59,11 @@ src_prepare() {
 	# vulnerability (bug #374897) might go by unnoticed if we ignore it now.
 	# As such, we will
 	# - prepare support for switching name from "sandbox" to "sesandbox"
-	epatch "${FILESDIR}/policycoreutils-2.0.85-sesandbox.patch.gz"
+	epatch "${DISTDIR}/policycoreutils-2.0.85-sesandbox.patch.gz"
 	# - patch the sandbox and seunshare code to fix the vulnerability
 	#   (uses, with permission, extract from
 	#   http://pkgs.fedoraproject.org/gitweb/?p=policycoreutils.git;a=blob_plain;f=policycoreutils-rhat.patch;hb=HEAD)
-	epatch "${FILESDIR}/policycoreutils-2.0.85-fix-seunshare-vuln.patch.gz"
+	epatch "${DISTDIR}/policycoreutils-2.0.85-fix-seunshare-vuln.patch.gz"
 	# But for now, disable building sandbox code
 	sed -i -e 's/sandbox //' "${S}/Makefile" || die "failed removing sandbox"
 	# Overwrite gl.po, id.po and et.po with valid PO file

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.89 2011/08/12 18:46:59 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.90 2011/09/02 19:31:05 swift Exp $
+
+  02 Sep 2011; <swift@gentoo.org> policycoreutils-2.0.85.ebuild,
+  policycoreutils-2.1.0.ebuild:
+  Update patch locations to dev.g.o instead of files/ folder
 
   12 Aug 2011; Anthony G. Basile <blueness@gentoo.org>
   -policycoreutils-2.0.55.ebuild, -policycoreutils-2.0.69.ebuild,
