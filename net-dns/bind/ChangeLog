@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.350 2011/09/01 19:34:46 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.351 2011/09/02 16:07:24 idl0r Exp $
+
+  02 Sep 2011; Christian Ruppert <idl0r@gentoo.org> bind-9.8.1.ebuild:
+  Disable replace-flags re bug 158664 for now, the bug is really old and a lot
+  changed since then.
 
   01 Sep 2011; Christian Ruppert <idl0r@gentoo.org> bind-9.8.1.ebuild,
   metadata.xml:
