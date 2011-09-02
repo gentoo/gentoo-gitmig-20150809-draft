@@ -1,0 +1,23 @@
+From 6ff24b133a26056634403979aa7594f85160ac3c Mon Sep 17 00:00:00 2001
+From: Brian Harring <ferringb@gmail.com>
+Date: Fri, 2 Sep 2011 16:01:59 -0700
+Subject: [PATCH] suppress slow shadowing testing of pkgcore.test.*
+
+---
+ pkgcore/test/test_slot_shadowing.py |    3 +++
+ 1 files changed, 3 insertions(+), 0 deletions(-)
+
+diff --git a/pkgcore/test/test_slot_shadowing.py b/pkgcore/test/test_slot_shadowing.py
+index d804e7f..f38b132 100644
+--- a/pkgcore/test/test_slot_shadowing.py
++++ b/pkgcore/test/test_slot_shadowing.py
+@@ -8,3 +8,6 @@ class Test_slot_shadowing(test_slot_shadowing.Test_slot_shadowing):
+ 
+     target_namespace = "pkgcore"
+     ignore_all_import_failures = True
++
++    def _default_module_blacklister(self, target):
++        return target in self.module_blacklist or target.startswith("pkgcore.test.")
+-- 
+1.7.6.1
+
