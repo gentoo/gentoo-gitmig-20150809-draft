@@ -1,6 +1,15 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.102 2011/08/31 16:09:54 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.103 2011/09/02 15:11:07 scarabeus Exp $
+
+*adobe-flash-10.3.183.7 (02 Sep 2011)
+
+  02 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -adobe-flash-10.3.181.26.ebuild, -adobe-flash-10.3.181.34.ebuild,
+  -adobe-flash-10.3.183.5.ebuild, +adobe-flash-10.3.183.7.ebuild:
+  Non-maintainer commit: add new 10.3 version that has fetchable sources.
+  Remove unfetchable versions. Also this release fixes security issues in older
+  10.3.
 
   31 Aug 2011; Jim Ramsay <lack@gentoo.org>
   adobe-flash-11.0.1.60_beta201108082.ebuild:
