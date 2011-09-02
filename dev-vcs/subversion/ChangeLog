@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.57 2011/09/01 07:42:03 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.58 2011/09/02 15:46:00 chainsaw Exp $
+
+*subversion-1.6.17-r7 (02 Sep 2011)
+
+  02 Sep 2011; Tony Vroon <chainsaw@gentoo.org> +subversion-1.6.17-r7.ebuild:
+  Remove apache2-related explanation as it looks out of place, as per Martin
+  von Gagern in bug #381259. dodoc -r is an EAPI 4 feature that can not be used
+  for eclass reasons, do better. As per Ulrich "ulm" Müller in bug #381577.
 
   01 Sep 2011; Tony Vroon <chainsaw@gentoo.org> -subversion-1.6.15.ebuild,
   -subversion-1.6.16.ebuild, -subversion-1.6.17-r4.ebuild,
