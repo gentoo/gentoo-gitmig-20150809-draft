@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/pbzip2-1.1.5.ebuild,v 1.1 2011/08/02 19:17:04 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pbzip2/pbzip2-1.1.5.ebuild,v 1.2 2011/09/02 21:12:15 vapier Exp $
 
 EAPI=4
 
-inherit multilib eutils
+inherit flag-o-matic eutils
 
 DESCRIPTION="Parallel bzip2 (de)compressor using libbz2"
 HOMEPAGE="http://compression.ca/pbzip2/"
@@ -21,26 +21,19 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.1.2-makefile.patch
 	tc-export CXX
-}
-
-src_compile() {
-	if use static ; then
-		cp -f /usr/$(get_libdir)/libbz2.a "${S}"
-		emake pbzip2-static || die "Failed to build"
-	else
-		emake pbzip2 || die "Failed to build"
-	fi
+	use static && append-ldflags -static
 }
 
 src_install() {
 	dobin pbzip2 || die "Failed to install"
 	dodoc AUTHORS ChangeLog README || die
 	doman pbzip2.1 || die "Failed to install man page"
-	dosym /usr/bin/pbzip2 /usr/bin/pbunzip2
+	dosym pbzip2 /usr/bin/pbunzip2
 
-	if use symlink; then
-		dosym /usr/bin/pbzip2 /usr/bin/bzip2
-		dosym /usr/bin/pbzip2 /usr/bin/bunzip2
-		dosym /usr/bin/pbzip2 /usr/bin/bzcat
+	if use symlink ; then
+		local s
+		for s in bzip2 bunzip2 bzcat ; do
+			dosym pbzip2 /usr/bin/${s} || die
+		done
 	fi
 }
