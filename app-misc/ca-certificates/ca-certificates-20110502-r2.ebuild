@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20110502-r2.ebuild,v 1.1 2011/09/02 17:47:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20110502-r2.ebuild,v 1.2 2011/09/02 19:08:32 darkside Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils
 
@@ -12,20 +12,21 @@ SRC_URI="mirror://debian/pool/main/c/${PN}/${PN}_${PV}+nmu1_all.deb"
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
 IUSE=""
 
 DEPEND="|| ( >=sys-apps/coreutils-6.10-r1 sys-apps/mktemp sys-freebsd/freebsd-ubin )"
 RDEPEND="${DEPEND}
 	dev-libs/openssl
-	sys-apps/debianutils"
+	sys-apps/debianutils
+	kernel_AIX? ( app-arch/deb2targz )" # platforms like AIX don't have a good ar
 
 S=${WORKDIR}
 
 pkg_setup() {
 	# For the conversion to having it in CONFIG_PROTECT_MASK,
 	# we need to tell users about it once manually first.
-	[[ -f /etc/env.d/98ca-certificates ]] \
+	[[ -f "${EPREFIX}"/etc/env.d/98ca-certificates ]] \
 		|| ewarn "You should run update-ca-certificates manually after etc-update"
 }
 
@@ -48,13 +49,14 @@ src_compile() {
 	find * -name '*.crt' | LC_ALL=C sort
 	) > "${S}"/etc/ca-certificates.conf
 
+	sed -i "/^ROOT=""/s:=.*:='${EPREFIX}':"	"${S}"/usr/sbin/update-ca-certificates || die
 	"${S}"/usr/sbin/update-ca-certificates --root "${S}"
 }
 
 src_install() {
-	cp -pPR * "${D}"/ || die
+	cp -pPR * "${ED}"/ || die
 
-	mv "${D}"/usr/share/doc/{ca-certificates,${PF}} || die
+	mv "${ED}"/usr/share/doc/{ca-certificates,${PF}} || die
 	prepalldocs
 
 	echo 'CONFIG_PROTECT_MASK="/etc/ca-certificates.conf"' > 98ca-certificates
@@ -62,16 +64,16 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ -d "${ROOT}/usr/local/share/ca-certificates" ] ; then
+	if [ -d "${EROOT}/usr/local/share/ca-certificates" ] ; then
 		# if the user has local certs, we need to rebuild again
 		# to include their stuff in the db.
 		# However it's too overzealous when the user has custom certs in place.
 		# --fresh is to clean up dangling symlinks
-		"${ROOT}"/usr/sbin/update-ca-certificates --root "${ROOT}"
+		"${EROOT}"/usr/sbin/update-ca-certificates --root "${EROOT}"
 	fi
 
 	local c badcerts=0
-	for c in $(find -L "${ROOT}"etc/ssl/certs/ -type l) ; do
+	for c in $(find -L "${EROOT}"etc/ssl/certs/ -type l) ; do
 		ewarn "Broken symlink for a certificate at $c"
 		badcerts=1
 	done
@@ -79,6 +81,6 @@ pkg_postinst() {
 		ewarn "You MUST remove the above broken symlinks"
 		ewarn "Otherwise any SSL validation that use the directory may fail!"
 		ewarn "To batch-remove them, run:"
-		ewarn "find -L ${ROOT}etc/ssl/certs/ -type l -exec rm {} +"
+		ewarn "find -L ${EROOT}etc/ssl/certs/ -type l -exec rm {} +"
 	fi
 }
