@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.4.ebuild,v 1.3 2011/09/02 19:27:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.4.ebuild,v 1.4 2011/09/02 21:02:07 vapier Exp $
 
 EAPI="2"
 
@@ -50,6 +50,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-exportfs-skip-dir.patch
 	epatch "${FILESDIR}"/${P}-conditional.patch
 	epatch "${FILESDIR}"/${PN}-1.2.4-nfsidmap.patch
+	epatch "${FILESDIR}"/${PN}-1.2.4-cross-build.patch
 	eautoreconf
 }
 

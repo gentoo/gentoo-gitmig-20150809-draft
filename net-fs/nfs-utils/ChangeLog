@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.187 2011/09/02 19:27:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.188 2011/09/02 21:02:07 vapier Exp $
+
+  02 Sep 2011; Mike Frysinger <vapier@gentoo.org> nfs-utils-1.2.4.ebuild,
+  +files/nfs-utils-1.2.4-cross-build.patch:
+  Fix cross-compiling with native helper tools.
 
   02 Sep 2011; Mike Frysinger <vapier@gentoo.org> nfs-utils-1.2.4.ebuild,
   +files/nfs-utils-1.2.4-nfsidmap.patch, metadata.xml:
