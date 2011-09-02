@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/tomcat-servlet-api
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.102 2011/09/02 10:48:21 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.103 2011/09/02 10:52:25 fordfrog Exp $
+
+  02 Sep 2011; Miroslav Šulc <fordfrog@gentoo.org>
+  -tomcat-servlet-api-7.0.14.ebuild, -tomcat-servlet-api-7.0.16.ebuild,
+  -tomcat-servlet-api-7.0.19.ebuild:
+  Removed old versions
 
 *tomcat-servlet-api-7.0.21 (02 Sep 2011)
 
