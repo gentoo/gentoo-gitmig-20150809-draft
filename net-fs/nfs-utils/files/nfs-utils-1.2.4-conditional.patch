@@ -1,3 +1,5 @@
+taken from upstream git
+
 diff --git a/configure.ac b/configure.ac
 index ca12f9e..593808c 100644
 --- a/configure.ac
