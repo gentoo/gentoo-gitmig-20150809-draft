@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.118 2011/09/01 13:35:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.119 2011/09/02 12:53:11 scarabeus Exp $
+
+  02 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-3.4.3.2.ebuild, libreoffice-3.4.9999.ebuild,
+  libreoffice-9999.ebuild:
+  Should not be required as we use system poppler.
 
   01 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -libreoffice-3.4.2.3.ebuild, -files/libreoffice-fix-sandbox-install.patch,
