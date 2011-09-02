@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.43 2011/09/02 15:49:33 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.44 2011/09/02 15:50:54 xarthisius Exp $
 
-# Kacper Kowalik <xarthisius@gentoo.org> (22 Mar 2011)
+# Kacper Kowalik <xarthisius@gentoo.org> (02 Sep 2011)
 # Mask www-client/seamonkey[ipc] on ppc64 wrt #381191
 www-client/seamonkey ipc
 
