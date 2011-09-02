@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.67 2011/01/04 20:26:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.68 2011/09/02 17:11:23 beandog Exp $
+
+*netatalk-2.2.0 (02 Sep 2011)
+
+  02 Sep 2011; Steve Dibb <beandog@gentoo.org> +netatalk-2.2.0.ebuild,
+  +files/netatalk-2.2.0-path_afp_ipc.patch:
+  Version bump, bug 353177; Rename init script from atalk to netatalk; Restrict
+  test; Add avahi use flag; Add GPL-2 as license
 
 *netatalk-2.1.5 (04 Jan 2011)
 
