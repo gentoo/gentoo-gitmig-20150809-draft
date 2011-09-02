@@ -1,6 +1,12 @@
 # ChangeLog for app-text/searchmonkey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/searchmonkey/ChangeLog,v 1.6 2011/07/26 18:34:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/searchmonkey/ChangeLog,v 1.7 2011/09/02 23:34:43 sping Exp $
+
+*searchmonkey-2.0.0 (02 Sep 2011)
+
+  02 Sep 2011; Sebastian Pipping <sping@gentoo.org> +searchmonkey-2.0.0.ebuild,
+  +files/searchmonkey-2.0.0.desktop:
+  Bump to 2.0.0 (slot "2"), the Qt-based rewrite
 
   26 Jul 2011; Raúl Porcel <armin76@gentoo.org> metadata.xml:
   Move to maintainer-needed
