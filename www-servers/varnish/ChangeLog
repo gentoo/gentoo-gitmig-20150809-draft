@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/varnish
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.36 2011/07/30 22:27:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.37 2011/09/02 04:11:19 radhermit Exp $
+
+*varnish-3.0.1 (02 Sep 2011)
+
+  02 Sep 2011; Tim Harder <radhermit@gentoo.org> +varnish-3.0.1.ebuild:
+  Version bump. Add static-libs USE flag.
 
 *varnish-3.0.0 (30 Jul 2011)
 
