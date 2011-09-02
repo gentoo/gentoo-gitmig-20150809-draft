@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IMAP-Simple/Net-IMAP-Simple-1.2024.ebuild,v 1.1 2011/08/15 14:09:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IMAP-Simple/Net-IMAP-Simple-1.202.400.ebuild,v 1.1 2011/09/02 19:36:23 tove Exp $
 
-EAPI=3
+EAPI=4
 
-MODULE_AUTHOR="JETTERO"
-
+MODULE_AUTHOR=JETTERO
+MODULE_VERSION=1.2024
 inherit perl-module
 
 DESCRIPTION="Perl extension for simple IMAP account handling."
