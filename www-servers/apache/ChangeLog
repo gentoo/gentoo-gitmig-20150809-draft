@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.159 2011/09/02 17:09:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.160 2011/09/03 13:34:07 armin76 Exp $
+
+  03 Sep 2011; Raúl Porcel <armin76@gentoo.org> apache-2.2.20.ebuild:
+  arm/ia64/s390/sh/sparc/x86 stable wrt #380475
 
   02 Sep 2011; Jeroen Roovers <jer@gentoo.org> apache-2.2.20.ebuild:
   Stable for HPPA (bug #380475).
