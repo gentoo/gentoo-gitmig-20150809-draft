@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.204 2011/09/03 00:49:45 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.205 2011/09/03 02:02:28 nerdboy Exp $
+
+  03 Sep 2011; Steve Arnold <nerdboy@gentoo.org> doxygen-1.7.4.ebuild:
+  Newer (and cleaner) version using more of the qt4-r2 functionality.
+  Thanks to radhermit for bugging me about this...
 
   03 Sep 2011; Steve Arnold <nerdboy@gentoo.org> doxygen-1.7.4.ebuild:
   More updates to force qmake to use the right config settings; should 

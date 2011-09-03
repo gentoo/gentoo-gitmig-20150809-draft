@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.7.4.ebuild,v 1.2 2011/09/03 00:49:45 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.7.4.ebuild,v 1.3 2011/09/03 02:02:28 nerdboy Exp $
 
 EAPI=3
 
@@ -49,7 +49,7 @@ src_prepare() {
 	fi
 
 	# Call dot with -Teps instead of -Tps for EPS generation - bug #282150
-	epatch "${FILESDIR}/${PN}-1.7.1-dot-eps.patch"
+	epatch "${FILESDIR}"/${PN}-1.7.1-dot-eps.patch
 
 	# prefix search tools patch, plus OSX fixes
 	epatch "${FILESDIR}"/${PN}-1.5.6-prefix-misc-alt.patch
@@ -61,10 +61,6 @@ src_prepare() {
 	# fix pdf doc
 	sed -i.orig -e "s:g_kowal:g kowal:" \
 		doc/maintainers.txt || die "sed 3 failed"
-
-	# fix qmake spec problem
-#	sed -i.orig -e "s:spec macx-g++:spec gentoo:" \
-#		addon/doxywizard/Makefile || die "sed 4 failed"
 
 	# add native TCL support
 	use tcl && epatch "${WORKDIR}"/${PN}-1.7-tcl_support.patch
@@ -83,43 +79,36 @@ src_prepare() {
 src_configure() {
 	# set ./configure options (prefix, Qt based wizard, docdir)
 
-	local my_conf=""
-	use debug && my_conf="--debug"
+	local my_conf="--shared"
+
+	if use debug ; then
+		my_conf="${my_conf} --debug"
+	else
+		my_conf="${my_conf} --release "
+	fi
+
 	use ppc64 && my_conf="${my_conf} --english-only" #263641
+
+	use qt4 && my_conf="${my_conf} --with-doxywizard"
 
 	export CC="${QMAKE_CC}"
 	export CXX="${QMAKE_CXX}"
 	export LINK="${QMAKE_LINK}"
 	export LINK_SHLIB="${QMAKE_CXX}"
 
-	if use qt4; then
-		export QTDIR="${EPREFIX}/usr"
-		einfo "using QTDIR: '$QTDIR'."
-		export LIBRARY_PATH="${QTDIR}/$(get_libdir)${LIBRARY_PATH:+:}${LIBRARY_PATH}"
-		export LD_LIBRARY_PATH="${QTDIR}/$(get_libdir)${LD_LIBRARY_PATH:+:}${LD_LIBRARY_PATH}"
-		einfo "using QT LIBRARY_PATH: '$LIBRARY_PATH'."
-		einfo "using QT LD_LIBRARY_PATH: '$LD_LIBRARY_PATH'."
-
-		./configure --prefix "${EPREFIX}/usr" ${my_conf} $(use_with qt4 doxywizard) \
-		|| die 'configure with qt4 failed'
-	else
-		./configure --prefix "${EPREFIX}/usr" ${my_conf} || die 'configure failed'
-	fi
+	./configure --prefix "${EPREFIX}/usr" ${my_conf} \
+			|| die 'configure failed'
 }
 
 src_compile() {
 
-	# force stupid qmake to behave - yes, it's a big kluge...
+	# force stupid qmake to behave - if it works...
 	if use qt4 ; then
-		sed -i -e "s|\-Wl,\-O1 |\-Wl,\-O1 ${ELDFLAGS} |" \
-			-e "s|= g++|= $(tc-getCXX)|" \
-			-e "s|usr/local/Qt4.6|usr/share/qt4|g" \
-			-e "s|macx-g++ -macx|linux-g++|" \
-			addon/doxywizard/Makefile.doxywizard \
-			|| die "qmake sed hack failed"
+		qt4-r2_src_compile
+	else
+		CFLAGS+="${ECFLAGS}" CXXFLAGS+="${ECXXFLAGS}" LFLAGS+="${ELDFLAGS}" \
+			emake all || die 'emake failed'
 	fi
-	CFLAGS+="${ECFLAGS}" CXXFLAGS+="${ECXXFLAGS}" LFLAGS+="${ELDFLAGS}" \
-		emake all || die 'emake failed'
 
 	# generate html and pdf (if tetex in use) documents.
 	# errors here are not considered fatal, hence the ewarn message
