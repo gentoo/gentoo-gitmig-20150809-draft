@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/fakeroot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.67 2011/08/22 09:31:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.68 2011/09/03 00:32:06 radhermit Exp $
+
+*fakeroot-1.18 (03 Sep 2011)
+
+  03 Sep 2011; Tim Harder <radhermit@gentoo.org> +fakeroot-1.18.ebuild:
+  Version bump.
 
 *fakeroot-1.17 (22 Aug 2011)
 
