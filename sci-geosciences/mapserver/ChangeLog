@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/mapserver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.43 2011/07/22 22:52:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.44 2011/09/03 09:18:34 scarabeus Exp $
+
+  03 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Drop unused local descs.
 
 *mapserver-6.0.1 (22 Jul 2011)
 
