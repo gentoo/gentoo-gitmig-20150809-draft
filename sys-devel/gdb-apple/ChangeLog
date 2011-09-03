@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gdb-apple
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb-apple/ChangeLog,v 1.13 2011/09/03 14:30:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb-apple/ChangeLog,v 1.14 2011/09/03 14:58:16 grobian Exp $
+
+  03 Sep 2011; Fabian Groffen <grobian@gentoo.org> gdb-apple-1705.ebuild:
+  Add note to inform people that FSF gdb also works for them, and probably is
+  the better choice.
 
 *gdb-apple-1705 (03 Sep 2011)
 

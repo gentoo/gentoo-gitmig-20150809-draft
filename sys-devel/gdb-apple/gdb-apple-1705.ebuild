@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb-apple/gdb-apple-1705.ebuild,v 1.1 2011/09/03 14:30:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb-apple/gdb-apple-1705.ebuild,v 1.2 2011/09/03 14:58:16 grobian Exp $
 
 EAPI="3"
 
@@ -63,5 +63,11 @@ pkg_postinst() {
 		ewarn "have to perform the following steps:"
 		ewarn "  % sudo chgrp procmod ${EPREFIX}/usr/bin/gdb"
 		ewarn "  % sudo chmod g+s ${EPREFIX}/usr/bin/gdb"
+	fi
+	if use x86-macos || use x64-macos ; then
+		einfo "FSF gdb works on Intel-based OSX platforms, sometimes even"
+		einfo "better than gdb-apple.  You can consider installing FSF gdb"
+		einfo "instead of gdb-apple, since the FSF version is surely more"
+		einfo "advanced than this old 6.8 version modified by Apple."
 	fi
 }
