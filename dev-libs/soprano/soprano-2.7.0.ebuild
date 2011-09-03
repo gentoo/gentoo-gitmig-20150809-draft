@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.7.0.ebuild,v 1.1 2011/08/07 00:37:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.7.0.ebuild,v 1.2 2011/09/03 20:04:29 dilfridge Exp $
 
 EAPI=4
 
@@ -21,6 +21,9 @@ HOMEPAGE="http://sourceforge.net/projects/soprano"
 LICENSE="LGPL-2"
 SLOT="0"
 IUSE="clucene +dbus debug doc elibc_FreeBSD +raptor +redland test +virtuoso"
+
+RESTRICT=test
+# bug 281712
 
 COMMON_DEPEND="
 	>=x11-libs/qt-core-4.5.0:4
