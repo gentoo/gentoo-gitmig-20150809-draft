@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.7.4.ebuild,v 1.1 2011/04/09 18:09:46 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.7.4.ebuild,v 1.2 2011/09/03 00:49:45 nerdboy Exp $
 
 EAPI=3
 
@@ -62,6 +62,10 @@ src_prepare() {
 	sed -i.orig -e "s:g_kowal:g kowal:" \
 		doc/maintainers.txt || die "sed 3 failed"
 
+	# fix qmake spec problem
+#	sed -i.orig -e "s:spec macx-g++:spec gentoo:" \
+#		addon/doxywizard/Makefile || die "sed 4 failed"
+
 	# add native TCL support
 	use tcl && epatch "${WORKDIR}"/${PN}-1.7-tcl_support.patch
 
@@ -104,16 +108,18 @@ src_configure() {
 }
 
 src_compile() {
+
+	# force stupid qmake to behave - yes, it's a big kluge...
+	if use qt4 ; then
+		sed -i -e "s|\-Wl,\-O1 |\-Wl,\-O1 ${ELDFLAGS} |" \
+			-e "s|= g++|= $(tc-getCXX)|" \
+			-e "s|usr/local/Qt4.6|usr/share/qt4|g" \
+			-e "s|macx-g++ -macx|linux-g++|" \
+			addon/doxywizard/Makefile.doxywizard \
+			|| die "qmake sed hack failed"
+	fi
 	CFLAGS+="${ECFLAGS}" CXXFLAGS+="${ECXXFLAGS}" LFLAGS+="${ELDFLAGS}" \
 		emake all || die 'emake failed'
-
-	# force stupid qmake to use LDFLAGS - yes, it's a big kluge...
-	if use qt4 ; then
-		rm -f bin/doxywizard
-		sed -i -e "s|\-Wl,\-O1 |\-Wl,\-O1 ${ELDFLAGS} |" \
-			addon/doxywizard/Makefile.doxywizard
-		make -C addon/doxywizard
-	fi
 
 	# generate html and pdf (if tetex in use) documents.
 	# errors here are not considered fatal, hence the ewarn message
