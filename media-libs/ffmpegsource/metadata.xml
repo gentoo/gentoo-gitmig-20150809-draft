@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>proxy-maint</herd>
+	<maintainer>
+		<email>nikoli@lavabit.com</email>
+		<name>Nikoli</name>
+	</maintainer>
+	<maintainer>
+		<email>maksbotan@gentoo.org</email>
+		<name>Maxim Koltsov</name>
+	</maintainer>
+	<use>
+		<flag name="postproc">Enables image post-processing via libpostproc (part of FFmpeg).</flag>
+	</use>
+</pkgmetadata>
