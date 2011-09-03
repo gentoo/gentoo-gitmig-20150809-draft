@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/culmus-0.110.ebuild,v 1.1 2010/10/19 12:30:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/culmus-0.120-r2.ebuild,v 1.1 2011/09/03 11:37:16 pva Exp $
 
 EAPI="2"
 
@@ -9,6 +9,10 @@ inherit font
 # Maintainer: also check culmus.conf file in ${P}.tar.gz
 
 MY_A_P=AncientSemiticFonts-0.06-1
+# The Type 1 fonts are just a stripped version of TrueType fonts and they are
+# not updated unless there is a meaningful change and we need them for
+# culmus-latex, see bug #350657
+TYPE1_PV=0.105
 
 DESCRIPTION="Hebrew Type1 fonts"
 HOMEPAGE="http://culmus.sourceforge.net/"
@@ -18,6 +22,7 @@ FANCY_YG_FONTS="ShmuelCLM MakabiYG"
 TAAMEY_FONTS="TaameyDavidCLM TaameyFrankCLM KeterAramTsova KeterYG"
 
 SRC_URI="mirror://sourceforge/culmus/${P}.tar.gz
+	mirror://sourceforge/culmus/${PN}-type1-${TYPE1_PV}.tar.gz
 	fontforge? ( mirror://sourceforge/culmus/${PN}-src-${PV}.tar.gz )
 	ancient? ( !fontforge? ( mirror://sourceforge/culmus/${MY_A_P}.TTF.tgz )
 		fontforge? ( mirror://sourceforge/culmus/${MY_A_P}.tgz ) )"
@@ -37,8 +42,9 @@ IUSE="ancient fancy fontforge taamey"
 
 FONT_CONF=( "${FILESDIR}/65-culmus.conf" )
 
-DEPEND="!media-fonts/culmus-ancient"
-RDEPEND="${DEPEND}"
+RDEPEND="!media-fonts/culmus-ancient"
+DEPEND="${RDEPEND}
+	fontforge? ( media-gfx/fontforge )"
 
 S=${WORKDIR}
 # Put all fonts, generated or not here
@@ -46,6 +52,7 @@ FONT_S=${S}/FONTS
 
 src_unpack() {
 	unpack ${P}.tar.gz # For type1 fonts...
+	unpack ${PN}-type1-${TYPE1_PV}.tar.gz
 	use fontforge && unpack ${PN}-src-${PV}.tar.gz
 
 	use ancient && unpack ${MY_A_P}$(use fontforge || echo .TTF).tgz
@@ -73,6 +80,11 @@ src_compile() {
 		mv *.afm *.pfa "${FONT_S}"
 		rm *.ttf
 		popd >/dev/null
+
+		pushd ${PN}-type1-${TYPE1_PV}
+		mv *.afm *.pfa "${FONT_S}"
+		popd >/dev/null
+
 		pushd ${PN}-src-${PV}
 		for f in *.sfd; do
 			"${WORKDIR}"/${PN}-src-${PV}/GenerateTTF.pe ${f} "${FONT_S}" || die
@@ -101,6 +113,10 @@ src_compile() {
 	else
 		pushd ${P}
 		mv *.afm *.pfa *.ttf "${FONT_S}"
+		popd >/dev/null
+
+		pushd ${PN}-type1-${TYPE1_PV}
+		mv *.afm *.pfa "${FONT_S}"
 		popd >/dev/null
 
 		if use ancient; then
