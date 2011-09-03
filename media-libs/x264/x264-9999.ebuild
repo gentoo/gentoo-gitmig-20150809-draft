@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-9999.ebuild,v 1.1 2011/05/28 06:30:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-9999.ebuild,v 1.2 2011/09/03 18:39:24 maksbotan Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ fi
 inherit multilib toolchain-funcs ${V_ECLASS}
 
 if [ "${PV#9999}" = "${PV}" ] ; then
-	MY_P="x264-snapshot-$(get_version_component_range 3)-2245"
+	MY_P="x264-snapshot-$(get_version_component_range 3)-2245-stable"
 fi
 DESCRIPTION="A free library for encoding X264/AVC streams"
 HOMEPAGE="http://www.videolan.org/developers/x264.html"
@@ -21,7 +21,7 @@ if [ "${PV#9999}" != "${PV}" ] ; then
 	EGIT_REPO_URI="git://git.videolan.org/x264.git"
 	SRC_URI=""
 else
-	SRC_URI="http://ftp.videolan.org/pub/videolan/x264/snapshots/${MY_P}.tar.bz2"
+	SRC_URI="http://download.videolan.org/pub/videolan/x264/snapshots/${MY_P}.tar.bz2"
 fi
 
 LICENSE="GPL-2"
@@ -72,6 +72,5 @@ src_configure() {
 		--extra-cflags="${CFLAGS}" \
 		--extra-ldflags="${LDFLAGS}" \
 		--host="${CHOST}" \
-		${myconf} \
-		|| die
+		${myconf} || die
 }
