@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.0_pre20110313.ebuild,v 1.6 2011/08/02 11:03:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.0-r1.ebuild,v 1.1 2011/09/03 10:27:07 hwoarang Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="1.9"
@@ -8,7 +8,7 @@ inherit multilib autotools eutils
 
 DESCRIPTION="A standards compliant, fast, light-weight, extensible window manager"
 HOMEPAGE="http://openbox.org/"
-SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${P}.tar.gz"
+SRC_URI="http://openbox.org/dist/openbox/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="3"
@@ -28,7 +28,6 @@ RDEPEND="dev-libs/glib:2
 	x11-libs/libXinerama"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	app-text/docbook2X
 	dev-util/pkgconfig
 	x11-proto/xextproto
 	x11-proto/xf86vidmodeproto
@@ -37,6 +36,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-gnome-session-3.4.9.patch
 	epatch "${FILESDIR}"/${PN}-as-needed.patch
+	epatch "${FILESDIR}"/${P}-configure-imlib2.patch
 	eautopoint
 	eautoreconf
 }

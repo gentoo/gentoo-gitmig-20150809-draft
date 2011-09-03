@@ -1,6 +1,15 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.225 2011/08/17 22:56:33 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.226 2011/09/03 10:27:07 hwoarang Exp $
+
+*openbox-3.5.0-r1 (03 Sep 2011)
+
+  03 Sep 2011; Markos Chandras <hwoarang@gentoo.org>
+  -openbox-3.5.0_pre20110313.ebuild, -openbox-3.5.0_pre20110801.ebuild,
+  -openbox-3.5.0.ebuild, +openbox-3.5.0-r1.ebuild,
+  +files/openbox-3.5.0-configure-imlib2.patch:
+  Respect imlib2 configuration option. Bug #381067. Patch is already in git
+  repo
 
   17 Aug 2011; Markos Chandras <hwoarang@gentoo.org> openbox-3.5.0.ebuild:
   Remove app-text/docbook2X per bug #378939
