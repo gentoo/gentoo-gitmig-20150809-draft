@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.3.ebuild,v 1.5 2011/08/23 16:21:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.3.ebuild,v 1.6 2011/09/03 14:54:16 grobian Exp $
 
 EAPI="3"
 
@@ -52,7 +52,7 @@ is_cross \
 	&& SLOT="${CTARGET}" \
 	|| SLOT="0"
 if [[ ${PV} != 9999* ]] ; then
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~x86-fbsd ~x64-macos ~x86-macos"
 fi
 IUSE="expat multitarget nls python test vanilla"
 
@@ -91,8 +91,8 @@ src_configure() {
 		--disable-werror \
 		--enable-64-bit-bfd \
 		--with-system-readline \
-		--with-separate-debug-dir=/usr/lib/debug \
-		$(is_cross && echo --with-sysroot=/usr/${CTARGET}) \
+		--with-separate-debug-dir="${EPREFIX}"/usr/lib/debug \
+		$(is_cross && echo --with-sysroot="${EPREFIX}"/usr/${CTARGET}) \
 		$(use_with expat) \
 		$(use_enable nls) \
 		$(use multitarget && echo --enable-targets=all) \
@@ -112,7 +112,7 @@ src_install() {
 
 	# Don't install docs when building a cross-gdb
 	if [[ ${CTARGET} != ${CHOST} ]] ; then
-		rm -r "${D}"/usr/share
+		rm -r "${ED}"/usr/share
 		return 0
 	fi
 
@@ -128,10 +128,18 @@ src_install() {
 	fi
 
 	# Remove shared info pages
-	rm -f "${D}"/usr/share/info/{annotate,bfd,configure,standards}.info*
+	rm -f "${ED}"/usr/share/info/{annotate,bfd,configure,standards}.info*
 }
 
 pkg_postinst() {
 	# portage sucks and doesnt unmerge files in /etc
 	rm -vf "${ROOT}"/etc/skel/.gdbinit
+
+	if use prefix && [[ ${CHOST} == *-darwin* ]] ; then
+		ewarn "gdb is unable to get a mach task port when installed by Prefix"
+		ewarn "Portage, unprivileged.  To make gdb fully functional you'll"
+		ewarn "have to perform the following steps:"
+		ewarn "  % sudo chgrp procmod ${EPREFIX}/usr/bin/gdb"
+		ewarn "  % sudo chmod g+s ${EPREFIX}/usr/bin/gdb"
+	fi
 }

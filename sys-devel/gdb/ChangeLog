@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.189 2011/08/23 16:21:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.190 2011/09/03 14:54:16 grobian Exp $
+
+  03 Sep 2011; Fabian Groffen <grobian@gentoo.org> gdb-7.2.ebuild,
+  gdb-7.3.ebuild, gdb-9999.ebuild:
+  Fixed Prefix support, and marked ~x86-macos and ~x64-macos
 
   23 Aug 2011; Mike Frysinger <vapier@gentoo.org> gdb-7.3.ebuild,
   gdb-9999.ebuild:
