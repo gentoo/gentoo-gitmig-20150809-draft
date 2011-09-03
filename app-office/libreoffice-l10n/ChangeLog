@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-l10n
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.1 2011/09/03 11:45:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.2 2011/09/03 19:08:10 scarabeus Exp $
+
+  03 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-l10n-3.4.3.ebuild:
+  Fix the case with empty linguas.
 
 *libreoffice-l10n-3.4.3 (03 Sep 2011)
 

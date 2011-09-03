@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.4.3.ebuild,v 1.1 2011/09/03 11:45:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.4.3.ebuild,v 1.2 2011/09/03 19:08:10 scarabeus Exp $
 
 EAPI=4
 
@@ -84,6 +84,10 @@ src_configure() { :; }
 src_compile() { :; }
 
 src_install() {
-	insinto /usr/$(get_libdir)/${PN/-l10n/}
-	doins -r "${S}"/opt/${PN/-l10n/}$(get_version_component_range 1-2)/*
+	# Condition required for people that do not install anything eg no linguas
+	# or just english with no offlinehelp.
+	if [[ -d "${S}"/opt/${PN/-l10n/}$(get_version_component_range 1-2)/ ]] ; then
+		insinto /usr/$(get_libdir)/${PN/-l10n/}
+		doins -r "${S}"/opt/${PN/-l10n/}$(get_version_component_range 1-2)/*
+	fi
 }
