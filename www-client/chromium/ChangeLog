@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.429 2011/09/03 19:44:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.430 2011/09/03 21:08:06 floppym Exp $
+
+  03 Sep 2011; Mike Gilbert <floppym@gentoo.org> chromium-9999-r1.ebuild:
+  Depend on simplejson unconditionally to fix native_client/SConstruct
 
 *chromium-13.0.782.220 (03 Sep 2011)
 
