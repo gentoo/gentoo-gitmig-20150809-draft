@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-10.0.026-r1.ebuild,v 1.14 2009/08/22 20:23:12 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-10.0.026-r1.ebuild,v 1.15 2011/09/03 19:08:50 dilfridge Exp $
 
 inherit rpm eutils
 
@@ -8,7 +8,7 @@ PID=787
 PB=fc
 PEXEC=ifort
 DESCRIPTION="Intel FORTRAN 77/95 optimized compiler for Linux"
-HOMEPAGE="http://www.intel.com/software/products/compilers/flin/"
+HOMEPAGE="http://software.intel.com/en-us/articles/fortran-compilers/"
 
 ###
 # everything below common to ifc and icc

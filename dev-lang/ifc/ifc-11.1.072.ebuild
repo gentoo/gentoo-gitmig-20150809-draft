@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-11.1.072.ebuild,v 1.2 2010/11/26 13:09:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-11.1.072.ebuild,v 1.3 2011/09/03 19:08:50 dilfridge Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ BUILD="$(get_version_component_range 3)"
 PID=1769
 
 DESCRIPTION="Intel FORTRAN compiler suite for Linux"
-HOMEPAGE="http://www.intel.com/software/products/compilers/clin/"
+HOMEPAGE="http://software.intel.com/en-us/articles/fortran-compilers/"
 SRC_COM="http://registrationcenter-download.intel.com/irc_nas/${PID}/${PACKAGEID}"
 SRC_URI="amd64? ( ${SRC_COM}_intel64.tgz )
 	ia64? ( ${SRC_COM}_ia64.tgz )

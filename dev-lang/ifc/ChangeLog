@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ifc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.59 2010/11/26 13:09:17 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.60 2011/09/03 19:08:50 dilfridge Exp $
+
+  03 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  ifc-10.0.026-r1.ebuild, ifc-10.1.017.ebuild, ifc-10.1.018.ebuild,
+  ifc-11.1.056.ebuild, ifc-11.1.056-r1.ebuild, ifc-11.1.072.ebuild:
+  Fix HOMEPAGE
 
   26 Nov 2010; Justin Lecher <jlec@gentoo.org> ifc-11.1.072.ebuild:
   Adding missing LIBRARY/LDPATH for idb
