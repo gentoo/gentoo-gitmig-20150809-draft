@@ -49,9 +49,6 @@
     </flag>
 
     <!-- Miscellaneous flags -->
-    <flag name='network'>
-      Enable virtual networking (NAT) support for guests
-    </flag>
     <flag name='numa'>
       Use NUMA for memory segmenting via <pkg>sys-process/numactl</pkg>
     </flag>

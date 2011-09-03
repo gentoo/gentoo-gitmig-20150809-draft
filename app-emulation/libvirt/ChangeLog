@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.133 2011/08/31 22:55:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.134 2011/09/03 08:49:44 scarabeus Exp $
+
+  03 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Drop unused local desc.
 
   31 Aug 2011; Doug Goldstein <cardoe@gentoo.org> -libvirt-0.9.1.ebuild,
   libvirt-0.9.4.ebuild, libvirt-9999.ebuild:
