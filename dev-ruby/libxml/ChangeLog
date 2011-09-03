@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/libxml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.54 2011/08/24 20:49:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/libxml/ChangeLog,v 1.55 2011/09/03 15:47:39 armin76 Exp $
+
+  03 Sep 2011; Raúl Porcel <armin76@gentoo.org> libxml-2.0.5.ebuild:
+  ia64 stable wrt #370399
 
   24 Aug 2011; Markus Meier <maekke@gentoo.org> libxml-2.0.5.ebuild:
   x86 stable, bug #370399
