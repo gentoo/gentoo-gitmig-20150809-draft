@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/b43-firmware
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-firmware/ChangeLog,v 1.2 2011/05/09 14:12:49 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-firmware/ChangeLog,v 1.3 2011/09/03 09:29:55 scarabeus Exp $
+
+  03 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  b43-firmware-3.130.20.0.ebuild, b43-firmware-4.80.53.0.ebuild,
+  b43-firmware-4.150.10.5.ebuild, b43-firmware-4.174.64.19.ebuild:
+  Fix wrong features nomirror -> mirror.
 
   09 May 2011; Krzysztof Pawlik <nelchael@gentoo.org>
   b43-firmware-4.174.64.19.ebuild:

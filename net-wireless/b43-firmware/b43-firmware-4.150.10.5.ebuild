@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-firmware/b43-firmware-4.150.10.5.ebuild,v 1.1 2010/01/09 21:30:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/b43-firmware/b43-firmware-4.150.10.5.ebuild,v 1.2 2011/09/03 09:29:55 scarabeus Exp $
 
 : ${B43_FIRMWARE_SRC_OBJ:=wl_apsta_mimo.o}
 
@@ -13,7 +13,7 @@ LICENSE="as-is"
 SLOT="b43"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-RESTRICT="nomirror binchecks strip"
+RESTRICT="mirror binchecks strip"
 
 DEPEND=">=net-wireless/b43-fwcutter-012"
 RDEPEND=""
