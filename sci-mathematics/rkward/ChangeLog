@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/rkward
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/ChangeLog,v 1.30 2011/08/11 20:51:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/ChangeLog,v 1.31 2011/09/03 21:13:17 dilfridge Exp $
+
+  03 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org> rkward-0.5.4.ebuild,
+  rkward-0.5.5.ebuild, rkward-0.5.6.ebuild, rkward-0.5.6-r1.ebuild:
+  Needs katepart for >=kde-4.7, bug 380761
 
 *rkward-0.5.6-r1 (11 Aug 2011)
 

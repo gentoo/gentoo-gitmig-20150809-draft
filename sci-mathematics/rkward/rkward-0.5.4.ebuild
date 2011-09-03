@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/rkward-0.5.4.ebuild,v 1.3 2011/02/23 14:45:26 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/rkward-0.5.4.ebuild,v 1.4 2011/09/03 21:13:17 dilfridge Exp $
 
 EAPI=3
 
@@ -15,7 +15,11 @@ SLOT="4"
 KEYWORDS="amd64 x86"
 IUSE="debug"
 
-DEPEND="dev-lang/R"
+DEPEND="
+	dev-lang/R
+	|| (	<kde-base/kdelibs-4.6.50
+		( $(add_kdebase_dep katepart) ) )
+"
 RDEPEND="${DEPEND}"
 
 src_install() {
