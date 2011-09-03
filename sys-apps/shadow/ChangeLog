@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.261 2011/07/14 19:13:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.262 2011/09/03 09:13:57 scarabeus Exp $
+
+  03 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  shadow-4.1.4.2-r6.ebuild, shadow-4.1.4.3.ebuild, metadata.xml:
+  Drop unused local desc and useless blockers over non-existing packages.
 
   14 Jul 2011; Mike Frysinger <vapier@gentoo.org> shadow-4.1.4.2-r6.ebuild,
   shadow-4.1.4.3.ebuild:

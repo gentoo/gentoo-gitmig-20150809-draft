@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.4.2-r6.ebuild,v 1.8 2011/07/14 19:13:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.1.4.2-r6.ebuild,v 1.9 2011/09/03 09:13:57 scarabeus Exp $
 
 inherit eutils libtool toolchain-funcs pam multilib
 
@@ -16,8 +16,6 @@ IUSE="audit cracklib nls pam selinux skey"
 RDEPEND="audit? ( sys-process/audit )
 	cracklib? ( >=sys-libs/cracklib-2.7-r3 )
 	pam? ( virtual/pam )
-	!sys-apps/pam-login
-	!app-admin/nologin
 	skey? ( sys-auth/skey )
 	selinux? ( >=sys-libs/libselinux-1.28 )
 	nls? ( virtual/libintl )"
