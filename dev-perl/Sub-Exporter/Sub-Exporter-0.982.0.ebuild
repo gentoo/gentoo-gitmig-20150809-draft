@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter/Sub-Exporter-0.982.0.ebuild,v 1.1 2011/08/28 19:08:03 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Exporter/Sub-Exporter-0.982.0.ebuild,v 1.2 2011/09/03 21:05:06 tove Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="A sophisticated exporter for custom-built routines"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~ppc-macos ~x86-solaris"
+KEYWORDS="amd64 ppc x86 ~ppc-macos ~x86-solaris"
 IUSE=""
 
 RDEPEND=">=dev-perl/Sub-Install-0.92

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-canvas/gnome2-canvas-1.2.0.ebuild,v 1.1 2011/08/27 19:35:24 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-canvas/gnome2-canvas-1.2.0.ebuild,v 1.2 2011/09/03 21:04:57 tove Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ DESCRIPTION="Perl interface to the Gnome Canvas"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha amd64 ia64 ~ppc sparc x86"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+:2

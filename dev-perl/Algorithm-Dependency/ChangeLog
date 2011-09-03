@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Algorithm-Dependency
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Dependency/ChangeLog,v 1.42 2011/08/27 16:21:27 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Dependency/ChangeLog,v 1.43 2011/09/03 21:04:45 tove Exp $
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org>
+  Algorithm-Dependency-1.110.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
 
 *Algorithm-Dependency-1.110.0 (27 Aug 2011)
 

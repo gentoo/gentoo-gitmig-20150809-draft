@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem-Snowball-Da/Lingua-Stem-Snowball-Da-1.10.0.ebuild,v 1.1 2011/08/30 11:22:39 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem-Snowball-Da/Lingua-Stem-Snowball-Da-1.10.0.ebuild,v 1.2 2011/09/03 21:04:41 tove Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="Porters stemming algorithm for Denmark"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ia64 ~ppc sparc x86"
 IUSE=""
 
 SRC_TEST="do"

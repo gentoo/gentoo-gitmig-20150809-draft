@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Compress-Bzip2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Bzip2/ChangeLog,v 1.11 2011/09/01 10:52:51 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Bzip2/ChangeLog,v 1.12 2011/09/03 21:05:03 tove Exp $
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org> Compress-Bzip2-2.90.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
 
 *Compress-Bzip2-2.90.0 (01 Sep 2011)
 

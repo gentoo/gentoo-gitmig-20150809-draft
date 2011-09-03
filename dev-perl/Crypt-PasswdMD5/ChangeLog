@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Crypt-PasswdMD5
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-PasswdMD5/ChangeLog,v 1.9 2011/08/31 14:03:10 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-PasswdMD5/ChangeLog,v 1.10 2011/09/03 21:04:33 tove Exp $
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org> Crypt-PasswdMD5-1.300.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
 
 *Crypt-PasswdMD5-1.300.0 (31 Aug 2011)
 

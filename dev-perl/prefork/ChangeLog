@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/prefork
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/prefork/ChangeLog,v 1.40 2011/08/27 16:50:23 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/prefork/ChangeLog,v 1.41 2011/09/03 21:05:30 tove Exp $
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org> prefork-1.40.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
 
 *prefork-1.40.0 (27 Aug 2011)
 

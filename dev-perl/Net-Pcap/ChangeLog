@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Pcap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Pcap/ChangeLog,v 1.44 2011/08/29 11:46:07 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Pcap/ChangeLog,v 1.45 2011/09/03 21:04:25 tove Exp $
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org> Net-Pcap-0.160.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
 
 *Net-Pcap-0.160.0 (29 Aug 2011)
 

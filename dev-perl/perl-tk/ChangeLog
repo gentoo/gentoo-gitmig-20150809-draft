@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/perl-tk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.81 2011/08/30 09:26:55 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.82 2011/09/03 21:05:06 tove Exp $
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org> perl-tk-804.29.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
 
   30 Aug 2011; Fabio Erculiani <lxnay@gentoo.org> perl-tk-804.029.ebuild,
   perl-tk-804.29.0.ebuild:

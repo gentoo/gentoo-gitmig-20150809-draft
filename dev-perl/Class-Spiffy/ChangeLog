@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-Spiffy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Spiffy/ChangeLog,v 1.16 2011/09/01 11:00:16 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Spiffy/ChangeLog,v 1.17 2011/09/03 21:04:27 tove Exp $
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org> Class-Spiffy-0.150.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
 
 *Class-Spiffy-0.150.0 (01 Sep 2011)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/OLE-StorageLite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/OLE-StorageLite/ChangeLog,v 1.21 2011/08/29 11:16:04 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/OLE-StorageLite/ChangeLog,v 1.22 2011/09/03 21:05:16 tove Exp $
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org> OLE-StorageLite-0.190.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
 
 *OLE-StorageLite-0.190.0 (29 Aug 2011)
 

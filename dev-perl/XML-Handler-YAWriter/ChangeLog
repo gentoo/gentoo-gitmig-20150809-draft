@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-Handler-YAWriter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Handler-YAWriter/ChangeLog,v 1.23 2011/08/28 06:38:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Handler-YAWriter/ChangeLog,v 1.24 2011/09/03 21:04:54 tove Exp $
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org>
+  XML-Handler-YAWriter-0.230.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
 
 *XML-Handler-YAWriter-0.230.0 (28 Aug 2011)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Filesys-DiskSpace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filesys-DiskSpace/ChangeLog,v 1.9 2011/08/30 15:31:36 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filesys-DiskSpace/ChangeLog,v 1.10 2011/09/03 21:05:33 tove Exp $
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org>
+  Filesys-DiskSpace-0.50.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
 
 *Filesys-DiskSpace-0.50.0 (30 Aug 2011)
 

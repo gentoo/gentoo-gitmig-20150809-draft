@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ConfigReader/ConfigReader-0.500.0.ebuild,v 1.1 2011/09/01 10:44:50 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ConfigReader/ConfigReader-0.500.0.ebuild,v 1.2 2011/09/03 21:05:10 tove Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ DESCRIPTION="Read directives from a configuration file."
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ia64 ~ppc sparc x86"
 IUSE=""
 
 src_install() {

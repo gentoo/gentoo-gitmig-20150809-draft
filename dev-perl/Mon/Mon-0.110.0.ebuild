@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mon/Mon-0.110.0.ebuild,v 1.1 2011/08/29 17:51:22 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mon/Mon-0.110.0.ebuild,v 1.2 2011/09/03 21:05:09 tove Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="A Monitor Perl Module"
 
 SLOT="0"
 LICENSE="|| ( GPL-2 GPL-3 )" # GPL2+
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha amd64 ia64 ppc sparc x86"
 IUSE=""
 
 RDEPEND=">=net-analyzer/fping-2.2_beta1

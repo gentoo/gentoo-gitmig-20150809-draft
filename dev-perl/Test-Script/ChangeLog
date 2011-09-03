@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Script
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Script/ChangeLog,v 1.25 2011/08/28 13:32:39 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Script/ChangeLog,v 1.26 2011/09/03 21:04:59 tove Exp $
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org> Test-Script-1.70.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
 
 *Test-Script-1.70.0 (28 Aug 2011)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/crypt-dh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dh/ChangeLog,v 1.18 2011/08/27 20:15:16 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dh/ChangeLog,v 1.19 2011/09/03 21:04:52 tove Exp $
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org> crypt-dh-0.60.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
 
 *crypt-dh-0.60.0 (27 Aug 2011)
 

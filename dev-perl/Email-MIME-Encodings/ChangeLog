@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Email-MIME-Encodings
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-Encodings/ChangeLog,v 1.29 2011/08/31 10:51:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-Encodings/ChangeLog,v 1.30 2011/09/03 21:04:43 tove Exp $
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org>
+  Email-MIME-Encodings-1.313.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
 
 *Email-MIME-Encodings-1.313.0 (31 Aug 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-ArgvFile/Getopt-ArgvFile-1.110.0.ebuild,v 1.1 2011/08/30 15:08:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Getopt-ArgvFile/Getopt-ArgvFile-1.110.0.ebuild,v 1.2 2011/09/03 21:05:12 tove Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="This module is a simple supplement to other option handling modules
 
 SLOT="0"
 LICENSE="|| ( Artistic Artistic-2 )" # Artistic+
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ia64 ppc ~ppc64 sparc x86"
 IUSE=""
 
 SRC_TEST="do"

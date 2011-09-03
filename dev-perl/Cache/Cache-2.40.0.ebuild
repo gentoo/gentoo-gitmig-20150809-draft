@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache/Cache-2.40.0.ebuild,v 1.1 2011/09/01 11:45:51 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cache/Cache-2.40.0.ebuild,v 1.2 2011/09/03 21:04:30 tove Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ RDEPEND=">=virtual/perl-DB_File-1.72
 DEPEND="${RDEPEND}"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 SRC_TEST="do"

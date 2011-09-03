@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/class-returnvalue/class-returnvalue-0.550.0.ebuild,v 1.1 2011/08/27 20:32:00 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/class-returnvalue/class-returnvalue-0.550.0.ebuild,v 1.2 2011/09/03 21:04:39 tove Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ inherit perl-module
 DESCRIPTION="A return-value object that lets you treat it as as a boolean, array or object"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86"
 IUSE=""
 
 RDEPEND="dev-perl/Devel-StackTrace"

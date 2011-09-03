@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Clone
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.66 2011/09/01 10:54:53 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clone/ChangeLog,v 1.67 2011/09/03 21:05:08 tove Exp $
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org> Clone-0.310.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
 
 *Clone-0.310.0 (01 Sep 2011)
 

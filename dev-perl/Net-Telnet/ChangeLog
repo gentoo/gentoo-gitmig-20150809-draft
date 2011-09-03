@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Telnet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Telnet/ChangeLog,v 1.27 2011/08/29 11:29:30 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Telnet/ChangeLog,v 1.28 2011/09/03 21:04:29 tove Exp $
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org> Net-Telnet-3.30.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
 
 *Net-Telnet-3.30.0 (29 Aug 2011)
 

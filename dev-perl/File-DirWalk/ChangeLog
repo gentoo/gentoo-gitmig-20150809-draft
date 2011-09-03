@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-DirWalk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DirWalk/ChangeLog,v 1.17 2011/08/30 15:59:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-DirWalk/ChangeLog,v 1.18 2011/09/03 21:05:15 tove Exp $
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org> File-DirWalk-0.300.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
 
 *File-DirWalk-0.300.0 (30 Aug 2011)
 

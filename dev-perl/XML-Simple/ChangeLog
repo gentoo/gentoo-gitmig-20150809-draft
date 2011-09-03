@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Simple
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/ChangeLog,v 1.70 2011/08/27 21:06:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/ChangeLog,v 1.71 2011/09/03 21:05:04 tove Exp $
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org> XML-Simple-2.180.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
 
 *XML-Simple-2.180.0 (27 Aug 2011)
 

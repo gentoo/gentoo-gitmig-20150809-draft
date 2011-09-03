@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-SNPP
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNPP/ChangeLog,v 1.17 2011/08/29 11:33:54 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNPP/ChangeLog,v 1.18 2011/09/03 21:04:43 tove Exp $
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org> Net-SNPP-1.170.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
 
 *Net-SNPP-1.170.0 (29 Aug 2011)
 

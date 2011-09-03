@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-Simple-DTDReader
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple-DTDReader/ChangeLog,v 1.4 2011/08/27 21:05:43 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple-DTDReader/ChangeLog,v 1.5 2011/09/03 21:04:36 tove Exp $
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org>
+  XML-Simple-DTDReader-0.40.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
 
 *XML-Simple-DTDReader-0.40.0 (27 Aug 2011)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-C3
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-C3/ChangeLog,v 1.20 2011/09/01 11:25:25 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-C3/ChangeLog,v 1.21 2011/09/03 21:05:06 tove Exp $
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org> Class-C3-0.230.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
 
 *Class-C3-0.230.0 (01 Sep 2011)
 

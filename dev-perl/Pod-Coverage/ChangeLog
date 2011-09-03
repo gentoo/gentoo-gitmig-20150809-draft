@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Pod-Coverage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/ChangeLog,v 1.73 2011/08/29 10:37:47 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Coverage/ChangeLog,v 1.74 2011/09/03 21:04:30 tove Exp $
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org> Pod-Coverage-0.210.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
 
 *Pod-Coverage-0.210.0 (29 Aug 2011)
 

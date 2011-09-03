@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/ogg-vorbis-header
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ogg-vorbis-header/ChangeLog,v 1.22 2011/08/27 18:17:50 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ogg-vorbis-header/ChangeLog,v 1.23 2011/09/03 21:05:01 tove Exp $
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org>
+  ogg-vorbis-header-0.30.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
 
 *ogg-vorbis-header-0.30.0 (27 Aug 2011)
 

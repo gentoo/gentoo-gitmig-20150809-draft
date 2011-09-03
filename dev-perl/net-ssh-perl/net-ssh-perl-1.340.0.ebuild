@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/net-ssh-perl-1.340.0.ebuild,v 1.1 2011/08/27 18:20:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/net-ssh-perl-1.340.0.ebuild,v 1.2 2011/09/03 21:04:38 tove Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ inherit perl-module
 DESCRIPTION="Perl client Interface to SSH"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="alpha amd64 ~mips ~ppc sparc x86"
 IUSE=""
 
 DEPEND="

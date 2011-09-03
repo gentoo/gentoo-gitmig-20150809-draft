@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/String-Ediff
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/String-Ediff/ChangeLog,v 1.16 2011/09/01 13:51:51 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/String-Ediff/ChangeLog,v 1.17 2011/09/03 21:04:54 tove Exp $
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org> String-Ediff-0.90.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
 
 *String-Ediff-0.90.0 (28 Aug 2011)
 

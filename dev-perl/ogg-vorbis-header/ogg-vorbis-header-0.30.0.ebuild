@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ogg-vorbis-header/ogg-vorbis-header-0.30.0.ebuild,v 1.1 2011/08/27 18:17:50 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ogg-vorbis-header/ogg-vorbis-header-0.30.0.ebuild,v 1.2 2011/09/03 21:05:01 tove Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ DESCRIPTION="This module presents an object-oriented interface to Ogg Vorbis Com
 
 SLOT="0"
 LICENSE="|| ( GPL-2 GPL-3 ) LGPL-2" # GPL-2+
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha amd64 ia64 ~ppc sparc x86"
 IUSE=""
 
 RDEPEND="dev-perl/Inline

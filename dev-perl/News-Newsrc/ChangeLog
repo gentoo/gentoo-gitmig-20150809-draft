@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/News-Newsrc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/News-Newsrc/ChangeLog,v 1.16 2011/08/29 11:24:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/News-Newsrc/ChangeLog,v 1.17 2011/09/03 21:05:21 tove Exp $
+
+  03 Sep 2011; Torsten Veller <tove@gentoo.org> News-Newsrc-1.90.0.ebuild:
+  Merge stable keywords from former version scheme ebuild
 
 *News-Newsrc-1.90.0 (29 Aug 2011)
 

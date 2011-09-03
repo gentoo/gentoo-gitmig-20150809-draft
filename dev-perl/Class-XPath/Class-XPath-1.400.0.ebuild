@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-XPath/Class-XPath-1.400.0.ebuild,v 1.1 2011/09/01 10:56:46 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-XPath/Class-XPath-1.400.0.ebuild,v 1.2 2011/09/03 21:04:58 tove Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="adds xpath matching to object trees"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~sparc ~x86"
+KEYWORDS="amd64 ia64 sparc x86"
 IUSE="test"
 
 RDEPEND=""
