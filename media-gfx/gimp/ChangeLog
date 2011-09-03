@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.336 2011/09/02 21:03:50 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.337 2011/09/03 19:26:31 sping Exp $
+
+*gimp-2.6.11-r5 (03 Sep 2011)
+
+  03 Sep 2011; Sebastian Pipping <sping@gentoo.org> +gimp-2.6.11-r5.ebuild,
+  +files/gimp-2.6.11-cve-2011-2896.patch:
+  Integrate patch for security issue CVE-2011-2896 (bug #379289)
 
   02 Sep 2011; Sebastian Pipping <sping@gentoo.org> metadata.xml:
   Add myself as a backup maintainer
