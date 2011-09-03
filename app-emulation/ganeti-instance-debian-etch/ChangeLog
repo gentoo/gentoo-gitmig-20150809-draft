@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/ganeti-instance-debian-etch
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-instance-debian-etch/ChangeLog,v 1.6 2009/09/24 18:46:55 ramereth Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-instance-debian-etch/ChangeLog,v 1.7 2011/09/03 09:32:19 scarabeus Exp $
+
+  03 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  ganeti-instance-debian-etch-0.3.ebuild,
+  ganeti-instance-debian-etch-0.4.ebuild:
+  Mktemp is not in main tree for few years.
 
   24 Sep 2009; Lance Albertson <ramereth@gentoo.org> metadata.xml:
   Take over maintainership

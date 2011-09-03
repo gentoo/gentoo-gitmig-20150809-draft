@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-instance-debian-etch/ganeti-instance-debian-etch-0.3.ebuild,v 1.2 2008/01/23 04:45:56 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti-instance-debian-etch/ganeti-instance-debian-etch-0.3.ebuild,v 1.3 2011/09/03 09:32:19 scarabeus Exp $
 
 DESCRIPTION="Debian Etch instance example for Ganeti"
 HOMEPAGE="http://code.google.com/p/ganeti/"
@@ -17,7 +17,7 @@ RDEPEND="
 	app-arch/dump
 	app-emulation/ganeti
 	dev-util/debootstrap
-	|| ( >=sys-apps/coreutils-6.10-r1 sys-apps/mktemp )
+	>=sys-apps/coreutils-6.10-r1
 	sys-apps/util-linux
 	sys-fs/e2fsprogs
 "
