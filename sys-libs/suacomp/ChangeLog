@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/suacomp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/ChangeLog,v 1.11 2011/09/03 08:40:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/ChangeLog,v 1.12 2011/09/03 08:42:30 scarabeus Exp $
+
+  03 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> suacomp-9999.ebuild:
+  Update to git2 eclass too.
 
   03 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> suacomp-9999.ebuild:
   Keep just empty keywords not -*. Shuts up repoman.

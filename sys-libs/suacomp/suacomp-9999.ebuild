@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/suacomp-9999.ebuild,v 1.4 2011/09/03 08:40:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/suacomp-9999.ebuild,v 1.5 2011/09/03 08:42:30 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
-inherit toolchain-funcs flag-o-matic git
+inherit toolchain-funcs flag-o-matic git-2
 
 DESCRIPTION="library wrapping the interix lib-c to make it less buggy."
 HOMEPAGE="http://suacomp.sf.net"
@@ -42,12 +42,12 @@ pkg_setup() {
 }
 
 src_compile() {
-	emake all CC=$(tc-getCC) $(get_opts) CFLAGS="${CFLAGS}" || die "emake failed"
+	emake all CC=$(tc-getCC) $(get_opts) CFLAGS="${CFLAGS}"
 }
 
 src_install() {
 	emake install PREFIX="${EPREFIX}/usr" DESTDIR="${D}" $(get_opts) \
-		CFLAGS="${CFLAGS}" || die "emake install failed"
+		CFLAGS="${CFLAGS}"
 }
 
 src_test() {
@@ -56,5 +56,5 @@ src_test() {
 	use debug && v="TEST_VERBOSE=1"
 	use debug && export SUACOMP_DEBUG_OUT=stderr
 
-	emake check $(get_opts) ${v} || die "emake check failed"
+	emake check $(get_opts) ${v}
 }
