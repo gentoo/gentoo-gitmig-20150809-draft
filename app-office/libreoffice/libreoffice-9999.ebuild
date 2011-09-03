@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999.ebuild,v 1.20 2011/09/02 12:53:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999.ebuild,v 1.21 2011/09/03 11:51:49 scarabeus Exp $
 
 EAPI=3
 
@@ -34,7 +34,7 @@ SRC_URI="branding? ( http://dev.gentooexperimental.org/~scarabeus/${BRANDING} )"
 
 # Split modules following git/tarballs
 # Core MUST be first!
-MODULES="core binfilter dictionaries help translations"
+MODULES="core binfilter dictionaries help"
 # Only release has the tarballs
 if [[ ${PV} != *9999* ]]; then
 	for i in ${DEV_URI}; do
@@ -83,14 +83,6 @@ ADDONS_SRC+=" http://download.go-oo.org/extern/185d60944ea767075d27247c3162b3bc-
 ADDONS_SRC+=" http://www.numbertext.org/linux/881af2b7dca9b8259abbca00bbbc004d-LinLibertineG-20110101.zip"
 SRC_URI+=" ${ADDONS_SRC}"
 
-# intersection of available linguas and app-dicts/myspell-* dictionaries
-SPELL_DIRS="af bg ca cs cy da de el en eo es et fr ga gl he hr hu it ku lt mk nb
-nl nn pl pt ru sk sl sv tn zu"
-for X in ${SPELL_DIRS} ; do
-	SPELL_DIRS_DEPEND+=" linguas_${X}? ( app-dicts/myspell-${X} )"
-done
-unset X
-
 TDEPEND="${EXT_URI}/472ffb92d82cf502be039203c606643d-Sun-ODF-Template-Pack-en-US_1.0.0.oxt"
 TDEPEND+=" linguas_de? ( ${EXT_URI}/53ca5e56ccd4cab3693ad32c6bd13343-Sun-ODF-Template-Pack-de_1.0.0.oxt )"
 TDEPEND+=" linguas_en_GB? ( ${EXT_URI}/472ffb92d82cf502be039203c606643d-Sun-ODF-Template-Pack-en-US_1.0.0.oxt )"
@@ -106,18 +98,14 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="binfilter +branding custom-cflags dbus debug eds gnome graphite
-gstreamer gtk kde ldap mysql nsplugin odk offlinehelp opengl svg templates
-test +vba webdav"
+gstreamer gtk kde ldap mysql nsplugin odk opengl svg templates test +vba
+webdav"
 LICENSE="LGPL-3"
 SLOT="0"
 [[ ${PV} == *9999* ]] || KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 
-# translations
-LANGUAGES="af ar as ast be bg bn bo br brx bs ca ca_XV cs cy da de dgo dz el
-en en_GB en_ZA eo es et eu fa fi fr ga gl gu he hi hr hu id is it ja ka kk km
-kn kok ko ks ku lo lt lv mai mk ml mn mni mr my nb ne nl nn nr nso oc or
-pa_IN pl pt pt_BR ro ru rw sat sd sh sk sl sq sr ss st sv sw_TZ ta te tg
-th tn tr ts ug uk uz ve vi xh zh_CN zh_TW zu"
+# lingua for templates 
+LANGUAGES="de en_GB en_ZA es fr hu it"
 for X in ${LANGUAGES} ; do
 	IUSE+=" linguas_${X}"
 done
@@ -181,12 +169,13 @@ COMMON_DEPEND="
 	webdav? ( net-libs/neon )
 "
 
+# FIXME: l10n after release/branching
 RDEPEND="${COMMON_DEPEND}
 	!app-office/libreoffice-bin
 	!app-office/openoffice-bin
 	!app-office/openoffice
+	>=app-office/libreoffice-l10n-3.4
 	java? ( >=virtual/jre-1.6 )
-	${SPELL_DIRS_DEPEND}
 "
 
 DEPEND="${COMMON_DEPEND}
@@ -340,22 +329,7 @@ src_unpack() {
 }
 
 src_prepare() {
-	strip-linguas ${LANGUAGES}
-
-	# HACK: linguas needs special parsing until fixed upstream
-	if [[ -z ${LINGUAS} || ${LINGUAS} == en ]]; then
-		# if empty or just english we want empty
-		LO_LANGUAGES=
-	elif [[ ${LINGUAS} =~ en( |$) ]]; then
-		# otherwise if more then one language and english we
-		# replace en to en-US
-		LO_LANGUAGES="$(sed -e 's/\ben\b/en_US/;s/_/-/g' <<< ${LINGUAS})"
-	else
-		# and finally if no en is set we add en-US
-		LO_LANGUAGES="en-US ${LINGUAS//_/-}"
-	fi
-
-	# Now for our optimization flags ...
+	# optimization flags
 	export ARCH_FLAGS="${CXXFLAGS}"
 	use debug || export LINKFLAGSOPTIMIZE="${LDFLAGS}"
 
@@ -492,7 +466,7 @@ src_configure() {
 		--with-external-hyph-dir="${EPREFIX}/usr/share/myspell" \
 		--with-external-thes-dir="${EPREFIX}/usr/share/myspell" \
 		--with-external-tar="${DISTDIR}" \
-		--with-lang="${LO_LANGUAGES}" \
+		--with-lang="" \
 		--with-max-jobs=${jbs} \
 		--with-num-cpus=1 \
 		--with-theme="${themes}" \
@@ -531,7 +505,6 @@ src_configure() {
 		$(use_with ldap openldap) \
 		$(use_with mysql system-mysql-cppconn) \
 		$(use_with nsplugin system-mozilla libxul) \
-		$(use_with offlinehelp helppack-integration) \
 		$(use_with templates sun-templates) \
 		${internal_libs} \
 		${java_opts} \

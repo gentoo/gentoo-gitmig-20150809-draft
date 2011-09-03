@@ -13,8 +13,6 @@ version</longdescription>
 		<flag name="graphite">Enable support for non-Roman fonts via
 		<pkg>media-gfx/graphite2</pkg></flag>
 		<flag name="odk">Build the Office Development Kit</flag>
-		<flag name="offlinehelp">Install help files locally instead of
-		using the LibreOffice Wiki</flag>
 		<flag name="templates">Enable installation of Sun templates</flag>
 		<flag name="vba">Enable support for VBA compatibility and ActiveX
 		embedding</flag>
