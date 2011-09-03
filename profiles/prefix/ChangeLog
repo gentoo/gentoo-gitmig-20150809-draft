@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.292 2011/08/28 09:54:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.293 2011/09/03 10:55:26 grobian Exp $
+
+  03 Sep 2011; Fabian Groffen <grobian@gentoo.org> darwin/packages:
+  Add sys-libs/csu (crt1.o) to system set on Darwin, such that compilations can
+  do fully without Xcode
 
   28 Aug 2011; Fabian Groffen <grobian@gentoo.org> darwin/use.mask:
   Mask USE=introspection on Darwin, g-ir-tool it has a long way to go before
