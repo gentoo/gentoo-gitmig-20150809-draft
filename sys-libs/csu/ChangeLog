@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/csu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/csu/ChangeLog,v 1.5 2011/03/15 18:22:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/csu/ChangeLog,v 1.6 2011/09/03 10:52:52 grobian Exp $
+
+  03 Sep 2011; Fabian Groffen <grobian@gentoo.org> csu-79.ebuild:
+  Fetch restriction seems to have been removed, fix installation failing,
+  marked ~x86-macos and ~x64-macos
 
 *csu-79 (15 Mar 2011)
 
