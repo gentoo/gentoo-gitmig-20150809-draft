@@ -1,6 +1,24 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.866 2011/08/27 19:23:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.867 2011/09/03 06:26:44 zmedico Exp $
+
+*portage-2.2.0_alpha52 (03 Sep 2011)
+
+  03 Sep 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha52.ebuild:
+  2.2.0_alpha52 version bump. This includes all of the fixes in
+  portage-2.1.10.12. Bug #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.10.12 (03 Sep 2011)
+
+  03 Sep 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.12.ebuild:
+  2.1.10.12 version bump. This fixes bug #318897 (FEATURES=buildpkg
+  package.env support), bug #353648 (egencache --portdir-overlay option),
+  bug #379899 (QA Notice if dosym target omits basename), bug #380565
+  (fix deprecated ElementTree usage), bug #380625 (fix die hooks for EAPI 4
+  helpers_die), bug #381087 (include blockers in repoman dependency.unknown
+  check), and bug #381509 (allow merge of UTF-8 file names with locales that
+  specify ASCII encoding). Bug #381649 tracks all bugs fixed since
+  portage-2.1.10.11.
 
   27 Aug 2011; Jeroen Roovers <jer@gentoo.org> portage-2.1.10.11.ebuild:
   Stable for HPPA (bug #380677).
