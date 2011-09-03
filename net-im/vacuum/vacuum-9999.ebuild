@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/vacuum-9999.ebuild,v 1.1 2011/04/29 16:08:39 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/vacuum-9999.ebuild,v 1.2 2011/09/03 14:49:57 maksbotan Exp $
 
 EAPI="4"
 LANGS="de pl ru uk"
@@ -14,7 +14,7 @@ ESVN_REPO_URI="http://vacuum-im.googlecode.com/svn/trunk"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-PLUGINS=" adiummessagestyle annotations autostatus avatars bitsofbinary bookmarks captchaforms chatstates clientinfo commands compress console dataforms datastreamsmanager emoticons filestreamsmanager filetransfer gateways inbandstreams iqauth jabbersearch messagearchiver multiuserchat pepmanager privacylists privatestorage registration remotecontrol rostersearch servicediscovery sessionnegotiation socksstreams vcard xmppuriqueries"
+PLUGINS=" adiummessagestyle annotations autostatus avatars birthdayreminder bitsofbinary bookmarks captchaforms chatstates clientinfo commands compress console dataforms datastreamsmanager emoticons filestreamsmanager filetransfer gateways inbandstreams iqauth jabbersearch messagearchiver multiuserchat pepmanager privacylists privatestorage registration remotecontrol rostersearch servicediscovery sessionnegotiation socksstreams vcard xmppuriqueries"
 IUSE="${PLUGINS// / +} vcs-revision"
 for x in ${LANGS}; do
 	IUSE+=" linguas_${x}"
@@ -32,7 +32,8 @@ REQUIRED_USE="
 	pepmanager? ( servicediscovery )
 	registration? ( dataforms )
 	remotecontrol? ( commands dataforms )
-	sessionnegotiation? ( dataforms )"
+	sessionnegotiation? ( dataforms )
+"
 
 RDEPEND="
 	>=x11-libs/qt-core-4.5:4[ssl]
@@ -40,7 +41,8 @@ RDEPEND="
 	>=dev-libs/openssl-0.9.8k
 	adiummessagestyle? ( >=x11-libs/qt-webkit-4.5:4 )
 	net-dns/libidn
-	x11-libs/libXScrnSaver"
+	x11-libs/libXScrnSaver
+"
 DEPEND="${RDEPEND}"
 
 DOCS="AUTHORS CHANGELOG README TRANSLATORS"
