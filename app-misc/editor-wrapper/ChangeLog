@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/editor-wrapper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/editor-wrapper/ChangeLog,v 1.9 2011/08/28 13:27:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/editor-wrapper/ChangeLog,v 1.10 2011/09/03 16:01:26 armin76 Exp $
+
+  03 Sep 2011; Raúl Porcel <armin76@gentoo.org> editor-wrapper-4.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc/x86 stable wrt #379095
 
   28 Aug 2011; Markus Meier <maekke@gentoo.org> editor-wrapper-4.ebuild:
   arm stable, bug #379095
