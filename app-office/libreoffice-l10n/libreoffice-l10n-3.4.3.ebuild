@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.4.3.ebuild,v 1.2 2011/09/03 19:08:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.4.3.ebuild,v 1.3 2011/09/03 21:04:35 scarabeus Exp $
 
 EAPI=4
 
@@ -52,6 +52,14 @@ done
 unset X
 RDEPEND="${SPELL_DICTS_DEPEND}"
 unset X SPELL_DICTS SPELL_DICTS_DEPEND
+
+# blockers for old libreoffice with linguas bundled
+RDEPEND+="
+	!<=app-office/libreoffice-3.4.3.2
+	!=app-office/libreoffice-3.4.9999
+	!=app-office/libreoffice-9999
+	!<=app-office/libreoffice-bin-3.4.3-r1
+"
 
 RESTRICT="strip"
 
