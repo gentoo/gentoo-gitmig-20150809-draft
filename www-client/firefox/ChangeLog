@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.92 2011/08/31 09:36:39 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.93 2011/09/03 08:12:26 xarthisius Exp $
+
+  03 Sep 2011; Kacper Kowalik <xarthisius@gentoo.org> firefox-3.6.20.ebuild:
+  ppc/ppc64 stable wrt #379549
 
 *firefox-3.6.21 (31 Aug 2011)
 
