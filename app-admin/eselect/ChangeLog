@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.186 2011/07/08 06:03:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.187 2011/09/03 12:56:24 ulm Exp $
+
+  03 Sep 2011; Ulrich Mueller <ulm@gentoo.org> +eselect-9999.ebuild:
+  Restore live ebuild for SVN trunk.
 
 *eselect-1.2.16 (07 Jul 2011)
 
