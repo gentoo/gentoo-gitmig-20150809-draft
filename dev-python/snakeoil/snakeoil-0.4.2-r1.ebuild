@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/snakeoil-0.4.2.ebuild,v 1.1 2011/09/02 22:56:37 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/snakeoil-0.4.2-r1.ebuild,v 1.1 2011/09/03 08:12:05 ferringb Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -48,4 +48,9 @@ src_test() {
 		PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib*)" "$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" test
 	}
 	python_execute_function testing
+}
+
+src_install() {
+	distutils_src_install
+	rm -f "${D}"/usr/lib*/python2.*/site-packages/snakeoil/compatibility_py3k.py
 }
