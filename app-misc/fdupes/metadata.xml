@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>shell-tools</herd>
-<use>
-  <flag name='md5sum-external'>Use external md5sum program instead of bundled
-    md5sum routines</flag>
-</use>
 </pkgmetadata>
