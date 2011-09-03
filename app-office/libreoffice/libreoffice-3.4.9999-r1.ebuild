@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999.ebuild,v 1.23 2011/09/03 19:13:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999-r1.ebuild,v 1.1 2011/09/03 21:01:18 scarabeus Exp $
 
 EAPI=3
 
@@ -25,16 +25,17 @@ ADDONS_URI="http://dev-www.libreoffice.org/src/"
 BRANDING="${PN}-branding-gentoo-0.3.tar.xz"
 
 [[ ${PV} == *9999* ]] && SCM_ECLASS="git-2"
-inherit base autotools bash-completion check-reqs eutils java-pkg-opt-2 kde4-base pax-utils prefix python multilib toolchain-funcs flag-o-matic nsplugins ${SCM_ECLASS}
+inherit base autotools bash-completion check-reqs eutils java-pkg-opt-2 kde4-base pax-utils prefix python multilib toolchain-funcs flag-o-matic nsplugins versionator ${SCM_ECLASS}
 unset SCM_ECLASS
 
 DESCRIPTION="LibreOffice, a full office productivity suite."
 HOMEPAGE="http://www.libreoffice.org"
 SRC_URI="branding? ( http://dev.gentooexperimental.org/~scarabeus/${BRANDING} )"
 
-# Split modules following git/tarballs
-# Core MUST be first!
-MODULES="core binfilter dictionaries help"
+# Bootstrap MUST be first!
+MODULES="bootstrap artwork base calc components extensions extras filters help
+impress libs-core libs-extern libs-extern-sys libs-gui postprocess sdk testing
+ure writer"
 # Only release has the tarballs
 if [[ ${PV} != *9999* ]]; then
 	for i in ${DEV_URI}; do
@@ -49,6 +50,7 @@ unset DEV_URI
 
 # addons
 # FIXME: actually review which one of these are used
+ADDONS_SRC+=" ${ADDONS_URI}/128cfc86ed5953e57fe0f5ae98b62c2e-libtextcat-2.2.tar.gz"
 ADDONS_SRC+=" ${ADDONS_URI}/17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip"
 ADDONS_SRC+=" ${ADDONS_URI}/bd30e9cf5523cdfc019b94f5e1d7fd19-cppunit-1.12.1.tar.gz"
 ADDONS_SRC+=" ${ADDONS_URI}/1756c4fa6c616ae15973c104cd8cb256-Adobe-Core35_AFMs-314.tar.gz"
@@ -80,6 +82,7 @@ ADDONS_SRC+=" ${ADDONS_URI}/90401bca927835b6fbae4a707ed187c8-nlpsolver-0.9.tar.b
 ADDONS_SRC+=" ${ADDONS_URI}/0f63ee487fda8f21fafa767b3c447ac9-ixion-0.2.0.tar.gz"
 ADDONS_SRC+=" ${ADDONS_URI}/71474203939fafbe271e1263e61d083e-nss-3.12.8-with-nspr-4.8.6.tar.gz"
 ADDONS_SRC+=" http://download.go-oo.org/extern/185d60944ea767075d27247c3162b3bc-unowinreg.dll"
+ADDONS_SRC+=" http://download.go-oo.org/extern/b4cae0700aa1c2aef7eb7f345365e6f1-translate-toolkit-1.8.1.tar.bz2"
 ADDONS_SRC+=" http://www.numbertext.org/linux/881af2b7dca9b8259abbca00bbbc004d-LinLibertineG-20110101.zip"
 SRC_URI+=" ${ADDONS_SRC}"
 
@@ -97,8 +100,8 @@ unset ADDONS_URI
 unset EXT_URI
 unset ADDONS_SRC
 
-IUSE="binfilter +branding custom-cflags dbus debug eds gnome graphite
-gstreamer gtk kde ldap mysql nsplugin odk opengl svg templates test +vba
+IUSE="binfilter +branding cups custom-cflags dbus debug eds gnome graphite
+gstreamer gtk kde ldap mysql nsplugin odk opengl python templates test +vba
 webdav"
 LICENSE="LGPL-3"
 SLOT="0"
@@ -116,7 +119,6 @@ COMMON_DEPEND="
 	app-arch/unzip
 	>=app-text/hunspell-1.3.2
 	app-text/mythes
-	app-text/libtextcat
 	app-text/libwpd:0.9[tools]
 	app-text/libwpg:0.2
 	>=app-text/libwps-0.2.2
@@ -129,19 +131,19 @@ COMMON_DEPEND="
 	>=dev-lang/perl-5.0
 	>=dev-libs/openssl-0.9.8g
 	dev-libs/redland[ssl]
-	>=dev-python/translate-toolkit-1.8.0
 	media-libs/freetype:2
 	>=media-libs/fontconfig-2.3.0
 	>=media-libs/vigra-1.7
 	>=media-libs/libpng-1.4
-	net-print/cups
 	sci-mathematics/lpsolve
 	>=sys-libs/db-4.8
 	virtual/jpeg
 	>=x11-libs/cairo-1.10.0
+	x11-libs/libXaw
 	x11-libs/libXinerama
 	x11-libs/libXrandr
 	x11-libs/libXrender
+	cups? ( net-print/cups )
 	dbus? ( >=dev-libs/dbus-glib-0.94 )
 	eds? ( gnome-extra/evolution-data-server )
 	gnome? ( gnome-base/gconf:2 )
@@ -165,7 +167,6 @@ COMMON_DEPEND="
 		>=dev-libs/nss-3.12.9
 	)
 	opengl? ( virtual/opengl )
-	svg? ( gnome-base/librsvg )
 	webdav? ( net-libs/neon )
 "
 
@@ -176,9 +177,8 @@ RDEPEND="${COMMON_DEPEND}
 	java? ( >=virtual/jre-1.6 )
 "
 
-# FIXME: l10n after release/branching
 PDEPEND="
-    >=app-office/libreoffice-l10n-3.4
+    >=app-office/libreoffice-l10n-$(get_version_component_range 1-2)
 "
 
 DEPEND="${COMMON_DEPEND}
@@ -195,7 +195,6 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/bison
 	sys-apps/coreutils
 	sys-devel/flex
-	sys-devel/gettext
 	>=sys-devel/make-3.82
 	sys-libs/zlib
 	x11-libs/libXtst
@@ -212,9 +211,19 @@ DEPEND="${COMMON_DEPEND}
 
 PATCHES=(
 	"${FILESDIR}/${PN}-3.3.1-neon_remove_SSPI_support.diff"
+	"${FILESDIR}/${PN}-libdb5-fix-check.diff"
+	"${FILESDIR}/${PN}-3.4.1-salfix.diff"
 	"${FILESDIR}/sdext-presenter.diff"
 	"${FILESDIR}/${PN}-svx.patch"
+	"${FILESDIR}/${PN}-vbaobj-visibility-fix.patch"
+	"${FILESDIR}/${PN}-solenv-build-crash.patch"
+	"${FILESDIR}/${PN}-as-needed-gtk.patch"
+	"${FILESDIR}/${PN}-translate-toolkit-parallel-solenv.patch"
+	"${FILESDIR}/${PN}-gbuild-use-cxxflags.patch"
 	"${FILESDIR}/${PN}-installed-files-permissions.patch"
+	"${FILESDIR}/${PN}-check-for-avx.patch"
+	"${FILESDIR}/${PN}-append-no-avx.patch"
+	"${FILESDIR}/${PN}-32b-qt4-libdir.patch"
 	"${FILESDIR}/${PN}-binfilter-as-needed.patch"
 	"${FILESDIR}/${PN}-kill-cppunit.patch"
 )
@@ -229,7 +238,7 @@ PATCHES=(
 # Needs lots and lots of work and compiling
 RESTRICT="test"
 
-S="${WORKDIR}/${PN}-core-${PV}"
+S="${WORKDIR}/${PN}-bootstrap-${PV}"
 
 pkg_setup() {
 	java-pkg-opt-2_pkg_setup
@@ -290,7 +299,7 @@ src_unpack() {
 	if [[ ${PV} != *9999* ]]; then
 		for mod in ${MODULES}; do
 			unpack "${PN}-${mod}-${PV}.tar.bz2"
-			if [[ ${mod} != core ]]; then
+			if [[ ${mod} != bootstrap ]]; then
 				mv -n "${WORKDIR}/${PN}-${mod}-${PV}"/* "${S}"
 				rm -rf "${WORKDIR}/${PN}-${mod}-${PV}"
 			fi
@@ -304,7 +313,7 @@ src_unpack() {
 			EGIT_REPO_URI="git://anongit.freedesktop.org/${PN}/${mod}"
 			EGIT_NOUNPACK="true"
 			git-2_src_unpack
-			if [[ ${mod} != core ]]; then
+			if [[ ${mod} != bootstrap ]]; then
 				mv -n "${WORKDIR}/${PN}-${mod}-${PV}"/* "${S}"
 				rm -rf "${WORKDIR}/${PN}-${mod}-${PV}"
 			fi
@@ -376,7 +385,7 @@ src_configure() {
 	internal_libs+="
 		--without-system-hsqldb
 		--without-system-cppunit
-		--without-system-sane
+		--without-system-sane-header
 	"
 
 	# When building without java some things needs to be done
@@ -417,9 +426,9 @@ src_configure() {
 	#   only expections are mozilla and odbc/sane/xrender-header(s).
 	#   for jars the exception is db.jar controlled by --with-system-db
 	# --enable-unix-qstart-libpng: use libpng splashscreen that is faster
+	# --disable-broffice: do not use brazillian brand just be uniform
 	# --enable-cairo: ensure that cairo is always required
 	# --enable-*-link: link to the library rather than just dlopen on runtime
-	# --enable-release-build: build the libreoffice as release
 	# --disable-fetch-external: prevent dowloading during compile phase
 	# --disable-gnome-vfs: old gnome virtual fs support
 	# --disable-kdeab: kde3 adressbook
@@ -427,7 +436,6 @@ src_configure() {
 	# --disable-pch: precompiled headers cause build crashes
 	# --disable-rpath: relative runtime path is not desired
 	# --disable-static-gtk: ensure that gtk is linked dynamically
-	# --disable-ugly: disable ugly pieces of code
 	# --disable-zenity: disable build icon
 	# --with-extension-integration: enable any extension integration support
 	# --with-{max-jobs,num-cpus}: ensuring parallel building
@@ -440,14 +448,15 @@ src_configure() {
 		--with-system-jars \
 		--with-system-db \
 		--with-system-dicts \
-		--enable-cairo-canvas \
+		--enable-cairo \
+		--enable-fontconfig \
 		--enable-largefile \
-		--enable-python=system \
 		--enable-randr \
 		--enable-randr-link \
-		--enable-release-build \
 		--enable-unix-qstart-libpng \
+		--enable-Xaw \
 		--enable-xrender-link \
+		--disable-broffice \
 		--disable-crashdump \
 		--disable-dependency-tracking \
 		--disable-epm \
@@ -460,7 +469,6 @@ src_configure() {
 		--disable-rpath \
 		--disable-static-gtk \
 		--disable-strip-solver \
-		--disable-ugly \
 		--disable-zenity \
 		--with-alloc=system \
 		--with-build-version="Gentoo official package" \
@@ -482,6 +490,7 @@ src_configure() {
 		--without-ppds \
 		--without-stlport \
 		$(use_enable binfilter) \
+		$(use_enable cups) \
 		$(use_enable dbus) \
 		$(use_enable debug crashdump) \
 		$(use_enable eds evolution2) \
@@ -491,7 +500,6 @@ src_configure() {
 		$(use_enable graphite) \
 		$(use_enable gstreamer) \
 		$(use_enable gtk) \
-		$(use_enable gtk gtk3) \
 		$(use_enable gtk systray) \
 		$(use_enable java ext-scripting-beanshell) \
 		$(use_enable kde kde4) \
@@ -500,7 +508,8 @@ src_configure() {
 		$(use_enable nsplugin mozilla) \
 		$(use_enable odk) \
 		$(use_enable opengl) \
-		$(use_enable svg librsvg system) \
+		$(use_enable python) \
+		$(use_enable python ext-scripting-python) \
 		$(use_enable vba) \
 		$(use_enable vba activex-component) \
 		$(use_enable webdav neon) \
