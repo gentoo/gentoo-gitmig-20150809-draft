@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-4.0.ebuild,v 1.1 2011/05/11 20:06:45 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-4.1.ebuild,v 1.1 2011/09/03 20:33:22 grobian Exp $
 
 EAPI="3"
 
@@ -8,8 +8,10 @@ inherit eutils flag-o-matic toolchain-funcs
 
 RESTRICT="test" # the test suite will test what's installed.
 
-LD64=ld64-123.2
-CCTOOLS=cctools-800
+LD64=ld64-123.2.1
+CCTOOLS=cctools-806
+LIBUNWIND=libunwind-30
+DYLD=dyld-195.5
 # http://lists.apple.com/archives/Darwin-dev/2009/Sep/msg00025.html
 UNWIND=binutils-apple-3.2-unwind-patches-5
 
@@ -17,14 +19,15 @@ DESCRIPTION="Darwin assembler as(1) and static linker ld(1), Xcode Tools ${PV}"
 HOMEPAGE="http://www.opensource.apple.com/darwinsource/"
 SRC_URI="http://www.opensource.apple.com/tarballs/ld64/${LD64}.tar.gz
 	http://www.opensource.apple.com/tarballs/cctools/${CCTOOLS}.tar.gz
+	http://www.opensource.apple.com/tarballs/libunwind/${LIBUNWIND}.tar.gz
+	http://www.opensource.apple.com/tarballs/dyld/${DYLD}.tar.gz
 	http://www.gentoo.org/~grobian/distfiles/${UNWIND}.tar.xz
 	http://www.gentoo.org/~grobian/distfiles/libunwind-llvm-115426.tar.bz2"
 
 LICENSE="APSL-2"
-#uncompilable
 #KEYWORDS="~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS=""
 IUSE="lto test"
-SLOT="0"
 
 RDEPEND="sys-devel/binutils-config
 	lto? ( sys-devel/llvm )
@@ -41,9 +44,9 @@ fi
 is_cross() { [[ ${CHOST} != ${CTARGET} ]] ; }
 
 if is_cross ; then
-	SLOT="${CTARGET}"
+	SLOT="${CTARGET}-4"
 else
-	SLOT="0"
+	SLOT="4"
 fi
 
 LIBPATH=/usr/$(get_libdir)/binutils/${CTARGET}/${PV}
@@ -58,6 +61,36 @@ fi
 S=${WORKDIR}
 
 src_prepare() {
+	cd "${S}"/${LIBUNWIND}/src
+	cp "${FILESDIR}"/${LIBUNWIND}-Makefile Makefile
+
+	cd "${S}"/${LD64}/src
+	cp "${FILESDIR}"/${LD64%.1}-Makefile Makefile
+	epatch "${FILESDIR}"/${LD64}-lto.patch
+
+	ln -s ../../${CCTOOLS}/include
+	cp other/prune_trie.h include/mach-o/ || die
+	# use our own copy of lto.h, which doesn't require llvm build-env
+	mkdir -p include/llvm-c || die
+	cp "${WORKDIR}"/ld64-unwind/ld64-97.14-llvm-lto.h include/llvm-c/lto.h || die
+	# make libunwind sources known
+	#pushd "${WORKDIR}"/libunwind/include > /dev/null
+	ln -s ../../${LIBUNWIND}/src libunwind || die
+	cp ../../${LIBUNWIND}/include/*.h include/ || die
+	#popd > /dev/null
+
+	echo '' > configure.h
+	echo '' > linker_opts
+	local VER_STR="\"@(#)PROGRAM:ld  PROJECT:${LD64} (Gentoo ${PN}-${PVR})\\n\""
+	echo "char ldVersionString[] = ${VER_STR};" > version.cpp
+
+	epatch "${FILESDIR}"/${LD64%.1}-debug-backtrace.patch
+	[[ ${CHOST} == powerpc*-darwin* ]] && \
+		epatch "${FILESDIR}"/${LD64%.1}-darwin8-no-mlong-branch-warning.patch
+	if use !lto ; then
+		sed -i -e '/#define LTO_SUPPORT 1/d' other/ObjectDump.cpp || die
+	fi
+
 	cd "${S}"/${CCTOOLS}
 	epatch "${FILESDIR}"/${PN}-4.0-as.patch
 	epatch "${FILESDIR}"/${PN}-4.0-as-dir.patch
@@ -66,31 +99,6 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.1.1-nmedit.patch
 	epatch "${FILESDIR}"/${PN}-3.1.1-no-headers.patch
 	epatch "${FILESDIR}"/${PN}-4.0-no-oss-dir.patch
-
-	cd "${S}"/${LD64}/src
-	cp "${FILESDIR}"/${LD64}-Makefile Makefile
-
-	ln -s ../../${CCTOOLS}/include
-	cp other/prune_trie.h include/mach-o/ || die
-	# use our own copy of lto.h, which doesn't require llvm build-env
-	mkdir -p include/llvm-c || die
-	cp "${WORKDIR}"/ld64-unwind/ld64-97.14-llvm-lto.h include/llvm-c/lto.h || die
-	# make libunwind sources known
-	pushd "${WORKDIR}"/libunwind/include > /dev/null
-	ln -s ../src libunwind || die
-	popd > /dev/null
-
-	echo '' > configure.h
-	echo '' > linker_opts
-	local VER_STR="\"@(#)PROGRAM:ld  PROJECT:${LD64} (Gentoo ${PN}-${PVR})\\n\""
-	echo "char ldVersionString[] = ${VER_STR};" > version.cpp
-
-	epatch "${FILESDIR}"/${LD64}-debug-backtrace.patch
-	[[ ${CHOST} == powerpc*-darwin* ]] && \
-		epatch "${FILESDIR}"/${LD64}-darwin8-no-mlong-branch-warning.patch
-	if use !lto ; then
-		sed -i -e '/#define LTO_SUPPORT 1/d' other/ObjectDump.cpp || die
-	fi
 
 	# clean up test suite
 	cd "${S}"/${LD64}
@@ -140,21 +148,31 @@ src_configure() {
 		append-flags -DLTO_SUPPORT
 		append-ldflags -L"${EPREFIX}"/usr/$(get_libdir)/llvm
 		append-libs LTO
+		LTO=1
 	else
 		append-flags -ULTO_SUPPORT
+		LTO=0
 	fi
 	append-flags -DNDEBUG
 	append-flags -I${WORKDIR}/libunwind/include
 }
 
+compile_libunwind() {
+	einfo "building ${LIBUNWIND}"
+	cd "${S}"/${LIBUNWIND}/src
+	emake DYLDINCS=-I../../${DYLD}/include || die
+}
+
 compile_ld64() {
+	einfo "building ${LD64}"
 	cd "${S}"/${LD64}/src
 	# remove antiquated copy that's available on any OSX system and
 	# breaks ld64 compilation
 	mv include/mach-o/dyld.h{,.disable}
 	emake \
+		LTO=${LTO} \
 		CFLAGS="${CFLAGS}" \
-		CXXFLAGS="${CXXFLAGS}" \
+		CXXFLAGS="${CXXFLAGS} -I../../${DYLD}/include" \
 		LDFLAGS="${LDFLAGS} ${LIBS}" \
 		|| die "emake failed for ld64"
 	use test && emake build_test
@@ -163,6 +181,7 @@ compile_ld64() {
 }
 
 compile_cctools() {
+	einfo "building ${CCTOOLS}"
 	cd "${S}"/${CCTOOLS}
 	emake \
 		LIB_PRUNETRIE="-L../../${LD64}/src -lprunetrie" \
@@ -179,6 +198,7 @@ compile_cctools() {
 }
 
 src_compile() {
+	compile_libunwind
 	compile_ld64
 	compile_cctools
 }
@@ -209,7 +229,8 @@ install_cctools() {
 		BUILD_OBSOLETE_ARCH= \
 		DSTROOT=\"${D}\" \
 		USRBINDIR=\"${EPREFIX}\"${BINPATH} \
-		LIBDIR=\"${EPREFIX}\"${LIBPATH}
+		LIBDIR=\"${EPREFIX}\"${LIBPATH} \
+		LOCLIBDIR=\"${EPREFIX}\"${LIBPATH}
 
 	cd "${ED}"${BINPATH}
 	insinto ${DATAPATH}/man/man1

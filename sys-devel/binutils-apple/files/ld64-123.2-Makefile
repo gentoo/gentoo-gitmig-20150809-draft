@@ -1,12 +1,30 @@
-CPPFLAGS += -Iinclude -Iabstraction -Ild -Iother -I.
+CPPFLAGS += "-DCPU_SUBTYPE_X86_ALL=((cpu_subtype_t)3)" -Iinclude -Iabstraction -Ild -Ild/parsers -Iother -I.
 
 # dropped machocheck due to compilation failures
-all: rebase unwinddump dyldinfo ObjectDump ld64
+all: rebase unwinddump dyldinfo ld64 ObjectDump
 
 libprunetrie.a: other/PruneTrie.o other/prune_trie.h
 	$(AR) -s -r -c libprunetrie.a other/PruneTrie.o
 
-ld64: libprunetrie.a ld/ld.o ld/Options.o ld/debugline.o version.o
+LD64LIBS=ld/parsers/archive_file.o ld/parsers/macho_relocatable_file.o \
+		 ld/parsers/opaque_section_file.o \
+		 ld/parsers/macho_dylib_file.o \
+		 ld/passes/branch_island.o ld/passes/dylibs.o ld/passes/order_file.o \
+		 ld/passes/branch_shim.o ld/passes/got.o ld/passes/tlvp.o \
+		 ld/passes/compact_unwind.o ld/passes/huge.o \
+		 ld/passes/dtrace_dof.o ld/passes/objc.o \
+		 ld/passes/stubs/stubs.o \
+		 ld/InputFiles.o ld/OutputFile.o ld/SymbolTable.o \
+		 ld/Options.o ld/Resolver.o ld/debugline.o ld/ld.o
+
+ifeq ($(LTO),1)
+LD64LIBS += ld/parsers/lto_file.o
+CPPFLAGS += "-DLTO"
+else
+CPPFLAGS += "-ULTO"
+endif
+
+ld64: libprunetrie.a $(LD64LIBS) version.o
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $^
 
 rebase: other/rebase.o
