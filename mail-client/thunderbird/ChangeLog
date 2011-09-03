@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.91 2011/08/31 21:14:22 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.92 2011/09/03 08:11:03 xarthisius Exp $
+
+  03 Sep 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  thunderbird-3.1.12.ebuild:
+  ppc/ppc64 stable wrt #379549
 
 *thunderbird-3.1.13 (31 Aug 2011)
 
