@@ -16,6 +16,5 @@
 	<flag name='ssl'>Use OpenSSL as crypto backend</flag>
 	<flag name='polarssl'>Use PolarSSL as crypto backend</flag>	
 	<flag name='debug'>Enable all debugging options</flag>
-	<flag name='largefile'>Support for large files</flag>
 </use>
 </pkgmetadata>
