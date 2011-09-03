@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.211 2011/08/28 22:37:17 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.212 2011/09/03 08:07:52 xarthisius Exp $
+
+  03 Sep 2011; Kacper Kowalik <xarthisius@gentoo.org> nss-3.12.10.ebuild:
+  ppc/ppc64 stable wrt #379549
 
   28 Aug 2011; Tony Vroon <chainsaw@gentoo.org> nss-3.12.10.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in bug
