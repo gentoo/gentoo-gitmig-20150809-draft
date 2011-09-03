@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.120 2011/09/02 23:06:33 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.121 2011/09/03 08:22:35 ferringb Exp $
+
+*pkgcore-0.7.1 (03 Sep 2011)
+
+  03 Sep 2011; Brian Harring <ferringb@gentoo.org> -pkgcore-0.7.ebuild,
+  +pkgcore-0.7.1.ebuild, -files/0.7-racy-slot-shadowing.patch:
+  verbump to 0.7.1, pruning 0.7; bugfixes reported by users. Would've been
+  nice if they spotted it in -9999 rather than hours after a release :/
 
 *pkgcore-0.7 (02 Sep 2011)
 

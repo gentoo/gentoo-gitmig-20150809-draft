@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.7.ebuild,v 1.1 2011/09/02 23:06:33 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.7.1.ebuild,v 1.1 2011/09/03 08:22:35 ferringb Exp $
 
 EAPI="3"
 DISTUTILS_SRC_TEST="setup.py"
 
-inherit eutils distutils
+inherit distutils
 
 DESCRIPTION="pkgcore package manager"
 HOMEPAGE="http://pkgcore.googlecode.com/"
@@ -31,10 +31,6 @@ pkg_setup() {
 	python_pkg_setup
 }
 
-src_prepare() {
-	epatch "${FILESDIR}/0.7-racy-slot-shadowing.patch"
-}
-
 src_compile() {
 	distutils_src_compile
 
@@ -50,10 +46,6 @@ src_install() {
 		dohtml -r doc dev-notes
 		doman man/*.1
 	fi
-
-	dodoc doc/*.rst man/*.rst
-	docinto dev-notes
-	dodoc dev-notes/*.rst
 }
 
 pkg_postinst() {
