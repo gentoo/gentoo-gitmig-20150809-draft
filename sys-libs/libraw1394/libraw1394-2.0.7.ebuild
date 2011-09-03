@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/libraw1394-2.0.7.ebuild,v 1.1 2011/03/25 02:04:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/libraw1394-2.0.7.ebuild,v 1.2 2011/09/03 09:09:33 scarabeus Exp $
 
-EAPI="2"
+EAPI=4
 
 DESCRIPTION="library that provides direct access to the IEEE 1394 bus"
 HOMEPAGE="http://ieee1394.wiki.kernel.org/"
@@ -15,13 +15,9 @@ IUSE=""
 
 RDEPEND="!<media-libs/libdc1394-1.2.2"
 
+DOCS=( AUTHORS ChangeLog NEWS README )
+
 src_configure() {
 	econf \
-		--disable-dependency-tracking \
 		--without-fw-dir
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README
 }
