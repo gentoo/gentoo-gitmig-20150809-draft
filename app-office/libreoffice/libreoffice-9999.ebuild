@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999.ebuild,v 1.22 2011/09/03 16:08:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999.ebuild,v 1.23 2011/09/03 19:13:13 scarabeus Exp $
 
 EAPI=3
 
@@ -169,13 +169,16 @@ COMMON_DEPEND="
 	webdav? ( net-libs/neon )
 "
 
-# FIXME: l10n after release/branching
 RDEPEND="${COMMON_DEPEND}
 	!app-office/libreoffice-bin
 	!app-office/openoffice-bin
 	!app-office/openoffice
-	>=app-office/libreoffice-l10n-3.4
 	java? ( >=virtual/jre-1.6 )
+"
+
+# FIXME: l10n after release/branching
+PDEPEND="
+    >=app-office/libreoffice-l10n-3.4
 "
 
 DEPEND="${COMMON_DEPEND}

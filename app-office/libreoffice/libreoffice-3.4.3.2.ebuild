@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.3.2.ebuild,v 1.5 2011/09/03 16:08:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.3.2.ebuild,v 1.6 2011/09/03 19:13:13 scarabeus Exp $
 
 EAPI=3
 
@@ -174,8 +174,11 @@ RDEPEND="${COMMON_DEPEND}
 	!app-office/libreoffice-bin
 	!app-office/openoffice-bin
 	!app-office/openoffice
-	>=app-office/libreoffice-l10n-$(get_version_component_range 1-2)
 	java? ( >=virtual/jre-1.6 )
+"
+
+PDEPEND="
+	>=app-office/libreoffice-l10n-$(get_version_component_range 1-2)
 "
 
 DEPEND="${COMMON_DEPEND}
