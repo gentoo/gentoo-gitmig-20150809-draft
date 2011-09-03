@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-1.0.4.ebuild,v 1.1 2011/04/22 14:03:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-1.0.6.ebuild,v 1.1 2011/09/03 02:06:29 flameeyes Exp $
 
 EAPI=4
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="Provides Remote-Console and System Management Software as per IPMI v1.5/2.0"
 HOMEPAGE="http://www.gnu.org/software/freeipmi/"
@@ -22,6 +22,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# Fix build mistake, only causes warnings but at least stop it.
 	sed -i -e '/-module/d' "${S}"/libfreeipmi/src/Makefile.am || die
+
+	epatch "${FILESDIR}"/${PN}-1.0.5-strictaliasing.patch
 
 	AT_M4DIR="config" eautoreconf
 }
