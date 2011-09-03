@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20110502-r2.ebuild,v 1.2 2011/09/02 19:08:32 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20110502-r2.ebuild,v 1.3 2011/09/03 17:33:45 grobian Exp $
 
 EAPI="3"
 
@@ -54,6 +54,7 @@ src_compile() {
 }
 
 src_install() {
+	mkdir -p "${ED}"
 	cp -pPR * "${ED}"/ || die
 
 	mv "${ED}"/usr/share/doc/{ca-certificates,${PF}} || die
