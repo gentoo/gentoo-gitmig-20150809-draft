@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/modsecurity-crs/modsecurity-crs-2.1.2.ebuild,v 1.2 2011/03/24 14:58:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/modsecurity-crs/modsecurity-crs-2.1.2.ebuild,v 1.3 2011/09/03 09:05:04 scarabeus Exp $
 
-EAPI=2
+EAPI=4
 
 DESCRIPTION="Core Rule Set for ModSecurity"
 HOMEPAGE="http://www.owasp.org/index.php/Category:OWASP_ModSecurity_Core_Rule_Set_Project"
@@ -21,16 +21,16 @@ S="${WORKDIR}/${PN}_${PV}"
 RULESDIR=/etc/modsecurity
 
 src_install() {
-	insinto "${RULESDIR}"/base_rules || die
-	doins base_rules/* || die
+	insinto "${RULESDIR}"/base_rules
+	doins base_rules/*
 
 	insinto "${RULESDIR}"/optional_rules
-	doins optional_rules/* || die
+	doins optional_rules/*
 
 	insinto "${RULESDIR}"/experimental_rules
-	doins experimental_rules/* || die
+	doins experimental_rules/*
 
-	dodoc CHANGELOG README || die
+	dodoc CHANGELOG README
 
 	(
 		cat - <<EOF
@@ -55,7 +55,7 @@ EOF
 	) > "${T}"/"80_${PN}.conf"
 
 	insinto /etc/apache2/modules.d/
-	doins "${T}"/"80_${PN}.conf" || die
+	doins "${T}"/"80_${PN}.conf"
 }
 
 pkg_postinst() {
