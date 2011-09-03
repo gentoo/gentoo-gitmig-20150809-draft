@@ -1,0 +1,382 @@
+--- srecord-1.57/Makefile.in.orig
++++ srecord-1.57/Makefile.in
+@@ -316,9 +316,9 @@
+ 		man/man1/o_sequence.so man/man1/z_copyright.so \
+ 		man/man1/z_exit.so man/man1/z_options.so \
+ 		man/man1/.mandir 
+-	$(SOELIM) -I. -Iman/man1 man/man1/srec_cat.1 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man1 man/man1/srec_cat.1 > man/man1/srec_cat.1.man.man
++	$(INSTALL_DATA) man/man1/srec_cat.1.man.man $@
++	@rm -f man/man1/srec_cat.1.man
+ 
+ $(mandir)/man1/srec_cmp.1: man/man1/srec_cmp.1 etc/version.so \
+ 		man/man1/o_at.so man/man1/o_ignore_checksums.so \
+@@ -326,15 +326,15 @@
+ 		man/man1/o_sequence.so man/man1/z_copyright.so \
+ 		man/man1/z_exit.so man/man1/z_options.so \
+ 		man/man1/.mandir 
+-	$(SOELIM) -I. -Iman/man1 man/man1/srec_cmp.1 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man1 man/man1/srec_cmp.1 > man/man1/srec_cmp.1.man
++	$(INSTALL_DATA) man/man1/srec_cmp.1.man $@
++	@rm -f man/man1/srec_cmp.1.man
+ 
+ $(mandir)/man1/srec_examples.1: man/man1/srec_examples.1 etc/version.so \
+ 		man/man1/z_copyright.so man/man1/.mandir 
+-	$(SOELIM) -I. -Iman/man1 man/man1/srec_examples.1 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man1 man/man1/srec_examples.1 > man/man1/srec_examples.1.man
++	$(INSTALL_DATA) man/man1/srec_examples.1.man $@
++	@rm -f man/man1/srec_examples.1.man
+ 
+ $(mandir)/man1/srec_info.1: man/man1/srec_info.1 etc/version.so \
+ 		man/man1/o_at.so man/man1/o_ignore_checksums.so \
+@@ -342,21 +342,21 @@
+ 		man/man1/o_sequence.so man/man1/z_copyright.so \
+ 		man/man1/z_exit.so man/man1/z_options.so \
+ 		man/man1/.mandir 
+-	$(SOELIM) -I. -Iman/man1 man/man1/srec_info.1 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man1 man/man1/srec_info.1 > man/man1/srec_info.1.man
++	$(INSTALL_DATA) man/man1/srec_info.1.man $@
++	@rm -f man/man1/srec_info.1.man
+ 
+ $(mandir)/man1/srec_input.1: man/man1/srec_input.1 etc/version.so \
+ 		man/man1/o_ignore_checksums.so man/man1/z_copyright.so \
+ 		man/man1/z_options.so man/man1/.mandir 
+-	$(SOELIM) -I. -Iman/man1 man/man1/srec_input.1 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man1 man/man1/srec_input.1 > man/man1/srec_input.1.man
++	$(INSTALL_DATA) man/man1/srec_input.1.man $@
++	@rm -f man/man1/srec_input.1.man
+ 
+ $(mandir)/man1/srec_license.1: man/man1/srec_license.1  man/man1/.mandir
+-	$(SOELIM) -I. -Iman/man1 man/man1/srec_license.1 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man1 man/man1/srec_license.1 > man/man1/srec_license.1.man
++	$(INSTALL_DATA) man/man1/srec_license.1.man $@
++	@rm -f man/man1/srec_license.1.man
+ 
+ man/man3/.mandir: man/.mandir
+ 	-$(INSTALL) -m 0755 -d $(mandir)/man3
+@@ -365,15 +365,15 @@
+ 
+ $(mandir)/man3/srecord.3: man/man3/srecord.3 etc/version.so \
+ 		man/man1/z_copyright.so man/man3/.mandir 
+-	$(SOELIM) -I. -Iman/man3 man/man3/srecord.3 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man3 man/man3/srecord.3 > man/man3/srecord.3.man
++	$(INSTALL_DATA) man/man3/srecord.3.man $@
++	@rm -f man/man3/srecord.3.man
+ 
+ $(mandir)/man3/srecord_license.3: man/man3/srecord_license.3 \
+ 		man/man3/.mandir 
+-	$(SOELIM) -I. -Iman/man3 man/man3/srecord_license.3 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man3 man/man3/srecord_license.3 > man/man3/srecord_license.3.man
++	$(INSTALL_DATA) man/man3/srecord_license.3.man $@
++	@rm -f man/man3/srecord_license.3.man
+ 
+ man/man5/.mandir: man/.mandir
+ 	-$(INSTALL) -m 0755 -d $(mandir)/man5
+@@ -382,195 +382,195 @@
+ 
+ $(mandir)/man5/srec_aomf.5: man/man5/srec_aomf.5 etc/version.so \
+ 		man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_aomf.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_aomf.5 > man/man5/srec_aomf.5.man
++	$(INSTALL_DATA) man/man5/srec_aomf.5.man $@
++	@rm -f man/man5/srec_aomf.5.man
+ 
+ $(mandir)/man5/srec_ascii_hex.5: man/man5/srec_ascii_hex.5 \
+ 		etc/version.so man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_ascii_hex.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_ascii_hex.5 > man/man5/srec_ascii_hex.5.man
++	$(INSTALL_DATA) man/man5/srec_ascii_hex.5.man $@
++	@rm -f man/man5/srec_ascii_hex.5.man
+ 
+ $(mandir)/man5/srec_atmel_generic.5: man/man5/srec_atmel_generic.5 \
+ 		etc/version.so man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_atmel_generic.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_atmel_generic.5 > man/man5/srec_atmel_generic.5.man
++	$(INSTALL_DATA) man/man5/srec_atmel_generic.5.man $@
++	@rm -f man/man5/srec_atmel_generic.5.man
+ 
+ $(mandir)/man5/srec_binary.5: man/man5/srec_binary.5 etc/version.so \
+ 		man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_binary.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_binary.5 > man/man5/srec_binary.5.man
++	$(INSTALL_DATA) man/man5/srec_binary.5.man $@
++	@rm -f man/man5/srec_binary.5.man
+ 
+ $(mandir)/man5/srec_brecord.5: man/man5/srec_brecord.5 etc/version.so \
+ 		man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_brecord.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_brecord.5 > man/man5/srec_brecord.5.man
++	$(INSTALL_DATA) man/man5/srec_brecord.5.man $@
++	@rm -f man/man5/srec_brecord.5.man
+ 
+ $(mandir)/man5/srec_cosmac.5: man/man5/srec_cosmac.5 etc/version.so \
+ 		man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_cosmac.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_cosmac.5 > man/man5/srec_cosmac.5.man
++	$(INSTALL_DATA) man/man5/srec_cosmac.5.man $@
++	@rm -f man/man5/srec_cosmac.5.man
+ 
+ $(mandir)/man5/srec_dec_binary.5: man/man5/srec_dec_binary.5 \
+ 		etc/version.so man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_dec_binary.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_dec_binary.5 > man/man5/srec_dec_binary.5.man
++	$(INSTALL_DATA) man/man5/srec_dec_binary.5.man $@
++	@rm -f man/man5/srec_dec_binary.5.man
+ 
+ $(mandir)/man5/srec_emon52.5: man/man5/srec_emon52.5  man/man5/.mandir
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_emon52.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_emon52.5 > man/man5/srec_emon52.5.man
++	$(INSTALL_DATA) man/man5/srec_emon52.5.man $@
++	@rm -f man/man5/srec_emon52.5.man
+ 
+ $(mandir)/man5/srec_fairchild.5: man/man5/srec_fairchild.5 \
+ 		etc/version.so man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_fairchild.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_fairchild.5 > man/man5/srec_fairchild.5.man
++	$(INSTALL_DATA) man/man5/srec_fairchild.5.man $@
++	@rm -f man/man5/srec_fairchild.5.man
+ 
+ $(mandir)/man5/srec_fastload.5: man/man5/srec_fastload.5 etc/version.so \
+ 		man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_fastload.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_fastload.5 > man/man5/srec_fastload.5.man
++	$(INSTALL_DATA) man/man5/srec_fastload.5.man $@
++	@rm -f man/man5/srec_fastload.5.man
+ 
+ $(mandir)/man5/srec_formatted_binary.5: \
+ 		man/man5/srec_formatted_binary.5 etc/version.so \
+ 		man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_formatted_binary.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_formatted_binary.5 > man/man5/srec_formatted_binary.5.man
++	$(INSTALL_DATA) man/man5/srec_formatted_binary.5.man $@
++	@rm -f man/man5/srec_formatted_binary.5.man
+ 
+ $(mandir)/man5/srec_forth.5: man/man5/srec_forth.5 etc/version.so \
+ 		man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_forth.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_forth.5 > man/man5/srec_forth.5.man
++	$(INSTALL_DATA) man/man5/srec_forth.5.man $@
++	@rm -f man/man5/srec_forth.5.man
+ 
+ $(mandir)/man5/srec_fpc.5: man/man5/srec_fpc.5  man/man5/.mandir
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_fpc.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_fpc.5 > man/man5/srec_fpc.5.man
++	$(INSTALL_DATA) man/man5/srec_fpc.5.man $@
++	@rm -f man/man5/srec_fpc.5.man
+ 
+ $(mandir)/man5/srec_intel.5: man/man5/srec_intel.5 etc/version.so \
+ 		man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_intel.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_intel.5 > man/man5/srec_intel.5.man
++	$(INSTALL_DATA) man/man5/srec_intel.5.man $@
++	@rm -f man/man5/srec_intel.5.man
+ 
+ $(mandir)/man5/srec_intel16.5: man/man5/srec_intel16.5 etc/version.so \
+ 		man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_intel16.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_intel16.5 > man/man5/srec_intel16.5.man
++	$(INSTALL_DATA) man/man5/srec_intel16.5.man $@
++	@rm -f man/man5/srec_intel16.5.man
+ 
+ $(mandir)/man5/srec_mif.5: man/man5/srec_mif.5 etc/version.so \
+ 		man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_mif.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_mif.5 > man/man5/srec_mif.5.man
++	$(INSTALL_DATA) man/man5/srec_mif.5.man $@
++	@rm -f man/man5/srec_mif.5.man
+ 
+ $(mandir)/man5/srec_mos_tech.5: man/man5/srec_mos_tech.5 etc/version.so \
+ 		man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_mos_tech.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_mos_tech.5 > man/man5/srec_mos_tech.5.man
++	$(INSTALL_DATA) man/man5/srec_mos_tech.5.man $@
++	@rm -f man/man5/srec_mos_tech.5.man
+ 
+ $(mandir)/man5/srec_motorola.5: man/man5/srec_motorola.5 etc/version.so \
+ 		man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_motorola.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_motorola.5 > man/man5/srec_motorola.5.man
++	$(INSTALL_DATA) man/man5/srec_motorola.5.man $@
++	@rm -f man/man5/srec_motorola.5.man
+ 
+ $(mandir)/man5/srec_msbin.5: man/man5/srec_msbin.5 etc/version.so \
+ 		man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_msbin.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_msbin.5 > man/man5/srec_msbin.5.man
++	$(INSTALL_DATA) man/man5/srec_msbin.5.man $@
++	@rm -f man/man5/srec_msbin.5.man
+ 
+ $(mandir)/man5/srec_needham.5: man/man5/srec_needham.5 etc/version.so \
+ 		man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_needham.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_needham.5 > man/man5/srec_needham.5.man
++	$(INSTALL_DATA) man/man5/srec_needham.5.man $@
++	@rm -f man/man5/srec_needham.5.man
+ 
+ $(mandir)/man5/srec_os65v.5: man/man5/srec_os65v.5 etc/version.so \
+ 		man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_os65v.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_os65v.5 > man/man5/srec_os65v.5.man
++	$(INSTALL_DATA) man/man5/srec_os65v.5.man $@
++	@rm -f man/man5/srec_os65v.5.man
+ 
+ $(mandir)/man5/srec_signetics.5: man/man5/srec_signetics.5 \
+ 		man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_signetics.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_signetics.5 > man/man5/srec_signetics.5.man
++	$(INSTALL_DATA) man/man5/srec_signetics.5.man $@
++	@rm -f man/man5/srec_signetics.5.man
+ 
+ $(mandir)/man5/srec_spasm.5: man/man5/srec_spasm.5 etc/version.so \
+ 		man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_spasm.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_spasm.5 > man/man5/srec_spasm.5.man
++	$(INSTALL_DATA) man/man5/srec_spasm.5.man $@
++	@rm -f man/man5/srec_spasm.5.man
+ 
+ $(mandir)/man5/srec_spectrum.5: man/man5/srec_spectrum.5 etc/version.so \
+ 		man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_spectrum.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_spectrum.5 > man/man5/srec_spectrum.5.man
++	$(INSTALL_DATA) man/man5/srec_spectrum.5.man $@
++	@rm -f man/man5/srec_spectrum.5.man
+ 
+ $(mandir)/man5/srec_stewie.5: man/man5/srec_stewie.5 etc/version.so \
+ 		man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_stewie.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_stewie.5 > man/man5/srec_stewie.5.man
++	$(INSTALL_DATA) man/man5/srec_stewie.5.man $@
++	@rm -f man/man5/srec_stewie.5.man
+ 
+ $(mandir)/man5/srec_tektronix.5: man/man5/srec_tektronix.5 \
+ 		etc/version.so man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_tektronix.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_tektronix.5 > man/man5/srec_tektronix.5.man
++	$(INSTALL_DATA) man/man5/srec_tektronix.5.man $@
++	@rm -f man/man5/srec_tektronix.5.man
+ 
+ $(mandir)/man5/srec_tektronix_extended.5: \
+ 		man/man5/srec_tektronix_extended.5 etc/version.so \
+ 		man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_tektronix_extended.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_tektronix_extended.5 > man/man5/srec_tektronix_extended.5.man
++	$(INSTALL_DATA) man/man5/srec_tektronix_extended.5.man $@
++	@rm -f man/man5/srec_tektronix_extended.5.man
+ 
+ $(mandir)/man5/srec_ti_tagged.5: man/man5/srec_ti_tagged.5 \
+ 		etc/version.so man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_ti_tagged.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_ti_tagged.5 > man/man5/srec_ti_tagged.5.man
++	$(INSTALL_DATA) man/man5/srec_ti_tagged.5.man $@
++	@rm -f man/man5/srec_ti_tagged.5.man
+ 
+ $(mandir)/man5/srec_ti_tagged_16.5: man/man5/srec_ti_tagged_16.5 \
+ 		etc/version.so man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_ti_tagged_16.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_ti_tagged_16.5 > man/man5/srec_ti_tagged_16.5.man
++	$(INSTALL_DATA) man/man5/srec_ti_tagged_16.5.man $@
++	@rm -f man/man5/srec_ti_tagged_16.5.man
+ 
+ $(mandir)/man5/srec_ti_txt.5: man/man5/srec_ti_txt.5 etc/version.so \
+ 		man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_ti_txt.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_ti_txt.5 > man/man5/srec_ti_txt.5.man
++	$(INSTALL_DATA) man/man5/srec_ti_txt.5.man $@
++	@rm -f man/man5/srec_ti_txt.5.man
+ 
+ $(mandir)/man5/srec_vmem.5: man/man5/srec_vmem.5 etc/version.so \
+ 		man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_vmem.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_vmem.5 > man/man5/srec_vmem.5.man
++	$(INSTALL_DATA) man/man5/srec_vmem.5.man $@
++	@rm -f man/man5/srec_vmem.5.man
+ 
+ $(mandir)/man5/srec_wilson.5: man/man5/srec_wilson.5 etc/version.so \
+ 		man/man1/z_copyright.so man/man5/.mandir 
+-	$(SOELIM) -I. -Iman/man5 man/man5/srec_wilson.5 > tmp
+-	$(INSTALL_DATA) tmp $@
+-	@rm -f tmp
++	$(SOELIM) -I. -Iman/man5 man/man5/srec_wilson.5 > man/man5/srec_wilson.5.man
++	$(INSTALL_DATA) man/man5/srec_wilson.5.man $@
++	@rm -f man/man5/srec_wilson.5.man
+ 
+ script/test_prelude: script/test_prelude.in ./config.status
+ 	CONFIG_FILES=$@:script/test_prelude.in CONFIG_HEADERS= $(SH) \
