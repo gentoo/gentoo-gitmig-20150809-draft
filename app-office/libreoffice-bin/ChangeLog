@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.32 2011/09/02 10:53:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.33 2011/09/03 11:56:58 scarabeus Exp $
+
+  03 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-bin-3.4.3-r1.ebuild:
+  Depend on split libreoffice-l10n package instead of installing the languages
+  here.
 
 *libreoffice-bin-3.4.3-r1 (02 Sep 2011)
 
