@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/darwin-miscutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/darwin-miscutils/ChangeLog,v 1.8 2011/06/26 12:30:57 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/darwin-miscutils/ChangeLog,v 1.9 2011/09/03 10:44:37 grobian Exp $
+
+*darwin-miscutils-9 (03 Sep 2011)
+
+  03 Sep 2011; Fabian Groffen <grobian@gentoo.org> +darwin-miscutils-9.ebuild:
+  Bump to Lion version 10.7
 
   26 Jun 2011; Fabian Groffen <grobian@gentoo.org> darwin-miscutils-8.ebuild:
   (Try to) resolve naming conflict on OSX Lion, bug #372751
