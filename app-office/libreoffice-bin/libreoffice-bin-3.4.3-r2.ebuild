@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.3-r1.ebuild,v 1.3 2011/09/03 19:11:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.3-r2.ebuild,v 1.1 2011/09/03 21:03:58 scarabeus Exp $
 
 EAPI="3"
 
