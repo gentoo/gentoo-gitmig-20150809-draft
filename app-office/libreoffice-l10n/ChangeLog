@@ -1,0 +1,11 @@
+# ChangeLog for app-office/libreoffice-l10n
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.1 2011/09/03 11:45:52 scarabeus Exp $
+
+*libreoffice-l10n-3.4.3 (03 Sep 2011)
+
+  03 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +libreoffice-l10n-3.4.3.ebuild, +metadata.xml:
+  Add new package to contain split languages and helppack for libreoffice.
+  Fixes bug #381155.
+
