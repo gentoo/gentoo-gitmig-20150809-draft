@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/suacomp-9999.ebuild,v 1.3 2011/05/25 14:08:54 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/suacomp-9999.ebuild,v 1.4 2011/09/03 08:40:58 scarabeus Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ EGIT_REPO_URI="http://git.code.sf.net/p/suacomp/git"
 
 LICENSE="BEER-WARE"
 SLOT="0"
-KEYWORDS="-*"
+KEYWORDS=""
 IUSE="debug"
 
 DEPEND=""
