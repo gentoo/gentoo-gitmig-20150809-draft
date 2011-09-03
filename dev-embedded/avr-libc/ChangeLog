@@ -1,6 +1,12 @@
 # ChangeLog for dev-embedded/avr-libc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/ChangeLog,v 1.47 2011/07/20 13:53:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/ChangeLog,v 1.48 2011/09/03 08:40:14 radhermit Exp $
+
+*avr-libc-1.7.1 (03 Sep 2011)
+
+  03 Sep 2011; Tim Harder <radhermit@gentoo.org> +avr-libc-1.7.1.ebuild,
+  +files/avr-libc-1.7.1-gcc46.patch:
+  Version bump. Apply fix for gcc-4.6 issue (bug #371043 by klondike).
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #34534
