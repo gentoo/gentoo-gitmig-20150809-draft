@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.3-r1.ebuild,v 1.2 2011/09/03 11:56:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.3-r1.ebuild,v 1.3 2011/09/03 19:11:25 scarabeus Exp $
 
 EAPI="3"
 
@@ -40,7 +40,6 @@ RDEPEND="!app-office/libreoffice
 	!app-office/openoffice
 	!app-office/openoffice-bin
 	!prefix? ( sys-libs/glibc )
-	>=app-office/libreoffice-l10n-${PV}
 	app-arch/unzip
 	app-arch/zip
 	>=dev-lang/perl-5.0
@@ -51,7 +50,10 @@ RDEPEND="!app-office/libreoffice
 DEPEND="${RDEPEND}
 	sys-apps/findutils"
 
-PDEPEND="java? ( >=virtual/jre-1.5 )"
+PDEPEND="
+	>=app-office/libreoffice-l10n-${PV}
+	java? ( >=virtual/jre-1.5 )
+"
 
 RESTRICT="strip"
 
