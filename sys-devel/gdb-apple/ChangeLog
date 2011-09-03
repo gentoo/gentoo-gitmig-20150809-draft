@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gdb-apple
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb-apple/ChangeLog,v 1.12 2011/07/12 05:49:45 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb-apple/ChangeLog,v 1.13 2011/09/03 14:30:33 grobian Exp $
+
+*gdb-apple-1705 (03 Sep 2011)
+
+  03 Sep 2011; Fabian Groffen <grobian@gentoo.org> +gdb-apple-1705.ebuild:
+  Version bump to version from Developer Tools 4.1
 
   12 Jul 2011; Fabian Groffen <grobian@gentoo.org>
   files/gdb-apple-1518-darwin8-9.patch, files/gdb-apple-1518-darwin8.patch:
