@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/buildbot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.91 2011/03/23 21:30:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.92 2011/09/03 19:34:00 djc Exp $
+
+*buildbot-0.8.4_p2 (03 Sep 2011)
+
+  03 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> +buildbot-0.8.4_p2.ebuild:
+  Version bump to 0.8.4_p2 (fixes bug 373927).
 
   23 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> buildbot-0.8.3_p1.ebuild:
   ppc/ppc64 stable wrt #352741
