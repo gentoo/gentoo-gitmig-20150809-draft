@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Net-IRC
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IRC/ChangeLog,v 1.29 2010/03/27 21:47:02 robbat2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IRC/ChangeLog,v 1.30 2011/09/03 08:44:26 scarabeus Exp $
+
+  03 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> -Net-IRC-0.76.ebuild,
+  Net-IRC-0.79.ebuild:
+  Remove the stupid keywords. The 0.79 again has the files that .76 had
+  missing.
 
 *Net-IRC-0.79 (27 Mar 2010)
 
