@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/fdupes-1.50_pre2.ebuild,v 1.9 2011/03/21 10:47:37 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/fdupes-1.50_pre2.ebuild,v 1.10 2011/09/03 08:59:35 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
 inherit eutils toolchain-funcs
 
@@ -24,11 +24,11 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CC=$(tc-getCC) || die "emake failed"
+	emake CC=$(tc-getCC)
 }
 
 src_install() {
-	dobin fdupes || die
-	doman fdupes.1 || die
-	dodoc CHANGES CONTRIBUTORS README TODO || die
+	dobin fdupes
+	doman fdupes.1
+	dodoc CHANGES CONTRIBUTORS README TODO
 }

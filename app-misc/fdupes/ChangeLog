@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/fdupes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.44 2011/09/03 08:56:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.45 2011/09/03 08:59:35 scarabeus Exp $
+
+  03 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> fdupes-1.50_pre2.ebuild:
+  Latest eapi use.
 
   03 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Drop unused local desc.
