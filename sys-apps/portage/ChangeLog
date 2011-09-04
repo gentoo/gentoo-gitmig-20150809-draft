@@ -1,6 +1,23 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.867 2011/09/03 06:26:44 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.868 2011/09/04 01:06:10 zmedico Exp $
+
+*portage-2.2.0_alpha53 (04 Sep 2011)
+
+  04 Sep 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha53.ebuild:
+  2.2.0_alpha53 version bump. This includes all of the fixes in
+  portage-2.1.10.13. Bug #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.10.13 (04 Sep 2011)
+
+  04 Sep 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.13.ebuild:
+  2.1.10.13 version bump. This fixes bug #381087 (fix repoman
+  dependency.unknown check to detect more cases), bug #381629
+  (UnicodeEncodeError triggered by symlink content), bug #381657
+  (regression in 2.1.10.12 and 2.2.0_alpha53 that triggers AssertionError
+  with Python 3.1), and bug #381705 (handle AttributeError when loading
+  pickle from disk). Bug #381649 tracks all bugs fixed since
+  portage-2.1.10.11.
 
 *portage-2.2.0_alpha52 (03 Sep 2011)
 
