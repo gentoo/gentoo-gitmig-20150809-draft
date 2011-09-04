@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libtinynotify-cli/libtinynotify-cli-1.0.0.ebuild,v 1.1 2011/08/29 22:23:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libtinynotify-cli/libtinynotify-cli-1.1.ebuild,v 1.1 2011/09/04 11:29:24 mgorny Exp $
 
 EAPI=4
 inherit autotools-utils
