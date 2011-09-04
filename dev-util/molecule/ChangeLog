@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/molecule
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/molecule/ChangeLog,v 1.24 2011/08/13 14:03:16 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/molecule/ChangeLog,v 1.25 2011/09/04 12:18:44 lxnay Exp $
+
+*molecule-0.9.21 (04 Sep 2011)
+
+  04 Sep 2011; Fabio Erculiani <lxnay@gentoo.org> -molecule-0.9.20.7.ebuild,
+  +molecule-0.9.21.ebuild:
+  version bump
 
   13 Aug 2011; Fabio Erculiani <lxnay@gentoo.org> molecule-0.9.20.7.ebuild:
   install non-arch dependent files in /usr/lib
