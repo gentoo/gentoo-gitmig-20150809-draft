@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/csu/csu-79.ebuild,v 1.2 2011/09/03 10:52:52 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/csu/csu-79.ebuild,v 1.3 2011/09/04 13:20:29 grobian Exp $
 
 EAPI=3
 
@@ -13,6 +13,7 @@ LICENSE="APSL-2"
 SLOT="0"
 KEYWORDS="~ppc-macos ~x64-macos ~x86-macos"
 IUSE=""
+S=${WORKDIR}/Csu-${PV}
 
 src_prepare() {
 	# since we don't have crt0, we can't build it either

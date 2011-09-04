@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/csu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/csu/ChangeLog,v 1.6 2011/09/03 10:52:52 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/csu/ChangeLog,v 1.7 2011/09/04 13:20:29 grobian Exp $
+
+  04 Sep 2011; Fabian Groffen <grobian@gentoo.org> csu-79.ebuild:
+  Fix build on case-sensitive volumes, bug #381779
 
   03 Sep 2011; Fabian Groffen <grobian@gentoo.org> csu-79.ebuild:
   Fetch restriction seems to have been removed, fix installation failing,
