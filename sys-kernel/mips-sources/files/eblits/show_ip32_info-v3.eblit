@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/files/eblits/show_ip32_info-v2.eblit,v 1.1 2010/06/07 06:43:17 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/files/eblits/show_ip32_info-v3.eblit,v 1.1 2011/09/04 11:18:13 kumba Exp $
 
 # Eblit with information/warnings for IP32 (O2) users.
 #
@@ -24,11 +24,10 @@ show_ip32_info() {
 	echo -e ""
 
 	if use ip32r10k; then
-		eerror "The R10K patch for IP32 is out of date and doesn't apply.  It might or"
-		eerror "might not be updated in the future to apply.  When it did apply and boot,"
-		eerror "however, it was flaky at best, and didn't stay online for long before"
-		eerror "locking up.  Don't attempt to play with this unless you are seriously"
-		eerror "interested in kernel hacking."
+		eerror "The R10K patch for IP32 is now updated and will apply to 3.0.x kernels."
+		eerror "When it did apply and booted, it was flaky at best, and didn't stay online"
+		eerror "for long before locking up.  Don't attempt to play with this unless you"
+		eerror "are seriously interested in kernel hacking."
 		echo -e ""
 		eerror "We're interesting in finding anyone with knowledge of the R10000"
 		eerror "workaround for speculative execution listed in the R10000 Processor"

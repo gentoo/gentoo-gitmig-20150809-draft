@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.140 2011/04/25 06:45:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.141 2011/09/04 11:18:13 kumba Exp $
+
+*mips-sources-3.0.4 (04 Sep 2011)
+
+  04 Sep 2011; Joshua Kinard <kumba@gentoo.org>
+  +files/eblits/show_ip22_info-v3.eblit, +files/eblits/show_ip30_info-v2.eblit,
+  +files/eblits/show_ip32_info-v3.eblit, +files/eblits/src_unpack-v3.eblit,
+  -files/eblits/show_ip22_info-v2.eblit, -files/eblits/show_ip32_info-v2.eblit,
+  -files/eblits/src_unpack-v1.eblit, -mips-sources-2.6.31.12.ebuild,
+  -mips-sources-2.6.34.7.ebuild, -mips-sources-2.6.35.9.ebuild,
+  -mips-sources-2.6.36.3.ebuild, -mips-sources-2.6.37.ebuild,
+  +mips-sources-3.0.4.ebuild, metadata.xml:
+  Add mips-sources-3.0.4, and remove old ebuilds and associated eblits.
 
   25 Apr 2011; Ulrich Mueller <ulm@gentoo.org> mips-sources-2.6.29.1.ebuild,
   mips-sources-2.6.31.12.ebuild, mips-sources-2.6.34.7.ebuild,
