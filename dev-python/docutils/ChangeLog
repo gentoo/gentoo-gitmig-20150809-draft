@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/docutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.136 2011/09/04 07:23:00 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.137 2011/09/04 07:25:00 djc Exp $
+
+  04 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> -docutils-0.8_pre7013.ebuild,
+  -docutils-0.8_pre7031.ebuild, -docutils-0.8_pre7034.ebuild,
+  -docutils-0.8_pre7036.ebuild, -docutils-0.8_pre7038.ebuild:
+  Remove pre-release versions.
 
 *docutils-0.8.1 (04 Sep 2011)
 
