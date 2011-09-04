@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.431 2011/09/03 22:50:34 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.432 2011/09/04 19:39:43 chainsaw Exp $
+
+  04 Sep 2011; Tony Vroon <chainsaw@gentoo.org> chromium-13.0.782.220.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah "Armageddon" El Lazkani in security bug #381713 filed by Mike
+  "floppym" Gilbert.
 
   03 Sep 2011; Mike Gilbert <floppym@gentoo.org> chromium-9999-r1.ebuild:
   Need dev-util/scons to build nacl
