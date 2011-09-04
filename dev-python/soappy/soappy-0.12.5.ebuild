@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/soappy-0.12.5.ebuild,v 1.1 2011/08/12 09:40:41 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/soappy-0.12.5.ebuild,v 1.2 2011/09/04 07:01:44 djc Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -16,13 +16,14 @@ DESCRIPTION="SOAP implementation for Python"
 HOMEPAGE="http://pywebsvcs.sourceforge.net/"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="BSD"
 IUSE="examples ssl"
 
 DEPEND=">=dev-python/fpconst-0.7.1
-		dev-python/pyxml"
+		dev-python/pyxml
+		dev-python/wstools"
 RDEPEND="${DEPEND}
 		ssl? ( dev-python/m2crypto )"
 
