@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/mandelbulber
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mandelbulber/ChangeLog,v 1.4 2011/07/16 09:27:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mandelbulber/ChangeLog,v 1.5 2011/09/04 10:45:04 xarthisius Exp $
+
+*mandelbulber-1.08 (04 Sep 2011)
+
+  04 Sep 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  -mandelbulber-1.00.ebuild, -files/mandelbulber-1.00-gcc46.patch,
+  -files/mandelbulber-1.00-qa.patch, -mandelbulber-1.05.ebuild,
+  -files/mandelbulber-1.05-overflow.patch, +mandelbulber-1.08.ebuild,
+  +files/mandelbulber-1.08-qa.patch:
+  Version bump wrt #380327 by Tim Harder <radhermit@gentoo.org>, drop old
 
 *mandelbulber-1.05 (16 Jul 2011)
 

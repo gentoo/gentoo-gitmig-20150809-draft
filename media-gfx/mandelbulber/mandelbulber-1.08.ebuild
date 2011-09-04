@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mandelbulber/mandelbulber-1.00.ebuild,v 1.1 2011/04/27 20:19:08 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mandelbulber/mandelbulber-1.08.ebuild,v 1.1 2011/09/04 10:45:04 xarthisius Exp $
 
-EAPI=3
+EAPI=4
 
 inherit eutils toolchain-funcs
 
@@ -27,19 +27,19 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-qa.patch \
-		"${FILESDIR}"/${P}-gcc46.patch
+	# https://sourceforge.net/tracker/?func=detail&aid=3368617&group_id=303080&atid=1277701
+	epatch "${FILESDIR}"/${P}-qa.patch
 }
 
 src_compile() {
-	emake CXX="$(tc-getCXX)" -C makefiles all || die
+	emake CXX="$(tc-getCXX)" -C makefiles all
 }
 
 src_install() {
-	dobin makefiles/${PN} || die
-	dodoc README NEWS || die
+	dobin makefiles/${PN}
+	dodoc README NEWS
 	insinto /usr/share/${PN}
-	doins -r .${PN}/* || die
+	doins -r usr/share/*
 }
 
 pkg_postinst() {

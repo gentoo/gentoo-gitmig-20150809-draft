@@ -1,20 +1,16 @@
-Respect CXX,CXXFLAGS, fix as-needed
-
-Patch written by Kacper Kowalik <xarthisius@gentoo.org>
-
---- a/makefiles/makefile
-+++ b/makefiles/makefile
+--- makefiles/makefile.orig	2011-09-04 12:36:07.388901054 +0200
++++ makefiles/makefile	2011-09-04 12:37:15.301900642 +0200
 @@ -44,7 +44,7 @@
  mandelbulber: $(OBJS) $(USER_OBJS)
  	@echo 'Building target: $@'
  	@echo 'Invoking: GCC C++ Linker'
--	g++ `pkg-config --libs gtk+-2.0 gthread-2.0` -o"mandelbulber" $(OBJS) $(USER_OBJS) $(LIBS)
-+	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o "mandelbulber" $(OBJS) $(USER_OBJS) `pkg-config --libs gtk+-2.0 gthread-2.0` $(LIBS)
+-	g++ `pkg-config --libs gtk+-2.0 gthread-2.0` -o"mandelbulber"$(OBJS) $(USER_OBJS) $(LIBS)
++	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $(OBJS) $(USER_OBJS) `pkg-config --libs gtk+-2.0 gthread-2.0` $(LIBS)
  	@echo 'Finished building target: $@'
  	@echo ' '
  
---- a/makefiles/src/subdir.mk
-+++ b/makefiles/src/subdir.mk
+--- makefiles/src/subdir.mk.orig	2011-09-04 12:37:21.200901233 +0200
++++ makefiles/src/subdir.mk	2011-09-04 12:37:57.896900659 +0200
 @@ -65,7 +65,7 @@
  src/%.o: ../src/%.cpp
  	@echo 'Building file: $<'
