@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 2009 Gentoo Foundation
+# Copyright 2009-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/files/vnstatd.initd,v 1.1 2009/06/21 16:57:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/files/vnstatd.initd,v 1.2 2011/09/04 17:41:24 jer Exp $
 
 opts="reload"
 
@@ -15,7 +15,7 @@ start() {
 	ebegin "Starting vnstatd"
 	start-stop-daemon --start --quiet \
 		--pidfile "${VNSTATD_PIDFILE}" \
-		--chuid vnstat:vnstat \
+		--user vnstat --group vnstat \
 		--nicelevel ${VNSTATD_NICELEVEL:-0} \
 		--exec /usr/bin/vnstatd -- \
 		-d ${VNSTATD_EXTRAOPTS} -p ${VNSTATD_PIDFILE}

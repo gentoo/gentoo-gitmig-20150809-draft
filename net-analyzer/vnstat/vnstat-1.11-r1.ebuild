@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.11.ebuild,v 1.2 2011/06/06 07:41:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.11-r1.ebuild,v 1.1 2011/09/04 17:41:24 jer Exp $
 
 EAPI="4"
 
