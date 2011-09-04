@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/moreutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.31 2011/09/04 17:49:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.32 2011/09/04 19:51:57 chainsaw Exp $
+
+  04 Sep 2011; Tony Vroon <chainsaw@gentoo.org> moreutils-0.45.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Tomáš "Mepho" Pružina in bug #381639 filed by Tim "radhermit" Harder.
 
   04 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> moreutils-0.45.ebuild:
   x86 stable wrt bug #381639
