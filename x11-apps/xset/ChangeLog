@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xset
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xset/ChangeLog,v 1.82 2011/08/30 08:04:27 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xset/ChangeLog,v 1.83 2011/09/04 12:01:20 maekke Exp $
+
+  04 Sep 2011; Markus Meier <maekke@gentoo.org> xset-1.2.2.ebuild:
+  x86 stable, bug #380421
 
   30 Aug 2011; Tony Vroon <chainsaw@gentoo.org> xset-1.2.2.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in bug
