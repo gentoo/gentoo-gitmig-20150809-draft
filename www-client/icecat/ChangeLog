@@ -1,6 +1,9 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.101 2011/09/03 08:13:21 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.102 2011/09/04 00:32:00 phajdan.jr Exp $
+
+  04 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> icecat-3.6.16-r3.ebuild:
+  x86 stable wrt security bug #379549
 
   03 Sep 2011; Kacper Kowalik <xarthisius@gentoo.org> icecat-3.6.16-r3.ebuild:
   ppc/ppc64 stable wrt #379549
