@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8192se/rtl8192se-2.6.0019.1207.2010.ebuild,v 1.1 2011/02/09 22:19:16 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rtl8192se/rtl8192se-2.6.0019.1207.2010.ebuild,v 1.2 2011/09/04 19:41:08 chithanh Exp $
 
 EAPI=3
 
@@ -29,6 +29,14 @@ CONFIG_CHECK="CFG80211 MAC80211 ~WIRELESS_EXT"
 
 MODULE_NAMES="r8192se_pci(${PN}::${S}/HAL/rtl8192)"
 BUILD_TARGETS="all"
+
+pkg_setup() {
+	linux-mod_pkg_setup
+	if kernel_is ge 3; then
+		ewarn "This driver is not designed to work with >=3.0 kernels. Enable the"
+		ewarn "in-kernel rtlwifi driver CONFIG_RTL8192SE instead."
+	fi
+}
 
 src_prepare() {
 	base_src_prepare
