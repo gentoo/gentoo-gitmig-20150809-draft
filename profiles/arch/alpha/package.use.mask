@@ -1,6 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.64 2011/08/31 16:28:30 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.65 2011/09/04 03:54:23 robbat2 Exp $
+
+# Robin H. Johnson <robbat2@gentoo.org> (03 Sep 2011)
+# Remove this for your arch after you keyword dev-utils/google-perftools (bug #381737)
+dev-libs/libmemcached tcmalloc
 
 # Alexey Shvetsov <alexxy@gentoo.org> (31 Aug 2011)
 # Mask numa use flag per bug #381313
