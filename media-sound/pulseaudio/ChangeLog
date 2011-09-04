@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.244 2011/08/29 17:54:32 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.245 2011/09/04 21:03:31 maekke Exp $
+
+  04 Sep 2011; Markus Meier <maekke@gentoo.org> pulseaudio-0.99.3.ebuild:
+  add ~arm, bug #377497
 
 *pulseaudio-0.99.3 (29 Aug 2011)
 
