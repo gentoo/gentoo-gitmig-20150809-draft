@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-opengl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.85 2011/08/30 07:42:31 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.86 2011/09/04 11:50:23 maekke Exp $
+
+  04 Sep 2011; Markus Meier <maekke@gentoo.org> eselect-opengl-1.2.4.ebuild:
+  x86 stable, bug #380421
 
   30 Aug 2011; Tony Vroon <chainsaw@gentoo.org> eselect-opengl-1.2.4.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in bug
