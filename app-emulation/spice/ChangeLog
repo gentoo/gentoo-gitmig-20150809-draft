@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/spice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.15 2011/08/30 07:23:15 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.16 2011/09/04 10:18:18 maekke Exp $
+
+  04 Sep 2011; Markus Meier <maekke@gentoo.org> spice-0.8.1.ebuild:
+  x86 stable, bug #369601
 
   30 Aug 2011; Tony Vroon <chainsaw@gentoo.org> spice-0.8.1.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in bug
