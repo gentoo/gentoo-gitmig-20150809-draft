@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gmp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.145 2011/09/04 17:38:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/ChangeLog,v 1.146 2011/09/04 21:01:37 maekke Exp $
+
+  04 Sep 2011; Markus Meier <maekke@gentoo.org> gmp-5.0.2.ebuild:
+  arm stable, bug #380675
 
   04 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> gmp-5.0.2.ebuild:
   x86 stable wrt bug #380675
