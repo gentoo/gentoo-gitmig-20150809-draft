@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.44 2011/09/03 00:17:00 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.45 2011/09/04 04:10:48 radhermit Exp $
+
+*nettle-2.4 (04 Sep 2011)
+
+  04 Sep 2011; Tim Harder <radhermit@gentoo.org> -nettle-2.3.ebuild,
+  +nettle-2.4.ebuild:
+  Version bump and remove old.
 
 *nettle-2.3 (03 Sep 2011)
 
