@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/make
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.83 2011/08/31 08:20:15 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.84 2011/09/04 17:43:59 phajdan.jr Exp $
+
+  04 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> make-3.82-r1.ebuild:
+  x86 stable wrt bug #381199
 
   31 Aug 2011; Tony Vroon <chainsaw@gentoo.org> make-3.82-r1.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
