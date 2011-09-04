@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.293 2011/09/03 10:55:26 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.294 2011/09/04 13:32:17 grobian Exp $
+
+  04 Sep 2011; Fabian Groffen <grobian@gentoo.org>
+  sunos/solaris/package.use.mask:
+  Mask introspection for poppler, because gir is doing linking wrong
 
   03 Sep 2011; Fabian Groffen <grobian@gentoo.org> darwin/packages:
   Add sys-libs/csu (crt1.o) to system set on Darwin, such that compilations can
