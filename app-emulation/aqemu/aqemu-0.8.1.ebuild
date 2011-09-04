@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/aqemu/aqemu-0.8.1.ebuild,v 1.2 2011/08/26 15:14:54 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/aqemu/aqemu-0.8.1.ebuild,v 1.3 2011/09/04 17:36:42 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="kvm vnc"
 
 DEPEND="${RDEPEND}"
