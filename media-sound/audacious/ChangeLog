@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.238 2011/08/25 15:37:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.239 2011/09/04 12:17:11 maekke Exp $
+
+  04 Sep 2011; Markus Meier <maekke@gentoo.org> audacious-2.5.4.ebuild:
+  x86 stable, bug #380575
 
   25 Aug 2011; Tony Vroon <chainsaw@gentoo.org> audacious-2.5.4.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo and
