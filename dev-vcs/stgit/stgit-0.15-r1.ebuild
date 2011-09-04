@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/stgit-0.15-r1.ebuild,v 1.4 2011/08/31 08:18:28 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/stgit-0.15-r1.ebuild,v 1.5 2011/09/04 17:43:13 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -14,7 +14,7 @@ SRC_URI="http://download.gna.org/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~ppc64 x86"
 IUSE="doc"
 
 RDEPEND=">=dev-vcs/git-1.6.3.3"

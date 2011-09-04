@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/stgit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/ChangeLog,v 1.7 2011/08/31 08:18:28 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/ChangeLog,v 1.8 2011/09/04 17:43:13 phajdan.jr Exp $
+
+  04 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> stgit-0.15-r1.ebuild:
+  x86 stable wrt bug #381127
 
   31 Aug 2011; Tony Vroon <chainsaw@gentoo.org> stgit-0.15-r1.ebuild:
   Marked stable on AMD64 based on arch testing by Ian "idella" Delaney in bug
