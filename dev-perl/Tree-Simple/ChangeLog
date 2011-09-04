@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Tree-Simple
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tree-Simple/ChangeLog,v 1.29 2011/08/28 09:48:54 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tree-Simple/ChangeLog,v 1.30 2011/09/04 11:23:11 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Tree-Simple-1.18.ebuild:
+  Cleanup
 
 *Tree-Simple-1.180.0 (28 Aug 2011)
 

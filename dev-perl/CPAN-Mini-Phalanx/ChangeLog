@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/CPAN-Mini-Phalanx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini-Phalanx/ChangeLog,v 1.10 2011/09/03 21:04:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini-Phalanx/ChangeLog,v 1.11 2011/09/04 11:22:41 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -CPAN-Mini-Phalanx-0.01.ebuild:
+  Cleanup
 
   03 Sep 2011; Torsten Veller <tove@gentoo.org>
   CPAN-Mini-Phalanx-0.10.0.ebuild:

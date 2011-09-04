@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Requires
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Requires/ChangeLog,v 1.7 2011/08/28 13:33:28 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Requires/ChangeLog,v 1.8 2011/09/04 11:23:10 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Test-Requires-0.60.ebuild:
+  Cleanup
 
 *Test-Requires-0.60.0 (28 Aug 2011)
 

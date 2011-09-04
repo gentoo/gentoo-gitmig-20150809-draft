@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DateTime-Locale
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Locale/ChangeLog,v 1.81 2011/09/03 21:04:27 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Locale/ChangeLog,v 1.82 2011/09/04 11:23:25 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -DateTime-Locale-0.45.ebuild:
+  Cleanup
 
   03 Sep 2011; Torsten Veller <tove@gentoo.org> DateTime-Locale-0.450.0.ebuild:
   Merge stable keywords from former version scheme ebuild

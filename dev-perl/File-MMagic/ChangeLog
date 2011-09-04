@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-MMagic
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MMagic/ChangeLog,v 1.54 2011/09/03 21:05:26 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-MMagic/ChangeLog,v 1.55 2011/09/04 11:23:10 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -File-MMagic-1.27.ebuild:
+  Cleanup
 
   03 Sep 2011; Torsten Veller <tove@gentoo.org> File-MMagic-1.270.0.ebuild:
   Merge stable keywords from former version scheme ebuild

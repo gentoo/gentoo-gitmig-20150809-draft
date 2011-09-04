@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-NCopy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NCopy/ChangeLog,v 1.24 2011/09/03 21:04:28 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NCopy/ChangeLog,v 1.25 2011/09/04 11:21:22 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -File-NCopy-0.36.ebuild:
+  Cleanup
 
   03 Sep 2011; Torsten Veller <tove@gentoo.org> File-NCopy-0.360.0.ebuild:
   Merge stable keywords from former version scheme ebuild

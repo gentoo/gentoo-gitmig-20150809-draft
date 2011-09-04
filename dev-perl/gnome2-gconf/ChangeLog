@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/gnome2-gconf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-gconf/ChangeLog,v 1.32 2011/08/27 19:32:44 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-gconf/ChangeLog,v 1.33 2011/09/04 11:20:47 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -gnome2-gconf-1.044.ebuild:
+  Cleanup
 
 *gnome2-gconf-1.44.0 (27 Aug 2011)
 

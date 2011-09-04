@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Video-Info
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Info/ChangeLog,v 1.15 2011/09/03 21:05:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-Info/ChangeLog,v 1.16 2011/09/04 11:22:18 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Video-Info-0.993.ebuild:
+  Cleanup
 
   03 Sep 2011; Torsten Veller <tove@gentoo.org> Video-Info-0.993.0.ebuild:
   Merge stable keywords from former version scheme ebuild

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Devel-Profiler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Profiler/ChangeLog,v 1.15 2011/09/03 21:05:23 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Profiler/ChangeLog,v 1.16 2011/09/04 11:23:20 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Devel-Profiler-0.04.ebuild:
+  Cleanup
 
   03 Sep 2011; Torsten Veller <tove@gentoo.org> Devel-Profiler-0.40.0.ebuild:
   Merge stable keywords from former version scheme ebuild

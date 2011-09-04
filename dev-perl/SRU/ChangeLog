@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SRU
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SRU/ChangeLog,v 1.5 2011/08/29 09:35:43 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SRU/ChangeLog,v 1.6 2011/09/04 11:24:02 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -SRU-0.99.ebuild:
+  Cleanup
 
 *SRU-0.990.0 (29 Aug 2011)
 

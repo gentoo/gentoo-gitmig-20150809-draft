@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Pod-Abstract
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Abstract/ChangeLog,v 1.2 2011/08/29 10:38:30 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Abstract/ChangeLog,v 1.3 2011/09/04 11:21:18 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Pod-Abstract-0.20.ebuild:
+  Cleanup
 
 *Pod-Abstract-0.200.0 (29 Aug 2011)
 

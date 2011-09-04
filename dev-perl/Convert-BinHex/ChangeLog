@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Convert-BinHex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BinHex/ChangeLog,v 1.17 2011/09/03 21:05:13 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BinHex/ChangeLog,v 1.18 2011/09/04 11:22:24 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Convert-BinHex-1.119.ebuild:
+  Cleanup
 
   03 Sep 2011; Torsten Veller <tove@gentoo.org> Convert-BinHex-1.119.0.ebuild:
   Merge stable keywords from former version scheme ebuild

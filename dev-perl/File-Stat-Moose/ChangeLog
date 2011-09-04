@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Stat-Moose
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Stat-Moose/ChangeLog,v 1.5 2011/08/30 15:40:21 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Stat-Moose/ChangeLog,v 1.6 2011/09/04 11:20:42 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -File-Stat-Moose-0.06.ebuild:
+  Cleanup
 
 *File-Stat-Moose-0.60.0 (30 Aug 2011)
 

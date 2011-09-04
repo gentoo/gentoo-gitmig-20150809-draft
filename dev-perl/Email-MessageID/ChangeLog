@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Email-MessageID
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MessageID/ChangeLog,v 1.27 2011/09/03 21:05:26 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MessageID/ChangeLog,v 1.28 2011/09/04 11:23:10 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Email-MessageID-1.402.ebuild:
+  Cleanup
 
   03 Sep 2011; Torsten Veller <tove@gentoo.org> Email-MessageID-1.402.0.ebuild:
   Merge stable keywords from former version scheme ebuild

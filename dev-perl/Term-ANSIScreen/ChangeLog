@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Term-ANSIScreen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIScreen/ChangeLog,v 1.18 2011/09/03 21:05:02 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIScreen/ChangeLog,v 1.19 2011/09/04 11:22:24 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Term-ANSIScreen-1.42.ebuild:
+  Cleanup
 
   03 Sep 2011; Torsten Veller <tove@gentoo.org> Term-ANSIScreen-1.420.0.ebuild:
   Merge stable keywords from former version scheme ebuild

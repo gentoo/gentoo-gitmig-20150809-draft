@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/p5-Palm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/p5-Palm/ChangeLog,v 1.23 2011/08/27 17:00:49 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/p5-Palm/ChangeLog,v 1.24 2011/09/04 11:23:38 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -p5-Palm-1.012.ebuild:
+  Cleanup
 
 *p5-Palm-1.12.0 (27 Aug 2011)
 

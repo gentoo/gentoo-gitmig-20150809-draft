@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Font-AFM
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-AFM/ChangeLog,v 1.21 2011/09/03 21:04:35 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-AFM/ChangeLog,v 1.22 2011/09/04 11:23:41 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Font-AFM-1.20.ebuild:
+  Cleanup
 
   03 Sep 2011; Torsten Veller <tove@gentoo.org> Font-AFM-1.200.0.ebuild:
   Merge stable keywords from former version scheme ebuild

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Digest-MD4
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD4/ChangeLog,v 1.26 2011/09/03 21:04:27 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD4/ChangeLog,v 1.27 2011/09/04 11:20:45 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Digest-MD4-1.5.ebuild:
+  Cleanup
 
   03 Sep 2011; Torsten Veller <tove@gentoo.org> Digest-MD4-1.500.0.ebuild:
   Merge stable keywords from former version scheme ebuild

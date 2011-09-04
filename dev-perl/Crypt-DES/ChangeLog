@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Crypt-DES
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-DES/ChangeLog,v 1.29 2011/09/03 21:05:29 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-DES/ChangeLog,v 1.30 2011/09/04 11:23:17 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Crypt-DES-2.05.ebuild:
+  Cleanup
 
   03 Sep 2011; Torsten Veller <tove@gentoo.org> Crypt-DES-2.50.0.ebuild:
   Merge stable keywords from former version scheme ebuild

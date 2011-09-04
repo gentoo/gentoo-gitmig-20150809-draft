@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Template-Latex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Latex/ChangeLog,v 1.19 2011/09/03 21:05:22 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Latex/ChangeLog,v 1.20 2011/09/04 11:22:57 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Template-Latex-2.17.ebuild:
+  Cleanup
 
   03 Sep 2011; Torsten Veller <tove@gentoo.org> Template-Latex-2.170.0.ebuild:
   Merge stable keywords from former version scheme ebuild

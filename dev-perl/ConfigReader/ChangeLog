@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/ConfigReader
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ConfigReader/ChangeLog,v 1.13 2011/09/03 21:05:10 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ConfigReader/ChangeLog,v 1.14 2011/09/04 11:23:48 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -ConfigReader-0.5.ebuild:
+  Cleanup
 
   03 Sep 2011; Torsten Veller <tove@gentoo.org> ConfigReader-0.500.0.ebuild:
   Merge stable keywords from former version scheme ebuild

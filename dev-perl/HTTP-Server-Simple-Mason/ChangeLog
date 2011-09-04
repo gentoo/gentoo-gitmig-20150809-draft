@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTTP-Server-Simple-Mason
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Server-Simple-Mason/ChangeLog,v 1.19 2011/08/30 13:43:01 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Server-Simple-Mason/ChangeLog,v 1.20 2011/09/04 11:22:02 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org>
+  -HTTP-Server-Simple-Mason-0.14.ebuild:
+  Cleanup
 
 *HTTP-Server-Simple-Mason-0.140.0 (30 Aug 2011)
 

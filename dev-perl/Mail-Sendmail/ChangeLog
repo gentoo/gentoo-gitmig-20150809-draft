@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-Sendmail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sendmail/ChangeLog,v 1.25 2011/09/03 21:05:24 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Sendmail/ChangeLog,v 1.26 2011/09/04 11:21:17 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Mail-Sendmail-0.79.ebuild:
+  Cleanup
 
   03 Sep 2011; Torsten Veller <tove@gentoo.org> Mail-Sendmail-0.790.0.ebuild:
   Merge stable keywords from former version scheme ebuild

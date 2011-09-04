@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Math-Calc-Units
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Calc-Units/ChangeLog,v 1.5 2011/08/30 10:32:24 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Calc-Units/ChangeLog,v 1.6 2011/09/04 11:21:42 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Math-Calc-Units-1.07.ebuild:
+  Cleanup
 
 *Math-Calc-Units-1.70.0 (30 Aug 2011)
 

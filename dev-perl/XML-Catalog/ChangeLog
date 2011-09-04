@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Catalog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Catalog/ChangeLog,v 1.22 2011/09/03 21:04:24 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Catalog/ChangeLog,v 1.23 2011/09/04 11:20:40 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -XML-Catalog-0.02-r2.ebuild:
+  Cleanup
 
   03 Sep 2011; Torsten Veller <tove@gentoo.org> XML-Catalog-0.20.0.ebuild:
   Merge stable keywords from former version scheme ebuild

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SVN-Mirror
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Mirror/ChangeLog,v 1.47 2011/08/29 09:33:08 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVN-Mirror/ChangeLog,v 1.48 2011/09/04 11:21:23 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -SVN-Mirror-0.75.ebuild:
+  Cleanup
 
 *SVN-Mirror-0.750.0 (29 Aug 2011)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MLDBM
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MLDBM/ChangeLog,v 1.31 2011/08/30 11:09:30 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MLDBM/ChangeLog,v 1.32 2011/09/04 11:22:04 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -MLDBM-2.04.ebuild:
+  Cleanup
 
 *MLDBM-2.40.0 (30 Aug 2011)
 

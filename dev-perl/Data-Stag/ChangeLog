@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Data-Stag
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Stag/ChangeLog,v 1.6 2011/09/03 21:04:51 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Stag/ChangeLog,v 1.7 2011/09/04 11:22:04 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Data-Stag-0.11.ebuild:
+  Cleanup
 
   03 Sep 2011; Torsten Veller <tove@gentoo.org> Data-Stag-0.110.0.ebuild:
   Merge stable keywords from former version scheme ebuild

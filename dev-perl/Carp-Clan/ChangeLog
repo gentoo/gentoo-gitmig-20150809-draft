@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Carp-Clan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.48 2011/09/03 21:04:47 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.49 2011/09/04 11:23:22 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Carp-Clan-6.04.ebuild:
+  Cleanup
 
   03 Sep 2011; Torsten Veller <tove@gentoo.org> Carp-Clan-6.40.0.ebuild:
   Merge stable keywords from former version scheme ebuild

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Calendar-Simple
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Calendar-Simple/ChangeLog,v 1.20 2011/09/01 11:37:17 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Calendar-Simple/ChangeLog,v 1.21 2011/09/04 11:21:04 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Calendar-Simple-1.21.ebuild:
+  Cleanup
 
 *Calendar-Simple-1.210.0 (01 Sep 2011)
 

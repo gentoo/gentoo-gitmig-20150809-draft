@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Email-Date
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Date/ChangeLog,v 1.23 2011/08/31 11:05:52 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Date/ChangeLog,v 1.24 2011/09/04 11:20:46 tove Exp $
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org> -Email-Date-1.103.ebuild:
+  Cleanup
 
 *Email-Date-1.103.0 (31 Aug 2011)
 
