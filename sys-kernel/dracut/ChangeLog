@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.30 2011/08/31 13:05:42 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.31 2011/09/04 14:51:09 aidecoe Exp $
+
+*dracut-013-r1 (04 Sep 2011)
+*dracut-011-r1 (04 Sep 2011)
+
+  04 Sep 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-011-r1.ebuild,
+  +files/dracut-011-integrated-initramfs-fix.patch, +dracut-013-r1.ebuild,
+  +files/dracut-013-integrated-initramfs-fix.patch:
+  Fixed bug #380111 - "kernels with integrated initramfs and dracut failed to
+  boot"
 
   31 Aug 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-007.ebuild,
   -files/dracut-007-dm-udev-rules.patch,
