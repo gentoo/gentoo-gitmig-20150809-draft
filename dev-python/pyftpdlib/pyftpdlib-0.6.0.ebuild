@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyftpdlib/pyftpdlib-0.6.0.ebuild,v 1.5 2011/09/01 18:58:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyftpdlib/pyftpdlib-0.6.0.ebuild,v 1.6 2011/09/04 16:38:38 naota Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -17,7 +17,7 @@ SRC_URI="http://pyftpdlib.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~arm x86 ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris"
+KEYWORDS="amd64 ~arm x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris"
 IUSE="examples ssl"
 
 DEPEND="ssl? (
