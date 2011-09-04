@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.4.3.ebuild,v 1.3 2011/09/03 21:04:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.4.3-r1.ebuild,v 1.1 2011/09/04 09:32:13 scarabeus Exp $
 
 EAPI=4
 
@@ -76,6 +76,8 @@ src_unpack() {
 		# for english we provide just helppack, as translation is always there
 		if [[ ${lang} != en ]]; then
 			rpmdir="LibO_${PV}${RC_VERSION}_Linux_x86_langpack-rpm_${dir}/RPMS/"
+			# First remove dictionaries, we want to use system ones.
+			rm -rf "${S}/${rpmdir}/"*dict*.rpm
 			rpm_unpack "./${rpmdir}/"*.rpm
 		fi
 
