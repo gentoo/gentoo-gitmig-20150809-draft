@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitflu/bitflu-1.37.ebuild,v 1.3 2011/08/26 09:13:18 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitflu/bitflu-1.37.ebuild,v 1.4 2011/09/04 10:13:26 maekke Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="http://bitflu.workaround.ch/bitflu/${P}.tgz"
 
 LICENSE="Artistic-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="dev-perl/Danga-Socket

@@ -1,5 +1,8 @@
 
 
+  04 Sep 2011; Markus Meier <maekke@gentoo.org> bitflu-1.37.ebuild:
+  x86 stable, bug #380079
+
   26 Aug 2011; Tony Vroon <chainsaw@gentoo.org> bitflu-1.37.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
   Elijah El Lazkani in bug #380079.
