@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/avr-libc-1.7.1.ebuild,v 1.1 2011/09/03 08:40:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/avr-libc-1.7.1.ebuild,v 1.2 2011/09/04 23:57:48 radhermit Exp $
 
 CHOST="avr"
 CTARGET="avr"
@@ -44,7 +44,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	#Fix avr-libc bug #32988 causing and ICE with gcc-4.6.0
+	# Fix avr-libc bug #32988 causing an ICE with gcc-4.6.0
 	epatch "${FILESDIR}/${P}-gcc46.patch"
 
 	# work around broken gcc versions PR45261
