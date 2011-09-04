@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.3.9.ebuild,v 1.15 2011/09/04 03:15:10 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.3.9.ebuild,v 1.16 2011/09/04 06:13:14 robbat2 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -21,6 +21,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="doc examples sasl ssl"
 
+# If you need support for openldap-2.3.x, please use python-ldap-2.3.9. 
+# python team: Please do not remove python-ldap-2.3.9 from the tree.
 RDEPEND=">=net-nds/openldap-2.3
 	sasl? ( dev-libs/cyrus-sasl )"
 DEPEND="${DEPEND}
