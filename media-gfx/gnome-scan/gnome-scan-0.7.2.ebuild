@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-scan/gnome-scan-0.7.2.ebuild,v 1.3 2011/08/30 07:33:24 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-scan/gnome-scan-0.7.2.ebuild,v 1.4 2011/09/04 17:31:26 phajdan.jr Exp $
 
 EAPI="3"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/projects/gnome-scan/index"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug doc"
 
 RDEPEND=">=x11-libs/gtk+-2.12:2
