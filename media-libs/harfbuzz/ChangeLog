@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.4 2011/09/04 11:27:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.5 2011/09/04 15:52:03 scarabeus Exp $
+
+  04 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  harfbuzz-0.7.0_pre20110904.ebuild:
+  Add automagic graphite2 to harddep, i wont rewrite this mess.
 
   04 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   harfbuzz-0.7.0_pre20110904.ebuild:
