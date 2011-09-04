@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.263 2011/09/03 18:39:24 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.264 2011/09/04 01:24:06 xmw Exp $
+
+  04 Sep 2011; Michael Weber <xmw@gentoo.org> mpd-0.16.4.ebuild:
+  ffmpeg patch now in upstream, remove unneeded and failing epatch line (bug
+  381725 by Josh)
 
 *mpd-0.16.4 (03 Sep 2011)
 
