@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.2.3.ebuild,v 1.1 2011/07/05 21:37:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-1.2.3.ebuild,v 1.2 2011/09/04 17:34:28 phajdan.jr Exp $
 
 EAPI=1
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="mmx X opengl dv gtk alsa aac encode png jpeg vorbis lame x264 ffmpeg doc schroedinger"
 
 RDEPEND="dv? ( media-libs/libdv )
