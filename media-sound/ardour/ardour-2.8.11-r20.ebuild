@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.8.11-r20.ebuild,v 1.1 2011/07/29 07:23:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.8.11-r20.ebuild,v 1.2 2011/09/04 12:30:34 aballier Exp $
 
 EAPI=4
 inherit eutils flag-o-matic toolchain-funcs scons-utils
@@ -26,7 +26,7 @@ RDEPEND="media-libs/aubio
 	>=media-libs/libsndfile-1.0.18
 	>=media-libs/libsamplerate-0.1
 	>=media-libs/rubberband-1.6.0
-	media-libs/libsoundtouch
+	>=media-libs/libsoundtouch-1.6.0
 	media-libs/flac
 	media-libs/raptor:2
 	>=media-libs/liblrdf-0.4.0-r20
@@ -54,7 +54,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-syslibs.patch \
 		"${FILESDIR}"/${P}-type.patch \
 		"${FILESDIR}"/${P}-ldpath.patch \
-		"${FILESDIR}"/${P}-raptor2.patch
+		"${FILESDIR}"/${P}-raptor2.patch \
+		"${FILESDIR}"/${P}-soundtouch.patch
 
 	if [[ ($(gcc-major-version) -eq 4 && $(gcc-minor-version) -ge 6) ]]; then
 		epatch "${FILESDIR}"/${P}-gcc46.patch

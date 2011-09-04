@@ -1,0 +1,13 @@
+Index: ardour-2.8.11/SConstruct
+===================================================================
+--- ardour-2.8.11.orig/SConstruct
++++ ardour-2.8.11/SConstruct
+@@ -1063,7 +1063,7 @@ if env['SYSLIBS']:
+ 
+ #    libraries['flowcanvas'] = LibraryInfo(LIBS='flowcanvas', LIBPATH='#/libs/flowcanvas', CPPPATH='#libs/flowcanvas')
+     libraries['soundtouch'] = LibraryInfo()
+-    libraries['soundtouch'].ParseConfig ('pkg-config --cflags --libs soundtouch-1.0')
++    libraries['soundtouch'].ParseConfig ('pkg-config --cflags --libs soundtouch')
+     # Comment the previous line and uncomment this for old versions of Debian:
+     #libraries['soundtouch'].ParseConfig ('pkg-config --cflags --libs libSoundTouch')
+ 
