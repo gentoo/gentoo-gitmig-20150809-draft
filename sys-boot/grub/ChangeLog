@@ -1,6 +1,15 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.163 2011/08/31 11:27:51 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.164 2011/09/04 09:17:44 scarabeus Exp $
+
+*grub-1.99-r2 (04 Sep 2011)
+
+  04 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/1.99-do_not_stat_so_often.patch, +files/1.99-improve_devmapper.patch,
+  +files/1.99-stat_root_device_properly-p1.patch, -grub-1.99-r1.ebuild,
+  +files/1.99-stat_root_device_properly-p2.patch, +grub-1.99-r2.ebuild:
+  Backport patches to fix esissues with non-existant /dev/root. Fixes bug
+  #381491.
 
   31 Aug 2011; Alexey Shvetsov <alexxy@gentoo.org> grub-1.99-r1.ebuild,
   grub-9999.ebuild:

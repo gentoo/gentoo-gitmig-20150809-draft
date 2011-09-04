@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.99-r1.ebuild,v 1.2 2011/08/31 11:27:51 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.99-r2.ebuild,v 1.1 2011/09/04 09:17:44 scarabeus Exp $
 
 EAPI=4
 
@@ -157,7 +157,11 @@ src_prepare() {
 	local i j archs
 
 	epatch \
-		"${FILESDIR}/1.99-call_proper_grub_probe.patch"
+		"${FILESDIR}/1.99-call_proper_grub_probe.patch" \
+		"${FILESDIR}/1.99-improve_devmapper.patch" \
+		"${FILESDIR}/1.99-do_not_stat_so_often.patch" \
+		"${FILESDIR}/1.99-stat_root_device_properly-p1.patch" \
+		"${FILESDIR}/1.99-stat_root_device_properly-p2.patch"
 
 	epatch_user
 
