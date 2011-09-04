@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.40 2011/08/29 21:37:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.41 2011/09/04 00:39:47 phajdan.jr Exp $
+
+  04 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  thunderbird-bin-3.1.12.ebuild:
+  x86 stable wrt security bug #379549
 
   29 Aug 2011; Markos Chandras <hwoarang@gentoo.org>
   thunderbird-bin-3.1.12.ebuild:
