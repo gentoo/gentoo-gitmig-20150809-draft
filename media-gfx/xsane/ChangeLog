@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xsane
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.88 2011/08/30 07:37:35 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.89 2011/09/04 17:39:57 phajdan.jr Exp $
+
+  04 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> xsane-0.998.ebuild:
+  x86 stable wrt bug #380917
 
   30 Aug 2011; Tony Vroon <chainsaw@gentoo.org> xsane-0.998.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
