@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.110 2011/09/04 00:55:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.111 2011/09/04 07:31:57 pva Exp $
+
+  04 Sep 2011; Peter Volkov <pva@gentoo.org> -mantisbt-1.2.4.ebuild,
+  -mantisbt-1.2.5.ebuild, -mantisbt-1.2.6.ebuild, -mantisbt-1.2.7.ebuild,
+  metadata.xml:
+  Drop vulnerable versions. Update David's email in metadata.xml
 
   04 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   mantisbt-1.2.7-r1.ebuild:
