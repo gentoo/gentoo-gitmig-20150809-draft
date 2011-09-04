@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/sshfs-fuse
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.55 2011/07/29 04:39:35 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.56 2011/09/04 17:50:33 phajdan.jr Exp $
+
+  04 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> sshfs-fuse-2.3.ebuild:
+  x86 stable wrt bug #381641
 
   29 Jul 2011; Zac Medico <zmedico@gentoo.org> sshfs-fuse-2.3.ebuild:
   Add ~x86-linux keyword.
