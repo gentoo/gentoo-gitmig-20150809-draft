@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-c/json-c-0.9.ebuild,v 1.4 2011/08/25 13:36:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-c/json-c-0.9.ebuild,v 1.5 2011/09/04 21:02:28 maekke Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ SRC_URI="http://oss.metaparadigm.com/json-c/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 src_install() {
