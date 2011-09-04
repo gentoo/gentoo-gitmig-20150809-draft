@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.8.4_p2.ebuild,v 1.1 2011/09/03 19:34:00 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.8.4_p2.ebuild,v 1.2 2011/09/04 06:29:21 djc Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -51,13 +51,19 @@ pkg_setup() {
 	enewuser buildbot
 }
 
+src_prepare() {
+	distutils_src_prepare
+	# https://github.com/buildbot/buildbot/commit/a3abed70546b3742964994517bb27556e06f6e20
+	sed -e "s/sqlalchemy-migrate == 0.6/sqlalchemy-migrate ==0.6, ==0.7/" -i setup.py || die "sed failed"
+}
+
 src_compile() {
 	distutils_src_compile
 
 	if use doc; then
 		einfo "Generation of documentation"
 		pushd docs > /dev/null
-		emake buildbot.html buildbot.info || die "Generation of documentation failed"
+		emake buildbot.html buildbot.info
 		popd > /dev/null
 	fi
 }
@@ -65,20 +71,20 @@ src_compile() {
 src_install() {
 	distutils_src_install
 
-	doman docs/buildbot.1 || die "doman failed"
+	doman docs/buildbot.1
 
 	if use doc; then
-		dohtml -r docs/buildbot.html docs/images || die "dohtml failed"
-		doinfo docs/buildbot.info || die "doinfo failed"
+		dohtml -r docs/buildbot.html docs/images
+		doinfo docs/buildbot.info
 	fi
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}
-		doins -r contrib docs/examples || die "doins failed"
+		doins -r contrib docs/examples
 	fi
 
-	newconfd "${FILESDIR}/buildmaster.confd" buildmaster || die "newconfd failed"
-	newinitd "${FILESDIR}/buildmaster.initd" buildmaster || die "newinitd failed"
+	newconfd "${FILESDIR}/buildmaster.confd" buildmaster
+	newinitd "${FILESDIR}/buildmaster.initd" buildmaster
 }
 
 pkg_postinst() {
