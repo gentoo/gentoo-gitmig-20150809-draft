@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/ogre
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.71 2011/04/27 12:13:07 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ChangeLog,v 1.72 2011/09/04 21:49:53 mr_bones_ Exp $
+
+  04 Sep 2011; Michael Sterrett <mr_bones_@gentoo.org> ogre-1.6.5.ebuild:
+  needs <dev-games/cegui-0.7.5 to build (bug #375503)
 
   27 Apr 2011; Tupone Alfredo <tupone@gentoo.org> ogre-1.6.5.ebuild,
   +files/ogre-1.6.5-gcc46.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.6.5.ebuild,v 1.9 2011/04/27 12:13:07 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-1.6.5.ebuild,v 1.10 2011/09/04 21:49:53 mr_bones_ Exp $
 
 EAPI=2
 inherit multilib eutils autotools flag-o-matic
@@ -25,7 +25,7 @@ RDEPEND="dev-libs/zziplib
 	cg? ( media-gfx/nvidia-cg-toolkit )
 	devil? ( media-libs/devil )
 	gtk? ( x11-libs/gtk+:2 )
-	cegui? ( >=dev-games/cegui-0.5 )
+	cegui? ( >=dev-games/cegui-0.5 !>dev-games/cegui-0.6.3 )
 	threads? ( || ( >=dev-libs/boost-1.34.1 dev-libs/boost[threads] ) )"
 DEPEND="${RDEPEND}
 	!dev-games/ogre
