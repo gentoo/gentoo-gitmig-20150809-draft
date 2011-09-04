@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/putty
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.60 2011/08/28 17:28:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/ChangeLog,v 1.61 2011/09/04 13:51:35 maekke Exp $
+
+  04 Sep 2011; Markus Meier <maekke@gentoo.org> putty-0.61.ebuild:
+  x86 stable, bug #380851
 
   28 Aug 2011; Jeroen Roovers <jer@gentoo.org> putty-0.61.ebuild:
   Add pkgconfig to DEPEND thanks to cyberbat (bug #380915).
