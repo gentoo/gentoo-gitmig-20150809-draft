@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyflakes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/ChangeLog,v 1.17 2011/09/03 17:33:42 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/ChangeLog,v 1.18 2011/09/04 06:20:03 djc Exp $
+
+  04 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> pyflakes-0.5.0.ebuild:
+  Take some fixes suggested by Arfrever via the python overlay.
 
 *pyflakes-0.5.0 (03 Sep 2011)
 
