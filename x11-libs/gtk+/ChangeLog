@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.529 2011/08/28 13:24:00 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.530 2011/09/04 09:10:11 grobian Exp $
+
+  04 Sep 2011; Fabian Groffen <grobian@gentoo.org> gtk+-3.0.12.ebuild:
+  Fix compilation on Solaris
 
   28 Aug 2011; Fabian Groffen <grobian@gentoo.org> gtk+-2.24.5-r1.ebuild:
   Marked ~x64-macos

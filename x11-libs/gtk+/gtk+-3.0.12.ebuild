@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.0.12.ebuild,v 1.2 2011/08/11 09:06:56 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.0.12.ebuild,v 1.3 2011/09/04 09:10:11 grobian Exp $
 
 EAPI="4"
 
@@ -106,6 +106,11 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.0.8-darwin-quartz.patch
 	# fix building with gir #372953
 	epatch "${FILESDIR}"/${PN}-3.0.11-darwin-quartz-introspection.patch
+	# Solaris is strict, and needs c99
+	# http://mail.gnome.org/archives/gtk-devel-list/2011-April/msg00127.html
+	if [[ ${CHOST} == *-solaris* ]] ; then
+		sed -i -e '/_XOPEN_SOURCE 500/d' gtk/gtksearchenginesimple.c || die
+	fi
 }
 
 src_configure() {
