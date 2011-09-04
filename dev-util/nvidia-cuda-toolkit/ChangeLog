@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/nvidia-cuda-toolkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.41 2011/08/27 20:30:51 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.42 2011/09/04 10:08:12 maekke Exp $
+
+  04 Sep 2011; Markus Meier <maekke@gentoo.org> nvidia-cuda-toolkit-4.0.ebuild:
+  x86 stable, bug #378545
 
   27 Aug 2011; Tony Vroon <chainsaw@gentoo.org> nvidia-cuda-toolkit-4.0.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah El Lazkani & Tomáš

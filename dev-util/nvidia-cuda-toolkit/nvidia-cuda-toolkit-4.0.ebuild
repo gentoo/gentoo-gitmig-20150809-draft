@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-4.0.ebuild,v 1.6 2011/08/27 20:30:51 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-4.0.ebuild,v 1.7 2011/09/04 10:08:12 maekke Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ SRC_URI="amd64? ( ${BASE_URI}/cudatoolkit_${CUDA_V}.17_linux_64_ubuntu10.10.run 
 
 LICENSE="NVIDIA"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debugger doc profiler"
 
 RDEPEND="${DEPEND}
