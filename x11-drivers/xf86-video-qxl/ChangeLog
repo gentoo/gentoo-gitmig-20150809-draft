@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-qxl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-qxl/ChangeLog,v 1.7 2011/08/30 08:29:16 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-qxl/ChangeLog,v 1.8 2011/09/04 12:19:16 maekke Exp $
+
+  04 Sep 2011; Markus Meier <maekke@gentoo.org> xf86-video-qxl-0.0.16.ebuild:
+  x86 stable, bug #380421
 
   30 Aug 2011; Tony Vroon <chainsaw@gentoo.org> xf86-video-qxl-0.0.16.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in bug
