@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libX11
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.183 2011/08/30 08:31:31 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libX11/ChangeLog,v 1.184 2011/09/04 12:20:46 maekke Exp $
+
+  04 Sep 2011; Markus Meier <maekke@gentoo.org> libX11-1.4.4.ebuild:
+  x86 stable, bug #380421
 
   30 Aug 2011; Tony Vroon <chainsaw@gentoo.org> libX11-1.4.4.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in bug
