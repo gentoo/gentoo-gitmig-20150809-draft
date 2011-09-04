@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.7.0_pre20110904.ebuild,v 1.1 2011/09/04 11:24:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-0.7.0_pre20110904.ebuild,v 1.2 2011/09/04 11:27:15 scarabeus Exp $
 
 EAPI=4
 
@@ -25,6 +25,8 @@ DEPEND="${RDEPEND}
 "
 
 src_configure() {
+	# this packge needs build system update because
+	# all the deps are automagic
 	econf \
 		--disable-static
 }
