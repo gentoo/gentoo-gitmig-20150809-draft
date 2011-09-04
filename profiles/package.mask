@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13026 2011/09/02 07:11:19 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13027 2011/09/04 11:07:56 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -160,16 +160,6 @@ app-misc/hal-info
 # No maintainer. Runtimve problems. Dead upstream.
 # Removal in 30 days. Bug #377979
 gnome-extra/gget
-
-# Markos Chandras <hwoarang@gentoo.org> (04 Aug 2011)
-# No maintainer. Security problems
-# Removal in 30 days. Bug #340357
-app-emulation/frodo
-
-# Markos Chandras <hwoarang@gentoo.org> (04 Aug 2011)
-# Does not work with veoh.com and upstream is dead.
-# Removal in 30 days. Bug #376217
-net-misc/vget
 
 # Matt Turner <mattst88@gentoo.org) (04 Aug 2011)
 # libots is only used by Compaq's C compiler, which was tree
