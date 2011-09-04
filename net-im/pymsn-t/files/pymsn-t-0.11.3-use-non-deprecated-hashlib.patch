@@ -1,21 +1,7 @@
-From 87d6eac62671152c318ea2cb839a748b06723ee2 Mon Sep 17 00:00:00 2001
-From: Matthew W. S. Bell <matthew@bells23.org.uk>
-Date: Sat, 12 Feb 2011 19:44:18 +0000
-Subject: [PATCH 2/4] Use newer (non-deprecataed) hashlib module, if available.
-
----
- src/avatar.py               |    9 +++++++--
- src/legacy/msn/msn.py       |   11 +++++++----
- src/legacy/msn/msnp11chl.py |    8 ++++++--
- src/utils.py                |   12 ++++++------
- src/xdb.py                  |    8 ++++++--
- 5 files changed, 32 insertions(+), 16 deletions(-)
-
-diff --git a/src/avatar.py b/src/avatar.py
-index b9f7dfc..3aa0a3c 100644
---- a/src/avatar.py
-+++ b/src/avatar.py
-@@ -6,7 +6,12 @@ from debug import LogEvent, INFO, WARN, ERROR
+diff -Naur pymsnt-0.11.3/src/avatar.py pymsnt-0.11.3-1/src/avatar.py
+--- pymsnt-0.11.3/src/avatar.py	2008-02-08 14:55:07.000000000 +0100
++++ pymsnt-0.11.3-1/src/avatar.py	2011-09-04 13:40:02.350321866 +0200
+@@ -6,7 +6,12 @@
  from twisted.internet import reactor
  from twisted.words.xish.domish import Element
  
@@ -29,7 +15,7 @@ index b9f7dfc..3aa0a3c 100644
  
  import utils
  import config
-@@ -34,7 +39,7 @@ def parsePhotoEl(photo):
+@@ -34,7 +39,7 @@
  class Avatar:
  	""" Represents an Avatar. Does not store the image in memory. """
  	def __init__(self, imageData, avatarCache):
@@ -38,47 +24,9 @@ index b9f7dfc..3aa0a3c 100644
  		self.__avatarCache = avatarCache
  
  	def getImageHash(self):
-diff --git a/src/legacy/msn/msn.py b/src/legacy/msn/msn.py
-index cd36aa8..e27e973 100644
---- a/src/legacy/msn/msn.py
-+++ b/src/legacy/msn/msn.py
-@@ -106,9 +106,12 @@ from twisted.words.xish.domish import parseText, unescapeFromXml
- 
- 
- # System imports
--import types, operator, os, sys, base64, random, struct, random, sha, base64, StringIO, array, codecs, binascii
-+import types, operator, os, sys, base64, random, struct, random, base64, StringIO, array, codecs, binascii
- from urllib import quote, unquote
--
-+try:
-+	from hashlib import sha1
-+except ImportError:
-+	from sha import sha as sha1
- 
- MSN_PROTOCOL_VERSION = "MSNP11"      # protocol version
- MSN_PORT             = 1863               # default dispatch server port
-@@ -490,7 +493,7 @@ class MSNObject:
-         self.type = 3
-         self.location = "TMP" + str(random.randint(1000,9999))
-         self.friendly = "AAA="
--        self.sha1d = b64enc(sha.sha(imageData).digest())
-+        self.sha1d = b64enc(sha1(imageData).digest())
-         self.makeText()
-     
-     def setNull(self):
-@@ -518,7 +521,7 @@ class MSNObject:
-         h.append(self.friendly)
-         h.append("SHA1D")
-         h.append(self.sha1d)
--        sha1c = b64enc(sha.sha("".join(h)).digest())
-+        sha1c = b64enc(sha1("".join(h)).digest())
-         self.text = '<msnobj Creator="%s" Size="%s" Type="%s" Location="%s" Friendly="%s" SHA1D="%s" SHA1C="%s"/>' % (self.creator, str(self.size), str(self.type), self.location, self.friendly, self.sha1d, sha1c)
-     
-     def parse(self, s):
-diff --git a/src/legacy/msn/msnp11chl.py b/src/legacy/msn/msnp11chl.py
-index bbf4c4d..9368df0 100644
---- a/src/legacy/msn/msnp11chl.py
-+++ b/src/legacy/msn/msnp11chl.py
+diff -Naur pymsnt-0.11.3/src/legacy/msn/msnp11chl.py pymsnt-0.11.3-1/src/legacy/msn/msnp11chl.py
+--- pymsnt-0.11.3/src/legacy/msn/msnp11chl.py	2008-02-08 14:55:07.000000000 +0100
++++ pymsnt-0.11.3-1/src/legacy/msn/msnp11chl.py	2011-09-04 13:40:02.351321854 +0200
 @@ -1,16 +1,20 @@
  # Copyright 2005 James Bunton <james@delx.cjb.net>
  # Licensed for distribution under the GPL version 2, check COPYING for details
@@ -102,10 +50,45 @@ index bbf4c4d..9368df0 100644
  
  	# Make array of md5 string ints
  	md5Ints = struct.unpack("<llll", md5digest)
-diff --git a/src/utils.py b/src/utils.py
-index cb73ea3..88110ae 100644
---- a/src/utils.py
-+++ b/src/utils.py
+diff -Naur pymsnt-0.11.3/src/legacy/msn/msn.py pymsnt-0.11.3-1/src/legacy/msn/msn.py
+--- pymsnt-0.11.3/src/legacy/msn/msn.py	2008-02-08 14:55:07.000000000 +0100
++++ pymsnt-0.11.3-1/src/legacy/msn/msn.py	2011-09-04 13:40:02.351321854 +0200
+@@ -106,9 +106,12 @@
+ 
+ 
+ # System imports
+-import types, operator, os, sys, base64, random, struct, random, sha, base64, StringIO, array, codecs, binascii
++import types, operator, os, sys, base64, random, struct, random, base64, StringIO, array, codecs, binascii
+ from urllib import quote, unquote
+-
++try:
++	from hashlib import sha1
++except ImportError:
++	from sha import sha as sha1
+ 
+ MSN_PROTOCOL_VERSION = "MSNP11 CVR0"      # protocol version
+ MSN_PORT             = 1863               # default dispatch server port
+@@ -490,7 +493,7 @@
+         self.type = 3
+         self.location = "TMP" + str(random.randint(1000,9999))
+         self.friendly = "AAA="
+-        self.sha1d = b64enc(sha.sha(imageData).digest())
++        self.sha1d = b64enc(sha1(imageData).digest())
+         self.makeText()
+     
+     def setNull(self):
+@@ -518,7 +521,7 @@
+         h.append(self.friendly)
+         h.append("SHA1D")
+         h.append(self.sha1d)
+-        sha1c = b64enc(sha.sha("".join(h)).digest())
++        sha1c = b64enc(sha1("".join(h)).digest())
+         self.text = '<msnobj Creator="%s" Size="%s" Type="%s" Location="%s" Friendly="%s" SHA1D="%s" SHA1C="%s"/>' % (self.creator, str(self.size), str(self.type), self.location, self.friendly, self.sha1d, sha1c)
+     
+     def parse(self, s):
+diff -Naur pymsnt-0.11.3/src/utils.py pymsnt-0.11.3-1/src/utils.py
+--- pymsnt-0.11.3/src/utils.py	2008-02-08 14:55:07.000000000 +0100
++++ pymsnt-0.11.3-1/src/utils.py	2011-09-04 13:40:02.351321854 +0200
 @@ -1,17 +1,17 @@
  # Copyright 2004-2005 James Bunton <james@delx.cjb.net>
  # Licensed for distribution under the GPL version 2, check COPYING for details
@@ -130,11 +113,10 @@ index cb73ea3..88110ae 100644
  import urllib
  import os.path
  def getURLBits(url, assumedType=None):
-diff --git a/src/xdb.py b/src/xdb.py
-index a3e3b5d..bd48582 100644
---- a/src/xdb.py
-+++ b/src/xdb.py
-@@ -6,9 +6,13 @@ from debug import LogEvent, INFO, WARN
+diff -Naur pymsnt-0.11.3/src/xdb.py pymsnt-0.11.3-1/src/xdb.py
+--- pymsnt-0.11.3/src/xdb.py	2008-02-08 14:55:07.000000000 +0100
++++ pymsnt-0.11.3-1/src/xdb.py	2011-09-04 13:40:02.351321854 +0200
+@@ -6,9 +6,13 @@
  import os
  import os.path
  import shutil
@@ -149,7 +131,7 @@ index a3e3b5d..bd48582 100644
  X = os.path.sep
  SPOOL_UMASK = 0077
  
-@@ -23,7 +27,7 @@ def mangle(file):
+@@ -23,7 +27,7 @@
  	return file.replace("@", "%")
  
  def makeHash(file):
@@ -158,6 +140,3 @@ index a3e3b5d..bd48582 100644
  
  
  class XDB:
--- 
-1.7.2.3
-

@@ -1,6 +1,10 @@
 # ChangeLog for net-im/pymsn-t
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pymsn-t/ChangeLog,v 1.21 2011/09/04 10:26:35 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pymsn-t/ChangeLog,v 1.22 2011/09/04 11:44:01 hanno Exp $
+
+  04 Sep 2011; Hanno Boeck <hanno@gentoo.org>
+  files/pymsn-t-0.11.3-use-non-deprecated-hashlib.patch:
+  Re-diff patch to avoid problems with some versions of patch.
 
 *pymsn-t-0.11.3-r3 (04 Sep 2011)
 
