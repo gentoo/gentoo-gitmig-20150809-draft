@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Business-FedEx-DirectConnect
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Business-FedEx-DirectConnect/ChangeLog,v 1.11 2006/10/20 21:45:45 mcummings Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Business-FedEx-DirectConnect/ChangeLog,v 1.12 2011/09/04 18:39:59 tove Exp $
+
+*Business-FedEx-DirectConnect-1.10.0 (04 Sep 2011)
+
+  04 Sep 2011; Torsten Veller <tove@gentoo.org>
+  +Business-FedEx-DirectConnect-1.10.0.ebuild:
+  Maintenance. Use CPAN mirrors. Change version scheme
 
   20 Oct 2006; Michael Cummings <mcummings@gentoo.org>
   Business-FedEx-DirectConnect-1.01.ebuild:
