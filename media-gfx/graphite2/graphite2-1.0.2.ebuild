@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.0.2.ebuild,v 1.3 2011/09/04 11:29:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.0.2.ebuild,v 1.4 2011/09/04 11:44:33 scarabeus Exp $
 
 EAPI=4
 
@@ -13,23 +13,24 @@ SRC_URI="mirror://sourceforge/silgraphite/${PN}/${P}.tgz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
-IUSE="perl"
+IUSE="perl test"
 
 RDEPEND="
-	dev-libs/glib:2
-	media-libs/fontconfig
-	>=media-libs/harfbuzz-0.7.0_pre20110904
-	media-libs/silgraphite
 	perl? ( dev-lang/perl )
 "
 DEPEND="${RDEPEND}
 	perl? ( virtual/perl-Module-Build )
+	test? (
+		dev-libs/glib:2
+		media-libs/fontconfig
+		media-libs/silgraphite
+	)
 "
 
 PATCHES=(
 	"${FILESDIR}/${PN}-includes-libs-perl.patch"
 	"${FILESDIR}/${PN}-fix_wrong_linker_opts.patch"
-	"${FILESDIR}/${P}-notests.patch"
+	"${FILESDIR}/${PN}-1.0.2-no_harfbuzz_tests.patch"
 )
 
 pkg_setup() {
@@ -45,6 +46,13 @@ src_prepare() {
 		sed -i \
 			-e "s:@BUILD_DIR@:\"${CMAKE_BUILD_DIR}/src\":" \
 			contrib/perl/Build.PL || die
+	fi
+
+	# make tests optional
+	if ! use test; then
+		sed -i \
+			-e '/tests/d' \
+			CMakeLists.txt || die
 	fi
 }
 
