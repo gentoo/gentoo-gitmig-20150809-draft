@@ -1,9 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.rc6.3,v 1.1 2010/04/06 02:11:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.rc6.3,v 1.2 2011/09/05 16:56:19 mr_bones_ Exp $
 
-opts="checkconfig reload"
+extra_commands="checkconfig reload"
 
 depend() {
 	# Make networking dependency conditional on configuration
