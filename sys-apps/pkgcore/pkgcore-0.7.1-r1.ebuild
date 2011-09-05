@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.7.1.ebuild,v 1.1 2011/09/03 08:22:35 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.7.1-r1.ebuild,v 1.1 2011/09/05 20:18:28 ferringb Exp $
 
 EAPI="3"
 DISTUTILS_SRC_TEST="setup.py"
@@ -14,14 +14,14 @@ SRC_URI="http://pkgcore.googlecode.com/files/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="doc"
+IUSE="-doc"
 
 RDEPEND=">=dev-lang/python-2.4
 	>=dev-python/snakeoil-0.4.2
 	dev-python/pyparsing
 	|| ( >=dev-lang/python-2.5 dev-python/pycrypto )"
 DEPEND="${RDEPEND}
-	doc? ( >=dev-python/docutils-0.4 )"
+	doc? ( dev-python/sphinx )"
 
 DOCS="AUTHORS NEWS"
 
@@ -35,7 +35,7 @@ src_compile() {
 	distutils_src_compile
 
 	if use doc; then
-		./build_docs.py || die "doc building failed"
+		python setup.py build_docs || die "doc building failed"
 	fi
 }
 
@@ -43,8 +43,7 @@ src_install() {
 	distutils_src_install
 
 	if use doc; then
-		dohtml -r doc dev-notes
-		doman man/*.1
+		dohtml -r build/sphinx/html/*
 	fi
 }
 
