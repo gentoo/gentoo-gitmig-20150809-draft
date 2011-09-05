@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/xtables-addons
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/ChangeLog,v 1.20 2011/07/28 16:43:53 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/ChangeLog,v 1.21 2011/09/05 10:33:19 chainsaw Exp $
+
+  05 Sep 2011; Tony Vroon <chainsaw@gentoo.org> xtables-addons-1.37.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah "Armageddon" El Lazkani in bug #381611. Removed incorrect inherit of
+  autotools, this eclass is not used.
 
   28 Jul 2011; Peter Volkov <pva@gentoo.org> xtables-addons-1.37.ebuild:
   Disable TEE for kernel >= 2.6.35 as it's already in kernel and no need to

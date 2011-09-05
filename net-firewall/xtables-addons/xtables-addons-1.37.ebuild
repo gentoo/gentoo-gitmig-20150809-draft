@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.37.ebuild,v 1.2 2011/07/28 16:43:53 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.37.ebuild,v 1.3 2011/09/05 10:33:19 chainsaw Exp $
 
 EAPI="4"
-inherit eutils linux-info linux-mod multilib autotools
+inherit eutils linux-info linux-mod multilib
 
 DESCRIPTION="extensions not yet accepted in the main kernel/iptables (patch-o-matic(-ng) successor)"
 HOMEPAGE="http://xtables-addons.sourceforge.net/"
