@@ -1,4 +1,4 @@
-some arches put argv into readonly memory - bug #379101
+Fixes segfault on some arches - bug #379101
 Index: rfc2045/reformime.c
 ===================================================================
 --- rfc2045/reformime.c	(revision 102)
@@ -14,9 +14,9 @@ Index: rfc2045/reformime.c
  			doinfo=1;
 Index: rfc2045/reformime.c
 ===================================================================
---- rfc2045/reformime.c	(revision 137)
+--- rfc2045/reformime.c	(revision 141)
 +++ rfc2045/reformime.c	(working copy)
-@@ -1150,7 +1150,7 @@
+@@ -1150,14 +1150,15 @@
  
  	if (doinfo)
  	{
@@ -25,3 +25,12 @@ Index: rfc2045/reformime.c
  		do {
  			print_info(p, mimesection);
  			if (do_extract)
+ 				extract_section(p, mimesection,
+ 						extract_filename, argc-argn,
+ 						argv+argn, do_extract);
+-			mimesection = strtok(NULL,",");
++			if (mimesection)
++				mimesection = strtok(NULL,",");
+ 		} while (mimesection != NULL);
+ 	}
+ 	else if (dodecode)
