@@ -1,6 +1,12 @@
 # ChangeLog for app-text/poppler-data
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/ChangeLog,v 1.39 2011/04/27 17:53:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/ChangeLog,v 1.40 2011/09/05 17:50:11 reavertm Exp $
+
+*poppler-data-0.4.5 (05 Sep 2011)
+
+  05 Sep 2011; Maciej Mrozowski <reavertm@gentoo.org>
+  +poppler-data-0.4.5.ebuild:
+  Version bump
 
   27 Apr 2011; Fabian Groffen <grobian@gentoo.org> poppler-data-0.4.4.ebuild:
   Marked ~m68k-mint, bug #364787
