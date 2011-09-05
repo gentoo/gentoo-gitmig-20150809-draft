@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-hppa64/binutils-hppa64-2.21.1.ebuild,v 1.1 2011/07/15 02:01:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-hppa64/binutils-hppa64-2.21.1-r1.ebuild,v 1.1 2011/09/05 20:02:47 jer Exp $
 
 export CTARGET=hppa64-${CHOST#*-}
 
-PATCHVER="1.0"
+PATCHVER="1.1"
 ELF2FLT_VER=""
 inherit toolchain-binutils
 
