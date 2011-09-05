@@ -1,6 +1,12 @@
 # ChangeLog for net-print/gutenprint
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/ChangeLog,v 1.23 2011/07/09 09:37:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/ChangeLog,v 1.24 2011/09/05 06:42:58 radhermit Exp $
+
+*gutenprint-5.2.7 (05 Sep 2011)
+
+  05 Sep 2011; Tim Harder <radhermit@gentoo.org> +gutenprint-5.2.7.ebuild:
+  Version bump (bug #377895 by Raphaël Droz). Add nls and static-libs USE
+  flags.
 
   09 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> gutenprint-5.2.6.ebuild:
   ppc64 stable wrt #276421
