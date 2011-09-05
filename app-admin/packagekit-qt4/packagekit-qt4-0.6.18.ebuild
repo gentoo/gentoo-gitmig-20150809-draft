@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-qt4/packagekit-qt4-0.6.18.ebuild,v 1.2 2011/09/05 20:05:15 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-qt4/packagekit-qt4-0.6.18.ebuild,v 1.3 2011/09/05 20:36:10 lxnay Exp $
 
 EAPI="3"
 
@@ -56,6 +56,12 @@ src_configure() {
 src_compile() {
 	for qtdir in packagekit-qt packagekit-qt2; do
 		cd "${S}"/lib/${qtdir} || die
+		# fix buildsystem, make .moc files to get regenerated
+		if [[ "${qtdir}" = "packagekit-qt" ]]; then
+			rm src/*.moc || die
+		else
+			rm *.moc || die
+		fi
 		emake || die "emake install failed"
 	done
 }

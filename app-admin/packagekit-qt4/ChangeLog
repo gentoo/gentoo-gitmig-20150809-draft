@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/packagekit-qt4
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-qt4/ChangeLog,v 1.5 2011/09/05 20:05:15 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-qt4/ChangeLog,v 1.6 2011/09/05 20:36:10 lxnay Exp $
+
+  05 Sep 2011; Fabio Erculiani <lxnay@gentoo.org> packagekit-qt4-0.6.18.ebuild:
+  fix compilation with qt4 4.7, remove pre-built .moc files
 
   05 Sep 2011; Fabio Erculiani <lxnay@gentoo.org> packagekit-qt4-0.6.16.ebuild,
   packagekit-qt4-0.6.17.ebuild, packagekit-qt4-0.6.18.ebuild:
