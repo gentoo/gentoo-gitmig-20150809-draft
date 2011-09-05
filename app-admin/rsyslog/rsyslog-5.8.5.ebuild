@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.1.ebuild,v 1.1 2011/05/23 08:01:54 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.5.ebuild,v 1.1 2011/09/05 09:25:41 ultrabug Exp $
 
 EAPI=4
 
@@ -8,12 +8,13 @@ inherit autotools-utils systemd
 
 DESCRIPTION="An enhanced multi-threaded syslogd with database support and more."
 HOMEPAGE="http://www.rsyslog.com/"
-SRC_URI="http://www.rsyslog.com/files/download/${PN}/${P}.tar.gz"
+SRC_URI="http://www.rsyslog.com/files/download/${PN}/${P}.tar.gz
+	zeromq?	( https://github.com/aggregateknowledge/rsyslog-zeromq/tarball/44b551abc29dd5b541884bd51b45b413855a93d8 -> ${PN}-zeromq.tar.gz )"
 
 LICENSE="GPL-3 LGPL-3"
 KEYWORDS="~amd64 ~arm ~hppa ~sparc ~x86"
 SLOT="0"
-IUSE="dbi debug doc extras gnutls kerberos mysql oracle postgres relp snmp static-libs zlib"
+IUSE="dbi debug doc extras gnutls kerberos mysql oracle postgres relp snmp static-libs zeromq zlib"
 
 DEPEND="dbi? ( dev-db/libdbi )
 	extras? ( net-libs/libnet )
@@ -24,6 +25,7 @@ DEPEND="dbi? ( dev-db/libdbi )
 	oracle? ( dev-db/oracle-instantclient-basic )
 	relp? ( >=dev-libs/librelp-0.1.3 )
 	snmp? ( net-analyzer/net-snmp )
+	zeromq? ( net-libs/zeromq )
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}"
 
@@ -37,6 +39,18 @@ RESTRICT="test"
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
 DOCS=(AUTHORS ChangeLog doc/rsyslog-example.conf)
+
+src_prepare() {
+	# Maintainer notes:
+	# ZeroMQ support, for now it is done by hand until upstream process bug.
+	# Bugzilla : http://bugzilla.adiscon.com/show_bug.cgi?id=277
+	if use zeromq; then
+		local ZEROPATH=${WORKDIR}/aggregateknowledge-rsyslog-zeromq-44b551a
+		epatch ${ZEROPATH}/rsyslog-zeromq.patch
+		cp -r "${ZEROPATH}/{i,o}mzeromq" "${S}/plugins"
+		eautoreconf
+	fi
+}
 
 src_configure() {
 	# Maintainer notes:
@@ -82,6 +96,8 @@ src_configure() {
 		$(use_enable debug diagtools)
 		$(use_enable debug memcheck)
 		$(use_enable debug valgrind)
+		$(use_enable zeromq imzeromq)
+		$(use_enable zeromq omzeromq)
 	)
 
 	systemd_to_myeconfargs

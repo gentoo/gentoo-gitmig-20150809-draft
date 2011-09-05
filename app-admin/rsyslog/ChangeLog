@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.52 2011/08/03 07:45:11 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.53 2011/09/05 09:25:41 ultrabug Exp $
+
+*rsyslog-5.8.5 (05 Sep 2011)
+
+  05 Sep 2011; Ultrabug <ultrabug@gentoo.org> files/5-stable/rsyslog.initd,
+  -rsyslog-5.8.1.ebuild, +rsyslog-5.8.5.ebuild, metadata.xml:
+  Init script handles baselayout 1 & 2, fix #373913 thanks to Martin Dummer for
+  reporting. Version bump wrt #381637 and drop old vulnerable version. Add
+  optional zeromq support to rsyslog.
 
 *rsyslog-5.8.3 (03 Aug 2011)
 
