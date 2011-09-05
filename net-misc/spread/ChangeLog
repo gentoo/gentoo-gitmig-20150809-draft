@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/spread
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spread/ChangeLog,v 1.6 2010/02/22 18:20:33 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spread/ChangeLog,v 1.7 2011/09/05 07:05:23 kumba Exp $
+
+*spread-4.1.0 (05 Sep 2011)
+
+  05 Sep 2011; Joshua Kinard <kumba@gentoo.org> +spread-4.1.0.ebuild:
+  Bump to 4.1.0. This fixes #311317.
 
   22 Feb 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> spread-4.0.0.ebuild:
   Put the docs in correct place wrt bug #241308 by flameeyes. Also fix some
