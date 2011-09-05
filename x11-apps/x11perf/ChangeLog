@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/x11perf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/x11perf/ChangeLog,v 1.68 2011/09/04 11:54:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/x11perf/ChangeLog,v 1.69 2011/09/05 19:18:07 maekke Exp $
+
+  05 Sep 2011; Markus Meier <maekke@gentoo.org> x11perf-1.5.4.ebuild:
+  arm stable, bug #380421
 
   04 Sep 2011; Markus Meier <maekke@gentoo.org> x11perf-1.5.4.ebuild:
   x86 stable, bug #380421
