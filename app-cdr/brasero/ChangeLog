@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.131 2011/08/19 15:19:22 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.132 2011/09/05 20:32:57 maekke Exp $
+
+  05 Sep 2011; Markus Meier <maekke@gentoo.org> brasero-3.0.0.ebuild:
+  add ~arm, bug #379651
 
 *brasero-3.0.0 (19 Aug 2011)
 
