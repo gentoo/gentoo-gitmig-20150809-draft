@@ -1,17 +1,18 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/monotone-0.48.1.ebuild,v 1.5 2011/08/13 07:24:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/monotone-1.0.ebuild,v 1.1 2011/09/05 13:33:03 pva Exp $
 
-EAPI=2
+# QA failiures reported in https://code.monotone.ca/p/monotone/issues/181/
+EAPI="4"
 inherit bash-completion elisp-common eutils toolchain-funcs
 
 DESCRIPTION="Monotone Distributed Version Control System"
 HOMEPAGE="http://monotone.ca"
-SRC_URI="http://monotone.ca/downloads/${PV}/${P}.tar.gz"
+SRC_URI="http://monotone.ca/downloads/${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="amd64 ~ia64 x86"
+KEYWORDS="~amd64 ~ia64 ~x86"
 IUSE="doc emacs ipv6 nls"
 
 RDEPEND="sys-libs/zlib
@@ -36,42 +37,44 @@ src_prepare() {
 		( $(gcc-major-version) -eq "3" && $(gcc-minor-version) -le 3 ) ]]; then
 		die 'requires >=gcc-3.4'
 	fi
-
-	epatch "${FILESDIR}/monotone-0.48.1-sqlite-3.7.3.patch"
 }
 
 src_configure() {
 	econf \
-		--disable-dependency-tracking \
 		$(use_enable nls) \
 		$(use_enable ipv6)
 }
 
 src_compile() {
-	emake || die
+	emake
 
-	if use doc; then
-		emake html || die
-	fi
+	use doc && emake html
 
 	if use emacs; then
-		cd contrib
+		cd contrib || die
 		elisp-compile *.el || die
 	fi
 }
 
 src_test() {
-	if [ ${UID} != 0 ]; then
-		emake check || die "emake check failed"
+	# Disables netsync_bind_opt test
+	# https://code.monotone.ca/p/monotone/issues/179/
+	export DISABLE_NETWORK_TESTS=true
+	# bash_completion test fails too. Expected thus disab
+	# https://code.monotone.ca/p/monotone/issues/180/
+	rm test/extra/bash_completion/ -rf
+	if [[ ${UID} != 0 ]]; then
+		emake check
 	else
-		ewarn "Tests will fail if ran as root, skipping."
+		# Tests fail if run as root
+		su portage emake check
 	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 
-	mv "${D}"/usr/share/doc/${PN} "${D}"/usr/share/doc/${PF} || die
+	mv "${ED}"/usr/share/doc/${PN} "${ED}"/usr/share/doc/${PF} || die
 
 	dobashcompletion contrib/monotone.bash_completion
 
@@ -86,16 +89,17 @@ src_install() {
 			|| die
 	fi
 
-	dodoc AUTHORS NEWS README* UPGRADE || die
+	dodoc AUTHORS NEWS README* UPGRADE
 	docinto contrib
-	dodoc contrib/*
-	newconfd "${FILESDIR}"/monotone.confd monotone || die
-	newinitd "${FILESDIR}"/${PN}-0.36.initd monotone || die
+	docompress -x /usr/share/doc/${PF}/contrib
+	dodoc -r contrib
+	newconfd "${FILESDIR}"/monotone.confd monotone
+	newinitd "${FILESDIR}"/${PN}-0.36.initd monotone
 
 	insinto /etc/monotone
-	newins "${FILESDIR}"/hooks.lua hooks.lua || die
-	newins "${FILESDIR}"/read-permissions read-permissions || die
-	newins "${FILESDIR}"/write-permissions write-permissions || die
+	newins "${FILESDIR}"/hooks.lua hooks.lua
+	newins "${FILESDIR}"/read-permissions read-permissions
+	newins "${FILESDIR}"/write-permissions write-permissions
 
 	keepdir /var/lib/monotone/keys/ /var/{log,run}/monotone
 	fowners monotone:monotone /var/lib/monotone{,/keys} /var/{log,run}/monotone

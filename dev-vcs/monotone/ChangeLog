@@ -1,6 +1,16 @@
 # ChangeLog for dev-vcs/monotone
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/ChangeLog,v 1.17 2011/08/13 07:24:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/ChangeLog,v 1.18 2011/09/05 13:33:03 pva Exp $
+
+*monotone-1.0 (05 Sep 2011)
+
+  05 Sep 2011; Peter Volkov <pva@gentoo.org> -files/monotone-0.45-gcc45.patch,
+  -monotone-0.48.1.ebuild, -files/monotone-0.48.1-sqlite-3.7.3.patch,
+  -monotone-0.99-r1.ebuild, monotone-0.99.1.ebuild,
+  -files/monotone-0.99-crash.patch, +monotone-1.0.ebuild:
+  Version bump, bug #381135; updated monotone-0.99.1 to depend on
+  <dev-libs/botan-1.10, bug 380257, thank Dennis Schridde for both reports.
+  Drop old.
 
   13 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> monotone-0.48.1.ebuild,
   monotone-0.99-r1.ebuild, monotone-0.99.1.ebuild:

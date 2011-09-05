@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/monotone-0.99.1.ebuild,v 1.4 2011/08/13 07:24:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/monotone-0.99.1.ebuild,v 1.5 2011/09/05 13:33:03 pva Exp $
 
 EAPI="4"
 inherit bash-completion elisp-common eutils toolchain-funcs
@@ -18,6 +18,7 @@ RDEPEND="sys-libs/zlib
 	emacs? ( virtual/emacs )
 	>=dev-libs/libpcre-7.6
 	>=dev-libs/botan-1.8.0
+	<dev-libs/botan-1.10
 	>=dev-db/sqlite-3.3.8
 	>=dev-lang/lua-5.1
 	net-dns/libidn"
