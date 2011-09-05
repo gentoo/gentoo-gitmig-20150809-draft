@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/decoratortools
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/decoratortools/ChangeLog,v 1.19 2010/07/18 13:47:24 nixnut Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/decoratortools/ChangeLog,v 1.20 2011/09/05 04:58:24 neurogeek Exp $
+
+  05 Sep 2011; Jesus Rivero <neurogeek@gentoo.org> decoratortools-1.8.ebuild:
+  License fix, changed to PSF-2
 
   18 Jul 2010; <nixnut@gentoo.org> decoratortools-1.8.ebuild:
   ppc stable #324467
