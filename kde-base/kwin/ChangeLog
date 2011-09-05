@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.239 2011/08/17 20:49:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.240 2011/09/05 22:18:32 dilfridge Exp $
+
+*kwin-4.6.5-r1 (05 Sep 2011)
+
+  05 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org> +kwin-4.6.5-r1.ebuild,
+  +files/kwin-4.6.5-mesadri.patch:
+  Backport fix for Intel DRI mis-detection, bug 380737
 
   17 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> -kwin-4.7.0.ebuild,
   kwin-4.7.0-r1.ebuild, -files/kwin-4.7.0-xcomposite_cmake_automagic.patch:
