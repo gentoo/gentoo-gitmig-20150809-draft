@@ -1,0 +1,9 @@
+# ChangeLog for sys-apps/gpet
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gpet/ChangeLog,v 1.1 2011/09/05 14:19:45 naota Exp $
+
+*gpet-0.3 (05 Sep 2011)
+
+  05 Sep 2011; Naohiro Aota <naota@gentoo.org> +gpet-0.3.ebuild, +metadata.xml:
+  New package sys-apps/gpet
+
