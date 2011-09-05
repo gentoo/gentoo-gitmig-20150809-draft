@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/ca-certificates
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.52 2011/09/03 17:33:45 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.53 2011/09/05 19:56:46 grobian Exp $
+
+*ca-certificates-20110502-r3 (05 Sep 2011)
+
+  05 Sep 2011; Fabian Groffen <grobian@gentoo.org>
+  +ca-certificates-20110502-r3.ebuild:
+  Fix for Prefix migration gone bad. Make sure update-ca-certificates knows
+  about the offset, such that it doesn't generate symlinks pointing outside the
+  offset. Bug #381937
 
   03 Sep 2011; Fabian Groffen <grobian@gentoo.org>
   ca-certificates-20110502-r2.ebuild:
