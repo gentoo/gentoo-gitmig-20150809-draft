@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Eval-LineNumbers
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Eval-LineNumbers/ChangeLog,v 1.1 2011/09/05 19:10:55 robbat2 Exp $
+
+*Eval-LineNumbers-0.310.0 (05 Sep 2011)
+
+  05 Sep 2011; Robin H. Johnson <robbat2@gentoo.org>
+  +Eval-LineNumbers-0.310.0.ebuild, +metadata.xml:
+  New package, test dependency for dev-perl/Daemon-Generic.
+
