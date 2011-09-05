@@ -1,6 +1,9 @@
 # ChangeLog for games-server/pvpgn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/ChangeLog,v 1.21 2011/05/22 21:04:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/pvpgn/ChangeLog,v 1.22 2011/09/05 16:58:03 mr_bones_ Exp $
+
+  05 Sep 2011; Michael Sterrett <mr_bones_@gentoo.org> files/pvpgn.rc:
+  opts => extra_commands for init script
 
   22 May 2011; Michael Sterrett <mr_bones_@gentoo.org> files/pvpgn.rc:
   update init script with patch from Anton Podavalov via bug #368203
