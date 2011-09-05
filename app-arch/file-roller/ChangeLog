@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.299 2011/08/19 15:41:35 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.300 2011/09/05 19:47:50 maekke Exp $
+
+  05 Sep 2011; Markus Meier <maekke@gentoo.org> file-roller-3.0.2-r1.ebuild:
+  add ~arm, bug #379657
 
 *file-roller-3.0.2-r1 (19 Aug 2011)
 
