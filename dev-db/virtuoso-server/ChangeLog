@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/virtuoso-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/ChangeLog,v 1.20 2011/05/01 02:31:05 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/ChangeLog,v 1.21 2011/09/05 13:49:43 chainsaw Exp $
+
+  05 Sep 2011; Tony Vroon <chainsaw@gentoo.org> virtuoso-server-6.1.3.ebuild:
+  Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney in bug
+  #375171 filed by Maciej "reavertm" Mrozowski.
 
   01 May 2011; Mark Loeser <halcy0n@gentoo.org> virtuoso-server-6.1.2.ebuild:
   Stable on ppc64
