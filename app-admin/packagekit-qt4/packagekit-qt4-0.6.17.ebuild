@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-qt4/packagekit-qt4-0.6.17.ebuild,v 1.1 2011/08/02 05:45:34 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-qt4/packagekit-qt4-0.6.17.ebuild,v 1.2 2011/09/05 20:05:15 lxnay Exp $
 
 EAPI="3"
 
@@ -54,11 +54,15 @@ src_configure() {
 }
 
 src_compile() {
-	cd "${S}"/lib/packagekit-qt || die
-	emake || die "emake install failed"
+	for qtdir in packagekit-qt packagekit-qt2; do
+		cd "${S}"/lib/${qtdir} || die
+		emake || die "emake install failed"
+	done
 }
 
 src_install() {
-	cd "${S}"/lib/packagekit-qt || die
-	emake DESTDIR="${D}" install || die "emake install failed"
+	for qtdir in packagekit-qt packagekit-qt2; do
+		cd "${S}"/lib/${qtdir} || die
+		emake DESTDIR="${D}" install || die "emake install failed"
+	done
 }
