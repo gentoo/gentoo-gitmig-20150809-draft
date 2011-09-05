@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.8.4.ebuild,v 1.3 2011/02/24 17:31:10 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.8.4.ebuild,v 1.4 2011/09/05 20:03:36 zmedico Exp $
 
 EAPI=2
-inherit cmake-utils eutils multilib
+inherit cmake-utils eutils flag-o-matic multilib
 
 DESCRIPTION="PoDoFo is a C++ library to work with the PDF file format."
 HOMEPAGE="http://sourceforge.net/projects/podofo/"
@@ -54,6 +54,10 @@ src_prepare() {
 }
 
 src_configure() {
+
+	# Bug #381359: undefined reference to `PoDoFo::PdfVariant::DelayedLoadImpl()'
+	filter-flags -fvisibility-inlines-hidden
+
 	mycmakeargs+=(
 		"-DPODOFO_BUILD_SHARED=1"
 		"-DPODOFO_HAVE_JPEG_LIB=1"
