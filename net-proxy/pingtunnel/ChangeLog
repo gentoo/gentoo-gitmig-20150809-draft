@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/pingtunnel
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/pingtunnel/ChangeLog,v 1.4 2009/09/16 21:16:36 mrness Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/pingtunnel/ChangeLog,v 1.5 2011/09/05 20:08:46 radhermit Exp $
+
+*pingtunnel-0.72 (05 Sep 2011)
+
+  05 Sep 2011; Tim Harder <radhermit@gentoo.org> +pingtunnel-0.72.ebuild:
+  Version bump. Respect CC and update to EAPI 4.
 
 *pingtunnel-0.71 (16 Sep 2009)
 
