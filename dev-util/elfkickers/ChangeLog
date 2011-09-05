@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/elfkickers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.40 2011/08/24 19:25:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.41 2011/09/05 20:36:17 maekke Exp $
+
+  05 Sep 2011; Markus Meier <maekke@gentoo.org> elfkickers-3.0-r1.ebuild:
+  add ~arm, bug #380085
 
   24 Aug 2011; Markus Meier <maekke@gentoo.org> elfkickers-3.0-r1.ebuild:
   x86 stable, bug #380083
