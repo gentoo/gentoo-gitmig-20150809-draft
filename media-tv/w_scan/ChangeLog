@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/w_scan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/ChangeLog,v 1.17 2011/01/27 17:55:23 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/ChangeLog,v 1.18 2011/09/05 15:49:34 idl0r Exp $
+
+*w_scan-20110702 (05 Sep 2011)
+
+  05 Sep 2011; Christian Ruppert <idl0r@gentoo.org> +w_scan-20110702.ebuild,
+  -files/w_scan-20081106-build-and-path-fixes.patch,
+  -files/w_scan-20090516-build-and-path-fixes.patch, metadata.xml:
+  Version bump to 20110702. Remove old patches. Fixes bug 322987 and bug
+  363505.
 
   27 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
   -w_scan-20081106.ebuild, -w_scan-20090516.ebuild, w_scan-20101204.ebuild:
