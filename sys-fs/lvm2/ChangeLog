@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.246 2011/07/29 08:14:15 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.247 2011/09/05 17:41:04 robbat2 Exp $
+
+*lvm2-2.02.88 (05 Sep 2011)
+
+  05 Sep 2011; Robin H. Johnson <robbat2@gentoo.org> +lvm2-2.02.88.ebuild:
+  Version bump (bug #376749), more docs (bug #378855), USE=static-libs (bug
+  #379039).
 
   29 Jul 2011; Zac Medico <zmedico@gentoo.org> lvm2-2.02.85.ebuild:
   Add ~x86-linux keyword.
