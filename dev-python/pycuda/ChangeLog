@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycuda
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/ChangeLog,v 1.10 2011/01/01 21:15:03 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/ChangeLog,v 1.11 2011/09/05 22:36:05 spock Exp $
+
+*pycuda-2011.1.2 (05 Sep 2011)
+
+  05 Sep 2011; Michał Januszewski <spock@gentoo.org> +pycuda-2011.1.2.ebuild:
+  Version bump.
 
   01 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pycuda-0.94.2.ebuild, pycuda-9999.ebuild:
