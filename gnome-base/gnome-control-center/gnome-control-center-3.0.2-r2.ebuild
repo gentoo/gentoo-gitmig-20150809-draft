@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.0.2-r2.ebuild,v 1.1 2011/08/18 06:22:02 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.0.2-r2.ebuild,v 1.2 2011/09/05 19:56:10 maekke Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2"
 SLOT="2"
 IUSE="+cheese +cups +networkmanager +socialweb"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~amd64 ~arm ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 
 # XXX: gnome-desktop-2.91.5 is needed for upstream commit c67f7efb
 # XXX: NetworkManager-0.9 support is automagic, make hard-dep once it's released
