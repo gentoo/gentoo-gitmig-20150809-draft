@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.4.ebuild,v 1.3 2011/09/04 20:06:04 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.4.ebuild,v 1.4 2011/09/05 08:36:50 scarabeus Exp $
 
 EAPI="3"
 
@@ -226,9 +226,9 @@ src_prepare() {
 	ewarn
 
 	# Check if we have enough RAM and free diskspace to build this beast
-	CHECKREQS_MEMORY="512"
-	use debug && CHECKREQS_DISK_BUILD="12288" || CHECKREQS_DISK_BUILD="7144"
-	check_reqs
+	CHECKREQS_MEMORY="512M"
+	use debug && CHECKREQS_DISK_BUILD="12G" || CHECKREQS_DISK_BUILD="7G"
+	check-reqs_pkg_setup
 
 	strip-linguas ${LANGS}
 

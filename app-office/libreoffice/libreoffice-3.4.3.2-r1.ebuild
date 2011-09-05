@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.3.2-r1.ebuild,v 1.3 2011/09/04 11:52:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.3.2-r1.ebuild,v 1.4 2011/09/05 08:36:50 scarabeus Exp $
 
 EAPI=3
 
@@ -279,14 +279,10 @@ pkg_setup() {
 		ewarn
 	fi
 
-	ewarn "Libreoffice compilation often fails on parallel issues"
-	ewarn "but the slowdown by enforcing MAKEOPTS=-j1 is too huge."
-	ewarn "If you encounter errors try yourself to disable parallel build."
-
 	# Check if we have enough RAM and free diskspace to build this beast
-	CHECKREQS_MEMORY="1024"
-	use debug && CHECKREQS_DISK_BUILD="15360" || CHECKREQS_DISK_BUILD="9216"
-	check_reqs
+	CHECKREQS_MEMORY="1G"
+	use debug && CHECKREQS_DISK_BUILD="15G" || CHECKREQS_DISK_BUILD="9G"
+	check-reqs_pkg_setup
 }
 
 src_unpack() {
