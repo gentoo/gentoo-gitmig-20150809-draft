@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.80 2011/09/04 03:55:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.81 2011/09/05 09:25:24 ultrabug Exp $
 
 # Robin H. Johnson <robbat2@gentoo.org> (03 Sep 2011)
 # Remove this for your arch after you keyword dev-utils/google-perftools (bug #381737
@@ -131,3 +131,7 @@ net-libs/ortp srtp
 # >=dev-texlive/texlive-langcjk-2010 provides ptex too but is masked
 # unmask when TeX Live 2010 keywording is done (bug #342513)
 app-i18n/canna doc
+
+# Ultrabug <ultrabug@gentoo.org) (05 Sept 2011)
+# missing keyword for net-libs/zeromq
+app-admin/rsyslog zeromq

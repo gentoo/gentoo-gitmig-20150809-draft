@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.58 2011/09/04 03:54:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.59 2011/09/05 09:25:24 ultrabug Exp $
 
 # Robin H. Johnson <robbat2@gentoo.org> (03 Sep 2011)
 # Remove this for your arch after you keyword dev-utils/google-perftools and virtual/gsasl (bug #381737
@@ -96,3 +96,7 @@ media-plugins/gst-plugins-meta aac dv lame taglib vcd wavpack
 
 # projectm not keyworded, bug #314969
 media-video/vlc projectm
+
+# Ultrabug <ultrabug@gentoo.org) (05 Sept 2011)
+# missing keyword for net-libs/zeromq
+app-admin/rsyslog zeromq
