@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/accountsservice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/ChangeLog,v 1.1 2011/08/18 05:11:39 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/accountsservice/ChangeLog,v 1.2 2011/09/05 19:54:39 maekke Exp $
+
+  05 Sep 2011; Markus Meier <maekke@gentoo.org> accountsservice-0.6.13.ebuild:
+  add ~arm, bug #379651
 
 *accountsservice-0.6.13 (18 Aug 2011)
 
