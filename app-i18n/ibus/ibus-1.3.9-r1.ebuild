@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.3.9-r1.ebuild,v 1.5 2011/04/16 22:08:19 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.3.9-r1.ebuild,v 1.6 2011/09/05 08:38:15 naota Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -24,6 +24,7 @@ RDEPEND=">=dev-libs/glib-2.18:2
 		x11-libs/gtk+:2
 	)
 	X? (
+		sys-apps/dbus[X]
 		x11-libs/libX11
 		x11-libs/gtk+:2
 	)
