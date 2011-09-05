@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.7.4.1-r1.ebuild,v 1.2 2011/07/05 02:46:37 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.7.5.ebuild,v 1.1 2011/09/05 18:32:44 flameeyes Exp $
 
-EAPI="2"
+EAPI="4"
 
 MY_P="${P/_/-}"
 
-inherit eutils linux-info versionator base
+inherit eutils linux-info versionator flag-o-matic
 
 DESCRIPTION="LinuX Containers userspace utilities"
 HOMEPAGE="http://lxc.sourceforge.net/"
@@ -17,12 +17,12 @@ KEYWORDS="~amd64 ~ppc64 ~x86"
 
 LICENSE="LGPL-3"
 SLOT="0"
-IUSE="doc examples vanilla"
+IUSE="examples vanilla"
 
 RDEPEND="sys-libs/libcap"
 
 DEPEND="${RDEPEND}
-	doc? ( app-text/docbook-sgml-utils )
+	app-text/docbook-sgml-utils
 	>=sys-kernel/linux-headers-2.6.29"
 
 # For init script, so protect with vanilla, they are not strictly
@@ -34,7 +34,7 @@ RDEPEND="${RDEPEND}
 	)"
 
 CONFIG_CHECK="~CGROUPS
-	~CGROUP_NS ~CPUSETS ~CGROUP_CPUACCT
+	~CPUSETS ~CGROUP_CPUACCT
 	~RESOURCE_COUNTERS ~CGROUP_MEM_RES_CTLR
 	~CGROUP_SCHED
 
@@ -56,7 +56,11 @@ ERROR_NET_NS="CONFIG_NET_NS:	needed for unshared network"
 ERROR_VETH="CONFIG_VETH:	needed for internal (host-to-container) networking"
 ERROR_MACVLAN="CONFIG_MACVLAN:	needed for internal (inter-container) networking"
 
+DOCS=(AUTHORS CONTRIBUTING MAINTAINERS NEWS TODO README doc/FAQ.txt)
+
 src_configure() {
+	append-flags -fno-strict-aliasing
+
 	econf \
 		--localstatedir=/var \
 		--bindir=/usr/sbin \
@@ -64,24 +68,12 @@ src_configure() {
 		--with-config-path=/etc/lxc	\
 		--with-rootfs-path=/usr/lib/lxc/rootfs \
 		--with-linuxdir="${KERNEL_DIR}" \
-		$(use_enable doc) \
-		$(use_enable examples) \
-		|| die "configure failed"
+		--enable-doc \
+		$(use_enable examples)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
-
-	dodoc AUTHORS CONTRIBUTING MAINTAINERS \
-		NEWS TODO README doc/FAQ.txt || die "dodoc failed"
-
-	# If the documentation is going to be rebuilt, the Makefiles will
-	# install the man pages themselves; if we're not going to, we
-	# still need to install them, as they are provided with the
-	# tarball in recent versions.
-	if ! use doc; then
-		doman doc/*.{1,5,7} || die
-	fi
+	default
 
 	rm -r "${D}"/usr/sbin/lxc-{setcap,ls} \
 		"${D}"/usr/share/man/man1/lxc-ls.1 \

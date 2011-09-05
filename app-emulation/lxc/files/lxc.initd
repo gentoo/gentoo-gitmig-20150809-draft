@@ -1,15 +1,12 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/files/lxc.initd,v 1.5 2011/05/06 11:03:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/files/lxc.initd,v 1.6 2011/09/05 18:32:44 flameeyes Exp $
 
 CONTAINER=${SVCNAME#*.}
-CONFIGFILE=${CONFIGFILE:-/etc/lxc/${CONTAINER}.conf}
 
 lxc_get_configfile() {
-	if [ -n "${CONFIGFILE}" ]; then
-		echo "${CONFIGFILE}"
-	elif [ -f "/etc/lxc/${CONTAINER}.conf" ]; then
+	if [ -f "/etc/lxc/${CONTAINER}.conf" ]; then
 		echo "/etc/lxc/${CONTAINER}.conf"
 	elif [ -f "/etc/lxc/${CONTAINER}/config" ]; then
 		echo "/etc/lxc/${CONTAINER}/config"
@@ -21,8 +18,10 @@ lxc_get_configfile() {
 	fi
 }
 
+CONFIGFILE=${CONFIGFILE:-$(lxc_get_configfile)}
+
 lxc_get_var() {
-	awk 'BEGIN { FS="[ \t]*=[ \t]*" } $1 == "'$1'" { print $2; exit }' $(lxc_get_configfile)
+	awk 'BEGIN { FS="[ \t]*=[ \t]*" } $1 == "'$1'" { print $2; exit }' ${CONFIGFILE}
 }
 
 cgroup_get_mount() {
@@ -37,7 +36,7 @@ checkconfig() {
 	fi
 
 	# no need to output anything, the function takes care of that.
-	[ -z "$(lxc_get_configfile)" ] && return 1
+	[ -z "${CONFIGFILE}" ] && return 1
 
 	utsname=$(lxc_get_var lxc.utsname)
 	if [ ${CONTAINER} != ${utsname} ]; then
@@ -52,14 +51,14 @@ depend() {
 	# non-muxed init script, unfortunately.
 	checkconfig 2>/dev/null || return 0
 
-	config $(lxc_get_configfile)
+	config ${CONFIGFILE}
 	need localmount
 
 	# find out which network interface the container is linked to,
 	# and then require that to be enabled, so that the
 	# dependencies are correct.
 	netif=$(lxc_get_var lxc.network.link)
-	[ -n "${netif}" ] && need net.${netif}
+	[ -n "${netif}" ] && use net.${netif}
 }
 
 start() {
@@ -93,7 +92,7 @@ start() {
 	esac
 
 	ebegin "Starting ${CONTAINER}"
-	env -i ${setarch} $(type -p lxc-start) -l WARN -n ${CONTAINER} -f $(lxc_get_configfile) -d -o /var/log/lxc/${CONTAINER}.log
+	env -i ${setarch} $(type -p lxc-start) -l WARN -n ${CONTAINER} -f ${CONFIGFILE} -d -o /var/log/lxc/${CONTAINER}.log
 	sleep 0.5
 
 	# lxc-start -d will _always_ report a correct startup, even if it
