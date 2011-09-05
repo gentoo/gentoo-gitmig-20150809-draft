@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/json-c
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-c/ChangeLog,v 1.5 2011/09/04 21:02:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-c/ChangeLog,v 1.6 2011/09/05 17:27:34 hwoarang Exp $
+
+  05 Sep 2011; Markos Chandras <hwoarang@gentoo.org> json-c-0.9.ebuild:
+  Fix license. Bug #381921
 
   04 Sep 2011; Markus Meier <maekke@gentoo.org> json-c-0.9.ebuild:
   add ~arm, bug #377497
