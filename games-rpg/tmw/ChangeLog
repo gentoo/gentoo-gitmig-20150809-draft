@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/tmw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/ChangeLog,v 1.39 2011/08/02 11:56:25 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/ChangeLog,v 1.40 2011/09/05 18:02:37 mr_bones_ Exp $
+
+  05 Sep 2011; Michael Sterrett <mr_bones_@gentoo.org> tmw-0.5.2.ebuild:
+  Fails to build without opengl (bug #378191)
 
 *tmw-0.5.2 (02 Aug 2011)
 
