@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.375 2011/09/03 16:06:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.376 2011/09/05 20:48:30 darkside Exp $
+
+*eix-0.23.0 (05 Sep 2011)
+
+  05 Sep 2011; Jeremy Olexa <darkside@gentoo.org> -eix-0.22.11.ebuild,
+  +eix-0.23.0.ebuild, metadata.xml:
+  Version bump from upstream. Touch up USE flag descriptions, remove old
+  version
 
   03 Sep 2011; Raúl Porcel <armin76@gentoo.org> eix-0.22.11.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #379603
