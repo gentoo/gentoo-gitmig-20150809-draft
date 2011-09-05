@@ -1,6 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.59 2011/09/05 09:25:24 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.60 2011/09/05 19:52:11 maekke Exp $
+
+# Markus Meier <maekke@gentoo.org> (05 Sep 2011)
+# unkeyworded deps for bug 379657 and bug 379651
+gnome-base/gnome-control-center cheese socialweb
+app-admin/packagekit-base entropy
 
 # Robin H. Johnson <robbat2@gentoo.org> (03 Sep 2011)
 # Remove this for your arch after you keyword dev-utils/google-perftools and virtual/gsasl (bug #381737

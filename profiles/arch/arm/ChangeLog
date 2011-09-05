@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.132 2011/09/04 03:52:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.133 2011/09/05 19:52:11 maekke Exp $
+
+  05 Sep 2011; Markus Meier <maekke@gentoo.org> package.use.mask:
+  package.use.mask some unkeyworded deps for bug 379657 and bug 379651
 
   04 Sep 2011; Robin H. Johnson <robbat2@gentoo.org> package.use.mask:
   Bug #381737: block dev-libs/libmemcached[tcmalloc] until
