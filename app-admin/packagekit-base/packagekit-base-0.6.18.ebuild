@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/packagekit-base-0.6.18.ebuild,v 1.2 2011/09/05 19:45:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/packagekit-base-0.6.18.ebuild,v 1.3 2011/09/05 21:03:22 lxnay Exp $
 
 EAPI="3"
 
@@ -132,7 +132,9 @@ src_install() {
 	dodoc ChangeLog || die "dodoc failed"
 
 	if use nsplugin; then
-		src_mv_plugins /usr/$(get_libdir)/mozilla/plugins
+		dodir "/usr/$(get_libdir)/${PLUGINS_DIR}"
+		mv "${D}"/usr/$(get_libdir)/mozilla/plugins/* \
+			"${D}/usr/$(get_libdir)/${PLUGINS_DIR}/"
 	fi
 
 	if ! use static-libs; then
