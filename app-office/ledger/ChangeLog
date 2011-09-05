@@ -1,6 +1,9 @@
 # ChangeLog for app-office/ledger
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ChangeLog,v 1.23 2011/06/07 20:30:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ChangeLog,v 1.24 2011/09/05 22:32:58 radhermit Exp $
+
+  05 Sep 2011; Tim Harder <radhermit@gentoo.org> ledger-2.6.3-r1.ebuild:
+  Fix emacs files install location (bug #381593 by Tom Prince).
 
 *ledger-2.6.3-r1 (07 Jun 2011)
 

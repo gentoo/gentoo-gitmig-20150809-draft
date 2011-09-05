@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ledger-2.6.3-r1.ebuild,v 1.1 2011/06/07 20:30:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ledger-2.6.3-r1.ebuild,v 1.2 2011/09/05 22:32:58 radhermit Exp $
 
 EAPI=4
 
@@ -39,7 +39,7 @@ src_configure() {
 	use emacs || export EMACS=no
 	econf \
 		$(use_enable debug) \
-		$(use_with emacs lispdir "${ED}${SITELISP}/${PN}") \
+		$(use_with emacs lispdir "${SITELISP}/${PN}") \
 		$(use_enable ofx) \
 		$(use_enable static-libs static) \
 		$(use_enable xml)
