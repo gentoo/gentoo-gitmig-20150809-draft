@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r1.ebuild,v 1.1 2011/08/31 18:56:13 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r1.ebuild,v 1.2 2011/09/05 20:41:30 alexxy Exp $
 
 EAPI="3"
 
@@ -14,14 +14,13 @@ S="${WORKDIR}/xen-${PV}"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc debug screen custom-cflags pygrub hvm api acm flask ioemu"
+IUSE="doc debug screen custom-cflags pygrub hvm api flask ioemu"
 
 CDEPEND="dev-lang/python
 	dev-python/lxml
 	sys-libs/zlib
 	hvm? ( media-libs/libsdl
 		sys-power/iasl )
-	acm? ( dev-libs/libxml2 )
 	api? ( dev-libs/libxml2 net-misc/curl )"
 
 DEPEND="${CDEPEND}
@@ -34,6 +33,13 @@ DEPEND="${CDEPEND}
 		dev-tex/latex2html
 		media-gfx/transfig
 		media-gfx/graphviz
+		dev-tex/xcolor
+		dev-texlive/texlive-latexextra
+		virtual/latex-base
+		dev-tex/latexmk
+		dev-texlive/texlive-latex
+		dev-texlive/texlive-pictures
+		dev-texlive/texlive-latexrecommended
 	)
 	hvm? (
 		x11-proto/xproto
@@ -44,6 +50,7 @@ RDEPEND="${CDEPEND}
 	sys-apps/iproute2
 	net-misc/bridge-utils
 	dev-python/pyxml
+	>=dev-lang/ocaml-3.12.0
 	screen? (
 		app-misc/screen
 		app-admin/logrotate
@@ -178,7 +185,7 @@ src_install() {
 		|| die "install failed"
 
 	# Remove RedHat-specific stuff
-	rm -r "${D}"/etc/default "${D}"/etc/init.d/xen* || die
+	rm -r "${D}"/etc/init.d/xen* || die
 
 	dodoc README docs/README.xen-bugtool docs/ChangeLog
 	if use doc; then
