@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsoup-gnome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.58 2011/09/05 09:06:43 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.59 2011/09/05 19:13:02 maekke Exp $
+
+  05 Sep 2011; Markus Meier <maekke@gentoo.org> libsoup-gnome-2.34.3.ebuild:
+  arm/x86 stable, bug #376793
 
   05 Sep 2011; Tony Vroon <chainsaw@gentoo.org> libsoup-gnome-2.34.3.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
