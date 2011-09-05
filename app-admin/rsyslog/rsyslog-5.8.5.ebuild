@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.5.ebuild,v 1.1 2011/09/05 09:25:41 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.5.ebuild,v 1.2 2011/09/05 12:22:11 ultrabug Exp $
 
 EAPI=4
 
@@ -47,9 +47,12 @@ src_prepare() {
 	if use zeromq; then
 		local ZEROPATH=${WORKDIR}/aggregateknowledge-rsyslog-zeromq-44b551a
 		epatch ${ZEROPATH}/rsyslog-zeromq.patch
-		cp -r "${ZEROPATH}/{i,o}mzeromq" "${S}/plugins"
-		eautoreconf
+		cp -r ${ZEROPATH}/{i,o}mzeromq "${S}/plugins"
 	fi
+
+	# Don't force '-g' CFLAG
+	sed -i 's/CFLAGS="\(.*\) -g"/CFLAGS="\1"/g' configure.ac || die
+	eautoreconf
 }
 
 src_configure() {
@@ -96,6 +99,10 @@ src_configure() {
 		$(use_enable debug diagtools)
 		$(use_enable debug memcheck)
 		$(use_enable debug valgrind)
+	)
+
+	use zeromq && myeconfargs=(
+		${myeconfargs[@]-}
 		$(use_enable zeromq imzeromq)
 		$(use_enable zeromq omzeromq)
 	)
@@ -115,6 +122,8 @@ src_install() {
 	keepdir /var/spool/${PN}
 	keepdir /etc/ssl/${PN}
 	keepdir /etc/${PN}.d
+
+	use static-libs || find "${D}" -name '*.la' -delete || die
 
 	if use mysql; then
 		insinto /usr/share/doc/${PF}/scripts/mysql
