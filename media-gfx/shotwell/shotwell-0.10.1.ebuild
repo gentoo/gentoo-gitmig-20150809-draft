@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.10.1.ebuild,v 1.3 2011/07/09 21:39:58 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.10.1.ebuild,v 1.4 2011/09/05 08:36:58 jlec Exp $
 
 EAPI=4
 GCONF_DEBUG="no"
@@ -16,7 +16,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-db/sqlite-3.5.9:3
+RDEPEND="
+	>=dev-db/sqlite-3.5.9:3
 	>=dev-libs/dbus-glib-0.80
 	>=dev-libs/json-glib-0.7.6
 	>=dev-libs/libgee-0.5.0
@@ -48,17 +49,11 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/0.10-ldflags.patch \
+	epatch \
+		"${FILESDIR}"/0.10-ldflags.patch \
 		"${FILESDIR}"/${P}-libraw-config.patch
 	gnome2_src_prepare
 
 	sed -e 's/valac/valac-0.12/' -i plugins/Makefile.plugin.mk || die
 	sed -e 's/valac/valac-0.12/' -i Makefile || die
-}
-
-src_install() {
-	# This is needed so that gnome2_gconf_savelist() works correctly.
-	insinto /etc/gconf/schemas
-	doins misc/shotwell.schemas || die "install gconf schema failed"
-	gnome2_src_install
 }
