@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/parcellite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/ChangeLog,v 1.14 2011/08/08 18:52:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/ChangeLog,v 1.15 2011/09/06 08:14:31 hwoarang Exp $
+
+*parcellite-1.0.2_rc4 (06 Sep 2011)
+
+  06 Sep 2011; Markos Chandras <hwoarang@gentoo.org>
+  -parcellite-1.0.2_rc2.ebuild, -parcellite-1.0.2_rc3.ebuild,
+  +parcellite-1.0.2_rc4.ebuild:
+  Version bump
 
 *parcellite-1.0.2_rc3 (08 Aug 2011)
 

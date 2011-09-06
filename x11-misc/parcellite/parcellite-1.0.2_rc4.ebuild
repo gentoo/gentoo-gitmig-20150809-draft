@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/parcellite-1.0.2_rc3.ebuild,v 1.1 2011/08/08 18:52:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/parcellite-1.0.2_rc4.ebuild,v 1.1 2011/09/06 08:14:31 hwoarang Exp $
 
 EAPI=4
 inherit fdo-mime autotools
