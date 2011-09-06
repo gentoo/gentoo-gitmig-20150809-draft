@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.35_p10.ebuild,v 1.3 2011/08/17 03:46:34 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.35_p10.ebuild,v 1.4 2011/09/06 18:59:45 mattst88 Exp $
 
 EAPI=2
 
@@ -20,11 +20,12 @@ SRC_URI="mirror://sourceforge/flex/${MY_P}.tar.bz2
 LICENSE="FLEX"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="nls static"
+IUSE="nls static test"
 
 RDEPEND="sys-devel/m4"
 DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	test? ( sys-devel/bison )"
 
 S=${WORKDIR}/${MY_P}
 

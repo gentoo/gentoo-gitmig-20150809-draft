@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.35.ebuild,v 1.14 2011/08/17 03:46:34 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.35.ebuild,v 1.15 2011/09/06 18:59:44 mattst88 Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,11 +13,12 @@ SRC_URI="mirror://sourceforge/flex/${P}.tar.bz2"
 LICENSE="FLEX"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
-IUSE="nls static"
+IUSE="nls static test"
 
 RDEPEND="sys-devel/m4"
 DEPEND="${RDEPEND}
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	test? ( sys-devel/bison )"
 
 src_unpack() {
 	unpack ${A}

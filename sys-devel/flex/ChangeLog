@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/flex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.86 2011/08/17 03:46:34 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.87 2011/09/06 18:59:44 mattst88 Exp $
+
+  06 Sep 2011; Matt Turner <mattst88@gentoo.org> flex-2.5.35.ebuild,
+  flex-2.5.35_p10.ebuild:
+  Add test? ( sys-devel/bison ) to DEPEND (plain dev-util/yacc doesn't work),
+  bug 381273.
 
   17 Aug 2011; Matt Turner <mattst88@gentoo.org> flex-2.5.35.ebuild,
   flex-2.5.35_p10.ebuild:
