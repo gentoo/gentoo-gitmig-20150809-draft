@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.12.1.ebuild,v 1.2 2011/07/11 04:35:37 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.12.1.ebuild,v 1.3 2011/09/06 15:38:09 aballier Exp $
 
 EAPI="1"
 
@@ -126,5 +126,6 @@ pkg_postinst() {
 	ewarn "need to rebuild all packages depending on it, that are actually"
 	ewarn "installed on your system. To do so, you can run:"
 	ewarn "emerge @ocaml-rebuild"
+	ewarn "Or, (almost) equivalently: emerge -1 /usr/$(get_libdir)/ocaml"
 	echo
 }
