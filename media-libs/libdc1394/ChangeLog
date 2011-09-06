@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libdc1394
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.56 2011/06/07 23:21:16 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.57 2011/09/06 20:51:31 dilfridge Exp $
+
+*libdc1394-2.1.3-r1 (06 Sep 2011)
+
+  06 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +files/libdc1394-usbinit.patch, +libdc1394-2.1.3-r1.ebuild:
+  Non-maintainer fix: add upstream patch to avoid usb_init symbol conflict, bug
+  380287
 
   07 Jun 2011; Theo Chatzimichos <tampakrap@gentoo.org> libdc1394-2.1.3.ebuild:
   Non maintainer fix, there were two src_compile() instead of a src_configure
