@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-4.1.2.ebuild,v 1.1 2011/09/04 18:22:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-4.1.2.ebuild,v 1.2 2011/09/06 20:38:24 dilfridge Exp $
 
 EAPI=4
 
@@ -46,6 +46,7 @@ IUSE="+bwscheduler debug +downloadorder +infowidget +ipfilter +kross +logviewer
 COMMONDEPEND="
 	<net-libs/libktorrent-${LIBKT_VERSION_MAX}
 	>=net-libs/libktorrent-${LIBKT_VERSION_MIN}
+	infowidget? ( dev-libs/geoip )
 	mediaplayer? ( >=media-libs/taglib-1.5 )
 	plasma? ( $(add_kdebase_dep libtaskmanager) )
 	rss? ( $(add_kdebase_dep kdepimlibs) )
@@ -59,7 +60,6 @@ DEPEND="${COMMONDEPEND}
 	sys-devel/gettext
 "
 RDEPEND="${COMMONDEPEND}
-	infowidget? ( dev-libs/geoip )
 	ipfilter? (
 		app-arch/bzip2
 		app-arch/unzip

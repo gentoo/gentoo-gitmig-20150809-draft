@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.170 2011/09/04 18:22:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.171 2011/09/06 20:38:24 dilfridge Exp $
+
+  06 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org> ktorrent-4.1.1.ebuild,
+  ktorrent-4.1.2.ebuild:
+  Move geoip to COMMONDEPEND, bug 381899
 
 *ktorrent-4.1.2 (04 Sep 2011)
 
