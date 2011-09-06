@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.51 2011/07/28 14:01:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.52 2011/09/06 18:44:05 mattst88 Exp $
+
+  06 Sep 2011; Matt Turner <mattst88@gentoo.org> procps-3.2.8_p10-r1.ebuild:
+  Depend on ncurses[unicode?], bug 381739.
 
 *procps-3.2.8_p10-r1 (28 Jul 2011)
 

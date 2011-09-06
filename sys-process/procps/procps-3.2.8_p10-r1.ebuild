@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.2.8_p10-r1.ebuild,v 1.1 2011/07/28 14:01:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/procps-3.2.8_p10-r1.ebuild,v 1.2 2011/09/06 18:44:05 mattst88 Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="unicode"
 
-RDEPEND=">=sys-libs/ncurses-5.2-r2"
+RDEPEND=">=sys-libs/ncurses-5.2-r2[unicode?]"
 
 S=${WORKDIR}/${MY_P}
 
