@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.445 2011/08/27 18:06:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.446 2011/09/06 17:48:11 aballier Exp $
+
+  06 Sep 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild,
+  metadata.xml:
+  add vis useflag for sparc simd, bug #349814
 
   27 Aug 2011; Alexis Ballier <aballier@gentoo.org> -ffmpeg-0.7_rc1.ebuild:
   remove old
