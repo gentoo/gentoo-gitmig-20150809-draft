@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>cluster</herd>
 	<use>
-		<flag name='pbs'>Enable pbs integration</flag>
-		<flag name='slurm'>Enable slurm integration</flag>
+		<flag name="pbs">Enable pbs integration</flag>
+		<flag name="slurm">Enable slurm integration</flag>
 	</use>
 </pkgmetadata>

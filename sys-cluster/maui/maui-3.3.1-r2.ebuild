@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/maui-3.3.1-r2.ebuild,v 1.2 2011/07/04 16:18:38 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/maui-3.3.1-r2.ebuild,v 1.3 2011/09/06 08:23:37 jlec Exp $
 
 EAPI="4"
 
 inherit eutils multilib
 
 DESCRIPTION="Maui Cluster Scheduler"
-HOMEPAGE="http://www.clusterresources.com/products/maui/"
+HOMEPAGE="http://www.clusterresources.com/pages/products/maui-cluster-scheduler.php"
 SRC_URI="http://www.adaptivecomputing.com/download/${PN}/${P}.tar.gz"
 
 LICENSE="maui"
