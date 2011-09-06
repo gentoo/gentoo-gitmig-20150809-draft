@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.6.11.ebuild,v 1.2 2011/08/10 16:14:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.6.11.ebuild,v 1.3 2011/09/06 18:11:46 bicatali Exp $
 
 EAPI=3
 
@@ -18,12 +18,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc mpi octave python static-libs test"
 
-RDEPEND="
-	sci-libs/hdf5[mpi?]
+RDEPEND="sci-libs/hdf5[mpi?]
 	mpi? ( dev-libs/boost[mpi] )
 	octave? ( sci-mathematics/octave )
 	python? ( dev-python/numpy )"
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	app-arch/unzip
 	test? ( dev-util/gtest )"
 
