@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/shiboken
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/ChangeLog,v 1.10 2011/07/28 22:33:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/shiboken/ChangeLog,v 1.11 2011/09/06 12:42:16 scarabeus Exp $
+
+*shiboken-1.0.6 (06 Sep 2011)
+
+  06 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -shiboken-0.5.1-r1.ebuild, -files/shiboken-0.5.1-fix-pkgconfig.patch,
+  -shiboken-1.0.0.ebuild, -files/shiboken-1.0.0-fix-pkgconfig.patch,
+  -shiboken-1.0.3.ebuild, +shiboken-1.0.6.ebuild,
+  +files/shiboken-1.0.6-fix-pkgconfig.patch:
+  Version bump to latest release. Cleanup ebuild. Remove older.
 
   28 Jul 2011; Patrick Lauer <patrick@gentoo.org> shiboken-1.0.3.ebuild:
   Small dep fixes for #369823

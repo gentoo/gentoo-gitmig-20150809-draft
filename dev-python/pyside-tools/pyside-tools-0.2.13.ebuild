@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/pyside-tools-0.2.9.ebuild,v 1.1 2011/05/27 18:29:12 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/pyside-tools-0.2.13.ebuild,v 1.1 2011/09/06 12:42:16 scarabeus Exp $
 
-EAPI="2"
+EAPI=3
 
 PYTHON_DEPEND="2:2.5"
 
-inherit cmake-utils python
+inherit python cmake-utils virtualx
 
 DESCRIPTION="PySide development tools"
 HOMEPAGE="http://www.pyside.org/"
@@ -17,12 +17,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug test"
 
-DEPEND=">=dev-python/pyside-0.4.0
-	>=x11-libs/qt-core-4.6.0
-	>=x11-libs/qt-gui-4.6.0"
-RDEPEND="${DEPEND}"
+RDEPEND=">=dev-python/pyside-1.0.6
+	>=x11-libs/qt-core-4.7.0
+	>=x11-libs/qt-gui-4.7.0"
+DEPEND="${DEPEND}
+	test? ( >=x11-libs/qt-test-4.7.0 )"
 
-TEST_VERBOSE=1
+DOCS=( AUTHORS ChangeLog )
 
 pkg_setup() {
 	python_set_active_version 2
@@ -36,7 +37,14 @@ src_prepare() {
 	python_convert_shebangs -r 2 pyside-uic
 }
 
-src_install() {
-	cmake-utils_src_install
-	dodoc AUTHORS ChangeLog || die "dodoc failed"
+src_configure() {
+	local mycmakeargs=(
+		$(cmake-utils_use_build test TESTS)
+	)
+	cmake-utils_src_configure
+}
+
+src_test() {
+	VIRTUALX_COMMAND="cmake-utils_src_test"
+	virtualmake
 }
