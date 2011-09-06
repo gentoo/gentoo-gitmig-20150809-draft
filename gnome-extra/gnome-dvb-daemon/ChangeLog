@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-dvb-daemon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-dvb-daemon/ChangeLog,v 1.3 2011/08/31 23:18:27 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-dvb-daemon/ChangeLog,v 1.4 2011/09/06 18:40:49 mattst88 Exp $
+
+  06 Sep 2011; Matt Turner <mattst88@gentoo.org> gnome-dvb-daemon-0.2.2.ebuild:
+  Don't use the package system to byte-compile python, bug 381587. Patch from
+  Chris Mayo.
 
   31 Aug 2011; Matt Turner <mattst88@gentoo.org> gnome-dvb-daemon-0.2.2.ebuild:
   Pass --with-totem-plugin-dir since totem-2 doesn't ship a .pc file, bug

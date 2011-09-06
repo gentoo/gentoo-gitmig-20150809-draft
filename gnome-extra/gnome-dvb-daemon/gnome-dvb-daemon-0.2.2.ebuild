@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-dvb-daemon/gnome-dvb-daemon-0.2.2.ebuild,v 1.2 2011/08/31 23:18:27 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-dvb-daemon/gnome-dvb-daemon-0.2.2.ebuild,v 1.3 2011/09/06 18:40:49 mattst88 Exp $
 
 EAPI="3"
 
@@ -44,4 +44,27 @@ pkg_setup() {
 		--with-totem-plugin-dir=/usr/$(get_libdir)/totem/plugins"
 	python_set_active_version 2
 	python_pkg_setup
+}
+
+src_prepare() {
+	# Disable byte-compilation of Python modules.
+	ln -s $(type -P true) py-compile
+
+	gnome2_src_prepare
+}
+
+pkg_postinst() {
+	python_mod_optimize gnomedvb
+	if use totem; then
+		python_mod_optimize "/usr/$(get_libdir)/totem/plugins"
+	fi
+	gnome2_pkg_postinst
+}
+
+pkg_postrm() {
+	python_mod_cleanup gnomedvb
+	if use totem; then
+		python_mod_cleanup "/usr/$(get_libdir)/totem/plugins"
+	fi
+	gnome2_pkg_postrm
 }
