@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libhangul/libhangul-0.0.12.ebuild,v 1.1 2011/01/27 23:24:15 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libhangul/libhangul-0.0.12.ebuild,v 1.2 2011/09/06 17:52:19 chainsaw Exp $
 
 EAPI="3"
 
@@ -10,7 +10,7 @@ SRC_URI="http://kldp.net/frs/download.php/5855/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~x86"
 IUSE="nls static-libs test"
 
 RDEPEND="nls? ( virtual/libintl )"
