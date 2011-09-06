@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.447 2011/09/06 18:02:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.448 2011/09/06 18:09:44 aballier Exp $
+
+  06 Sep 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-0.8.2.ebuild:
+  openal is not in 0.8.2, only 9999, bug #379187
 
   06 Sep 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild,
   metadata.xml:
