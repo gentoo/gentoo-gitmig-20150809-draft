@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.376 2011/09/05 20:48:30 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.377 2011/09/06 08:33:45 chainsaw Exp $
+
+  06 Sep 2011; Tony Vroon <chainsaw@gentoo.org> +eix-0.22.11.ebuild:
+  Reintroduce last stable, it appears to have been accidentally deleted. This
+  is based on a report by Nikoli in bug #379603 and by J.D. Horelick on IRC.
 
 *eix-0.23.0 (05 Sep 2011)
 
