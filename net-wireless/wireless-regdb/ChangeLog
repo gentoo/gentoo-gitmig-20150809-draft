@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/wireless-regdb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/ChangeLog,v 1.19 2011/03/18 16:18:28 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/ChangeLog,v 1.20 2011/09/06 18:29:25 mattst88 Exp $
+
+*wireless-regdb-20110428 (06 Sep 2011)
+
+  06 Sep 2011; Matt Turner <mattst88@gentoo.org>
+  +wireless-regdb-20110428.ebuild:
+  Version bump. Add ~mips, bug 374735.
 
 *wireless-regdb-20101124 (18 Mar 2011)
 
