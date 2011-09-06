@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.164 2011/09/04 09:17:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.165 2011/09/06 15:31:59 scarabeus Exp $
+
+  06 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> grub-1.99-r2.ebuild,
+  grub-9999.ebuild:
+  Do not show qa warnings about exec. Fixes bug #381041.
 
 *grub-1.99-r2 (04 Sep 2011)
 

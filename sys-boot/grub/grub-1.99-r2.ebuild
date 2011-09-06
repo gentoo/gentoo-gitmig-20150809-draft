@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.99-r2.ebuild,v 1.1 2011/09/04 09:17:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.99-r2.ebuild,v 1.2 2011/09/06 15:31:59 scarabeus Exp $
 
 EAPI=4
 
@@ -81,6 +81,11 @@ QA_EXECSTACK="
 	bin/grub2-mkfont
 	bin/grub2-editenv
 	bin/grub2-mkimage
+"
+
+QA_WX_LOAD="
+	lib*/grub2/*/kernel.img
+	lib*/grub2/*/setjmp.mod
 "
 
 grub_run_phase() {
