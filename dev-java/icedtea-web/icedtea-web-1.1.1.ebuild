@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.1.1.ebuild,v 1.1 2011/07/22 09:08:37 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.1.1.ebuild,v 1.2 2011/09/06 09:57:09 caster Exp $
 # Build written by Andrew John Hughes (ahughes@redhat.com)
 
 EAPI="2"
@@ -17,9 +17,9 @@ HOMEPAGE="http://icedtea.classpath.org"
 
 IUSE="build doc +nsplugin"
 
-RDEPEND="dev-java/icedtea:${SLOT}
+RDEPEND="dev-java/icedtea:${SLOT}"
+DEPEND="${RDEPEND}
 	 nsplugin? ( >=net-libs/xulrunner-1.9.1 )"
-DEPEND="${RDEPEND}"
 
 # a bit of hack so the VM switching is triggered without causing dependency troubles
 JAVA_PKG_NV_DEPEND=">=virtual/jdk-1.6"

@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.1.ebuild,v 1.2 2011/06/20 12:34:46 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.1.2.ebuild,v 1.1 2011/09/06 09:57:09 caster Exp $
 # Build written by Andrew John Hughes (ahughes@redhat.com)
 
 EAPI="2"
 
-inherit eutils java-pkg-2 java-vm-2
+inherit autotools eutils java-pkg-2 java-vm-2
 
 LICENSE="GPL-2 GPL-2-with-linking-exception LGPL-2"
 SLOT="6"
@@ -15,11 +15,13 @@ DESCRIPTION="FOSS Java browser plugin and Web Start implementation"
 SRC_URI="http://icedtea.classpath.org/download/source/${P}.tar.gz"
 HOMEPAGE="http://icedtea.classpath.org"
 
-IUSE="doc +nsplugin"
+IUSE="build doc +nsplugin"
 
-RDEPEND="dev-java/icedtea:${SLOT}
-	 nsplugin? ( >=net-libs/xulrunner-1.9.1 )"
-DEPEND="${RDEPEND}"
+RDEPEND="dev-java/icedtea:${SLOT}"
+DEPEND="${RDEPEND}
+	nsplugin? (
+		|| ( net-misc/npapi-sdk
+			>=net-libs/xulrunner-1.9.1 ) )"
 
 # a bit of hack so the VM switching is triggered without causing dependency troubles
 JAVA_PKG_NV_DEPEND=">=virtual/jdk-1.6"
@@ -60,20 +62,32 @@ src_unpack() {
 	default
 }
 
+src_prepare() {
+	epatch "${FILESDIR}"/0001-Support-using-NPAPI-SDK-headers-instead-of-whole-xul.patch
+	eautoreconf
+}
+
 src_configure() {
 	local vmhome=$(java-config -O)
-	icedteadir="/usr/$(get_libdir)/icedtea${SLOT}"
+
+	if use build; then
+		icedteadir="${ICEDTEA_BIN_DIR}"
+		installdir="/opt/icedtea${SLOT}-web-bin"
+	else
+		icedteadir="/usr/$(get_libdir)/icedtea${SLOT}"
+		installdir="/usr/$(get_libdir)/icedtea${SLOT}-web"
+	fi
 
 	unset_vars
 
-	if [[ ${vmhome} == ${icedteadir} ]] ; then
-		installdir="/usr/$(get_libdir)/icedtea${SLOT}-web"
+	if use build || [[ ${vmhome} == ${icedteadir} ]] ; then
 		VMHANDLE="icedtea${SLOT}"
 	else
 		die "Unexpected install location of IcedTea${SLOT}"
 	fi
 
-	elog "Installing IcedTea-Web in ${installdir}"
+	einfo "Installing IcedTea-Web in ${installdir}"
+	einfo "Installing IcedTea-Web for Icedtea${SLOT} in ${icedteadir}"
 	if [ ! -e ${vmhome} ] ; then
 		eerror "Could not find JDK install directory ${vmhome}."
 		die
@@ -84,7 +98,7 @@ src_configure() {
 	# the suffix the man page will end up compressed with, anyway
 	econf \
 		--prefix=${installdir} --mandir=${icedteadir}/man --infodir=${installdir}/share/info --datadir=${installdir}/share \
-		--with-jdk-home=${vmhome} \
+		--with-jdk-home=${icedteadir} \
 		$(use_enable doc docs) \
 		$(use_enable nsplugin plugin) \
 		|| die "configure failed"
