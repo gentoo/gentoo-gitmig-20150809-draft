@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.104 2011/07/12 14:29:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.105 2011/09/06 22:54:45 vapier Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -18,23 +18,31 @@ ___ECLASS_RECUR_TOOLCHAIN_FUNCS="yes"
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
-tc-getPROG() {
-	local var=$1
-	local prog=$2
+# tc-getPROG <VAR [search vars]> <default> [tuple]
+_tc-getPROG() {
+	local tuple=$1
+	local v var vars=$2
+	local prog=$3
 
-	if [[ -n ${!var} ]] ; then
-		echo "${!var}"
-		return 0
-	fi
+	var=${vars%% *}
+	for v in ${vars} ; do
+		if [[ -n ${!v} ]] ; then
+			export ${var}=${!v}
+			echo "${!v}"
+			return 0
+		fi
+	done
 
 	local search=
-	[[ -n $3 ]] && search=$(type -p "$3-${prog}")
-	[[ -z ${search} && -n ${CHOST} ]] && search=$(type -p "${CHOST}-${prog}")
+	[[ -n $4 ]] && search=$(type -p "$4-${prog}")
+	[[ -z ${search} && -n ${!tuple} ]] && search=$(type -p "${!tuple}-${prog}")
 	[[ -n ${search} ]] && prog=${search##*/}
 
 	export ${var}=${prog}
 	echo "${!var}"
 }
+tc-getBUILD_PROG() { _tc-getPROG CBUILD "$@"; }
+tc-getPROG() { _tc-getPROG CHOST "$@"; }
 
 # @FUNCTION: tc-getAR
 # @USAGE: [toolchain prefix]
@@ -104,26 +112,15 @@ tc-getDLLWRAP() { tc-getPROG DLLWRAP dllwrap "$@"; }
 # @FUNCTION: tc-getBUILD_CC
 # @USAGE: [toolchain prefix]
 # @RETURN: name of the C compiler for building binaries to run on the build machine
-tc-getBUILD_CC() {
-	local v
-	for v in CC_FOR_BUILD BUILD_CC HOSTCC ; do
-		if [[ -n ${!v} ]] ; then
-			export BUILD_CC=${!v}
-			echo "${!v}"
-			return 0
-		fi
-	done
-
-	local search=
-	if [[ -n ${CBUILD} ]] ; then
-		search=$(type -p ${CBUILD}-gcc)
-		search=${search##*/}
-	fi
-	search=${search:-gcc}
-
-	export BUILD_CC=${search}
-	echo "${search}"
-}
+tc-getBUILD_CC() { tc-getBUILD_PROG "BUILD_CC CC_FOR_BUILD HOSTCC" gcc "$@"; }
+# @FUNCTION: tc-getBUILD_CPP
+# @USAGE: [toolchain prefix]
+# @RETURN: name of the C preprocessor for building binaries to run on the build machine
+tc-getBUILD_CPP() { tc-getBUILD_PROG "BUILD_CPP CPP_FOR_BUILD HOSTCPP" cpp "$@"; }
+# @FUNCTION: tc-getBUILD_CXX
+# @USAGE: [toolchain prefix]
+# @RETURN: name of the C++ compiler for building binaries to run on the build machine
+tc-getBUILD_CXX() { tc-getBUILD_PROG "BUILD_CXX CXX_FOR_BUILD HOSTCXX" g++ "$@"; }
 
 # @FUNCTION: tc-export
 # @USAGE: <list of toolchain variables>
