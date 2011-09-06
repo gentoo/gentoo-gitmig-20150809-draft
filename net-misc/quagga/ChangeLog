@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/quagga
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.111 2011/04/02 15:43:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.112 2011/09/06 11:11:07 flameeyes Exp $
+
+  06 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -quagga-0.99.17-r2.ebuild, -files/quagga-0.99.17-gentoo.patch:
+  Remove old versions.
 
   02 Apr 2011; Raúl Porcel <armin76@gentoo.org> quagga-0.99.18.ebuild:
   arm/s390/sparc stable wrt #359903
