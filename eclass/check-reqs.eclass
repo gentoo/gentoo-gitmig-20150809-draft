@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/check-reqs.eclass,v 1.9 2011/09/05 08:22:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/check-reqs.eclass,v 1.10 2011/09/06 13:57:51 scarabeus Exp $
 
 # @ECLASS: check-reqs.eclass
 # @MAINTAINER:
@@ -339,7 +339,7 @@ check-reqs_unsatisfied() {
 	local sizeunit="$(check-reqs_get_number ${size}) $(check-reqs_get_unit ${size})"
 
 	[[ ${EBUILD_PHASE} == "pretend" && -z ${I_KNOW_WHAT_I_AM_DOING} ]] && msg="eerror"
-	${msg} "Don't have at least ${sizeunit} ${location}"
+	${msg} "There is NOT at least ${sizeunit} ${location}"
 
 	# @ECLASS-VARIABLE: CHECKREQS_FAILED
 	# @DESCRIPTION:
