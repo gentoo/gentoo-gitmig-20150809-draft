@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.43 2011/08/10 16:49:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.44 2011/09/06 20:56:37 dilfridge Exp $
+
+  06 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  opencv-2.2.0-r10.ebuild:
+  Bump libdc1394 version dependency to fix usb_init symbol conflict, bug 380287
 
   10 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> opencv-2.1.0.ebuild,
   opencv-2.2.0-r10.ebuild:
