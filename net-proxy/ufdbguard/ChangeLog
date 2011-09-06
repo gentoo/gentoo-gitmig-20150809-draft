@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/ufdbguard
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ChangeLog,v 1.18 2011/07/06 22:49:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ChangeLog,v 1.19 2011/09/06 10:03:37 flameeyes Exp $
+
+  06 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  ufdbguard-1.24-r1.ebuild, ufdbguard-1.26.ebuild, files/ufdb.initd:
+  Replace --chuid option with --user in init script; depend on openrc as the
+  init script always used --wait.
 
   06 Jul 2011; Diego E. Pettenò <flameeyes@gentoo.org> -ufdbguard-1.11.ebuild,
   -ufdbguard-1.20.ebuild, -files/ufdbguard-1.20-parallel-make.patch,

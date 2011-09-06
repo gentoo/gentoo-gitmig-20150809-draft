@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ufdbguard-1.26.ebuild,v 1.1 2011/06/25 07:27:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ufdbguard-1.26.ebuild,v 1.2 2011/09/06 10:03:37 flameeyes Exp $
 
 EAPI="4"
 
@@ -25,6 +25,9 @@ RDEPEND="dev-libs/openssl
 DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex"
+
+RDEPEND="${RDEPEND}
+	sys-apps/openrc"
 
 S="${WORKDIR}/${MY_P}"
 
