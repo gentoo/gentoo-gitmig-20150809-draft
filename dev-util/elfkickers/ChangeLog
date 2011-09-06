@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/elfkickers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.42 2011/09/06 13:20:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.43 2011/09/06 18:07:00 mattst88 Exp $
+
+  06 Sep 2011; Matt Turner <mattst88@gentoo.org> elfkickers-3.0-r1.ebuild,
+  elfkickers-3.0-r2.ebuild:
+  Added ~mips, bug 380085
 
 *elfkickers-3.0-r2 (06 Sep 2011)
 
