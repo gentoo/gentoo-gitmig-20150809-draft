@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.432 2011/09/04 19:39:43 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.433 2011/09/06 21:01:57 floppym Exp $
+
+*chromium-14.0.835.157 (06 Sep 2011)
+
+  06 Sep 2011; Mike Gilbert <floppym@gentoo.org> -chromium-14.0.835.109.ebuild,
+  -chromium-14.0.835.122.ebuild, -chromium-14.0.835.124.ebuild,
+  +chromium-14.0.835.157.ebuild:
+  Version bump for beta channel release. Remove old.
 
   04 Sep 2011; Tony Vroon <chainsaw@gentoo.org> chromium-13.0.782.220.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
