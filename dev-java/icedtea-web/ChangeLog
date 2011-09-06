@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/icedtea-web
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.8 2011/09/06 09:57:09 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.9 2011/09/06 11:56:40 caster Exp $
+
+  06 Sep 2011; Vlastimil Babka <caster@gentoo.org>
+  +files/0001-Support-using-NPAPI-SDK-headers-instead-of-whole-xul.patch:
+  Add missing patch, thanks to marienz
 
 *icedtea-web-1.1.2 (06 Sep 2011)
 
