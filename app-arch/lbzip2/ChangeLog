@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lbzip2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.18 2011/08/15 14:48:39 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.19 2011/09/06 05:59:21 naota Exp $
+
+  06 Sep 2011; Naohiro Aota <naota@gentoo.org> lbzip2-0.23-r2.ebuild:
+  Add ~x86-fbsd. Bug #370685
 
   15 Aug 2011; Matt Turner <mattst88@gentoo.org> -files/0.20-Makefile.patch,
   -lbzip2-0.20.ebuild, -lbzip2-0.22.ebuild, -lbzip2-0.23.ebuild,
@@ -23,7 +26,7 @@
   06 Aug 2011; Matt Turner <mattst88@gentoo.org> metadata.xml:
   Add myself as a maintainer.
 
-  10 Jul 2011; Raúl Porcel <armin76@gentoo.org> lbzip2-0.23-r1.ebuild:
+  10 Jul 2011; Ra炭l Porcel <armin76@gentoo.org> lbzip2-0.23-r1.ebuild:
   Add ~ia64/~m68k/~s390/~sh/~sparc wrt #370685
 
   12 Jun 2011; Markus Meier <maekke@gentoo.org> lbzip2-0.23-r1.ebuild:
