@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unpaper/unpaper-9999.ebuild,v 1.1 2011/08/15 03:24:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unpaper/unpaper-9999.ebuild,v 1.2 2011/09/06 14:25:31 flameeyes Exp $
 
 EAPI=4
 EGIT_REPO_URI="git://github.com/Flameeyes/unpaper.git"
@@ -17,7 +17,9 @@ KEYWORDS=""
 SLOT="0"
 IUSE="test"
 
-DEPEND="test? ( media-libs/netpbm[png] )"
+DEPEND="test? ( media-libs/netpbm[png] )
+	dev-libs/libxslt
+	app-text/docbook-xsl-ns-stylesheets"
 RDEPEND=""
 
 src_prepare() {
@@ -32,8 +34,4 @@ src_configure() {
 
 src_test() {
 	emake check
-}
-
-src_install() {
-	emake DESTDIR="${D}" install
 }
