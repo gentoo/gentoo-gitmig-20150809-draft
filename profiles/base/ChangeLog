@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.296 2011/08/23 15:57:13 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.297 2011/09/06 09:02:58 hwoarang Exp $
+
+  06 Sep 2011; Markos Chandras <hwoarang@gentoo.org> package.use.mask:
+  Unmask spice useflag for qemu-kvm since spice is now stable
 
   23 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
   Don't unmask introspection on stable babl

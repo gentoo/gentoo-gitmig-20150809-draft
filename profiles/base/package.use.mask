@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.264 2011/08/23 15:57:13 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.265 2011/09/06 09:02:58 hwoarang Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -12,7 +12,7 @@ app-emulation/libvirt xen
 
 # Markos Chandras <hwoarang@gentoo.org> (19 Aug 2011)
 # Masking rbd spice from qemu-kvm per bug #364889
-app-emulation/qemu-kvm rbd spice
+app-emulation/qemu-kvm rbd
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (16 Aug 2011)
 # dev-libs/seed is a messy and unstable package.
