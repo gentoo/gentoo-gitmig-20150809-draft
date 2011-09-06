@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pencil/pencil-0.4.4_beta.ebuild,v 1.2 2011/08/28 10:49:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pencil/pencil-0.4.4_beta.ebuild,v 1.3 2011/09/06 09:00:43 hwoarang Exp $
 
 EAPI=2
-inherit qt4-r2
+inherit eutils qt4-r2
 
 MY_P=${P/_beta/b}
 
@@ -25,7 +25,8 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}-source
 
 src_prepare() {
-	sed -i s:SWFSprite:SWFMovieClip:g src/external/flash/flash.{cpp,h}
+	epatch "${FILESDIR}"/${P}-gcc461.patch
+	sed -i s:SWFSprite:SWFMovieClip:g src/external/flash/flash.{cpp,h} || die
 }
 
 src_install() {
