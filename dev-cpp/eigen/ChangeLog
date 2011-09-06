@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/eigen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.48 2011/09/03 22:04:07 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.49 2011/09/06 21:23:11 dilfridge Exp $
+
+*eigen-3.0.2 (06 Sep 2011)
+
+  06 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org> +eigen-3.0.2.ebuild:
+  Version bump
 
 *eigen-2.0.16 (03 Sep 2011)
 
