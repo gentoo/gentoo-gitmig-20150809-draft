@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-2.0.0.ebuild,v 1.3 2011/08/14 18:14:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-2.0.0.ebuild,v 1.4 2011/09/06 21:05:11 dilfridge Exp $
 
 EAPI=4
 
@@ -46,7 +46,7 @@ DEPEND="
 			  media-libs/libgpod
 			  x11-libs/gtk+:2
 			)
-	redeyes?	( media-libs/opencv )
+	redeyes?	( >=media-libs/opencv-2.2.0-r10 )
 	scanner? 	(
 			  $(add_kdebase_dep libksane)
 			  media-gfx/sane-backends
