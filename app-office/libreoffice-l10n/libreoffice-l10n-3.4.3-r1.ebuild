@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.4.3-r1.ebuild,v 1.1 2011/09/04 09:32:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.4.3-r1.ebuild,v 1.2 2011/09/06 12:51:49 scarabeus Exp $
 
 EAPI=4
 
@@ -49,7 +49,6 @@ nb nl nn pl pt ru sk sl sv tn zu"
 for X in ${SPELL_DICTS} ; do
 	SPELL_DICTS_DEPEND+=" linguas_${X}? ( app-dicts/myspell-${X} )"
 done
-unset X
 RDEPEND="${SPELL_DICTS_DEPEND}"
 unset X SPELL_DICTS SPELL_DICTS_DEPEND
 
@@ -80,8 +79,7 @@ src_unpack() {
 			rm -rf "${S}/${rpmdir}/"*dict*.rpm
 			rpm_unpack "./${rpmdir}/"*.rpm
 		fi
-
-		if use offlinehelp; then
+		if [[ "${LANGUAGES_HELP}" =~ "${lang}" ]] && use offlinehelp; then
 			[[ ${lang} == en ]] && dir="en-US"
 			rpmdir="LibO_${PV}${RC_VERSION}_Linux_x86_helppack-rpm_${dir}/RPMS/"
 			rpm_unpack ./"${rpmdir}/"*.rpm
@@ -94,10 +92,11 @@ src_configure() { :; }
 src_compile() { :; }
 
 src_install() {
+	local dir="${S}"/opt/${PN/-l10n/}$(get_version_component_range 1-2)/
 	# Condition required for people that do not install anything eg no linguas
 	# or just english with no offlinehelp.
-	if [[ -d "${S}"/opt/${PN/-l10n/}$(get_version_component_range 1-2)/ ]] ; then
+	if [[ -d "${dir}" ]] ; then
 		insinto /usr/$(get_libdir)/${PN/-l10n/}
-		doins -r "${S}"/opt/${PN/-l10n/}$(get_version_component_range 1-2)/*
+		doins -r "${dir}"/*
 	fi
 }

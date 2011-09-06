@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-l10n
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.4 2011/09/04 09:32:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.5 2011/09/06 12:51:49 scarabeus Exp $
+
+  06 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-l10n-3.4.3-r1.ebuild:
+  Fix unpacking help for not-supported langs. Fixes bug #382031.
 
 *libreoffice-l10n-3.4.3-r1 (04 Sep 2011)
 
