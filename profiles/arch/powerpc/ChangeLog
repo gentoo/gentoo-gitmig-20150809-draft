@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.134 2011/09/04 03:53:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.135 2011/09/07 19:45:17 alexxy Exp $
+
+  07 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
+  Update kde mask
 
   04 Sep 2011; Robin H. Johnson <robbat2@gentoo.org> package.use.mask:
   Bug #381737: block dev-libs/libmemcached[tcmalloc] until
