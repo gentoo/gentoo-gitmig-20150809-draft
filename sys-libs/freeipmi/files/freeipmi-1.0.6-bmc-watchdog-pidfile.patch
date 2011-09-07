@@ -1,0 +1,44 @@
+diff --git a/bmc-watchdog/src/Makefile.am b/bmc-watchdog/src/Makefile.am
+index 04c01e2..38d2f7f 100644
+--- a/bmc-watchdog/src/Makefile.am
++++ b/bmc-watchdog/src/Makefile.am
+@@ -10,7 +10,8 @@ AM_CPPFLAGS = \
+ 	-I$(top_srcdir)/common/src/portability \
+ 	-I$(top_srcdir)/libfreeipmi/include \
+ 	-D_GNU_SOURCE \
+-	-D_REENTRANT
++	-D_REENTRANT \
++	-DLOCALSTATEDIR='"$(localstatedir)"'
+ 
+ sbin_PROGRAMS = bmc-watchdog
+ 
+diff --git a/bmc-watchdog/src/bmc-watchdog.c b/bmc-watchdog/src/bmc-watchdog.c
+index 566ee65..403bc0a 100644
+--- a/bmc-watchdog/src/bmc-watchdog.c
++++ b/bmc-watchdog/src/bmc-watchdog.c
+@@ -1677,6 +1677,10 @@ _daemon_init ()
+     {
+       unsigned int i;
+       pid_t pid;
++      FILE *pidfile;
++
++      if ( (pidfile = fopen(LOCALSTATEDIR "/run/bmc-watchdog.pid", "w")) == NULL )
++        _err_exit ("fopen: %s", strerror (errno));
+ 
+       if ((pid = fork ()) < 0)
+         _err_exit ("fork: %s", strerror (errno));
+@@ -1690,8 +1694,13 @@ _daemon_init ()
+ 
+       if ((pid = fork ()) < 0)
+         _err_exit ("fork: %s", strerror (errno));
+-      if (pid)
++      if (pid) {
++        /* write the 2nd child PID to the pidfile */
++        fprintf(pidfile, "%u\n", pid);
++        fclose(pidfile);
++
+         exit (0);                   /* 1st child terminates */
++      }
+ 
+       if (chdir ("/") < 0)
+         _err_exit ("chdir: %s", strerror (errno));

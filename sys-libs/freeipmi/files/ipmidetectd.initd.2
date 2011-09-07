@@ -1,0 +1,25 @@
+#!/sbin/runscript
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/files/ipmidetectd.initd.2,v 1.1 2011/09/07 06:20:45 flameeyes Exp $
+
+PIDFILE=/var/run/$SVCNAME.pid
+
+start() {
+	rm -f $PIDFILE
+
+	ebegin "Starting $SVCNAME"
+	start-stop-daemon --background --make-pidfile \
+		--start --exec /usr/sbin/$SVCNAME \
+		--pidfile $PIDFILE
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping $SVCNAME"
+	start-stop-daemon \
+		--stop \
+		--pidfile $PIDFILE
+	eend $?
+	rm -f $PIDFILE
+}
