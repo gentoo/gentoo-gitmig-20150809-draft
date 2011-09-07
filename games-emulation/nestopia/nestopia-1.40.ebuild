@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestopia/nestopia-1.40.ebuild,v 1.7 2011/06/14 03:26:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestopia/nestopia-1.40.ebuild,v 1.8 2011/09/07 03:47:29 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils games
+inherit eutils flag-o-matic games
 
 MY_PV="${PV//./}"
 LNX_P="nst${MY_PV}_lnx_release_h"
@@ -35,6 +35,7 @@ src_prepare() {
 	    "${FILESDIR}"/${PN} \
 	    > ${PN} \
 	    || die "sed failed"
+	strip-flags
 }
 
 src_install() {
