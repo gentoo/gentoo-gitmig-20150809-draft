@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.22 2011/08/29 21:25:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.23 2011/09/07 04:06:39 vapier Exp $
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+cramfs crypt loop-aes ncurses nls old-linux perl selinux slang static-libs uclibc unicode"
+IUSE="+cramfs crypt ddate loop-aes ncurses nls old-linux perl selinux slang static-libs uclibc unicode"
 
 RDEPEND="!sys-process/schedutils
 	!sys-apps/setarch
@@ -74,6 +74,7 @@ src_configure() {
 		$(use_enable nls) \
 		--enable-agetty \
 		$(use_enable cramfs) \
+		$(use_enable ddate) \
 		$(use_enable old-linux elvtune) \
 		--with-ncurses=$(usex ncurses $(usex unicode auto yes) no) \
 		--disable-kill \

@@ -8,6 +8,7 @@
 	</maintainer>
 <use>
 	<flag name='cramfs'>build mkfs/fsck helpers for cramfs filesystems</flag>
+	<flag name='ddate'>build ddate helper (Discordian dates)</flag>
 	<flag name='loop-aes'>include support for Loop AES encryption</flag>
 	<flag name='perl'>install the chkdupexe helper script</flag>
 </use>
