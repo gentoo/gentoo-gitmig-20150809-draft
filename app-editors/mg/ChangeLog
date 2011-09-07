@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/mg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.31 2011/08/31 18:08:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.32 2011/09/07 14:31:14 ulm Exp $
+
+*mg-20110905 (07 Sep 2011)
+
+  07 Sep 2011; Ulrich Mueller <ulm@gentoo.org> +mg-20110905.ebuild:
+  Version bump.
 
   31 Aug 2011; Ulrich Mueller <ulm@gentoo.org> mg-20110120.ebuild:
   Depend on ncurses, bug 381023.
