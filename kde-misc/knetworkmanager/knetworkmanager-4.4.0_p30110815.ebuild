@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/knetworkmanager-4.4.0_p30110815.ebuild,v 1.1 2011/08/15 15:11:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/knetworkmanager-4.4.0_p30110815.ebuild,v 1.2 2011/09/07 22:30:44 dilfridge Exp $
 
 #
 # NOTE: the "3" in the patchlevel is not a typo!!!
@@ -27,11 +27,13 @@ IUSE="consolekit debug"
 
 DEPEND="
 	net-misc/mobile-broadband-provider-info
-	>=net-misc/networkmanager-0.8.9997
+	>=net-misc/networkmanager-0.9.0
 "
 RDEPEND="${DEPEND}"
 
 RESTRICT="test"
+
+PATCHES=( "${FILESDIR}/${PN}-nm09version.patch" )
 
 src_prepare() {
 	kde4-base_src_prepare

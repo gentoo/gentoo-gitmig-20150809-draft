@@ -1,0 +1,12 @@
+diff -ruN knetworkmanager-4.4.0_p30110815.orig/CMakeLists.txt knetworkmanager-4.4.0_p30110815/CMakeLists.txt
+--- knetworkmanager-4.4.0_p30110815.orig/CMakeLists.txt	2011-08-15 14:07:37.000000000 +0200
++++ knetworkmanager-4.4.0_p30110815/CMakeLists.txt	2011-09-08 00:27:18.655236639 +0200
+@@ -1,7 +1,7 @@
+ project(plasma-networkmanagement)
+ 
+ option(INSTALL_KNM_AUTOSTART "Install the autostart file for knetworkmanager. Warning: This prevents the plasmoid from working properly")
+-set (MINIMUM_NM_VERSION_REQUIRED "0.8.999")
++set (MINIMUM_NM_VERSION_REQUIRED "0.9.0")
+ 
+ find_package(KDE4 REQUIRED)
+ include (KDE4Defaults)
