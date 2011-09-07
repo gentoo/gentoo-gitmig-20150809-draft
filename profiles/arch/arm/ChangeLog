@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.133 2011/09/05 19:52:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.134 2011/09/07 19:55:13 alexxy Exp $
+
+  07 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
+  Update kde mask
 
   05 Sep 2011; Markus Meier <maekke@gentoo.org> package.use.mask:
   package.use.mask some unkeyworded deps for bug 379657 and bug 379651
