@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/tomcat-servlet-api
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.103 2011/09/02 10:52:25 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.104 2011/09/07 17:17:43 fordfrog Exp $
+
+  07 Sep 2011; Miroslav Šulc <fordfrog@gentoo.org>
+  -tomcat-servlet-api-7.0.20.ebuild:
+  Removed slot 7 version affected by CVE-2011-3190
 
   02 Sep 2011; Miroslav Šulc <fordfrog@gentoo.org>
   -tomcat-servlet-api-7.0.14.ebuild, -tomcat-servlet-api-7.0.16.ebuild,
