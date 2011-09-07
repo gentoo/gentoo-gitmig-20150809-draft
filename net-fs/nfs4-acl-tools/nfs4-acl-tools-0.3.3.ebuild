@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs4-acl-tools/nfs4-acl-tools-0.3.3.ebuild,v 1.1 2009/02/15 20:55:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs4-acl-tools/nfs4-acl-tools-0.3.3.ebuild,v 1.2 2011/09/07 10:47:08 scarabeus Exp $
+
+EAPI=4
 
 DESCRIPTION="Commandline and GUI tools that deal directly with NFSv4 ACLs"
 HOMEPAGE="http://www.citi.umich.edu/projects/nfsv4/linux/"
@@ -13,7 +15,12 @@ IUSE=""
 
 DEPEND="sys-apps/attr"
 
+src_compile() {
+	# not gnumakefile :/
+	make || die
+}
+
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
-	dodoc CHANGELOG INSTALL README TODO
+	make DESTDIR="${D}" install || die
+	dodoc README TODO
 }

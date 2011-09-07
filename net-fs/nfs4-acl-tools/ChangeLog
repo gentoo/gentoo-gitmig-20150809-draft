@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/nfs4-acl-tools
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs4-acl-tools/ChangeLog,v 1.2 2009/02/15 20:55:31 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs4-acl-tools/ChangeLog,v 1.3 2011/09/07 10:47:08 scarabeus Exp $
+
+  07 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -nfs4-acl-tools-0.3.2.ebuild, nfs4-acl-tools-0.3.3.ebuild:
+  Cleanup the ebuild to eapi4, fix jobserver-not-avail warning, drop
+  overshadowed old version.
 
 *nfs4-acl-tools-0.3.3 (15 Feb 2009)
 
