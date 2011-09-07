@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/ca-certificates
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.54 2011/09/07 00:39:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.55 2011/09/07 01:47:48 vapier Exp $
+
+*ca-certificates-20110502-r4 (07 Sep 2011)
+
+  07 Sep 2011; Mike Frysinger <vapier@gentoo.org>
+  +ca-certificates-20110502-r4.ebuild,
+  +files/ca-certificates-20110502-root.patch:
+  Generate relative symlinks to certs when using --root so c_rehash works
+  properly.
 
   07 Sep 2011; Mike Frysinger <vapier@gentoo.org>
   ca-certificates-20110502-r3.ebuild:
