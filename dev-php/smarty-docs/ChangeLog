@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/smarty-docs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty-docs/ChangeLog,v 1.52 2011/09/07 15:11:40 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty-docs/ChangeLog,v 1.53 2011/09/07 19:14:30 olemarkus Exp $
+
+  07 Sep 2011; Ole Markus With <olemarkus@gentoo.org> +smarty-docs-2.6.ebuild:
+  Readded 2.6 and cleaned it up
 
   07 Sep 2011; Ole Markus With <olemarkus@gentoo.org> -smarty-docs-2.6.ebuild:
   Removed older version that used confutils
