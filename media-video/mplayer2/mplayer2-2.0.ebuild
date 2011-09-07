@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0.ebuild,v 1.16 2011/08/24 10:35:36 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0.ebuild,v 1.17 2011/09/07 14:53:55 sping Exp $
 
 EAPI=4
 
@@ -166,6 +166,7 @@ REQUIRED_USE="bindist? ( !win32codecs )"
 
 PATCHES=(
 	"${FILESDIR}/${PV}-ffmpeg.patch"
+	"${FILESDIR}/${PV}-fmt-conversion.patch"
 )
 
 pkg_setup() {

@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.22 2011/08/24 10:35:36 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/ChangeLog,v 1.23 2011/09/07 14:53:55 sping Exp $
+
+  07 Sep 2011; Sebastian Pipping <sping@gentoo.org>
+  +files/2.0-fmt-conversion.patch, mplayer2-2.0.ebuild:
+  Fix compilation against libav 0.8_pre20110818 with patch extracted from
+  upstream Git repo (bug #380881)
 
   24 Aug 2011; Tony Vroon <chainsaw@gentoo.org> mplayer2-2.0.ebuild:
   Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney in bug
