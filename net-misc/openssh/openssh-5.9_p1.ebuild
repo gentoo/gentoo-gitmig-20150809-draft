@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.9_p1.ebuild,v 1.1 2011/09/07 01:38:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.9_p1.ebuild,v 1.2 2011/09/07 03:33:26 vapier Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib autotools pam
@@ -72,6 +72,9 @@ src_prepare() {
 	# keep this as we need it to avoid the conflict between LPK and HPN changing
 	# this file.
 	cp version.h version.h.pristine
+
+	# don't break .ssh/authorized_keys2 for fun
+	sed -i '/^AuthorizedKeysFile/s:^:#:' sshd_config || die
 
 	if use X509 ; then
 		epatch "${WORKDIR}"/${X509_PATCH%.*}
