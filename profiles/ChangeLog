@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5679 2011/09/07 13:04:09 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5680 2011/09/07 14:02:09 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Sep 2011; Alexis Ballier <aballier@gentoo.org> package.mask:
+  mask new sexplib
 
   07 Sep 2011; Ole Markus With <olemarkus@gentoo.org> package.mask:
   Masked roadsend-php for removal
