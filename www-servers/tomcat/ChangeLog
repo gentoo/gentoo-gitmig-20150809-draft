@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.260 2011/09/02 10:54:08 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.261 2011/09/07 17:16:21 fordfrog Exp $
+
+  07 Sep 2011; Miroslav Šulc <fordfrog@gentoo.org>
+  -files/7/7.0.20-build-xml.patch, -tomcat-7.0.20.ebuild:
+  Removed slot 7 version affected by CVE-2011-3190
 
   02 Sep 2011; Miroslav Šulc <fordfrog@gentoo.org>
   -files/7/7.0.14-build-xml.patch, -files/7/7.0.16-build-xml.patch,
