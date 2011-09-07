@@ -20,7 +20,8 @@ FONT_SUFFIX="ttf"
 
 FONT_CONF=( "${FILESDIR}/60-liberation.conf" )
 
-DEPEND="fontforge? ( media-gfx/fontforge )"
+DEPEND="fontforge? ( media-gfx/fontforge )
+		app-arch/unzip"
 RDEPEND=""
 
 if use fontforge; then
