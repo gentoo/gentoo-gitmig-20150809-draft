@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20110825.ebuild,v 1.2 2011/09/07 09:04:25 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20110825.ebuild,v 1.3 2011/09/07 17:56:15 chutzpah Exp $
 
 EAPI=4
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.videolan.org/pub/videolan/x264/snapshots/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="custom-cflags debug +threads pic static-libs"
+IUSE="custom-cflags debug +interlaced pic static-libs +threads"
 
 RDEPEND=""
 DEPEND="amd64? ( >=dev-lang/yasm-0.6.2 )
@@ -32,6 +32,7 @@ src_configure() {
 	use debug && myconf+=" --enable-debug"
 	use static-libs && myconf+=" --enable-static"
 	use threads || myconf+=" --disable-thread"
+	use interlaced || myconf+=" --disable-interlaced"
 
 	# let upstream pick the optimization level by default
 	use custom-cflags || filter-flags -O?
