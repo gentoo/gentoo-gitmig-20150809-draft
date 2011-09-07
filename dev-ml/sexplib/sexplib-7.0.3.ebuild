@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/sexplib/sexplib-7.0.1.ebuild,v 1.1 2011/09/07 14:04:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/sexplib/sexplib-7.0.3.ebuild,v 1.1 2011/09/07 15:22:10 aballier Exp $
 
 EAPI=3
 
@@ -8,7 +8,7 @@ inherit findlib eutils multilib
 
 DESCRIPTION="Library for automated conversion of OCaml-values to and from S-expressions"
 HOMEPAGE="http://forge.ocamlcore.org/projects/sexplib/"
-SRC_URI="http://forge.ocamlcore.org/frs/download.php/670/${P}.tar.gz"
+SRC_URI="http://forge.ocamlcore.org/frs/download.php/694/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
