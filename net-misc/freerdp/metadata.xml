@@ -25,5 +25,8 @@
 	<flag name="nss">Use NSS as crypto backend</flag>
 	<flag name="polarssl">Use PolarSSL as crypto backend</flag>
 	<flag name="ssl">Use OpenSSL as crypto backend</flag>
+	<flag name="xcursor">Use the XCursor library</flag>
+	<flag name="xext">Use the Xext library</flag>
+	<flag name="xkbfile">Use the xkbfile library</flag>
 </use>
 </pkgmetadata>
