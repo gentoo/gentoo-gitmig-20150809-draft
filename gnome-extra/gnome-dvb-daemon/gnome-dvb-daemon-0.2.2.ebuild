@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-dvb-daemon/gnome-dvb-daemon-0.2.2.ebuild,v 1.3 2011/09/06 18:40:49 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-dvb-daemon/gnome-dvb-daemon-0.2.2.ebuild,v 1.4 2011/09/07 22:00:16 mattst88 Exp $
 
 EAPI="3"
 
@@ -48,7 +48,8 @@ pkg_setup() {
 
 src_prepare() {
 	# Disable byte-compilation of Python modules.
-	ln -s $(type -P true) py-compile
+	mv py-compile py-compile.orig
+	ln -s $(type -P true) py-compile || die
 
 	gnome2_src_prepare
 }
