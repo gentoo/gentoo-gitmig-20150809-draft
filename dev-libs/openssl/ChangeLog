@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.400 2011/08/12 19:35:30 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.401 2011/09/07 04:11:26 vapier Exp $
+
+*openssl-1.0.0e (07 Sep 2011)
+
+  07 Sep 2011; Mike Frysinger <vapier@gentoo.org> +openssl-1.0.0e.ebuild:
+  Version bump #382069.
 
   12 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> openssl-1.0.0d.ebuild,
   +files/openssl-1.0.0d-alpha-fix-unalign.patch:
