@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20110502-r3.ebuild,v 1.1 2011/09/05 19:56:46 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20110502-r3.ebuild,v 1.2 2011/09/07 00:39:11 vapier Exp $
 
 EAPI="3"
 
@@ -15,11 +15,13 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
 IUSE=""
 
-DEPEND="|| ( >=sys-apps/coreutils-6.10-r1 sys-apps/mktemp sys-freebsd/freebsd-ubin )"
+# platforms like AIX don't have a good ar
+DEPEND="kernel_AIX? ( app-arch/deb2targz )"
+# openssl: we run `c_rehash`
+# debianutils: we run `run-parts`
 RDEPEND="${DEPEND}
 	dev-libs/openssl
-	sys-apps/debianutils
-	kernel_AIX? ( app-arch/deb2targz )" # platforms like AIX don't have a good ar
+	sys-apps/debianutils"
 
 S=${WORKDIR}
 
