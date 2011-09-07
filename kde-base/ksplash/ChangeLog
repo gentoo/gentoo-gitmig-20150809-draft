@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ksplash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplash/ChangeLog,v 1.99 2011/08/15 18:55:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplash/ChangeLog,v 1.100 2011/09/07 20:13:56 alexxy Exp $
+
+*ksplash-4.7.1 (07 Sep 2011)
+
+  07 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org> +ksplash-4.7.1.ebuild:
+  Version bump KDE SC 4.7.1
 
   15 Aug 2011; Markus Meier <maekke@gentoo.org> ksplash-4.6.5.ebuild:
   x86 stable, bug #377465

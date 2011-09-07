@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/konsolekalendar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsolekalendar/ChangeLog,v 1.167 2011/08/10 22:11:53 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsolekalendar/ChangeLog,v 1.168 2011/09/07 20:14:00 alexxy Exp $
+
+*konsolekalendar-4.7.1 (07 Sep 2011)
+
+  07 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org>
+  +konsolekalendar-4.7.1.ebuild:
+  Version bump KDE SC 4.7.1
 
   10 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -konsolekalendar-4.6.0.ebuild:

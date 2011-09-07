@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kabcclient
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kabcclient/ChangeLog,v 1.69 2011/08/10 22:08:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kabcclient/ChangeLog,v 1.70 2011/09/07 20:13:42 alexxy Exp $
+
+*kabcclient-4.7.1 (07 Sep 2011)
+
+  07 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org> +kabcclient-4.7.1.ebuild:
+  Version bump KDE SC 4.7.1
 
   10 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -kabcclient-4.6.0.ebuild:

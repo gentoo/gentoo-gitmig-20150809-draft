@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/powerdevil
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.85 2011/08/15 21:53:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.86 2011/09/07 20:13:38 alexxy Exp $
+
+*powerdevil-4.7.1 (07 Sep 2011)
+
+  07 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org> +powerdevil-4.7.1.ebuild:
+  Version bump KDE SC 4.7.1
 
   15 Aug 2011; Markus Meier <maekke@gentoo.org> powerdevil-4.6.5.ebuild:
   x86 stable, bug #377465

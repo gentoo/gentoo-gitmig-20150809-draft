@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/knotes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.178 2011/08/10 22:11:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.179 2011/09/07 20:14:06 alexxy Exp $
+
+*knotes-4.7.1 (07 Sep 2011)
+
+  07 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org> +knotes-4.7.1.ebuild:
+  Version bump KDE SC 4.7.1
 
   10 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> -knotes-4.6.0.ebuild:
   Drop kdepim-4.6.0

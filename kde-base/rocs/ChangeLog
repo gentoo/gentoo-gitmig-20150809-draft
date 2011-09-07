@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/rocs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/ChangeLog,v 1.45 2011/08/27 07:44:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/ChangeLog,v 1.46 2011/09/07 20:14:08 alexxy Exp $
+
+*rocs-4.7.1 (07 Sep 2011)
+
+  07 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org> +rocs-4.7.1.ebuild:
+  Version bump KDE SC 4.7.1
 
   27 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> rocs-4.7.0.ebuild:
   Add missing boost dependency, bug 379763

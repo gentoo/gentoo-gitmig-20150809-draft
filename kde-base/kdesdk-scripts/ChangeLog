@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdesdk-scripts
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/ChangeLog,v 1.168 2011/08/15 19:46:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/ChangeLog,v 1.169 2011/09/07 20:13:39 alexxy Exp $
+
+*kdesdk-scripts-4.7.1 (07 Sep 2011)
+
+  07 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org>
+  +kdesdk-scripts-4.7.1.ebuild:
+  Version bump KDE SC 4.7.1
 
   15 Aug 2011; Markus Meier <maekke@gentoo.org> kdesdk-scripts-4.6.5.ebuild:
   x86 stable, bug #377465

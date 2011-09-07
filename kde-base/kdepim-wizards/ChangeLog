@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdepim-wizards
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/ChangeLog,v 1.179 2011/08/10 22:10:31 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-wizards/ChangeLog,v 1.180 2011/09/07 20:13:48 alexxy Exp $
+
+*kdepim-wizards-4.7.1 (07 Sep 2011)
+
+  07 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org>
+  +kdepim-wizards-4.7.1.ebuild:
+  Version bump KDE SC 4.7.1
 
   10 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -kdepim-wizards-4.6.0.ebuild:

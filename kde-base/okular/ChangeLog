@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.111 2011/08/27 07:52:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.112 2011/09/07 20:13:51 alexxy Exp $
+
+*okular-4.7.1 (07 Sep 2011)
+
+  07 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org> +okular-4.7.1.ebuild:
+  Version bump KDE SC 4.7.1
 
   27 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> okular-4.7.0.ebuild:
   Add missing qimageblitz dependency, bug 379771

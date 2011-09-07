@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdepim-runtime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/ChangeLog,v 1.46 2011/08/10 22:10:04 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/ChangeLog,v 1.47 2011/09/07 20:13:45 alexxy Exp $
+
+*kdepim-runtime-4.7.1 (07 Sep 2011)
+
+  07 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org>
+  +kdepim-runtime-4.7.1.ebuild:
+  Version bump KDE SC 4.7.1
 
   10 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -kdepim-runtime-4.6.0.ebuild:

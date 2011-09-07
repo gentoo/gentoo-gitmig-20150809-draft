@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdesdk-kioslaves
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/ChangeLog,v 1.181 2011/08/15 19:44:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/ChangeLog,v 1.182 2011/09/07 20:13:56 alexxy Exp $
+
+*kdesdk-kioslaves-4.7.1 (07 Sep 2011)
+
+  07 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org>
+  +kdesdk-kioslaves-4.7.1.ebuild:
+  Version bump KDE SC 4.7.1
 
   15 Aug 2011; Markus Meier <maekke@gentoo.org> kdesdk-kioslaves-4.6.5.ebuild:
   x86 stable, bug #377465

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kajongg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.26 2011/08/15 21:29:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kajongg/ChangeLog,v 1.27 2011/09/07 20:14:07 alexxy Exp $
+
+*kajongg-4.7.1 (07 Sep 2011)
+
+  07 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org> +kajongg-4.7.1.ebuild:
+  Version bump KDE SC 4.7.1
 
   15 Aug 2011; Markus Meier <maekke@gentoo.org> kajongg-4.6.5.ebuild:
   x86 stable, bug #377465
