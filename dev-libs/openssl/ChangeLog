@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.401 2011/09/07 04:11:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.402 2011/09/07 08:46:48 chainsaw Exp $
+
+  07 Sep 2011; Tony Vroon <chainsaw@gentoo.org> openssl-1.0.0e.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in
+  security bug #382069.
 
 *openssl-1.0.0e (07 Sep 2011)
 
