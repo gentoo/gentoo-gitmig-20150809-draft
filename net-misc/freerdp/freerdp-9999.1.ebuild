@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-9999.1.ebuild,v 1.1 2011/09/07 03:40:07 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-9999.1.ebuild,v 1.2 2011/09/07 03:53:03 floppym Exp $
 
 EAPI="4"
 
@@ -36,6 +36,8 @@ DEPEND="${RDEPEND}
 	app-text/xmlto
 	test? ( dev-util/cunit )
 "
+
+DOCS=( README )
 
 # Test suite segfaults
 RESTRICT="test"
