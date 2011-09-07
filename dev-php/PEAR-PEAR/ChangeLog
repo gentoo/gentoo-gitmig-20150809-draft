@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-PEAR
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.149 2011/08/25 11:56:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.150 2011/09/07 11:24:20 olemarkus Exp $
+
+  07 Sep 2011; Ole Markus With <olemarkus@gentoo.org>
+  -files/1.6.2-accept-encoding-bug_12116.patch, -PEAR-PEAR-1.9.2.ebuild,
+  -PEAR-PEAR-1.9.2-r1.ebuild, -PEAR-PEAR-1.9.2-r2.ebuild,
+  -files/symlink-attack-fix.patch:
+  Removed older versions
 
   25 Aug 2011; Jeroen Roovers <jer@gentoo.org> PEAR-PEAR-1.9.3.ebuild:
   Stable for HPPA (bug #374447).
