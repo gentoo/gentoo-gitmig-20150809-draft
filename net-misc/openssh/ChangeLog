@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.422 2011/09/07 03:33:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.423 2011/09/07 07:37:45 robbat2 Exp $
+
+*openssh-5.9_p1-r1 (07 Sep 2011)
+
+  07 Sep 2011; Robin H. Johnson <robbat2@gentoo.org> +openssh-5.9_p1-r1.ebuild:
+  Add complete port of HPN+LPK patches, also adjust the HOMEDIR setting for
+  src_test to complete in more cases.
 
   07 Sep 2011; Mike Frysinger <vapier@gentoo.org> openssh-5.9_p1.ebuild:
   Retain default AuthorizedKeysFile behavior.
