@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.123 2011/07/13 20:08:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.124 2011/09/07 09:04:34 chainsaw Exp $
+
+  07 Sep 2011; Tony Vroon <chainsaw@gentoo.org> libsndfile-1.0.25.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in
+  security bug #375125 filed by Alexis Ballier.
 
 *libsndfile-1.0.25 (13 Jul 2011)
 
