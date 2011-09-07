@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.102 2011/08/10 07:05:34 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.103 2011/09/07 09:35:13 chainsaw Exp $
+
+  07 Sep 2011; Tony Vroon <chainsaw@gentoo.org> ntop-4.0.3.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani & Tomáš "Mepho" Pružina in bug #382091 filed by Markos "hwoarang"
+  Chandras.
 
   10 Aug 2011; Lars Wendler <polynomial-c@gentoo.org>
   files/ntop-4.0.3-gentoo.patch:
