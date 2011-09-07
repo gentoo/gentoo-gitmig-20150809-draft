@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.193 2011/04/08 19:40:29 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.194 2011/09/07 02:28:56 vapier Exp $
+
+  07 Sep 2011; Mike Frysinger <vapier@gentoo.org> gettext-0.18.1.1-r2.ebuild,
+  +files/gettext-0.18.1.1-uclibc-sched_param-def.patch:
+  Add gnulib sched fix from upstream for uClibc builds #323377 by Maksim
+  Melnikau. Add elibtoolize for cross-compiling peeps #260794 by Andrei
+  Slavoiu.
 
   08 Apr 2011; Petteri Räty <betelgeuse@gentoo.org>
   gettext-0.18.1.1-r2.ebuild:
