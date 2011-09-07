@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5676 2011/09/06 22:45:32 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5677 2011/09/07 09:14:44 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Mask gdb 7.3.1, remove mask on removed package.
 
   06 Sep 2011; Matt Turner <mattst88@gentoo.org> package.mask:
   dev-libs/libots is gone
