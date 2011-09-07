@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Email-Date-Format
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Date-Format/ChangeLog,v 1.15 2011/09/04 11:21:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Date-Format/ChangeLog,v 1.16 2011/09/07 16:21:20 jlec Exp $
+
+  07 Sep 2011; Justin Lecher <jlec@gentoo.org> Email-Date-Format-1.2.0.ebuild,
+  metadata.xml:
+  keyworded *-linux, tested by me
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org>
   -Email-Date-Format-1.002.ebuild:
