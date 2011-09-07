@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/mikutter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/ChangeLog,v 1.17 2011/08/15 01:43:55 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/ChangeLog,v 1.18 2011/09/07 22:33:34 naota Exp $
+
+*mikutter-0.0.4.493 (07 Sep 2011)
+*mikutter-0.0.3.485 (07 Sep 2011)
+
+  07 Sep 2011; Naohiro Aota <naota@gentoo.org> -mikutter-0.0.3.12.ebuild,
+  +mikutter-0.0.3.485.ebuild, -mikutter-0.0.4.460.ebuild,
+  +mikutter-0.0.4.493.ebuild:
+  Version bump; drop old version
 
 *mikutter-0.0.4.460 (15 Aug 2011)
 
