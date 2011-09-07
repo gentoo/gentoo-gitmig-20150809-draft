@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.194 2011/09/07 02:28:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.195 2011/09/07 03:14:44 vapier Exp $
+
+*gettext-0.18.1.1-r3 (07 Sep 2011)
+
+  07 Sep 2011; Mike Frysinger <vapier@gentoo.org> +gettext-0.18.1.1-r3.ebuild:
+  Add USE=static-libs support #378227 by Agostino Sarubbo.
 
   07 Sep 2011; Mike Frysinger <vapier@gentoo.org> gettext-0.18.1.1-r2.ebuild,
   +files/gettext-0.18.1.1-uclibc-sched_param-def.patch:
