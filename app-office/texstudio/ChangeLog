@@ -1,0 +1,19 @@
+# ChangeLog for app-office/texstudio
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/ChangeLog,v 1.1 2011/09/07 17:21:43 jlec Exp $
+
+*texstudio-2.2 (07 Sep 2011)
+
+  07 Sep 2011; Justin Lecher <jlec@gentoo.org> +texstudio-2.2.ebuild,
+  +files/texstudio-2.2-hunspell.patch, +metadata.xml:
+  Version Bump of app-office/texmakerx with rename to texstudio, #377947
+
+  17 Jun 2011; Justin Lecher <jlec@gentoo.org> texmakerx-2.1.ebuild:
+  Add missing deps, #371739
+
+*texmakerx-2.1 (12 Jun 2011)
+
+  12 Jun 2011; Justin Lecher <jlec@gentoo.org> +texmakerx-2.1.ebuild,
+  +files/texmakerx-2.1-hunspell.patch, +metadata.xml:
+  Addition, #338436
+
