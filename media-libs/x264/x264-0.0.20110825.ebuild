@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20110825.ebuild,v 1.1 2011/09/07 02:24:28 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/x264-0.0.20110825.ebuild,v 1.2 2011/09/07 09:04:25 flameeyes Exp $
 
 EAPI=4
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
@@ -61,8 +61,8 @@ src_configure() {
 		local cflags
 		cflags="$(grep "^CFLAGS=" config.mak | sed 's/CFLAGS=//')"
 		cflags="${cflags//$(get-flag O)/}"
-		cflags="${cflags//-O?/$(get-flag O)}"
-		cflags="${cflags//-g/}"
+		cflags="${cflags//-O? /$(get-flag O) }"
+		cflags="${cflags//-g /}"
 		sed -i "s:^CFLAGS=.*:CFLAGS=${cflags//:/\\:}:" config.mak
 	fi
 }

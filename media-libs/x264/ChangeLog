@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/x264
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.58 2011/09/07 02:24:28 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/x264/ChangeLog,v 1.59 2011/09/07 09:04:25 flameeyes Exp $
+
+  07 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  x264-0.0.20110825.ebuild:
+  QA: stop failing when using -ggdb in CFLAGS.
 
 *x264-0.0.20110825 (07 Sep 2011)
 
