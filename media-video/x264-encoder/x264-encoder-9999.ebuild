@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/x264-encoder-9999.ebuild,v 1.2 2011/09/03 18:30:29 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/x264-encoder-9999.ebuild,v 1.3 2011/09/07 15:09:35 aballier Exp $
 
 EAPI=4
 
@@ -31,7 +31,7 @@ if [ "${PV#9999}" != "${PV}" ] ; then
 else
 	KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 fi
-IUSE="debug ffmpeg ffmpegsource mp4 +system-libx264 +threads"
+IUSE="debug ffmpeg ffmpegsource mp4 +threads"
 
 REQUIRED_USE="ffmpegsource? ( ffmpeg )"
 
@@ -39,7 +39,7 @@ RDEPEND="
 	ffmpeg? ( virtual/ffmpeg )
 	ffmpegsource? ( media-libs/ffmpegsource )
 	mp4? ( >=media-video/gpac-0.4.1_pre20060122 )
-	system-libx264? ( ~media-libs/x264-${PV} )
+	~media-libs/x264-${PV}
 "
 ASM_DEP=">=dev-lang/yasm-0.6.2"
 DEPEND="${RDEPEND}
@@ -61,7 +61,6 @@ src_configure() {
 	use ffmpeg || myconf+=" --disable-lavf --disable-swscale"
 	use ffmpegsource || myconf+=" --disable-ffms"
 	use mp4 || myconf+=" --disable-gpac"
-	use system-libx264 && myconf+=" --system-libx264"
 	use threads || myconf+=" --disable-thread"
 
 	./configure \
@@ -72,5 +71,6 @@ src_configure() {
 		--extra-cflags="${CFLAGS}" \
 		--extra-ldflags="${LDFLAGS}" \
 		--host="${CHOST}" \
+		--system-libx264 \
 		${myconf} || die
 }
