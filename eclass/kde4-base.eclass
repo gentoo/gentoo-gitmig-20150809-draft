@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.106 2011/08/31 23:44:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.107 2011/09/07 17:34:04 alexxy Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -576,20 +576,20 @@ _calculate_live_repo() {
 					# every package is listed explicitly now, as upstream
 					# seems to love being different :(
 					case ${_kmname} in
-						blinken|cantor|kalgebra|kalzium|kanagram|kbruch| \
-						kdeplasma-addons|kdepim|kdepim-runtime|kdepimlibs| \
-						kgeography|khangman|kig|kiten|klettres|kmplot|kstars| \
-						ktouch|kturtle|kwordquiz|libkdeedu|mobipocket|okular| \
-						parley|rocs|step)
+						ark|blinken|cantor|filelight|kalgebra|kalzium|kanagram|kbruch| \
+						kcalc|kcharselect|kdeplasma-addons|kdepim|kdepim-runtime|kdepimlibs| \
+						kdf|kfloppy|kgeography|kgpg|khangman|kig|kiten|klettres|kmplot|kremotecontrol| \
+						kstars|ktimer|ktouch|kturtle|kwallet|kwordquiz|libkdeedu|mobipocket| \
+						okular|parley|printer-applet|rocs|step|superkaramba|sweeper)
 							EGIT_BRANCH="$(get_kde_version)"
 							;;
 						marble)
 							EGIT_BRANCH="kde-$(get_kde_version)"
 							;;
-						gwenview|kamera|kate|kcolorchooser|kde-baseapps| \
+						gwenview|jovie|kaccessible|kamera|kate|kcolorchooser|kde-baseapps| \
 						kde-runtime|kde-workspace|kgamma| \
 						kdegraphics-strigi-analyzer|kdegraphics-thumbnailers| \
-						kdelibs|kimono|kolourpaint|konsole|korundum| \
+						kdelibs|kimono|kmag|kmousetool|kmouth|kolourpaint|konsole|korundum| \
 						kross-interpreters|kruler|ksaneplugin|ksnapshot| \
 						libkdcraw|libkexiv2|libkipi|libksane|perlqt|perlkde| \
 						pykde4|qtruby|qyoto|smokegen|smokekde|smokeqt|svgpart)
