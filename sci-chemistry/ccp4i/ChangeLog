@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/ccp4i
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4i/ChangeLog,v 1.9 2011/08/07 10:14:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4i/ChangeLog,v 1.10 2011/09/07 17:24:17 jlec Exp $
+
+  07 Sep 2011; Justin Lecher <jlec@gentoo.org> ccp4i-6.1.3-r3.ebuild:
+  EAPI bump, fixed usage of virtualx eclass
 
   07 Aug 2011; Markos Chandras <hwoarang@gentoo.org> ccp4i-6.1.3-r3.ebuild:
   Stable on amd64 wrt bug #375907

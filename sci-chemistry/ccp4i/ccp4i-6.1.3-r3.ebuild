@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4i/ccp4i-6.1.3-r3.ebuild,v 1.5 2011/08/07 10:14:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4i/ccp4i-6.1.3-r3.ebuild,v 1.6 2011/09/07 17:24:17 jlec Exp $
 
-EAPI="2"
+EAPI=3
+
 PYTHON_DEPEND="2"
 
 inherit base multilib python virtualx
@@ -93,7 +94,7 @@ pkg_postinst() {
 		export USER=root
 		ccp4i -h > /dev/null
 	}
-	_ccp4-setup
+	VIRTUALX_COMMAND="_ccp4-setup" virtualmake
 	echo ""
 	elog "ccp4i needs some enviromental settings. So please"
 	elog "\t source ${EPREFIX}/etc/profile"
