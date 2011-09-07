@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.116 2011/08/07 23:41:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.117 2011/09/07 04:02:54 vapier Exp $
+
+  07 Sep 2011; Mike Frysinger <vapier@gentoo.org> cryptsetup-1.2.0-r1.ebuild:
+  Pull in util-linux for uuid and require static/static-libs properly #381197
+  by Vasileios Lourdas, and drop older deps that are no longer in the tree.
 
   07 Aug 2011; Mike Frysinger <vapier@gentoo.org>
   files/1.1.3-dm-crypt-start.sh:
