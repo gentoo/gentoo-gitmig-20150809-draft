@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ca-certificates
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.55 2011/09/07 01:47:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.56 2011/09/07 07:04:06 grobian Exp $
+
+  07 Sep 2011; Fabian Groffen <grobian@gentoo.org>
+  ca-certificates-20110502-r4.ebuild:
+  Update RELPATH to compensate for the added offset.
 
 *ca-certificates-20110502-r4 (07 Sep 2011)
 

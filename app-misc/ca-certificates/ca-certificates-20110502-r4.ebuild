@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20110502-r4.ebuild,v 1.1 2011/09/07 01:47:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20110502-r4.ebuild,v 1.2 2011/09/07 07:04:06 grobian Exp $
 
 EAPI="3"
 
@@ -46,7 +46,10 @@ src_unpack() {
 src_prepare() {
 	cd "./${EPREFIX}" || die
 	epatch "${FILESDIR}"/${PN}-20110502-root.patch
-	sed -i -e '/="$ROOT/s:ROOT/:ROOT'"${EPREFIX}"'/:' \
+	local relp=$(echo "${EPREFIX}" | sed -e 's:[^/]\+:..:g')
+	sed -i \
+		-e '/="$ROOT/s:ROOT/:ROOT'"${EPREFIX}"'/:' \
+		-e '/RELPATH="\.\./s:"$:'"${relp}"'":' \
 		usr/sbin/update-ca-certificates || die
 }
 
