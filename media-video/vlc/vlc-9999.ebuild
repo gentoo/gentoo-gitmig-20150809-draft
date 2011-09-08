@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.144 2011/06/22 12:27:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.145 2011/09/08 04:52:32 aballier Exp $
 
 EAPI="4"
 
@@ -23,7 +23,7 @@ MY_PV="${PV/_/-}"
 MY_PV="${MY_PV/-beta/-test}"
 MY_P="${PN}-${MY_PV}"
 
-PATCHLEVEL="100"
+PATCHLEVEL="101"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
 if [ "${PV%9999}" != "${PV}" ] ; then # Live ebuild
@@ -331,7 +331,7 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
-	dodoc AUTHORS HACKING THANKS NEWS README \
+	dodoc AUTHORS THANKS NEWS README \
 		doc/fortunes.txt doc/intf-vcd.txt
 
 	# Punt useless libtool's .la files
