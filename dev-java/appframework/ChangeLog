@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/appframework
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/appframework/ChangeLog,v 1.2 2009/08/14 18:50:44 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/appframework/ChangeLog,v 1.3 2011/09/08 11:27:44 fordfrog Exp $
+
+*appframework-1.03-r1 (08 Sep 2011)
+
+  08 Sep 2011; Miroslav Šulc <fordfrog@gentoo.org>
+  +appframework-1.03-r1.ebuild:
+  Switched JNLP dependency from dev-java/jnlp-bin to dev-java/netx, bug #377967
 
   14 Aug 2009; Markus Meier <maekke@gentoo.org> appframework-1.03.ebuild:
   amd64/x86 stable, bug #280658
