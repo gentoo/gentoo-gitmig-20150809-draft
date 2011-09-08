@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.9.9.ebuild,v 1.2 2011/08/20 00:30:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.9.9.ebuild,v 1.3 2011/09/08 13:36:32 chainsaw Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ DESCRIPTION="Fast lightweight tabbed filemanager"
 HOMEPAGE="http://pcmanfm.sourceforge.net/"
 SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${P}.tar.gz"
 
-KEYWORDS="~alpha ~amd64 ~arm ~ppc ~x86 ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm ~ppc ~x86 ~x86-linux"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="debug"
