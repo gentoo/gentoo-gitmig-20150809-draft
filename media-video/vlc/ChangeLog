@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.737 2011/09/08 04:52:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.738 2011/09/08 18:16:38 aballier Exp $
+
+  08 Sep 2011; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  v4l2 is now automaticaly built upstream if headers are present, drop the
+  useflag
 
   08 Sep 2011; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
   fix build of -9999 after recent changes

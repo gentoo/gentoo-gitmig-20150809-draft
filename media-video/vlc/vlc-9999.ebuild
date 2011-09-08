@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.145 2011/09/08 04:52:32 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.146 2011/09/08 18:16:38 aballier Exp $
 
 EAPI="4"
 
@@ -56,7 +56,7 @@ IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi +avcodec
 	ncurses neon ogg omxil opengl optimisememory oss png portaudio +postproc
 	projectm pulseaudio pvr +qt4 rtsp run-as-root samba schroedinger sdl
 	sdl-image shine shout sid skins speex sqlite sse svg +swscale
-	switcher taglib theora truetype twolame udev upnp v4l2 vaapi vcdx vlm vorbis
+	switcher taglib theora truetype twolame udev upnp vaapi vcdx vlm vorbis
 	waveout win32codecs wingdi wma-fixed +X x264 +xcb xml xosd xv zvbi"
 
 RDEPEND="
@@ -151,7 +151,6 @@ DEPEND="${RDEPEND}
 	alsa? ( >=media-sound/alsa-headers-1.0.23 )
 	fbosd? ( sys-kernel/linux-headers )
 	kde? ( >=kde-base/kdelibs-4 )
-	v4l2? ( >=sys-kernel/linux-headers-2.6.25 )
 	xcb? ( x11-proto/xproto )
 	dev-util/pkgconfig"
 
@@ -166,7 +165,6 @@ REQUIRED_USE="
 	gnutls? ( gcrypt )
 	libtar? ( skins )
 	libtiger? ( kate )
-	libv4l2? ( v4l2 )
 	media-library? ( sqlite )
 	qt4? ( X )
 	sdl? ( X )
@@ -308,7 +306,6 @@ src_configure() {
 		$(use_enable twolame) \
 		$(use_enable udev) \
 		$(use_enable upnp) \
-		$(use_enable v4l2) \
 		$(use_enable vcdx) \
 		$(use_enable vaapi libva) \
 		$(use_enable vlm) \
