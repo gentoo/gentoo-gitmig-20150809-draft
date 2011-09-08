@@ -1,12 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/nsscache/nsscache-0.21.14.ebuild,v 1.1 2011/05/29 13:03:38 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/nsscache/nsscache-0.21.14.ebuild,v 1.2 2011/09/08 22:37:17 robbat2 Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
+PYTHON_USE_WITH="berkdb"
 
 inherit eutils python distutils
 
