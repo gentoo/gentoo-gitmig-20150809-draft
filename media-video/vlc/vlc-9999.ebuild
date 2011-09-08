@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.146 2011/09/08 18:16:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.147 2011/09/08 18:57:26 aballier Exp $
 
 EAPI="4"
 
@@ -50,14 +50,14 @@ IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi +avcodec
 	directfb directx dshow dts dvb dvd dxva2 elibc_glibc egl +encode
 	fbosd fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls
 	growl httpd ieee1394 ios-vout jack kate kde libass libcaca libnotify
-	libproxy libtiger libv4l2 linsys libtar lirc live lua +macosx +macosx-audio
-	+macosx-dialog-provider +macosx-eyetv +macosx-quartztext +macosx-qtcapture
-	+macosx-vout matroska media-library mmx modplug mp3 mpeg mtp musepack
-	ncurses neon ogg omxil opengl optimisememory oss png portaudio +postproc
-	projectm pulseaudio pvr +qt4 rtsp run-as-root samba schroedinger sdl
-	sdl-image shine shout sid skins speex sqlite sse svg +swscale
-	switcher taglib theora truetype twolame udev upnp vaapi vcdx vlm vorbis
-	waveout win32codecs wingdi wma-fixed +X x264 +xcb xml xosd xv zvbi"
+	libproxy libsamplerate libtiger libv4l2 linsys libtar lirc live lua +macosx
+	+macosx-audio +macosx-dialog-provider +macosx-eyetv +macosx-quartztext
+	+macosx-qtcapture +macosx-vout matroska media-library mmx modplug mp3 mpeg
+	mtp musepack ncurses neon ogg omxil opengl optimisememory oss png portaudio
+	+postproc projectm pulseaudio pvr +qt4 rtsp run-as-root samba schroedinger
+	sdl sdl-image shine shout sid skins speex sqlite sse svg +swscale switcher
+	taglib theora truetype twolame udev upnp vaapi vcdx vlm vorbis waveout
+	win32codecs wingdi wma-fixed +X x264 +xcb xml xosd xv zvbi"
 
 RDEPEND="
 		sys-libs/zlib
@@ -95,6 +95,7 @@ RDEPEND="
 		libcaca? ( >=media-libs/libcaca-0.99_beta14 )
 		libnotify? ( x11-libs/libnotify x11-libs/gtk+:2 )
 		libproxy? ( net-libs/libproxy )
+		libsamplerate? ( media-libs/libsamplerate )
 		libtar? ( >=dev-libs/libtar-1.2.11-r3 )
 		libtiger? ( media-libs/libtiger )
 		linsys? ( >=media-libs/zvbi-0.2.28 )
@@ -234,6 +235,7 @@ src_configure() {
 		$(use_enable flac) \
 		$(use_enable fluidsynth) \
 		$(use_enable fontconfig) \
+		$(use_enable gcrypt libgcrypt) \
 		$(use_enable gme) \
 		$(use_enable gnome gnomevfs) \
 		$(use_enable gnutls) \
@@ -246,9 +248,9 @@ src_configure() {
 		$(use_with kde kde-solid) \
 		$(use_enable libass) \
 		$(use_enable libcaca caca) \
-		$(use_enable gcrypt libgcrypt) \
 		$(use_enable libnotify notify) \
 		$(use_enable libproxy) \
+		$(use_enable libsamplerate samplerate) \
 		$(use_enable libtar) \
 		$(use_enable libtiger tiger) \
 		$(use_enable libv4l2) \
