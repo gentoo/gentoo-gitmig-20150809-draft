@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/cm3-bin-5.4.0.ebuild,v 1.6 2011/08/11 11:11:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/cm3-bin-5.4.0.ebuild,v 1.7 2011/09/08 14:54:10 ulm Exp $
 
 inherit toolchain-funcs eutils
 
@@ -22,7 +22,7 @@ IUSE=""
 RESTRICT="strip"
 
 DEPEND=""
-RDEPEND="app-misc/editor-wrapper"
+RDEPEND=">=app-misc/editor-wrapper-3"
 
 S=${WORKDIR}
 
@@ -37,7 +37,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-cm3-cfg.patch
 	sed -i \
-		-e "s:@GENTOO_INITIAL_REACTOR_EDITOR@:/usr/libexec/gentoo-editor:" \
+		-e "s:@GENTOO_INITIAL_REACTOR_EDITOR@:/usr/libexec/editor:" \
 		-e "s:@GENTOO_INSTALL_ROOT@:/usr/$(get_libdir)/cm3/:" \
 		-e "s:@GENTOO_CC@:$(tc-getCC):" \
 		-e "s:@GENTOO_AR@:$(tc-getAR):" \
