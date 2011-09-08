@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.10-r1.ebuild,v 1.1 2011/03/17 20:21:24 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.12.ebuild,v 1.1 2011/09/08 14:48:19 grozin Exp $
 EAPI=2
 inherit autotools
 MY_P=${P/tex/TeX}-src
@@ -8,12 +8,12 @@ MY_P=${P/tex/TeX}-src
 DESCRIPTION="Wysiwyg text processor with high-quality maths"
 HOMEPAGE="http://www.texmacs.org/"
 SRC_URI="
-	ftp://ftp.texmacs.org/pub/TeXmacs/targz/${MY_P}.tar.gz
+	ftp://ftp.texmacs.org/pub/TeXmacs/tmftp/source/${MY_P}.tar.gz
 	ftp://ftp.texmacs.org/pub/TeXmacs/targz/TeXmacs-600dpi-fonts.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="imlib jpeg netpbm -qt4 svg spell"
+IUSE="imlib jpeg netpbm qt4 svg spell"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-interix ~amd64-linux ~x86-linux"
 
 RDEPEND="dev-scheme/guile[deprecated]
@@ -33,17 +33,7 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${MY_P}"
 
-pkg_setup() {
-	if use qt4; then
-		ewarn "Qt port is highly experimental"
-		ewarn "If you want a stable TeXmacs, emerge with USE=-qt4"
-	fi
-}
-
 src_prepare() {
-	# don't strip
-	epatch "${FILESDIR}"/${PN}-strip.patch
-
 	# respect LDFLAGS, bug #338459
 	epatch "${FILESDIR}"/${PN}-ldflags.patch
 
