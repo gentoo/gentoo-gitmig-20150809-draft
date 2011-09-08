@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/spice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/spice/ChangeLog,v 1.14 2011/08/11 11:09:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/spice/ChangeLog,v 1.15 2011/09/08 14:20:46 ulm Exp $
+
+  08 Sep 2011; Ulrich Mueller <ulm@gentoo.org> spice-3.5.5-r1.ebuild:
+  Update dependency on app-misc/editor-wrapper.
 
   11 Aug 2011; Ulrich Mueller <ulm@gentoo.org> spice-3.5.5-r1.ebuild:
   Update dependency following package move of editor-wrapper.
