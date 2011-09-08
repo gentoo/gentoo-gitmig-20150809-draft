@@ -1,14 +1,14 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jce-bin/sun-jce-bin-1.6.0.ebuild,v 1.4 2008/06/15 20:50:15 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jce-bin/sun-jce-bin-1.6.0.ebuild,v 1.5 2011/09/08 12:02:23 caster Exp $
 
 jcefile="jce_policy-6.zip"
 
 DESCRIPTION="Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy Files ${PV}"
-HOMEPAGE="http://java.sun.com/javase/6/"
+HOMEPAGE="http://www.oracle.com/technetwork/java/javase/overview/index-jsp-136246.html"
 SRC_URI="${jcefile}"
 SLOT="1.6"
-LICENSE="sun-bcla-java-vm"
+LICENSE="Oracle-BCLA-JavaSE"
 KEYWORDS="amd64 x86 ~x86-fbsd"
 RESTRICT="fetch"
 IUSE=""
@@ -18,7 +18,7 @@ RDEPEND=""
 
 S="${WORKDIR}/jce"
 
-FETCH_JCE="https://cds.sun.com/is-bin/INTERSHOP.enfinity/WFS/CDS-CDS_Developer-Site/en_US/-/USD/ViewProductDetail-Start?ProductRef=jce_policy-6-oth-JPR@CDS-CDS_Developer"
+FETCH_JCE="http://www.oracle.com/technetwork/java/javase/downloads/jce-6-download-429243.html"
 
 pkg_nofetch() {
 	einfo "Please download ${jcefile} from:"
