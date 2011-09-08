@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.0.1.60_beta201108082.ebuild,v 1.4 2011/08/31 16:09:54 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.0.1.129_rc201109061.ebuild,v 1.1 2011/09/08 07:45:36 scarabeus Exp $
 
 EAPI=4
 inherit nsplugins multilib toolchain-funcs versionator
@@ -9,10 +9,10 @@ inherit nsplugins multilib toolchain-funcs versionator
 # For proper date ordering in the ebuild we are using CCYYMMDD,  whereas Adobe
 # uses MMDDYY in their filename.  Plus we tack on the release number, too.
 EBUILD_DATE=$(get_version_component_range $(get_version_component_count))
-DATE_SUFFIX=${EBUILD_DATE: -5:4}${EBUILD_DATE:6:2}
+DATE_SUFFIX=${EBUILD_DATE: -5:4}${EBUILD_DATE:4:2}
 REL_SUFFIX=${EBUILD_DATE: -1}
-MY_64B_URI="http://download.macromedia.com/pub/labs/flashplatformruntimes/flashplayer11/flashplayer11_b${REL_SUFFIX}_install_lin_64_${DATE_SUFFIX}.tar.gz"
-MY_32B_URI="http://download.macromedia.com/pub/labs/flashplatformruntimes/flashplayer11/flashplayer11_b${REL_SUFFIX}_install_lin_32_${DATE_SUFFIX}.tar.gz"
+MY_64B_URI="http://download.macromedia.com/pub/labs/flashplatformruntimes/flashplayer11/flashplayer11_rc${REL_SUFFIX}_install_lin_64_${DATE_SUFFIX}.tar.gz"
+MY_32B_URI="http://download.macromedia.com/pub/labs/flashplatformruntimes/flashplayer11/flashplayer11_rc${REL_SUFFIX}_install_lin_32_${DATE_SUFFIX}.tar.gz"
 
 DESCRIPTION="Adobe Flash Player"
 SRC_URI="x86? ( ${MY_32B_URI} )
