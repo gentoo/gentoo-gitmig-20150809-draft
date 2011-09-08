@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.43 2011/08/29 23:11:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.44 2011/09/08 21:11:09 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -48,11 +48,10 @@ RDEPEND="
 	gsf? (
 		app-text/odt2txt
 		>=gnome-extra/libgsf-1.13 )
-	upnp? ( >=media-libs/gupnp-dlna-0.5 )
-	!upnp? (
-		gstreamer? ( >=media-libs/gstreamer-0.10.31:0.10 )
-		!gstreamer? ( !xine? ( || ( media-video/totem media-video/mplayer ) ) )
-	)
+	gstreamer? (
+		>=media-libs/gstreamer-0.10.31:0.10
+		upnp? ( >=media-libs/gupnp-dlna-0.5 ) )
+	!gstreamer? ( !xine? ( || ( media-video/totem media-video/mplayer ) ) )
 	gtk? (
 		>=dev-libs/libgee-0.3
 		>=x11-libs/gtk+-2.18:2 )
@@ -117,16 +116,17 @@ pkg_setup() {
 
 	inotify_enabled
 
-	if use upnp ; then
-		G2CONF="${G2CONF} --enable-video-extractor=gupnp-dlna"
-	elif use gstreamer ; then
-		G2CONF="${G2CONF}
-			--enable-video-extractor=gstreamer
-			--enable-gstreamer-tagreadbin"
+	if use gstreamer ; then
+		G2CONF="${G2CONF} --enable-generic-media-extractor=gstreamer"
+		if use upnp; then
+			G2CONF="${G2CONF} --with-gstreamer-backend=gupnp-dlna"
+		else
+			G2CONF="${G2CONF} --with-gstreamer-backend=discover"
+		fi
 	elif use xine ; then
-		G2CONF="${G2CONF} --enable-video-extractor=xine"
+		G2CONF="${G2CONF} --enable-generic-media-extractor=xine"
 	else
-		G2CONF="${G2CONF} --enable-video-extractor=external"
+		G2CONF="${G2CONF} --enable-generic-media-extractor=external"
 	fi
 
 	if use applet || use gtk; then
