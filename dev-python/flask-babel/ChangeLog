@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/flask-babel
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-babel/ChangeLog,v 1.1 2010/12/14 22:50:18 rafaelmartins Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-babel/ChangeLog,v 1.2 2011/09/08 07:09:45 rafaelmartins Exp $
+
+*flask-babel-0.7 (08 Sep 2011)
+
+  08 Sep 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  -flask-babel-0.6.ebuild, +flask-babel-0.7.ebuild:
+  Version bump.
 
 *flask-babel-0.6 (14 Dec 2010)
 
