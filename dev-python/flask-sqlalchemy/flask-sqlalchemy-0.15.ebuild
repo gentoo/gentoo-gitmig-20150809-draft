@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-sqlalchemy/flask-sqlalchemy-0.11.ebuild,v 1.1 2011/02/17 15:09:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-sqlalchemy/flask-sqlalchemy-0.15.ebuild,v 1.1 2011/09/08 07:03:16 rafaelmartins Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
-DISTUTILS_SRC_TEST="setup.py"
+RESTRICT_PYTHON_ABIS="2.4 3.*"
+DISTUTILS_SRC_TEST="nosetests"
 
 inherit distutils
 
