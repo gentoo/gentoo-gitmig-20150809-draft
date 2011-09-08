@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dvipdfm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/ChangeLog,v 1.34 2011/04/12 21:32:01 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/ChangeLog,v 1.35 2011/09/08 19:32:18 grobian Exp $
+
+  08 Sep 2011; Fabian Groffen <grobian@gentoo.org>
+  dvipdfm-0.13.2d-r1.ebuild:
+  Marked ~sparc-solaris
 
   12 Apr 2011; Jonathan Callen <abcd@gentoo.org> dvipdfm-0.13.2d-r1.ebuild:
   Add prefix support, bump EAPI to 3, add prefix keywords
