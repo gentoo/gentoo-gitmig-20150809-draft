@@ -1,12 +1,8 @@
 http://labs.qt.nokia.com/2011/09/07/what-the-diginotar-security-breach-means-for-qt-users-continued/
-
 gentoo bug: https://bugs.gentoo.org/show_bug.cgi?id=382171
-
-diff --git a/src/network/ssl/qsslcertificate.cpp b/src/network/ssl/qsslcertificate.cpp
-index 328c5c2..1ae98f4 100644
---- a/src/network/ssl/qsslcertificate.cpp
-+++ b/src/network/ssl/qsslcertificate.cpp
-@@ -803,22 +803,47 @@ QList<QSslCertificate> QSslCertificatePrivate::certificatesFromDer(const QByteAr
+--- src/network/ssl/qsslcertificate.cpp
++++ src/network/ssl/qsslcertificate.cpp
+@@ -803,22 +803,47 @@
  // These certificates are known to be fraudulent and were created during the comodo
  // compromise. See http://www.comodo.com/Comodo-Fraud-Incident-2011-03-23.html
  static const char *certificate_blacklist[] = {
@@ -64,11 +60,9 @@ index 328c5c2..1ae98f4 100644
              return true;
      }
      return false;
-diff --git a/src/network/ssl/qsslsocket_openssl.cpp b/src/network/ssl/qsslsocket_openssl.cpp
-index 141d80a..b8e6c4c 100644
---- a/src/network/ssl/qsslsocket_openssl.cpp
-+++ b/src/network/ssl/qsslsocket_openssl.cpp
-@@ -1193,12 +1193,16 @@ bool QSslSocketBackendPrivate::startHandshake()
+--- src/network/ssl/qsslsocket_openssl.cpp
++++ src/network/ssl/qsslsocket_openssl.cpp
+@@ -1183,12 +1183,16 @@
      X509 *x509 = q_SSL_get_peer_certificate(ssl);
      configuration.peerCertificate = QSslCertificatePrivate::QSslCertificate_from_X509(x509);
      q_X509_free(x509);
