@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13032 2011/09/07 14:02:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13033 2011/09/08 14:30:48 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -342,10 +342,6 @@ app-portage/meatoo
 # Gentoo's bugzilla and then will be sent upstream by the maintainer
 # if appropriate."
 net-irc/atheme-services
-
-# Markos Chandras <hwoarang@gentoo.org> (18 Jul 2011)
-# Masked beta release
-=dev-util/qt-creator-2.3.0_beta
 
 # Markos Chandras <hwoarang@gentoo.org> (17 Jul 2011)
 # Masked for testing due to init script inclusion
