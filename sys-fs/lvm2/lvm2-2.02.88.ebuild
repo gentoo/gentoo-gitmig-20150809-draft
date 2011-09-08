@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.88.ebuild,v 1.1 2011/09/05 17:41:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.88.ebuild,v 1.2 2011/09/08 18:30:58 robbat2 Exp $
 
 EAPI=3
 inherit eutils multilib toolchain-funcs autotools linux-info
@@ -46,7 +46,7 @@ pkg_setup() {
 	if use static; then
 		elog "Warning, we no longer overwrite /sbin/lvm and /sbin/dmsetup with"
 		elog "their static versions. If you need the static binaries,"
-		elog "you must append .static the filename!"
+		elog "you must append .static to the filename!"
 	fi
 }
 
@@ -263,7 +263,7 @@ src_install() {
 	elog "with the cman USE flag."
 	elog ""
 	elog "USE flags clvm and cman are masked"
-	elog "by default and need to be unmasked to use them"
+	elog "by default and need to be unmasked to be used"
 	elog ""
 	elog "If you are using genkernel and root-on-LVM, rebuild the initramfs."
 }
@@ -272,7 +272,7 @@ pkg_postinst() {
 	elog "lvm volumes are no longer automatically created for"
 	elog "baselayout-2 users. If you are using baselayout-2, be sure to"
 	elog "run: # rc-update add lvm boot"
-	elog "Do NOT add it if you are using baselayout-1 still."
+	elog "Do NOT add it if you are still using baselayout-1."
 }
 
 src_test() {

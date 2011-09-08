@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.247 2011/09/05 17:41:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.248 2011/09/08 18:30:58 robbat2 Exp $
+
+  08 Sep 2011; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.02.88.ebuild:
+  Fix spelling and grammar (bug #382157).
 
 *lvm2-2.02.88 (05 Sep 2011)
 
