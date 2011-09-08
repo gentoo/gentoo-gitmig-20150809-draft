@@ -1,6 +1,6 @@
 #!/sbin/runscript
 
-opts="${opts} attach"
+extra_commands="${opts} attach"
 
 depend() {
 	# we can use dns and net, but we can also in most cases live without them

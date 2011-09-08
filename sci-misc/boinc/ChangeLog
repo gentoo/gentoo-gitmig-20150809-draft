@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.102 2011/07/11 21:15:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.103 2011/09/08 15:56:24 scarabeus Exp $
+
+  08 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> files/boinc.init:
+  Use extra_commands instead of opts. Per bug #382281.
 
 *boinc-6.12.33 (11 Jul 2011)
 
