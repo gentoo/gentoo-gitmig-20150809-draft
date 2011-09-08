@@ -1,3 +1,7 @@
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-stomp/pecl-stomp-1.0.3.ebuild,v 1.2 2011/09/08 18:48:48 olemarkus Exp $
+
 EAPI="2"
 
 PHP_EXT_NAME="stomp"
