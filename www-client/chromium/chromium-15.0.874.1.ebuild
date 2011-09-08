@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-15.0.861.0.ebuild,v 1.1 2011/08/26 20:56:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-15.0.874.1.ebuild,v 1.1 2011/09/08 20:20:07 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -116,12 +116,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Fix build with system libevent, to be upstreamed.
-	epatch "${FILESDIR}/${PN}-system-libevent-r1.patch"
-
-	# Backport upstream fix for using system Kerberos header.
-	epatch "${FILESDIR}/${PN}-kerberos-r0.patch"
-
 	cp "${FILESDIR}/nacl.gypi" chrome/ || die
 
 	# Remove most bundled libraries. Some are still needed.
@@ -204,13 +198,13 @@ src_configure() {
 		-Duse_system_zlib=1"
 
 	# Optional dependencies.
-	# TODO: linux_link_kerberos
 	myconf+="
 		$(gyp_use cups use_cups)
 		$(gyp_use gnome use_gconf)
 		$(gyp_use gnome-keyring use_gnome_keyring)
 		$(gyp_use gnome-keyring linux_link_gnome_keyring)
 		$(gyp_use kerberos use_kerberos)
+		$(gyp_use kerberos linux_link_kerberos)
 		$(gyp_use pulseaudio use_pulseaudio)"
 
 	# Enable sandbox.
@@ -388,8 +382,7 @@ src_install() {
 	doexe out/Release/libffmpegsumo.so || die
 
 	# Install icons and desktop entry.
-	# size 64: bug #378777.
-	for SIZE in 16 22 24 32 48 128 256 ; do
+	for SIZE in 16 22 24 32 48 64 128 256 ; do
 		insinto /usr/share/icons/hicolor/${SIZE}x${SIZE}/apps
 		newins chrome/app/theme/chromium/product_logo_${SIZE}.png \
 			chromium-browser.png || die
