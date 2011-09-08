@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.3-r2.ebuild,v 1.2 2011/08/29 16:28:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.3-r2.ebuild,v 1.3 2011/09/08 14:10:03 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -127,15 +127,16 @@ src_configure() {
 		myconf="${myconf} $(use_with gif) $(use_with jpeg)"
 		myconf="${myconf} $(use_with png) $(use_with svg rsvg)"
 		myconf="${myconf} $(use_with tiff) $(use_with xpm)"
-		myconf="${myconf} $(use_with xft)"
 
 		if use xft; then
+			myconf="${myconf} --with-xft"
 			myconf="${myconf} $(use_with m17n-lib libotf)"
 			myconf="${myconf} $(use_with m17n-lib m17n-flt)"
 		else
+			myconf="${myconf} --without-xft"
 			myconf="${myconf} --without-libotf --without-m17n-flt"
 			use m17n-lib && ewarn \
-				"USE flag \"m17n-lib\" has no effect because xft is not set."
+				"USE flag \"m17n-lib\" has no effect if \"xft\" is not set."
 		fi
 
 		# GTK+ is the default toolkit if USE=gtk is chosen with other
@@ -146,7 +147,7 @@ src_configure() {
 			myconf="${myconf} --with-x-toolkit=gtk"
 		elif use Xaw3d; then
 			einfo "Configuring to build with Xaw3d (Athena/Lucid) toolkit"
-			myconf="${myconf} --with-x-toolkit=athena"
+			myconf="${myconf} --with-x-toolkit=lucid"
 		elif use motif; then
 			einfo "Configuring to build with Motif toolkit"
 			myconf="${myconf} --with-x-toolkit=motif"
