@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sk1libs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/ChangeLog,v 1.8 2011/09/02 18:18:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/ChangeLog,v 1.9 2011/09/08 18:22:23 grobian Exp $
+
+  08 Sep 2011; Fabian Groffen <grobian@gentoo.org> sk1libs-0.9.1.ebuild:
+  Marked ~sparc-solaris
 
   02 Sep 2011; Fabian Groffen <grobian@gentoo.org> sk1libs-0.9.1.ebuild:
   Fixed for Prefix, marked ~amd64-linux and ~x64-macos, bug #359689
