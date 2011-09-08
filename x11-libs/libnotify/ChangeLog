@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libnotify
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.71 2011/05/21 18:54:11 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libnotify/ChangeLog,v 1.72 2011/09/08 21:05:35 ssuominen Exp $
+
+*libnotify-0.7.4 (08 Sep 2011)
+
+  08 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> +libnotify-0.7.4.ebuild:
+  Version bump.
 
   21 May 2011; Nirbheek Chauhan <nirbheek@gentoo.org> libnotify-0.7.3.ebuild,
   +files/libnotify-0.7.3-gtk3-tests.patch:
