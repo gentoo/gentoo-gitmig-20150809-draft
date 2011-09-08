@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion-r1.eclass,v 1.1 2011/09/08 16:25:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bash-completion-r1.eclass,v 1.2 2011/09/08 20:28:29 mgorny Exp $
 
 # @ECLASS: bash-completion-r1.eclass
 # @MAINTAINER:
@@ -17,6 +17,11 @@
 # 	newbashcomp contrib/${PN}.bash-completion ${PN}
 # }
 # @CODE
+
+case ${EAPI:-0} in
+	0|1|2|3|4) ;;
+	*) die "EAPI ${EAPI} unsupported (yet)."
+esac
 
 # @FUNCTION: dobashcomp
 # @USAGE: file [...]
