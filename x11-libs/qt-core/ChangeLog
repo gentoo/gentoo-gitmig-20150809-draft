@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.136 2011/08/17 16:54:36 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.137 2011/09/08 08:14:47 wired Exp $
+
+*qt-core-4.7.3-r1 (08 Sep 2011)
+*qt-core-4.7.2-r2 (08 Sep 2011)
+
+  08 Sep 2011; Alex Alexander <wired@gentoo.org> +qt-core-4.7.2-r2.ebuild,
+  +qt-core-4.7.3-r1.ebuild, +files/blacklist-diginotar-certs.diff:
+  security fix: upstream patch that blacklists all DigiNotar intermediates and
+  root certificates. bug #382171
 
   17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   qt-core-4.6.3-r1.ebuild:
