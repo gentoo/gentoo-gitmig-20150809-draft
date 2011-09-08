@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.3.0_beta.ebuild,v 1.1 2011/07/18 11:22:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.3.0.ebuild,v 1.1 2011/09/08 14:29:41 hwoarang Exp $
 
 EAPI="4"
 LANGS="cs de es fr hu it ja pl ru sl uk zh_CN"
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="bazaar bineditor bookmarks +cmake cvs debug doc examples fakevim git
 	mercurial perforce +qml qtscript rss subversion"
-QTVER="4.7.1:4"
+QTVER="4.7.4:4"
 DEPEND=">=x11-libs/qt-assistant-${QTVER}[doc?]
 	>=x11-libs/qt-sql-${QTVER}
 	>=x11-libs/qt-svg-${QTVER}
@@ -54,6 +54,11 @@ PATCHES=(
 
 src_prepare() {
 	qt4-r2_src_prepare
+
+	# fix library path for styleplugin
+	sed -i -e "/target.path/s:lib:$(get_libdir):" \
+		"${S}"/src/libs/qtcomponents/styleitem/styleitem.pro \
+		|| die "Failed to fix multilib dir for styleplugin"
 
 	# bug 263087
 	for plugin in ${PLUGINS}; do
@@ -105,16 +110,20 @@ src_configure() {
 
 src_install() {
 	#install wrapper
-	dobin bin/${MY_PN} bin/qtpromaker || die "dobin failed"
+	dobin bin/${MY_PN} bin/qtpromaker
 	if use qml; then
 		# qmlpuppet component. Bug #367383
-		dobin bin/qmlpuppet || die "Failed to install qmlpuppet component"
+		dobin bin/qmlpuppet
 	fi
-	emake INSTALL_ROOT="${D%/}${EPREFIX}/usr" install_subtargets || die
+	emake INSTALL_ROOT="${D%/}${EPREFIX}/usr" install_subtargets
 	if use doc;then
-		emake INSTALL_ROOT="${D%/}${EPREFIX}/usr" install_inst_qch_docs || die
+		emake INSTALL_ROOT="${D%/}${EPREFIX}/usr" install_inst_qch_docs
 	fi
-	make_desktop_entry ${MY_PN} QtCreator qtcreator_logo_48 \
+
+	# Install missing icon
+	doicon "${S}"/share/qtcreator/templates/wizards/qtcreatorplugin/${MY_PN}_logo_24.png \
+		|| die "failed to install icon"
+	make_desktop_entry ${MY_PN} "Qt Creator" ${MY_PN}_logo_24 \
 		'Qt;Development;IDE' || die
 
 	# install additional translations
@@ -124,7 +133,7 @@ src_install() {
 			if [[ ${x} == ${lang} ]]; then
 				cd "${S}"/share/${MY_PN}/translations
 				lrelease ${MY_PN}_${x}.ts -qm ${MY_PN}_${x}.qm || die
-				doins ${MY_PN}_${x}.qm || die
+				doins ${MY_PN}_${x}.qm
 			fi
 		done
 	done
