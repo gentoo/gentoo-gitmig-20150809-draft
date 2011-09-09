@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libuninameslist
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libuninameslist/ChangeLog,v 1.32 2010/01/15 09:43:44 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libuninameslist/ChangeLog,v 1.33 2011/09/09 12:03:39 scarabeus Exp $
+
+*libuninameslist-20091231 (09 Sep 2011)
+
+  09 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libuninameslist-20030713.ebuild, -libuninameslist-20060907.ebuild,
+  +libuninameslist-20091231.ebuild:
+  Version bump to latest release. Do not install static libs and .la archives.
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   libuninameslist-20080409.ebuild:
