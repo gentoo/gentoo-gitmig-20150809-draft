@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/bundler-1.0.18.ebuild,v 1.1 2011/08/20 08:24:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/bundler-1.0.18.ebuild,v 1.2 2011/09/09 12:22:33 grobian Exp $
 
 EAPI=2
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://github.com/carlhuda/bundler"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-solaris"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 ruby_add_rdepend dev-ruby/rubygems
