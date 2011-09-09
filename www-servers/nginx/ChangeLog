@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.288 2011/09/07 08:34:33 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.289 2011/09/09 16:44:14 hollow Exp $
+
+  09 Sep 2011; Benedikt Böhm <hollow@gentoo.org> nginx-1.0.4.ebuild,
+  nginx-1.0.5.ebuild, nginx-1.0.6.ebuild, nginx-1.1.2.ebuild:
+  remove ipv6 warning wrt #382393
 
 *nginx-1.1.2 (07 Sep 2011)
 *nginx-1.0.6 (07 Sep 2011)

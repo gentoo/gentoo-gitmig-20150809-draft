@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.0.4.ebuild,v 1.3 2011/07/15 21:16:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.0.4.ebuild,v 1.4 2011/09/09 16:44:14 hollow Exp $
 
 EAPI="2"
 
@@ -129,12 +129,6 @@ pkg_setup() {
 	enewgroup ${PN}
 	enewuser ${PN} -1 -1 -1 ${PN}
 	eend ${?}
-
-	if use ipv6; then
-		ewarn "Note that ipv6 support in nginx is still experimental."
-		ewarn "Be sure to read comments on gentoo bug #274614"
-		ewarn "http://bugs.gentoo.org/show_bug.cgi?id=274614"
-	fi
 
 	if use libatomic; then
 		ewarn "GCC 4.1+ features built-in atomic operations."
