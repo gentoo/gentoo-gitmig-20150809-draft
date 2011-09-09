@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.339 2011/09/04 19:43:07 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.340 2011/09/09 14:24:39 jer Exp $
+
+  09 Sep 2011; Jeroen Roovers <jer@gentoo.org> gimp-2.6.11-r5.ebuild:
+  Stable for HPPA (bug #379289).
 
   04 Sep 2011; Tony Vroon <chainsaw@gentoo.org> gimp-2.6.11-r5.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
