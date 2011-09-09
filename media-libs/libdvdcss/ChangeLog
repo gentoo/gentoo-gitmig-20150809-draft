@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdcss
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.86 2011/02/27 14:52:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.87 2011/09/09 17:28:44 scarabeus Exp $
+
+  09 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> libdvdcss-1.2.10.ebuild:
+  Make static library optional and remove libtool archive. Move to eapi4.
 
   27 Feb 2011; Alexis Ballier <aballier@gentoo.org> -libdvdcss-1.2.9.ebuild,
   -libdvdcss-1.2.9-r1.ebuild, -files/libdvdcss-1.2.9-doc.patch,
