@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/kid3
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.55 2011/04/24 15:27:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.56 2011/09/09 19:11:11 thev00d00 Exp $
+
+*kid3-2.0 (09 Sep 2011)
+
+  09 Sep 2011; Ian Whyman <thev00d00@gentoo.org> +kid3-2.0.ebuild:
+  Bump to 2.0, Fixes bug #382179
 
   24 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> kid3-1.6.ebuild:
   Drop kde useflag until somebody really fully test it and support it.
