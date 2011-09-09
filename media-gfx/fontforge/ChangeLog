@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/fontforge
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.140 2011/06/20 05:04:41 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.141 2011/09/09 12:14:51 scarabeus Exp $
+
+  09 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  fontforge-20110222.ebuild:
+  Disable static libraries, punt the .la files.
 
   20 Jun 2011; Peter Volkov <pva@gentoo.org> fontforge-20100501.ebuild,
   fontforge-20110222.ebuild:

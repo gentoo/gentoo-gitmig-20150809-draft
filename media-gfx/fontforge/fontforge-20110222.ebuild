@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20110222.ebuild,v 1.6 2011/06/20 05:04:41 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20110222.ebuild,v 1.7 2011/09/09 12:14:51 scarabeus Exp $
 
 # Some notes for maintainers this package:
 # 1. README-unix: freetype headers are required to make use of truetype debugger
@@ -76,6 +76,7 @@ src_configure() {
 	# no real way of disabling gettext/nls ...
 	use nls || export ac_cv_header_libintl_h=no
 	econf \
+		--disable-static \
 		$(use_with truetype-debugger freetype-src "/usr/include/freetype2/internal4fontforge/") \
 		$(use_enable type3) \
 		$(use_with python) \
@@ -91,23 +92,25 @@ src_configure() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die
-	dodoc AUTHORS README*
+	dodoc AUTHORS README* || die
+
+	find "${ED}" -name '*.la' -exec rm -f {} +
 
 	if use cjk; then #129518
 		insinto /usr/share/fontforge
-		doins "${WORKDIR}"/*.cidmap
+		doins "${WORKDIR}"/*.cidmap || die
 	fi
 
-	doicon Packaging/fontforge.png
+	doicon Packaging/fontforge.png || die
 	insinto /usr/share/applications
-	doins Packaging/fontforge.desktop
+	doins Packaging/fontforge.desktop || die
 	insinto /usr/share/mime/application
-	doins Packaging/fontforge.xml
+	doins Packaging/fontforge.xml || die
 
 	if use doc; then
 		insinto /usr/share/doc/${PN}
 		cd "${WORKDIR}/html/"
-		doins -r *
+		doins -r * || die
 	fi
 }
 
