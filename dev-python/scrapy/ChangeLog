@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/scrapy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/ChangeLog,v 1.1 2011/04/03 19:19:59 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/ChangeLog,v 1.2 2011/09/09 16:03:14 maksbotan Exp $
+
+*scrapy-0.12.0.2546 (09 Sep 2011)
+
+  09 Sep 2011; Maxim Koltsov <maksbotan@gentoo.org> +scrapy-0.12.0.2546.ebuild:
+  Bump to scrapy-0.12.0.2546
 
 *scrapy-0.12.0.2539 (03 Apr 2011)
 
