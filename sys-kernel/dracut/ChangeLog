@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.32 2011/09/04 14:53:40 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.33 2011/09/09 20:54:53 aidecoe Exp $
+
+  09 Sep 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-010-r3.ebuild,
+  dracut-011.ebuild, dracut-011-r1.ebuild, dracut-013.ebuild,
+  dracut-013-r1.ebuild:
+  Added app-arch/cpio dependency, because it's going to be removed from system
+  set.
 
   04 Sep 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-008-r1.ebuild:
   Removed left 008-r1 ebuild.

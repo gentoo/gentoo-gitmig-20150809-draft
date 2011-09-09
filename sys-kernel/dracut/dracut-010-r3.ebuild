@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-010-r3.ebuild,v 1.1 2011/06/30 21:23:39 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/dracut-010-r3.ebuild,v 1.2 2011/09/09 20:54:53 aidecoe Exp $
 
 EAPI=2
 
@@ -52,6 +52,7 @@ RDEPEND="
 	>=sys-apps/sysvinit-2.87-r3
 	>=sys-apps/util-linux-2.16
 	>=sys-fs/udev-149
+	app-arch/cpio
 
 	debug? ( dev-util/strace )
 	selinux? ( sys-libs/libselinux sys-libs/libsepol )
