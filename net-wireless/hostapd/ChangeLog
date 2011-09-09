@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.112 2011/07/13 12:19:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.113 2011/09/09 22:56:50 gurligebis Exp $
+
+  09 Sep 2011; <gurligebis@gentoo.org> hostapd-0.7.3.ebuild,
+  files/hostapd-init.d:
+  Adding support for >=libnl-2.0 and adding support for newer openrc
+  versions without making noise.
 
   13 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> hostapd-0.7.3.ebuild:
   ppc stable wrt #360997
