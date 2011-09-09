@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.530 2011/09/04 09:10:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.531 2011/09/09 20:16:59 pacho Exp $
+
+*gtk+-2.24.6 (09 Sep 2011)
+
+  09 Sep 2011; Pacho Ramos <pacho@gentoo.org> +gtk+-2.24.6.ebuild,
+  -gtk+-3.0.11.ebuild:
+  Version bump, remove old.
 
   04 Sep 2011; Fabian Groffen <grobian@gentoo.org> gtk+-3.0.12.ebuild:
   Fix compilation on Solaris
