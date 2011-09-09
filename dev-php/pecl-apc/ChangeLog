@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/pecl-apc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-apc/ChangeLog,v 1.2 2011/07/22 12:20:48 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-apc/ChangeLog,v 1.3 2011/09/09 13:01:09 olemarkus Exp $
+
+*pecl-apc-3.1.9-r2 (09 Sep 2011)
+
+  09 Sep 2011; Ole Markus With <olemarkus@gentoo.org>
+  +pecl-apc-3.1.9-r2.ebuild:
+  Added revbump with support of various locking mechanism. Bug 369635
 
 *pecl-apc-3.1.9-r1 (22 Jul 2011)
 
