@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.50 2011/09/01 18:50:49 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.51 2011/09/09 16:50:10 mgorny Exp $
+
+  09 Sep 2011; Michał Górny <mgorny@gentoo.org> mercurial-1.8.2.ebuild,
+  mercurial-1.8.3.ebuild, mercurial-1.9.ebuild, mercurial-1.9.1.ebuild,
+  mercurial-1.9.2.ebuild, mercurial-9999.ebuild:
+  Migrate to bash-completion-r1.
 
 *mercurial-1.9.2 (01 Sep 2011)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-9999.ebuild,v 1.9 2010/12/25 15:08:40 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/mercurial-9999.ebuild,v 1.10 2011/09/09 16:50:10 mgorny Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -8,7 +8,7 @@ PYTHON_USE_WITH="threads"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
 
-inherit bash-completion elisp-common eutils distutils mercurial
+inherit bash-completion-r1 elisp-common eutils distutils mercurial
 
 DESCRIPTION="Scalable distributed SCM"
 HOMEPAGE="http://mercurial.selenic.com/"
@@ -53,7 +53,7 @@ src_compile() {
 src_install() {
 	distutils_src_install
 
-	dobashcompletion contrib/bash_completion ${PN}
+	newbashcomp contrib/bash_completion ${PN} || die
 
 	if use zsh-completion ; then
 		insinto /usr/share/zsh/site-functions
@@ -119,7 +119,6 @@ src_test() {
 pkg_postinst() {
 	distutils_pkg_postinst
 	use emacs && elisp-site-regen
-	bash-completion_pkg_postinst
 
 	elog "If you want to convert repositories from other tools using convert"
 	elog "extension please install correct tool:"
