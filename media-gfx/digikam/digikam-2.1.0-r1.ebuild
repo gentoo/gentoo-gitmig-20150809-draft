@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-2.1.0.ebuild,v 1.1 2011/09/09 18:10:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-2.1.0-r1.ebuild,v 1.1 2011/09/09 19:45:03 dilfridge Exp $
 
 EAPI=4
 
@@ -82,7 +82,7 @@ src_prepare() {
 
 	# prepare the translations
 	mv "${WORKDIR}/${MY_P}/po" po || die
-	find po -name "kipiplugin_*.po" -exec rm {} +
+	find po -name "*.po" -and -not -name "digikam.po" -exec rm {} +
 
 	echo "find_package(Msgfmt REQUIRED)" >> CMakeLists.txt || die
 	echo "find_package(Gettext REQUIRED)" >> CMakeLists.txt || die
