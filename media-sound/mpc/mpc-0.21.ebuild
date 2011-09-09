@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/mpc-0.21.ebuild,v 1.1 2011/06/08 18:25:46 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/mpc-0.21.ebuild,v 1.2 2011/09/09 17:34:01 mgorny Exp $
 
 EAPI=4
-inherit bash-completion
+inherit bash-completion-r1
 
 DESCRIPTION="A commandline client for Music Player Daemon (media-sound/mpd)"
 HOMEPAGE="http://www.musicpd.org"
@@ -28,5 +28,5 @@ src_configure() {
 src_install() {
 	default
 	rm -rf "${ED}"/usr/share/doc/${PN}
-	dobashcompletion doc/mpc-completion.bash
+	newbashcomp doc/mpc-completion.bash ${PN}
 }
