@@ -1,0 +1,11 @@
+--- apps/gpg.te	2011-03-28 17:05:13.000000000 +0200
++++ apps/gpg.te	2011-09-07 20:33:11.481002857 +0200
+@@ -347,7 +347,7 @@
+ ')
+ 
+ optional_policy(`
+-	mutt_manage_tmp_files(gpg_t)
++	mutt_rw_tmp_files(gpg_t)
+ ')
+ 
+ optional_policy(`
