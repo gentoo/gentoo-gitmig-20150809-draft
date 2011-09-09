@@ -1,6 +1,13 @@
 # ChangeLog for media-fonts/liberation-fonts
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/ChangeLog,v 1.16 2011/09/07 19:08:11 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/liberation-fonts/ChangeLog,v 1.17 2011/09/09 10:22:58 pva Exp $
+
+*liberation-fonts-1.07.0-r1 (09 Sep 2011)
+
+  09 Sep 2011; Peter Volkov <pva@gentoo.org> liberation-fonts-1.07.0.ebuild,
+  +liberation-fonts-1.07.0-r1.ebuild:
+  Fixed installation with USE=fontforge, bug #379505 thank Nikolay S. Rybaloff
+  for report and fix.
 
   07 Sep 2011; Jeff Gardner <je_fro@gentoo.org> liberation-fonts-1.07.0.ebuild:
   Add unzip to DEPEND fixing bug #380051 thanks to g0del.
