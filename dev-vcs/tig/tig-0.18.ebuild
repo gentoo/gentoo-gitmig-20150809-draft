@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tig/tig-0.18.ebuild,v 1.1 2011/08/29 09:45:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tig/tig-0.18.ebuild,v 1.2 2011/09/09 16:38:04 mgorny Exp $
 
 EAPI=4
 
-inherit bash-completion
+inherit bash-completion-r1
 
 DESCRIPTION="Tig: text mode interface for git"
 HOMEPAGE="http://jonas.nitro.dk/tig/"
@@ -23,5 +23,5 @@ src_install() {
 	emake DESTDIR="${D}" install install-doc-man
 	dodoc BUGS NEWS TODO
 	dohtml manual.html README.html
-	dobashcompletion contrib/tig-completion.bash
+	newbashcomp contrib/tig-completion.bash ${PN}
 }
