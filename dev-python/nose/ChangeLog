@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/nose
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.74 2011/08/18 15:46:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.75 2011/09/09 07:47:42 djc Exp $
+
+*nose-1.1.2 (09 Sep 2011)
+
+  09 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> +nose-1.1.2.ebuild:
+  Version bump to 1.1.2 (bug 381789). Thanks to jbergstroem.
 
   18 Aug 2011; Patrick Lauer <patrick@gentoo.org> nose-1.1.1.ebuild:
   Multi-python install fix, thanks to marienz
