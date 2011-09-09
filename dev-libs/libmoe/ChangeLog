@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libmoe
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmoe/ChangeLog,v 1.22 2010/03/23 20:36:10 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmoe/ChangeLog,v 1.23 2011/09/09 14:15:30 naota Exp $
+
+  09 Sep 2011; Naohiro Aota <naota@gentoo.org> libmoe-1.5.8-r2.ebuild,
+  +files/libmoe-1.5.8-makefile.patch:
+  Add patch to set LDFLAGS. Bug #335802
 
   23 Mar 2010; Brent Baude <ranger@gentoo.org> libmoe-1.5.8-r2.ebuild:
   stable ppc, bug 302326
