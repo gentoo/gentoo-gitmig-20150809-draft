@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5685 2011/09/09 02:10:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5686 2011/09/09 07:46:22 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Mask coreutils as unfetchable.
 
   09 Sep 2011; Robin H. Johnson <robbat2@gentoo.org> thirdpartymirrors:
   Temporarily remove kernel.org as a Gentoo mirror until they finish rebuilding
