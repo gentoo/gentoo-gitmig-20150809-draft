@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/libpaper-1.1.24.ebuild,v 1.4 2011/08/28 13:26:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/libpaper-1.1.24-r1.ebuild,v 1.1 2011/09/09 16:41:52 scarabeus Exp $
 
 EAPI=4
 
@@ -18,14 +18,22 @@ IUSE=""
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
+DOCS=( README ChangeLog debian/changelog )
+
 src_prepare() {
 	eautoreconf
-	default
+}
+
+src_configure() {
+	econf \
+		--disable-static
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-	dodoc README ChangeLog debian/changelog
+	default
+
+	find "${ED}" -name '*.la' -exec rm -f {} +
+
 	dodir /etc
 	(paperconf 2>/dev/null || echo a4) > "${ED}"/etc/papersize \
 		|| die "papersize config failed"

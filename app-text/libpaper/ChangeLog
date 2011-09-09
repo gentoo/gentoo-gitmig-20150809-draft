@@ -1,6 +1,12 @@
 # ChangeLog for app-text/libpaper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.44 2011/08/28 13:26:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libpaper/ChangeLog,v 1.45 2011/09/09 16:41:52 scarabeus Exp $
+
+*libpaper-1.1.24-r1 (09 Sep 2011)
+
+  09 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> -libpaper-1.1.24.ebuild,
+  +libpaper-1.1.24-r1.ebuild:
+  Revision bump in order to remove all static libraries and libtool archives.
 
   28 Aug 2011; Fabian Groffen <grobian@gentoo.org> libpaper-1.1.24.ebuild:
   Marked ~x64-macos
