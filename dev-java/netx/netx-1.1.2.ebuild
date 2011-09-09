@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netx/netx-1.1.2.ebuild,v 1.1 2011/09/08 11:22:15 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netx/netx-1.1.2.ebuild,v 1.2 2011/09/09 09:16:56 caster Exp $
 
 EAPI="4"
 JAVA_PKG_IUSE="source"
 
-inherit eutils java-pkg-2
+inherit eutils java-pkg-2 java-pkg-simple
 
-DESCRIPTION="IcedTea JNLP implementation"
+DESCRIPTION="Open-source JNLP implementation, icedtea-web fork"
 HOMEPAGE="http://icedtea.classpath.org"
 SRC_URI="http://icedtea.classpath.org/download/source/icedtea-web-${PV}.tar.gz"
 
@@ -24,15 +24,15 @@ RDEPEND=">=virtual/jre-1.6
 
 S="${WORKDIR}/icedtea-web-${PV}/"
 
-src_configure() {
-	econf --with-rhino $(java-pkg_getjar rhino-1.6 js.jar)  || die
-}
+JAVA_GENTOO_CLASSPATH="rhino-1.6"
+JAVA_SRC_DIR="netx"
 
-src_compile() {
-	emake netx-dist || die
+# we don't use the icedtea-web buildsystem because it relies on icedtea for the parts we don't need here
+src_configure() {
+	:;
 }
 
 src_install() {
-	java-pkg_newjar "${S}"/netx.build/lib/classes.jar ${PN}.jar
+	java-pkg_dojar ${PN}.jar
 	use source && java-pkg_dosrc netx/*
 }
