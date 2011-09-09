@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/exiv2-0.21.1-r1.ebuild,v 1.3 2011/08/15 18:32:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/exiv2-0.21.1-r1.ebuild,v 1.4 2011/09/09 15:25:21 scarabeus Exp $
 
-EAPI="2"
+EAPI=3
 PYTHON_DEPEND="2"
 
 inherit eutils multilib toolchain-funcs python
@@ -81,7 +81,9 @@ src_configure() {
 		use amd64 && myconf="${myconf} --disable-visibility"
 	fi
 
-	econf ${myconf}
+	econf \
+		--disable-static \
+		${myconf}
 }
 
 src_compile() {
@@ -101,6 +103,8 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+
+	find "${ED}" -name '*.la' -exec rm -f {} +
 
 	if use contrib; then
 		emake DESTDIR="${D}" -C contrib/organize install || die "emake install organize failed"
