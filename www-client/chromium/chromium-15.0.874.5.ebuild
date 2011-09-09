@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-15.0.865.0.ebuild,v 1.2 2011/08/30 21:13:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-15.0.874.5.ebuild,v 1.1 2011/09/09 19:56:58 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -116,9 +116,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Backport upstream fix for using system Kerberos.
-	epatch "${FILESDIR}/${PN}-kerberos-r1.patch"
-
 	cp "${FILESDIR}/nacl.gypi" chrome/ || die
 
 	# Remove most bundled libraries. Some are still needed.
