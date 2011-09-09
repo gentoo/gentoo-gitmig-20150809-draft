@@ -1,6 +1,24 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.869 2011/09/06 21:56:25 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.870 2011/09/09 22:30:57 zmedico Exp $
+
+*portage-2.2.0_alpha55 (09 Sep 2011)
+
+  09 Sep 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha55.ebuild:
+  2.2.0_alpha55 version bump. This includes all of the fixes in
+  portage-2.1.10.15. Bug #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.10.15 (09 Sep 2011)
+
+  09 Sep 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.15.ebuild:
+  2.1.10.15 version bump. This fixes bug #382199 (use constant utf8 file
+  system encoding for all locales) and bug #382233 (fix code for old
+  binhost protocol to work with python3). Bug #381649 tracks all bugs fixed
+  since portage-2.1.10.11.
+
+  09 Sep 2011; Zac Medico <zmedico@gentoo.org> -portage-2.1.10.13.ebuild,
+  -portage-2.2.0_alpha53.ebuild:
+  Remove old versions.
 
 *portage-2.2.0_alpha54 (06 Sep 2011)
 
