@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/py
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.97 2011/07/24 16:30:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/ChangeLog,v 1.98 2011/09/09 08:22:27 djc Exp $
+
+*py-1.4.5 (09 Sep 2011)
+
+  09 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> +py-1.4.5.ebuild:
+  Version bump to 1.4.5.
 
   24 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> py-1.4.3.ebuild:
   ppc/ppc64 stable wrt #373363
