@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.112 2011/09/08 21:11:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.113 2011/09/09 21:52:56 eva Exp $
+
+  09 Sep 2011; Gilles Dartiguelongue <eva@gentoo.org> tracker-0.10.26.ebuild:
+  Fix a typo in gstreamer backend selection.
 
 *tracker-0.10.26 (08 Sep 2011)
 

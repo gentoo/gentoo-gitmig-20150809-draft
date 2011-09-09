@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.10.26.ebuild,v 1.1 2011/09/08 21:11:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.10.26.ebuild,v 1.2 2011/09/09 21:52:56 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -122,7 +122,7 @@ pkg_setup() {
 		if use upnp; then
 			G2CONF="${G2CONF} --with-gstreamer-backend=gupnp-dlna"
 		else
-			G2CONF="${G2CONF} --with-gstreamer-backend=discover"
+			G2CONF="${G2CONF} --with-gstreamer-backend=discoverer"
 		fi
 	elif use xine ; then
 		G2CONF="${G2CONF} --enable-generic-media-extractor=xine"
