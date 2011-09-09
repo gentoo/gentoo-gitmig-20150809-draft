@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.259 2011/09/04 21:07:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.260 2011/09/09 14:30:56 jer Exp $
+
+  09 Sep 2011; Jeroen Roovers <jer@gentoo.org> libsoup-2.34.3.ebuild:
+  Stable for HPPA (bug #376793).
 
   04 Sep 2011; Markus Meier <maekke@gentoo.org> libsoup-2.34.3.ebuild:
   arm/x86 stable, bug #376793
