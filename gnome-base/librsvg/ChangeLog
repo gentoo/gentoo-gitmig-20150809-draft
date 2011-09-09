@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.245 2011/08/20 18:38:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.246 2011/09/09 20:02:35 pacho Exp $
+
+*librsvg-2.34.1-r1 (09 Sep 2011)
+*librsvg-2.34.1 (09 Sep 2011)
+
+  09 Sep 2011; Pacho Ramos <pacho@gentoo.org> -librsvg-2.34.0-r1.ebuild,
+  +librsvg-2.34.1.ebuild, +librsvg-2.34.1-r1.ebuild:
+  Version bump, remove old.
 
   20 Aug 2011; Jeroen Roovers <jer@gentoo.org> librsvg-2.34.0.ebuild:
   Stable for HPPA (bug #369909).

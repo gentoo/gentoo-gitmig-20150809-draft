@@ -1,10 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.34.0-r1.ebuild,v 1.2 2011/06/28 18:54:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.34.1-r1.ebuild,v 1.1 2011/09/09 20:02:35 pacho Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
-GNOME_TARBALL_SUFFIX="bz2"
 GCONF_DEBUG="no"
 
 inherit gnome2 multilib eutils autotools
