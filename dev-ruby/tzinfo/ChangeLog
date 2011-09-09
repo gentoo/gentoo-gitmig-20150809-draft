@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tzinfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.86 2011/07/17 21:38:10 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.87 2011/09/09 07:23:18 grobian Exp $
+
+  09 Sep 2011; Fabian Groffen <grobian@gentoo.org> tzinfo-0.3.29.ebuild:
+  Marked ~sparc-solaris
 
   17 Jul 2011; Mark Loeser <halcy0n@gentoo.org> tzinfo-0.3.27.ebuild:
   Stable for ppc/ppc64; bug #371553
