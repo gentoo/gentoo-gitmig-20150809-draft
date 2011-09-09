@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-9999.ebuild,v 1.8 2011/09/03 12:56:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-9999.ebuild,v 1.9 2011/09/09 10:43:05 ulm Exp $
 
-EAPI=2
+EAPI=4
 ESVN_REPO_URI="svn://anonsvn.gentoo.org/eselect/trunk"
 ESVN_BOOTSTRAP="autogen.bash"
 
-inherit subversion bash-completion
+inherit subversion bash-completion-r1
 
 DESCRIPTION="Gentoo's multi-purpose configuration and management tool"
 HOMEPAGE="http://www.gentoo.org/proj/en/eselect/"
@@ -35,18 +35,15 @@ RDEPEND="!app-admin/eselect-news
 #	vim-syntax? ( app-vim/eselect-syntax )"
 
 src_compile() {
-	emake || die "emake failed"
-
-	if use doc; then
-		make html || die "failed to build html"
-	fi
+	emake
+	use doc && emake html
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install
+	newbashcomp misc/${PN}.bashcomp ${PN}
 	dodoc AUTHORS ChangeLog NEWS README TODO doc/*.txt
 	use doc && dohtml *.html doc/*
-	dobashcompletion misc/${PN}.bashcomp
 
 	# needed by news module
 	keepdir /var/lib/gentoo/news
@@ -55,9 +52,6 @@ src_install() {
 pkg_postinst() {
 	# fowners in src_install doesn't work for the portage group:
 	# merging changes the group back to root
-	[[ -z ${EROOT} ]] && local EROOT=${ROOT}
 	chgrp portage "${EROOT}/var/lib/gentoo/news" \
 		&& chmod g+w "${EROOT}/var/lib/gentoo/news"
-
-	bash-completion_pkg_postinst
 }

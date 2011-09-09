@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.2.15.ebuild,v 1.6 2011/05/23 00:04:32 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.2.15.ebuild,v 1.7 2011/09/09 10:43:05 ulm Exp $
 
-inherit bash-completion
+inherit bash-completion-r1
 
 DESCRIPTION="Gentoo's multi-purpose configuration and management tool"
 HOMEPAGE="http://www.gentoo.org/proj/en/eselect/"
@@ -41,9 +41,9 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
+	newbashcomp misc/${PN}.bashcomp ${PN} || die
 	dodoc AUTHORS ChangeLog NEWS README TODO doc/*.txt
 	use doc && dohtml *.html doc/*
-	dobashcompletion misc/${PN}.bashcomp
 
 	# needed by news module
 	keepdir /var/lib/gentoo/news
@@ -55,6 +55,4 @@ pkg_postinst() {
 	[[ -z ${EROOT} ]] && local EROOT=${ROOT}
 	chgrp portage "${EROOT}/var/lib/gentoo/news" \
 		&& chmod g+w "${EROOT}/var/lib/gentoo/news"
-
-	bash-completion_pkg_postinst
 }
