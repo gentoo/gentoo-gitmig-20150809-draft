@@ -1,0 +1,11 @@
+# ChangeLog for net-libs/libkvkontakte
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkvkontakte/ChangeLog,v 1.1 2011/09/09 19:22:28 dilfridge Exp $
+
+*libkvkontakte-2.1.0 (09 Sep 2011)
+
+  09 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libkvkontakte-2.1.0.ebuild, +files/libkvkontakte-2.1.0-definstall.patch,
+  +files/libkvkontakte-2.1.0-libsuffix.patch, +metadata.xml:
+  New library, dependency of media-plugins/kipi-plugins
+
