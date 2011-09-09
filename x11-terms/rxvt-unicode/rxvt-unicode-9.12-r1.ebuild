@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.12-r1.ebuild,v 1.1 2011/07/04 22:26:12 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.12-r1.ebuild,v 1.2 2011/09/09 07:43:25 wired Exp $
 
 EAPI="4"
 
@@ -42,10 +42,7 @@ src_prepare() {
 		einfo "   or the *afterimage* USE flag. Enabling both will default to pixbuf."
 	fi
 
-	if use vanilla; then
-		ewarn " + You have enabled the vanilla USE flag."
-		ewarn "   This means no USE flag controlled patches will be applied."
-	else
+	if ! use vanilla; then
 		ewarn " + You are going to include unsupported third-party bug fixes/features."
 
 		use wcwidth && epatch doc/wcwidth.patch
