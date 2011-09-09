@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r4.ebuild,v 1.5 2011/09/09 13:19:29 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.3_beta15-r4.ebuild,v 1.6 2011/09/09 13:56:50 aidecoe Exp $
 
 EAPI=4
 
@@ -23,6 +23,8 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
+DOCS=(README TODO ChangeLog)
+
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-satacmds.patch
 	epatch "${FILESDIR}"/${P}-byteswap.patch
@@ -43,7 +45,6 @@ src_configure() {
 
 src_install() {
 	default
-	dodoc README TODO ChangeLog
 
 	insinto /usr/share/hddtemp
 	newins "${WORKDIR}/hddtemp-${DBV}.db" hddtemp.db
