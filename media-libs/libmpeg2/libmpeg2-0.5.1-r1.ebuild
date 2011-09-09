@@ -1,8 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.5.1-r1.ebuild,v 1.6 2010/09/20 22:00:06 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.5.1-r1.ebuild,v 1.7 2011/09/09 18:05:02 scarabeus Exp $
 
-EAPI=2
+EAPI=4
+
 inherit autotools eutils libtool
 
 DESCRIPTION="library for decoding mpeg-2 and mpeg-1 video"
@@ -12,7 +13,7 @@ SRC_URI="http://libmpeg2.sourceforge.net/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 arm ~hppa ~ia64 ppc ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-solaris"
-IUSE="sdl X"
+IUSE="sdl static-libs X"
 
 RDEPEND="sdl? ( media-libs/libsdl )
 	X? ( x11-libs/libXv
@@ -22,8 +23,11 @@ RDEPEND="sdl? ( media-libs/libsdl )
 DEPEND="${RDEPEND}
 	X? ( x11-proto/xextproto )"
 
+DOCS=( AUTHORS ChangeLog NEWS README TODO )
+
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-arm-private-symbols.patch \
+	epatch \
+		"${FILESDIR}"/${P}-arm-private-symbols.patch \
 		"${FILESDIR}"/${P}-global-symbol-test.patch \
 		"${FILESDIR}"/${P}-armv4l.patch
 	elibtoolize
@@ -34,18 +38,20 @@ src_prepare() {
 
 src_configure() {
 	econf \
+		$(use_enable static-libs static) \
 		--enable-shared \
-		--disable-dependency-tracking \
 		$(use_enable sdl) \
 		$(use_with X x)
 }
 
 src_compile() {
-	emake OPT_CFLAGS="${CFLAGS}" MPEG2DEC_CFLAGS="${CFLAGS}" \
-		LIBMPEG2_CFLAGS="" || die "emake failed"
+	emake OPT_CFLAGS="${CFLAGS}" \
+		MPEG2DEC_CFLAGS="${CFLAGS}" \
+		LIBMPEG2_CFLAGS=""
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README TODO
+	default
+
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
