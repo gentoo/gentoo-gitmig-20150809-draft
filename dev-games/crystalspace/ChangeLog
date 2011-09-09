@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/crystalspace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.52 2011/07/20 13:26:19 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.53 2011/09/09 09:25:36 tupone Exp $
+
+  09 Sep 2011; Tupone Alfredo <tupone@gentoo.org> crystalspace-1.4.0.ebuild,
+  +files/crystalspace-1.4.0-png15.patch:
+  Build with libpng-1.5 Bug #381723 by Diego Elio Pettenò
 
   20 Jul 2011; Thomas Kahle <tomka@gentoo.org> crystalspace-1.2.1.ebuild:
   Dropping to ~x86 wrt to bug 335921
