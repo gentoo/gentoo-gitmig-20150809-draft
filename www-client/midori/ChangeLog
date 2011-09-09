@@ -1,6 +1,9 @@
 # ChangeLog for www-client/midori
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.64 2011/08/02 16:26:17 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.65 2011/09/09 16:39:59 angelos Exp $
+
+  09 Sep 2011; Christoph Mende <angelos@gentoo.org> midori-0.4.0.ebuild:
+  Restore keywords
 
 *midori-0.4.0 (02 Aug 2011)
 
