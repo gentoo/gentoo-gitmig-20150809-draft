@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-debian/python-debian-0.1.21.ebuild,v 1.2 2011/09/09 05:03:07 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-debian/python-debian-0.1.21.ebuild,v 1.3 2011/09/09 05:05:44 floppym Exp $
 
 EAPI="3"
 
@@ -21,7 +21,8 @@ IUSE="examples"
 
 RDEPEND="dev-python/chardet"
 DEPEND="${RDEPEND}
-	dev-python/setuptools"
+	dev-python/setuptools
+	test? ( app-arch/dpkg )"
 
 PYTHON_MODNAME="deb822.py debian debian_bundle"
 
