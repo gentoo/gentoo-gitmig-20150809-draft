@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.137 2011/08/28 15:28:50 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.138 2011/09/09 20:44:12 chainsaw Exp $
+
+  09 Sep 2011; Tony Vroon <chainsaw@gentoo.org>
+  postgresql-server-8.2.21-r2.ebuild, postgresql-server-8.3.15-r2.ebuild,
+  postgresql-server-8.4.8-r2.ebuild, postgresql-server-9.0.4-r2.ebuild:
+  Marked 8.2.21-r2, 8.3.15-r2, 8.4.8-r2 & 9.0.4-r2 stable on AMD64 based on
+  arch testing by Agostino "ago" Sarubbo in bug #371763 filed by Aaron W.
+  "titanofold" Swenson.
 
 *postgresql-server-9.1_rc1 (28 Aug 2011)
 
