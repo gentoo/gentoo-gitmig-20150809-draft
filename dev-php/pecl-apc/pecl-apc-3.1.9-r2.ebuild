@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-apc/pecl-apc-3.1.9-r2.ebuild,v 1.1 2011/09/09 13:01:09 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-apc/pecl-apc-3.1.9-r2.ebuild,v 1.2 2011/09/09 15:59:38 mr_bones_ Exp $
 
 EAPI=4
 
@@ -34,7 +34,6 @@ done
 IUSE+=" ${LUSE/lock_pthreadmutex/+lock_pthreadmutex}"
 
 REQUIRED_USE="^^ ( $LUSE )"
-
 
 src_configure() {
 	my_conf="--enable-apc"
