@@ -1,6 +1,10 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.209 2011/08/27 16:32:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.210 2011/09/09 20:29:27 vostorga Exp $
+
+  09 Sep 2011; Víctor Ostorga <vostorga@gentoo.org>
+  files/liferea-1.6.6b-libnotify-0.7.patch:
+  Dropping libnotify <= 0.7.3 check on configure.ac
 
   28 Aug 2011; Tomáš Chvátal <scarabeus@gentoo.org> liferea-1.7.6.ebuild:
   Trailing whitespace fix.
