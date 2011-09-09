@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libview
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libview/ChangeLog,v 1.14 2011/09/09 13:22:54 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libview/ChangeLog,v 1.15 2011/09/09 20:58:11 chainsaw Exp $
+
+  09 Sep 2011; Tony Vroon <chainsaw@gentoo.org> libview-0.6.6-r1.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in bug
+  #382187 filed by Jared.
 
 *libview-0.6.6-r1 (09 Sep 2011)
 
