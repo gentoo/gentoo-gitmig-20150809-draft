@@ -1,6 +1,11 @@
 # ChangeLog for app-text/zathura
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/ChangeLog,v 1.17 2011/05/26 14:32:53 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura/ChangeLog,v 1.18 2011/09/09 07:35:17 wired Exp $
+
+*zathura-0.0.8.4 (09 Sep 2011)
+
+  09 Sep 2011; Alex Alexander <wired@gentoo.org> +zathura-0.0.8.4.ebuild:
+  version bump, bug #379215
 
   26 May 2011; Michael Weber <xmw@gentoo.org> zathura-0.0.8.3.ebuild:
   added ~arm keyword (bug 368757)
