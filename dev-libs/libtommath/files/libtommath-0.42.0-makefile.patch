@@ -13,7 +13,7 @@
  
  objs: $(OBJECTS)
  
-+.c.o:                                                                                                                                                                                                                                         
++.c.o:
 +	$(LTCOMPILE) $(CFLAGS) $(LDFLAGS) -o $@ -c $<
 +
  $(LIBNAME):  $(OBJECTS)

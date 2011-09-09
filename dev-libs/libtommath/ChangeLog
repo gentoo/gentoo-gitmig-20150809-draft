@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libtommath
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/ChangeLog,v 1.43 2011/08/07 16:55:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/ChangeLog,v 1.44 2011/09/09 07:16:01 radhermit Exp $
+
+  09 Sep 2011; Tim Harder <radhermit@gentoo.org>
+  files/libtommath-0.42.0-makefile.patch:
+  Remove whitespace.
 
   07 Aug 2011; Raúl Porcel <armin76@gentoo.org> libtommath-0.42.0.ebuild:
   alpha/ia64/sparc stable wrt #376163
