@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/transmissionrpc/transmissionrpc-0.7.ebuild,v 1.2 2011/09/09 20:40:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/transmissionrpc/transmissionrpc-0.7.ebuild,v 1.3 2011/09/09 21:44:23 floppym Exp $
 
 EAPI=3
 
@@ -18,7 +18,7 @@ SRC_URI="http://dev.gentoo.org/~floppym/distfiles/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-python/setuptools"
