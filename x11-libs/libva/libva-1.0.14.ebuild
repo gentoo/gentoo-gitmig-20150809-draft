@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-1.0.14.ebuild,v 1.2 2011/07/29 01:10:12 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-1.0.14.ebuild,v 1.3 2011/09/09 20:28:50 chainsaw Exp $
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ fi
 LICENSE="MIT"
 SLOT="0"
 if [ "${PV%9999}" = "${PV}" ] ; then
-	KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+	KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 else
 	KEYWORDS=""
 fi
