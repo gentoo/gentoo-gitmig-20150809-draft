@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jmf-bin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmf-bin/ChangeLog,v 1.13 2009/07/07 23:02:09 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmf-bin/ChangeLog,v 1.14 2011/09/09 13:07:52 caster Exp $
+
+  09 Sep 2011; Vlastimil Babka <caster@gentoo.org> jmf-bin-2.1.1e-r2.ebuild:
+  Update homepage and download URL to Oracle site.
 
   07 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   jmf-bin-2.1.1e-r2.ebuild:

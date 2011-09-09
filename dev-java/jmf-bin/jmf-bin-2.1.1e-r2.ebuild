@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmf-bin/jmf-bin-2.1.1e-r2.ebuild,v 1.6 2009/07/07 23:02:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmf-bin/jmf-bin-2.1.1e-r2.ebuild,v 1.7 2011/09/09 13:07:52 caster Exp $
 
 inherit java-pkg-2
 
@@ -8,7 +8,7 @@ At="${PN%-bin}-2_1_1e-alljava.zip"
 S="${WORKDIR}/JMF-${PV}"
 DESCRIPTION="The Java Media Framework API (JMF)"
 SRC_URI="${At}"
-HOMEPAGE="http://java.sun.com/products/java-media/jmf/"
+HOMEPAGE="http://www.oracle.com/technetwork/java/javase/tech/index-jsp-140239.html"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 LICENSE="sun-bcla-jmf"
@@ -16,12 +16,12 @@ SLOT="0"
 DEPEND=">=app-arch/unzip-5.50-r1"
 RDEPEND=">=virtual/jre-1.4"
 RESTRICT="fetch"
-DOWNLOAD_URL="https://cds.sun.com/is-bin/INTERSHOP.enfinity/WFS/CDS-CDS_Developer-Site/en_US/-/USD/ViewProductDetail-Start?ProductRef=7372-jmf-2.1.1e-oth-JPR@CDS-CDS_Developer"
+DOWNLOAD_URL="http://www.oracle.com/technetwork/java/javase/download-142937.html"
 
 pkg_nofetch() {
 	elog
 	elog " Due to license restrictions, we cannot fetch the"
-	elog " distributables automagically."
+	elog " distributables automatically."
 	elog
 	elog " 1. Visit ${DOWNLOAD_URL} and select 'Linux'"
 	elog " 2. Download ${At}"
