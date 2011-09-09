@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr-util
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.163 2011/07/29 20:43:44 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.164 2011/09/09 14:40:50 scarabeus Exp $
+
+  09 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> apr-util-1.3.12.ebuild:
+  Drop the sqlite2 useflag, keep only sqlite3 around.
 
 *apr-util-1.3.12 (29 Jul 2011)
 
