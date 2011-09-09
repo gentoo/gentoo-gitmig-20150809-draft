@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.164 2011/08/02 21:19:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.165 2011/09/09 09:42:19 gurligebis Exp $
+
+  09 Sep 2011; <gurligebis@gentoo.org> wpa_supplicant-0.7.3-r5.ebuild:
+  Adding support for libnl 2.0 and above, fixing bug #382159
 
   02 Aug 2011; Michał Górny <mgorny@gentoo.org>
   wpa_supplicant-0.7.3-r5.ebuild, files/wpa_supplicant.service,

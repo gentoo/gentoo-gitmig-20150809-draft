@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r5.ebuild,v 1.4 2011/08/02 21:19:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r5.ebuild,v 1.5 2011/09/09 09:42:19 gurligebis Exp $
 
 EAPI="2"
 
@@ -28,7 +28,6 @@ RDEPEND="dbus? ( sys-apps/dbus )
 	qt4? ( x11-libs/qt-gui:4
 		x11-libs/qt-svg:4 )
 	readline? ( sys-libs/ncurses sys-libs/readline )
-	wimax? ( !net-wireless/libeap )
 	ssl? ( dev-libs/openssl )
 	!ssl? ( gnutls? ( net-libs/gnutls ) )
 	!ssl? ( !gnutls? ( dev-libs/libtommath ) )"
@@ -188,6 +187,12 @@ src_configure() {
 	if use qt4 ; then
 		cd "${S}"/wpa_gui-qt4
 		eqmake4 wpa_gui.pro
+	fi
+
+	# If we are using libnl 2.0 and above, enable support for it
+	# Bug 382159
+	if has_version ">=dev-libs/libnl-2.0"; then
+		echo "CONFIG_LIBNL20=y" >> .config
 	fi
 }
 
