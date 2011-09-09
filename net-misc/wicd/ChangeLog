@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.92 2011/07/17 19:55:00 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.93 2011/09/09 11:18:41 tomka Exp $
+
+*wicd-1.7.1_beta2-r5 (09 Sep 2011)
+
+  09 Sep 2011; Thomas Kahle <tomka@gentoo.org> +wicd-1.7.1_beta2-r5.ebuild:
+  remove opts variable from init script (bug 381885)
 
   17 Jul 2011; Mark Loeser <halcy0n@gentoo.org> wicd-1.7.1_beta2-r4.ebuild:
   Stable on ppc/ppc64; bug #370525
