@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.10.3.ebuild,v 1.1 2011/07/22 09:02:15 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.10.3.ebuild,v 1.2 2011/09/09 09:24:34 caster Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -175,7 +175,8 @@ unset_vars() {
 src_configure() {
 	local config procs rhino_jar
 	local vm=$(java-pkg_get-current-vm)
-	local vmhome="/usr/$(get_libdir)/jvm/${vm}"
+	# the VM symlinks are installed specifically to /usr/lib (not get_libdir), bug 380853
+	local vmhome="/usr/lib/jvm/${vm}"
 
 	# IcedTea6 can't be built using IcedTea7; its class files are too new
 	if [[ "${vm}" == "icedtea6" ]] || [[ "${vm}" == "icedtea6-bin" ]] ; then
