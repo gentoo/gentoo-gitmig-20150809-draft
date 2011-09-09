@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.124 2011/09/07 09:04:34 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.125 2011/09/09 14:55:44 jer Exp $
+
+  09 Sep 2011; Jeroen Roovers <jer@gentoo.org> libsndfile-1.0.25.ebuild:
+  Stable for HPPA (bug #375125).
 
   07 Sep 2011; Tony Vroon <chainsaw@gentoo.org> libsndfile-1.0.25.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in
