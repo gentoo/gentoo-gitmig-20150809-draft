@@ -1,13 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-1.3.10.ebuild,v 1.1 2011/05/10 21:44:59 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gst/clutter-gst-1.3.14.ebuild,v 1.1 2011/09/09 17:14:58 pacho Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2" # Just a build-time dependency
+GNOME_TARBALL_SUFFIX="xz"
 CLUTTER_LA_PUNT="yes"
 
 # inherit clutter after gnome2 so that defaults aren't overriden
-inherit python gnome2 clutter
+# inherit gnome.org in the end so we use gnome mirrors and get the xz tarball
+inherit python gnome2 clutter gnome.org
 
 DESCRIPTION="GStreamer Integration library for Clutter"
 
@@ -18,7 +20,7 @@ IUSE="debug doc examples +introspection"
 RDEPEND="
 	>=dev-libs/glib-2.20:2
 	>=media-libs/clutter-1.4.0:1.0[introspection?]
-	>=media-libs/gstreamer-0.10.20:0.10[introspection?]
+	>=media-libs/gstreamer-0.10.26:0.10[introspection?]
 	media-libs/gst-plugins-base:0.10[introspection?]
 	introspection? ( >=dev-libs/gobject-introspection-0.6.8 )"
 DEPEND="${RDEPEND}
@@ -38,9 +40,6 @@ src_prepare() {
 }
 
 src_compile() {
-	# Avoid sandbox violation with USE="introspection", bug #356283
-	export GST_REGISTRY=${T}/registry.cache.xml
-
 	# Clutter tries to access dri without userpriv
 	# Massive failure of a hack, see bug 360219, bug 360073, bug 363917
 	shopt -s nullglob
