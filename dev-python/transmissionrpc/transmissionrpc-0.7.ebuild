@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/transmissionrpc/transmissionrpc-0.7.ebuild,v 1.1 2011/08/29 00:37:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/transmissionrpc/transmissionrpc-0.7.ebuild,v 1.2 2011/09/09 20:40:39 floppym Exp $
 
 EAPI=3
 
@@ -13,7 +13,8 @@ inherit distutils eutils
 
 DESCRIPTION="Python module that implements the Transmission bittorrent client RPC protocol"
 HOMEPAGE="https://bitbucket.org/blueluna/transmissionrpc"
-SRC_URI="https://bitbucket.org/blueluna/${PN}/get/release-${PV}.tar.bz2 -> ${P}.tar.bz2"
+# SRC_URI="https://bitbucket.org/blueluna/${PN}/get/release-${PV}.tar.bz2 -> ${P}.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~floppym/distfiles/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
