@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.16-r4.ebuild,v 1.21 2010/06/26 10:46:54 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-2.8.16-r5.ebuild,v 1.1 2011/09/09 18:15:04 scarabeus Exp $
 
 inherit eutils alternatives toolchain-funcs
 
@@ -69,8 +69,8 @@ src_compile() {
 	fi
 
 	econf ${myconf} \
-		$(use_enable nls utf8) \
-		|| die "econf failed"
+		--disable-static \
+		$(use_enable nls utf8)
 
 	emake all || die "emake all failed"
 
@@ -101,6 +101,8 @@ src_install () {
 	dodir /usr/{bin,include,$(get_libdir)}
 
 	make DESTDIR="${D}" install || die "make install failed"
+
+	find "${ED}" -name '*.la' -exec rm -f {} +
 
 	newbin lemon lemon-${SLOT}
 

@@ -1,6 +1,19 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.387 2011/09/03 17:17:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.388 2011/09/09 18:15:04 scarabeus Exp $
+
+*sqlite-3.7.7.1-r1 (09 Sep 2011)
+*sqlite-2.8.16-r5 (09 Sep 2011)
+
+  09 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -sqlite-2.8.16-r4.ebuild, +sqlite-2.8.16-r5.ebuild,
+  -files/sqlite-3.6.22-dlopen.patch,
+  -files/sqlite-3.6.22-interix-fixes-amalgamation.patch, -sqlite-3.7.5.ebuild,
+  -files/sqlite-3.7.5-SQLITE_OMIT_WAL.patch, -files/sqlite-3.7.5-utimes.patch,
+  -sqlite-3.7.6.ebuild, -sqlite-3.7.6.2.ebuild, -sqlite-3.7.6.3.ebuild,
+  +sqlite-3.7.7.1-r1.ebuild:
+  Disable static libraries. Remove libtool archives. Use eapi4 on 3 series
+  ebuild. Remove overshadowed versions.
 
   03 Sep 2011; Raúl Porcel <armin76@gentoo.org> sqlite-3.7.7.1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #372745
