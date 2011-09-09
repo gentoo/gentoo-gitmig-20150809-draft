@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.105 2011/09/06 22:54:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.106 2011/09/09 19:14:19 vapier Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -27,7 +27,7 @@ _tc-getPROG() {
 	var=${vars%% *}
 	for v in ${vars} ; do
 		if [[ -n ${!v} ]] ; then
-			export ${var}=${!v}
+			export ${var}="${!v}"
 			echo "${!v}"
 			return 0
 		fi
