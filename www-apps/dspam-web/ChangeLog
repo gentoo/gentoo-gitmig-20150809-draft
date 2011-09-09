@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/dspam-web
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/ChangeLog,v 1.41 2009/03/07 20:49:50 betelgeuse Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dspam-web/ChangeLog,v 1.42 2011/09/09 19:04:10 radhermit Exp $
+
+*dspam-web-3.10.1 (09 Sep 2011)
+
+  09 Sep 2011; Tim Harder <radhermit@gentoo.org> +dspam-web-3.10.1.ebuild:
+  Version bump (bug #301194 by Tom Hendrikx).
 
   07 Mar 2009; Petteri Räty <betelgeuse@gentoo.org>
   dspam-web-3.8.0-r1.ebuild:
