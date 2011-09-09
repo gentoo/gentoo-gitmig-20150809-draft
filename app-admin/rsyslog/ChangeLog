@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.56 2011/09/08 14:34:29 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.57 2011/09/09 14:23:02 jer Exp $
+
+  09 Sep 2011; Jeroen Roovers <jer@gentoo.org> rsyslog-5.8.5.ebuild:
+  Stable for HPPA (bug #381637).
 
   05 Sep 2011; Tony Vroon <chainsaw@gentoo.org> rsyslog-5.8.5.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in bug
