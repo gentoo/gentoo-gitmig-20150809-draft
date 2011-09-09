@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdoc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.65 2011/07/23 10:18:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.66 2011/09/09 07:51:47 grobian Exp $
+
+  09 Sep 2011; Fabian Groffen <grobian@gentoo.org> rdoc-3.6.1.ebuild:
+  Marked ~sparc-solaris
 
   23 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> rdoc-3.5.1.ebuild:
   ppc64 stable wrt #364215

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rack-test
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-test/ChangeLog,v 1.16 2011/08/14 09:40:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-test/ChangeLog,v 1.17 2011/09/09 08:00:12 grobian Exp $
+
+  09 Sep 2011; Fabian Groffen <grobian@gentoo.org> rack-test-0.5.7.ebuild:
+  Marked ~sparc-solaris
 
   14 Aug 2011; Hans de Graaff <graaff@gentoo.org> rack-test-0.5.7.ebuild:
   Fix specs with newer versions of Sinatra, fixing bug 376179.
