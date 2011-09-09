@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/erubis-2.7.0.ebuild,v 1.3 2011/08/07 13:45:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/erubis/erubis-2.7.0.ebuild,v 1.4 2011/09/09 08:17:43 grobian Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.kuwata-lab.com/erubis/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-solaris"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~sparc-solaris ~x86-solaris"
 IUSE=""
 
 ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
