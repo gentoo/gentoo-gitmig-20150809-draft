@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/treetop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/treetop/ChangeLog,v 1.30 2011/07/31 16:55:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/treetop/ChangeLog,v 1.31 2011/09/09 07:46:23 grobian Exp $
+
+  09 Sep 2011; Fabian Groffen <grobian@gentoo.org> treetop-1.4.10.ebuild:
+  Marked ~sparc-solaris
 
   31 Jul 2011; Raúl Porcel <armin76@gentoo.org> treetop-1.4.9.ebuild,
   treetop-1.4.10.ebuild:

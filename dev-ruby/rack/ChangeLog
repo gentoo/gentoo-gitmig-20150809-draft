@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.56 2011/08/07 12:28:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.57 2011/09/09 07:28:34 grobian Exp $
+
+  09 Sep 2011; Fabian Groffen <grobian@gentoo.org> rack-1.2.3.ebuild:
+  Marked ~sparc-solaris
 
   07 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org> -rack-1.0.1.ebuild:
   Remove old ruby.eclass based ebuild.
