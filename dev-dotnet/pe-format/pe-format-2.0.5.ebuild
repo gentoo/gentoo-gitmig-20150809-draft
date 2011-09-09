@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/pe-format-2.0.5.ebuild,v 1.5 2011/06/21 13:34:05 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/pe-format-2.0.5.ebuild,v 1.6 2011/09/09 20:30:45 chainsaw Exp $
 
 EAPI=3
 inherit autotools-utils
@@ -11,7 +11,7 @@ SRC_URI="http://cloud.github.com/downloads/mgorny/${PN}2/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 src_install() {

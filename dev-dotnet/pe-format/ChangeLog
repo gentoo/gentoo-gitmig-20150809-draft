@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/pe-format
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/ChangeLog,v 1.30 2011/09/05 08:20:54 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/ChangeLog,v 1.31 2011/09/09 20:30:45 chainsaw Exp $
+
+  09 Sep 2011; Tony Vroon <chainsaw@gentoo.org> pe-format-2.0.5.ebuild:
+  Marked stable based on arch testing by Ian "idella4" Delaney & Agostino "ago"
+  Sarubbo in bug #371163.
 
   05 Sep 2011; Naohiro Aota <naota@gentoo.org> pe-format-1.ebuild:
   Drop ~x86-fbsd. Bug #336937
