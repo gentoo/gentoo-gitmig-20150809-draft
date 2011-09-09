@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/vimpress
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimpress/ChangeLog,v 1.1 2011/06/10 21:12:51 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimpress/ChangeLog,v 1.2 2011/09/09 06:53:37 radhermit Exp $
+
+*vimpress-2.1.5 (09 Sep 2011)
+
+  09 Sep 2011; Tim Harder <radhermit@gentoo.org> +vimpress-2.1.5.ebuild:
+  Version bump. Use github mirror.
 
 *vimpress-2.1.0 (10 Jun 2011)
 
