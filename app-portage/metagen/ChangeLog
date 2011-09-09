@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/metagen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.28 2011/08/13 22:22:06 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.29 2011/09/09 14:04:43 neurogeek Exp $
+
+*metagen-0.6 (09 Sep 2011)
+
+  09 Sep 2011; Jesus Rivero <neurogeek@gentoo.org> +metagen-0.6.ebuild:
+  Version bump
 
   13 Aug 2011; Jesus Rivero <neurogeek@gentoo.org> metagen-9999.ebuild:
   Added RDEPEND on sys-apps/portage. Wrt bug #310989
