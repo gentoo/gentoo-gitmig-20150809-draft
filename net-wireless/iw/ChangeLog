@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/iw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.35 2011/08/19 09:19:40 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.36 2011/09/09 23:17:31 gurligebis Exp $
+
+*iw-3.1 (09 Sep 2011)
+
+  09 Sep 2011; <gurligebis@gentoo.org> -iw-3.0.ebuild, +iw-3.1.ebuild,
+  +files/iw-3.1_libnl-3-support.patch:
+  Bumping to 3.1 and adding support for libnl 3.0 and 3.1
 
 *iw-3.0 (19 Aug 2011)
 

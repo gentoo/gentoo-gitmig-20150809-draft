@@ -1,12 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/iw-3.0.ebuild,v 1.1 2011/08/19 09:19:40 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/iw-3.1.ebuild,v 1.1 2011/09/09 23:17:31 gurligebis Exp $
 
-inherit toolchain-funcs
+EAPI="2"
+
+inherit toolchain-funcs eutils
 
 DESCRIPTION="nl80211-based configuration utility for wireless devices using the mac80211 kernel stack"
 HOMEPAGE="http://wireless.kernel.org/en/users/Documentation/iw"
-SRC_URI="http://wireless.kernel.org/download/${PN}/${P}.tar.bz2"
+SRC_URI="http://linuxwireless.org/download/${PN}/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
@@ -19,6 +21,10 @@ DEPEND="${RDEPEND}
 
 CC=$(tc-getCC)
 LD=$(tc-getLD)
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}_libnl-3-support.patch"
+}
 
 src_install() {
 	emake install DESTDIR="${D}" || die "Failed to install"
