@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/builder
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.61 2011/07/24 17:32:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.62 2011/09/09 08:27:56 grobian Exp $
+
+  09 Sep 2011; Fabian Groffen <grobian@gentoo.org> builder-3.0.0.ebuild:
+  Marked ~sparc-solaris
 
   24 Jul 2011; Raúl Porcel <armin76@gentoo.org> builder-2.1.2-r2.ebuild:
   alpha/ia64/s390/sparc stable wrt #372391
