@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libg15render
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15render/ChangeLog,v 1.13 2010/03/06 20:19:01 robbat2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15render/ChangeLog,v 1.14 2011/09/09 16:51:21 scarabeus Exp $
+
+*libg15render-1.2-r2 (09 Sep 2011)
+
+  09 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libg15render-1.2-r1.ebuild, +libg15render-1.2-r2.ebuild:
+  Revision bump in order to remove static library and libtool archive. Bump the
+  eapi to 4.
 
   06 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Changing maintainer per emails of Jan 18th.

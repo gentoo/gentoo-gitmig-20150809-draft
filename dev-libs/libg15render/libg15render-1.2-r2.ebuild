@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15render/libg15render-1.2-r1.ebuild,v 1.6 2007/05/01 10:33:05 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15render/libg15render-1.2-r2.ebuild,v 1.1 2011/09/09 16:51:21 scarabeus Exp $
+
+EAPI=4
 
 inherit eutils
 
@@ -14,30 +16,26 @@ KEYWORDS="amd64 ppc ppc64 x86"
 
 IUSE="truetype"
 
-DEPEND="dev-libs/libg15
-	truetype? ( media-libs/freetype )"
+RDEPEND="
+	dev-libs/libg15
+	truetype? ( media-libs/freetype )
+"
+DEPEND=${RDEPEND}
 
-RDEPEND=${DEPEND}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}/${P}-pixel-c.patch"
 }
 
-src_compile() {
+src_configure() {
 	econf \
-		$(use_enable truetype ttf ) \
-		|| die "configure failed"
-
-	emake || die "make failed"
+		--disable-static \
+		$(use_enable truetype ttf )
 }
 
 src_install() {
 	emake DESTDIR="${D}" \
 		docdir=/usr/share/doc/${PF} install || die "make install failed"
-	rm "${D}/usr/share/doc/${PF}/COPYING"
+	rm "${ED}/usr/share/doc/${PF}/COPYING"
 
-	prepalldocs
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
