@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.5.ebuild,v 1.4 2011/09/09 14:23:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.5.ebuild,v 1.5 2011/09/09 18:17:50 radhermit Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ~arm hppa ~sparc ~x86"
 SLOT="0"
 IUSE="dbi debug doc extras gnutls kerberos mysql oracle postgres relp snmp static-libs zeromq zlib"
 
-DEPEND="dbi? ( dev-db/libdbi )
+RDEPEND="dbi? ( dev-db/libdbi )
 	extras? ( net-libs/libnet )
 	gnutls? ( net-libs/gnutls )
 	kerberos? ( virtual/krb5 )
@@ -27,7 +27,8 @@ DEPEND="dbi? ( dev-db/libdbi )
 	snmp? ( net-analyzer/net-snmp )
 	zeromq? ( net-libs/zeromq )
 	zlib? ( sys-libs/zlib )"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 BRANCH="5-stable"
 
