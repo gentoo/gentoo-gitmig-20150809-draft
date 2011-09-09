@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13035 2011/09/09 07:46:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13036 2011/09/09 17:04:57 vapier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,10 +30,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Diego Elio Pettenò <flameeyes@gentoo.org> (09 Sep 2011)
-# Yet again missing patchset.
-=sys-apps/coreutils-8.13
 
 # Alexis Ballier <aballier@gentoo.org> (07 Sep 2011)
 # New releases from Jane Street, breaks their rev. deps for now
