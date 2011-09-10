@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.352 2011/09/10 09:17:02 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.353 2011/09/10 12:38:06 idl0r Exp $
+
+  10 Sep 2011; Christian Ruppert <idl0r@gentoo.org> bind-9.8.1.ebuild,
+  +files/bind-9.8.1-sdlz_helper.patch:
+  Fix dlz linking, bug 382269, thanks to Todd Goodman <tsg@bonedaddy.net>.
 
 *bind-9.7.4 (10 Sep 2011)
 
