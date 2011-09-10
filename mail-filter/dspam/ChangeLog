@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.139 2011/08/26 09:20:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.140 2011/09/10 10:17:32 radhermit Exp $
+
+  10 Sep 2011; Tim Harder <radhermit@gentoo.org> files/dspam.initd:
+  Fix init script to properly return (bug #382443 by Leeman Strout).
 
   26 Aug 2011; Tim Harder <radhermit@gentoo.org> -dspam-3.10.0.ebuild,
   -dspam-3.10.0-r1.ebuild, -dspam-3.10.1.ebuild:
