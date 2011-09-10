@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/emesene-1.6.3.ebuild,v 1.5 2011/09/07 18:56:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/emesene-1.6.3.ebuild,v 1.6 2011/09/10 14:24:29 pacho Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -20,12 +20,18 @@ RDEPEND="dev-python/pygtk:2
 	webcam? ( media-plugins/gst-plugins-meta[v4l2]
 		dev-python/gst-python )"
 
+pkg_setup() {
+	python_set_active_version 2
+}
+
 src_prepare() {
 	rm GPL PSF LGPL || die "rm license files failed"
 
 	if ! use webcam; then
 		rm -r libmimic || die "rm libmimic dir failed"
 	fi
+
+	python_convert_shebangs -r 2 .
 }
 
 src_compile() {
