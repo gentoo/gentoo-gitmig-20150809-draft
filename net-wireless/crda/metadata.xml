@@ -5,10 +5,6 @@
 		<email>gurligebis@gentoo.org</email>
 		<name>Bjarke Istrup Pedersen</name>
 	</maintainer>
-	<maintainer>
-		<email>chainsaw@gentoo.org</email>
-		<name>Tony Vroon</name>
-	</maintainer>
 	<herd>mobile</herd>
 	<longdescription lang="en">
 		Central Regulatory Domain Agent

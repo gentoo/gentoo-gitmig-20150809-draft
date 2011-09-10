@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/crda
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.23 2011/09/10 07:24:04 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.24 2011/09/10 10:12:29 gurligebis Exp $
+
+  10 Sep 2011; <gurligebis@gentoo.org> metadata.xml:
+  Removed Tony Vroon (chainsaw) from maintainers per request in bug #382447 .
 
   10 Sep 2011; <gurligebis@gentoo.org> +files/libnl31-support.diff,
   -crda-1.1.0.ebuild, -crda-1.1.1.ebuild, crda-1.1.2.ebuild, metadata.xml:
