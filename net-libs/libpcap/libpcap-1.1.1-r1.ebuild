@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-1.1.1-r1.ebuild,v 1.4 2011/08/11 02:35:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/libpcap-1.1.1-r1.ebuild,v 1.5 2011/09/10 08:26:04 scarabeus Exp $
 
-EAPI=2
+EAPI=4
 inherit autotools eutils multilib toolchain-funcs
 
 DESCRIPTION="A system-independent library for user-level network packet capture"
@@ -21,33 +21,37 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	virtual/yacc"
 
+DOCS=( CREDITS CHANGES VERSION TODO README{,.dag,.linux,.macosx,.septel} )
+
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-1.1-cross-linux.patch"
-	epatch "${FILESDIR}/${P}-ignore-ENODEV.patch"
-	# Force usbmon device to avoid #318359
-	sed 's:\(ac_usb_dev_name=\).*udevinfo.*:\1"usbmon":' -i configure.in || die
+	epatch \
+		"${FILESDIR}/${PN}-1.1-cross-linux.patch" \
+		"${FILESDIR}/${P}-ignore-ENODEV.patch" \
+		"${FILESDIR}/${P}-libidn2.patch"
+
 	eautoreconf
 }
 
 src_configure() {
-	econf $(use_enable ipv6) \
+	econf \
+		$(use_enable ipv6) \
 		$(use_with libnl) \
 		$(use_enable bluetooth)
 }
 
 src_compile() {
-	emake all shared || die "compile problem"
+	emake all shared
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
+
+	# remove static libraries (--disable-static does not work)
+	find "${ED}" -name '*.a' -exec rm -f {} +
 
 	# We need this to build pppd on G/FBSD systems
 	if [[ "${USERLAND}" == "BSD" ]]; then
 		insinto /usr/include
-		doins pcap-int.h || die "failed to install pcap-int.h"
+		doins pcap-int.h
 	fi
-
-	# We are not installing README.{Win32,aix,hpux,tru64} (bug 183057)
-	dodoc CREDITS CHANGES VERSION TODO README{,.dag,.linux,.macosx,.septel} || die
 }
