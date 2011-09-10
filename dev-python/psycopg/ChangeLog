@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/psycopg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.130 2011/08/05 22:45:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.131 2011/09/10 17:39:59 jer Exp $
+
+  10 Sep 2011; Jeroen Roovers <jer@gentoo.org> psycopg-2.4.1.ebuild:
+  Marked ~hppa (bug #381709).
 
   05 Aug 2011; Markos Chandras <hwoarang@gentoo.org> -psycopg-2.4.ebuild:
   Remove old ebuild. Requested by Arfrever

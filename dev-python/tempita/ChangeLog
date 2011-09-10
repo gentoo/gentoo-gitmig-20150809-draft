@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/tempita
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tempita/ChangeLog,v 1.3 2011/09/03 17:56:22 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tempita/ChangeLog,v 1.4 2011/09/10 17:43:11 jer Exp $
+
+  10 Sep 2011; Jeroen Roovers <jer@gentoo.org> tempita-0.5.1.ebuild:
+  Marked ~hppa (bug #381709).
 
 *tempita-0.5.1 (03 Sep 2011)
 
