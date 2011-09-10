@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.162 2011/08/15 19:44:03 sochotnicky Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.163 2011/09/10 18:19:28 mgorny Exp $
+
+*rtorrent-0.8.9 (10 Sep 2011)
+
+  10 Sep 2011; Michał Górny <mgorny@gentoo.org> rtorrent-0.8.7-r4.ebuild,
+  +rtorrent-0.8.9.ebuild, +files/rtorrent-0.8.9-canvas-fix.patch,
+  +files/rtorrent-0.8.9-ncurses.patch:
+  Version bump per bug #366623. Bump EAPI, migrate to autotools-utils. Fix
+  libtorrent dep in previous version
 
 *rtorrent-0.8.7-r4 (15 Aug 2011)
 
