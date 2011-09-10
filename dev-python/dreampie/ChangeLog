@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/dreampie
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dreampie/ChangeLog,v 1.3 2010/07/08 13:56:38 grozin Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dreampie/ChangeLog,v 1.4 2011/09/10 10:42:25 radhermit Exp $
+
+*dreampie-1.1.1 (10 Sep 2011)
+
+  10 Sep 2011; Tim Harder <radhermit@gentoo.org> +dreampie-1.1.1.ebuild:
+  Version bump (bug #345257).
 
 *dreampie-1.0.3 (08 Jul 2010)
 
