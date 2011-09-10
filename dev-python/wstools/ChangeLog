@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wstools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wstools/ChangeLog,v 1.1 2011/09/04 06:39:34 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wstools/ChangeLog,v 1.2 2011/09/10 17:58:36 jer Exp $
+
+  10 Sep 2011; Jeroen Roovers <jer@gentoo.org> wstools-0.3.ebuild:
+  Marked ~hppa (bug #381749).
 
 *wstools-0.3 (04 Sep 2011)
 
