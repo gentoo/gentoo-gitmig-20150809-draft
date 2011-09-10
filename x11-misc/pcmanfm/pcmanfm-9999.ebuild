@@ -1,19 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-9999.ebuild,v 1.11 2011/08/09 22:36:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-9999.ebuild,v 1.12 2011/09/10 11:40:05 hwoarang Exp $
 
 EAPI=3
 
-if [[ ${PV} == 9999 ]]; then
-	EGIT_REPO_URI="git://pcmanfm.git.sourceforge.net/gitroot/pcmanfm/${PN}"
-	inherit autotools git-2
-	SRC_URI=""
-else
-	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-linux"
-fi
-
-inherit fdo-mime
+EGIT_REPO_URI="git://pcmanfm.git.sourceforge.net/gitroot/pcmanfm/${PN}"
+inherit autotools fdo-mime
 
 DESCRIPTION="Fast lightweight tabbed filemanager"
 HOMEPAGE="http://pcmanfm.sourceforge.net/"
@@ -21,6 +13,7 @@ HOMEPAGE="http://pcmanfm.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="debug"
+KEYWORDS=""
 
 COMMON_DEPEND=">=dev-libs/glib-2.18:2
 	>=x11-libs/gtk+-2.22.1:2
@@ -35,10 +28,10 @@ DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext"
 
 src_prepare() {
-	if [[ ${PV} == 9999 ]]; then
-		intltoolize --force --copy --automake || die
-		eautoreconf
-	fi
+	intltoolize --force --copy --automake || die
+	# drop -O0. Bug #382265
+	sed -i -e "s:-O0::" "${S}"/configure.ac
+	eautoreconf
 }
 
 src_configure() {

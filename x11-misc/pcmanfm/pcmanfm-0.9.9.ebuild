@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.9.9.ebuild,v 1.3 2011/09/08 13:36:32 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.9.9.ebuild,v 1.4 2011/09/10 11:40:05 hwoarang Exp $
 
 EAPI=4
 
-inherit fdo-mime
+inherit autotools fdo-mime
 
 DESCRIPTION="Fast lightweight tabbed filemanager"
 HOMEPAGE="http://pcmanfm.sourceforge.net/"
@@ -31,6 +31,10 @@ src_prepare() {
 	# Fix desktop icons
 	sed -i -e "/MimeType/s:=.*normal;:=:" "${S}"/data/${PN}.desktop \
 		|| die "failed to fix desktop icon"
+	# drop -O0. Bug #382265
+	sed -i -e "s:-O0::" "${S}"/configure.ac
+	eautoreconf
+
 }
 
 src_configure() {
