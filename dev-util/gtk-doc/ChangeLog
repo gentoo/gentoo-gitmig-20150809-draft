@@ -1,6 +1,17 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.160 2011/08/29 00:02:37 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.161 2011/09/10 17:03:28 pacho Exp $
+
+*gtk-doc-1.17-r1 (10 Sep 2011)
+
+  10 Sep 2011; Pacho Ramos <pacho@gentoo.org>
+  -files/gtk-doc-1.13-fixxref-vim-u-NONE.patch, -gtk-doc-1.15.ebuild,
+  -gtk-doc-1.15-r2.ebuild,
+  -files/gtk-doc-1.15-allow-selection-highlighter.patch,
+  -files/gtk-doc-1.15-fixxref-vim-fixes.patch, +gtk-doc-1.17-r1.ebuild,
+  +files/gtk-doc-1.17-buildir-docs.patch:
+  When doing 'make install', look for generated docs in builddir, bug #379415
+  by Michał Górny. Remove old.
 
   29 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gtk-doc-1.17.ebuild:
   Can use either vim or gvim for the /usr/bin/vim binary, bug 379647

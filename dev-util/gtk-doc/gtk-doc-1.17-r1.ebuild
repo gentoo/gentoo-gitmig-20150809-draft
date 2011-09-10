@@ -1,33 +1,33 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.15-r2.ebuild,v 1.8 2011/01/28 10:25:02 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-1.17-r1.ebuild,v 1.1 2011/09/10 17:03:28 pacho Exp $
 
-EAPI="2"
+EAPI="3"
 PYTHON_DEPEND="2"
 
-inherit autotools eutils elisp-common gnome2 python
+inherit eutils elisp-common gnome2 python
 
 DESCRIPTION="GTK+ Documentation Generator"
 HOMEPAGE="http://www.gtk.org/gtk-doc/"
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris"
 IUSE="debug doc emacs highlight vim test"
 
 # dev-tex/tex4ht blocker needed due bug #315287
-RDEPEND=">=dev-libs/glib-2.6
+RDEPEND=">=dev-libs/glib-2.6:2
 	>=dev-lang/perl-5.6
 	>=app-text/openjade-1.3.1
 	dev-libs/libxslt
-	>=dev-libs/libxml2-2.3.6
+	>=dev-libs/libxml2-2.3.6:2
 	~app-text/docbook-xml-dtd-4.3
 	app-text/docbook-xsl-stylesheets
 	~app-text/docbook-sgml-dtd-3.0
 	>=app-text/docbook-dsssl-stylesheets-1.40
 	emacs? ( virtual/emacs )
 	highlight? (
-		vim? ( app-editors/vim )
+		vim? ( || ( app-editors/vim app-editors/gvim ) )
 		!vim? ( dev-util/source-highlight )
 	)
 	!!<dev-tex/tex4ht-20090611_p1038-r1"
@@ -48,6 +48,7 @@ pkg_setup() {
 	else
 		G2CONF="${G2CONF} $(use_with highlight highlight source-highlight)"
 	fi
+	G2CONF+=" --with-xml-catalog=${EPREFIX}/etc/xml/catalog"
 	python_set_active_version 2
 }
 
@@ -57,16 +58,8 @@ src_prepare() {
 	# Remove global Emacs keybindings.
 	epatch "${FILESDIR}/${PN}-1.8-emacs-keybindings.patch"
 
-	# Fix bug 306569 by not loading vim plugins while calling vim in
-	# gtkdoc-fixxref for fixing vim syntax highlighting
-	# Also fix incompatibility with vim-7.3 (bug #333313)
-	epatch "${FILESDIR}/${PN}-1.15-fixxref-vim-fixes.patch"
-
-	# Allow selection of specific highlighter, bug #334489
-	# In upstream's master
-	epatch "${FILESDIR}/${PN}-1.15-allow-selection-highlighter.patch"
-
-	eautoreconf
+	# When doing 'make install', look for generated docs in builddir.
+	epatch "${FILESDIR}/${PN}-1.17-buildir-docs.patch"
 }
 
 src_compile() {
@@ -78,17 +71,17 @@ src_compile() {
 src_install() {
 	gnome2_src_install
 
-	python_convert_shebangs 2 "${D}"/usr/bin/gtkdoc-depscan
+	python_convert_shebangs 2 "${ED}"/usr/bin/gtkdoc-depscan
 
 	# Don't install those files, they are in gtk-doc-am now
-	rm "${D}"/usr/share/aclocal/gtk-doc.m4 || die "failed to remove gtk-doc.m4"
-	rm "${D}"/usr/bin/gtkdoc-rebase || die "failed to remove gtkdoc-rebase"
+	rm "${ED}"/usr/share/aclocal/gtk-doc.m4 || die "failed to remove gtk-doc.m4"
+	rm "${ED}"/usr/bin/gtkdoc-rebase || die "failed to remove gtkdoc-rebase"
 
 	if use doc; then
 		docinto doc
-		dodoc doc/*
+		dodoc doc/* || die
 		docinto examples
-		dodoc examples/*
+		dodoc examples/* || die
 	fi
 
 	if use emacs; then
