@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cherrypy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/ChangeLog,v 1.45 2011/04/23 18:16:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/ChangeLog,v 1.46 2011/09/10 19:08:36 floppym Exp $
+
+*cherrypy-3.2.1 (10 Sep 2011)
+
+  10 Sep 2011; Mike Gilbert <floppym@gentoo.org> +cherrypy-3.2.1.ebuild:
+  Version bump for bug 381985 by Johan Bergström. Drop support for py2.4.
 
   23 Apr 2011; Raúl Porcel <armin76@gentoo.org> cherrypy-3.2.0.ebuild:
   ia64 stable wrt #361151
