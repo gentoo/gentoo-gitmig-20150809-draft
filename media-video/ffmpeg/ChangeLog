@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.450 2011/09/08 17:54:31 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.451 2011/09/10 17:54:29 jer Exp $
+
+  10 Sep 2011; Jeroen Roovers <jer@gentoo.org> ffmpeg-0.7.4.ebuild:
+  Stable for HPPA (bug #382301).
 
 *ffmpeg-0.7.4 (08 Sep 2011)
 
