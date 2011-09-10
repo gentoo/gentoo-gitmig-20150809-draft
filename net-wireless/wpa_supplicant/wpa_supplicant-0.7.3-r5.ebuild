@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r5.ebuild,v 1.5 2011/09/09 09:42:19 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r5.ebuild,v 1.6 2011/09/10 11:42:40 scarabeus Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit eutils toolchain-funcs qt4-r2 systemd multilib
 
@@ -18,16 +18,23 @@ IUSE="dbus debug gnutls eap-sim fasteap madwifi ps3 qt4 readline ssl wimax wps k
 RDEPEND="dbus? ( sys-apps/dbus )
 	kernel_linux? (
 		eap-sim? ( sys-apps/pcsc-lite )
-		madwifi? ( ||
-			( >net-wireless/madwifi-ng-tools-0.9.3
-			net-wireless/madwifi-old )
+		madwifi? (
+			|| (
+				>net-wireless/madwifi-ng-tools-0.9.3
+				net-wireless/madwifi-old
+			)
 		)
 		dev-libs/libnl
 	)
 	!kernel_linux? ( net-libs/libpcap )
-	qt4? ( x11-libs/qt-gui:4
-		x11-libs/qt-svg:4 )
-	readline? ( sys-libs/ncurses sys-libs/readline )
+	qt4? (
+		x11-libs/qt-gui:4
+		x11-libs/qt-svg:4
+	)
+	readline? (
+		sys-libs/ncurses
+		sys-libs/readline
+	)
 	ssl? ( dev-libs/openssl )
 	!ssl? ( gnutls? ( net-libs/gnutls ) )
 	!ssl? ( !gnutls? ( dev-libs/libtommath ) )"
@@ -184,44 +191,46 @@ src_configure() {
 	# Enable mitigation against certain attacks against TKIP
 	echo "CONFIG_DELAYED_MIC_ERROR_REPORT=y" >> .config
 
-	if use qt4 ; then
-		cd "${S}"/wpa_gui-qt4
-		eqmake4 wpa_gui.pro
-	fi
-
 	# If we are using libnl 2.0 and above, enable support for it
 	# Bug 382159
 	if has_version ">=dev-libs/libnl-2.0"; then
 		echo "CONFIG_LIBNL20=y" >> .config
 	fi
+
+	if use qt4 ; then
+		pushd "${S}"/wpa_gui-qt4 > /dev/null
+		eqmake4 wpa_gui.pro
+		popd > /dev/null
+	fi
 }
 
 src_compile() {
 	einfo "Building wpa_supplicant"
-	emake || die "emake failed"
+	emake
 
 	if use wimax; then
-		emake -C ../src/eap_peer clean || die "emake failed"
-		emake -C ../src/eap_peer || die "emake failed"
+		emake -C ../src/eap_peer clean
+		emake -C ../src/eap_peer
 	fi
 
 	if use qt4 ; then
-		cd "${S}"/wpa_gui-qt4
+		pushd "${S}"/wpa_gui-qt4 > /dev/null
 		einfo "Building wpa_gui"
-		emake || die "wpa_gui compilation failed"
+		emake
+		popd > /dev/null
 	fi
 }
 
 src_install() {
-	dosbin wpa_supplicant || die
-	dobin wpa_cli wpa_passphrase || die
+	dosbin wpa_supplicant
+	dobin wpa_cli wpa_passphrase
 
 	# baselayout-1 compat
 	if has_version "<sys-apps/baselayout-2.0.0"; then
 		dodir /sbin
-		dosym /usr/sbin/wpa_supplicant /sbin/wpa_supplicant || die
+		dosym /usr/sbin/wpa_supplicant /sbin/wpa_supplicant
 		dodir /bin
-		dosym /usr/bin/wpa_cli /bin/wpa_cli || die
+		dosym /usr/bin/wpa_cli /bin/wpa_cli
 	fi
 
 	if has_version ">=sys-apps/openrc-0.5.0"; then
@@ -233,33 +242,32 @@ src_install() {
 	newexe "${FILESDIR}/wpa_cli.sh" wpa_cli.sh
 
 	dodoc ChangeLog {eap_testing,todo}.txt README{,-WPS} \
-		wpa_supplicant.conf || die "dodoc failed"
+		wpa_supplicant.conf
 
-	doman doc/docbook/*.{5,8} || die "doman failed"
+	doman doc/docbook/*.{5,8}
 
 	if use qt4 ; then
 		into /usr
-		dobin wpa_gui-qt4/wpa_gui || die
-		doicon wpa_gui-qt4/icons/wpa_gui.svg || die "Icon not found"
+		dobin wpa_gui-qt4/wpa_gui
+		doicon wpa_gui-qt4/icons/wpa_gui.svg
 		make_desktop_entry wpa_gui "WPA Supplicant Administration GUI" "wpa_gui" "Qt;Network;"
 	fi
 
-	if use wimax; then
-		emake DESTDIR="${D}" -C ../src/eap_peer install || die
-	fi
+	use wimax && emake DESTDIR="${D}" -C ../src/eap_peer install
 
 	if use dbus ; then
-		cd "${S}"/dbus
+		pushd "${S}"/dbus > /dev/null
 		insinto /etc/dbus-1/system.d
-		newins dbus-wpa_supplicant.conf wpa_supplicant.conf || die
+		newins dbus-wpa_supplicant.conf wpa_supplicant.conf
 		insinto /usr/share/dbus-1/system-services
-		doins fi.epitest.hostap.WPASupplicant.service fi.w1.wpa_supplicant1.service || die
+		doins fi.epitest.hostap.WPASupplicant.service fi.w1.wpa_supplicant1.service
 		keepdir /var/run/wpa_supplicant
+		popd > /dev/null
 	fi
 
 	# systemd stuff
 	systemd_dounit "${FILESDIR}"/wpa_supplicant.service
-	systemd_newunit "${FILESDIR}"/wpa_supplicant_at.service 'wpa_supplicant@.service' || die
+	systemd_newunit "${FILESDIR}"/wpa_supplicant_at.service 'wpa_supplicant@.service'
 }
 
 pkg_postinst() {
