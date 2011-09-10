@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysql-workbench
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.41 2011/08/20 19:10:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.42 2011/09/10 08:51:16 graaff Exp $
+
+  10 Sep 2011; Hans de Graaff <graaff@gentoo.org>
+  mysql-workbench-5.2.34.ebuild:
+  Remove now unused libgnome dependency, thanks to Ben Sagal for reporting and
+  testing in bug 381817.
 
   20 Aug 2011; Hans de Graaff <graaff@gentoo.org>
   mysql-workbench-5.2.34.ebuild:

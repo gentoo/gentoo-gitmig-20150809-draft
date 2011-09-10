@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.34.ebuild,v 1.3 2011/08/20 19:10:17 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-5.2.34.ebuild,v 1.4 2011/09/10 08:51:16 graaff Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -34,7 +34,6 @@ CDEPEND="dev-db/sqlite:3
 	dev-libs/libpcre
 	virtual/opengl
 	>=dev-lang/lua-5.1[deprecated]
-	gnome-base/libgnome
 	x11-libs/pango
 	|| ( sys-libs/e2fsprogs-libs
 		dev-libs/ossp-uuid )
