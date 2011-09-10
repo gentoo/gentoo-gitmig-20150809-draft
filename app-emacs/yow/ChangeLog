@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/yow
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yow/ChangeLog,v 1.6 2009/09/10 20:35:34 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yow/ChangeLog,v 1.7 2011/09/10 10:48:17 ulm Exp $
+
+  10 Sep 2011; Ulrich Mueller <ulm@gentoo.org> yow-21.4_p20020329.ebuild:
+  EAPI bump.
 
   10 Sep 2009; Ulrich Mueller <ulm@gentoo.org> files/50yow-gentoo.el,
   yow-21.4_p20020329.ebuild:

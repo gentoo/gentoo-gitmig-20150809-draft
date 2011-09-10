@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yow/yow-21.4_p20020329.ebuild,v 1.7 2009/09/10 22:38:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yow/yow-21.4_p20020329.ebuild,v 1.8 2011/09/10 10:48:17 ulm Exp $
+
+EAPI=4
 
 inherit elisp
 
@@ -25,8 +27,8 @@ src_compile() { :; }
 
 src_install() {
 	insinto "${SITEETC}/${PN}"
-	doins yow.lines || die
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
+	doins yow.lines
+	elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 }
 
 pkg_postinst() {
