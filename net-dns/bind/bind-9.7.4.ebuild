@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.3_p1.ebuild,v 1.7 2011/05/30 00:15:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.7.4.ebuild,v 1.1 2011/09/10 09:17:02 idl0r Exp $
 
 EAPI="3"
 
@@ -29,7 +29,7 @@ SRC_URI="ftp://ftp.isc.org/isc/bind9/${MY_PV}/${MY_P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="ssl ipv6 doc dlz postgres berkdb mysql odbc ldap selinux idn threads
 	resolvconf urandom xml geoip gssapi sdb-ldap"
 
@@ -103,9 +103,8 @@ src_prepare() {
 
 	if use geoip; then
 		cp "${DISTDIR}"/${GEOIP_PATCH_A} "${S}" || die
-		sed -i -e 's:PATCHVER=2:PATCHVER=3:' \
-			-e 's/-RELEASEVER=2/-RELEASEVER=1/' \
-			-e 's/+RELEASEVER=2-geoip-1.3/+RELEASEVER=1-geoip-1.3/' \
+		sed -i -e 's:RELEASETYPE=-P:RELEASETYPE=:' \
+			-e 's:RELEASEVER=2:RELEASEVER=:' \
 			${GEOIP_PATCH_A} || die
 		epatch ${GEOIP_PATCH_A}
 	fi
@@ -213,7 +212,7 @@ src_install() {
 		tar xf "${DISTDIR}"/dyndns-samples.tbz2 || die
 	fi
 
-	use geoip && dodoc "${DISTDIR}"/${GEOIP_P}-readme.txt
+	use geoip && dodoc "${DISTDIR}"/${GEOIP_DOC_A}
 
 	insinto /etc/bind
 	newins "${FILESDIR}"/named.conf-r5 named.conf || die
@@ -226,7 +225,7 @@ src_install() {
 	newins "${FILESDIR}"/127.zone-r1 127.zone || die
 	newins "${FILESDIR}"/localhost.zone-r3 localhost.zone || die
 
-	newinitd "${FILESDIR}"/named.init-r10 named || die
+	newinitd "${FILESDIR}"/named.init-r11 named || die
 	newconfd "${FILESDIR}"/named.confd-r6 named || die
 
 	newenvd "${FILESDIR}"/10bind.env 10bind || die
