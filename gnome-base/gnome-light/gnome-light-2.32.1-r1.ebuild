@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.30.2-r1.ebuild,v 1.5 2011/03/16 10:41:44 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.32.1-r1.ebuild,v 1.1 2011/09/10 16:26:32 pacho Exp $
 
-EAPI="2"
+EAPI="4"
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop, merge this package to install"
@@ -13,7 +13,7 @@ IUSE="+automount"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="alpha amd64 arm ia64 ~ppc ~ppc64 sparc x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 
 #  Note to developers:
 #  This is a wrapper for the 'light' Gnome2 desktop,
@@ -28,45 +28,46 @@ KEYWORDS="alpha amd64 arm ia64 ~ppc ~ppc64 sparc x86 ~x86-freebsd ~amd64-linux ~
 
 RDEPEND="!gnome-base/gnome
 
-	>=dev-libs/glib-2.24.2:2
-	>=x11-libs/gtk+-2.20.1:2
-	>=dev-libs/atk-1.30.0
+	>=dev-libs/glib-2.26.1:2
+	>=x11-libs/gtk+-2.22.1-r1:2
+	>=x11-libs/gdk-pixbuf-2.22.1:2
+	>=dev-libs/atk-1.32.0
 	>=x11-libs/pango-1.28.3
 
 	>=gnome-base/orbit-2.14.19:2
 
-	>=x11-libs/libwnck-2.30.5:1
+	>=x11-libs/libwnck-2.30.6:1
 	>=x11-wm/metacity-2.30.3
 
-	>=gnome-base/gconf-2.28.1:2
+	>=gnome-base/gconf-2.32.0-r1:2
+	>=gnome-base/dconf-0.5.1-r2
 
 	>=gnome-base/libbonobo-2.24.3
 	>=gnome-base/libbonoboui-2.24.4
-	>=gnome-base/libgnome-2.30.0
-	>=gnome-base/libgnomeui-2.24.4
+	>=gnome-base/libgnome-2.32.0
 	>=gnome-base/libgnomecanvas-2.30.2
 	>=gnome-base/libglade-2.6.4:2.0
 
-	>=gnome-base/gnome-settings-daemon-2.30.2
-	>=gnome-base/gnome-control-center-2.30.1
+	>=gnome-base/gnome-settings-daemon-2.32.1
+	>=gnome-base/gnome-control-center-2.32.0
 
-	>=gnome-base/nautilus-2.30.1
+	>=gnome-base/nautilus-2.32.1
 
-	>=gnome-base/gnome-desktop-2.30.2:2
-	>=gnome-base/gnome-session-2.30.2
-	>=gnome-base/gnome-panel-2.30.2
+	>=gnome-base/gnome-desktop-2.32.1:2
+	>=gnome-base/gnome-session-2.32.1
+	>=gnome-base/gnome-panel-2.32.1
 
-	>=x11-themes/gnome-icon-theme-2.30.3
-	>=x11-themes/gnome-themes-2.30.2
+	>=x11-themes/gnome-icon-theme-2.31.0
+	>=x11-themes/gnome-themes-2.32.1
 
-	>=x11-terms/gnome-terminal-2.30.2
+	>=x11-terms/gnome-terminal-2.32.1
 
-	>=gnome-base/librsvg-2.26.3:2
+	>=gnome-base/librsvg-2.32.1:2
 
 	>=gnome-extra/yelp-2.30.2"
 DEPEND=""
-PDEPEND=">=gnome-base/gvfs-1.6.4
-	automount? ( >=gnome-base/gvfs-1.6.4[gdu] )"
+PDEPEND=">=gnome-base/gvfs-1.6.6
+	automount? ( >=gnome-base/gvfs-1.6.6[gdu] )"
 
 pkg_postinst () {
 # FIXME: Rephrase to teach about using different WMs instead, as metacity is the default anyway
