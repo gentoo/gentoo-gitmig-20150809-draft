@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.14.ebuild,v 1.1 2011/08/16 11:12:39 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.18.ebuild,v 1.1 2011/09/10 20:55:35 zmedico Exp $
 
 EAPI=3
 PYTHON_DEPEND=2:2.7
 PYTHON_USE_WITH=sqlite
 
-inherit python distutils eutils fdo-mime bash-completion multilib
+inherit python distutils eutils fdo-mime bash-completion-r1 multilib
 
 DESCRIPTION="Ebook management application."
 HOMEPAGE="http://calibre-ebook.com/"
@@ -113,17 +113,15 @@ src_install() {
 
 	PATH=${T}:${PATH} PYTHONPATH=${S}/src${PYTHONPATH:+:}${PYTHONPATH} \
 		distutils_src_install \
-		--staging-root="${D}usr" \
-		--staging-libdir="${D}usr/${libdir}"
+		--prefix="${EPREFIX}/usr" \
+		--libdir="${EPREFIX}/usr/${libdir}" \
+		--staging-root="${ED}usr" \
+		--staging-libdir="${ED}usr/${libdir}"
 
-	grep -rlZ "${D}" "${D}" | xargs -0 sed -e "s:${D}:/:g" -i ||
+	grep -rlZ "${ED}" "${ED}" | xargs -0 sed -e "s:${D}:/:g" -i ||
 		die "failed to fix harcoded \$D in paths"
 
-	grep -rlZ "/usr/lib/calibre" "${D}" | \
-		xargs -0 sed -e "s:/usr/lib/calibre:/usr/${libdir}/calibre:g" -i ||
-		die "failed to fix harcoded libdir paths"
-
-	find "${D}"usr/share/calibre/man -type f -print0 | \
+	find "${ED}"usr/share/calibre/man -type f -print0 | \
 		while read -r -d $'\0' ; do
 			if [[ ${REPLY} = *.[0-9]calibre.bz2 ]] ; then
 				newname=${REPLY%calibre.bz2}.bz2
@@ -132,36 +130,35 @@ src_install() {
 				rm -f "${newname}" || die "rm failed"
 			fi
 		done
-	rmdir "${D}"usr/share/calibre/man/* || \
+	rmdir "${ED}"usr/share/calibre/man/* || \
 		die "could not remove redundant man subdir(s)"
-	rmdir "${D}"usr/share/calibre/man || \
+	rmdir "${ED}"usr/share/calibre/man || \
 		die "could not remove redundant man dir"
 
 	# The menu entries end up here due to '--mode user' being added to
 	# xdg-* options in src_prepare.
 	dodir /usr/share/mime/packages
 	chmod -fR a+rX,u+w,g-w,o-w "${HOME}"/.local
-	mv "${HOME}"/.local/share/mime/packages/* "${D}"usr/share/mime/packages/ ||
+	mv "${HOME}"/.local/share/mime/packages/* "${ED}"usr/share/mime/packages/ ||
 		die "failed to register mime types"
 	dodir /usr/share/icons
-	mv "${HOME}"/.local/share/icons/* "${D}"usr/share/icons/ ||
+	mv "${HOME}"/.local/share/icons/* "${ED}"usr/share/icons/ ||
 		die "failed to install icon files"
 
 	domenu "${HOME}"/.local/share/applications/*.desktop ||
 		die "failed to install .desktop menu files"
 
-	dobashcompletion "${D}"usr/etc/bash_completion.d/calibre
-	rm -r "${D}"usr/etc/bash_completion.d
-	find "${D}"usr/etc -type d -empty -delete
+	dobashcomp "${ED}"usr/etc/bash_completion.d/calibre || die
+	rm -r "${ED}"usr/etc/bash_completion.d
+	find "${ED}"usr/etc -type d -empty -delete
 
-	python_convert_shebangs -r $(python_get_version) "${D}"
+	python_convert_shebangs -r $(python_get_version) "${ED}"
 }
 
 pkg_postinst() {
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 	python_mod_optimize /usr/$(get_libdir)/${PN}
-	bash-completion_pkg_postinst
 }
 
 pkg_postrm() {
