@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/ftpcube
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpcube/ChangeLog,v 1.42 2010/04/06 20:59:08 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpcube/ChangeLog,v 1.43 2011/09/10 06:15:47 floppym Exp $
+
+*ftpcube-0.5.1-r2 (10 Sep 2011)
+
+  10 Sep 2011; Mike Gilbert <floppym@gentoo.org> +ftpcube-0.5.1-r2.ebuild,
+  +files/ftpcube.xpm:
+  Install icon and desktop file. Bug 198680 by Sebastian.
 
   06 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   ftpcube-0.5.1-r1.ebuild:
