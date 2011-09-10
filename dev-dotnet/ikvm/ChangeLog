@@ -1,6 +1,12 @@
 # ChangeLog for dev-dotnet/ikvm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ChangeLog,v 1.25 2010/12/06 14:09:34 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm/ChangeLog,v 1.26 2011/09/10 10:33:47 pacho Exp $
+
+*ikvm-0.46.0.1 (10 Sep 2011)
+
+  10 Sep 2011; Pacho Ramos <pacho@gentoo.org> -ikvm-0.44.0.5.ebuild,
+  +ikvm-0.46.0.1.ebuild, +files/ikvm-0.46.0.1-key.patch:
+  Version bump, remove old.
 
 *ikvm-0.44.0.6 (06 Dec 2010)
 
