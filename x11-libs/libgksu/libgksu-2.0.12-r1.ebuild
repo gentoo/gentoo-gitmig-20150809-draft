@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/libgksu-2.0.12-r1.ebuild,v 1.11 2011/06/03 14:28:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/libgksu-2.0.12-r1.ebuild,v 1.12 2011/09/10 17:27:10 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -18,7 +18,7 @@ IUSE="nls doc static-libs"
 
 BOTH=">=x11-libs/gtk+-2.12:2
 	>=gnome-base/gconf-2
-	>=gnome-base/gnome-keyring-0.4.4
+	gnome-base/libgnome-keyring
 	x11-libs/startup-notification
 	>=gnome-base/libgtop-2
 	nls? ( >=sys-devel/gettext-0.14.1 )"
