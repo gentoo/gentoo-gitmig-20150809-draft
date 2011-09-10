@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.8.4.ebuild,v 1.6 2011/08/28 13:10:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.8.4.ebuild,v 1.7 2011/09/10 17:21:47 armin76 Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ SRC_URI="${MY_URI}/${MY_SRC}.tar.gz
 
 LICENSE="IBM"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="cdb doc dovecot-sasl hardened ipv6 ldap ldap-bind mbox mysql nis pam postgres sasl selinux sqlite ssl vda"
 
 DEPEND=">=sys-libs/db-3.2

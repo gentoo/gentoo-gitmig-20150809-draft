@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.286 2011/09/08 06:07:21 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.287 2011/09/10 17:21:47 armin76 Exp $
+
+  10 Sep 2011; Raúl Porcel <armin76@gentoo.org> postfix-2.8.4.ebuild:
+  alpha/ia64/sparc stable wrt #378373
 
 *postfix-2.9_pre20110907 (08 Sep 2011)
 
