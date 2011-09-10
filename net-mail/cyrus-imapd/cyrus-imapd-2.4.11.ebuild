@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.4.11.ebuild,v 1.1 2011/09/09 07:18:10 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.4.11.ebuild,v 1.2 2011/09/10 05:54:25 eras Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.cyrusimap.org/cyrus-imapd/${MY_P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="afs berkdb kerberos mysql nntp pam postgres replication +sieve snmp sqlite ssl tcpd"
+IUSE="afs berkdb kerberos mysql nntp pam postgres replication snmp sqlite ssl tcpd"
 
 RDEPEND="sys-libs/zlib
 	>=dev-libs/cyrus-sasl-2.1.13
@@ -97,6 +97,7 @@ src_configure() {
 		--enable-murder \
 		--enable-netscapehack \
 		--enable-idled \
+		--enable-sieve \
 		--with-service-path=/usr/$(get_libdir)/cyrus \
 		--with-cyrus-user=cyrus \
 		--with-cyrus-group=mail \
@@ -112,7 +113,6 @@ src_configure() {
 		$(use_enable nntp) \
 		$(use_enable replication) \
 		$(use_enable kerberos gssapi) \
-		$(use_enable sieve) \
 		$(use_with mysql) \
 		$(use_with postgres pgsql) \
 		$(use_with sqlite) \

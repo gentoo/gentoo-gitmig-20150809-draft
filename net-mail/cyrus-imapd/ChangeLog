@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.177 2011/09/09 07:18:10 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.178 2011/09/10 05:54:25 eras Exp $
+
+  10 Sep 2011; Eray Aslan <eras@gentoo.org> cyrus-imapd-2.4.11.ebuild:
+  Make sieve compulsory - bug #382349. Bug report and solution by Agostino
+  Sarubbo. Thanks.
 
 *cyrus-imapd-2.4.11 (09 Sep 2011)
 
