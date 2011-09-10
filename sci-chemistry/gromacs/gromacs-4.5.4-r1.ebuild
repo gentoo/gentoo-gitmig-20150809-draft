@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.4-r1.ebuild,v 1.10 2011/06/26 08:32:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.4-r1.ebuild,v 1.11 2011/09/10 14:47:53 ottxor Exp $
 
 EAPI="4"
 
@@ -8,7 +8,7 @@ LIBTOOLIZE="true"
 TEST_PV="4.0.4"
 MANUAL_PV="4.5.4"
 
-inherit autotools-utils bash-completion flag-o-matic fortran-2 multilib toolchain-funcs
+inherit autotools-utils bash-completion-r1 flag-o-matic fortran-2 multilib toolchain-funcs
 
 if [ "${PV%9999}" != "${PV}" ]; then
 	EGIT_REPO_URI="git://git.gromacs.org/gromacs"
@@ -224,7 +224,7 @@ src_install() {
 	doenvd "${T}/80gromacs"
 	rm -f "${ED}"/usr/bin/GMXRC*
 
-	dobashcompletion "${ED}"/usr/bin/completion.bash ${PN}
+	newbashcomp "${ED}"/usr/bin/completion.bash ${PN}
 	if use zsh-completion ; then
 		insinto /usr/share/zsh/site-functions
 		newins "${ED}"/usr/bin/completion.zsh _${PN}
@@ -246,16 +246,13 @@ src_install() {
 
 pkg_postinst() {
 	env-update && source /etc/profile
-	elog
-	elog "Please read and cite:"
-	elog "Gromacs 4, J. Chem. Theory Comput. 4, 435 (2008). "
-	elog "http://dx.doi.org/10.1021/ct700301q"
-	elog
-	bash-completion_pkg_postinst
-	elog
-	elog $(g_luck)
-	elog "For more Gromacs cool quotes (gcq) add luck to your .bashrc"
-	elog
-	elog "Gromacs can use sci-chemistry/vmd to read additional file formats"
-	elog
+	einfo
+	einfo  "Please read and cite:"
+	einfo  "Gromacs 4, J. Chem. Theory Comput. 4, 435 (2008). "
+	einfo  "http://dx.doi.org/10.1021/ct700301q"
+	einfo
+	einfo  $(g_luck)
+	einfo  "For more Gromacs cool quotes (gcq) add g_luck to your .bashrc"
+	einfo
+	elog  "Gromacs can use sci-chemistry/vmd to read additional file formats"
 }
