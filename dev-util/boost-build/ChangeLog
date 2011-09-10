@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/boost-build
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.74 2011/08/28 13:15:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boost-build/ChangeLog,v 1.75 2011/09/10 16:10:49 armin76 Exp $
+
+  10 Sep 2011; Raúl Porcel <armin76@gentoo.org> boost-build-1.46.1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #377805
 
   28 Aug 2011; Markus Meier <maekke@gentoo.org> boost-build-1.46.1.ebuild:
   arm stable, bug #377805
