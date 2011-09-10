@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-debian/python-debian-0.1.21.ebuild,v 1.3 2011/09/09 05:05:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-debian/python-debian-0.1.21.ebuild,v 1.4 2011/09/10 01:13:12 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://debian/pool/main/${P:0:1}/${PN}/${PN}_${PV}.tar.gz"
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="examples"
+IUSE="examples test"
 
 RDEPEND="dev-python/chardet"
 DEPEND="${RDEPEND}
