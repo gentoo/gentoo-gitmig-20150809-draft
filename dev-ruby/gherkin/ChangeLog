@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/gherkin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.28 2011/08/26 06:07:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.29 2011/09/10 09:25:05 graaff Exp $
+
+  10 Sep 2011; Hans de Graaff <graaff@gentoo.org> -gherkin-2.3.7.ebuild,
+  -gherkin-2.3.9.ebuild, -gherkin-2.4.2.ebuild, -gherkin-2.4.6.ebuild:
+  Remove old versions.
 
 *gherkin-2.4.15 (26 Aug 2011)
 
