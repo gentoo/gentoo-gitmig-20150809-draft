@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.81 2011/09/05 20:41:30 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.82 2011/09/10 17:22:46 alexxy Exp $
+
+*xen-tools-4.1.1-r2 (10 Sep 2011)
+
+  10 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org> -xen-tools-4.1.1-r1.ebuild,
+  +xen-tools-4.1.1-r2.ebuild, files/xend.initd-r2, files/xendomains.initd-r2:
+  Uncomment xl settings, fix bug 370817, adjust init.d scripts to work for xl;
+  Thanks to Ian Delaney aka idella4
 
   05 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org> xen-tools-4.1.1-r1.ebuild,
   metadata.xml:

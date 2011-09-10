@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r1.ebuild,v 1.2 2011/09/05 20:41:30 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r2.ebuild,v 1.1 2011/09/10 17:22:46 alexxy Exp $
 
 EAPI="3"
 
@@ -186,6 +186,12 @@ src_install() {
 
 	# Remove RedHat-specific stuff
 	rm -r "${D}"/etc/init.d/xen* || die
+
+	# uncomment lines in xl.conf
+	sed -e 's:^#autoballoon=1:autoballoon=1:' \
+		-e 's:^#lockfile="/var/lock/xl":lockfile="/var/lock/xl":' \
+		-e 's:^#vifscript="vif-bridge":vifscript="vif-bridge":' \
+		-i tools/examples/xl.conf  || die
 
 	dodoc README docs/README.xen-bugtool docs/ChangeLog
 	if use doc; then
