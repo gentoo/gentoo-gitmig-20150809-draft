@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnucash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.243 2011/08/29 15:59:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.244 2011/09/10 17:22:39 pacho Exp $
+
+  10 Sep 2011; Pacho Ramos <pacho@gentoo.org> gnucash-2.4.7.ebuild:
+  Fix python modules installation, bug #381477 by Chris Mayo.
 
 *gnucash-2.4.7 (29 Aug 2011)
 

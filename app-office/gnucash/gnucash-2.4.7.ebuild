@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.7.ebuild,v 1.1 2011/08/29 15:59:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.4.7.ebuild,v 1.2 2011/09/10 17:22:39 pacho Exp $
 
 EAPI="3"
 GNOME2_LA_PUNT="yes"
@@ -31,7 +31,7 @@ RDEPEND=">=dev-libs/glib-2.13:2
 	>=gnome-base/gconf-2:2
 	>=gnome-base/libgnomeui-2.4
 	>=gnome-base/libglade-2.4:2.0
-	|| ( <gnome-base/gnome-keyring-2.29 gnome-base/libgnome-keyring )
+	gnome-base/libgnome-keyring
 	media-libs/libart_lgpl
 	>=sys-libs/zlib-1.1.4
 	>=x11-libs/gtk+-2.14:2
@@ -139,4 +139,14 @@ src_install() {
 	rm -rf "${ED}"/usr/share/doc/${PF}/{examples/,COPYING,INSTALL,*win32-bin.txt,projects.html}
 	mv "${ED}"/usr/share/doc/${PF} "${T}"/cantuseprepalldocs || die
 	dodoc "${T}"/cantuseprepalldocs/* || die
+}
+
+pkg_postinst() {
+	gnome2_pkg_postinst
+	use python && python_mod_optimize gnucash
+}
+
+pkg_postrm() {
+	gnome2_pkg_postrm
+	use python && python_mod_cleanup gnucash
 }
