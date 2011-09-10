@@ -1,21 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.17 2011/08/10 10:19:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/libfm-9999.ebuild,v 1.18 2011/09/10 11:43:40 hwoarang Exp $
 
 EAPI=3
 
-if [[ ${PV} == 9999 ]]; then
-	EGIT_REPO_URI="git://pcmanfm.git.sourceforge.net/gitroot/pcmanfm/${PN}"
-	inherit autotools git-2
-	SRC_URI=""
-else
-	inherit autotools
-	SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${P}.tar.gz"
-	KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-linux"
-	S="${WORKDIR}"
-fi
+EGIT_REPO_URI="git://pcmanfm.git.sourceforge.net/gitroot/pcmanfm/${PN}"
 
-inherit fdo-mime
+inherit autotools git-2 fdo-mime
 
 DESCRIPTION="A library for file management"
 HOMEPAGE="http://pcmanfm.sourceforge.net/"
@@ -23,6 +14,7 @@ HOMEPAGE="http://pcmanfm.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="debug doc examples udev"
+KEYWORDS=""
 
 COMMON_DEPEND=">=dev-libs/glib-2.18:2
 	>=x11-libs/gtk+-2.16:2
@@ -53,6 +45,7 @@ src_prepare() {
 		progress;do
 		echo "data/ui/"${trans}.ui >> po/POTFILES.in
 	done
+	sed -i -e "s:-O0::" "${S}"/configure.ac || die
 	eautoreconf
 }
 

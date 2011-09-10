@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libfm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.50 2011/09/08 13:34:40 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.51 2011/09/10 11:43:40 hwoarang Exp $
+
+  10 Sep 2011; Markos Chandras <hwoarang@gentoo.org> libfm-0.1.16.ebuild,
+  libfm-9999.ebuild:
+  Drop -O0. Bug #382265
 
   08 Sep 2011; Tony Vroon <chainsaw@gentoo.org> libfm-0.1.16.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
