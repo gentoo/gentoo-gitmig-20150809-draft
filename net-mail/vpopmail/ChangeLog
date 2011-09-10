@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/vpopmail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.104 2011/08/20 07:28:13 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/ChangeLog,v 1.105 2011/09/10 16:43:33 armin76 Exp $
+
+  10 Sep 2011; Raúl Porcel <armin76@gentoo.org> vpopmail-5.4.30-r1.ebuild:
+  ia64 stable wrt #378373
 
   20 Aug 2011; Eray Aslan <eras@gentoo.org> vpopmail-5.4.33.ebuild:
   Add mysql incdir to configure script - bug #379813
