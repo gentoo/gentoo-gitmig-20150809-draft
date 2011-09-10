@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/cooledit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cooledit/ChangeLog,v 1.27 2010/04/05 04:04:43 abcd Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cooledit/ChangeLog,v 1.28 2011/09/10 17:46:52 hwoarang Exp $
+
+*cooledit-3.17.17-r1 (10 Sep 2011)
+
+  10 Sep 2011; Markos Chandras <hwoarang@gentoo.org>
+  +cooledit-3.17.17-r1.ebuild, +files/cooledit-3.17.17-copy.patch:
+  Add patches for bug #267567 and bug #267536. Thanks to Frank Peters
+  <frank.peters@comcast.net> and Helmuth Schmelzer <des-colo@hotmail.com>
 
   05 Apr 2010; Jonathan Callen <abcd@gentoo.org> cooledit-3.17.17.ebuild,
   +files/cooledit-3.17.17-interix.patch,
