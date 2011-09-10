@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.10.5.ebuild,v 1.1 2011/09/10 11:42:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.10.5.ebuild,v 1.2 2011/09/10 14:17:04 pacho Exp $
 
 EAPI="4"
 
@@ -13,11 +13,10 @@ LICENSE="MIT LGPL-2.1 GPL-2 BSD-4 NPL-1.1 Ms-PL GPL-2-with-linking-exception IDP
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-IUSE="minimal xen"
+IUSE="minimal pax_kernel xen"
 
 #Bash requirement is for += operator
-COMMONDEPEND="!<dev-dotnet/pnet-0.6.12
-	!dev-util/monodoc
+COMMONDEPEND="!dev-util/monodoc
 	!minimal? ( =dev-dotnet/libgdiplus-${GO_MONO_REL_PV}* )
 	ia64? (	sys-libs/libunwind )"
 RDEPEND="${COMMONDEPEND}
@@ -26,7 +25,7 @@ RDEPEND="${COMMONDEPEND}
 DEPEND="${COMMONDEPEND}
 	sys-devel/bc
 	>=app-shells/bash-3.2
-	sys-apps/paxctl"
+	pax_kernel? ( sys-apps/paxctl )"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
@@ -53,6 +52,18 @@ pkg_setup() {
 		fi
 	fi
 	PATCHES=( "${FILESDIR}/${PN}-2.10.2-threads-access.patch" )
+}
+
+src_prepare() {
+	go-mono_src_prepare
+
+	# we need to sed in the paxctl -mr in the runtime/mono-wrapper.in so it don't
+	# get killed in the build proces when MPROTEC is enable. #286280
+	# RANDMMAP kill the build proces to #347365
+	if use pax_kernel ; then
+		ewarn "We are disabling MPROTECT on the mono binary."
+		sed '/exec/ i\paxctl -mr "$r/@mono_runtime@"' -i "${S}"/runtime/mono-wrapper.in
+	fi
 }
 
 src_configure() {

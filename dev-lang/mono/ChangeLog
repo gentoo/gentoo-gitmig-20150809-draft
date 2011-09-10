@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mono
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.228 2011/09/10 11:42:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.229 2011/09/10 14:17:04 pacho Exp $
+
+  10 Sep 2011; Pacho Ramos <pacho@gentoo.org> mono-2.10.5.ebuild, metadata.xml:
+  Use and DEPEND on pax tools only when people wants to use mono on hardened
+  kernels (bug #375799 by Anthony Basile).
 
 *mono-2.10.5 (10 Sep 2011)
 
