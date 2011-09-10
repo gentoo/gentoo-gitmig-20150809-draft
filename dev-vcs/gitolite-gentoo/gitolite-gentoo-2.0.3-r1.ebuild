@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite/gitolite-2.0.3.ebuild,v 1.1 2011/08/30 17:13:44 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/gitolite-gentoo-2.0.3-r1.ebuild,v 1.1 2011/09/10 17:52:10 idl0r Exp $
 
 EAPI=3
 
 inherit eutils perl-module
 
-DESCRIPTION="Highly flexible server for git directory version tracker"
-HOMEPAGE="http://github.com/sitaramc/gitolite"
+DESCRIPTION="Highly flexible server for git directory version tracker, Gentoo fork"
+HOMEPAGE="http://git.overlays.gentoo.org/gitweb/?p=proj/gitolite-gentoo.git;a=summary"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -18,7 +18,8 @@ IUSE="contrib vim-syntax"
 DEPEND="dev-lang/perl
 	>=dev-vcs/git-1.6.2"
 RDEPEND="${DEPEND}
-	!dev-vcs/gitolite-gentoo
+	!dev-vcs/gitolite
+	dev-perl/Net-SSH-AuthorizedKeysFile
 	vim-syntax? ( app-vim/gitolite-syntax )"
 
 pkg_setup() {
@@ -30,13 +31,14 @@ src_prepare() {
 	rm Makefile doc/COPYING || die
 	rm -rf contrib/{gitweb,vim} || die
 
-	echo "${PF}" > conf/VERSION
+	epatch "${FILESDIR}/0001-fix-a-rather-large-typo-thinko-in-1006eba.patch"
+
+	echo "${PF}-gentoo" > conf/VERSION
 }
 
 src_install() {
 	dodir /usr/share/gitolite/{conf,hooks} /usr/bin || die
 
-	# install using upstream method
 	./src/gl-system-install "${D}"/usr/bin \
 		"${D}"/usr/share/gitolite/conf "${D}"/usr/share/gitolite/hooks || die
 	sed -i -e "s:${D}::g" "${D}/usr/bin/gl-setup" \
@@ -63,5 +65,9 @@ pkg_postinst() {
 	ewarn
 	elog "Please make sure that your 'git' user has the correct homedir (/var/lib/gitolite)."
 	elog "Especially if you're migrating from gitosis."
+	ewarn
+	ewarn
+	elog "If you use the umask feature and upgrade from <=gitolite-gentoo-1.5.9.1"
+	elog "then please check the permissions of all repositories using the umask feature"
 	ewarn
 }
