@@ -1,14 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-python/monodevelop-python-2.5.93.ebuild,v 1.1 2011/08/20 08:45:20 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-python/monodevelop-python-2.6.ebuild,v 1.1 2011/09/10 13:52:28 pacho Exp $
 
-EAPI=3
+EAPI="4"
 
 inherit mono multilib versionator
 
 DESCRIPTION="Python Support for MonoDevelop."
 HOMEPAGE="http://www.monodevelop.com/"
-SRC_URI="http://monodevelop.com/files/Linux/tarballs/${P}.tar.bz2"
+SRC_URI="http://download.mono-project.com/sources/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,10 +28,10 @@ src_configure() {
 }
 
 src_compile() {
-	emake -j1 || die "make failed"
+	emake -j1
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
+	emake -j1 DESTDIR="${D}" install
 	mono_multilib_comply
 }
