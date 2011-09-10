@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/ikvm-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ChangeLog,v 1.16 2011/06/30 14:15:02 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ChangeLog,v 1.17 2011/09/10 10:46:23 pacho Exp $
+
+*ikvm-bin-0.46.0.1 (10 Sep 2011)
+
+  10 Sep 2011; Pacho Ramos <pacho@gentoo.org> -ikvm-bin-0.42.0.6.ebuild,
+  -ikvm-bin-0.44.0.5.ebuild, +ikvm-bin-0.46.0.1.ebuild:
+  Version bump, remove old and fix links gac managing (bug #380645 by Juergen
+  Rose).
 
   30 Jun 2011; Christoph Mende <angelos@gentoo.org> ikvm-bin-0.44.0.6.ebuild:
   Stable on amd64 wrt bug #371163

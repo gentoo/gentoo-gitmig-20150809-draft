@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ikvm-bin-0.44.0.5.ebuild,v 1.1 2010/09/12 15:24:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ikvm-bin-0.46.0.1.ebuild,v 1.1 2011/09/10 10:46:23 pacho Exp $
+
+EAPI="4"
 
 inherit eutils mono multilib
 
@@ -8,8 +10,8 @@ MY_P=${P/-bin/}
 MY_PN=${PN/-bin/}
 
 DESCRIPTION="Java VM for .NET"
-HOMEPAGE="http://www.ikvm.net/"
-SRC_URI="mirror://sourceforge/${MY_PN}/${MY_PN}bin-${PV}.zip"
+HOMEPAGE="http://www.ikvm.net/ http://weblog.ikvm.net/"
+SRC_URI="http://www.frijters.net/${MY_PN}bin-${PV}.zip"
 LICENSE="as-is"
 
 SLOT="0"
@@ -25,7 +27,7 @@ RDEPEND="${DEPEND}"
 
 src_install() {
 	insinto /usr/$(get_libdir)/${MY_PN}
-	doins bin/* || die "doins failed"
+	doins bin/*
 
 	for exe in ikvm ikvmc ikvmstub;
 	do
@@ -40,7 +42,10 @@ src_install() {
 
 	for dll in bin/IKVM*.dll
 	do
-		gacutil -i ${dll} -root "${D}"/usr/$(get_libdir) \
-			-gacdir /usr/$(get_libdir) -package ${dll} || die
+		dllbase=${dll##*/}
+		ebegin "Installing and registering ${dllbase}"
+		gacutil -i bin/${dllbase} -root "${D}"/usr/$(get_libdir) \
+			-gacdir /usr/$(get_libdir) -package IKVM &>/dev/null
+		eend $? || die "Failed installing ${dllbase}"
 	done
 }
