@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.3.8.ebuild,v 1.2 2011/07/11 22:43:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rkhunter/rkhunter-1.3.8.ebuild,v 1.3 2011/09/10 12:47:30 radhermit Exp $
 
-EAPI=2
+EAPI=4
 
-inherit eutils bash-completion
+inherit eutils bash-completion-r1
 
 DESCRIPTION="Rootkit Hunter scans for known and unknown rootkits, backdoors, and sniffers."
 HOMEPAGE="http://rkhunter.sf.net/"
@@ -36,25 +36,24 @@ src_install() {
 	dodir /var/lib/${PN}/tmp
 
 	insinto /etc
-	doins ${PN}.conf || die "failed to install ${PN}.conf"
+	doins ${PN}.conf
 
 	exeinto /usr/lib/${PN}/scripts
-	doexe *.pl || die "failed to install scripts"
+	doexe *.pl
 
 	insinto /var/lib/${PN}/db
-	doins *.dat || die "failed to install dat files"
+	doins *.dat
 
 	insinto /var/lib/${PN}/db/i18n
 	doins i18n/*
 
-	doman ${PN}.8 || die "doman failed"
-	dodoc ACKNOWLEDGMENTS CHANGELOG FAQ README || die "dodoc failed"
+	doman ${PN}.8
+	dodoc ACKNOWLEDGMENTS CHANGELOG FAQ README
 
 	exeinto /etc/cron.daily
-	newexe "${FILESDIR}/${PN}-1.3.cron" ${PN} || \
-		die "failed to install cron script"
+	newexe "${FILESDIR}/${PN}-1.3.cron" ${PN}
 
-	dobashcompletion "${FILESDIR}/${PN}.bash-completion"
+	newbashcomp "${FILESDIR}/${PN}.bash-completion" ${PN}
 }
 
 pkg_postinst() {
@@ -65,5 +64,4 @@ pkg_postinst() {
 	elog "virtual/mailx or alter the EMAIL_CMD variable in the"
 	elog "cron script and possibly the MAIL_CMD variable in the"
 	elog "${PN}.conf file to use another mail client."
-	bash-completion_pkg_postinst
 }
