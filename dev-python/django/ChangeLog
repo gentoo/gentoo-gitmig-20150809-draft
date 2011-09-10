@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.69 2011/05/01 16:42:10 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.70 2011/09/10 05:56:53 djc Exp $
+
+*django-1.3.1 (10 Sep 2011)
+
+  10 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> +django-1.3.1.ebuild:
+  Version bump to 1.3.1.
 
   01 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> django-1.3.ebuild:
   x86 stable wrt bug #364415
