@@ -1,19 +1,19 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-2.4.ebuild,v 1.4 2010/09/23 22:16:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-2.6.ebuild,v 1.1 2011/09/10 11:10:29 pacho Exp $
 
-EAPI=2
+EAPI="4"
 
 inherit fdo-mime mono multilib gnome2-utils versionator
 
 DESCRIPTION="Integrated Development Environment for .NET"
 HOMEPAGE="http://www.monodevelop.com/"
-SRC_URI="http://ftp.novell.com/pub/mono/sources/${PN}/${P}.tar.bz2"
+SRC_URI="http://download.mono-project.com/sources/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="+subversion"
+KEYWORDS="~amd64 ~x86"
+IUSE="+subversion +git"
 
 RDEPEND="sys-apps/dbus[X]
 	>=dev-lang/mono-2.6.1
@@ -54,16 +54,17 @@ src_configure() {
 		--enable-monoextensions				\
 		--enable-gnomeplatform				\
 		$(use_enable subversion)			\
+		$(use_enable git)					\
 		|| die "configure failed"
 }
 
 src_compile() {
-	emake || die "make failed"
+	emake
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
-	dodoc ChangeLog README || die "dodoc failed"
+	emake DESTDIR="${D}" install
+	dodoc ChangeLog README
 }
 
 pkg_postinst() {
@@ -71,11 +72,10 @@ pkg_postinst() {
 	fdo-mime_mime_database_update
 	fdo-mime_desktop_database_update
 	elog "These optional plugins currently exist:"
-	elog " - dev-util/monodevelop-boo"
+	elog " - dev-util/monodevelop-python"
 	elog " - dev-util/monodevelop-java"
 	elog " - dev-util/monodevelop-database"
 	elog " - dev-util/monodevelop-debugger-gdb"
-	elog " - dev-util/monodevelop-debugger-mdb"
 	elog " - dev-util/monodevelop-vala"
 	elog "To enable their (self-explanatory) functionality, just emerge them."
 	elog "Read more here:"
