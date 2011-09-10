@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libssh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.52 2011/08/24 14:07:14 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.53 2011/09/10 12:20:54 radhermit Exp $
+
+  10 Sep 2011; Tim Harder <radhermit@gentoo.org> libssh-0.5.1.ebuild:
+  Explicitly require static libraries to be built if testing is enabled since
+  the tests currently require them.
 
   24 Aug 2011; Jeremy Olexa <darkside@gentoo.org> libssh-0.5.1.ebuild:
   add prefix keywords, bug 374401
