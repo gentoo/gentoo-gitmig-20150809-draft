@@ -5,5 +5,9 @@
 <maintainer>
  <email>vanquirius@gentoo.org</email>
 </maintainer>
+<maintainer>
+ <email>radhermit@gentoo.org</email>
+ <name>Tim Harder</name>
+</maintainer>
 <longdescription>Tardy is a tar post-processor for manipulating the file headers.</longdescription>
 </pkgmetadata>
