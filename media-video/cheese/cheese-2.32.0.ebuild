@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.32.0.ebuild,v 1.12 2011/06/09 01:28:06 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.32.0.ebuild,v 1.13 2011/09/10 17:25:29 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -18,9 +18,7 @@ IUSE="doc"
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.7
 	>=dev-libs/glib-2.16:2
 	>=x11-libs/gtk+-2.19.1:2
-	|| (
-		x11-libs/gtk+:2[jpeg]
-		x11-libs/gdk-pixbuf:2[jpeg] )
+	x11-libs/gdk-pixbuf:2[jpeg]
 	>=x11-libs/cairo-1.4
 	>=x11-libs/pango-1.18
 	>=sys-apps/dbus-1[X]

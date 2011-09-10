@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.49 2011/08/18 05:54:49 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.50 2011/09/10 17:25:29 pacho Exp $
+
+  10 Sep 2011; Pacho Ramos <pacho@gentoo.org> cheese-2.32.0.ebuild:
+  Fix dependencies as explained in bug #382011.
 
 *cheese-3.0.2 (18 Aug 2011)
 
