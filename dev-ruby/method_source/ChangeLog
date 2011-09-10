@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/method_source
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/method_source/ChangeLog,v 1.1 2011/09/10 07:38:23 graaff Exp $
+
+*method_source-0.6.5 (10 Sep 2011)
+
+  10 Sep 2011; Hans de Graaff <graaff@gentoo.org> +method_source-0.6.5.ebuild,
+  +metadata.xml:
+  Initial import. Dependency for forthcoming dev-ruby/pry.
+
