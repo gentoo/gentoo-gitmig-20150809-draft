@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/votca-csg-1.2.1.ebuild,v 1.1 2011/08/25 20:25:13 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/votca-csg-1.2.1.ebuild,v 1.2 2011/09/10 15:02:16 ottxor Exp $
 
 EAPI=4
 
-inherit bash-completion cmake-utils
+inherit bash-completion-r1 cmake-utils
 
 IUSE="doc examples extras +gromacs +system-boost"
 PDEPEND="extras? ( =sci-chemistry/votca-csgapps-${PV} )"
@@ -57,7 +57,7 @@ src_configure() {
 
 src_install() {
 	DOCS=(README NOTICE ${CMAKE_BUILD_DIR}/CHANGELOG)
-	dobashcompletion scripts/csg-completion.bash ${PN}
+	newbashcomp scripts/csg-completion.bash ${PN}
 	cmake-utils_src_install
 	if use doc; then
 		if [ -n "${PV##*9999}" ]; then
@@ -76,10 +76,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog
-	elog "Please read and cite:"
-	elog "VOTCA, J. Chem. Theory Comput. 5, 3211 (2009). "
-	elog "http://dx.doi.org/10.1021/ct900369w"
-	elog
-	bash-completion_pkg_postinst
+	einfo
+	einfo "Please read and cite:"
+	einfo "VOTCA, J. Chem. Theory Comput. 5, 3211 (2009). "
+	einfo "http://dx.doi.org/10.1021/ct900369w"
+	einfo
 }
