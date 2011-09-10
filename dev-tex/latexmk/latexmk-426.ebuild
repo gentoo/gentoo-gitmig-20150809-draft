@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/latexmk-426.ebuild,v 1.2 2011/08/28 16:05:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/latexmk-426.ebuild,v 1.3 2011/09/10 12:54:46 radhermit Exp $
 
 EAPI=4
 
-inherit bash-completion
+inherit bash-completion-r1
 
 DESCRIPTION="Perl script for automatically building LaTeX documents."
 HOMEPAGE="http://www.phys.psu.edu/~collins/software/latexmk/"
@@ -27,5 +27,5 @@ src_install() {
 	doman latexmk.1
 	dodoc CHANGES README latexmk.pdf latexmk.ps latexmk.txt
 	dodoc -r example_rcfiles extra-scripts
-	dobashcompletion "${FILESDIR}"/completion.bash-2 ${PN}
+	newbashcomp "${FILESDIR}"/completion.bash-2 ${PN}
 }
