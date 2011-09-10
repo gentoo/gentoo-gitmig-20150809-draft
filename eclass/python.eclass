@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.131 2011/08/22 04:46:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.132 2011/09/10 13:48:46 djc Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -16,7 +16,7 @@ if ! has "${EAPI:-0}" 0 1 2 3; then
 fi
 
 _CPYTHON2_GLOBALLY_SUPPORTED_ABIS=(2.4 2.5 2.6 2.7)
-_CPYTHON3_GLOBALLY_SUPPORTED_ABIS=(3.1 3.2 3.3)
+_CPYTHON3_GLOBALLY_SUPPORTED_ABIS=(3.1 3.2)
 _JYTHON_GLOBALLY_SUPPORTED_ABIS=(2.5-jython)
 _PYPY_GLOBALLY_SUPPORTED_ABIS=(2.7-pypy-1.5)
 _PYTHON_GLOBALLY_SUPPORTED_ABIS=(${_CPYTHON2_GLOBALLY_SUPPORTED_ABIS[@]} ${_CPYTHON3_GLOBALLY_SUPPORTED_ABIS[@]} ${_JYTHON_GLOBALLY_SUPPORTED_ABIS[@]} ${_PYPY_GLOBALLY_SUPPORTED_ABIS[@]})
