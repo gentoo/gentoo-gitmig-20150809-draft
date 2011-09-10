@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.26-r1.ebuild,v 1.5 2011/06/24 12:01:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.26-r1.ebuild,v 1.6 2011/09/10 09:02:31 scarabeus Exp $
 
 EAPI=4
 
@@ -21,9 +21,9 @@ RDEPEND=">=sys-libs/ncurses-5.2
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-pkg_setup() {
+pkg_pretend() {
 	if kernel_is 2 4; then
-		eerror "${P} supports only 2.6 kernels, please try ${PN}-1.21 for 2.4 kernels"
+		eerror "${P} supports only 2.6 series and later kernels, please try ${PN}-1.21 for 2.4 kernels"
 		die "wrong kernel version"
 	fi
 }
@@ -39,28 +39,26 @@ src_compile() {
 		CC="$(tc-getCC)" \
 		HAVE_NL=1 \
 		STATIC_LIB=${STATIC} \
-		POPT_LIB="$(pkg-config --libs popt)" \
-		 || die
+		POPT_LIB="$(pkg-config --libs popt)"
 }
 
 src_install() {
 	into /
-	dosbin ipvsadm ipvsadm-save ipvsadm-restore || die
+	dosbin ipvsadm ipvsadm-save ipvsadm-restore
 
 	into /usr
-	doman ipvsadm.8 ipvsadm-save.8 ipvsadm-restore.8 || die
+	doman ipvsadm.8 ipvsadm-save.8 ipvsadm-restore.8
 
 	newinitd "${FILESDIR}"/ipvsadm-init ipvsadm
 	keepdir /var/lib/ipvsadm
 
 	use static-libs && dolib.a libipvs/libipvs.a
-	dolib.so libipvs/libipvs.so || die
+	dolib.so libipvs/libipvs.so
 
 	insinto /usr/include/ipvs
-	newins libipvs/libipvs.h ipvs.h || die
+	newins libipvs/libipvs.h ipvs.h
 }
 
 pkg_postinst() {
 	einfo "You will need a kernel that has ipvs patches to use LVS."
-	einfo "This version is specifically for 2.6 kernels."
 }

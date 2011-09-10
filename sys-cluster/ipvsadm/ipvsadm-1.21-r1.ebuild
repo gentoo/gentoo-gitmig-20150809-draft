@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.21-r1.ebuild,v 1.18 2011/06/06 05:00:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.21-r1.ebuild,v 1.19 2011/09/10 09:02:31 scarabeus Exp $
 
 inherit linux-info
 
@@ -23,7 +23,7 @@ S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	if kernel_is -ge 2 6; then
-		eerror "${P} does not support 2.6 kernels, please try ${PN}-1.24"
+		eerror "${P} does not support 2.6 kernels, please try newer versions"
 		die "wrong kernel version"
 	fi
 }
