@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.285 2011/08/02 05:34:57 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.286 2011/09/10 08:54:54 pacho Exp $
+
+*vte-0.28.2-r300 (10 Sep 2011)
+*vte-0.28.2-r200 (10 Sep 2011)
+
+  10 Sep 2011; Pacho Ramos <pacho@gentoo.org> -vte-0.26.2.ebuild,
+  +vte-0.28.2-r200.ebuild, +vte-0.28.2-r300.ebuild:
+  Version bump, remove old, include introspection macro for gtk3 version until
+  a better solution is supplied.
 
   11 Jul 2011; Matt Turner <mattst88@gentoo.org> vte-0.28.1-r200.ebuild,
   vte-0.28.1-r300.ebuild:
