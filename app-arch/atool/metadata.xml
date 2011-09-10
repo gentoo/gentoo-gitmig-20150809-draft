@@ -6,4 +6,8 @@
 		<email>nyhm@gentoo.org</email>
 		<name>Tristan Heaven</name>
 	</maintainer>
+	<maintainer>
+		<email>radhermit@gentoo.org</email>
+		<name>Tim Harder</name>
+	</maintainer>
 </pkgmetadata>
