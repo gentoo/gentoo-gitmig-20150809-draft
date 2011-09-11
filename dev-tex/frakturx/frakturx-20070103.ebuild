@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/frakturx/frakturx-20070103.ebuild,v 1.1 2009/01/12 16:12:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/frakturx/frakturx-20070103.ebuild,v 1.2 2011/09/11 19:15:23 ulm Exp $
+
+EAPI=4
 
 inherit latex-package
 
@@ -31,30 +33,27 @@ RDEPEND=""
 S="${WORKDIR}"
 TEXMF="/usr/share/texmf-site"
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	# remove spurious files, so that doins -r is possible later
 	find . -type f -name '.*' | xargs rm -f
 }
 
 src_install() {
 	insinto ${TEXMF}/tex/latex
-	doins -r tex/latex/fraktur || die
+	doins -r tex/latex/fraktur
 	insinto ${TEXMF}/fonts
-	doins -r fonts/{tfm,vf,type1,enc} || die
+	doins -r fonts/{tfm,vf,type1,enc}
 	insinto ${TEXMF}/fonts/map/dvips/fraktur
-	doins fonts/map/dvips/*.map || die
+	doins fonts/map/dvips/*.map
 
 	local m
 	for m in fobi fodd fods fowf fowg ftas ftbk ftkb ftwv ftwy ftzf; do
 		echo "Map ${m}.map" >>"${T}"/50frakturx.cfg
 	done
 	insinto /etc/texmf/updmap.d
-	doins "${T}"/50frakturx.cfg || die
+	doins "${T}"/50frakturx.cfg
 
-	insinto /usr/share/doc/${PF}
-	doins -r doc/fonts/fraktur/* || die
-	prepalldocs
+	dodoc -r doc/fonts/fraktur/*
 
 	# symlink for texdoc
 	dosym /usr/share/doc/${PF} ${TEXMF}/doc/fonts/fraktur
