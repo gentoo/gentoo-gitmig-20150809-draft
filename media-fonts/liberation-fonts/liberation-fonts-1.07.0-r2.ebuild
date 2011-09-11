@@ -24,7 +24,9 @@ DEPEND="fontforge? ( media-gfx/fontforge )
 		app-arch/unzip"
 RDEPEND=""
 
-FONT_S="${S}/${PN}-ttf-${PV}"
-if ! use fontforge; then
-	S=${FONT_S}
+if use fontforge; then
+	FONT_S="${S}/${PN}-ttf-${PV}"
+else
+	FONT_S="${WORKDIR}/${PN}-ttf-${PV}"
+	S="${FONT_S}"
 fi
