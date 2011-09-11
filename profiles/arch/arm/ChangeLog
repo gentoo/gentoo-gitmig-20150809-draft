@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.134 2011/09/07 19:55:13 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.135 2011/09/11 20:08:16 maekke Exp $
+
+  11 Sep 2011; Markus Meier <maekke@gentoo.org> use.mask:
+  use.mask mssql, bug #381709
 
   07 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
   Update kde mask

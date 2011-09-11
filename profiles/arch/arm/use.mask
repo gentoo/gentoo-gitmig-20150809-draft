@@ -82,6 +82,7 @@ oracle
 libvirt
 pdfannotextractor
 prelude
+mssql
 
 # havent tested yet
 cupsddk
