@@ -1,9 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/files/3.6/samba.initd,v 1.1 2011/06/30 15:50:28 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/files/3.6/samba.initd,v 1.2 2011/09/11 19:43:56 vostorga Exp $
 
-opts="reload"
+extra_commands="reload"
 
 depend() {
 	after slapd

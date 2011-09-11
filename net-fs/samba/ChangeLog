@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.487 2011/08/27 11:27:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.488 2011/09/11 19:43:56 vostorga Exp $
+
+  11 Sep 2011; Víctor Ostorga <vostorga@gentoo.org> files/3.5/samba.initd,
+  -samba-3.4.12.ebuild, files/3.6/samba.initd, -samba-3.4.14.ebuild,
+  files/samba4.initd:
+  Cleaning up 3.4 series, Replacing opts parameter with extra_commands, thanks
+  to Billy DeVincentis <billydv1@verizon.net> bug 381527
 
   27 Aug 2011; Raúl Porcel <armin76@gentoo.org> samba-3.5.11.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #377909

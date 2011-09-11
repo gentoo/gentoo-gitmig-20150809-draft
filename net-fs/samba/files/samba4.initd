@@ -1,9 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/files/samba4.initd,v 1.1 2010/02/28 16:03:04 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/files/samba4.initd,v 1.2 2011/09/11 19:43:56 vostorga Exp $
 
-opts="reload"
+extra_commands="reload"
 
 description="The samba daemon init script"
 description_reload="Reloads the samba daemon"
