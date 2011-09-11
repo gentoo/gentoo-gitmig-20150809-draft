@@ -1,21 +1,28 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-9999.ebuild,v 1.3 2011/08/09 17:27:29 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-9999.ebuild,v 1.4 2011/09/11 14:48:15 alexxy Exp $
 
-EAPI="3"
+EAPI="4"
 
-inherit mount-boot flag-o-matic toolchain-funcs mercurial
+if [[ $PV == *9999 ]]; then
+	KEYWORDS=""
+	REPO="xen-unstable.hg"
+	EHG_REPO_URI="http://xenbits.xensource.com/${REPO}"
+	S="${WORKDIR}/${REPO}"
+	live_eclass="mercurial"
+else
+	KEYWORDS="~amd64 ~x86"
+	SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz"
+fi
+
+inherit mount-boot flag-o-matic toolchain-funcs ${live_eclass}
 
 DESCRIPTION="The Xen virtual machine monitor"
 HOMEPAGE="http://xen.org/"
-REPO="xen-unstable.hg"
-EHG_REPO_URI="http://xenbits.xensource.com/${REPO}"
-S="${WORKDIR}/${REPO}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
-IUSE="debug custom-cflags pae acm flask xsm"
+IUSE="custom-cflags debug flask pae xsm"
 
 RDEPEND="|| ( sys-boot/grub
 		sys-boot/grub-static )"
@@ -25,6 +32,10 @@ RESTRICT="test"
 
 # Approved by QA team in bug #144032
 QA_WX_LOAD="boot/xen-syms-${PV}"
+
+REQUIRED_USE="
+	flask? ( xsm )
+	"
 
 pkg_setup() {
 	if [[ -z ${XEN_TARGET_ARCH} ]]; then
@@ -39,15 +50,11 @@ pkg_setup() {
 		fi
 	fi
 
-	if use xsm ; then
+	if use flask ; then
 		export "XSM_ENABLE=y"
-		use acm && export "ACM_SECURITY=y"
-		if use flask ; then
-			! use acm  && export "FLASK_ENABLE=y"
-			  use acm  && ewarn "Both acm and flask XSM specified, defaulting to acm."
-		fi
-	elif use acm || use flask ; then
-		ewarn "acm and flask require USE=xsm to be set, dropping use flags"
+		export "FLASK_ENABLE=y"
+	elif use xsm ; then
+		export "XSM_ENABLE=y"
 	fi
 }
 
