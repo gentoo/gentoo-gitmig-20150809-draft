@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/vimpc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vimpc/ChangeLog,v 1.2 2011/06/27 15:41:41 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vimpc/ChangeLog,v 1.3 2011/09/11 07:59:38 angelos Exp $
+
+*vimpc-0.03 (11 Sep 2011)
+
+  11 Sep 2011; Christoph Mende <angelos@gentoo.org> +vimpc-0.03.ebuild:
+  Version bump
 
   27 Jun 2011; Christoph Mende <angelos@gentoo.org> vimpc-0.02.2.ebuild,
   vimpc-9999.ebuild:
