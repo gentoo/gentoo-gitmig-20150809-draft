@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmatroska
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.95 2011/09/10 10:13:08 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.96 2011/09/11 09:24:28 maekke Exp $
+
+  11 Sep 2011; Markus Meier <maekke@gentoo.org> libmatroska-1.2.0.ebuild:
+  x86 stable, bug #376399
 
   10 Sep 2011; Christian Ruppert <idl0r@gentoo.org> libmatroska-1.2.0.ebuild:
   Fix dev-libs/libebml dependency, bug 382489.
