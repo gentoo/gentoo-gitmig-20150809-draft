@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/konq-plugins-4.7.0.ebuild,v 1.1 2011/07/27 14:04:30 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/konq-plugins-4.7.0.ebuild,v 1.2 2011/09/11 20:42:32 dilfridge Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ DESCRIPTION="Various plugins for konqueror"
 HOMEPAGE="http://kde.org/"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 IUSE="debug tidy"
 
 DEPEND="
