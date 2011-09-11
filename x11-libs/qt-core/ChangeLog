@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.139 2011/09/08 10:56:05 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.140 2011/09/11 21:22:49 maekke Exp $
+
+  11 Sep 2011; Markus Meier <maekke@gentoo.org> qt-core-4.7.2-r2.ebuild:
+  x86 stable, bug #382171
 
   08 Sep 2011; Alex Alexander <wired@gentoo.org>
   files/blacklist-diginotar-certs.diff:
