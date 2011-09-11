@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/bcat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/ChangeLog,v 1.1 2011/06/23 05:48:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcat/ChangeLog,v 1.2 2011/09/11 05:51:27 graaff Exp $
+
+*bcat-0.6.2 (11 Sep 2011)
+
+  11 Sep 2011; Hans de Graaff <graaff@gentoo.org> +bcat-0.6.2.ebuild:
+  Version bump.
 
 *bcat-0.6.1 (23 Jun 2011)
 
