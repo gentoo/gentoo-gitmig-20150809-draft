@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.126 2011/09/11 09:23:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.127 2011/09/11 17:26:23 armin76 Exp $
+
+  11 Sep 2011; Raúl Porcel <armin76@gentoo.org> libsndfile-1.0.25.ebuild:
+  alpha/ia64/sh/sparc stable wrt #375125
 
   11 Sep 2011; Markus Meier <maekke@gentoo.org> libsndfile-1.0.25.ebuild:
   arm/x86 stable, bug #375125
