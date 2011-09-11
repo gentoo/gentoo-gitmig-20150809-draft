@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5690 2011/09/11 20:02:42 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5691 2011/09/11 22:33:19 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Sep 2011; Pacho Ramos <pacho@gentoo.org> package.mask:
+  Mask >=gnome-extra/nautilus-sendto-3.0 with the rest of Gnome3 as it isn't
+  compatible with 2.32 gnome-bluetooth, bug 381267.
 
   11 Sep 2011; Vlastimil Babka <caster@gentoo.org> package.mask:
   Mask jdk/jre 1.7 until icedtea7 is ready, bug #382485.
