@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/decorator
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.46 2011/09/04 12:36:48 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/ChangeLog,v 1.47 2011/09/11 20:09:27 maekke Exp $
+
+  11 Sep 2011; Markus Meier <maekke@gentoo.org> decorator-3.3.2.ebuild:
+  add ~arm, bug #381709
 
 *decorator-3.3.2 (04 Sep 2011)
 
