@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.196 2011/09/11 18:11:10 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.197 2011/09/11 18:47:50 dilfridge Exp $
+
+*digikam-2.1.0-r2 (11 Sep 2011)
+
+  11 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  digikam-2.1.0-r1.ebuild, +digikam-2.1.0-r2.ebuild:
+  Add version that corresponds to the tag v2.1.0, not the broken release
+  tarball. WARNING: you cannot upgrade from -r1 to -r2!!! Removing keywords
+  from -r1, lets hope not too many people installed it.
 
   11 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   digikam-2.1.0-r1.ebuild:
