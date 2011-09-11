@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.82 2011/09/10 17:22:46 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.83 2011/09/11 15:03:25 alexxy Exp $
+
+*xen-tools-4.1.1-r3 (11 Sep 2011)
+
+  11 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org> -xen-tools-4.1.1-r2.ebuild,
+  +xen-tools-4.1.1-r3.ebuild, xen-tools-9999.ebuild, metadata.xml:
+  Sync live ebuild with 4.1.1, drop acm since its deprecated upstream. Make
+  xend optional. Input from Ian Delaney aka idell4
 
 *xen-tools-4.1.1-r2 (10 Sep 2011)
 

@@ -1,20 +1,29 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r2.ebuild,v 1.1 2011/09/10 17:22:46 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r3.ebuild,v 1.1 2011/09/11 15:03:25 alexxy Exp $
 
 EAPI="3"
 
-inherit flag-o-matic eutils multilib python
+if [[ $PV == *9999 ]]; then
+	KEYWORDS=""
+	REPO="xen-unstable.hg"
+	EHG_REPO_URI="http://xenbits.xensource.com/${REPO}"
+	S="${WORKDIR}/${REPO}"
+	live_eclass="mercurial"
+else
+	KEYWORDS="~amd64 ~x86"
+	SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz"
+	S="${WORKDIR}/xen-${PV}"
+fi
+
+inherit flag-o-matic eutils multilib python ${live_eclass}
 
 DESCRIPTION="Xend daemon and tools"
 HOMEPAGE="http://xen.org/"
-SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz"
-S="${WORKDIR}/xen-${PV}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="doc debug screen custom-cflags pygrub hvm api flask ioemu"
+IUSE="api custom-cflags debug doc flask hvm ioemu pygrub screen xend"
 
 CDEPEND="dev-lang/python
 	dev-python/lxml
@@ -111,7 +120,6 @@ pkg_setup() {
 	fi
 
 	use api     && export "LIBXENAPI_BINDINGS=y"
-	use acm     && export "ACM_SECURITY=y"
 	use flask   && export "FLASK_ENABLE=y"
 }
 
@@ -119,6 +127,13 @@ src_prepare() {
 	sed -e 's/-Wall//' -i Config.mk || die "Couldn't sanitize CFLAGS"
 	# Drop .config
 	sed -e '/-include $(XEN_ROOT)\/.config/d' -i Config.mk || die "Couldn't drop"
+	# Xend
+	if ! use xend; then
+		sed -e 's:xm xen-bugtool xen-python-path xend:xen-bugtool xen-python-path:' \
+			-i tools/misc/Makefile || die "Disabling xend failed"
+		sed -e 's:^XEND_INITD:#XEND_INITD:' \
+			-i tools/examples/Makefile || "Disabling xend failed"
+	fi
 	# if the user *really* wants to use their own custom-cflags, let them
 	if use custom-cflags; then
 		einfo "User wants their own CFLAGS - removing defaults"
@@ -208,7 +223,7 @@ src_install() {
 
 	doman docs/man?/*
 
-	newinitd "${FILESDIR}"/xend.initd-r2 xend \
+	use xend && newinitd "${FILESDIR}"/xend.initd-r2 xend \
 		|| die "Couldn't install xen.initd"
 	newconfd "${FILESDIR}"/xendomains.confd xendomains \
 		|| die "Couldn't install xendomains.confd"
@@ -268,7 +283,10 @@ pkg_postinst() {
 		echo
 		elog "The ioemu use flag has been removed and replaced with hvm."
 	fi
-
+	if use xend; then
+		echo
+		elog "xend capability has been enabled and installed"
+	fi
 	if grep -qsF XENSV= "${ROOT}/etc/conf.d/xend"; then
 		echo
 		elog "xensv is broken upstream (Gentoo bug #142011)."
