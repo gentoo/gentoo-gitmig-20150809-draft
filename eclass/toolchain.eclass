@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.465 2011/09/11 17:14:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.466 2011/09/11 17:48:19 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1093,36 +1093,36 @@ gcc_src_unpack() {
 
 gcc-library-configure() {
 	if is_multilib ; then
-		confgcc="${confgcc} --enable-multilib"
+		confgcc+=" --enable-multilib"
 	else
-		confgcc="${confgcc} --disable-multilib"
+		confgcc+=" --disable-multilib"
 	fi
 }
 
 gcc-compiler-configure() {
 	if is_multilib ; then
-		confgcc="${confgcc} --enable-multilib"
+		confgcc+=" --enable-multilib"
 	else
-		confgcc="${confgcc} --disable-multilib"
+		confgcc+=" --disable-multilib"
 	fi
 
 	if tc_version_is_at_least "4.0" ; then
 		if has mudflap ${IUSE} ; then
-			confgcc="${confgcc} $(use_enable mudflap libmudflap)"
+			confgcc+=" $(use_enable mudflap libmudflap)"
 		else
-			confgcc="${confgcc} --disable-libmudflap"
+			confgcc+=" --disable-libmudflap"
 		fi
 
 		if want_libssp ; then
-			confgcc="${confgcc} --enable-libssp"
+			confgcc+=" --enable-libssp"
 		else
 			export gcc_cv_libc_provides_ssp=yes
-			confgcc="${confgcc} --disable-libssp"
+			confgcc+=" --disable-libssp"
 		fi
 
 		# If we want hardened support with the newer piepatchset for >=gcc 4.4
 		if tc_version_is_at_least 4.4 && want_minispecs ; then
-			confgcc="${confgcc} $(use_enable hardened esp)"
+			confgcc+=" $(use_enable hardened esp)"
 		fi
 
 		if tc_version_is_at_least "4.2" ; then
@@ -1134,14 +1134,14 @@ gcc-compiler-configure() {
 				if ! is_crosscompile || \
 				   $(tc-getCPP ${CTARGET}) -E - <<<"#include <pthread.h>" >& /dev/null
 				then
-					confgcc="${confgcc} $(use_enable openmp libgomp)"
+					confgcc+=" $(use_enable openmp libgomp)"
 				else
 					# Force disable as the configure script can be dumb #359855
-					confgcc="${confgcc} --disable-libgomp"
+					confgcc+=" --disable-libgomp"
 				fi
 			else
 				# For gcc variants where we don't want openmp (e.g. kgcc)
-				confgcc="${confgcc} --disable-libgomp"
+				confgcc+=" --disable-libgomp"
 			fi
 		fi
 
@@ -1156,25 +1156,25 @@ gcc-compiler-configure() {
 		#
 		# This should translate into "/share/gcc-data/${CTARGET}/${GCC_CONFIG_VER}/python"
 		if tc_version_is_at_least "4.4" ; then
-			confgcc="${confgcc} --with-python-dir=${DATAPATH/$PREFIX/}/python"
+			confgcc+=" --with-python-dir=${DATAPATH/$PREFIX/}/python"
 		fi
 	fi
 
 	# For newer versions of gcc, use the default ("release"), because no
 	# one (even upstream apparently) tests with it disabled. #317217
 	if tc_version_is_at_least 4 || [[ -n ${GCC_CHECKS_LIST} ]] ; then
-		confgcc="${confgcc} --enable-checking=${GCC_CHECKS_LIST:-release}"
+		confgcc+=" --enable-checking=${GCC_CHECKS_LIST:-release}"
 	else
-		confgcc="${confgcc} --disable-checking"
+		confgcc+=" --disable-checking"
 	fi
 
 	# GTK+ is preferred over xlib in 3.4.x (xlib is unmaintained
 	# right now). Much thanks to <csm@gnu.org> for the heads up.
 	# Travis Tilley <lv@gentoo.org>	 (11 Jul 2004)
 	if ! is_gcj ; then
-		confgcc="${confgcc} --disable-libgcj"
+		confgcc+=" --disable-libgcj"
 	elif use gtk ; then
-		confgcc="${confgcc} --enable-java-awt=gtk"
+		confgcc+=" --enable-java-awt=gtk"
 	fi
 
 	case $(tc-arch) in
@@ -1187,13 +1187,13 @@ gcc-compiler-configure() {
 				# Remove endian ('l' / 'eb')
 				[[ ${arm_arch} == *l  ]] && arm_arch=${arm_arch%l}
 				[[ ${arm_arch} == *eb ]] && arm_arch=${arm_arch%eb}
-				confgcc="${confgcc} --with-arch=${arm_arch}"
+				confgcc+=" --with-arch=${arm_arch}"
 			fi
 
 			# Enable hardvfp
 			if [[ ${CTARGET##*-} == *eabi ]] && [[ $(tc-is-hardfloat) == yes ]] && \
 			    tc_version_is_at_least "4.5" ; then
-			        confgcc="${confgcc} --with-float=hard"
+			        confgcc+=" --with-float=hard"
 			fi
 			;;
 		# Add --with-abi flags to set default MIPS ABI
@@ -1201,16 +1201,16 @@ gcc-compiler-configure() {
 			local mips_abi=""
 			[[ ${DEFAULT_ABI} == n64 ]] && mips_abi="--with-abi=64"
 			[[ ${DEFAULT_ABI} == n32 ]] && mips_abi="--with-abi=n32"
-			[[ -n ${mips_abi} ]] && confgcc="${confgcc} ${mips_abi}"
+			[[ -n ${mips_abi} ]] && confgcc+=" ${mips_abi}"
 			;;
 		# Default arch for x86 is normally i386, lets give it a bump
 		# since glibc will do so based on CTARGET anyways
 		x86)
-			confgcc="${confgcc} --with-arch=${CTARGET%%-*}"
+			confgcc+=" --with-arch=${CTARGET%%-*}"
 			;;
 		# Enable sjlj exceptions for backward compatibility on hppa
 		hppa)
-			[[ ${GCCMAJOR} == "3" ]] && confgcc="${confgcc} --enable-sjlj-exceptions"
+			[[ ${GCCMAJOR} == "3" ]] && confgcc+=" --enable-sjlj-exceptions"
 			;;
 		# Set up defaults based on current CFLAGS
 		ppc)
@@ -1227,7 +1227,7 @@ gcc-compiler-configure() {
 	if is_objc || is_objcxx ; then
 		GCC_LANG="${GCC_LANG},objc"
 		if tc_version_is_at_least "4.0" ; then
-			use objc-gc && confgcc="${confgcc} --enable-objc-gc"
+			use objc-gc && confgcc+=" --enable-objc-gc"
 		fi
 		is_objcxx && GCC_LANG="${GCC_LANG},obj-c++"
 	fi
@@ -1262,7 +1262,7 @@ gcc_do_configure() {
 	local confgcc
 
 	# Set configuration based on path variables
-	confgcc="${confgcc} \
+	confgcc+=" \
 		--prefix=${PREFIX} \
 		--bindir=${BINPATH} \
 		--includedir=${INCLUDEPATH} \
@@ -1275,41 +1275,41 @@ gcc_do_configure() {
 	# non-Darwin we screw up the behaviour this eclass relies on.  We in
 	# particular need this over --libdir for bug #255315.
 	[[ ${CTARGET} == *-darwin* ]] && \
-		confgcc="${confgcc} --enable-version-specific-runtime-libs"
+		confgcc+=" --enable-version-specific-runtime-libs"
 
 	# All our cross-compile logic goes here !  woo !
-	confgcc="${confgcc} --host=${CHOST}"
+	confgcc+=" --host=${CHOST}"
 	if is_crosscompile || tc-is-cross-compiler ; then
 		# Straight from the GCC install doc:
 		# "GCC has code to correctly determine the correct value for target
 		# for nearly all native systems. Therefore, we highly recommend you
 		# not provide a configure target when configuring a native compiler."
-		confgcc="${confgcc} --target=${CTARGET}"
+		confgcc+=" --target=${CTARGET}"
 	fi
-	[[ -n ${CBUILD} ]] && confgcc="${confgcc} --build=${CBUILD}"
+	[[ -n ${CBUILD} ]] && confgcc+=" --build=${CBUILD}"
 
 	# ppc altivec support
-	confgcc="${confgcc} $(use_enable altivec)"
+	confgcc+=" $(use_enable altivec)"
 
 	# gcc has fixed-point arithmetic support in 4.3 for mips targets that can
 	# significantly increase compile time by several hours.  This will allow
 	# users to control this feature in the event they need the support.
-	tc_version_is_at_least "4.3" && confgcc="${confgcc} $(use_enable fixed-point)"
+	tc_version_is_at_least "4.3" && confgcc+=" $(use_enable fixed-point)"
 
 	# Graphite support was added in 4.4, which depends on external libraries
 	# for optimizations.  Up to 4.6 we use cloog-ppl (cloog fork with Parma PPL
 	# backend).  Later versions will use upstream cloog with the ISL backend.  We
 	# disable the PPL version check so we can use >=ppl-0.11.
 	if tc_version_is_at_least "4.4"; then
-		confgcc="${confgcc} $(use_with graphite ppl)"
-		confgcc="${confgcc} $(use_with graphite cloog)"
+		confgcc+=" $(use_with graphite ppl)"
+		confgcc+=" $(use_with graphite cloog)"
 		if use graphite; then
-			confgcc="${confgcc} --disable-ppl-version-check"
+			confgcc+=" --disable-ppl-version-check"
 			# this will be removed when cloog-ppl-0.15.10 goes stable
 			if has_version '>=dev-libs/cloog-ppl-0.15.10'; then
-				confgcc="${confgcc} --with-cloog-include=/usr/include/cloog-ppl"
+				confgcc+=" --with-cloog-include=/usr/include/cloog-ppl"
 			else
-				confgcc="${confgcc} --with-cloog-include=/usr/include/cloog"
+				confgcc+=" --with-cloog-include=/usr/include/cloog"
 			fi
 		fi
 	fi
@@ -1317,21 +1317,21 @@ gcc_do_configure() {
 	# LTO support was added in 4.5, which depends upon elfutils.  This allows
 	# users to enable that option, and pull in the additional library.  In 4.6,
 	# the dependency is no longer required.
-	[[ ${GCC_BRANCH_VER} == 4.5 ]] && confgcc="${confgcc} $(use_enable lto)"
-	[[ ${GCC_BRANCH_VER} > 4.5 ]] && confgcc="${confgcc} --enable-lto"
+	[[ ${GCC_BRANCH_VER} == 4.5 ]] && confgcc+=" $(use_enable lto)"
+	[[ ${GCC_BRANCH_VER} > 4.5 ]] && confgcc+=" --enable-lto"
 
-	[[ $(tc-is-softfloat) == "yes" ]] && confgcc="${confgcc} --with-float=soft"
-	[[ $(tc-is-hardfloat) == "yes" ]] && confgcc="${confgcc} --with-float=hard"
+	[[ $(tc-is-softfloat) == "yes" ]] && confgcc+=" --with-float=soft"
+	[[ $(tc-is-hardfloat) == "yes" ]] && confgcc+=" --with-float=hard"
 
 	# Native Language Support
 	if use nls ; then
-		confgcc="${confgcc} --enable-nls --without-included-gettext"
+		confgcc+=" --enable-nls --without-included-gettext"
 	else
-		confgcc="${confgcc} --disable-nls"
+		confgcc+=" --disable-nls"
 	fi
 
 	# reasonably sane globals (hopefully)
-	confgcc="${confgcc} \
+	confgcc+=" \
 		--with-system-zlib \
 		--disable-werror \
 		--enable-secureplt"
@@ -1343,7 +1343,7 @@ gcc_do_configure() {
 	# if not specified, assume we are building for a target that only
 	# requires C support
 	GCC_LANG=${GCC_LANG:-c}
-	confgcc="${confgcc} --enable-languages=${GCC_LANG}"
+	confgcc+=" --enable-languages=${GCC_LANG}"
 
 	if is_crosscompile ; then
 		# When building a stage1 cross-compiler (just C compiler), we have to
@@ -1359,59 +1359,59 @@ gcc_do_configure() {
 			*-uclibc*)		 needed_libc=uclibc;;
 			*-cygwin)        needed_libc=cygwin;;
 			mingw*|*-mingw*) needed_libc=mingw-runtime;;
-			avr)			 confgcc="${confgcc} --enable-shared --disable-threads";;
+			avr)			 confgcc+=" --enable-shared --disable-threads";;
 		esac
 		if [[ -n ${needed_libc} ]] ; then
 			if ! has_version ${CATEGORY}/${needed_libc} ; then
-				confgcc="${confgcc} --disable-shared --disable-threads --without-headers"
+				confgcc+=" --disable-shared --disable-threads --without-headers"
 			elif built_with_use --hidden --missing false ${CATEGORY}/${needed_libc} crosscompile_opts_headers-only ; then
-				confgcc="${confgcc} --disable-shared --with-sysroot=${PREFIX}/${CTARGET}"
+				confgcc+=" --disable-shared --with-sysroot=${PREFIX}/${CTARGET}"
 			else
-				confgcc="${confgcc} --with-sysroot=${PREFIX}/${CTARGET}"
+				confgcc+=" --with-sysroot=${PREFIX}/${CTARGET}"
 			fi
 		fi
 
 		if [[ ${GCCMAJOR}.${GCCMINOR} > 4.1 ]] ; then
-			confgcc="${confgcc} --disable-bootstrap"
+			confgcc+=" --disable-bootstrap"
 		fi
 	else
 		if tc-is-static-only ; then
-			confgcc="${confgcc} --disable-shared"
+			confgcc+=" --disable-shared"
 		else
-			confgcc="${confgcc} --enable-shared"
+			confgcc+=" --enable-shared"
 		fi
 		case ${CHOST} in
 			mingw*|*-mingw*|*-cygwin)
-				confgcc="${confgcc} --enable-threads=win32" ;;
+				confgcc+=" --enable-threads=win32" ;;
 			*)
-				confgcc="${confgcc} --enable-threads=posix" ;;
+				confgcc+=" --enable-threads=posix" ;;
 		esac
 	fi
 	# __cxa_atexit is "essential for fully standards-compliant handling of
 	# destructors", but apparently requires glibc.
 	case ${CTARGET} in
 	*-uclibc*)
-		confgcc="${confgcc} --disable-__cxa_atexit --enable-target-optspace $(use_enable nptl tls)"
-		[[ ${GCCMAJOR}.${GCCMINOR} == 3.3 ]] && confgcc="${confgcc} --enable-sjlj-exceptions"
+		confgcc+=" --disable-__cxa_atexit --enable-target-optspace $(use_enable nptl tls)"
+		[[ ${GCCMAJOR}.${GCCMINOR} == 3.3 ]] && confgcc+=" --enable-sjlj-exceptions"
 		if tc_version_is_at_least 3.4 && [[ ${GCCMAJOR}.${GCCMINOR} < 4.3 ]] ; then
-			confgcc="${confgcc} --enable-clocale=uclibc"
+			confgcc+=" --enable-clocale=uclibc"
 		fi
 		;;
 	*-elf|*-eabi)
-		confgcc="${confgcc} --with-newlib"
+		confgcc+=" --with-newlib"
 		;;
 	*-gnu*)
-		confgcc="${confgcc} --enable-__cxa_atexit"
-		confgcc="${confgcc} --enable-clocale=gnu"
+		confgcc+=" --enable-__cxa_atexit"
+		confgcc+=" --enable-clocale=gnu"
 		;;
 	*-freebsd*)
-		confgcc="${confgcc} --enable-__cxa_atexit"
+		confgcc+=" --enable-__cxa_atexit"
 		;;
 	*-solaris*)
-		confgcc="${confgcc} --enable-__cxa_atexit"
+		confgcc+=" --enable-__cxa_atexit"
 		;;
 	esac
-	[[ ${GCCMAJOR}.${GCCMINOR} < 3.4 ]] && confgcc="${confgcc} --disable-libunwind-exceptions"
+	[[ ${GCCMAJOR}.${GCCMINOR} < 3.4 ]] && confgcc+=" --disable-libunwind-exceptions"
 
 	# create a sparc*linux*-{gcc,g++} that can handle -m32 and -m64 (biarch)
 	if [[ ${CTARGET} == sparc*linux* ]] \
@@ -1419,7 +1419,7 @@ gcc_do_configure() {
 		&& ! is_crosscompile \
 		&& [[ ${GCCMAJOR}.${GCCMINOR} > 4.2 ]]
 	then
-		confgcc="${confgcc} --enable-targets=all"
+		confgcc+=" --enable-targets=all"
 	fi
 
 	tc_version_is_at_least 4.3 && set -- "$@" \
