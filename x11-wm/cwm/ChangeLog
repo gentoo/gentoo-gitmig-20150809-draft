@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/cwm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.22 2011/09/11 21:41:23 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.23 2011/09/11 22:03:09 xmw Exp $
+
+  11 Sep 2011; Michael Weber <xmw@gentoo.org> cwm-20110908.ebuild,
+  +files/cwm.desktop:
+  Added .desktop file for login manager
 
 *cwm-20110908 (11 Sep 2011)
 
