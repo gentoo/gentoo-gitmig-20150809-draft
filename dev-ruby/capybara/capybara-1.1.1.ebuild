@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capybara/capybara-1.1.1.ebuild,v 1.1 2011/09/10 08:32:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capybara/capybara-1.1.1.ebuild,v 1.2 2011/09/11 10:31:58 graaff Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ree18"
@@ -23,7 +23,7 @@ IUSE="test"
 
 # Restrict tests until launchy is part of the main tree. With it
 # installed all tests should pass.
-#RESTRICT="test"
+RESTRICT="test"
 
 #ruby_add_bdepend "test? ( dev-ruby/rspec:2 dev-ruby/launchy www-client/firefox )"
 
