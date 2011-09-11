@@ -1,6 +1,13 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.210 2011/09/09 20:29:27 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.211 2011/09/11 13:36:08 vostorga Exp $
+
+*liferea-1.7.6-r1 (11 Sep 2011)
+
+  11 Sep 2011; <vostorga@gentoo.org> -liferea-1.7.6.ebuild,
+  +liferea-1.7.6-r1.ebuild, +files/liferea-1.7.6-unread-feeds.patch:
+  Reverting upstream commit 640eff3e418b786468208643d2f93718f7fa9da0 to avoid
+  always unread feeds, bug #381117
 
   09 Sep 2011; Víctor Ostorga <vostorga@gentoo.org>
   files/liferea-1.6.6b-libnotify-0.7.patch:
