@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-2.1.0-r1.ebuild,v 1.1 2011/09/09 19:45:03 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-2.1.0-r1.ebuild,v 1.2 2011/09/11 18:11:10 dilfridge Exp $
 
 EAPI=4
 
@@ -28,6 +28,7 @@ SLOT="4"
 IUSE="addressbook debug doc gphoto2 mysql semantic-desktop themedesigner +thumbnails video"
 
 CDEPEND="
+	!!<media-gfx/digikam-2.1.0-r1
 	$(add_kdebase_dep kdelibs 'semantic-desktop=')
 	$(add_kdebase_dep libkdcraw)
 	$(add_kdebase_dep libkexiv2)
