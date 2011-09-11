@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.82 2011/08/13 13:32:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.83 2011/09/11 13:10:30 pva Exp $
+
+*vzctl-3.0.28.3-r1 (11 Sep 2011)
+
+  11 Sep 2011; Peter Volkov <pva@gentoo.org> +vzctl-3.0.28.3-r1.ebuild,
+  +files/vzctl-3.0.28.3-vzeventd-stop.patch:
+  Fixed vzeventd failure to stop, bug #382213 thank Vladimir Berezhnoy for
+  report.
 
   13 Aug 2011; Peter Volkov <pva@gentoo.org> -vzctl-3.0.26.3.ebuild,
   -vzctl-3.0.27.ebuild, -vzctl-3.0.28.2.ebuild, vzctl-3.0.28.3.ebuild:

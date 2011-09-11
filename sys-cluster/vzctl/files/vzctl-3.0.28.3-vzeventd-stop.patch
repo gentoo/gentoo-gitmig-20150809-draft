@@ -1,0 +1,37 @@
+From cf5b82e9758a96f493469caade1b447552415c5a Mon Sep 17 00:00:00 2001
+From: Peter Volkov <pva@gentoo.org>
+Date: Sun, 11 Sep 2011 15:47:22 +0400
+Subject: [PATCH] etc/init.d/vzeventd-gentoo.in: fix service stop
+
+vzeventd does not create pid file. Drop its mentioning from init script
+to fix /etc/init.d/vzeventd stop.
+
+https://bugs.gentoo.org/show_bug.cgi?id=382213
+---
+ etc/init.d/vzeventd-gentoo.in |    4 +---
+ 1 files changed, 1 insertions(+), 3 deletions(-)
+
+diff --git a/etc/init.d/vzeventd-gentoo.in b/etc/init.d/vzeventd-gentoo.in
+index 2c0da26..d7abcdf 100644
+--- a/etc/init.d/vzeventd-gentoo.in
++++ b/etc/init.d/vzeventd-gentoo.in
+@@ -41,7 +41,6 @@ start() {
+ 
+ 	ebegin "Starting vzeventd"
+ 	start-stop-daemon --start --exec ${VZEVENTD} \
+-		--pidfile /var/run/vzeventd.pid \
+ 		-- ${VZEVENTD_OPTS}
+ 	eend $?
+ }
+@@ -49,7 +48,6 @@ start() {
+ stop() {
+ 	check_config || return
+ 	ebegin "Stopping vzeventd"
+-	start-stop-daemon --stop --exec ${VZEVENTD} \
+-		--pidfile /var/run/vzeventd.pid
++	start-stop-daemon --stop --exec ${VZEVENTD}
+ 	eend $?
+ }
+-- 
+1.7.3.4
+
