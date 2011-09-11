@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Digest-Perl-MD5
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-Perl-MD5/ChangeLog,v 1.1 2011/09/11 02:00:27 robbat2 Exp $
+
+*Digest-Perl-MD5-1.800.0 (11 Sep 2011)
+
+  11 Sep 2011; Robin H. Johnson <robbat2@gentoo.org>
+  +Digest-Perl-MD5-1.800.0.ebuild, +metadata.xml:
+  Initial commit. Dependency for new version of
+  dev-perl/Spreadsheet-ParseExcel.
+
