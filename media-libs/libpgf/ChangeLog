@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libpgf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpgf/ChangeLog,v 1.7 2011/07/27 21:33:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpgf/ChangeLog,v 1.8 2011/09/11 20:03:16 dilfridge Exp $
+
+*libpgf-6.11.32 (11 Sep 2011)
+
+  11 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org> libpgf-6.11.28.ebuild,
+  +libpgf-6.11.32.ebuild:
+  Version bump because of ppc bugfixes; remove ppc keyword in previous version
 
 *libpgf-6.11.28 (27 Jul 2011)
 
