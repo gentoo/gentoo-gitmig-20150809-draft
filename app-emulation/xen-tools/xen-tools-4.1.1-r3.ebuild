@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r3.ebuild,v 1.1 2011/09/11 15:03:25 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r3.ebuild,v 1.2 2011/09/11 21:27:42 alexxy Exp $
 
 EAPI="3"
 
@@ -223,8 +223,9 @@ src_install() {
 
 	doman docs/man?/*
 
-	use xend && newinitd "${FILESDIR}"/xend.initd-r2 xend \
-		|| die "Couldn't install xen.initd"
+	if use xend; then
+		newinitd "${FILESDIR}"/xend.initd-r2 xend || die "Couldn't install xen.initd"
+	fi
 	newconfd "${FILESDIR}"/xendomains.confd xendomains \
 		|| die "Couldn't install xendomains.confd"
 	newinitd "${FILESDIR}"/xendomains.initd-r2 xendomains \
