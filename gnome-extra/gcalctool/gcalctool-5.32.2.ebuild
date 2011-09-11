@@ -1,11 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/gcalctool-5.32.2.ebuild,v 1.7 2011/03/23 08:11:09 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/gcalctool-5.32.2.ebuild,v 1.8 2011/09/11 09:12:14 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
+GNOME_TARBALL_SUFFIX="bz2"
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="A calculator application for GNOME"
 HOMEPAGE="http://live.gnome.org/Gcalctool http://calctool.sourceforge.net/"
@@ -30,4 +31,11 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		--with-gtk=2.0"
 	DOCS="AUTHORS ChangeLog* NEWS README"
+}
+
+src_prepare() {
+	gnome2_src_prepare
+
+	# Fix compilation problems due missing header, bug #356563
+	epatch "${FILESDIR}/${PN}-5.32.2-missing-header.patch"
 }

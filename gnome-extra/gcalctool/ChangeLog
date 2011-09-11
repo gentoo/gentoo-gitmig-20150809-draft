@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gcalctool
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.217 2011/08/19 11:20:17 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.218 2011/09/11 09:12:14 pacho Exp $
+
+  11 Sep 2011; Pacho Ramos <pacho@gentoo.org> gcalctool-5.32.2.ebuild,
+  +files/gcalctool-5.32.2-missing-header.patch:
+  Fix compilation problems due missing header, bug #356563 by pp--, Bradley
+  Broom and Balint SZENTE.
 
 *gcalctool-6.0.2 (19 Aug 2011)
 
