@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wstools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wstools/ChangeLog,v 1.3 2011/09/11 09:25:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wstools/ChangeLog,v 1.4 2011/09/11 18:03:25 armin76 Exp $
+
+  11 Sep 2011; Raúl Porcel <armin76@gentoo.org> wstools-0.3.ebuild:
+  Add ~alpha/~ia64/~s390/~sh/~sparc wrt #381749
 
   11 Sep 2011; Markus Meier <maekke@gentoo.org> wstools-0.3.ebuild:
   add ~arm, bug #381749
