@@ -1,6 +1,15 @@
 # ChangeLog for dev-vcs/monotone
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/ChangeLog,v 1.18 2011/09/05 13:33:03 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/ChangeLog,v 1.19 2011/09/11 11:26:01 pva Exp $
+
+*monotone-1.0-r1 (11 Sep 2011)
+
+  11 Sep 2011; Peter Volkov <pva@gentoo.org> monotone-1.0.ebuild,
+  +monotone-1.0-r1.ebuild, +files/monotone-1.0-bash-completion-tests.patch,
+  +files/monotone-1.0-botan-1.10.patch:
+  Fix bash-completion test. Drop emacs USE flag (bug #382177); fix
+  bash-completion installation (bug #382191), fix build issue with >botan-1.10
+  (bug #380257), thank Martin von Gagern for all this reports and fixes.
 
 *monotone-1.0 (05 Sep 2011)
 
