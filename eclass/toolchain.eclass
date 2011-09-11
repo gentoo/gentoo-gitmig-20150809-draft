@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.464 2011/08/22 23:03:16 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.465 2011/09/11 17:14:24 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -2369,13 +2369,7 @@ setup_multilib_osdirnames() {
 	is_multilib || return 0
 
 	local config
-	local libdirs
-
-	if [[ ${SYMLINK_LIB} == "yes" ]] ; then
-		libdirs="../lib64 ../lib32"
-	else
-		libdirs="../lib64 ../lib"
-	fi
+	local libdirs="../lib64 ../lib32"
 
 	# this only makes sense for some Linux targets
 	case ${CTARGET} in
@@ -2387,8 +2381,18 @@ setup_multilib_osdirnames() {
 	esac
 	config+="/t-linux64"
 
-	einfo "updating multilib directories to be: ${libdirs}"
-	sed -i -e "/^MULTILIB_OSDIRNAMES/s:=.*:= ${libdirs}:" "${S}"/gcc/config/${config} || die
+	if [[ ${SYMLINK_LIB} == "yes" ]] ; then
+		einfo "updating multilib directories to be: ${libdirs}"
+		if tc_version_is_at_least 4.7 && [[ ${CTARGET} == x86_64*-linux* ]] ; then
+			set -- -e '/^MULTILIB_OSDIRNAMES.*lib32/s:[$][(]if.*):../lib32:'
+		else
+			set -- -e "/^MULTILIB_OSDIRNAMES/s:=.*:= ${libdirs}:"
+		fi
+	else
+		einfo "using upstream multilib; disabling lib32 autodetection"
+		set -- -r -e 's:[$][(]if.*,(.*)[)]:\1:'
+	fi
+	sed -i "$@" "${S}"/gcc/config/${config} || die
 }
 
 disable_multilib_libjava() {
