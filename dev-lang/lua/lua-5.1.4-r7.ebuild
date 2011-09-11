@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.4-r7.ebuild,v 1.1 2011/01/09 17:33:55 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.4-r7.ebuild,v 1.2 2011/09/11 02:23:51 rafaelmartins Exp $
 
 EAPI=3
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="+deprecated emacs readline static"
 
-DEPEND="readline? ( sys-libs/readline )"
+DEPEND="readline? ( sys-libs/readline )
+	sys-devel/libtool"
 RDEPEND="${DEPEND}"
 PDEPEND="emacs? ( app-emacs/lua-mode )"
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/lua
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.150 2011/01/09 17:33:55 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.151 2011/09/11 02:23:51 rafaelmartins Exp $
+
+  11 Sep 2011; Rafael G. Martins <rafaelmartins@gentoo.org> lua-5.1.4.ebuild,
+  lua-5.1.4-r4.ebuild, lua-5.1.4-r6.ebuild, lua-5.1.4-r7.ebuild:
+  Added missing DEPEND sys-devel/libtool (bug #382501).
 
 *lua-5.1.4-r7 (09 Jan 2011)
 
