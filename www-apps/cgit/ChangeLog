@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/cgit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/ChangeLog,v 1.8 2011/08/03 18:17:38 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/ChangeLog,v 1.9 2011/09/11 11:39:20 pva Exp $
+
+*cgit-0.9.0.2-r1 (11 Sep 2011)
+
+  11 Sep 2011; Peter Volkov <pva@gentoo.org> -cgit-0.9.0.1.ebuild,
+  -cgit-0.9.0.2.ebuild, +cgit-0.9.0.2-r1.ebuild,
+  +files/cgit-0.9.0.2-fix-xss.patch, -cgit-9999.ebuild:
+  Fix XSS vulnerability in rename hint, bug #378803, thank Nikoli for this job.
+  Drop old.
 
 *cgit-0.9.0.2 (03 Aug 2011)
 

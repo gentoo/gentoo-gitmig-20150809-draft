@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-0.9.0.1.ebuild,v 1.1 2011/06/27 08:58:08 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-0.9.0.2-r1.ebuild,v 1.1 2011/09/11 11:39:20 pva Exp $
 
 EAPI="4"
 
@@ -44,6 +44,8 @@ pkg_setup() {
 src_prepare() {
 	rmdir git || die
 	mv "${WORKDIR}"/git-"${GIT_V}" git || die
+
+	epatch "${FILESDIR}"/${P}-fix-xss.patch
 
 	sed -i \
 		-e "/^CACHE_ROOT =/s:/var/cache/cgit:${CGIT_CACHEDIR}:" \
