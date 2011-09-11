@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13036 2011/09/09 17:04:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13037 2011/09/11 02:59:58 robbat2 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -984,12 +984,6 @@ sys-libs/newlib
 # Mike Pagano <mpagano@gentoo.org> (17 Dec 2008)
 # Masked waiting on >=portage-2.2* to be unmasked
 >=app-portage/portpeek-2
-
-# Robin H. Johnson <robbat2@gentoo.org> (06 Dec 2008)
-# The init.d scripts and default rules need updating and serious testing.
-# Do not use the old ones with the new versions of audit, you will get weird
-# crashes.
->sys-process/audit-1.7.4
 
 # Peter Volkov <pva@gentoo.org> (16 Nov 2008)
 # The development branch, to be unmasked when out of beta by upstream.
