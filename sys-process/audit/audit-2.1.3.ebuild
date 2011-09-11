@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-2.1.3.ebuild,v 1.1 2011/09/10 19:06:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/audit-2.1.3.ebuild,v 1.2 2011/09/11 02:58:55 robbat2 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -50,7 +50,6 @@ src_prepare() {
 		"${S}"/configure.ac || die
 	sed -i \
 		-e 's,system-config-audit,,g' \
-		-e '/^SUBDIRS/s,\\$,,g' \
 		"${S}"/Makefile.am || die
 	rm -rf "${S}"/system-config-audit
 
@@ -126,8 +125,8 @@ src_install() {
 	docinto contrib/plugin
 	dodoc contrib/plugin/*
 
-	newinitd "${FILESDIR}"/auditd-init.d-1.7.17 auditd
-	newconfd "${FILESDIR}"/auditd-conf.d-1.2.3 auditd
+	newinitd "${FILESDIR}"/auditd-init.d-2.1.3 auditd
+	newconfd "${FILESDIR}"/auditd-conf.d-2.1.3 auditd
 
 	# things like shadow use this so we need to be in /
 	dodir /$(get_libdir)
@@ -139,7 +138,8 @@ src_install() {
 
 	# Gentoo rules
 	insinto /etc/audit/
-	doins "${FILESDIR}"/audit.rules*
+	newins "${FILESDIR}"/audit.rules-2.1.3 audit.rules
+	doins "${FILESDIR}"/audit.rules.stop*
 
 	# audit logs go here
 	keepdir /var/log/audit/
