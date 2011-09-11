@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-2.0.4.ebuild,v 1.1 2011/07/26 16:40:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-2.0.4.ebuild,v 1.2 2011/09/11 19:24:24 ssuominen Exp $
 
 EAPI=4
-inherit eutils libtool
+inherit autotools eutils libtool
 
 MY_P=${PN}2-${PV}
 
@@ -32,6 +32,8 @@ S=${WORKDIR}/${MY_P}
 DOCS=( AUTHORS ChangeLog NEWS NOTICE README )
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-fix_math_test.patch
+	eautoreconf # only for -fix_math_test.patch
 	epunt_cxx
 	elibtoolize
 }
