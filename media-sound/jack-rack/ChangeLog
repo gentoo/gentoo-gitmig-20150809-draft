@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/jack-rack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.41 2011/08/07 03:13:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-rack/ChangeLog,v 1.42 2011/09/11 19:33:13 ssuominen Exp $
+
+  11 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> -jack-rack-1.4.6.ebuild,
+  -files/jack-rack-1.4.6-no-disable-deprecated.patch:
+  [This is a placeholder. Please ignore.]
 
   07 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   jack-rack-1.4.7-r1.ebuild:

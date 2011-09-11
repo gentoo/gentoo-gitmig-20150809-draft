@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sonic-visualiser
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/ChangeLog,v 1.20 2011/07/29 09:35:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/ChangeLog,v 1.21 2011/09/11 19:31:11 ssuominen Exp $
+
+  11 Sep 2011; Samuli Suominen <ssuominen@gentoo.org>
+  -sonic-visualiser-1.7.2.ebuild:
+  [This is a placeholder. Please ignore.]
 
   29 Jul 2011; Samuli Suominen <ssuominen@gentoo.org>
   sonic-visualiser-1.8.ebuild:
