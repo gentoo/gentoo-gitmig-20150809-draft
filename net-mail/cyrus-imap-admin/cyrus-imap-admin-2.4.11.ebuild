@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.4.11.ebuild,v 1.1 2011/09/09 07:25:34 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.4.11.ebuild,v 1.2 2011/09/11 13:14:59 eras Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ DEPEND="$RDEPEND"
 S="${WORKDIR}/cyrus-imapd-${MY_PV}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-ldflags.patch"
+	epatch "${FILESDIR}/${PN}-2.4.10-ldflags.patch"
 }
 
 src_configure() {
