@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.103 2011/09/07 09:35:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.104 2011/09/11 09:26:27 maekke Exp $
+
+  11 Sep 2011; Markus Meier <maekke@gentoo.org> ntop-4.0.3.ebuild:
+  x86 stable, bug #382091
 
   07 Sep 2011; Tony Vroon <chainsaw@gentoo.org> ntop-4.0.3.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
