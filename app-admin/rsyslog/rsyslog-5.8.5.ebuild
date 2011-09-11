@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.5.ebuild,v 1.5 2011/09/09 18:17:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-5.8.5.ebuild,v 1.6 2011/09/11 09:28:27 maekke Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.rsyslog.com/files/download/${PN}/${P}.tar.gz
 	zeromq?	( https://github.com/aggregateknowledge/rsyslog-zeromq/tarball/44b551abc29dd5b541884bd51b45b413855a93d8 -> ${PN}-zeromq.tar.gz )"
 
 LICENSE="GPL-3 LGPL-3"
-KEYWORDS="amd64 ~arm hppa ~sparc ~x86"
+KEYWORDS="amd64 ~arm hppa ~sparc x86"
 SLOT="0"
 IUSE="dbi debug doc extras gnutls kerberos mysql oracle postgres relp snmp static-libs zeromq zlib"
 
