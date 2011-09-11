@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.118 2011/09/05 18:41:45 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.119 2011/09/11 20:10:14 maekke Exp $
+
+  11 Sep 2011; Markus Meier <maekke@gentoo.org> maildrop-2.5.4.ebuild:
+  arm stable, bug #376563
 
   05 Sep 2011; Eray Aslan <eras@gentoo.org>
   files/maildrop-2.5.4-reformime.patch:
