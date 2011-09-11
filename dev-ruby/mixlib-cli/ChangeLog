@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/mixlib-cli
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mixlib-cli/ChangeLog,v 1.1 2010/07/03 11:58:53 hollow Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mixlib-cli/ChangeLog,v 1.2 2011/09/11 06:31:27 graaff Exp $
+
+*mixlib-cli-1.2.2 (11 Sep 2011)
+
+  11 Sep 2011; Hans de Graaff <graaff@gentoo.org> +mixlib-cli-1.2.2.ebuild:
+  Version bump.
 
 *mixlib-cli-1.2.0 (03 Jul 2010)
 
