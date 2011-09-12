@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r3.ebuild,v 1.2 2011/09/11 21:27:42 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r4.ebuild,v 1.1 2011/09/12 18:59:01 alexxy Exp $
 
 EAPI="3"
 
@@ -12,7 +12,9 @@ if [[ $PV == *9999 ]]; then
 	live_eclass="mercurial"
 else
 	KEYWORDS="~amd64 ~x86"
-	SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz"
+	XEN_EXTFILES_URL="http://xenbits.xensource.com/xen-extfiles"
+	SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz \
+	$XEN_EXTFILES_URL/ipxe-git-v1.0.0.tar.gz"
 	S="${WORKDIR}/xen-${PV}"
 fi
 
@@ -124,6 +126,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	cp "$DISTDIR/ipxe-git-v1.0.0.tar.gz" tools/firmware/etherboot/ipxe.tar.gz
 	sed -e 's/-Wall//' -i Config.mk || die "Couldn't sanitize CFLAGS"
 	# Drop .config
 	sed -e '/-include $(XEN_ROOT)\/.config/d' -i Config.mk || die "Couldn't drop"
@@ -171,6 +174,12 @@ src_prepare() {
 
 	# Do not strip binaries
 	epatch "${FILESDIR}/${PN}-3.3.0-nostrip.patch"
+
+	# Prevent the downloading of ipxe
+	sed -e 's:^\tif ! wget -O _$T:#\tif ! wget -O _$T:' \
+		-e 's:^\tfi:#\tfi:' -i \
+		-e 's:^\tmv _$T $T:#\tmv _$T $T:' \
+		-i tools/firmware/etherboot/Makefile || die
 }
 
 src_compile() {

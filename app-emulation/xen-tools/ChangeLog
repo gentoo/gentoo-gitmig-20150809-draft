@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.84 2011/09/11 21:27:42 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.85 2011/09/12 18:59:01 alexxy Exp $
+
+*xen-tools-4.1.1-r4 (12 Sep 2011)
+
+  12 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org> -xen-tools-4.1.1-r3.ebuild,
+  +xen-tools-4.1.1-r4.ebuild:
+  Prevent downloading during compile, fixes bug #366125; Thanks to Ian Delaney
+  aka idella4
 
   11 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org> xen-tools-4.1.1-r3.ebuild,
   xen-tools-9999.ebuild:
