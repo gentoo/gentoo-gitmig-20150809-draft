@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.4.7.ebuild,v 1.8 2011/06/07 10:15:01 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.6.2.ebuild,v 1.1 2011/09/12 18:55:52 pva Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
-inherit libtool flag-o-matic eutils toolchain-funcs python autotools
+inherit libtool flag-o-matic eutils toolchain-funcs python
 
 [[ -n ${PV#*_rc} && ${PV#*_rc} != ${PV} ]] && MY_P=${PN}-${PV/_} || MY_P=${P}
 DESCRIPTION="A network protocol analyzer formerly known as ethereal"
@@ -13,7 +13,7 @@ SRC_URI="http://www.wireshark.org/download/src/all-versions/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="adns ares doc doc-pdf gtk ipv6 lua gcrypt geoip kerberos
 profile +pcap portaudio python +caps selinux smi ssl threads zlib"
 
@@ -39,7 +39,6 @@ RDEPEND=">=dev-libs/glib-2.14:2
 
 DEPEND="${RDEPEND}
 	doc? ( dev-libs/libxslt
-		app-text/docbook-xml-dtd:4.2
 		dev-libs/libxml2
 		app-doc/doxygen
 		doc-pdf? ( dev-java/fop ) )
@@ -47,7 +46,8 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	sys-devel/bison
 	sys-apps/sed
-	sys-devel/flex"
+	sys-devel/flex
+	!!<net-analyzer/wireshark-1.6.0_rc1"
 
 S=${WORKDIR}/${MY_P}
 
@@ -153,16 +153,16 @@ src_configure() {
 		$(use_with lua) \
 		$(use_with kerberos krb5) \
 		$(use_with smi libsmi) \
-		$(use_with pcap) \
 		$(use_with zlib) \
 		$(use_with geoip) \
 		$(use_with portaudio) \
 		$(use_with python) \
 		$(use_with caps libcap) \
+		$(use_with pcap) \
+		$(use_with pcap dumpcap-group wireshark) \
 		$(use pcap && use_enable caps setcap-install) \
 		$(use pcap && use_enable !caps setuid-install) \
 		--sysconfdir=/etc/wireshark \
-		--with-dumpcap-group=wireshark \
 		--disable-extra-gcc-checks \
 		${myconf}
 }
