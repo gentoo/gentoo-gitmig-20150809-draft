@@ -4,6 +4,5 @@
 	<herd>python</herd>
 	<use>
 		<flag name='redland'>enable support for Redland triplestore</flag>
-		<flag name='zodb'>enable support for Zope Object Database triplestore</flag>
 	</use>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rdflib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/ChangeLog,v 1.10 2011/03/27 00:03:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/ChangeLog,v 1.11 2011/09/12 21:20:56 neurogeek Exp $
+
+  12 Sep 2011; Jesus Rivero <neurogeek@gentoo.org> rdflib-3.1.0.ebuild:
+  Delete "zodb" USE flag. Patch by Arfrever.
 
 *rdflib-3.1.0 (27 Mar 2011)
 
