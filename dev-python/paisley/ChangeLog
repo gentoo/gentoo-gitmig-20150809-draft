@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/paisley
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paisley/ChangeLog,v 1.14 2011/07/01 21:25:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paisley/ChangeLog,v 1.15 2011/09/12 08:23:55 djc Exp $
+
+  12 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> metadata.xml:
+  Remove myself as maintainer.
 
   01 Jul 2011; Markos Chandras <hwoarang@gentoo.org> -paisley-0.1.ebuild:
   Remove old ebuilds. Requested by Arfrever
