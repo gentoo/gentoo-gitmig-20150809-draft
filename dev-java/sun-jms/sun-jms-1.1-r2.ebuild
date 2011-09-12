@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jms/sun-jms-1.1-r2.ebuild,v 1.14 2010/04/24 17:54:01 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jms/sun-jms-1.1-r2.ebuild,v 1.15 2011/09/12 13:26:37 pva Exp $
 
 inherit java-pkg-2
 
-DOWNLOAD_PAGE="https://cds.sun.com/is-bin/INTERSHOP.enfinity/WFS/CDS-CDS_Developer-Site/en_US/-/USD/ViewProductDetail-Start?ProductRef=7542-jms-1.1-fr-doc-oth-JSpec@CDS-CDS_Developer"
+DOWNLOAD_PAGE="http://download.oracle.com/otndocs/jcp/7542-jms-1.1-fr-doc-oth-JSpec/"
 At="jms-${PV/./_}-fr-apidocs.zip"
 DESCRIPTION="The Java Message Service (JMS) API."
 HOMEPAGE="http://java.sun.com/products/jms/"
