@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.2.9-r1.ebuild,v 1.3 2011/04/22 10:39:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.2.9-r1.ebuild,v 1.4 2011/09/12 07:49:19 radhermit Exp $
 
 EAPI="4"
 
-inherit toolchain-funcs eutils
+inherit toolchain-funcs eutils autotools
 
 DESCRIPTION="A remote security scanner for Linux (nessus-core)"
 HOMEPAGE="http://www.nessus.org/"
@@ -15,13 +15,15 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug gtk prelude tcpd"
 
-DEPEND="
+RDEPEND="
 	~net-analyzer/nessus-libraries-${PV}
 	~net-analyzer/libnasl-${PV}
 	tcpd? ( sys-apps/tcp-wrappers )
 	gtk? ( x11-libs/gtk+:2 )
 	prelude? ( dev-libs/libprelude )
 	!net-analyzer/nessus-client"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S="${WORKDIR}"/${PN}
 
@@ -32,10 +34,12 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PV}-gentoo.patch \
 		"${FILESDIR}"/${PV}-crash.patch \
-		"${FILESDIR}"/${PV}-asneeded.patch
-	sed \
-		-e "/^LDFLAGS/s:$:${LDFLAGS}:g" \
-		-i nessus.tmpl.in
+		"${FILESDIR}"/${P}-open.patch
+
+	sed -i -e "/^LDFLAGS/s:$:${LDFLAGS}:g" nessus.tmpl.in || die
+	sed -i -e 's:CFLAGS="-g"; ::' configure.in || die
+
+	eautoreconf
 }
 
 src_configure() {
@@ -58,5 +62,5 @@ src_install() {
 	keepdir /var/lib/nessus/users
 	# newer version is provided by nessus-libraries
 	# should be fixed upstream in version 2.2.6
-	rm "${D}"/usr/include/nessus/includes.h
+	rm "${ED}"/usr/include/nessus/includes.h
 }
