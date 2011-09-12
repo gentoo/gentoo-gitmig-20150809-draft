@@ -1,0 +1,13 @@
+# ChangeLog for dev-vcs/veracity
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/veracity/ChangeLog,v 1.1 2011/09/12 05:08:05 binki Exp $
+
+*veracity-1.0.0.10517 (12 Sep 2011)
+
+  12 Sep 2011; Nathan Phillip Brink <binki@gentoo.org>
+  +veracity-1.0.0.10517.ebuild,
+  +files/veracity-1.0.0.10517-spidermonkey-as-needed.patch,
+  +files/veracity-1.0.0.10517-system-sqlite.patch,
+  +files/veracity-1.0.0.10517-werror.patch, +metadata.xml:
+  Add dev-vcs/veracity-1.0.0.10517, a young DVCS (requested by jdhore).
+
