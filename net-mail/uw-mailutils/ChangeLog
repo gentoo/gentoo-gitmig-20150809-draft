@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/uw-mailutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/ChangeLog,v 1.32 2011/06/06 19:50:05 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-mailutils/ChangeLog,v 1.33 2011/09/12 20:49:28 eras Exp $
+
+*uw-mailutils-2007f (12 Sep 2011)
+
+  12 Sep 2011; Eray Aslan <eras@gentoo.org> +uw-mailutils-2007f.ebuild:
+  version bump
 
   06 Jun 2011; Eray Aslan <eras@gentoo.org> -uw-mailutils-2007b.ebuild,
   uw-mailutils-2007e-r1.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.126 2011/07/17 07:43:28 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.127 2011/09/12 20:52:05 eras Exp $
+
+*uw-imap-2007f (12 Sep 2011)
+
+  12 Sep 2011; Eray Aslan <eras@gentoo.org> +uw-imap-2007f.ebuild:
+  version bump
 
 *uw-imap-2007e-r2 (17 Jul 2011)
 
