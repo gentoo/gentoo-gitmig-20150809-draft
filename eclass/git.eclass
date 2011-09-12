@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.56 2011/08/22 04:46:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git.eclass,v 1.57 2011/09/12 12:49:44 mgorny Exp $
 
 # @DEPRECATED
 # This eclass has been superseded by git-2 eclass.
@@ -194,6 +194,10 @@ git_branch() {
 # Gets repository from EGIT_REPO_URI and store it in specified EGIT_STORE_DIR
 git_fetch() {
 	debug-print-function ${FUNCNAME} "$@"
+
+	eqawarn "git.eclass is deprecated."
+	eqawarn "Please update your ebuilds to use git-2 instead. For details, see"
+	eqawarn "http://archives.gentoo.org/gentoo-dev/msg_b7ba363cae580845819ae3501fb157e9.xml"
 
 	local GIT_DIR EGIT_CLONE_DIR oldsha1 cursha1 extra_clone_opts upstream_branch
 	[[ -z ${EGIT_HAS_SUBMODULES} ]] && export GIT_DIR
