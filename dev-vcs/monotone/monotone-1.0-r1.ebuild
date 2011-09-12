@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/monotone-1.0-r1.ebuild,v 1.2 2011/09/12 10:41:42 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/monotone/monotone-1.0-r1.ebuild,v 1.3 2011/09/12 15:21:23 mr_bones_ Exp $
 
 # QA failiures reported in https://code.monotone.ca/p/monotone/issues/181/
 EAPI="4"
@@ -110,4 +110,3 @@ pkg_postinst() {
 	elog "  5. make persistent: rc-update add monotone default"
 	elog
 }
-
