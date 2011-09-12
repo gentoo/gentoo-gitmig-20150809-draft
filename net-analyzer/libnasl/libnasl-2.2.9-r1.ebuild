@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/libnasl-2.2.9-r1.ebuild,v 1.2 2011/04/22 10:33:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/libnasl-2.2.9-r1.ebuild,v 1.3 2011/09/12 06:16:35 radhermit Exp $
 
 EAPI=4
 
@@ -15,8 +15,9 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="static-libs"
 
-DEPEND="~net-analyzer/nessus-libraries-${PV}"
-RDEPEND="${DEPEND}"
+RDEPEND="~net-analyzer/nessus-libraries-${PV}"
+DEPEND="${RDEPEND}
+	sys-devel/bison"
 
 S="${WORKDIR}"/${PN}
 
@@ -40,4 +41,9 @@ src_compile() {
 	# emake fails for >= -j2. bug #16471.
 	emake -C nasl cflags
 	emake
+}
+
+src_install() {
+	default
+	use static-libs || find "${ED}" -name '*.la' -delete
 }
