@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.106 2011/09/09 19:14:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.107 2011/09/12 21:42:08 vapier Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -41,7 +41,7 @@ _tc-getPROG() {
 	export ${var}=${prog}
 	echo "${!var}"
 }
-tc-getBUILD_PROG() { _tc-getPROG CBUILD "$@"; }
+tc-getBUILD_PROG() { _tc-getPROG CBUILD "BUILD_$1 $1_FOR_BUILD HOST$1" "${@:2}"; }
 tc-getPROG() { _tc-getPROG CHOST "$@"; }
 
 # @FUNCTION: tc-getAR
@@ -109,18 +109,50 @@ tc-getRC() { tc-getPROG RC windres "$@"; }
 # @RETURN: name of the Windows dllwrap utility
 tc-getDLLWRAP() { tc-getPROG DLLWRAP dllwrap "$@"; }
 
+# @FUNCTION: tc-getBUILD_AR
+# @USAGE: [toolchain prefix]
+# @RETURN: name of the archiver for building binaries to run on the build machine
+tc-getBUILD_AR() { tc-getBUILD_PROG AR ar "$@"; }
+# @FUNCTION: tc-getBUILD_AS
+# @USAGE: [toolchain prefix]
+# @RETURN: name of the assembler for building binaries to run on the build machine
+tc-getBUILD_AS() { tc-getBUILD_PROG AS as "$@"; }
 # @FUNCTION: tc-getBUILD_CC
 # @USAGE: [toolchain prefix]
 # @RETURN: name of the C compiler for building binaries to run on the build machine
-tc-getBUILD_CC() { tc-getBUILD_PROG "BUILD_CC CC_FOR_BUILD HOSTCC" gcc "$@"; }
+tc-getBUILD_CC() { tc-getBUILD_PROG CC gcc "$@"; }
 # @FUNCTION: tc-getBUILD_CPP
 # @USAGE: [toolchain prefix]
 # @RETURN: name of the C preprocessor for building binaries to run on the build machine
-tc-getBUILD_CPP() { tc-getBUILD_PROG "BUILD_CPP CPP_FOR_BUILD HOSTCPP" cpp "$@"; }
+tc-getBUILD_CPP() { tc-getBUILD_PROG CPP cpp "$@"; }
 # @FUNCTION: tc-getBUILD_CXX
 # @USAGE: [toolchain prefix]
 # @RETURN: name of the C++ compiler for building binaries to run on the build machine
-tc-getBUILD_CXX() { tc-getBUILD_PROG "BUILD_CXX CXX_FOR_BUILD HOSTCXX" g++ "$@"; }
+tc-getBUILD_CXX() { tc-getBUILD_PROG CXX g++ "$@"; }
+# @FUNCTION: tc-getBUILD_LD
+# @USAGE: [toolchain prefix]
+# @RETURN: name of the linker for building binaries to run on the build machine
+tc-getBUILD_LD() { tc-getBUILD_PROG LD ld "$@"; }
+# @FUNCTION: tc-getBUILD_STRIP
+# @USAGE: [toolchain prefix]
+# @RETURN: name of the strip program for building binaries to run on the build machine
+tc-getBUILD_STRIP() { tc-getBUILD_PROG STRIP strip "$@"; }
+# @FUNCTION: tc-getBUILD_NM
+# @USAGE: [toolchain prefix]
+# @RETURN: name of the symbol/object thingy for building binaries to run on the build machine
+tc-getBUILD_NM() { tc-getBUILD_PROG NM nm "$@"; }
+# @FUNCTION: tc-getBUILD_RANLIB
+# @USAGE: [toolchain prefix]
+# @RETURN: name of the archiver indexer for building binaries to run on the build machine
+tc-getBUILD_RANLIB() { tc-getBUILD_PROG RANLIB ranlib "$@"; }
+# @FUNCTION: tc-getBUILD_OBJCOPY
+# @USAGE: [toolchain prefix]
+# @RETURN: name of the object copier for building binaries to run on the build machine
+tc-getBUILD_OBJCOPY() { tc-getBUILD_PROG OBJCOPY objcopy "$@"; }
+# @FUNCTION: tc-getBUILD_PKG_CONFIG
+# @USAGE: [toolchain prefix]
+# @RETURN: name of the pkg-config tool for building binaries to run on the build machine
+tc-getBUILD_PKG_CONFIG() { tc-getBUILD_PROG PKG_CONFIG pkg-config "$@"; }
 
 # @FUNCTION: tc-export
 # @USAGE: <list of toolchain variables>
