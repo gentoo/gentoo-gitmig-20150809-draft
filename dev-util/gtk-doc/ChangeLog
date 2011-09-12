@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.162 2011/09/12 15:37:52 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.163 2011/09/12 15:42:34 pacho Exp $
+
+  12 Sep 2011; Pacho Ramos <pacho@gentoo.org> -gtk-doc-1.16.ebuild:
+  Remove old.
 
   12 Sep 2011; Kacper Kowalik <xarthisius@gentoo.org> gtk-doc-1.17.ebuild:
   ppc/ppc64 stable wrt #369909
