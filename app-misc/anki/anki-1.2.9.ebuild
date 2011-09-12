@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/anki-1.2.9.ebuild,v 1.1 2011/08/13 22:38:32 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/anki-1.2.9.ebuild,v 1.2 2011/09/12 18:38:48 nativemad Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -14,7 +14,7 @@ SRC_URI="http://anki.googlecode.com/files/${P}.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="furigana +graph latex recording +sound"
 
 RDEPEND="dev-python/beautifulsoup
