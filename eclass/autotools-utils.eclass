@@ -1,10 +1,11 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.9 2011/02/01 00:08:19 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.10 2011/09/12 19:11:20 reavertm Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
 # Maciej Mrozowski <reavertm@gentoo.org>
+# Michał Górny <mgorny@gentoo.org>
 # @BLURB: common ebuild functions for autotools-based packages
 # @DESCRIPTION:
 # autotools-utils.eclass is autotools.eclass(5) and base.eclass(5) wrapper
