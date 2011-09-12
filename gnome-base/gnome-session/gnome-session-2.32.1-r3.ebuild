@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.32.1.ebuild,v 1.11 2011/03/22 19:11:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.32.1-r3.ebuild,v 1.1 2011/09/12 10:01:54 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="yes"
+GNOME_TARBALL_SUFFIX="bz2"
 
 inherit autotools eutils gnome2
 
@@ -12,10 +13,13 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 
 IUSE="doc ipv6 elibc_FreeBSD"
 
+# x11-misc/xdg-user-dirs{,-gtk} are needed to create the various XDG_*_DIRs, and
+# create .config/user-dirs.dirs which is read by glib to get G_USER_DIRECTORY_*
+# xdg-user-dirs-update is run during login (see 10-user-dirs-update below).
 RDEPEND=">=dev-libs/glib-2.16:2
 	>=x11-libs/gtk+-2.22.0:2
 	>=dev-libs/dbus-glib-0.76
@@ -28,7 +32,10 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXtst
-	x11-apps/xdpyinfo"
+	x11-apps/xdpyinfo
+
+	x11-misc/xdg-user-dirs
+	x11-misc/xdg-user-dirs-gtk"
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5
 	>=sys-devel/gettext-0.10.40
@@ -59,6 +66,19 @@ src_prepare() {
 	# Add "session saving" button back, upstream bug #575544
 	epatch "${FILESDIR}/${PN}-2.32.0-session-saving-button.patch"
 
+	# Fix support for GNOME3 conditions, bug #XXXXXX
+	epatch "${FILESDIR}/${PN}-2.32.1-gnome3-conditions.patch"
+
+	# Also support Gsettings conditions to work with libcanberra
+	epatch "${FILESDIR}/${PN}-2.32.1-gsettings-conditions.patch"
+
+	# gsm: Fix race condition in idle monitor
+	epatch "${FILESDIR}/${PN}-2.32.1-idle-transition.patch"
+
+	# Fix dialog size
+	epatch "${FILESDIR}/${PN}-2.32.1-dialog-size.patch"
+	epatch "${FILESDIR}/${PN}-2.32.1-dialog-size2.patch"
+
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
 }
@@ -66,7 +86,18 @@ src_prepare() {
 src_install() {
 	gnome2_src_install
 
-	dodir /etc/X11/Sessions || die "dodir failed"
+	dodir /etc/X11/Sessions
 	exeinto /etc/X11/Sessions
-	doexe "${FILESDIR}/Gnome" || die "doexe failed"
+	doexe "${FILESDIR}/Gnome"
+
+	dodir /usr/share/gnome/applications/
+	insinto /usr/share/gnome/applications/
+	doins "${FILESDIR}/defaults.list"
+
+	dodir /etc/X11/xinit/xinitrc.d/
+	exeinto /etc/X11/xinit/xinitrc.d/
+	doexe "${FILESDIR}/15-xdg-data-gnome"
+
+	# FIXME: this should be done by x11-misc/xdg-user-dirs
+	doexe "${FILESDIR}/10-user-dirs-update"
 }
