@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.97.1.ebuild,v 1.1 2011/09/11 19:21:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/gtk-gnutella-0.97.1.ebuild,v 1.2 2011/09/12 18:20:51 graaff Exp $
 
 EAPI="2"
 
@@ -25,6 +25,10 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_configure() {
+	# There is no option to turn off optimization through the build.sh
+	# script.
+	sed -i -e "s/optimize=''/optimize=' '/" Configure || die
+
 	# The build script does not support the equivalent --enable
 	# options so we must construct the configuration by hand.
 
@@ -48,7 +52,11 @@ src_configure() {
 		myconf="${myconf} --topless"
 	fi
 
-	./build.sh --configure-only --prefix="/usr" ${myconf}
+	./build.sh \
+		--configure-only \
+		--prefix="/usr" \
+		--cc=$(tc-getCC) \
+		${myconf}
 }
 
 src_install() {

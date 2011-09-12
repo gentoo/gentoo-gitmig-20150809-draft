@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.115 2011/09/11 19:21:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.116 2011/09/12 18:20:51 graaff Exp $
+
+  12 Sep 2011; Hans de Graaff <graaff@gentoo.org> gtk-gnutella-0.97.1.ebuild:
+  Respect Gentoo's C compiler choice and don't force specific optimizations,
+  thanks to Agostino Sarubbo in bug 382595.
 
 *gtk-gnutella-0.97.1 (11 Sep 2011)
 
