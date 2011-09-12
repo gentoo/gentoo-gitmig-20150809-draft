@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-ParseExcel/Spreadsheet-ParseExcel-0.590.0.ebuild,v 1.1 2011/09/11 02:03:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Spreadsheet-ParseExcel/Spreadsheet-ParseExcel-0.590.0.ebuild,v 1.2 2011/09/12 15:20:49 mr_bones_ Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ IUSE="test cjk unicode"
 RDEPEND=">=dev-perl/OLE-StorageLite-0.19
 	dev-perl/IO-stringy
 	dev-perl/Text-CSV_XS
-	dev-perl/Crypt-RC4 
+	dev-perl/Crypt-RC4
 	dev-perl/Digest-Perl-MD5
 	unicode? ( dev-perl/Unicode-Map )
 	cjk? ( dev-perl/Jcode )"
