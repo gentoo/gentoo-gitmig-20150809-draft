@@ -1,12 +1,14 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.17.3.ebuild,v 1.1 2009/03/08 20:06:34 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.92.1.ebuild,v 1.1 2011/09/12 14:08:04 pacho Exp $
+
+EAPI="4"
 
 inherit eutils multilib elisp-common
 
 DESCRIPTION="Shared library implementing a Lisp dialect"
 HOMEPAGE="http://librep.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="http://download.tuxfamily.org/librep/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,20 +21,21 @@ RDEPEND=">=sys-libs/gdbm-1.8.0
 DEPEND="${RDEPEND}
 	sys-apps/texinfo"
 
-src_unpack() {
-	unpack ${P}.tar.bz2
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-disable-elisp.patch
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-0.92.0-disable-elisp.patch
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		--libexecdir=/usr/$(get_libdir) \
 		--without-gmp \
 		--without-ffi \
-		$(use_with readline) || die "configure failed"
+		--disable-static \
+		$(use_with readline)
+}
 
-	emake || die "make failed"
+src_compile() {
+	emake
 
 	if use emacs; then
 		elisp-compile rep-debugger.el || die "elisp-compile failed"
@@ -40,8 +43,10 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS BUGS ChangeLog NEWS README THANKS TODO TREE
+	emake DESTDIR="${D}" install
+	find "${D}" -name '*.la' -exec rm -f {} + || die "la file removal failed"
+
+	dodoc ChangeLog MAINTAINERS NEWS README TODO
 	docinto doc
 	dodoc doc/*
 
