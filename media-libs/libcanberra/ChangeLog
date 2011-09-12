@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/libcanberra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.71 2011/07/21 17:26:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.72 2011/09/12 10:16:37 pacho Exp $
+
+*libcanberra-0.28-r5 (12 Sep 2011)
+
+  12 Sep 2011; Pacho Ramos <pacho@gentoo.org> -libcanberra-0.28-r4.ebuild,
+  +libcanberra-0.28-r5.ebuild, +files/libcanberra-0.28-workaround-hang.patch:
+  Apply fedora patch to workaround hangs when pulseaudio has problems, RDEPEND
+  on gnome-base/gsettings-desktop-schemas to work ok with
+  gnome-session-2.32.1-r3, remove all .la files (bug #366071 by Stephan
+  Friedrichs, thanks a lot to Jonathan Callen for his explanation. Remove old.
 
 *libcanberra-0.28-r4 (21 Jul 2011)
 *libcanberra-0.28-r3 (21 Jul 2011)

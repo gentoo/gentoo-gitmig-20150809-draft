@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.28-r4.ebuild,v 1.1 2011/07/21 17:26:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.28-r5.ebuild,v 1.1 2011/09/12 10:16:37 pacho Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SRC_URI="http://0pointer.de/lennart/projects/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="alsa gstreamer +gtk +gtk3 oss pulseaudio +sound tdb udev"
+IUSE="alsa gnome gstreamer +gtk +gtk3 oss pulseaudio +sound tdb udev"
 
 COMMON_DEPEND="media-libs/libvorbis
 	>=sys-devel/libtool-2.2.6b
@@ -29,6 +29,7 @@ COMMON_DEPEND="media-libs/libvorbis
 	tdb? ( sys-libs/tdb )
 "
 RDEPEND="${COMMON_DEPEND}
+	gnome? ( gnome-base/gsettings-desktop-schemas )
 	sound? ( x11-themes/sound-theme-freedesktop )" # Required for index.theme wrt #323379
 DEPEND="${COMMON_DEPEND}
 	>=dev-util/pkgconfig-0.17"
@@ -37,6 +38,9 @@ REQUIRED_USE="udev? ( alsa )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-underlinking.patch
+
+	# https://bugs.freedesktop.org/show_bug.cgi?id=35024
+	epatch "${FILESDIR}/${PN}-0.28-workaround-hang.patch"
 
 	# gconf-2.m4 is needed for autoconf, bug #374561
 	if ! use gtk && ! use gtk3 ; then
@@ -67,14 +71,15 @@ src_configure() {
 
 src_install() {
 	# Disable parallel installation until bug #253862 is solved
-	emake -j1 DESTDIR="${D}" install || die
+	emake -j1 DESTDIR="${D}" install
 
-	# Remove useless .la files
-	# la files in /usr/lib*/${P}/ are needed
-	if use gtk || use gtk3; then
-		rm -v "${ED}"/usr/$(get_libdir)/gtk-*/modules/*.la || die
-	fi
-	rm -v "${ED}"/usr/$(get_libdir)/*.la || die
+	# Remove useless .la files:
+	# libcanberra uses lt_dlopenext instead of ld_dlopen to load the modules,
+	# which means that it will first try appending ".la" to the given filename
+	# prefix; if that fails, it will append the module extension for the
+	# current system and try that (".so" on Linux, ".bundle" on Darwin, ".dll"
+	# on Windows, etc.).  Only if both fail will it return an error.
+	find "${D}" -name '*.la' -exec rm -f {} + || die "la file removal failed"
 }
 
 pkg_preinst() { gnome2_gconf_savelist; }
