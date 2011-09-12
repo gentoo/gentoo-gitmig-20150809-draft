@@ -8,6 +8,7 @@
 	</maintainer>
 	<use>
 		<flag name='audacious'>Build Audacious plugin</flag>
+		<flag name='avx'>Adds support for Advanced Vector Extensions instructions</flag>
 		<flag name='forcefpu'>Disable assembly code</flag>
 		<flag name='plugdouble'>Build plugins in double precision mode
 			(default is float)</flag>
