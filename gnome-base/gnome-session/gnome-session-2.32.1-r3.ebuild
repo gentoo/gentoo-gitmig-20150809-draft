@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.32.1-r3.ebuild,v 1.1 2011/09/12 10:01:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.32.1-r3.ebuild,v 1.2 2011/09/12 10:35:55 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -19,7 +19,7 @@ IUSE="doc ipv6 elibc_FreeBSD"
 
 # x11-misc/xdg-user-dirs{,-gtk} are needed to create the various XDG_*_DIRs, and
 # create .config/user-dirs.dirs which is read by glib to get G_USER_DIRECTORY_*
-# xdg-user-dirs-update is run during login (see 10-user-dirs-update below).
+# xdg-user-dirs-update is run during login (see 10-user-dirs-update-gnome below).
 RDEPEND=">=dev-libs/glib-2.16:2
 	>=x11-libs/gtk+-2.22.0:2
 	>=dev-libs/dbus-glib-0.76
@@ -98,6 +98,6 @@ src_install() {
 	exeinto /etc/X11/xinit/xinitrc.d/
 	doexe "${FILESDIR}/15-xdg-data-gnome"
 
-	# FIXME: this should be done by x11-misc/xdg-user-dirs
-	doexe "${FILESDIR}/10-user-dirs-update"
+	# This should be done here as discussed in bug #270852
+	doexe "${FILESDIR}/10-user-dirs-update-gnome"
 }
