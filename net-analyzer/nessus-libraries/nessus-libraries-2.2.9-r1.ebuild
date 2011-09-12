@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/nessus-libraries-2.2.9-r1.ebuild,v 1.1 2011/04/20 07:17:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/nessus-libraries-2.2.9-r1.ebuild,v 1.2 2011/09/12 06:46:58 radhermit Exp $
 
 EAPI=4
 
@@ -24,11 +24,10 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}"/${PN}
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${P}-linking.patch
-	sed \
-		-e "s:^\(LDFLAGS=\):\1 ${LDFLAGS}:g" \
-		-i nessus.tmpl.in
+	epatch "${FILESDIR}"/${P}-linking.patch
+
+	sed -i -e "s:^\(LDFLAGS=\):\1 ${LDFLAGS}:g" nessus.tmpl.in || die
+	sed -i -e '/sbindir/d' Makefile || die
 }
 
 src_configure() {
@@ -41,4 +40,9 @@ src_configure() {
 		--enable-shared \
 		--with-ssl="${EPREFIX}/usr/$(get_libdir)" \
 		--disable-nessuspcap
+}
+
+src_install() {
+	default
+	use static-libs || find "${ED}" -name '*.la' -delete
 }
