@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.47 2011/08/22 04:46:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.48 2011/09/12 13:50:57 mgorny Exp $
 
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -410,8 +410,11 @@ xorg-2_src_configure() {
 	# @DEFAULT_UNSET
 	if [[ $(declare -p XORG_CONFIGURE_OPTIONS 2>&-) != "declare -a"* ]]; then
 		# fallback to CONFIGURE_OPTIONS, deprecated.
-		[[ -n "${CONFIGURE_OPTIONS}" ]] && \
-			ewarn "QA: CONFIGURE_OPTIONS are deprecated. Please migrate to XORG_CONFIGURE_OPTIONS to preserve namespace."
+		if [[ -n "${CONFIGURE_OPTIONS}" ]]; then
+			eqawarn "CONFIGURE_OPTIONS are deprecated. Please migrate to XORG_CONFIGURE_OPTIONS"
+			eqawarn "to preserve namespace."
+		fi
+
 		local xorgconfadd=(${CONFIGURE_OPTIONS})
 	else
 		local xorgconfadd=("${XORG_CONFIGURE_OPTIONS[@]}")
