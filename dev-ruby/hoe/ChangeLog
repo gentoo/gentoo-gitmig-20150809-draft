@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.122 2011/09/10 10:04:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.123 2011/09/12 18:38:27 graaff Exp $
+
+  12 Sep 2011; Hans de Graaff <graaff@gentoo.org> hoe-2.12.3.ebuild:
+  Depend on rdoc gem since the code explicitly requires it now. Fixes 381233.
 
 *hoe-2.12.3 (10 Sep 2011)
 
