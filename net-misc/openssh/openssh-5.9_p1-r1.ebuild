@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.9_p1-r1.ebuild,v 1.1 2011/09/07 07:37:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.9_p1-r1.ebuild,v 1.2 2011/09/12 05:38:10 vapier Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib autotools pam
@@ -219,17 +219,15 @@ src_test() {
 		tests="${tests} tests"
 	fi
 	# It will also attempt to write to the homedir .ssh
-	local oldhome=$HOMEDIR
-	export HOMEDIR="${T}/homedir"
-	mkdir -pv $HOMEDIR/.ssh/
+	local sshhome=${T}/homedir
+	mkdir -p "${sshhome}"/.ssh
 	for t in ${tests} ; do
 		# Some tests read from stdin ...
+		HOMEDIR="${sshhome}" \
 		emake -k -j1 ${t} </dev/null \
 			&& passed="${passed}${t} " \
 			|| failed="${failed}${t} "
 	done
-	unset HOMEDIR
-	export HOMEDIR="$oldhome"
 	einfo "Passed tests: ${passed}"
 	ewarn "Skipped tests: ${skipped}"
 	if [[ -n ${failed} ]] ; then

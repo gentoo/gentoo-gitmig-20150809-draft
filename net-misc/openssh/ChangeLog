@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.423 2011/09/07 07:37:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.424 2011/09/12 05:38:10 vapier Exp $
+
+  12 Sep 2011; Mike Frysinger <vapier@gentoo.org> openssh-5.9_p1-r1.ebuild:
+  Simplify test homedir logic a bit, and fix quoting.
 
 *openssh-5.9_p1-r1 (07 Sep 2011)
 
