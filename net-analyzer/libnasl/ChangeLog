@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/libnasl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.91 2011/09/12 06:16:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/libnasl/ChangeLog,v 1.92 2011/09/12 06:18:16 radhermit Exp $
+
+  12 Sep 2011; Tim Harder <radhermit@gentoo.org> -libnasl-2.2.9.ebuild:
+  Remove old.
 
   12 Sep 2011; Tim Harder <radhermit@gentoo.org> libnasl-2.2.9-r1.ebuild:
   Add build dependency on bison (bug #382185 by bay). Conditionally remove
