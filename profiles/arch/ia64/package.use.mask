@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.56 2011/09/04 03:54:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.57 2011/09/12 15:49:23 pacho Exp $
 
 # Robin H. Johnson <robbat2@gentoo.org> (03 Sep 2011)
 # Remove this for your arch after you keyword dev-utils/google-perftools (bug #381737
@@ -87,4 +87,4 @@ dev-lisp/clisp hyperspec pari svm
 media-video/mplayer ladspa
 
 # missing keywords
-media-plugins/gst-plugins-meta dv lame mms taglib vcd wavpack
+media-plugins/gst-plugins-meta dts dv lame mms taglib vcd wavpack
