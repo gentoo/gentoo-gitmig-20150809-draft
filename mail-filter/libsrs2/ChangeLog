@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/libsrs2
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs2/ChangeLog,v 1.11 2010/02/01 20:00:59 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs2/ChangeLog,v 1.12 2011/09/12 00:04:38 radhermit Exp $
+
+  12 Sep 2011; Tim Harder <radhermit@gentoo.org> libsrs2-1.0.18.ebuild,
+  metadata.xml:
+  Update to EAPI 4 and add static-libs use flag.
 
   01 Feb 2010; Markus Meier <maekke@gentoo.org> libsrs2-1.0.18.ebuild:
   amd64 stable, bug #299862
