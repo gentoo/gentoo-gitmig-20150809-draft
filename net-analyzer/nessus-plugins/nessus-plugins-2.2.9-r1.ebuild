@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/nessus-plugins-2.2.9-r1.ebuild,v 1.1 2011/04/20 11:00:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/nessus-plugins-2.2.9-r1.ebuild,v 1.2 2011/09/12 08:01:31 radhermit Exp $
 
 EAPI=4
 
@@ -15,11 +15,12 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND="
+RDEPEND="
 	dev-libs/openssl:0
 	~net-analyzer/nessus-core-${PV}
+	~net-analyzer/nessus-libraries-${PV}
 	net-libs/libpcap"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/${PN}
 
