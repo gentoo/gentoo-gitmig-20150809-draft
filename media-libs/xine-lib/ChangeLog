@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.643 2011/05/11 19:11:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.644 2011/09/12 06:02:38 radhermit Exp $
+
+  12 Sep 2011; Tim Harder <radhermit@gentoo.org>
+  files/xine-lib-1.1.19-ffmpeg.patch:
+  Fix build with newer versions of libav (bug #376419).
 
   11 May 2011; Alexis Ballier <aballier@gentoo.org> xine-lib-1.1.19.ebuild,
   +files/xine-lib-1.1.19-ffmpeg.patch:
