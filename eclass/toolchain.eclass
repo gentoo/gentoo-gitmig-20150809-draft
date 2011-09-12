@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.466 2011/09/11 17:48:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.467 2011/09/12 05:40:23 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1175,6 +1175,18 @@ gcc-compiler-configure() {
 		confgcc+=" --disable-libgcj"
 	elif use gtk ; then
 		confgcc+=" --enable-java-awt=gtk"
+	fi
+
+	# newer gcc versions like to bootstrap themselves with C++,
+	# so we need to manually disable it ourselves
+	if tc_version_is_at_least 4.7 && ! is_cxx ; then
+		confgcc+=" --disable-build-with-cxx --disable-build-poststage1-with-cxx"
+	fi
+
+	# newer gcc's come with libquadmath, but only fortran uses
+	# it, so auto punt it when we don't care
+	if tc_version_is_at_least 4.6 && ! is_fortran ; then
+		confgcc+=" --disable-libquadmath"
 	fi
 
 	case $(tc-arch) in
