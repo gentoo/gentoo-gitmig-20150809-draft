@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yagf/yagf-0.8.7.ebuild,v 1.1 2011/09/07 07:42:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yagf/yagf-0.8.7.ebuild,v 1.2 2011/09/12 13:18:16 pva Exp $
 
 EAPI="4"
 inherit cmake-utils
@@ -12,13 +12,17 @@ SRC_URI="http://symmetrica.net/cuneiform-linux/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="scanner"
+IUSE="scanner +cuneiform tesseract pdf"
 
-DEPEND="x11-libs/qt-gui:4
+REQUIRED_USE="|| ( cuneiform tesseract )"
+
+DEPEND=">=x11-libs/qt-gui-4.7
 	app-text/aspell"
 RDEPEND="${DEPEND}
-	app-text/cuneiform
-	scanner? ( media-gfx/xsane )"
+	cuneiform? ( app-text/cuneiform )
+	tesseract? ( app-text/tesseract )
+	scanner? ( media-gfx/xsane )
+	pdf? ( || ( app-text/poppler[utils] app-text/ghostscript-gpl ) )"
 
 DOCS="AUTHORS ChangeLog DESCRIPTION README"
 

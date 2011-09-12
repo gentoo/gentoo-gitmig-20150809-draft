@@ -17,5 +17,8 @@
 	centre. YAGF also makes it easy to scan and recognize several images
 	sequentially.
 	</longdescription>
+	<use>
+		<flag name='cuneiform'>Enable support for the <pkg>app-text/cuneiform</pkg> OCR engine.</flag>
+		<flag name='tesseract'>Enable support for the tesseract OCR engine</flag>
+	</use>
 </pkgmetadata>
-

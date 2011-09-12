@@ -1,6 +1,9 @@
 # ChangeLog for app-text/yagf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yagf/ChangeLog,v 1.7 2011/09/07 07:42:05 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yagf/ChangeLog,v 1.8 2011/09/12 13:18:16 pva Exp $
+
+  12 Sep 2011; Peter Volkov <pva@gentoo.org> yagf-0.8.7.ebuild, metadata.xml:
+  Add tesseract/pdf support thank Yaleks for this job.
 
 *yagf-0.8.7 (07 Sep 2011)
 
