@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/dahdi-2.4.1-r1.ebuild,v 1.4 2011/08/07 15:24:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/dahdi-2.4.1-r1.ebuild,v 1.5 2011/09/12 13:59:35 flameeyes Exp $
 
 EAPI=3
 
@@ -57,9 +57,6 @@ src_compile() {
 }
 
 src_install() {
-	# setup directory structure so udev rules get installed
-	mkdir -p "${D}"/etc/udev/rules.d
-
 	einfo "Installing kernel module"
 	emake KSRC="${KERNEL_DIR}" DESTDIR="${D}" install || die "Installation failed"
 	rm -rf "$D"/lib/modules/*/modules.*

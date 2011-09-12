@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.26 2011/09/02 14:02:32 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.27 2011/09/12 13:59:35 flameeyes Exp $
+
+  12 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org> dahdi-2.4.1-r1.ebuild,
+  dahdi-2.5.0.ebuild, dahdi-2.5.0-r2.ebuild:
+  QA: avoid creating empty directory; the udev rules are not installed in /udev
+  since 2.4.1-r1.
 
 *dahdi-2.5.0-r2 (02 Sep 2011)
 
