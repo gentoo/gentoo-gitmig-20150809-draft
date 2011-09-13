@@ -1,6 +1,9 @@
 # ChangeLog for net-im/jabberd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.123 2010/06/17 21:50:00 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.124 2011/09/13 18:26:55 pacho Exp $
+
+  13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #225633
 
   17 Jun 2010; Patrick Lauer <patrick@gentoo.org> jabberd-1.4.4-r3.ebuild,
   jabberd-1.6.1.1-r1.ebuild:
