@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.249 2011/09/13 09:09:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.250 2011/09/13 14:28:19 nativemad Exp $
+
+  13 Sep 2011; Andreas Schuerch <nativemad@gentoo.org>
+  iptables-1.4.12.1.ebuild:
+  x86 stable, see Bug #382367
 
   13 Sep 2011; Markos Chandras <hwoarang@gentoo.org> iptables-1.4.12.1.ebuild:
   Stable on amd64 wrt bug #382367
