@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/werkzeug
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.25 2011/07/28 19:05:51 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/ChangeLog,v 1.26 2011/09/13 23:52:05 floppym Exp $
+
+*werkzeug-0.7.1-r1 (13 Sep 2011)
+
+  13 Sep 2011; Mike Gilbert <floppym@gentoo.org> -werkzeug-0.7.1.ebuild,
+  +werkzeug-0.7.1-r1.ebuild, +files/werkzeug-0.7.1-py24.patch:
+  Fix syntax error with python2.4, bug 382761
 
 *werkzeug-0.7.1 (28 Jul 2011)
 

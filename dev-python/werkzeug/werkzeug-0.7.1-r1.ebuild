@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/werkzeug-0.7.1.ebuild,v 1.1 2011/07/28 19:05:51 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/werkzeug/werkzeug-0.7.1-r1.ebuild,v 1.1 2011/09/13 23:52:05 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -8,7 +8,7 @@ SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 DISTUTILS_SRC_TEST="nosetests"
 
-inherit distutils
+inherit distutils eutils
 
 MY_PN="Werkzeug"
 MY_P="${MY_PN}-${PV}"
@@ -29,6 +29,12 @@ DEPEND="dev-python/setuptools
 S="${WORKDIR}/${MY_P}"
 
 DOCS="CHANGES"
+
+src_prepare() {
+	# Bug 382761: Fix syntax error with python2.4
+	epatch "${FILESDIR}/${P}-py24.patch"
+	distutils_src_prepare
+}
 
 src_test() {
 	distutils_src_test -e '^test_app$' tests tests/contrib
