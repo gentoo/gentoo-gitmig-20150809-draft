@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/criticalmass
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/ChangeLog,v 1.22 2011/07/21 10:45:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/ChangeLog,v 1.23 2011/09/13 18:59:27 mr_bones_ Exp $
+
+  13 Sep 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  criticalmass-1.0.0-r1.ebuild, criticalmass-1.0.2.ebuild:
+  add a warning about getting the background music (bug #382859)
 
   21 Jul 2011; Markus Meier <maekke@gentoo.org> criticalmass-1.0.2.ebuild:
   amd64/x86 stable, bug #375683

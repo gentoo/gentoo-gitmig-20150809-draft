@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/criticalmass-1.0.0-r1.ebuild,v 1.4 2010/10/15 12:36:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/criticalmass-1.0.0-r1.ebuild,v 1.5 2011/09/13 18:59:27 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -38,4 +38,14 @@ src_install() {
 	newicon critter.png ${PN}.png
 	make_desktop_entry critter "Critical Mass"
 	prepgamesdirs
+}
+
+pkg_postinst() {
+	games_pkg_postinst
+	if ! has_version "media-libs/sdl-mixer[mikmod]" ; then
+		ewarn
+		ewarn "To hear music, you will have to rebuild media-libs/sdl-mixer"
+		ewarn "with the \"mikmod\" USE flag turned on."
+		ewarn
+	fi
 }
