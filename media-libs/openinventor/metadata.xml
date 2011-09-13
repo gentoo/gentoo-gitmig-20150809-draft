@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>graphics</herd>
-<maintainer>
-  <email>stefaan@gentoo.org</email>
-  <name>Stefaan De Roeck</name>
-</maintainer>
 <longdescription>
 	OpenInventor is a toolkit written by SGI, that enables you to easily
 	design 3D object drawings, possibly with a user interface on defined
