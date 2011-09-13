@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/alephone-20100424.ebuild,v 1.4 2011/01/20 23:34:46 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alephone/alephone-20100424.ebuild,v 1.5 2011/09/13 08:45:26 tupone Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -52,7 +52,8 @@ src_prepare() {
 		|| die "sed failed"
 	rm -rf Source_Files/Expat
 
-	epatch "${FILESDIR}"/${P}-boost_145.patch
+	epatch "${FILESDIR}"/${P}-boost_145.patch \
+		"${FILESDIR}"/${P}-png15.patch
 
 	eautoreconf
 }
