@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mock
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/ChangeLog,v 1.35 2011/08/05 22:42:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/ChangeLog,v 1.36 2011/09/13 08:08:26 djc Exp $
+
+*mock-0.7.2 (13 Sep 2011)
+
+  13 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> +mock-0.7.2.ebuild:
+  Version bump to 0.7.2.
 
   05 Aug 2011; Markos Chandras <hwoarang@gentoo.org> -mock-0.7.0.ebuild:
   Remove old ebuild. Requested by Arfrever
