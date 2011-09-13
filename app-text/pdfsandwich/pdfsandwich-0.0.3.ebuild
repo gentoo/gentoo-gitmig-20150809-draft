@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdfsandwich/pdfsandwich-0.0.3.ebuild,v 1.1 2010/10/27 18:29:09 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdfsandwich/pdfsandwich-0.0.3.ebuild,v 1.2 2011/09/13 14:37:43 tomka Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ IUSE=""
 # >=cuneiform-0.9 will break placement of background text with
 # exact-image  This is discussed on upstream's mailing list.
 
-RDEPEND="<app-text/cuneiform-0.9.0[imagemagick]
+RDEPEND="app-text/cuneiform[imagemagick]
 	media-gfx/exact-image
 	app-text/ghostscript-gpl"
 DEPEND="sys-apps/gawk
