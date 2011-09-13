@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13040 2011/09/13 11:23:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13041 2011/09/13 11:58:12 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -330,16 +330,6 @@ net-misc/dhcdbd
 =dev-db/mariadb-5.3*
 =virtual/mysql-5.3*
 
-# Pacho Ramos <pacho@gentoo.org> (25 Jul 2011)
-# Old and unmaintained for a long time, bug #358587.
-# Removal in 30 days
-=dev-libs/libsigc++-1.0*
-
-# Pacho Ramos <pacho@gentoo.org> (25 Jul 2011)
-# No new release since 2002, doesn't respect LDFLAGS and
-# still needing old libsigc++:1.0. Removal in 30 days. (#358589)
-net-libs/libicq2000
-
 # Gilles Dartiguelongue <eva@gentoo.org> (24 Jul 2011)
 # Mask development release
 =dev-libs/json-glib-0.13*
@@ -356,10 +346,6 @@ net-libs/libicq2000
 app-emulation/vmware-server
 =app-emulation/vmware-modules-208.2
 app-emulation/vmware-server-console
-
-# Pacho Ramos <pacho@gentoo.org> (20 Jul 2011)
-# Dead project and not maintained for ages, removal in 30 days.
-app-portage/meatoo
 
 # Nathan Phillip Brink <binki@gentoo.org> (20 Jul 2011)
 # Masked indefinitely. The atheme upstream requests:
@@ -381,12 +367,6 @@ net-irc/atheme-services
 # Masking mariadb-5.1.55 until we have feedback about the unit tests
 # as they build for me but fail for Robin
 ~dev-db/mariadb-5.1.55
-
-# Pacho Ramos <pacho@gentoo.org> (14 Jul 2011)
-# Upstream doesn't maintain it for a long time, nothing uses it
-# anymore and bundles a copy of sqlite3, bug #252540
-# Removal in 30 days
-=gnome-extra/libgda-3*
 
 # Justin Lecher <jlec@gentoo.org> (13 Jul 2011)
 # fails with libjpeg-turbo on tests
@@ -411,17 +391,6 @@ app-laptop/batterymon
 # Nirbheek Chauhan <nirbheek@gentoo.org> (03 Jul 2011)
 # Mask js185 release, changes pkgconfig file, soname, etc
 >=dev-lang/spidermonkey-1.8.5
-
-# Pacho Ramos <pacho@gentoo.org> (29 Jun 2011)
-# Mask for removal in 30 days x11-libs/gtksourceview:1.0
-# and reverse dependencies, bug #354241
-=x11-libs/gtksourceview-1.8.5-r1
-app-editors/conglomerate
-=app-editors/mlview-0.9.0
-app-editors/screem
-dev-python/gtksourceview-python
-app-editors/scribes
-=dev-ruby/ruby-gtksourceview-0.19.4
 
 # Justin Lecher <jlec@gentoo.org> (27 Jun 2011)
 # Only avalable version isn't in the tree.
@@ -862,7 +831,6 @@ games-strategy/xscorch
 # Please don't ask for including testing packages in other emul
 # packages, this is an exception to current policy because some people
 # from X11 team needed 3D support even with bleeding edge Xorg.
-=app-emulation/emul-linux-x86-opengl-20110129-r99
 =app-emulation/emul-linux-x86-opengl-20110722-r99
 =app-emulation/emul-linux-x86-baselibs-20110722-r99
 
