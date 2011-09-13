@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.1_beta2-r5.ebuild,v 1.1 2011/09/09 11:18:41 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.1_beta2-r6.ebuild,v 1.1 2011/09/13 19:25:14 tomka Exp $
 
 EAPI=3
 
@@ -63,6 +63,10 @@ DOCS="CHANGES NEWS AUTHORS README"
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-init.patch
 	epatch "${FILESDIR}"/${PN}-init-sve-start.patch
+	# Fix ad-hoc networking (bug 351337)
+	epatch "${FILESDIR}"/fix-ad-hoc-networking.patch
+	# Add a template for hex psk's and wpa (Bug 306423)
+	epatch "${FILESDIR}"/add-wpa-psk-hex-template.patch
 	# get rid of opts variable to fix bug 381885
 	sed -i "/opts/d" "in/init=gentoo=wicd.in"
 	# Need to ensure that generated scripts use Python 2 at run time.
