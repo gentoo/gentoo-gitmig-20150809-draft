@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gtksourceview
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtksourceview/ChangeLog,v 1.28 2011/06/29 13:30:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtksourceview/ChangeLog,v 1.29 2011/09/13 11:53:45 pacho Exp $
+
+  13 Sep 2011; Pacho Ramos <pacho@gentoo.org>
+  -ruby-gtksourceview-0.19.4.ebuild:
+  Remove old.
 
   29 Jun 2011; Pacho Ramos <pacho@gentoo.org> ruby-gtksourceview-0.90.8.ebuild:
   Fix x11-libs/gtksourceview dependencies (bug #369357 by Kazunori Kojima),
