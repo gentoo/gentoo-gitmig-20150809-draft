@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kwin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.242 2011/09/13 20:12:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/ChangeLog,v 1.243 2011/09/13 20:31:43 dilfridge Exp $
+
+*kwin-4.6.5-r2 (13 Sep 2011)
+
+  13 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org> +kwin-4.6.5-r2.ebuild,
+  +files/kwin-4.6.5-performance.patch:
+  Backport performance improvement from upstream to 4.6
 
 *kwin-4.7.1-r1 (13 Sep 2011)
 
