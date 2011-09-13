@@ -1,6 +1,40 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.248 2011/09/08 18:30:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.249 2011/09/13 05:47:23 robbat2 Exp $
+
+  13 Sep 2011; Robin H. Johnson <robbat2@gentoo.org>
+  -files/device-mapper.rc-1.02.22-r3, -files/64-device-mapper.rules-1.02.22-r5,
+  -files/64-device-mapper.rules-1.02.49-r2, -files/lvm.rc-2.02.28-r2,
+  -files/lvm2-start.sh-2.02.28-r2, -files/clvmd.rc-2.02.28-r3,
+  -files/lvm2-stop.sh-2.02.28-r5, -lvm2-2.02.33.ebuild,
+  -lvm2-2.02.33-r1.ebuild, -files/lvm.conf-2.02.33.patch, -lvm2-2.02.36.ebuild,
+  -files/lvm.conf-2.02.36.patch, -files/lvm2-stop.sh-2.02.37,
+  -lvm2-2.02.37.ebuild, -lvm2-2.02.39.ebuild, -lvm2-2.02.42.ebuild,
+  -lvm2-2.02.45.ebuild, -lvm2-2.02.45-r1.ebuild, -lvm2-2.02.45-r2.ebuild,
+  -files/lvm2-2.02.45-device-mapper-export-format.patch,
+  -files/lvm2-2.02.45-dmeventd.patch, -files/lvm.conf-2.02.45.patch,
+  -lvm2-2.02.48.ebuild, -lvm2-2.02.48-r1.ebuild, -lvm2-2.02.48-r2.ebuild,
+  -files/lvm2-2.02.48-as-needed.patch,
+  -files/lvm2-2.02.48-device-mapper-export-format.patch,
+  -files/lvm2-2.02.48-fix-pkgconfig.patch, -lvm2-2.02.49.ebuild,
+  -files/lvm2-start.sh-2.02.49-r1, -files/lvm2-stop.sh-2.02.49-r1,
+  -lvm2-2.02.49-r1.ebuild, -lvm2-2.02.49-r2.ebuild, -lvm2-2.02.49-r3.ebuild,
+  -files/lvm2-2.02.49-lockdir-override.patch, -lvm2-2.02.51.ebuild,
+  -lvm2-2.02.51-r1.ebuild, -lvm2-2.02.51-r2.ebuild, -lvm2-2.02.51-r3.ebuild,
+  -files/lvm2-2.02.51-as-needed.patch,
+  -files/lvm2-2.02.51-device-mapper-export-format.patch,
+  -files/lvm2-2.02.51-dmsetup-selinux-linking-fix.patch,
+  -files/lvm2-2.02.51-dmsetup-selinux-linking-fix-r3.patch,
+  -files/lvm2-2.02.51-fix-pvcreate.patch, -files/lvm.conf-2.02.51.patch,
+  -lvm2-2.02.56.ebuild, -lvm2-2.02.56-r1.ebuild, -lvm2-2.02.56-r2.ebuild,
+  -files/64-device-mapper.rules-2.02.56-r3, -lvm2-2.02.56-r3.ebuild,
+  -files/lvm2-2.02.56-always-make-static-libdm.patch,
+  -files/lvm2-2.02.56-device-mapper-export-format.patch,
+  -files/lvm2-2.02.56-dmeventd.patch, -files/lvm.conf-2.02.56.patch,
+  -lvm2-2.02.63-r1.ebuild, -lvm2-2.02.63-r2.ebuild, -lvm2-2.02.64.ebuild,
+  lvm2-2.02.88.ebuild:
+  Clean up old versions and FILESDIR for them. Fix install of VERSION_DM in
+  2.02.88.
 
   08 Sep 2011; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.02.88.ebuild:
   Fix spelling and grammar (bug #382157).

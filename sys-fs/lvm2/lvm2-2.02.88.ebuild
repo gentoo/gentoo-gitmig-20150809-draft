@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.88.ebuild,v 1.2 2011/09/08 18:30:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.88.ebuild,v 1.3 2011/09/13 05:47:23 robbat2 Exp $
 
 EAPI=3
 inherit eutils multilib toolchain-funcs autotools linux-info
@@ -183,36 +183,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "Failed to emake install"
 
-	# All of this was change by upstream, and if we don't get any problems, we
-	# can probably drop it in .65
-	#X## Revamp all of our library handling for bug #316571
-	#X## Upstream build script puts a lot of this stuff into /usr/lib regardless of
-	#X## libdir variable.
-	#X#dodir /$(get_libdir)
-	#X## .so -> /$(get_libdir)
-	#X#mv -f "${D}"/usr/lib/lib*.so* "${D}"/$(get_libdir)
-	#X#[[ "$(get_libdir)" != "lib" ]] && \
-	#X#	mv "${D}"/usr/$(get_libdir)/lib*.so* "${D}"/$(get_libdir)
-	#X## .a -> /usr/$(get_libdir)
-	#X#[[ "$(get_libdir)" != "lib" ]] && \
-	#X#	mv -f "${D}"/usr/lib/lib*.a "${D}"/usr/$(get_libdir)
-	#X## The upstream symlinks are borked. lets rebuild them instead.
-	#X#find "${D}"/{usr,}/{lib,$(get_libdir)} -type l \
-	#X#	| xargs rm -f 2>/dev/null
-	#X#for i in "${D}"/$(get_libdir)/*.so.* ; do
-	#X#	b="${i//*\/}" o="${b/.so.*/.so}"
-	#X#	ln -s "${b}" "${D}/$(get_libdir)/${o}"
-	#X#done
-	#X## Now enable building properly
-	#X#for i in \
-	#X#	libdevmapper-event{,-lvm2{,mirror,snapshot}} \
-	#X#	libdevmapper \
-	#X#	liblvm2{format1,snapshot,cmd,app} \
-	#X#	; do
-	#X#	gen_usr_ldscript ${i}.so || die
-	#X#done
-
-	dodoc README VERSION WHATS_NEW WHATS_NEW_DM doc/*.{conf,c,txt}
+	dodoc README VERSION* WHATS_NEW WHATS_NEW_DM doc/*.{conf,c,txt}
 	insinto /$(get_libdir)/rcscripts/addons
 	newins "${FILESDIR}"/lvm2-start.sh-2.02.67-r1 lvm-start.sh || die
 	newins "${FILESDIR}"/lvm2-stop.sh-2.02.67-r1 lvm-stop.sh || die
