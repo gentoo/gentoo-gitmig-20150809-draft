@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/mbrola
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.51 2011/03/23 17:22:30 cbrannon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/ChangeLog,v 1.52 2011/09/13 19:22:08 pacho Exp $
+
+  13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #353756
 
 *mbrola-3.0.1h-r6 (23 Mar 2011)
 
