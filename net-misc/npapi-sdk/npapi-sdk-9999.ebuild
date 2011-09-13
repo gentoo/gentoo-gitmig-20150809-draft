@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/npapi-sdk/npapi-sdk-9999.ebuild,v 1.1 2011/09/05 15:52:14 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/npapi-sdk/npapi-sdk-9999.ebuild,v 1.2 2011/09/13 08:03:36 naota Exp $
 
 EAPI=4
 inherit autotools-utils
@@ -17,12 +17,12 @@ SRC_URI="http://cloud.github.com/downloads/mgorny/${PN}/${P}.tar.bz2"
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE=""
 
 #if LIVE
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 SRC_URI=
 
 src_prepare() {

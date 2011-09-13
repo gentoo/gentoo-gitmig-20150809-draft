@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/npapi-sdk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/npapi-sdk/ChangeLog,v 1.1 2011/09/05 15:52:14 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/npapi-sdk/ChangeLog,v 1.2 2011/09/13 08:03:36 naota Exp $
+
+  13 Sep 2011; Naohiro Aota <naota@gentoo.org> npapi-sdk-9999.ebuild:
+  Add ~x86-fbsd
 
 *npapi-sdk-9999 (05 Sep 2011)
 
