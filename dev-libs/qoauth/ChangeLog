@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/qoauth
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qoauth/ChangeLog,v 1.13 2010/11/08 20:48:24 ayoy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qoauth/ChangeLog,v 1.14 2011/09/13 19:08:05 pacho Exp $
+
+  13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #278944
 
   08 Nov 2010; Dominik Kapusta <ayoy@gentoo.org> qoauth-1.0.1.ebuild:
   Fixing bug #337643 for real. Missed sedding out test subdirectory when
