@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.59 2011/09/11 09:28:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.60 2011/09/13 12:14:45 ultrabug Exp $
+
+  13 Sep 2011; Ultrabug <ultrabug@gentoo.org> -rsyslog-5.6.5.ebuild,
+  -rsyslog-5.8.3.ebuild:
+  Drop old vulnerable versions wrt #381637
 
   11 Sep 2011; Markus Meier <maekke@gentoo.org> rsyslog-5.8.5.ebuild:
   x86 stable, bug #381637
