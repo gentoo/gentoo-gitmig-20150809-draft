@@ -1,6 +1,9 @@
 # ChangeLog for app-text/cb2bib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cb2bib/ChangeLog,v 1.6 2010/10/06 20:22:26 chiiph Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/cb2bib/ChangeLog,v 1.7 2011/09/13 18:59:52 pacho Exp $
+
+  13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #278944
 
 *cb2bib-1.4.2 (06 Oct 2010)
 
