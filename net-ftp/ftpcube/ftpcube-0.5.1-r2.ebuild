@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpcube/ftpcube-0.5.1-r2.ebuild,v 1.1 2011/09/10 06:15:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpcube/ftpcube-0.5.1-r2.ebuild,v 1.2 2011/09/13 05:42:28 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -29,7 +29,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-wxversion.patch"
 
 	# setup.cfg specifies /usr/local location for data and scripts.
-	rm -f setup.cfg
+	rm setup.cfg || die
 }
 
 src_install() {
