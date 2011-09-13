@@ -1,9 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.312 2011/09/13 10:29:10 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.313 2011/09/13 11:30:18 nativemad Exp $
 
-  13 Sep 2011; <mad@gentoo.org> wireshark-1.4.9.ebuild:
-  wireshark-1.4.9.ebuild
+  13 Sep 2011; Andreas Schuerch <nativemad@gentoo.org> wireshark-1.4.9.ebuild:
+  x86 stable, Bug 38551
 
 *wireshark-1.6.2 (12 Sep 2011)
 *wireshark-1.4.9 (12 Sep 2011)
