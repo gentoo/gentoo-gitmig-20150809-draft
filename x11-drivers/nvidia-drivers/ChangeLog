@@ -1,6 +1,15 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.296 2011/09/13 14:47:42 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.297 2011/09/13 15:22:54 cardoe Exp $
+
+*nvidia-drivers-285.03 (13 Sep 2011)
+*nvidia-drivers-280.13 (13 Sep 2011)
+
+  13 Sep 2011; Doug Goldstein <cardoe@gentoo.org>
+  -nvidia-drivers-275.19.ebuild, -nvidia-drivers-275.21.ebuild,
+  +nvidia-drivers-280.13.ebuild, +nvidia-drivers-285.03.ebuild:
+  Bump beta nvidia-drivers. 280.13 is an official release but suffers from bug
+  #375615
 
   13 Sep 2011; Doug Goldstein <cardoe@gentoo.org>
   -nvidia-drivers-173.14.28.ebuild, -nvidia-drivers-256.53.ebuild,
