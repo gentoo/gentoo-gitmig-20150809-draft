@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/hcs-utils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/hcs-utils/ChangeLog,v 1.1 2010/08/29 18:52:39 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hcs-utils/ChangeLog,v 1.2 2011/09/13 14:49:03 hwoarang Exp $
+
+*hcs-utils-1.2 (13 Sep 2011)
+
+  13 Sep 2011; Markos Chandras <hwoarang@gentoo.org> +hcs-utils-1.2.ebuild:
+  Version bump
 
 *hcs-utils-1.1.1 (29 Aug 2010)
 
