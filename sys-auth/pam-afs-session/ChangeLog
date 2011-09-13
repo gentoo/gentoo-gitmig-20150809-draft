@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pam-afs-session
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-afs-session/ChangeLog,v 1.5 2008/03/25 11:46:56 stefaan Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam-afs-session/ChangeLog,v 1.6 2011/09/13 17:58:04 pacho Exp $
+
+  13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #99651
 
 *pam-afs-session-1.6 (25 Mar 2008)
 
