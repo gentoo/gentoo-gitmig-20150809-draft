@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/getdata/getdata-0.6.3-r1.ebuild,v 1.1 2011/09/13 21:05:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/getdata/getdata-0.6.3-r1.ebuild,v 1.2 2011/09/13 21:06:59 jlec Exp $
 
 EAPI=3
 
@@ -62,7 +62,7 @@ src_compile() {
 				NUMPY_CPPFLAGS="-I${EPREFIX}$(python_get_sitedir)/numpy/core/include" \
 				PYTHON_CPPFLAGS="-I${EPREFIX}$(python_get_includedir)" \
 				pyexecdir="$(python_get_sitedir)" \
-            pythondir="$(python_get_sitedir)"
+				pythondir="$(python_get_sitedir)"
 		}
 		python_execute_function -s --source-dir bindings/python building
 	fi
@@ -79,7 +79,7 @@ src_install() {
 				PYTHON_CPPFLAGS="-I${EPREFIX}$(python_get_includedir)" \
 				PYTHON_VERSION="$(python_get_version)" \
 				pyexecdir="$(python_get_sitedir)" \
-            pythondir="$(python_get_sitedir)" \
+				pythondir="$(python_get_sitedir)" \
 				install
 				if use static-libs; then
 					find "${ED}/$(python_get_sitedir)" -type f -name "*.a" -delete || die

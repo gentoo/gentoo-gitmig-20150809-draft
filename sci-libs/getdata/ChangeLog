@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/getdata
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/getdata/ChangeLog,v 1.5 2011/09/13 21:05:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/getdata/ChangeLog,v 1.6 2011/09/13 21:06:59 jlec Exp $
+
+  13 Sep 2011; Justin Lecher <jlec@gentoo.org> getdata-0.6.3-r1.ebuild:
+  Fix: build contains leading spaces on line
 
 *getdata-0.6.3-r1 (13 Sep 2011)
 
