@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/aufs2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/ChangeLog,v 1.43 2011/08/30 07:27:38 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/ChangeLog,v 1.44 2011/09/13 18:25:39 nativemad Exp $
+
+  14 Sep 2011; Andreas Schuerch <nativemad@gentoo.org>
+  aufs2-2.2_p20110815.ebuild:
+  x86 stable, see bug #338420
 
   30 Aug 2011; Tony Vroon <chainsaw@gentoo.org> aufs2-2.1_p20110817.ebuild,
   aufs2-2.2_p20110815.ebuild:
