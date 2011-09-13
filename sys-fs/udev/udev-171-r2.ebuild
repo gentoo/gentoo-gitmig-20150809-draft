@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.52 2011/09/13 19:17:28 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r2.ebuild,v 1.1 2011/09/13 19:17:28 zzam Exp $
 
 EAPI=4
 
 KV_min=2.6.32
 KV_reliable=2.6.32
-#PATCHSET=${P}-gentoo-patchset-v1
+PATCHSET=${P}-gentoo-patchset-v1
 scriptversion=v4
 scriptname=udev-gentoo-scripts-${scriptversion}
 
@@ -38,9 +38,13 @@ HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="build selinux test debug +rule_generator hwdb acl gudev introspection
-	keymap floppy edd action_modeswitch"
+	keymap floppy edd action_modeswitch extras"
 
 COMMON_DEPEND="selinux? ( sys-libs/libselinux )
+	extras? ( sys-apps/acl
+		dev-libs/glib:2
+		dev-libs/gobject-introspection
+		virtual/libusb:0 )
 	acl? ( sys-apps/acl dev-libs/glib:2 )
 	gudev? ( dev-libs/glib:2 )
 	introspection? ( dev-libs/gobject-introspection )
@@ -50,6 +54,7 @@ COMMON_DEPEND="selinux? ( sys-libs/libselinux )
 
 DEPEND="${COMMON_DEPEND}
 	keymap? ( dev-util/gperf )
+	extras? ( dev-util/gperf )
 	dev-util/pkgconfig
 	virtual/os-headers
 	!<sys-kernel/linux-headers-2.6.34
@@ -57,6 +62,11 @@ DEPEND="${COMMON_DEPEND}
 
 RDEPEND="${COMMON_DEPEND}
 	hwdb?
+	(
+		>=sys-apps/usbutils-0.82
+		sys-apps/pciutils
+	)
+	extras?
 	(
 		>=sys-apps/usbutils-0.82
 		sys-apps/pciutils
@@ -179,6 +189,8 @@ src_prepare() {
 }
 
 src_configure() {
+	if ! use extras
+	then
 	econf \
 		--prefix=/usr \
 		--sysconfdir=/etc \
@@ -202,6 +214,31 @@ src_configure() {
 		$(use_enable edd) \
 		$(use_enable action_modeswitch) \
 		$(systemd_with_unitdir)
+	else
+	econf \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--sbindir=/sbin \
+		--libdir=/usr/$(get_libdir) \
+		--with-rootlibdir=/$(get_libdir) \
+		--libexecdir=/lib/udev \
+		--enable-logging \
+		--enable-static \
+		$(use_with selinux) \
+		$(use_enable debug) \
+		--enable-rule_generator \
+		--enable-hwdb \
+		--with-pci-ids-path=/usr/share/misc/pci.ids \
+		--with-usb-ids-path=/usr/share/misc/usb.ids \
+		--enable-udev_acl \
+		--enable-gudev \
+		--enable-introspection \
+		--enable-keymap \
+		--enable-floppy \
+		--enable-edd \
+		--enable-action_modeswitch \
+		$(systemd_with_unitdir)
+	fi
 }
 
 src_compile() {
