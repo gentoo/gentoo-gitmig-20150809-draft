@@ -6,4 +6,8 @@
 		<email>sci@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en"/>
+	<use>
+		<flag name="fortran">Build fortran bindings</flag>
+		<flag name="python">Build python bindings</flag>
+	</use>
 </pkgmetadata>
