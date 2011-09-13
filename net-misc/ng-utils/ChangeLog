@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ng-utils
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ng-utils/ChangeLog,v 1.2 2008/02/13 07:43:26 opfer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ng-utils/ChangeLog,v 1.3 2011/09/13 17:57:03 pacho Exp $
+
+  13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #99651
 
   13 Feb 2008; Christian Faulhammer <opfer@gentoo.org> metadata.xml:
   add no-herd
