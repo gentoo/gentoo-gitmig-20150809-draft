@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.141 2011/09/12 21:05:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.142 2011/09/13 09:12:06 hwoarang Exp $
+
+  13 Sep 2011; Markos Chandras <hwoarang@gentoo.org> qt-core-4.7.2-r2.ebuild:
+  Stable on amd64 wrt bug #382171
 
   12 Sep 2011; Markus Meier <maekke@gentoo.org> qt-core-4.7.2-r2.ebuild:
   arm stable, bug #382171
