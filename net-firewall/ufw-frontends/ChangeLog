@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/ufw-frontends
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw-frontends/ChangeLog,v 1.1 2011/07/28 07:20:19 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw-frontends/ChangeLog,v 1.2 2011/09/13 06:45:13 pva Exp $
+
+*ufw-frontends-0.3.1 (13 Sep 2011)
+
+  13 Sep 2011; Peter Volkov <pva@gentoo.org> +ufw-frontends-0.3.1.ebuild:
+  Version bump, thank Sławomir Nizio for this job.
 
 *ufw-frontends-0.2.0 (28 Jul 2011)
 
