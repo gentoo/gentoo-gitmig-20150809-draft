@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13039 2011/09/11 22:33:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13040 2011/09/13 11:23:33 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,28 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (13 Sep 2011)
+# Fails to build with linux-headers-2.6.38 and above, plus other issues
+#
+# xdtv, bugs 359791, 268800, 250879
+# video-entropyd, bugs 360871, 334895
+# qutecom, bugs 361181, 354803, 324627, 315051, 315045
+# gnomeradio, bug 376443
+# vdr-atmo, bug 370417
+# vdr-avards, bug 368921
+# SDLcam, bug 364821
+# vdr-pvr350, bug 364669
+#
+# Removal in 30 days
+media-tv/xdtv
+media-video/video-entropyd
+net-im/qutecom
+media-plugins/vdr-pvr350
+media-video/SDLcam
+media-plugins/vdr-avards
+media-plugins/vdr-atmo
+media-sound/gnomeradio
 
 # Vlastimil Babka <caster@gentoo.org> (11 Sep 2011)
 # Masked until Icedtea7 final is released, to prevent pulling oracle-jdk-bin for everyone.
