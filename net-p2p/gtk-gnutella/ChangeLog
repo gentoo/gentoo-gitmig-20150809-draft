@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.117 2011/09/12 18:46:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.118 2011/09/13 09:39:24 hwoarang Exp $
+
+  13 Sep 2011; Markos Chandras <hwoarang@gentoo.org> gtk-gnutella-0.97.ebuild:
+  Stable on amd64 wrt bug #382565
 
   12 Sep 2011; Hans de Graaff <graaff@gentoo.org> gtk-gnutella-0.97.1.ebuild:
   Patch build.sh instead after discussing with upstream.
