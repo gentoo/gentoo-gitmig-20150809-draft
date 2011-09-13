@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.136 2011/06/23 15:13:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.137 2011/09/13 18:52:48 pacho Exp $
+
+  13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #246793
 
   23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> -kvirc-4.2_pre5727.ebuild:
   Remove old ebuilds. Requested by Arfrever
