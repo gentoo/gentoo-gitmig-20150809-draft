@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/kst
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/kst/ChangeLog,v 1.2 2011/02/09 16:34:50 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/kst/ChangeLog,v 1.3 2011/09/13 19:17:42 pacho Exp $
+
+  13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #278944
 
 *kst-2.0.0 (13 Sep 2010)
 
