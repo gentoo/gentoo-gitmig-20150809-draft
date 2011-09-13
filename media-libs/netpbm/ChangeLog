@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.247 2011/08/15 03:39:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.248 2011/09/13 19:41:56 vapier Exp $
+
+  13 Sep 2011; Mike Frysinger <vapier@gentoo.org> netpbm-10.51.00-r1.ebuild:
+  Clean up doc install #382833 by Ulrich Müller.
 
   15 Aug 2011; Mike Frysinger <vapier@gentoo.org> netpbm-10.51.00-r1.ebuild:
   Add patch by Stuart Longland for libpng-1.5 build failure #355025 by Lars

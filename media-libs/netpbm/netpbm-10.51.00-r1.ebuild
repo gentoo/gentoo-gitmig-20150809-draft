@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.51.00-r1.ebuild,v 1.2 2011/08/15 03:39:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.51.00-r1.ebuild,v 1.3 2011/09/13 19:41:56 vapier Exp $
 
 EAPI="3"
 
@@ -170,6 +170,6 @@ src_install() {
 
 	dodoc README
 	cd doc
-	GLOBIGNORE='*.html:.*' dodoc *
+	dodoc HISTORY Netpbm.programming USERDOC
 	dohtml -r .
 }
