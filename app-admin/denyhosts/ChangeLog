@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/denyhosts
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.43 2010/11/16 15:17:36 darkside Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.44 2011/09/13 18:18:58 pacho Exp $
+
+  13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #225633
 
   16 Nov 2010; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
   add myself as maintainer
