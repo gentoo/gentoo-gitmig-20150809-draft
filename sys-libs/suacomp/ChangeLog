@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/suacomp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/ChangeLog,v 1.12 2011/09/03 08:42:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/suacomp/ChangeLog,v 1.13 2011/09/13 07:16:53 mduft Exp $
+
+*suacomp-0.6.14 (13 Sep 2011)
+
+  13 Sep 2011; Markus Duft <mduft@gentoo.org> -suacomp-0.6.10.ebuild,
+  -suacomp-0.6.11.ebuild, -suacomp-0.6.12.ebuild, +suacomp-0.6.14.ebuild:
+  added new release, removed old versions
 
   03 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> suacomp-9999.ebuild:
   Update to git2 eclass too.
