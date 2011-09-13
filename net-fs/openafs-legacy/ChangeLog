@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/openafs-legacy
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-legacy/ChangeLog,v 1.8 2009/01/05 18:01:28 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-legacy/ChangeLog,v 1.9 2011/09/13 17:55:18 pacho Exp $
+
+  13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #99651
 
   05 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
   openafs-legacy-0.1.ebuild:
