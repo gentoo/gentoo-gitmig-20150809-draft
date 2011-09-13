@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/scratchbox-devkit-debian-squeeze
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-debian-squeeze/ChangeLog,v 1.4 2010/09/19 10:16:52 ayoy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-debian-squeeze/ChangeLog,v 1.5 2011/09/13 19:00:48 pacho Exp $
+
+  13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #278944
 
 *scratchbox-devkit-debian-squeeze-1.0.5 (19 Sep 2010)
 

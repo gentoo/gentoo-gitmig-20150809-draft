@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/scratchbox-toolchain-cs2009q1-203sb1
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-toolchain-cs2009q1-203sb1/ChangeLog,v 1.3 2010/01/18 13:03:47 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-toolchain-cs2009q1-203sb1/ChangeLog,v 1.4 2011/09/13 19:03:16 pacho Exp $
+
+  13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #278944
 
   18 Jan 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   scratchbox-toolchain-cs2009q1-203sb1-1.0.13.ebuild:

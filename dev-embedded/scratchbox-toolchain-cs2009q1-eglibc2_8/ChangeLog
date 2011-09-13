@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/scratchbox-toolchain-cs2009q1-eglibc2_8
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-toolchain-cs2009q1-eglibc2_8/ChangeLog,v 1.9 2010/09/19 10:17:09 ayoy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-toolchain-cs2009q1-eglibc2_8/ChangeLog,v 1.10 2011/09/13 19:04:36 pacho Exp $
+
+  13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #278944
 
 *scratchbox-toolchain-cs2009q1-eglibc2_8-1.0.19 (19 Sep 2010)
 

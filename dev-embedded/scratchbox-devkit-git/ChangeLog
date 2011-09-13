@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/scratchbox-devkit-git
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-git/ChangeLog,v 1.6 2010/06/29 17:38:39 ayoy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-git/ChangeLog,v 1.7 2011/09/13 19:01:34 pacho Exp $
+
+  13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #278944
 
 *scratchbox-devkit-git-1.0.2 (29 Jun 2010)
 
