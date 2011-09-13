@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/unixODBC
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.102 2011/09/13 19:23:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/ChangeLog,v 1.103 2011/09/13 20:10:10 neurogeek Exp $
+
+  13 Sep 2011; Jesus Rivero <neurogeek@gentoo.org> metadata.xml:
+  Added myself to metadata.xml as maintainer
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #353756
