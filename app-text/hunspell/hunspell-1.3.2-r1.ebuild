@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.3.2-r1.ebuild,v 1.2 2011/06/15 19:30:09 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.3.2-r1.ebuild,v 1.3 2011/09/13 09:40:06 scarabeus Exp $
 
-EAPI="4"
+EAPI=4
 inherit eutils multilib autotools flag-o-matic versionator
 
 MY_P=${PN}-${PV/_beta/b}
@@ -16,32 +16,41 @@ LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 IUSE="ncurses nls readline static-libs"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 
-DEPEND="readline? ( sys-libs/readline )
+DEPEND="
+	sys-devel/gettext
 	ncurses? ( sys-libs/ncurses )
-	sys-devel/gettext"
+	readline? ( sys-libs/readline )
+"
 RDEPEND="${DEPEND}"
 
-#TODO: "ia" "mi" - check what they are and add appropriate desc...
-def="app-dicts/myspell-en"
-for l in \
-"af" "bg" "ca" "cs" "cy" "da" "de" "el" "en" "eo" "es" "et" "fo" "fr" "ga" \
-"gl" "he" "hr" "hu" "id" "it" "ku" "lt" "lv" "mk" "ms" "nb" "nl" \
-"nn" "pl" "pt" "ro" "ru" "sk" "sl" "sv" "sw" "tn" "uk" "zu" \
-; do
-	dep="linguas_${l}? ( app-dicts/myspell-${l/pt_BR/pt-br} )"
-	[[ ${l} = "de" ]] &&
-		dep="linguas_de? ( || ( app-dicts/myspell-de app-dicts/myspell-de-alt ) )"
-	[[ -z ${PDEPEND} ]] &&
-		PDEPEND="${dep}" ||
-		PDEPEND="${PDEPEND}
-${dep}"
-	def="!linguas_${l}? ( ${def} )"
-	IUSE="${IUSE} linguas_${l}"
+# TODO: Add proper desc for mi
+LANGS="af bg ca cs cy da de el en eo es et fo fr ga gl he hr hu ia id it ku lt
+lv mk ms nb nl nn pl pt ro ru sk sl sv sw tn uk zu"
+
+DICT_DEP="app-dicts/myspell-en"
+for lang in ${LANGS}; do
+	if [[ ${lang} == de ]] ; then
+		DICT_DEP+=" linguas_de? (
+			|| (
+				app-dicts/myspell-de
+				app-dicts/myspell-de-alt
+			)
+		)"
+	else
+		DICT_DEP+=" linguas_${lang}? ( app-dicts/myspell-${lang/pt_BR/pt-br} )"
+	fi
+	IUSE+=" linguas_${lang}"
 done
-PDEPEND="${PDEPEND}
-${def}"
+PDEPEND="${DICT_DEP}"
+
+unset lang LANGS DICT_DEP
 
 S=${WORKDIR}/${MY_P}
+
+DOCS=(
+	AUTHORS ChangeLog NEWS README THANKS TODO license.hunspell
+	AUTHORS.myspell README.myspell license.myspell
+)
 
 src_prepare() {
 	# Upstream package creates some executables which names are too generic
@@ -55,8 +64,12 @@ src_configure() {
 	# missing somehow, and I am too lazy to fix it properly
 	[[ ${CHOST} == *-darwin* ]] && append-libs -liconv
 
-	# I wanted to put the include files in /usr/include/hunspell
-	# but this means the openoffice build won't find them.
+	# FIXME: installs static library and buildsystem needs to be patched
+	# to use proper libtool approach converting it onto shared one.
+
+	# I wanted to put the include files in /usr/include/hunspell.
+	# You can do that, libreoffice can find them anywhere, just
+	# ping me when you do so ; -- scarabeus
 	econf \
 		$(use_enable nls) \
 		$(use_with ncurses ui) \
@@ -65,17 +78,14 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	default
+
+	find "${ED}" -name '*.la' -exec rm -f {} +
 
 	#342449
 	pushd "${ED}"/usr/$(get_libdir)/ >/dev/null
 	ln -s lib${PN}{-$(get_major_version).$(get_version_component_range 2).so.0.0.0,.so}
 	popd >/dev/null
-
-	dodoc AUTHORS ChangeLog NEWS README THANKS TODO license.hunspell
-	# hunspell is derived from myspell
-	dodoc AUTHORS.myspell README.myspell license.myspell
-	find "${ED}" -name '*.la' -exec rm -f {} +
 }
 
 pkg_postinst() {
