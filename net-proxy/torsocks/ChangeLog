@@ -1,0 +1,8 @@
+
+
+*torsocks-1.1a (13 Sep 2011)
+
+  13 Sep 2011; Anthony G. Basile <blueness@gentoo.org> +torsocks-1.1a.ebuild,
+  +metadata.xml:
+  Initial commit
+
