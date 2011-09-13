@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/global
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.89 2011/08/08 18:45:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.90 2011/09/13 18:51:23 pacho Exp $
+
+  13 Sep 2011; Pacho Ramos <pacho@gentoo.org> -global-5.9.6.ebuild,
+  metadata.xml:
+  Drop maintainer due retirement, bug #246793; remove old.
 
 *global-5.9.7 (08 Aug 2011)
 
