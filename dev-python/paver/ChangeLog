@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/paver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.12 2011/05/15 16:30:39 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.13 2011/09/13 04:23:47 floppym Exp $
+
+*paver-1.0.4-r1 (13 Sep 2011)
+
+  13 Sep 2011; Mike Gilbert <floppym@gentoo.org> +paver-1.0.4-r1.ebuild:
+  Remove path25.py for python2.4
 
   15 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> paver-1.0.4.ebuild:
   x86 stable wrt bug #366661
