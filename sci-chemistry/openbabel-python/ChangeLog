@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/openbabel-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/ChangeLog,v 1.5 2011/05/09 15:53:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/ChangeLog,v 1.6 2011/09/13 14:39:45 jlec Exp $
+
+  13 Sep 2011; Justin Lecher <jlec@gentoo.org> openbabel-python-2.3.0.ebuild,
+  metadata.xml:
+  Python.eclass wants an array
 
   09 May 2011; Justin Lecher <jlec@gentoo.org> openbabel-python-2.3.0.ebuild:
   Fix for Prefixed installation
