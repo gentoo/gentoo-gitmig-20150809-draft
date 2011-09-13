@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>vim</herd>
-  <maintainer>
-    <email>tanderson@gentoo.org</email>
-    <name>Thomas Anderson</name>
-  </maintainer>
 <maintainer>
     <email>ahf@exherbo.org</email>
     <name>Alexander H. Faeroy</name>
