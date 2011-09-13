@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.467 2011/09/12 05:40:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.468 2011/09/13 16:30:00 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1091,20 +1091,37 @@ gcc_src_unpack() {
 	disable_multilib_libjava || die "failed to disable multilib java"
 }
 
-gcc-library-configure() {
-	if is_multilib ; then
-		confgcc+=" --enable-multilib"
-	else
+gcc-multilib-configure() {
+	# if multilib is disabled, get out quick!
+	if ! is_multilib ; then
 		confgcc+=" --disable-multilib"
+		return
+	else
+		confgcc+=" --enable-multilib"
 	fi
+
+	# translate our notion of multilibs into gcc's
+	local abi map=() list
+	case ${CTARGET} in
+	x86_64*) tc_version_is_at_least 4.7 && map=(amd64:m64 x86:m32 x32:mx32) ;;
+	esac
+	for abi in $(get_all_abis) ; do
+		local m a l
+		for m in "${map[@]}" ; do
+			a=${m%:*}
+			l=${m#*:}
+			[[ ${abi} == ${a} ]] && list=",${l}${list}"
+		done
+	done
+	[[ -n ${list} ]] && confgcc+=" --with-multilib-list=${list:1}"
+}
+
+gcc-library-configure() {
+	gcc-multilib-configure
 }
 
 gcc-compiler-configure() {
-	if is_multilib ; then
-		confgcc+=" --enable-multilib"
-	else
-		confgcc+=" --disable-multilib"
-	fi
+	gcc-multilib-configure
 
 	if tc_version_is_at_least "4.0" ; then
 		if has mudflap ${IUSE} ; then
