@@ -1,11 +1,12 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/tatt/tatt-9999.ebuild,v 1.3 2010/12/03 17:18:33 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/tatt/tatt-9999.ebuild,v 1.4 2011/09/13 13:54:56 tomka Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
+PYTHON_DEPEND="2:2.6"
 
-inherit distutils git
+inherit distutils git-2
 
 DESCRIPTION="tatt is an arch testing tool"
 HOMEPAGE="http://github.com/tom111/tatt"
@@ -23,7 +24,7 @@ RDEPEND="app-portage/eix
 		dev-python/configobj"
 
 #configobj does not support python-3
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="2.[45] 3.*"
 
 S="${WORKDIR}/${PN}"
 
