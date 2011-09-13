@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/yajl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.10 2011/07/07 04:50:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/ChangeLog,v 1.11 2011/09/13 09:55:43 scarabeus Exp $
+
+  13 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> yajl-2.0.2.ebuild:
+  Bump to eapi4.
 
   07 Jul 2011; Hans de Graaff <graaff@gentoo.org> yajl-2.0.2.ebuild:
   Move back into the normal slot since this package is not designed for

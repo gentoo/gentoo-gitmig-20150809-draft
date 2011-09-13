@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/yajl-2.0.2.ebuild,v 1.2 2011/07/07 04:50:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/yajl-2.0.2.ebuild,v 1.3 2011/09/13 09:55:43 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
-inherit cmake-utils
+inherit base cmake-utils
 
 DESCRIPTION="Small event-driven (SAX-style) JSON parser"
 HOMEPAGE="http://lloyd.github.com/yajl/"
@@ -16,11 +16,15 @@ KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 
 IUSE=""
 
-src_prepare() {
+PATCHES=(
+	"${FILESDIR}"/${PN}-fix_static_linking.patch
+)
+
+src_unpack() {
+	unpack ${A}
+
 	cd "${WORKDIR}"/lloyd-${PN}-*
 	S=$(pwd)
-
-	epatch "${FILESDIR}"/${PN}-fix_static_linking.patch
 }
 
 src_test() {
