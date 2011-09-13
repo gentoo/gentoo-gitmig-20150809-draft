@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/quazip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/ChangeLog,v 1.5 2011/09/12 22:23:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/ChangeLog,v 1.6 2011/09/13 21:30:52 dilfridge Exp $
+
+*quazip-0.4.3-r1 (13 Sep 2011)
+
+  13 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org> -quazip-0.4.3.ebuild,
+  +quazip-0.4.3-r1.ebuild:
+  Switch to cmake build
 
 *quazip-0.4.3 (12 Sep 2011)
 

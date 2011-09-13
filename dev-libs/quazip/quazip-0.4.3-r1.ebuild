@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/quazip-0.4.3.ebuild,v 1.1 2011/09/12 22:23:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/quazip-0.4.3-r1.ebuild,v 1.1 2011/09/13 21:30:52 dilfridge Exp $
 
 EAPI=4
 
-inherit multilib qt4-r2
+inherit multilib cmake-utils
 
 DESCRIPTION="A simple C++ wrapper over Gilles Vollant's ZIP/UNZIP package"
 HOMEPAGE="http://quazip.sourceforge.net/"
@@ -19,14 +19,6 @@ DEPEND="sys-libs/zlib
 	x11-libs/qt-gui:4"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}"/${P}/${PN}
+S="${WORKDIR}"/${P}
 
-DOCS="../NEWS ../README.txt"
-
-src_prepare() {
-	sed -i \
-		-e "s:/usr/local:${EPREFIX}/usr:" \
-		-e "s:/lib:/$(get_libdir):" \
-		${PN}.pro || die
-	qt4-r2_src_prepare
-}
+DOCS="NEWS README.txt"
