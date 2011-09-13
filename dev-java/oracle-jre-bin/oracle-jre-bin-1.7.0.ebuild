@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/oracle-jre-bin-1.7.0.ebuild,v 1.1 2011/09/10 08:54:23 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/oracle-jre-bin-1.7.0.ebuild,v 1.2 2011/09/13 16:14:38 serkan Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ JCE_URI="http://www.oracle.com/technetwork/java/javase/downloads/jce-7-download-
 JCE_DIR="UnlimitedJCEPolicy"
 JCE_FILE="${JCE_DIR}JDK7.zip"
 
-DESCRIPTION="Oracle's Java SE Development Kit"
+DESCRIPTION="Oracle's Java SE Runtime Environment"
 HOMEPAGE="http://www.oracle.com/technetwork/java/javase/"
 SRC_URI="x86? ( ${X86_AT} )
 	amd64? ( ${AMD64_AT} )
