@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/stfl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/ChangeLog,v 1.30 2010/09/19 19:27:30 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/stfl/ChangeLog,v 1.31 2011/09/13 18:25:46 pacho Exp $
+
+  13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #225633
 
   19 Sep 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   stfl-0.21.ebuild:

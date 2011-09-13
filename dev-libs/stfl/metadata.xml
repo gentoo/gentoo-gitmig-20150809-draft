@@ -3,8 +3,7 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>tanderson@gentoo.org</email>
-		<name>Thomas Anderson</name>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">
 		STFL is a library which implements a curses-based widget set for text
