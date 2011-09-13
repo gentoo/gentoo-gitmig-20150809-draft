@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/neon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.24 2011/08/05 22:37:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.25 2011/09/13 18:54:05 pacho Exp $
+
+  13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #246793
 
   05 Aug 2011; Markos Chandras <hwoarang@gentoo.org> -neon-0.29.5.ebuild:
   Remove old ebuild. Requested by Arfrever
