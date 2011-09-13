@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/pms
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.30 2011/07/16 14:04:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.31 2011/09/13 18:21:26 pacho Exp $
+
+  13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #225633
 
   16 Jul 2011; Michał Górny <mgorny@gentoo.org> pms-9999.ebuild:
   Migrate the live ebuild to git-2.eclass, add a fallback EGIT_REPO_URI, bump
