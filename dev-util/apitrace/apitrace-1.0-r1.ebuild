@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/apitrace-1.0-r1.ebuild,v 1.1 2011/06/10 10:34:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/apitrace-1.0-r1.ebuild,v 1.2 2011/09/13 13:15:33 ssuominen Exp $
 
 EAPI=3
 
@@ -41,8 +41,10 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-automagic-qt.patch \
-		"${FILESDIR}"/${P}-glxtrace-only.patch
+	epatch \
+		"${FILESDIR}"/${P}-automagic-qt.patch \
+		"${FILESDIR}"/${P}-glxtrace-only.patch \
+		"${FILESDIR}"/${P}-libpng15.patch
 }
 
 src_configure() {
