@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/lessfs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/ChangeLog,v 1.46 2011/09/11 09:28:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lessfs/ChangeLog,v 1.47 2011/09/13 14:59:53 hwoarang Exp $
+
+*lessfs-1.5.4 (13 Sep 2011)
+
+  13 Sep 2011; Markos Chandras <hwoarang@gentoo.org> +lessfs-1.5.4.ebuild:
+  Version bump
 
   11 Sep 2011; Markus Meier <maekke@gentoo.org> lessfs-1.4.9.ebuild:
   x86 stable, bug #382025
