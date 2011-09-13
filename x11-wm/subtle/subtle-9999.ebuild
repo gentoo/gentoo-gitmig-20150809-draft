@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/subtle/subtle-9999.ebuild,v 1.1 2011/09/13 09:50:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/subtle/subtle-9999.ebuild,v 1.2 2011/09/13 16:17:40 mr_bones_ Exp $
 
 EAPI="4"
 USE_RUBY="ruby19"
@@ -25,7 +25,7 @@ RDEPEND="x11-libs/libX11
 	xtest? ( x11-libs/libXtst )
 	xrandr? ( x11-libs/libXrandr )"
 DEPEND="${RDEPEND}"
-#	test? ( 
+#	test? (
 #		x11-terms/xterm
 #		x11-base/xorg-server[xvfb]
 #	)"
