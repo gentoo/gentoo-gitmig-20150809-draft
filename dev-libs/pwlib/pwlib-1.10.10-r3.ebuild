@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.10.10-r3.ebuild,v 1.1 2011/08/07 10:30:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.10.10-r3.ebuild,v 1.2 2011/09/13 18:21:07 ssuominen Exp $
 
 EAPI="1"
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.ekiga.org/admin/downloads/latest/sources/sources/${P}.tar.gz
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
 	ldap? ( >=net-nds/openldap-2.3.35 )
