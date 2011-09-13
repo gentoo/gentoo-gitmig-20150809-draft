@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git-sh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-sh/ChangeLog,v 1.4 2011/09/13 19:13:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-sh/ChangeLog,v 1.5 2011/09/13 21:22:32 jlec Exp $
+
+  13 Sep 2011; Justin Lecher <jlec@gentoo.org> git-sh-1.1.ebuild, metadata.xml:
+  Taken over maintainer ship, moved to EAPI=4
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> -git-sh-1.0-r1.ebuild,
   metadata.xml:
