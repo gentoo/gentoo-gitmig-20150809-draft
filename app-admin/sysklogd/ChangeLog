@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/sysklogd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.73 2011/04/07 07:51:22 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.74 2011/09/14 22:22:57 polynomial-c Exp $
+
+*sysklogd-1.5-r2 (14 Sep 2011)
+
+  14 Sep 2011; Lars Wendler <polynomial-c@gentoo.org> +sysklogd-1.5-r2.ebuild,
+  +files/sysklogd.rc7:
+  non-maintainer commit: Removed deprecated --oknodo option (bug #379515).
+  Replaced deprecated opts variable and removed --stop option from reload
+  function. All done with kind permission from vapier.
 
   07 Apr 2011; Ultrabug <ultrabug@gentoo.org>
   sysklogd-1.4.2_pre20061230-r2.ebuild, sysklogd-1.5.ebuild,
