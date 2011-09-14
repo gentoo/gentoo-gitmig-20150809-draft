@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.438 2011/09/13 06:05:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.439 2011/09/14 01:50:03 floppym Exp $
+
+  14 Sep 2011; Mike Gilbert <floppym@gentoo.org> chromium-9999-r1.ebuild:
+  Refactor src_unpack. Set ESVN_REPO_URI to trunk.
 
 *chromium-14.0.835.162 (13 Sep 2011)
 
