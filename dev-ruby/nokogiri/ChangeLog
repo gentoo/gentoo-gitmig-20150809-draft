@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.61 2011/08/27 09:43:35 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.62 2011/09/14 17:17:15 jer Exp $
+
+  14 Sep 2011; Jeroen Roovers <jer@gentoo.org> nokogiri-1.4.4-r1.ebuild:
+  Stable for HPPA (bug #369573).
 
   27 Aug 2011; Fabian Groffen <grobian@gentoo.org> nokogiri-1.5.0.ebuild:
   Provide locations to libraries, and help extconf to guess the library name of
