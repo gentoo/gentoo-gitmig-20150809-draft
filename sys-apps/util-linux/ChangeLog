@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.349 2011/09/07 04:06:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.350 2011/09/14 05:00:49 vapier Exp $
+
+  14 Sep 2011; Mike Frysinger <vapier@gentoo.org> util-linux-2.20.ebuild:
+  Drop ddate man page when USE=-ddate #381291#5 by Ulrich Müller.
 
   07 Sep 2011; Mike Frysinger <vapier@gentoo.org> util-linux-2.20.ebuild,
   util-linux-9999.ebuild, metadata.xml:
