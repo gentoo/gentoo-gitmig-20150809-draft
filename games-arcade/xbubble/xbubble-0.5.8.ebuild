@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbubble/xbubble-0.5.8.ebuild,v 1.15 2010/03/09 21:22:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbubble/xbubble-0.5.8.ebuild,v 1.16 2011/09/14 08:11:24 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -25,7 +25,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-xpaths.patch \
 		"${FILESDIR}"/${P}-locale.patch \
-		"${FILESDIR}"/${P}-libpng14.patch
+		"${FILESDIR}"/${P}-libpng14.patch \
+		"${FILESDIR}"/${P}-png15.patch
 	sed -i \
 		-e '/^AM_CFLAGS/d' \
 		src/Makefile.in || die "sed cflags"
