@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.280 2011/09/14 10:53:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.281 2011/09/14 12:14:38 blueness Exp $
+
+*tor-0.2.2.33 (14 Sep 2011)
+
+  14 Sep 2011; Anthony G. Basile <blueness@gentoo.org> +tor-0.2.2.33.ebuild:
+  Bump to latest upstream stable release
 
   14 Sep 2011; Anthony G. Basile <blueness@gentoo.org> files/tor.initd-r6:
   Change opts to extra_commands on ~arch ebuilds, bug #381895
