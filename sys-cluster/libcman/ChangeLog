@@ -1,0 +1,10 @@
+# ChangeLog for sys-cluster/libcman
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/libcman/ChangeLog,v 1.1 2011/09/14 10:28:16 ultrabug Exp $
+
+*libcman-3.1.5 (14 Sep 2011)
+
+  14 Sep 2011; Ultrabug <ultrabug@gentoo.org> +libcman-3.1.5.ebuild,
+  +metadata.xml:
+  Initial import
+
