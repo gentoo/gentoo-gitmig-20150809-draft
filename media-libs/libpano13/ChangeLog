@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libpano13
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano13/ChangeLog,v 1.30 2011/08/18 10:10:51 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpano13/ChangeLog,v 1.31 2011/09/14 18:51:55 nativemad Exp $
+
+  15 Sep 2011; Andreas Schuerch <nativemad@gentoo.org> libpano13-2.9.18.ebuild:
+  x86 stable, thanks JD, bug 379089.
 
   18 Aug 2011; Tony Vroon <chainsaw@gentoo.org> libpano13-2.9.18.ebuild:
   Marked stable based on arch testing by Agostino "ago" Sarubbo in bug #379089.
