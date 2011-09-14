@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/chameleon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chameleon/ChangeLog,v 1.5 2011/09/14 08:23:19 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chameleon/ChangeLog,v 1.6 2011/09/14 08:26:17 djc Exp $
+
+*chameleon-2.4.3 (14 Sep 2011)
+
+  14 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> +chameleon-2.4.3.ebuild:
+  Version bump to 2.4.3.
 
   14 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> chameleon-2.2-r1.ebuild:
   Add PyPI homepage.
