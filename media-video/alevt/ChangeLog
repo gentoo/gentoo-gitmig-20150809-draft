@@ -1,6 +1,11 @@
 # ChangeLog for media-video/alevt
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/ChangeLog,v 1.30 2009/05/14 08:35:13 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/ChangeLog,v 1.31 2011/09/14 11:54:46 ssuominen Exp $
+
+  14 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> alevt-1.6.2.ebuild,
+  +files/alevt-1.6.2-libpng15.patch:
+  Fix building with libpng15 (missing zlib.h include) wrt #378503 by Diego Elio
+  Pettenò
 
   14 May 2009; Jeroen Roovers <jer@gentoo.org> alevt-1.6.2.ebuild,
   +files/alevt-1.6.2-respectflags.patch:

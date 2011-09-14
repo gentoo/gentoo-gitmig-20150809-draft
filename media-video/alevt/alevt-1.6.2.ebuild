@@ -1,34 +1,37 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/alevt-1.6.2.ebuild,v 1.2 2009/05/14 08:35:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/alevt-1.6.2.ebuild,v 1.3 2011/09/14 11:54:46 ssuominen Exp $
 
-EAPI="2"
-
+EAPI=4
 inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="Teletext viewer for X11"
 HOMEPAGE="http://www.goron.de/~froese/"
 SRC_URI="http://www.goron.de/~froese/alevt/${P}.tar.gz"
-RESTRICT="strip"
-IUSE=""
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+IUSE=""
 
 RDEPEND="x11-libs/libX11
-	>=media-libs/libpng-1.0.12"
-
+	>=media-libs/libpng-1.4"
 DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
+RESTRICT="strip"
+
 src_prepare() {
 	cp -va Makefile{,.orig}
-	epatch "${FILESDIR}"/${P}-respectflags.patch
+
+	epatch \
+		"${FILESDIR}"/${P}-respectflags.patch \
+		"${FILESDIR}"/${P}-libpng15.patch
 }
 
 src_compile() {
 	append-flags -fno-strict-aliasing
-	emake CC="$(tc-getCC)" || die
+	emake CC="$(tc-getCC)"
 }
 
 src_install() {
