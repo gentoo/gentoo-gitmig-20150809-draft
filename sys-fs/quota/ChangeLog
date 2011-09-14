@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/quota
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.59 2011/05/21 18:01:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.60 2011/09/14 04:58:13 vapier Exp $
+
+*quota-4.00 (14 Sep 2011)
+
+  14 Sep 2011; Mike Frysinger <vapier@gentoo.org> +quota-4.00.ebuild,
+  metadata.xml:
+  Version bump #382797 by Justin Lecher. Add USE=netlink support #382801 by
+  Justin Lecher.
 
   21 May 2011; Raúl Porcel <armin76@gentoo.org> quota-3.17-r1.ebuild:
   alpha/ia64/sparc stable wrt #364361

@@ -3,6 +3,7 @@
 <pkgmetadata>
 <herd>base-system</herd>
 <use>
+	<flag name='netlink'>Compile daemon receiving quota messages via netlink</flag>
 	<flag name='rpc'>Enable quota interaction via RPC</flag>
 </use>
 </pkgmetadata>
