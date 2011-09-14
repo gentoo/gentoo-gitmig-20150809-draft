@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/povscript+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/povscript+/ChangeLog,v 1.4 2011/03/02 17:51:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/povscript+/ChangeLog,v 1.5 2011/09/14 19:49:57 ssuominen Exp $
+
+  14 Sep 2011; Samuli Suominen <ssuominen@gentoo.org>
+  povscript+-2.1.2.2.19.ebuild, +files/povscript+-2.1.2.2.19-libpng15.patch:
+  Fix building with libpng15 wrt #378737 by Diego Elio Pettenò. Fix missing
+  dependencies; freeglut, giflib, libpng, zlib, glu, jpeg, opengl and libX11.
 
   02 Mar 2011; Justin Lecher <jlec@gentoo.org> povscript+-2.1.2.2.18.ebuild,
   povscript+-2.1.2.2.19.ebuild:
