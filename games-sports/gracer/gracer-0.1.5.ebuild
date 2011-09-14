@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/gracer-0.1.5.ebuild,v 1.21 2011/02/26 15:32:17 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/gracer-0.1.5.ebuild,v 1.22 2011/09/14 12:37:51 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -25,13 +25,12 @@ DEPEND="x11-libs/libXi
 	media-libs/libpng
 	media-libs/plib"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${PV}-gldefs.patch \
-		"${FILESDIR}"/${PN}-gcc-3.4.patch \
-		"${FILESDIR}/${P}"-gcc41.patch \
-		"${FILESDIR}"/${P}-as-needed.patch \
-		"${FILESDIR}"/${P}-libpng14.patch
-}
+PATCHES=( "${FILESDIR}"/${PV}-gldefs.patch
+	"${FILESDIR}"/${PN}-gcc-3.4.patch
+	"${FILESDIR}/${P}"-gcc41.patch
+	"${FILESDIR}"/${P}-as-needed.patch
+	"${FILESDIR}"/${P}-libpng14.patch
+	"${FILESDIR}"/${P}-png15.patch )
 
 src_configure() {
 	egamesconf \
