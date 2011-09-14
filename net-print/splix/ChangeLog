@@ -1,6 +1,10 @@
 # ChangeLog for net-print/splix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/splix/ChangeLog,v 1.20 2011/05/13 22:17:48 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/splix/ChangeLog,v 1.21 2011/09/14 12:56:07 voyageur Exp $
+
+  14 Sep 2011; Bernard Cafarelli <voyageur@gentoo.org> splix-2.0.0.ebuild,
+  splix-2.0.0_p20110219-r1.ebuild:
+  Drop cupsddk dependency, bug #336475
 
 *splix-2.0.0_p20110219-r1 (13 May 2011)
 
