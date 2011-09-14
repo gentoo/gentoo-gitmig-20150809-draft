@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-2.4.ebuild,v 1.4 2011/07/15 20:17:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/newsbeuter-2.4.ebuild,v 1.5 2011/09/14 10:35:07 radhermit Exp $
 
 EAPI="2"
 inherit toolchain-funcs
@@ -26,6 +26,9 @@ DEPEND="${RDEPEND}
 		dev-libs/boost
 		sys-devel/bc
 	)"
+
+# Tests require network access
+RESTRICT="test"
 
 src_prepare() {
 	sed -i \

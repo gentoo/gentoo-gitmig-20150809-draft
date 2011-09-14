@@ -1,6 +1,9 @@
 # ChangeLog for net-news/newsbeuter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.33 2011/09/13 18:30:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.34 2011/09/14 10:35:07 radhermit Exp $
+
+  14 Sep 2011; Tim Harder <radhermit@gentoo.org> newsbeuter-2.4.ebuild:
+  Restrict tests since they require network access (bug #351015).
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #225633
