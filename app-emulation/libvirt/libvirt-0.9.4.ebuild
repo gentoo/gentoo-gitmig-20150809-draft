@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.4.ebuild,v 1.4 2011/08/31 22:55:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.4.ebuild,v 1.5 2011/09/14 15:10:26 cardoe Exp $
 
 #BACKPORTS=2
 #AUTOTOOLIZE=yes
@@ -187,8 +187,7 @@ src_configure() {
 		--disable-static \
 		--docdir=/usr/share/doc/${PF} \
 		--with-remote \
-		--localstatedir=/var \
-		--with-remote-pid-file=/var/run/libvirtd.pid
+		--localstatedir=/var
 }
 
 src_test() {

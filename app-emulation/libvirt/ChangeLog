@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.134 2011/09/03 08:49:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.135 2011/09/14 15:10:26 cardoe Exp $
+
+  14 Sep 2011; Doug Goldstein <cardoe@gentoo.org> libvirt-0.9.4.ebuild,
+  libvirt-9999.ebuild:
+  Remove old configure option --with-remote-pid-file
 
   03 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Drop unused local desc.
