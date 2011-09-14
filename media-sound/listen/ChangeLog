@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/listen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/ChangeLog,v 1.30 2011/03/28 14:02:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/listen/ChangeLog,v 1.31 2011/09/14 11:17:52 pacho Exp $
+
+*listen-0.6.5-r1 (14 Sep 2011)
+
+  14 Sep 2011; Pacho Ramos <pacho@gentoo.org> -listen-0.6.5.ebuild,
+  +listen-0.6.5-r1.ebuild:
+  Use webkit always due gtkmozembed removal (bug #372247), drop libsexy support
+  as it's deprecated (bug #381209). Remove old.
 
   28 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> listen-0.6.5.ebuild:
   Remove media-libs/tunepimp (Old RDF service) dep. in favour of

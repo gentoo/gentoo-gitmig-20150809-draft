@@ -31,8 +31,4 @@
     * Fill metadata with musicbrainz
     * Make inteligent playlists
 </longdescription>
-  <use>
-    <flag name="libsexy">Enable libsexy support</flag>
-	<flag name="webkit">Enable webkit rendering engine instead of mozembed</flag>
-  </use>
 </pkgmetadata>
