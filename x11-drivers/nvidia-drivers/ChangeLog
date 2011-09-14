@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.297 2011/09/13 15:22:54 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.298 2011/09/14 15:59:10 cardoe Exp $
+
+*nvidia-drivers-275.28 (14 Sep 2011)
+
+  14 Sep 2011; Doug Goldstein <cardoe@gentoo.org>
+  +nvidia-drivers-275.28.ebuild:
+  Add the extremely buggy 275.28 version which claims to have xorg-server-1.11
+  support to statisfy users desire for the latest and greatest, even if its
+  broken.
 
 *nvidia-drivers-285.03 (13 Sep 2011)
 *nvidia-drivers-280.13 (13 Sep 2011)
