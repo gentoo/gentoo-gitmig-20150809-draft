@@ -1,11 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.6.14.ebuild,v 1.3 2011/04/29 12:23:52 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.6.18.ebuild,v 1.1 2011/09/14 14:31:32 pacho Exp $
 
-EAPI="3"
+EAPI="4"
+CLUTTER_LA_PUNT="yes"
+
 WANT_AUTOMAKE="1.11"
 
-inherit clutter
+# Inherit gnome.org last for new tarball location
+inherit clutter gnome.org
 
 DESCRIPTION="Clutter is a library for creating graphical user interfaces"
 
@@ -48,6 +51,7 @@ DEPEND="${RDEPEND}
 		>=app-text/docbook-sgml-utils-0.6.14[jadetex]
 		dev-libs/libxslt )
 "
+
 DOCS="AUTHORS README NEWS ChangeLog*"
 
 src_configure() {
