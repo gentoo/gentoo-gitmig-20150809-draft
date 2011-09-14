@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/soappy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.39 2011/09/11 18:05:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.40 2011/09/14 19:15:43 grobian Exp $
+
+  14 Sep 2011; Fabian Groffen <grobian@gentoo.org> soappy-0.12.5.ebuild:
+  Marked ~x86-macos, bug #382049
 
   11 Sep 2011; Raúl Porcel <armin76@gentoo.org> soappy-0.12.5.ebuild:
   Add ~alpha/~ia64/~s390/~sh/~sparc wrt #381749
