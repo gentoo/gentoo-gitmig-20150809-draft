@@ -1,0 +1,12 @@
+Missing include for Z_BEST_COMPRESSION
+
+--- image.cxx
++++ image.cxx
+@@ -91,6 +91,7 @@
+ #endif // HAVE_LIBJPEG
+ 
+ #ifdef HAVE_LIBPNG
++#  include <zlib.h>
+ #  include <png.h>
+ #endif // HAVE_LIBPNG
+ 
