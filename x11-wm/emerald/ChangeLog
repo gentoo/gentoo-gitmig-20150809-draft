@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/emerald
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/ChangeLog,v 1.35 2011/03/21 22:38:51 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/ChangeLog,v 1.36 2011/09/14 20:47:24 ssuominen Exp $
+
+  14 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> emerald-0.8.4-r2.ebuild,
+  +files/emerald-0.8.4-pkgconfig-pollution.patch:
+  Use Requires.private and Libs.private instead of Requires and Libs wrt
+  #380197 by Diego Elio Pettenò
 
   21 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   emerald-0.8.4-r2.ebuild:
