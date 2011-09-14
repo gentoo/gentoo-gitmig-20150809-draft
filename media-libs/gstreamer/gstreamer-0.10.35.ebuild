@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.35.ebuild,v 1.4 2011/09/06 19:02:55 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.10.35.ebuild,v 1.5 2011/09/14 19:23:56 grobian Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ SRC_URI="http://${PN}.freedesktop.org/src/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT=${PV_MAJ_MIN}
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="+introspection nls test"
 
 RDEPEND=">=dev-libs/glib-2.22:2
@@ -31,6 +31,17 @@ DEPEND="${RDEPEND}
 	# dev-util/gtk-doc-am # Only if eautoreconf'ing
 
 src_configure() {
+	if [[ ${CHOST} == *-interix* ]] ; then
+		export ac_cv_lib_dl_dladdr=no
+		export ac_cv_func_poll=no
+	fi
+	if [[ ${CHOST} == powerpc-apple-darwin* ]] ; then
+		# GCC groks this, but then refers to an implementation (___multi3,
+		# ___udivti3) that don't exist (at least I can't find it), so force
+		# this one to be off, such that we use 2x64bit emulation code.
+		export gst_cv_uint128_t=no
+	fi
+
 	# Disable static archives, dependency tracking and examples
 	# to speed up build time
 	# Disable debug, as it only affects -g passing (debugging symbols), this must done through make.conf in gentoo
