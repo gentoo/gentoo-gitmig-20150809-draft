@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/brlcad/brlcad-7.18.4.ebuild,v 1.1 2011/04/18 22:47:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/brlcad/brlcad-7.18.4.ebuild,v 1.2 2011/09/14 12:08:39 ssuominen Exp $
 
 EAPI=3
 inherit eutils java-pkg-opt-2
@@ -36,6 +36,12 @@ DEPEND="${RDEPEND}
 	doc? ( dev-libs/libxslt )"
 
 BRLCAD_DIR="${EPREFIX}/usr/${PN}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libpng15.patch
+
+	java-pkg-opt-2_src_prepare
+}
 
 src_configure() {
 	local myconf="--without-jdk"

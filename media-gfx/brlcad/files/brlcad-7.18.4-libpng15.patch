@@ -1,0 +1,13 @@
+http://bugs.gentoo.org/378273
+
+--- src/libged/png.c
++++ src/libged/png.c
+@@ -30,6 +30,8 @@
+ #include <string.h>
+ #include "bio.h"
+ 
++#include <zlib.h> /* Z_BEST_COMPRESSION */
++
+ #include "png.h"
+ #include "bu.h"
+ #include "vmath.h"
