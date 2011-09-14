@@ -1,7 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.13a.ebuild,v 1.7 2010/09/15 15:30:00 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/magicpoint/magicpoint-1.13a.ebuild,v 1.8 2011/09/14 16:10:59 ssuominen Exp $
 
+EAPI=4
 inherit autotools elisp-common eutils fixheadtails toolchain-funcs
 
 DESCRIPTION="An X11 based presentation tool"
@@ -18,7 +19,7 @@ MY_DEPEND="x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libXrender
 	x11-libs/libXmu
-	>=media-libs/libpng-1.2.43-r2
+	>=media-libs/libpng-1.4
 	gif? ( >=media-libs/giflib-4.0.1 )
 	imlib? ( media-libs/imlib )
 	truetype? ( x11-libs/libXft )
@@ -37,23 +38,24 @@ RDEPEND="${MY_DEPEND}
 
 SITEFILE=50${PN}-gentoo.el
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${PN}-1.11b-gentoo.diff"
-	epatch "${FILESDIR}/${P}-implicit-declaration.patch"
+src_prepare() {
+	epatch \
+		"${FILESDIR}"/${PN}-1.11b-gentoo.diff \
+		"${FILESDIR}"/${P}-implicit-declaration.patch \
+		"${FILESDIR}"/${P}-libpng15.patch
 
+	# fix compability with libpng14
 	sed -i \
 		-e 's:png_set_gray_1_2_4_to_8:png_set_expand_gray_1_2_4_to_8:' \
 		configure.in image/png.c || die
 
 	# bug #85720
-	sed -i -e "s/ungif/gif/g" configure.in || die "sed failed"
+	sed -i -e "s/ungif/gif/g" configure.in || die
 	ht_fix_file configure.in
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		$(use_enable gif) \
 		$(use_enable imlib) \
@@ -63,18 +65,20 @@ src_compile() {
 		--disable-vflib \
 		--disable-freetype \
 		--x-libraries=/usr/lib/X11 \
-		--x-includes=/usr/include/X11 || die "econf failed"
+		--x-includes=/usr/include/X11
+}
 
-	xmkmf || die "xmkmf failed"
+src_compile() {
+	xmkmf || die
 	# no parallel build possibly, anywhere
-	emake -j1 Makefiles || die "emake Makefiles failed"
-	emake -j1 clean || die "emake clean failed"
+	emake -j1 Makefiles
+	emake -j1 clean
 	tc-export CC
 	emake -j1 CC="${CC}" CDEBUGFLAGS="${CFLAGS}" LOCAL_LDFLAGS="${LDFLAGS}" \
-		BINDIR=/usr/bin LIBDIR=/etc/X11 || die "emake failed"
+		BINDIR=/usr/bin LIBDIR=/etc/X11
 	if use emacs; then
 	   cd contrib/
-	   elisp-compile *.el || die "elisp-compile failed"
+	   elisp-compile *.el || die
 	fi
 }
 
@@ -83,20 +87,20 @@ src_install() {
 		DESTDIR="${D}" \
 		BINDIR=/usr/bin \
 		LIBDIR=/etc/X11 \
-		install || die "emake install failed"
+		install
 
 	emake -j1 \
 		DESTDIR="${D}" \
 		DOCHTMLDIR=/usr/share/doc/${PF} \
 		MANPATH=/usr/share/man \
 		MANSUFFIX=1 \
-		install.man || die "emake install.man failed"
+		install.man
 
 	dobin contrib/{mgp2html.pl,mgp2latex.pl}
 
-	if use emacs ; then
+	if use emacs; then
 		cd contrib/
-		elisp-install ${PN} *.el *.elc || die "elisp-install failed"
+		elisp-install ${PN} *.el *.elc || die
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 		cd -
 	fi
@@ -109,8 +113,7 @@ src_install() {
 		doins README* cloud.jpg dad.* embed*.mgp gradation*.mgp \
 			mgp-old*.jpg mgp.mng mgp3.xbm mgprc-sample \
 			multilingual.mgp sample*.mgp sendmail6*.mgp \
-			tutorial*.mgp v6*.mgp v6header.* || \
-			die "example installation failed"
+			tutorial*.mgp v6*.mgp v6header.*
 	fi
 }
 
