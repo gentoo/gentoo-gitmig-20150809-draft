@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/adns-python
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/adns-python/ChangeLog,v 1.27 2010/07/14 17:21:43 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/adns-python/ChangeLog,v 1.28 2011/09/14 08:03:50 djc Exp $
+
+  14 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> adns-python-1.2.1.ebuild:
+  Add PyPI homepage.
 
   14 Jul 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   adns-python-1.2.1.ebuild:
