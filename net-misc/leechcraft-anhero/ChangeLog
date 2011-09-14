@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/leechcraft-anhero
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-anhero/ChangeLog,v 1.1 2011/08/25 15:40:45 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-anhero/ChangeLog,v 1.2 2011/09/14 17:01:24 maksbotan Exp $
+
+*leechcraft-anhero-0.4.90 (14 Sep 2011)
+
+  14 Sep 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-anhero-0.4.90.ebuild:
+  Bump net-misc/leechcraft-anhero to 0.4.90, thanks to 0xd34df00d
 
 *leechcraft-anhero-9999 (25 Aug 2011)
 *leechcraft-anhero-0.4.85 (25 Aug 2011)

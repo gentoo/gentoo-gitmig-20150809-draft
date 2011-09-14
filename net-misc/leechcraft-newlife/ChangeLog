@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/leechcraft-newlife
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-newlife/ChangeLog,v 1.1 2011/08/25 18:35:10 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-newlife/ChangeLog,v 1.2 2011/09/14 17:04:55 maksbotan Exp $
+
+*leechcraft-newlife-0.4.90 (14 Sep 2011)
+
+  14 Sep 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-newlife-0.4.90.ebuild:
+  Bump net-misc/leechcraft-newlife to 0.4.90, thanks to 0xd34df00d
 
 *leechcraft-newlife-9999 (25 Aug 2011)
 *leechcraft-newlife-0.4.85 (25 Aug 2011)
