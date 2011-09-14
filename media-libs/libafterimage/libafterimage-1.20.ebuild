@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/libafterimage-1.20.ebuild,v 1.3 2011/08/28 17:51:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/libafterimage-1.20.ebuild,v 1.4 2011/09/14 19:17:34 ssuominen Exp $
 
 EAPI=3
 inherit eutils autotools
@@ -39,6 +39,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-config.patch
 	# fix gif unbundle
 	epatch "${FILESDIR}"/${PN}-gif.patch
+	# fix for libpng15 compability
+	epatch "${FILESDIR}"/${PN}-libpng15.patch
 	# remove forced flags
 	sed -i \
 		-e 's/CFLAGS="-O3"//' \

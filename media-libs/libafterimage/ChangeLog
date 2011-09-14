@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libafterimage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.32 2011/08/28 17:51:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.33 2011/09/14 19:17:34 ssuominen Exp $
+
+  14 Sep 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +files/libafterimage-libpng15.patch, libafterimage-1.20.ebuild:
+  Fix building with libpng15 wrt #378523 by Diego Elio Pettenò
 
   28 Aug 2011; Fabian Groffen <grobian@gentoo.org> libafterimage-1.20.ebuild:
   Fix for Prefix, transfer Prefix keywords
