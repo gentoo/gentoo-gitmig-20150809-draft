@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/qca
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.91 2011/08/17 16:42:26 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.92 2011/09/14 19:11:21 grobian Exp $
+
+  14 Sep 2011; Fabian Groffen <grobian@gentoo.org> qca-2.0.3.ebuild:
+  Marked ~ppc-macos, bug #382057
 
   17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   qca-2.0.3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.0.3.ebuild,v 1.8 2011/08/17 16:42:26 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.0.3.ebuild,v 1.9 2011/09/14 19:11:21 grobian Exp $
 
 EAPI="3"
 inherit eutils multilib qt4-r2
@@ -11,7 +11,7 @@ SRC_URI="http://delta.affinix.com/download/${PN}/${PV%.*}/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~sparc-solaris"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~sparc-solaris"
 IUSE="aqua debug doc examples"
 RESTRICT="test"
 
