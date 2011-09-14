@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/nip2-7.26.3.ebuild,v 1.1 2011/08/25 07:50:30 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/nip2-7.26.3.ebuild,v 1.2 2011/09/14 09:01:32 pva Exp $
 
 EAPI=2
 inherit eutils autotools fdo-mime gnome2-utils versionator
@@ -26,7 +26,7 @@ RDEPEND=">=dev-libs/glib-2.14:2
 DEPEND="${RDEPEND}
 	sys-devel/bison
 	sys-devel/flex
-	test? ( media-libs/vips[jpeg,lcms] )"
+	test? ( media-libs/vips[jpeg,lcms,tiff] )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-7.16.4-fftw3-build.patch
