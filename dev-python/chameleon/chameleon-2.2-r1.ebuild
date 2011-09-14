@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chameleon/chameleon-2.2-r1.ebuild,v 1.3 2011/07/30 01:04:26 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chameleon/chameleon-2.2-r1.ebuild,v 1.4 2011/09/14 08:23:19 djc Exp $
 
 EAPI=3
 
@@ -14,8 +14,8 @@ inherit distutils
 MY_PN="Chameleon"
 MY_P="${MY_PN}-${PV}"
 
-DESCRIPTION="Fast XML template compiler for Python"
-HOMEPAGE="http://chameleon.repoze.org"
+DESCRIPTION="Fast HTML/XML template compiler for Python"
+HOMEPAGE="http://chameleon.repoze.org http://pypi.python.org/pypi/Chameleon"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="repoze"
