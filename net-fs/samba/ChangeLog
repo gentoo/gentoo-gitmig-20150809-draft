@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.488 2011/09/11 19:43:56 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.489 2011/09/14 22:52:32 polynomial-c Exp $
+
+  14 Sep 2011; Lars Wendler <polynomial-c@gentoo.org> files/3.5/samba.initd,
+  files/3.6/samba.initd, files/samba4.initd:
+  non-maintainer commit: Moved reload option from extra_commands to
+  extra_started_commands as it is only useful when samba has been started.
 
   11 Sep 2011; Víctor Ostorga <vostorga@gentoo.org> files/3.5/samba.initd,
   -samba-3.4.12.ebuild, files/3.6/samba.initd, -samba-3.4.14.ebuild,
