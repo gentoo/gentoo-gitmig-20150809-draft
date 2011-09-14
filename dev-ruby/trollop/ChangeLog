@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/trollop
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/trollop/ChangeLog,v 1.11 2010/12/04 14:53:07 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/trollop/ChangeLog,v 1.12 2011/09/14 16:49:58 jer Exp $
+
+  14 Sep 2011; Jeroen Roovers <jer@gentoo.org> trollop-1.16.2-r2.ebuild:
+  Stable for HPPA (bug #369573).
 
   04 Dec 2010; Fabian Groffen <grobian@gentoo.org> trollop-1.16.2-r2.ebuild:
   Added Prefix keywords

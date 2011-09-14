@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/term-ansicolor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/term-ansicolor/ChangeLog,v 1.20 2011/07/22 06:53:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/term-ansicolor/ChangeLog,v 1.21 2011/09/14 16:54:53 jer Exp $
+
+  14 Sep 2011; Jeroen Roovers <jer@gentoo.org> term-ansicolor-1.0.5-r1.ebuild:
+  Stable for HPPA (bug #369573).
 
 *term-ansicolor-1.0.6 (22 Jul 2011)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/gherkin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.30 2011/09/10 09:42:39 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.31 2011/09/14 16:52:18 jer Exp $
+
+  14 Sep 2011; Jeroen Roovers <jer@gentoo.org> gherkin-1.0.30-r1.ebuild:
+  Stable for HPPA (bug #369573).
 
 *gherkin-2.4.18 (10 Sep 2011)
 
