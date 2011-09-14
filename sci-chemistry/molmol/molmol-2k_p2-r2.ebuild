@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/molmol-2k_p2-r2.ebuild,v 1.7 2011/07/15 20:37:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/molmol-2k_p2-r2.ebuild,v 1.8 2011/09/14 21:25:05 ssuominen Exp $
 
 EAPI=4
 
@@ -59,6 +59,7 @@ src_prepare() {
 		-i "${S}"/makedef || die
 
 	epatch "${FILESDIR}"/cast.patch
+	epatch "${FILESDIR}"/libpng15.patch
 }
 
 src_install() {
