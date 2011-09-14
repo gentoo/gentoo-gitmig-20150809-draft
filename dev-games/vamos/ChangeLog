@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/vamos
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/ChangeLog,v 1.15 2010/09/17 11:09:08 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/ChangeLog,v 1.16 2011/09/14 12:26:11 ssuominen Exp $
+
+  14 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> vamos-0.6.2.ebuild,
+  +files/vamos-0.6.2-libpng15.patch:
+  Fix building with libpng15 wrt #378351 by Diego Elio Pettenò
 
   17 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org> vamos-0.6.2.ebuild:
   Remove virtual/glu where already virtual/opengl is stated.

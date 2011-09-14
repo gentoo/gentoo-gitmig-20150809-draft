@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/vamos-0.6.2.ebuild,v 1.6 2010/09/17 11:09:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/vamos-0.6.2.ebuild,v 1.7 2011/09/14 12:26:11 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -24,7 +24,9 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-as-needed.patch
+	epatch \
+		"${FILESDIR}"/${P}-as-needed.patch \
+		"${FILESDIR}"/${P}-libpng15.patch
 }
 
 src_configure() {
