@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13043 2011/09/13 19:17:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13044 2011/09/14 09:20:50 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -493,10 +493,6 @@ dev-lang/open64
 # Opera Next is forever unstable and unsupported.
 # <http://my.opera.com/desktopteam/blog>
 www-client/opera-next
-
-# Peter Volkov <pva@gentoo.org> (24 May 2011)
-# Mask release candidates
-=net-analyzer/wireshark-1.6.0_rc*
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (16 May 2011)
 # Masked until reverse dependencies of dev-python/pyxml are updated.
