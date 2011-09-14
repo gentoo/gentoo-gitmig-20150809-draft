@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/darktable
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.8 2011/08/29 03:50:48 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.9 2011/09/14 12:59:27 c1pher Exp $
+
+*darktable-0.9.2-r2 (14 Sep 2011)
+
+  14 Sep 2011; Dane Smith <c1pher@gentoo.org> +darktable-0.9.2-r2.ebuild:
+  Revision bump.
+  Disable the use of OpenCL during compilation.
+  Fixes issues with some modules not loading when it isn't present.
 
   29 Aug 2011; Tim Harder <radhermit@gentoo.org> -darktable-0.9.1-r1.ebuild,
   -files/darktable-0.9.1-system-libraw.patch, -darktable-0.9.2.ebuild,
