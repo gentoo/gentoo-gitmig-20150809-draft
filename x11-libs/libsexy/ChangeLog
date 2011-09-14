@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libsexy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsexy/ChangeLog,v 1.53 2011/05/21 04:43:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsexy/ChangeLog,v 1.54 2011/09/14 15:22:37 ssuominen Exp $
+
+*libsexy-0.1.11-r3 (14 Sep 2011)
+
+  14 Sep 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +libsexy-0.1.11-r3.ebuild, +files/libsexy-0.1.11-pkgconfig-pollution.patch:
+  Use Libs.private instead of Libs to pass libraries for static linking wrt
+  #380193 by Diego Elio Pettenò
 
   21 May 2011; Samuli Suominen <ssuominen@gentoo.org> libsexy-0.1.11-r2.ebuild:
   ppc/ppc64 stable wrt #361917
