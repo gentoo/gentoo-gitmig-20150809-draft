@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/numactl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/ChangeLog,v 1.17 2011/08/26 09:39:45 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/ChangeLog,v 1.18 2011/09/14 19:28:59 grobian Exp $
+
+*numactl-2.0.7-r1 (14 Sep 2011)
+
+  14 Sep 2011; Fabian Groffen <grobian@gentoo.org> +numactl-2.0.7-r1.ebuild:
+  Bump for Prefix fixes, marked ~amd64-linux, bug #382347
 
   26 Aug 2011; Thomas Kahle <tomka@gentoo.org> numactl-2.0.7.ebuild:
   x86 stable per bug 379807
