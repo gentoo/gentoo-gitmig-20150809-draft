@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/xolox-misc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/xolox-misc/ChangeLog,v 1.2 2011/09/02 19:26:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/xolox-misc/ChangeLog,v 1.3 2011/09/14 22:59:36 radhermit Exp $
+
+*xolox-misc-20110904 (14 Sep 2011)
+
+  14 Sep 2011; Tim Harder <radhermit@gentoo.org> +xolox-misc-20110904.ebuild:
+  Version bump.
 
 *xolox-misc-20110831 (02 Sep 2011)
 
