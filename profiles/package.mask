@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13044 2011/09/14 09:20:50 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13045 2011/09/14 17:21:16 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -214,8 +214,7 @@ dev-ruby/capistrano-launcher
 # Breaks lots of GNOME related apps (bug #375615)
 =x11-drivers/nvidia-drivers-285.03
 =x11-drivers/nvidia-drivers-280.13
-=x11-drivers/nvidia-drivers-275.21
-=x11-drivers/nvidia-drivers-275.19
+=x11-drivers/nvidia-drivers-275.28
 
 # Steev Klimaszewski <steev@gentoo.org> (31 Jul 2011)
 # This package is old and obsolete.  Mask for removal.
