@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xrmap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/ChangeLog,v 1.21 2011/03/25 17:10:45 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/ChangeLog,v 1.22 2011/09/14 15:13:19 ssuominen Exp $
+
+  14 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> xrmap-2.33-r1.ebuild,
+  +files/xrmap-2.33-libpng15.patch:
+  Fix building with libpng15 (missing zlib.h include) wrt #378715 by Diego Elio
+  Pettenò. Fix missing virtual/jpeg, media-libs/libpng and sys-libs/zlib
+  dependencies (see image.c for reference).
 
 *xrmap-2.33-r1 (25 Mar 2011)
 

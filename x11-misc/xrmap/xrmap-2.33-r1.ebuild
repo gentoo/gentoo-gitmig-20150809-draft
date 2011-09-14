@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/xrmap-2.33-r1.ebuild,v 1.1 2011/03/25 17:10:45 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrmap/xrmap-2.33-r1.ebuild,v 1.2 2011/09/14 15:13:19 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -22,11 +22,13 @@ SRC_URI="ftp://ftp.ac-grenoble.fr/ge/geosciences/${PN}/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="zlib"
+IUSE=""
 
 CDEPEND="x11-libs/libX11
 	x11-libs/libXpm
-	zlib? ( sys-libs/zlib )"
+	virtual/jpeg
+	>=media-libs/libpng-1.4
+	sys-libs/zlib"
 RDEPEND="${CDEPEND}
 	x11-misc/xdg-utils
 	app-text/gv
@@ -44,8 +46,8 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-Makefile.kit.patch \
 		"${FILESDIR}"/${P}-as-needed.patch \
-		"${FILESDIR}"/${P}-parallel-make.patch
-	use zlib || sed -i 's/-DZLIB\|-lz//g' Makefile.noimake || die
+		"${FILESDIR}"/${P}-parallel-make.patch \
+		"${FILESDIR}"/${P}-libpng15.patch
 
 	sed  -e 's,^\(X11DIR=\).*,\1/usr/,g' \
 		 -e 's,^\(EDITOR=\).*,\1less,g'   \
