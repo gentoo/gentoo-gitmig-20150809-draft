@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/qt-demo-4.7.4.ebuild,v 1.1 2011/09/08 09:19:47 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-demo/qt-demo-4.7.4.ebuild,v 1.2 2011/09/14 10:44:38 wired Exp $
 
 EAPI="3"
 inherit qt4-build
@@ -44,7 +44,7 @@ pkg_setup() {
 }
 
 src_configure() {
-	myconf="${myconf} $(qt_use qt3support)"
+	myconf="${myconf} $(qt_use qt3support) -no-openvg"
 	qt4-build_src_configure
 }
 
