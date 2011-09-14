@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/ufdbguard
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ChangeLog,v 1.20 2011/09/14 11:37:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ChangeLog,v 1.21 2011/09/14 15:21:34 flameeyes Exp $
+
+  14 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Forcing Manifest regeneration.
 
   14 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org> files/ufdb.initd:
   Do not use bashism to reload ufdbGuard; use the new extra_started_commands
