@@ -1,6 +1,11 @@
 # ChangeLog for media-radio/tucnak2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak2/ChangeLog,v 1.32 2011/09/14 18:53:42 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak2/ChangeLog,v 1.33 2011/09/14 18:57:28 tomjbe Exp $
+
+*tucnak2-2.44 (14 Sep 2011)
+
+  14 Sep 2011; Thomas Beierlein <tomjbe@gentoo.org> +tucnak2-2.44.ebuild:
+  version bump
 
   14 Sep 2011; Thomas Beierlein <tomjbe@gentoo.org>
   +files/tucnak2-libpng15.patch, tucnak2-2.43.ebuild:
