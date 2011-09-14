@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxpuck/tuxpuck-0.8.2-r1.ebuild,v 1.7 2011/08/02 18:12:45 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxpuck/tuxpuck-0.8.2-r1.ebuild,v 1.8 2011/09/14 15:46:53 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -34,7 +34,8 @@ src_prepare() {
 		utils/Makefile \
 		data/Makefile \
 		|| die "sed failed"
-	epatch "${FILESDIR}"/${P}-ldflags.patch
+	epatch "${FILESDIR}"/${P}-ldflags.patch \
+		"${FILESDIR}"/${P}-png15.patch
 }
 
 src_compile() {
