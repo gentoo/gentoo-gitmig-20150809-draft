@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/files/lxc.initd,v 1.6 2011/09/05 18:32:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/files/lxc.initd,v 1.7 2011/09/14 19:39:40 flameeyes Exp $
 
 CONTAINER=${SVCNAME#*.}
 
@@ -18,7 +18,7 @@ lxc_get_configfile() {
 	fi
 }
 
-CONFIGFILE=${CONFIGFILE:-$(lxc_get_configfile)}
+[ $CONTAINER != $SVCNAME ] && CONFIGFILE=${CONFIGFILE:-$(lxc_get_configfile)}
 
 lxc_get_var() {
 	awk 'BEGIN { FS="[ \t]*=[ \t]*" } $1 == "'$1'" { print $2; exit }' ${CONFIGFILE}

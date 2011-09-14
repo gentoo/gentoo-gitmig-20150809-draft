@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.26 2011/09/05 18:32:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.27 2011/09/14 19:39:40 flameeyes Exp $
+
+*lxc-0.7.5-r1 (14 Sep 2011)
+
+  14 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org> -lxc-0.7.4.2.ebuild,
+  -lxc-0.7.5.ebuild, +lxc-0.7.5-r1.ebuild, files/lxc.initd:
+  Fix init script not to look for a configuration file when generating
+  dependencies for the base (multiplexed) init script. Revision bump to make
+  sure users reinstall the ebuild, and remove old. Closes bug #382519.
 
 *lxc-0.7.5 (05 Sep 2011)
 

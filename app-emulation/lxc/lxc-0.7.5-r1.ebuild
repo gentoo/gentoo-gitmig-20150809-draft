@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.7.4.2.ebuild,v 1.1 2011/07/26 13:39:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/lxc-0.7.5-r1.ebuild,v 1.1 2011/09/14 19:39:40 flameeyes Exp $
 
 EAPI="4"
 
@@ -17,12 +17,12 @@ KEYWORDS="~amd64 ~ppc64 ~x86"
 
 LICENSE="LGPL-3"
 SLOT="0"
-IUSE="doc examples vanilla"
+IUSE="examples vanilla"
 
 RDEPEND="sys-libs/libcap"
 
 DEPEND="${RDEPEND}
-	doc? ( app-text/docbook-sgml-utils )
+	app-text/docbook-sgml-utils
 	>=sys-kernel/linux-headers-2.6.29"
 
 # For init script, so protect with vanilla, they are not strictly
@@ -34,7 +34,7 @@ RDEPEND="${RDEPEND}
 	)"
 
 CONFIG_CHECK="~CGROUPS
-	~CGROUP_NS ~CPUSETS ~CGROUP_CPUACCT
+	~CPUSETS ~CGROUP_CPUACCT
 	~RESOURCE_COUNTERS ~CGROUP_MEM_RES_CTLR
 	~CGROUP_SCHED
 
@@ -56,6 +56,8 @@ ERROR_NET_NS="CONFIG_NET_NS:	needed for unshared network"
 ERROR_VETH="CONFIG_VETH:	needed for internal (host-to-container) networking"
 ERROR_MACVLAN="CONFIG_MACVLAN:	needed for internal (inter-container) networking"
 
+DOCS=(AUTHORS CONTRIBUTING MAINTAINERS NEWS TODO README doc/FAQ.txt)
+
 src_configure() {
 	append-flags -fno-strict-aliasing
 
@@ -66,23 +68,12 @@ src_configure() {
 		--with-config-path=/etc/lxc	\
 		--with-rootfs-path=/usr/lib/lxc/rootfs \
 		--with-linuxdir="${KERNEL_DIR}" \
-		$(use_enable doc) \
+		--enable-doc \
 		$(use_enable examples)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-
-	dodoc AUTHORS CONTRIBUTING MAINTAINERS \
-		NEWS TODO README doc/FAQ.txt
-
-	# If the documentation is going to be rebuilt, the Makefiles will
-	# install the man pages themselves; if we're not going to, we
-	# still need to install them, as they are provided with the
-	# tarball in recent versions.
-	if ! use doc; then
-		doman doc/*.{1,5,7}
-	fi
+	default
 
 	rm -r "${D}"/usr/sbin/lxc-{setcap,ls} \
 		"${D}"/usr/share/man/man1/lxc-ls.1 \
