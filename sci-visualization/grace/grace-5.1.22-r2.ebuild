@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r2.ebuild,v 1.9 2011/06/21 14:30:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/grace-5.1.22-r2.ebuild,v 1.10 2011/09/14 14:48:08 ssuominen Exp $
 
 EAPI=4
 
@@ -46,7 +46,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-5.1.21-fortran.patch
 	# fix a leak (from freebsd)
 	epatch "${FILESDIR}"/${P}-dlmodule.patch \
-		"${FILESDIR}"/${P}-ldflags.patch
+		"${FILESDIR}"/${P}-ldflags.patch \
+		"${FILESDIR}"/${P}-libpng15.patch
 
 	# don't strip if not asked for
 	sed -i \

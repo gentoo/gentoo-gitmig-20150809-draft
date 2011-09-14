@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/grace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.51 2011/06/21 14:30:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.52 2011/09/14 14:48:08 ssuominen Exp $
+
+  14 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> grace-5.1.22-r2.ebuild,
+  +files/grace-5.1.22-libpng15.patch:
+  Fix building with libpng15 (including missing zlib.h include) wrt #380437 by
+  Diego Elio Pettenò
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> grace-5.1.22-r1.ebuild,
   grace-5.1.22-r2.ebuild:
