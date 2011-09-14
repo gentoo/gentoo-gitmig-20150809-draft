@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gqmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gqmpeg/ChangeLog,v 1.26 2011/08/25 20:39:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gqmpeg/ChangeLog,v 1.27 2011/09/14 08:52:30 ssuominen Exp $
+
+  14 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> gqmpeg-0.91.1.ebuild,
+  +files/gqmpeg-0.91.1-libpng15.patch:
+  Fix building with libpng15 wrt #380679 by Diego Elio Pettenò
 
   25 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org> gqmpeg-0.91.1.ebuild:
   QA: add missing libpng dependency.
