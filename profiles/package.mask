@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13045 2011/09/14 17:21:16 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13046 2011/09/14 22:03:23 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -421,10 +421,6 @@ sci-chemistry/webmo
 # ebuilds to address numerous issues.  See bugs #336993, #336199, #369881
 # and #335307.
 =media-radio/svxlink-090426
-
-# Samuli Suominen <ssuominen@gentoo.org> (15 Jun 2011)
-# Retire gpixpod for bugs 221277 and 351307.   Removal in 30 days.
-app-pda/gpixpod
 
 # Eray Aslan <eras@gentoo.org> (15 Jun 2011)
 # Mask experimental software
