@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libva
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.25 2011/09/09 20:28:50 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.26 2011/09/14 18:47:00 nativemad Exp $
+
+  15 Sep 2011; Andreas Schuerch <nativemad@gentoo.org> libva-1.0.14.ebuild:
+  x86 stable, thanks JD, bug 382401
 
   09 Sep 2011; Tony Vroon <chainsaw@gentoo.org> libva-1.0.14.ebuild:
   Marked stable based on arch testing by Agostino "ago" Sarubbo in bug #382401
