@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/hydra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.62 2011/08/15 10:20:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.63 2011/09/14 05:49:26 jer Exp $
+
+*hydra-7.0 (14 Sep 2011)
+
+  14 Sep 2011; Jeroen Roovers <jer@gentoo.org> +hydra-7.0.ebuild, metadata.xml:
+  Version bump. Add many dependencies already used, and USE flags to go with
+  them.
 
   15 Aug 2011; Jeroen Roovers <jer@gentoo.org> -hydra-5.9.ebuild,
   -hydra-6.0.ebuild:
