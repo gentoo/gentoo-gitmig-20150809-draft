@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/freecraft-1.18-r3.ebuild,v 1.15 2007/04/04 19:55:13 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/freecraft-1.18-r3.ebuild,v 1.16 2011/09/14 20:10:50 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 MY_P=${PN}-030311
@@ -16,21 +17,20 @@ IUSE=""
 RESTRICT="fetch"
 
 DEPEND="media-libs/libpng
-	media-libs/libsdl"
+	media-libs/libsdl[audio,video]
+	|| ( sys-apps/util-linux[ddate] <sys-apps/util-linux-2.20 )"
 
 S=${WORKDIR}/${MY_P}
 
 pkg_nofetch() {
 	einfo "Due to a Cease and Desist given by Blizzard,"
 	einfo "you must obtain the sources for this game yourself."
-	einfo "For more information, please visit: ${HOMEPAGE}"
-	einfo "Also, you'll have to place the files ${A}"
+	einfo "Use the power of the internet to do this."
+	einfo "Also, you'll have to place the file ${A}"
 	einfo "into ${DISTDIR}"
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -e "s:GENTOO_DATADIR:${GAMES_DATADIR}/${PN}:" \
 		-e "s:GENTOO_LIBDIR:$(games_get_libdir)/${PN}:" \
 		"${FILESDIR}"/${PN} > "${T}"/${PN} \
@@ -43,8 +43,8 @@ src_unpack() {
 }
 
 src_compile() {
-	emake depend || die "depend generation failed"
-	emake -j1 || die "emake failed"
+	emake depend || die
+	emake -j1 || die
 }
 
 src_install() {

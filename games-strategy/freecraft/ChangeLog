@@ -1,6 +1,14 @@
 # ChangeLog for games-strategy/freecraft
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/ChangeLog,v 1.15 2007/02/17 09:26:11 nyhm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecraft/ChangeLog,v 1.16 2011/09/14 20:10:50 mr_bones_ Exp $
+
+  14 Sep 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  freecraft-1.18-r3.ebuild:
+  add dep for getting ddate (bug #382905)
+
+  14 Sep 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  freecraft-1.18-r3.ebuild:
+  add dep on util-linux for bug #382905
 
   17 Feb 2007; Tristan Heaven <nyhm@gentoo.org> freecraft-1.18-r3.ebuild:
   Fix ROOT abuse, bug #167277
