@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.424 2011/09/12 05:38:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.425 2011/09/14 21:46:19 polynomial-c Exp $
+
+*openssh-5.9_p1-r2 (14 Sep 2011)
+*openssh-5.8_p2-r1 (14 Sep 2011)
+
+  14 Sep 2011; Lars Wendler <polynomial-c@gentoo.org>
+  +openssh-5.8_p2-r1.ebuild, -openssh-5.9_p1-r1.ebuild,
+  +openssh-5.9_p1-r2.ebuild, files/sshd.rc6.3:
+  non-maintainer commit: Replaced deprecated opts variable (bug #382227) and
+  removed --stop option from reload function (bug #382975). Bot changes and
+  revbumps were done with kind permission from vapier.
 
   12 Sep 2011; Mike Frysinger <vapier@gentoo.org> openssh-5.9_p1-r1.ebuild:
   Simplify test homedir logic a bit, and fix quoting.

@@ -1,17 +1,17 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.9_p1-r1.ebuild,v 1.2 2011/09/12 05:38:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.8_p2-r1.ebuild,v 1.1 2011/09/14 21:46:19 polynomial-c Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic multilib autotools pam
 
 # Make it more portable between straight releases
 # and _p? releases.
-PARCH=${P/_}
+PARCH=${P/_/}
 
-HPN_PATCH="${PARCH}-hpn13v11.diff.gz"
+HPN_PATCH="${PARCH/p2/p1}-hpn13v11.diff.gz"
 LDAP_PATCH="${PARCH/-/-lpk-}-0.3.14.patch.gz"
-#X509_VER="7.0" X509_PATCH="${PARCH}+x509-${X509_VER}.diff.gz"
+X509_VER="6.2.4" X509_PATCH="${PARCH/p2/p1}+x509-${X509_VER}.diff.gz"
 
 DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.org/"
@@ -23,7 +23,7 @@ SRC_URI="mirror://openbsd/OpenSSH/portable/${PARCH}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="${HPN_PATCH:++}hpn kerberos ldap libedit pam selinux skey static tcpd X X509"
 
 RDEPEND="pam? ( virtual/pam )
@@ -73,9 +73,6 @@ src_prepare() {
 	# this file.
 	cp version.h version.h.pristine
 
-	# don't break .ssh/authorized_keys2 for fun
-	sed -i '/^AuthorizedKeysFile/s:^:#:' sshd_config || die
-
 	if use X509 ; then
 		epatch "${WORKDIR}"/${X509_PATCH%.*}
 		epatch "${FILESDIR}"/${PN}-5.8_p1-x509-hpn-glue.patch
@@ -91,9 +88,9 @@ src_prepare() {
 	else
 		use ldap && ewarn "Sorry, X509 and LDAP conflict internally, disabling LDAP"
 	fi
-	epatch "${FILESDIR}"/${PN}-5.9_p1-sshd-gssapi-multihomed.patch #378361
 	epatch "${FILESDIR}"/${PN}-4.7_p1-GSSAPI-dns.patch #165444 integrated into gsskex
 	if [[ -n ${HPN_PATCH} ]] && use hpn; then
+		sed -i '/SSH_PORTABLE/s:p1:p2:' "${WORKDIR}"/${HPN_PATCH%.*}
 		epatch "${WORKDIR}"/${HPN_PATCH%.*}
 		epatch "${FILESDIR}"/${PN}-5.6_p1-hpn-progressmeter.patch
 		# version.h patch conflict avoidence
@@ -218,12 +215,8 @@ src_test() {
 	else
 		tests="${tests} tests"
 	fi
-	# It will also attempt to write to the homedir .ssh
-	local sshhome=${T}/homedir
-	mkdir -p "${sshhome}"/.ssh
 	for t in ${tests} ; do
 		# Some tests read from stdin ...
-		HOMEDIR="${sshhome}" \
 		emake -k -j1 ${t} </dev/null \
 			&& passed="${passed}${t} " \
 			|| failed="${failed}${t} "

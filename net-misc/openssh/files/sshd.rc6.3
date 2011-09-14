@@ -1,9 +1,10 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/files/sshd.rc6.3,v 1.1 2011/09/07 01:38:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/files/sshd.rc6.3,v 1.2 2011/09/14 21:46:19 polynomial-c Exp $
 
-opts="${opts} reload checkconfig gen_keys"
+extra_commands="checkconfig gen_keys"
+extra_started_commands="reload"
 
 depend() {
 	use logger dns
@@ -78,7 +79,7 @@ stop() {
 reload() {
 	checkconfig || return 1
 	ebegin "Reloading ${SVCNAME}"
-	start-stop-daemon --stop --signal HUP \
+	start-stop-daemon --signal HUP \
 	    --exec "${SSHD_BINARY}" --pidfile "${SSHD_PIDFILE}"
 	eend $?
 }
