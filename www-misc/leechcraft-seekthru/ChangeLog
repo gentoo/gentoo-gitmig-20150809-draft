@@ -1,6 +1,12 @@
 # ChangeLog for www-misc/leechcraft-seekthru
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/leechcraft-seekthru/ChangeLog,v 1.1 2011/08/25 18:27:44 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/leechcraft-seekthru/ChangeLog,v 1.2 2011/09/14 17:10:11 maksbotan Exp $
+
+*leechcraft-seekthru-0.4.90 (14 Sep 2011)
+
+  14 Sep 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-seekthru-0.4.90.ebuild:
+  Bump www-misc/leechcraft-seekthru to 0.4.90, thanks to 0xd34df00d
 
 *leechcraft-seekthru-9999 (25 Aug 2011)
 *leechcraft-seekthru-0.4.85 (25 Aug 2011)
