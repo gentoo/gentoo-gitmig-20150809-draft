@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.3.3.ebuild,v 1.4 2011/09/14 09:57:19 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.3.3.ebuild,v 1.5 2011/09/14 10:00:58 george Exp $
 
 inherit gnatbuild
 
@@ -20,7 +20,7 @@ SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/gcc-${PV}/gcc-core-${PV}.tar.bz2
 	ftp://gcc.gnu.org/pub/gcc/releases/gcc-${PV}/gcc-ada-${PV}.tar.bz2
 	ppc?   ( mirror://gentoo/gnatboot-${BOOT_SLOT}-ppc.tar.bz2 )"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~ppc"
 
 DEPEND=">=dev-libs/mpfr-2.3.1
 	>=dev-libs/gmp-4.2.2"
