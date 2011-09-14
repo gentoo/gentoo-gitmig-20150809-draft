@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/openmsx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.40 2011/08/24 19:38:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.41 2011/09/14 16:58:32 ssuominen Exp $
+
+  14 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> openmsx-0.8.1.ebuild,
+  +files/openmsx-0.8.1-libpng15.patch:
+  Fix building with libpng15 wrt #378171 by Diego Elio Pettenò
 
   24 Aug 2011; Markus Meier <maekke@gentoo.org> openmsx-0.8.1.ebuild:
   x86 stable, bug #380179
