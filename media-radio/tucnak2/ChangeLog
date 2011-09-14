@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/tucnak2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak2/ChangeLog,v 1.31 2011/07/17 14:37:49 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak2/ChangeLog,v 1.32 2011/09/14 18:53:42 tomjbe Exp $
+
+  14 Sep 2011; Thomas Beierlein <tomjbe@gentoo.org>
+  +files/tucnak2-libpng15.patch, tucnak2-2.43.ebuild:
+  Fix building with libpng15 wrt #378521 by Diego Elio Pettenò
 
 *tucnak2-2.43 (17 Jul 2011)
 
