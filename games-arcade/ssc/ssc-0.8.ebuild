@@ -1,6 +1,7 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ssc/ssc-0.8.ebuild,v 1.11 2011/08/25 11:23:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ssc/ssc-0.8.ebuild,v 1.12 2011/09/14 12:19:32 tupone Exp $
+EAPI=2
 
 inherit eutils games
 
@@ -21,9 +22,7 @@ DEPEND="virtual/opengl
 	>=media-libs/freetype-2
 	media-libs/libpng"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e "s:/usr/local/share/:${GAMES_DATADIR}/:" \
 		src/{asteroid.cc,audio.cc,config.cc,menu.cc} \
@@ -34,7 +33,8 @@ src_unpack() {
 		|| die "sed configure failed"
 	epatch \
 		"${FILESDIR}"/${P}-gcc34.patch \
-		"${FILESDIR}"/${P}-ode.patch
+		"${FILESDIR}"/${P}-ode.patch \
+		"${FILESDIR}"/${P}-png15.patch
 }
 
 src_install () {
