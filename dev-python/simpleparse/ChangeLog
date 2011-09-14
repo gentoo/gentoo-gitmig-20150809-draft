@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/simpleparse
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/ChangeLog,v 1.24 2010/12/18 15:02:46 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/ChangeLog,v 1.25 2011/09/14 07:34:53 djc Exp $
+
+*simpleparse-2.1.1 (14 Sep 2011)
+
+  14 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> +simpleparse-2.1.1.ebuild:
+  Version bump to 2.1.1 (fixes bug 382825; thanks to jbergstroem).
 
   18 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -simpleparse-2.1.0_alpha1.ebuild,
