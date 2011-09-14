@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rake
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.109 2011/03/07 12:00:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rake/ChangeLog,v 1.110 2011/09/14 16:02:06 jer Exp $
+
+  14 Sep 2011; Jeroen Roovers <jer@gentoo.org> rake-0.8.7-r5.ebuild:
+  Stable for HPPA (bug #369573).
 
   07 Mar 2011; Raúl Porcel <armin76@gentoo.org> rake-0.8.7-r3.ebuild,
   rake-0.8.7-r4.ebuild, rake-0.8.7-r5.ebuild, rake-0.8.7-r6.ebuild:

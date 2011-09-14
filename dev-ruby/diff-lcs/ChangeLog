@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/diff-lcs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/diff-lcs/ChangeLog,v 1.28 2011/07/10 23:18:00 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/diff-lcs/ChangeLog,v 1.29 2011/09/14 16:09:02 jer Exp $
+
+  14 Sep 2011; Jeroen Roovers <jer@gentoo.org> diff-lcs-1.1.2-r2.ebuild:
+  Stable for HPPA (bug #369573).
 
   10 Jul 2011; Mark Loeser <halcy0n@gentoo.org> diff-lcs-1.1.2-r2.ebuild:
   Stable for ppc64; bug #353130
