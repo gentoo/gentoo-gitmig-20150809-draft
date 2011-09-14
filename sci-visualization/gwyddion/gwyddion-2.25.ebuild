@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/gwyddion-2.25.ebuild,v 1.2 2011/08/25 11:26:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/gwyddion-2.25.ebuild,v 1.3 2011/09/14 14:40:55 ssuominen Exp $
 
 EAPI=2
 
 PYTHON_DEPEND="python? 2"
 
-inherit fdo-mime gnome2-utils python
+inherit eutils fdo-mime gnome2-utils python
 
 DESCRIPTION="A software framework for SPM data analysis"
 HOMEPAGE="http://gwyddion.net/"
@@ -38,6 +38,10 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	use python && python_set_active_version 2
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libpng15.patch
 }
 
 src_configure() {
