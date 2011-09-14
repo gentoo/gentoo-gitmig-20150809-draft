@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/leechcraft-bittorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/leechcraft-bittorrent/ChangeLog,v 1.1 2011/08/25 15:31:44 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/leechcraft-bittorrent/ChangeLog,v 1.2 2011/09/14 17:07:22 maksbotan Exp $
+
+*leechcraft-bittorrent-0.4.90 (14 Sep 2011)
+
+  14 Sep 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-bittorrent-0.4.90.ebuild:
+  Bump net-p2p/leechcraft-bittorrent to 0.4.90, thanks to 0xd34df00d
 
 *leechcraft-bittorrent-9999 (25 Aug 2011)
 *leechcraft-bittorrent-0.4.85 (25 Aug 2011)
