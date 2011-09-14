@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.12.2.ebuild,v 1.1 2011/09/13 22:29:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.12.2.ebuild,v 1.2 2011/09/14 19:42:15 flameeyes Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.opensc-project.org/files/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="doc libtool +pcsc-lite openct readline ssl static-libs zlib"
+IUSE="doc libtool +pcsc-lite openct readline ssl zlib"
 
 RDEPEND="libtool? ( sys-devel/libtool )
 	zlib? ( sys-libs/zlib )
@@ -52,21 +52,22 @@ src_configure() {
 	# the native system's dlopen ... so we have to manually
 	# control the behavior to something a bit more sane
 	export ac_cv_header_ltdl_h=$(usex libtool) \
-	       ac_cv_lib_ltdl_lt_dlopen=$(usex libtool)
+		   ac_cv_lib_ltdl_lt_dlopen=$(usex libtool)
 
 	econf \
 		--docdir="/usr/share/doc/${PF}" \
 		--htmldir="/usr/share/doc/${PF}/html" \
+		--disable-static \
 		$(use_enable doc) \
 		$(use_enable openct) \
 		$(use_enable readline) \
-		$(use_enable static-libs static) \
 		$(use_enable zlib) \
 		${myconf}
 }
 
 src_install() {
 	emake DESTDIR="${D}" install
-	use static-libs || find "${D}" -name '*.la' -delete
+	find "${D}" -name '*.la' -delete
+
 	dodoc ChangeLog
 }
