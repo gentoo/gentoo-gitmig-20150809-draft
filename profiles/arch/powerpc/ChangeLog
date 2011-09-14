@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.135 2011/09/07 19:45:17 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.136 2011/09/14 05:47:55 jer Exp $
+
+  14 Sep 2011; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Mask USE=oracle once more for net-analyzer/hydra.
 
   07 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
   Update kde mask
