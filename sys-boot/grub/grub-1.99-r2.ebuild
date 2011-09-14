@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.99-r2.ebuild,v 1.2 2011/09/06 15:31:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.99-r2.ebuild,v 1.3 2011/09/14 17:57:08 scarabeus Exp $
 
 EAPI=4
 
@@ -245,12 +245,15 @@ src_install() {
 	cat <<EOF >> "${ED}"/lib*/grub2/grub-mkconfig_lib
 	GRUB_DISTRIBUTOR="Gentoo"
 EOF
+
+	elog "Remember to run emerge --config =${CATEGORY}/${P} in order"
+	elog "to set up basic settings for this package."
 }
 
 setup_boot_dir() {
 	local dir=$1
 
-	# display the link to guide if user didn't set up anything yet.
+	# display the link to guide
 	elog "For informations how to configure grub-2 please reffer to the guide:"
 	elog "    http://dev.gentoo.org/~scarabeus/grub-2-guide.xml"
 
@@ -265,7 +268,7 @@ setup_boot_dir() {
 
 		einfo "Even if we just created configuration for your grub2 using old"
 		einfo "grub-legacy configuration file you should migrate to use new style"
-		einfo "configuration in '${ROOT}/etc/grub.d'."
+		einfo "configuration in '${ROOT}/etc/grub.d' and '${ROOT}/etc/defaults/grub'."
 		einfo
 
 	else
@@ -275,18 +278,21 @@ setup_boot_dir() {
 			ewarn "Running grub2-mkconfig failed! Check your configuration files!"
 	fi
 
-	elog "Remember to run \"grub2-mkconfig -o '${dir}/grub.cfg'\" every time"
-	elog "you update the configuration files!"
-
 	elog "Remember to run grub2-install to install your grub every time"
 	elog "you update this package!"
 }
 
-pkg_postinst() {
+pkg_config() {
+	local dir
+
 	mount-boot_mount_boot_partition
 
-	setup_boot_dir "${ROOT}"boot/grub2
+	einfo "Enter the directory where you want to setup grub2 ('${ROOT}boot/grub2/'):"
+	read dir
 
-	# needs to be called after we call setup_boot_dir
+	[[ -z ${dir} ]] && dir="${ROOT}"boot/grub2
+
+	setup_boot_dir "${dir}"
+
 	mount-boot_pkg_postinst
 }

@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.166 2011/09/10 02:33:59 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.167 2011/09/14 17:57:08 scarabeus Exp $
+
+  14 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> grub-1.99-r2.ebuild,
+  grub-9999.ebuild:
+  Run the configure phase for the package only in the pkg_config. Fixes bug
+  #382769.
 
   10 Sep 2011; Ryan Hill <dirtyepic@gentoo.org> grub-0.97-r10.ebuild:
   Release patchset 1.11 to work around miscompilation with gcc-4.6 (bug
