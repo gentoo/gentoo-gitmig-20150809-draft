@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/zsnes
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.46 2010/01/03 11:52:55 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.47 2011/09/14 08:45:05 ssuominen Exp $
+
+  14 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> zsnes-1.51-r2.ebuild,
+  +files/zsnes-1.51-libpng15.patch:
+  Fix building with libpng15 wrt #378735 by Diego Elio Pettenò
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org> zsnes-1.51-r2.ebuild:
   Transfer Prefix keywords
