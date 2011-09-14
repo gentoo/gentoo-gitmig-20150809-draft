@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/knights/knights-2.3.2.ebuild,v 1.1 2011/05/21 19:27:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/knights/knights-2.3.2.ebuild,v 1.2 2011/09/14 19:08:35 mr_bones_ Exp $
 
 EAPI=4
 
@@ -20,3 +20,10 @@ IUSE="debug"
 
 DEPEND="$(add_kdebase_dep libkdegames)"
 RDEPEND="${DEPEND}"
+
+pkg_postinst() {
+	kde4-base_pkg_postinst
+
+	elog "No chess engines are emerged by default! If you want a chess engine"
+	elog "to play with, you can emerge gnuchess or crafty."
+}
