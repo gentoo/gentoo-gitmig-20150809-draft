@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/neocomplcache
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/neocomplcache/ChangeLog,v 1.1 2011/05/22 02:29:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/neocomplcache/ChangeLog,v 1.2 2011/09/14 22:40:44 radhermit Exp $
+
+*neocomplcache-6.1 (14 Sep 2011)
+
+  14 Sep 2011; Tim Harder <radhermit@gentoo.org> +neocomplcache-6.1.ebuild:
+  Version bump (bug #382897 by Alec M.). Use github mirror.
 
 *neocomplcache-6.0 (22 May 2011)
 
