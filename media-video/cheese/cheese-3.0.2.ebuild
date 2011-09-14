@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-3.0.2.ebuild,v 1.1 2011/08/18 05:54:49 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-3.0.2.ebuild,v 1.2 2011/09/14 10:45:50 pacho Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 
 COMMON_DEPEND="
 	>=dev-libs/glib-2.28.0:2
-	>=dev-libs/libgee-0.6.0
+	>=dev-libs/libgee-0.6.0:0
 	>=x11-libs/gtk+-2.99.4:3[introspection?]
 	>=x11-libs/cairo-1.10
 	>=x11-libs/pango-1.28.0

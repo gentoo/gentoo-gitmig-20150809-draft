@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.50 2011/09/10 17:25:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.51 2011/09/14 10:45:50 pacho Exp $
+
+  14 Sep 2011; Pacho Ramos <pacho@gentoo.org> cheese-3.0.2.ebuild:
+  Fix libgee dependency to proper slot.
 
   10 Sep 2011; Pacho Ramos <pacho@gentoo.org> cheese-2.32.0.ebuild:
   Fix dependencies as explained in bug #382011.
