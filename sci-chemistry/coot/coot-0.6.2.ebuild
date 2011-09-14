@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.2.ebuild,v 1.4 2011/07/16 13:14:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.2.ebuild,v 1.5 2011/09/14 17:49:30 ssuominen Exp $
 
 EAPI=3
 
@@ -80,6 +80,7 @@ PATCHES=(
 	"${FILESDIR}"/${PV}-gl.patch
 	"${FILESDIR}"/${PV}-test.patch
 	"${FILESDIR}"/${PV}-ssm.patch
+	"${FILESDIR}"/${PV}-libpng15.patch
 	)
 
 src_prepare() {
