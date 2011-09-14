@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.278 2011/09/14 10:32:19 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.279 2011/09/14 10:46:56 blueness Exp $
+
+  14 Sep 2011; Anthony G. Basile <blueness@gentoo.org> tor-0.2.1.30-r2.ebuild,
+  tor-0.2.2.32-r2.ebuild:
+  Removed RDEPEND net-proxy/tsocks[tordns] on ~arch ebuilds, bug #381181
 
 *tor-0.2.3.4_alpha (14 Sep 2011)
 

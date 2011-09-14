@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.1.30-r2.ebuild,v 1.1 2011/06/07 21:12:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.1.30-r2.ebuild,v 1.2 2011/09/14 10:46:56 blueness Exp $
 
 EAPI=2
 
@@ -19,9 +19,7 @@ IUSE="debug"
 
 DEPEND="dev-libs/openssl
 	>=dev-libs/libevent-1.2"
-# The tordns patch for tsocks avoids some leakage of information thus raising anonymity
-RDEPEND="${DEPEND}
-	net-proxy/tsocks[tordns]"
+RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	enewgroup tor
