@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/mtools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/ChangeLog,v 1.50 2011/06/19 16:59:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/ChangeLog,v 1.51 2011/09/15 00:41:34 radhermit Exp $
+
+*mtools-4.0.17 (15 Sep 2011)
+
+  15 Sep 2011; Tim Harder <radhermit@gentoo.org> +mtools-4.0.17.ebuild:
+  Version bump. Update to EAPI 4 and fix parallel install issue.
 
   19 Jun 2011; Raúl Porcel <armin76@gentoo.org> mtools-4.0.15.ebuild:
   alpha/sparc stable wrt #363985
