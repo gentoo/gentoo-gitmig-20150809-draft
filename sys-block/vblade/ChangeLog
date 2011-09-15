@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/vblade
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/vblade/ChangeLog,v 1.28 2011/09/15 07:56:37 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/vblade/ChangeLog,v 1.29 2011/09/15 08:05:36 radhermit Exp $
+
+  15 Sep 2011; Tim Harder <radhermit@gentoo.org>
+  -files/init.d-vblade.vblade0-14, -vblade-14.ebuild,
+  -files/init.d-vblade.vblade0-14-r1, -vblade-14-r1.ebuild, -vblade-18.ebuild:
+  Remove old.
 
 *vblade-20 (15 Sep 2011)
 
