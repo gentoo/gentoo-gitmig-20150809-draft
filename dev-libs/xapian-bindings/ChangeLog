@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xapian-bindings
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.21 2011/09/15 12:13:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.22 2011/09/15 12:26:36 blueness Exp $
+
+  15 Sep 2011; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
+  Added myself and Johan Bergström as maintainers
 
 *xapian-bindings-1.2.7 (15 Sep 2011)
 
