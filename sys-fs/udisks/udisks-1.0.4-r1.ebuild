@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.4-r1.ebuild,v 1.1 2011/09/15 14:53:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.4-r1.ebuild,v 1.2 2011/09/15 14:56:30 ssuominen Exp $
 
 EAPI=4
 inherit eutils bash-completion linux-info
@@ -14,7 +14,6 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="debug doc nls remote-access"
 
-# Missing USE device-mapper depend for parted? Testing without now by user reqs.
 COMMON_DEPEND="
 	|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-147[extras] )
 	>=dev-libs/glib-2.16.1:2
@@ -24,8 +23,7 @@ COMMON_DEPEND="
 	>=sys-block/parted-1.8.8
 	>=sys-fs/lvm2-2.02.66
 	>=dev-libs/libatasmart-0.14
-	>=sys-apps/sg3_utils-1.27.20090411
-	!sys-apps/devicekit-disks"
+	>=sys-apps/sg3_utils-1.27.20090411"
 RDEPEND="${COMMON_DEPEND}
 	virtual/eject
 	remote-access? ( net-dns/avahi )"
