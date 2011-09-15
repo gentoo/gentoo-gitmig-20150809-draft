@@ -1,29 +1,30 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvr350/vdr-pvr350-2008.09.07.ebuild,v 1.3 2010/12/01 22:47:52 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvr350/vdr-pvr350-1.7.3.ebuild,v 1.1 2011/09/15 13:26:33 hd_brummy Exp $
+
+EAPI="3"
+
 inherit vdr-plugin eutils
 
 IUSE="yaepg"
 
-MY_PV="${PV//./-}"
-MY_P="${PN}-${MY_PV}"
-
 DESCRIPTION="VDR plugin: use a PVR350 as output device"
 HOMEPAGE="http://drseltsam.device.name/vdr/pvr/src/pvr350/"
-SRC_URI="http://drseltsam.device.name/vdr/pvr/src/pvr350/${MY_P}.tgz"
+SRC_URI="http://drseltsam.device.name/vdr/pvr/src/pvr350/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
-S="${WORKDIR}/${MY_P#vdr-}"
+S="${WORKDIR}/${P#vdr-}"
 
-DEPEND=">=media-video/vdr-1.4.0
+DEPEND=">=media-video/vdr-1.6.0
+	media-sound/mpg123
 	media-sound/twolame
 	media-libs/a52dec"
 RDEPEND="${DEPEND}"
 
 DEPEND="${DEPEND}
-	|| ( >=sys-kernel/linux-headers-2.6.22-r2 )"
+	|| ( >=sys-kernel/linux-headers-2.6.38 )"
 
 pkg_setup() {
 	vdr-plugin_pkg_setup

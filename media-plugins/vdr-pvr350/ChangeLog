@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/vdr-pvr350
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvr350/ChangeLog,v 1.18 2010/12/01 22:47:52 hd_brummy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvr350/ChangeLog,v 1.19 2011/09/15 13:26:33 hd_brummy Exp $
+
+*vdr-pvr350-1.7.3 (15 Sep 2011)
+
+  15 Sep 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  +vdr-pvr350-1.7.3.ebuild, -vdr-pvr350-2008.09.07.ebuild:
+  version bump, fix #364669
 
   01 Dec 2010; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-pvr350-2008.09.07.ebuild:
