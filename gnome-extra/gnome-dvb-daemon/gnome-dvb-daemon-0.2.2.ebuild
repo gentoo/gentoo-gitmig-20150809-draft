@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-dvb-daemon/gnome-dvb-daemon-0.2.2.ebuild,v 1.4 2011/09/07 22:00:16 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-dvb-daemon/gnome-dvb-daemon-0.2.2.ebuild,v 1.5 2011/09/15 21:28:34 eva Exp $
 
 EAPI="3"
 
@@ -18,7 +18,7 @@ RDEPEND=">=dev-libs/glib-2.28.5
 	>=media-libs/gstreamer-0.10.29
 	>=media-libs/gst-plugins-good-0.10.14
 	>=media-libs/gst-plugins-bad-0.10.13
-	>=dev-libs/libgee-0.5
+	>=dev-libs/libgee-0.5:0
 	>=dev-db/sqlite-3.4
 	>=media-libs/gst-rtsp-server-0.10.7
 	media-plugins/gst-plugins-dvb
