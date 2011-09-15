@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/autofs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.122 2011/09/13 17:53:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.123 2011/09/15 03:52:42 pva Exp $
+
+*autofs-5.0.6-r2 (14 Sep 2011)
+
+  14 Sep 2011; Peter Volkov <pva@gentoo.org> +autofs-5.0.6-r2.ebuild,
+  +files/autofs-5.0.6-revert-ldap.patch:
+  Fix ldap problem with -sasl, bug #381315 thank Martin Stockinger for report
+  and Dustin Polke for this job.
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #99651
