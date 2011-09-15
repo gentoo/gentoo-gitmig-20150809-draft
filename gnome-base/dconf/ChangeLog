@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/dconf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/ChangeLog,v 1.13 2011/08/13 17:17:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/ChangeLog,v 1.14 2011/09/15 21:26:42 eva Exp $
+
+  15 Sep 2011; Gilles Dartiguelongue <eva@gentoo.org> dconf-0.5.1-r2.ebuild:
+  Pin libgee dependency to slot 0.
 
   13 Aug 2011; Raúl Porcel <armin76@gentoo.org> dconf-0.5.1-r2.ebuild:
   alpha/ia64/sh/sparc stable wrt #369909
