@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.4.0-r6.ebuild,v 1.11 2011/03/29 13:01:08 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.4.0-r6.ebuild,v 1.12 2011/09/15 19:24:43 ssuominen Exp $
 
 EAPI=1
 inherit eutils versionator flag-o-matic
@@ -57,6 +57,8 @@ HTML_S="${WORKDIR}/wxWidgets-${BASE_PV}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	sed -i -e 's:voidp:png_voidp:' src/common/imagpng.cpp || die # Bug 380833
 
 	# General Patches
 

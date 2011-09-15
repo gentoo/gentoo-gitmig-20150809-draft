@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.269 2011/07/16 09:32:34 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.270 2011/09/15 19:24:43 ssuominen Exp $
+
+  15 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> wxGTK-2.6.4.0-r6.ebuild:
+  Fix building with libpng15 wrt #380833 by Diego Elio Pettenò
 
   16 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> wxGTK-2.8.11.0.ebuild:
   ppc64 stable wrt #364203
