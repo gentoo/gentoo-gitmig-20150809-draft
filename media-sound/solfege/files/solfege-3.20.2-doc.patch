@@ -1,0 +1,29 @@
+--- solfege-3.20.2/help/fr/music-theory.xml.orig
++++ solfege-3.20.2/help/fr/music-theory.xml
+@@ -35,7 +35,7 @@
+ <title>Secondes</title>
+ <para>Les secondes sont faciles à reconnaître : les deux notes sont voisines sur la portée. Une des deux notes se trouve sur une ligne et l'autre dans l'interligne immédiatement supérieur ou inférieur. A une seconde mineure correspond un intervalle conjoint d'un demi-ton. A une seconde majeure correspond un intervalle conjoint d'un ton et contient deux demi-tons.</para>
+ 
+-<para>Pour apprendre à identifier les secondes, il faut d'abord se souvenir des types d'intervalle conjoint (ton ou demi-ton) qui se trouvent entre les notes successives de la gamme. Ainsi que vous pouvez le voir dans la <xref linkend="theory-intervals-seconds">, seuls les intervalles mi-fa et si-do font un demi-ton (secondes mineures), tous les autres font un ton (secondes majeures). Vous pouvez le vérifier <xref linkend="theory-intervals-seconds"/> en regardant le clavier d'un piano : vous verrez qu'il n'y a pas de touche noire entre mi et fa, ni entre si et do.</xref></para>
++<para>Pour apprendre à identifier les secondes, il faut d'abord se souvenir des types d'intervalle conjoint (ton ou demi-ton) qui se trouvent entre les notes successives de la gamme. Ainsi que vous pouvez le voir dans la <xref linkend="theory-intervals-seconds"/>, seuls les intervalles mi-fa et si-do font un demi-ton (secondes mineures), tous les autres font un ton (secondes majeures). Vous pouvez le vérifier <xref linkend="theory-intervals-seconds"/> en regardant le clavier d'un piano : vous verrez qu'il n'y a pas de touche noire entre mi et fa, ni entre si et do.</para>
+ 
+ <figure id="theory-intervals-seconds">
+     <title/>
+@@ -125,7 +125,7 @@
+      ################# -->
+ <sect2 id="theory-fifths">
+ <title>Quinte</title>
+-<para>Une quinte juste comprend 3 tons et un demi-ton et se décompose en trois secondes majeures plus une seconde mineure. La <xref linkend="theory-intervals-fifths"> décrit toutes les quintes de la gamme de do majeur. Retenez que toutes ces quintes sont justes, sauf fa-si qui est diminuée.</xref></para>
++<para>Une quinte juste comprend 3 tons et un demi-ton et se décompose en trois secondes majeures plus une seconde mineure. La <xref linkend="theory-intervals-fifths"/> décrit toutes les quintes de la gamme de do majeur. Retenez que toutes ces quintes sont justes, sauf fa-si qui est diminuée.</para>
+ 
+ <figure id="theory-intervals-fifths">
+     <title/>
+@@ -158,7 +158,7 @@
+     </mediaobject>
+ </figure>
+ 
+-<para>D'après la <xref linkend="theory-intervals-fifths">, l'intervalle mi-si est une quinte juste. Dans la <xref linkend="theory-intervals-fifths-2">, le mi est précédé d'un bémol, ce qui produit un intervalle augmenté. Mais le si est également précédé d'un double bémol, ce qui réduit l'intervalle de 2 demi-tons et le transforme en quinte dinimuée.</xref></xref></para>
++<para>D'après la <xref linkend="theory-intervals-fifths"/>, l'intervalle mi-si est une quinte juste. Dans la <xref linkend="theory-intervals-fifths-2"/>, le mi est précédé d'un bémol, ce qui produit un intervalle augmenté. Mais le si est également précédé d'un double bémol, ce qui réduit l'intervalle de 2 demi-tons et le transforme en quinte dinimuée.</para>
+ </sect2>
+ 
+ <sect2 id="theory-sixths">
