@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.13-r1.ebuild,v 1.1 2011/09/15 14:45:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/upower-0.9.13-r1.ebuild,v 1.2 2011/09/15 14:57:35 ssuominen Exp $
 
 EAPI=4
 inherit linux-info
@@ -23,8 +23,7 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.88
 		|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-151[extras] )
 		virtual/libusb:1
 		ios? ( >=app-pda/libimobiledevice-0.9.7
-			>=app-pda/libplist-0.12 ) )
-	!sys-apps/hal"
+			>=app-pda/libplist-0.12 ) )"
 RDEPEND="${COMMON_DEPEND}
 	kernel_linux? ( >=sys-power/pm-utils-1.4.1 )"
 DEPEND="${COMMON_DEPEND}
@@ -35,7 +34,7 @@ DEPEND="${COMMON_DEPEND}
 	doc? ( dev-util/gtk-doc
 		app-text/docbook-xml-dtd:4.1.2 )"
 
-RESTRICT="test"
+RESTRICT="test" # FIXME: Why is this even restricted?
 
 DOCS=( AUTHORS HACKING NEWS README )
 
