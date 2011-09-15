@@ -1,0 +1,87 @@
+--- MediaInfoLib.orig/Project/GNU/Library/configure.ac
++++ MediaInfoLib/Project/GNU/Library/configure.ac
+@@ -308,6 +308,14 @@
+ dnl #########################################################################
+ 
+ dnl -------------------------------------------------------------------------
++dnl tinyxml
++dnl
++
++LIBS="$LIBS -ltinyxml"
++MediaInfoLib_LIBS="$MediaInfoLib_LIBS -ltinyxml"
++MediaInfoLib_LIBS_Static="$MediaInfoLib_LIBS_Static -ltinyxml"
++
++dnl -------------------------------------------------------------------------
+ dnl zlib
+ dnl
+ 
+--- MediaInfoLib.orig/Project/GNU/Library/libmediainfo.pc.in
++++ MediaInfoLib/Project/GNU/Library/libmediainfo.pc.in
+@@ -3,10 +3,10 @@
+ libdir=@libdir@
+ includedir=@includedir@
+ Unicode=@MediaInfoLib_Unicode@
+-Libs_Static=@libdir@/libmediainfo.a ${libdir}/libzen.a -lpthread -lz
++Libs_Static=@libdir@/libmediainfo.a ${libdir}/libzen.a -lpthread -lz -ltinyxml
+ 
+ Name: libmediainfo
+ Version: @PACKAGE_VERSION@
+ Description: MediaInfoLib
+-Libs: -L@libdir@ -lmediainfo -lzen -lz -lpthread
++Libs: -L@libdir@ -lmediainfo -lzen -lz -lpthread -ltinyxml
+ Cflags: -I@includedir@
+--- MediaInfoLib.orig/Source/MediaInfo/Multiple/File_Dcp.cpp
++++ MediaInfoLib/Source/MediaInfo/Multiple/File_Dcp.cpp
+@@ -40,7 +40,7 @@
+ #include "MediaInfo/Multiple/File__ReferenceFilesHelper.h"
+ #include "ZenLib/Dir.h"
+ #include "ZenLib/FileName.h"
+-#include "ZenLib/TinyXml/tinyxml.h"
++#include <tinyxml.h>
+ //---------------------------------------------------------------------------
+ 
+ namespace MediaInfoLib
+--- MediaInfoLib.orig/Source/MediaInfo/Multiple/File_Dxw.cpp
++++ MediaInfoLib/Source/MediaInfo/Multiple/File_Dxw.cpp
+@@ -40,7 +40,7 @@
+ #include "MediaInfo/Multiple/File__ReferenceFilesHelper.h"
+ #include "ZenLib/Dir.h"
+ #include "ZenLib/FileName.h"
+-#include "ZenLib/TinyXml/tinyxml.h"
++#include <tinyxml.h>
+ #include "ZenLib/Format/Http/Http_Utils.h"
+ //---------------------------------------------------------------------------
+ 
+--- MediaInfoLib.orig/Source/MediaInfo/Multiple/File_Ism.cpp
++++ MediaInfoLib/Source/MediaInfo/Multiple/File_Ism.cpp
+@@ -40,7 +40,7 @@
+ #include "MediaInfo/Multiple/File__ReferenceFilesHelper.h"
+ #include "ZenLib/Dir.h"
+ #include "ZenLib/FileName.h"
+-#include "ZenLib/TinyXml/tinyxml.h"
++#include <tinyxml.h>
+ #include "ZenLib/Format/Http/Http_Utils.h"
+ //---------------------------------------------------------------------------
+ 
+--- MediaInfoLib.orig/Source/MediaInfo/Multiple/File_P2_Clip.cpp
++++ MediaInfoLib/Source/MediaInfo/Multiple/File_P2_Clip.cpp
+@@ -40,7 +40,7 @@
+ #include "MediaInfo/Multiple/File__ReferenceFilesHelper.h"
+ #include "ZenLib/Dir.h"
+ #include "ZenLib/FileName.h"
+-#include "ZenLib/TinyXml/tinyxml.h"
++#include <tinyxml.h>
+ //---------------------------------------------------------------------------
+ 
+ namespace MediaInfoLib
+--- MediaInfoLib.orig/Source/MediaInfo/Multiple/File_Xdcam_Clip.cpp
++++ MediaInfoLib/Source/MediaInfo/Multiple/File_Xdcam_Clip.cpp
+@@ -40,7 +40,7 @@
+ #include "ZenLib/Dir.h"
+ #include "ZenLib/File.h"
+ #include "ZenLib/FileName.h"
+-#include "ZenLib/TinyXml/tinyxml.h"
++#include <tinyxml.h>
+ //---------------------------------------------------------------------------
+ 
+ namespace MediaInfoLib
