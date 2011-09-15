@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/heckle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/heckle/ChangeLog,v 1.25 2011/07/22 13:01:30 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/heckle/ChangeLog,v 1.26 2011/09/15 04:50:28 jer Exp $
+
+  15 Sep 2011; Jeroen Roovers <jer@gentoo.org> heckle-1.4.3-r2.ebuild:
+  Stable for HPPA (bug #369573).
 
   22 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> heckle-1.4.3-r2.ebuild:
   ppc64 stable wrt #356269
