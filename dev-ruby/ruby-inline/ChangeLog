@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-inline
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inline/ChangeLog,v 1.42 2011/08/27 09:50:23 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inline/ChangeLog,v 1.43 2011/09/15 04:43:15 jer Exp $
+
+  15 Sep 2011; Jeroen Roovers <jer@gentoo.org> ruby-inline-3.8.6.ebuild:
+  Stable for HPPA (bug #369573).
 
   27 Aug 2011; Fabian Groffen <grobian@gentoo.org> ruby-inline-3.9.0.ebuild:
   Marked ~x64-macos
