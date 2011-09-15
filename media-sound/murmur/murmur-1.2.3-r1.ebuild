@@ -1,24 +1,25 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.2.2.ebuild,v 1.2 2010/06/08 08:30:08 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/murmur-1.2.3-r1.ebuild,v 1.1 2011/09/15 21:42:38 tgurr Exp $
 
-EAPI="2"
+EAPI="4"
 
-inherit eutils qt4
+inherit eutils qt4-r2
 
 MY_P="${PN/murmur/mumble}-${PV/_/~}"
 
-DESCRIPTION="Mumble is an open source, low-latency, high quality voice chat software."
+DESCRIPTION="Mumble is an open source, low-latency, high quality voice chat software"
 HOMEPAGE="http://mumble.sourceforge.net/"
-SRC_URI="http://mumble.info/snapshot/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/mumble/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+dbus debug +ice pch zeroconf"
 
-RDEPEND="dev-libs/openssl
+RDEPEND=">=dev-libs/openssl-1.0.0b
 	>=dev-libs/protobuf-2.2.0
+	sys-apps/lsb-release
 	>=sys-libs/libcap-2.15
 	x11-libs/qt-core:4[ssl]
 	|| ( x11-libs/qt-sql:4[sqlite] x11-libs/qt-sql:4[mysql] )
@@ -28,10 +29,12 @@ RDEPEND="dev-libs/openssl
 	zeroconf? ( || ( net-dns/avahi[mdnsresponder-compat] net-misc/mDNSResponder ) )"
 
 DEPEND="${RDEPEND}
-	>=dev-libs/boost-1.36.0-r1
+	>=dev-libs/boost-1.41.0
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
+
+PATCHES=( "${FILESDIR}/${PN}-1.2.3-ice-3.4.2-compat.patch" )
 
 pkg_setup() {
 	enewgroup murmur
@@ -39,15 +42,15 @@ pkg_setup() {
 }
 
 src_prepare() {
-	sed -i \
-		-e 's:mumble-server:murmur:g' \
-		"${S}"/scripts/murmur.conf \
-		"${S}"/scripts/murmur.ini.system \
-		|| die "sed failed."
+	qt4-r2_src_prepare
+
+	sed -i -e 's:mumble-server:murmur:g' \
+		"${S}"/scripts/murmur.{conf,ini.system} || die
 }
 
 src_configure() {
 	local conf_add
+
 	use dbus || conf_add="${conf_add} no-dbus"
 	use debug && conf_add="${conf_add} symbols debug" || conf_add="${conf_add} release"
 	use ice || conf_add="${conf_add} no-ice"
@@ -55,16 +58,19 @@ src_configure() {
 	use zeroconf || conf_add="${conf_add} no-bonjour"
 
 	eqmake4 main.pro -recursive \
-		CONFIG+="${conf_add} \
-			no-client" \
-		|| die "eqmake4 failed."
+		CONFIG+="${conf_add} no-client"
+}
+
+src_compile() {
+	# parallel make workaround, upstream bug #3190498
+	emake -j1
 }
 
 src_install() {
-	dodoc README CHANGES || die "Installing docs failed."
+	dodoc README CHANGES
 
 	docinto scripts
-	dodoc scripts/*.php scripts/*.pl || die "Installing docs failed."
+	dodoc scripts/*.php scripts/*.pl
 
 	local dir
 	if use debug; then
@@ -73,25 +79,25 @@ src_install() {
 		dir=release
 	fi
 
-	dobin "${dir}"/murmurd || die "Installing murmurd binary failed."
+	dobin "${dir}"/murmurd
 
 	insinto /etc/murmur/
-	newins scripts/murmur.ini.system murmur.ini || die "Installing murmur.ini configuration file failed."
+	newins scripts/murmur.ini.system murmur.ini
 
 	insinto /etc/logrotate.d/
-	newins "${FILESDIR}"/murmur.logrotate murmur || die "Installing murmur logrotate file failed."
+	newins "${FILESDIR}"/murmur.logrotate murmur
 
 	insinto /etc/dbus-1/system.d/
-	doins scripts/murmur.conf || die "Installing murmur.conf dbus configuration file failed."
+	doins scripts/murmur.conf
 
-	newinitd "${FILESDIR}"/murmur.initd murmur || die "Installing murmur init.d file failed."
-	newconfd "${FILESDIR}"/murmur.confd murmur || die "Installing murmur conf.d file failed."
+	newinitd "${FILESDIR}"/murmur.initd murmur
+	newconfd "${FILESDIR}"/murmur.confd murmur
 
 	keepdir /var/lib/murmur /var/run/murmur /var/log/murmur
-	fowners -R murmur /var/lib/murmur /var/run/murmur /var/log/murmur || die "fowners failed."
-	fperms 750 /var/lib/murmur /var/run/murmur /var/log/murmur || die "fperms failed."
+	fowners -R murmur /var/lib/murmur /var/run/murmur /var/log/murmur
+	fperms 750 /var/lib/murmur /var/run/murmur /var/log/murmur
 
-	doman man/murmurd.1 || die "Installing murmur manpage failed."
+	doman man/murmurd.1
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
 #!/sbin/runscript
 
-opts="reload"
+extra_started_commands="reload"
 
 depend() {
 	need localmount net
@@ -29,7 +29,7 @@ reload() {
 	return 1
 	fi
 	ebegin "Reloading Murmur"
-	start-stop-daemon --stop --oknodo --signal HUP --pidfile "${MURMUR_PID}" \
+	start-stop-daemon --signal HUP --pidfile "${MURMUR_PID}" \
 		--exec /usr/bin/murmurd
 	eend $?
 }
