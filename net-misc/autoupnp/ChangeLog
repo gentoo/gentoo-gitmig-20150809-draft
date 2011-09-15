@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/autoupnp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/autoupnp/ChangeLog,v 1.1 2011/07/27 20:08:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/autoupnp/ChangeLog,v 1.2 2011/09/15 10:42:23 mgorny Exp $
+
+*autoupnp-0.4.6 (15 Sep 2011)
+
+  15 Sep 2011; Michał Górny <mgorny@gentoo.org> -autoupnp-0.4.5.ebuild,
+  +autoupnp-0.4.6.ebuild:
+  Version bump. The new version fixes pthread optionality and uses
+  libtinynotify.
 
 *autoupnp-0.4.5 (27 Jul 2011)
 
