@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gupnp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/ChangeLog,v 1.39 2011/09/08 22:10:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/ChangeLog,v 1.40 2011/09/15 21:16:12 eva Exp $
+
+  15 Sep 2011; Gilles Dartiguelongue <eva@gentoo.org> gupnp-0.18.0.ebuild:
+  Add missing kernel_linux in IUSE.
 
 *gupnp-0.18.0 (08 Sep 2011)
 
