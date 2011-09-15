@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.446 2011/09/03 18:45:44 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.447 2011/09/15 14:55:28 a3li Exp $
+
+*phpmyadmin-3.4.5 (15 Sep 2011)
+
+  15 Sep 2011; Alex Legler <a3li@gentoo.org> +phpmyadmin-3.4.5.ebuild:
+  Version bump for security bug 383107, fixing input sanitation flaws.
 
   03 Sep 2011; Alex Legler <a3li@gentoo.org> -phpmyadmin-3.4.3.2.ebuild:
   Removing vunlerable ebuild
