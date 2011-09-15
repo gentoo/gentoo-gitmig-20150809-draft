@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/exult
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/ChangeLog,v 1.28 2011/01/20 21:21:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/ChangeLog,v 1.29 2011/09/15 02:44:46 ssuominen Exp $
+
+  15 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> exult-1.2.ebuild,
+  +files/exult-1.2-libpng15.patch:
+  Fix building with libpng15 wrt #380145 by Diego Elio Pettenò
 
 *exult-1.4.9_rc1 (20 Jan 2011)
 
