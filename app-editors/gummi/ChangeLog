@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gummi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/ChangeLog,v 1.24 2011/05/24 21:06:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/ChangeLog,v 1.25 2011/09/15 07:55:05 hwoarang Exp $
+
+  15 Sep 2011; Markos Chandras <hwoarang@gentoo.org> gummi-9999.ebuild:
+  Update SVN uri
 
   24 May 2011; Markus Meier <maekke@gentoo.org> gummi-0.5.8-r1.ebuild:
   x86 stable, bug #366549

@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/gummi-9999.ebuild,v 1.1 2010/10/24 11:34:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/gummi-9999.ebuild,v 1.2 2011/09/15 07:55:05 hwoarang Exp $
 
 EAPI=2
 inherit base eutils subversion
 
-ESVN_REPO_URI="http://dev.midnightcoding.org/svn/gummi/trunk"
+ESVN_REPO_URI="http://svn.midnightcoding.org/gummi/trunk"
 ESVN_PROJECT="${PN/-svn}"
 
 DESCRIPTION="Simple LaTeX editor for GTK+ users"
