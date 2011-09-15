@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.8.1.ebuild,v 1.8 2011/02/25 18:24:23 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.8.1.ebuild,v 1.9 2011/09/15 02:31:01 ssuominen Exp $
 
 EAPI=2
 inherit flag-o-matic eutils
@@ -38,7 +38,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-ndebug.patch \
 		"${FILESDIR}"/${P}-gcc43.patch \
-		"${FILESDIR}"/${P}-gcc44.patch
+		"${FILESDIR}"/${P}-gcc44.patch \
+		"${FILESDIR}"/${P}-libpng15.patch
 }
 
 src_configure() {
