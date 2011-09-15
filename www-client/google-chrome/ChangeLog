@@ -1,6 +1,12 @@
 # ChangeLog for www-client/google-chrome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/ChangeLog,v 1.16 2011/09/14 23:40:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/ChangeLog,v 1.17 2011/09/15 06:58:35 floppym Exp $
+
+  15 Sep 2011; Mike Gilbert <floppym@gentoo.org>
+  google-chrome-13.0.782.220_p99552.ebuild,
+  google-chrome-14.0.835.163_beta101024.ebuild,
+  google-chrome-15.0.874.12_alpha100838.ebuild:
+  Make the app-arch/deb2targz blocker stronger
 
 *google-chrome-14.0.835.163_beta101024 (14 Sep 2011)
 

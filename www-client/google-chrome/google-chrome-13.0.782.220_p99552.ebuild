@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-13.0.782.220_p99552.ebuild,v 1.1 2011/09/03 17:47:30 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-13.0.782.220_p99552.ebuild,v 1.2 2011/09/15 06:58:35 floppym Exp $
 
 EAPI="4"
 
@@ -28,7 +28,7 @@ for lang in ${LANGS}; do
 	    IUSE+=" linguas_${lang}"
 done
 
-DEPEND="!app-arch/deb2targz"
+DEPEND="!!app-arch/deb2targz"
 RDEPEND="app-arch/bzip2
 	app-misc/ca-certificates
 	media-libs/alsa-lib
