@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-15.0.874.12.ebuild,v 1.1 2011/09/14 19:01:04 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-15.0.874.12.ebuild,v 1.2 2011/09/15 00:27:18 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -117,6 +117,8 @@ pkg_setup() {
 
 src_prepare() {
 	cp "${FILESDIR}/nacl.gypi" chrome/ || die
+
+	epatch_user
 
 	# Remove most bundled libraries. Some are still needed.
 	find third_party -type f \! -iname '*.gyp*' \

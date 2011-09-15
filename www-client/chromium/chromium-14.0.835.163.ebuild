@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-14.0.835.163.ebuild,v 1.1 2011/09/15 00:22:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-14.0.835.163.ebuild,v 1.2 2011/09/15 00:27:18 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -121,6 +121,8 @@ src_prepare() {
 
 	# Fix build with system libevent, to be upstreamed.
 	epatch "${FILESDIR}/${PN}-system-libevent-r0.patch"
+
+	epatch_user
 
 	# Remove most bundled libraries. Some are still needed.
 	find third_party -type f \! -iname '*.gyp*' \
