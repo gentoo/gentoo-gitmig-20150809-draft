@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.53 2011/09/10 12:20:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.54 2011/09/15 16:19:58 nativemad Exp $
+
+  16 Sep 2011; Andreas Schuerch <nativemad@gentoo.org> libssh-0.5.1.ebuild:
+  x86 stable, thanks JD on bug 382499
 
   10 Sep 2011; Tim Harder <radhermit@gentoo.org> libssh-0.5.1.ebuild:
   Explicitly require static libraries to be built if testing is enabled since
