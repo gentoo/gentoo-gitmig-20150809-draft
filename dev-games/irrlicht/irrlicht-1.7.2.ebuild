@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-1.7.2.ebuild,v 1.5 2011/04/08 03:21:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/irrlicht-1.7.2.ebuild,v 1.6 2011/09/15 03:18:02 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -33,7 +33,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-config.patch \
 		"${FILESDIR}"/${P}-demoMake.patch \
-		"${FILESDIR}"/${P}-gcc46.patch
+		"${FILESDIR}"/${P}-gcc46.patch \
+		"${FILESDIR}"/${P}-libpng15.patch
 
 	sed -i \
 		-e 's:\.\./\.\./media:../media:g' \
