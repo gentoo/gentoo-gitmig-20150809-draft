@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/rygel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.14 2011/09/08 22:16:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.15 2011/09/15 21:26:58 eva Exp $
+
+*rygel-0.12.1 (15 Sep 2011)
+
+  15 Sep 2011; Gilles Dartiguelongue <eva@gentoo.org> rygel-0.10.4.ebuild,
+  rygel-0.12.0.ebuild, +rygel-0.12.1.ebuild:
+  Version bump. Pin libgee dependency to slot 0, bug #382955.
 
 *rygel-0.12.0 (08 Sep 2011)
 

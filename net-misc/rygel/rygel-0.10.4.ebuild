@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.10.4.ebuild,v 1.2 2011/09/08 21:24:21 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.10.4.ebuild,v 1.3 2011/09/15 21:26:58 eva Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -20,7 +20,7 @@ IUSE="X nls +sqlite tracker transcode"
 # version at the time of writing this ebuild
 RDEPEND="
 	>=dev-libs/glib-2.26:2
-	>=dev-libs/libgee-0.5.2
+	>=dev-libs/libgee-0.5.2:0
 	>=media-libs/gupnp-dlna-0.5
 	>=media-libs/gstreamer-0.10.28
 	>=media-libs/gst-plugins-base-0.10.28
