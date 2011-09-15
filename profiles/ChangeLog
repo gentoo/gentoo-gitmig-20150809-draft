@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5699 2011/09/15 12:16:02 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5700 2011/09/15 13:31:04 hd_brummy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Sep 2011; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  removed pmask for media-plugins/vdr-pvr350, fixed on bump
 
   15 Sep 2011; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
   changed pmask for =media-plugins/vdr-avards-0.2.2
