@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/apache-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.98 2011/09/03 13:31:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.99 2011/09/15 08:55:22 pva Exp $
+
+*apache-tools-2.2.21 (15 Sep 2011)
+
+  15 Sep 2011; Peter Volkov <pva@gentoo.org> +apache-tools-2.2.21.ebuild,
+  metadata.xml:
+  Version bump, bug #382971 wrt Agostino Sarubbo.
 
   03 Sep 2011; Raúl Porcel <armin76@gentoo.org> apache-tools-2.2.20.ebuild:
   arm/ia64/s390/sh/sparc/x86 stable wrt #380475
