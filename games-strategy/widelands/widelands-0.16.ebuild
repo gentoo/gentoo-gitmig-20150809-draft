@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.16.ebuild,v 1.2 2011/08/11 21:40:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/widelands/widelands-0.16.ebuild,v 1.3 2011/09/15 03:32:59 ssuominen Exp $
 
 EAPI=3
 inherit versionator cmake-utils games
@@ -36,7 +36,9 @@ src_prepare() {
 	sed -i \
 		-e 's:__ppc__:__PPC__:' src/s2map.cc \
 		|| die "sed s2map.cc failed"
-	epatch "${FILESDIR}"/${P}-goldmine.patch
+	epatch \
+		"${FILESDIR}"/${P}-goldmine.patch \
+		"${FILESDIR}"/${P}-libpng15.patch
 }
 
 src_configure() {
