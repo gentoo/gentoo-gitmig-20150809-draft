@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.405 2011/09/12 15:32:18 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.406 2011/09/15 16:35:41 vapier Exp $
+
+  15 Sep 2011; Mike Frysinger <vapier@gentoo.org>
+  -files/openssl-0.9.8l-binutils.patch, openssl-1.0.0d.ebuild,
+  openssl-1.0.0e.ebuild:
+  Drop gas patch since upstream worked around it in a different way (by
+  updating the x86_64-xlate.pl helper).
 
   12 Sep 2011; Kacper Kowalik <xarthisius@gentoo.org> openssl-1.0.0e.ebuild:
   ppc/ppc64 stable wrt #382069
