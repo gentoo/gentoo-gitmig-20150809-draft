@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/dvdisaster-0.72.1.ebuild,v 1.2 2011/08/21 19:03:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/dvdisaster-0.72.1.ebuild,v 1.3 2011/09/15 02:24:21 ssuominen Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils gnome2-utils versionator
 
 MY_P=${PN}-$(replace_version_separator 2 '.')
@@ -23,6 +23,10 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libpng15.patch
+}
 
 # - There is no autotools, use_ functions won't work
 # - NLS disabled because sys-devel/gettext fails, if you enable it
@@ -47,12 +51,11 @@ src_configure() {
 		--localedir=/usr/share/locale \
 		--buildroot="${D}" \
 		--with-nls=no \
-		${myconf} \
-		|| die "./configure failed"
+		${myconf} || die
 }
 
 src_install() {
-	emake install || die "emake install failed"
+	emake install
 
 	newicon contrib/${PN}48.png ${PN}.png
 	make_desktop_entry ${PN} ${PN} ${PN} "System;Utility"

@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/dvdisaster
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/ChangeLog,v 1.15 2011/08/21 19:03:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/ChangeLog,v 1.16 2011/09/15 02:24:21 ssuominen Exp $
+
+  15 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> dvdisaster-0.72.1.ebuild,
+  +files/dvdisaster-0.72.1-libpng15.patch:
+  Fix building with libpng15 (missing zlib.h include) wrt #380139 by Diego Elio
+  Pettenò
 
   21 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   dvdisaster-0.72.1.ebuild:
