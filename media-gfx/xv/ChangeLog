@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/xv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.104 2011/08/12 21:04:50 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.105 2011/09/15 22:05:48 ssuominen Exp $
+
+  15 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> xv-3.10a-r16.ebuild,
+  files/xv-3.10a-libpng15.patch:
+  Enchance -libpng15.patch by _AxS_ from Freenode with some bits also from
+  NetBSD. Restore keywording as libpng15 is about to get unmasked and PNG
+  saving is working fine here (see bug #355883)
 
   12 Aug 2011; Joe Peterson <lavajoe@gentoo.org> xv-3.10a-r16.ebuild:
   Mask xv-3.10a-r16, since it breaks saving PNG files (see bug #355883)
