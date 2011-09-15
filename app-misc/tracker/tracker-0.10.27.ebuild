@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.10.24.ebuild,v 1.1 2011/08/29 23:11:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.10.27.ebuild,v 1.1 2011/09/15 21:22:20 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
+GNOME_TARBALL_SUFFIX="xz"
 PYTHON_DEPEND="2:2.6"
 
 inherit eutils gnome2 linux-info python virtualx
@@ -27,7 +28,7 @@ RDEPEND="
 	>=app-i18n/enca-1.9
 	>=dev-db/sqlite-3.7[threadsafe]
 	>=dev-libs/dbus-glib-0.82-r1
-	>=dev-libs/glib-2.26:2
+	>=dev-libs/glib-2.28:2
 	>=dev-libs/icu-4
 	|| (
 		>=media-gfx/imagemagick-5.2.1[png,jpeg=]
@@ -50,13 +51,12 @@ RDEPEND="
 	gsf? (
 		app-text/odt2txt
 		>=gnome-extra/libgsf-1.13 )
-	upnp? ( >=media-libs/gupnp-dlna-0.5 )
-	!upnp? (
-		gstreamer? ( >=media-libs/gstreamer-0.10.31:0.10 )
-		!gstreamer? ( !xine? ( || ( media-video/totem media-video/mplayer ) ) )
-	)
+	gstreamer? (
+		>=media-libs/gstreamer-0.10.31:0.10
+		upnp? ( >=media-libs/gupnp-dlna-0.5 ) )
+	!gstreamer? ( !xine? ( || ( media-video/totem media-video/mplayer ) ) )
 	gtk? (
-		>=dev-libs/libgee-0.3
+		>=dev-libs/libgee-0.3:0
 		>=x11-libs/gtk+-2.18:2 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
 	iptc? ( media-libs/libiptcdata )
@@ -118,16 +118,17 @@ pkg_setup() {
 
 	inotify_enabled
 
-	if use upnp ; then
-		G2CONF="${G2CONF} --enable-video-extractor=gupnp-dlna"
-	elif use gstreamer ; then
-		G2CONF="${G2CONF}
-			--enable-video-extractor=gstreamer
-			--enable-gstreamer-tagreadbin"
+	if use gstreamer ; then
+		G2CONF="${G2CONF} --enable-generic-media-extractor=gstreamer"
+		if use upnp; then
+			G2CONF="${G2CONF} --with-gstreamer-backend=gupnp-dlna"
+		else
+			G2CONF="${G2CONF} --with-gstreamer-backend=discoverer"
+		fi
 	elif use xine ; then
-		G2CONF="${G2CONF} --enable-video-extractor=xine"
+		G2CONF="${G2CONF} --enable-generic-media-extractor=xine"
 	else
-		G2CONF="${G2CONF} --enable-video-extractor=external"
+		G2CONF="${G2CONF} --enable-generic-media-extractor=external"
 	fi
 
 	if use applet || use gtk; then

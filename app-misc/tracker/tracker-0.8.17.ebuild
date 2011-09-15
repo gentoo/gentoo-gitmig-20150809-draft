@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.8.17.ebuild,v 1.13 2011/04/14 12:28:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.8.17.ebuild,v 1.14 2011/09/15 21:22:20 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -46,7 +46,7 @@ RDEPEND="
 	gstreamer? ( >=media-libs/gstreamer-0.10.12 )
 	!gstreamer? ( !xine? ( || ( media-video/totem media-video/mplayer ) ) )
 	gtk? (
-		>=dev-libs/libgee-0.3
+		>=dev-libs/libgee-0.3:0
 		>=x11-libs/gtk+-2.18:2 )
 	iptc? ( media-libs/libiptcdata )
 	jpeg? ( virtual/jpeg:0 )

@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.113 2011/09/09 21:52:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.114 2011/09/15 21:22:20 eva Exp $
+
+*tracker-0.10.27 (15 Sep 2011)
+
+  15 Sep 2011; Gilles Dartiguelongue <eva@gentoo.org> tracker-0.8.17.ebuild,
+  -tracker-0.10.24.ebuild, tracker-0.10.26.ebuild, +tracker-0.10.27.ebuild,
+  tracker-9999.ebuild:
+  Version bump. Pin dependency on libgee to slot 0.
 
   09 Sep 2011; Gilles Dartiguelongue <eva@gentoo.org> tracker-0.10.26.ebuild:
   Fix a typo in gstreamer backend selection.

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.44 2011/09/08 21:11:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-9999.ebuild,v 1.45 2011/09/15 21:22:20 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -53,7 +53,7 @@ RDEPEND="
 		upnp? ( >=media-libs/gupnp-dlna-0.5 ) )
 	!gstreamer? ( !xine? ( || ( media-video/totem media-video/mplayer ) ) )
 	gtk? (
-		>=dev-libs/libgee-0.3
+		>=dev-libs/libgee-0.3:0
 		>=x11-libs/gtk+-2.18:2 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
 	iptc? ( media-libs/libiptcdata )
