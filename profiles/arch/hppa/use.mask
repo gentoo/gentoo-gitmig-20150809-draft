@@ -1,8 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.39 2011/06/09 16:25:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.40 2011/09/15 18:59:01 jer Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
-# Jeroen Roovers <jer@gentoo.org (9 Jun 2011)
+# Jeroen Roovers <jer@gentoo.org> (15 Sep 2011)
+# Prelude has not been tested on HPPA.
+prelude
+
+# Jeroen Roovers <jer@gentoo.org> (9 Jun 2011)
 # Lots of untested dependencies (bug #365451)
 facedetect
 

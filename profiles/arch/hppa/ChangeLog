@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.121 2011/09/04 03:52:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.122 2011/09/15 18:59:01 jer Exp $
+
+  15 Sep 2011; Jeroen Roovers <jer@gentoo.org> use.mask:
+  Mask USE=prelude. Correct a previous entry.
 
   04 Sep 2011; Robin H. Johnson <robbat2@gentoo.org> package.use.mask:
   Bug #381737: block dev-libs/libmemcached[tcmalloc] until
