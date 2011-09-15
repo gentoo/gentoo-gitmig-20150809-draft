@@ -1,0 +1,10 @@
+# ChangeLog for app-emacs/markdown-mode
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/markdown-mode/ChangeLog,v 1.1 2011/09/15 16:44:15 naota Exp $
+
+*markdown-mode-1.8.1 (15 Sep 2011)
+
+  15 Sep 2011; Naohiro Aota <naota@gentoo.org>
+  +files/50markdown-mode-gentoo.el, +markdown-mode-1.8.1.ebuild, +metadata.xml:
+  New package app-emacs/markdown-mode
+
