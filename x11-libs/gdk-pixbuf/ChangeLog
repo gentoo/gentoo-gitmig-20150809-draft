@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.31 2011/08/28 19:13:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.32 2011/09/15 19:40:37 ssuominen Exp $
+
+*gdk-pixbuf-2.24.0-r1 (15 Sep 2011)
+
+  15 Sep 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +gdk-pixbuf-2.24.0-r1.ebuild:
+  Use libpng.pc instead of versioned pkg-config file to generate
+  Requires.private: libpng instead of versioned one. This will avoid some
+  problems with libpng14 to libpng15 upgrade.
 
 *gdk-pixbuf-2.24.0 (28 Aug 2011)
 
