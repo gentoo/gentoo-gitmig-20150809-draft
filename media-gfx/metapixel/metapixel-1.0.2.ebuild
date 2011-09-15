@@ -1,8 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/metapixel/metapixel-1.0.2.ebuild,v 1.4 2010/11/08 22:56:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/metapixel/metapixel-1.0.2.ebuild,v 1.5 2011/09/15 23:19:01 ssuominen Exp $
 
-inherit toolchain-funcs
+EAPI=4
+inherit eutils toolchain-funcs
 
 DESCRIPTION="a program for generating photomosaics"
 HOMEPAGE="http://www.complang.tuwien.ac.at/schani/metapixel"
@@ -15,20 +16,19 @@ IUSE=""
 
 RDEPEND="dev-lang/perl
 	media-libs/giflib
-	media-libs/libpng
+	>=media-libs/libpng-1.4
 	virtual/jpeg"
 DEPEND="${RDEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i -e "s:/usr/X11R6:/usr:g" Makefile
-	sed -i -e "s:ar:$(tc-getAR):" rwimg/Makefile
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libpng15.patch
+
+	sed -i -e 's:/usr/X11R6:/usr:g' Makefile || die
+	sed -i -e 's:ar:$(AR):' rwimg/Makefile || die
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" OPTIMIZE="${CFLAGS}" \
-		LDOPTS="${LDFLAGS}" || die "emake failed."
+	emake AR="$(tc-getAR)" CC="$(tc-getCC)" OPTIMIZE="${CFLAGS}" LDOPTS="${LDFLAGS}"
 }
 
 src_install() {
