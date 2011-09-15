@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.443 2011/09/15 06:19:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.444 2011/09/15 21:33:59 floppym Exp $
+
+  15 Sep 2011; Mike Gilbert <floppym@gentoo.org> chromium-14.0.835.163.ebuild,
+  chromium-15.0.874.12.ebuild, chromium-9999-r1.ebuild:
+  Enable H.264 support in bundled ffmpeg; bug 382029 by Sylvain Bertrand. Add
+  bindist use flag.
 
   15 Sep 2011; Mike Gilbert <floppym@gentoo.org> chromium-9999-r1.ebuild:
   Keep third_party/smhasher, bug 382941 by Julien Sanchez.
