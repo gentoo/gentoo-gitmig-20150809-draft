@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.41.ebuild,v 1.4 2011/08/20 04:12:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-5.41-r1.ebuild,v 1.1 2011/09/15 07:58:50 polynomial-c Exp $
 
 EAPI="3"
 

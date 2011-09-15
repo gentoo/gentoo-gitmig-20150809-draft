@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/smartmontools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.104 2011/08/20 04:12:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.105 2011/09/15 07:58:50 polynomial-c Exp $
+
+*smartmontools-5.41-r1 (15 Sep 2011)
+
+  15 Sep 2011; Lars Wendler <polynomial-c@gentoo.org>
+  -smartmontools-5.41.ebuild, +smartmontools-5.41-r1.ebuild, files/smartd.rc:
+  non-maintainer commit: Removed deprecated --oknodo option (bug #377769).
+  Replaced deprecated opts variable (bug #381879) and removed --stop option
+  from reload function. All done with kind permission from vapier.
 
   20 Aug 2011; Mike Frysinger <vapier@gentoo.org> smartmontools-5.41.ebuild,
   smartmontools-9999.ebuild:
