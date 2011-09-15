@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/crossfire-client/crossfire-client-1.12.0.ebuild,v 1.7 2011/08/07 06:45:58 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/crossfire-client/crossfire-client-1.12.0.ebuild,v 1.8 2011/09/15 03:01:36 ssuominen Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -30,9 +30,11 @@ src_prepare() {
 		-r '/^.TH/s:$: 6:' \
 		$(find . -name "*man") \
 		|| die "sed failed"
-	epatch "${FILESDIR}/${P}-lua.patch" \
+	epatch \
+		"${FILESDIR}"/${P}-lua.patch \
 		"${FILESDIR}"/${P}-underlink.patch \
-		"${FILESDIR}"/${P}-curl-headers.patch
+		"${FILESDIR}"/${P}-curl-headers.patch \
+		"${FILESDIR}"/${P}-libpng15.patch
 	eautoreconf
 }
 
