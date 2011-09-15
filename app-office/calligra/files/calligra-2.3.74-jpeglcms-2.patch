@@ -1,6 +1,14 @@
-diff -ruN calligra-2.3.74.orig/krita/plugins/formats/jpeg/CMakeLists.txt calligra-2.3.74/krita/plugins/formats/jpeg/CMakeLists.txt
---- calligra-2.3.74.orig/krita/plugins/formats/jpeg/CMakeLists.txt	2011-08-12 15:51:32.000000000 +0200
-+++ calligra-2.3.74/krita/plugins/formats/jpeg/CMakeLists.txt	2011-08-19 23:41:02.000000000 +0200
+diff -urN calligra-2.3.81.old/krita/plugins/formats/jpeg/CMakeLists.txt calligra-2.3.81/krita/plugins/formats/jpeg/CMakeLists.txt
+--- calligra-2.3.81.old/krita/plugins/formats/jpeg/CMakeLists.txt	2011-09-15 13:13:23.521381587 +0200
++++ calligra-2.3.81/krita/plugins/formats/jpeg/CMakeLists.txt	2011-09-15 13:13:51.571381250 +0200
+@@ -1,6 +1,6 @@
+ add_subdirectory(tests)
+ 
+-include_directories( ${KRITA_INCLUDES} ${LCMS_INCLUDE_DIR} ${CMAKE_SOURCE_DIR}/krita/image/metadata ${EXIV2_INCLUDE_DIR})
++include_directories( ${KRITA_INCLUDES} ${LCMS2_INCLUDE_DIR} ${CMAKE_SOURCE_DIR}/krita/image/metadata ${EXIV2_INCLUDE_DIR})
+ 
+ set(libkritaconverter_LIB_SRCS
+     kis_jpeg_converter.cc
 @@ -16,7 +16,7 @@
  
  kde4_add_plugin(kritajpegimport ${kritajpegimport_PART_SRCS})

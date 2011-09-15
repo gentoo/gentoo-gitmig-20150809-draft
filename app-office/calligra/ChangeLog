@@ -1,6 +1,14 @@
 # ChangeLog for app-office/calligra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.8 2011/08/26 20:53:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/ChangeLog,v 1.9 2011/09/15 11:27:39 scarabeus Exp $
+
+*calligra-2.3.81 (15 Sep 2011)
+
+  15 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> -calligra-2.3.74.ebuild,
+  -files/calligra-2.3.74-jpeglcms.patch,
+  files/calligra-2.3.74-jpeglcms-2.patch, +calligra-2.3.81.ebuild,
+  calligra-9999.ebuild:
+  Version bump to the latest beta. Drop alpha.
 
 *calligra-9999 (26 Aug 2011)
 
