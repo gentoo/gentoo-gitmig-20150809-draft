@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.2.7.ebuild,v 1.2 2011/09/11 07:28:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/gutenprint-5.2.7-r1.ebuild,v 1.1 2011/09/15 21:30:05 radhermit Exp $
 
 EAPI=4
 
@@ -32,7 +32,8 @@ RESTRICT="test"
 DOCS=( AUTHORS ChangeLog NEWS README doc/gutenprint-users-manual.{pdf,odt} )
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-5.2.4-CFLAGS.patch"
+	epatch "${FILESDIR}/${PN}-5.2.4-CFLAGS.patch" \
+		"${FILESDIR}"/${P}-genppd.patch
 	sed -i -e "s:m4local:m4extra:" Makefile.am || die
 	eautoreconf
 }
@@ -58,7 +59,6 @@ src_configure() {
 		--enable-test \
 		--with-ghostscript \
 		--disable-translated-cups-ppds \
-		--enable-static-genppd \
 		$(use_with gimp gimp2) \
 		$(use_with gimp gimp2-as-gutenprint) \
 		$(use_with cups) \
