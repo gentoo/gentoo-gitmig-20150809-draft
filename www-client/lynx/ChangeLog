@@ -1,6 +1,10 @@
 # ChangeLog for www-client/lynx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.109 2011/09/15 09:26:55 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.110 2011/09/15 20:38:34 radhermit Exp $
+
+  15 Sep 2011; Tim Harder <radhermit@gentoo.org> lynx-2.8.8_pre9.ebuild,
+  +files/lynx-2.8.8_pre9-zlib.patch:
+  Fix build with zlib-1.2.5.1 (bug #383113, patch by Nikos Chantziaras).
 
 *lynx-2.8.8_pre9 (15 Sep 2011)
 
