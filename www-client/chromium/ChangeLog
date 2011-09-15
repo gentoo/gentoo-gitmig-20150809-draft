@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.442 2011/09/15 00:27:18 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.443 2011/09/15 06:19:48 floppym Exp $
+
+  15 Sep 2011; Mike Gilbert <floppym@gentoo.org> chromium-9999-r1.ebuild:
+  Keep third_party/smhasher, bug 382941 by Julien Sanchez.
 
   15 Sep 2011; Mike Gilbert <floppym@gentoo.org> chromium-14.0.835.163.ebuild,
   chromium-15.0.874.12.ebuild:
