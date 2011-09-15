@@ -1,6 +1,16 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.160 2011/09/03 13:34:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.161 2011/09/15 10:41:16 pva Exp $
+
+*apache-2.2.21 (15 Sep 2011)
+
+  15 Sep 2011; Peter Volkov <pva@gentoo.org> +apache-2.2.21.ebuild,
+  metadata.xml:
+  Version bump, fixes security issue in mod_proxy_ajp #382971 and regression
+  for CVE-2011-3192, thank Agostino Sarubbo for report. Add local description
+  for USE static, bug 333885 wrt Diego Elio Pettenò. Use start-stop-daemon to
+  start apache and use system limits, bug #347301 wrt Diego Elio Pettenò.
+  Don't install cruft into /etc/apache2, bug #382997 by Remy Blank.
 
   03 Sep 2011; Raúl Porcel <armin76@gentoo.org> apache-2.2.20.ebuild:
   arm/ia64/s390/sh/sparc/x86 stable wrt #380475
