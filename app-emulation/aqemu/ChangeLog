@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/aqemu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/aqemu/ChangeLog,v 1.7 2011/09/11 16:58:52 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/aqemu/ChangeLog,v 1.8 2011/09/15 18:02:23 maksbotan Exp $
+
+  15 Sep 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  files/aqemu-0.8.2_sigsev_propertis.patch:
+  Resolve #382673; thanks Kent Hagebrand for patch fix
 
   11 Sep 2011; Maxim Koltsov <maksbotan@gentoo.org> aqemu-0.8.2-r1.ebuild:
   Fix repoman leading space errors
