@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/simage/simage-1.7.0.ebuild,v 1.4 2010/11/09 09:05:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/simage/simage-1.7.0.ebuild,v 1.5 2011/09/15 18:47:03 ssuominen Exp $
 
 EAPI=2
 
@@ -35,7 +35,8 @@ DEPEND="${RDEPEND}
 DOCS=(AUTHORS ChangeLog NEWS README)
 
 PATCHES=(
-	"${FILESDIR}/${PN}-1.7.0-pkgconfig-partial.patch"
+	"${FILESDIR}"/${PN}-1.7.0-pkgconfig-partial.patch
+	"${FILESDIR}"/${PN}-1.7.0-libpng15.patch
 )
 
 # --with-pic, two defined (PIC and one for image format, sillyt), no not pass
