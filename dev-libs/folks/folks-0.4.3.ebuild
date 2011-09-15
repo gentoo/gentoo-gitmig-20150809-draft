@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.4.3.ebuild,v 1.5 2011/08/13 18:18:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/folks-0.4.3.ebuild,v 1.6 2011/09/15 21:24:44 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -19,7 +19,7 @@ IUSE=""
 RDEPEND=">=dev-libs/glib-2.24:2
 	>=net-libs/telepathy-glib-0.13.1[vala]
 	dev-libs/dbus-glib
-	<dev-libs/libgee-0.7
+	<dev-libs/libgee-0.7:0
 	dev-libs/libxml2
 	sys-libs/ncurses
 	sys-libs/readline

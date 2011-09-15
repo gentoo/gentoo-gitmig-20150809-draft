@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/folks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/ChangeLog,v 1.14 2011/08/13 18:18:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/ChangeLog,v 1.15 2011/09/15 21:24:44 eva Exp $
+
+  15 Sep 2011; Gilles Dartiguelongue <eva@gentoo.org> folks-0.2.1.ebuild,
+  -folks-0.4.2.ebuild, folks-0.4.3.ebuild:
+  Pin libgee dependency to slot 0.
 
   13 Aug 2011; Raúl Porcel <armin76@gentoo.org> folks-0.4.3.ebuild:
   alpha/ia64/sparc stable wrt #369909
