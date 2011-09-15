@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/dash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.82 2011/06/08 15:40:36 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.83 2011/09/15 03:54:56 vapier Exp $
+
+*dash-0.5.7.1 (15 Sep 2011)
+
+  15 Sep 2011; Mike Frysinger <vapier@gentoo.org> +dash-0.5.7.1.ebuild:
+  Version bump #381777 by Hans.
 
   08 Jun 2011; Matt Turner <mattst88@gentoo.org> dash-0.5.5.1.7.ebuild:
   Add ~mips keyword, prerequisite for bug 370685
