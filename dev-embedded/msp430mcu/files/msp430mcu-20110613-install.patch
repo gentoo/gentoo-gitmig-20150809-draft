@@ -1,0 +1,31 @@
+--- msp430mcu-20110613/scripts/install.sh.orig
++++ msp430mcu-20110613/scripts/install.sh
+@@ -3,7 +3,6 @@
+ # Copyright (c) 2011, Peter A. Bigot, licensed under New BSD (see COPYING)
+ # This file is part of msp430mcu (http://sourceforge.net/projects/mspgcc/)
+ 
+-PREFIX=${1:-/msp430/install/dev}
+ MSP430MCU_ROOT=${MSP430MCU_ROOT:-${MSP430_ROOT:-/msp430}/msp430mcu}
+ UPSTREAM=${MSP430MCU_ROOT}/upstream
+ ANALYSIS=${MSP430MCU_ROOT}/analysis
+@@ -15,16 +14,16 @@
+ mkdir -p ${INCPATH} ${LIBPATH}
+ 
+ # Upstream headers
+-install -p ${UPSTREAM}/*.h ${INCPATH}
++install -m 644 ${UPSTREAM}/*.h ${INCPATH}
+ 
+ # Local override headers
+-install -p ${MSP430MCU_ROOT}/include/*.h ${INCPATH}
++install -m 644 ${MSP430MCU_ROOT}/include/*.h ${INCPATH}
+ 
+ # Override msp430.h to accommodate legacy MSPGCC MCU identifiers
+-install -p ${ANALYSIS}/msp430.h ${INCPATH}
++install -m 644 ${ANALYSIS}/msp430.h ${INCPATH}
+ 
+ # MCU-specific data for GCC driver program
+-install -p ${ANALYSIS}/msp430mcu.spec ${LIBPATH}
++install -m 644 ${ANALYSIS}/msp430mcu.spec ${LIBPATH}
+ 
+ # Install MCU-specific memory and periph maps
+ cp -pr ${ANALYSIS}/ldscripts ${LIBPATH}

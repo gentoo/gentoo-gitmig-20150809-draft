@@ -1,0 +1,10 @@
+# ChangeLog for dev-embedded/msp430mcu
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/msp430mcu/ChangeLog,v 1.1 2011/09/15 05:23:02 radhermit Exp $
+
+*msp430mcu-20110613 (15 Sep 2011)
+
+  15 Sep 2011; Tim Harder <radhermit@gentoo.org> +msp430mcu-20110613.ebuild,
+  +files/msp430mcu-20110613-install.patch, +metadata.xml:
+  Initial import from the msp430 overlay.
+
