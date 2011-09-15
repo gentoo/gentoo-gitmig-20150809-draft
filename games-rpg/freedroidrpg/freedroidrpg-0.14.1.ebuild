@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/freedroidrpg-0.14.1.ebuild,v 1.4 2011/01/15 15:06:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/freedroidrpg-0.14.1.ebuild,v 1.5 2011/09/15 02:53:41 ssuominen Exp $
 
 EAPI=2
 PYTHON_DEPEND="2"
@@ -38,7 +38,9 @@ pkg_setup() {
 
 src_prepare() {
 	rm -rf lua src/SDL_rotozoom*
-	epatch "${FILESDIR}"/${P}-syslibs.patch
+	epatch \
+		"${FILESDIR}"/${P}-syslibs.patch \
+		"${FILESDIR}"/${P}-libpng15.patch
 
 	python_convert_shebangs -r 2 .
 
