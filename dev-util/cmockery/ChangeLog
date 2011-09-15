@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmockery
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmockery/ChangeLog,v 1.7 2011/08/24 14:05:48 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmockery/ChangeLog,v 1.8 2011/09/15 16:16:21 nativemad Exp $
+
+  16 Sep 2011; Andreas Schuerch <nativemad@gentoo.org> cmockery-0.1.2.ebuild:
+  x86 stable, thanks JD on bug 382499
 
   24 Aug 2011; Jeremy Olexa <darkside@gentoo.org> cmockery-0.1.2.ebuild:
   add prefix keywords, bug 374401
