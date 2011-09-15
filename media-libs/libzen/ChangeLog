@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libzen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.17 2011/08/17 05:06:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.18 2011/09/15 23:20:47 radhermit Exp $
+
+*libzen-0.4.21-r1 (15 Sep 2011)
+
+  15 Sep 2011; Tim Harder <radhermit@gentoo.org> +libzen-0.4.21-r1.ebuild,
+  +files/libzen-0.4.21-no-tinyxml.patch:
+  Revision bump. Remove bundled tinyxml library (fixes #383123).
 
   17 Aug 2011; Tim Harder <radhermit@gentoo.org> libzen-0.4.21.ebuild:
   Remove unused eutils eclass
