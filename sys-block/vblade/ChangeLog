@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/vblade
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/vblade/ChangeLog,v 1.27 2011/07/17 11:07:07 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/vblade/ChangeLog,v 1.28 2011/09/15 07:56:37 radhermit Exp $
+
+*vblade-20 (15 Sep 2011)
+
+  15 Sep 2011; Tim Harder <radhermit@gentoo.org> +vblade-20.ebuild:
+  Version bump. Update to EAPI 4 and respect LDFLAGS (bug #336230).
 
   17 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> vblade-19.ebuild:
   ppc/ppc64 stable wrt #366539
