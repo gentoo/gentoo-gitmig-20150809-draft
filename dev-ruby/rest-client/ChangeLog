@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rest-client
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rest-client/ChangeLog,v 1.10 2011/07/20 06:34:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rest-client/ChangeLog,v 1.11 2011/09/16 18:58:42 graaff Exp $
+
+*rest-client-1.6.7 (16 Sep 2011)
+
+  16 Sep 2011; Hans de Graaff <graaff@gentoo.org> +rest-client-1.6.7.ebuild:
+  Version bump.
 
 *rest-client-1.6.3 (20 Jul 2011)
 
