@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/bluez-hcidump-2.0.ebuild,v 1.3 2011/08/07 03:15:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-hcidump/bluez-hcidump-2.0.ebuild,v 1.4 2011/09/16 16:47:33 jer Exp $
 
 EAPI=4
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://kernel/linux/bluetooth/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc x86"
+KEYWORDS="amd64 hppa ~ppc x86"
 IUSE=""
 
 RDEPEND=">=net-wireless/bluez-4.90"
