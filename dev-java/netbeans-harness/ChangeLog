@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/netbeans-harness
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-harness/ChangeLog,v 1.5 2011/08/22 12:41:05 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-harness/ChangeLog,v 1.6 2011/09/16 19:43:08 fordfrog Exp $
+
+  16 Sep 2011; Miroslav Šulc <fordfrog@gentoo.org>
+  netbeans-harness-7.0.1.ebuild:
+  Building NetBeans is supported only with JDK 1.6
 
   22 Aug 2011; Miroslav Šulc <fordfrog@gentoo.org>
   -netbeans-harness-7.0.ebuild:
