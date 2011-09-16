@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.163 2011/09/16 11:59:21 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.164 2011/09/16 15:48:48 jer Exp $
+
+  16 Sep 2011; Jeroen Roovers <jer@gentoo.org> apache-2.2.21.ebuild:
+  Stable for HPPA (bug #382971).
 
   16 Sep 2011; Tony Vroon <chainsaw@gentoo.org> apache-2.2.21.ebuild:
   Marked stable on AMD64 based on arch testing by Tomáš "Mepho" Pružina,
