@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-nb/netbeans-nb-7.0.1.ebuild,v 1.1 2011/08/05 10:25:03 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-nb/netbeans-nb-7.0.1.ebuild,v 1.2 2011/09/16 19:52:07 fordfrog Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -21,7 +21,7 @@ S="${WORKDIR}"
 CDEPEND="~dev-java/netbeans-platform-${PV}
 	~dev-java/netbeans-harness-${PV}
 	~dev-java/netbeans-ide-${PV}"
-DEPEND=">=virtual/jdk-1.6
+DEPEND="virtual/jdk:1.6
 	app-arch/unzip
 	${CDEPEND}
 	dev-java/javahelp:0"
@@ -115,8 +115,8 @@ src_install() {
 
 	# fix paths per bug# 163483
 	if [[ -e "${D}"/${INSTALL_DIR}/bin/netbeans ]]; then
-		sed -i -e 's:"$progdir"/../etc/:/etc/netbeans-7.0/:' "${D}"/${INSTALL_DIR}/bin/netbeans
-		sed -i -e 's:"${userdir}"/etc/:/etc/netbeans-7.0/:' "${D}"/${INSTALL_DIR}/bin/netbeans
+		sed -i -e "s:\"\$progdir\"/../etc/:/etc/netbeans-${SLOT}/:" "${D}"/${INSTALL_DIR}/bin/netbeans
+		sed -i -e "s:\"\${userdir}\"/etc/:/etc/netbeans-${SLOT}/:" "${D}"/${INSTALL_DIR}/bin/netbeans
 	fi
 
 	dodir /usr/share/icons/hicolor/32x32/apps
