@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.226 2011/09/10 16:13:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.227 2011/09/16 16:54:16 jer Exp $
+
+  16 Sep 2011; Jeroen Roovers <jer@gentoo.org> boost-1.46.1-r1.ebuild:
+  Stable for HPPA (bug #377805).
 
   10 Sep 2011; Raúl Porcel <armin76@gentoo.org> boost-1.46.1-r1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #377805
