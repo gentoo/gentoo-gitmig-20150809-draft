@@ -1,6 +1,10 @@
 # ChangeLog for app-text/hunspell
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.89 2011/09/15 10:32:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/ChangeLog,v 1.90 2011/09/16 12:32:14 chainsaw Exp $
+
+  16 Sep 2011; Tony Vroon <chainsaw@gentoo.org> hunspell-1.3.2-r1.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
+  "idella4" Delaney in bug #379045.
 
   15 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   hunspell-1.3.2-r2.ebuild:
