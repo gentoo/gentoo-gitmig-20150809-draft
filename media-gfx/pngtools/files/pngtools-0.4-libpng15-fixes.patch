@@ -1,20 +1,25 @@
---- pngtools-0.4.orig/pnginfo.c	2008-11-27 01:14:17.000000000 +0200
-+++ pngtools-0.4.orig/pnginfo.c	2011-09-15 14:30:36.000000000 +0300
-@@ -187,18 +187,21 @@ 
+diff -Nuar --exclude '*.orig' --exclude '*.rej' pngtools-0.4.orig//pnginfo.c pngtools-0.4/pnginfo.c
+--- pngtools-0.4.orig//pnginfo.c	2011-09-16 07:05:05.235477249 +0000
++++ pngtools-0.4/pnginfo.c	2011-09-16 07:07:52.385872705 +0000
+@@ -185,20 +185,25 @@
+   ///////////////////////////////////////////////////////////////////////////
+ 
    printf ("  Image Width: %d Image Length: %d\n", width, height);
++  int pixel_depth;
++  pixel_depth = bitdepth * png_get_channels(png, info);
    if(tiffnames == pnginfo_true){
      printf ("  Bits/Sample: %d\n", bitdepth);
 -    printf ("  Samples/Pixel: %d\n", info->channels);
 -    printf ("  Pixel Depth: %d\n", info->pixel_depth);	// Does this add value?
 +    printf ("  Samples/Pixel: %d\n", png_get_channels(png, info));
-+    printf ("  Pixel Depth: %d\n", info->pixel_depth);	// Does this add value?
++    printf ("  Pixel Depth: %d\n", pixel_depth);	// Does this add value?
    }
    else{
      printf ("  Bitdepth (Bits/Sample): %d\n", bitdepth);
 -    printf ("  Channels (Samples/Pixel): %d\n", info->channels);
 -    printf ("  Pixel depth (Pixel Depth): %d\n", info->pixel_depth);	// Does this add value?
 +    printf ("  Channels (Samples/Pixel): %d\n", png_get_channels(png, info));
-+    printf ("  Pixel depth (Pixel Depth): %d\n", info->pixel_depth);	// Does this add value?
++    printf ("  Pixel depth (Pixel Depth): %d\n", pixel_depth);	// Does this add value?
    }
  
    // Photometric interp packs a lot of information
@@ -26,7 +31,7 @@
    switch (colourtype)
      {
      case PNG_COLOR_TYPE_GRAY:
-@@ -207,10 +210,10 @@ 
+@@ -207,10 +212,10 @@
  
      case PNG_COLOR_TYPE_PALETTE:
        printf ("PALETTED COLOUR ");
@@ -39,7 +44,7 @@
        break;
  
      case PNG_COLOR_TYPE_RGB:
-@@ -232,7 +235,7 @@ 
+@@ -232,7 +237,7 @@
    printf ("\n");
  
    printf ("  Image filter: ");
@@ -48,7 +53,7 @@
      {
      case PNG_FILTER_TYPE_BASE:
        printf ("Single row per byte filter ");
-@@ -249,7 +252,7 @@ 
+@@ -249,7 +254,7 @@
    printf ("\n");
  
    printf ("  Interlacing: ");
@@ -57,7 +62,7 @@
      {
      case PNG_INTERLACE_NONE:
        printf ("No interlacing ");
-@@ -266,7 +269,7 @@ 
+@@ -266,7 +271,7 @@
    printf ("\n");
  
    printf ("  Compression Scheme: ");
@@ -66,7 +71,7 @@
      {
      case PNG_COMPRESSION_TYPE_BASE:
        printf ("Deflate method 8, 32k window");
-@@ -278,9 +281,13 @@ 
+@@ -278,9 +283,13 @@
      }
    printf ("\n");
  
@@ -82,7 +87,7 @@
      {
      case PNG_RESOLUTION_UNKNOWN:
        printf ("(unit unknown)");
-@@ -299,15 +306,18 @@ 
+@@ -299,15 +308,18 @@
    // FillOrder is always msb-to-lsb, big endian
    printf ("  FillOrder: msb-to-lsb\n  Byte Order: Network (Big Endian)\n");
  
@@ -105,7 +110,7 @@
  	{
  	case -1:
  	  printf ("(tEXt uncompressed)");
-@@ -332,12 +342,12 @@ 
+@@ -332,12 +344,12 @@
  
        printf (": ");
        j = 0;
@@ -121,7 +126,7 @@
  
  	  j++;
  	}
-@@ -385,14 +395,14 @@ 
+@@ -385,14 +397,14 @@
  
  	  printf ("Dumping the bitmap for this image:\n");
  	  printf ("(Expanded samples result in %d bytes per pixel, %d channels with %d bytes per channel)\n\n", 
@@ -138,7 +143,7 @@
  	    {
  	      int scount, bcount, pixel;
  
-@@ -408,16 +418,16 @@ 
+@@ -408,16 +420,16 @@
  
  	      // Determine if this is a pixel whose entire value is zero
  	      pixel = 0;
@@ -158,7 +163,7 @@
  		  }
  		  printf ("] ");
  		  runlen++;
-@@ -425,10 +435,10 @@ 
+@@ -425,10 +437,10 @@
  
  	      if (runlen == 0){
  		printf ("[");
@@ -171,9 +176,10 @@
  		}
  		printf("] ");
  	      }
---- pngtools-0.4.orig/pngread.c	2008-11-27 01:14:17.000000000 +0200
-+++ pngtools-0.4.orig/pngread.c	2011-09-15 14:27:37.000000000 +0300
-@@ -68,7 +68,7 @@ 
+diff -Nuar --exclude '*.orig' --exclude '*.rej' pngtools-0.4.orig//pngread.c pngtools-0.4/pngread.c
+--- pngtools-0.4.orig//pngread.c	2011-09-16 07:05:05.235477249 +0000
++++ pngtools-0.4/pngread.c	2011-09-16 07:05:44.865570870 +0000
+@@ -68,7 +68,7 @@
    // palette is correctly reported...
    //png_set_strip_alpha (png);
    png_read_update_info (png, info);
