@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnlp-api/jnlp-api-6.0.18.ebuild,v 1.1 2011/09/09 23:08:25 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnlp-api/jnlp-api-6.0.18.ebuild,v 1.2 2011/09/16 12:45:36 chainsaw Exp $
 
 EAPI="4"
 JAVA_PKG_IUSE="source"
@@ -13,7 +13,7 @@ SRC_URI="http://dev.gentoo.org/~caster/distfiles/${P}.tar.bz2"
 
 LICENSE="GPL-2 GPL-2-with-linking-exception LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="source"
 
 DEPEND=">=virtual/jdk-1.6"
