@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvdstyler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.44 2011/08/13 07:42:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.45 2011/09/16 18:38:04 beandog Exp $
+
+  16 Sep 2011; Steve Dibb <beandog@gentoo.org> dvdstyler-1.7.4.ebuild,
+  dvdstyler-1.8.1_beta1.ebuild, dvdstyler-1.8.1.ebuild:
+  Use ffmpeg virtual, bug 362129
 
   13 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> dvdstyler-1.7.4.ebuild,
   dvdstyler-1.8.1_beta1.ebuild, dvdstyler-1.8.1.ebuild:
