@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-13.0.782.220_p99552.ebuild,v 1.3 2011/09/15 23:05:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-14.0.835.163_p101024.ebuild,v 1.1 2011/09/16 17:32:51 floppym Exp $
 
 EAPI="4"
 
@@ -92,6 +92,7 @@ src_prepare() {
 
 	pax-mark m ${CHROME_HOME}chrome || die
 	rm -rf usr/share/menu || die
+	mv usr/share/doc/${PN} usr/share/doc/${PF} || die
 
 	# Support LINGUAS, bug #332751.
 	cd "${CHROME_HOME}locales" || die
