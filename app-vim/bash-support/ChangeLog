@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/bash-support
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/bash-support/ChangeLog,v 1.2 2011/03/10 04:38:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/bash-support/ChangeLog,v 1.3 2011/09/16 21:18:48 radhermit Exp $
+
+*bash-support-3.6 (16 Sep 2011)
+
+  16 Sep 2011; Tim Harder <radhermit@gentoo.org> +bash-support-3.6.ebuild:
+  Version bump (bug #383021 by Roger).
 
 *bash-support-3.5 (10 Mar 2011)
 
