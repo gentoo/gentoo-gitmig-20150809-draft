@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/patron
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/patron/ChangeLog,v 1.18 2011/08/26 06:42:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/patron/ChangeLog,v 1.19 2011/09/16 18:47:14 graaff Exp $
+
+*patron-0.4.16 (16 Sep 2011)
+
+  16 Sep 2011; Hans de Graaff <graaff@gentoo.org> +patron-0.4.16.ebuild:
+  Version bump.
 
 *patron-0.4.15 (26 Aug 2011)
 
