@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyconstruct
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyconstruct/ChangeLog,v 1.2 2010/06/08 19:04:28 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyconstruct/ChangeLog,v 1.3 2011/09/16 08:24:21 djc Exp $
+
+*pyconstruct-2.04 (16 Sep 2011)
+
+  16 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> +pyconstruct-2.04.ebuild:
+  Version bump to 2.04 (fixes bug 383059, thanks jbergstroem).
 
   08 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pyconstruct-2.0.0.ebuild:
