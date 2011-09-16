@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/global
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.90 2011/09/13 18:51:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.91 2011/09/16 02:37:14 naota Exp $
+
+  16 Sep 2011; Naohiro Aota <naota@gentoo.org> metadata.xml:
+  Assign me as new maintainer
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> -global-5.9.6.ebuild,
   metadata.xml:

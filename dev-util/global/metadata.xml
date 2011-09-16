@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>naota@gentoo.org</email>
 	</maintainer>
 	<use>
 		<flag name="vim">Integrate the GNU GLOBAL source code tag system with Vim</flag>
