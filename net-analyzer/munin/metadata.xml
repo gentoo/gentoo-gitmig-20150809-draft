@@ -20,5 +20,6 @@
 		<flag name='asterisk'>installs deps for monitoring Asterisk</flag>
 		<flag name='irc'>installs deps for monitoring IRC</flag>
 		<flag name='memcached'>installs deps for monitoring memcached</flag>
+		<flag name='minimal'>installs only the munin-node, applicable if the host is not the munin master installation"</flag>
 	</use>
 </pkgmetadata>

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.4.6-r2.ebuild,v 1.1 2011/08/17 15:45:54 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.4.6-r2.ebuild,v 1.2 2011/09/16 21:03:27 darkside Exp $
 
 EAPI=2
 
@@ -145,10 +145,9 @@ pkg_config() {
 pkg_postinst() {
 	elog "Please follow the munin documentation to set up the plugins you"
 	elog "need, afterwards start munin-node via /etc/init.d/munin-node."
-	elog "To have munin's cronjob automatically configured for you if this is"
-	elog "your munin master installation, please:"
-	elog "emerge --config net-analyzer/munin"
-	elog ""
-	elog "Please note that the crontab has undergone some modifications"
-	elog "since 1.3.2, and you should update to it!"
+	if ! use minimal; then
+		elog "To have munin's cronjob automatically configured for you if this is"
+		elog "your munin master installation, please:"
+		elog "emerge --config net-analyzer/munin"
+	fi
 }

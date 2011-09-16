@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.58 2011/08/17 15:45:54 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.59 2011/09/16 21:03:27 darkside Exp $
+
+  16 Sep 2011; Jeremy Olexa <darkside@gentoo.org> munin-1.4.6-r2.ebuild,
+  metadata.xml:
+  reduce noise in postinst, document minimal USE flag
 
 *munin-1.4.6-r2 (17 Aug 2011)
 
