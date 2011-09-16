@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/d0_blind_id
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/d0_blind_id/ChangeLog,v 1.1 2011/09/16 18:37:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/d0_blind_id/ChangeLog,v 1.2 2011/09/16 20:02:58 mr_bones_ Exp $
+
+  16 Sep 2011; Michael Sterrett <mr_bones_@gentoo.org> d0_blind_id-0.3.ebuild:
+  remove openssl and tommath deps since they aren't needed by xonotic
 
 *d0_blind_id-0.3 (16 Sep 2011)
 
