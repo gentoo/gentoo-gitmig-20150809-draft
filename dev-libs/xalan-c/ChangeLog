@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/xalan-c
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/ChangeLog,v 1.28 2011/08/04 12:34:59 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/ChangeLog,v 1.29 2011/09/16 12:35:29 chainsaw Exp $
+
+  16 Sep 2011; Tony Vroon <chainsaw@gentoo.org>
+  xalan-c-1.11.0_pre1153059.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
+  "idella4" Delaney in bug #382781.
 
 *xalan-c-1.11.0_pre1153059 (04 Aug 2011)
 
