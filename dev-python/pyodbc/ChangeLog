@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyodbc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyodbc/ChangeLog,v 1.1 2011/03/25 15:07:11 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyodbc/ChangeLog,v 1.2 2011/09/16 07:55:37 djc Exp $
+
+*pyodbc-2.1.11 (16 Sep 2011)
+
+  16 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> +pyodbc-2.1.11.ebuild:
+  Version bump to 2.1.11 (fixes bug 382937, thanks jbergstroem).
 
 *pyodbc-2.1.8 (25 Mar 2011)
 
