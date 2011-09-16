@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.17 2011/09/16 15:38:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.18 2011/09/16 15:38:26 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -162,18 +162,28 @@ remove_libtool_files() {
 		local archivefile=${f/%.la/.a}
 		[[ "${f}" != "${archivefile}" ]] || die 'regex sanity check failed'
 
-		# Remove static libs we're not supposed to link against
+		# Remove static libs we're not supposed to link against.
 		if [[ ${shouldnotlink} ]]; then
 			einfo "Removing unnecessary ${archivefile#${D%/}}"
 			rm -f "${archivefile}" || die
-			# We're never going to remove the .la file.
+			# The .la file may be used by a module loader, so avoid removing it
+			# unless explicitly requested.
 			[[ ${removing_all} ]] || continue
 		fi
 
-		# Keep .la files when:
-		# - they have shouldnotlink=yes - likely plugins (handled above),
-		# - respective static archive exists.
-		if [[ ${removing_all} || ! -f ${archivefile} ]]; then
+		# Remove .la files when:
+		# - user explicitly wants us to remove all .la files,
+		# - respective static archive doesn't exist,
+		# - they don't provide any new information (no libs & no flags).
+		local removing
+		if [[ ${removing_all} ]]; then removing=1
+		elif [[ ! -f ${archivefile} ]]; then removing=1
+		elif [[ ! $(sed -n -e \
+			"s/^\(dependency_libs\|inherited_linker_flags\)='\(.*\)'$/\2/p" \
+			"${f}") ]]; then removing=1
+		fi
+
+		if [[ ${removing} ]]; then
 			einfo "Removing unnecessary ${f#${D%/}}"
 			rm -f "${f}" || die
 		fi
