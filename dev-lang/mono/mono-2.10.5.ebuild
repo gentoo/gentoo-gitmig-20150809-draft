@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.10.5.ebuild,v 1.2 2011/09/10 14:17:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.10.5.ebuild,v 1.3 2011/09/16 13:48:00 pacho Exp $
 
 EAPI="4"
 
@@ -24,6 +24,7 @@ RDEPEND="${COMMONDEPEND}
 
 DEPEND="${COMMONDEPEND}
 	sys-devel/bc
+	virtual/yacc
 	>=app-shells/bash-3.2
 	pax_kernel? ( sys-apps/paxctl )"
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mono
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.229 2011/09/10 14:17:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.230 2011/09/16 13:48:00 pacho Exp $
+
+  16 Sep 2011; Pacho Ramos <pacho@gentoo.org> mono-2.10.5.ebuild:
+  Add virtual/yacc to DEPEND per bug #382911 by bay.
 
   10 Sep 2011; Pacho Ramos <pacho@gentoo.org> mono-2.10.5.ebuild, metadata.xml:
   Use and DEPEND on pax tools only when people wants to use mono on hardened
