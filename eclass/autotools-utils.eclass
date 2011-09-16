@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.15 2011/09/16 15:37:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.16 2011/09/16 15:37:59 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -144,6 +144,17 @@ _check_build_dir() {
 # See autotools-utils_src_install for reference.
 remove_libtool_files() {
 	debug-print-function ${FUNCNAME} "$@"
+	local removing_all
+	[[ ${#} -le 1 ]] || die "Invalid number of args to ${FUNCNAME}()"
+	if [[ ${#} -eq 1 ]]; then
+		case "${1}" in
+			all)
+				removing_all=1
+				;;
+			*)
+				die "Invalid argument to ${FUNCNAME}(): ${1}"
+		esac
+	fi
 
 	local f
 	find "${D}" -type f -name '*.la' -print0 | while read -r -d '' f; do
@@ -154,7 +165,7 @@ remove_libtool_files() {
 		# Keep .la files when:
 		# - they have shouldnotlink=yes - likely plugins,
 		# - respective static archive exists.
-		if [[ "$1" == 'all' || ( -z ${shouldnotlink} && ! -f ${archivefile} ) ]]; then
+		if [[ ${removing_all} || ( -z ${shouldnotlink} && ! -f ${archivefile} ) ]]; then
 			einfo "Removing unnecessary ${f#${D%/}}"
 			rm -f "${f}" || die
 		fi
