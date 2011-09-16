@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cmockery
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmockery/ChangeLog,v 1.8 2011/09/15 16:16:21 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmockery/ChangeLog,v 1.9 2011/09/16 12:58:20 chainsaw Exp $
+
+  16 Sep 2011; Tony Vroon <chainsaw@gentoo.org> cmockery-0.1.2.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
+  "idella4" Delaney in bug #382499.
 
   16 Sep 2011; Andreas Schuerch <nativemad@gentoo.org> cmockery-0.1.2.ebuild:
   x86 stable, thanks JD on bug 382499
