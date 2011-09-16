@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.0_beta69.ebuild,v 1.5 2011/05/16 14:40:29 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/doomsday-1.9.0_beta69.ebuild,v 1.6 2011/09/16 12:16:41 tupone Exp $
 
 EAPI=2
 inherit cmake-utils games
@@ -28,7 +28,9 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}/${PN}
 
-PATCHES=( "${FILESDIR}"/${P}-underlink.patch )
+PATCHES=( "${FILESDIR}"/${P}-underlink.patch
+	"${FILESDIR}"/${P}-png15.patch
+)
 
 src_configure() {
 	mycmakeargs=(
