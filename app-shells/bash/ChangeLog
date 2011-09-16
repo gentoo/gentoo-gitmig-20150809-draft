@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.290 2011/08/11 02:23:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.291 2011/09/16 17:25:35 vapier Exp $
+
+  16 Sep 2011; Mike Frysinger <vapier@gentoo.org> bash-4.2_p10.ebuild,
+  +files/bash-4.2-execute-job-control.patch:
+  Fix building when job controls are disabled (like when cross-compiling)
+  #383237 by Maciej Grela.
 
   11 Aug 2011; Mike Frysinger <vapier@gentoo.org> bash-4.2_p8-r1.ebuild,
   bash-4.2_p10.ebuild:

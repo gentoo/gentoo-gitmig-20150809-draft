@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p10.ebuild,v 1.3 2011/08/11 02:23:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-4.2_p10.ebuild,v 1.4 2011/09/16 17:25:35 vapier Exp $
 
 EAPI="1"
 
@@ -71,6 +71,8 @@ src_unpack() {
 	cd lib/readline
 	[[ ${READLINE_PLEVEL} -gt 0 ]] && epatch $(patches -s ${READLINE_PLEVEL} readline ${READLINE_VER})
 	cd ../..
+
+	epatch "${FILESDIR}"/${PN}-4.2-execute-job-control.patch #383237
 }
 
 src_compile() {
