@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.119 2011/08/25 01:13:19 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.120 2011/09/16 13:20:36 chainsaw Exp $
+
+  16 Sep 2011; Tony Vroon <chainsaw@gentoo.org> ghostscript-gpl-9.04-r3.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
+  "idella4" Delaney in bug #382951.
 
 *ghostscript-gpl-9.04-r3 (25 Aug 2011)
 
