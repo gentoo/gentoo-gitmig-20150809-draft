@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/elfkickers-3.0-r1.ebuild,v 1.6 2011/09/06 18:07:00 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/elfkickers-3.0-r1.ebuild,v 1.7 2011/09/16 16:49:51 jer Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.muppetlabs.com/~breadbox/pub/software/${MY_PN}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~mips x86"
+KEYWORDS="amd64 ~arm ~hppa ~mips x86"
 IUSE="doc"
 
 DEPEND="app-misc/pax-utils"
