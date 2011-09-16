@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udisks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.52 2011/09/15 14:56:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.53 2011/09/16 00:11:38 ssuominen Exp $
+
+  16 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> udisks-1.0.4-r1.ebuild:
+  Port to bash-completion-r1.eclass wrt #383167 by David J. Cozatt
 
   15 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> udisks-1.0.4-r1.ebuild:
   Remove obsolete blockers.

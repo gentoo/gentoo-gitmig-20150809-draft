@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.4-r1.ebuild,v 1.2 2011/09/15 14:56:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.4-r1.ebuild,v 1.3 2011/09/16 00:11:38 ssuominen Exp $
 
 EAPI=4
-inherit eutils bash-completion linux-info
+inherit eutils bash-completion-r1 linux-info
 
 DESCRIPTION="Daemon providing interfaces to work with storage devices"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/udisks"
@@ -69,7 +69,7 @@ src_install() {
 	default
 
 	rm -f "${ED}"/etc/profile.d/udisks-bash-completion.sh
-	dobashcompletion tools/udisks-bash-completion.sh ${PN}
+	newbashcomp tools/udisks-bash-completion.sh ${PN}
 
 	find "${ED}" -name '*.la' -exec rm -f {} +
 
