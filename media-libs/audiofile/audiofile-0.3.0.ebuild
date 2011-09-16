@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/audiofile-0.3.0.ebuild,v 1.1 2011/09/15 07:22:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/audiofile-0.3.0.ebuild,v 1.2 2011/09/16 06:41:25 radhermit Exp $
 
 EAPI=4
 
@@ -20,6 +20,9 @@ DOCS=( ACKNOWLEDGEMENTS AUTHORS ChangeLog NEWS NOTES README TODO )
 src_prepare() {
 	sed -i -e "/^AM_CFLAGS =/s:-Werror ::" \
 		libaudiofile/Makefile.am libaudiofile/modules/Makefile.am || die
+
+	# Don't build examples
+	sed -i -e "/^SRC_SUBDIRS/s: examples::" Makefile.am || die
 
 	eautoreconf
 }
