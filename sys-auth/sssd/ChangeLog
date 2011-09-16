@@ -1,6 +1,14 @@
 # ChangeLog for sys-auth/sssd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.6 2011/08/31 08:25:10 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.7 2011/09/16 09:15:35 maksbotan Exp $
+
+*sssd-1.6.1-r1 (16 Sep 2011)
+
+  16 Sep 2011; Maxim Koltsov <maksbotan@gentoo.org> -sssd-1.5.13.ebuild,
+  +sssd-1.6.1-r1.ebuild:
+  (ChangeLog by Andreis Vinogradovs <spamslepnoga@inbox.ru>)
+  Fix #382703 - remove useless .la files;
+  Thanks Samuli Suominen <ssuominen@gentoo.org> for report
 
   31 Aug 2011; Maxim Koltsov <maksbotan@gentoo.org> +files/allow_xdm.patch:
   Add forgotten patch
@@ -24,7 +32,7 @@
 
 *sssd-1.5.12 (14 Aug 2011)
 
-  14 Aug 2011; <maks@gentoo.org> +sssd-1.5.12.ebuild, +metadata.xml:
+  14 Aug 2011; Maxim Koltsov <maksbotan@gentoo.org> +sssd-1.5.12.ebuild, +metadata.xml:
   Add sssd-1.5.12, 1.6.0 is not yet considered ready by ebuild author. Thanks
   to
   slepnoga, bug #321875

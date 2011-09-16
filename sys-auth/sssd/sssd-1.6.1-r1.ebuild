@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.5.13.ebuild,v 1.1 2011/08/31 08:22:24 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.6.1-r1.ebuild,v 1.1 2011/09/16 09:15:35 maksbotan Exp $
 
 EAPI=3
 
@@ -75,9 +75,7 @@ src_configure(){
 
 src_install(){
 	autotools-utils_src_install
-
-	rm "${ED}/$(get_libdir)/"libnss_sss.la || die
-	rm "${ED}/usr/$(get_libdir)/"ldb/modules/ldb/*.la || die
+	remove_libtool_files all
 
 	insinto /etc/sssd
 	insopts -m600
