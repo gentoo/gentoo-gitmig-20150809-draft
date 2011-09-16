@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-7.0.1.ebuild,v 1.1 2011/08/05 10:33:33 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-7.0.1.ebuild,v 1.2 2011/09/16 19:58:43 fordfrog Exp $
 
 EAPI="4"
 inherit eutils java-pkg-2 java-ant-2
@@ -90,7 +90,7 @@ IUSE_LINGUAS="
 IUSE="doc ${IUSE_NETBEANS_MODULES} ${IUSE_LINGUAS}"
 S="${WORKDIR}"
 
-DEPEND=">=virtual/jdk-1.6
+DEPEND="virtual/jdk:1.6
 	dev-java/javahelp:0"
 RDEPEND=">=virtual/jdk-1.6
 	~dev-java/netbeans-harness-${PV}
