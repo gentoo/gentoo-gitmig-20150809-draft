@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-15.0.874.5.ebuild,v 1.1 2011/09/09 19:56:58 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-15.0.874.15.ebuild,v 1.1 2011/09/16 18:18:37 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -15,7 +15,7 @@ SRC_URI="http://build.chromium.org/official/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="chromedriver cups gnome gnome-keyring kerberos pulseaudio"
+IUSE="bindist chromedriver cups gnome gnome-keyring kerberos pulseaudio"
 
 # en_US is ommitted on purpose from the list below. It must always be available.
 LANGS="am ar bg bn ca cs da de el en_GB es es_LA et fa fi fil fr gu he hi hr
@@ -113,10 +113,18 @@ pkg_setup() {
 	# bug #363907.
 	CONFIG_CHECK="~PID_NS ~NET_NS"
 	check_extra_config
+
+	if use bindist; then
+		elog "bindist enabled: H.264 video support will be disabled."
+	else
+		elog "bindist disabled: Resulting binaries may not be legal to re-distribute."
+	fi
 }
 
 src_prepare() {
 	cp "${FILESDIR}/nacl.gypi" chrome/ || die
+
+	epatch_user
 
 	# Remove most bundled libraries. Some are still needed.
 	find third_party -type f \! -iname '*.gyp*' \
@@ -198,13 +206,13 @@ src_configure() {
 		-Duse_system_zlib=1"
 
 	# Optional dependencies.
+	# TODO: linux_link_kerberos, bug #381289.
 	myconf+="
 		$(gyp_use cups use_cups)
 		$(gyp_use gnome use_gconf)
 		$(gyp_use gnome-keyring use_gnome_keyring)
 		$(gyp_use gnome-keyring linux_link_gnome_keyring)
 		$(gyp_use kerberos use_kerberos)
-		$(gyp_use kerberos linux_link_kerberos)
 		$(gyp_use pulseaudio use_pulseaudio)"
 
 	# Enable sandbox.
@@ -221,6 +229,11 @@ src_configure() {
 	# Our system ffmpeg should support more codecs than the bundled one
 	# for Chromium.
 	# myconf+=" -Dproprietary_codecs=1"
+
+	if ! use bindist; then
+		# Enable H.624 support in bundled ffmpeg.
+		myconf+=" -Dproprietary_codecs=1 -Dffmpeg_branding=Chrome"
+	fi
 
 	local myarch="$(tc-arch)"
 	if [[ $myarch = amd64 ]] ; then

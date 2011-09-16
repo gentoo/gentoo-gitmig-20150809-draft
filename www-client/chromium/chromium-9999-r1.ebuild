@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.53 2011/09/15 21:33:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.54 2011/09/16 18:18:37 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -257,13 +257,13 @@ src_configure() {
 		-Duse_system_zlib=1"
 
 	# Optional dependencies.
+	# TODO: linux_link_kerberos, bug #381289.
 	myconf+="
 		$(gyp_use cups use_cups)
 		$(gyp_use gnome use_gconf)
 		$(gyp_use gnome-keyring use_gnome_keyring)
 		$(gyp_use gnome-keyring linux_link_gnome_keyring)
 		$(gyp_use kerberos use_kerberos)
-		$(gyp_use kerberos linux_link_kerberos)
 		$(gyp_use pulseaudio use_pulseaudio)"
 
 	# Enable sandbox.

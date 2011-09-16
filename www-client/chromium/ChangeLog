@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.444 2011/09/15 21:33:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.445 2011/09/16 18:18:37 phajdan.jr Exp $
+
+*chromium-15.0.874.15 (16 Sep 2011)
+
+  16 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-15.0.874.5.ebuild, +chromium-15.0.874.15.ebuild,
+  chromium-9999-r1.ebuild:
+  Version bump for dev channel release. Fixed bug #381289 by Thomas Beinicke
+  (temporarily disabled linux_link_kerberos. Removed old.
 
   15 Sep 2011; Mike Gilbert <floppym@gentoo.org> chromium-14.0.835.163.ebuild,
   chromium-15.0.874.12.ebuild, chromium-9999-r1.ebuild:
