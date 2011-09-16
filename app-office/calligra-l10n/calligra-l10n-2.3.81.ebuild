@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/calligra-l10n-2.3.81.ebuild,v 1.1 2011/09/15 11:38:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/calligra-l10n-2.3.81.ebuild,v 1.2 2011/09/16 08:50:44 scarabeus Exp $
 
 EAPI=4
 
@@ -48,7 +48,7 @@ src_unpack() {
 	# add all linguas to cmake
 	if [[ -n ${A} ]]; then
 		for lng in ${MY_LANGS}; do
-			dir="${PN}-${lng}-${MY_PV}"
+			dir="${PN}-${lng}-${PV}"
 			if [[ -d "${dir}" ]] ; then
 				echo "add_subdirectory( ${dir} )" >> "${S}"/CMakeLists.txt
 			fi
