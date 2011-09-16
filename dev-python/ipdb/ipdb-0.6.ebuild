@@ -1,11 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipdb/ipdb-0.3.ebuild,v 1.1 2011/01/17 17:19:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipdb/ipdb-0.6.ebuild,v 1.1 2011/09/16 15:59:46 neurogeek Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-# This package theoretically supports Python 3, but dev-python/ipython does not support Python 3.
 RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils
