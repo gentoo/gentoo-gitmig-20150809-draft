@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.164 2011/09/12 18:56:14 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.165 2011/09/16 12:14:47 chainsaw Exp $
+
+  16 Sep 2011; Tony Vroon <chainsaw@gentoo.org> mediawiki-1.16.5.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in
+  security bug #36685 filed by Tim Sammut.
 
   12 Sep 2011; Thomas Kahle <tomka@gentoo.org> mediawiki-1.16.5.ebuild:
   x86 stable per bug 366685
