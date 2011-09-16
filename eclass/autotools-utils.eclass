@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.19 2011/09/16 15:38:40 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.20 2011/09/16 15:38:54 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -186,16 +186,17 @@ remove_libtool_files() {
 		# - they are covered by a .pc file already,
 		# - they don't provide any new information (no libs & no flags).
 		local removing
-		if [[ ${removing_all} ]]; then removing=1
-		elif [[ ! -f ${archivefile} ]]; then removing=1
-		elif has "$(basename "${f}")" "${pc_libs[@]}"; then removing=1
+		if [[ ${removing_all} ]]; then removing='forced'
+		elif [[ ! -f ${archivefile} ]]; then removing='no static archive'
+		elif has "$(basename "${f}")" "${pc_libs[@]}"; then
+			removing='covered by .pc'
 		elif [[ ! $(sed -n -e \
 			"s/^\(dependency_libs\|inherited_linker_flags\)='\(.*\)'$/\2/p" \
-			"${f}") ]]; then removing=1
+			"${f}") ]]; then removing='no libs & flags'
 		fi
 
 		if [[ ${removing} ]]; then
-			einfo "Removing unnecessary ${f#${D%/}}"
+			einfo "Removing unnecessary ${f#${D%/}} (${removing})"
 			rm -f "${f}" || die
 		fi
 	done
