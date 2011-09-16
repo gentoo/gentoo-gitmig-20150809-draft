@@ -1,6 +1,10 @@
 # ChangeLog for app-text/htmltidy
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.59 2010/12/01 14:54:15 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.60 2011/09/16 18:37:08 scarabeus Exp $
+
+  16 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -htmltidy-20090325.ebuild, htmltidy-20090325-r1.ebuild:
+  Update the ebuild to eapi4, add static-libs useflag, punt libtool archive.
 
   01 Dec 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   -files/03-html2db-null.patch, -files/04-htmltidy-docbook.patch,

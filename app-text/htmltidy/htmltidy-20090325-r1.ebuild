@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-20090325-r1.ebuild,v 1.1 2010/03/30 08:32:24 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-20090325-r1.ebuild,v 1.2 2011/09/16 18:37:08 scarabeus Exp $
 
-EAPI=2
-inherit eutils autotools
+EAPI=4
 
 MY_PN="tidy"
-MY_P=${MY_PN}-${PV}
-S="${WORKDIR}"/${MY_P}
+MY_P="${MY_PN}-${PV}"
+
+inherit eutils autotools
 
 DESCRIPTION="Tidy the layout and correct errors in HTML and XML documents"
 HOMEPAGE="http://tidy.sourceforge.net/"
@@ -17,10 +17,12 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="debug doc"
+IUSE="debug doc static-libs"
 
 DEPEND="doc? ( app-doc/doxygen )"
 RDEPEND=""
+
+S="${WORKDIR}"/${MY_P}
 
 src_prepare() {
 	# Required to setup the source dist for autotools
@@ -45,37 +47,31 @@ src_compile() {
 }
 
 src_configure() {
-	econf $(use_enable debug)
+	econf \
+		$(use_enable debug) \
+		$(use_enable static-libs static)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "error during make install"
+	default
 
-	cd "${S}"/htmldoc
-	# It seems the manual page installation in the Makefile's
-	# is commented out, so we need to install manually
-	# for the moment. Please check this on updates.
-	# mv man_page.txt tidy.1
-	# doman tidy.1
-	#
-	# Update:
+	find "${ED}" -name '*.la' -exec rm -f {} +
+
 	# Now the man page is provided as an xsl file, which
 	# we can't use until htmltidy is merged.
 	# I have generated the man page and quickref which is on
 	# the mirrors. (bug #132429)
-	doman "${WORKDIR}"/"${MY_P}"-doc/tidy.1 || die "doman failed"
+	doman "${WORKDIR}"/"${MY_P}"-doc/tidy.1
 
 	# Fix name before installing
 	mv "${WORKDIR}"/"${MY_P}"-doc/quickref-html \
 		"${WORKDIR}"/"${MY_P}"-doc/quickref.html
 
+	cd "${S}"/htmldoc
 	# Install basic html documentation
-	dohtml *.html *.css *.gif "${WORKDIR}"/"${MY_P}"-doc/quickref.html ||
-		die "dohtml failed"
+	dohtml *.html *.css *.gif "${WORKDIR}"/"${MY_P}"-doc/quickref.html
 
 	# If use 'doc' is set, then we also want to install the
 	# api documentation
-	if use doc; then
-		dohtml -r api || die "api dohtml failed"
-	fi
+	use doc && dohtml -r api
 }
