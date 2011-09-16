@@ -1,6 +1,11 @@
 # ChangeLog for www-client/rekonq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.28 2011/05/09 23:16:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.29 2011/09/16 09:09:15 scarabeus Exp $
+
+*rekonq-0.7.80 (16 Sep 2011)
+
+  16 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> +rekonq-0.7.80.ebuild:
+  Version bump to latest beta.
 
   09 May 2011; Markos Chandras <hwoarang@gentoo.org> rekonq-0.7.0.ebuild:
   Stable on amd64 wrt bug #354033
