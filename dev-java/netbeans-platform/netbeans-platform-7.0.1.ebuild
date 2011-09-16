@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-platform/netbeans-platform-7.0.1.ebuild,v 1.2 2011/08/07 17:07:12 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-platform/netbeans-platform-7.0.1.ebuild,v 1.3 2011/09/16 19:54:17 fordfrog Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -25,7 +25,7 @@ S="${WORKDIR}"
 CDEPEND="dev-java/javahelp:0
 	>=dev-java/jna-3.2.7:0
 	dev-java/swing-layout:1[source]"
-DEPEND=">=virtual/jdk-1.6
+DEPEND="virtual/jdk:1.6
 	app-arch/unzip
 	${CDEPEND}"
 RDEPEND=">=virtual/jdk-1.6
