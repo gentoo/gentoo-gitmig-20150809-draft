@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.511 2011/09/03 17:20:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.512 2011/09/16 07:02:56 olemarkus Exp $
+
+  16 Sep 2011; Ole Markus With <olemarkus@gentoo.org>
+  files/eblits/src_configure-v3.eblit, files/eblits/src_install-v3.eblit,
+  php-5.4.0_alpha3.ebuild:
+  Remove deps on phpconfutils and php-common-r1
 
   03 Sep 2011; Raúl Porcel <armin76@gentoo.org> php-5.3.8.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #372745

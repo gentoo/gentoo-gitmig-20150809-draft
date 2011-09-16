@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v3.eblit,v 1.2 2011/07/20 12:41:38 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v3.eblit,v 1.3 2011/09/16 07:02:57 olemarkus Exp $
 
 eblit-php-src_install() {
 	# see bug #324739 for what happens when we don't have that
@@ -25,9 +25,6 @@ eblit-php-src_install() {
 		|| die "emake install failed"
 
 	local extension_dir="$("${D}/${PHP_DESTDIR}/bin/php-config" --extension-dir)"
-
-	# Generate the USE file for PHP
-	phpconfutils_generate_usefile
 
 	# Create the directory where we'll put version-specific php scripts
 	keepdir /usr/share/php${PHP_MV}

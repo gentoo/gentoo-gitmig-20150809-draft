@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v3.eblit,v 1.4 2011/08/22 13:32:38 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_configure-v3.eblit,v 1.5 2011/09/16 07:02:57 olemarkus Exp $
 
 eblit-php-src_configure() {
     addpredict /usr/share/snmp/mibs/.index
@@ -214,7 +214,9 @@ eblit-php-src_configure() {
 	my_conf="${my_conf} --with-pcre-regex=/usr --with-pcre-dir=/usr"
 
 	# Catch CFLAGS problems
-	php_check_cflags
+    # Fixes bug #14067.
+    # Changed order to run it in reverse for bug #32022 and #12021.
+    replace-cpu-flags "k6*" "i586"
 
 	# Support user-passed configuration parameters
 	my_conf="${my_conf} ${EXTRA_ECONF:-}"
