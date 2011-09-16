@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-enterprise/netbeans-enterprise-7.0.1.ebuild,v 1.1 2011/08/05 10:13:29 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-enterprise/netbeans-enterprise-7.0.1.ebuild,v 1.2 2011/09/16 19:39:14 fordfrog Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -55,7 +55,7 @@ CDEPEND="~dev-java/netbeans-harness-${PV}
 	dev-java/commons-fileupload:0
 	dev-java/glassfish-deployment-api:1.2
 	dev-java/jakarta-jstl:0"
-DEPEND=">=virtual/jdk-1.6
+DEPEND="virtual/jdk:1.6
 	app-arch/unzip
 	${CDEPEND}
 	dev-java/javahelp:0
