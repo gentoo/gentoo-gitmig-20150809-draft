@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-1.2.7.ebuild,v 1.1 2011/09/15 12:13:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-1.2.7-r1.ebuild,v 1.1 2011/09/16 19:53:26 blueness Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -10,6 +10,7 @@ RESTRICT_PYTHON_ABIS="3.* *-jython"
 
 PHP_EXT_NAME="xapian"
 PHP_EXT_INI="yes"
+PHP_EXT_OPTIONAL_USE="php"
 
 inherit java-pkg-opt-2 mono php-ext-source-r2 python
 
@@ -26,11 +27,9 @@ COMMONDEPEND="=dev-libs/xapian-${PV}*
 	lua? ( >=dev-lang/lua-5.1 )
 	mono? ( >=dev-lang/mono-1.0.8 )
 	perl? ( dev-lang/perl )
-	php? ( >=dev-lang/php-5 )
 	ruby? ( dev-lang/ruby )
 	tcl? ( >=dev-lang/tcl-8.1 )"
 DEPEND="${COMMONDEPEND}
-	python? ( >=dev-lang/swig-1.3.29-r1 )
 	java? ( >=virtual/jdk-1.3 )"
 RDEPEND="${COMMONDEPEND}
 	java? ( >=virtual/jre-1.3 )"
@@ -67,6 +66,9 @@ src_configure() {
 		$(use_with python) \
 		$(use_with ruby) \
 		$(use_with tcl)
+
+	# Python bindings are built/tested/installed manually.
+	sed -e "/SUBDIRS =/s/ python//" -i Makefile || die "sed Makefile"
 }
 
 src_compile() {
