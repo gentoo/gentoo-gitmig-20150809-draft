@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/apache-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.99 2011/09/15 08:55:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.100 2011/09/16 11:50:27 nativemad Exp $
+
+  16 Sep 2011; Andreas Schuerch <nativemad@gentoo.org>
+  apache-tools-2.2.21.ebuild:
+  x86 stable, thanks JD, bug 382871
 
 *apache-tools-2.2.21 (15 Sep 2011)
 
