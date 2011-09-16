@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/systemu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/systemu/ChangeLog,v 1.4 2011/08/20 09:59:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/systemu/ChangeLog,v 1.5 2011/09/16 19:18:37 graaff Exp $
+
+*systemu-2.4.0 (16 Sep 2011)
+
+  16 Sep 2011; Hans de Graaff <graaff@gentoo.org> +systemu-2.4.0.ebuild:
+  Version bump.
 
 *systemu-2.3.0 (20 Aug 2011)
 
