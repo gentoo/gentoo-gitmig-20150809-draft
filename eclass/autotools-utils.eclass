@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.14 2011/09/16 15:33:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.15 2011/09/16 15:37:41 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -149,21 +149,20 @@ remove_libtool_files() {
 	find "${D}" -type f -name '*.la' -print0 | while read -r -d '' f; do
 		local shouldnotlink=$(sed -ne '/^shouldnotlink=yes$/p' "${f}")
 		local archivefile=${f/%.la/.a}
+		[[ "${f}" != "${archivefile}" ]] || die 'regex sanity check failed'
 
 		# Keep .la files when:
 		# - they have shouldnotlink=yes - likely plugins,
 		# - respective static archive exists.
 		if [[ "$1" == 'all' || ( -z ${shouldnotlink} && ! -f ${archivefile} ) ]]; then
 			einfo "Removing unnecessary ${f#${D%/}}"
-			rm -f "${f}"
+			rm -f "${f}" || die
 		fi
 
 		# Remove static libs we're not supposed to link against
-		if [[ -n ${shouldnotlink} ]]; then
-			local remove=${f/%.la/.a}
-			[[ "${f}" != "${remove}" ]] || die 'regex sanity check failed'
-			einfo "Removing unnecessary ${remove#${D%/}}"
-			rm -f "${remove}"
+		if [[ ${shouldnotlink} ]]; then
+			einfo "Removing unnecessary ${archivefile#${D%/}}"
+			rm -f "${archivefile}" || die
 		fi
 	done
 }
