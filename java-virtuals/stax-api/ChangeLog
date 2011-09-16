@@ -1,6 +1,12 @@
 # ChangeLog for java-virtuals/stax-api
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/stax-api/ChangeLog,v 1.14 2011/09/11 06:33:43 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/stax-api/ChangeLog,v 1.15 2011/09/16 03:58:00 serkan Exp $
+
+*stax-api-1-r3 (16 Sep 2011)
+
+  16 Sep 2011; Serkan Kaba <serkan@gentoo.org> -stax-api-1-r2.ebuild,
+  +stax-api-1-r3.ebuild:
+  Revbump to fix typo
 
 *stax-api-1-r2 (11 Sep 2011)
 
