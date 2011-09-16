@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/gtkpod
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.90 2011/09/15 16:08:02 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.91 2011/09/16 13:34:21 chainsaw Exp $
+
+  16 Sep 2011; Tony Vroon <chainsaw@gentoo.org> gtkpod-2.0.2.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani & Agostino "ago" Sarubbo in bug #376405.
 
   16 Sep 2011; Andreas Schuerch <nativemad@gentoo.org> gtkpod-2.0.2.ebuild:
   x86 stable, thanks JD. Bug 376405
