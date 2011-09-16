@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-mobility/netbeans-mobility-7.0.1.ebuild,v 1.1 2011/08/05 10:30:00 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-mobility/netbeans-mobility-7.0.1.ebuild,v 1.2 2011/09/16 19:49:44 fordfrog Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -35,7 +35,7 @@ CDEPEND="~dev-java/netbeans-apisupport-${PV}
 	dev-java/commons-codec:0
 	dev-java/commons-httpclient:3
 	dev-java/jdom:1.0"
-DEPEND=">=virtual/jdk-1.6
+DEPEND="virtual/jdk:1.6
 	app-arch/unzip
 	${CDEPEND}
 	dev-java/javahelp:0"
