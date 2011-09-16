@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.8 2011/09/08 16:50:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.9 2011/09/16 08:51:58 scarabeus Exp $
 
 EAPI=3
 
@@ -214,10 +214,8 @@ PATCHES=(
 	"${FILESDIR}/${PN}-3.3.1-neon_remove_SSPI_support.diff"
 	"${FILESDIR}/sdext-presenter.diff"
 	"${FILESDIR}/${PN}-svx.patch"
-	"${FILESDIR}/${PN}-installed-files-permissions.patch"
 	"${FILESDIR}/${PN}-binfilter-as-needed.patch"
 	"${FILESDIR}/${PN}-kill-cppunit.patch"
-	"${FILESDIR}/${PN}-java.patch"
 )
 
 # Uncoment me when updating to eapi4
