@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/bzr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.35 2011/09/01 08:31:25 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.36 2011/09/16 07:57:41 pva Exp $
+
+*bzr-2.4.1 (15 Sep 2011)
+
+  15 Sep 2011; Peter Volkov <pva@gentoo.org> +bzr-2.4.1.ebuild:
+  Version bump.
 
   01 Sep 2011; Christian Faulhammer <fauli@gentoo.org> bzr-2.4.0.ebuild:
   Change Python dependency as pointed out by Mike Gilbert in bug 381381
