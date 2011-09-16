@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.6.ebuild,v 1.2 2011/08/24 21:21:57 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.6.ebuild,v 1.3 2011/09/16 15:57:51 reavertm Exp $
 
 EAPI="3"
 
@@ -25,13 +25,13 @@ RESTRICT="test"
 # system-config-printer split since 1.1.3
 COMMON_DEPEND="
 	dev-libs/glib:2
-	dev-libs/libusb
 	dev-libs/libxml2[python]
 	dev-python/dbus-python
 	>=dev-python/pycups-1.9.53
 	>=dev-python/pygobject-2.21.5
 	>=net-print/cups-1.4.6[dbus]
 	sys-fs/udev
+	virtual/libusb:0
 "
 DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
