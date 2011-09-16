@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-websvccommon/netbeans-websvccommon-7.0.1.ebuild,v 1.1 2011/08/05 09:47:06 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-websvccommon/netbeans-websvccommon-7.0.1.ebuild,v 1.2 2011/09/16 19:56:42 fordfrog Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -19,7 +19,7 @@ S="${WORKDIR}"
 
 CDEPEND="~dev-java/netbeans-platform-${PV}
 	~dev-java/netbeans-ide-${PV}"
-DEPEND=">=virtual/jdk-1.6
+DEPEND="virtual/jdk:1.6
 	app-arch/unzip
 	${CDEPEND}
 	dev-java/javahelp:0"
