@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.512 2011/09/16 07:02:56 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.513 2011/09/16 07:04:41 olemarkus Exp $
+
+*php-5.4.0_beta1 (16 Sep 2011)
+
+  16 Sep 2011; Ole Markus With <olemarkus@gentoo.org> +php-5.4.0_beta1.ebuild:
+  Bump 5.4 to beta1
 
   16 Sep 2011; Ole Markus With <olemarkus@gentoo.org>
   files/eblits/src_configure-v3.eblit, files/eblits/src_install-v3.eblit,
