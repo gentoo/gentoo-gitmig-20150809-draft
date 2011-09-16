@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.161 2011/09/15 10:41:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.162 2011/09/16 11:53:40 nativemad Exp $
+
+  16 Sep 2011; Andreas Schuerch <nativemad@gentoo.org> apache-2.2.21.ebuild:
+  x86 stable, thanks JD, bug 382971
 
 *apache-2.2.21 (15 Sep 2011)
 
