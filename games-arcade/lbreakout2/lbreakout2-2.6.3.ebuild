@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/lbreakout2-2.6.3.ebuild,v 1.4 2011/08/15 08:07:44 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/lbreakout2-2.6.3.ebuild,v 1.5 2011/09/16 22:34:43 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools flag-o-matic eutils games
 
-levels_V=20100920
+levels_V=20110610
 themes_V=20070514
 
 DESCRIPTION="Breakout clone written with the SDL library"
