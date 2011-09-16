@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-ide/netbeans-ide-7.0.1.ebuild,v 1.2 2011/08/22 12:56:49 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-ide/netbeans-ide-7.0.1.ebuild,v 1.3 2011/09/16 19:44:37 fordfrog Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -94,7 +94,7 @@ CDEPEND="~dev-java/netbeans-harness-${PV}
 #	dev-java/ini4j:0 our version is too old
 #	java-virtuals/jaf:0 could use this instead of sun-jaf but it returns empty classpath
 #	dev-java/trilead-ssh2:0 in overlay
-DEPEND=">=virtual/jdk-1.6
+DEPEND="virtual/jdk:1.6
 	app-arch/unzip
 	${CDEPEND}
 	dev-java/javacc:0
