@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.546 2011/09/16 13:34:12 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.547 2011/09/16 20:47:06 djc Exp $
+
+*python-3.2.2 (16 Sep 2011)
+
+  16 Sep 2011; Dirkjan Ochtman <djc@gentoo.org> +python-3.2.2.ebuild:
+  Version bump to 3.2.2 (fixes bug 375051).
 
 *python-3.1.4-r3 (16 Sep 2011)
 *python-2.7.2-r3 (16 Sep 2011)
