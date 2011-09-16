@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-0.9.0.2-r1.ebuild,v 1.1 2011/09/11 11:39:20 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-0.9.0.2-r1.ebuild,v 1.2 2011/09/16 08:25:02 pva Exp $
 
 EAPI="4"
 
@@ -82,6 +82,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	webapp_pkg_postinst
 	ewarn "If you intend to run cgit using web server's user"
 	ewarn "you should change ${CGIT_CACHEDIR} permissions."
 }

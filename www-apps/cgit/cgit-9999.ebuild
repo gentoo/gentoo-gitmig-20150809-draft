@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-0.9.ebuild,v 1.1 2011/04/29 19:02:19 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/cgit-9999.ebuild,v 1.4 2011/09/16 08:25:02 pva Exp $
 
-EAPI="2"
+EAPI="4"
 
 WEBAPP_MANUAL_SLOT="yes"
 
-inherit webapp eutils multilib
+inherit webapp eutils multilib git-2
 
 [[ -z "${CGIT_CACHEDIR}" ]] && CGIT_CACHEDIR="/var/cache/${PN}/"
 
@@ -14,12 +14,12 @@ GIT_V="1.7.4"
 
 DESCRIPTION="a fast web-interface for git repositories"
 HOMEPAGE="http://hjemli.net/git/cgit/about/"
-SRC_URI="mirror://kernel/software/scm/git/git-${GIT_V}.tar.bz2
-	http://hjemli.net/git/cgit/snapshot/${P}.tar.bz2"
+SRC_URI="mirror://kernel/software/scm/git/git-${GIT_V}.tar.bz2"
+EGIT_REPO_URI="git://hjemli.net/pub/git/${PN}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE="doc highlight"
 
 RDEPEND="
@@ -51,21 +51,19 @@ src_prepare() {
 }
 
 src_compile() {
-	emake || die
-	if use doc ; then
-		emake doc-man || die
-	fi
+	emake
+	use doc && emake doc-man
 }
 
 src_install() {
 	webapp_src_preinst
 
 	emake \
-		prefix=/usr \
-		libdir=/usr/$(get_libdir) \
+		prefix="${EPREFIX}"/usr \
+		libdir="${EPREFIX}"/usr/$(get_libdir) \
 		CGIT_SCRIPT_PATH="${MY_CGIBINDIR}" \
 		CGIT_DATA_PATH="${MY_HTDOCSDIR}" \
-		DESTDIR="${D}" install || die
+		DESTDIR="${D}" install
 
 	insinto /etc
 	doins "${FILESDIR}"/cgitrc
@@ -82,6 +80,7 @@ src_install() {
 }
 
 pkg_postinst() {
+	webapp_pkg_postinst
 	ewarn "If you intend to run cgit using web server's user"
-	ewarn "you should change /var/cache/cgit/ permissions."
+	ewarn "you should change ${CGIT_CACHEDIR} permissions."
 }

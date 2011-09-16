@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/cgit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/ChangeLog,v 1.9 2011/09/11 11:39:20 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/cgit/ChangeLog,v 1.10 2011/09/16 08:25:02 pva Exp $
+
+  16 Sep 2011; Peter Volkov <pva@gentoo.org> -cgit-0.9.ebuild,
+  cgit-0.9.0.2-r1.ebuild, +cgit-9999.ebuild:
+  Revert mistakenly deleted 9999 ebuild, fix webconfig postinstall (bug 382979
+  by Alon Bar-Lev), drop old. Thank Nikoli for this job.
 
 *cgit-0.9.0.2-r1 (11 Sep 2011)
 
