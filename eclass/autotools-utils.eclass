@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.18 2011/09/16 15:38:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.19 2011/09/16 15:38:40 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -156,6 +156,15 @@ remove_libtool_files() {
 		esac
 	fi
 
+	local pc_libs=()
+	if [[ ! ${removing_all} ]]; then
+		local arg
+		for arg in $(find "${D}" -name '*.pc' -exec \
+					sed -n -e 's;^Libs:;;p' {} +); do
+			[[ ${arg} == -l* ]] && pc_libs+=(lib${arg#-l}.la)
+		done
+	fi
+
 	local f
 	find "${D}" -type f -name '*.la' -print0 | while read -r -d '' f; do
 		local shouldnotlink=$(sed -ne '/^shouldnotlink=yes$/p' "${f}")
@@ -174,10 +183,12 @@ remove_libtool_files() {
 		# Remove .la files when:
 		# - user explicitly wants us to remove all .la files,
 		# - respective static archive doesn't exist,
+		# - they are covered by a .pc file already,
 		# - they don't provide any new information (no libs & no flags).
 		local removing
 		if [[ ${removing_all} ]]; then removing=1
 		elif [[ ! -f ${archivefile} ]]; then removing=1
+		elif has "$(basename "${f}")" "${pc_libs[@]}"; then removing=1
 		elif [[ ! $(sed -n -e \
 			"s/^\(dependency_libs\|inherited_linker_flags\)='\(.*\)'$/\2/p" \
 			"${f}") ]]; then removing=1
