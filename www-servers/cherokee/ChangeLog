@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/cherokee
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.85 2011/08/26 11:58:08 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.86 2011/09/16 11:57:03 matsuu Exp $
+
+*cherokee-1.2.99 (16 Sep 2011)
+
+  16 Sep 2011; MATSUU Takuto <matsuu@gentoo.org> +files/cherokee-initd-1.2.99,
+  +cherokee-1.2.99.ebuild, +files/cherokee-1.2.99-gentoo.patch,
+  +files/cherokee.logrotate:
+  Version bumped. Added cherokee.logrotate. Fixed graceful and reload in
+  init.d, bug #348929. Clean up.
 
 *cherokee-1.2.98 (26 Aug 2011)
 

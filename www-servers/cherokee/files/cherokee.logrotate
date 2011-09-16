@@ -1,0 +1,11 @@
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/files/cherokee.logrotate,v 1.1 2011/09/16 11:57:03 matsuu Exp $
+# lighttpd logrotate script for Gentoo
+
+/var/log/cherokee/cherokee.* {
+  missingok
+  notifempty
+  sharedscripts
+  postrotate
+  [ -f /var/run/cherokee/cherokee.pid ] && /bin/kill -USR2 `cat /var/run/cherokee.pid`
+  endscript
+}
