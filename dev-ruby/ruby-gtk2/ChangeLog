@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-gtk2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk2/ChangeLog,v 1.79 2011/05/29 14:29:22 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk2/ChangeLog,v 1.80 2011/09/17 09:36:15 naota Exp $
+
+*ruby-gtk2-0.90.9 (17 Sep 2011)
+
+  17 Sep 2011; Naohiro Aota <naota@gentoo.org> +ruby-gtk2-0.90.9.ebuild:
+  Version bump
 
 *ruby-gtk2-0.90.8 (29 May 2011)
 
