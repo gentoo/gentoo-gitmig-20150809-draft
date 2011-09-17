@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.3.2-r1.ebuild,v 1.5 2011/09/16 12:32:14 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hunspell/hunspell-1.3.2-r3.ebuild,v 1.1 2011/09/17 04:08:53 scarabeus Exp $
 
 EAPI=4
 inherit eutils multilib autotools flag-o-matic versionator
@@ -14,7 +14,7 @@ HOMEPAGE="http://hunspell.sourceforge.net/"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2 LGPL-2.1"
 IUSE="ncurses nls readline static-libs"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 
 DEPEND="
 	sys-devel/gettext
@@ -57,15 +57,13 @@ src_prepare() {
 	# to be placed in /usr/bin - this patch prefixes them with 'hunspell-'.
 	# It modifies a Makefile.am file, hence eautoreconf.
 	epatch "${FILESDIR}"/${PN}-1.3-renameexes.patch
+	epatch "${FILESDIR}"/${P}-static-lib.patch
 	eautoreconf
 }
 
 src_configure() {
 	# missing somehow, and I am too lazy to fix it properly
 	[[ ${CHOST} == *-darwin* ]] && append-libs -liconv
-
-	# FIXME: installs static library and buildsystem needs to be patched
-	# to use proper libtool approach converting it onto shared one.
 
 	# I wanted to put the include files in /usr/include/hunspell.
 	# You can do that, libreoffice can find them anywhere, just

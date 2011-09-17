@@ -1,45 +1,9 @@
 diff -urN hunspell-1.3.2.old/src/parsers/Makefile.am hunspell-1.3.2/src/parsers/Makefile.am
 --- hunspell-1.3.2.old/src/parsers/Makefile.am	2011-09-15 11:50:40.251441126 +0200
-+++ hunspell-1.3.2/src/parsers/Makefile.am	2011-09-15 12:14:25.891424029 +0200
-@@ -1,10 +1,12 @@
++++ hunspell-1.3.2/src/parsers/Makefile.am	2011-09-17 06:06:50.469615528 +0200
+@@ -1,4 +1,4 @@
 -lib_LIBRARIES=libparsers.a
--libparsers_a_SOURCES=firstparser.cxx htmlparser.cxx \
--		      latexparser.cxx  manparser.cxx \
--		      textparser.cxx 
-+lib_LTLIBRARIES=libparsers.la
-+libparsers_la_SOURCES=firstparser.cxx firstparser.hxx \
-+	htmlparser.cxx htmlparser.hxx \
-+	latexparser.cxx latexparser.hxx \
-+	manparser.cxx manparser.hxx \
-+	textparser.cxx textparser.hxx
-+libparsers_la_LIBADD=../hunspell/libhunspell-1.3.la
-+libparsers_la_LDFLAGS=-no-undefined
- 
--noinst_PROGRAMS=testparser
--testparser_SOURCES=firstparser.cxx firstparser.hxx htmlparser.cxx htmlparser.hxx latexparser.cxx latexparser.hxx manparser.cxx manparser.hxx testparser.cxx textparser.cxx textparser.hxx
--
--# need mystrdup()
--LDADD = ../hunspell/libhunspell-1.3.la
-+check_PROGRAMS=testparser
-+testparser_SOURCES=testparser.cxx
-+testparser_LDADD=libparsers.la ../hunspell/libhunspell-1.3.la
-diff -urN hunspell-1.3.2.old/src/tools/Makefile.am hunspell-1.3.2/src/tools/Makefile.am
---- hunspell-1.3.2.old/src/tools/Makefile.am	2011-09-15 11:50:40.251441126 +0200
-+++ hunspell-1.3.2/src/tools/Makefile.am	2011-09-15 12:08:46.081428111 +0200
-@@ -13,14 +13,14 @@
- example_LDADD = ../hunspell/libhunspell-1.3.la
- 
- hunspell_SOURCES=hunspell.cxx
--hunspell_LDADD = @LIBINTL@ @LIBICONV@ ../parsers/libparsers.a \
-+hunspell_LDADD = @LIBINTL@ @LIBICONV@ ../parsers/libparsers.la \
- 	../hunspell/libhunspell-1.3.la @CURSESLIB@ @READLINELIB@
- 
- hunspell_analyze_SOURCES=analyze.cxx
- hunspell_analyze_LDADD = ../hunspell/libhunspell-1.3.la
- 
- hunspell_chmorph_SOURCES=chmorph.cxx
--hunspell_chmorph_LDADD = ../parsers/libparsers.a ../hunspell/libhunspell-1.3.la
-+hunspell_chmorph_LDADD = ../parsers/libparsers.la ../hunspell/libhunspell-1.3.la
- 
- noinst_PROGRAMS=example
- 
++noinst_LIBRARIES=libparsers.a
+ libparsers_a_SOURCES=firstparser.cxx htmlparser.cxx \
+ 		      latexparser.cxx  manparser.cxx \
+ 		      textparser.cxx 
