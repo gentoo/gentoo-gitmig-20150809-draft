@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.13 2011/09/17 03:46:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.14 2011/09/17 03:58:44 scarabeus Exp $
 
 EAPI=3
 
@@ -246,18 +246,6 @@ pkg_setup() {
 		ewarn
 		ewarn "Before reporting a bug, please make sure you rebuild and try with"
 		ewarn "basic CFLAGS, otherwise the bug will not be accepted."
-		ewarn
-	fi
-
-	if ! use java; then
-		ewarn "You are building with java-support disabled, this results in some"
-		ewarn "of the LibreOffice functionality being disabled."
-		ewarn "If something you need does not work for you, rebuild with"
-		ewarn "java in your USE-flags."
-		ewarn
-		ewarn "Some java libraries will be provided internally by libreoffice"
-		ewarn "during the build. You should really reconsider enabling java"
-		ewarn "use flag."
 		ewarn
 	fi
 

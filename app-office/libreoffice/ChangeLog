@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.137 2011/09/17 03:46:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.138 2011/09/17 03:58:44 scarabeus Exp $
+
+  17 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-9999-r1.ebuild:
+  Stop warning about -java as it is used just for few wizards and stuff.
 
   17 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   libreoffice-9999-r1.ebuild:
