@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1401.ebuild,v 1.1 2011/08/27 08:37:39 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1404.ebuild,v 1.1 2011/09/17 18:37:32 tommy Exp $
 
 EAPI="2"
-DATE=20110824
+DATE=20110917
 JAVA_PKG_IUSE="doc source"
 
 inherit eutils java-pkg-2 java-ant-2 multilib
@@ -70,7 +70,6 @@ src_prepare() {
 	cp "${FILESDIR}"/freenet-0.7.5_p1389-wrapper.conf freenet-wrapper.conf || die
 	cp "${FILESDIR}"/run.sh-20090501 run.sh || die
 	epatch "${FILESDIR}"/0.7.5_p1302-ext.patch \
-		"${FILESDIR}"/strip-openjdk-check.patch \
 		"${FILESDIR}"/freenet-0.7.5_p1384-libraryloader-just-try-loading.patch \
 		"${FILESDIR}"/freenet-0.7.5_p1384-nativebiginteger-no-nativedoublevalue.patch
 
