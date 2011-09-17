@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-atk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-atk/ChangeLog,v 1.50 2011/05/29 14:26:05 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-atk/ChangeLog,v 1.51 2011/09/17 09:17:28 naota Exp $
+
+*ruby-atk-0.90.9 (17 Sep 2011)
+
+  17 Sep 2011; Naohiro Aota <naota@gentoo.org> +ruby-atk-0.90.9.ebuild:
+  Version bump
 
 *ruby-atk-0.90.8 (29 May 2011)
 
