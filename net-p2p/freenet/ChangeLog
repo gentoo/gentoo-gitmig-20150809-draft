@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/freenet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.141 2011/09/17 18:37:32 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.142 2011/09/17 18:42:44 tommy Exp $
+
+  17 Sep 2011; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> freenet-9999.ebuild,
+  -files/strip-openjdk-check.patch:
+  Drop obsolete stripping of openjdk checks
 
 *freenet-0.7.5_p1404 (17 Sep 2011)
 

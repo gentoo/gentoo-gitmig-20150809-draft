@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-9999.ebuild,v 1.22 2011/09/17 18:37:32 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-9999.ebuild,v 1.23 2011/09/17 18:42:44 tommy Exp $
 
 EAPI="2"
 DATE=20110917
@@ -71,7 +71,6 @@ src_prepare() {
 	cp "${FILESDIR}"/freenet-0.7.5_p1389-wrapper1.conf freenet-wrapper.conf || die
 	cp "${FILESDIR}"/run.sh-20090501 run.sh || die
 	epatch "${FILESDIR}"/0.7.5_p1302-ext.patch \
-		"${FILESDIR}"/strip-openjdk-check.patch \
 		"${FILESDIR}"/freenet-0.7.5_p1384-libraryloader-just-try-loading.patch \
 		"${FILESDIR}"/freenet-0.7.5_p1384-nativebiginteger-no-nativedoublevalue.patch
 	sed -i -e "s:=/usr/lib:=/usr/$(get_libdir):g" \
