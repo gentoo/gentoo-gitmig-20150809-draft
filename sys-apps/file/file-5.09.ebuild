@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.09.ebuild,v 1.1 2011/09/16 20:52:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-5.09.ebuild,v 1.2 2011/09/17 03:06:52 vapier Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? *"
@@ -26,8 +26,6 @@ PYTHON_MODNAME="magic.py"
 
 src_prepare() {
 	elibtoolize
-
-	epatch "${FILESDIR}"/${P}-cdf-arraycount.patch
 
 	# dont let python README kill main README #60043
 	mv python/README{,.python}
