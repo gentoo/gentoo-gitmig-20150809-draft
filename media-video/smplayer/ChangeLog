@@ -1,6 +1,11 @@
 # ChangeLog for media-video/smplayer
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.93 2010/10/25 03:08:39 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.94 2011/09/17 00:10:13 beandog Exp $
+
+*smplayer-0.6.9-r1 (16 Sep 2011)
+
+  16 Sep 2011; Steve Dibb <beandog@gentoo.org> +smplayer-0.6.9-r1.ebuild:
+  Support mplayer or mplayer2, bug 361115
 
   25 Oct 2010; Jeroen Roovers <jer@gentoo.org> smplayer-0.6.9.ebuild:
   Stable for HPPA (bug #311491).
