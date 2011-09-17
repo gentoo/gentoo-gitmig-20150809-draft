@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.260 2011/08/25 11:57:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.261 2011/09/17 18:17:25 armin76 Exp $
+
+  17 Sep 2011; Raúl Porcel <armin76@gentoo.org> genkernel-3.4.16.ebuild:
+  ia64/s390/sparc stable wrt #369409
 
   25 Aug 2011; Jeroen Roovers <jer@gentoo.org> genkernel-3.4.16.ebuild:
   Stable for HPPA (bug #369409).
