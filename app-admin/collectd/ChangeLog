@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/collectd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.27 2011/08/26 20:36:03 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.28 2011/09/17 22:48:14 dilfridge Exp $
+
+*collectd-5.0.0-r2 (17 Sep 2011)
+
+  17 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +collectd-5.0.0-r2.ebuild, +files/collectd-5.0.0-varnish.patch:
+  Add support for varnish plugin and fix bug 380297
 
   26 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   collectd-5.0.0-r1.ebuild:
