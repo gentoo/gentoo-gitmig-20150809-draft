@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/veracity
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/veracity/ChangeLog,v 1.1 2011/09/12 05:08:05 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/veracity/ChangeLog,v 1.2 2011/09/17 03:29:19 binki Exp $
+
+  17 Sep 2011; Nathan Phillip Brink <binki@gentoo.org>
+  veracity-1.0.0.10517.ebuild:
+  Add ~x86 keyword.
 
 *veracity-1.0.0.10517 (12 Sep 2011)
 
