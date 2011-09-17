@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13051 2011/09/16 17:11:26 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13052 2011/09/17 04:33:22 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -379,13 +379,6 @@ net-libs/libfwbuilder
 # mask it for now, we'll see about removing it later.
 dev-tex/pdftex
 
-# Kacper Kowalik <xarthisius@gentoo.org> (19 Aug 2011)
-# Ancient, obsolete, last release 2006
-# and practically unmaintained
-# Bugs: 198621
-# Pending removal in 30 days
-sys-block/iscsi-initiator-core-tools
-
 # Jeroen Roovers <jer@gentoo.org> (17 Aug 2011)
 # Incompatible API changes with no SONAME bump (bug #379343).
 >=net-libs/libecap-0.2.0
@@ -404,13 +397,6 @@ sys-block/iscsi-initiator-core-tools
 # Masking for testing
 =net-fs/samba-3.6.0
 
-# Kacper Kowalik <xarthisius@gentoo.org> (08 Aug 2011)
-# Ancient, doesn't work with modern kernels, never stable
-# and practically unmaintained
-# Bugs: 165559, 165749, 171967
-# Pending removal in 30 days
-sys-fs/unionfs
-
 # Samuli Suominen <ssuominen@gentoo.org> (06 Aug 2011)
 # Replaced by sys-fs/udev and "helpers" like udisks and upower
 #
@@ -424,16 +410,6 @@ sys-fs/unionfs
 sys-apps/hal
 app-misc/hal-info
 
-# Peter Volkov <pva@gentoo.org> (06 Aug 2011)
-# No maintainer. Runtimve problems. Dead upstream.
-# Removal in 30 days. Bug #377979
-gnome-extra/gget
-
-# Hans de Graaff <graaff@gentoo.org> (03 Aug 2011)
-# No longer needed now that we have a single slot again for
-# capistrano. Masked for removal in 30 days.
-dev-ruby/capistrano-launcher
-
 # Arun Raghavan <ford_prefect@gentoo.org> (03 Aug 2011)
 # Masking prereleases
 =media-sound/pulseaudio-0.99*
@@ -443,10 +419,6 @@ dev-ruby/capistrano-launcher
 =x11-drivers/nvidia-drivers-285.03
 =x11-drivers/nvidia-drivers-280.13
 =x11-drivers/nvidia-drivers-275.28
-
-# Steev Klimaszewski <steev@gentoo.org> (31 Jul 2011)
-# This package is old and obsolete.  Mask for removal.
-net-misc/dhcdbd
 
 # Jesus Rivero <neurogeek@gentoo.org> (29 Jul 2011)
 # This package had wrong versioning. Masked to enforce upgrade on the
@@ -606,12 +578,6 @@ net-irc/atheme-services
 # Beta Release
 >=dev-db/pgadmin3-1.14.0_beta1
 
-# Christian Ruppert <idl0r@gentoo.org> (10 Jul 2011)
-# Masked for removal in 30 days.
-# Upstream seems dead, more recent versions depend on HAL. Please use
-# app-laptop/batti instead.
-app-laptop/batterymon
-
 # Diego Elio Pettenò <flameeyes@gentoo.org> (08 Jul 2011)
 # Seems to work unreliably between reboots, waiting to hear from
 # upstream.
@@ -665,21 +631,6 @@ sci-chemistry/webmo
 # settle the migration code
 >=app-misc/gramps-3.3.0
 
-# Sergei Trofimovich <slyfox@gentoo.org> (11 Jun 2011)
-# Masked for removal in 30 days. 'Abandoned' by upstream.
-# Fails to build on modern toolchain:
-#    #284216, #367191, #267974
-#
-# Upstream now provides splitted packages for various gtk
-# subsystems:
-#     dev-haskell/pango
-#     dev-haskell/cairo
-#     dev-haskell/glib
-#     dev-haskell/cairo
-#     dev-haskell/glade
-#     dev-haskell/gtk
-dev-haskell/gtk2hs
-
 # Diego E. Pettenò <flameeyes@gentoo.org> (8 Jun 2011)
 # Broken upstream
 =net-libs/libtirpc-0.2.2
@@ -691,13 +642,6 @@ dev-haskell/gtk2hs
 # Tim Harder <radhermit@gentoo.org> (3 Jun 2011)
 # Mask release candidates
 =app-office/scribus-1.4.0_rc*
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (3 Jun 2011)
-# Requires KDE 4.4, which is not in the portage tree anymore.
-# Please unmerge before upgrading KDE, and emerge afterwards
-# net-wireless/bluedevil for bluetooth support in KDE 4.6.
-# Masked for removal in 15 days
-net-wireless/kbluetooth
 
 # Markos Chandras <hwoarang@gentoo.org> (28 May 2011)
 # emesene-2 is on early stage of development and very 
@@ -716,10 +660,6 @@ dev-lang/open64
 # Opera Next is forever unstable and unsupported.
 # <http://my.opera.com/desktopteam/blog>
 www-client/opera-next
-
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (16 May 2011)
-# Masked until reverse dependencies of dev-python/pyxml are updated.
-=dev-lang/python-2.7.1-r2
 
 # Hans de Graaff <graaff@gentoo.org> (15 May 2011)
 # Mask new versions until thread-related crashes have been fixed.
@@ -743,10 +683,6 @@ www-client/opera-next
 # development branch of argus/-clients
 =net-analyzer/argus-3.0.5*
 =net-analyzer/argus-clients-3.0.5*
-
-# Luca Barbato <lu_zero@gentoo.org> (19 Apr 2011)
-# Masked for testing, breaks reverse dependencies 
-=media-video/libav-0.7
 
 # Daniel Gryniewicz <dang@gentoo.org> (13 Apr 2011)
 # Masked for removal in 30 days. Functionality is merged into and maintained in
