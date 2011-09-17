@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exact-image/exact-image-0.8.1.ebuild,v 1.3 2010/11/08 22:36:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exact-image/exact-image-0.8.1.ebuild,v 1.4 2011/09/17 16:06:43 ssuominen Exp $
 
 EAPI=2
 
@@ -49,7 +49,11 @@ pkg_setup() {
 
 src_prepare() {
 	python_convert_shebangs -r 2 .
-	epatch "${FILESDIR}"/${PN}-0.7.5-libpng14.patch
+
+	epatch \
+		"${FILESDIR}"/${PN}-0.7.5-libpng14.patch \
+		"${FILESDIR}"/${P}-libpng15.patch
+
 	# fix python hardcoded path wrt bug #327171
 	sed -i -e "s:python2.5:python$(python_get_version):" \
 		-e "s:\$(libdir):usr/$(get_libdir):" \
