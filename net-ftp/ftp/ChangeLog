@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/ftp
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.36 2009/09/26 09:13:32 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.37 2011/09/17 07:27:19 vapier Exp $
+
+*ftp-0.17.23.0.2.1 (17 Sep 2011)
+
+  17 Sep 2011; Mike Frysinger <vapier@gentoo.org> +ftp-0.17.23.0.2.1.ebuild:
+  Migrate to Debian patchset for more fixes #117506#6 by Jonathan.
 
   26 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org> -ftp-0.17-r6.ebuild,
   ftp-0.17-r7.ebuild, -files/netkit-ftp-0.17-CPPFLAGS.patch,
