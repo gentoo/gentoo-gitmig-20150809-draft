@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-vte
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-vte/ChangeLog,v 1.18 2011/05/29 15:17:06 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-vte/ChangeLog,v 1.19 2011/09/17 09:50:25 naota Exp $
+
+*ruby-vte-0.90.9 (17 Sep 2011)
+
+  17 Sep 2011; Naohiro Aota <naota@gentoo.org> +ruby-vte-0.90.9.ebuild:
+  Version bump
 
 *ruby-vte-0.90.8 (29 May 2011)
 
