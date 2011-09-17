@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.166 2011/09/10 11:42:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.167 2011/09/17 10:50:47 armin76 Exp $
+
+  17 Sep 2011; Raúl Porcel <armin76@gentoo.org>
+  wpa_supplicant-0.7.3-r2.ebuild:
+  arm stable
 
   10 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   wpa_supplicant-0.7.3-r5.ebuild:
