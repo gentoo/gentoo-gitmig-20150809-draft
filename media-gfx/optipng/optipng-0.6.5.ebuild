@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.6.5.ebuild,v 1.1 2011/08/02 15:10:47 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.6.5.ebuild,v 1.2 2011/09/17 18:43:28 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE=""
 
-DEPEND="<media-libs/libpng-1.5"
+RDEPEND=">=media-libs/libpng-1.4"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	sed -i \
@@ -23,15 +24,19 @@ src_prepare() {
 		src/scripts/gcc.mak.in \
 		lib/pngxtern/scripts/gcc.mak.in \
 		|| die "sed failed"
-	cp lib/libpng/pngpriv.h src/ || die
-	rm -rf lib/{libpng,zlib}
 
-	epatch "${FILESDIR}"/${P}-libpng-1.4.8.patch
+	if has_version "<media-libs/libpng-1.5:0"; then
+		cp lib/libpng/pngpriv.h src/ || die
+		rm -rf lib/{libpng,zlib}
+		epatch "${FILESDIR}"/${P}-libpng-1.4.8.patch
+	else
+		rm -rf lib/zlib
+	fi
 }
 
 src_configure() {
 	./configure \
-		-with-system-libpng \
+		$(has_version "<media-libs/libpng-1.5:0" && echo -with-system-libpng) \
 		-with-system-zlib \
 		|| die "configure failed"
 }
