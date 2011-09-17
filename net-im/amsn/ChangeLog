@@ -1,6 +1,10 @@
 # ChangeLog for net-im/amsn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.104 2011/04/28 15:42:27 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.105 2011/09/17 19:03:45 ssuominen Exp $
+
+  17 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> amsn-0.98.4-r1.ebuild,
+  +files/amsn-0.98.4-libpng15.patch:
+  Fix building with libpng15 wrt #383209 by Diego Elio Pettenò
 
 *amsn-0.98.4-r1 (28 Apr 2011)
 

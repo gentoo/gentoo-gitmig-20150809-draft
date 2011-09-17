@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.98.4-r1.ebuild,v 1.1 2011/04/28 15:42:27 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.98.4-r1.ebuild,v 1.2 2011/09/17 19:03:45 ssuominen Exp $
 
 EAPI=2
 
@@ -41,9 +41,11 @@ RDEPEND="${DEPEND}
 #	>=media-plugins/gst-plugins-ffmpeg-0.10.7
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.98-noautoupdate.patch" \
+	epatch \
+		"${FILESDIR}"/${PN}-0.98-noautoupdate.patch \
 		"${FILESDIR}"/${PN}-0.98.4-v4l2.patch \
-		"${FILESDIR}"/${PN}-0.98.4-amsnplus-ldflags.patch
+		"${FILESDIR}"/${PN}-0.98.4-amsnplus-ldflags.patch \
+		"${FILESDIR}"/${PN}-0.98.4-libpng15.patch
 	# only portage should strip files, bug 285682
 	sed -i -e "s/LDFLAGS += -s/LDFLAGS += /" Makefile.in || die "sed failed"
 	# Ships with a 32-bit binary, we want to rebuild it
