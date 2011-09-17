@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13052 2011/09/17 04:33:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13053 2011/09/17 08:20:22 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,20 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (17 Sep 2011)
+# Masked for testing. Also, there is an upstream bug
+# for gtk greeter. https://bugs.launchpad.net/lightdm/+bug/818852
+# Until this one is resolved, lightdm
+# will remain masked
+x11-misc/lightdm
+
+# Markos Chandras <hwoarang@gentoo.org> (17 Sep 2011)
+# Masked for testing for as long as it takes. Old QA problems
+# reported in bug #348432 and 
+# http://blog.flameeyes.eu/2010/08/20/there-s-something-about-webmin
+# must go away (if they haven't already) before unmasking webmin
+app-admin/webmin
 
 # Samuli Suominen <ssuominen@gentoo.org> (15 Sep 2011)
 # Uncompatible with wxpython 2.8, bugs 201314 and 330683
