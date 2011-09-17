@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999-r1.ebuild,v 1.9 2011/09/08 16:50:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999-r1.ebuild,v 1.10 2011/09/17 12:43:29 scarabeus Exp $
 
 EAPI=3
 
@@ -101,8 +101,8 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="binfilter +branding custom-cflags dbus debug eds gnome graphite
-gstreamer gtk kde ldap mysql nsplugin odk opengl python templates test +vba
-webdav"
+gstreamer gtk jemalloc kde ldap mysql nsplugin odk opengl python templates test
++vba webdav"
 LICENSE="LGPL-3"
 SLOT="0"
 [[ ${PV} == *9999* ]] || KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
@@ -159,6 +159,7 @@ COMMON_DEPEND="
 		dev-java/lucene-analyzers:2.3
 		dev-java/saxon:0
 	)
+	jemalloc? ( dev-libs/jemalloc )
 	ldap? ( net-nds/openldap )
 	mysql? ( >=dev-db/mysql-connector-c++-1.1.0 )
 	nsplugin? (
@@ -466,7 +467,7 @@ src_configure() {
 		--disable-static-gtk \
 		--disable-strip-solver \
 		--disable-zenity \
-		--with-alloc=system \
+		--with-alloc=$(use jemalloc && echo "jemalloc" || echo "system") \
 		--with-build-version="Gentoo official package" \
 		--with-extension-integration \
 		--with-external-dict-dir="${EPREFIX}/usr/share/myspell" \
