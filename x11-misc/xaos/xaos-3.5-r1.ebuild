@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.5-r1.ebuild,v 1.7 2011/06/28 20:04:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.5-r1.ebuild,v 1.8 2011/09/17 11:10:27 ssuominen Exp $
 
 EAPI=4
 
@@ -40,7 +40,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-3.4-png.patch \
-		"${FILESDIR}"/${PN}-3.4-include.patch
+		"${FILESDIR}"/${PN}-3.4-include.patch \
+		"${FILESDIR}"/${PN}-3.5-libpng15.patch
 	sed -i -e 's/-s//' Makefile.in
 	eautoreconf
 }
