@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/shaaft-0.5.0.ebuild,v 1.14 2011/08/11 04:32:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/shaaft/shaaft-0.5.0.ebuild,v 1.15 2011/09/17 16:22:20 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -38,7 +38,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-gcc34.patch \
 		"${FILESDIR}"/${P}-gcc41.patch \
-		"${FILESDIR}"/${P}-gcc43.patch
+		"${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-libpng15.patch
 
 	eautoreconf
 }
