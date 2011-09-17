@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/criticalmass-1.0.2.ebuild,v 1.4 2011/09/13 18:59:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/criticalmass-1.0.2.ebuild,v 1.5 2011/09/17 16:20:45 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -26,7 +26,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc43.patch \
 		"${FILESDIR}"/${P}-system_curl.patch \
 		"${FILESDIR}"/${P}-libpng14.patch \
-		"${FILESDIR}"/${P}-cflags.patch
+		"${FILESDIR}"/${P}-cflags.patch \
+		"${FILESDIR}"/${P}-libpng15.patch
 	rm -rf curl
 	eautoreconf
 }
