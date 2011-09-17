@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5702 2011/09/16 17:11:26 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5703 2011/09/17 04:41:58 scarabeus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> base/package.use.mask:
+  Cleanup base.use.mask
 
   16 Sep 2011; Mike Gilbert <floppym@gentoo.org> package.mask:
   Update Arfrever's email address

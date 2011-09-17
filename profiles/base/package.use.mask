@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.266 2011/09/11 07:34:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.267 2011/09/17 04:41:59 scarabeus Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -57,14 +57,10 @@ dev-libs/glib introspection
 <net-libs/webkit-gtk-1.3 introspection
 <net-libs/telepathy-glib-0.14 introspection
 <net-wireless/gnome-bluetooth-2.32.0-r1 introspection
-<sys-auth/polkit-0.101-r1 introspection
-<sys-power/upower-0.9.12 introspection
 <www-client/epiphany-3 introspection
-<x11-libs/gdk-pixbuf-2.22.1-r1 introspection
 <x11-libs/libnotify-0.7.3 introspection
 <x11-libs/libwnck-2.30.6-r1 introspection
 <x11-libs/pango-1.28.4 introspection
-<x11-libs/vte-0.28 introspection
 
 # Anthony G. Basile <blueness@gentoo.org> (22 Jul 2011)
 # nat-pmp and upnp are only stable on amd64/x86 for this package
@@ -165,10 +161,6 @@ net-libs/xulrunner ipc
 www-client/firefox ipc
 www-client/icecat ipc
 
-# Samuli Suominen <ssuominen@gentoo.org> (26 Jun 2010)
-# Masking support for vulnerable firefox and xulrunner.
-=dev-java/swt-3.3* firefox xulrunner
-
 # Tomas Touceda <chiiph@gentoo.org> (13 Apr 2010)
 # Masked because libsvm module is broken with this release on every arch.
 dev-lisp/clisp svm
@@ -200,12 +192,6 @@ x11-libs/cairo gallium
 # Alexey Shvetsov <alexxy@gentoo.org> (3 Dec 2009)
 # Mask very experimental mpi use flag dfor gamess
 sci-chemistry/gamess mpi
-
-# Samuli Suominen <ssuominen@gentoo.org> (10 Jan 2009)
-# Not ready for stable anytime soon.
-<kde-base/kdeadmin-meta-4.5.0 cups
-<kde-base/kdeutils-meta-4.5.0 cups
-<kde-base/plasma-workspace-4.5.0 google-gadgets
 
 # Mounir Lamouri <volkmar@gentoo.org> (07 Nov 2009)
 # Mask cuda for k3d. Works only on amd64/x86. Bug 267264
@@ -265,15 +251,6 @@ app-text/enchant zemberek
 # Peter Alfredsen <loki_val@gentoo.org> (25 Jun 2008)
 # Php module fails to build due to newer autotools.
 >=media-libs/ming-0.4.0_beta5 php
-
-# Christian Faulhammer <opfer@gentoo.org> (03 Mar 2008)
-# This feature is experimental and should be used by people willing to
-# test it
-app-portage/gatt libpaludis
-
-# Christian Hoffmann <hoffie@gentoo.org> (27 Dec 2007)
-# Missing dev-php5/php-java-bridge
-dev-lang/php java-external
 
 dev-java/sun-jdk nsplugin
 dev-java/sun-jre-bin nsplugin
