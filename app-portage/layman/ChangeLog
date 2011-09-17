@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.146 2011/08/12 01:46:26 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.147 2011/09/17 21:15:08 idl0r Exp $
+
+*layman-2.0.0_rc3 (17 Sep 2011)
+
+  17 Sep 2011; Christian Ruppert <idl0r@gentoo.org> +layman-2.0.0_rc3.ebuild,
+  layman-9999.ebuild:
+  Version bump. Use PYTHON_USE_WITH. Move/Migrate
+  $EROOT/var/lib/layman/overlays.xml to .../installed.xml.
 
   12 Aug 2011; Paul Varner <fuzzyray@gentoo.org> layman-9999.ebuild:
   Update with Gentoo Prefix modifications

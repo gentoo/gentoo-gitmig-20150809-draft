@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.22 2011/09/17 21:15:08 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.0.0_rc3.ebuild,v 1.1 2011/09/17 21:15:08 idl0r Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -8,22 +8,20 @@ PYTHON_DEPEND="2:2.6"
 RESTRICT_PYTHON_ABIS="2.4 3.*"
 PYTHON_USE_WITH="xml"
 
-inherit eutils distutils git-2 prefix
+inherit eutils distutils prefix
 
 DESCRIPTION="Tool to manage Gentoo overlays"
-HOMEPAGE="http://layman.sourceforge.net"
-SRC_URI=""
-EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/layman.git"
+HOMEPAGE="http://layman.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~ppc-aix ~x86-fbsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="bazaar cvs darcs git mercurial subversion test"
 
 COMMON_DEPS="dev-lang/python"
 DEPEND="${COMMON_DEPS}
-	test? ( dev-vcs/subversion )
-	app-text/asciidoc"
+	test? ( dev-vcs/subversion )"
 RDEPEND="${COMMON_DEPS}
 	bazaar? ( dev-vcs/bzr )
 	cvs? ( dev-vcs/cvs )
@@ -49,12 +47,6 @@ src_test() {
 		done
 	}
 	python_execute_function testing
-}
-
-src_compile() {
-	distutils_src_compile
-	# override MAKEOPTS to prevent build failure
-	emake -j1 -C doc || die "emake -C doc failed"
 }
 
 src_install() {
