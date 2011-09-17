@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.8 2011/08/29 01:28:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/systemd.eclass,v 1.9 2011/09/17 13:48:21 mgorny Exp $
 
 # @ECLASS: systemd.eclass
 # @MAINTAINER:
@@ -30,6 +30,14 @@ case ${EAPI:-0} in
 	*) die "${ECLASS}.eclass API in EAPI ${EAPI} not yet established."
 esac
 
+# @FUNCTION: _systemd_get_unitdir
+# @INTERNAL
+# @DESCRIPTION:
+# Get unprefixed unitdir.
+_systemd_get_unitdir() {
+	echo -n /lib/systemd/system
+}
+
 # @FUNCTION: systemd_get_unitdir
 # @DESCRIPTION:
 # Output the path for the systemd unit directory (not including ${D}).
@@ -38,7 +46,7 @@ systemd_get_unitdir() {
 	has "${EAPI:-0}" 0 1 2 && ! use prefix && EPREFIX=
 	debug-print-function ${FUNCNAME} "${@}"
 
-	echo -n "${EPREFIX}"/lib/systemd/system
+	echo -n "${EPREFIX}$(_systemd_get_unitdir)"
 }
 
 # @FUNCTION: systemd_dounit
@@ -47,12 +55,10 @@ systemd_get_unitdir() {
 # Install systemd unit(s). Uses doins, thus it is fatal in EAPI 4
 # and non-fatal in earlier EAPIs.
 systemd_dounit() {
-	has "${EAPI:-0}" 0 1 2 && ! use prefix && EPREFIX=
 	debug-print-function ${FUNCNAME} "${@}"
 
 	(
-		local ud=$(systemd_get_unitdir)
-		insinto "${ud#${EPREFIX}}"
+		insinto "$(_systemd_get_unitdir)"
 		doins "${@}"
 	)
 }
@@ -66,7 +72,7 @@ systemd_newunit() {
 	debug-print-function ${FUNCNAME} "${@}"
 
 	(
-		insinto "$(systemd_get_unitdir)"
+		insinto "$(_systemd_get_unitdir)"
 		newins "${@}"
 	)
 }
@@ -98,7 +104,7 @@ systemd_enable_service() {
 
 	local target=${1}
 	local service=${2}
-	local ud=$(systemd_get_unitdir)
+	local ud=$(_systemd_get_unitdir)
 
 	dodir "${ud}"/"${target}".wants && \
 	dosym ../"${service}" "${ud}"/"${target}".wants
