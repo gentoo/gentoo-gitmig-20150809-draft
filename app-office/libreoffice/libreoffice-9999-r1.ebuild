@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.11 2011/09/17 03:28:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.12 2011/09/17 03:44:58 scarabeus Exp $
 
 EAPI=3
 
@@ -213,9 +213,6 @@ DEPEND="${COMMON_DEPEND}
 
 PATCHES=(
 	"${FILESDIR}/${PN}-3.3.1-neon_remove_SSPI_support.diff"
-	"${FILESDIR}/sdext-presenter.diff"
-	"${FILESDIR}/${PN}-svx.patch"
-	"${FILESDIR}/${PN}-binfilter-as-needed.patch"
 	"${FILESDIR}/${PN}-kill-cppunit.patch"
 )
 
