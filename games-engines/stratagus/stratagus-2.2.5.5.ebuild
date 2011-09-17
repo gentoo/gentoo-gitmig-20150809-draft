@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.2.5.5.ebuild,v 1.6 2011/03/09 22:54:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.2.5.5.ebuild,v 1.7 2011/09/17 16:50:03 ssuominen Exp $
 
 EAPI=2
-inherit autotools games
+inherit autotools eutils games
 
 DESCRIPTION="A realtime strategy game engine"
 HOMEPAGE="http://stratagus.sourceforge.net/"
@@ -28,6 +28,7 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-libpng15.patch
 	sed -i \
 		-e 's/-O.*\(-fsigned-char\).*/\1"/' \
 		configure.in \
