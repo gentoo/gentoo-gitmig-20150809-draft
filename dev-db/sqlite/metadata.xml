@@ -3,8 +3,12 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>betelgeuse@gentoo.org</email>
-  <description>Take if you want it</description>
+	<email>betelgeuse@gentoo.org</email>
+	<description>Take if you want it</description>
+</maintainer>
+<maintainer>
+	<email>arfrever.fta@gmail.com</email>
+	<description>Proxy maintainer</description>
 </maintainer>
 <use>
   <flag name='extensions'>Enable support for dynamic loading of extensions</flag>
