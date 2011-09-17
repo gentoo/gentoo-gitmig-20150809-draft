@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-gnome2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnome2/ChangeLog,v 1.54 2011/06/29 13:33:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnome2/ChangeLog,v 1.55 2011/09/17 16:42:24 naota Exp $
+
+*ruby-gnome2-0.90.9 (17 Sep 2011)
+
+  17 Sep 2011; Naohiro Aota <naota@gentoo.org> +ruby-gnome2-0.90.9.ebuild:
+  Version bump
 
   29 Jun 2011; Pacho Ramos <pacho@gentoo.org> ruby-gnome2-0.90.8.ebuild:
   Readd dev-ruby/ruby-gtksourceview dependency as its latest version got its
