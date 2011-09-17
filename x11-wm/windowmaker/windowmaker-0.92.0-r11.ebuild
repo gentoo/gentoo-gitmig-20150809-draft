@@ -1,19 +1,19 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r11.ebuild,v 1.1 2011/04/21 14:26:48 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r11.ebuild,v 1.2 2011/09/17 19:11:46 ssuominen Exp $
 
 EAPI=3
 
 inherit autotools eutils flag-o-matic
 
 # note: patchset is in gentoo/src/patchsets/windowmaker
-PATCHVER=4
+PATCHVER=5
 S=${WORKDIR}/${P/windowm/WindowM}
 
 DESCRIPTION="The fast and light GNUstep window manager"
 SRC_URI="ftp://ftp.windowmaker.info/pub/source/release/${P/windowm/WindowM}.tar.gz
 	http://www.windowmaker.info/pub/source/release/WindowMaker-extra-0.1.tar.gz
-	mirror://gentoo/${P}-patchset-${PATCHVER}.tar.bz2"
+	http://dev.gentoo.org/~ssuominen/${P}-patchset-${PATCHVER}.tar.bz2"
 HOMEPAGE="http://www.windowmaker.info/"
 
 IUSE="gif jpeg nls png tiff modelock +vdesktop xinerama"
@@ -43,6 +43,7 @@ src_prepare() {
 	epatch "${psd}"/${P}-math_h.patch
 	epatch "${psd}"/${P}-gettext.patch
 	epatch "${psd}"/${P}-libpng14.patch
+	epatch "${psd}"/${P}-libpng15.patch
 
 	# Patches from upstream HG
 	epatch "${psd}"/${P}-composite-non-24bit-depth.patch
