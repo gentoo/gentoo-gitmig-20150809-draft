@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/veracity/veracity-1.0.0.10517.ebuild,v 1.2 2011/09/17 03:29:19 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/veracity/veracity-1.0.0.10517.ebuild,v 1.3 2011/09/17 03:47:57 binki Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SRC_URI="http://download.sourcegear.com/Veracity/release/${PV}/${PN}-source-${PV
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-linux"
 IUSE="test"
 
 S=${WORKDIR}/${PN}
@@ -73,7 +73,7 @@ src_compile() {
 	# Based on thirdparty/build_linux.sh.
 	emake -j1 \
 		-C "${WORKDIR}"/js/src \
-		JS_DIST=/usr \
+		JS_DIST="${EPREFIX}"/usr \
 		JS_THREADSAFE=1 \
 		BUILD_OPT=1 \
 		-f Makefile.ref
