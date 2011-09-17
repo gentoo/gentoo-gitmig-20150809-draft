@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13053 2011/09/17 08:20:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13054 2011/09/17 09:41:44 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -284,7 +284,7 @@ net-zope/zwiki
 # vdr-avards, bug 368921 // fixed on bump
 # SDLcam, bug 364821
 # vdr-pvr350, bug 364669 // fixed on bump
-# vdr-pvrinput, bug 369701
+# vdr-pvrinput, bug 369701 // fixed on bump
 #
 # Removal in 30 days
 media-tv/xdtv
@@ -295,7 +295,7 @@ media-video/SDLcam
 =media-plugins/vdr-avards-0.2.2
 media-plugins/vdr-atmo
 media-sound/gnomeradio
-media-plugins/vdr-pvrinput
+#media-plugins/vdr-pvrinput // fixed on bump
 
 # Vlastimil Babka <caster@gentoo.org> (11 Sep 2011)
 # Masked until Icedtea7 final is released, to prevent pulling oracle-jdk-bin for everyone.
