@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.10.1.ebuild,v 1.4 2011/09/05 08:36:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.10.1.ebuild,v 1.5 2011/09/17 08:43:27 angelos Exp $
 
 EAPI=4
 GCONF_DEBUG="no"
@@ -20,7 +20,7 @@ RDEPEND="
 	>=dev-db/sqlite-3.5.9:3
 	>=dev-libs/dbus-glib-0.80
 	>=dev-libs/json-glib-0.7.6
-	>=dev-libs/libgee-0.5.0
+	>=dev-libs/libgee-0.5.0:0
 	>=dev-libs/libunique-1:1
 	>=dev-libs/libxml2-2.6.32:2
 	>=gnome-base/gconf-2.22.0:2
