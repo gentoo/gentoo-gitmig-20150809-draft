@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.8.6.ebuild,v 1.1 2011/09/15 11:07:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/fuse-2.8.6.ebuild,v 1.2 2011/09/17 23:35:42 zmedico Exp $
 
 EAPI=4
 inherit libtool linux-info
@@ -66,7 +66,7 @@ src_install() {
 	fi
 
 	find "${ED}" -name "*.la" -delete
-	rm -rf "${ED}/dev"
+	rm -rf "${D}/dev"
 
 	dodir /etc
 	cat > "${ED}"/etc/fuse.conf <<-EOF

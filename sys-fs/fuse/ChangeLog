@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.147 2011/09/15 11:07:27 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.148 2011/09/17 23:35:42 zmedico Exp $
+
+  17 Sep 2011; Zac Medico <zmedico@gentoo.org> fuse-2.8.6.ebuild:
+  Remove ${D}/dev for prefix.
 
 *fuse-2.8.6 (15 Sep 2011)
 
