@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>ssuominen@gentoo.org</email>
+		<name>Samuli Suominens</name>
+		<description>Proxy maintainer. CC him on bugs.</description>
+	</maintainer>
+	<maintainer>
+		<email>jdhore1@gmail.com</email>
+		<name>Jeff D. Horelick</name>
+		<description>Maintainer. Assign bugs to him.</description>
+	</maintainer>
+</pkgmetadata>
