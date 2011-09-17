@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/Horde_Vfs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/Horde_Vfs/ChangeLog,v 1.2 2011/06/15 17:12:32 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/Horde_Vfs/ChangeLog,v 1.3 2011/09/17 12:25:18 a3li Exp $
+
+*Horde_Vfs-1.0.4 (17 Sep 2011)
+
+  17 Sep 2011; Alex Legler <a3li@gentoo.org> +Horde_Vfs-1.0.4.ebuild:
+  Automated version bump
 
   15 Jun 2011; Alex Legler <a3li@gentoo.org> Horde_Vfs-1.0.2.ebuild:
   Fix SRC_URI
