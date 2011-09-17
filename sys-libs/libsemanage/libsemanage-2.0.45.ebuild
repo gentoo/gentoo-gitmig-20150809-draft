@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.0.45.ebuild,v 1.7 2011/06/30 10:40:52 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.0.45.ebuild,v 1.8 2011/09/17 12:57:34 swift Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2"
@@ -26,6 +26,8 @@ RDEPEND=">=sys-libs/libsepol-${SEPOL_VER}
 	dev-libs/ustr
 	ruby? ( dev-lang/ruby )"
 DEPEND="${RDEPEND}
+	sys-devel/bison
+	sys-devel/flex
 	ruby? ( dev-lang/swig )"
 
 # tests are not meant to be run outside of the

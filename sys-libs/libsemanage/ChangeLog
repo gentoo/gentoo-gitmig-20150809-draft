@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libsemanage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.41 2011/09/17 12:55:40 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.42 2011/09/17 12:57:34 swift Exp $
+
+  17 Sep 2011; <swift@gentoo.org> libsemanage-2.0.45.ebuild,
+  libsemanage-2.0.46.ebuild:
+  Adding dependencies on bison and flex as per bug #382583
 
   17 Sep 2011; <swift@gentoo.org> libsemanage-2.1.0.ebuild:
   Add dependency for flex and bison
