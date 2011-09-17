@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/hivex-1.3.1.ebuild,v 1.2 2011/09/13 18:43:15 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/hivex-1.3.1.ebuild,v 1.3 2011/09/17 15:02:37 maksbotan Exp $
 
 EAPI=3
 
@@ -70,11 +70,6 @@ src_test() {
 
 src_install() {
 	strip-linguas -i po
-	if [ -z "${LINGUAS}" ] ; then
-		LINGUAS=none
-	else
-		LINGUAS=none
-	fi
 
 	autotools-utils_src_install "LINGUAS=""${LINGUAS}"""
 
