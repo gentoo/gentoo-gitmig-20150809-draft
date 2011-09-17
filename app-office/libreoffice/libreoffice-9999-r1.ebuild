@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.9 2011/09/16 08:51:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.10 2011/09/17 01:26:38 scarabeus Exp $
 
 EAPI=3
 
@@ -49,7 +49,6 @@ unset DEV_URI
 
 # addons
 # FIXME: actually review which one of these are used
-ADDONS_SRC+=" ${ADDONS_URI}/17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip"
 ADDONS_SRC+=" ${ADDONS_URI}/bd30e9cf5523cdfc019b94f5e1d7fd19-cppunit-1.12.1.tar.gz"
 ADDONS_SRC+=" ${ADDONS_URI}/1756c4fa6c616ae15973c104cd8cb256-Adobe-Core35_AFMs-314.tar.gz"
 ADDONS_SRC+=" ${ADDONS_URI}/1f24ab1d39f4a51faf22244c94a6203f-xmlsec1-1.2.14.tar.gz"
@@ -130,10 +129,11 @@ COMMON_DEPEND="
 	>=dev-libs/openssl-0.9.8g
 	dev-libs/redland[ssl]
 	>=dev-python/translate-toolkit-1.8.0
-	media-libs/freetype:2
 	>=media-libs/fontconfig-2.3.0
-	>=media-libs/vigra-1.7
+	media-libs/freetype:2
 	>=media-libs/libpng-1.4
+	media-libs/libvisio
+	>=media-libs/vigra-1.7
 	net-print/cups
 	sci-mathematics/lpsolve
 	>=sys-libs/db-4.8
@@ -339,6 +339,8 @@ src_prepare() {
 
 	base_src_prepare
 	eautoreconf
+	# hack in the autogen.sh
+	touch autogen.lastrun
 }
 
 src_configure() {
@@ -362,26 +364,19 @@ src_configure() {
 		--enable-ext-presenter-minimizer
 	"
 
-	# hsqldb: requires just 1.8.0 not 1.8.1 which we don't ship at all
 	# dmake: not worth of splitting out
 	# cppunit: patched not to run anything, just main() { return 0; }
 	#          workaround to upstream running the tests during build
 	# sane: just sane.h header that is used for scan in writer, not
 	#       linked or anything else, worthless to depend on
 	internal_libs+="
-		--without-system-hsqldb
 		--without-system-cppunit
 		--without-system-sane
 	"
 
-	# When building without java some things needs to be done
-	# as internal libraries.
-	if ! use java; then
-		internal_libs+="
-			--without-junit
-		"
-	else
+	if use java; then
 		java_opts="
+			--without-system-hsqldb
 			--with-ant-home="${ANT_HOME}"
 			--with-jdk-home=$(java-config --jdk-home 2>/dev/null)
 			--with-java-target-version=$(java-pkg_get-target)
@@ -432,6 +427,9 @@ src_configure() {
 		--with-system-jars \
 		--with-system-db \
 		--with-system-dicts \
+		--with-system-libvisio \
+		--with-system-libtextcat --with-external-libtextcat-data \
+		--with-system-translate-toolkit \
 		--enable-cairo-canvas \
 		--enable-largefile \
 		--enable-python=system \
