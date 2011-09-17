@@ -1,24 +1,28 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.5.13-r2.ebuild,v 1.2 2011/03/28 21:58:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.6.2_rc1.ebuild,v 1.1 2011/09/17 08:48:30 flameeyes Exp $
 
-EAPI=3
+EAPI=4
 
 inherit apache-module autotools
 
-MY_P=modsecurity-apache_${PV/_rc/-rc}
+MY_PN=modsecurity-apache
+MY_PV=${PV/_rc/-rc}
+MY_P=${MY_PN}_${MY_PV}
 
 DESCRIPTION="Web application firewall and Intrusion Detection System for Apache."
 HOMEPAGE="http://www.modsecurity.org/"
-SRC_URI="http://www.modsecurity.org/download/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/project/mod-security/${MY_PN}/${MY_PV}/${MY_P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="lua geoip"
+IUSE="geoip curl lua"
 
-DEPEND="dev-libs/libxml2
+DEPEND=">=dev-libs/libxml2-2.7.8
+	dev-libs/libpcre
 	lua? ( >=dev-lang/lua-5.1 )
+	curl? ( >=net-misc/curl-7.15.1 )
 	www-servers/apache[apache2_modules_unique_id]"
 RDEPEND="${DEPEND}
 	geoip? ( dev-libs/geoip )"
@@ -29,22 +33,22 @@ S="${WORKDIR}/${MY_P}"
 APACHE2_MOD_FILE="apache2/.libs/${PN}2.so"
 APACHE2_MOD_DEFINE="SECURITY"
 
+# Tests require symbols only defined within the Apache binary.
+RESTRICT=test
+
 need_apache2
 
 src_prepare() {
 	cp "${FILESDIR}"/modsecurity.conf "${T}"/79_modsecurity.conf || die
 
-	epatch "${FILESDIR}"/${PN}-2.5.10-as-needed.patch
-
-	cd apache2
 	eautoreconf
 }
 
 src_configure() {
-	cd apache2
-
-	econf --with-apxs="${APXS}" \
-		--without-curl \
+	econf \
+		--enable-shared --disable-static \
+		--with-apxs="${APXS}" \
+		$(use_enable curl mlogc) \
 		$(use_with lua) \
 		|| die "econf failed"
 }
@@ -55,25 +59,11 @@ src_compile() {
 			"${T}"/79_modsecurity.conf || die
 	fi
 
-	APXS_FLAGS=
-	for flag in ${CFLAGS}; do
-		APXS_FLAGS="${APXS_FLAGS} -Wc,${flag}"
-	done
-
-	# Yes we need to prefix it _twice_
-	for flag in ${LDFLAGS}; do
-		APXS_FLAGS="${APXS_FLAGS} -Wl,${flag}"
-	done
-
-	emake -C apache2 \
-		APXS_CFLAGS="${CFLAGS}" \
-		APXS_LDFLAGS="${LDFLAGS}" \
-		APXS_EXTRA_CFLAGS="${APXS_FLAGS}" \
-		|| die "emake failed"
+	emake || die
 }
 
 src_test() {
-	emake -C apache2 test || die
+	emake check || die
 }
 
 src_install() {
@@ -84,14 +74,11 @@ src_install() {
 	insinto "${APACHE_MODULES_CONFDIR}"
 	doins "${T}"/79_modsecurity.conf
 
-	# install documentation; don't install index.html as it references
-	# the PDF and split-pages versions of the same documentation.
 	dodoc CHANGES
-	dohtml "${S}"/doc/*.{css,gif,jpg} "${S}"/doc/modsecurity2*.html
 
-	keepdir /var/cache/modsecurity || die
-	fowners apache:apache /var/cache/modsecurity || die
-	fperms 0770 /var/cache/modsecurity || die
+	keepdir /var/cache/modsecurity
+	fowners apache:apache /var/cache/modsecurity
+	fperms 0770 /var/cache/modsecurity
 }
 
 pkg_postinst() {
