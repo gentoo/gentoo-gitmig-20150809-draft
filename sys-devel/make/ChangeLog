@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/make
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.87 2011/09/17 07:25:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.88 2011/09/17 23:29:34 vapier Exp $
+
+*make-3.82-r3 (17 Sep 2011)
+
+  17 Sep 2011; Mike Frysinger <vapier@gentoo.org> +make-3.82-r3.ebuild,
+  +files/make-3.82-glob-speedup.patch:
+  Add more complete glob optimization patch from upstream #382845 by Tomáš
+  Chvátal.
 
   17 Sep 2011; Mike Frysinger <vapier@gentoo.org> -make-3.82-r2.ebuild,
   -files/make-3.82-glob-speedup.patch:
