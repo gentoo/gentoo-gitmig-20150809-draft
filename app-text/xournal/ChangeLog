@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xournal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.15 2011/08/17 21:12:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.16 2011/09/17 11:28:24 dilfridge Exp $
+
+  17 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  xournal-0.4.5-r2.ebuild:
+  Cleanup, EAPI bump, dependencies checked
 
 *xournal-0.4.5-r2 (17 Aug 2011)
 
