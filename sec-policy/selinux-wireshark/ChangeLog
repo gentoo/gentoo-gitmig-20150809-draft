@@ -1,6 +1,13 @@
 # ChangeLog for sec-policy/selinux-wireshark
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-wireshark/ChangeLog,v 1.13 2011/08/28 21:12:38 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-wireshark/ChangeLog,v 1.14 2011/09/17 16:20:16 swift Exp $
+
+*selinux-wireshark-2.20110726-r2 (17 Sep 2011)
+
+  17 Sep 2011; <swift@gentoo.org> +selinux-wireshark-2.20110726-r2.ebuild:
+  Drop the libffi hack that we introduced (to get it to work now, build with
+  USE without python) as it introduces a potential security risk. Other patches
+  have been rewritten and accepted by refpolicy.
 
 *selinux-wireshark-2.20110726-r1 (28 Aug 2011)
 

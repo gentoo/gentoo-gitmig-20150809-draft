@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-puppet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-puppet/ChangeLog,v 1.4 2011/08/28 21:13:11 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-puppet/ChangeLog,v 1.5 2011/09/17 16:20:16 swift Exp $
+
+*selinux-puppet-2.20110726-r2 (17 Sep 2011)
+
+  17 Sep 2011; <swift@gentoo.org> +selinux-puppet-2.20110726-r2.ebuild:
+  Fix the calls towards the portage domains, include support for the
+  portage_fetch_t domain
 
 *selinux-puppet-2.20110726-r1 (28 Aug 2011)
 

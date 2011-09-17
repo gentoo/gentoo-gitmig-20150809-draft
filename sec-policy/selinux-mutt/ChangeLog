@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-mutt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mutt/ChangeLog,v 1.5 2011/08/28 21:12:36 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mutt/ChangeLog,v 1.6 2011/09/17 16:20:16 swift Exp $
+
+*selinux-mutt-2.20110726-r2 (17 Sep 2011)
+
+  17 Sep 2011; <swift@gentoo.org> +selinux-mutt-2.20110726-r2.ebuild:
+  Fix support for gpg signing
 
 *selinux-mutt-2.20110726-r1 (28 Aug 2011)
 

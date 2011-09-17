@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.83 2011/08/28 21:12:32 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.84 2011/09/17 16:20:17 swift Exp $
+
+*selinux-base-policy-2.20110726-r4 (17 Sep 2011)
+
+  17 Sep 2011; <swift@gentoo.org> +selinux-base-policy-2.20110726-r4.ebuild:
+  Update on portage and portage_fetch domains, fix puppet issues, normalize
+  patches with refpolicy
 
 *selinux-base-policy-2.20110726-r3 (28 Aug 2011)
 

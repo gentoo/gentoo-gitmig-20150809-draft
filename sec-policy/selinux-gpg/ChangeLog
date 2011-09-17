@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-gpg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-gpg/ChangeLog,v 1.3 2011/09/09 18:38:24 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-gpg/ChangeLog,v 1.4 2011/09/17 16:20:16 swift Exp $
+
+*selinux-gpg-2.20110726-r2 (17 Sep 2011)
+
+  17 Sep 2011; <swift@gentoo.org> +selinux-gpg-2.20110726-r2.ebuild:
+  Add gpg_exec interface, used by portage domain (signed tree support)
 
   09 Sep 2011; <swift@gentoo.org> +files/0021-gpg-fix-mutt-call-r4.patch,
   selinux-gpg-2.20110726-r1.ebuild:
