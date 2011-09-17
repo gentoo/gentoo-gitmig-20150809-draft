@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/bip
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/ChangeLog,v 1.19 2010/09/11 13:33:19 a3li Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/ChangeLog,v 1.20 2011/09/17 16:10:09 a3li Exp $
+
+*bip-0.8.8 (17 Sep 2011)
+
+  17 Sep 2011; Alex Legler <a3li@gentoo.org> +bip-0.8.8.ebuild,
+  +files/bip-0.8.8-configure.patch:
+  Version bump. Change HOMEPAGE and SRC_URI to new upstream. Use new configure
+  patch, applied in upstream git.
 
   11 Sep 2010; Alex Legler <a3li@gentoo.org> -bip-0.8.4.ebuild,
   -bip-0.8.5.ebuild:
