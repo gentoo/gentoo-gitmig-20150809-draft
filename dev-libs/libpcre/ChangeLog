@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.183 2011/09/01 06:26:43 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.184 2011/09/17 04:47:35 vapier Exp $
+
+*libpcre-8.13-r1 (17 Sep 2011)
+
+  17 Sep 2011; Mike Frysinger <vapier@gentoo.org> +libpcre-8.13-r1.ebuild,
+  +files/libpcre-8.13-posix-regex.patch:
+  Add fix from upstream for posix regex behavior #382919 by Christian Kaps.
 
 *libpcre-8.13 (01 Sep 2011)
 
