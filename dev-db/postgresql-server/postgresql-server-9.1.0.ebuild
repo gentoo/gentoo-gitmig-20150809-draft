@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.1_rc1.ebuild,v 1.1 2011/08/28 15:28:50 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/postgresql-server-9.1.0.ebuild,v 1.1 2011/09/17 17:48:36 titanofold Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -10,18 +10,15 @@ inherit autotools eutils flag-o-matic multilib pam prefix python versionator
 
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~ppc-macos ~x86-solaris"
 
-# Upstream doesn't have an underscore in the file name
-MY_PV=${PV/_/}
+SLOT="$(get_version_component_range 1-2)"
+S="${WORKDIR}/postgresql-${PV}"
 
 DESCRIPTION="PostgreSQL server"
 HOMEPAGE="http://www.postgresql.org/"
-SRC_URI="mirror://postgresql/source/v${MY_PV}/postgresql-${MY_PV}.tar.bz2
-		 http://dev.gentoo.org/~titanofold/postgresql-patches-${MY_PV}.tbz2
+SRC_URI="mirror://postgresql/source/v${PV}/postgresql-${PV}.tar.bz2
+		 http://dev.gentoo.org/~titanofold/postgresql-patches-${SLOT}.tbz2
 		 http://dev.gentoo.org/~titanofold/postgresql-initscript-1.2.tbz2"
 LICENSE="POSTGRESQL"
-
-S="${WORKDIR}/postgresql-${MY_PV}"
-SLOT="$(get_version_component_range 1-2)"
 
 LINGUAS="af cs de en es fa fr hr hu it ko nb pl pt_BR ro ru sk sl sv tr zh_CN zh_TW"
 IUSE="doc kernel_linux nls pam perl -pg_legacytimestamp python selinux tcl uuid xml"
@@ -121,7 +118,7 @@ src_install() {
 			emake install -C $bd DESTDIR="${D}" || die "emake install in $bd failed"
 	done
 
-	dodoc README HISTORY doc/{README.*,TODO,bug.template}
+	dodoc README HISTORY doc/{TODO,bug.template}
 
 	dodir /etc/eselect/postgresql/slots/${SLOT}
 	echo "postgres_ebuilds=\"\${postgres_ebuilds} ${PF}\"" > \
