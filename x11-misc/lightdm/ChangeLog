@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/lightdm
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.8 2011/09/17 13:47:00 hwoarang Exp $
+
+*lightdm-0.9.7 (17 Sep 2011)
+
+  17 Sep 2011; Markos Chandras <hwoarang@gentoo.org> +lightdm-0.9.7.ebuild,
+  +files/lightdm-0.9.7-gtk.patch, +metadata.xml:
+  Re-introduce lightdm package. Bug #365311. Thanks to Christoph Junghans
+  <ottxor@gentoo.org>
+
