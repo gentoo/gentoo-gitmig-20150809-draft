@@ -1,0 +1,10 @@
+# ChangeLog for media-fonts/ricty
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ricty/ChangeLog,v 1.1 2011/09/17 06:16:30 matsuu Exp $
+
+*ricty-3.1.1 (17 Sep 2011)
+
+  17 Sep 2011; MATSUU Takuto <matsuu@gentoo.org> +ricty-3.1.1.ebuild,
+  +metadata.xml:
+  Initial import.
+
