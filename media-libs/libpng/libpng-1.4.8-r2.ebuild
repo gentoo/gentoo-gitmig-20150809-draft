@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.5.4.ebuild,v 1.2 2011/09/17 17:52:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.4.8-r2.ebuild,v 1.1 2011/09/17 17:52:35 ssuominen Exp $
+
+# this ebuild is only for the libpng14.so.0 SONAME for ABI compat
 
 EAPI=4
 
@@ -9,18 +11,23 @@ inherit eutils libtool multilib
 DESCRIPTION="Portable Network Graphics library"
 HOMEPAGE="http://www.libpng.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.xz
-	apng? ( mirror://sourceforge/${PN}-apng/${PN}-devel/${PV}/${P}-apng.patch.gz )"
+	apng? ( mirror://sourceforge/${PN}-apng/${PN}-master/${PV}/${P}-apng.patch.gz )"
 
 LICENSE="as-is"
-SLOT="0"
+SLOT="1.4"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
-IUSE="apng static-libs"
+IUSE="apng"
 
-RDEPEND="sys-libs/zlib"
+RDEPEND="sys-libs/zlib
+	!=media-libs/libpng-1.4*:0"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils"
 
-DOCS=( ANNOUNCE CHANGES libpng-manual.txt README TODO )
+pkg_setup() {
+	if [[ -e ${EROOT}/usr/$(get_libdir)/libpng14.so.0 ]]; then
+		rm -f "${EROOT}"/usr/$(get_libdir)/libpng14.so.0
+	fi
+}
 
 src_prepare() {
 	use apng && epatch "${WORKDIR}"/${P}-apng.patch
@@ -28,20 +35,13 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_enable static-libs static)
+	econf --disable-static
+}
+
+src_compile() {
+	emake libpng14.la
 }
 
 src_install() {
-	default
-	find "${ED}" -name '*.la' -exec rm -f {} +
-}
-
-pkg_preinst() {
-	has_version ${CATEGORY}/${PN}:1.4 && return 0
-	preserve_old_lib /usr/$(get_libdir)/libpng14$(get_libname 14)
-}
-
-pkg_postinst() {
-	has_version ${CATEGORY}/${PN}:1.4 && return 0
-	preserve_old_lib_notify /usr/$(get_libdir)/libpng14$(get_libname 14)
+	newlib.so .libs/libpng14.so.14.* libpng14.so.14
 }
