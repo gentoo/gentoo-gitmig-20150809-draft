@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libssh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.55 2011/09/16 13:00:01 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.56 2011/09/17 23:24:03 radhermit Exp $
+
+*libssh-0.5.2 (17 Sep 2011)
+
+  17 Sep 2011; Tim Harder <radhermit@gentoo.org> +libssh-0.5.2.ebuild:
+  Version bump.
 
   16 Sep 2011; Tony Vroon <chainsaw@gentoo.org> libssh-0.5.1.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
