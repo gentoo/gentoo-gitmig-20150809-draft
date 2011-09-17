@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/jemalloc-2.2.1-r1.ebuild,v 1.2 2011/04/12 18:18:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/jemalloc-2.2.3.ebuild,v 1.1 2011/09/17 12:24:28 scarabeus Exp $
 
-EAPI="2"
+EAPI=4
 
-inherit autotools eutils flag-o-matic
+inherit autotools
 
 DESCRIPTION="Jemalloc is a general-purpose scalable concurrent allocator"
 HOMEPAGE="http://www.canonware.com/jemalloc/"
@@ -20,8 +20,9 @@ DEPEND=""
 RDEPEND=""
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-strip-optimization.patch"
-	epatch "${FILESDIR}/${PN}-2.2.1-no-pprof.patch"
+	epatch \
+		"${FILESDIR}/${PN}-strip-optimization.patch" \
+		"${FILESDIR}/${PN}-2.2.1-no-pprof.patch"
 
 	eautoreconf
 }
@@ -30,10 +31,5 @@ src_configure() {
 	econf \
 		--with-jemalloc-prefix=j \
 		$(use_enable debug) \
-		$(use_enable stats) \
-		|| die "configure failed"
-}
-
-src_install() {
-	make DESTDIR="${D}" install
+		$(use_enable stats)
 }
