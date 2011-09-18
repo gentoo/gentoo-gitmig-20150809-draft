@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-14.0.835.163.ebuild,v 1.5 2011/09/18 10:13:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-14.0.835.163.ebuild,v 1.6 2011/09/18 21:32:36 tomka Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -14,7 +14,7 @@ SRC_URI="http://build.chromium.org/official/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="bindist cups gnome gnome-keyring kerberos"
 
 # en_US is ommitted on purpose from the list below. It must always be available.
