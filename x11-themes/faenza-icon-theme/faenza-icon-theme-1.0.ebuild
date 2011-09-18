@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/faenza-icon-theme/faenza-icon-theme-1.0.ebuild,v 1.3 2011/09/18 08:15:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/faenza-icon-theme/faenza-icon-theme-1.0.ebuild,v 1.4 2011/09/18 08:20:13 ssuominen Exp $
 
 EAPI=4
 inherit gnome2-utils
@@ -22,6 +22,7 @@ RESTRICT="binchecks strip"
 S=${WORKDIR}
 
 src_prepare() {
+	local res x
 	for x in Faenza Faenza-Dark; do
 		for res in 22 24 32 48; do
 			cp "${x}"/places/${res}/start-here-gentoo.png \
