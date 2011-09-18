@@ -18,3 +18,4 @@ move kde-misc/smaragd x11-themes/smaragd
 slotmove >sys-boot/grub-1 0 2
 move dev-php5/suhosin dev-php/suhosin
 move dev-php5/PEAR-Text_Template dev-php/php-texttemplate
+move dev-php5/PHPonTrax dev-php/PHPonTrax
