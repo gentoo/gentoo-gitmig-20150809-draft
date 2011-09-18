@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvisvgm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.19 2011/08/28 15:29:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.20 2011/09/18 18:02:20 armin76 Exp $
+
+  18 Sep 2011; Raúl Porcel <armin76@gentoo.org> dvisvgm-1.0.8.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #355085
 
   28 Aug 2011; Fabian Groffen <grobian@gentoo.org> dvisvgm-1.0.8.ebuild,
   +files/dvisvgm-1.0.8-darwin.patch:
