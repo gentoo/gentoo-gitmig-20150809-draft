@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.1.1-r1.ebuild,v 1.1 2011/09/11 14:48:15 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.1.1-r2.ebuild,v 1.1 2011/09/18 12:15:08 alexxy Exp $
 
 EAPI="4"
 
@@ -73,6 +73,8 @@ src_prepare() {
 			-e 's/CFLAGS\(.*\)=\(.*\)-O2\(.*\)/CFLAGS\1=\2\3/' \
 			-i {} \;
 	fi
+	# Add sccurity fix bug #379241
+	epatch "${FILESDIR}/${P}-iommu_sec_fix.patch"
 }
 
 src_configure() {

@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.79 2011/09/11 14:48:15 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.80 2011/09/18 12:15:08 alexxy Exp $
+
+*xen-4.1.1-r2 (18 Sep 2011)
+
+  18 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org> -xen-4.1.1-r1.ebuild,
+  +xen-4.1.1-r2.ebuild, +files/xen-4.1.1-iommu_sec_fix.patch:
+  Fix bug #379241
 
 *xen-4.1.1-r1 (11 Sep 2011)
 
