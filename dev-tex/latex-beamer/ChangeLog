@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.70 2011/07/25 13:10:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.71 2011/09/18 21:54:15 radhermit Exp $
+
+*latex-beamer-3.11 (18 Sep 2011)
+
+  18 Sep 2011; Tim Harder <radhermit@gentoo.org> +latex-beamer-3.11.ebuild:
+  Version bump (bug #382855). Update to EAPI 4.
 
   25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   latex-beamer-3.10-r1.ebuild:
