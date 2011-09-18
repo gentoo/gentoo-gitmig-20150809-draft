@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-0.9.4.ebuild,v 1.2 2011/09/18 11:17:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-0.9.4.ebuild,v 1.3 2011/09/18 11:20:34 idl0r Exp $
 
 EAPI="3"
 
@@ -74,7 +74,7 @@ src_compile() {
 			ewarn "You have to specify at least one programmer, and if you specify"
 			ewarn "more than one programmer, you have to enable either dummy or"
 			ewarn "internal as well.  'internal' will be the default now."
-			ebeep 3
+			sleep 3
 			args+=" CONFIG_INTERNAL=yes"
 		fi
 	fi
