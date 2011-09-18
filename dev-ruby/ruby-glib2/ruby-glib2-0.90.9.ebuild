@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-glib2/ruby-glib2-0.90.9.ebuild,v 1.1 2011/09/17 08:36:35 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-glib2/ruby-glib2-0.90.9.ebuild,v 1.2 2011/09/18 03:52:50 naota Exp $
 
 EAPI="3"
 USE_RUBY="ruby18 ruby19"
@@ -13,7 +13,6 @@ IUSE=""
 RDEPEND="${RDEPEND} >=dev-libs/glib-2"
 DEPEND="${DEPEND}
 	>=dev-libs/glib-2"
-ruby_add_bdepend "dev-ruby/pkg-config"
 
 each_ruby_configure() {
 	${RUBY} extconf.rb || die "extconf.rb failed"
