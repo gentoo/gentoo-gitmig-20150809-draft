@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r4.ebuild,v 1.1 2011/09/12 18:59:01 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r5.ebuild,v 1.1 2011/09/18 12:31:58 alexxy Exp $
 
 EAPI="3"
 
@@ -174,6 +174,12 @@ src_prepare() {
 
 	# Do not strip binaries
 	epatch "${FILESDIR}/${PN}-3.3.0-nostrip.patch"
+
+	# Patch to libxl bug #380343
+	epatch "${FILESDIR}/${PN}-4.1.1-xllib.patch"
+
+	# Patch from bug #382329 for hvmloader
+	epatch "${FILESDIR}/${PN}-4.1.1-upstream-23104-1976adbf2b80.patch"
 
 	# Prevent the downloading of ipxe
 	sed -e 's:^\tif ! wget -O _$T:#\tif ! wget -O _$T:' \
