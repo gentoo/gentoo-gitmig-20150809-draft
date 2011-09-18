@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latexmk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.35 2011/09/10 12:54:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.36 2011/09/18 18:16:16 armin76 Exp $
+
+  18 Sep 2011; Raúl Porcel <armin76@gentoo.org> latexmk-423a.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #355085
 
   10 Sep 2011; Tim Harder <radhermit@gentoo.org> latexmk-426.ebuild:
   Migrate to the bash-completion-r1 eclass.
