@@ -11,7 +11,6 @@ Think of Wine as a compatibility layer for running Windows programs. Wine does n
 	<flag name='capi'>Enable ISDN support via CAPI</flag>
 	<flag name='custom-cflags'>Bypass strip-flags; use are your own peril</flag>
 	<flag name='gecko'>Add support for the Gecko engine when using iexplore</flag>
-	<flag name='hal'>Enable obsolete <pkg>sys-apps/hal</pkg> support</flag>
 	<flag name='mousewarp'>Add mouse warp patch -- enable this if you primarily play games (http://bugs.winehq.org/show_bug.cgi?id=6971)</flag>
 	<flag name='opencl'>Enable OpenCL support</flag>
 	<flag name='perl'>Install helpers written in perl (winedump/winemaker)</flag>
