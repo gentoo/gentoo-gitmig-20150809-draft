@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-latexextra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexextra/ChangeLog,v 1.50 2011/08/14 18:27:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexextra/ChangeLog,v 1.51 2011/09/18 17:36:08 armin76 Exp $
+
+  18 Sep 2011; Raúl Porcel <armin76@gentoo.org>
+  texlive-latexextra-2010-r2.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #355085
 
   14 Aug 2011; Markus Meier <maekke@gentoo.org>
   texlive-latexextra-2010-r2.ebuild:
