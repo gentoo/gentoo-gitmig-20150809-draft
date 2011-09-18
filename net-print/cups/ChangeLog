@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.435 2011/09/03 13:21:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.436 2011/09/18 08:11:49 scarabeus Exp $
+
+  18 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> cups-1.5.0-r2.ebuild:
+  cups 1.5 should handle the usb printing properly without any kernel hackery.
 
   03 Sep 2011; Raúl Porcel <armin76@gentoo.org> cups-1.4.8-r1.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #380771

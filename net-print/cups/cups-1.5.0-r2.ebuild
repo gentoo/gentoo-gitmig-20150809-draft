@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.0-r2.ebuild,v 1.1 2011/08/28 23:20:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.5.0-r2.ebuild,v 1.2 2011/09/18 08:11:49 scarabeus Exp $
 
 #
 # See http://git.overlays.gentoo.org/gitweb/?p=dev/dilfridge.git;a=blob;f=net-print/cups/notes.txt;hb=HEAD
@@ -11,7 +11,7 @@ EAPI=3
 
 PYTHON_DEPEND="python? 2:2.5"
 
-inherit autotools eutils flag-o-matic linux-info multilib pam perl-module python versionator java-pkg-opt-2
+inherit autotools eutils flag-o-matic multilib pam perl-module python versionator java-pkg-opt-2
 
 MY_P=${P/_}
 MY_PV=${PV/_}
@@ -85,51 +85,6 @@ pkg_setup() {
 	if use python; then
 		python_set_active_version 2
 		python_pkg_setup
-	fi
-
-	if use usb; then
-		elog "You are going to use new libusb backed to access your usb printer."
-		elog "This interface has quite few known issues and does not report all"
-		elog "issues and just refuses to print."
-		elog "Please consider disabling usb useflag if you are having issues."
-		elog
-		elog "Please note that if you disable the usb useflag your device will be"
-		elog "still working using kernel usblp interface instead of libusb."
-		echo
-	fi
-
-	linux-info_pkg_setup
-	if  ! linux_config_exists; then
-		ewarn "Can't check the linux kernel configuration."
-		ewarn "You might have some incompatible options enabled."
-	else
-		# recheck that we don't have usblp to collide with libusb
-		if use usb; then
-			if linux_chkconfig_present USB_PRINTER; then
-				eerror "Your usb printers will be managed via libusb which collides with kernel module."
-				eerror "${P} requires the USB_PRINTER support disabled."
-				eerror "Please disable it:"
-				eerror "    CONFIG_USB_PRINTER=n"
-				eerror "in /usr/src/linux/.config or"
-				eerror "    Device Drivers --->"
-				eerror "        USB support  --->"
-				eerror "            [ ] USB Printer support"
-				eerror "Alternatively, just disable the usb useflag for cups (your printer will still work)."
-			fi
-		else
-			#here we should warn user that he should enable it so he can print
-			if ! linux_chkconfig_present USB_PRINTER; then
-				ewarn "If you plan to use USB printers you should enable the USB_PRINTER"
-				ewarn "support in your kernel."
-				ewarn "Please enable it:"
-				ewarn "    CONFIG_USB_PRINTER=y"
-				ewarn "in /usr/src/linux/.config or"
-				ewarn "    Device Drivers --->"
-				ewarn "        USB support  --->"
-				ewarn "            [*] USB Printer support"
-				ewarn "Alternatively, enable the usb useflag for cups and use the new, less-tested libusb code."
-			fi
-		fi
 	fi
 }
 
