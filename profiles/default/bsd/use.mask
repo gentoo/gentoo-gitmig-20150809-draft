@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/use.mask,v 1.9 2011/05/09 21:20:22 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/use.mask,v 1.10 2011/09/18 09:24:55 ssuominen Exp $
 
 # Mart Raudsepp <leio@gentoo.org>
 # net-misc/networkmanager not keyworded
@@ -60,7 +60,7 @@ gcj
 # This requires a kernel module that's Linux specific right now
 ifp
 
-# This requires hal and a usb-eject command
+# This requires a usb-eject command
 ipod
 
 # Mask extraneous elibc/kernel combinations
