@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.21 2011/09/18 07:57:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.22 2011/09/18 07:57:55 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -224,6 +224,9 @@ autotools-utils_src_prepare() {
 # to econf respectively.
 autotools-utils_src_configure() {
 	debug-print-function ${FUNCNAME} "$@"
+
+	[[ -z ${myeconfargs+1} || $(declare -p myeconfargs) == 'declare -a'* ]] \
+		|| die 'autotools-utils.eclass: myeconfargs has to be an array.'
 
 	# Common args
 	local econfargs=()
