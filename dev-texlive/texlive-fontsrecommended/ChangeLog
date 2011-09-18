@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-fontsrecommended
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontsrecommended/ChangeLog,v 1.42 2011/08/14 17:38:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontsrecommended/ChangeLog,v 1.43 2011/09/18 15:51:01 armin76 Exp $
+
+  18 Sep 2011; Raúl Porcel <armin76@gentoo.org>
+  texlive-fontsrecommended-2010.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #355085
 
   14 Aug 2011; Markus Meier <maekke@gentoo.org>
   texlive-fontsrecommended-2010.ebuild:

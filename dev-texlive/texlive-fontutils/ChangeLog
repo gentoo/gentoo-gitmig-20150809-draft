@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-fontutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontutils/ChangeLog,v 1.24 2011/08/14 17:39:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-fontutils/ChangeLog,v 1.25 2011/09/18 15:53:41 armin76 Exp $
+
+  18 Sep 2011; Raúl Porcel <armin76@gentoo.org>
+  texlive-fontutils-2010-r1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #355085
 
   14 Aug 2011; Markus Meier <maekke@gentoo.org>
   texlive-fontutils-2010-r1.ebuild:

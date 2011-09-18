@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-documentation-turkish
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-turkish/ChangeLog,v 1.36 2011/08/14 17:34:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-turkish/ChangeLog,v 1.37 2011/09/18 15:43:57 armin76 Exp $
+
+  18 Sep 2011; Raúl Porcel <armin76@gentoo.org>
+  texlive-documentation-turkish-2010.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #355085
 
   14 Aug 2011; Markus Meier <maekke@gentoo.org>
   texlive-documentation-turkish-2010.ebuild:
