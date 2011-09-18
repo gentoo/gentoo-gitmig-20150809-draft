@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.22 2011/09/17 21:15:08 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.23 2011/09/18 23:21:11 idl0r Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -75,7 +75,7 @@ pkg_postinst() {
 	ewarn "The installed db file '%(storage)/overlays.xml'"
 	ewarn "has been renamed to '%(storage)/installed.xml'"
 
-	if "${EROOT}/var/lib/layman/overlays.xml"; then
+	if [ -f "${EROOT}/var/lib/layman/overlays.xml" ]; then
 		mv "${EROOT}/var/lib/layman/overlays.xml" "${EROOT}/var/lib/layman/installed.xml"
 		einfo "${EROOT}/var/lib/layman/overlays.xml has been moved to ${EROOT}/var/lib/layman/installed.xml"
 	fi

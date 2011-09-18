@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.147 2011/09/17 21:15:08 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.148 2011/09/18 23:21:11 idl0r Exp $
+
+  18 Sep 2011; Christian Ruppert <idl0r@gentoo.org> layman-2.0.0_rc3.ebuild,
+  layman-9999.ebuild:
+  Fix if statement by adding a file test.
 
 *layman-2.0.0_rc3 (17 Sep 2011)
 
