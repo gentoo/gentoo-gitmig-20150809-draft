@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/g-octave-0.4.1-r1.ebuild,v 1.1 2011/05/31 05:24:11 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/g-octave-0.4.1-r2.ebuild,v 1.1 2011/09/18 01:44:11 rafaelmartins Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 PYTHON_DEPEND="*:2.6"
 
-DB_COMMIT="d66097a24ed9654f350f16ba6f7395f314e9e48f"
+DB_COMMIT="f8de0c5a490a9572a7e6592f0082c3f7e039ef67"
 DB_DIR="rafaelmartins-${PN}-db-${DB_COMMIT:0:7}"
 
 inherit distutils eutils
@@ -79,7 +79,7 @@ pkg_config() {
 	mkdir -p "${db}"
 	einfo "Extracting g-octave database files to: ${db}"
 	tar -xzf "${DISTDIR}/${PN}-db-${DB_COMMIT:0:7}.tar.gz" -C "${db}" || die 'tar failed.'
-	rm -rf "${db}"/{patches,octave-forge,info.json,timestamp}
+	rm -rf "${db}"/{patches,octave-forge,info.json,manifest.json,timestamp}
 	mv -f "${db}/${DB_DIR}"/* "${db}" || die 'mv failed.'
 	rm -rf "${db}/${DB_DIR}"
 }

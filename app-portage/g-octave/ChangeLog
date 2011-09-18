@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/g-octave
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/ChangeLog,v 1.5 2011/05/31 05:31:43 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/ChangeLog,v 1.6 2011/09/18 01:44:11 rafaelmartins Exp $
+
+*g-octave-0.4.1-r2 (18 Sep 2011)
+
+  18 Sep 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  -g-octave-0.4.1-r1.ebuild, +g-octave-0.4.1-r2.ebuild:
+  Revision bump. New package database.
 
 *g-octave-0.4.1-r1 (31 May 2011)
 
