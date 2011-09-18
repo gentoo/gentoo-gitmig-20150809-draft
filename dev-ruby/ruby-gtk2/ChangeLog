@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-gtk2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk2/ChangeLog,v 1.81 2011/09/18 02:10:55 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtk2/ChangeLog,v 1.82 2011/09/18 09:14:21 naota Exp $
+
+*ruby-gtk2-1.0.0 (18 Sep 2011)
+
+  18 Sep 2011; Naohiro Aota <naota@gentoo.org> ruby-gtk2-0.90.9.ebuild,
+  +ruby-gtk2-1.0.0.ebuild:
+  Version bump. Bug #376371
 
   18 Sep 2011; Naohiro Aota <naota@gentoo.org> ruby-gtk2-0.90.9.ebuild:
   Fix build dependecies.
