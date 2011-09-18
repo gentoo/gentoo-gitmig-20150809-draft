@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/semacode
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/semacode/ChangeLog,v 1.1 2011/09/18 12:31:16 flameeyes Exp $
+
+*semacode-0.7.4 (18 Sep 2011)
+
+  18 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org> +semacode-0.7.4.ebuild,
+  +metadata.xml:
+  Initial import of the semacode datamatrix generation library.
+
