@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/ddclient
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.45 2011/09/16 13:32:05 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.46 2011/09/18 21:43:55 maekke Exp $
+
+  18 Sep 2011; Markus Meier <maekke@gentoo.org> ddclient-3.8.1-r3.ebuild:
+  x86 stable, bug #382717
 
   16 Sep 2011; Tony Vroon <chainsaw@gentoo.org> ddclient-3.8.1-r3.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
