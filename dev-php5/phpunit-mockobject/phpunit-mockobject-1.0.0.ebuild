@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit-mockobject/phpunit-mockobject-1.0.0.ebuild,v 1.1 2010/10/04 22:50:16 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/phpunit-mockobject/phpunit-mockobject-1.0.0.ebuild,v 1.2 2011/09/18 10:59:42 olemarkus Exp $
 
 EAPI="2"
 inherit php-pear-lib-r1
@@ -17,7 +17,7 @@ IUSE=""
 DEPEND="!dev-php4/phpunit
 	>=dev-php/PEAR-PEAR-1.9.1"
 RDEPEND="${DEPEND}
-	dev-php5/PEAR-Text_Template"
+	dev-php/php-texttemplate"
 
 need_php_by_category
 
