@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xbmc-addon-xvdr/xbmc-addon-xvdr-9999.ebuild,v 1.1 2011/09/17 20:17:15 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xbmc-addon-xvdr/xbmc-addon-xvdr-9999.ebuild,v 1.2 2011/09/18 11:36:52 flameeyes Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ EGIT_REPO_URI="git://github.com/pipelka/xbmc-addon-xvdr.git"
 DESCRIPTION="XBMC addon: add VDR (http://www.cadsoft.de/vdr) as a TV/PVR Backend"
 HOMEPAGE="https://github.com/pipelka/xbmc-addon-xvdr"
 SRC_URI=""
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
