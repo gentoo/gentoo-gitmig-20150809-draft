@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/serf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.60 2011/09/13 18:55:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.61 2011/09/18 13:55:50 pacho Exp $
+
+  18 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Add Arfrever as proxy maintainer with proxy-maintainers as herd.
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #246793
