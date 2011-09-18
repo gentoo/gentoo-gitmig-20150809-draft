@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libtinynotify
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libtinynotify/ChangeLog,v 1.4 2011/09/04 11:24:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libtinynotify/ChangeLog,v 1.5 2011/09/18 09:28:42 mgorny Exp $
+
+  18 Sep 2011; Michał Górny <mgorny@gentoo.org> libtinynotify-0.2.ebuild:
+  Fix implicit $(use_enable debug). Update gtk-doc dep and thus remove test
+  restriction.
 
 *libtinynotify-0.2 (04 Sep 2011)
 
