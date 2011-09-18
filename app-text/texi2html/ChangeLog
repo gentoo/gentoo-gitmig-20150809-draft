@@ -1,6 +1,9 @@
 # ChangeLog for app-text/texi2html
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.49 2011/08/14 17:02:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texi2html/ChangeLog,v 1.50 2011/09/18 14:22:29 armin76 Exp $
+
+  18 Sep 2011; Raúl Porcel <armin76@gentoo.org> texi2html-1.78.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #355085
 
   14 Aug 2011; Markus Meier <maekke@gentoo.org> texi2html-1.78.ebuild:
   arm stable, bug #355085
