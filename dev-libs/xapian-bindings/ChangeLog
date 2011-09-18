@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/xapian-bindings
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.24 2011/09/16 19:53:26 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.25 2011/09/18 08:43:28 blueness Exp $
+
+*xapian-bindings-1.2.7-r2 (18 Sep 2011)
+
+  18 Sep 2011; Anthony G. Basile <blueness@gentoo.org>
+  -xapian-bindings-1.2.7-r1.ebuild, +xapian-bindings-1.2.7-r2.ebuild,
+  metadata.xml:
+  Fix java bindings, bug #176419
 
 *xapian-bindings-1.2.7-r1 (16 Sep 2011)
 

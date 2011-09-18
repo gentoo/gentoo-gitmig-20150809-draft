@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-1.2.7-r1.ebuild,v 1.1 2011/09/16 19:53:26 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-1.2.7-r2.ebuild,v 1.1 2011/09/18 08:43:28 blueness Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -35,16 +35,27 @@ RDEPEND="${COMMONDEPEND}
 	java? ( >=virtual/jre-1.3 )"
 
 pkg_setup() {
+	java-pkg-opt-2_pkg_setup
+
 	if use python; then
 		python_pkg_setup
 	fi
 }
 
 src_prepare() {
-	sed \
-		-e 's:\(^pkgpylib_DATA = xapian/__init__.py\).*:\1:' \
-		-e 's|\(^xapian/__init__.py: modern/xapian.py\)|\1 xapian/_xapian$(PYTHON_SO)|' \
-		-i python/Makefile.{am,in} || die "sed failed"
+	java-pkg-opt-2_src_prepare
+	if use java; then
+		sed \
+			-e 's/$(JAVAC)/$(JAVAC) $(JAVACFLAGS)/' \
+			-i java{/,/org/xapian/errors/,/org/xapian/}Makefile.in || die "sed failed"
+	fi
+
+	if use python; then
+		sed \
+			-e 's:\(^pkgpylib_DATA = xapian/__init__.py\).*:\1:' \
+			-e 's|\(^xapian/__init__.py: modern/xapian.py\)|\1 xapian/_xapian$(PYTHON_SO)|' \
+			-i python/Makefile.in || die "sed failed"
+	fi
 }
 
 src_configure() {
