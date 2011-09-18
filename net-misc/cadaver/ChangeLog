@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/cadaver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/ChangeLog,v 1.41 2011/09/13 18:56:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/ChangeLog,v 1.42 2011/09/18 13:57:20 pacho Exp $
+
+  18 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Add Arfrever as proxy maintainer with proxy-maintainers as herd.
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #246793
