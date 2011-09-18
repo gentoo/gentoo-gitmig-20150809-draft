@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng-gnome2.eclass,v 1.10 2011/09/18 03:45:21 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng-gnome2.eclass,v 1.11 2011/09/18 04:30:14 naota Exp $
 
 # @ECLASS: ruby-ng-gnome2.eclass
 # @MAINTAINER:
@@ -27,16 +27,15 @@ if [ $(get_version_component_range "1-2") == "0.19" ]; then
 	subbinding=${subbinding/%2}
 else
 	subbinding=${subbinding/-/_}
+	DEPEND="dev-util/pkgconfig"
+	ruby_add_bdepend "dev-ruby/pkg-config
+		dev-ruby/rubygems"
 fi
 S=${WORKDIR}/ruby-gnome2-all-${PV}/${subbinding}
 SRC_URI="mirror://sourceforge/ruby-gnome2/ruby-gnome2-all-${PV}.tar.gz"
 HOMEPAGE="http://ruby-gnome2.sourceforge.jp/"
 LICENSE="Ruby"
 SLOT="0"
-
-DEPEND="dev-util/pkgconfig"
-ruby_add_bdepend "dev-ruby/pkg-config
-	dev-ruby/rubygems"
 
 # @FUNCTION: each_ruby_configure
 # @DESCRIPTION:
