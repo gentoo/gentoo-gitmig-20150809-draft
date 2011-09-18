@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/entropy-1.0_rc53.ebuild,v 1.1 2011/09/18 10:47:13 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/entropy-1.0_rc53.ebuild,v 1.2 2011/09/18 17:31:00 lxnay Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
+PYTHON_USE_WITH="sqlite"
 inherit eutils python
 
 DESCRIPTION="Entropy Package Manager foundation library"
