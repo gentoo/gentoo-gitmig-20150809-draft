@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.1264 2011/09/16 17:33:51 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.1265 2011/09/18 20:24:14 mpagano Exp $
+
+  18 Sep 2011; Michael Pagano <mpagano@gentoo.org> git-sources-3.1_rc5.ebuild,
+  git-sources-3.1_rc6.ebuild:
+  Change ebuilds to use EGIT_COMMIT
 
   16 Sep 2011; Michael Pagano <mpagano@gentoo.org> -git-sources-3.1_rc3.ebuild,
   -git-sources-3.1_rc3-r1.ebuild, -git-sources-3.1_rc3-r2.ebuild,
