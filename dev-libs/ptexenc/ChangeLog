@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/ptexenc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptexenc/ChangeLog,v 1.16 2011/08/27 19:50:37 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ptexenc/ChangeLog,v 1.17 2011/09/18 14:47:32 armin76 Exp $
+
+  18 Sep 2011; Raúl Porcel <armin76@gentoo.org>
+  ptexenc-1.1.0_p20100722.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #355085
 
   27 Aug 2011; Fabian Groffen <grobian@gentoo.org>
   ptexenc-1.2.0_p20110705.ebuild:
