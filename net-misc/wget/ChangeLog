@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.146 2011/09/06 16:43:49 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.147 2011/09/18 23:08:35 radhermit Exp $
+
+*wget-1.13.4 (18 Sep 2011)
+
+  18 Sep 2011; Tim Harder <radhermit@gentoo.org> +wget-1.13.4.ebuild:
+  Version bump. Add explicit build dependency on xz-utils.
 
   06 Sep 2011; Fabian Groffen <grobian@gentoo.org>
   files/wget-1.13-static-link-libz.patch:
