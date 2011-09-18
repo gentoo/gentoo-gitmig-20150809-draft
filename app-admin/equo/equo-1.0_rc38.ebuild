@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/equo/equo-1.0_rc38.ebuild,v 1.1 2011/08/12 09:30:46 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/equo/equo-1.0_rc38.ebuild,v 1.2 2011/09/18 17:23:49 lxnay Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
-inherit eutils python bash-completion
+inherit eutils python bash-completion-r1
 
 DESCRIPTION="Entropy Package Manager text-based client"
 HOMEPAGE="http://www.sabayon.org"
@@ -26,12 +26,11 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" LIBDIR="usr/lib" equo-install || die "make install failed"
-	dobashcompletion "${S}/misc/equo-completion.bash" equo
+	newbashcomp "${S}/misc/equo-completion.bash" equo
 }
 
 pkg_postinst() {
 	python_mod_optimize "/usr/lib/entropy/client"
-	bash-completion_pkg_postinst
 	echo
 	elog "If you would like to allow users in the 'entropy' group"
 	elog "to update available package repositories, please consider"
