@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/hivex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/ChangeLog,v 1.3 2011/09/17 15:02:37 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/ChangeLog,v 1.4 2011/09/18 12:22:56 maksbotan Exp $
+
+  18 Sep 2011; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml:
+  Fix herd to be proxy-maintainers
 
   17 Sep 2011; Maxim Koltsov <maksbotan@gentoo.org> hivex-1.3.1.ebuild:
   Remove unneeded part of LINGUAS-handling code. Thanks to Andreis Vinogradovs
