@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/chunky_png
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/chunky_png/ChangeLog,v 1.1 2011/09/18 13:06:17 flameeyes Exp $
+
+*chunky_png-1.2.4 (18 Sep 2011)
+
+  18 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +chunky_png-1.2.4.ebuild, +metadata.xml:
+  Initial import of the pure-Ruby chunky_png library.
+
