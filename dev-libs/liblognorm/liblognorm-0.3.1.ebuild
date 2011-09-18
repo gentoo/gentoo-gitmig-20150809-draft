@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/liblognorm-0.3.1.ebuild,v 1.2 2011/08/30 08:20:38 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/liblognorm-0.3.1.ebuild,v 1.3 2011/09/18 10:49:09 mgorny Exp $
 
 EAPI=4
 
@@ -21,6 +21,14 @@ DEPEND="
 	dev-libs/libestr
 	dev-libs/libee"
 RDEPEND="${DEPEND}"
+
+src_configure() {
+	local myeconfargs=(
+		$(use_enable debug)
+	)
+
+	autotools-utils_src_configure
+}
 
 src_compile() {
 	emake -j1

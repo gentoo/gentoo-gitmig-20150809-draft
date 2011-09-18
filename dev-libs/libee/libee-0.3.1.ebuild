@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libee/libee-0.3.1.ebuild,v 1.1 2011/08/29 19:48:16 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libee/libee-0.3.1.ebuild,v 1.2 2011/09/18 10:49:03 mgorny Exp $
 
 EAPI=4
 
@@ -24,6 +24,7 @@ DOCS=(INSTALL ChangeLog)
 
 src_configure() {
 	local myeconfargs=(
+		$(use_enable debug)
 		--enable-testbench
 	)
 	autotools-utils_src_configure
