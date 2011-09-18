@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-games
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-games/ChangeLog,v 1.37 2011/08/14 18:08:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-games/ChangeLog,v 1.38 2011/09/18 16:59:18 armin76 Exp $
+
+  18 Sep 2011; Raúl Porcel <armin76@gentoo.org> texlive-games-2010.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #355085
 
   14 Aug 2011; Markus Meier <maekke@gentoo.org> texlive-games-2010.ebuild:
   arm stable, bug #355085
