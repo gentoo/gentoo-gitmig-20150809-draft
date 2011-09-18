@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/openafs-kernel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.131 2011/09/13 17:54:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs-kernel/ChangeLog,v 1.132 2011/09/18 21:30:29 vapier Exp $
+
+  18 Sep 2011; Mike Frysinger <vapier@gentoo.org> openafs-kernel-1.4.14.ebuild:
+  Mark stable for amd64/x86 #383473 by Andrej Filipcic.
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #99651
