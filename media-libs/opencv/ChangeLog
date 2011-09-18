@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.44 2011/09/06 20:56:37 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.45 2011/09/18 20:30:22 dilfridge Exp $
+
+*opencv-2.3.0 (18 Sep 2011)
+
+  18 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org> +opencv-2.3.0.ebuild,
+  +files/opencv-2.3.0-convert_sets_to_options.patch,
+  +files/opencv-2.3.0-ffmpeg.patch, +files/opencv-2.3.0-numpy.patch,
+  +files/opencv-2.3.0-symlink.patch:
+  Version bump
 
   06 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   opencv-2.2.0-r10.ebuild:
