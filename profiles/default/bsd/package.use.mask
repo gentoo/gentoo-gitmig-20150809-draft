@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.19 2011/07/10 17:38:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/package.use.mask,v 1.20 2011/09/18 09:11:21 ssuominen Exp $
 
 # Sebastian Pipping <sping@gentoo.org> (22 Feb 2011)
 # No dev-util/source-highlight or media-sound/lilypond here, yet (bug #356069, bug #344289)
@@ -24,7 +24,6 @@ net-libs/c-client pam
 net-proxy/squid -ipf-transparent -pf-transparent
 sys-apps/baselayout pam
 sys-apps/coreutils acl
-sys-apps/hal dell disk-partition laptop
 sys-apps/help2man nls
 sys-auth/consolekit pam
 
