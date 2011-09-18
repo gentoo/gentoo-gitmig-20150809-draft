@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng-gnome2.eclass,v 1.8 2011/08/22 04:46:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng-gnome2.eclass,v 1.9 2011/09/18 02:06:04 naota Exp $
 
 # @ECLASS: ruby-ng-gnome2.eclass
 # @MAINTAINER:
@@ -30,6 +30,9 @@ SRC_URI="mirror://sourceforge/ruby-gnome2/ruby-gnome2-all-${PV}.tar.gz"
 HOMEPAGE="http://ruby-gnome2.sourceforge.jp/"
 LICENSE="Ruby"
 SLOT="0"
+
+ruby_add_bdepend "dev-ruby/pkg-config
+	dev-ruby/rubygems"
 
 # @FUNCTION: each_ruby_configure
 # @DESCRIPTION:
