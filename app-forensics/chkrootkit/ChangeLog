@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/chkrootkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.61 2011/09/16 12:37:40 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.62 2011/09/18 16:54:53 maekke Exp $
+
+  18 Sep 2011; Markus Meier <maekke@gentoo.org> chkrootkit-0.49.ebuild:
+  arm stable, bug #382455
 
   16 Sep 2011; Tony Vroon <chainsaw@gentoo.org> chkrootkit-0.49.ebuild:
   Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney,
