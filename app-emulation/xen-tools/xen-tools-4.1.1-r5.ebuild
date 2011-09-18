@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r5.ebuild,v 1.1 2011/09/18 12:31:58 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r5.ebuild,v 1.2 2011/09/18 17:03:29 alexxy Exp $
 
 EAPI="3"
 
@@ -176,7 +176,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-3.3.0-nostrip.patch"
 
 	# Patch to libxl bug #380343
-	epatch "${FILESDIR}/${PN}-4.1.1-xllib.patch"
+	epatch "${FILESDIR}/${PN}-4.1.1-libxl-tap.patch"
 
 	# Patch from bug #382329 for hvmloader
 	epatch "${FILESDIR}/${PN}-4.1.1-upstream-23104-1976adbf2b80.patch"
