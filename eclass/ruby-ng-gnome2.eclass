@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng-gnome2.eclass,v 1.9 2011/09/18 02:06:04 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng-gnome2.eclass,v 1.10 2011/09/18 03:45:21 naota Exp $
 
 # @ECLASS: ruby-ng-gnome2.eclass
 # @MAINTAINER:
@@ -12,7 +12,10 @@
 # This eclass simplifies installation of the various pieces of
 # ruby-gnome2 since they share a very common installation procedure.
 
-inherit ruby-ng multilib versionator
+RUBY_FAKEGEM_NAME="${PN#ruby-}"
+RUBY_FAKEGEM_TASK_TEST=""
+
+inherit ruby-fakegem multilib versionator
 
 IUSE=""
 
@@ -31,6 +34,7 @@ HOMEPAGE="http://ruby-gnome2.sourceforge.jp/"
 LICENSE="Ruby"
 SLOT="0"
 
+DEPEND="dev-util/pkgconfig"
 ruby_add_bdepend "dev-ruby/pkg-config
 	dev-ruby/rubygems"
 
@@ -66,6 +70,8 @@ each_ruby_install() {
 	dodir ${archdir#${EPREFIX}} /usr/$(get_libdir)/pkgconfig
 
 	emake DESTDIR="${D}" install || die "make install failed"
+
+	each_fakegem_install
 }
 
 # @FUNCTION: all_ruby_install
@@ -79,4 +85,6 @@ all_ruby_install() {
 		insinto /usr/share/doc/${PF}
 		doins -r sample || die "sample install failed"
 	fi
+
+	all_fakegem_install
 }
