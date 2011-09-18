@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/dbunit/dbunit-1.0.1.ebuild,v 1.8 2011/06/28 07:28:03 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/dbunit/dbunit-1.0.1.ebuild,v 1.9 2011/09/18 10:53:55 olemarkus Exp $
 
 EAPI="3"
 PHP_PEAR_CHANNEL="${FILESDIR}/channel.xml"
@@ -20,4 +20,4 @@ RDEPEND="${RDEPEND}
 	>=dev-php5/ezc-ConsoleTools-1.6
 	>=dev-php/file-iterator-1.2.2
 	dev-php/php-tokenstream
-	dev-php5/PEAR-Text_Template"
+	dev-php/php-texttemplate"
