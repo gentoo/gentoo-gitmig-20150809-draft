@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.163 2011/09/10 18:19:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.164 2011/09/18 10:51:21 mgorny Exp $
+
+  18 Sep 2011; Michał Górny <mgorny@gentoo.org> rtorrent-0.8.9.ebuild:
+  Fix implicit $(use_enable debug).
 
 *rtorrent-0.8.9 (10 Sep 2011)
 

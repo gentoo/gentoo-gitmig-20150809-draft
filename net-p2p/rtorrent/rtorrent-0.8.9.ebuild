@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.8.9.ebuild,v 1.1 2011/09/10 18:19:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/rtorrent-0.8.9.ebuild,v 1.2 2011/09/18 10:51:21 mgorny Exp $
 
 EAPI=4
 
@@ -40,6 +40,7 @@ src_prepare() {
 src_configure() {
 	local myeconfargs=(
 		--disable-dependency-tracking
+		$(use_enable debug)
 		$(use_enable ipv6)
 		$(use_with xmlrpc xmlrpc-c)
 	)
