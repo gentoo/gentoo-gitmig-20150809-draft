@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13059 2011/09/18 03:20:10 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13060 2011/09/18 07:53:52 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -735,9 +735,10 @@ sys-kernel/usermode-sources
 # can emerge udev.
 =sys-apps/pciutils-3.1.7-r1
 
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (25 Mar 2011)
-# Some packages fail to build or work with GnuTLS built with Nettle crypto backend.
-=net-libs/gnutls-2.12*
+# Tomáš Chvátal <scarabeus@gentoo.org> (18 Sep 2011)
+# Mask latest revisions using dev-libs/nettle and app-crypt/p11-kit
+# Needs tinderbox testing.
+>=net-libs/gnutls-2.12
 
 # Stefaan De Roeck <stefaan@gentoo.org> (19 Mar 2011)
 # New major upstream release.

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5710 2011/09/18 03:20:10 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5711 2011/09/18 07:53:52 scarabeus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
+  update pmask for gnutls.
 
   18 Sep 2011; Mounir Lamouri <volkmar@gentoo.org> package.mask:
   pmask www-plugins/weave for removal.
