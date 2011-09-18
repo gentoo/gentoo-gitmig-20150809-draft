@@ -1,0 +1,24 @@
+# ChangeLog for dev-php5/phpunit-mockobject
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit-mockobject/ChangeLog,v 1.1 2011/09/18 11:02:27 olemarkus Exp $
+
+  24 May 2011; Markos Chandras <hwoarang@gentoo.org>
+  phpunit-mockobject-1.0.3.ebuild:
+  Stable on amd64 wrt bug #368293
+
+  23 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  phpunit-mockobject-1.0.3.ebuild:
+  x86 stable wrt bug #368293
+
+*phpunit-mockobject-1.0.3 (26 Mar 2011)
+
+  26 Mar 2011; Ole Markus With <olemarkus@gentoo.org>
+  +phpunit-mockobject-1.0.3.ebuild:
+  Version bump
+
+*phpunit-mockobject-1.0.0 (04 Oct 2010)
+
+  04 Oct 2010; Markus Ullmann <jokey@gentoo.org>
+  +phpunit-mockobject-1.0.0.ebuild, +metadata.xml:
+  Initial import for phpunit-3.5
+
