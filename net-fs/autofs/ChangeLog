@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/autofs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.124 2011/09/15 06:50:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.125 2011/09/18 21:36:26 maekke Exp $
+
+  18 Sep 2011; Markus Meier <maekke@gentoo.org> autofs-5.0.6-r2.ebuild:
+  amd64/x86 stable, bug #379569
 
   15 Sep 2011; Peter Volkov <pva@gentoo.org> autofs-5.0.6-r2.ebuild:
   Depend on <glibc-2.14, temporary measure for bug #374403, thank cyrillic for
