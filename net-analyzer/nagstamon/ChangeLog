@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagstamon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/ChangeLog,v 1.22 2011/07/03 18:50:45 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/ChangeLog,v 1.23 2011/09/18 11:32:10 hwoarang Exp $
+
+  18 Sep 2011; Markos Chandras <hwoarang@gentoo.org> nagstamon-0.9.7.1.ebuild:
+  Stable on amd64 wrt bug #383407
 
   03 Jul 2011; Christian Ruppert <idl0r@gentoo.org> -nagstamon-0.9.5.ebuild,
   nagstamon-0.9.7.1.ebuild, -files/nagstamon-0.9.0-sharedir.patch:
