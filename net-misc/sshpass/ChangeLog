@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/sshpass
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sshpass/ChangeLog,v 1.8 2011/09/16 12:51:01 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sshpass/ChangeLog,v 1.9 2011/09/18 21:48:33 maekke Exp $
+
+  18 Sep 2011; Markus Meier <maekke@gentoo.org> sshpass-1.05.ebuild:
+  x86 stable, bug #382887
 
   16 Sep 2011; Tony Vroon <chainsaw@gentoo.org> sshpass-1.05.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
