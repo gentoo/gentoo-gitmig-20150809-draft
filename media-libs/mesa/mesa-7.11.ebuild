@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.11.ebuild,v 1.8 2011/09/16 19:32:56 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.11.ebuild,v 1.9 2011/09/18 15:45:24 mattst88 Exp $
 
 EAPI=3
 
@@ -187,7 +187,6 @@ src_configure() {
 		$(use_enable gles gles1)
 		$(use_enable gles gles2)
 		$(use_enable egl)
-		$(use_enable openvg)
 	"
 	if use egl; then
 		use shared-glapi || die "egl needs shared-glapi. Please either enable shared-glapi or disable the egl use flag ."
@@ -205,6 +204,7 @@ src_configure() {
 		myconf+="
 			--with-state-trackers=glx,dri$(use egl && echo ",egl")$(use openvg && echo ",vega")
 			$(use_enable llvm gallium-llvm)
+			$(use_enable openvg)
 		"
 		gallium_enable swrast
 		gallium_enable video_cards_vmware svga

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.365 2011/09/16 19:32:56 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.366 2011/09/18 15:45:24 mattst88 Exp $
+
+  18 Sep 2011; Matt Turner <mattst88@gentoo.org> mesa-7.11.ebuild:
+  Only allow openvg to be enabled with USE=gallium, bug 377689
 
   16 Sep 2011; Matt Turner <mattst88@gentoo.org> mesa-7.9.2.ebuild,
   mesa-7.10.2.ebuild, mesa-7.10.2-r1.ebuild, mesa-7.10.3.ebuild,
