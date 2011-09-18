@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.99 2011/08/11 02:17:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.100 2011/09/18 09:22:50 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -75,7 +75,7 @@ if version_is_at_least 2.18 ; then
 else
 	LICENSE="|| ( GPL-2 LGPL-2 )"
 fi
-IUSE="nls multitarget multislot test vanilla"
+IUSE="nls multitarget multislot static-libs test vanilla"
 if use multislot ; then
 	SLOT="${CTARGET}-${BVER}"
 elif is_cross ; then
@@ -234,6 +234,7 @@ toolchain-binutils_src_compile() {
 		--enable-64-bit-bfd \
 		--enable-shared \
 		--disable-werror \
+		$(use_enable static-libs static) \
 		${EXTRA_ECONF}
 	echo ./configure "$@"
 	"${S}"/configure "$@" || die
@@ -283,6 +284,7 @@ toolchain-binutils_src_install() {
 	cd "${MY_BUILDDIR}"
 	emake DESTDIR="${D}" tooldir="${LIBPATH}" install || die
 	rm -rf "${D}"/${LIBPATH}/bin
+	use static-libs || find "${D}" -name '*.la' -delete
 
 	# Newer versions of binutils get fancy with ${LIBPATH} #171905
 	cd "${D}"/${LIBPATH}
