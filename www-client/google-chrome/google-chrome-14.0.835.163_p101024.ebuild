@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-14.0.835.163_p101024.ebuild,v 1.1 2011/09/16 17:32:51 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-14.0.835.163_p101024.ebuild,v 1.2 2011/09/18 10:14:46 hwoarang Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ SRC_URI="amd64? ( ${SRC_BASE}amd64.deb ) x86? ( ${SRC_BASE}i386.deb )"
 
 LICENSE="google-chrome"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 ~x86"
 IUSE="+plugins"
 RESTRICT="mirror"
 
