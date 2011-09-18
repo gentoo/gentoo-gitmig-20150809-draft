@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.28 2011/08/09 09:30:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.29 2011/09/18 12:38:26 maksbotan Exp $
+
+  18 Sep 2011; Maxim Koltsov <maksbotan@gentoo.org> 64bit-native/package.mask:
+  Mask 32bit only games-action/cs2d on no-multilib profile
 
   09 Aug 2011; Samuli Suominen <ssuominen@gentoo.org> -gcc2/package.mask:
   Remove unused gcc2 parent wrt #361133
