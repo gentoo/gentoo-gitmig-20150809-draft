@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rqr/rqr-0.2.2.ebuild,v 1.1 2011/07/14 08:32:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rqr/rqr-0.2.2.ebuild,v 1.2 2011/09/18 12:21:51 flameeyes Exp $
 
 EAPI=4
 
@@ -39,6 +39,8 @@ DEPEND="${DEPEND} ${CDEPEND}"
 # tests require the presence of all external formats; simply add them as
 # a requirement for now.
 REQUIRED_USE="test? ( jpeg png tiff )"
+
+RUBY_PATCHES=( "${FILESDIR}"/${P}+libpng-1.5.patch )
 
 each_ruby_configure() {
 	cd ext/rqr
