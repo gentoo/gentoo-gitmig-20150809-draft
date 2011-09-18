@@ -1,6 +1,9 @@
 # ChangeLog for app-text/poppler-data
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/ChangeLog,v 1.41 2011/09/16 13:20:06 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler-data/ChangeLog,v 1.42 2011/09/18 21:59:44 maekke Exp $
+
+  18 Sep 2011; Markus Meier <maekke@gentoo.org> poppler-data-0.4.4.ebuild:
+  x86 stable, bug #382951
 
   16 Sep 2011; Tony Vroon <chainsaw@gentoo.org> poppler-data-0.4.4.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
