@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.137 2011/09/13 18:52:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.138 2011/09/18 13:45:07 pacho Exp $
+
+  18 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Add Arfrever as proxy maintainer with proxy-maintainers as herd.
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #246793
