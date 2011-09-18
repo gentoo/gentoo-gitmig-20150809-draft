@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-10.1.ebuild,v 1.6 2011/08/11 02:43:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-10.1.ebuild,v 1.7 2011/09/18 01:37:04 vapier Exp $
 
 EAPI="2"
 
@@ -112,6 +112,8 @@ src_unpack() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-10.0-python-2.7.patch #350098
 	epatch "${FILESDIR}"/${PN}-10.1-gcc-4.6.patch #367261
+	epatch "${FILESDIR}"/${P}-libpng-1.5.patch #380127
+	epatch "${FILESDIR}"/${PN}-10.1-headers.patch #380127
 
 	# some dirs ship generated autotools, some dont
 	local d
