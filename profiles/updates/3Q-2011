@@ -20,3 +20,4 @@ move dev-php5/suhosin dev-php/suhosin
 move dev-php5/PEAR-Text_Template dev-php/php-texttemplate
 move dev-php5/PHPonTrax dev-php/PHPonTrax
 move dev-php5/phpunit-mockobject dev-php/phpunit-mockobject
+move dev-php5/phpunit-selenium dev-php/phpunit-selenium
