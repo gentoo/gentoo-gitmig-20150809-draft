@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libunwind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/ChangeLog,v 1.16 2011/08/28 15:18:02 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libunwind/ChangeLog,v 1.17 2011/09/18 05:49:01 vapier Exp $
+
+*libunwind-1.0.1 (18 Sep 2011)
+
+  18 Sep 2011; Mike Frysinger <vapier@gentoo.org> +libunwind-1.0.1.ebuild,
+  +files/libunwind-1.0.1-disable-setjmp.patch:
+  Version bump which includes a fix from upstream for #382005 by Maks Verver.
 
   28 Aug 2011; Naohiro Aota <naota@gentoo.org> libunwind-1.0.ebuild:
   Add QA_DT_NEEDED for x86-fbsd
