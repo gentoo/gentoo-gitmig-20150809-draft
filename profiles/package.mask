@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13061 2011/09/18 09:21:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13062 2011/09/18 23:44:38 blueness Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Anthony G. Basile <blueness@gentoo.org> (18 Sep 2011)
+# Masked while testing potentially dangerous utility
+sys-apps/elfix
 
 # Mounir Lamouri <volkmar@gentoo.org> (18 Sep 2011)
 # Masked for removal in 30 days. Use Firefox 4 or higher instead.

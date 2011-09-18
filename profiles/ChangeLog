@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5712 2011/09/18 09:21:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5713 2011/09/18 23:44:38 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Sep 2011; Anthony G. Basile <blueness@gentoo.org> package.mask:
+  Mask sys-apps/elfix while testing experimental utility
 
   18 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Remove entry for sys-apps/hal and app-misc/hal-info.
