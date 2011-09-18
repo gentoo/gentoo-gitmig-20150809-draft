@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.299 2011/09/16 14:43:29 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.300 2011/09/18 21:47:55 maekke Exp $
+
+  18 Sep 2011; Markus Meier <maekke@gentoo.org>
+  nvidia-drivers-275.09.07.ebuild:
+  x86 stable, bug #382835
 
   16 Sep 2011; Tony Vroon <chainsaw@gentoo.org>
   nvidia-drivers-275.09.07.ebuild:
