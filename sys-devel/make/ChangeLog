@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/make
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.88 2011/09/17 23:29:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/make/ChangeLog,v 1.89 2011/09/18 16:41:18 maekke Exp $
+
+  18 Sep 2011; Markus Meier <maekke@gentoo.org> make-3.82-r1.ebuild:
+  arm stable, bug #381199
 
 *make-3.82-r3 (17 Sep 2011)
 
