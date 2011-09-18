@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.22 2011/09/18 07:57:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.23 2011/09/18 21:03:59 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -58,6 +58,7 @@
 #
 # src_configure() {
 # 	local myeconfargs=(
+# 		$(use_enable debug)
 # 		$(use_with qt4)
 # 		$(use_enable threads multithreading)
 # 		$(use_with tiff)
