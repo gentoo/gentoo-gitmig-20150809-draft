@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/iwl1000-ucode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl1000-ucode/ChangeLog,v 1.5 2011/09/16 12:22:02 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl1000-ucode/ChangeLog,v 1.6 2011/09/18 21:41:28 maekke Exp $
+
+  18 Sep 2011; Markus Meier <maekke@gentoo.org> iwl1000-ucode-39.31.5.1.ebuild:
+  x86 stable, bug #382509
 
   16 Sep 2011; Tony Vroon <chainsaw@gentoo.org> iwl1000-ucode-39.31.5.1.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo, Ian
