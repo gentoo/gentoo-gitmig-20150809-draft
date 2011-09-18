@@ -1,5 +1,8 @@
 
 
+  18 Sep 2011; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
+  Added no-herd to metadata.xml
+
   24 Aug 2011; Markus Meier <maekke@gentoo.org> spew-1.0.8.ebuild:
   x86 stable, bug #380097
 
