@@ -1,5 +1,10 @@
 
 
+*elfix-0.2.0 (18 Sep 2011)
+
+  18 Sep 2011; Anthony G. Basile <blueness@gentoo.org> +elfix-0.2.0.ebuild:
+  Version bump, adds paxctl-ng
+
   13 Sep 2011; Anthony G. Basile <blueness@gentoo.org> -elfix-0.1.1.ebuild:
   Removed deprecated version
 
