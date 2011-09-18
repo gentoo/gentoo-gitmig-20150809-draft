@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.16.ebuild,v 1.8 2011/03/16 10:09:30 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.16.ebuild,v 1.9 2011/09/18 09:41:22 ssuominen Exp $
 
-EAPI="2"
+EAPI=4
 
 DESCRIPTION="Spell checking widget for GTK2"
 HOMEPAGE="http://gtkspell.sourceforge.net/"
@@ -14,20 +14,18 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos ~x86-solaris"
 IUSE="doc"
 
-RDEPEND=">=x11-libs/gtk+-2:2
+RDEPEND="x11-libs/gtk+:2
 	>=app-text/enchant-1.1.6"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.35.0
-	doc? (
-		>=dev-util/gtk-doc-1
-		=app-text/docbook-xml-dtd-4.2* )"
+	doc? ( dev-util/gtk-doc app-text/docbook-xml-dtd:4.2 )"
+
+DOCS=( AUTHORS ChangeLog README ) # NEWS file is empty
 
 src_prepare() {
 	# Fix intltoolize broken file, see upstream #577133
-	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
-		|| die "sed failed"
+	sed -i -e "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" po/Makefile.in.in || die
 }
 
 src_configure() {
@@ -37,7 +35,6 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
-	# not installing NEWS, it's empty
-	dodoc AUTHORS ChangeLog README || die "dodoc failed"
+	default
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
