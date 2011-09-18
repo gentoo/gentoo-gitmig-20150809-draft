@@ -13,7 +13,6 @@
 # If you wish to run dhcpd in a chroot, uncomment the following line
 # DHCPD_CHROOT="/var/lib/dhcp/chroot"
 
-# Then run emerge dhcp --config
 # All file paths below are relative to the chroot.
 # You can specify a different chroot directory but MAKE SURE it's empty.
 

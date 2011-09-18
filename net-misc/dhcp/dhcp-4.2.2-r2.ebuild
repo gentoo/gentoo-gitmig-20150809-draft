@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.2.2-r2.ebuild,v 1.1 2011/09/17 05:28:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.2.2-r2.ebuild,v 1.2 2011/09/18 19:18:11 vapier Exp $
 
 EAPI="2"
 
@@ -192,7 +192,7 @@ src_install() {
 		fi
 
 		newinitd "${FILESDIR}"/dhcpd.init3 dhcpd || die
-		newconfd "${FILESDIR}"/dhcpd.conf dhcpd || die
+		newconfd "${FILESDIR}"/dhcpd.conf2 dhcpd || die
 		newinitd "${FILESDIR}"/dhcrelay.init2 dhcrelay || die
 		newconfd "${FILESDIR}"/dhcrelay.conf dhcrelay || die
 	fi
