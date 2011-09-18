@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/zpaq-3.01.ebuild,v 1.1 2011/08/25 11:34:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/zpaq-3.01.ebuild,v 1.2 2011/09/18 10:16:45 mgorny Exp $
 
 EAPI=3
 inherit autotools autotools-utils
@@ -25,6 +25,14 @@ src_prepare() {
 	EPATCH_OPTS+=-p1 epatch "${FILESDIR}"/${PN}-${PV%.*}-autotools.patch
 	autotools-utils_src_prepare
 	eautoreconf
+}
+
+src_configure() {
+	local myeconfargs=(
+		$(use_enable debug)
+	)
+
+	autotools-utils_src_configure
 }
 
 pkg_postinst() {

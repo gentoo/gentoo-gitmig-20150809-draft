@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/zpaq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/ChangeLog,v 1.5 2011/08/25 12:13:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zpaq/ChangeLog,v 1.6 2011/09/18 10:16:45 mgorny Exp $
+
+  18 Sep 2011; Michał Górny <mgorny@gentoo.org> zpaq-2.05.ebuild,
+  zpaq-3.01.ebuild:
+  Fix implicit $(use_enable debug).
 
   25 Aug 2011; Michał Górny <mgorny@gentoo.org> files/zpaq-3-autotools.patch:
   Quickly fix zpaqopt contents.
