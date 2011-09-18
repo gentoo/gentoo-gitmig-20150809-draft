@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.445 2011/09/16 18:18:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.446 2011/09/18 03:08:19 floppym Exp $
+
+  18 Sep 2011; Mike Gilbert <floppym@gentoo.org> chromium-14.0.835.163.ebuild,
+  chromium-15.0.874.15.ebuild, chromium-9999-r1.ebuild:
+  Add workaround for build failure with zlib-1.2.5.1-r1. Bug 383371 by Chris
+  Smith.
 
 *chromium-15.0.874.15 (16 Sep 2011)
 

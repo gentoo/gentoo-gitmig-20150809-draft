@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-15.0.874.15.ebuild,v 1.1 2011/09/16 18:18:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-15.0.874.15.ebuild,v 1.2 2011/09/18 03:08:18 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -123,6 +123,11 @@ pkg_setup() {
 
 src_prepare() {
 	cp "${FILESDIR}/nacl.gypi" chrome/ || die
+
+	# zlib-1.2.5.1-r1 renames the OF macro in zconf.h, bug 383371.
+	sed -i '1i#define OF(x) x' \
+		third_party/zlib/contrib/minizip/{ioapi,{,un}zip}.c \
+		chrome/common/zip.cc || die
 
 	epatch_user
 
