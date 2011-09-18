@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.105 2011/09/11 13:31:02 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.106 2011/09/18 16:52:32 maekke Exp $
+
+  18 Sep 2011; Markus Meier <maekke@gentoo.org> ntop-4.0.3.ebuild:
+  arm stable, bug #382091
 
   11 Sep 2011; Christian Ruppert <idl0r@gentoo.org> ntop-4.0.3.ebuild:
   Fix HOMEPAGE.

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-4.0.3.ebuild,v 1.4 2011/09/11 13:31:02 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-4.0.3.ebuild,v 1.5 2011/09/18 16:52:32 maekke Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/ntop/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="amd64 arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
 IUSE="ipv6 ssl"
 #snmp support is disabled
 
