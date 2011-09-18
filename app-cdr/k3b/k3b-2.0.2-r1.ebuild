@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.2-r1.ebuild,v 1.8 2011/08/11 09:37:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.2-r1.ebuild,v 1.9 2011/09/18 10:08:03 dilfridge Exp $
 
 EAPI=4
 
@@ -62,6 +62,8 @@ RDEPEND="${DEPEND}
 "
 
 DOCS+=( ChangeLog )
+
+PATCHES=( "${FILESDIR}/${P}-ffmpeg.patch" )
 
 src_configure() {
 	mycmakeargs=(
