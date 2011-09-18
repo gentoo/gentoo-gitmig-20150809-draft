@@ -1,6 +1,9 @@
 # ChangeLog for app-text/texlive
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.82 2011/08/28 17:00:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.83 2011/09/18 18:52:43 armin76 Exp $
+
+  18 Sep 2011; Raúl Porcel <armin76@gentoo.org> texlive-2010-r2.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #355085
 
   28 Aug 2011; Fabian Groffen <grobian@gentoo.org> texlive-2011.ebuild:
   Add back Prefix keywords
