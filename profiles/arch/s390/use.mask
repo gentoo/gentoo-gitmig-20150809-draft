@@ -13,7 +13,6 @@ lasi
 kde
 mpi
 fuse
-hal
 prolog
 jpeg2k
 libnl

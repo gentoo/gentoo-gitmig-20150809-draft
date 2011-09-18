@@ -54,7 +54,6 @@ fusion
 pike
 R
 octave
-hal
 bluetooth
 autotrace
 lqr

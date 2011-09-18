@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/s390 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/ChangeLog,v 1.42 2011/08/07 14:01:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/s390/ChangeLog,v 1.43 2011/09/18 09:16:41 ssuominen Exp $
+
+  18 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> use.mask:
+  Remove obsolete USE="hal" mask.
 
   07 Aug 2011; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask webp, fftw

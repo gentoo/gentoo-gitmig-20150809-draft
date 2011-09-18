@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.294 2011/09/04 13:32:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.295 2011/09/18 09:23:44 ssuominen Exp $
+
+  18 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> windows/interix/use.mask,
+  windows/winnt/use.mask:
+  Remove obsolete USE="hal" mask.
 
   04 Sep 2011; Fabian Groffen <grobian@gentoo.org>
   sunos/solaris/package.use.mask:
