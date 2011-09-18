@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.6.1.ebuild,v 1.1 2011/07/01 21:40:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.0.2.ebuild,v 1.1 2011/09/18 07:50:20 scarabeus Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit autotools libtool
 
@@ -16,9 +16,9 @@ else
 	MINOR_VERSION="${MINOR_VERSION%%.*}"
 	if [[ $((MINOR_VERSION % 2)) == 0 ]]; then
 		#SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.bz2"
-		SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
+		SRC_URI="mirror://gnu/${PN}/${P}.tar.xz"
 	else
-		SRC_URI="ftp://alpha.gnu.org/gnu/${PN}/${P}.tar.bz2"
+		SRC_URI="ftp://alpha.gnu.org/gnu/${PN}/${P}.tar.xz"
 	fi
 	unset MINOR_VERSION
 fi
@@ -27,16 +27,16 @@ fi
 LICENSE="GPL-3 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="bindist +cxx doc examples guile lzo +nettle nls test zlib"
+IUSE="+cxx doc examples guile +nettle nls static-libs test zlib"
 
 # lib/m4/hooks.m4 says that GnuTLS uses a fork of PaKChoiS.
-RDEPEND=">=dev-libs/libtasn1-0.3.4
-	nls? ( virtual/libintl )
+RDEPEND="
+	app-crypt/p11-kit
+	>=dev-libs/libtasn1-0.3.4
+	>=dev-libs/nettle-2.1[gmp]
 	guile? ( >=dev-scheme/guile-1.8[networking] )
-	nettle? ( >=dev-libs/nettle-2.1[gmp] )
-	!nettle? ( >=dev-libs/libgcrypt-1.4.0 )
-	zlib? ( >=sys-libs/zlib-1.2.3.1 )
-	!bindist? ( lzo? ( >=dev-libs/lzo-2 ) )"
+	nls? ( virtual/libintl )
+	zlib? ( >=sys-libs/zlib-1.2.3.1 )"
 DEPEND="${RDEPEND}
 	sys-devel/libtool
 	doc? ( dev-util/gtk-doc )
@@ -45,28 +45,25 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${P%_pre*}"
 
-pkg_setup() {
-	if use lzo && use bindist; then
-		ewarn "lzo support is disabled for binary distribution of GnuTLS due to licensing issues."
-	fi
-}
+DOCS=( AUTHORS ChangeLog NEWS README THANKS doc/TODO )
 
 src_prepare() {
-	# tests/suite directory is not distributed.
-	sed -e 's|AC_CONFIG_FILES(\[tests/suite/Makefile\])|:|' -i configure.ac
-
-	sed -e 's/imagesdir = $(infodir)/imagesdir = $(htmldir)/' -i doc/Makefile.am
-
 	local dir
-	for dir in m4 lib/m4 libextra/m4; do
+
+	# tests/suite directory is not distributed.
+	sed -i \
+		-e ':AC_CONFIG_FILES(\[tests/suite/Makefile\]):d' \
+		configure.ac || die
+
+	sed -i \
+		-e 's/imagesdir = $(infodir)/imagesdir = $(htmldir)/' \
+		doc/Makefile.am || die
+
+	for dir in m4 gl/m4; do
 		rm -f "${dir}/lt"* "${dir}/libtool.m4"
 	done
 	find . -name ltmain.sh -exec rm {} \;
-	for dir in . lib libextra; do
-		pushd "${dir}" > /dev/null
-		eautoreconf
-		popd > /dev/null
-	done
+	eautoreconf
 
 	# Use sane .so versioning on FreeBSD.
 	elibtoolize
@@ -74,21 +71,22 @@ src_prepare() {
 
 src_configure() {
 	local myconf
-	use bindist && myconf="--without-lzo" || myconf="$(use_with lzo)"
-	[[ "${VALGRIND_TESTS}" != "1" ]] && myconf+=" --disable-valgrind-tests"
+	[[ ${VALGRIND_TESTS} != 1 ]] && myconf+=" --disable-valgrind-tests"
 
-	econf --htmldir=/usr/share/doc/${P}/html \
+	econf \
+		--htmldir="${EPREFIX}/usr/share/doc/${PF}/html" \
+		$(use_enable static-libs static) \
 		$(use_enable cxx) \
 		$(use_enable doc gtk-doc) \
+		$(use_enable doc gtk-doc-pdf) \
 		$(use_enable guile) \
-		$(use_with !nettle libgcrypt) \
 		$(use_enable nls) \
 		$(use_with zlib) \
 		${myconf}
 }
 
 src_test() {
-	if has_version dev-util/valgrind && [[ "${VALGRIND_TESTS}" != "1" ]]; then
+	if has_version dev-util/valgrind && [[ ${VALGRIND_TESTS} != 1 ]]; then
 		elog
 		elog "You can set VALGRIND_TESTS=\"1\" to enable Valgrind tests."
 		elog
@@ -98,17 +96,17 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	default
 
-	dodoc AUTHORS ChangeLog NEWS README THANKS doc/TODO || die "dodoc failed"
+	find "${ED}" -name '*.la' -exec rm -f {} +
 
 	if use doc; then
-		dodoc doc/gnutls.{pdf,ps} || die "dodoc failed"
-		dohtml doc/gnutls.html || die "dohtml failed"
+		dodoc doc/gnutls.{pdf,ps}
+		dohtml doc/gnutls.html
 	fi
 
 	if use examples; then
 		docinto examples
-		dodoc doc/examples/*.c || die "dodoc failed"
+		dodoc doc/examples/*.c
 	fi
 }
