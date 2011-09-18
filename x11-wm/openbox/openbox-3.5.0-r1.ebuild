@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.0-r1.ebuild,v 1.1 2011/09/03 10:27:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.5.0-r1.ebuild,v 1.2 2011/09/18 12:03:40 hwoarang Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="1.9"
@@ -37,6 +37,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-gnome-session-3.4.9.patch
 	epatch "${FILESDIR}"/${PN}-as-needed.patch
 	epatch "${FILESDIR}"/${P}-configure-imlib2.patch
+	sed -i -e "s:-O0 -ggdb ::" "${S}"/m4/openbox.m4 || die
 	eautopoint
 	eautoreconf
 }
