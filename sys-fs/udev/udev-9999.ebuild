@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.52 2011/09/13 19:17:28 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.53 2011/09/18 06:42:42 zmedico Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ inherit ${vcs} eutils flag-o-matic multilib toolchain-funcs linux-info systemd
 
 if [[ ${PV} != "9999" ]]
 then
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-linux"
 	# please update testsys-tarball whenever udev-xxx/test/sys/ is changed
 	SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2
 			 test? ( mirror://gentoo/${PN}-171-testsys.tar.bz2 )"
@@ -180,20 +180,20 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--prefix=/usr \
-		--sysconfdir=/etc \
-		--sbindir=/sbin \
-		--libdir=/usr/$(get_libdir) \
-		--with-rootlibdir=/$(get_libdir) \
-		--libexecdir=/lib/udev \
+		--prefix="${EPREFIX}/usr" \
+		--sysconfdir="${EPREFIX}/etc" \
+		--sbindir="${EPREFIX}/sbin" \
+		--libdir="${EPREFIX}/usr/$(get_libdir)" \
+		--with-rootlibdir="${EPREFIX}/$(get_libdir)" \
+		--libexecdir="${EPREFIX}/lib/udev" \
 		--enable-logging \
 		--enable-static \
 		$(use_with selinux) \
 		$(use_enable debug) \
 		$(use_enable rule_generator) \
 		$(use_enable hwdb) \
-		--with-pci-ids-path=/usr/share/misc/pci.ids \
-		--with-usb-ids-path=/usr/share/misc/usb.ids \
+		--with-pci-ids-path="${EPREFIX}/usr/share/misc/pci.ids" \
+		--with-usb-ids-path="${EPREFIX}/usr/share/misc/usb.ids" \
 		$(use_enable acl udev_acl) \
 		$(use_enable gudev) \
 		$(use_enable introspection) \
@@ -212,7 +212,11 @@ src_compile() {
 
 src_install() {
 	emake -C "${WORKDIR}/${scriptname}" \
-		DESTDIR="${D}" LIBDIR="$(get_libdir)" \
+		DESTDIR="${D}" LIBDIR="${EPREFIX}$(get_libdir)" \
+		LIBUDEV="${EPREFIX}/lib/udev" \
+		MODPROBE_DIR="${EPREFIX}/etc/modprobe.d" \
+		INITD="${EPREFIX}/etc/init.d" \
+		CONFD="${EPREFIX}/etc/conf.d" \
 		KV_min="${KV_min}" KV_reliable="${KV_reliable}" \
 		install
 
@@ -229,7 +233,7 @@ src_install() {
 
 	# Add gentoo stuff to udev.conf
 	echo "# If you need to change mount-options, do it in /etc/fstab" \
-	>> "${D}"/etc/udev/udev.conf
+	>> "${ED}"/etc/udev/udev.conf
 
 	# let the dir exist at least
 	keepdir /etc/udev/rules.d
@@ -256,7 +260,7 @@ src_install() {
 	dodoc ChangeLog README TODO
 
 	# keep doc in just one directory, Bug #281137
-	rm -rf "${D}/usr/share/doc/${PN}"
+	rm -rf "${ED}/usr/share/doc/${PN}"
 	if use keymap
 	then
 		dodoc extras/keymap/README.keymap.txt
@@ -285,7 +289,7 @@ src_test() {
 
 pkg_preinst() {
 	# moving old files to support newer modprobe, 12 May 2009
-	local f dir=${ROOT}/etc/modprobe.d/
+	local f dir=${EROOT}/etc/modprobe.d/
 	for f in pnp-aliases blacklist; do
 		if [[ -f $dir/$f && ! -f $dir/$f.conf ]]
 		then
@@ -294,34 +298,34 @@ pkg_preinst() {
 		fi
 	done
 
-	if [[ -d ${ROOT}/lib/udev-state ]]
+	if [[ -d ${EROOT}/lib/udev-state ]]
 	then
-		mv -f "${ROOT}"/lib/udev-state/* "${D}"/lib/udev/state/
-		rm -r "${ROOT}"/lib/udev-state
+		mv -f "${EROOT}"/lib/udev-state/* "${ED}"/lib/udev/state/
+		rm -r "${EROOT}"/lib/udev-state
 	fi
 
-	if [[ -f ${ROOT}/etc/udev/udev.config &&
-		 ! -f ${ROOT}/etc/udev/udev.rules ]]
+	if [[ -f ${EROOT}/etc/udev/udev.config &&
+		 ! -f ${EROOT}/etc/udev/udev.rules ]]
 	then
-		mv -f "${ROOT}"/etc/udev/udev.config "${ROOT}"/etc/udev/udev.rules
+		mv -f "${EROOT}"/etc/udev/udev.config "${EROOT}"/etc/udev/udev.rules
 	fi
 
 	# delete the old udev.hotplug symlink if it is present
-	if [[ -h ${ROOT}/etc/hotplug.d/default/udev.hotplug ]]
+	if [[ -h ${EROOT}/etc/hotplug.d/default/udev.hotplug ]]
 	then
-		rm -f "${ROOT}"/etc/hotplug.d/default/udev.hotplug
+		rm -f "${EROOT}"/etc/hotplug.d/default/udev.hotplug
 	fi
 
 	# delete the old wait_for_sysfs.hotplug symlink if it is present
-	if [[ -h ${ROOT}/etc/hotplug.d/default/05-wait_for_sysfs.hotplug ]]
+	if [[ -h ${EROOT}/etc/hotplug.d/default/05-wait_for_sysfs.hotplug ]]
 	then
-		rm -f "${ROOT}"/etc/hotplug.d/default/05-wait_for_sysfs.hotplug
+		rm -f "${EROOT}"/etc/hotplug.d/default/05-wait_for_sysfs.hotplug
 	fi
 
 	# delete the old wait_for_sysfs.hotplug symlink if it is present
-	if [[ -h ${ROOT}/etc/hotplug.d/default/10-udev.hotplug ]]
+	if [[ -h ${EROOT}/etc/hotplug.d/default/10-udev.hotplug ]]
 	then
-		rm -f "${ROOT}"/etc/hotplug.d/default/10-udev.hotplug
+		rm -f "${EROOT}"/etc/hotplug.d/default/10-udev.hotplug
 	fi
 
 	has_version "=${CATEGORY}/${PN}-103-r3"
@@ -339,7 +343,7 @@ pkg_preinst() {
 
 # 19 Nov 2008
 fix_old_persistent_net_rules() {
-	local rules=${ROOT}/etc/udev/rules.d/70-persistent-net.rules
+	local rules=${EROOT}/etc/udev/rules.d/70-persistent-net.rules
 	[[ -f ${rules} ]] || return
 
 	elog
@@ -363,7 +367,7 @@ restart_udevd() {
 	fi
 
 	# need to merge to our system
-	[[ ${ROOT} = / ]] || return
+	[[ ${EROOT} = / ]] || return
 
 	# check if root of init-process is identical to ours (not in chroot)
 	[[ -r /proc/1/root && /proc/1/root/ -ef /proc/self/root/ ]] || return
@@ -404,16 +408,16 @@ postinst_init_scripts() {
 	# If we are building stages, add udev to the sysinit runlevel automatically.
 	if use build
 	then
-		if [[ -x "${ROOT}"/etc/init.d/udev  \
-			&& -d "${ROOT}"/etc/runlevels/sysinit ]]
+		if [[ -x "${EROOT}"/etc/init.d/udev  \
+			&& -d "${EROOT}"/etc/runlevels/sysinit ]]
 		then
-			ln -s /etc/init.d/udev "${ROOT}"/etc/runlevels/sysinit/udev
+			ln -s "${EPREFIX}"/etc/init.d/udev "${EROOT}"/etc/runlevels/sysinit/udev
 		fi
 		enable_postmount=true
 	fi
 
 	# migration to >=openrc-0.4
-	if [[ -e "${ROOT}"/etc/runlevels/sysinit && ! -e "${ROOT}"/etc/runlevels/sysinit/udev ]]
+	if [[ -e "${EROOT}"/etc/runlevels/sysinit && ! -e "${EROOT}"/etc/runlevels/sysinit/udev ]]
 	then
 		ewarn
 		ewarn "You need to add the udev init script to the runlevel sysinit,"
@@ -428,19 +432,19 @@ postinst_init_scripts() {
 	# like a hotplug event, 2009/10/15
 
 	# already enabled?
-	[[ -e "${ROOT}"/etc/runlevels/default/udev-postmount ]] && return
+	[[ -e "${EROOT}"/etc/runlevels/default/udev-postmount ]] && return
 
-	[[ -e "${ROOT}"/etc/runlevels/sysinit/udev ]] && enable_postmount=true
-	[[ "${ROOT}" = "/" && -d /dev/.udev/ ]] && enable_postmount=true
+	[[ -e "${EROOT}"/etc/runlevels/sysinit/udev ]] && enable_postmount=true
+	[[ "${EROOT}" = "/" && -d /dev/.udev/ ]] && enable_postmount=true
 
 	if $enable_postmount
 	then
 		local initd=udev-postmount
 
-		if [[ -e ${ROOT}/etc/init.d/${initd} ]] && \
-			[[ ! -e ${ROOT}/etc/runlevels/default/${initd} ]]
+		if [[ -e ${EROOT}/etc/init.d/${initd} ]] && \
+			[[ ! -e ${EROOT}/etc/runlevels/default/${initd} ]]
 		then
-			ln -snf /etc/init.d/${initd} "${ROOT}"/etc/runlevels/default/${initd}
+			ln -snf "${EPREFIX}"/etc/init.d/${initd} "${EROOT}"/etc/runlevels/default/${initd}
 			elog "Auto-adding '${initd}' service to your default runlevel"
 		fi
 	else
@@ -455,8 +459,8 @@ pkg_postinst() {
 
 	# "losetup -f" is confused if there is an empty /dev/loop/, Bug #338766
 	# So try to remove it here (will only work if empty).
-	rmdir "${ROOT}"/dev/loop 2>/dev/null
-	if [[ -d "${ROOT}"/dev/loop ]]
+	rmdir "${EROOT}"/dev/loop 2>/dev/null
+	if [[ -d "${EROOT}"/dev/loop ]]
 	then
 		ewarn "Please make sure your remove /dev/loop,"
 		ewarn "else losetup may be confused when looking for unused devices."
@@ -471,38 +475,38 @@ pkg_postinst() {
 
 	# delete 40-scsi-hotplug.rules, it is integrated in 50-udev.rules, 19 Jan 2007
 	if [[ $previous_equal_to_103_r3 = 0 ]] &&
-		[[ -e ${ROOT}/etc/udev/rules.d/40-scsi-hotplug.rules ]]
+		[[ -e ${EROOT}/etc/udev/rules.d/40-scsi-hotplug.rules ]]
 	then
 		ewarn "Deleting stray 40-scsi-hotplug.rules"
 		ewarn "installed by sys-fs/udev-103-r3"
-		rm -f "${ROOT}"/etc/udev/rules.d/40-scsi-hotplug.rules
+		rm -f "${EROOT}"/etc/udev/rules.d/40-scsi-hotplug.rules
 	fi
 
 	# Removing some device-nodes we thought we need some time ago, 25 Jan 2007
-	if [[ -d ${ROOT}/lib/udev/devices ]]
+	if [[ -d ${EROOT}/lib/udev/devices ]]
 	then
-		rm -f "${ROOT}"/lib/udev/devices/{null,zero,console,urandom}
+		rm -f "${EROOT}"/lib/udev/devices/{null,zero,console,urandom}
 	fi
 
 	# Removing some old file, 29 Jan 2007
 	if [[ $previous_less_than_104_r5 = 0 ]]
 	then
-		rm -f "${ROOT}"/etc/dev.d/net/hotplug.dev
-		rmdir --ignore-fail-on-non-empty "${ROOT}"/etc/dev.d/net 2>/dev/null
+		rm -f "${EROOT}"/etc/dev.d/net/hotplug.dev
+		rmdir --ignore-fail-on-non-empty "${EROOT}"/etc/dev.d/net 2>/dev/null
 	fi
 
 	# 19 Mar 2007
 	if [[ $previous_less_than_106_r5 = 0 ]] &&
-		[[ -e ${ROOT}/etc/udev/rules.d/95-net.rules ]]
+		[[ -e ${EROOT}/etc/udev/rules.d/95-net.rules ]]
 	then
-		rm -f "${ROOT}"/etc/udev/rules.d/95-net.rules
+		rm -f "${EROOT}"/etc/udev/rules.d/95-net.rules
 	fi
 
 	# Try to remove /etc/dev.d as that is obsolete, 23 Apr 2007
-	if [[ -d ${ROOT}/etc/dev.d ]]
+	if [[ -d ${EROOT}/etc/dev.d ]]
 	then
-		rmdir --ignore-fail-on-non-empty "${ROOT}"/etc/dev.d/default "${ROOT}"/etc/dev.d 2>/dev/null
-		if [[ -d ${ROOT}/etc/dev.d ]]
+		rmdir --ignore-fail-on-non-empty "${EROOT}"/etc/dev.d/default "${EROOT}"/etc/dev.d 2>/dev/null
+		if [[ -d ${EROOT}/etc/dev.d ]]
 		then
 			ewarn "You still have the directory /etc/dev.d on your system."
 			ewarn "This is no longer used by udev and can be removed."
@@ -512,10 +516,10 @@ pkg_postinst() {
 	# 64-device-mapper.rules now gets installed by sys-fs/device-mapper
 	# remove it if user don't has sys-fs/device-mapper installed, 27 Jun 2007
 	if [[ $previous_less_than_113 = 0 ]] &&
-		[[ -f ${ROOT}/etc/udev/rules.d/64-device-mapper.rules ]] &&
+		[[ -f ${EROOT}/etc/udev/rules.d/64-device-mapper.rules ]] &&
 		! has_version sys-fs/device-mapper
 	then
-			rm -f "${ROOT}"/etc/udev/rules.d/64-device-mapper.rules
+			rm -f "${EROOT}"/etc/udev/rules.d/64-device-mapper.rules
 			einfo "Removed unneeded file 64-device-mapper.rules"
 	fi
 
@@ -524,7 +528,7 @@ pkg_postinst() {
 	elog "persistent-net does assigning fixed names to network devices."
 	elog "If you have problems with the persistent-net rules,"
 	elog "just delete the rules file"
-	elog "\trm ${ROOT}etc/udev/rules.d/70-persistent-net.rules"
+	elog "\trm ${EROOT}etc/udev/rules.d/70-persistent-net.rules"
 	elog "and then reboot."
 	elog
 	elog "This may however number your devices in a different way than they are now."

@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.602 2011/09/13 19:17:28 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.603 2011/09/18 06:42:42 zmedico Exp $
+
+  18 Sep 2011; Zac Medico <zmedico@gentoo.org> udev-171-r2.ebuild,
+  udev-9999.ebuild:
+  Fix for prefix and add ~x86-linux keyword.
 
 *udev-171-r2 (13 Sep 2011)
 
