@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.20 2011/09/16 15:38:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.21 2011/09/18 07:57:34 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -88,7 +88,7 @@ case ${EAPI:-0} in
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
 
-inherit autotools base
+inherit autotools base eutils
 
 EXPORT_FUNCTIONS src_prepare src_configure src_compile src_install src_test
 
@@ -220,8 +220,6 @@ autotools-utils_src_prepare() {
 # in myeconfargs are passed here to econf. Additionally following USE
 # flags are known:
 #
-# IUSE="debug" passes --disable-debug/--enable-debug to econf respectively.
-#
 # IUSE="static-libs" passes --enable-shared and either --disable-static/--enable-static
 # to econf respectively.
 autotools-utils_src_configure() {
@@ -232,7 +230,12 @@ autotools-utils_src_configure() {
 
 	# Handle debug found in IUSE
 	if has debug ${IUSE//+}; then
-		econfargs+=($(use_enable debug))
+		local debugarg=$(use_enable debug)
+		if ! has "${debugarg}" "${myeconfargs[@]}"; then
+			eqawarn 'Implicit $(use_enable debug) for IUSE="debug" is no longer supported.'
+			eqawarn 'Please add the necessary arg to myeconfargs if requested.'
+			eqawarn 'The autotools-utils eclass will stop warning about it on Oct 15th.'
+		fi
 	fi
 
 	# Handle static-libs found in IUSE, disable them by default
