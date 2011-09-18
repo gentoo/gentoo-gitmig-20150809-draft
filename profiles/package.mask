@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13060 2011/09/18 07:53:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13061 2011/09/18 09:21:55 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -419,19 +419,6 @@ dev-tex/pdftex
 # Robert Piasek <dagger@gentoo.org> (09 Aug 2011)
 # Masking for testing
 =net-fs/samba-3.6.0
-
-# Samuli Suominen <ssuominen@gentoo.org> (06 Aug 2011)
-# Replaced by sys-fs/udev and "helpers" like udisks and upower
-#
-# You can stop and remove the hald service from boot and emerge -C
-# hal hal-info
-#
-# Be careful with overlays, and copy hal with hal-info in your
-# local overlay as needed
-#
-# Removal in 90 days (or later if required)
-sys-apps/hal
-app-misc/hal-info
 
 # Arun Raghavan <ford_prefect@gentoo.org> (03 Aug 2011)
 # Masking prereleases
