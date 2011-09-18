@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.297 2011/09/06 09:02:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.298 2011/09/18 09:10:29 ssuominen Exp $
+
+  18 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> use.mask:
+  Remove obsolete USE="hal" mask.
 
   06 Sep 2011; Markos Chandras <hwoarang@gentoo.org> package.use.mask:
   Unmask spice useflag for qemu-kvm since spice is now stable
