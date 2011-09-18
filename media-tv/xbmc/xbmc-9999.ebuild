@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.86 2011/08/28 22:29:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.87 2011/09/18 01:44:38 vapier Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit eutils python
 
 EGIT_REPO_URI="git://github.com/xbmc/xbmc.git"
 if [[ ${PV} == "9999" ]] ; then
-	inherit git autotools
+	inherit git-2 autotools
 else
 	inherit autotools
 	MY_P=${P/_/-}
@@ -96,7 +96,7 @@ DEPEND="${COMMON_DEPEND}
 
 src_unpack() {
 	if [[ ${PV} == "9999" ]] ; then
-		git_src_unpack
+		git-2_src_unpack
 		cd "${S}"
 		rm -f configure
 	else
