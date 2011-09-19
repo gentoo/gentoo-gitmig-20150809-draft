@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/gptfdisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/ChangeLog,v 1.6 2011/08/15 19:17:42 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/ChangeLog,v 1.7 2011/09/19 21:07:29 alexxy Exp $
+
+*gptfdisk-0.8.0 (19 Sep 2011)
+
+  19 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org> +gptfdisk-0.8.0.ebuild:
+  Version bump
 
 *gptfdisk-0.7.2 (15 Aug 2011)
 
