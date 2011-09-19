@@ -1,11 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/getdata/getdata-0.6.3-r1.ebuild,v 1.2 2011/09/13 21:06:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/getdata/getdata-0.6.3-r1.ebuild,v 1.3 2011/09/19 16:03:52 jlec Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython *-pypy-*"
 
 FORTRAN_STANDARD="95"
 
