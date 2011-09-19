@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils-hppa64
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-hppa64/ChangeLog,v 1.22 2011/09/19 11:18:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-hppa64/ChangeLog,v 1.23 2011/09/19 16:17:55 vapier Exp $
+
+  19 Sep 2011; Mike Frysinger <vapier@gentoo.org> Manifest:
+  Regen 2.19.1/2.20.1 manifests too #381831.
 
   19 Sep 2011; Jeroen Roovers <jer@gentoo.org> Manifest:
   Fix Manifest for new 2.21.1 tarball.
