@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.7.0.ebuild,v 1.2 2011/08/28 15:55:55 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.7.0.ebuild,v 1.3 2011/09/19 07:41:29 naota Exp $
 
 EAPI="3"
-inherit autotools eutils multilib elisp-common flag-o-matic
+inherit autotools eutils multilib elisp-common flag-o-matic toolchain-funcs
 
 DESCRIPTION="Simple, secure and flexible input method library"
 HOMEPAGE="http://code.google.com/p/uim/"
@@ -116,6 +116,9 @@ src_prepare() {
 
 	# bug 275420
 	sed -i -e "s:\$libedit_path/lib:/$(get_libdir):g" configure.ac || die
+
+	echo "QMAKE_LFLAGS = ${LDFLAGS}" >> qt4/common.pro.in || die
+
 	#./autogen.sh
 	AT_NO_RECURSIVE=1 eautoreconf
 }
@@ -153,7 +156,6 @@ src_configure() {
 	#	myconf="${myconf} $(use_enable gtk gnome-applet)"
 	#	myconf="${myconf} $(use_enable gtk3 gnome3-applet)"
 	#fi
-
 	econf $(use_with X x) \
 		$(use_with canna) \
 		$(use_with curl) \

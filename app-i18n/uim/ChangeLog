@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/uim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.234 2011/08/28 15:55:55 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.235 2011/09/19 07:41:29 naota Exp $
+
+  19 Sep 2011; Naohiro Aota <naota@gentoo.org> uim-1.7.0.ebuild,
+  uim-1.7.1.ebuild:
+  Change to respect LDFLAGS
 
   28 Aug 2011; Naohiro Aota <naota@gentoo.org> uim-1.6.1.ebuild,
   +files/uim-1.6.1-canna.patch, uim-1.7.0.ebuild:

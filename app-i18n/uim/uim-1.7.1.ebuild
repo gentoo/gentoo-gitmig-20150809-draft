@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.7.1.ebuild,v 1.1 2011/07/29 00:26:53 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.7.1.ebuild,v 1.2 2011/09/19 07:41:29 naota Exp $
 
 EAPI="3"
 inherit autotools eutils multilib elisp-common flag-o-matic
@@ -115,6 +115,9 @@ src_prepare() {
 
 	# bug 275420
 	sed -i -e "s:\$libedit_path/lib:/$(get_libdir):g" configure.ac || die
+
+	echo "QMAKE_LFLAGS = ${LDFLAGS}" >> qt4/common.pro.in || die
+
 	#./autogen.sh
 	AT_NO_RECURSIVE=1 eautoreconf
 }
