@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/icedtea6-bin-1.10.3-r1.ebuild,v 1.1 2011/09/19 09:25:52 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/icedtea6-bin-1.10.3-r1.ebuild,v 1.2 2011/09/19 15:16:42 mr_bones_ Exp $
 
 EAPI="3"
 
@@ -9,9 +9,9 @@ inherit java-vm-2
 dist="http://dev.gentoo.org/~caster/distfiles/"
 DESCRIPTION="A Gentoo-made binary build of the icedtea6 JDK"
 TARBALL_VERSION="${PVR}"
-SRC_URI="amd64? ( ${dist}/${PN}-core-${TARBALL_VERSION}-amd64.tar.bz2 
+SRC_URI="amd64? ( ${dist}/${PN}-core-${TARBALL_VERSION}-amd64.tar.bz2
 		${dist}/${PN}-libpng15-${TARBALL_VERSION}-amd64.tar.bz2 )
-	x86? ( ${dist}/${PN}-core-${TARBALL_VERSION}-x86.tar.bz2 
+	x86? ( ${dist}/${PN}-core-${TARBALL_VERSION}-x86.tar.bz2
 		${dist}/${PN}-libpng15-${TARBALL_VERSION}-x86.tar.bz2 )
 	doc? ( ${dist}/${PN}-doc-${TARBALL_VERSION}.tar.bz2 )
 	examples? (
