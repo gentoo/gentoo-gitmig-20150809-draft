@@ -1,6 +1,11 @@
 # ChangeLog for virtual/gnat
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gnat/ChangeLog,v 1.10 2010/01/11 10:59:29 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/gnat/ChangeLog,v 1.11 2011/09/19 07:05:57 george Exp $
+
+*gnat-4.4 (19 Sep 2011)
+
+  19 Sep 2011; George Shapovalov <george@gentoo.org> +gnat-4.4.ebuild:
+  new virtual for gnat-4.4
 
   11 Jan 2010; Ulrich Mueller <ulm@gentoo.org> gnat-3.4.ebuild,
   gnat-4.1.ebuild, gnat-4.2.ebuild, gnat-4.3.ebuild:
