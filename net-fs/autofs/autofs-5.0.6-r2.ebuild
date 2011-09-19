@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.6-r2.ebuild,v 1.4 2011/09/19 08:15:28 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.6-r2.ebuild,v 1.5 2011/09/19 12:23:21 pva Exp $
 
 EAPI="4"
 inherit eutils multilib autotools linux-info
@@ -23,7 +23,7 @@ IUSE="hesiod ldap sasl"
 REQUIRED_USE="sasl? ( ldap )"
 
 # currently, sasl code assumes the presence of kerberosV
-RDEPEND="<sys-libs/glibc-2.14
+RDEPEND="
 	hesiod? ( net-dns/hesiod )
 	ldap? ( >=net-nds/openldap-2.0
 		sasl? ( dev-libs/cyrus-sasl
