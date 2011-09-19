@@ -1,6 +1,14 @@
 # ChangeLog for app-text/wdiff
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.61 2011/03/27 21:57:37 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.62 2011/09/19 16:33:06 radhermit Exp $
+
+*wdiff-1.0.1 (19 Sep 2011)
+
+  19 Sep 2011; Tim Harder <radhermit@gentoo.org>
+  -files/wdiff-0.5-avoid-wraps.diff, -files/wdiff-0.5-headers.patch,
+  -files/wdiff-0.5-ignore-case.patch, -files/wdiff-0.5-segfault-fix.diff,
+  -files/wdiff-0.6.0-info.patch, +wdiff-1.0.1.ebuild, metadata.xml:
+  Version bump and remove old patches (bug #383533 by Petr Pisar).
 
   27 Mar 2011; Jeremy Olexa <darkside@gentoo.org> -wdiff-0.6.4.ebuild:
   remove old ebuilds
