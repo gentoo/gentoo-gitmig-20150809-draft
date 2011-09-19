@@ -1,0 +1,10 @@
+# ChangeLog for app-portage/install-mask
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/install-mask/ChangeLog,v 1.1 2011/09/19 08:26:53 mgorny Exp $
+
+*install-mask-0.0.1 (19 Sep 2011)
+
+  19 Sep 2011; Michał Górny <mgorny@gentoo.org> +install-mask-0.0.1.ebuild,
+  +files/location-db.xml, +metadata.xml:
+  Introduce install-mask, a tool to manage INSTALL_MASK setting.
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install-mask>
+	<location id="systemd">
+		<path>/lib/systemd/system</path>
+		<path>/usr/lib/tmpfiles.d</path>
+		<description>
+			systemd unit and auxiliary files.
+		</description>
+	</location>
+
+	<location id="bash-completion">
+		<path>/usr/share/bash-completion</path>
+	</location>
+
+	<location id="locale">
+		<path>/usr/share/locale</path>
+		<description>
+			All localizations.
+		</description>
+	</location>
+</install-mask>
