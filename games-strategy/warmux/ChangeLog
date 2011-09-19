@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/warmux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warmux/ChangeLog,v 1.8 2011/08/01 19:04:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warmux/ChangeLog,v 1.9 2011/09/19 19:45:57 mr_bones_ Exp $
+
+  19 Sep 2011; Michael Sterrett <mr_bones_@gentoo.org> warmux-11.04.1.ebuild,
+  +files/warmux-11.04.1-zlib.patch:
+  add patch to work with newer zlib (bug #383595) submitted by Martin Jansa
 
   01 Aug 2011; Markus Meier <maekke@gentoo.org> warmux-11.04.1.ebuild:
   amd64/x86 stable, bug #375379
