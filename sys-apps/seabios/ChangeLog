@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/seabios
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/seabios/ChangeLog,v 1.1 2011/08/25 22:22:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/seabios/ChangeLog,v 1.2 2011/09/19 17:27:23 cardoe Exp $
+
+  19 Sep 2011; Doug Goldstein <cardoe@gentoo.org>
+  seabios-0.6.3_pre20010817.ebuild:
+  Update install path to match package name.
 
 *seabios-0.6.3_pre20010817 (25 Aug 2011)
 

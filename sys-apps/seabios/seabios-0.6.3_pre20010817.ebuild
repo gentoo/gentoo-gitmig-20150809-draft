@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/seabios/seabios-0.6.3_pre20010817.ebuild,v 1.2 2011/08/31 06:42:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/seabios/seabios-0.6.3_pre20010817.ebuild,v 1.3 2011/09/19 17:27:23 cardoe Exp $
 
 EAPI=4
 
@@ -54,7 +54,7 @@ src_compile() {
 }
 
 src_install() {
-	insinto /usr/share/qemu
+	insinto /usr/share/seabios
 	doins out/bios.bin
 #	doins out/vgabios.bin
 }
