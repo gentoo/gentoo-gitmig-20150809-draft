@@ -1,6 +1,14 @@
 # ChangeLog for www-client/xxxterm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/ChangeLog,v 1.1 2011/07/23 02:37:01 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/ChangeLog,v 1.2 2011/09/19 00:26:07 rafaelmartins Exp $
+
+*xxxterm-9999 (19 Sep 2011)
+*xxxterm-1.518 (19 Sep 2011)
+
+  19 Sep 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
+  -xxxterm-1.425.ebuild, +xxxterm-1.518.ebuild, +xxxterm-9999.ebuild:
+  Version bump. Fixes bugs #380375 #380377 #381165, thanks to Agostino Sarubbo.
+  Added a live ebuild.
 
 *xxxterm-1.425 (23 Jul 2011)
 

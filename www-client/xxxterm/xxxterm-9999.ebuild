@@ -1,18 +1,31 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/xxxterm-1.425.ebuild,v 1.1 2011/07/23 02:37:01 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/xxxterm-9999.ebuild,v 1.1 2011/09/19 00:26:07 rafaelmartins Exp $
 
 EAPI="4"
 
-inherit eutils fdo-mime toolchain-funcs
+GIT_ECLASS=
+if [[ ${PV} = *9999* ]]; then
+	GIT_ECLASS=git-2
+fi
+
+inherit eutils fdo-mime toolchain-funcs ${GIT_ECLASS}
 
 DESCRIPTION="A minimalist web browser with sophisticated security features designed-in"
 HOMEPAGE="http://opensource.conformal.com/wiki/xxxterm"
-SRC_URI="http://opensource.conformal.com/snapshots/${PN}/${P}.tgz"
+
+KEYWORDS=""
+if [[ ${PV} = *9999* ]]; then
+	EGIT_REPO_URI="git://opensource.conformal.com/xxxterm.git
+		https://opensource.conformal.com/git/xxxterm.git"
+	EGIT_SOURCEDIR="${WORKDIR}/${P}"
+else
+	SRC_URI="http://opensource.conformal.com/snapshots/${PN}/${P}.tgz"
+	KEYWORDS="~amd64 ~x86"
+fi
 
 LICENSE="ISC"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="x11-libs/gtk+
@@ -38,21 +51,21 @@ src_prepare() {
 }
 
 src_compile() {
-	emake \
-		CC="$(tc-getCC)"
-		CFLAGS="${CFLAGS}" \
-		LDFLAGS="${LDFLAGS}"
+	CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDADD="${LDFLAGS}" emake
 }
 
 src_install() {
-	einstall \
+	emake \
 		DESTDIR="${D}" \
-		PREFIX=/usr
+		PREFIX=/usr install
 
-	insinto /usr/share/${PN}
+	insinto "/usr/share/${PN}"
 	doins ../*.png ../style.css
 	insinto /usr/share/applications
 	doins ../xxxterm.desktop
+	insinto "/usr/share/doc/${PF}/examples"
+	doins ../xxxterm.conf ../playflash.sh ../favorites
+	doman ../xxxterm.1
 }
 
 pkg_postinst() {
