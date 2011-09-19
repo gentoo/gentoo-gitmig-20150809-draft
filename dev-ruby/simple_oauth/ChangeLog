@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/simple_oauth
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simple_oauth/ChangeLog,v 1.1 2011/09/19 19:38:32 graaff Exp $
+
+*simple_oauth-0.1.5 (19 Sep 2011)
+
+  19 Sep 2011; Hans de Graaff <graaff@gentoo.org> +simple_oauth-0.1.5.ebuild,
+  +metadata.xml:
+  Initial import. Dependency of forthcoming faraday_middleware.
+
