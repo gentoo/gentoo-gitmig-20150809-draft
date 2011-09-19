@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.13.3.ebuild,v 1.1 2011/08/28 19:03:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/vala-0.14.0.ebuild,v 1.1 2011/09/19 12:41:37 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -29,6 +29,7 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	G2CONF="${G2CONF}
 		--disable-unversioned
+		--disable-maintainer-mode
 		$(use_enable vapigen)"
 	DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
 }
