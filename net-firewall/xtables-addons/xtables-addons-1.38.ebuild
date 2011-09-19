@@ -1,10 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.30.ebuild,v 1.4 2011/04/28 18:54:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.38.ebuild,v 1.1 2011/09/19 13:06:30 pva Exp $
 
-EAPI="3"
-
-inherit eutils linux-mod multilib
+EAPI="4"
+inherit eutils linux-info linux-mod multilib autotools
 
 DESCRIPTION="extensions not yet accepted in the main kernel/iptables (patch-o-matic(-ng) successor)"
 HOMEPAGE="http://xtables-addons.sourceforge.net/"
@@ -15,7 +14,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="modules"
 
-MODULES="quota2 psd pknock lscan length2 ipv4options ipset ipp2p iface geoip fuzzy condition tee tarpit sysrq steal rawnat logmark ipmark echo dhcpmac delude checksum chaos account"
+REQUIRED_USE="
+	xtables_addons_ipset4? ( !xtables_addons_ipset6 )
+	xtables_addons_ipset6? ( !xtables_addons_ipset4 )"
+
+MODULES="quota2 psd pknock lscan length2 ipv4options ipset6 ipset4 ipp2p iface gradm geoip fuzzy condition tee tarpit sysrq steal rawnat logmark ipmark echo dnetmap dhcpmac delude checksum chaos account"
 
 for mod in ${MODULES}; do
 	IUSE="${IUSE} xtables_addons_${mod}"
@@ -24,24 +27,55 @@ done
 DEPEND=">=net-firewall/iptables-1.4.3"
 
 RDEPEND="${DEPEND}
-	xtables_addons_ipset? ( !net-firewall/ipset )
+	xtables_addons_ipset4? ( !net-firewall/ipset )
+	xtables_addons_ipset6? (
+		!net-firewall/ipset
+		net-libs/libmnl )
 	xtables_addons_geoip? ( virtual/perl-Getopt-Long
 		dev-perl/Text-CSV_XS )"
 
 DEPEND="${DEPEND}
 	virtual/linux-sources"
 
+SKIP_MODULES=""
+
+# XA_kernel_check tee "2 6 26"
+XA_check4internal_module() {
+	local mod=${1}
+	local version=${2}
+	local kconfigname=${3}
+
+	if use xtables_addons_${mod} && kernel_is -gt ${version}; then
+		ewarn "${kconfigname} should be provided by the kernel. Skipping its build..."
+		if ! linux_chkconfig_present ${kconfigname}; then
+			ewarn "Please enable ${kconfigname} target in your kernel
+			configuration or disable checksum module in ${PN}."
+		fi
+		# SKIP_MODULES in case we need to disable building of everything
+		# like having this USE disabled
+		SKIP_MODULES+=" ${mod}"
+	fi
+}
+
 pkg_setup()	{
 	if use modules; then
 		get_version
 		check_modules_supported
-		# CONFIG_IP_NF_CONNTRACK{,_MARK} doesn't exist in >virtual/linux-sources-2.6.22
-		CONFIG_CHECK="NF_CONNTRACK NF_CONNTRACK_MARK"
+		CONFIG_CHECK="NF_CONNTRACK NF_CONNTRACK_MARK ~CONNECTOR"
+		ERROR_CONNECTOR="Please, enable CONFIG_CONNECTOR if you wish to receive userspace notifications from pknock through netlink/connector"
 		linux-mod_pkg_setup
 
 		if ! linux_chkconfig_present IPV6; then
-			SKIP_IPV6_MODULES="ip6table_rawpost"
+			SKIP_IPV6_MODULES="ip6table_rawpost ipset6"
+			ewarn "No IPV6 support in kernel. Disabling: ${SKIP_IPV6_MODULES}"
 		fi
+		if ! (use xtables_addons_ipset4 || use xtables_addons_ipset6) &&
+			kernel_is -lt 2 6 35; then
+			die "${PN} with ipset requires kernel version >= 2.6.29"
+		fi
+		kernel_is -lt 2 6 29 && die "${PN} requires kernel version >= 2.6.29"
+		XA_check4internal_module tee "2 6 35" NETFILTER_XT_TARGET_TEE
+		XA_check4internal_module checksum "2 6 36" NETFILTER_XT_TARGET_CHECKSUM
 	fi
 }
 
@@ -75,7 +109,9 @@ XA_get_module_name() {
 	local mod objdir build_mod sources_list
 	mod=${1}
 	objdir=${S}/extensions
+	# Take modules name from mconfig
 	build_mod=$(sed -n "s/\(build_${mod}\)=.*/\1/Ip" "${S}/mconfig")
+	# strip .o, = and everything before = and print
 	sources_list=$(sed -n "/^obj-[$][{]${build_mod}[}]/\
 		{s:obj-[^+]\+ [+]=[[:space:]]*::;s:[.]o::g;p}" \
 				"${objdir}/Kbuild")
@@ -101,7 +137,7 @@ src_prepare() {
 		MODULE_NAMES="compat_xtables(xtables_addons:${S}/extensions:)"
 	fi
 	for mod in ${MODULES}; do
-		if use xtables_addons_${mod}; then
+		if ! has ${mod} ${SKIP_MODULES} && use xtables_addons_${mod}; then
 			sed "s/\(build_${mod}=\).*/\1m/I" -i mconfig || die
 			if use modules; then
 				for module_name in $(XA_get_module_name ${mod}); do
@@ -112,6 +148,7 @@ src_prepare() {
 			sed "s/\(build_${mod}=\).*/\1n/I" -i mconfig || die
 		fi
 	done
+	einfo "${MODULE_NAMES}" # for debugging
 
 	sed -e 's/depmod -a/true/' -i Makefile.in || die
 	sed -e '/^all-local:/{s: modules::}' \
@@ -122,21 +159,20 @@ src_prepare() {
 }
 
 src_configure() {
-	unset ARCH # .. or it'll look for /arch/amd64/Makefile in linux sources
-	export KBUILD_EXTMOD=${S} # Avoid build in /usr/src/linux #250407
+	set_arch_to_kernel # .. or it'll look for /arch/amd64/Makefile
 	econf --prefix="${EPREFIX}/" \
 		--libexecdir="${EPREFIX}/$(get_libdir)/" \
 		--with-kbuild="${KV_DIR}"
 }
 
 src_compile() {
-	emake CFLAGS="${CFLAGS}" CC="$(tc-getCC)" V=1 || die
+	emake CFLAGS="${CFLAGS}" CC="$(tc-getCC)" V=1
 	use modules && BUILD_TARGETS="modules" linux-mod_src_compile
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	use modules && linux-mod_src_install
-	dodoc README doc/* || die
+	dodoc -r README doc/*
 	find "${ED}" -type f -name '*.la' -exec rm -rf '{}' '+'
 }

@@ -1,6 +1,16 @@
 # ChangeLog for net-firewall/xtables-addons
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/ChangeLog,v 1.22 2011/09/15 09:56:50 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/ChangeLog,v 1.23 2011/09/19 13:06:30 pva Exp $
+
+*xtables-addons-1.38 (19 Sep 2011)
+
+  19 Sep 2011; Peter Volkov <pva@gentoo.org> -xtables-addons-1.28-r1.ebuild,
+  -xtables-addons-1.30.ebuild, -xtables-addons-1.31.ebuild,
+  -xtables-addons-1.36.ebuild, -files/xtables-addons-1.36-absolute-M.patch,
+  -files/xtables-addons-1.36-kernel-detection.patch,
+  xtables-addons-1.37.ebuild, +xtables-addons-1.38.ebuild:
+  Mark 1.37 stable, bug #381611. Version bump, ignore in-kernel CHECKSUM
+  module. Drop old.
 
   15 Sep 2011; Andreas Schuerch <nativemad@gentoo.org>
   xtables-addons-1.37.ebuild:
