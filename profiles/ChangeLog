@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5714 2011/09/19 05:55:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5715 2011/09/19 14:02:20 vapier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Sep 2011; Mike Frysinger <vapier@gentoo.org> package.mask:
+  Punt openafs masks now that things are out of pre stage.
 
   19 Sep 2011; Tim Harder <radhermit@gentoo.org> package.mask:
   Mask development releases of app-misc/task.
