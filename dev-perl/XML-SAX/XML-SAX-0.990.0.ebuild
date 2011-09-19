@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/XML-SAX-0.990.0.ebuild,v 1.1 2011/09/19 01:21:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-SAX/XML-SAX-0.990.0.ebuild,v 1.2 2011/09/19 13:52:51 tove Exp $
 
 EAPI=4
 
@@ -14,8 +14,11 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
-RDEPEND=">=dev-perl/XML-NamespaceSupport-1.04
-	>=dev-libs/libxml2-2.4.1"
+RDEPEND="
+	dev-perl/XML-SAX-Base
+	>=dev-perl/XML-NamespaceSupport-1.40.0
+	>=dev-libs/libxml2-2.4.1
+"
 DEPEND="${RDEPEND}"
 
 SRC_TEST="do"
