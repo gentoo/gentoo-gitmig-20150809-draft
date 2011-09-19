@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/autofs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.125 2011/09/18 21:36:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.126 2011/09/19 08:15:28 pva Exp $
+
+  19 Sep 2011; Peter Volkov <pva@gentoo.org> autofs-5.0.5-r4.ebuild,
+  autofs-5.0.6-r2.ebuild:
+  Add virtual/yacc into DEPEND, bug #383477 thank bay and Dustin Polke for this
+  job.
 
   18 Sep 2011; Markus Meier <maekke@gentoo.org> autofs-5.0.6-r2.ebuild:
   amd64/x86 stable, bug #379569

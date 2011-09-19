@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.6-r2.ebuild,v 1.3 2011/09/18 21:36:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.6-r2.ebuild,v 1.4 2011/09/19 08:15:28 pva Exp $
 
 EAPI="4"
 inherit eutils multilib autotools linux-info
@@ -29,7 +29,8 @@ RDEPEND="<sys-libs/glibc-2.14
 		sasl? ( dev-libs/cyrus-sasl
 			dev-libs/libxml2
 			virtual/krb5 ) )"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	virtual/yacc"
 
 src_prepare() {
 	# Upstream's patchset
