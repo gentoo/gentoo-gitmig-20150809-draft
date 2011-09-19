@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/tkimg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.28 2011/09/17 17:32:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.29 2011/09/19 16:18:00 jlec Exp $
+
+  19 Sep 2011; Justin Lecher <jlec@gentoo.org> tkimg-1.4.ebuild,
+  tkimg-1.4-r1.ebuild, tkimg-1.5_pre324.ebuild:
+  Remove unneeded deps
 
   17 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> tkimg-1.4.ebuild,
   tkimg-1.4-r1.ebuild, tkimg-1.4.20100510.ebuild, tkimg-1.5_pre324.ebuild,
