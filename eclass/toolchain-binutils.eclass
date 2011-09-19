@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.100 2011/09/18 09:22:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.101 2011/09/19 14:34:58 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -59,6 +59,8 @@ case ${BTYPE} in
 		SRC_URI="mirror://kernel/linux/devel/binutils/binutils-${PV}.tar.bz2
 			mirror://kernel/linux/devel/binutils/test/binutils-${PV}.tar.bz2
 			mirror://gnu/binutils/binutils-${PV}.tar.bz2"
+		# disable kernel mirrors until kernel.org is back up #383579
+		SRC_URI="mirror://gnu/binutils/binutils-${PV}.tar.bz2"
 esac
 add_src_uri() {
 	[[ -z $2 ]] && return
