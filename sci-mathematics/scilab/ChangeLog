@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/scilab
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.59 2011/08/02 05:49:16 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.60 2011/09/19 15:30:17 jlec Exp $
+
+  19 Sep 2011; Justin Lecher <jlec@gentoo.org> scilab-4.1.2-r2.ebuild,
+  +files/scilab-4.1.2-gcc45-2.patch:
+  Fix for seqf on zterm, thanks Maciej Szmigiero for the patch , #301625
 
   02 Aug 2011; Matt Turner <mattst88@gentoo.org> scilab-4.1.2-r1.ebuild,
   scilab-4.1.2-r2.ebuild:

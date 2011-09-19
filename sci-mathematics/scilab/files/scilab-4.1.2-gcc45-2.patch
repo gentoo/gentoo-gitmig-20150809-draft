@@ -1,0 +1,12 @@
+--- routines/gzvt2/vte.c.old	2011-06-05 01:08:52.000000000 +0200
++++ routines/gzvt2/vte.c	2011-06-05 01:09:11.612332604 +0200
+@@ -80,7 +80,8 @@
+   geometry.min_width = xpad + terminal->char_width * 2;
+   geometry.min_height = ypad + terminal->char_height * 2;
+ 
+-  gtk_window_set_geometry_hints(window, widget, &geometry,
++  if (gtk_widget_get_realized(widget))
++    gtk_window_set_geometry_hints(window, widget, &geometry,
+ 				GDK_HINT_RESIZE_INC |
+ 				GDK_HINT_BASE_SIZE |
+ 				GDK_HINT_MIN_SIZE);
