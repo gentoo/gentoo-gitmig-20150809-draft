@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/addressable-2.2.6.ebuild,v 1.1 2011/05/13 06:25:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/addressable/addressable-2.2.6.ebuild,v 1.2 2011/09/19 18:33:51 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ruby19 jruby ree18"
@@ -24,13 +24,20 @@ IUSE=""
 
 ruby_add_bdepend "test? ( dev-ruby/rspec:0 )"
 
+all_ruby_prepare() {
+	# Remove spec-related tasks so that we don't need to require rspec
+	# just to build the documentation, bug 383611.
+	sed -i -e '/spectask/d' Rakefile || die
+	rm tasks/spec.rake || die
+}
+
 each_ruby_test() {
 	case ${RUBY} in
 		*jruby)
 			ewarn "Tests disabled because they crash jruby."
 			;;
 		*)
-			each_fakegem_test
+			${RUBY} -I lib -S spec spec || die "Tests failed."
 			;;
 	esac
 }
