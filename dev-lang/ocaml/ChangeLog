@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.196 2011/09/18 15:47:34 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.197 2011/09/19 21:49:41 maekke Exp $
+
+  19 Sep 2011; Markus Meier <maekke@gentoo.org> ocaml-3.12.1.ebuild:
+  arm stable, bug #361767
 
   18 Sep 2011; Andreas Schuerch <nativemad@gentoo.org> ocaml-3.12.1.ebuild:
   x86 stable, thanks JD, bug 361767
