@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-gtkmozembed
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkmozembed/ChangeLog,v 1.34 2011/09/17 16:31:47 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gtkmozembed/ChangeLog,v 1.35 2011/09/19 02:27:22 naota Exp $
+
+*ruby-gtkmozembed-1.0.0 (19 Sep 2011)
+
+  19 Sep 2011; Naohiro Aota <naota@gentoo.org> +ruby-gtkmozembed-1.0.0.ebuild:
+  Version bump. Bug #376371
 
 *ruby-gtkmozembed-0.90.9 (17 Sep 2011)
 
