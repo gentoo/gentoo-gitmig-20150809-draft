@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13062 2011/09/18 23:44:38 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13063 2011/09/19 05:55:26 radhermit Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tim Harder <radhermit@gentoo.org> (19 Sep 2011)
+# Mask development releases
+=app-misc/task-2*
 
 # Anthony G. Basile <blueness@gentoo.org> (18 Sep 2011)
 # Masked while testing potentially dangerous utility
