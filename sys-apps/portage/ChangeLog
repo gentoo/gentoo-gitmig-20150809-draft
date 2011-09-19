@@ -1,6 +1,27 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.873 2011/09/15 06:17:57 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.874 2011/09/19 04:39:17 zmedico Exp $
+
+*portage-2.2.0_alpha59 (19 Sep 2011)
+
+  19 Sep 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha59.ebuild:
+  2.2.0_alpha59 version bump. This includes all of the fixes in
+  portage-2.1.10.19. Bug #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.10.19 (19 Sep 2011)
+
+  19 Sep 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.19.ebuild:
+  2.1.10.19 version bump. This fixes bug #374233 (change "poor programming
+  practices" QA message to say "severe warnings" instead),  bug #375265
+  (show relevant parent in autounmask dependency chain), bug #383269
+  (fix quote handling for PORTDIR_OVERLAY), and bug #383375 (fix
+  emerge-webrsync to bail out if gpg is missing). Bug #381649 tracks all
+  bugs fixed since portage-2.1.10.11.
+
+  19 Sep 2011; Zac Medico <zmedico@gentoo.org> -portage-2.1.10.15.ebuild,
+  -portage-2.1.10.17.ebuild, -portage-2.2.0_alpha55.ebuild,
+  -portage-2.2.0_alpha57.ebuild:
+  Remove old versions.
 
 *portage-2.2.0_alpha58 (15 Sep 2011)
 
