@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.255 2011/08/29 06:39:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.256 2011/09/19 17:05:45 hwoarang Exp $
+
+*lighttpd-1.4.29-r2 (19 Sep 2011)
+
+  19 Sep 2011; Markos Chandras <hwoarang@gentoo.org>
+  +lighttpd-1.4.29-r2.ebuild, +files/lighttpd-1.4.29-mod_uploadprogress.patch,
+  files/lighttpd.initd:
+  Add patch for experimental progress bar module. Bug #380093 thanks to Richard
+  Homonnai <chain@rpgfiction.net>. Remove deprecated --oknodo from init script.
+  Bug #375301 thanks to Laurent Bachelier <laurent@bachelier.name>
 
   29 Aug 2011; Jeroen Roovers <jer@gentoo.org> lighttpd-1.4.28-r2.ebuild:
   Stable for HPPA (bug #373917).
