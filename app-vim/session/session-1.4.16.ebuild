@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/session/session-1.4.9-r1.ebuild,v 1.1 2011/08/31 10:20:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/session/session-1.4.16.ebuild,v 1.1 2011/09/19 06:12:02 radhermit Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ IUSE=""
 
 VIM_PLUGIN_HELPFILES="session.txt"
 
-RDEPEND="app-vim/xolox-misc"
+RDEPEND=">=app-vim/xolox-misc-20110904"
 
 src_unpack() {
 	unpack ${A}
@@ -25,6 +25,6 @@ src_unpack() {
 
 src_prepare() {
 	# remove unneeded files
-	rm -f *.md
-	rm -rf autoload/xolox/misc
+	rm *.md || die
+	rm -r autoload/xolox/misc || die
 }
