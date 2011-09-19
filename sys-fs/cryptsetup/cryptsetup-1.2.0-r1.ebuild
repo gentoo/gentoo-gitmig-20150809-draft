@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.2.0-r1.ebuild,v 1.8 2011/09/07 04:02:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-1.2.0-r1.ebuild,v 1.9 2011/09/19 01:33:47 vapier Exp $
 
 EAPI="2"
 
@@ -14,19 +14,20 @@ SRC_URI="http://cryptsetup.googlecode.com/files/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="+static nls selinux"
+IUSE="nls selinux +static"
 
 S=${WORKDIR}/${MY_P}
 
-RDEPEND=">=sys-fs/lvm2-2.02.64
-	>=dev-libs/libgcrypt-1.1.42
+RDEPEND="
 	!static? (
+		>=dev-libs/libgcrypt-1.1.42
 		dev-libs/libgpg-error
 		>=dev-libs/popt-1.7
 		>=sys-apps/util-linux-2.17.2
+		>=sys-fs/lvm2-2.02.64
 	)
 	>=sys-fs/udev-124
-	|| ( >=sys-libs/e2fsprogs-libs-1.41 <sys-fs/e2fsprogs-1.41 )
+	>=sys-libs/e2fsprogs-libs-1.41
 	selinux? ( sys-libs/libselinux )
 	!sys-fs/cryptsetup-luks"
 DEPEND="${RDEPEND}
@@ -35,6 +36,7 @@ DEPEND="${RDEPEND}
 		>=dev-libs/popt-1.16-r1[static-libs]
 		|| ( >=sys-apps/util-linux-2.20[static-libs] <sys-apps/util-linux-2.20 )
 		dev-libs/libgcrypt[static-libs]
+		|| ( >=sys-fs/lvm2-2.02.88[static-libs] <sys-fs/lvm2-2.02.88 )
 	)"
 
 pkg_setup() {
