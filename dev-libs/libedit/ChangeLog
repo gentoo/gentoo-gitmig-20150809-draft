@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libedit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.54 2011/09/16 14:19:46 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.55 2011/09/19 12:16:29 nativemad Exp $
+
+  19 Sep 2011; Andreas Schuerch <nativemad@gentoo.org>
+  libedit-20110709.3.0.ebuild:
+  x86 stable, thank you JD. Bug 383057.
 
   16 Sep 2011; Tony Vroon <chainsaw@gentoo.org> libedit-20110709.3.0.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
