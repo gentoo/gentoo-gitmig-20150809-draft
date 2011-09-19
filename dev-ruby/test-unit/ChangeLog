@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.42 2011/07/22 07:36:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.43 2011/09/19 05:59:30 graaff Exp $
+
+*test-unit-2.4.0 (19 Sep 2011)
+
+  19 Sep 2011; Hans de Graaff <graaff@gentoo.org> +test-unit-2.4.0.ebuild:
+  Version bump.
 
 *test-unit-2.3.0 (22 Jul 2011)
 
