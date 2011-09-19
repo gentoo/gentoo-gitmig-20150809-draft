@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/notes/notes-0.10-r1.ebuild,v 1.1 2011/08/31 10:15:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/notes/notes-0.11.3.ebuild,v 1.1 2011/09/19 06:03:44 radhermit Exp $
 
 EAPI=4
 
@@ -13,10 +13,10 @@ LICENSE="MIT"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="app-vim/xolox-misc
+RDEPEND=">=app-vim/xolox-misc-20110904
 	|| ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] )"
 
-VIM_PLUGIN_HELPFILES="notes.txt"
+VIM_PLUGIN_HELPFILES="${PN}.txt"
 
 src_unpack() {
 	unpack ${A}
@@ -24,6 +24,7 @@ src_unpack() {
 }
 
 src_prepare() {
-	rm INSTALL.md README.md
-	rm -rf autoload/xolox/misc
+	# Remove unnecessary files
+	rm INSTALL.md README.md misc/notes/user/README || die
+	rm -r autoload/xolox/misc || die
 }

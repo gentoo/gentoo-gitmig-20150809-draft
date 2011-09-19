@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/colorv/colorv-2.0.2.1.ebuild,v 1.1 2011/07/24 06:12:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/colorv/colorv-2.5.3.ebuild,v 1.1 2011/09/19 06:06:34 radhermit Exp $
 
 EAPI="4"
 
@@ -16,8 +16,11 @@ IUSE=""
 
 VIM_PLUGIN_HELPFILES="${PN}"
 
-RDEPEND=">=app-editors/gvim-7.0[python]
-	dev-python/pygtk:2"
+RDEPEND="
+	|| (
+		app-editors/vim[python]
+		( app-editors/gvim[python] dev-python/pygtk:2 )
+	)"
 
 src_unpack() {
 	unpack ${A}
@@ -25,5 +28,5 @@ src_unpack() {
 }
 
 src_prepare() {
-	rm -f README*
+	rm README* || die
 }
