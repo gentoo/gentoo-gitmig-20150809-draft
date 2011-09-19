@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/subtle/subtle-0.10.3008.ebuild,v 1.2 2011/09/13 16:17:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/subtle/subtle-0.10.3008.ebuild,v 1.3 2011/09/19 22:07:42 radhermit Exp $
 
 EAPI="4"
 USE_RUBY="ruby19"
@@ -25,18 +25,11 @@ RDEPEND="x11-libs/libX11
 	xtest? ( x11-libs/libXtst )
 	xrandr? ( x11-libs/libXrandr )"
 DEPEND="${RDEPEND}"
-#	test? (
-#		x11-terms/xterm
-#		x11-base/xorg-server[xvfb]
-#	)"
 
 ruby_add_rdepend "dev-ruby/archive-tar-minitar"
 ruby_add_bdepend "dev-ruby/rake"
 
 RUBY_S="${P}-${GR}"
-
-# Requires dev-ruby/riot which isn't in the tree yet
-RESTRICT="test"
 
 each_ruby_configure() {
 	local myconf
@@ -54,10 +47,6 @@ each_ruby_compile() {
 	${RUBY} -S rake build || die
 }
 
-each_ruby_test() {
-	${RUBY} test/test.rb || die "tests failed"
-}
-
 each_ruby_install() {
 	${RUBY} -S rake install || die
 }
@@ -66,7 +55,7 @@ all_ruby_install() {
 	dodir /etc/X11/Sessions
 	cat <<-EOF > "${D}/etc/X11/Sessions/${PN}"
 		#!/bin/sh
-		/usr/bin/subtle
+		exec /usr/bin/subtle
 	EOF
 	fperms a+x /etc/X11/Sessions/${PN}
 
