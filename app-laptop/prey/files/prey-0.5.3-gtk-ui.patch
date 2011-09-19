@@ -1,0 +1,31 @@
+Index: prey/platform/linux/prey-config.py
+===================================================================
+--- prey.orig/platform/linux/prey-config.py
++++ prey/platform/linux/prey-config.py
+@@ -23,7 +23,7 @@ import urllib
+ 
+ app_name = 'prey-config'
+ lang_path = 'lang'
+-script_path = os.sys.path[0]
++script_path = '/usr/share/prey/platform/linux/'
+ 
+ ################################################
+ # gettext localization
+@@ -42,7 +42,7 @@ _ = gettext.gettext
+ ################################################
+ 
+ PREY_PATH = '/usr/share/prey'
+-CONFIG_FILE = PREY_PATH + '/config'
++CONFIG_FILE = '/etc/config'
+ CONTROL_PANEL_URL = 'http://control.preyproject.com'
+ CONTROL_PANEL_URL_SSL = 'https://control.preyproject.com'
+ GUEST_ACCOUNT_NAME = 'guest_account'
+@@ -293,7 +293,7 @@ class PreyConfigurator(object):
+ 			return True
+ 
+ 	def is_config_writable(self):
+-		command = 'if [ ! -w "'+PREY_PATH+'/config" ]; then echo 1; fi'
++		command = 'if [ ! -w '+CONFIG_FILE+' ]; then echo 1; fi'
+ 		no_access = os.popen(command).read().strip()
+ 		if no_access == '1':
+ 			self.show_alert(_("Unauthorized"), _("You don't have access to manage Prey's configuration. Sorry."), True)
