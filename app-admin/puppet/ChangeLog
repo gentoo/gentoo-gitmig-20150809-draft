@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.78 2011/08/31 08:36:35 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.79 2011/09/19 21:54:21 maekke Exp $
+
+  19 Sep 2011; Markus Meier <maekke@gentoo.org> puppet-2.6.9.ebuild:
+  x86 stable, bug #380529
 
   31 Aug 2011; Tony Vroon <chainsaw@gentoo.org> puppet-2.6.9.ebuild:
   Marked stable on AMD64 based on arch testing by Ian "idella" Delaney & Elijah
