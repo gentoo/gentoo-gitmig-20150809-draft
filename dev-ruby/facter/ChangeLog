@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.37 2011/08/31 08:34:51 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.38 2011/09/19 21:52:40 maekke Exp $
+
+  19 Sep 2011; Markus Meier <maekke@gentoo.org> facter-1.6.0.ebuild:
+  x86 stable, bug #380525
 
   31 Aug 2011; Tony Vroon <chainsaw@gentoo.org> facter-1.6.0.ebuild:
   Marked stable on AMD64 based on arch testing by Ian "idella" Delaney & Elijah
