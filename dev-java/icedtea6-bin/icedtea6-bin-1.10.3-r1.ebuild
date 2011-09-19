@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/icedtea6-bin-1.10.2.ebuild,v 1.7 2011/09/17 19:23:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/icedtea6-bin-1.10.3-r1.ebuild,v 1.1 2011/09/19 09:25:52 caster Exp $
 
 EAPI="3"
 
@@ -9,8 +9,10 @@ inherit java-vm-2
 dist="http://dev.gentoo.org/~caster/distfiles/"
 DESCRIPTION="A Gentoo-made binary build of the icedtea6 JDK"
 TARBALL_VERSION="${PVR}"
-SRC_URI="amd64? ( ${dist}/${PN}-core-${TARBALL_VERSION}-amd64.tar.bz2 )
-	x86? ( ${dist}/${PN}-core-${TARBALL_VERSION}-x86.tar.bz2 )
+SRC_URI="amd64? ( ${dist}/${PN}-core-${TARBALL_VERSION}-amd64.tar.bz2 
+		${dist}/${PN}-libpng15-${TARBALL_VERSION}-amd64.tar.bz2 )
+	x86? ( ${dist}/${PN}-core-${TARBALL_VERSION}-x86.tar.bz2 
+		${dist}/${PN}-libpng15-${TARBALL_VERSION}-x86.tar.bz2 )
 	doc? ( ${dist}/${PN}-doc-${TARBALL_VERSION}.tar.bz2 )
 	examples? (
 		amd64? ( ${dist}/${PN}-examples-${TARBALL_VERSION}-amd64.tar.bz2 )
@@ -28,15 +30,15 @@ RESTRICT="strip"
 
 LICENSE="GPL-2-with-linking-exception"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
-S="${WORKDIR}/${PN}-${TARBALL_VERSION}"
+S="${WORKDIR}/${P}"
 
 RDEPEND=">=sys-devel/gcc-4.3
 	>=sys-libs/glibc-2.11.2
 	>=media-libs/giflib-4.1.6-r1
 	virtual/jpeg
-	=media-libs/libpng-1.4*
+	>=media-libs/libpng-1.4
 	>=sys-libs/zlib-1.2.3-r1
 	"
 PDEPEND="
@@ -60,9 +62,24 @@ PDEPEND="
 	)"
 DEPEND=""
 
+src_unpack() {
+	unpack ${A}
+
+	if has_version '>=media-libs/libpng-1.5.0'; then
+		einfo "Installing libpng-1.5 ABI version"
+		local arch=${ARCH}
+		use x86 && arch=i386
+		mv -v ${P}-libpng15/jre/lib/${arch}/*.so ${P}/jre/lib/${arch} || die
+	else
+		elog "Installing libpng-1.4 ABI version"
+		elog "You will have to remerge icedtea6-bin after upgrading to libpng-1.5"
+		elog "Note that revdep-rebuild will not do it automatically due to the mask file."
+	fi
+}
+
 src_install() {
 	local dest="/opt/${P}"
-	local ddest="${ED}/${dest}"
+	local ddest="${D}/${dest}"
 	dodir "${dest}" || die
 
 	local arch=${ARCH}
