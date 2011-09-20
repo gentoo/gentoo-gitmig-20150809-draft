@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.5.0-r3.ebuild,v 1.4 2011/08/28 18:39:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.5.0-r3.ebuild,v 1.5 2011/09/20 07:48:59 chainsaw Exp $
 
 EAPI=3
 inherit autotools base eutils linux-info multilib
@@ -63,9 +63,7 @@ RDEPEND="sys-libs/ncurses
 	vorbis? ( media-libs/libvorbis )"
 
 DEPEND="${RDEPEND}
-	!net-misc/asterisk-addons
-	!net-misc/asterisk-chan_unistim
-	!net-misc/zaptel"
+	!net-libs/openh323"
 
 RDEPEND="${RDEPEND}
 	syslog? ( virtual/logger )"

@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.343 2011/09/01 14:09:56 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.344 2011/09/20 07:48:58 chainsaw Exp $
+
+  20 Sep 2011; Tony Vroon <chainsaw@gentoo.org> asterisk-1.8.5.0-r3.ebuild,
+  asterisk-1.8.6.0.ebuild:
+  Explicitly block against the abandoned net-libs/openh323 package in the tree.
+  Closes bug #345635 by Grigoriy Puzankin and bug #383629 by Aidan Marks.
 
 *asterisk-1.8.6.0 (01 Sep 2011)
 
