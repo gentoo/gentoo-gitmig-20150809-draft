@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.9.1-r1.ebuild,v 1.2 2011/09/20 04:28:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.9.1-r2.ebuild,v 1.1 2011/09/20 05:07:23 vapier Exp $
 
 EAPI="2"
 
@@ -8,18 +8,14 @@ inherit eutils libtool flag-o-matic
 
 EX_P="${PN}-1.8.3"
 DESCRIPTION="Standard GNU database libraries"
-HOMEPAGE="http://www.gnu.org/software/gdbm/gdbm.html"
+HOMEPAGE="http://www.gnu.org/software/gdbm/"
 SRC_URI="mirror://gnu/gdbm/${P}.tar.gz
 	exporter? ( mirror://gnu/gdbm/${EX_P}.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-# enable compat by default only so long as perl/python need it
-IUSE="berkdb +compat exporter static-libs"
-
-DEPEND="berkdb? ( sys-libs/db )"
-RDEPEND="${DEPEND}"
+IUSE="+berkdb exporter static-libs"
 
 EX_S="${WORKDIR}"/${EX_P}
 
@@ -29,7 +25,8 @@ src_prepare() {
 }
 
 src_configure() {
-	use berkdb || export ac_cv_lib_dbm_main=no ac_cv_lib_ndbm_main=no
+	# gdbm doesn't appear to use either of these libraries
+	export ac_cv_lib_dbm_main=no ac_cv_lib_ndbm_main=no
 
 	if use exporter ; then
 		pushd "${EX_S}" >/dev/null
@@ -42,7 +39,7 @@ src_configure() {
 		--includedir=/usr/include/gdbm \
 		--with-gdbm183-libdir="${EX_S}/.libs" \
 		--with-gdbm183-includedir="${EX_S}" \
-		$(use_enable compat libgdbm-compat) \
+		$(use_enable berkdb libgdbm-compat) \
 		$(use_enable exporter gdbm-export) \
 		$(use_enable static-libs static)
 }

@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/gdbm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.56 2011/09/20 04:28:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.57 2011/09/20 05:07:23 vapier Exp $
+
+*gdbm-1.9.1-r2 (20 Sep 2011)
+
+  20 Sep 2011; Mike Frysinger <vapier@gentoo.org> -gdbm-1.9.1.ebuild,
+  -gdbm-1.9.1-r1.ebuild, +gdbm-1.9.1-r2.ebuild, metadata.xml:
+  Convert USE=compat to USE=berkdb since that is what the compat library
+  actually is for, and drop berkdb linkage since gdbm does not seem to use it
+  anywhere.
 
   20 Sep 2011; Mike Frysinger <vapier@gentoo.org> gdbm-1.9.1-r1.ebuild:
   Enable compat by default since perl/python need it #383745 by Alexandre
