@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-9999.ebuild,v 1.2 2011/08/06 21:33:24 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-9999.ebuild,v 1.3 2011/09/20 02:53:25 ferringb Exp $
 
 EAPI="3"
 DISTUTILS_SRC_TEST="setup.py"
@@ -36,7 +36,8 @@ src_compile() {
 	distutils_src_compile
 
 	if use doc; then
-		./build_docs.py || die "doc building failed"
+		python setup.py build_docs || die "doc generation failed"
+		python setup.py build_man || die "man generation failed"
 	fi
 }
 
@@ -44,13 +45,8 @@ src_install() {
 	distutils_src_install
 
 	if use doc; then
-		dohtml -r doc dev-notes
-		doman man/*.1
+		dohtml -r build/sphinx/html/*
 	fi
-
-	dodoc doc/*.rst man/*.rst
-	docinto dev-notes
-	dodoc dev-notes/*.rst
 }
 
 pkg_postinst() {
