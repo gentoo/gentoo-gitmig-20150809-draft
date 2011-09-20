@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/rasqal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.61 2011/08/26 09:16:20 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.62 2011/09/20 13:15:27 chainsaw Exp $
+
+  20 Sep 2011; Tony Vroon <chainsaw@gentoo.org> rasqal-0.9.27.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
+  "idella4" Delaney in bug #382641.
 
 *rasqal-0.9.27 (26 Aug 2011)
 
