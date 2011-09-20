@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-shout2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-shout2/ChangeLog,v 1.71 2011/07/31 03:37:21 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-shout2/ChangeLog,v 1.72 2011/09/20 03:59:26 phajdan.jr Exp $
+
+  20 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gst-plugins-shout2-0.10.30.ebuild:
+  x86 stable wrt bug #382225
 
 *gst-plugins-shout2-0.10.30 (31 Jul 2011)
 

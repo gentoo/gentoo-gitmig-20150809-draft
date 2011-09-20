@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-faac
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-faac/ChangeLog,v 1.72 2011/07/29 08:34:57 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-faac/ChangeLog,v 1.73 2011/09/20 04:14:21 phajdan.jr Exp $
+
+  20 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gst-plugins-faac-0.10.22.ebuild:
+  x86 stable wrt bug #382225
 
 *gst-plugins-faac-0.10.22 (29 Jul 2011)
 
