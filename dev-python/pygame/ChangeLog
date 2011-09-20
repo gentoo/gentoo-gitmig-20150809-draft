@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pygame
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.80 2011/07/07 07:28:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.81 2011/09/20 23:50:37 floppym Exp $
+
+*pygame-1.9.2_pre3203 (20 Sep 2011)
+
+  20 Sep 2011; Mike Gilbert <floppym@gentoo.org> +pygame-1.9.2_pre3203.ebuild:
+  Version bump. Ebuild by Arfrever. Backported from Progress Overlay.
 
   07 Jul 2011; Markos Chandras <hwoarang@gentoo.org>
   -files/pygame-1.9.1-linux-headers-2.6.38.patch, -files/config.patch:
