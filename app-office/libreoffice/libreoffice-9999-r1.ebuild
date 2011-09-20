@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.17 2011/09/18 09:45:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.18 2011/09/20 16:01:14 scarabeus Exp $
 
 EAPI=3
 
@@ -486,12 +486,12 @@ src_configure() {
 
 src_compile() {
 	# this is not a proper make script and the jobs are passed during configure
-	make || die
+	make build || die
 }
 
 src_install() {
 	# This is not Makefile so no buildserver
-	make DESTDIR="${D}" distro-pack-install || die
+	make DESTDIR="${D}" distro-pack-install -o build || die
 
 	# Fix bash completion placement
 	newbashcomp "${ED}"/etc/bash_completion.d/libreoffice.sh ${PN} || die
