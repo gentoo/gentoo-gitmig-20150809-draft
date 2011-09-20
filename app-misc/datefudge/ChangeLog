@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/datefudge
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/datefudge/ChangeLog,v 1.13 2011/02/22 19:11:12 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/datefudge/ChangeLog,v 1.14 2011/09/20 22:37:44 darkside Exp $
+
+*datefudge-1.17 (20 Sep 2011)
+
+  20 Sep 2011; Jeremy Olexa <darkside@gentoo.org> +datefudge-1.17.ebuild:
+  Version bump from upstream, migrate to EAPI4, add prefix mods from bug 383749
 
   22 Feb 2011; nixnut <nixnut@gentoo.org> datefudge-1.14.ebuild:
   ppc stable #352744
