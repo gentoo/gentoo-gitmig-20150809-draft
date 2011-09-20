@@ -1,6 +1,8 @@
-diff -Nru xl2tpd-1.2.6.orig/xl2tpd.c xl2tpd-1.2.6/xl2tpd.c
---- xl2tpd-1.2.6.orig/xl2tpd.c	2010-05-10 22:35:43.000000000 +0200
-+++ xl2tpd-1.2.6/xl2tpd.c	2010-08-15 22:02:14.000000000 +0200
+https://bugs.gentoo.org/show_bug.cgi?id=307489
+http://homenet.beeline.ru/index.php?showtopic=192551&st=0&p=1063626345&#entry1063626345
+
+--- xl2tpd.c	2010-05-10 22:35:43.000000000 +0200
++++ xl2tpd.c	2010-08-15 22:02:14.000000000 +0200
 @@ -587,9 +587,33 @@
      hp = gethostbyname (host);
      if (!hp)
