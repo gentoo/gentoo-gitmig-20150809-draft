@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/vixie-cron
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/ChangeLog,v 1.61 2011/09/04 17:30:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/ChangeLog,v 1.62 2011/09/20 15:13:51 idl0r Exp $
+
+  20 Sep 2011; Christian Ruppert <idl0r@gentoo.org> files/crontab-3.0.1-r4,
+  files/crontab:
+  Whitespace
 
   04 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   vixie-cron-4.1-r11.ebuild:
