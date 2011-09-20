@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.3.0.ebuild,v 1.1 2011/09/18 20:30:22 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.3.0.ebuild,v 1.2 2011/09/20 11:28:54 hwoarang Exp $
 
 EAPI=3
 
@@ -80,6 +80,8 @@ pkg_setup() {
 
 src_prepare() {
 	base_src_prepare
+	# include missing zlib.h for libpng>1.5. Bug #383571
+	epatch "${FILESDIR}"/${P}-libpng15.patch
 
 	# remove bundled stuff
 	rm -rf 3rdparty
