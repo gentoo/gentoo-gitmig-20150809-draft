@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wstools/wstools-0.3.ebuild,v 1.5 2011/09/14 19:14:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wstools/wstools-0.3.ebuild,v 1.6 2011/09/20 23:38:05 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
+PYTHON_USE_WITH="xml"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="2.4 3.*"
 
@@ -20,3 +21,8 @@ IUSE=""
 
 DEPEND="dev-python/setuptools"
 RDEPEND=""
+
+src_prepare() {
+	distutils_src_prepare
+	find -name .cvsignore -print0 | xargs -0 rm -f
+}
