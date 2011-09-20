@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/icedtea6-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/ChangeLog,v 1.67 2011/09/19 09:25:52 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea6-bin/ChangeLog,v 1.68 2011/09/20 07:50:27 caster Exp $
+
+*icedtea6-bin-1.10.3-r2 (20 Sep 2011)
+
+  20 Sep 2011; Vlastimil Babka <caster@gentoo.org>
+  +icedtea6-bin-1.10.3-r2.ebuild:
+  Revbump to replace nsplugin part by icedtea-web-1.1.2-r1, which respects
+  LDFLAGS and thus --as-needed removes the (false) libpng14 dependency. Fixes
+  bug #383771.
 
 *icedtea6-bin-1.10.3-r1 (19 Sep 2011)
 
