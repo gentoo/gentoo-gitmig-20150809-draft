@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/man-pages
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.159 2011/09/16 17:17:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.160 2011/09/20 18:02:50 vapier Exp $
+
+*man-pages-3.33 (20 Sep 2011)
+
+  20 Sep 2011; Mike Frysinger <vapier@gentoo.org> +man-pages-3.33.ebuild:
+  Version bump.
 
   16 Sep 2011; Jeroen Roovers <jer@gentoo.org> man-pages-3.32.ebuild:
   Stable for HPPA (bug #379917).
