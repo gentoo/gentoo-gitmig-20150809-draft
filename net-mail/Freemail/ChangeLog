@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/Freemail
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/Freemail/ChangeLog,v 1.6 2010/03/28 21:22:04 caster Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/Freemail/ChangeLog,v 1.7 2011/09/20 22:49:57 mgorny Exp $
+
+  20 Sep 2011; Michał Górny <mgorny@gentoo.org> Freemail-9999.ebuild:
+  Migrate to git-2.
 
   28 Mar 2010; Vlastimil Babka <caster@gentoo.org> Freemail-9999.ebuild:
   Use slot dep for bcprov.
