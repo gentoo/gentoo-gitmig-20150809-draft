@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/flashrom
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/ChangeLog,v 1.17 2011/09/19 15:29:05 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/ChangeLog,v 1.18 2011/09/20 16:03:21 nativemad Exp $
+
+  20 Sep 2011; Andreas Schuerch <nativemad@gentoo.org> flashrom-0.9.4.ebuild:
+  x86 stable, bug 383401
 
   19 Sep 2011; Christian Ruppert <idl0r@gentoo.org> flashrom-0.9.3.ebuild,
   flashrom-0.9.4.ebuild:
