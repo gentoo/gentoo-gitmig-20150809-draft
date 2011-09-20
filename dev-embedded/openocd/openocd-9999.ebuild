@@ -1,14 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.14 2011/05/12 18:51:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.15 2011/09/20 22:05:51 mgorny Exp $
 
 EAPI="2"
 
 inherit autotools eutils
 if [[ ${PV} == "9999" ]] ; then
-	inherit git
+	inherit git-2
 	KEYWORDS=""
-	EGIT_REPO_URI="git://openocd.git.sourceforge.net/gitroot/openocd/openocd"
+	EGIT_REPO_URI="git://openocd.git.sourceforge.net/gitroot/${PN}/${PN}"
 else
 	KEYWORDS="~amd64 ~x86"
 	SRC_URI="http://dev.gentoo.org/~hwoarang/distfiles/${P}.tar.gz"
