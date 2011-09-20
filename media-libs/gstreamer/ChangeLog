@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.300 2011/09/14 19:23:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.301 2011/09/20 03:32:07 phajdan.jr Exp $
+
+  20 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gstreamer-0.10.35.ebuild:
+  x86 stable wrt bug #382225
 
   14 Sep 2011; Fabian Groffen <grobian@gentoo.org> gstreamer-0.10.35.ebuild:
   Transfer Prefix keywords, add Interix and PPC/Darwin fixes
