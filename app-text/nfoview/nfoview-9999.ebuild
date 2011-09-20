@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/nfoview/nfoview-9999.ebuild,v 1.8 2011/06/12 01:23:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/nfoview/nfoview-9999.ebuild,v 1.9 2011/09/20 22:46:11 mgorny Exp $
 
 EAPI=3
 
@@ -10,8 +10,9 @@ RESTRICT_PYTHON_ABIS="3.*"
 
 inherit distutils fdo-mime gnome2-utils
 if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="git://github.com/otsaloma/nfoview.git"
-	inherit git
+	EGIT_REPO_URI="git://github.com/otsaloma/nfoview.git
+		http://github.com/otsaloma/nfoview.git"
+	inherit git-2
 	SRC_URI=""
 	#KEYWORDS=""
 else
