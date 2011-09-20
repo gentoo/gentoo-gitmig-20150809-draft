@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.9.1-r1.ebuild,v 1.1 2011/09/20 04:16:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.9.1-r1.ebuild,v 1.2 2011/09/20 04:28:59 vapier Exp $
 
 EAPI="2"
 
@@ -15,7 +15,8 @@ SRC_URI="mirror://gnu/gdbm/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="berkdb compat exporter static-libs"
+# enable compat by default only so long as perl/python need it
+IUSE="berkdb +compat exporter static-libs"
 
 DEPEND="berkdb? ( sys-libs/db )"
 RDEPEND="${DEPEND}"
