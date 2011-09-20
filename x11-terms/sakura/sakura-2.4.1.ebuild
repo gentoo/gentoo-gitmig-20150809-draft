@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/sakura-2.4.1.ebuild,v 1.1 2011/07/19 13:26:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/sakura-2.4.1.ebuild,v 1.2 2011/09/20 03:58:07 radhermit Exp $
 
 EAPI=4
 inherit cmake-utils
 
 DESCRIPTION="sakura is a terminal emulator based on GTK and VTE"
-HOMEPAGE="http://www.pleyades.net/david/sakura.php"
+HOMEPAGE="http://www.pleyades.net/david/projects/sakura/"
 SRC_URI="http://www.pleyades.net/david/projects/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
