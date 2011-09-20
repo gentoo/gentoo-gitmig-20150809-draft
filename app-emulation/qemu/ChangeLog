@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.86 2011/06/27 19:27:45 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.87 2011/09/20 22:34:01 mgorny Exp $
+
+  20 Sep 2011; Michał Górny <mgorny@gentoo.org> qemu-9999.ebuild:
+  Migrate to git-2.
 
 *qemu-9999 (27 Jun 2011)
 

@@ -1,12 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.1 2011/06/27 19:27:45 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.2 2011/09/20 22:34:01 mgorny Exp $
 
 EAPI="2"
 
 if [[ ${PV} = *9999* ]]; then
-	EGIT_REPO_URI="git://git.qemu.org/qemu.git"
-	GIT_ECLASS="git"
+	EGIT_REPO_URI="git://git.qemu.org/qemu.git
+		http://git.qemu.org/git/qemu.git"
+	GIT_ECLASS="git-2"
 fi
 
 inherit eutils flag-o-matic ${GIT_ECLASS} linux-info toolchain-funcs
