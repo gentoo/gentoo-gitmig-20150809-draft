@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.209 2011/09/13 18:32:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.210 2011/09/20 20:55:19 peper Exp $
+
+*paludis-0.68.0 (20 Sep 2011)
+
+  20 Sep 2011; Piotr Jaroszyński <peper@gentoo.org> +paludis-0.68.0.ebuild:
+  Add 0.68.0
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #225633
