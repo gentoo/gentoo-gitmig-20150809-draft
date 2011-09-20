@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.2.0.ebuild,v 1.1 2011/08/30 17:11:03 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-3.2.1.ebuild,v 1.1 2011/09/20 15:35:34 idl0r Exp $
 
 EAPI="3"
 
@@ -37,12 +37,6 @@ S="${WORKDIR}/${MY_P}"
 
 src_configure() {
 	local myconf
-
-#	if use mysql || use postgres ; then
-#		myconf="--with-sql"
-#	else
-#		myconf="--without-sql"
-#	fi
 
 	# BDB by default, prefer tokyocabinet above qdbm...
 	# sqlite3 has been added but stated as experimental/broken...
