@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gobject-introspection
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.42 2011/09/12 08:59:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.43 2011/09/20 19:53:20 mattst88 Exp $
+
+  20 Sep 2011; Matt Turner <mattst88@gentoo.org>
+  gobject-introspection-0.10.8.ebuild:
+  Add missing dependency on bison, bug 382987
 
   12 Sep 2011; Pacho Ramos <pacho@gentoo.org>
   gobject-introspection-0.10.8.ebuild,

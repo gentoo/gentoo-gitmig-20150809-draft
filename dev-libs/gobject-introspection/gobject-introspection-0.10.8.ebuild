@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-0.10.8.ebuild,v 1.15 2011/09/12 08:59:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-0.10.8.ebuild,v 1.16 2011/09/20 19:53:20 mattst88 Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -21,6 +21,7 @@ RDEPEND=">=dev-libs/glib-2.24:2
 	virtual/libffi"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
+	sys-devel/bison
 	sys-devel/flex
 	virtual/yacc
 	doc? ( >=dev-util/gtk-doc-1.12 )
