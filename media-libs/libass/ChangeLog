@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libass
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/ChangeLog,v 1.45 2011/09/18 16:38:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/ChangeLog,v 1.46 2011/09/20 13:08:37 chainsaw Exp $
+
+  20 Sep 2011; Tony Vroon <chainsaw@gentoo.org> libass-0.9.13.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
+  "idella4" Delaney in bug #377255.
 
   18 Sep 2011; Markus Meier <maekke@gentoo.org> libass-0.9.13.ebuild:
   arm stable, bug #377255
