@@ -1,11 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/pyflakes-0.5.0.ebuild,v 1.2 2011/09/04 06:20:03 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyflakes/pyflakes-0.5.0.ebuild,v 1.3 2011/09/20 23:40:33 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
+PYTHON_TESTS_RESTRICTED_ABIS="*-jython"
 DISTUTILS_SRC_TEST="trial"
 
 inherit distutils
@@ -19,5 +20,5 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
-DEPEND="test? ( dev-python/twisted )"
+DEPEND=""
 RDEPEND=""
