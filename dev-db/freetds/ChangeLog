@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/freetds
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.50 2011/09/20 09:51:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freetds/ChangeLog,v 1.51 2011/09/20 10:11:34 jlec Exp $
+
+*freetds-0.91 (20 Sep 2011)
+
+  20 Sep 2011; Justin Lecher <jlec@gentoo.org> +freetds-0.91.ebuild:
+  Version Bump, #381341; thanks Eric Johnson for the ebuild
 
   20 Sep 2011; Justin Lecher <jlec@gentoo.org> freetds-0.64.ebuild,
   freetds-0.82-r3.ebuild:
