@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.4.8-r2.ebuild,v 1.4 2011/09/17 18:26:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.4.8-r2.ebuild,v 1.5 2011/09/20 20:31:14 grobian Exp $
 
 # this ebuild is only for the libpng14.so.14 SONAME for ABI compat
 
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	if ! has_version media-libs/libpng:${SLOT}; then
-		rm -f "${EROOT}"/usr/$(get_libdir)/libpng14.so.14
+		rm -f "${EROOT}"/usr/$(get_libdir)/libpng14$(get_libname 14)
 	fi
 }
 
@@ -43,5 +43,6 @@ src_compile() {
 }
 
 src_install() {
-	newlib.so .libs/libpng14.so.14.* libpng14.so.14
+	local libn=libpng14$(get_libname 14)
+	newlib.so .libs/$(readlink .libs/${libn}) ${libn}
 }
