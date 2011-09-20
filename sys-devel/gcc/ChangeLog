@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.823 2011/08/13 03:55:39 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.824 2011/09/20 13:50:37 chainsaw Exp $
+
+  20 Sep 2011; Tony Vroon <chainsaw@gentoo.org> gcc-4.5.3-r1.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in bug
+  #357479.
 
 *gcc-4.6.1-r1 (13 Aug 2011)
 *gcc-4.5.3-r1 (13 Aug 2011)
