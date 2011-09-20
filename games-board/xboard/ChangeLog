@@ -1,6 +1,10 @@
 # ChangeLog for games-board/xboard
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.41 2011/08/02 05:45:58 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/ChangeLog,v 1.42 2011/09/20 14:36:55 mr_bones_ Exp $
+
+  20 Sep 2011; Michael Sterrett <mr_bones_@gentoo.org> xboard-4.4.4.ebuild,
+  xboard-4.5.1.ebuild, xboard-4.5.2a.ebuild:
+  drop amd64 support (bug #375407)
 
   02 Aug 2011; Matt Turner <mattst88@gentoo.org> xboard-4.4.4.ebuild,
   xboard-4.5.1.ebuild, xboard-4.5.2a.ebuild:
