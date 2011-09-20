@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/bioperl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/ChangeLog,v 1.48 2011/07/18 06:31:35 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/ChangeLog,v 1.49 2011/09/20 22:15:18 mgorny Exp $
+
+  20 Sep 2011; Michał Górny <mgorny@gentoo.org> bioperl-9999-r1.ebuild:
+  Migrate to git-2.
 
 *bioperl-1.6.9 (18 Jul 2011)
 

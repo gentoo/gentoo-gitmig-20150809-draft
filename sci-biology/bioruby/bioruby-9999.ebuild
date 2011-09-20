@@ -1,12 +1,13 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioruby/bioruby-9999.ebuild,v 1.1 2009/09/19 21:41:54 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioruby/bioruby-9999.ebuild,v 1.2 2011/09/20 22:11:00 mgorny Exp $
 
 EAPI="2"
 
-EGIT_REPO_URI="git://github.com/bioruby/bioruby.git"
+EGIT_REPO_URI="git://github.com/bioruby/bioruby.git
+	https://github.com/bioruby/bioruby.git"
 
-inherit ruby git
+inherit ruby git-2
 
 DESCRIPTION="An integrated environment for bioinformatics using the Ruby language"
 LICENSE="Ruby"
