@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/gdbm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.54 2011/09/19 04:28:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/ChangeLog,v 1.55 2011/09/20 04:16:42 vapier Exp $
+
+*gdbm-1.9.1-r1 (20 Sep 2011)
+
+  20 Sep 2011; Mike Frysinger <vapier@gentoo.org> +gdbm-1.9.1-r1.ebuild,
+  +files/gdbm-1.9.1-compat-link.patch:
+  Add patch from upstream so gdbm_compat links against gdbm #383743 by
+  Alexandre Rostovtsev.
 
 *gdbm-1.9.1 (19 Sep 2011)
 
