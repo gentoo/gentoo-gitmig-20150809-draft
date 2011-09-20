@@ -1,0 +1,11 @@
+# ChangeLog for dev-vcs/git-bz
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-bz/ChangeLog,v 1.1 2011/09/20 14:15:19 mgorny Exp $
+
+*git-bz-0_p110920 (20 Sep 2011)
+
+  20 Sep 2011; Michał Górny <mgorny@gentoo.org> +git-bz-0_p110920.ebuild,
+  +metadata.xml:
+  Introduce an ebuild for git-bz snapshot. git-bz is a Bugzilla integration
+  subcommand for git.
+
