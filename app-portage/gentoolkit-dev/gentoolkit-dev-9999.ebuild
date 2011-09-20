@@ -1,15 +1,14 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/gentoolkit-dev-9999.ebuild,v 1.7 2010/12/27 16:31:20 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/gentoolkit-dev-9999.ebuild,v 1.8 2011/09/20 22:09:20 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*:2.6"
 PYTHON_USE_WITH="xml"
 
 EGIT_MASTER="gentoolkit-dev"
-EGIT_BRANCH="gentoolkit-dev"
 
-inherit git python
+inherit git-2 python
 
 DESCRIPTION="Collection of developer scripts for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/tools/index.xml"

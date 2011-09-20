@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gentoolkit-dev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.111 2011/07/17 10:26:32 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.112 2011/09/20 22:09:20 mgorny Exp $
+
+  20 Sep 2011; Michał Górny <mgorny@gentoo.org> gentoolkit-dev-9999.ebuild:
+  Migrate to git-2.
 
   17 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gentoolkit-dev-0.2.8.ebuild:
