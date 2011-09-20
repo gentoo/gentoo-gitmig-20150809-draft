@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gentoolkit-dev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.112 2011/09/20 22:09:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.113 2011/09/20 22:11:46 mgorny Exp $
+
+  20 Sep 2011; Michał Górny <mgorny@gentoo.org> gentoolkit-dev-9999.ebuild:
+  Add HTTP fallback for git-2. Sorry for missing it in the first commit.
 
   20 Sep 2011; Michał Górny <mgorny@gentoo.org> gentoolkit-dev-9999.ebuild:
   Migrate to git-2.
