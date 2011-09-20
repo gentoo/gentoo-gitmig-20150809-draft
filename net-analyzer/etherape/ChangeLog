@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/etherape
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/ChangeLog,v 1.61 2011/09/20 15:53:24 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/ChangeLog,v 1.62 2011/09/20 16:11:51 chainsaw Exp $
+
+  20 Sep 2011; Tony Vroon <chainsaw@gentoo.org> etherape-0.9.12.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah "Armageddon" El Lazkani in security bug #383689 filed by Sean Amoss.
 
   20 Sep 2011; Andreas Schuerch <nativemad@gentoo.org> etherape-0.9.12.ebuild:
   x86 stable, see security bug 383689
