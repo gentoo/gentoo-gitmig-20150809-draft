@@ -1,12 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.13.ebuild,v 1.1 2011/09/05 20:58:27 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.13.ebuild,v 1.2 2011/09/20 23:47:55 floppym Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="*-jython"
+PYTHON_TESTS_FAILURES_TOLERANT_ABIS="3.1"
 
-inherit distutils eutils
+inherit distutils
 
 MY_PN="pyOpenSSL"
 MY_P="${MY_PN}-${PV}"
@@ -57,18 +58,18 @@ src_test() {
 	test_package() {
 		pushd OpenSSL/test > /dev/null
 
-		local return_status="0" test
+		local exit_status="0" test
 		for test in test_*.py; do
 			einfo "Running ${test}..."
 			if ! PYTHONPATH="$(ls -d ../../build-${PYTHON_ABI}/lib.*)" "$(PYTHON)" "${test}"; then
-				eerror "${test} failed with $(python_get_implementation) $(python_get_version)"
-				return_status="1"
+				eerror "${test} failed with $(python_get_implementation_and_version)"
+				exit_status="1"
 			fi
 		done
 
 		popd > /dev/null
 
-		return "${return_status}"
+		return "${exit_status}"
 	}
 	python_execute_function test_package
 }
@@ -86,7 +87,6 @@ src_install() {
 		dodoc doc/pyOpenSSL.* || die "dodoc failed"
 	fi
 
-	# Install examples
 	insinto /usr/share/doc/${PF}/examples
 	doins -r examples/* || die "doins failed"
 }

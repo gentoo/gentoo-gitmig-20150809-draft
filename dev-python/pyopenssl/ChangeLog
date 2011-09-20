@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyopenssl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.84 2011/09/05 20:58:27 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.85 2011/09/20 23:47:55 floppym Exp $
+
+  20 Sep 2011; Mike Gilbert <floppym@gentoo.org> pyopenssl-0.13.ebuild:
+  Ignore tests failures with Python 3.1. Don't inherit unused eclass. Simplify
+  src_test(). Patch by Arfrever.
 
 *pyopenssl-0.13 (05 Sep 2011)
 
