@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/gnat-gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.48 2011/09/20 19:19:27 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.49 2011/09/20 20:15:39 george Exp $
+
+  20 Sep 2011; George Shapovalov <george@gentoo.org> gnat-gcc-4.4.3.ebuild,
+  gnat-gcc-4.4.5.ebuild:
+  removed inherit autotools - the eauto-specific code was moved to a relevant
+  ebuild
 
   20 Sep 2011; George Shapovalov <george@gentoo.org> gnat-gcc-4.3.6.ebuild:
   updated bootstrap/keyworded for 4.3 on x86

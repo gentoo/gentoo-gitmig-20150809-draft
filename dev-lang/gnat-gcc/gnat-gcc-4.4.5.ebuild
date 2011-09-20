@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.4.5.ebuild,v 1.3 2011/06/19 20:33:42 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.4.5.ebuild,v 1.4 2011/09/20 20:15:39 george Exp $
 
-inherit gnatbuild autotools
+inherit gnatbuild
 
 DESCRIPTION="GNAT Ada Compiler - gcc version"
 HOMEPAGE="http://gcc.gnu.org/"
