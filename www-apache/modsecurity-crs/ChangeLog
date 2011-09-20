@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/modsecurity-crs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/modsecurity-crs/ChangeLog,v 1.12 2011/09/20 14:47:42 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/modsecurity-crs/ChangeLog,v 1.13 2011/09/20 15:35:13 nativemad Exp $
+
+  20 Sep 2011; Andreas Schuerch <nativemad@gentoo.org>
+  modsecurity-crs-2.1.2.ebuild:
+  x86 stable, see bug 383315
 
   20 Sep 2011; Tony Vroon <chainsaw@gentoo.org> modsecurity-crs-2.1.2.ebuild:
   Marked stable as a dependency of www-apache/mod_security based on arch
