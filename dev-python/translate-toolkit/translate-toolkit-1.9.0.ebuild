@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/translate-toolkit/translate-toolkit-1.9.0.ebuild,v 1.2 2011/08/10 15:13:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/translate-toolkit/translate-toolkit-1.9.0.ebuild,v 1.3 2011/09/20 19:46:33 scarabeus Exp $
 
 EAPI=3
 
@@ -28,7 +28,6 @@ RDEPEND="
 	ical? ( dev-python/vobject )
 	ini? ( dev-python/iniparse )
 	psyco? ( dev-python/psyco )
-	subtitles? ( media-video/gaupol )
 "
 DEPEND="${RDEPEND}"
 
