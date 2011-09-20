@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-1.1.2.ebuild,v 1.4 2011/09/10 07:24:04 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-1.1.2.ebuild,v 1.5 2011/09/20 21:18:53 vapier Exp $
 
 EAPI="2"
 
@@ -24,6 +24,9 @@ RDEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}/libnl31-support.diff"
+	sed -i \
+		-e "s:\<pkg-config\>:$(tc-getPKG_CONFIG):" \
+		Makefile || die
 }
 
 src_compile() {

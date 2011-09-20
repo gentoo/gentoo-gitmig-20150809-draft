@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/crda
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.24 2011/09/10 10:12:29 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.25 2011/09/20 21:18:53 vapier Exp $
+
+  20 Sep 2011; Mike Frysinger <vapier@gentoo.org> crda-1.1.2.ebuild:
+  Use correct pkg-config rather than hardcoded `pkg-config` #383861#1 by Tony
+  Vroon.
 
   10 Sep 2011; <gurligebis@gentoo.org> metadata.xml:
   Removed Tony Vroon (chainsaw) from maintainers per request in bug #382447 .
