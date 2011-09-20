@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.256 2011/09/19 17:05:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.257 2011/09/20 13:41:35 chainsaw Exp $
+
+  20 Sep 2011; Tony Vroon <chainsaw@gentoo.org> lighttpd-1.4.29-r2.ebuild:
+  Marked stable on AMD64 based on arch testing by Tomáš "Mepho" Pružina &
+  Agostino "ago" Sarubbo in bug #383791.
 
 *lighttpd-1.4.29-r2 (19 Sep 2011)
 
