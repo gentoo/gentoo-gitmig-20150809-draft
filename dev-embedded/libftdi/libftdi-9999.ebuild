@@ -1,14 +1,14 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-9999.ebuild,v 1.2 2010/06/29 23:32:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-9999.ebuild,v 1.3 2011/09/20 22:01:38 mgorny Exp $
 
 EAPI="2"
 
 if [[ ${PV} == 9999* ]] ; then
-	EGIT_REPO_URI="git://developer.intra2net.com/libftdi"
-	inherit git autotools
+	EGIT_REPO_URI="git://developer.intra2net.com/${PN}"
+	inherit git-2 autotools
 else
-	SRC_URI="http://www.intra2net.com/en/developer/libftdi/download/${P}.tar.gz"
+	SRC_URI="http://www.intra2net.com/en/developer/${PN}/download/${P}.tar.gz"
 	KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 fi
 

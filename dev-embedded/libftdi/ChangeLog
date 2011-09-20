@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/libftdi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/ChangeLog,v 1.53 2010/09/09 18:04:18 vapier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/ChangeLog,v 1.54 2011/09/20 22:01:38 mgorny Exp $
+
+  20 Sep 2011; Michał Górny <mgorny@gentoo.org> libftdi-9999.ebuild,
+  libftdi-9999.1.0.ebuild:
+  Migrate to git-2, simplify URIs a little.
 
   09 Sep 2010; Mike Frysinger <vapier@gentoo.org> libftdi-0.18.ebuild:
   Stabilize for all.
