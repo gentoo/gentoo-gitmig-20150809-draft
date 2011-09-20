@@ -1,6 +1,19 @@
 # ChangeLog for dev-java/gcj-jdk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/ChangeLog,v 1.3 2011/08/11 07:06:53 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/ChangeLog,v 1.4 2011/09/20 15:37:19 caster Exp $
+
+*gcj-jdk-4.5.2-r1 (20 Sep 2011)
+*gcj-jdk-4.5.1-r1 (20 Sep 2011)
+*gcj-jdk-4.4.6 (20 Sep 2011)
+*gcj-jdk-4.4.5-r1 (20 Sep 2011)
+*gcj-jdk-4.4.4-r1 (20 Sep 2011)
+
+  20 Sep 2011; Vlastimil Babka <caster@gentoo.org> -gcj-jdk-4.4.4.ebuild,
+  +gcj-jdk-4.4.4-r1.ebuild, -gcj-jdk-4.4.5.ebuild, +gcj-jdk-4.4.5-r1.ebuild,
+  +gcj-jdk-4.4.6.ebuild, -gcj-jdk-4.5.1.ebuild, +gcj-jdk-4.5.1-r1.ebuild,
+  -gcj-jdk-4.5.2.ebuild, +gcj-jdk-4.5.2-r1.ebuild:
+  Add 4.4.6 variant and revbump the rest to have the same set of symlinks as
+  added for 4.5.3.
 
 *gcj-jdk-4.5.3 (10 Aug 2011)
 

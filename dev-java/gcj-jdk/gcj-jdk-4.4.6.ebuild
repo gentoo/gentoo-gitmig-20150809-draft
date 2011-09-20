@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/gcj-jdk-4.4.4.ebuild,v 1.1 2010/11/14 01:04:19 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/gcj-jdk-4.4.6.ebuild,v 1.1 2011/09/20 15:37:19 caster Exp $
 
 EAPI="2"
 
@@ -62,6 +62,14 @@ src_install() {
 	dosym ${gccbin}/grmiregistry ${gcjhome}/jre/bin/rmiregistry
 	dosym ${gccbin}/gkeytool ${gcjhome}/bin/keytool
 	dosym ${gccbin}/gkeytool ${gcjhome}/jre/bin/keytool
+	dosym ${gccbin}/gnative2ascii ${gcjhome}/bin/native2ascii
+	dosym ${gccbin}/gorbd ${gcjhome}/bin/orbd
+	dosym ${gccbin}/gorbd ${gcjhome}/jre/bin/orbd
+	dosym ${gccbin}/grmid ${gcjhome}/bin/rmid
+	dosym ${gccbin}/grmid ${gcjhome}/jre/bin/rmid
+	dosym ${gccbin}/gserialver ${gcjhome}/bin/serialver
+	dosym ${gccbin}/gtnameserv ${gcjhome}/bin/tnameserv
+	dosym ${gccbin}/gtnameserv ${gcjhome}/jre/bin/tnameserv
 	dodir ${gcjhome}/jre/lib/${libarch}/client
 	dosym /usr/$(get_libdir)/gcj-${gcc_version}*/libjvm.so ${gcjhome}/jre/lib/${libarch}/client/libjvm.so
 	dosym /usr/$(get_libdir)/gcj-${gcc_version}*/libjvm.so ${gcjhome}/jre/lib/${libarch}/server/libjvm.so
