@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ogmrip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ChangeLog,v 1.44 2011/02/06 17:01:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ChangeLog,v 1.45 2011/09/20 10:21:44 hwoarang Exp $
+
+  20 Sep 2011; Markos Chandras <hwoarang@gentoo.org> ogmrip-0.13.6.ebuild,
+  +files/ogmrip-0.13.6-libpng15.patch:
+  Add libpng-1.5 patch thanks to Olivier Rolland <billl@users.sf.net>. Bug
+  #383593
 
   06 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> ogmrip-0.13.6.ebuild,
   +files/ogmrip-0.13.6-libnotify-0.7.patch:
