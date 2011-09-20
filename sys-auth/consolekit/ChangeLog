@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/consolekit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.111 2011/07/24 17:48:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/consolekit/ChangeLog,v 1.112 2011/09/20 16:26:36 jer Exp $
+
+  20 Sep 2011; Jeroen Roovers <jer@gentoo.org> consolekit-0.4.5-r1.ebuild:
+  Stable for HPPA (bug #374687).
 
   24 Jul 2011; Raúl Porcel <armin76@gentoo.org> consolekit-0.4.5-r1.ebuild:
   alpha/ia64/sh/sparc stable wrt #374687
