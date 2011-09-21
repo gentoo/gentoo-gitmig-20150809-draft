@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.314 2011/09/21 06:37:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.315 2011/09/21 10:05:42 scarabeus Exp $
+
+  21 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> -gnutls-3.0.2.ebuild,
+  gnutls-3.0.3.ebuild, metadata.xml:
+  Make pkcs11 support optional. Drop older 3.0 ebuild that fails with that.
 
 *gnutls-3.0.3 (21 Sep 2011)
 *gnutls-2.12.11 (21 Sep 2011)

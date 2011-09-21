@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.0.3.ebuild,v 1.1 2011/09/21 06:37:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.0.3.ebuild,v 1.2 2011/09/21 10:05:42 scarabeus Exp $
 
 EAPI=4
 
@@ -27,15 +27,15 @@ fi
 LICENSE="GPL-3 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="+cxx doc examples guile +nettle nls static-libs test zlib"
+IUSE="+cxx doc examples guile +nettle nls pkcs11 static-libs test zlib"
 
 # lib/m4/hooks.m4 says that GnuTLS uses a fork of PaKChoiS.
 RDEPEND="
-	app-crypt/p11-kit
 	>=dev-libs/libtasn1-0.3.4
 	>=dev-libs/nettle-2.2[gmp]
 	guile? ( >=dev-scheme/guile-1.8[networking] )
 	nls? ( virtual/libintl )
+	pkcs11? ( app-crypt/p11-kit )
 	zlib? ( >=sys-libs/zlib-1.2.3.1 )"
 DEPEND="${RDEPEND}
 	sys-devel/libtool
@@ -81,6 +81,7 @@ src_configure() {
 		$(use_enable doc gtk-doc-pdf) \
 		$(use_enable guile) \
 		$(use_enable nls) \
+		$(use_with pkcs11 p11-kit) \
 		$(use_with zlib) \
 		${myconf}
 }
