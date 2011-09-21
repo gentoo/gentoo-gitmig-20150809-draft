@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/gnokii
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.112 2011/07/22 12:06:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.113 2011/09/21 07:44:16 mgorny Exp $
+
+  21 Sep 2011; Michał Górny <mgorny@gentoo.org> gnokii-9999.ebuild:
+  Migrate to git-2.
 
   22 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> gnokii-0.6.29.ebuild:
   ppc/ppc64 stable wrt #332043

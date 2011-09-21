@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-9999.ebuild,v 1.8 2011/03/27 12:11:23 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-9999.ebuild,v 1.9 2011/09/21 07:44:16 mgorny Exp $
 
 EAPI=2
 
@@ -13,8 +13,9 @@ if [ "$PV" != "9999" ]; then
 else
 	SRC_URI=""
 	KEYWORDS=""
-	EGIT_REPO_URI="git://git.savannah.nongnu.org/gnokii.git"
-	inherit git
+	EGIT_REPO_URI="git://git.savannah.nongnu.org/${PN}.git
+		http://git.savannah.gnu.org/r/${PN}.git"
+	inherit git-2
 fi
 DESCRIPTION="user space driver and tools for use with mobile phones"
 
