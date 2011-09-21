@@ -1,21 +1,39 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-14.0.835.186_p101821.ebuild,v 1.1 2011/09/20 21:16:26 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-14.0.835.186_p101821.ebuild,v 1.2 2011/09/21 01:16:55 floppym Exp $
 
 EAPI="4"
 
 inherit eutils fdo-mime gnome2-utils multilib pax-utils
 
-MY_PN="${PN}-stable"
-MY_P="${MY_PN}_${PV/_p/-r}"
-
 DESCRIPTION="The web browser from Google"
 HOMEPAGE="http://www.google.com/chrome"
+
+case ${PV} in
+	*_alpha*)
+		SLOT="unstable"
+		MY_PV=${PV/_alpha/-r}
+		;;
+	*_beta*)
+		SLOT="beta"
+		MY_PV=${PV/_beta/-r}
+		;;
+	*_p*)
+		SLOT="stable"
+		MY_PV=${PV/_p/-r}
+		;;
+	*)
+		die "Invalid value for \${PV}: ${PV}"
+		;;
+esac
+
+MY_PN="${PN}-${SLOT}"
+MY_P="${MY_PN}_${MY_PV}"
+
 SRC_BASE="http://dl.google.com/linux/chrome/deb/pool/main/g/${MY_PN}/${MY_P}_"
 SRC_URI="amd64? ( ${SRC_BASE}amd64.deb ) x86? ( ${SRC_BASE}i386.deb )"
 
 LICENSE="google-chrome"
-SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="+plugins"
 RESTRICT="mirror"
@@ -56,8 +74,15 @@ RDEPEND="app-arch/bzip2
 	x11-libs/pango
 	x11-misc/xdg-utils"
 
+# Add blockers for the other slots.
+for x in 0 beta stable unstable; do
+	if [[ ${SLOT} != ${x} ]]; then
+		RDEPEND+=" !${CATEGORY}/${PN}:${x}"
+	fi
+done
+
 QA_PREBUILT="*"
-S="${WORKDIR}"
+S=${WORKDIR}
 
 # Chromium uses different names for some langs,
 # return Chromium name corresponding to a Gentoo lang.
