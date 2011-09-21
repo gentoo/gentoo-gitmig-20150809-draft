@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/lenovo-sl-laptop
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/lenovo-sl-laptop/ChangeLog,v 1.2 2010/06/11 21:04:24 yngwin Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/lenovo-sl-laptop/ChangeLog,v 1.3 2011/09/21 07:35:10 mgorny Exp $
+
+  21 Sep 2011; Michał Górny <mgorny@gentoo.org> lenovo-sl-laptop-9999.ebuild:
+  Migrate to git-2, update HOMEPAGE.
 
   11 Jun 2010; Ben de Groot <yngwin@gentoo.org> metadata.xml:
   Removing myself as maintainer
