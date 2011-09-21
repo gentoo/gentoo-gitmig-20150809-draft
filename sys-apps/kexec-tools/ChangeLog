@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kexec-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.41 2011/09/19 11:01:44 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.42 2011/09/21 08:31:54 mgorny Exp $
+
+  21 Sep 2011; Michał Górny <mgorny@gentoo.org> kexec-tools-9999.ebuild:
+  Migrate to git-2.
 
   19 Sep 2011; Andreas Schuerch <nativemad@gentoo.org>
   kexec-tools-2.0.2-r1.ebuild:
