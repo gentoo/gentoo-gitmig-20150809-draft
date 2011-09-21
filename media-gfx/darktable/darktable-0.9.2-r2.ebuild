@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-0.9.2-r2.ebuild,v 1.1 2011/09/14 12:59:27 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/darktable-0.9.2-r2.ebuild,v 1.2 2011/09/21 18:39:29 radhermit Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -52,6 +52,7 @@ PATCHES=(
 	"${FILESDIR}"/${P}-system-libraw.patch
 	"${FILESDIR}"/${PN}-0.9.1-no-rawspeed.patch
 	"${FILESDIR}"/${PN}-0.9-cflags.patch
+	"${FILESDIR}"/${P}-zlib-header.patch
 )
 
 src_prepare() {
