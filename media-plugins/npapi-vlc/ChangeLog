@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/npapi-vlc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/npapi-vlc/ChangeLog,v 1.1 2010/10/16 15:21:31 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/npapi-vlc/ChangeLog,v 1.2 2011/09/21 08:43:31 mgorny Exp $
+
+  21 Sep 2011; Michał Górny <mgorny@gentoo.org> npapi-vlc-9999.ebuild:
+  Migrate to git-2.
 
 *npapi-vlc-9999 (16 Oct 2010)
 
