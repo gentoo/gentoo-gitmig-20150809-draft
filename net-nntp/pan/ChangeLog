@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/pan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.88 2011/09/20 07:10:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.89 2011/09/21 08:42:43 mgorny Exp $
+
+  21 Sep 2011; Michał Górny <mgorny@gentoo.org> pan-9999.ebuild:
+  Migrate to git-2.
 
 *pan-0.135 (20 Sep 2011)
 

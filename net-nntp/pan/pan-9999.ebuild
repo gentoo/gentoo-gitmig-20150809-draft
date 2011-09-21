@@ -1,15 +1,16 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-9999.ebuild,v 1.5 2011/02/23 22:23:24 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-9999.ebuild,v 1.6 2011/09/21 08:42:43 mgorny Exp $
 
 EAPI="3"
 
-inherit autotools base git
+inherit autotools base git-2
 
 DESCRIPTION="A newsreader for GNOME"
 HOMEPAGE="http://pan.rebelbase.com/"
 
-EGIT_REPO_URI="git://git.gnome.org/${PN}2"
+EGIT_REPO_URI="git://git.gnome.org/${PN}2
+	http://git.gnome.org/browse/${PN}2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -32,8 +33,6 @@ Pnorm="${PN}-0.134"
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 src_prepare() {
-	git_src_prepare
-
 	# bootstrap build system
 	intltoolize --force --automake || die "intltoolize failed"
 	eautoreconf
