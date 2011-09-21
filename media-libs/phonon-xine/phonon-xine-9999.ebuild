@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-xine/phonon-xine-9999.ebuild,v 1.2 2011/07/17 08:50:04 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-xine/phonon-xine-9999.ebuild,v 1.3 2011/09/21 08:31:29 mgorny Exp $
 
 EAPI="3"
 
-inherit cmake-utils git
+inherit cmake-utils git-2
 
 DESCRIPTION="Phonon XINE backend"
 HOMEPAGE="https://projects.kde.org/projects/kdesupport/phonon/phonon-xine"
