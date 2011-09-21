@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/reiserfsprogs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.58 2010/11/13 15:57:03 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.59 2011/09/21 21:06:41 alexxy Exp $
+
+*reiserfsprogs-3.6.21-r1 (21 Sep 2011)
+
+  21 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org>
+  +reiserfsprogs-3.6.21-r1.ebuild,
+  +files/reiserfsprogs-3.6.21-fix_large_fs.patch:
+  Add patch to fix large >4T fs
 
   13 Nov 2010; Raúl Porcel <armin76@gentoo.org>
   reiserfsprogs-3.6.21.ebuild:
