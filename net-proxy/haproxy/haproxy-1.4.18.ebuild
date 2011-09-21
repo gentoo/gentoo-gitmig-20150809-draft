@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.4.18.ebuild,v 1.1 2011/09/20 16:00:25 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.4.18.ebuild,v 1.2 2011/09/21 13:44:51 idl0r Exp $
 
 EAPI="3"
 
-inherit eutils versionator toolchain-funcs
+inherit eutils versionator toolchain-funcs flag-o-matic
 
 DESCRIPTION="A TCP/HTTP reverse proxy for high availability environments"
 HOMEPAGE="http://haproxy.1wt.eu"
@@ -30,6 +30,9 @@ src_compile() {
 
 	use kernel_linux && args="${args} USE_LINUX_SPLICE=1"
 	use kernel_linux && args="${args} USE_LINUX_TPROXY=1"
+
+	# For now, until the strict-aliasing breakage will be fixed
+	append-cflags -fno-strict-aliasing
 
 	emake CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" CC=$(tc-getCC) ${args} || die
 }
