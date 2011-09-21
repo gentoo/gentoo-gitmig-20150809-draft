@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/yaffs2-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/yaffs2-utils/ChangeLog,v 1.2 2011/09/11 19:08:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/yaffs2-utils/ChangeLog,v 1.3 2011/09/21 08:16:06 mgorny Exp $
+
+  21 Sep 2011; Michał Górny <mgorny@gentoo.org> yaffs2-utils-9999.ebuild:
+  Migrate to git-2.
 
   11 Sep 2011; Mike Frysinger <vapier@gentoo.org> yaffs2-utils-9999.ebuild,
   files/yaffs2-utils-9999-build.patch:

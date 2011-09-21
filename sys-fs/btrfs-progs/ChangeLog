@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/btrfs-progs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.34 2011/08/25 18:52:04 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.35 2011/09/21 08:11:46 mgorny Exp $
+
+  21 Sep 2011; Michał Górny <mgorny@gentoo.org> btrfs-progs-9999.ebuild:
+  Migrate to git-2.
 
   25 Aug 2011; Matt Turner <mattst88@gentoo.org> btrfs-progs-0.19-r3.ebuild:
   Added ~mips

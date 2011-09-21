@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/yaffs-utils/yaffs-utils-9999.ebuild,v 1.3 2011/09/11 19:01:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/yaffs-utils/yaffs-utils-9999.ebuild,v 1.4 2011/09/21 08:16:12 mgorny Exp $
 
 EAPI="2"
 
 EGIT_REPO_URI="git://www.aleph1.co.uk/yaffs"
-EGIT_UNPACK_DIR=${WORKDIR}
+EGIT_SOURCEDIR=${WORKDIR}
 
-inherit eutils git toolchain-funcs
+inherit eutils git-2 toolchain-funcs
 
 DESCRIPTION="tools for generating YAFFS images"
 HOMEPAGE="http://www.aleph1.co.uk/yaffs/"

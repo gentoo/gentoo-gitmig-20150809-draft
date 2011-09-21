@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-99999999.ebuild,v 1.8 2011/07/29 08:31:56 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtd-utils/mtd-utils-99999999.ebuild,v 1.9 2011/09/21 08:18:22 mgorny Exp $
 
 EAPI="3"
 
 if [[ ${PV} == "99999999" ]] ; then
 	EGIT_REPO_URI="git://git.infradead.org/mtd-utils.git"
 
-	inherit git
+	inherit git-2
 	SRC_URI=""
 	#KEYWORDS=""
 else
