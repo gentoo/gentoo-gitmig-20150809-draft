@@ -1,6 +1,10 @@
 # ChangeLog for games-server/ut2004-ded
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ChangeLog,v 1.25 2010/11/09 15:13:43 tupone Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ChangeLog,v 1.26 2011/09/21 15:57:30 mr_bones_ Exp $
+
+  21 Sep 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  ut2004-ded-3369.3-r1.ebuild:
+  fix elog url (bug #383951)
 
   09 Nov 2010; Tupone Alfredo <tupone@gentoo.org>
   ut2004-ded-3369.3-r1.ebuild:
