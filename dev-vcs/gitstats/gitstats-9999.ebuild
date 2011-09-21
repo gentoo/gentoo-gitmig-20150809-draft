@@ -1,17 +1,18 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitstats/gitstats-9999.ebuild,v 1.2 2010/07/23 07:46:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitstats/gitstats-9999.ebuild,v 1.3 2011/09/21 08:25:56 mgorny Exp $
 
 EAPI="2"
 
 PYTHON_DEPEND="2"
 
-inherit python git
+inherit python git-2
 
 DESCRIPTION="Statistics generator for git"
 HOMEPAGE="http://gitstats.sourceforge.net/"
 SRC_URI=""
-EGIT_REPO_URI="git://repo.or.cz/${PN}.git"
+EGIT_REPO_URI="git://repo.or.cz/${PN}.git
+	http://repo.or.cz/r/${PN}.git"
 
 LICENSE="GPL-3"
 SLOT="0"
