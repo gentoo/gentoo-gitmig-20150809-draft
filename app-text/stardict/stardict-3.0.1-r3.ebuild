@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/stardict-3.0.1-r3.ebuild,v 1.3 2011/03/27 12:23:55 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/stardict-3.0.1-r3.ebuild,v 1.4 2011/09/21 23:55:12 dirtyepic Exp $
 
 EAPI="2"
 
@@ -51,6 +51,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-changelog-minor-typo-fixes.patch
 	epatch "${FILESDIR}"/${P}-gcc44.patch
 	epatch "${FILESDIR}"/${P}-sparc_sigbus.patch
+	epatch "${FILESDIR}"/${P}-gcc46.patch
 
 	# Fix compatibility with gucharmap-2, bug #240728
 	epatch "${FILESDIR}/${P}-gucharmap2.patch"

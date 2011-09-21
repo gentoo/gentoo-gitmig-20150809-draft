@@ -1,6 +1,10 @@
 # ChangeLog for app-text/stardict
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.9 2011/03/27 12:23:55 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/stardict/ChangeLog,v 1.10 2011/09/21 23:55:12 dirtyepic Exp $
+
+  22 Sep 2011; Ryan Hill <dirtyepic@gentoo.org> stardict-3.0.1-r3.ebuild,
+  +files/stardict-3.0.1-gcc46.patch:
+  Add patch from Piotr Szymaniak to fix compilation w/ GCC 4.6 (bug #362299).
 
   27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   -stardict-2.4.8-r1.ebuild, -stardict-3.0.1-r1.ebuild,

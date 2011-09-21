@@ -1,0 +1,12 @@
+https://bugs.gentoo.org/362299
+
+--- a/stardict-plugins/stardict-wordnet-plugin/scene.hpp
++++ b/stardict-plugins/stardict-wordnet-plugin/scene.hpp
+@@ -9,6 +9,7 @@
+ #include "partic.hpp"
+ #include "spring.hpp"
+ 
++#include <cstdlib>
+ #include <vector>
+ using namespace std;
+ 
