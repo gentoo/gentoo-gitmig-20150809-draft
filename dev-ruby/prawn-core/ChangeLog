@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/prawn-core
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-core/ChangeLog,v 1.6 2010/09/24 14:46:57 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-core/ChangeLog,v 1.7 2011/09/21 06:29:13 graaff Exp $
+
+  21 Sep 2011; Hans de Graaff <graaff@gentoo.org> -prawn-core-0.8.4.ebuild:
+  Remove old version.
 
 *prawn-core-0.8.4-r1 (24 Sep 2010)
 
