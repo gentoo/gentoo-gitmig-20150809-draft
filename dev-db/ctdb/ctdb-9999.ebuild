@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ctdb-9999.ebuild,v 1.2 2009/11/14 13:53:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ctdb-9999.ebuild,v 1.3 2011/09/21 08:49:14 mgorny Exp $
 
 EGIT_REPO_URI="git://git.samba.org/tridge/ctdb.git"
 
-inherit autotools eutils git
+inherit autotools eutils git-2
 
 DESCRIPTION="A cluster implementation of the TDB database used by Samba and other projects to store temporary data."
 HOMEPAGE="http://ctdb.samba.org/"
@@ -17,7 +17,7 @@ DEPEND="dev-libs/popt"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
-	git_src_unpack
+	git-2_src_unpack
 
 	epatch "${FILESDIR}/autoconf-2.62-fix.patch"
 
