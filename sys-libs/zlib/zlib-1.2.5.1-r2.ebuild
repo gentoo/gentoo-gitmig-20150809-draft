@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.5.1-r2.ebuild,v 1.1 2011/09/21 19:36:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.2.5.1-r2.ebuild,v 1.2 2011/09/21 21:18:15 vapier Exp $
 
 inherit autotools eutils toolchain-funcs
 
@@ -62,6 +62,11 @@ src_compile() {
 	fi
 }
 
+sed_macros() {
+	# clean up namespace a little #383179
+	# we do it here so we only have to tweak 2 files
+	sed -i -r 's:\<(O[FN])\>:_Z_\1:g' "$@" || die
+}
 src_install() {
 	case ${CHOST} in
 	*-mingw*|mingw*)
@@ -78,18 +83,16 @@ src_install() {
 	*)
 		emake install DESTDIR="${D}" LDCONFIG=: || die
 		gen_usr_ldscript -a z
+		sed_macros "${D}"/usr/include/*.h
 		;;
 	esac
-
-	# clean up namespace a little #383179
-	# we do it here so we only have to tweak 2 files
-	sed -i -r 's:\<(O[FN])\>:_Z_\1:g' "${D}"/usr/include/*.h
 
 	dodoc FAQ README ChangeLog doc/*.txt
 
 	if use minizip ; then
 		cd contrib/minizip
 		emake install DESTDIR="${D}" || die
+		sed_macros "${D}"/usr/include/minizip/*.h
 		dodoc *.txt
 	fi
 
