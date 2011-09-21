@@ -1,0 +1,36 @@
+diff -ruN virtuoso-opensource-6.1.3/configure.in new/configure.in
+--- virtuoso-opensource-6.1.3/configure.in	2011-03-30 01:20:19.000000000 +0200
++++ new/configure.in	2011-09-21 23:04:42.372977092 +0200
+@@ -1568,14 +1568,15 @@
+ then
+     AC_CHECK_HEADER(zlib.h)
+     AC_CHECK_LIB(z, main, [with_zlib=yes], [with_zlib=internal])
++    AC_CHECK_LIB(minizip, main, [with_zlib=yes], [with_zlib=internal])
+ fi
+ if test "x$with_zlib" = "xinternal"
+ then
+     ZLIB_INC='-I$(top_srcdir)/libsrc/zlib'
+     ZLIB_LIB='$(top_builddir)/libsrc/zlib/libz.la'
+ else
+-    ZLIB_INC=""
+-    ZLIB_LIB="-lz"
++    ZLIB_INC=`pkg-config --cflags zlib minizip`
++    ZLIB_LIB=`pkg-config --libs zlib minizip`
+ fi
+ AC_SUBST(ZLIB_INC)
+ AC_SUBST(ZLIB_LIB)
+diff -ruN virtuoso-opensource-6.1.3/libsrc/Wi/bif_file.c new/libsrc/Wi/bif_file.c
+--- virtuoso-opensource-6.1.3/libsrc/Wi/bif_file.c	2011-02-14 13:30:56.000000000 +0100
++++ new/libsrc/Wi/bif_file.c	2011-09-21 22:44:52.638977417 +0200
+@@ -6139,10 +6139,7 @@
+   return NULL;
+ }
+ 
+-
+-#include "zlib/contrib/minizip/unzip.h"
+-#include "zlib/contrib/minizip/ioapi.c"
+-#include "zlib/contrib/minizip/unzip.c"
++#include "unzip.h"
+ 
+ static caddr_t
+ bif_unzip_file (caddr_t * qst, caddr_t * err_ret, state_slot_t ** args)
