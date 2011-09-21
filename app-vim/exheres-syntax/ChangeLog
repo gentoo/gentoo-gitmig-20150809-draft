@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/exheres-syntax
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/exheres-syntax/ChangeLog,v 1.9 2011/09/13 18:23:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/exheres-syntax/ChangeLog,v 1.10 2011/09/21 08:00:27 mgorny Exp $
+
+  21 Sep 2011; Michał Górny <mgorny@gentoo.org>
+  exheres-syntax-99999999.ebuild:
+  Migrate to git-2.
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #225633
