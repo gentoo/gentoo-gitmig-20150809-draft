@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-9999.ebuild,v 1.3 2011/08/09 17:35:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-9999.ebuild,v 1.4 2011/09/21 07:55:04 mgorny Exp $
 
 EAPI="2"
 
-inherit flag-o-matic eutils multilib mercurial git
+inherit flag-o-matic eutils multilib mercurial git-2
 
 DESCRIPTION="allows to boot Xen domU kernels from a menu.lst laying inside guest filesystem"
 HOMEPAGE="http://xen.org/"
@@ -21,7 +21,6 @@ GIT_REPO="qemu-xen-unstable.git"
 
 EHG_REPO_URI="http://xenbits.xensource.com/${MERC_REPO}"
 EGIT_REPO_URI="git://xenbits.xensource.com/${GIT_REPO}"
-EGIT_PROJECT="${GIT_REPO}"
 
 S="${WORKDIR}/${MERC_REPO}"
 
@@ -46,13 +45,12 @@ src_unpack() {
 	# unpack xen
 	mercurial_src_unpack
 
-	EGIT_COMMIT=$(sed -n -e "s/QEMU_TAG := \(.*\)/\1/p" "${S}"/Config.mk)
+	local EGIT_COMMIT=$(sed -n -e "s/QEMU_TAG := \(.*\)/\1/p" "${S}"/Config.mk)
 
 	# unpack ioemu repos
-	S=${WORKDIR}/${GIT_REPO}
-	git_src_unpack
-
-	S=${WORKDIR}/${MERC_REPO}
+	local S=${WORKDIR}/${GIT_REPO}
+	local EGIT_NOUNPACK=1
+	git-2_src_unpack
 }
 
 src_prepare() {

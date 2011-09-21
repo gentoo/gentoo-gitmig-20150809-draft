@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xen-pvgrub
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.4 2011/09/17 17:52:52 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.5 2011/09/21 07:55:04 mgorny Exp $
+
+  21 Sep 2011; Michał Górny <mgorny@gentoo.org> xen-pvgrub-9999.ebuild:
+  Migrate to git-2. Localize git variables.
 
 *xen-pvgrub-4.1.1-r1 (17 Sep 2011)
 
