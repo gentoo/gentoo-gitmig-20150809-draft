@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13067 2011/09/20 05:25:07 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13068 2011/09/21 07:32:23 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -36,6 +36,8 @@
 # Empathy, Pidgin and aMSN
 >=net-libs/gupnp-0.17
 >=net-libs/gssdp-0.11
+>=net-libs/gupnp-av-0.10.1
+>=net-misc/rygel-0.12.0
 
 # Markos Chandras <hwoarang@gentoo.org> (19 Sep 2011)
 # Masked for testing. Gentoo specific configuration and paths
