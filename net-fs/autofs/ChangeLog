@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/autofs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.128 2011/09/21 00:44:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.129 2011/09/21 15:49:56 pva Exp $
+
+  21 Sep 2011; Peter Volkov <pva@gentoo.org> autofs-5.0.5-r4.ebuild,
+  autofs-5.0.6-r2.ebuild:
+  Add sys-devel/flex into DEPEND, bug #383477 thank bay and Dustin Polke for
+  this job.
 
   21 Sep 2011; Jeroen Roovers <jer@gentoo.org> autofs-4.1.4.ebuild:
   Stable for HPPA (bug #374887).

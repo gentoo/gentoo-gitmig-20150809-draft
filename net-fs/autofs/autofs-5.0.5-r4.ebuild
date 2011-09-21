@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.5-r4.ebuild,v 1.7 2011/09/19 08:15:28 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.5-r4.ebuild,v 1.8 2011/09/21 15:49:56 pva Exp $
 
 EAPI="4"
 inherit eutils multilib autotools linux-info
@@ -27,6 +27,7 @@ RDEPEND="hesiod? ( net-dns/hesiod )
 			dev-libs/libxml2
 			virtual/krb5 ) )"
 DEPEND="${RDEPEND}
+	sys-devel/flex
 	virtual/yacc"
 
 src_prepare() {
