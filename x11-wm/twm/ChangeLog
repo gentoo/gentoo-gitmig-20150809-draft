@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/twm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/twm/ChangeLog,v 1.69 2011/09/05 19:41:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/twm/ChangeLog,v 1.70 2011/09/21 00:41:37 jer Exp $
+
+  21 Sep 2011; Jeroen Roovers <jer@gentoo.org> twm-1.0.7.ebuild:
+  Stable for HPPA (bug #380421).
 
   05 Sep 2011; Markus Meier <maekke@gentoo.org> twm-1.0.7.ebuild:
   arm stable, bug #380421
