@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-4.1.ebuild,v 1.1 2011/09/03 20:33:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-4.1.ebuild,v 1.2 2011/09/21 20:41:49 grobian Exp $
 
 EAPI="3"
 
@@ -25,8 +25,7 @@ SRC_URI="http://www.opensource.apple.com/tarballs/ld64/${LD64}.tar.gz
 	http://www.gentoo.org/~grobian/distfiles/libunwind-llvm-115426.tar.bz2"
 
 LICENSE="APSL-2"
-#KEYWORDS="~ppc-macos ~x64-macos ~x86-macos"
-KEYWORDS=""
+KEYWORDS="~ppc-macos ~x64-macos ~x86-macos"
 IUSE="lto test"
 
 RDEPEND="sys-devel/binutils-config
