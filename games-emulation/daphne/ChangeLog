@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/daphne
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/ChangeLog,v 1.16 2010/10/05 07:42:25 tupone Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/daphne/ChangeLog,v 1.17 2011/09/21 10:44:04 tupone Exp $
+
+  21 Sep 2011; Tupone Alfredo <tupone@gentoo.org> daphne-1.0.ebuild,
+  +files/daphne-1.0-underlink.patch, +files/daphne-1.0-zlib.patch:
+  Fix underlink. Bug #379489 by Diego Elio Pettenò
+  Build with sys-libs/zlib-1.2.5.1-r1 
 
   05 Oct 2010; Tupone Alfredo <tupone@gentoo.org> daphne-1.0.ebuild,
   +files/daphne-1.0-ldflags.patch:
