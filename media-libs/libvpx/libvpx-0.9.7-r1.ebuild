@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.16 2011/09/21 20:35:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-0.9.7-r1.ebuild,v 1.1 2011/09/21 20:35:58 radhermit Exp $
 
 EAPI=4
-inherit multilib toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 if [[ ${PV} == *9999* ]]; then
 	inherit git-2
@@ -11,10 +11,12 @@ if [[ ${PV} == *9999* ]]; then
 	KEYWORDS=""
 elif [[ ${PV} == *pre* ]]; then
 	SRC_URI="mirror://gentoo/${P}.tar.bz2"
-	KEYWORDS="~amd64 ~arm ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+	KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 else
-	SRC_URI="http://webm.googlecode.com/files/${PN}-v${PV}.tar.bz2"
-	KEYWORDS="~amd64 ~arm ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+	MY_P="${PN}-v${PV}"
+	SRC_URI="http://webm.googlecode.com/files/${MY_P}.tar.bz2"
+	KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+	S="${WORKDIR}/${MY_P}"
 fi
 
 DESCRIPTION="WebM VP8 Codec SDK"
@@ -22,7 +24,7 @@ HOMEPAGE="http://www.webmproject.org"
 
 LICENSE="BSD"
 SLOT="0"
-IUSE="altivec debug doc mmx postproc sse sse2 sse3 ssse3 sse4_1 static-libs +threads"
+IUSE="altivec debug doc mmx postproc sse sse2 sse3 ssse3 static-libs +threads"
 
 RDEPEND=""
 DEPEND="amd64? ( dev-lang/yasm )
@@ -38,8 +40,16 @@ REQUIRED_USE="
 	sse2? ( mmx )
 	"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-0.9.5-enable-shared.patch
+}
+
 src_configure() {
 	tc-export CC
+	local archparams=""
+	[ "$ABI" = "x86" ] && archparams=" --target=x86-linux-gcc"
+	[ "$ABI" = "amd64" ] && archparams=" --target=x86_64-linux-gcc"
+	( use x86 || use amd64 ) && archparams+=" --as=yasm"
 	./configure \
 		--prefix="${EPREFIX}"/usr \
 		--libdir="${EPREFIX}"/usr/$(get_libdir) \
@@ -55,14 +65,16 @@ src_configure() {
 		$(use_enable sse) \
 		$(use_enable sse2) \
 		$(use_enable sse3) \
-		$(use_enable sse4_1) \
 		$(use_enable ssse3) \
-		$(use_enable static-libs static ) \
+		$(use_enable static-libs static) \
 		$(use_enable threads multithread) \
+		$archparams \
 		|| die
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	# http://bugs.gentoo.org/show_bug.cgi?id=323805
+	emake -j1 DESTDIR="${D}" install
+
 	dodoc AUTHORS CHANGELOG README
 }
