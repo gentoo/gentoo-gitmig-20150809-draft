@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/qt-creator
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.89 2011/09/08 14:29:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.90 2011/09/21 10:21:13 hwoarang Exp $
+
+*qt-creator-2.3.0-r1 (21 Sep 2011)
+
+  21 Sep 2011; Markos Chandras <hwoarang@gentoo.org>
+  +qt-creator-2.3.0-r1.ebuild, metadata.xml:
+  Introduce botan-bundled useflag as a temp fix for bug #383033
 
 *qt-creator-2.3.0 (08 Sep 2011)
 
