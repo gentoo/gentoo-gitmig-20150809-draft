@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/pstoedit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.68 2010/07/10 19:17:25 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.69 2011/09/21 05:02:57 radhermit Exp $
+
+*pstoedit-3.60 (21 Sep 2011)
+
+  21 Sep 2011; Tim Harder <radhermit@gentoo.org> +pstoedit-3.60.ebuild,
+  +files/pstoedit-3.60-parallel.patch:
+  Version bump (bug #383841).
 
 *pstoedit-3.50-r1 (10 Jul 2010)
 
