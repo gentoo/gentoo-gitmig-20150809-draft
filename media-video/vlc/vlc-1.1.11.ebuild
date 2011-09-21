@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.11.ebuild,v 1.5 2011/08/27 17:38:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.11.ebuild,v 1.6 2011/09/21 15:52:18 aballier Exp $
 
 EAPI="3"
 
@@ -60,7 +60,7 @@ IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddb dbus dc1394
 	vorbis win32codecs wma-fixed +X x264 +xcb xml xosd xv zvbi"
 
 RDEPEND="
-		sys-libs/zlib
+		<sys-libs/zlib-1.2.5.1-r1
 		>=media-libs/libdvbpsi-0.1.6
 		a52? ( >=media-libs/a52dec-0.7.4-r3 )
 		aalib? ( media-libs/aalib x11-libs/libX11 )
