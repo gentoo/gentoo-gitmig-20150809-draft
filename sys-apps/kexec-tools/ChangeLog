@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kexec-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.42 2011/09/21 08:31:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kexec-tools/ChangeLog,v 1.43 2011/09/21 15:28:08 chainsaw Exp $
+
+  21 Sep 2011; Tony Vroon <chainsaw@gentoo.org> kexec-tools-2.0.2-r1.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo,
+  Elijah "Armageddon" El Lazkani & Tomáš "Mepho" Pružina in bug #382659.
 
   21 Sep 2011; Michał Górny <mgorny@gentoo.org> kexec-tools-9999.ebuild:
   Migrate to git-2.
