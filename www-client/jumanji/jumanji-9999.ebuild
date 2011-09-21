@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/jumanji/jumanji-9999.ebuild,v 1.3 2011/02/09 21:12:45 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/jumanji/jumanji-9999.ebuild,v 1.4 2011/09/21 07:38:46 mgorny Exp $
 
 EAPI=2
 
-inherit flag-o-matic git toolchain-funcs
+inherit flag-o-matic git-2 toolchain-funcs
 
 DESCRIPTION="webkit based browser"
 HOMEPAGE="http://pwmt.org/projects/jumanji"
@@ -25,7 +25,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	git_src_prepare
 	# respect CFLAGS
 	sed -i -e '/${CC}/s:${CFLAGS}:\0 ${INCS}:' Makefile || die
 }
