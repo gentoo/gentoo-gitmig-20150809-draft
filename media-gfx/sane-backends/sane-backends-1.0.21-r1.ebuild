@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.21-r1.ebuild,v 1.12 2011/08/08 17:58:57 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.21-r1.ebuild,v 1.13 2011/09/21 19:00:03 phosphan Exp $
 
 EAPI="1"
 
@@ -163,6 +163,8 @@ src_unpack() {
 	epatch "${FILESDIR}/xerox-grey.patch"
 	# Bug #356919
 	epatch "${FILESDIR}"/${PN}-1.0.22-libv4l-0.8.3.patch
+	# Bug #329047
+	epatch "${FILESDIR}"/niash_array_index.patch
 }
 
 src_compile() {

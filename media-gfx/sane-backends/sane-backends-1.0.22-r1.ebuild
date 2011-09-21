@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.22-r1.ebuild,v 1.3 2011/08/08 17:58:57 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.22-r1.ebuild,v 1.4 2011/09/21 19:00:03 phosphan Exp $
 
 EAPI="4"
 
@@ -152,6 +152,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-xerox_mfp-usb.patch
 	# Bug #356919
 	epatch "${FILESDIR}"/${P}-libv4l-0.8.3.patch
+	# Bug #329047
+	epatch "${FILESDIR}"/niash_array_index.patch
 }
 
 src_configure() {
