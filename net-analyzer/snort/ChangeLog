@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.184 2011/07/24 12:12:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.185 2011/09/21 15:33:43 chainsaw Exp $
+
+  21 Sep 2011; Tony Vroon <chainsaw@gentoo.org> snort-2.9.0.5.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah "Armageddon" El Lazkani in bug #382857.
 
   24 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> snort-2.9.0.5.ebuild:
   Marked ~ppc/~ppc64 wrt #351551
