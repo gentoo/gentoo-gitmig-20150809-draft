@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/zen-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.51 2011/05/10 15:17:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.52 2011/09/21 09:02:49 mgorny Exp $
+
+  21 Sep 2011; Michał Górny <mgorny@gentoo.org> zen-sources-9999.ebuild:
+  Migrate to git-2.
 
 *zen-sources-2.6.38_p20110510 (10 May 2011)
 
