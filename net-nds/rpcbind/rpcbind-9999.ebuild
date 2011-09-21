@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/rpcbind-9999.ebuild,v 1.5 2011/09/02 20:08:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/rpcbind-9999.ebuild,v 1.6 2011/09/21 08:18:29 mgorny Exp $
 
 EAPI="2"
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.infradead.org/~steved/rpcbind.git"
-	inherit autotools git
+	inherit autotools git-2
 	SRC_URI=""
 	#KEYWORDS=""
 else

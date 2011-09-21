@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/rpcbind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/ChangeLog,v 1.15 2011/09/02 20:10:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/rpcbind/ChangeLog,v 1.16 2011/09/21 08:18:29 mgorny Exp $
+
+  21 Sep 2011; Michał Górny <mgorny@gentoo.org> rpcbind-9999.ebuild:
+  Migrate to git-2.
 
   02 Sep 2011; Mike Frysinger <vapier@gentoo.org> rpcbind-0.2.0.ebuild:
   Oops, lost some KEYWORDS there ... back to stable.

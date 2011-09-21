@@ -1,9 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-9999.ebuild,v 1.2 2007/05/12 10:56:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-9999.ebuild,v 1.3 2011/09/21 08:19:45 mgorny Exp $
 
 EGIT_REPO_URI="git://neil.brown.name/portmap"
-inherit eutils toolchain-funcs git
+inherit eutils toolchain-funcs git-2
 
 DESCRIPTION="Netkit - portmapper"
 HOMEPAGE="ftp://ftp.porcupine.org/pub/security/index.html"

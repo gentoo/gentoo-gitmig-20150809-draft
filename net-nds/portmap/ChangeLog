@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/portmap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.48 2011/02/06 10:26:21 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.49 2011/09/21 08:19:45 mgorny Exp $
+
+  21 Sep 2011; Michał Górny <mgorny@gentoo.org> portmap-9999.ebuild:
+  Migrate to git-2.
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> portmap-6.0.ebuild:
   Drop to ~mips
