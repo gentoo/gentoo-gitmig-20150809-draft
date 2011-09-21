@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.9.2_pre3203.ebuild,v 1.1 2011/09/20 23:50:37 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.9.2_pre3203.ebuild,v 1.2 2011/09/21 22:24:10 floppym Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -45,6 +45,9 @@ src_configure() {
 	if ! use X; then
 		sed -e "s:^scrap :#&:" -i Setup || die "sed failed"
 	fi
+
+	# Automagic dep on portmidi, bug 383927.
+	sed -e "s:^pypm :#&:" -i Setup || die
 }
 
 src_test() {
