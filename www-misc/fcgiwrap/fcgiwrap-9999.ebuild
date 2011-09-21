@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/fcgiwrap-9999.ebuild,v 1.1 2010/06/29 13:17:59 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/fcgiwrap-9999.ebuild,v 1.2 2011/09/21 08:55:59 mgorny Exp $
 
 EAPI="3"
 
-[[ ${PV} = *9999* ]] && VCS_ECLASS="git" || VCS_ECLASS=""
+[[ ${PV} = *9999* ]] && VCS_ECLASS="git-2" || VCS_ECLASS=""
 inherit autotools ${VCS_ECLASS}
 
 DESCRIPTION="Simple FastCGI wrapper for CGI scripts (CGI support for nginx)"
@@ -15,7 +15,8 @@ SLOT="0"
 IUSE=""
 
 if [[ ${PV} == *9999* ]]; then
-	EGIT_REPO_URI="git://github.com/gnosek/${PN}.git"
+	EGIT_REPO_URI="git://github.com/gnosek/${PN}.git
+		https://github.com/gnosek/${PN}.git"
 
 	KEYWORDS=""
 else

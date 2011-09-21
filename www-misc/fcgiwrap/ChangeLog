@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/fcgiwrap
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/ChangeLog,v 1.4 2010/09/15 09:07:29 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/ChangeLog,v 1.5 2011/09/21 08:55:59 mgorny Exp $
+
+  21 Sep 2011; Michał Górny <mgorny@gentoo.org> fcgiwrap-9999.ebuild:
+  Migrate to git-2.
 
   15 Sep 2010; Peter Volkov <pva@gentoo.org> fcgiwrap-1.0.3.ebuild:
   Use gentoo mirrors for sources as upstream link disappears with time.
