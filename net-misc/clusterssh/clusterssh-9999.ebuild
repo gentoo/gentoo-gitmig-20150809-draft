@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clusterssh/clusterssh-9999.ebuild,v 1.2 2011/08/29 07:49:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clusterssh/clusterssh-9999.ebuild,v 1.3 2011/09/21 08:57:24 mgorny Exp $
 
 EAPI=2
 
-inherit git perl-module
+inherit git-2 perl-module
 
 EGIT_REPO_URI="git://clusterssh.git.sourceforge.net/gitroot/clusterssh/clusterssh"
 
@@ -34,11 +34,6 @@ DEPEND="
 SRC_TEST="do parallel"
 
 src_unpack() {
-	git_src_unpack
+	git-2_src_unpack
 	perl-module_src_unpack
-}
-
-src_prepare() {
-	git_src_prepare
-	perl-module_src_prepare
 }
