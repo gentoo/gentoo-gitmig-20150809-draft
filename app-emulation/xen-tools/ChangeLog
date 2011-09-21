@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.87 2011/09/18 17:03:29 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.88 2011/09/21 17:27:43 alexxy Exp $
+
+*xen-tools-3.4.2-r1 (21 Sep 2011)
+
+  21 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org> +xen-tools-3.4.2-r1.ebuild,
+  +files/xen-tools-3.4.2-fix-definitions.patch,
+  +files/xen-tools-3.4.2-fix-include.patch:
+  Fix borken emerge due to system header changes; bug #379815. Input from Ian
+  Delaney aka idell4
 
   18 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org> xen-tools-4.1.1-r5.ebuild:
   Fix patch name. Thanks to Sven Köhler
