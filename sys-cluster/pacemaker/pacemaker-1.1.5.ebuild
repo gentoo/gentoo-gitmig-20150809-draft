@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.5.ebuild,v 1.2 2011/07/08 14:02:02 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.5.ebuild,v 1.3 2011/09/21 14:25:51 ultrabug Exp $
 
 EAPI=3
 
@@ -20,6 +20,7 @@ KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="acl heartbeat smtp snmp static-libs"
 
 DEPEND="
+	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt
 	sys-cluster/corosync
 	sys-cluster/cluster-glue
