@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/zlib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.94 2011/09/16 21:40:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/ChangeLog,v 1.95 2011/09/21 19:36:25 vapier Exp $
+
+*zlib-1.2.5.1-r2 (21 Sep 2011)
+
+  21 Sep 2011; Mike Frysinger <vapier@gentoo.org>
+  +files/zlib-1.2.4-minizip-autotools.patch, +zlib-1.2.5.1-r2.ebuild,
+  metadata.xml:
+  Add USE=static-libs support, and USE=minizip to control building of the
+  minizip code as a library for other apps to link against (like vlc) #383351.
 
 *zlib-1.2.5.1-r1 (16 Sep 2011)
 
