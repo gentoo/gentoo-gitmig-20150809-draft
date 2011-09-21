@@ -1,6 +1,9 @@
 # ChangeLog for www-client/luakit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/ChangeLog,v 1.26 2011/07/27 10:36:29 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/ChangeLog,v 1.27 2011/09/21 07:47:32 mgorny Exp $
+
+  21 Sep 2011; Michał Górny <mgorny@gentoo.org> luakit-9999.ebuild:
+  Migrate to git-2, fix github hack to PMS-compliant one.
 
 *luakit-2011.07.22_p1 (27 Jul 2011)
 

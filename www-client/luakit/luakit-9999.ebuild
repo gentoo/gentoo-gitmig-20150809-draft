@@ -1,23 +1,23 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/luakit-9999.ebuild,v 1.17 2011/06/30 17:07:49 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/luakit/luakit-9999.ebuild,v 1.18 2011/09/21 07:47:32 mgorny Exp $
 
 EAPI=3
 
 IUSE="luajit vim-syntax"
 
 if [[ ${PV} == *9999* ]]; then
-	inherit git
-	EGIT_REPO_URI=${EGIT_REPO_URI:-"git://github.com/mason-larobina/luakit.git"}
-	[[ ${EGIT_BRANCH} == "master" ]] && EGIT_BRANCH="develop"
-	[[ ${EGIT_COMMIT} == "master" ]] && EGIT_COMMIT=${EGIT_BRANCH}
+	inherit git-2
+	EGIT_REPO_URI="git://github.com/mason-larobina/${PN}.git
+		https://github.com/mason-larobina/${PN}.git"
+	EGIT_BRANCH="develop"
 	KEYWORDS=""
 	SRC_URI=""
 else
 	inherit base
 	MY_PV="${PV/_p/-r}"
 	KEYWORDS="~amd64 ~x86"
-	SRC_URI="http://github.com/mason-larobina/${PN}/tarball/${MY_PV} -> ${P}.tar.gz"
+	SRC_URI="https://github.com/mason-larobina/${PN}/tarball/${MY_PV} -> ${P}.tar.gz"
 fi
 
 DESCRIPTION="fast, small, webkit-gtk based micro-browser extensible by lua"
@@ -49,13 +49,12 @@ RDEPEND="
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
 "
 
-src_prepare() {
+src_unpack() {
 	if [[ ${PV} == *9999* ]]; then
-		git_src_prepare
+		git-2_src_unpack
 	else
-		cd "${WORKDIR}"/mason-larobina-luakit-*
-		S=$(pwd)
-		base_src_prepare
+		base_src_unpack
+		mv mason-larobina-luakit-* "${S}"
 	fi
 }
 
