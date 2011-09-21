@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/gens-2.15.5.ebuild,v 1.6 2010/10/28 08:14:45 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/gens-2.15.5.ebuild,v 1.7 2011/09/21 21:17:48 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -15,7 +15,7 @@ KEYWORDS="x86"
 IUSE=""
 
 RDEPEND="virtual/opengl
-	>=media-libs/libsdl-1.2
+	>=media-libs/libsdl-1.2[joystick,video]
 	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	>=dev-lang/nasm-0.98"
@@ -24,6 +24,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-romsdir.patch \
 		"${FILESDIR}"/${P}-as-needed.patch \
 		"${FILESDIR}"/${P}-ovflfix.patch
+	sed -i -e '1i#define OF(x) x' src/gens/util/file/unzip.h || die
 	append-ldflags -Wl,-z,noexecstack
 }
 
