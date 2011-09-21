@@ -1,5 +1,5 @@
---- src/game/gameplay_action.cpp.old	2010-06-01 10:50:55.000000000 +0200
-+++ src/game/gameplay_action.cpp	2010-06-01 10:51:23.000000000 +0200
+--- src/game/gameplay_action.cpp.old
++++ src/game/gameplay_action.cpp
 @@ -268,7 +268,7 @@
   ** 
   ** @version	0.6.8
@@ -9,8 +9,8 @@
  GameplayAction::operator=(GameplayAction const& action)
  {
    this->type = action.type;
---- src/game/gameplay_actions/pure.cpp.old	2010-06-01 10:53:02.000000000 +0200
-+++ src/game/gameplay_actions/pure.cpp	2010-06-01 10:53:54.000000000 +0200
+--- src/game/gameplay_actions/pure.cpp.old
++++ src/game/gameplay_actions/pure.cpp
 @@ -90,7 +90,7 @@
   ** 
   ** @version	0.7.3
@@ -20,8 +20,8 @@
  GameplayAction::Pure::operator=(Pure const& action)
  {
    this->GameplayAction::operator=(action);
---- src/game/gameplay_actions/player1.cpp.old	2010-06-01 10:55:59.000000000 +0200
-+++ src/game/gameplay_actions/player1.cpp	2010-06-01 10:56:10.000000000 +0200
+--- src/game/gameplay_actions/player1.cpp.old
++++ src/game/gameplay_actions/player1.cpp
 @@ -103,7 +103,7 @@
   ** 
   ** @version	0.7.3
@@ -31,8 +31,8 @@
  GameplayAction::Player1::operator=(Player1 const& action)
  {
    this->GameplayAction::operator=(action);
---- src/game/gameplay_actions/base_cards.cpp.old	2010-06-01 10:56:47.000000000 +0200
-+++ src/game/gameplay_actions/base_cards.cpp	2010-06-01 10:56:59.000000000 +0200
+--- src/game/gameplay_actions/base_cards.cpp.old
++++ src/game/gameplay_actions/base_cards.cpp
 @@ -142,7 +142,7 @@
   ** 
   ** @version	0.7.3
@@ -42,8 +42,8 @@
  GameplayAction::BaseCards::operator=(BaseCards const& poverty_shift)
  {
    this->Player1::operator=(poverty_shift);
---- src/game/gameplay_actions/reservation.cpp.old	2010-06-01 10:57:46.000000000 +0200
-+++ src/game/gameplay_actions/reservation.cpp	2010-06-01 10:57:59.000000000 +0200
+--- src/game/gameplay_actions/reservation.cpp.old
++++ src/game/gameplay_actions/reservation.cpp
 @@ -110,7 +110,7 @@
   ** 
   ** @version	0.7.3
@@ -53,8 +53,8 @@
  GameplayAction::Reservation::operator=(Reservation const& reservation)
  {
    this->Player1::operator=(reservation);
---- src/game/gameplay_actions/marriage.cpp.old	2010-06-01 10:58:29.000000000 +0200
-+++ src/game/gameplay_actions/marriage.cpp	2010-06-01 10:58:43.000000000 +0200
+--- src/game/gameplay_actions/marriage.cpp.old
++++ src/game/gameplay_actions/marriage.cpp
 @@ -121,7 +121,7 @@
   ** 
   ** @version	0.7.1
@@ -64,8 +64,8 @@
  GameplayAction::Marriage::operator=(Marriage const& marriage)
  {
    this->Player1::operator=(marriage);
---- src/game/gameplay_actions/genscher.cpp.old	2010-06-01 10:59:12.000000000 +0200
-+++ src/game/gameplay_actions/genscher.cpp	2010-06-01 10:59:22.000000000 +0200
+--- src/game/gameplay_actions/genscher.cpp.old
++++ src/game/gameplay_actions/genscher.cpp
 @@ -120,7 +120,7 @@
   ** 
   ** @version	0.7.1
@@ -75,8 +75,8 @@
  GameplayAction::Genscher::operator=(Genscher const& genscher)
  {
    this->Player1::operator=(genscher);
---- src/game/gameplay_actions/announcement.cpp.old	2010-06-01 10:59:46.000000000 +0200
-+++ src/game/gameplay_actions/announcement.cpp	2010-06-01 10:59:58.000000000 +0200
+--- src/game/gameplay_actions/announcement.cpp.old
++++ src/game/gameplay_actions/announcement.cpp
 @@ -132,7 +132,7 @@
   ** 
   ** @version	0.7.1
@@ -86,8 +86,8 @@
  GameplayAction::Announcement::operator=(Announcement const& announcement)
  {
    this->Player1::operator=(announcement);
---- src/game/gameplay_actions/card_played.cpp.old	2010-06-01 11:00:28.000000000 +0200
-+++ src/game/gameplay_actions/card_played.cpp	2010-06-01 11:00:40.000000000 +0200
+--- src/game/gameplay_actions/card_played.cpp.old
++++ src/game/gameplay_actions/card_played.cpp
 @@ -178,7 +178,7 @@
   ** 
   ** @version	0.7.3
@@ -97,8 +97,8 @@
  GameplayAction::CardPlayed::operator=(CardPlayed const& card_played)
  {
    this->Player1::operator=(card_played);
---- src/game/gameplay_actions/trick_full.cpp.old	2010-06-01 11:01:10.000000000 +0200
-+++ src/game/gameplay_actions/trick_full.cpp	2010-06-01 11:01:20.000000000 +0200
+--- src/game/gameplay_actions/trick_full.cpp.old
++++ src/game/gameplay_actions/trick_full.cpp
 @@ -224,7 +224,7 @@
   ** 
   ** @version	0.7.1
@@ -108,8 +108,8 @@
  GameplayAction::TrickFull::operator=(TrickFull const& trick_full)
  {
    this->GameplayAction::operator=(trick_full);
---- src/game/gameplay_actions/check.cpp.old	2010-06-01 11:01:56.000000000 +0200
-+++ src/game/gameplay_actions/check.cpp	2010-06-01 11:02:07.000000000 +0200
+--- src/game/gameplay_actions/check.cpp.old
++++ src/game/gameplay_actions/check.cpp
 @@ -104,7 +104,7 @@
   ** 
   ** @version	0.7.6

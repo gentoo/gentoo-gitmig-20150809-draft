@@ -1,5 +1,5 @@
---- src/Makefile.modules.orig	2006-08-12 16:56:49.150314837 +0200
-+++ src/Makefile.modules	2006-08-12 17:15:29.231357349 +0200
+--- src/Makefile.modules.orig
++++ src/Makefile.modules
 @@ -11,7 +11,7 @@
  # The network code
  # It is not necessary for single players

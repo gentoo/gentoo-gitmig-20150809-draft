@@ -1,5 +1,5 @@
---- src/Makefile.rules.orig	2006-10-05 21:59:41.915041312 +0200
-+++ src/Makefile.rules	2006-10-05 21:59:50.259772720 +0200
+--- src/Makefile.rules.orig
++++ src/Makefile.rules
 @@ -5,8 +5,7 @@
  		  $(DEPTH)/Makefile.os
  # Gentoo users do want to see the real compile line.

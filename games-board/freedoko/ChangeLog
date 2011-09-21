@@ -1,6 +1,15 @@
 # ChangeLog for games-board/freedoko
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/ChangeLog,v 1.13 2011/03/29 07:53:22 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/ChangeLog,v 1.14 2011/09/21 19:42:55 mr_bones_ Exp $
+
+*freedoko-0.7.10 (21 Sep 2011)
+
+  21 Sep 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  files/freedoko-0.7.8-gcc45.patch, files/freedoko-0.7.8-gentoo.patch,
+  +freedoko-0.7.10.ebuild, +files/freedoko-0.7.10-gentoo.patch,
+  files/Fix_Cardset_Make.patch, files/nodoc.patch, files/nonet.patch,
+  files/portage-cxx.patch:
+  version bump (bug #383681)
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org> freedoko-0.7.8.ebuild:
   Fixed slot deps

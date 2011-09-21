@@ -1,5 +1,5 @@
---- Makefile.orig	2006-08-12 16:26:20.366547794 +0200
-+++ Makefile	2006-08-12 16:26:51.066037961 +0200
+--- Makefile.orig
++++ Makefile
 @@ -139,7 +139,6 @@
  	$(MAKE) Version
  	cp AUTHORS COPYING ChangeLog README LIESMICH Version release/FreeDoko_$(VERSION)/
