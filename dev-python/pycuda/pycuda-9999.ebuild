@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/pycuda-9999.ebuild,v 1.7 2011/01/01 21:15:03 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/pycuda-9999.ebuild,v 1.8 2011/09/21 08:48:19 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 
-inherit git distutils
+inherit git-2 distutils
 
 EGIT_REPO_URI="http://git.tiker.net/trees/pycuda.git"
 
@@ -27,7 +27,7 @@ RDEPEND="=dev-python/pytools-9999
 DEPEND="${RDEPEND}"
 
 src_unpack() {
-	git_src_unpack
+	git-2_src_unpack
 }
 
 src_configure() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/remoteobjects/remoteobjects-99999999.ebuild,v 1.2 2011/04/07 17:58:01 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/remoteobjects/remoteobjects-99999999.ebuild,v 1.3 2011/09/21 08:46:37 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -11,8 +11,9 @@ DISTUTILS_SRC_TEST="nosetests"
 inherit distutils
 
 if [[ ${PV} == "99999999" ]] ; then
-	EGIT_REPO_URI="git://github.com/LegNeato/remoteobjects.git"
-	inherit git
+	EGIT_REPO_URI="git://github.com/LegNeato/${PN}.git
+		https://github.com/LegNeato/${PN}.git"
+	inherit git-2
 fi
 
 DESCRIPTION="subclassable Python objects for working with JSON REST APIs"
