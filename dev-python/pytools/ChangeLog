@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytools/ChangeLog,v 1.7 2011/01/01 21:08:52 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytools/ChangeLog,v 1.8 2011/09/21 08:46:39 mgorny Exp $
+
+  21 Sep 2011; Michał Górny <mgorny@gentoo.org> pytools-9999.ebuild:
+  Migrate to git-2. Simplify a little.
 
   01 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pytools-11.ebuild, pytools-9999.ebuild:
