@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pms
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pms/ChangeLog,v 1.5 2010/09/16 07:10:28 wired Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pms/ChangeLog,v 1.6 2011/09/21 08:01:22 mgorny Exp $
+
+  21 Sep 2011; Michał Górny <mgorny@gentoo.org> pms-9999.ebuild:
+  Migrate to git-2.
 
   16 Sep 2010; Alex Alexander <wired@gentoo.org> pms-0.42.ebuild,
   pms-9999.ebuild:
