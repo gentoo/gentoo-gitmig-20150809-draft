@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-9999.ebuild,v 1.20 2011/06/06 06:24:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-9999.ebuild,v 1.21 2011/09/21 08:15:45 mgorny Exp $
 
-inherit linux-mod flag-o-matic eutils multilib autotools git
+inherit linux-mod flag-o-matic eutils multilib autotools git-2
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -101,14 +101,19 @@ pkg_setup() {
 }
 
 src_unpack() {
-	EGIT_REPO_URI="git://git.alsa-project.org/alsa-driver.git" S="${WORKDIR}/alsa-driver" git_src_unpack
-	EGIT_REPO_URI="git://git.alsa-project.org/alsa-kmirror.git" EGIT_PROJECT="alsa-kmirror" S="${WORKDIR}/alsa-driver/alsa-kernel" git_src_unpack
-	S="${WORKDIR}/alsa-driver"
+	EGIT_REPO_URI="git://git.alsa-project.org/alsa-driver.git
+		http://git.alsa-project.org/http/alsa-driver.git" \
+		git-2_src_unpack
 
-	convert_to_m "${S}/Makefile"
-	sed -i -e 's:\(.*depmod\):#\1:' "${S}/Makefile"
+	EGIT_REPO_URI="git://git.alsa-project.org/alsa-kmirror.git
+		http://git.alsa-project.org/http/alsa-kmirror.git" \
+		EGIT_SOURCEDIR="${WORKDIR}/alsa-driver/alsa-kernel" \
+		git-2_src_unpack
 
 	cd "${S}"
+	convert_to_m Makefile
+	sed -i -e 's:\(.*depmod\):#\1:' Makefile
+
 	emake ALSAKERNELDIR="${S}/alsa-kernel" all-deps
 	eaclocal
 	eautoconf
