@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/vbam
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/ChangeLog,v 1.7 2011/06/17 21:01:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/ChangeLog,v 1.8 2011/09/21 06:23:09 radhermit Exp $
+
+  21 Sep 2011; Tim Harder <radhermit@gentoo.org> vbam-1.8.0.1009-r1.ebuild:
+  Fix build issue with the latest zlib macro issues thanks to vapier (bug
+  #383627).
 
   17 Jun 2011; Tim Harder <radhermit@gentoo.org> vbam-1.8.0.1009-r1.ebuild,
   +files/vbam-1.8.0.1009-no-nls.patch:
