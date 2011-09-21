@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/quazip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/ChangeLog,v 1.6 2011/09/13 21:30:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/ChangeLog,v 1.7 2011/09/21 12:42:19 sping Exp $
+
+  21 Sep 2011; Sebastian Pipping <sping@gentoo.org> quazip-0.4.3-r1.ebuild,
+  +files/quazip-0.4.3-zlib.patch:
+  Fix compilation against zlib-1.2.5.1-r1 (bug #383309)
 
 *quazip-0.4.3-r1 (13 Sep 2011)
 
