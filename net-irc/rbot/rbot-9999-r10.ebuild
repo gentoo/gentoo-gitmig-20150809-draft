@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-9999-r10.ebuild,v 1.5 2010/08/06 17:36:35 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/rbot/rbot-9999-r10.ebuild,v 1.6 2011/09/21 08:54:22 mgorny Exp $
 
 inherit ruby eutils
 
-[[ ${PV} == *"9999" ]] && inherit git
+[[ ${PV} == *"9999" ]] && inherit git-2
 
 DESCRIPTION="rbot is a ruby IRC bot"
 HOMEPAGE="http://ruby-rbot.org/"
@@ -60,7 +60,7 @@ pkg_setup() {
 
 src_unpack() {
 	if [[ ${PV} == *"9999" ]]; then
-		git_src_unpack
+		git-2_src_unpack
 
 		cd "${S}"
 		sed -i -e '/\$version=/s:".\+":"'${PV}'":' bin/rbot \
