@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-99999999.ebuild,v 1.4 2011/08/07 20:09:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-99999999.ebuild,v 1.5 2011/09/21 09:01:28 mgorny Exp $
 
 # For released versions, we precompile the man/html pages and store
 # them in a tarball on our mirrors.  This avoids ugly issues while
@@ -12,7 +12,7 @@ EAPI="2"
 inherit flag-o-matic eutils toolchain-funcs
 if [[ ${PV} == "99999999" ]] ; then
 	EGIT_REPO_URI="git://www.linux-ipv6.org/gitroot/iputils"
-	inherit git
+	inherit git-2
 else
 	SRC_URI="http://www.skbuff.net/iputils/iputils-s${PV}.tar.bz2
 		mirror://gentoo/iputils-s${PV}-manpages.tar.bz2"
