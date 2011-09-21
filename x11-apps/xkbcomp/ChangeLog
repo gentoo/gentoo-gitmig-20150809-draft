@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xkbcomp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkbcomp/ChangeLog,v 1.95 2011/09/05 19:20:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xkbcomp/ChangeLog,v 1.96 2011/09/21 00:31:36 jer Exp $
+
+  21 Sep 2011; Jeroen Roovers <jer@gentoo.org> xkbcomp-1.2.3.ebuild:
+  Stable for HPPA (bug #380421).
 
   05 Sep 2011; Markus Meier <maekke@gentoo.org> xkbcomp-1.2.3.ebuild:
   arm stable, bug #380421
