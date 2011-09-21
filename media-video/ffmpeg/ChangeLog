@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.455 2011/09/17 16:48:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.456 2011/09/21 15:21:46 aballier Exp $
+
+  21 Sep 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild,
+  metadata.xml:
+  add cdio useflag
 
   17 Sep 2011; Raúl Porcel <armin76@gentoo.org> ffmpeg-0.7.4.ebuild:
   alpha/ia64/sparc stable wrt #382301

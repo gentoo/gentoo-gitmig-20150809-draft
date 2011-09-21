@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.53 2011/09/06 18:02:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.54 2011/09/21 15:21:46 aballier Exp $
 
 EAPI="4"
 
@@ -29,10 +29,10 @@ if [ "${PV#9999}" = "${PV}" ] ; then
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 fi
 IUSE="
-	aac alsa amr bindist +bzip2 celt cpudetection debug dirac doc +encode faac
-	frei0r gsm +hardcoded-tables ieee1394 jack jpeg2k mp3 network openal oss pic
-	qt-faststart rtmp schroedinger sdl speex static-libs test theora threads
-	truetype v4l v4l2 vaapi vdpau vorbis vpx X x264 xvid +zlib
+	aac alsa amr bindist +bzip2 cdio celt cpudetection debug dirac doc +encode
+	faac frei0r gsm +hardcoded-tables ieee1394 jack jpeg2k mp3 network openal
+	oss pic qt-faststart rtmp schroedinger sdl speex static-libs test theora
+	threads truetype v4l v4l2 vaapi vdpau vorbis vpx X x264 xvid +zlib
 	"
 
 # String for CPU features in the useflag[:configure_option] form
@@ -47,6 +47,7 @@ RDEPEND="
 	alsa? ( media-libs/alsa-lib )
 	amr? ( media-libs/opencore-amr )
 	bzip2? ( app-arch/bzip2 )
+	cdio? ( dev-libs/libcdio )
 	celt? ( >=media-libs/celt-0.11.1 )
 	dirac? ( media-video/dirac )
 	encode? (
@@ -131,6 +132,7 @@ src_configure() {
 	fi
 
 	# libavdevice options
+	use cdio && myconf="${myconf} --enable-libcdio"
 	use ieee1394 && myconf="${myconf} --enable-libdc1394"
 	use openal && myconf="${myconf} --enable-openal"
 	# Indevs
