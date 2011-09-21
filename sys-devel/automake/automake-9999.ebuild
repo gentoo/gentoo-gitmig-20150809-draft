@@ -1,10 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-9999.ebuild,v 1.3 2009/02/08 19:42:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-9999.ebuild,v 1.4 2011/09/21 08:35:56 mgorny Exp $
 
-EGIT_REPO_URI="git://git.savannah.gnu.org/automake.git"
+EGIT_REPO_URI="git://git.savannah.gnu.org/${PN}.git
+	http://git.savannah.gnu.org/r/${PN}.git"
 
-inherit eutils git
+inherit eutils git-2
 
 DESCRIPTION="Used to generate Makefile.in from Makefile.am"
 HOMEPAGE="http://sources.redhat.com/automake/"
@@ -24,7 +25,7 @@ DEPEND="${RDEPEND}
 	sys-apps/help2man"
 
 src_unpack() {
-	git_src_unpack
+	git-2_src_unpack
 	cd "${S}"
 	sed -i \
 		-e "s|: (automake)| v${SLOT}: (automake${SLOT})|" \

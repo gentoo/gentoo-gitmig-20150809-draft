@@ -1,13 +1,15 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/gnuconfig-99999999.ebuild,v 1.7 2011/02/19 17:39:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/gnuconfig-99999999.ebuild,v 1.8 2011/09/21 08:39:50 mgorny Exp $
 
 EAPI="2"
 
 inherit eutils
 if [[ ${PV} == "99999999" ]] ; then
-	EGIT_REPO_URI="git://git.savannah.gnu.org/config.git"
-	inherit git
+	EGIT_REPO_URI="git://git.savannah.gnu.org/config.git
+		http://git.savannah.gnu.org/r/config.git"
+
+	inherit git-2
 else
 	SRC_URI="mirror://gentoo/${P}.tar.bz2"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~hppa-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
@@ -38,7 +40,7 @@ maint_pkg_create() {
 
 src_unpack() {
 	if [[ ${PV} == "99999999" ]] ; then
-		git_src_unpack
+		git-2_src_unpack
 		maint_pkg_create
 	else
 		unpack ${A}

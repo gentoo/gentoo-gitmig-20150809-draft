@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/sparse
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.43 2011/04/08 01:32:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/ChangeLog,v 1.44 2011/09/21 08:38:30 mgorny Exp $
+
+  21 Sep 2011; Michał Górny <mgorny@gentoo.org> sparse-9999.ebuild:
+  Migrate to git-2.
 
   08 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> sparse-0.4.3.ebuild:
   Add a comment on where to find the patches.

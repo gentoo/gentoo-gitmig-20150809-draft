@@ -1,12 +1,14 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-9999.ebuild,v 1.3 2010/09/22 23:56:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-9999.ebuild,v 1.4 2011/09/21 08:36:01 mgorny Exp $
 
 EAPI="2"
 
 if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="git://git.savannah.gnu.org/autoconf.git"
-	inherit git
+	EGIT_REPO_URI="git://git.savannah.gnu.org/${PN}.git
+		http://git.savannah.gnu.org/r/${PN}.git"
+
+	inherit git-2
 	SRC_URI=""
 	#KEYWORDS=""
 else

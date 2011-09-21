@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/sparse-9999.ebuild,v 1.8 2011/04/08 01:31:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/sparse-9999.ebuild,v 1.9 2011/09/21 08:38:30 mgorny Exp $
 
 EAPI="2"
 
 inherit multilib toolchain-funcs
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/devel/sparse/sparse.git"
-	inherit git
+	inherit git-2
 fi
 
 DESCRIPTION="C semantic parser"

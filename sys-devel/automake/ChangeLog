@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/automake
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.152 2011/04/08 18:02:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.153 2011/09/21 08:35:56 mgorny Exp $
+
+  21 Sep 2011; Michał Górny <mgorny@gentoo.org> automake-9999.ebuild:
+  Migrate to git-2.
 
 *automake-1.11.1-r1 (08 Apr 2011)
 

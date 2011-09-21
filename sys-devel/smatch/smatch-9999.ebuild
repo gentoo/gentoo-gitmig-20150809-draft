@@ -1,13 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/smatch/smatch-9999.ebuild,v 1.1 2011/09/08 22:10:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/smatch/smatch-9999.ebuild,v 1.2 2011/09/21 08:38:29 mgorny Exp $
 
 EAPI="2"
 
 inherit multilib toolchain-funcs
 if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="git://repo.or.cz/smatch.git"
-	inherit git
+	EGIT_REPO_URI="git://repo.or.cz/${PN}.git
+		http://repo.or.cz/r/${PN}.git"
+	inherit git-2
 fi
 
 DESCRIPTION="static analysis tool for C"
