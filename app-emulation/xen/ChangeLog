@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.80 2011/09/18 12:15:08 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.81 2011/09/21 11:14:59 alexxy Exp $
+
+*xen-3.4.2-r2 (21 Sep 2011)
+
+  21 Sep 2011; Alexey Shvetsov <alexxy@gentoo.org> +xen-3.4.2-r2.ebuild,
+  +files/xen-3.4.2-no-DMA.patch:
+  Security patch from xen-4 backported for xen-3 by Ian Delaney aka idell4
 
 *xen-4.1.1-r2 (18 Sep 2011)
 
