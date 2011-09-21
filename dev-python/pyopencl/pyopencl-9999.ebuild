@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/pyopencl-9999.ebuild,v 1.5 2010/12/31 16:55:04 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopencl/pyopencl-9999.ebuild,v 1.6 2011/09/21 08:48:21 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
 
-inherit git distutils
+inherit distutils git-2
 
 EGIT_REPO_URI="http://git.tiker.net/trees/pyopencl.git"
 
@@ -25,11 +25,6 @@ RDEPEND=">=dev-python/numpy-1.0.4
 	>=dev-util/nvidia-cuda-toolkit-3.0"
 DEPEND="${RDEPEND}
 	dev-libs/boost[python]"
-
-src_unpack()
-{
-	git_src_unpack
-}
 
 src_configure()
 {
