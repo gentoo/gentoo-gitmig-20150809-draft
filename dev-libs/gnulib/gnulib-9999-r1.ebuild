@@ -1,10 +1,11 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnulib/gnulib-9999-r1.ebuild,v 1.4 2009/03/04 15:37:25 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnulib/gnulib-9999-r1.ebuild,v 1.5 2011/09/21 08:21:11 mgorny Exp $
 
-EGIT_REPO_URI="git://git.savannah.gnu.org/gnulib.git"
+EGIT_REPO_URI="git://git.savannah.gnu.org/${PN}.git
+	http://git.savannah.gnu.org/r/${PN}.git"
 
-inherit eutils git
+inherit eutils git-2
 
 DESCRIPTION="Gnulib is a library of common routines intended to be shared at the source level."
 HOMEPAGE="http://www.gnu.org/software/gnulib"

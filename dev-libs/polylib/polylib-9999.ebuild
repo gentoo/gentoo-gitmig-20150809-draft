@@ -1,10 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/polylib/polylib-9999.ebuild,v 1.1 2008/09/21 08:46:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/polylib/polylib-9999.ebuild,v 1.2 2011/09/21 08:22:33 mgorny Exp $
 
-EGIT_REPO_URI="git://repo.or.cz/polylib.git"
+EGIT_REPO_URI="git://repo.or.cz/${PN}.git
+	http://repo.or.cz/r/${PN}.git"
 EGIT_BOOTSTRAP="eautoreconf && cd cln && eautoreconf"
-inherit git autotools eutils
+inherit git-2 autotools eutils
 
 DESCRIPTION="ppl port of cloog"
 HOMEPAGE="http://icps.u-strasbg.fr/polylib/"
@@ -15,7 +16,7 @@ KEYWORDS=""
 IUSE=""
 
 src_unpack() {
-	git_src_unpack
+	git-2_src_unpack
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-headers.patch
 	# strip LDFLAGS from pkgconfig .pc file
