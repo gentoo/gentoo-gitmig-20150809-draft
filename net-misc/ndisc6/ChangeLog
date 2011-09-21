@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ndisc6
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ndisc6/ChangeLog,v 1.5 2010/11/06 01:56:29 xmw Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ndisc6/ChangeLog,v 1.6 2011/09/21 20:48:39 xmw Exp $
+
+*ndisc6-1.0.2 (21 Sep 2011)
+
+  21 Sep 2011; Michael Weber <xmw@gentoo.org> +ndisc6-1.0.2.ebuild:
+  Version bump
 
 *ndisc6-0.9.9-r2 (06 Nov 2010)
 
