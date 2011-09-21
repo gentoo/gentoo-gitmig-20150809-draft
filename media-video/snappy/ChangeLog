@@ -1,6 +1,9 @@
 # ChangeLog for media-video/snappy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/snappy/ChangeLog,v 1.3 2011/06/20 16:31:09 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/snappy/ChangeLog,v 1.4 2011/09/21 09:01:31 mgorny Exp $
+
+  21 Sep 2011; Michał Górny <mgorny@gentoo.org> snappy-9999.ebuild:
+  Migrate to git-2.
 
 *snappy-0.2 (20 Jun 2011)
 

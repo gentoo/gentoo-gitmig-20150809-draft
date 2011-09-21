@@ -1,18 +1,19 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/snappy/snappy-9999.ebuild,v 1.2 2011/06/15 04:15:08 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/snappy/snappy-9999.ebuild,v 1.3 2011/09/21 09:01:31 mgorny Exp $
 
 EAPI="4"
 
 if [[ ${PV} = 9999 ]]; then
-	inherit autotools git
+	inherit autotools git-2
 fi
 
 DESCRIPTION="A simple media player written using GStreamer and Clutter"
 HOMEPAGE="https://github.com/luisbg/snappy"
 
 if [[ ${PV} = 9999 ]]; then
-	EGIT_REPO_URI="git://github.com/luisbg/${PN}.git"
+	EGIT_REPO_URI="git://github.com/luisbg/${PN}.git
+		https://github.com/luisbg/${PN}.git"
 	EGIT_BOOTSTRAP="eautoreconf"
 	KEYWORDS=""
 else

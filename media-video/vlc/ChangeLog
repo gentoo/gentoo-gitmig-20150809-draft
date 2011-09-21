@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.739 2011/09/08 18:57:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.740 2011/09/21 08:58:32 mgorny Exp $
+
+  21 Sep 2011; Michał Górny <mgorny@gentoo.org> vlc-1.1.9999.ebuild,
+  vlc-9999.ebuild:
+  Migrate to git-2.
 
   08 Sep 2011; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
   add libsamplerate useflag

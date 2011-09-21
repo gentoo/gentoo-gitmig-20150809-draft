@@ -1,15 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.9999.ebuild,v 1.31 2011/06/22 12:38:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.9999.ebuild,v 1.32 2011/09/21 08:58:32 mgorny Exp $
 
 EAPI="3"
 
 SCM=""
 if [ "${PV%9999}" != "${PV}" ] ; then
-	SCM=git
+	SCM=git-2
 	EGIT_BOOTSTRAP="bootstrap"
-	EGIT_BRANCH=master
-	EGIT_PROJECT=${P}
 	if [ "${PV%.9999}" != "${PV}" ] ; then
 		EGIT_REPO_URI="git://git.videolan.org/vlc/vlc-${PV%.9999}.git"
 	else
@@ -208,14 +206,11 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	if [ "${PV%9999}" != "${PV}" ] ; then
-		git_src_unpack
+		git-2_src_unpack
 	fi
 }
 
 src_prepare() {
-	if [ "${PV%9999}" != "${PV}" ] ; then
-		git_src_prepare
-	fi
 	# Make it build with libtool 1.5
 	rm -f m4/lt* m4/libtool.m4
 
