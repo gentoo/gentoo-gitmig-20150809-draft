@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/chkrootkit-0.49.ebuild,v 1.4 2011/09/18 16:54:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/chkrootkit-0.49.ebuild,v 1.5 2011/09/22 20:26:47 radhermit Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit eutils toolchain-funcs
 
@@ -17,30 +17,31 @@ SLOT="0"
 KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
 IUSE=""
 
+RDEPEND="virtual/cron"
+
 src_prepare() {
 	epatch "${WORKDIR}/${P}-gentoo.diff"
 	sed -i 's:/var/adm/:/var/log/:g' chklastlog.c || die "sed chklastlog.c failed"
 }
 
 src_compile() {
-	emake CC=$(tc-getCC) STRIP=true sense || die "emake sense failed"
+	emake CC=$(tc-getCC) STRIP=true sense
 }
 
 src_install() {
-	dosbin chkdirs chklastlog chkproc chkrootkit chkwtmp chkutmp ifpromisc \
-		strings-static || die
-	dodoc ACKNOWLEDGMENTS README* || die
+	dosbin chkdirs chklastlog chkproc chkrootkit chkwtmp chkutmp ifpromisc strings-static
+	dodoc ACKNOWLEDGMENTS README*
 
 	exeinto /etc/cron.weekly
-	newexe "${FILESDIR}"/${PN}.cron ${PN} || die
+	newexe "${FILESDIR}"/${PN}.cron ${PN}
 }
 
 pkg_postinst() {
-	echo
+	elog
 	elog "Edit /etc/cron.weekly/chkrootkit to activate chkrootkit!"
 	elog
 	elog "Some applications, such as portsentry, will cause chkrootkit"
 	elog "to produce false positives.  Read the chkrootkit FAQ at"
 	elog "http://www.chkrootkit.org/ for more information."
-	echo
+	elog
 }
