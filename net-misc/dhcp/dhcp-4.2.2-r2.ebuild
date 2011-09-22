@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.2.2-r2.ebuild,v 1.3 2011/09/20 13:36:48 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.2.2-r2.ebuild,v 1.4 2011/09/22 17:32:35 vapier Exp $
 
 EAPI="2"
 
@@ -151,10 +151,12 @@ src_configure() {
 		$(use_with ldap) \
 		$(use ldap && use_with ssl ldapcrypto || echo --without-ldapcrypto)
 
-	# configure local bind cruft
+	# configure local bind cruft.  symtable option requires
+	# perl and we don't want to require that #383837.
 	cd bind/bind-*/ || die
 	eval econf \
 		$(sed -n '/ [.].configure /{s:^[^-]*::;s:>.*::;p}' ../Makefile) \
+		--disable-symtable \
 		--without-make-clean
 }
 
