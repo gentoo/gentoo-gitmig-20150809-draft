@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/urwid
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.43 2010/05/23 18:15:38 pacho Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urwid/ChangeLog,v 1.44 2011/09/22 19:26:41 radhermit Exp $
+
+*urwid-1.0.0 (22 Sep 2011)
+
+  22 Sep 2011; Tim Harder <radhermit@gentoo.org> +urwid-1.0.0.ebuild:
+  Version bump.
 
   23 May 2010; Pacho Ramos <pacho@gentoo.org> urwid-0.9.9.1.ebuild:
   stable amd64, bug 307259
