@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.2.2-r2.ebuild,v 1.4 2011/09/22 17:32:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.2.2-r2.ebuild,v 1.5 2011/09/22 19:38:41 vapier Exp $
 
 EAPI="2"
 
@@ -198,18 +198,26 @@ src_install() {
 		newinitd "${FILESDIR}"/dhcrelay.init2 dhcrelay || die
 		newconfd "${FILESDIR}"/dhcrelay.conf dhcrelay || die
 	fi
+
+	# the default config files aren't terribly useful #384087
+	sed -i '/^[^#]/s:^:#:' "${D}"/etc/dhcp/*.conf || die
 }
 
 pkg_preinst() {
 	enewgroup dhcp
 	enewuser dhcp -1 -1 /var/lib/dhcp dhcp
 
-	# Keep the user files over the sample ones
-	local f
-	for f in dhclient dhcpd ; do
-		f="/etc/dhcp/${f}.conf"
+	# Keep the user files over the sample ones.  The
+	# hashing is to ignore the crappy defaults #384087.
+	local f h
+	for f in dhclient:da7c8496a96452190aecf9afceef4510 dhcpd:10979e7b71134bd7f04d2a60bd58f070 ; do
+		h=${f#*:}
+		f="/etc/dhcp/${f%:*}.conf"
 		if [ -e "${ROOT}"${f} ] ; then
-			cp -p "${ROOT}"${f} "${D}"${f}
+			case $(md5sum "${ROOT}"${f}) in
+				${h}*) ;;
+				*) cp -p "${ROOT}"${f} "${D}"${f};;
+			esac
 		fi
 	done
 }

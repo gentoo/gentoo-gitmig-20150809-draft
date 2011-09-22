@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.191 2011/09/22 17:32:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.192 2011/09/22 19:38:41 vapier Exp $
+
+  22 Sep 2011; Mike Frysinger <vapier@gentoo.org> dhcp-4.2.2-r2.ebuild,
+  files/dhcpd.init4:
+  Install the default config files commented out since they aren't useful in
+  the real world other than as examples #384087 by Nick Bowler.
 
   22 Sep 2011; Mike Frysinger <vapier@gentoo.org> dhcp-4.2.2-r2.ebuild:
   Disable symtable support in local bind as it requires perl #383837 by Albert

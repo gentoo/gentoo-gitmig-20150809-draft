@@ -1,9 +1,9 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/files/dhcpd.init4,v 1.1 2011/09/17 05:28:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/files/dhcpd.init4,v 1.2 2011/09/22 19:38:41 vapier Exp $
 
-opts="configtest"
+extra_commands="configtest"
 
 : ${DHCPD_CONF:=/etc/dhcp/${SVCNAME}.conf}
 
