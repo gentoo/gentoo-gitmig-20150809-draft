@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-community-extensions/banshee-community-extensions-2.2.0.ebuild,v 1.1 2011/09/22 17:18:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-community-extensions/banshee-community-extensions-2.2.0.ebuild,v 1.2 2011/09/22 17:19:41 pacho Exp $
 
 EAPI="4"
 
@@ -37,7 +37,9 @@ DEPEND=">=dev-lang/mono-2.0
 		dev-dotnet/notify-sharp
 		>=dev-lang/mono-2.4.2
 	)"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	!media-plugins/banshee-lyrics
+	!media-plugins/banshee-mirage"
 
 src_configure() {
 	# Disable ClutterFlow as we don't have clutter-sharp and co in tree
