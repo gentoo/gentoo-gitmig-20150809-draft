@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/banshee-community-extensions
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-community-extensions/ChangeLog,v 1.19 2011/07/08 16:43:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-community-extensions/ChangeLog,v 1.20 2011/09/22 17:18:01 pacho Exp $
+
+*banshee-community-extensions-2.2.0 (22 Sep 2011)
+
+  22 Sep 2011; Pacho Ramos <pacho@gentoo.org>
+  +banshee-community-extensions-2.2.0.ebuild:
+  Version bump.
 
 *banshee-community-extensions-2.0.1 (08 Jul 2011)
 
