@@ -1,6 +1,9 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.26 2011/08/18 09:40:05 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.27 2011/09/22 18:47:03 lu_zero Exp $
+
+  22 Sep 2011; Luca Barbato <lu_zero@gentoo.org> libav-9999.ebuild:
+  Update vaapi logic, thanks to Tobias Jakobi for the notice
 
   18 Aug 2011; Luca Barbato <lu_zero@gentoo.org> libav-0.8_pre20110818.ebuild,
   libav-9999.ebuild:

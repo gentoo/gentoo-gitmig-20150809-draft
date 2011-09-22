@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.16 2011/08/18 09:40:05 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.17 2011/09/22 18:47:03 lu_zero Exp $
 
 EAPI=4
 
@@ -105,7 +105,7 @@ src_configure() {
 	"
 
 	# enabled by default
-	uses="debug doc network vaapi zlib"
+	uses="debug doc network zlib"
 	for i in ${uses}; do
 		use ${i} || myconf+=" --disable-${i}"
 	done
@@ -120,6 +120,8 @@ src_configure() {
 	#	use vdpau || myconf="${myconf} --disable-decoder=${i}"
 	#done
 	use video_cards_nvidia && use vdpau || myconf+=" --disable-vdpau"
+
+	use vaapi && myconf+=" --enable-vaapi"
 
 	# Encoders
 	if use encode; then
