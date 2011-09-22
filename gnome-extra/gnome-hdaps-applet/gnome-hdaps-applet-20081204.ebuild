@@ -1,10 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-hdaps-applet/gnome-hdaps-applet-20081204.ebuild,v 1.2 2010/12/11 12:22:37 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-hdaps-applet/gnome-hdaps-applet-20081204.ebuild,v 1.3 2011/09/22 19:21:59 vapier Exp $
 
 EAPI=2
 
-ETYPE=gcc-library
 inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="Visualization of the Hard Disc Active Protection System State as Gnome applet"
