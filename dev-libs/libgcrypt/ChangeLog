@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.149 2011/07/01 21:49:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.150 2011/09/22 14:19:48 flameeyes Exp $
+
+  22 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org> libgcrypt-1.5.0.ebuild,
+  +files/libgcrypt-1.5.0-uscore.patch:
+  Use libtool's macro to identify whether to use underscores in names or not.
+  Closes bug #383865.
 
 *libgcrypt-1.5.0 (01 Jul 2011)
 

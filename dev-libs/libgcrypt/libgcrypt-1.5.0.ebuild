@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.5.0.ebuild,v 1.1 2011/07/01 21:49:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.5.0.ebuild,v 1.2 2011/09/22 14:19:48 flameeyes Exp $
 
 EAPI="3"
+
+inherit autotools
 
 DESCRIPTION="General purpose crypto library based on the code used in GnuPG"
 HOMEPAGE="http://www.gnupg.org/"
@@ -16,6 +18,11 @@ IUSE="static-libs"
 
 RDEPEND=">=dev-libs/libgpg-error-1.8"
 DEPEND="${RDEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-uscore.patch
+	eautoreconf
+}
 
 src_configure() {
 	# --disable-padlock-support for bug #201917
