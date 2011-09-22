@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/chkrootkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.63 2011/09/22 20:26:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.64 2011/09/22 20:30:14 radhermit Exp $
+
+  22 Sep 2011; Tim Harder <radhermit@gentoo.org> chkrootkit-0.49.ebuild:
+  Minor quoting and spacing fixes.
 
   22 Sep 2011; Tim Harder <radhermit@gentoo.org> chkrootkit-0.49.ebuild:
   Add cron dependency (bug #383385 by Toralf Förster) and bump to EAPI 4.

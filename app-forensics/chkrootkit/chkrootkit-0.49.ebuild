@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/chkrootkit-0.49.ebuild,v 1.5 2011/09/22 20:26:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/chkrootkit-0.49.ebuild,v 1.6 2011/09/22 20:30:14 radhermit Exp $
 
 EAPI="4"
 
@@ -8,8 +8,7 @@ inherit eutils toolchain-funcs
 
 DESCRIPTION="Tool to locally check for signs of a rootkit"
 HOMEPAGE="http://www.chkrootkit.org/"
-SRC_URI="
-	ftp://ftp.pangeia.com.br/pub/seg/pac/${P}.tar.gz
+SRC_URI="ftp://ftp.pangeia.com.br/pub/seg/pac/${P}.tar.gz
 	mirror://gentoo/${P}-gentoo.diff.bz2"
 
 LICENSE="BSD-2"
@@ -20,12 +19,12 @@ IUSE=""
 RDEPEND="virtual/cron"
 
 src_prepare() {
-	epatch "${WORKDIR}/${P}-gentoo.diff"
+	epatch "${WORKDIR}"/${P}-gentoo.diff
 	sed -i 's:/var/adm/:/var/log/:g' chklastlog.c || die "sed chklastlog.c failed"
 }
 
 src_compile() {
-	emake CC=$(tc-getCC) STRIP=true sense
+	emake CC="$(tc-getCC)" STRIP=true sense
 }
 
 src_install() {
