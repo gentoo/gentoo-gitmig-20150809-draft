@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/split2flac/split2flac-9999.ebuild,v 1.1 2011/09/22 18:10:41 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/split2flac/split2flac-9999.ebuild,v 1.2 2011/09/22 18:34:43 maksbotan Exp $
 
 EAPI="4"
 
@@ -10,7 +10,7 @@ DESCRIPTION="sh script to split one big APE/FLAC/WV/WAV audio image with CUE she
 HOMEPAGE="https://code.google.com/p/split2flac/"
 EHG_REPO_URI="https://code.google.com/p/split2flac/"
 
-LICENSE="GPL-2"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS=""
 IUSE="flake imagemagick mac mp3 mp4 ogg replaygain wavpack"

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/split2flac
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/split2flac/ChangeLog,v 1.1 2011/09/22 18:10:41 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/split2flac/ChangeLog,v 1.2 2011/09/22 18:34:43 maksbotan Exp $
+
+  22 Sep 2011; Maxim Koltsov <maksbotan@gentoo.org> split2flac-9999.ebuild:
+  Fix license to be MIT instead of GPL-2
 
 *split2flac-9999 (22 Sep 2011)
 
