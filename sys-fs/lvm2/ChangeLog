@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.249 2011/09/13 05:47:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.250 2011/09/22 11:33:01 xarthisius Exp $
+
+  22 Sep 2011; Kacper Kowalik <xarthisius@gentoo.org> lvm2-2.02.73-r1.ebuild:
+  ppc stable wrt #334087
 
   13 Sep 2011; Robin H. Johnson <robbat2@gentoo.org>
   -files/device-mapper.rc-1.02.22-r3, -files/64-device-mapper.rules-1.02.22-r5,
