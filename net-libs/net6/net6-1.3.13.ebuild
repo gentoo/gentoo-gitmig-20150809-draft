@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/net6/net6-1.3.13.ebuild,v 1.1 2011/09/22 16:18:31 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/net6/net6-1.3.13.ebuild,v 1.2 2011/09/22 16:52:32 xarthisius Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://releases.0x539.de/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~x86"
-IUSE="nls"
+IUSE="nls static-libs"
 
 RDEPEND="dev-libs/libsigc++:2
 	>=net-libs/gnutls-1.2.10"
@@ -25,10 +25,10 @@ DOCS=( AUTHORS ChangeLog NEWS README )
 
 src_configure() {
 	econf $(use_enable nls) \
-		--disable-static
+		$(use_enable static-libs static)
 }
 
 src_install() {
 	default
-	rm -f "${D}"/usr/$(get_libdir)/${PN}.la
+	use static-libs || rm -f "${D}"/usr/$(get_libdir)/${PN}.la
 }
