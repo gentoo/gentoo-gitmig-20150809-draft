@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.0.3.ebuild,v 1.1 2011/09/22 14:59:42 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.0.3.ebuild,v 1.2 2011/09/22 15:17:43 floppym Exp $
 
 EAPI=4
 
@@ -23,7 +23,8 @@ RDEPEND=">=dev-libs/dbus-glib-0.60
 	dev-libs/libxml2
 	>=x11-libs/cairo-1.2.6
 	>=x11-libs/pango-1.8.0
-	gtk3? ( x11-libs/gtk+:3 ) || ( >=x11-libs/gtk+-2.14:2 )
+	gtk3? ( x11-libs/gtk+:3 )
+	!gtk3? ( >=x11-libs/gtk+-2.14:2 )
 	session? ( x11-libs/libSM )"
 
 DEPEND="${RDEPEND}
