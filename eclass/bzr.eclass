@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bzr.eclass,v 1.16 2011/09/02 21:26:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bzr.eclass,v 1.17 2011/09/22 08:13:09 ulm Exp $
 #
 # @ECLASS: bzr.eclass
 # @MAINTAINER:
@@ -233,7 +233,7 @@ bzr_fetch() {
 
 	if [[ ! -d ${branch_dir}/.bzr ]]; then
 		if [[ ${repo_dir} != "${branch_dir}" && ! -d ${repo_dir}/.bzr ]]; then
-			einfo "creating shared bzr repository"
+			einfo "creating shared bzr repository: ${repo_dir}"
 			${EBZR_INIT_REPO_CMD} "${repo_dir}" \
 				|| die "${EBZR}: can't create shared repository"
 		fi
