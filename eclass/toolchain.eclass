@@ -1,48 +1,20 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.468 2011/09/13 16:30:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.469 2011/09/22 23:08:28 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
+#---->> eclass stuff <<----
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GPL-2 LGPL-2.1"
 RESTRICT="strip" # cross-compilers need controlled stripping
 
-#---->> eclass stuff <<----
 inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig multilib fixheadtails
 
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_test pkg_preinst src_install pkg_postinst pkg_prerm pkg_postrm
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
 FEATURES=${FEATURES/multilib-strict/}
-
-toolchain_pkg_setup() {
-	gcc_pkg_setup
-}
-toolchain_src_unpack() {
-	gcc_src_unpack
-}
-toolchain_src_compile() {
-	gcc_src_compile
-}
-toolchain_src_test() {
-	gcc_src_test
-}
-toolchain_pkg_preinst() {
-	${ETYPE}_pkg_preinst
-}
-toolchain_src_install() {
-	${ETYPE}_src_install
-}
-toolchain_pkg_postinst() {
-	${ETYPE}_pkg_postinst
-}
-toolchain_pkg_prerm() {
-	${ETYPE}_pkg_prerm
-}
-toolchain_pkg_postrm() {
-	${ETYPE}_pkg_postrm
-}
 #----<< eclass stuff >>----
 
 
@@ -58,7 +30,6 @@ is_crosscompile() {
 }
 
 tc_version_is_at_least() { version_is_at_least "$1" "${2:-${GCC_RELEASE_VER}}" ; }
-
 
 GCC_PV=${TOOLCHAIN_GCC_PV:-${PV}}
 GCC_PVR=${GCC_PV}
@@ -88,91 +59,65 @@ elif [[ ${GCC_PV} == *_rc* ]] ; then
 fi
 export GCC_FILESDIR=${GCC_FILESDIR:-${FILESDIR}}
 
-if [[ ${ETYPE} == "gcc-library" ]] ; then
-	GCC_VAR_TYPE=${GCC_VAR_TYPE:-non-versioned}
-	GCC_LIB_COMPAT_ONLY=${GCC_LIB_COMPAT_ONLY:-true}
-else
-	GCC_VAR_TYPE=${GCC_VAR_TYPE:-versioned}
-	GCC_LIB_COMPAT_ONLY="false"
-fi
-
 PREFIX=${TOOLCHAIN_PREFIX:-/usr}
 
-if [[ ${GCC_VAR_TYPE} == "versioned" ]] ; then
-	if tc_version_is_at_least 3.4.0 ; then
-		LIBPATH=${TOOLCHAIN_LIBPATH:-${PREFIX}/lib/gcc/${CTARGET}/${GCC_CONFIG_VER}}
-	else
-		LIBPATH=${TOOLCHAIN_LIBPATH:-${PREFIX}/lib/gcc-lib/${CTARGET}/${GCC_CONFIG_VER}}
-	fi
-	INCLUDEPATH=${TOOLCHAIN_INCLUDEPATH:-${LIBPATH}/include}
-	if is_crosscompile ; then
-		BINPATH=${TOOLCHAIN_BINPATH:-${PREFIX}/${CHOST}/${CTARGET}/gcc-bin/${GCC_CONFIG_VER}}
-	else
-		BINPATH=${TOOLCHAIN_BINPATH:-${PREFIX}/${CTARGET}/gcc-bin/${GCC_CONFIG_VER}}
-	fi
-	DATAPATH=${TOOLCHAIN_DATAPATH:-${PREFIX}/share/gcc-data/${CTARGET}/${GCC_CONFIG_VER}}
-	# Dont install in /usr/include/g++-v3/, but in gcc internal directory.
-	# We will handle /usr/include/g++-v3/ with gcc-config ...
-	STDCXX_INCDIR=${TOOLCHAIN_STDCXX_INCDIR:-${LIBPATH}/include/g++-v${GCC_BRANCH_VER/\.*/}}
-elif [[ ${GCC_VAR_TYPE} == "non-versioned" ]] ; then
-	# using non-versioned directories to install gcc, like what is currently
-	# done for ppc64 and 3.3.3_pre, is a BAD IDEA. DO NOT do it!! However...
-	# setting up variables for non-versioned directories might be useful for
-	# specific gcc targets, like libffi. Note that we dont override the value
-	# returned by get_libdir here.
-	LIBPATH=${TOOLCHAIN_LIBPATH:-${PREFIX}/$(get_libdir)}
-	INCLUDEPATH=${TOOLCHAIN_INCLUDEPATH:-${PREFIX}/include}
-	BINPATH=${TOOLCHAIN_BINPATH:-${PREFIX}/bin}
-	DATAPATH=${TOOLCHAIN_DATAPATH:-${PREFIX}/share}
-	STDCXX_INCDIR=${TOOLCHAIN_STDCXX_INCDIR:-${PREFIX}/include/g++-v3}
+if tc_version_is_at_least 3.4.0 ; then
+	LIBPATH=${TOOLCHAIN_LIBPATH:-${PREFIX}/lib/gcc/${CTARGET}/${GCC_CONFIG_VER}}
+else
+	LIBPATH=${TOOLCHAIN_LIBPATH:-${PREFIX}/lib/gcc-lib/${CTARGET}/${GCC_CONFIG_VER}}
 fi
+INCLUDEPATH=${TOOLCHAIN_INCLUDEPATH:-${LIBPATH}/include}
+if is_crosscompile ; then
+	BINPATH=${TOOLCHAIN_BINPATH:-${PREFIX}/${CHOST}/${CTARGET}/gcc-bin/${GCC_CONFIG_VER}}
+else
+	BINPATH=${TOOLCHAIN_BINPATH:-${PREFIX}/${CTARGET}/gcc-bin/${GCC_CONFIG_VER}}
+fi
+DATAPATH=${TOOLCHAIN_DATAPATH:-${PREFIX}/share/gcc-data/${CTARGET}/${GCC_CONFIG_VER}}
+# Dont install in /usr/include/g++-v3/, but in gcc internal directory.
+# We will handle /usr/include/g++-v3/ with gcc-config ...
+STDCXX_INCDIR=${TOOLCHAIN_STDCXX_INCDIR:-${LIBPATH}/include/g++-v${GCC_BRANCH_VER/\.*/}}
 
 #----<< globals >>----
 
 
 #---->> SLOT+IUSE logic <<----
-if [[ ${ETYPE} == "gcc-library" ]] ; then
-	IUSE="nls build test"
-	SLOT="${CTARGET}-${SO_VERSION_SLOT:-5}"
-else
-	IUSE="multislot nptl test"
+IUSE="multislot nptl test"
+
+if tc_version_is_at_least 3 ; then
+	IUSE+=" vanilla"
+fi
+
+if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
+	IUSE+=" altivec build fortran nls nocxx"
+	[[ -n ${PIE_VER} ]] && IUSE+=" nopie"
+	[[ -n ${PP_VER}	 ]] && IUSE+=" nossp"
+	[[ -n ${SPECS_VER} ]] && IUSE+=" nossp"
+	[[ -n ${HTB_VER} ]] && IUSE+=" boundschecking"
+	[[ -n ${D_VER}	 ]] && IUSE+=" d"
 
 	if tc_version_is_at_least 3 ; then
-		IUSE+=" vanilla"
-	fi
+		IUSE+=" bootstrap doc gcj gtk hardened libffi multilib objc"
 
-	if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
-		IUSE+=" altivec build fortran nls nocxx"
-		[[ -n ${PIE_VER} ]] && IUSE+=" nopie"
-		[[ -n ${PP_VER}	 ]] && IUSE+=" nossp"
-		[[ -n ${SPECS_VER} ]] && IUSE+=" nossp"
-		[[ -n ${HTB_VER} ]] && IUSE+=" boundschecking"
-		[[ -n ${D_VER}	 ]] && IUSE+=" d"
-
-		if tc_version_is_at_least 3 ; then
-			IUSE+=" bootstrap doc gcj gtk hardened libffi multilib objc"
-
-			tc_version_is_at_least "4.0" && IUSE+=" objc-gc mudflap"
-			tc_version_is_at_least "4.1" && IUSE+=" objc++"
-			tc_version_is_at_least "4.2" && IUSE+=" openmp"
-			tc_version_is_at_least "4.3" && IUSE+=" fixed-point"
-			if tc_version_is_at_least "4.4" ; then
-				IUSE+=" graphite"
-				[[ -n ${SPECS_VER} ]] && IUSE+=" nossp"
-			fi
-			[[ ${GCC_BRANCH_VER} == 4.5 ]] && IUSE+=" lto"
-			tc_version_is_at_least "4.6" && IUSE+=" go"
+		tc_version_is_at_least "4.0" && IUSE+=" objc-gc mudflap"
+		tc_version_is_at_least "4.1" && IUSE+=" objc++"
+		tc_version_is_at_least "4.2" && IUSE+=" openmp"
+		tc_version_is_at_least "4.3" && IUSE+=" fixed-point"
+		if tc_version_is_at_least "4.4" ; then
+			IUSE+=" graphite"
+			[[ -n ${SPECS_VER} ]] && IUSE+=" nossp"
 		fi
+		[[ ${GCC_BRANCH_VER} == 4.5 ]] && IUSE+=" lto"
+		tc_version_is_at_least "4.6" && IUSE+=" go"
 	fi
+fi
 
-	# Support upgrade paths here or people get pissed
-	if use multislot ; then
-		SLOT="${CTARGET}-${GCC_CONFIG_VER}"
-	elif is_crosscompile; then
-		SLOT="${CTARGET}-${GCC_BRANCH_VER}"
-	else
-		SLOT="${GCC_BRANCH_VER}"
-	fi
+# Support upgrade paths here or people get pissed
+if use multislot ; then
+	SLOT="${CTARGET}-${GCC_CONFIG_VER}"
+elif is_crosscompile; then
+	SLOT="${CTARGET}-${GCC_BRANCH_VER}"
+else
+	SLOT="${GCC_BRANCH_VER}"
 fi
 #----<< SLOT+IUSE logic >>----
 
@@ -180,12 +125,7 @@ fi
 #---->> S + SRC_URI essentials <<----
 
 # This function sets the source directory depending on whether we're using
-# a prerelease, snapshot, or release tarball. To use it, just set S with:
-#
-#	S="$(gcc_get_s_dir)"
-#
-# Travis Tilley <lv@gentoo.org> (03 Sep 2004)
-#
+# a prerelease, snapshot, or release tarball.
 gcc_get_s_dir() {
 	local GCC_S
 	if [[ -n ${PRERELEASE} ]] ; then
@@ -197,6 +137,7 @@ gcc_get_s_dir() {
 	fi
 	echo "${GCC_S}"
 }
+S=$(gcc_get_s_dir)
 
 # This function handles the basics of setting the SRC_URI for a gcc ebuild.
 # To use, set SRC_URI with:
@@ -376,7 +317,6 @@ get_gcc_src_uri() {
 
 	echo "${GCC_SRC_URI}"
 }
-S=$(gcc_get_s_dir)
 SRC_URI=$(get_gcc_src_uri)
 #---->> S + SRC_URI essentials >>----
 
@@ -778,7 +718,7 @@ copy_minispecs_gcc_specs() {
 #----<< specs + env.d logic >>----
 
 #---->> pkg_* <<----
-gcc_pkg_setup() {
+toolchain_pkg_setup() {
 	[[ -z ${ETYPE} ]] && die "Your ebuild needs to set the ETYPE variable"
 
 	if [[ ${ETYPE} == "gcc-compiler" ]] ; then
@@ -807,11 +747,11 @@ gcc_pkg_setup() {
 	unset LANGUAGES #265283
 }
 
-gcc-compiler_pkg_preinst() {
+toolchain_pkg_preinst() {
 	:
 }
 
-gcc-compiler_pkg_postinst() {
+toolchain_pkg_postinst() {
 	do_gcc_config
 
 	if ! is_crosscompile ; then
@@ -863,13 +803,13 @@ gcc-compiler_pkg_postinst() {
 	fi
 }
 
-gcc-compiler_pkg_prerm() {
+toolchain_pkg_prerm() {
 	# Don't let these files be uninstalled #87647
 	touch -c "${ROOT}"/sbin/fix_libtool_files.sh \
 		"${ROOT}"/$(get_libdir)/rcscripts/awk/fixlafiles.awk
 }
 
-gcc-compiler_pkg_postrm() {
+toolchain_pkg_postrm() {
 	# to make our lives easier (and saner), we do the fix_libtool stuff here.
 	# rather than checking SLOT's and trying in upgrade paths, we just see if
 	# the common libstdc++.la exists in the ${LIBPATH} of the gcc that we are
@@ -937,9 +877,6 @@ gcc-compiler_src_unpack() {
 			"${S}"/configure || die
 	fi
 }
-gcc-library_src_unpack() {
-	:
-}
 guess_patch_type_in_dir() {
 	[[ -n $(ls "$1"/*.bz2 2>/dev/null) ]] \
 		&& EPATCH_SUFFIX="patch.bz2" \
@@ -979,7 +916,7 @@ do_gcc_rename_java_bins() {
 			die "Failed to fixup file ${jfile} for rename to grmic"
 	done
 }
-gcc_src_unpack() {
+toolchain_src_unpack() {
 	export BRANDING_GCC_PKGVERSION="Gentoo ${GCC_PVR}"
 
 	[[ -z ${UCLIBC_VER} ]] && [[ ${CTARGET} == *-uclibc* ]] && die "Sorry, this version does not support uClibc"
@@ -1114,10 +1051,6 @@ gcc-multilib-configure() {
 		done
 	done
 	[[ -n ${list} ]] && confgcc+=" --with-multilib-list=${list:1}"
-}
-
-gcc-library-configure() {
-	gcc-multilib-configure
 }
 
 gcc-compiler-configure() {
@@ -1569,34 +1502,6 @@ gcc_do_make() {
 	popd
 }
 
-# This function will add ${GCC_CONFIG_VER} to the names of all shared libraries in the
-# directory specified to avoid filename collisions between multiple slotted
-# non-versioned gcc targets. If no directory is specified, it is assumed that
-# you want -all- shared objects to have ${GCC_CONFIG_VER} added. Example
-#
-#	add_version_to_shared ${D}/usr/$(get_libdir)
-#
-# Travis Tilley <lv@gentoo.org> (05 Sep 2004)
-#
-add_version_to_shared() {
-	local sharedlib sharedlibdir
-	[[ -z $1 ]] \
-		&& sharedlibdir=${D} \
-		|| sharedlibdir=$1
-
-	for sharedlib in $(find ${sharedlibdir} -name *.so.*) ; do
-		if [[ ! -L ${sharedlib} ]] ; then
-			einfo "Renaming `basename "${sharedlib}"` to `basename "${sharedlib/.so*/}-${GCC_CONFIG_VER}.so.${sharedlib/*.so./}"`"
-			mv "${sharedlib}" "${sharedlib/.so*/}-${GCC_CONFIG_VER}.so.${sharedlib/*.so./}" \
-				|| die
-			pushd `dirname "${sharedlib}"` > /dev/null || die
-			ln -sf "`basename "${sharedlib/.so*/}-${GCC_CONFIG_VER}.so.${sharedlib/*.so./}"`" \
-				"`basename "${sharedlib}"`" || die
-			popd > /dev/null || die
-		fi
-	done
-}
-
 # This is mostly a stub function to be overwritten in an ebuild
 gcc_do_filter_flags() {
 	strip-flags
@@ -1680,7 +1585,7 @@ gcc_do_filter_flags() {
 	export GCJFLAGS=${GCJFLAGS:-${CFLAGS}}
 }
 
-gcc_src_compile() {
+toolchain_src_compile() {
 	gcc_do_filter_flags
 	einfo "CFLAGS=\"${CFLAGS}\""
 	einfo "CXXFLAGS=\"${CXXFLAGS}\""
@@ -1719,51 +1624,12 @@ gcc_src_compile() {
 	popd > /dev/null
 }
 
-gcc_src_test() {
+toolchain_src_test() {
 	cd "${WORKDIR}"/build
 	emake -k check || ewarn "check failed and that sucks :("
 }
 
-gcc-library_src_install() {
-	# Do the 'make install' from the build directory
-	cd "${WORKDIR}"/build
-	S=${WORKDIR}/build \
-	emake -j1 \
-		DESTDIR="${D}" \
-		prefix=${PREFIX} \
-		bindir=${BINPATH} \
-		includedir=${LIBPATH}/include \
-		datadir=${DATAPATH} \
-		mandir=${DATAPATH}/man \
-		infodir=${DATAPATH}/info \
-		LIBPATH="${LIBPATH}" \
-		${GCC_INSTALL_TARGET} || die
-
-	if [[ ${GCC_LIB_COMPAT_ONLY} == "true" ]] ; then
-		rm -rf "${D}"${INCLUDEPATH}
-		rm -rf "${D}"${DATAPATH}
-		pushd "${D}"${LIBPATH}/
-		rm *.a *.la *.so
-		popd
-	fi
-
-	if [[ -n ${GCC_LIB_USE_SUBDIR} ]] ; then
-		mkdir -p "${WORKDIR}"/${GCC_LIB_USE_SUBDIR}/
-		mv "${D}"${LIBPATH}/* "${WORKDIR}"/${GCC_LIB_USE_SUBDIR}/
-		mv "${WORKDIR}"/${GCC_LIB_USE_SUBDIR}/ "${D}"${LIBPATH}
-
-		dodir /etc/env.d
-		echo "LDPATH=\"${LIBPATH}/${GCC_LIB_USE_SUBDIR}/\"" >> "${D}"/etc/env.d/99${PN}
-	fi
-
-	if [[ ${GCC_VAR_TYPE} == "non-versioned" ]] ; then
-		# if we're not using versioned directories, we need to use versioned
-		# filenames.
-		add_version_to_shared
-	fi
-}
-
-gcc-compiler_src_install() {
+toolchain_src_install() {
 	local x=
 
 	cd "${WORKDIR}"/build
@@ -2528,3 +2394,9 @@ is_treelang() {
 	#use treelang
 	return 0
 }
+
+# should kill these off once all the ebuilds are migrated
+gcc_pkg_setup() { toolchain_pkg_setup ; }
+gcc_src_unpack() { toolchain_src_unpack ; }
+gcc_src_compile() { toolchain_src_compile ; }
+gcc_src_test() { toolchain_src_test ; }
