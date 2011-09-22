@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/pianobar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pianobar/ChangeLog,v 1.5 2011/07/10 09:16:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pianobar/ChangeLog,v 1.6 2011/09/22 05:57:02 radhermit Exp $
+
+*pianobar-2011.07.09-r1 (22 Sep 2011)
+
+  22 Sep 2011; Tim Harder <radhermit@gentoo.org> -pianobar-2011.07.09.ebuild,
+  +pianobar-2011.07.09-r1.ebuild,
+  +files/pianobar-2011.07.09-protocol-bump.patch:
+  Revision bump to update protocol version. Remove old.
 
   10 Jul 2011; Tim Harder <radhermit@gentoo.org> pianobar-2011.07.09.ebuild:
   Explicitly inherit the eutils eclass.
