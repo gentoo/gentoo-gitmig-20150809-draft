@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.138 2011/07/09 14:47:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.139 2011/09/22 17:10:15 pacho Exp $
+
+*banshee-2.2.0 (22 Sep 2011)
+
+  22 Sep 2011; Pacho Ramos <pacho@gentoo.org> +banshee-2.2.0.ebuild:
+  Version bump.
 
   09 Jul 2011; Pacho Ramos <pacho@gentoo.org>
   +files/banshee-2.0.1-audiocd-metadata.patch,
