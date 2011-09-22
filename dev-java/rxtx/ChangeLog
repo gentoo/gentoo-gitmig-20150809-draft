@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/rxtx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rxtx/ChangeLog,v 1.17 2011/09/22 07:17:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rxtx/ChangeLog,v 1.18 2011/09/22 07:33:53 radhermit Exp $
+
+  22 Sep 2011; Tim Harder <radhermit@gentoo.org>
+  files/rxtx-2.2_pre2-add-ttyACM.patch:
+  Use correct patch.
 
   22 Sep 2011; Tim Harder <radhermit@gentoo.org> rxtx-2.1.7.2-r2.ebuild,
   rxtx-2.1.7.2-r3.ebuild:

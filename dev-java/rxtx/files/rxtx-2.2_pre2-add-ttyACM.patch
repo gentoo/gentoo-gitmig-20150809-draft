@@ -1,21 +1,10 @@
---- rxtx-2.2pre2/CNI/RXTXCommDriver.java.orig	2010-02-12 09:13:00.032700879 -0800
-+++ rxtx-2.2pre2/CNI/RXTXCommDriver.java	2010-02-12 09:13:57.504441037 -0800
-@@ -556,8 +556,10 @@
+--- rxtx-2.2pre2/src/gnu/io/RXTXCommDriver.java.orig
++++ rxtx-2.2pre2/src/gnu/io/RXTXCommDriver.java
+@@ -574,6 +574,7 @@
  					if(osName.equals("Linux"))
  					{
  						String[] Temp = {
 +						"ttyACM", // linux USB modems
  						"ttyS", // linux Serial Ports
- 						"ttySA" // for the IPAQs
-+						"ttyUSB", //linux USB serial converters
- 						};
- 						CandidatePortPrefixes=Temp;
- 					}
-@@ -573,6 +575,7 @@
- 						"ttyircomm", // linux IrCommdevices (IrDA serial emu)
- 						"ttycosa0c", // linux COSA/SRP synchronous serial card
- 						"ttycosa1c", // linux COSA/SRP synchronous serial card
-+						"ttyACM", // linux USB modems
- 						"ttyC", // linux cyclades cards
- 						"ttyCH",// linux Chase Research AT/PCI-Fast serial card
- 						"ttyD", // linux Digiboard serial card
+ 						"ttySA", // for the IPAQs
+ 						"ttyUSB", // for USB frobs
