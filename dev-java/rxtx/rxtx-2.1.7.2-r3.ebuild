@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rxtx/rxtx-2.1.7.2-r3.ebuild,v 1.3 2010/07/07 14:40:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rxtx/rxtx-2.1.7.2-r3.ebuild,v 1.4 2011/09/22 07:17:57 radhermit Exp $
 
 inherit flag-o-matic toolchain-funcs versionator autotools java-pkg-2
 
@@ -9,7 +9,7 @@ MY_PV="$(replace_version_separator 3 r ${MY_PV})"
 MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="Native lib providing serial and parallel communication for Java"
-HOMEPAGE="http://rxtx.org/"
+HOMEPAGE="http://rxtx.qbang.org/"
 SRC_URI="ftp://ftp.qbang.org/pub/rxtx/${MY_P}.zip"
 
 LICENSE="LGPL-2"
