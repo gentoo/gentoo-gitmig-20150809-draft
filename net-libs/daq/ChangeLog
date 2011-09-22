@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/daq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/ChangeLog,v 1.12 2011/07/24 12:07:15 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/daq/ChangeLog,v 1.13 2011/09/22 17:45:57 patrick Exp $
+
+*daq-0.6.1 (22 Sep 2011)
+
+  22 Sep 2011; Patrick Lauer <patrick@gentoo.org> +daq-0.6.1.ebuild,
+  metadata.xml:
+  Bump for #380517
 
   24 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> daq-0.5.ebuild:
   Marked ~ppc/~ppc64 wrt #351551
