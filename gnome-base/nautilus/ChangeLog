@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.381 2011/08/15 12:26:09 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.382 2011/09/22 15:43:04 pacho Exp $
+
+  22 Sep 2011; Pacho Ramos <pacho@gentoo.org> nautilus-2.32.2.1-r1.ebuild,
+  nautilus-3.0.2.ebuild:
+  gnome-base/dconf is needed as RDEPEND to prevent connection problems as
+  reported in bug #375101 (by Christian Bönnhoff).
 
 *nautilus-3.0.2 (15 Aug 2011)
 

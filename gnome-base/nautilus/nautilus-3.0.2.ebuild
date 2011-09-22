@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-3.0.2.ebuild,v 1.1 2011/08/15 12:26:09 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-3.0.2.ebuild,v 1.2 2011/09/22 15:43:04 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -22,6 +22,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.28.0:2
 	>=dev-libs/libxml2-2.7.8:2
 	>=gnome-base/gnome-desktop-3.0.0:3
 
+	gnome-base/dconf
 	gnome-base/gsettings-desktop-schemas
 	>=x11-libs/libnotify-0.7
 	x11-libs/libX11
