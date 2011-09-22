@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.7.2.6.ebuild,v 1.1 2011/09/14 13:10:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.7.2.6.ebuild,v 1.2 2011/09/22 02:09:05 vapier Exp $
 
 EAPI=4
-inherit multilib toolchain-funcs versionator
+inherit multilib toolchain-funcs versionator eutils autotools
 
 MY_P=ImageMagick-$(replace_version_separator 3 '-')
 
@@ -62,6 +62,11 @@ S=${WORKDIR}/${MY_P}
 RESTRICT="perl? ( userpriv )"
 
 DOCS=( AUTHORS.txt ChangeLog NEWS.txt README.txt )
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-lfs.patch
+	eautoreconf
+}
 
 src_configure() {
 	local depth=16
