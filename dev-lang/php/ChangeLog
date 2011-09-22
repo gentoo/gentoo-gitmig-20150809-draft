@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.514 2011/09/16 07:06:16 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.515 2011/09/22 17:35:18 olemarkus Exp $
+
+  22 Sep 2011; Ole Markus With <olemarkus@gentoo.org> php-5.3.8.ebuild:
+  Enabling xml USE flag by default
 
   16 Sep 2011; Ole Markus With <olemarkus@gentoo.org> -php-5.3.6.ebuild,
   -php-5.3.6-r1.ebuild, -php-5.3.7_rc5.ebuild, -php-5.4.0_alpha3.ebuild:
