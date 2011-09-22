@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/lokalize-4.7.0.ebuild,v 1.2 2011/08/07 18:53:08 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/lokalize-4.7.0.ebuild,v 1.3 2011/09/22 21:50:09 dilfridge Exp $
 
 EAPI=3
 
@@ -16,6 +16,7 @@ IUSE="debug"
 # Althrought they are purely runtime, its too useless without them
 DEPEND="
 	>=app-text/hunspell-1.2.8
+	dev-libs/soprano
 	>=x11-libs/qt-sql-4.5.0:4[sqlite]
 "
 RDEPEND="${DEPEND}
