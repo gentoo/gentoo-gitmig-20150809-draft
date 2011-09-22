@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/reduce
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/reduce/ChangeLog,v 1.2 2011/03/29 21:02:40 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/reduce/ChangeLog,v 1.3 2011/09/22 11:15:33 grozin Exp $
+
+*reduce-20110414 (22 Sep 2011)
+
+  22 Sep 2011; Andrey Grozin <grozin@gentoo.org> +reduce-20110414.ebuild:
+  Version bump
 
 *reduce-20101007-r1 (29 Mar 2011)
 
