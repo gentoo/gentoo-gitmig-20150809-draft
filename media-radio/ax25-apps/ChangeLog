@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/ax25-apps
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ChangeLog,v 1.16 2011/01/08 17:01:47 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ChangeLog,v 1.17 2011/09/22 12:30:19 scarabeus Exp $
+
+  22 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  ax25-apps-0.0.8_rc2.ebuild:
+  Do not use the blank file in the filesdir.
 
   08 Jan 2011; Thomas Beierlein <tomjbe@gentoo.org> ax25-apps-0.0.6-r1.ebuild,
   ax25-apps-0.0.8_rc2.ebuild:

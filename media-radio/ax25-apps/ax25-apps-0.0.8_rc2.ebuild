@@ -1,11 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ax25-apps-0.0.8_rc2.ebuild,v 1.2 2011/01/08 17:01:47 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ax25-apps-0.0.8_rc2.ebuild,v 1.3 2011/09/22 12:30:19 scarabeus Exp $
 
-EAPI=2
-inherit versionator
+EAPI=4
 
-MY_P=${PN}-$(replace_version_separator 3 '-')
+MY_P=${P/_/-}
 
 DESCRIPTION="Basic AX.25 (Amateur Radio) user tools, additional daemons"
 HOMEPAGE="http://www.linux-ax25.org"
@@ -23,18 +22,18 @@ RDEPEND=${DEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_install() {
-	emake DESTDIR="${D}" install installconf || die
+	default
 
 	newinitd "${FILESDIR}"/ax25ipd.rc ax25ipd
 	newinitd "${FILESDIR}"/ax25mond.rc ax25mond
 	newinitd "${FILESDIR}"/ax25rtd.rc ax25rtd
 
-	rm -rf "${D}"/usr/share/doc/ax25-apps
+	rm -rf "${ED}"/usr/share/doc/ax25-apps
 
 	dodoc AUTHORS ChangeLog NEWS README ax25ipd/README.ax25ipd \
 		ax25rtd/README.ax25rtd ax25ipd/HISTORY.ax25ipd ax25rtd/TODO.ax25rtd
 
-	insinto /var/lib/ax25/ax25rtd
-	newins "${FILESDIR}"/ax25rtd.blank ax25_route
-	newins "${FILESDIR}"/ax25rtd.blank ip_route
+	dodir /var/lib/ax25/ax25rtd
+	touch "${ED}"/var/lib/ax25/ax25rtd/ax25_route
+	touch "${ED}"/var/lib/ax25/ax25rtd/ip_route
 }
