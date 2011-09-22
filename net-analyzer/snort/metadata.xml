@@ -127,5 +127,14 @@
 			connection tearing for inline deployments. Replaces flexresp and 
 			flexresp2.
 		</flag>
+		<flag name='paf'>
+			Enables support for Protocol Aware Flushing. This allows Snort to
+			statefully scan a stream and reassemble a complete protocol data
+			unit regardless of segmentation.
+		</flag>
+		<flag name='large-pcap-64bit'>
+			Allows Snort to read pcap files that are larger than 2 GB. ONLY
+			VALID FOR 64bit SYSTEMS!
+		</flag>
 	</use>
 </pkgmetadata>
