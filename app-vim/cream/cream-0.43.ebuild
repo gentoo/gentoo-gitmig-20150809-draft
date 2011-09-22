@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.43.ebuild,v 1.1 2011/04/25 16:50:49 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.43.ebuild,v 1.2 2011/09/22 21:34:47 radhermit Exp $
 
 inherit vim-plugin eutils fdo-mime
 
@@ -107,10 +107,16 @@ src_install() {
 	insinto /usr/share/vim/cream
 	doins *.vim creamrc
 	local dir
-	for dir in addons bitmaps filetypes lang spelldicts ; do
+	for dir in addons bitmaps filetypes lang ; do
 		insinto /usr/share/vim/cream/${dir}
 		doins ${dir}/*
 	done
+
+	if [[ -n ${LINGUAS} ]] ; then
+		insinto /usr/share/vim/cream/spelldicts
+		doins spelldicts/*
+	fi
+
 	insinto /usr/share/vim/vimfiles/doc
 	doins help/*.txt
 

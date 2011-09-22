@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/cream
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.51 2011/07/18 22:56:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.52 2011/09/22 21:34:47 radhermit Exp $
+
+  22 Sep 2011; Tim Harder <radhermit@gentoo.org> cream-0.41-r2.ebuild,
+  cream-0.43.ebuild:
+  Only install dictionaries when the proper LINGUAS is set (bug #299758 by
+  Diego Elio Pettenò).
 
   18 Jul 2011; Tim Harder <radhermit@gentoo.org> -cream-0.32.ebuild,
   -cream-0.34.ebuild:
