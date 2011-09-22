@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.119 2011/08/31 13:11:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.120 2011/09/22 18:42:10 pacho Exp $
+
+*webkit-gtk-1.4.3-r300 (22 Sep 2011)
+*webkit-gtk-1.4.3-r200 (22 Sep 2011)
+
+  22 Sep 2011; Pacho Ramos <pacho@gentoo.org> +webkit-gtk-1.4.3-r200.ebuild,
+  +webkit-gtk-1.4.3-r300.ebuild, +files/webkit-gtk-1.4.3-underlinking.patch:
+  Version bump and fix underlinking problems in gtk3 version (bug #371751).
 
   31 Aug 2011; Pacho Ramos <pacho@gentoo.org> webkit-gtk-1.2.7.ebuild:
   Parallel build fails for 1.2.x, seems fixed in 1.4.x (bug #343249).

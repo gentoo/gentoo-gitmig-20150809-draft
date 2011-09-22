@@ -1,0 +1,90 @@
+Index: /trunk/ChangeLog
+===================================================================
+--- /trunk/ChangeLog	(revision 82570)
++++ /trunk/ChangeLog	(revision 82599)
+@@ -1,2 +1,16 @@
++2011-03-31  Xan Lopez  <xlopez@igalia.com>
++
++        Reviewed by Martin Robinson.
++
++        [GTK] Link explicitly with XRender on Linux/Unix
++        https://bugs.webkit.org/show_bug.cgi?id=57558
++
++        Some linkers, like GNU Gold, require explicit linkage of all the
++        libraries used instead of relying on our dependencies to bring
++        them in. In this case, the build fails because we use XRender in
++        the plugin code but don't link directly to it.
++
++        * configure.ac: check for XRender on UNIX.
++
+ 2011-03-31  Vamshikrishna.Yellenki  <vamshi@motorola.com> and Alejandro G. Castro  <alex@igalia.com>
+ 
+Index: /trunk/Source/WebKit/gtk/GNUmakefile.am
+===================================================================
+--- /trunk/Source/WebKit/gtk/GNUmakefile.am	(revision 80561)
++++ /trunk/Source/WebKit/gtk/GNUmakefile.am	(revision 82599)
+@@ -103,4 +103,5 @@
+ 	$(SQLITE3_LIBS) \
+ 	$(UNICODE_LIBS) \
++	$(XRENDER_LIBS) \
+ 	$(XT_LIBS) \
+ 	$(WINMM_LIBS) \
+Index: /trunk/Source/WebKit/gtk/ChangeLog
+===================================================================
+--- /trunk/Source/WebKit/gtk/ChangeLog	(revision 82582)
++++ /trunk/Source/WebKit/gtk/ChangeLog	(revision 82599)
+@@ -1,2 +1,11 @@
++2011-03-31  Xan Lopez  <xlopez@igalia.com>
++
++        Reviewed by Martin Robinson.
++
++        [GTK] Link explicitly with XRender on Linux/Unix
++        https://bugs.webkit.org/show_bug.cgi?id=57558
++
++        * GNUmakefile.am: add XRender LIBS.
++
+ 2011-03-31  Evan Martin  <evan@chromium.org>
+ 
+Index: /trunk/Source/WebCore/ChangeLog
+===================================================================
+--- /trunk/Source/WebCore/ChangeLog	(revision 82597)
++++ /trunk/Source/WebCore/ChangeLog	(revision 82599)
+@@ -1,2 +1,11 @@
++2011-03-31  Xan Lopez  <xlopez@igalia.com>
++
++        Reviewed by Martin Robinson.
++
++        [GTK] Link explicitly with XRender on Linux/Unix
++        https://bugs.webkit.org/show_bug.cgi?id=57558
++
++        * GNUmakefile.am: add XRender CFLAGS.
++
+ 2011-03-31  Eric Seidel  <eric@webkit.org>
+ 
+Index: /trunk/Source/WebCore/GNUmakefile.am
+===================================================================
+--- /trunk/Source/WebCore/GNUmakefile.am	(revision 82580)
++++ /trunk/Source/WebCore/GNUmakefile.am	(revision 82599)
+@@ -5111,4 +5111,5 @@
+ 	$(SQLITE3_CFLAGS) \
+ 	$(UNICODE_CFLAGS) \
++	$(XRENDER_CFLAGS) \
+ 	$(XT_CFLAGS)
+ 
+Index: /trunk/configure.ac
+===================================================================
+--- /trunk/configure.ac	(revision 81641)
++++ /trunk/configure.ac	(revision 82599)
+@@ -937,4 +937,12 @@
+     AC_SUBST([GEOCLUE_CFLAGS])
+     AC_SUBST([GEOCLUE_LIBS])
++fi
++
++# check for XRender under Linux/Unix. Some linkers require explicit
++# linkage (like GNU Gold), so we cannot rely on GTK+ pulling XRender
++if test "$os_win32" = "no"; then
++   PKG_CHECK_MODULES([XRENDER], [xrender])
++   AC_SUBST([XRENDER_CFLAGS])
++   AC_SUBST([XRENDER_LIBS])
+ fi
+ 
