@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/ngircd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.54 2011/09/12 18:20:07 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.55 2011/09/22 11:29:53 xarthisius Exp $
+
+  22 Sep 2011; Kacper Kowalik <xarthisius@gentoo.org> ngircd-0.12.1.ebuild,
+  ngircd-13.ebuild, ngircd-17.1.ebuild, ngircd-18.ebuild:
+  ppc keywords dropped wrt #307437
 
   12 Sep 2011; Thomas Kahle <tomka@gentoo.org> ngircd-17.1.ebuild:
   x86 stable per bug 307437
