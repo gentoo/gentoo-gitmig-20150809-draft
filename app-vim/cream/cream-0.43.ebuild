@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.43.ebuild,v 1.2 2011/09/22 21:34:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/cream-0.43.ebuild,v 1.3 2011/09/22 21:52:35 radhermit Exp $
+
+EAPI=4
 
 inherit vim-plugin eutils fdo-mime
 
@@ -61,6 +63,25 @@ prefix_help_file() {
 		|| die "Failed to rename \"${helpfile}\""
 }
 
+pkg_setup() {
+	elog "Cream comes with several dictionaries for spell checking. In"
+	elog "all cases, at least a small English dictionary will be installed."
+	elog
+	elog "To specify which optional dictionaries are installed, set the"
+	elog "LINGUAS variable in /etc/make.conf. For example, to install full"
+	elog "English and French dictionaries, use:"
+	elog "    LINGUAS=\"en fr\""
+	elog
+	elog "Available dictionaries are:"
+	for dict in "English en" "French fr" "German de" "Spanish es" ; do
+		# portage bug: shouldn't get a QA notice for linguas stuff...
+		elog "    ${dict% *} \t(${dict#* }) $( ( \
+			use linguas_${dict#* } &>/dev/null && \
+			echo '(Will be installed)' ) || echo '(Will not be installed)' )"
+	done
+	elog
+}
+
 src_unpack() {
 	mkdir -p "${S}"/spelldicts
 
@@ -75,14 +96,16 @@ src_unpack() {
 			unpack ${my_a}
 		fi
 	done
+}
 
+src_prepare() {
 	# change installation path + fix the wrapper command (disable plugins)
-	cd "${S}"
-	cat >cream <<EOF
-#!/bin/sh
-gvim --servername CREAM --noplugin -U NONE -u "\\\$VIM/cream/creamrc" "\$@"
-EOF
-	sed -i "/let \$CREAM/s:VIMRUNTIME:VIM:" creamrc || die "sed #1 broke"
+	cat > cream <<-EOF
+	#!/bin/sh
+	gvim --servername CREAM --noplugin -U NONE -u "\\\$VIM/cream/creamrc" "\$@"
+	EOF
+
+	sed -i "/let \$CREAM/s:VIMRUNTIME:VIM:" creamrc || die
 
 	# make taglist ebuild aware, bug #66052
 	epatch "${FILESDIR}"/${PN}-0.30-ebuilds.patch
@@ -125,27 +148,6 @@ src_install() {
 	dohtml docs-html/*
 	# html doc may be opened from Cream GUI
 	dosym ../../doc/${PF}/html /usr/share/vim/cream/docs-html
-}
-
-pkg_setup() {
-	elog "Cream comes with several dictionaries for spell checking. In"
-	elog "all cases, at least a small English dictionary will be installed."
-	elog
-	elog "To specify which optional dictionaries are installed, set the"
-	elog "LINGUAS variable in /etc/make.conf. For example, to install full"
-	elog "English and French dictionaries, use:"
-	elog "    LINGUAS=\"en fr\""
-	elog
-	elog "Available dictionaries are:"
-	for dict in "English en" "French fr" "German de" "Spanish es" ; do
-		# portage bug: shouldn't get a QA notice for linguas stuff...
-		elog "    ${dict% *} \t(${dict#* }) $( ( \
-			use linguas_${dict#* } &>/dev/null && \
-			echo '(Will be installed)' ) || echo '(Will not be installed)' )"
-	done
-	elog
-	# give the user time to cancel if necessary
-	epause
 }
 
 pkg_postinst() {
