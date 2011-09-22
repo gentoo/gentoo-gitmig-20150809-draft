@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/winetricks-99999999.ebuild,v 1.1 2011/07/05 21:29:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/winetricks-99999999.ebuild,v 1.2 2011/09/22 12:48:28 scarabeus Exp $
 
-EAPI="2"
+EAPI=4
 
 if [[ ${PV} == "99999999" ]] ; then
 	ESVN_REPO_URI="http://winetricks.googlecode.com/svn/trunk"
@@ -25,6 +25,8 @@ RDEPEND="app-emulation/wine
 	gtk? ( gnome-extra/zenity )
 	kde? ( kde-base/kdialog )"
 
+S="${WORKDIR}"
+
 src_unpack() {
 	if [[ ${PV} == "99999999" ]] ; then
 		subversion_src_unpack
@@ -37,6 +39,6 @@ src_unpack() {
 
 src_install() {
 	cd src
-	dobin ${PN} || die
-	doman ${PN}.1 || die
+	dobin ${PN}
+	doman ${PN}.1
 }
