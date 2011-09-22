@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/markdown-mode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/markdown-mode/ChangeLog,v 1.2 2011/09/21 22:58:41 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/markdown-mode/ChangeLog,v 1.3 2011/09/22 00:15:17 tomka Exp $
+
+  22 Sep 2011; Thomas Kahle <tomka@gentoo.org> markdown-mode-1.8.1.ebuild:
+  Added ~x86 keyword
 
   21 Sep 2011; Naohiro Aota <naota@gentoo.org> markdown-mode-1.8.1.ebuild:
   Use git instead of unstable SRC_URI
