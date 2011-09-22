@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.151 2011/09/22 14:21:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.152 2011/09/22 14:44:39 flameeyes Exp $
+
+*libgcrypt-1.5.0-r1 (22 Sep 2011)
+
+  22 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +libgcrypt-1.5.0-r1.ebuild, +files/libgcrypt-multilib-syspath.patch:
+  Revbump: also drop -L flags from libgcrypt-config as done for libgpg-error;
+  avoid forcing PIC code for static libraries (if they are even enabled); use
+  EAPI=4 features; remove .la files if the static libraries are not installed.
 
   22 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   -libgcrypt-1.5.0_beta1-r1.ebuild, -libgcrypt-1.5.0_beta1-r2.ebuild,
