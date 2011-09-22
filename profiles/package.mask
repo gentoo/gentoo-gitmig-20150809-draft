@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13069 2011/09/21 09:53:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13070 2011/09/22 07:20:45 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -683,10 +683,6 @@ sci-chemistry/webmo
 # emesene-2 is on early stage of development and very 
 # unstable
 =net-im/emesene-2*
-
-# Markos Chandras <hwoarang@gentoo.org> (26 May 2011)
-# Masked for testing. Bug #308449
-=net-dialup/freeradius-2.1.10
 
 # Michael Sterrett <mr_bones_@gentoo.org> (25 May 2011)
 # Needs an old version of bison that isn't in the tree anymore.
