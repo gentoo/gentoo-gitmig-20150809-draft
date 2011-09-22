@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.19 2011/09/22 11:00:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.20 2011/09/22 12:39:04 scarabeus Exp $
 
 EAPI=3
 
@@ -98,9 +98,8 @@ unset ADDONS_URI
 unset EXT_URI
 unset ADDONS_SRC
 
-IUSE="binfilter +branding custom-cflags dbus debug eds gnome graphite
-gstreamer gtk jemalloc kde ldap mysql nsplugin odk opengl svg templates test
-+vba webdav"
+IUSE="binfilter +branding dbus debug eds gnome +graphite gstreamer gtk +jemalloc
+kde ldap mysql nsplugin odk opengl svg templates test +vba webdav"
 LICENSE="LGPL-3"
 SLOT="0"
 [[ ${PV} == *9999* ]] || KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
@@ -244,15 +243,6 @@ pkg_setup() {
 		die "Too old gcc found."
 	fi
 
-	if use custom-cflags; then
-		ewarn "You are using custom CFLAGS, which is NOT supported and can cause"
-		ewarn "all sorts of build and runtime errors."
-		ewarn
-		ewarn "Before reporting a bug, please make sure you rebuild and try with"
-		ewarn "basic CFLAGS, otherwise the bug will not be accepted."
-		ewarn
-	fi
-
 	if ! use gtk; then
 		ewarn "If you want the LibreOffice systray quickstarter to work"
 		ewarn "activate the 'gtk' use flag."
@@ -319,13 +309,7 @@ src_unpack() {
 src_prepare() {
 	# optimization flags
 	export ARCH_FLAGS="${CXXFLAGS}"
-	use debug || export LINKFLAGSOPTIMIZE="${LDFLAGS}"
-
-	# compiler flags
-	use custom-cflags || strip-flags
-	use debug || filter-flags "-g*"
-	# silent miscompiles; LO/OOo adds -O2/1/0 where appropriate
-	filter-flags "-O*"
+	export LINKFLAGSOPTIMIZE="${LDFLAGS}"
 
 	base_src_prepare
 	eautoreconf
@@ -498,9 +482,6 @@ src_install() {
 	# Fix bash completion placement
 	newbashcomp "${ED}"/etc/bash_completion.d/libreoffice.sh ${PN} || die
 	rm -rf "${ED}"/etc/
-
-	# hack fix the gdb printers upstream!
-	rm -rf "${ED}"/var/
 
 	# symlink the plugin to system location
 	if use nsplugin; then
