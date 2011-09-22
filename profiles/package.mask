@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13070 2011/09/22 07:20:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13071 2011/09/22 21:11:10 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (22 Sep 2011)
+# Doesn't work and upstream has gone away.
+# Masked for removal on 20111022
+# See bug #382831
+games-action/dungeon
 
 # Markos Chandras <hwoarang@gentoo.org> (21 Sep 2011)
 # Masking beta releases
