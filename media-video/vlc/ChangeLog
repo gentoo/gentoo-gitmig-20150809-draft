@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.741 2011/09/21 15:52:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.742 2011/09/22 15:29:42 aballier Exp $
+
+  22 Sep 2011; Alexis Ballier <aballier@gentoo.org> vlc-1.1.11.ebuild,
+  vlc-1.1.9999.ebuild, vlc-9999.ebuild:
+  use minizip from zlib when available: with a or dep for 1.1 and always use it
+  for 1.2, bug #383351
 
   21 Sep 2011; Alexis Ballier <aballier@gentoo.org> vlc-1.1.11.ebuild:
   fix zlib dep, bug #383351; for now we will force to use the older version

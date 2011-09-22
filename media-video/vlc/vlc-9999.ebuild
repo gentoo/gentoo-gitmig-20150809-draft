@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.148 2011/09/21 08:58:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.149 2011/09/22 15:29:42 aballier Exp $
 
 EAPI="4"
 
@@ -58,7 +58,7 @@ IUSE="a52 aac aalib alsa altivec atmo +audioqueue avahi +avcodec
 	win32codecs wingdi wma-fixed +X x264 +xcb xml xosd xv zvbi"
 
 RDEPEND="
-		sys-libs/zlib
+		>=sys-libs/zlib-1.2.5.1-r2[minizip]
 		a52? ( >=media-libs/a52dec-0.7.4-r3 )
 		aalib? ( media-libs/aalib )
 		aac? ( >=media-libs/faad2-2.6.1 )
