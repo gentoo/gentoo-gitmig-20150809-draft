@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.300 2011/09/22 20:37:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.301 2011/09/22 20:50:07 scarabeus Exp $
+
+  22 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +syslog-ng-3.2.4-r1.ebuild:
+  Add revision to actually propagate changes in the init scripts. This is QA
+  commit and if you want to revert it ask QA for permission first.
 
 *syslog-ng-3.2.4-r1 (22 Sep 2011)
 
