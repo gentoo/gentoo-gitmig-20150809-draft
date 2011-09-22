@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/rxtx
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rxtx/ChangeLog,v 1.15 2010/07/07 14:40:33 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rxtx/ChangeLog,v 1.16 2011/09/22 07:14:51 radhermit Exp $
+
+*rxtx-2.2_pre2 (22 Sep 2011)
+
+  22 Sep 2011; Tim Harder <radhermit@gentoo.org> +rxtx-2.2_pre2.ebuild,
+  +files/rxtx-2.2_pre2-add-ttyACM.patch:
+  Non-maintainer version bump (bug #277262). Update HOMEPAGE and bump to EAPI
+  4.
 
   07 Jul 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   rxtx-2.1.7.2-r3.ebuild:
