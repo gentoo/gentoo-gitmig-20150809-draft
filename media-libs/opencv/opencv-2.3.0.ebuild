@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.3.0.ebuild,v 1.2 2011/09/20 11:28:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.3.0.ebuild,v 1.3 2011/09/22 20:03:55 dilfridge Exp $
 
 EAPI=3
 
@@ -17,10 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}library/${MY_P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="cuda doc eigen examples ffmpeg gstreamer gtk ieee1394 ipp jpeg jpeg2k openexr opengl png python qt4 sse sse2 sse3 ssse3 test tiff v4l xine"
-
-# all tests fail, needs further investigation, bug 296681 - dilfridge
-RESTRICT=test
+IUSE="cuda doc eigen examples ffmpeg gstreamer gtk ieee1394 ipp jpeg jpeg2k openexr opengl png python qt4 sse sse2 sse3 ssse3 tiff v4l xine"
 
 RDEPEND="
 	app-arch/bzip2
@@ -96,7 +93,6 @@ src_configure() {
 		$(cmake-utils_use_build examples)
 		$(cmake-utils_use examples INSTALL_C_EXAMPLES)
 		$(cmake-utils_use_build python NEW_PYTHON_SUPPORT)
-		$(cmake-utils_use_build test TESTS)
 		$(cmake-utils_use_enable sse SSE)
 		$(cmake-utils_use_enable sse2 SSE2)
 		$(cmake-utils_use_enable sse3 SSE3)
@@ -160,9 +156,4 @@ src_configure() {
 	)
 
 	cmake-utils_src_configure
-}
-
-src_test() {
-	export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${CMAKE_BUILD_DIR}/lib"
-	cmake-utils_src_test
 }

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.46 2011/09/20 11:28:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.47 2011/09/22 20:03:55 dilfridge Exp $
+
+  22 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org> opencv-2.3.0.ebuild:
+  Tests subdirectory has been removed from distribution
 
   20 Sep 2011; Markos Chandras <hwoarang@gentoo.org> opencv-2.3.0.ebuild,
   +files/opencv-2.3.0-libpng15.patch:
