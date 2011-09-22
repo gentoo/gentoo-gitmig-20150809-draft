@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.219 2011/09/22 15:00:05 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.220 2011/09/22 20:06:53 chainsaw Exp $
+
+  22 Sep 2011; Tony Vroon <chainsaw@gentoo.org> audacious-plugins-3.0.3.ebuild,
+  metadata.xml:
+  That was indeed the core ebuild and not the plugins ebuild. My apologies, and
+  thanks to robbat2 for pointing it out.
 
 *audacious-plugins-3.0.3 (22 Sep 2011)
 

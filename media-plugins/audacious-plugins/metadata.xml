@@ -11,10 +11,8 @@
 		support</flag>
 	<flag name='bs2b'>Enable Bauer Bauer stereophonic-to-binaural
 		headphone filter</flag>
-	<flag name="chardet">Try to handle non-UTF8 chinese/japanese/korean ID3 tags</flag>
 	<flag name='cue'>Support CUE sheets using the libcue library</flag>
 	<flag name='fluidsynth'>Support FluidSynth as MIDI synth backend</flag>
-	<flag name='gtk3'>Build against GTK+ version 3 rather than version 2</flag>
 	<flag name='midi'>Build with amidi-plug (MIDI synth) support</flag>
 	<flag name='scrobbler'>Build with scrobbler/LastFM submission support</flag>
 	<flag name='sid'>Build with SID (Commodore 64 Audio) support</flag>
