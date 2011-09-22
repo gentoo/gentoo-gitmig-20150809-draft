@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.0.2.ebuild,v 1.1 2011/08/24 21:51:33 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/audacious-3.0.3.ebuild,v 1.1 2011/09/22 14:59:42 chainsaw Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://distfiles.atheme.org/${MY_P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
-IUSE="altivec chardet nls session sse2"
+IUSE="altivec chardet gtk3 nls session sse2"
 
 RDEPEND=">=dev-libs/dbus-glib-0.60
 	>=dev-libs/glib-2.16
@@ -22,8 +22,8 @@ RDEPEND=">=dev-libs/dbus-glib-0.60
 	>=dev-libs/libmowgli-0.9.50
 	dev-libs/libxml2
 	>=x11-libs/cairo-1.2.6
-	>=x11-libs/gtk+-2.14:2
 	>=x11-libs/pango-1.8.0
+	gtk3? ( x11-libs/gtk+:3 ) || ( >=x11-libs/gtk+-2.14:2 )
 	session? ( x11-libs/libSM )"
 
 DEPEND="${RDEPEND}
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 	chardet? ( app-i18n/libguess )
 	nls? ( dev-util/intltool )"
 
-PDEPEND=">=media-plugins/audacious-plugins-3.0.2"
+PDEPEND=">=media-plugins/audacious-plugins-3.0.3"
 
 src_configure() {
 	# D-Bus is a mandatory dependency, remote control,
@@ -43,13 +43,14 @@ src_configure() {
 		--enable-dbus \
 		$(use_enable altivec) \
 		$(use_enable chardet) \
+		$(use_enable gtk3) \
 		$(use_enable nls) \
 		$(use_enable session sm) \
 		$(use_enable sse2)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	default
 	dodoc AUTHORS NEWS README
 
 	# Gentoo_ice skin installation; bug #109772
