@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/task
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/task/ChangeLog,v 1.21 2011/09/19 05:59:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/task/ChangeLog,v 1.22 2011/09/22 06:27:48 radhermit Exp $
+
+*task-2.0.0_beta2 (22 Sep 2011)
+
+  22 Sep 2011; Tim Harder <radhermit@gentoo.org> +task-2.0.0_beta2.ebuild:
+  Version bump.
 
 *task-2.0.0_beta1 (19 Sep 2011)
 
