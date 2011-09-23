@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.38.ebuild,v 1.1 2011/09/19 13:06:30 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.38.ebuild,v 1.2 2011/09/23 20:59:40 swegener Exp $
 
 EAPI="4"
 inherit eutils linux-info linux-mod multilib autotools
@@ -71,7 +71,7 @@ pkg_setup()	{
 		fi
 		if ! (use xtables_addons_ipset4 || use xtables_addons_ipset6) &&
 			kernel_is -lt 2 6 35; then
-			die "${PN} with ipset requires kernel version >= 2.6.29"
+			die "${PN} with ipset requires kernel version >= 2.6.35"
 		fi
 		kernel_is -lt 2 6 29 && die "${PN} requires kernel version >= 2.6.29"
 		XA_check4internal_module tee "2 6 35" NETFILTER_XT_TARGET_TEE
