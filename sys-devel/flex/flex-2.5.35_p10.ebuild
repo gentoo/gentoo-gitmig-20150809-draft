@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.35_p10.ebuild,v 1.4 2011/09/06 18:59:45 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.35_p10.ebuild,v 1.5 2011/09/23 17:33:03 vapier Exp $
 
-EAPI=2
+EAPI="3"
 
 inherit eutils flag-o-matic autotools
 
