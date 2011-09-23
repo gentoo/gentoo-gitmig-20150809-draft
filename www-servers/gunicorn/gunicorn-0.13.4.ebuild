@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/gunicorn-0.13.2.ebuild,v 1.1 2011/09/22 18:35:00 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gunicorn/gunicorn-0.13.4.ebuild,v 1.1 2011/09/23 06:05:25 rafaelmartins Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
