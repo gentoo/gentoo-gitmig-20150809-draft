@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/luminance-hdr-2.1.0.ebuild,v 1.1 2011/08/26 10:42:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/luminance-hdr-2.1.0.ebuild,v 1.2 2011/09/23 23:32:01 radhermit Exp $
 
 EAPI="4"
 
@@ -48,6 +48,8 @@ src_prepare() {
 	if ! use openmp ; then
 		sed -i -e '/-fopenmp/d' project.pro || die
 	fi
+
+	epatch "${FILESDIR}"/${P}-libraw.patch
 }
 
 src_configure() {
