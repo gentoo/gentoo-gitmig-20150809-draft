@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.462 2011/07/17 15:58:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.463 2011/09/23 16:29:06 darkside Exp $
 
 # Keep them sorted
 
@@ -274,7 +274,7 @@ pcntl - Adds support for process creation functions
 pcre - Adds support for Perl Compatible Regular Expressions
 pda - Adds support for portable devices
 pdf - Adds general support for PDF (Portable Document Format), this replaces the pdflib and cpdflib flags
-perl - Adds support/bindings for the Perl language
+perl - Adds optional support/bindings for the Perl language
 php - Include support for the PHP language
 plasma - Build optional plasma widgets that require kde-base/libplasma
 plotutils - Add support for plotutils (library for 2-D vector graphics)
@@ -288,7 +288,7 @@ prefix - Defines if a Gentoo Prefix offset installation is used
 prelude - Adds support/bindings for the Prelude Intrusion Detection System
 profile - Adds support for software performance analysis (will likely vary from ebuild to ebuild)
 pulseaudio - Adds support for PulseAudio sound server
-python - Adds support/bindings for the Python language
+python - Adds optional support/bindings for the Python language
 qdbm - Adds support for the qdbm (Quick Database Manager) library
 qmail-spp - Adds support for qmail SMTP plugins
 qt4 - Adds support for the Qt GUI/Application Toolkit version 4.x
