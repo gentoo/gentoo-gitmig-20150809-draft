@@ -1,6 +1,14 @@
 # ChangeLog for app-text/libtextcat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libtextcat/ChangeLog,v 1.1 2011/08/09 14:32:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libtextcat/ChangeLog,v 1.2 2011/09/23 14:19:39 scarabeus Exp $
+
+*libtextcat-3.0.1 (23 Sep 2011)
+
+  23 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/2.2-catalan-shorttexts.patch, -libtextcat-2.2.ebuild,
+  -files/2.2-exportapi.patch, +libtextcat-3.0.1.ebuild,
+  -files/2.2-openoffice.patch:
+  Bump to latest release, includes the libreo fixes.
 
 *libtextcat-2.2 (09 Aug 2011)
 
