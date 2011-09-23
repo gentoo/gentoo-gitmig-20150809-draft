@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.17 2011/09/23 13:57:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.18 2011/09/23 13:57:28 mgorny Exp $
 
 # @ECLASS: git-2.eclass
 # @MAINTAINER:
@@ -290,8 +290,7 @@ git-2_initial_clone() {
 	EGIT_REPO_URI_SELECTED=""
 	for repo_uri in ${EGIT_REPO_URI}; do
 		debug-print "${FUNCNAME}: git clone ${EGIT_LOCAL_OPTIONS} \"${repo_uri}\" \"${EGIT_DIR}\""
-		git clone ${EGIT_LOCAL_OPTIONS} "${repo_uri}" "${EGIT_DIR}"
-		if [[ $? -eq 0 ]]; then
+		if git clone ${EGIT_LOCAL_OPTIONS} "${repo_uri}" "${EGIT_DIR}"; then
 			# global variable containing the repo_name we will be using
 			debug-print "${FUNCNAME}: EGIT_REPO_URI_SELECTED=\"${repo_uri}\""
 			EGIT_REPO_URI_SELECTED="${repo_uri}"
@@ -326,8 +325,7 @@ git-2_update_repo() {
 		git config remote.origin.url "${repo_uri}"
 
 		debug-print "${EGIT_UPDATE_CMD}"
-		${EGIT_UPDATE_CMD} > /dev/null
-		if [[ $? -eq 0 ]]; then
+		if ${EGIT_UPDATE_CMD} > /dev/null; then
 			# global variable containing the repo_name we will be using
 			debug-print "${FUNCNAME}: EGIT_REPO_URI_SELECTED=\"${repo_uri}\""
 			EGIT_REPO_URI_SELECTED="${repo_uri}"
