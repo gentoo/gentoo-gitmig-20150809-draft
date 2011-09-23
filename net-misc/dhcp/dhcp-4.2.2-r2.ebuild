@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.2.2-r2.ebuild,v 1.5 2011/09/22 19:38:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-4.2.2-r2.ebuild,v 1.6 2011/09/23 14:11:48 vapier Exp $
 
 EAPI="2"
 
@@ -193,7 +193,7 @@ src_install() {
 			dosbin contrib/ldap/dhcpd-conf-to-ldap || die
 		fi
 
-		newinitd "${FILESDIR}"/dhcpd.init3 dhcpd || die
+		newinitd "${FILESDIR}"/dhcpd.init4 dhcpd || die
 		newconfd "${FILESDIR}"/dhcpd.conf2 dhcpd || die
 		newinitd "${FILESDIR}"/dhcrelay.init2 dhcrelay || die
 		newconfd "${FILESDIR}"/dhcrelay.conf dhcrelay || die
