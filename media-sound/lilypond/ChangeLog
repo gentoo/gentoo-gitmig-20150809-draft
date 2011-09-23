@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.110 2011/09/21 15:24:23 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.111 2011/09/23 15:07:42 nativemad Exp $
+
+  23 Sep 2011; Andreas Schuerch <nativemad@gentoo.org> lilypond-2.12.3.ebuild:
+  x86 stable, thanks Joe Stroller. Bug 331181
 
   21 Sep 2011; Tony Vroon <chainsaw@gentoo.org> lilypond-2.12.3.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
