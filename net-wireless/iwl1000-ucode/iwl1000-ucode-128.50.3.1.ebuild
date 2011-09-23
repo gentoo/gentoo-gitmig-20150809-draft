@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl1000-ucode/iwl1000-ucode-128.50.3.1.ebuild,v 1.5 2011/09/23 06:54:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl1000-ucode/iwl1000-ucode-128.50.3.1.ebuild,v 1.6 2011/09/23 07:00:30 ulm Exp $
 
 EAPI=4
 MY_P="iwlwifi-1000-ucode-${PV}"
@@ -10,7 +10,7 @@ HOMEPAGE="http://intellinuxwireless.org/?p=iwlwifi"
 SRC_URI="http://intellinuxwireless.org/iwlwifi/downloads/${MY_P}.tgz"
 
 LICENSE="ipw3945"
-SLOT="0"
+SLOT="3"
 KEYWORDS=""
 IUSE=""
 
