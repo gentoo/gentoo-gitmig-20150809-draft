@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.0.3.ebuild,v 1.2 2011/09/22 20:06:53 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.0.3.ebuild,v 1.3 2011/09/23 08:22:56 chainsaw Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="aac adplug alsa aqua bs2b cdda cue ffmpeg flac fluidsynth gnome ipv6 jack
-lame libnotify libsamplerate lirc midi mms mp3 mtp nls oss pulseaudio scrobbler sdl sid sndfile sse2 vorbis wavpack"
+lame libnotify libsamplerate midi mms mp3 mtp nls oss pulseaudio scrobbler sid sndfile sse2 vorbis wavpack"
 
 RDEPEND="app-arch/unzip
 	>=dev-libs/dbus-glib-0.60
@@ -41,13 +41,11 @@ RDEPEND="app-arch/unzip
 	lame? ( media-sound/lame )
 	libnotify? ( x11-libs/libnotify )
 	libsamplerate? ( media-libs/libsamplerate )
-	lirc? ( app-misc/lirc )
 	mms? ( >=media-libs/libmms-0.3 )
 	mp3? ( >=media-sound/mpg123-1.12.1 )
 	mtp? ( media-libs/libmtp )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.3 )
 	scrobbler? ( net-misc/curl )
-	sdl? (  >=media-libs/libsdl-1.2.5 )
 	sid? ( >=media-libs/libsidplay-2.1.1-r2 )
 	sndfile? ( >=media-libs/libsndfile-1.0.17-r1 )
 	vorbis? ( >=media-libs/libvorbis-1.2.0
@@ -75,7 +73,6 @@ src_configure() {
 		$(use_enable adplug) \
 		$(use_enable aac) \
 		$(use_enable alsa) \
-		$(use_enable alsa bluetooth) \
 		$(use_enable alsa amidiplug-alsa) \
 		$(use_enable aqua coreaudio) \
 		$(use_enable aqua dockalbumart) \
@@ -92,7 +89,6 @@ src_configure() {
 		$(use_enable lame filewriter_mp3) \
 		$(use_enable libnotify notify) \
 		$(use_enable libsamplerate resample) \
-		$(use_enable lirc) \
 		$(use_enable mms) \
 		$(use_enable mp3) \
 		$(use_enable midi amidiplug) \
@@ -101,7 +97,6 @@ src_configure() {
 		$(use_enable oss) \
 		$(use_enable pulseaudio pulse) \
 		$(use_enable scrobbler) \
-		$(use_enable sdl paranormal) \
 		$(use_enable sid) \
 		$(use_enable sndfile) \
 		$(use_enable sse2) \
