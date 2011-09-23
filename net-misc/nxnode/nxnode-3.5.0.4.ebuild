@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.5.0.4.ebuild,v 1.3 2011/08/23 17:21:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.5.0.4.ebuild,v 1.4 2011/09/23 09:41:30 voyageur Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ KEYWORDS="-* amd64 x86"
 IUSE="rdesktop vnc"
 RESTRICT="strip"
 
-DEPEND="!<net-misc/nxserver-freeedition-3.0.0"
+DEPEND=""
 RDEPEND="=net-misc/nxclient-${MAJOR_PV}*[cups]
 	sys-process/lsof
 	x11-libs/libICE
