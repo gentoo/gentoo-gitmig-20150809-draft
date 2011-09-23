@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nxclient
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.94 2011/08/23 17:20:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.95 2011/09/23 09:47:17 voyageur Exp $
+
+  23 Sep 2011; Bernard Cafarelli <voyageur@gentoo.org>
+  -nxclient-3.4.0.5.ebuild, -nxclient-3.4.0.7.ebuild,
+  -nxclient-3.4.0.7-r1.ebuild, -nxclient-3.5.0.6.ebuild:
+  Drop 3.4.0 versions
 
   23 Aug 2011; Markos Chandras <hwoarang@gentoo.org> nxclient-3.5.0.7.ebuild:
   Stable on amd64 wrt bug #378345
