@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.9.1.ebuild,v 1.1 2011/09/22 17:39:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.9.1.ebuild,v 1.2 2011/09/23 15:04:08 mr_bones_ Exp $
 
 EAPI="2"
 inherit eutils autotools multilib
@@ -201,7 +201,7 @@ src_install() {
 	sed -i -e 's|^include reference.config|include /etc/snort/reference.config|g' \
 		"${D}etc/snort/snort.conf.distrib" || die
 
-	# Disable all rule files by default. 
+	# Disable all rule files by default.
 	sed -i -e 's|^include $RULE_PATH|# include $RULE_PATH|g' \
 		"${D}etc/snort/snort.conf.distrib" || die
 
