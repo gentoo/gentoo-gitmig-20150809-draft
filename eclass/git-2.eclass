@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.21 2011/09/23 13:58:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.22 2011/09/23 13:58:22 mgorny Exp $
 
 # @ECLASS: git-2.eclass
 # @MAINTAINER:
@@ -120,6 +120,7 @@ DEPEND="dev-vcs/git"
 # Default behaviour is to unpack ${A} content.
 
 # @FUNCTION: git-2_init_variables
+# @INTERNAL
 # @DESCRIPTION:
 # Internal function initializing all git variables.
 # We define it in function scope so user can define
@@ -160,6 +161,7 @@ git-2_init_variables() {
 }
 
 # @FUNCTION: git-2_submodules
+# @INTERNAL
 # @DESCRIPTION:
 # Internal function wrapping the submodule initialisation and update.
 git-2_submodules() {
@@ -186,6 +188,7 @@ git-2_submodules() {
 }
 
 # @FUNCTION: git-2_branch
+# @INTERNAL
 # @DESCRIPTION:
 # Internal function that changes branch for the repo based on EGIT_COMMIT and
 # EGIT_BRANCH variables.
@@ -210,6 +213,7 @@ git-2_branch() {
 }
 
 # @FUNCTION: git-2_gc
+# @INTERNAL
 # @DESCRIPTION:
 # Internal function running garbage collector on checked out tree.
 git-2_gc() {
@@ -229,6 +233,7 @@ git-2_gc() {
 }
 
 # @FUNCTION: git-2_prepare_storedir
+# @INTERNAL
 # @DESCRIPTION:
 # Internal function preparing directory where we are going to store SCM
 # repository.
@@ -265,6 +270,7 @@ git-2_prepare_storedir() {
 }
 
 # @FUNCTION: git-2_move_source
+# @INTERNAL
 # @DESCRIPTION:
 # Internal function moving sources from the EGIT_DIR to EGIT_SOURCEDIR dir.
 git-2_move_source() {
@@ -280,6 +286,7 @@ git-2_move_source() {
 }
 
 # @FUNCTION: git-2_initial_clone
+# @INTERNAL
 # @DESCRIPTION:
 # Internal function running initial clone on specified repo_uri.
 git-2_initial_clone() {
@@ -303,6 +310,7 @@ git-2_initial_clone() {
 }
 
 # @FUNCTION: git-2_update_repo
+# @INTERNAL
 # @DESCRIPTION:
 # Internal function running update command on specified repo_uri.
 git-2_update_repo() {
@@ -338,6 +346,7 @@ git-2_update_repo() {
 }
 
 # @FUNCTION: git-2_fetch
+# @INTERNAL
 # @DESCRIPTION:
 # Internal function fetching repository from EGIT_REPO_URI and storing it in
 # specified EGIT_STORE_DIR.
@@ -396,6 +405,7 @@ git-2_fetch() {
 }
 
 # @FUNCTION: git_bootstrap
+# @INTERNAL
 # @DESCRIPTION:
 # Internal function that runs bootstrap command on unpacked source.
 git-2_bootstrap() {
@@ -438,6 +448,7 @@ git-2_bootstrap() {
 }
 
 # @FUNCTION: git-2_migrate_repository
+# @INTERNAL
 # @DESCRIPTION:
 # Internal function migrating between bare and normal checkout repository.
 # This is based on usage of EGIT_SUBMODULES, at least until they
@@ -507,6 +518,7 @@ git-2_migrate_repository() {
 }
 
 # @FUNCTION: git-2_cleanup
+# @INTERNAL
 # @DESCRIPTION:
 # Internal function cleaning up all the global variables
 # that are not required after the unpack has been done.
