@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/opengl-apple
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opengl-apple/ChangeLog,v 1.5 2011/02/08 18:03:19 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opengl-apple/ChangeLog,v 1.6 2011/09/23 19:04:35 grobian Exp $
+
+  23 Sep 2011; Fabian Groffen <grobian@gentoo.org> opengl-apple-3.ebuild,
+  opengl-apple-4.ebuild:
+  Drop USE=doc since opengl-manpages no longer seem to exist, bug #384197
 
   27 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   opengl-apple-3.ebuild, opengl-apple-4.ebuild:

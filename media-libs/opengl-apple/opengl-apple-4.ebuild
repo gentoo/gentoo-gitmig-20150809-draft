@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opengl-apple/opengl-apple-4.ebuild,v 1.2 2010/09/27 15:53:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opengl-apple/opengl-apple-4.ebuild,v 1.3 2011/09/23 19:04:35 grobian Exp $
 
 EAPI="3"
 
@@ -11,10 +11,9 @@ HOMEPAGE="http://www.apple.com/"
 LICENSE="as-is"
 KEYWORDS="-* ~ppc-macos ~x64-macos ~x86-macos"
 SLOT=0
-IUSE="doc"
+IUSE=""
 
 DEPEND=">=app-admin/eselect-opengl-1.0.8-r1
-	doc? ( app-doc/opengl-manpages )
 	x11-proto/glproto"
 RDEPEND="${DEPEND}"
 
