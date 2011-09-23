@@ -1,6 +1,12 @@
 # ChangeLog for net-im/choqok
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/choqok/ChangeLog,v 1.18 2011/04/12 12:53:32 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/choqok/ChangeLog,v 1.19 2011/09/23 21:39:42 dilfridge Exp $
+
+*choqok-1.1-r1 (23 Sep 2011)
+
+  23 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org> +choqok-1.1-r1.ebuild,
+  +files/choqok-1.1-twitter.patch:
+  Fix twitter authentication, bug 383307
 
 *choqok-1.1 (12 Apr 2011)
 

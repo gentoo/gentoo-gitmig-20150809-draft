@@ -1,0 +1,30 @@
+commit 9053b699c33d998d3933a6c11e4ff624846620e5
+Author: Mehrdad Momeny <mehrdad.momeny@gmail.com>
+Date:   Sun Jul 24 11:30:49 2011 +0800
+
+    BUG:275185 Get user friends list bug fixed
+
+diff --git a/helperlibs/twitterapihelper/twitterapimicroblog.cpp b/helperlibs/twitterapihelper/twitterapimicroblog.cpp
+index 1efbb1f..1a87d61 100644
+--- a/helperlibs/twitterapihelper/twitterapimicroblog.cpp
++++ b/helperlibs/twitterapihelper/twitterapimicroblog.cpp
+@@ -681,14 +681,18 @@ void TwitterApiMicroBlog::requestFriendsScreenName(TwitterApiAccount* theAccount
+     TwitterApiAccount* account = qobject_cast<TwitterApiAccount*>(theAccount);
+     KUrl url = account->apiUrl();
+     url.addPath( QString("/statuses/friends.xml") );
++    KUrl tmpUrl(url);
+     url.addQueryItem( "cursor", d->friendsCursor );
++    QOAuth::ParamMap params;
++    params.insert("cursor", d->friendsCursor.toLatin1());
+ 
+     KIO::StoredTransferJob *job = KIO::storedGet( url, KIO::Reload, KIO::HideProgressInfo ) ;
+     if ( !job ) {
+         kDebug() << "Cannot create an http GET request!";
+         return;
+     }
+-    job->addMetaData("customHTTPHeader", "Authorization: " + authorizationHeader(account, url, QOAuth::GET));
++    job->addMetaData("customHTTPHeader", "Authorization: " + authorizationHeader(account, tmpUrl,
++                                                                                 QOAuth::GET, params));
+     mJobsAccount[job] = theAccount;
+     connect( job, SIGNAL( result( KJob* ) ), this, SLOT( slotRequestFriendsScreenName(KJob*) ) );
+     job->start();
