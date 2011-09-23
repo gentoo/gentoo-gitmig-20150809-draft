@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/pavucontrol
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/ChangeLog,v 1.31 2010/03/08 20:24:46 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/ChangeLog,v 1.32 2011/09/23 10:23:05 ford_prefect Exp $
+
+*pavucontrol-0.99.2 (23 Sep 2011)
+
+  23 Sep 2011; Arun Raghavan <ford_prefect@gentoo.org>
+  +pavucontrol-0.99.2.ebuild, metadata.xml:
+  Add pre-release build for 0.99.2 (1.0 RC2). Includes gtk3 support (exposed as
+  a USE flag), improved UI, and support for new features such as
+  per-source-output volumes and selecting passthrough formats.
 
   08 Mar 2010; Markus Meier <maekke@gentoo.org> pavucontrol-0.9.10.ebuild:
   x86 stable, bug #305917

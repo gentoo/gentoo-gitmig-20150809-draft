@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sound</herd>
+  <herd>sound</herd>
+  <maintainer>
+    <email>ford_prefect@gentoo.org</email>
+    <name>Arun Raghavan</name>
+  </maintainer>
+  <use>
+    <flag name="gtk3">
+	  Build against GTK+ 3 rather than 2 (which is the default).
+    </flag>
+  </use>
 </pkgmetadata>
