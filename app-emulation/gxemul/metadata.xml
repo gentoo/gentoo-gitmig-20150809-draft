@@ -4,6 +4,5 @@
 <maintainer>
   <email>maintainer-needed@gentoo.org</email>
 </maintainer>
-	<herd>no-herd</herd>
 <longdescription>Machine Emulator.  Supports emulation across several architectures.  Primarily for MIPS support, but other platform support coming soon.</longdescription>
 </pkgmetadata>
