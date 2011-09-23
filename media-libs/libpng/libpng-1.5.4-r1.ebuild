@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.5.4.ebuild,v 1.2 2011/09/17 17:52:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.5.4-r1.ebuild,v 1.1 2011/09/23 18:25:09 xarthisius Exp $
 
 EAPI=4
 
@@ -23,6 +23,7 @@ DEPEND="${RDEPEND}
 DOCS=( ANNOUNCE CHANGES libpng-manual.txt README TODO )
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-CVE-2011-3328.patch
 	use apng && epatch "${WORKDIR}"/${P}-apng.patch
 	elibtoolize
 }
