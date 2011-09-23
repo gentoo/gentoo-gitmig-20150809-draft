@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.23 2011/09/18 21:03:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.24 2011/09/23 07:56:41 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -233,7 +233,7 @@ autotools-utils_src_configure() {
 	local econfargs=()
 
 	# Handle debug found in IUSE
-	if has debug ${IUSE//+}; then
+	if in_iuse debug; then
 		local debugarg=$(use_enable debug)
 		if ! has "${debugarg}" "${myeconfargs[@]}"; then
 			eqawarn 'Implicit $(use_enable debug) for IUSE="debug" is no longer supported.'
@@ -243,7 +243,7 @@ autotools-utils_src_configure() {
 	fi
 
 	# Handle static-libs found in IUSE, disable them by default
-	if has static-libs ${IUSE//+}; then
+	if in_iuse static-libs; then
 		econfargs+=(
 			--enable-shared
 			$(use_enable static-libs static)
