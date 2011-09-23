@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.107 2011/09/23 04:14:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.108 2011/09/23 04:14:38 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -9,8 +9,6 @@
 # @DESCRIPTION:
 # This eclass is for safely handling autotooled software packages that need to
 # regenerate their build scripts.  All functions will abort in case of errors.
-#
-# NB:  If you add anything, please comment it!
 
 inherit eutils libtool
 
