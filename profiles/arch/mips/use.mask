@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.48 2011/08/21 02:49:37 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/use.mask,v 1.49 2011/09/23 02:30:59 mattst88 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -mips
@@ -47,9 +47,7 @@ lapack
 blas
 
 # Ryan Hill <dirtyepic@gentoo.org>
-# We have neither.
 dell
-laptop
 
 # Alexander Færøy <eroyf@gentoo.org>
 # Masking for now.
@@ -267,7 +265,6 @@ emacs
 # architecture.
 php
 djbfft
-glitz
 pike
 timidity
 
@@ -308,15 +305,6 @@ qdbm
 # see bug #162205 comment 10.
 smartcard
 openct
-
-# mips doesn't support cpufeq, at least on
-# the machines we use.
-#
-# Same goes for battery support.  No one has
-# seen a mips laptop since the dinosaurs
-# lived.
-cpufreq
-battery
 
 # kumba (02 Jun 2007)
 # pulseaudio hasn't been tested on mips; maybe someday
