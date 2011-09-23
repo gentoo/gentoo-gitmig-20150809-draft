@@ -1,6 +1,9 @@
 # ChangeLog for virtual/gnat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gnat/ChangeLog,v 1.11 2011/09/19 07:05:57 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/gnat/ChangeLog,v 1.12 2011/09/23 14:06:34 george Exp $
+
+  23 Sep 2011; George Shapovalov <george@gentoo.org> gnat-4.3.ebuild:
+  propagated stable to matching virtual, as per #372179
 
 *gnat-4.4 (19 Sep 2011)
 
