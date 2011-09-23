@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.24 2011/09/23 13:58:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.25 2011/09/23 13:59:11 mgorny Exp $
 
 # @ECLASS: git-2.eclass
 # @MAINTAINER:
@@ -253,6 +253,22 @@ git-2_prepare_storedir() {
 
 	# allow writing into EGIT_STORE_DIR
 	addwrite "${EGIT_STORE_DIR}"
+
+	# calculate git.eclass store dir for data
+	# We will try to clone the old repository,
+	# and we will remove it if we don't need it anymore.
+	EGIT_OLD_CLONE=
+	if [[ ${EGIT_STORE_DIR} == */egit-src ]]; then
+		local old_store_dir=${EGIT_STORE_DIR/%egit-src/git-src}
+		local old_location=${old_store_dir}/${EGIT_PROJECT:-${PN}}
+
+		if [[ -d ${old_location} ]]; then
+			EGIT_OLD_CLONE=${old_location}
+			# required to remove the old clone
+			addwrite "${old_store_dir}"
+		fi
+	fi
+
 	# calculate the proper store dir for data
 	# If user didn't specify the EGIT_DIR, we check if he did specify
 	# the EGIT_PROJECT or get the folder name from EGIT_REPO_URI.
@@ -265,16 +281,10 @@ git-2_prepare_storedir() {
 		fi
 		EGIT_DIR=${EGIT_STORE_DIR}/${clone_dir}
 
-		# Try to migrate from git.eclass git-src/
-		if [[ ! -d ${EGIT_DIR} && ${EGIT_STORE_DIR} == */egit-src ]]; then
-			local old_store_dir=${EGIT_STORE_DIR/%egit-src/git-src}
-			local old_location=${old_store_dir}/${EGIT_PROJECT:-${PN}}
-
-			if [[ -d ${old_location} ]]; then
-				elog "${FUNCNAME}: ${CATEGORY}/${PF} will be cloned from old location."
-				elog "It will be necessary to rebuild the package to fetch updates."
-				EGIT_REPO_URI="${old_location} ${EGIT_REPO_URI}"
-			fi
+		if [[ ${EGIT_OLD_CLONE} && ! -d ${EGIT_DIR} ]]; then
+			elog "${FUNCNAME}: ${CATEGORY}/${PF} will be cloned from old location."
+			elog "It will be necessary to rebuild the package to fetch updates."
+			EGIT_REPO_URI="${EGIT_OLD_CLONE} ${EGIT_REPO_URI}"
 		fi
 	fi
 	export EGIT_DIR=${EGIT_DIR}
@@ -414,6 +424,12 @@ git-2_fetch() {
 	echo "   branch:                   ${EGIT_BRANCH}"
 	echo "   storage directory:        \"${EGIT_DIR}\""
 	echo "   checkout type:            ${repo_type}"
+
+	# Cleanup after git.eclass
+	if [[ ${EGIT_OLD_CLONE} ]]; then
+		einfo "${FUNCNAME}: removing old clone in ${EGIT_OLD_CLONE}."
+		rm -rf "${EGIT_OLD_CLONE}"
+	fi
 }
 
 # @FUNCTION: git_bootstrap
