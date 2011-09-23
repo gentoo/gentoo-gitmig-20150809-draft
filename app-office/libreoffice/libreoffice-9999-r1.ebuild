@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.21 2011/09/23 12:46:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.22 2011/09/23 14:35:43 scarabeus Exp $
 
 EAPI=3
 
@@ -394,7 +394,6 @@ src_configure() {
 		--with-system-db \
 		--with-system-dicts \
 		--with-system-libvisio \
-		--with-system-libtextcat --with-external-libtextcat-data \
 		--with-system-translate-toolkit \
 		--enable-cairo-canvas \
 		--enable-largefile \
