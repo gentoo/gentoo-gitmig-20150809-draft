@@ -1,6 +1,10 @@
 # ChangeLog for games-util/ucon64
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ChangeLog,v 1.14 2010/11/04 08:20:12 tupone Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ChangeLog,v 1.15 2011/09/23 18:05:42 tupone Exp $
+
+  23 Sep 2011; Tupone Alfredo <tupone@gentoo.org> ucon64-2.0.0.ebuild,
+  +files/ucon64-2.0.0-zlib.patch:
+  Build with new zlib. Bug #383813 by Diego Elio Pettenò
 
   04 Nov 2010; Tupone Alfredo <tupone@gentoo.org> ucon64-2.0.0.ebuild,
   +files/ucon64-2.0.0-ovflfix.patch:

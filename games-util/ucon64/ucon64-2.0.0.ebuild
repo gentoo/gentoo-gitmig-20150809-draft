@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ucon64-2.0.0.ebuild,v 1.9 2010/11/04 08:20:12 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/ucon64/ucon64-2.0.0.ebuild,v 1.10 2011/09/23 18:05:42 tupone Exp $
 EAPI=2
 inherit eutils
 
@@ -19,7 +19,8 @@ DEPEND=""
 S=${WORKDIR}/${P}-src/src
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-ovflfix.patch
+	epatch "${FILESDIR}"/${P}-ovflfix.patch \
+		"${FILESDIR}"/${P}-zlib.patch
 	sed -i \
 		-e "/^CFLAGS/s/-O3/${CFLAGS}/" \
 		-e "/^LDFLAGS/s/-s$/${LDFLAGS}/" \
