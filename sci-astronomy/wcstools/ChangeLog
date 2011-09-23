@@ -1,6 +1,17 @@
 # ChangeLog for sci-astronomy/wcstools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/ChangeLog,v 1.21 2011/08/04 18:34:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/ChangeLog,v 1.22 2011/09/23 19:17:31 xarthisius Exp $
+
+*wcstools-3.8.4 (23 Sep 2011)
+
+  23 Sep 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  -files/wcstools-3.8.1-autotools.patch, -files/wcstools-3.8.1-format.patch,
+  -files/wcstools-3.8.1-implicits.patch,
+  -files/wcstools-3.8.1-invalid_free.patch,
+  -files/wcstools-3.8.1-overflows.patch, -wcstools-3.8.3.ebuild,
+  +wcstools-3.8.4.ebuild, +files/wcstools-3.8.4-implicits.patch,
+  +files/wcstools-3.8.4-overflows.patch:
+  Version bump, drop old
 
   04 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org> metadata.xml:
   Switched herd to sci-astronomy
