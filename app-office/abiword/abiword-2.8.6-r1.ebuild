@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.8.6-r1.ebuild,v 1.11 2011/08/07 08:59:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.8.6-r1.ebuild,v 1.12 2011/09/23 12:46:50 pacho Exp $
 
 EAPI="3"
 
-inherit alternatives eutils gnome2 versionator
+inherit alternatives eutils gnome2 versionator autotools
 
 MY_MAJORV=$(get_version_component_range 1-2)
 
@@ -117,9 +117,10 @@ src_configure() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-libpng15.patch
-
 	gnome2_src_prepare
+
+	epatch "${FILESDIR}"/${P}-libpng15.patch
+	epatch "${FILESDIR}"/${P}-gcc46.patch
 
 	# install icon to pixmaps (bug #220097)
 	sed 's:$(datadir)/icons:$(datadir)/pixmaps:' \
@@ -127,6 +128,8 @@ src_prepare() {
 	# readme.txt will be installed using dodoc
 	sed '/readme\.txt\|abw/d' \
 		-i user/wp/Makefile.am user/wp/Makefile.in || die "sed 2 failed"
+
+	eautoreconf
 }
 
 src_install() {
