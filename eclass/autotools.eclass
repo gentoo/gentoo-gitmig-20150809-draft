@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.106 2011/08/22 19:39:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.107 2011/09/23 04:14:02 vapier Exp $
 
 # @ECLASS: autotools.eclass
 # @MAINTAINER:
@@ -153,6 +153,34 @@ eautoreconf() {
 	return 0
 }
 
+# @FUNCTION: eaclocal_amflags
+# @DESCRIPTION:
+# Extract the ACLOCAL_AMFLAGS value from the Makefile.am and try to handle
+# (most) of the crazy crap that people throw at us.
+eaclocal_amflags() {
+	local aclocal_opts amflags_file
+
+	for amflags_file in GNUmakefile.am Makefile.am GNUmakefile.in Makefile.in ; do
+		[[ -e ${amflags_file} ]] || continue
+		# setup the env in case the pkg does something crazy
+		# in their ACLOCAL_AMFLAGS.  like run a shell script
+		# which turns around and runs autotools. #365401
+		# or split across multiple lines. #383525
+		autotools_env_setup
+		aclocal_opts=$(sed -n \
+			"/^ACLOCAL_AMFLAGS[[:space:]]*=/{ \
+			  # match the first line
+			  s:[^=]*=::p; \
+			  # then gobble up all escaped lines
+			  : nextline /\\\\$/{ n; p; b nextline; } \
+			}" ${amflags_file})
+		eval aclocal_opts=\""${aclocal_opts}"\"
+		break
+	done
+
+	echo ${aclocal_opts}
+}
+
 # @FUNCTION: eaclocal
 # @DESCRIPTION:
 # These functions runs the autotools using autotools_run_tool with the
@@ -161,22 +189,8 @@ eautoreconf() {
 # They also force installing the support files for safety.
 # Respects AT_M4DIR for additional directories to search for macro's.
 eaclocal() {
-	local aclocal_opts
-
-	local amflags_file
-	for amflags_file in GNUmakefile.am Makefile.am GNUmakefile.in Makefile.in ; do
-		[[ -e ${amflags_file} ]] || continue
-		# setup the env in case the pkg does something crazy
-		# in their ACLOCAL_AMFLAGS.  like run a shell script
-		# which turns around and runs autotools #365401
-		autotools_env_setup
-		aclocal_opts=$(sed -n '/^ACLOCAL_AMFLAGS[[:space:]]*=/s:[^=]*=::p' ${amflags_file})
-		eval aclocal_opts=\"${aclocal_opts}\"
-		break
-	done
-
 	[[ ! -f aclocal.m4 || -n $(grep -e 'generated.*by aclocal' aclocal.m4) ]] && \
-		autotools_run_tool aclocal $(autotools_m4dir_include) "$@" ${aclocal_opts}
+		autotools_run_tool aclocal $(autotools_m4dir_include) "$@" $(eaclocal_amflags)
 }
 
 # @FUNCTION: _elibtoolize
