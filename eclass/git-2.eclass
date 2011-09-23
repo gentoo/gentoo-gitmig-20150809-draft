@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.20 2011/09/23 13:57:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.21 2011/09/23 13:58:09 mgorny Exp $
 
 # @ECLASS: git-2.eclass
 # @MAINTAINER:
@@ -217,15 +217,15 @@ git-2_gc() {
 
 	local args
 
-	pushd "${EGIT_DIR}" > /dev/null
 	if [[ ${EGIT_REPACK} || ${EGIT_PRUNE} ]]; then
+		pushd "${EGIT_DIR}" > /dev/null
 		ebegin "Garbage collecting the repository"
 		[[ ${EGIT_PRUNE} ]] && args='--prune'
 		debug-print "${FUNCNAME}: git gc ${args}"
 		git gc ${args}
 		eend $?
+		popd > /dev/null
 	fi
-	popd > /dev/null
 }
 
 # @FUNCTION: git-2_prepare_storedir
