@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.23 2011/09/23 13:58:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.24 2011/09/23 13:58:58 mgorny Exp $
 
 # @ECLASS: git-2.eclass
 # @MAINTAINER:
@@ -264,6 +264,18 @@ git-2_prepare_storedir() {
 			clone_dir=${EGIT_REPO_URI##*/}
 		fi
 		EGIT_DIR=${EGIT_STORE_DIR}/${clone_dir}
+
+		# Try to migrate from git.eclass git-src/
+		if [[ ! -d ${EGIT_DIR} && ${EGIT_STORE_DIR} == */egit-src ]]; then
+			local old_store_dir=${EGIT_STORE_DIR/%egit-src/git-src}
+			local old_location=${old_store_dir}/${EGIT_PROJECT:-${PN}}
+
+			if [[ -d ${old_location} ]]; then
+				elog "${FUNCNAME}: ${CATEGORY}/${PF} will be cloned from old location."
+				elog "It will be necessary to rebuild the package to fetch updates."
+				EGIT_REPO_URI="${old_location} ${EGIT_REPO_URI}"
+			fi
+		fi
 	fi
 	export EGIT_DIR=${EGIT_DIR}
 	debug-print "${FUNCNAME}: Storing the repo into \"${EGIT_DIR}\"."
