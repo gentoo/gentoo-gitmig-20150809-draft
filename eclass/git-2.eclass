@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.18 2011/09/23 13:57:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.19 2011/09/23 13:57:42 mgorny Exp $
 
 # @ECLASS: git-2.eclass
 # @MAINTAINER:
@@ -458,7 +458,6 @@ git-2_migrate_repository() {
 	# check if user didn't specify that we want non-bare repo
 	if [[ ${EGIT_NONBARE} ]]; then
 		target="full"
-		EGIT_LOCAL_NONBARE="true"
 	fi
 
 	# test if we already have some repo and if so find out if we have
