@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.8.ebuild,v 1.1 2011/08/18 05:45:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.8.1.ebuild,v 1.1 2011/09/23 18:51:06 xarthisius Exp $
 
 EAPI=4
+
 inherit eutils fortran-2
 
 DESCRIPTION="Astronomical World Coordinate System transformations library"

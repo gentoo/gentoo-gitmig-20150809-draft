@@ -1,6 +1,12 @@
 # ChangeLog for sci-astronomy/wcslib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/ChangeLog,v 1.19 2011/08/18 05:45:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/ChangeLog,v 1.20 2011/09/23 18:51:06 xarthisius Exp $
+
+*wcslib-4.8.1 (23 Sep 2011)
+
+  23 Sep 2011; Kacper Kowalik <xarthisius@gentoo.org> -wcslib-4.7.ebuild,
+  -wcslib-4.8.ebuild, +wcslib-4.8.1.ebuild:
+  Version bump, drop old
 
 *wcslib-4.8 (18 Aug 2011)
 
