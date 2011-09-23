@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/brlcad
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/brlcad/ChangeLog,v 1.4 2011/09/14 12:08:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/brlcad/ChangeLog,v 1.5 2011/09/23 08:59:24 polynomial-c Exp $
+
+  23 Sep 2011; Lars Wendler <polynomial-c@gentoo.org>
+  files/brlcad-7.18.4-libpng15.patch:
+  non-maintainer commit: Added fixed patch to build with libpng15 (bug
+  #378273). ACKed by ssuominen. Thanks to Ian Stakenvicius for providing a
+  working patch.
 
   14 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> brlcad-7.18.4.ebuild,
   +files/brlcad-7.18.4-libpng15.patch:
