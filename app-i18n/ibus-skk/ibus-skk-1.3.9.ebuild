@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-skk/ibus-skk-1.3.7.ebuild,v 1.1 2011/06/15 23:07:34 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-skk/ibus-skk-1.3.9.ebuild,v 1.1 2011/09/23 16:13:42 matsuu Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -8,7 +8,7 @@ inherit python
 
 DESCRIPTION="Japanese input method Anthy IMEngine for IBus Framework"
 HOMEPAGE="http://github.com/ueno/ibus-skk"
-SRC_URI="http://cloud.github.com/downloads/ueno/${PN}/${P}.tar.gz"
+SRC_URI="mirror://github/ueno/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
