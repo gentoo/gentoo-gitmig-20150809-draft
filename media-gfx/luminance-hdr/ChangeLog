@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/luminance-hdr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/ChangeLog,v 1.9 2011/09/23 23:32:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/ChangeLog,v 1.10 2011/09/23 23:43:07 radhermit Exp $
+
+  23 Sep 2011; Tim Harder <radhermit@gentoo.org> luminance-hdr-2.1.0.ebuild:
+  Add dependency on qt-sql (bug #382305 by Martin Thierer).
 
   23 Sep 2011; Tim Harder <radhermit@gentoo.org> luminance-hdr-2.1.0.ebuild,
   +files/luminance-hdr-2.1.0-libraw.patch:
