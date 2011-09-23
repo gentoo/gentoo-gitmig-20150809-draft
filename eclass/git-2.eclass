@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.14 2011/08/22 04:46:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.15 2011/09/23 13:55:47 mgorny Exp $
 
 # @ECLASS: git-2.eclass
 # @MAINTAINER:
@@ -127,7 +127,8 @@ DEPEND="dev-vcs/git"
 git-2_init_variables() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	local x
+	local esc_pn liverepo livebranch livecommit
+	esc_pn=${PN//[-+]/_}
 
 	: ${EGIT_SOURCEDIR="${S}"}
 
@@ -139,19 +140,19 @@ git-2_init_variables() {
 
 	: ${EGIT_MASTER:=master}
 
-	eval x="\$${PN//[-+]/_}_LIVE_REPO"
-	EGIT_REPO_URI=${x:-${EGIT_REPO_URI}}
+	liverepo=${esc_pn}_LIVE_REPO
+	EGIT_REPO_URI=${!liverepo:-${EGIT_REPO_URI}}
 	[[ -z ${EGIT_REPO_URI} ]] && die "EGIT_REPO_URI must have some value"
 
 	: ${EVCS_OFFLINE:=}
 
-	eval x="\$${PN//[-+]/_}_LIVE_BRANCH"
-	[[ -n ${x} ]] && ewarn "QA: using \"${PN//[-+]/_}_LIVE_BRANCH\" variable, you won't get any support"
-	EGIT_BRANCH=${x:-${EGIT_BRANCH:-${EGIT_MASTER}}}
+	livebranch=${esc_pn}_LIVE_BRANCH
+	[[ -n ${!livebranch} ]] && ewarn "QA: using \"${esc_pn}_LIVE_BRANCH\" variable, you won't get any support"
+	EGIT_BRANCH=${!livebranch:-${EGIT_BRANCH:-${EGIT_MASTER}}}
 
-	eval x="\$${PN//[-+]/_}_LIVE_COMMIT"
-	[[ -n ${x} ]] && ewarn "QA: using \"${PN//[-+]/_}_LIVE_COMMIT\" variable, you won't get any support"
-	EGIT_COMMIT=${x:-${EGIT_COMMIT:-${EGIT_BRANCH}}}
+	livecommit=${esc_pn}_LIVE_COMMIT
+	[[ -n ${!livecommit} ]] && ewarn "QA: using \"${esc_pn}_LIVE_COMMIT\" variable, you won't get any support"
+	EGIT_COMMIT=${!livecommit:-${EGIT_COMMIT:-${EGIT_BRANCH}}}
 
 	: ${EGIT_REPACK:=}
 
