@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.784 2011/09/07 20:13:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.785 2011/09/23 21:32:05 dilfridge Exp $
+
+*kdelibs-4.7.1-r1 (23 Sep 2011)
+
+  23 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kdelibs-4.7.1-r1.ebuild, +files/kdelibs-4.7.1-clearbutton.patch:
+  Beautifying-the-clearbutton revbump
 
 *kdelibs-4.7.1 (07 Sep 2011)
 
