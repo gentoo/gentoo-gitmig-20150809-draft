@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.191 2011/09/21 08:35:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.192 2011/09/23 04:17:36 vapier Exp $
+
+*libtool-2.4-r2 (23 Sep 2011)
+
+  23 Sep 2011; Mike Frysinger <vapier@gentoo.org> +libtool-2.4-r2.ebuild,
+  +files/libtool-2.4-openmp.patch, libtool-9999.ebuild:
+  Unify live/release ebuilds again. Add patch from upstream for openmp when
+  linking #349078 by Justin Lecher. Add USE=static-libs support #379047 by
+  Agostino Sarubbo.
 
   21 Sep 2011; Michał Górny <mgorny@gentoo.org> libtool-9999.ebuild:
   Migrate to git-2.

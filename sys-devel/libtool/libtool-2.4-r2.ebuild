@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-9999.ebuild,v 1.7 2011/09/23 04:17:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.4-r2.ebuild,v 1.1 2011/09/23 04:17:36 vapier Exp $
 
 EAPI="2" #356089
 
@@ -25,8 +25,9 @@ SLOT="2"
 IUSE="static-libs vanilla"
 
 RDEPEND="sys-devel/gnuconfig
-	>=sys-devel/autoconf-2.65
-	>=sys-devel/automake-1.11.1"
+	!<sys-devel/autoconf-2.62:2.5
+	!<sys-devel/automake-1.11.1:1.11
+	!=sys-devel/libtool-2*:1.5"
 DEPEND="${RDEPEND}
 	>=sys-devel/binutils-2.20
 	app-arch/xz-utils"
@@ -45,6 +46,8 @@ src_unpack() {
 
 src_prepare() {
 	use vanilla && return 0
+
+	epatch "${FILESDIR}"/${P}-openmp.patch #349078
 
 	epunt_cxx
 	cd libltdl/m4
