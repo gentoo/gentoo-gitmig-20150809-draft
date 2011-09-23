@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/dvdisaster
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/ChangeLog,v 1.17 2011/09/16 23:39:27 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/ChangeLog,v 1.18 2011/09/23 08:46:42 polynomial-c Exp $
+
+  23 Sep 2011; Lars Wendler <polynomial-c@gentoo.org> dvdisaster-0.72.2.ebuild:
+  non-maintainer commit: Readded libpng15 patch. Moved ebuild back to EAPI-4.
+  Should fix bug #383491 reported by Jean-Francois Ostiguy.
 
 *dvdisaster-0.72.2 (16 Sep 2011)
 

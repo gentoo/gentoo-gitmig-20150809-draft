@@ -1,15 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/dvdisaster-0.72.2.ebuild,v 1.1 2011/09/16 23:39:27 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/dvdisaster-0.72.2.ebuild,v 1.2 2011/09/23 08:46:42 polynomial-c Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils gnome2-utils versionator
 
 MY_P=${PN}-$(replace_version_separator 2 '.')
 
 DESCRIPTION="Data-protection and recovery tool for DVDs"
-HOMEPAGE="http://dvdisaster.net/"
-SRC_URI="http://dvdisaster.net/downloads/${P}.tar.bz2"
+HOMEPAGE="http://dvdisaster.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
@@ -23,6 +23,10 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-0.72.1-libpng15.patch
+}
 
 # - There is no autotools, use_ functions won't work
 # - NLS disabled because sys-devel/gettext fails, if you enable it
@@ -47,12 +51,11 @@ src_configure() {
 		--localedir=/usr/share/locale \
 		--buildroot="${D}" \
 		--with-nls=no \
-		${myconf} \
-		|| die "./configure failed"
+		${myconf} || die
 }
 
 src_install() {
-	emake install || die "emake install failed"
+	emake install
 
 	newicon contrib/${PN}48.png ${PN}.png
 	make_desktop_entry ${PN} ${PN} ${PN} "System;Utility"
