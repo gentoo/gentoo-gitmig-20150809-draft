@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.4.2-r1.ebuild,v 1.1 2011/09/21 17:27:43 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.4.2-r2.ebuild,v 1.1 2011/09/23 17:09:51 chainsaw Exp $
 
 EAPI="3"
 
-inherit flag-o-matic eutils multilib python
+inherit base flag-o-matic eutils multilib python
 
 # TPMEMUFILE=tpm_emulator-0.4.tar.gz
 
@@ -54,6 +54,16 @@ RDEPEND="${CDEPEND}
 	)
 	|| ( sys-fs/udev sys-apps/hotplug )"
 
+PATCHES=(
+	"${FILESDIR}/${PN}-3.4.0-network-bridge-broadcast.patch"
+	"${FILESDIR}/${PN}-3.3.0-nostrip.patch"
+	"${FILESDIR}/${PN}-3.3.1-sandbox-fix.patch"
+	"${FILESDIR}/${P}-as-needed.patch"
+	"${FILESDIR}/${P}-fix-definitions.patch"
+	"${FILESDIR}/${P}-fix-include.patch"
+	"${FILESDIR}/${P}-werror-idiocy.patch"
+)
+
 # hvmloader is used to bootstrap a fully virtualized kernel
 # Approved by QA team in bug #144032
 QA_WX_LOAD="usr/lib/xen/boot/hvmloader"
@@ -89,6 +99,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	base_src_prepare
+
 	#	use vtpm && cp "${DISTDIR}"/${TPMEMUFILE}  tools/vtpm
 
 	# if the user *really* wants to use their own custom-cflags, let them
@@ -114,22 +126,6 @@ src_prepare() {
 	if ! use pygrub; then
 		sed -i -e '/^SUBDIRS-$(PYTHON_TOOLS) += pygrub$/d' "${S}"/tools/Makefile
 	fi
-
-	# Fix network broadcast on bridged networks
-	epatch "${FILESDIR}/${PN}-3.4.0-network-bridge-broadcast.patch"
-
-	# Do not strip binaries
-	epatch "${FILESDIR}/${PN}-3.3.0-nostrip.patch"
-
-	# fix variable declaration to avoid sandbox issue, #253134
-	epatch "${FILESDIR}/${PN}-3.3.1-sandbox-fix.patch"
-
-	# Fix --as-needed issues, bug 296631
-	epatch "${FILESDIR}/${P}-as-needed.patch" || die "as-needed patch failed to apply"
-
-	# Fix WRITE define, bug #379815
-	epatch "${FILESDIR}/${P}-fix-definitions.patch" \
-		"${FILESDIR}/${P}-fix-include.patch" || die "include patch failed to apply"
 }
 
 src_compile() {
