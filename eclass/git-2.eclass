@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.16 2011/09/23 13:56:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.17 2011/09/23 13:57:15 mgorny Exp $
 
 # @ECLASS: git-2.eclass
 # @MAINTAINER:
@@ -142,16 +142,16 @@ git-2_init_variables() {
 
 	liverepo=${esc_pn}_LIVE_REPO
 	EGIT_REPO_URI=${!liverepo:-${EGIT_REPO_URI}}
-	[[ -z ${EGIT_REPO_URI} ]] && die "EGIT_REPO_URI must have some value"
+	[[ ${EGIT_REPO_URI} ]] || die "EGIT_REPO_URI must have some value"
 
 	: ${EVCS_OFFLINE:=}
 
 	livebranch=${esc_pn}_LIVE_BRANCH
-	[[ -n ${!livebranch} ]] && ewarn "QA: using \"${esc_pn}_LIVE_BRANCH\" variable, you won't get any support"
+	[[ ${!livebranch} ]] && ewarn "QA: using \"${esc_pn}_LIVE_BRANCH\" variable, you won't get any support"
 	EGIT_BRANCH=${!livebranch:-${EGIT_BRANCH:-${EGIT_MASTER}}}
 
 	livecommit=${esc_pn}_LIVE_COMMIT
-	[[ -n ${!livecommit} ]] && ewarn "QA: using \"${esc_pn}_LIVE_COMMIT\" variable, you won't get any support"
+	[[ ${!livecommit} ]] && ewarn "QA: using \"${esc_pn}_LIVE_COMMIT\" variable, you won't get any support"
 	EGIT_COMMIT=${!livecommit:-${EGIT_COMMIT:-${EGIT_BRANCH}}}
 
 	: ${EGIT_REPACK:=}
@@ -164,8 +164,8 @@ git-2_init_variables() {
 # Internal function wrapping the submodule initialisation and update.
 git-2_submodules() {
 	debug-print-function ${FUNCNAME} "$@"
-	if [[ -n ${EGIT_HAS_SUBMODULES} ]]; then
-		if [[ -n ${EVCS_OFFLINE} ]]; then
+	if [[ ${EGIT_HAS_SUBMODULES} ]]; then
+		if [[ ${EVCS_OFFLINE} ]]; then
 			# for submodules operations we need to be online
 			debug-print "${FUNCNAME}: not updating submodules in offline mode"
 			return 1
@@ -218,9 +218,9 @@ git-2_gc() {
 	local args
 
 	pushd "${EGIT_DIR}" > /dev/null
-	if [[ -n ${EGIT_REPACK} || -n ${EGIT_PRUNE} ]]; then
+	if [[ ${EGIT_REPACK} || ${EGIT_PRUNE} ]]; then
 		ebegin "Garbage collecting the repository"
-		[[ -n ${EGIT_PRUNE} ]] && args='--prune'
+		[[ ${EGIT_PRUNE} ]] && args='--prune'
 		debug-print "${FUNCNAME}: git gc ${args}"
 		git gc ${args}
 		eend $?
@@ -252,8 +252,8 @@ git-2_prepare_storedir() {
 	# If user didn't specify the EGIT_DIR, we check if he did specify
 	# the EGIT_PROJECT or get the folder name from EGIT_REPO_URI.
 	EGIT_REPO_URI=${EGIT_REPO_URI%/}
-	if [[ -z ${EGIT_DIR} ]]; then
-		if [[ -n ${EGIT_PROJECT} ]]; then
+	if [[ ! ${EGIT_DIR} ]]; then
+		if [[ ${EGIT_PROJECT} ]]; then
 			clone_dir=${EGIT_PROJECT}
 		else
 			clone_dir=${EGIT_REPO_URI##*/}
@@ -299,9 +299,8 @@ git-2_initial_clone() {
 		fi
 	done
 
-	if [[ -z ${EGIT_REPO_URI_SELECTED} ]]; then
-		die "${FUNCNAME}: can't fetch from ${EGIT_REPO_URI}"
-	fi
+	[[ ${EGIT_REPO_URI_SELECTED} ]] \
+		|| die "${FUNCNAME}: can't fetch from ${EGIT_REPO_URI}"
 }
 
 # @FUNCTION: git-2_update_repo
@@ -312,7 +311,7 @@ git-2_update_repo() {
 
 	local repo_uri
 
-	if [[ -n ${EGIT_LOCAL_NONBARE} ]]; then
+	if [[ ${EGIT_LOCAL_NONBARE} ]]; then
 		# checkout master branch and drop all other local branches
 		git checkout ${EGIT_MASTER} || die "${FUNCNAME}: can't checkout master branch ${EGIT_MASTER}"
 		for x in $(git branch | grep -v "* ${EGIT_MASTER}" | tr '\n' ' '); do
@@ -336,9 +335,8 @@ git-2_update_repo() {
 		fi
 	done
 
-	if [[ -z ${EGIT_REPO_URI_SELECTED} ]]; then
-		die "${FUNCNAME}: can't update from ${EGIT_REPO_URI}"
-	fi
+	[[ ${EGIT_REPO_URI_SELECTED} ]] \
+		|| die "${FUNCNAME}: can't update from ${EGIT_REPO_URI}"
 }
 
 # @FUNCTION: git-2_fetch
@@ -350,7 +348,7 @@ git-2_fetch() {
 
 	local oldsha cursha repo_type
 
-	[[ -n ${EGIT_LOCAL_NONBARE} ]] && repo_type="non-bare repository" || repo_type="bare repository"
+	[[ ${EGIT_LOCAL_NONBARE} ]] && repo_type="non-bare repository" || repo_type="bare repository"
 
 	if [[ ! -d ${EGIT_DIR} ]]; then
 		git-2_initial_clone
@@ -361,7 +359,7 @@ git-2_fetch() {
 		echo "   at the commit:            ${cursha}"
 
 		popd > /dev/null
-	elif [[ -n ${EVCS_OFFLINE} ]]; then
+	elif [[ ${EVCS_OFFLINE} ]]; then
 		pushd "${EGIT_DIR}" > /dev/null
 		cursha=$(git rev-parse ${UPSTREAM_BRANCH})
 		echo "GIT offline update -->"
@@ -412,7 +410,7 @@ git-2_bootstrap() {
 	# enviroment the package will fail if there is no update, thus in
 	# combination with --keep-going it would lead in not-updating
 	# pakcages that are up-to-date.
-	if [[ -n ${EGIT_BOOTSTRAP} ]]; then
+	if [[ ${EGIT_BOOTSTRAP} ]]; then
 		pushd "${EGIT_SOURCEDIR}" > /dev/null
 		einfo "Starting bootstrap"
 
@@ -454,13 +452,13 @@ git-2_migrate_repository() {
 	local target returnstate
 
 	# first find out if we have submodules
-	if [[ -z ${EGIT_HAS_SUBMODULES} ]]; then
+	if [[ ! ${EGIT_HAS_SUBMODULES} ]]; then
 		target="bare"
 	else
 		target="full"
 	fi
 	# check if user didn't specify that we want non-bare repo
-	if [[ -n ${EGIT_NONBARE} ]]; then
+	if [[ ${EGIT_NONBARE} ]]; then
 		target="full"
 		EGIT_LOCAL_NONBARE="true"
 	fi
@@ -557,9 +555,9 @@ git-2_src_unpack() {
 
 	# Users can specify some SRC_URI and we should
 	# unpack the files too.
-	if [[ -z ${EGIT_NOUNPACK} ]]; then
+	if [[ ! ${EGIT_NOUNPACK} ]]; then
 		if has ${EAPI:-0} 0 1; then
-			[[ -n ${A} ]] && unpack ${A}
+			[[ ${A} ]] && unpack ${A}
 		else
 			default_src_unpack
 		fi
