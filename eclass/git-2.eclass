@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.19 2011/09/23 13:57:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.20 2011/09/23 13:57:55 mgorny Exp $
 
 # @ECLASS: git-2.eclass
 # @MAINTAINER:
@@ -447,23 +447,18 @@ git-2_bootstrap() {
 git-2_migrate_repository() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	local target returnstate
+	local bare returnstate
 
 	# first find out if we have submodules
-	if [[ ! ${EGIT_HAS_SUBMODULES} ]]; then
-		target="bare"
-	else
-		target="full"
-	fi
-	# check if user didn't specify that we want non-bare repo
-	if [[ ${EGIT_NONBARE} ]]; then
-		target="full"
+	# or user explicitly wants us to use non-bare clones
+	if ! [[ ${EGIT_HAS_SUBMODULES} || ${EGIT_NONBARE} ]]; then
+		bare=1
 	fi
 
 	# test if we already have some repo and if so find out if we have
 	# to migrate the data
 	if [[ -d ${EGIT_DIR} ]]; then
-		if [[ ${target} == bare && -d ${EGIT_DIR}/.git ]]; then
+		if [[ ${bare} && -d ${EGIT_DIR}/.git ]]; then
 			debug-print "${FUNCNAME}: converting \"${EGIT_DIR}\" to bare copy"
 
 			ebegin "Converting \"${EGIT_DIR}\" from non-bare to bare copy"
@@ -475,8 +470,7 @@ git-2_migrate_repository() {
 			rm -rf "${EGIT_DIR}"
 			mv "${EGIT_DIR}.bare" "${EGIT_DIR}"
 			eend ${returnstate}
-		fi
-		if [[ ${target} == full && ! -d ${EGIT_DIR}/.git ]]; then
+		elif [[ ! ${bare} && ! -d ${EGIT_DIR}/.git ]]; then
 			debug-print "${FUNCNAME}: converting \"${EGIT_DIR}\" to non-bare copy"
 
 			ebegin "Converting \"${EGIT_DIR}\" from bare to non-bare copy"
@@ -496,7 +490,7 @@ git-2_migrate_repository() {
 	fi
 
 	# set various options to work with both targets
-	if [[ ${target} == bare ]]; then
+	if [[ ${bare} ]]; then
 		debug-print "${FUNCNAME}: working in bare repository for \"${EGIT_DIR}\""
 		EGIT_LOCAL_OPTIONS+="${EGIT_OPTIONS} --bare"
 		MOVE_COMMAND="git clone -l -s -n ${EGIT_DIR// /\\ }"
