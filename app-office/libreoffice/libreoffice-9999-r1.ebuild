@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.22 2011/09/23 14:35:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.23 2011/09/23 14:44:42 scarabeus Exp $
 
 EAPI=3
 
@@ -184,11 +184,15 @@ PDEPEND="
 	>=app-office/libreoffice-l10n-3.4
 "
 
+# FIXME: cppunit should be moved to test conditional
+#        after everything upstream is under gbuild
+#        as dmake execute tests right away
 DEPEND="${COMMON_DEPEND}
 	>=dev-libs/boost-1.46
 	>=dev-libs/libxml2-2.7.8
 	dev-libs/libxslt
 	dev-perl/Archive-Zip
+	dev-util/cppunit
 	>=dev-util/gperf-3
 	dev-util/intltool
 	dev-util/mdds
@@ -216,7 +220,6 @@ DEPEND="${COMMON_DEPEND}
 
 PATCHES=(
 	"${FILESDIR}/${PN}-3.3.1-neon_remove_SSPI_support.diff"
-	"${FILESDIR}/${PN}-kill-cppunit.patch"
 )
 
 # Uncoment me when updating to eapi4
@@ -225,9 +228,6 @@ PATCHES=(
 #	gnome? ( gtk )
 #	nsplugin? ( gtk )
 #"
-
-# Needs lots and lots of work and compiling
-RESTRICT="test"
 
 S="${WORKDIR}/${PN}-core-${PV}"
 
@@ -330,13 +330,9 @@ src_configure() {
 	use gnome && themes+=" tango"
 	use kde && themes+=" oxygen"
 
-	# dmake: not worth of splitting out
-	# cppunit: patched not to run anything, just main() { return 0; }
-	#          workaround to upstream running the tests during build
 	# sane: just sane.h header that is used for scan in writer, not
 	#       linked or anything else, worthless to depend on
 	internal_libs+="
-		--without-system-cppunit
 		--without-system-sane
 	"
 
@@ -472,6 +468,10 @@ src_configure() {
 src_compile() {
 	# this is not a proper make script and the jobs are passed during configure
 	make build || die
+}
+
+src_test() {
+	make check || die
 }
 
 src_install() {
