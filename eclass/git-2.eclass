@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.15 2011/09/23 13:55:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/git-2.eclass,v 1.16 2011/09/23 13:56:29 mgorny Exp $
 
 # @ECLASS: git-2.eclass
 # @MAINTAINER:
@@ -251,7 +251,7 @@ git-2_prepare_storedir() {
 	# calculate the proper store dir for data
 	# If user didn't specify the EGIT_DIR, we check if he did specify
 	# the EGIT_PROJECT or get the folder name from EGIT_REPO_URI.
-	[[ -z ${EGIT_REPO_URI##*/} ]] && EGIT_REPO_URI="${EGIT_REPO_URI%/}"
+	EGIT_REPO_URI=${EGIT_REPO_URI%/}
 	if [[ -z ${EGIT_DIR} ]]; then
 		if [[ -n ${EGIT_PROJECT} ]]; then
 			clone_dir=${EGIT_PROJECT}
