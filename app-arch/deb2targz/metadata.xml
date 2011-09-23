@@ -3,4 +3,8 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer><email>chainsaw@gentoo.org</email></maintainer>
+<maintainer>
+	<email>floppym@gentoo.org</email>
+	<name>Mike Gilbert</name>
+</maintainer>
 </pkgmetadata>
