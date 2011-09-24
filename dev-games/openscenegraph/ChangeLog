@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/openscenegraph
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.40 2011/04/22 08:28:23 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.41 2011/09/24 22:06:09 mr_bones_ Exp $
+
+  24 Sep 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  openscenegraph-2.8.3.ebuild, +files/openscenegraph-2.8.3-curl.patch:
+  Add patch to build with newer curl submitted by Ed Catmur (bug #383719)
 
   22 Apr 2011; Tupone Alfredo <tupone@gentoo.org> openscenegraph-2.8.3.ebuild,
   +files/openscenegraph-2.8.3-ffmpeg.patch:
