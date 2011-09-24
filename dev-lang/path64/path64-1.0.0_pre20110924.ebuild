@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/path64/path64-1.0.0_pre20110729.ebuild,v 1.3 2011/08/29 06:22:33 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/path64/path64-1.0.0_pre20110924.ebuild,v 1.1 2011/09/24 10:04:20 xarthisius Exp $
 
 EAPI=4
 CMAKE_VERBOSE=1
@@ -50,7 +50,6 @@ src_configure() {
 	local linker=$($(tc-getCC) --help -v 2>&1 >/dev/null | \
 		sed -n -e '/dynamic-linker/s:.* -dynamic-linker \([^ ]\+\) .*:\1:p')
 	local libgcc=$($(tc-getCC) -print-libgcc-file-name)
-	local crt=$($(tc-getCC) -print-file-name=crt1.o)
 	use custom-cflags && flags=(
 			-DCMAKE_C_FLAGS="${CFLAGS}"
 			-DCMAKE_CXX_FLAGS="${CXXFLAGS}"
@@ -79,7 +78,7 @@ src_configure() {
 		$(cmake-utils_use openmp PATH64_ENABLE_OPENMP)
 		$(cmake-utils_use debugger PATH64_ENABLE_PATHDB)
 		$(cmake-utils_use valgrind PATH64_ENABLE_VALGRIND)
-		-DPSC_CRT_PATH_x86_64=$(dirname ${crt})
+		-DPSC_CRT_PATH_x86_64=/usr/$(get_libdir)
 		-DPSC_CRTBEGIN_PATH=$(dirname ${libgcc})
 		-DPSC_DYNAMIC_LINKER_x86_64=${linker}
 		-DCMAKE_C_COMPILER="$(tc-getCC)"
