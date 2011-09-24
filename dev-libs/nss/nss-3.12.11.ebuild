@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.11.ebuild,v 1.4 2011/09/24 15:43:47 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.11.ebuild,v 1.5 2011/09/24 18:50:12 grobian Exp $
 
 EAPI=3
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -49,6 +49,11 @@ src_prepare() {
 			"${S}"/mozilla/security/nss/config/nss-config.in \
 			"${S}"/mozilla/security/nss/config/nss.pc.in || die
 	fi
+
+	# Avoid install_name_tooling post install
+	sed -i -e "s:@executable_path:${EPREFIX}/usr/$(get_libdir):" \
+		"${S}"/mozilla/security/coreconf/Darwin.mk \
+		"${S}"/mozilla/security/nss/lib/freebl/config.mk || die
 
 	epatch "${FILESDIR}"/${PN}-3.12.4-solaris-gcc.patch  # breaks non-gnu tools
 	# dirty hack
@@ -157,19 +162,6 @@ src_install () {
 		n=${file%$(get_libname)}$(get_libname ${MINOR_VERSION})
 		mv ${file} ${n}
 		ln -s ${n} ${file}
-		if [[ ${CHOST} == *-darwin* ]]; then
-			# fix install_name
-			install_name_tool -id "${EPREFIX}/usr/$(get_libdir)/${file}" ${n} || die
-			# and the references that were already made against it
-			install_name_tool \
-				-change "@executable_path/libnssutil3.dylib" \
-					"${EPREFIX}/usr/$(get_libdir)/libnssutil3.dylib" \
-				${n} || die
-			install_name_tool \
-				-change "@executable_path/libnss3.dylib" \
-					"${EPREFIX}/usr/$(get_libdir)/libnss3.dylib" \
-				${n} || die
-		fi
 	done
 
 	local nssutils
