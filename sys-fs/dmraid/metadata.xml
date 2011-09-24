@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
 	<use>
 		<flag name='dietlibc'>Compile against <pkg>dev-libs/dietlibc</pkg></flag>
 		<flag name='intel_led'>Enable Intel LED support</flag>
