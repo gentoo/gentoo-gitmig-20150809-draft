@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.61 2011/07/03 05:28:44 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.62 2011/09/24 16:57:47 grobian Exp $
+
+  24 Sep 2011; Fabian Groffen <grobian@gentoo.org>
+  spidermonkey-1.8.2.15.ebuild:
+  Fix install_name for produced shared library on Darwin, keyworded ~x86-macos
+  and ~x64-macos bug #354523
+
+  24 Sep 2011; Fabian Groffen <grobian@gentoo.org>
+  spidermonkey-1.8.2.15.ebuild:
+  Fix install_name for produced shared library on Darwin, keyworded ~x86-macos
+  and ~x64-macos bug #354523
 
 *spidermonkey-1.8.5 (03 Jul 2011)
 
