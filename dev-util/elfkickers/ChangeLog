@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/elfkickers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.45 2011/09/16 16:49:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfkickers/ChangeLog,v 1.46 2011/09/24 17:23:55 armin76 Exp $
+
+  24 Sep 2011; Raúl Porcel <armin76@gentoo.org> elfkickers-3.0-r1.ebuild,
+  elfkickers-3.0-r2.ebuild:
+  Readd ~sparc wrt #380085
 
   16 Sep 2011; Jeroen Roovers <jer@gentoo.org> elfkickers-3.0-r1.ebuild,
   elfkickers-3.0-r2.ebuild:
