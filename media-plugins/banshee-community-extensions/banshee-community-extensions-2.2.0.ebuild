@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-community-extensions/banshee-community-extensions-2.2.0.ebuild,v 1.2 2011/09/22 17:19:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-community-extensions/banshee-community-extensions-2.2.0.ebuild,v 1.3 2011/09/24 14:01:09 pacho Exp $
 
 EAPI="4"
 
@@ -56,7 +56,7 @@ src_configure() {
 		--with-vendor-build-id=Gentoo/${PN}/${PVR}
 		--disable-scrollkeeper
 		--disable-clutterflow --disable-appindicator --disable-openvp
-		--disable-zeitgeistdataprovide
+		--disable-zeitgeistdataprovider
 		--enable-ampache --enable-karaoke --enable-jamendo
 		--enable-randombylastfm --enable-albumartwriter
 		--enable-duplicatesongdetector"
@@ -74,6 +74,6 @@ src_configure() {
 
 src_install() {
 	base_src_install
-	find "${ED}" -name "*.la" -delete || die "remove of la files failed"
+	find "${D}" -name "*.la" -delete || die "remove of la files failed"
 	dodoc AUTHORS NEWS README
 }
