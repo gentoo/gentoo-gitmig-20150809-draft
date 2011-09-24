@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/terminator
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/ChangeLog,v 1.16 2011/03/23 06:17:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminator/ChangeLog,v 1.17 2011/09/24 05:47:19 jlec Exp $
+
+*terminator-0.96 (24 Sep 2011)
+
+  24 Sep 2011; Justin Lecher <jlec@gentoo.org> +terminator-0.96.ebuild,
+  metadata.xml:
+  Version Bump
 
   23 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> terminator-0.95.ebuild:
   Use SLOT dependencies for x11-libs/vte.
