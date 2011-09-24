@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/coverage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.41 2011/09/10 14:00:40 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.42 2011/09/24 13:42:07 grobian Exp $
+
+  24 Sep 2011; Fabian Groffen <grobian@gentoo.org> coverage-3.5.ebuild:
+  Marked ~x64-macos
 
 *coverage-3.5 (10 Sep 2011)
 
