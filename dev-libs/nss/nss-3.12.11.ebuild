@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.11.ebuild,v 1.3 2011/09/24 15:03:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.11.ebuild,v 1.4 2011/09/24 15:43:47 grobian Exp $
 
 EAPI=3
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -158,7 +158,17 @@ src_install () {
 		mv ${file} ${n}
 		ln -s ${n} ${file}
 		if [[ ${CHOST} == *-darwin* ]]; then
-			install_name_tool -id "${EPREFIX}/usr/$(get_libdir)/${n}" ${n} || die
+			# fix install_name
+			install_name_tool -id "${EPREFIX}/usr/$(get_libdir)/${file}" ${n} || die
+			# and the references that were already made against it
+			install_name_tool \
+				-change "@executable_path/libnssutil3.dylib" \
+					"${EPREFIX}/usr/$(get_libdir)/libnssutil3.dylib" \
+				${n} || die
+			install_name_tool \
+				-change "@executable_path/libnss3.dylib" \
+					"${EPREFIX}/usr/$(get_libdir)/libnss3.dylib" \
+				${n} || die
 		fi
 	done
 
