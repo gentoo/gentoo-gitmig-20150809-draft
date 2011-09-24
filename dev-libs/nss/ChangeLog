@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.214 2011/09/04 10:14:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.215 2011/09/24 14:17:23 grobian Exp $
+
+  24 Sep 2011; Fabian Groffen <grobian@gentoo.org> nss-3.12.11.ebuild:
+  Marked ~x64-macos, libnaming fixes, and disable resigning of libs on Darwin,
+  since Darwin doesn't do ELF
 
   04 Sep 2011; Markus Meier <maekke@gentoo.org> nss-3.12.10.ebuild:
   arm stable, bug #379549
