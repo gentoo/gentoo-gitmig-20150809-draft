@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.90 2011/09/23 17:09:51 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.91 2011/09/24 20:55:10 chainsaw Exp $
+
+*xen-tools-3.4.2-r3 (24 Sep 2011)
+
+  24 Sep 2011; Tony Vroon <chainsaw@gentoo.org> -xen-tools-3.4.2-r2.ebuild,
+  +xen-tools-3.4.2-r3.ebuild, -files/xen-tools-3.4.2-werror-idiocy.patch,
+  +files/xen-tools-3.4.2-werror-idiocy-v2.patch:
+  Revised patch by Ian "idella4" Delaney resolves building on GCC 4.5 & 4.6;
+  closes bug #383977.
 
 *xen-tools-3.4.2-r2 (23 Sep 2011)
 
