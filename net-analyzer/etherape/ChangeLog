@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/etherape
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/ChangeLog,v 1.62 2011/09/20 16:11:51 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/ChangeLog,v 1.63 2011/09/24 16:15:54 armin76 Exp $
+
+  24 Sep 2011; Raúl Porcel <armin76@gentoo.org> etherape-0.9.12.ebuild:
+  sparc stable wrt #383689
 
   20 Sep 2011; Tony Vroon <chainsaw@gentoo.org> etherape-0.9.12.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
