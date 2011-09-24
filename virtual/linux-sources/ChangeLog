@@ -1,6 +1,9 @@
 # ChangeLog for virtual/linux-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/ChangeLog,v 1.8 2011/09/22 11:31:38 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/ChangeLog,v 1.9 2011/09/24 23:33:16 blueness Exp $
+
+  24 Sep 2011; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
+  Changed herd name to kernel
 
   22 Sep 2011; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
   Fix gpg sign failure
