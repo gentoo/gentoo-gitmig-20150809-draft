@@ -5,7 +5,6 @@
 		<email>weaver@gentoo.org</email>
 		<name>Andrey Kislyuk</name>
 	</maintainer>
-	<herd>no-herd</herd>
 	<longdescription lang="en">
 	  Powerman provides power management in a data center or compute cluster
 	  environment.  It performs operations such as power on, power off, and
