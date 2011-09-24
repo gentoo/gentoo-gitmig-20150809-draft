@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.7.1-r1.ebuild,v 1.1 2011/09/23 21:32:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.7.1-r1.ebuild,v 1.2 2011/09/24 15:35:16 dilfridge Exp $
 
 EAPI=4
 
@@ -141,6 +141,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.6.3-no_suid_kdeinit.patch"
 	"${FILESDIR}/${PN}-4.6.3-bytecode.patch"
 	"${FILESDIR}/${PN}-4.7.1-clearbutton.patch"
+	"${FILESDIR}/${PN}-4.7.1-libpng15.patch"
 )
 
 pkg_pretend() {
