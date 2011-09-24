@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.8.9.ebuild,v 1.1 2011/08/27 23:40:25 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.8.9.ebuild,v 1.2 2011/09/24 15:08:21 grobian Exp $
 
 EAPI=3
 
@@ -36,6 +36,13 @@ src_prepare() {
 	# Respect LDFLAGS
 	sed -i -e 's/\$(MKSHLIB) \$(OBJS)/\$(MKSHLIB) \$(LDFLAGS) \$(OBJS)/g' \
 		mozilla/nsprpub/config/rules.mk
+
+	if [[ ${CHOST} == *-darwin* ]] ; then
+		# Fix pkgconfig for Darwin (no RPATH stuff)
+		sed -i -e 's/-Wl,-R${\?libdir}\?//' \
+			"${S}"/mozilla/nsprpub/config/nspr-config.in \
+			"${S}"/mozilla/nsprpub/config/nspr.pc.in || die
+	fi
 }
 
 src_configure() {
