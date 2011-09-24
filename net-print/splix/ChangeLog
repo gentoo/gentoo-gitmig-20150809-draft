@@ -1,6 +1,11 @@
 # ChangeLog for net-print/splix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/splix/ChangeLog,v 1.22 2011/09/21 15:46:11 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/splix/ChangeLog,v 1.23 2011/09/24 21:24:04 chainsaw Exp $
+
+  24 Sep 2011; Tony Vroon <chainsaw@gentoo.org>
+  splix-2.0.0_p20110219-r1.ebuild:
+  Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney &
+  Agostino "ago" Sarubbo in bug #383625.
 
   21 Sep 2011; Thomas Kahle <tomka@gentoo.org> splix-2.0.0_p20110219-r1.ebuild:
   x86 stable per bug 383625
