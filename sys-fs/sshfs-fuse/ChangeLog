@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/sshfs-fuse
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.57 2011/09/04 19:49:40 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.58 2011/09/24 16:44:55 armin76 Exp $
+
+  24 Sep 2011; Raúl Porcel <armin76@gentoo.org> sshfs-fuse-2.2.ebuild,
+  sshfs-fuse-2.3.ebuild:
+  Drop sparc keyword wrt #381641
 
   04 Sep 2011; Tony Vroon <chainsaw@gentoo.org> sshfs-fuse-2.3.ebuild:
   Marked stable based on arch testing by Agostino "ago" Sarubbo & Ian "idella4"
