@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/JSON
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON/ChangeLog,v 1.35 2011/07/29 18:31:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON/ChangeLog,v 1.36 2011/09/24 13:28:29 grobian Exp $
+
+  24 Sep 2011; Fabian Groffen <grobian@gentoo.org> JSON-2.530.0.ebuild:
+  Marked ~x64-macos
 
   29 Jul 2011; Torsten Veller <tove@gentoo.org> -JSON-2.510.0.ebuild:
   Cleanup

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Package-Stash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Stash/ChangeLog,v 1.24 2011/09/06 15:32:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Stash/ChangeLog,v 1.25 2011/09/24 13:29:38 grobian Exp $
+
+  24 Sep 2011; Fabian Groffen <grobian@gentoo.org>
+  Package-Stash-0.320.0.ebuild:
+  Marked ~x64-macos
 
 *Package-Stash-0.320.0 (06 Sep 2011)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/common-sense
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/common-sense/ChangeLog,v 1.18 2011/07/27 12:13:55 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/common-sense/ChangeLog,v 1.19 2011/09/24 13:24:23 grobian Exp $
+
+  24 Sep 2011; Fabian Groffen <grobian@gentoo.org> common-sense-3.400.0.ebuild:
+  Marked ~x64-macos
 
 *common-sense-3.400.0 (27 Jul 2011)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Variable-Magic
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Variable-Magic/ChangeLog,v 1.38 2011/09/04 11:22:47 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Variable-Magic/ChangeLog,v 1.39 2011/09/24 13:12:48 grobian Exp $
+
+  24 Sep 2011; Fabian Groffen <grobian@gentoo.org>
+  Variable-Magic-0.460.0.ebuild:
+  Marked ~x64-macos
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Variable-Magic-0.460.ebuild:
   Cleanup

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Package-DeprecationManager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-DeprecationManager/ChangeLog,v 1.12 2011/08/13 09:09:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-DeprecationManager/ChangeLog,v 1.13 2011/09/24 13:13:54 grobian Exp $
+
+  24 Sep 2011; Fabian Groffen <grobian@gentoo.org>
+  Package-DeprecationManager-0.110.0.ebuild:
+  Marked ~x64-macos
 
   13 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org>
   Package-DeprecationManager-0.10.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Data-Visitor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Visitor/ChangeLog,v 1.7 2011/09/04 11:21:03 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Visitor/ChangeLog,v 1.8 2011/09/24 13:22:12 grobian Exp $
+
+  24 Sep 2011; Fabian Groffen <grobian@gentoo.org> Data-Visitor-0.270.0.ebuild:
+  Marked ~x64-macos
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Data-Visitor-0.27-r1.ebuild:
   Cleanup
