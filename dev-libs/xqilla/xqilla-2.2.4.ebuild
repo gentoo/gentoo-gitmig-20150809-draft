@@ -1,9 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xqilla/xqilla-2.2.4.ebuild,v 1.1 2010/08/29 11:47:00 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xqilla/xqilla-2.2.4.ebuild,v 1.2 2011/09/24 12:36:27 chainsaw Exp $
 
 EAPI="2"
-inherit autotools eutils
+inherit autotools base
 
 MY_P="XQilla-${PV}"
 
@@ -26,14 +26,15 @@ RDEPEND=">=dev-libs/xerces-c-3.1.0
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
+PATCHES=(
+	"${FILESDIR}/${PV}-respect-ldflags-no-rpath.patch"
+	"${FILESDIR}/${P}-gcc46.patch"
+)
+
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	# respect our LDFLAGS and don't add an rpath for the xerces-c lib
-	# since that is in the default LDPATH anyway and the binaries
-	# may need relinking at install-time because they temporary use
-	# already installed libraries
-	epatch "${FILESDIR}/${PV}-respect-ldflags-no-rpath.patch"
+	base_src_prepare
 	eautoreconf
 }
 
