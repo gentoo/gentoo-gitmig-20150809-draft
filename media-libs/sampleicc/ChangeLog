@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/sampleicc
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sampleicc/ChangeLog,v 1.1 2011/09/24 14:09:46 scarabeus Exp $
+
+*sampleicc-1.6.4 (24 Sep 2011)
+
+  24 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> +sampleicc-1.6.4.ebuild,
+  +metadata.xml:
+  Add the library that will be used during libreoffice build (for now bundled.
+  Also fixes bug #175972.
+
