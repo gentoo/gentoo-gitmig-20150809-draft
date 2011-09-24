@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-2.0.1-r1.ebuild,v 1.4 2011/08/29 18:21:28 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-2.0.1-r1.ebuild,v 1.5 2011/09/24 17:09:37 grobian Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -33,6 +33,8 @@ src_prepare() {
 
 	# https://bugs.gentoo.org/show_bug.cgi?id=361061
 	sed -i -e "s|/usr/local/bin:/opt/bin:/bin:/usr/bin|${EPREFIX}usr/local/bin:${EPREFIX}opt/bin:${EPREFIX}bin:${EPREFIX}usr/bin:/usr/local/bin:/opt/bin:/bin:/usr/bin|g" engine/SCons/Platform/posix.py || die
+	# and make sure the build system doesn't "force" /usr/local/ :(
+	sed -i -e "s/'darwin'/'NOWAYdarwinWAYNO'/" setup.py || die
 }
 
 src_install () {

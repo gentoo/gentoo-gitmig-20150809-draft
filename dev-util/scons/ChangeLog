@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/scons
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.99 2011/08/29 18:21:28 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.100 2011/09/24 17:09:37 grobian Exp $
+
+  24 Sep 2011; Fabian Groffen <grobian@gentoo.org> scons-2.0.1-r1.ebuild:
+  Prevent the buildsystem from forcing installation into /usr/local on Darwin
 
   29 Aug 2011; Fabian Groffen <grobian@gentoo.org> scons-2.0.1-r1.ebuild:
   Fix hardcoded paths to refer to those from the Prefix first, by Asfand Yar
