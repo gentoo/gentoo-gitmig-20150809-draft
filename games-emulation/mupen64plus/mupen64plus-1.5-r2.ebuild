@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/mupen64plus-1.5-r2.ebuild,v 1.2 2011/04/15 11:45:26 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/mupen64plus-1.5-r2.ebuild,v 1.3 2011/09/24 05:48:48 vapier Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ RDEPEND="virtual/opengl
 	media-libs/libsdl
 	media-libs/sdl-ttf
 	media-fonts/dejavu
-	sys-libs/zlib
+	sys-libs/zlib[minizip]
 	x11-libs/gtk+:2
 	libsamplerate? ( media-libs/libsamplerate )
 	lirc? ( app-misc/lirc )
@@ -53,6 +53,9 @@ pkg_setup() {
 src_prepare() {
 	EPATCH_SOURCE="${WORKDIR}/patches" EPATCH_SUFFIX="patch" \
 		epatch
+
+	rm -rf main/zip
+	epatch "${FILESDIR}"/${P}-minizip.patch #383845
 
 	sed -i \
 		-e "s:/usr/local/share/mupen64plus:${GAMES_DATADIR}/mupen64plus:" \

@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/mupen64plus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/ChangeLog,v 1.14 2011/07/13 06:55:27 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/ChangeLog,v 1.15 2011/09/24 05:48:48 vapier Exp $
+
+  24 Sep 2011; Mike Frysinger <vapier@gentoo.org> mupen64plus-1.5-r2.ebuild,
+  +files/mupen64plus-1.5-minizip.patch:
+  Use minizip from system zlib #383845 by Dennis Schridde.
 
   13 Jul 2011; Tupone Alfredo <tupone@gentoo.org>
   files/mupen64plus-1.5-gcc46.patch:
