@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/g-ctan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-ctan/ChangeLog,v 1.19 2011/09/24 19:23:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-ctan/ChangeLog,v 1.20 2011/09/24 19:28:59 fauli Exp $
+
+*g-ctan-2011.1 (24 Sep 2011)
+
+  24 Sep 2011; Christian Faulhammer <fauli@gentoo.org> +g-ctan-2011.1.ebuild:
+  version bump for TeXLive 2011
 
 *g-ctan-2010.2 (24 Sep 2011)
 
