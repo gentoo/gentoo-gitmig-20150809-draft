@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.4.2.ebuild,v 1.1 2011/08/10 21:09:15 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.4.2.ebuild,v 1.2 2011/09/24 13:05:32 chainsaw Exp $
 
 EAPI="2"
 
@@ -56,6 +56,7 @@ src_unpack() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.4.1-db5.patch
+	epatch "${FILESDIR}"/${PN}-3.4.2-gcc46.patch
 
 	sed -i \
 		-e 's|\(install_docdir[[:space:]]*\):=|\1?=|' \

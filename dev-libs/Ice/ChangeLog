@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/Ice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.7 2011/08/10 21:09:15 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.8 2011/09/24 13:05:32 chainsaw Exp $
+
+  24 Sep 2011; Tony Vroon <chainsaw@gentoo.org> Ice-3.4.2.ebuild,
+  +files/Ice-3.4.2-gcc46.patch:
+  Patch by Maciej Piechotka allows building on GCC 4.6; closes bug #362991.
 
 *Ice-3.4.2 (10 Aug 2011)
 
