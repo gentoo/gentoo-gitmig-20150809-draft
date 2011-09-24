@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.4.12.1.ebuild,v 1.1 2011/07/19 18:40:25 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.4.12.1.ebuild,v 1.2 2011/09/24 17:19:06 grobian Exp $
 
-EAPI="2"
+EAPI="3"
 
 inherit eutils flag-o-matic multilib pax-utils scons-utils toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="BSD"
 
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~arm ~x86 ~x64-macos ~x86-macos"
 IUSE="readline"
 
 RDEPEND="readline? ( >=sys-libs/readline-6.1 )"
@@ -85,8 +85,14 @@ src_install() {
 
 	dobin d8 || die
 
-	dolib libv8-${PV}.so || die
-	dosym libv8-${PV}.so /usr/$(get_libdir)/libv8.so || die
+	if [[ ${CHOST} == *-darwin* ]] ; then
+		install_name_tool \
+			-id "${EPREFIX}"/usr/$(get_libdir)/libv8-${PV}$(get_libname) \
+			libv8-${PV}$(get_libname) || die
+	fi
+
+	dolib libv8-${PV}$(get_libname) || die
+	dosym libv8-${PV}$(get_libname) /usr/$(get_libdir)/libv8$(get_libname) || die
 
 	dodoc AUTHORS ChangeLog || die
 }
