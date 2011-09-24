@@ -1,8 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogviewer/elogviewer-0.5.2-r2.ebuild,v 1.5 2009/03/17 12:30:14 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogviewer/elogviewer-0.5.2-r2.ebuild,v 1.6 2011/09/24 17:36:05 zmedico Exp $
 
-inherit eutils
+PYTHON_DEPEND=2
+
+inherit eutils python
 
 DESCRIPTION="GTK+ based utility to parse the contents of elogs created by Portage"
 HOMEPAGE="http://sourceforge.net/projects/elogviewer/"
@@ -32,6 +34,7 @@ src_install() {
 	doman "${WORKDIR}"/elogviewer.1
 	make_desktop_entry elogviewer Elogviewer "" "System" ||
 		die "Couldn't make desktop entry"
+	python_convert_shebangs -r 2 "${D}"
 }
 
 pkg_postinst() {
