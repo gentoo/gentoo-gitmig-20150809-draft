@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-CPAN-Meta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN-Meta/ChangeLog,v 1.14 2011/08/06 07:41:08 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CPAN-Meta/ChangeLog,v 1.15 2011/09/24 19:00:43 tove Exp $
+
+*perl-CPAN-Meta-2.112.621 (24 Sep 2011)
+
+  24 Sep 2011; Torsten Veller <tove@gentoo.org>
+  +perl-CPAN-Meta-2.112.621.ebuild:
+  Version bump
 
 *perl-CPAN-Meta-2.112.150 (06 Aug 2011)
 
