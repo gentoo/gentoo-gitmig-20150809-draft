@@ -9,7 +9,6 @@
 	  Enable support for the vala programming language
 	</flag>
   </use>
-  <herd>no-herd</herd>
   <maintainer>
 	<email>maintainer-needed@gentoo.org</email>
   </maintainer>
