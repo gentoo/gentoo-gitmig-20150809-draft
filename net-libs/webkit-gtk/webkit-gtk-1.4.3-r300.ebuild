@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.4.3-r300.ebuild,v 1.1 2011/09/22 18:42:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.4.3-r300.ebuild,v 1.2 2011/09/24 13:53:13 pacho Exp $
 
 EAPI="4"
 
@@ -59,9 +59,6 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	DOCS="Source/WebKit/gtk/NEWS Source/WebKit/gtk/ChangeLog"
-
-	# Link explicitly with XRender on Linux/Unix, bug #371751
-	epatch "${FILESDIR}/${PN}-1.4.3-underlinking.patch"
 
 	# FIXME: Fix unaligned accesses on ARM, IA64 and SPARC
 	# https://bugs.webkit.org/show_bug.cgi?id=19775

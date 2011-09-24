@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.120 2011/09/22 18:42:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.121 2011/09/24 13:53:13 pacho Exp $
+
+  24 Sep 2011; Pacho Ramos <pacho@gentoo.org> webkit-gtk-1.4.3-r300.ebuild,
+  -files/webkit-gtk-1.4.3-underlinking.patch:
+  underlinking patch is not needed as it was already applied by upstream, bug
+  #384181 by Lance Poore, Hilco, Albert W. Hopkins, S.Holzbach and maby others.
 
 *webkit-gtk-1.4.3-r300 (22 Sep 2011)
 *webkit-gtk-1.4.3-r200 (22 Sep 2011)
