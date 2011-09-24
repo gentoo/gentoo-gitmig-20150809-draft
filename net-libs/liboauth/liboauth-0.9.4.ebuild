@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/liboauth-0.9.4.ebuild,v 1.1 2011/03/18 00:37:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/liboauth-0.9.4.ebuild,v 1.2 2011/09/24 15:10:42 grobian Exp $
 
-EAPI=2
+EAPI=3
 
 DESCRIPTION="C library implementing the OAuth secure authentication protocol"
 HOMEPAGE="http://liboauth.sourceforge.net/"
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 
 LICENSE="|| ( GPL-2 MIT )"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x64-macos"
 IUSE="curl doc bindist +nss"
 
 CDEPEND="
@@ -65,7 +65,7 @@ src_compile() {
 
 	if use doc ; then
 		# make sure fonts are found
-		export DOTFONTPATH=/usr/share/fonts/freefont-ttf
+		export DOTFONTPATH="${EPREFIX}"/usr/share/fonts/freefont-ttf
 		emake dox || die "emake dox failed"
 	fi
 }

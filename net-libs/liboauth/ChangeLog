@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/liboauth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/ChangeLog,v 1.8 2011/03/18 00:37:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liboauth/ChangeLog,v 1.9 2011/09/24 15:10:42 grobian Exp $
+
+  24 Sep 2011; Fabian Groffen <grobian@gentoo.org> liboauth-0.9.4.ebuild:
+  Fixed for Prefix (EAPI=3) and marked ~x64-macos
 
 *liboauth-0.9.4 (18 Mar 2011)
 
