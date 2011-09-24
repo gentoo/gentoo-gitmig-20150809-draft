@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-9999.ebuild,v 1.2 2011/08/25 15:13:22 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-9999.ebuild,v 1.3 2011/09/24 17:49:27 maksbotan Exp $
 
 EAPI="2"
 
@@ -12,12 +12,13 @@ SLOT="0"
 KEYWORDS=""
 IUSE="debug +acetamide +adiumstyles +autoidler +autopaste +chathistory +crypt
 		+depester +embedmedia +herbicide +hili +juick +lastseen +metacontacts
-		+modnok +nativeemoticons +p100q +rosenthal +standardstyles +xoox
+		+modnok +nativeemoticons +otroid +p100q +rosenthal +standardstyles +xoox
 		+xtazy"
 
 DEPEND="=net-misc/leechcraft-core-${PV}
 		x11-libs/qt-webkit
 		x11-libs/qt-multimedia
+		otroid? ( net-libs/libotr )
 		xoox? ( =net-libs/qxmpp-9999[extras] media-libs/speex )
 		xtazy? ( x11-libs/qt-dbus )
 		crypt? ( app-crypt/qca app-crypt/qca-gnupg )"
@@ -47,6 +48,7 @@ src_configure() {
 		$(cmake-utils_use_enable metacontacts AZOTH_LASTSEEN)
 		$(cmake-utils_use_enable modnok AZOTH_MODNOK)
 		$(cmake-utils_use_enable nativeemoticons AZOTH_NATIVEEMOTICONS)
+		$(cmake-utils_use_enable otroid AZOTH_OTROID)
 		$(cmake-utils_use_enable p100q AZOTH_P100Q)
 		$(cmake-utils_use_enable rosenthal AZOTH_ROSENTHAL)
 		$(cmake-utils_use_enable standardstyles AZOTH_STANDARDSTYLES)

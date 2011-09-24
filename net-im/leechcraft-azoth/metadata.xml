@@ -17,6 +17,7 @@
 	<flag name="metacontacts">Build plugin for metacontacts support</flag>
 	<flag name="modnok">Build Modnok for in-chat LaTeX formulae rendering</flag>
 	<flag name="nativeemoticons">Build support for native Azoth's emoticons packs</flag>
+	<flag name="otroid">Build OTRoid, plugin for the Off-the-Record deniable encryption system</flag>
 	<flag name="p100q">Build p100q, plugin for psto.net microblogging service</flag>
 	<flag name="rosenthal">Build Rosenthal, the spellchecker plugin</flag>
 	<flag name="standardstyles">Build support for standard Azoth styles engine</flag>
