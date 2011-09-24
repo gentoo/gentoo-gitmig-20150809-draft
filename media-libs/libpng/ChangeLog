@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libpng
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.304 2011/09/24 05:39:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.305 2011/09/24 21:12:35 chainsaw Exp $
+
+  24 Sep 2011; Tony Vroon <chainsaw@gentoo.org> libpng-1.2.46.ebuild,
+  libpng-1.4.8-r1.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah "Armageddon" El Lazkani in bug #384285.
 
 *libpng-1.5.5 (24 Sep 2011)
 
