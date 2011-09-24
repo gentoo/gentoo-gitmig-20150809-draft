@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.215 2011/09/24 14:17:23 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.216 2011/09/24 15:03:58 grobian Exp $
+
+  24 Sep 2011; Fabian Groffen <grobian@gentoo.org> nss-3.12.11.ebuild:
+  Fix pkg-config and nss-config for Darwin where the linker doesn't understand
+  (and need) -R arguments
 
   24 Sep 2011; Fabian Groffen <grobian@gentoo.org> nss-3.12.11.ebuild:
   Marked ~x64-macos, libnaming fixes, and disable resigning of libs on Darwin,

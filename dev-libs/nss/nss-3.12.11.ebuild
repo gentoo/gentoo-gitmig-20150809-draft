@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.11.ebuild,v 1.2 2011/09/24 14:17:23 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.11.ebuild,v 1.3 2011/09/24 15:03:58 grobian Exp $
 
 EAPI=3
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -42,7 +42,13 @@ src_prepare() {
 
 	# Fix pkgconfig file for Prefix
 	sed -i -e "/^PREFIX =/s:= /usr:= ${EPREFIX}/usr:" \
-		"${S}"/mozilla/security/nss/config/Makefile
+		"${S}"/mozilla/security/nss/config/Makefile || die
+	if [[ ${CHOST} == *-darwin* ]] ; then
+		# Fix pkgconfig for Darwin (no RPATH stuff)
+		sed -i -e 's/-Wl,-R${\?libdir}\?//' \
+			"${S}"/mozilla/security/nss/config/nss-config.in \
+			"${S}"/mozilla/security/nss/config/nss.pc.in || die
+	fi
 
 	epatch "${FILESDIR}"/${PN}-3.12.4-solaris-gcc.patch  # breaks non-gnu tools
 	# dirty hack
