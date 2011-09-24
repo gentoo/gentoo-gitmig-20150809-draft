@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/qt-creator
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.90 2011/09/21 10:21:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.91 2011/09/24 09:09:24 hwoarang Exp $
+
+  24 Sep 2011; Markos Chandras <hwoarang@gentoo.org>
+  qt-creator-2.3.0-r1.ebuild:
+  Refactor dependency variables and introduce pkgconfig dependency
 
 *qt-creator-2.3.0-r1 (21 Sep 2011)
 

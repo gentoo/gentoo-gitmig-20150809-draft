@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.3.0-r1.ebuild,v 1.1 2011/09/21 10:21:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.3.0-r1.ebuild,v 1.2 2011/09/24 09:09:24 hwoarang Exp $
 
 EAPI="4"
 LANGS="cs de es fr hu it ja pl ru sl uk zh_CN"
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="bazaar bineditor bookmarks +botan-bundled +cmake cvs debug doc examples fakevim git
 	mercurial perforce +qml qtscript rss subversion"
 QTVER="4.7.4:4"
-DEPEND=">=x11-libs/qt-assistant-${QTVER}[doc?]
+CDEPEND=">=x11-libs/qt-assistant-${QTVER}[doc?]
 	>=x11-libs/qt-sql-${QTVER}
 	>=x11-libs/qt-svg-${QTVER}
 	debug? ( >=x11-libs/qt-test-${QTVER} )
@@ -34,7 +34,10 @@ DEPEND=">=x11-libs/qt-assistant-${QTVER}[doc?]
 	qtscript? ( >=x11-libs/qt-script-${QTVER} )
 	!botan-bundled? ( =dev-libs/botan-1.8* )"
 
-RDEPEND="${DEPEND}
+DEPEND= "${CDEPEND}
+	!botan-bundled? ( dev-util/pkgconfig )"
+
+RDEPEND="${CDEPEND}
 	bazaar? ( dev-vcs/bzr )
 	cmake? ( dev-util/cmake )
 	cvs? ( dev-vcs/cvs )
