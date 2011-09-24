@@ -5,7 +5,6 @@
 <email>joker@gentoo.org</email>
 <name>Christian Birchinger</name>
 </maintainer>
-<herd>no-herd</herd>
 <longdescription>
 This tool lets you programatically (or manually) simulate keyboard input and
 mouse activity, move and resize windows, etc. It does this using X11's XTEST
