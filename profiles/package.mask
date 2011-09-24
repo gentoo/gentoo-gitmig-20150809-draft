@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13072 2011/09/23 10:19:27 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13073 2011/09/24 23:32:03 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (24 Sep 2011)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-16
 
 # Michael Sterrett <mr_bones_@gentoo.org> (22 Sep 2011)
 # Doesn't work and upstream has gone away.
@@ -441,11 +446,6 @@ dev-tex/pdftex
 # Mask for testing, depends on masked networkmanager
 # (the "3011" is not a typo!)
 >=kde-misc/knetworkmanager-4.4.0_p30110815
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (11 Aug 2011)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-15
 
 # Robert Piasek <dagger@gentoo.org> (09 Aug 2011)
 # Masking for testing
