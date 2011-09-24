@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-9999.ebuild,v 1.7 2011/09/23 04:17:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-9999.ebuild,v 1.8 2011/09/24 06:39:35 vapier Exp $
 
 EAPI="2" #356089
 
@@ -67,8 +67,11 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	use static-libs || find "${D}" -name libltdl.la -delete
 	dodoc AUTHORS ChangeLog* NEWS README THANKS TODO doc/PLATFORMS
+
+	# While the libltdl.la file is not used directly, the m4 ltdl logic
+	# keys off of its existence when searching for ltdl support. #293921
+	#use static-libs || find "${D}" -name libltdl.la -delete
 
 	for x in $(find "${D}" -name config.guess -o -name config.sub) ; do
 		rm -f "${x}" ; ln -sf /usr/share/gnuconfig/${x##*/} "${x}"
