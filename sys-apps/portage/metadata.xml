@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>no-herd</herd>
 	<upstream>
 		<bugs-to>mailto:dev-portage@gentoo.org</bugs-to>
 		<changelog>http://git.overlays.gentoo.org/gitweb/?p=proj/portage.git;a=blob_plain;f=RELEASE-NOTES</changelog>

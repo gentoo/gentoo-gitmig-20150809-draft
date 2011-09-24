@@ -5,7 +5,6 @@
 <email>joker@gentoo.org</email>
 <name>Christian Birchinger</name>
 </maintainer>
-<herd>no-herd</herd>
 <longdescription>
 Utility to for advanced configuration of the following Razer mice: Krait, Lachesis,
 DeathAdder (Classic, 3500 DPI, Black Edition), Copperhead, Naga, Boomslang CE. The
