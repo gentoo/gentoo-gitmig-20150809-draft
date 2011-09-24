@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.50 2011/09/05 13:09:44 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.51 2011/09/24 16:25:33 floppym Exp $
+
+*pyro-3.15 (24 Sep 2011)
+
+  24 Sep 2011; Mike Gilbert <floppym@gentoo.org> +pyro-3.15.ebuild:
+  Version bump requested by aidecoe.
 
 *pyro-4.8 (05 Sep 2011)
 
