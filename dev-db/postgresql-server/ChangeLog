@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.140 2011/09/17 17:48:36 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.141 2011/09/24 17:14:00 armin76 Exp $
+
+  24 Sep 2011; Raúl Porcel <armin76@gentoo.org>
+  postgresql-server-8.2.21-r2.ebuild, postgresql-server-8.3.15-r2.ebuild,
+  postgresql-server-8.4.8-r2.ebuild, postgresql-server-9.0.4-r2.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #371763
 
 *postgresql-server-9.1.0 (17 Sep 2011)
 
