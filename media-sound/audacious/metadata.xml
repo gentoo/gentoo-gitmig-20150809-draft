@@ -8,6 +8,5 @@
   </maintainer>
   <use>
     <flag name="chardet">Try to handle non-UTF8 chinese/japanese/korean ID3 tags</flag>
-    <flag name="gtk3">Use GTK+ version 3 instead of GTK+ version 2</flag>
   </use>
 </pkgmetadata>

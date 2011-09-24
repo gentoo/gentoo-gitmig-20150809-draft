@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.241 2011/09/22 15:17:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.242 2011/09/24 12:20:34 chainsaw Exp $
+
+*audacious-3.0.3-r1 (24 Sep 2011)
+
+  24 Sep 2011; Tony Vroon <chainsaw@gentoo.org> -audacious-3.0.3.ebuild,
+  +audacious-3.0.3-r1.ebuild, metadata.xml:
+  Trying to use GTK+2 results in plugin build failures, particularly aosd. Stop
+  offering the choice and handing the user the pieces. Closes bug #384185 by
+  Lance Poore.
 
   22 Sep 2011; Mike Gilbert <floppym@gentoo.org> audacious-3.0.3.ebuild:
   Fix faulty gtk dependency.
