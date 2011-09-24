@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.36 2011/09/16 07:57:41 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr/ChangeLog,v 1.37 2011/09/24 09:44:18 grobian Exp $
+
+  24 Sep 2011; Fabian Groffen <grobian@gentoo.org> bzr-2.4.1.ebuild:
+  Marked ~x64-macos
 
 *bzr-2.4.1 (15 Sep 2011)
 
