@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/cairo-clock/cairo-clock-0.3.3.ebuild,v 1.5 2011/03/02 18:41:04 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/cairo-clock/cairo-clock-0.3.3.ebuild,v 1.6 2011/09/24 11:48:10 chainsaw Exp $
 
 EAPI=2
+
+inherit autotools base
 
 DESCRIPTION="An analog clock displaying the system-time."
 HOMEPAGE="http://macslow.thepimp.net/?page_id=23"
@@ -12,6 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~x86 ~x86-fbsd"
 IUSE=""
+PATCHES=( "${FILESDIR}/${P}-gcc46.patch" )
 
 RDEPEND="dev-libs/glib:2
 	gnome-base/libglade
@@ -23,6 +26,12 @@ DEPEND="${DEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
 	sys-devel/gettext"
+
+src_prepare() {
+	base_src_prepare
+	intltoolize --force --copy --automake || die "intltoolize failed"
+	eautoreconf
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
