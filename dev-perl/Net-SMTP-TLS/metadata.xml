@@ -5,6 +5,7 @@
     <email>dev-zero@gentoo.org</email>
     <name>Tiziano Müller</name>
   </maintainer>
+  <herd>perl</herd>
   <upstream>
 	  <remote-id type="cpan">Net::SMTP::TLS</remote-id>
   </upstream>

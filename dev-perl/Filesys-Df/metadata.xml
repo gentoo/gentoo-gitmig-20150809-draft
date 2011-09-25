@@ -5,6 +5,7 @@
     <email>jokey@gentoo.org</email>
     <name>Markus Ullmann</name>
   </maintainer>
+  <herd>perl</herd>
   <upstream>
     <remote-id type="cpan">Filesys-Df</remote-id>
   </upstream>
