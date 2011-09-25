@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/libmpd-11.8.17.ebuild,v 1.2 2011/08/20 11:22:32 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/libmpd-11.8.17.ebuild,v 1.3 2011/09/25 20:15:13 chainsaw Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.sarine.nl/Programs/gmpc/11.8/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-interix ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="doc static-libs"
 
 RDEPEND=">=dev-libs/glib-2.16:2"

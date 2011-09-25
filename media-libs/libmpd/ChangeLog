@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/ChangeLog,v 1.62 2011/08/20 11:22:32 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/ChangeLog,v 1.63 2011/09/25 20:15:13 chainsaw Exp $
+
+  25 Sep 2011; Tony Vroon <chainsaw@gentoo.org> libmpd-11.8.17.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah "Armageddon" El Lazkani in bug #381219.
 
   20 Aug 2011; Christoph Mende <angelos@gentoo.org> libmpd-11.8.17.ebuild:
   Re-add keywords
