@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/zencoding-vim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/zencoding-vim/ChangeLog,v 1.6 2011/03/10 04:52:04 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/zencoding-vim/ChangeLog,v 1.7 2011/09/25 07:37:19 radhermit Exp $
+
+*zencoding-vim-0.54 (25 Sep 2011)
+
+  25 Sep 2011; Tim Harder <radhermit@gentoo.org> +zencoding-vim-0.54.ebuild:
+  Version bump. Use github mirror.
 
 *zencoding-vim-0.53 (10 Mar 2011)
 
