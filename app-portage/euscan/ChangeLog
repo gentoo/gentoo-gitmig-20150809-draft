@@ -1,0 +1,11 @@
+# ChangeLog for app-portage/euscan
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/euscan/ChangeLog,v 1.1 2011/09/25 17:41:38 hwoarang Exp $
+
+*euscan-9999 (25 Sep 2011)
+
+  25 Sep 2011; Markos Chandras <hwoarang@gentoo.org> +euscan-9999.ebuild,
+  +metadata.xml:
+  Initial commit. Bug #383937. Thanks to Corentin Chary
+  <corentin.chary@gmail.com>
+
