@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004-data
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ChangeLog,v 1.27 2010/12/16 19:21:34 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ChangeLog,v 1.28 2011/09/25 20:07:14 mr_bones_ Exp $
+
+  25 Sep 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  ut2004-data-3186-r4.ebuild:
+  add interactive property (bug #384455)
 
   16 Dec 2010; Michael Sterrett <mr_bones_@gentoo.org>
   ut2004-data-3186-r4.ebuild:
