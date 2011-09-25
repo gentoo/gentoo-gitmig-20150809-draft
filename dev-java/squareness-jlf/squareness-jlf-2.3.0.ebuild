@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/squareness-jlf/squareness-jlf-2.3.0.ebuild,v 1.1 2008/07/12 09:41:28 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/squareness-jlf/squareness-jlf-2.3.0.ebuild,v 1.2 2011/09/25 19:46:45 caster Exp $
+
+EAPI="1"
 
 JAVA_PKG_IUSE="doc source"
 inherit java-pkg-2 java-ant-2
@@ -17,10 +19,10 @@ IUSE=""
 S="${WORKDIR}"
 
 RDEPEND=">=virtual/jre-1.4
-	dev-java/laf-plugin"
+	dev-java/laf-plugin:0"
 
 DEPEND=">=virtual/jdk-1.4
-	dev-java/laf-plugin"
+	dev-java/laf-plugin:0"
 
 EANT_GENTOO_CLASSPATH="laf-plugin"
 

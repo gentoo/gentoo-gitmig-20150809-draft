@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/skinlf
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/skinlf/ChangeLog,v 1.9 2007/08/03 15:40:22 betelgeuse Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/skinlf/ChangeLog,v 1.10 2011/09/25 19:45:12 caster Exp $
+
+  25 Sep 2011; Vlastimil Babka <caster@gentoo.org> skinlf-6.7.ebuild:
+  Pin laf-plugin slot.
 
   03 Aug 2007; Petteri Räty <betelgeuse@gentoo.org>
   -skinlf-1.2.12-r1.ebuild:
