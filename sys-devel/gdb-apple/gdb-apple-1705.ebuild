@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb-apple/gdb-apple-1705.ebuild,v 1.2 2011/09/03 14:58:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb-apple/gdb-apple-1705.ebuild,v 1.3 2011/09/25 10:54:43 grobian Exp $
 
 EAPI="3"
 
@@ -29,6 +29,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-no-global-gdbinit.patch
 	epatch "${FILESDIR}"/${PN}-768-texinfo.patch
 	epatch "${FILESDIR}"/${PN}-1518-darwin8-9.patch
+	epatch "${FILESDIR}"/${PN}-1705-darwin8-10.patch
 	[[ ${CHOST} == *-darwin8 ]] && epatch "${FILESDIR}"/${PN}-1518-darwin8.patch
 }
 
