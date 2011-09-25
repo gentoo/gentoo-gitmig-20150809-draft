@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hashed-storage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashed-storage/ChangeLog,v 1.13 2011/08/04 21:03:16 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hashed-storage/ChangeLog,v 1.14 2011/09/25 08:12:28 grobian Exp $
+
+  25 Sep 2011; Fabian Groffen <grobian@gentoo.org> hashed-storage-0.5.7.ebuild:
+  Fixed for Prefix, marked ~ppc-macos and ~x86-macos
 
 *hashed-storage-0.5.7 (04 Aug 2011)
 
