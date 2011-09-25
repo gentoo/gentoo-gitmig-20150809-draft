@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/metagen-9999.ebuild,v 1.3 2011/08/13 22:22:06 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/metagen-9999.ebuild,v 1.4 2011/09/25 14:31:01 neurogeek Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -22,11 +22,6 @@ IUSE=""
 DEPEND=">=dev-python/jaxml-3.01
 		>=sys-apps/portage-2.1.9.42"
 RDEPEND="${DEPEND}"
-
-src_prepare() {
-	distutils_src_prepare
-	git_src_prepare
-}
 
 src_install() {
 	distutils_src_install
