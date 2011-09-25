@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.50 2011/08/20 06:48:42 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailutils/ChangeLog,v 1.51 2011/09/25 17:10:39 armin76 Exp $
+
+  25 Sep 2011; Raúl Porcel <armin76@gentoo.org> mailutils-0.6-r3.ebuild,
+  mailutils-2.2.ebuild:
+  Drop alpha/sparc keywords
 
   20 Aug 2011; Eray Aslan <eras@gentoo.org> mailutils-2.2.ebuild:
   Use Python 2. Don't install *.pyc, *.pyo, *.a and *.la files in Python
