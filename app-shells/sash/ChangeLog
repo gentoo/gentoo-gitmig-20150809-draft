@@ -1,6 +1,14 @@
 # ChangeLog for app-shells/sash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.41 2011/09/01 16:21:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.42 2011/09/25 19:43:27 vapier Exp $
+
+  25 Sep 2011; Mike Frysinger <vapier@gentoo.org>
+  -files/sash-3.6-fix-includes.patch, files/sash-3.6-readline.patch,
+  sash-3.7-r1.ebuild, sash-3.7-r3.ebuild:
+  Drop useless fix-includes patch as this breaks with gcc-4.6+
+  (--disable-shared is not a valid flag). Depend on lib packages being built
+  with USE=static-libs when we are built with USE=static #384333 by Guenther
+  Brunthaler.
 
 *sash-3.7-r3 (01 Sep 2011)
 

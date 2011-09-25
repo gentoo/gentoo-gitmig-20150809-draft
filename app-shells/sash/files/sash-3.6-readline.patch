@@ -1,6 +1,5 @@
-diff -ruN sash-3.6/Makefile sash-3.6.readline/Makefile
---- sash-3.6/Makefile	2003-10-17 14:25:00.306848712 +0200
-+++ sash-3.6.readline/Makefile	2003-10-17 14:27:34.529403320 +0200
+--- sash-3.6/Makefile
++++ sash-3.6/Makefile
 @@ -19,10 +19,11 @@
  	-DHAVE_LINUX_ATTR=$(HAVE_LINUX_ATTR) \
  	-DHAVE_LINUX_MOUNT=$(HAVE_LINUX_MOUNT) \
@@ -9,15 +8,14 @@ diff -ruN sash-3.6/Makefile sash-3.6.readline/Makefile
 +	-DMOUNT_TYPE=$(MOUNT_TYPE) \
 +	-DHAVE_READLINE
  
- LDFLAGS = --disable-shared -static -s
+ LDFLAGS = -static -s
 -LIBS = -lz
 +LIBS = -lz -lreadline -lncurses
  
  
  BINDIR = /bin
-diff -ruN sash-3.6/sash.c sash-3.6.readline/sash.c
---- sash-3.6/sash.c	2002-07-22 00:55:28.000000000 +0200
-+++ sash-3.6.readline/sash.c	2003-10-17 14:26:26.184793280 +0200
+--- sash-3.6/sash.c
++++ sash-3.6/sash.c
 @@ -384,6 +384,201 @@
  static	void	usage(void);
  static	Alias *	findAlias(const char * name);
