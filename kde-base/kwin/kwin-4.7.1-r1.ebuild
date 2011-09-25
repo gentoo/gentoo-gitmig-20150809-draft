@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.7.1-r1.ebuild,v 1.1 2011/09/13 20:12:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwin/kwin-4.7.1-r1.ebuild,v 1.2 2011/09/25 19:31:41 dilfridge Exp $
 
 EAPI=4
 
@@ -22,7 +22,10 @@ COMMONDEPEND="
 	>=x11-libs/libXrandr-1.2.1
 	x11-libs/libXrender
 	opengl? ( >=media-libs/mesa-7.10 )
-	gles? ( >=media-libs/mesa-7.10[egl(+),gles] )
+	gles? (
+		|| (  ( >=media-libs/mesa-7.10[egl(+),gles] <media-libs/mesa-7.12[egl(+),gles] )
+			>=media-libs/mesa-7.12[egl(+),gles2] )
+	)
 	xinerama? ( x11-libs/libXinerama )
 "
 DEPEND="${COMMONDEPEND}
