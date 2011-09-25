@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/mg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.33 2011/09/25 17:30:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.34 2011/09/25 17:49:10 ulm Exp $
+
+  25 Sep 2011; Ulrich Mueller <ulm@gentoo.org> mg-20110120.ebuild,
+  mg-20110905.ebuild:
+  Set /usr/bin/emacs symlink with USE=livecd.
 
   25 Sep 2011; Raúl Porcel <armin76@gentoo.org> mg-20110120.ebuild,
   mg-20110905.ebuild:
