@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.825 2011/09/23 17:14:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.826 2011/09/25 01:52:54 phajdan.jr Exp $
+
+  25 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> gcc-4.5.3-r1.ebuild:
+  x86 stable wrt bug #357479
 
   23 Sep 2011; Kacper Kowalik <xarthisius@gentoo.org> gcc-4.5.3-r1.ebuild:
   ppc/ppc64 stable wrt #357479
