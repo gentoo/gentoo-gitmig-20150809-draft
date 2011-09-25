@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.301 2011/09/20 03:32:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.302 2011/09/25 20:42:52 chainsaw Exp $
+
+  25 Sep 2011; Tony Vroon <chainsaw@gentoo.org> gstreamer-0.10.35.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Tomáš "Mepho" Pružina in bug #382225.
 
   20 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gstreamer-0.10.35.ebuild:
