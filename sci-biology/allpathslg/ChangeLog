@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/allpathslg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpathslg/ChangeLog,v 1.3 2011/06/20 05:34:50 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpathslg/ChangeLog,v 1.4 2011/09/25 00:33:39 weaver Exp $
+
+*allpathslg-38573 (25 Sep 2011)
+
+  25 Sep 2011; Andrey Kislyuk <weaver@gentoo.org> +allpathslg-38573.ebuild:
+  Version bump
 
 *allpathslg-37578 (20 Jun 2011)
 
