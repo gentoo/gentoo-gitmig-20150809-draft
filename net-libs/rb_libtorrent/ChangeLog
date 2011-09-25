@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.113 2011/08/02 14:18:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.114 2011/09/25 17:58:30 hwoarang Exp $
+
+*rb_libtorrent-0.15.7-r1 (25 Sep 2011)
+
+  25 Sep 2011; Markos Chandras <hwoarang@gentoo.org>
+  +rb_libtorrent-0.15.7-r1.ebuild:
+  Add static-libs useflag. Drop .la files. BUg #384433. Thanks to Hans
+  <immerdabeiundnie@abwesend.de>
 
 *rb_libtorrent-0.15.7 (02 Aug 2011)
 
