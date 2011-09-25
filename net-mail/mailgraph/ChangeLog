@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailgraph
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/ChangeLog,v 1.39 2011/08/19 19:18:38 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/ChangeLog,v 1.40 2011/09/25 20:10:52 chainsaw Exp $
+
+  25 Sep 2011; Tony Vroon <chainsaw@gentoo.org> mailgraph-1.14-r2.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
+  "idella4" Delaney in bug #379893.
 
   19 Aug 2011; Eray Aslan <eras@gentoo.org> -mailgraph-1.14-r1.ebuild:
   remove un-upgradable version
