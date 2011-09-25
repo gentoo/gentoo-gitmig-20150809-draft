@@ -3,7 +3,4 @@
 <pkgmetadata>
 <herd>base-system</herd>
 <herd>embedded</herd>
-<maintainer>
-  <email>ulm@gentoo.org</email>
-</maintainer>
 </pkgmetadata>

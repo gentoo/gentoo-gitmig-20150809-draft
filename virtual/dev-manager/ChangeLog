@@ -1,6 +1,9 @@
 # ChangeLog for virtual/dev-manager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/dev-manager/ChangeLog,v 1.1 2011/04/15 21:46:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/dev-manager/ChangeLog,v 1.2 2011/09/25 21:40:43 ulm Exp $
+
+  25 Sep 2011; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Remove myself as maintainer.
 
 *dev-manager-0 (15 Apr 2011)
 

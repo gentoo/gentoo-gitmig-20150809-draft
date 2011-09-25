@@ -1,6 +1,9 @@
 # ChangeLog for virtual/w3m
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/w3m/ChangeLog,v 1.1 2011/04/13 15:01:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/w3m/ChangeLog,v 1.2 2011/09/25 21:50:56 ulm Exp $
+
+  25 Sep 2011; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Remove myself as maintainer.
 
 *w3m-0 (13 Apr 2011)
 

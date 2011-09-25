@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ssh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ssh/ChangeLog,v 1.1 2011/04/16 19:27:07 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ssh/ChangeLog,v 1.2 2011/09/25 21:49:56 ulm Exp $
+
+  25 Sep 2011; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
+  Remove myself as maintainer.
 
 *ssh-0 (16 Apr 2011)
 

@@ -3,7 +3,4 @@
 <pkgmetadata>
 <herd>base-system</herd>
 <herd>bsd</herd>
-<maintainer>
-  <email>ulm@gentoo.org</email>
-</maintainer>
 </pkgmetadata>
