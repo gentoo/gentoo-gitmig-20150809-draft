@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/fhist
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.25 2011/06/12 20:04:44 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.26 2011/09/25 12:35:42 grobian Exp $
+
+  25 Sep 2011; Fabian Groffen <grobian@gentoo.org> fhist-1.19.ebuild:
+  Drop *-macos keywords, libexplain is a too Linux-specific hell to port (1.16
+  was keyworded before Prefix migration)
 
   12 Jun 2011; Matt Turner <mattst88@gentoo.org> fhist-1.16.ebuild:
   Drop mips keyword, bug 350891
