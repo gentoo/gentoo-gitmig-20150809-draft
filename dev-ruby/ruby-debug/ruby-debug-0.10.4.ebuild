@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug/ruby-debug-0.10.4.ebuild,v 1.2 2011/07/31 16:54:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-debug/ruby-debug-0.10.4.ebuild,v 1.3 2011/09/25 14:21:48 flameeyes Exp $
 
 EAPI="2"
 USE_RUBY="ruby18 ree18"
@@ -29,16 +29,12 @@ SRC_URI="mirror://rubygems/${P}.gem
 
 EXTRA_S="${WORKDIR}/all/${PN}-extra-${PV}"
 
-ruby_add_rdepend ">=dev-ruby/columnize-0.1"
+ruby_add_rdepend "
+	>=dev-ruby/columnize-0.1
+	~dev-ruby/ruby-debug-base-${PV}"
 
 DEPEND="${DEPEND} emacs? ( >=virtual/emacs-22 )"
 RDEPEND="${RDEPEND} emacs? ( >=virtual/emacs-22 )"
-
-# The original extension is used for MRI (ruby18)
-USE_RUBY="ruby18" \
-	ruby_add_rdepend "ruby_targets_ruby18? ( ~dev-ruby/ruby-debug-base-${PV} )"
-USE_RUBY="ree18" \
-	ruby_add_rdepend "ruby_targets_ruby18? ( ~dev-ruby/ruby-debug-base-${PV} )"
 
 all_ruby_compile() {
 	all_fakegem_compile
