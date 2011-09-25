@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.101 2011/08/25 18:08:59 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.102 2011/09/25 15:15:21 pacho Exp $
 
 # @ECLASS: gnome2.eclass
 # @MAINTAINER:
@@ -118,6 +118,11 @@ gnome2_src_configure() {
 	# Prevent a QA warning
 	if has doc ${IUSE} ; then
 		G2CONF="${G2CONF} $(use_enable doc gtk-doc)"
+	fi
+
+	# Pass --disable-maintainer-mode when needed
+	if grep -q "^[[:space:]]*AM_MAINTAINER_MODE(\[enable\])" configure.*; then
+		G2CONF="${G2CONF} --disable-maintainer-mode"
 	fi
 
 	# Avoid sandbox violations caused by gnome-vfs (bug #128289 and #345659)
