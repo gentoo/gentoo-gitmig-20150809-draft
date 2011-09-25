@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-mimic
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mimic/ChangeLog,v 1.35 2011/09/20 04:17:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mimic/ChangeLog,v 1.36 2011/09/25 21:44:09 chainsaw Exp $
+
+  25 Sep 2011; Tony Vroon <chainsaw@gentoo.org>
+  gst-plugins-mimic-0.10.22.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Tomáš "Mepho" Pružina in bug #382225.
 
   20 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gst-plugins-mimic-0.10.22.ebuild:
