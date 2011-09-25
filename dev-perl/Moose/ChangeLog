@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Moose
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/ChangeLog,v 1.89 2011/09/24 13:19:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/ChangeLog,v 1.90 2011/09/25 12:06:51 tove Exp $
+
+*Moose-2.20.500 (25 Sep 2011)
+
+  25 Sep 2011; Torsten Veller <tove@gentoo.org> +Moose-2.20.500.ebuild:
+  Version bump
 
   24 Sep 2011; Fabian Groffen <grobian@gentoo.org> Moose-2.20.200.ebuild:
   Marked ~x64-macos
