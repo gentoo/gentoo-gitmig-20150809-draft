@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-SamTools/Bio-SamTools-1.300.0.ebuild,v 1.2 2011/09/25 11:52:27 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-SamTools/Bio-SamTools-1.310.0.ebuild,v 1.1 2011/09/25 11:52:27 tove Exp $
 
 EAPI=4
 
 MODULE_AUTHOR=LDS
-MODULE_VERSION=1.30
+MODULE_VERSION=1.31
 inherit perl-module
 
 DESCRIPTION="Read SAM/BAM database files"
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="sci-biology/bioperl
-	sci-biology/samtools"
+	>=sci-biology/samtools-0.1.16"
 DEPEND="${RDEPEND}
 	virtual/perl-ExtUtils-CBuilder
 	virtual/perl-Module-Build

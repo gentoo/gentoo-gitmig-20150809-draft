@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-SamTools/Bio-SamTools-1.290.0.ebuild,v 1.1 2011/09/01 13:02:36 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-SamTools/Bio-SamTools-1.290.0.ebuild,v 1.2 2011/09/25 11:52:27 tove Exp $
 
 EAPI=4
 
@@ -14,9 +14,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="sci-biology/bioperl
+RDEPEND="sci-biology/bioperl
 	sci-biology/samtools"
-RDEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	virtual/perl-ExtUtils-CBuilder
 	virtual/perl-Module-Build
 "

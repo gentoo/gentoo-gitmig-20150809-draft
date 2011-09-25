@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Bio-SamTools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-SamTools/ChangeLog,v 1.4 2011/09/05 18:07:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-SamTools/ChangeLog,v 1.5 2011/09/25 11:52:27 tove Exp $
+
+*Bio-SamTools-1.310.0 (25 Sep 2011)
+
+  25 Sep 2011; Torsten Veller <tove@gentoo.org> Bio-SamTools-1.290.0.ebuild,
+  Bio-SamTools-1.300.0.ebuild, +Bio-SamTools-1.310.0.ebuild:
+  Version bump. Fix R/DEPEND.
 
 *Bio-SamTools-1.300.0 (05 Sep 2011)
 
