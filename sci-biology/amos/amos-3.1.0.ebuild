@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/amos/amos-3.1.0.ebuild,v 1.2 2011/09/25 01:08:00 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/amos/amos-3.1.0.ebuild,v 1.3 2011/09/25 16:32:18 chainsaw Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="Artistic"
 SLOT="0"
 IUSE="qt"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 DEPEND="qt? ( x11-libs/qt-core:4 )"
 RDEPEND="${DEPEND}
