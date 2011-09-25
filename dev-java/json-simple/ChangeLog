@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/json-simple
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/json-simple/ChangeLog,v 1.10 2011/09/25 09:21:35 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/json-simple/ChangeLog,v 1.11 2011/09/25 09:29:20 serkan Exp $
+
+  25 Sep 2011; Serkan Kaba <serkan@gentoo.org> json-simple-1.1.ebuild:
+  Fix license
 
 *json-simple-1.1 (25 Sep 2011)
 *json-simple-1.0_pre20080420 (25 Sep 2011)
