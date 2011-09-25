@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/last
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/last/ChangeLog,v 1.14 2011/04/25 11:00:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/last/ChangeLog,v 1.15 2011/09/25 22:45:35 weaver Exp $
+
+*last-184 (25 Sep 2011)
+
+  25 Sep 2011; Andrey Kislyuk <weaver@gentoo.org> +last-184.ebuild:
+  Version bump
 
   25 Apr 2011; Justin Lecher <jlec@gentoo.org> +files/162-gcc46.patch,
   last-162.ebuild, last-162-r1.ebuild:
