@@ -1,0 +1,10 @@
+# ChangeLog for app-crypt/kencfs
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kencfs/ChangeLog,v 1.1 2011/09/25 15:17:26 dilfridge Exp $
+
+*kencfs-1.1 (25 Sep 2011)
+
+  25 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org> +kencfs-1.1.ebuild,
+  +files/kencfs-1.1-underlinking.patch, +metadata.xml:
+  New application, bug 383735. Thanks to Adam for the initial ebuild.
+
