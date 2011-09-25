@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/normaliz-2.7.ebuild,v 1.1 2011/07/08 11:22:05 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/normaliz-2.7.ebuild,v 1.2 2011/09/25 18:15:11 tomka Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils toolchain-funcs
 
@@ -19,7 +19,9 @@ IUSE="extras openmp"
 
 RDEPEND="dev-libs/gmp[-nocxx]"
 DEPEND="${RDEPEND}
-	app-arch/unzip"
+	app-arch/unzip
+	dev-libs/boost"
+# Only a boost header is needed -> not RDEPEND
 
 S=${WORKDIR}/${MYP}
 
@@ -34,12 +36,12 @@ src_prepare () {
 }
 
 src_compile(){
-	emake CXX="$(tc-getCXX)" OPENMP="${OPENMP}" -C source || die
+	emake CXX="$(tc-getCXX)" OPENMP="${OPENMP}" -C source
 }
 
 src_install() {
-	dobin source/normaliz || die
-	dodoc doc/"${MYP}Documentation.pdf" || die
+	dobin source/normaliz
+	dodoc doc/"${MYP}Documentation.pdf"
 	if use extras; then
 		elog "You have selected to install extras which consist of Macaulay2"
 		elog "and Singular packages. These have been installed into "
