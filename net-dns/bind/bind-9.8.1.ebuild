@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.1.ebuild,v 1.4 2011/09/10 12:38:06 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.1.ebuild,v 1.5 2011/09/25 18:26:13 idl0r Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -72,13 +72,6 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	use threads && {
-		ewarn
-		ewarn "If you're in vserver enviroment, you're probably want to"
-		ewarn "disable threads support because of linux capabilities dependency"
-		ewarn
-	}
-
 	ebegin "Creating named group and user"
 	enewgroup named 40
 	enewuser named 40 -1 /etc/bind named

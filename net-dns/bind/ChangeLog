@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.354 2011/09/14 15:48:50 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.355 2011/09/25 18:26:13 idl0r Exp $
+
+  25 Sep 2011; Christian Ruppert <idl0r@gentoo.org> bind-9.8.1.ebuild:
+  Remove obsolete warning.
 
   14 Sep 2011; Christian Ruppert <idl0r@gentoo.org> files/named.init-r11:
   Remove deprecated opts variable as well as --oknodo.
