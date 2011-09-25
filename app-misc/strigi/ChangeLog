@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.71 2011/08/10 21:46:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.72 2011/09/25 19:11:25 dilfridge Exp $
+
+*strigi-0.7.6 (25 Sep 2011)
+
+  25 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org> +strigi-0.7.6.ebuild:
+  Version bump (from git tag)
 
   10 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> -strigi-0.7.2.ebuild,
   -strigi-0.7.5.ebuild, -strigi-0.7.5-r1.ebuild, strigi-0.7.5-r2.ebuild:
