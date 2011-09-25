@@ -22,4 +22,5 @@ move dev-php5/PHPonTrax dev-php/PHPonTrax
 move dev-php5/phpunit-mockobject dev-php/phpunit-mockobject
 move dev-php5/phpunit-selenium dev-php/phpunit-selenium
 move dev-php5/pecl-drizzle dev-php/pecl-drizzle
+move dev-php5/pecl-id3 dev-php/pecl-id3
 slotmove =net-wireless/iwl1000-ucode-128.50.3.1 0 3
