@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.12 2011/09/05 21:34:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.13 2011/09/25 17:16:00 mgorny Exp $
+
+*systemd-36 (25 Sep 2011)
+
+  25 Sep 2011; Michał Górny <mgorny@gentoo.org> -systemd-32.ebuild,
+  -systemd-35.ebuild, +systemd-36.ebuild:
+  Version bump. Still masked due to udev dep.
 
 *systemd-35 (05 Sep 2011)
 

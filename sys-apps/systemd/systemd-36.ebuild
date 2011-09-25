@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-32.ebuild,v 1.1 2011/08/09 11:36:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-36.ebuild,v 1.1 2011/09/25 17:16:00 mgorny Exp $
 
 EAPI=4
 
-inherit autotools-utils bash-completion linux-info pam systemd
+inherit autotools-utils bash-completion-r1 linux-info pam systemd
 
 DESCRIPTION="System and service manager for Linux"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
@@ -33,7 +33,7 @@ COMMON_DEPEND=">=sys-apps/dbus-1.4.10
 	tcpd? ( sys-apps/tcp-wrappers )"
 
 # Vala-0.10 doesn't work with libnotify 0.7.1
-VALASLOT="0.14"
+VALASLOT="0.12"
 # A little higher than upstream requires
 # but I had real trouble with 2.6.37 and systemd.
 MINKV="2.6.38"
@@ -64,7 +64,7 @@ src_configure() {
 	local myeconfargs=(
 		--with-distro=gentoo
 		--with-rootdir=
-		--with-rootlibdir=$(get_libdir)
+		--with-rootlibdir=/$(get_libdir)
 		--localstatedir=/var
 		--docdir=/tmp/docs
 		$(use_enable acl)
@@ -89,7 +89,7 @@ src_install() {
 		bashcompletiondir=/tmp
 
 	# move files as necessary
-	dobashcompletion "${D}"/tmp/systemctl-bash-completion.sh
+	newbashcomp "${D}"/tmp/systemctl-bash-completion.sh ${PN}
 	dodoc "${D}"/tmp/docs/*
 	rm -rf "${D}"/tmp || die
 
