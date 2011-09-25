@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mini_magick
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mini_magick/ChangeLog,v 1.9 2011/07/21 06:01:02 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mini_magick/ChangeLog,v 1.10 2011/09/25 14:20:23 flameeyes Exp $
+
+  25 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org> mini_magick-3.3.ebuild:
+  Remove ruby19 support as subexec does not declare supporting it.
 
 *mini_magick-3.3 (21 Jul 2011)
 
