@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.13.1.ebuild,v 1.2 2011/08/04 11:38:27 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.13.1-r1.ebuild,v 1.1 2011/09/25 06:23:59 nerdboy Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ CDEPEND="app-arch/bzip2
 	|| ( >=net-libs/libtirpc-0.2.2-r1 <sys-libs/glibc-2.14 sys-freebsd/freebsd-lib )
 	virtual/blas
 	cairo? ( x11-libs/cairo[X]
-		|| ( >=x11-libs/pango-1.20[X] <x11-libs/pango-1.20 ) )
+		>=x11-libs/pango-1.20[X] )
 	jpeg? ( virtual/jpeg )
 	lapack? ( virtual/lapack )
 	perl? ( dev-lang/perl )
@@ -40,7 +40,7 @@ DEPEND="${CDEPEND}
 		   app-text/ptex ) )"
 
 RDEPEND="${CDEPEND}
-	app-arch/unzip
+	( || ( <sys-libs/zlib-1.2.5.1-r1 >=sys-libs/zlib-1.2.5.1-r2[minizip] ) )
 	app-arch/xz-utils
 	java? ( >=virtual/jre-1.5 )"
 
@@ -68,6 +68,8 @@ src_prepare() {
 	# upstream does not want it, no reasons given
 	# https://bugs.r-project.org/bugzilla3/show_bug.cgi?id=14506
 	epatch "${FILESDIR}"/${PN}-2.12.1-ldflags.patch
+	# update for zlib header changes (see bug #383431)
+	epatch "${FILESDIR}"/${P}-zlib_header_fix.patch
 
 	# glibc 2.14 removed rpc
 	if has_version '>=net-libs/libtirpc-0.2.2-r1'; then

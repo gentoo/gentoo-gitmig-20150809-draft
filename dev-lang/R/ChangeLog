@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.187 2011/08/04 11:38:27 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.188 2011/09/25 06:23:59 nerdboy Exp $
+
+*R-2.13.1-r1 (25 Sep 2011)
+
+  25 Sep 2011; Steve Arnold <nerdboy@gentoo.org> -R-2.13.1.ebuild,
+  +R-2.13.1-r1.ebuild, +files/R-2.13.1-zlib_header_fix.patch:
+  Updated for zlib header changes (closes bug #383431).
 
   04 Aug 2011; Naohiro Aota <naota@gentoo.org> R-2.13.1.ebuild:
   Fix dependency for FreeBSD. We have rpc related functions in freebsd-lib.
