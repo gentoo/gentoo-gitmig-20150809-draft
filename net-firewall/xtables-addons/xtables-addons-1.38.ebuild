@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.38.ebuild,v 1.3 2011/09/23 21:03:38 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-1.38.ebuild,v 1.4 2011/09/25 15:49:11 swegener Exp $
 
 EAPI="4"
 inherit eutils linux-info linux-mod multilib
@@ -69,7 +69,7 @@ pkg_setup()	{
 			SKIP_IPV6_MODULES="ip6table_rawpost ipset6"
 			ewarn "No IPV6 support in kernel. Disabling: ${SKIP_IPV6_MODULES}"
 		fi
-		if ! (use xtables_addons_ipset4 || use xtables_addons_ipset6) &&
+		if (use xtables_addons_ipset4 || use xtables_addons_ipset6) &&
 			kernel_is -lt 2 6 35; then
 			die "${PN} with ipset requires kernel version >= 2.6.35"
 		fi

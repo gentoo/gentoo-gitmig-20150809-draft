@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/xtables-addons
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/ChangeLog,v 1.25 2011/09/23 21:03:38 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/ChangeLog,v 1.26 2011/09/25 15:49:11 swegener Exp $
+
+  25 Sep 2011; Sven Wegener <swegener@gentoo.org> xtables-addons-1.37.ebuild,
+  xtables-addons-1.38.ebuild:
+  Remove negation from ipset module check.
 
   23 Sep 2011; Sven Wegener <swegener@gentoo.org> xtables-addons-1.38.ebuild:
   Drop autotools eclass.
