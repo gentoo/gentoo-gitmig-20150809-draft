@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.93 2011/09/25 13:41:47 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.94 2011/09/25 19:45:22 chainsaw Exp $
+
+*xen-tools-3.4.2-r4 (25 Sep 2011)
+
+  25 Sep 2011; Tony Vroon <chainsaw@gentoo.org> +xen-tools-3.4.2-r4.ebuild,
+  +files/xen-tools-3.4.2-remove-default-cflags.patch:
+  Proxy commit for Ian "idella4" Delaney. Be more thorough for custom-cflags
+  and use a diff instead of sed magic, closes bug #383975. Use toolchain-funcs
+  to invoke correct compiler, closes bug #383973.
 
   25 Sep 2011; Tony Vroon <chainsaw@gentoo.org> xen-tools-3.4.2-r3.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
