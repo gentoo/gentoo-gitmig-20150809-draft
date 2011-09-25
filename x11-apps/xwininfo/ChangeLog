@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xwininfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwininfo/ChangeLog,v 1.66 2011/09/21 00:34:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwininfo/ChangeLog,v 1.67 2011/09/25 23:05:07 mattst88 Exp $
+
+  25 Sep 2011; Matt Turner <mattst88@gentoo.org> xwininfo-1.1.1.ebuild,
+  xwininfo-1.1.2.ebuild:
+  Move libX11 from RDEPEND to DEPEND. It's not linked against, and xwininfo
+  only needs a single header from libX11.
 
   21 Sep 2011; Jeroen Roovers <jer@gentoo.org> xwininfo-1.1.2.ebuild:
   Stable for HPPA (bug #380421).
