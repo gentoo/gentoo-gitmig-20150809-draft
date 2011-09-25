@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/json-simple
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/json-simple/ChangeLog,v 1.9 2009/03/20 19:47:00 josejx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/json-simple/ChangeLog,v 1.10 2011/09/25 09:21:35 serkan Exp $
+
+*json-simple-1.1 (25 Sep 2011)
+*json-simple-1.0_pre20080420 (25 Sep 2011)
+
+  25 Sep 2011; Serkan Kaba <serkan@gentoo.org>
+  +json-simple-1.0_pre20080420.ebuild, +json-simple-1.1.ebuild,
+  +files/json-simple-1.1-extra-constructors-from-azureus.patch,
+  -json-simple-20080420.ebuild:
+  Rename date tagged version as a pre and version bump
 
   20 Mar 2009; Joseph Jezak <josejx@gentoo.org> json-simple-20080420.ebuild:
   Marked ppc stable.
