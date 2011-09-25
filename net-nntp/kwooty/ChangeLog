@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/kwooty
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/kwooty/ChangeLog,v 1.13 2011/04/20 16:31:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/kwooty/ChangeLog,v 1.14 2011/09/25 11:24:06 dilfridge Exp $
+
+*kwooty-0.7.2 (25 Sep 2011)
+
+  25 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org> +kwooty-0.7.2.ebuild:
+  Version bump
 
 *kwooty-0.7.0 (20 Apr 2011)
 
