@@ -1,6 +1,14 @@
 # ChangeLog for dev-php/ZendFramework
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/ZendFramework/ChangeLog,v 1.10 2011/06/07 09:38:40 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/ZendFramework/ChangeLog,v 1.11 2011/09/25 14:21:32 gurligebis Exp $
+
+*ZendFramework-1.11.10 (25 Sep 2011)
+
+  25 Sep 2011; <gurligebis@gentoo.org> -ZendFramework-1.7.5.ebuild,
+  -ZendFramework-1.10.7.ebuild, -ZendFramework-1.11.0.ebuild,
+  -ZendFramework-1.11.4.ebuild, -ZendFramework-1.11.5.ebuild,
+  -ZendFramework-1.11.7.ebuild, +ZendFramework-1.11.10.ebuild:
+  Bumping to 1.11.10 and removing old ebuilds - fixing bug #383539
 
   07 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org>
   ZendFramework-1.11.6.ebuild:
