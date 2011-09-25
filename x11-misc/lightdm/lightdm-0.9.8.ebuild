@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-0.9.7.ebuild,v 1.1 2011/09/17 13:47:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-0.9.8.ebuild,v 1.1 2011/09/25 17:29:18 hwoarang Exp $
 
 EAPI=4
 inherit autotools eutils pam
@@ -33,22 +33,12 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	introspection? ( dev-libs/gobject-introspection )"
 
-REQUIRED_USE="branding? ( gtk )"
+REQUIRED_USE="branding? ( gtk ) || ( gtk qt4 )"
 DOCS=( NEWS )
-
-pkg_setup() {
-	if ! use gtk && ! use qt4; then
-		eerror
-		eerror "You have neither 'gtk' nor 'qt4' useflags enabled."
-		eerror "Please enable at least one of the two available greeter"
-		eerror "options"
-		die "Neither gtk nor qt4 useflag is enabled"
-	fi
-}
 
 src_prepare() {
 	# Make gtk greeter optional
-	epatch "${FILESDIR}/${P}-gtk.patch"
+	epatch "${FILESDIR}/${PN}-0.9.7-gtk.patch"
 	# remove GNOME_COMPILE_WARNING reference which requires
 	# gnome-base/gnome-common dependency.
 	sed -i -e "/GNOME_COMPILE_WARNING/d" "${S}"/configure.ac || die
