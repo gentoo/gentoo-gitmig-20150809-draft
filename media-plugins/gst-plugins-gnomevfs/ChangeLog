@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-gnomevfs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gnomevfs/ChangeLog,v 1.197 2011/09/20 03:44:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gnomevfs/ChangeLog,v 1.198 2011/09/25 20:48:44 chainsaw Exp $
+
+  25 Sep 2011; Tony Vroon <chainsaw@gentoo.org>
+  gst-plugins-gnomevfs-0.10.35.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Tomáš "Mepho" Pružina in bug #382225.
 
   20 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gst-plugins-gnomevfs-0.10.35.ebuild:

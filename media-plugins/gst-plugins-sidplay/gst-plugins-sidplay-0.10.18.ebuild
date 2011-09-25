@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-sidplay/gst-plugins-sidplay-0.10.18.ebuild,v 1.2 2011/09/20 04:10:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-sidplay/gst-plugins-sidplay-0.10.18.ebuild,v 1.3 2011/09/25 21:29:46 chainsaw Exp $
 
 inherit gst-plugins-ugly
 
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 RDEPEND="=media-libs/libsidplay-1.3*
