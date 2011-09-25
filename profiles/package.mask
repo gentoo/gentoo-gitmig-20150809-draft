@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13075 2011/09/25 17:37:33 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13076 2011/09/25 20:21:10 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -49,7 +49,7 @@ games-action/dungeon
 
 # Markos Chandras <hwoarang@gentoo.org> (21 Sep 2011)
 # Masking beta releases
-=net-p2p/qbittorrent-2.9.0_beta*
+=net-p2p/qbittorrent-2.9.0_rc*
 
 # Olivier Crete <tester@gentoo.org> (20 Sep 2011)
 # Masked because the API was broken and it will  causes crashes in 
