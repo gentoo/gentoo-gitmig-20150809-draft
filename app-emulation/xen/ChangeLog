@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.82 2011/09/25 01:45:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.83 2011/09/25 11:36:43 chainsaw Exp $
+
+*xen-3.4.2-r3 (25 Sep 2011)
+
+  25 Sep 2011; Tony Vroon <chainsaw@gentoo.org> -xen-3.4.2-r2.ebuild,
+  +xen-3.4.2-r3.ebuild, +files/xen-3.4.2-werror-idiocy.patch:
+  Patch by Ian "idella4" Delaney allows building on GCC 4.5 & 4.6; closes bug
+  #384361 by Agostino "ago" Sarubbo.
 
   25 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> xen-4.1.1-r2.ebuild:
   x86 stable wrt bug #360621

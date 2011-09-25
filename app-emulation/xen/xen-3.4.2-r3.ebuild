@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.4.2-r2.ebuild,v 1.1 2011/09/21 11:14:59 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.4.2-r3.ebuild,v 1.1 2011/09/25 11:36:43 chainsaw Exp $
 
-inherit mount-boot flag-o-matic toolchain-funcs
+EAPI=2
+
+inherit mount-boot flag-o-matic toolchain-funcs base
 
 DESCRIPTION="The Xen virtual machine monitor"
 HOMEPAGE="http://xen.org/"
@@ -17,6 +19,12 @@ RDEPEND="|| ( sys-boot/grub
 		sys-boot/grub-static )
 		>=sys-kernel/xen-sources-2.6.18"
 PDEPEND="~app-emulation/xen-tools-${PV}"
+PATCHES=(
+	"${FILESDIR}/"${PN}-3.3.0-unexported-target-fix.patch
+	"${FILESDIR}/"${P}-dump_registers-watchdog-fix.patch
+	"${FILESDIR}/"${P}-no-DMA.patch
+	"${FILESDIR}/"${P}-werror-idiocy.patch
+)
 
 RESTRICT="test"
 
@@ -48,18 +56,8 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	# Fix unexport $target in xen-setup
-	epatch "${FILESDIR}/"${PN}-3.3.0-unexported-target-fix.patch
-
-	# Fix crash in xen console
-	epatch "${FILESDIR}/"${P}-dump_registers-watchdog-fix.patch
-
-	# Security patches
-        epatch "${FILESDIR}/"${P}-no-DMA.patch || die
+src_prepare() {
+	base_src_prepare
 
 	# if the user *really* wants to use their own custom-cflags, let them
 	if use custom-cflags; then
