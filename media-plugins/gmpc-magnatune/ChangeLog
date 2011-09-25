@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-magnatune
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-magnatune/ChangeLog,v 1.39 2011/08/20 13:06:08 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-magnatune/ChangeLog,v 1.40 2011/09/25 20:27:53 chainsaw Exp $
+
+  25 Sep 2011; Tony Vroon <chainsaw@gentoo.org> gmpc-magnatune-11.8.16.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah "Armageddon" El Lazkani in bug #381219.
 
   20 Aug 2011; Christoph Mende <angelos@gentoo.org>
   +gmpc-magnatune-11.8.16.ebuild:

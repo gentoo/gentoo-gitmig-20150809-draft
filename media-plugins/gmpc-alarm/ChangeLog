@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-alarm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-alarm/ChangeLog,v 1.22 2011/08/20 11:28:47 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-alarm/ChangeLog,v 1.23 2011/09/25 20:18:42 chainsaw Exp $
+
+  25 Sep 2011; Tony Vroon <chainsaw@gentoo.org> gmpc-alarm-11.8.16.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah "Armageddon" El Lazkani in bug #381219.
 
 *gmpc-alarm-11.8.16 (20 Aug 2011)
 

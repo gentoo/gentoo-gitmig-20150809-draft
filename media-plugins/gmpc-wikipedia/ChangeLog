@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-wikipedia
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-wikipedia/ChangeLog,v 1.9 2011/09/21 15:30:49 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-wikipedia/ChangeLog,v 1.10 2011/09/25 20:31:12 chainsaw Exp $
+
+  25 Sep 2011; Tony Vroon <chainsaw@gentoo.org> gmpc-wikipedia-11.8.16.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah "Armageddon" El Lazkani in bug #381219.
 
 *gmpc-wikipedia-11.8.16 (21 Sep 2011)
 
