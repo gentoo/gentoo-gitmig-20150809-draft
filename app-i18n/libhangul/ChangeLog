@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/libhangul
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libhangul/ChangeLog,v 1.24 2011/09/06 17:56:38 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libhangul/ChangeLog,v 1.25 2011/09/25 17:54:59 armin76 Exp $
+
+  25 Sep 2011; Raúl Porcel <armin76@gentoo.org> libhangul-0.0.10.ebuild,
+  libhangul-0.0.12.ebuild:
+  Drop alpha keywords
 
   06 Sep 2011; Tony Vroon <chainsaw@gentoo.org> libhangul-0.0.12.ebuild:
   Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney &
