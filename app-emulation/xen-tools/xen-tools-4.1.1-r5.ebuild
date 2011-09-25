@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r5.ebuild,v 1.2 2011/09/18 17:03:29 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r5.ebuild,v 1.3 2011/09/25 01:44:26 phajdan.jr Exp $
 
 EAPI="3"
 
@@ -11,7 +11,7 @@ if [[ $PV == *9999 ]]; then
 	S="${WORKDIR}/${REPO}"
 	live_eclass="mercurial"
 else
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 x86"
 	XEN_EXTFILES_URL="http://xenbits.xensource.com/xen-extfiles"
 	SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz \
 	$XEN_EXTFILES_URL/ipxe-git-v1.0.0.tar.gz"
