@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/Macaulay2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.23 2011/05/14 14:34:21 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/Macaulay2/ChangeLog,v 1.24 2011/09/25 19:44:37 tomka Exp $
+
+*Macaulay2-1.4-r1 (25 Sep 2011)
+
+  25 Sep 2011; Thomas Kahle <tomka@gentoo.org>
+  +files/1.4-comint-use-fields.patch, +files/1.4-fix-emacs-syntax-table.patch,
+  +Macaulay2-1.4-r1.ebuild, +files/1.4-pari-2.5-compat.patch:
+  Fix pari-2.5 compatibility (Bug 381347) and two emacs-improvements
 
   14 May 2011; Thomas Kahle <tomka@gentoo.org> Macaulay2-1.4.ebuild:
   x86 stable per bug 366379
