@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/youtube-dl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.85 2011/08/07 19:01:07 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.86 2011/09/25 12:55:48 chainsaw Exp $
+
+  25 Sep 2011; Tony Vroon <chainsaw@gentoo.org> youtube-dl-2011.08.04.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani & Agostino "ago" Sarubbo in bug #384163.
 
   05 Aug 2011; <ricmm@gentoo.org> -youtube-dl-2010.10.03.ebuild,
   -youtube-dl-2010.10.24.ebuild, -youtube-dl-2010.11.19.ebuild:
