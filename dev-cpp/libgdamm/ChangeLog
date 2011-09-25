@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libgdamm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgdamm/ChangeLog,v 1.22 2011/09/22 16:52:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgdamm/ChangeLog,v 1.23 2011/09/25 17:42:58 armin76 Exp $
+
+  25 Sep 2011; Raúl Porcel <armin76@gentoo.org> libgdamm-4.1.2.ebuild:
+  sparc stable wrt #372353
 
 *libgdamm-4.1.3 (22 Sep 2011)
 
