@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.7 2011/08/22 04:46:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.8 2011/09/25 12:43:28 grobian Exp $
 
 # @ECLASS: mysql-v2.eclass
 # @MAINTAINER:
@@ -251,8 +251,9 @@ for i in "mysql" "mysql-community" "mysql-cluster" "mariadb" ; do
 	DEPEND="${DEPEND} !dev-db/${i}"
 done
 
+# prefix: first need to implement something for #196294
 RDEPEND="${DEPEND}
-	!minimal? ( dev-db/mysql-init-scripts )
+	!minimal? ( !prefix? ( dev-db/mysql-init-scripts ) )
 	selinux? ( sec-policy/selinux-mysql )
 "
 
