@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/require_relative
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/require_relative/ChangeLog,v 1.6 2011/08/25 19:34:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/require_relative/ChangeLog,v 1.7 2011/09/25 14:18:29 flameeyes Exp $
+
+  25 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  require_relative-1.0.2.ebuild:
+  Add missing dependency over minitest.
 
   25 Aug 2011; Fabian Groffen <grobian@gentoo.org>
   require_relative-1.0.2.ebuild:
