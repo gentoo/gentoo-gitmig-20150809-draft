@@ -1,6 +1,17 @@
 # ChangeLog for dev-libs/libgamin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/ChangeLog,v 1.26 2011/07/11 04:16:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/ChangeLog,v 1.27 2011/09/25 16:25:55 pacho Exp $
+
+  25 Sep 2011; Pacho Ramos <pacho@gentoo.org> libgamin-0.1.10-r2.ebuild,
+  +files/libgamin-0.1.10-G_CONST_RETURN-removal.patch,
+  +files/libgamin-0.1.10-armel-features.patch,
+  +files/libgamin-0.1.10-crosscompile-fix.patch:
+  Fix compilation with latest glib, bug #382783 by Maciej Piechotka; fix
+  crosscompilation issues, bug #267604 by Andrei Slavoiu; enable linux specific
+  features on armel, upstream bug #588338; drop DG_DISABLE_DEPRECATED; don't
+  try to even check for python, simplifying ebuild for people running python3
+  as main interpreter; use gnome.org eclass to set SRC_URI and use bz2 tarball
+  instead of gz.
 
   11 Jul 2011; Samuli Suominen <ssuominen@gentoo.org>
   libgamin-0.1.10-r2.ebuild:

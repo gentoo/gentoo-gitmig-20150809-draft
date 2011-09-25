@@ -1,22 +1,20 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/libgamin-0.1.10-r2.ebuild,v 1.13 2011/07/11 04:16:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgamin/libgamin-0.1.10-r2.ebuild,v 1.14 2011/09/25 16:25:55 pacho Exp $
 
-EAPI=2
+EAPI="3"
 
 PYTHON_DEPEND="python? 2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
+GNOME_ORG_MODULE="gamin"
 
-inherit autotools eutils flag-o-matic libtool python
-
-MY_PN=${PN//lib/}
-MY_P=${MY_PN}-${PV}
+inherit autotools eutils flag-o-matic libtool python gnome.org
 
 DESCRIPTION="Library providing the FAM File Alteration Monitor API"
 HOMEPAGE="http://www.gnome.org/~veillard/gamin/"
-SRC_URI="http://www.gnome.org/~veillard/${MY_PN}/sources/${MY_P}.tar.gz
-	mirror://gentoo/${MY_PN}-0.1.9-freebsd.patch.bz2
+SRC_URI="${SRC_URI}
+	mirror://gentoo/gamin-0.1.9-freebsd.patch.bz2
 	http://pkgconfig.freedesktop.org/releases/pkg-config-0.26.tar.gz" # pkg.m4 for eautoreconf
 
 LICENSE="LGPL-2"
@@ -24,13 +22,11 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="debug kernel_linux python static-libs"
 
-RESTRICT="test" # need gam-server
+RESTRICT="test" # needs gam-server
 
 RDEPEND="!app-admin/fam
 	!<app-admin/gamin-0.1.10"
 DEPEND="${RDEPEND}"
-
-S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	if use python; then
@@ -42,16 +38,28 @@ src_prepare() {
 	mv -vf "${WORKDIR}"/pkg-config-*/pkg.m4 "${WORKDIR}"/ || die
 
 	# Fix QA warnings, bug #257281, upstream #466791
-	epatch "${FILESDIR}"/${P}-compilewarnings.patch
+	epatch "${FILESDIR}"/${PN}-0.1.10-compilewarnings.patch
 
 	# Fix compile warnings; bug #188923
-	epatch "${DISTDIR}"/${MY_PN}-0.1.9-freebsd.patch.bz2
+	epatch "${DISTDIR}"/gamin-0.1.9-freebsd.patch.bz2
 
 	# Fix collision problem due to intermediate library, upstream bug #530635
-	epatch "${FILESDIR}"/${P}-noinst-lib.patch
+	epatch "${FILESDIR}"/${PN}-0.1.10-noinst-lib.patch
+
+	# Fix compilation with latest glib, bug #382783
+	epatch "${FILESDIR}/${PN}-0.1.10-G_CONST_RETURN-removal.patch"
+
+	# Fix crosscompilation issues, bug #267604
+	epatch "${FILESDIR}/${PN}-0.1.10-crosscompile-fix.patch"
+
+	# Enable linux specific features on armel, upstream bug #588338
+	epatch "${FILESDIR}/${P}-armel-features.patch"
+
+	# Drop DEPRECATED flags
+	sed -i -e 's:-DG_DISABLE_DEPRECATED:$(NULL):g' server/Makefile.am || die
 
 	# Build only shared version of Python module.
-	epatch "${FILESDIR}"/${P}-disable_python_static_library.patch
+	epatch "${FILESDIR}"/${PN}-0.1.10-disable_python_static_library.patch
 
 	# Python bindings are built/installed manually.
 	sed -e "/SUBDIRS += python/d" -i Makefile.am
