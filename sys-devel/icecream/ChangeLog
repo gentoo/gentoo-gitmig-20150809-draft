@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/icecream
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/ChangeLog,v 1.39 2010/09/18 10:24:22 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/ChangeLog,v 1.40 2011/09/25 13:28:17 scarabeus Exp $
+
+*icecream-0.9.7 (25 Sep 2011)
+
+  25 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> +icecream-0.9.7.ebuild:
+  Bump to latest. Fixes gcc-4.6 issues.
 
 *icecream-0.9.6-r1 (18 Sep 2010)
 
