@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/openarena-0.8.5.ebuild,v 1.4 2011/02/26 15:09:58 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/openarena-0.8.5.ebuild,v 1.5 2011/09/25 21:32:21 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils flag-o-matic versionator games
@@ -50,6 +50,8 @@ src_prepare() {
 	cd "${MY_S}"
 	epatch "${FILESDIR}"/${P}-bots-strcpy-fix.patch
 	touch jpegint.h
+
+	sed -i -e '1i#define OF(x) x' $(find -name unzip.c) || die
 }
 
 src_compile() {
