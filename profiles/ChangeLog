@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5725 2011/09/25 20:21:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5726 2011/09/26 10:53:39 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Sep 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Mask boost-1.47
 
   25 Sep 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Update qbittorrent entry
