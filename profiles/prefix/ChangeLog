@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.295 2011/09/18 09:23:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.296 2011/09/26 18:53:37 grobian Exp $
+
+  26 Sep 2011; Fabian Groffen <grobian@gentoo.org> bsd/freebsd/package.mask:
+  >=sys-devel/binutils-2.21.1 exhibits -ldl problem on FreeBSD
 
   18 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> windows/interix/use.mask,
   windows/winnt/use.mask:
