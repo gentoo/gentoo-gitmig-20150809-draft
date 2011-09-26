@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-9999.ebuild,v 1.3 2011/09/20 22:01:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/libftdi-9999.ebuild,v 1.4 2011/09/26 18:13:28 vapier Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.intra2net.com/en/developer/libftdi/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-IUSE="cxx doc examples python"
+IUSE="cxx doc examples python static-libs"
 
 RDEPEND="virtual/libusb:0
 	cxx? ( dev-libs/boost )
@@ -37,11 +37,13 @@ src_configure() {
 		$(use_enable cxx libftdipp) \
 		$(use_with doc docs) \
 		$(use_with examples) \
-		$(use_enable python python-binding)
+		$(use_enable python python-binding) \
+		$(use_enable static-libs static)
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die
+	use static-libs || find "${D}" -name '*.la' -delete
 	dodoc ChangeLog README
 
 	if use doc ; then
