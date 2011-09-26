@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.3.0.ebuild,v 1.3 2011/09/22 20:03:55 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.3.0.ebuild,v 1.4 2011/09/26 22:38:16 dilfridge Exp $
 
 EAPI=3
 
@@ -99,7 +99,6 @@ src_configure() {
 		$(cmake-utils_use_enable ssse3 SSSE3)
 		$(cmake-utils_use_with ipp)
 		$(cmake-utils_use_with ieee1394 1394)
-		$(cmake-utils_use_with cuda)
 		$(cmake-utils_use_with eigen)
 		$(cmake-utils_use_with ffmpeg)
 		$(cmake-utils_use_with gstreamer)
@@ -114,6 +113,17 @@ src_configure() {
 		$(cmake-utils_use_with v4l V4L)
 		$(cmake-utils_use_with xine)
 	)
+
+	if use cuda; then
+		if [ "$(gcc-version)" > "4.4" ]; then
+			ewarn "CUDA and >=sys-devel/gcc-4.5 do not play well together. Disabling CUDA support."
+			mycmakeargs+=( "-DWITH_CUDA=OFF" )
+		else
+			mycmakeargs+=( "-DWITH_CUDA=ON" )
+		fi
+	else
+		mycmakeargs+=( "-DWITH_CUDA=OFF" )
+	fi
 
 	if use python && use examples; then
 		mycmakeargs+=( "-DINSTALL_PYTHON_EXAMPLES=ON" )
