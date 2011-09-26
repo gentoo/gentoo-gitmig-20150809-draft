@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.7.1-r1.ebuild,v 1.7 2011/07/29 02:33:46 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.7.1-r1.ebuild,v 1.8 2011/09/26 07:45:56 nerdboy Exp $
 
 EAPI=3
 
@@ -55,6 +55,9 @@ src_prepare() {
 	    bindings/python/SConscript || die "sed 2 failed"
 	rm -rf agg || die
 	epatch "${FILESDIR}"/${P}-libagg.patch
+
+	# update for libpng 1.5 changes (see bug #)
+	epatch "${FILESDIR}"/${P}-libpng1.5.4.patch
 }
 
 src_configure() {

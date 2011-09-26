@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/mapnik
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.26 2011/07/29 02:33:46 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.27 2011/09/26 07:45:56 nerdboy Exp $
+
+  26 Sep 2011; Steve Arnold <nerdboy@gentoo.org> mapnik-0.7.1-r1.ebuild,
+  +files/mapnik-0.7.1-libpng1.5.4.patch:
+  Update for libpng 1.5 changes (closes bug #384263).
 
   29 Jul 2011; Steve Arnold <nerdboy@gentoo.org> mapnik-0.7.1-r1.ebuild:
   Updated with API doc workaround (see bug #370575) and a missing dep
