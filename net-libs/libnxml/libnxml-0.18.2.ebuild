@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnxml/libnxml-0.18.2.ebuild,v 1.1 2009/03/29 15:30:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnxml/libnxml-0.18.2.ebuild,v 1.2 2011/09/26 22:12:40 radhermit Exp $
 
 DESCRIPTION="A C-library for parsing and writing XML 1.0/1.1 files or streams"
-HOMEPAGE="http://www2.autistici.org/bakunin/codes.php"
-SRC_URI="http://www2.autistici.org/bakunin/${PN}/${P}.tar.gz"
+HOMEPAGE="http://www.autistici.org/bakunin/libnxml/doc/"
+SRC_URI="http://www.autistici.org/bakunin/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"

@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libnxml
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnxml/ChangeLog,v 1.14 2009/06/09 09:28:20 dev-zero Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnxml/ChangeLog,v 1.15 2011/09/26 22:12:40 radhermit Exp $
+
+  26 Sep 2011; Tim Harder <radhermit@gentoo.org> libnxml-0.17.1.ebuild,
+  libnxml-0.18.0.ebuild, libnxml-0.18.2.ebuild, libnxml-0.18.3.ebuild:
+  Update HOMEPAGE and SRC_URI.
 
 *libnxml-0.18.3 (09 Jun 2009)
 
