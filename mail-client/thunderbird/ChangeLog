@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.94 2011/09/11 11:02:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.95 2011/09/26 15:50:46 polynomial-c Exp $
+
+*thunderbird-6.0.2 (26 Sep 2011)
+*thunderbird-3.1.14 (26 Sep 2011)
+
+  26 Sep 2011; Lars Wendler <polynomial-c@gentoo.org>
+  -thunderbird-3.1.10.ebuild, +thunderbird-3.1.14.ebuild,
+  +thunderbird-6.0.2.ebuild:
+  Security bump. Removed old.
 
   11 Sep 2011; Raúl Porcel <armin76@gentoo.org> thunderbird-3.1.12.ebuild:
   alpha/ia64/sparc stable wrt #379549
