@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.29-r2.ebuild,v 1.3 2011/09/25 14:43:51 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.29-r2.ebuild,v 1.4 2011/09/26 17:08:43 hwoarang Exp $
 
 EAPI="4"
 
@@ -102,6 +102,7 @@ src_prepare() {
 	if use uploadprogress; then
 	    epatch "${FILESDIR}"/${P}-mod_uploadprogress.patch
 	fi
+	epatch "${FILESDIR}"/${P}-ssl-no-ecdh.patch
 	eautoreconf
 }
 src_configure() {

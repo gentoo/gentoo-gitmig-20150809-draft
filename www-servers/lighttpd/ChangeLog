@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.258 2011/09/25 14:43:51 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.259 2011/09/26 17:08:43 hwoarang Exp $
+
+  26 Sep 2011; Markos Chandras <hwoarang@gentoo.org> lighttpd-1.4.29-r2.ebuild,
+  +files/lighttpd-1.4.29-ssl-no-ecdh.patch:
+  Add patch to compile when Eliptic Curve support is compiled in openssl.
+  Upstream bug http://redmine.lighttpd.net/issues/2335
 
   25 Sep 2011; Andreas Schuerch <nativemad@gentoo.org>
   lighttpd-1.4.29-r2.ebuild:
