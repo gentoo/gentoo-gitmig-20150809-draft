@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/zile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.153 2011/09/26 17:45:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/ChangeLog,v 1.154 2011/09/26 17:46:57 grobian Exp $
+
+  26 Sep 2011; Fabian Groffen <grobian@gentoo.org> zile-2.4.1.ebuild:
+  Fix docdir for Prefix
 
   26 Sep 2011; Fabian Groffen <grobian@gentoo.org> zile-2.4.1.ebuild:
   Marked ~x86-freebsd
