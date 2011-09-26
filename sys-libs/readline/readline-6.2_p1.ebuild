@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.2_p1.ebuild,v 1.1 2011/03/01 00:48:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.2_p1.ebuild,v 1.2 2011/09/26 02:37:51 vapier Exp $
 
-inherit autotools eutils multilib toolchain-funcs flag-o-matic
+inherit eutils multilib toolchain-funcs flag-o-matic
 
 # Official patches
 # See ftp://ftp.cwru.edu/pub/bash/readline-6.0-patches/
