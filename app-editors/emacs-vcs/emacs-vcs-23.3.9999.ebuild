@@ -1,13 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.3.9999.ebuild,v 1.12 2011/09/09 19:21:18 ulm Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-vcs/emacs-vcs-23.3.9999.ebuild,v 1.13 2011/09/26 12:31:16 ulm Exp $
 EAPI=4
 WANT_AUTOMAKE="none"
 
 inherit autotools elisp-common eutils flag-o-matic multilib
 
-if [ "${PV##*.}" = "9999" ]; then
+if [[ ${PV##*.} = 9999 ]]; then
 	EBZR_PROJECT="emacs"
 	EBZR_BRANCH="emacs-23"
 	EBZR_REPO_URI="bzr://bzr.savannah.gnu.org/emacs/${EBZR_BRANCH}/"
@@ -31,7 +30,7 @@ HOMEPAGE="http://www.gnu.org/software/emacs/"
 LICENSE="GPL-3 FDL-1.3 BSD as-is MIT W3C unicode PSF-2"
 SLOT="23"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="alsa dbus gconf gif gpm gtk gzip-el hesiod jpeg kerberos m17n-lib motif png sound source svg tiff toolkit-scroll-bars X Xaw3d xft +xpm"
+IUSE="alsa athena dbus gconf gif gpm gtk gzip-el hesiod jpeg kerberos m17n-lib motif png sound source svg tiff toolkit-scroll-bars X Xaw3d xft +xpm"
 
 RDEPEND="sys-libs/ncurses
 	>=app-admin/eselect-emacs-1.2
@@ -64,7 +63,10 @@ RDEPEND="sys-libs/ncurses
 		gtk? ( x11-libs/gtk+:2 )
 		!gtk? (
 			Xaw3d? ( x11-libs/libXaw3d )
-			!Xaw3d? ( motif? ( >=x11-libs/openmotif-2.3:0 ) )
+			!Xaw3d? (
+				athena? ( x11-libs/libXaw )
+				!athena? ( motif? ( >=x11-libs/openmotif-2.3:0 ) )
+			)
 		)
 	)"
 
@@ -78,20 +80,11 @@ RDEPEND="${RDEPEND}
 EMACS_SUFFIX="emacs-${SLOT}-vcs"
 SITEFILE="20${PN}-${SLOT}-gentoo.el"
 
-pkg_setup() {
-	local olddir="${EBZR_STORE_DIR}/emacs-${EBZR_BRANCH#emacs-}"
-	if [ -d "${olddir}" ]; then
-		ewarn "bzr.eclass uses branches instead of checkouts now."
-		ewarn "Therefore, you may remove the old bzr checkout:"
-		ewarn "rm -rf ${olddir}"
-	fi
-}
-
 src_prepare() {
-	if [ "${PV##*.}" = "9999" ]; then
+	if [[ ${PV##*.} = 9999 ]]; then
 		FULL_VERSION=$(grep 'defconst[	 ]*emacs-version' lisp/version.el \
 			| sed -e 's/^[^"]*"\([^"]*\)".*$/\1/')
-		[ "${FULL_VERSION}" ] || die "Cannot determine current Emacs version"
+		[[ ${FULL_VERSION} ]] || die "Cannot determine current Emacs version"
 		echo
 		einfo "Emacs branch: ${EBZR_BRANCH}"
 		einfo "Revision: ${EBZR_REVISION:-${EBZR_REVNO}}"
@@ -174,9 +167,9 @@ src_configure() {
 		if use gtk; then
 			einfo "Configuring to build with GIMP Toolkit (GTK+)"
 			myconf="${myconf} --with-x-toolkit=gtk"
-		elif use Xaw3d; then
-			einfo "Configuring to build with Xaw3d (Athena/Lucid) toolkit"
-			myconf="${myconf} --with-x-toolkit=lucid"
+		elif use Xaw3d || use athena; then
+			einfo "Configuring to build with Athena/Lucid toolkit"
+			myconf="${myconf} --with-x-toolkit=lucid $(use_with Xaw3d xaw3d)"
 		elif use motif; then
 			einfo "Configuring to build with Motif toolkit"
 			myconf="${myconf} --with-x-toolkit=motif"
@@ -186,9 +179,9 @@ src_configure() {
 		fi
 
 		local f tk=
-		for f in gtk Xaw3d motif; do
+		for f in gtk Xaw3d athena motif; do
 			use ${f} || continue
-			[ "${tk}" ] \
+			[[ ${tk} ]] \
 				&& ewarn "USE flag \"${f}\" ignored (superseded by \"${tk}\")"
 			tk="${tk}${tk:+ }${f}"
 		done
@@ -196,7 +189,7 @@ src_configure() {
 		myconf="${myconf} --without-x"
 	fi
 
-	if [ "${PV##*.}" = "9999" ]; then
+	if [[ ${PV##*.} = 9999 ]]; then
 		# These variables are not needed for building. We add them to
 		# configure options because they are stored in the Emacs binary
 		# and available in variable "system-configuration-options".
@@ -223,7 +216,7 @@ src_configure() {
 
 src_compile() {
 	export SANDBOX_ON=0			# for the unbelievers, see Bug #131505
-	if [ "${PV##*.}" = "9999" ]; then
+	if [[ ${PV##*.} = 9999 ]]; then
 		emake CC="$(tc-getCC)" bootstrap
 		# cleanup, otherwise emacs will be dumped again in src_install
 		(cd src; emake versionclean)
@@ -295,7 +288,7 @@ src_install () {
 pkg_preinst() {
 	# move Info dir file to correct name
 	local infodir=/usr/share/info/${EMACS_SUFFIX} f
-	if [ -f "${ED}"${infodir}/dir.orig ]; then
+	if [[ -f ${ED}${infodir}/dir.orig ]]; then
 		mv "${ED}"${infodir}/dir{.orig,} || die "moving info dir failed"
 	else
 		# this should not happen in EAPI 4
@@ -313,7 +306,7 @@ pkg_preinst() {
 pkg_postinst() {
 	local f
 	for f in "${EROOT}"/var/lib/games/emacs/{snake,tetris}-scores; do
-		[ -e "${f}" ] || touch "${f}"
+		[[ -e ${f} ]] || touch "${f}"
 	done
 	chown games "${EROOT}"/var/lib/games/emacs
 
