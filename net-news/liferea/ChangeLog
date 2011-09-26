@@ -1,6 +1,12 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.211 2011/09/11 13:36:08 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.212 2011/09/26 15:19:32 vostorga Exp $
+
+*liferea-1.8_rc1 (26 Sep 2011)
+
+  26 Sep 2011; Víctor Ostorga <vostorga@gentoo.org> -liferea-1.7.4.ebuild,
+  +liferea-1.8_rc1.ebuild:
+  Version bump to 1.8_rc1, fixes #381117 and #384431
 
 *liferea-1.7.6-r1 (11 Sep 2011)
 

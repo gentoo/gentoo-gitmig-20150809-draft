@@ -1,36 +1,37 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.7.4.ebuild,v 1.6 2011/03/21 22:19:52 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.8_rc1.ebuild,v 1.1 2011/09/26 15:19:32 vostorga Exp $
 
-EAPI=2
+EAPI=4
 
 GCONF_DEBUG=no
 
 inherit eutils gnome2 pax-utils
 
-MY_P=${P/_/-}
+MY_PV="1.8-RC1"
+MY_P=${PN}-${MY_PV}
 
-DESCRIPTION="News Aggregator for RDF/RSS/CDF/Atom/Echo/etc feeds"
+DESCRIPTION="News Aggregator for RDF/RSS/CDF/Atom/Echo feeds"
 HOMEPAGE="http://liferea.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="dbus libnotify networkmanager"
+IUSE="ayatana libnotify"
 
 RDEPEND=">=x11-libs/gtk+-2.18.0:2
-	>=dev-libs/glib-2.16.0:2
+	>=dev-libs/glib-2.24.0:2
 	>=x11-libs/pango-1.4.0
-	gnome-base/gconf:2
+	>=gnome-base/gconf-1.1.9:2
+	dev-libs/json-glib
 	dev-libs/libunique:1
 	>=dev-libs/libxml2-2.6.27:2
 	>=dev-libs/libxslt-1.1.19
 	>=dev-db/sqlite-3.6.10:3
 	>=net-libs/libsoup-2.28.2:2.4
-	>=net-libs/webkit-gtk-1.1.11:2
-	libnotify? ( >=x11-libs/libnotify-0.3.2 )
-	dbus? ( >=dev-libs/dbus-glib-0.71 )
-	networkmanager? ( net-misc/networkmanager dev-libs/dbus-glib )"
+	>=net-libs/webkit-gtk-1.2.2:2
+	ayatana? ( dev-libs/libindicate[gtk] )
+	libnotify? ( >=x11-libs/libnotify-0.3.2 )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig"
@@ -43,13 +44,11 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		--enable-sm
 		--disable-schemas-install
-		$(use_enable dbus)
-		$(use_enable networkmanager nm)
+		$(use_enable ayatana libindicate)
 		$(use_enable libnotify)"
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
 	gnome2_src_prepare
 }
 
@@ -60,4 +59,9 @@ src_install() {
 	# MPROTECT policy violation. Will sit here until webkit will
 	# get optional JIT.
 	pax-mark m "${D}"/usr/bin/liferea
+
+	einfo "If you want to enhance funcitonality of this package"
+	einfo "You should consider installing these packages:"
+	einfo "    dev-libs/dbus-glib"
+	einfo "    net-misc/networkmanager"
 }
