@@ -1,0 +1,11 @@
+# ChangeLog for app-misc/recoll
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/ChangeLog,v 1.1 2011/09/26 20:00:37 hwoarang Exp $
+
+*recoll-1.16.0 (26 Sep 2011)
+
+  26 Sep 2011; Markos Chandras <hwoarang@gentoo.org> +recoll-1.16.0.ebuild,
+  +metadata.xml:
+  Initial commit. Ebuild based on the one attached by Israel G. Lugo
+  <israel.lugo@lugosys.com>. Bug #171271
+

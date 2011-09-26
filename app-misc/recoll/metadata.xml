@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+	<email>hwoarang@gentoo.org</email>
+	<name>Markos Chandras</name>
+</maintainer>
+<use>
+	<flag name='inotify'>Use the Linux Kenrel notification subsystem for monitoring file alterations</flag>
+	<flag name='camelcase'>Enable indexing for camelCase sentences and words</flag>
+	<flag name='audio'>Index audio files</flag>
+	<flag name='chm'>Index chm files</flag>
+	<flag name='dvi'>Index dvi files</flag>
+	<flag name='gs'>Index PostScript files</flag>
+	<flag name='ics'>Index icalendar files</flag>
+	<flag name='info'>Index GNU info files</flag>
+	<flag name='lyx'>Index Latex lyx files</flag>
+	<flag name='msdoc'>Index Microsoft Word documents</flag>
+	<flag name='msppt'>Index Microsoft Power Point documents</flag>
+	<flag name='msxls'>Index Microsoft Excel documents</flag>
+	<flag name='rtf'>Index Microsoft RTF documents</flag>
+	<flag name='tex'>Index Tex files</flag>
+	<flag name='wordperfect'>Index wordperfect documents</flag>
+</use>
+<longdescription lang="en">
+</longdescription>
+</pkgmetadata>
+
