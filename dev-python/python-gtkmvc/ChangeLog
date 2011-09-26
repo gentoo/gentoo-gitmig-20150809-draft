@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-gtkmvc
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gtkmvc/ChangeLog,v 1.2 2010/04/08 18:57:10 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gtkmvc/ChangeLog,v 1.3 2011/09/26 15:55:58 pacho Exp $
+
+  26 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due bug #45816
 
   08 Apr 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   python-gtkmvc-1.2.2.ebuild:
