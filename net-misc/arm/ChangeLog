@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/arm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arm/ChangeLog,v 1.13 2011/09/04 10:10:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arm/ChangeLog,v 1.14 2011/09/26 19:05:10 blueness Exp $
+
+*arm-1.4.4.0 (26 Sep 2011)
+
+  26 Sep 2011; Anthony G. Basile <blueness@gentoo.org> +arm-1.4.4.0.ebuild:
+  Version bump
 
   04 Sep 2011; Markus Meier <maekke@gentoo.org> arm-1.4.3.0.ebuild:
   x86 stable, bug #380075
