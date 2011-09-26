@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.7.1-r1.ebuild,v 1.2 2011/09/24 15:35:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.7.1-r1.ebuild,v 1.3 2011/09/26 21:15:36 dilfridge Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ RESTRICT="test"
 
 COMMONDEPEND="
 	app-crypt/qca:2
-	>=app-misc/strigi-0.6.3
+	>=app-misc/strigi-0.7.6
 	app-text/docbook-xml-dtd:4.2
 	app-text/docbook-xsl-stylesheets
 	>=dev-libs/libattica-0.1.90

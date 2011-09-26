@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.786 2011/09/24 15:35:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.787 2011/09/26 21:15:36 dilfridge Exp $
+
+  26 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kdelibs-4.6.3-r3.ebuild, -kdelibs-4.7.1.ebuild, kdelibs-4.7.1-r1.ebuild:
+  Bump strigi version dependency because of bug 377225; remove old
 
   24 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   kdelibs-4.7.1-r1.ebuild, +files/kdelibs-4.7.1-libpng15.patch:
