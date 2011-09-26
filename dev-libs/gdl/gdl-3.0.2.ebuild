@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/gdl-3.0.2.ebuild,v 1.1 2011/07/24 14:05:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/gdl-3.0.2.ebuild,v 1.2 2011/09/26 11:35:33 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -27,4 +27,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40.1
 	doc? ( >=dev-util/gtk-doc-1.4 )"
 
-DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
+pkg_setup() {
+	DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
+	G2CONF="${G2CONF} $(use_enable introspection)"
+}

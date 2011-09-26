@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/gdl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.64 2011/07/24 14:05:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.65 2011/09/26 11:35:33 pacho Exp $
+
+  26 Sep 2011; Pacho Ramos <pacho@gentoo.org> -gdl-3.0.0.ebuild,
+  -gdl-3.0.1.ebuild, gdl-3.0.2.ebuild:
+  Handle introspection USE flag properly (bug #383635 by optiluca and fix by
+  Alexandre Rostovtsev), remove old.
 
 *gdl-3.0.2 (24 Jul 2011)
 
