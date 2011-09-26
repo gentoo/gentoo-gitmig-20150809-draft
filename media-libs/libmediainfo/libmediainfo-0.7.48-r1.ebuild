@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.48-r1.ebuild,v 1.1 2011/09/15 23:17:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/libmediainfo-0.7.48-r1.ebuild,v 1.2 2011/09/26 21:00:38 radhermit Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ IUSE="curl doc mms static-libs"
 
 RDEPEND="sys-libs/zlib
 	>=dev-libs/tinyxml-2.6.2[stl]
-	>=media-libs/libzen-0.4.20[static-libs=]
+	>=media-libs/libzen-0.4.21-r1[static-libs=]
 	curl? ( net-misc/curl )
 	mms? ( >=media-libs/libmms-0.6.1[static-libs=] )"
 DEPEND="${RDEPEND}
