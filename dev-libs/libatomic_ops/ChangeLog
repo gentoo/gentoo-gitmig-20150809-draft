@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libatomic_ops
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/ChangeLog,v 1.24 2011/07/07 12:35:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libatomic_ops/ChangeLog,v 1.25 2011/09/26 17:30:29 grobian Exp $
+
+  26 Sep 2011; Fabian Groffen <grobian@gentoo.org> libatomic_ops-1.2-r1.ebuild:
+  Marked ~x86-freebsd
 
   07 Jul 2011; Fabian Groffen <grobian@gentoo.org> libatomic_ops-1.2-r1.ebuild:
   Marked ~x86-macos
