@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/ghex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.62 2011/01/24 13:12:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.63 2011/09/26 18:08:28 pacho Exp $
+
+*ghex-3.0.0 (26 Sep 2011)
+
+  26 Sep 2011; Pacho Ramos <pacho@gentoo.org> +ghex-3.0.0.ebuild:
+  Version bump, it finally drops RDEPEND on old libgnomeprint stuff and other
+  deprecated packages.
 
   24 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org> ghex-2.24.0.ebuild:
   Pin gtk+ dependency to slot 2. Update ebuild to EAPI 3.
