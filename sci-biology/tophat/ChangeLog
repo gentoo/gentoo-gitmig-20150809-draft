@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/tophat
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/tophat/ChangeLog,v 1.4 2010/04/05 12:08:12 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/tophat/ChangeLog,v 1.5 2011/09/26 15:33:22 weaver Exp $
+
+*tophat-1.3.2 (26 Sep 2011)
+
+  26 Sep 2011; Andrey Kislyuk <weaver@gentoo.org> +tophat-1.3.2.ebuild:
+  Version bump
 
   05 Apr 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org> tophat-1.0.12.ebuild:
   x86 stable wrt bug #311829

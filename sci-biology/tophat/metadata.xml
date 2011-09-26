@@ -6,4 +6,7 @@
 		<name>Andrey Kislyuk</name>
 	</maintainer>
 	<herd>sci-biology</herd>
+	<use>
+		<flag name='bam'>Compile support for the BAM format</flag>
+	</use>
 </pkgmetadata>
