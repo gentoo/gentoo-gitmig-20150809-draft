@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.148 2011/08/02 05:43:01 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.149 2011/09/26 18:28:02 graaff Exp $
+
+  26 Sep 2011; Hans de Graaff <graaff@gentoo.org> xemacs-21.4.22-r2.ebuild,
+  +files/xemacs-21.4.22-libpng15.patch:
+  Fix compilation with libpng 1.5, thanks to Samuli Suominen in bug 384461.
 
   02 Aug 2011; Matt Turner <mattst88@gentoo.org> xemacs-21.4.22-r1.ebuild,
   xemacs-21.4.22-r2.ebuild, xemacs-21.5.29-r2.ebuild, xemacs-21.5.30.ebuild,

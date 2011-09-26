@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.22-r2.ebuild,v 1.4 2011/08/02 05:43:01 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.22-r2.ebuild,v 1.5 2011/09/26 18:28:02 graaff Exp $
 
 # Note: xemacs currently does not work with a hardened profile. If you
 # want to use xemacs on a hardened profile then compile with the
@@ -72,6 +72,9 @@ src_unpack() {
 	# Make sure to include deprecated LDAP symbols to avoid runtime
 	# crashes.
 	epatch "${FILESDIR}"/${P}-deprecated-ldap.patch
+
+	# Fix compilation with libpng 1.5, bug 384461
+	epatch "${FILESDIR}"/${P}-libpng15.patch
 
 	# Run autoconf. XEmacs tries to be smart by providing a stub
 	# configure.ac file for autoconf 2.59 but this throws our
