@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/wfmath
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/wfmath/ChangeLog,v 1.16 2011/01/16 04:11:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/wfmath/ChangeLog,v 1.17 2011/09/26 08:11:18 tupone Exp $
+
+*wfmath-0.3.11 (26 Sep 2011)
+
+  26 Sep 2011; Tupone Alfredo <tupone@gentoo.org> +wfmath-0.3.11.ebuild:
+  Version bump to 0.3.11 Bug #383413 by Mr. Anderson
 
   16 Jan 2011; Michael Sterrett <mr_bones_@gentoo.org> wfmath-0.3.10.ebuild:
   add static-libs support
