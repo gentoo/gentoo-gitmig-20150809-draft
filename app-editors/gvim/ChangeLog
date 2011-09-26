@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/gvim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.355 2011/09/23 23:50:55 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.356 2011/09/26 22:45:19 chainsaw Exp $
+
+  26 Sep 2011; Tony Vroon <chainsaw@gentoo.org> gvim-7.3.266.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani, Tomáš "Mepho" Pružina & Agostino "ago" Sarubbo in bug #384381.
 
 *gvim-7.3.322 (23 Sep 2011)
 
