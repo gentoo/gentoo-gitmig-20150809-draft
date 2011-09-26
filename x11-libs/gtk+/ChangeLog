@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.531 2011/09/09 20:16:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.532 2011/09/26 12:21:02 pacho Exp $
+
+*gtk+-3.0.12-r1 (26 Sep 2011)
+
+  26 Sep 2011; Pacho Ramos <pacho@gentoo.org> +gtk+-3.0.12-r1.ebuild,
+  +files/gtk+-3.0.12-use-const.patch:
+  Use const instead G_CONST_RETURN, bug #379897 by Alexandre Rostovtsev.
 
 *gtk+-2.24.6 (09 Sep 2011)
 
