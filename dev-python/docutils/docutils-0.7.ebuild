@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.7.ebuild,v 1.18 2011/04/20 22:00:57 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.7.ebuild,v 1.19 2011/09/26 20:30:10 ulm Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -15,13 +15,11 @@ SRC_URI="mirror://sourceforge/docutils/${P}.tar.gz
 LICENSE="public-domain PYTHON BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="glep emacs"
+IUSE="glep"
 
 DEPEND=">=app-shells/bash-4
 	dev-python/setuptools"
 RDEPEND=""
-# Emacs support is in PDEPEND to avoid a dependency cycle (bug #183242)
-PDEPEND="emacs? ( || ( >=app-emacs/rst-0.4 >=virtual/emacs-23 ) )"
 
 DOCS="*.txt"
 PYTHON_MODNAME="docutils roman.py"
