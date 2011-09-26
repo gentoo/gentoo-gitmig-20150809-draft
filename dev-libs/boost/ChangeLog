@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.227 2011/09/16 16:54:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.228 2011/09/26 11:02:02 hwoarang Exp $
+
+*boost-1.47.0 (26 Sep 2011)
+
+  26 Sep 2011; Markos Chandras <hwoarang@gentoo.org>
+  +files/random-Jamfile-1.47.0, +boost-1.47.0.ebuild,
+  +files/remove-toolset-1.47.0.patch:
+  Version bump. Bug #376937
 
   16 Sep 2011; Jeroen Roovers <jer@gentoo.org> boost-1.46.1-r1.ebuild:
   Stable for HPPA (bug #377805).
