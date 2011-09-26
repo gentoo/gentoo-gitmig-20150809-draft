@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/libgpg-error-1.10-r1.ebuild,v 1.1 2011/09/22 13:43:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/libgpg-error-1.10-r1.ebuild,v 1.2 2011/09/26 18:33:32 vapier Exp $
 
 EAPI="4"
 
@@ -30,7 +30,7 @@ src_configure() {
 	econf \
 		$(use_enable nls) \
 		$(use_enable static-libs static) \
-		$(use_enable common-libs languages)
+		$(use_enable common-lisp languages)
 }
 
 src_install() {
