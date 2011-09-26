@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gtypist
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/ChangeLog,v 1.28 2011/09/24 20:53:13 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/ChangeLog,v 1.29 2011/09/26 13:59:42 darkside Exp $
+
+  26 Sep 2011; Jeremy Olexa <darkside@gentoo.org> gtypist-2.8.5-r1.ebuild:
+  style changes, add Gentoo Prefix support
 
 *gtypist-2.8.5-r1 (24 Sep 2011)
 

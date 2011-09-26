@@ -1,19 +1,19 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/gtypist-2.8.5-r1.ebuild,v 1.1 2011/09/24 20:53:13 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/gtypist-2.8.5-r1.ebuild,v 1.2 2011/09/26 13:59:42 darkside Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils elisp-common
 
 DESCRIPTION="Universal typing tutor"
 HOMEPAGE="http://www.gnu.org/software/gtypist/"
 SRC_URI="mirror://gnu/gtypist/${P}.tar.gz
-	mirror://gentoo/colemak.typ.gz"
+	http://colemak.com/pub/learn/colemak.typ"
 
 LICENSE="GPL-2 public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux"
 IUSE="nls emacs xemacs"
 
 DEPEND=">=sys-libs/ncurses-5.2
@@ -23,6 +23,10 @@ DEPEND=">=sys-libs/ncurses-5.2
 RDEPEND="${DEPEND}"
 
 SITEFILE=50${PN}-gentoo.el
+
+src_unpack() {
+	unpack ${P}.tar.gz
+}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.8.3-xemacs-compat.patch
@@ -34,7 +38,7 @@ src_configure() {
 		lispdir="${SITELISP}/${PN}"
 		einfo "Configuring to build with GNU Emacs support"
 	elif use xemacs; then
-		lispdir="/usr/lib/xemacs/site-packages/lisp/${PN}"
+		lispdir="${EPREFIX}/usr/lib/xemacs/site-packages/lisp/${PN}"
 		einfo "Configuring to build with XEmacs support"
 	fi
 
@@ -44,11 +48,11 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README THANKS TODO || die
+	emake DESTDIR="${D}" install
+	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 
 	insinto /usr/share/gtypist
-	doins "${WORKDIR}"/colemak.typ
+	doins ${DISTDIR}/colemak.typ
 
 	if use emacs; then
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
