@@ -13,5 +13,6 @@
 		<flag name="caps-ng">libcap-ng support</flag>
 		<flag name="creds">cifs credentials support</flag>
 		<flag name="setuid">Seting SETUID bit for mount.cifs</flag>
+		<flag name="upcall">Create cifs.idmap binary; idmap support</flag>
 	</use>
 </pkgmetadata>

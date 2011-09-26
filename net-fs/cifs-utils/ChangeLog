@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/cifs-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.14 2011/08/09 13:42:37 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/ChangeLog,v 1.15 2011/09/26 17:32:43 vostorga Exp $
+
+*cifs-utils-5.1 (26 Sep 2011)
+
+  26 Sep 2011; Víctor Ostorga <vostorga@gentoo.org> +cifs-utils-5.1.ebuild:
+  Moving to EAPI 4, adding upcall use flag, which enable cifsidmap, forcing
+  user to choice either caps or caps-ng support
 
   09 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> cifs-utils-5.0.ebuild:
   Marked ~ppc64 wrt #358401
