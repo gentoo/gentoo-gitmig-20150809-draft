@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/will_paginate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/will_paginate/ChangeLog,v 1.13 2011/09/19 08:14:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/will_paginate/ChangeLog,v 1.14 2011/09/26 11:31:36 flameeyes Exp $
+
+  26 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  will_paginate-2.3.15.ebuild:
+  Make sure to depend on slot 2.3 of activesupport to not conflict with rails.
 
 *will_paginate-3.0.1 (19 Sep 2011)
 
