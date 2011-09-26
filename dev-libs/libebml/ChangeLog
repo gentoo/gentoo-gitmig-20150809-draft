@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.109 2011/09/24 16:53:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.110 2011/09/26 00:15:31 radhermit Exp $
+
+*libebml-1.2.2 (26 Sep 2011)
+
+  26 Sep 2011; Tim Harder <radhermit@gentoo.org> +libebml-1.2.2.ebuild:
+  Version bump. Add static-libs use flag (bug #381661), add debug use flag,
+  update to EAPI 4.
 
   24 Sep 2011; Raúl Porcel <armin76@gentoo.org> libebml-1.2.1.ebuild:
   alpha/ia64/sparc stable wrt #376395
