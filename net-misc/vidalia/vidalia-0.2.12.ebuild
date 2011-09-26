@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/vidalia-0.2.12.ebuild,v 1.2 2011/05/08 01:07:09 chiiph Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/vidalia-0.2.12.ebuild,v 1.3 2011/09/26 22:31:14 chainsaw Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="https://www.torproject.org/dist/${PN}/${P}.tar.gz"
 
 LICENSE="|| ( GPL-3 GPL-2 ) openssl"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE="debug +tor"
 
 DEPEND="x11-libs/qt-gui:4[debug?]"
