@@ -1,10 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r10.ebuild,v 1.5 2011/07/20 08:58:35 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r10.ebuild,v 1.6 2011/09/26 17:38:49 vapier Exp $
 
 PATCH_VER="1.3"
 SPLIT_SPECS="no"
-ETYPE="gcc-compiler"
 
 inherit toolchain eutils flag-o-matic
 

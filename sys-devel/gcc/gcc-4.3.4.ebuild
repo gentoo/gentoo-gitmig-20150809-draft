@@ -1,14 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.3.4.ebuild,v 1.17 2011/07/01 06:02:29 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.3.4.ebuild,v 1.18 2011/09/26 17:38:49 vapier Exp $
 
 GENTOO_PATCH_EXCLUDE="69_all_gcc43-pr39013.patch \
 02_all_gcc-4.3-alpha-PR42113.patch" #262567 #309279
 
 PATCH_VER="1.3"
 UCLIBC_VER="1.0"
-
-ETYPE="gcc-compiler"
 
 # Hardened gcc 4 stuff
 PIE_VER="10.1.5"
@@ -71,7 +69,7 @@ if [[ ${CATEGORY} != cross-* ]] ; then
 fi
 
 src_unpack() {
-	gcc_src_unpack
+	toolchain_src_unpack
 
 	use vanilla && return 0
 
