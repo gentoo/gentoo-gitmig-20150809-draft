@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libmrss
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmrss/ChangeLog,v 1.14 2009/06/09 09:29:14 dev-zero Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmrss/ChangeLog,v 1.15 2011/09/26 21:56:36 radhermit Exp $
+
+  26 Sep 2011; Tim Harder <radhermit@gentoo.org> libmrss-0.17.1.ebuild,
+  libmrss-0.18.0.ebuild, libmrss-0.19.2.ebuild:
+  Update HOMEPAGE and SRC_URI.
 
 *libmrss-0.19.2 (09 Jun 2009)
 
