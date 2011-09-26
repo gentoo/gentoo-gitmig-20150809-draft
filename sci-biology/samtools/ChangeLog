@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/samtools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/ChangeLog,v 1.7 2011/07/18 01:50:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/samtools/ChangeLog,v 1.8 2011/09/26 15:18:39 weaver Exp $
+
+*samtools-0.1.18 (26 Sep 2011)
+
+  26 Sep 2011; Andrey Kislyuk <weaver@gentoo.org> +samtools-0.1.18.ebuild:
+  Version bump
 
 *samtools-0.1.17 (18 Jul 2011)
 
