@@ -31,10 +31,6 @@
     <flag name="ospfapi">
       Enable OSPFAPI support for client applications accessing the OSPF link state database
     </flag>
-    <flag name="realms">
-      Apply unofficial patch to enable realms support. Patch and information to be found at
-      http://vcalinus.gemenii.ro/quaggarealms.html and http://linux.mantech.ro/quagga+realm_en.php
-    </flag>
     <flag name="tcp-zebra">
       Enable TCP zserv interface on port 2600 for Zebra/protocol-daemon communication. Unix domain
       sockets are chosen otherwise.
