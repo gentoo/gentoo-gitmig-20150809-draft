@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-1.0.4.ebuild,v 1.2 2011/07/08 19:59:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-1.0.4.ebuild,v 1.3 2011/09/27 13:10:22 ssuominen Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils
@@ -14,21 +14,23 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="alsa dbus gnome ipod libnotify musicbrainz pulseaudio"
 
-RDEPEND=">=dev-libs/glib-2.26:2
-	|| ( >=media-video/mplayer-1.0_rc4_p20091026-r1[ass] media-video/mplayer2[ass] )
+COMMON_DEPEND=">=dev-libs/glib-2.26:2
 	x11-libs/gtk+:3
 	x11-libs/libX11
 	x11-libs/libXScrnSaver
 	alsa? ( media-libs/alsa-lib )
 	dbus? ( >=dev-libs/dbus-glib-0.92 )
-	gnome? ( gnome-base/gvfs
-		gnome-base/nautilus )
+	gnome? ( gnome-base/nautilus )
 	ipod? ( >=media-libs/libgpod-0.7 )
 	libnotify? ( x11-libs/libnotify )
 	musicbrainz? ( net-misc/curl
 		>=media-libs/musicbrainz-3 )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.14 )"
-DEPEND="${RDEPEND}
+RDEPEND="${COMMON_DEPEND}
+	|| ( >=media-video/mplayer-1.0_rc4_p20100101[ass] media-video/mplayer2[ass] )
+	gnome-base/dconf
+	gnome? ( gnome-base/gvfs )"
+DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
 
