@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.25.ebuild,v 1.6 2011/09/12 14:43:23 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.25.ebuild,v 1.7 2011/09/27 19:39:02 ssuominen Exp $
 
 EAPI=4
-inherit eutils autotools
+inherit autotools eutils flag-o-matic multilib
 
 MY_P=${P/_pre/pre}
 
@@ -30,9 +30,13 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
+# Keep this function synced with x11-libs/pango ebuild!
+function multilib_enabled() {
+	has_multilib_profile || ( use x86 && [ "$(get_libdir)" = "lib32" ] )
+}
+
 src_prepare() {
-	sed -i -e "s/noinst_PROGRAMS/check_PROGRAMS/" "${S}/tests/Makefile.am" \
-		"${S}/examples/Makefile.am" || die "sed failed"
+	sed -i -e 's:noinst_PROGRAMS:check_PROGRAMS:' {examples,tests}/Makefile.am || die
 
 	epatch "${FILESDIR}"/${PN}-1.0.17-regtests-need-sqlite.patch
 
@@ -41,7 +45,10 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_enable sqlite) \
+	multilib_enabled && append-lfs-flags #313259
+
+	econf \
+		$(use_enable sqlite) \
 		$(use_enable static-libs static) \
 		$(use_enable alsa) \
 		$(use_enable !minimal external-libs) \

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.129 2011/09/12 15:22:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.130 2011/09/27 19:39:02 ssuominen Exp $
+
+  27 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> libsndfile-1.0.25.ebuild:
+  Use largefile flags when building emul-linux- pkgs wrt #313259 by Marc Joliet
+  and Pacho Ramos
 
   12 Sep 2011; Alexis Ballier <aballier@gentoo.org> -libsndfile-1.0.23.ebuild,
   -libsndfile-1.0.24.ebuild:
