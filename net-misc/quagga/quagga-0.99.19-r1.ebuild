@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.19.ebuild,v 1.1 2011/09/27 13:07:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.19-r1.ebuild,v 1.1 2011/09/27 21:50:12 flameeyes Exp $
 
 EAPI="4"
 
