@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/solfege
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.73 2011/09/15 09:58:38 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.74 2011/09/27 19:53:29 radhermit Exp $
+
+*solfege-3.20.3 (27 Sep 2011)
+
+  27 Sep 2011; Tim Harder <radhermit@gentoo.org> +solfege-3.20.3.ebuild:
+  Version bump.
 
 *solfege-3.20.2 (15 Sep 2011)
 
