@@ -1,6 +1,12 @@
 # ChangeLog for lxde-base/lxdm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/ChangeLog,v 1.10 2011/08/03 16:07:53 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxdm/ChangeLog,v 1.11 2011/09/27 12:38:52 hwoarang Exp $
+
+*lxdm-0.4.1-r2 (27 Sep 2011)
+
+  27 Sep 2011; Markos Chandras <hwoarang@gentoo.org> +lxdm-0.4.1-r2.ebuild:
+  Drop --with-pam since it silently disabled pam support. bug #384615 by
+  Alexander E. Patrakov <patrakov@gmail.com>
 
 *lxdm-0.4.1-r1 (03 Aug 2011)
 
