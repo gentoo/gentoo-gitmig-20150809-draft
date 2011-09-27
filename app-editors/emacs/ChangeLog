@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.431 2011/09/25 13:00:16 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.432 2011/09/27 16:03:29 ulm Exp $
+
+  27 Sep 2011; Ulrich Mueller <ulm@gentoo.org> emacs-21.4-r23.ebuild,
+  emacs-22.3-r8.ebuild, -emacs-23.2-r2.ebuild:
+  Fix compilation with libpng-1.5, bug 384553. Remove old.
 
   25 Sep 2011; Tony Vroon <chainsaw@gentoo.org> emacs-23.3-r2.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
