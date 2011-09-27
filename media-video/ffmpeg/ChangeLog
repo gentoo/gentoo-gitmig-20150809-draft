@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.460 2011/09/27 15:34:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.461 2011/09/27 18:14:53 aballier Exp $
+
+  27 Sep 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild,
+  metadata.xml:
+  add libaacplus support
 
   27 Sep 2011; Jeroen Roovers <jer@gentoo.org> ffmpeg-0.7.5.ebuild:
   Stable for HPPA (bug #384095).

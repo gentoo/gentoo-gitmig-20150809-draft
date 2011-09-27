@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.54 2011/09/21 15:21:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.55 2011/09/27 18:14:53 aballier Exp $
 
 EAPI="4"
 
@@ -29,10 +29,10 @@ if [ "${PV#9999}" = "${PV}" ] ; then
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 fi
 IUSE="
-	aac alsa amr bindist +bzip2 cdio celt cpudetection debug dirac doc +encode
-	faac frei0r gsm +hardcoded-tables ieee1394 jack jpeg2k mp3 network openal
-	oss pic qt-faststart rtmp schroedinger sdl speex static-libs test theora
-	threads truetype v4l v4l2 vaapi vdpau vorbis vpx X x264 xvid +zlib
+	aac aacplus alsa amr bindist +bzip2 cdio celt cpudetection debug dirac doc
+	+encode faac frei0r gsm +hardcoded-tables ieee1394 jack jpeg2k mp3 network
+	openal oss pic qt-faststart rtmp schroedinger sdl speex static-libs test
+	theora threads truetype v4l v4l2 vaapi vdpau vorbis vpx X x264 xvid +zlib
 	"
 
 # String for CPU features in the useflag[:configure_option] form
@@ -52,6 +52,7 @@ RDEPEND="
 	dirac? ( media-video/dirac )
 	encode? (
 		aac? ( media-libs/vo-aacenc )
+		aacplus? ( media-libs/libaacplus )
 		amr? ( media-libs/vo-amrwbenc )
 		faac? ( media-libs/faac )
 		mp3? ( >=media-sound/lame-3.98.3 )
@@ -93,7 +94,7 @@ DEPEND="${RDEPEND}
 	v4l2? ( sys-kernel/linux-headers )
 "
 # faac is license-incompatible with ffmpeg
-REQUIRED_USE="bindist? ( encode? ( !faac ) )"
+REQUIRED_USE="bindist? ( encode? ( !faac !aacplus ) )"
 
 S=${WORKDIR}/${P/_/-}
 
@@ -126,6 +127,7 @@ src_configure() {
 		for i in theora vorbis x264 xvid; do
 			use ${i} && myconf="${myconf} --enable-lib${i}"
 		done
+		use aacplus && myconf="${myconf} --enable-libaacplus --enable-nonfree"
 		use faac && myconf="${myconf} --enable-libfaac --enable-nonfree"
 	else
 		myconf="${myconf} --disable-encoders"
