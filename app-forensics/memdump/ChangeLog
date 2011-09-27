@@ -1,6 +1,13 @@
 # ChangeLog for app-forensics/memdump
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/memdump/ChangeLog,v 1.9 2011/06/26 07:17:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/memdump/ChangeLog,v 1.10 2011/09/27 08:52:16 radhermit Exp $
+
+*memdump-1.01 (27 Sep 2011)
+
+  27 Sep 2011; Tim Harder <radhermit@gentoo.org> -memdump-1.0.1.ebuild,
+  +memdump-1.01.ebuild, +files/memdump-1.01-linux3.patch:
+  Use upstream versioning and fix build with Linux 3.x (bug #383803 by Diego
+  Elio Pettenò).
 
   26 Jun 2011; Tim Harder <radhermit@gentoo.org> memdump-1.0.1.ebuild:
   Respect LDFLAGS (bug #337739), respect CC (bug #243594), don't test FEATURES
