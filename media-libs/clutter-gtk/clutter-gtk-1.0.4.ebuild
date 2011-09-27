@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/clutter-gtk-1.0.0.ebuild,v 1.2 2011/04/16 06:17:13 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/clutter-gtk-1.0.4.ebuild,v 1.1 2011/09/27 12:46:14 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="yes"
 CLUTTER_LA_PUNT="yes"
 
 # inherit clutter after gnome2 so that defaults aren't overriden
-inherit gnome2 clutter
+inherit gnome2 clutter gnome.org
 
 DESCRIPTION="Clutter-GTK - GTK+3 Integration library for Clutter"
 
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-1.14 )"
 
 pkg_setup() {
-	DOCS="AUTHORS ChangeLog NEWS README"
+	DOCS="NEWS README"
 	EXAMPLES="examples/{*.c,redhand.png}"
 	G2CONF="${G2CONF}
 		--with-flavour=x11
