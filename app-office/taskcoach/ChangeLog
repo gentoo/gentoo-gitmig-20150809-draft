@@ -1,6 +1,14 @@
 # ChangeLog for app-office/taskcoach
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/ChangeLog,v 1.75 2011/09/06 08:58:27 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/ChangeLog,v 1.76 2011/09/27 12:47:18 caster Exp $
+
+*taskcoach-1.2.28 (27 Sep 2011)
+
+  27 Sep 2011; Vlastimil Babka <caster@gentoo.org> taskcoach-1.1.4-r1.ebuild,
+  -taskcoach-1.2.23.ebuild, -taskcoach-1.2.24.ebuild, taskcoach-1.2.27.ebuild,
+  +taskcoach-1.2.28.ebuild:
+  Version bump. Stop removing the syncml .so file which was already removed
+  upstream a while ago.
 
 *taskcoach-1.2.27 (06 Sep 2011)
 
