@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/files/lighttpd.initd,v 1.18 2011/09/19 17:05:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/files/lighttpd.initd,v 1.19 2011/09/27 00:53:18 hwoarang Exp $
 
 opts="reload graceful"
 
@@ -50,7 +50,7 @@ reload() {
 	checkconfig || return 1
 
 	ebegin "Re-opening lighttpd log files"
-	start-stop-daemon --stop --quiet --pidfile "${LIGHTTPD_PID}" \
+	start-stop-daemon --quiet --pidfile "${LIGHTTPD_PID}" \
 		--signal HUP
 	eend $?
 }
@@ -63,7 +63,7 @@ graceful() {
 	checkconfig || return 1
 
 	ebegin "Gracefully stopping lighttpd"
-	start-stop-daemon --stop --quiet --pidfile "${LIGHTTPD_PID}" \
+	start-stop-daemon --quiet --pidfile "${LIGHTTPD_PID}" \
 		--signal INT
 	if eend $? ; then
 		rm -f "${LIGHTTPD_PID}"

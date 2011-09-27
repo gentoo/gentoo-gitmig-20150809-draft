@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.259 2011/09/26 17:08:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.260 2011/09/27 00:53:18 hwoarang Exp $
+
+*lighttpd-1.4.29-r3 (27 Sep 2011)
+
+  27 Sep 2011; Markos Chandras <hwoarang@gentoo.org>
+  -lighttpd-1.4.29-r1.ebuild, -lighttpd-1.4.29-r2.ebuild,
+  +lighttpd-1.4.29-r3.ebuild, files/lighttpd.initd:
+  Force revbump in stable tree to fix broken init script per bug #375301
 
   26 Sep 2011; Markos Chandras <hwoarang@gentoo.org> lighttpd-1.4.29-r2.ebuild,
   +files/lighttpd-1.4.29-ssl-no-ecdh.patch:
