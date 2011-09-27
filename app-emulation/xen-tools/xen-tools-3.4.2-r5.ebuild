@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.4.2-r4.ebuild,v 1.1 2011/09/25 19:45:22 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.4.2-r5.ebuild,v 1.1 2011/09/27 21:14:09 chainsaw Exp $
 
 EAPI="3"
 
@@ -62,6 +62,7 @@ PATCHES=(
 	"${FILESDIR}/${P}-fix-definitions.patch"
 	"${FILESDIR}/${P}-fix-include.patch"
 	"${FILESDIR}/${P}-werror-idiocy-v2.patch"
+	"${FILESDIR}/${P}-ldflags-respect.patch"
 )
 
 # hvmloader is used to bootstrap a fully virtualized kernel
@@ -131,7 +132,7 @@ src_compile() {
 		append-flags -fno-strict-overflow
 	fi
 
-	emake CC=$(tc-getCC) -C tools ${myopt} || die "compile failed"
+	emake CC=$(tc-getCC) LD=$(tc-getLD) -C tools ${myopt} || die "compile failed"
 
 	if use doc; then
 		sh ./docs/check_pkgs || die "package check failed"
@@ -148,6 +149,11 @@ src_install() {
 
 	# Remove RedHat-specific stuff
 	rm -rf "${D}"/etc/sysconfig
+
+	# Remove unneeded static-libs
+	rm "${D}"/usr/lib64/libxenctrl.a "${D}"/usr/lib64/libxenguest.a \
+	"${D}"/usr/lib64/libflask.a "${D}"/usr/lib64/libxenstore.a \
+	"${D}"/usr/lib64/libblktap.a "${D}"/usr/lib64/libxenapi.a
 
 	dodoc README docs/README.xen-bugtool docs/ChangeLog
 	if use doc; then
