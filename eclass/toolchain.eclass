@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.471 2011/09/26 20:39:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.472 2011/09/27 12:14:25 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -81,14 +81,10 @@ STDCXX_INCDIR=${TOOLCHAIN_STDCXX_INCDIR:-${LIBPATH}/include/g++-v${GCC_BRANCH_VE
 
 
 #---->> SLOT+IUSE logic <<----
-IUSE="multislot nptl test"
-
-if tc_version_is_at_least 3 ; then
-	IUSE+=" vanilla"
-fi
+IUSE="build multislot nls nptl test vanilla"
 
 if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
-	IUSE+=" altivec build fortran nls nocxx"
+	IUSE+=" altivec fortran nocxx"
 	[[ -n ${PIE_VER} ]] && IUSE+=" nopie"
 	[[ -n ${PP_VER}	 ]] && IUSE+=" nossp"
 	[[ -n ${SPECS_VER} ]] && IUSE+=" nossp"
@@ -121,6 +117,44 @@ else
 fi
 #----<< SLOT+IUSE logic >>----
 
+#---->> DEPEND <<----
+
+RDEPEND="sys-libs/zlib
+	!build? (
+		nls? ( sys-devel/gettext )
+	)"
+if tc_version_is_at_least 3 ; then
+	RDEPEND+=" virtual/libiconv"
+fi
+if tc_version_is_at_least 4 ; then
+	RDEPEND+=" >=dev-libs/gmp-4.2.1 >=dev-libs/mpfr-2.3.2"
+	if tc_version_is_at_least 4.5 ; then
+		RDEPEND+=" >=dev-libs/mpc-0.8.1"
+	fi
+fi
+if has graphite ${IUSE} ; then
+	RDEPEND+="
+	    graphite? (
+	        >=dev-libs/cloog-ppl-0.15.10
+	        >=dev-libs/ppl-0.10
+	    )"
+fi
+
+DEPEND="${RDEPEND}
+	>=sys-apps/texinfo-4.8
+	>=sys-devel/bison-1.875
+	>=sys-devel/flex-2.5.4
+	test? (
+		>=dev-util/dejagnu-1.4.4
+		>=sys-devel/autogen-5.5.4
+	)"
+if tc_version_is_at_least 4.2 && has gcj ${IUSE} ; then
+	DEPEND+=" gcj? ( app-arch/zip app-arch/unzip )"
+fi
+
+PDEPEND=">=sys-devel/gcc-config-1.4"
+
+#----<< DEPEND >>----
 
 #---->> S + SRC_URI essentials <<----
 
