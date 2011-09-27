@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/plasma-workspace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.124 2011/09/07 20:13:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.125 2011/09/27 21:45:52 abcd Exp $
+
+*plasma-workspace-4.7.1-r1 (27 Sep 2011)
+
+  27 Sep 2011; Jonathan Callen <abcd@gentoo.org>
+  +plasma-workspace-4.7.1-r1.ebuild:
+  Depend on new kactivities (kactivities blocks older versions of
+  plasma-workspace to ensure upgrades work properly)
 
 *plasma-workspace-4.7.1 (07 Sep 2011)
 
