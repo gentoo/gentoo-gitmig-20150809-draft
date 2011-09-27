@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-3.0.7.ebuild,v 1.1 2011/08/16 22:09:44 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-3.0.7.ebuild,v 1.2 2011/09/27 17:25:55 nirbheek Exp $
 
 EAPI="3"
 GNOME_TARBALL_SUFFIX="xz"
@@ -28,12 +28,12 @@ RDEPEND=">=app-editors/gedit-3.0.0[python?]
 	>=x11-libs/gtk+-3.0.0:3
 	>=x11-libs/gtksourceview-3.0.0:3.0
 	python? (
-		>=app-editors/gedit-3.0.0[introspection]
-		>=dev-libs/glib-2.26.0:2[introspection]
+		dev-libs/gobject-introspection
+		x11-libs/gdk-pixbuf:2[introspection]
 		>=x11-libs/gtk+-3.0.0:3[introspection]
 		>=x11-libs/gtksourceview-3.0.0:3.0[introspection]
 		x11-libs/pango[introspection]
-		x11-libs/gdk-pixbuf:2[introspection]
+		>=app-editors/gedit-3.0.0[introspection]
 	)
 	charmap? ( >=gnome-extra/gucharmap-3.0.0:2.90[introspection] )
 	synctex? ( >=dev-python/dbus-python-0.82 )
