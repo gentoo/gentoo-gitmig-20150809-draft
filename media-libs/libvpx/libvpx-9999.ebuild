@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.17 2011/09/22 09:08:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/libvpx-9999.ebuild,v 1.18 2011/09/27 12:57:54 ottxor Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs
@@ -39,6 +39,9 @@ REQUIRED_USE="
 	"
 
 src_configure() {
+	# http://bugs.gentoo.org/show_bug.cgi?id=384585
+	addpredict /usr/share/snmp/mibs/.index
+
 	tc-export CC
 	./configure \
 		--prefix="${EPREFIX}"/usr \
