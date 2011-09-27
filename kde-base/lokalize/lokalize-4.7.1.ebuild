@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/lokalize-4.7.1.ebuild,v 1.2 2011/09/22 21:50:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/lokalize-4.7.1.ebuild,v 1.3 2011/09/27 20:55:44 dilfridge Exp $
 
 EAPI=3
 
@@ -11,13 +11,12 @@ inherit python kde4-meta
 
 DESCRIPTION="KDE4 translation tool"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="debug"
+IUSE="debug semantic-desktop"
 
-# Althrought they are purely runtime, its too useless without them
 DEPEND="
 	>=app-text/hunspell-1.2.8
-	dev-libs/soprano
 	>=x11-libs/qt-sql-4.5.0:4[sqlite]
+	semantic-desktop? ( dev-libs/soprano )
 "
 RDEPEND="${DEPEND}
 	$(add_kdebase_dep kdesdk-strigi-analyzer)
