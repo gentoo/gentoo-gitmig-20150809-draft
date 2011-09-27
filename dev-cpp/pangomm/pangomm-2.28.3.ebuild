@@ -1,18 +1,19 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/pangomm-2.28.1.ebuild,v 1.1 2011/03/26 19:48:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/pangomm-2.28.3.ebuild,v 1.1 2011/09/27 12:54:45 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 
-inherit autotools gnome2
+inherit gnome2
 
 DESCRIPTION="C++ interface for pango"
 HOMEPAGE="http://www.gtkmm.org"
 
 LICENSE="LGPL-2.1"
 SLOT="1.4"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~sparc-solaris ~x86-solaris"
 IUSE="doc"
 
 COMMON_DEPEND=">=x11-libs/pango-1.23.0
@@ -32,7 +33,6 @@ RDEPEND="${COMMON_DEPEND}
 
 src_prepare() {
 	G2CONF="${G2CONF}
-		--disable-maintainer-mode
 		$(use_enable doc documentation)"
 	DOCS="AUTHORS ChangeLog NEWS README*"
 }

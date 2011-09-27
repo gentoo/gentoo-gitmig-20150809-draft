@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/pangomm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/ChangeLog,v 1.43 2011/09/25 17:34:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/ChangeLog,v 1.44 2011/09/27 12:54:45 pacho Exp $
+
+*pangomm-2.28.3 (27 Sep 2011)
+
+  27 Sep 2011; Pacho Ramos <pacho@gentoo.org> -pangomm-2.28.1.ebuild,
+  +pangomm-2.28.3.ebuild:
+  Version bump, remove old.
 
   25 Sep 2011; Raúl Porcel <armin76@gentoo.org> pangomm-2.28.2.ebuild:
   alpha/ia64/sh/sparc stable wrt #372353
