@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.72 2011/09/25 19:11:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.73 2011/09/27 19:31:56 dilfridge Exp $
+
+  27 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org> strigi-0.7.6.ebuild:
+  Add missing boost dependency, bug 384519
 
 *strigi-0.7.6 (25 Sep 2011)
 

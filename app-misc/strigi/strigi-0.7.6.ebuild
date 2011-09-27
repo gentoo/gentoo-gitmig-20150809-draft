@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.6.ebuild,v 1.1 2011/09/25 19:11:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.6.ebuild,v 1.2 2011/09/27 19:31:56 dilfridge Exp $
 
 EAPI=4
 
@@ -25,6 +25,7 @@ IUSE="clucene +dbus debug exif fam ffmpeg hyperestraier inotify log +qt4 test"
 
 COMMONDEPEND="
 	app-arch/bzip2:0
+	dev-libs/boost
 	dev-libs/libxml2:2
 	sys-libs/zlib:0
 	virtual/libiconv
