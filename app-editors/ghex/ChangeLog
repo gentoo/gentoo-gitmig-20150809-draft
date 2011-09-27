@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/ghex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.63 2011/09/26 18:08:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.64 2011/09/27 18:57:34 pacho Exp $
+
+  27 Sep 2011; Pacho Ramos <pacho@gentoo.org> ghex-3.0.0.ebuild:
+  popt and scrollkeeper/rarian are no longer required, thanks to tetromino for
+  noticing.
 
 *ghex-3.0.0 (26 Sep 2011)
 
