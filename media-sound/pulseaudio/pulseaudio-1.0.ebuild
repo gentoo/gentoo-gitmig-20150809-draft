@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.99.4.ebuild,v 1.1 2011/09/15 11:19:37 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-1.0.ebuild,v 1.1 2011/09/27 09:48:43 ford_prefect Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ inherit eutils libtool flag-o-matic versionator
 DESCRIPTION="A networked sound server with an advanced plugin system"
 HOMEPAGE="http://www.pulseaudio.org/"
 
-SRC_URI="http://freedesktop.org/software/pulseaudio/releases/${P}.tar.gz"
+SRC_URI="http://freedesktop.org/software/pulseaudio/releases/${P}.tar.xz"
 
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
@@ -18,7 +18,7 @@ IUSE="+alsa avahi +caps equalizer jack lirc oss tcpd +X dbus libsamplerate gnome
 
 RDEPEND="app-admin/eselect-esd
 	X? (
-		|| ( >=x11-libs/libX11-1.4.0 <x11-libs/libX11-1.4.0[xcb] )
+		>=x11-libs/libX11-1.4.0
 		>=x11-libs/libxcb-1.6
 		>=x11-libs/xcb-util-0.3.1
 		x11-libs/libSM
@@ -55,7 +55,7 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	X? (
 		x11-proto/xproto
-		|| ( >=x11-libs/libXtst-1.0.99.2 <x11-proto/xextproto-7.0.99 )
+		>=x11-libs/libXtst-1.0.99.2
 	)
 	dev-libs/libatomic_ops
 	dev-util/pkgconfig
