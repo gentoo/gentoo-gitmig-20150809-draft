@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5732 2011/09/27 13:28:30 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5733 2011/09/27 19:15:51 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Preepmtive package mask of soprano-2.[67].1, should anyone bump it. KDE
+  advises not to use these as they introduce major breakage.
 
   27 Sep 2011; Arun Raghavan <ford_prefect@gentoo.org> package.mask:
   Remove pulseaudio/pavucontrol 0.99 from package.mask -- these versions are
