@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.94 2011/05/26 15:31:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.95 2011/09/27 10:47:17 hwoarang Exp $
+
+*freeradius-2.1.11 (26 Sep 2011)
+
+  26 Sep 2011; Markos Chandras <hwoarang@gentoo.org> +freeradius-2.1.11.ebuild:
+  Non-maintainer version bump. Thanks to Bjarke Istrup Pedersen
+  <gurligebis@gentoo.org>. Bug #384027
 
 *freeradius-2.1.10 (26 May 2011)
 
