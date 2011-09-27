@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.182 2011/09/24 16:18:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.183 2011/09/27 18:09:57 xarthisius Exp $
+
+  27 Sep 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  cyrus-imapd-2.4.11.ebuild:
+  ppc/ppc64 stable wrt #382349
 
   24 Sep 2011; Raúl Porcel <armin76@gentoo.org> cyrus-imapd-2.4.11.ebuild:
   sparc stable wrt #382349
