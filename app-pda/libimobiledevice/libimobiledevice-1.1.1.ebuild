@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/libimobiledevice-1.1.1.ebuild,v 1.1 2011/06/15 18:53:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libimobiledevice/libimobiledevice-1.1.1.ebuild,v 1.2 2011/09/27 13:40:47 ssuominen Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2:2.6"
@@ -18,7 +18,7 @@ IUSE="python static-libs"
 
 RDEPEND=">=app-pda/libplist-0.15
 	>=app-pda/usbmuxd-0.1.4
-	>=dev-libs/glib-2.14.1
+	>=dev-libs/glib-2.28.6
 	dev-libs/libgcrypt
 	>=dev-libs/libtasn1-1.1
 	>=net-libs/gnutls-1.6.3
