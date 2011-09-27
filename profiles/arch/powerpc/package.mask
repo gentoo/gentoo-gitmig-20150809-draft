@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.42 2011/09/07 19:45:17 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.43 2011/09/27 21:43:34 abcd Exp $
 
 # Alexey Shvetsov <alexxy@gentoo.org> (27 Jul 2011)
 # Mask KDE SC 4.7.0 per bug #376613
@@ -317,6 +317,7 @@
 ~kde-base/juk-4.7.1
 ~kde-base/kabcclient-4.7.1
 ~kde-base/kaccessible-4.7.1
+~kde-base/kactivities-4.7.1
 ~kde-base/kaddressbook-4.7.1
 ~kde-base/kajongg-4.7.1
 ~kde-base/kalarm-4.7.1

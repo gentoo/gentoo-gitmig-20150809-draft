@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.138 2011/09/21 10:20:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.139 2011/09/27 21:43:34 abcd Exp $
+
+  27 Sep 2011; Jonathan Callen <abcd@gentoo.org> package.mask:
+  Add kactivites to KDE 4.7 mask
 
   21 Sep 2011; Markos Chandras <hwoarang@gentoo.org> package.use.force:
   Force botan-bundled useflag for dev-util/qt-creator
