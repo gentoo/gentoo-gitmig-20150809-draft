@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/golly
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/golly/ChangeLog,v 1.7 2011/03/22 12:29:00 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/golly/ChangeLog,v 1.8 2011/09/27 22:36:43 xmw Exp $
+
+*golly-2.2-r1 (27 Sep 2011)
+
+  27 Sep 2011; Michael Weber <xmw@gentoo.org> -golly-2.1.ebuild,
+  -golly-2.1-r1.ebuild, -files/golly-2.1-as-needed.patch,
+  -files/golly-2.1-perl-ldopts.patch, -files/golly-2.1-python-amd64.patch,
+  golly-2.2.ebuild, +golly-2.2-r1.ebuild, +files/golly-2.2-perl-5.14.patch:
+  Remove old versons, add dep on <perl-5.14 and revbump for perl-5.14 patch by
+  Maks Verver (bug 384057)
 
   22 Mar 2011; Thomas Kahle <tomka@gentoo.org> golly-2.2.ebuild:
   x86 stable per bug 357447
