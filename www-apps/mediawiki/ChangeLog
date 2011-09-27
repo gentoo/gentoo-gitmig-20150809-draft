@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.167 2011/09/27 16:35:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.168 2011/09/27 19:30:57 radhermit Exp $
+
+  27 Sep 2011; Tim Harder <radhermit@gentoo.org> -mediawiki-1.16.4.ebuild:
+  Remove old.
 
   27 Sep 2011; Kacper Kowalik <xarthisius@gentoo.org> mediawiki-1.16.5.ebuild:
   ppc stable wrt #366685
