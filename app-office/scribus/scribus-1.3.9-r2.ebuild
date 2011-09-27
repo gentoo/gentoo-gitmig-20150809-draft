@@ -1,18 +1,16 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.0_rc5.ebuild,v 1.4 2011/09/27 21:28:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.3.9-r2.ebuild,v 1.1 2011/09/27 21:28:14 jlec Exp $
 
-EAPI=3
+EAPI=2
 
 PYTHON_DEPEND="2:2.6"
 
 inherit cmake-utils fdo-mime multilib python
 
-MY_P="${P/_/.}"
-
 DESCRIPTION="Desktop publishing (DTP) and layout program"
 HOMEPAGE="http://www.scribus.net/"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -24,7 +22,7 @@ COMMON_DEPEND="
 	dev-libs/libxml2
 	media-libs/fontconfig
 	media-libs/freetype:2
-	media-libs/lcms:2
+	media-libs/lcms:0
 	media-libs/libpng
 	media-libs/tiff
 	net-print/cups
@@ -41,10 +39,10 @@ DEPEND="${COMMON_DEPEND}
 	dev-libs/boost"
 
 PATCHES=(
-	"${FILESDIR}"/${P}-docs.patch
+	"${FILESDIR}/${PN}-1.3.5.1-system-hyphen.patch"
 	)
 
-S=${WORKDIR}/${MY_P}
+DOCS="AUTHORS ChangeLog* LINKS NEWS README TODO TRANSLATION"
 
 pkg_setup() {
 	python_set_active_version 2
@@ -56,9 +54,9 @@ src_prepare() {
 	use examples || \
 		sed '/ADD_SUBDIRECTORY(samples)/d' -i scribus/plugins/scriptplugin/CMakeLists.txt
 
-sed \
-	-e '1i#define OF(x) x' \
-	-i scribus/fileunzip.cpp scribus/unzip.h scribus/ioapi.h || die
+	sed \
+		-e '1i#define OF(x) x' \
+		-i scribus/fileunzip.cpp scribus/unzip.h scribus/ioapi.h || die
 
 	base_src_prepare
 }
@@ -71,7 +69,6 @@ src_configure() {
 		"-DWANT_NORPATH=ON"
 		"-DWANT_QTARTHUR=ON"
 		"-DWANT_QT3SUPPORT=OFF"
-		"-DGENTOOVERSION=${PVR}"
 		$(cmake-utils_use_has spell ASPELL)
 		$(cmake-utils_use_has pdf PODOFO)
 		$(cmake-utils_use_want cairo)
@@ -83,9 +80,6 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
-
-	mv "${ED}"/usr/share/doc/${PF}/{en,html}
-	ln -sf html "${ED}"/usr/share/doc/${PF}/en
 
 	doicon resources/icons/scribus.png
 	domenu scribus.desktop
