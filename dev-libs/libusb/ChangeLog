@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libusb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.110 2010/10/12 16:44:02 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.111 2011/09/27 17:27:43 grobian Exp $
+
+  27 Sep 2011; Fabian Groffen <grobian@gentoo.org> libusb-0.1.12-r7.ebuild,
+  libusb-1.0.8.ebuild:
+  Marked ~x64-macos
 
   12 Oct 2010; Raúl Porcel <armin76@gentoo.org> libusb-1.0.8.ebuild:
   sparc stable wrt #304149
