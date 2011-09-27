@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/quagga
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.112 2011/09/06 11:11:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.113 2011/09/27 13:07:50 flameeyes Exp $
+
+*quagga-0.99.19 (27 Sep 2011)
+
+  27 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org> +quagga-0.99.19.ebuild,
+  +files/quagga-services.init.2, +files/zebra.init.3:
+  Version bump (security fixes); use EAPI=4; use OpenRC's proper init scripts
+  with check whether to use syslog or not; disable strict aliasing since way
+  too many warnings are thrown right now and this could be mission-critical for
+  many.
 
   06 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   -quagga-0.99.17-r2.ebuild, -files/quagga-0.99.17-gentoo.patch:
