@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.7.4.ebuild,v 1.1 2011/07/03 17:54:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.7.4.ebuild,v 1.2 2011/09/27 17:36:29 grobian Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos"
 IUSE="usb kernel_linux"
 
 RDEPEND="!kernel_linux? ( usb? ( virtual/libusb:1 ) )
@@ -44,8 +44,9 @@ src_configure() {
 	econf \
 		--disable-maintainer-mode \
 		--disable-dependency-tracking \
-		--docdir="/usr/share/doc/${PF}" \
-		--enable-usbdropdir="/usr/$(get_libdir)/readers/usb" \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
+		--enable-usbdropdir="${EPREFIX}/usr/$(get_libdir)/readers/usb" \
+		--enable-confdir="${EPREFIX}"/etc \
 		${myconf}
 }
 
