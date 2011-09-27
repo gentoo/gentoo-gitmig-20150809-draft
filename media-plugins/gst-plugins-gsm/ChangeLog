@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/gst-plugins-gsm
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gsm/ChangeLog,v 1.1 2011/09/27 10:04:49 leio Exp $
+
+*gst-plugins-gsm-0.10.22 (27 Sep 2011)
+
+  27 Sep 2011; Mart Raudsepp <leio@gentoo.org> +gst-plugins-gsm-0.10.22.ebuild:
+  Add the gsm plugin from gst-plugins-bad for GSM audio decoding/encoding for
+  bug 384093
+
