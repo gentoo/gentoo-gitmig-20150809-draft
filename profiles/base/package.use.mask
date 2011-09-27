@@ -1,9 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.268 2011/09/27 09:33:41 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.269 2011/09/27 12:11:16 nirbheek Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Nirbheek Chauhan <nirbheek@gentoo.org> (17 Sep 2011)
+# Systemtap is not keyworded on anything except amd64/x86
+# Temporarily mask instead of dropping keywords, bug 384647
+dev-libs/glib systemtap
 
 # Markos Chandras <hwoarang@gentoo.org> (19 Aug 2011)
 # Masking xen useflag from app-emulation/libvirt per
@@ -23,7 +28,7 @@ gnome-extra/gnome-games seed
 # Nirbheek Chauhan <nirbheek@gentoo.org> (16 Aug 2011)
 # Mask introspection on ebuilds that went stable before it was unmasked.
 # As these ebuilds are cleaned from the tree, the masks can be removed.
-dev-libs/glib introspection
+<dev-libs/glib-2.30.0 introspection
 <dev-libs/atk-1.32.0-r1 introspection
 <app-cdr/brasero-2.32.1-r1 introspection
 <app-crypt/seahorse-2.32.0-r1 introspection

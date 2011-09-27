@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.143 2011/09/18 12:38:25 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.144 2011/09/27 12:13:12 nirbheek Exp $
+
+  27 Sep 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
+  Mask dev-libs/glib[systemtap] and unmask for amd64/x86, bug 384647
 
   18 Sep 2011; Maxim Koltsov <maksbotan@gentoo.org> no-multilib/package.mask:
   Mask 32bit only games-action/cs2d on no-multilib profile

@@ -1,8 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.63 2011/09/27 09:33:41 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.64 2011/09/27 12:14:40 nirbheek Exp $
 
 # This file requires >=portage-2.1.1
+
+# Nirbheek Chauhan <nirbheek@gentoo.org> (17 Sep 2011)
+# Systemtap is masked in base/package.use.mask
+# Temporarily unmask in amd64/x86, bug 384647
+dev-libs/glib -systemtap
 
 # Anthony G. Basile <blueness@gentoo.org> (22 Jul 2011)
 # nat-pmp and upnp are only stable on amd64/x86 for this package

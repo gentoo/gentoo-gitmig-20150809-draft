@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.76 2011/07/22 18:09:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.77 2011/09/27 12:14:40 nirbheek Exp $
+
+  27 Sep 2011; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
+  Mask dev-libs/glib[systemtap] and unmask for amd64/x86, bug 384647
 
   22 Jul 2011; Anthony G. Basile <blueness@gentoo.org> package.use.mask:
   Unmask USE="nat-pmp" and "upnp" here.
