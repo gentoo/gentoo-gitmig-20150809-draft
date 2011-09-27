@@ -1,5 +1,11 @@
 
 
+*elfix-0.2.1 (27 Sep 2011)
+
+  27 Sep 2011; Anthony G. Basile <blueness@gentoo.org> -elfix-0.2.0.ebuild,
+  +elfix-0.2.1.ebuild:
+  Improves control of setting PT_PAX flags
+
 *elfix-0.2.0 (18 Sep 2011)
 
   18 Sep 2011; Anthony G. Basile <blueness@gentoo.org> +elfix-0.2.0.ebuild:
