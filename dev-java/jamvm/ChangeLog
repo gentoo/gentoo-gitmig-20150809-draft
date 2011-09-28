@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jamvm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/ChangeLog,v 1.46 2010/07/08 04:22:28 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/ChangeLog,v 1.47 2011/09/28 10:53:39 ssuominen Exp $
+
+  28 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  USE="libffi" is now global USE flag.
 
   08 Jul 2010; Diego E. Pettenò <flameeyes@gentoo.org>
   +files/classes-location.patch:
