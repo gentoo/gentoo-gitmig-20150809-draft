@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.30.0.ebuild,v 1.1 2011/09/27 12:59:44 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.30.0.ebuild,v 1.2 2011/09/28 11:20:20 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -22,7 +22,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="doc test"
 
 RDEPEND=">=dev-libs/glib-2.29.7:2
-	>=dev-libs/libffi-3.0"
+	virtual/libffi"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/flex

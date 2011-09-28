@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/gobject-introspection
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.44 2011/09/27 12:59:44 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/ChangeLog,v 1.45 2011/09/28 11:20:20 ssuominen Exp $
+
+  28 Sep 2011; Samuli Suominen <ssuominen@gentoo.org>
+  gobject-introspection-1.30.0.ebuild:
+  Use virtual/libffi instead of dev-libs/libffi in case we have to switch to
+  using copy from GCC in future.
 
 *gobject-introspection-1.30.0 (27 Sep 2011)
 

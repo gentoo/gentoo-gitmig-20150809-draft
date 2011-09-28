@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.30.0.ebuild,v 1.1 2011/09/27 12:59:45 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.30.0.ebuild,v 1.2 2011/09/28 11:19:21 ssuominen Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh
 ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x86-linux"
 
 RDEPEND="virtual/libiconv
-	>=dev-libs/libffi-3.0.0
+	virtual/libffi
 	sys-libs/zlib
 	xattr? ( sys-apps/attr )
 	fam? ( virtual/fam )"

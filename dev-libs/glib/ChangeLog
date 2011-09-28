@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.483 2011/09/27 12:59:45 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.484 2011/09/28 11:19:21 ssuominen Exp $
+
+  28 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> glib-2.30.0.ebuild:
+  Use virtual/libffi instead of dev-libs/libffi in case we have to switch to
+  using copy from GCC in future.
 
 *glib-2.30.0 (27 Sep 2011)
 
