@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/opencpn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/opencpn/ChangeLog,v 1.4 2011/07/31 14:25:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/opencpn/ChangeLog,v 1.5 2011/09/28 14:39:18 mschiff Exp $
+
+  28 Sep 2011; Marc Schiffbauer <mschiff@gentoo.org> opencpn-2.5.0.ebuild,
+  +files/opencpn-2.5.0_tinyxml_stl.patch:
+  Add patch to fix linking against tinyxml[stl]. Fixes #384781
 
 *opencpn-2.5.0 (31 Jul 2011)
 
