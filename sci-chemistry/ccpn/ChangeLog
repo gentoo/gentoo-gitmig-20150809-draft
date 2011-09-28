@@ -1,6 +1,17 @@
 # ChangeLog for sci-chemistry/ccpn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.68 2011/09/27 08:26:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ChangeLog,v 1.69 2011/09/28 14:17:21 jlec Exp $
+
+  28 Sep 2011; Justin Lecher <jlec@gentoo.org> +ccpn-2.1.5_p110928.ebuild,
+  +ccpn-2.2.1_p110928.ebuild:
+  Move symlink createtion to the data package
+
+*ccpn-2.2.1_p110928 (28 Sep 2011)
+*ccpn-2.1.5_p110928 (28 Sep 2011)
+
+  28 Sep 2011; Justin Lecher <jlec@gentoo.org> +ccpn-2.1.5_p110928.ebuild,
+  +ccpn-2.2.1_p110928.ebuild:
+  Move symlink create to the data package
 
 *ccpn-2.2.1_p110926 (27 Sep 2011)
 *ccpn-2.1.5_p110926 (27 Sep 2011)
