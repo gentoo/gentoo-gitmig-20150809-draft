@@ -1,10 +1,6 @@
 # ChangeLog for dev-tex/luatex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.93 2011/09/28 23:03:44 reavertm Exp $
-
-  28 Sep 2011; Maciej Mrozowski <reavertm@gentoo.org> luatex-0.63.0.ebuild,
-  luatex-0.65.0.ebuild, luatex-0.70.1.ebuild:
-  Doesn't compile against poppler-0.18.0, restrict.
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.94 2011/09/28 23:40:08 reavertm Exp $
 
   18 Sep 2011; Raúl Porcel <armin76@gentoo.org> luatex-0.70.1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #355085
