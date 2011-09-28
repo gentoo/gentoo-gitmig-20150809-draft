@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/gitg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.14 2011/08/07 07:24:00 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.15 2011/09/28 14:36:38 sping Exp $
+
+*gitg-0.2.5 (28 Sep 2011)
+
+  28 Sep 2011; Sebastian Pipping <sping@gentoo.org> +gitg-0.2.5.ebuild:
+  Bump to 0.2.5 (bug #383527)
 
   07 Aug 2011; Zac Medico <zmedico@gentoo.org> gitg-0.2.4.ebuild:
   Add ~x86-linux keyword.
