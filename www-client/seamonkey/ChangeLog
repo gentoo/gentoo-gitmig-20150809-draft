@@ -1,6 +1,11 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.336 2011/09/26 15:08:07 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.337 2011/09/28 11:14:09 ssuominen Exp $
+
+  28 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> seamonkey-2.3.1.ebuild,
+  seamonkey-2.3.3-r1.ebuild, seamonkey-2.4.ebuild:
+  Use virtual/libffi instead of dev-libs/libffi in case we have to switch to
+  using copy from GCC in future.
 
 *seamonkey-2.4 (26 Sep 2011)
 *seamonkey-2.3.3-r1 (26 Sep 2011)

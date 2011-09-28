@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-6.0.2.ebuild,v 1.1 2011/09/26 15:58:51 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-6.0.2.ebuild,v 1.2 2011/09/28 11:15:25 ssuominen Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -37,7 +37,7 @@ RDEPEND="
 	>=dev-libs/glib-2.26
 	>=media-libs/mesa-7.10
 	media-libs/libpng[apng]
-	dev-libs/libffi
+	virtual/libffi
 	system-sqlite? ( >=dev-db/sqlite-3.7.4[fts3,secure-delete,unlock-notify,debug=] )
 	webm? ( media-libs/libvpx
 		media-libs/alsa-lib )
