@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.463 2011/09/23 16:29:06 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.464 2011/09/28 10:52:06 ssuominen Exp $
 
 # Keep them sorted
 
@@ -190,6 +190,7 @@ lcms - Adds lcms support (color management engine)
 ldap - Adds LDAP support (Lightweight Directory Access Protocol)
 libcaca - Add support for colored ASCII-art graphics
 libedit - Use the libedit library (replacement for readline)
+libffi - Enable support for Foreign Function Interface library
 libgda - Adds GNOME Data Access support
 libnotify - Enable desktop notification support
 libsamplerate - Build with support for converting sample rates using libsamplerate

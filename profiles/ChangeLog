@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5735 2011/09/28 04:53:43 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5736 2011/09/28 10:52:06 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> use.desc:
+  Import description for USE="libffi".
 
   28 Sep 2011; Justin Bronder <jsbronder@gentoo.org> package.mask:
   Add dev-perl/perl-PBS to mask for <sys-cluster/torque-2.4
