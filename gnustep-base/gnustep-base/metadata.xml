@@ -12,7 +12,4 @@ remote object messaging support (distributed objects), and event loops.
 It provides functionality that aims to implement the non-graphical
 portion of the OpenStep standard (the Foundation library).
 </longdescription>
-<use>
-	<flag name='libffi'>Use <pkg>dev-libs/libffi</pkg> instead of <pkg>dev-libs/ffcall</pkg></flag>
-</use>
 </pkgmetadata>

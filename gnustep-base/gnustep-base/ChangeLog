@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-base/gnustep-base
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.104 2011/04/26 08:06:35 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-base/ChangeLog,v 1.105 2011/09/28 10:57:01 ssuominen Exp $
+
+  28 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  USE="libffi" is now global USE flag.
 
   26 Apr 2011; Bernard Cafarelli <voyageur@gentoo.org>
   gnustep-base-1.22.0.ebuild:
