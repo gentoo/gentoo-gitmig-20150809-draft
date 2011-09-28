@@ -1,0 +1,39 @@
+# ChangeLog for media-sound/google-musicmanager
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/ChangeLog,v 1.1 2011/09/28 07:36:44 ottxor Exp $
+
+  28 Sep 2011; Christoph Junghans <ottxor@gentoo.org>
+  +google-musicmanager-1.0.18.6104_beta.ebuild, +metadata.xml:
+  import from cj-overlay
+
+*google-musicmanager-1.0.18.6104_beta (23 Sep 2011)
+
+  23 Sep 2011; Christoph Junghans <ottxor@gentoo.org>
+  -google-musicmanager-1.0.16.6403_beta.ebuild,
+  +google-musicmanager-1.0.18.6104_beta.ebuild:
+  version bump
+
+*google-musicmanager-1.0.16.6403_beta (27 Aug 2011)
+
+  27 Aug 2011; Christoph Junghans <ottxor@gentoo.org>
+  -google-musicmanager-1.0.13.9715_beta-r1.ebuild,
+  +google-musicmanager-1.0.16.6403_beta.ebuild:
+  version bump
+
+  22 Aug 2011; Christoph Junghans <ottxor@gentoo.org>
+  google-musicmanager-1.0.13.9715_beta-r1.ebuild:
+  added ~amd64 keyword (bug #375969#c8) thx fernando@movrev.com
+
+*google-musicmanager-1.0.13.9715_beta-r1 (22 Aug 2011)
+
+  22 Aug 2011; Christoph Junghans <ottxor@gentoo.org>
+  -google-musicmanager-1.0.13.9715_beta.ebuild,
+  +google-musicmanager-1.0.13.9715_beta-r1.ebuild:
+  fixed license and rpath
+
+*google-musicmanager-1.0.13.9715_beta (20 Aug 2011)
+
+  20 Aug 2011; Christoph Junghans <ottxor@gentoo.org>
+  +google-musicmanager-1.0.13.9715_beta.ebuild, +metadata.xml:
+  initial commit (bug #375969)
+
