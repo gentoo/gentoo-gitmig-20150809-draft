@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.112 2011/09/07 20:13:51 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.113 2011/09/28 22:41:10 reavertm Exp $
+
+  28 Sep 2011; Maciej Mrozowski <reavertm@gentoo.org> okular-4.6.3.ebuild,
+  okular-4.6.5.ebuild, okular-4.7.0.ebuild, okular-4.7.1.ebuild:
+  Provide USE defaults for removed 'exceptions' USE flag from poppler.
 
 *okular-4.7.1 (07 Sep 2011)
 
