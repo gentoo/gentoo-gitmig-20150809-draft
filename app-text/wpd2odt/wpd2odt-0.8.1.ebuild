@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wpd2odt/wpd2odt-0.8.1.ebuild,v 1.1 2011/09/28 18:02:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wpd2odt/wpd2odt-0.8.1.ebuild,v 1.2 2011/09/28 18:07:41 scarabeus Exp $
 
 EAPI=4
 
 DESCRIPTION="WordPerfect Document (wpd/wpg) to Open document (odt/odg) converter"
 HOMEPAGE="http://libwpd.sf.net"
-SRC_URI="mirror://sourceforge/libwpd/writerperfect-${PV}.tar.bz2"
+SRC_URI="mirror://sourceforge/libwpd/writerperfect-${PV}.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
