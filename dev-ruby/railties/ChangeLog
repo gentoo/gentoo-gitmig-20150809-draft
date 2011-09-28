@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/railties
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.13 2011/09/09 07:09:27 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/railties/ChangeLog,v 1.14 2011/09/28 07:34:39 graaff Exp $
+
+*railties-3.0.10 (28 Sep 2011)
+
+  28 Sep 2011; Hans de Graaff <graaff@gentoo.org> +railties-3.0.10.ebuild:
+  Version bump for Rails 3.0.10
 
   09 Sep 2011; Fabian Groffen <grobian@gentoo.org> railties-3.0.9.ebuild:
   Marked ~sparc-solaris
