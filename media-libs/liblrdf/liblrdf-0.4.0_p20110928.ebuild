@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/liblrdf-0.4.0_p20110928.ebuild,v 1.1 2011/09/28 14:40:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/liblrdf-0.4.0_p20110928.ebuild,v 1.2 2011/09/28 22:45:07 ssuominen Exp $
 
 EAPI=4
 inherit autotools
 
 DESCRIPTION="A library for the manipulation of RDF file in LADSPA plugins"
 HOMEPAGE="http://lrdf.sourceforge.net/ http://github.com/swh/LRDF"
-SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.xz"
+SRC_URI="mirror://gentoo/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
