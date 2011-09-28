@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.6.1.ebuild,v 1.4 2011/08/28 15:55:55 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.6.1.ebuild,v 1.5 2011/09/28 10:59:35 ssuominen Exp $
 
 EAPI="3"
 inherit autotools eutils multilib elisp-common flag-o-matic
@@ -12,7 +12,7 @@ SRC_URI="http://uim.googlecode.com/files/${P}.tar.bz2"
 LICENSE="BSD GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
-IUSE="+anthy canna curl eb emacs ffi gnome gtk kde libedit libnotify m17n-lib ncurses nls prime qt4 skk sqlite ssl test unicode X xft linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko"
+IUSE="+anthy canna curl eb emacs libffi gnome gtk kde libedit libnotify m17n-lib ncurses nls prime qt4 skk sqlite ssl test unicode X xft linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko"
 
 RESTRICT="test"
 
@@ -33,7 +33,7 @@ RDEPEND="X? (
 	curl? ( >=net-misc/curl-7.16.4 )
 	eb? ( dev-libs/eb )
 	emacs? ( virtual/emacs )
-	ffi? ( virtual/libffi )
+	libffi? ( virtual/libffi )
 	gnome? ( >=gnome-base/gnome-panel-2.14 )
 	gtk? ( >=x11-libs/gtk+-2.4:2 )
 	kde? ( >=kde-base/kdelibs-4 )
@@ -140,7 +140,7 @@ src_configure() {
 		$(use_with eb) \
 		$(use_enable emacs) \
 		$(use_with emacs lispdir "${SITELISP}") \
-		$(use_with ffi) \
+		$(use_with libffi ffi) \
 		$(use_enable gnome gnome-applet) \
 		$(use_with gtk gtk2) \
 		$(use_with libedit) \

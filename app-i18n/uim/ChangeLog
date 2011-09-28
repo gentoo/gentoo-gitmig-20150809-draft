@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/uim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.235 2011/09/19 07:41:29 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.236 2011/09/28 10:59:35 ssuominen Exp $
+
+  28 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> uim-1.6.1.ebuild,
+  uim-1.7.0.ebuild, uim-1.7.1.ebuild, metadata.xml:
+  Rename local USE="ffi" to global USE="libffi".
 
   19 Sep 2011; Naohiro Aota <naota@gentoo.org> uim-1.7.0.ebuild,
   uim-1.7.1.ebuild:
