@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.63.0.ebuild,v 1.8 2010/11/27 17:51:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.63.0.ebuild,v 1.9 2011/09/28 23:03:44 reavertm Exp $
 
 EAPI="2"
 
@@ -18,6 +18,7 @@ IUSE="doc"
 RDEPEND="dev-libs/zziplib
 	media-libs/libpng
 	>=app-text/poppler-0.12.3-r3[xpdf-headers]
+	<app-text/poppler-0.18.0
 	sys-libs/zlib
 	virtual/tex-base"
 DEPEND="${RDEPEND}
