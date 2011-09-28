@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/padevchooser
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/padevchooser/ChangeLog,v 1.17 2011/01/30 08:54:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/padevchooser/ChangeLog,v 1.18 2011/09/28 10:49:08 ford_prefect Exp $
+
+  28 Sep 2011; Arun Raghavan <ford_prefect@gentoo.org>
+  padevchooser-0.9.3-r1.ebuild:
+  Block being built against >=media-sound/pulseaudio-1.0. padevchooser is
+  considered deprecated by upstreamd and will eventually be removed.
 
   30 Jan 2011; Samuli Suominen <ssuominen@gentoo.org>
   padevchooser-0.9.3-r1.ebuild, +files/padevchooser-0.9.3-libnotify-0.7.patch:
