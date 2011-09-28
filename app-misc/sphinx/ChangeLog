@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/sphinx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.36 2011/05/29 15:31:35 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.37 2011/09/28 10:40:10 grobian Exp $
+
+  28 Sep 2011; Fabian Groffen <grobian@gentoo.org> sphinx-2.0.1_beta.ebuild,
+  +files/sphinx-2.0.1_beta-solaris.patch:
+  Fixed for and marked ~sparc-solaris, ~sparc64-solaris
 
   29 May 2011; Fabian Groffen <grobian@gentoo.org> sphinx-2.0.1_beta.ebuild,
   +files/sphinx-2.0.1_beta-darwin8.patch:

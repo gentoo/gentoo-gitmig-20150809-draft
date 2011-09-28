@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-2.0.1_beta.ebuild,v 1.2 2011/05/29 15:31:35 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-2.0.1_beta.ebuild,v 1.3 2011/09/28 10:40:10 grobian Exp $
 
 EAPI=3
 inherit eutils autotools
@@ -18,7 +18,7 @@ SRC_URI="http://sphinxsearch.com/files/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris"
 IUSE="debug id64 mysql odbc postgres stemmer test"
 
 RDEPEND="mysql? ( virtual/mysql )
@@ -40,6 +40,7 @@ src_unpack() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-darwin8.patch
+	epatch "${FILESDIR}"/${P}-solaris.patch
 
 	# drop nasty hardcoded search path breaking Prefix
 	sed -i -e '/\/usr\/local\//d' configure.ac || die
