@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.95 2011/09/27 16:58:52 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.96 2011/09/28 07:14:39 ottxor Exp $
+
+  28 Sep 2011; Christoph Junghans <ottxor@gentoo.org> gromacs-4.5.5.ebuild:
+  cmake variable LIB was renamed to GMXLIB
 
 *gromacs-4.5.5 (27 Sep 2011)
 

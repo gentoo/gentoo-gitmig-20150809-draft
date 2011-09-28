@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.5.ebuild,v 1.1 2011/09/27 16:58:52 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.5.5.ebuild,v 1.2 2011/09/28 07:14:39 ottxor Exp $
 
 EAPI="4"
 
@@ -150,7 +150,7 @@ src_configure() {
 		$(cmake-utils_use xml GMX_XML)
 		-DGMX_DEFAULT_SUFFIX=off
 		-DGMX_ACCELERATION="$acce"
-		-DLIB="$(get_libdir)"
+		-DGMXLIB="$(get_libdir)"
 	)
 
 	for x in ${GMX_DIRS}; do
