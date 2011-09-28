@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/metagen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.31 2011/09/25 14:31:01 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/metagen/ChangeLog,v 1.32 2011/09/28 14:58:05 neurogeek Exp $
+
+*metagen-0.6.2 (28 Sep 2011)
+
+  28 Sep 2011; Jesus Rivero <neurogeek@gentoo.org> -metagen-0.6.1.ebuild,
+  +metagen-0.6.2.ebuild:
+  New version that fixes bug #384535. Removed 0.6.1
 
   25 Sep 2011; Jesus Rivero <neurogeek@gentoo.org> metagen-9999.ebuild:
   Removed src_prepare func wrt bug #384271
