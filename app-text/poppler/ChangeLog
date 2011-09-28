@@ -1,6 +1,12 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.299 2011/09/17 10:57:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.300 2011/09/28 23:06:04 reavertm Exp $
+
+*poppler-0.18.0 (28 Sep 2011)
+
+  28 Sep 2011; Maciej Mrozowski <reavertm@gentoo.org> +poppler-0.18.0.ebuild,
+  +files/poppler-0.18.0-poppler_page_get_image-crash.patch:
+  Version bump, bug 384595. Ebuild by Rafał Mużyło.
 
   17 Sep 2011; Raúl Porcel <armin76@gentoo.org> poppler-0.16.7.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #377593
