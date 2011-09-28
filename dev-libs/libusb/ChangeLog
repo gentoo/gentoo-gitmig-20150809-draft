@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.111 2011/09/27 17:27:43 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.112 2011/09/28 13:03:27 ssuominen Exp $
+
+  28 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> libusb-0.1.12-r7.ebuild,
+  libusb-1.0.8.ebuild:
+  USE="static-libs" and remove useless libtool files.
 
   27 Sep 2011; Fabian Groffen <grobian@gentoo.org> libusb-0.1.12-r7.ebuild,
   libusb-1.0.8.ebuild:

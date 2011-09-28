@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.12-r7.ebuild,v 1.2 2011/09/27 17:27:43 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.12-r7.ebuild,v 1.3 2011/09/28 13:03:27 ssuominen Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/libusb/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
-IUSE="debug doc nocxx"
+IUSE="debug doc nocxx static-libs"
 RESTRICT="test"
 
 RDEPEND="!dev-libs/libusb-compat"
@@ -42,6 +42,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
+		$(use_enable static-libs static) \
 		$(use_enable debug debug all) \
 		$(use_enable doc build-docs)
 }
@@ -53,4 +54,6 @@ src_install() {
 
 	gen_usr_ldscript -a usb
 	use nocxx && rm -f "${ED}"/usr/include/usbpp.h
+
+	rm -f "${ED}"/usr/lib*/libusb*.la
 }
