@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/c-wrapper/c-wrapper-0.6.1.ebuild,v 1.3 2011/08/13 11:44:04 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/c-wrapper/c-wrapper-0.6.1.ebuild,v 1.4 2011/09/28 11:21:55 ssuominen Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ KEYWORDS="x86"
 IUSE="examples"
 
 RDEPEND="dev-scheme/gauche
-	dev-libs/libffi"
+	virtual/libffi"
 DEPEND="${RDEPEND}"
 
 src_prepare() {

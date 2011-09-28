@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-2.0.0.ebuild,v 1.2 2011/04/12 18:20:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/guile-2.0.0.ebuild,v 1.3 2011/09/28 11:21:15 ssuominen Exp $
 
 EAPI=3
 inherit eutils flag-o-matic elisp-common
@@ -20,7 +20,7 @@ DEPEND="
 	dev-util/pkgconfig
 	dev-libs/libunistring
 	>=dev-libs/boehm-gc-7.0[threads?]
-	dev-libs/libffi
+	virtual/libffi
 	emacs? ( virtual/emacs )"
 RDEPEND="${DEPEND}"
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/guile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.93 2011/07/09 11:18:15 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile/ChangeLog,v 1.94 2011/09/28 11:21:15 ssuominen Exp $
+
+  28 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> guile-2.0.0.ebuild:
+  Use virtual/libffi instead of dev-libs/libffi in case we have to switch to
+  using copy from GCC in future.
 
   09 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> guile-1.8.8-r1.ebuild:
   ppc64 stable wrt #335657
