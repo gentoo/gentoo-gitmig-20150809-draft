@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r23.ebuild,v 1.3 2011/09/27 16:03:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.4-r23.ebuild,v 1.4 2011/09/28 05:35:45 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -30,7 +30,7 @@ DEPEND="sys-libs/ncurses
 		>=media-libs/giflib-4.1.0.1b
 		virtual/jpeg
 		>=media-libs/tiff-3.5.5-r3
-		>=media-libs/libpng-1.2.1
+		>=media-libs/libpng-1.4:0
 		Xaw3d? ( x11-libs/libXaw3d )
 		!Xaw3d? ( motif? ( >=x11-libs/openmotif-2.3:0 ) )
 	)"
