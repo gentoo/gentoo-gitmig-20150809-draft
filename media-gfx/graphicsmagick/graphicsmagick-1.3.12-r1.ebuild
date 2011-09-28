@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.12-r1.ebuild,v 1.1 2011/08/07 17:49:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/graphicsmagick-1.3.12-r1.ebuild,v 1.2 2011/09/28 22:51:42 ssuominen Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ MY_P=${P/graphicsm/GraphicsM}
 DESCRIPTION="Collection of tools and libraries for many image formats"
 HOMEPAGE="http://www.graphicsmagick.org/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
-	http://dev.gentoo.org/~ssuominen/${P}-libpng15.patch.bz2"
+	mirror://gentoo/${P}-libpng15.patch.bz2"
 
 LICENSE="MIT"
 SLOT="0"
