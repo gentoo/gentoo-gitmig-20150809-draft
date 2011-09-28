@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5733 2011/09/27 19:15:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5734 2011/09/28 01:05:03 jsbronder Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Sep 2011; Justin Bronder <jsbronder@gentoo.org> package.mask:
+  Add mask for <sys-cluster/torque-2.4.
 
   27 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Preepmtive package mask of soprano-2.[67].1, should anyone bump it. KDE
