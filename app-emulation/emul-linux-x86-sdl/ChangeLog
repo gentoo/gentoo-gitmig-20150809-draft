@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-sdl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/ChangeLog,v 1.54 2011/08/24 10:07:17 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/ChangeLog,v 1.55 2011/09/28 14:01:26 pacho Exp $
+
+*emul-linux-x86-sdl-20110928 (28 Sep 2011)
+
+  28 Sep 2011; Pacho Ramos <pacho@gentoo.org>
+  +emul-linux-x86-sdl-20110928.ebuild:
+  Version bump.
 
   24 Aug 2011; Tony Vroon <chainsaw@gentoo.org>
   emul-linux-x86-sdl-20110722.ebuild:
