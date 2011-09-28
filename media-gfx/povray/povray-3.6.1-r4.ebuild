@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.6.1-r5.ebuild,v 1.1 2011/09/28 17:43:12 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.6.1-r4.ebuild,v 1.16 2011/09/28 19:33:31 lavajoe Exp $
 
 inherit flag-o-matic eutils autotools
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.povray.org/"
 
 LICENSE="povlegal-3.6"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="svga tiff X"
 
 DEPEND=">=media-libs/libpng-1.4
@@ -29,10 +29,6 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-configure.patch
 	epatch "${FILESDIR}"/${P}-find-egrep.patch
 
-	# Check for an exact match to libjpeg-6b,
-	# since newer versions do not work (bug #382459).
-	epatch "${FILESDIR}"/${P}-only-libjpeg-6b.patch
-
 	# Change some destination directories that cannot be adjusted via configure
 	cp Makefile.am Makefile.am.orig
 	sed -i -e "s:^povlibdir = .*:povlibdir = @datadir@/${PN}:" Makefile.am
@@ -50,11 +46,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-use-system-libpng.patch
 
 	# Also, to make sure no bundled static libs can be used, remove them
-	# (but keep jpeg and tiff, since we need to use these old static versions
-	# if libjpeg-6b is not found on system (bug #382459)).
-	#rm -r libraries/jpeg
+	rm -r libraries/jpeg
 	rm -r libraries/png
-	#rm -r libraries/tiff
+	rm -r libraries/tiff
 	rm -r libraries/zlib
 
 	AT_NO_RECURSIVE="yes" eautoreconf
