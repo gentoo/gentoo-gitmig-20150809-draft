@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.12.4.ebuild,v 1.2 2011/08/06 09:16:28 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.12.7.ebuild,v 1.1 2011/09/28 18:57:05 pacho Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -59,4 +59,5 @@ src_test() {
 src_install() {
 	emake install DESTDIR="${D}" || die "emake install failed"
 	dodoc AUTHORS NEWS ChangeLog README || die "dodoc failed"
+	find "${D}" -name '*.la' -exec rm -f {} +
 }
