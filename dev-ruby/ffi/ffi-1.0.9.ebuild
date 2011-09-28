@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ffi-1.0.9.ebuild,v 1.6 2011/08/02 16:30:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ffi-1.0.9.ebuild,v 1.7 2011/09/28 11:12:26 ssuominen Exp $
 
 EAPI=4
 
@@ -27,8 +27,8 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x86-solaris"
 
-RDEPEND="${RDEPEND} dev-libs/libffi"
-DEPEND="${DEPEND} dev-libs/libffi"
+RDEPEND="${RDEPEND} virtual/libffi"
+DEPEND="${DEPEND} virtual/libffi"
 
 ruby_add_bdepend dev-ruby/rake-compiler
 

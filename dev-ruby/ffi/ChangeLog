@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ffi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.23 2011/08/02 16:30:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.24 2011/09/28 11:12:25 ssuominen Exp $
+
+  28 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> ffi-1.0.9.ebuild,
+  ffi-1.0.9-r1.ebuild:
+  Use virtual/libffi instead of dev-libs/libffi in case we have to switch to
+  using copy from GCC in future.
 
   02 Aug 2011; Markos Chandras <hwoarang@gentoo.org> ffi-1.0.9.ebuild:
   Stable on amd64 wrt bug #348510
