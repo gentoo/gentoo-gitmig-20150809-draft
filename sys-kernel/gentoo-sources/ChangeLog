@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.883 2011/09/16 17:38:05 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.884 2011/09/28 16:39:24 mpagano Exp $
+
+*gentoo-sources-3.0.4-r1 (28 Sep 2011)
+
+  28 Sep 2011; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-3.0.4-r1.ebuild:
+  Fix for vmscan count in small memcfgs. Change firmware download url for dvb
+  tda10046. ALPS patches for new touchpads from Seth Forshee at Ubuntu
 
   16 Sep 2011; Michael Pagano <mpagano@gentoo.org>
   -gentoo-sources-2.6.32-r32.ebuild, -gentoo-sources-2.6.32-r33.ebuild,
