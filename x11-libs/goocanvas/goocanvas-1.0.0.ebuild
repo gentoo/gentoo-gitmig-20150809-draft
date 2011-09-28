@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/goocanvas-1.0.0.ebuild,v 1.1 2011/02/22 22:33:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goocanvas/goocanvas-1.0.0.ebuild,v 1.2 2011/09/28 13:13:33 ssuominen Exp $
 
 EAPI="3"
 
-GCONF_DEBUG="no"
+GCONF_DEBUG=no
+GNOME2_LA_PUNT=yes
 
 inherit gnome2 libtool
 
