@@ -1,9 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/files/proftpd.initd,v 1.3 2010/11/16 13:00:29 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/files/proftpd.initd,v 1.4 2011/09/28 09:47:22 voyageur Exp $
 
-opts="reload"
+extra_started_commands="reload"
 
 depend() {
 	need net
@@ -46,7 +46,7 @@ stop() {
 reload() {
 	check_configuration || return 1
 	ebegin "Reloading ProFTPD"
-	start-stop-daemon --stop --quiet --signal HUP --oknodo \
+	start-stop-daemon --quiet --signal HUP \
 		--pidfile /var/run/proftpd/proftpd.pid
 	eend $?
 }

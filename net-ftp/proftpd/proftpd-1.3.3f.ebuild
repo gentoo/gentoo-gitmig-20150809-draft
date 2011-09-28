@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.3d-r1.ebuild,v 1.8 2011/07/21 17:16:12 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.3f.ebuild,v 1.1 2011/09/28 09:47:22 voyageur Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -9,7 +9,7 @@ CASE_VER="0.4"
 CLAMAV_VER="0.11rc"
 DEFLATE_VER="0.5.4"
 GSS_VER="1.3.3"
-VROOT_VER="0.8.5"
+VROOT_VER="0.9.2"
 
 DESCRIPTION="An advanced and very configurable FTP server."
 HOMEPAGE="http://www.proftpd.org/
@@ -25,7 +25,7 @@ SRC_URI="ftp://ftp.proftpd.org/distrib/source/${P/_/}.tar.bz2
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="acl authfile ban +caps case clamav +ctrls deflate doc exec ifsession ident ipv6 kerberos ldap mysql ncurses nls pam postgres radius ratio readme rewrite selinux sftp shaper sitemisc softquota ssl tcpd trace vroot xinetd"
 
 DEPEND="acl? ( sys-apps/acl sys-apps/attr )
@@ -75,9 +75,6 @@ src_prepare() {
 	use deflate && __prepare_module mod_deflate
 	use vroot && __prepare_module mod_vroot
 
-	# Fix ProFTPD Bug #3586
-	epatch "${FILESDIR}"/proftpd-bug3586.patch
-
 	# Fix MySQL includes
 	sed -i -e "s/<mysql.h>/<mysql\/mysql.h>/g" contrib/mod_sql_mysql.c
 
@@ -101,7 +98,7 @@ src_configure() {
 	use ban && mym="${mym}:mod_ban"
 	use case && mym="${mym}:mod_case"
 	use clamav && mym="${mym}:mod_clamav"
-	if use ctrls || use shaper ; then
+	if use ctrls || use ban || use shaper ; then
 		myc="${myc} --enable-ctrls"
 		mym="${mym}:mod_ctrls_admin"
 	fi
