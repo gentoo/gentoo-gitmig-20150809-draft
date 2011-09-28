@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.13 2011/09/27 13:45:29 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-9999.ebuild,v 1.14 2011/09/28 14:31:56 ford_prefect Exp $
 
 EAPI=4
 
@@ -110,7 +110,6 @@ src_configure() {
 		$(use_with caps) \
 		$(use_with equalizer fftw) \
 		--localstatedir="${EPREFIX}"/var \
-		--disable-per-user-esound-socket \
 		--with-database=gdbm \
 		--with-udev-rules-dir="${EPREFIX}/lib/udev/rules.d"
 
@@ -187,22 +186,13 @@ pkg_postinst() {
 			elog "gconf module on /etc/pulse/system.pa to be able to use PulseAudio"
 			elog "with a system-wide instance."
 		fi
-		elog
-		elog "To use the ESounD wrapper while using a system-wide daemon, you also"
-		elog "need to enable auth-anonymous for the esound-unix module, or to copy"
-		elog "/var/run/pulse/.esd_auth into each home directory."
-		elog
 	fi
 	if use bluetooth; then
 		elog
-		elog "The BlueTooth proximity module is not enabled in the default"
+		elog "The Bluetooth proximity module is not enabled in the default"
 		elog "configuration file. If you do enable it, you'll have to have"
-		elog "your BlueTooth controller enabled and inserted at bootup or"
+		elog "your Bluetooth controller enabled and inserted at bootup or"
 		elog "PulseAudio will refuse to start."
-		elog
-		elog "Please note that the BlueTooth proximity module seems itself"
-		elog "still experimental, so please report to upstream if you have"
-		elog "problems with it."
 	fi
 	if use alsa; then
 		local pkg="media-plugins/alsa-plugins"

@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.248 2011/09/27 13:45:29 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.249 2011/09/28 14:31:56 ford_prefect Exp $
+
+*pulseaudio-1.0-r1 (28 Sep 2011)
+
+  28 Sep 2011; Arun Raghavan <ford_prefect@gentoo.org> -pulseaudio-1.0.ebuild,
+  +pulseaudio-1.0-r1.ebuild, pulseaudio-9999.ebuild:
+  Make sure the esound module doesn't break things and some log fixes.
 
   27 Sep 2011; Arun Raghavan <ford_prefect@gentoo.org> pulseaudio-1.0.ebuild,
   pulseaudio-9999.ebuild:
