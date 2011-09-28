@@ -1,6 +1,11 @@
 # ChangeLog for app-forensics/chkrootkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.64 2011/09/22 20:30:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.65 2011/09/28 00:40:46 radhermit Exp $
+
+  28 Sep 2011; Tim Harder <radhermit@gentoo.org> chkrootkit-0.49.ebuild,
+  metadata.xml:
+  Add cron use flag to control cron dependency and script installation (bug
+  #384409).
 
   22 Sep 2011; Tim Harder <radhermit@gentoo.org> chkrootkit-0.49.ebuild:
   Minor quoting and spacing fixes.
