@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r11.ebuild,v 1.2 2011/09/17 19:11:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r11.ebuild,v 1.3 2011/09/28 22:50:31 ssuominen Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ S=${WORKDIR}/${P/windowm/WindowM}
 DESCRIPTION="The fast and light GNUstep window manager"
 SRC_URI="ftp://ftp.windowmaker.info/pub/source/release/${P/windowm/WindowM}.tar.gz
 	http://www.windowmaker.info/pub/source/release/WindowMaker-extra-0.1.tar.gz
-	http://dev.gentoo.org/~ssuominen/${P}-patchset-${PATCHVER}.tar.bz2"
+	mirror://gentoo/${P}-patchset-${PATCHVER}.tar.bz2"
 HOMEPAGE="http://www.windowmaker.info/"
 
 IUSE="gif jpeg nls png tiff modelock +vdesktop xinerama"
