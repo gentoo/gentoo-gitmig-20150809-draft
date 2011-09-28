@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-1.0.6-r2.ebuild,v 1.1 2011/09/26 11:00:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-1.0.7.ebuild,v 1.1 2011/09/28 21:27:03 flameeyes Exp $
 
 EAPI=4
 
@@ -20,15 +20,7 @@ DEPEND="${RDEPEND}
 		virtual/os-headers"
 
 src_prepare() {
-	# Fix build mistake, only causes warnings but at least stop it.
-	sed -i -e '/-module/d' "${S}"/libfreeipmi/src/Makefile.am || die
-
 	epatch "${FILESDIR}"/${PN}-1.0.5-strictaliasing.patch
-	epatch "${FILESDIR}"/${P}-bmc-watchdog-pidfile.patch
-
-	# bug #383793
-	sed -i -e 's:/usr/local/:/usr/:' \
-		"${S}"/ipmi-sensors/src/ipmimonitoring || die
 
 	AT_M4DIR="config" eautoreconf
 }
