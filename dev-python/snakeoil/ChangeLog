@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/snakeoil
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.45 2011/09/03 08:12:05 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snakeoil/ChangeLog,v 1.46 2011/09/28 03:54:22 ferringb Exp $
+
+*snakeoil-0.4.3 (28 Sep 2011)
+
+  28 Sep 2011; Brian Harring <ferringb@gentoo.org> +snakeoil-0.4.3.ebuild:
+  parallelization work alongside bugfixes
 
 *snakeoil-0.4.2-r1 (03 Sep 2011)
 
