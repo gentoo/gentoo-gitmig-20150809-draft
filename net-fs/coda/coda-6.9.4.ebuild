@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.9.4.ebuild,v 1.3 2011/03/28 08:40:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.9.4.ebuild,v 1.4 2011/09/28 22:49:36 ssuominen Exp $
 
 inherit autotools eutils toolchain-funcs
 
@@ -14,7 +14,7 @@ IUSE="client server coda_layout coda_symlinks kerberos"
 DESCRIPTION="Coda is an advanced networked filesystem developed at Carnegie Mellon Univ."
 HOMEPAGE="http://www.coda.cs.cmu.edu/"
 SRC_URI="http://www.coda.cs.cmu.edu/pub/coda/src/${P}.tar.gz
-	http://dev.gentoo.org/~ssuominen/coda_scripts.tar.bz2" #328651
+	mirror://gentoo/coda_scripts.tar.bz2" #328651
 
 SLOT="0"
 LICENSE="GPL-2"
