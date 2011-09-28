@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/will_paginate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/will_paginate/ChangeLog,v 1.14 2011/09/26 11:31:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/will_paginate/ChangeLog,v 1.15 2011/09/28 05:46:45 graaff Exp $
+
+*will_paginate-3.0.2 (28 Sep 2011)
+
+  28 Sep 2011; Hans de Graaff <graaff@gentoo.org> +will_paginate-3.0.2.ebuild:
+  Version bump.
 
   26 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   will_paginate-2.3.15.ebuild:
