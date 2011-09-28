@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/colord
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.1 2011/08/14 13:48:22 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.2 2011/09/28 11:40:40 pacho Exp $
+
+*colord-0.1.12 (28 Sep 2011)
+
+  28 Sep 2011; Pacho Ramos <pacho@gentoo.org> +colord-0.1.12.ebuild:
+  Version bump that also runs as a different user than root. Thanks a lot to
+  Alexandre Rostovtsev for doing all the work (bug #384607).
 
 *colord-0.1.11 (14 Aug 2011)
 
