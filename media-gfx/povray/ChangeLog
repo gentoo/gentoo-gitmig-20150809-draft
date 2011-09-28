@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/povray
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.112 2011/03/24 15:57:10 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.113 2011/09/28 17:43:12 lavajoe Exp $
+
+*povray-3.6.1-r5 (28 Sep 2011)
+
+  28 Sep 2011; Joe Peterson <lavajoe@gentoo.org> -povray-3.6.1-r4.ebuild,
+  +povray-3.6.1-r5.ebuild, +files/povray-3.6.1-only-libjpeg-6b.patch:
+  Require older libjpeg-6b for older povray-3.6.1 and use included static lib
+  if not available (bug #382459); revert use of EROOT, etc., in povray-3.6.1
+  ebuild (not EAPI 3)
 
   24 Mar 2011; Justin Lecher <jlec@gentoo.org>
   +files/3.7.0_rc3-user-conf.patch, povray-3.7.0_rc3.ebuild:
