@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/liblrdf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.42 2011/09/20 13:17:52 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/ChangeLog,v 1.43 2011/09/28 14:40:45 ssuominen Exp $
+
+*liblrdf-0.4.0_p20110928 (28 Sep 2011)
+
+  28 Sep 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +liblrdf-0.4.0_p20110928.ebuild:
+  Snapshot from new upstream. This one is using libcrypto instead of private
+  MD5 implementation.
 
   20 Sep 2011; Tony Vroon <chainsaw@gentoo.org> liblrdf-0.4.0-r20.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
