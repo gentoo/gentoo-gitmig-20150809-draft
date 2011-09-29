@@ -20,14 +20,5 @@ index cf28922..3f1261c 100644
      str->reset();
  
      int c;
-@@ -490,7 +494,7 @@ void PDFOutDev::endPage()
- }
- 
- #if POPPLER_CHECK_VERSION(0, 17, 0)
--void PDFOutDev::processLink(AnnotLink *link, Catalog *catalog)
-+void PDFOutDev::processLink(AnnotLink *link, Catalog *)
- #else
- void PDFOutDev::processLink(Link* link, Catalog*)
- #endif
 --
 cgit v0.9.0.2-2-gbebe
