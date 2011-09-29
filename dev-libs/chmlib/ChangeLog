@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/chmlib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/chmlib/ChangeLog,v 1.22 2011/03/21 16:55:28 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/chmlib/ChangeLog,v 1.23 2011/09/29 02:09:38 dirtyepic Exp $
+
+  29 Sep 2011; Ryan Hill <dirtyepic@gentoo.org> -chmlib-0.40.ebuild,
+  chmlib-0.40-r1.ebuild:
+  Enable USE="examples" by default. Enough packages depend on it. (bug #384559
+  by Bibär.ch)
 
   21 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> chmlib-0.40-r1.ebuild:
   ppc64 stable wrt #352473
