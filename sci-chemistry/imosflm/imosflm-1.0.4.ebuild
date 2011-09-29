@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/imosflm/imosflm-1.0.4.ebuild,v 1.5 2011/09/07 15:27:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/imosflm/imosflm-1.0.4.ebuild,v 1.6 2011/09/29 11:52:38 tomka Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ SRC_URI="${HOMEPAGE}/ver${MY_PV}/downloads/${P}.zip"
 
 LICENSE="ccp4"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
