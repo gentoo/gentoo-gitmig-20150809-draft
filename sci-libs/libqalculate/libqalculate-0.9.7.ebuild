@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/libqalculate-0.9.7.ebuild,v 1.10 2011/03/02 20:59:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libqalculate/libqalculate-0.9.7.ebuild,v 1.11 2011/09/29 19:45:48 ssuominen Exp $
 
-EAPI=2
+EAPI=4
 
 DESCRIPTION="A modern multi-purpose calculator library"
 HOMEPAGE="http://qalculate.sourceforge.net/"
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/qalculate/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux"
-IUSE="readline"
+IUSE="readline static-libs"
 
 COMMON_DEPEND=">=sci-libs/cln-1.2
 	dev-libs/libxml2:2
@@ -42,11 +42,12 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--disable-dependency-tracking \
+		$(use_enable static-libs static) \
 		$(use_with readline)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	dodoc AUTHORS ChangeLog NEWS README* TODO
+	rm -f "${ED}"usr/lib*/${PN}.la
 }
