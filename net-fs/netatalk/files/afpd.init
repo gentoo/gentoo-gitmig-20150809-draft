@@ -1,20 +1,16 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/files/afpd.init,v 1.1 2011/09/29 16:55:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/files/afpd.init,v 1.2 2011/09/29 18:21:54 flameeyes Exp $
 
 depend() {
 	need net cnid_metad
-    use logger dns atalkd
+	use logger dns atalkd
 
-	if [ ${EXTRA_CONF/-D/} != ${EXTRA_CONF} ]; then
-		need atalkd
-	else
-		config /etc/netatalk/afpd.conf
+	config /etc/netatalk/afpd.conf
 
-		sed -e 's:#.*::' /etc/netatalk/afpd.conf | fgrep -q -e -ddp \
-			&& need atalkd
-	fi
+	sed -e 's:#.*::' /etc/netatalk/afpd.conf | fgrep -q -e -ddp \
+		&& need atalkd
 
 	need avahi-daemon
 	need slpd
