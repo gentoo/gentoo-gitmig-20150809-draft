@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/emul-linux-x86-medialibs-20110928.ebuild,v 1.1 2011/09/28 13:58:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-medialibs/emul-linux-x86-medialibs-20110928.ebuild,v 1.2 2011/09/29 15:25:53 pacho Exp $
 
 EAPI="4"
 
@@ -13,7 +13,9 @@ DEPEND=""
 RDEPEND="~app-emulation/emul-linux-x86-baselibs-${PV}
 	~app-emulation/emul-linux-x86-xlibs-${PV}
 	!<=app-emulation/emul-linux-x86-sdl-20081109"
-PDEPEND="~app-emulation/emul-linux-x86-soundlibs-${PV}"
+PDEPEND="~app-emulation/emul-linux-x86-soundlibs-${PV}
+	~app-emulation/emul-linux-x86-sdl-${PV}"
+# sdl pdep should be dropped once bug #299324 is solved
 
 src_prepare() {
 	# Include all libv4l libs, bug #348277
