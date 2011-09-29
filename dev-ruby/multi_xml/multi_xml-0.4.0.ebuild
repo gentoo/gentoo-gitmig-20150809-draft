@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_xml/multi_xml-0.4.0.ebuild,v 1.1 2011/09/14 07:35:02 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_xml/multi_xml-0.4.0.ebuild,v 1.2 2011/09/29 12:13:53 graaff Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ DESCRIPTION="A generic swappable back-end for XML parsing"
 HOMEPAGE="http://rdoc.info/gems/multi_xml"
 LICENSE="MIT"
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE=""
 
