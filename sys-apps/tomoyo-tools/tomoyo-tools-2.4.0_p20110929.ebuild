@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tomoyo-tools/tomoyo-tools-2.4.0_p20110820.ebuild,v 1.1 2011/09/16 04:13:25 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tomoyo-tools/tomoyo-tools-2.4.0_p20110929.ebuild,v 1.1 2011/09/29 22:43:40 naota Exp $
 
 EAPI="2"
 

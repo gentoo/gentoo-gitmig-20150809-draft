@@ -14,7 +14,7 @@ diff --git a/kernel_test/Makefile b/kernel_test/Makefile
 index 2559b4b..ef599a2 100644
 --- a/kernel_test/Makefile
 +++ b/kernel_test/Makefile
-@@ -10,25 +10,23 @@ all: $(ALL_FILES)
+@@ -10,16 +10,14 @@ all: $(ALL_FILES)
  
  $(ALL_FILES): include.h
  
@@ -26,18 +26,6 @@ index 2559b4b..ef599a2 100644
  #
  # Tools for kernel testing.
  #
- 
- tomoyo_capability_test: tomoyo_capability_test.c
--	$(CC) $(CFLAGS) -o tomoyo_capability_test tomoyo_capability_test.c -lutil
-+	$(CC) $(CFLAGS) $(LDFLAGS) -o tomoyo_capability_test tomoyo_capability_test.c -lutil
- 
- tomoyo_new_capability_test: tomoyo_new_capability_test.c
--	$(CC) $(CFLAGS) -o tomoyo_new_capability_test tomoyo_new_capability_test.c -lutil
-+	$(CC) $(CFLAGS) $(LDFLAGS) -o tomoyo_new_capability_test tomoyo_new_capability_test.c -lutil
- 
- tomoyo_new_test: tomoyo_new_test.c include.h
--	$(CC) $(CFLAGS) -o tomoyo_new_test tomoyo_new_test.c -lutil
-+	$(CC) $(CFLAGS) $(LDFLAGS) -o tomoyo_new_test tomoyo_new_test.c -lutil
  
  .c:
 -	$(CC) $(CFLAGS) -o $@ $<
@@ -75,31 +63,17 @@ diff --git a/usr_sbin/Makefile b/usr_sbin/Makefile
 index fa715b0..5b991db 100644
 --- a/usr_sbin/Makefile
 +++ b/usr_sbin/Makefile
-@@ -4,9 +4,13 @@ BUILD_FILES := tomoyo-auditd tomoyo-checkpolicy tomoyo-diffpolicy tomoyo-domainm
- 	tomoyo-editpolicy tomoyo-findtemp tomoyo-loadpolicy tomoyo-notifyd tomoyo-patternize \
- 	tomoyo-pstree tomoyo-queryd tomoyo-savepolicy tomoyo-selectpolicy tomoyo-setlevel \
- 	tomoyo-setprofile tomoyo-sortpolicy
-+SIMPLE = tomoyo-domainmatch tomoyo-pstree tomoyo-checkpolicy tomoyo-findtemp tomoyo-ld-watch tomoyo-loadpolicy tomoyo-patternize tomoyo-savepolicy tomoyo-setlevel tomoyo-setprofile tomoyo-sortpolicy tomoyo-diffpolicy tomoyo-selectpolicy
- 
- all: libtomoyotools.so $(BUILD_FILES)
- 
-+$(SIMPLE): % : %.c libtomoyotools.so
-+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $< -ltomoyotools -L.
-+
- $(BUILD_FILES): libtomoyotools.so
- 
- /usr/include/curses.h:
-@@ -15,17 +19,17 @@ $(BUILD_FILES): libtomoyotools.so
+@@ -15,17 +15,17 @@ $(BUILD_FILES): libtomoyotools.so
  	sleep 10
  
  libtomoyotools.so: tomoyotools.c tomoyotools.h
--	$(CC) $(CFLAGS) -fPIC tomoyotools.c -shared -Wl,-soname,libtomoyotools.so.2 -o libtomoyotools.so.2.0.1
-+	$(CC) $(CFLAGS) -fPIC $(LDFLAGS) tomoyotools.c -shared -Wl,-soname,libtomoyotools.so.2 -o libtomoyotools.so.2.0.1
- 	ln -sf libtomoyotools.so.2.0.1 libtomoyotools.so
+-	$(CC) $(CFLAGS) -fPIC tomoyotools.c -shared -Wl,-soname,libtomoyotools.so.2 -o libtomoyotools.so.2.0.2
++	$(CC) $(CFLAGS) $(LDFLAGS) -fPIC tomoyotools.c -shared -Wl,-soname,libtomoyotools.so.2 -o libtomoyotools.so.2.0.2
+ 	ln -sf libtomoyotools.so.2.0.2 libtomoyotools.so
  
  .c:
--	$(CC) $(CFLAGS) -o $@ -ltomoyotools -L. $<
-+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ -ltomoyotools -L. $<
+-	$(CC) $(CFLAGS) -o $@ $< -ltomoyotools -L. 
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $< -ltomoyotools -L. 
  
  tomoyo-editpolicy: tomoyotools.h editpolicy*.c readline.h /usr/include/curses.h libtomoyotools.so
 -	$(CC) $(CFLAGS) -o tomoyo-editpolicy editpolicy*.c -lncurses -ltomoyotools -L. -DCOLOR_ON
