@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.96 2011/09/27 22:50:08 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.97 2011/09/29 14:22:28 tomka Exp $
+
+  29 Sep 2011; Thomas Kahle <tomka@gentoo.org> xen-tools-3.4.2-r3.ebuild:
+  x86 stable per bug 379241
 
   27 Sep 2011; Tony Vroon <chainsaw@gentoo.org> xen-tools-3.4.2-r5.ebuild:
   Patch by Ian "idella4" Delaney closes bug #384349 by Agostino "ago" Sarubbo.
