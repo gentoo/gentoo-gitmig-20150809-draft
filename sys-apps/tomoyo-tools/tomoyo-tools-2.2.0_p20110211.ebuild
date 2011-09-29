@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tomoyo-tools/tomoyo-tools-2.2.0_p20090727.ebuild,v 1.1 2009/07/28 23:48:36 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tomoyo-tools/tomoyo-tools-2.2.0_p20110211.ebuild,v 1.1 2011/09/29 22:15:13 naota Exp $
 
 inherit eutils multilib toolchain-funcs
 
