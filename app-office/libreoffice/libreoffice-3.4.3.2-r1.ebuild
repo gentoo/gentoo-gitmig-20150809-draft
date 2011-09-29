@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.3.2-r1.ebuild,v 1.7 2011/09/08 12:33:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.3.2-r1.ebuild,v 1.8 2011/09/29 13:42:10 scarabeus Exp $
 
 EAPI=3
 
@@ -228,6 +228,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-kill-cppunit.patch"
 	"${FILESDIR}/${PN}-honor-strip.patch"
 	"${FILESDIR}/${PN}-java.patch"
+	"${FILESDIR}/${PN}-poppler-0.18.0.patch"
 )
 
 # Uncoment me when updating to eapi4
