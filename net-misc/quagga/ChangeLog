@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/quagga
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.118 2011/09/28 04:36:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.119 2011/09/29 13:40:00 flameeyes Exp $
+
+*quagga-0.99.20 (29 Sep 2011)
+
+  29 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org> +quagga-0.99.20.ebuild:
+  Version bump.
 
   28 Sep 2011; Kacper Kowalik <xarthisius@gentoo.org> quagga-0.99.19-r1.ebuild:
   ppc stable wrt #384651
