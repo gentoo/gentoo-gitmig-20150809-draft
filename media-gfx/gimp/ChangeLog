@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gimp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.342 2011/09/12 15:19:48 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/ChangeLog,v 1.343 2011/09/29 16:13:30 sping Exp $
+
+  29 Sep 2011; Sebastian Pipping <sping@gentoo.org> gimp-2.6.11-r5.ebuild,
+  +files/gimp-2.6.11-poppler-0.17.patch:
+  Fix compilation of 2.6.11-r5 against recent poppler (patch from Fedora,
+  Gentoo bug #384903)
 
   12 Sep 2011; Kacper Kowalik <xarthisius@gentoo.org> gimp-2.6.11-r5.ebuild:
   ppc/ppc64 stable wrt #379289

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.6.11-r5.ebuild,v 1.6 2011/09/12 15:19:48 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.6.11-r5.ebuild,v 1.7 2011/09/29 16:13:30 sping Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -106,6 +106,10 @@ src_prepare() {
 	# https://bugs.gentoo.org/show_bug.cgi?id=372941
 	# https://bugzilla.gnome.org/show_bug.cgi?id=653980#c6
 	epatch "${FILESDIR}"/${P}-file-uri.patch
+
+	# fix compilation against poppler 0.17/0.18
+	# https://bugs.gentoo.org/show_bug.cgi?id=384903
+	epatch "${FILESDIR}"/${P}-poppler-0.17.patch
 
 	echo '#!/bin/sh' > py-compile
 	gnome2_src_prepare
