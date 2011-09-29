@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/check
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.67 2011/09/13 22:47:21 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.68 2011/09/29 12:39:53 binki Exp $
+
+*check-0.9.8-r1 (29 Sep 2011)
+
+  29 Sep 2011; Nathan Phillip Brink <binki@gentoo.org> +check-0.9.8-r1.ebuild,
+  metadata.xml:
+  In a revbump, add subunit useflag to fix bug 354091 by flameeyes, bump to
+  EAPI=4, and move to using autotools-utils eclass (adding static-libs
+  useflag).
 
   13 Sep 2011; Nathan Phillip Brink <binki@gentoo.org> metadata.xml:
   Set myself (binki) as maintainer.
