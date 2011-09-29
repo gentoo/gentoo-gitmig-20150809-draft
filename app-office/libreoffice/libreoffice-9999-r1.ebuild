@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.26 2011/09/29 13:20:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.27 2011/09/29 14:27:25 scarabeus Exp $
 
 EAPI=3
 
@@ -70,7 +70,7 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="binfilter +branding dbus debug eds gnome +graphite gstreamer gtk +jemalloc
-kde ldap mysql nsplugin odk opengl svg templates test +vba webdav"
+kde ldap mysql nsplugin odk opengl pdfimport svg templates test +vba webdav"
 LICENSE="LGPL-3"
 SLOT="0"
 [[ ${PV} == *9999* ]] || KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
@@ -91,7 +91,6 @@ COMMON_DEPEND="
 	app-text/libwpd:0.9[tools]
 	app-text/libwpg:0.2
 	>=app-text/libwps-0.2.2
-	>=app-text/poppler-0.12.3-r3[xpdf-headers]
 	dev-db/unixODBC
 	dev-libs/expat
 	>=dev-libs/glib-2.18
@@ -137,6 +136,7 @@ COMMON_DEPEND="
 		>=dev-libs/nss-3.12.9
 	)
 	opengl? ( virtual/opengl )
+	pdfimport? ( >=app-text/poppler-0.12.3-r3[xpdf-headers] )
 	svg? ( gnome-base/librsvg )
 	webdav? ( net-libs/neon )
 "
@@ -426,6 +426,7 @@ src_configure() {
 		$(use_enable nsplugin mozilla) \
 		$(use_enable odk) \
 		$(use_enable opengl) \
+		$(use_enable pdfimport ext-pdfimport) \
 		$(use_enable svg librsvg system) \
 		$(use_enable vba) \
 		$(use_enable vba activex-component) \
