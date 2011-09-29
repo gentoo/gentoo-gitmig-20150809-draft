@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.9.1.ebuild,v 1.2 2011/09/23 15:04:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.9.1.ebuild,v 1.3 2011/09/29 06:04:55 pva Exp $
 
 EAPI="2"
 inherit eutils autotools multilib
@@ -168,8 +168,8 @@ src_install() {
 	rm "${D}"usr/share/doc/"${PF}"/Makefile* || die "Failed to remove doc make files"
 
 	#Remove unneeded .la files (Bug #382863)
-	rm "${D}"usr/lib64/snort_dynamicengine/libsf_engine.la || die
-	rm "${D}"usr/lib64/snort_dynamicpreprocessor/libsf_*_preproc.la || die "Failed to remove libsf_?_preproc.la"
+	rm "${D}"usr/$(get_libdir)/snort_dynamicengine/libsf_engine.la || die
+	rm "${D}"usr/$(get_libdir)/snort_dynamicpreprocessor/libsf_*_preproc.la || die "Failed to remove libsf_?_preproc.la"
 
 	# Set the correct lib path for dynamicengine, dynamicpreprocessor, and dynamicdetection
 	sed -i -e 's|/usr/local/lib|/usr/'$(get_libdir)'|g' \
