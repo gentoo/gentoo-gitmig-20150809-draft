@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/oauth2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth2/ChangeLog,v 1.10 2011/07/24 20:09:43 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth2/ChangeLog,v 1.11 2011/09/29 12:14:36 graaff Exp $
+
+*oauth2-0.5.1 (29 Sep 2011)
+
+  29 Sep 2011; Hans de Graaff <graaff@gentoo.org> +oauth2-0.5.1.ebuild:
+  Version bump.
 
   24 Jul 2011; Thomas Kahle <tomka@gentoo.org> oauth2-0.4.1.ebuild:
   ~x86 per bug 375153
