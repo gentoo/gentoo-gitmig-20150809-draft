@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.108 2011/09/29 08:00:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.109 2011/09/29 15:34:39 flameeyes Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -194,9 +194,6 @@ media-libs/mlt mmx
 # Mask doc flag for fop as nearly impossible to
 # run javadoc target.  see #177585
 >=dev-java/fop-0.93 doc
-
-# missing the necessary linux-headers dep
->=net-fs/netatalk-2.0.3-r3 xfs
 
 # 8 Aug 2008: Alexis Ballier <aballier@gentoo.org>
 # x86 asm only, it won't be built on amd64 if mmx useflag is enabled but that
