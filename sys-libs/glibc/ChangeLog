@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.790 2011/09/19 17:07:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.791 2011/09/29 21:13:44 vapier Exp $
+
+  29 Sep 2011; Mike Frysinger <vapier@gentoo.org>
+  glibc-2.9_p20081201-r3.ebuild, glibc-2.10.1-r1.ebuild, glibc-2.11.3.ebuild,
+  glibc-2.12.1-r3.ebuild, glibc-2.12.2.ebuild, glibc-2.13-r2.ebuild,
+  glibc-2.13-r4.ebuild, glibc-2.14.ebuild, glibc-9999.ebuild:
+  Drop gcc-config dep since toolchain.eclass now forces a recent one, and
+  change sandbox requirement into a blocker on older versions to make
+  installing into empty ROOTs simpler.
 
   19 Sep 2011; Mike Frysinger <vapier@gentoo.org>
   files/eblits/src_compile.eblit:
