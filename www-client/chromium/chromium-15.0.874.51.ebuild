@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-15.0.874.15.ebuild,v 1.2 2011/09/18 03:08:18 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-15.0.874.51.ebuild,v 1.1 2011/09/29 02:11:01 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -159,6 +159,7 @@ src_prepare() {
 		\! -path 'third_party/protobuf/*' \
 		\! -path 'third_party/sfntly/*' \
 		\! -path 'third_party/skia/*' \
+		\! -path 'third_party/smhasher/*' \
 		\! -path 'third_party/speex/speex.h' \
 		\! -path 'third_party/sqlite/*' \
 		\! -path 'third_party/tcmalloc/*' \
