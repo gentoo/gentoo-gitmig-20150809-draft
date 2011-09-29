@@ -1,6 +1,34 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.874 2011/09/19 04:39:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.875 2011/09/29 18:41:41 zmedico Exp $
+
+*portage-2.2.0_alpha60 (29 Sep 2011)
+
+  29 Sep 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha60.ebuild:
+  2.2.0_alpha60 version bump. This includes all of the fixes in
+  portage-2.1.10.20. Bug #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.10.20 (29 Sep 2011)
+
+  29 Sep 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.20.ebuild:
+  2.1.10.20 version bump. This fixes bug #297549 (enable --binpkg-respect-use
+  automatically, unless --usepkgonly is enabled), bug #372485 (new emerge
+  --autounmask-keep-masks option), bug #375573 (handle cases where
+  backtracking masks become irrelevant due to the parent package getting
+  masked by backtracking), bug #379333 (new emerge
+  --autounmask-unrestricted-atoms option), bug #383859 (remove stray print
+  statement in fetch checksum failure code), bug #384003 (new emerge
+  --complete-graph-if-new-ver option), bug #384063 (fix portageq
+  best-visible for multi-repo support), bug #384177 (trigger repoman error
+  for obsolete no-herd value), bug #384597 (handle \r in installed
+  file names), bug #384663 (PAGER variable support in etc-update and
+  dispatch-conf), bug #384665 (archive-conf ImportError), and bug #384749
+  (UnicodeDecodeError triggered by invalid dependency string in depgraph).
+  Bug #381649 tracks all bugs fixed since portage-2.1.10.11.
+
+  29 Sep 2011; Zac Medico <zmedico@gentoo.org> -portage-2.1.10.18.ebuild,
+  -portage-2.2.0_alpha58.ebuild:
+  Remove old versions.
 
 *portage-2.2.0_alpha59 (19 Sep 2011)
 
