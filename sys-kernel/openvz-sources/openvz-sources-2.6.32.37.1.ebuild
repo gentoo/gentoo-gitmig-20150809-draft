@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.32.37.1.ebuild,v 1.1 2011/09/29 07:57:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.32.37.1.ebuild,v 1.2 2011/09/29 15:52:55 mr_bones_ Exp $
 
 inherit versionator
 
@@ -43,4 +43,3 @@ This patchset considered to be more stable and security supported by upstream,
 but for us RHEL6 patchset is very fragile and fails to build in many
 configurations so if you have problems use config files from openvz team
 http://wiki.openvz.org/Download/kernel/rhel6/042stab${OVZ_KV}"
-
