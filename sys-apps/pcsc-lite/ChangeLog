@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.115 2011/09/27 17:36:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.116 2011/09/29 17:09:06 grobian Exp $
+
+  29 Sep 2011; Fabian Groffen <grobian@gentoo.org> pcsc-lite-1.7.2-r1.ebuild,
+  pcsc-lite-1.7.4.ebuild:
+  Fix and keyword also latest unmasked version for Prefix
 
   27 Sep 2011; Fabian Groffen <grobian@gentoo.org> pcsc-lite-1.6.6.ebuild,
   pcsc-lite-1.7.4.ebuild:
