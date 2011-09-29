@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ccs-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ccs-tools/ChangeLog,v 1.10 2011/09/29 21:48:40 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ccs-tools/ChangeLog,v 1.11 2011/09/29 23:33:28 naota Exp $
+
+  29 Sep 2011; Naohiro Aota <naota@gentoo.org>
+  ccs-tools-1.8.3_p20110929.ebuild:
+  Clean up codes; Fix pkg_config. Patch-By: thomasg. Bug #384699
 
   29 Sep 2011; Naohiro Aota <naota@gentoo.org>
   ccs-tools-1.8.0_p20110214.ebuild,

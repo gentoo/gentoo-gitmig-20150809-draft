@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ccs-tools/ccs-tools-1.8.3_p20110929.ebuild,v 1.1 2011/09/29 21:09:25 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ccs-tools/ccs-tools-1.8.3_p20110929.ebuild,v 1.2 2011/09/29 23:33:28 naota Exp $
 
 EAPI=3
 inherit eutils multilib toolchain-funcs
@@ -42,10 +42,6 @@ src_test() {
 
 src_install() {
 	emake INSTALLDIR="${D}" install || die
-
-#	insinto /etc/ccs
-#	doins ccstools.conf || die
-
 	dodoc README.ccs
 }
 
@@ -67,5 +63,5 @@ pkg_postinst() {
 }
 
 pkg_config() {
-	/usr/$(get_libdir)/ccs/init_policy.sh
+	/usr/$(get_libdir)/ccs/init_policy
 }
