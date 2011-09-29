@@ -1,0 +1,25 @@
+#!/sbin/runscript
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/files/atalk_service.init,v 1.1 2011/09/29 16:55:00 flameeyes Exp $
+
+depend() {
+	need net atalkd
+    use logger dns
+}
+
+start() {
+	ebegin "Starting ${SVCNAME}"
+	start-stop-daemon \
+		--start \
+		--exec /usr/sbin/${SVCNAME} --
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping ${SVCNAME}"
+	start-stop-daemon \
+		--stop \
+		--exec /usr/sbin/${SVCNAME}
+	eend $?
+}

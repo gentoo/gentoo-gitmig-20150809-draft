@@ -1,0 +1,28 @@
+#!/sbin/runscript
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/files/cnid_metad.init,v 1.1 2011/09/29 16:55:00 flameeyes Exp $
+
+: ${CNID_CONFIG:=-l log_note}
+
+depend() {
+	need net
+    use logger
+}
+
+start() {
+	ebegin "Starting ${SVCNAME}"
+	start-stop-daemon \
+		--start --pidfile "/var/run/${SVCNAME}.pid" \
+		--exec /usr/sbin/${SVCNAME} -- \
+		${CNID_CONFIG}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping ${SVCNAME}"
+	start-stop-daemon \
+		--stop --pidfile "/var/run/${SVCNAME}.pid" \
+		--exec /usr/sbin/${SVCNAME}
+	eend $?
+}
