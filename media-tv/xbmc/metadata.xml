@@ -10,5 +10,6 @@
  <flag name='vdpau'>enable support for Video Decode and Presentation API for Unix</flag>
  <flag name='webserver'>Enable internal webserver</flag>
  <flag name='xrandr'>Support X randr extension</flag>
+ <flag name='rsxs'>Enable really slick X screensavers</flag>
 </use>
 </pkgmetadata>
