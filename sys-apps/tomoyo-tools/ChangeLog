@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/tomoyo-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tomoyo-tools/ChangeLog,v 1.6 2011/09/29 22:43:40 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tomoyo-tools/ChangeLog,v 1.7 2011/09/29 22:51:17 naota Exp $
+
+  29 Sep 2011; Naohiro Aota <naota@gentoo.org>
+  tomoyo-tools-2.2.0_p20110211.ebuild,
+  +files/tomoyo-tools-2.2.0_p20110211-ldflags.patch:
+  Respect LDFLAGS. Bug #332297
 
 *tomoyo-tools-2.4.0_p20110929 (29 Sep 2011)
 
