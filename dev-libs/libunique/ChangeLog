@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libunique
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.43 2011/07/25 15:18:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.44 2011/09/29 09:58:16 ssuominen Exp $
+
+  29 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> libunique-3.0.2.ebuild:
+  Change GCONF_DEBUF to GCONF_DEBUG to match gnome2.eclass. Remove
+  -DG_DISABLE_DEPRECATED and -DGTK_DISABLE_DEPRECATED from build system to
+  allow building against glib-2.30 and pango-1.28.
 
 *libunique-1.1.6-r1 (25 Jul 2011)
 

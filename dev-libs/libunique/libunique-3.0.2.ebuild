@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/libunique-3.0.2.ebuild,v 1.2 2011/07/11 15:40:12 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/libunique-3.0.2.ebuild,v 1.3 2011/09/29 09:58:16 ssuominen Exp $
 
 EAPI="4"
-GCONF_DEBUF="yes"
+GCONF_DEBUG="yes"
 GNOME_TARBALL_SUFFIX="xz"
 GNOME2_LA_PUNT="yes"
 
@@ -36,6 +36,12 @@ pkg_setup() {
 		--disable-maintainer-flags
 		--disable-dbus
 		$(use_enable introspection)"
+}
+
+src_prepare() {
+	# should we sed Makefile.am instead and run eautoreconf?
+	sed -i -e '/DG.*_DISABLE_DEPRECATED/d' unique/Makefile.in || die
+	gnome2_src_prepare
 }
 
 src_test() {
