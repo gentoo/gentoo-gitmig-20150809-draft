@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.302 2011/09/22 22:11:44 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.303 2011/09/29 21:21:13 mr_bones_ Exp $
+
+*syslog-ng-3.3.0_beta2 (29 Sep 2011)
+
+  29 Sep 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  +syslog-ng-3.3.0_beta2.ebuild, +files/syslog-ng.conf.gentoo.3.3,
+  +files/syslog-ng.conf.gentoo.fbsd.3.3,
+  +files/syslog-ng.conf.gentoo.hardened.3.3:
+  masked version bump for ebuild testing
 
   22 Sep 2011; Christian Ruppert <idl0r@gentoo.org> files/syslog-ng.rc6.3:
   Whitespace. Don't use --stop for reload().
