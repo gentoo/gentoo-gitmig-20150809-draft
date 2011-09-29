@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-3,v 1.5 2011/08/29 00:56:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-3,v 1.6 2011/09/29 20:26:56 vapier Exp $
 
 # Format of /etc/env.d/binutils/:
 #  config-TARGET:	CURRENT=version for TARGET
@@ -21,6 +21,7 @@ source /etc/init.d/functions.sh || {
 	exit 1
 }
 esyslog() { :; }
+die() { eerror "${argv0}: $*"; exit 1; }
 umask 022
 
 usage() {
@@ -34,8 +35,7 @@ ${HILITE}General Options:${NORMAL}
   ${GOOD}-d, --debug${NORMAL}                Execute with debug output
 
 ${HILITE}General Cruft:${NORMAL}
-  ${GOOD}--gold${NORMAL}                     Switch linker to gold (if supported)
-  ${GOOD}--bfd${NORMAL}                      Switch linker to [older] bfd (if supported)
+  ${GOOD}--linker${NORMAL} <linker>          Switch to specified linker (if supported)
 
 ${HILITE}Arch Specific Cruft:${NORMAL}
   ${GOOD}--amd64${NORMAL}                    Install extra amd64 links (x86_64)
@@ -241,8 +241,7 @@ switch_profile() {
 
 uninstall_target() {
 	if [[ ${TARGET} == ${HOST} ]] ; then
-		eerror "${argv0}: Refusing to uninstall native binutils"
-		exit 1
+		die "refusing to uninstall native binutils"
 	fi
 
 	shopt -s nullglob
@@ -253,8 +252,7 @@ uninstall_target() {
 		rm -f "${ENV_D}"/${PROFILE}
 	done
 	if [[ -z ${PROFILE} ]] && [[ ! -e ${ENV_D}/config-${TARGET} ]] ; then
-		eerror "${argv0}: No profiles exist for '${TARGET}'"
-		exit 1
+		die "no profiles exist for '${TARGET}'"
 	fi
 
 	rm -f "${ENV_D}"/config-${TARGET} "${ROOT}"/etc/ld.so.conf.d/05binutils.conf
@@ -352,23 +350,26 @@ list_profiles() {
 }
 
 switch_linker() {
-	local ld=$1
+	local bpath ld=$1
+
+	case ${ld} in
+	ld.*) ;;
+	*) die "not supported: linker must start with 'ld.'" ;;
+	esac
 
 	setup_env || return 1
+	bpath="${ROOT}/${BINPATH}"
 
 	# does this binutils even support the requested linker ?
-	if [[ ! -e ${ROOT}/${BINPATH}/ld.${ld} ]] ; then
-		eerror "${argv0}: sorry, but ${PROFILE} doesn't support the ${ld} linker"
-		exit 1
+	if [[ ! -e ${bpath}/${ld} ]] ; then
+		die "sorry, but ${PROFILE} doesn't support the ${ld} linker"
 	fi
 
 	# switch it up
 	ebegin "Setting default linker to ${ld} for ${PROFILE}"
-	atomic_ln ld.${ld} "${ROOT}/${BINPATH}" ld
+	atomic_ln ${ld} "${bpath}" ld
 	eend $?
 }
-switch_linker_gold() { switch_linker gold ; }
-switch_linker_bfd() { switch_linker bfd ; }
 
 set_HOST() {
 	# Set HOST to CHOST if it isn't already set
@@ -391,8 +392,7 @@ select_action() {
 		NEED_ACTION="no"
 		DOIT=$1
 	else
-		eerror "${argv0}: one action at a time!"
-		exit 1
+		die "one action at a time!"
 	fi
 }
 
@@ -401,15 +401,14 @@ while [[ $# -gt 0 ]] ; do
 	shift
 	case ${x} in
 		-c|--get-current-profile)  select_action get_current_profile ;;
-		-l|--list-profiles)        select_action list_profiles ;;
+		-l|--list|--list-profiles) select_action list_profiles ;;
 		-u|--uninstall)            select_action uninstall_target ;;
-		--gold)                    select_action switch_linker_gold ;;
-		--bfd)                     select_action switch_linker_bfd ;;
+		--linker)                  select_action "switch_linker $1"; shift ;;
 		-d|--debug)                DEBUG="yes" ;;
 		-h|--help)                 usage 0 ;;
 		-V|--version)
 			unset Header
-			cvsver="$Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-3,v 1.5 2011/08/29 00:56:46 vapier Exp $"
+			cvsver="$Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/files/binutils-config-3,v 1.6 2011/09/29 20:26:56 vapier Exp $"
 			cvsver=${cvsver##*binutils-config-}
 			bver=${cvsver%%,v *}
 			cvsver=${cvsver#* }
@@ -429,13 +428,11 @@ while [[ $# -gt 0 ]] ; do
 			fi
 			;;
 		-*)
-			eerror "${0##*/}: Invalid switch!  Try '--help'."
-			exit 1
+			die "invalid switch!  Try '--help'."
 			;;
 		*)
 			if [[ ${UARG+set} == "set" ]] ; then
-				eerror "${argv0}: only one profile/target at a time please"
-				exit 1
+				die "only one profile/target at a time please"
 			fi
 			NEED_ACTION="maybe"
 			UARG=${x}
@@ -483,8 +480,7 @@ switch_profile|switch_linker_*)
 				if [[ -f ${ENV_D}/${HOST}-${x} ]] ; then
 					x=${HOST}-${x}
 				else
-					eerror "${argv0}: Could not locate '$x' in '${ENV_D}/'!"
-					exit 1
+					die "could not locate '$x' in '${ENV_D}/'!"
 				fi
 				PROFILE=${x}
 			else
