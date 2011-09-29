@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.99 2011/09/29 04:12:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.100 2011/09/29 04:16:39 vapier Exp $
+
+  29 Sep 2011; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Make samba support optional now that upstream allows it to be disabled
+  #383759 by BT.
 
   29 Sep 2011; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild,
   metadata.xml:
