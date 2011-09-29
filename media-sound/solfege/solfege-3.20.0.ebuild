@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.20.0.ebuild,v 1.3 2011/07/23 11:33:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.20.0.ebuild,v 1.4 2011/09/29 08:15:06 radhermit Exp $
 
 EAPI=3
 PYTHON_DEPEND="2:2.6"
@@ -18,7 +18,9 @@ KEYWORDS="amd64 ~ppc x86"
 IUSE="alsa oss"
 
 RDEPEND=">=dev-python/pygtk-2.12
-	alsa? ( dev-python/pyalsa )"
+	gnome-base/librsvg
+	alsa? ( dev-python/pyalsa )
+	!oss? ( media-sound/timidity++ )"
 DEPEND="dev-lang/swig
 	sys-devel/gettext
 	sys-apps/texinfo
