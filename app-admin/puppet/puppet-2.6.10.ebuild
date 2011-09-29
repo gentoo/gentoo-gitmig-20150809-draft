@@ -1,22 +1,22 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-2.6.7.ebuild,v 1.1 2011/04/11 15:04:16 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-2.6.10.ebuild,v 1.1 2011/09/29 12:28:01 matsuu Exp $
 
-EAPI="2"
+EAPI="3"
 USE_RUBY="ruby18"
 
 RUBY_FAKEGEM_TASK_DOC=""
-RUBY_FAKEGEM_TASK_TEST="spec"
+RUBY_FAKEGEM_TASK_TEST="test"
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG* README*"
 
-inherit elisp-common eutils ruby-fakegem
+inherit elisp-common xemacs-elisp-common eutils ruby-fakegem
 
 DESCRIPTION="A system automation and configuration management software"
 HOMEPAGE="http://puppetlabs.com/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="augeas diff doc emacs ldap rrdtool selinux shadow sqlite3 vim-syntax"
+IUSE="augeas diff doc emacs ldap rrdtool selinux shadow sqlite3 vim-syntax xemacs"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 
 ruby_add_rdepend "
@@ -38,9 +38,11 @@ ruby_add_rdepend "
 #	stomp? ( dev-ruby/stomp )
 
 DEPEND="${DEPEND}
-	emacs? ( virtual/emacs )"
+	emacs? ( virtual/emacs )
+	xemacs? ( app-editors/xemacs )"
 RDEPEND="${RDEPEND}
 	emacs? ( virtual/emacs )
+	xemacs? ( app-editors/xemacs )
 	rrdtool? ( >=net-analyzer/rrdtool-1.2.23[ruby] )
 	selinux? ( sys-libs/libselinux[ruby] )
 	>=app-portage/eix-0.18.0"
@@ -57,6 +59,14 @@ all_ruby_compile() {
 
 	if use emacs ; then
 		elisp-compile ext/emacs/puppet-mode.el || die "elisp-compile failed"
+	fi
+
+	if use xemacs ; then
+		# Create a separate version for xemacs to be able to install
+		# emacs and xemacs in parallel.
+		mkdir ext/xemacs || die
+		cp ext/emacs/* ext/xemacs/ || die
+		xemacs-elisp-compile ext/xemacs/puppet-mode.el || die "xemacs-elisp-compile failed"
 	fi
 }
 
@@ -95,13 +105,20 @@ all_ruby_install() {
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
 	fi
 
+	if use xemacs ; then
+		xemacs-elisp-install ${PN} ext/xemacs/puppet-mode.el* || die "xemacs-elisp-install failed"
+		xemacs-elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
+	fi
+
 	if use ldap ; then
 		insinto /etc/openldap/schema; doins ext/ldap/puppet.schema || die
 	fi
 
 	if use vim-syntax ; then
+		insinto /usr/share/vim/vimfiles/ftdetect; doins ext/vim/ftdetect/puppet.vim || die
+		insinto /usr/share/vim/vimfiles/ftplugin; doins ext/vim/ftplugin/puppet.vim || die
+		insinto /usr/share/vim/vimfiles/indent; doins ext/vim/indent/puppet.vim || die
 		insinto /usr/share/vim/vimfiles/syntax; doins ext/vim/syntax/puppet.vim || die
-		insinto /usr/share/vim/vimfiles/ftdetect; doins	ext/vim/ftdetect/puppet.vim || die
 	fi
 
 	# ext and examples files
@@ -126,9 +143,9 @@ pkg_postinst() {
 	elog
 
 	if [ \
-		-f "${ROOT}/etc/puppet/puppetd.conf" -o \
-		-f "${ROOT}/etc/puppet/puppetmaster.conf" -o \
-		-f "${ROOT}/etc/puppet/puppetca.conf" \
+		-f "${EPREFIX}/etc/puppet/puppetd.conf" -o \
+		-f "${EPREFIX}/etc/puppet/puppetmaster.conf" -o \
+		-f "${EPREFIX}/etc/puppet/puppetca.conf" \
 	] ; then
 		elog
 		elog "Please remove deprecated config files."
@@ -139,8 +156,10 @@ pkg_postinst() {
 	fi
 
 	use emacs && elisp-site-regen
+	use xemacs && xemacs-elisp-site-regen
 }
 
 pkg_postrm() {
 	use emacs && elisp-site-regen
+	use xemacs && xemacs-elisp-site-regen
 }

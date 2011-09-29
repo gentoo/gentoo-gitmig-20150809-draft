@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-2.7.1.ebuild,v 1.1 2011/06/29 17:44:07 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-2.7.4.ebuild,v 1.1 2011/09/29 12:28:01 matsuu Exp $
 
 EAPI="3"
 # ruby19: dev-ruby/ruby-ldap has no ruby19
