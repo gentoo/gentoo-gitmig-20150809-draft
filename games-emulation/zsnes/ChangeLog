@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/zsnes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.47 2011/09/14 08:45:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.48 2011/09/29 20:11:35 mr_bones_ Exp $
+
+  29 Sep 2011; Michael Sterrett <mr_bones_@gentoo.org> zsnes-1.51-r2.ebuild,
+  +files/zsnes-1.51-buffer.patch:
+  fix building with newer zlib (bug #384473); add patch from rpmfusion (bug
+  #257963)
 
   14 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> zsnes-1.51-r2.ebuild,
   +files/zsnes-1.51-libpng15.patch:

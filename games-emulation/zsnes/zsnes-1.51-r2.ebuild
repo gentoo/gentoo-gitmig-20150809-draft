@@ -1,7 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r2.ebuild,v 1.8 2011/09/14 08:45:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r2.ebuild,v 1.9 2011/09/29 20:11:35 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils autotools flag-o-matic toolchain-funcs multilib games
 
 DESCRIPTION="SNES (Super Nintendo) emulator that uses x86 assembly"
@@ -13,7 +14,7 @@ SLOT="0"
 KEYWORDS="-* amd64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 IUSE="ao custom-cflags opengl png"
 
-RDEPEND="media-libs/libsdl
+RDEPEND="media-libs/libsdl[audio,video]
 	>=sys-libs/zlib-1.2.3-r1
 	amd64? ( >=app-emulation/emul-linux-x86-sdl-10.1 )
 	ao? ( media-libs/libao )
@@ -25,23 +26,25 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${PN}_${PV//./_}/src
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Fixing compilation without libpng installed
-	epatch "${FILESDIR}"/${P}-libpng.patch
 	# Fix bug #186111
-	epatch "${FILESDIR}"/${P}-archopt-july-23-update.patch
-	epatch "${FILESDIR}"/${P}-gcc43.patch
 	# Fix bug #214697
-	epatch "${FILESDIR}"/${P}-libao-thread.patch
 	# Fix bug #170108
-	epatch "${FILESDIR}"/${P}-depbuild.patch
 	# Fix bug #260247
-	epatch "${FILESDIR}"/${P}-CC-quotes.patch
 	# Fix compability with libpng15 wrt #378735
-	epatch "${FILESDIR}"/${P}-libpng15.patch
+	# Fix buffer overwrite #257963
+	epatch \
+		"${FILESDIR}"/${P}-libpng.patch \
+		"${FILESDIR}"/${P}-archopt-july-23-update.patch \
+		"${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-libao-thread.patch \
+		"${FILESDIR}"/${P}-depbuild.patch \
+		"${FILESDIR}"/${P}-CC-quotes.patch \
+		"${FILESDIR}"/${P}-libpng15.patch \
+		"${FILESDIR}"/${P}-buffer.patch
+
+	sed -i -e '67i#define OF(x) x' zip/zunzip.h || die
 
 	# Remove hardcoded CFLAGS and LDFLAGS
 	sed -i \
@@ -53,7 +56,7 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	tc-export CC
 	use amd64 && multilib_toolchain_setup x86
 	use custom-cflags || strip-flags
@@ -67,8 +70,10 @@ src_compile() {
 		--disable-debug \
 		--disable-cpucheck \
 		--enable-release \
-		force_arch=no \
-		|| die
+		force_arch=no
+}
+
+src_compile() {
 	emake makefile.dep || die "emake makefile.dep failed"
 	emake || die "emake failed"
 }
@@ -76,8 +81,9 @@ src_compile() {
 src_install() {
 	dogamesbin zsnes || die "dogamesbin failed"
 	newman linux/zsnes.1 zsnes.6
-	dodoc ../docs/{readme.1st,*.txt,README.LINUX}
-	dodoc ../docs/readme.txt/*
+	dodoc \
+		../docs/{readme.1st,authors.txt,srcinfo.txt,stdards.txt,support.txt,thanks.txt,todo.txt,README.LINUX} \
+		../docs/readme.txt/*
 	dohtml -r ../docs/readme.htm/*
 	make_desktop_entry zsnes ZSNES
 	newicon icons/48x48x32.png ${PN}.png
