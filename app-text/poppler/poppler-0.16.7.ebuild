@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.16.7.ebuild,v 1.6 2011/09/17 10:57:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.16.7.ebuild,v 1.7 2011/09/29 16:56:04 pacho Exp $
 
 EAPI="2"
 
@@ -52,6 +52,10 @@ RDEPEND="${COMMON_DEPEND}
 "
 
 DOCS=(AUTHORS ChangeLog NEWS README README-XPDF TODO)
+
+src_prepare() {
+	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED::g' CMakeLists.txt || die
+}
 
 src_configure() {
 	mycmakeargs=(
