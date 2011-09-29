@@ -1,11 +1,11 @@
 # ChangeLog for net-p2p/bittorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.141 2011/09/15 07:37:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.142 2011/09/29 10:28:48 grobian Exp $
 
   15 Sep 2011; Samuli Suominen <ssuominen@gentoo.org>
   -bittorrent-4.4.0-r1.ebuild, -bittorrent-5.0.9-r1.ebuild,
   -bittorrent-5.2.2.ebuild:
-  [This is a placeholder. Please ignore.]
+  remove old
 
 *bittorrent-5.2.2-r1 (15 Sep 2011)
 
