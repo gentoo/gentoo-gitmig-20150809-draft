@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.6.4.ebuild,v 1.11 2011/04/22 22:16:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.6.4.ebuild,v 1.12 2011/09/29 16:50:18 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="2"
 
 inherit eutils gnome2 python virtualx
@@ -38,6 +39,9 @@ src_prepare() {
 	# patch to not throw a warning with gtk+-2.14 during tests, as it triggers abort
 	epatch "${FILESDIR}/${PN}-2.6.3-fix_tests-page_size.patch"
 
+	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' \
+		glade/Makefile.am glade/Makefile.in || die
+
 	if ! use test; then
 		sed 's/ tests//' -i Makefile.am Makefile.in || die "sed failed"
 	fi
@@ -50,7 +54,6 @@ src_test() {
 src_install() {
 	dodir /etc/xml
 	gnome2_src_install
-	find "${ED}" -name '*.la' -exec rm -f {} +
 	python_convert_shebangs 2 "${ED}"/usr/bin/libglade-convert
 }
 
