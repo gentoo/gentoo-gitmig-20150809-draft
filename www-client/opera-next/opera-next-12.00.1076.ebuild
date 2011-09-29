@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.00.1076.ebuild,v 1.1 2011/09/28 15:41:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.00.1076.ebuild,v 1.2 2011/09/29 15:49:25 jer Exp $
 
 EAPI="4"
 
@@ -162,13 +162,6 @@ src_prepare() {
 	echo 'export OPERA_PERSONALDIR=${OPERA_PERSONALDIR:-"${HOME}/.'${PN}'"}' \
 		>> ${PN}
 	echo 'exec '"${OPREFIX}/${PN}/${PN}"' "$@"' >> ${PN}
-
-	# Fix libdir in defaults/pluginpath.ini
-	sed -i \
-		share/${PN}/defaults/pluginpath.ini \
-		-e "s|/usr/lib32|${OPREFIX}|g" \
-		-e '/netscape/{s|[0-1]|2|g}' \
-		|| die "sed pluginpath.ini failed"
 
 	# Change libz.so.3 to libz.so.1 for gentoo/freebsd
 	if use elibc_FreeBSD; then
