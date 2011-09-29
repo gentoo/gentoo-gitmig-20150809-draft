@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-0.15.1.ebuild,v 1.1 2011/08/07 19:50:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-0.15.1-r1.ebuild,v 1.1 2011/09/29 08:54:46 radhermit Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ DESCRIPTION="An improved rewrite/port of the Picard Tagger using Qt"
 HOMEPAGE="http://musicbrainz.org/doc/PicardQt"
 SRC_URI="
 	http://ftp.musicbrainz.org/pub/musicbrainz/picard/${MY_P}.tar.gz
-	coverart? ( http://users.musicbrainz.org/~outsidecontext/picard/plugins/coverart.py )"
+	coverart? ( http://dev.gentoo.org/~radhermit/distfiles/${P}-coverart.py.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -51,9 +51,9 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${MY_P}.tar.gz
+	unpack ${A}
 	if use coverart; then
-		cp "${DISTDIR}"/coverart.py "${S}"/${PN}/plugins/coverart.py || die "Copy of coverart plugin failed"
+		cp "${WORKDIR}"/${P}-coverart.py "${S}"/${PN}/plugins/coverart.py || die "Copy of coverart plugin failed"
 	fi
 }
 
