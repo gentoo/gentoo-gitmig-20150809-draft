@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/smb4k-0.10.69.ebuild,v 1.1 2011/05/11 14:14:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/smb4k-0.10.74.ebuild,v 1.1 2011/09/29 08:55:07 scarabeus Exp $
 
 EAPI=4
-KDE_LINGUAS="bg cs da de en_GB eo es fr ga gl hu is it ja lt mai nb nds nl pl
-pt_BR ru sk sv tr uk zh_CN zh_TW"
+KDE_LINGUAS="bg cs da de en_GB eo es et fr ga gl hu is it ja lt mai nb nds nl
+pl pt pt_BR ru sk sv tr ug uk zh_CN zh_TW"
 KDE_HANDBOOK="optional"
 KDE_DOC_DIRS="doc doc-translations"
 QT_MINIMAL="4.7"
