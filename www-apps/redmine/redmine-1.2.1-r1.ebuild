@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-1.2.1.ebuild,v 1.1 2011/07/27 16:24:53 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/redmine-1.2.1-r1.ebuild,v 1.1 2011/09/29 00:40:09 matsuu Exp $
 
 EAPI="3"
 USE_RUBY="ruby18"
@@ -24,8 +24,8 @@ ruby_add_rdepend "~dev-ruby/coderay-0.9.7
 	~dev-ruby/i18n-0.4.2
 	~dev-ruby/rack-1.1.0
 	dev-ruby/rake"
-ruby_add_rdepend ~dev-ruby/rails-2.3.11:2.3
-ruby_add_rdepend "~dev-ruby/activerecord-2.3.11:2.3[mysql?,postgres?,sqlite3?]"
+#ruby_add_rdepend ~dev-ruby/rails-2.3.11:2.3
+#ruby_add_rdepend "~dev-ruby/activerecord-2.3.11:2.3[mysql?,postgres?,sqlite3?]"
 ruby_add_rdepend fastcgi dev-ruby/ruby-fcgi
 ruby_add_rdepend imagemagick dev-ruby/rmagick
 ruby_add_rdepend openid dev-ruby/ruby-openid
@@ -52,7 +52,7 @@ all_ruby_prepare() {
 	rm -r log files/delete.me || die
 	rm -r vendor/gems/coderay-0.9.7 || die
 	rm -r vendor/plugins/ruby-net-ldap-0.0.4 || die
-	rm -fr vendor/rails || die
+	#rm -fr vendor/rails || die
 	echo "CONFIG_PROTECT=\"${EPREFIX}${REDMINE_DIR}/config\"" > "${T}/50${PN}"
 	echo "CONFIG_PROTECT_MASK=\"${EPREFIX}${REDMINE_DIR}/config/locales ${EPREFIX}${REDMINE_DIR}/config/settings.yml\"" >> "${T}/50${PN}"
 }

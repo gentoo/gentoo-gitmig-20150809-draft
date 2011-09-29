@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/files/redmine.initd,v 1.2 2010/12/25 02:53:46 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/redmine/files/redmine.initd,v 1.3 2011/09/29 00:40:09 matsuu Exp $
 
 RAILS_ENV=${RAILS_ENV:-production}
 REDMINE_DIR=${REDMINE_DIR:-/var/lib/redmine}
@@ -18,7 +18,7 @@ depend() {
 start() {
 	ebegin "Starting redmine"
 	cd "${REDMINE_DIR}"
-	start-stop-daemon --start --quiet --chuid ${REDMINE_USER}:${REDMINE_GROUP} \
+	start-stop-daemon --start --quiet --user ${REDMINE_USER}:${REDMINE_GROUP} \
 		--pidfile "${REDMINE_PIDFILE}" \
 		--exec /usr/bin/ruby "${REDMINE_DIR}"/script/server -- \
 		--daemon --environment=${RAILS_ENV} \
