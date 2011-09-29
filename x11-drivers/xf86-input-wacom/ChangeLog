@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-input-wacom
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-wacom/ChangeLog,v 1.47 2011/09/01 18:01:32 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-wacom/ChangeLog,v 1.48 2011/09/29 11:45:21 scarabeus Exp $
+
+  29 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -xf86-input-wacom-0.10.11.ebuild, xf86-input-wacom-0.11.1.ebuild:
+  Stable latest on x86 and amd64 (work on my chroots) drop oldest overshadowed
+  version. Use ED not D in src_install.
 
 *xf86-input-wacom-0.11.1 (01 Sep 2011)
 
