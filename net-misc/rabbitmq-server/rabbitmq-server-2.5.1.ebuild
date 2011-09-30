@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-2.5.1.ebuild,v 1.1 2011/07/25 09:36:33 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-2.5.1.ebuild,v 1.2 2011/09/30 07:45:54 hollow Exp $
 
 EAPI="2"
 
@@ -46,7 +46,7 @@ src_install() {
 	doins -r ebin include
 
 	einfo "Installing server scripts to /usr/sbin"
-	for script in rabbitmq-env rabbitmq-server rabbitmqctl rabbitmq-multi; do
+	for script in rabbitmq-env rabbitmq-server rabbitmqctl; do
 		exeinto /usr/libexec/rabbitmq
 		doexe scripts/${script}
 		newsbin "${FILESDIR}"/rabbitmq-script-wrapper ${script}
