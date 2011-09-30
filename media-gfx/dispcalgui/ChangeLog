@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/dispcalgui
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dispcalgui/ChangeLog,v 1.1 2011/06/06 10:59:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dispcalgui/ChangeLog,v 1.2 2011/09/30 17:13:45 hwoarang Exp $
+
+*dispcalgui-0.7.3.7 (30 Sep 2011)
+
+  30 Sep 2011; Markos Chandras <hwoarang@gentoo.org>
+  +dispcalgui-0.7.3.7.ebuild:
+  Version bump. Bug #384035
 
 *dispcalgui-0.7.0.7 (06 Jun 2011)
 
