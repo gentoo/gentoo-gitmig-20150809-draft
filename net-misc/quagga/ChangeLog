@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/quagga
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.119 2011/09/29 13:40:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.120 2011/09/30 21:06:22 beandog Exp $
+
+  30 Sep 2011; Steve Dibb <beandog@gentoo.org> quagga-0.99.20.ebuild:
+  amd64 stable, security bug 384651
 
 *quagga-0.99.20 (29 Sep 2011)
 
