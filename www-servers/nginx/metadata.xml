@@ -40,6 +40,8 @@
 			ability to cache static files</flag>
 		<flag name='nginx_modules_http_upload_progress'>This module adds the
 			ability to track POST upload progress via JSON API</flag>
+		<flag name='nginx_modules_http_mp4'>This module adds pseudo-streaming
+			support for H.264/AAC in MP4 containers.</flag>
 		<flag name='nginx_modules_mail_imap'>Enables IMAP proxy support</flag>
 		<flag name='nginx_modules_mail_pop3'>Enables POP3 proxy support</flag>
 		<flag name='nginx_modules_mail_smtp'>Enables SMTP proxy support</flag>
