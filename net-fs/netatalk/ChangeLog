@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.72 2011/09/29 18:21:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.73 2011/09/30 10:37:50 flameeyes Exp $
+
+  30 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/netatalk-2.2.1-gentoo.patch:
+  Fix building with USE=tcpd, closes bug #384977.
 
   29 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org> files/afpd.init:
   Avoid false positives in apfd init dependencies.
