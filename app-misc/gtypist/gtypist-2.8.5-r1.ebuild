@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/gtypist-2.8.5-r1.ebuild,v 1.2 2011/09/26 13:59:42 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/gtypist-2.8.5-r1.ebuild,v 1.3 2011/09/30 15:48:11 darkside Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnu/gtypist/${P}.tar.gz
 
 LICENSE="GPL-2 public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux"
+KEYWORDS="amd64 ppc x86 ~amd64-linux"
 IUSE="nls emacs xemacs"
 
 DEPEND=">=sys-libs/ncurses-5.2
@@ -52,7 +52,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 
 	insinto /usr/share/gtypist
-	doins ${DISTDIR}/colemak.typ
+	doins "${DISTDIR}"/colemak.typ
 
 	if use emacs; then
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die

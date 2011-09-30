@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gtypist
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/ChangeLog,v 1.29 2011/09/26 13:59:42 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gtypist/ChangeLog,v 1.30 2011/09/30 15:48:11 darkside Exp $
+
+  30 Sep 2011; Jeremy Olexa <darkside@gentoo.org> -gtypist-2.8.5.ebuild,
+  gtypist-2.8.5-r1.ebuild:
+  stabilize for all since the revbump only installs a new noarch file, remove
+  old version
 
   26 Sep 2011; Jeremy Olexa <darkside@gentoo.org> gtypist-2.8.5-r1.ebuild:
   style changes, add Gentoo Prefix support
