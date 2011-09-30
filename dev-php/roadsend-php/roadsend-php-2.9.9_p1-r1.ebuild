@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/roadsend-php/roadsend-php-2.9.9_p1-r1.ebuild,v 1.1 2010/08/09 22:37:47 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/roadsend-php/roadsend-php-2.9.9_p1-r1.ebuild,v 1.2 2011/09/30 16:53:45 vapier Exp $
 
 EAPI=2
 inherit autotools eutils multilib
@@ -51,7 +51,7 @@ src_prepare() {
 	# http://code.roadsend.com/pcc/ticket/3531
 	# note the ugly ^M gremlins and make the patch not fail
 	# with DOS line endings depending on sys-devel/patch version installed
-	edos2unix bigloo-rules.mk || die "failed to sanitize bigloo-rules.mk"
+	edos2unix bigloo-rules.mk
 	for i in runtime/Makefile compiler/Makefile tools/c-interface/Makefile \
 		    tools/profiler/Makefile tools/readline/Makefile webconnect/fastcgi/Makefile \
 		    webconnect/micro/Makefile ; do
