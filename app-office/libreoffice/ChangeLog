@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.157 2011/09/30 10:45:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.158 2011/09/30 11:47:52 scarabeus Exp $
+
+  30 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-9999-r1.ebuild:
+  Update the l10n dependency in live ebuild.
 
   30 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   libreoffice-9999-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.30 2011/09/30 10:45:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.31 2011/09/30 11:47:52 scarabeus Exp $
 
 EAPI=3
 
@@ -150,9 +150,8 @@ RDEPEND="${COMMON_DEPEND}
 	java? ( >=virtual/jre-1.6 )
 "
 
-# FIXME: l10n after release/branching
 PDEPEND="
-	>=app-office/libreoffice-l10n-3.4
+	>=app-office/libreoffice-l10n-$(get_version_component_range 1-2)
 "
 
 # FIXME: cppunit should be moved to test conditional
