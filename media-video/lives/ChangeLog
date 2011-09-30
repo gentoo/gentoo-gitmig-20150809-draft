@@ -1,6 +1,15 @@
 # ChangeLog for media-video/lives
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lives/ChangeLog,v 1.31 2011/04/04 13:05:26 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lives/ChangeLog,v 1.32 2011/09/30 19:13:53 ssuominen Exp $
+
+*lives-1.4.6 (30 Sep 2011)
+
+  30 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> +lives-1.4.6.ebuild:
+  Version bump wrt #376367 by tman, including upstream patch for building
+  against libv4l instead of v4l1 from linux-headers wrt #361943 by Jouni Rinne.
+  Use python2 instead of python wrt #315053 by Arfrever Frehtes Taifersar
+  Arahesis. Fix imagemagick vs. graphicsmagick dependencies wrt #314337 by
+  Wojciech Porczyk.
 
 *lives-1.4.2 (04 Apr 2011)
 
