@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/gjs-1.29.0.ebuild,v 1.1 2011/06/14 13:19:59 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/gjs-1.30.0.ebuild,v 1.1 2011/09/30 14:49:28 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -8,7 +8,7 @@ GNOME_TARBALL_SUFFIX="xz"
 GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="2"
 
-inherit eutils gnome2 python virtualx
+inherit gnome2 python virtualx
 
 DESCRIPTION="Javascript bindings for GNOME"
 HOMEPAGE="http://live.gnome.org/Gjs"
@@ -18,30 +18,31 @@ SLOT="0"
 IUSE="examples test"
 KEYWORDS="~amd64 ~x86"
 
-# Things are untested and broken with anything other than xulrunner-2.0
 RDEPEND=">=dev-libs/glib-2.18:2
-	>=dev-libs/gobject-introspection-0.10.1
+	>=dev-libs/gobject-introspection-1.29.16
 
 	dev-libs/dbus-glib
 	sys-libs/readline
 	x11-libs/cairo
-	>=net-libs/xulrunner-2.0:1.9"
+	>=dev-lang/spidermonkey-1.8.5"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
-	>=dev-util/pkgconfig-0.9
-	!dev-lang/spidermonkey"
-# HACK HACK: gjs-tests picks up /usr/lib/libmozjs.so with spidermonkey installed
+	>=dev-util/pkgconfig-0.9"
 
-src_prepare() {
+pkg_setup() {
 	# AUTHORS, ChangeLog are empty
 	DOCS="NEWS README"
 	# FIXME: add systemtap/dtrace support, like in glib:2
+	# FIXME: --enable-systemtap installs files in ${D}/${D} for some reason
 	# XXX: Do NOT enable coverage, completely useless for portage installs
 	G2CONF="${G2CONF}
+		--with-js-package=mozjs185
 		--disable-systemtap
 		--disable-dtrace
 		--disable-coverage"
+}
 
+src_prepare() {
 	gnome2_src_prepare
 	python_convert_shebangs 2 "${S}"/scripts/make-tests
 }
