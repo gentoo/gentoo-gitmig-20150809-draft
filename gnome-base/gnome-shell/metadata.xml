@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>gnome</herd>
+	<use>
+		<flag name="nm-applet">Pull in an automagic dependency on 
+			<pkg>gnome-extra/nm-applet</pkg> and
+			<pkg>net-misc/networkmanager</pkg>, should be removed soon</flag>
+	</use>
+</pkgmetadata>
