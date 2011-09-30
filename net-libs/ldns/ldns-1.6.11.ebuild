@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ldns-1.6.8-r1.ebuild,v 1.1 2011/03/03 04:46:43 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ldns-1.6.11.ebuild,v 1.1 2011/09/30 14:56:58 matsuu Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.4"
 
-inherit eutils python
+inherit python
 
 DESCRIPTION="ldns is a library with the aim to simplify DNS programing in C"
 HOMEPAGE="http://www.nlnetlabs.nl/projects/ldns/"
@@ -16,6 +16,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc-macos ~x64-macos"
 IUSE="doc gost python ssl static-libs vim-syntax"
 
+RESTRICT="test" # 1.6.9 has no test directory
+
 RDEPEND="ssl? ( >=dev-libs/openssl-0.9.7 )
 	gost? ( >=dev-libs/openssl-1 )"
 DEPEND="${RDEPEND}
@@ -24,10 +26,6 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	python_set_active_version 2
-}
-
-src_prepare() {
-	epatch "${FILESDIR}/${P}-swig.patch"
 }
 
 src_configure() {
@@ -53,6 +51,10 @@ src_install() {
 
 	if use python ; then
 		find "${ED}$(python_get_sitedir)" "(" -name "*.a" -o -name "*.la" ")" -type f -delete || die
+	fi
+
+	if ! use static-libs ; then
+		find "${ED}" -name "*.la" -type f -delete || die
 	fi
 
 	if use doc ; then

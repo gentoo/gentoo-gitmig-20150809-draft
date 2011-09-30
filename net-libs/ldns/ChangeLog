@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/ldns
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.18 2011/06/01 23:05:47 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.19 2011/09/30 14:56:58 matsuu Exp $
+
+*ldns-1.6.11 (30 Sep 2011)
+
+  30 Sep 2011; MATSUU Takuto <matsuu@gentoo.org>
+  -files/ldns-1.6.3-r3151-fix-double-free.patch, -ldns-1.6.8-r1.ebuild,
+  -files/ldns-1.6.8-swig.patch, +ldns-1.6.11.ebuild:
+  Version bumped, bug #384249. Removed old versions.
 
 *ldns-1.6.10 (01 Jun 2011)
 
