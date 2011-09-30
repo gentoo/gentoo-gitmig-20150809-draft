@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/nabi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/ChangeLog,v 1.28 2011/03/27 10:54:45 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/ChangeLog,v 1.29 2011/09/30 00:49:36 naota Exp $
+
+  30 Sep 2011; Naohiro Aota <naota@gentoo.org> nabi-0.15.ebuild,
+  +files/nabi-0.15-asneeded.patch, nabi-0.17.ebuild:
+  Fix --as-needed failure. Bug #384697
 
   27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> nabi-0.15.ebuild,
   nabi-0.17.ebuild, nabi-0.99.3.ebuild:
