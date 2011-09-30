@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.489 2011/09/14 22:52:32 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.490 2011/09/30 14:51:47 vostorga Exp $
+
+  30 Sep 2011; Víctor Ostorga <vostorga@gentoo.org> samba-3.6.0.ebuild:
+  Updating elog entry, fixind DEPEND on tevent in samba-4
 
   14 Sep 2011; Lars Wendler <polynomial-c@gentoo.org> files/3.5/samba.initd,
   files/3.6/samba.initd, files/samba4.initd:

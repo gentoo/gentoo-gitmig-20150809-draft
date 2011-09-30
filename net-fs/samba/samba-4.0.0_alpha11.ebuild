@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.0_alpha11.ebuild,v 1.5 2010/07/15 12:34:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.0_alpha11.ebuild,v 1.6 2011/09/30 14:51:47 vostorga Exp $
 
 EAPI="2"
 
@@ -28,7 +28,7 @@ DEPEND="!net-fs/samba-libs
 	sqlite? ( >=dev-db/sqlite-3 )
 	>=sys-libs/talloc-2.0.1
 	>=sys-libs/tdb-1.2.0
-	=sys-libs/tevent-0.9.8"
+	>=sys-libs/tevent-0.9.8"
 	#=sys-libs/ldb-0.9.10 No release yet
 # See source4/min_versions.m4 for the minimal versions
 RDEPEND="${DEPEND}"

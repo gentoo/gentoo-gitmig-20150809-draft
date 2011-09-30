@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.0.ebuild,v 1.1 2011/08/09 13:22:46 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.6.0.ebuild,v 1.2 2011/09/30 14:51:47 vostorga Exp $
 
 EAPI=4
 
@@ -408,16 +408,17 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "The default value of 'wide links' has been changed to 'no' in samba 3.5"
-	elog "to avoid an insecure default configuration"
-	elog "('wide links = yes' and 'unix extensions = yes'). For more details,"
-	elog "please see http://www.samba.org/samba/news/symlink_attack.html ."
+	elog "Samba 3.6 has adopted a number of improved security defaults that"
+	elog "will impact on existing users of Samba."
+	elog "			client ntlmv2 auth = yes"
+	elog "			client use spnego principal = no"
+	elog "			send spnego principal = no"
 	elog ""
-	elog "An EXPERIMENTAL implementation of the SMB2 protocol has been added."
-	elog "SMB2 can be enabled by setting 'max protocol = smb2'. SMB2 is a new "
+	elog "SMB2 protocol support in 3.6.0 is fully functional and can be "
+	elog "enabled by setting 'max protocol = smb2'. SMB2 is a new "
 	elog "implementation of the SMB protocol used by Windows Vista and higher"
 	elog ""
 	elog "For further information make sure to read the release notes at"
 	elog "http://samba.org/samba/history/${P}.html and "
-	elog "http://samba.org/samba/history/${PN}-3.5.0.html"
+	elog "http://samba.org/samba/history/${PN}-3.6.0.html"
 }
