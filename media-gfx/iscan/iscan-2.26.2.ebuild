@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.26.2.ebuild,v 1.2 2011/04/23 18:26:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.26.2.ebuild,v 1.3 2011/09/30 17:58:25 ssuominen Exp $
 
 EAPI="2"
 
@@ -79,8 +79,9 @@ src_prepare() {
 			-e "s:\(PKG_CHECK_MODULES(GDK_IMLIB,.*)\):#\1:g" configure.ac
 	fi
 
-	epatch "${FILESDIR}/iscan-2.25.0-drop-ltdl.patch"
-	epatch "${FILESDIR}/iscan-2.25.0-fix-g++-test.patch"
+	epatch "${FILESDIR}"/iscan-2.25.0-drop-ltdl.patch
+	epatch "${FILESDIR}"/iscan-2.25.0-fix-g++-test.patch
+	epatch "${FILESDIR}"/iscan-2.26.2-libpng15.patch
 
 	eautoreconf
 }

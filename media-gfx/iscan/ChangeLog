@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/iscan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.42 2011/04/23 18:26:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.43 2011/09/30 17:58:25 ssuominen Exp $
+
+  30 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> iscan-2.26.2.ebuild,
+  +files/iscan-2.26.2-libpng15.patch:
+  Fix building with libpng15 wrt #383799 by Ian Stakenvicius (patch pending
+  upstream review)
 
   23 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org> iscan-2.26.2.ebuild:
   Drop dependency over libieee1284 (no longer used by iscan), add missing
