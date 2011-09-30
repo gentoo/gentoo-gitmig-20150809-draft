@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13090 2011/09/30 19:30:18 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13091 2011/09/30 19:50:30 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -382,30 +382,6 @@ net-zope/zpsycopgda
 net-zope/zsqlmethods
 net-zope/zsyncer
 net-zope/zwiki
-
-# Samuli Suominen <ssuominen@gentoo.org> (13 Sep 2011)
-# Fails to build with linux-headers-2.6.38 and above, plus other issues
-#
-# xdtv, bugs 359791, 268800, 250879
-# video-entropyd, bugs 360871, 334895
-# qutecom, bugs 361181, 354803, 324627, 315051, 315045
-# gnomeradio, bug 376443
-# vdr-atmo, bug 370417
-# vdr-avards, bug 368921 // fixed on bump
-# SDLcam, bug 364821
-# vdr-pvr350, bug 364669 // fixed on bump
-# vdr-pvrinput, bug 369701 // fixed on bump
-#
-# Removal in 30 days
-media-tv/xdtv
-media-video/video-entropyd
-net-im/qutecom
-# media-plugins/vdr-pvr350 // fixed on bump
-media-video/SDLcam
-=media-plugins/vdr-avards-0.2.2
-media-plugins/vdr-atmo
-media-sound/gnomeradio
-#media-plugins/vdr-pvrinput // fixed on bump
 
 # Vlastimil Babka <caster@gentoo.org> (11 Sep 2011)
 # Masked until Icedtea7 final is released, to prevent pulling oracle-jdk-bin for everyone.
