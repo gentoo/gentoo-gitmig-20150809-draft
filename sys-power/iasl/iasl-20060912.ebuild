@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20060912.ebuild,v 1.7 2008/05/26 21:51:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20060912.ebuild,v 1.8 2011/09/30 16:56:57 vapier Exp $
 
 inherit toolchain-funcs eutils
 
@@ -15,10 +15,10 @@ SRC_URI="http://www.intel.com/technology/iapc/acpi/downloads/${MY_P}.tar.gz"
 LICENSE="iASL"
 SLOT="0"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
-
 IUSE=""
+
 DEPEND="sys-devel/bison
-		sys-devel/flex"
+	sys-devel/flex"
 RDEPEND=""
 
 src_unpack() {

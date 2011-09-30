@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20090903.ebuild,v 1.1 2009/09/30 01:17:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20090903.ebuild,v 1.2 2011/09/30 16:56:57 vapier Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -15,11 +15,10 @@ SRC_URI="http://www.acpica.org/download/${MY_P}.tar.gz
 LICENSE="iASL"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
-
 IUSE="test"
-DEPEND="sys-devel/bison
-		sys-devel/flex"
 
+DEPEND="sys-devel/bison
+	sys-devel/flex"
 RDEPEND=""
 
 S=${WORKDIR}/${MY_P}
@@ -104,7 +103,7 @@ aslts_test() {
 	export	PATH="${PATH}:${ASLTSDIR}/bin"
 	echo "$ASLTSDIR" >"${T}"/asltdir
 	cd "${ASLTSDIR}"
-	edos2unix $(find . -type 'f') || die "edos2unix failed in aslts"
+	edos2unix $(find . -type 'f')
 	make install || die "make install aslts test failed"
 	chmod +x $(find bin/ ! -regex 'ERROR_OPCODES|HOW_TO_USE|README' ) || die "chmod bin +x failed"
 
@@ -117,7 +116,7 @@ aslts_test() {
 aapits_test() {
 	mv "${WORKDIR}/${MY_TESTS_P}/tests/aapits" "${S}/tools/" || die "mv failed"
 	cd "${S}/tools/aapits" || die "cannot find ${S}/tools/aapits"
-	edos2unix $(find . -type 'f') || die "edos2unix failed in aapits"
+	edos2unix $(find . -type 'f')
 	chmod +x $(find bin/ | sed  -r -e '/\/[A-Z_]+$/d') || die "chmod bin +x failed"
 	make || die "make in aapits failed"
 	cd asl || die "cd asl failed"
