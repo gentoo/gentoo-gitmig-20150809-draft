@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ldns-utils-1.6.8.ebuild,v 1.1 2011/01/25 13:37:37 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ldns-utils-1.6.11.ebuild,v 1.1 2011/09/30 14:58:17 matsuu Exp $
 
-EAPI="2"
+EAPI="3"
+inherit autotools eutils
 
 MY_P="${P/-utils}"
 DESCRIPTION="Set of utilities to simplify various dns(sec) tasks."
@@ -19,6 +20,13 @@ DEPEND=">=net-libs/ldns-${PV}[gost?,ssl?]
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
+
+src_prepare() {
+	# bug #369339
+	epatch "${FILESDIR}/1.6.10-cflags.patch"
+
+	eautoreconf
+}
 
 src_configure() {
 	cd "${S}"/drill
