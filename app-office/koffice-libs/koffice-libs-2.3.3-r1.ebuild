@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/koffice-libs-2.3.3-r1.ebuild,v 1.2 2011/09/26 22:36:05 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/koffice-libs-2.3.3-r1.ebuild,v 1.3 2011/09/30 22:48:03 dilfridge Exp $
 
 EAPI=3
 
@@ -53,6 +53,9 @@ KMEXTRACTONLY="
 "
 
 KMSAVELIBS="true"
+
+RESTRICT=test
+# bug 385025
 
 src_configure() {
 	mycmakeargs=(
