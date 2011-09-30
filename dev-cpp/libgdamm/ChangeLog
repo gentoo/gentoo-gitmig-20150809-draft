@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/libgdamm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgdamm/ChangeLog,v 1.23 2011/09/25 17:42:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgdamm/ChangeLog,v 1.24 2011/09/30 19:31:15 nirbheek Exp $
+
+*libgdamm-4.99.3.1 (30 Sep 2011)
+
+  30 Sep 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +libgdamm-4.99.3.1.ebuild:
+  Bump to 4.99.3.1, new slot, GTK3 version
 
   25 Sep 2011; Raúl Porcel <armin76@gentoo.org> libgdamm-4.1.2.ebuild:
   sparc stable wrt #372353
