@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-0.8.15.ebuild,v 1.4 2011/03/30 09:29:34 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-0.9.ebuild,v 1.1 2011/09/30 12:49:09 xmw Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://mupdf.com/download/${P}-source.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="X vanilla"
 
 RDEPEND="media-libs/freetype:2
@@ -25,21 +25,26 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-buildsystem.patch
+	epatch "${FILESDIR}"/${PN}-0.8.165-buildsystem.patch
 
-	use vanilla || epatch "${FILESDIR}"/${P}-zoom.patch
+	if ! use vanilla ; then
+		epatch "${FILESDIR}"/${PN}-0.8.165-zoom.patch
+		epatch "${FILESDIR}"/${P}-scroll_hack.patch
+		epatch "${FILESDIR}"/${P}-dpi_hack.patch
+	fi
 }
 
 src_compile() {
 	local my_pdfexe=
-	use X || my_pdfexe="PDFVIEW_EXE="
+	use X || my_nox11="NOX11=yes MUPDF= "
 
-	emake build=debug ${my_pdfexe} CC="$(tc-getCC)" verbose=true -j1 || die
+	emake CC="$(tc-getCC)" \
+		build=debug verbose=true ${my_nox11} -j1 || die
 }
 
 src_install() {
-	emake build=debug ${my_pdfexe} prefix="${D}usr" \
-		LIBDIR="${D}usr/$(get_libdir)" verbose=true install || die
+	emake prefix="${D}usr" LIBDIR="${D}usr/$(get_libdir)" \
+		build=debug verbose=true ${my_nox11} install || die
 
 	insinto /usr/$(get_libdir)/pkgconfig
 	doins debian/mupdf.pc || die

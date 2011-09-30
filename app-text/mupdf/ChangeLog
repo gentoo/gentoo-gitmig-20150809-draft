@@ -1,6 +1,15 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.20 2011/08/23 23:07:36 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.21 2011/09/30 12:49:09 xmw Exp $
+
+*mupdf-0.9 (30 Sep 2011)
+
+  30 Sep 2011; Michael Weber <xmw@gentoo.org> -mupdf-0.8.15.ebuild,
+  -files/mupdf-0.8.15-buildsystem.patch, -files/mupdf-0.8.15-zoom.patch,
+  +mupdf-0.9.ebuild, +files/mupdf-0.9-dpi_hack.patch,
+  +files/mupdf-0.9-scroll_hack.patch:
+  Remove old version, version bump (thanks radhermit, bug 385031), added
+  patches for dpi and scrolling
 
   23 Aug 2011; Michael Weber <xmw@gentoo.org> mupdf-0.8.165.ebuild:
   ppc stable (bug 378427)
