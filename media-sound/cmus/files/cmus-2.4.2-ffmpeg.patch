@@ -1,0 +1,130 @@
+--- cmus-v2.4.2/ffmpeg.c.orig
++++ cmus-v2.4.2/ffmpeg.c
+@@ -21,6 +21,7 @@
+ #include "xmalloc.h"
+ #include "debug.h"
+ #include "utils.h"
++#include "comment.h"
+ #include "config/ffmpeg.h"
+ 
+ #include <stdio.h>
+@@ -32,6 +33,9 @@
+ #include <libavcodec/avcodec.h>
+ #include <libavformat/avformat.h>
+ #include <libavformat/avio.h>
++#ifndef AVUTIL_MATHEMATICS_H
++#include <libavutil/mathematics.h>
++#endif
+ #endif
+ 
+ #if (LIBAVFORMAT_VERSION_INT < ((52<<16)+(31<<8)+0))
+@@ -52,10 +56,19 @@
+ #endif
+ #endif
+ 
++#if (LIBAVUTIL_VERSION_INT < ((51<<16)+(5<<8)+0))
++#define AV_DICT_IGNORE_SUFFIX AV_METADATA_IGNORE_SUFFIX
++#define av_dict_get av_metadata_get
++#define AVDictionaryEntry AVMetadataTag
++#endif
++
+ struct ffmpeg_input {
+ 	AVPacket pkt;
+ 	int curr_pkt_size;
+ 	uint8_t *curr_pkt_buf;
++
++	unsigned long curr_size;
++	unsigned long curr_duration;
+ };
+ 
+ struct ffmpeg_output {
+@@ -166,18 +179,26 @@
+ 	int stream_index = -1;
+ 	AVCodec *codec;
+ 	AVCodecContext *cc = NULL;
+-	AVFormatContext *ic;
++	AVFormatContext *ic = NULL;
+ 
+ 	ffmpeg_init();
+ 
++#if (LIBAVFORMAT_VERSION_INT < ((53<<16)+(2<<8)+0))
+ 	err = av_open_input_file(&ic, ip_data->filename, NULL, 0, NULL);
++#else
++	err = avformat_open_input(&ic, ip_data->filename, NULL, NULL);
++#endif
+ 	if (err < 0) {
+ 		d_print("av_open failed: %d\n", err);
+ 		return -IP_ERROR_FILE_FORMAT;
+ 	}
+ 
+ 	do {
++#if (LIBAVFORMAT_VERSION_INT < ((53<<16)+(3<<8)+0))
+ 		err = av_find_stream_info(ic);
++#else
++		err = avformat_find_stream_info(ic, NULL);
++#endif
+ 		if (err < 0) {
+ 			d_print("unable to find stream info: %d\n", err);
+ 			err = -IP_ERROR_FILE_FORMAT;
+@@ -208,7 +229,11 @@
+ 		if (codec->capabilities & CODEC_CAP_TRUNCATED)
+ 			cc->flags |= CODEC_FLAG_TRUNCATED;
+ 
++#if (LIBAVCODEC_VERSION_INT < ((53<<16)+(6<<8)+0))
+ 		if (avcodec_open(cc, codec) < 0) {
++#else
++		if (avcodec_open2(cc, codec, NULL) < 0) {
++#endif
+ 			d_print("could not open codec: %d, %s\n", cc->codec_id, cc->codec_name);
+ 			err = -IP_ERROR_UNSUPPORTED_FILE_TYPE;
+ 			break;
+@@ -299,6 +324,8 @@
+ 			}
+ 			input->curr_pkt_size = input->pkt.size;
+ 			input->curr_pkt_buf = input->pkt.data;
++			input->curr_size += input->pkt.size;
++			input->curr_duration += input->pkt.duration;
+ 			continue;
+ 		}
+ 
+@@ -409,7 +436,7 @@
+ 	char buff[16];
+ 	int i = 0;
+ 
+-	*comments = xnew0(struct keyval, NUM_FFMPEG_KEYS + 1);
++	*comments = keyvals_new(NUM_FFMPEG_KEYS);
+ 
+ 	i = set_comment(*comments, i, "artist", ic->author);
+ 	i = set_comment(*comments, i, "album", ic->album);
+@@ -427,9 +454,9 @@
+ 	}
+ #else
+ 	GROWING_KEYVALS(c);
+-	AVMetadataTag *tag = NULL;
++	AVDictionaryEntry *tag = NULL;
+  
+-	while ((tag = av_metadata_get(ic->metadata, "", tag, AV_METADATA_IGNORE_SUFFIX))) {
++	while ((tag = av_dict_get(ic->metadata, "", tag, AV_DICT_IGNORE_SUFFIX))) {
+ 		if (tag && tag->value[0])
+ 			comments_add_const(&c, tag->key, tag->value);
+ 	}
+@@ -472,15 +499,15 @@
+ };
+ 
+ const int ip_priority = 30;
+-#ifdef USE_FALLBACK_IP
+-const char *const ip_extensions[] = { "any", NULL };
+-#else
+ const char *const ip_extensions[] = {
+ 	"ac3", "aif", "aifc", "aiff", "ape", "au", "mka", "shn", "tta", "wma",
+ 	/* also supported by other plugins */
+ 	"aac", "fla", "flac", "m4a", "m4b", "mp+", "mp2", "mp3", "mp4", "mpc",
+ 	"mpp", "ogg", "wav", "wv",
++#ifdef USE_FALLBACK_IP
++	"*",
++#endif
+ 	NULL
+ };
+-#endif
+ const char *const ip_mime_types[] = { NULL };
++const char * const ip_options[] = { NULL };
