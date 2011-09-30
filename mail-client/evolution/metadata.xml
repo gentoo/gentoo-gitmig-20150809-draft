@@ -10,6 +10,8 @@
 			<pkg>app-crypt/gnupg</pkg> and <pkg>app-crypt/pinentry</pkg></flag>
 		<flag name="ldap">Enable support for fetching contacts from an LDAP or
 			Active Directory server using <pkg>net-nds/openldap</pkg></flag>
+		<flag name="map">Enable support for displaying contacts on a map inside
+			evolution using <pkg>media-libs/libchamplain</pkg></flag>
 		<flag name="networkmanager">Allows Evolution to automagically toggle
 			online/offline mode by talking to <pkg>net-misc/networkmanager</pkg>
 			and getting the current network state</flag>
