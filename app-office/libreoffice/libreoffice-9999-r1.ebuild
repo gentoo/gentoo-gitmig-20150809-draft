@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.28 2011/09/30 08:25:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.29 2011/09/30 10:42:49 scarabeus Exp $
 
 EAPI=3
 
@@ -190,7 +190,6 @@ DEPEND="${COMMON_DEPEND}
 "
 
 PATCHES=(
-	"${FILESDIR}/${PN}-3.3.1-neon_remove_SSPI_support.diff"
 )
 
 # Uncoment me when updating to eapi4
