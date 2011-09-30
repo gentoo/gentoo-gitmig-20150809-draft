@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.10-r2.ebuild,v 1.2 2011/05/01 17:14:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.10-r2.ebuild,v 1.3 2011/09/30 22:11:48 ssuominen Exp $
 
 EAPI=3
 
@@ -37,6 +37,7 @@ INCDIR=${EPREFIX}/usr/include/fltk-${SLOT}
 LIBDIR=${EPREFIX}/usr/$(get_libdir)/fltk-${SLOT}
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-libpng15.patch
 	# backported from 1.3.0
 	epatch "${FILESDIR}"/${P}-includedir.patch
 	epatch "${FILESDIR}"/fltk-1.1.9-share.patch
