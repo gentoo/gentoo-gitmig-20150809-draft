@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/canlock/canlock-2b.ebuild,v 1.1 2011/09/30 10:05:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/canlock/canlock-2b.ebuild,v 1.2 2011/09/30 23:16:59 radhermit Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ IUSE="static-libs"
 S=${WORKDIR}/${P/-/}
 
 src_prepare() {
-	epatch "${DISTDIR}"/${MY_P}-6.diff.gz \
+	epatch "${WORKDIR}"/${MY_P}-6.diff \
 		"${FILESDIR}"/${P}-make.patch
 }
 
