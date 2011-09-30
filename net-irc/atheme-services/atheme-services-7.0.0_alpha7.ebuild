@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-7.0.0_alpha7.ebuild,v 1.1 2011/09/30 03:38:22 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/atheme-services/atheme-services-7.0.0_alpha7.ebuild,v 1.2 2011/09/30 04:47:45 binki Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86 ~x86-fbsd ~amd64-linux"
 IUSE="largenet ldap nls +pcre perl profile ssl"
 
-RDEPEND=">=dev-libs/libmowgli-0.9.90
+RDEPEND=">=dev-libs/libmowgli-0.9.95
 	ldap? ( net-nds/openldap )
 	nls? ( sys-devel/gettext )
 	perl? ( dev-lang/perl )
