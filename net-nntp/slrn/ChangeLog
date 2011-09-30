@@ -1,6 +1,13 @@
 # ChangeLog for net-nntp/slrn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/slrn/ChangeLog,v 1.23 2011/04/10 03:21:35 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/slrn/ChangeLog,v 1.24 2011/09/30 10:19:34 radhermit Exp $
+
+*slrn-1.0.0_pre18 (30 Sep 2011)
+
+  30 Sep 2011; Tim Harder <radhermit@gentoo.org> +slrn-1.0.0_pre18.ebuild,
+  +files/slrn-1.0.0_pre18-make.patch, metadata.xml:
+  Version bump to latest development release (bug #308643). Update to EAPI 4
+  and add canlock use flag (bug #104245).
 
   10 Apr 2011; Jonathan Callen <abcd@gentoo.org> slrn-0.9.9_p1.ebuild:
   Add prefix support, bump EAPI to 3, add prefix keywords

@@ -5,5 +5,7 @@
 <use>
 	<flag name='uudeview'>Add support for yEnc coding and more using
 		<pkg>dev-libs/uulib</pkg></flag>
+	<flag name='canlock'>Add support for cancel locks via
+		<pkg>net-libs/canlock</pkg></flag>
 </use>
 </pkgmetadata>
