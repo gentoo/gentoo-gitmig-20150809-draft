@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina-plugins/remmina-plugins-9999.ebuild,v 1.1 2011/06/24 14:40:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina-plugins/remmina-plugins-9999.ebuild,v 1.2 2011/09/30 17:39:31 hwoarang Exp $
 
 EAPI=2
 EGIT_REPO_URI="git://remmina.git.sourceforge.net/gitroot/remmina/remmina"
@@ -23,7 +23,7 @@ RDEPEND=">=net-misc/remmina-0.8.0
 	rdesktop? ( =net-misc/freerdp-9999 )
 	xdmcp? ( x11-base/xorg-server[kdrive] )
 	ssh? ( net-libs/libssh[sftp] )
-	vnc? ( net-libs/libvncserver )"
+	vnc? ( net-libs/libvncserver[jpeg,zlib] >=net-libs/gnutls-2.4.0 )"
 
 DEPEND="${RDEPEND}
 	dev-util/intltool
