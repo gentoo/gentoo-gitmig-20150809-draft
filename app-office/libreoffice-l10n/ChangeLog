@@ -1,6 +1,14 @@
 # ChangeLog for app-office/libreoffice-l10n
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.7 2011/09/18 09:58:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.8 2011/09/30 11:45:57 scarabeus Exp $
+
+*libreoffice-l10n-9999 (30 Sep 2011)
+*libreoffice-l10n-3.4.3-r3 (30 Sep 2011)
+
+  30 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libreoffice-l10n-3.4.3-r2.ebuild, +libreoffice-l10n-3.4.3-r3.ebuild,
+  +libreoffice-l10n-9999.ebuild:
+  Stop using basis-link as then builds fail on collisions :/ Fixes bug #384811.
 
 *libreoffice-l10n-3.4.3-r2 (18 Sep 2011)
 
