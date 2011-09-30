@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.25 2011/07/29 02:51:25 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql_fx.eclass,v 1.26 2011/09/30 02:10:24 jmbsvicetto Exp $
 
 # Author: Francesco Riosa (Retired) <vivo@gentoo.org>
 # Maintainer:
@@ -199,7 +199,7 @@ mysql_lib_symlinks() {
 
 	# waste some time in removing and recreating symlinks
 	for d in $dirlist ; do
-		for libname in $( find "${d}" -name "*${libsuffix}*" -and -not -type "l" 2>/dev/null ) ; do
+		for libname in $( find "${d}" -mindepth 1 -maxdepth 1 -name "*${libsuffix}*" -and -not -type "l" 2>/dev/null ) ; do
 			# maxdot is a limit versus infinite loop
 			maxdots=0
 			libnameln=${libname##*/}
