@@ -1,0 +1,12 @@
+diff -ruN eigen-3.0.2.orig/Eigen/src/Core/Fuzzy.h eigen-3.0.2/Eigen/src/Core/Fuzzy.h
+--- eigen-3.0.2.orig/Eigen/src/Core/Fuzzy.h	2011-08-26 14:56:26.000000000 +0200
++++ eigen-3.0.2/Eigen/src/Core/Fuzzy.h	2011-09-30 23:29:55.459594976 +0200
+@@ -94,7 +94,7 @@
+   *
+   * \note The fuzzy compares are done multiplicatively. Two vectors \f$ v \f$ and \f$ w \f$
+   * are considered to be approximately equal within precision \f$ p \f$ if
+-  * \f[ \Vert v - w \Vert \leqslant p\,\(min)(\Vert v\Vert, \Vert w\Vert). \f]
++  * \f[ \Vert v - w \Vert \leqslant p\,\min(\Vert v\Vert, \Vert w\Vert). \f]
+   * For matrices, the comparison is done using the Hilbert-Schmidt norm (aka Frobenius norm
+   * L2 norm).
+   *

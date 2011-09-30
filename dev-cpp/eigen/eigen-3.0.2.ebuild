@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-3.0.2.ebuild,v 1.1 2011/09/06 21:23:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-3.0.2.ebuild,v 1.2 2011/09/30 21:38:12 dilfridge Exp $
 
 EAPI="2"
 
@@ -18,7 +18,10 @@ IUSE="debug doc"
 DEPEND="doc? ( app-doc/doxygen )"
 RDEPEND="!dev-cpp/eigen:0"
 
-PATCHES=( "${FILESDIR}"/${PN}-3.0.0-gcc46.patch )
+PATCHES=(
+	"${FILESDIR}"/${PN}-3.0.0-gcc46.patch
+	"${FILESDIR}"/${PN}-3.0.2-latex.patch
+)
 
 src_unpack() {
 	unpack ${A}

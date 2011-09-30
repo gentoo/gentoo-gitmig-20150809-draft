@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/eigen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.49 2011/09/06 21:23:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.50 2011/09/30 21:38:12 dilfridge Exp $
+
+  30 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org> eigen-3.0.2.ebuild,
+  +files/eigen-3.0.2-latex.patch:
+  Fix LaTeX error in documentation, bug 383051
 
 *eigen-3.0.2 (06 Sep 2011)
 
