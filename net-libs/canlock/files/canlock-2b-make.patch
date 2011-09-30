@@ -1,0 +1,45 @@
+--- canlock2b.orig/Makefile
++++ canlock2b/Makefile
+@@ -15,16 +15,17 @@
+ 	$(CC) $(CFLAGS) t/$@.c -o $@ $(LDFLAGS)
+ 
+ $(STATIC_LIB):
+-	cd src && make
++	cd src && $(MAKE) libcanlock.so.2.0.0
++	cd src && $(MAKE) libcanlock.a
+ 	ln -s src/libcanlock.a libcanlock.a
+ 
+ clean:
+ 	rm -f src/*.o t/*.o t/*.out *.gmon gmon.*
+-	cd src && make clean
++	cd src && $(MAKE) clean
+ 	rm -f *.a canlocktest hmactest sha1test *.exe *.h lib-stamp
+ 
+ install: all
+-	cd src && make install DESTDIR=$(DESTDIR)
++	cd src && $(MAKE) install DESTDIR=$(DESTDIR)
+ 	install --mode=644 include/canlock.h $(DESTDIR)/usr/include
+ 	
+ test: all
+--- canlock2b.orig/src/Makefile
++++ canlock2b/src/Makefile
+@@ -13,8 +13,8 @@
+ 
+ libcanlock.a:
+ 	$(CC) $(CFLAGS) -c $(SOURCES)
+-	ar cru libcanlock.a $(OBJS)
+-	ranlib libcanlock.a
++	$(AR) cru libcanlock.a $(OBJS)
++	$(RANLIB) libcanlock.a
+ 	rm $(OBJS)
+ 
+ libcanlock.so.2.0.0:
+@@ -26,7 +26,7 @@
+ 	cd $(DESTDIR)/usr/lib && ln -s libcanlock.so.2.0.0 libcanlock.so.2
+ 	cd $(DESTDIR)/usr/lib && ln -s libcanlock.so.2.0.0 libcanlock.so
+ 	$(INSTALL) libcanlock.a $(DESTDIR)/usr/lib/libcanlock.a
+-	ranlib $(DESTDIR)/usr/lib/libcanlock.a
++	$(RANLIB) $(DESTDIR)/usr/lib/libcanlock.a
+ 	
+ clean:
+ 	rm -f $(OBJS) $(LIBS)
