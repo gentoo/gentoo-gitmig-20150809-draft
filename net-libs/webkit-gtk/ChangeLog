@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.121 2011/09/24 13:53:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.122 2011/09/30 13:52:33 nirbheek Exp $
+
+*webkit-gtk-1.6.1-r300 (30 Sep 2011)
+*webkit-gtk-1.6.1-r200 (30 Sep 2011)
+
+  30 Sep 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +webkit-gtk-1.6.1-r200.ebuild, +webkit-gtk-1.6.1-r300.ebuild, metadata.xml:
+  Bump to 1.6.1, optional partly-broken webgl support, build and install API
+  docs with USE=doc, generate an xz tarball and use that
 
   24 Sep 2011; Pacho Ramos <pacho@gentoo.org> webkit-gtk-1.4.3-r300.ebuild,
   -files/webkit-gtk-1.4.3-underlinking.patch:

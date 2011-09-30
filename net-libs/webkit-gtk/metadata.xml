@@ -5,8 +5,10 @@
   <use>
 	<flag name="coverage">Enable code coverage support</flag>
 	<flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>
-	for introspection</flag>
+		for introspection</flag>
 	<flag name="jit">Enable JIT javascript compiler (disabling it will
-	cause performance penalty)</flag>
+		cause performance penalty)</flag>
+	<flag name="webgl">Build support for the WebGL HTML API using
+		<pkg>virtual/opengl</pkg></flag>
   </use>
 </pkgmetadata>
