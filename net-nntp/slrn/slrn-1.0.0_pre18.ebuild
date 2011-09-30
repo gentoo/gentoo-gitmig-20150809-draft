@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/slrn/slrn-1.0.0_pre18.ebuild,v 1.1 2011/09/30 10:19:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/slrn/slrn-1.0.0_pre18.ebuild,v 1.2 2011/09/30 10:28:12 radhermit Exp $
 
 EAPI=4
-
 inherit eutils
 
 MY_P="${PN}-pre${PV/_pre/~}"
-DESCRIPTION="a s-lang based newsreader"
+
+DESCRIPTION="A s-lang based newsreader"
 HOMEPAGE="http://slrn.sourceforge.net/"
 SRC_URI="http://slrn.sourceforge.net/downloads/svn_snapshots/${MY_P}.tar.bz2"
 
