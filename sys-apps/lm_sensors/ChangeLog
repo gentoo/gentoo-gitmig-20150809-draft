@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.118 2011/07/29 07:56:46 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.119 2011/09/30 19:58:10 polynomial-c Exp $
+
+*lm_sensors-3.3.1 (30 Sep 2011)
+
+  30 Sep 2011; Lars Wendler <polynomial-c@gentoo.org> +lm_sensors-3.3.1.ebuild,
+  +files/lm_sensors-3.3.1-sensors-detect-gentoo.patch:
+  non-maintainer commit: Version bump (bug #377223).
 
   29 Jul 2011; Zac Medico <zmedico@gentoo.org> lm_sensors-3.3.0.ebuild:
   Add ~x86-linux keyword.
