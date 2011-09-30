@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/sdlmame
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.53 2011/09/11 06:10:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.54 2011/09/30 16:50:10 vapier Exp $
+
+  30 Sep 2011; Mike Frysinger <vapier@gentoo.org> sdlmame-0.141_p3.ebuild,
+  sdlmame-0.142.ebuild, sdlmame-0.142_p5.ebuild, sdlmame-0.143_p4.ebuild,
+  sdlmame-0.143_p5.ebuild:
+  Tweak edos2unix invocation to avoid passing non-existent files.
 
 *sdlmame-0.143_p5 (11 Sep 2011)
 

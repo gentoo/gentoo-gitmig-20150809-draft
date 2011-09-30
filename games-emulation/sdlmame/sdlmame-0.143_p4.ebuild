@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/sdlmame-0.143_p4.ebuild,v 1.1 2011/09/04 02:40:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/sdlmame-0.143_p4.ebuild,v 1.2 2011/09/30 16:50:10 vapier Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -60,7 +60,7 @@ src_unpack() {
 
 src_prepare() {
 	if [[ $PV == *_p* ]] ; then
-		edos2unix $(grep +++ *diff | awk '{ print $2 }' | sort -u) *diff 2> /dev/null
+		edos2unix $(find $(grep +++ *diff | awk '{ print $2 }' | sort -u) 2>/dev/null) *diff
 		einfo "Patching release with source updates"
 		epatch ${MY_PV%%_p*}*.diff
 	fi
