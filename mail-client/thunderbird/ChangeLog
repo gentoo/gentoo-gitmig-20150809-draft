@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.95 2011/09/26 15:50:46 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.96 2011/10/01 01:45:31 anarchy Exp $
+
+*thunderbird-7.0.1 (01 Oct 2011)
+
+  01 Oct 2011; Jory A. Pratt <anarchy@gentoo.org> -thunderbird-6.0.ebuild,
+  -thunderbird-6.0.2.ebuild, +thunderbird-7.0.1.ebuild,
+  +files/Copy_xpcshell_only_if_tests_are_enabled.patch,
+  -files/fix-thunderbird-calender-support.patch:
+  Security bump with addon updater fixed
 
 *thunderbird-6.0.2 (26 Sep 2011)
 *thunderbird-3.1.14 (26 Sep 2011)
