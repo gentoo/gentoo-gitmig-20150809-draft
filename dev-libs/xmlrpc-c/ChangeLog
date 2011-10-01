@@ -1,6 +1,17 @@
 # ChangeLog for dev-libs/xmlrpc-c
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.96 2011/07/25 10:21:06 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.97 2011/10/01 21:44:07 pva Exp $
+
+*xmlrpc-c-1.28.00 (01 Oct 2011)
+
+  01 Oct 2011; Peter Volkov <pva@gentoo.org> +xmlrpc-c-1.28.00.ebuild,
+  +files/xmlrpc-c-1.28.00-advanced-test.patch, metadata.xml:
+  Version bump, bug #299011 wrt Arfrever Frehtes Taifersar Arahesis. Fixes
+  parallel build issue, bug 291881 wrt simon. Fixes build on BSD, bug #283751
+  wrt Henning Schild. Fixes installation of shared libraries, bug #274536 wrt
+  Ambroz Bizjak. Fixes build failure with specific USE flags combination, bug
+  301076 wrt Marco Clocchiatti. And thank Andreis_Vinogradovs (slepnoga) for
+  making me work on this version bump.
 
   25 Jul 2011; Christoph Mende <angelos@gentoo.org> xmlrpc-c-1.06.27.ebuild,
   +files/xmlrpc-c-1.06.27-curl-headers.patch, xmlrpc-c-1.18.02.ebuild,
