@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.60 2011/09/24 21:27:00 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.61 2011/10/01 03:23:11 phajdan.jr Exp $
+
+  01 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> munin-1.4.6-r2.ebuild:
+  x86 stable wrt bug #383683
 
   24 Sep 2011; Tony Vroon <chainsaw@gentoo.org> munin-1.4.6-r2.ebuild:
   Marked stable based on arch testing by Elijah "Armageddon" El Lazkani,
