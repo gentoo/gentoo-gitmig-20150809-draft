@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lensfun
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.28 2011/08/23 23:00:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.29 2011/10/01 21:37:03 ssuominen Exp $
+
+  01 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> lensfun-0.2.5-r2.ebuild:
+  Use full toolchain name wrt #385213, Comment #1 by Agostino Sarubbo.
 
   23 Aug 2011; Tim Harder <radhermit@gentoo.org> lensfun-0.2.4.ebuild,
   lensfun-0.2.5.ebuild, lensfun-0.2.5-r1.ebuild, lensfun-0.2.5-r2.ebuild:
