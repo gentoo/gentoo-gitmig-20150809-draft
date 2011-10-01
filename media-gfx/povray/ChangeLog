@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/povray
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.114 2011/09/28 19:33:31 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.115 2011/10/01 00:44:01 lavajoe Exp $
+
+*povray-3.6.1-r6 (01 Oct 2011)
+
+  01 Oct 2011; Joe Peterson <lavajoe@gentoo.org> +povray-3.6.1-r6.ebuild:
+  Disable optimzations on 3.6.1 to match 3.7.0 and to fix misalignment with
+  libjpeg on 32-bit systems (bug #382459)
 
   28 Sep 2011; Joe Peterson <lavajoe@gentoo.org> +povray-3.6.1-r4.ebuild,
   -povray-3.6.1-r5.ebuild, -files/povray-3.6.1-only-libjpeg-6b.patch:
