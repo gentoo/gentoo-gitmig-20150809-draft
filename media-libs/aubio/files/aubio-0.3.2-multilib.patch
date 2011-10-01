@@ -1,5 +1,5 @@
---- python/aubio/Makefile.am.orig	2008-02-10 18:32:03.000000000 -0500
-+++ python/aubio/Makefile.am	2008-02-10 18:33:48.000000000 -0500
+--- python/aubio/Makefile.am
++++ python/aubio/Makefile.am
 @@ -68,7 +68,7 @@
  	-L$(top_builddir)/ext -laubioext \
  	-L$(top_builddir)/src -laubio
