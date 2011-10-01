@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.32.2.1-r1.ebuild,v 1.7 2011/09/22 15:43:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.32.2.1-r1.ebuild,v 1.8 2011/10/01 21:10:09 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -60,8 +60,9 @@ src_prepare() {
 	epatch "${WORKDIR}/${P}-patches"/*.patch
 
 	# Remove crazy CFLAGS
-	sed 's:-DG.*DISABLE_DEPRECATED::g' -i configure.in configure \
-		|| die "sed 1 failed"
+	sed -i \
+		-e 's:-DG.*DISABLE_DEPRECATED::g' \
+		configure{,.in} eel/Makefile.{am,in} || die
 }
 
 src_test() {

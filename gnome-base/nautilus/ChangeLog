@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.382 2011/09/22 15:43:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.383 2011/10/01 21:10:09 ssuominen Exp $
+
+  01 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  nautilus-2.32.2.1-r1.ebuild:
+  Remove -DG_DISABLE_DEPRECATED and -DGDK_PIXBUF_DISABLE_DEPRECATED also from
+  Makefile in eel/ to allow building against glib-2.30 and pango-1.28.
 
   22 Sep 2011; Pacho Ramos <pacho@gentoo.org> nautilus-2.32.2.1-r1.ebuild,
   nautilus-3.0.2.ebuild:
