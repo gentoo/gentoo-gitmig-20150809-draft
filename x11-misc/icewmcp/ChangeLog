@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/icewmcp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewmcp/ChangeLog,v 1.14 2011/03/02 18:22:55 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewmcp/ChangeLog,v 1.15 2011/10/01 06:20:23 vapier Exp $
+
+*icewmcp-3.2-r3 (01 Oct 2011)
+
+  01 Oct 2011; Mike Frysinger <vapier@gentoo.org> +icewmcp-3.2-r3.ebuild:
+  Clean up ebuild a lot #384555 by i.Dark_Templar.
 
   02 Mar 2011; Kevin McCarthy <signals@gentoo.org> icewmcp-3.2-r2.ebuild:
   Slot all gnome-related deps.
