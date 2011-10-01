@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.22-r1.ebuild,v 1.5 2011/09/26 22:38:22 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.22-r1.ebuild,v 1.6 2011/10/01 03:33:33 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -133,7 +133,7 @@ SRC_URI="ftp://ftp.sane-project.org/pub/sane/${P}/${P}.tar.gz
 	ftp://ftp.sane-project.org/pub/sane/old-versions/${P}/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2 public-domain"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
 
 pkg_setup() {
 	enewgroup scanner
