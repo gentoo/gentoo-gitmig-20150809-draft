@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/fcgiwrap-9999.ebuild,v 1.2 2011/09/21 08:55:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/fcgiwrap-9999.ebuild,v 1.3 2011/10/01 07:54:00 pva Exp $
 
-EAPI="3"
+EAPI="4"
 
 [[ ${PV} = *9999* ]] && VCS_ECLASS="git-2" || VCS_ECLASS=""
 inherit autotools ${VCS_ECLASS}
@@ -15,13 +15,13 @@ SLOT="0"
 IUSE=""
 
 if [[ ${PV} == *9999* ]]; then
-	EGIT_REPO_URI="git://github.com/gnosek/${PN}.git
-		https://github.com/gnosek/${PN}.git"
+	EGIT_REPO_URI="git://github.com/gnosek/${PN}.git"
 
 	KEYWORDS=""
 else
-	MY_REV="2e301c8"
-	SRC_URI="http://download.github.com/gnosek-${PN}-v${PV}-1-g${MY_REV}.tar.gz -> ${P}.tar.gz"
+	MY_REV="58ec209"
+	#SRC_URI="http://download.github.com/gnosek-${P}-4-g${MY_REV}.tar.gz"
+	SRC_URI="mirror://gentoo/gnosek-${P}-4-g${MY_REV}.tar.gz -> ${P}.tar.gz"
 	S="${WORKDIR}/gnosek-${PN}-${MY_REV}"
 
 	KEYWORDS="~amd64 ~x86"
@@ -30,17 +30,13 @@ fi
 DEPEND="dev-libs/fcgi"
 RDEPEND="${DEPEND}"
 
+DOCS=( README.rst )
+
 src_prepare() {
 	sed -e '/man8dir = $(DESTDIR)/s/@prefix@//' \
 		-i Makefile.in || die "sed failed"
 
 	eautoreconf
-}
-
-src_install() {
-	einstall DESTDIR="${D}"
-
-	dodoc README.rst
 }
 
 pkg_postinst() {

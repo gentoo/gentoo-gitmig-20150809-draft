@@ -1,6 +1,12 @@
 # ChangeLog for www-misc/fcgiwrap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/ChangeLog,v 1.6 2011/09/30 20:42:23 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/fcgiwrap/ChangeLog,v 1.7 2011/10/01 07:54:00 pva Exp $
+
+*fcgiwrap-1.0.3-r1 (01 Oct 2011)
+
+  01 Oct 2011; Peter Volkov <pva@gentoo.org> -fcgiwrap-1.0.2-r1.ebuild,
+  +fcgiwrap-1.0.3-r1.ebuild, fcgiwrap-9999.ebuild:
+  Bump EAPI, use emake in src_install, bug #385081 thank Nikoli for this job.
 
   30 Sep 2011; Steve Dibb <beandog@gentoo.org> fcgiwrap-1.0.3.ebuild:
   amd64 stable, bug 384475
