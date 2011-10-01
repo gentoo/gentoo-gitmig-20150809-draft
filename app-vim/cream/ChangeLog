@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/cream
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.54 2011/09/25 10:44:44 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cream/ChangeLog,v 1.55 2011/10/01 03:27:08 phajdan.jr Exp $
+
+  01 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> cream-0.43.ebuild:
+  x86 stable wrt bug #384135
 
   25 Sep 2011; Tony Vroon <chainsaw@gentoo.org> cream-0.43.ebuild:
   Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney, Elijah
