@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-9999.1.ebuild,v 1.2 2011/09/07 03:53:03 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-9999.1.ebuild,v 1.3 2011/10/01 16:46:46 pva Exp $
 
 EAPI="4"
 
@@ -15,7 +15,10 @@ EGIT_REPO_URI="git://github.com/FreeRDP/FreeRDP.git
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS=""
-IUSE="+alsa +cups directfb pulseaudio test +X +xcursor +xext +xinerama +xkbfile"
+IUSE="+alsa +cups directfb pulseaudio sse2 test +X +xcursor +xext +xinerama +xkbfile"
+
+FREERDP_DEBUG="transport chanman svc dvc kbd nla nego certificate license gdi rfx x11 rail xv"
+IUSE+=" $(printf 'debug-%s ' ${FREERDP_DEBUG})"
 
 RDEPEND="
 	dev-libs/openssl
@@ -43,7 +46,6 @@ DOCS=( README )
 RESTRICT="test"
 
 src_configure() {
-	# TODO: Add debug options
 	local mycmakeargs=(
 		-DWITH_MANPAGES=ON
 		$(cmake-utils_use_with alsa)
@@ -56,6 +58,13 @@ src_configure() {
 		$(cmake-utils_use_with xext)
 		$(cmake-utils_use_with xinerama)
 		$(cmake-utils_use_with xkbfile)
+		$(cmake-utils_use_with sse2 SSE2)
 	)
+	for i in ${FREERDP_DEBUG}; do
+		mycmakeargs+=(
+			$(cmake-utils_use_with debug-${i} DEBUG_$(LC_ALL=C echo ${i} | tr a-z A-Z))
+		)
+	done
+	einfo "${mycmakeargs[@]}"
 	cmake-utils_src_configure
 }
