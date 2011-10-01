@@ -1,3 +1,5 @@
+http://pkgs.fedoraproject.org/gitweb/?p=aubio.git;a=tree
+
 --- python/aubio/aubioclass.py
 +++ python/aubio/aubioclass.py
 @@ -42,8 +42,10 @@
