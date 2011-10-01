@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.18.ebuild,v 1.1 2011/09/10 20:55:35 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.21.ebuild,v 1.1 2011/10/01 01:44:15 zmedico Exp $
 
 EAPI=3
 PYTHON_DEPEND=2:2.7
@@ -58,6 +58,11 @@ src_prepare() {
 	#sed -e "s#\\(^numeric_version =\\).*#\\1 (${PV//./, })#" \
 	#	-i src/calibre/constants.py || \
 	#	die "sed failed to patch constants.py"
+
+	# include poppler-features.h for POPPLER_*_VERSION
+	sed -e '/#include <PDFDoc.h>/ i\
+#include <poppler/glib/poppler-features.h>' \
+	-i src/calibre/ebooks/pdf/reflow.h || die "sed failed to patch reflow.h"
 
 	# Avoid sandbox violation in /usr/share/gnome/apps when linux.py
 	# calls xdg-* (bug #258938).
