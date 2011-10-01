@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.7.3-r3.ebuild,v 1.7 2011/08/29 17:49:09 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.7.3-r3.ebuild,v 1.8 2011/10/01 18:44:04 ssuominen Exp $
 
 EAPI="4"
 
@@ -17,12 +17,12 @@ KEYWORDS="amd64 ~ppc ~ppc64 x86 ~ppc-macos ~x64-macos ~x86-macos"
 # not built with v4l2 support (taken from configure.ac)
 # TODO: run-time test for ipv6: does it really need ortp[ipv6] ?
 IUSE="+alsa amr bindist coreaudio debug examples gsm ilbc ipv6 jack oss portaudio
-pulseaudio sdl +speex theora v4l2 video x264 X"
+pulseaudio sdl +speex theora v4l video x264 X"
 REQUIRED_USE="|| ( oss alsa jack portaudio coreaudio )
 	video? ( || ( sdl X ) )
 	theora? ( video )
 	X? ( video )
-	v4l2? ( video )"
+	v4l? ( video )"
 
 RDEPEND=">=net-libs/ortp-0.16.2[ipv6?]
 	alsa? ( media-libs/alsa-lib )
@@ -34,7 +34,7 @@ RDEPEND=">=net-libs/ortp-0.16.2[ipv6?]
 	speex? ( >=media-libs/speex-1.2_beta3 )
 	video? (
 		virtual/ffmpeg
-		v4l2? ( media-libs/libv4l
+		v4l? ( media-libs/libv4l
 			sys-kernel/linux-headers )
 		theora? ( media-libs/libtheora )
 		sdl? ( media-libs/libsdl[video,X] )
@@ -107,8 +107,8 @@ src_configure() {
 		$(use_enable speex) \
 		$(use_enable theora) \
 		$(use_enable video) \
-		$(use_enable v4l2 v4l) \
-		$(use_enable v4l2 libv4l) \
+		$(use_enable v4l) \
+		$(use_enable v4l libv4l) \
 		$(use_enable sdl) \
 		$(use_enable X x11) \
 		$(use_enable X xv)
