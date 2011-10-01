@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/tf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/ChangeLog,v 1.22 2011/08/03 12:33:39 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tf/ChangeLog,v 1.23 2011/10/01 03:19:26 phajdan.jr Exp $
+
+  01 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> tf-50_beta8-r1.ebuild:
+  x86 stable wrt bug #381735
 
 *tf-50_beta8-r1 (03 Aug 2011)
 
