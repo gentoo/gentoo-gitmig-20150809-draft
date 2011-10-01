@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/apitrace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/ChangeLog,v 1.4 2011/09/13 13:15:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/apitrace/ChangeLog,v 1.5 2011/10/01 23:44:02 radhermit Exp $
+
+*apitrace-2.0 (01 Oct 2011)
+
+  01 Oct 2011; Tim Harder <radhermit@gentoo.org> +apitrace-2.0.ebuild,
+  +files/apitrace-2.0-glxtrace-only.patch,
+  +files/apitrace-2.0-system-libs.patch:
+  Version bump.
 
   13 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> apitrace-1.0-r1.ebuild,
   +files/apitrace-1.0-libpng15.patch:
