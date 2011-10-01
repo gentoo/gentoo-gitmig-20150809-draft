@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aubio/aubio-0.3.2-r2.ebuild,v 1.1 2011/10/01 10:22:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aubio/aubio-0.3.2-r2.ebuild,v 1.2 2011/10/01 10:44:40 ssuominen Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ SRC_URI="http://aubio.piem.org/pub/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="alsa doc jack lash static-libs"
+IUSE="alsa doc examples jack lash static-libs"
 
 RDEPEND="sci-libs/fftw:3.0
 	media-libs/libsndfile
@@ -77,6 +77,14 @@ src_install() {
 		dohtml -r doc/devel/devel
 		mv doc/examples/html doc/examples/examples
 		dohtml -r doc/examples/examples
+	fi
+
+	if use examples; then
+		# install dist_noinst_SCRIPTS from Makefile.am
+		insinto /usr/share/doc/${PF}/examples
+		doins python/aubio{compare-onset,plot-notes,filter-notes,web.py} || die
+		docinto examples
+		newdoc python/README README.examples
 	fi
 
 	find "${ED}"usr -name '*.la' -exec rm -f {} +
