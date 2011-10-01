@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13093 2011/10/01 00:19:00 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13094 2011/10/01 14:23:07 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -538,6 +538,7 @@ dev-tex/pdftex
 >=gnome-extra/gnome-games-3.0
 >=gnome-extra/gnome-games-extra-data-3.0
 >=gnome-extra/gnome-media-2.32.0-r300
+>=gnome-extra/gnome-packagekit-3.0
 >=gnome-extra/gnome-power-manager-3.0
 >=gnome-extra/gnome-screensaver-3.0
 >=gnome-extra/gnome-system-monitor-3.0
