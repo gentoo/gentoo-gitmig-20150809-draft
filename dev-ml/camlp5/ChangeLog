@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/camlp5
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.58 2011/09/20 21:16:33 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.59 2011/10/01 03:26:13 phajdan.jr Exp $
+
+  01 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> camlp5-6.02.3.ebuild:
+  x86 stable wrt bug #383825
 
   20 Sep 2011; Tony Vroon <chainsaw@gentoo.org> camlp5-6.02.3.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in bug
