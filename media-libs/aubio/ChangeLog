@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/aubio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aubio/ChangeLog,v 1.21 2011/10/01 10:54:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aubio/ChangeLog,v 1.22 2011/10/01 16:46:15 ssuominen Exp $
 
   01 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> aubio-0.3.2-r2.ebuild:
   Disable automagic puredata detection wrt #369835 by Xavier Miller
@@ -12,7 +12,7 @@
 
   01 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> +aubio-0.3.2-r2.ebuild,
   +files/aubio-0.3.2-numarray-gnuplot.patch:
-  Import Fedora patch for byte-compiling errors wrt #312915 by artin Mokrejš
+  Import Fedora patch for byte-compiling errors wrt #312915 by Martin Mokrejš
   and Sebastian Pipping
 
   01 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> aubio-0.3.2-r1.ebuild:
