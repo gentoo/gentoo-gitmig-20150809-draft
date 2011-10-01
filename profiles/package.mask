@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13094 2011/10/01 14:23:07 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13095 2011/10/01 16:11:19 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -551,6 +551,7 @@ dev-tex/pdftex
 >=gnome-extra/zenity-3.0
 >=mail-client/evolution-3.0
 >=media-gfx/eog-3.0
+>=media-sound/rhythmbox-2.90
 >=media-sound/sound-juicer-2.99
 >=media-video/cheese-3.0
 >=media-video/totem-3.0
