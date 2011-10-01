@@ -1,6 +1,11 @@
 # ChangeLog for app-text/flpsed
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/ChangeLog,v 1.23 2011/03/20 20:20:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/flpsed/ChangeLog,v 1.24 2011/10/01 08:31:56 radhermit Exp $
+
+*flpsed-0.7.0 (01 Oct 2011)
+
+  01 Oct 2011; Tim Harder <radhermit@gentoo.org> +flpsed-0.7.0.ebuild:
+  Version bump.
 
   20 Mar 2011; Justin Lecher <jlec@gentoo.org> flpsed-0.5.1.ebuild:
   x11-libs/fltk SLOTMOVE 1.1 -> 1, corrected ebuild accordingly
