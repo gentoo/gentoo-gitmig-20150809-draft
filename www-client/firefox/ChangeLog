@@ -1,6 +1,9 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.100 2011/10/01 01:38:13 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.101 2011/10/01 11:51:05 ssuominen Exp $
+
+  01 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> firefox-7.0.1.ebuild:
+  Convert dev-libs/libffi to virtual/libffi again.
 
 *firefox-7.0.1 (01 Oct 2011)
 
