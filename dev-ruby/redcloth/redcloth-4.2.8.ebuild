@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-4.2.8.ebuild,v 1.1 2011/09/25 22:48:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-4.2.8.ebuild,v 1.2 2011/10/01 02:57:39 robbat2 Exp $
 
 EAPI=4
 
@@ -34,7 +34,8 @@ KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~pp
 IUSE=""
 
 DEPEND="$DEPEND
-	dev-util/ragel"
+	dev-util/ragel
+	dev-ruby/rspec"
 RDEPEND="$RDEPEND"
 
 ruby_add_bdepend "
