@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ldns-utils-1.6.11.ebuild,v 1.1 2011/09/30 14:58:17 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ldns-utils-1.6.11.ebuild,v 1.2 2011/10/01 17:55:28 phajdan.jr Exp $
 
 EAPI="3"
 inherit autotools eutils
@@ -12,7 +12,7 @@ SRC_URI="http://www.nlnetlabs.nl/downloads/ldns/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="examples gost ssl"
 
 DEPEND=">=net-libs/ldns-${PV}[gost?,ssl?]
