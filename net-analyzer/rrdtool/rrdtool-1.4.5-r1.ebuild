@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.5-r1.ebuild,v 1.1 2011/08/07 08:13:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.5-r1.ebuild,v 1.2 2011/10/01 06:59:07 radhermit Exp $
 
 EAPI="3"
 
@@ -26,10 +26,11 @@ RDEPEND="
 	lua? ( dev-lang/lua )
 	perl? ( dev-lang/perl )
 	python? ( dev-lang/python )
-	ruby? ( >=dev-lang/ruby-1.8.6_p287-r13 !dev-ruby/ruby-rrd )
+	ruby? ( >=dev-lang/ruby-1.8.6_p287-r13 )
 	tcl? ( dev-lang/tcl )"
 
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	sys-apps/gawk"
 
 src_prepare() {
