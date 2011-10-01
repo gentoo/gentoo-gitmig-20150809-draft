@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-0.44-r1.ebuild,v 1.1 2010/08/19 19:52:24 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/libical-0.44-r1.ebuild,v 1.2 2011/10/01 09:50:53 ssuominen Exp $
 
-EAPI="2"
+EAPI=4
 
 DESCRIPTION="An implementation of basic iCAL protocols from citadel, previously known as aurore"
 HOMEPAGE="http://freeassociation.sourceforge.net"
@@ -13,9 +13,6 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="examples"
 
-DEPEND=""
-RDEPEND="${DEPEND}"
-
 # https://sourceforge.net/tracker2/index.php?func=detail&aid=2196790&group_id=16077&atid=116077
 # Upstream states that tests are supposed to fail (I hope sf updates archives
 # and answer became visible):
@@ -24,11 +21,11 @@ RESTRICT="test"
 
 src_prepare() {
 	# Do not waste time building examples
-	sed 's/^\(SUBDIRS =.*\)examples\(.*\)$/\1\2/' \
-		-i Makefile.am Makefile.in || die "sed failed"
+	sed -i -e 's/^\(SUBDIRS =.*\)examples\(.*\)$/\1\2/' Makefile.{am,in} || die
 	# If errors are fatal, some software can segfault
-	sed 's/^#define ICAL_ERRORS_ARE_FATAL 0/#undef ICAL_ERRORS_ARE_FATAL/' \
-		-i configure || die "sed failed"
+	sed -i \
+		-e 's/^#define ICAL_ERRORS_ARE_FATAL 0/#undef ICAL_ERRORS_ARE_FATAL/' \
+		configure || die
 }
 
 src_configure() {
@@ -38,9 +35,12 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install
+
+	rm -f "${ED}"usr/lib*/${PN}*.la
+
 	dodoc AUTHORS ChangeLog NEWS README TEST THANKS TODO \
-		doc/{AddingOrModifyingComponents,UsingLibical}.txt || die "dodoc failed"
+		doc/{AddingOrModifyingComponents,UsingLibical}.txt
 
 	if use examples; then
 		rm examples/Makefile* examples/CMakeLists.txt
