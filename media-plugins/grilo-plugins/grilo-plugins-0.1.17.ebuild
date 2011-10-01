@@ -1,12 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.1.15.ebuild,v 1.2 2011/06/15 16:43:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.1.17.ebuild,v 1.1 2011/10/01 16:33:37 nirbheek Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
-GNOME_TARBALL_SUFFIX="bz2"
 
-inherit gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="A framework for easy media discovery and browsing"
 HOMEPAGE="https://live.gnome.org/Grilo"
@@ -20,10 +19,12 @@ RDEPEND="
 	>=dev-libs/glib-2.26:2
 	=media-libs/grilo-${PV}[network]
 
+	|| ( dev-libs/gmime:2.6 dev-libs/gmime:2.4 )
 	dev-libs/libxml2:2
 	dev-db/sqlite:3
 
-	youtube? ( >=dev-libs/libgdata-0.4.0 )
+	youtube? ( >=dev-libs/libgdata-0.7
+		>=media-libs/quvi-0.2.15 )
 	upnp? ( >=net-libs/gupnp-0.13
 		>=net-libs/gupnp-av-0.5 )
 	vimeo? ( net-libs/libsoup:2.4
@@ -44,20 +45,22 @@ pkg_setup() {
 		--disable-uninstalled"
 
 	# Plugins
-	# TODO: Enable tracker support
+	# TODO: Enable tracker support (requires tracker-0.10.5+)
+	# TODO: Enable Blip.TV support (requires librest)
 	G2CONF="${G2CONF}
+		--enable-apple-trailers
+		--enable-bookmarks
 		--enable-filesystem
+		--enable-flickr
+		--enable-gravatar
 		--enable-jamendo
 		--enable-lastfm-albumart
-		--enable-flickr
-		--enable-podcasts
-		--enable-bookmarks
-		--disable-shoutcast
-		--enable-apple-trailers
-		--enable-metadata-store
-		--enable-gravatar
-		--disable-tracker
 		--enable-localmetadata
+		--enable-metadata-store
+		--enable-podcasts
+		--disable-bliptv
+		--disable-shoutcast
+		--disable-tracker
 		$(use_enable upnp)
 		$(use_enable youtube)
 		$(use_enable vimeo)"
@@ -65,5 +68,10 @@ pkg_setup() {
 
 src_prepare() {
 	sed -i -e 's/^\(SUBDIRS .*\)test/\1/g' Makefile.*
+
+	epatch "${FILESDIR}/${P}-apple-trailers-fix.patch"
+
+	eautoreconf
+
 	gnome2_src_prepare
 }
