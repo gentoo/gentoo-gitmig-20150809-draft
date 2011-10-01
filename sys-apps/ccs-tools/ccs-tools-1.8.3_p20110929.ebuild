@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ccs-tools/ccs-tools-1.8.3_p20110929.ebuild,v 1.2 2011/09/29 23:33:28 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ccs-tools/ccs-tools-1.8.3_p20110929.ebuild,v 1.3 2011/10/01 00:39:25 naota Exp $
 
 EAPI=3
 inherit eutils multilib toolchain-funcs
@@ -50,16 +50,11 @@ pkg_postinst() {
 	elog
 	elog "emerge --config =${CATEGORY}/${PF}"
 	elog
-	elog "For more information, please visit the following."
+	elog "For more information, please visit http://tomoyo.sourceforge.jp/1.8/"
 	elog
-	elog "For >=kernel-2.6.36:"
-	elog "http://tomoyo.sourceforge.jp/2.3/"
-	elog
-	elog "For >=kernel-2.6.30:"
-	elog "http://tomoyo.sourceforge.jp/2.2/"
-	elog
-	elog "For <kernel-2.6.30 + ccs-patch:"
-	elog "http://tomoyo.sourceforge.jp/1.8/"
+	elog "This tools are for ccs-patch'ed kernels. There are also sys-apps/tomoyo-tools"
+	elog "which works with TOMOYO 2.x.x versions (already merged into Linux kernel)."
+	elog "If you'd like to try them, please emerge sys-apps/tomoyo-tools instead."
 }
 
 pkg_config() {
