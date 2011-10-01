@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/PEAR-Net_IDNA2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_IDNA2/ChangeLog,v 1.1 2011/10/01 19:38:07 pva Exp $
+
+*PEAR-Net_IDNA2-0.1.1 (01 Oct 2011)
+
+  01 Oct 2011; Peter Volkov <pva@gentoo.org> +PEAR-Net_IDNA2-0.1.1.ebuild,
+  +metadata.xml:
+  Initial import. Dependency of mail-client/roundcube.
+
