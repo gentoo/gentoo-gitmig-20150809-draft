@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.5-r2.ebuild,v 1.9 2011/05/17 19:29:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-1.1.5-r2.ebuild,v 1.10 2011/10/01 18:32:34 ssuominen Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://berlios/tcforge/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
-IUSE="X 3dnow a52 aac alsa altivec dv dvd iconv imagemagick jpeg lzo mjpeg mp3 mpeg mmx nuv ogg oss postproc quicktime sdl sse sse2 theora truetype v4l2 vorbis x264 xml xvid"
+IUSE="X 3dnow a52 aac alsa altivec dv dvd iconv imagemagick jpeg lzo mjpeg mp3 mpeg mmx nuv ogg oss postproc quicktime sdl sse sse2 theora truetype v4l vorbis x264 xml xvid"
 
 RDEPEND="aac? ( media-libs/faac )
 	a52? ( media-libs/a52dec )
@@ -47,7 +47,7 @@ RDEPEND="aac? ( media-libs/faac )
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	v4l2? ( >=sys-kernel/linux-headers-2.6.11 )"
+	v4l? ( >=sys-kernel/linux-headers-2.6.11 )"
 
 # Notify the user that some useflag have been forced on
 tc_use_force() {
@@ -95,7 +95,7 @@ src_configure() {
 		$(use_enable sse) \
 		$(use_enable sse2) \
 		$(use_enable altivec) \
-		$(use_enable v4l2 v4l) \
+		$(use_enable v4l) \
 		$(use_enable alsa) \
 		$(use_enable oss) \
 		$(use_enable truetype freetype2) \
