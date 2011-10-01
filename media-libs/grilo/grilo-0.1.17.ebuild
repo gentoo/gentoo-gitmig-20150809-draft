@@ -1,22 +1,19 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/grilo-0.1.15.ebuild,v 1.2 2011/06/15 16:37:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/grilo-0.1.17.ebuild,v 1.1 2011/10/01 16:29:27 nirbheek Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
-GNOME_TARBALL_SUFFIX="bz2"
 
 inherit autotools eutils gnome2
 
 DESCRIPTION="A framework for easy media discovery and browsing"
 HOMEPAGE="https://live.gnome.org/Grilo"
-SRC_URI="${SRC_URI}
-	mirror://gentoo/${P}-patches-0.1.tar.xz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc +introspection +network test test-ui vala"
+IUSE="doc examples +introspection +network test test-ui vala"
 
 RDEPEND="
 	>=dev-libs/glib-2.22:2
@@ -31,6 +28,9 @@ DEPEND="${RDEPEND}
 	test? (
 		dev-python/pygobject:2[introspection?]
 		media-plugins/grilo-plugins )"
+
+# Tests fail horribly, but return 0
+RESTRICT="test"
 
 pkg_setup() {
 	DOCS="AUTHORS NEWS README TODO"
@@ -50,10 +50,15 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Various patches from upstream trunk
-	epatch "${WORKDIR}"/*.patch
+	# Don't build examples
+	sed -e '/SUBDIRS/s/examples//' \
+		-i Makefile.am -i Makefile.in || die
+
+	# Fix Test-UI automagic gtk2/gtk3 selection
+	epatch "${FILESDIR}/${PN}-0.1.16-fix-automagic-test-ui.patch"
+
 	# Build system doesn't install this file with the tarball
-	cp "${WORKDIR}/constants.py" "${S}/tests/python/"
+	cp "${FILESDIR}/${PN}-0.1.16-constants.py" "${S}/tests/python/constants.py"
 	eautoreconf
 
 	gnome2_src_prepare
@@ -62,4 +67,14 @@ src_prepare() {
 src_test() {
 	cd tests/
 	emake check
+}
+
+src_install() {
+	gnome2_src_install
+
+	if use examples; then
+		# Install example code
+		insinto /usr/share/doc/${PF}/examples
+		doins "${S}"/examples/*.c
+	fi
 }
