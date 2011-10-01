@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.94 2011/09/13 19:25:14 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.95 2011/10/01 16:18:28 tomka Exp $
+
+*wicd-1.7.1_beta2-r7 (01 Oct 2011)
+
+  01 Oct 2011; Thomas Kahle <tomka@gentoo.org> wicd-1.7.0.ebuild,
+  wicd-1.7.0-r1.ebuild, wicd-1.7.1_beta2-r3.ebuild, wicd-1.7.1_beta2-r4.ebuild,
+  wicd-1.7.1_beta2-r6.ebuild, +wicd-1.7.1_beta2-r7.ebuild,
+  +files/wicd-1.7.1_beta2-urwid-1.0.patch:
+  Bump urwid dep in -r7, restrict urwid in all other versions (Bug 384761)
 
 *wicd-1.7.1_beta2-r6 (13 Sep 2011)
 

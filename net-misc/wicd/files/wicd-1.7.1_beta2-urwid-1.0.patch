@@ -1,0 +1,20 @@
+--- /usr/share/wicd/curses/wicd-curses.py.old	2011-10-01 14:54:47.478406517 +0400
++++ /usr/share/wicd/curses/wicd-curses.py	2011-10-01 14:49:50.781273004 +0400
+@@ -241,7 +241,7 @@
+         # Don't stop because someone let go of the mouse on the frame
+         mouse_release = False
+         for k in keys:
+-            if urwid.is_mouse_event(k) and k[0] == "mouse release":
++            if urwid.util.is_mouse_event(k) and k[0] == "mouse release":
+                 mouse_release = True
+                 break
+         if mouse_release :
+@@ -882,7 +882,7 @@
+                                                 data[4], False)
+             
+         for k in keys:
+-            if urwid.is_mouse_event(k):
++            if urwid.util.is_mouse_event(k):
+                 event, button, col, row = k
+                 self.frame.mouse_event( self.size,
+                         event, button, col, row,
