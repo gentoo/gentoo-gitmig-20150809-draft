@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/gnome-disk-utility-3.0.2.ebuild,v 1.1 2011/08/15 12:26:09 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/gnome-disk-utility-3.0.2.ebuild,v 1.2 2011/10/01 20:44:18 ssuominen Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -26,20 +26,17 @@ CDEPEND="
 	>=x11-libs/libnotify-0.6.1
 
 	avahi? ( >=net-dns/avahi-0.6.25[gtk3] )
-	gnome-keyring? ( || (
-		gnome-base/libgnome-keyring
-		<gnome-base/gnome-keyring-2.29.4 ) )
+	gnome-keyring? ( gnome-base/libgnome-keyring )
 	nautilus? ( >=gnome-base/nautilus-2.91.0 )
 "
 RDEPEND="${CDEPEND}
 	x11-misc/xdg-utils
-	fat? ( sys-fs/dosfstools )
-	!!sys-apps/udisks"
+	fat? ( sys-fs/dosfstools )"
 DEPEND="${CDEPEND}
 	sys-devel/gettext
 	gnome-base/gnome-common
 	app-text/docbook-xml-dtd:4.1.2
-	app-text/scrollkeeper
+	app-text/rarian
 	app-text/gnome-doc-utils
 
 	>=dev-util/pkgconfig-0.9
