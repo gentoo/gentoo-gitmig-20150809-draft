@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-15.0.874.54.ebuild,v 1.1 2011/09/30 18:33:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-15.0.874.54.ebuild,v 1.2 2011/10/01 00:02:39 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -128,6 +128,9 @@ src_prepare() {
 	sed -i '1i#define OF(x) x' \
 		third_party/zlib/contrib/minizip/{ioapi,{,un}zip}.c \
 		chrome/common/zip.cc || die
+
+	# Backport http://codereview.chromium.org/8038051, fix for bug #383121.
+	epatch "${FILESDIR}/${PN}-kerberos-r0.patch"
 
 	epatch_user
 

@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.454 2011/09/30 18:33:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.455 2011/10/01 00:02:39 phajdan.jr Exp $
+
+  01 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +files/chromium-kerberos-r0.patch, chromium-15.0.874.54.ebuild:
+  Fix build with Heimdal, bug #383121 by Ben Carrell, patch by Martin von
+  Gagern.
 
 *chromium-15.0.874.54 (30 Sep 2011)
 
