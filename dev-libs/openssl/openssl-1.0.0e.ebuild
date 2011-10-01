@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0e.ebuild,v 1.7 2011/09/17 10:53:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-1.0.0e.ebuild,v 1.8 2011/10/01 07:28:54 pva Exp $
 
 EAPI="2"
 
@@ -136,6 +136,7 @@ src_install() {
 	dobin "${WORKDIR}"/c_rehash || die #333117
 	dodoc CHANGES* FAQ NEWS README doc/*.txt doc/c-indentation.el
 	dohtml -r doc/*
+	use rfc3779 && dodoc engines/ccgost/README.gost
 
 	# create the certs directory
 	dodir /etc/ssl/certs

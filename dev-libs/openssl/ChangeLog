@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.407 2011/09/17 10:53:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.408 2011/10/01 07:28:54 pva Exp $
+
+  01 Oct 2011; Peter Volkov <pva@gentoo.org> openssl-1.0.0e.ebuild:
+  Install README.gost when USE=rfc3779, bug #385027.
 
   17 Sep 2011; Raúl Porcel <armin76@gentoo.org> openssl-1.0.0e.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #382069
