@@ -1,6 +1,13 @@
 # ChangeLog for app-text/gtranslator
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/ChangeLog,v 1.44 2011/06/07 20:43:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/ChangeLog,v 1.45 2011/10/01 16:59:51 nirbheek Exp $
+
+*gtranslator-2.90.5 (01 Oct 2011)
+
+  01 Oct 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +gtranslator-2.90.5.ebuild:
+  Bump to 2.90.5, gtk3 version from gnome overlay for GNOME 3, keywords
+  dropped: bug 353071
 
   07 Jun 2011; Gilles Dartiguelongue <eva@gentoo.org>
   gtranslator-1.9.13.ebuild:
