@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/mailgraph-1.14-r2.ebuild,v 1.2 2011/09/25 20:10:52 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailgraph/mailgraph-1.14-r2.ebuild,v 1.3 2011/10/01 03:17:49 phajdan.jr Exp $
 
 EAPI=4
 inherit eutils
@@ -12,7 +12,7 @@ SRC_URI="http://mailgraph.schweikert.ch//pub/${P}.tar.gz"
 LICENSE="GPL-2"
 # Change SLOT to 0 when appropriate
 SLOT="1.14"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 RDEPEND="dev-lang/perl
