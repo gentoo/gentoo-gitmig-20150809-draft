@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/fbreader-0.12.10.ebuild,v 1.5 2011/03/27 12:17:32 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/fbreader-0.12.10.ebuild,v 1.6 2011/10/01 17:22:35 hwoarang Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.fbreader.org/${PN}-sources-${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 
 IUSE="debug gtk +qt4"
 DEPEND="dev-libs/expat
