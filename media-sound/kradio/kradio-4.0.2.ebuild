@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/kradio-4.0.2.ebuild,v 1.3 2011/03/26 15:16:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/kradio-4.0.2.ebuild,v 1.4 2011/10/01 19:01:38 ssuominen Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 SLOT="4"
-IUSE="alsa debug encode ffmpeg lirc +mp3 +vorbis v4l2"
+IUSE="alsa debug encode ffmpeg lirc +mp3 +vorbis v4l"
 
 DEPEND="
 	media-libs/libsndfile
@@ -43,7 +43,7 @@ src_configure() {
 		$(cmake-utils_use_with vorbis OGG_VORBIS)
 		$(cmake-utils_use_with lirc LIRC)
 		$(cmake-utils_use_with ffmpeg FFMPEG)
-		$(cmake-utils_use_with v4l2 V4L2)
+		$(cmake-utils_use_with v4l V4L2)
 		)
 
 	kde4-base_src_configure

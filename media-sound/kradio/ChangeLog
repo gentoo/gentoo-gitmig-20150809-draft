@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kradio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/ChangeLog,v 1.27 2011/03/26 15:16:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/ChangeLog,v 1.28 2011/10/01 19:01:38 ssuominen Exp $
+
+  01 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> kradio-4.0.2.ebuild:
+  Rename USE="v4l2" to USE="v4l" wrt #385241
 
   26 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> kradio-4.0.2.ebuild:
   Depend on virtual/ffmpeg instead of media-video/ffmpeg.
