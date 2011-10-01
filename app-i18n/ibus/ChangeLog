@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/ibus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.91 2011/09/23 16:10:26 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.92 2011/10/01 03:00:55 naota Exp $
+
+  01 Oct 2011; Naohiro Aota <naota@gentoo.org> ibus-1.4.0.ebuild,
+  +files/ibus-1.4.0-doc-typo.patch:
+  Add tiny typo fix patch, which cause access violation with USE=doc Bug
+  #384507
 
 *ibus-1.4.0 (23 Sep 2011)
 
