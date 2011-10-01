@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/libsmf
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsmf/ChangeLog,v 1.1 2011/10/01 07:57:07 radhermit Exp $
+
+*libsmf-1.3 (01 Oct 2011)
+
+  01 Oct 2011; Tim Harder <radhermit@gentoo.org> +libsmf-1.3.ebuild,
+  +metadata.xml:
+  Initial import.
+
