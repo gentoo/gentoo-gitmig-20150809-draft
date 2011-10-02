@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.116 2011/09/14 18:54:43 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.117 2011/10/02 21:33:47 maekke Exp $
+
+*hugin-2011.2.0 (02 Oct 2011)
+
+  02 Oct 2011; Markus Meier <maekke@gentoo.org> -hugin-2010.0.0.ebuild,
+  -files/hugin-2010.0.0_rc1-libpng14.patch, -hugin-2010.4.0.ebuild,
+  +hugin-2011.2.0.ebuild:
+  version bump, remove old
 
   15 Sep 2011; Andreas Schuerch <nativemad@gentoo.org> hugin-2011.0.0.ebuild:
   x86 stable, Thanks JD, bug 379089
