@@ -1,14 +1,16 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.6.3-r2.ebuild,v 1.1 2011/07/13 16:17:04 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.6.3-r2.ebuild,v 1.2 2011/10/02 19:32:28 reavertm Exp $
 
 EAPI="3"
 
+KDE_HANDBOOK="optional"
 inherit kde4-base
 
 DESCRIPTION="KDE internationalization package"
 HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2"
+IUSE=""
 
 DEPEND="
 	sys-devel/gettext
@@ -16,7 +18,6 @@ DEPEND="
 RDEPEND="!<kde-misc/konq-plugins-4.6"
 
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="+handbook"
 
 # /usr/portage/distfiles $ ls -1 kde-l10n-*-${PV}.* |sed -e 's:-${PV}.tar.bz2::' -e 's:kde-l10n-::' |tr '\n' ' '
 MY_LANGS="ar bg ca ca@valencia cs da de el en_GB es et eu fi fr ga gl gu he hi
