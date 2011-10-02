@@ -1,6 +1,27 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.149 2011/10/01 20:19:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.150 2011/10/02 11:16:28 titanofold Exp $
+
+  02 Oct 2011; Aaron W. Swenson <titanofold@gentoo.org>
+  -files/postgresql.conf-8.2-r1, -files/postgresql.init-8.2-r1,
+  -postgresql-server-8.2.21-r1.ebuild, -postgresql-server-8.2.21-r2.ebuild,
+  -files/postgresql-8.2-common.patch, -files/postgresql-8.2-server.patch,
+  -files/postgresql.conf-8.3-r1, -files/postgresql.init-8.3-r1,
+  -files/postgresql-8.3.1-server.patch, -postgresql-server-8.3.14.ebuild,
+  -postgresql-server-8.3.15-r1.ebuild, -postgresql-server-8.3.15-r2.ebuild,
+  -files/postgresql-8.3-common.patch, -files/postgresql-8.3-server.patch,
+  -files/postgresql.conf-8.4-r1, -files/postgresql.init-8.4-r1,
+  -postgresql-server-8.4.7.ebuild, -postgresql-server-8.4.8-r1.ebuild,
+  -postgresql-server-8.4.8-r2.ebuild, -files/postgresql-8.4-common.patch,
+  -files/postgresql-8.4-server.patch, -files/postgresql.conf-9.0-r1,
+  -files/postgresql.init-9.0-r1, -postgresql-server-9.0.3.ebuild,
+  -postgresql-server-9.0.4-r1.ebuild, -postgresql-server-9.0.4-r2.ebuild,
+  -files/postgresql-server-9.0.4-bool.patch,
+  -files/postgresql-9.0-common.3.patch, -files/postgresql-9.0-common.patch,
+  -files/postgresql-9.0-makefile.patch, -files/postgresql-9.0-server.2.patch,
+  -files/postgresql-9.0-server.3.patch, -files/postgresql-9.0-server.patch,
+  -files/pg_ctl-exit-status.patch:
+  Removed versions affected by bug 384539 and cleaned out unused files.
 
   01 Oct 2011; Markos Chandras <hwoarang@gentoo.org>
   postgresql-server-8.2.22.ebuild, postgresql-server-8.3.16.ebuild,
