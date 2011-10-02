@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13098 2011/10/01 21:55:13 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13099 2011/10/02 10:58:43 rich0 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -35,12 +35,6 @@
 # Old package for very old kernel, unmaintained, fails to build, bug #362827
 net-wireless/madwifi-old
 net-wireless/madwifi-old-tools
-
-# Markos Chandras <hwoarang@gentoo.org> (01 Oct 2011)
-# Unmaintained. Plenty of open bugs ( 219892, 230183, 303199 ).
-# Replaced by dispatch-conf and/or etc-update
-# Masked for removal in 30 days.
-app-portage/cfg-update
 
 # Michael Sterrett <mr_bones_@gentoo.org> (29 Sep 2011)
 # Don't use this on production boxes.  This version of
