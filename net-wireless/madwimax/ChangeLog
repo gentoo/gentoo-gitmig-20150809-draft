@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/madwimax
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwimax/ChangeLog,v 1.1 2010/08/07 21:20:12 alexxy Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwimax/ChangeLog,v 1.2 2011/10/02 20:04:56 alexxy Exp $
+
+  02 Oct 2011; Alexey Shvetsov <alexxy@gentoo.org> madwimax-0.1.1.ebuild:
+  It works on ~arm (tm)
 
 *madwimax-0.1.1 (07 Aug 2010)
 
