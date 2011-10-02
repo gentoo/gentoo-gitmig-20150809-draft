@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/cfg-update
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/cfg-update/ChangeLog,v 1.25 2011/07/20 16:22:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/cfg-update/ChangeLog,v 1.26 2011/10/02 10:52:50 rich0 Exp $
+
+  02 Oct 2011; Richard Freeman <rich0@gentoo.org> metadata.xml:
+  Taking ownership of package.
 
   20 Jul 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #81177
