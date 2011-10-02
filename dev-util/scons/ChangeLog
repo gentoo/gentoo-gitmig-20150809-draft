@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/scons
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.100 2011/09/24 17:09:37 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.101 2011/10/02 06:09:30 radhermit Exp $
+
+*scons-2.1.0 (02 Oct 2011)
+
+  02 Oct 2011; Tim Harder <radhermit@gentoo.org> +scons-2.1.0.ebuild:
+  Version bump (fixes bug #361413).
 
   24 Sep 2011; Fabian Groffen <grobian@gentoo.org> scons-2.0.1-r1.ebuild:
   Prevent the buildsystem from forcing installation into /usr/local on Darwin
