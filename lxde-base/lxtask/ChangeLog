@@ -1,6 +1,10 @@
 # ChangeLog for lxde-base/lxtask
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxtask/ChangeLog,v 1.18 2011/06/22 07:23:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxtask/ChangeLog,v 1.19 2011/10/02 10:17:24 hwoarang Exp $
+
+  02 Oct 2011; Markos Chandras <hwoarang@gentoo.org> lxtask-0.1.4.ebuild,
+  +files/lxtask-0.1.4-remove-broken-linguas.patch:
+  Remove all the remaining broken linguas. Bug #385287
 
 *lxtask-0.1.4 (22 Jun 2011)
 
