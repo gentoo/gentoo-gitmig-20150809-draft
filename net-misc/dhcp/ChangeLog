@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.195 2011/09/25 10:23:44 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.196 2011/10/02 16:11:29 armin76 Exp $
+
+  02 Oct 2011; Raúl Porcel <armin76@gentoo.org> dhcp-4.2.2-r2.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #378799
 
   25 Sep 2011; Kacper Kowalik <xarthisius@gentoo.org> dhcp-4.2.2-r2.ebuild:
   ppc/ppc64 stable wrt #378799
