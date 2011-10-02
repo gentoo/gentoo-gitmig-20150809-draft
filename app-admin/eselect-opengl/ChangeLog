@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-opengl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.88 2011/09/21 00:27:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.89 2011/10/02 13:32:06 armin76 Exp $
+
+  02 Oct 2011; Raúl Porcel <armin76@gentoo.org> eselect-opengl-1.2.4.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #380421
 
   21 Sep 2011; Jeroen Roovers <jer@gentoo.org> eselect-opengl-1.2.4.ebuild:
   Stable for HPPA (bug #380421).
