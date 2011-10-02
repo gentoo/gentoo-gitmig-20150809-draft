@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.335 2011/09/27 21:04:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.336 2011/10/02 14:23:20 armin76 Exp $
+
+  02 Oct 2011; Raúl Porcel <armin76@gentoo.org> xterm-271.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #380421
 
 *xterm-275 (27 Sep 2011)
 
