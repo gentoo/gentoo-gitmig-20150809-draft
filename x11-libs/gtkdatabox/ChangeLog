@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtkdatabox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkdatabox/ChangeLog,v 1.6 2011/08/07 11:10:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkdatabox/ChangeLog,v 1.7 2011/10/02 12:01:07 pva Exp $
+
+*gtkdatabox-0.9.1.3 (02 Oct 2011)
+
+  02 Oct 2011; Peter Volkov <pva@gentoo.org> +gtkdatabox-0.9.1.3.ebuild:
+  Version bump.
 
   06 Aug 2011; Peter Volkov <pva@gentoo.org> metadata.xml:
   Took maintaining.
