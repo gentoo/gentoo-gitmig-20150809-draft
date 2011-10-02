@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-6.0.ebuild,v 1.3 2011/09/28 11:15:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-7.0.ebuild,v 1.1 2011/10/02 23:19:21 polynomial-c Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -12,7 +12,7 @@ MAJ_FF_PV="$(get_version_component_range 1-2)" # 3.5, 3.6, 4.0, etc.
 FF_PV="${PV/_alpha/a}" # Handle alpha for SRC_URI
 FF_PV="${FF_PV/_beta/b}" # Handle beta for SRC_URI
 FF_PV="${FF_PV/_rc/rc}" # Handle rc for SRC_URI
-PATCH="firefox-6.0-patches-0.1"
+PATCH="firefox-7.0-patches-0.5"
 
 DESCRIPTION="GNU project's edition of Mozilla Firefox"
 HOMEPAGE="http://www.gnu.org/software/gnuzilla/"
@@ -20,11 +20,12 @@ HOMEPAGE="http://www.gnu.org/software/gnuzilla/"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="+crashreporter +methodjit +ipc pgo system-sqlite +webm"
+IUSE="+crashreporter +ipc pgo system-sqlite +webm"
 
 # More URIs appended below...
 SRC_URI="mirror://gnu/gnuzilla/${FF_PV}/${PN}-${FF_PV}.tar.bz2
-	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.bz2"
+	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.xz
+	http://dev.gentoo.org/~polynomial-c/mozilla/ff701.diff.xz"
 LANGPACK_URI="http://gnuzilla.gnu.org/download/langpacks/${FF_PV}"
 
 ASM_DEPEND=">=dev-lang/yasm-1.1"
@@ -34,7 +35,7 @@ RDEPEND="
 	>=sys-devel/binutils-2.16.1
 	>=dev-libs/nss-3.12.10
 	>=dev-libs/nspr-4.8.8
-	>=dev-libs/glib-2.26
+	>=dev-libs/glib-2.26:2
 	>=media-libs/mesa-7.10
 	media-libs/libpng[apng]
 	virtual/libffi
@@ -114,12 +115,6 @@ pkg_setup() {
 		XDG_SESSION_COOKIE \
 		XAUTHORITY
 
-	if ! use methodjit ; then
-		einfo
-		ewarn "You are disabling the method-based JIT in JägerMonkey."
-		ewarn "This will greatly slowdown JavaScript in ${PN}!"
-	fi
-
 	if use pgo ; then
 		einfo
 		ewarn "You will do a double build for profile guided optimization."
@@ -138,6 +133,9 @@ src_unpack() {
 }
 
 src_prepare() {
+	# Make this a 7.0.1 version
+	epatch "${DISTDIR}"/ff701.diff.xz
+
 	# Fix preferences location
 	sed -i 's|defaults/pref/|defaults/preferences/|' browser/installer/packages-static || die "sed failed"
 
@@ -146,7 +144,7 @@ src_prepare() {
 	EPATCH_EXCLUDE="2000-firefox_gentoo_install_dirs.patch" \
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
-	epatch "${WORKDIR}"
+	epatch "${WORKDIR}/firefox"
 
 	epatch "${FILESDIR}"/2000-icecat-6_gentoo_install_dirs.patch \
 		"${FILESDIR}"/${PN}-5.0-curl7217-includes-fix.patch
@@ -223,8 +221,9 @@ src_configure() {
 	# Other browser-specific settings
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
 
+	mozconfig_annotate '' --target="${CTARGET:-${CHOST}}"
+
 	mozconfig_use_enable system-sqlite
-	mozconfig_use_enable methodjit
 
 	# Allow for a proper pgo build
 	if use pgo ; then
@@ -247,7 +246,12 @@ src_compile() {
 	if use pgo; then
 		addpredict /root
 		addpredict /etc/gconf
-		addpredict /dev/dri
+		# icecat tries to dri stuff when it's run, see bug 380283
+		shopt -s nullglob
+		local cards=$(echo -n /dev/{dri,ati}/card* /dev/nvidiactl* | sed 's/ /:/g')
+		shopt -u nullglob
+		test -n "${cards}" && addpredict "${cards}"
+
 		CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" \
 		MOZ_MAKE_FLAGS="${MAKEOPTS}" \
 		Xemake -f client.mk profiledbuild || die "Xemake failed"
@@ -266,6 +270,9 @@ src_install() {
 	local obj_dir="$(echo */config.log)"
 	obj_dir="${obj_dir%/*}"
 	cd "${S}/${obj_dir}"
+
+	# Pax mark xpcshell for hardened support, only used for startupcache creation.
+	pax-mark m "${S}/${obj_dir}"/dist/bin/xpcshell
 
 	# Add our default prefs for firefox + xulrunner
 	cp "${FILESDIR}"/gentoo-default-prefs.js \
@@ -302,8 +309,8 @@ src_install() {
 		echo "StartupNotify=true" >> "${ED}/usr/share/applications/${PN}.desktop"
 	fi
 
-	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/${PN}
-	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/plugin-container
+	# Required in order to use plugins and even run firefox on hardened.
+	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/{${PN},${PN}-bin,plugin-container}
 
 	# Plugins dir
 	dosym ../nsbrowser/plugins "${MOZILLA_FIVE_HOME}"/plugins \
