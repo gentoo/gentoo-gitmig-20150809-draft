@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/phonon-vlc-0.4.0.ebuild,v 1.6 2011/08/07 15:25:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/phonon-vlc-0.4.0.ebuild,v 1.7 2011/10/02 19:57:38 reavertm Exp $
 
 EAPI=4
 
@@ -18,14 +18,13 @@ SRC_URI="mirror://kde/stable/phonon/${MY_PN}/${PV}/src/${MY_P}.tar.bz2"
 LICENSE="LGPL-2.1"
 [[ ${PV} == 9999 ]] || KEYWORDS="amd64 ~ppc ~ppc64 x86"
 SLOT="0"
-IUSE="debug v4l2"
+IUSE="debug"
 
 RDEPEND="
 	>=media-libs/phonon-4.5.0
 	>=media-video/vlc-1.1.1[dbus,ogg,vorbis]
 	>=x11-libs/qt-dbus-4.6.0:4
 	>=x11-libs/qt-gui-4.6.0:4
-	v4l2? ( media-libs/libv4l )
 "
 DEPEND="${RDEPEND}
 	>=dev-util/automoc-0.9.87
@@ -35,13 +34,6 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 DOCS=( AUTHORS )
-
-src_configure() {
-	local mycmakeargs=(
-		$(cmake-utils_use_with v4l2)
-	)
-	cmake-utils_src_configure
-}
 
 pkg_postinst() {
 	elog "For more verbose debug information, export the following variables:"

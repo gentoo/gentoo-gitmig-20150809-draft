@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/phonon-vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/ChangeLog,v 1.11 2011/09/02 21:55:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/ChangeLog,v 1.12 2011/10/02 19:57:38 reavertm Exp $
+
+  02 Oct 2011; Maciej Mrozowski <reavertm@gentoo.org> phonon-vlc-0.4.0.ebuild,
+  phonon-vlc-0.4.1.ebuild, phonon-vlc-9999.ebuild:
+  Remove v4l dependencies (support is optional and determined runtime). Bug
+  385243.
 
   02 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -phonon-vlc-0.3.2.ebuild:
