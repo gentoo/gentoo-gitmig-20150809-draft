@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/autoconf-wrapper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.87 2011/06/11 23:37:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.88 2011/10/02 19:39:07 vapier Exp $
+
+*autoconf-wrapper-12 (02 Oct 2011)
+
+  02 Oct 2011; Mike Frysinger <vapier@gentoo.org> +autoconf-wrapper-12.ebuild,
+  +files/ac-wrapper-12.sh:
+  Optimize version lookup a bit, and handle the case where $0 is not a full
+  path #385201 by Florian Philipp.
 
 *autoconf-wrapper-11 (11 Jun 2011)
 
