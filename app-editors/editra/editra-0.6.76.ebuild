@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/editra-0.6.26.ebuild,v 1.1 2011/03/21 21:14:33 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/editra-0.6.76.ebuild,v 1.1 2011/10/02 23:48:17 dirtyepic Exp $
 
 EAPI=2
 SUPPORT_PYTHON_ABIS=1
@@ -37,7 +37,7 @@ src_install() {
 	distutils_src_install --no-clean
 	insinto /usr/share/pixmaps
 	doins "${S}"/pixmaps/editra.png
-	make_desktop_entry Editra Editra editra "Development;TextEditor"
+	make_desktop_entry editra Editra editra "Development;TextEditor"
 	dodoc FAQ THANKS
 }
 
