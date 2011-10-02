@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.205 2011/08/14 12:52:06 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.206 2011/10/02 20:18:29 pacho Exp $
+
+  02 Oct 2011; Pacho Ramos <pacho@gentoo.org> avahi-0.6.30-r1.ebuild:
+  Drop DEPRECATED flags, bug #384743
 
 *avahi-0.6.30-r1 (14 Aug 2011)
 
