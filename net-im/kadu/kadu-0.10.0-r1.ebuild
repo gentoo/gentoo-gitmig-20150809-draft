@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.10.0-r1.ebuild,v 1.1 2011/09/30 21:41:27 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.10.0-r1.ebuild,v 1.2 2011/10/02 18:43:55 reavertm Exp $
 
 EAPI="4"
 
@@ -36,8 +36,10 @@ COMMON_DEPEND="
 	>=x11-libs/qt-webkit-4.7.0:4
 	gadu? ( >=x11-libs/qt-xmlpatterns-4.7.0:4 )
 	phonon? (
-		media-libs/phonon
-		>=x11-libs/qt-phonon-4.7.0:4
+		|| (
+			media-libs/phonon
+			>=x11-libs/qt-phonon-4.7.0:4
+		)
 	)
 	spell? ( app-text/enchant )
 	xmpp? (
