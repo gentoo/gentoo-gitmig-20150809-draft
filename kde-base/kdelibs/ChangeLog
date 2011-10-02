@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.788 2011/09/27 21:40:11 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.789 2011/10/02 19:21:14 reavertm Exp $
+
+  02 Oct 2011; Maciej Mrozowski <reavertm@gentoo.org> kdelibs-4.7.0-r1.ebuild,
+  kdelibs-4.7.1-r1.ebuild, kdelibs-4.7.1-r2.ebuild:
+  Revert change proposed in bug, 379733 - not the way to go.
 
 *kdelibs-4.7.1-r2 (27 Sep 2011)
 
