@@ -1,11 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.5-r1.ebuild,v 1.2 2011/10/01 06:59:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.4.5-r1.ebuild,v 1.3 2011/10/02 00:54:44 radhermit Exp $
 
 EAPI="3"
 
 GENTOO_DEPEND_ON_PERL="no"
-inherit eutils flag-o-matic multilib perl-module autotools
+PYTHON_DEPEND="python? 2"
+SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
+
+inherit eutils distutils flag-o-matic multilib perl-module autotools
 
 DESCRIPTION="A system to store and display time-series data"
 HOMEPAGE="http://oss.oetiker.ch/rrdtool/"
@@ -25,7 +29,6 @@ RDEPEND="
 	>=x11-libs/pango-1.17
 	lua? ( dev-lang/lua )
 	perl? ( dev-lang/perl )
-	python? ( dev-lang/python )
 	ruby? ( >=dev-lang/ruby-1.8.6_p287-r13 )
 	tcl? ( dev-lang/tcl )"
 
@@ -33,11 +36,21 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-apps/gawk"
 
+DISTUTILS_SETUP_FILES=("bindings/python|setup.py")
+
+pkg_setup() {
+	use python && python_pkg_setup
+}
+
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.3.8-configure.ac.patch"
 #	epatch "${FILESDIR}/${PN}-1.4.3-ruby-ldflags.patch"
 	epatch "${FILESDIR}/${PN}-1.4.4-dont-link-system-lib.patch"
 	sed -i '/PERLLD/s:same as PERLCC:same-as-PERLCC:' configure.ac #281694
+
+	# Python bindings are built/installed manually
+	sed -e "/^all-local:/s/ @COMP_PYTHON@//" -i bindings/Makefile.am
+
 	eautoreconf
 }
 
@@ -64,6 +77,11 @@ src_configure() {
 		$(use_enable python)
 }
 
+src_compile() {
+	default
+	use python && distutils_src_compile
+}
+
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
@@ -82,12 +100,16 @@ src_install() {
 		perl_delete_packlist
 	fi
 
+	use python && distutils_src_install
+
 	dodoc CHANGES CONTRIBUTORS NEWS README THREADS TODO
 
 	find "${ED}"usr -name '*.la' -exec rm -f {} +
 }
 
 pkg_postinst() {
+	use python && distutils_pkg_postinst
+
 	ewarn "rrdtool dump 1.3 does emit completely legal xml. Basically this means that"
 	ewarn "it contains an xml header and a DOCTYPE definition. Unfortunately this"
 	ewarn "causes older versions of rrdtool restore to be unhappy."
@@ -99,4 +121,8 @@ pkg_postinst() {
 	ewarn "Note: rrdtool-1.3.x doesn't have any default font bundled. Thus if you've"
 	ewarn "upgraded from rrdtool-1.2.x and don't have any font installed to make"
 	ewarn "lables visible, please, install some font, e.g. media-fonts/dejavu."
+}
+
+pkg_postrm() {
+	use python && distutils_pkg_postrm
 }
