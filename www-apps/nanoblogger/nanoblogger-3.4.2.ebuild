@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoblogger/nanoblogger-3.4.2.ebuild,v 1.1 2011/10/02 04:55:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoblogger/nanoblogger-3.4.2.ebuild,v 1.2 2011/10/02 05:07:58 radhermit Exp $
 
 EAPI=4
 
@@ -64,5 +64,4 @@ pkg_postinst() {
 	elog "after copying your old entries from [oldblog_dir]/data to"
 	elog "[newblog_dir]/data."
 	elog
-	bash-completion_pkg_postinst
 }
