@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tipcutils/tipcutils-2.0.0.ebuild,v 1.1 2011/10/02 12:37:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tipcutils/tipcutils-2.0.0.ebuild,v 1.2 2011/10/02 19:49:47 ssuominen Exp $
 
 EAPI=4
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs # linux-info
 
 DESCRIPTION="Utilities for TIPC (Transparent Inter-Process Communication)"
 HOMEPAGE="http://tipc.sourceforge.net"
@@ -26,6 +26,8 @@ src_prepare() {
 
 src_compile() {
 	tc-export CC
+	# inherit linux-info and add IFLAGS="${KERNEL_DIR}/include" below in order
+	# to build against headers in /usr/src/linux
 	emake EXTRAS="${CFLAGS}"
 }
 
