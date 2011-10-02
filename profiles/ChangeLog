@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5745 2011/10/02 10:58:42 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5746 2011/10/02 17:09:23 phajdan.jr Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  targets/developer/make.defaults:
+  Remove FEATURES=stricter from developer profile, it's counter-productive and
+  people disable it anyway.
 
   02 Oct 2011; Richard Freeman <rich0@gentoo.org> package.mask:
   Taking over cfg-update maintainership.
