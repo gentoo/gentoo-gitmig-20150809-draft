@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/udns
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/ChangeLog,v 1.17 2011/09/13 18:29:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/ChangeLog,v 1.18 2011/10/02 18:58:09 pva Exp $
+
+*udns-0.1 (02 Oct 2011)
+
+  02 Oct 2011; Peter Volkov <pva@gentoo.org> +udns-0.1.ebuild,
+  +files/udns-0.1-respect-LDFLAGS.patch:
+  Version bump. Respect LDFLAGS, bug #336040 wrt Diego Elio Pettenò.
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #225633
