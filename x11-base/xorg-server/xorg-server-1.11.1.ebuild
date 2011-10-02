@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.11.1.ebuild,v 1.1 2011/10/02 00:47:55 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.11.1.ebuild,v 1.2 2011/10/02 00:58:38 chithanh Exp $
 
 EAPI=4
 
@@ -79,7 +79,16 @@ DEPEND="${RDEPEND}
 	>=x11-proto/xf86vidmodeproto-2.2.99.1
 	>=x11-proto/xineramaproto-1.1.3
 	>=x11-proto/xproto-7.0.22
-	dmx? ( >=x11-proto/dmxproto-2.2.99.1 )
+	dmx? (
+		>=x11-proto/dmxproto-2.2.99.1
+		doc? (
+			|| (
+				www-client/links
+				www-client/lynx
+				www-client/w3m
+			)
+		)
+	)
 	!minimal? (
 		>=x11-proto/xf86driproto-2.1.0
 		>=x11-proto/dri2proto-2.6
