@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/hdaps-gl
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdaps-gl/ChangeLog,v 1.2 2010/09/16 18:06:17 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdaps-gl/ChangeLog,v 1.3 2011/10/02 20:44:52 hanno Exp $
+
+  02 Oct 2011; Hanno Boeck <hanno@gentoo.org> hdaps-gl-0.0.5.ebuild:
+  Add freeglut dependency (fix #318539).
 
   16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   hdaps-gl-0.0.5.ebuild:
