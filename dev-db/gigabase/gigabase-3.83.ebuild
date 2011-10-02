@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/gigabase-3.70.ebuild,v 1.2 2011/06/25 18:39:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/gigabase-3.83.ebuild,v 1.1 2011/10/02 09:17:21 pva Exp $
 
 inherit eutils multilib
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-DEPEND=""
+DEPEND="doc? ( app-doc/doxygen )"
 RDEPEND=""
 
 S=${WORKDIR}/gigabase
@@ -24,6 +24,7 @@ src_compile() {
 	econf
 	sed -r -i -e 's/subsql([^\.]|$)/subsql-gdb\1/' ${mf}
 	emake || die "compilation failed"
+	use doc && { doxygen doxygen.cfg || die "doxygen failed"; }
 }
 
 src_install() {
