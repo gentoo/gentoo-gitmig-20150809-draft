@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.60 2011/07/08 10:23:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.61 2011/10/02 18:08:36 pva Exp $
+
+*rt-3.8.10 (02 Oct 2011)
+
+  02 Oct 2011; Peter Volkov <pva@gentoo.org> +rt-3.8.10.ebuild, metadata.xml:
+  Version bump, bug 371467235914 thank Eric Martin for this job. Fixes multiple
+  vulnerabilities, bug #371467 wrt GLSAMaker/CVETool Bot.
 
   08 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> rt-3.6.7.ebuild:
   Convert from "useq" to "use".
