@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/automake-wrapper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/ChangeLog,v 1.47 2011/02/06 11:29:37 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/ChangeLog,v 1.48 2011/10/02 19:51:17 vapier Exp $
+
+*automake-wrapper-6 (02 Oct 2011)
+
+  02 Oct 2011; Mike Frysinger <vapier@gentoo.org> +automake-wrapper-6.ebuild,
+  +files/am-wrapper-6.sh:
+  Optimize version lookup a bit, and handle the case where $0 is not a full
+  path #385201 by Florian Philipp.
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> automake-wrapper-3-r1.ebuild:
   Drop to ~mips
