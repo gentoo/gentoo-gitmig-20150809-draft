@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoblogger/nanoblogger-3.2.3.ebuild,v 1.10 2011/02/06 10:48:33 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoblogger/nanoblogger-3.2.3.ebuild,v 1.11 2011/10/02 04:59:24 radhermit Exp $
 
-inherit bash-completion
+inherit bash-completion-r1
 
 DESCRIPTION="Small and simple weblog engine written in Bash for the command-line"
 HOMEPAGE="http://nanoblogger.sourceforge.net/"
@@ -17,7 +17,7 @@ RDEPEND="app-shells/bash"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i \
 		-e 's|^\(NB_BASE_DIR=\).*$|\1"/usr/share/nanoblogger"|' \
 		-e 's|"$NB_BASE_DIR/\(nb\.conf\)"|"/etc/\1"|g' \
@@ -33,7 +33,7 @@ src_install() {
 	doins nb.conf
 	dodoc ChangeLog
 	dohtml docs/nanoblogger.html
-	dobashcompletion ${FILESDIR}/nb.bashcomp
+	dobashcomp "${FILESDIR}"/nb.bashcomp || die
 }
 
 pkg_postinst() {
