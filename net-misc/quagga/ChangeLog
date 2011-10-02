@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/quagga
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.121 2011/10/01 17:57:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.122 2011/10/02 13:39:52 armin76 Exp $
+
+  02 Oct 2011; Raúl Porcel <armin76@gentoo.org> quagga-0.99.20.ebuild:
+  alpha/arm/s390/sparc stable wrt #384651
 
   01 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> quagga-0.99.20.ebuild:
   x86 stable wrt security bug #384651
