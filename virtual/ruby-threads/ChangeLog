@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-threads
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-threads/ChangeLog,v 1.4 2011/07/23 14:25:23 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-threads/ChangeLog,v 1.5 2011/10/02 16:54:35 armin76 Exp $
+
+  02 Oct 2011; Raúl Porcel <armin76@gentoo.org> ruby-threads-0.ebuild:
+  sparc stable
 
   23 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> ruby-threads-0.ebuild:
   ppc stable wrt #348510

@@ -1,6 +1,9 @@
 # ChangeLog for virtual/ruby-ffi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.11 2011/08/02 16:31:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-ffi/ChangeLog,v 1.12 2011/10/02 16:57:13 armin76 Exp $
+
+  02 Oct 2011; Raúl Porcel <armin76@gentoo.org> ruby-ffi-0.ebuild:
+  sparc stable
 
   02 Aug 2011; Markos Chandras <hwoarang@gentoo.org> ruby-ffi-0.ebuild:
   Stable on amd64 wrt bug #348510
