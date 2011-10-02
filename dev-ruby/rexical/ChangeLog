@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rexical
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.19 2011/09/14 17:11:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexical/ChangeLog,v 1.20 2011/10/02 16:57:18 armin76 Exp $
+
+  02 Oct 2011; Raúl Porcel <armin76@gentoo.org> rexical-1.0.5.ebuild:
+  ia64/sparc stable wrt #369573
 
   14 Sep 2011; Jeroen Roovers <jer@gentoo.org> rexical-1.0.5.ebuild:
   Stable for HPPA (bug #369573).

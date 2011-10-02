@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rspec-core
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/ChangeLog,v 1.19 2011/09/19 21:49:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-core/ChangeLog,v 1.20 2011/10/02 17:05:37 armin76 Exp $
+
+  02 Oct 2011; Raúl Porcel <armin76@gentoo.org> rspec-core-2.6.4.ebuild:
+  ia64/sparc stable wrt #369573
 
   19 Sep 2011; Markus Meier <maekke@gentoo.org> rspec-core-2.6.4.ebuild:
   x86 stable, bug #369573

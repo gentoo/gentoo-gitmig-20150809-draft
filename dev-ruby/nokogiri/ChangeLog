@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.62 2011/09/14 17:17:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.63 2011/10/02 16:58:49 armin76 Exp $
+
+  02 Oct 2011; Raúl Porcel <armin76@gentoo.org> nokogiri-1.4.4-r1.ebuild:
+  ia64/sparc stable wrt #369573
 
   14 Sep 2011; Jeroen Roovers <jer@gentoo.org> nokogiri-1.4.4-r1.ebuild:
   Stable for HPPA (bug #369573).
