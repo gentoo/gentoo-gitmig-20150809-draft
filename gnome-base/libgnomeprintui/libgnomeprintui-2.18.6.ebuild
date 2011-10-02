@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/libgnomeprintui-2.18.6.ebuild,v 1.7 2011/03/22 19:18:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/libgnomeprintui-2.18.6.ebuild,v 1.8 2011/10/02 20:47:39 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -27,4 +27,14 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"
 	G2CONF="${G2CONF} --disable-static"
+}
+
+src_prepare() {
+	gnome2_src_prepare
+
+	# Drop DEPRECATED flags, bug #384815
+	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' \
+		libgnomeprintui/gpaui/Makefile.am libgnomeprintui/gpaui/Makefile.in \
+		libgnomeprintui/Makefile.am libgnomeprintui/Makefile.in \
+		tests/Makefile.am tests/Makefile.in || die
 }
