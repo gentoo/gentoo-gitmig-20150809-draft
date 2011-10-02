@@ -14,7 +14,6 @@ Pidgin is an instant messaging program for Windows, Linux, BSD, and other Unixes
 	<flag name='ncurses'>Build finch, console interface</flag>
 	<flag name='prediction'>Enable Contact Availability Prediction plugin</flag>
 	<flag name='python'>Build libgnt (GLib Ncurses Toolkit used by finch) with python scripting support</flag>
-	<flag name='qq'>Enable QQ protocol support</flag>
 	<flag name='silc'>Enable SILC protocol support</flag>
 	<flag name='xscreensaver'>Use X screensaver protocol extension to monitor idle/active status based on mouse/keyboard events</flag>
 	<flag name='zephyr'>Enable Zephyr protocol support</flag>
