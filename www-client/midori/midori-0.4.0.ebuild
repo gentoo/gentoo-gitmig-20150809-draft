@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.4.0.ebuild,v 1.2 2011/09/09 16:39:59 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.4.0.ebuild,v 1.3 2011/10/02 21:31:09 ssuominen Exp $
 
 EAPI=3
 inherit eutils fdo-mime gnome2-utils python waf-utils
@@ -36,6 +36,7 @@ pkg_setup() {
 
 	DOCS=( AUTHORS ChangeLog HACKING INSTALL TODO TRANSLATE )
 	HTML_DOCS=( data/faq.html data/faq.css )
+	PATCHES=( "${FILESDIR}"/${P}-webkit151.patch )
 }
 
 src_configure() {

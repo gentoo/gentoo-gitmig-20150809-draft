@@ -1,6 +1,10 @@
 # ChangeLog for www-client/midori
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.65 2011/09/09 16:39:59 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.66 2011/10/02 21:31:09 ssuominen Exp $
+
+  02 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> midori-0.4.0.ebuild,
+  +files/midori-0.4.0-webkit151.patch:
+  Fix building with webkit-gtk >= 1.5.1 wrt #385371 by Hanno Meyer-Thurow
 
   09 Sep 2011; Christoph Mende <angelos@gentoo.org> midori-0.4.0.ebuild:
   Restore keywords
