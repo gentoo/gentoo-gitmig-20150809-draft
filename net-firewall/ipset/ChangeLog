@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/ipset
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.53 2011/09/19 05:49:29 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.54 2011/10/02 13:07:53 pva Exp $
+
+*ipset-6.9.1-r1 (02 Oct 2011)
+
+  02 Oct 2011; Peter Volkov <pva@gentoo.org> +ipset-6.9.1-r1.ebuild,
+  +files/ipset.initd:
+  Drop confusing message about netlink.patch, bug #382221 by John Brendler. Add
+  init script by Andrew Savchenko, bug #181045 by Caleb Cushing.
 
   17 Sep 2011; Peter Volkov <pva@gentoo.org> -files/ipset-2.4.7-LDFLAGS.patch,
   -ipset-4.4.ebuild, -ipset-6.7-r1.ebuild:
