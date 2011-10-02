@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-2.3.0_beta1.ebuild,v 1.2 2011/01/28 12:47:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-2.3.0_beta1.ebuild,v 1.3 2011/10/02 19:19:39 reavertm Exp $
 
 EAPI=3
 
+KDE_HANDBOOK="optional"
 KDE_LINGUAS="bg ca cs da de el en_GB es et fr gl hr hu it ja ko lt mai nb nds
 nl pl pt pt_BR ro ru sk sl sv tr uk zh_CN zh_TW"
 KDE_DOC_DIRS="doc doc-translations/%lingua_${PN}"
@@ -18,7 +19,7 @@ LICENSE="GPL-2"
 
 SLOT="4"
 KEYWORDS="amd64 ~ppc ~ppc64 x86"
-IUSE="debug handbook"
+IUSE="debug"
 
 RDEPEND="
 	$(add_kdebase_dep libkonq)
