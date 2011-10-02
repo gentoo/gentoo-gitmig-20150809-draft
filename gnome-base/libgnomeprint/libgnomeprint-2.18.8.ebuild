@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-2.18.8.ebuild,v 1.6 2011/03/22 19:17:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-2.18.8.ebuild,v 1.7 2011/10/02 20:40:20 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -41,4 +41,15 @@ pkg_setup() {
 	# Disable papi support until papi is in portage; avoids automagic
 	# dependencies on an untracked library.
 	G2CONF="${G2CONF} $(use_with cups) --without-papi --disable-static"
+}
+
+src_prepare() {
+	gnome2_src_prepare
+
+	# Drop DEPRECATED flags, bug #384807
+	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED::g' \
+		configure.in configure || die
+	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' \
+		libgnomeprint/ttsubset/Makefile.am \
+		libgnomeprint/ttsubset/Makefile.in || die
 }
