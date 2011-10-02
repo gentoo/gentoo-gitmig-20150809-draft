@@ -1,6 +1,12 @@
 # ChangeLog for net-print/cups-windows
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-windows/ChangeLog,v 1.2 2008/10/10 09:57:27 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-windows/ChangeLog,v 1.3 2011/10/02 21:39:17 dilfridge Exp $
+
+*cups-windows-6.0-r1 (02 Oct 2011)
+
+  02 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +cups-windows-6.0-r1.ebuild:
+  Install missing ppd file, bug 261761
 
   10 Oct 2008; Diego Pettenò <flameeyes@gentoo.org>
   cups-windows-6.0.ebuild:
