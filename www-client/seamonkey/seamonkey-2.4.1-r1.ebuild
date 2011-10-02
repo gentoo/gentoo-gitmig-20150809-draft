@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.4.1-r1.ebuild,v 1.1 2011/10/02 20:49:39 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.4.1-r1.ebuild,v 1.2 2011/10/02 21:07:29 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -235,6 +235,8 @@ src_configure() {
 	mozconfig_annotate '' --enable-canvas
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
 	mozconfig_annotate '' --enable-system-ffi
+
+	mozconfig_annotate '' --target="${CTARGET:-${CHOST}}"
 
 	mozconfig_use_enable system-sqlite
 	mozconfig_use_enable methodjit
