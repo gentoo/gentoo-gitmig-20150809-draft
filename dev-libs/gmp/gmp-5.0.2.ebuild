@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-5.0.2.ebuild,v 1.6 2011/09/14 15:54:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-5.0.2.ebuild,v 1.7 2011/10/03 15:31:45 vapier Exp $
 
-inherit flag-o-matic eutils libtool flag-o-matic toolchain-funcs
+inherit flag-o-matic eutils libtool toolchain-funcs
 
 DESCRIPTION="Library for arithmetic on arbitrary precision integers, rational numbers, and floating-point numbers"
 HOMEPAGE="http://gmplib.org/"
