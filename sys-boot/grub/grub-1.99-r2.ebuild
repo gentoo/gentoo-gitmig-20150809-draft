@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.99-r2.ebuild,v 1.3 2011/09/14 17:57:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.99-r2.ebuild,v 1.4 2011/10/03 09:10:13 scarabeus Exp $
 
 EAPI=4
 
@@ -235,10 +235,10 @@ src_install() {
 		"bin/grub2-mkimage"
 	)
 	for e in ${PAX[@]}; do
-		pax-mark -mpx "${ED}/${e}"
+		pax-mark -mp "${ED}/${e}"
 	done
 
-	# can't be in docs array as we use defualt_src_install in different builddir
+	# can't be in docs array as we use default_src_install in different builddir
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 	insinto /etc/default
 	newins "${FILESDIR}"/grub.default grub
@@ -246,7 +246,7 @@ src_install() {
 	GRUB_DISTRIBUTOR="Gentoo"
 EOF
 
-	elog "Remember to run emerge --config =${CATEGORY}/${P} in order"
+	elog "Remember to run emerge --config =${CATEGORY}/${PF} in order"
 	elog "to set up basic settings for this package."
 }
 
@@ -254,8 +254,11 @@ setup_boot_dir() {
 	local dir=$1
 
 	# display the link to guide
-	elog "For informations how to configure grub-2 please reffer to the guide:"
+	elog "For informations how to configure grub-2 please refer to the guide:"
 	elog "    http://dev.gentoo.org/~scarabeus/grub-2-guide.xml"
+
+	# Make sure target directory exists
+	mkdir -p "${dir}"
 
 	if [[ ! -e ${dir}/grub.cfg && -e ${dir/2/}/menu.lst ]] ; then
 		# This is first grub2 install and we have old configuraton for
