@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.98.4-r1.ebuild,v 1.2 2011/09/17 19:03:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.98.4-r1.ebuild,v 1.3 2011/10/03 09:31:36 ssuominen Exp $
 
 EAPI=2
 
@@ -44,8 +44,11 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-0.98-noautoupdate.patch \
 		"${FILESDIR}"/${PN}-0.98.4-v4l2.patch \
-		"${FILESDIR}"/${PN}-0.98.4-amsnplus-ldflags.patch \
-		"${FILESDIR}"/${PN}-0.98.4-libpng15.patch
+		"${FILESDIR}"/${PN}-0.98.4-amsnplus-ldflags.patch
+
+	# The NetBSD patch kills backwards compability, see http://bugs.gentoo.org/376407
+	has_version '>=media-libs/libpng-1.5:0' && epatch "${FILESDIR}"/${PN}-0.98.4-libpng15.patch
+
 	# only portage should strip files, bug 285682
 	sed -i -e "s/LDFLAGS += -s/LDFLAGS += /" Makefile.in || die "sed failed"
 	# Ships with a 32-bit binary, we want to rebuild it
