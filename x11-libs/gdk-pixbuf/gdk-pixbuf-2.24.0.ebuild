@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.24.0.ebuild,v 1.1 2011/08/28 19:13:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.24.0.ebuild,v 1.2 2011/10/03 08:54:19 lxnay Exp $
 
 EAPI="4"
 
@@ -70,7 +70,16 @@ src_install() {
 }
 
 pkg_postinst() {
-	gdk-pixbuf-query-loaders > "${EROOT}usr/$(get_libdir)/gdk-pixbuf-2.0/2.10.0/loaders.cache"
+	# causes segfault if set, see bug 375615
+	unset __GL_NO_DSO_FINALIZER
+
+	tmp_file=$(mktemp --suffix=gdk_pixbuf_ebuild)
+	# be atomic!
+	gdk-pixbuf-query-loaders > "${tmp_file}"
+	if [ "${?}" = "0" ]; then
+		cat "${tmp_file}" > "${EROOT}usr/$(get_libdir)/gdk-pixbuf-2.0/2.10.0/loaders.cache"
+	fi
+	rm "${tmp_file}"
 
 	if [ -e "${EROOT}"usr/lib/gtk-2.0/2.*/loaders ]; then
 		elog "You need to rebuild ebuilds that installed into" "${EROOT}"usr/lib/gtk-2.0/2.*/loaders
