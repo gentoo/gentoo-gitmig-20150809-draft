@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-7.0.1-r1.ebuild,v 1.1 2011/10/03 00:02:43 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-7.0.1-r1.ebuild,v 1.2 2011/10/03 07:30:11 mr_bones_ Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -110,7 +110,7 @@ pkg_setup() {
 	# Ensure we have enough disk space to compile
 	CHECKREQS_DISK_BUILD="4G"
 	check-reqs_pkg_setup
-	
+
 }
 
 src_unpack() {
