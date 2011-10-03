@@ -1,5 +1,2 @@
 # Unmask the flag which corresponds to ARCH.
 -ppc
-
-# RealMagic Hollywood+/Creative DXR3 support
--dxr3

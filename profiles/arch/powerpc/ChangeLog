@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.139 2011/09/27 21:43:34 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.140 2011/10/03 20:28:09 ssuominen Exp $
+
+  03 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> ppc32/use.mask:
+  Mask USE="dxr3" again wrt #350211.
 
   27 Sep 2011; Jonathan Callen <abcd@gentoo.org> package.mask:
   Add kactivites to KDE 4.7 mask

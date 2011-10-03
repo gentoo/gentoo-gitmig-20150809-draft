@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.26 2011/07/11 15:12:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/use.mask,v 1.27 2011/10/03 20:28:47 ssuominen Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -amd64
@@ -144,8 +144,5 @@ gcc64
 # 2007/02/04 - Simon Stelling <blubb@gentoo.org>
 # games-emulation/caps is 32bit only, while app-emulation/e-uae is 64bit; bug 158416
 capslib
-
-# RealMagic Hollywood+/Creative DXR3 support
--dxr3
 
 # NOT NECESSARY - SECTION

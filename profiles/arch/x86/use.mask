@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.26 2011/07/11 15:13:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/use.mask,v 1.27 2011/10/03 20:29:26 ssuominen Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -x86
@@ -131,9 +131,6 @@ video_cards_newport
 
 # tcc is x86 only
 -tcc
-
-# RealMagic Hollywood+/Creative DXR3 support
--dxr3
 
 # 64bit Windows doesn't work on 32bit systems
 win64
