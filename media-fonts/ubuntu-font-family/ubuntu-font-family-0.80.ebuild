@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ubuntu-font-family/ubuntu-font-family-0.70.1.ebuild,v 1.2 2011/01/18 22:41:45 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ubuntu-font-family/ubuntu-font-family-0.80.ebuild,v 1.1 2011/10/03 17:13:54 spatz Exp $
 
-EAPI=3
+EAPI=4
 
 inherit font
 
@@ -21,3 +21,7 @@ RDEPEND=""
 FONT_SUFFIX="ttf"
 
 DOCS="CONTRIBUTING.txt FONTLOG.txt README.txt"
+
+src_prepare() {
+	rm "${S}"/Ubuntu-M*.ttf
+}

@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/ubuntu-font-family
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ubuntu-font-family/ChangeLog,v 1.5 2011/08/02 19:29:01 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ubuntu-font-family/ChangeLog,v 1.6 2011/10/03 17:13:54 spatz Exp $
+
+*ubuntu-font-family-0.80 (03 Oct 2011)
+
+  03 Oct 2011; Dror Levin <spatz@gentoo.org> -ubuntu-font-family-0.70.1.ebuild,
+  +ubuntu-font-family-0.80.ebuild:
+  Version bump, bug 384957.
 
 *ubuntu-font-family-0.71.2-r1 (02 Aug 2011)
 
