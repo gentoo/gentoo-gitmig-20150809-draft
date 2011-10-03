@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openjpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.48 2011/06/13 22:16:32 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.49 2011/10/03 21:37:20 maekke Exp $
+
+  03 Oct 2011; Markus Meier <maekke@gentoo.org> openjpeg-1.4-r1.ebuild:
+  arm stable, bug #373499
 
   13 Jun 2011; Matt Turner <mattst88@gentoo.org> openjpeg-1.4-r1.ebuild:
   Added ~mips, bug 342513
