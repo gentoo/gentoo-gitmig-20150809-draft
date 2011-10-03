@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.45 2011/09/28 10:56:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.46 2011/10/03 13:36:01 voyageur Exp $
+
+  03 Oct 2011; Bernard Cafarelli <voyageur@gentoo.org> -llvm-2.8-r1.ebuild,
+  llvm-2.8-r2.ebuild, llvm-2.8-r4.ebuild, -llvm-2.9-r1.ebuild,
+  llvm-2.9-r2.ebuild, llvm-9999.ebuild, metadata.xml:
+  Rename alltargets USE flag to multitarget, bug #382307. Clean bison
+  dependency, depending only on new enough one. Drop some versions
 
   28 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   USE="libffi" is now global USE flag.

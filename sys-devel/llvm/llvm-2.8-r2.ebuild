@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.8-r2.ebuild,v 1.5 2011/07/15 09:54:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.8-r2.ebuild,v 1.6 2011/10/03 13:36:01 voyageur Exp $
 
 EAPI="3"
 inherit eutils multilib toolchain-funcs
@@ -14,14 +14,12 @@ SRC_URI="http://llvm.org/releases/${PV}/${P}.tgz -> ${P}-r1.tgz"
 LICENSE="UoI-NCSA"
 SLOT="0"
 KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos"
-IUSE="alltargets debug +libffi llvm-gcc ocaml test udis86"
+IUSE="debug +libffi llvm-gcc multitarget ocaml test udis86"
 
 DEPEND="dev-lang/perl
 	>=sys-devel/make-3.79
 	>=sys-devel/flex-2.5.4
-	>=sys-devel/bison-1.28
-	!~sys-devel/bison-1.85
-	!~sys-devel/bison-1.875
+	>=sys-devel/bison-1.875d
 	|| ( >=sys-devel/gcc-3.0 >=sys-devel/gcc-apple-4.2.1 )
 	|| ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-3.2.3 )
 	libffi? ( virtual/libffi )
@@ -102,7 +100,7 @@ src_configure() {
 			--disable-expensive-checks"
 	fi
 
-	if use alltargets; then
+	if use multitarget; then
 		CONF_FLAGS="${CONF_FLAGS} --enable-targets=all"
 	else
 		CONF_FLAGS="${CONF_FLAGS} --enable-targets=host-only"
