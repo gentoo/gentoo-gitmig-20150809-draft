@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.32 2011/10/03 08:58:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.33 2011/10/03 09:28:24 scarabeus Exp $
 
 EAPI=3
 
@@ -39,7 +39,11 @@ MODULES="core binfilter dictionaries help"
 if [[ ${PV} != *9999* ]]; then
 	for i in ${DEV_URI}; do
 		for mod in ${MODULES}; do
-			SRC_URI+=" ${i}/${PN}-${mod}-${PV}.tar.bz2"
+			if [[ ${mod} == binfilter ]]; then
+				SRC_URI+=" binfilter? ( ${i}/${PN}-${mod}-${PV}.tar.bz2 )"
+			else
+				SRC_URI+=" ${i}/${PN}-${mod}-${PV}.tar.bz2"
+			fi
 		done
 		unset mod
 	done
@@ -242,6 +246,9 @@ src_unpack() {
 		done
 	else
 		for mod in ${MODULES}; do
+			if [[ ${mod} == binfilter ]] && ! use binfilter; then
+				continue
+			fi
 			mypv=${PV/.9999}
 			[[ ${mypv} != ${PV} ]] && EGIT_BRANCH="${PN}-${mypv/./-}"
 			EGIT_PROJECT="${PN}/${mod}"
