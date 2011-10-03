@@ -1,5 +1,11 @@
 
 
+*elfix-0.2.2 (03 Oct 2011)
+
+  03 Oct 2011; Anthony G. Basile <blueness@gentoo.org> -elfix-0.2.1.ebuild,
+  +elfix-0.2.2.ebuild:
+  Bump, fix FEATURES="test"
+
 *elfix-0.2.1 (27 Sep 2011)
 
   27 Sep 2011; Anthony G. Basile <blueness@gentoo.org> -elfix-0.2.0.ebuild,
