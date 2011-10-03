@@ -1,0 +1,15 @@
+diff --git a/kio/kssl/ksslcertificatebox.cpp b/kio/kssl/ksslcertificatebox.cpp
+index 4ffc613..094787a 100644
+--- a/kio/kssl/ksslcertificatebox.cpp
++++ b/kio/kssl/ksslcertificatebox.cpp
+@@ -36,6 +36,10 @@ KSslCertificateBox::KSslCertificateBox(QWidget *parent)
+    d(new KSslCertificateBoxPrivate())
+ {
+     d->ui.setupUi(this);
++    // No fooling us with html tags
++    Q_FOREACH(QLabel* label, qFindChildren<QLabel *>(this)) {
++        label->setTextFormat(Qt::PlainText);
++    }
+ }
+ 
+ 
