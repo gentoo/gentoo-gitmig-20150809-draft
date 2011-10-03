@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/phppgadmin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.96 2011/09/21 08:50:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.97 2011/10/03 20:19:36 radhermit Exp $
+
+*phppgadmin-5.0.3 (03 Oct 2011)
+
+  03 Oct 2011; Tim Harder <radhermit@gentoo.org> +phppgadmin-5.0.3.ebuild:
+  Version bump.
 
   21 Sep 2011; Michał Górny <mgorny@gentoo.org> phppgadmin-9999.ebuild:
   Migrate to git-2.
