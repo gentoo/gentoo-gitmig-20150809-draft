@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/mpfr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.140 2011/09/14 15:56:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.141 2011/10/03 15:17:49 vapier Exp $
+
+*mpfr-2.4.2_p3-r1 (03 Oct 2011)
+
+  03 Oct 2011; Mike Frysinger <vapier@gentoo.org> +mpfr-2.4.2_p3-r1.ebuild:
+  Add ebuild for libmpfr.so.1 ABI name.
 
   14 Sep 2011; Jeroen Roovers <jer@gentoo.org> mpfr-3.0.1_p4.ebuild:
   Stable for HPPA (bug #380673).
