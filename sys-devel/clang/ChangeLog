@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.41 2011/08/16 09:33:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.42 2011/10/03 13:36:31 voyageur Exp $
+
+  03 Oct 2011; Bernard Cafarelli <voyageur@gentoo.org> clang-2.8-r3.ebuild,
+  -clang-2.9.ebuild, clang-2.9-r1.ebuild, clang-9999.ebuild, metadata.xml:
+  Rename alltargets USE flag to multitarget, bug #382307. Drop some versions
 
 *clang-2.9-r1 (16 Aug 2011)
 

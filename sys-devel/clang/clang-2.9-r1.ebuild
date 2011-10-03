@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.9-r1.ebuild,v 1.1 2011/08/16 09:33:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-2.9-r1.ebuild,v 1.2 2011/10/03 13:36:31 voyageur Exp $
 
 EAPI=3
 
@@ -18,11 +18,11 @@ SRC_URI="http://llvm.org/releases/${PV}/llvm-${PV}.tgz
 LICENSE="UoI-NCSA"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
-IUSE="alltargets debug +static-analyzer +system-cxx-headers test"
+IUSE="debug multitarget +static-analyzer +system-cxx-headers test"
 
 # Note: for LTO support, clang will depend on binutils with gold plugins, and LLVM built after that - http://llvm.org/docs/GoldPlugin.html
 DEPEND="static-analyzer? ( dev-lang/perl )"
-RDEPEND="~sys-devel/llvm-${PV}[alltargets=]"
+RDEPEND="~sys-devel/llvm-${PV}[multitarget=]"
 
 S="${WORKDIR}/llvm-${PV}"
 
@@ -89,7 +89,7 @@ src_configure() {
 			--with-c-include-dirs=${EPREFIX}/usr/include:/usr/include"
 	fi
 
-	if use alltargets; then
+	if use multitarget; then
 		CONF_FLAGS="${CONF_FLAGS} --enable-targets=all"
 	else
 		CONF_FLAGS="${CONF_FLAGS} --enable-targets=host-only"
