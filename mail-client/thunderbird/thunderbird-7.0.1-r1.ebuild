@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-7.0.1.ebuild,v 1.1 2011/10/01 01:45:31 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-7.0.1-r1.ebuild,v 1.1 2011/10/03 00:02:43 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -18,12 +18,14 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linu
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="bindist gconf +crashreporter +crypt +ipc +lightning mozdom"
-PATCH="${PN}-7.0-patches-0.1"
+PATCH="${PN}-7.0-patches-0.4"
+PATCHFF="firefox-7.0-patches-0.5"
 
 FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/"
 SRC_URI="${FTP_URI}/${TB_PV}/source/${TB_P}.source.tar.bz2
 	crypt? ( http://www.mozilla-enigmail.org/download/source/enigmail-${EMVER}.tar.gz )
-	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.bz2"
+	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCH}.tar.xz
+	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCHFF}.tar.xz"
 
 if ! [[ ${PV} =~ alpha|beta ]]; then
 	# This list can be updated using get_langs.sh from the mozilla overlay
@@ -55,6 +57,7 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 	>=dev-libs/nspr-4.8.8
 	gconf? ( >=gnome-base/gconf-1.2.1:2 )
 	media-libs/libpng[apng]
+	virtual/libffi
 	!x11-plugins/lightning
 	!x11-plugins/enigmail
 	system-sqlite? ( >=dev-db/sqlite-3.7.5[fts3,secure-delete,unlock-notify,debug=] )
@@ -107,6 +110,7 @@ pkg_setup() {
 	# Ensure we have enough disk space to compile
 	CHECKREQS_DISK_BUILD="4G"
 	check-reqs_pkg_setup
+	
 }
 
 src_unpack() {
@@ -125,12 +129,17 @@ src_unpack() {
 }
 
 src_prepare() {
-	# Apply our patches
+	# Apply our Thunderbird patchset
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
-	epatch "${WORKDIR}"
+	epatch "${WORKDIR}/thunderbird"
 
-	epatch "${FILESDIR}/Copy_xpcshell_only_if_tests_are_enabled.patch"
+	# Apply our patchset from firefox to thunderbird as well
+	pushd "${S}"/mozilla &>/dev/null || die
+	EPATCH_SUFFIX="patch" \
+	EPATCH_FORCE="yes" \
+	epatch "${WORKDIR}/firefox"
+	popd &>/dev/null || die
 
 	if use crypt ; then
 		mv "${WORKDIR}"/enigmail "${S}"/mailnews/extensions/enigmail
@@ -182,6 +191,7 @@ src_configure() {
 	mozconfig_annotate '' --with-default-mozilla-five-home="${EPREFIX}${MOZILLA_FIVE_HOME}"
 	mozconfig_annotate '' --with-user-appdir=.thunderbird
 	mozconfig_annotate '' --with-system-png
+	mozconfig_annotate '' --enable-system-ffi
 
 	# Use enable features
 	mozconfig_use_enable lightning calendar

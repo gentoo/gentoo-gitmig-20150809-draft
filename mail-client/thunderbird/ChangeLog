@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.96 2011/10/01 01:45:31 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.97 2011/10/03 00:02:43 anarchy Exp $
+
+*thunderbird-7.0.1-r1 (03 Oct 2011)
+
+  03 Oct 2011; Jory A. Pratt <anarchy@gentoo.org> -thunderbird-7.0.1.ebuild,
+  +thunderbird-7.0.1-r1.ebuild,
+  -files/Copy_xpcshell_only_if_tests_are_enabled.patch:
+  multiple bug fixes, enable system libffi, multiple archs now supported.
 
 *thunderbird-7.0.1 (01 Oct 2011)
 
