@@ -87,6 +87,7 @@
     </menu>
     <menu name="System">
         <plugin name="setup" />
+		<systen name="Setup" />
         <system name="Commands" />
         <plugin name="vdrc" />
         <plugin name="text2skin" />
