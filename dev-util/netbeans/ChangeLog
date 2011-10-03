@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.157 2011/09/16 19:58:43 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.158 2011/10/03 21:52:22 fordfrog Exp $
+
+*netbeans-7.0.1-r1 (03 Oct 2011)
+
+  03 Oct 2011; Miroslav Šulc <fordfrog@gentoo.org> +netbeans-7.0.1-r1.ebuild:
+  Updated translation sources
 
   16 Sep 2011; Miroslav Šulc <fordfrog@gentoo.org> netbeans-7.0.1.ebuild:
   Building NetBeans is supported only with JDK 1.6
