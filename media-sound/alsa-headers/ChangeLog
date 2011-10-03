@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alsa-headers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/ChangeLog,v 1.209 2011/09/21 08:11:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-headers/ChangeLog,v 1.210 2011/10/03 22:45:27 maekke Exp $
+
+  03 Oct 2011; Markus Meier <maekke@gentoo.org> alsa-headers-1.0.24.ebuild:
+  arm stable, bug #379423
 
   21 Sep 2011; Michał Górny <mgorny@gentoo.org> alsa-headers-9999.ebuild:
   Migrate to git-2.
