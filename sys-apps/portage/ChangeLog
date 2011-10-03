@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.875 2011/09/29 18:41:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.876 2011/10/03 18:14:17 josejx Exp $
+
+  03 Oct 2011; Joseph Jezak <josejx@gentoo.org> portage-2.1.10.11.ebuild:
+  Marked ppc/ppc64 stable for bug #380677.
 
 *portage-2.2.0_alpha60 (29 Sep 2011)
 
