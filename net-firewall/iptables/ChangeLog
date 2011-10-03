@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.253 2011/09/19 07:45:40 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.254 2011/10/03 20:01:17 josejx Exp $
+
+  03 Oct 2011; Joseph Jezak <josejx@gentoo.org> iptables-1.4.12.1.ebuild:
+  Marked ppc/ppc64 stable for bug #382367.
 
 *iptables-1.4.12.1-r1 (19 Sep 2011)
 
