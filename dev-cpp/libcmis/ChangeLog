@@ -1,0 +1,10 @@
+# ChangeLog for dev-cpp/libcmis
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/ChangeLog,v 1.1 2011/10/03 08:54:32 scarabeus Exp $
+
+*libcmis-9999 (03 Oct 2011)
+
+  03 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> +libcmis-9999.ebuild,
+  +metadata.xml:
+  Initial commit, required for libreoffice.
+
