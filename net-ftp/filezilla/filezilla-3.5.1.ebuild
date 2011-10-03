@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/filezilla-3.5.1.ebuild,v 1.1 2011/08/29 12:20:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/filezilla-3.5.1.ebuild,v 1.2 2011/10/03 17:08:39 voyageur Exp $
 
 EAPI=2
 
 WX_GTK_VER="2.8"
 
-inherit autotools eutils multilib wxwidgets
+inherit autotools eutils flag-o-matic multilib wxwidgets
 
 MY_PV=${PV/_/-}
 MY_P="FileZilla_${MY_PV}"
@@ -22,7 +22,7 @@ IUSE="dbus nls test"
 
 RDEPEND=">=app-admin/eselect-wxwidgets-0.7-r1
 	>=dev-db/sqlite-3.7
-	>=dev-libs/tinyxml-2.6.1-r1[-stl]
+	>=dev-libs/tinyxml-2.6.1-r1[stl]
 	net-dns/libidn
 	>=net-libs/gnutls-2.8.3
 	>=x11-libs/wxGTK-2.8.9:2.8[X]
@@ -38,6 +38,7 @@ S="${WORKDIR}"/${PN}-${MY_PV}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.3.5.1-debug.patch
+	append-flags -DTIXML_USE_STL
 	eautoreconf
 }
 

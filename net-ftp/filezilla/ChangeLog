@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/filezilla
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.81 2011/08/29 12:20:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.82 2011/10/03 17:08:39 voyageur Exp $
+
+  03 Oct 2011; Bernard Cafarelli <voyageur@gentoo.org>
+  -filezilla-3.3.0.1.ebuild, -filezilla-3.4.0.ebuild, -filezilla-3.5.0.ebuild,
+  filezilla-3.5.1.ebuild:
+  Use tinyxml[stl], bug #383335. Drop some versions
 
 *filezilla-3.5.1 (29 Aug 2011)
 
