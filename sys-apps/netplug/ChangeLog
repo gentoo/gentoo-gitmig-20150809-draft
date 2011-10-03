@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/netplug
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netplug/ChangeLog,v 1.22 2010/02/28 18:52:11 volkmar Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netplug/ChangeLog,v 1.23 2011/10/03 07:09:24 polynomial-c Exp $
+
+*netplug-1.2.9.2 (03 Oct 2011)
+
+  03 Oct 2011; Lars Wendler <polynomial-c@gentoo.org> +netplug-1.2.9.2.ebuild,
+  +files/netplug.2, metadata.xml:
+  Took over maintenance. Version bump. Thanks to Marco Paolone who reported
+  this in bug #367227. Removed init-ng support. Thanks to Nikoli who provided a
+  working script in bug #373107.
 
   28 Feb 2010; Mounir Lamouri <volkmar@gentoo.org> files/netplug:
   Exit correctly when probe is called. Fix bug 228663
