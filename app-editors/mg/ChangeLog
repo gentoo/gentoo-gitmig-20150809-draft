@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.35 2011/09/25 22:01:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.36 2011/10/03 20:25:40 jer Exp $
+
+  03 Oct 2011; Jeroen Roovers <jer@gentoo.org> mg-20110905.ebuild:
+  Marked ~hppa (bug #384639).
 
   25 Sep 2011; Ulrich Mueller <ulm@gentoo.org> mg-20110120.ebuild,
   mg-20110905.ebuild:
