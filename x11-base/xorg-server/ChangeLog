@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.616 2011/10/02 13:54:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.617 2011/10/03 18:00:09 josejx Exp $
+
+  03 Oct 2011; Joseph Jezak <josejx@gentoo.org> xorg-server-1.10.4.ebuild:
+  Marked ppc ppc64 stable for bug #380421.
 
   02 Oct 2011; Raúl Porcel <armin76@gentoo.org> xorg-server-1.10.4.ebuild:
   alpha/ia64/sh/sparc stable wrt #380421
