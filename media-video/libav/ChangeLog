@@ -1,6 +1,9 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.28 2011/09/30 17:46:26 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.29 2011/10/03 07:39:42 lu_zero Exp $
+
+  03 Oct 2011; Luca Barbato <lu_zero@gentoo.org> libav-0.7.2.ebuild:
+  Fix wrong option bump, 0.7.2 doesn't introduce avtools
 
 *libav-0.7.2 (30 Sep 2011)
 
