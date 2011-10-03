@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.164 2011/07/26 16:39:27 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.165 2011/10/03 20:46:24 jer Exp $
+
+  03 Oct 2011; Jeroen Roovers <jer@gentoo.org> mjpegtools-2.0.0-r1.ebuild:
+  Marked ~hppa (bug #373639).
 
   26 Jul 2011; Daniel Pielmeier <billie@gentoo.org> metadata.xml:
   Remove unused use flag.
