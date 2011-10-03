@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.262 2011/09/21 09:04:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.263 2011/10/03 19:47:58 josejx Exp $
+
+  03 Oct 2011; Joseph Jezak <josejx@gentoo.org> genkernel-3.4.16.ebuild:
+  Marked ppc/ppc64 stable for bug #369409.
 
   21 Sep 2011; Michał Górny <mgorny@gentoo.org> genkernel-9999.ebuild:
   Migrate to git-2.
