@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/svgalib
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.90 2010/11/19 21:35:37 lxnay Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.91 2011/10/03 17:01:40 mr_bones_ Exp $
+
+  03 Oct 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  svgalib-1.9.25-r1.ebuild:
+  sed patch to fix bug #369095
 
   19 Nov 2010; Fabio Erculiani <lxnay@gentoo.org>
   files/svgalib-1.9.25-linux2.6.36.patch:
