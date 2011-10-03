@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.98.4-r1.ebuild,v 1.4 2011/10/03 11:05:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.98.4-r1.ebuild,v 1.5 2011/10/03 11:25:11 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime gnome2-utils toolchain-funcs
@@ -70,13 +70,13 @@ src_install() {
 	domenu amsn.desktop
 	sed -i -e s:.png:: "${D}"/usr/share/applications/amsn.desktop || die
 
-	cd desktop-icons
-	for i in *; do
-		if [ -e ${i}/msn.png ]; then
-			insinto /usr/share/icons/hicolor/${i}/apps
-			doins  ${i}/msn.png
-		fi
+	pushd desktop-icons
+	local res
+	for res in 22 32 48 64 72 96 128; do
+		insinto /usr/share/icons/hicolor/${res}x${res}/apps
+		doins ${res}x${res}/apps/amsn.png
 	done
+	popd
 }
 
 pkg_preinst() {
