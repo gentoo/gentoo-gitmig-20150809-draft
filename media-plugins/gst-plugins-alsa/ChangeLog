@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-alsa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-alsa/ChangeLog,v 1.190 2011/09/25 20:45:41 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-alsa/ChangeLog,v 1.191 2011/10/03 21:46:34 maekke Exp $
+
+  03 Oct 2011; Markus Meier <maekke@gentoo.org>
+  gst-plugins-alsa-0.10.35.ebuild:
+  arm stable, bug #382225
 
   25 Sep 2011; Tony Vroon <chainsaw@gentoo.org>
   gst-plugins-alsa-0.10.35.ebuild:

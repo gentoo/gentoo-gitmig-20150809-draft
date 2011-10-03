@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-mad
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mad/ChangeLog,v 1.166 2011/09/25 21:27:11 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mad/ChangeLog,v 1.167 2011/10/03 22:34:21 maekke Exp $
+
+  03 Oct 2011; Markus Meier <maekke@gentoo.org> gst-plugins-mad-0.10.18.ebuild:
+  arm stable, bug #382225
 
   25 Sep 2011; Tony Vroon <chainsaw@gentoo.org> gst-plugins-mad-0.10.18.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
