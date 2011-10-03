@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13099 2011/10/02 10:58:43 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13100 2011/10/03 08:05:58 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (03 Oct 2011)
+# build-tested only, use at your own risk, bug #361181 for details
+=net-im/qutecom-2.2_p20110210
 
 # Peter Volkov <pva@gentoo.org> (02 Oct 2011)
 # Old package for very old kernel, unmaintained, fails to build, bug #362827
