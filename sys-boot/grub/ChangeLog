@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.168 2011/10/03 09:10:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.169 2011/10/04 18:23:19 scarabeus Exp $
+
+  04 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> grub-1.99-r2.ebuild,
+  grub-9999.ebuild:
+  Include option to prompt for grub1 configuration. Thanks to Robert Trace
+  rtrace{at}farcaster.org for the patch.
 
   03 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> grub-1.99-r2.ebuild,
   grub-9999.ebuild:

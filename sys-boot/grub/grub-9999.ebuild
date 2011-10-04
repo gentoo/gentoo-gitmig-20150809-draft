@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.43 2011/10/03 09:10:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.44 2011/10/04 18:23:19 scarabeus Exp $
 
 EAPI=4
 
@@ -183,7 +183,7 @@ src_prepare() {
 		use grub_platforms_${i} && GRUB_ENABLED_PLATFORMS+=" ${i}"
 	done
 	[[ -z ${GRUB_ENABLED_PLATFORMS} ]] && GRUB_ENABLED_PLATFORMS="guessed"
-	einfo "Going to build following platforms: ${GRUB_ENABLED_PLATFORMS}"
+	elog "Going to build following platforms: ${GRUB_ENABLED_PLATFORMS}"
 }
 
 src_configure() {
@@ -242,43 +242,66 @@ src_install() {
 	GRUB_DISTRIBUTOR="Gentoo"
 EOF
 
-	elog "Remember to run emerge --config =${CATEGORY}/${PF} in order"
-	elog "to set up basic settings for this package."
+	elog
+	elog "To configure GRUB 2, check the defaults in /etc/default/grub and"
+	elog "then run 'emerge --config =${CATEGORY}/${PF}'."
+
+	# display the link to guide
+	show_doc_url
+}
+
+show_doc_url() {
+	elog
+	elog "For informations how to configure grub-2 please refer to the guide:"
+	elog "    http://dev.gentoo.org/~scarabeus/grub-2-guide.xml"
 }
 
 setup_boot_dir() {
 	local dir=$1
-
-	# display the link to guide
-	elog "For informations how to configure grub-2 please refer to the guide:"
-	elog "    http://dev.gentoo.org/~scarabeus/grub-2-guide.xml"
+	local use_legacy='n'
 
 	# Make sure target directory exists
 	mkdir -p "${dir}"
 
-	if [[ ! -e ${dir}/grub.cfg && -e ${dir/2/}/menu.lst ]] ; then
-		# This is first grub2 install and we have old configuraton for
-		# grub1 around. Lets try to generate grub.cfg from it so user
-		# does not loose any stuff when rebooting.
-		# NOTE: in long term he still NEEDS to migrate to grub.d stuff.
-		einfo "Running: grub2-menulst2cfg '${dir/2/}/menu.lst' '${dir}/grub.cfg'"
-		grub2-menulst2cfg "${dir/2/}/menu.lst" "${dir}/grub.cfg" || \
-			ewarn "Running grub2-menulst2cfg failed!"
+	if [[ -e ${dir/2/}/menu.lst ]] ; then
+		# Legacy config exists, ask user what to do
+		einfo "Found legacy GRUB configuration.  Do you want to convert it"
+		einfo "instead of using autoconfig (y/N)?"
+		read use_legacy
 
-		einfo "Even if we just created configuration for your grub2 using old"
-		einfo "grub-legacy configuration file you should migrate to use new style"
-		einfo "configuration in '${ROOT}/etc/grub.d' and '${ROOT}/etc/defaults/grub'."
-		einfo
-
-	else
-		# we need to refresh the grub.cfg everytime just to play it safe
-		einfo "Running: grub2-mkconfig -o '${dir}/grub.cfg'"
-		grub2-mkconfig -o "${dir}/grub.cfg" || \
-			ewarn "Running grub2-mkconfig failed! Check your configuration files!"
+		use_legacy=${use_legacy,,[A-Z]}
 	fi
 
-	elog "Remember to run grub2-install to install your grub every time"
-	elog "you update this package!"
+	if [[ ${use_legacy} == y* ]] ; then
+		grub1_cfg=${dir/2/}/menu.lst
+		grub2_cfg=${dir}/grub.cfg
+
+		# GRUB legacy configuration exists.  Use it instead of doing
+		# our normal autoconfigure.
+		#
+
+		einfo "Converting legacy config at '${grub1_cfg}' for use by GRUB2."
+		ebegin "Running: grub2-menulst2cfg '${grub1_cfg}' '${grub2_cfg}'"
+		grub2-menulst2cfg "${grub1_cfg}" "${grub2_cfg}" &> /dev/null
+		eend $?
+
+		ewarn
+		ewarn "Even though the conversion above succeeded, you are STRONGLY"
+		ewarn "URGED to upgrade to the new GRUB2 configuration format."
+
+		# Remind the user about the documentation
+		show_doc_url
+	else
+		# Run GRUB 2 autoconfiguration
+		einfo "Running GRUB 2 autoconfiguration."
+		ebegin "grub2-mkconfig -o '${dir}/grub.cfg'"
+		grub2-mkconfig -o "${dir}/grub.cfg" &> /dev/null
+		eend $?
+	fi
+
+	einfo
+	einfo "Remember to run grub2-install to activate GRUB2 as your default"
+	einfo "bootloader."
 }
 
 pkg_config() {
