@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/arj
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.46 2011/08/07 17:34:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.47 2011/10/04 22:29:46 josejx Exp $
+
+  04 Oct 2011; Joseph Jezak <josejx@gentoo.org> arj-3.10.22-r3.ebuild:
+  Marked ppc stable for bug #375923.
 
   07 Aug 2011; Raúl Porcel <armin76@gentoo.org> arj-3.10.22-r3.ebuild:
   sparc stable wrt #375923
