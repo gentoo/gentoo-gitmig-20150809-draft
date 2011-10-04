@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.5.0_beta3.ebuild,v 1.1 2011/09/05 20:17:06 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.5.0_rc1.ebuild,v 1.1 2011/10/04 15:52:30 ramereth Exp $
 
 EAPI="4"
 
 inherit eutils confutils bash-completion
 
-#MY_PV="${PV/_rc/~rc}"
-MY_PV="${PV/_beta/~beta}"
+MY_PV="${PV/_rc/~rc}"
+#MY_PV="${PV/_beta/~beta}"
 MY_P="${PN}-${MY_PV}"
 
 if [[ ${PV} == "9999" ]] ; then
