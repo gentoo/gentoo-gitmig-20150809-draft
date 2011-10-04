@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xdvipdfmx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvipdfmx/ChangeLog,v 1.45 2011/09/18 14:42:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvipdfmx/ChangeLog,v 1.46 2011/10/04 17:40:39 jer Exp $
+
+  04 Oct 2011; Jeroen Roovers <jer@gentoo.org>
+  xdvipdfmx-0.7.8_p20100722.ebuild:
+  Stable for HPPA (bug #355085).
 
   18 Sep 2011; Raúl Porcel <armin76@gentoo.org>
   xdvipdfmx-0.7.8_p20100722.ebuild:

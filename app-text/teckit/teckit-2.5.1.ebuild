@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/teckit/teckit-2.5.1.ebuild,v 1.21 2011/09/18 14:30:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/teckit/teckit-2.5.1.ebuild,v 1.22 2011/10/04 17:39:41 jer Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://scripts.sil.org/svn-view/teckit/TAGS/${MY_P}.tar.gz"
 
 LICENSE="|| ( CPL-0.5 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
 RDEPEND="sys-libs/zlib
