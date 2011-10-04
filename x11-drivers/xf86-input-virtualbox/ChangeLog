@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-input-virtualbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/ChangeLog,v 1.74 2011/10/04 18:01:01 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/ChangeLog,v 1.75 2011/10/04 19:07:17 polynomial-c Exp $
+
+  04 Oct 2011; Lars Wendler <polynomial-c@gentoo.org>
+  xf86-input-virtualbox-4.0.12.ebuild, xf86-input-virtualbox-4.1.2.ebuild,
+  xf86-input-virtualbox-4.1.4.ebuild:
+  Fixed installation path of 50-vboxmouse.conf without a revbump (bug #381035).
 
 *xf86-input-virtualbox-4.1.4 (04 Oct 2011)
 

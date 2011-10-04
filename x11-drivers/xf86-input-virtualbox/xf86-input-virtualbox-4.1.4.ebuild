@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-4.1.4.ebuild,v 1.1 2011/10/04 18:01:01 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-4.1.4.ebuild,v 1.2 2011/10/04 19:07:17 polynomial-c Exp $
 
 EAPI=2
 
@@ -85,7 +85,7 @@ src_install() {
 		doins 70-xorg-vboxmouse.rules
 
 		# install X11 information file about the mouse driver
-		insinto /etc/X11/xorg.conf.d
+		insinto /usr/share/X11/xorg.conf.d
 		doins "${S}/src/VBox/Additions/x11/Installer/50-vboxmouse.conf"
 }
 
