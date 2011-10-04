@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyparted
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.65 2011/09/05 11:10:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.66 2011/10/04 11:03:23 chainsaw Exp $
+
+  04 Oct 2011; Tony Vroon <chainsaw@gentoo.org> pyparted-3.8-r1.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in bug
+  #385227.
 
   05 Sep 2011; Jeroen Roovers <jer@gentoo.org> pyparted-3.8-r1.ebuild:
   Marked ~hppa (bug #381303).
