@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/arpon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpon/ChangeLog,v 1.8 2011/10/04 12:25:25 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpon/ChangeLog,v 1.9 2011/10/04 17:19:13 nativemad Exp $
+
+  04 Oct 2011; Andreas Schuerch <nativemad@gentoo.org> arpon-2.7.ebuild:
+  x86 stable, bug 384913
 
   04 Oct 2011; Tony Vroon <chainsaw@gentoo.org> arpon-2.7.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
