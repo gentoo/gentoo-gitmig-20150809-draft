@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kportagetray/kportagetray-0.2.4.ebuild,v 1.3 2011/06/07 03:05:21 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kportagetray/kportagetray-0.2.4.ebuild,v 1.4 2011/10/04 21:53:21 josejx Exp $
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ else
 fi
 
 LICENSE="GPL-3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="4"
 IUSE=""
 
