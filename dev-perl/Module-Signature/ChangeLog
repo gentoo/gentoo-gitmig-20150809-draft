@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Module-Signature
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/ChangeLog,v 1.32 2011/10/04 11:34:30 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Signature/ChangeLog,v 1.33 2011/10/04 21:32:01 phajdan.jr Exp $
+
+  04 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  Module-Signature-0.680.0.ebuild:
+  x86 stable wrt bug #385023
 
   04 Oct 2011; Tony Vroon <chainsaw@gentoo.org>
   Module-Signature-0.680.0.ebuild:
