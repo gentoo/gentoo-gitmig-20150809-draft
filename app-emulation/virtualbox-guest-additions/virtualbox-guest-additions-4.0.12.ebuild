@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.0.12.ebuild,v 1.4 2011/08/20 21:06:18 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.0.12.ebuild,v 1.5 2011/10/04 19:30:04 polynomial-c Exp $
 
 EAPI=2
 
@@ -83,7 +83,7 @@ src_prepare() {
 	done
 }
 
-src_compile() {
+src_configure() {
 		# build the user-space tools, warnings are harmless
 		./configure --nofatal \
 		--disable-xpcom \
@@ -91,6 +91,9 @@ src_compile() {
 		--disable-pulse \
 		--disable-alsa \
 		--build-headless || die "configure failed"
+}
+
+src_compile() {
 		source ./env.sh
 
 		for each in /src/VBox/{Runtime,Additions/common} \
