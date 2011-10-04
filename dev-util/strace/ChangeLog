@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.161 2011/10/03 18:21:47 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.162 2011/10/04 14:13:56 nativemad Exp $
+
+  04 Oct 2011; Andreas Schuerch <nativemad@gentoo.org> strace-4.5.20-r2.ebuild:
+  x86 stable, thanks JD. Bug 384661
 
   03 Oct 2011; Joseph Jezak <josejx@gentoo.org> strace-4.5.20-r2.ebuild:
   Marked ppc/ppc64 stable for bug #384661.
