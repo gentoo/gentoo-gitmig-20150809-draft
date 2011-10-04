@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.8.10.ebuild,v 1.1 2011/10/02 18:08:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.8.10.ebuild,v 1.2 2011/10/04 09:37:59 flameeyes Exp $
 
 inherit webapp eutils depend.apache confutils
 
@@ -32,14 +32,14 @@ DEPEND="
 	>=dev-perl/HTML-Scrubber-0.08
 	dev-perl/HTML-Tree
 	>=dev-perl/HTTP-Server-Simple-0.07
-	>=dev-perl/HTTP-Server-Simple-Mason-0.09
+	>=dev-perl/HTTP-Server-Simple-Mason-0.14
 	dev-perl/libwww-perl
 	dev-perl/locale-maketext-fuzzy
 	>=dev-perl/locale-maketext-lexicon-0.32
 	>=dev-perl/log-dispatch-2.0
 	>=dev-perl/MailTools-1.60
 	>=dev-perl/MIME-tools-5.417
-	dev-perl/Module-Versions-Report
+	>=dev-perl/Module-Versions-Report-1.05
 	dev-perl/regexp-common
 	dev-perl/TermReadKey
 	dev-perl/text-autoformat
