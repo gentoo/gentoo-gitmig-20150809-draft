@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/munge
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/munge/ChangeLog,v 1.9 2011/09/11 10:07:55 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/munge/ChangeLog,v 1.10 2011/10/04 17:27:37 jlec Exp $
+
+  04 Oct 2011; Justin Lecher <jlec@gentoo.org> munge-0.5.10.ebuild,
+  metadata.xml:
+  Cleaned additional . and die
 
 *munge-0.5.10 (31 Aug 2011)
 

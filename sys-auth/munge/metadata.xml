@@ -6,7 +6,7 @@
 		<email>jsbronder@gentoo.org</email>
 	</maintainer>
 	<use>
-		<flag name='gcrypt'>Use libgcrypt instead of openssl</flag>
+		<flag name="gcrypt">Use libgcrypt instead of openssl</flag>
 	</use>
 	<longdescription> 
 	MUNGE (MUNGE Uid 'N' Gid Emporium) is an authentication service for creating
