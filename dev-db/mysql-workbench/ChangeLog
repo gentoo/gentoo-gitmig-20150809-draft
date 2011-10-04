@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/mysql-workbench
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.43 2011/09/24 09:09:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/ChangeLog,v 1.44 2011/10/04 01:35:29 josejx Exp $
+
+  04 Oct 2011; Joseph Jezak <josejx@gentoo.org> mysql-workbench-5.2.34.ebuild,
+  mysql-workbench-5.2.35.ebuild:
+  Marked ~ppc for bug #356365.
 
 *mysql-workbench-5.2.35 (24 Sep 2011)
 
