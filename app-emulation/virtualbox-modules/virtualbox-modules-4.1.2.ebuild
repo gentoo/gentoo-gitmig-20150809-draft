@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-4.1.2.ebuild,v 1.1 2011/08/17 23:34:38 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-4.1.2.ebuild,v 1.2 2011/10/04 17:56:11 polynomial-c Exp $
 
 # XXX: the tarball here is just the kernel modules split out of the binary
 #      package that comes from virtualbox-bin
@@ -28,8 +28,6 @@ BUILD_TARGET_ARCH="${ARCH}"
 MODULE_NAMES="vboxdrv(misc:${S}) vboxnetflt(misc:${S}) vboxnetadp(misc:${S}) vboxpci(misc:${S})"
 
 pkg_setup() {
-	# check for kernel options to support PCI passthrough (since 2.6.31)
-	CONFIG_CHECK="~IOMMU_SUPPORT ~DMAR ~PCI_STUB"
 	linux-mod_pkg_setup
 
 	BUILD_PARAMS="KERN_DIR=${KV_DIR} KERNOUT=${KV_OUT_DIR}"

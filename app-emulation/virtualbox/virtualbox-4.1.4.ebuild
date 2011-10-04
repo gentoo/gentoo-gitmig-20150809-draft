@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.0.ebuild,v 1.4 2011/09/01 08:06:53 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.4.ebuild,v 1.1 2011/10/04 18:00:30 polynomial-c Exp $
 
 EAPI=4
 
@@ -50,7 +50,7 @@ RDEPEND="!app-emulation/virtualbox-bin
 	vnc? ( >=net-libs/libvncserver-0.9.7 )
 	java? ( >=virtual/jre-1.5 )"
 DEPEND="${RDEPEND}
-	=dev-util/kbuild-0.1.5*
+	>=dev-util/kbuild-0.1.999
 	>=dev-lang/yasm-0.6.2
 	sys-devel/bin86
 	sys-devel/dev86
@@ -151,7 +151,7 @@ src_prepare() {
 		"${FILESDIR}/${PN}-4-mkisofs-check.patch"
 
 	# fix build with --as-needed (bug #249295 and bug #350907)
-	epatch "${FILESDIR}/${PN}-4-asneeded.patch"
+	epatch "${FILESDIR}/${PN}-4.1.4-asneeded.patch"
 
 	# Respect LDFLAGS
 	sed -e "s/_LDFLAGS\.${ARCH}*.*=/& ${LDFLAGS}/g" \
@@ -160,7 +160,8 @@ src_prepare() {
 	# We still want to use ${HOME}/.VirtualBox/Machines as machines dir.
 	epatch "${FILESDIR}/${PN}-4.0.2-restore_old_machines_dir.patch"
 
-	epatch "${FILESDIR}"/${P}-vboxpci-build.patch
+	# Don't build vboxpci.ko module (D'oh!)
+	epatch "${FILESDIR}"/${PN}-4.1.2-vboxpci-build.patch
 
 	# add correct java path
 	if use java ; then

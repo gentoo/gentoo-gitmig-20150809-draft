@@ -1,0 +1,26 @@
+--- VirtualBox-4.1.4_OSE/Config.kmk
++++ VirtualBox-4.1.4_OSE/Config.kmk
+@@ -4263,7 +4263,7 @@
+ TEMPLATE_VBOXBLDPROG_LDFLAGS.amd64       = -m64
+ TEMPLATE_VBOXBLDPROG_LDFLAGS.sparc64     = -m64
+  ifeq ($(KBUILD_HOST),linux)
+-TEMPLATE_VBOXBLDPROG_LIBS                = pthread m rt dl
++TEMPLATE_VBOXBLDPROG_LIBS                = pthread m rt dl crypt
+  else ifeq ($(KBUILD_HOST),os2)
+ TEMPLATE_VBOXBLDPROG_TOOL                = GXX3OMF
+ TEMPLATE_VBOXBLDPROG_LIBS                = socket iconv
+--- VirtualBox-4.1.4_OSE/src/libs/xpcom18a4/Makefile.kmk
++++ VirtualBox-4.1.4_OSE/src/libs/xpcom18a4/Makefile.kmk
+@@ -469,10 +469,10 @@
+  libIDL_config_cflags := $(shell $(VBOX_LIBIDL_CONFIG) --cflags)
+  libIDL_config_libs   := $(shell $(VBOX_LIBIDL_CONFIG) --libs)
+  xpidl_CFLAGS = \
+-	$(libIDL_config_cflags)
++	$(shell pkg-config --cflags libIDL-2.0)
+  ifeq ($(BUILD_PLATFORM),linux)
+  xpidl_LDFLAGS = \
+-	$(filter-out -l%,$(libIDL_config_libs))
++	$(filter-out -l%,$(shell pkg-config --libs-only-L libIDL-2.0))
+  else
+  xpidl_LDFLAGS = \
+ 	$(libIDL_config_libs)

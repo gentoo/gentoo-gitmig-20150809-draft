@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-4.1.0-r1.ebuild,v 1.1 2011/08/07 11:18:29 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-4.1.4.ebuild,v 1.1 2011/10/04 17:56:11 polynomial-c Exp $
 
 # XXX: the tarball here is just the kernel modules split out of the binary
 #      package that comes from virtualbox-bin
@@ -29,13 +29,12 @@ MODULE_NAMES="vboxdrv(misc:${S}) vboxnetflt(misc:${S}) vboxnetadp(misc:${S}) vbo
 
 pkg_setup() {
 	linux-mod_pkg_setup
+
 	BUILD_PARAMS="KERN_DIR=${KV_DIR} KERNOUT=${KV_OUT_DIR}"
 	enewgroup vboxusers
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-vboxbug9305.patch
-
 	if kernel_is -ge 2 6 33 ; then
 		# evil patch for new kernels - header moved
 		grep -lR linux/autoconf.h *  | xargs sed -i -e 's:<linux/autoconf.h>:<generated/autoconf.h>:'
