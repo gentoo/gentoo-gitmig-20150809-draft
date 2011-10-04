@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.102 2011/10/03 21:32:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.103 2011/10/04 01:38:10 josejx Exp $
+
+  04 Oct 2011; Joseph Jezak <josejx@gentoo.org> kbd-1.15.3.ebuild:
+  Marked ppc/ppc64 stable for bug #329693.
 
   03 Oct 2011; Markus Meier <maekke@gentoo.org> kbd-1.15.3.ebuild:
   arm stable, bug #329693
