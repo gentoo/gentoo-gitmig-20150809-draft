@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.8-r2.ebuild,v 1.6 2011/10/03 13:36:01 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.8-r2.ebuild,v 1.7 2011/10/04 11:43:37 voyageur Exp $
 
 EAPI="3"
 inherit eutils multilib toolchain-funcs
@@ -75,8 +75,9 @@ src_prepare() {
 	sed -e 's,$ABS_RUN_DIR/lib,'"${EPREFIX}"/usr/$(get_libdir)/${PN}, \
 		-i tools/llvm-config/llvm-config.in.in || die "llvm-config sed failed"
 
-	einfo "Fixing rpath"
+	einfo "Fixing rpath and CFLAGS"
 	sed -e 's,\$(RPATH) -Wl\,\$(\(ToolDir\|LibDir\)),$(RPATH) -Wl\,'"${EPREFIX}"/usr/$(get_libdir)/${PN}, \
+		-e '/OmitFramePointer/s/-fomit-frame-pointer//' \
 		-i Makefile.rules || die "rpath sed failed"
 
 	epatch "${FILESDIR}"/${PN}-2.7-nodoctargz.patch
@@ -96,6 +97,7 @@ src_configure() {
 	else
 		CONF_FLAGS="${CONF_FLAGS} \
 			--enable-optimized \
+			--with-optimize-option= \
 			--disable-assertions \
 			--disable-expensive-checks"
 	fi
