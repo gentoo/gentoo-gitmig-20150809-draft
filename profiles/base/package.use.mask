@@ -1,13 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.270 2011/10/01 21:20:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.271 2011/10/04 21:02:09 pacho Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
-
-# Samuli Suominen <ssuominen@gentoo.org> (02 Oct 2011)
-# This entry can be removed when nautilus >= 3 is in testing
->=sys-apps/gnome-disk-utility-3 nautilus
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (17 Sep 2011)
 # Systemtap is not keyworded on anything except amd64/x86
