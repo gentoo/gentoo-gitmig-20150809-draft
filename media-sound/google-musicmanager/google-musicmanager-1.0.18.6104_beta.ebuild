@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.18.6104_beta.ebuild,v 1.1 2011/09/28 07:36:44 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.18.6104_beta.ebuild,v 1.2 2011/10/04 15:10:52 ottxor Exp $
 
 EAPI=4
 
@@ -59,7 +59,10 @@ pkg_nofetch() {
 }
 
 src_unpack() {
-	unpack ${A} ./data.tar.lzma
+	# Avoid automagic usage of deb2targz (bug #384147, #375969#c22)
+	echo ">>> Unpacking ${A} to ${PWD}"
+	ar x "${DISTDIR}/${A}" || die
+	unpack ./data.tar.lzma
 }
 
 src_install() {
