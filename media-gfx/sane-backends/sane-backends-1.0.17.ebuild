@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.17.ebuild,v 1.19 2010/11/16 21:00:45 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.17.ebuild,v 1.20 2011/10/04 19:28:50 phosphan Exp $
 
 EAPI="1"
 
@@ -131,5 +131,5 @@ src_install () {
 
 	echo "SANE_CONFIG_DIR=/etc/sane.d" > 30sane
 	doenvd 30sane
-
+	find "${D}" -name "*.la" | while read file; do rm "${file}"; done
 }
