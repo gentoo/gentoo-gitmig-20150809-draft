@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.304 2011/10/04 21:30:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.305 2011/10/04 23:15:44 mr_bones_ Exp $
+
+  04 Oct 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  files/syslog-ng.conf.gentoo.3.3, files/syslog-ng.conf.gentoo.fbsd.3.3,
+  files/syslog-ng.conf.gentoo.hardened.3.3:
+  Turn on threading in default config per upstream
 
 *syslog-ng-3.3.1 (04 Oct 2011)
 

@@ -1,9 +1,10 @@
 @version: 3.3
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.conf.gentoo.fbsd.3.3,v 1.1 2011/09/29 21:21:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.conf.gentoo.fbsd.3.3,v 1.2 2011/10/04 23:15:44 mr_bones_ Exp $
 #
 # Syslog-ng default configuration file for Gentoo FreeBSD
 #
 options {
+	threaded(yes);
 	chain_hostnames(no);
 
 	# The default action of syslog-ng is to log a STATS line
