@@ -1,6 +1,9 @@
 # ChangeLog for media-video/camorama
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/ChangeLog,v 1.23 2011/10/04 11:10:18 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/ChangeLog,v 1.24 2011/10/04 14:07:44 nativemad Exp $
+
+  04 Oct 2011; Andreas Schuerch <nativemad@gentoo.org> camorama-0.19-r2.ebuild:
+  x86 stable, see bug 385343
 
   04 Oct 2011; Tony Vroon <chainsaw@gentoo.org> camorama-0.19-r2.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
