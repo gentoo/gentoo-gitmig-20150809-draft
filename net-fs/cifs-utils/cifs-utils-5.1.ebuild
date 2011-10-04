@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-5.1.ebuild,v 1.1 2011/09/26 17:32:43 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/cifs-utils/cifs-utils-5.1.ebuild,v 1.2 2011/10/04 16:07:57 vostorga Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.samba.org/pub/linux-cifs/${PN}/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="ads +caps caps-ng creds setuid upcall"
+IUSE="ads +caps caps-ng creds upcall"
 
 DEPEND="!net-fs/mount-cifs
 	!<net-fs/samba-3.6_rc1
@@ -51,20 +51,14 @@ src_configure() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die "emake install failed"
-	# Set set-user-ID bit of mount.cifs
-	if use setuid ; then
-		chmod u+s "${D}"/sbin/mount.cifs
-	fi
 	dodoc doc/linux-cifs-client-guide.odt
 }
 
 pkg_postinst() {
 	# Inform about set-user-ID bit of mount.cifs
-	if use setuid ; then
-		ewarn "Setting SETUID bit for mount.cifs."
-		ewarn "However, there may be severe security implications. Also see:"
-		ewarn "http://samba.org/samba/security/CVE-2009-2948.html"
-	fi
+	ewarn "setuid use flag was dropped due to multiple security implications"
+	ewarn "such as CVE-2009-2948 and CVE-2011-3585."
+	ewarn "You are free to set setuid flags by yourself"
 
 	# Inform about upcall usage
 	if use ads ; then
