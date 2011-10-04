@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.117 2011/10/04 01:29:46 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.118 2011/10/04 15:08:00 mpagano Exp $
+
+  04 Oct 2011; Michael Pagano <mpagano@gentoo.org> portpeek-2.0.10.ebuild:
+  Remove dependency on masked portage. All apis needed are in stable portage
 
   04 Oct 2011; Joseph Jezak <josejx@gentoo.org> portpeek-1.9.70.ebuild:
   Marked ppc stable for bug #371783.
