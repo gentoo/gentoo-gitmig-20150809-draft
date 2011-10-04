@@ -1,6 +1,9 @@
 # ChangeLog for app-office/taskcoach
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/ChangeLog,v 1.77 2011/10/01 17:19:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/ChangeLog,v 1.78 2011/10/04 11:23:23 nativemad Exp $
+
+  04 Oct 2011; Andreas Schuerch <nativemad@gentoo.org> taskcoach-1.2.27.ebuild:
+  x86 stable, bug 379221
 
   01 Oct 2011; Markos Chandras <hwoarang@gentoo.org> taskcoach-1.2.27.ebuild:
   Stable on amd64 wrt bug #379221
