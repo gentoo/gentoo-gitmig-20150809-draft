@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.14.4.ebuild,v 1.2 2011/08/15 17:23:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.14.4.ebuild,v 1.3 2011/10/04 17:08:20 jlec Exp $
 
 EAPI=3
 
@@ -47,7 +47,7 @@ RDEPEND="${COMMON_DEPEND}
 	jingle? ( net-libs/farsight2[python] )
 	networkmanager? (
 			dev-python/dbus-python
-			|| ( >=net-misc/networkmanager-0.7.1 net-misc/networkmanager[gnome] )
+			net-misc/networkmanager
 		)
 	srv? (
 		|| (
@@ -68,8 +68,8 @@ pkg_setup() {
 			die "USE=\"dbus\" needed for avahi support"
 		fi
 	fi
-	python_pkg_setup
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
