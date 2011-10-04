@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.3.0_beta2.ebuild,v 1.1 2011/09/29 21:21:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.3.1.ebuild,v 1.1 2011/10/04 21:30:41 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools fixheadtails eutils multilib
@@ -40,6 +40,7 @@ S=${WORKDIR}/${PN}-${MY_PV}
 
 src_prepare() {
 	ht_fix_file configure.in
+	touch README
 	eautoreconf
 }
 
@@ -76,7 +77,7 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	dodoc AUTHORS ChangeLog NEWS README \
+	dodoc AUTHORS ChangeLog NEWS \
 		contrib/syslog-ng.conf* \
 		contrib/syslog2ng "${FILESDIR}/syslog-ng.conf."*
 
