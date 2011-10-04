@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.11.2.ebuild,v 1.1 2011/09/23 18:04:05 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/shotwell-0.11.2.ebuild,v 1.2 2011/10/04 18:19:58 radhermit Exp $
 
 EAPI=4
 GCONF_DEBUG="no"
@@ -29,7 +29,7 @@ RDEPEND="
 	media-libs/lcms:2
 	>=media-libs/libexif-0.6.16
 	>=media-libs/libgphoto2-2.4.2
-	>=media-libs/libraw-0.9.0
+	>=media-libs/libraw-0.14.0
 	>=net-libs/libsoup-2.26.0:2.4
 	>=net-libs/webkit-gtk-1.1.5:2
 	|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-145[extras] )
@@ -46,6 +46,10 @@ pkg_setup() {
 		--disable-desktop-update
 		--disable-icon-update
 		--lib=$(get_libdir)"
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libraw-0.14.patch
 }
 
 src_compile() {
