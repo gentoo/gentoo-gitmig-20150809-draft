@@ -9,7 +9,7 @@ computer. It will however make a snappier openoffice than the binary
 version</longdescription>
 	<use>
 		<flag name="binfilter">Enable support for legacy StarOffice 5.x and earlier file formats</flag>
-		<flag name="cmis"></flag>
+		<flag name="cmis">Enable support for the CMIS interface via <pkg>dev-cpp/libcmis</pkg></flag>
 		<flag name="graphite">Enable support for non-Roman fonts via <pkg>media-gfx/graphite2</pkg></flag>
 		<flag name="jemalloc">Use <pkg>dev-libs/jemalloc</pkg> for allocations</flag>
 		<flag name="odk">Build the Office Development Kit</flag>
