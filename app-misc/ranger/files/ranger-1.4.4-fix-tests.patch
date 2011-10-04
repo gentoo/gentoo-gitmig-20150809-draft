@@ -1,0 +1,24 @@
+--- ranger-1.4.4/test/tc_loader.py.orig
++++ ranger-1.4.4/test/tc_loader.py
+@@ -35,7 +35,7 @@
+ class Test1(unittest.TestCase):
+ 	def test_loader(self):
+ 		loader = Loader()
+-		fm = OpenStruct(loader=loader)
++		fm = OpenStruct(loader=loader, update_preview=lambda path: None)
+ 		SettingsAware.settings = Fake()
+ 		FileManagerAware.fm = fm
+ 
+--- ranger-1.4.4/test/tc_newkeys.py.orig
++++ ranger-1.4.4/test/tc_newkeys.py
+@@ -127,8 +127,8 @@
+ 		test('<C-b>', 2)
+ 		for i in range(1, 26):
+ 			test('<C-' + chr(i+ord('a')-1) + '>', i)
+-		test('<A-x>', 27, ord('x'))
+-		test('<a-o>', 27, ord('o'))
++		test('<A-x>', 9004, ord('x'))
++		test('<a-o>', 9004, ord('o'))
+ 		test('k<a')
+ 		test('k<anz>')
+ 		test('k<a<nz>')
