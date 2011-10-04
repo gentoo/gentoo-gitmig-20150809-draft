@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/silgraphite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/silgraphite/ChangeLog,v 1.23 2011/09/18 14:57:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/silgraphite/ChangeLog,v 1.24 2011/10/04 17:48:42 jer Exp $
+
+  04 Oct 2011; Jeroen Roovers <jer@gentoo.org> silgraphite-2.3.1.ebuild:
+  Stable for HPPA (bug #355085).
 
   18 Sep 2011; Raúl Porcel <armin76@gentoo.org> silgraphite-2.3.1.ebuild:
   alpha/ia64/sh/sparc stable wrt #355085
