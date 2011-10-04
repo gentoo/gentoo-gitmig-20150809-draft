@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/testtools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.31 2011/08/20 09:04:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testtools/ChangeLog,v 1.32 2011/10/04 16:28:38 jer Exp $
+
+  04 Oct 2011; Jeroen Roovers <jer@gentoo.org> testtools-0.9.11.ebuild:
+  Stable for HPPA (bug #383751).
 
   20 Aug 2011; Christian Faulhammer <fauli@gentoo.org> testtools-0.9.11.ebuild:
   enable Python APIs again as reported in bug 379755 by Martin von Gagern
