@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.32.1-r1.ebuild,v 1.1 2011/09/10 16:29:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.32.1-r1.ebuild,v 1.2 2011/10/04 21:16:23 pacho Exp $
 
 EAPI="4"
 
@@ -92,7 +92,8 @@ RDEPEND="
 	>=gnome-base/gnome-panel-2.32.1
 	>=gnome-base/gnome-menus-2.30.5
 	>=x11-themes/gnome-icon-theme-2.31.0
-	>=x11-themes/gnome-themes-2.32.1
+	>=x11-themes/gnome-themes-2.32.1-r1
+	>=x11-themes/gnome-themes-standard-3.0.2
 	>=gnome-extra/deskbar-applet-2.32.0
 	>=gnome-extra/hamster-applet-2.32.1
 
@@ -187,4 +188,13 @@ pkg_postinst() {
 	elog "be useful for other packages that do not use the new file"
 	elog "monitoring API yet that the new glib provides."
 	elog
+
+	ewarn "If you are running gtk3 apps inside Gnome2 desktop you will"
+	ewarn "need to follow one of the following steps to get a better"
+	ewarn "look and feel for them:"
+	ewarn "- Use gnome-appearance-properties to select a theme with"
+	ewarn "  support for gtk2 and gtk3, like Adwaita."
+	ewarn "- Symlink your local ~/.config/gtk-3.0 to the gtk3 theme"
+	ewarn "  you would like to use, for example running:"
+	ewarn "  $ ln -s /usr/share/themes/Adwaita/gtk-3.0/ .config/gtk-3.0"
 }
