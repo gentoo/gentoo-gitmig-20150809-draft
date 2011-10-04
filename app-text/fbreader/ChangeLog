@@ -1,6 +1,9 @@
 # ChangeLog for app-text/fbreader
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.22 2011/10/01 17:22:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbreader/ChangeLog,v 1.23 2011/10/04 11:40:08 nativemad Exp $
+
+  04 Oct 2011; Andreas Schuerch <nativemad@gentoo.org> fbreader-0.12.10.ebuild:
+  x86 stable, bug 384479
 
   01 Oct 2011; Markos Chandras <hwoarang@gentoo.org> fbreader-0.12.10.ebuild:
   Stable on amd64 wrt bug #384479
