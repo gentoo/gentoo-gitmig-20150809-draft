@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.8.10.ebuild,v 1.2 2011/10/04 09:37:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.8.10.ebuild,v 1.3 2011/10/04 17:56:21 flameeyes Exp $
 
 inherit webapp eutils depend.apache confutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="RT is an enterprise-grade ticketing system"
 HOMEPAGE="http://www.bestpractical.com/rt/"
 SRC_URI="http://download.bestpractical.com/pub/${PN}/release/${P}.tar.gz"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-2"
 IUSE="mysql postgres fastcgi lighttpd"
 
@@ -63,6 +63,9 @@ DEPEND="
 	virtual/perl-Scalar-List-Utils
 	>=virtual/perl-Storable-2.08
 	virtual/perl-Time-HiRes
+	dev-perl/File-ShareDir
+	dev-perl/HTML-RewriteAttributes
+	dev-perl/Data-ICal
 
 	!lighttpd? ( dev-perl/Apache-DBI )
 	lighttpd? ( dev-perl/FCGI )

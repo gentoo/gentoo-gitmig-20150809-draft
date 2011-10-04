@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.62 2011/10/04 09:37:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.63 2011/10/04 17:56:21 flameeyes Exp $
+
+  04 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org> rt-3.8.10.ebuild:
+  QA: add the other three missing dependencies, drop ~ppc keyword as the
+  packages are not keyworded.
 
   04 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org> rt-3.8.10.ebuild:
   QA: fix two dependencies on minimum version requirement (see bug #385591).
