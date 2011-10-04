@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libafterimage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.34 2011/09/29 13:27:32 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.35 2011/10/04 16:18:52 nativemad Exp $
+
+  04 Oct 2011; Andreas Schuerch <nativemad@gentoo.org>
+  libafterimage-1.20.ebuild:
+  x86 stable, see bug 384707
 
   29 Sep 2011; Tony Vroon <chainsaw@gentoo.org> libafterimage-1.20.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" & Elijah
