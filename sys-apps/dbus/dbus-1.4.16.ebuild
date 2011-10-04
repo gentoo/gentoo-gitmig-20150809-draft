@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.16.ebuild,v 1.1 2011/09/26 21:04:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.16.ebuild,v 1.2 2011/10/04 08:06:11 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils multilib flag-o-matic python systemd virtualx
@@ -95,6 +95,7 @@ src_configure() {
 		--with-dbus-user=messagebus
 		$(systemd_with_unitdir)
 		--localstatedir=/var
+		--docdir=/usr/share/doc/${PF}
 		--htmldir=/usr/share/doc/${PF}/html"
 
 	mkdir "${BD}"
@@ -163,7 +164,6 @@ src_install() {
 	keepdir /etc/dbus-1/session.d/
 
 	dodoc AUTHORS ChangeLog HACKING NEWS README doc/TODO || die
-	dohtml doc/*.html || die
 
 	cd "${BD}"
 	emake DESTDIR="${D}" install || die
