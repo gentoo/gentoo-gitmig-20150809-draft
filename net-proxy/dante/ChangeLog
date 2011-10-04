@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/dante
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/ChangeLog,v 1.59 2011/08/04 16:33:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/ChangeLog,v 1.60 2011/10/04 20:14:21 robbat2 Exp $
+
+  04 Oct 2011; Robin H. Johnson <robbat2@gentoo.org> files/dante-sockd-init:
+  lsof shows files like /.sock{dshmem,slock}XXXXXXX being created by sockd, and
+  failing when / is read-only. Force them to be created in /var/lock instead.
 
 *dante-1.3.2 (04 Aug 2011)
 
