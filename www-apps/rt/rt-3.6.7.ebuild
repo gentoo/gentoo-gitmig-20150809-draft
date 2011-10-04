@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.6.7.ebuild,v 1.2 2011/07/08 10:23:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.6.7.ebuild,v 1.3 2011/10/04 18:21:29 xarthisius Exp $
 
 inherit webapp eutils depend.apache confutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="RT is an enterprise-grade ticketing system"
 HOMEPAGE="http://www.bestpractical.com/rt/"
 SRC_URI="http://download.bestpractical.com/pub/${PN}/release/${P}.tar.gz"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-2"
 IUSE="mysql postgres fastcgi lighttpd"
 
