@@ -1,6 +1,12 @@
 # ChangeLog for app-text/libwpg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpg/ChangeLog,v 1.3 2011/09/03 09:59:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpg/ChangeLog,v 1.4 2011/10/04 15:21:42 scarabeus Exp $
+
+*libwpg-0.2.1 (04 Oct 2011)
+
+  04 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> -libwpg-0.2.0-r1.ebuild,
+  +libwpg-0.2.1.ebuild:
+  Bump libwpg to latest. Drop older 0.2.
 
   03 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> -libwpg-0.1.3-r1.ebuild,
   -libwpg-0.2.0.ebuild:

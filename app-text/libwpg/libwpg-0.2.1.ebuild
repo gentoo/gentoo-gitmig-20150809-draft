@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpg/libwpg-0.2.0-r1.ebuild,v 1.1 2011/08/04 16:25:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpg/libwpg-0.2.1.ebuild,v 1.1 2011/10/04 15:21:42 scarabeus Exp $
 
-EAPI="4"
+EAPI=4
 
-inherit alternatives autotools
+inherit alternatives
 
 DESCRIPTION="C++ library to read and parse graphics in WPG"
 HOMEPAGE="http://libwpg.sourceforge.net/libwpg.htm"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0.2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="doc"
+IUSE="doc static-libs"
 
 RDEPEND="app-text/libwpd:0.9[tools]"
 DEPEND="${RDEPEND}
@@ -22,18 +22,13 @@ DEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
 	!<app-text/libwpd-0.1.3-r1"
 
-src_prepare() {
-	sed -i -e 's: -Werror::g' configure.in || die
-	# FIXME: Touching configure.in triggers maintainer-mode always
-	eautoreconf
-}
-
 src_configure() {
 	econf \
+		--disable-werror \
 		--program-suffix=-${SLOT} \
-		--disable-dependency-tracking \
 		--docdir="${EPREFIX%/}/usr/share/doc/${PF}" \
-		$(use_with doc docs)
+		$(use_with doc docs) \
+		$(use_enable static-libs static)
 }
 
 src_install() {
