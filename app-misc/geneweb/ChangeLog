@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/geneweb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/ChangeLog,v 1.16 2011/09/29 07:02:31 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/ChangeLog,v 1.17 2011/10/04 12:01:18 chainsaw Exp $
+
+  04 Oct 2011; Tony Vroon <chainsaw@gentoo.org> geneweb-5.02.ebuild:
+  Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney, Elijah
+  "Armageddon" El Lazkani & Tomáš "Mepho" Pružina in bug #384751.
 
   29 Sep 2011; Alfredo Tupone <tupone@gentoo.org> geneweb-5.02.ebuild,
   +files/geneweb-5.02-amd64.patch:
