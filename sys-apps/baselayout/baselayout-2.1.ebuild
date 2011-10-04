@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.1.ebuild,v 1.1 2011/10/03 03:59:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.1.ebuild,v 1.2 2011/10/04 18:36:31 vapier Exp $
 
 inherit eutils multilib
 
@@ -21,6 +21,17 @@ pkg_setup() {
 }
 
 # Create our multilib dirs - the Makefile has no knowledge of this
+multilib_warn() {
+	local syms=$1 dirs=$2 def_libdir=$3
+
+	[ -z "${syms}${dirs}" ] && return
+
+	ewarn "Your system profile has SYMLINK_LIB=${SYMLINK_LIB}, so that means"
+	if [ -z "${syms}" ] ; then
+		ewarn "you need to have these paths as symlinks to ${def_libdir}:"
+		ewarn "$1"
+	fi
+}
 multilib_layout() {
 	local libdir libdirs=$(get_all_libdirs) def_libdir=$(get_abi_LIBDIR $DEFAULT_ABI)
 	: ${libdirs:=lib}	# it isn't that we don't trust multilib.eclass...
@@ -38,16 +49,13 @@ multilib_layout() {
 			fi
 		done
 	done
-	if [ -n "${syms}" ] ; then
-		ewarn "Based on your profile, these paths should be directories:"
-		ewarn "${syms}"
-		ewarn "Failure to fix this may result in a broken system."
-		echo
-	fi
-	if [ -n "${dirs}" ] ; then
-		ewarn "Based on your profile, these paths should be symlinks:"
-		ewarn "${dirs}"
-		ewarn "Failure to fix this may result in a broken system."
+	if [ -n "${syms}${dirs}" ] ; then
+		ewarn "Your system profile has SYMLINK_LIB=${SYMLINK_LIB:-no}, so that means you need to"
+		ewarn "have these paths configured as follows:"
+		[ -n "${dirs}" ] && ewarn "symlinks to '${def_libdir}':${dirs}"
+		[ -n "${syms}" ] && ewarn "directories:${syms}"
+		ewarn "The ebuild will attempt to fix these, but only for trivial conversions."
+		ewarn "If things fail, you will need to manually create/move the directories."
 		echo
 	fi
 
