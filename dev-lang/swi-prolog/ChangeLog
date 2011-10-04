@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.295 2011/10/03 07:51:26 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.296 2011/10/04 07:07:29 keri Exp $
+
+  04 Oct 2011; <keri@gentoo.org> swi-prolog-5.10.5-r1.ebuild,
+  swi-prolog-5.11.28.ebuild:
+  Do not use internal zlib header handling; this invalidates the need for
+  zutil.h
 
 *swi-prolog-5.11.28 (03 Oct 2011)
 
