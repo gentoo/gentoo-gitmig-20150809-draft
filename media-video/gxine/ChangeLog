@@ -1,6 +1,12 @@
 # ChangeLog for media-video/gxine
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.110 2011/06/22 02:30:29 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.111 2011/10/04 13:10:48 ssuominen Exp $
+
+*gxine-0.5.906 (04 Oct 2011)
+
+  04 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> +gxine-0.5.906.ebuild,
+  +files/gxine-0.5.906-endif.patch:
+  Version bump.
 
   22 Jun 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gxine-0.5.905-r1.ebuild:
   Fix spidermonkey version for the new versioning scheme
