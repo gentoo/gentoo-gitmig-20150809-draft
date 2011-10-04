@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.286 2011/09/10 08:54:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.287 2011/10/04 20:36:48 pacho Exp $
+
+  04 Oct 2011; Pacho Ramos <pacho@gentoo.org>
+  files/vte-0.28.0-fix-gdk-targets.patch:
+  Fix gdk-targets patch to prevent underlinking problems, bug #369387 and patch
+  by Naohiro Aota.
 
 *vte-0.28.2-r300 (10 Sep 2011)
 *vte-0.28.2-r200 (10 Sep 2011)
