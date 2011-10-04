@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.77 2011/09/24 17:19:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.78 2011/10/04 21:02:29 phajdan.jr Exp $
+
+*v8-3.4.14.28 (04 Oct 2011)
+
+  04 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> -v8-3.4.6.2.ebuild,
+  +v8-3.4.14.28.ebuild, v8-9999.ebuild:
+  Version bump for stable channel release. Remove old.
 
   24 Sep 2011; Fabian Groffen <grobian@gentoo.org> v8-3.4.12.1.ebuild:
   Fix libaries on Darwin, keyworded ~x64-macos and ~x86-macos, bug #354601
