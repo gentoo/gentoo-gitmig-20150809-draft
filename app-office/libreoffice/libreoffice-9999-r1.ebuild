@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.33 2011/10/03 09:28:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.34 2011/10/04 08:03:40 scarabeus Exp $
 
 EAPI=3
 
@@ -73,8 +73,9 @@ unset ADDONS_URI
 unset EXT_URI
 unset ADDONS_SRC
 
-IUSE="binfilter +branding dbus debug eds gnome +graphite gstreamer gtk +jemalloc
-kde ldap mysql nsplugin odk opengl pdfimport svg templates test +vba +webdav"
+IUSE="binfilter +branding +cmis dbus debug eds gnome +graphite gstreamer gtk
++jemalloc kde ldap mysql nsplugin odk opengl pdfimport svg templates test +vba
++webdav"
 LICENSE="LGPL-3"
 SLOT="0"
 [[ ${PV} == *9999* ]] || KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
@@ -95,7 +96,6 @@ COMMON_DEPEND="
 	app-text/libwpd:0.9[tools]
 	app-text/libwpg:0.2
 	>=app-text/libwps-0.2.2
-	dev-cpp/libcmis
 	dev-db/unixODBC
 	dev-libs/expat
 	>=dev-libs/glib-2.18
@@ -117,6 +117,7 @@ COMMON_DEPEND="
 	x11-libs/libXinerama
 	x11-libs/libXrandr
 	x11-libs/libXrender
+	cmis? ( dev-cpp/libcmis )
 	dbus? ( >=dev-libs/dbus-glib-0.94 )
 	eds? ( gnome-extra/evolution-data-server )
 	gnome? ( gnome-base/gconf:2 )
@@ -367,7 +368,6 @@ src_configure() {
 		--with-system-jars \
 		--with-system-db \
 		--with-system-dicts \
-		--with-system-libcmis \
 		--with-system-libvisio \
 		--with-system-libexttextcat \
 		--with-system-translate-toolkit \
@@ -438,6 +438,7 @@ src_configure() {
 		$(use_enable vba) \
 		$(use_enable vba activex-component) \
 		$(use_enable webdav neon) \
+		$(use_with cmis) \
 		$(use_with java) \
 		$(use_with ldap openldap) \
 		$(use_with mysql system-mysql-cppconn) \
