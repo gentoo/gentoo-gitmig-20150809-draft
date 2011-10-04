@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/man-pages
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.162 2011/09/25 19:25:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/ChangeLog,v 1.163 2011/10/04 17:55:28 vapier Exp $
+
+*man-pages-3.35 (04 Oct 2011)
+
+  04 Oct 2011; Mike Frysinger <vapier@gentoo.org> +man-pages-3.35.ebuild:
+  Version bump.
 
   25 Sep 2011; Mike Frysinger <vapier@gentoo.org> man-pages-3.34.ebuild:
   Use elog rather than einfo #384337 by William Throwe.
