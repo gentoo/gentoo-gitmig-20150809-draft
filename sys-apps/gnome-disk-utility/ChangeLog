@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/gnome-disk-utility
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.54 2011/10/01 20:44:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/ChangeLog,v 1.55 2011/10/04 20:59:55 pacho Exp $
+
+*gnome-disk-utility-3.0.2-r300 (04 Oct 2011)
+*gnome-disk-utility-3.0.2-r200 (04 Oct 2011)
+
+  04 Oct 2011; Pacho Ramos <pacho@gentoo.org> -gnome-disk-utility-3.0.2.ebuild,
+  +gnome-disk-utility-3.0.2-r200.ebuild, +gnome-disk-utility-3.0.2-r300.ebuild,
+  +files/gnome-disk-utility-3.0.2-nautilus2-compat.patch:
+  Have a version prepared to work on Gnome2 with nautilus-2 and another one for
+  Gnome3.
 
   01 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
   gnome-disk-utility-2.32.1.ebuild, gnome-disk-utility-2.32.1-r1.ebuild,
