@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/kpathsea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.19 2011/09/18 14:24:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.20 2011/10/04 17:36:56 jer Exp $
+
+  04 Oct 2011; Jeroen Roovers <jer@gentoo.org> kpathsea-6.0.1_p20110627.ebuild:
+  Stable for HPPA (bug #355085).
 
   18 Sep 2011; Raúl Porcel <armin76@gentoo.org>
   kpathsea-6.0.1_p20110627.ebuild:
