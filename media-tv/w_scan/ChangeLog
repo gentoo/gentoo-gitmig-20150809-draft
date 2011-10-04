@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/w_scan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/ChangeLog,v 1.18 2011/09/05 15:49:34 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/ChangeLog,v 1.19 2011/10/04 11:58:14 chainsaw Exp $
+
+  04 Oct 2011; Tony Vroon <chainsaw@gentoo.org> w_scan-20110702.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
+  "idella4" Delaney in bug #373499.
 
 *w_scan-20110702 (05 Sep 2011)
 
