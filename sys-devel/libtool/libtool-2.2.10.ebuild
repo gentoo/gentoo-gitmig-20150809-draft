@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.2.10.ebuild,v 1.12 2011/08/22 18:20:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.2.10.ebuild,v 1.13 2011/10/04 20:42:26 vapier Exp $
 
 EAPI="2" #356089
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.lzma"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="vanilla"
+IUSE="test vanilla"
 
 RDEPEND="sys-devel/gnuconfig
 	>=sys-devel/autoconf-2.62
@@ -23,8 +23,8 @@ RDEPEND="sys-devel/gnuconfig
 	!=sys-devel/automake-1.10
 	!=sys-devel/libtool-2*:1.5"
 DEPEND="${RDEPEND}
-	>=sys-devel/binutils-2.20
-	|| ( app-arch/xz-utils app-arch/lzma-utils )"
+	test? ( !<sys-devel/binutils-2.20 )
+	app-arch/xz-utils"
 
 src_prepare() {
 	if ! use vanilla ; then

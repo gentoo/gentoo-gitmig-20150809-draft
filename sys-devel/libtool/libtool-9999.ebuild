@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-9999.ebuild,v 1.8 2011/09/24 06:39:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-9999.ebuild,v 1.9 2011/10/04 20:42:26 vapier Exp $
 
 EAPI="2" #356089
 
@@ -22,13 +22,13 @@ HOMEPAGE="http://www.gnu.org/software/libtool/"
 
 LICENSE="GPL-2"
 SLOT="2"
-IUSE="static-libs vanilla"
+IUSE="static-libs test vanilla"
 
 RDEPEND="sys-devel/gnuconfig
 	>=sys-devel/autoconf-2.65
 	>=sys-devel/automake-1.11.1"
 DEPEND="${RDEPEND}
-	>=sys-devel/binutils-2.20
+	test? ( !<sys-devel/binutils-2.20 )
 	app-arch/xz-utils"
 [[ ${PV} == "9999" ]] && DEPEND+=" sys-apps/help2man"
 

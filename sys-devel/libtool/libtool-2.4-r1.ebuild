@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.4-r1.ebuild,v 1.9 2011/08/22 18:20:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.4-r1.ebuild,v 1.10 2011/10/04 20:42:26 vapier Exp $
 
 EAPI="2" #356089
 
@@ -15,14 +15,14 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="vanilla"
+IUSE="test vanilla"
 
 RDEPEND="sys-devel/gnuconfig
 	!<sys-devel/autoconf-2.62:2.5
 	!<sys-devel/automake-1.11.1:1.11
 	!=sys-devel/libtool-2*:1.5"
 DEPEND="${RDEPEND}
-	>=sys-devel/binutils-2.20
+	test? ( !<sys-devel/binutils-2.20 )
 	app-arch/xz-utils"
 
 src_unpack() {
