@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/fragroute
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/ChangeLog,v 1.21 2010/11/29 20:45:55 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/ChangeLog,v 1.22 2011/10/04 08:16:30 nativemad Exp $
+
+  04 Oct 2011; Andreas Schuerch <nativemad@gentoo.org> fragroute-1.2-r3.ebuild:
+  x86 stable, see bug 366371
 
 *fragroute-1.2-r3 (29 Nov 2010)
 

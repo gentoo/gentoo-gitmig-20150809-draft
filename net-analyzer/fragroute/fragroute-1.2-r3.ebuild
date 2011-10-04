@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/fragroute-1.2-r3.ebuild,v 1.1 2010/11/29 20:45:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fragroute/fragroute-1.2-r3.ebuild,v 1.2 2011/10/04 08:16:30 nativemad Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.monkey.org/~dugsong/fragroute/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="
