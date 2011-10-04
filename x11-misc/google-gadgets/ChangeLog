@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/google-gadgets
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.41 2011/07/13 14:50:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.42 2011/10/04 13:48:05 voyageur Exp $
+
+  04 Oct 2011; Bernard Cafarelli <voyageur@gentoo.org>
+  google-gadgets-0.11.2.ebuild:
+  Add support >=>=zlib-1.2.5.1-r1, bug #385477
 
   13 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   google-gadgets-0.11.2.ebuild:

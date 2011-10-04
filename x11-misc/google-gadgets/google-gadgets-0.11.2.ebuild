@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.11.2.ebuild,v 1.11 2011/07/13 14:50:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.11.2.ebuild,v 1.12 2011/10/04 13:48:05 voyageur Exp $
 
 EAPI=2
 
@@ -84,6 +84,11 @@ src_prepare() {
 	sed -i -r \
 		-e '/^GGL_SYSDEPS_INCLUDE_DIR/ c\GGL_SYSDEPS_INCLUDE_DIR=$GGL_INCLUDE_DIR' \
 		configure.ac||die "404"
+
+	# zlib-1.2.5.1-r1 renames the OF macro in zconf.h, bug 385477.
+	sed -i '1i#define OF(x) x' \
+		third_party/unzip/ioapi.h || die "zlib sed failed"
+
 	eautoreconf
 }
 
