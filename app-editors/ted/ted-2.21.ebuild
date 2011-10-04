@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.21.ebuild,v 1.4 2011/09/13 13:22:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.21.ebuild,v 1.5 2011/10/04 21:35:14 phajdan.jr Exp $
 
 EAPI=2
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.nluug.nl/pub/editors/ted/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="x11-libs/gtk+:2
