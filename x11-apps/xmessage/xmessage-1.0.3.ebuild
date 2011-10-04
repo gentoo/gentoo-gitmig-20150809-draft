@@ -1,8 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xmessage/xmessage-1.0.3.ebuild,v 1.9 2010/08/02 18:32:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xmessage/xmessage-1.0.3.ebuild,v 1.10 2011/10/04 21:20:18 chithanh Exp $
 
-inherit x-modular
+EAPI=4
+
+inherit xorg-2
 
 DESCRIPTION="display a message or query in a window (X-based /bin/echo)"
 

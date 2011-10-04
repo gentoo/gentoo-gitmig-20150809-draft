@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xmessage
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xmessage/ChangeLog,v 1.50 2010/08/03 09:20:54 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xmessage/ChangeLog,v 1.51 2011/10/04 21:20:18 chithanh Exp $
+
+  04 Oct 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xmessage-1.0.3.ebuild:
+  Migrate to xorg-2.eclass
 
   03 Aug 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -xmessage-1.0.2-r1.ebuild:
