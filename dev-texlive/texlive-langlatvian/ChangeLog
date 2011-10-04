@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-langlatvian
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langlatvian/ChangeLog,v 1.17 2011/09/18 16:29:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langlatvian/ChangeLog,v 1.18 2011/10/04 18:31:23 jer Exp $
+
+  04 Oct 2011; Jeroen Roovers <jer@gentoo.org> texlive-langlatvian-2010.ebuild:
+  Stable for HPPA (bug #355085).
 
   18 Sep 2011; Raúl Porcel <armin76@gentoo.org>
   texlive-langlatvian-2010.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-langturkmen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langturkmen/ChangeLog,v 1.12 2011/09/18 16:52:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langturkmen/ChangeLog,v 1.13 2011/10/04 18:35:29 jer Exp $
+
+  04 Oct 2011; Jeroen Roovers <jer@gentoo.org> texlive-langturkmen-2010.ebuild:
+  Stable for HPPA (bug #355085).
 
   18 Sep 2011; Raúl Porcel <armin76@gentoo.org>
   texlive-langturkmen-2010.ebuild:

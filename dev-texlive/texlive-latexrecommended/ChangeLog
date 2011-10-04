@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-latexrecommended
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexrecommended/ChangeLog,v 1.50 2011/09/18 17:38:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexrecommended/ChangeLog,v 1.51 2011/10/04 18:37:02 jer Exp $
+
+  04 Oct 2011; Jeroen Roovers <jer@gentoo.org>
+  texlive-latexrecommended-2010.ebuild:
+  Stable for HPPA (bug #355085).
 
   18 Sep 2011; Raúl Porcel <armin76@gentoo.org>
   texlive-latexrecommended-2010.ebuild:

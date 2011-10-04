@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-publishers/texlive-publishers-2010.ebuild,v 1.6 2011/09/18 17:24:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-publishers/texlive-publishers-2010.ebuild,v 1.7 2011/10/04 18:39:50 jer Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ DESCRIPTION="TeXLive Support for publishers, theses, standards, conferences, etc
 
 LICENSE="GPL-2 Apache-2.0 as-is GPL-1 GPL-3 LPPL-1.2 LPPL-1.3 public-domain "
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 DEPEND=">=dev-texlive/texlive-latex-2010
 !<dev-texlive/texlive-latexextra-2010

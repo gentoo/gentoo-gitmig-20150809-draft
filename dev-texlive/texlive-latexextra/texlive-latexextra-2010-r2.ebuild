@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexextra/texlive-latexextra-2010-r2.ebuild,v 1.6 2011/09/18 17:36:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latexextra/texlive-latexextra-2010-r2.ebuild,v 1.7 2011/10/04 18:01:32 jer Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ DESCRIPTION="TeXLive LaTeX supplementary packages"
 
 LICENSE="GPL-2 as-is BSD GPL-1 GPL-2 GPL-3 LGPL-2 LPPL-1.2 LPPL-1.3 public-domain "
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 DEPEND=">=dev-texlive/texlive-latex-2010
 >=dev-texlive/texlive-pictures-2010

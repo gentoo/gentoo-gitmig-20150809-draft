@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-documentation-mongolian
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-mongolian/ChangeLog,v 1.38 2011/09/18 15:29:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-mongolian/ChangeLog,v 1.39 2011/10/04 18:11:55 jer Exp $
+
+  04 Oct 2011; Jeroen Roovers <jer@gentoo.org>
+  texlive-documentation-mongolian-2010.ebuild:
+  Stable for HPPA (bug #355085).
 
   18 Sep 2011; Raúl Porcel <armin76@gentoo.org>
   texlive-documentation-mongolian-2010.ebuild:

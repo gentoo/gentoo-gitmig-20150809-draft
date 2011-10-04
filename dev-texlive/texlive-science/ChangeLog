@@ -1,6 +1,9 @@
 # ChangeLog for dev-texlive/texlive-science
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-science/ChangeLog,v 1.40 2011/09/18 17:26:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-science/ChangeLog,v 1.41 2011/10/04 18:40:06 jer Exp $
+
+  04 Oct 2011; Jeroen Roovers <jer@gentoo.org> texlive-science-2010.ebuild:
+  Stable for HPPA (bug #355085).
 
   18 Sep 2011; Raúl Porcel <armin76@gentoo.org> texlive-science-2010.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #355085
