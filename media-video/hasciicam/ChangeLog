@@ -1,6 +1,10 @@
 # ChangeLog for media-video/hasciicam
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/hasciicam/ChangeLog,v 1.5 2011/03/28 18:07:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/hasciicam/ChangeLog,v 1.6 2011/10/04 11:16:04 chainsaw Exp $
+
+  04 Oct 2011; Tony Vroon <chainsaw@gentoo.org> hasciicam-1.1.1.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah "Armageddon" El Lazkani in bug #385357.
 
 *hasciicam-1.1.1 (28 Mar 2011)
 
