@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-4.1.0.ebuild,v 1.2 2011/09/01 08:16:24 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-4.1.4.ebuild,v 1.1 2011/10/04 18:01:01 polynomial-c Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ RDEPEND="x11-base/xorg-server
 	|| ( x11-drivers/xf86-input-mouse
 	    x11-drivers/xf86-input-evdev )"
 DEPEND="${RDEPEND}
-	=dev-util/kbuild-0.1.5*
+	>=dev-util/kbuild-0.1.999
 	>=dev-lang/yasm-0.6.2
 	sys-devel/dev86
 	sys-power/iasl
@@ -67,8 +67,11 @@ src_install() {
 		cd "${S}/out/linux.${ARCH}/release/bin/additions"
 		insinto /usr/$(get_libdir)/xorg/modules/input
 
+		# xorg-server-1.11
+		if has_version "=x11-base/xorg-server-1.11*" ; then
+				newins vboxmouse_drv_111.so vboxmouse_drv.so
 		# xorg-server-1.10
-		if has_version "=x11-base/xorg-server-1.10*" ; then
+		elif has_version "=x11-base/xorg-server-1.10*" ; then
 				newins vboxmouse_drv_110.so vboxmouse_drv.so
 		# xorg-server-1.9
 		else

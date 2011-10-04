@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.1.0.ebuild,v 1.2 2011/09/01 08:14:31 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/xf86-video-virtualbox-4.1.4.ebuild,v 1.1 2011/10/04 18:01:34 polynomial-c Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ IUSE="dri"
 
 RDEPEND="x11-base/xorg-server[-minimal]"
 DEPEND="${RDEPEND}
-		=dev-util/kbuild-0.1.5*
+		>=dev-util/kbuild-0.1.999
 		=dev-lang/python-2*
 		>=dev-lang/yasm-0.6.2
 		sys-devel/dev86
@@ -119,8 +119,11 @@ src_install() {
 		cd "${S}/out/linux.${ARCH}/release/bin/additions"
 		insinto /usr/$(get_libdir)/xorg/modules/drivers
 
+		# xorg-server-1.11.x
+		if has_version ">=x11-base/xorg-server-1.11" ; then
+				newins vboxvideo_drv_111.so vboxvideo_drv.so
 		# xorg-server-1.10.x
-		if has_version ">=x11-base/xorg-server-1.10" ; then
+		elif has_version ">=x11-base/xorg-server-1.10" ; then
 				newins vboxvideo_drv_110.so vboxvideo_drv.so
 		# xorg-server-1.9.x
 		else
