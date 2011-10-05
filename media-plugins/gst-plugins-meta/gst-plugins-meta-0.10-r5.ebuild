@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/gst-plugins-meta-0.10-r5.ebuild,v 1.10 2011/08/20 17:41:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/gst-plugins-meta-0.10-r5.ebuild,v 1.11 2011/10/05 17:52:45 xarthisius Exp $
 
 DESCRIPTION="Meta ebuild to pull in gst plugins for apps"
 HOMEPAGE="http://www.gentoo.org"
 
 LICENSE="GPL-2"
 SLOT="0.10"
-KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ~ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="aac a52 alsa dv dvb dvd esd ffmpeg flac lame mp3 mpeg musepack mythtv ogg oss pulseaudio taglib theora v4l2 vorbis wavpack X xv"
 
 RDEPEND="=media-libs/gstreamer-0.10*
