@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libwpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.81 2011/09/02 14:14:20 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpd/ChangeLog,v 1.82 2011/10/05 17:10:35 xarthisius Exp $
+
+  05 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> libwpd-0.8.14-r1.ebuild:
+  ppc/ppc64 stable wrt #369909
 
   02 Sep 2011; Jeremy Olexa <darkside@gentoo.org> libwpd-0.9.3.ebuild:
   fix docdir for Gentoo Prefix, bug 381529

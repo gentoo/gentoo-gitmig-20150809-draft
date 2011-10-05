@@ -1,6 +1,9 @@
 # ChangeLog for app-text/iso-codes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.111 2011/08/20 18:31:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/iso-codes/ChangeLog,v 1.112 2011/10/05 17:09:42 xarthisius Exp $
+
+  05 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> iso-codes-3.24.2.ebuild:
+  ppc/ppc64 stable wrt #369909
 
   20 Aug 2011; Jeroen Roovers <jer@gentoo.org> iso-codes-3.24.2.ebuild:
   Stable for HPPA (bug #369909).
