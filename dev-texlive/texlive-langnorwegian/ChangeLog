@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langnorwegian
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langnorwegian/ChangeLog,v 1.38 2011/10/04 18:32:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langnorwegian/ChangeLog,v 1.39 2011/10/05 15:39:32 aballier Exp $
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org>
+  -texlive-langnorwegian-2008.ebuild, -texlive-langnorwegian-2009.ebuild:
+  remove old
 
   04 Oct 2011; Jeroen Roovers <jer@gentoo.org>
   texlive-langnorwegian-2010.ebuild:
