@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Getopt-Long
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Getopt-Long/ChangeLog,v 1.43 2011/09/05 06:55:36 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Getopt-Long/ChangeLog,v 1.44 2011/10/05 20:21:27 aballier Exp $
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org>
+  perl-Getopt-Long-2.380.0-r1.ebuild:
+  keyword ~x86-fbsd
 
   05 Sep 2011; Fabian Groffen <grobian@gentoo.org>
   perl-Getopt-Long-2.380.0-r1.ebuild:
