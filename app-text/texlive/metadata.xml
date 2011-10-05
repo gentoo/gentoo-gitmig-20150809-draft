@@ -5,8 +5,6 @@
 <use>
   <flag name='context'>Add support for the ConTeXt format
     (<pkg>dev-texlive/texlive-context</pkg>)</flag>
-  <flag name='cyrillic'>Add support for Cyrillic
-    (<pkg>dev-texlive/texlive-langcyrillic</pkg>)</flag>
   <flag name='detex'>Add support for <pkg>dev-tex/detex</pkg>, a filter program
 	  that removes the LaTeX (or TeX) control sequences</flag>
   <flag name='dvi2tty'>Add support for <pkg>dev-tex/dvi2tty</pkg> to preview

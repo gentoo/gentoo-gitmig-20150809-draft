@@ -1,6 +1,10 @@
 # ChangeLog for app-text/texlive
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.84 2011/10/04 18:41:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.85 2011/10/05 14:13:33 aballier Exp $
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org> -texlive-2008.ebuild,
+  -texlive-2009.ebuild:
+  remove old
 
   04 Oct 2011; Jeroen Roovers <jer@gentoo.org> texlive-2010-r2.ebuild:
   Stable for HPPA (bug #355085).
