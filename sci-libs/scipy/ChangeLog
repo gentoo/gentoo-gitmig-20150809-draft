@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.69 2011/06/21 14:46:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.70 2011/10/05 19:30:26 jlec Exp $
+
+  05 Oct 2011; Justin Lecher <jlec@gentoo.org> scipy-0.9.0.ebuild,
+  scipy-0.9.0-r1.ebuild, metadata.xml:
+  Added USE=lapack deps for numpy
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> scipy-0.8.0.ebuild,
   scipy-0.9.0.ebuild, scipy-0.9.0-r1.ebuild:
