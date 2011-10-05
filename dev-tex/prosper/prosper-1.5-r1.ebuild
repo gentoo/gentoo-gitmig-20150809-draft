@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/prosper/prosper-1.5-r1.ebuild,v 1.8 2010/01/03 11:41:56 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/prosper/prosper-1.5-r1.ebuild,v 1.9 2011/10/05 20:58:08 aballier Exp $
 
 inherit latex-package
 
@@ -16,9 +16,10 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 S=${WORKDIR}/${PN}
 IUSE=""
+DEPEND=""
+RDEPEND="dev-texlive/texlive-pstricks"
 
 src_install(){
-	cd ${S}
 	latex-package_src_doinstall styles
 	insinto ${TEXMF}/tex/latex/${PN}/img/
 	doins img/*.{ps,gif}
