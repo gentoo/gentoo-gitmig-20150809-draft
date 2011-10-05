@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/mysql2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql2/ChangeLog,v 1.10 2011/08/20 09:06:43 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql2/ChangeLog,v 1.11 2011/10/05 11:45:46 graaff Exp $
+
+*mysql2-0.2.13 (05 Oct 2011)
+
+  05 Oct 2011; Hans de Graaff <graaff@gentoo.org> +mysql2-0.2.13.ebuild:
+  Version bump.
 
 *mysql2-0.3.7 (20 Aug 2011)
 
