@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.261 2011/08/20 18:35:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.262 2011/10/05 17:14:33 xarthisius Exp $
+
+  05 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> pygtk-2.24.0-r1.ebuild:
+  ppc/ppc64 stable wrt #369909
 
   20 Aug 2011; Jeroen Roovers <jer@gentoo.org> pygtk-2.24.0-r1.ebuild:
   Stable for HPPA (bug #369909).
