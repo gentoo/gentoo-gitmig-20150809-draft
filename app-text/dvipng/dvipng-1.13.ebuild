@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/dvipng-1.13.ebuild,v 1.8 2010/10/02 12:41:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/dvipng-1.13.ebuild,v 1.9 2011/10/05 19:25:23 aballier Exp $
 
 EAPI="2"
 inherit eutils
@@ -22,7 +22,7 @@ RDEPEND="media-libs/gd[jpeg,png]
 	truetype? ( >=media-libs/freetype-2.1.5 )"
 DEPEND="${RDEPEND}
 	virtual/texi2dvi
-	test? ( || ( dev-texlive/texlive-fontsrecommended app-text/ptex ) )"
+	test? ( dev-texlive/texlive-fontsrecommended )"
 
 src_configure() {
 	if ! use t1lib; then

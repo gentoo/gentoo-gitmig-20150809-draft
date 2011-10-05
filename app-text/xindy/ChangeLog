@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xindy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xindy/ChangeLog,v 1.18 2011/09/11 23:51:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xindy/ChangeLog,v 1.19 2011/10/05 19:21:01 aballier Exp $
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org> xindy-2.4.ebuild:
+  remove ptex dep as it is going away
 
   11 Sep 2011; Tim Harder <radhermit@gentoo.org> -xindy-2.3.ebuild,
   -files/xindy-2.3-clisp-2.48.patch:

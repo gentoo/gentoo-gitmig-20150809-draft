@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-3.13-r2.ebuild,v 1.17 2010/11/24 13:45:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/jadetex-3.13-r2.ebuild,v 1.18 2011/10/05 19:23:00 aballier Exp $
 
 inherit latex-package
 
@@ -15,8 +15,8 @@ IUSE=""
 RESTRICT="test"
 
 DEPEND=">=app-text/openjade-1.3.1
-	|| ( dev-texlive/texlive-fontsrecommended app-text/ptex )
-	|| ( dev-texlive/texlive-genericrecommended app-text/ptex )"
+	dev-texlive/texlive-fontsrecommended
+	dev-texlive/texlive-genericrecommended"
 
 has_tetex_3() {
 	if has_version '>=app-text/tetex-2.96' || has_version '>=app-text/ptex-3.1.4.20041026' || has_version '>=app-text/texlive-2005' || has_version '>=app-text/texlive-core-2007'; then

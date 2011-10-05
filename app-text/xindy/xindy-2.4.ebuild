@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xindy/xindy-2.4.ebuild,v 1.7 2011/08/13 06:29:35 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xindy/xindy-2.4.ebuild,v 1.8 2011/10/05 19:21:01 aballier Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ IUSE="doc"
 
 RDEPEND="virtual/latex-base
 	>=dev-lisp/clisp-2.44.1-r1
-	|| ( dev-texlive/texlive-langcyrillic app-text/ptex )"
+	dev-texlive/texlive-langcyrillic"
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	sys-devel/flex"

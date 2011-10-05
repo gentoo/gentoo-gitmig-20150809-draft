@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.9.ebuild,v 1.4 2011/07/24 12:02:03 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.9.ebuild,v 1.5 2011/10/05 19:27:14 aballier Exp $
 
 EAPI="2"
 
@@ -25,8 +25,9 @@ RDEPEND=">=dev-lang/ocaml-3.11.2[ocamlopt?]
 	app-text/ghostscript-gpl
 	x11-libs/libXinerama"
 DEPEND="${RDEPEND}
-	|| ( ( dev-texlive/texlive-pstricks dev-texlive/texlive-pictures dev-texlive/texlive-latexextra )
-		app-text/ptex )
+	dev-texlive/texlive-pstricks
+	dev-texlive/texlive-pictures
+	dev-texlive/texlive-latexextra
 	x11-proto/xineramaproto
 	dev-ml/findlib
 	app-text/htmlc

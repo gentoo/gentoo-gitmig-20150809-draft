@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dvipng
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.77 2011/08/28 13:15:15 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipng/ChangeLog,v 1.78 2011/10/05 19:25:23 aballier Exp $
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org> dvipng-1.13.ebuild,
+  dvipng-1.14.ebuild:
+  remove ptex dep as it is going away
 
   28 Aug 2011; Fabian Groffen <grobian@gentoo.org> dvipng-1.14.ebuild,
   +files/dvipng-1.14-wait.patch:
