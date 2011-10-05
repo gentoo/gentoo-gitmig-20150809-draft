@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/latex2rtf-2.1.0.ebuild,v 1.1 2010/05/25 13:51:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/latex2rtf-2.1.0.ebuild,v 1.2 2011/10/05 19:04:41 aballier Exp $
 
 inherit toolchain-funcs
 
@@ -17,10 +17,9 @@ RDEPEND="virtual/latex-base
 	media-gfx/imagemagick"
 DEPEND="${RDEPEND}
 	doc? ( virtual/texi2dvi )
-	test? ( || (
-		( dev-texlive/texlive-langgerman dev-texlive/texlive-fontsrecommended )
-		app-text/ptex
-		)
+	test? (
+		dev-texlive/texlive-langgerman
+		dev-texlive/texlive-fontsrecommended
 		dev-tex/latex2html
 	)"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtex2html/bibtex2html-1.96.ebuild,v 1.3 2011/07/23 11:25:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtex2html/bibtex2html-1.96.ebuild,v 1.4 2011/10/05 19:07:15 aballier Exp $
 
 EAPI=2
 
@@ -23,7 +23,7 @@ RESTRICT="test"
 # manual.tex needs fullpage.sty
 DEPEND=">=dev-lang/ocaml-3.10[ocamlopt?]
 	doc? ( virtual/latex-base
-	|| ( dev-texlive/texlive-latexextra app-text/ptex )
+		dev-texlive/texlive-latexextra
 		dev-tex/hevea )"
 # We need tex-base for bibtex but also some bibtex styles, so we use latex-base
 RDEPEND="virtual/latex-base"

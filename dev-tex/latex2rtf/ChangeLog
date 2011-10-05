@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/latex2rtf
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.33 2010/05/25 13:51:34 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.34 2011/10/05 19:04:40 aballier Exp $
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org> latex2rtf-1.9.19.ebuild,
+  latex2rtf-2.1.0.ebuild:
+  remove ptex dep as it is going away
 
 *latex2rtf-2.1.0 (25 May 2010)
 
