@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/coccinelle-0.2.5-r2.ebuild,v 1.2 2011/07/23 15:47:43 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/coccinelle-0.2.5-r2.ebuild,v 1.3 2011/10/05 19:01:26 aballier Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ RDEPEND="python? ( dev-lang/python )
 # dev-texlive/texlive-fontsextra contains 'ifsym.sty'
 DEPEND="${RDEPEND}
 	doc? ( virtual/latex-base
-		|| ( dev-texlive/texlive-latexextra app-text/ptex )
+		dev-texlive/texlive-latexextra
 		dev-texlive/texlive-fontsextra )"
 
 src_configure() {
