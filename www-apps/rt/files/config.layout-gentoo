@@ -9,6 +9,7 @@
   libdir:		${prefix}/lib
   datadir:		${prefix}/share
   htmldir:		HTMLDIR
+  fontdir:		${datadir}/fonts
   manualdir:		${datadir}/doc
   localstatedir:	${prefix}/var
   logfiledir:		${localstatedir}/log
