@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.66 2011/10/05 12:58:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.67 2011/10/05 15:53:36 flameeyes Exp $
+
+  05 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org> rt-3.8.10.ebuild:
+  Add another missing dependency.
 
   05 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   files/config.layout-gentoo:
