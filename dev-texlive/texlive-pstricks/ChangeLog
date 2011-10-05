@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-pstricks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pstricks/ChangeLog,v 1.44 2011/10/04 18:39:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pstricks/ChangeLog,v 1.45 2011/10/05 14:29:32 aballier Exp $
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org>
+  -texlive-pstricks-2008-r1.ebuild, -texlive-pstricks-2009.ebuild:
+  remove old
 
   04 Oct 2011; Jeroen Roovers <jer@gentoo.org> texlive-pstricks-2010.ebuild:
   Stable for HPPA (bug #355085).

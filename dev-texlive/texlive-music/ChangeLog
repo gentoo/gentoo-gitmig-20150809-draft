@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-music
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-music/ChangeLog,v 1.39 2011/10/04 18:38:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-music/ChangeLog,v 1.40 2011/10/05 14:43:42 aballier Exp $
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org> -texlive-music-2008.ebuild,
+  -texlive-music-2009.ebuild:
+  remove old
 
   04 Oct 2011; Jeroen Roovers <jer@gentoo.org> texlive-music-2010.ebuild:
   Stable for HPPA (bug #355085).

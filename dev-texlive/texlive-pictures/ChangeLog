@@ -1,6 +1,11 @@
 # ChangeLog for dev-texlive/texlive-pictures
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pictures/ChangeLog,v 1.50 2011/10/04 17:59:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pictures/ChangeLog,v 1.51 2011/10/05 14:38:28 aballier Exp $
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org>
+  -texlive-pictures-2008-r1.ebuild, -texlive-pictures-2009.ebuild,
+  -texlive-pictures-2010.ebuild:
+  remove old
 
   04 Oct 2011; Jeroen Roovers <jer@gentoo.org> texlive-pictures-2010-r1.ebuild:
   Stable for HPPA (bug #355085).
