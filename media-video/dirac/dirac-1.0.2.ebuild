@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dirac/dirac-1.0.2.ebuild,v 1.8 2009/05/30 09:17:32 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dirac/dirac-1.0.2.ebuild,v 1.9 2011/10/05 18:56:00 aballier Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -19,8 +19,7 @@ IUSE="mmx debug doc"
 DEPEND="doc? ( app-doc/doxygen
 	virtual/latex-base
 	media-gfx/graphviz
-	|| ( app-text/dvipdfm
-		app-text/ptex )
+	app-text/dvipdfm
 		)"
 RDEPEND=""
 
