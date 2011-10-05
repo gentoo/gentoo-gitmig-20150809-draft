@@ -1,6 +1,24 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.876 2011/10/03 18:14:17 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.877 2011/10/05 17:33:56 zmedico Exp $
+
+*portage-2.2.0_alpha61 (05 Oct 2011)
+
+  05 Oct 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha61.ebuild:
+  2.2.0_alpha61 version bump. This includes all of the fixes in
+  portage-2.1.10.21. Bug #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.10.21 (05 Oct 2011)
+
+  05 Oct 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.21.ebuild:
+  2.1.10.21 version bump. This fixes bug #375265 (display relevant parent
+  in autounmask comments), bug #375613 (fix dispatch-conf replace-wscomments
+  pattern), bug #385133 (repos.conf trust-authoritative-cache settings),
+  bug #385341 (ValueError triggered by elog messages from gccxml),
+  bug #385391 (prefer slot conflict display over blocker display), and
+  bug #385413 (fix emerge --changelog to avoid unnecessary newline output
+  when there is nothing to display). Bug #381649 tracks all bugs fixed since
+  portage-2.1.10.11.
 
   03 Oct 2011; Joseph Jezak <josejx@gentoo.org> portage-2.1.10.11.ebuild:
   Marked ppc/ppc64 stable for bug #380677.
