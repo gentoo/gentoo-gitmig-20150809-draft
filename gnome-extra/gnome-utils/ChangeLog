@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.222 2011/08/19 11:54:28 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.223 2011/10/05 17:41:26 xarthisius Exp $
+
+  05 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  gnome-utils-2.32.0-r2.ebuild:
+  ppc/ppc64 stable wrt #369909
 
 *gnome-utils-3.0.1 (19 Aug 2011)
 
