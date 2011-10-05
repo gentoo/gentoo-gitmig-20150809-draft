@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/htmldoc-1.8.27-r2.ebuild,v 1.2 2011/03/20 20:19:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/htmldoc-1.8.27-r2.ebuild,v 1.3 2011/10/05 14:00:05 ssuominen Exp $
 
 EAPI=1
 
@@ -35,8 +35,10 @@ src_unpack() {
 	# make sure not to use the libs htmldoc ships with
 	mkdir foo ; mv jpeg foo/ ; mv png foo/ ; mv zlib foo/
 
-	epatch "${FILESDIR}"/${PN}-sscanf-overflows.patch \
-		"${FILESDIR}"/${PN}-fortify-fail.patch
+	epatch \
+		"${FILESDIR}"/${PN}-sscanf-overflows.patch \
+		"${FILESDIR}"/${PN}-fortify-fail.patch \
+		"${FILESDIR}"/${PN}-libpng15.patch
 
 	sed -i "s:^#define DOCUMENTATION \"\$prefix/share/doc/htmldoc\":#define DOCUMENTATION \"\$prefix/share/doc/${PF}/html\":" \
 		configure
