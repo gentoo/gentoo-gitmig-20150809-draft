@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-genericextra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-genericextra/ChangeLog,v 1.41 2011/10/04 18:22:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-genericextra/ChangeLog,v 1.42 2011/10/05 17:45:18 aballier Exp $
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org>
+  -texlive-genericextra-2008.ebuild, -texlive-genericextra-2009.ebuild:
+  remove old
 
   04 Oct 2011; Jeroen Roovers <jer@gentoo.org>
   texlive-genericextra-2010.ebuild:
