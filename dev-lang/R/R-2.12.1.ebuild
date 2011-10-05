@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.12.1.ebuild,v 1.4 2011/06/23 13:03:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.12.1.ebuild,v 1.5 2011/10/05 19:20:04 aballier Exp $
 
 EAPI=2
 
@@ -40,9 +40,8 @@ DEPEND="${CDEPEND}
 	dev-util/pkgconfig
 	doc? (
 		virtual/latex-base
-		|| (
-			dev-texlive/texlive-fontsrecommended
-			app-text/ptex ) )"
+		dev-texlive/texlive-fontsrecommended
+		)"
 
 RDEPEND="${CDEPEND}
 	app-arch/unzip
