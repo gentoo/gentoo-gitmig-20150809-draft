@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.152 2011/02/28 15:38:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.153 2011/10/05 02:27:08 vapier Exp $
+
+  05 Oct 2011; Mike Frysinger <vapier@gentoo.org> elfutils-0.146.ebuild,
+  elfutils-0.148.ebuild, elfutils-0.149.ebuild, elfutils-0.150.ebuild,
+  elfutils-0.151.ebuild, elfutils-0.152.ebuild:
+  Drop forced gcc/binutils/glibc upgrade since these versions are long stable.
 
   28 Feb 2011; Brent Baude <ranger@gentoo.org> elfutils-0.149.ebuild:
   stable ppc, bug 348407

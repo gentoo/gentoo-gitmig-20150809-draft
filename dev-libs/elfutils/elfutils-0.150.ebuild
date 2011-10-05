@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.150.ebuild,v 1.1 2010/12/11 06:41:09 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.150.ebuild,v 1.2 2011/10/05 02:27:08 vapier Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="https://fedorahosted.org/releases/e/l/elfutils/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2-with-exceptions"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
-IUSE="bzip2 lzma nls zlib elibc_glibc"
+IUSE="bzip2 lzma nls zlib"
 
 # This pkg does not actually seem to compile currently in a uClibc
 # environment (xrealloc errs), but we need to ensure that glibc never
@@ -20,12 +20,9 @@ RDEPEND="zlib? ( >=sys-libs/zlib-1.2.2.3 )
 	bzip2? ( app-arch/bzip2 )
 	lzma? ( app-arch/xz-utils )"
 DEPEND="${RDEPEND}
-	elibc_glibc? ( !prefix? ( >=sys-libs/glibc-2.7 ) )
 	nls? ( sys-devel/gettext )
 	>=sys-devel/flex-2.5.4a
 	sys-devel/m4
-	>=sys-devel/binutils-2.15.90.0.1
-	>=sys-devel/gcc-4.1.2
 	!dev-libs/libelf"
 
 src_unpack() {
