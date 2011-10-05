@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5754 2011/10/05 17:33:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5755 2011/10/05 19:16:02 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org> updates/4Q-2011:
+  move obsolete texlive packages to their new names, as suggested by Matt
+  Turner on -dev ml
 
   05 Oct 2011; Alexis Ballier <aballier@gentoo.org> package.mask:
   mask dev-texlive/texlive-documentation-greek

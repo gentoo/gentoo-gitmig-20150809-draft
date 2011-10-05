@@ -1,1 +1,4 @@
 move app-text/libtextcat app-text/libexttextcat
+move dev-texlive/texlive-psutils dev-texlive/texlive-fontutils
+move dev-texlive/texlive-langukenglish dev-texlive/texlive-langenglish
+move dev-texlive/texlive-langarab dev-texlive/texlive-langarabic
