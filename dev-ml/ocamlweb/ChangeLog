@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocamlweb
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ChangeLog,v 1.14 2009/05/30 08:47:59 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ChangeLog,v 1.15 2011/10/05 19:11:58 aballier Exp $
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org> ocamlweb-1.37.ebuild:
+  remove ptex dep as it is going away
 
   30 May 2009; Ulrich Mueller <ulm@gentoo.org> ocamlweb-1.37.ebuild:
   Remove app-text/tetex from dependencies, bug 227443.
