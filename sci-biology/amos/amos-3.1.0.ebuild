@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/amos/amos-3.1.0.ebuild,v 1.4 2011/10/01 03:34:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/amos/amos-3.1.0.ebuild,v 1.5 2011/10/05 19:51:18 jlec Exp $
 
 EAPI=4
 
@@ -19,6 +19,4 @@ RDEPEND="${DEPEND}
 	dev-perl/Statistics-Descriptive
 	sci-biology/mummer"
 
-src_compile() {
-	emake -j1
-}
+MAKEOPTS+=" -j1"

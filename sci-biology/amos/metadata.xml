@@ -7,6 +7,6 @@
 	</maintainer>
 	<herd>sci-biology</herd>
 	<use>
-		<flag name='qt'>Compile the hawkeye assembly viewer</flag>
+		<flag name="qt">Compile the hawkeye assembly viewer</flag>
 	</use>
 </pkgmetadata>
