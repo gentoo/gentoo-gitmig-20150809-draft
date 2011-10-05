@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5756 2011/10/05 19:22:13 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5757 2011/10/05 19:51:44 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org> base/package.use.mask:
+  mask media-libs/libass[harfbuzz] as it does not build with the current
+  version in the tree
 
   05 Oct 2011; Jeremy Olexa <darkside@gentoo.org> default/linux/make.defaults:
   Remove USE={python,perl} from default profile, as discussed/announced. Bug
