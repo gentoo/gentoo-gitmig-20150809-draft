@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.39 2011/08/22 04:46:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.40 2011/10/05 17:46:20 graaff Exp $
 
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -68,7 +68,7 @@
 # (e.g. selenium's firefox driver extension). When set this argument is
 # passed to "grep -E" to remove reporting of these shared objects.
 
-inherit eutils toolchain-funcs
+inherit eutils java-utils-2 toolchain-funcs
 
 EXPORT_FUNCTIONS src_unpack src_prepare src_configure src_compile src_test src_install pkg_setup
 
@@ -394,6 +394,8 @@ ruby-ng_pkg_setup() {
 	# before doing anything; by leaving the parameters empty we know
 	# it's a special case.
 	_ruby_each_implementation
+
+	use ruby_targets_jruby && java-pkg_setup-vm
 }
 
 # @FUNCTION: ruby-ng_src_unpack
