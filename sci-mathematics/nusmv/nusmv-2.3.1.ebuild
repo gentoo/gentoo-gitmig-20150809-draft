@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nusmv/nusmv-2.3.1.ebuild,v 1.6 2010/01/13 16:48:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nusmv/nusmv-2.3.1.ebuild,v 1.7 2011/10/05 18:44:32 aballier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -38,8 +38,7 @@ IUSE="minisat examples"
 RDEPEND="dev-libs/expat"
 DEPEND="${RDEPEND}
 		virtual/latex-base
-		|| ( ( dev-texlive/texlive-latexextra )
-			app-text/ptex )
+		dev-texlive/texlive-latexextra
 		app-text/ghostscript-gpl
 		www-client/lynx
 		dev-lang/perl"

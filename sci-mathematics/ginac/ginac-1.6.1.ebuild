@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ginac-1.6.1.ebuild,v 1.1 2011/07/26 17:42:36 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ginac-1.6.1.ebuild,v 1.2 2011/10/05 18:46:53 aballier Exp $
 
 EAPI=4
 inherit eutils
@@ -20,8 +20,8 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen
 		   media-gfx/transfig
 		   virtual/texi2dvi
-		   || ( dev-texlive/texlive-fontsrecommended
-				app-text/ptex ) )"
+		   dev-texlive/texlive-fontsrecommended
+		 )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.5.1-pkgconfig.patch

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.4-r3.ebuild,v 1.5 2011/07/25 10:13:48 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.4-r3.ebuild,v 1.6 2011/10/05 18:44:23 aballier Exp $
 
 EAPI="2"
 inherit flag-o-matic xemacs-elisp-common autotools
@@ -42,8 +42,7 @@ RDEPEND="dev-libs/libpcre
 DEPEND="${RDEPEND}
 	virtual/latex-base
 	sys-apps/texinfo
-	|| ( dev-texlive/texlive-genericrecommended
-		 app-text/ptex )
+	dev-texlive/texlive-genericrecommended
 	dev-util/gperf
 	dev-util/pkgconfig"
 
