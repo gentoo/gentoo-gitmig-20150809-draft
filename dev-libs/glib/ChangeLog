@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.484 2011/09/28 11:19:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.485 2011/10/05 16:51:48 xarthisius Exp $
+
+  05 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> glib-2.28.8.ebuild:
+  ppc/ppc64 stable wrt #369909
 
   28 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> glib-2.30.0.ebuild:
   Use virtual/libffi instead of dev-libs/libffi in case we have to switch to
