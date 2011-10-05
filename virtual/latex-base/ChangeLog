@@ -1,6 +1,9 @@
 # ChangeLog for virtual/latex-base
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/latex-base/ChangeLog,v 1.11 2011/08/28 13:17:27 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/latex-base/ChangeLog,v 1.12 2011/10/05 18:28:13 aballier Exp $
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org> latex-base-1.0.ebuild:
+  remove ptex and old texlive deps as they are going away
 
   28 Aug 2011; Fabian Groffen <grobian@gentoo.org> latex-base-1.0.ebuild:
   Marked ~x64-macos
