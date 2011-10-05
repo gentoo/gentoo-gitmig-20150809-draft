@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.32.2.ebuild,v 1.5 2011/10/05 17:05:55 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.32.2.ebuild,v 1.6 2011/10/05 22:08:26 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -46,6 +46,10 @@ src_prepare() {
 	# Use absolute path to GNU tar since star doesn't have the same
 	# options. On Gentoo, star is /usr/bin/tar, GNU tar is /bin/tar
 	epatch "${FILESDIR}"/${PN}-2.10.3-use_bin_tar.patch
+
+	# Drop DEPRECATED flags as configure option doesn't do it, bug #385453
+	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' \
+		copy-n-paste/Makefile.am copy-n-paste/Makefile.in || die
 }
 
 src_install() {
