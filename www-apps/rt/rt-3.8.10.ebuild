@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.8.10.ebuild,v 1.3 2011/10/04 17:56:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.8.10.ebuild,v 1.4 2011/10/05 11:17:04 flameeyes Exp $
 
 inherit webapp eutils depend.apache confutils
 
@@ -150,24 +150,35 @@ src_unpack() {
 }
 
 src_compile() {
-	local web="apache"
-	use lighttpd && web="lighttpd"
-
-	local dbtype dba
+	local web myconf depsconf
 
 	if use mysql; then
-		dbtype="--with-db-type=mysql"
-		dba="--with-db-dba=root"
+		myconf+=" --with-db-type=mysql --with-db-dba=root"
+		depsconf+=" --with-mysql"
 	fi
 	if use postgres;then
-		dbtype="--with-db-type=Pg"
-		dba="--with-db-dba=postgres"
+		myconf+=" --with-db-type=Pg --with-db-dba=postgres"
+		depsconf+=" --with-postgresql"
 	fi
 	if use postgres && use mysql; then
 		ewarn "Both mysql and postgres USE flags enabled, default is mysql."
 		ewarn "You can set the default value in RT_SiteConfig before DB init."
-		dbtype="--with-db-type=mysql"
-		dba="--with-db-dba=root"
+		myconf+=" --with-db-type=mysql --with-db-dba=root"
+		depsconf+=" --with-mysql"
+	fi
+
+	if use fastcgi ; then
+		myconf+=" --with-web-handler=fastcgi"
+		web="apache"
+		depsconf+=" --with-fastcgi"
+	elif use lighttpd ; then
+		myconf+=" --with-web-handler=fastcgi"
+		web="lighttpd"
+		depsconf+=" --with-fastcgi"
+	else
+		myconf+=" --with-web-handler=modperl2"
+		web="apache"
+		depsconf+=" --with-modperl2"
 	fi
 
 	./configure --enable-layout=Gentoo \
@@ -177,20 +188,10 @@ src_compile() {
 		--with-rt-group=rt \
 		--with-web-user=${web} \
 		--with-web-group=${web} \
-		${dbtype} ${dba}
+		${myconf}
 
 	# check for missing deps and ask to report if something is broken
-	local myconf="--verbose \
-		$(enable_extension_withonly mysql mysql) \
-		$(enable_extension_withonly postgresql postgres) \
-		$(enable_extension_withonly fastcgi fastcgi) \
-		$(enable_extension_withonly fastcgi lighttpd)" \
-
-	if ! use fastcgi && ! use lighttpd; then
-		myconf="${myconf} --with-modperl2"
-	fi
-
-	/usr/bin/perl ./sbin/rt-test-dependencies ${myconf} > "${T}"/t
+	/usr/bin/perl ./sbin/rt-test-dependencies ${depsconf} > "${T}"/t
 	if grep -q "MISSING" "${T}"/t; then
 		ewarn "Missing Perl dependency!"
 		ewarn

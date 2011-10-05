@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.64 2011/10/04 18:21:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.65 2011/10/05 11:17:04 flameeyes Exp $
+
+  05 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org> rt-3.8.10.ebuild:
+  QA: calculate configuration only once to make sure that the dependency check
+  and the actual configuration are in sync; this should address bug #385595.
 
   04 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> rt-3.6.7.ebuild:
   ppc keywords dropped wrt #385591
