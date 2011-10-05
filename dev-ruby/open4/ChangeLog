@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/open4
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/open4/ChangeLog,v 1.8 2011/09/10 07:36:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/open4/ChangeLog,v 1.9 2011/10/05 06:23:29 graaff Exp $
+
+*open4-1.2.0 (05 Oct 2011)
+
+  05 Oct 2011; Hans de Graaff <graaff@gentoo.org> +open4-1.2.0.ebuild:
+  Version bump.
 
   10 Sep 2011; Hans de Graaff <graaff@gentoo.org> open4-1.1.0.ebuild:
   Add ree18.
