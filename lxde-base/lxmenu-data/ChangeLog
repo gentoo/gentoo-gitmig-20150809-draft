@@ -1,6 +1,10 @@
 # ChangeLog for lxde-base/lxmenu-data
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxmenu-data/ChangeLog,v 1.13 2011/07/27 08:49:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxmenu-data/ChangeLog,v 1.14 2011/10/05 07:20:33 nativemad Exp $
+
+  05 Oct 2011; Andreas Schuerch <nativemad@gentoo.org>
+  lxmenu-data-0.1.2.ebuild:
+  x86 stable, bug 385189
 
 *lxmenu-data-0.1.2 (27 Jul 2011)
 

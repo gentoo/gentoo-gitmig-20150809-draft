@@ -1,6 +1,10 @@
 # ChangeLog for lxde-base/lxterminal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxterminal/ChangeLog,v 1.22 2011/07/28 07:16:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxterminal/ChangeLog,v 1.23 2011/10/05 07:27:56 nativemad Exp $
+
+  05 Oct 2011; Andreas Schuerch <nativemad@gentoo.org>
+  lxterminal-0.1.11.ebuild:
+  x86 stable, bug 385189
 
 *lxterminal-0.1.11 (28 Jul 2011)
 
