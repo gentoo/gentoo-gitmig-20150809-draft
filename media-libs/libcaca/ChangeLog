@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcaca
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.96 2011/02/09 07:53:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.97 2011/10/05 18:57:44 aballier Exp $
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org> libcaca-0.99_beta17.ebuild:
+  remove ptex dep as it is going away
 
   09 Feb 2011; Tim Harder <radhermit@gentoo.org> libcaca-0.99_beta17.ebuild:
   Fix compile error when the imlib USE flag is selected and the X USE flag
