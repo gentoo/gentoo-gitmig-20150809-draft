@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.107 2011/08/09 05:40:01 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.108 2011/10/05 19:34:13 aballier Exp $
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org> matplotlib-1.0.1-r1.ebuild:
+  remove ptex dep as it is going away
 
   09 Aug 2011; Sébastien Fabbro <bicatali@gentoo.org>
   matplotlib-1.0.1-r1.ebuild, +files/matplotlib-1.0.1-linux3.patch:

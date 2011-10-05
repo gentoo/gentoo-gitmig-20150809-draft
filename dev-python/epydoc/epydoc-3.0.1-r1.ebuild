@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/epydoc-3.0.1-r1.ebuild,v 1.9 2010/07/06 20:25:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/epydoc-3.0.1-r1.ebuild,v 1.10 2011/10/05 19:33:13 aballier Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -22,7 +22,7 @@ IUSE="doc latex X"
 DEPEND=""
 RDEPEND="dev-python/docutils
 	latex? ( virtual/latex-base
-		|| ( dev-texlive/texlive-latexextra app-text/ptex )
+			 dev-texlive/texlive-latexextra
 	)"
 RESTRICT_PYTHON_ABIS="3.*"
 
