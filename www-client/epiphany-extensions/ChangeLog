@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.149 2011/08/19 14:55:28 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.150 2011/10/05 18:00:52 xarthisius Exp $
+
+  05 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  epiphany-extensions-2.32.0.ebuild:
+  ppc stable wrt #369909
 
 *epiphany-extensions-3.0.0-r1 (19 Aug 2011)
 
