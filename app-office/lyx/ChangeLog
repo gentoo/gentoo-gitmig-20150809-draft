@@ -1,6 +1,14 @@
 # ChangeLog for app-office/lyx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.235 2011/09/09 17:02:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.236 2011/10/05 19:32:13 aballier Exp $
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org> lyx-1.6.8.ebuild,
+  lyx-1.6.10.ebuild, lyx-2.0.0.ebuild, lyx-2.0.1.ebuild:
+  remove ptex dep as it is going away
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org> lyx-1.6.8.ebuild,
+  lyx-1.6.10.ebuild, lyx-2.0.0.ebuild, lyx-2.0.1.ebuild:
+  remove ptex dep as it is going away
 
   09 Sep 2011; Alexis Ballier <aballier@gentoo.org> -lyx-1.6.9.ebuild:
   remove old
