@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.55 2011/09/27 18:14:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.56 2011/10/05 14:17:52 aballier Exp $
 
 EAPI="4"
 
@@ -30,9 +30,10 @@ if [ "${PV#9999}" = "${PV}" ] ; then
 fi
 IUSE="
 	aac aacplus alsa amr bindist +bzip2 cdio celt cpudetection debug dirac doc
-	+encode faac frei0r gsm +hardcoded-tables ieee1394 jack jpeg2k mp3 network
-	openal oss pic qt-faststart rtmp schroedinger sdl speex static-libs test
-	theora threads truetype v4l v4l2 vaapi vdpau vorbis vpx X x264 xvid +zlib
+	+encode faac frei0r gsm +hardcoded-tables ieee1394 jack jpeg2k modplug mp3
+	network openal oss pic qt-faststart rtmp schroedinger sdl speex static-libs
+	test theora threads truetype v4l v4l2 vaapi vdpau vorbis vpx X x264 xvid
+	+zlib
 	"
 
 # String for CPU features in the useflag[:configure_option] form
@@ -66,6 +67,7 @@ RDEPEND="
 	ieee1394? ( media-libs/libdc1394 sys-libs/libraw1394 )
 	jack? ( media-sound/jack-audio-connection-kit )
 	jpeg2k? ( >=media-libs/openjpeg-1.3-r2 )
+	modplug? ( media-libs/libmodplug )
 	openal? ( >=media-libs/openal-1.1 )
 	rtmp? ( >=media-video/rtmpdump-2.2f )
 	sdl? ( >=media-libs/libsdl-1.2.13-r1[audio,video] )
@@ -155,7 +157,7 @@ src_configure() {
 
 	# Decoders
 	use amr && { myconf="${myconf} --enable-libopencore-amrwb --enable-libopencore-amrnb" ; version3=" --enable-version3" ; }
-	for i in celt gsm dirac rtmp schroedinger speex vpx; do
+	for i in celt gsm dirac modplug rtmp schroedinger speex vpx; do
 		use ${i} && myconf="${myconf} --enable-lib${i}"
 	done
 	use jpeg2k && myconf="${myconf} --enable-libopenjpeg"
