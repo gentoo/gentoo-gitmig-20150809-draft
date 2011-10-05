@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.11.ebuild,v 1.1 2011/08/14 13:48:22 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.11.ebuild,v 1.2 2011/10/05 13:19:17 nirbheek Exp $
 
 EAPI="4"
 
@@ -31,7 +31,6 @@ COMMON_DEPEND="
 RDEPEND="${COMMON_DEPEND}
 	media-gfx/shared-color-profiles"
 DEPEND="${COMMON_DEPEND}
-	app-text/docbook-sgml-utils
 	dev-libs/libxslt
 	>=dev-util/intltool-0.35
 	dev-util/pkgconfig

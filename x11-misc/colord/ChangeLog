@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/colord
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.2 2011/09/28 11:40:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.3 2011/10/05 13:19:17 nirbheek Exp $
+
+  05 Oct 2011; Nirbheek Chauhan <nirbheek@gentoo.org> colord-0.1.11.ebuild,
+  colord-0.1.12.ebuild:
+  docbook-sgml-utils is not needed with tarballs, pointed out by marienz
 
 *colord-0.1.12 (28 Sep 2011)
 
