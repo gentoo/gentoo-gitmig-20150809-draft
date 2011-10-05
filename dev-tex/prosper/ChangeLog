@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/prosper
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/prosper/ChangeLog,v 1.20 2010/01/03 11:41:55 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/prosper/ChangeLog,v 1.21 2011/10/05 20:54:54 aballier Exp $
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org> -prosper-1.00.4-r1.ebuild:
+  remove old
 
   03 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   prosper-1.5-r1.ebuild:
