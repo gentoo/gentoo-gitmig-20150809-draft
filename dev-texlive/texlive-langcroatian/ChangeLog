@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langcroatian
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcroatian/ChangeLog,v 1.39 2011/10/04 18:24:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langcroatian/ChangeLog,v 1.40 2011/10/05 16:31:14 aballier Exp $
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org>
+  -texlive-langcroatian-2008.ebuild, -texlive-langcroatian-2009.ebuild:
+  remove old
 
   04 Oct 2011; Jeroen Roovers <jer@gentoo.org>
   texlive-langcroatian-2010.ebuild:
