@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/dash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.86 2011/09/21 00:19:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.87 2011/10/05 05:52:56 maekke Exp $
+
+  05 Oct 2011; Markus Meier <maekke@gentoo.org> dash-0.5.5.1.7.ebuild:
+  arm stable, bug #383015
 
   21 Sep 2011; Jeroen Roovers <jer@gentoo.org> dash-0.5.5.1.7.ebuild:
   Stable for HPPA (bug #383015).
