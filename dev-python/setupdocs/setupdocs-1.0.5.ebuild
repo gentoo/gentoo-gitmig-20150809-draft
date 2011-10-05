@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setupdocs/setupdocs-1.0.5.ebuild,v 1.5 2011/01/27 10:01:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setupdocs/setupdocs-1.0.5.ebuild,v 1.6 2011/10/05 19:07:51 aballier Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -24,7 +24,7 @@ IUSE=""
 DEPEND="dev-python/setuptools
 	dev-python/sphinx
 	virtual/latex-base
-	|| ( dev-texlive/texlive-latexextra app-text/ptex )"
+	dev-texlive/texlive-latexextra"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"

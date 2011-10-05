@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/setupdocs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setupdocs/ChangeLog,v 1.21 2011/01/27 15:03:23 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setupdocs/ChangeLog,v 1.22 2011/10/05 19:07:51 aballier Exp $
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org> setupdocs-1.0.5.ebuild:
+  remove ptex dep as it is going away
 
   27 Jan 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -setupdocs-1.0.4.ebuild:
