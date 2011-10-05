@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.36 2011/10/03 20:25:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.37 2011/10/05 12:26:39 naota Exp $
+
+  05 Oct 2011; Naohiro Aota <naota@gentoo.org> mg-20110905.ebuild:
+  Add ~x86-fbsd
 
   03 Oct 2011; Jeroen Roovers <jer@gentoo.org> mg-20110905.ebuild:
   Marked ~hppa (bug #384639).
