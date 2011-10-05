@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r5.ebuild,v 1.3 2011/09/25 01:44:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r5.ebuild,v 1.4 2011/10/05 18:59:29 alexxy Exp $
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ HOMEPAGE="http://xen.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="api custom-cflags debug doc flask hvm ioemu pygrub screen xend"
+IUSE="api custom-cflags debug doc flask hvm qemu pygrub screen xend"
 
 CDEPEND="dev-lang/python
 	dev-python/lxml
@@ -77,7 +77,7 @@ QA_EXECSTACK="usr/share/xen/qemu/openbios-sparc32
 pkg_setup() {
 	export "CONFIG_LOMOUNT=y"
 
-	if use ioemu; then
+	if use qemu; then
 		export "CONFIG_IOEMU=y"
 	else
 		export "CONFIG_IOEMU=n"
@@ -123,6 +123,12 @@ pkg_setup() {
 
 	use api     && export "LIBXENAPI_BINDINGS=y"
 	use flask   && export "FLASK_ENABLE=y"
+
+	if use hvm && ! use qemu; then
+		elog "With qemu disabled, it is not possible to use HVM machines " \
+			"or PVM machines with a framebuffer attached in the kernel config" \
+			"The addition of use flag qemu is required when use flag hvm ise selected"
+	fi
 }
 
 src_prepare() {
@@ -160,8 +166,8 @@ src_prepare() {
 	if ! use pygrub; then
 		sed -e '/^SUBDIRS-$(PYTHON_TOOLS) += pygrub$/d' -i tools/Makefile
 	fi
-	# Don't bother with ioemu, only needed for fully virtualised guests
-	if ! use ioemu; then
+	# Don't bother with qemu, only needed for fully virtualised guests
+	if ! use qemu; then
 		sed -e "/^CONFIG_IOEMU := y$/d" -i config/*.mk
 		sed -e "s:install-tools\: tools/ioemu-dir:install-tools\: :g" \
 			-i Makefile
@@ -297,7 +303,7 @@ pkg_postinst() {
 		elog "support enable the hvm use flag."
 		elog "An x86 or amd64 multilib system is required to build HVM support."
 		echo
-		elog "The ioemu use flag has been removed and replaced with hvm."
+		elog "The qemu use flag has been removed and replaced with hvm."
 	fi
 	if use xend; then
 		echo
