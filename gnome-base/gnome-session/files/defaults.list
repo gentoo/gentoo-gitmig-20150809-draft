@@ -230,6 +230,7 @@ application/x-extension-m4a=totem.desktop
 application/x-extension-mp4=totem.desktop
 application/x-flac=totem.desktop
 application/x-flash-video=totem.desktop
+application/x-lyx=lyx.desktop
 application/x-matroska=totem.desktop
 application/x-netshow-channel=totem.desktop
 application/x-ogg=totem.desktop
