@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-2.6.ebuild,v 1.1 2011/09/10 11:10:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-2.6.ebuild,v 1.2 2011/10/05 21:47:49 pacho Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ IUSE="+subversion +git"
 RDEPEND="sys-apps/dbus[X]
 	>=dev-lang/mono-2.6.1
 	>=virtual/monodoc-2.0
-	>=dev-dotnet/mono-addins-0.5[gtk]
+	>=dev-dotnet/mono-addins-0.6[gtk]
 	>=dev-dotnet/gtk-sharp-2.12.9
 	>=dev-dotnet/glade-sharp-2.12.9
 	>=dev-dotnet/gnome-sharp-2.24.0
