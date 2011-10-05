@@ -1,6 +1,13 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.107 2011/09/25 14:41:59 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.108 2011/10/05 08:21:48 scarabeus Exp $
+
+*adobe-flash-11.0.1.152 (05 Oct 2011)
+
+  05 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -adobe-flash-11.0.1.129_rc201109061.ebuild, +adobe-flash-11.0.1.152.ebuild:
+  Add flash-11 final release because RCs are again unfetchable. Non-maintainer
+  commit.
 
   25 Sep 2011; Tony Vroon <chainsaw@gentoo.org> adobe-flash-10.3.183.10.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
