@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-Module-CoreList
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-CoreList/ChangeLog,v 1.43 2011/09/27 20:44:19 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-CoreList/ChangeLog,v 1.44 2011/10/05 15:49:32 jer Exp $
+
+  05 Oct 2011; Jeroen Roovers <jer@gentoo.org>
+  perl-Module-CoreList-2.540.0.ebuild:
+  Stable for HPPA (bug #384593).
 
   27 Sep 2011; Tony Vroon <chainsaw@gentoo.org>
   perl-Module-CoreList-2.540.0.ebuild:
