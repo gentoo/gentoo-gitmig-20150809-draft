@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/geneweb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/ChangeLog,v 1.18 2011/10/04 16:56:28 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/ChangeLog,v 1.19 2011/10/05 07:26:56 tupone Exp $
+
+  05 Oct 2011; Tupone Alfredo <tupone@gentoo.org> -geneweb-5.01-r1.ebuild,
+  -files/geneweb-5.01-gentoo.patch:
+  Removing old version affected by Bug #357977 by flameeyes@gentoo.org
 
   04 Oct 2011; Andreas Schuerch <nativemad@gentoo.org> geneweb-5.02.ebuild:
   x86 stable, bug 384751
