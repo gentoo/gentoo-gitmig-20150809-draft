@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/dsgui
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dsgui/ChangeLog,v 1.1 2011/10/05 20:22:21 scarabeus Exp $
+
+*dsgui-1.6.3 (05 Oct 2011)
+
+  05 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> +dsgui-1.6.3.ebuild,
+  +metadata.xml:
+  Initial commit, probably usefull for czech people only.
+
