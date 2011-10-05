@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/libedit-20110709.3.0.ebuild,v 1.5 2011/09/21 00:18:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/libedit-20110709.3.0.ebuild,v 1.6 2011/10/05 05:40:22 maekke Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.thrysoee.dk/editline/${MY_P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos"
 IUSE="static-libs"
 
 DEPEND=">=sys-libs/ncurses-5.7-r5[static-libs?]
