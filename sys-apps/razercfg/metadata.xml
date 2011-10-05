@@ -5,6 +5,7 @@
 <email>joker@gentoo.org</email>
 <name>Christian Birchinger</name>
 </maintainer>
+<herd>no-herd</herd>
 <longdescription>
 Utility to for advanced configuration of the following Razer mice: Krait, Lachesis,
 DeathAdder (Classic, 3500 DPI, Black Edition), Copperhead, Naga, Boomslang CE. The
@@ -12,4 +13,9 @@ tool architecture is based on "razerd", which is a background daemon doing all o
 the lowlevel privileged hardware accesses. The user interface tools are "razercfg",
 a commandline tool; and "qrazercfg", a QT4 based graphical device configuration tool. 
 </longdescription>
+<use>
+	<flag name='pm-utils'>Installs the pm-utils hooks for suspend/resume and
+		requires <pkg>sys-power/pm-utils</pkg></flag>
+	<flag name='qt4'>Installs a qt UI. Requires <pkg>dev-python/pygtk</pkg></flag>
+</use>
 </pkgmetadata>
