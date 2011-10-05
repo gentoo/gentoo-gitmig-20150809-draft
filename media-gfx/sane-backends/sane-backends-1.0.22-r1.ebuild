@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.22-r1.ebuild,v 1.7 2011/10/04 19:28:50 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.22-r1.ebuild,v 1.8 2011/10/05 18:58:37 aballier Exp $
 
 EAPI="4"
 
@@ -121,7 +121,7 @@ DEPEND="${RDEPEND}
 	v4l? ( sys-kernel/linux-headers )
 	doc? (
 		virtual/latex-base
-		|| ( dev-texlive/texlive-latexextra app-text/ptex )
+		dev-texlive/texlive-latexextra
 	)
 	>=sys-apps/sed-4"
 
