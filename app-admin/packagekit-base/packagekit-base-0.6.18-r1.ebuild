@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/packagekit-base-0.6.18.ebuild,v 1.3 2011/09/05 21:03:22 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/packagekit-base-0.6.18-r1.ebuild,v 1.1 2011/10/05 20:41:49 lxnay Exp $
 
 EAPI="3"
 
@@ -69,6 +69,7 @@ RESTRICT="test" # tests are failing atm
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.6.17-entropy-extra-downloads-support.patch"
+	epatch "${FILESDIR}/${PN}-entropy-add-forward-compatibility.patch"
 }
 
 src_configure() {

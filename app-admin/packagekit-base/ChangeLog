@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/packagekit-base
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/ChangeLog,v 1.6 2011/09/05 21:03:22 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/ChangeLog,v 1.7 2011/10/05 20:41:49 lxnay Exp $
+
+*packagekit-base-0.6.18-r1 (05 Oct 2011)
+
+  05 Oct 2011; Fabio Erculiani <lxnay@gentoo.org>
+  -packagekit-base-0.6.18.ebuild, +packagekit-base-0.6.18-r1.ebuild,
+  +files/packagekit-base-entropy-add-forward-compatibility.patch:
+  revision bump, add upstream patch
 
   05 Sep 2011; Fabio Erculiani <lxnay@gentoo.org>
   packagekit-base-0.6.18.ebuild:
