@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.37 2011/10/05 09:25:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.38 2011/10/05 14:25:41 scarabeus Exp $
 
 EAPI=3
 
@@ -57,6 +57,8 @@ unset DEV_URI
 ADDONS_SRC+=" ${ADDONS_URI}/fdb27bfe2dbe2e7b57ae194d9bf36bab-SampleICC-1.3.2.tar.gz"
 ADDONS_SRC+=" nsplugin? ( ${ADDONS_URI}/1f24ab1d39f4a51faf22244c94a6203f-xmlsec1-1.2.14.tar.gz )"
 ADDONS_SRC+=" java? ( ${ADDONS_URI}/17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip )"
+ADDONS_SRC+=" java? ( ${ADDONS_URI}/798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip )"
+ADDONS_SRC+=" java? ( ${ADDONS_URI}/35c94d2df8893241173de1d16b6034c0-swingExSrc.zip )"
 SRC_URI+=" ${ADDONS_SRC}"
 
 TDEPEND="${EXT_URI}/472ffb92d82cf502be039203c606643d-Sun-ODF-Template-Pack-en-US_1.0.0.oxt"
@@ -366,11 +368,7 @@ src_configure() {
 		--with-system-headers \
 		--with-system-libs \
 		--with-system-jars \
-		--with-system-libcmis \
-		--with-system-db \
 		--with-system-dicts \
-		--with-system-libvisio \
-		--with-system-libexttextcat \
 		--with-system-translate-toolkit \
 		--enable-cairo-canvas \
 		--enable-largefile \
