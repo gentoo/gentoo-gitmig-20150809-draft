@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p3-r1.ebuild,v 1.9 2010/07/04 19:09:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p3-r1.ebuild,v 1.10 2011/10/05 19:28:09 aballier Exp $
 
 inherit cannadic eutils multilib
 
@@ -19,7 +19,6 @@ IUSE=""
 DEPEND=">=sys-apps/sed-4
 	x11-misc/gccmakedep
 	x11-misc/imake"
-#	doc? ( app-text/ptex )
 RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"

@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/canna
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.69 2010/11/14 20:16:35 aballier Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.70 2011/10/05 19:28:09 aballier Exp $
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org> canna-3.7_p2.ebuild,
+  canna-3.7_p3.ebuild, canna-3.7_p3-r1.ebuild, canna-3.7_p3-r2.ebuild:
+  remove ptex dep as it is going away
 
   14 Nov 2010; Alexis Ballier <aballier@gentoo.org> canna-3.7_p3.ebuild,
   canna-3.7_p3-r2.ebuild:
