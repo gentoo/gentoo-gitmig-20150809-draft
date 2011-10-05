@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-publishers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-publishers/ChangeLog,v 1.41 2011/10/04 18:39:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-publishers/ChangeLog,v 1.42 2011/10/05 14:22:13 aballier Exp $
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org>
+  -texlive-publishers-2008.ebuild, -texlive-publishers-2009.ebuild:
+  remove old
 
   04 Oct 2011; Jeroen Roovers <jer@gentoo.org> texlive-publishers-2010.ebuild:
   Stable for HPPA (bug #355085).
