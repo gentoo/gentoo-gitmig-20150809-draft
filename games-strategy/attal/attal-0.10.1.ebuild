@@ -1,9 +1,9 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/attal-0.10.1.ebuild,v 1.8 2009/06/01 16:17:22 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/attal-0.10.1.ebuild,v 1.9 2011/10/05 22:11:09 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils qt4 games
+inherit eutils qt4-r2 games
 
 MY_P="${PN}-src-${PV}"
 DESCRIPTION="turn-based strategy game project"
