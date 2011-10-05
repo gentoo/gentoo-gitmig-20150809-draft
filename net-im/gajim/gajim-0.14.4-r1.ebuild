@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.14.4-r1.ebuild,v 1.2 2011/10/04 17:08:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.14.4-r1.ebuild,v 1.3 2011/10/05 17:06:22 chainsaw Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.gajim.org/downloads/$(get_version_component_range 1-2)/${P}.
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="avahi crypt dbus gmail gnome idle jingle libnotify networkmanager nls spell srv X xhtml"
 
 # needs EAPI=4
