@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/g-ctan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-ctan/ChangeLog,v 1.20 2011/09/24 19:28:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-ctan/ChangeLog,v 1.21 2011/10/05 20:19:21 aballier Exp $
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org> -g-ctan-2008.2.ebuild,
+  -g-ctan-2009.2-r1.ebuild:
+  remove versions working for and require TeX Live 2008 or 2009, they are
+  useless now as these versions are gone
 
 *g-ctan-2011.1 (24 Sep 2011)
 
