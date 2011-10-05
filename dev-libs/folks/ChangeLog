@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/folks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/ChangeLog,v 1.15 2011/09/15 21:24:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/folks/ChangeLog,v 1.16 2011/10/05 16:50:25 xarthisius Exp $
+
+  05 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> folks-0.4.3.ebuild:
+  ppc stable wrt #369909
 
   15 Sep 2011; Gilles Dartiguelongue <eva@gentoo.org> folks-0.2.1.ebuild,
   -folks-0.4.2.ebuild, folks-0.4.3.ebuild:
