@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/texi2dvi/texi2dvi-0.ebuild,v 1.4 2011/08/28 13:18:35 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/texi2dvi/texi2dvi-0.ebuild,v 1.5 2011/10/05 18:25:49 aballier Exp $
 
 DESCRIPTION="Virtual for texi2dvi (and texi2pdf)"
 HOMEPAGE=""
@@ -14,7 +14,5 @@ IUSE=""
 DEPEND=""
 RDEPEND="sys-apps/texinfo
 	virtual/latex-base
-	|| (
-		dev-texlive/texlive-texinfo
-		app-text/ptex
-	)"
+	dev-texlive/texlive-texinfo
+	"
