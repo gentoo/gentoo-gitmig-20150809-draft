@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langfrench
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langfrench/ChangeLog,v 1.39 2011/10/04 18:28:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langfrench/ChangeLog,v 1.40 2011/10/05 16:20:26 aballier Exp $
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org>
+  -texlive-langfrench-2008.ebuild, -texlive-langfrench-2009.ebuild:
+  remove old
 
   04 Oct 2011; Jeroen Roovers <jer@gentoo.org> texlive-langfrench-2010.ebuild:
   Stable for HPPA (bug #355085).
