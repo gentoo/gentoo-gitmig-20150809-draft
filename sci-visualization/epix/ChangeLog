@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/epix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.36 2011/07/27 21:51:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/ChangeLog,v 1.37 2011/10/05 18:41:37 aballier Exp $
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org> epix-1.2.6.ebuild,
+  epix-1.2.7.ebuild, epix-1.2.8.ebuild:
+  remove ptex dep as it is going away
 
   27 Jul 2011; Sébastien Fabbro <bicatali@gentoo.org> epix-1.2.8.ebuild:
   Small prefix change

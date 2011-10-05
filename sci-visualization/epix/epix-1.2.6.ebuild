@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.6.ebuild,v 1.4 2010/01/20 20:03:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.6.ebuild,v 1.5 2011/10/05 18:41:37 aballier Exp $
 
 EAPI=2
 inherit elisp-common bash-completion autotools
@@ -15,11 +15,10 @@ KEYWORDS="amd64 ppc x86"
 IUSE="doc emacs examples"
 
 DEPEND="virtual/latex-base
-		|| ( ( dev-texlive/texlive-pstricks
-			   dev-texlive/texlive-pictures
-			   dev-texlive/texlive-latexextra
-			   dev-tex/xcolor )
-			app-text/ptex )
+		dev-texlive/texlive-pstricks
+		dev-texlive/texlive-pictures
+		dev-texlive/texlive-latexextra
+		dev-tex/xcolor
 		emacs? ( virtual/emacs )"
 RDEPEND="${DEPEND}"
 SITEFILE=50${PN}-gentoo.el
