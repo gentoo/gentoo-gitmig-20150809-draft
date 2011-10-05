@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/audacious-dumb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-dumb/ChangeLog,v 1.38 2011/10/05 20:16:00 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-dumb/ChangeLog,v 1.39 2011/10/05 20:32:57 joker Exp $
+
+  05 Oct 2011; Christian Birchinger <joker@gentoo.org>
+  -audacious-dumb-0.72.ebuild:
+  0.72 is wont be usable until Audacious 3.1 is released
 
 *audacious-dumb-0.72 (05 Oct 2011)
 
