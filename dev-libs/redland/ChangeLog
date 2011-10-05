@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/redland
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.90 2011/10/04 08:13:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.91 2011/10/05 08:28:52 nativemad Exp $
+
+  05 Oct 2011; Andreas Schuerch <nativemad@gentoo.org> redland-1.0.14.ebuild:
+  x86 stable, thanks David. Bug 382641
 
   04 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> redland-1.0.14.ebuild:
   If building with xml support, require same from raptor.
