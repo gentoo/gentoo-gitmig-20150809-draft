@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/raptor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.106 2011/09/20 13:14:22 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.107 2011/10/05 08:25:52 nativemad Exp $
+
+  05 Oct 2011; Andreas Schuerch <nativemad@gentoo.org> raptor-2.0.4.ebuild:
+  x86 stable, thanks David. Bug 382641
 
   20 Sep 2011; Tony Vroon <chainsaw@gentoo.org> raptor-2.0.4.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
