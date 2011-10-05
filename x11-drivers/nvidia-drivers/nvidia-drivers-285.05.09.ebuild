@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-285.05.09.ebuild,v 1.1 2011/10/04 15:04:55 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-285.05.09.ebuild,v 1.2 2011/10/05 16:23:22 cardoe Exp $
 
 EAPI="2"
 
@@ -23,7 +23,10 @@ IUSE="acpi custom-cflags gtk multilib kernel_linux"
 RESTRICT="strip"
 EMULTILIB_PKG="true"
 
-COMMON="<x11-base/xorg-server-1.11.99
+# While this release does officially support xorg-server 1.11, it has poor
+# performance characteristics for many users. see bug #275612 & bug #385669
+# as well as http://lists.x.org/archives/xorg-devel/2011-October/026050.html
+COMMON="<x11-base/xorg-server-1.10.99
 	kernel_linux? ( >=sys-libs/glibc-2.6.1 )
 	multilib? ( app-emulation/emul-linux-x86-xlibs )
 	>=app-admin/eselect-opengl-1.0.9

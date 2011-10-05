@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.301 2011/10/04 15:04:55 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.302 2011/10/05 16:23:22 cardoe Exp $
+
+  05 Oct 2011; Doug Goldstein <cardoe@gentoo.org>
+  nvidia-drivers-285.05.09.ebuild:
+  Due to a regression in X that requires a deprecated function to be copied
+  into the nvidia-drivers binary component, there is a significant performance
+  degradation with xorg-server-1.11. As a result I'm re-marking this release as
+  not supporting xorg-server-1.11. bug #385669
 
 *nvidia-drivers-285.05.09 (04 Oct 2011)
 
