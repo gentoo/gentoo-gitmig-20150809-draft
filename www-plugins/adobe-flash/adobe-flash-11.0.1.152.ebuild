@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.0.1.152.ebuild,v 1.1 2011/10/05 08:21:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-11.0.1.152.ebuild,v 1.2 2011/10/05 12:32:41 scarabeus Exp $
 
 EAPI=4
 inherit nsplugins multilib toolchain-funcs versionator
@@ -94,8 +94,8 @@ src_unpack() {
 	if [[ $amd64_32bit ]]; then
 		# Since the 32-bit and 64-bit tarballs collide, put the 32-bit one
 		# elsewhere:
-		local my_32b_src=${MY_32B_URI##*/}
-		local my_64b_src=${MY_64B_URI##*/}
+		local my_32b_src=${MY_32B_URI##*>}
+		local my_64b_src=${MY_64B_URI##*>}
 		if [[ $native_install ]]; then
 			unpack $my_64b_src
 		fi
