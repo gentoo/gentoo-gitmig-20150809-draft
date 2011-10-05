@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-5.9.ebuild,v 1.18 2010/02/10 22:53:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-5.9.ebuild,v 1.19 2011/10/05 18:40:35 aballier Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -20,9 +20,8 @@ DEPEND="
 		app-text/poppler
 		dev-tex/latex2html
 		virtual/latex-base
-		|| ( ( dev-texlive/texlive-genericrecommended
-				dev-texlive/texlive-latexextra )
-			app-text/ptex )
+		dev-texlive/texlive-genericrecommended
+		dev-texlive/texlive-latexextra
 	)"
 
 RDEPEND="${DEPEND}"
