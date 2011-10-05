@@ -1,6 +1,14 @@
 # ChangeLog for net-fs/autofs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.129 2011/09/21 15:49:56 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.130 2011/10/05 14:27:26 pva Exp $
+
+*autofs-5.0.6-r3 (05 Oct 2011)
+*autofs-4.1.4-r1 (05 Oct 2011)
+
+  05 Oct 2011; Peter Volkov <pva@gentoo.org> +autofs-4.1.4-r1.ebuild,
+  files/autofs5.initd, files/autofs-4.1.4-init.patch, +autofs-5.0.6-r3.ebuild:
+  Don't use deprecated opts, bug 385639 thank Martin von Gagern for report and
+  Dustin Polke for fix.
 
   21 Sep 2011; Peter Volkov <pva@gentoo.org> autofs-5.0.5-r4.ebuild,
   autofs-5.0.6-r2.ebuild:
