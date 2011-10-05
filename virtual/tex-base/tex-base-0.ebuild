@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/tex-base/tex-base-0.ebuild,v 1.7 2011/08/28 13:40:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/tex-base/tex-base-0.ebuild,v 1.8 2011/10/05 18:37:30 aballier Exp $
 
 DESCRIPTION="Virtual for basic TeX binaries (tex, kpathsea)"
 HOMEPAGE=""
@@ -12,7 +12,6 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-
 IUSE=""
 
 DEPEND=""
-RDEPEND="|| (
+RDEPEND="
 		app-text/texlive-core
-		app-text/ptex
-	)"
+	"
