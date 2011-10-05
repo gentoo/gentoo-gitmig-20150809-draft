@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.2.1.ebuild,v 1.12 2011/07/26 18:22:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.2.1.ebuild,v 1.13 2011/10/05 19:18:30 aballier Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -23,7 +23,7 @@ DEPEND="${COMMONDEPEND}
 	java? ( >=virtual/jdk-1.4 )
 	doc? ( app-doc/doxygen
 		virtual/latex-base
-		|| ( dev-texlive/texlive-fontsextra app-text/ptex )
+		dev-texlive/texlive-fontsextra
 	)"
 RDEPEND="${COMMONDEPEND}
 	java? ( >=virtual/jre-1.4 )"
