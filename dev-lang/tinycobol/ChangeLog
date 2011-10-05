@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tinycobol
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/ChangeLog,v 1.20 2010/04/16 18:48:02 phosphan Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/ChangeLog,v 1.21 2011/10/05 08:05:16 nativemad Exp $
+
+  05 Oct 2011; Andreas Schuerch <nativemad@gentoo.org> tinycobol-0.65.9.ebuild:
+  x86 stable, see bug 384499
 
   16 Apr 2010; Patrick Kursawe <phosphan@gentoo.org> tinycobol-0.64.ebuild,
   tinycobol-0.65.9.ebuild:
