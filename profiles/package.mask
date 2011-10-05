@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13106 2011/10/05 17:15:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13107 2011/10/05 17:17:41 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -38,6 +38,8 @@
 dev-texlive/texlive-psutils
 # Moved to dev-texlive/texlive-langenglish after TeX Live 2010
 dev-texlive/texlive-langukenglish
+# Moved to dev-texlive/texlive-langarabic after TeX Live 2009
+dev-texlive/texlive-langarab
 
 # Hans de Graaff <graaff@gentoo.org> (04 Oct 2011)
 # Mask stable version of ruby-activeldap since the sole version

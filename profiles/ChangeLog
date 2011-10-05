@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5752 2011/10/05 17:15:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5753 2011/10/05 17:17:41 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Oct 2011; Alexis Ballier <aballier@gentoo.org> package.mask:
+  mask dev-texlive/texlive-langarab
 
   05 Oct 2011; Alexis Ballier <aballier@gentoo.org> package.mask:
   mask dev-texlive/texlive-langukenglish
