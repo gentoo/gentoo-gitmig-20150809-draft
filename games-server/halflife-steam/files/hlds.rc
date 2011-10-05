@@ -1,7 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-steam/files/hlds.rc,v 1.1 2005/11/16 03:24:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-steam/files/hlds.rc,v 1.2 2011/10/05 09:14:03 mr_bones_ Exp $
+
+PID_PATH="/var/run"
 
 depend() {
 	use net
@@ -18,21 +20,56 @@ checkconfig() {
 	return 0
 }
 
-start() {
-	checkconfig || return $?
+start_server() {
+	local serv_num=$1
+	local serv_opts="`eval echo '$'HLDS_SERVER${serv_num}`"
+	local PID1=${PID_PATH}/hlds${serv_num}_1.pid
+	local PID2=${PID_PATH}/hlds${serv_num}_2.pid
+	rm -f $PID1 $PID2
 
-	ebegin "Starting Halflife Dedicated Server"
-	export LD_LIBRARY_PATH=${HLDS_PATH}:${HLDS_PATH}/bin:${LD_LIBRARY_PATH}
+	test $serv_num != 1 -a -z "$serv_opts" && return 1
+
+	ebegin "Starting Halflife Dedicated Server $serv_num"
+	touch ${PID2}
+	chown @GAMES_USER@:@GAMES_GROUP@ ${PID2}
 	start-stop-daemon --start \
 		--chdir ${HLDS_PATH} -c @GAMES_USER@:@GAMES_GROUP@ \
 		-n ${HLDS_MT} -b -a ${HLDS_PATH}/${HLDS_MT} \
+		-m --pidfile ${PID1} \
 		-- \
-		-pidfile /var/run/hlds.pid ${HLDS_OPTS}
+		-pidfile ${PID2} ${HLDS_OPTS} ${serv_opts}
 	eend $?
 }
 
+stop_server() {
+	local serv_num=$1
+	local PID1=${PID_PATH}/hlds${serv_num}_1.pid
+	local PID2=${PID_PATH}/hlds${serv_num}_2.pid
+	if test -f ${PID1} -a -f ${PID2}; then
+		ebegin "Stopping Halflife Dedicated Server $serv_num"
+		start-stop-daemon --stop --pidfile ${PID1}
+		start-stop-daemon --stop --pidfile ${PID2}
+		eend $?
+		rm -f $PID1 $PID2
+	else
+		return 1
+	fi
+	return 0
+}
+
+start() {
+	checkconfig || return $?
+
+	export LD_LIBRARY_PATH=${HLDS_PATH}:${HLDS_PATH}/bin:${LD_LIBRARY_PATH}
+	local i=1
+	while start_server $i; do
+		i=$(($i+1))
+	done
+}
+
 stop() {
-	ebegin "Stopping Halflife Dedicated Server"
-	start-stop-daemon --stop --pidfile /var/run/hlds.pid
-	eend $?
+	local i=1
+	while stop_server $i; do
+		i=$(($i+1))
+	done
 }

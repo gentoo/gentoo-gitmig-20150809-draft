@@ -10,5 +10,12 @@ HLDS_PATH="@GAMESDIR@"
 #  srcds_i686  on most x86 systems
 #HLDS_MT="srcds_i686"
 
-# Here you can set your start options like game type and maxplayers ...
-HLDS_OPTS="-console -port 27015 -game cstrike +map de_dust +maxplayers 6"
+# Here you can set your common start options...
+HLDS_OPTS="-console +maxplayers 32"
+
+# Here you can setup more than one server
+# You should for each server create variable HLDS_SERVER<N> (where <N> positive decimal number)
+# When you have enabled SERVER1 and SERVER3 then only first will be started
+HLDS_SERVER1="-game cstrike -port 27015 +map de_dust2"
+#HLDS_SERVER2="-game cstrike +ip a.b.c.d -port 27015 +map de_aztec15"
+#HLDS_SERVER3="-game cstrike +ip a.b.c.d -port 27016"
