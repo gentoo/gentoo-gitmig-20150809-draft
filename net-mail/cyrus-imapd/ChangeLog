@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.184 2011/10/06 11:14:55 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.185 2011/10/06 20:00:02 beandog Exp $
+
+  06 Oct 2011; Steve Dibb <beandog@gentoo.org> cyrus-imapd-2.4.12.ebuild:
+  amd64 stable, security bug 385729
 
 *cyrus-imapd-2.4.12 (06 Oct 2011)
 
