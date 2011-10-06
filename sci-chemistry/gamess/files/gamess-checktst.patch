@@ -1,0 +1,13 @@
+--- /usr/share/gamess/tests/checktst	2011-08-19 18:08:16.000000000 +0200
++++ ./checktst	2011-08-20 00:45:59.613091738 +0200
+@@ -61,8 +61,8 @@
+ setenv tolW 0.1
+ setenv tolX 0.00001
+ 
+-set script=$GMSPATH/tools/checktst/exam
+-setenv chkabs $GMSPATH/tools/checktst/chkabs
++set script=./exam
++setenv chkabs ./chkabs
+ 
+ #   If we don't see the message about GAMESS exiting normally,
+ #   then there is surely a mistake, and we want to focus the
