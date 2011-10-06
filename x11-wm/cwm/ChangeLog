@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/cwm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.25 2011/09/26 06:53:51 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/ChangeLog,v 1.26 2011/10/06 00:00:59 xmw Exp $
+
+*cwm-20110913-r1 (05 Oct 2011)
+*cwm-20110908-r1 (05 Oct 2011)
+
+  05 Oct 2011; Michael Weber <xmw@gentoo.org> -cwm-20110908.ebuild,
+  +cwm-20110908-r1.ebuild, -cwm-20110913.ebuild, +cwm-20110913-r1.ebuild,
+  -files/cwm.desktop:
+  Revbump to replace files/.desktop file with make_session_desktop
 
 *cwm-20110913 (26 Sep 2011)
 
