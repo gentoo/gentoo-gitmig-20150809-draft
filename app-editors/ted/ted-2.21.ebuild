@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.21.ebuild,v 1.6 2011/10/06 17:44:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.21.ebuild,v 1.7 2011/10/06 17:46:32 ssuominen Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.nluug.nl/pub/editors/ted/${P}.src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+:2
@@ -53,5 +53,5 @@ src_install() {
 	RPM_BUILD_ROOT=${D} ./installTed.sh COMMON || die
 
 	dodir /usr/share
-	mv "${D}"usr/Ted "${D}"usr/share/Ted
+	mv "${ED}"usr/Ted "${ED}"usr/share/Ted
 }
