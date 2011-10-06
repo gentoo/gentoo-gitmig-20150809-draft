@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.3.0.ebuild,v 1.5 2011/10/06 22:32:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.3.0-r1.ebuild,v 1.1 2011/10/06 22:32:26 ssuominen Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}library/${MY_P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="cuda doc eigen examples ffmpeg gstreamer gtk ieee1394 jpeg jpeg2k openexr opengl png python qt4 sse sse2 sse3 ssse3 tiff v4l xine"
+IUSE="cuda doc eigen examples ffmpeg gstreamer gtk ieee1394 ipp jpeg jpeg2k openexr opengl png python qt4 sse sse2 sse3 ssse3 tiff v4l xine"
 
 RDEPEND="
 	app-arch/bzip2
@@ -37,6 +37,7 @@ RDEPEND="
 	jpeg? ( virtual/jpeg )
 	jpeg2k? ( media-libs/jasper )
 	ieee1394? ( media-libs/libdc1394 sys-libs/libraw1394 )
+	ipp? ( sci-libs/ipp )
 	openexr? ( media-libs/openexr )
 	png? ( media-libs/libpng )
 	python? ( dev-python/numpy )
@@ -96,7 +97,7 @@ src_configure() {
 		$(cmake-utils_use_enable sse2 SSE2)
 		$(cmake-utils_use_enable sse3 SSE3)
 		$(cmake-utils_use_enable ssse3 SSSE3)
-		-DWITH_IPP=OFF
+		$(cmake-utils_use_with ipp)
 		$(cmake-utils_use_with ieee1394 1394)
 		$(cmake-utils_use_with eigen)
 		$(cmake-utils_use_with ffmpeg)
