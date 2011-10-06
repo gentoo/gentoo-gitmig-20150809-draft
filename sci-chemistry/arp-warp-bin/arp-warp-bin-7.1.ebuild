@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/arp-warp-bin-7.1.ebuild,v 1.9 2011/07/25 19:36:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/arp-warp-bin/arp-warp-bin-7.1.ebuild,v 1.10 2011/10/06 11:20:18 chainsaw Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.embl-hamburg.de/ARP/"
 
 LICENSE="ArpWarp"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="-* amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
