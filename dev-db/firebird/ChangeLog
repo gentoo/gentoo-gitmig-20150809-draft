@@ -1,6 +1,17 @@
 # ChangeLog for dev-db/firebird
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.106 2011/05/12 18:42:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.107 2011/10/06 09:03:08 patrick Exp $
+
+*firebird-2.5.0.26074.0-r2 (06 Oct 2011)
+
+  06 Oct 2011; Patrick Lauer <patrick@gentoo.org>
+  +firebird-2.5.0.26074.0-r2.ebuild,
+  +files/firebird-2.5.0.26074.0-Makefile.in.static.createdb,
+  +files/firebird-2.5.0.26074.0-build.patch,
+  files/firebird-2.5.0.26074.0-client.patch,
+  +files/firebird-2.5.0.26074.0-deps-flags.patch,
+  +files/firebird-2.5.0.26074.0-superclassic.patch, +files/firebird.xinetd:
+  Bump for #385137
 
 *firebird-2.5.0.26074.0-r1 (12 May 2011)
 
