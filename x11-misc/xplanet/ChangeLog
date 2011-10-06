@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xplanet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.69 2011/09/16 19:00:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.70 2011/10/06 20:38:35 hwoarang Exp $
+
+  06 Oct 2011; Markos Chandras <hwoarang@gentoo.org> xplanet-1.2.2.ebuild:
+  Stable on amd64 wrt bug #385795
 
 *xplanet-1.2.2 (16 Sep 2011)
 
