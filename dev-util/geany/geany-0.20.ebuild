@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.20.ebuild,v 1.3 2011/03/23 06:16:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.20.ebuild,v 1.4 2011/10/06 11:51:55 polynomial-c Exp $
 
 EAPI=2
 inherit eutils gnome2-utils
@@ -44,7 +44,6 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" DOCDIR="${D}/usr/share/doc/${PF}" install || die
 	rm -f "${D}"/usr/share/doc/${PF}/{COPYING,GPL-2,ScintillaLicense.txt}
-	prepalldocs
 }
 
 pkg_preinst() { gnome2_icon_savelist; }

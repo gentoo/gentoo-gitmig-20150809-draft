@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.19.ebuild,v 1.6 2011/03/23 06:16:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.21.ebuild,v 1.1 2011/10/06 11:51:55 polynomial-c Exp $
 
 EAPI=2
 inherit eutils gnome2-utils
 
-LANGS="ast be bg ca cs de el en_GB es fi fr gl hu it ja ko lb nl pl pt pt_BR ro ru sl sv tr uk vi zh_CN ZH_TW"
+LANGS="ast be bg ca cs de el en_GB es fi fr gl hu it ja kk ko lb nl pl pt pt_BR ro ru sl sv tr uk vi zh_CN ZH_TW"
 NOSHORTLANGS="en_GB zh_CN zh_TW"
 
 DESCRIPTION="GTK+ based fast and lightweight IDE"
@@ -14,7 +14,7 @@ SRC_URI="http://download.geany.org/${P}.tar.bz2"
 
 LICENSE="GPL-2 Scintilla"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="+vte"
 
 RDEPEND=">=x11-libs/gtk+-2.12:2
@@ -44,7 +44,7 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" DOCDIR="${D}/usr/share/doc/${PF}" install || die
 	rm -f "${D}"/usr/share/doc/${PF}/{COPYING,GPL-2,ScintillaLicense.txt}
-	prepalldocs
+	find "${D}" -type f -name '*.la' -delete
 }
 
 pkg_preinst() { gnome2_icon_savelist; }
