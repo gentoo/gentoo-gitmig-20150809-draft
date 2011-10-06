@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/cyrus-imap-admin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.104 2011/09/11 13:14:59 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/ChangeLog,v 1.105 2011/10/06 11:17:52 eras Exp $
+
+*cyrus-imap-admin-2.4.12 (06 Oct 2011)
+
+  06 Oct 2011; Eray Aslan <eras@gentoo.org> +cyrus-imap-admin-2.4.12.ebuild:
+  version bump
 
   11 Sep 2011; Eray Aslan <eras@gentoo.org> cyrus-imap-admin-2.4.11.ebuild:
   Fix missing patch - bug #382581
