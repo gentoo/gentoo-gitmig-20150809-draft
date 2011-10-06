@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.1.3-r1.ebuild,v 1.6 2011/09/07 16:42:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4/ccp4-6.1.3-r1.ebuild,v 1.7 2011/10/06 11:19:07 chainsaw Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE="ccp4"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE="X arpwarp +balbes"
 
 RDEPEND="
