@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-1.4.6.ebuild,v 1.1 2011/09/30 19:13:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-1.4.6.ebuild,v 1.2 2011/10/06 17:25:07 ssuominen Exp $
 
 EAPI=4
-inherit eutils
+inherit autotools eutils
 
 MY_P=LiVES-${PV}
 
@@ -16,10 +16,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="libvisual matroska nls ogg theora" # static-libs
 
-# FIXME (incomplete workaround in place):
-# !!<${CATEGORY}/${PF} is because if you have lives installed, the bundled
-# libweed never gets installed in second emerge
-# See also bug 295293
 RDEPEND="media-video/mplayer
 	|| ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
 	dev-lang/perl
@@ -50,12 +46,17 @@ DOCS=( AUTHORS BUGS ChangeLog FEATURES GETTING.STARTED NEWS README )
 src_prepare() {
 	esvn_clean
 
+	# Don't try to detect installed copies wrt #295293
+	sed -i -e '/^PKG_CHECK_MODULES(WEED/s:true:false:' configure.in || die
+	sed -i -e '/test/s:sendOSC:dIsAbLeAuToMaGiC:' libOSC/sendOSC/Makefile.am || die
+
 	# Use python 2.x as per reference in plugins
 	sed -i \
 		-e '/#!.*env/s:python:python2:' \
 		lives-plugins/plugins/encoders/multi_encoder* \
 		lives-plugins/marcos-encoders/lives_*_encoder* || die
 
+	AT_M4DIR="mk/autoconf" eautoreconf # for the seds
 }
 
 src_configure() {
@@ -68,6 +69,10 @@ src_configure() {
 
 src_install() {
 	default
+
+	rm -f "${ED}"usr/bin/lives #384727
+	dosym lives-exe /usr/bin/lives
+
 	find "${ED}"usr -name '*.la' -exec rm -f {} +
 	# use static-libs ||
 	rm -f "${ED}"usr/lib*/libweed-*.a
