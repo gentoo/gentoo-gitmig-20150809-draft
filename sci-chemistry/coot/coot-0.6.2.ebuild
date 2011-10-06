@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.2.ebuild,v 1.5 2011/09/14 17:49:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.2.ebuild,v 1.6 2011/10/06 12:04:07 ssuominen Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="2"
 
-inherit autotools base eutils python toolchain-funcs versionator
+inherit autotools base eutils flag-o-matic python toolchain-funcs versionator
 
 MY_S2_PV=$(replace_version_separator 2 - ${PV})
 MY_S2_P=${PN}-${MY_S2_PV/pre1/pre-1}
@@ -70,6 +70,7 @@ S="${WORKDIR}/${MY_P}"
 pkg_setup() {
 	if use openmp; then
 		tc-has-openmp || die "Please use an OPENMP capable compiler"
+		has_version '<sys-devel/libtool-2.4-r2' && append-ldflags $(no-as-needed)
 	fi
 	python_set_active_version 2
 }
