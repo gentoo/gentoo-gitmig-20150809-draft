@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/help2man-1.40.4.ebuild,v 1.2 2011/09/22 15:05:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/help2man-1.40.4.ebuild,v 1.3 2011/10/06 16:51:28 ssuominen Exp $
 
 EAPI="4"
 
@@ -24,9 +24,12 @@ DEPEND="${RDEPEND}
 		dev-perl/Locale-gettext
 	) )"
 
+DOCS=( debian/changelog NEWS README THANKS ) #385753
+
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.36.4-respect-LDFLAGS.patch
-	epatch "${FILESDIR}"/${PN}-1.38.4-linguas.patch
+	epatch \
+		"${FILESDIR}"/${PN}-1.36.4-respect-LDFLAGS.patch \
+		"${FILESDIR}"/${PN}-1.38.4-linguas.patch
 }
 
 src_configure() {

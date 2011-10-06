@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/help2man
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.63 2011/09/22 15:05:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.64 2011/10/06 16:51:28 ssuominen Exp $
+
+  06 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> help2man-1.40.4.ebuild:
+  Fix broken symlink to ChangeLog wrt #385753 by Michał Bartoszkiewicz
 
   22 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org> help2man-1.38.2.ebuild,
   help2man-1.40.4.ebuild:
