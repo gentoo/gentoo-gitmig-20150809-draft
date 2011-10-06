@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-9999.ebuild,v 1.1 2011/10/06 10:48:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/harfbuzz-9999.ebuild,v 1.2 2011/10/06 14:48:14 scarabeus Exp $
 
 EAPI=4
 
@@ -25,8 +25,9 @@ RDEPEND="
 	truetype? ( media-libs/freetype:2 )
 "
 DEPEND="${RDEPEND}
-	dev-util/ragel
+	dev-util/gtk-doc-am
 	dev-util/pkgconfig
+	dev-util/ragel
 "
 
 PATCHES=(
