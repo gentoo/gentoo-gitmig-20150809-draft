@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/bfast
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bfast/ChangeLog,v 1.5 2011/07/15 15:38:43 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bfast/ChangeLog,v 1.6 2011/10/06 12:59:24 jlec Exp $
+
+*bfast-0.6.5a-r1 (06 Oct 2011)
+
+  06 Oct 2011; Justin Lecher <jlec@gentoo.org> +bfast-0.6.5a-r1.ebuild:
+  Respect CFLAGS, #384369
 
   15 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> -bfast-0.6.4c.ebuild,
   -bfast-0.6.4d.ebuild:
