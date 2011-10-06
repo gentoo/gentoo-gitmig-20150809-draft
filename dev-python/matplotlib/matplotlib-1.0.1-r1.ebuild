@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.0.1-r1.ebuild,v 1.7 2011/10/05 19:34:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-1.0.1-r1.ebuild,v 1.8 2011/10/06 20:09:15 aballier Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -61,10 +61,7 @@ RDEPEND="${CDEPEND}
 		app-text/ghostscript-gpl
 		app-text/dvipng
 		app-text/poppler[utils]
-		|| (
-			dev-texlive/texlive-fontsrecommended
-			app-text/ptex
-		)
+		dev-texlive/texlive-fontsrecommended
 	)"
 
 PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
