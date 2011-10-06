@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/fuse-1.0.0.ebuild,v 1.2 2011/09/17 13:28:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/fuse-1.0.0.ebuild,v 1.3 2011/10/06 19:50:44 beandog Exp $
 
 EAPI=4
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/fuse-emulator/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="alsa ao fbcon gpm gtk joystick memlimit png sdl svga X xml"
 
 # This build is heavily use dependent. Fuse user interface use flags are, in
