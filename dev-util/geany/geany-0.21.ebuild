@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.21.ebuild,v 1.1 2011/10/06 11:51:55 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.21.ebuild,v 1.2 2011/10/06 12:00:57 polynomial-c Exp $
 
-EAPI=2
+EAPI=4
 inherit eutils gnome2-utils
 
 LANGS="ast be bg ca cs de el en_GB es fi fr gl hu it ja kk ko lb nl pl pt pt_BR ro ru sl sv tr uk vi zh_CN ZH_TW"

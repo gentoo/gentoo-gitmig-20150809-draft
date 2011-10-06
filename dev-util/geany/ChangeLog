@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/geany
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.45 2011/10/06 11:51:55 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.46 2011/10/06 12:00:57 polynomial-c Exp $
+
+  06 Oct 2011; Lars Wendler <polynomial-c@gentoo.org> geany-0.19.2.ebuild,
+  geany-0.20.ebuild, geany-0.21.ebuild:
+  Bumped all ebuilds to EAPI-4.
 
 *geany-0.21 (06 Oct 2011)
 
