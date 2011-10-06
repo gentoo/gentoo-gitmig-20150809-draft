@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.75 2011/08/29 01:28:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cmake-utils.eclass,v 1.76 2011/10/06 13:33:51 haubi Exp $
 
 # @ECLASS: cmake-utils.eclass
 # @MAINTAINER:
@@ -320,7 +320,9 @@ enable_cmake-utils_src_configure() {
 		SET (CMAKE_CXX_COMPILE_OBJECT "<CMAKE_CXX_COMPILER> <DEFINES> ${CPPFLAGS} <FLAGS> -o <OBJECT> -c <SOURCE>" CACHE STRING "C++ compile command" FORCE)
 	_EOF_
 
-	if use prefix; then
+	has "${EAPI:-0}" 0 1 2 && ! use prefix && EPREFIX=
+
+	if [[ ${EPREFIX} ]]; then
 		cat >> "${build_rules}" <<- _EOF_
 			# in Prefix we need rpath and must ensure cmake gets our default linker path
 			# right ... except for Darwin hosts
@@ -360,8 +362,6 @@ enable_cmake-utils_src_configure() {
 	else
 		local mycmakeargs_local=("${mycmakeargs[@]}")
 	fi
-
-	has "${EAPI:-0}" 0 1 2 && ! use prefix && EPREFIX=
 
 	# Common configure parameters (overridable)
 	# NOTE CMAKE_BUILD_TYPE can be only overriden via CMAKE_BUILD_TYPE eclass variable
