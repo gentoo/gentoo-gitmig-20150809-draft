@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5758 2011/10/06 18:28:58 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5759 2011/10/06 18:54:24 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Oct 2011; Jeremy Olexa <darkside@gentoo.org> use.desc:
+  Update 'doc' description to enhance end user experience
 
   06 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
   Mask dev-lang/nacl-toolchain-newlib.

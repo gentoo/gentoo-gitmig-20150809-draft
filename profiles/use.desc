@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.465 2011/09/30 20:01:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.466 2011/10/06 18:54:24 darkside Exp $
 
 # Keep them sorted
 
@@ -79,7 +79,7 @@ dedicated - Adds support for dedicated game servers (some packages do not provid
 dga - Adds DGA (Direct Graphic Access) support for X
 directfb - Adds support for DirectFB layer (library for FB devices)
 djvu - support DjVu, a PDF-like document format esp. suited for scanned documents
-doc - Adds extra documentation (API, Javadoc, etc)
+doc - Adds extra documentation (API, Javadoc, etc). It is recommended to enable per package instead of globally
 dri - Enable direct rendering: used for accelerated 3D and some 2D, like DMA
 dts - Enables DTS Coherent Acoustics decoder support
 dv - Enables support for a codec used by many camcorders
