@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/xia2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xia2/ChangeLog,v 1.8 2011/10/04 15:09:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/xia2/ChangeLog,v 1.9 2011/10/06 11:22:04 chainsaw Exp $
+
+  06 Oct 2011; Tony Vroon <chainsaw@gentoo.org> xia2-0.3.3.1.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in bug
+  #351753.
 
 *xia2-0.3.3.3 (04 Oct 2011)
 

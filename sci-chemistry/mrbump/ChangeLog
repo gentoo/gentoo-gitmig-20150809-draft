@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/mrbump
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mrbump/ChangeLog,v 1.5 2011/01/18 17:21:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mrbump/ChangeLog,v 1.6 2011/10/06 11:25:36 chainsaw Exp $
+
+  06 Oct 2011; Tony Vroon <chainsaw@gentoo.org> mrbump-0.4.4.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo in bug
+  #351753.
 
   18 Jan 2011; Justin Lecher <jlec@gentoo.org> mrbump-0.4.4.ebuild:
   Rearranged build layout
