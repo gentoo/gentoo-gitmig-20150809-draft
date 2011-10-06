@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/solve-resolve-bin/solve-resolve-bin-2.13.ebuild,v 1.2 2011/02/23 15:39:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/solve-resolve-bin/solve-resolve-bin-2.13.ebuild,v 1.3 2011/10/06 11:24:01 chainsaw Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ SRC_URI="
 
 SLOT="0"
 LICENSE="solve"
-KEYWORDS="-* ~x86 ~amd64"
+KEYWORDS="-* ~x86 amd64"
 IUSE="examples"
 
 RDEPEND="sci-libs/ccp4-libs"
