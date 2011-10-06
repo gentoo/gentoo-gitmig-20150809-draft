@@ -1,6 +1,9 @@
 # ChangeLog for app-text/podofo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.23 2011/09/05 20:03:36 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.24 2011/10/06 20:52:23 hwoarang Exp $
+
+  06 Oct 2011; Markos Chandras <hwoarang@gentoo.org> podofo-0.9.1.ebuild:
+  Stable on amd64 wrt bug #385913
 
   05 Sep 2011; Zac Medico <zmedico@gentoo.org> podofo-0.7.0.ebuild,
   podofo-0.8.1-r1.ebuild, podofo-0.8.2.ebuild, podofo-0.8.4.ebuild,
