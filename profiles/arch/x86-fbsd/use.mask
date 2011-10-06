@@ -1,6 +1,6 @@
-# Copyright 2004-2009 Gentoo Foundation.
+# Copyright 1999-2011 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/use.mask,v 1.7 2010/03/07 17:56:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/use.mask,v 1.8 2011/10/06 20:42:30 aballier Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -x86-fbsd
@@ -38,3 +38,6 @@ portaudio
 
 # valgrind hasn't been ported to fbsd yet
 valgrind
+
+# libva doesnt build on fbsd for now
+vaapi

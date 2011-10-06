@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86-fbsd profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.28 2011/10/05 18:14:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.29 2011/10/06 20:42:30 aballier Exp $
+
+  06 Oct 2011; Alexis Ballier <aballier@gentoo.org> use.mask:
+  mask vaapi useflag as libva doesnt build
 
   05 Oct 2011; Alexis Ballier <aballier@gentoo.org> -package.mask:
   unmask texlive as most of it is keyworded and older versions are going away
