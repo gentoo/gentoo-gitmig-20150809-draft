@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r14.ebuild,v 1.1 2011/10/06 15:04:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r14.ebuild,v 1.2 2011/10/06 15:12:27 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils elisp-common
@@ -116,7 +116,7 @@ src_install() {
 	# these are only for the ALSA sequencer mode
 	if use alsa; then
 		newconfd "${FILESDIR}"/conf.d.timidity.2 timidity
-		newinitd "${FILESDIR}"/init.d.timidity.3 timidity
+		newinitd "${FILESDIR}"/init.d.timidity.4 timidity
 	fi
 
 	insinto /etc
