@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/afterstep
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.97 2010/11/08 13:43:13 voyageur Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.98 2011/10/06 12:19:45 ssuominen Exp $
+
+  06 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> afterstep-2.2.9.ebuild,
+  +files/afterstep-2.2.9-libpng15.patch:
+  Fix building with libpng15 wrt #385851 by "Zosiek"
 
   08 Nov 2010; Bernard Cafarelli <voyageur@gentoo.org>
   afterstep-2.2.9.ebuild:
