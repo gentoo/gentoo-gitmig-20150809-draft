@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.39 2011/10/06 14:20:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.40 2011/10/06 14:24:41 scarabeus Exp $
 
 EAPI=3
 
@@ -107,7 +107,6 @@ COMMON_DEPEND="
 	>=dev-lang/perl-5.0
 	>=dev-libs/openssl-0.9.8g
 	dev-libs/redland[ssl]
-	>=dev-python/translate-toolkit-1.8.0
 	>=media-libs/fontconfig-2.3.0
 	media-libs/freetype:2
 	>=media-libs/libpng-1.4
@@ -170,6 +169,7 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-libs/libxml2-2.7.8
 	dev-libs/libxslt
 	dev-perl/Archive-Zip
+	>=dev-python/translate-toolkit-1.8.0
 	dev-util/cppunit
 	>=dev-util/gperf-3
 	dev-util/intltool

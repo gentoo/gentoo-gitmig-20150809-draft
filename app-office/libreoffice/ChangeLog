@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.167 2011/10/06 14:20:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.168 2011/10/06 14:24:41 scarabeus Exp $
+
+  06 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-9999-r1.ebuild:
+  translate-toolkit is just builddep.
 
   06 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   libreoffice-9999-r1.ebuild:
