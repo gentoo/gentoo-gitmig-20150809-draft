@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/cwm-99999999.ebuild,v 1.4 2011/09/11 22:06:30 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/cwm/cwm-99999999.ebuild,v 1.5 2011/10/06 00:20:06 xmw Exp $
 
 EAPI=2
 
@@ -26,14 +26,12 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/bison"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${PN}-20110726-Makefile.patch
-	export LDADD="${LDFLAGS}"
-	tc-export CC
+src_compile() {
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	insinto /usr/share/applications
-	doins "${FILESDIR}"/${PN}.desktop || die
+	emake DESTDIR="${D}" PREFIX=/usr install || die
+	dodoc README || die
+	make_session_desktop ${PN} ${PN}
 }
