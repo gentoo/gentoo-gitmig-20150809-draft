@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.183 2011/09/27 18:09:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.184 2011/10/06 11:14:55 eras Exp $
+
+*cyrus-imapd-2.4.12 (06 Oct 2011)
+
+  06 Oct 2011; Eray Aslan <eras@gentoo.org> +cyrus-imapd-2.4.12.ebuild:
+  version bump - security bug #385729. Add back sieve USE flag - bug #382389
 
   27 Sep 2011; Kacper Kowalik <xarthisius@gentoo.org>
   cyrus-imapd-2.4.11.ebuild:
