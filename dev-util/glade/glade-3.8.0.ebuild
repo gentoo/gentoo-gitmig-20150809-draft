@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.8.0.ebuild,v 1.6 2011/10/05 16:58:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.8.0.ebuild,v 1.7 2011/10/06 18:40:13 ssuominen Exp $
 
 EAPI="2"
 GNOME_ORG_MODULE="glade3"
+GNOME2_LA_PUNT="yes"
 
 inherit eutils gnome2
 
