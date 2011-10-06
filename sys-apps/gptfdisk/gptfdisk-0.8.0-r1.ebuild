@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/gptfdisk-0.8.0.ebuild,v 1.1 2011/09/19 21:07:29 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/gptfdisk-0.8.0-r1.ebuild,v 1.1 2011/10/06 13:52:28 alexxy Exp $
 
 EAPI="4"
 
@@ -28,7 +28,7 @@ src_compile() {
 }
 
 src_install() {
-	for x in gdisk sgdisk fixparts; do
+	for x in gdisk sgdisk cgdisk fixparts; do
 		dosbin "${x}" || die
 		doman "${x}.8" || die
 	done
