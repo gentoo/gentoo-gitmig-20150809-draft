@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeedu-meta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.188 2011/09/07 20:13:55 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.189 2011/10/06 18:11:03 alexxy Exp $
+
+*kdeedu-meta-4.7.2 (06 Oct 2011)
+
+  06 Oct 2011; Alexey Shvetsov <alexxy@gentoo.org> +kdeedu-meta-4.7.2.ebuild:
+  Version bump KDE SC 4.7.2
 
 *kdeedu-meta-4.7.1 (07 Sep 2011)
 

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.793 2011/10/04 14:16:33 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.794 2011/10/06 18:10:59 alexxy Exp $
+
+*kdelibs-4.7.2 (06 Oct 2011)
+
+  06 Oct 2011; Alexey Shvetsov <alexxy@gentoo.org> +kdelibs-4.7.2.ebuild:
+  Version bump KDE SC 4.7.2
 
   04 Oct 2011; Thomas Kahle <tomka@gentoo.org> kdelibs-4.6.5-r2.ebuild:
   x86 stable per bug 384227

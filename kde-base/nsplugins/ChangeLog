@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/nsplugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/ChangeLog,v 1.211 2011/09/07 20:13:43 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/ChangeLog,v 1.212 2011/10/06 18:10:48 alexxy Exp $
+
+*nsplugins-4.7.2 (06 Oct 2011)
+
+  06 Oct 2011; Alexey Shvetsov <alexxy@gentoo.org> +nsplugins-4.7.2.ebuild:
+  Version bump KDE SC 4.7.2
 
 *nsplugins-4.7.1 (07 Sep 2011)
 

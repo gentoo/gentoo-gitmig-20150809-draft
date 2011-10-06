@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/filelight
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/filelight/ChangeLog,v 1.23 2011/09/07 20:13:44 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/filelight/ChangeLog,v 1.24 2011/10/06 18:10:50 alexxy Exp $
+
+*filelight-4.7.2 (06 Oct 2011)
+
+  06 Oct 2011; Alexey Shvetsov <alexxy@gentoo.org> +filelight-4.7.2.ebuild:
+  Version bump KDE SC 4.7.2
 
 *filelight-4.7.1 (07 Sep 2011)
 

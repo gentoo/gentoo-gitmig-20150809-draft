@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/krossjava
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krossjava/ChangeLog,v 1.63 2011/09/07 20:14:04 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krossjava/ChangeLog,v 1.64 2011/10/06 18:10:52 alexxy Exp $
+
+*krossjava-4.7.2 (06 Oct 2011)
+
+  06 Oct 2011; Alexey Shvetsov <alexxy@gentoo.org> +krossjava-4.7.2.ebuild:
+  Version bump KDE SC 4.7.2
 
 *krossjava-4.7.1 (07 Sep 2011)
 

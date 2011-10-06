@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kreadconfig
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kreadconfig/ChangeLog,v 1.162 2011/09/07 20:13:43 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kreadconfig/ChangeLog,v 1.163 2011/10/06 18:10:49 alexxy Exp $
+
+*kreadconfig-4.7.2 (06 Oct 2011)
+
+  06 Oct 2011; Alexey Shvetsov <alexxy@gentoo.org> +kreadconfig-4.7.2.ebuild:
+  Version bump KDE SC 4.7.2
 
 *kreadconfig-4.7.1 (07 Sep 2011)
 

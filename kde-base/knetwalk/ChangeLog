@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/knetwalk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knetwalk/ChangeLog,v 1.112 2011/09/07 20:13:44 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knetwalk/ChangeLog,v 1.113 2011/10/06 18:11:02 alexxy Exp $
+
+*knetwalk-4.7.2 (06 Oct 2011)
+
+  06 Oct 2011; Alexey Shvetsov <alexxy@gentoo.org> +knetwalk-4.7.2.ebuild:
+  Version bump KDE SC 4.7.2
 
 *knetwalk-4.7.1 (07 Sep 2011)
 

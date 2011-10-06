@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kactivities
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kactivities/ChangeLog,v 1.1 2011/09/27 21:44:29 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kactivities/ChangeLog,v 1.2 2011/10/06 18:11:07 alexxy Exp $
+
+*kactivities-4.7.2 (06 Oct 2011)
+
+  06 Oct 2011; Alexey Shvetsov <alexxy@gentoo.org> +kactivities-4.7.2.ebuild:
+  Version bump KDE SC 4.7.2
 
 *kactivities-4.7.1 (27 Sep 2011)
 
