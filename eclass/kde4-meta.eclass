@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.56 2011/07/10 17:53:37 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.57 2011/10/06 14:13:29 alexxy Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -559,7 +559,11 @@ kde4-meta_change_cmakelists() {
 			# Strip EXPORT feature section from workspace for KDE4 versions > 4.1.82
 			if [[ ${PN} != libkworkspace ]]; then
 				sed -e '/install(FILES ${CMAKE_CURRENT_BINARY_DIR}\/KDE4WorkspaceConfig.cmake/,/^[[:space:]]*FILE KDE4WorkspaceLibraryTargets.cmake )[[:space:]]*^/d' \
-					-i CMakeLists.txt || die "${LINENO}: sed died in kdebase-workspace strip config install and fix EXPORT section"
+					-i CMakeLists.txt || die "${LINENO}: sed died in kde-workspace strip config install and fix EXPORT section"
+			fi
+			if [[ ${PN} != plasma-workspace ]]; then
+				sed -e '/KActivities/s/REQUIRED//' \
+					-i CMakeLists.txt || die "${LINENO}: sed died in kde-workspace dep reduction section"
 			fi
 			;;
 		kdebase-runtime | kde-runtime)

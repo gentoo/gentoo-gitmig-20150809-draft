@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.107 2011/09/07 17:34:04 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.108 2011/10/06 14:13:29 alexxy Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -569,38 +569,8 @@ _calculate_live_repo() {
 			fi
 
 			# default branching
-			case ${PV} in
-				9999*) ;;
-				*)
-					# set EGIT_BRANCH and EGIT_COMMIT to $(get_kde_version)
-					# every package is listed explicitly now, as upstream
-					# seems to love being different :(
-					case ${_kmname} in
-						ark|blinken|cantor|filelight|kalgebra|kalzium|kanagram|kbruch| \
-						kcalc|kcharselect|kdeplasma-addons|kdepim|kdepim-runtime|kdepimlibs| \
-						kdf|kfloppy|kgeography|kgpg|khangman|kig|kiten|klettres|kmplot|kremotecontrol| \
-						kstars|ktimer|ktouch|kturtle|kwallet|kwordquiz|libkdeedu|mobipocket| \
-						okular|parley|printer-applet|rocs|step|superkaramba|sweeper)
-							EGIT_BRANCH="$(get_kde_version)"
-							;;
-						marble)
-							EGIT_BRANCH="kde-$(get_kde_version)"
-							;;
-						gwenview|jovie|kaccessible|kamera|kate|kcolorchooser|kde-baseapps| \
-						kde-runtime|kde-workspace|kgamma| \
-						kdegraphics-strigi-analyzer|kdegraphics-thumbnailers| \
-						kdelibs|kimono|kmag|kmousetool|kmouth|kolourpaint|konsole|korundum| \
-						kross-interpreters|kruler|ksaneplugin|ksnapshot| \
-						libkdcraw|libkexiv2|libkipi|libksane|perlqt|perlkde| \
-						pykde4|qtruby|qyoto|smokegen|smokekde|smokeqt|svgpart)
-							EGIT_BRANCH="KDE/$(get_kde_version)"
-							;;
-						*)
-							ewarn "Unknown KMNAME ${_kmname}: Guessing branch name 'KDE/$(get_kde_version)'"
-							EGIT_BRANCH="KDE/$(get_kde_version)" ;;
-					esac
-					;;
-			esac
+			[[ ${PV} != 9999* && ${KDEBASE} == kde-base ]] && \
+				EGIT_BRANCH="KDE/$(get_kde_version)"
 
 			# default repo uri
 			EGIT_REPO_URI="${EGIT_MIRROR}/${_kmname}"
@@ -749,21 +719,23 @@ kde4-base_src_prepare() {
 
 	# Replace KDE4Workspace library targets
 	find "${S}" -name CMakeLists.txt \
-		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_TASKMANAGER_(LIBRARY|LIBS)\}/taskmanager/g' {} + \
-		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_KWORKSPACE_(LIBRARY|LIBS)\}/kworkspace/g' {} + \
-		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_SOLIDCONTROLIFACES_(LIBRARY|LIBS)\}/solidcontrolifaces/g' {} + \
-		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_SOLIDCONTROL_(LIBRARY|LIBS)\}/solidcontrol/g' {} + \
-		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_PROCESSUI_(LIBRARY|LIBS)\}/processui/g' {} + \
-		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_LSOFUI_(LIBRARY|LIBS)\}/lsofui/g' {} + \
-		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_PLASMACLOCK_(LIBRARY|LIBS)\}/plasmaclock/g' {} + \
-		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_NEPOMUKQUERYCLIENT_(LIBRARY|LIBS)\}/nepomukqueryclient/g' {} + \
-		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_NEPOMUKQUERY_(LIBRARY|LIBS)\}/nepomukquery/g' {} + \
-		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_KSCREENSAVER_(LIBRARY|LIBS)\}/kscreensaver/g' {} + \
-		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_WEATHERION_(LIBRARY|LIBS)\}/weather_ion/g' {} + \
-		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_KWINEFFECTS_(LIBRARY|LIBS)\}/kwineffects/g' {} + \
-		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_KDECORATIONS_(LIBRARY|LIBS)\}/kdecorations/g' {} + \
-		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_KSGRD_(LIBRARY|LIBS)\}/ksgrd/g' {} + \
-		-exec sed -i -r -e 's/\$\{KDE4WORKSPACE_KEPHAL_(LIBRARY|LIBS)\}/kephal/g' {} + \
+		-exec sed -i -r \
+			-e 's/\$\{KDE4WORKSPACE_TASKMANAGER_(LIBRARY|LIBS)\}/taskmanager/g' \
+			-e 's/\$\{KDE4WORKSPACE_KWORKSPACE_(LIBRARY|LIBS)\}/kworkspace/g' \
+			-e 's/\$\{KDE4WORKSPACE_SOLIDCONTROLIFACES_(LIBRARY|LIBS)\}/solidcontrolifaces/g' \
+			-e 's/\$\{KDE4WORKSPACE_SOLIDCONTROL_(LIBRARY|LIBS)\}/solidcontrol/g' \
+			-e 's/\$\{KDE4WORKSPACE_PROCESSUI_(LIBRARY|LIBS)\}/processui/g' \
+			-e 's/\$\{KDE4WORKSPACE_LSOFUI_(LIBRARY|LIBS)\}/lsofui/g' \
+			-e 's/\$\{KDE4WORKSPACE_PLASMACLOCK_(LIBRARY|LIBS)\}/plasmaclock/g' \
+			-e 's/\$\{KDE4WORKSPACE_NEPOMUKQUERYCLIENT_(LIBRARY|LIBS)\}/nepomukqueryclient/g' \
+			-e 's/\$\{KDE4WORKSPACE_NEPOMUKQUERY_(LIBRARY|LIBS)\}/nepomukquery/g' \
+			-e 's/\$\{KDE4WORKSPACE_KSCREENSAVER_(LIBRARY|LIBS)\}/kscreensaver/g' \
+			-e 's/\$\{KDE4WORKSPACE_WEATHERION_(LIBRARY|LIBS)\}/weather_ion/g' \
+			-e 's/\$\{KDE4WORKSPACE_KWINEFFECTS_(LIBRARY|LIBS)\}/kwineffects/g' \
+			-e 's/\$\{KDE4WORKSPACE_KDECORATIONS_(LIBRARY|LIBS)\}/kdecorations/g' \
+			-e 's/\$\{KDE4WORKSPACE_KSGRD_(LIBRARY|LIBS)\}/ksgrd/g' \
+			-e 's/\$\{KDE4WORKSPACE_KEPHAL_(LIBRARY|LIBS)\}/kephal/g' \
+			{} + \
 		|| die 'failed to replace KDE4Workspace library targets'
 
 	# Hack for manuals relying on outdated DTD, only outside kde-base/koffice/...
