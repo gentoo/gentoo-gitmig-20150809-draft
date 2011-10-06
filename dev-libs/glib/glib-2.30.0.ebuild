@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.30.0.ebuild,v 1.2 2011/09/28 11:19:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.30.0.ebuild,v 1.3 2011/10/06 08:52:18 ssuominen Exp $
 
 EAPI="4"
 
@@ -100,6 +100,8 @@ src_configure() {
 	if ! has_version dev-util/pkgconfig; then
 		export DBUS1_CFLAGS="-I/usr/include/dbus-1.0 -I/usr/$(get_libdir)/dbus-1.0/include"
 		export DBUS1_LIBS="-ldbus-1"
+		export LIBFFI_CFLAGS="-I$(echo /usr/$(get_libdir)/libffi-*/include)"
+		export LIBFFI_LIBS="-lffi"
 	fi
 
 	local myconf
