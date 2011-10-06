@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.7.1-r1.ebuild,v 1.6 2011/08/02 05:44:53 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/gv-3.7.1-r1.ebuild,v 1.7 2011/10/06 17:48:47 jer Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/gv/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc x86"
 IUSE="xinerama"
 
 DEPEND="x11-libs/libX11
