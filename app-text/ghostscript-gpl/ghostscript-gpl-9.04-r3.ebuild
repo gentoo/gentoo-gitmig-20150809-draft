@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.04-r3.ebuild,v 1.4 2011/10/05 05:50:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.04-r3.ebuild,v 1.5 2011/10/06 17:41:08 jer Exp $
 
 EAPI=3
 inherit autotools eutils versionator flag-o-matic
@@ -17,7 +17,7 @@ SRC_URI="!bindist? ( djvu? ( mirror://sourceforge/djvu/gsdjvu-${GSDJVU_PV}.tar.g
 
 LICENSE="GPL-3 CPL-1.0"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="bindist cups dbus djvu gtk idn jpeg2k static-libs X"
 
 COMMON_DEPEND="app-text/libpaper
@@ -107,6 +107,7 @@ src_prepare() {
 		-e "s:exdir=.*:exdir=/usr/share/doc/${PF}/examples:" \
 		-e "s:docdir=.*:docdir=/usr/share/doc/${PF}/html:" \
 		-e "s:GS_DOCDIR=.*:GS_DOCDIR=/usr/share/doc/${PF}/html:" \
+		-e 's:-L$(BINDIR):$(LDFLAGS) &:g' \
 		base/Makefile.in base/*.mak || die "sed failed"
 
 	cd "${S}"
