@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.1.11.ebuild,v 1.1 2011/09/27 10:47:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.1.11.ebuild,v 1.2 2011/10/06 22:58:24 hwoarang Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit eutils multilib pam autotools libtool
 
@@ -33,6 +33,8 @@ RDEPEND="!net-dialup/cistronradius
 	frxp? ( dev-lang/python )"
 DEPEND="${RDEPEND}"
 
+REQUIRED_USE="frxp? ( threads )"
+
 S="${WORKDIR}/${PN}-server-${PV}"
 
 pkg_setup() {
@@ -51,6 +53,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.1.10-qafixes.patch"
 	epatch "${FILESDIR}/${PN}-2.1.10-pkglibdir.patch"
 
+	append-flags -lpthread
 	# kill modules we don't use
 	if ! use ssl; then
 		einfo "removing rlm_eap_{tls,ttls,ikev2,peap} modules  (no use ssl)"
@@ -126,14 +129,13 @@ src_install() {
 	diropts
 
 	make R="${D}" install || die "make install failed"
-	dosed 's:^#user *= *nobody:user = radiusd:;s:^#group *= *nobody:group = radiusd:' \
-	    /etc/raddb/radiusd.conf
+	sed -i -e 's:^#user *= *nobody:user = radiusd:;s:^#group *= *nobody:group = radiusd:' \
+	    "${D}"/etc/raddb/radiusd.conf
 	chown -R root:radiusd "${D}"/etc/raddb/*
 
 	pamd_mimic_system radiusd auth account password session
 
 	mv "${D}/usr/share/doc/${PN}" "${D}/usr/share/doc/${PF}"
-	prepalldocs
 	dodoc CREDITS
 
 	rm "${D}/usr/sbin/rc.radiusd"
