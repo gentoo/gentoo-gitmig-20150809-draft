@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13113 2011/10/06 20:27:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13114 2011/10/06 20:37:56 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -935,15 +935,6 @@ dev-haskell/hsshellscript
 # Use the split horde ebuilds instaed.
 www-apps/horde-webmail
 www-apps/horde-groupware
-
-# Alexis Ballier <aballier@gentoo.org> (13 Nov 2010)
-# Last rites: app-text/ptex
-# Ebuilds have been unmaintained for years. ptex is now merged in TeX Live with
-# the 2010 version: enable the cjk useflag. If you have any feature ptex had
-# that is not available with TeX Live, please file a bug.
-# Will be removed on max{13 Dec 2010, TeX Live 2010 stabilized}.
-# Bugs: 303965, 323559 and 344585
-app-text/ptex
 
 # Markos Chandras <hwoarang@gentoo.org> (01 Nov 2010)
 # Masking alpha releases
