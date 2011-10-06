@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.3.4.ebuild,v 1.1 2011/06/14 10:46:48 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-1.3.4.ebuild,v 1.2 2011/10/06 08:13:58 ssuominen Exp $
 
 EAPI="4"
 
@@ -99,4 +99,5 @@ src_install() {
 	emake DESTDIR="${D}" install
 	dodoc AUTHORS BUGS ChangeLog NEWS README* TODO
 	fowners root:root -R /usr/share/kino/help #177378
+	find "${ED}"usr -name '*.la' -exec rm -f {} + #385361
 }
