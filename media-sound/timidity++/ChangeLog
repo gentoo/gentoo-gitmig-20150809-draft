@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.134 2011/02/16 16:24:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.135 2011/10/06 15:04:43 ssuominen Exp $
+
+*timidity++-2.13.2-r14 (06 Oct 2011)
+
+  06 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +timidity++-2.13.2-r14.ebuild:
+  export CFLAGS to EXTRACFLAGS wrt #385817 by Agostino Sarubbo
 
   16 Feb 2011; Alexis Ballier <aballier@gentoo.org>
   timidity++-2.13.2-r13.ebuild:
