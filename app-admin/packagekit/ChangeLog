@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/packagekit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit/ChangeLog,v 1.3 2011/09/05 15:03:24 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit/ChangeLog,v 1.4 2011/10/06 19:26:39 lxnay Exp $
+
+*packagekit-0.6.19 (06 Oct 2011)
+
+  06 Oct 2011; Fabio Erculiani <lxnay@gentoo.org> +packagekit-0.6.19.ebuild:
+  version bump
 
 *packagekit-0.6.18 (05 Sep 2011)
 
