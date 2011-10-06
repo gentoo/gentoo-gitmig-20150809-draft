@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/dmenu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.68 2011/05/31 08:15:38 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.69 2011/10/06 20:31:28 jer Exp $
+
+*dmenu-4.4.1 (06 Oct 2011)
+
+  06 Oct 2011; Jeroen Roovers <jer@gentoo.org> +dmenu-4.4.1.ebuild:
+  Version bump, block app-misc/lsx and net-dialup/lrzsz (bug #376675). Do not
+  install README (bug #369541). Drop -g from CFLAGS (bug #378651).
 
 *dmenu-4.3.1 (31 May 2011)
 
