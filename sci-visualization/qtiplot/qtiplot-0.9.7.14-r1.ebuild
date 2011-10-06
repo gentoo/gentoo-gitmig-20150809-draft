@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.14-r1.ebuild,v 1.4 2010/10/10 16:55:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.14-r1.ebuild,v 1.5 2011/10/06 11:33:01 jlec Exp $
 
 EAPI=2
 
@@ -186,10 +186,10 @@ src_install() {
 
 pkg_postinst() {
 	fdo-mime_desktop_database_update
-	python_mod_optimize "$(python_get_sitedir)/qtiplot"
+	use python && python_mod_optimize "$(python_get_sitedir)/qtiplot"
 }
 
 pkg_postrm() {
 	fdo-mime_desktop_database_update
-	python_mod_cleanup "$(python_get_sitedir)/qtiplot"
+	use python && python_mod_cleanup "$(python_get_sitedir)/qtiplot"
 }
