@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.135 2011/10/07 10:52:31 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.136 2011/10/07 10:53:14 djc Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -2408,8 +2408,8 @@ _python_test_hook() {
 		die "${FUNCNAME}() requires 1 argument"
 	fi
 
-	if _python_package_supporting_installation_for_multiple_python_abis && [[ "$(type -t "${FUNCNAME[3]}_$1_hook")" == "function" ]]; then
-		"${FUNCNAME[3]}_$1_hook"
+	if _python_package_supporting_installation_for_multiple_python_abis && [[ "$(type -t "${_PYTHON_TEST_FUNCTION}_$1_hook")" == "function" ]]; then
+		"${_PYTHON_TEST_FUNCTION}_$1_hook"
 	fi
 }
 
@@ -2453,7 +2453,7 @@ python_execute_nosetests() {
 
 		eval "evaluated_PYTHONPATH=\"${PYTHONPATH_template}\""
 
-		_python_test_hook pre
+		_PYTHON_TEST_FUNCTION="python_execute_nosetests" _python_test_hook pre
 
 		if [[ -n "${evaluated_PYTHONPATH}" ]]; then
 			echo ${_BOLD}PYTHONPATH="${evaluated_PYTHONPATH}" nosetests --verbosity="${PYTHON_TEST_VERBOSITY}" "$@"${_NORMAL}
@@ -2463,7 +2463,7 @@ python_execute_nosetests() {
 			nosetests --verbosity="${PYTHON_TEST_VERBOSITY}" "$@" || return "$?"
 		fi
 
-		_python_test_hook post
+		_PYTHON_TEST_FUNCTION="python_execute_nosetests" _python_test_hook post
 	}
 	if _python_package_supporting_installation_for_multiple_python_abis; then
 		python_execute_function ${separate_build_dirs:+-s} python_test_function "$@"
@@ -2517,7 +2517,7 @@ python_execute_py.test() {
 
 		eval "evaluated_PYTHONPATH=\"${PYTHONPATH_template}\""
 
-		_python_test_hook pre
+		_PYTHON_TEST_FUNCTION="python_execute_py.test" _python_test_hook pre
 
 		if [[ -n "${evaluated_PYTHONPATH}" ]]; then
 			echo ${_BOLD}PYTHONPATH="${evaluated_PYTHONPATH}" py.test $([[ "${PYTHON_TEST_VERBOSITY}" -ge 2 ]] && echo -v) "$@"${_NORMAL}
@@ -2527,7 +2527,7 @@ python_execute_py.test() {
 			py.test $([[ "${PYTHON_TEST_VERBOSITY}" -gt 1 ]] && echo -v) "$@" || return "$?"
 		fi
 
-		_python_test_hook post
+		_PYTHON_TEST_FUNCTION="python_execute_py.test" _python_test_hook post
 	}
 	if _python_package_supporting_installation_for_multiple_python_abis; then
 		python_execute_function ${separate_build_dirs:+-s} python_test_function "$@"
@@ -2581,7 +2581,7 @@ python_execute_trial() {
 
 		eval "evaluated_PYTHONPATH=\"${PYTHONPATH_template}\""
 
-		_python_test_hook pre
+		_PYTHON_TEST_FUNCTION="python_execute_trial" _python_test_hook pre
 
 		if [[ -n "${evaluated_PYTHONPATH}" ]]; then
 			echo ${_BOLD}PYTHONPATH="${evaluated_PYTHONPATH}" trial $([[ "${PYTHON_TEST_VERBOSITY}" -ge 4 ]] && echo --spew) "$@"${_NORMAL}
@@ -2591,7 +2591,7 @@ python_execute_trial() {
 			trial $([[ "${PYTHON_TEST_VERBOSITY}" -ge 4 ]] && echo --spew) "$@" || return "$?"
 		fi
 
-		_python_test_hook post
+		_PYTHON_TEST_FUNCTION="python_execute_trial" _python_test_hook post
 	}
 	if _python_package_supporting_installation_for_multiple_python_abis; then
 		python_execute_function ${separate_build_dirs:+-s} python_test_function "$@"
