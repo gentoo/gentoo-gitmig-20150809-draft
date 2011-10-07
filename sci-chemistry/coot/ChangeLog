@@ -1,10 +1,10 @@
 # ChangeLog for sci-chemistry/coot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.45 2011/10/07 09:37:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/ChangeLog,v 1.46 2011/10/07 09:45:59 jlec Exp $
 
-  07 Oct 2011; Justin Lecher <jlec@gentoo.org> coot-0.6.2.ebuild,
-  coot-0.6.2-r1.ebuild:
-  Readded dropped append-ldflags.eclass, found by ssuominen
+  07 Oct 2011; Justin Lecher <jlec@gentoo.org> coot-0.6.2.ebuild:
+  Readded dropped flag-o-matic.eclass and removed dep on
+  >=sys-devel/libtool-2.4-r2, found by ssuominen
 
 *coot-0.6.2-r1 (07 Oct 2011)
 
