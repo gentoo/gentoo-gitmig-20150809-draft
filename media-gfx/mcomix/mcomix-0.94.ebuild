@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/mcomix-0.94.ebuild,v 1.2 2011/10/06 03:42:28 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/mcomix/mcomix-0.94.ebuild,v 1.3 2011/10/07 01:44:47 dirtyepic Exp $
 
 EAPI="3"
 
@@ -18,11 +18,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="rar"
 
-RDEPEND="
-	app-arch/unzip
-	dev-python/pysqlite
+DEPEND="dev-python/setuptools"
+RDEPEND="${DEPEND}
 	>=dev-python/imaging-1.1.5
-	>=dev-python/pygtk-2.12
+	>=dev-python/pygtk-2.14
+	|| ( dev-lang/python[sqlite] dev-python/pysqlite )
 	rar? ( || ( app-arch/unrar app-arch/rar ) )
 	!media-gfx/comix"
 # TODO - if libunrar ever becomes available (bug #177402)
@@ -42,6 +42,10 @@ pkg_postinst() {
 	distutils_pkg_postinst
 	fdo-mime_mime_database_update
 	fdo-mime_desktop_database_update
+	echo
+	elog "You can optionally add support for 7z or LHA archives by installing"
+	elog "app-arch/p7zip or app-arch/lha."
+	echo
 }
 
 pkg_postrm() {
