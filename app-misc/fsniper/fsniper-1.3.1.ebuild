@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fsniper/fsniper-1.3.1.ebuild,v 1.4 2011/01/11 07:25:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fsniper/fsniper-1.3.1.ebuild,v 1.5 2011/10/07 14:57:06 jlec Exp $
 
 DESCRIPTION="Tool that monitors a given set of directories for new files"
-HOMEPAGE="http://projects.l3ib.org/trac/fsniper"
+HOMEPAGE="https://github.com/l3ib/fsniper/"
 SRC_URI="http://projects.l3ib.org/${PN}/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
