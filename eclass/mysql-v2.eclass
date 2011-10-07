@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.8 2011/09/25 12:43:28 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql-v2.eclass,v 1.9 2011/10/07 04:30:18 jmbsvicetto Exp $
 
 # @ECLASS: mysql-v2.eclass
 # @MAINTAINER:
@@ -43,6 +43,7 @@ MYSQL_EXTRAS=""
 # @ECLASS-VARIABLE: MYSQL_EXTRAS_VER
 # @DESCRIPTION:
 # The version of the MYSQL_EXTRAS repo to use to build mysql
+# Use "none" to disable it's use
 [[ "${MY_EXTRAS_VER}" == "live" ]] && MYSQL_EXTRAS="git-2"
 
 inherit eutils flag-o-matic gnuconfig ${MYSQL_EXTRAS} ${BUILD_INHERIT} mysql_fx versionator toolchain-funcs
@@ -174,7 +175,7 @@ fi
 SRC_URI="${SERVER_URI}"
 
 # Gentoo patches to MySQL
-[[ ${MY_EXTRAS_VER} != live ]] \
+[[ ${MY_EXTRAS_VER} != live ]] && [[ ${MY_EXTRAS_VER} != none ]] \
 && SRC_URI="${SRC_URI}
 		mirror://gentoo/mysql-extras-${MY_EXTRAS_VER}.tar.bz2
 		http://g3nt8.org/patches/mysql-extras-${MY_EXTRAS_VER}.tar.bz2
@@ -235,7 +236,7 @@ IUSE="${IUSE} berkdb"
 # These are used for both runtime and compiletime
 DEPEND="
 	ssl? ( >=dev-libs/openssl-0.9.6d )
-	userland_GNU? ( sys-process/procps )
+	kernel_linux? ( sys-process/procps )
 	>=sys-apps/sed-4
 	>=sys-apps/texinfo-4.7-r1
 	>=sys-libs/readline-4.1
@@ -639,7 +640,7 @@ mysql-v2_pkg_config() {
 	help_tables="${TMPDIR}/fill_help_tables.sql"
 
 	pushd "${TMPDIR}" &>/dev/null
-	"${ROOT}/usr/bin/mysql_install_db" >"${TMPDIR}"/mysql_install_db.log 2>&1
+	"${ROOT}/usr/bin/mysql_install_db --basedir=/usr" >"${TMPDIR}"/mysql_install_db.log 2>&1
 	if [ $? -ne 0 ]; then
 		grep -B5 -A999 -i "ERROR" "${TMPDIR}"/mysql_install_db.log 1>&2
 		die "Failed to run mysql_install_db. Please review /var/log/mysql/mysqld.err AND ${TMPDIR}/mysql_install_db.log"
