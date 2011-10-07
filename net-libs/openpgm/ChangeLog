@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/openpgm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openpgm/ChangeLog,v 1.4 2011/07/13 19:47:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openpgm/ChangeLog,v 1.5 2011/10/07 11:20:56 djc Exp $
+
+  07 Oct 2011; Dirkjan Ochtman <djc@gentoo.org> -openpgm-5.1.114.ebuild:
+  Remove old version.
 
   13 Jul 2011; Markus Meier <maekke@gentoo.org> openpgm-5.1.116.ebuild:
   x86 stable, bug #371377
