@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/autotrace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.46 2011/03/03 15:38:09 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.47 2011/10/07 15:49:47 ssuominen Exp $
+
+  07 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  autotrace-0.31.1-r6.ebuild:
+  USE="static-libs" and remove libtool archive wrt #386035 by Agostino Sarubbo
 
   03 Mar 2011; Joseph Jezak <josejx@gentoo.org> autotrace-0.31.1-r5.ebuild,
   autotrace-0.31.1-r6.ebuild, +files/autotrace-0.31.1-bool.patch:

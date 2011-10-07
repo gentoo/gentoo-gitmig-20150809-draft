@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.31.1-r6.ebuild,v 1.3 2011/03/03 15:38:09 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.31.1-r6.ebuild,v 1.4 2011/10/07 15:49:47 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit autotools eutils
 
 _dpatch=15
@@ -15,7 +15,7 @@ SRC_URI="mirror://debian/pool/main/a/${PN}/${PN}_${PV}.orig.tar.gz
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="+imagemagick"
+IUSE="+imagemagick static-libs"
 
 RDEPEND="media-libs/libexif
 	>=media-libs/libpng-1.4.3
@@ -25,13 +25,17 @@ RDEPEND="media-libs/libexif
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+DOCS=( AUTHORS ChangeLog NEWS README )
+
 src_prepare() {
 	epatch "${WORKDIR}"/${PN}_${PV}-${_dpatch}.diff
 
-	epatch "${FILESDIR}"/${P}-{m4,libpng14,pkgconfig}.patch \
+	epatch \
+		"${FILESDIR}"/${P}-{m4,libpng14,pkgconfig}.patch \
 		"${FILESDIR}"/${P}-swf-output.patch \
 		"${FILESDIR}"/${P}-GetOnePixel.patch \
 		"${FILESDIR}"/${P}-libpng-1.5.patch
+
 	# Fix building on PowerPC with Altivec
 	epatch "${FILESDIR}"/${P}-bool.patch
 
@@ -40,13 +44,13 @@ src_prepare() {
 
 src_configure() {
 	econf \
-		--disable-dependency-tracking \
+		$(use_enable static-libs static) \
 		$(use_with imagemagick magick) \
 		--with-ming \
 		--with-pstoedit
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS README
+	default
+	rm -f "${ED}"usr/lib*/lib${PN}.la
 }
