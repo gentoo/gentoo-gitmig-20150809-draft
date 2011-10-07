@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/aria
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/ChangeLog,v 1.9 2011/08/30 13:51:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/aria/ChangeLog,v 1.10 2011/10/07 19:23:04 jlec Exp $
+
+*aria-2.3.2-r1 (07 Oct 2011)
+
+  07 Oct 2011; Justin Lecher <jlec@gentoo.org> +aria-2.3.2-r1.ebuild,
+  +files/aria-2.3.2-through-space.patch:
+  Add patches for newer ccpn data model, kindly provided by Tim Stevens
 
   30 Aug 2011; Justin Lecher <jlec@gentoo.org> aria-2.3.2.ebuild:
   Corrected dep version of cns so that new changes are present
