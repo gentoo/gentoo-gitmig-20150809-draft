@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-ffnetdev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/ChangeLog,v 1.16 2011/01/29 00:10:30 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/ChangeLog,v 1.17 2011/10/07 18:33:14 hd_brummy Exp $
+
+  07 Oct 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdr-ffnetdev-0.1.0-r1.ebuild:
+  fixed dead berlios Homepage, new project HP
 
   29 Jan 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-ffnetdev-0.1.0-r1.ebuild:
