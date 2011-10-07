@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/asciitable/asciitable-0.8.0.ebuild,v 1.1 2011/10/05 20:06:51 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/asciitable/asciitable-0.8.0.ebuild,v 1.2 2011/10/07 11:30:46 xarthisius Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -20,8 +20,6 @@ IUSE=""
 
 RDEPEND="dev-python/numpy"
 DEPEND="${RDEPEND}"
-
-PYTHON_MODNAME="asciitable.py"
 
 src_install() {
 	distutils_src_install

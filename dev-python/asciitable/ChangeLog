@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/asciitable
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/asciitable/ChangeLog,v 1.12 2011/10/05 20:06:51 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/asciitable/ChangeLog,v 1.13 2011/10/07 11:30:46 xarthisius Exp $
+
+  07 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> asciitable-0.8.0.ebuild:
+  Remove obsolete PYTHON_MODNAME
 
 *asciitable-0.8.0 (05 Oct 2011)
 
