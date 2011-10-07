@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/olsrd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/ChangeLog,v 1.23 2011/01/06 22:43:26 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/ChangeLog,v 1.24 2011/10/07 17:01:39 jer Exp $
+
+*olsrd-0.6.2 (07 Oct 2011)
+
+  07 Oct 2011; Jeroen Roovers <jer@gentoo.org> +olsrd-0.6.2.ebuild:
+  Version bump. Respect LDFLAGS, fix --as-needed in USE=gtk case.
 
 *olsrd-0.6.1 (06 Jan 2011)
 
