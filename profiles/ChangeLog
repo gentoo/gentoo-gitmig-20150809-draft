@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5765 2011/10/06 20:46:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5766 2011/10/07 13:02:21 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Oct 2011; Jeremy Olexa <darkside@gentoo.org> targets/desktop/package.use:
+  Provide a better user experience on desktop profiles by enabling python
+  useflag on dev-libs/libxml2, bug 385843
 
   06 Oct 2011; Alexis Ballier <aballier@gentoo.org> package.mask:
   unmask new janestreet ocaml packages
