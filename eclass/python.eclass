@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.133 2011/10/07 10:48:24 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.134 2011/10/07 10:49:26 djc Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -1573,7 +1573,7 @@ for file in sorted(files_set):
 		popd > /dev/null || die "popd failed"
 
 		if ROOT="/" has_version sys-apps/coreutils; then
-			cp -fr --preserve=all "${intermediate_installation_images_directory}/${PYTHON_ABI}/"* "${D}" || die "Merging of intermediate installation image for Python ABI '${PYTHON_ABI} into installation image failed"
+			cp -fr --preserve=all --no-preserve=context "${intermediate_installation_images_directory}/${PYTHON_ABI}/"* "${D}" || die "Merging of intermediate installation image for Python ABI '${PYTHON_ABI} into installation image failed"
 		else
 			cp -fpr "${intermediate_installation_images_directory}/${PYTHON_ABI}/"* "${D}" || die "Merging of intermediate installation image for Python ABI '${PYTHON_ABI} into installation image failed"
 		fi
