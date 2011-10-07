@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.3.0-r1.ebuild,v 1.1 2011/10/06 22:32:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.3.0-r1.ebuild,v 1.2 2011/10/07 13:18:45 dilfridge Exp $
 
 EAPI=3
 
@@ -22,7 +22,6 @@ IUSE="cuda doc eigen examples ffmpeg gstreamer gtk ieee1394 ipp jpeg jpeg2k open
 RDEPEND="
 	app-arch/bzip2
 	sys-libs/zlib
-	sci-libs/flann
 	cuda? ( >=dev-util/nvidia-cuda-toolkit-4 )
 	eigen? ( dev-cpp/eigen:2 )
 	ffmpeg? ( virtual/ffmpeg )
@@ -61,6 +60,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-2.3.0-ffmpeg.patch"
 	"${FILESDIR}/${PN}-2.3.0-numpy.patch"
 	"${FILESDIR}/${PN}-2.3.0-symlink.patch"
+	"${FILESDIR}/${PN}-2.3.0-libpng15.patch"
 )
 
 CMAKE_BUILD_TYPE="Release"
@@ -77,8 +77,6 @@ pkg_setup() {
 
 src_prepare() {
 	base_src_prepare
-	# include missing zlib.h for libpng>1.5. Bug #383571
-	epatch "${FILESDIR}"/${P}-libpng15.patch
 
 	# remove bundled stuff
 	rm -rf 3rdparty
