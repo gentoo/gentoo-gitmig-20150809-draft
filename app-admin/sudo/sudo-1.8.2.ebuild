@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.2.ebuild,v 1.3 2011/08/26 01:03:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.2.ebuild,v 1.4 2011/10/07 16:27:53 vapier Exp $
 
 EAPI=4
 
@@ -55,6 +55,7 @@ REQUIRED_USE="pam? ( !skey ) skey? ( !pam )"
 MAKEOPTS="${MAKEOPTS} SAMPLES="
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-parallel-build.patch
 	elibtoolize
 }
 
