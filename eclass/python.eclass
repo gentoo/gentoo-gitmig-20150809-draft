@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.136 2011/10/07 10:53:14 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.137 2011/10/07 10:55:51 djc Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -1623,7 +1623,9 @@ else:
 	# Python 2
 	stdout = sys.stdout
 
-files = set(open('${T}/python_wrapper_scripts', 'rb').read().rstrip(${b}'\x00').split(${b}'\x00'))
+python_wrapper_scripts_file = open('${T}/python_wrapper_scripts', 'rb')
+files = set(python_wrapper_scripts_file.read().rstrip(${b}'\x00').split(${b}'\x00'))
+python_wrapper_scripts_file.close()
 
 for file in sorted(files):
 	stdout.write(file)
