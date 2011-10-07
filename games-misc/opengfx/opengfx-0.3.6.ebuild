@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/opengfx/opengfx-0.3.3.ebuild,v 1.1 2011/05/04 17:23:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/opengfx/opengfx-0.3.6.ebuild,v 1.1 2011/10/07 21:47:49 mr_bones_ Exp $
 
 EAPI=2
 inherit games
@@ -26,6 +26,6 @@ src_compile() {
 src_install() {
 	insinto "${GAMES_DATADIR}/openttd/data/"
 	doins *.grf opengfx.obg || die
-	dodoc docs/{changelog.txt,readme.txt} || die
+	dodoc docs/{changelog.txt,readme.txt}
 	prepgamesdirs
 }
