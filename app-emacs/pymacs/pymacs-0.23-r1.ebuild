@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.23-r1.ebuild,v 1.10 2011/10/05 19:29:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/pymacs-0.23-r1.ebuild,v 1.11 2011/10/07 20:58:00 ulm Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -22,8 +22,7 @@ DEPEND="
 	doc? ( dev-python/docutils
 		virtual/latex-base
 		dev-texlive/texlive-latexextra
-		dev-texlive/texlive-langfrench
-		 )"
+		dev-texlive/texlive-langfrench )"
 RDEPEND=""
 
 SITEFILE=50${PN}-gentoo.el
