@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.132 2011/09/10 13:48:46 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.133 2011/10/07 10:48:24 djc Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -1236,7 +1236,8 @@ import sys
 cpython_re = re.compile(r"^python(\d+\.\d+)$")
 jython_re = re.compile(r"^jython(\d+\.\d+)$")
 pypy_re = re.compile(r"^pypy-c(\d+\.\d+)$")
-python_shebang_re = re.compile(r"^#! *(${EPREFIX}/usr/bin/python|(${EPREFIX})?/usr/bin/env +(${EPREFIX}/usr/bin/)?python)")
+cpython_shebang_re = re.compile(r"^#![ \t]*(?:${EPREFIX}/usr/bin/python|(?:${EPREFIX})?/usr/bin/env[ \t]+(?:${EPREFIX}/usr/bin/)?python)")
+python_shebang_options_re = re.compile(r"^#![ \t]*${EPREFIX}/usr/bin/(?:jython|pypy-c|python)(?:\d+(?:\.\d+)?)?[ \t]+(-\S)")
 python_verification_output_re = re.compile("^GENTOO_PYTHON_TARGET_SCRIPT_PATH supported\n$")
 
 pypy_versions_mapping = {
@@ -1340,14 +1341,19 @@ EOF
 
 target_executable = open(target_executable_path, "rb")
 target_executable_first_line = target_executable.readline()
+target_executable.close()
 if not isinstance(target_executable_first_line, str):
 	# Python 3
 	target_executable_first_line = target_executable_first_line.decode("utf_8", "replace")
 
-python_shebang_matched = python_shebang_re.match(target_executable_first_line)
-target_executable.close()
+options = []
+python_shebang_options_matched = python_shebang_options_re.match(target_executable_first_line)
+if python_shebang_options_matched is not None:
+	options = [python_shebang_options_matched.group(1)]
 
-if python_shebang_matched is not None:
+cpython_shebang_matched = cpython_shebang_re.match(target_executable_first_line)
+
+if cpython_shebang_matched is not None:
 	try:
 		python_interpreter_path = "${EPREFIX}/usr/bin/%s" % EPYTHON
 		os.environ["GENTOO_PYTHON_TARGET_SCRIPT_PATH_VERIFICATION"] = "1"
@@ -1370,9 +1376,9 @@ if python_shebang_matched is not None:
 			os.environ["GENTOO_PYTHON_TARGET_SCRIPT_PATH"] = target_executable_path
 
 		if hasattr(os, "execv"):
-			os.execv(python_interpreter_path, [python_interpreter_path] + sys.argv)
+			os.execv(python_interpreter_path, [python_interpreter_path] + options + sys.argv)
 		else:
-			sys.exit(subprocess.Popen([python_interpreter_path] + sys.argv).wait())
+			sys.exit(subprocess.Popen([python_interpreter_path] + options + sys.argv).wait())
 	except (KeyboardInterrupt, SystemExit):
 		raise
 	except:
