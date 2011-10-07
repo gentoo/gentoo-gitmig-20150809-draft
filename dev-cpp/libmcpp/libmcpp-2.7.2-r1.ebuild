@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libmcpp/libmcpp-2.7.2-r1.ebuild,v 1.4 2010/08/01 23:58:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libmcpp/libmcpp-2.7.2-r1.ebuild,v 1.5 2011/10/07 19:13:38 darkside Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/mcpp/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm x86"
+KEYWORDS="amd64 ~arm x86 ~x64-macos"
 IUSE="static-libs"
 
 DEPEND=""
@@ -29,9 +29,9 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	rm -rf "${D}/usr/share/doc"
+	rm -rf "${ED}/usr/share/doc"
 	dodoc ChangeLog NEWS README doc/*.pdf
 	dohtml doc/*.html
 
-	use static-libs || rm -rf "${D}"/usr/lib*/*.la
+	use static-libs || rm -rf "${ED}"/usr/lib*/*.la
 }
