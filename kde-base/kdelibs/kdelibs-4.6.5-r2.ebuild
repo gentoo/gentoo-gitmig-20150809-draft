@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.5-r2.ebuild,v 1.3 2011/10/04 14:16:33 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.5-r2.ebuild,v 1.4 2011/10/07 20:24:51 ssuominen Exp $
 
 EAPI=4
 
@@ -142,6 +142,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.6.5-cardinality.patch"
 	"${FILESDIR}/${PN}-4.6.5-qlabel-1.patch"
 	"${FILESDIR}/${PN}-4.6.5-qlabel-2.patch"
+	"${FILESDIR}/${PN}-4.7.1-libpng15.patch"
 )
 
 pkg_pretend() {
