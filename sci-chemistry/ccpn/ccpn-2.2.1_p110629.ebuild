@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.2.1_p110629.ebuild,v 1.1 2011/06/29 05:51:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.2.1_p110629.ebuild,v 1.2 2011/10/07 19:29:31 jlec Exp $
 
 EAPI="3"
 
@@ -39,7 +39,7 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 PDEPEND="
 	extendnmr? (
-		sci-chemistry/aria
+		>=sci-chemistry/aria-2.3.2-r1
 		sci-chemistry/prodecomp )"
 
 RESTRICT="mirror"
