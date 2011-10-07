@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.68 2011/08/28 21:00:34 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.69 2011/10/07 18:47:48 swift Exp $
 
 # Zac Medico <zmedico@gentoo.org> (09 Aug 2011)
 # Bug #377907 - Use package.mask for compatibility with PMS section 5.2.7, and
@@ -146,7 +146,6 @@
 -sec-policy/selinux-mozilla
 -sec-policy/selinux-mplayer
 -sec-policy/selinux-mrtg
--sec-policy/selinux-mta
 -sec-policy/selinux-munin
 -sec-policy/selinux-mutt
 -sec-policy/selinux-mysql
@@ -249,3 +248,7 @@
 -sec-policy/selinux-xscreensaver
 -sec-policy/selinux-xserver
 -sec-policy/selinux-zabbix
+
+# Sven Vermeulen <swift@gentoo.org> (07 Oct 2011)
+# Mask out sec-policy/selinux-mta as it is offered by selinux-base-policy (bug #384851)
+sec-policy/selinux-mta
