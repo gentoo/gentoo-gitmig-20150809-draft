@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.2-r1.ebuild,v 1.1 2011/10/07 09:01:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.6.2-r1.ebuild,v 1.2 2011/10/07 09:37:25 jlec Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="2"
 
-inherit autotools-utils python toolchain-funcs versionator
+inherit autotools-utils flag-o-matic python toolchain-funcs versionator
 
 MY_S2_PV=$(replace_version_separator 2 - ${PV})
 MY_S2_P=${PN}-${MY_S2_PV/pre1/pre-1}
