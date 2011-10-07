@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxpolkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpolkit/ChangeLog,v 1.8 2011/10/05 07:22:15 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpolkit/ChangeLog,v 1.9 2011/10/07 18:39:27 hwoarang Exp $
+
+  07 Oct 2011; Markos Chandras <hwoarang@gentoo.org> lxpolkit-0.1.0.ebuild:
+  Stable on amd64 wrt bug #385189
 
   05 Oct 2011; Andreas Schuerch <nativemad@gentoo.org> lxpolkit-0.1.0.ebuild:
   x86 stable, bug 385189

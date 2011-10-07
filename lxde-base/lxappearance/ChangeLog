@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxappearance
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxappearance/ChangeLog,v 1.23 2011/10/05 07:16:36 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxappearance/ChangeLog,v 1.24 2011/10/07 18:35:32 hwoarang Exp $
+
+  07 Oct 2011; Markos Chandras <hwoarang@gentoo.org> lxappearance-0.5.1.ebuild:
+  Stable on amd64 wrt bug #385189
 
   05 Oct 2011; Andreas Schuerch <nativemad@gentoo.org>
   lxappearance-0.5.1.ebuild:
