@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/ipvsadm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ChangeLog,v 1.53 2011/09/10 09:02:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ChangeLog,v 1.54 2011/10/07 20:33:04 xarthisius Exp $
+
+*ipvsadm-1.24 (07 Oct 2011)
+
+  07 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> +ipvsadm-1.24.ebuild:
+  Restore previous version wrt #371903
 
   10 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> ipvsadm-1.21-r1.ebuild,
   -ipvsadm-1.24.ebuild, ipvsadm-1.26-r1.ebuild:
