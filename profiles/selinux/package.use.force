@@ -1,11 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.use.force,v 1.2 2011/10/07 17:43:20 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.use.force,v 1.3 2011/10/07 17:50:18 swift Exp $
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (18 Feb 2011)
 # sys-apps/portage depends on sys-libs/libselinux, which currently does not support Python 3.
 sys-apps/portage python2
 
 # Sven Vermeulen <swift@gentoo.org> (07 Oct 2011)
-# sys-apps/policycoreutils (semanage command) uses sepolgen, which requires libselinux with USE="python"
+# sys-apps/policycoreutils (semanage command) uses sepolgen, which requires libselinux with USE="python". 
+# sys-apps/policycoreutils also requires libsemanage with USE="python"
 sys-libs/libselinux python
+sys-libs/libsemanage python
