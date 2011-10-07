@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/fhist-1.19.ebuild,v 1.5 2011/09/25 12:35:42 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/fhist-1.19.ebuild,v 1.6 2011/10/07 15:03:15 jlec Exp $
 
-EAPI="4"
+EAPI=4
 
 inherit eutils
 
@@ -23,15 +23,8 @@ DEPEND="${RDEPEND}
 	sys-devel/bison
 	test? ( app-arch/sharutils )"
 
+MAKEOPTS+=" -j1"
+
 src_prepare() {
 	epatch "${FILESDIR}"/${PV}-ldflags.patch
-}
-
-src_compile() {
-	emake -j1
-}
-
-src_install () {
-	emake -j1 DESTDIR="${D}" install
-	dodoc README
 }

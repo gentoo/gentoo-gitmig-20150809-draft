@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/fhist
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.26 2011/09/25 12:35:42 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fhist/ChangeLog,v 1.27 2011/10/07 15:03:15 jlec Exp $
+
+  07 Oct 2011; Justin Lecher <jlec@gentoo.org> fhist-1.16.ebuild,
+  fhist-1.19.ebuild:
+  Move parallel make blocking to global space, #358567 & #356671
 
   25 Sep 2011; Fabian Groffen <grobian@gentoo.org> fhist-1.19.ebuild:
   Drop *-macos keywords, libexplain is a too Linux-specific hell to port (1.16
