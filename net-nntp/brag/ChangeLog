@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/brag
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/brag/ChangeLog,v 1.4 2007/02/09 04:56:43 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/brag/ChangeLog,v 1.5 2011/10/07 09:09:20 radhermit Exp $
+
+*brag-1.4.3 (07 Oct 2011)
+
+  07 Oct 2011; Tim Harder <radhermit@gentoo.org> +brag-1.4.3.ebuild:
+  Version bump. Update to EAPI 4.
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
