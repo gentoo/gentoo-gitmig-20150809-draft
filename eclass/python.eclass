@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.137 2011/10/07 10:55:51 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.138 2011/10/07 10:57:48 djc Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -2862,7 +2862,7 @@ python_mod_optimize() {
 						eval "dirs+=(\"\${root}${dir}\")"
 					done
 					stderr+="${stderr:+$'\n'}$("$(PYTHON)" -m compileall "${options[@]}" "${dirs[@]}" 2>&1)" || return_code="1"
-					if [[ "$(_python_get_implementation "${PYTHON_ABI}")" != "Jython" ]]; then
+					if ! has "$(_python_get_implementation "${PYTHON_ABI}")" Jython PyPy; then
 						"$(PYTHON)" -O -m compileall "${options[@]}" "${dirs[@]}" &> /dev/null || return_code="1"
 					fi
 					_python_clean_compiled_modules "${dirs[@]}"
@@ -2875,7 +2875,7 @@ python_mod_optimize() {
 						eval "files+=(\"\${root}${file}\")"
 					done
 					stderr+="${stderr:+$'\n'}$("$(PYTHON)" -m py_compile "${files[@]}" 2>&1)" || return_code="1"
-					if [[ "$(_python_get_implementation "${PYTHON_ABI}")" != "Jython" ]]; then
+					if ! has "$(_python_get_implementation "${PYTHON_ABI}")" Jython PyPy; then
 						"$(PYTHON)" -O -m py_compile "${files[@]}" &> /dev/null || return_code="1"
 					fi
 					_python_clean_compiled_modules "${files[@]}"
@@ -2906,14 +2906,14 @@ python_mod_optimize() {
 			ebegin "Compilation and optimization of Python modules placed outside of site-packages directories for $(python_get_implementation_and_version)"
 			if ((${#other_dirs[@]})); then
 				stderr+="${stderr:+$'\n'}$("$(PYTHON ${PYTHON_ABI})" -m compileall "${options[@]}" "${other_dirs[@]}" 2>&1)" || return_code="1"
-				if [[ "$(_python_get_implementation "${PYTHON_ABI}")" != "Jython" ]]; then
+				if ! has "$(_python_get_implementation "${PYTHON_ABI}")" Jython PyPy; then
 					"$(PYTHON ${PYTHON_ABI})" -O -m compileall "${options[@]}" "${other_dirs[@]}" &> /dev/null || return_code="1"
 				fi
 				_python_clean_compiled_modules "${other_dirs[@]}"
 			fi
 			if ((${#other_files[@]})); then
 				stderr+="${stderr:+$'\n'}$("$(PYTHON ${PYTHON_ABI})" -m py_compile "${other_files[@]}" 2>&1)" || return_code="1"
-				if [[ "$(_python_get_implementation "${PYTHON_ABI}")" != "Jython" ]]; then
+				if ! has "$(_python_get_implementation "${PYTHON_ABI}")" Jython PyPy; then
 					"$(PYTHON ${PYTHON_ABI})" -O -m py_compile "${other_files[@]}" &> /dev/null || return_code="1"
 				fi
 				_python_clean_compiled_modules "${other_files[@]}"
