@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/lsw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lsw/ChangeLog,v 1.7 2011/07/11 10:19:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lsw/ChangeLog,v 1.8 2011/10/07 16:22:39 jer Exp $
+
+  07 Oct 2011; Jeroen Roovers <jer@gentoo.org> lsw-0.2-r1.ebuild:
+  Fix sed script that should fix CFLAGS thanks to ago (bug #386087).
 
 *lsw-0.2-r1 (11 Jul 2011)
 

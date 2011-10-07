@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lsw/lsw-0.2-r1.ebuild,v 1.1 2011/07/11 10:19:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lsw/lsw-0.2-r1.ebuild,v 1.2 2011/10/07 16:22:39 jer Exp $
 
 EAPI="4"
 
@@ -25,8 +25,8 @@ src_prepare() {
 
 	sed -i config.mk \
 		-e '/^CC/d' \
-		-e 's/CFLAGS = -Os/CFLAGS +=/' \
-		-e '/^LDFLAGS/{s| = | += |;s| -s | |}' || die
+		-e '/^CFLAGS/{s| -Os||;s|=|+=|}' \
+		-e '/^LDFLAGS/{s|=|+=|;s| -s||}' || die
 }
 
 src_compile() {
