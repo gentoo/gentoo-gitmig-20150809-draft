@@ -1,6 +1,20 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.879 2011/10/06 02:39:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.880 2011/10/07 18:15:42 zmedico Exp $
+
+*portage-2.2.0_alpha63 (07 Oct 2011)
+
+  07 Oct 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha63.ebuild:
+  2.2.0_alpha63 version bump. This includes all of the fixes in
+  portage-2.1.10.23. Bug #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.10.23 (07 Oct 2011)
+
+  07 Oct 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.23.ebuild:
+  2.1.10.23 version bump. This fixes bug #340475 (repoman unnecessarily
+  commits signed manifests separately), and also has repoman commit logic
+  tweak for thin-manifests. Bug #381649 tracks all bugs fixed since
+  portage-2.1.10.11.
 
 *portage-2.2.0_alpha62 (06 Oct 2011)
 
