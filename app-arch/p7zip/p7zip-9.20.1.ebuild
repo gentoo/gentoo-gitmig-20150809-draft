@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.20.1.ebuild,v 1.3 2011/08/17 16:41:23 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-9.20.1.ebuild,v 1.4 2011/10/07 15:27:28 jlec Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -121,6 +121,7 @@ src_install() {
 			insinto /usr/share/icons/hicolor/16x16/apps/
 			newins GUI/p7zip_16_ok.png p7zip.png
 
+			rm GUI/kde4/p7zip_compress.desktop
 			insinto  /usr/share/kde4/services/ServiceMenus
 			doins GUI/kde4/*.desktop
 		fi

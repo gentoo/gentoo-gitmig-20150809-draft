@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/p7zip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.142 2011/08/19 17:27:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/ChangeLog,v 1.143 2011/10/07 15:27:28 jlec Exp $
+
+  07 Oct 2011; Justin Lecher <jlec@gentoo.org> p7zip-9.20.1.ebuild,
+  metadata.xml:
+  Do only install one .desktop file for compression, #366465
 
   19 Aug 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Fix metadata.xml
