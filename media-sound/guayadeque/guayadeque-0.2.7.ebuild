@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/guayadeque/guayadeque-0.2.7.ebuild,v 1.4 2011/07/17 09:15:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/guayadeque/guayadeque-0.2.7.ebuild,v 1.5 2011/10/07 15:19:09 jlec Exp $
 
 EAPI=3
 
@@ -28,7 +28,7 @@ RDEPEND="
 	media-libs/taglib
 	net-misc/curl
 	sys-apps/dbus
-	x11-libs/wxGTK:2.8[gstreamer]"
+	x11-libs/wxGTK:2.8[X]"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-util/pkgconfig

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/guayadeque/guayadeque-0.3.1.ebuild,v 1.2 2011/07/17 09:15:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/guayadeque/guayadeque-0.3.1.ebuild,v 1.3 2011/10/07 15:19:09 jlec Exp $
 
 EAPI=3
 
@@ -28,7 +28,7 @@ RDEPEND="
 	media-libs/taglib
 	net-misc/curl
 	sys-apps/dbus
-	x11-libs/wxGTK:2.8[X,gstreamer]
+	x11-libs/wxGTK:2.8[X]
 	indicate? (	dev-libs/libindicate )
 	ipod? ( media-libs/libgpod )"
 DEPEND="${RDEPEND}
