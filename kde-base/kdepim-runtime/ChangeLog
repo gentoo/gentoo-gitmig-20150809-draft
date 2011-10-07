@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdepim-runtime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/ChangeLog,v 1.49 2011/10/06 18:10:58 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/ChangeLog,v 1.50 2011/10/07 22:05:28 reavertm Exp $
+
+*kdepim-runtime-4.7.2-r1 (07 Oct 2011)
+
+  07 Oct 2011; Maciej Mrozowski <reavertm@gentoo.org>
+  +kdepim-runtime-4.7.2-r1.ebuild,
+  +files/kdepim-runtime-4.7.2-duplicated-folders.patch:
+  Add patch for duplicated inbox/sent-mail folders after kmail 1->2 migration,
+  kde bug 283467.
 
 *kdepim-runtime-4.7.2 (06 Oct 2011)
 
