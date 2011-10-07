@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-14.0.835.202.ebuild,v 1.2 2011/10/06 21:25:19 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-14.0.835.202.ebuild,v 1.3 2011/10/07 16:37:19 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -297,8 +297,9 @@ src_test() {
 
 	# NetUtilTest: bug #361885.
 	# UDP: unstable, active development. We should revisit this later.
+	# X509CertificateTest.UnoSoftCertParsing: bug #385331.
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/net_unittests virtualmake \
-		'--gtest_filter=-NetUtilTest.IDNToUnicode*:NetUtilTest.FormatUrl*:*UDP*'
+		'--gtest_filter=-NetUtilTest.IDNToUnicode*:NetUtilTest.FormatUrl*:*UDP*:X509CertificateTest.UnoSoftCertParsing'
 }
 
 src_install() {

@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.459 2011/10/06 23:59:24 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.460 2011/10/07 16:37:19 phajdan.jr Exp $
+
+  07 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-14.0.835.202.ebuild:
+  Disable failing time-dependent test, bug #385331 by graaff.
 
 *chromium-15.0.874.81 (06 Oct 2011)
 
