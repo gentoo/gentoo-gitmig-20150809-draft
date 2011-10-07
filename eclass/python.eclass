@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.134 2011/10/07 10:49:26 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.135 2011/10/07 10:52:31 djc Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -1233,9 +1233,12 @@ import re
 import subprocess
 import sys
 
-cpython_re = re.compile(r"^python(\d+\.\d+)$")
-jython_re = re.compile(r"^jython(\d+\.\d+)$")
-pypy_re = re.compile(r"^pypy-c(\d+\.\d+)$")
+cpython_ABI_re = re.compile(r"^(\d+\.\d+)$")
+jython_ABI_re = re.compile(r"^(\d+\.\d+)-jython$")
+pypy_ABI_re = re.compile(r"^\d+\.\d+-pypy-(\d+\.\d+)$")
+cpython_interpreter_re = re.compile(r"^python(\d+\.\d+)$")
+jython_interpreter_re = re.compile(r"^jython(\d+\.\d+)$")
+pypy_interpreter_re = re.compile(r"^pypy-c(\d+\.\d+)$")
 cpython_shebang_re = re.compile(r"^#![ \t]*(?:${EPREFIX}/usr/bin/python|(?:${EPREFIX})?/usr/bin/env[ \t]+(?:${EPREFIX}/usr/bin/)?python)")
 python_shebang_options_re = re.compile(r"^#![ \t]*${EPREFIX}/usr/bin/(?:jython|pypy-c|python)(?:\d+(?:\.\d+)?)?[ \t]+(-\S)")
 python_verification_output_re = re.compile("^GENTOO_PYTHON_TARGET_SCRIPT_PATH supported\n$")
@@ -1244,10 +1247,10 @@ pypy_versions_mapping = {
 	"1.5": "2.7"
 }
 
-def get_PYTHON_ABI(EPYTHON):
-	cpython_matched = cpython_re.match(EPYTHON)
-	jython_matched = jython_re.match(EPYTHON)
-	pypy_matched = pypy_re.match(EPYTHON)
+def get_PYTHON_ABI(python_interpreter):
+	cpython_matched = cpython_interpreter_re.match(python_interpreter)
+	jython_matched = jython_interpreter_re.match(python_interpreter)
+	pypy_matched = pypy_interpreter_re.match(python_interpreter)
 	if cpython_matched is not None:
 		PYTHON_ABI = cpython_matched.group(1)
 	elif jython_matched is not None:
@@ -1258,17 +1261,31 @@ def get_PYTHON_ABI(EPYTHON):
 		PYTHON_ABI = None
 	return PYTHON_ABI
 
+def get_python_interpreter(PYTHON_ABI):
+	cpython_matched = cpython_ABI_re.match(PYTHON_ABI)
+	jython_matched = jython_ABI_re.match(PYTHON_ABI)
+	pypy_matched = pypy_ABI_re.match(PYTHON_ABI)
+	if cpython_matched is not None:
+		python_interpreter = "python" + cpython_matched.group(1)
+	elif jython_matched is not None:
+		python_interpreter = "jython" + jython_matched.group(1)
+	elif pypy_matched is not None:
+		python_interpreter = "pypy-c" + pypy_matched.group(1)
+	else:
+		python_interpreter = None
+	return python_interpreter
+
 EOF
 		if [[ "$?" != "0" ]]; then
 			die "${FUNCNAME}(): Generation of '$1' failed"
 		fi
 		if [[ "${respect_EPYTHON}" == "1" ]]; then
 			cat << EOF >> "${file}"
-EPYTHON = os.environ.get("EPYTHON")
-if EPYTHON:
-	PYTHON_ABI = get_PYTHON_ABI(EPYTHON)
+python_interpreter = os.environ.get("EPYTHON")
+if python_interpreter:
+	PYTHON_ABI = get_PYTHON_ABI(python_interpreter)
 	if PYTHON_ABI is None:
-		sys.stderr.write("%s: EPYTHON variable has unrecognized value '%s'\n" % (sys.argv[0], EPYTHON))
+		sys.stderr.write("%s: EPYTHON variable has unrecognized value '%s'\n" % (sys.argv[0], python_interpreter))
 		sys.exit(1)
 else:
 	try:
@@ -1281,15 +1298,15 @@ else:
 		sys.stderr.write("%s: Execution of 'eselect python show${eselect_python_option:+ }${eselect_python_option}' failed\n" % sys.argv[0])
 		sys.exit(1)
 
-	EPYTHON = eselect_process.stdout.read()
-	if not isinstance(EPYTHON, str):
+	python_interpreter = eselect_process.stdout.read()
+	if not isinstance(python_interpreter, str):
 		# Python 3
-		EPYTHON = EPYTHON.decode()
-	EPYTHON = EPYTHON.rstrip("\n")
+		python_interpreter = python_interpreter.decode()
+	python_interpreter = python_interpreter.rstrip("\n")
 
-	PYTHON_ABI = get_PYTHON_ABI(EPYTHON)
+	PYTHON_ABI = get_PYTHON_ABI(python_interpreter)
 	if PYTHON_ABI is None:
-		sys.stderr.write("%s: 'eselect python show${eselect_python_option:+ }${eselect_python_option}' printed unrecognized value '%s'\n" % (sys.argv[0], EPYTHON))
+		sys.stderr.write("%s: 'eselect python show${eselect_python_option:+ }${eselect_python_option}' printed unrecognized value '%s'\n" % (sys.argv[0], python_interpreter))
 		sys.exit(1)
 
 wrapper_script_path = os.path.realpath(sys.argv[0])
@@ -1313,15 +1330,15 @@ except (OSError, ValueError):
 	sys.stderr.write("%s: Execution of 'eselect python show${eselect_python_option:+ }${eselect_python_option}' failed\n" % sys.argv[0])
 	sys.exit(1)
 
-EPYTHON = eselect_process.stdout.read()
-if not isinstance(EPYTHON, str):
+python_interpreter = eselect_process.stdout.read()
+if not isinstance(python_interpreter, str):
 	# Python 3
-	EPYTHON = EPYTHON.decode()
-EPYTHON = EPYTHON.rstrip("\n")
+	python_interpreter = python_interpreter.decode()
+python_interpreter = python_interpreter.rstrip("\n")
 
-PYTHON_ABI = get_PYTHON_ABI(EPYTHON)
+PYTHON_ABI = get_PYTHON_ABI(python_interpreter)
 if PYTHON_ABI is None:
-	sys.stderr.write("%s: 'eselect python show${eselect_python_option:+ }${eselect_python_option}' printed unrecognized value '%s'\n" % (sys.argv[0], EPYTHON))
+	sys.stderr.write("%s: 'eselect python show${eselect_python_option:+ }${eselect_python_option}' printed unrecognized value '%s'\n" % (sys.argv[0], python_interpreter))
 	sys.exit(1)
 
 wrapper_script_path = os.path.realpath(sys.argv[0])
@@ -1331,6 +1348,11 @@ for PYTHON_ABI in [PYTHON_ABI, ${PYTHON_ABIS_list}]:
 		break
 else:
 	sys.stderr.write("%s: No target script exists for '%s'\n" % (sys.argv[0], wrapper_script_path))
+	sys.exit(1)
+
+python_interpreter = get_python_interpreter(PYTHON_ABI)
+if python_interpreter is None:
+	sys.stderr.write("%s: Unrecognized Python ABI '%s'\n" % (sys.argv[0], PYTHON_ABI))
 	sys.exit(1)
 EOF
 			if [[ "$?" != "0" ]]; then
@@ -1355,7 +1377,7 @@ cpython_shebang_matched = cpython_shebang_re.match(target_executable_first_line)
 
 if cpython_shebang_matched is not None:
 	try:
-		python_interpreter_path = "${EPREFIX}/usr/bin/%s" % EPYTHON
+		python_interpreter_path = "${EPREFIX}/usr/bin/%s" % python_interpreter
 		os.environ["GENTOO_PYTHON_TARGET_SCRIPT_PATH_VERIFICATION"] = "1"
 		python_verification_process = subprocess.Popen([python_interpreter_path, "-c", "pass"], stdout=subprocess.PIPE)
 		del os.environ["GENTOO_PYTHON_TARGET_SCRIPT_PATH_VERIFICATION"]
@@ -1370,7 +1392,7 @@ if cpython_shebang_matched is not None:
 		if not python_verification_output_re.match(python_verification_output):
 			raise ValueError
 
-		if cpython_re.match(EPYTHON) is not None:
+		if cpython_interpreter_re.match(python_interpreter) is not None:
 			os.environ["GENTOO_PYTHON_PROCESS_NAME"] = os.path.basename(sys.argv[0])
 			os.environ["GENTOO_PYTHON_WRAPPER_SCRIPT_PATH"] = sys.argv[0]
 			os.environ["GENTOO_PYTHON_TARGET_SCRIPT_PATH"] = target_executable_path
