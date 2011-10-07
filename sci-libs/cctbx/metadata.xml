@@ -3,8 +3,8 @@
 <pkgmetadata>
 	<herd>sci-chemistry</herd>
 	<maintainer>
-	  <email>jlec@gentoo.org</email>
-	  <name>Justin Lecher (jlec)</name>
+		<email>jlec@gentoo.org</email>
+		<name>Justin Lecher (jlec)</name>
 	</maintainer>
 	<longdescription>
 	The Computational Crystallography Toolbox (cctbx) is being developed
