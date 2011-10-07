@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/youtube-dl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.90 2011/10/07 15:55:51 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.91 2011/10/07 16:21:30 zmedico Exp $
+
+  07 Oct 2011; Zac Medico <zmedico@gentoo.org> youtube-dl-2011.08.04.ebuild:
+  Add ~arm keyword for bug #366789 (it's pure python so it should work fine on
+  any architecture where python works).
 
   07 Oct 2011; Zac Medico <zmedico@gentoo.org> -youtube-dl-2010.12.09.ebuild,
   -youtube-dl-2011.01.30.ebuild, -youtube-dl-2011.03.29.ebuild:
