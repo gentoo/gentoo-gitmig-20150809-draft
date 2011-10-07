@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/geeqie
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/ChangeLog,v 1.15 2011/07/26 07:53:22 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/ChangeLog,v 1.16 2011/10/07 10:57:31 voyageur Exp $
+
+*geeqie-1.0-r2 (07 Oct 2011)
+
+  07 Oct 2011; Bernard Cafarelli <voyageur@gentoo.org> +geeqie-1.0-r2.ebuild,
+  +files/geeqie-1.0-lfs_support.patch:
+  Add large file support check, thanks MageSlayer <denisgolovan@yandex.ru> in
+  bug #384467
 
   26 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> geeqie-1.0-r1.ebuild:
   Marked ~ppc wrt #354855
