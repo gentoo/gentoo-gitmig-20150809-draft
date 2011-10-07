@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.3.1.ebuild,v 1.2 2011/10/05 21:28:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.3.1.ebuild,v 1.3 2011/10/07 16:40:50 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools fixheadtails eutils multilib
@@ -39,6 +39,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}-${MY_PV}
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-ssl.patch
 	ht_fix_file configure.in
 	eautoreconf
 }

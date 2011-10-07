@@ -1,0 +1,93 @@
+While most places where OpenSSL was used were guarded by ENABLE_SSL
+ifs, some were not. This patch adds those guards to lib/crypto.c,
+modules/afsql/afsql.c and tests/loggen/loggen.c.
+
+It also makes sure that OPENSSL_LIBS gets emptied when enable_ssl is
+set to no.
+
+Signed-off-by: Gergely Nagy <algernon@balabit.hu>
+---
+ configure.in          |    4 ++++
+ lib/crypto.c          |    4 ++++
+ modules/afsql/afsql.c |    3 +++
+ tests/loggen/loggen.c |    3 +++
+ 4 files changed, 14 insertions(+), 0 deletions(-)
+
+diff --git a/configure.in b/configure.in
+index 13bc874..686911e 100644
+--- a/configure.in
++++ b/configure.in
+@@ -679,6 +679,10 @@ else
+         enable_ssl="no"
+ fi
+ 
++if test "x$enable_ssl" = "xno"; then
++	OPENSSL_LIBS=""
++fi
++
+ dnl
+ dnl Right now, openssl is never linked statically as it is only used by the
+ dnl TLS build of the afsocket plugin which is loaded dynamically anyway.
+diff --git a/lib/crypto.c b/lib/crypto.c
+index 702609c..ac4d070 100644
+--- a/lib/crypto.c
++++ b/lib/crypto.c
+@@ -29,6 +29,8 @@
+ #include "crypto.h"
+ #include "apphook.h"
+ 
++#if ENABLE_SSL
++
+ #include <openssl/rand.h>
+ #include <openssl/ssl.h>
+ #include <stdio.h>
+@@ -124,3 +126,5 @@ crypto_init(void)
+ }
+ 
+ /* the crypto options (seed) are handled in main.c */
++
++#endif
+diff --git a/modules/afsql/afsql.c b/modules/afsql/afsql.c
+index eb59b57..02b9f83 100644
+--- a/modules/afsql/afsql.c
++++ b/modules/afsql/afsql.c
+@@ -35,7 +35,10 @@
+ 
+ #include <dbi/dbi.h>
+ #include <string.h>
++
++#if ENABLE_SSL
+ #include <openssl/md5.h>
++#endif
+ 
+ /* field flags */
+ enum
+diff --git a/tests/loggen/loggen.c b/tests/loggen/loggen.c
+index c5399a7..bf11a1e 100644
+--- a/tests/loggen/loggen.c
++++ b/tests/loggen/loggen.c
+@@ -14,11 +14,14 @@
+ #include <glib.h>
+ #include <signal.h>
+ 
++#if ENABLE_SSL
+ #include <openssl/crypto.h>
+ #include <openssl/x509.h>
+ #include <openssl/pem.h>
+ #include <openssl/ssl.h>
+ #include <openssl/err.h>
++#endif
++
+ #include <unistd.h>
+ 
+ #define MAX_MESSAGE_LENGTH 8192
+-- 
+1.7.0.4
+
+
+______________________________________________________________________________
+Member info: https://lists.balabit.hu/mailman/listinfo/syslog-ng
+Documentation: http://www.balabit.com/support/documentation/?product=syslog-ng
+FAQ: http://www.balabit.com/wiki/syslog-ng-faq
+
+

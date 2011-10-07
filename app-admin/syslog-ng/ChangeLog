@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.305 2011/10/04 23:15:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.306 2011/10/07 16:40:50 mr_bones_ Exp $
+
+  07 Oct 2011; Michael Sterrett <mr_bones_@gentoo.org> syslog-ng-3.3.1.ebuild,
+  +files/syslog-ng-3.3.1-ssl.patch:
+  Add upstream patch for USE="-ssl sql" case
 
   04 Oct 2011; Michael Sterrett <mr_bones_@gentoo.org>
   files/syslog-ng.conf.gentoo.3.3, files/syslog-ng.conf.gentoo.fbsd.3.3,
