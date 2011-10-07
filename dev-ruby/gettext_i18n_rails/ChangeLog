@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/gettext_i18n_rails
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gettext_i18n_rails/ChangeLog,v 1.3 2011/10/07 06:14:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gettext_i18n_rails/ChangeLog,v 1.4 2011/10/07 06:16:15 graaff Exp $
+
+*gettext_i18n_rails-0.3.0 (07 Oct 2011)
+
+  07 Oct 2011; Hans de Graaff <graaff@gentoo.org>
+  +gettext_i18n_rails-0.3.0.ebuild:
+  Version bump.
 
   07 Oct 2011; Hans de Graaff <graaff@gentoo.org>
   -gettext_i18n_rails-0.2.19.ebuild:
