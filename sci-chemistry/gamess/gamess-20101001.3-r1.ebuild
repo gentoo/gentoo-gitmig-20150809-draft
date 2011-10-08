@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20101001.3-r1.ebuild,v 1.1 2011/10/06 10:44:51 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20101001.3-r1.ebuild,v 1.2 2011/10/08 11:50:31 alexxy Exp $
 
 EAPI="4"
 
@@ -107,7 +107,7 @@ src_unpack() {
 src_prepare() {
 	# apply LINUX-arch patches to gamess makesfiles
 	epatch "${FILESDIR}/${P}.gentoo.patch"
-	epatch "${FILESDIR}/${P}-checktst.patch"
+	epatch "${FILESDIR}/${PN}-checktst.patch"
 	# select arch
 	# NOTE: please leave lked alone; it should be good as is!!
 	cd "${S}"
