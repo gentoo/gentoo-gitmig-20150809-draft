@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/dwm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.71 2011/10/07 15:24:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/ChangeLog,v 1.72 2011/10/08 16:43:08 jer Exp $
+
+  08 Oct 2011; Jeroen Roovers <jer@gentoo.org> dwm-5.6.1.ebuild,
+  dwm-5.7.2.ebuild, dwm-5.8.2.ebuild:
+  Remove xsetroot from RDEPEND thanks to Cedric (bug #384005)
 
   07 Oct 2011; Jeroen Roovers <jer@gentoo.org> -dwm-5.2.ebuild,
   -dwm-5.3.1.ebuild, -dwm-5.4.1.ebuild, -dwm-5.5.ebuild:

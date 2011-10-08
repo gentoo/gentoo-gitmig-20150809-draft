@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-5.7.2.ebuild,v 1.2 2010/10/21 21:39:36 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-5.7.2.ebuild,v 1.3 2011/10/08 16:43:08 jer Exp $
 
 inherit toolchain-funcs savedconfig
 
@@ -18,8 +18,7 @@ DEPEND="x11-libs/libX11
 		x11-proto/xineramaproto
 		x11-libs/libXinerama
 		)"
-RDEPEND="${DEPEND}
-	x11-apps/xsetroot"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
