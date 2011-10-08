@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.2.ebuild,v 1.9 2011/07/01 17:28:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.3-r1.ebuild,v 1.1 2011/10/08 21:25:44 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="python? 2:2.4"
 
 inherit autotools flag-o-matic gnome2 python versionator
@@ -13,12 +14,12 @@ MY_MAJORV=$(get_version_component_range 1-2)
 DESCRIPTION="Integrated mail, addressbook and calendaring functionality"
 HOMEPAGE="http://www.gnome.org/projects/evolution/"
 
+SRC_URI="${SRC_URI} http://dev.gentoo.org/~pacho/gnome/${P}-patches.tar.xz"
+
 LICENSE="GPL-2 LGPL-2 OPENLDAP"
 SLOT="2.0"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
-
-# connman is not ready to be stabilized, bug #353440
-IUSE="clutter crypt doc gstreamer kerberos ldap networkmanager python ssl"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE="clutter connman crypt doc gstreamer kerberos ldap networkmanager python ssl"
 
 # We need a graphical pinentry frontend to be able to ask for the GPG
 # password from inside evolution, bug 160302
@@ -39,7 +40,7 @@ RDEPEND=">=dev-libs/glib-2.25.12:2
 	>=gnome-extra/gtkhtml-3.31.90:3.14
 	>=gnome-base/gconf-2:2
 	dev-libs/atk
-	>=dev-libs/libxml2-2.7.3
+	>=dev-libs/libxml2-2.7.3:2
 	>=net-libs/libsoup-2.4:2.4
 	>=media-gfx/gtkimageview-1.6
 	>=x11-misc/shared-mime-info-0.22
@@ -47,6 +48,7 @@ RDEPEND=">=dev-libs/glib-2.25.12:2
 	>=dev-libs/libgdata-0.4
 
 	clutter? ( media-libs/clutter:1.0[gtk] )
+	connman? ( net-misc/connman )
 	crypt? ( || (
 				  ( >=app-crypt/gnupg-2.0.1-r2
 					${PINENTRY_DEPEND} )
@@ -62,7 +64,6 @@ RDEPEND=">=dev-libs/glib-2.25.12:2
 		>=dev-libs/nss-3.11 )
 
 	!<gnome-extra/evolution-exchange-2.32"
-# connman? ( net-misc/connman )
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.16
@@ -91,7 +92,7 @@ pkg_setup() {
 		$(use_enable ssl nss)
 		$(use_enable ssl smime)
 		$(use_enable networkmanager nm)
-		--disable-connman
+		$(use_enable connman)
 		$(use_enable gstreamer audio-inline)
 		--disable-profiling
 		--disable-pst-import
@@ -121,10 +122,10 @@ pkg_setup() {
 	fi
 
 	# NM and connman support cannot coexist
-#	if use networkmanager && use connman ; then
-#		ewarn "It is not possible to enable both ConnMan and NetworkManager, disabling connman..."
-#		G2CONF="${G2CONF} --disable-connman"
-#	fi
+	if use networkmanager && use connman ; then
+		ewarn "It is not possible to enable both ConnMan and NetworkManager, disabling connman..."
+		G2CONF="${G2CONF} --disable-connman"
+	fi
 
 	python_set_active_version 2
 }
@@ -137,16 +138,21 @@ src_prepare() {
 	# Fix invalid use of la file in contact-editor, upstream bug #635002
 	epatch "${FILESDIR}/${PN}-2.32.0-wrong-lafile-usage.patch"
 
+	# Fix compilation with --disable-smime, bug #356471
+	epatch "${FILESDIR}/${PN}-2.32.2-smime-fix.patch"
+
+	# Fix desktop file to work with latest glib
+	epatch "${FILESDIR}/${PN}-2.32.2-mime-handler.patch"
+
+	# Apply multiple backports from master fixing important bugs
+	epatch "${WORKDIR}/${P}-patches"/*.patch
+
 	# Use NSS/NSPR only if 'ssl' is enabled.
 	if use ssl ; then
 		sed -e 's|mozilla-nss|nss|' \
 			-e 's|mozilla-nspr|nspr|' \
 			-i configure.ac configure || die "sed 2 failed"
 	fi
-
-	# Fix compilation flags crazyness
-	sed -e 's/CFLAGS="$CFLAGS $WARNING_FLAGS"//' \
-		-i configure.ac configure || die "sed 1 failed"
 
 	# Fix compilation flags crazyness
 	sed -e 's/-D.*_DISABLE_DEPRECATED//' \
@@ -156,23 +162,19 @@ src_prepare() {
 	eautoreconf
 }
 
-src_install() {
-	gnome2_src_install
-
-	find "${ED}"/usr/$(get_libdir)/evolution/${MY_MAJORV}/plugins \
-		-name "*.la" -delete || die "la files removal failed 1"
-	find "${ED}"/usr/$(get_libdir)/evolution/${MY_MAJORV}/modules \
-		-name "*.la" -delete || die "la files removal failed 2"
-}
-
 pkg_postinst() {
 	gnome2_pkg_postinst
 
-	elog "To change the default browser if you are not using GNOME, do:"
-	elog "gconftool-2 --set /desktop/gnome/url-handlers/http/command -t string 'firefox %s'"
-	elog "gconftool-2 --set /desktop/gnome/url-handlers/https/command -t string 'firefox %s'"
+	elog "To change the default browser if you are not using GNOME, edit"
+	elog "~/.local/share/applications/mimeapps.list so it includes the"
+	elog "following content:"
 	elog ""
-	elog "Replace 'firefox %s' with which ever browser you use."
+	elog "[Default Applications]"
+	elog "x-scheme-handler/http=firefox.desktop"
+	elog "x-scheme-handler/https=firefox.desktop"
+	elog ""
+	elog "(replace firefox.desktop with the name of the appropriate .desktop"
+	elog "file from /usr/share/applications if you use a different browser)."
 	elog ""
 	elog "Junk filters are now a run-time choice. You will get a choice of"
 	elog "bogofilter or spamassassin based on which you have installed"
