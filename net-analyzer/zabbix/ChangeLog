@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.61 2011/10/01 01:23:53 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.62 2011/10/08 19:34:59 phajdan.jr Exp $
+
+  08 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> zabbix-1.8.7.ebuild:
+  x86 stable wrt security bug #386175
 
 *zabbix-1.8.8 (01 Oct 2011)
 
