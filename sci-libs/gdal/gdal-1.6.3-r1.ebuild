@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.3-r1.ebuild,v 1.20 2011/07/16 17:45:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.3-r1.ebuild,v 1.21 2011/10/08 10:32:13 ssuominen Exp $
 
 EAPI=3
 
@@ -81,7 +81,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-1.4.2-datadir.patch \
 		"${FILESDIR}"/${PN}-1.5.1-python-install.patch \
 		"${FILESDIR}"/${PN}-1.6.0-swig-fix.patch \
-		"${FILESDIR}"/${PN}-1.6.1-ruby-make.patch
+		"${FILESDIR}"/${PN}-1.6.1-ruby-make.patch \
+		"${FILESDIR}"/${PN}-1.6.3-libpng15.patch
 
 	[[ ${CHOST} == *-darwin* ]] \
 		&& epatch "${FILESDIR}"/${PN}-1.5.0-install_name.patch \
