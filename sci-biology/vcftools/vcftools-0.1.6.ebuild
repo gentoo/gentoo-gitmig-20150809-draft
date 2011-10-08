@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vcftools/vcftools-0.1.6.ebuild,v 1.1 2011/10/02 20:04:57 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vcftools/vcftools-0.1.6.ebuild,v 1.2 2011/10/08 22:36:00 weaver Exp $
 
 EAPI=4
 
@@ -28,5 +28,8 @@ src_install(){
 	doins perl/*.pm
 	exeinto /usr/share/${PN}/perl
 	doexe perl/{fill,vcf}-*
+	echo 'COLON_SEPARATED=PERL5LIB' > "${S}/99${PN}"
+	echo "PERL5LIB=/usr/share/${PN}/perl" >> "${S}/99${PN}"
+	doenvd "${S}/99${PN}"
 	dodoc README.txt
 }
