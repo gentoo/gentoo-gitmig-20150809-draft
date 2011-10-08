@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/gmap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/gmap/ChangeLog,v 1.10 2011/09/25 21:57:32 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/gmap/ChangeLog,v 1.11 2011/10/08 22:39:22 weaver Exp $
+
+*gmap-2011.10.07 (08 Oct 2011)
+
+  08 Oct 2011; Andrey Kislyuk <weaver@gentoo.org> -gmap-2007.09.28.ebuild,
+  -gmap-2010.03.09.ebuild, +gmap-2011.10.07.ebuild:
+  Version bump, drop old
 
 *gmap-2011.09.14 (25 Sep 2011)
 
