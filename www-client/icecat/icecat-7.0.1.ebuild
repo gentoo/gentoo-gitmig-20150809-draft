@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-7.0.ebuild,v 1.1 2011/10/02 23:19:21 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/icecat-7.0.1.ebuild,v 1.1 2011/10/08 18:26:42 polynomial-c Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -133,9 +133,6 @@ src_unpack() {
 }
 
 src_prepare() {
-	# Make this a 7.0.1 version
-	epatch "${DISTDIR}"/ff701.diff.xz
-
 	# Fix preferences location
 	sed -i 's|defaults/pref/|defaults/preferences/|' browser/installer/packages-static || die "sed failed"
 

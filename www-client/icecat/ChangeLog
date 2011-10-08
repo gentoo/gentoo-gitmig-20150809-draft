@@ -1,6 +1,12 @@
 # ChangeLog for www-client/icecat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.105 2011/10/02 23:19:21 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/icecat/ChangeLog,v 1.106 2011/10/08 18:26:42 polynomial-c Exp $
+
+*icecat-7.0.1 (08 Oct 2011)
+
+  08 Oct 2011; Lars Wendler <polynomial-c@gentoo.org> -icecat-7.0.ebuild,
+  +icecat-7.0.1.ebuild:
+  Version bump to real 7.0.1 version.
 
 *icecat-7.0 (02 Oct 2011)
 
