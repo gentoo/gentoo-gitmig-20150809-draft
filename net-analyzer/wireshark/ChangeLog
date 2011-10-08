@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.318 2011/09/27 17:11:06 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.319 2011/10/08 16:27:15 pva Exp $
+
+  08 Oct 2011; Peter Volkov <pva@gentoo.org>
+  -files/wireshark-0.99.7-asneeded.patch,
+  -files/wireshark-0.99.8-as-needed.patch,
+  -files/wireshark-1.0.5-text2pcap-protos.patch,
+  -files/wireshark-1.0-sigpipe.patch, -files/wireshark-1.1.2--as-needed.patch,
+  -files/wireshark-1.2.8-zlib-1.2.5-capture.patch,
+  -files/wireshark-1.4.6-gnutls_nettle.patch,
+  -files/wireshark-1.4.6-wspy_dissectors_dir.patch, -wireshark-1.4.8.ebuild,
+  -files/wireshark-except-double-free.diff:
+  Drop old and vulnerable.
 
   27 Sep 2011; Kacper Kowalik <xarthisius@gentoo.org> wireshark-1.4.9.ebuild:
   ppc/ppc64 stable wrt #381551
