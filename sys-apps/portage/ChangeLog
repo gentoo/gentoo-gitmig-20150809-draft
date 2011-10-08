@@ -1,6 +1,22 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.880 2011/10/07 18:15:42 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.881 2011/10/08 16:07:56 zmedico Exp $
+
+*portage-2.2.0_alpha64 (08 Oct 2011)
+
+  08 Oct 2011; Zac Medico <zmedico@gentoo.org> -portage-2.2.0_alpha63.ebuild,
+  +portage-2.2.0_alpha64.ebuild:
+  2.2.0_alpha64 version bump. This includes all of the fixes in
+  portage-2.1.10.24. Bug #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.10.24 (08 Oct 2011)
+
+  08 Oct 2011; Zac Medico <zmedico@gentoo.org> -portage-2.1.10.23.ebuild,
+  +portage-2.1.10.24.ebuild:
+  2.1.10.24 version bump. This fixes bug #386095 (set UTF-8 encoding in elog
+  mails with python2), and also has a repoman fix related to bug #385333
+  (overlays should us negative package.mask atoms instead of package.unmask).
+  Bug #381649 tracks all bugs fixed since portage-2.1.10.11.
 
 *portage-2.2.0_alpha63 (07 Oct 2011)
 
