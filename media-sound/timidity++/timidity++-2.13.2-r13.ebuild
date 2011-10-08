@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r13.ebuild,v 1.5 2011/10/08 06:34:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r13.ebuild,v 1.6 2011/10/08 16:22:19 phajdan.jr Exp $
 
 EAPI=2
 inherit autotools eutils elisp-common
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/timidity/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="motif oss nas X gtk vorbis tk slang alsa jack emacs ao speex flac ncurses"
 
 DEPEND="ncurses? ( >=sys-libs/ncurses-5 )
