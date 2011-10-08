@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/drivel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.45 2011/05/15 10:46:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.46 2011/10/08 06:17:05 graaff Exp $
+
+  08 Oct 2011; Hans de Graaff <graaff@gentoo.org> -drivel-3.0.2.ebuild:
+  Remove old version.
 
 *drivel-3.0.3 (15 May 2011)
 
