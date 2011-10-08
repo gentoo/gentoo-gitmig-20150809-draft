@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/flask
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask/ChangeLog,v 1.9 2011/10/08 17:17:45 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask/ChangeLog,v 1.10 2011/10/08 17:37:12 floppym Exp $
+
+  08 Oct 2011; Mike Gilbert <floppym@gentoo.org> flask-0.7.2.ebuild,
+  flask-0.8.ebuild:
+  Drop support for python 2.4. Bug 382765.
 
 *flask-0.8 (08 Oct 2011)
 
