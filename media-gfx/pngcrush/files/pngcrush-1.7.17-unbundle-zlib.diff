@@ -1,0 +1,23 @@
+--- pngcrush-1.7.17/Makefile	2010-02-26 05:16:56.000000000 +0100
++++ pngcrush-1.7.17-1/Makefile	2011-10-08 22:09:24.514781541 +0200
+@@ -30,15 +30,15 @@
+ 
+ PNGCRUSH  = pngcrush
+ 
+-LIBS = -lm
++LIBS = -lm -lz
+ #LIBS = -L${ZLIB} -lz -lm
+ #LIBS = ${ZLIB}/libz.a -lm
+ 
+ # uncomment these 4 lines only if you are NOT using an external copy of zlib:
+-ZHDR = zlib.h
+-ZOBJS  = adler32$(O) compress$(O) crc32$(O) deflate$(O) \
+-	 infback$(O) inffast$(O) inflate$(O) inftrees$(O) \
+-	 trees$(O) uncompr$(O) zutil$(O)
++#ZHDR = zlib.h
++#ZOBJS  = adler32$(O) compress$(O) crc32$(O) deflate$(O) \
++#	 infback$(O) inffast$(O) inflate$(O) inftrees$(O) \
++#	 trees$(O) uncompr$(O) zutil$(O)
+ 
+ OBJS  = pngcrush$(O) png$(O) pngerror$(O) pngget$(O) pngmem$(O) \
+ 	pngpread$(O) pngread$(O) pngrio$(O) pngrtran$(O) pngrutil$(O) \
