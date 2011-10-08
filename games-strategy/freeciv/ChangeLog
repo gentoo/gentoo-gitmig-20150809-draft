@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/freeciv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.129 2011/08/19 19:27:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/ChangeLog,v 1.130 2011/10/08 16:32:57 phajdan.jr Exp $
+
+  08 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> freeciv-2.3.0.ebuild:
+  x86 stable wrt bug #385899
 
 *freeciv-2.3.0 (19 Aug 2011)
 
