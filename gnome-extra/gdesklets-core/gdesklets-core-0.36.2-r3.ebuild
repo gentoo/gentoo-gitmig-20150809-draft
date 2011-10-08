@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.2-r3.ebuild,v 1.9 2011/06/10 00:53:10 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.2-r3.ebuild,v 1.10 2011/10/08 17:40:29 nixphoeni Exp $
 
 EAPI=3
 # desklets don't run with USE=debug
 GCONF_DEBUG="no"
+PYTHON_USE_WITH="xml"
 PYTHON_DEPEND="2:2.4"
 
 inherit gnome2 python eutils autotools multilib bash-completion
@@ -23,14 +24,14 @@ IUSE=""
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 
 # is libgsf needed for runtime or just compiling?
+# only need expat for python-2.4, I think
 RDEPEND=">=dev-libs/glib-2.4
 	gnome-extra/libgsf
 	>=gnome-base/librsvg-2.8
 	>=gnome-base/libgtop-2.8.2
 	>=dev-python/pygtk-2.10
 	>=dev-python/gnome-python-2.6
-	>=dev-libs/expat-1.95.8
-	>=dev-python/pyxml-0.8.3-r1"
+	>=dev-libs/expat-1.95.8"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
