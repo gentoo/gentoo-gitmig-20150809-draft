@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/drivel-3.0.3.ebuild,v 1.1 2011/05/15 10:46:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/drivel-3.0.3.ebuild,v 1.2 2011/10/08 12:35:03 graaff Exp $
 
 EAPI="2"
+
+GCONF_DEBUG="no"
 
 inherit eutils gnome2
 
