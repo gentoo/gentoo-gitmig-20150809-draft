@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.24 2011/10/08 15:49:45 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-2.2.4.ebuild,v 1.1 2011/10/08 15:49:45 pva Exp $
 
 EAPI="4"
 
@@ -52,7 +52,7 @@ RDEPEND="
 	daemon? ( xmlrpc? ( >=dev-libs/xmlrpc-c-1.19.0[abyss,cxx] ) )
 	gtk? (
 		x11-libs/pango
-		>=x11-libs/gtk+-2.18:2
+		>=x11-libs/gtk+-2.24:2
 		>=dev-libs/glib-2.18:2
 		x11-themes/hicolor-icon-theme
 		gnome? ( gnome-base/libgnome )

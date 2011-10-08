@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+<herd>no-herd</herd>
 <maintainer>
   <email>pva@gentoo.org</email>
   <name>Peter Volkov</name>
@@ -18,6 +19,7 @@
 <use>
   <flag name="cli">Enable eiskaltdcpp-daemon with sample cli based on readline</flag>
   <flag name="daemon">Enable eiskaltdcpp-daemon without any UI</flag>
+  <flag name="dht">Enable DHT (distributed hash table) support for libeiskaltdcpp</flag>
   <flag name="emoticons">Install emoticon packs</flag>
   <flag name="minimal">Don't install headers</flag>
   <flag name="upnp">Forward ports using UPnP</flag>
