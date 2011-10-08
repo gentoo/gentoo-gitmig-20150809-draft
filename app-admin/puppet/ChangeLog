@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.85 2011/10/06 07:38:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.86 2011/10/08 17:46:12 armin76 Exp $
+
+  08 Oct 2011; Raúl Porcel <armin76@gentoo.org> puppet-2.6.11.ebuild:
+  sparc stable wrt #385149
 
   06 Oct 2011; Markos Chandras <hwoarang@gentoo.org> puppet-2.6.11.ebuild:
   Stable on amd64 wrt bug #385149
