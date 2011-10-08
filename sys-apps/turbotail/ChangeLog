@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/turbotail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/turbotail/ChangeLog,v 1.14 2011/01/07 18:13:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/turbotail/ChangeLog,v 1.15 2011/10/08 13:03:36 jlec Exp $
+
+*turbotail-0.3-r1 (08 Oct 2011)
+
+  08 Oct 2011; Justin Lecher <jlec@gentoo.org> +turbotail-0.3-r1.ebuild,
+  metadata.xml:
+  Respect FLAGS*, #334753
 
   07 Jan 2011; Jeroen Roovers <jer@gentoo.org> turbotail-0.3.ebuild:
   Use the virtual. Set RDEPEND.
