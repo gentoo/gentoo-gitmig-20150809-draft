@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask/flask-0.8.ebuild,v 1.2 2011/10/08 17:37:12 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask/flask-0.8.ebuild,v 1.3 2011/10/08 19:13:50 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -29,6 +29,14 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-python/sphinx-0.6 )"
 
 S="${WORKDIR}/${MY_P}"
+
+src_prepare() {
+	distutils_src_prepare
+
+	# Fixed an issue with an unused module for Python 2.5 (flask.session)
+	# https://github.com/mitsuhiko/flask/commit/0dd9dc37b6618b8091c2a0f849f5f3143dc6eafc
+	sed -e "s/\(from .sessions import\).*/\1 SecureCookieSession, NullSession/" -i flask/session.py || die
+}
 
 src_compile() {
 	distutils_src_compile
