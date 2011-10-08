@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-4.2.8.ebuild,v 1.2 2011/10/01 02:57:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/redcloth-4.2.8.ebuild,v 1.3 2011/10/08 14:52:39 graaff Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ USE_RUBY="ruby18 ree18 ruby19"
 RUBY_FAKEGEM_NAME="RedCloth"
 
 RUBY_FAKEGEM_TASK_TEST="spec"
-RUBY_FAKEGEM_TASK_DOC="docs"
+RUBY_FAKEGEM_TASK_DOC=""
 
 RUBY_FAKEGEM_DOCDIR="doc"
 
@@ -34,8 +34,7 @@ KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~pp
 IUSE=""
 
 DEPEND="$DEPEND
-	dev-util/ragel
-	dev-ruby/rspec"
+	dev-util/ragel"
 RDEPEND="$RDEPEND"
 
 ruby_add_bdepend "
@@ -57,7 +56,7 @@ pkg_setup() {
 
 all_ruby_prepare() {
 	sed -i -e '/[Bb]undler/d' Rakefile ${PN}.gemspec || die
-	rm tasks/{release,gems}.rake || die
+	rm tasks/{release,gems,rspec}.rake || die
 }
 
 each_ruby_compile() {
@@ -67,5 +66,5 @@ each_ruby_compile() {
 }
 
 each_ruby_test() {
-	find spec -name '*_spec.rb' -print0 | xargs -0 ${RUBY} -I lib -S rspec -Du -fs
+	${RUBY} -I lib -S rspec spec || die
 }

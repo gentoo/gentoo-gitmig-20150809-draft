@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/redcloth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.64 2011/10/03 20:01:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcloth/ChangeLog,v 1.65 2011/10/08 14:52:39 graaff Exp $
+
+  08 Oct 2011; Hans de Graaff <graaff@gentoo.org> redcloth-4.2.8.ebuild:
+  Remove broken rspec dependency. Insstead remove the need to have it installed
+  for building. It is no longer possible to build documentation. Fix rspec
+  invocation to actually work and make it simpler. Fixes bug 384641 amongst
+  other things.
 
   03 Oct 2011; Jeroen Roovers <jer@gentoo.org> redcloth-4.2.3-r1.ebuild:
   Stable for HPPA (bug #385149).
