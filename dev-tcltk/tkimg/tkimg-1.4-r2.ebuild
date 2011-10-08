@@ -1,19 +1,19 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.4-r2.ebuild,v 1.1 2011/10/08 13:12:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.4-r2.ebuild,v 1.2 2011/10/08 13:14:50 jlec Exp $
 
 EAPI=3
 
 VIRTUALX_USE=test
 
-inherit autotools eutils prefix virtualx
+inherit eutils prefix virtualx
 
 MYP="${PN}${PV}"
 
 DESCRIPTION="Adds a lot of image formats to Tcl/Tk"
 HOMEPAGE="http://tkimg.sourceforge.net/"
 SRC_URI="
-	${P}-gentoo.patch.xz
+	http://dev.gentoo.org/~jlec/distfiles/${P}-gentoo.patch.xz
 	mirror://sourceforge/${PN}/${PV}/${MYP}.tar.bz2"
 
 IUSE="doc test"
