@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/yoshimi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yoshimi/ChangeLog,v 1.5 2011/09/30 08:14:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yoshimi/ChangeLog,v 1.6 2011/10/08 11:43:44 ssuominen Exp $
+
+  08 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> yoshimi-0.060.10.ebuild:
+  Missing USE="opengl" depend for x11-libs/fltk:1 wrt #385499 by Eric F.
+  GARIOUD
 
 *yoshimi-0.060.10 (30 Sep 2011)
 

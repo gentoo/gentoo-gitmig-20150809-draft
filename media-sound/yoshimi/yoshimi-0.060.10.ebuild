@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/yoshimi/yoshimi-0.060.10.ebuild,v 1.1 2011/09/30 08:14:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/yoshimi/yoshimi-0.060.10.ebuild,v 1.2 2011/10/08 11:43:44 ssuominen Exp $
 
 EAPI=4
 inherit cmake-utils eutils
@@ -17,7 +17,7 @@ IUSE=""
 RDEPEND="
 	sys-libs/zlib
 	media-libs/fontconfig
-	x11-libs/fltk:1
+	x11-libs/fltk:1[opengl]
 	sci-libs/fftw:3.0
 	>=dev-libs/mini-xml-2.5
 	>=media-libs/alsa-lib-1.0.17
