@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/dvdisaster-0.72.2.ebuild,v 1.2 2011/09/23 08:46:42 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/dvdisaster-0.72.2.ebuild,v 1.3 2011/10/08 11:11:53 ssuominen Exp $
 
 EAPI=4
 inherit eutils gnome2-utils versionator
@@ -40,7 +40,7 @@ src_configure() {
 		myconf+=" --with-sse2=no"
 	fi
 
-	use debug && myconf+=" --debug --with-memdebug=yes"
+	use debug && myconf+=" --with-memdebug=yes"
 
 	./configure \
 		--prefix=/usr \
