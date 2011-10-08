@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.3.2-r1.ebuild,v 1.9 2011/09/30 10:09:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.3.2-r1.ebuild,v 1.10 2011/10/08 08:23:15 scarabeus Exp $
 
 EAPI=3
 
@@ -122,7 +122,7 @@ COMMON_DEPEND="
 	app-text/libwpd:0.9[tools]
 	app-text/libwpg:0.2
 	>=app-text/libwps-0.2.2
-	>=app-text/poppler-0.12.3-r3[xpdf-headers]
+	>=app-text/poppler-0.12.3-r3[xpdf-headers,cairo]
 	dev-db/unixODBC
 	dev-libs/expat
 	>=dev-libs/glib-2.18
