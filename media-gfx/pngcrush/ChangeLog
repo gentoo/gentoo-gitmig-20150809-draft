@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/pngcrush
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/ChangeLog,v 1.63 2011/10/08 19:12:43 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/ChangeLog,v 1.64 2011/10/08 19:29:34 ssuominen Exp $
+
+  08 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  pngcrush-1.7.17-r1.ebuild:
+  Restore dropped upstream -Wall -Wshadow and respect full compiler name also
+  when linking. Remove redudant libpng and zlib deps as internal copies are
+  used instead.
 
 *pngcrush-1.7.17-r1 (08 Oct 2011)
 
