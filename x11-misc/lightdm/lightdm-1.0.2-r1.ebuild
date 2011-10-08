@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.0.2.ebuild,v 1.1 2011/10/07 07:11:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.0.2-r1.ebuild,v 1.1 2011/10/08 00:58:35 hwoarang Exp $
 
 EAPI=4
 inherit autotools eutils pam
@@ -37,11 +37,10 @@ REQUIRED_USE="branding? ( gtk ) || ( gtk qt4 )"
 DOCS=( NEWS )
 
 src_prepare() {
-	# remove GNOME_COMPILE_WARNING reference which requires
-	# gnome-base/gnome-common dependency.
-	sed -i -e "/GNOME_COMPILE_WARNING/d" "${S}"/configure.ac || die
-	# Hide users with uid < 1000
 	sed -i -e "/minimum-uid/s:500:1000:" "${S}"/data/users.conf	|| die
+	# Fix configure.ac since upstream since unable to apply patches without
+	# introducing regressions for trying to be smart.
+	epatch "${FILESDIR}"/${P}-configure.patch
 	eautoreconf
 }
 
