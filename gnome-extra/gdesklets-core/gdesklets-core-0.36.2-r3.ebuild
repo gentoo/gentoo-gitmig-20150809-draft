@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.2-r3.ebuild,v 1.10 2011/10/08 17:40:29 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.2-r3.ebuild,v 1.11 2011/10/08 18:02:51 nixphoeni Exp $
 
 EAPI=3
 # desklets don't run with USE=debug
@@ -8,7 +8,7 @@ GCONF_DEBUG="no"
 PYTHON_USE_WITH="xml"
 PYTHON_DEPEND="2:2.4"
 
-inherit gnome2 python eutils autotools multilib bash-completion
+inherit gnome2 python eutils autotools multilib bash-completion-r1
 
 MY_PN="gDesklets"
 MY_P="${MY_PN}-${PV}"
@@ -74,8 +74,7 @@ src_install() {
 	gnome2_src_install
 
 	# Install bash completion script
-	BASHCOMPLETION_NAME="gDesklets" \
-		dobashcompletion "contrib/bash/gdesklets"
+	dobashcomp "contrib/bash/gdesklets"
 
 	# Install autostart script
 	insinto "/etc/xdg/autostart"
@@ -120,8 +119,6 @@ pkg_postinst() {
 	elog "           ${ROOT}usr/$(get_libdir)/gdesklets/contrib/gdesklets-migration-tool"
 	elog "after the first time you run gDesklets"
 	elog
-
-	BASHCOMPLETION_NAME="gDesklets" bash-completion_pkg_postinst
 
 }
 
