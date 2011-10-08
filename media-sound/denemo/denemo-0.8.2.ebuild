@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/denemo-0.8.2.ebuild,v 1.5 2011/03/21 22:57:05 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/denemo-0.8.2.ebuild,v 1.6 2011/10/08 18:49:41 armin76 Exp $
 
 EAPI=2
 inherit autotools
@@ -11,7 +11,7 @@ SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 sparc x86"
+KEYWORDS="~amd64 x86"
 IUSE="jack nls"
 
 RDEPEND="media-sound/lilypond

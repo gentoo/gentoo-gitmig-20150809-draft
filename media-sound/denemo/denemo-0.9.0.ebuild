@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/denemo-0.9.0.ebuild,v 1.1 2011/05/05 17:54:55 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/denemo-0.9.0.ebuild,v 1.2 2011/10/08 18:49:41 armin76 Exp $
 
 EAPI=4
 inherit fdo-mime
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3 OFL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="jack +fluidsynth nls +portaudio"
 
 COMMON_DEPEND="
