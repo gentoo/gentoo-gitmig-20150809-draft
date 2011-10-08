@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.20-r1.ebuild,v 1.3 2011/04/13 18:08:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.20-r1.ebuild,v 1.4 2011/10/08 15:37:42 flameeyes Exp $
 
 EAPI="2"
 
@@ -54,7 +54,7 @@ src_install() {
 	find "${D}" -name '*.la' -delete
 	rm "${D}"/usr/$(get_libdir)/openct-ifd.*
 
-	insinto /$(get_libdir)/udev/rules.d/
+	insinto /lib/udev/rules.d/
 	newins etc/openct.udev 70-openct.rules || die "newins 70-openct.rules failed"
 
 	diropts -m0750 -gopenct -oopenctd

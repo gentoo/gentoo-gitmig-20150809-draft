@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openct
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.95 2011/04/13 18:08:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.96 2011/10/08 15:37:42 flameeyes Exp $
+
+  08 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  openct-0.6.20-r1.ebuild:
+  Do not use /lib64 for rules.
 
   13 Apr 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   openct-0.6.20-r1.ebuild:
