@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13121 2011/10/08 19:43:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13122 2011/10/08 21:00:56 blueness Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Anthony G. Basile <blueness@gentoo.org> (08 Oct 2011)
+# Masked while testing potentially dangerous utility
+dev-python/pypax
 
 # Markos Chandras <hwoarang@gentoo.org> (08 Oct 2011)
 # Masking due to insecure usage of bundled libpng14 and zlib
