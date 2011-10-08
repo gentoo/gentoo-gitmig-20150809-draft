@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pointless/pointless-1.6.2.ebuild,v 1.5 2011/10/06 11:26:09 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pointless/pointless-1.6.2.ebuild,v 1.6 2011/10/08 08:18:42 ssuominen Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.mrc-lmb.cam.ac.uk/pub/pre/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="ccp4"
-KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 DEPEND="
