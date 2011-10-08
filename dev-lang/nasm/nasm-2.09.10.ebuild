@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-2.09.10.ebuild,v 1.3 2011/10/06 21:08:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-2.09.10.ebuild,v 1.4 2011/10/08 16:33:33 phajdan.jr Exp $
 
 EAPI=2
 inherit flag-o-matic
@@ -11,7 +11,7 @@ SRC_URI="http://www.nasm.us/pub/nasm/releasebuilds/${PV/_}/${P/_}.tar.bz2"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="-* amd64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x64-macos"
+KEYWORDS="-* amd64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x64-macos"
 IUSE="doc"
 
 DEPEND="dev-lang/perl
