@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.112 2011/10/06 21:36:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.113 2011/10/08 16:29:46 phajdan.jr Exp $
+
+  08 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> allegro-4.4.2.ebuild:
+  x86 stable wrt bug #385821
 
   06 Oct 2011; Markos Chandras <hwoarang@gentoo.org> allegro-4.4.2.ebuild:
   Stable on amd64 wrt bug #385821

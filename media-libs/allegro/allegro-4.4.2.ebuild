@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.4.2.ebuild,v 1.2 2011/10/06 21:36:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.4.2.ebuild,v 1.3 2011/10/08 16:29:46 phajdan.jr Exp $
 
 EAPI=2
 CMAKE_IN_SOURCE_BUILD=1
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/alleg/${P}.tar.gz"
 
 LICENSE="Allegro as-is GPL-2 ZLIB"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="alsa fbcon jack jpeg opengl oss png svga test vga vorbis X"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
