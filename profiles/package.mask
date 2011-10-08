@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13120 2011/10/08 19:15:09 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13121 2011/10/08 19:43:38 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,12 @@
 
 #--- END OF EXAMPLES ---
 
+# Markos Chandras <hwoarang@gentoo.org> (08 Oct 2011)
+# Masking due to insecure usage of bundled libpng14 and zlib
+# See bug 356127. Waiting for upstream to release a new version
+# that will work with libpng15. Before unmasking contact
+# qa@gentoo.org
+media-gfx/pngcrush
 
 # Fabian Groffen <grobian@gentoo.org> (08 Oct 2011)
 # Exim Release Candidates
