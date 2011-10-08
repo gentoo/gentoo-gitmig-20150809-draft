@@ -1,6 +1,9 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.257 2011/10/04 19:28:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.258 2011/10/08 17:44:35 armin76 Exp $
+
+  08 Oct 2011; Raúl Porcel <armin76@gentoo.org> pidgin-2.10.0-r1.ebuild:
+  alpha/ia64/sparc stable wrt #385073
 
   04 Oct 2011; Markos Chandras <hwoarang@gentoo.org> pidgin-2.10.0-r1.ebuild:
   Stable on amd64 wrt bug #385073
