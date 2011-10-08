@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.75.ebuild,v 1.3 2011/10/08 14:15:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.75.ebuild,v 1.4 2011/10/08 14:18:55 ssuominen Exp $
 
 EAPI="2"
 
@@ -32,7 +32,7 @@ RDEPEND=">=dev-libs/glib-2.16
 	wimax? ( net-wireless/wimax )"
 
 DEPEND="${RDEPEND}
-	>=sys-kernel/linux-headers-2.6.38
+	>=sys-kernel/linux-headers-2.6.39
 	doc? ( dev-util/gtk-doc )"
 
 src_prepare() {

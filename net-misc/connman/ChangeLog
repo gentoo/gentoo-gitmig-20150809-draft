@@ -1,9 +1,9 @@
 # ChangeLog for net-misc/connman
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.40 2011/10/08 14:15:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/ChangeLog,v 1.41 2011/10/08 14:18:55 ssuominen Exp $
 
   08 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> connman-0.75.ebuild:
-  Raise linux-headers dependencies to 2.6.38 for linux/if_alg.h wrt #386139 by
+  Raise linux-headers dependencies to 2.6.39 for linux/if_alg.h wrt #386139 by
   Ian Delaney
 
 *connman-0.75 (16 Jun 2011)
