@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/raster3d
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/ChangeLog,v 1.27 2011/06/21 15:57:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/ChangeLog,v 1.28 2011/10/08 16:21:24 phajdan.jr Exp $
+
+  08 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> raster3d-3.0.2.ebuild:
+  x86 stable wrt bug #385627
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> raster3d-2.7c.ebuild,
   raster3d-2.9.2.ebuild, raster3d-3.0.2.ebuild:
