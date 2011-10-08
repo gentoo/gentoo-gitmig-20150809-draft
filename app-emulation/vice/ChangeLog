@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.76 2011/08/02 05:44:43 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.77 2011/10/08 16:31:21 phajdan.jr Exp $
+
+  08 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> vice-2.3.ebuild:
+  x86 stable wrt bug #385895
 
   02 Aug 2011; Matt Turner <mattst88@gentoo.org> vice-2.2.ebuild,
   vice-2.3.ebuild:
