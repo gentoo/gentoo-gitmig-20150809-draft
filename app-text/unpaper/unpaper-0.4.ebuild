@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unpaper/unpaper-0.4.ebuild,v 1.1 2011/10/08 19:47:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unpaper/unpaper-0.4.ebuild,v 1.2 2011/10/08 19:48:18 flameeyes Exp $
 
 EAPI=4
 
@@ -9,6 +9,7 @@ if [[ ${PV} == 9999 ]]; then
 	inherit git-2 autotools
 else
 	SRC_URI="http://www.flameeyes.eu/files/${P}.tar.xz"
+	KEYWORDS="~amd64 ~x86"
 fi
 
 DESCRIPTION="Post-processor for scanned and photocopied book pages"

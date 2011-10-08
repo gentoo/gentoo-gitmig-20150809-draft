@@ -1,6 +1,9 @@
 # ChangeLog for app-text/unpaper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unpaper/ChangeLog,v 1.5 2011/10/08 19:47:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unpaper/ChangeLog,v 1.6 2011/10/08 19:48:18 flameeyes Exp $
+
+  08 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org> unpaper-0.4.ebuild:
+  Whoops, forgot the keywords.
 
 *unpaper-0.4 (08 Oct 2011)
 
