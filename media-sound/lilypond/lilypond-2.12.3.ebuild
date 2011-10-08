@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.12.3.ebuild,v 1.8 2011/09/23 15:07:42 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.12.3.ebuild,v 1.9 2011/10/08 18:51:54 armin76 Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://lilypond.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~hppa ~sparc x86"
+KEYWORDS="amd64 ~hppa x86"
 
 IUSE="debug emacs profile"
 

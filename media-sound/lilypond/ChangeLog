@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.111 2011/09/23 15:07:42 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.112 2011/10/08 18:51:54 armin76 Exp $
+
+  08 Oct 2011; Raúl Porcel <armin76@gentoo.org> lilypond-2.12.2.ebuild,
+  lilypond-2.12.2-r1.ebuild, lilypond-2.12.3.ebuild:
+  Drop alpha/sparc keywords
 
   23 Sep 2011; Andreas Schuerch <nativemad@gentoo.org> lilypond-2.12.3.ebuild:
   x86 stable, thanks Joe Stroller. Bug 331181
