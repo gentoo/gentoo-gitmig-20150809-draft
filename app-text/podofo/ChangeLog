@@ -1,6 +1,9 @@
 # ChangeLog for app-text/podofo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.24 2011/10/06 20:52:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.25 2011/10/08 16:36:28 phajdan.jr Exp $
+
+  08 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> podofo-0.9.1.ebuild:
+  x86 stable wrt bug #385913
 
   06 Oct 2011; Markos Chandras <hwoarang@gentoo.org> podofo-0.9.1.ebuild:
   Stable on amd64 wrt bug #385913
