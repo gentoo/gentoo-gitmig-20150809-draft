@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-0.40.1.ebuild,v 1.12 2011/02/26 15:15:19 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-0.40.1.ebuild,v 1.13 2011/10/08 20:20:03 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -112,6 +112,7 @@ src_prepare() {
 	sed -i \
 		-e 's:jpeg_mem_src:qudos_jpeg_mem_src:g' \
 		src/ref_gl/gl_image.c || die
+	 sed -i -e '1i#define OF(x) x' src/qcommon/unzip/ioapi.h || die
 }
 
 src_compile() {
