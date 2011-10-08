@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-0.40.1.ebuild,v 1.13 2011/10/08 20:20:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/qudos-0.40.1.ebuild,v 1.14 2011/10/08 21:24:14 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -28,6 +28,7 @@ UIDEPEND="alsa? ( media-libs/alsa-lib )
 	media-libs/libogg
 	media-libs/libpng
 	media-libs/libvorbis
+	sys-libs/zlib
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXxf86dga
@@ -112,7 +113,9 @@ src_prepare() {
 	sed -i \
 		-e 's:jpeg_mem_src:qudos_jpeg_mem_src:g' \
 		src/ref_gl/gl_image.c || die
-	 sed -i -e '1i#define OF(x) x' src/qcommon/unzip/ioapi.h || die
+
+	has_version '>=sys-libs/zlib-1.2.5.1-r1' && \
+		sed -i -e '1i#define OF(x) x' src/qcommon/unzip/ioapi.h || die
 }
 
 src_compile() {
