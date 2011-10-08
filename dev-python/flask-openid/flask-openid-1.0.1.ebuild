@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-openid/flask-openid-1.0.1.ebuild,v 1.2 2010/10/30 19:43:22 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-openid/flask-openid-1.0.1.ebuild,v 1.3 2011/10/08 17:46:15 floppym Exp $
 
 EAPI="3"
-PYTHON_DEPEND="2"
+PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
+RESTRICT_PYTHON_ABIS="2.4 3.*"
 
 inherit distutils
 
