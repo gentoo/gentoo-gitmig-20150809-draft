@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/syslog-summary
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-summary/ChangeLog,v 1.2 2010/03/12 10:21:03 phajdan.jr Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-summary/ChangeLog,v 1.3 2011/10/08 21:09:45 phajdan.jr Exp $
+
+  08 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  syslog-summary-1.14.ebuild:
+  Cleanup: use mirror://github as suggested by Agostino Sarubbo in bug #384043,
+  and also removed verbose die messages.
 
   12 Mar 2010; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   syslog-summary-1.14.ebuild:
