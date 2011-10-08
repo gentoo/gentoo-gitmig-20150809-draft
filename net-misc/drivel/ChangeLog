@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/drivel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.47 2011/10/08 12:35:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.48 2011/10/08 12:45:15 graaff Exp $
+
+  08 Oct 2011; Hans de Graaff <graaff@gentoo.org> drivel-3.0.3.ebuild:
+  Don't use make directly in the Makefile. Fixes bug 354861.
 
   08 Oct 2011; Hans de Graaff <graaff@gentoo.org> drivel-3.0.3.ebuild:
   Make it explicit that this package has no debug mode to fix warnings about
