@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r10.ebuild,v 1.4 2011/10/08 08:10:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r10.ebuild,v 1.5 2011/10/08 08:40:36 jlec Exp $
 
 EAPI=3
 
@@ -50,7 +50,6 @@ TKDEPS="
 	dev-tcltk/itcl
 	dev-tcltk/itk
 	>=dev-tcltk/tdom-0.8
-	dev-tcltk/tkimg
 	dev-tcltk/tktreectrl"
 
 SCILIBS="
