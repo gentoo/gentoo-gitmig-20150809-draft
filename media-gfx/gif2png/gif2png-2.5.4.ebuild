@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gif2png/gif2png-2.5.4.ebuild,v 1.2 2011/10/07 18:41:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gif2png/gif2png-2.5.4.ebuild,v 1.3 2011/10/08 16:44:02 phajdan.jr Exp $
 
 EAPI=4
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://catb.org/~esr/${PN}/${P}.tar.gz"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE=""
 
 RDEPEND=">=media-libs/libpng-1.4
