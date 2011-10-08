@@ -1,66 +1,54 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.7.2-r1.ebuild,v 1.2 2011/09/29 17:09:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.6.6-r2.ebuild,v 1.1 2011/10/08 14:51:16 flameeyes Exp $
 
-EAPI="4"
+EAPI="3"
 
 inherit multilib eutils
 
 DESCRIPTION="PC/SC Architecture smartcard middleware library"
 HOMEPAGE="http://pcsclite.alioth.debian.org/"
 
-STUPID_NUM="3533"
+STUPID_NUM="3479"
 MY_P="${PN}-${PV/_/-}"
 SRC_URI="http://alioth.debian.org/download.php/${STUPID_NUM}/${MY_P}.tar.bz2"
 S="${WORKDIR}/${MY_P}"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="amd64 arm hppa ia64 m68k ppc ppc64 s390 sh sparc x86 ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos"
 IUSE="usb kernel_linux"
 
-RDEPEND="!kernel_linux? ( usb? ( virtual/libusb:1 ) )
-	kernel_linux? ( sys-fs/udev )"
+RDEPEND="usb? ( virtual/libusb:1 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 RDEPEND="${RDEPEND}
-	!<app-crypt/ccid-1.4.1-r1"
+	!<app-crypt/ccid-1.4.1-r1
+	kernel_linux? ( sys-fs/udev )"
 
 pkg_setup() {
-	enewgroup openct # make sure it exists
 	enewgroup pcscd
-	enewuser pcscd -1 -1 /var/run/pcscd pcscd,openct
 }
 
 src_configure() {
-	local myconf=
-
-	if use kernel_linux; then
-		myconf="${myconf} --enable-libudev --disable-libusb"
-	else
-		myconf="${myconf} --disable-libudev $(use_enable usb libusb)"
-	fi
-
 	econf \
 		--disable-maintainer-mode \
 		--disable-dependency-tracking \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--enable-usbdropdir="${EPREFIX}/usr/$(get_libdir)/readers/usb" \
-		--enable-confdir="${EPREFIX}"/etc \
-		${myconf}
+		$(use_enable usb libusb) \
+		--disable-libhal
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	find "${D}" -name '*.la' -delete
+	dodoc AUTHORS DRIVERS HELP README SECURITY ChangeLog || die
 
-	dodoc AUTHORS DRIVERS HELP README SECURITY ChangeLog
-
-	newinitd "${FILESDIR}/pcscd-init.4" pcscd
+	newinitd "${FILESDIR}/pcscd-init.3" pcscd || die
 
 	if use kernel_linux; then
 		insinto /lib/udev/rules.d
-		doins "${FILESDIR}"/99-pcscd-hotplug.rules
+		doins "${FILESDIR}"/99-pcscd-hotplug.rules || die
 	fi
 }
 

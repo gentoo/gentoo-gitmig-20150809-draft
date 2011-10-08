@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.116 2011/09/29 17:09:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.117 2011/10/08 14:51:16 flameeyes Exp $
+
+*pcsc-lite-1.7.4-r1 (08 Oct 2011)
+*pcsc-lite-1.7.2-r2 (08 Oct 2011)
+*pcsc-lite-1.6.6-r2 (08 Oct 2011)
+
+  08 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  -pcsc-lite-1.6.6.ebuild, +pcsc-lite-1.6.6-r2.ebuild, -pcsc-lite-1.6.7.ebuild,
+  -pcsc-lite-1.7.2-r1.ebuild, +pcsc-lite-1.7.2-r2.ebuild,
+  -pcsc-lite-1.7.4.ebuild, +pcsc-lite-1.7.4-r1.ebuild:
+  Fix Prefix 'fix' screwup (bug #386103). This includes revbumping straight to
+  stable since they decided to break the stable ebuild as well.
 
   29 Sep 2011; Fabian Groffen <grobian@gentoo.org> pcsc-lite-1.7.2-r1.ebuild,
   pcsc-lite-1.7.4.ebuild:
