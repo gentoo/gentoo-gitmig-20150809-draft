@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.62 2011/10/08 19:34:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.63 2011/10/09 05:08:28 mattm Exp $
+
+*zabbix-1.8.8-r1 (09 Oct 2011)
+*zabbix-1.8.7-r1 (09 Oct 2011)
+
+  09 Oct 2011; Matthew Marlowe <mattm@gentoo.org> +zabbix-1.8.7-r1.ebuild,
+  +zabbix-1.8.8-r1.ebuild:
+  Fix oracle use flag dependencies for Zabbix 1.8.7 and 1.8.8 per Bug #386457
 
   08 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> zabbix-1.8.7.ebuild:
   x86 stable wrt security bug #386175
