@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxinput
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxinput/ChangeLog,v 1.17 2011/10/07 18:36:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxinput/ChangeLog,v 1.18 2011/10/09 16:42:21 maekke Exp $
+
+  09 Oct 2011; Markus Meier <maekke@gentoo.org> lxinput-0.3.1.ebuild:
+  arm stable, bug #385189
 
   07 Oct 2011; Markos Chandras <hwoarang@gentoo.org> lxinput-0.3.1.ebuild:
   Stable on amd64 wrt bug #385189

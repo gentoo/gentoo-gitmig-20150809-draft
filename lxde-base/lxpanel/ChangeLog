@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxpanel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/ChangeLog,v 1.34 2011/10/07 18:38:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/ChangeLog,v 1.35 2011/10/09 16:44:30 maekke Exp $
+
+  09 Oct 2011; Markus Meier <maekke@gentoo.org> lxpanel-0.5.8.ebuild:
+  arm stable, bug #385189
 
   07 Oct 2011; Markos Chandras <hwoarang@gentoo.org> lxpanel-0.5.8.ebuild:
   Stable on amd64 wrt bug #385189

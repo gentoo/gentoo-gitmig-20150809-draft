@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxshortcut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxshortcut/ChangeLog,v 1.12 2011/10/07 18:42:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxshortcut/ChangeLog,v 1.13 2011/10/09 16:48:40 maekke Exp $
+
+  09 Oct 2011; Markus Meier <maekke@gentoo.org> lxshortcut-0.1.2.ebuild:
+  arm stable, bug #385189
 
   07 Oct 2011; Markos Chandras <hwoarang@gentoo.org> lxshortcut-0.1.2.ebuild:
   Stable on amd64 wrt bug #385189

@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxrandr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxrandr/ChangeLog,v 1.15 2011/10/07 18:40:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxrandr/ChangeLog,v 1.16 2011/10/09 16:45:43 maekke Exp $
+
+  09 Oct 2011; Markus Meier <maekke@gentoo.org> lxrandr-0.1.2.ebuild:
+  arm stable, bug #385189
 
   07 Oct 2011; Markos Chandras <hwoarang@gentoo.org> lxrandr-0.1.2.ebuild:
   Stable on amd64 wrt bug #385189

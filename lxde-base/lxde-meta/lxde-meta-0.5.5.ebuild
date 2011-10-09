@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/lxde-meta-0.5.5.ebuild,v 1.3 2011/10/07 18:44:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/lxde-meta-0.5.5.ebuild,v 1.4 2011/10/09 16:51:39 maekke Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://lxde.sf.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ppc x86"
+KEYWORDS="~alpha amd64 arm ~ppc x86"
 IUSE=""
 
 RDEPEND="=lxde-base/lxappearance-0.5*
