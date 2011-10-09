@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ufraw-0.18.ebuild,v 1.2 2011/05/22 03:22:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ufraw-0.18.ebuild,v 1.3 2011/10/09 07:34:15 ssuominen Exp $
 
-EAPI=2
-inherit fdo-mime gnome2-utils eutils autotools
+EAPI=4
+inherit autotools eutils fdo-mime gnome2-utils
 
 DESCRIPTION="RAW Image format viewer and GIMP plugin"
 HOMEPAGE="http://ufraw.sourceforge.net/"
@@ -21,12 +21,12 @@ RDEPEND="dev-libs/glib:2
 	>=media-libs/lensfun-0.2.5
 	media-libs/tiff
 	fits? ( sci-libs/cfitsio )
-	gnome? ( gnome-base/gconf )
+	gnome? ( >=gnome-base/gconf-2 )
 	gtk? ( >=x11-libs/gtk+-2.6:2
-		>=media-gfx/gtkimageview-1.5.0 )
+		>=media-gfx/gtkimageview-1.5 )
 	gimp? ( >=x11-libs/gtk+-2.6:2
-		>=media-gfx/gtkimageview-1.5.0
-		>=media-gfx/gimp-2.0 )"
+		>=media-gfx/gtkimageview-1.5
+		>=media-gfx/gimp-2 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -52,8 +52,14 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc README TODO || die
+	emake DESTDIR="${D}" schemasdir=/etc/gconf/schemas install
+	dodoc README TODO
+}
+
+pkg_preinst() {
+	if use gnome; then
+		gnome2_gconf_savelist
+	fi
 }
 
 pkg_postinst() {
