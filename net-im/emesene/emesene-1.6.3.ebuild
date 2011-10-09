@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/emesene-1.6.3.ebuild,v 1.7 2011/10/09 12:13:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/emesene-1.6.3.ebuild,v 1.8 2011/10/09 13:34:57 mr_bones_ Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
@@ -18,7 +18,7 @@ IUSE="webcam"
 
 RDEPEND="dev-python/pygtk:2
 	webcam? ( media-plugins/gst-plugins-meta[v4l2]
-		dev-python/gst-python 
+		dev-python/gst-python
 		media-libs/libmimic )"
 
 pkg_setup() {
