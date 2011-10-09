@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-7.7.ebuild,v 1.1 2011/08/04 07:33:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/org-mode-7.7.ebuild,v 1.2 2011/10/09 10:26:59 ulm Exp $
 
 EAPI=4
 NEED_EMACS=22
@@ -36,10 +36,7 @@ src_install() {
 		infodir="${ED}/usr/share/info" \
 		install
 
-	elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
-
-	doinfo doc/org
-	dodoc README doc/org.pdf doc/orgcard.pdf doc/orgguide.pdf
+	cp "${FILESDIR}/${SITEFILE}" "${T}/${SITEFILE}"
 
 	if use contrib; then
 		elisp-install ${PN}/contrib contrib/lisp/*org*.el || die
@@ -47,5 +44,11 @@ src_install() {
 		doins -r contrib/README contrib/babel contrib/odt contrib/scripts
 		find "${ED}/usr/share/doc/${PF}/contrib" -type f -name '.*' \
 			-exec rm -f '{}' '+'
+		sed -ie 's:\(.*@SITELISP@\)\(.*\):&\n\1/contrib\2:' \
+			"${T}/${SITEFILE}" || die
 	fi
+
+	elisp-site-file-install "${T}/${SITEFILE}" || die
+	doinfo doc/org
+	dodoc README doc/org.pdf doc/orgcard.pdf doc/orgguide.pdf
 }
