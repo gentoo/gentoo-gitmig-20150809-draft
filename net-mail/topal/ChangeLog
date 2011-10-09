@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/topal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/topal/ChangeLog,v 1.8 2011/08/26 15:40:27 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/topal/ChangeLog,v 1.9 2011/10/09 07:51:25 tove Exp $
+
+  09 Oct 2011; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove tove from metadata.xml
 
   26 Aug 2011; Markos Chandras <hwoarang@gentoo.org> topal-72.ebuild:
   Stable on amd64 wrt bug #317971
