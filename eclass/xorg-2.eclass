@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.48 2011/09/12 13:50:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.49 2011/10/09 07:45:53 mgorny Exp $
 
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -522,7 +522,7 @@ create_fonts_scale() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	if [[ ${FONT_DIR} != Speedo && ${FONT_DIR} != CID ]]; then
-		ebegin "Generating font.scale"
+		ebegin "Generating fonts.scale"
 			mkfontscale \
 				-a "${EROOT}/usr/share/fonts/encodings/encodings.dir" \
 				-- "${EROOT}/usr/share/fonts/${FONT_DIR}"
