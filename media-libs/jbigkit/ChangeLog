@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/jbigkit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.49 2010/09/05 13:16:55 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/ChangeLog,v 1.50 2011/10/09 11:59:40 ssuominen Exp $
+
+  09 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> -jbigkit-1.6-r1.ebuild,
+  -files/jbigkit-1.6-build.patch, -files/jbigkit-1.6-respect-make.patch,
+  -files/jbigkit-1.6-shared-lib.patch, -jbigkit-2.0.ebuild,
+  -files/jbigkit-2.0-build.patch:
+  old
 
   05 Sep 2010; Raúl Porcel <armin76@gentoo.org> jbigkit-2.0-r1.ebuild:
   ia64/m68k/s390/sh/sparc stable wrt #322193
