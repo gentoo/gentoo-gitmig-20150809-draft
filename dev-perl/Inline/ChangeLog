@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Inline
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.42 2011/09/27 16:31:26 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.43 2011/10/09 17:02:38 armin76 Exp $
+
+  09 Oct 2011; Raúl Porcel <armin76@gentoo.org> Inline-0.480.0.ebuild:
+  Add ~alpha/~arm/~ia64/~s390/~sh wrt #384677
 
 *Inline-0.480.0 (27 Sep 2011)
 
