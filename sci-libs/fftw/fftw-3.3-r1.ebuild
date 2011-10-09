@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3.ebuild,v 1.1 2011/08/31 16:58:27 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-3.3-r1.ebuild,v 1.1 2011/10/09 11:56:41 xarthisius Exp $
 
 EAPI=4
 
@@ -127,7 +127,7 @@ src_install () {
 	use openmp && [[ ${FFTW_OPENMP} = "--enable-openmp" ]] && u="omp"
 	for f in "${ED}"/usr/lib*/pkgconfig/*.pc; do
 		for u in $(usev mpi) $(usev threads) ${u}; do
-		    sed "s|-lfftw3[lf]\?|&_$u|" "$f" > "${f%.pc}_$u.pc" || die
+		    sed "s|-lfftw3[lf]\?|&_$u &|" "$f" > "${f%.pc}_$u.pc" || die
 		done
 	done
 }
