@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.75 2011/08/30 20:10:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp-common.eclass,v 1.76 2011/10/09 09:10:41 ulm Exp $
 #
 # @ECLASS: elisp-common.eclass
 # @MAINTAINER:
@@ -94,6 +94,8 @@
 # many Emacs support files, users may be annoyed by the start-up time.
 # Also avoid keybindings as they might interfere with the user's
 # settings.  Give a hint in pkg_postinst(), which should be enough.
+# The guiding principle is that emerging your package should not by
+# itself cause a change of standard Emacs behaviour.
 #
 # The naming scheme for this site-init file matches the shell pattern
 # "[1-8][0-9]*-gentoo*.el", where the two digits at the beginning define
