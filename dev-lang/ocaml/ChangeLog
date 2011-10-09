@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.198 2011/09/20 13:11:02 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.199 2011/10/09 17:12:19 armin76 Exp $
+
+  09 Oct 2011; Raúl Porcel <armin76@gentoo.org> ocaml-3.12.1.ebuild:
+  alpha/ia64/sparc stable wrt #361767
 
   20 Sep 2011; Tony Vroon <chainsaw@gentoo.org> ocaml-3.12.1.ebuild:
   Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney &
