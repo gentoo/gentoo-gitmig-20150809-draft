@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/htpdate
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/ChangeLog,v 1.41 2009/06/19 22:08:34 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/ChangeLog,v 1.42 2011/10/09 16:19:16 vapier Exp $
+
+  09 Oct 2011; Mike Frysinger <vapier@gentoo.org> files/htpdate.init:
+  Fix simple bashism in init.d script #386483 by Faustus.
 
   19 Jun 2009; Brent Baude <ranger@gentoo.org> htpdate-1.0.4.ebuild:
   keyworded ~arch for ppc64, bug 272590
