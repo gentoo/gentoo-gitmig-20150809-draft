@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/strace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.162 2011/10/04 14:13:56 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.163 2011/10/09 16:39:03 maekke Exp $
+
+  09 Oct 2011; Markus Meier <maekke@gentoo.org> strace-4.5.20-r2.ebuild:
+  arm stable, bug #384661
 
   04 Oct 2011; Andreas Schuerch <nativemad@gentoo.org> strace-4.5.20-r2.ebuild:
   x86 stable, thanks JD. Bug 384661
