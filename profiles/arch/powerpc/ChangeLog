@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.141 2011/10/06 17:05:05 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.142 2011/10/09 19:29:01 xarthisius Exp $
+
+  09 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> package.mask,
+  package.use.mask:
+  Remove obsolete masks
 
   06 Oct 2011; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
   Mask kde on ppc/ppc64

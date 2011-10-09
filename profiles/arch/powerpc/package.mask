@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.44 2011/10/06 17:05:05 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.45 2011/10/09 19:29:01 xarthisius Exp $
 
 # Alexey Shvetsov <alexxy@gentoo.org> (27 Jul 2011)
 # Mask KDE SC 4.7.0 per bug #376613
@@ -375,7 +375,6 @@
 ~kde-base/kdegraphics-meta-4.7.1
 ~kde-base/kdegraphics-strigi-analyzer-4.7.1
 ~kde-base/kde-l10n-4.7.1
-~kde-base/kdepim-l10n-4.7.1
 ~kde-base/kdelibs-4.7.1
 ~kde-base/kde-meta-4.7.1
 ~kde-base/kdemultimedia-kioslaves-4.7.1
