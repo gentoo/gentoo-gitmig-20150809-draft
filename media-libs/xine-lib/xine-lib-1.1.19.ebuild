@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.19.ebuild,v 1.14 2011/05/11 19:11:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.19.ebuild,v 1.15 2011/10/09 16:31:22 ssuominen Exp $
 
 EAPI=3
 inherit eutils flag-o-matic toolchain-funcs multilib
@@ -180,4 +180,5 @@ src_install() {
 		docdir="/usr/share/doc/${PF}" htmldir="/usr/share/doc/${PF}/html" \
 		install || die
 	dodoc ChangeLog
+	rm -f "${D}"usr/lib*/libxine.la
 }
