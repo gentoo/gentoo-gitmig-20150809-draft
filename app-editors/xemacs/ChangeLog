@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.151 2011/10/08 16:17:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.152 2011/10/09 13:54:51 hwoarang Exp $
+
+  09 Oct 2011; Markos Chandras <hwoarang@gentoo.org> xemacs-21.4.22-r2.ebuild:
+  Stable on amd64 wrt bug #385207
 
   08 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   xemacs-21.4.22-r2.ebuild:
