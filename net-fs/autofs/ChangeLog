@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/autofs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.132 2011/10/05 15:42:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.133 2011/10/09 12:39:28 hwoarang Exp $
+
+  09 Oct 2011; Markos Chandras <hwoarang@gentoo.org> autofs-4.1.4-r1.ebuild:
+  Stable on amd64 wrt bug #374887
 
   05 Oct 2011; Jeroen Roovers <jer@gentoo.org> autofs-4.1.4-r1.ebuild:
   Stable for HPPA (bug #374887).
