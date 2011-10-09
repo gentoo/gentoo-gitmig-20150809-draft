@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.1.ebuild,v 1.2 2011/10/04 18:36:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.1.ebuild,v 1.3 2011/10/09 16:34:39 vapier Exp $
 
 inherit eutils multilib
 
@@ -35,6 +35,8 @@ multilib_warn() {
 multilib_layout() {
 	local libdir libdirs=$(get_all_libdirs) def_libdir=$(get_abi_LIBDIR $DEFAULT_ABI)
 	: ${libdirs:=lib}	# it isn't that we don't trust multilib.eclass...
+
+	[ -z "${def_libdir}" ] && die "your DEFAULT_ABI=$DEFAULT_ABI appears to be invalid"
 
 	# figure out which paths should be symlinks and which should be directories
 	local dirs syms exp d
