@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libbluray-xine
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray-xine/ChangeLog,v 1.6 2011/10/08 18:37:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray-xine/ChangeLog,v 1.7 2011/10/09 16:34:23 maekke Exp $
+
+  09 Oct 2011; Markus Meier <maekke@gentoo.org>
+  libbluray-xine-0.0.1_pre20110210.ebuild:
+  x86 stable, bug #365951
 
   08 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   libbluray-xine-0.0.1_pre20110819.ebuild:
