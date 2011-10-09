@@ -15,3 +15,5 @@ LIBDIR_n32="lib32"
 CFLAGS_n64="-mabi=64"
 CHOST_n64=${CHOST}
 LIBDIR_n64="lib64"
+
+SYMLINK_LIB="no"
