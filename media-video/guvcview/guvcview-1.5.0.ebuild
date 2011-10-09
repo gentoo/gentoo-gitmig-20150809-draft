@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/guvcview-1.5.0.ebuild,v 1.1 2011/08/22 05:32:09 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/guvcview-1.5.0.ebuild,v 1.2 2011/10/09 16:46:09 ssuominen Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit autotools
 
 MY_P=${PN}-src-${PV}
 DESCRIPTION="GTK+ UVC Viewer"
-HOMEPAGE="http://guvcview.berlios.de"
+HOMEPAGE="http://guvcview.sourceforge.net/"
 SRC_URI="mirror://berlios/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
