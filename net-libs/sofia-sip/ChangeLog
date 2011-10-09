@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/sofia-sip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/sofia-sip/ChangeLog,v 1.18 2011/08/06 08:37:25 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/sofia-sip/ChangeLog,v 1.19 2011/10/09 11:03:39 ssuominen Exp $
+
+  09 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> sofia-sip-1.12.11.ebuild:
+  USE="static-libs" and remove libtool files. Import _part_ of missing LICENSE
+  as referred by COPYRIGHT file.
 
   06 Aug 2011; Zac Medico <zmedico@gentoo.org> sofia-sip-1.12.11.ebuild:
   Add ~x86-linux keyword.
