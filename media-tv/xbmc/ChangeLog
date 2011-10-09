@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.101 2011/10/01 18:38:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.102 2011/10/09 17:42:56 vapier Exp $
+
+  09 Oct 2011; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild,
+  metadata.xml:
+  Add USE=projectm to control visualization plugin #385449 by BT.
 
   01 Oct 2011; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild,
   metadata.xml:

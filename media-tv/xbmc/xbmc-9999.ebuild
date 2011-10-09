@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.90 2011/10/01 18:38:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.91 2011/10/09 17:42:56 vapier Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://xbmc.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="airplay alsa altivec avahi bluray css debug joystick midi profile pulseaudio +rsxs rtmp +samba sse sse2 udev vaapi vdpau webserver +xrandr"
+IUSE="airplay alsa altivec avahi bluray css debug joystick midi profile +projectm pulseaudio +rsxs rtmp +samba sse sse2 udev vaapi vdpau webserver +xrandr"
 
 COMMON_DEPEND="virtual/opengl
 	app-arch/bzip2
@@ -54,6 +54,7 @@ COMMON_DEPEND="virtual/opengl
 	media-libs/libmpeg2
 	media-libs/libogg
 	media-libs/libpng
+	projectm? ( media-libs/libprojectm )
 	media-libs/libsamplerate
 	media-libs/libsdl[audio,opengl,video,X]
 	alsa? ( media-libs/libsdl[alsa] )
@@ -171,6 +172,7 @@ src_configure() {
 		$(use_enable joystick) \
 		$(use_enable midi mid) \
 		$(use_enable profile profiling) \
+		$(use_enable projectm) \
 		$(use_enable pulseaudio pulse) \
 		$(use_enable rsxs) \
 		$(use_enable rtmp) \
