@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-neon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-neon/ChangeLog,v 1.60 2011/09/25 21:48:22 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-neon/ChangeLog,v 1.61 2011/10/09 17:00:26 armin76 Exp $
+
+  09 Oct 2011; Raúl Porcel <armin76@gentoo.org>
+  gst-plugins-neon-0.10.22.ebuild:
+  alpha stable wrt #382225
 
   25 Sep 2011; Tony Vroon <chainsaw@gentoo.org>
   gst-plugins-neon-0.10.22.ebuild:
