@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>ml</herd>
-	<maintainer>
-		<email>tove@gentoo.org</email>
-	</maintainer>
 	<longdescription lang="en">
 		Wyrd is a text-based front-end to Remind, a sophisticated calendar and alarm
 		program. Remind's power lies in its programmability, and Wyrd does not hide this

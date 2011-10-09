@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/wyrd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wyrd/ChangeLog,v 1.18 2010/05/19 16:42:13 tove Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wyrd/ChangeLog,v 1.19 2011/10/09 07:43:26 tove Exp $
+
+  09 Oct 2011; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove tove from metadata.xml
 
   19 May 2010; Torsten Veller <tove@gentoo.org> wyrd-1.4.4.ebuild:
   Don't strip wyrd (#320005)
