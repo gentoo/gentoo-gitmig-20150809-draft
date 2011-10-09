@@ -1,5 +1,10 @@
 
 
+*elfix-0.2.3 (09 Oct 2011)
+
+  09 Oct 2011; Anthony G. Basile <blueness@gentoo.org> +elfix-0.2.3.ebuild:
+  Bump, moves utils to /usr/bin/sbin and adds revdep-pax
+
 *elfix-0.2.2 (03 Oct 2011)
 
   03 Oct 2011; Anthony G. Basile <blueness@gentoo.org> -elfix-0.2.1.ebuild,
