@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5773 2011/10/08 21:00:56 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5774 2011/10/09 17:43:26 hd_brummy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Oct 2011; Joerg Bornkessel <hd_brummy@gentoo.org> thirdpartymirrors:
+  added thirtpartymirror vdr-developerorg
 
   08 Oct 2011; Anthony G. Basile <blueness@gentoo.org> package.mask:
   Mask dev-python/pypax while testing experimental utility
