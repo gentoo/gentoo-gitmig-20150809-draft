@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gst-plugins-base
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.179 2011/10/04 19:06:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.180 2011/10/09 15:50:19 armin76 Exp $
+
+  09 Oct 2011; Raúl Porcel <armin76@gentoo.org>
+  gst-plugins-base-0.10.35.ebuild:
+  alpha/ia64/sh/sparc stable wrt #382225
 
   04 Oct 2011; Jeroen Roovers <jer@gentoo.org> gst-plugins-base-0.10.35.ebuild:
   Marked ~hppa (bug #382225).
