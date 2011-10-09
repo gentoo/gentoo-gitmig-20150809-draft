@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.3-r1.ebuild,v 1.4 2011/04/05 05:40:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.4.3-r1.ebuild,v 1.5 2011/10/09 13:31:10 ssuominen Exp $
 
 EAPI="3"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/ming/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE="+perl +python php"
+IUSE="+perl +python php static-libs"
 
 RDEPEND="perl? ( dev-lang/perl )
 	python? ( dev-lang/python )
@@ -64,7 +64,10 @@ src_configure() {
 	# build is sensitive to -O3 (bug #297437)
 	replace-flags -O3 -O2
 
-	econf $(use_enable perl) $(use_enable python)
+	econf \
+		$(use_enable static-libs static) \
+		$(use_enable perl) \
+		$(use_enable python)
 }
 
 src_compile() {
@@ -85,6 +88,8 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${D}" INSTALLDIRS="vendor" install || die
+
+	rm -f "${ED}"usr/lib*/lib${PN}.la
 
 	fixlocalpod
 
