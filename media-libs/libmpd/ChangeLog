@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/ChangeLog,v 1.63 2011/09/25 20:15:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/ChangeLog,v 1.64 2011/10/09 16:47:50 maekke Exp $
+
+  09 Oct 2011; Markus Meier <maekke@gentoo.org> libmpd-11.8.17.ebuild:
+  x86 stable, bug #381219
 
   25 Sep 2011; Tony Vroon <chainsaw@gentoo.org> libmpd-11.8.17.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
