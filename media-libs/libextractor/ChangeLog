@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libextractor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/ChangeLog,v 1.59 2011/10/09 17:31:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/ChangeLog,v 1.60 2011/10/09 17:37:14 ssuominen Exp $
+
+  09 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  libextractor-0.6.2.ebuild:
+  Drop keywording until we have working net-p2p/gnunet.
 
 *libextractor-0.6.2 (09 Oct 2011)
 
