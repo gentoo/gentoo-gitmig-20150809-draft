@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-3.0.2.ebuild,v 1.5 2011/10/08 16:21:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/raster3d-3.0.2.ebuild,v 1.6 2011/10/09 15:00:59 hwoarang Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.bmsc.washington.edu/${PN}/${MY_P}.tar.gz -> ${MY_P}.tar"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~amd64 ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE="gd tiff"
 
 RDEPEND="
