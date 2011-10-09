@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/gnu-smalltalk
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.46 2010/12/21 01:04:11 araujo Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/ChangeLog,v 1.47 2011/10/09 23:25:33 araujo Exp $
+
+*gnu-smalltalk-3.2.4 (09 Oct 2011)
+
+  09 Oct 2011; <araujo@gentoo.org> +gnu-smalltalk-3.2.4.ebuild,
+  +files/SequenceableCollection-size-3.2.4.patch:
+  Fix: dev-lang/gnu-smalltalk should DEPEND on app-arch/zip (bug#364731).
+  dev-lang/gnu-smalltalk crashes by SequenceableCollection new (bug#364733).
+  dev-lang/gnu-smalltalk-3.2.4 has been released (bug#381609)
 
 *gnu-smalltalk-3.2.3 (21 Dec 2010)
 
