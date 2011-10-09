@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/greenbone-security-assistant
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/greenbone-security-assistant/ChangeLog,v 1.1 2011/10/09 17:29:41 hanno Exp $
+
+*greenbone-security-assistant-2.0.1 (09 Oct 2011)
+
+  09 Oct 2011; Hanno Boeck <hanno@gentoo.org>
+  +greenbone-security-assistant-2.0.1.ebuild, +files/gsad, +metadata.xml:
+  Initial commit of Greenbone Security Assistant, part of openvas.
+
