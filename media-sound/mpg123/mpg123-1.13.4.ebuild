@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-1.13.4.ebuild,v 1.1 2011/08/29 10:08:57 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-1.13.4.ebuild,v 1.2 2011/10/09 20:35:09 ssuominen Exp $
 
 EAPI=4
 inherit toolchain-funcs libtool
@@ -60,4 +60,9 @@ src_configure() {
 		--with-cpu=${_cpu} \
 		--enable-network \
 		$(use_enable ipv6)
+}
+
+src_install() {
+	default
+	find "${ED}" -name '*.la' -exec sed -i -e "/^dependency_libs/s:=.*:='':" {} +
 }
