@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/9libs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/9libs/ChangeLog,v 1.17 2010/09/23 19:07:29 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/9libs/ChangeLog,v 1.18 2011/10/09 03:46:00 floppym Exp $
+
+*9libs-1.0-r2 (09 Oct 2011)
+
+  09 Oct 2011; Mike Gilbert <floppym@gentoo.org> +9libs-1.0-r2.ebuild,
+  +files/9libs-va_list.patch:
+  Fix build failure on amd64. Thanks to Claudio Calvelli for the patch. Bug
+  385387.
 
   23 Sep 2010; Ulrich Mueller <ulm@gentoo.org> -9libs-1.0.ebuild,
   9libs-1.0-r1.ebuild:
