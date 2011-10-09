@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng-gnome2.eclass,v 1.12 2011/09/18 06:44:11 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng-gnome2.eclass,v 1.13 2011/10/09 09:39:59 graaff Exp $
 
 # @ECLASS: ruby-ng-gnome2.eclass
 # @MAINTAINER:
@@ -14,6 +14,7 @@
 
 RUBY_FAKEGEM_NAME="${RUBY_FAKEGEM_NAME:-${PN#ruby-}}"
 RUBY_FAKEGEM_TASK_TEST=""
+RUBY_FAKEGEM_TASK_DOC=""
 
 inherit ruby-fakegem multilib versionator
 
