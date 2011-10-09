@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/markupsafe
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markupsafe/ChangeLog,v 1.31 2011/08/22 10:04:35 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markupsafe/ChangeLog,v 1.32 2011/10/09 13:47:34 hwoarang Exp $
+
+  09 Oct 2011; Markos Chandras <hwoarang@gentoo.org> markupsafe-0.15.ebuild:
+  Stable on amd64 wrt bug #386053
 
   22 Aug 2011; Markus Duft <mduft@gentoo.org> markupsafe-0.15.ebuild:
   keyworded ~x86-interix
