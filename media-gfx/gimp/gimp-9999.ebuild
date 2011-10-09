@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.38 2011/09/02 15:58:38 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.39 2011/10/09 23:40:29 sping Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -104,8 +104,6 @@ src_unpack() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-2.7.3-glib-2.29.patch
-
 	echo '#!/bin/sh' > py-compile
 	chmod a+x py-compile || die
 	sed -i -e 's:\$srcdir/configure:#:g' autogen.sh
