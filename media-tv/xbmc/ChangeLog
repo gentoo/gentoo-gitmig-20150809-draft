@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.102 2011/10/09 17:42:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.103 2011/10/09 17:46:43 vapier Exp $
+
+  09 Oct 2011; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild,
+  metadata.xml:
+  Add USE=goom to control GOOM support #385447 by BT. Run autotools in new goom
+  subdir #386471 by BT.
 
   09 Oct 2011; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild,
   metadata.xml:
