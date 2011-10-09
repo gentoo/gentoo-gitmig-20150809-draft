@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libextractor
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/ChangeLog,v 1.58 2009/12/29 17:43:47 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libextractor/ChangeLog,v 1.59 2011/10/09 17:31:11 ssuominen Exp $
+
+*libextractor-0.6.2 (09 Oct 2011)
+
+  09 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +libextractor-0.6.2.ebuild:
+  Version bump wrt #269050 by Arfrever Frehtes Taifersar Arahesis. This one is
+  using external exiv2 wrt #383039 and doesn't fail to build against zlib >=
+  1.2.5.1-r1 wrt #383585.
 
   29 Dec 2009; Raúl Porcel <armin76@gentoo.org>
   libextractor-0.5.19a.ebuild, libextractor-0.5.20a.ebuild,
