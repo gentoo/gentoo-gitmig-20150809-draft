@@ -1,6 +1,13 @@
 # ChangeLog for media-video/dvdstyler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.45 2011/09/16 18:38:04 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.46 2011/10/09 10:47:02 ssuominen Exp $
+
+*dvdstyler-2.0_rc1 (09 Oct 2011)
+
+  09 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +dvdstyler-2.0_rc1.ebuild:
+  Version bump wrt #353478 by Thomas Rausch. This will also fix building with
+  recent FFmpeg wrt #374797 by Diego Elio Pettenò.
 
   16 Sep 2011; Steve Dibb <beandog@gentoo.org> dvdstyler-1.7.4.ebuild,
   dvdstyler-1.8.1_beta1.ebuild, dvdstyler-1.8.1.ebuild:
