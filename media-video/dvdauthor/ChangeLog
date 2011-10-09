@@ -1,6 +1,12 @@
 # ChangeLog for media-video/dvdauthor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/ChangeLog,v 1.35 2011/10/08 16:43:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/ChangeLog,v 1.36 2011/10/09 09:37:29 ssuominen Exp $
+
+*dvdauthor-0.7.0 (09 Oct 2011)
+
+  09 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> +dvdauthor-0.7.0.ebuild,
+  +files/dvdauthor-0.7.0-libpng15.patch, metadata.xml:
+  Version bump wrt #308899 by Daniel Pielmeier
 
   08 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> dvdauthor-0.6.18.ebuild:
   x86 stable wrt bug #385973
