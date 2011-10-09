@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/autofs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.134 2011/10/09 16:38:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.135 2011/10/09 16:46:08 maekke Exp $
+
+  09 Oct 2011; Markus Meier <maekke@gentoo.org> autofs-5.0.6-r3.ebuild:
+  x86 stable, bug #379569
 
   09 Oct 2011; Markus Meier <maekke@gentoo.org> autofs-4.1.4-r1.ebuild:
   x86 stable, bug #374887
