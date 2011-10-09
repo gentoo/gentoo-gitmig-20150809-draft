@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/flex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.91 2011/10/08 11:02:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.92 2011/10/09 16:58:43 jer Exp $
+
+  09 Oct 2011; Jeroen Roovers <jer@gentoo.org> flex-2.5.35_p10.ebuild:
+  Stable for HPPA (bug #384221).
 
   08 Oct 2011; Markus Meier <maekke@gentoo.org> flex-2.5.35_p10.ebuild:
   arm stable, bug #384221
