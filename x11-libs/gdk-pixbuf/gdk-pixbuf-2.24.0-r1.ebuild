@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.24.0-r1.ebuild,v 1.2 2011/10/03 08:54:19 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/gdk-pixbuf-2.24.0-r1.ebuild,v 1.3 2011/10/09 09:43:33 lxnay Exp $
 
 EAPI="4"
 
@@ -82,6 +82,8 @@ pkg_postinst() {
 	gdk-pixbuf-query-loaders > "${tmp_file}"
 	if [ "${?}" = "0" ]; then
 		cat "${tmp_file}" > "${EROOT}usr/$(get_libdir)/gdk-pixbuf-2.0/2.10.0/loaders.cache"
+	else
+		ewarn "Cannot update loaders.cache, gdk-pixbuf-query-loaders failed to run"
 	fi
 	rm "${tmp_file}"
 
