@@ -1,6 +1,10 @@
 
 
   09 Oct 2011; Anthony G. Basile <blueness@gentoo.org> pypax-0.2.3.ebuild:
+  Moved SUPPORT_PYTHON_ABIS and RESTRICT_PYTHON_ABIS before inherit, thanks
+  Arfrever
+
+  09 Oct 2011; Anthony G. Basile <blueness@gentoo.org> pypax-0.2.3.ebuild:
   Add support for multiple ABIS and restrict Jython
 
 *pypax-0.2.3 (08 Oct 2011)
