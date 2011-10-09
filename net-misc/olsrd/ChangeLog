@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/olsrd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/ChangeLog,v 1.24 2011/10/07 17:01:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/olsrd/ChangeLog,v 1.25 2011/10/09 16:52:38 jer Exp $
+
+  09 Oct 2011; Jeroen Roovers <jer@gentoo.org> -olsrd-0.4.10.ebuild,
+  -files/olsrd-0.4.10-makefile.patch,
+  -files/olsrd-0.4.10-memleak_in_olsr_remove_scheduler_event.patch,
+  -olsrd-0.5.0.ebuild, -olsrd-0.5.1-r1.ebuild,
+  -files/olsrd-0.5.1-fix-hashing.patch, -olsrd-0.5.2-r1.ebuild,
+  -files/olsrd-0.5.2-bmf.patch, -olsrd-0.5.3.ebuild, -olsrd-0.5.4.ebuild,
+  -files/olsrd-0.5.4-build_fix.patch, -olsrd-0.5.5.ebuild,
+  -files/olsrd-0.5.5-build_fix.patch, -olsrd-0.5.6.ebuild:
+  ^
 
 *olsrd-0.6.2 (07 Oct 2011)
 
