@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Amazon-S3
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Amazon-S3/ChangeLog,v 1.16 2011/09/25 11:44:48 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Amazon-S3/ChangeLog,v 1.17 2011/10/09 07:47:17 tove Exp $
+
+  09 Oct 2011; Torsten Veller <tove@gentoo.org> metadata.xml:
+  Remove tove from metadata.xml
 
 *Net-Amazon-S3-0.540.0 (25 Sep 2011)
 
