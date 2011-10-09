@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/TheUnarchiver/TheUnarchiver-2.7.1.ebuild,v 1.1 2011/10/08 18:12:47 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/TheUnarchiver/TheUnarchiver-2.7.1.ebuild,v 1.2 2011/10/09 07:40:06 hanno Exp $
 
 EAPI=4
 
@@ -16,16 +16,11 @@ KEYWORDS="~amd64"
 IUSE=""
 
 RDEPEND="gnustep-base/gnustep-base
-	gnustep-base/gnustep-make[native-exceptions]"
+	>=gnustep-base/gnustep-make-2.6.0[native-exceptions]"
 DEPEND="${RDEPEND}
 	sys-devel/gcc[objc]"
 
 S="${WORKDIR}/The Unarchiver/XADMaster"
-
-#src_prepare() {
-#	sed -i -e 's:-D_NATIVE_OBJC_EXCEPTIONS::g' Makefile.linux \
-#		../UniversalDetector/Makefile.linux || die "sed failed"
-#}
 
 src_compile() {
 	emake -f Makefile.linux \
