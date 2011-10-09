@@ -1,6 +1,9 @@
 # ChangeLog for app-office/grisbi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.50 2011/10/02 18:57:16 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.51 2011/10/09 16:31:10 remi Exp $
+
+  09 Oct 2011; Rémi Cardona <remi@gentoo.org> grisbi-0.8.8.ebuild:
+  Disable CUnit/tests support, fixes bug #356951.
 
 *grisbi-0.8.8 (02 Oct 2011)
 
