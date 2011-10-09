@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gmpc-jamendo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-jamendo/ChangeLog,v 1.10 2011/09/25 20:23:16 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-jamendo/ChangeLog,v 1.11 2011/10/09 16:52:41 maekke Exp $
+
+  09 Oct 2011; Markus Meier <maekke@gentoo.org> gmpc-jamendo-11.8.16.ebuild:
+  x86 stable, bug #381219
 
   25 Sep 2011; Tony Vroon <chainsaw@gentoo.org> gmpc-jamendo-11.8.16.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &

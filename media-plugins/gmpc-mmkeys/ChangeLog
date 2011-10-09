@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gmpc-mmkeys
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mmkeys/ChangeLog,v 1.5 2011/09/25 20:29:09 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mmkeys/ChangeLog,v 1.6 2011/10/09 16:56:49 maekke Exp $
+
+  09 Oct 2011; Markus Meier <maekke@gentoo.org> gmpc-mmkeys-11.8.16.ebuild:
+  x86 stable, bug #381219
 
   25 Sep 2011; Tony Vroon <chainsaw@gentoo.org> gmpc-mmkeys-11.8.16.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
