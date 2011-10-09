@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.828 2011/10/04 13:54:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.829 2011/10/09 16:59:23 maekke Exp $
+
+  09 Oct 2011; Markus Meier <maekke@gentoo.org> gcc-4.5.3-r1.ebuild:
+  arm stable, bug #357479
 
   04 Oct 2011; Jeroen Roovers <jer@gentoo.org> gcc-4.5.3-r1.ebuild:
   Stable for HPPA (bug #357479).
