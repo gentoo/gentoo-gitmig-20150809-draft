@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.77.ebuild,v 1.2 2011/10/10 16:51:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.77.ebuild,v 1.3 2011/10/10 17:13:21 grobian Exp $
 
 EAPI="3"
 
 inherit eutils toolchain-funcs multilib pam
 
-IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl lmtp ipv6 sasl dnsdb perl mbx X nis syslog spf srs gnutls sqlite dovecot-sasl radius maildir +dkim dcc dsn"
+IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl lmtp ipv6 sasl dnsdb perl mbx X nis syslog spf srs gnutls sqlite doc dovecot-sasl radius maildir +dkim dcc dsn"
 
 DSN_EXIM_V=469
 DSN_V=1_3
@@ -14,7 +14,8 @@ DSN_V=1_3
 DESCRIPTION="A highly configurable, drop-in replacement for sendmail"
 SRC_URI="ftp://ftp.exim.org/pub/exim/exim4/${P//rc/RC}.tar.bz2
 	mirror://gentoo/system_filter.exim.gz
-	dsn? ( mirror://sourceforge/eximdsn/eximdsn-patch-1.3/exim_${DSN_EXIM_V}_dsn_${DSN_V}.patch )"
+	dsn? ( mirror://sourceforge/eximdsn/eximdsn-patch-1.3/exim_${DSN_EXIM_V}_dsn_${DSN_V}.patch )
+	doc? ( ftp://ftp.exim.org/pub/exim/exim4/${PN}-html-${PV//rc/RC}.tar.bz2 )"
 HOMEPAGE="http://www.exim.org/"
 
 SLOT="0"
@@ -301,6 +302,7 @@ src_install () {
 	dodoc "${S}"/doc/*
 	doman "${S}"/doc/exim.8
 	use dsn && dodoc "${S}"/README.DSN
+	use doc && dohtml -r "${WORKDIR}"/${PN}-html-${PV//rc/RC}/doc/html/spec_html/*
 
 	# conf files
 	insinto /etc/exim
