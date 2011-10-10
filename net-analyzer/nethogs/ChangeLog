@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nethogs
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/ChangeLog,v 1.15 2009/11/03 17:27:16 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/ChangeLog,v 1.16 2011/10/10 10:04:25 jer Exp $
+
+*nethogs-0.8.0 (10 Oct 2011)
+
+  10 Oct 2011; Jeroen Roovers <jer@gentoo.org> +nethogs-0.8.0.ebuild:
+  Version bump.
 
   03 Nov 2009; Raúl Porcel <armin76@gentoo.org> nethogs-0.7.0.ebuild:
   Add ~ia64 wrt #282956
