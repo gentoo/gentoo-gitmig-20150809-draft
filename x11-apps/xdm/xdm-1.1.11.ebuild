@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.1.11.ebuild,v 1.1 2011/10/02 00:40:13 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.1.11.ebuild,v 1.2 2011/10/10 08:56:06 mgorny Exp $
 
 EAPI=3
 
@@ -32,6 +32,7 @@ pkg_setup() {
 	XORG_CONFIGURE_OPTIONS=(
 		$(use_enable ipv6)
 		$(use_with pam)
+		"$(systemd_with_unitdir)"
 		--with-default-vt=${DEFAULTVT}
 		--with-xdmconfigdir=/etc/X11/xdm
 	)
@@ -48,8 +49,6 @@ src_install() {
 	fi
 	# Keep /var/lib/xdm. This is where authfiles are stored. See #286350.
 	keepdir /var/lib/xdm
-
-	systemd_dounit "${FILESDIR}"/xdm.service || die
 }
 
 pkg_postinst() {
