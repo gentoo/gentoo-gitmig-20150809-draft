@@ -10,7 +10,6 @@
 
 JSON-GLib uses GLib native data types and the generic value container GValue for ease of development. It also provides integration with the GObject classes for direct serialization into, and deserialization from, JSON data streams.</longdescription>
 	<use>
-		<flag name="coverage">Enable coverage analysis</flag>
 		<flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg> for
 			introspection</flag>
 	</use>
