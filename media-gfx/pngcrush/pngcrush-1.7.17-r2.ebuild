@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/pngcrush-1.7.17-r2.ebuild,v 1.1 2011/10/08 20:18:49 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/pngcrush-1.7.17-r2.ebuild,v 1.2 2011/10/10 21:07:42 ssuominen Exp $
 
 EAPI=4
 inherit toolchain-funcs eutils
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 	app-arch/xz-utils"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-unbundle-zlib.diff"
+	epatch "${FILESDIR}"/${P}-unbundle-zlib.diff
 }
 
 src_compile() {

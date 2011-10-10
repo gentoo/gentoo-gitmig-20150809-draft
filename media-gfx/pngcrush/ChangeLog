@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/pngcrush
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/ChangeLog,v 1.67 2011/10/09 01:49:02 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngcrush/ChangeLog,v 1.68 2011/10/10 21:07:42 ssuominen Exp $
+
+  10 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  -pngcrush-1.7.17-r1.ebuild:
+  old
 
   09 Oct 2011; Matt Turner <mattst88@gentoo.org> metadata.xml:
   Drop maintainership.
