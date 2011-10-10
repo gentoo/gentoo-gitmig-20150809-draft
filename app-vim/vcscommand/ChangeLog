@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/vcscommand
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vcscommand/ChangeLog,v 1.20 2011/06/25 10:05:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vcscommand/ChangeLog,v 1.21 2011/10/10 08:26:23 radhermit Exp $
+
+*vcscommand-1.99.44 (10 Oct 2011)
+
+  10 Oct 2011; Tim Harder <radhermit@gentoo.org> +vcscommand-1.99.44.ebuild:
+  Version bump. Use github mirror.
 
 *vcscommand-1.99.43 (25 Jun 2011)
 
