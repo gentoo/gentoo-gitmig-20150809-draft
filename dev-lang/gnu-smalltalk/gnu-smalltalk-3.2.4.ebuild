@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-3.2.4.ebuild,v 1.1 2011/10/09 23:25:33 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-3.2.4.ebuild,v 1.2 2011/10/10 21:29:46 araujo Exp $
 
-EAPI="0"
+EAPI="3"
 
 inherit elisp-common flag-o-matic eutils
 
@@ -30,13 +30,11 @@ S="${WORKDIR}/smalltalk-${PV}"
 
 SITEFILE=50gnu-smalltalk-gentoo.el
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/SequenceableCollection-size-3.2.4.patch
 }
 
-src_compile() {
+src_configure() {
 	replace-flags '-O3' '-O2'
 	econf \
 		--libdir=/usr/$(get_libdir) \
@@ -49,6 +47,9 @@ src_compile() {
 		$(use_with tk tcl /usr/$(get_libdir)) \
 		$(use_with tk tk /usr/$(get_libdir)) \
 		$(use_enable gtk gtk)
+}
+
+src_compile() {
 	emake || die "emake failed"
 	use emacs && elisp-compile *.el
 }
