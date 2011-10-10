@@ -1,15 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/chrpath-0.13-r2.ebuild,v 1.1 2011/08/29 19:23:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/chrpath-0.13-r2.ebuild,v 1.2 2011/10/10 22:28:37 ssuominen Exp $
 
-EAPI="2"
-
-inherit eutils autotools
+EAPI=4
+inherit autotools eutils
 
 DESCRIPTION="chrpath can modify the rpath and runpath of ELF executables"
 HOMEPAGE="http://directory.fsf.org/project/chrpath/"
-# original upstream no longer exists (ftp://ftp.hungry.com/pub/hungry)
-SRC_URI="http://ftp.tux.org/pub/X-Windows/ftp.hungry.com/chrpath/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,14 +15,21 @@ KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~
 IUSE=""
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-multilib.patch
-	epatch "${FILESDIR}"/${PN}-keepgoing.patch
-	epatch "${FILESDIR}"/${P}-testsuite-1.patch
-	sed -i -e '/^docdir/d' Makefile.am # use standard docdir
+	epatch \
+		"${FILESDIR}"/${P}-multilib.patch \
+		"${FILESDIR}"/${PN}-keepgoing.patch \
+		"${FILESDIR}"/${P}-testsuite-1.patch
+
 	eautoreconf
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
-	dodoc ChangeLog AUTHORS NEWS README
+	emake \
+		DESTDIR="${D}" \
+		docdir=/usr/share/doc/${PF} \
+		install
+
+	rm -f \
+		"${ED}"usr/lib*/lib*.{a,la} \
+		"${ED}"usr/share/doc/${PF}/{COPYING,INSTALL}
 }

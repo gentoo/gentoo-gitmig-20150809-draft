@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/chrpath
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/ChangeLog,v 1.15 2011/08/29 19:23:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/ChangeLog,v 1.16 2011/10/10 22:28:37 ssuominen Exp $
+
+  10 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> chrpath-0.13-r2.ebuild:
+  Remove unnecessary static libraries because chrpath is dlopening the dynamic
+  libraries instead. Fix documentation path.
 
 *chrpath-0.13-r2 (29 Aug 2011)
 
