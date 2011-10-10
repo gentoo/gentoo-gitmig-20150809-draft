@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcrypt-ruby/bcrypt-ruby-3.0.1.ebuild,v 1.1 2011/10/05 18:20:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bcrypt-ruby/bcrypt-ruby-3.0.1.ebuild,v 1.2 2011/10/10 17:28:18 grobian Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ DESCRIPTION="An easy way to keep your users' passwords secure."
 HOMEPAGE="http://bcrypt-ruby.rubyforge.org/"
 LICENSE="MIT"
 
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 SLOT="0"
 IUSE=""
 
