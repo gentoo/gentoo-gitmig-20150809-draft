@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-1.0.2-r2.ebuild,v 1.7 2010/12/01 05:10:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-1.0.2-r2.ebuild,v 1.8 2011/10/10 18:51:25 ssuominen Exp $
 
 inherit eutils autotools
 
@@ -55,6 +55,9 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-libsupc++.patch"
 
 	epatch "${FILESDIR}/${P}-autotools.patch"
+
+	# error: ‘Z_BEST_COMPRESSION’ undeclared (first use in this function)
+	sed -i -e '1i#include <zlib.h>' src/pngoutput.c || die
 
 	AT_M4DIR="m4" eautoreconf
 }

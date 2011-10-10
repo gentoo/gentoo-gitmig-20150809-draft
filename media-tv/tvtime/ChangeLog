@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/tvtime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.51 2011/08/14 10:42:15 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.52 2011/10/10 18:51:25 ssuominen Exp $
+
+  10 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> tvtime-1.0.2-r2.ebuild:
+  Missing #include <zlib.h> for Z_BEST_COMPRESSION. Required by libpng >= 1.5
+  stabilization.
 
 *tvtime-1.0.2_p20110131-r1 (14 Aug 2011)
 
