@@ -1,6 +1,11 @@
 # ChangeLog for app-office/grisbi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.51 2011/10/09 16:31:10 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.52 2011/10/10 19:05:52 pacho Exp $
+
+  10 Oct 2011; Pacho Ramos <pacho@gentoo.org>
+  -files/grisbi-0.5.6-latex-unicode.patch, -grisbi-0.6.0.ebuild,
+  -grisbi-0.8.1.ebuild, grisbi-0.8.8.ebuild:
+  Drop .la files, bug #386665 by Ago. Drop old.
 
   09 Oct 2011; Rémi Cardona <remi@gentoo.org> grisbi-0.8.8.ebuild:
   Disable CUnit/tests support, fixes bug #356951.
