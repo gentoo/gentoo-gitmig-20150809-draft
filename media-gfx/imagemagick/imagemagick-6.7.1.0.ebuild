@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.7.1.0.ebuild,v 1.9 2011/09/24 16:49:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.7.1.0.ebuild,v 1.10 2011/10/10 22:06:41 ssuominen Exp $
 
 EAPI=4
 inherit multilib toolchain-funcs versionator
@@ -78,7 +78,7 @@ src_configure() {
 	if use truetype; then
 		myconf="$(use_with corefonts windows-font-dir /usr/share/fonts/corefonts)"
 	else
-		myconf="--without-corefonts"
+		myconf="--without-windows-font-dir"
 	fi
 
 	econf \

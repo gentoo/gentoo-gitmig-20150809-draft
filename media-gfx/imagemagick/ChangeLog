@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.446 2011/10/10 22:02:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.447 2011/10/10 22:06:41 ssuominen Exp $
+
+  10 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  imagemagick-6.7.1.0.ebuild, imagemagick-6.7.3.0.ebuild:
+  Change --without-corefonts to --without-windows-font-dir by Agostino Sarubbo
 
   10 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
   -imagemagick-6.6.7.6.ebuild, -imagemagick-6.6.8.5.ebuild,
@@ -12,8 +16,7 @@
   10 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
   +imagemagick-6.7.3.0.ebuild:
   Version bump wrt #385427 by Kamen Dokov. Improve USE="opencl" logic wrt
-  #381281 by Sergey Parubochiy. Change --without-corefonts to
-  --without-windows-font-dir by Agostino Sarubbo.
+  #381281 by Sergey Parubochiy.
 
   24 Sep 2011; Raúl Porcel <armin76@gentoo.org> imagemagick-6.7.1.0.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #378543
