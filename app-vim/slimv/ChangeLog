@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/slimv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/slimv/ChangeLog,v 1.9 2011/10/10 08:31:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/slimv/ChangeLog,v 1.10 2011/10/10 08:31:55 radhermit Exp $
+
+  10 Oct 2011; Tim Harder <radhermit@gentoo.org> -slimv-0.8.4.ebuild,
+  -slimv-0.8.5.ebuild:
+  Remove old.
 
 *slimv-0.9.0 (10 Oct 2011)
 
