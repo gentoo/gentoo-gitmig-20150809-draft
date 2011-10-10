@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/json
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.66 2011/09/11 06:05:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/ChangeLog,v 1.67 2011/10/10 18:48:23 graaff Exp $
+
+  10 Oct 2011; Hans de Graaff <graaff@gentoo.org> json-1.5.4.ebuild:
+  Call tests directly instead of via testrb to address bug 339126.
 
 *json-1.5.4 (11 Sep 2011)
 

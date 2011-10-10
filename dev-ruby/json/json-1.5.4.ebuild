@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/json-1.5.4.ebuild,v 1.1 2011/09/11 06:05:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/json/json-1.5.4.ebuild,v 1.2 2011/10/10 18:48:23 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -45,11 +45,11 @@ each_ruby_compile() {
 
 each_ruby_test() {
 	JSON=pure \
-	${RUBY} -Iext:lib -S testrb tests/*.rb || die "pure ruby tests failed"
+	${RUBY} -Iext:lib -rtest/unit -e "Dir['test/*.rb'].each{|f| require f}" || die "pure ruby tests failed"
 
 	if [[ $(basename ${RUBY}) != "jruby" ]]; then
 		JSON=ext \
-		${RUBY} -Iext:lib -S testrb tests/*.rb || die "ext ruby tests failed"
+		${RUBY} -Iext:lib -rtest/unit -e "Dir['test/*.rb'].each{|f| require f}" || die "ext ruby tests failed"
 	fi
 }
 
