@@ -1,13 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5776 2011/10/10 19:12:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5777 2011/10/10 19:39:04 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
 
   10 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
-  Mask new libdvdread and libdvdnav for testing.
+  Unmask libdvdnav, libdvdread and dvdbackup.
 
   10 Oct 2011; Fabian Groffen <grobian@gentoo.org> package.mask:
   Drop Exim Release Candidate testing mask

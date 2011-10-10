@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13124 2011/10/10 19:12:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13125 2011/10/10 19:39:04 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,19 +31,14 @@
 
 #--- END OF EXAMPLES ---
 
-# Samuli Suominen <ssuominen@gentoo.org> (10 Oct 2011)
-# Masked for testing
->=media-libs/libdvdread-4.2.0_pre
->=media-libs/libdvdnav-4.2.0_pre
-
 # Anthony G. Basile <blueness@gentoo.org> (08 Oct 2011)
 # Masked while testing potentially dangerous utility
 dev-python/pypax
 
 # Markos Chandras <hwoarang@gentoo.org> (08 Oct 2011)
-# Masking due to insecure usage of bundled libpng14 and zlib
+# Masking due to insecure usage of bundled libpng
 # See bug 356127. Waiting for upstream to release a new version
-# that will work with libpng15. Before unmasking contact
+# that will work with system libpng. Before unmasking contact
 # qa@gentoo.org
 media-gfx/pngcrush
 
@@ -969,10 +964,6 @@ net-analyzer/ncrack
 # Doug Goldstein <cardoe@gentoo.org> (8 Sep 2010)
 # masked live version
 =x11-libs/cairo-9999*
-
-# Sebastian Pipping <sping@gentoo.org> (1 Sep 2010)
-# Mask upcoming bumps, potentially too hot to push to everyone
-=media-video/dvdbackup-0.4.1
 
 # Doug Goldstein <cardoe@gentoo.org> (28 Aug 2010)
 # Need to investigate build errors on some kernels
