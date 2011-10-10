@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/canlock/canlock-2b.ebuild,v 1.2 2011/09/30 23:16:59 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/canlock/canlock-2b.ebuild,v 1.3 2011/10/10 18:35:03 grobian Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://debian/pool/main/c/${PN}/${MY_P}.orig.tar.gz
 
 LICENSE="BSD MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="static-libs"
 
 S=${WORKDIR}/${P/-/}
