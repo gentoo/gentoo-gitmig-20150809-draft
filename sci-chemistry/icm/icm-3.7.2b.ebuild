@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm/icm-3.7.2b.ebuild,v 1.1 2011/07/12 21:56:15 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm/icm-3.7.2b.ebuild,v 1.2 2011/10/10 20:43:15 ssuominen Exp $
 
 EAPI="4"
 
@@ -30,7 +30,7 @@ DEPEND="!sci-chemistry/icm-browser
 		app-arch/unzip
 		amd64? (
 			64bit? (
-					media-libs/tiff-compat:3
+					=media-libs/tiff-3*
 					media-libs/libmng
 					app-crypt/mit-krb5
 					app-arch/bzip2
@@ -46,7 +46,7 @@ DEPEND="!sci-chemistry/icm-browser
 			)
 		)
 		x86? (
-				media-libs/tiff-compat:3
+				=media-libs/tiff-3*
 				media-libs/libpng:1.2
 				media-libs/libmng
 				app-crypt/mit-krb5
