@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.0.2.ebuild,v 1.1 2011/08/28 18:24:02 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/i3/i3-4.0.2-r1.ebuild,v 1.1 2011/10/10 15:24:03 xarthisius Exp $
 
 EAPI=4
 
@@ -18,6 +18,7 @@ IUSE=""
 CDEPEND="dev-libs/libev
 	dev-libs/yajl
 	x11-libs/libxcb
+	x11-libs/libXcursor
 	x11-libs/libX11
 	x11-libs/xcb-util"
 DEPEND="${CDEPEND}
