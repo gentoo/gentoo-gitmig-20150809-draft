@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/slimv/slimv-0.8.6.ebuild,v 1.1 2011/09/05 04:32:13 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/slimv/slimv-0.8.6.ebuild,v 1.2 2011/10/10 08:34:49 radhermit Exp $
 
 EAPI=4
 
@@ -33,7 +33,7 @@ src_unpack() {
 
 src_prepare() {
 	# Remove emacs related files
-	rm -rf slime swank-clojure
+	rm -r slime swank-clojure || die
 
-	rm README
+	rm README || die
 }
