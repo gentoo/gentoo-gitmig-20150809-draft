@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-2.32.0.ebuild,v 1.1 2011/06/24 13:31:53 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-2.32.0.ebuild,v 1.2 2011/10/10 18:57:08 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="python? 2:2.6"
 PYTHON_USE_WITH="xml"
 PYTHON_USE_WITH_OPT="python"
