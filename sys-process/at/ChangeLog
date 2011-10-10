@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/at
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.28 2011/09/23 12:13:04 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/ChangeLog,v 1.29 2011/10/10 10:42:43 polynomial-c Exp $
+
+  10 Oct 2011; Lars Wendler <polynomial-c@gentoo.org> at-3.1.10.2-r1.ebuild,
+  at-3.1.10.2-r2.ebuild, at-3.1.13.ebuild:
+  non-maintainer commit: Don't install .SEQ file when it's already installed.
+  Thanks to Christian Kauhaus who reported this in bug #386625.
 
   23 Sep 2011; Lars Wendler <polynomial-c@gentoo.org> at-3.1.13.ebuild:
   non-maintainer commit: Bumped EAPI to version 4. Added autoconf-2.64 to

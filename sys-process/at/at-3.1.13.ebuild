@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.13.ebuild,v 1.2 2011/09/23 12:13:04 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.13.ebuild,v 1.3 2011/10/10 10:42:43 polynomial-c Exp $
 
 EAPI=4
 
@@ -51,6 +51,11 @@ src_configure() {
 
 src_install() {
 	make install IROOT="${D}" || die
+
+	# Don't install .SEQ file when it's already installed
+	if [ -e "${ROOT}/var/spool/at/atjobs/.SEQ" ] ; then
+		rm "${D}/var/spool/at/atjobs/.SEQ" || die
+	fi
 
 	newinitd "${FILESDIR}"/atd.rc6 atd
 	newconfd "${FILESDIR}"/atd.confd atd
