@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXext/libXext-1.3.0.ebuild,v 1.8 2011/08/20 15:53:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXext/libXext-1.3.0.ebuild,v 1.9 2011/10/10 19:28:27 idl0r Exp $
 
 EAPI=4
 
@@ -14,7 +14,8 @@ IUSE=""
 
 RDEPEND=">=x11-libs/libX11-1.2
 	>=x11-proto/xextproto-7.1.99"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	x11-proto/xproto"
 
 pkg_setup() {
 	XORG_CONFIGURE_OPTIONS=(
