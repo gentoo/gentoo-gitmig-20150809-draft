@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.2.10.ebuild,v 1.2 2011/08/26 01:59:16 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.2.10.ebuild,v 1.3 2011/10/10 19:23:17 pacho Exp $
 
 EAPI="4"
 
@@ -40,6 +40,7 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install
 	dodoc AUTHORS ChangeLog README NEWS TODO
+	use static-libs || find "${D}" -name '*.la' -exec rm -f {} +
 
 	if use doc ; then
 		dohtml -r docs/reference/html/* docs/images/*
