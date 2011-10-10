@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdvdread
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.75 2011/10/10 19:13:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.76 2011/10/10 19:16:05 ssuominen Exp $
+
+  10 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  -files/libdvdread-0.9.6-udfsymbols.patch, -libdvdread-4.1.3_p1217.ebuild:
+  old
 
 *libdvdread-4.2.0_pre1243 (10 Oct 2011)
 
