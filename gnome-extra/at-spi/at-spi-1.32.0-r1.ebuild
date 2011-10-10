@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.32.0-r1.ebuild,v 1.1 2011/08/19 11:19:25 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/at-spi-1.32.0-r1.ebuild,v 1.2 2011/10/10 19:40:11 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="2:2.4"
 
 inherit gnome2 python
@@ -63,13 +64,6 @@ src_prepare() {
 	# disable pyc compiling
 	mv py-compile py-compile.orig
 	ln -s $(type -P true) py-compile
-}
-
-src_install() {
-	gnome2_src_install
-
-	find "${ED}"/usr/$(get_libdir)/orbit-2.0 -name "*.la" -delete
-	find "${ED}"/usr/$(get_libdir)/gtk-2.0 -name "*.la" -delete
 }
 
 pkg_postinst() {
