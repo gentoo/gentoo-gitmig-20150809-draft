@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5779 2011/10/10 20:23:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5780 2011/10/10 20:45:20 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask media-libs/tiff-compat for while.
 
   10 Oct 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
   openocd snapshots are no more
