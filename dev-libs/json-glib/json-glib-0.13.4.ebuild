@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-glib/json-glib-0.13.4.ebuild,v 1.2 2011/10/04 05:21:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-glib/json-glib-0.13.4.ebuild,v 1.3 2011/10/10 16:29:30 ssuominen Exp $
 
-EAPI="4"
-GCONF_DEBUG="yes"
+EAPI=4
+GCONF_DEBUG=yes
+GNOME2_LA_PUNT=yes
 
 inherit gnome2
 
@@ -17,7 +18,7 @@ IUSE="doc +introspection"
 
 RDEPEND=">=dev-libs/glib-2.26:2"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.9
+	dev-util/pkgconfig
 	>=sys-devel/gettext-0.18
 	doc? ( >=dev-util/gtk-doc-1.13 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )"
