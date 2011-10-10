@@ -1,8 +1,16 @@
 # ChangeLog for dev-embedded/openocd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.17 2011/09/20 22:05:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.18 2011/10/10 20:23:06 hwoarang Exp $
 
-  20 Sep 2011; Michał Górny <mgorny@gentoo.org> openocd-9999.ebuild:
+*openocd-0.5.0 (10 Oct 2011)
+
+  10 Oct 2011; Markos Chandras <hwoarang@gentoo.org> -openocd-0.3.1.ebuild,
+  openocd-0.3.1-r1.ebuild, openocd-0.4.0.ebuild,
+  -openocd-0.5.0_pre20110317.ebuild, -openocd-0.5.0_pre20110427.ebuild,
+  +openocd-0.5.0.ebuild, openocd-9999.ebuild, metadata.xml:
+  Version bump. Remove snapshots. Update metadata and homepage
+
+  20 Sep 2011; MichaÅ GÃ³rny <mgorny@gentoo.org> openocd-9999.ebuild:
   Migrate to git-2.
 
   12 May 2011; Markos Chandras <hwoarang@gentoo.org> openocd-9999.ebuild:
@@ -41,13 +49,13 @@
   Have USE=parport control parallel port functionality and not autodetected
   windows-specific features #305805 by Peter Abrahamsen.
 
-  12 Feb 2010; Raúl Porcel <armin76@gentoo.org> openocd-0.3.1.ebuild,
+  12 Feb 2010; RaÃºl Porcel <armin76@gentoo.org> openocd-0.3.1.ebuild,
   openocd-9999.ebuild:
   Add ~amd64
 
 *openocd-0.3.1 (26 Dec 2009)
 
-  26 Dec 2009; Raúl Porcel <armin76@gentoo.org> +openocd-0.3.1.ebuild,
+  26 Dec 2009; RaÃºl Porcel <armin76@gentoo.org> +openocd-0.3.1.ebuild,
   openocd-9999.ebuild:
   Version bump wrt #281139, build without -Werror wrt #268238, update 9999
   to git wrt #296139, fix building of docs in 9999 wrt #277358
@@ -72,7 +80,7 @@
   05 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
 
-  04 Jun 2008; Diego Pettenò <flameeyes@gentoo.org> openocd-9999.ebuild:
+  04 Jun 2008; Diego PettenÃ² <flameeyes@gentoo.org> openocd-9999.ebuild:
   Use eautoreconf, not the bootstrap script.
 
 *openocd-9999 (19 Apr 2008)

@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.3.1-r1.ebuild,v 1.1 2011/02/22 17:09:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.3.1-r1.ebuild,v 1.2 2011/10/10 20:23:06 hwoarang Exp $
 
-EGIT_REPO_URI="git://openocd.git.sourceforge.net/gitroot/openocd/openocd"
+EGIT_REPO_URI="git://${PN}.git.sourceforge.net/gitroot/${PN}/${PN}"
 inherit eutils
 if [[ ${PV} == "9999" ]] ; then
-	inherit git autotools
+	inherit git-2 autotools
 	#KEYWORDS=""
 	SRC_URI=""
 else
@@ -14,7 +14,7 @@ else
 fi
 
 DESCRIPTION="OpenOCD - Open On-Chip Debugger"
-HOMEPAGE="http://openocd.berlios.de/web/"
+HOMEPAGE="http://openocd.sourceforge.net"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -37,7 +37,7 @@ pkg_setup() {
 
 src_unpack() {
 	if [[ ${PV} == "9999" ]] ; then
-		git_src_unpack
+		git-2_src_unpack
 		cd "${S}"
 		eautoreconf
 	else
