@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.32.4.ebuild,v 1.1 2011/06/20 10:37:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.32.4.ebuild,v 1.2 2011/10/10 19:28:52 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
+GNOME2_LA_PUNT="yes"
 GNOME_ORG_MODULE="GConf"
 
 inherit eutils gnome2
