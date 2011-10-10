@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXinerama/libXinerama-1.1.1.ebuild,v 1.9 2011/02/14 22:59:15 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXinerama/libXinerama-1.1.1.ebuild,v 1.10 2011/10/10 19:40:25 idl0r Exp $
 
 EAPI=3
 inherit xorg-2
@@ -14,4 +14,5 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXext
 	x11-proto/xextproto
 	>=x11-proto/xineramaproto-1.2"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	x11-proto/xproto"
