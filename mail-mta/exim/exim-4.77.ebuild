@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.77.ebuild,v 1.1 2011/10/10 06:59:30 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.77.ebuild,v 1.2 2011/10/10 16:51:06 grobian Exp $
 
 EAPI="3"
 
@@ -82,7 +82,7 @@ src_prepare() {
 
 	if use dsn ; then
 		cp "${DISTDIR}"/exim_${DSN_EXIM_V}_dsn_${DSN_V}.patch . || die
-		epatch "${FILESDIR}"/${P}-dsn.patch
+		epatch "${FILESDIR}"/${PN}-4.76-dsn.patch
 		epatch exim_${DSN_EXIM_V}_dsn_${DSN_V}.patch
 	fi
 }
