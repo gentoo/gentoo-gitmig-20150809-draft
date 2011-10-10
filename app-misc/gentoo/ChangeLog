@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.94 2011/06/17 04:42:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.95 2011/10/10 11:38:43 jer Exp $
+
+*gentoo-0.19.12 (10 Oct 2011)
+
+  10 Oct 2011; Jeroen Roovers <jer@gentoo.org> +gentoo-0.19.12.ebuild:
+  Version bump thanks to Mikael Grahn (bug #381013).
 
 *gentoo-0.19.10 (17 Jun 2011)
 
