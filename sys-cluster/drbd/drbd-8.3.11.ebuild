@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.3.9.ebuild,v 1.2 2011/03/26 08:43:16 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.3.11.ebuild,v 1.1 2011/10/10 08:42:32 ultrabug Exp $
 
 EAPI="2"
 
@@ -27,7 +27,6 @@ src_prepare() {
 		scripts/Makefile.in || die
 	# don't participate in user survey bug 360483
 	sed -i -e '/usage-count/ s/yes/no/' scripts/drbd.conf.example || die
-	epatch "${FILESDIR}"/${PN}-8.3.8.1-implicits.patch
 }
 
 src_configure() {
