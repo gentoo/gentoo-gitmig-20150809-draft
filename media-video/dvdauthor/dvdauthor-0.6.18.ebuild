@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/dvdauthor-0.6.18.ebuild,v 1.4 2011/10/08 16:43:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/dvdauthor-0.6.18.ebuild,v 1.5 2011/10/10 09:06:14 radhermit Exp $
 
 EAPI=4
 inherit eutils
@@ -20,7 +20,8 @@ RDEPEND="media-libs/libdvdread
 	media-libs/freetype
 	dev-libs/fribidi
 	media-libs/libpng"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/${PN}
 
