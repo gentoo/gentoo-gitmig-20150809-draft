@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5774 2011/10/09 17:43:26 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5775 2011/10/10 07:01:29 grobian Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Oct 2011; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Drop Exim Release Candidate testing mask
 
   09 Oct 2011; Joerg Bornkessel <hd_brummy@gentoo.org> thirdpartymirrors:
   added thirtpartymirror vdr-developerorg
