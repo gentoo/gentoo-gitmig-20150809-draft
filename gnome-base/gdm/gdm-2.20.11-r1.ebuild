@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.11-r1.ebuild,v 1.1 2011/09/11 22:27:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.11-r1.ebuild,v 1.2 2011/10/10 19:33:05 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -74,6 +74,7 @@ pkg_setup() {
 		--localstatedir=/var
 		--with-xdmcp=yes
 		--with-pam-prefix=/etc
+		--disable-static
 		SOUND_PROGRAM=/usr/bin/gdmplay
 		$(use_enable ipv6)
 		$(use_enable remote secureremote)
