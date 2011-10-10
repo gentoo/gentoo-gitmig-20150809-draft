@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.8.2-r1.ebuild,v 1.1 2011/08/14 14:23:28 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.8.2-r1.ebuild,v 1.2 2011/10/10 19:37:02 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
+GNOME_TARBALL_SUFFIX="bz2"
 
 inherit autotools bash-completion gnome2 eutils
 if [[ ${PV} = 9999 ]]; then

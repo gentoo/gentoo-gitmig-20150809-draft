@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.6.7-r1.ebuild,v 1.2 2011/07/11 00:08:46 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.6.7-r1.ebuild,v 1.3 2011/10/10 19:37:02 pacho Exp $
 
 EAPI="4"
+GNOME2_LA_PUNT="yes"
 GNOME_TARBALL_SUFFIX="bz2"
 GCONF_DEBUG="no"
 
