@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/libdvdread-4.1.3_p1168.ebuild,v 1.14 2011/10/10 17:39:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/libdvdread-4.1.3_p1168.ebuild,v 1.15 2011/10/10 22:57:36 beandog Exp $
 
 EAPI=4
 WANT_AUTOCONF=2.5
@@ -8,7 +8,7 @@ WANT_AUTOCONF=2.5
 inherit autotools libtool multilib
 
 DESCRIPTION="Library for DVD navigation tools"
-HOMEPAGE="http://mplayerhq.hu/"
+HOMEPAGE="http://dvdnav.mplayerhq.hu/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
