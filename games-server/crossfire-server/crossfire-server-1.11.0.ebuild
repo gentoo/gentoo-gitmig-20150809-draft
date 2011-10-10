@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/crossfire-server-1.11.0.ebuild,v 1.7 2011/04/28 07:46:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/crossfire-server-1.11.0.ebuild,v 1.8 2011/10/10 14:40:21 tupone Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -17,6 +17,7 @@ KEYWORDS="~amd64 ppc x86"
 IUSE="X"
 
 DEPEND="
+	net-misc/curl
 	X? (
 		x11-libs/libXaw
 		media-libs/libpng )"
@@ -24,7 +25,8 @@ DEPEND="
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-libpng15.patch
+	epatch "${FILESDIR}"/${P}-libpng15.patch \
+		"${FILESDIR}"/${P}-curl.patch
 	sed -i \
 		-e 's/make /$(MAKE) /' \
 		$(find . -name Makefile.am) \

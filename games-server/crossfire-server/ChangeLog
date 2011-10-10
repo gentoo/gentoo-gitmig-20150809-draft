@@ -1,6 +1,10 @@
 # ChangeLog for games-server/crossfire-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/ChangeLog,v 1.18 2011/02/21 14:17:21 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/crossfire-server/ChangeLog,v 1.19 2011/10/10 14:40:21 tupone Exp $
+
+  10 Oct 2011; Tupone Alfredo <tupone@gentoo.org>
+  crossfire-server-1.11.0.ebuild, +files/crossfire-server-1.11.0-curl.patch:
+  Build with newer net-misc/curl. Bug #383217 by Diego Elio Pettenò
 
   21 Feb 2011; Tupone Alfredo <tupone@gentoo.org>
   crossfire-server-1.11.0.ebuild,
