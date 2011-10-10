@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.5.31.ebuild,v 1.5 2011/08/02 05:43:01 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.5.31.ebuild,v 1.6 2011/10/10 19:11:29 graaff Exp $
 
 # Note: xemacs currently does not work with a hardened profile. If you
 # want to use xemacs on a hardened profile then compile with the
 # -nopie flag in CFLAGS or help fix bug #75028.
 
-EAPI="2"
+EAPI=4
 
 export WANT_AUTOCONF="2.5"
 inherit eutils flag-o-matic multilib
@@ -25,7 +25,7 @@ X_DEPEND="x11-libs/libXt x11-libs/libXmu x11-libs/libXext x11-misc/xbitmaps"
 
 RDEPEND="
 	berkdb? ( >=sys-libs/db-4 !!<sys-libs/db-4 )
-	gdbm? ( >=sys-libs/gdbm-1.8.3 )
+	gdbm? ( >=sys-libs/gdbm-1.8.3[berkdb(+)] )
 	>=sys-libs/zlib-1.1.4
 	>=dev-libs/openssl-0.9.6
 	>=media-libs/audiofile-0.2.3

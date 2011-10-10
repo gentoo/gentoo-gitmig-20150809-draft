@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.152 2011/10/09 13:54:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.153 2011/10/10 19:11:29 graaff Exp $
+
+  10 Oct 2011; Hans de Graaff <graaff@gentoo.org> xemacs-21.5.31.ebuild:
+  Make sure berkdb support is turned on for newer versions of gdbm. Fixes bug
+  383587, thanks to Martin von Gagern for diagnosing the issue.
 
   09 Oct 2011; Markos Chandras <hwoarang@gentoo.org> xemacs-21.4.22-r2.ebuild:
   Stable on amd64 wrt bug #385207
