@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-16.0.891.0.ebuild,v 1.1 2011/09/27 16:21:26 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-16.0.904.0.ebuild,v 1.1 2011/10/11 17:36:43 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -122,8 +122,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	cp "${FILESDIR}/nacl.gypi" chrome/ || die
-
 	# zlib-1.2.5.1-r1 renames the OF macro in zconf.h, bug 383371.
 	sed -i '1i#define OF(x) x' \
 		third_party/zlib/contrib/minizip/{ioapi,{,un}zip}.c \
@@ -187,10 +185,6 @@ src_configure() {
 
 	# Disable NaCl temporarily, this tarball doesn't have IRT.
 	myconf+=" -Ddisable_nacl=1"
-
-	# Disable WebRTC until they make PulseAudio dependency optional,
-	# bug #377847.
-	myconf+=" -Denable_webrtc=0"
 
 	# Use system-provided libraries.
 	# TODO: use_system_ffmpeg
