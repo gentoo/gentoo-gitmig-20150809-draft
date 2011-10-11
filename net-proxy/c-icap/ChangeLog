@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/c-icap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/c-icap/ChangeLog,v 1.8 2011/07/24 09:19:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/c-icap/ChangeLog,v 1.9 2011/10/11 17:24:43 flameeyes Exp $
+
+*c-icap-0.1.7 (11 Oct 2011)
+
+  11 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org> +c-icap-0.1.7.ebuild:
+  Version bump.
 
   24 Jul 2011; Markos Chandras <hwoarang@gentoo.org> c-icap-0.1.6.ebuild:
   Stable on amd64 wrt bug #374285
