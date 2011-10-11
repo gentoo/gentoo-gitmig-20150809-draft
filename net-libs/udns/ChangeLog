@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/udns
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/ChangeLog,v 1.18 2011/10/02 18:58:09 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/ChangeLog,v 1.19 2011/10/11 04:58:23 pva Exp $
+
+  11 Oct 2011; Peter Volkov <pva@gentoo.org> metadata.xml:
+  Take maintaining.
 
 *udns-0.1 (02 Oct 2011)
 
