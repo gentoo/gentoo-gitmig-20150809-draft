@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/chkrootkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.66 2011/10/09 15:54:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/chkrootkit/ChangeLog,v 1.67 2011/10/11 17:33:11 jer Exp $
+
+  11 Oct 2011; Jeroen Roovers <jer@gentoo.org> chkrootkit-0.49.ebuild:
+  Stable for HPPA (bug #382455).
 
   09 Oct 2011; Raúl Porcel <armin76@gentoo.org> chkrootkit-0.49.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #382455
