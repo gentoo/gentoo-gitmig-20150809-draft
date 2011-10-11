@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-lame
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-lame/ChangeLog,v 1.108 2011/10/09 16:41:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-lame/ChangeLog,v 1.109 2011/10/11 19:48:18 jer Exp $
+
+  11 Oct 2011; Jeroen Roovers <jer@gentoo.org> gst-plugins-lame-0.10.18.ebuild:
+  Stable for HPPA (bug #382225).
 
   09 Oct 2011; Raúl Porcel <armin76@gentoo.org>
   gst-plugins-lame-0.10.18.ebuild:
