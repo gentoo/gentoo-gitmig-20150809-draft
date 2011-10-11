@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.1.5_p110928.ebuild,v 1.2 2011/10/07 19:29:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccpn/ccpn-2.2.1_p111011.ebuild,v 1.1 2011/10/11 19:28:28 jlec Exp $
 
 EAPI="3"
 
@@ -15,9 +15,9 @@ MY_PV="$(replace_version_separator 3 _ ${PV%%_p*})"
 MY_MAJOR="$(get_version_component_range 1-3)"
 
 DESCRIPTION="The Collaborative Computing Project for NMR"
-HOMEPAGE="http://www.ccpn.ac.uk/ccpn"
 SRC_URI="http://www.bio.cam.ac.uk/ccpn/download/${MY_PN}/analysis${MY_PV}.tar.gz"
 	[[ -n ${PATCHSET} ]] && SRC_URI="${SRC_URI}	http://dev.gentoo.org/~jlec/distfiles/ccpn-update-${MY_MAJOR}-${PATCHSET}.patch.xz"
+HOMEPAGE="http://www.ccpn.ac.uk/ccpn"
 
 SLOT="0"
 LICENSE="|| ( CCPN LGPL-2.1 )"
@@ -41,7 +41,7 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 PDEPEND="
 	extendnmr? (
-		<=sci-chemistry/aria-2.3.2
+		>=sci-chemistry/aria-2.3.2-r1
 		sci-chemistry/prodecomp )"
 
 RESTRICT="mirror"
@@ -121,7 +121,7 @@ src_install() {
 	libdir=$(get_libdir)
 	tkver=$(best_version dev-lang/tk | cut -d- -f3 | cut -d. -f1,2)
 
-	_wrapper="analysis dangle dataShifter depositionFileImporter eci formatConverter pipe2azara"
+	_wrapper="analysis dangle dataShifter depositionFileImporter eci formatConverter pipe2azara xeasy2azara"
 	use extendnmr && _wrapper="${_wrapper} extendNmr"
 	for wrapper in ${_wrapper}; do
 		sed \
