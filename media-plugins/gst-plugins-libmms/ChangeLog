@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-libmms
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libmms/ChangeLog,v 1.58 2011/10/09 16:56:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libmms/ChangeLog,v 1.59 2011/10/11 19:53:18 jer Exp $
+
+  11 Oct 2011; Jeroen Roovers <jer@gentoo.org>
+  gst-plugins-libmms-0.10.22.ebuild:
+  Stable for HPPA (bug #385703).
 
   09 Oct 2011; Raúl Porcel <armin76@gentoo.org>
   gst-plugins-libmms-0.10.22.ebuild:
