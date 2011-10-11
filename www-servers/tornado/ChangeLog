@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/tornado
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.14 2011/06/28 10:39:44 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.15 2011/10/11 15:13:24 djc Exp $
+
+*tornado-2.1.1 (11 Oct 2011)
+
+  11 Oct 2011; Dirkjan Ochtman <djc@gentoo.org> +tornado-2.1.1.ebuild:
+  Version bump to 2.1.1 (bug 386775).
 
   28 Jun 2011; Dirkjan Ochtman <djc@gentoo.org> -tornado-1.1.1.ebuild,
   -tornado-1.2.ebuild:
