@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.10-r2.ebuild,v 1.6 2011/10/11 16:24:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.10-r2.ebuild,v 1.7 2011/10/11 19:57:28 ssuominen Exp $
 
 EAPI=3
 
@@ -10,11 +10,9 @@ DESCRIPTION="C++ user interface toolkit for X and OpenGL"
 HOMEPAGE="http://www.fltk.org/"
 SRC_URI="mirror://easysw/${PN}/${PV}/${P}-source.tar.bz2"
 
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
 LICENSE="FLTK LGPL-2"
-
 SLOT="1"
-
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
 IUSE="debug doc examples games opengl threads xft xinerama"
 
 RDEPEND="x11-libs/libXext
