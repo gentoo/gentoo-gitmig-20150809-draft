@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/mh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/mh/ChangeLog,v 1.24 2011/08/28 16:28:45 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/mh/ChangeLog,v 1.25 2011/10/11 14:02:04 aballier Exp $
+
+*mh-20111011 (11 Oct 2011)
+
+  11 Oct 2011; Alexis Ballier <aballier@gentoo.org> +mh-20111011.ebuild:
+  version bump, bug #378477
 
   28 Aug 2011; Fabian Groffen <grobian@gentoo.org> mh-20101024.ebuild:
   Marked ~x64-macos
