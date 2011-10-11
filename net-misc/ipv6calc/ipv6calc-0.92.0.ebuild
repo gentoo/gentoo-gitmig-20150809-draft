@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.92.0.ebuild,v 1.1 2011/10/10 19:49:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.92.0.ebuild,v 1.2 2011/10/11 04:57:29 pva Exp $
 
 EAPI="4"
 inherit fixheadtails
@@ -29,6 +29,14 @@ src_configure() {
 src_compile() {
 	# Disable default CFLAGS (-O2 and -g)
 	emake DEFAULT_CFLAGS=""
+}
+
+src_test() {
+	if [[ ${EUID} -eq 0 ]]; then
+		# Disable tests that fail as root
+		echo true > ipv6logstats/test_ipv6logstats.sh
+	fi
+	default
 }
 
 src_install() {
