@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.11.ebuild,v 1.3 2011/05/19 20:35:55 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-9.11.ebuild,v 1.4 2011/10/11 20:54:09 jer Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="
 	256-color alt-font-width afterimage blink +focused-urgency fading-colors
-	+font-styles force-hints iso14755 +mousewheel perl pixbuf truetype unicode3
+	+font-styles force-hints iso14755 +mousewheel +perl pixbuf truetype unicode3
 	+vanilla wcwidth
 "
 

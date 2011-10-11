@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/rxvt-unicode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.191 2011/09/09 07:43:25 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/ChangeLog,v 1.192 2011/10/11 20:54:09 jer Exp $
+
+  11 Oct 2011; Jeroen Roovers <jer@gentoo.org> rxvt-unicode-9.10.ebuild,
+  rxvt-unicode-9.11.ebuild, rxvt-unicode-9.12.ebuild,
+  rxvt-unicode-9.12-r1.ebuild, metadata.xml:
+  Enable USE=perl by default thanks to Talamona Francesco (bug #386827).
+  Describe its function specially in metadata.xml
 
   09 Sep 2011; Alex Alexander <wired@gentoo.org> rxvt-unicode-9.12-r1.ebuild:
   removed unnecessary ewarn, bug #365813

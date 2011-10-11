@@ -22,6 +22,7 @@
 	http://bugs.gentoo.org/show_bug.cgi?id=346553</flag>
 <flag name='iso14755'>Enable ISO-14755 support</flag>
 <flag name='mousewheel'>Enable scrolling via mouse wheel or buttons 4 and 5</flag>
+<flag name='perl'>Enable perl script support. You can still disable this at runtime with -pe ""</flag>
 <flag name='pixbuf'>Enable transparency support using gtk's pixbuf</flag>
 <flag name='unicode3'>Use 21 instead of 16 bits to represent unicode characters</flag>
 <flag name='wcwidth'>Enable wide char width support</flag>
