@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.5.0-r3.ebuild,v 1.5 2011/09/20 07:48:59 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.5.0-r3.ebuild,v 1.6 2011/10/11 15:20:11 chainsaw Exp $
 
 EAPI=3
 inherit autotools base eutils linux-info multilib
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
-IUSE="ais alsa bluetooth calendar +caps curl dahdi debug doc freetds gtalk h323 http iconv jabber jingle ldap lua mysql newt +samples odbc osplookup oss portaudio postgres radius snmp span speex ssl sqlite sqlite3 srtp static syslog usb vorbis"
+IUSE="ais alsa bluetooth calendar +caps curl dahdi debug doc freetds gtalk http iconv jabber jingle ldap lua mysql newt +samples odbc osplookup oss portaudio postgres radius snmp span speex ssl sqlite sqlite3 srtp static syslog usb vorbis"
 
 EPATCH_SUFFIX="patch"
 PATCHES=( "${WORKDIR}/asterisk-patchset" )
@@ -36,7 +36,6 @@ RDEPEND="sys-libs/ncurses
 		net-misc/dahdi-tools )
 	freetds? ( dev-db/freetds )
 	gtalk? ( dev-libs/iksemel )
-	h323? ( net-libs/openh323 )
 	http? ( dev-libs/gmime:2.4 )
 	iconv? ( virtual/libiconv )
 	jabber? ( dev-libs/iksemel )
@@ -117,6 +116,7 @@ src_configure() {
 
 	# Broken functionality is forcibly disabled (bug #360143)
 	menuselect/menuselect --disable chan_misdn menuselect.makeopts
+	menuselect/menuselect --disable chan_ooh323 menuselect.makeopts
 
 	# Utility set is forcibly enabled (bug #358001)
 	menuselect/menuselect --enable smsq menuselect.makeopts
@@ -186,11 +186,6 @@ src_configure() {
 		menuselect/menuselect --enable chan_gtalk menuselect.makeopts
 	else
 		menuselect/menuselect --disable chan_gtalk menuselect.makeopts
-	fi
-	if use h323; then
-		menuselect/menuselect --enable chan_ooh323 menuselect.makeopts
-	else
-		menuselect/menuselect --disable chan_ooh323 menuselect.makeopts
 	fi
 	if use http; then
 		menuselect/menuselect --enable res_http_post menuselect.makeopts
