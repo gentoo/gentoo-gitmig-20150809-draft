@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccpn-data/ccpn-data-2.1.5_p110928.ebuild,v 1.1 2011/09/28 14:16:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccpn-data/ccpn-data-2.1.5_p111011.ebuild,v 1.1 2011/10/11 14:12:09 jlec Exp $
 
 EAPI=3
 
@@ -61,5 +61,5 @@ src_install() {
 
 	dohtml -r doc/*
 	insinto /usr/share/ccpn
-	doins -r data model
+	doins -r data model || die
 }

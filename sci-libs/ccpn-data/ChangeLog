@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/ccpn-data
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccpn-data/ChangeLog,v 1.5 2011/09/28 14:16:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccpn-data/ChangeLog,v 1.6 2011/10/11 14:12:09 jlec Exp $
+
+*ccpn-data-2.2.1_p111011 (11 Oct 2011)
+*ccpn-data-2.1.5_p111011 (11 Oct 2011)
+
+  11 Oct 2011; Justin Lecher <jlec@gentoo.org> -ccpn-data-2.1.5_p110928.ebuild,
+  +ccpn-data-2.1.5_p111011.ebuild, -ccpn-data-2.2.1_p110928.ebuild,
+  +ccpn-data-2.2.1_p111011.ebuild:
+  Add missing use of python.eclass
 
 *ccpn-data-2.2.1_p110928 (28 Sep 2011)
 *ccpn-data-2.1.5_p110928 (28 Sep 2011)

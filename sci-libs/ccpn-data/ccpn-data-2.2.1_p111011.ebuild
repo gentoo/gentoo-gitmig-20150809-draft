@@ -1,10 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccpn-data/ccpn-data-2.2.1_p110928.ebuild,v 1.1 2011/09/28 14:16:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccpn-data/ccpn-data-2.2.1_p111011.ebuild,v 1.1 2011/10/11 14:12:09 jlec Exp $
 
-EAPI=4
+EAPI=3
 
-inherit portability versionator
+PYTHON_DEPEND="2"
+
+inherit portability python versionator
 
 PATCHSET="${PV##*_p}"
 MY_PN="${PN/-data}mr"
@@ -27,6 +29,10 @@ DEPEND=""
 RESTRICT="binchecks strip"
 
 S="${WORKDIR}"/ccpnmr/ccpnmr2.2
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_prepare() {
 	[[ -n ${PATCHSET} ]] && \
@@ -55,5 +61,5 @@ src_install() {
 
 	dohtml -r doc/*
 	insinto /usr/share/ccpn
-	doins -r data model
+	doins -r data model || die
 }
