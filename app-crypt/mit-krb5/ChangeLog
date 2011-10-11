@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.289 2011/08/11 02:26:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.290 2011/10/11 17:36:47 jer Exp $
+
+  11 Oct 2011; Jeroen Roovers <jer@gentoo.org> mit-krb5-1.9.1.ebuild:
+  Stable for HPPA (bug #374119).
 
   11 Aug 2011; Mike Frysinger <vapier@gentoo.org> mit-krb5-1.9.1.ebuild:
   Use virtual/yacc instead of hardcoding list ourselves.
