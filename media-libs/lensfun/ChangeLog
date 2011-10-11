@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lensfun
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.33 2011/10/11 16:35:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.34 2011/10/11 20:18:29 ssuominen Exp $
+
+  11 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> lensfun-0.2.5-r2.ebuild:
+  ppc64 stable wrt #385213
 
   11 Oct 2011; Jeroen Roovers <jer@gentoo.org> lensfun-0.2.5-r2.ebuild:
   Stable for HPPA (bug #385213).
