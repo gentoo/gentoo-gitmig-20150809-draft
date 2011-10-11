@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pychecker
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/ChangeLog,v 1.49 2011/09/05 11:09:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pychecker/ChangeLog,v 1.50 2011/10/11 20:07:05 jer Exp $
+
+  11 Oct 2011; Jeroen Roovers <jer@gentoo.org> pychecker-0.8.19.ebuild:
+  Stable for HPPA (bug #385227).
 
   05 Sep 2011; Jeroen Roovers <jer@gentoo.org> pychecker-0.8.19.ebuild:
   Marked ~hppa (bug #381303).
