@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_compile.eblit,v 1.18 2011/09/19 17:07:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_compile.eblit,v 1.19 2011/10/11 21:20:30 vapier Exp $
 
 glibc_do_configure() {
 	local myconf
@@ -198,10 +198,10 @@ eblit-glibc-src_compile() {
 		local abilist=""
 		if has_multilib_profile ; then
 			abilist=$(get_install_abis)
-			einfo "Building multilib glibc for ABIs: ${abilist}"
 		elif is_crosscompile || tc-is-cross-compiler ; then
 			abilist=${DEFAULT_ABI}
 		fi
+		einfo "Building glibc for ABIs: ${abilist}"
 		if [[ -n ${abilist} ]] ; then
 			OABI=${ABI}
 			for ABI in ${abilist} ; do

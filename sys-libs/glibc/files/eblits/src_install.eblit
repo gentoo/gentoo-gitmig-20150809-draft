@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.15 2011/07/08 15:38:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/src_install.eblit,v 1.16 2011/10/11 21:20:30 vapier Exp $
 
 toolchain-glibc_src_install() {
 	local GBUILDDIR
@@ -73,27 +73,6 @@ toolchain-glibc_src_install() {
 	# We'll take care of the cache ourselves
 	rm -f "${D}"/etc/ld.so.cache
 
-	# When cross-compiling for a non-multilib setup, make sure we have
-	# lib and a proper symlink setup
-	if is_crosscompile && ! use multilib && ! has_multilib_profile && [[ $(get_libdir) != "lib" ]] ; then
-		cd "${D}"$(alt_libdir)/..
-		mv $(get_libdir) lib || die
-		ln -s lib $(get_libdir) || die
-		cd "${D}"$(alt_usrlibdir)/..
-		mv $(get_libdir) lib || die
-		ln -s lib $(get_libdir) || die
-	fi
-
-	#################################################################
-	# EVERYTHING AFTER THIS POINT IS FOR NATIVE GLIBC INSTALLS ONLY #
-	# Make sure we install some symlink hacks so that when we build
-	# a 2nd stage cross-compiler, gcc finds the target system
-	# headers correctly.  See gcc/doc/gccinstall.info
-	if is_crosscompile ; then
-		dosym usr/include /usr/${CTARGET}/sys-include
-		return 0
-	fi
-
 	# Everything past this point just needs to be done once ...
 	is_final_abi || return 0
 
@@ -109,6 +88,25 @@ toolchain-glibc_src_install() {
 				dosym ../$(get_abi_LIBDIR ppc)/ld.so.1 /lib/ld.so.1
 				;;
 		esac
+	fi
+
+	#################################################################
+	# EVERYTHING AFTER THIS POINT IS FOR NATIVE GLIBC INSTALLS ONLY #
+	# Make sure we install some symlink hacks so that when we build
+	# a 2nd stage cross-compiler, gcc finds the target system
+	# headers correctly.  See gcc/doc/gccinstall.info
+	if is_crosscompile ; then
+		# We need to make sure that /lib and /usr/lib always exists.
+		# gcc likes to use relative paths to get to its multilibs like
+		# /usr/lib/../lib64/.  So while we don't install any files into
+		# /usr/lib/, we do need it to exist.
+		cd "${D}"$(alt_libdir)/..
+		[[ -e lib ]] || mkdir lib
+		cd "${D}"$(alt_usrlibdir)/..
+		[[ -e lib ]] || mkdir lib
+
+		dosym usr/include /usr/${CTARGET}/sys-include
+		return 0
 	fi
 
 	# Files for Debian-style locale updating
