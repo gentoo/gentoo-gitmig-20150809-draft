@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.289 2011/10/01 10:15:55 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.290 2011/10/11 19:27:13 jer Exp $
+
+  11 Oct 2011; Jeroen Roovers <jer@gentoo.org> postfix-2.8.4.ebuild:
+  Stable for HPPA (bug #378373).
 
 *postfix-2.9_pre20110930 (01 Oct 2011)
 
