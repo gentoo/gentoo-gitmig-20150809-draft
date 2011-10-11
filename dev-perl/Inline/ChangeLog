@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Inline
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.44 2011/10/10 10:42:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline/ChangeLog,v 1.45 2011/10/11 20:54:46 mattst88 Exp $
+
+  11 Oct 2011; Matt Turner <mattst88@gentoo.org> Inline-0.480.0.ebuild:
+  Added ~mips, bug 384677
 
   10 Oct 2011; Jeroen Roovers <jer@gentoo.org> Inline-0.480.0.ebuild:
   Marked ~hppa (bug #384677).
