@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nacl-toolchain-newlib/nacl-toolchain-newlib-0_p6869.ebuild,v 1.1 2011/10/07 18:32:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nacl-toolchain-newlib/nacl-toolchain-newlib-0_p6869.ebuild,v 1.2 2011/10/11 16:48:40 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -31,12 +31,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="
+RDEPEND="
+	>=dev-libs/gmp-5.0.2
+	>=dev-libs/mpfr-3.0.1
+	>=sys-libs/glibc-2.8
+	>=sys-libs/zlib-1.1.4
+"
+DEPEND="${RDEPEND}
 	app-arch/zip
 	app-arch/unzip
-	>=dev-libs/gmp-5.0.2
 	dev-libs/mpc
-	>=dev-libs/mpfr-3.0.1
 	dev-libs/cloog-ppl
 	dev-libs/ppl
 	>=media-libs/libart_lgpl-2.1
@@ -46,15 +50,12 @@ DEPEND="
 	>=sys-devel/flex-2.5.4
 	sys-devel/gnuconfig
 	sys-devel/m4
-	>=sys-libs/glibc-2.8
 	>=sys-libs/ncurses-5.2-r2
-	>=sys-libs/zlib-1.1.4
 	>=sys-apps/sed-4
 	sys-devel/gettext
 	virtual/libiconv
 	virtual/yacc
 "
-RDEPEND=">=sys-libs/zlib-1.1.4"
 
 S="${WORKDIR}"
 
