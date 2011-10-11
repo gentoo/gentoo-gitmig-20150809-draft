@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.171 2011/10/08 08:24:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.172 2011/10/11 12:38:12 scarabeus Exp $
+
+  11 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-9999-r1.ebuild:
+  Use proper default, crystal is for kde3, oops.
 
   08 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Drop unused local desc.

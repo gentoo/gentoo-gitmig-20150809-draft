@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.40 2011/10/06 14:24:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.41 2011/10/11 12:38:12 scarabeus Exp $
 
 EAPI=3
 
@@ -300,7 +300,7 @@ src_prepare() {
 src_configure() {
 	local java_opts
 	local internal_libs
-	local themes="crystal"
+	local themes="default"
 	local jbs=$(sed -ne 's/.*\(-j[[:space:]]*\|--jobs=\)\([[:digit:]]\+\).*/\2/;T;p' <<< "${MAKEOPTS}")
 
 	# recheck that there is some value in jobs
