@@ -1,6 +1,10 @@
 # ChangeLog for app-text/texlive
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.87 2011/10/11 14:15:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/ChangeLog,v 1.88 2011/10/11 14:18:21 aballier Exp $
+
+  11 Oct 2011; Alexis Ballier <aballier@gentoo.org> -texlive-2010.ebuild,
+  -texlive-2010-r1.ebuild:
+  remove old
 
   11 Oct 2011; Alexis Ballier <aballier@gentoo.org> texlive-2011.ebuild:
   carry on fbsd keywords
