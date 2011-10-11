@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netplug/netplug-1.2.9.2.ebuild,v 1.1 2011/10/03 07:09:24 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netplug/netplug-1.2.9.2-r1.ebuild,v 1.1 2011/10/11 08:49:38 polynomial-c Exp $
 
 EAPI=4
 
@@ -51,7 +51,7 @@ src_install() {
 
 	dodir /etc/netplug.d
 	exeinto /etc/netplug.d
-	doexe "${FILESDIR}/netplug.2"
+	newexe "${FILESDIR}/netplug-2" netplug
 
 	dodir /etc/netplug
 	echo "eth*" > "${D}"/etc/netplug/netplugd.conf
