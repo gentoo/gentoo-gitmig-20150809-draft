@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/xinetd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.51 2011/04/16 19:16:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.52 2011/10/11 01:26:08 vapier Exp $
+
+*xinetd-2.3.14-r1 (11 Oct 2011)
+
+  11 Oct 2011; Mike Frysinger <vapier@gentoo.org> +xinetd-2.3.14-r1.ebuild,
+  files/xinetd.rc6, metadata.xml:
+  Use libtirpc for USE=rpc support #370995 by Diego Elio Pettenò. Migrate away
+  from --oknodo with newer openrc #377775 by Michael Mair-Keimberger. Convert
+  opts to extra_started_commands #385633 by Martin von Gagern.
 
   16 Apr 2011; Ulrich Mueller <ulm@gentoo.org> xinetd-2.3.14.ebuild:
   Don't PROVIDE virtual/inetd, bug 358831.

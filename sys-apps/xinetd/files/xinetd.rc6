@@ -1,9 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/files/xinetd.rc6,v 1.23 2009/10/11 00:45:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/files/xinetd.rc6,v 1.24 2011/10/11 01:26:08 vapier Exp $
 
-opts="reload dump check"
+extra_started_commands="reload dump check"
 
 depend() {
 	use net
@@ -25,7 +25,7 @@ stop() {
 do_sig() {
 	local sig=$1 ; shift
 	ebegin "$*"
-	start-stop-daemon --oknodo --stop --signal ${sig} --pidfile /var/run/xinetd.pid
+	start-stop-daemon --signal ${sig} --pidfile /var/run/xinetd.pid
 	eend $?
 }
 reload() { do_sig HUP  "Reloading configuration" ; }
