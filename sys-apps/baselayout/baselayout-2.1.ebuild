@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.1.ebuild,v 1.3 2011/10/09 16:34:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-2.1.ebuild,v 1.4 2011/10/11 21:06:57 vapier Exp $
 
 inherit eutils multilib
 
@@ -102,13 +102,17 @@ multilib_layout() {
 				# make sure the old "lib" ABI location does not exist; we
 				# only symlinked the lib dir on systems where we moved it
 				# to "lib32" ...
-				if [ -d "${prefix}lib32" ] ; then
-					rm -f "${prefix}lib32"/.keep
-					if ! rmdir "${prefix}lib32" 2>/dev/null ; then
-						ewarn "You need to merge ${prefix}lib32 into ${prefix}lib"
-						die "non-empty dir found where there should be none: ${prefix}lib32"
+				case ${CHOST} in
+				i?86*|x86_64*|powerpc*|sparc*|s390*)
+					if [ -d "${prefix}lib32" ] ; then
+						rm -f "${prefix}lib32"/.keep
+						if ! rmdir "${prefix}lib32" 2>/dev/null ; then
+							ewarn "You need to merge ${prefix}lib32 into ${prefix}lib"
+							die "non-empty dir found where there should be none: ${prefix}lib32"
+						fi
 					fi
-				fi
+					;;
+				esac
 			else
 				# nothing exists, so just set it up sanely
 				ewarn "Initializing ${prefix}lib as a dir"
