@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.mask,v 1.13 2011/08/15 18:08:20 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.mask,v 1.14 2011/10/11 20:09:45 mattst88 Exp $
 
 # Mask pam_ldap and nss_ldap - openldap dep missing.
 sys-auth/pam_ldap
@@ -9,3 +9,8 @@ sys-auth/nss_ldap
 # Matt Turner <mattst88@gentoo.org> (15 Aug 2011)
 # python-3.2 is broken on n32/multilib systems, bug 354877
 >=dev-lang/python-3.2
+
+# Matt Turner <mattst88@gentoo.org> (11 Oct 2011)
+# baselayout-2.1 doesn't understand that lib and lib32 can
+# exist together on mips, bug 386821
+>=sys-apps/baselayout-2.1

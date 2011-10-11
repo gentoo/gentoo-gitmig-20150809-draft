@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.82 2011/10/09 18:46:26 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.83 2011/10/11 20:09:45 mattst88 Exp $
+
+  11 Oct 2011; Matt Turner <mattst88@gentoo.org> package.mask:
+  package.mask >=baselayout-2.1, bug 386821
 
   09 Oct 2011; Matt Turner <mattst88@gentoo.org> mips64/multilib/make.defaults,
   mipsel/mips64el/multilib/make.defaults:
