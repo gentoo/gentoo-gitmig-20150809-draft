@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.196 2011/10/02 16:11:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.197 2011/10/11 16:28:53 jer Exp $
+
+  11 Oct 2011; Jeroen Roovers <jer@gentoo.org> dhcp-4.2.2-r2.ebuild:
+  Stable for HPPA (bug #378799).
 
   02 Oct 2011; Raúl Porcel <armin76@gentoo.org> dhcp-4.2.2-r2.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #378799
