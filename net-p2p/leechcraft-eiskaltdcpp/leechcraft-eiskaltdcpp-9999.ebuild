@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/leechcraft-eiskaltdcpp/leechcraft-eiskaltdcpp-9999.ebuild,v 1.1 2011/09/15 12:48:40 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/leechcraft-eiskaltdcpp/leechcraft-eiskaltdcpp-9999.ebuild,v 1.2 2011/10/11 16:20:18 maksbotan Exp $
 
 EAPI="2"
 
@@ -27,7 +27,8 @@ RDEPEND="=net-misc/leechcraft-core-${PV}
 		spell? ( app-text/aspell )
 		sqlite? ( x11-libs/qt-sql:4[sqlite] )
 		pcre? ( >=dev-libs/libpcre-4.2 )
-		virtual/leechcraft-task-show"
+		virtual/leechcraft-task-show
+		!!net-p2p/eiskaltdcpp"
 DEPEND="=net-misc/leechcraft-core-${PV}
 		dev-util/pkgconfig"
 
