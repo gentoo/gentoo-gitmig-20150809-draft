@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openjpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.52 2011/10/04 22:22:14 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.53 2011/10/11 16:22:38 jer Exp $
+
+  11 Oct 2011; Jeroen Roovers <jer@gentoo.org> openjpeg-1.4-r1.ebuild:
+  Stable for HPPA (bug #373499).
 
   04 Oct 2011; Joseph Jezak <josejx@gentoo.org> openjpeg-1.4-r1.ebuild:
   Marked ppc/ppc64 stable for bug #373499.
