@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/nkf-2.1.0-r1.ebuild,v 1.2 2011/06/06 23:30:49 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/nkf-2.1.0-r1.ebuild,v 1.3 2011/10/11 11:02:19 naota Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge.jp/nkf/44486/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-macos"
 IUSE="perl python linguas_ja"
 
 pkg_setup() {
