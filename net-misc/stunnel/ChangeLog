@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.120 2011/05/28 16:49:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.121 2011/10/11 20:40:43 robbat2 Exp $
+
+*stunnel-4.44 (11 Oct 2011)
+
+  11 Oct 2011; Robin H. Johnson <robbat2@gentoo.org> +stunnel-4.44.ebuild:
+  Bug #379859: version bump for security
 
   28 May 2011; Raúl Porcel <armin76@gentoo.org> stunnel-4.35.ebuild:
   alpha/arm/ia64/sparc stable wrt #353955
