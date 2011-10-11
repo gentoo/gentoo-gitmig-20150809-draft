@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/autotrace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.49 2011/10/08 16:49:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.50 2011/10/11 16:37:49 jer Exp $
+
+  11 Oct 2011; Jeroen Roovers <jer@gentoo.org> autotrace-0.31.1-r6.ebuild:
+  Stable for HPPA (bug #386007).
 
   08 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   autotrace-0.31.1-r6.ebuild:
