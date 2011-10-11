@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/chrpath-0.13-r2.ebuild,v 1.3 2011/10/11 16:49:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/chrpath-0.13-r2.ebuild,v 1.4 2011/10/11 18:19:49 grobian Exp $
 
 EAPI="2"
 
@@ -14,17 +14,20 @@ SRC_URI="http://ftp.tux.org/pub/X-Windows/ftp.hungry.com/chrpath/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE=""
+IUSE="static-libs"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-multilib.patch
 	epatch "${FILESDIR}"/${PN}-keepgoing.patch
 	epatch "${FILESDIR}"/${P}-testsuite-1.patch
-	sed -i -e '/^docdir/d' Makefile.am # use standard docdir
+	# disable installing redundant docs in the wrong dir
+	sed -i -e '/doc_DATA/d' Makefile.am || die
 	eautoreconf
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die
+	emake DESTDIR="${D}" install || die
 	dodoc ChangeLog AUTHORS NEWS README
+	find "${D}" -name "*.la" -exec rm '{}' +
+	use static-libs || find "${D}" -name "*.a" -exec rm '{}' +
 }

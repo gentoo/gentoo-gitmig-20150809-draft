@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/chrpath
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/ChangeLog,v 1.17 2011/10/11 16:49:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chrpath/ChangeLog,v 1.18 2011/10/11 18:19:49 grobian Exp $
+
+  11 Oct 2011; Fabian Groffen <grobian@gentoo.org> chrpath-0.13-r2.ebuild:
+  Fix odd double docs dir installation, remove libtool archives, install static
+  archives with USE=static-libs
 
   11 Oct 2011; Fabian Groffen <grobian@gentoo.org> chrpath-0.13-r2.ebuild:
   Revert ssuominen's changes that were totally uncalled for and most
