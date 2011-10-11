@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2011.ebuild,v 1.2 2011/08/28 17:00:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive/texlive-2011.ebuild,v 1.3 2011/10/11 14:12:41 aballier Exp $
 
 EAPI="2"
 
@@ -73,9 +73,9 @@ RDEPEND="${DEPEND}
 			>=dev-tex/g-brief-4.0.2
 			>=dev-tex/envlab-1.2-r1
 			>=dev-tex/europecv-20060424-r1
+			>=dev-tex/mh-20111011
 			>=dev-tex/svninfo-0.7.3-r1
 		>=${TEXLIVE_CAT}/texlive-mathextra-${PV}
-			>=dev-tex/mh-20080903
 		>=${TEXLIVE_CAT}/texlive-plainextra-${PV}
 	)
 	xetex? ( >=${TEXLIVE_CAT}/texlive-xetex-${PV} )
