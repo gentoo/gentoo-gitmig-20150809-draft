@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xplanet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.72 2011/10/11 21:24:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.73 2011/10/11 21:26:09 ssuominen Exp $
+
+  11 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> -xplanet-1.2.1.ebuild,
+  -files/xplanet-1.2.1-gentoo.patch:
+  old
 
   11 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> xplanet-1.2.2.ebuild:
   ppc/ppc64 stable wrt #385795
