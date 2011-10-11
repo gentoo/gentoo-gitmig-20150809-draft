@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.85 2011/09/29 14:21:09 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.86 2011/10/11 20:25:50 chainsaw Exp $
+
+*xen-3.4.2-r4 (11 Oct 2011)
+
+  11 Oct 2011; Tony Vroon <chainsaw@gentoo.org> +xen-3.4.2-r4.ebuild,
+  +files/xen-3.4.2-CVE-2011-1583.patch,
+  +files/xen-3.4.2-fix-__addr_ok-limit.patch:
+  Patches by Ian "idella4" Delaney to address security bugs #385319 and
+  #386371.
 
   29 Sep 2011; Thomas Kahle <tomka@gentoo.org> xen-3.4.2-r3.ebuild:
   x86 stable per bug 379241
