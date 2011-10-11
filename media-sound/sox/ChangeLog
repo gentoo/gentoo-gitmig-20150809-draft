@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.131 2011/10/11 16:46:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.132 2011/10/11 22:38:49 ssuominen Exp $
+
+  11 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> sox-14.3.2-r1.ebuild:
+  ppc64 stable wrt #386005
 
   11 Oct 2011; Jeroen Roovers <jer@gentoo.org> sox-14.3.2-r1.ebuild:
   Stable for HPPA (bug #386005).
