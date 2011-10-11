@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.44.ebuild,v 1.1 2011/10/11 20:40:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.44.ebuild,v 1.2 2011/10/11 21:00:16 robbat2 Exp $
 
 EAPI="2"
 
@@ -26,8 +26,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	use xforward && epatch "${FILESDIR}/stunnel-4.36-xforwarded-for.diff"
-	use listen-queue && epatch "${FILESDIR}/stunnel-4.36-listen-queue.diff"
+	use xforward && epatch "${FILESDIR}/stunnel-4.44-xforwarded-for.diff"
+	use listen-queue && epatch "${FILESDIR}/stunnel-4.44-listen-queue.diff"
 	eautoreconf
 
 	# Hack away generation of certificate
