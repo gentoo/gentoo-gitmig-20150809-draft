@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/xxxterm-1.518.ebuild,v 1.1 2011/09/19 00:26:07 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/xxxterm-1.518.ebuild,v 1.2 2011/10/11 00:25:00 rafaelmartins Exp $
 
 EAPI="4"
 
@@ -28,8 +28,8 @@ LICENSE="ISC"
 SLOT="0"
 IUSE=""
 
-DEPEND="x11-libs/gtk+
-	net-libs/webkit-gtk
+DEPEND="x11-libs/gtk+:2
+	net-libs/webkit-gtk:2
 	net-libs/libsoup
 	net-libs/gnutls
 	dev-libs/libbsd"
