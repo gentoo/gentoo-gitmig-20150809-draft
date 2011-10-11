@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.4.ebuild,v 1.2 2011/10/09 15:02:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.4.ebuild,v 1.3 2011/10/11 16:31:57 jer Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://kernel/linux/libs/pam/library/${MY_P}.tar.bz2
 
 LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="cracklib nls elibc_FreeBSD selinux vim-syntax audit test elibc_glibc debug berkdb nis"
 
 RDEPEND="nls? ( virtual/libintl )
