@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libafterimage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.36 2011/10/09 15:03:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.37 2011/10/11 16:24:55 jer Exp $
+
+  11 Oct 2011; Jeroen Roovers <jer@gentoo.org> libafterimage-1.20.ebuild:
+  Stable for HPPA (bug #384707).
 
   09 Oct 2011; Raúl Porcel <armin76@gentoo.org> libafterimage-1.20.ebuild:
   alpha/ia64/sparc stable wrt #384707
