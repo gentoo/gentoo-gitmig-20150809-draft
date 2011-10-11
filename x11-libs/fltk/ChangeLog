@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.185 2011/10/05 17:13:52 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.186 2011/10/11 16:24:25 jer Exp $
+
+  11 Oct 2011; Jeroen Roovers <jer@gentoo.org> fltk-1.1.10-r2.ebuild:
+  Stable for HPPA (bug #385195).
 
   05 Oct 2011; Tony Vroon <chainsaw@gentoo.org> fltk-1.1.10-r2.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
