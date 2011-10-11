@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdvbpsi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.43 2011/09/20 17:50:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.44 2011/10/11 01:39:11 ssuominen Exp $
+
+  11 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> libdvbpsi-0.2.1.ebuild:
+  USE="static-libs" and remove useless libtool archive. Force recent enough
+  graphviz wrt #181147 in order to remove pkg_setup() test.
 
 *libdvbpsi-0.2.1 (20 Sep 2011)
 
