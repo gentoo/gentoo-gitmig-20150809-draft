@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nacl-toolchain-newlib/nacl-toolchain-newlib-0_p6869.ebuild,v 1.2 2011/10/11 16:48:40 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nacl-toolchain-newlib/nacl-toolchain-newlib-0_p6869.ebuild,v 1.3 2011/10/11 23:14:14 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -75,6 +75,5 @@ src_compile() {
 src_install() {
 	local TOOLCHAIN_HOME="/usr/$(get_libdir)"
 	dodir "${TOOLCHAIN_HOME}"
-	insinto "${TOOLCHAIN_HOME}"
-	doins -r "${WORKDIR}/${PN}"
+	mv "${WORKDIR}/${PN}" "${ED}/${TOOLCHAIN_HOME}" || die
 }
