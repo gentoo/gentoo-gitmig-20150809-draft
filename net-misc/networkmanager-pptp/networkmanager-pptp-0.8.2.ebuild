@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/networkmanager-pptp-0.8.2.ebuild,v 1.2 2011/03/29 12:52:08 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/networkmanager-pptp-0.8.2.ebuild,v 1.3 2011/10/11 17:13:20 pacho Exp $
 
 EAPI="2"
 
@@ -36,6 +36,15 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
+
+src_prepare() {
+	# Drop DEPRECATED flags, bug #385503
+	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' \
+		auth-dialog/Makefile.am auth-dialog/Makefile.in \
+		common-gnome/Makefile.am common-gnome/Makefile.in \
+		properties/Makefile.am properties/Makefile.in \
+		src/Makefile.am src/Makefile.in || die
+}
 
 src_configure() {
 	ECONF="--disable-more-warnings

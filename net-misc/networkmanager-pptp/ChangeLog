@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/networkmanager-pptp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/ChangeLog,v 1.17 2011/08/23 23:18:41 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/ChangeLog,v 1.18 2011/10/11 17:13:20 pacho Exp $
+
+  11 Oct 2011; Pacho Ramos <pacho@gentoo.org> networkmanager-pptp-0.8.2.ebuild:
+  Drop DEPRECATED flags, bug #385503
 
 *networkmanager-pptp-0.9.0 (23 Aug 2011)
 
