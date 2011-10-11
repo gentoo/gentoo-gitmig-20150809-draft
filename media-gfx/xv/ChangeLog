@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.107 2011/10/11 16:40:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.108 2011/10/11 22:43:22 ssuominen Exp $
+
+  11 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> xv-3.10a-r16.ebuild:
+  ppc64 stable wrt #386031
 
   11 Oct 2011; Jeroen Roovers <jer@gentoo.org> xv-3.10a-r16.ebuild:
   Stable for HPPA (bug #386031).
