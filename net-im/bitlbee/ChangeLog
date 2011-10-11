@@ -1,6 +1,15 @@
 # ChangeLog for net-im/bitlbee
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.146 2011/10/11 11:38:14 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.147 2011/10/11 19:33:24 radhermit Exp $
+
+  11 Oct 2011; Tim Harder <radhermit@gentoo.org>
+  -files/bitlbee-1.2.2-fix_tests_check_set.patch, -bitlbee-1.2.3.ebuild,
+  -bitlbee-1.2.3-r1.ebuild, -bitlbee-1.2.8.ebuild, -bitlbee-3.0.ebuild,
+  -bitlbee-3.0.1.ebuild, -files/bitlbee-3.0.1-ldflags.patch,
+  -files/bitlbee-3.0.1-no-ssl.patch, -bitlbee-3.0.2.ebuild,
+  -files/bitlbee-3.0-jabber.patch, -files/bitlbeed.confd2,
+  -files/bitlbeed.initd:
+  Remove old.
 
   11 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> bitlbee-3.0.3.ebuild:
   ppc stable wrt #375155
