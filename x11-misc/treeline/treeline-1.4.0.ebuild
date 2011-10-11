@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-1.3.3.ebuild,v 1.2 2010/07/14 16:33:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-1.4.0.ebuild,v 1.1 2011/10/11 20:59:43 jer Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2"
