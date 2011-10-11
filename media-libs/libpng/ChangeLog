@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libpng
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.312 2011/10/08 11:05:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.313 2011/10/11 22:00:27 ssuominen Exp $
+
+  11 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> libpng-1.5.5.ebuild:
+  Don't execute symbols check with apng patch wrt #378111 by Diego Elio
+  Pettenò
 
   08 Oct 2011; Markus Meier <maekke@gentoo.org> libpng-1.4.8-r1.ebuild:
   arm stable, bug #384285
