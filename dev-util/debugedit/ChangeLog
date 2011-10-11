@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/debugedit
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.22 2009/11/14 09:14:33 swegener Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debugedit/ChangeLog,v 1.23 2011/10/11 03:53:15 vapier Exp $
+
+*debugedit-5.3.5 (11 Oct 2011)
+
+  11 Oct 2011; Mike Frysinger <vapier@gentoo.org> +debugedit-5.3.5.ebuild,
+  +files/Makefile, +files/update.sh:
+  Version bump.
 
 *debugedit-5.1.9 (14 Nov 2009)
 
