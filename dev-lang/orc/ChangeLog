@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/orc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.20 2011/10/03 20:49:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/orc/ChangeLog,v 1.21 2011/10/11 19:54:22 jer Exp $
+
+  11 Oct 2011; Jeroen Roovers <jer@gentoo.org> orc-0.4.14.ebuild:
+  Stable for HPPA (bug #385703).
 
   03 Oct 2011; Jeroen Roovers <jer@gentoo.org> orc-0.4.14.ebuild:
   Marked ~hppa (bug #373639).
