@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/libewf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/ChangeLog,v 1.13 2011/09/28 01:13:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/ChangeLog,v 1.14 2011/10/11 17:09:32 jer Exp $
+
+  11 Oct 2011; Jeroen Roovers <jer@gentoo.org> libewf-20100226.ebuild:
+  Stable for HPPA (bug #374321).
 
   28 Sep 2011; Tim Harder <radhermit@gentoo.org> libewf-20100226-r1.ebuild:
   Update to EAPI 4 and add static-libs use flag.

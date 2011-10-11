@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/afflib-3.6.8.ebuild,v 1.4 2011/07/24 18:23:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/afflib-3.6.8.ebuild,v 1.5 2011/10/11 17:10:05 jer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.afflib.org/downloads/${P}.tar.gz"
 
 LICENSE="BSD-4"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc x86"
+KEYWORDS="amd64 hppa ~ppc x86"
 IUSE="ewf fuse ncurses python qemu readline s3 threads"
 
 DEPEND="

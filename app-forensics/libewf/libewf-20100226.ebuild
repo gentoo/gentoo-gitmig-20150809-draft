@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/libewf-20100226.ebuild,v 1.5 2011/07/24 18:24:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/libewf-20100226.ebuild,v 1.6 2011/10/11 17:09:32 jer Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/libewf/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc x86"
+KEYWORDS="amd64 hppa ~ppc x86"
 # upstream bug #2597171, pyewf has implicit declarations
 #IUSE="debug python rawio unicode"
 IUSE="debug rawio unicode"
