@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/silgraphite/silgraphite-2.3.1.ebuild,v 1.24 2011/10/04 17:48:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/silgraphite/silgraphite-2.3.1.ebuild,v 1.25 2011/10/11 17:19:09 pacho Exp $
 
 EAPI=4
 
@@ -24,6 +24,11 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-aligned_access.patch"
+
+	# Drop DEPRECATED flags, bug #385533
+	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' \
+		wrappers/pangographite/Makefile.am wrappers/pangographite/Makefile.in \
+		wrappers/pangographite/graphite/Makefile.am || die
 }
 
 src_configure() {
