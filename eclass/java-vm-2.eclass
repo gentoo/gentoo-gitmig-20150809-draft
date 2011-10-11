@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.33 2011/09/01 14:15:57 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.34 2011/10/11 10:55:06 grobian Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -115,7 +115,10 @@ get_system_arch() {
 set_java_env() {
 	debug-print-function ${FUNCNAME} $*
 
-	has ${EAPI:-0} 0 1 2 && ! use prefix && ED="${D}"
+	if has ${EAPI:-0} 0 1 2 && ! use prefix ; then
+		ED="${D}"
+		EPREFIX=""
+	fi
 
 	local platform="$(get_system_arch)"
 	local env_file="${ED}${JAVA_VM_CONFIG_DIR}/${VMHANDLE}"
@@ -156,7 +159,7 @@ set_java_env() {
 
 	# Make the symlink
 	dodir "${JAVA_VM_DIR}"
-	dosym ${java_home} ${JAVA_VM_DIR}/${VMHANDLE} \
+	dosym ${java_home#${EPREFIX}} ${JAVA_VM_DIR}/${VMHANDLE} \
 		|| die "Failed to make VM symlink at ${JAVA_VM_DIR}/${VMHANDLE}"
 }
 
