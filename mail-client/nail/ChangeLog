@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/nail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.77 2011/03/20 13:18:38 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.78 2011/10/12 17:21:54 armin76 Exp $
+
+  12 Oct 2011; Raúl Porcel <armin76@gentoo.org> nail-12.4.ebuild,
+  nail-12.4-r2.ebuild:
+  Add ~s390/~sh wrt #324129
 
   20 Mar 2011; Eray Aslan <eras@gentoo.org> nail-12.4.ebuild,
   -nail-12.4-r1.ebuild, nail-12.4-r2.ebuild:
