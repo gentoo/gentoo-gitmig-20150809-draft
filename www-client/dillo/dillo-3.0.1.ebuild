@@ -1,13 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-3.0.1.ebuild,v 1.2 2011/10/12 01:06:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/dillo-3.0.1.ebuild,v 1.3 2011/10/12 01:17:54 jer Exp $
 
-EAPI="2"
+EAPI="4"
+
 inherit eutils flag-o-matic multilib
 
 DESCRIPTION="Lean FLTK2-based web browser"
 HOMEPAGE="http://www.dillo.org/"
-SRC_URI="http://www.dillo.org/download/${P}.tar.bz2"
+SRC_URI="http://www.dillo.org/download/${P}.tar.bz2
+	mirror://gentoo/dillo.png"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -37,7 +39,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die "make failed"
+	default
 	if use doc ; then
 		doxygen Doxyfile || die "doxygen failed"
 	fi
@@ -45,16 +47,16 @@ src_compile() {
 
 src_install() {
 	dodir /etc
-	emake DESTDIR="${D}" install || die "install failed"
+	default
 
 	if use doc; then
-		dohtml html/* || die "install documentation failed"
+		dohtml html/*
 	fi
 	dodoc AUTHORS ChangeLog README NEWS
 	docinto doc
 	dodoc doc/*.txt doc/README
 
-	doicon "${FILESDIR}"/dillo.png
+	doicon "${DISTDIR}"/dillo.png
 	make_desktop_entry dillo Dillo dillo
 }
 
