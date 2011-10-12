@@ -1,6 +1,14 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.58 2011/09/02 15:46:00 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.59 2011/10/12 19:21:54 chainsaw Exp $
+
+*subversion-1.7.0 (12 Oct 2011)
+
+  12 Oct 2011; Tony Vroon <chainsaw@gentoo.org> +subversion-1.7.0.ebuild:
+  New upstream release, bringing you "svn patch", "svnrdump", "svn upgrade" and
+  many other goodies. The build system has changed significantly so a lot of
+  patching has now gone. Please do file a bug if it seems that this causes
+  issues.
 
 *subversion-1.6.17-r7 (02 Sep 2011)
 
