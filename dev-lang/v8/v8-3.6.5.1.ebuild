@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.6.5.1.ebuild,v 1.3 2011/10/12 18:18:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.6.5.1.ebuild,v 1.4 2011/10/12 22:39:01 floppym Exp $
 
 EAPI="4"
 
@@ -10,7 +10,8 @@ GYP_REV="1066"
 
 DESCRIPTION="Google's open source JavaScript engine"
 HOMEPAGE="http://code.google.com/p/v8"
-SRC_URI="http://dev.gentoo.org/~floppym/distfiles/${P}.tar.xz
+SRC_URI="mirror://gentoo/${P}.tar.gz
+	http://dev.gentoo.org/~floppym/distfiles/${P}.tar.gz
 	http://dev.gentoo.org/~floppym/distfiles/gyp-${GYP_REV}.tar.xz"
 LICENSE="BSD"
 
