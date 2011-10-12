@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.87 2011/10/09 17:44:00 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.88 2011/10/12 16:56:49 matsuu Exp $
+
+  12 Oct 2011; MATSUU Takuto <matsuu@gentoo.org> -puppet-0.25.5.ebuild,
+  -puppet-2.6.9.ebuild, -puppet-2.6.10.ebuild, -puppet-2.7.4.ebuild:
+  Removed old versions.
 
   09 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> puppet-2.6.11.ebuild:
   ppc stable wrt #385149
