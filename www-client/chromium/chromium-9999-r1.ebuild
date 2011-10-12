@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.57 2011/10/12 02:39:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.58 2011/10/12 20:42:56 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -26,6 +26,7 @@ for lang in ${LANGS}; do
 done
 
 RDEPEND="app-arch/bzip2
+	dev-lang/v8
 	dev-libs/dbus-glib
 	dev-libs/elfutils
 	>=dev-libs/icu-4.4.1
@@ -143,6 +144,14 @@ chromium_lang() {
 	fi
 }
 
+get_bundled_v8_version() {
+	"$(PYTHON -2)" "${FILESDIR}"/extract_v8_version.py v8/src/version.cc
+}
+
+get_installed_v8_version() {
+	best_version dev-lang/v8 | sed -e 's@dev-lang/v8-@@g'
+}
+
 pkg_setup() {
 	SUFFIX="-${SLOT}"
 	CHROMIUM_HOME="/usr/$(get_libdir)/chromium-browser${SUFFIX}"
@@ -230,6 +239,20 @@ src_prepare() {
 		\! -path 'third_party/zlib/contrib/minizip/*' \
 		-delete || die
 
+	local v8_bundled="$(get_bundled_v8_version)"
+	local v8_installed="$(get_installed_v8_version)"
+	elog "V8 version: bundled - ${v8_bundled}; installed - ${v8_installed}"
+
+	# Remove bundled v8.
+	find v8 -type f \! -iname '*.gyp*' -delete || die
+
+	# The implementation files include v8 headers with full path,
+	# like #include "v8/include/v8.h". Make sure the system headers
+	# will be used.
+	# TODO: find a solution that can be upstreamed.
+	rmdir v8/include || die
+	ln -s /usr/include v8/include || die
+
 	# Make sure the build system will use the right python, bug #344367.
 	# Only convert directories that need it, to save time.
 	python_convert_shebangs -q -r 2 build tools
@@ -258,6 +281,7 @@ src_configure() {
 		-Duse_system_libwebp=1
 		-Duse_system_libxml=1
 		-Duse_system_speex=1
+		-Duse_system_v8=1
 		-Duse_system_xdg_utils=1
 		-Duse_system_zlib=1"
 
@@ -276,11 +300,11 @@ src_configure() {
 		-Dlinux_sandbox_path=${CHROMIUM_HOME}/chrome_sandbox
 		-Dlinux_sandbox_chrome_path=${CHROMIUM_HOME}/chrome"
 
-	if host-is-pax; then
-		# Prevent the build from failing (bug #301880). The performance
-		# difference is very small.
-		myconf+=" -Dv8_use_snapshot=0"
-	fi
+	# if host-is-pax; then
+	#	# Prevent the build from failing (bug #301880). The performance
+	#	# difference is very small.
+	#	myconf+=" -Dv8_use_snapshot=0"
+	# fi
 
 	# Our system ffmpeg should support more codecs than the bundled one
 	# for Chromium.
