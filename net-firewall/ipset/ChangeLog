@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/ipset
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.54 2011/10/02 13:07:53 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.55 2011/10/12 13:26:16 pva Exp $
+
+*ipset-6.9.1-r2 (12 Oct 2011)
+
+  12 Oct 2011; Peter Volkov <pva@gentoo.org> +ipset-6.9.1-r2.ebuild,
+  +files/ipset.initd-r1, files/ipset.initd:
+  Fix init script, bug #386151 wrt Alexey Shvetsov. Require
+  CONFIG_IP6_NF_IPTABLES only if USE=ipv6, bug #385445 wrt John Brendler.
 
 *ipset-6.9.1-r1 (02 Oct 2011)
 

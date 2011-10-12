@@ -1,11 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/files/ipset.initd,v 1.2 2011/10/12 13:26:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/files/ipset.initd-r1,v 1.1 2011/10/12 13:26:16 pva Exp $
 
-extra_started_commands="save"
+extra_commands="save"
 
-IPSET_SAVE=${IPSET_SAVE:-/var/lib/ipset}
+IPSET_SAVE=${IPSET_SAVE:-/var/lib/ipset/rules-save}
 
 depend() {
     before iptables ip6tables
