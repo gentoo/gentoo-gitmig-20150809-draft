@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/uemacs-pk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/uemacs-pk/ChangeLog,v 1.13 2011/09/11 09:53:54 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/uemacs-pk/ChangeLog,v 1.14 2011/10/12 10:07:24 chainsaw Exp $
+
+  12 Oct 2011; Tony Vroon <chainsaw@gentoo.org>
+  uemacs-pk-4.0.15_p20110825.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
+  "idella4" Delaney in bug #386691.
 
   11 Sep 2011; Ulrich Mueller <ulm@gentoo.org> -uemacs-pk-4.0.18.ebuild,
   -files/uemacs-pk-4.0.18-gentoo.patch:
