@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2010-r4.ebuild,v 1.8 2011/10/04 17:56:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2010-r4.ebuild,v 1.9 2011/10/12 15:08:15 armin76 Exp $
 
 EAPI=3
 
@@ -104,6 +104,9 @@ src_prepare() {
 }
 
 src_configure() {
+	# It fails on alpha without this
+	use alpha && append-ldflags "-Wl,--no-relax"
+
 	# Too many regexps use A-Z a-z constructs, what causes problems with locales
 	# that don't have the same alphabetical order than ascii. Bug #242430
 	# So we set LC_ALL to C in order to avoid problems.
