@@ -1,5 +1,11 @@
 
 
+*elfix-0.2.4 (12 Oct 2011)
+
+  12 Oct 2011; Anthony G. Basile <blueness@gentoo.org> -elfix-0.2.2.ebuild,
+  +elfix-0.2.4.ebuild:
+  Version bump, remove deprecated
+
 *elfix-0.2.3 (09 Oct 2011)
 
   09 Oct 2011; Anthony G. Basile <blueness@gentoo.org> +elfix-0.2.3.ebuild:

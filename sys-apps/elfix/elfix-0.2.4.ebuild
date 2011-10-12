@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/elfix/elfix-0.2.2.ebuild,v 1.1 2011/10/03 16:36:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/elfix/elfix-0.2.4.ebuild,v 1.1 2011/10/12 11:08:58 blueness Exp $
 
 EAPI=4
 
@@ -14,10 +14,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 DEPEND="dev-libs/elfutils
+	dev-python/pypax
 	test? ( dev-lang/yasm )"
 RDEPEND="${DEPEND}"
 
 src_configure() {
+	rm -f "${S}/scripts/setup.py"
 	econf $(use_enable test tests)
 }
 
