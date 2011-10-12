@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-expectations/rspec-expectations-2.6.0.ebuild,v 1.8 2011/10/02 17:02:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-expectations/rspec-expectations-2.6.0.ebuild,v 1.9 2011/10/12 17:51:40 graaff Exp $
 
 EAPI=2
 USE_RUBY="ruby18 ree18 ruby19 jruby"
@@ -25,6 +25,8 @@ ruby_add_bdepend "test? (
 		>=dev-ruby/rspec-core-2.4.0:2
 		dev-ruby/rspec-mocks:2
 	)"
+
+ruby_add_bdepend "doc? ( dev-ruby/rspec-core:2 )"
 
 # Not clear yet to what extend we need those (now)
 #	>=dev-ruby/cucumber-0.6.2
