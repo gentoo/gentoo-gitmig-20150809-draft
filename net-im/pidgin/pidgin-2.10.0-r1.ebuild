@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.0-r1.ebuild,v 1.6 2011/10/08 17:44:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.10.0-r1.ebuild,v 1.7 2011/10/12 11:39:20 pva Exp $
 
 EAPI=3
 
@@ -91,6 +91,7 @@ DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,simple,msn,myspace"
 #   x11-plugins/pidgin-latex
 #   x11-plugins/pidgintex
 #   x11-plugins/pidgin-libnotify
+#	x11-plugins/pidgin-mbpurple
 #	x11-plugins/pidgin-bot-sentry
 #   x11-plugins/pidgin-otr
 #   x11-plugins/pidgin-rhythmbox
@@ -98,12 +99,17 @@ DYNAMIC_PRPLS="irc,jabber,oscar,yahoo,simple,msn,myspace"
 #   x11-themes/pidgin-smileys
 #	x11-plugins/pidgin-knotify
 # Plugins in Sunrise:
-#	x11-plugins/pidgimpd
-#	x11-plugins/pidgin-birthday
+#	x11-plugins/pidgin-audacious-remote
+#	x11-plugins/pidgin-autoanswer
+#	x11-plugins/pidgin-birthday-reminder
+#	x11-plugins/pidgin-blinklight
 #	x11-plugins/pidgin-convreverse
+#	x11-plugins/pidgin-embeddedvideo
 #	x11-plugins/pidgin-extended-blist-sort
+#	x11-plugins/pidgin-gfire
 #	x11-plugins/pidgin-lastfm
-#	x11-plugins/pidgin-mbpurple
+#	x11-plugins/pidgin-sendscreenshot
+#	x11-plugins/pidgimpd
 
 pkg_setup() {
 	if ! use gtk && ! use ncurses ; then
