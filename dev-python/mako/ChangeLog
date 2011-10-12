@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mako
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.42 2011/10/11 15:18:29 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.43 2011/10/12 20:40:50 hwoarang Exp $
+
+  12 Oct 2011; Markos Chandras <hwoarang@gentoo.org> mako-0.4.2.ebuild:
+  Stable on amd64 wrt bug #386799
 
 *mako-0.5.0 (11 Oct 2011)
 
