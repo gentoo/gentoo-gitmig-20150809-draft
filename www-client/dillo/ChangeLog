@@ -1,6 +1,9 @@
 # ChangeLog for www-client/dillo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.95 2011/10/12 01:02:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.96 2011/10/12 01:06:03 jer Exp $
+
+  12 Oct 2011; Jeroen Roovers <jer@gentoo.org> dillo-3.0.1.ebuild:
+  Commit properly patched ebuild.
 
 *dillo-3.0.1 (12 Oct 2011)
 
