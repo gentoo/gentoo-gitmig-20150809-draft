@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.80 2011/10/09 19:45:12 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.81 2011/10/12 02:58:55 floppym Exp $
+
+  12 Oct 2011; Mike Gilbert <floppym@gentoo.org> v8-3.6.5.1.ebuild:
+  Migrate to EAPI 4. Add python deps. Re-add pax-mark.
 
 *v8-3.6.5.1 (09 Oct 2011)
 
