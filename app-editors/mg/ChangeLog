@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/mg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.37 2011/10/05 12:26:39 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.38 2011/10/12 10:04:33 chainsaw Exp $
+
+  12 Oct 2011; Tony Vroon <chainsaw@gentoo.org> mg-20110905.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
+  "idella4" Delaney in bug #386689.
 
   05 Oct 2011; Naohiro Aota <naota@gentoo.org> mg-20110905.ebuild:
   Add ~x86-fbsd
