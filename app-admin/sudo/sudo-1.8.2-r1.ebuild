@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.2.ebuild,v 1.4 2011/10/07 16:27:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.2-r1.ebuild,v 1.1 2011/10/12 18:50:26 slyfox Exp $
 
 EAPI=4
 
@@ -56,6 +56,7 @@ MAKEOPTS="${MAKEOPTS} SAMPLES="
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-parallel-build.patch
+	epatch "${FILESDIR}"/${P}-fix-pwutil-alignment.patch
 	elibtoolize
 }
 
