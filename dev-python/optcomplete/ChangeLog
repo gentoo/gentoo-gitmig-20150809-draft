@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/optcomplete
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/optcomplete/ChangeLog,v 1.5 2011/06/08 16:15:44 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/optcomplete/ChangeLog,v 1.6 2011/10/12 10:27:19 chainsaw Exp $
+
+  12 Oct 2011; Tony Vroon <chainsaw@gentoo.org> optcomplete-1.2.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
+  "idella4" Delaney in bug #386723.
 
   08 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org> optcomplete-1.2.ebuild:
   Marked ~ppc wrt #366541
