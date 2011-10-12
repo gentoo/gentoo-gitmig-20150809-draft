@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.7.0_rc2.ebuild,v 1.2 2011/10/11 15:20:11 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.8.7.0-r1.ebuild,v 1.1 2011/10/12 09:25:53 chainsaw Exp $
 
 EAPI=4
 inherit autotools base eutils linux-info multilib
@@ -10,7 +10,7 @@ MY_P="${PN}-${PV/_/-}"
 DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
 SRC_URI="http://downloads.asterisk.org/pub/telephony/asterisk/${MY_P}.tar.gz
-	 mirror://gentoo/gentoo-asterisk-patchset-1.3.tar.bz2"
+	 mirror://gentoo/gentoo-asterisk-patchset-1.4.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -325,6 +325,10 @@ src_install() {
 	emake DESTDIR="${D}" installdirs
 	emake DESTDIR="${D}" install
 
+	if use radius; then
+		insinto /etc/radiusclient-ng/
+		doins contrib/dictionary.digium
+	fi
 	if use samples; then
 		emake DESTDIR="${D}" samples
 		for conffile in "${D}"etc/asterisk/*.*
