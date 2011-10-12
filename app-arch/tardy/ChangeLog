@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/tardy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tardy/ChangeLog,v 1.14 2011/10/04 03:36:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tardy/ChangeLog,v 1.15 2011/10/12 01:59:02 jer Exp $
+
+  12 Oct 2011; Jeroen Roovers <jer@gentoo.org> tardy-1.12.ebuild,
+  tardy-1.16.ebuild, tardy-1.17-r1.ebuild:
+  Drop HPPA keywording (bug #382495).
 
 *tardy-1.24 (04 Oct 2011)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tardy/tardy-1.17-r1.ebuild,v 1.1 2010/04/10 11:23:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tardy/tardy-1.17-r1.ebuild,v 1.2 2011/10/12 01:59:02 jer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/tardy/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 src_unpack() {
