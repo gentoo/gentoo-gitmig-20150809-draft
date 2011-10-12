@@ -1,9 +1,16 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.272 2011/10/05 19:51:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.273 2011/10/12 18:03:59 phajdan.jr Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (12 Oct 2011)
+# Upstream support not yet ready:
+# http://code.google.com/p/chromium/issues/detail?id=32757
+# Feel free to file a Gentoo bug to unmask the flag
+# when above upstream bug is closed.
+www-client/chromium pulseaudio
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (17 Sep 2011)
 # Systemtap is not keyworded on anything except amd64/x86
