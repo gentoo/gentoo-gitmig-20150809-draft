@@ -1,5 +1,8 @@
 
 
+  12 Oct 2011; Anthony G. Basile <blueness@gentoo.org> pypax-0.2.3.ebuild:
+  Add DEPEND on dev-libs/elfutils
+
   09 Oct 2011; Anthony G. Basile <blueness@gentoo.org> pypax-0.2.3.ebuild:
   Moved SUPPORT_PYTHON_ABIS and RESTRICT_PYTHON_ABIS before inherit, thanks
   Arfrever
