@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-bsearch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bsearch/ChangeLog,v 1.27 2011/01/15 11:37:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bsearch/ChangeLog,v 1.28 2011/10/12 16:57:30 matsuu Exp $
+
+*ruby-bsearch-1.5-r3 (12 Oct 2011)
+
+  12 Oct 2011; MATSUU Takuto <matsuu@gentoo.org> +ruby-bsearch-1.5-r3.ebuild:
+  Added ruby19, ree18 and jruby to USE_RUBY.
 
   15 Jan 2011; Hans de Graaff <graaff@gentoo.org>
   -ruby-bsearch-1.5-r1.ebuild:
