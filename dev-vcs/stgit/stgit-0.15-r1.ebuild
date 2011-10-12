@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/stgit-0.15-r1.ebuild,v 1.6 2011/09/25 17:47:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/stgit/stgit-0.15-r1.ebuild,v 1.7 2011/10/12 17:48:52 mgorny Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 
-inherit distutils bash-completion
+inherit distutils bash-completion-r1
 
 DESCRIPTION="Manage a stack of patches using GIT as a backend"
 HOMEPAGE="http://www.procode.org/stgit/"
@@ -75,5 +75,5 @@ src_install() {
 		dohtml Documentation/*.html || die "dohtml failed"
 	fi
 
-	dobashcompletion stgit-completion.bash ${PN}
+	newbashcomp stgit-completion.bash ${PN} || die
 }
