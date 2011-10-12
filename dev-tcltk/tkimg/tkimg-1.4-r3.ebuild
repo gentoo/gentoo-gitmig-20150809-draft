@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.4-r3.ebuild,v 1.1 2011/10/08 14:21:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.4-r3.ebuild,v 1.2 2011/10/12 16:35:15 jlec Exp $
 
 EAPI=3
 
@@ -25,7 +25,7 @@ RDEPEND="
 	dev-lang/tk
 	>=dev-tcltk/tcllib-1.11
 	virtual/jpeg
-	=media-libs/tiff-3*
+	=media-libs/tiff-3*:0
 	=media-libs/libpng-1.5*
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
