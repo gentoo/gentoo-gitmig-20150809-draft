@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/difffilter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/difffilter/ChangeLog,v 1.9 2011/06/03 19:55:49 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/difffilter/ChangeLog,v 1.10 2011/10/12 20:45:50 hwoarang Exp $
+
+  12 Oct 2011; Markos Chandras <hwoarang@gentoo.org> difffilter-0.3.1.ebuild:
+  Stable on amd64 wrt bug #385957
 
 *difffilter-0.3.1 (03 Jun 2011)
 
