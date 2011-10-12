@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-6.9.1-r2.ebuild,v 1.1 2011/10/12 13:26:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-6.9.1-r2.ebuild,v 1.2 2011/10/12 14:13:35 pva Exp $
 
 EAPI="4"
 inherit autotools linux-info linux-mod
@@ -15,7 +15,7 @@ SRC_URI="http://ipset.netfilter.org/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="ipv6 modules"
+IUSE="modules"
 
 RDEPEND=">=net-firewall/iptables-1.4.4
 	net-libs/libmnl"
@@ -44,9 +44,7 @@ check_header_patch() {
 pkg_setup() {
 	get_version
 	CONFIG_CHECK="NETFILTER"
-	use ipv6 && CONFIG_CHECK+=" IP6_NF_IPTABLES"
 	ERROR_NETFILTER="ipset requires NETFILTER support in your kernel."
-	ERROR_IP6_NF_IPTABLES="ipset requires IP6_NF_IPTABLES support in your kernel."
 
 	build_modules=0
 	if use modules; then
@@ -65,11 +63,11 @@ pkg_setup() {
 			fi
 		else
 			eerror "Nonmodular kernel detected, but USE=modules. Either build"
-			eerror "modular kernel or disable USE=modules"
+			eerror "modular kernel (without IP_SET) or disable USE=modules"
 			die "Nonmodular kernel detected, will not build kernel modules"
 		fi
 	fi
-	linux-mod_pkg_setup
+	[[ ${build_modules} -eq 1 ]] && linux-mod_pkg_setup
 }
 
 src_prepare() {

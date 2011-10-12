@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/ipset
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.55 2011/10/12 13:26:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.56 2011/10/12 14:13:35 pva Exp $
+
+  12 Oct 2011; Peter Volkov <pva@gentoo.org> ipset-6.9.1-r2.ebuild:
+  On second thought drop USE=ipv6: userspace should work is the same
+  independently of USE=ipv6 and kernel side will depend on kernel
+  configuration.
 
 *ipset-6.9.1-r2 (12 Oct 2011)
 
