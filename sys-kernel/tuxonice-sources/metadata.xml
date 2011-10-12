@@ -7,6 +7,9 @@
 		<email>nelchael@gentoo.org</email>
 		<name>Krzysztof Pawlik</name>
 	</maintainer>
+	<maintainer>
+		<email>pacho@gentoo.org</email>
+	</maintainer>
 	<use>
   	  	<flag name='deblob'>Remove binary blobs from kernel sources to provide libre license compliance.</flag>
   	</use>
