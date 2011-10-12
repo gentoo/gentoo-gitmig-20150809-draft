@@ -1,6 +1,11 @@
 # ChangeLog for app-text/highlight
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/ChangeLog,v 1.44 2011/08/30 02:22:29 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/highlight/ChangeLog,v 1.45 2011/10/12 02:06:40 radhermit Exp $
+
+*highlight-3.6 (12 Oct 2011)
+
+  12 Oct 2011; Tim Harder <radhermit@gentoo.org> +highlight-3.6.ebuild:
+  Version bump.
 
   30 Aug 2011; Naohiro Aota <naota@gentoo.org> highlight-3.5.ebuild:
   Add ~x86-fbsd
