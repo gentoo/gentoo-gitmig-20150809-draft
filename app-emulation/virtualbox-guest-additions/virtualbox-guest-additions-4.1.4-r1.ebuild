@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.1.4.ebuild,v 1.2 2011/10/04 19:30:04 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/virtualbox-guest-additions-4.1.4-r1.ebuild,v 1.1 2011/10/12 21:32:19 polynomial-c Exp $
 
 EAPI=2
 
@@ -17,7 +17,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE="X"
 
 RDEPEND="X? ( ~x11-drivers/xf86-video-virtualbox-${PV}
-			 ~x11-drivers/xf86-input-virtualbox-${PV}
 			 x11-apps/xrandr
 			 x11-apps/xrefresh
 			 x11-libs/libXmu
@@ -27,7 +26,8 @@ RDEPEND="X? ( ~x11-drivers/xf86-video-virtualbox-${PV}
 			 x11-libs/libXau
 			 x11-libs/libXdmcp
 			 x11-libs/libSM
-			 x11-libs/libICE )"
+			 x11-libs/libICE )
+	!!x11-drivers/xf86-input-virtualbox"
 DEPEND="${RDEPEND}
 		>=dev-util/kbuild-0.1.999
 		>=dev-lang/yasm-0.6.2
