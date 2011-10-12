@@ -1,15 +1,16 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker-gui/pacemaker-gui-2.0.0.ebuild,v 1.1 2011/02/21 14:46:15 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker-gui/pacemaker-gui-2.1.0.ebuild,v 1.1 2011/10/12 12:38:45 ultrabug Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
+MY_P="pacemaker-mgmt-${PV}"
 
 inherit python base autotools
 
 DESCRIPTION="Pacemaker python GUI and management daemon"
 HOMEPAGE="http://hg.clusterlabs.org/pacemaker/pygui/"
-SRC_URI="http://hg.clusterlabs.org/pacemaker/pygui/archive/45aced6962a9.tar.bz2"
+SRC_URI="http://hg.clusterlabs.org/pacemaker/pygui/archive/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="~amd64 ~x86"
@@ -41,11 +42,11 @@ DEPEND="${CDEPEND}
 		sys-devel/gettext
 	)"
 
-S="${WORKDIR}/Pacemaker-Python-GUI-45aced6962a9/"
+S="${WORKDIR}/Pacemaker-Python-GUI-${MY_P}/"
 
 PATCHES=(
-	"${FILESDIR}/${P}-gnutls.patch"
-	"${FILESDIR}/${P}-doc.patch"
+	"${FILESDIR}/${PN}-2.0.0-gnutls.patch"
+	"${FILESDIR}/${PN}-2.0.0-doc.patch"
 )
 
 pkg_setup() {
