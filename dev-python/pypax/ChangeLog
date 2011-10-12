@@ -1,5 +1,10 @@
 
 
+*pypax-0.2.4 (12 Oct 2011)
+
+  12 Oct 2011; Anthony G. Basile <blueness@gentoo.org> +pypax-0.2.4.ebuild:
+  Version bump
+
   12 Oct 2011; Anthony G. Basile <blueness@gentoo.org> pypax-0.2.3.ebuild:
   Add DEPEND on dev-libs/elfutils
 
