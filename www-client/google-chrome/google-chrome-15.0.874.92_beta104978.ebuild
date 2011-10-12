@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-15.0.874.83_beta104223.ebuild,v 1.1 2011/10/06 23:33:40 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-15.0.874.92_beta104978.ebuild,v 1.1 2011/10/12 22:50:25 floppym Exp $
 
 EAPI="4"
 
@@ -108,8 +108,7 @@ chrome_unpack() {
 }
 
 src_unpack() {
-	chrome_unpack ${A}
-	unpack ./data.tar.lzma
+	chrome_unpack ${A} ./data.tar.lzma
 }
 
 src_prepare() {
