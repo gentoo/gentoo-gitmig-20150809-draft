@@ -1,6 +1,21 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.883 2011/10/10 21:49:30 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.884 2011/10/12 02:20:24 zmedico Exp $
+
+*portage-2.2.0_alpha67 (12 Oct 2011)
+
+  12 Oct 2011; Zac Medico <zmedico@gentoo.org> +portage-2.2.0_alpha67.ebuild:
+  2.2.0_alpha67 version bump. This includes all of the fixes in
+  portage-2.1.10.27. Bug #210077 tracks all bugs fixed since portage-2.1.x.
+
+*portage-2.1.10.27 (12 Oct 2011)
+
+  12 Oct 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.27.ebuild:
+  2.1.10.27 version bump. This fixes bug #386771 (regression causing newlines
+  after every character in elog files), bug #386797 (fetch complains about
+  lack of space even if files are already fetched), bug #386829 (corrupt IUSE
+  in /var/db/pkg triggered by LANGS variable interacting with qt4-r2.eclass).
+  Bug #381649 tracks all bugs fixed since portage-2.1.10.11.
 
 *portage-2.2.0_alpha66 (10 Oct 2011)
 
