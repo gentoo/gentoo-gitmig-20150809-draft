@@ -1,6 +1,13 @@
 # ChangeLog for virtual/ruby-test-unit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.20 2011/07/15 17:26:24 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ruby-test-unit/ChangeLog,v 1.21 2011/10/12 18:12:15 graaff Exp $
+
+*ruby-test-unit-0-r4 (12 Oct 2011)
+
+  12 Oct 2011; Hans de Graaff <graaff@gentoo.org> +ruby-test-unit-0-r4.ebuild:
+  Depend directly on dev-lang/ruby:1.9 for ruby19 instead of on an old version
+  of test-unit that won't be loaded. Thanks to Shunsuke Shimizu in bug 380711
+  for the suggestion and associated testing.
 
   15 Jul 2011; Matt Turner <mattst88@gentoo.org> ruby-test-unit-0-r3.ebuild:
   Added ~mips, bug 332593
