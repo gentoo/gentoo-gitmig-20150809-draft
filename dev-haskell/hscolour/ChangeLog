@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hscolour
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hscolour/ChangeLog,v 1.11 2011/02/25 12:33:57 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hscolour/ChangeLog,v 1.12 2011/10/13 11:28:25 naota Exp $
+
+  13 Oct 2011; Naohiro Aota <naota@gentoo.org> hscolour-1.17.ebuild:
+  Add ~x86-fbsd
 
   25 Feb 2011; Kacper Kowalik <xarthisius@gentoo.org> hscolour-1.17.ebuild:
   ppc/ppc64 stable wrt #331623
