@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-3.0.4-r1.ebuild,v 1.2 2011/04/12 17:34:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-3.0.4-r1.ebuild,v 1.3 2011/10/13 08:52:06 ultrabug Exp $
 
 EAPI="2"
 
@@ -20,10 +20,12 @@ RDEPEND="sys-cluster/cluster-glue
 	dev-libs/glib:2
 	virtual/ssh
 	net-libs/gnutls
-	snmp? ( net-analyzer/net-snmp )	"
+	snmp? ( net-analyzer/net-snmp )
+"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	dev-lang/swig"
+	dev-lang/swig
+	doc? ( dev-libs/libxslt app-text/docbook-xsl-stylesheets )"
 
 PDEPEND="sys-cluster/resource-agents"
 
