@@ -1,0 +1,13 @@
+# ChangeLog for media-plugins/gst-plugins-soundtouch
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-soundtouch/ChangeLog,v 1.1 2011/10/13 06:43:29 leio Exp $
+
+*gst-plugins-soundtouch-0.10.22 (13 Oct 2011)
+
+  13 Oct 2011; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-soundtouch-0.10.22.ebuild, +metadata.xml:
+  Add the soundtouch plugin from gst-plugins-bad for BPM (beats-per-minute)
+  detection and pitch controller element. The bpmdetect element is particularly
+  needed by media-sound/banshee for its automatic beats-per-minute detection
+  feature. Bug 284036
+
