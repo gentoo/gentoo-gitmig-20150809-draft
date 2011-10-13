@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.1.0.ebuild,v 1.2 2011/10/13 06:55:00 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.1.0.ebuild,v 1.3 2011/10/13 21:51:21 phajdan.jr Exp $
 
 EAPI="4"
 #inherit eutils flag-o-matic ssl-cert
@@ -14,7 +14,7 @@ SRC_URI="ftp://ftp.qualcomm.com/eudora/servers/unix/popper/${MY_P}.tar.gz"
 
 LICENSE="qpopper ISOC-rfc"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~sparc x86"
 IUSE="debug drac gdbm mailbox pam ssl xinetd apop"
 
 DEPEND="virtual/mta
