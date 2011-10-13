@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.120 2011/10/08 06:20:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.121 2011/10/13 21:54:00 phajdan.jr Exp $
+
+  13 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gtk-gnutella-0.97.1.ebuild:
+  x86 stable wrt bug #387007
 
   08 Oct 2011; Hans de Graaff <graaff@gentoo.org> -gtk-gnutella-0.96.9.ebuild:
   Remove old version.
