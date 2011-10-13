@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/iksemel
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/iksemel/ChangeLog,v 1.13 2009/12/26 12:58:36 pva Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/iksemel/ChangeLog,v 1.14 2011/10/13 12:06:35 naota Exp $
+
+  13 Oct 2011; Naohiro Aota <naota@gentoo.org> iksemel-1.4.ebuild:
+  Add ~x86-fbsd
 
 *iksemel-1.4 (26 Dec 2009)
 
