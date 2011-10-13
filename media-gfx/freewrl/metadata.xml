@@ -2,12 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-	<email>patrick@gentoo.org</email>
-	<name>Patrick Lauer (proxy)</name>
-</maintainer>
-<maintainer>
-	<email>ian@aerobiology.ca</email>
-	<name>Ian Stakenvicius (proxy-maintainer)</name>
+	<email>axs@gentoo.org</email>
+	<name>Ian Stakenvicius</name>
 </maintainer>
 <use> 
         <flag name='glew'>Enable glew extensions</flag>
@@ -16,5 +12,4 @@
         <flag name='osc'>Allows for OSC-based control and communication between multiple freewrl instances</flag>
         <flag name='java'>Build and install java EAI/SAI support library</flag>
 </use>
-
 </pkgmetadata>
