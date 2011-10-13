@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-3.99.5_p02.ebuild,v 1.1 2011/08/05 19:08:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-3.99.5_p02.ebuild,v 1.2 2011/10/13 19:34:36 ssuominen Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -27,6 +27,12 @@ S=${WORKDIR}/${MY_P/_/-}
 
 DOCS=( ChangeLog NEWS doc/README.txt )
 
+src_prepare() {
+	# Fix building with recent pcsc-lite
+	has_version '>=sys-apps/pcsc-lite-1.7.3' && \
+		sed -i -e 's:FEATURE_MCT_READERDIRECT:FEATURE_MCT_READER_DIRECT:' ifd/ifd.cpp
+}
+
 src_configure() {
 	econf \
 		--mandir=/usr/share/man/man8 \
@@ -40,12 +46,6 @@ src_configure() {
 
 src_install() {
 	default
-
-# FIXME: Should we install udev rules (from 3.3.5-r2) and do they need updating?
-#	insinto /lib/udev
-#	doins "${FILESDIR}"/cyberjack.sh
-#	insinto /lib/udev/rules.d
-#	newins "${FILESDIR}"/cyberjack.rules-r1 99-cyberjack-rules
 
 	rm -f "${D}"usr/lib*/cyberjack/pcscd_init.diff
 	find "${D}"usr -name '*.la' -exec rm -f {} +
