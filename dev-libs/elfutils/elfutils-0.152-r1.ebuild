@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.152-r1.ebuild,v 1.1 2011/10/05 02:28:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.152-r1.ebuild,v 1.2 2011/10/13 22:40:08 vapier Exp $
 
 EAPI="3"
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Libraries/utilities to handle ELF objects (drop in replacement for libelf)"
 HOMEPAGE="https://fedorahosted.org/elfutils/"
@@ -36,15 +36,48 @@ src_prepare() {
 	use test || sed -i -e 's: tests::' Makefile.in #226349
 	# some patches touch both configure and configure.ac
 	find -type f -exec touch -r configure {} +
+	mkdir -p ${CBUILD} ${CHOST}
+}
+
+econf_build() {
+	CFLAGS=${BUILD_CFLAGS:--O1 -pipe} \
+	CXXFLAGS=${BUILD_CXXFLAGS:--O1 -pipe} \
+	CPPFLAGS=${BUILD_CPPFLAGS} \
+	LDFLAGS=${BUILD_LDFLAGS} \
+	CC=$(tc-getBUILD_CC) \
+	LD=$(tc-getBUILD_LD) \
+	econf --host=${CBUILD} "$@"
 }
 
 src_configure() {
+	ECONF_SOURCE=${S}
+
+	if tc-is-cross-compiler ; then
+		pushd ${CBUILD} >/dev/null
+		econf_build --disable-nls --without-{zlib,bzlib,lzma}
+		popd >/dev/null
+	fi
+
+	pushd ${CHOST} >/dev/null
 	econf \
 		$(use_enable nls) \
 		--program-prefix="eu-" \
 		$(use_with zlib) \
 		$(use_with bzip2 bzlib) \
 		$(use_with lzma)
+	popd >/dev/null
+}
+
+src_compile() {
+	if tc-is-cross-compiler ; then
+		pushd ${CBUILD} >/dev/null
+		emake -C lib || die
+		emake -C libcpu || die
+		popd >/dev/null
+		ln ${CBUILD}/libcpu/i386_gendis ${CHOST}/libcpu/ || die
+	fi
+
+	emake -C ${CHOST} || die
 }
 
 src_test() {
@@ -54,6 +87,6 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake -C ${CHOST} DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS NOTES README THANKS TODO
 }
