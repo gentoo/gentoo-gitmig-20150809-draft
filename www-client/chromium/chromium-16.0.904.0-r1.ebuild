@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-16.0.904.0-r1.ebuild,v 1.1 2011/10/12 02:39:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-16.0.904.0-r1.ebuild,v 1.2 2011/10/13 03:48:58 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -57,13 +57,11 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	>=dev-util/gperf-3.0.3
 	>=dev-util/pkgconfig-0.23
+	dev-python/simplejson
 	>=sys-devel/bison-2.4.3
 	sys-devel/flex
 	>=sys-devel/make-3.81-r2
-	test? (
-		dev-python/pyftpdlib
-		dev-python/simplejson
-	)"
+	test? ( dev-python/pyftpdlib )"
 RDEPEND+="
 	x11-misc/xdg-utils
 	virtual/ttf-fonts"

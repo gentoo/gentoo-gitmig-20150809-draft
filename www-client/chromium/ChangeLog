@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.465 2011/10/12 23:24:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.466 2011/10/13 03:48:58 floppym Exp $
+
+  13 Oct 2011; Mike Gilbert <floppym@gentoo.org> chromium-16.0.904.0-r1.ebuild,
+  chromium-16.0.904.0-r2.ebuild:
+  DEPEND on dev-python/simplejson unconditionally. Bug 386861 by Andrew Waters.
 
 *chromium-15.0.874.92 (12 Oct 2011)
 
