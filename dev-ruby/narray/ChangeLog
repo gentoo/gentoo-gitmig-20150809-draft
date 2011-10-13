@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/narray
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.46 2011/10/11 16:20:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.47 2011/10/13 21:33:01 phajdan.jr Exp $
+
+  13 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> narray-0.6.0.1.ebuild:
+  x86 stable wrt bug #386135
 
   11 Oct 2011; Jeroen Roovers <jer@gentoo.org> narray-0.6.0.1.ebuild:
   Stable for HPPA (bug #386135).
