@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/split2flac/split2flac-0.1_pre20110712.ebuild,v 1.1 2011/10/13 14:39:24 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/split2flac/split2flac-0.1_pre20110712.ebuild,v 1.2 2011/10/13 18:47:09 maksbotan Exp $
 
 EAPI="4"
 
@@ -34,7 +34,7 @@ RDEPEND="
 S="${WORKDIR}"
 
 src_unpack() {
-	cp "${DISTDIR}"/${PN}-${PV}.sh "${WORKDIR}"/${PN}.sh
+	cp "${DISTDIR}"/${PN}-${PV##*_pre}.sh "${WORKDIR}"/${PN}.sh
 }
 
 src_install() {
