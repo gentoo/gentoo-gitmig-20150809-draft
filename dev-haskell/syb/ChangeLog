@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/syb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/syb/ChangeLog,v 1.6 2011/08/03 12:29:59 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/syb/ChangeLog,v 1.7 2011/10/13 11:49:15 naota Exp $
+
+  13 Oct 2011; Naohiro Aota <naota@gentoo.org> syb-0.3.2.ebuild:
+  Add ~x86-fbsd
 
   03 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> syb-0.3.2.ebuild:
   marked ~ppc (split out of ghc-6 to separate package)
