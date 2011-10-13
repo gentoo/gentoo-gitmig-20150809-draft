@@ -1,10 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.13 2011/10/12 18:18:48 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.14 2011/10/13 02:17:14 floppym Exp $
 
-EAPI="2"
+EAPI="3"
 
-inherit eutils multilib pax-utils subversion toolchain-funcs
+PYTHON_DEPEND="2:2.6"
+
+inherit eutils multilib pax-utils python subversion toolchain-funcs
 
 DESCRIPTION="Google's open source JavaScript engine"
 HOMEPAGE="http://code.google.com/p/v8"
@@ -17,6 +19,10 @@ IUSE="readline"
 
 RDEPEND="readline? ( >=sys-libs/readline-6.1 )"
 DEPEND="${RDEPEND}"
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_unpack() {
 	subversion_src_unpack
