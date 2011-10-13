@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.1.1-r1.ebuild,v 1.2 2011/09/25 01:45:34 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.1.1-r1.ebuild,v 1.3 2011/10/13 19:25:12 alexxy Exp $
 
 EAPI="2"
 
-inherit flag-o-matic eutils multilib
+inherit flag-o-matic eutils multilib toolchain-funcs
 
 XEN_EXTFILES_URL="http://xenbits.xensource.com/xen-extfiles"
 OCAML_URL=http://caml.inria.fr/pub/distrib
@@ -91,14 +91,16 @@ src_compile() {
 		append-flags -fno-strict-overflow
 	fi
 
-	emake -C tools/include || die "prepare libelf headers failed"
+	emake CC=$(tc-getCC) LD=$(tc-getLD) -C tools/include || die "prepare libelf headers failed"
 
 	if use x86; then
-		emake -j1 XEN_TARGET_ARCH="x86_32" -C stubdom pv-grub || \
+		emake -j1 CC=$(tc-getCC) LD=$(tc-getLD) \
+		XEN_TARGET_ARCH="x86_32" -C stubdom pv-grub || \
 		die "compile pv-grub_x86_32 failed"
 	fi
 	if use amd64; then
-		emake -j1 XEN_TARGET_ARCH="x86_64" -C stubdom pv-grub || \
+		emake -j1 CC=$(tc-getCC) LD=$(tc-getLD) \
+		XEN_TARGET_ARCH="x86_64" -C stubdom pv-grub || \
 		die "compile pv-grub_x86_64 failed"
 		if use multilib; then
 			multilib_toolchain_setup x86
