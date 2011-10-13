@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/split2flac/split2flac-20110712.ebuild,v 1.1 2011/10/11 16:56:37 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/split2flac/split2flac-0.1_pre20110712.ebuild,v 1.1 2011/10/13 14:39:24 maksbotan Exp $
 
 EAPI="4"
 
 DESCRIPTION="sh script to split one big APE/FLAC/WV/WAV audio image with CUE sheet into tracks"
 HOMEPAGE="https://code.google.com/p/split2flac/"
-SRC_URI="http://dev.gentoo.org/~maksbotan/${PN}-${PV}.sh"
+SRC_URI="http://dev.gentoo.org/~maksbotan/${PN}-${PV##*_pre}.sh"
 
 LICENSE="MIT"
 SLOT="0"
