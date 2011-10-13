@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.1.1-r2.ebuild,v 1.2 2011/09/25 01:45:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.1.1-r2.ebuild,v 1.3 2011/10/13 19:21:06 alexxy Exp $
 
 EAPI="4"
 
@@ -73,6 +73,13 @@ src_prepare() {
 			-e 's/CFLAGS\(.*\)=\(.*\)-O2\(.*\)/CFLAGS\1=\2\3/' \
 			-i {} \;
 	fi
+
+	# remove -Werror for gcc-4.6's sake
+	find ${S} -name 'Makefile*' -o -name '*.mk' -o -name 'common.make' | \
+		xargs sed -i 's/ *-Werror */ /'
+	# not strictly necessary to fix this
+	sed -i 's/, "-Werror"//' ${S}/tools/python/setup.py
+
 	# Add sccurity fix bug #379241
 	epatch "${FILESDIR}/${P}-iommu_sec_fix.patch"
 }
