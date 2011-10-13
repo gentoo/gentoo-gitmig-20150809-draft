@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/muttprint
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.43 2011/05/21 19:40:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/ChangeLog,v 1.44 2011/10/13 15:13:08 c1pher Exp $
+
+  13 Oct 2011; Dane Smith <c1pher@gentoo.org> metadata.xml:
+  Updated maintainer info to reflect new proxy maintainer.
 
 *muttprint-0.72d-r2 (21 May 2011)
 
