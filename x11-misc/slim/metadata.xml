@@ -3,12 +3,7 @@
 <pkgmetadata>
 	<herd>desktop-misc</herd>
 	<maintainer>
-		<email>darkside@gentoo.org</email>
-	</maintainer>
-	<maintainer>
-		<email>ian@aerobiology.ca</email>
-		<name>Ian Stakenvicius</name>
-		<description>Please CC on bugs</description>
+		<email>axs@gentoo.org</email>
 	</maintainer>
 </pkgmetadata>
 
