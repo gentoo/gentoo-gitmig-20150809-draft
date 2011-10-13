@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.19.12.ebuild,v 1.1 2011/10/10 11:38:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.19.12.ebuild,v 1.2 2011/10/13 16:02:41 jer Exp $
 
 EAPI=4
 
@@ -28,6 +28,7 @@ src_prepare() {
 		gentoorc.in || die "Fixing icon path failed."
 	sed -i \
 		-e '/GTK_DISABLE_DEPRECATED/ d' \
+		-e '/^GENTOO_CFLAGS=/s|".*"|"${CFLAGS}"|g' \
 		configure.in || die "Fixing configure.in failed" #357343
 	eautoreconf
 }

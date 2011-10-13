@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.95 2011/10/10 11:38:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.96 2011/10/13 16:02:41 jer Exp $
+
+  13 Oct 2011; Jeroen Roovers <jer@gentoo.org> gentoo-0.19.10.ebuild,
+  gentoo-0.19.12.ebuild:
+  Respect CFLAGS thanks to ago (bug #386639).
 
 *gentoo-0.19.12 (10 Oct 2011)
 
