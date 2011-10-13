@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/quvi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/ChangeLog,v 1.32 2011/10/10 07:36:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/ChangeLog,v 1.33 2011/10/13 21:39:58 phajdan.jr Exp $
+
+  13 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> quvi-0.2.19.ebuild:
+  x86 stable wrt bug #386629
 
 *quvi-0.4.0 (10 Oct 2011)
 
