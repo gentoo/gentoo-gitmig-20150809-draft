@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/foobillard-3.0a.ebuild,v 1.15 2011/02/21 20:28:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/foobillard-3.0a.ebuild,v 1.16 2011/10/13 08:00:07 tupone Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
-IUSE="sdl"
+IUSE="sdl video_cards_nvidia"
 
 RDEPEND="x11-libs/libXaw
 	x11-libs/libXi
@@ -22,8 +22,7 @@ RDEPEND="x11-libs/libXaw
 	media-libs/libpng
 	sdl? ( media-libs/libsdl )
 	!sdl? ( media-libs/freeglut )"
-DEPEND="${RDEPEND}
-	app-admin/eselect-opengl"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch \
@@ -36,16 +35,11 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf
-	[[ "$(eselect opengl show)" == 'nvidia' ]] \
-		&& myconf='--enable-nvidia=yes' \
-		|| myconf='--enable-nvidia=no'
-
 	egamesconf \
 		--enable-sound \
 		$(use_enable sdl SDL) \
 		$(use_enable !sdl glut) \
-		${myconf}
+		$(use_enable video_cards_nvidia nvidia)
 }
 
 src_install() {
