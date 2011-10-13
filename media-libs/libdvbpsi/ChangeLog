@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvbpsi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.47 2011/10/12 14:35:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.48 2011/10/13 21:43:50 phajdan.jr Exp $
+
+  13 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> libdvbpsi-0.2.1.ebuild:
+  x86 stable wrt bug #386701
 
   12 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> libdvbpsi-0.2.1.ebuild:
   Remove forced optimization level from configure wrt #386701, Comment #1 by
