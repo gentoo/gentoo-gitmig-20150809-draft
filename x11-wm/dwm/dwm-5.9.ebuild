@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-5.9.ebuild,v 1.3 2011/10/09 11:21:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/dwm/dwm-5.9.ebuild,v 1.4 2011/10/13 21:32:10 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://dl.suckless.org/dwm/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
 IUSE="xinerama"
 
 DEPEND="x11-libs/libX11
