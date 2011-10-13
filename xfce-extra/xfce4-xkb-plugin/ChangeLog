@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-xkb-plugin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xkb-plugin/ChangeLog,v 1.29 2011/05/22 20:37:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xkb-plugin/ChangeLog,v 1.30 2011/10/13 14:24:57 ssuominen Exp $
+
+  13 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-xkb-plugin-0.5.4.1.ebuild:
+  Import missing sk.po from git wrt #386975 by Agostino Sarubbo
 
 *xfce4-xkb-plugin-0.5.4.1 (22 May 2011)
 
