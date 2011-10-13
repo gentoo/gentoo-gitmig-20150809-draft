@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13131 2011/10/12 07:38:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13132 2011/10/13 15:01:33 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -233,14 +233,10 @@ net-ftp/ftpcube
 
 # Mike Gilbert <floppym@gentoo.org> (15 Sep 2011)
 # Arfrever Frehtes Taifersar Arahesis <arfrever.fta@gmail.com> (15 Sep 2011)
-# ******************************************************************************************
-# Zope Toolkit, Zope and other Zope-related packages are now maintained in Progress Overlay,
-# which provides more Python-related features than the main tree.
-# You should switch to Progress Overlay.
-# You can use 'layman -a progress' to install Progress Overlay.
+# Zope Toolkit, Zope and other Zope-related packages are now maintained in
+# Progress Overlay. Use 'layman -a progress' to install Progress Overlay.
 # See http://www.gentoo.org/proj/en/overlays/userguide.xml for more information.
 # These packages will be removed from the main tree on 2012-03-01.
-# ******************************************************************************************
 app-admin/zope-config
 app-admin/zprod-manager
 dev-python/manuel
