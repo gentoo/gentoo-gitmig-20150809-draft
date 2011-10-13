@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/iw-3.1.ebuild,v 1.1 2011/09/09 23:17:31 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/iw-3.1.ebuild,v 1.2 2011/10/13 23:04:46 vapier Exp $
 
 EAPI="2"
 
@@ -19,13 +19,11 @@ RDEPEND=">=dev-libs/libnl-1.1"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-CC=$(tc-getCC)
-LD=$(tc-getLD)
-
 src_prepare() {
 	epatch "${FILESDIR}/${P}_libnl-3-support.patch"
+	tc-export CC LD
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "Failed to install"
+	emake install DESTDIR="${D}" || die
 }
