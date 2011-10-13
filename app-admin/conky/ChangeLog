@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.165 2011/08/06 23:14:18 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.166 2011/10/13 18:45:04 billie Exp $
+
+  13 Oct 2011; Daniel Pielmeier <billie@gentoo.org> -conky-1.8.0-r1.ebuild,
+  -files/conky-1.8.0-audacious-2.3.patch, -files/conky-1.8.0-ncurses.patch:
+  Remove vulnerable version, bug #354061.
 
   06 Aug 2011; Daniel Pielmeier <billie@gentoo.org> conky-1.8.0-r1.ebuild,
   conky-1.8.1-r2.ebuild, +files/conky-1.8.1-maxinterfaces.patch:
