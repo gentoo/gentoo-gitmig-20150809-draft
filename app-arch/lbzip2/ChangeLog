@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/lbzip2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.20 2011/09/06 11:47:35 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.21 2011/10/13 08:22:28 chainsaw Exp $
+
+  13 Oct 2011; Tony Vroon <chainsaw@gentoo.org> lbzip2-0.23-r2.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah "Armageddon" El Lazkani in bug #370685.
 
   06 Sep 2011; Naohiro Aota <naota@gentoo.org> lbzip2-0.23-r2.ebuild:
   Add ~x86-fbsd. Bug #370685
