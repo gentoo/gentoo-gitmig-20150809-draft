@@ -30,7 +30,7 @@
  			 ha.cf.5 authkeys.5
  
 -STYLESHEET_PREFIX 	?= http://docbook.sourceforge.net/release/xsl/current
-+STYLESHEET_PREFIX 	?= /usr/share/sgml/docbook/xsl-stylesheets 
++STYLESHEET_PREFIX 	?= /usr/share/sgml/docbook/xsl-stylesheets
  MANPAGES_STYLESHEET 	?= $(STYLESHEET_PREFIX)/manpages/docbook.xsl
  HTML_STYLESHEET 	?= $(STYLESHEET_PREFIX)/xhtml/docbook.xsl
  FO_STYLESHEET 		?= $(STYLESHEET_PREFIX)/fo/docbook.xsl

@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.95 2011/06/24 09:40:13 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.96 2011/10/13 08:17:58 xarthisius Exp $
+
+  13 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> files/3.0.4-docs.patch:
+  Remove trailing whitespace wrt bug 386989 by Agostino Sarubbo
+  <ago@autistici.org>
 
 *heartbeat-3.0.5 (24 Jun 2011)
 
