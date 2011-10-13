@@ -11,7 +11,7 @@ HOMEPAGE="https://fedorahosted.org/liberation-fonts"
 SRC_URI="!fontforge? ( https://fedorahosted.org/releases/l/i/${PN}/${PN}-ttf-${PV}.tar.gz )
 fontforge? ( https://fedorahosted.org/releases/l/i/${PN}/${P}.tar.gz )"
 
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="GPL-2-with-exceptions"
 IUSE="fontforge X"
