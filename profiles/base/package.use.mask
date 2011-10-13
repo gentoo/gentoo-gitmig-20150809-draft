@@ -1,9 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.273 2011/10/12 18:03:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.274 2011/10/13 08:10:56 a3li Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Alex Legler <a3li@gentoo.org> (13 Oct 2011)
+# The Ubuntu ALSA patch for tvtime is still somewhat unstable
+# c.f. bug 384215
+media-tv/tvtime alsa
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (12 Oct 2011)
 # Upstream support not yet ready:

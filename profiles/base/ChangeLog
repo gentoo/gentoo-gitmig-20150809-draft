@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.301 2011/10/03 20:33:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.302 2011/10/13 08:10:56 a3li Exp $
+
+  13 Oct 2011; Alex Legler <a3li@gentoo.org> package.use.mask:
+  Mask alsa USE flag for upcoming tvtime packages
 
   03 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> use.mask:
   Update mask message for USE=dxr3"
