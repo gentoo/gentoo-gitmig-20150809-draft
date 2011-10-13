@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.466 2011/10/13 03:48:58 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.467 2011/10/13 04:11:57 floppym Exp $
+
+  13 Oct 2011; Mike Gilbert <floppym@gentoo.org> chromium-9999-r1.ebuild:
+  Don't depend on scons; we are using the bundled copy.
 
   13 Oct 2011; Mike Gilbert <floppym@gentoo.org> chromium-16.0.904.0-r1.ebuild,
   chromium-16.0.904.0-r2.ebuild:
