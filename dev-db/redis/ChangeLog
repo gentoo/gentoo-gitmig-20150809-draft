@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/redis
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.23 2011/10/09 11:35:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/ChangeLog,v 1.24 2011/10/13 21:26:43 phajdan.jr Exp $
+
+  13 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> redis-2.2.12.ebuild:
+  x86 stable wrt bug #386051
 
   09 Oct 2011; Markos Chandras <hwoarang@gentoo.org> redis-2.2.12.ebuild:
   Stable on amd64 wrt bug #386051
