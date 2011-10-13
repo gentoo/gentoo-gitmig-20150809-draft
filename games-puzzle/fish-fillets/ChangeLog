@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/fish-fillets
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/ChangeLog,v 1.53 2011/10/12 10:11:06 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/fish-fillets/ChangeLog,v 1.54 2011/10/13 21:39:14 phajdan.jr Exp $
+
+  13 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  fish-fillets-1.0.1.ebuild:
+  x86 stable wrt bug #386585
 
   12 Oct 2011; Tony Vroon <chainsaw@gentoo.org> fish-fillets-1.0.1.ebuild:
   Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney &
