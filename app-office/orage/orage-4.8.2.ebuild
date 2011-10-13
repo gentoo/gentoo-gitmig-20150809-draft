@@ -1,13 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/orage/orage-4.8.2.ebuild,v 1.1 2011/09/13 14:34:12 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/orage/orage-4.8.2.ebuild,v 1.2 2011/10/13 13:56:22 ssuominen Exp $
 
 EAPI=4
 inherit flag-o-matic xfconf
 
 DESCRIPTION="Xfce's calendar suite (with panel plug-in)"
 HOMEPAGE="http://www.xfce.org/projects/orage/"
-SRC_URI="mirror://xfce/src/apps/${PN}/4.8/${P}.tar.bz2"
+SRC_URI="mirror://xfce/src/apps/${PN}/4.8/${P}.tar.bz2
+	http://dev.gentoo.org/~ssuominen/${P}-hr.po.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -38,4 +39,9 @@ pkg_setup() {
 		)
 
 	DOCS=( AUTHORS ChangeLog NEWS README TODO )
+}
+
+src_prepare() {
+	mv -vf "${WORKDIR}"/${P}-hr.po po/hr.po || die
+	xfconf_src_prepare
 }
