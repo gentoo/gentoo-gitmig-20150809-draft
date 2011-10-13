@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.98 2011/10/05 18:59:29 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.99 2011/10/13 19:30:37 alexxy Exp $
+
+  13 Oct 2011; Alexey Shvetsov <alexxy@gentoo.org> -xen-tools-3.4.2.ebuild,
+  xen-tools-4.1.1-r5.ebuild, files/xendomains.initd-r1:
+  Sabayon Tinderbox build failuire, fixes bug #377557. patch by Tobias Heinlein
+  aka keytoaster, full diff prepared by Ian Delaney. Use toolchain function
+  instead of calling LD directly, copy fix from bug #384359, fix to invoke
+  correct compiler, copy from bug #383973, patches by Ian Delaney aka idella4
 
   05 Oct 2011; Alexey Shvetsov <alexxy@gentoo.org> xen-tools-3.4.2-r5.ebuild,
   xen-tools-4.1.1-r5.ebuild, metadata.xml:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r5.ebuild,v 1.4 2011/10/05 18:59:29 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r5.ebuild,v 1.5 2011/10/13 19:30:37 alexxy Exp $
 
 EAPI="3"
 
@@ -18,7 +18,7 @@ else
 	S="${WORKDIR}/xen-${PV}"
 fi
 
-inherit flag-o-matic eutils multilib python ${live_eclass}
+inherit flag-o-matic eutils multilib python toolchain-funcs ${live_eclass}
 
 DESCRIPTION="Xend daemon and tools"
 HOMEPAGE="http://xen.org/"
@@ -205,7 +205,7 @@ src_compile() {
 	fi
 
 	unset LDFLAGS
-	emake -C tools ${myopt} || die "compile failed"
+	emake CC=$(tc-getCC) LD=$(tc-getLD) -C tools ${myopt} || die "compile failed"
 
 	if use doc; then
 		sh ./docs/check_pkgs || die "package check failed"
@@ -217,11 +217,15 @@ src_compile() {
 }
 
 src_install() {
+	# Override auto-detection in the build system, bug #382573
+	export INITD_DIR=/etc/init.d
+	export CONFIG_LEAF_DIR=default
+
 	make DESTDIR="${D}" DOCDIR="/usr/share/doc/${PF}" XEN_PYTHON_NATIVE_INSTALL=y install-tools  \
 		|| die "install failed"
 
 	# Remove RedHat-specific stuff
-	rm -r "${D}"/etc/init.d/xen* || die
+	rm -r "${D}"/etc/init.d/xen* "${D}"/etc/default || die
 
 	# uncomment lines in xl.conf
 	sed -e 's:^#autoballoon=1:autoballoon=1:' \
