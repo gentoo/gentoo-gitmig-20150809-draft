@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.157 2011/09/09 15:09:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.158 2011/10/13 16:59:41 pva Exp $
+
+  13 Oct 2011; Peter Volkov <pva@gentoo.org> fontconfig-2.8.0-r2.ebuild:
+  Add static-libs USE flag, bug #378313 thank Thomas Capricelli for report.
 
 *fontconfig-2.8.0-r2 (09 Sep 2011)
 
