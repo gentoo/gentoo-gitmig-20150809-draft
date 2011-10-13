@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/portpeek-2.0.11.ebuild,v 1.1 2011/10/11 14:44:55 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/portpeek-2.0.12.ebuild,v 1.1 2011/10/13 19:05:56 mpagano Exp $
 
 EAPI="2"
 PYTHON_DEPEND="3"

@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.120 2011/10/11 14:44:55 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.121 2011/10/13 19:05:56 mpagano Exp $
+
+*portpeek-2.0.12 (13 Oct 2011)
+
+  13 Oct 2011; Michael Pagano <mpagano@gentoo.org> -portpeek-2.0.11.ebuild,
+  +portpeek-2.0.12.ebuild:
+  Remove broken version. Add missing global variable overlay_list
 
 *portpeek-2.0.11 (11 Oct 2011)
 
