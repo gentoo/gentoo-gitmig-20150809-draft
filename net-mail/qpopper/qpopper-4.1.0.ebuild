@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.1.0.ebuild,v 1.1 2011/09/11 14:05:17 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.1.0.ebuild,v 1.2 2011/10/13 06:55:00 pva Exp $
 
 EAPI="4"
 #inherit eutils flag-o-matic ssl-cert
@@ -18,13 +18,11 @@ KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="debug drac gdbm mailbox pam ssl xinetd apop"
 
 DEPEND="virtual/mta
+	>=net-mail/mailbase-0.00-r8
 	xinetd? ( virtual/inetd )
 	gdbm? ( sys-libs/gdbm )
 	drac? ( mail-client/drac )
-	pam? (
-		>=sys-libs/pam-0.72
-		>=net-mail/mailbase-0.00-r8
-	)
+	pam? ( >=sys-libs/pam-0.72 )
 	ssl? ( dev-libs/openssl )"
 RDEPEND="${DEPEND}"
 
@@ -55,6 +53,7 @@ src_configure() {
 		--enable-popuid=pop \
 		--enable-log-login \
 		--enable-specialauth \
+		--enable-spool-dir=/var/spool/mail \
 		--enable-log-facility=LOG_MAIL
 
 	if ! use gdbm; then

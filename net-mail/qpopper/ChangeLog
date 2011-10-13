@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/qpopper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.33 2011/09/11 14:05:17 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.34 2011/10/13 06:55:00 pva Exp $
+
+  13 Oct 2011; Peter Volkov <pva@gentoo.org> qpopper-4.1.0.ebuild:
+  Fixed build issue: specify spool-dir and always depend on mailbase, bug
+  #386991 wrt Agostino Sarubbo.
 
 *qpopper-4.1.0 (11 Sep 2011)
 
