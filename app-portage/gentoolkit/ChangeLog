@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.233 2011/10/12 10:31:26 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.234 2011/10/13 21:41:46 phajdan.jr Exp $
+
+  13 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gentoolkit-0.3.0.4-r4.ebuild:
+  x86 stable wrt bug #386679
 
   12 Oct 2011; Tony Vroon <chainsaw@gentoo.org> gentoolkit-0.3.0.4-r4.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
