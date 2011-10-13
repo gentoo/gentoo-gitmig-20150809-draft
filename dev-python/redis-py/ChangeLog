@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/redis-py
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/redis-py/ChangeLog,v 1.10 2011/10/09 13:38:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/redis-py/ChangeLog,v 1.11 2011/10/13 21:26:09 phajdan.jr Exp $
+
+  13 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> redis-py-2.4.9.ebuild:
+  x86 stable wrt bug #386045
 
   09 Oct 2011; Markos Chandras <hwoarang@gentoo.org> redis-py-2.4.9.ebuild:
   Stable on amd64 wrt bug #386045
