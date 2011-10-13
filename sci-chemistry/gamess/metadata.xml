@@ -8,6 +8,7 @@
 	<herd>sci-chemistry</herd>
 	<use>
 		<flag name='neo'>Enable NEO for nuclear basis support</flag>
+		<flag name='pax_kernel'>Make this package work on PAX kernels</flag>
 		<flag name='qmmm-tinker'>Enable tinker qmmm code</flag>
 	</use>
 </pkgmetadata>

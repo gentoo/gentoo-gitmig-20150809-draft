@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20101001.3-r1.ebuild,v 1.2 2011/10/08 11:50:31 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20110811.1.ebuild,v 1.1 2011/10/13 12:00:38 alexxy Exp $
 
 EAPI="4"
 
-inherit eutils fortran-2 toolchain-funcs flag-o-matic
+inherit eutils fortran-2 flag-o-matic pax-utils toolchain-funcs
 
 DESCRIPTION="A powerful quantum chemistry package"
 LICENSE="gamess"
@@ -20,12 +20,11 @@ SLOT="0"
 # new version comes out the stable version will be useless since
 # users can not get at the tarball any more.
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="hardened mpi neo qmmm-tinker"
+IUSE="mpi neo pax_kernel qmmm-tinker"
 
 CDEPEND="
 	virtual/fortran
 	app-shells/tcsh
-	hardened? ( sys-apps/paxctl )
 	mpi? ( virtual/mpi )
 	virtual/blas"
 DEPEND="${CDEPEND}
@@ -38,7 +37,7 @@ S="${WORKDIR}/${PN}"
 RESTRICT="fetch"
 
 GAMESS_DOWNLOAD="http://www.msg.ameslab.gov/GAMESS/License_Agreement.html"
-GAMESS_VERSION="1 OCT 2010 (R3)"
+GAMESS_VERSION="1 AUG 2011 (R1)"
 
 pkg_nofetch() {
 	echo
@@ -120,7 +119,7 @@ src_prepare() {
 
 	# for hardened-gcc let't turn off ssp, since it breakes
 	# a few routines
-	if use hardened && [[ ${FCOMP} == g77 ]]; then
+	if use pax_kernel && [[ ${FCOMP} == g77 ]]; then
 		FFLAGS="${FFLAGS} -fno-stack-protector-all"
 	fi
 
@@ -136,7 +135,6 @@ src_prepare() {
 
 	# enable NEO
 	if use neo; then
-		epatch "${FILESDIR}/${PN}-neo-fix.patch"
 		sed -e "s:NEO=false:NEO=true:" -i compall lked || \
 			die "Failed to enable NEO code"
 	else
@@ -233,9 +231,8 @@ src_compile() {
 
 	# for hardened (PAX) users and ifc we need to turn
 	# MPROTECT off
-	if [[ ${FCOMP} == "ifort" ]] && use hardened; then
-		/sbin/paxctl -PemRxS actvte.x 2> /dev/null || \
-			die "paxctl failed on actvte.x"
+	if [[ ${FCOMP} == "ifort" ]] && use pax_kernel; then
+		pax-mark -PemRxS actvte.x
 	fi
 
 	# build gamess
@@ -252,9 +249,8 @@ src_compile() {
 
 	# for hardened (PAX) users and ifc we need to turn
 	# MPROTECT off
-	if [[ ${FCOMP} == "ifort" ]] && use hardened; then
-		/sbin/paxctl -PemRxS ${PN}.00.x 2> /dev/null || \
-			die "paxctl failed on actvte.x"
+	if [[ ${FCOMP} == "ifort" ]] && use pax_kernel; then
+		pax-mark -PemRxS ${PN}.00.x
 	fi
 }
 
