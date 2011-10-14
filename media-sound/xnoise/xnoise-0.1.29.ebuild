@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-0.1.26.ebuild,v 1.1 2011/07/08 16:31:16 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xnoise/xnoise-0.1.29.ebuild,v 1.1 2011/10/14 16:46:23 angelos Exp $
 
 EAPI=4
-inherit fdo-mime gnome2-utils
+inherit autotools eutils fdo-mime gnome2-utils
 
 DESCRIPTION="A media player for Gtk+ with a slick GUI, great speed and lots of
 features"
@@ -34,6 +34,11 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 DOCS=( AUTHORS README )
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-disable-deprecated.patch
+	eautoreconf
+}
 
 src_configure() {
 	econf \
