@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13134 2011/10/14 11:30:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13135 2011/10/14 16:53:02 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -206,11 +206,6 @@ www-plugins/weave
 # media-video/vdr-xvdr-9999, masked git live ebuild
 =media-plugins/vdr-xvdr-9999
 =media-plugins/xbmc-addon-vdr-9999
-
-# Markos Chandras <hwoarang@gentoo.org> (17 Sep 2011)
-# Very unstable at the moment. Not ready for ~testing
-# tree. Use with caution
-x11-misc/lightdm
 
 # Markos Chandras <hwoarang@gentoo.org> (17 Sep 2011)
 # Masked for testing for as long as it takes. Old QA problems
