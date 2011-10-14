@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.24 2011/09/23 07:56:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools-utils.eclass,v 1.25 2011/10/14 20:28:29 mgorny Exp $
 
 # @ECLASS: autotools-utils.eclass
 # @MAINTAINER:
@@ -89,7 +89,7 @@ case ${EAPI:-0} in
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
 
-inherit autotools base eutils
+inherit autotools base eutils libtool
 
 EXPORT_FUNCTIONS src_prepare src_configure src_compile src_install src_test
 
@@ -212,6 +212,7 @@ autotools-utils_src_prepare() {
 	debug-print-function ${FUNCNAME} "$@"
 
 	base_src_prepare
+	elibtoolize --patch-only
 }
 
 # @FUNCTION: autotools-utils_src_configure
