@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_jk
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.68 2010/10/24 14:43:15 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.69 2011/10/14 16:58:23 beandog Exp $
+
+*mod_jk-1.2.32 (14 Oct 2011)
+
+  14 Oct 2011; Steve Dibb <beandog@gentoo.org> +mod_jk-1.2.32.ebuild:
+  Version bump, bug 355151
 
   24 Oct 2010; Brent Baude <ranger@gentoo.org> mod_jk-1.2.30.ebuild:
   Marking mod_jk-1.2.30 ppc for bug 315561
