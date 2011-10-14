@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.3-r3.ebuild,v 1.6 2011/10/03 18:19:00 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.6.3-r3.ebuild,v 1.7 2011/10/14 21:53:37 dilfridge Exp $
 
 EAPI=4
 
@@ -90,7 +90,6 @@ RDEPEND="${COMMONDEPEND}
 	!dev-libs/kunitconversion
 	!x11-libs/qt-phonon
 	!<=kde-misc/kdnssd-avahi-0.1.2:0
-	!<=kde-misc/knetworkmanager-4.4.0_p20100820
 	>=app-crypt/gnupg-2.0.11
 	app-misc/ca-certificates
 	$(add_kdebase_dep kde-env)
