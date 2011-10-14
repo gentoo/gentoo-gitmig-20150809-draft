@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.121 2011/10/13 21:54:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.122 2011/10/14 21:48:18 chainsaw Exp $
+
+  14 Oct 2011; Tony Vroon <chainsaw@gentoo.org> gtk-gnutella-0.97.1.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
+  "idella4" Delaney in bug #387007.
 
   13 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gtk-gnutella-0.97.1.ebuild:
