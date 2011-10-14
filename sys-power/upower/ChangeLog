@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/upower
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.64 2011/10/10 21:37:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/upower/ChangeLog,v 1.65 2011/10/14 20:31:25 ssuominen Exp $
+
+  14 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> -upower-0.9.13.ebuild:
+  old
 
   10 Oct 2011; Markus Meier <maekke@gentoo.org> upower-0.9.13-r1.ebuild:
   arm stable, bug #385233
