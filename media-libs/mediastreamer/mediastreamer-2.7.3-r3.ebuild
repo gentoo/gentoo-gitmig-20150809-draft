@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.7.3-r3.ebuild,v 1.8 2011/10/01 18:44:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.7.3-r3.ebuild,v 1.9 2011/10/14 07:22:44 pva Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ KEYWORDS="amd64 ~ppc ~ppc64 x86 ~ppc-macos ~x64-macos ~x86-macos"
 # TODO: run-time test for ipv6: does it really need ortp[ipv6] ?
 IUSE="+alsa amr bindist coreaudio debug examples gsm ilbc ipv6 jack oss portaudio
 pulseaudio sdl +speex theora v4l video x264 X"
-REQUIRED_USE="|| ( oss alsa jack portaudio coreaudio )
+REQUIRED_USE="|| ( oss alsa jack portaudio coreaudio pulseaudio )
 	video? ( || ( sdl X ) )
 	theora? ( video )
 	X? ( video )
