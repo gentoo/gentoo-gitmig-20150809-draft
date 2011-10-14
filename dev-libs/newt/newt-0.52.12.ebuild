@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.12.ebuild,v 1.9 2011/03/01 01:19:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.12.ebuild,v 1.10 2011/10/14 03:12:38 naota Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -13,7 +13,7 @@ SRC_URI="https://fedorahosted.org/releases/n/e/newt/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="gpm tcl nls"
 
 RDEPEND="=sys-libs/slang-2*
@@ -44,6 +44,9 @@ src_prepare() {
 		-e 's|instroot|DESTDIR|g' \
 		-e 's|	make |	$(MAKE) |g' \
 		|| die "sed Makefile.in"
+
+	epatch "${FILESDIR}"/${P}-whiptail.patch \
+		   "${FILESDIR}"/${P}-install.patch
 }
 
 src_configure() {
