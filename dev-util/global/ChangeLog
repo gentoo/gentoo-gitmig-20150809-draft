@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/global
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.92 2011/09/17 16:21:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/ChangeLog,v 1.93 2011/10/14 00:49:53 naota Exp $
+
+*global-6.1 (14 Oct 2011)
+
+  14 Oct 2011; Naohiro Aota <naota@gentoo.org> +global-6.1.ebuild:
+  Version bumped.
 
   17 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Add Arfrever as proxy maintainer as requested by him.
