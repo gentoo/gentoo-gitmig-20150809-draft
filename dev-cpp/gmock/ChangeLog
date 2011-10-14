@@ -1,0 +1,9 @@
+# ChangeLog for dev-cpp/gmock
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gmock/ChangeLog,v 1.1 2011/10/14 19:26:57 vapier Exp $
+
+*gmock-1.5.0 (14 Oct 2011)
+
+  14 Oct 2011; Mike Frysinger <vapier@gentoo.org> +gmock-1.5.0.ebuild,
+  +metadata.xml:
+  Initial import based on ChromeOS's ebuild.
