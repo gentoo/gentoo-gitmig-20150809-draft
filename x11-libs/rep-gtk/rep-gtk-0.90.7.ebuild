@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.90.7.ebuild,v 1.2 2011/09/25 16:57:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.90.7.ebuild,v 1.3 2011/10/14 21:36:42 ssuominen Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.tuxfamily.org/librep/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="gtk-2.0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/librep-0.90.5

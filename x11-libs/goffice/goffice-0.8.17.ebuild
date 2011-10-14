@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.8.17.ebuild,v 1.1 2011/07/31 18:13:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/goffice/goffice-0.8.17.ebuild,v 1.2 2011/10/14 21:35:01 ssuominen Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ HOMEPAGE="http://git.gnome.org/browse/goffice/"
 
 LICENSE="GPL-2"
 SLOT="0.8"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x64-solaris"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x64-solaris"
 IUSE="doc gnome"
 
 # Build fails with -gtk
