@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.342 2011/10/10 19:33:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.343 2011/10/14 21:20:34 ssuominen Exp $
+
+  14 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> gdm-2.20.11-r1.ebuild:
+  amd64 stable wrt #385699
 
   10 Oct 2011; Pacho Ramos <pacho@gentoo.org> gdm-2.20.11-r1.ebuild:
   Drop .a files, bug #386665 by Ago.

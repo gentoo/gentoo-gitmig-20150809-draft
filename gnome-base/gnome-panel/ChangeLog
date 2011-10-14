@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-panel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.340 2011/10/05 17:20:21 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.341 2011/10/14 21:21:38 ssuominen Exp $
+
+  14 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  gnome-panel-2.32.1-r3.ebuild:
+  amd64 stable wrt #385699
 
   05 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gnome-panel-2.32.1-r2.ebuild:
