@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.102 2011/09/12 14:12:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.103 2011/10/14 21:16:53 ssuominen Exp $
+
+  14 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> sawfish-1.8.2.ebuild:
+  amd64 stable wrt #385699
 
 *sawfish-1.8.2 (12 Sep 2011)
 
