@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.28.2-r300.ebuild,v 1.1 2011/09/10 08:54:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.28.2-r300.ebuild,v 1.2 2011/10/14 19:11:35 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -15,7 +15,7 @@ SRC_URI="${SRC_URI} mirror://gentoo/introspection.m4.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2.90"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug doc glade +introspection"
 
 PDEPEND="x11-libs/gnome-pty-helper"
