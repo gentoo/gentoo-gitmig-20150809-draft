@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nautilus-python/nautilus-python-0.7.0.ebuild,v 1.3 2011/08/01 19:02:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nautilus-python/nautilus-python-1.0.ebuild,v 1.1 2011/10/14 00:40:24 pva Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="2"
+GCONF_DEBUG="no"
 inherit eutils gnome2 python autotools
 
 DESCRIPTION="Python bindings for the Nautilus file manager"
@@ -12,29 +13,20 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-DOCS="AUTHORS ChangeLog NEWS"
-G2CONF="--docdir=${EPREFIX}/usr/share/doc/${PF}"
-
-RDEPEND=">=dev-python/pygtk-2.8
-	>=dev-python/pygobject-2.16
-	>=gnome-base/nautilus-2.22"
+RDEPEND=">=dev-python/pygobject-2.28.2
+	>=gnome-base/nautilus-2.32"
 DEPEND="${RDEPEND}
-	>=dev-python/gconf-python-2.12
 	doc? ( >=dev-util/gtk-doc-1.9 )"
+
+DOCS="AUTHORS ChangeLog NEWS README"
+G2CONF="--docdir=${EPREFIX}/usr/share/doc/${PF}"
 
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
-}
-
-src_prepare() {
-	# dev-python/gnome-python-base is not required actually, but configure script
-	# checks for it for some unknown reason
-	sed -e '/gnome-python-2.0/d' -i configure.in || die
-	AT_M4DIR=m4 eautoreconf
 }
 
 src_install() {
@@ -42,5 +34,4 @@ src_install() {
 	mv "${D}"/usr/share/doc/{${PN}/*,${PF}} || die
 	rm -rf "${D}"/usr/share/doc/${PN}
 	find "${ED}" -name '*.la' -exec rm -f {} +
-	prepalldocs
 }
