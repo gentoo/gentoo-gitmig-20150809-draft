@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.14 2011/10/07 13:02:21 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.15 2011/10/14 20:27:57 ssuominen Exp $
 
 # Jeremy Olexa <darkside@gentoo.org> (07 Oct 2011)
 # Required by mesa, ultimately by xorg-server (every desktop) bug 385843
@@ -13,11 +13,9 @@ media-libs/libpng apng
 # Samuli Suominen <ssuominen@gentoo.org> (19 Dec 2010)
 # Required by udev helpers like udisks and upower
 sys-fs/udev extras gudev hwdb keymap
-sys-block/parted device-mapper
 
 # Samuli Suominen <ssuominen@gentoo.org> (19 Dec 2010)
-# Required for desktop icons integration. Only desktop users should get this
-# dependency hell.
+# Support for desktop icons
 xfce-base/xfdesktop thunar
 
 # Chris Gianelloni <wolf31o2@gentoo.org> (26 Mar 2008)

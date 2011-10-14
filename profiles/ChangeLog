@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5788 2011/10/14 16:53:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5789 2011/10/14 20:27:57 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  targets/desktop/package.use:
+  Remove now unnecessary package.use entry for sys-block/parted and
+  USE="device-mapper"
 
   14 Oct 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
   drop mask for lightdm. Time to broader testing
