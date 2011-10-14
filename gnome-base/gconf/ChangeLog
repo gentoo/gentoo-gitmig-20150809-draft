@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.256 2011/10/10 19:28:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.257 2011/10/14 20:04:04 ssuominen Exp $
+
+  14 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> gconf-2.32.4.ebuild:
+  amd64 stable wrt #385699
 
   10 Oct 2011; Pacho Ramos <pacho@gentoo.org> -gconf-2.32.0-r1.ebuild,
   gconf-2.32.4.ebuild:
