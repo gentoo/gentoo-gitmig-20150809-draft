@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/telepathy-salut-0.5.1.ebuild,v 1.2 2011/08/06 09:55:57 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/telepathy-salut-0.5.1.ebuild,v 1.3 2011/10/14 21:36:08 ssuominen Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -13,7 +13,7 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-linux"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-linux"
 IUSE="test"
 
 RDEPEND="dev-libs/libxml2
