@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xkeyboard-config
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.143 2011/10/04 22:58:20 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.144 2011/10/14 22:07:52 chithanh Exp $
+
+*xkeyboard-config-2.4.1-r1 (14 Oct 2011)
+
+  14 Oct 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -xkeyboard-config-2.4.1.ebuild, +xkeyboard-config-2.4.1-r1.ebuild,
+  +files/xkeyboard-config-2.4.1-extended-function-keys.patch:
+  Add upstream patch to unbreak extended function keys, bug #386561.
 
 *xkeyboard-config-2.4.1 (04 Oct 2011)
 

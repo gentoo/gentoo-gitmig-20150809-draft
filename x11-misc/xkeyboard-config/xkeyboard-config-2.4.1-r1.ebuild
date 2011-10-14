@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/xkeyboard-config-2.4.1.ebuild,v 1.1 2011/10/04 22:58:20 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/xkeyboard-config-2.4.1-r1.ebuild,v 1.1 2011/10/14 22:07:52 chithanh Exp $
 
 EAPI=4
 
@@ -32,6 +32,10 @@ XORG_CONFIGURE_OPTIONS=(
 	# do not check for runtime deps
 	--disable-runtime-deps
 	--with-xkb-rules-symlink=xorg
+)
+
+PATCHES=(
+	"${FILESDIR}"/${P}-extended-function-keys.patch
 )
 
 src_prepare() {
