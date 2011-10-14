@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/shotwell
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.27 2011/10/04 18:19:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/shotwell/ChangeLog,v 1.28 2011/10/14 17:23:13 angelos Exp $
+
+*shotwell-0.11.3 (14 Oct 2011)
+
+  14 Oct 2011; Christoph Mende <angelos@gentoo.org> +shotwell-0.11.3.ebuild:
+  Version bump
 
   04 Oct 2011; Tim Harder <radhermit@gentoo.org> shotwell-0.11.2.ebuild,
   +files/shotwell-0.11.2-libraw-0.14.patch:
