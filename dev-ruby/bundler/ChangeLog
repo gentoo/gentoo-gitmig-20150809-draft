@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/bundler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.28 2011/09/09 12:22:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.29 2011/10/14 05:24:10 graaff Exp $
+
+  14 Oct 2011; Hans de Graaff <graaff@gentoo.org> -bundler-1.0.15.ebuild,
+  -bundler-1.0.17.ebuild:
+  Remove old versions.
 
   09 Sep 2011; Fabian Groffen <grobian@gentoo.org> bundler-1.0.18.ebuild:
   Marked ~sparc-solaris
