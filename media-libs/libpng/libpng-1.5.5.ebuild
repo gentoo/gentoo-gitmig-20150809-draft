@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.5.5.ebuild,v 1.4 2011/10/11 22:00:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.5.5.ebuild,v 1.5 2011/10/14 11:44:31 ssuominen Exp $
 
-# NOTE: Both optipng and pngcrush are using bundled libpng14. If and when libpng
-# gets bumped for security, they need to be checked out.
+# WARNING: media-gfx/optipng is shipping internal copy of libpng14. Look out for
+# security.
 
 EAPI=4
 
