@@ -1,0 +1,10 @@
+# ChangeLog for www-apache/mod_geoip2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_geoip2/ChangeLog,v 1.1 2011/10/14 17:08:16 darkside Exp $
+
+*mod_geoip2-1.2.7 (14 Oct 2011)
+
+  14 Oct 2011; Jeremy Olexa <darkside@gentoo.org> +files/30_mod_geoip2.conf,
+  +mod_geoip2-1.2.7.ebuild, +metadata.xml:
+  New Apache module. Original ebuild by Lance Albertson. bug 304675
+
