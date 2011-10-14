@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_bw/mod_bw-0.8.ebuild,v 1.4 2008/03/02 14:56:34 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_bw/mod_bw-0.8.ebuild,v 1.5 2011/10/14 16:52:23 beandog Exp $
 
 inherit apache-module
 
@@ -13,7 +13,7 @@ LICENSE="Apache-2.0"
 SLOT="0"
 IUSE=""
 
-DEPEND=""
+DEPEND="sys-devel/libtool"
 RDEPEND=""
 
 APACHE2_MOD_CONF="11_${PN}"

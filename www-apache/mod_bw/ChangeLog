@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_bw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_bw/ChangeLog,v 1.8 2011/10/14 16:49:38 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_bw/ChangeLog,v 1.9 2011/10/14 16:52:23 beandog Exp $
+
+  14 Oct 2011; Steve Dibb <beandog@gentoo.org> mod_bw-0.8.ebuild:
+  Add libtool dependency
 
 *mod_bw-0.9.2 (14 Oct 2011)
 *mod_bw-0.9.1 (14 Oct 2011)
