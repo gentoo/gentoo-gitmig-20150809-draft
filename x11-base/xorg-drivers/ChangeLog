@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.56 2011/08/29 05:48:26 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/ChangeLog,v 1.57 2011/10/14 21:45:01 chithanh Exp $
+
+  14 Oct 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-drivers-1.10.ebuild, xorg-drivers-1.11.ebuild:
+  Allow stable drivers for 1.10, drop virtualbox from 1.11, bug #387121
 
   29 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   xorg-drivers-1.10.ebuild:

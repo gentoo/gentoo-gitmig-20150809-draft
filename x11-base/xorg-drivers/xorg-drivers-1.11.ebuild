@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.11.ebuild,v 1.2 2011/06/29 12:54:53 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.11.ebuild,v 1.3 2011/10/14 21:45:01 chithanh Exp $
 
 EAPI=4
 
@@ -25,7 +25,6 @@ IUSE_INPUT_DEVICES="
 	input_devices_mutouch
 	input_devices_penmount
 	input_devices_tslib
-	input_devices_virtualbox
 	input_devices_vmmouse
 	input_devices_void
 	input_devices_synaptics
@@ -99,7 +98,6 @@ PDEPEND="
 	input_devices_mutouch?     ( x11-drivers/xf86-input-mutouch )
 	input_devices_penmount?    ( x11-drivers/xf86-input-penmount )
 	input_devices_tslib?       ( x11-drivers/xf86-input-tslib )
-	input_devices_virtualbox?  ( x11-drivers/xf86-input-virtualbox )
 	input_devices_vmmouse?     ( x11-drivers/xf86-input-vmmouse )
 	input_devices_void?        ( x11-drivers/xf86-input-void )
 	input_devices_synaptics?   ( x11-drivers/xf86-input-synaptics )

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.10.ebuild,v 1.12 2011/08/29 05:48:26 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-drivers/xorg-drivers-1.10.ebuild,v 1.13 2011/10/14 21:45:01 chithanh Exp $
 
 EAPI=4
 
@@ -15,10 +15,15 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE_INPUT_DEVICES="
 	input_devices_acecad
 	input_devices_aiptek
+	input_devices_elographics
 	input_devices_evdev
+	input_devices_fpit
+	input_devices_hyperpen
 	input_devices_joystick
 	input_devices_keyboard
 	input_devices_mouse
+	input_devices_mutouch
+	input_devices_penmount
 	input_devices_tslib
 	input_devices_virtualbox
 	input_devices_vmmouse
@@ -84,10 +89,15 @@ IUSE="${IUSE_VIDEO_CARDS} ${IUSE_INPUT_DEVICES}"
 PDEPEND="
 	input_devices_acecad?      ( x11-drivers/xf86-input-acecad )
 	input_devices_aiptek?      ( x11-drivers/xf86-input-aiptek )
+	input_devices_elographics? ( x11-drivers/xf86-input-elographics )
 	input_devices_evdev?       ( x11-drivers/xf86-input-evdev )
+	input_devices_fpit?        ( x11-drivers/xf86-input-fpit )
+	input_devices_hyperpen?    ( x11-drivers/xf86-input-hyperpen )
 	input_devices_joystick?    ( x11-drivers/xf86-input-joystick )
 	input_devices_keyboard?    ( x11-drivers/xf86-input-keyboard )
 	input_devices_mouse?       ( x11-drivers/xf86-input-mouse )
+	input_devices_mutouch?     ( x11-drivers/xf86-input-mutouch )
+	input_devices_penmount?    ( x11-drivers/xf86-input-penmount )
 	input_devices_tslib?       ( x11-drivers/xf86-input-tslib )
 	input_devices_virtualbox?  ( x11-drivers/xf86-input-virtualbox )
 	input_devices_vmmouse?     ( x11-drivers/xf86-input-vmmouse )
@@ -144,11 +154,6 @@ PDEPEND="
 	video_cards_voodoo?        ( x11-drivers/xf86-video-voodoo )
 
 	!x11-drivers/xf86-input-citron
-	!<x11-drivers/xf86-input-elographics-1.3.0
-	!<x11-drivers/xf86-input-fpit-1.4.0
-	!<x11-drivers/xf86-input-hyperpen-1.4.1
-	!<x11-drivers/xf86-input-mutouch-1.3.0
-	!<x11-drivers/xf86-input-penmount-1.5.0
 	!x11-drivers/xf86-video-cyrix
 	!x11-drivers/xf86-video-impact
 	!x11-drivers/xf86-video-nsc
