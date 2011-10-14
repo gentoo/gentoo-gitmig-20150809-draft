@@ -1,6 +1,12 @@
 # ChangeLog for app-text/txt2man
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2man/ChangeLog,v 1.19 2010/10/24 15:41:57 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2man/ChangeLog,v 1.20 2011/10/14 22:45:23 radhermit Exp $
+
+*txt2man-1.5.6 (14 Oct 2011)
+
+  14 Oct 2011; Tim Harder <radhermit@gentoo.org> +txt2man-1.5.6.ebuild,
+  metadata.xml:
+  Version bump. Update to EAPI 4 and add myself as maintainer.
 
   24 Oct 2010; Brent Baude <ranger@gentoo.org> txt2man-1.5.5.ebuild:
   Marking txt2man-1.5.5 ppc for bug 340309
