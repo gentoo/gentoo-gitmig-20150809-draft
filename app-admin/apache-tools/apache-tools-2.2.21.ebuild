@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.2.21.ebuild,v 1.6 2011/09/27 18:23:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/apache-tools-2.2.21.ebuild,v 1.7 2011/10/14 16:25:46 beandog Exp $
 
 EAPI="4"
 inherit flag-o-matic eutils
@@ -21,7 +21,8 @@ RDEPEND="=dev-libs/apr-1*
 	ssl? ( dev-libs/openssl )
 	!<www-servers/apache-2.2.4"
 
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	sys-devel/libtool"
 
 S="${WORKDIR}/httpd-${PV}"
 
