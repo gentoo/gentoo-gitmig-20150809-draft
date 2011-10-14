@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gtksourceviewmm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/ChangeLog,v 1.17 2011/10/10 19:10:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/ChangeLog,v 1.18 2011/10/14 21:12:18 ssuominen Exp $
+
+  14 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  gtksourceviewmm-2.10.2.ebuild:
+  amd64 stable wrt #385699
 
   10 Oct 2011; Pacho Ramos <pacho@gentoo.org> gtksourceviewmm-2.10.2.ebuild:
   Drop .la files, bug #386665 by Ago.

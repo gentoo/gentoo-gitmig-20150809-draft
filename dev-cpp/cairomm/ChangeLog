@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/cairomm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.54 2011/09/27 12:59:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cairomm/ChangeLog,v 1.55 2011/10/14 21:10:54 ssuominen Exp $
+
+  14 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> cairomm-1.10.0.ebuild:
+  amd64 stable wrt #385699
 
 *cairomm-1.10.0 (27 Sep 2011)
 
