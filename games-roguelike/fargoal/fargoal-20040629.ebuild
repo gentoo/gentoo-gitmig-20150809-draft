@@ -1,7 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/fargoal/fargoal-20040629.ebuild,v 1.5 2011/06/21 14:46:50 tupone Exp $
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/fargoal/fargoal-20040629.ebuild,v 1.6 2011/10/14 06:16:42 vapier Exp $
+
+EAPI="2"
 
 inherit eutils games
 
@@ -14,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
-RDEPEND="<media-libs/allegro-5"
+RDEPEND="media-libs/allegro:0"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
