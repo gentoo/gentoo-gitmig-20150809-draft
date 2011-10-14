@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.58.ebuild,v 1.2 2011/09/12 22:12:30 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.60.ebuild,v 1.1 2011/10/14 23:26:11 reavertm Exp $
 
 EAPI="3"
 
