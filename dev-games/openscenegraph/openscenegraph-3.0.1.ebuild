@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.3.ebuild,v 1.18 2011/10/14 09:50:30 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-3.0.1.ebuild,v 1.1 2011/10/14 09:50:30 tupone Exp $
 
-EAPI=2
+EAPI=3
 
-inherit eutils flag-o-matic versionator cmake-utils
+inherit eutils cmake-utils wxwidgets
 
 MY_PN="OpenSceneGraph"
 MY_P=${MY_PN}-${PV}
@@ -15,20 +15,17 @@ SRC_URI="http://www.openscenegraph.org/downloads/stable_releases/${MY_P}/source/
 
 LICENSE="wxWinLL-3 LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
-IUSE="curl debug doc examples ffmpeg fltk fox gdal gif glut gtk jpeg jpeg2k
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="curl debug doc examples ffmpeg fltk fox gdal gif glut gtk itk jpeg jpeg2k
 openexr openinventor osgapps pdf png qt4 sdl static-libs svg tiff truetype vnc
 wxwidgets xine xrandr zlib"
 
 # NOTE: OpenAL (support missing)
-# TODO: COLLADA, FBX, OpenVRML, Performer, ITK, DCMTK
-# 	xulrunner? ( only 1.8 supported for now, ignore it
-#		net-libs/xulrunner:1.8
-#		x11-libs/gtk+:2
-#	)
+# TODO: COLLADA, FBX, OpenVRML, Performer, DCMTK
 RDEPEND="
 	x11-libs/libSM
 	x11-libs/libXext
+	virtual/glu
 	virtual/opengl
 	curl? ( net-misc/curl )
 	examples? (
@@ -47,6 +44,7 @@ RDEPEND="
 	ffmpeg? ( virtual/ffmpeg )
 	gdal? ( sci-libs/gdal )
 	gif? ( media-libs/giflib )
+	itk? ( dev-tcltk/itk )
 	jpeg? ( virtual/jpeg )
 	jpeg2k? ( media-libs/jasper )
 	openexr? (
@@ -86,17 +84,19 @@ DOCS=(AUTHORS.txt ChangeLog NEWS.txt)
 
 PATCHES=(
 	"${FILESDIR}/${P}-cmake.patch"
-	"${FILESDIR}/${P}-ffmpeg.patch"
-	"${FILESDIR}/${P}-curl.patch"
 )
 
 src_configure() {
+	if use examples && use wxwidgets; then
+		WX_GTK_VER="2.8"
+		need-wxwidgets unicode
+	fi
+
 	# Needed by FFmpeg
 	append-cppflags -D__STDC_CONSTANT_MACROS
 
 	mycmakeargs=(
 		-DWITH_OpenAL=OFF # Commented out in buildsystem
-		-DWITH_XUL=OFF # Supports only xulrunner 1.8
 		-DGENTOO_DOCDIR="/usr/share/doc/${PF}"
 		$(cmake-utils_use_with curl)
 		$(cmake-utils_use_build doc DOCUMENTATION)
@@ -108,17 +108,18 @@ src_configure() {
 		$(cmake-utils_use_with gdal)
 		$(cmake-utils_use_with gif GIFLIB)
 		$(cmake-utils_use_with glut)
-		$(cmake-utils_use_with gtk)
+		$(cmake-utils_use_with gtk GtkGl)
+		$(cmake-utils_use_with itk)
 		$(cmake-utils_use_with jpeg)
 		$(cmake-utils_use_with jpeg2k Jasper)
 		$(cmake-utils_use_with openexr OpenEXR)
 		$(cmake-utils_use_with openinventor Inventor)
-		$(cmake-utils_use_with pdf)
+		$(cmake-utils_use_with pdf Poppler-glib)
 		$(cmake-utils_use_with png)
 		$(cmake-utils_use_with qt4)
 		$(cmake-utils_use !static-libs DYNAMIC_OPENSCENEGRAPH)
 		$(cmake-utils_use_with sdl)
-		$(cmake-utils_use_with svg)
+		$(cmake-utils_use_with svg rsvg)
 		$(cmake-utils_use_with tiff)
 		$(cmake-utils_use_with truetype FreeType)
 		$(cmake-utils_use_with vnc LibVNCServer)
