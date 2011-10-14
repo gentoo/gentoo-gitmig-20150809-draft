@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/autossh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/ChangeLog,v 1.31 2011/03/30 21:20:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/ChangeLog,v 1.32 2011/10/14 21:30:42 radhermit Exp $
+
+*autossh-1.4c (14 Oct 2011)
+
+  14 Oct 2011; Tim Harder <radhermit@gentoo.org> +autossh-1.4c.ebuild:
+  Version bump.
 
   30 Mar 2011; Tim Harder <radhermit@gentoo.org> autossh-1.4b.ebuild:
   Add ~arm keyword (bug #356619).
