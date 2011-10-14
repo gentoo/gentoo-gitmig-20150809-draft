@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.337 2011/10/03 18:09:48 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.338 2011/10/14 20:51:33 ssuominen Exp $
+
+  14 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> -xterm-267.ebuild,
+  -xterm-269.ebuild, -xterm-270.ebuild, -xterm-274.ebuild:
+  old
 
   03 Oct 2011; Joseph Jezak <josejx@gentoo.org> xterm-271.ebuild:
   Marked ppc ppc64 stable for bug #380421.
