@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.49 2011/10/09 07:45:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xorg-2.eclass,v 1.50 2011/10/14 20:27:11 mgorny Exp $
 
 # @ECLASS: xorg-2.eclass
 # @MAINTAINER:
@@ -478,7 +478,11 @@ xorg-2_src_install() {
 xorg-2_pkg_postinst() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	[[ -n ${FONT} ]] && setup_fonts "$@"
+	if [[ -n ${FONT} ]]; then
+		create_fonts_scale
+		create_fonts_dir
+		font_pkg_postinst "$@"
+	fi
 }
 
 # @FUNCTION: xorg-2_pkg_postrm
@@ -488,18 +492,14 @@ xorg-2_pkg_postinst() {
 xorg-2_pkg_postrm() {
 	debug-print-function ${FUNCNAME} "$@"
 
-	[[ -n ${FONT} ]] && font_pkg_postrm "$@"
-}
-
-# @FUNCTION: setup_fonts
-# @DESCRIPTION:
-# Generates needed files for fonts and fixes font permissions
-setup_fonts() {
-	debug-print-function ${FUNCNAME} "$@"
-
-	create_fonts_scale
-	create_fonts_dir
-	font_pkg_postinst
+	if [[ -n ${FONT} ]]; then
+		# if we're doing an upgrade, postinst will do
+		if [[ ${EAPI} -lt 4 || -z ${REPLACED_BY_VERSION} ]]; then
+			create_fonts_scale
+			create_fonts_dir
+			font_pkg_postrm "$@"
+		fi
+	fi
 }
 
 # @FUNCTION: remove_font_metadata
