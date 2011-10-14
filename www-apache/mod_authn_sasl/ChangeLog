@@ -1,0 +1,10 @@
+# ChangeLog for www-apache/mod_authn_sasl
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_authn_sasl/ChangeLog,v 1.1 2011/10/14 17:24:30 beandog Exp $
+
+*mod_authn_sasl-1.1 (14 Oct 2011)
+
+  14 Oct 2011; Steve Dibb <beandog@gentoo.org> +files/10_mod_authn_sasl.conf,
+  +mod_authn_sasl-1.1.ebuild:
+  Initial ebuild, bug 330781; Thanks to Phil Turmel
+
