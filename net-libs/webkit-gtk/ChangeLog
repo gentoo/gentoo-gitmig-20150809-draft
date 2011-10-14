@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.122 2011/09/30 13:52:33 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.123 2011/10/14 21:34:22 ssuominen Exp $
+
+  14 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  webkit-gtk-1.4.3-r200.ebuild, webkit-gtk-1.4.3-r300.ebuild:
+  amd64 stable wrt #385699
 
 *webkit-gtk-1.6.1-r300 (30 Sep 2011)
 *webkit-gtk-1.6.1-r200 (30 Sep 2011)
