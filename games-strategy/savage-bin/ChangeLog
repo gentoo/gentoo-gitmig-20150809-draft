@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/savage-bin
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/ChangeLog,v 1.13 2010/06/16 20:16:33 sping Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/ChangeLog,v 1.14 2011/10/14 06:12:37 vapier Exp $
+
+  14 Oct 2011; Mike Frysinger <vapier@gentoo.org> savage-bin-2.00e.ebuild:
+  Use a SLOT dep instead of "<" for jpeg.
 
   16 Jun 2010; Sebastian Pipping <sping@gentoo.org> savage-bin-2.00e.ebuild:
   Propagate upstream's change in download access

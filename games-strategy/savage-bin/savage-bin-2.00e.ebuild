@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/savage-bin-2.00e.ebuild,v 1.12 2010/06/16 20:16:33 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/savage-bin-2.00e.ebuild,v 1.13 2011/10/14 06:12:37 vapier Exp $
 
 EAPI=2
 inherit eutils games
@@ -25,7 +25,7 @@ RESTRICT="mirror strip"
 RDEPEND="virtual/opengl
 	x86? ( media-libs/libsdl
 		>=media-libs/freetype-2
-		<media-libs/jpeg-7 )
+		media-libs/jpeg:62 )
 	amd64? ( app-emulation/emul-linux-x86-sdl )"
 DEPEND="app-arch/unzip"
 
