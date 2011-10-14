@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.508 2011/10/10 10:24:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.509 2011/10/14 08:27:07 nativemad Exp $
+
+  14 Oct 2011; Andreas Schuerch <nativemad@gentoo.org> ruby-1.8.7_p352.ebuild:
+  x86 stable, bug 386369
 
   10 Oct 2011; Jeroen Roovers <jer@gentoo.org> ruby-1.8.7_p352.ebuild:
   Stable for HPPA (bug #386369).
