@@ -1,10 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/knetworkmanager-0.8.80.ebuild,v 1.1 2011/10/14 10:08:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/knetworkmanager-0.8.80.ebuild,v 1.2 2011/10/14 10:20:48 scarabeus Exp $
 
 EAPI=4
 
 KDE_MINIMAL="4.6"
+KDE_LINGUAS="ar ast bs ca ca@valencia cs da de el en_GB eo es et fi fr ga gl hr
+hu is it ja km ko lt lv mai ms nb nds nl nn pa pl pt pt_BR ro ru sk sl sq sv th
+tr ug uk wa zh_CN zh_TW"
+
 MY_PN="networkmanagement"
 MY_P="${MY_PN}-${PV}"
 

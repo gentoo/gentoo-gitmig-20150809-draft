@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/knetworkmanager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/ChangeLog,v 1.35 2011/10/14 10:08:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetworkmanager/ChangeLog,v 1.36 2011/10/14 10:20:48 scarabeus Exp $
+
+  14 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/knetworkmanager-nm09version.patch, knetworkmanager-0.8.80.ebuild:
+  Remove unused patch file and add linguas
 
 *knetworkmanager-0.8.80 (14 Oct 2011)
 *knetworkmanager-0.8_p20110714 (14 Oct 2011)
