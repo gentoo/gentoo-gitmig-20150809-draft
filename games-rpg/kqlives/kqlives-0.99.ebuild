@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/kqlives/kqlives-0.99.ebuild,v 1.4 2011/03/26 17:20:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/kqlives/kqlives-0.99.ebuild,v 1.5 2011/10/14 06:16:04 vapier Exp $
 
 EAPI=2
 inherit eutils games
@@ -18,7 +18,7 @@ IUSE="cheats nls"
 
 RDEPEND=">=x11-libs/gtk+-2.8:2
 	>=gnome-base/libglade-2.4
-	<media-libs/allegro-5
+	media-libs/allegro:0
 	media-libs/aldumb
 	dev-lang/lua
 	nls? ( virtual/libintl )"
