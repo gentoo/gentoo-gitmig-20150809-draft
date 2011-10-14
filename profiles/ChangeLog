@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5785 2011/10/13 19:26:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5786 2011/10/14 10:09:15 scarabeus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
+  Update knetworkmanager mask with proper version.
 
   13 Oct 2011; Jeroen Roovers <jer@gentoo.org> desc/linguas.desc:
   Add ur and nan linguas.
