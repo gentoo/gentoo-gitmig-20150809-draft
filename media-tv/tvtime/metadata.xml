@@ -7,4 +7,10 @@
 		<name>Alex Legler</name>
 		<description>Please CC on bugs</description>
 	</maintainer>
+	<use>
+		<flag name="alsa">
+			Enables an EXPERIMENTAL ALSA patch by the Ubuntu maintainers.
+			Several problems were reported, use with care.
+		</flag>
+	</use>
 </pkgmetadata>

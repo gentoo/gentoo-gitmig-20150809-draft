@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/tvtime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.53 2011/10/13 08:13:56 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.54 2011/10/14 21:16:50 a3li Exp $
+
+*tvtime-1.0.2_p20110131-r3 (14 Oct 2011)
+
+  14 Oct 2011; Alex Legler <a3li@gentoo.org> -tvtime-1.0.2_p20110131-r2.ebuild,
+  +tvtime-1.0.2_p20110131-r3.ebuild,
+  +files/tvtime-1.0.2_p20110131-underlinking.patch, metadata.xml:
+  Add additional patch to fix alsa issues, bug 384215. Minor ebuild fixes from
+  bug 385353 and idl0r.
 
 *tvtime-1.0.2_p20110131-r2 (13 Oct 2011)
 

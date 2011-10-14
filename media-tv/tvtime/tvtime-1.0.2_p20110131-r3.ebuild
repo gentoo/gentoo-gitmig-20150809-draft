@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-1.0.2_p20110131-r2.ebuild,v 1.1 2011/10/13 08:13:56 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-1.0.2_p20110131-r3.ebuild,v 1.1 2011/10/14 21:16:50 a3li Exp $
 
 EAPI=4
 inherit eutils autotools
@@ -10,8 +10,9 @@ TVTIME_HGREV="111b28cca42d"
 DESCRIPTION="High quality television application for use with video capture cards"
 HOMEPAGE="http://tvtime.sourceforge.net/"
 SRC_URI="http://www.kernellabs.com/hg/~dheitmueller/tvtime/archive/${TVTIME_HGREV}.tar.bz2 -> ${P}.tar.bz2
-http://dev.gentoo.org/~a3li/distfiles/${PN}-1.0.2-alsa.patch
-http://dev.gentoo.org/~a3li/distfiles/${PN}-1.0.2-alsamixer.patch"
+http://dev.gentoo.org/~a3li/distfiles/${PN}-1.0.2-alsamixer-r1.patch
+http://dev.gentoo.org/~a3li/distfiles/${PN}-1.0.2-alsa-r1.patch
+http://dev.gentoo.org/~a3li/distfiles/${PN}-1.0.2-alsa-fixes.patch"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -40,6 +41,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/${PN}-${TVTIME_HGREV}"
+DOCS=( ChangeLog AUTHORS NEWS README )
 
 src_prepare() {
 	# Rename the desktop file, bug #308297
@@ -62,10 +64,12 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-autotools.patch"
 	epatch "${FILESDIR}/${P}-gettext.patch"
 	epatch "${FILESDIR}/${PN}-libpng-1.5.patch"
+	epatch "${FILESDIR}/${P}-underlinking.patch" #370025
 
 	if use alsa; then
-		epatch "${DISTDIR}/${PN}-1.0.2-alsa.patch"
-		epatch "${DISTDIR}/${PN}-1.0.2-alsamixer.patch"
+		epatch "${DISTDIR}/${PN}-1.0.2-alsa-r1.patch"
+		epatch "${DISTDIR}/${PN}-1.0.2-alsamixer-r1.patch"
+		epatch "${DISTDIR}/${PN}-1.0.2-alsa-fixes.patch"
 	fi
 
 	AT_M4DIR="m4" eautoreconf
@@ -77,16 +81,10 @@ src_configure() {
 		$(use_with xinerama) || die "econf failed"
 }
 
-src_compile() {
-	# Fix underlinking, #370025
-	emake LDFLAGS="${LDFLAGS} -lpthread" || die "compile problem"
-}
-
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	default
 
 	dohtml docs/html/*
-	dodoc ChangeLog AUTHORS NEWS README
 }
 
 pkg_postinst() {
