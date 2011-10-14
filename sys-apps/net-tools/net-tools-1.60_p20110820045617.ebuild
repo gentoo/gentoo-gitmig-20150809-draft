@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60_p20110820045617.ebuild,v 1.1 2011/08/20 05:00:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60_p20110820045617.ebuild,v 1.2 2011/10/14 03:17:46 vapier Exp $
 
 EAPI="3"
 
@@ -8,7 +8,7 @@ inherit flag-o-matic toolchain-funcs eutils
 
 PATCH_VER="1"
 DESCRIPTION="Standard Linux networking tools"
-HOMEPAGE="http://net-tools.berlios.de/"
+HOMEPAGE="http://net-tools.sourceforge.net/"
 SRC_URI="mirror://gentoo/${P}.tar.xz
 	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.xz"
 
