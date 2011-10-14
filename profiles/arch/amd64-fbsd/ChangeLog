@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86-fbsd profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/ChangeLog,v 1.6 2011/03/18 22:09:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/ChangeLog,v 1.7 2011/10/14 22:52:08 vapier Exp $
+
+  14 Oct 2011; Mike Frysinger <vapier@gentoo.org> make.defaults:
+  Drop unused ASFLAGS_x86 variable.
 
   18 Mar 2011: Mike Frysinger <vapier@gentoo.org> make.defaults:
   Drop CDEFINE_<abi> variables now that nothing uses them.
