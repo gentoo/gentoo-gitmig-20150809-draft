@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/cfg-update
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/cfg-update/ChangeLog,v 1.27 2011/10/02 11:17:06 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/cfg-update/ChangeLog,v 1.28 2011/10/15 13:29:08 rich0 Exp $
+
+*cfg-update-1.8.5 (15 Oct 2011)
+
+  15 Oct 2011; Richard Freeman <rich0@gentoo.org> +cfg-update-1.8.5.ebuild:
+  Bump - support for earlier keep/discard option.
 
 *cfg-update-1.8.4 (02 Oct 2011)
 
