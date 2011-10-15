@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-libvisual
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libvisual/ChangeLog,v 1.106 2011/09/25 20:49:46 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libvisual/ChangeLog,v 1.107 2011/10/15 18:35:19 xarthisius Exp $
+
+  15 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  gst-plugins-libvisual-0.10.35.ebuild:
+  ppc/ppc64 stable wrt #382225
 
   25 Sep 2011; Tony Vroon <chainsaw@gentoo.org>
   gst-plugins-libvisual-0.10.35.ebuild:
