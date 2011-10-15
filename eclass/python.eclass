@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.138 2011/10/07 10:57:48 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.139 2011/10/15 20:58:08 phajdan.jr Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -11,7 +11,7 @@
 
 inherit multilib
 
-if ! has "${EAPI:-0}" 0 1 2 3; then
+if ! has "${EAPI:-0}" 0 1 2 3 4; then
 	die "API of python.eclass in EAPI=\"${EAPI}\" not established"
 fi
 
