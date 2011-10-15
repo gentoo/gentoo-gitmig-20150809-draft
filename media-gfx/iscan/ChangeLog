@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/iscan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.43 2011/09/30 17:58:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.44 2011/10/15 23:12:50 maekke Exp $
+
+  15 Oct 2011; Markus Meier <maekke@gentoo.org> iscan-2.26.2.ebuild:
+  x86 stable, bug #386021
 
   30 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> iscan-2.26.2.ebuild,
   +files/iscan-2.26.2-libpng15.patch:

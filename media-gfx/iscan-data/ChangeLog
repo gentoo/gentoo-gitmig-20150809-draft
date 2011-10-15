@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/iscan-data
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-data/ChangeLog,v 1.4 2011/07/27 19:32:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan-data/ChangeLog,v 1.5 2011/10/15 23:12:14 maekke Exp $
+
+  15 Oct 2011; Markus Meier <maekke@gentoo.org> iscan-data-1.9.0.1.ebuild:
+  x86 stable, bug #386021
 
 *iscan-data-1.9.0.1 (27 Jul 2011)
 
