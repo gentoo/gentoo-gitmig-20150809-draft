@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/fuse
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.36 2011/10/15 14:20:34 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.37 2011/10/15 23:07:33 maekke Exp $
+
+  15 Oct 2011; Markus Meier <maekke@gentoo.org> fuse-1.0.0.ebuild:
+  x86 stable, bug #385791
 
   15 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> fuse-1.0.0.ebuild:
   ppc stable wrt #385791
