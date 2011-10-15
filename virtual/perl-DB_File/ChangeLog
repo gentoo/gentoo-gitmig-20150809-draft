@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-DB_File
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-DB_File/ChangeLog,v 1.44 2011/08/07 13:55:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-DB_File/ChangeLog,v 1.45 2011/10/15 18:11:45 tove Exp $
+
+  15 Oct 2011; Torsten Veller <tove@gentoo.org> perl-DB_File-1.820.ebuild:
+  DB_File is provided by dev-lang/perl[berkdb] (#385697)
 
 *perl-DB_File-1.824.0 (07 Aug 2011)
 
