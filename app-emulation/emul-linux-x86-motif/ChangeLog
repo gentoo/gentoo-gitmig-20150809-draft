@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-motif
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-motif/ChangeLog,v 1.3 2011/09/28 13:59:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-motif/ChangeLog,v 1.4 2011/10/15 19:28:58 hwoarang Exp $
+
+  15 Oct 2011; Markos Chandras <hwoarang@gentoo.org>
+  emul-linux-x86-motif-20110928.ebuild:
+  Stable on amd64 wrt bug #387209
 
 *emul-linux-x86-motif-20110928 (28 Sep 2011)
 
