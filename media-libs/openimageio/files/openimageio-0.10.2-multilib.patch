@@ -1,0 +1,16 @@
+--- CMakeLists.txt
++++ CMakeLists.txt
+@@ -91,11 +91,11 @@
+ 
+ # Exec Install Locations
+ set (BINDIR   "${CMAKE_INSTALL_PREFIX}/bin")
+-set (LIBDIR   "${CMAKE_INSTALL_PREFIX}/lib")
++set (LIBDIR   "${CMAKE_INSTALL_PREFIX}/lib${LIB_SUFFIX}")
+ set (PYLIBDIR "${CMAKE_INSTALL_PREFIX}/python")
+ if (EXEC_INSTALL_PREFIX)
+     set (BINDIR   "${EXEC_INSTALL_PREFIX}/bin")
+-    set (LIBDIR   "${EXEC_INSTALL_PREFIX}/lib")
++    set (LIBDIR   "${EXEC_INSTALL_PREFIX}/lib${LIB_SUFFIX}")
+     set (PYLIBDIR "${EXEC_INSTALL_PREFIX}/python")
+ endif ()
+ 
