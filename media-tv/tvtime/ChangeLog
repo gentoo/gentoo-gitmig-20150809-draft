@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/tvtime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.54 2011/10/14 21:16:50 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.55 2011/10/15 14:54:01 hwoarang Exp $
+
+  15 Oct 2011; Markos Chandras <hwoarang@gentoo.org>
+  tvtime-1.0.2_p20110131-r3.ebuild:
+  Stable on amd64 wrt bug #385353
 
 *tvtime-1.0.2_p20110131-r3 (14 Oct 2011)
 
