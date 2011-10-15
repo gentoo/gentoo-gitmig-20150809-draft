@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/parted
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/ChangeLog,v 1.10 2011/10/11 20:04:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/parted/ChangeLog,v 1.11 2011/10/15 23:15:46 maekke Exp $
+
+  15 Oct 2011; Markus Meier <maekke@gentoo.org> parted-3.0.ebuild:
+  x86 stable, bug #385221
 
   11 Oct 2011; Jeroen Roovers <jer@gentoo.org> parted-3.0.ebuild:
   Stable for HPPA (bug #385221).
