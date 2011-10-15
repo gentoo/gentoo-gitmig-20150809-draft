@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.26.2.ebuild,v 1.4 2011/10/15 23:12:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.26.2.ebuild,v 1.5 2011/10/15 23:14:57 ssuominen Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ SRC_REV="1"  # revision used by upstream
 # TODO:
 # (re)add closed-source binary modules which are needed for some scanners.
 
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 
 DESCRIPTION="EPSON Image Scan! for Linux (including sane-epkowa backend)"
 HOMEPAGE="http://www.avasys.jp/english/linux_e/dl_scan.html"
