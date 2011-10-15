@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doomsday
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.39 2011/09/16 12:16:41 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.40 2011/10/15 14:08:01 xarthisius Exp $
+
+  15 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  doomsday-1.9.0_beta69.ebuild:
+  ppc stable wrt #385793
 
   16 Sep 2011; Tupone Alfredo <tupone@gentoo.org> doomsday-1.9.0_beta69.ebuild,
   +files/doomsday-1.9.0_beta69-png15.patch:
