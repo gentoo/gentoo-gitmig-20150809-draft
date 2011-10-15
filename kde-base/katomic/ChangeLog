@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/katomic
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/katomic/ChangeLog,v 1.183 2011/10/06 18:10:58 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/katomic/ChangeLog,v 1.184 2011/10/15 17:25:51 dilfridge Exp $
+
+  15 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org> -katomic-4.7.0.ebuild:
+  Drop KDE 4.7.0
 
 *katomic-4.7.2 (06 Oct 2011)
 

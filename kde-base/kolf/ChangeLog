@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kolf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kolf/ChangeLog,v 1.183 2011/10/06 18:10:55 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kolf/ChangeLog,v 1.184 2011/10/15 17:26:14 dilfridge Exp $
+
+  15 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org> -kolf-4.7.0.ebuild:
+  Drop KDE 4.7.0
 
 *kolf-4.7.2 (06 Oct 2011)
 

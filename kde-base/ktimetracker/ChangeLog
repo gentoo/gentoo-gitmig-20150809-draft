@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ktimetracker
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimetracker/ChangeLog,v 1.86 2011/10/06 18:11:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimetracker/ChangeLog,v 1.87 2011/10/15 17:26:17 dilfridge Exp $
+
+  15 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -ktimetracker-4.7.0.ebuild:
+  Drop KDE 4.7.0
 
 *ktimetracker-4.7.2 (06 Oct 2011)
 

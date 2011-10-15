@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/granatier
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/granatier/ChangeLog,v 1.42 2011/10/06 18:11:08 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/granatier/ChangeLog,v 1.43 2011/10/15 17:25:58 dilfridge Exp $
+
+  15 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -granatier-4.7.0.ebuild:
+  Drop KDE 4.7.0
 
 *granatier-4.7.2 (06 Oct 2011)
 

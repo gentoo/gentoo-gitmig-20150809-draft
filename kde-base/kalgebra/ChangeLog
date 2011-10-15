@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kalgebra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/ChangeLog,v 1.100 2011/10/06 18:11:11 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalgebra/ChangeLog,v 1.101 2011/10/15 17:26:07 dilfridge Exp $
+
+  15 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kalgebra-4.7.0.ebuild:
+  Drop KDE 4.7.0
 
 *kalgebra-4.7.2 (06 Oct 2011)
 

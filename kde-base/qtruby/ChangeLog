@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qtruby
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.88 2011/10/06 18:10:51 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.89 2011/10/15 17:26:01 dilfridge Exp $
+
+  15 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org> -qtruby-4.7.0.ebuild:
+  Drop KDE 4.7.0
 
 *qtruby-4.7.2 (06 Oct 2011)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-runtime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/ChangeLog,v 1.50 2011/10/07 22:05:28 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/ChangeLog,v 1.51 2011/10/15 17:25:50 dilfridge Exp $
+
+  15 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kdepim-runtime-4.7.0.ebuild:
+  Drop KDE 4.7.0
 
 *kdepim-runtime-4.7.2-r1 (07 Oct 2011)
 

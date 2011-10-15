@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kubrick
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/ChangeLog,v 1.81 2011/10/06 18:11:11 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kubrick/ChangeLog,v 1.82 2011/10/15 17:26:12 dilfridge Exp $
+
+  15 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org> -kubrick-4.7.0.ebuild:
+  Drop KDE 4.7.0
 
 *kubrick-4.7.2 (06 Oct 2011)
 

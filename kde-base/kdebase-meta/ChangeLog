@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.202 2011/10/06 18:10:56 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.203 2011/10/15 17:26:15 dilfridge Exp $
+
+  15 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kdebase-meta-4.7.0.ebuild:
+  Drop KDE 4.7.0
 
 *kdebase-meta-4.7.2 (06 Oct 2011)
 
