@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/amatch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/ChangeLog,v 1.25 2011/08/28 19:40:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/ChangeLog,v 1.26 2011/10/15 04:38:02 graaff Exp $
+
+*amatch-0.2.8 (15 Oct 2011)
+
+  15 Oct 2011; Hans de Graaff <graaff@gentoo.org> +amatch-0.2.8.ebuild:
+  Version bump.
 
   28 Aug 2011; Jeroen Roovers <jer@gentoo.org> amatch-0.2.6.ebuild,
   amatch-0.2.7.ebuild:
