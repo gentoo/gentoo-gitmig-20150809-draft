@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-opengl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/ChangeLog,v 1.17 2011/10/15 19:29:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-opengl/ChangeLog,v 1.18 2011/10/15 20:24:51 hwoarang Exp $
+
+  15 Oct 2011; Markos Chandras <hwoarang@gentoo.org>
+  emul-linux-x86-opengl-20110928.ebuild:
+  Revert keywords per bug #387209. We are not ready yet
 
   15 Oct 2011; Markos Chandras <hwoarang@gentoo.org>
   emul-linux-x86-opengl-20110928.ebuild:

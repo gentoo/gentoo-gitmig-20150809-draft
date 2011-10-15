@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtkmmlibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtkmmlibs/ChangeLog,v 1.8 2011/10/15 19:28:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtkmmlibs/ChangeLog,v 1.9 2011/10/15 20:24:21 hwoarang Exp $
+
+  15 Oct 2011; Markos Chandras <hwoarang@gentoo.org>
+  emul-linux-x86-gtkmmlibs-20110928.ebuild:
+  Revert keywords per bug #387209. We are not ready yet
 
   15 Oct 2011; Markos Chandras <hwoarang@gentoo.org>
   emul-linux-x86-gtkmmlibs-20110928.ebuild:

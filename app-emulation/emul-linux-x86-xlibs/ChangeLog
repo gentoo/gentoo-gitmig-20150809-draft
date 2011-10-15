@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.108 2011/10/15 19:29:50 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.109 2011/10/15 20:25:33 hwoarang Exp $
+
+  15 Oct 2011; Markos Chandras <hwoarang@gentoo.org>
+  emul-linux-x86-xlibs-20110928.ebuild:
+  Revert keywords per bug #387209. We are not ready yet
 
   15 Oct 2011; Markos Chandras <hwoarang@gentoo.org>
   emul-linux-x86-xlibs-20110928.ebuild:
