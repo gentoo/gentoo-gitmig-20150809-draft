@@ -8,7 +8,7 @@ MY_PN="KFaenza"
 DESCRIPTION="Faenza-Cupertino icon theme for KDE"
 HOMEPAGE="http://kde-look.org/content/show.php/KFaenza?content=143890"
 #That is upstream location, not reupload. Don't fix/
-SRC_URI="http://ompldr.org/vYXB0aw/${PN}-${PV}.tar.gz"
+SRC_URI="http://ompldr.org/vYXQ5Zg/${PN}-${PV}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
