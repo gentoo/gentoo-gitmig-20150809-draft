@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/mkfontscale
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mkfontscale/ChangeLog,v 1.84 2011/10/03 17:49:48 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mkfontscale/ChangeLog,v 1.85 2011/10/15 04:58:57 pva Exp $
+
+*mkfontscale-1.0.9-r1 (15 Oct 2011)
+
+  15 Oct 2011; Peter Volkov <pva@gentoo.org> +mkfontscale-1.0.9-r1.ebuild,
+  +files/mkfontscale-1.0.9-heavy-support.txt:
+  Support 'ExtraLight' and 'Heavy' weights, bug #386715.
 
   03 Oct 2011; Joseph Jezak <josejx@gentoo.org> mkfontscale-1.0.9.ebuild:
   Marked ppc/ppc64 stable for bug #380421.
