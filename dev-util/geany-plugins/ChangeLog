@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/geany-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/ChangeLog,v 1.7 2011/05/04 23:36:26 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/ChangeLog,v 1.8 2011/10/15 23:33:07 binki Exp $
+
+  15 Oct 2011; Nathan Phillip Brink <binki@gentoo.org>
+  geany-plugins-0.20-r1.ebuild, +files/geany-plugins-0.20-config.h.patch:
+  Fix compilation of geany-plugins-0.20 against geany-0.21 with patch pulled
+  from upstream commits. Update dependency to reflect compatibility with
+  geany-0.21.
 
   04 May 2011; Nathan Phillip Brink <binki@gentoo.org> metadata.xml:
   Take over geany-plugins which used to be proxy maintained for me.
