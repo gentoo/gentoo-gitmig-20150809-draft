@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.8-r4.ebuild,v 1.6 2010/06/22 18:54:31 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.8-r4.ebuild,v 1.7 2011/10/15 23:12:17 mattst88 Exp $
 
 EAPI="1"
 inherit eutils multilib toolchain-funcs
@@ -11,15 +11,13 @@ SRC_URI="mirror://sourceforge/scponly/${P}.tgz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ~mips ppc sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE="+sftp scp winscp gftp rsync unison subversion wildcards quota passwd logging"
 
 RDEPEND="sys-apps/sed
 	net-misc/openssh
 	quota? ( sys-fs/quota )
-	!mips? ( passwd? ( sys-apps/shadow ) )
 	rsync? ( net-misc/rsync )
-	!mips? ( unison? ( net-misc/unison ) )
 	subversion? ( dev-vcs/subversion )"
 DEPEND="${RDEPEND}"
 
@@ -28,14 +26,6 @@ myhome="/home/${myuser}"
 mysubdir="/pub"
 
 pkg_setup() {
-	if use mips; then
-		if use unison || use passwd; then
-			eerror
-			eerror "unison and passwd use-flags are not supported on mips yet!"
-			die "unsupported use-flags for your arch"
-		fi
-	fi
-
 	if use unison; then
 		if [ ! -e "${ROOT}usr/bin/unison" ]; then
 			eerror
