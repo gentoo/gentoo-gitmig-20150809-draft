@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.313 2011/10/14 21:18:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.314 2011/10/15 22:11:40 pacho Exp $
+
+*libxml2-2.7.8-r3 (15 Oct 2011)
+
+  15 Oct 2011; Pacho Ramos <pacho@gentoo.org> -libxml2-2.7.8.ebuild,
+  +libxml2-2.7.8-r3.ebuild, +files/libxml2-2.7.8-error-xpath.patch,
+  +files/libxml2-2.7.8-hardening-xpath.patch:
+  Fix CVE-2011-{2821,2834}, bug #386985, thanks to Michael Harrison and Tim
+  Sammut. Remove old.
 
   14 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> libxml2-2.7.8-r2.ebuild:
   amd64 stable wrt #385699

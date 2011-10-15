@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.7.8.ebuild,v 1.9 2011/02/26 17:17:33 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.7.8-r3.ebuild,v 1.1 2011/10/15 22:11:40 pacho Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -16,8 +16,8 @@ HOMEPAGE="http://www.xmlsoft.org/"
 
 LICENSE="MIT"
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
-IUSE="debug doc examples icu ipv6 python readline test"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
+IUSE="debug doc examples icu ipv6 python readline static-libs test"
 
 XSTS_HOME="http://www.w3.org/XML/2004/xml-schema-test-suite"
 XSTS_NAME_1="xmlschema2002-01-16"
@@ -76,7 +76,16 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-xpath-freeing.patch"
 	epatch "${FILESDIR}/${P}-xpath-freeing2.patch"
 
+	# Fix some potential problems on reallocation failures
+	epatch "${FILESDIR}/${P}-reallocation-failures.patch"
+
 	epatch "${FILESDIR}/${P}-disable_static_modules.patch"
+
+	# Hardening of XPath evaluation
+	epatch "${FILESDIR}/${P}-hardening-xpath.patch"
+
+	# Fix missing error status in XPath evaluation
+	epatch "${FILESDIR}/${P}-error-xpath.patch"
 
 	# Please do not remove, as else we get references to PORTAGE_TMPDIR
 	# in /usr/lib/python?.?/site-packages/libxml2mod.la among things.
@@ -106,7 +115,8 @@ src_configure() {
 		$(use_with python)
 		$(use_with readline)
 		$(use_with readline history)
-		$(use_enable ipv6)"
+		$(use_enable ipv6)
+		$(use_enable static-libs static)"
 
 	# filter seemingly problematic CFLAGS (#26320)
 	filter-flags -fprefetch-loop-arrays -funroll-loops
@@ -181,6 +191,11 @@ src_install() {
 	if ! use examples; then
 		rm -rf "${ED}/usr/share/doc/${PF}/examples"
 		rm -rf "${ED}/usr/share/doc/${PF}/python/examples"
+	fi
+
+	if ! use static-libs; then
+		# Remove useless .la files
+		find "${D}" -name '*.la' -exec rm -f {} + || die "la file removal failed"
 	fi
 }
 
