@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/gl117/gl117-1.3.2.ebuild,v 1.10 2010/09/16 16:59:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/gl117/gl117-1.3.2.ebuild,v 1.11 2011/10/15 20:14:04 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
 
 MY_P="gl-117-${PV}-src"
 DESCRIPTION="An action flight simulator"
-HOMEPAGE="http://www.heptargon.de/"
+HOMEPAGE="http://www.heptargon.de/gl-117/gl-117.html"
 SRC_URI="mirror://sourceforge/gl-117/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -22,6 +22,8 @@ DEPEND="media-libs/libsdl[audio,joystick,opengl,video]
 	media-libs/freeglut"
 
 S=${WORKDIR}/${MY_P}
+
+PATCHES=( "${FILESDIR}"/${P}-mode.patch )
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
