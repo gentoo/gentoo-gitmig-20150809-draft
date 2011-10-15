@@ -1,0 +1,12 @@
+Fix for QA warning: implicit declaration of function 'gettimeofday'
+
+--- dateutils-0.1.5rc2/lib/time-core.c.orig
++++ dateutils-0.1.5rc2/lib/time-core.c
+@@ -42,6 +42,7 @@
+ #include <stdio.h>
+ #include <stdbool.h>
+ #include <time.h>
++#include <sys/time.h>
+ #include "strops.h"
+ 
+ #if !defined LIKELY
