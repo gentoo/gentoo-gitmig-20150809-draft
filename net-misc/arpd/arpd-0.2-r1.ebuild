@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/arpd/arpd-0.2-r1.ebuild,v 1.4 2011/10/11 19:45:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/arpd/arpd-0.2-r1.ebuild,v 1.5 2011/10/15 23:20:41 maekke Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.citi.umich.edu/u/provos/honeyd/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 hppa ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND=">=dev-libs/libdnet-1.4
