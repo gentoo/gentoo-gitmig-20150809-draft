@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.467 2011/10/13 04:11:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.468 2011/10/15 03:12:32 phajdan.jr Exp $
+
+  15 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-16.0.904.0-r2.ebuild, chromium-9999-r1.ebuild:
+  Fix build failures: bug #386931 by Kamen Dokov (disabled NaCl again), bug
+  #387145 by Agostino Sarubbo (required recent enough V8).
 
   13 Oct 2011; Mike Gilbert <floppym@gentoo.org> chromium-9999-r1.ebuild:
   Don't depend on scons; we are using the bundled copy.

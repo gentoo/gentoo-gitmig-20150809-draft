@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.59 2011/10/13 04:11:57 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.60 2011/10/15 03:12:32 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -26,7 +26,7 @@ for lang in ${LANGS}; do
 done
 
 RDEPEND="app-arch/bzip2
-	dev-lang/v8
+	>=dev-lang/v8-3.6.5.1
 	dev-libs/dbus-glib
 	dev-libs/elfutils
 	>=dev-libs/icu-4.4.1
@@ -54,7 +54,6 @@ RDEPEND="app-arch/bzip2
 	x11-libs/libXtst
 	kerberos? ( virtual/krb5 )"
 DEPEND="${RDEPEND}
-	dev-lang/nacl-toolchain-newlib
 	dev-lang/perl
 	dev-python/simplejson
 	>=dev-util/gperf-3.0.3
@@ -184,9 +183,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	ln -s "/usr/$(get_libdir)/nacl-toolchain-newlib" \
-		"native_client/toolchain/linux_x86_newlib" || die
-
 	# zlib-1.2.5.1-r1 renames the OF macro in zconf.h, bug 383371.
 	sed -i '1i#define OF(x) x' \
 		third_party/zlib/contrib/minizip/{ioapi,{,un}zip}.c \
@@ -263,6 +259,9 @@ src_configure() {
 	# Never tell the build system to "enable" SSE2, it has a few unexpected
 	# additions, bug #336871.
 	myconf+=" -Ddisable_sse2=1"
+
+	# Disable NaCl temporarily, bug #386931 (amd64-specific).
+	myconf+=" -Ddisable_nacl=1"
 
 	# Use system-provided libraries.
 	# TODO: use_system_ffmpeg
@@ -393,17 +392,17 @@ src_install() {
 	fi
 
 	# Install Native Client files on platforms that support it.
-	insinto "${CHROMIUM_HOME}"
-	case "$(tc-arch)" in
-		amd64)
-			doins out/Release/nacl_irt_x86_64.nexe || die
-			doins out/Release/libppGoogleNaClPluginChrome.so || die
-		;;
-		x86)
-			doins out/Release/nacl_irt_x86_32.nexe || die
-			doins out/Release/libppGoogleNaClPluginChrome.so || die
-		;;
-	esac
+	# insinto "${CHROMIUM_HOME}"
+	# case "$(tc-arch)" in
+	# 	amd64)
+	# 		doins out/Release/nacl_irt_x86_64.nexe || die
+	# 		doins out/Release/libppGoogleNaClPluginChrome.so || die
+	# 	;;
+	# 	x86)
+	# 		doins out/Release/nacl_irt_x86_32.nexe || die
+	# 		doins out/Release/libppGoogleNaClPluginChrome.so || die
+	# 	;;
+	# esac
 
 	newexe "${FILESDIR}"/chromium-launcher-r2.sh chromium-launcher.sh || die
 	sed "s:chromium-browser:chromium-browser${SUFFIX}:g" \
