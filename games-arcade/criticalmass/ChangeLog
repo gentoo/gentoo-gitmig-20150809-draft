@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/criticalmass
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/ChangeLog,v 1.24 2011/09/17 16:20:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/ChangeLog,v 1.25 2011/10/15 10:44:21 xarthisius Exp $
+
+  15 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  criticalmass-1.0.2.ebuild:
+  ppc stable wrt #375683
 
   17 Sep 2011; Samuli Suominen <ssuominen@gentoo.org>
   criticalmass-1.0.2.ebuild, +files/criticalmass-1.0.2-libpng15.patch:
