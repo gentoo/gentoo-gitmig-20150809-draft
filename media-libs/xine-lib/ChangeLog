@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.645 2011/10/09 16:31:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.646 2011/10/15 21:59:42 idl0r Exp $
+
+*xine-lib-1.2.9999 (15 Oct 2011)
+
+  15 Oct 2011; Christian Ruppert <idl0r@gentoo.org> +xine-lib-1.2.9999.ebuild,
+  metadata.xml:
+  Add live ebuild for xine-lib-1.2
 
   09 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> xine-lib-1.1.19.ebuild:
   Remove useless libtool file libxine.la
