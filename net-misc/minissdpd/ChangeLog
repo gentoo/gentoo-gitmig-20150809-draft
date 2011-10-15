@@ -1,0 +1,9 @@
+
+
+*minissdpd-1.1.20111007 (14 Oct 2011)
+
+  14 Oct 2011; Anthony G. Basile <blueness@gentoo.org>
+  +minissdpd-1.1.20111007.ebuild, +files/minissdpd-respect-CFLAGS.patch,
+  +metadata.xml:
+  Initial commit
+

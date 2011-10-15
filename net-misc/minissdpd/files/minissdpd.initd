@@ -1,0 +1,23 @@
+#!/sbin/runscript
+
+MINISSDPD="/usr/sbin/minissdpd"
+PIDFILE="/var/run/minissdpd.pid"
+
+depend() {
+	need net
+	before miniupnpd
+}
+
+start() {
+	ebegin "Starting minissdpd"
+	IF=$(/sbin/route | grep default | awk -- '{ print $8 }')
+	ARGS="-i $(/sbin/ifconfig $IF | grep 'inet addr' | sed 's/.\+inet addr:\([0-9.]\+\).\+/\1/')"
+	start-stop-daemon --start --quiet --pidfile $PIDFILE --exec $MINISSDPD -- $ARGS
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping minissdpd"
+	start-stop-daemon --stop --pidfile "${PIDFILE}"
+	eend $?
+}
