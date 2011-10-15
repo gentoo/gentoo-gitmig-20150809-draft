@@ -1,6 +1,13 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.67 2011/09/04 00:22:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.68 2011/10/15 11:29:20 polynomial-c Exp $
+
+*firefox-bin-7.0.1 (15 Oct 2011)
+
+  15 Oct 2011; Lars Wendler <polynomial-c@gentoo.org>
+  -firefox-bin-3.6.17.ebuild, -firefox-bin-3.6.18.ebuild,
+  -firefox-bin-6.0.ebuild, +firefox-bin-7.0.1.ebuild:
+  Version bump (bug #387191). Removed old.
 
   04 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   firefox-bin-3.6.20.ebuild:
