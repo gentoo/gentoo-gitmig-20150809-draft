@@ -1,6 +1,20 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.54 2011/10/15 23:14:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.55 2011/10/15 23:16:59 ssuominen Exp $
+
+  15 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  -files/opencv-2.0.0-libpng14.patch, -opencv-2.1.0.ebuild,
+  -files/opencv-2.1.0-mmap.patch, -files/opencv-2.1.0-multilib.patch,
+  -opencv-2.2.0.ebuild, -opencv-2.2.0-r10.ebuild,
+  -files/opencv-2.2.0-convert_sets_to_options.patch,
+  -files/opencv-2.2.0-ffmpeg01.patch, -files/opencv-2.2.0-ffmpeg02.patch,
+  -files/opencv-2.2.0-findblas.patch, -files/opencv-2.2.0-findnpp.patch,
+  -files/opencv-2.2.0-fortran.patch, -files/opencv-2.2.0-gcc46.patch,
+  -files/opencv-2.2.0-libpng1.5.patch, -files/opencv-2.2.0-numpy.patch,
+  -files/opencv-2.2.0-ptrcvcapture.patch,
+  -files/opencv-2.2.0-use_system_libs.patch,
+  -files/opencv-2.2.0-v4l_2.6.38.patch:
+  old
 
   15 Oct 2011; Markus Meier <maekke@gentoo.org> opencv-2.3.0.ebuild:
   x86 stable, bug #385211
