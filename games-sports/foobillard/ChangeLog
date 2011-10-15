@@ -1,6 +1,6 @@
 # ChangeLog for games-sports/foobillard
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/ChangeLog,v 1.19 2011/10/13 08:00:07 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/foobillard/ChangeLog,v 1.20 2011/10/15 08:10:46 tove Exp $
 
   13 Oct 2011; Tupone Alfredo <tupone@gentoo.org> foobillard-3.0a.ebuild:
   No more rely on build-time opengl choice. Bug #377295 by Michał Górny
@@ -10,7 +10,7 @@
   work around issues with some drivers related to GL_CLAMP (bug #355821)
   - patch submitted by Alan Swanson
 
-  16 Sep 2010; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org>
+  16 Sep 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   foobillard-3.0a.ebuild:
   virtual/glut -> media-libs/glut
 
@@ -25,15 +25,15 @@
   24 Feb 2007; Tristan Heaven <nyhm@gentoo.org> foobillard-3.0a.ebuild:
   Fix dependencies, bug #168179
 
-  12 Oct 2006; Diego PettenÃ² <flameeyes@gentoo.org> foobillard-3.0a.ebuild:
+  12 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> foobillard-3.0a.ebuild:
   Force latest versions of autotools.
 
-  02 Oct 2006; Diego PettenÃ² <flameeyes@gentoo.org> foobillard-3.0a.ebuild:
+  02 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> foobillard-3.0a.ebuild:
   Add ~x86-fbsd keyword.
 
   01 Oct 2006; Michael Sterrett <mr_bones_@gentoo.org>
   +files/foobillard-3.0a-fbsd.patch, foobillard-3.0a.ebuild:
-  fixup nvidia detection and add fbsd support - patch from Diego PettenÃ² (bug
+  fixup nvidia detection and add fbsd support - patch from Diego Pettenò (bug
   #149718)
 
   29 Jan 2006; Joshua Baergen <joshuabaergen@gentoo.org>
@@ -88,7 +88,7 @@
 
 *foobillard-1.5 (21 Jun 2002)
 
-  17 jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> foobillard-1.5.ebuild :
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> foobillard-1.5.ebuild :
   Added KEYWORDS, SLOT.
 
   21 Jun 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
