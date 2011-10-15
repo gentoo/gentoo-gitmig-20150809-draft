@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/markupsafe
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markupsafe/ChangeLog,v 1.34 2011/10/13 21:28:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markupsafe/ChangeLog,v 1.35 2011/10/15 23:04:53 maekke Exp $
+
+  15 Oct 2011; Markus Meier <maekke@gentoo.org> markupsafe-0.15.ebuild:
+  arm stable, bug #386053
 
   13 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> markupsafe-0.15.ebuild:
   x86 stable wrt bug #386053
