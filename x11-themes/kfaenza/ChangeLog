@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/kfaenza
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/kfaenza/ChangeLog,v 1.1 2011/10/15 19:26:45 maksbotan Exp $
+
+*kfaenza-0.8.7 (15 Oct 2011)
+
+  15 Oct 2011; Maxim Koltsov <maksbotan@gentoo.org> +kfaenza-0.8.7.ebuild,
+  +metadata.xml:
+  Initial ebuild from bug #384569. Thanks to Adam <fitzadam@hotmail.com>.
+
