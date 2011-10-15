@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xmldiff
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmldiff/ChangeLog,v 1.17 2011/08/06 09:33:21 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmldiff/ChangeLog,v 1.18 2011/10/15 19:34:48 hwoarang Exp $
+
+  15 Oct 2011; Markos Chandras <hwoarang@gentoo.org> xmldiff-0.6.10.ebuild:
+  Stable on amd64 wrt bug #378063
 
   06 Aug 2011; Zac Medico <zmedico@gentoo.org> xmldiff-0.6.10.ebuild:
   Add ~x86-linux keyword.
