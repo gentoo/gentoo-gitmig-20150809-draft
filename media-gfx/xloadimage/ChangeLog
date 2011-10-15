@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xloadimage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/ChangeLog,v 1.60 2011/10/15 11:50:24 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/ChangeLog,v 1.61 2011/10/15 22:54:58 maekke Exp $
+
+  15 Oct 2011; Markus Meier <maekke@gentoo.org> xloadimage-4.1-r11.ebuild:
+  arm stable, bug #385789
 
   15 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
   xloadimage-4.1-r11.ebuild:
