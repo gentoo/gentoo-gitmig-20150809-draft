@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/nip2-7.26.3.ebuild,v 1.2 2011/09/14 09:01:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/nip2-7.26.3.ebuild,v 1.3 2011/10/15 19:58:32 hwoarang Exp $
 
 EAPI=2
 inherit eutils autotools fdo-mime gnome2-utils versionator
@@ -12,7 +12,7 @@ HOMEPAGE="http://vips.sourceforge.net"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug fftw goffice gsl test"
 
 RDEPEND=">=dev-libs/glib-2.14:2
