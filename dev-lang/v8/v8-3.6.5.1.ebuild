@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.6.5.1.ebuild,v 1.5 2011/10/13 02:17:14 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.6.5.1.ebuild,v 1.6 2011/10/15 17:48:13 floppym Exp $
 
 EAPI="3"
 
@@ -66,7 +66,18 @@ src_compile() {
 	else
 		soname_version="${PV}"
 	fi
-	emake V=1 library=shared werror=no console=${console} soname_version=${soname_version} ${mytarget} || die
+
+	local snapshot=on
+	host-is-pax && snapshot=off
+
+	emake V=1 \
+		library=shared \
+		werror=no \
+		console=${console} \
+		soname_version=${soname_version} \
+		snapshot=${snapshot} \
+		${mytarget} || die
+
 	pax-mark m out/${mytarget}/{cctest,d8,shell} || die
 }
 
