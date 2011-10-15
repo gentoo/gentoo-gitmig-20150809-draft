@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.214 2011/10/02 00:54:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.215 2011/10/15 14:48:58 hwoarang Exp $
+
+  15 Oct 2011; Markos Chandras <hwoarang@gentoo.org> rrdtool-1.4.5-r1.ebuild:
+  Stable on amd64 wrt bug #387171
 
   02 Oct 2011; Tim Harder <radhermit@gentoo.org> rrdtool-1.4.5-r1.ebuild:
   Improve python support (bug #315085 by Arfrever).
