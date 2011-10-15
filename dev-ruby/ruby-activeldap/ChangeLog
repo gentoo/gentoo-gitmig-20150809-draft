@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-activeldap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-activeldap/ChangeLog,v 1.29 2011/10/08 18:36:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-activeldap/ChangeLog,v 1.30 2011/10/15 23:05:58 maekke Exp $
+
+  15 Oct 2011; Markus Meier <maekke@gentoo.org>
+  ruby-activeldap-1.2.2-r1.ebuild:
+  amd64/x86 stable, bug #384827
 
   08 Oct 2011; Raúl Porcel <armin76@gentoo.org> ruby-activeldap-1.2.1.ebuild,
   ruby-activeldap-1.2.2.ebuild, ruby-activeldap-1.2.2-r1.ebuild:
