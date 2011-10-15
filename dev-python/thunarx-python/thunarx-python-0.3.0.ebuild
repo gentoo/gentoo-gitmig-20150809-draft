@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/thunarx-python/thunarx-python-0.3.0.ebuild,v 1.2 2011/05/19 22:32:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/thunarx-python/thunarx-python-0.3.0.ebuild,v 1.3 2011/10/15 21:04:39 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 PYTHON_DEPEND=2
 inherit python xfconf
 
