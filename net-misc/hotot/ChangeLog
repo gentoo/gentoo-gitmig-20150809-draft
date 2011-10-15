@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/hotot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/ChangeLog,v 1.5 2011/07/26 17:03:22 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hotot/ChangeLog,v 1.6 2011/10/15 09:23:18 xmw Exp $
+
+*hotot-0.9.6_p20111015 (15 Oct 2011)
+
+  15 Oct 2011; Michael Weber <xmw@gentoo.org> -hotot-0.9.6_p20110703-r1.ebuild,
+  +hotot-0.9.6_p20111015.ebuild:
+  Remove old version, add new snapshot to fix segfault reported by mori rámar
+  (bug 385969) and reported fixed by upstream.
 
 *hotot-0.9.6_p20110726 (26 Jul 2011)
 
