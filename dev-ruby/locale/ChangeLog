@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/locale
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.26 2011/09/28 17:48:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.27 2011/10/15 23:02:11 maekke Exp $
+
+  15 Oct 2011; Markus Meier <maekke@gentoo.org> locale-2.0.5-r2.ebuild:
+  amd64/x86 stable, bug #384825
 
 *locale-2.0.5-r3 (28 Sep 2011)
 
