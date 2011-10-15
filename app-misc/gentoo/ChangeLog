@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.98 2011/10/14 15:51:21 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.99 2011/10/15 17:28:49 jer Exp $
+
+  15 Oct 2011; Jeroen Roovers <jer@gentoo.org> gentoo-0.19.10.ebuild:
+  Stable for HPPA (bug #386639).
 
   14 Oct 2011; Steve Dibb <beandog@gentoo.org> gentoo-0.19.10.ebuild:
   amd64 stable, bug 386639
