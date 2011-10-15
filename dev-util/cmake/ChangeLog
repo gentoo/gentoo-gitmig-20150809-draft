@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.170 2011/07/18 09:03:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.171 2011/10/15 15:06:12 dilfridge Exp $
+
+*cmake-2.8.6-r1 (15 Oct 2011)
+
+  15 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +cmake-2.8.6-r1.ebuild, +files/cmake-2.8.6-FindBLAS.patch,
+  +files/cmake-2.8.6-FindLAPACK.patch:
+  Version bump (thanks johu!)
 
 *cmake-2.8.5-r2 (18 Jul 2011)
 
