@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.165 2011/10/14 18:59:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.166 2011/10/16 17:43:06 xarthisius Exp $
+
+  16 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> gtk-doc-1.18.ebuild:
+  ppc/ppc64 stable wrt #385699
 
   14 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> gtk-doc-1.18.ebuild:
   amd64 stable wrt #385699
