@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-wmdock-plugin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock-plugin/ChangeLog,v 1.6 2011/04/29 07:11:12 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wmdock-plugin/ChangeLog,v 1.7 2011/10/16 03:40:18 phajdan.jr Exp $
+
+  16 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  xfce4-wmdock-plugin-0.3.4.ebuild:
+  x86 stable wrt bug #386963
 
 *xfce4-wmdock-plugin-0.3.4 (29 Apr 2011)
 
