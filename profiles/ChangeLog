@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5790 2011/10/15 04:04:43 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5791 2011/10/16 11:08:23 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Oct 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Masking app-admin/mon for removal. Bug #375071
 
   15 Oct 2011; Matt Turner <mattst88@gentoo.org> package.mask:
   sys-boot/arcboot is gone from the tree.
