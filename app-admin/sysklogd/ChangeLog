@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysklogd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.74 2011/09/14 22:22:57 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.75 2011/10/16 05:06:18 vapier Exp $
+
+  16 Oct 2011; Mike Frysinger <vapier@gentoo.org> files/syslog.conf:
+  Tweak config file #376553 by Lamarque V. Souza.
 
 *sysklogd-1.5-r2 (14 Sep 2011)
 
