@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.94 2011/08/29 01:28:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.95 2011/10/16 09:59:39 hwoarang Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -139,7 +139,7 @@ qt4-build_src_unpack() {
 	setqtenv
 	local unpack_p="${MY_P}"
 	case "${PV}" in
-		4.8.0_beta*)
+		4.8.0_*)
 			unpack_p="qt-everywhere-opensource-src-${PV/_*}"
 		;;
 	esac
@@ -153,7 +153,7 @@ qt4-build_src_unpack() {
 	echo tar xzf "${DISTDIR}"/${MY_P}.tar.gz ${targets}
 	tar xzf "${DISTDIR}"/${MY_P}.tar.gz ${targets} || die
 	case "${PV}" in
-		4.8.0_beta*)
+		4.8.0_*)
 			mv ${WORKDIR}/qt-everywhere-opensource-src-${PV/_*} \
 				${WORKDIR}/qt-everywhere-opensource-src-${MY_PV}
 		;;
