@@ -1,0 +1,21 @@
+From bb72db04075dc5a1f0f88b92d3b1715bb2f0681e Mon Sep 17 00:00:00 2001
+From: Nathan Phillip Brink <ohnobinki@ohnopublishing.net>
+Date: Sun, 16 Oct 2011 20:12:51 +0000
+Subject: [PATCH 1/2] Install an SONAME symlink.
+
+---
+ Makefile |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index bec0ed5..65e1858 100644
+--- a/Makefile
++++ b/Makefile
+@@ -46,4 +46,4 @@ install:
+ 	$(INSTALL) -m 0644 $(HEADER_FILES) $(INCLUDE_DIR)
+ 	$(LDCONFIG)
+ 	ln -fs $(LIB_FILE) $(INSTALL_DIR)/$(LIB_NAME)
+-
++	ln -fs $(LIB_FILE) $(INSTALL_DIR)/$(SONAME)
+-- 
+1.7.3.4

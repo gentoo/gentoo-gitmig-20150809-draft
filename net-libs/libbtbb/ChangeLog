@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/libbtbb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/ChangeLog,v 1.1 2011/05/31 19:47:28 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/ChangeLog,v 1.2 2011/10/16 22:54:34 binki Exp $
+
+*libbtbb-0.6 (16 Oct 2011)
+
+  16 Oct 2011; Nathan Phillip Brink <binki@gentoo.org> -libbtbb-0.5.ebuild,
+  -files/libbtbb-0.5-flags.patch, -files/libbtbb-0.5-makefile.patch,
+  +libbtbb-0.6.ebuild, +files/libbtbb-0.6-soname-symlink.patch,
+  libbtbb-9999.ebuild:
+  Bump to libbtbb-0.6 at zero_chaos's request, with a patch to fix QA warning
+  about missing SONAME symlink.
 
 *libbtbb-9999 (31 May 2011)
 *libbtbb-0.5 (31 May 2011)

@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/libbtbb-9999.ebuild,v 1.1 2011/05/31 19:47:28 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/libbtbb-9999.ebuild,v 1.2 2011/10/16 22:54:34 binki Exp $
 
 EAPI=4
 
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="A library to decode Bluetooth baseband packets"
 HOMEPAGE="http://libbtbb.sourceforge.net/"
@@ -14,7 +14,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit git-2
 	KEYWORDS=""
 else
-	SRC_URI="mirror://sourceforge/${PN}/${PN}.${PV}.tgz"
+	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
@@ -22,12 +22,9 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-S=${WORKDIR}/${PN}
-
 src_prepare() {
-	if [[ ${PV} != "9999" ]] ; then
-		epatch "${FILESDIR}"/${P}-makefile.patch \
-			"${FILESDIR}"/${P}-flags.patch
+	if [[ ${PV} != "9999" ]]; then
+		epatch "${FILESDIR}"/${P}-soname-symlink.patch
 	fi
 }
 
