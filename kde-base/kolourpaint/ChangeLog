@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kolourpaint
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kolourpaint/ChangeLog,v 1.187 2011/10/15 17:25:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kolourpaint/ChangeLog,v 1.188 2011/10/16 10:06:53 mschiff Exp $
+
+  16 Oct 2011; Marc Schiffbauer <mschiff@gentoo.org> kolourpaint-4.7.2.ebuild:
+  Added scanner USE flag. Thanks to Diogo Pereira. Fixes bug #386591
 
   15 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -kolourpaint-4.7.0.ebuild:
