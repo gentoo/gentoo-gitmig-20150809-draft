@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.25.ebuild,v 1.1 2011/10/16 23:35:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.25.ebuild,v 1.2 2011/10/16 23:58:56 radhermit Exp $
 
 EAPI=4
 inherit multilib
@@ -20,8 +20,10 @@ CDEPEND="idn? ( net-dns/libidn )
 		gnome-base/gnome-keyring
 		dev-python/gnome-keyring-python
 	)
-	gnutls? ( >=net-libs/gnutls-1.2.0 )
-	!gnutls? ( ssl? ( >=dev-libs/openssl-0.9.6 ) )
+	ssl? (
+		gnutls? ( >=net-libs/gnutls-1.2.0 )
+		!gnutls? ( >=dev-libs/openssl-0.9.6 )
+	)
 	sasl? ( >=virtual/gsasl-0.2.4 )"
 
 RDEPEND="${CDEPEND}
@@ -43,6 +45,8 @@ DEPEND="${CDEPEND}
 	nls? ( sys-devel/gettext )
 	dev-util/pkgconfig"
 
+REQUIRED_USE="gnutls? ( ssl )"
+
 src_prepare() {
 	# Use default Gentoo location for mail aliases
 	sed -i -e 's:/etc/aliases:/etc/mail/aliases:' scripts/find_alias/find_alias_for_msmtp.sh
@@ -51,15 +55,8 @@ src_prepare() {
 src_configure() {
 	local myconf
 
-	if use gnutls ; then
-		myconf="--with-ssl=gnutls"
-	elif use ssl ; then
-		myconf="--with-ssl=openssl"
-	else
-		myconf="--with-ssl=no"
-	fi
-
 	econf \
+		$(use_with ssl ssl $(use gnutls && echo "gnutls" || echo "openssl")) \
 		$(use_with idn libidn) \
 		$(use_with sasl libgsasl) \
 		$(use_with gnome-keyring ) \
