@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.314 2011/10/15 22:11:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.315 2011/10/16 09:07:54 xarthisius Exp $
+
+  16 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> libxml2-2.7.8-r3.ebuild:
+  ppc/ppc64 stable wrt #386985
 
 *libxml2-2.7.8-r3 (15 Oct 2011)
 
