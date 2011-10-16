@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.16.ebuild,v 1.2 2011/10/04 08:06:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.16.ebuild,v 1.3 2011/10/16 13:16:37 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils multilib flag-o-matic python systemd virtualx
@@ -81,7 +81,7 @@ src_configure() {
 		--disable-modular-tests
 		$(use_with X x)
 		$(use_enable debug verbose-mode)
-		$(use_enable debug asserts)
+		--disable-asserts
 		$(use_enable kernel_linux inotify)
 		$(use_enable kernel_FreeBSD kqueue)
 		$(use_enable selinux)
