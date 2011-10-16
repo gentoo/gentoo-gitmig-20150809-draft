@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.6.0.ebuild,v 1.3 2011/05/02 21:24:52 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.6.1.ebuild,v 1.1 2011/10/16 19:51:26 billie Exp $
 
 EAPI=2
 
