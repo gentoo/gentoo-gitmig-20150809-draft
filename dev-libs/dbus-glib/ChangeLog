@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/dbus-glib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.89 2011/10/03 11:58:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbus-glib/ChangeLog,v 1.90 2011/10/16 00:13:12 ssuominen Exp $
+
+  16 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  -dbus-glib-0.94-r1.ebuild, -files/dbus-glib-0.94-marshall_objs.patch:
+  old
 
 *dbus-glib-0.98 (03 Oct 2011)
 
