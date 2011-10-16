@@ -1,18 +1,20 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.12.ebuild,v 1.3 2011/07/21 18:12:26 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.12.ebuild,v 1.4 2011/10/16 13:37:31 scarabeus Exp $
 
-EAPI=2
+EAPI=4
+
 inherit eutils flag-o-matic
 
 DESCRIPTION="Checks and undeletes partitions + PhotoRec, signature based recovery tool"
 HOMEPAGE="http://www.cgsecurity.org/wiki/TestDisk"
 SRC_URI="http://www.cgsecurity.org/${P}.tar.bz2"
-#SRC_URI="http://www.cgsecurity.org/${P}-WIP.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="static reiserfs ntfs jpeg"
+
 # WARNING: reiserfs support does NOT work with reiserfsprogs
 # you MUST use progsreiserfs-0.3.1_rc8 (the last version ever released).
 DEPEND=">=sys-libs/ncurses-5.2
@@ -23,29 +25,27 @@ DEPEND=">=sys-libs/ncurses-5.2
 		sys-libs/zlib"
 RDEPEND="!static? ( ${DEPEND} )"
 
-#S=${WORKDIR}/${P}-WIP
-
-# merged upstream
-#src_prepare() {
-#	epatch "${FILESDIR}"/${P}-exif_bound_checking-v2.patch
-#}
-
 src_configure() {
-	local myconf="--without-ewf --enable-sudo"
-	# --with-foo are broken, any use of --with/--without disable the
-	# functionality.
-	# The following variation must be used.
-	use reiserfs || myconf="${myconf} --without-reiserfs"
-	use ntfs || myconf="${myconf} --without-ntfs"
-	use jpeg || myconf="${myconf} --without-jpeg"
+	local myconf
 
 	# this is static method is the same used by upstream for their 'static' make
 	# target, but better, as it doesn't break.
 	use static && append-ldflags -static
 
-	econf ${myconf} || die
+	# --with-foo are broken, any use of --with/--without disable the
+	# functionality.
+	# The following variation must be used.
+	use reiserfs || myconf+=" --without-reiserfs"
+	use ntfs || myconf+=" --without-ntfs"
+	use jpeg || myconf+=" --without-jpeg"
 
-	# perform safety checks for NTFS and REISERFS
+	econf \
+		--docdir="${ED}/usr/share/doc/${PF}" \
+		--without-ewf \
+		--enable-sudo \
+		${myconf}
+
+	# perform safety checks for NTFS, REISERFS and JPEG
 	if use ntfs && ! egrep -q '^#define HAVE_LIBNTFS(3G)? 1$' "${S}"/config.h ; then
 		die "Failed to find either NTFS or NTFS-3G library."
 	fi
@@ -55,9 +55,4 @@ src_configure() {
 	if use jpeg && egrep -q 'undef HAVE_LIBJPEG\>' "${S}"/config.h ; then
 		die "Failed to find jpeg library."
 	fi
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die
-	[ "$PF" != "$P" ] && mv "${D}"/usr/share/doc/${P} "${D}"/usr/share/doc/${PF}
 }

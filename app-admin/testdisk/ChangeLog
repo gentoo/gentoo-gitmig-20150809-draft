@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/testdisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.43 2011/07/21 18:12:26 c1pher Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.44 2011/10/16 13:37:31 scarabeus Exp $
+
+  16 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> -testdisk-6.8-r1.ebuild,
+  -files/testdisk-6.8-jpeg.patch, -testdisk-6.10.ebuild,
+  -testdisk-6.11-r1.ebuild, -testdisk-6.11.3.ebuild,
+  -files/testdisk-6.11-exif_bound_checking-v2.patch, testdisk-6.12.ebuild:
+  Stabilise latest on amd64 and x86. Drop overshadowed. Per bug #332417.
 
   21 Jul 2011; Dane Smith <c1pher@gentoo.org> testdisk-6.12.ebuild:
   QA: Fix configure sanity checks wrt bug 374009. Thanks Ian Abbott
