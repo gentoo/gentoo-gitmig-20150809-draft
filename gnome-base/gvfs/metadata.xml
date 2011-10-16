@@ -12,6 +12,7 @@ applications not using gio to access the gvfs filesystems.
 <use>
 	<flag name='archive'>Enables support for accessing files in archives
 		transparently via <pkg>app-arch/libarchive</pkg></flag>
+	<flag name='bluray'>Enable playback of Blu-ray filesystems using <pkg>media-libs/libbluray</pkg></flag>
 	<flag name='fuse'>Enables fuse mount points in $HOME/.gvfs for legacy
 		application access</flag>
 	<flag name="gdu">Enable <pkg>sys-apps/gnome-disk-utility</pkg> integration</flag>
