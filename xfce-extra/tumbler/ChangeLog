@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/tumbler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/tumbler/ChangeLog,v 1.20 2011/10/16 03:36:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/tumbler/ChangeLog,v 1.21 2011/10/16 05:24:34 ssuominen Exp $
+
+  16 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> tumbler-0.1.22.ebuild:
+  amd64 stable wrt #386963
 
   16 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> tumbler-0.1.22.ebuild:
   x86 stable wrt bug #386963
