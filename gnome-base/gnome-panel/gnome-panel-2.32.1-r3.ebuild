@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1-r3.ebuild,v 1.2 2011/10/14 21:21:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1-r3.ebuild,v 1.3 2011/10/16 17:53:10 xarthisius Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -16,7 +16,7 @@ SRC_URI="${SRC_URI} mirror://gentoo/introspection-20110205.m4.tar.bz2
 
 LICENSE="GPL-2 FDL-1.1 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="+bonobo doc eds +introspection networkmanager"
 
 RDEPEND=">=gnome-base/gnome-desktop-2.26:2
