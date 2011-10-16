@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-36.ebuild,v 1.1 2011/09/25 17:16:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-37.ebuild,v 1.1 2011/10/16 17:27:59 mgorny Exp $
 
 EAPI=4
 
