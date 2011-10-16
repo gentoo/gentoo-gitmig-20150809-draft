@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/tuxonice-userui
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/ChangeLog,v 1.22 2011/09/26 15:34:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/ChangeLog,v 1.23 2011/10/16 16:45:31 pacho Exp $
+
+  16 Oct 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Co-maintain this also.
 
   26 Sep 2011; Markos Chandras <hwoarang@gentoo.org>
   tuxonice-userui-1.0.ebuild, +files/tuxonice-userui-1.0-libpng15.patch:

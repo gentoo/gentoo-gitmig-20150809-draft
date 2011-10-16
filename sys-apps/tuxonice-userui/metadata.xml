@@ -6,6 +6,10 @@
 		<email>nelchael@gentoo.org</email>
 		<name>Krzysztof Pawlik</name>
 	</maintainer>
+	<maintainer>
+		<email>pacho@gentoo.org</email>
+		<name>Pacho Ramos</name>
+	</maintainer>
 	<use>
 		<flag name='fbsplash'>Add support for framebuffer splash</flag>
 	</use>
