@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r3.ebuild,v 1.2 2011/04/15 08:51:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r3.ebuild,v 1.3 2011/10/16 13:07:03 ssuominen Exp $
 
 EAPI="2"
 
@@ -28,8 +28,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-maxcolors.patch #292130
 	epatch "${FILESDIR}"/${P}-fontconfig.patch #363367
 
-	# Try libpng14 first, then fallback to plain libpng
-	sed -i -e 's:png12:png14:' configure.ac || die
+	# Try libpng15 first, then fallback to plain libpng
+	sed -i -e 's:png12:png15:' configure.ac || die
 
 	# Avoid programs we never install
 	sed -i '/^noinst_PROGRAMS/s:=:=\n___fooooo =:' Makefile.in || die
