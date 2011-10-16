@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/llfuse
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/llfuse/ChangeLog,v 1.1 2011/10/16 23:21:24 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/llfuse/ChangeLog,v 1.2 2011/10/16 23:27:33 radhermit Exp $
+
+  16 Oct 2011; Tim Harder <radhermit@gentoo.org> llfuse-0.36.ebuild:
+  Add pypi homepage.
 
 *llfuse-0.36 (16 Oct 2011)
 
