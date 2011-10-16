@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libwps
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/ChangeLog,v 1.8 2011/10/16 07:55:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/ChangeLog,v 1.9 2011/10/16 17:08:09 xarthisius Exp $
+
+  16 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> libwps-0.2.2.ebuild:
+  ppc stable wrt #385699
 
   16 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> libwps-0.2.3.ebuild:
   Add pkgconfig to depend.
