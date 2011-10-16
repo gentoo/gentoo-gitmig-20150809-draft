@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/oasis
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/ChangeLog,v 1.15 2011/10/08 08:21:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/oasis/ChangeLog,v 1.16 2011/10/16 12:28:00 ssuominen Exp $
+
+  16 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> oasis-4.0-r2.ebuild:
+  amd64 restable
 
   08 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> oasis-4.0-r2.ebuild:
   Revert back to ~arch for security and libpng porting.

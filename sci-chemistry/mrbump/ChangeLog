@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/mrbump
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mrbump/ChangeLog,v 1.7 2011/10/08 08:11:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mrbump/ChangeLog,v 1.8 2011/10/16 12:26:15 ssuominen Exp $
+
+  16 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> mrbump-0.4.4.ebuild:
+  amd64 restable
 
   08 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> mrbump-0.4.4.ebuild:
   Revert back to ~arch for security and libpng porting.
