@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-1.9.0.ebuild,v 1.4 2011/05/09 23:10:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-1.9.0.ebuild,v 1.5 2011/10/16 11:01:42 dilfridge Exp $
 
 EAPI=3
 
@@ -9,6 +9,7 @@ KDE_LINGUAS="ar ast be bg ca ca@valencia cs da de el en_GB eo es et eu fi fr ga 
 lt lv mai ms nb nds nl nn oc pa pl pt pt_BR ro ru se sk sv th tr uk zh_CN zh_TW"
 KMNAME="extragear/graphics"
 KDE_MINIMAL="4.5"
+KDE_HANDBOOK="optional"
 inherit flag-o-matic kde4-base
 
 DESCRIPTION="Plugins for the KDE Image Plugin Interface"
@@ -20,7 +21,7 @@ LICENSE="GPL-2
 	handbook? ( FDL-1.2 )"
 KEYWORDS="amd64 ~ppc x86"
 SLOT="4"
-IUSE="cdr calendar crypt debug expoblending handbook +imagemagick ipod mjpeg redeyes scanner"
+IUSE="cdr calendar crypt debug expoblending +imagemagick ipod mjpeg redeyes scanner"
 
 DEPEND="
 	>=dev-libs/expat-2.0.1

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-2.2.0.ebuild,v 1.1 2011/10/03 19:40:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-2.2.0.ebuild,v 1.2 2011/10/16 11:01:42 dilfridge Exp $
 
 EAPI=4
 
@@ -12,6 +12,8 @@ KDE_LINGUAS="ar az be bg bn br bs ca cs csb cy da de el en_GB eo es et eu fa fi 
 gl ha he hi hr hsb hu id is it ja ka kk km ko ku lb lo lt lv mi mk mn ms mt nb nds ne nl nn
 nso oc pa pl pt pt_BR ro ru rw se sk sl sq sr ss sv ta te tg th tr tt uk uz ven vi wa xh
 zh_CN zh_HK zh_TW zu"
+
+KDE_HANDBOOK="optional"
 
 inherit flag-o-matic kde4-base
 
@@ -25,7 +27,7 @@ LICENSE="GPL-2
 	handbook? ( FDL-1.2 )"
 KEYWORDS="~amd64 ~x86"
 SLOT="4"
-IUSE="cdr calendar crypt debug expoblending gpssync handbook +imagemagick ipod +mediawiki mjpeg panorama redeyes scanner vkontakte"
+IUSE="cdr calendar crypt debug expoblending gpssync +imagemagick ipod +mediawiki mjpeg panorama redeyes scanner vkontakte"
 
 DEPEND="
 	$(add_kdebase_dep libkipi)
