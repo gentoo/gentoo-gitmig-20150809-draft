@@ -1,11 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.99.4.ebuild,v 1.1 2011/09/30 19:27:46 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-4.99.4.ebuild,v 1.2 2011/10/16 00:05:35 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GNOME2_LA_PUNT="yes"
 GCONF_DEBUG="yes"
-GNOME_TARBALL_SUFFIX="xz" # remove when python eclass supports EAPI 4
 PYTHON_DEPEND="2"
 
 inherit autotools db-use eutils flag-o-matic gnome2 java-pkg-opt-2 python
@@ -103,6 +102,11 @@ pkg_setup() {
 	# Not in portage
 	G2CONF="${G2CONF}
 		--disable-default-binary"
+
+	export XDG_DATA_HOME="${T}/.local"
+
+	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
