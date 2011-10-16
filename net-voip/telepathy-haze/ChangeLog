@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/telepathy-haze
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/ChangeLog,v 1.26 2011/10/14 21:35:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/ChangeLog,v 1.27 2011/10/16 17:13:33 xarthisius Exp $
+
+  16 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  telepathy-haze-0.5.0.ebuild:
+  ppc stable wrt #385699
 
   14 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
   telepathy-haze-0.5.0.ebuild:
