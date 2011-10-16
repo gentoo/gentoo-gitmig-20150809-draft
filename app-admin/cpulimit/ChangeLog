@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/cpulimit
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cpulimit/ChangeLog,v 1.8 2009/09/14 21:02:40 volkmar Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cpulimit/ChangeLog,v 1.9 2011/10/16 09:42:28 hwoarang Exp $
+
+*cpulimit-9999 (16 Oct 2011)
+
+  16 Oct 2011; Markos Chandras <hwoarang@gentoo.org> +cpulimit-9999.ebuild,
+  +files/cpulimit-9999-cflags.patch:
+  Add live ebuild. Bug #324757. Thank to Paulo da Silva <psdasilva@yahoo.com>
 
   14 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> cpulimit-1.1.ebuild:
   Keywording for ppc.
