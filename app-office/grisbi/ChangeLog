@@ -1,6 +1,9 @@
 # ChangeLog for app-office/grisbi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.53 2011/10/14 21:03:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.54 2011/10/16 17:05:54 xarthisius Exp $
+
+  16 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> grisbi-0.8.8.ebuild:
+  ppc stable wrt #385699
 
   14 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> grisbi-0.8.8.ebuild:
   amd64 stable wrt #385699
