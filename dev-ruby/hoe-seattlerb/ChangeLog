@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/hoe-seattlerb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.31 2011/09/14 17:04:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe-seattlerb/ChangeLog,v 1.32 2011/10/16 07:34:25 graaff Exp $
+
+  16 Oct 2011; Hans de Graaff <graaff@gentoo.org> -hoe-seattlerb-1.2.2.ebuild,
+  -hoe-seattlerb-1.2.4-r1.ebuild, -hoe-seattlerb-1.2.5.ebuild:
+  Remove old versions.
 
   14 Sep 2011; Jeroen Roovers <jer@gentoo.org> hoe-seattlerb-1.2.4.ebuild:
   Stable for HPPA (bug #369573).
