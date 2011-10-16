@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-0.7.92.ebuild,v 1.1 2011/10/03 13:52:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/rekonq-0.8.0.ebuild,v 1.1 2011/10/16 10:08:00 scarabeus Exp $
 
 EAPI=4
 
