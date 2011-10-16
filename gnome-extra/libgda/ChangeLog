@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.180 2011/10/16 00:05:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.181 2011/10/16 17:59:33 xarthisius Exp $
+
+  16 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> libgda-4.2.9.ebuild:
+  ppc/ppc64 stable wrt #385699
 
   16 Oct 2011; Pacho Ramos <pacho@gentoo.org> -libgda-4.2.2.ebuild,
   -files/libgda-4.2.5-missing-m4.patch, -libgda-4.2.8.ebuild,
