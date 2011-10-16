@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999-r1.ebuild,v 1.12 2011/10/05 14:25:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999-r1.ebuild,v 1.13 2011/10/16 14:12:14 scarabeus Exp $
 
 EAPI=3
 
@@ -91,21 +91,21 @@ unset X
 COMMON_DEPEND="
 	app-arch/zip
 	app-arch/unzip
-	>=app-text/hunspell-1.3.2
+	>=app-text/hunspell-1.3.2-r3
 	app-text/mythes
 	app-text/libwpd:0.9[tools]
 	app-text/libwpg:0.2
 	>=app-text/libwps-0.2.2
 	dev-db/unixODBC
 	dev-libs/expat
-	>=dev-libs/glib-2.18
+	>=dev-libs/glib-2.28
 	>=dev-libs/hyphen-2.7.1
 	>=dev-libs/icu-4.8.1-r1
 	>=dev-lang/perl-5.0
 	>=dev-libs/openssl-0.9.8g
 	dev-libs/redland[ssl]
 	media-libs/freetype:2
-	>=media-libs/fontconfig-2.3.0
+	>=media-libs/fontconfig-2.8.0
 	>=media-libs/vigra-1.7
 	>=media-libs/libpng-1.4
 	net-print/cups
@@ -117,7 +117,7 @@ COMMON_DEPEND="
 	x11-libs/libXinerama
 	x11-libs/libXrandr
 	x11-libs/libXrender
-	dbus? ( >=dev-libs/dbus-glib-0.94 )
+	dbus? ( >=dev-libs/dbus-glib-0.92 )
 	eds? ( gnome-extra/evolution-data-server )
 	gnome? ( gnome-base/gconf:2 )
 	gtk? ( >=x11-libs/gtk+-2.24:2 )
@@ -141,7 +141,7 @@ COMMON_DEPEND="
 		>=dev-libs/nss-3.12.9
 	)
 	opengl? ( virtual/opengl )
-	pdfimport? ( >=app-text/poppler-0.12.3-r3[xpdf-headers] )
+	pdfimport? ( >=app-text/poppler-0.16[xpdf-headers] )
 	webdav? ( net-libs/neon )
 "
 
@@ -165,8 +165,8 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/intltool
 	dev-util/mdds
 	>=dev-util/pkgconfig-0.26
-	>=net-misc/curl-7.21.7
-	>=sys-apps/findutils-4.5.9
+	>=net-misc/curl-7.21.4
+	>=sys-apps/findutils-4.4.2
 	sys-devel/bison
 	sys-apps/coreutils
 	sys-devel/flex
