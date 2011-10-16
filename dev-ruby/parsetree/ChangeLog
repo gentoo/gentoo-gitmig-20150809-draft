@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/parsetree
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/ChangeLog,v 1.44 2011/09/15 04:49:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/parsetree/ChangeLog,v 1.45 2011/10/16 09:52:13 graaff Exp $
+
+*parsetree-3.0.8 (16 Oct 2011)
+
+  16 Oct 2011; Hans de Graaff <graaff@gentoo.org> +parsetree-3.0.8.ebuild:
+  Version bump.
 
   15 Sep 2011; Jeroen Roovers <jer@gentoo.org> parsetree-3.0.7.ebuild:
   Stable for HPPA (bug #369573).
