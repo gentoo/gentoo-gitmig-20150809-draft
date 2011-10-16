@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.51.00-r2.ebuild,v 1.1 2011/10/12 21:11:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.51.00-r2.ebuild,v 1.2 2011/10/16 05:11:46 vapier Exp $
 
 EAPI="3"
 
@@ -8,17 +8,15 @@ inherit toolchain-funcs eutils multilib
 
 DESCRIPTION="A set of utilities for converting to/from the netpbm (and related) formats"
 HOMEPAGE="http://netpbm.sourceforge.net/"
-SRC_URI="
-	mirror://gentoo/${P}.tar.xz
+SRC_URI="mirror://gentoo/${P}.tar.xz
 	mirror://gentoo/${P}-libpng-1.5.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ~ppc ppc64 s390 sh ~sparc x86 ~x86-fbsd"
 IUSE="jbig jpeg jpeg2k png rle svga tiff X xml zlib"
 
-RDEPEND="
-	jbig? ( media-libs/jbigkit )
+RDEPEND="jbig? ( media-libs/jbigkit )
 	jpeg? ( virtual/jpeg )
 	jpeg2k? ( media-libs/jasper )
 	png? ( >=media-libs/libpng-1.4 )
@@ -54,7 +52,6 @@ maint_pkg_create() {
 		die "need svn checkout dir"
 	fi
 }
-
 pkg_setup() { [[ -n ${VAPIER_LOVES_YOU} && ! -e ${DISTDIR}/${P}.tar.xz ]] && maint_pkg_create ; }
 
 netpbm_libtype() {
