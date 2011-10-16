@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/libwps-0.2.3.ebuild,v 1.1 2011/10/07 09:47:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/libwps-0.2.3.ebuild,v 1.2 2011/10/16 07:55:10 scarabeus Exp $
 
 EAPI=4
 
@@ -15,6 +15,7 @@ IUSE="doc debug static-libs"
 
 RDEPEND="app-text/libwpd:0.9"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	doc? ( app-doc/doxygen[-nodot] )
 "
 
