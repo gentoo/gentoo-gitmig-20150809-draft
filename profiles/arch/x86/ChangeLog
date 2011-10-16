@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.78 2011/10/03 20:29:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.79 2011/10/16 11:42:14 ssuominen Exp $
+
+  16 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Unmask USE="bluray" for gnome-base/gvfs.
 
   03 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> use.mask:
   Mask USE="dxr3" again wrt #350211.

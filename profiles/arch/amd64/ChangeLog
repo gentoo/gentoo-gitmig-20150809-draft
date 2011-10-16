@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.148 2011/10/14 22:52:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.149 2011/10/16 11:43:42 ssuominen Exp $
+
+  16 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Unmask USE="bluray" for gnome-base/gvfs.
 
   14 Oct 2011; Mike Frysinger <vapier@gentoo.org> make.defaults:
   Drop unused ASFLAGS_x86 variable.
