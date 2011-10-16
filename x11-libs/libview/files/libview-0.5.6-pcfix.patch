@@ -1,7 +1,6 @@
-diff -u -r libview-0.5.6.old/libview.pc.in libview-0.5.6/libview.pc.in
---- libview-0.5.6.old/libview.pc.in	2005-09-07 18:35:12.000000000 -0400
-+++ libview-0.5.6/libview.pc.in	2006-05-31 10:38:50.000000000 -0400
-@@ -1,9 +1,10 @@
+--- libview.pc.in
++++ libview.pc.in
+@@ -1,9 +1,11 @@
 -prefix=${prefix}
 +prefix=@prefix@
 +exec_prefix=${prefix}
@@ -13,5 +12,6 @@ diff -u -r libview-0.5.6.old/libview.pc.in libview-0.5.6/libview.pc.in
  Version: @VERSION@
 -Libs: -L${libdir} -lview @PACKAGE_LIBS@
 -Cflags: -I${includedir} @PACKAGE_CFLAGS@
-+Libs: -L${libdir} -lview @VIEW_LIBS@
++Libs: -L${libdir} -lview
++Libs.private: @VIEW_LIBS@
 +Cflags: -I${includedir} @VIEW_CFLAGS@

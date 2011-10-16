@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libview
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libview/ChangeLog,v 1.17 2011/09/14 18:11:42 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libview/ChangeLog,v 1.18 2011/10/16 20:24:16 ssuominen Exp $
+
+*libview-0.6.6-r2 (16 Oct 2011)
+
+  16 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  files/libview-0.5.6-pcfix.patch, +libview-0.6.6-r2.ebuild:
+  Move @VIEW_LIBS@ to Libs.private from Libs to avoid problems with libpng
+  upgrade.
 
   14 Sep 2011; Vadim Kuznetsov <vadimk@gentoo.org> -libview-0.6.2.ebuild,
   -libview-0.6.6.ebuild:
