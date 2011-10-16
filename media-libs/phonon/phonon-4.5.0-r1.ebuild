@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.4.4.ebuild,v 1.4 2011/03/28 23:13:46 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.5.0-r1.ebuild,v 1.1 2011/10/16 10:41:36 dilfridge Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit cmake-utils
 
@@ -11,9 +11,9 @@ HOMEPAGE="https://projects.kde.org/projects/kdesupport/phonon"
 SRC_URI="mirror://kde/stable/phonon/${PV}/src/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 SLOT="0"
-IUSE="debug gstreamer pulseaudio +vlc xine"
+IUSE="aqua debug +gstreamer pulseaudio vlc xine"
 
 COMMON_DEPEND="
 	>=x11-libs/qt-core-4.6.0:4
@@ -28,9 +28,9 @@ COMMON_DEPEND="
 # directshow? ( media-sound/phonon-directshow )
 # mmf? ( media-sound/phonon-mmf )
 # mplayer? ( media-sound/phonon-mplayer )
-# quicktime? ( media-sound/phonon-quicktime )
 # waveout? ( media-sound/phonon-waveout )
 PDEPEND="
+	aqua? ( media-libs/phonon-qt7 )
 	gstreamer? ( media-libs/phonon-gstreamer )
 	vlc? ( >=media-libs/phonon-vlc-0.3.2 )
 	xine? ( >=media-libs/phonon-xine-0.4.4 )
@@ -44,11 +44,9 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 "
 
-pkg_setup() {
-	if use !gstreamer && use !vlc && use !xine; then
-		ewarn "You must at least select one backend for phonon to be usuable"
-	fi
-}
+REQUIRED_USE="|| ( aqua gstreamer vlc xine )"
+
+PATCHES=( "${FILESDIR}/${P}-pow.patch" )
 
 src_configure() {
 	local mycmakeargs=(

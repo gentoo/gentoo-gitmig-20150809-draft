@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/phonon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.16 2011/06/01 16:04:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.17 2011/10/16 10:41:36 dilfridge Exp $
+
+*phonon-4.5.0-r1 (16 Oct 2011)
+
+  16 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org> -phonon-4.4.4.ebuild,
+  +phonon-4.5.0-r1.ebuild, +files/phonon-4.5.0-pow.patch:
+  Add pulseaudio-1 build fix, bug 386489; remove old
 
   01 Jun 2011; Brent Baude <ranger@gentoo.org> phonon-4.4.3.ebuild:
   Marking phonon-4.4.3 ppc for bug 354033
