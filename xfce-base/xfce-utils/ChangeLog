@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.185 2011/10/16 03:34:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/ChangeLog,v 1.186 2011/10/16 05:23:23 ssuominen Exp $
+
+  16 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> xfce-utils-4.8.3.ebuild:
+  amd64 stable wrt #386963
 
   16 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> xfce-utils-4.8.3.ebuild:
   x86 stable wrt bug #386963
