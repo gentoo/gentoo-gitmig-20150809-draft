@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gdbus-codegen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.1 2011/09/27 13:02:37 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/ChangeLog,v 1.2 2011/10/16 19:24:10 pacho Exp $
+
+*gdbus-codegen-2.30.1 (16 Oct 2011)
+
+  16 Oct 2011; Pacho Ramos <pacho@gentoo.org> +gdbus-codegen-2.30.1.ebuild:
+  Version bump.
 
 *gdbus-codegen-2.30.0 (27 Sep 2011)
 
