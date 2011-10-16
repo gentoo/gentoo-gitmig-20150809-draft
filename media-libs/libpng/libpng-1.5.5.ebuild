@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.5.5.ebuild,v 1.7 2011/10/16 20:09:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.5.5.ebuild,v 1.8 2011/10/16 20:26:01 ssuominen Exp $
 
 # WARNING: media-gfx/optipng is shipping internal copy of libpng14. Look out for
 # security.
@@ -21,7 +21,8 @@ IUSE="apng static-libs"
 
 RDEPEND="sys-libs/zlib
 	!!<x11-libs/gdk-pixbuf-2.24.0-r1
-	!!<x11-libs/libsexy-0.1.11-r3"
+	!!<x11-libs/libsexy-0.1.11-r3
+	!!<x11-libs/libview-0.6.6-r2"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils"
 
