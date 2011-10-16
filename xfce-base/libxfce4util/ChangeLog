@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/libxfce4util
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/ChangeLog,v 1.161 2011/09/12 19:11:47 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/ChangeLog,v 1.162 2011/10/16 03:30:37 phajdan.jr Exp $
+
+  16 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  libxfce4util-4.8.2.ebuild:
+  x86 stable wrt bug #386963
 
 *libxfce4util-4.8.2 (12 Sep 2011)
 
