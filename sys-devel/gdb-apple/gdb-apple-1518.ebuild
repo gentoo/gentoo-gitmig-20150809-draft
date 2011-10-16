@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb-apple/gdb-apple-1518.ebuild,v 1.2 2011/07/11 12:08:37 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb-apple/gdb-apple-1518.ebuild,v 1.3 2011/10/16 10:17:17 grobian Exp $
 
 EAPI="3"
 
@@ -46,7 +46,7 @@ src_install() {
 	emake DESTDIR="${D}" libdir=/nukeme includedir=/nukeme install || die
 	rm -R "${D}"/nukeme || die
 	rm -Rf "${ED}"/usr/${CHOST} || die
-	mv "${ED}"/usr/bin/gdb ${ED}/
+	mv "${ED}"/usr/bin/gdb "${ED}"/
 	rm -f "${ED}"/usr/bin/*
 	mv "${ED}"/gdb "${ED}"/usr/bin/
 }
