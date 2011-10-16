@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/atkmm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/atkmm/ChangeLog,v 1.22 2011/10/04 14:10:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/atkmm/ChangeLog,v 1.23 2011/10/16 17:26:52 xarthisius Exp $
+
+  16 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> atkmm-2.22.5.ebuild:
+  ppc/ppc64 stable wrt #385699
 
   04 Oct 2011; Jeroen Roovers <jer@gentoo.org> atkmm-2.22.5.ebuild:
   Stable for HPPA (bug #372353).
