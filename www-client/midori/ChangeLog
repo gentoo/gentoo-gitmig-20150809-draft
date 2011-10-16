@@ -1,6 +1,9 @@
 # ChangeLog for www-client/midori
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.67 2011/10/14 19:10:55 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.68 2011/10/16 03:43:31 phajdan.jr Exp $
+
+  16 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> midori-0.4.0.ebuild:
+  x86 stable wrt bug #386963
 
 *midori-0.4.1 (14 Oct 2011)
 
