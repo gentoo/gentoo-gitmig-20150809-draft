@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/audiofile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.85 2011/10/14 21:29:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/audiofile/ChangeLog,v 1.86 2011/10/16 17:44:59 xarthisius Exp $
+
+  16 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> audiofile-0.3.1.ebuild:
+  ppc/ppc64 stable wrt #385699
 
   14 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> audiofile-0.3.1.ebuild:
   amd64 stable wrt #385699
