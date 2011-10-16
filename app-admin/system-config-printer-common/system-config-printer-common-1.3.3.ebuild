@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.3.ebuild,v 1.9 2011/09/16 15:57:51 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/system-config-printer-common-1.3.3.ebuild,v 1.10 2011/10/16 17:35:28 xarthisius Exp $
 
 EAPI="3"
 
@@ -64,7 +64,7 @@ src_configure() {
 
 src_compile() {
 	emake || die "emake failed"
-	if 	use doc; then
+	if use doc; then
 		emake html || die "emake html failed"
 	fi
 }
