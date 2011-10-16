@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/workrave
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.78 2011/10/14 21:00:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.79 2011/10/16 17:03:38 xarthisius Exp $
+
+  16 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> workrave-1.9.4.ebuild:
+  ppc stable wrt #385699
 
   14 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> workrave-1.9.4.ebuild:
   amd64 stable wrt #385699
