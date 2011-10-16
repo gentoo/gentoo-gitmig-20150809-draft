@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/svninfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/ChangeLog,v 1.39 2011/08/28 16:30:25 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/svninfo/ChangeLog,v 1.40 2011/10/16 17:22:02 grobian Exp $
+
+  16 Oct 2011; Fabian Groffen <grobian@gentoo.org> svninfo-0.7.4.ebuild:
+  Marked ~x86-macos
 
   28 Aug 2011; Fabian Groffen <grobian@gentoo.org> svninfo-0.7.4.ebuild:
   Marked ~x64-macos
