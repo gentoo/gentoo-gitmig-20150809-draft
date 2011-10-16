@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.228 2011/10/14 21:02:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.229 2011/10/16 17:41:01 xarthisius Exp $
+
+  16 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> gnumeric-1.10.17.ebuild:
+  ppc/ppc64 stable wrt #385699
 
   14 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> gnumeric-1.10.17.ebuild:
   amd64 stable wrt #385699
