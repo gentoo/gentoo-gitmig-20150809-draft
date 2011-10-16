@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ctags-5.8.ebuild,v 1.1 2009/11/16 21:59:58 spatz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ctags-5.8.ebuild,v 1.2 2011/10/16 06:02:51 radhermit Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit eutils
 
@@ -27,8 +27,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-f95-pointers.patch"
 
 	# enabling Ada support
-	if use ada; then
-		cp "${WORKDIR}/${PN}-ada-mode-4.3.11/ada.c" "${S}"
+	if use ada ; then
+		cp "${WORKDIR}/${PN}-ada-mode-4.3.11/ada.c" "${S}" || die
 		epatch "${FILESDIR}/${P}-ada.patch"
 	fi
 }
@@ -38,20 +38,19 @@ src_configure() {
 		--with-posix-regex \
 		--without-readlib \
 		--disable-etags \
-		--enable-tmpdir=/tmp \
-		|| die "econf failed"
+		--enable-tmpdir=/tmp
 }
 
 src_install() {
-	einstall || die "einstall failed"
+	emake prefix="${D}"/usr mandir="${D}"/usr/share/man install
 
 	# namepace collision with X/Emacs-provided /usr/bin/ctags -- we
 	# rename ctags to exuberant-ctags (Mandrake does this also).
-	mv "${D}"/usr/bin/{ctags,exuberant-ctags}
-	mv "${D}"/usr/share/man/man1/{ctags,exuberant-ctags}.1
+	mv "${D}"/usr/bin/{ctags,exuberant-ctags} || die
+	mv "${D}"/usr/share/man/man1/{ctags,exuberant-ctags}.1 || die
 
-	dodoc FAQ NEWS README || die
-	dohtml EXTENDING.html ctags.html || die
+	dodoc FAQ NEWS README
+	dohtml EXTENDING.html ctags.html
 }
 
 pkg_postinst() {
