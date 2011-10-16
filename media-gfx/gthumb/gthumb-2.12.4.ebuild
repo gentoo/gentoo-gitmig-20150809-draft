@@ -1,28 +1,30 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.12.2.ebuild,v 1.6 2011/03/22 19:36:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.12.4.ebuild,v 1.1 2011/10/16 10:17:03 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="yes"
+GNOME2_LA_PUNT="yes"
 
 inherit eutils gnome2
 
 DESCRIPTION="Image viewer and browser for Gnome"
-HOMEPAGE="http://gthumb.sourceforge.net"
+HOMEPAGE="http://live.gnome.org/gthumb"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="cdr exif gnome-keyring gstreamer http raw slideshow tiff test"
 
-# TODO: beware, can link to brasero-3
+# We can't link against libbrasero-burn3
 RDEPEND=">=dev-libs/glib-2.16:2
 	>=x11-libs/gtk+-2.20:2
 	>=gnome-base/gconf-2.6
 	>=dev-libs/libunique-1.1.2:1
 	media-libs/libpng:0
 	virtual/jpeg:0
-	cdr? ( >=app-cdr/brasero-2.28 )
+	cdr? ( >=app-cdr/brasero-2.28
+		<app-cdr/brasero-2.90 )
 	exif? ( >=media-gfx/exiv2-0.18 )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-2.28 )
 	gstreamer? (
@@ -67,11 +69,10 @@ src_prepare() {
 
 	# Remove unwanted CFLAGS added with USE=debug
 	sed 's/CFLAGS="$CFLAGS -g -O0 -DDEBUG"//' -i configure.ac configure || die
-}
 
-src_install() {
-	gnome2_src_install
+	# Avoid linking to libbrasero-burn3
+	epatch "${FILESDIR}/${PN}-no-brasero3.patch"
 
-	# gthumb does not need *.la files
-	find "${ED}" -name "*.la" -delete || die "*.la files removal failed"
+	# GSeal doesn't get disabled with --disable-gseal
+	sed -e 's/-DGSEAL_ENABLE//g' -i configure.ac -i configure || die
 }
