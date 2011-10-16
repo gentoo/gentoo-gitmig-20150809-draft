@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/fatsort
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fatsort/ChangeLog,v 1.14 2011/06/09 19:21:45 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fatsort/ChangeLog,v 1.15 2011/10/16 18:40:42 billie Exp $
+
+*fatsort-0.9.15.247 (16 Oct 2011)
+
+  16 Oct 2011; Daniel Pielmeier <billie@gentoo.org> +fatsort-0.9.15.247.ebuild:
+  Version bump. Switch to EAPI 4.
 
   09 Jun 2011; Daniel Pielmeier <billie@gentoo.org>
   -fatsort-0.9.13.1.206.ebuild:
