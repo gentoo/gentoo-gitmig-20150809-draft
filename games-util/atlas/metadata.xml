@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>games</herd>
+<maintainer>
+	<email>reavertm@gentoo.org</email>
+	<name>Maciej Mrozowski</name>
+</maintainer>
 </pkgmetadata>
