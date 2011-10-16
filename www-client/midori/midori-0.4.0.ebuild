@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.4.0.ebuild,v 1.4 2011/10/16 03:43:31 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/midori-0.4.0.ebuild,v 1.5 2011/10/16 05:27:02 ssuominen Exp $
 
 EAPI=3
 inherit eutils fdo-mime gnome2-utils python waf-utils
@@ -11,7 +11,7 @@ SRC_URI="mirror://xfce/src/apps/${PN}/0.4/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1 MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~arm ~ppc x86 ~x86-fbsd"
 IUSE="doc gnome idn libnotify nls +unique"
 
 RDEPEND="dev-libs/libxml2:2
