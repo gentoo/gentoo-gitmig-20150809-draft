@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-compat/emul-linux-x86-compat-20110928.ebuild,v 1.3 2011/10/15 20:23:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-compat/emul-linux-x86-compat-20110928.ebuild,v 1.4 2011/10/16 12:10:08 ssuominen Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ DESCRIPTION="32 bit lib-compat, and also libgcc_s and libstdc++ from gcc 3.3 and
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~amd64"
+KEYWORDS="-* amd64"
 RESTRICT="strip"
 IUSE="multilib"
 
