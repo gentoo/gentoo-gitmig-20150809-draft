@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.4.25-r1.ebuild,v 1.5 2011/07/24 11:20:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.4.25-r1.ebuild,v 1.6 2011/10/16 17:33:16 xarthisius Exp $
 
 EAPI="4"
 GNOME_TARBALL_SUFFIX="bz2"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="1"
-KEYWORDS="~alpha amd64 ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="+espeak festival"
 
 COMMON_DEPEND=">=gnome-base/orbit-2.3.94
