@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/apsw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.39 2011/06/23 15:19:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/apsw/ChangeLog,v 1.40 2011/10/16 22:12:44 radhermit Exp $
+
+*apsw-3.7.8.1 (16 Oct 2011)
+
+  16 Oct 2011; Tim Harder <radhermit@gentoo.org> +apsw-3.7.8.1.ebuild:
+  Version bump. Add doc use flag.
 
   23 Jun 2011; Markos Chandras <hwoarang@gentoo.org> -apsw-3.7.5.1.ebuild:
   Remove old ebuilds. Requested by Arfrever
