@@ -1,6 +1,10 @@
 # ChangeLog for games-util/atlas
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/ChangeLog,v 1.28 2011/10/16 03:26:02 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/ChangeLog,v 1.29 2011/10/16 03:32:27 reavertm Exp $
+
+  16 Oct 2011; Maciej Mrozowski <reavertm@gentoo.org>
+  atlas-0.3.1_p20101101-r1.ebuild:
+  Remove some automagic but not used X* dependencies.
 
 *atlas-0.3.1_p20101101-r1 (16 Oct 2011)
 

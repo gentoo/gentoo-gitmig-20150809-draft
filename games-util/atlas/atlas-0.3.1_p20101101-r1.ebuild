@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/atlas-0.3.1_p20101101-r1.ebuild,v 1.1 2011/10/16 03:26:02 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/atlas-0.3.1_p20101101-r1.ebuild,v 1.2 2011/10/16 03:32:27 reavertm Exp $
 
 EAPI=3
 inherit autotools eutils games
@@ -18,16 +18,10 @@ COMMON_DEPEND="
 	media-libs/freeglut
 	>=media-libs/libpng-1.4
 	net-misc/curl
+	sys-libs/zlib
 	virtual/glu
 	virtual/jpeg
 	virtual/opengl
-	x11-libs/libX11
-	x11-libs/libXext
-	x11-libs/libXi
-	x11-libs/libICE
-	x11-libs/libSM
-	x11-libs/libXt
-	x11-libs/libXmu
 "
 DEPEND="${COMMON_DEPEND}
 	>=dev-games/simgear-2.4.0
