@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/parole/parole-0.2.0.6.ebuild,v 1.5 2011/10/16 03:42:42 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/parole/parole-0.2.0.6.ebuild,v 1.6 2011/10/16 05:26:45 ssuominen Exp $
 
 EAPI=4
 EAUTORECONF=yes
@@ -12,7 +12,7 @@ SRC_URI="mirror://xfce/src/apps/${PN}/0.2/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="debug libnotify taglib"
 
 COMMON_DEPEND=">=x11-libs/gtk+-2.16:2
