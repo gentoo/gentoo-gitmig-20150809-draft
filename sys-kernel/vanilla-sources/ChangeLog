@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.902 2011/10/10 17:35:33 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.903 2011/10/16 11:45:10 chainsaw Exp $
+
+  16 Oct 2011; Tony Vroon <chainsaw@gentoo.org> vanilla-sources-3.0.6.ebuild:
+  Marked stable on AMD64 based on arch testing by Blain "doc235" Anderson,
+  Elijah "Armageddon" El Lazkani & Tomáš "Mepho" Pružina in bug #387047.
 
 *vanilla-sources-3.0.6 (10 Oct 2011)
 

@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.887 2011/10/04 09:41:54 psomas Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.888 2011/10/16 11:40:52 chainsaw Exp $
+
+  16 Oct 2011; Tony Vroon <chainsaw@gentoo.org> gentoo-sources-3.0.6.ebuild:
+  Marked stable on AMD64 based on arch testing by Blain "doc235" Anderson,
+  Elijah "Armageddon" El Lazkani & Tomáš "Mepho" Pružina in bug #387047.
 
 *gentoo-sources-3.0.6 (04 Oct 2011)
 
