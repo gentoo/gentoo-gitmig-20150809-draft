@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.12.4-r1.ebuild,v 1.4 2011/10/10 21:29:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.12.4-r1.ebuild,v 1.5 2011/10/16 15:41:03 mattst88 Exp $
 
 EAPI=4
 
@@ -162,11 +162,6 @@ src_configure() {
 	use ppc && filter-flags "-mpowerpc-gpopt"
 	# Fixes bug #143895 on gcc-4.1.1
 	filter-flags "-fsched2-use-superblocks"
-
-	# this is needed because gcc 3.3-compiled kernels will hang
-	# the machine trying to run this test - check with `Kumba
-	# <rac@gentoo.org> 2003.06.26
-	use mips && myconf -Dd_u32align
 
 	use sparc && myconf -Ud_longdbl
 

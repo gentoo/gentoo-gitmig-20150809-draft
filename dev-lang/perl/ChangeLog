@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.375 2011/10/10 21:29:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.376 2011/10/16 15:41:03 mattst88 Exp $
+
+  16 Oct 2011; Matt Turner <mattst88@gentoo.org> perl-5.12.4-r1.ebuild,
+  perl-5.14.2.ebuild:
+  Remove mips d_u32align hack from the gcc-3.3 days (circa 2003)
 
   10 Oct 2011; Markus Meier <maekke@gentoo.org> perl-5.12.4-r1.ebuild:
   arm/x86 stable, bug #384593
