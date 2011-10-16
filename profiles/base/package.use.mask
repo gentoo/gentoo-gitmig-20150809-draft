@@ -1,9 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.274 2011/10/13 08:10:56 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.275 2011/10/16 11:37:04 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Samuli Suominen <ssuominen@gentoo.org> (16 Oct 2011)
+# Mask libbluray support here, and enable it per arch instead
+gnome-base/gvfs bluray
 
 # Alex Legler <a3li@gentoo.org> (13 Oct 2011)
 # The Ubuntu ALSA patch for tvtime is still somewhat unstable
