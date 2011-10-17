@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.10.1.ebuild,v 1.13 2011/10/05 19:20:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.10.1.ebuild,v 1.14 2011/10/17 15:34:01 ssuominen Exp $
 
 EAPI=2
 
@@ -75,6 +75,16 @@ src_prepare() {
 	# fix HTML links to manual (bug #273957)
 	sed -i -e 's:\.\./manual/:manual/:g' $(grep -Flr ../manual/ doc) \
 		|| die "sed for HTML links to manual failed"
+
+	# Fix compability with zlib-1.2.5.1-r1 OF change
+	has_version ">=sys-libs/zlib-1.2.5.1-r1" && \
+		sed -i -e '1i#define OF(x) x' src/main/unzip.h
+
+	# Missing include that was implicit before
+	sed -i -e '1i#include <zlib.h>' src/main/dounzip.c || die
+
+	# Don't try to access libpng internal structure
+	sed -i -e 's:png_ptr->jmpbuf:png_jmpbuf(png_ptr):' src/modules/X11/rbitmap.c || die
 
 	use lapack && \
 		export LAPACK_LIBS="$(pkg-config --libs lapack)"
