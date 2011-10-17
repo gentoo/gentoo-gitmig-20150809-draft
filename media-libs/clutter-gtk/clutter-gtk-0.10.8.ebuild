@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/clutter-gtk-0.10.8.ebuild,v 1.10 2011/10/15 22:00:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/clutter-gtk-0.10.8.ebuild,v 1.11 2011/10/17 16:11:35 jlec Exp $
 
 EAPI="2"
 
@@ -39,6 +39,9 @@ src_prepare() {
 	# Drop DEPRECATED flags, bug #387173
 	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' \
 		clutter-gtk/Makefile.am || die
+
+	# Fix underlinking problem with gold.ld
+	epatch "${FILESDIR}"/${P}-gold.patch
 
 	eautoreconf
 }
