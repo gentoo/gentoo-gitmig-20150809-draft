@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/povray
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.115 2011/10/01 00:44:01 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.116 2011/10/17 14:12:44 jer Exp $
+
+  17 Oct 2011; Jeroen Roovers <jer@gentoo.org> povray-3.7.0_rc3.ebuild:
+  Stable for HPPA (bug #384823).
 
 *povray-3.6.1-r6 (01 Oct 2011)
 
