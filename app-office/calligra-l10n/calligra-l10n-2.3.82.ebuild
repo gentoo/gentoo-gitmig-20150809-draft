@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/calligra-l10n-2.3.81.ebuild,v 1.2 2011/09/16 08:50:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra-l10n/calligra-l10n-2.3.82.ebuild,v 1.1 2011/10/17 15:17:17 scarabeus Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ RDEPEND=""
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc"
 
-MY_LANGS="ca ca@valencia da de el en_GB es et fr it kk nb nds nl pl pt pt_BR ru sv uk zh_TW"
+MY_LANGS="ca ca@valencia cs da de el en_GB es et fr it kk nb nds nl pl pt pt_BR ru sv uk zh_TW"
 URI_BASE="mirror://kde/unstable/${PN/-l10n/}-${PV}/${PN}/"
 SRC_URI=""
 SLOT="4"
