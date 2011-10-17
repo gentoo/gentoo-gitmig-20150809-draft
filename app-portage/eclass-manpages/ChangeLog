@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/eclass-manpages
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/ChangeLog,v 1.25 2011/10/14 18:03:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eclass-manpages/ChangeLog,v 1.26 2011/10/17 18:25:13 jlec Exp $
+
+  17 Oct 2011; Justin Lecher <jlec@gentoo.org> metadata.xml,
+  eclass-manpages-20111014.ebuild:
+  Call bash instead the script directly, because things in FILESDIR might not be
+  executable
 
 *eclass-manpages-20111014 (14 Oct 2011)
 
