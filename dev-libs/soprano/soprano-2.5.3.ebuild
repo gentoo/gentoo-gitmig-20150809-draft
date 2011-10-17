@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.5.3.ebuild,v 1.2 2011/05/09 17:48:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.5.3.ebuild,v 1.3 2011/10/17 14:27:33 jer Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://soprano.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 SLOT="0"
 IUSE="clucene +dbus debug doc elibc_FreeBSD +raptor +redland test +virtuoso"
 
