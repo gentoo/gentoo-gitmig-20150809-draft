@@ -1,10 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/files/miniupnpd-init.d,v 1.2 2011/06/30 20:02:18 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/files/miniupnpd-init.d,v 1.3 2011/10/17 12:03:01 gurligebis Exp $
 
 depend() {
 	need net iptables
+	use minissdpd
 }
 
 start() {
