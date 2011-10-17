@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/vnstat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.49 2011/09/04 17:54:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.50 2011/10/17 14:48:04 jer Exp $
+
+  17 Oct 2011; Jeroen Roovers <jer@gentoo.org> files/vnstatd.initd:
+  Run checkpath on the directory itself, not its parent.
 
   04 Sep 2011; Jeroen Roovers <jer@gentoo.org> files/vnstatd.initd:
   Add support for cleaned /var/run on startup by Xake and i.Dark_Templar (bug

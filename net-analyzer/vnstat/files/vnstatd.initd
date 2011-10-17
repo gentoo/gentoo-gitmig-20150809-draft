@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/files/vnstatd.initd,v 1.3 2011/09/04 17:54:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/files/vnstatd.initd,v 1.4 2011/10/17 14:48:04 jer Exp $
 
 opts="reload"
 
@@ -13,7 +13,7 @@ VNSTATD_PIDFILE="${VNSTATD_PIDFILE:-/var/run/vnstatd/vnstatd.pid}"
 
 start() {
 	ebegin "Starting vnstatd"
-	checkpath -q -d -m 755 -o vnstat:vnstat $( dirname /var/run/vnstatd )
+	checkpath -q -d -m 755 -o vnstat:vnstat /var/run/vnstatd
 	start-stop-daemon --start --quiet \
 		--pidfile "${VNSTATD_PIDFILE}" \
 		--user vnstat --group vnstat \
