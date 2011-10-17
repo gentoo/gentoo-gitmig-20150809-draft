@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.321 2011/10/16 11:37:03 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.322 2011/10/17 15:37:22 jer Exp $
+
+  17 Oct 2011; Jeroen Roovers <jer@gentoo.org> lftp-4.3.2.ebuild:
+  Stable for HPPA (bug #387221).
 
   16 Oct 2011; Tony Vroon <chainsaw@gentoo.org> lftp-4.3.2.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
