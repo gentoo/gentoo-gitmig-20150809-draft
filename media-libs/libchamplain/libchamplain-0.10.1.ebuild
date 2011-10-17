@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.10.1.ebuild,v 1.1 2011/09/19 20:56:06 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.10.1.ebuild,v 1.2 2011/10/17 16:15:32 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -33,7 +33,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( >=dev-util/gtk-doc-1.9 )
-	vala? ( dev-lang/vala:0.12[vapigen] )"
+	vala? ( dev-lang/vala:0.14[vapigen] )"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"
@@ -44,7 +44,7 @@ pkg_setup() {
 		--disable-maemo
 		--disable-vala-demos
 		--enable-memphis
-		VAPIGEN=$(type -p vapigen-0.12)
+		VAPIGEN=$(type -p vapigen-0.14)
 		$(use_enable debug)
 		$(use_enable gtk)
 		$(use_enable introspection)

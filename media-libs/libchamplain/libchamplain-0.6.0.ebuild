@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.6.0.ebuild,v 1.11 2011/06/15 08:43:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.6.0.ebuild,v 1.12 2011/10/17 16:15:32 pacho Exp $
 
 EAPI="3"
 
@@ -54,6 +54,10 @@ G2CONF="${G2CONF}
 src_prepare() {
 	gnome2_src_prepare
 	sed 's:bindings::g' -i Makefile.in || die
+
+	# Drop DEPRECATED flags, bug #387335
+	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' \
+		tidy/Makefile.am tidy/Makefile.in || die
 }
 
 src_compile() {

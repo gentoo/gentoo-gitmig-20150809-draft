@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.8.3.ebuild,v 1.5 2011/07/14 11:01:59 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libchamplain/libchamplain-0.8.3.ebuild,v 1.6 2011/10/17 16:15:32 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -39,4 +39,12 @@ pkg_setup() {
 		$(use_enable debug)
 		$(use_enable gtk)
 		$(use_enable introspection)"
+}
+
+src_prepare() {
+	gnome2_src_prepare
+
+	# Drop DEPRECATED flags, bug #387335
+	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' \
+		tidy/Makefile.am tidy/Makefile.in || die
 }
