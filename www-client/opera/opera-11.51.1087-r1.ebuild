@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.00.1105.ebuild,v 1.2 2011/10/17 21:08:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.51.1087-r1.ebuild,v 1.1 2011/10/17 21:09:00 jer Exp $
 
 EAPI="4"
 
@@ -17,14 +17,14 @@ IUSE="elibc_FreeBSD gtk kde +gstreamer"
 O_V="$(get_version_component_range 1-2)" # Major version, i.e. 11.00
 O_B="$(get_version_component_range 3)"   # Build version, i.e. 1156
 
-O_D="alpha_${O_V}-${O_B}"
+O_D="${O_V/./}"
 O_P="${PN}-${O_V}-${O_B}"
-O_U="http://snapshot.opera.com/unix/"
+O_U="mirror://opera/"
 
 SRC_URI="
-	amd64? ( ${O_U}${O_D}/${O_P}.x86_64.linux.tar.xz )
-	x86? ( ${O_U}${O_D}/${O_P}.i386.linux.tar.xz )
-	x86-fbsd? ( ${O_U}${O_D}/${O_P}.i386.freebsd.tar.xz )
+	amd64? ( ${O_U}linux/${O_D}/${O_P}.x86_64.linux.tar.xz )
+	x86? ( ${O_U}linux/${O_D}/${O_P}.i386.linux.tar.xz )
+	x86-fbsd? ( ${O_U}unix/${O_D}/${O_P}.i386.freebsd.tar.xz )
 "
 
 OPREFIX="/usr/$(get_libdir)"
@@ -130,7 +130,7 @@ src_prepare() {
 
 	# Optional libraries
 	if ! use gtk; then
-		rm lib/${PN}/liboperagtk2.so || die
+		rm lib/${PN}/liboperagtk.so || die
 	fi
 	if ! use kde; then
 		rm lib/${PN}/liboperakde4.so || die
