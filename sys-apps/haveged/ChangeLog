@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/haveged
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/haveged/ChangeLog,v 1.6 2011/08/06 12:23:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/haveged/ChangeLog,v 1.7 2011/10/17 17:20:53 flameeyes Exp $
+
+*haveged-1.2 (17 Oct 2011)
+
+  17 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org> +haveged-1.2.ebuild,
+  +files/haveged-init.d.2:
+  Version bump; add an OpenRC-based init script that actually checks the
+  haveged started status.
 
   06 Aug 2011; Markus Meier <maekke@gentoo.org> haveged-1.1.ebuild:
   x86 stable, bug #368699
