@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/quake3-defrag
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-defrag/ChangeLog,v 1.9 2009/10/10 17:26:29 nyhm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-defrag/ChangeLog,v 1.10 2011/10/17 19:52:56 mr_bones_ Exp $
+
+*quake3-defrag-1.91.20 (17 Oct 2011)
+
+  17 Oct 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  +quake3-defrag-1.91.20.ebuild:
+  version bump (bug #386927)
 
   10 Oct 2009; Tristan Heaven <nyhm@gentoo.org>
   quake3-defrag-1.91.08-r1.ebuild:
