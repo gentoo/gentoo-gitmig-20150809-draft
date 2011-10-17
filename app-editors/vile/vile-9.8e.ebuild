@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.8e.ebuild,v 1.1 2011/04/20 21:02:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.8e.ebuild,v 1.2 2011/10/17 07:22:22 radhermit Exp $
 
 EAPI=4
 
@@ -34,11 +34,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "Setting /usr/bin/vi symlink"
-	eselect vi set "${PN}"
+	einfo "Updating /usr/bin/vi symlink"
+	eselect vi update --if-unset
 }
 
 pkg_postrm() {
 	einfo "Updating /usr/bin/vi symlink"
-	eselect vi update
+	eselect vi update --if-unset
 }
