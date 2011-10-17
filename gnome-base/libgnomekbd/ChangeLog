@@ -1,6 +1,15 @@
 # ChangeLog for gnome-base/libgnomekbd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomekbd/ChangeLog,v 1.92 2011/08/14 14:58:21 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomekbd/ChangeLog,v 1.93 2011/10/17 20:46:58 pacho Exp $
+
+*libgnomekbd-2.32.0-r1 (17 Oct 2011)
+
+  17 Oct 2011; Pacho Ramos <pacho@gentoo.org> +libgnomekbd-2.32.0-r1.ebuild,
+  +files/libgnomekbd-2.32.0-gdkdisplay-usage.patch,
+  +files/libgnomekbd-2.32.0-gdkkeyname-replace.patch,
+  +files/libgnomekbd-2.32.0-unneeded-casts.patch:
+  Apply upstream patches to stop relying on deprecated stuff, also drop .la
+  files.
 
 *libgnomekbd-3.0.0.1 (14 Aug 2011)
 
