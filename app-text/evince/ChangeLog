@@ -1,6 +1,10 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.228 2011/10/05 17:11:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.229 2011/10/17 18:20:48 jlec Exp $
+
+  17 Oct 2011; Justin Lecher <jlec@gentoo.org> +files/evince-2.32.0-gold.patch,
+  metadata.xml, evince-2.32.0-r3.ebuild:
+  Fix linking with gold.ld
 
   05 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> evince-2.32.0-r3.ebuild:
   ppc/ppc64 stable wrt #369909

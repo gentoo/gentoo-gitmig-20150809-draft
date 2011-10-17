@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.32.0-r3.ebuild,v 1.7 2011/10/05 17:11:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.32.0-r3.ebuild,v 1.8 2011/10/17 18:20:48 jlec Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -124,6 +124,9 @@ src_prepare() {
 	if ! use gnome; then
 		cp "${FILESDIR}/gconf-2.m4" m4/ || die "Copying gconf-2.m4 failed!"
 	fi
+
+	# Fix underlinking with gold
+	epatch "${FILESDIR}"/${P}-gold.patch
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
