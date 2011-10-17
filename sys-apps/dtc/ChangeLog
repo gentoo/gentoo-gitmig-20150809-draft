@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/dtc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dtc/ChangeLog,v 1.9 2011/06/15 21:19:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dtc/ChangeLog,v 1.10 2011/10/17 21:39:35 vapier Exp $
+
+*dtc-9999 (17 Oct 2011)
+
+  17 Oct 2011; Mike Frysinger <vapier@gentoo.org> +dtc-9999.ebuild:
+  Add a live git ebuild.
 
 *dtc-1.3.0 (15 Jun 2011)
 
