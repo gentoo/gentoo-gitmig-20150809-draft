@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.25.ebuild,v 1.4 2011/10/17 05:41:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.25.ebuild,v 1.5 2011/10/17 19:10:29 radhermit Exp $
 
 EAPI=4
-inherit multilib
+inherit multilib python
 
 DESCRIPTION="An SMTP client and SMTP plugin for mail user agents such as Mutt"
 HOMEPAGE="http://msmtp.sourceforge.net/"
@@ -14,17 +14,18 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc gnome-keyring gnutls idn +mta nls sasl ssl vim-syntax"
 
-CDEPEND="idn? ( net-dns/libidn )
-	nls? ( virtual/libintl )
+CDEPEND="
 	gnome-keyring? (
-		gnome-base/gnome-keyring
 		dev-python/gnome-keyring-python
+		gnome-base/libgnome-keyring
 	)
+	idn? ( net-dns/libidn )
+	nls? ( virtual/libintl )
+	sasl? ( virtual/gsasl )
 	ssl? (
 		gnutls? ( net-libs/gnutls )
 		!gnutls? ( dev-libs/openssl )
-	)
-	sasl? ( virtual/gsasl )"
+	)"
 
 RDEPEND="${CDEPEND}
 	mta? (	!mail-mta/courier
@@ -50,19 +51,22 @@ REQUIRED_USE="gnutls? ( ssl )"
 src_prepare() {
 	# Use default Gentoo location for mail aliases
 	sed -i -e 's:/etc/aliases:/etc/mail/aliases:' scripts/find_alias/find_alias_for_msmtp.sh
+
+	python_convert_shebangs 2 scripts/msmtp-gnome-tool/msmtp-gnome-tool.py
 }
 
 src_configure() {
 	econf \
-		$(use_with ssl ssl $(use gnutls && echo "gnutls" || echo "openssl")) \
-		$(use_with idn libidn) \
-		$(use_with sasl libgsasl) \
 		$(use_with gnome-keyring ) \
-		$(use_enable nls)
+		$(use_with idn libidn) \
+		$(use_enable nls) \
+		$(use_with sasl libgsasl) \
+		$(use_with ssl ssl $(use gnutls && echo "gnutls" || echo "openssl"))
 }
 
 src_compile() {
 	default
+
 	if use doc ; then
 		cd doc || die
 		emake html pdf
@@ -71,13 +75,6 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install
-
-	if use mta ; then
-		dodir /usr/sbin
-		dosym /usr/bin/msmtp /usr/sbin/sendmail
-		dosym /usr/bin/msmtp /usr/$(get_libdir)/sendmail
-	fi
-
 	dodoc AUTHORS ChangeLog NEWS README THANKS doc/{Mutt+msmtp.txt,msmtprc*}
 
 	if use doc ; then
@@ -85,19 +82,25 @@ src_install() {
 		dodoc doc/msmtp.pdf
 	fi
 
+	if use gnome-keyring ; then
+		src_install_contrib msmtp-gnome-tool msmtp-gnome-tool.py README
+	fi
+
+	if use mta ; then
+		dodir /usr/sbin
+		dosym /usr/bin/msmtp /usr/sbin/sendmail
+		dosym /usr/bin/msmtp /usr/$(get_libdir)/sendmail
+	fi
+
 	if use vim-syntax ; then
 		insinto /usr/share/vim/vimfiles/syntax
 		doins scripts/vim/msmtp.vim
 	fi
 
-	if use gnome-keyring ; then
-		src_install_contrib msmtp-gnome-tool "msmtp-gnome-tool.py" "README"
-	fi
-
-	src_install_contrib find_alias "find_alias_for_msmtp.sh"
+	src_install_contrib find_alias find_alias_for_msmtp.sh
 	src_install_contrib msmtpqueue "*.sh" "README ChangeLog"
-	src_install_contrib msmtpq "msmtpq msmtpQ" "README"
-	src_install_contrib set_sendmail "set_sendmail.sh" "set_sendmail.conf"
+	src_install_contrib msmtpq "msmtpq msmtpQ" README
+	src_install_contrib set_sendmail set_sendmail.sh set_sendmail.conf
 }
 
 src_install_contrib() {
