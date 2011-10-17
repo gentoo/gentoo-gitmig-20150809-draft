@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.25.ebuild,v 1.3 2011/10/17 05:15:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.25.ebuild,v 1.4 2011/10/17 05:41:06 radhermit Exp $
 
 EAPI=4
 inherit multilib
@@ -62,9 +62,9 @@ src_configure() {
 }
 
 src_compile() {
-	default_src_compile
+	default
 	if use doc ; then
-		cd doc || die "cd failed"
+		cd doc || die
 		emake html pdf
 	fi
 }
