@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.2.ebuild,v 1.16 2011/07/27 17:38:47 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.2.ebuild,v 1.17 2011/10/17 18:12:36 ssuominen Exp $
 
 EAPI="3"
 
@@ -74,6 +74,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-odbc.patch
 	epatch "${FILESDIR}"/${P}-h5part.patch
 	epatch "${FILESDIR}"/${P}-libpng14.patch
+	epatch "${FILESDIR}"/${P}-libpng15.patch
 
 	if has_version '>=sci-libs/hdf5-1.8.0'; then
 		epatch "${FILESDIR}"/${P}-hdf-1.8.3.patch
