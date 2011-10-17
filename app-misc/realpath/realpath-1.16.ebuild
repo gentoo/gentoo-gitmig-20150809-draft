@@ -1,13 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/realpath-1.16.ebuild,v 1.1 2011/10/17 14:54:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/realpath-1.16.ebuild,v 1.2 2011/10/17 19:52:56 jlec Exp $
 
 EAPI="3"
 inherit eutils toolchain-funcs flag-o-matic prefix
 
 DESCRIPTION="Return the canonicalized absolute pathname"
 HOMEPAGE="http://packages.debian.org/unstable/utils/realpath"
-SRC_URI="mirror://debian/pool/main/r/${PN}/${PN}_${PV}.tar.gz
+SRC_URI="
+	mirror://debian/pool/main/r/${PN}/${PN}_${PV}.tar.gz
 	nls? ( mirror://debian/pool/main/r/${PN}/${PN}_${PV}_i386.deb )"
 
 LICENSE="GPL-2"
