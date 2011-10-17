@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-3.0.5.ebuild,v 1.2 2011/10/13 08:52:06 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-3.0.5.ebuild,v 1.3 2011/10/17 17:28:38 jer Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://hg.linux-ha.org/${PN}-STABLE_3_0/archive/STABLE-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="~amd64 hppa ~x86"
 IUSE="doc snmp static-libs"
 
 RDEPEND="sys-cluster/cluster-glue
