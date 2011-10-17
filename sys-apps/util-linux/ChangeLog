@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.353 2011/10/17 22:00:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.354 2011/10/17 22:01:41 vapier Exp $
+
+*util-linux-2.20-r1 (17 Oct 2011)
+
+  17 Oct 2011; Mike Frysinger <vapier@gentoo.org> +util-linux-2.20-r1.ebuild,
+  +files/util-linux-2.20-dmesg-newline.patch,
+  +files/util-linux-2.20-sysfs-init.patch:
+  Add fixes from upstream for dmesg stopping with blank newlines #385305 by
+  Maxime Gervais. Add fix from upstream for nfs/btrfs unmounting #385323 by
+  Thomas Arnett.
 
   17 Oct 2011; Mike Frysinger <vapier@gentoo.org> util-linux-2.19.1-r1.ebuild:
   Mark alpha/arm/hppa/ia64/m68k/s390/sh stable #384305.
