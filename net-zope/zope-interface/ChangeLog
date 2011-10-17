@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-interface
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/ChangeLog,v 1.28 2011/10/17 14:19:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/ChangeLog,v 1.29 2011/10/17 20:39:30 maekke Exp $
+
+  17 Oct 2011; Markus Meier <maekke@gentoo.org> zope-interface-3.7.0.ebuild:
+  arm stable, bug #386069
 
   17 Oct 2011; Jeroen Roovers <jer@gentoo.org> zope-interface-3.7.0.ebuild:
   Stable for HPPA (bug #386069).
