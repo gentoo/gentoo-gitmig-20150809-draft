@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/cherokee
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.86 2011/09/16 11:57:03 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.87 2011/10/17 16:24:30 matsuu Exp $
+
+*cherokee-1.2.100 (17 Oct 2011)
+
+  17 Oct 2011; MATSUU Takuto <matsuu@gentoo.org> -files/cherokee-initd-0.99.23,
+  -cherokee-1.0.12.ebuild, -files/cherokee-initd-1.2.0, -cherokee-1.2.0.ebuild,
+  -cherokee-1.2.1.ebuild, -cherokee-1.2.2.ebuild, -files/cherokee-initd-1.2.98,
+  -cherokee-1.2.98.ebuild, -files/cherokee-1.2.98-gentoo.patch,
+  +cherokee-1.2.100.ebuild:
+  Version bumped. Removed old versions.
 
 *cherokee-1.2.99 (16 Sep 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.2.98.ebuild,v 1.1 2011/08/26 11:58:08 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-1.2.100.ebuild,v 1.1 2011/10/17 16:24:30 matsuu Exp $
 
 EAPI="3"
 PYTHON_DEPEND="admin? 2"
@@ -48,8 +48,8 @@ pkg_setup() {
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}/${P}-gentoo.patch" \
-		"${FILESDIR}/${P}-linux3.patch"
+		"${FILESDIR}/${PN}-1.2.99-gentoo.patch" \
+		"${FILESDIR}/${PN}-1.2.98-linux3.patch"
 
 	python_convert_shebangs -r 2 .
 }
@@ -126,43 +126,64 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog README || die
 
-	use pam && pamd_mimic system-auth cherokee auth account session
+	if use pam ; then
+		pamd_mimic system-auth cherokee auth account session || die
+	fi
 
-	newinitd "${FILESDIR}/${PN}-initd-${PV}" ${PN} || die "newinitd ${PN} failed"
-	newconfd "${FILESDIR}/${PN}-confd-${PV}" ${PN} || die "newconfd ${PN} failed"
+	newinitd "${FILESDIR}/${PN}-initd-1.2.99" ${PN} || die "newinitd ${PN} failed"
+	newconfd "${FILESDIR}/${PN}-confd-1.2.98" ${PN} || die "newconfd ${PN} failed"
 
 	if ! use admin ; then
 		rm -r \
 			"${ED}"/usr/bin/cherokee-admin-launcher \
 			"${ED}"/usr/bin/CTK-run \
 			"${ED}"/usr/sbin/cherokee-admin \
-			"${ED}"/usr/share/cherokee/admin
+			"${ED}"/usr/share/cherokee/admin || die
 	fi
 
 	exeinto /usr/share/doc/${PF}/contrib
-	doexe contrib/{bin2buffer.py,make-cert.sh,make-dh_params.sh,tracelor.py}
+	doexe contrib/{bin2buffer.py,make-cert.sh,make-dh_params.sh,tracelor.py} || die
 
-	keepdir /var/www/localhost/htdocs /var/log/cherokee
-	fowners cherokee:cherokee /var/log/cherokee
+	keepdir \
+		/var/www/localhost/htdocs \
+		/var/log/cherokee \
+		/var/lib/cherokee/graphs/images || die
+	fowners cherokee:cherokee \
+		/var/log/cherokee \
+		/var/lib/cherokee/graphs \
+		/var/lib/cherokee/graphs/images || die
+
+	# logrotate
+	insinto /etc/logrotate.d
+	newins "${FILESDIR}"/${PN}.logrotate ${PN} || die
 
 	if ! use coverpage ; then
-		rm -rf "${ED}"/var/www/localhost/htdocs/*
+		rm -r "${ED}"/var/www/localhost/htdocs/* || die
 	fi
 }
 
 pkg_postinst() {
+	elog
 	if use admin ; then
 		python_mod_optimize "${EPREFIX}/usr/share/cherokee/admin/"
-		echo
 		elog "Just run '/usr/sbin/cherokee-admin' and go to: http://localhost:9090"
-		echo
+		elog
+		elog "Cherokee currently supports configuration versioning, so from now on,"
+		elog "whenever a change is made to the configuration file format,"
+		elog "Cherokee-Admin will be able to automatically convert yours to the new"
+		elog "release. You simply have to load Cherokee-Admin and it will be converted"
+		elog "once you proceed to saving it."
+		elog
+		elog "There is also a command line utility that you can use to do the exact"
+		elog "same thing. Config format can change in different versions. It is"
+		elog "provided under:"
+		elog "	${EPREFIX}/usr/share/cherokee/admin/upgrade_config.py"
 	else
-		echo
 		elog "Try USE=admin if you want an easy way to configure cherokee."
-		echo
 	fi
+	elog
 	elog "emerge www-servers/spawn-fcgi if you use Ruby on Rails with ${PN}."
-	echo
+	elog
 }
 
 pkg_postrm() {
