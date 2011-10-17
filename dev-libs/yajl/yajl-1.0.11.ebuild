@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/yajl-1.0.11.ebuild,v 1.7 2011/02/11 18:41:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yajl/yajl-1.0.11.ebuild,v 1.8 2011/10/17 14:29:22 jer Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://github.com/lloyd/yajl/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ~arm hppa ~ppc ~ppc64 x86"
 
 IUSE=""
 
