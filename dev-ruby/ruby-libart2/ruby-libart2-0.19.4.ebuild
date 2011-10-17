@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libart2/ruby-libart2-0.19.4.ebuild,v 1.5 2010/10/20 21:58:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libart2/ruby-libart2-0.19.4.ebuild,v 1.6 2011/10/17 14:33:32 ssuominen Exp $
 
 EAPI="2"
 USE_RUBY="ruby18"
@@ -17,3 +17,7 @@ DEPEND="${DEPEND}
 	dev-util/pkgconfig"
 
 ruby_add_rdepend ">=dev-ruby/ruby-glib2-${PV}"
+
+all_ruby_prepare() {
+	epatch "${FILESDIR}"/${P}-libpng15.patch
+}
