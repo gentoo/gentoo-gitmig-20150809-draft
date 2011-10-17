@@ -1,6 +1,10 @@
 # ChangeLog for virtual/fortran
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/fortran/ChangeLog,v 1.6 2011/08/24 18:45:22 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/fortran/ChangeLog,v 1.7 2011/10/17 20:26:04 xarthisius Exp $
+
+  17 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> fortran-0.ebuild:
+  List dev-lang/ifc as a last compiler in order to prevent people randomly
+  hitting bug #332657
 
   24 Aug 2011; Kacper Kowalik <xarthisius@gentoo.org> fortran-0.ebuild:
   Fix ekopath PN, add path64

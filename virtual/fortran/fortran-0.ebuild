@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/fortran/fortran-0.ebuild,v 1.6 2011/08/24 18:45:22 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/fortran/fortran-0.ebuild,v 1.7 2011/10/17 20:26:04 xarthisius Exp $
 
-EAPI="4"
+EAPI=4
 
 DESCRIPTION="Virtual for Fortran Compiler"
 HOMEPAGE=""
@@ -14,9 +14,9 @@ LICENSE=""
 IUSE="openmp"
 
 RDEPEND="
-	|| ( sys-devel/gcc[fortran] sys-devel/gcc-apple[fortran] dev-lang/ifc
-	dev-lang/ekopath dev-lang/path64 )
+	|| ( sys-devel/gcc[fortran] sys-devel/gcc-apple[fortran]
+	dev-lang/ekopath dev-lang/path64 dev-lang/ifc )
 	openmp? (
 		|| ( sys-devel/gcc[fortran,openmp?] sys-devel/gcc-apple[fortran,openmp?]
-		dev-lang/ifc dev-lang/ekopath dev-lang/path64[openmp?] ) )"
+		dev-lang/ekopath dev-lang/path64[openmp?] dev-lang/ifc ) )"
 DEPEND="${RDEPEND}"
