@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.122 2011/09/15 18:59:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.123 2011/10/17 17:32:31 jer Exp $
+
+  17 Oct 2011; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Remove old USE masks.
 
   15 Sep 2011; Jeroen Roovers <jer@gentoo.org> use.mask:
   Mask USE=prelude. Correct a previous entry.
