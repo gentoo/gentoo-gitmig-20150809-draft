@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.3.81.ebuild,v 1.2 2011/09/16 07:18:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.3.82.ebuild,v 1.1 2011/10/17 15:06:05 scarabeus Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -9,7 +9,7 @@
 EAPI=4
 
 KDE_SCM=git
-KDE_MINIMAL=4.7.0
+KDE_MINIMAL=4.6.4
 OPENGL_REQUIRED=optional
 KDE_HANDBOOK=optional
 KDE_LINGUAS_LIVE_OVERRIDE=true
@@ -60,7 +60,6 @@ RDEPEND="
 	$(add_kdebase_dep knewstuff)
 	media-libs/libpng
 	sys-libs/zlib
-	x11-libs/qt-webkit
 	crypt? ( app-crypt/qca:2 )
 	eigen? ( dev-cpp/eigen:2 )
 	exif? ( media-gfx/exiv2 )
@@ -185,6 +184,8 @@ src_configure() {
 		mycmakeargs+=( $(cmake-utils_use_build calligra_features_${cal_ft} ${cal_ft}) )
 	done
 	mycmakeargs+=( $(cmake-utils_use_build test cstester) )
+
+	# filters
 
 	kde4-base_src_configure
 }
