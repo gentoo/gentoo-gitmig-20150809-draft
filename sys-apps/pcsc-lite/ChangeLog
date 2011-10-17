@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.120 2011/10/17 14:00:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.121 2011/10/17 20:44:27 maekke Exp $
+
+  17 Oct 2011; Markus Meier <maekke@gentoo.org> pcsc-lite-1.7.2-r2.ebuild:
+  arm stable, bug #386345
 
   17 Oct 2011; Jeroen Roovers <jer@gentoo.org> pcsc-lite-1.7.2-r2.ebuild:
   Stable for HPPA (bug #386345).
