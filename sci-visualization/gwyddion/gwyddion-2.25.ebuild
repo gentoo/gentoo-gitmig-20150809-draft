@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/gwyddion-2.25.ebuild,v 1.5 2011/10/15 23:09:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gwyddion/gwyddion-2.25.ebuild,v 1.6 2011/10/17 15:08:06 jlec Exp $
 
 EAPI=2
 
@@ -17,11 +17,12 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="doc fftw gnome kde nls opengl perl python ruby sourceview xml X"
 
-RDEPEND="x11-libs/gtk+:2
-	x11-libs/cairo
-	x11-libs/pango
-	x11-libs/libXmu
+RDEPEND="
 	media-libs/libpng
+	x11-libs/cairo
+	x11-libs/gtk+:2
+	x11-libs/libXmu
+	x11-libs/pango
 	fftw? ( >=sci-libs/fftw-3 )
 	gnome? ( gnome-base/gconf:2 )
 	kde? ( >=kde-base/kdelibs-4 )
