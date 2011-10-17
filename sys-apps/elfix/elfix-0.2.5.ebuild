@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/elfix/elfix-0.2.3.ebuild,v 1.1 2011/10/09 14:30:01 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/elfix/elfix-0.2.5.ebuild,v 1.1 2011/10/17 22:18:08 blueness Exp $
 
 EAPI=4
 
