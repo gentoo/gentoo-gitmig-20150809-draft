@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.25.ebuild,v 1.2 2011/10/16 23:58:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.25.ebuild,v 1.3 2011/10/17 05:15:14 radhermit Exp $
 
 EAPI=4
 inherit multilib
@@ -21,10 +21,10 @@ CDEPEND="idn? ( net-dns/libidn )
 		dev-python/gnome-keyring-python
 	)
 	ssl? (
-		gnutls? ( >=net-libs/gnutls-1.2.0 )
-		!gnutls? ( >=dev-libs/openssl-0.9.6 )
+		gnutls? ( net-libs/gnutls )
+		!gnutls? ( dev-libs/openssl )
 	)
-	sasl? ( >=virtual/gsasl-0.2.4 )"
+	sasl? ( virtual/gsasl )"
 
 RDEPEND="${CDEPEND}
 	mta? (	!mail-mta/courier
@@ -53,15 +53,12 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf
-
 	econf \
 		$(use_with ssl ssl $(use gnutls && echo "gnutls" || echo "openssl")) \
 		$(use_with idn libidn) \
 		$(use_with sasl libgsasl) \
 		$(use_with gnome-keyring ) \
-		$(use_enable nls) \
-		${myconf}
+		$(use_enable nls)
 }
 
 src_compile() {
