@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.93 2011/10/14 22:54:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.94 2011/10/17 19:14:14 vapier Exp $
 
 # @ECLASS: multilib.eclass
 # @MAINTAINER:
@@ -73,17 +73,7 @@ get_libdir() {
 # If <ABI> is not specified and ${ABI} and ${DEFAULT_ABI} are not defined, we return an empty string.
 get_abi_var() {
 	local flag=$1
-	local abi
-	if [ $# -gt 1 ]; then
-		abi=${2}
-	elif [ -n "${ABI}" ]; then
-		abi=${ABI}
-	elif [ -n "${DEFAULT_ABI}" ]; then
-		abi=${DEFAULT_ABI}
-	else
-		abi="default"
-	fi
-
+	local abi=${2:-${ABI:-${DEFAULT_ABI:-default}}}
 	local var="${flag}_${abi}"
 	echo ${!var}
 }
