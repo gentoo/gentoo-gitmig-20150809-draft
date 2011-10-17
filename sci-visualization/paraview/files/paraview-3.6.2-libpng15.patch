@@ -18,4 +18,3 @@
          {
          fclose(this->TempFP);
          this->SetErrorCode(vtkErrorCode::OutOfDiskSpaceError);
-Only in ParaView3/VTK/IO: vtkPNGWriter.cxx.orig
