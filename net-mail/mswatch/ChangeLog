@@ -1,0 +1,10 @@
+# ChangeLog for net-mail/mswatch
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mswatch/ChangeLog,v 1.1 2011/10/17 18:54:06 radhermit Exp $
+
+*mswatch-1.2.0 (17 Oct 2011)
+
+  17 Oct 2011; Tim Harder <radhermit@gentoo.org> +mswatch-1.2.0.ebuild,
+  +metadata.xml:
+  Initial import.
+
