@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/nose
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.77 2011/10/13 21:47:35 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/ChangeLog,v 1.78 2011/10/17 21:01:50 maekke Exp $
+
+  17 Oct 2011; Markus Meier <maekke@gentoo.org> nose-1.1.2.ebuild:
+  arm stable, bug #386793
 
   13 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> nose-1.1.2.ebuild:
   x86 stable wrt bug #386793
