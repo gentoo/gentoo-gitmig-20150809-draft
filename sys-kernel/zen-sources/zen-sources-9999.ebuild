@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/zen-sources-9999.ebuild,v 1.4 2011/09/21 09:02:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/zen-sources-9999.ebuild,v 1.5 2011/10/17 18:46:00 hwoarang Exp $
 
 EAPI="2"
 
@@ -15,7 +15,8 @@ CKV='2.6.99'
 
 ETYPE="sources"
 
-IUSE="+stable"
+EGIT_REPO_URI="git://zen-kernel.org/kernel/zen-stable.git
+	http://git.zen-kernel.org/zen-stable/"
 
 inherit kernel-2 git-2
 detect_version
@@ -24,13 +25,7 @@ K_NOSETEXTRAVERSION="don't_set_it"
 DESCRIPTION="The Zen Kernel Live Sources"
 HOMEPAGE="http://zen-kernel.org"
 
-if use stable; then
-	EGIT_REPO_URI="git://zen-kernel.org/kernel/zen-stable.git
-		http://git.zen-kernel.org/zen-stable/"
-else
-	EGIT_REPO_URI="git://zen-kernel.org/kernel/zen.git
-		http://git.zen-kernel.org/zen/"
-fi
+IUSE="+minimal"
 
 KEYWORDS=""
 
@@ -42,15 +37,8 @@ pkg_setup(){
 	ewarn "Git zen-sources are extremely unsupported, even from the upstream"
 	ewarn "developers. Use them at your own risk and don't bite us if your"
 	ewarn "system explodes"
-	ebeep 10
-	ewarn
-	if use stable; then
-		ewarn "stable use flag is enabled. This means that you will install"
-		ewarn "${PN} from stable git tree."
-	else
-		ewarn "WARNING! stable use flag is disabled. You will install ${PN}"
-		ewarn "from unstable git tree"
+	if use minimal; then
+		EGIT_OPTIONS="--depth 1"
 	fi
-	ebeep 10
 	kernel-2_pkg_setup
 }

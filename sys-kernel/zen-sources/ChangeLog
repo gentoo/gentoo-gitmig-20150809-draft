@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/zen-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.52 2011/09/21 09:02:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/zen-sources/ChangeLog,v 1.53 2011/10/17 18:46:00 hwoarang Exp $
+
+  17 Oct 2011; Markos Chandras <hwoarang@gentoo.org> zen-sources-9999.ebuild,
+  metadata.xml:
+  Drop stable useflag. Now enabled by default. Bug #387403. Use minimal use
+  flag for --depth 1 clones. Bug #384673.
 
   21 Sep 2011; Michał Górny <mgorny@gentoo.org> zen-sources-9999.ebuild:
   Migrate to git-2.
