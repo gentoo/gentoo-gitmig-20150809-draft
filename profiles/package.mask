@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13141 2011/10/17 18:02:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13142 2011/10/17 18:48:51 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1047,7 +1047,7 @@ app-crypt/hmaccalc
 
 # Michael Sterrett <mr_bones_@gentoo.org> (14 Apr 2010)
 # gtk+-1 is old and nasty.
-# Start transitioning away from these packages.
+# Will be removed 20111116 
 # Read man 5 portage about package.unmask to unmask the package locally.
 games-arcade/cervi
 games-emulation/darcnes
