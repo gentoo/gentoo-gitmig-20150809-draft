@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.14.9.ebuild,v 1.2 2011/08/05 09:31:38 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.16.0.ebuild,v 1.1 2011/10/17 10:30:27 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="2:2.5"
 
 inherit python virtualx
@@ -16,11 +16,11 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-linux"
 IUSE="debug +introspection +vala"
 
-RDEPEND=">=dev-libs/glib-2.25.16:2
+RDEPEND=">=dev-libs/glib-2.28.0:2
 	>=dev-libs/dbus-glib-0.82
 	introspection? ( >=dev-libs/gobject-introspection-0.9.6 )
 	vala? (
-		dev-lang/vala:0.12[vapigen]
+		dev-lang/vala:0.14[vapigen]
 		>=dev-libs/gobject-introspection-0.9.6 )"
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
@@ -36,8 +36,8 @@ src_configure() {
 
 	if use vala; then
 		myconf="--enable-introspection
-			VALAC=$(type -p valac-0.12)
-			VAPIGEN=$(type -p vapigen-0.12)"
+			VALAC=$(type -p valac-0.14)
+			VAPIGEN=$(type -p vapigen-0.14)"
 	fi
 
 	econf --disable-static \
@@ -51,13 +51,14 @@ src_configure() {
 }
 
 src_test() {
+	unset DBUS_SESSION_BUS_ADDRESS
 	# Needs dbus for tests (auto-launched)
 	Xemake -j1 check || die
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README || die "dodoc failed"
+	emake install DESTDIR="${D}"
+	dodoc AUTHORS ChangeLog NEWS README
 
-	find "${ED}" -name '*.la' -exec rm -f '{}' + || die
+	find "${D}" -name '*.la' -exec rm -f '{}' + || die
 }
