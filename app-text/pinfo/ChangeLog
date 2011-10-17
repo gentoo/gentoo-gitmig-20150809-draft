@@ -1,6 +1,11 @@
 # ChangeLog for app-text/pinfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.57 2011/07/17 11:05:47 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pinfo/ChangeLog,v 1.58 2011/10/17 17:06:42 jer Exp $
+
+  17 Oct 2011; Jeroen Roovers <jer@gentoo.org> -pinfo-0.6.9-r1.ebuild,
+  -files/pinfo-0.6.9-FTPVIEWER.patch, -files/pinfo-0.6.9-version.patch,
+  -pinfo-0.6.10.ebuild:
+  ^
 
   17 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> pinfo-0.6.10-r2.ebuild:
   ppc64 stable wrt #366239
