@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmng
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.73 2011/10/13 21:37:58 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/ChangeLog,v 1.74 2011/10/17 13:57:18 jer Exp $
+
+  17 Oct 2011; Jeroen Roovers <jer@gentoo.org> libmng-1.0.10-r1.ebuild:
+  Stable for HPPA (bug #386511).
 
   13 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> libmng-1.0.10-r1.ebuild:
   x86 stable wrt bug #386511
