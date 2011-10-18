@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pngtools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngtools/ChangeLog,v 1.10 2011/09/16 07:12:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngtools/ChangeLog,v 1.11 2011/10/18 09:31:18 xarthisius Exp $
+
+  18 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> pngtools-0.4-r2.ebuild:
+  ppc stable wrt #387461
 
 *pngtools-0.4-r2 (16 Sep 2011)
 

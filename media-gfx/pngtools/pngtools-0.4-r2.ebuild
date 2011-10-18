@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngtools/pngtools-0.4-r2.ebuild,v 1.1 2011/09/16 07:12:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngtools/pngtools-0.4-r2.ebuild,v 1.2 2011/10/18 09:31:18 xarthisius Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -13,7 +13,7 @@ SRC_URI="http://www.stillhq.com/pngtools/source/pngtools_${MY_PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE=""
 
 RDEPEND=">=media-libs/libpng-1.2.40"
