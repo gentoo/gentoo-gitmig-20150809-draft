@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13146 2011/10/18 18:51:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13147 2011/10/18 21:50:57 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (18 Oct 2011)
+# Mask openbox and obconf snapshots for testing
+~x11-wm/openbox-3.5.0_p20111019
+~x11-misc/obconf-2.0.3_p20111019
 
 # Jeroen Roovers <jer@gentoo.org> (18 Oct 2011)
 # Masked for removal on 18 Nov 2011

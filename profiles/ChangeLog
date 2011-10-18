@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5797 2011/10/18 18:51:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5798 2011/10/18 21:50:57 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Oct 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Masking new snapshots for openbox and obconf
 
   18 Oct 2011; Jeroen Roovers <jer@gentoo.org> package.mask:
   Fix removal date.
