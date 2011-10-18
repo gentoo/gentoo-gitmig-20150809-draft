@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.173 2011/07/31 18:33:22 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.174 2011/10/18 21:41:55 vapier Exp $
+
+  18 Oct 2011; Mike Frysinger <vapier@gentoo.org> iproute2-2.6.38.ebuild,
+  +files/iproute2-2.6.38-parallel-build.patch:
+  Fix parallel builds in the tc subdir.
 
   31 Jul 2011; Matt Turner <mattst88@gentoo.org> iproute2-2.6.29.1-r1.ebuild,
   iproute2-2.6.35-r2.ebuild, iproute2-2.6.35-r3.ebuild, iproute2-2.6.38.ebuild,
