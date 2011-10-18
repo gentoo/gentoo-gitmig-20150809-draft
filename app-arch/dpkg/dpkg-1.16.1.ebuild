@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.16.1.ebuild,v 1.2 2011/10/18 21:23:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.16.1.ebuild,v 1.3 2011/10/18 21:58:13 jer Exp $
 
 EAPI=3
 
@@ -53,6 +53,7 @@ src_prepare() {
 		-e '/850_Dpkg_Compression.t/d' \
 		|| die "sed failed"
 
+	epatch "${FILESDIR}"/${PN}-1.16.1-bootstrap.patch
 	eautoreconf
 }
 
