@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.02-r4.ebuild,v 1.11 2011/10/18 21:52:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/xpdf-3.02-r4.ebuild,v 1.12 2011/10/18 21:56:02 dilfridge Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="nodrm"
 
 RDEPEND="
-	>=app-text/poppler-0.12.3-r3[xpdf-headers]
+	>=app-text/poppler-0.18.0[xpdf-headers]
 	>=x11-libs/openmotif-2.3:0
 	x11-libs/libX11
 	x11-libs/libXpm
