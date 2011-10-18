@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libebml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.110 2011/09/26 00:15:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libebml/ChangeLog,v 1.111 2011/10/18 16:48:50 jer Exp $
+
+  18 Oct 2011; Jeroen Roovers <jer@gentoo.org> libebml-1.2.1.ebuild:
+  Stable for HPPA (bug #376395).
 
 *libebml-1.2.2 (26 Sep 2011)
 
