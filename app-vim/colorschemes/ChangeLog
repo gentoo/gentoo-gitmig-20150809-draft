@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/colorschemes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/ChangeLog,v 1.60 2011/10/18 21:07:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/ChangeLog,v 1.61 2011/10/18 21:16:39 radhermit Exp $
+
+  18 Oct 2011; Tim Harder <radhermit@gentoo.org> -colorschemes-20100218.ebuild,
+  -colorschemes-20101121.ebuild:
+  Remove old.
 
   18 Oct 2011; Jeroen Roovers <jer@gentoo.org> colorschemes-20110506-r1.ebuild:
   Stable for HPPA (bug #374193).
