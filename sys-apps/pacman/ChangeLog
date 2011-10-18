@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/pacman
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pacman/ChangeLog,v 1.7 2011/10/16 23:02:15 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pacman/ChangeLog,v 1.8 2011/10/18 00:58:32 binki Exp $
+
+*pacman-4.0.0 (18 Oct 2011)
+
+  18 Oct 2011; Nathan Phillip Brink <binki@gentoo.org> +pacman-4.0.0.ebuild,
+  +files/pacman-4.0.0-gpgme.patch, metadata.xml:
+  Bump to pacman-4.0.0. Add support for gpgme with help of buildsystem patch,
+  support new libcurl functionality, add missing asciidoc DEPEND, and install
+  bash completion files.
 
   16 Oct 2011; Nathan Phillip Brink <binki@gentoo.org> -pacman-3.4.1.ebuild,
   -pacman-3.5.2.ebuild:
