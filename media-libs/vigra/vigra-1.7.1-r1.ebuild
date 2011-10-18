@@ -1,11 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.7.1-r1.ebuild,v 1.1 2011/10/05 22:06:11 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.7.1-r1.ebuild,v 1.2 2011/10/18 07:28:40 scarabeus Exp $
 
 EAPI=4
 
+PYTHON_DEPEND="2"
+PYTHON_USE_WITH="threads,xml"
+
 MY_P=${P}-src
-inherit base cmake-utils multilib
+
+inherit base cmake-utils multilib python
 
 DESCRIPTION="C++ computer vision library with emphasize on customizable algorithms and data structures"
 HOMEPAGE="http://hci.iwr.uni-heidelberg.de/vigra/"
@@ -56,6 +60,10 @@ REQUIRED_USE="
 CMAKE_IN_SOURCE_BUILD=1
 
 DOCS=(README.txt)
+
+pkg_setup() {
+	python_set_active_version 2
+}
 
 src_prepare() {
 	base_src_prepare
