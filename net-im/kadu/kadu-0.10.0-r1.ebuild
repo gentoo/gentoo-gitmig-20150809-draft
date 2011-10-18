@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.10.0-r1.ebuild,v 1.2 2011/10/02 18:43:55 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.10.0-r1.ebuild,v 1.3 2011/10/18 20:42:39 reavertm Exp $
 
 EAPI="4"
 
@@ -15,7 +15,7 @@ SRC_URI="http://download.kadu.im/stable/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
-IUSE="+gadu phonon sdk speech spell +ssl xmpp"
+IUSE="+gadu phonon sdk speech spell xmpp"
 REQUIRED_USE="
 	|| (
 		gadu
@@ -52,8 +52,8 @@ DEPEND="${COMMON_DEPEND}
 	x11-proto/scrnsaverproto
 "
 RDEPEND="${COMMON_DEPEND}
+	app-crypt/qca-ossl:2
 	speech? ( app-accessibility/powiedz )
-	ssl? ( app-crypt/qca-ossl:2 )
 "
 
 PATCHES=(
@@ -62,11 +62,11 @@ PATCHES=(
 )
 
 PLUGINS='amarok1_mediaplayer antistring auto_hide autoaway autoresponder
-autostatus cenzor chat_notify config_wizard desktop_docking docking exec_notify
-ext_sound falf_mediaplayer filedesc firewall freedesktop_notify hints history
-idle imagelink last_seen mediaplayer mprisplayer_mediaplayer pcspeaker qt4_docking
-qt4_docking_notify screenshot simpleview single_window sms sound sql_history tabs
-word_fix'
+autostatus cenzor chat_notify config_wizard desktop_docking docking
+encryption_ng encryption_ng_simlite exec_notify ext_sound falf_mediaplayer
+filedesc firewall freedesktop_notify hints history idle imagelink last_seen
+mediaplayer mprisplayer_mediaplayer pcspeaker qt4_docking qt4_docking_notify
+screenshot simpleview single_window sms sound sql_history tabs word_fix'
 
 src_configure() {
 	# Filter out dangerous flags
@@ -85,10 +85,6 @@ src_configure() {
 	use phonon && PLUGINS+=' phonon_sound'
 	use speech && PLUGINS+=' speech'
 	use spell && PLUGINS+=' spellchecker'
-
-	if use ssl; then
-		PLUGINS+=' encryption_ng encryption_ng_simlite'
-	fi
 
 	# COMPILE_PLUGINS isn't the most flexible..
 	local compile_plugins=

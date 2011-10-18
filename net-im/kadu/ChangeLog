@@ -1,6 +1,10 @@
 # ChangeLog for net-im/kadu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.112 2011/10/18 17:15:10 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.113 2011/10/18 20:42:39 reavertm Exp $
+
+  18 Oct 2011; Maciej Mrozowski <reavertm@gentoo.org> -kadu-0.6.5.4.ebuild,
+  -files/kadu-0.6.5.4-glibc211.patch, kadu-0.10.0-r1.ebuild:
+  qca-ossl is mandatory, bug 386469. Remove old
 
   18 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> kadu-0.9.2.ebuild:
   ppc stable wrt #372455
