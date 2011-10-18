@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.195 2011/09/04 14:13:19 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.196 2011/10/18 12:59:32 pva Exp $
+
+  18 Oct 2011; Peter Volkov <pva@gentoo.org> splashutils-1.5.4.4.ebuild,
+  files/splashutils-1.5.4.4-freetype-bz2.patch:
+  Fixed build failure reported in bug 384131 wrt Robin Johnson.
 
   04 Sep 2011; Michał Januszewski <spock@gentoo.org>
   splashutils-1.5.4.3-r3.ebuild:
