@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/d0_blind_id/d0_blind_id-0.3.ebuild,v 1.2 2011/09/16 20:02:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/d0_blind_id/d0_blind_id-0.3.ebuild,v 1.3 2011/10/18 06:33:44 phajdan.jr Exp $
 
 EAPI=4
 inherit autotools-utils
@@ -11,7 +11,7 @@ SRC_URI="https://github.com/downloads/divVerent/d0_blind_id/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="static-libs"
 
 RDEPEND="dev-libs/gmp"
