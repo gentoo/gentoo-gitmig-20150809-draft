@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/freeipmi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.39 2011/09/28 21:27:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.40 2011/10/18 09:01:08 flameeyes Exp $
+
+*freeipmi-1.0.7-r1 (18 Oct 2011)
+
+  18 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +freeipmi-1.0.7-r1.ebuild, +files/bmc-watchdog.initd.3,
+  +files/ipmidetectd.initd.3:
+  Revbump with more OpenRC-style init scripts.
 
 *freeipmi-1.0.7 (28 Sep 2011)
 
