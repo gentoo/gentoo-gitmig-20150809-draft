@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.99 2011/10/18 06:38:39 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.100 2011/10/18 10:31:51 chainsaw Exp $
+
+  18 Oct 2011; Tony Vroon <chainsaw@gentoo.org> heartbeat-3.0.5.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
+  "idella4" Delaney in bug #386955.
 
   18 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> heartbeat-3.0.5.ebuild:
   x86 stable wrt bug #386955
