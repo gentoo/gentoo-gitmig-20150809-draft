@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r12.ebuild,v 1.2 2011/07/08 10:00:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r13.ebuild,v 1.1 2011/10/18 17:16:11 reavertm Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz mirror://gentoo/${PN}-patches-${
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="hb hb2 ncurses nls"
+IUSE="ncurses nls"
 
 # sys-apps/util-linux: libuuid
 # sys-libs/readline: evms cli
@@ -26,10 +26,6 @@ RDEPEND="
 		sys-fs/device-mapper
 		>=sys-fs/lvm2-2.02.45
 	)
-	hb? (
-		!hb2? ( =sys-cluster/heartbeat-1* )
-	)
-	hb2? ( >=sys-cluster/heartbeat-2 )
 	ncurses? (
 		>=dev-libs/glib-2.12.4-r1
 		sys-libs/ncurses
@@ -46,11 +42,6 @@ RESTRICT="test"
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
 pkg_setup() {
-	if use hb && use hb2 ; then
-		ewarn "It's not possible to have support for heartbeat version 1 and 2 at the same time."
-		ewarn "Assuming  that you want heartbeat-2, if not, please do not enable the hb2 use flag."
-	fi
-
 	get_running_version
 	if [[ ${KV_MAJOR} -eq 2 ]]; then
 		if [[ ${KV_PATCH} -lt 19 ]] || [[ ${KV_MINOR} -eq 4 ]]; then
@@ -75,17 +66,9 @@ src_configure() {
 	replace-flags -O3 -O2
 	replace-flags -Os -O2
 
-	# hb2 should override hb
-	local myeconfargs=(
-		$(use_enable hb ha)
-		--disable-hb2
-	)
-	use hb2 && myeconfargs=(
-		--disable-ha
-		--enable-hb2
-	)
-
 	myeconfargs+=(
+		--disable-ha
+		--disable-hb2
 		--disable-gui
 		--enable-cli
 		--without-debug

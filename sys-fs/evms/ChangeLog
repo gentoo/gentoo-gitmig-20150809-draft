@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/evms
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.103 2011/07/08 10:00:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.104 2011/10/18 17:16:11 reavertm Exp $
+
+*evms-2.5.5-r13 (18 Oct 2011)
+
+  18 Oct 2011; Maciej Mrozowski <reavertm@gentoo.org> -evms-2.5.5-r12.ebuild,
+  +evms-2.5.5-r13.ebuild, metadata.xml:
+  Remove hartbeat-{1,2} support, bug 387543
 
   08 Jul 2011; Samuli Suominen <ssuominen@gentoo.org> evms-2.5.5-r12.ebuild:
   Convert from "hasq" to "has".
