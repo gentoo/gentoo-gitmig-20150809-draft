@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpolkit/lxpolkit-0.1.0-r1.ebuild,v 1.1 2011/10/18 21:20:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpolkit/lxpolkit-0.1.0-r1.ebuild,v 1.2 2011/10/18 21:26:23 ssuominen Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	local f=data/lxpolkit.desktop.in.in
-	sed -i -e '/^NotShowIn/s:GNOME;::' ${f} || die
+	sed -i -e '/^NotShowIn/s:=.*:=KDE;:' ${f} || die
 	echo 'AutostartCondition=GNOME3 if-session gnome-fallback' >> ${f}
 }
 
