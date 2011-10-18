@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qmmp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.74 2011/10/16 11:31:41 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.75 2011/10/18 06:35:26 phajdan.jr Exp $
+
+  18 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> qmmp-0.5.2.ebuild:
+  x86 stable wrt bug #387201
 
   16 Oct 2011; Tony Vroon <chainsaw@gentoo.org> qmmp-0.5.2.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
