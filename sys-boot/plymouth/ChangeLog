@@ -1,6 +1,15 @@
 # ChangeLog for sys-boot/plymouth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.14 2011/07/03 10:06:14 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.15 2011/10/18 09:57:50 aidecoe Exp $
+
+*plymouth-0.9_pre20111013 (18 Oct 2011)
+
+  18 Oct 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +files/0.9_pre20111013-gentoo-fb-path.patch,
+  +plymouth-0.9_pre20111013.ebuild, metadata.xml:
+  Pre 0.9 snapshot ebuild based on latest git sources. It introduces libkms.
+
+  EAPI bumped to 4.
 
 *plymouth-0.8.3-r5 (03 Jul 2011)
 
