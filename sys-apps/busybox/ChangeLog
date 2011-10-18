@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.285 2011/09/17 03:46:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.286 2011/10/18 20:17:16 vapier Exp $
+
+*busybox-1.19.2-r1 (18 Oct 2011)
+
+  18 Oct 2011; Mike Frysinger <vapier@gentoo.org> +busybox-1.19.2-r1.ebuild,
+  +files/busybox-1.19.2-tftp.patch:
+  Undo nommu and rebuild config to get all the ash features enabled by default
+  #387555 by Ortwin Glueck.
 
 *busybox-1.19.2 (17 Sep 2011)
 
