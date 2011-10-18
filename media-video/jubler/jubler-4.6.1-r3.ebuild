@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-4.6.1-r3.ebuild,v 1.4 2011/05/15 15:36:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-4.6.1-r3.ebuild,v 1.5 2011/10/18 09:43:04 scarabeus Exp $
 
 EAPI="2"
 WANT_ANT_TASKS="ant-nodeps ant-contrib"
@@ -25,7 +25,7 @@ RDEPEND=">=virtual/jre-1.5
 	)"
 
 DEPEND=">=virtual/jdk-1.5
-	>=media-video/ffmpeg-0.4.9_p20080326
+	virtual/ffmpeg
 	app-text/xmlto
 	>=dev-java/jupidator-0.6.0
 	dev-util/pkgconfig

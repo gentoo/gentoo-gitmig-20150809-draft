@@ -1,6 +1,9 @@
 # ChangeLog for media-video/jubler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.42 2011/05/15 15:38:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/ChangeLog,v 1.43 2011/10/18 09:43:04 scarabeus Exp $
+
+  18 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> jubler-4.6.1-r3.ebuild:
+  Really depend on the virtual.
 
   15 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/jubler-3.9.6-ffmpegfix.patch, -files/jubler-3.9.6.patch,
