@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/FusionSound/FusionSound-1.1.1-r1.ebuild,v 1.5 2011/06/29 14:54:46 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/FusionSound/FusionSound-1.1.1-r1.ebuild,v 1.6 2011/10/18 09:41:36 scarabeus Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/DirectFB-${PV}
 	vorbis? ( media-libs/libvorbis )
 	mad? ( media-libs/libmad )
 	cddb? ( media-libs/libcddb )
-	ffmpeg? ( >=media-video/ffmpeg-0.6.90_rc0 )
+	ffmpeg? ( >=virtual/ffmpeg-0.6.90_rc0 )
 	!net-zope/zodb"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
