@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.887 2011/10/17 06:25:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.888 2011/10/18 08:06:19 zmedico Exp $
+
+*portage-2.1.10.29 (18 Oct 2011)
+
+  18 Oct 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.29.ebuild:
+  2.1.10.29 version bump. This fixes regressions in 2.1.10.28 and 2.2.0_alpha68
+  involving support for users who are not in the portage group. Bug #381649
+  tracks all bugs fixed since portage-2.1.10.11.
 
 *portage-2.2.0_alpha68 (16 Oct 2011)
 
