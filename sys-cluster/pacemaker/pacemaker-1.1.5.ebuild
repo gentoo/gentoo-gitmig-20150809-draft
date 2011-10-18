@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.5.ebuild,v 1.3 2011/09/21 14:25:51 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pacemaker/pacemaker-1.1.5.ebuild,v 1.4 2011/10/18 18:40:04 xarthisius Exp $
 
 EAPI=3
 
@@ -22,10 +22,10 @@ IUSE="acl heartbeat smtp snmp static-libs"
 DEPEND="
 	app-text/docbook-xsl-stylesheets
 	dev-libs/libxslt
-	sys-cluster/corosync
 	sys-cluster/cluster-glue
 	sys-cluster/resource-agents
 	heartbeat? ( >=sys-cluster/heartbeat-3.0.0 )
+	!heartbeat? ( sys-cluster/corosync )
 	smtp? ( net-libs/libesmtp )
 	snmp? ( net-analyzer/net-snmp )
 "
