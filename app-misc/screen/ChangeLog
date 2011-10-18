@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/screen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.162 2011/07/15 14:31:00 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.163 2011/10/18 19:25:31 jer Exp $
+
+  18 Oct 2011; Jeroen Roovers <jer@gentoo.org>
+  -files/4.0.3-extend-d_termname.patch,
+  -files/4.0.3-extend-d_termname-ng.patch, -screen-4.0.3.ebuild:
+  ^
 
   15 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> screen-4.0.3-r4.ebuild:
   ppc64 stable wrt #361823
