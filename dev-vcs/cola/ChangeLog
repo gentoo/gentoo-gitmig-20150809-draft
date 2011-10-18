@@ -1,6 +1,13 @@
 # ChangeLog for dev-vcs/cola
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cola/ChangeLog,v 1.12 2011/09/09 10:57:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cola/ChangeLog,v 1.13 2011/10/18 08:32:46 dev-zero Exp $
+
+*cola-1.4.3.5 (18 Oct 2011)
+
+  18 Oct 2011; Tiziano Müller <dev-zero@gentoo.org>
+  -files/1.4.3.2-backport.patch, -cola-1.4.3.1.ebuild, -cola-1.4.3.2.ebuild,
+  -cola-1.4.3.2-r1.ebuild, -cola-1.4.3.3.ebuild, +cola-1.4.3.5.ebuild:
+  Version bump. Dropped old.
 
   09 Sep 2011; Justin Lecher <jlec@gentoo.org> cola-1.4.3.4.ebuild:
   keyworded *-linux, tested by me

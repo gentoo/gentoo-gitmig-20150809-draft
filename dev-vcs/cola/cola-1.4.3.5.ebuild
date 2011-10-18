@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cola/cola-1.4.3.3.ebuild,v 1.1 2011/04/23 07:05:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cola/cola-1.4.3.5.ebuild,v 1.1 2011/10/18 08:32:46 dev-zero Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ SRC_URI="http://cola.tuxfamily.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc test"
 
 RDEPEND="
@@ -69,10 +69,10 @@ src_install() {
 	distutils_src_install
 
 	# remove bundled libraries
-	rm -rf "${D}"/usr/share/git-cola/lib/{jsonpickle,simplejson}
+	rm -rf "${ED}"/usr/share/git-cola/lib/{jsonpickle,simplejson}
 
 	# remove wrong translation file
-	rm -rf "${D}/usr/share/locale/"
+	rm -rf "${ED}/usr/share/locale/"
 
 	insinto /usr/share/locale
 	doins -r share/locale/*
