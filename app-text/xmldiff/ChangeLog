@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xmldiff
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmldiff/ChangeLog,v 1.18 2011/10/15 19:34:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmldiff/ChangeLog,v 1.19 2011/10/18 06:40:30 phajdan.jr Exp $
+
+  18 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> xmldiff-0.6.10.ebuild:
+  x86 stable wrt bug #378063
 
   15 Oct 2011; Markos Chandras <hwoarang@gentoo.org> xmldiff-0.6.10.ebuild:
   Stable on amd64 wrt bug #378063
