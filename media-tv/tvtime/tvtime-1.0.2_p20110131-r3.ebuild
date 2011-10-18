@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-1.0.2_p20110131-r3.ebuild,v 1.2 2011/10/15 14:54:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/tvtime-1.0.2_p20110131-r3.ebuild,v 1.3 2011/10/18 06:38:13 phajdan.jr Exp $
 
 EAPI=4
 inherit eutils autotools
@@ -16,7 +16,7 @@ http://dev.gentoo.org/~a3li/distfiles/${PN}-1.0.2-alsa-fixes.patch"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="alsa nls xinerama"
 
 RDEPEND="x11-libs/libSM
