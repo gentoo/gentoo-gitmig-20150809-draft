@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-7.0.21.ebuild,v 1.1 2011/09/02 10:50:01 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-7.0.21-r1.ebuild,v 1.1 2011/10/18 22:27:52 fordfrog Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc examples source test"

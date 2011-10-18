@@ -1,9 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/7/tomcat.init,v 1.1 2010/12/21 09:13:39 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/7/tomcat.init,v 1.2 2011/10/18 22:27:52 fordfrog Exp $
 
-opts="${opts} forcestop"
+extra_commands="forcestop"
 
 init_env_vars() {
 	# Populate JAVA_HOME
@@ -44,7 +44,7 @@ ssd() {
 	shift
 	start-stop-daemon --start --quiet --background \
 		--chdir "${CATALINA_TMPDIR}" \
-		--chuid ${CATALINA_USER}:${CATALINA_GROUP} \
+		--user ${CATALINA_USER}:${CATALINA_GROUP} \
 		--make-pidfile --pidfile /var/run/tomcat-7.pid \
 		--exec ${exec} -- ${OPTS_CP} "$@" ${CATALINA_ARGS} ${TOMCAT_START}
 	return $?
