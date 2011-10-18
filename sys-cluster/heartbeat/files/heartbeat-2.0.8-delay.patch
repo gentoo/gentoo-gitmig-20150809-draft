@@ -1,8 +1,0 @@
---- heartbeat-2.0.8/resources/heartbeat/Delay.in.orig	2007-03-21 14:16:48.000000000 +0100
-+++ heartbeat-2.0.8/resources/heartbeat/Delay.in	2007-03-21 14:16:52.000000000 +0100
-@@ -39,4 +39,4 @@
- OCF_RESOURCE_INSTANCE=${OCF_TYPE}_${OCF_RESKEY_startdelay}
- export OCF_TYPE OCF_RESOURCE_INSTANCE
- 
--ra_execocf $op;;
-+ra_execocf $op

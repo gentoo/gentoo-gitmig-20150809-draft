@@ -1,6 +1,17 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.100 2011/10/18 10:31:51 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.101 2011/10/18 17:27:57 xarthisius Exp $
+
+  18 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> -heartbeat-1.2.5.ebuild,
+  -heartbeat-1.2.5-r1.ebuild, -heartbeat-2.0.7-r2.ebuild,
+  -files/heartbeat-2.0.7-update-resources-failcount.patch,
+  -heartbeat-2.0.8.ebuild, -files/heartbeat-2.0.8-asneeded.patch,
+  -files/heartbeat-2.0.8-crm-assert.patch,
+  -files/heartbeat-2.0.8-crm-leaks.patch, -files/heartbeat-2.0.8-delay.patch,
+  -files/heartbeat-2.0.8-glibc.patch, -files/heartbeat-2.0.8-install_fix.patch,
+  -heartbeat-3.0.4-r1.ebuild:
+  Drop ancient and unusable versions of heartbeat-{1,2} since we have
+  heartbeat-3 stable
 
   18 Oct 2011; Tony Vroon <chainsaw@gentoo.org> heartbeat-3.0.5.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
