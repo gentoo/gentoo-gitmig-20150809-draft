@@ -1,6 +1,11 @@
 # ChangeLog for net-voip/telepathy-salut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/ChangeLog,v 1.29 2011/10/16 17:14:34 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/ChangeLog,v 1.30 2011/10/18 19:15:38 pacho Exp $
+
+*telepathy-salut-0.6.0 (18 Oct 2011)
+
+  18 Oct 2011; Pacho Ramos <pacho@gentoo.org> +telepathy-salut-0.6.0.ebuild:
+  Version bump.
 
   16 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
   telepathy-salut-0.5.1.ebuild:
