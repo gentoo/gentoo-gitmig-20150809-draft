@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/ddclient
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.48 2011/10/08 18:32:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.49 2011/10/18 21:01:33 jer Exp $
+
+  18 Oct 2011; Jeroen Roovers <jer@gentoo.org> ddclient-3.8.1-r3.ebuild:
+  Stable for HPPA (bug #382717).
 
   08 Oct 2011; Raúl Porcel <armin76@gentoo.org> ddclient-3.8.1-r3.ebuild:
   alpha/ia64/sparc stable wrt #382717
