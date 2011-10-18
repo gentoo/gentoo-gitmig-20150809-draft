@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psutil/psutil-0.3.0.ebuild,v 1.1 2011/09/04 12:51:12 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psutil/psutil-0.3.0.ebuild,v 1.2 2011/10/18 10:23:45 chainsaw Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*"
@@ -15,7 +15,7 @@ SRC_URI="http://psutil.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 # A broken test
