@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/obconf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.89 2011/10/05 05:59:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.90 2011/10/18 20:57:22 jer Exp $
+
+  18 Oct 2011; Jeroen Roovers <jer@gentoo.org>
+  obconf-2.0.3_p20110314-r1.ebuild:
+  Stable for HPPA (bug #383475).
 
   05 Oct 2011; Markus Meier <maekke@gentoo.org>
   obconf-2.0.3_p20110314-r1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.232 2011/10/05 05:57:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.233 2011/10/18 20:57:22 jer Exp $
+
+  18 Oct 2011; Jeroen Roovers <jer@gentoo.org> openbox-3.5.0-r1.ebuild:
+  Stable for HPPA (bug #383475).
 
   05 Oct 2011; Markus Meier <maekke@gentoo.org> openbox-3.5.0-r1.ebuild:
   arm stable, bug #383475
