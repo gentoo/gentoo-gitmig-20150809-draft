@@ -1,0 +1,21 @@
+#!/sbin/runscript
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/files/afpd.init.2,v 1.1 2011/10/18 07:37:57 flameeyes Exp $
+
+command="/usr/sbin/${SVCNAME}"
+command_args="${EXTRA_CONF}"
+pidfile="/var/run/${SVCNAME}.pid"
+
+depend() {
+	need net cnid_metad
+	use logger dns atalkd
+
+	config /etc/netatalk/afpd.conf
+
+	sed -e 's:#.*::' /etc/netatalk/afpd.conf | fgrep -q -e -ddp \
+		&& need atalkd
+
+	need avahi-daemon
+	need slpd
+}

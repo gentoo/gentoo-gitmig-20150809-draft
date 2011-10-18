@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.73 2011/09/30 10:37:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.74 2011/10/18 07:37:57 flameeyes Exp $
+
+*netatalk-2.2.1-r2 (18 Oct 2011)
+
+  18 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +netatalk-2.2.1-r2.ebuild, +files/afpd.init.2, +files/atalk_service.init.2,
+  +files/cnid_metad.init.2:
+  Revbump with more OpenRC-style init scripts.
 
   30 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   files/netatalk-2.2.1-gentoo.patch:
