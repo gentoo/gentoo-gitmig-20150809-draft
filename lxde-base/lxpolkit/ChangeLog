@@ -1,9 +1,6 @@
 # ChangeLog for lxde-base/lxpolkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpolkit/ChangeLog,v 1.12 2011/10/18 21:26:23 ssuominen Exp $
-
-  19 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> lxpolkit-0.1.0-r1.ebuild:
-  Change syntax so it's immediately clear what the sed is doing.
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpolkit/ChangeLog,v 1.13 2011/10/18 21:27:32 ssuominen Exp $
 
 *lxpolkit-0.1.0-r1 (18 Oct 2011)
 
