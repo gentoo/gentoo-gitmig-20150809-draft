@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/automake-wrapper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/ChangeLog,v 1.48 2011/10/02 19:51:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/ChangeLog,v 1.49 2011/10/18 06:43:54 phajdan.jr Exp $
+
+  18 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  automake-wrapper-5.ebuild:
+  x86 stable wrt bug #387467
 
 *automake-wrapper-6 (02 Oct 2011)
 
