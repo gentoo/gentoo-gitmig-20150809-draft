@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/cman-3.1.5.ebuild,v 1.1 2011/09/14 10:41:18 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/cman-3.1.5.ebuild,v 1.2 2011/10/18 20:54:50 jer Exp $
 
 EAPI=4
 
@@ -18,7 +18,7 @@ SRC_URI="https://fedorahosted.org/releases/c/l/cluster/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="dbus ldap"
 
 RDEPEND="dev-libs/libxml2
