@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.43 2011/10/16 18:01:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.44 2011/10/18 07:33:46 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
 KDE_REQUIRED="optional"
 KDE_SCM="git"
@@ -200,14 +200,19 @@ DEPEND="${COMMON_DEPEND}
 PATCHES=(
 )
 
-# Uncoment me when updating to eapi4
-# REQUIRED_USE="
-#	|| ( gtk gnome kde )
-#	gnome? ( gtk )
-#	nsplugin? ( gtk )
-#"
+REQUIRED_USE="
+	|| ( gtk gnome kde )
+	gnome? ( gtk )
+	nsplugin? ( gtk )
+"
 
 S="${WORKDIR}/${PN}-core-${PV}"
+
+pkg_pretend() {
+	CHECKREQS_MEMORY="1G"
+	use debug && CHECKREQS_DISK_BUILD="15G" || CHECKREQS_DISK_BUILD="9G"
+	check-reqs_pkg_setup
+}
 
 pkg_setup() {
 	java-pkg-opt-2_pkg_setup
@@ -461,7 +466,7 @@ src_install() {
 	make DESTDIR="${D}" distro-pack-install -o build -o check || die
 
 	# Fix bash completion placement
-	newbashcomp "${ED}"/etc/bash_completion.d/libreoffice.sh ${PN} || die
+	newbashcomp "${ED}"/etc/bash_completion.d/libreoffice.sh ${PN}
 	rm -rf "${ED}"/etc/
 
 	# symlink the plugin to system location
@@ -471,7 +476,7 @@ src_install() {
 
 	if use branding; then
 		insinto /usr/$(get_libdir)/${PN}/program
-		newins "${WORKDIR}/branding-sofficerc" sofficerc || die
+		newins "${WORKDIR}/branding-sofficerc" sofficerc
 	fi
 }
 

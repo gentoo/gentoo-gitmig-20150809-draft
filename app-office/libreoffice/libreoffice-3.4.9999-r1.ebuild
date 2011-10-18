@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999-r1.ebuild,v 1.14 2011/10/16 18:01:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999-r1.ebuild,v 1.15 2011/10/18 07:33:46 scarabeus Exp $
 
-EAPI=3
+EAPI=4
 
 KDE_REQUIRED="optional"
 KDE_SCM="git"
@@ -206,12 +206,11 @@ PATCHES=(
 	"${FILESDIR}/${PN}-java.patch"
 )
 
-# Uncoment me when updating to eapi4
-# REQUIRED_USE="
-#	|| ( gtk gnome kde )
-#	gnome? ( gtk )
-#	nsplugin? ( gtk )
-#"
+REQUIRED_USE="
+	|| ( gtk gnome kde )
+	gnome? ( gtk )
+	nsplugin? ( gtk )
+"
 
 # Needs lots and lots of work and compiling
 RESTRICT="test"
@@ -505,7 +504,7 @@ src_install() {
 	make DESTDIR="${D}" distro-pack-install || die
 
 	# Fix bash completion placement
-	newbashcomp "${ED}"/etc/bash_completion.d/libreoffice.sh ${PN} || die
+	newbashcomp "${ED}"/etc/bash_completion.d/libreoffice.sh ${PN}
 	rm -rf "${ED}"/etc/
 
 	# symlink the plugin to system location
@@ -515,7 +514,7 @@ src_install() {
 
 	if use branding; then
 		insinto /usr/$(get_libdir)/${PN}/program
-		newins "${WORKDIR}/branding-sofficerc" sofficerc || die
+		newins "${WORKDIR}/branding-sofficerc" sofficerc
 	fi
 }
 
