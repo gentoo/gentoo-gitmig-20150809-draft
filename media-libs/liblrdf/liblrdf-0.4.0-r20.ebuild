@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/liblrdf-0.4.0-r20.ebuild,v 1.6 2011/10/17 14:32:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblrdf/liblrdf-0.4.0-r20.ebuild,v 1.7 2011/10/18 16:57:28 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/lrdf/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 hppa ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 hppa ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="static-libs"
 
 RDEPEND="media-libs/raptor:2
