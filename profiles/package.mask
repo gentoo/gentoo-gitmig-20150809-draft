@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13143 2011/10/17 20:14:08 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13144 2011/10/18 01:25:38 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -131,8 +131,11 @@ net-wireless/madwifi-old-tools
 
 # Michael Sterrett <mr_bones_@gentoo.org> (29 Sep 2011)
 # Don't use this on production boxes.  This version of
-# syslog-ng leaks memory with some configs.
+# syslog-ng leaks memory with some configs, etc.
 # This version is added for ebuild testing only.
+# Bug reports about anything other than the package
+# install should be directed upstream at:
+# https://bugzilla.balabit.com/
 >=app-admin/syslog-ng-3.2.9999
 
 # Samuli Suominen <ssuominen@gentoo.org> (29 Sep 2011)
