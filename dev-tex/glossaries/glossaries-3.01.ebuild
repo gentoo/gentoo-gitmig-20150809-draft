@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/glossaries-3.01.ebuild,v 1.3 2011/10/16 17:19:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/glossaries-3.01.ebuild,v 1.4 2011/10/18 18:04:42 radhermit Exp $
+
+EAPI=4
 
 inherit latex-package
 
@@ -28,16 +30,16 @@ S=${WORKDIR}/${PN}
 src_install() {
 	latex-package_src_doinstall styles
 
-	dobin makeglossaries || die
+	dobin makeglossaries
 
-	dodoc CHANGES README || die
+	dodoc CHANGES README
 	insinto "${TEXMF}/tex/latex/${PN}/dict"
-	doins *.dict || die
+	doins *.dict
 	if use doc ; then
 		latex-package_src_doinstall pdf
 	fi
 	if use examples ; then
-		insinto /usr/share/doc/${PF}/examples
-		doins *.tex || die
+		docinto examples
+		dodoc samples/*.tex
 	fi
 }

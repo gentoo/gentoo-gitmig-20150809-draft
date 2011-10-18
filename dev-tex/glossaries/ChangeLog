@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/glossaries
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.40 2011/10/16 17:19:16 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.41 2011/10/18 18:04:42 radhermit Exp $
+
+  18 Oct 2011; Tim Harder <radhermit@gentoo.org> glossaries-3.01.ebuild:
+  Update to EAPI 4.
 
   16 Oct 2011; Fabian Groffen <grobian@gentoo.org> glossaries-3.01.ebuild:
   Marked ~x86-macos
