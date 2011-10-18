@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.104.ebuild,v 1.1 2011/10/18 17:31:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.104.ebuild,v 1.2 2011/10/18 17:31:51 ssuominen Exp $
 
 EAPI=4
 inherit gnome.org
@@ -33,7 +33,7 @@ src_configure() {
 		$(use_enable doc gtk-doc) \
 		$(use_enable examples) \
 		$(use_enable introspection) \
-		--with-html-dir=/usr/share/doc/${PF}
+		--with-html-dir=/usr/share/doc/${PF}/html
 }
 
 src_install() {
