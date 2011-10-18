@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.70 2011/10/16 13:24:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.71 2011/10/18 14:19:20 jer Exp $
+
+  18 Oct 2011; Jeroen Roovers <jer@gentoo.org> gd-2.0.35-r3.ebuild:
+  Stable for HPPA (bug #387291).
 
   16 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> gd-2.0.35-r3.ebuild:
   amd64 stable wrt #387291 and force libpng >= 1.5 :0 to ensure gdlib-config is
