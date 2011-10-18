@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/culmus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.69 2011/10/11 17:05:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/ChangeLog,v 1.70 2011/10/18 19:12:48 pva Exp $
+
+*culmus-0.120-r3 (18 Oct 2011)
+
+  18 Oct 2011; Peter Volkov <pva@gentoo.org> +culmus-0.120-r3.ebuild:
+  Add horev font. Depend on >=x11-apps/mkfontscale-1.0.9-r1 as Heavy weight is
+  required for this font.
 
   11 Oct 2011; Jeroen Roovers <jer@gentoo.org> culmus-0.120-r1.ebuild:
   Stable for HPPA (bug #376347).
