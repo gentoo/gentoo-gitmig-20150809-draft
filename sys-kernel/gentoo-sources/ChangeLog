@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.888 2011/10/16 11:40:52 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.889 2011/10/18 19:43:06 psomas Exp $
+
+*gentoo-sources-3.0.7 (18 Oct 2011)
+
+  18 Oct 2011; Stratos Psomadakis <psomas@gentoo.org>
+  +gentoo-sources-3.0.7.ebuild:
+  Linux patch 3.0.7 and v0.10 of Alps patch from Seth Forshee of Canonical. See
+  bug #318567
 
   16 Oct 2011; Tony Vroon <chainsaw@gentoo.org> gentoo-sources-3.0.6.ebuild:
   Marked stable on AMD64 based on arch testing by Blain "doc235" Anderson,
