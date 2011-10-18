@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/rep-gtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.70 2011/10/16 17:01:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.71 2011/10/18 18:37:27 pacho Exp $
+
+  18 Oct 2011; Pacho Ramos <pacho@gentoo.org> -rep-gtk-0.18-r3.ebuild,
+  -files/rep-gtk-0.18.4-locale.patch, -files/rep-gtk-0.18.4-libdir.patch,
+  -files/rep-gtk-0.18-gtk24.patch, -files/rep-gtk-0.18-gtk26.patch,
+  -files/libtool.patch, rep-gtk-0.90.7.ebuild:
+  Fix gdk-pixbuf dependency (bug #387041 by Jack Lloyd), update homepage as
+  older one is obsolete, drop old.
 
   16 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> rep-gtk-0.90.7.ebuild:
   ppc stable wrt #385699

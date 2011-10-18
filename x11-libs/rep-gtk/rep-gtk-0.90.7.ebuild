@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.90.7.ebuild,v 1.4 2011/10/16 17:01:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/rep-gtk-0.90.7.ebuild,v 1.5 2011/10/18 18:37:27 pacho Exp $
 
 EAPI="4"
 
 inherit eutils multilib
 
 DESCRIPTION="A GTK+/libglade/GNOME language binding for the librep Lisp environment"
-HOMEPAGE="http://rep-gtk.sourceforge.net/"
+HOMEPAGE="http://sawfish.wikia.com/wiki/Main_Page"
 SRC_URI="http://download.tuxfamily.org/librep/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2"
@@ -17,7 +17,8 @@ IUSE=""
 
 RDEPEND=">=dev-libs/librep-0.90.5
 	>=dev-libs/glib-2.6:2
-	>=x11-libs/gtk+-2.24.0:2"
+	>=x11-libs/gtk+-2.24.0:2
+	>=x11-libs/gdk-pixbuf-2.23:2"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0"
 
