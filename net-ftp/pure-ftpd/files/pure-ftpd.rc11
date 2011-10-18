@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/files/pure-ftpd.rc11,v 1.2 2011/05/17 15:09:50 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/files/pure-ftpd.rc11,v 1.3 2011/10/18 17:04:00 polynomial-c Exp $
 
 ftpd_pidfile="/var/run/pure-ftpd.pid"
 script_pidfile="/var/run/pure-uploadscript.pid"
@@ -43,7 +43,7 @@ start() {
 	ebegin "Starting Pure-FTPd"
 	start-stop-daemon --start --quiet --pidfile ${ftpd_pidfile} \
 		--make-pidfile --background --exec /usr/sbin/pure-ftpd ${WAIT} \
-		-- ${FTPD_CONFIG//-B}
+		-- $( echo ${FTPD_CONFIG} | sed 's@\([[:space:]]\+\|^\)-B\([[:space:]]\+\|$\)@\1@g')
 	result=$?
 	if [ $result -ne 0 ] ; then
 		eend 1 "Could not launch Pure-FTPd"
