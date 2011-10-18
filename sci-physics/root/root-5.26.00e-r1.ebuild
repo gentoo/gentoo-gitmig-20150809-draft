@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00e-r1.ebuild,v 1.10 2011/06/21 14:31:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00e-r1.ebuild,v 1.11 2011/10/18 16:35:29 ssuominen Exp $
 
 EAPI=3
 
@@ -111,7 +111,8 @@ src_prepare() {
 		"${WORKDIR}"/${P}-configure-paths.patch \
 		"${WORKDIR}"/${P}-nobyte-compile.patch \
 		"${WORKDIR}"/${P}-glibc212.patch \
-		"${WORKDIR}"/${P}-xrootd-prop-flags.patch
+		"${WORKDIR}"/${P}-xrootd-prop-flags.patch \
+		"${FILESDIR}"/${P}-libpng15.patch
 
 	# use system cfortran
 	rm montecarlo/eg/inc/cfortran.h README/cfortran.doc

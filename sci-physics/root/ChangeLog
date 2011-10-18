@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.88 2011/06/21 14:31:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.89 2011/10/18 16:35:29 ssuominen Exp $
+
+  18 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> root-5.26.00e-r1.ebuild,
+  +files/root-5.26.00e-libpng15.patch:
+  Fix building with libpng15 wrt #387553 by Daniel Savard
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> root-5.26.00-r2.ebuild,
   root-5.26.00e-r1.ebuild, root-5.28.00d.ebuild:
