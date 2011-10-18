@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.535 2011/10/18 14:29:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.536 2011/10/18 18:43:56 pacho Exp $
+
+*gtk+-2.24.7 (18 Oct 2011)
+
+  18 Oct 2011; Pacho Ramos <pacho@gentoo.org> +gtk+-2.24.7.ebuild,
+  +files/gtk+-2.24.7-darwin-quartz-introspection.patch:
+  Version bump, also skip broken pltcheck tests under gtk/ subdir (bug
+  #333463).
 
   18 Oct 2011; Jeroen Roovers <jer@gentoo.org> gtk+-2.24.5-r1.ebuild,
   gtk+-3.0.12-r1.ebuild:
