@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/rlwrap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rlwrap/ChangeLog,v 1.24 2011/10/15 14:50:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rlwrap/ChangeLog,v 1.25 2011/10/18 06:42:09 phajdan.jr Exp $
+
+  18 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> rlwrap-0.37.ebuild:
+  x86 stable wrt bug #387159
 
   15 Oct 2011; Markos Chandras <hwoarang@gentoo.org> rlwrap-0.37.ebuild:
   Stable on amd64 wrt bug #387159
