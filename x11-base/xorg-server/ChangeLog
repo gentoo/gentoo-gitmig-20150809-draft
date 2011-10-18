@@ -1,6 +1,15 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.617 2011/10/03 18:00:09 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.618 2011/10/18 16:26:04 chithanh Exp $
+
+*xorg-server-1.11.1-r1 (18 Oct 2011)
+*xorg-server-1.10.4-r1 (18 Oct 2011)
+*xorg-server-1.9.5-r1 (18 Oct 2011)
+
+  18 Oct 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xorg-server-1.9.5-r1.ebuild, +xorg-server-1.10.4-r1.ebuild,
+  +xorg-server-1.11.1-r1.ebuild, +files/xorg-cve-2011-4028+4029.patch:
+  Add patch for security bug #387069.
 
   03 Oct 2011; Joseph Jezak <josejx@gentoo.org> xorg-server-1.10.4.ebuild:
   Marked ppc ppc64 stable for bug #380421.
