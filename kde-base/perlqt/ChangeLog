@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/perlqt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/ChangeLog,v 1.6 2011/10/15 17:26:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/perlqt/ChangeLog,v 1.7 2011/10/18 23:09:59 dilfridge Exp $
+
+*perlqt-4.7.2-r1 (18 Oct 2011)
+*perlqt-4.7.1-r1 (18 Oct 2011)
+
+  18 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +perlqt-4.7.1-r1.ebuild, +perlqt-4.7.2-r1.ebuild,
+  +files/perlqt-4.7.2-vendor.patch:
+  vendor-perl, not site-perl, bug 387477
 
   15 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org> -perlqt-4.7.0.ebuild:
   Drop KDE 4.7.0
