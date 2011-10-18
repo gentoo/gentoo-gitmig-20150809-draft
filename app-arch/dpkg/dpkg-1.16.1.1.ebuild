@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.16.1.1.ebuild,v 1.1 2011/10/16 13:34:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.16.1.1.ebuild,v 1.2 2011/10/18 21:23:18 jer Exp $
 
 EAPI=3
 
@@ -30,6 +30,7 @@ RDEPEND=">=dev-lang/perl-5.6.0
 	zlib? ( >=sys-libs/zlib-1.1.4 )
 	bzip2? ( app-arch/bzip2 )"
 DEPEND="${RDEPEND}
+	sys-devel/flex
 	dev-util/pkgconfig
 	nls? ( app-text/po4a )
 	test? (
