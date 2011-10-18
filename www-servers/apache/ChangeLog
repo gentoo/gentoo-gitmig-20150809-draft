@@ -1,6 +1,17 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.166 2011/09/27 18:24:48 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.167 2011/10/18 06:43:56 pva Exp $
+
+*apache-2.2.21-r1 (18 Oct 2011)
+
+  18 Oct 2011; Peter Volkov <pva@gentoo.org> +apache-2.2.21-r1.ebuild:
+  Fix Reverse Proxy Mode Security Bypass (CVE-2011-3368), bug #385859 by
+  Agostino Sarubbo. Init script fixes: 1. use extra_{,started}commands, bug
+  #385637 by Martin von Gagern; 2. check config during restart, bug #384997 wrt
+  Christian Ruppert (idl0r); 3. don't use pidof to check for running instances
+  to make it more ConTainer friendly, bug #384267 by Stef Simoens. Updated
+  defaults in 00_default_settings.conf to better match upstream intentions, bug
+  #387157 by Steve Dibb.
 
   27 Sep 2011; Kacper Kowalik <xarthisius@gentoo.org> apache-2.2.21.ebuild:
   ppc/ppc64 stable wrt #382971
