@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/libidn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.145 2011/08/01 20:58:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.146 2011/10/18 20:24:00 jer Exp $
+
+*libidn-1.22-r1 (18 Oct 2011)
+
+  18 Oct 2011; Jeroen Roovers <jer@gentoo.org> +libidn-1.22-r1.ebuild:
+  Remove .la file when USE=-static-libs by Hans (bug #386929).
 
   01 Aug 2011; Jeroen Roovers <jer@gentoo.org> -libidn-1.19.ebuild,
   -libidn-1.20.ebuild, -libidn-1.21.ebuild:
