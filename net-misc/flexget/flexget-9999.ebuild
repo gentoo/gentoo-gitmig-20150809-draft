@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.2 2011/08/31 06:46:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/flexget-9999.ebuild,v 1.3 2011/10/18 03:24:39 floppym Exp $
 
-EAPI="3"
+EAPI=4
 
 PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
@@ -19,9 +19,9 @@ ESVN_REPO_URI="http://svn.flexget.com/trunk"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS=""
-IUSE="test"
+IUSE="deluge test transmission"
 
-RDEPEND="dev-python/setuptools
+RDEPEND="
 	dev-python/feedparser
 	>=dev-python/sqlalchemy-0.7
 	dev-python/pyyaml
@@ -32,10 +32,18 @@ RDEPEND="dev-python/setuptools
 	dev-python/pynzb
 	dev-python/progressbar
 	dev-python/flask
-	dev-python/cherrypy"
-DEPEND="${RDEPEND}
+	dev-python/cherrypy
+"
+DEPEND="
+	dev-python/setuptools
 	dev-python/paver
-	test? ( dev-python/nose )"
+	test? ( ${RDEPEND} dev-python/nose )
+"
+RDEPEND+="
+	dev-python/setuptools
+	deluge? ( net-p2p/deluge )
+	transmission? ( dev-python/transmissionrpc )
+"
 
 src_prepare() {
 	# Prevent setup from grabbing nose from pypi

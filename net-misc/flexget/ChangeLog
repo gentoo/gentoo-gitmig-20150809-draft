@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/flexget
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.2 2011/09/26 03:56:13 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/flexget/ChangeLog,v 1.3 2011/10/18 03:24:39 floppym Exp $
+
+*flexget-1.0_beta2435 (18 Oct 2011)
+
+  18 Oct 2011; Mike Gilbert <floppym@gentoo.org> -flexget-1.0_beta2323.ebuild,
+  -flexget-1.0_beta2385.ebuild, +flexget-1.0_beta2435.ebuild,
+  flexget-9999.ebuild, metadata.xml:
+  Version bump. Set EAPI=4. Add deps for deluge and transmission.
 
 *flexget-1.0_beta2385 (26 Sep 2011)
 
