@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.7.1-r1.ebuild,v 1.2 2011/10/18 07:28:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.7.1-r1.ebuild,v 1.3 2011/10/18 07:30:00 scarabeus Exp $
 
 EAPI=4
 
@@ -63,6 +63,7 @@ DOCS=(README.txt)
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {

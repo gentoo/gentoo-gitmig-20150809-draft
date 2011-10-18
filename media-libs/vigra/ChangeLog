@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vigra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.39 2011/10/18 07:28:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.40 2011/10/18 07:30:00 scarabeus Exp $
+
+  18 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> vigra-1.7.1-r1.ebuild:
+  Forgot on pkg_setup.
 
   18 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> vigra-1.7.1-r1.ebuild:
   Use python eclass now that it supports eapi4.
