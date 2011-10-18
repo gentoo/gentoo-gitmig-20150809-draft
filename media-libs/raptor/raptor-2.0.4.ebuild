@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-2.0.4.ebuild,v 1.6 2011/10/17 20:21:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-2.0.4.ebuild,v 1.7 2011/10/18 16:51:50 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils libtool
@@ -13,7 +13,7 @@ SRC_URI="http://download.librdf.org/source/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0 GPL-2 LGPL-2.1"
 SLOT="2"
-KEYWORDS="amd64 arm hppa ~ppc ~ppc64 x86 ~x86-fbsd ~x64-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 arm hppa ppc ppc64 x86 ~x86-fbsd ~x64-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="+curl debug json static-libs unicode +xml"
 
 RDEPEND="unicode? ( dev-libs/glib:2 )
@@ -24,8 +24,9 @@ RDEPEND="unicode? ( dev-libs/glib:2 )
 	dev-libs/libxslt
 	!<media-libs/raptor-1.4.21-r1"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	sys-devel/flex
-	dev-util/pkgconfig"
+	dev-util/gtk-doc-am" # remove once eautoreconf is gone
 
 S=${WORKDIR}/${MY_P}
 
