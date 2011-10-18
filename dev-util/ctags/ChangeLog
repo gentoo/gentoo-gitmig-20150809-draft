@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ctags
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.76 2011/10/18 06:37:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.77 2011/10/18 21:10:58 jer Exp $
+
+  18 Oct 2011; Jeroen Roovers <jer@gentoo.org> ctags-5.8.ebuild:
+  Stable for HPPA (bug #387175).
 
   18 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> ctags-5.8.ebuild:
   x86 stable wrt bug #387175
