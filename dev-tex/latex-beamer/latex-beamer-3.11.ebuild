@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/latex-beamer-3.11.ebuild,v 1.1 2011/09/18 21:54:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/latex-beamer-3.11.ebuild,v 1.2 2011/10/18 17:38:13 radhermit Exp $
 
 EAPI=4
 
-inherit versionator latex-package
+inherit latex-package
 
 DESCRIPTION="LaTeX class for creating presentations using a video projector"
 HOMEPAGE="http://bitbucket.org/rivanvx/beamer/wiki/Home"
