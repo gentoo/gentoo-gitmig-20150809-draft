@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.142 2011/10/09 19:29:01 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.143 2011/10/18 22:48:56 dilfridge Exp $
+
+  18 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Add kdepim-l10n to kde-4.7 mask
 
   09 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> package.mask,
   package.use.mask:

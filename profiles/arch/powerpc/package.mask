@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.45 2011/10/09 19:29:01 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.46 2011/10/18 22:48:56 dilfridge Exp $
 
 # Alexey Shvetsov <alexxy@gentoo.org> (27 Jul 2011)
 # Mask KDE SC 4.7.0 per bug #376613
@@ -384,6 +384,7 @@
 ~kde-base/kdepasswd-4.7.1
 ~kde-base/kdepim-common-libs-4.7.1
 ~kde-base/kdepim-icons-4.7.1
+~kde-base/kdepim-l10n-4.7.1
 ~kde-base/kdepim-kresources-4.7.1
 ~kde-base/kdepimlibs-4.7.1
 ~kde-base/kdepim-meta-4.7.1
@@ -672,6 +673,7 @@
 ~kde-base/kdepasswd-4.7.2
 ~kde-base/kdepim-common-libs-4.7.2
 ~kde-base/kdepim-icons-4.7.2
+~kde-base/kdepim-l10n-4.7.2
 ~kde-base/kdepim-kresources-4.7.2
 ~kde-base/kdepimlibs-4.7.2
 ~kde-base/kdepim-meta-4.7.2
