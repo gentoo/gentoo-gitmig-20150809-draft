@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/synaptiks-0.8.0.ebuild,v 1.1 2011/10/16 10:25:55 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/synaptiks-0.8.0.ebuild,v 1.2 2011/10/18 22:12:54 dilfridge Exp $
 
 EAPI=3
 PYTHON_DEPEND="2:2.6"
+RESTRICT_PYTHON_ABIS="3.*"
 inherit distutils
 
 DESCRIPTION="Touchpad configuration and management tool for KDE"
