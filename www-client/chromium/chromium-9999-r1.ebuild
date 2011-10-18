@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.60 2011/10/15 03:12:32 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.61 2011/10/18 08:10:30 phajdan.jr Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="2:2.6"
 
 inherit eutils fdo-mime flag-o-matic gnome2-utils linux-info multilib \
@@ -150,6 +150,53 @@ get_installed_v8_version() {
 	best_version dev-lang/v8 | sed -e 's@dev-lang/v8-@@g'
 }
 
+pkg_pretend() {
+	if [[ "${MERGE_TYPE}" == "source" || "${MERGE_TYPE}" == "binary" ]]; then
+		# Fail if the kernel doesn't support features needed for sandboxing,
+		# bug #363907.
+		ERROR_PID_NS="PID_NS is required for sandbox to work"
+		ERROR_NET_NS="NET_NS is required for sandbox to work"
+		CONFIG_CHECK="PID_NS NET_NS"
+		check_extra_config
+	fi
+}
+
+if ! has chromium-pkg_die ${EBUILD_DEATH_HOOKS}; then
+	EBUILD_DEATH_HOOKS+=" chromium-pkg_die";
+fi
+
+chromium-pkg_die() {
+	if [[ "${EBUILD_PHASE}" != "compile" ]]; then
+		return
+	fi
+
+	# Prevent user problems like bug #348235.
+	eshopts_push -s extglob
+	if is-flagq '-g?(gdb)?([1-9])'; then
+		ewarn
+		ewarn "You have enabled debug info (i.e. -g or -ggdb in your CFLAGS/CXXFLAGS)."
+		ewarn "Please try removing -g{,gdb} before reporting a bug."
+		ewarn
+	fi
+	eshopts_pop
+
+	# ccache often causes bogus compile failures, especially when the cache gets
+	# corrupted.
+	if has ccache ${FEATURES}; then
+		ewarn
+		ewarn "You have enabled ccache. Please try disabling ccache"
+		ewarn "before reporting a bug."
+		ewarn
+	fi
+
+	# If the system doesn't have enough memory, the compilation is known to
+	# fail. Print info about memory to recognize this condition.
+	einfo
+	einfo "$(grep MemTotal /proc/meminfo)"
+	einfo "$(grep SwapTotal /proc/meminfo)"
+	einfo
+}
+
 pkg_setup() {
 	SUFFIX="-${SLOT}"
 	CHROMIUM_HOME="/usr/$(get_libdir)/chromium-browser${SUFFIX}"
@@ -160,20 +207,6 @@ pkg_setup() {
 	# Make sure the build system will use the right python, bug #344367.
 	python_set_active_version 2
 	python_pkg_setup
-
-	# Prevent user problems like bug #348235.
-	eshopts_push -s extglob
-	if is-flagq '-g?(gdb)?([1-9])'; then
-		ewarn "You have enabled debug info (probably have -g or -ggdb in your \$C{,XX}FLAGS)."
-		ewarn "You may experience really long compilation times and/or increased memory usage."
-		ewarn "If compilation fails, please try removing -g{,gdb} before reporting a bug."
-	fi
-	eshopts_pop
-
-	# Warn if the kernel doesn't support features useful for sandboxing,
-	# bug #363907.
-	CONFIG_CHECK="~PID_NS ~NET_NS"
-	check_extra_config
 
 	if use bindist; then
 		elog "bindist enabled: H.264 video support will be disabled."
