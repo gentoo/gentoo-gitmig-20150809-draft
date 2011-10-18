@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/soprano
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.79 2011/10/17 14:27:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.80 2011/10/18 16:59:50 ssuominen Exp $
+
+  18 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> soprano-2.7.0.ebuild:
+  ppc/ppc64 stable wrt #382641
 
   17 Oct 2011; Jeroen Roovers <jer@gentoo.org> soprano-2.4.4.ebuild,
   soprano-2.5.3.ebuild, soprano-2.6.0.ebuild, soprano-2.6.51.ebuild,
