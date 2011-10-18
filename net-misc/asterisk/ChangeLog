@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.351 2011/10/13 22:10:48 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.352 2011/10/18 10:00:46 chainsaw Exp $
+
+*asterisk-1.8.7.1 (18 Oct 2011)
+
+  18 Oct 2011; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.7.0-r1.ebuild,
+  +asterisk-1.8.7.1.ebuild:
+  Update to fix remote crash vulnerability (caused by unitialised variable) in
+  SIP channel driver, remove vulnerable versions except last stable. Advisories
+  CVE-2011-4063 & AST-2011-012.
 
   13 Oct 2011; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.5.0-r3.ebuild,
   asterisk-1.8.6.0.ebuild, -asterisk-1.8.7.0.ebuild:
