@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/talloc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.28 2011/09/27 20:08:18 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/ChangeLog,v 1.29 2011/10/18 21:59:36 vostorga Exp $
+
+  18 Oct 2011; Víctor Ostorga <vostorga@gentoo.org> talloc-2.0.7.ebuild:
+  Adding block on <sys-libs/talloc-2.0.5 to DEPEND, bug 387509
 
 *talloc-2.0.7 (27 Sep 2011)
 

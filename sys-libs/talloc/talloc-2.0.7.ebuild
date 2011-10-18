@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/talloc-2.0.7.ebuild,v 1.1 2011/09/27 20:08:18 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/talloc-2.0.7.ebuild,v 1.2 2011/10/18 21:59:36 vostorga Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2:2.6"
@@ -16,7 +16,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="compat python"
 
 RDEPEND="!!<sys-libs/talloc-2.0.5"
-DEPEND="dev-libs/libxslt
+DEPEND="${RDEPEND}
+	dev-libs/libxslt
 	|| ( dev-lang/python:2.7[threads] dev-lang/python:2.6[threads] )"
 
 WAF_BINARY="${S}/buildtools/bin/waf"
