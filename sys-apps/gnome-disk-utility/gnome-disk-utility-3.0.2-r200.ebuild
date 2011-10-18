@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/gnome-disk-utility-3.0.2-r200.ebuild,v 1.1 2011/10/04 20:59:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gnome-disk-utility/gnome-disk-utility-3.0.2-r200.ebuild,v 1.2 2011/10/18 21:36:54 ssuominen Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -56,6 +56,10 @@ pkg_setup() {
 }
 
 src_prepare() {
+	local f=data/gdu-notification-daemon.desktop.in.in.in
+	sed -i -e '/^OnlyShowIn/d' ${f} || die
+	echo 'NotShowIn=KDE;' >> ${f}
+
 	sed -e '/printf/s:nautilus:xdg-open:' \
 		-i src/palimpsest/gdu-section-volumes.c || die "#350919"
 
