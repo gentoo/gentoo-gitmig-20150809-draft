@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/transmissionrpc/transmissionrpc-9999.ebuild,v 1.1 2011/08/29 00:37:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/transmissionrpc/transmissionrpc-9999.ebuild,v 1.2 2011/10/18 02:47:39 floppym Exp $
 
-EAPI=3
+EAPI=4
 
 PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS=1
