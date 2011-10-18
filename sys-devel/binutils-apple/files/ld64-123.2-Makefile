@@ -18,14 +18,17 @@ LD64LIBS=ld/parsers/archive_file.o ld/parsers/macho_relocatable_file.o \
 		 ld/Options.o ld/Resolver.o ld/debugline.o ld/ld.o
 
 ifeq ($(LTO),1)
-LD64LIBS += ld/parsers/lto_file.o
 CPPFLAGS += "-DLTO"
+LTO_OBJ = ld/parsers/lto_file.o
+LIBLTO = -lLTO
 else
 CPPFLAGS += "-ULTO"
+LTO_OBJ =
+LIBLTO =
 endif
 
-ld64: libprunetrie.a $(LD64LIBS) version.o
-	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $^
+ld64: libprunetrie.a version.o $(LTO_OBJ)
+	$(CXX) $(CXXFLAGS) $(LDFLAGS) $(LIBLTO) -o $@ $^
 
 rebase: other/rebase.o
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $^
@@ -36,8 +39,8 @@ dyldinfo: other/dyldinfo.o
 unwinddump: other/unwinddump.o
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $^
 
-ObjectDump: other/ObjectDump.o ld/debugline.o ld/parsers/macho_relocatable_file.o
-	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $^
+ObjectDump: other/ObjectDump.o ld/debugline.o ld/parsers/macho_relocatable_file.o $(LTO_OBJ)
+	$(CXX) $(CXXFLAGS) $(LDFLAGS) $(LIBLTO) -o $@ $^
 
 machocheck: other/machochecker.o
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $^
