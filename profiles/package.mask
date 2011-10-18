@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13145 2011/10/18 18:50:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13146 2011/10/18 18:51:08 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -32,7 +32,7 @@
 #--- END OF EXAMPLES ---
 
 # Jeroen Roovers <jer@gentoo.org> (18 Oct 2011)
-# Masked for removal on 18 Oct 2011
+# Masked for removal on 18 Nov 2011
 # https://bugs.gentoo.org/377695
 sys-apps/lsparisc
 
