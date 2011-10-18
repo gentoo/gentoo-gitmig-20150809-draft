@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.14.ebuild,v 1.1 2011/10/13 16:12:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-8.14.ebuild,v 1.2 2011/10/18 22:47:25 vapier Exp $
 
 EAPI="3"
 
@@ -45,9 +45,6 @@ src_prepare() {
 		epatch
 	fi
 
-	# Avoid perl dep for compiled in dircolors default #348642
-	has_version dev-lang/perl || touch src/dircolors.h
-
 	# Since we've patched many .c files, the make process will try to
 	# re-build the manpages by running `./bin --help`.  When doing a
 	# cross-compile, we can't do that since 'bin' isn't a native bin.
@@ -55,6 +52,12 @@ src_prepare() {
 	# so let's just update the timestamps and skip the help2man step.
 	set -- man/*.x
 	tc-is-cross-compiler && touch ${@/%x/1}
+
+	# Avoid perl dep for compiled in dircolors default #348642
+	if ! has_version dev-lang/perl ; then
+		touch src/dircolors.h
+		touch ${@/%x/1}
+	fi
 }
 
 src_configure() {
