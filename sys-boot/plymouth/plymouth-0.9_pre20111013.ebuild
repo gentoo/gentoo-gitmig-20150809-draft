@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.9_pre20111013.ebuild,v 1.1 2011/10/18 09:57:50 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.9_pre20111013.ebuild,v 1.2 2011/10/18 17:54:55 aidecoe Exp $
 
 EAPI=4
 
@@ -60,13 +60,15 @@ src_install() {
 	autotools-utils_src_install
 
 	if use static-libs; then
-		mv "${D}/$(get_libdir)"/libply{,-splash-core}.{a,la} \
-			"${D}/usr/$(get_libdir)"/ || die 'mv *.{a,la} files failed'
+		mv "${D}/$(get_libdir)"/libply{,-splash-core}.a \
+			"${D}/usr/$(get_libdir)"/ || die 'mv *.a files failed'
 		gen_usr_ldscript libply.so libply-splash-core.so
 	else
-		einfo "Removing /usr/$(get_libdir)/plymouth/*.la"
-		rm "${D}/usr/$(get_libdir)"/plymouth/{*.la,renderers/*.la} \
-			|| die 'rm *.la'
+		local la
+		for la in "${D}/usr/$(get_libdir)"/plymouth/{*.la,renderers/*.la}; do
+			einfo "Removing left ${la#${D}}"
+			rm "${la}" || die "rm '${la}'"
+		done
 	fi
 
 	insinto /usr/share/plymouth
