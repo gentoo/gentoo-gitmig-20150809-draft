@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/lucene
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.80 2011/08/28 16:17:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.81 2011/10/18 23:18:57 fordfrog Exp $
+
+*lucene-2.1.0-r2 (18 Oct 2011)
+
+  18 Oct 2011; Miroslav Šulc <fordfrog@gentoo.org> +lucene-2.1.0-r2.ebuild:
+  Contains generics so must use at least JDK 1.5
 
   28 Aug 2011; Fabian Groffen <grobian@gentoo.org> lucene-2.1.0-r1.ebuild:
   Marked ~x64-macos
