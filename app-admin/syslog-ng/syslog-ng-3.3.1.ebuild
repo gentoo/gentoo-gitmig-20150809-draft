@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.3.1.ebuild,v 1.3 2011/10/07 16:40:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.3.1.ebuild,v 1.4 2011/10/18 20:21:58 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools fixheadtails eutils multilib
@@ -98,7 +98,7 @@ src_install() {
 		newins "${FILESDIR}/syslog-ng.logrotate" syslog-ng || die
 	fi
 
-	newinitd "${FILESDIR}/syslog-ng.rc6.${PV%%.*}" syslog-ng || die
+	newinitd "${FILESDIR}/syslog-ng.rc6.${PV%.*}" syslog-ng || die
 	newconfd "${FILESDIR}/syslog-ng.confd" syslog-ng || die
 	keepdir /etc/syslog-ng/patterndb.d
 	find "${D}" -type f -name '*.la' -exec rm {} + || die
