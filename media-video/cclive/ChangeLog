@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cclive
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/ChangeLog,v 1.36 2011/10/10 07:45:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/ChangeLog,v 1.37 2011/10/18 23:41:23 radhermit Exp $
+
+  18 Oct 2011; Tim Harder <radhermit@gentoo.org> +cclive-0.7.6.ebuild:
+  Re-add as a stable target with media-libs/quvi-0.2.19.
 
   10 Oct 2011; Tim Harder <radhermit@gentoo.org> -cclive-0.7.4.ebuild,
   -cclive-0.7.4.1.ebuild, -cclive-0.7.5.ebuild, -cclive-0.7.6.ebuild:
