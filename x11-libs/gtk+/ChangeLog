@@ -1,6 +1,24 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.536 2011/10/18 18:43:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.537 2011/10/19 03:48:07 tetromino Exp $
+
+*gtk+-3.2.1 (19 Oct 2011)
+
+  19 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> +gtk+-3.2.1.ebuild,
+  +files/gtk+-3.2.1-failing-tests.patch, +files/gtk+-3.2.1-selector.errors,
+  metadata.xml:
+  Add gtk+-3.2.1 from the gnome overlay. Disable failing treeview scrolling
+  tests (see bug #384855 and https://bugzilla.gnome.org/show_bug.cgi?id=660931),
+  add missing selectors.errors file (needed for the css parser test),
+  completely skip reftests (many of them fail when building from portage, but
+  strangely enough succeed when building from my home directory; need to
+  investigate why), and disable a11y picker test (GtkFileChooserButton look
+  depends on list of mounted filesystems).
+
+  Notable changes: *lots* (better theming, including a new CSS parser, and dark
+  theme variants; better XInput2 support; gail is no longer a module; tree
+  model improvements; more widgets support height-for-width;
+  GtkFontChooserDialog, GtkLockButton, GtkOverlay).
 
 *gtk+-2.24.7 (18 Oct 2011)
 
