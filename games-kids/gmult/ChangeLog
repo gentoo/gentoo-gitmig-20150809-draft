@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/gmult
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gmult/ChangeLog,v 1.13 2011/03/29 07:54:52 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gmult/ChangeLog,v 1.14 2011/10/19 21:14:37 mr_bones_ Exp $
+
+  19 Oct 2011; Michael Sterrett <mr_bones_@gentoo.org> gmult-5.3.ebuild:
+  EAPI=2; fix up desktop file
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org> gmult-5.3.ebuild:
   Fixed slot deps
