@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils-apple
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.22 2011/10/18 16:43:44 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.23 2011/10/19 06:45:18 grobian Exp $
+
+  19 Oct 2011; Fabian Groffen <grobian@gentoo.org> files/ld64-123.2-Makefile:
+  Fix compilation of ld64, add back wrongly dropped LD64LIBS, thanks Charles
+  Davis (again).
 
   18 Oct 2011; Fabian Groffen <grobian@gentoo.org> files/ld64-123.2-Makefile:
   Fix USE=lto compilation thanks to patch from Charles Davis in bug #387481

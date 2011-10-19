@@ -27,7 +27,7 @@ LTO_OBJ =
 LIBLTO =
 endif
 
-ld64: libprunetrie.a version.o $(LTO_OBJ)
+ld64: libprunetrie.a version.o $(LD64LIBS) $(LTO_OBJ)
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) $(LIBLTO) -o $@ $^
 
 rebase: other/rebase.o
