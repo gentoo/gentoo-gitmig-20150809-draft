@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13149 2011/10/19 02:15:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13150 2011/10/19 13:29:41 fordfrog Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,23 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Miroslav Šulc <fordfrog@gentoo.org> (19 Oct 2011)
+# Masked for removal on 19 Nov 2011
+# Replaced by dev-java/jnlp-api
+dev-java/netx
+
+# Miroslav Šulc <fordfrog@gentoo.org> (19 Oct 2011)
+# Masked for removal on 19 Nov 2011
+# Bug https://bugs.gentoo.org/show_bug.cgi?id=377967
+# Replaced by dev-java/jnlp-api
+dev-java/jnlp-bin
+
+# Miroslav Šulc <fordfrog@gentoo.org> (19 Oct 2011)
+# Masked for removal on 19 Nov 2011
+# This package is obsolete and depends on dev-java/jnlp-bin
+# (bug https://bugs.gentoo.org/show_bug.cgi?id=377967)
+app-misc/openjnlp
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (18 Oct 2011)
 # Gtk+-3.2, friends, and dependencies; will be unmasked soon™
