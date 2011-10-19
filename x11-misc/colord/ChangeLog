@@ -1,6 +1,18 @@
 # ChangeLog for x11-misc/colord
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.3 2011/10/05 13:19:17 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/ChangeLog,v 1.4 2011/10/19 05:03:38 tetromino Exp $
+
+*colord-0.1.13 (19 Oct 2011)
+
+  19 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +colord-0.1.13.ebuild,
+  +files/colord-0.1.13-use-dbus-security-for-permissions.patch:
+  Add colord-0.1.13 from the gnome overlay; fixes bug #385677.
+  Following Ubuntu's example, we now disable polkit support, and switch to dbus
+  security instead. This is necessary to allow users to access colord when it's
+  running as a non-root user; see
+  https://bugs.launchpad.net/ubuntu/+source/colord/+bug/837851 for a
+  discussion. This change fixes polkit-related errors during gnome-3.2 startup.
 
   05 Oct 2011; Nirbheek Chauhan <nirbheek@gentoo.org> colord-0.1.11.ebuild,
   colord-0.1.12.ebuild:
