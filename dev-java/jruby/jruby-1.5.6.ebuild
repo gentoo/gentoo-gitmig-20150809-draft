@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.5.6.ebuild,v 1.2 2011/06/14 18:59:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.5.6.ebuild,v 1.3 2011/10/19 01:25:10 fordfrog Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source test"
@@ -38,7 +38,7 @@ RDEPEND="${CDEPEND}
 	>=virtual/jre-1.6"
 
 DEPEND="${CDEPEND}
-	>=virtual/jdk-1.6
+	virtual/jdk:1.6
 	test? (
 		dev-java/ant-junit4:0
 		dev-java/ant-trax:0
