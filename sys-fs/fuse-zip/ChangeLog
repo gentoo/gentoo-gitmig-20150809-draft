@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/fuse-zip
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-zip/ChangeLog,v 1.4 2010/12/07 18:39:30 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse-zip/ChangeLog,v 1.5 2011/10/19 20:05:18 hwoarang Exp $
+
+  19 Oct 2011; Markos Chandras <hwoarang@gentoo.org> fuse-zip-0.2.13.ebuild,
+  +files/libzip-fix-0.10.patch:
+  Fix building with new gcc and libzip. Bug #364747. Thanks to Billy Holmes
+  <billy@gonoph.net>
 
   07 Dec 2010; Markos Chandras <hwoarang@gentoo.org> fuse-zip-0.2.13.ebuild:
   Fix parallel build warnings. Thanks to Diego Elio Pettenò
