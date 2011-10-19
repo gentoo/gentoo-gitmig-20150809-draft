@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/alacarte
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.108 2011/03/22 19:51:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.109 2011/10/19 22:50:54 tetromino Exp $
+
+  19 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  alacarte-0.12.4.ebuild, alacarte-0.13.2.ebuild:
+  Depend on correct slot of pygobject. Also, depend on slot 0 of gnome-menus in
+  preparation for gnome-menus:3 arrival from the gnome overlay.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> alacarte-0.13.2.ebuild:
   Marking alacarte-0.13.2 ppc stable for bug 353436

@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.12.4.ebuild,v 1.7 2010/10/09 10:33:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/alacarte-0.12.4.ebuild,v 1.8 2011/10/19 22:50:54 tetromino Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -16,9 +16,9 @@ IUSE=""
 SLOT=0
 
 common_depends=">=dev-lang/python-2.4
-	>=dev-python/pygobject-2.15.1
+	>=dev-python/pygobject-2.15.1:2
 	>=dev-python/pygtk-2.13
-	>=gnome-base/gnome-menus-2.27.92[python]"
+	>=gnome-base/gnome-menus-2.27.92:0[python]"
 
 RDEPEND="${common_depends}
 	>=gnome-base/gnome-panel-2.16"
