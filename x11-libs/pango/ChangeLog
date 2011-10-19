@@ -1,6 +1,17 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.328 2011/07/11 00:05:28 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.329 2011/10/19 01:59:34 tetromino Exp $
+
+*pango-1.29.4 (19 Oct 2011)
+
+  19 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +pango-1.29.4.ebuild:
+  Add pango-1.29.4 (supposedly stable-ish, despite the odd minor version) from
+  the gnome overlay. Includes fix for bug #384671 (pango-querymodules usage
+  when
+  ROOT != /), thanks to vapier.
+
+  Notable changes: introspection improvements.
 
   11 Jul 2011; Matt Turner <mattst88@gentoo.org> pango-1.28.4.ebuild:
   Added ~mips, bug 364693
