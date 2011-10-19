@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.216 2011/10/18 06:36:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.217 2011/10/19 00:23:25 jer Exp $
+
+  19 Oct 2011; Jeroen Roovers <jer@gentoo.org> rrdtool-1.4.5-r1.ebuild:
+  Stable for HPPA (bug #387171).
 
   18 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> rrdtool-1.4.5-r1.ebuild:
   x86 stable wrt bug #387171
