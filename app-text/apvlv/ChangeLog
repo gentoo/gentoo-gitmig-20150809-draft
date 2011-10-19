@@ -1,6 +1,12 @@
 # ChangeLog for app-text/apvlv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/apvlv/ChangeLog,v 1.14 2011/07/14 09:29:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/apvlv/ChangeLog,v 1.15 2011/10/19 13:52:55 ssuominen Exp $
+
+*apvlv-0.1.2-r1 (19 Oct 2011)
+
+  19 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> +apvlv-0.1.2-r1.ebuild,
+  +files/apvlv-0.1.2-poppler-0.18.patch:
+  Fix building with app-text/poppler >= 0.18 wrt #385057 by Diego Elio Pettenò
 
 *apvlv-0.1.2 (14 Jul 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/apvlv/apvlv-0.1.2.ebuild,v 1.1 2011/07/14 09:29:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/apvlv/apvlv-0.1.2.ebuild,v 1.2 2011/10/19 13:52:55 ssuominen Exp $
 
 EAPI=4
 
@@ -18,6 +18,7 @@ IUSE="debug djvu"
 
 RDEPEND=">=x11-libs/gtk+-2.10.4:2
 	>=app-text/poppler-0.12.3-r3[cairo]
+	<app-text/poppler-0.18
 	djvu? ( app-text/djvu )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
