@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.175 2011/10/19 11:21:07 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.176 2011/10/19 11:57:10 jer Exp $
+
+  19 Oct 2011; Jeroen Roovers <jer@gentoo.org> apr-1.4.5.ebuild:
+  Stable for HPPA (bug #385859).
 
   19 Oct 2011; Tony Vroon <chainsaw@gentoo.org> apr-1.4.5.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
