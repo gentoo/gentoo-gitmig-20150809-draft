@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.798 2011/10/15 17:30:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.799 2011/10/19 21:43:32 dilfridge Exp $
+
+  19 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdelibs-4.7.1-r3.ebuild, kdelibs-4.7.2.ebuild:
+  Add katepart in PDEPEND, fixes e.g. bug 387431
 
   15 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -kdelibs-4.6.3-r2.ebuild, -kdelibs-4.6.5-r1.ebuild, -kdelibs-4.7.1-r1.ebuild,

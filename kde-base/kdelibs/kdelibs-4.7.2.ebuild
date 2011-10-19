@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.7.2.ebuild,v 1.1 2011/10/06 18:10:59 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.7.2.ebuild,v 1.2 2011/10/19 21:43:32 dilfridge Exp $
 
 EAPI=4
 
@@ -106,6 +106,7 @@ RDEPEND="${COMMONDEPEND}
 	)
 "
 PDEPEND="
+	$(add_kdebase_dep katepart)
 	|| ( ( $(add_kdebase_dep kfmclient) ) x11-misc/xdg-utils )
 	handbook? ( $(add_kdebase_dep khelpcenter) )
 	policykit? (
