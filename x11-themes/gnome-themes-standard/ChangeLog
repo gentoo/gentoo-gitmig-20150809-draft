@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/gnome-themes-standard
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/ChangeLog,v 1.5 2011/10/16 17:47:21 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/ChangeLog,v 1.6 2011/10/19 04:25:39 tetromino Exp $
+
+*gnome-themes-standard-3.2.1 (19 Oct 2011)
+
+  19 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-themes-standard-3.2.1.ebuild:
+  Add gnome-themes-standard-3.2.1 from the gnome overlay.
+
+  Notable changes: looks better and now includes a dark variant.
 
   16 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gnome-themes-standard-3.0.2.ebuild:
