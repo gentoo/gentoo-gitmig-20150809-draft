@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13151 2011/10/19 15:45:06 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13152 2011/10/19 16:27:44 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -111,10 +111,6 @@ games-roguelike/fargoal
 # Mask development releases
 =www-apps/wordpress-3.3*
 
-# Samuli Suominen <ssuominen@gentoo.org> (10 Oct 2011)
-# Use media-libs/tiff:3 instead.
-media-libs/tiff-compat
-
 # Anthony G. Basile <blueness@gentoo.org> (08 Oct 2011)
 # Masked while testing potentially dangerous utility
 dev-python/pypax
@@ -124,12 +120,6 @@ dev-python/pypax
 # Removal in 30 days
 games-action/xpilot-ng
 games-puzzle/londonlaw
-
-# Samuli Suominen <ssuominen@gentoo.org> (06 Oct 2011)
-# Part of wxGTK-2.6 removal wrt bug #330683
-# Removal in 14 days
-=dev-games/crystalspace-1.2*
-=dev-games/cel-1.2*
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (06 Oct 2011)
 # Extremely experimental. Masked while it's being tested.
@@ -285,11 +275,6 @@ www-plugins/weave
 # http://blog.flameeyes.eu/2010/08/20/there-s-something-about-webmin
 # must go away (if they haven't already) before unmasking webmin
 app-admin/webmin
-
-# Samuli Suominen <ssuominen@gentoo.org> (15 Sep 2011)
-# Uncompatible with wxpython 2.8, bugs 201314 and 330683
-# Removal in 30 days
-net-ftp/ftpcube
 
 # Mike Gilbert <floppym@gentoo.org> (15 Sep 2011)
 # Arfrever Frehtes Taifersar Arahesis <arfrever.fta@gmail.com> (15 Sep 2011)
