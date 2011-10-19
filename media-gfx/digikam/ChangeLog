@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.199 2011/10/03 20:38:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.200 2011/10/19 19:11:12 dilfridge Exp $
+
+  19 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  digikam-2.1.0-r2.ebuild, digikam-2.2.0.ebuild:
+  Does not work with atlas, bug 386783
 
 *digikam-2.2.0 (03 Oct 2011)
 
