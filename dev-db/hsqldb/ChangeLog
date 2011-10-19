@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/hsqldb
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.62 2010/10/17 12:23:18 caster Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/ChangeLog,v 1.63 2011/10/19 01:58:38 fordfrog Exp $
+
+  19 Oct 2011; Miroslav Šulc <fordfrog@gentoo.org> hsqldb-1.8.1.2-r1.ebuild:
+  Not compatible with JDBC 4.1 so restricting compilation to JDK 6 (fixes bug
+  #384161)
 
   17 Oct 2010; Vlastimil Babka <caster@gentoo.org> -hsqldb-1.8.0.10.ebuild,
   -files/bundle-all-tools.patch:

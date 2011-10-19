@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.8.1.2-r1.ebuild,v 1.5 2010/10/14 16:52:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hsqldb/hsqldb-1.8.1.2-r1.ebuild,v 1.6 2011/10/19 01:58:38 fordfrog Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source test"
@@ -21,7 +21,7 @@ IUSE=""
 CDEPEND="java-virtuals/servlet-api:2.3"
 RDEPEND=">=virtual/jre-1.6
 	${CDEPEND}"
-DEPEND=">=virtual/jdk-1.6
+DEPEND="virtual/jdk:1.6
 	test? ( dev-java/junit:0 )
 	app-arch/unzip
 	${CDEPEND}"
