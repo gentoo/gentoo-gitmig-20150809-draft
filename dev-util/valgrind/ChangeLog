@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.125 2011/08/09 13:30:13 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.126 2011/10/19 17:24:51 vapier Exp $
+
+  19 Oct 2011; Mike Frysinger <vapier@gentoo.org> valgrind-3.6.1-r2.ebuild:
+  Add arm love #376533 by Nick Bowler.
 
 *valgrind-3.6.1-r2 (09 Aug 2011)
 
