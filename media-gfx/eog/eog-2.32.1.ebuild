@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.32.1.ebuild,v 1.7 2011/03/22 19:35:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.32.1.ebuild,v 1.8 2011/10/19 21:28:27 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -35,7 +35,7 @@ RDEPEND=">=x11-libs/gtk+-2.18:2
 	jpeg? ( virtual/jpeg:0 )
 	lcms? ( =media-libs/lcms-1* )
 	python? (
-		>=dev-python/pygobject-2.15.1
+		>=dev-python/pygobject-2.15.1:2
 		>=dev-python/pygtk-2.13 )
 	svg? ( >=gnome-base/librsvg-2.26 )
 	xmp? ( >=media-libs/exempi-2 )"
