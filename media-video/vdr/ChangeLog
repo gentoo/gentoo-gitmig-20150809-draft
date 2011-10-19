@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vdr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.144 2011/10/17 19:22:17 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.145 2011/10/19 17:14:11 hd_brummy Exp $
+
+  19 Oct 2011; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-1.6.0_p2-r6.ebuild:
+  changed from media-tv/linuxtv-dvb-headers to
+  sys-kernel/linux-headers-2.6.38+, to make it more clear about the really
+  needed depends
 
   17 Oct 2011; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-1.6.0_p2-r6.ebuild:
   stable amd64, depend on stable linux-headers-2.6.38+

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r6.ebuild,v 1.2 2011/10/17 19:22:17 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r6.ebuild,v 1.3 2011/10/19 17:14:11 hd_brummy Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -50,7 +50,7 @@ COMMON_DEPEND="virtual/jpeg
 	dvdarchive? ( dvdchapjump? ( >=media-libs/libdvdread-4.1.3_p1168 ) )"
 
 DEPEND="${COMMON_DEPEND}
-	media-tv/linuxtv-dvb-headers
+	>=sys-kernel/linux-headers-2.6.38
 	dev-util/unifdef"
 
 RDEPEND="${COMMON_DEPEND}
