@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_rc3.ebuild,v 1.4 2011/10/17 14:12:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_rc3.ebuild,v 1.5 2011/10/19 13:06:50 ssuominen Exp $
 
 EAPI="3"
 
@@ -21,13 +21,13 @@ SRC_URI="http://www.povray.org/redirect/www.povray.org/beta/source/${PN}-${MY_PV
 
 LICENSE="povlegal-3.6"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="debug mkl openexr tiff X"
 
 DEPEND="
 	>=dev-libs/boost-1.41
 	virtual/jpeg
-	media-libs/libpng
+	media-libs/libpng:0
 	sys-libs/zlib
 	openexr? (
 		media-libs/ilmbase
@@ -37,7 +37,7 @@ DEPEND="
 	X? ( media-libs/libsdl )"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${PN}-${MY_PV}"
+S=${WORKDIR}/${PN}-${MY_PV}
 
 src_prepare() {
 	# Change some destination directories that cannot be adjusted via configure
