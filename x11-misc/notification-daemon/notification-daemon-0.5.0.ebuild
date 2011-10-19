@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/notification-daemon-0.5.0.ebuild,v 1.11 2011/05/01 09:34:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/notification-daemon-0.5.0.ebuild,v 1.12 2011/10/19 02:06:41 ssuominen Exp $
 
 EAPI=3
 GCONF_DEBUG=no
@@ -25,7 +25,6 @@ RDEPEND=">=dev-libs/glib-2.4:2
 	x11-libs/libnotify
 	x11-libs/libwnck:1
 	x11-libs/libX11
-	!<xfce-extra/xfce4-notifyd-0.2.1_p20110101
 	!x11-misc/notify-osd"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
