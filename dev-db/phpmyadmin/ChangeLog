@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.454 2011/10/19 00:21:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.455 2011/10/19 11:11:50 chainsaw Exp $
+
+  19 Oct 2011; Tony Vroon <chainsaw@gentoo.org> phpmyadmin-3.4.6.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
+  "idella4" Delaney in security bug #387413.
 
   19 Oct 2011; Jeroen Roovers <jer@gentoo.org> phpmyadmin-3.4.6.ebuild:
   Stable for HPPA (bug #387413).
