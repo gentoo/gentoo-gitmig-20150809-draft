@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.5.2.ebuild,v 1.6 2011/10/19 15:44:02 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/eclipse-ecj/eclipse-ecj-3.5.2.ebuild,v 1.7 2011/10/19 20:09:46 mr_bones_ Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ S="${WORKDIR}"
 
 DESCRIPTION="Eclipse Compiler for Java"
 HOMEPAGE="http://www.eclipse.org/"
-SRC_URI="http:/archive.eclipse.org/eclipse/downloads/drops/${DMF}/${MY_PN}src-${PV}.zip"
+SRC_URI="http://archive.eclipse.org/eclipse/downloads/drops/${DMF}/${MY_PN}src-${PV}.zip"
 
 IUSE="+ant userland_GNU"
 
