@@ -1,15 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.12.ebuild,v 1.1 2011/09/08 14:48:19 grozin Exp $
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.7.14.ebuild,v 1.1 2011/10/19 07:57:29 grozin Exp $
+EAPI=4
 inherit autotools
 MY_P=${P/tex/TeX}-src
 
 DESCRIPTION="Wysiwyg text processor with high-quality maths"
 HOMEPAGE="http://www.texmacs.org/"
-SRC_URI="
-	ftp://ftp.texmacs.org/pub/TeXmacs/tmftp/source/${MY_P}.tar.gz
-	ftp://ftp.texmacs.org/pub/TeXmacs/targz/TeXmacs-600dpi-fonts.tar.gz"
+SRC_URI="ftp://ftp.texmacs.org/pub/TeXmacs/tmftp/source/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -37,9 +35,6 @@ src_prepare() {
 	# respect LDFLAGS, bug #338459
 	epatch "${FILESDIR}"/${PN}-ldflags.patch
 
-	# fix LD_LIBRARY_PATH in tm_mupad_help, bug #337532
-	epatch "${FILESDIR}"/${PN}-mupad.patch
-
 	eautoreconf
 }
 
@@ -50,11 +45,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc TODO || die "dodoc failed"
-	domenu "${FILESDIR}"/TeXmacs.desktop || die "domenu failed"
-
-	# now install the fonts
-	insinto /usr/share/texmf
-	doins -r "${WORKDIR}/fonts" || die "installing fonts failed"
+	emake DESTDIR="${D}" install
+	dodoc TODO
+	domenu "${FILESDIR}"/TeXmacs.desktop
 }
