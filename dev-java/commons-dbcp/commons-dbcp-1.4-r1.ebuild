@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-1.4-r1.ebuild,v 1.2 2011/02/27 14:26:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-dbcp/commons-dbcp-1.4-r1.ebuild,v 1.3 2011/10/19 00:57:29 fordfrog Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc source test"
@@ -14,7 +14,7 @@ COMMON_DEP=">=dev-java/commons-pool-1.3
 	dev-java/glassfish-transaction-api:0"
 RDEPEND=">=virtual/jre-1.6
 		${COMMON_DEP}"
-DEPEND=">=virtual/jdk-1.6
+DEPEND="virtual/jdk:1.6
 		test? (
 			dev-java/junit:0
 			www-servers/tomcat:6
