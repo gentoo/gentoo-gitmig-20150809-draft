@@ -1,6 +1,6 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.537 2011/10/19 03:48:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.538 2011/10/19 05:10:41 tetromino Exp $
 
 *gtk+-3.2.1 (19 Oct 2011)
 
@@ -14,7 +14,6 @@
   strangely enough succeed when building from my home directory; need to
   investigate why), and disable a11y picker test (GtkFileChooserButton look
   depends on list of mounted filesystems).
-
   Notable changes: *lots* (better theming, including a new CSS parser, and dark
   theme variants; better XInput2 support; gail is no longer a module; tree
   model improvements; more widgets support height-for-width;
