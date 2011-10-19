@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/pycadia
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pycadia/ChangeLog,v 1.10 2009/01/19 19:03:34 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pycadia/ChangeLog,v 1.11 2011/10/19 21:38:02 mr_bones_ Exp $
+
+  19 Oct 2011; Michael Sterrett <mr_bones_@gentoo.org> pycadia-0.5.1.ebuild:
+  EAPI=2; add desktop file support
 
   19 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> pycadia-0.5.1.ebuild:
   EAPI=1; ditch built_with_use
