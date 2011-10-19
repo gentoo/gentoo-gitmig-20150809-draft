@@ -1,6 +1,13 @@
 # ChangeLog for net-im/psi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.213 2011/10/04 07:11:35 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.214 2011/10/19 09:16:31 pva Exp $
+
+*psi-0.14-r3 (19 Oct 2011)
+
+  19 Oct 2011; Peter Volkov <pva@gentoo.org> +psi-0.14-r3.ebuild,
+  +files/psi-0.14-input-validation.patch:
+  Fix Input Validation Failure reported in bug #384227 by Agostino Sarubbo.
+  Thank Nikoli and rion for this patch.
 
   04 Oct 2011; Peter Volkov <pva@gentoo.org> psi-0.14-r2.ebuild,
   +files/psi-0.14-minizip-detection.patch:
