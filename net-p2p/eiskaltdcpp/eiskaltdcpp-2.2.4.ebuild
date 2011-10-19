@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-2.2.4.ebuild,v 1.1 2011/10/08 15:49:45 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-2.2.4.ebuild,v 1.2 2011/10/19 19:50:45 pva Exp $
 
 EAPI="4"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://eiskaltdc.googlecode.com/"
 
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
-IUSE="daemon dbus +dht +emoticons examples -gnome -gtk idn -javascript libnotify lua +minimal pcre +qt4 sound spell sqlite upnp xmlrpc"
+IUSE="cli daemon dbus +dht +emoticons examples -gnome -gtk idn -javascript libnotify lua +minimal pcre +qt4 sound spell sqlite upnp xmlrpc"
 for x in ${LANGS}; do
 	IUSE="${IUSE} linguas_${x}"
 done
@@ -49,10 +49,15 @@ RDEPEND="
 	lua? ( >=dev-lang/lua-5.1 )
 	pcre? ( >=dev-libs/libpcre-4.2 )
 	upnp? ( net-libs/miniupnpc )
+	cli? (
+		>=dev-lang/perl-5.10
+		dev-perl/RPC-XML
+		dev-perl/Term-ShellUI
+	)
 	daemon? ( xmlrpc? ( >=dev-libs/xmlrpc-c-1.19.0[abyss,cxx] ) )
 	gtk? (
 		x11-libs/pango
-		>=x11-libs/gtk+-2.24:2
+		>=x11-libs/gtk+-2.18:2
 		>=dev-libs/glib-2.18:2
 		x11-themes/hicolor-icon-theme
 		gnome? ( gnome-base/libgnome )
@@ -93,6 +98,7 @@ src_configure() {
 		-DLIB_INSTALL_DIR="$(get_libdir)"
 		-Dlinguas="${langs}"
 		-DLOCAL_MINIUPNP=OFF
+		"$(cmake-utils_use cli USE_CLI)"
 		"$(cmake-utils_use daemon NO_UI_DAEMON)"
 		"$(cmake-utils_use dbus DBUS_NOTIFY)"
 		"$(cmake-utils_use dht WITH_DHT)"
@@ -113,7 +119,6 @@ src_configure() {
 		"$(cmake-utils_use sqlite USE_QT_SQLITE)"
 		"$(cmake-utils_use upnp USE_MINIUPNP)"
 		"$(cmake-utils_use xmlrpc XMLRPC_DAEMON)"
-		-DUSE_CLI=OFF
 	)
 	cmake-utils_src_configure
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.25 2011/10/19 08:13:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/eiskaltdcpp/eiskaltdcpp-9999.ebuild,v 1.26 2011/10/19 19:50:45 pva Exp $
 
 EAPI="4"
 
@@ -98,7 +98,7 @@ src_configure() {
 		-DLIB_INSTALL_DIR="$(get_libdir)"
 		-Dlinguas="${langs}"
 		-DLOCAL_MINIUPNP=OFF
-		"$(cmake-utils_use cli)"
+		"$(cmake-utils_use cli USE_CLI)"
 		"$(cmake-utils_use daemon NO_UI_DAEMON)"
 		"$(cmake-utils_use dbus DBUS_NOTIFY)"
 		"$(cmake-utils_use dht WITH_DHT)"
