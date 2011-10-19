@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/files/lxc.initd,v 1.8 2011/09/28 21:47:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/files/lxc.initd,v 1.9 2011/10/19 17:51:48 flameeyes Exp $
 
 CONTAINER=${SVCNAME#*.}
 
@@ -113,15 +113,19 @@ stop() {
 
 	init_pid=$(lxc-info -n ${CONTAINER} --pid | cut -d: -f 2)
 
+	if [ "${init_pid}" = "-1" ]; then
+	    ewarn "${CONTAINER} doesn't seem to be running."
+	    return 0
+	fi
+
 	ebegin "Shutting down system in ${CONTAINER}"
 	kill -INT ${init_pid}
 	eend $?
 
 	TIMEOUT=${TIMEOUT:-30}
 	i=0
-	while [ -n "${missingprocs}" -a $i -lt ${TIMEOUT} ]; do
+	while [ -n "$(pgrep -P ${init_pid})" -a $i -lt ${TIMEOUT} ]; do
 		sleep 1
-		missingprocs=$(pgrep -P ${init_pid})
 		i=$(expr $i + 1)
 	done
 
