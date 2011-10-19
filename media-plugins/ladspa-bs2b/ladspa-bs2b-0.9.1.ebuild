@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/ladspa-bs2b/ladspa-bs2b-0.9.1.ebuild,v 1.1 2009/10/07 03:50:25 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/ladspa-bs2b/ladspa-bs2b-0.9.1.ebuild,v 1.2 2011/10/19 20:45:26 hwoarang Exp $
 
 DESCRIPTION="LADSPA plugin for bs2b headphone filter"
 HOMEPAGE="http://bs2b.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/bs2b/LADSPA%20splugin/${PV}/${P}.tar.bz2"
 
 LICENSE="|| ( GPL-2 GPL-3 )"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND="media-libs/ladspa-sdk
