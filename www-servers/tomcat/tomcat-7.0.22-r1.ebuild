@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-7.0.22.ebuild,v 1.1 2011/10/18 22:49:07 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-7.0.22-r1.ebuild,v 1.1 2011/10/19 20:46:13 fordfrog Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc examples source test"
@@ -19,8 +19,7 @@ LICENSE="Apache-2.0"
 
 IUSE=""
 
-# eclipse ecj version/slot (upstream uses version 3.7 which we do not have packaged yet)
-ECJV="3.6"
+ECJV="3.7"
 
 # servlet-api slot
 SAPIS="3.0"

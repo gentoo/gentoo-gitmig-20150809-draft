@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.263 2011/10/18 22:49:07 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.264 2011/10/19 20:46:13 fordfrog Exp $
+
+*tomcat-7.0.22-r1 (19 Oct 2011)
+
+  19 Oct 2011; Miroslav Šulc <fordfrog@gentoo.org> -tomcat-7.0.22.ebuild,
+  +tomcat-7.0.22-r1.ebuild:
+  In tomcat 7 switched to ecj 3.7 which is finally in tree
 
 *tomcat-7.0.22 (18 Oct 2011)
 
