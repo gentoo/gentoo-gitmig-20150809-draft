@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.167 2011/10/18 06:43:56 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.168 2011/10/19 11:23:49 chainsaw Exp $
+
+  19 Oct 2011; Tony Vroon <chainsaw@gentoo.org> apache-2.2.21-r1.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
+  "idella4" Delaney in security bug #385859.
 
 *apache-2.2.21-r1 (18 Oct 2011)
 
