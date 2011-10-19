@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/prll
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/prll/ChangeLog,v 1.10 2011/08/14 14:30:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/prll/ChangeLog,v 1.11 2011/10/19 15:36:59 jlec Exp $
+
+*prll-0.6.1 (19 Oct 2011)
+
+  19 Oct 2011; Justin Lecher <jlec@gentoo.org> +prll-0.6.1.ebuild, metadata.xml:
+  Version Bump
 
   14 Aug 2011; Justin Lecher <jlec@gentoo.org> prll-0.6.ebuild, metadata.xml:
   Don't test with random shells, but with bash, #378563
