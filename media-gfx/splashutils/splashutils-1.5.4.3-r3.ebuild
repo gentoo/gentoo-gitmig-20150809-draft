@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3-r3.ebuild,v 1.17 2011/09/04 14:13:19 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3-r3.ebuild,v 1.18 2011/10/19 03:09:22 pva Exp $
 
 EAPI="2"
 
@@ -107,6 +107,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/splashutils-1.5.4.3-nondefault-runlevel.patch
 	epatch "${FILESDIR}"/splashutils-1.5.4.3-openrc-effects.patch
 	epatch "${FILESDIR}"/initrd.splash-cmp-str-instead-of-int.patch
+	cd ${SM}
+	epatch "${FILESDIR}"/splashutils-1.5.4.4-freetype-bz2.patch
 	cd "${S}"
 
 	# Latest version of klibc defined its own version of ferror, so there is
