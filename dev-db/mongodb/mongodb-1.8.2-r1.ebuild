@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-1.8.2-r1.ebuild,v 1.2 2011/08/26 12:38:49 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-1.8.2-r1.ebuild,v 1.3 2011/10/19 15:54:07 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -79,5 +79,5 @@ pkg_postinst() {
 		ewarn "You just upgraded from a previous version of mongodb !"
 		ewarn "Make sure you run 'mongod --upgrade' before using this version."
 	fi
-	elog "Journaling is now enabled by default, see /etc/conf.d/${PN}.conf"
+	elog "Journaling is now enabled by default, see /etc/conf.d/${PN}"
 }
