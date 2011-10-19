@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/glipper
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/ChangeLog,v 1.18 2010/11/02 02:53:24 ford_prefect Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/ChangeLog,v 1.19 2011/10/19 22:54:28 tetromino Exp $
+
+  19 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  glipper-1.0-r3.ebuild:
+  Depend on correct slot of pygobject.
 
   02 Nov 2010; Arun Raghavan <ford_prefect@gentoo.org>
   glipper-1.0-r3.ebuild:

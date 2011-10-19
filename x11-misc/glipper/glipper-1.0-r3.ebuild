@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/glipper-1.0-r3.ebuild,v 1.5 2010/11/02 02:53:24 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glipper/glipper-1.0-r3.ebuild,v 1.6 2011/10/19 22:54:28 tetromino Exp $
 
 EAPI="3"
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-python/pygobject-2.6
+DEPEND=">=dev-python/pygobject-2.6:2
 	>=dev-python/pygtk-2.6
 	>=dev-python/gconf-python-2.22.0
 	>=dev-python/libgnome-python-2.22.0
