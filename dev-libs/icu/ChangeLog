@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.162 2011/10/18 06:36:36 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.163 2011/10/19 00:25:15 jer Exp $
+
+  19 Oct 2011; Jeroen Roovers <jer@gentoo.org> icu-4.8.1-r2.ebuild:
+  Stable for HPPA (bug #387259).
 
   18 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> icu-4.8.1-r2.ebuild:
   x86 stable wrt bug #387259
