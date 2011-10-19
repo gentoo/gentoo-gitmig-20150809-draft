@@ -264,7 +264,7 @@ index 856fb98..98e0670 100644
 +	[AS_HELP_STRING([--without-graphite], [Build with graphite2 library])]
 +)
 +AS_IF([test "x$with_graphite" != "xno"], [
-+	PKG_CHECK_MODULES(GRAPHITE, graphite, have_graphite=yes, have_graphite=no)
++	PKG_CHECK_MODULES(GRAPHITE, graphite2, have_graphite=yes, have_graphite=no)
 +], [
 +	have_graphite=no
 +])
