@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/lib_mysqludf_ta/lib_mysqludf_ta-0.1.ebuild,v 1.1 2011/10/19 12:30:29 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/lib_mysqludf_ta/lib_mysqludf_ta-0.1.ebuild,v 1.2 2011/10/19 12:32:13 sbriesen Exp $
 
 EAPI=4
 
@@ -45,7 +45,7 @@ src_prepare() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	econf --with-pic --disable-static --libdir="${MYSQL_PLUGINDIR}"
 }
 
