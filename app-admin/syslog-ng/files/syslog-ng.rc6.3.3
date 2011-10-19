@@ -1,9 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.rc6.3.3,v 1.1 2011/10/18 20:21:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.rc6.3.3,v 1.2 2011/10/19 06:19:38 mr_bones_ Exp $
 
-extra_commands="checkconfig reload"
+extra_commands="checkconfig"
+extra_started_commands="reload"
+
+description_checkconfig="Check the configuration file that will be used by \"start\""
+description_reload="Reload the configuration without exiting"
 
 SYSLOG_NG_SERVICE=${SVCNAME#*.}
 SYSLOG_NG_SERVICE=${SYSLOG_NG_SERVICE:-syslog-ng}
