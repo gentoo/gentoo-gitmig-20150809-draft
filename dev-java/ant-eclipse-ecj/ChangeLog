@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/ant-eclipse-ecj
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-eclipse-ecj/ChangeLog,v 1.26 2011/10/19 18:47:33 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-eclipse-ecj/ChangeLog,v 1.27 2011/10/19 19:50:27 fordfrog Exp $
+
+*ant-eclipse-ecj-3.7.1 (19 Oct 2011)
+
+  19 Oct 2011; Miroslav Šulc <fordfrog@gentoo.org> +files/ecj-3.7,
+  +ant-eclipse-ecj-3.7.1.ebuild:
+  Added version 3.7 (bug #380165, thanks William L. Thomson Jr.
+  <wlt@obsidian-studios.com> for the ebuild)
 
   19 Oct 2011; Miroslav Šulc <fordfrog@gentoo.org>
   -ant-eclipse-ecj-3.6.ebuild:
