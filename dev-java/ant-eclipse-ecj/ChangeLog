@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/ant-eclipse-ecj
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-eclipse-ecj/ChangeLog,v 1.24 2011/10/19 18:22:29 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-eclipse-ecj/ChangeLog,v 1.25 2011/10/19 18:45:13 fordfrog Exp $
+
+*ant-eclipse-ecj-3.6-r1 (19 Oct 2011)
+
+  19 Oct 2011; Miroslav Šulc <fordfrog@gentoo.org> files/ecj-3.6,
+  +ant-eclipse-ecj-3.6-r1.ebuild:
+  Fixed compiler settings (bug #378985, thanks to William L. Thomson Jr.
+  <wlt@obsidian-studios.com> for the fix)
 
   19 Oct 2011; Miroslav Šulc <fordfrog@gentoo.org>
   -ant-eclipse-ecj-3.5.1.ebuild:
