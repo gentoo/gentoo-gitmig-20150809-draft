@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.44 2011/10/18 07:33:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.45 2011/10/19 09:31:26 scarabeus Exp $
 
 EAPI=4
 
@@ -209,9 +209,16 @@ REQUIRED_USE="
 S="${WORKDIR}/${PN}-core-${PV}"
 
 pkg_pretend() {
-	CHECKREQS_MEMORY="1G"
-	use debug && CHECKREQS_DISK_BUILD="15G" || CHECKREQS_DISK_BUILD="9G"
-	check-reqs_pkg_setup
+	if [[ ${MERGE_TYPE} != binary ]]; then
+		CHECKREQS_MEMORY="1G"
+		use debug && CHECKREQS_DISK_BUILD="15G" || CHECKREQS_DISK_BUILD="9G"
+		check-reqs_pkg_pretend
+
+		if [[ $(gcc-major-version) -lt 4 ]]; then
+			eerror "Compilation with gcc older than 4.0 is not supported"
+			die "Too old gcc found."
+		fi
+	fi
 }
 
 pkg_setup() {
@@ -221,21 +228,11 @@ pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
 
-	if [[ $(gcc-major-version) -lt 4 ]]; then
-		eerror "Compilation with gcc older than 4.0 is not supported"
-		die "Too old gcc found."
-	fi
-
 	if ! use gtk; then
 		ewarn "If you want the LibreOffice systray quickstarter to work"
 		ewarn "activate the 'gtk' use flag."
 		ewarn
 	fi
-
-	# Check if we have enough RAM and free diskspace to build this beast
-	CHECKREQS_MEMORY="1G"
-	use debug && CHECKREQS_DISK_BUILD="15G" || CHECKREQS_DISK_BUILD="9G"
-	check-reqs_pkg_setup
 }
 
 src_unpack() {
