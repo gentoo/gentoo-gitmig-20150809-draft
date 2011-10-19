@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/notification-daemon-0.7.3.ebuild,v 1.2 2011/10/19 02:14:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/notification-daemon-0.7.3.ebuild,v 1.3 2011/10/19 02:35:01 ssuominen Exp $
 
 EAPI=4
 inherit gnome.org
@@ -23,6 +23,7 @@ RDEPEND=">=dev-libs/glib-2.28
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
 	>=dev-util/intltool-0.40
+	dev-util/pkgconfig
 	sys-devel/gettext"
 
 DOCS=( AUTHORS ChangeLog NEWS )
