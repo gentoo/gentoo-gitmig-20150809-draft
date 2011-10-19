@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/antlr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.89 2011/08/18 19:21:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.90 2011/10/19 01:42:15 fordfrog Exp $
+
+*antlr-2.7.7-r4 (19 Oct 2011)
+
+  19 Oct 2011; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/2.7.7-static-libs-fix.patch, +antlr-2.7.7-r4.ebuild:
+  Fixed linking when static-libs is disabled (bug #385797, thanks to Roeland
+  Douma <roeland@rullzer.com> for the patch)
 
 *antlr-2.7.7-r3 (18 Aug 2011)
 
