@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.6.3.ebuild,v 1.7 2011/05/14 14:51:52 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/opendict/opendict-0.6.3.ebuild,v 1.8 2011/10/19 16:15:37 ssuominen Exp $
 
 EAPI=3
 PYTHON_DEPEND=2
@@ -12,7 +12,7 @@ HOMEPAGE="http://opendict.sourceforge.net/"
 SRC_URI="http://opendict.idiles.com/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND="dev-python/wxpython:2.8
