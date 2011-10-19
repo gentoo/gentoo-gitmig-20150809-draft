@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jcifs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcifs/ChangeLog,v 1.29 2011/07/15 15:57:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcifs/ChangeLog,v 1.30 2011/10/19 00:41:50 fordfrog Exp $
+
+*jcifs-1.3.17 (19 Oct 2011)
+
+  19 Oct 2011; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/1.3.17-build.xml.patch, +jcifs-1.3.17.ebuild:
+  Version bump
 
   15 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> jcifs-1.3.15.ebuild:
   ppc64 stable wrt #363241
