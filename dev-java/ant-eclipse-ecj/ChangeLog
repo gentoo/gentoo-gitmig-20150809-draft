@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-eclipse-ecj
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-eclipse-ecj/ChangeLog,v 1.23 2010/12/21 07:39:29 ali_bush Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-eclipse-ecj/ChangeLog,v 1.24 2011/10/19 18:22:29 fordfrog Exp $
+
+  19 Oct 2011; Miroslav Šulc <fordfrog@gentoo.org>
+  -ant-eclipse-ecj-3.5.1.ebuild:
+  Removing version 3.5.1 as we have version 3.5.2 stable
 
 *ant-eclipse-ecj-3.6 (21 Dec 2010)
 
