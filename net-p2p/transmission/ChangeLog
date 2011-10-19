@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.156 2011/08/05 21:00:38 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.157 2011/10/19 10:59:45 pva Exp $
+
+*transmission-2.41 (19 Oct 2011)
+
+  19 Oct 2011; Peter Volkov <pva@gentoo.org> +transmission-2.41.ebuild,
+  +files/transmission-2.41-0003-system-miniupnpc.patch:
+  Version bump, bug 387035 wrt lexa and Daniel T. Do not reset permissions, bug
+  349867 thank Tony Levi for report and Nikolaj Sjujskij for getting me back on
+  issue.
 
 *transmission-2.33-r1 (05 Aug 2011)
 
