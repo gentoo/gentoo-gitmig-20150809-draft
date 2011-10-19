@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.136 2011/09/11 21:02:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.137 2011/10/19 03:24:46 tetromino Exp $
+
+  19 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  Unmask USE="packagekit" for x11-libs/gtk+.
 
   11 Sep 2011; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Remove the kde-4.7 mask as it is not needed anymore; keywording describes a
