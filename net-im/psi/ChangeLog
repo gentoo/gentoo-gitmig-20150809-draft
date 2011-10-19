@@ -1,6 +1,14 @@
 # ChangeLog for net-im/psi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.215 2011/10/19 11:34:51 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.216 2011/10/19 13:28:51 pva Exp $
+
+  19 Oct 2011; Peter Volkov <pva@gentoo.org> psi-0.14-r4.ebuild,
+  +files/psi-0.14-drop-debug-cflags.patch:
+  Don't pass -g to C.*FLAGS and bump EAPI, thank Agostino Sarubbo for this job.
+
+  19 Oct 2011; Peter Volkov <pva@gentoo.org> psi-0.14-r4.ebuild,
+  +files/psi-0.14-drop-debug-cflags.patch:
+  Don't pass -g to C.*FLAGS, thank Agostino Sarubbo for the fix.
 
 *psi-0.14-r4 (19 Oct 2011)
 

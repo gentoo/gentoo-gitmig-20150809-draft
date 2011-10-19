@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14-r4.ebuild,v 1.1 2011/10/19 11:34:51 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14-r4.ebuild,v 1.2 2011/10/19 13:28:51 pva Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit eutils qt4-r2 multilib
 
@@ -53,6 +53,7 @@ src_prepare() {
 	epatch "${FILESDIR}/psi-0.14-qt-compat.patch"
 	epatch "${FILESDIR}/psi-0.14-minizip-detection.patch"
 	epatch "${FILESDIR}/psi-0.14-input-validation.patch"
+	epatch "${FILESDIR}/psi-0.14-drop-debug-cflags.patch"
 
 	if use extras; then
 		# some patches from psi+ project http://code.google.com/p/psi-dev
@@ -84,7 +85,7 @@ src_prepare() {
 		fi
 	fi
 
-	rm -rf third-party/qca # We use system libraries.
+	rm -rf third-party/qca || die # We use system libraries.
 }
 
 src_configure() {
@@ -111,38 +112,38 @@ src_configure() {
 src_compile() {
 	eqmake4
 
-	emake || die "emake failed"
+	emake
 
 	if use doc; then
-		cd doc
-		mkdir -p api # 259632
-		make api_public || die "make api_public failed"
+		cd doc || die
+		mkdir -p api || die # 259632
+		emake api_public
 	fi
 }
 
 src_install() {
-	emake INSTALL_ROOT="${D}" install || die "emake install failed"
-	rm "${D}"/usr/share/psi/{COPYING,README}
+	emake INSTALL_ROOT="${D}" install
+	rm "${D}"/usr/share/psi/{COPYING,README} || die
 
 	# this way the docs will be installed in the standard gentoo dir
-	newdoc iconsets/roster/README README.roster || die
-	newdoc iconsets/system/README README.system || die
-	newdoc certs/README README.certs || die
-	dodoc README || die
+	newdoc iconsets/roster/README README.roster
+	newdoc iconsets/system/README README.system
+	newdoc certs/README README.certs
+	dodoc README
 
 	if use doc; then
-		cd doc
-		dohtml -r api || die "dohtml failed"
+		cd doc || die
+		dohtml -r api
 	fi
 
 	# install translations
-	cd "${WORKDIR}"
+	cd "${WORKDIR}" || die
 	insinto /usr/share/${PN}/
 	local nolangs=true
 	for LNG in ${LANGS}; do
 		if use linguas_${LNG}; then
-			doins ${LNG}/${PN}_${LNG}.qm || die
-			newins ${LNG}/INFO INFO.${LNG} || die
+			doins ${LNG}/${PN}_${LNG}.qm
+			newins ${LNG}/INFO INFO.${LNG}
 			nolangs=false
 		fi
 	done
@@ -150,8 +151,8 @@ src_install() {
 	# if linguas is empty install all translations
 	if ${nolangs}; then
 		for LNG in ${LANGS}; do
-			doins ${LNG}/${PN}_${LNG}.qm || die
-			newins ${LNG}/INFO INFO.${LNG} || die
+			doins ${LNG}/${PN}_${LNG}.qm
+			newins ${LNG}/INFO INFO.${LNG}
 		done
 	fi
 
