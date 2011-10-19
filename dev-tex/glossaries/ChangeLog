@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/glossaries
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.41 2011/10/18 18:04:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.42 2011/10/19 20:42:13 hwoarang Exp $
+
+  19 Oct 2011; Markos Chandras <hwoarang@gentoo.org> glossaries-3.01.ebuild:
+  Stable on amd64 wrt bug #387579
 
   18 Oct 2011; Tim Harder <radhermit@gentoo.org> glossaries-3.01.ebuild:
   Update to EAPI 4.
