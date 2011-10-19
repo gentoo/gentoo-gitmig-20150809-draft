@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5798 2011/10/18 21:50:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5799 2011/10/19 00:58:02 tetromino Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
+  Mask gtk+-3.2 with dependencies, and pygobject:3 and compatible
+  pygobject-2.28.6-r50, in preparation for move from gnome overlay.
 
   18 Oct 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Masking new snapshots for openbox and obconf
