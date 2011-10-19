@@ -1,35 +1,19 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-3.0.6.ebuild,v 1.3 2011/10/18 18:26:38 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-3.0.6.ebuild,v 1.4 2011/10/19 08:17:10 psomas Exp $
 
-EAPI="4"
-UNIPATCH_STRICTORDER="yes"
+EAPI="2"
 K_NOUSENAME="yes"
 K_NOSETEXTRAVERSION="yes"
-K_NOUSEPR="yes"
-K_SECURITY_UNSUPPORTED="yes"
-K_DEBLOB_AVAILABLE=0
+K_SECURITY_UNSUPPORTED="1"
+K_DEBLOB_AVAILABLE="1"
 ETYPE="sources"
-CKV="${PVR/-r/-git}"
-# only use this if it's not an _rc/_pre release
-[ "${PV/_pre}" == "${PV}" ] && [ "${PV/_rc}" == "${PV}" ] && OKV="${PV}"
-inherit kernel-2 git-2
+inherit kernel-2
 detect_version
 
 DESCRIPTION="Full sources for the Linux kernel"
 HOMEPAGE="http://www.kernel.org"
-EGIT_REPO_URI="https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git"
-EGIT_COMMIT="v${PV/_/-}"
+SRC_URI="${KERNEL_URI}"
 
 KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
-IUSE=""
-
-K_EXTRAEINFO="This kernel is not supported by Gentoo due to its unstable and
-experimental nature. If you have any issues, try a matching vanilla-sources
-ebuild -- if the problem is not there, please contact the upstream kernel
-developers at http://bugzilla.kernel.org and on the linux-kernel mailing list to
-report the problem so it can be fixed in time for the next kernel release."
-
-pkg_postinst() {
-	postinst_sources
-}
+IUSE="deblob"
