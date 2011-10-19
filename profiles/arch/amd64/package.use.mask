@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.110 2011/10/16 11:43:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.111 2011/10/19 03:17:58 tetromino Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -17,6 +17,10 @@
 #
 
 #--- END OF EXAMPLES ---
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (18 Oct 2011)
+# Masked in base, unmask per supported arch
+x11-libs/gtk+ -colord -packagekit
 
 # Samuli Suominen <ssuominen@gentoo.org> (16 Oct 2011)
 # Masked in base, unmask per arch
