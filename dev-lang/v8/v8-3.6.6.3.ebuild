@@ -1,20 +1,24 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.16 2011/10/19 22:08:14 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.6.6.3.ebuild,v 1.1 2011/10/19 22:08:14 floppym Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="2:2.6"
 
-inherit eutils multilib pax-utils python subversion toolchain-funcs
+inherit eutils multilib pax-utils python toolchain-funcs
+
+GYP_REV="1066"
 
 DESCRIPTION="Google's open source JavaScript engine"
 HOMEPAGE="http://code.google.com/p/v8"
-ESVN_REPO_URI="http://v8.googlecode.com/svn/trunk"
+SRC_URI="mirror://gentoo/${P}.tar.gz
+	http://dev.gentoo.org/~floppym/distfiles/${P}.tar.gz
+	http://dev.gentoo.org/~floppym/distfiles/gyp-${GYP_REV}.tar.xz"
 LICENSE="BSD"
 
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~x86 ~x64-macos ~x86-macos"
 IUSE=""
 
 pkg_setup() {
@@ -22,9 +26,13 @@ pkg_setup() {
 }
 
 src_unpack() {
-	subversion_src_unpack
-	cd "${S}"
-	make dependencies || die
+	unpack ${A}
+	mv gyp-${GYP_REV} ${P}/build/gyp || die
+}
+
+src_prepare() {
+	# Stop -Werror from breaking the build.
+	sed -i -e "s/-Werror//" build/standalone.gypi || die
 }
 
 src_compile() {
