@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libnih/libnih-1.0.3.ebuild,v 1.1 2011/10/19 17:27:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libnih/libnih-1.0.3.ebuild,v 1.2 2011/10/19 17:52:29 vapier Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://launchpad.net/${PN}/$(get_version_component_range 1-2)/${PV}/+do
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
-IUSE="dbus nls static-libs test +threads"
+IUSE="+dbus nls static-libs test +threads"
 
 RDEPEND="dbus? ( dev-libs/expat >=sys-apps/dbus-1.2.16 )"
 DEPEND="${RDEPEND}
@@ -40,7 +40,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die
 
 	# we need to be in / because upstart needs libnih
-	gen_usr_ldscript -a nih nih-dbus
+	gen_usr_ldscript -a nih $(use dbus && echo nih-dbus)
 	use static-libs || rm "${D}"/usr/lib*/*.la
 
 	dodoc AUTHORS ChangeLog HACKING NEWS README TODO
