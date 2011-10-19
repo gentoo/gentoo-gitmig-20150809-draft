@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.10.0-r1.ebuild,v 1.3 2011/10/16 17:41:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-3.10.0-r1.ebuild,v 1.4 2011/10/19 20:20:38 tetromino Exp $
 
 EAPI="2"
 GNOME2_LA_PUNT="yes"
@@ -19,7 +19,7 @@ IUSE="doc +introspection python"
 RDEPEND=">=x11-libs/gtk+-3.0.2:3
 	>=dev-libs/libxml2-2.4.0:2
 	introspection? ( >=dev-libs/gobject-introspection-0.10.1 )
-	python? ( >=dev-python/pygobject-2.27.0 )
+	python? ( >=dev-python/pygobject-2.27.0:2 )
 "
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper

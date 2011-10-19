@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/glade
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.141 2011/10/16 17:41:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.142 2011/10/19 20:20:38 tetromino Exp $
+
+  19 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  glade-3.10.0-r1.ebuild, glade-3.10.2.ebuild:
+  Depend on correct slot of pygobject.
 
   16 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> glade-3.10.0-r1.ebuild:
   ppc/ppc64 stable wrt #385699

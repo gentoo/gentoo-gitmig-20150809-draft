@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.5.0.ebuild,v 1.7 2011/03/22 19:07:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-1.5.0.ebuild,v 1.8 2011/10/19 20:23:35 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -19,7 +19,7 @@ IUSE="doc gnome"
 RDEPEND="
 	>=gnome-base/libglade-2
 	>=dev-python/pygtk-2.14
-	>=dev-python/pygobject-2.8
+	>=dev-python/pygobject-2.8:2
 	gnome? ( >=dev-python/gconf-python-2.22 )
 "
 DEPEND="${RDEPEND}
