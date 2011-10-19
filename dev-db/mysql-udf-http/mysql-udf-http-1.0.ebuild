@@ -1,11 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-udf-http/mysql-udf-http-1.0.ebuild,v 1.1 2011/10/19 12:07:46 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-udf-http/mysql-udf-http-1.0.ebuild,v 1.2 2011/10/19 12:09:10 sbriesen Exp $
 
 EAPI=4
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
 
 inherit eutils toolchain-funcs autotools
 
