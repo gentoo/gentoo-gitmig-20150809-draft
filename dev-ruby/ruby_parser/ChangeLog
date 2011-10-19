@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby_parser
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.31 2011/09/15 04:48:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.32 2011/10/19 17:57:16 graaff Exp $
+
+*ruby_parser-2.3.1 (19 Oct 2011)
+
+  19 Oct 2011; Hans de Graaff <graaff@gentoo.org> +ruby_parser-2.3.1.ebuild:
+  Version bump.
 
   15 Sep 2011; Jeroen Roovers <jer@gentoo.org> ruby_parser-2.0.5.ebuild:
   Stable for HPPA (bug #369573).
