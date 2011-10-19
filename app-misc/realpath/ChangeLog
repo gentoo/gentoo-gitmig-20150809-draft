@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/realpath
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/ChangeLog,v 1.17 2011/10/17 19:52:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/realpath/ChangeLog,v 1.18 2011/10/19 03:53:28 radhermit Exp $
+
+  19 Oct 2011; Tim Harder <radhermit@gentoo.org> realpath-1.15-r1.ebuild,
+  realpath-1.15-r3.ebuild, realpath-1.16.ebuild:
+  Make gettext dependencies optional based on the nls use flag (bug #387615 by
+  Ed Wildgoose).
 
   17 Oct 2011; Justin Lecher <jlec@gentoo.org> +files/realpath-1.16-nonls.patch,
   metadata.xml, realpath-1.16.ebuild:
