@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/notification-daemon-0.7.3.ebuild,v 1.1 2011/10/19 02:05:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/notification-daemon-0.7.3.ebuild,v 1.2 2011/10/19 02:14:33 ssuominen Exp $
 
 EAPI=4
 inherit gnome.org
@@ -26,3 +26,16 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 DOCS=( AUTHORS ChangeLog NEWS )
+
+src_install() {
+	default
+
+	cat <<-EOF > "${T}"/org.freedesktop.Notifications.service
+	[D-BUS Service]
+	Name=org.freedesktop.Notifications
+	Exec=/usr/libexec/notification-daemon
+	EOF
+
+	insinto /usr/share/dbus-1/services
+	doins "${T}"/org.freedesktop.Notifications.service
+}
