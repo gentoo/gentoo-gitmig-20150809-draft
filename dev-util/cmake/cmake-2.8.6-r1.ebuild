@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.6-r1.ebuild,v 1.1 2011/10/15 15:06:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.6-r1.ebuild,v 1.2 2011/10/19 21:10:58 dilfridge Exp $
 
 EAPI=4
 
@@ -91,6 +91,12 @@ cmake_src_test() {
 		-E BootstrapTest SimpleCOnly_sdcc \
 		|| die "Tests failed"
 	popd > /dev/null
+}
+
+pkg_setup() {
+	einfo "Fixing java access violations ..."
+	# bug 387227
+	addpredict /proc/self/coredump_filter
 }
 
 src_prepare() {

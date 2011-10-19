@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.171 2011/10/15 15:06:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.172 2011/10/19 21:10:58 dilfridge Exp $
+
+  19 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org> cmake-2.8.6-r1.ebuild:
+  Fix java 7 sandbox violation, bug 387227
 
 *cmake-2.8.6-r1 (15 Oct 2011)
 
