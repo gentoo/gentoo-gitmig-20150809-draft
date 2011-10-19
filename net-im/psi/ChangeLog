@@ -1,6 +1,12 @@
 # ChangeLog for net-im/psi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.214 2011/10/19 09:16:31 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.215 2011/10/19 11:34:51 pva Exp $
+
+*psi-0.14-r4 (19 Oct 2011)
+
+  19 Oct 2011; Peter Volkov <pva@gentoo.org> -psi-0.14-r3.ebuild,
+  +psi-0.14-r4.ebuild:
+  Port to qt4-r2 eclass, bug #387655 wrt Agostino Sarubbo.
 
 *psi-0.14-r3 (19 Oct 2011)
 

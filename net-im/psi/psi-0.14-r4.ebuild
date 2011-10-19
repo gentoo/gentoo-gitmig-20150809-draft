@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14-r3.ebuild,v 1.1 2011/10/19 09:16:31 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14-r4.ebuild,v 1.1 2011/10/19 11:34:51 pva Exp $
 
 EAPI="2"
 
-inherit eutils qt4 multilib
+inherit eutils qt4-r2 multilib
 
 MY_P="${P/_rc/-rc}"
 
