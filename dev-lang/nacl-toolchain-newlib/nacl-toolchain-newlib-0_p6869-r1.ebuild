@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nacl-toolchain-newlib/nacl-toolchain-newlib-0_p6869.ebuild,v 1.3 2011/10/11 23:14:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nacl-toolchain-newlib/nacl-toolchain-newlib-0_p6869-r1.ebuild,v 1.1 2011/10/19 16:28:23 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -30,6 +30,9 @@ LICENSE+=" GPL-3 LGPL-3 || ( GPL-3 libgcc libstdc++ gcc-runtime-library-exceptio
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+# Stripping with a non-NaCl strip breaks the toolchain, bug #386931.
+RESTRICT="strip"
 
 RDEPEND="
 	>=dev-libs/gmp-5.0.2

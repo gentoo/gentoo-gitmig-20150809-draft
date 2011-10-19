@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/nacl-toolchain-newlib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nacl-toolchain-newlib/ChangeLog,v 1.4 2011/10/11 23:14:14 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nacl-toolchain-newlib/ChangeLog,v 1.5 2011/10/19 16:28:23 phajdan.jr Exp $
+
+*nacl-toolchain-newlib-0_p6869-r1 (19 Oct 2011)
+
+  19 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -nacl-toolchain-newlib-0_p6852.ebuild, -nacl-toolchain-newlib-0_p6869.ebuild,
+  +nacl-toolchain-newlib-0_p6869-r1.ebuild:
+  Do not strip the toolchain with a non-NaCl strip, this breaks it (bug #386931
+  by Kamen Dokov). Big thanks to Victor Khimenko for identifying the issue and
+  the solution. Removed old, broken versions.
 
   11 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   nacl-toolchain-newlib-0_p6869.ebuild:
