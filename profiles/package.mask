@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13152 2011/10/19 16:27:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13153 2011/10/19 19:52:13 tetromino Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (19 Oct 2011)
+# Requires nautilus[introspection] to run
+>=dev-python/nautilus-python-1.0
 
 # Richard Freeman <rich0@gentoo.org> (19 Oct 2011)
 # Emulator in latest sdk does not yet work
