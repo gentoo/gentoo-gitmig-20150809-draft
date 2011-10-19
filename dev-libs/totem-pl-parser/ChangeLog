@@ -1,6 +1,19 @@
 # ChangeLog for dev-libs/totem-pl-parser
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.104 2011/10/16 17:25:59 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.105 2011/10/19 07:03:36 tetromino Exp $
+
+*totem-pl-parser-2.32.6-r1 (19 Oct 2011)
+
+  19 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +totem-pl-parser-2.32.6-r1.ebuild,
+  +files/totem-pl-parser-2.32.6-quvi-0.4.patch:
+  Change dependency from quvi to libquvi per Tim Harder's recommendation (and
+  drop keywords accordingly). Add libquvi-0.4 compatibility patch (deprecated
+  "video" interface was removed during libquvi-0.2.20 development); fixes
+  bug #386651. Many thanks to Marien Zwart for the patch and to the many users
+  in the bug's CC list for testing. Patch has not yet been applied upstream
+  (see https://bugzilla.gnome.org/show_bug.cgi?id=661451), but is obviously
+  correct by inspection.
 
   16 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
   totem-pl-parser-2.32.6.ebuild:
