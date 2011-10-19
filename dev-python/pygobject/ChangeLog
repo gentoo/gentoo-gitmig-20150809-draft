@@ -1,6 +1,20 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.125 2011/10/05 17:13:42 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.126 2011/10/19 01:23:24 tetromino Exp $
+
+*pygobject-3.0.1 (19 Oct 2011)
+*pygobject-2.28.6-r50 (19 Oct 2011)
+
+  19 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +pygobject-2.28.6-r50.ebuild, +files/pygobject-2.90.1-make_check.patch,
+  +files/pygobject-3.0.0-support_multiple_python_versions.patch,
+  +pygobject-3.0.1.ebuild:
+  New pygobject:3, moved from the gnome overlay. Per upstream decision,
+  pygobject:2 (starting with 2.28.6-r50) will only be installing the "classic"
+  glib and gobject bindings; the new introspection-based bindings will be
+  provided only by pygobject:3. See
+  http://www.daa.com.au/pipermail/pygtk/2011-August/019920.html for a brief
+  introduction to pygobject:3 porting.
 
   05 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> pygobject-2.28.6.ebuild:
   ppc/ppc64 stable wrt #369909
