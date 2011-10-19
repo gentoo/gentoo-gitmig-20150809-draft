@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13153 2011/10/19 19:52:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13154 2011/10/19 21:33:45 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -218,10 +218,6 @@ games-fps/ut2004-redorchestra
 # Masked for removal in 30 days, bug 384561.
 app-emacs/rst
 
-# Markos Chandras <hwoarang@gentoo.org> (16 Sep 2011)
-# Masking app-misc/recoll for testing
-app-misc/recoll
-
 # Markos Chandras <hwoarang@gentoo.org> (26 Sep 2011)
 # 10 days masking for broader testing
 ~dev-libs/boost-1.47.0
@@ -250,11 +246,6 @@ games-action/dungeon
 >=net-libs/gssdp-0.11
 >=net-libs/gupnp-av-0.10.1
 >=net-misc/rygel-0.12.0
-
-# Markos Chandras <hwoarang@gentoo.org> (19 Sep 2011)
-# Masked for testing. Gentoo specific configuration and paths
-# need verification before releasing prey to testing tree
-app-laptop/prey
 
 # Tim Harder <radhermit@gentoo.org> (19 Sep 2011)
 # Mask development releases
@@ -726,10 +717,6 @@ app-emulation/vmware-server-console
 # Gentoo's bugzilla and then will be sent upstream by the maintainer
 # if appropriate."
 net-irc/atheme-services
-
-# Markos Chandras <hwoarang@gentoo.org> (17 Jul 2011)
-# Masked for testing due to init script inclusion
-~www-apps/tt-rss-1.5.5
 
 # Robin H. Johnson <robbat2@gentoo.org> (16 Jul 2011)
 # Masked for testing, no testsuite failures left!

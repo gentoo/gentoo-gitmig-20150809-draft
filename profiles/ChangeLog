@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5804 2011/10/19 19:52:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5805 2011/10/19 21:33:45 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Oct 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  unmask app-laptop/prey www-apps/tt-rss app-misc/recoll
 
   19 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
   Mask >=nautilus-python-1.0 (will not run without nautilus[introspection],
