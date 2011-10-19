@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/nautilus-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nautilus-python/ChangeLog,v 1.13 2011/10/14 00:40:24 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nautilus-python/ChangeLog,v 1.14 2011/10/19 19:52:40 tetromino Exp $
+
+*nautilus-python-1.1 (19 Oct 2011)
+
+  19 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  nautilus-python-0.7.3.ebuild, nautilus-python-1.0.ebuild,
+  +nautilus-python-1.1.ebuild, metadata.xml:
+  Add nautilus-python-1.1 with pygobject:3 compatibility. Fix pygobject
+  dependencies in 0.7.3 (slot 2) and 1.0 (needs introspection). 1.0
+  doesn't need autotools. Add myself to maintainers with pva's permission.
 
 *nautilus-python-1.0 (14 Oct 2011)
 
