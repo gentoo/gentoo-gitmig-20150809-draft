@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/pessulus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.93 2011/03/22 18:41:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/ChangeLog,v 1.94 2011/10/19 17:34:49 tetromino Exp $
+
+  19 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  pessulus-2.30.4.ebuild:
+  Depend on correct slot of pygobject.
 
   22 Mar 2011; Brent Baude <ranger@gentoo.org> pessulus-2.30.4.ebuild:
   Marking pessulus-2.30.4 ppc stable for bug 353436

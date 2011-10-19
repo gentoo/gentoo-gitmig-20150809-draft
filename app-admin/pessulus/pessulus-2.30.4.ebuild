@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/pessulus-2.30.4.ebuild,v 1.6 2011/03/22 18:41:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pessulus/pessulus-2.30.4.ebuild,v 1.7 2011/10/19 17:34:49 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -17,7 +17,7 @@ KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=dev-python/pygtk-2.13.0
-	dev-python/pygobject
+	dev-python/pygobject:2
 	>=dev-python/libbonobo-python-2.22
 	>=dev-python/bug-buddy-python-2.22
 	>=dev-python/gconf-python-2.17.2
