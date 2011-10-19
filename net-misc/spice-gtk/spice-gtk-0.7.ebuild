@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.7.ebuild,v 1.1 2011/07/25 12:32:11 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.7.ebuild,v 1.2 2011/10/19 08:37:10 dev-zero Exp $
 
 EAPI=3
 
@@ -15,11 +15,11 @@ SRC_URI="http://spice-space.org/download/gtk/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+cairo doc gnome gstreamer gtk3 introspection kde +pulseaudio python sasl static-libs"
+IUSE="+cairo doc gnome gstreamer gtk3 introspection kde +pulseaudio python sasl static-libs vala"
 
 RDEPEND="pulseaudio? ( !gstreamer? ( media-sound/pulseaudio ) )
 	gstreamer? ( media-libs/gstreamer )
-	>=app-emulation/spice-protocol-0.8.0-r1
+	>=app-emulation/spice-protocol-0.8.1
 	>=x11-libs/pixman-0.17.7
 	>=media-libs/celt-0.5.1.1:0.5.1
 	dev-libs/openssl
@@ -34,6 +34,7 @@ RDEPEND="pulseaudio? ( !gstreamer? ( media-sound/pulseaudio ) )
 	sasl? ( dev-libs/cyrus-sasl )
 	gnome? ( gnome-base/gconf )"
 DEPEND="${RDEPEND}
+	vala? ( dev-lang/vala:0.12 )
 	dev-lang/python
 	dev-lang/perl
 	dev-perl/Text-CSV
@@ -53,6 +54,10 @@ src_configure() {
 	use pulseaudio && audio="pulse"
 	use gstreamer && audio="gstreamer"
 	use gtk3 && gtk="3.0"
+	if use vala ; then
+		rm gtk/controller/controller.{c,vala.stamp} gtk/controller/menu.c # force vala regen
+		export VALAC=$(which valac-0.12)
+	fi
 
 	econf \
 		$(use_enable static-libs static) \
@@ -61,12 +66,13 @@ src_configure() {
 		$(use_with !cairo x11) \
 		$(use_with python) \
 		$(use_with sasl) \
+		$(use_enable vala) \
 		--with-gtk="${gtk}" \
 		--disable-smartcard
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake -j1 DESTDIR="${D}" install || die "emake install failed"
 
 	use static-libs || rm -rf "${D}"/usr/lib*/*.la
 	use python && rm -rf "${D}"/usr/lib*/python*/site-packages/*.la

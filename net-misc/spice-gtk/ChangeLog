@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/spice-gtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.5 2011/07/25 12:32:11 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.6 2011/10/19 08:37:10 dev-zero Exp $
+
+  19 Oct 2011; Tiziano Müller <dev-zero@gentoo.org> spice-gtk-0.7.ebuild,
+  metadata.xml:
+  Added vala USE-flag to regenerate the pre-generated code if requested. Fixed
+  bug #377051 by adding -j1 to 'emake install' (final solution will be upstream
+  once spice-gtk is integrated in spice). Fixed bug #377041 by updating the
+  spice-protocol dependency.
 
 *spice-gtk-0.7 (25 Jul 2011)
 
