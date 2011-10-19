@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.41.ebuild,v 1.1 2011/10/19 10:59:45 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.41.ebuild,v 1.2 2011/10/19 11:49:53 pva Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils qt4-r2 autotools
@@ -14,7 +14,7 @@ SRC_URI="http://download.transmissionbt.com/${PN}/files/${MY_P}.tar.xz"
 LICENSE="MIT GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gtk kde libnotify libcanberra nls qt4 utp"
+IUSE="gtk kde nls qt4 utp"
 
 RDEPEND="
 	sys-libs/zlib
@@ -25,9 +25,7 @@ RDEPEND="
 	>=net-libs/miniupnpc-1.6
 	gtk? ( >=dev-libs/glib-2.28:2
 		>=x11-libs/gtk+-2.22:2
-		>=dev-libs/dbus-glib-0.70
-		libnotify? ( >=x11-libs/libnotify-0.4.3 )
-		libcanberra? ( >=media-libs/libcanberra-0.10 ) )
+		>=dev-libs/dbus-glib-0.70 )
 	qt4? ( x11-libs/qt-gui:4[dbus] )"
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-2.2.6b
@@ -82,8 +80,6 @@ src_configure() {
 		$(use_enable nls) \
 		$(use_enable utp) \
 		$(use_enable gtk) \
-		$(use gtk && use_enable libnotify) \
-		$(use gtk && use_enable libcanberra) \
 		--enable-external-miniupnp
 
 	use qt4 && cd qt && eqmake4 qtr.pro
@@ -132,6 +128,11 @@ pkg_postinst() {
 	ewarn "'rpc-password' (in plain text, transmission-daemon will hash it on"
 	ewarn "start) in settings.json file located at /var/transmission/config or"
 	ewarn "any other appropriate config directory."
+	elog
+	elog "To enable sound emerge media-libs/libcanberra and check that at least"
+	elog "some sound them is selected. For this go:"
+	elog "Gnome/system/preferences/sound themes tab and 'sound theme: default'"
+	elog
 	if use utp; then
 		ewarn
 		ewarn "Since uTP is enabled ${PN} needs large kernel buffers for the UDP socket."

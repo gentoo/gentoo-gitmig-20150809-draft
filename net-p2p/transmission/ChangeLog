@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/transmission
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.157 2011/10/19 10:59:45 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/ChangeLog,v 1.158 2011/10/19 11:49:53 pva Exp $
+
+  19 Oct 2011; Peter Volkov <pva@gentoo.org> transmission-2.41.ebuild:
+  Drop noexistent configure options.
 
 *transmission-2.41 (19 Oct 2011)
 
