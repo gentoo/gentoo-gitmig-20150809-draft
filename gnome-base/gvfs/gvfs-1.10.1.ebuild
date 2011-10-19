@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.10.1.ebuild,v 1.2 2011/10/17 16:46:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.10.1.ebuild,v 1.3 2011/10/19 05:32:29 tetromino Exp $
 
 EAPI=4
 GCONF_DEBUG=no
@@ -24,13 +24,14 @@ else
 	DOCS="AUTHORS ChangeLog NEWS MAINTAINERS README TODO" # ChangeLog.pre-1.2 README.commits
 fi
 
-IUSE="archive avahi bluetooth bluray cdda crypt doc fuse gdu gnome-keyring gphoto2 +http ios prefix samba +udev"
+IUSE="afp archive avahi bluetooth bluray cdda doc fuse gdu gnome-keyring gphoto2 +http ios prefix samba +udev"
 
 RDEPEND=">=dev-libs/glib-2.29.14
 	sys-apps/dbus
 	dev-libs/libxml2
 	net-misc/openssh
 	!prefix? ( >=sys-fs/udev-164-r2 )
+	afp? ( >=dev-libs/libgcrypt-1.2.2 )
 	archive? ( app-arch/libarchive )
 	avahi? ( >=net-dns/avahi-0.6 )
 	bluetooth? (
@@ -39,7 +40,6 @@ RDEPEND=">=dev-libs/glib-2.29.14
 		net-wireless/bluez
 		dev-libs/expat )
 	bluray? ( media-libs/libbluray )
-	crypt? ( dev-libs/libgcrypt )
 	fuse? ( >=sys-fs/fuse-2.8.0 )
 	gdu? ( >=sys-apps/gnome-disk-utility-3.0.2 )
 	gnome-keyring? ( >=gnome-base/gnome-keyring-1.0 )
@@ -66,12 +66,12 @@ pkg_setup() {
 		--disable-hal
 		--disable-schemas-compile
 		--with-dbus-service-dir=/usr/share/dbus-1/services
+		$(use_enable afp)
 		$(use_enable archive)
 		$(use_enable avahi)
 		$(use_enable bluetooth obexftp)
 		$(use_enable bluray)
 		$(use_enable cdda)
-		$(use_enable crypt afp)
 		$(use_enable fuse)
 		$(use_enable gdu)
 		$(use_enable gphoto2)

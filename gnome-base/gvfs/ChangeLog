@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.154 2011/10/17 16:46:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.155 2011/10/19 05:32:29 tetromino Exp $
+
+  19 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> gvfs-1.10.1.ebuild,
+  metadata.xml:
+  Rename "crypt" USE flag to a more descriptive "afp", and document what the
+  flag does. Acked by ssuominen.
 
   17 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> gvfs-1.6.7-r1.ebuild,
   gvfs-1.10.1.ebuild:
