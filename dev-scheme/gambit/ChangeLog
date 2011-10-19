@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/gambit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/ChangeLog,v 1.33 2010/11/18 12:16:14 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/ChangeLog,v 1.34 2011/10/19 13:45:37 hkbst Exp $
+
+*gambit-4.6.2 (19 Oct 2011)
+
+  19 Oct 2011; Marijn Schouten <hkBst@gentoo.org> +gambit-4.6.2.ebuild:
+  bump
 
   18 Nov 2010; Justin Lecher <jlec@gentoo.org>
   -files/gambit-4.4.0-install_name.patch, gambit-4.5.3-r1.ebuild:
