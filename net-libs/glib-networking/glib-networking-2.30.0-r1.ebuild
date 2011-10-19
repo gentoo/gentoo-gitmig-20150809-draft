@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.30.0-r1.ebuild,v 1.1 2011/10/19 16:09:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/glib-networking/glib-networking-2.30.0-r1.ebuild,v 1.2 2011/10/19 16:32:21 mr_bones_ Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -47,7 +47,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# bug #387589, https://bugzilla.gnome.org/show_bug.cgi?id=662203 
+	# bug #387589, https://bugzilla.gnome.org/show_bug.cgi?id=662203
 	# Fixed in upstream git master
 	epatch "${FILESDIR}/${PN}-2.28.7-gnome-proxy-AC_ARG_WITH.patch"
 	mkdir m4
