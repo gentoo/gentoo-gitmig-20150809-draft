@@ -1,0 +1,11 @@
+# ChangeLog for games-strategy/openxcom
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/openxcom/ChangeLog,v 1.1 2011/10/19 13:27:24 scarabeus Exp $
+
+*openxcom-9999 (19 Oct 2011)
+
+  19 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> +openxcom-9999.ebuild,
+  +metadata.xml:
+  Add new ebuild for openxcom game, only live ebuild as releases do not use
+  autotools yet.
+
