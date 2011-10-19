@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.5.0.ebuild,v 1.1 2011/10/10 20:23:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.5.0.ebuild,v 1.2 2011/10/19 20:39:58 hwoarang Exp $
 
 EAPI="4"
 
@@ -30,7 +30,7 @@ DEPEND="dev-lang/jimtcl
 	ftdi? ( dev-embedded/libftdi )"
 RDEPEND="${DEPEND}"
 
-REQUIRED_USE="blaster? ( || ( ftdi ftd2xx ) ) ^^ ( ftdi ftd2xx )"
+REQUIRED_USE="blaster? ( || ( ftdi ftd2xx ) ) ftdi? ( !ftd2xx )"
 
 src_configure() {
 	# Here are some defaults
