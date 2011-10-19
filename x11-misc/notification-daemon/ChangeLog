@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/notification-daemon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.81 2011/05/01 16:27:32 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.82 2011/10/19 02:05:31 ssuominen Exp $
+
+*notification-daemon-0.7.3 (19 Oct 2011)
+
+  19 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +notification-daemon-0.7.3.ebuild:
+  Version bump.
 
   01 May 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   +notification-daemon-0.7.1.ebuild:
