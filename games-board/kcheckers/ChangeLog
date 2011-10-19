@@ -1,6 +1,9 @@
 # ChangeLog for games-board/kcheckers
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/kcheckers/ChangeLog,v 1.14 2009/11/21 18:21:59 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/kcheckers/ChangeLog,v 1.15 2011/10/19 17:14:43 mr_bones_ Exp $
+
+  19 Oct 2011; Michael Sterrett <mr_bones_@gentoo.org> kcheckers-0.8.1.ebuild:
+  use qt4-r2
 
   21 Nov 2009; Markus Meier <maekke@gentoo.org> kcheckers-0.8.1.ebuild:
   x86 stable, bug #288959
