@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-2.4.0.ebuild,v 1.1 2011/10/16 02:31:24 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-2.4.0.ebuild,v 1.2 2011/10/19 06:36:06 tupone Exp $
 
 EAPI=3
 
@@ -35,7 +35,8 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-2.0.0-sdl.patch
+	epatch "${FILESDIR}"/${PN}-2.0.0-sdl.patch \
+		"${FILESDIR}"/${P}-svn.patch
 	eautoreconf
 }
 
