@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.4.9_rc1.ebuild,v 1.1 2011/01/20 21:21:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.4.9_rc1.ebuild,v 1.2 2011/10/19 16:51:53 mr_bones_ Exp $
 
 EAPI=2
-inherit autotools multilib eutils games
+inherit multilib eutils games
 
 DESCRIPTION="an Ultima 7 game engine that runs on modern operating systems"
 HOMEPAGE="http://exult.sourceforge.net/"
