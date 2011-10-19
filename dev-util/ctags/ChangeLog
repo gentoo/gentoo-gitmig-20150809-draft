@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/ctags
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.77 2011/10/18 21:10:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.78 2011/10/19 11:18:06 chainsaw Exp $
+
+  19 Oct 2011; Tony Vroon <chainsaw@gentoo.org> ctags-5.8.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani & Agostino "ago" Sarubbo in bug #387175.
 
   18 Oct 2011; Jeroen Roovers <jer@gentoo.org> ctags-5.8.ebuild:
   Stable for HPPA (bug #387175).
