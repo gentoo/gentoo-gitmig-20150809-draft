@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subcheck/subcheck-0.78.2.ebuild,v 1.1 2010/08/08 00:48:39 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subcheck/subcheck-0.78.2.ebuild,v 1.2 2011/10/20 13:51:03 sbriesen Exp $
 
-EAPI="2"
+EAPI=2
 
 inherit eutils
 
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
-RDEPEND=""
+DEPEND="!sci-biology/ncbi-tools++"  # bug 377093
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}"
 
