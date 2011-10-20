@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ekeyd-1.1.4.ebuild,v 1.1 2011/09/05 20:10:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ekeyd-1.1.4-r1.ebuild,v 1.1 2011/10/20 11:40:28 flameeyes Exp $
 
 EAPI=4
 
@@ -28,7 +28,8 @@ EKEYD_RDEPEND="${EKEYD_RDEPEND}
 	munin? ( net-analyzer/munin )"
 
 RDEPEND="!minimal? ( ${EKEYD_RDEPEND} )
-	!app-crypt/ekey-egd-linux"
+	!app-crypt/ekey-egd-linux
+	sys-apps/openrc"
 DEPEND="!minimal? ( ${EKEYD_DEPEND} )"
 
 CONFIG_CHECK="~USB_ACM"
@@ -80,8 +81,8 @@ src_install() {
 	newexe host/egd-linux   ekey-egd-linux
 	newman host/egd-linux.8 ekey-egd-linux.8
 
-	newconfd "${FILESDIR}"/ekey-egd-linux.conf ekey-egd-linux
-	newinitd "${FILESDIR}"/ekey-egd-linux.init ekey-egd-linux
+	newconfd "${FILESDIR}"/ekey-egd-linux.conf.2 ekey-egd-linux
+	newinitd "${FILESDIR}"/ekey-egd-linux.init.2 ekey-egd-linux
 
 	dodoc doc/* AUTHORS ChangeLog THANKS
 
@@ -99,11 +100,11 @@ src_install() {
 	dodir /usr/libexec
 	mv "${D}"/usr/sbin/ekey*d "${D}"/usr/libexec
 
-	newinitd "${FILESDIR}"/${PN}.init ${PN}
+	newinitd "${FILESDIR}"/${PN}.init.2 ${PN}
 
 	if use usb && ! use kernel_linux; then
-		newinitd "${FILESDIR}"/ekey-ulusbd.init ekey-ulusbd
-		newconfd "${FILESDIR}"/ekey-ulusbd.conf ekey-ulusbd
+		newinitd "${FILESDIR}"/ekey-ulusbd.init.2 ekey-ulusbd
+		newconfd "${FILESDIR}"/ekey-ulusbd.conf.2 ekey-ulusbd
 	fi
 
 	if use kernel_linux; then
@@ -135,8 +136,8 @@ pkg_postinst() {
 	elog "falls below the value set in the kernel.random.write_wakeup_threshold"
 	elog "sysctl entry."
 	elog ""
-	elog "You can change the watermark in /etc/conf.d/ekey-egd-linux; if you do"
-	elog "it will require write access to the kernel's sysctl."
+	ewarn "Since version 1.1.4-r1, ekey-egd-linux will *not* set the watermark for"
+	ewarn "you, instead you'll have to configure the sysctl in /etc/sysctl.conf"
 
 	use minimal && return
 	# from here on, document everything that is not part of the minimal
