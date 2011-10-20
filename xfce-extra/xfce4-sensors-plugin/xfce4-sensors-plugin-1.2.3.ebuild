@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/xfce4-sensors-plugin-1.2.3.ebuild,v 1.4 2011/10/16 05:25:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-sensors-plugin/xfce4-sensors-plugin-1.2.3.ebuild,v 1.5 2011/10/20 13:42:57 ssuominen Exp $
 
 EAPI=4
 EAUTORECONF=yes
@@ -49,5 +49,9 @@ src_prepare() {
 	# Use flags from xfce4-dev-tools instead of defining them again in
 	# configure.in wrt #386979
 	sed -i -e '/PLATFORM_CFLAGS/s:-Werror::' configure.in || die
+	# http://bugzilla.xfce.org/show_bug.cgi?id=8057
+	# value "Monitor" in key "Categories" in group "Desktop Entry" requires
+	# another category to be present among the following categories: System
+	sed -i -e 's:Monitor:System;&:' src/xfce4-sensors.desktop.in || die
 	xfconf_src_prepare
 }
