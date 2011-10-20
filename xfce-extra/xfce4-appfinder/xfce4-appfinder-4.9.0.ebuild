@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-appfinder/xfce4-appfinder-4.9.0.ebuild,v 1.1 2011/10/20 17:02:13 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-appfinder/xfce4-appfinder-4.9.0.ebuild,v 1.2 2011/10/20 17:11:57 angelos Exp $
 
 EAPI=4
 inherit xfconf
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.84
 	>=x11-libs/gtk+-2.20:2
 	>=xfce-base/libxfce4util-4.8
 	>=xfce-base/libxfce4ui-4.8
-	>=xfce-base/garcon-0.1.2
+	>=xfce-base/garcon-0.1.7
 	>=xfce-base/xfconf-4.8"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -27,5 +27,5 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	XFCONF=( $(xfconf_use_debug) )
-	DOCS=( AUTHORS ChangeLog NEWS README TODO )
+	DOCS=( AUTHORS ChangeLog NEWS )
 }
