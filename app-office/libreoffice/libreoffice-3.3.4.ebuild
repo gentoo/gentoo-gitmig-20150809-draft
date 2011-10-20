@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.4.ebuild,v 1.5 2011/10/02 15:11:33 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.4.ebuild,v 1.6 2011/10/20 11:10:58 scarabeus Exp $
 
 EAPI="3"
 
@@ -188,6 +188,8 @@ DEPEND="${COMMON_DEPEND}
 	x11-proto/xextproto
 	x11-proto/xineramaproto
 	x11-proto/xproto"
+
+RESTRICT="test"
 
 pkg_setup() {
 
