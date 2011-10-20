@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/gnome-themes-standard-3.2.1.ebuild,v 1.1 2011/10/19 04:25:39 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-standard/gnome-themes-standard-3.2.1.ebuild,v 1.2 2011/10/20 09:44:35 flameeyes Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -29,8 +29,6 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	!<x11-themes/gnome-themes-2.32.1-r1"
 
-# This ebuild does not install any binaries
-RESTRICT="binchecks strip"
 # FIXME: --enable-placeholders fails
 G2CONF="--disable-static --disable-placeholders"
 DOCS="ChangeLog NEWS"
