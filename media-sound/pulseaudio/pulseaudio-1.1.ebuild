@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-1.0-r2.ebuild,v 1.1 2011/10/08 11:28:50 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-1.1.ebuild,v 1.1 2011/10/20 16:15:56 ford_prefect Exp $
 
 EAPI=4
 
@@ -80,7 +80,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-version-fix.patch"
+	epatch "${FILESDIR}/${P}-python3-fix.patch"
 }
 
 src_configure() {

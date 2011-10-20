@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.250 2011/10/08 11:28:50 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.251 2011/10/20 16:15:56 ford_prefect Exp $
+
+*pulseaudio-1.1 (20 Oct 2011)
+
+  20 Oct 2011; Arun Raghavan <ford_prefect@gentoo.org>
+  -pulseaudio-1.0-r1.ebuild, -pulseaudio-1.0-r2.ebuild, +pulseaudio-1.1.ebuild,
+  +files/pulseaudio-1.1-python3-fix.patch:
+  New stable releases. Bunch of bug fixes. Remove old versions since some of
+  the problems were license related.
 
 *pulseaudio-1.0-r2 (08 Oct 2011)
 
