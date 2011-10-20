@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.195 2011/10/18 17:46:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.196 2011/10/20 03:39:19 vapier Exp $
+
+*libtool-2.4-r4 (20 Oct 2011)
+
+  20 Oct 2011; Mike Frysinger <vapier@gentoo.org> -libtool-2.4-r3.ebuild,
+  +libtool-2.4-r4.ebuild, libtool-2.4.2.ebuild, libtool-9999.ebuild:
+  Have system libtool build static objs by default even when USE=-static-libs
+  #336167#20.
 
 *libtool-2.4.2 (18 Oct 2011)
 

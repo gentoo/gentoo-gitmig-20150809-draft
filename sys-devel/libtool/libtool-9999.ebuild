@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-9999.ebuild,v 1.9 2011/10/04 20:42:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-9999.ebuild,v 1.10 2011/10/20 03:39:19 vapier Exp $
 
 EAPI="2" #356089
 
@@ -72,6 +72,11 @@ src_install() {
 	# While the libltdl.la file is not used directly, the m4 ltdl logic
 	# keys off of its existence when searching for ltdl support. #293921
 	#use static-libs || find "${D}" -name libltdl.la -delete
+
+	# Building libtool with --disable-static will cause the installed
+	# helper to not build static objects by default.  This is undesirable
+	# for crappy packages that utilize the system libtool, so undo that.
+	dosed '1,/^build_old_libs=/{/^build_old_libs=/{s:=.*:=yes:}}' /usr/bin/libtool || die
 
 	for x in $(find "${D}" -name config.guess -o -name config.sub) ; do
 		rm -f "${x}" ; ln -sf /usr/share/gnuconfig/${x##*/} "${x}"
