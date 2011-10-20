@@ -1,6 +1,13 @@
 # ChangeLog for app-text/cedilla
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cedilla/ChangeLog,v 1.8 2008/04/21 17:02:52 phreak Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/cedilla/ChangeLog,v 1.9 2011/10/20 13:05:13 titanofold Exp $
+
+*cedilla-0.6 (20 Oct 2011)
+
+  20 Oct 2011; Aaron W. Swenson <titanofold@gentoo.org>
+  +files/cedilla-gentoo-r1.patch, +cedilla-0.6.ebuild, metadata.xml:
+  Version bump. Now proxy-maintained by Ian "idella4" Delaney, proxy-committed
+  by Aaron W. Swenson.
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata

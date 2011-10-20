@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
-		<name>Default assignee for orphaned packages</name>
-	</maintainer>
+  <herd>no-herd</herd>
+  <maintainer>
+	<email>johneed@hotmail.com</email>
+	<name>Ian Delaney</name>
+	<description>Proxy maintainer, assign bugs</description>
+  </maintainer>
+  <maintainer>
+	<email>titanofold@gentoo.org</email>
+	<name>Aaron W. Swenson</name>
+  </maintainer>
 </pkgmetadata>
