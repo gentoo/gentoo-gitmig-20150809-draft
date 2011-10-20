@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5808 2011/10/20 14:14:33 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5809 2011/10/20 17:19:00 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Oct 2011; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Add new virtual/rubygems to the ruby 1.9 mask.
 
   20 Oct 2011; Stefan Briesenick <sbriesen@gentoo.org> package.mask:
   masked net-misc/x25_utils for removal
