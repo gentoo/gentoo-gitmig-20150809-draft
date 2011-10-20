@@ -1,6 +1,9 @@
 # ChangeLog for games-board/pychess
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/ChangeLog,v 1.12 2011/07/13 16:54:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pychess/ChangeLog,v 1.13 2011/10/20 02:54:50 radhermit Exp $
+
+  20 Oct 2011; Tim Harder <radhermit@gentoo.org> pychess-0.10.ebuild:
+  Use slot dep for pygobject.
 
   13 Jul 2011; Michael Sterrett <mr_bones_@gentoo.org> pychess-0.10.ebuild:
   add dev-python/pygtksourceview dep (bug #375105)
