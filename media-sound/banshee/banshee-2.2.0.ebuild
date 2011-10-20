@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.2.0.ebuild,v 1.1 2011/09/22 17:10:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.2.0.ebuild,v 1.2 2011/10/20 22:54:37 pacho Exp $
 
 EAPI="4"
 
@@ -93,6 +93,7 @@ src_prepare () {
 }
 
 src_configure() {
+	# soundmenu needs a properly maintained and updated indicate-sharp
 	local myconf="--disable-dependency-tracking
 		--disable-static
 		--disable-maintainer-mode
@@ -105,7 +106,7 @@ src_configure() {
 		--disable-torrent
 		--disable-shave
 		--disable-ubuntuone
-		--enable-soundmenu"
+		--disable-soundmenu"
 
 	econf \
 		$(use_enable doc docs) \

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.139 2011/09/22 17:10:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.140 2011/10/20 22:54:37 pacho Exp $
+
+  20 Oct 2011; Pacho Ramos <pacho@gentoo.org> banshee-2.2.0.ebuild:
+  soundmenu needs a properly maintained and updated indicate-sharp, disabling
+  it then, bug #387827 by Flameeyes.
 
 *banshee-2.2.0 (22 Sep 2011)
 
