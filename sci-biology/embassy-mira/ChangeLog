@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/embassy-mira
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-mira/ChangeLog,v 1.6 2011/03/13 12:57:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-mira/ChangeLog,v 1.7 2011/10/20 08:32:11 xarthisius Exp $
+
+  20 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  embassy-mira-2.8.2.ebuild, embassy-mira-2.8.2-r1.ebuild:
+  Fix SRC_URI for emboss wrt #387299
 
   13 Mar 2011; Raúl Porcel <armin76@gentoo.org> embassy-mira-2.8.2.ebuild,
   embassy-mira-2.8.2-r1.ebuild:
