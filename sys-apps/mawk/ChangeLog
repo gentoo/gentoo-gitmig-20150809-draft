@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/mawk
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mawk/ChangeLog,v 1.17 2010/07/14 21:38:43 sping Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mawk/ChangeLog,v 1.18 2011/10/20 15:04:10 vapier Exp $
+
+  20 Oct 2011; Mike Frysinger <vapier@gentoo.org> mawk-1.3.4_p20100625.ebuild,
+  +files/mawk-1.3.4-cross-compile.patch:
+  Make this package cross-compile.
 
 *mawk-1.3.4_p20100625 (14 Jul 2010)
 
