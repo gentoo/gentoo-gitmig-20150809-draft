@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gromit/gromit-20041213-r1.ebuild,v 1.3 2011/04/10 06:43:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gromit/gromit-20041213-r1.ebuild,v 1.4 2011/10/20 22:38:19 pacho Exp $
 
 EAPI="2"
 
@@ -24,6 +24,10 @@ src_prepare() {
 		-e 's:-Wall:-Wall $(CFLAGS) $(LDFLAGS):' \
 		-e 's:gcc:$(CC):g' \
 		|| die "sed Makefile failed"
+
+	# Drop DEPRECATED flags, bug #387833
+	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED ::g' \
+		Makefile || die
 }
 
 src_compile() {
