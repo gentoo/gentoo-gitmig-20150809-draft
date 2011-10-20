@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5805 2011/10/19 21:33:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5806 2011/10/20 01:07:26 mattst88 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Oct 2011; Matt Turner <mattst88@gentoo.org> package.mask:
+  Mask >=gnome-dvb-daemon-0.2.3 until pygobject:3 is unmasked.
 
   19 Oct 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
   unmask app-laptop/prey www-apps/tt-rss app-misc/recoll
