@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/ark
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.199 2011/10/15 17:26:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.200 2011/10/20 00:14:06 reavertm Exp $
+
+*ark-4.6.5-r1 (20 Oct 2011)
+*ark-4.7.1-r1 (20 Oct 2011)
+*ark-4.7.2-r1 (20 Oct 2011)
+
+  20 Oct 2011; Maciej Mrozowski <reavertm@gentoo.org> +ark-4.6.5-r1.ebuild,
+  +ark-4.7.1-r1.ebuild, +ark-4.7.2-r1.ebuild,
+  +files/ark-4.6.5-CVE-2011-2725.patch:
+  CVE-2011-2725, bug 386055
 
   15 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org> -ark-4.7.0.ebuild:
   Drop KDE 4.7.0
