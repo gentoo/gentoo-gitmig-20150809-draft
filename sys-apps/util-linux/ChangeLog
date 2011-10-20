@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.354 2011/10/17 22:01:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.355 2011/10/20 00:36:36 vapier Exp $
+
+  20 Oct 2011; Mike Frysinger <vapier@gentoo.org> util-linux-2.20-r1.ebuild,
+  util-linux-9999.ebuild:
+  Inform users of new default clear behavior #381401#5 by Neil Bothwick.
 
 *util-linux-2.20-r1 (17 Oct 2011)
 

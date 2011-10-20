@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.20-r1.ebuild,v 1.1 2011/10/17 22:01:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.20-r1.ebuild,v 1.2 2011/10/20 00:36:36 vapier Exp $
 
 EAPI="3"
 
@@ -116,4 +116,9 @@ src_install() {
 		newinitd "${FILESDIR}"/crypto-loop.initd crypto-loop || die
 		newconfd "${FILESDIR}"/crypto-loop.confd crypto-loop || die
 	fi
+}
+
+pkg_postinst() {
+	elog "The agetty util now clears the terminal by default.  You"
+	elog "might want to add --noclear to your /etc/inittab lines."
 }
