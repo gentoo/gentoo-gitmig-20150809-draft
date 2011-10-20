@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13156 2011/10/20 12:53:00 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13157 2011/10/20 13:57:41 sbriesen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Stefan Briesenick <sbriesen@gentoo.org> (20 Oct 2011)
+# unmaintained upstream, obsolete in general. (bug #337657)
+# Masked for removal on 20 Nov 2011
+net-misc/x25_utils
 
 # Matt Turner <mattst88@gentoo.org> (19 Oct 2011)
 # pygobject:3 is masked. Remove this mask when pygobject:3 is unmasked.
