@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/cclive-0.7.6.ebuild,v 1.4 2011/10/18 23:48:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cclive/cclive-0.7.6.ebuild,v 1.5 2011/10/20 10:00:52 chainsaw Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PV:0:3}/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND=">=media-libs/quvi-0.2.17
