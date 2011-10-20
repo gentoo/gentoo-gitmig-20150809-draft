@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.28 2011/10/20 10:50:01 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.29 2011/10/20 12:51:58 chainsaw Exp $
+
+  20 Oct 2011; Tony Vroon <chainsaw@gentoo.org> dahdi-2.5.0.1.ebuild:
+  CONFIG_CHECK was disabled during testing, I should have undone that.
 
 *dahdi-2.5.0.1 (20 Oct 2011)
 
