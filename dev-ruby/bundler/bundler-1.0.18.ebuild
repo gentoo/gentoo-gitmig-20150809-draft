@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/bundler-1.0.18.ebuild,v 1.2 2011/09/09 12:22:33 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/bundler-1.0.18.ebuild,v 1.3 2011/10/20 17:38:09 graaff Exp $
 
 EAPI=2
 
@@ -25,7 +25,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~sparc-solaris ~x86-solaris"
 IUSE=""
 
-ruby_add_rdepend dev-ruby/rubygems
+ruby_add_rdepend virtual/rubygems
 
 ruby_add_bdepend "test? ( app-text/ronn dev-ruby/rspec:2 )"
 
