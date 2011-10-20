@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cuecue
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuecue/ChangeLog,v 1.9 2009/03/10 22:08:00 beandog Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cuecue/ChangeLog,v 1.10 2011/10/20 13:37:50 sbriesen Exp $
+
+  20 Oct 2011; Stefan Briesenick <sbriesen@gentoo.org> cuecue-0.2.2-r1.ebuild:
+  bump to EAPI=4, solving bug #378519.
 
   10 Mar 2009; Steve Dibb <beandog@gentoo.org> cuecue-0.2.2-r1.ebuild:
   Enable vorbis by default, bug 254745
