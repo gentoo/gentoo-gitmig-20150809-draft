@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.155 2011/10/13 22:40:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.156 2011/10/20 09:47:24 flameeyes Exp $
+
+  20 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  elfutils-0.152-r1.ebuild:
+  QA: fix src_test after recent cross-compile changes.
 
   13 Oct 2011; Mike Frysinger <vapier@gentoo.org> elfutils-0.152-r1.ebuild:
   Add support for cross-compiling.
