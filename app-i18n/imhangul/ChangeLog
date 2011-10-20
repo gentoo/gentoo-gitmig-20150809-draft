@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/imhangul
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/ChangeLog,v 1.34 2011/09/25 17:53:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/ChangeLog,v 1.35 2011/10/20 22:47:18 pacho Exp $
+
+  21 Oct 2011; Pacho Ramos <pacho@gentoo.org> imhangul-2.0.0.ebuild,
+  imhangul-3.0.0.ebuild:
+  Drop DEPRECATED flags, bug #387825
 
   25 Sep 2011; Raúl Porcel <armin76@gentoo.org> imhangul-0.9.12.ebuild,
   imhangul-0.9.16.ebuild, imhangul-2.0.0.ebuild, imhangul-3.0.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-3.0.0.ebuild,v 1.2 2011/09/25 17:53:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-3.0.0.ebuild,v 1.3 2011/10/20 22:47:18 pacho Exp $
 
 EAPI="3"
 inherit multilib
@@ -25,6 +25,11 @@ update_gtk_immodules() {
 	if [ -x "${EPREFIX}/usr/bin/gtk-query-immodules-3.0" ] ; then
 		"${EPREFIX}/usr/bin/gtk-query-immodules-3.0" --update-cache
 	fi
+}
+
+src_prepare() {
+	# Drop DEPRECATED flags, bug #387825
+	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' Makefile.am Makefile.in || die
 }
 
 src_configure() {
