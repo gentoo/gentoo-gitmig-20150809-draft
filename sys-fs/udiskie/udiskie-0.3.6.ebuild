@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udiskie/udiskie-0.3.6.ebuild,v 1.2 2011/02/12 10:42:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udiskie/udiskie-0.3.6.ebuild,v 1.3 2011/10/20 02:48:12 radhermit Exp $
 
 EAPI=3
 
@@ -20,6 +20,6 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-python/dbus-python
-	dev-python/pygobject
+	dev-python/pygobject:2
 	sys-fs/udisks"
 DEPEND=""

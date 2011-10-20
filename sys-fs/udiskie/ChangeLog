@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udiskie
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udiskie/ChangeLog,v 1.12 2011/10/01 21:39:16 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udiskie/ChangeLog,v 1.13 2011/10/20 02:48:12 radhermit Exp $
+
+  20 Oct 2011; Tim Harder <radhermit@gentoo.org> udiskie-0.3.6.ebuild,
+  udiskie-0.3.7.ebuild, udiskie-0.3.9.ebuild, udiskie-0.3.10.ebuild:
+  Use slot dep for pygobject.
 
 *udiskie-0.3.10 (01 Oct 2011)
 
