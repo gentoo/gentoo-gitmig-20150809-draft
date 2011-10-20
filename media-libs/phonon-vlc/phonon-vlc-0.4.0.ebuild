@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/phonon-vlc-0.4.0.ebuild,v 1.7 2011/10/02 19:57:38 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/phonon-vlc-0.4.0.ebuild,v 1.8 2011/10/20 09:50:14 flameeyes Exp $
 
 EAPI=4
 
@@ -37,7 +37,6 @@ DOCS=( AUTHORS )
 
 pkg_postinst() {
 	elog "For more verbose debug information, export the following variables:"
-	use v4l2 && elog "PHONON_VLC_DEBUG=3"
 	elog "PHONON_DEBUG=1"
 	elog ""
 	elog "To make KDE detect the new backend without reboot, run:"

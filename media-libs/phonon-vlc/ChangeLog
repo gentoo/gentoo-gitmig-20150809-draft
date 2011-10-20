@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/phonon-vlc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/ChangeLog,v 1.12 2011/10/02 19:57:38 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon-vlc/ChangeLog,v 1.13 2011/10/20 09:50:14 flameeyes Exp $
+
+  20 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  phonon-vlc-0.4.0.ebuild, phonon-vlc-0.4.1.ebuild, phonon-vlc-9999.ebuild:
+  QA: remove reference to USE flag that is no longer present.
 
   02 Oct 2011; Maciej Mrozowski <reavertm@gentoo.org> phonon-vlc-0.4.0.ebuild,
   phonon-vlc-0.4.1.ebuild, phonon-vlc-9999.ebuild:
