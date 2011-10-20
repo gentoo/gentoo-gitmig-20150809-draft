@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.84 2011/09/09 17:34:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.85 2011/10/20 17:20:55 angelos Exp $
+
+  20 Oct 2011; Christoph Mende <angelos@gentoo.org> mpc-0.21.ebuild:
+  Add missing pkgconfig dep (bug #386913)
 
   09 Sep 2011; Michał Górny <mgorny@gentoo.org> mpc-0.21.ebuild:
   Migrate to bash-completion-r1.
