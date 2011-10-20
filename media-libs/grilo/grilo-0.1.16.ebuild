@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/grilo-0.1.16.ebuild,v 1.1 2011/08/14 10:52:25 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/grilo-0.1.16.ebuild,v 1.2 2011/10/20 17:04:00 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -23,11 +23,13 @@ RDEPEND="
 	introspection? ( >=dev-libs/gobject-introspection-0.9 )"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
+	gnome-base/gnome-common
 	doc? ( >=dev-util/gtk-doc-1.10 )
 	vala? ( dev-lang/vala:0.12[vapigen] )
 	test? (
 		dev-python/pygobject:2[introspection?]
 		media-plugins/grilo-plugins )"
+# eautoreconf requires gnome-common
 
 # Tests fail horribly, but return 0
 RESTRICT="test"

@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/grilo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/ChangeLog,v 1.4 2011/10/01 16:29:27 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/ChangeLog,v 1.5 2011/10/20 17:04:00 tetromino Exp $
+
+  20 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> grilo-0.1.16.ebuild,
+  grilo-0.1.17.ebuild:
+  Add gnome-common build dep (bug #387879). Thanks to Albert W. Hopkins
+  <marduk@python.net> for reporting.
 
 *grilo-0.1.17 (01 Oct 2011)
 
