@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/imageworsener
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imageworsener/ChangeLog,v 1.8 2011/09/02 22:00:02 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imageworsener/ChangeLog,v 1.9 2011/10/20 00:47:21 sping Exp $
+
+*imageworsener-0.9.5 (20 Oct 2011)
+
+  20 Oct 2011; Sebastian Pipping <sping@gentoo.org>
+  +imageworsener-0.9.5.ebuild,
+  +files/imageworsener-0.9.5-disable-webp-tests.patch,
+  +files/imageworsener-0.9.5-webp.patch:
+  Bump to 0.9.5. Upstream has moved to CMake, libwebp detection needed
+  patching, libwebp 0.1.2 too old, bug #387761 opened for that.
 
 *imageworsener-0.9.4 (02 Sep 2011)
 
