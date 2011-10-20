@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5810 2011/10/20 17:39:00 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5811 2011/10/20 18:19:57 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Oct 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  unmask boost-1.47.0
 
   20 Oct 2011; Hans de Graaff <graaff@gentoo.org> base/package.use.force:
   Force correct USE flags for virtual/rubygems versions.
