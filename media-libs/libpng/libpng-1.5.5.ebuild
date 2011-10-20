@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.5.5.ebuild,v 1.10 2011/10/18 14:18:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.5.5.ebuild,v 1.11 2011/10/20 15:46:20 ssuominen Exp $
 
 # WARNING: media-gfx/optipng is shipping internal copy of libpng14. Look out for
 # security.
@@ -19,11 +19,11 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt"
 IUSE="apng static-libs"
 
-RDEPEND="sys-libs/zlib
+RDEPEND="sys-libs/zlib"
+DEPEND="${RDEPEND}
 	!!<x11-libs/gdk-pixbuf-2.24.0-r1
 	!!<x11-libs/libsexy-0.1.11-r3
-	!!<x11-libs/libview-0.6.6-r2"
-DEPEND="${RDEPEND}
+	!!<x11-libs/libview-0.6.6-r2
 	app-arch/xz-utils"
 
 DOCS=( ANNOUNCE CHANGES libpng-manual.txt README TODO )

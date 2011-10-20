@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libpng
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.321 2011/10/18 14:18:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.322 2011/10/20 15:46:20 ssuominen Exp $
+
+  20 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> libpng-1.5.5.ebuild:
+  Move blockers from RDEPEND to DEPEND as per recommendation by "few" from
+  Freenode
 
   18 Oct 2011; Jeroen Roovers <jer@gentoo.org> libpng-1.5.5.ebuild:
   Stable for HPPA (bug #384701).
@@ -9,10 +13,8 @@
   ppc/ppc64 stable wrt #384701
 
   16 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> libpng-1.5.5.ebuild:
-  Block <libview-0.6.6-r2 for polluting pkg-config Libs: with versioned -lpng
-
-  16 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> libpng-1.5.5.ebuild:
-  Block <libsexy-0.1.11-r3 for polluting pkg-config Libs: with versioned -lpng
+  Block <libsexy-0.1.11-r3 and <libview-0.6.6-r2 for polluting pkg-config
+  Libs: with versioned -lpng
 
   16 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> libpng-1.5.5.ebuild:
   amd64 stable wrt #384701
