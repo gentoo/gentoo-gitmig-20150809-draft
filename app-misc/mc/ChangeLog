@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.224 2011/08/14 19:59:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.225 2011/10/20 17:40:01 slyfox Exp $
+
+*mc-4.8.0 (20 Oct 2011)
+*mc-4.7.5.5 (20 Oct 2011)
+
+  20 Oct 2011; Sergei Trofimovich <slyfox@gentoo.org> +mc-4.7.5.5.ebuild,
+  +mc-4.8.0.ebuild:
+  Version bump (requested by Anton Kochkov in bug #387883)
 
   14 Aug 2011; Fabian Groffen <grobian@gentoo.org> mc-4.7.5.3.ebuild:
   Allow linkage to succeed on Solaris, bug #378699 by Daniel Vergien
