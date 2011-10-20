@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13155 2011/10/20 01:07:27 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13156 2011/10/20 12:53:00 vadimk Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -706,13 +706,6 @@ dev-tex/pdftex
 =dev-libs/guiloader-2.99.0
 =dev-libs/guiloader-c++-2.99.0
 =dev-util/crow-designer-2.99.0
-
-# Vadim Kuznetsov <vadimk@gentoo.org> (21 Jul 2001)
-# multiple vulnerabilities. Bug 374599
-# Out of upstream support
-app-emulation/vmware-server
-=app-emulation/vmware-modules-208.2
-app-emulation/vmware-server-console
 
 # Nathan Phillip Brink <binki@gentoo.org> (20 Jul 2011)
 # Masked indefinitely. The atheme upstream requests:
