@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-9.6.1.ebuild,v 1.4 2011/06/24 18:53:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-9.6.1.ebuild,v 1.5 2011/10/20 22:32:08 pacho Exp $
 
 EAPI=2
 
@@ -54,6 +54,12 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Drop DEPRECATED flags, bug #387817
+	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' \
+		src/gcompris/Makefile.am src/gcompris/Makefile.in \
+		src/goocanvas/src/Makefile.am src/goocanvas/src/Makefile.in \
+		|| die
+
 	epatch "${FILESDIR}"/${P}-build.patch
 	cp /usr/share/gettext/config.rpath .
 	eautoreconf
