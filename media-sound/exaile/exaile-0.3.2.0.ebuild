@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.3.2.0.ebuild,v 1.7 2011/07/07 15:31:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.3.2.0.ebuild,v 1.8 2011/10/20 02:52:13 radhermit Exp $
 
 EAPI=3
 
@@ -21,7 +21,7 @@ IUSE="cddb libnotify nls"
 RDEPEND="dev-python/dbus-python
 	>=media-libs/mutagen-1.10
 	>=dev-python/pygtk-2.17
-	>=dev-python/pygobject-2.18
+	>=dev-python/pygobject-2.18:2
 	dev-python/gst-python:0.10
 	media-libs/gst-plugins-good:0.10
 	media-plugins/gst-plugins-meta:0.10
