@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-dvb-daemon/gnome-dvb-daemon-0.2.2.ebuild,v 1.5 2011/09/15 21:28:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-dvb-daemon/gnome-dvb-daemon-0.2.2.ebuild,v 1.6 2011/10/20 01:14:01 mattst88 Exp $
 
 EAPI="3"
 
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/glib-2.28.5
 	media-plugins/gst-plugins-dvb
 	>=dev-lang/python-2.5
 	dev-python/gst-python
-	>=dev-python/pygobject-2.28.4
+	>=dev-python/pygobject-2.28.4:2
 	>=dev-libs/gobject-introspection-0.10.8
 	|| ( sys-fs/udev[gudev] sys-fs/udev[extras] )
 	vala? ( >=dev-lang/vala-0.12 )
