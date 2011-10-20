@@ -1,12 +1,12 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/files/acct.initd,v 1.2 2011/01/26 05:36:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/files/acct.initd,v 1.3 2011/10/20 05:07:52 vapier Exp $
 
-opts="report reload"
+extra_started_commands="report"
 
 depend() {
-    need localmount
+	need localmount
 }
 
 checkconfig() {
@@ -22,24 +22,16 @@ start() {
 	checkconfig || return 1
 
 	ebegin "Starting accounting"
-	accton "${ACCT_LOG}"
+	accton "${ACCT_LOG}" >/dev/null
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping accounting"
-	accton off
+	accton off >/dev/null
 	eend $?
 }
 
 report() {
 	sa ${REPORT_OPTS} "${ACCT_LOG}"
 }
-
-reload() {
-	service_started "${SVCNAME}" || return
-	svc_stop
-	svc_start
-}
-
-# vim:ts=4 sw=4:

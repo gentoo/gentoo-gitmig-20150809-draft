@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/acct
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.51 2011/07/11 03:14:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.52 2011/10/20 05:07:52 vapier Exp $
+
+*acct-6.5.5-r2 (20 Oct 2011)
+
+  20 Oct 2011; Mike Frysinger <vapier@gentoo.org> +acct-6.5.5-r2.ebuild,
+  +files/acct-6.5.5-cross-compile.patch, files/acct.initd:
+  Add arm love. Add cross-compile fix by Diego Elio Pettenò. Clean up init.d
+  script #367815 by Robert Trace.
 
   11 Jul 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   "was mistaken in terms of how this works"
