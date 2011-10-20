@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde-agent/polkit-kde-agent-0.99.0.ebuild,v 1.4 2011/08/14 17:55:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde-agent/polkit-kde-agent-0.99.0.ebuild,v 1.5 2011/10/20 08:10:54 xarthisius Exp $
 
 EAPI="3"
 
@@ -21,7 +21,7 @@ DESCRIPTION="PolKit agent module for KDE."
 HOMEPAGE="http://www.kde.org"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~arm x86"
+KEYWORDS="amd64 ~arm ~ppc x86"
 SLOT="4"
 IUSE="debug"
 

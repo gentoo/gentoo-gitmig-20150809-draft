@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/polkit-kde-agent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde-agent/ChangeLog,v 1.4 2011/08/14 17:55:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/polkit-kde-agent/ChangeLog,v 1.5 2011/10/20 08:10:54 xarthisius Exp $
+
+  20 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  polkit-kde-agent-0.99.0.ebuild:
+  Marked ~ppc wrt #387683, ATed by Massimo Burcheri <massimo.burcheri@gmx.de>
 
   14 Aug 2011; Markus Meier <maekke@gentoo.org> polkit-kde-agent-0.99.0.ebuild:
   add ~arm, bug #376613
