@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/ii
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ii/ChangeLog,v 1.6 2008/11/27 09:59:06 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ii/ChangeLog,v 1.7 2011/10/20 18:14:07 binki Exp $
+
+*ii-1.6 (20 Oct 2011)
+
+  20 Oct 2011; Nathan Phillip Brink <binki@gentoo.org> -ii-1.4.ebuild,
+  +ii-1.6.ebuild:
+  Bump to ii-1.6 for bug #387907 by Richard Anderson. Install query.sh as
+  ii-query, bump to EAPI=4.
 
 *ii-1.4 (27 Nov 2008)
 
