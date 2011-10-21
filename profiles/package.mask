@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13163 2011/10/21 19:52:00 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13164 2011/10/21 20:01:49 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -38,7 +38,7 @@ net-misc/x25_utils
 
 # Matt Turner <mattst88@gentoo.org> (19 Oct 2011)
 # pygobject:3 is masked. Remove this mask when pygobject:3 is unmasked.
->=gnome-extras/gnome-dvb-daemon-0.2.3
+>=gnome-extra/gnome-dvb-daemon-0.2.3
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (19 Oct 2011)
 # Requires nautilus[introspection] to run
