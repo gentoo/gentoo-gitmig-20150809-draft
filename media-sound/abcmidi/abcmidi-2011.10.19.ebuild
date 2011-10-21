@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcmidi/abcmidi-2011.10.19.ebuild,v 1.1 2011/10/21 06:47:56 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcmidi/abcmidi-2011.10.19.ebuild,v 1.2 2011/10/21 20:18:20 radhermit Exp $
 
 EAPI="4"
 
@@ -23,11 +23,6 @@ S="${WORKDIR}/${PN}"
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-install.patch
 	rm makefile || die
-}
-
-src_configure() {
-	econf \
-		--docdir=/usr/share/doc/${PF}
 }
 
 src_install() {
