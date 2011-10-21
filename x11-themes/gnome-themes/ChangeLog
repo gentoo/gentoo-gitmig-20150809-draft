@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gnome-themes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.250 2011/10/16 17:48:23 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.251 2011/10/21 15:08:28 phajdan.jr Exp $
+
+  21 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gnome-themes-2.32.1-r1.ebuild:
+  x86 stable wrt bug #385699
 
   16 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gnome-themes-2.32.1-r1.ebuild:
