@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.45 2011/10/19 09:31:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.46 2011/10/21 07:56:29 scarabeus Exp $
 
 EAPI=4
 
@@ -437,6 +437,7 @@ src_configure() {
 		$(use_enable opengl) \
 		$(use_enable pdfimport ext-pdfimport) \
 		$(use_enable svg librsvg system) \
+		$(use_enable test linkoo)
 		$(use_enable vba) \
 		$(use_enable vba activex-component) \
 		$(use_enable webdav neon) \
