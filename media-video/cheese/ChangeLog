@@ -1,6 +1,10 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.51 2011/09/14 10:45:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.52 2011/10/21 03:43:07 tetromino Exp $
+
+  21 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> cheese-3.0.2.ebuild:
+  Needs gst-plugins-jpeg for capturing still photos (bug #379649 comment 4).
+  Thanks to Albert W. Hopkins <marduk@python.net> for reporting.
 
   14 Sep 2011; Pacho Ramos <pacho@gentoo.org> cheese-3.0.2.ebuild:
   Fix libgee dependency to proper slot.
