@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.72 2011/10/18 17:22:41 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.73 2011/10/21 17:31:32 ssuominen Exp $
+
+  21 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> gd-2.0.35-r3.ebuild:
+  x86 stable wrt #387291
 
   18 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> gd-2.0.35-r3.ebuild:
   ppc/ppc64 stable wrt #387291
