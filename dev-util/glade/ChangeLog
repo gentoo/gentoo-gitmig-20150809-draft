@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/glade
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.142 2011/10/19 20:20:38 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.143 2011/10/21 14:13:54 phajdan.jr Exp $
+
+  21 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> glade-3.10.0-r1.ebuild:
+  x86 stable wrt bug #385699
 
   19 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   glade-3.10.0-r1.ebuild, glade-3.10.2.ebuild:

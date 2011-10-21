@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/meld
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.133 2011/10/19 20:23:35 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.134 2011/10/21 14:15:18 phajdan.jr Exp $
+
+  21 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> meld-1.5.2.ebuild:
+  x86 stable wrt bug #385699
 
   19 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> meld-1.5.0.ebuild:
   Depend on correct slot of pygobject.
