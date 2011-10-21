@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.294 2011/10/04 21:55:20 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.295 2011/10/21 15:03:38 ssuominen Exp $
+
+  21 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  -files/xscreensaver-5.10-gentoo.patch, -xscreensaver-5.12.ebuild,
+  -xscreensaver-5.12-r1.ebuild,
+  -files/xscreensaver-5.12-for-now-set-lang-on-daemon-to-C.patch,
+  -files/xscreensaver-5.12-gltext-memleak.patch, -xscreensaver-5.13.ebuild:
+  old
 
   04 Oct 2011; Joseph Jezak <josejx@gentoo.org> xscreensaver-5.14.ebuild:
   Marked ppc/ppc64 stable for bug #381043.
