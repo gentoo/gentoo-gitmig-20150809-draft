@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/kplayer-0.7.1.ebuild,v 1.1 2011/06/11 14:03:18 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/kplayer-0.7.1.ebuild,v 1.2 2011/10/21 21:34:19 dilfridge Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 RDEPEND="${DEPEND}
-	>=media-video/mplayer-1.0_rc1
+	|| ( >=media-video/mplayer-1.0_rc1 media-video/mplayer2 )
 "
 
 src_prepare() {
