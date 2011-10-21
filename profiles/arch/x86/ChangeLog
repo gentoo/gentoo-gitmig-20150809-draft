@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.82 2011/10/21 05:14:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.83 2011/10/21 08:02:42 xarthisius Exp $
+
+  21 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
+  Drop hearbeat mask wrt #387685 by Marcin Mirosław <bug@mejor.pl>
 
   21 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Undo poorly thought out masking of USE="colord packagekit" on gtk+; need to

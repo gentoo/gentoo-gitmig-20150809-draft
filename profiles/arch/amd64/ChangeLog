@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.153 2011/10/21 07:03:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.154 2011/10/21 08:03:05 xarthisius Exp $
+
+  21 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
+  Drop hearbeat mask wrt #387685 by Marcin Mirosław <bug@mejor.pl>
 
   21 Oct 2011; Hans de Graaff <graaff@gentoo.org> use.mask:
   Unmask Rubinius since it is keyworded for amd64.

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.67 2011/10/21 05:10:15 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.68 2011/10/21 08:02:42 xarthisius Exp $
 
 # This file requires >=portage-2.1.1
 
@@ -42,10 +42,6 @@ sci-mathematics/fricas -cmucl
 # # Masked in base, unmask for amd64/x86
 media-video/mplayer2 -bluray -vdpau
 
-# Kacper Kowalik <xarthisius@gentoo.org> (22 Feb 2011)
-# >=heartbeat-3.0 is pmasked
-sys-cluster/pacemaker-gui heartbeat
-
 # Tim Harder <radhermit@gentoo.org> (13 Feb 2011)
 # Masked in base, unmask for amd64/x86
 >=media-video/mplayer-1.0_rc4_p20101219 -bluray
@@ -75,10 +71,6 @@ media-libs/mesa -llvm
 # Dane Smith <c1pher@gentoo.org> (10 Nov 2010)
 # Valgrind is only available on amd64/x86/ppc/ppc64.
 net-libs/gnutls -valgrind
-
-# Kacper Kowalik <xarthisius@gentoo.org> (1 Jul 2010)
-# >=heartbeat-3.0 is pmasked
-sys-cluster/pacemaker heartbeat
 
 # Nirbheek Chauhna <nirbheek@gentoo.org> (26 Jun 2010)
 # Inter-process communication doesn't work on anything except x86/amd64/arm
