@@ -1,14 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.21 2011/10/21 03:13:05 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.22 2011/10/21 17:01:50 cardoe Exp $
 
-#BACKPORTS=2
+#BACKPORTS=1
 
 EAPI="3"
 
 if [[ ${PV} = *9999* ]]; then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/virt/kvm/qemu-kvm.git"
-	EGIT_REPO_URI="git://github.com/avikivity/kvm.git"
 	GIT_ECLASS="git-2"
 fi
 
@@ -19,8 +18,10 @@ if [[ ${PV} = *9999* ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="mirror://sourceforge/kvm/${PN}/${P}.tar.gz
-	${BACKPORTS:+http://dev.gentoo.org/~cardoe/distfiles/${P}-backports-${BACKPORTS}.tar.bz2}"
-	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+	${BACKPORTS:+
+		http://dev.gentoo.org/~flameeyes/${PN}/${P}-backports-${BACKPORTS}.tar.bz2
+		http://dev.gentoo.org/~cardoe/distfiles/${P}-backports-${BACKPORTS}.tar.bz2}"
+	KEYWORDS="~amd64 ~x86"
 fi
 
 DESCRIPTION="QEMU + Kernel-based Virtual Machine userland tools"
@@ -60,13 +61,12 @@ RESTRICT="test"
 RDEPEND="
 	!app-emulation/kqemu
 	!app-emulation/qemu
-	!app-emulation/qemu-softmmu
 	!app-emulation/qemu-user
-	!app-emulation/qemu-kvm-spice
 	>=dev-libs/glib-2.0
 	sys-apps/pciutils
 	>=sys-apps/util-linux-2.16.0
 	sys-libs/zlib
+	sys-apps/seabios
 	aio? ( dev-libs/libaio )
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
 	bluetooth? ( net-wireless/bluez )
@@ -266,6 +266,11 @@ src_install() {
 	dodoc Changelog MAINTAINERS TODO pci-ids.txt || die
 	newdoc pc-bios/README README.pc-bios || die
 	dohtml qemu-doc.html qemu-tech.html || die
+
+	# Remove SeaBIOS since we're using the SeaBIOS packaged one
+	rm "${D}/usr/share/qemu/bios.bin"
+	insinto /usr/share/qemu
+	dosym ../seabios/bios.bin
 }
 
 pkg_postinst() {
