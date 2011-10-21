@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.69 2011/10/21 17:01:14 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.70 2011/10/21 18:31:32 jmbsvicetto Exp $
+
+  21 Oct 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  qemu-kvm-0.15.1.ebuild, qemu-kvm-9999.ebuild:
+  [app-emulation/qemu-kvm] Restore the use of Avi Kivity's git repo until
+  kernel.org is up again.
 
 *qemu-kvm-0.15.1 (21 Oct 2011)
 

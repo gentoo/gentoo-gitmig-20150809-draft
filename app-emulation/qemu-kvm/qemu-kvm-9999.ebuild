@@ -1,13 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.22 2011/10/21 17:01:50 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.23 2011/10/21 18:31:32 jmbsvicetto Exp $
 
 #BACKPORTS=1
 
 EAPI="3"
 
 if [[ ${PV} = *9999* ]]; then
-	EGIT_REPO_URI="git://git.kernel.org/pub/scm/virt/kvm/qemu-kvm.git"
+#	EGIT_REPO_URI="git://git.kernel.org/pub/scm/virt/kvm/qemu-kvm.git"
+	EGIT_REPO_URI="git://github.com/avikivity/kvm.git"
 	GIT_ECLASS="git-2"
 fi
 
