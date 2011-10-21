@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-4.7.1.ebuild,v 1.1 2011/09/07 20:13:53 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-4.7.1.ebuild,v 1.2 2011/10/21 23:13:22 dilfridge Exp $
 
 EAPI=4
 
@@ -18,7 +18,9 @@ DEPEND="
 	$(add_kdebase_dep kdepim-common-libs)
 	sys-libs/zlib
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	$(add_kdebase_dep ktimezoned)
+"
 
 # Moved after 4.3.90
 add_blocker kontact-specialdates
