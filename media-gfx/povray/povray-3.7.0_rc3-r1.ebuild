@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_rc3.ebuild,v 1.6 2011/10/21 16:40:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_rc3-r1.ebuild,v 1.1 2011/10/21 16:40:19 ssuominen Exp $
 
 EAPI="3"
 
@@ -21,8 +21,8 @@ SRC_URI="http://www.povray.org/redirect/www.povray.org/beta/source/${PN}-${MY_PV
 
 LICENSE="povlegal-3.6"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
-IUSE="debug openexr tiff X"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+IUSE="debug mkl openexr tiff X"
 
 DEPEND="
 	>=dev-libs/boost-1.41
@@ -32,6 +32,7 @@ DEPEND="
 	openexr? (
 		media-libs/ilmbase
 		media-libs/openexr )
+	mkl? ( sci-libs/mkl )
 	tiff? ( >=media-libs/tiff-3.6.1 )
 	X? ( media-libs/libsdl )"
 RDEPEND="${DEPEND}"
@@ -89,7 +90,7 @@ src_configure() {
 		COMPILED_BY="Portage (Gentoo `uname`) on `hostname -f`" \
 		$(use_enable debug) \
 		$(use_with openexr) \
-		--without-libmkl \
+		$(use_with mkl libmkl) \
 		$(use_with tiff libtiff) \
 		$(use_with X libsdl) \
 		$(use_with X x) \
