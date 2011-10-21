@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libcanberra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.75 2011/10/18 17:33:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.76 2011/10/21 14:28:39 phajdan.jr Exp $
+
+  21 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  libcanberra-0.28-r5.ebuild:
+  x86 stable wrt bug #385699
 
   18 Oct 2011; Jeroen Roovers <jer@gentoo.org> libcanberra-0.28-r5.ebuild:
   Stable for HPPA (bug #385699).
