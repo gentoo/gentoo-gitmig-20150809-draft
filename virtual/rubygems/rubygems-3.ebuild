@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/rubygems-3.ebuild,v 1.1 2011/10/20 17:32:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/rubygems/rubygems-3.ebuild,v 1.2 2011/10/21 06:02:48 graaff Exp $
 
 EAPI=2
 USE_RUBY="ree18"
@@ -13,7 +13,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="${USE_RUBY}"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-ruby/rubygems[ruby_targets_ree18]"
