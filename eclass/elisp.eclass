@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/elisp.eclass,v 1.52 2011/08/30 20:10:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/elisp.eclass,v 1.53 2011/10/21 19:16:16 ulm Exp $
 #
 # @ECLASS: elisp.eclass
 # @MAINTAINER:
@@ -36,8 +36,9 @@
 # @ECLASS-VARIABLE: ELISP_PATCHES
 # @DEFAULT_UNSET
 # @DESCRIPTION:
-# Any patches to apply after unpacking the sources.  Patch files are
-# searched for in the current working dir, WORKDIR, and FILESDIR.
+# Space separated list of patches to apply after unpacking the sources.
+# Patch files are searched for in the current working dir, WORKDIR, and
+# FILESDIR.
 
 # @ECLASS-VARIABLE: SITEFILE
 # @DEFAULT_UNSET
