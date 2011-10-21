@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/gource
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/ChangeLog,v 1.16 2011/07/17 14:49:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gource/ChangeLog,v 1.17 2011/10/21 09:26:34 flameeyes Exp $
+
+*gource-0.37 (21 Oct 2011)
+
+  21 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org> +gource-0.37.ebuild:
+  Version bump, and fix build with tinyxml[stl], thanks to the proxy maintainer
+  Enrico Tagliavini.
 
 *gource-0.35 (17 Jul 2011)
 
