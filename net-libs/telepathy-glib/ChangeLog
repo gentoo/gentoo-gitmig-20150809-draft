@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/telepathy-glib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.89 2011/10/17 10:30:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.90 2011/10/21 15:01:18 phajdan.jr Exp $
+
+  21 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  telepathy-glib-0.14.10.ebuild:
+  x86 stable wrt bug #385699
 
 *telepathy-glib-0.16.0 (17 Oct 2011)
 
