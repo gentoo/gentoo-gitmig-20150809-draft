@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-276.ebuild,v 1.2 2011/10/21 16:45:09 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-276.ebuild,v 1.3 2011/10/21 17:08:20 darkside Exp $
 
 EAPI=4
 inherit eutils multilib
@@ -15,6 +15,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="toolbar truetype unicode Xaw3d"
 
 COMMON_DEPEND="kernel_linux? ( sys-libs/libutempter )
+	kernel_FreeBSD? ( sys-libs/libutempter )
 	>=sys-libs/ncurses-5.6-r2
 	x11-apps/xmessage
 	x11-libs/libX11
