@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/solid-4.7.1.ebuild,v 1.2 2011/10/14 10:03:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/solid-4.7.1.ebuild,v 1.3 2011/10/21 23:56:15 dilfridge Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="debug bluetooth networkmanager wicd"
 
 DEPEND="
-	networkmanager? ( <net-misc/networkmanager-0.9 )
+	networkmanager? ( net-misc/networkmanager )
 	wicd? ( net-misc/wicd )
 "
 RDEPEND="${DEPEND}
