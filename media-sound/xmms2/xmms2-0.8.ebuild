@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.8.ebuild,v 1.1 2011/10/21 18:01:10 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.8.ebuild,v 1.2 2011/10/21 18:04:23 slyfox Exp $
 
 EAPI=3
 
@@ -59,8 +59,6 @@ RDEPEND="server? (
 		vocoder? ( sci-libs/fftw media-libs/libsamplerate )
 		wavpack? ( media-sound/wavpack )
 		xml? ( dev-libs/libxml2 )
-
-		test? ( dev-util/cunit )
 	)
 
 	>=dev-libs/glib-2.12.9
@@ -73,7 +71,9 @@ DEPEND="${RDEPEND}
 	dev-lang/python
 	python? ( dev-python/pyrex )
 	perl? ( virtual/perl-Module-Build )
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	test? ( dev-util/cunit )
+	"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -224,7 +224,6 @@ src_configure() {
 	# pass them explicitely even if empty as we try to avoid magic deps
 	waf_params+=" --with-optionals=${optionals:1}" # skip first ',' if yet
 	waf_params+=" --with-plugins=${plugins:1}"
-
 
 	CC="$(tc-getCC)"         \
 	CPP="$(tc-getCPP)"       \

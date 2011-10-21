@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xmms2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.17 2011/10/21 18:01:10 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.18 2011/10/21 18:04:23 slyfox Exp $
+
+  21 Oct 2011; Sergei Trofimovich <slyfox@gentoo.org> xmms2-0.8.ebuild:
+  Fixed repoman QA warnings (test? in RDEPEND)
 
 *xmms2-0.8 (21 Oct 2011)
 
