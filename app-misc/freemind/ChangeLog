@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/freemind
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.51 2010/02/28 11:40:44 caster Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.52 2011/10/21 21:42:37 caster Exp $
+
+*freemind-0.9.0 (21 Oct 2011)
+
+  21 Oct 2011; Vlastimil Babka <caster@gentoo.org> +freemind-0.9.0.ebuild:
+  Version bump, bug #365179. Thanks to Christopher Robin Elmersson
+  <robin@girlplusboy.com> and Ralph Sennhauser <gentoo.sera@bluewin.ch> for the
+  contribution.
 
 *freemind-0.9.0_rc7 (28 Feb 2010)
 
