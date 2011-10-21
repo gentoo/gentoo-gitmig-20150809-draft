@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.121 2011/10/13 19:05:56 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.122 2011/10/21 13:27:24 mpagano Exp $
+
+*portpeek-1.9.74 (21 Oct 2011)
+
+  21 Oct 2011; Michael Pagano <mpagano@gentoo.org> +portpeek-1.9.74.ebuild:
+  Fix line handling if package is not installed and contains special character.
+  Add parameter to ask the user for confirmation before modifiying package
+  files. Update man page for fix-confirm functionality.
 
 *portpeek-2.0.12 (13 Oct 2011)
 
