@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5814 2011/10/21 19:28:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5815 2011/10/21 19:52:00 tetromino Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Oct 2011; Alexandre Rostovtsev (tetromino) <tetromino@gmail.com>
+  package.mask:
+  Mask >=vte-0.30 (requires gtk+-3.2).
 
   21 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Change =pciutils-3.1.7-r1 mask to >=pciutils-3.1.7-r1 wrt #388027.
