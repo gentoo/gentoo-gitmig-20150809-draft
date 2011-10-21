@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.291 2011/10/21 15:06:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.292 2011/10/21 19:56:15 tetromino Exp $
+
+*vte-0.30.1 (21 Oct 2011)
+
+  21 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> +vte-0.30.1.ebuild:
+  Add vte-0.30.1 from the gnome overlay.
+  Notable changes: better accessibility support, and no more gtk2 version.
 
   21 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> vte-0.28.2-r200.ebuild,
   vte-0.28.2-r300.ebuild:
