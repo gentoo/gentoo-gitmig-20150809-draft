@@ -1,10 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.62 2011/10/19 03:24:46 tetromino Exp $
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (19 Oct 2011)
-# Masked in base, unmask per supported arch
-x11-libs/gtk+ -packagekit
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.63 2011/10/21 05:10:15 tetromino Exp $
 
 # Markus Meier <maekke@gentoo.org> (05 Sep 2011)
 # unkeyworded deps for bug 379657 and bug 379651

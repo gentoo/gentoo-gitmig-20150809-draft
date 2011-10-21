@@ -1,12 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.66 2011/10/19 03:20:02 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.67 2011/10/21 05:10:15 tetromino Exp $
 
 # This file requires >=portage-2.1.1
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (18 Oct 2011)
-# Masked in base, unmask per supported arch
-x11-libs/gtk+ -colord -packagekit
 
 # Samuli Suominen <ssuominen@gentoo.org> (16 Oct 2011)
 # Masked in base, unmask per arch
