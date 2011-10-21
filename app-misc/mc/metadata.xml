@@ -5,6 +5,10 @@
   <maintainer>
     <email>wired@gentoo.org</email>
   </maintainer>
+  <maintainer>
+    <email>slyfox@gentoo.org</email>
+    <name>Sergei Trofimovich</name>
+  </maintainer>
   <use>
     <flag name="edit">Build mcedit application</flag>
   </use>
