@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.162 2011/10/18 14:35:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.163 2011/10/21 14:09:26 phajdan.jr Exp $
+
+  21 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> gmime-2.4.26.ebuild,
+  gmime-2.6.0.ebuild:
+  x86 stable wrt bug #385699
 
   18 Oct 2011; Jeroen Roovers <jer@gentoo.org> gmime-2.4.26.ebuild,
   gmime-2.6.0.ebuild:
