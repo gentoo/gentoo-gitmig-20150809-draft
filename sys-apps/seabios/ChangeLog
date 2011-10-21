@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/seabios
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/seabios/ChangeLog,v 1.2 2011/09/19 17:27:23 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/seabios/ChangeLog,v 1.3 2011/10/21 16:55:20 cardoe Exp $
+
+  21 Oct 2011; Doug Goldstein <cardoe@gentoo.org>
+  seabios-0.6.3_pre20010817.ebuild:
+  Update blockers so we mark the versions of qemu-kvm we'll work with.
 
   19 Sep 2011; Doug Goldstein <cardoe@gentoo.org>
   seabios-0.6.3_pre20010817.ebuild:
