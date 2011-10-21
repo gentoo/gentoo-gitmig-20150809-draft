@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sk1libs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/ChangeLog,v 1.12 2011/10/18 14:24:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sk1libs/ChangeLog,v 1.13 2011/10/21 16:45:19 ssuominen Exp $
+
+  21 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> sk1libs-0.9.1.ebuild:
+  x86 stable wrt #387199
 
   18 Oct 2011; Jeroen Roovers <jer@gentoo.org> sk1libs-0.9.1.ebuild:
   Stable for HPPA (bug #387199).
