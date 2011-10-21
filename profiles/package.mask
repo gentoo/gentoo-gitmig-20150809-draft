@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13160 2011/10/21 16:57:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13161 2011/10/21 19:24:02 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -74,6 +74,7 @@ app-misc/openjnlp
 >=x11-libs/pango-1.29
 x11-themes/gtk-engines-unico
 >=x11-themes/gnome-themes-standard-3.2
+>=x11-misc/notify-osd-0.9.32
 
 # Markos Chandras <hwoarang@gentoo.org> (18 Oct 2011)
 # Mask openbox and obconf snapshots for testing
