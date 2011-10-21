@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/xmms2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.16 2011/08/25 20:03:51 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/ChangeLog,v 1.17 2011/10/21 18:01:10 slyfox Exp $
+
+*xmms2-0.8 (21 Oct 2011)
+
+  21 Oct 2011; Sergei Trofimovich <slyfox@gentoo.org> +xmms2-0.8.ebuild,
+  +files/xmms2-0.8DrO_o-waflib-fix-perl.patch:
+  Version bump. Added FEATURES=test support.
 
   25 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> xmms2-0.7-r3.ebuild,
   +files/xmms2-0.7DrNo-XsParse-3.patch:
