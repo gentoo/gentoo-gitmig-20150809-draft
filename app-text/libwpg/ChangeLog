@@ -1,6 +1,10 @@
 # ChangeLog for app-text/libwpg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpg/ChangeLog,v 1.8 2011/10/18 14:29:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpg/ChangeLog,v 1.9 2011/10/21 15:09:18 phajdan.jr Exp $
+
+  21 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> libwpg-0.1.3-r2.ebuild,
+  libwpg-0.2.1.ebuild:
+  x86 stable wrt bug #385699
 
   18 Oct 2011; Jeroen Roovers <jer@gentoo.org> libwpg-0.1.3-r2.ebuild:
   Stable for HPPA (bug #385699).
