@@ -1,14 +1,14 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.4 2011/10/21 19:00:39 tetromino Exp $
-
-# liboauth (required by evolution-data-server[gnome-online-accounts] and
-# gnome-documents in gnome-3.2) has +nss in IUSE, pulls in curl[-gnutls,nss]
-net-misc/curl -gnutls nss
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/gnome/package.use,v 1.5 2011/10/21 19:02:54 tetromino Exp $
 
 # The following are required by ekiga-3
 net-libs/opal sip
 net-libs/ptlib wav
+
+# liboauth (required by evolution-data-server[gnome-online-accounts] and
+# gnome-documents in gnome-3.2) has +nss in IUSE, pulls in curl[-gnutls,nss]
+net-misc/curl -gnutls nss
 
 # Required by app-admin/sabayon
 x11-base/xorg-server kdrive
