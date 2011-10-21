@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-276.ebuild,v 1.1 2011/10/14 20:53:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-276.ebuild,v 1.2 2011/10/21 16:45:09 darkside Exp $
 
 EAPI=4
 inherit eutils multilib
@@ -11,10 +11,10 @@ SRC_URI="ftp://invisible-island.net/${PN}/${P}.tgz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="toolbar truetype unicode Xaw3d"
 
-COMMON_DEPEND="sys-libs/libutempter
+COMMON_DEPEND="kernel_linux? ( sys-libs/libutempter )
 	>=sys-libs/ncurses-5.6-r2
 	x11-apps/xmessage
 	x11-libs/libX11
@@ -34,7 +34,7 @@ DEPEND="${COMMON_DEPEND}
 	x11-proto/xproto"
 
 pkg_setup() {
-	DEFAULTS_DIR=/usr/share/X11/app-defaults
+	DEFAULTS_DIR="${EPREFIX}"/usr/share/X11/app-defaults
 }
 
 src_configure() {
@@ -43,7 +43,7 @@ src_configure() {
 	# -ssuominen, 2011
 
 	econf \
-		--libdir=/etc \
+		--libdir="${EPREFIX}"/etc \
 		--disable-full-tgetent \
 		--with-app-defaults=${DEFAULTS_DIR} \
 		--disable-setuid \
@@ -81,5 +81,5 @@ src_install() {
 	fperms 0755 /usr/bin/xterm
 
 	# restore the navy blue
-	sed -i -e "s:blue2$:blue:" "${D}"${DEFAULTS_DIR}/XTerm-color
+	sed -i -e "s:blue2$:blue:" "${ED}"${DEFAULTS_DIR}/XTerm-color
 }
