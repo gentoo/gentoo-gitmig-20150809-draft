@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/rubinius
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/ChangeLog,v 1.6 2011/10/21 06:54:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/ChangeLog,v 1.7 2011/10/21 06:55:28 graaff Exp $
+
+  21 Oct 2011; Hans de Graaff <graaff@gentoo.org>
+  rubinius-1.2.4.20110705.ebuild:
+  Remove rubygems dependency as we will use the bundled version.
 
   21 Oct 2011; Hans de Graaff <graaff@gentoo.org> metadata.xml:
   Remove copy-paste USE flags.

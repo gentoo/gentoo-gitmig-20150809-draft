@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/rubinius-1.2.4.20110705.ebuild,v 1.1 2011/10/21 06:53:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/rubinius-1.2.4.20110705.ebuild,v 1.2 2011/10/21 06:55:28 graaff Exp $
 
 EAPI=4
 inherit eutils flag-o-matic multilib versionator
@@ -18,7 +18,6 @@ IUSE=""
 S=${WORKDIR}/${PN}-$(get_version_component_range 1-3)
 
 RDEPEND="sys-libs/readline
-	dev-ruby/rubygems
 	>=sys-devel/llvm-2.8
 	dev-libs/openssl
 	sys-libs/zlib"
