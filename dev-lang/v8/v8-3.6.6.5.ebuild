@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.6.5.1.ebuild,v 1.7 2011/10/19 22:08:14 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.6.6.5.ebuild,v 1.1 2011/10/21 02:29:25 floppym Exp $
 
 EAPI="3"
 
@@ -12,9 +12,7 @@ GYP_REV="1066"
 
 DESCRIPTION="Google's open source JavaScript engine"
 HOMEPAGE="http://code.google.com/p/v8"
-SRC_URI="mirror://gentoo/${P}.tar.gz
-	http://dev.gentoo.org/~floppym/distfiles/${P}.tar.gz
-	http://dev.gentoo.org/~floppym/distfiles/gyp-${GYP_REV}.tar.xz"
+SRC_URI="http://commondatastorage.googleapis.com/chromium-browser-official/${P}.tar.bz2"
 LICENSE="BSD"
 
 SLOT="0"
@@ -23,11 +21,6 @@ IUSE=""
 
 pkg_setup() {
 	python_set_active_version 2
-}
-
-src_unpack() {
-	unpack ${A}
-	mv gyp-${GYP_REV} ${P}/build/gyp || die
 }
 
 src_prepare() {
