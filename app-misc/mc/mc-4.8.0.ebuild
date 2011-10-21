@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.0.ebuild,v 1.1 2011/10/20 17:40:01 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.0.ebuild,v 1.2 2011/10/21 11:09:36 slyfox Exp $
 
 EAPI=4
 
@@ -38,6 +38,8 @@ DEPEND="${RDEPEND}
 	"
 
 S=${WORKDIR}/${MY_P}
+
+PATCHES=("${FILESDIR}/${PN}"-4.8.0-fix-nls.patch)
 
 src_configure() {
 	local myscreen=ncurses
