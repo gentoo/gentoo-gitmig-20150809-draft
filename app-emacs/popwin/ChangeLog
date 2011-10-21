@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/popwin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/popwin/ChangeLog,v 1.3 2011/10/21 07:43:19 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/popwin/ChangeLog,v 1.4 2011/10/21 19:19:58 ulm Exp $
+
+  21 Oct 2011; Ulrich Mueller <ulm@gentoo.org> popwin-0.3-r1.ebuild:
+  ELISP_PATCHES is not an array, but a space-separated list.
 
 *popwin-0.3-r1 (21 Oct 2011)
 
