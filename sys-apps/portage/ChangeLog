@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.890 2011/10/19 17:16:46 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.891 2011/10/21 09:14:27 zmedico Exp $
+
+*portage-2.1.10.30 (21 Oct 2011)
+
+  21 Oct 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.30.ebuild:
+  2.1.10.30 version bump. This adds support for repoman --echangelog=y to update
+  copyright dates in all changed files, and has support for a new
+  metadata/layout.conf "update-changelog" setting that enables repoman
+  --echangelog=y automatically (already enabled in the gentoo-x86). Bug #381649
+  tracks all bugs fixed since portage-2.1.10.11.
 
   19 Oct 2011; Zac Medico <zmedico@gentoo.org> -portage-2.1.10.28.ebuild,
   -portage-2.2.0_alpha68.ebuild:
