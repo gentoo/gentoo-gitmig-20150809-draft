@@ -1,10 +1,13 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.306 2011/10/21 05:14:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.307 2011/10/21 06:59:10 graaff Exp $
 
   21 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Undo poorly thought out masking of USE="colord packagekit" on gtk+; need to
   get it keyworded properly (bug #387959)
+
+  21 Oct 2011; Hans de Graaff <graaff@gentoo.org> use.mask:
+  Mask Rubinius by default like other ruby targets.
 
   19 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Mask USE="colord" and "packagekit" for x11-libs/gtk+.

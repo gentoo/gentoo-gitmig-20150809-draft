@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.125 2011/10/03 20:33:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.126 2011/10/21 06:59:10 graaff Exp $
 
 # nvidia-cuda-toolkit is amd64/x86 only
 opencl
@@ -258,10 +258,11 @@ pvm
 
 # Alex Legler <a3li@gentoo.org> (7 Dec 2009)
 # Ruby 1.9 is hardmasked
-# JRuby and REE18 are whitelisted on supported arches
+# JRuby, REE18, and Rubinius are whitelisted on supported arches
 ruby_targets_ruby19
 ruby_targets_jruby
 ruby_targets_ree18
+ruby_targets_rbx
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (19 Oct 2010)
 # masking flags that only apply to FreeBSD
