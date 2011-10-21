@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.8.ebuild,v 1.2 2011/10/21 18:04:23 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.8.ebuild,v 1.3 2011/10/21 18:37:20 slyfox Exp $
 
 EAPI=3
 
@@ -127,8 +127,6 @@ src_configure() {
 	else
 		# some fun static mappings:
 		local option_map=(	# USE		# sorted xmms2 option flag (same, as USE if empty)
-					"avahi		avahi"
-					"avahi		dns_sd"
 					"phonehome	et"
 					"ENABLED	launcher"
 					"mlib-update	medialib-updater"
