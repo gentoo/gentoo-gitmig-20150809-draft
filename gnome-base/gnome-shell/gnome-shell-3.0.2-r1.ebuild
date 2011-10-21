@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.0.2-r1.ebuild,v 1.1 2011/09/30 19:43:33 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.0.2-r1.ebuild,v 1.2 2011/10/21 02:22:11 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -106,6 +106,10 @@ src_prepare() {
 	# Don't clobber extensions' styles
 	epatch "${FILESDIR}/${PN}-3.0.2-unbreak-extension-css.patch"
 	gnome2_src_prepare
+
+	# Drop G_DISABLE_DEPRECATED for sanity on glib upgrades; bug #384765
+	# Note: sed Makefile.in because it is generated from several Makefile.ams
+	sed -e 's/-DG_DISABLE_DEPRECATED//g' -i src/Makefile.in || die "sed failed"
 }
 
 src_install() {
