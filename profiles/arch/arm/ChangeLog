@@ -1,10 +1,10 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.138 2011/10/21 05:10:15 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.139 2011/10/21 05:14:13 tetromino Exp $
 
   21 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Undo poorly thought out masking of USE="colord packagekit" on gtk+; need to
-  get it keyworded properly (bug #)
+  get it keyworded properly (bug #387959)
 
   19 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Unmask USE="packagekit" for x11-libs/gtk+.
