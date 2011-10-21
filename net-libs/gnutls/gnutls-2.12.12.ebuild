@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.11.ebuild,v 1.1 2011/09/21 06:37:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.12.ebuild,v 1.1 2011/10/21 19:10:25 radhermit Exp $
 
 EAPI="3"
 
