@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/pangomm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/ChangeLog,v 1.48 2011/10/18 14:48:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/ChangeLog,v 1.49 2011/10/21 14:08:26 phajdan.jr Exp $
+
+  21 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> pangomm-2.28.3.ebuild:
+  x86 stable wrt bug #385699
 
   18 Oct 2011; Jeroen Roovers <jer@gentoo.org> pangomm-2.28.3.ebuild:
   Stable for HPPA (bug #385699).
