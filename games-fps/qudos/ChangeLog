@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/qudos
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/ChangeLog,v 1.12 2011/10/08 21:24:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/ChangeLog,v 1.13 2011/10/21 13:32:59 ssuominen Exp $
+
+  21 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> qudos-0.40.1.ebuild,
+  +files/qudos-0.40.1-libpng15.patch:
+  Fix building with libpng15 (missing zlib.h include) wrt #387945 by "Jared"
 
   08 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> qudos-0.40.1.ebuild:
   Improve sys-libs/zlib handling.
