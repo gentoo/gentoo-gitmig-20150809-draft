@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-16.0.904.0-r2.ebuild,v 1.4 2011/10/18 08:10:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-15.0.874.102.ebuild,v 1.1 2011/10/21 21:26:43 floppym Exp $
 
-EAPI="4"
+EAPI="3"
 PYTHON_DEPEND="2:2.6"
 
 inherit eutils fdo-mime flag-o-matic gnome2-utils linux-info multilib \
@@ -10,7 +10,7 @@ inherit eutils fdo-mime flag-o-matic gnome2-utils linux-info multilib \
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
-SRC_URI="http://build.chromium.org/official/${P}.tar.bz2"
+SRC_URI="http://commondatastorage.googleapis.com/chromium-browser-official/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
@@ -26,9 +26,7 @@ for lang in ${LANGS}; do
 done
 
 RDEPEND="app-arch/bzip2
-	>=dev-lang/v8-3.6.5.1
 	dev-libs/dbus-glib
-	dev-libs/elfutils
 	>=dev-libs/icu-4.4.1
 	>=dev-libs/libevent-1.4.13
 	dev-libs/libxml2[icu]
@@ -57,11 +55,13 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	>=dev-util/gperf-3.0.3
 	>=dev-util/pkgconfig-0.23
-	dev-python/simplejson
 	>=sys-devel/bison-2.4.3
 	sys-devel/flex
 	>=sys-devel/make-3.81-r2
-	test? ( dev-python/pyftpdlib )"
+	test? (
+		dev-python/pyftpdlib
+		dev-python/simplejson
+	)"
 RDEPEND+="
 	x11-misc/xdg-utils
 	virtual/ttf-fonts"
@@ -90,61 +90,6 @@ chromium_lang() {
 	fi
 }
 
-get_bundled_v8_version() {
-	"$(PYTHON -2)" "${FILESDIR}"/extract_v8_version.py v8/src/version.cc
-}
-
-get_installed_v8_version() {
-	best_version dev-lang/v8 | sed -e 's@dev-lang/v8-@@g'
-}
-
-pkg_pretend() {
-	if [[ "${MERGE_TYPE}" == "source" || "${MERGE_TYPE}" == "binary" ]]; then
-		# Fail if the kernel doesn't support features needed for sandboxing,
-		# bug #363907.
-		ERROR_PID_NS="PID_NS is required for sandbox to work"
-		ERROR_NET_NS="NET_NS is required for sandbox to work"
-		CONFIG_CHECK="PID_NS NET_NS"
-		check_extra_config
-	fi
-}
-
-if ! has chromium-pkg_die ${EBUILD_DEATH_HOOKS}; then
-	EBUILD_DEATH_HOOKS+=" chromium-pkg_die";
-fi
-
-chromium-pkg_die() {
-	if [[ "${EBUILD_PHASE}" != "compile" ]]; then
-		return
-	fi
-
-	# Prevent user problems like bug #348235.
-	eshopts_push -s extglob
-	if is-flagq '-g?(gdb)?([1-9])'; then
-		ewarn
-		ewarn "You have enabled debug info (i.e. -g or -ggdb in your CFLAGS/CXXFLAGS)."
-		ewarn "Please try removing -g{,gdb} before reporting a bug."
-		ewarn
-	fi
-	eshopts_pop
-
-	# ccache often causes bogus compile failures, especially when the cache gets
-	# corrupted.
-	if has ccache ${FEATURES}; then
-		ewarn
-		ewarn "You have enabled ccache. Please try disabling ccache"
-		ewarn "before reporting a bug."
-		ewarn
-	fi
-
-	# If the system doesn't have enough memory, the compilation is known to
-	# fail. Print info about memory to recognize this condition.
-	einfo
-	einfo "$(grep MemTotal /proc/meminfo)"
-	einfo "$(grep SwapTotal /proc/meminfo)"
-	einfo
-}
-
 pkg_setup() {
 	CHROMIUM_HOME="/usr/$(get_libdir)/chromium-browser"
 
@@ -155,6 +100,20 @@ pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
 
+	# Prevent user problems like bug #348235.
+	eshopts_push -s extglob
+	if is-flagq '-g?(gdb)?([1-9])'; then
+		ewarn "You have enabled debug info (probably have -g or -ggdb in your \$C{,XX}FLAGS)."
+		ewarn "You may experience really long compilation times and/or increased memory usage."
+		ewarn "If compilation fails, please try removing -g{,gdb} before reporting a bug."
+	fi
+	eshopts_pop
+
+	# Warn if the kernel doesn't support features useful for sandboxing,
+	# bug #363907.
+	CONFIG_CHECK="~PID_NS ~NET_NS"
+	check_extra_config
+
 	if use bindist; then
 		elog "bindist enabled: H.264 video support will be disabled."
 	else
@@ -163,10 +122,15 @@ pkg_setup() {
 }
 
 src_prepare() {
+	cp "${FILESDIR}/nacl.gypi" chrome/ || die
+
 	# zlib-1.2.5.1-r1 renames the OF macro in zconf.h, bug 383371.
 	sed -i '1i#define OF(x) x' \
 		third_party/zlib/contrib/minizip/{ioapi,{,un}zip}.c \
 		chrome/common/zip.cc || die
+
+	# Backport http://codereview.chromium.org/8038051, fix for bug #383121.
+	epatch "${FILESDIR}/${PN}-kerberos-r0.patch"
 
 	epatch_user
 
@@ -189,7 +153,6 @@ src_prepare() {
 		\! -path 'third_party/libjingle/*' \
 		\! -path 'third_party/libphonenumber/*' \
 		\! -path 'third_party/libvpx/*' \
-		\! -path 'third_party/lss/*' \
 		\! -path 'third_party/mesa/*' \
 		\! -path 'third_party/modp_b64/*' \
 		\! -path 'third_party/mongoose/*' \
@@ -197,7 +160,6 @@ src_prepare() {
 		\! -path 'third_party/openmax/*' \
 		\! -path 'third_party/ots/*' \
 		\! -path 'third_party/protobuf/*' \
-		\! -path 'third_party/scons-2.0.1/*' \
 		\! -path 'third_party/sfntly/*' \
 		\! -path 'third_party/skia/*' \
 		\! -path 'third_party/smhasher/*' \
@@ -214,20 +176,6 @@ src_prepare() {
 		\! -path 'third_party/zlib/contrib/minizip/*' \
 		-delete || die
 
-	local v8_bundled="$(get_bundled_v8_version)"
-	local v8_installed="$(get_installed_v8_version)"
-	elog "V8 version: bundled - ${v8_bundled}; installed - ${v8_installed}"
-
-	# Remove bundled v8.
-	find v8 -type f \! -iname '*.gyp*' -delete || die
-
-	# The implementation files include v8 headers with full path,
-	# like #include "v8/include/v8.h". Make sure the system headers
-	# will be used.
-	# TODO: find a solution that can be upstreamed.
-	rmdir v8/include || die
-	ln -s /usr/include v8/include || die
-
 	# Make sure the build system will use the right python, bug #344367.
 	# Only convert directories that need it, to save time.
 	python_convert_shebangs -q -r 2 build tools
@@ -240,8 +188,12 @@ src_configure() {
 	# additions, bug #336871.
 	myconf+=" -Ddisable_sse2=1"
 
-	# Disable NaCl temporarily, bug #386931 (amd64-specific).
+	# Disable NaCl temporarily, this tarball doesn't have IRT.
 	myconf+=" -Ddisable_nacl=1"
+
+	# Disable WebRTC until they make PulseAudio dependency optional,
+	# bug #377847.
+	myconf+=" -Denable_webrtc=0"
 
 	# Use system-provided libraries.
 	# TODO: use_system_ffmpeg
@@ -259,7 +211,6 @@ src_configure() {
 		-Duse_system_libwebp=1
 		-Duse_system_libxml=1
 		-Duse_system_speex=1
-		-Duse_system_v8=1
 		-Duse_system_xdg_utils=1
 		-Duse_system_zlib=1"
 
@@ -278,11 +229,11 @@ src_configure() {
 		-Dlinux_sandbox_path=${CHROMIUM_HOME}/chrome_sandbox
 		-Dlinux_sandbox_chrome_path=${CHROMIUM_HOME}/chrome"
 
-	# if host-is-pax; then
-	#	# Prevent the build from failing (bug #301880). The performance
-	#	# difference is very small.
-	#	myconf+=" -Dv8_use_snapshot=0"
-	# fi
+	if host-is-pax; then
+		# Prevent the build from failing (bug #301880). The performance
+		# difference is very small.
+		myconf+=" -Dv8_use_snapshot=0"
+	fi
 
 	# Our system ffmpeg should support more codecs than the bundled one
 	# for Chromium.
@@ -375,11 +326,11 @@ src_install() {
 	# insinto "${CHROMIUM_HOME}"
 	# case "$(tc-arch)" in
 	# 	amd64)
-	# 		doins out/Release/nacl_irt_x86_64.nexe || die
+	# 		doins native_client/irt_binaries/nacl_irt_x86_64.nexe || die
 	# 		doins out/Release/libppGoogleNaClPluginChrome.so || die
 	# 	;;
 	# 	x86)
-	# 		doins out/Release/nacl_irt_x86_32.nexe || die
+	# 		doins native_client/irt_binaries/nacl_irt_x86_32.nexe || die
 	# 		doins out/Release/libppGoogleNaClPluginChrome.so || die
 	# 	;;
 	# esac
