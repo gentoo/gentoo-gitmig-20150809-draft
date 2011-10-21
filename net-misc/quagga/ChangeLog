@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/quagga
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.125 2011/10/17 11:27:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.126 2011/10/21 22:51:52 flameeyes Exp $
+
+*quagga-0.99.20-r1 (21 Oct 2011)
+
+  21 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +quagga-0.99.20-r1.ebuild, +files/quagga-services.init.3:
+  Bump to add a patch to fix bug #387375; take the chance to merge the two init
+  scripts, so that zebra is the only real script, and the rest are actually
+  symlinks.
 
   17 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org> -quagga-0.99.18.ebuild,
   -quagga-0.99.19-r1.ebuild, -files/quagga-services.init, -files/zebra.init.2:
