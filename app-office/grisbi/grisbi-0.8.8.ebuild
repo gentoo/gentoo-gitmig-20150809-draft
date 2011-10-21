@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.8.8.ebuild,v 1.5 2011/10/16 17:05:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.8.8.ebuild,v 1.6 2011/10/21 13:40:10 phajdan.jr Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/grisbi/grisbi%20stable/0.8.x/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 
 RDEPEND="dev-libs/libxml2
 	>=dev-libs/glib-2.18.0
