@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.538 2011/10/19 05:10:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.539 2011/10/21 05:09:38 tetromino Exp $
+
+  21 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> gtk+-3.2.1.ebuild:
+  Drop keywords for USE="colord packagekit" (bug #387959).
 
 *gtk+-3.2.1 (19 Oct 2011)
 
