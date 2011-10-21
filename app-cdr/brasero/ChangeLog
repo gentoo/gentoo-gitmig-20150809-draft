@@ -1,6 +1,18 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.133 2011/10/16 17:37:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.134 2011/10/21 13:02:10 phajdan.jr Exp $
+
+  21 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  brasero-2.32.1-r1.ebuild:
+  x86 stable wrt bug #385699
+
+  21 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  brasero-2.32.1-r1.ebuild:
+  x86 stable wrt bug #385699
+
+  21 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  brasero-2.32.1-r1.ebuild:
+  x86 stable wrt bug #385699
 
   16 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> brasero-2.32.1-r1.ebuild:
   ppc/ppc64 stable wrt #385699
