@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/vnstat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.51 2011/10/20 16:24:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.52 2011/10/21 15:16:06 jer Exp $
+
+  21 Oct 2011; Jeroen Roovers <jer@gentoo.org> vnstat-1.11-r1.ebuild:
+  Remove fowners call for /var/run/vnstatd too.
 
   20 Oct 2011; Jeroen Roovers <jer@gentoo.org> vnstat-1.11-r1.ebuild:
   Remove keepdir /var/run/vnstatd by i.Dark_Templar (bug #387887).
