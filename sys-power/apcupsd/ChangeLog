@@ -1,6 +1,12 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.76 2011/10/20 16:39:01 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.77 2011/10/21 22:06:43 flameeyes Exp $
+
+*apcupsd-3.14.10-r1 (21 Oct 2011)
+
+  21 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org> -apcupsd-3.14.7.ebuild,
+  -apcupsd-3.14.9-r1.ebuild, +apcupsd-3.14.10-r1.ebuild, +files/apcupsd.init.3:
+  Simplify init script with the new declarative runscript.
 
   20 Oct 2011; Brent Baude <ranger@gentoo.org> apcupsd-3.14.8-r1.ebuild:
   Marking apcupsd-3.14.8-r1 ppc for bug 363087
