@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imageworsener/imageworsener-0.9.5.ebuild,v 1.1 2011/10/20 00:47:21 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imageworsener/imageworsener-0.9.5.ebuild,v 1.2 2011/10/21 22:03:00 sping Exp $
 
 EAPI="2"
 
@@ -18,22 +18,25 @@ SRC_URI="http://entropymine.com/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="test"  # TODO webp
+IUSE="test webp"
 
+WEBP_DEPEND='>=media-libs/libwebp-0.1.3'
 DEPEND="media-libs/libpng:0
-	virtual/jpeg"
-	# TODO webp? ( >=media-libs/libwebp-0.1.3 )
-	# TODO test? ( >=media-libs/libwebp-0.1.3 )
+	virtual/jpeg
+	webp? ( ${WEBP_DEPEND} )
+	test? ( ${WEBP_DEPEND} )"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	# TODO bring back webp tests
-	epatch "${FILESDIR}"/${P}-webp.patch \
-			"${FILESDIR}"/${P}-disable-webp-tests.patch
+	epatch "${FILESDIR}"/${P}-webp.patch
 }
 
 src_configure() {
-	mycmakeargs=( -DIW_SUPPORT_WEBP=0 )
+	local webp=0
+	use webp && webp=1
+	use test && webp=1
+	mycmakeargs=( -DIW_SUPPORT_WEBP=${webp} )
+
 	cmake-utils_src_configure
 }
 
