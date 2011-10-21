@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/rep-gtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.71 2011/10/18 18:37:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.72 2011/10/21 15:06:26 phajdan.jr Exp $
+
+  21 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> rep-gtk-0.90.7.ebuild:
+  x86 stable wrt bug #385699
 
   18 Oct 2011; Pacho Ramos <pacho@gentoo.org> -rep-gtk-0.18-r3.ebuild,
   -files/rep-gtk-0.18.4-locale.patch, -files/rep-gtk-0.18.4-libdir.patch,
