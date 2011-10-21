@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.104 2011/10/16 17:02:08 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.105 2011/10/21 15:08:54 phajdan.jr Exp $
+
+  21 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> sawfish-1.8.2.ebuild:
+  x86 stable wrt bug #385699
 
   16 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> sawfish-1.8.2.ebuild:
   ppc stable wrt #385699
