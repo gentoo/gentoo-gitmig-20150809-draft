@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/gconfmm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.89 2011/10/16 17:28:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gconfmm/ChangeLog,v 1.90 2011/10/21 18:49:35 pacho Exp $
+
+*gconfmm-2.28.3 (21 Oct 2011)
+
+  21 Oct 2011; Pacho Ramos <pacho@gentoo.org> +gconfmm-2.28.3.ebuild,
+  -gconfmm-2.28.2.ebuild:
+  Version bump, remove old.
 
   16 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> gconfmm-2.28.2-r1.ebuild:
   ppc/ppc64 stable wrt #385699
