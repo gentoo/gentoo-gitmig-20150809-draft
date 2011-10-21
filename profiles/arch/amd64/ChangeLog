@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.152 2011/10/21 05:14:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.153 2011/10/21 07:03:29 graaff Exp $
+
+  21 Oct 2011; Hans de Graaff <graaff@gentoo.org> use.mask:
+  Unmask Rubinius since it is keyworded for amd64.
 
   21 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Undo poorly thought out masking of USE="colord packagekit" on gtk+; need to
