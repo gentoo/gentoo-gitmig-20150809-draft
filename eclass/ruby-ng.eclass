@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.40 2011/10/05 17:46:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.41 2011/10/21 06:48:24 graaff Exp $
 
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -19,6 +19,7 @@
 #  * ruby19 - Ruby (MRI) 1.9.x
 #  * ree18  - Ruby Enterprise Edition 1.8.x
 #  * jruby  - JRuby
+#  * rbx    - Rubinius
 #
 # This eclass does not define the implementation of the configure,
 # compile, test, or install phases. Instead, the default phases are
@@ -113,6 +114,10 @@ ruby_implementation_depend() {
 			;;
 		jruby)
 			rubypn="dev-java/jruby"
+			rubyslot=""
+			;;
+		rbx)
+			rubypn="dev-lang/rubinius"
 			rubyslot=""
 			;;
 		*) die "$1: unknown Ruby implementation"
@@ -610,6 +615,9 @@ ruby_get_implementation() {
 			;;
 		*jruby*)
 			echo "jruby"
+			;;
+		*rubinius*)
+			echo "rbx"
 			;;
 		*)
 			echo "mri"
