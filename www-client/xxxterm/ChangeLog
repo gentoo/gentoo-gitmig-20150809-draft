@@ -1,6 +1,9 @@
 # ChangeLog for www-client/xxxterm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/ChangeLog,v 1.3 2011/10/11 00:25:00 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/ChangeLog,v 1.4 2011/10/22 18:56:16 hwoarang Exp $
+
+  22 Oct 2011; Markos Chandras <hwoarang@gentoo.org> xxxterm-1.518.ebuild:
+  Stable on amd64 wrt bug #387929
 
   11 Oct 2011; Rafael G. Martins <rafaelmartins@gentoo.org>
   xxxterm-1.518.ebuild, xxxterm-9999.ebuild:
