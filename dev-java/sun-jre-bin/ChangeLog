@@ -1,6 +1,16 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.196 2011/09/01 13:45:33 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.197 2011/10/22 23:26:08 caster Exp $
+
+*sun-jre-bin-1.6.0.29 (22 Oct 2011)
+
+  22 Oct 2011; Vlastimil Babka <caster@gentoo.org>
+  +sun-jre-bin-1.6.0.29.ebuild, +files/sun-jre-bin-1.6.env-r1,
+  +files/fontconfig.Gentoo.properties-r1:
+  Version bug, security bug #387851. Unfortunately had to change license and
+  make the package fetch restricted due to the DJL binaries no longer provided.
+  Free alternatives are dev-java/icedtea6-bin and dev-java/icedtea. Added
+  prefix support. Thanks to Ralph Sennhauser (sera) for the ebuild.
 
 *sun-jre-bin-1.6.0.27 (01 Sep 2011)
 
