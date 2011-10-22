@@ -1,6 +1,13 @@
 # ChangeLog for app-text/xournal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.19 2011/09/20 14:43:13 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.20 2011/10/22 16:20:46 dilfridge Exp $
+
+*xournal-0.4.5_p20111022 (22 Oct 2011)
+
+  22 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -xournal-0.4.2.1-r1.ebuild, -files/xournal-0.4.2.1-pdf-annotation.patch,
+  +xournal-0.4.5_p20111022.ebuild:
+  Remove old; add current CVS snapshot
 
   20 Sep 2011; Andreas Schuerch <nativemad@gentoo.org> xournal-0.4.5-r2.ebuild:
   x86 stable, thanks JD. Bug 348645
