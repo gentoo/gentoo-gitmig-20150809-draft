@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.653 2011/10/22 07:16:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.654 2011/10/22 15:37:25 jer Exp $
+
+  22 Oct 2011; Jeroen Roovers <jer@gentoo.org> -opera-11.51.1087.ebuild,
+  -opera-11.51.1087-r1.ebuild:
+  Vulnerable.
 
   22 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> opera-11.52.1100.ebuild:
   x86 stable wrt bug #387137
