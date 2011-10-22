@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr-util
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.166 2011/10/19 11:58:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.167 2011/10/22 16:20:06 xarthisius Exp $
+
+  22 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> apr-util-1.3.12.ebuild:
+  ppc/ppc64 stable wrt #385859
 
   19 Oct 2011; Jeroen Roovers <jer@gentoo.org> apr-util-1.3.12.ebuild:
   Stable for HPPA (bug #385859).

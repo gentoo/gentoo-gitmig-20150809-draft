@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.176 2011/10/19 11:57:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.177 2011/10/22 16:17:31 xarthisius Exp $
+
+  22 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> apr-1.4.5.ebuild:
+  ppc/ppc64 stable wrt #385859
 
   19 Oct 2011; Jeroen Roovers <jer@gentoo.org> apr-1.4.5.ebuild:
   Stable for HPPA (bug #385859).
