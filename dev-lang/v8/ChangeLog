@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.91 2011/10/21 02:31:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.92 2011/10/22 11:44:36 phajdan.jr Exp $
+
+  22 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> v8-3.6.6.5.ebuild,
+  v8-9999.ebuild:
+  Make it easier to update by using preserve_old_lib.
 
   21 Oct 2011; Mike Gilbert <floppym@gentoo.org> -files/v8-gyp-cflags-r0.patch:
   Remove unused patch.
