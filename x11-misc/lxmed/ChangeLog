@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/lxmed
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lxmed/ChangeLog,v 1.1 2011/10/22 05:50:50 ssuominen Exp $
+
+*lxmed-20110717 (22 Oct 2011)
+
+  22 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> +lxmed-20110717.ebuild:
+  Initial commit.
+
