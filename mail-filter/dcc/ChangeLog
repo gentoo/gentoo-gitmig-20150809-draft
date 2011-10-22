@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/dcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/ChangeLog,v 1.63 2011/01/25 04:24:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/ChangeLog,v 1.64 2011/10/22 22:57:48 robbat2 Exp $
+
+*dcc-1.3.140 (22 Oct 2011)
+
+  22 Oct 2011; Robin H. Johnson <robbat2@gentoo.org> +files/dcc.initd-1.3.140,
+  +dcc-1.3.140.ebuild:
+  Version bump with patch from bug #334245. EAPI2, cgi, milter, docs, /var/run
+  tmpfs support, POSIX init compliance. Thanks to Eray Aslan <eras@gentoo.org>.
 
   25 Jan 2011; Robin H. Johnson <robbat2@gentoo.org> files/dcc.initd:
   Bug #267780: Fix typo in init script.
