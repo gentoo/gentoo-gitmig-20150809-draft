@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Apache-DBI
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/ChangeLog,v 1.61 2011/09/04 11:21:36 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/ChangeLog,v 1.62 2011/10/22 08:13:57 tove Exp $
+
+*Apache-DBI-1.110.0 (22 Oct 2011)
+
+  22 Oct 2011; Torsten Veller <tove@gentoo.org> +Apache-DBI-1.110.0.ebuild:
+  Version bump
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -Apache-DBI-1.100.ebuild:
   Cleanup
