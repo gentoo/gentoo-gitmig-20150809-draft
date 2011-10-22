@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.513 2011/10/22 16:53:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.514 2011/10/22 17:16:53 jer Exp $
+
+  22 Oct 2011; Jeroen Roovers <jer@gentoo.org> ruby-1.9.3_rc1.ebuild:
+  Add workaround for target_arch issue (bug #342819). Marked ~hppa (bug
+  #332593).
 
   22 Oct 2011; Jeroen Roovers <jer@gentoo.org> ruby-1.9.2_p290.ebuild:
   Add workaround for target_arch issue (bug #342819). Marked ~hppa (bug

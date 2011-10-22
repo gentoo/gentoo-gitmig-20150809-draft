@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.3_rc1.ebuild,v 1.1 2011/10/22 10:13:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.3_rc1.ebuild,v 1.2 2011/10/22 17:16:53 jer Exp $
 
 EAPI=2
 
@@ -35,7 +35,7 @@ SRC_URI="mirror://ruby/1.9/${MY_P}.tar.bz2
 		 http://dev.gentoo.org/~flameeyes/ruby-team/${PN}-patches-${PATCHSET}.tar.bz2"
 
 LICENSE="|| ( Ruby BSD-2 )"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="berkdb debug doc examples gdbm ipv6 +rdoc rubytests socks5 ssl tk xemacs ncurses +readline +yaml" #libedit
 
 # libedit support is removed everywhere because of this upstream bug:
@@ -120,6 +120,9 @@ src_configure() {
 #		myconf="${myconf} --without-readline"
 #	fi
 	myconf="${myconf} $(use_with readline)"
+
+	# Set a faux target (bug #342819)
+	use hppa && myconf="${myconf} --target=parisc"
 
 	econf \
 		--program-suffix=${MY_SUFFIX} \
