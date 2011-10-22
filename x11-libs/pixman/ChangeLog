@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/pixman
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.112 2011/10/03 18:06:59 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.113 2011/10/22 03:15:32 mattst88 Exp $
+
+*pixman-0.23.6 (22 Oct 2011)
+
+  22 Oct 2011; Matt Turner <mattst88@gentoo.org> +pixman-0.23.6.ebuild:
+  Version bump. Add ARM's iwmmxt USE flag.
 
   03 Oct 2011; Joseph Jezak <josejx@gentoo.org> pixman-0.22.2.ebuild:
   Marked ppc ppc64 stable for bug #380421.
