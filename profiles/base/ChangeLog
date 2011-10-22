@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.307 2011/10/21 06:59:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.308 2011/10/22 03:10:20 mattst88 Exp $
+
+  22 Oct 2011; Matt Turner <mattst88@gentoo.org> use.mask:
+  use.mask arm's iwmmxt flag.
 
   21 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Undo poorly thought out masking of USE="colord packagekit" on gtk+; need to
