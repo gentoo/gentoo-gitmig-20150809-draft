@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.8.ebuild,v 1.3 2011/10/21 18:37:20 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.8-r1.ebuild,v 1.1 2011/10/22 09:23:51 slyfox Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 
 IUSE="aac airplay +alsa ao asf avahi cdda curl cxx ffmpeg flac gvfs ices
-jack mac mlib-update mms +mad modplug mp3 musepack ofa oss
+jack mac mlib-update mms +mad modplug mp3 mp4 musepack ofa oss
 perl phonehome pulseaudio python ruby
 samba +server sid sndfile speex test +vorbis vocoder wavpack xml"
 
@@ -177,7 +177,7 @@ src_configure() {
 					"		mac"
 					"		mms"
 					"		mad"
-					"DISABLED	mp4" # uses bundled patched faad2
+					"		mp4" # bug #387961 (aac, mp3, ape can sit there)
 					"mp3		mpg123"
 					"		modplug"
 					"		musepack"
