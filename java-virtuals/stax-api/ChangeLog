@@ -1,6 +1,11 @@
 # ChangeLog for java-virtuals/stax-api
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/stax-api/ChangeLog,v 1.15 2011/09/16 03:58:00 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/stax-api/ChangeLog,v 1.16 2011/10/22 08:19:12 caster Exp $
+
+  22 Oct 2011; Vlastimil Babka <caster@gentoo.org> -stax-api-1-r1.ebuild,
+  stax-api-1-r3.ebuild:
+  Stabilize the revbump everywhere and drop the old version. Nothing
+  arch-specific here and we don't want bug 383175.
 
 *stax-api-1-r3 (16 Sep 2011)
 
