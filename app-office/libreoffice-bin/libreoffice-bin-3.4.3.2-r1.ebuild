@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.3.2-r1.ebuild,v 1.3 2011/10/19 09:26:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.3.2-r1.ebuild,v 1.4 2011/10/22 12:26:53 scarabeus Exp $
 
 EAPI=4
 
 KDE_REQUIRED="optional"
 CMAKE_REQUIRED="never"
 
-BASE_URI="http://dev.gentooexperimental.org/~scarabeus/libreo_binary/"
+BASE_URI="http://dev.gentooexperimental.org/~scarabeus/libreo_binary/amd64/"
 
 inherit kde4-base java-pkg-opt-2 pax-utils
 

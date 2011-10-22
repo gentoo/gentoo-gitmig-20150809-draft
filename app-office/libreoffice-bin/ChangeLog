@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.37 2011/10/19 09:26:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/ChangeLog,v 1.38 2011/10/22 12:26:53 scarabeus Exp $
+
+  22 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-bin-3.4.3.2-r1.ebuild:
+  Move the sources under amd64 dir so we prepare for other arches.
 
   19 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   libreoffice-bin-3.4.3.2-r1.ebuild:
