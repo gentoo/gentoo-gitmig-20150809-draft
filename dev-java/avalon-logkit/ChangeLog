@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/avalon-logkit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/ChangeLog,v 1.87 2011/09/27 05:31:39 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/avalon-logkit/ChangeLog,v 1.88 2011/10/22 19:13:13 hwoarang Exp $
+
+  22 Oct 2011; Markos Chandras <hwoarang@gentoo.org>
+  avalon-logkit-2.1-r5.ebuild:
+  Stable on amd64 wrt bug #384613
 
 *avalon-logkit-2.1-r5 (27 Sep 2011)
 
