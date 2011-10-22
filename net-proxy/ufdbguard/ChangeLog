@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/ufdbguard
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ChangeLog,v 1.21 2011/09/14 15:21:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ChangeLog,v 1.22 2011/10/22 00:15:54 flameeyes Exp $
+
+*ufdbguard-1.26-r1 (22 Oct 2011)
+
+  22 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +ufdbguard-1.26-r1.ebuild, +files/ufdb.initd.2:
+  Revision bump to update the init script to be more sophisticated thanks to
+  OpenRC.
 
   14 Sep 2011; Diego E. Pettenò <flameeyes@gentoo.org> ChangeLog:
   Forcing Manifest regeneration.
