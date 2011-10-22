@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.618 2011/10/18 16:26:04 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.619 2011/10/22 07:26:33 phajdan.jr Exp $
+
+  22 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  xorg-server-1.9.5-r1.ebuild, xorg-server-1.10.4-r1.ebuild:
+  x86 stable wrt bug #387069
 
 *xorg-server-1.11.1-r1 (18 Oct 2011)
 *xorg-server-1.10.4-r1 (18 Oct 2011)
