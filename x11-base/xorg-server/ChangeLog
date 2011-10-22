@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.621 2011/10/22 16:57:28 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.622 2011/10/22 20:37:41 chithanh Exp $
+
+  22 Oct 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -xorg-server-1.9.4.ebuild, -xorg-server-1.9.5.ebuild,
+  -xorg-server-1.10.2.ebuild, -xorg-server-1.10.3.ebuild,
+  -xorg-server-1.10.4.ebuild, -xorg-server-1.11.0.ebuild,
+  -xorg-server-1.11.1.ebuild:
+  Drop vulnerable versions, bug #387069.
 
   22 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
   xorg-server-1.9.5-r1.ebuild, xorg-server-1.10.4-r1.ebuild:
