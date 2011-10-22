@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-progressbar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ChangeLog,v 1.35 2011/04/18 05:52:40 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-progressbar/ChangeLog,v 1.36 2011/10/22 12:25:13 graaff Exp $
+
+  22 Oct 2011; Hans de Graaff <graaff@gentoo.org>
+  ruby-progressbar-0.0.10.ebuild:
+  Fix tests with ruby 19, bug 365929. Add rbx.
 
 *ruby-progressbar-0.0.10 (18 Apr 2011)
 
