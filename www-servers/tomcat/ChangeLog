@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.264 2011/10/19 20:46:13 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.265 2011/10/22 18:53:30 fordfrog Exp $
+
+  22 Oct 2011; Miroslav Šulc <fordfrog@gentoo.org> -files/6/build-xml.patch,
+  -files/6/examples-cal.patch, -files/6/tomcat.init,
+  -files/7/7.0.21-build-xml.patch, -tomcat-6.0.26.ebuild,
+  -files/7/build-xml.patch, -tomcat-6.0.26-r2.ebuild,
+  -files/7/examples-cal.patch, -tomcat-6.0.28-r1.ebuild,
+  -tomcat-6.0.29-r1.ebuild, -tomcat-6.0.32-r2.ebuild, -tomcat-7.0.21-r1.ebuild:
+  Removed obsolete files
 
 *tomcat-7.0.22-r1 (19 Oct 2011)
 
