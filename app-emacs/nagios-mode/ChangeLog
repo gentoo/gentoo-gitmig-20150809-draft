@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/nagios-mode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nagios-mode/ChangeLog,v 1.1 2011/07/17 17:47:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nagios-mode/ChangeLog,v 1.2 2011/10/22 19:05:18 hwoarang Exp $
+
+  22 Oct 2011; Markos Chandras <hwoarang@gentoo.org> nagios-mode-0.3.ebuild:
+  Stable on amd64 wrt bug #387229
 
 *nagios-mode-0.3 (17 Jul 2011)
 
