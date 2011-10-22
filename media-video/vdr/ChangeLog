@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vdr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.146 2011/10/19 18:32:22 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.147 2011/10/22 19:02:14 hd_brummy Exp $
+
+  22 Oct 2011; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-1.6.0_p2-r6.ebuild:
+  keyworded ~arm
+
+  22 Oct 2011; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-1.6.0_p2-r6.ebuild:
+  keyworded ~arm
 
   19 Oct 2011; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-1.6.0_p2-r6.ebuild:
   move back to linuxtv-dvb-header; stable x86, #384733 #387313
