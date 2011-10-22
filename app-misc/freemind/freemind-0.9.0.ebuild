@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.9.0.ebuild,v 1.2 2011/10/22 02:05:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.9.0.ebuild,v 1.3 2011/10/22 02:11:45 flameeyes Exp $
 
 EAPI="4"
 
@@ -21,6 +21,7 @@ COMMON_DEP="
 	dev-java/javahelp:0
 	dev-java/jgoodies-forms:0
 	dev-java/jibx:0
+	dev-java/jsr173
 	>=dev-java/simplyhtml-0.13.1:0
 	groovy? ( dev-java/groovy )
 	latex? ( dev-java/hoteqn:0 )
