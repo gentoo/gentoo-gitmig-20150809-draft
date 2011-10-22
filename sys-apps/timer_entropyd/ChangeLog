@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/timer_entropyd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/timer_entropyd/ChangeLog,v 1.7 2011/05/03 11:46:29 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/timer_entropyd/ChangeLog,v 1.8 2011/10/22 00:21:28 flameeyes Exp $
+
+*timer_entropyd-0.1-r3 (22 Oct 2011)
+
+  22 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +timer_entropyd-0.1-r3.ebuild, +files/timer_entropyd.initd.1:
+  Bump to update the OpenRC.
 
   03 May 2011; Jeremy Olexa <darkside@gentoo.org>
   -timer_entropyd-0.1-r1.ebuild, timer_entropyd-0.1-r2.ebuild:
