@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.6.0.25.ebuild,v 1.1 2011/08/12 18:22:20 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.6.0.25.ebuild,v 1.2 2011/10/22 22:21:42 hwoarang Exp $
 
 ORIG_NAME="jdk-6u25-fcs-bin-b04-apidocs-04_Apr_2011.zip"
 SRC_URI="jdk-6u25-fcs-bin-b04-apidocs-04_Apr_2011.zip"
@@ -8,7 +8,7 @@ DESCRIPTION="Sun's documentation bundle (including API) for Java SE"
 HOMEPAGE="http://download.oracle.com/javase/6/docs/index.html"
 LICENSE="oracle-java-documentation"
 SLOT="1.6.0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 DEPEND="app-arch/unzip"
 RDEPEND=""

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-sdk-docs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.77 2011/09/02 22:38:42 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.78 2011/10/22 22:21:42 hwoarang Exp $
+
+  22 Oct 2011; Markos Chandras <hwoarang@gentoo.org>
+  java-sdk-docs-1.6.0.25.ebuild:
+  Stable on amd64 wrt bug #387681
 
 *java-sdk-docs-1.7.0 (02 Sep 2011)
 
