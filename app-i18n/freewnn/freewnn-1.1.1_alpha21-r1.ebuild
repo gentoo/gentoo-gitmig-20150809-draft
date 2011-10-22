@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha21-r1.ebuild,v 1.8 2010/05/21 21:02:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha21-r1.ebuild,v 1.9 2011/10/22 01:30:14 naota Exp $
 
 inherit eutils
 
@@ -31,6 +31,9 @@ src_unpack() {
 		-e "s/@INSTPGMFLAGS@//" makerule.mk.in || die
 	# bug #298744
 	epatch "${FILESDIR}/${P}-as-needed.patch"
+
+	#bug #318593
+	epatch "${FILESDIR}"/${P}-gcc45.patch
 }
 
 src_compile() {
