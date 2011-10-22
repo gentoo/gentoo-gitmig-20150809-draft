@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unrar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.155 2011/10/20 16:37:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.156 2011/10/22 18:08:53 armin76 Exp $
+
+  22 Oct 2011; Raúl Porcel <armin76@gentoo.org> unrar-4.0.7.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #380653
 
   20 Oct 2011; Brent Baude <ranger@gentoo.org> unrar-4.0.7.ebuild:
   Marking unrar-4.0.7 ppc for bug 380653

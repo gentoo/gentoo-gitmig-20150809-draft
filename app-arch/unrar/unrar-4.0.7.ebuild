@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-4.0.7.ebuild,v 1.6 2011/10/20 16:37:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/unrar-4.0.7.ebuild,v 1.7 2011/10/22 18:08:53 armin76 Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.rarlab.com/rar/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="unRAR"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="!<=app-arch/unrar-gpl-0.0.1_p20080417"
