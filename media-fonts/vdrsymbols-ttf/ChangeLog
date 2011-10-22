@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/vdrsymbols-ttf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/vdrsymbols-ttf/ChangeLog,v 1.8 2011/10/20 12:11:42 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/vdrsymbols-ttf/ChangeLog,v 1.9 2011/10/22 16:07:43 hd_brummy Exp $
+
+  22 Oct 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
+  vdrsymbols-ttf-20100612.ebuild:
+  keyworded ~arm
 
   20 Oct 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdrsymbols-ttf-20100612.ebuild:
