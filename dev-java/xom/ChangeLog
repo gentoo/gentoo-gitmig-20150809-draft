@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xom
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/ChangeLog,v 1.56 2011/03/13 05:17:21 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/ChangeLog,v 1.57 2011/10/22 20:15:00 hwoarang Exp $
+
+  22 Oct 2011; Markos Chandras <hwoarang@gentoo.org> xom-1.2.6.ebuild:
+  Stable on amd64 wrt bug #381981
 
 *xom-1.2.6 (13 Mar 2011)
 
