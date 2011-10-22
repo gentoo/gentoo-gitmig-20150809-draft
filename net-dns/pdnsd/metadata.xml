@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>net-dialup</herd>
-  <maintainer>
-    <email>flameeyes@gentoo.org</email>
-  </maintainer>
   <longdescription>
     A proxy DNS server with permanent caching (the cache contents are
     written to hard disk on exit) that is designed to cope with
