@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/term-ansicolor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/term-ansicolor/ChangeLog,v 1.22 2011/10/13 06:03:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/term-ansicolor/ChangeLog,v 1.23 2011/10/22 12:14:53 graaff Exp $
+
+  22 Oct 2011; Hans de Graaff <graaff@gentoo.org> term-ansicolor-1.0.7.ebuild:
+  Add ruby19 and rbx support. Fixes bug 293353.
 
 *term-ansicolor-1.0.7 (13 Oct 2011)
 
