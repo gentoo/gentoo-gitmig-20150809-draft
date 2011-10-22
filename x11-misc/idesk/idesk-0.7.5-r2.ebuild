@@ -1,9 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/idesk-0.7.5-r2.ebuild,v 1.5 2011/03/30 16:36:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/idesk/idesk-0.7.5-r2.ebuild,v 1.6 2011/10/22 04:14:47 ssuominen Exp $
 
-EAPI=2
-
+EAPI=4
 inherit eutils
 
 DESCRIPTION="Utility to place icons on the root window"
@@ -19,13 +18,14 @@ RDEPEND=">=media-libs/imlib2-1.4[X]
 	media-libs/freetype
 	dev-libs/libxml2
 	dev-libs/glib:2
-	gnome-extra/libgsf
 	x11-libs/pango
 	x11-libs/gtk+:2
 	media-libs/libart_lgpl
 	x11-libs/startup-notification"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+DOCS=( AUTHORS NEWS README TODO )
 
 src_prepare() {
 	sed -i \
@@ -35,11 +35,5 @@ src_prepare() {
 }
 
 src_configure() {
-	econf \
-		--enable-libsn
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc README AUTHORS NEWS TODO || die
+	econf --enable-libsn
 }
