@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.9.0.ebuild,v 1.1 2011/10/21 21:42:37 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.9.0.ebuild,v 1.2 2011/10/22 02:05:31 flameeyes Exp $
 
 EAPI="4"
 
@@ -63,8 +63,8 @@ src_compile() {
 	fi
 	EANT_GENTOO_CLASSPATH="
 		jgoodies-forms,jibx,javahelp,simplyhtml
-		$(usex groovy groovy)
-		$(usex latex hoteqn)
+		$(usex groovy groovy '')
+		$(usex latex hoteqn '')
 		${svg_deps}"
 	EANT_GENTOO_CLASSPATH_EXTRA="lib/bindings.jar${svg_build_deps}"
 	EANT_BUILD_TARGET="dist"

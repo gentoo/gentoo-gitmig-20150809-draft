@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/freemind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.52 2011/10/21 21:42:37 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/ChangeLog,v 1.53 2011/10/22 02:05:31 flameeyes Exp $
+
+  22 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org> freemind-0.9.0.ebuild:
+  QA: fix usex usage.
 
 *freemind-0.9.0 (21 Oct 2011)
 
