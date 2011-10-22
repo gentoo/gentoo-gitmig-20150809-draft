@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/bind-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.197 2011/09/02 15:07:36 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/ChangeLog,v 1.198 2011/10/22 02:25:31 flameeyes Exp $
+
+  22 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  bind-tools-9.8.1.ebuild, metadata.xml:
+  QA: make sure not to automagic depend on gssapi (copy code and description
+  from bind itself).
 
 *bind-tools-9.8.1 (02 Sep 2011)
 
