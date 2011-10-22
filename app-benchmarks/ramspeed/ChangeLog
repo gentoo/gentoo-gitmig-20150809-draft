@@ -1,6 +1,11 @@
 # ChangeLog for app-benchmarks/ramspeed
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ramspeed/ChangeLog,v 1.4 2010/10/16 15:45:57 c1pher Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ramspeed/ChangeLog,v 1.5 2011/10/22 18:59:34 patrick Exp $
+
+*ramspeed-3.5.0 (22 Oct 2011)
+
+  22 Oct 2011; Patrick Lauer <patrick@gentoo.org> +ramspeed-3.5.0.ebuild:
+  Bump for #381367, thanks to Michael Seifert
 
   16 Oct 2010; Dane Smith <c1pher@gentoo.org> metadata.xml:
   Updated maintainer info in metadata.xml.
