@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/pambase
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.102 2010/11/28 16:04:45 constanze Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.103 2011/10/22 01:12:25 ssuominen Exp $
+
+*pambase-20101024-r1 (22 Oct 2011)
+
+  22 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +pambase-20101024-r1.ebuild:
+  Remove nox11 argument from pam_ck_connector.so wrt #342345
 
   28 Nov 2010; Constanze Hausner <constanze@gentoo.org>
   pambase-20090620.1-r1.ebuild, pambase-20100310.ebuild,
