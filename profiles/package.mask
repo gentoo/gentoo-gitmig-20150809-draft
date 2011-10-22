@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13165 2011/10/22 01:07:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13166 2011/10/22 11:53:09 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -741,11 +741,6 @@ net-irc/atheme-services
 # Only avalable version isn't in the tree.
 # Mask until it is bumped
 sci-chemistry/webmo
-
-# Hans de Graaff <graaff@gentoo.org> (25 Jun 2011)
-# Mask for testing, still incomplete and too central to
-# all things ruby to just throw out there.
-=dev-ruby/rubygems-1.8*
 
 # Alexis Ballier <aballier@gentoo.org> (23 Jun 2011)
 # Breaks API/ABI and has the same features as 0.7.1
