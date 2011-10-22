@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.15.1.ebuild,v 1.3 2011/10/22 22:56:49 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.15.1.ebuild,v 1.4 2011/10/22 23:00:17 cardoe Exp $
 
 #BACKPORTS=1
 
@@ -22,7 +22,7 @@ else
 	${BACKPORTS:+
 		http://dev.gentoo.org/~flameeyes/${PN}/${P}-backports-${BACKPORTS}.tar.bz2
 		http://dev.gentoo.org/~cardoe/distfiles/${P}-backports-${BACKPORTS}.tar.bz2}"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 fi
 
 DESCRIPTION="QEMU + Kernel-based Virtual Machine userland tools"
@@ -67,7 +67,8 @@ RDEPEND="
 	sys-apps/pciutils
 	>=sys-apps/util-linux-2.16.0
 	sys-libs/zlib
-	sys-apps/seabios
+	amd64? ( sys-apps/seabios )
+	x86? ( sys-apps/seabios )
 	aio? ( dev-libs/libaio )
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
 	bluetooth? ( net-wireless/bluez )
@@ -270,10 +271,13 @@ src_install() {
 	newdoc pc-bios/README README.pc-bios || die
 	dohtml qemu-doc.html qemu-tech.html || die
 
-	# Remove SeaBIOS since we're using the SeaBIOS packaged one
-	rm "${D}/usr/share/qemu/bios.bin"
-	insinto /usr/share/qemu
-	dosym ../seabios/bios.bin
+	# FIXME: Need to come up with a solution for non-x86 based systems
+	if use x86 || use amd64; then
+		# Remove SeaBIOS since we're using the SeaBIOS packaged one
+		rm "${D}/usr/share/qemu/bios.bin"
+		insinto /usr/share/qemu
+		dosym ../seabios/bios.bin
+	fi
 }
 
 pkg_postinst() {
