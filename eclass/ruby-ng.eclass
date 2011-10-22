@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.41 2011/10/21 06:48:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.42 2011/10/22 10:08:44 scarabeus Exp $
 
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -400,7 +400,7 @@ ruby-ng_pkg_setup() {
 	# it's a special case.
 	_ruby_each_implementation
 
-	use ruby_targets_jruby && java-pkg_setup-vm
+	has ruby_targets_jruby ${IUSE} && use ruby_targets_jruby && java-pkg_setup-vm
 }
 
 # @FUNCTION: ruby-ng_src_unpack
