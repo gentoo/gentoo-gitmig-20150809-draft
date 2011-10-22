@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.466 2011/10/06 18:54:24 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.467 2011/10/22 03:14:18 mattst88 Exp $
 
 # Keep them sorted
 
@@ -165,6 +165,7 @@ iodbc - Adds support for iODBC library
 ios - Enable support for Apple's iDevice with iOS operating system (iPad, iPhone, iPod, etc)
 ipod - Enable support for iPod device access
 ipv6 - Adds support for IP version 6
+iwmmxt - Adds support for optimizations for ARM iwMMXt instructions
 jabber - Enable jabber IM protocol support
 jack - Adds support for the JACK Audio Connection Kit
 java - Adds support for Java
