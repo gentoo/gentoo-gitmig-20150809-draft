@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/radiotray
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/ChangeLog,v 1.12 2011/07/22 17:22:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/ChangeLog,v 1.13 2011/10/22 22:24:29 hwoarang Exp $
+
+  22 Oct 2011; Markos Chandras <hwoarang@gentoo.org> radiotray-0.6.4.ebuild:
+  Stable on amd64 wrt bug #387745
 
 *radiotray-0.6.4 (22 Jul 2011)
 
