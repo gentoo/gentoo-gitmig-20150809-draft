@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ark
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.201 2011/10/22 07:19:20 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ark/ChangeLog,v 1.202 2011/10/22 18:57:49 hwoarang Exp $
+
+  22 Oct 2011; Markos Chandras <hwoarang@gentoo.org> ark-4.6.5-r1.ebuild:
+  Stable on amd64 wrt bug #386055
 
   22 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> ark-4.6.5-r1.ebuild:
   x86 stable wrt bug #386055
