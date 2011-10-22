@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.404 2011/10/19 11:06:40 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.405 2011/10/22 07:17:58 phajdan.jr Exp $
+
+  22 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> clamav-0.97.3.ebuild:
+  x86 stable wrt bug #387521
 
   19 Oct 2011; Tony Vroon <chainsaw@gentoo.org> clamav-0.97.3.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
