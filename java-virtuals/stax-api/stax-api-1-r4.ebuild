@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/stax-api/stax-api-1-r3.ebuild,v 1.2 2011/10/22 08:19:12 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/stax-api/stax-api-1-r4.ebuild,v 1.1 2011/10/22 13:51:16 caster Exp $
 
 EAPI=1
 
@@ -22,4 +22,4 @@ RDEPEND="|| (
 		)"
 
 JAVA_VIRTUAL_PROVIDES="jsr173"
-JAVA_VIRTUAL_VM=">=virtual/jre1.6"
+JAVA_VIRTUAL_VM=">=virtual/jre-1.6"
