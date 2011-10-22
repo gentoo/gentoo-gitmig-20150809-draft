@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.308 2011/10/22 03:10:20 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.309 2011/10/22 17:07:34 hwoarang Exp $
+
+  22 Oct 2011; Markos Chandras <hwoarang@gentoo.org> package.use.mask:
+  Remove xen mask for app-emulation/libvirt
 
   22 Oct 2011; Matt Turner <mattst88@gentoo.org> use.mask:
   use.mask arm's iwmmxt flag.

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.277 2011/10/21 05:10:15 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.278 2011/10/22 17:07:34 hwoarang Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -25,11 +25,6 @@ www-client/chromium pulseaudio
 # Systemtap is not keyworded on anything except amd64/x86
 # Temporarily mask instead of dropping keywords, bug 384647
 dev-libs/glib systemtap
-
-# Markos Chandras <hwoarang@gentoo.org> (19 Aug 2011)
-# Masking xen useflag from app-emulation/libvirt per
-# bug #379815
-app-emulation/libvirt xen
 
 # Markos Chandras <hwoarang@gentoo.org> (19 Aug 2011)
 # Masking rbd spice from qemu-kvm per bug #364889
