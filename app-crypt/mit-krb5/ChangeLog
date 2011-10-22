@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.295 2011/10/20 13:08:20 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.296 2011/10/22 07:23:32 phajdan.jr Exp $
+
+  22 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  mit-krb5-1.8.4-r1.ebuild, mit-krb5-1.9.1-r2.ebuild:
+  x86 stable wrt bug #387585
 
   20 Oct 2011; Tony Vroon <chainsaw@gentoo.org> mit-krb5-1.8.4-r1.ebuild,
   mit-krb5-1.9.1-r2.ebuild:
