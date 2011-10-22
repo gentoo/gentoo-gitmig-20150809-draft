@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/gdome2-0.8.1-r2.ebuild,v 1.2 2007/01/03 19:39:45 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/gdome2-0.8.1-r2.ebuild,v 1.3 2011/10/22 13:07:13 eva Exp $
 
 inherit eutils gnome2 autotools
 
@@ -24,16 +24,16 @@ DOCS="AUTHORS ChangeLog INSTALL MAINTAINERS NEWS README*"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Fix broken GLIB_CONFIG in configure.in, see #114542
-	epatch ${FILESDIR}/gdome2-0.8.1-gdome2-config.patch
+	epatch "${FILESDIR}"/gdome2-0.8.1-gdome2-config.patch
 	eautoconf || die
 
 	# make docs honor DESTDIR
 	epatch "${FILESDIR}/${P}-docs-destdir.patch"
 
 	# prevent gtk-fixxref from running (will cause sandbox violation)
-	cd ${S}/gtk-doc
+	cd "${S}"/gtk-doc
 	sed -e 's:gtkdoc-fixxref:#gtkdoc-fixxref:' -i Makefile.in
 }

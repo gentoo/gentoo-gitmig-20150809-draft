@@ -1,8 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/gdome2-0.8.1-r3.ebuild,v 1.2 2009/12/14 19:54:51 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/gdome2-0.8.1-r3.ebuild,v 1.3 2011/10/22 13:07:13 eva Exp $
 
-inherit eutils gnome2 autotools
+EAPI="4"
+GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
+
+inherit autotools eutils gnome2
 
 DESCRIPTION="The DOM C library for the GNOME project"
 HOMEPAGE="http://gdome2.cs.unibo.it/"
@@ -21,12 +25,12 @@ RDEPEND=">=dev-libs/glib-2.2.0
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README*"
+pkg_setup() {
+	G2CONF="${G2CONF} --disable-static"
+	DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README*"
+}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Fix broken GLIB_CONFIG in configure.in, see #114542
 	epatch "${FILESDIR}/${P}-gdome2-config.patch"
 
@@ -37,4 +41,6 @@ src_unpack() {
 	sed -i -e 's:gtkdoc-fixxref:#gtkdoc-fixxref:' gtk-doc/Makefile* || die
 
 	eautoconf
+
+	gnome2_src_prepare
 }
