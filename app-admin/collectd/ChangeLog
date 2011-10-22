@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/collectd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.29 2011/10/18 15:21:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/ChangeLog,v 1.30 2011/10/22 17:35:40 dilfridge Exp $
+
+*collectd-5.0.1 (22 Oct 2011)
+
+  22 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -collectd-4.10.3-r1.ebuild, -collectd-5.0.0-r1.ebuild,
+  +collectd-5.0.1.ebuild, +files/collectd-5.0.1-varnish.patch:
+  Version bump; add varnish-3 patch, bug 386993
 
   18 Oct 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Fix maintainer tag order and remove bug wrangler instructions that machines

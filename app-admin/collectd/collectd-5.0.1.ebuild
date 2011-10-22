@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-4.10.3-r1.ebuild,v 1.3 2011/07/25 21:00:48 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/collectd/collectd-5.0.1.ebuild,v 1.1 2011/10/22 17:35:40 dilfridge Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ IUSE="contrib debug kernel_linux kernel_FreeBSD kernel_Darwin perl static-libs"
 COLLECTD_IMPOSSIBLE_PLUGINS="netapp pinba xmms"
 
 # Plugins that still need some work
-COLLECTD_UNTESTED_PLUGINS="ipvs apple_sensors routeros tape zfs_arc modbus"
+COLLECTD_UNTESTED_PLUGINS="ipvs apple_sensors routeros tape zfs_arc modbus amqp genericjmx lpar redis threshold write_redis v5upgrade"
 
 # Plugins that have been (compile) tested and can be enabled via COLLECTD_PLUGINS
 COLLECTD_TESTED_PLUGINS="apache apcups ascent battery bind conntrack contextswitch
@@ -30,7 +30,7 @@ COLLECTD_TESTED_PLUGINS="apache apcups ascent battery bind conntrack contextswit
 	memcached memory multimeter mysql netlink network nfs nginx ntpd nut olsrd
 	onewire openvpn perl ping postgresql powerdns processes protocols python
 	rrdcached sensors serial snmp swap table tail tcpconns teamspeak2 ted thermal
-	tokyotyrant uptime users vmem vserver wireless csv exec logfile network
+	tokyotyrant uptime users varnish vmem vserver wireless csv exec logfile network
 	notify_desktop notify_email oracle perl python rrdcached rrdtool syslog unixsock write_http
 	match_empty_counter match_hashed match_regex match_timediff match_value
 	target_notification target_replace target_scale target_set uuid"
@@ -47,6 +47,7 @@ unset plugin
 # Now come the dependencies.
 
 COMMON_DEPEND="
+	dev-libs/libgcrypt
 	sys-devel/libtool
 	perl?					( dev-lang/perl[ithreads] ( || ( sys-devel/libperl[ithreads] >=sys-devel/libperl-5.10 ) ) )
 	collectd_plugins_apache?		( net-misc/curl )
@@ -65,7 +66,6 @@ COMMON_DEPEND="
 	collectd_plugins_memcachec?		( dev-libs/libmemcached )
 	collectd_plugins_mysql?			( >=virtual/mysql-5.0 )
 	collectd_plugins_netlink?		( >=sys-apps/iproute2-2.6.34 )
-	collectd_plugins_network?		( dev-libs/libgcrypt )
 	collectd_plugins_nginx?			( net-misc/curl )
 	collectd_plugins_notify_desktop?	( x11-libs/libnotify )
 	collectd_plugins_notify_email?		( >=net-libs/libesmtp-1.0.4 dev-libs/openssl )
@@ -81,6 +81,7 @@ COMMON_DEPEND="
 	collectd_plugins_sensors?		( sys-apps/lm_sensors )
 	collectd_plugins_snmp?			( net-analyzer/net-snmp )
 	collectd_plugins_tokyotyrant?		( net-misc/tokyotyrant )
+	collectd_plugins_varnish?		( www-servers/varnish )
 	collectd_plugins_write_http?		( net-misc/curl )
 
 	kernel_FreeBSD?	(
@@ -103,8 +104,9 @@ RDEPEND="${COMMON_DEPEND}
 
 PATCHES=(
 	"${FILESDIR}/${PN}-4.10.1"-{libperl,libiptc,noowniptc}.patch
-	"${FILESDIR}/${PN}-4.10.2"-{libocci,libnotify-0.7,nohal}.patch
+	"${FILESDIR}/${PN}-4.10.2"-{libocci,nohal}.patch
 	"${FILESDIR}/${PN}-4.10.3"-{lt,werror}.patch
+	"${FILESDIR}/${P}"-varnish.patch
 	)
 
 # @FUNCTION: collectd_plugin_kernel_linux
@@ -344,4 +346,9 @@ pkg_postinst() {
 		elog "The scripts in /usr/share/doc/${PF}/collection3 for generating graphs need dev-perl/HTML-Parser,"
 		elog "dev-perl/config-general, dev-perl/regexp-common, and net-analyzer/rrdtool[perl] to be installed."
 	fi
+	ewarn
+	ewarn "Version 5 of collectd uses a database format different from version 4. You will"
+	ewarn "have to migrate your database after the upgrade, following the guide at"
+	ewarn "   http://www.collectd.org/wiki/index.php/V4_to_v5_migration_guide"
+	ewarn
 }
