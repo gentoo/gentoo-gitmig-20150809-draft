@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.29.ebuild,v 1.1 2011/10/22 23:26:08 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.29.ebuild,v 1.2 2011/10/22 23:52:37 caster Exp $
 
 EAPI="4"
 
@@ -61,41 +61,7 @@ pkg_nofetch() {
 }
 
 src_unpack() {
-	# Do a little voodoo to extract the distfile
-	# Find the ELF in the script
-	testExp=$(echo -e '\0105\0114\0106')
-	startAt=$(grep -aonm 1 ${testExp}  ${DISTDIR}/${A} | cut -d: -f1)
-	# Extract and run it
-	tail -n +${startAt} "${DISTDIR}"/${A} > install.sfx
-	chmod +x install.sfx
-	./install.sfx >/dev/null || die
-	rm install.sfx
-
-	local packed_jars=(
-		lib/deploy.jar
-		lib/charsets.jar
-		lib/javaws.jar
-		lib/jsse.jar
-		lib/ext/localedata.jar
-		lib/plugin.jar
-		lib/rt.jar)
-
-	if [ -f "${S}"/bin/unpack200 ]; then
-			UNPACK_CMD="${S}"/bin/unpack200
-			chmod +x $UNPACK_CMD
-			sed -i 's#/tmp/unpack.log#/dev/null\x00\x00\x00\x00\x00\x00#g' $UNPACK_CMD
-			for i in "${packed_jars[@]}"; do
-					PACK_FILE=${S}/$(dirname $i)/$(basename $i .jar).pack
-					if [ -f ${PACK_FILE} ]; then
-							echo "  unpacking: $i"
-							$UNPACK_CMD ${PACK_FILE} "${S}"/$i || die "unpack failed"
-							rm -f ${PACK_FILE} || die "rm ${PACK_FILE} failed"
-					fi
-			done
-			rm -f ${UNPACK_CMD} || die "rm ${UNPACK_CMD} failed"
-	else
-			die "unpack not found"
-	fi
+	sh "${DISTDIR}"/${A} -noregister || die "Failed to unpack"
 }
 
 src_compile() {
@@ -109,11 +75,6 @@ src_compile() {
 		"${S}"/bin/java -client -Xshare:dump || die
 	fi
 	"${S}"/bin/java -server -Xshare:dump || die
-
-	# Create files used as storage for system preferences.
-	mkdir .systemPrefs || die
-	touch .systemPrefs/.system.lock || die
-	touch .systemPrefs/.systemRootModFile || die
 }
 
 src_install() {
