@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.15.1.ebuild,v 1.2 2011/10/21 18:31:32 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.15.1.ebuild,v 1.3 2011/10/22 22:56:49 cardoe Exp $
 
 #BACKPORTS=1
 
@@ -12,7 +12,7 @@ if [[ ${PV} = *9999* ]]; then
 	GIT_ECLASS="git-2"
 fi
 
-inherit eutils flag-o-matic ${GIT_ECLASS} linux-info toolchain-funcs multilib
+inherit eutils flag-o-matic ${GIT_ECLASS} linux-info toolchain-funcs multilib python
 
 if [[ ${PV} = *9999* ]]; then
 	SRC_URI=""
@@ -129,6 +129,8 @@ pkg_setup() {
 			ewarn "to have vhost-net support."
 		fi
 	fi
+
+	python_set_active_version 2
 
 	enewgroup kvm
 }
