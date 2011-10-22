@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13164 2011/10/21 20:01:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13165 2011/10/22 01:07:12 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (21 Oct 2011)
+# Live ebuild (seabios) shouldn't have been keyworded ~arch
+=app-emulation/qemu-kvm-0.15.1
+sys-apps/seabios
 
 # Stefan Briesenick <sbriesen@gentoo.org> (20 Oct 2011)
 # unmaintained upstream, obsolete in general. (bug #337657)
