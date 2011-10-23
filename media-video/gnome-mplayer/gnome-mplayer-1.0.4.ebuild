@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-1.0.4.ebuild,v 1.4 2011/10/15 17:20:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-1.0.4.ebuild,v 1.5 2011/10/23 12:06:07 maekke Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils
@@ -11,7 +11,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
 IUSE="alsa dbus gnome ipod libnotify musicbrainz pulseaudio"
 
 COMMON_DEPEND=">=dev-libs/glib-2.26:2
