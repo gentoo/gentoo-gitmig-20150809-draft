@@ -1,6 +1,6 @@
 #!/sbin/runscript
 
-opts="reload slow fast info"
+extra_started_commands="reload slow fast info"
 
 MLDONKEY_BINARY=${MLDONKEY_BINARY:-/usr/bin/mlnet}
 MLDONKEY_TIMEOUT=${TIMEOUT:-10}
@@ -79,11 +79,6 @@ restart() {
 }
 
 reload() {
-	if ! service_started "${SVCNAME}"; then
-		eerror "${SVCNAME} is not started"
-		return 1
-	fi
-
 	ebegin "Reloading ${SVCNAME}"
 	start-stop-daemon --stop --signal HUP --oknodo \
 		--exec "${MLDONKEY_BINARY}" --pidfile /var/run/"${SVCNAME}".pid
@@ -91,11 +86,6 @@ reload() {
 }
 
 slow() {
-	if ! service_started "${SVCNAME}"; then
-		eerror "${SVCNAME} is not started"
-		return 1
-	fi
-
 	ebegin "Reducing bandwidth to ${LOW_DOWN}k/${LOW_UP}k"
 	setup_uri
 	wget --spider --timeout="${MLDONKEY_TIMEOUT}" \
@@ -106,11 +96,6 @@ slow() {
 }
 
 fast() {
-	if ! service_started "${SVCNAME}"; then
-		eerror "${SVCNAME} is not started"
-		return 1
-	fi
-
 	ebegin "Increasing bandwidth to ${HIGH_DOWN}k/${HIGH_UP}k"
 
 	setup_uri
@@ -123,11 +108,6 @@ fast() {
 
 
 info() {
-	if ! service_started "${SVCNAME}"; then
-		eerror "${SVCNAME} is not started"
-		return 1
-	fi
-
 	setup_uri
 	local result=$(wget --timeout="${MLDONKEY_TIMEOUT}" \
 		-O - "${BASE}"/submit?q=vo 2>/dev/null | \
