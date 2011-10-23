@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.258 2011/10/23 16:07:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.259 2011/10/23 19:53:21 radhermit Exp $
+
+  23 Oct 2011; Tim Harder <radhermit@gentoo.org>
+  -files/netpbm-10.35.0-pnmtopng-zlib.patch, -files/netpbm-10.35.0-xml2.patch,
+  -files/netpbm-10.42.0-gcc43.patch,
+  -files/netpbm-10.46.00-min_DCT_v_scaled_size.patch,
+  -files/netpbm-10.48.00-pngx.patch,
+  -files/netpbm-10.48.00-pnmtopng-zlib.patch, -netpbm-10.49.00.ebuild,
+  -files/netpbm-10.49.00-sigpower.patch, -netpbm-10.51.00-r1.ebuild:
+  Remove old.
 
   23 Oct 2011; Raúl Porcel <armin76@gentoo.org> netpbm-10.51.00-r2.ebuild:
   alpha/sparc stable wrt #383753
