@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Gentoo-PerlMod-Version
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gentoo-PerlMod-Version/ChangeLog,v 1.5 2011/02/26 19:15:29 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gentoo-PerlMod-Version/ChangeLog,v 1.6 2011/10/23 07:02:29 tove Exp $
+
+*Gentoo-PerlMod-Version-0.3.1 (23 Oct 2011)
+
+  23 Oct 2011; Torsten Veller <tove@gentoo.org>
+  +Gentoo-PerlMod-Version-0.3.1.ebuild:
+  Version bump
 
   26 Feb 2011; Torsten Veller <tove@gentoo.org>
   -Gentoo-PerlMod-Version-0.2.2.ebuild:
