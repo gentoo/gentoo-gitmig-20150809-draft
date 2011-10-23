@@ -1,6 +1,15 @@
 # ChangeLog for app-misc/dnetc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.60 2011/07/12 15:23:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.61 2011/10/23 06:02:32 robbat2 Exp $
+
+*dnetc-2.9109.518 (23 Oct 2011)
+*dnetc-2.9108.517 (23 Oct 2011)
+
+  23 Oct 2011; Robin H. Johnson <robbat2@gentoo.org> +dnetc-2.9108.517.ebuild,
+  +dnetc-2.9109.518.ebuild, metadata.xml:
+  Fixup for bug #382375. Version bump, confirmed to work here. Please note that
+  upstream ships only some arches in each version: 2.9109.518 is missing x86,
+  2.9108.517 is missing ppc.
 
   12 Jul 2011; Michael Sterrett <mr_bones_@gentoo.org> dnetc-2.9103.509.ebuild:
   EAPI=2; don't call use during metadata generation
