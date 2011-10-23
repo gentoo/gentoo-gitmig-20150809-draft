@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.10-r2.ebuild,v 1.8 2011/10/15 11:42:53 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.10-r2.ebuild,v 1.9 2011/10/23 15:37:37 armin76 Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://easysw/${PN}/${PV}/${P}-source.tar.bz2"
 
 LICENSE="FLTK LGPL-2"
 SLOT="1"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux"
 IUSE="debug doc examples games opengl threads xft xinerama"
 
 RDEPEND="x11-libs/libXext
