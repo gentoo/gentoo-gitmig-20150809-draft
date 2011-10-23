@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.218 2011/09/24 18:50:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.219 2011/10/23 11:54:47 armin76 Exp $
+
+  23 Oct 2011; Raúl Porcel <armin76@gentoo.org> nss-3.12.9-r1.ebuild:
+  Fix linux-3.0 support on stable as well, bug #372001
 
   24 Sep 2011; Fabian Groffen <grobian@gentoo.org> nss-3.12.11.ebuild:
   Avoid brute force install_name_tooling by hacking the makefiles
