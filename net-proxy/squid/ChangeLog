@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.327 2011/10/17 19:18:33 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.328 2011/10/23 18:45:39 polynomial-c Exp $
+
+  23 Oct 2011; Lars Wendler <polynomial-c@gentoo.org> files/squid.initd:
+  non-maintainer commit: Replaced deprecated opts variable in init script (bug
+  #385641).
 
   17 Oct 2011; Eray Aslan <eras@gentoo.org> -squid-3.1.8.ebuild,
   -files/squid-3.1.8-gentoo.patch, -files/squid-3.1.8-libmd5.patch,
