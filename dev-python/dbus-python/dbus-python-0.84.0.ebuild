@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.84.0.ebuild,v 1.4 2011/10/23 21:44:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.84.0.ebuild,v 1.5 2011/10/23 22:33:54 tetromino Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -25,7 +25,7 @@ RDEPEND="
 	>=sys-apps/dbus-1.4.1"
 DEPEND="${RDEPEND}
 	doc? ( =dev-python/epydoc-3* )
-	test? ( dev-python/pygobject )
+	test? ( dev-python/pygobject:2 )
 	dev-util/pkgconfig"
 
 src_prepare() {
