@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pms-test-suite/pms-test-suite-0.1.ebuild,v 1.1 2011/08/21 08:23:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pms-test-suite/pms-test-suite-0.1.ebuild,v 1.2 2011/10/23 22:15:08 tetromino Exp $
 
 EAPI=3
 
@@ -24,7 +24,7 @@ IUSE="doc test"
 
 RDEPEND=">=app-portage/gentoopm-0.1.5
 	dev-python/dbus-python
-	dev-python/pygobject"
+	dev-python/pygobject:2"
 DEPEND="doc? ( dev-python/epydoc )
 	test? ( >=sys-apps/portage-2.1.10.3
 		sys-apps/pkgcore
