@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/setuptools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.147 2011/10/17 14:15:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/ChangeLog,v 1.148 2011/10/23 15:56:53 armin76 Exp $
+
+  23 Oct 2011; Raúl Porcel <armin76@gentoo.org> setuptools-0.6.21.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #386061
 
   17 Oct 2011; Jeroen Roovers <jer@gentoo.org> setuptools-0.6.21.ebuild:
   Stable for HPPA (bug #386061).
