@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.177 2011/10/01 11:05:10 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.178 2011/10/23 12:00:45 armin76 Exp $
+
+  23 Oct 2011; Raúl Porcel <armin76@gentoo.org>
+  heimdal-1.4.1_pre20110304.ebuild, heimdal-1.5.ebuild, heimdal-1.5.1.ebuild:
+  Re-add ~s390/~sh wrt #355253
 
 *heimdal-1.5.1 (01 Oct 2011)
 
