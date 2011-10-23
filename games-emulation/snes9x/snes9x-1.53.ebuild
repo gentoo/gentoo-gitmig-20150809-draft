@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.53.ebuild,v 1.1 2011/09/26 22:23:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.53.ebuild,v 1.2 2011/10/23 21:14:32 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic multilib gnome2-utils games
@@ -16,8 +16,7 @@ IUSE="alsa debug gtk joystick multilib netplay nls opengl oss png pulseaudio por
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext
-	png? ( >=media-libs/libpng-1.2.43 )
-	amd64? ( png? ( >=media-libs/libpng-1.4.2 ) )
+	png? ( >=media-libs/libpng-1.2.43:0 )
 	gtk? ( >=x11-libs/gtk+-2.10:2
 		x11-misc/xdg-utils
 		portaudio? ( >=media-libs/portaudio-19_pre )
