@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-dxr3
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dxr3/ChangeLog,v 1.22 2011/04/06 17:35:19 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-dxr3/ChangeLog,v 1.23 2011/10/23 15:58:40 hd_brummy Exp $
+
+*vdr-dxr3-0.2.13 (23 Oct 2011)
+
+  23 Oct 2011; Joerg Bornkessel <hd_brummy@gentoo.org> +vdr-dxr3-0.2.13.ebuild:
+  bump; plugin dont need patched vdr anymore
 
   06 Apr 2011; Christian Ruppert <idl0r@gentoo.org> vdr-dxr3-0.2.8.ebuild,
   vdr-dxr3-0.2.10.ebuild, vdr-dxr3-0.2.12.ebuild:
