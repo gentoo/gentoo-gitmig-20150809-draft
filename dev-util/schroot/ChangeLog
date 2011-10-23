@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/schroot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.27 2011/08/05 14:28:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.28 2011/10/23 01:10:22 abcd Exp $
+
+*schroot-1.4.23 (23 Oct 2011)
+
+  23 Oct 2011; Jonathan Callen <abcd@gentoo.org> +schroot-1.4.23.ebuild:
+  Bump to latest upstream
 
   05 Aug 2011; Markos Chandras <hwoarang@gentoo.org> schroot-1.4.14.ebuild:
   Append -DBOOST_FILESYSTEM_VERSION=2 to C{XX}FLAGS to compile with new boost
