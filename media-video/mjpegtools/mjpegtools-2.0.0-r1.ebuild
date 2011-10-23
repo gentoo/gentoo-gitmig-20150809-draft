@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-2.0.0-r1.ebuild,v 1.8 2011/10/04 19:01:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-2.0.0-r1.ebuild,v 1.9 2011/10/23 18:02:04 billie Exp $
 
 EAPI=4
 
@@ -15,22 +15,19 @@ SRC_URI="mirror://sourceforge/mjpeg/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
-IUSE="dga dv gtk mmx png quicktime sdl sdlgfx static-libs v4l X"
-REQUIRED_USE="!X? ( !gtk !sdl )
-	X? ( sdl )
-	sdlgfx? ( sdl )"
+IUSE="dga dv gtk mmx png quicktime sdl sdlgfx static-libs v4l"
+REQUIRED_USE="sdlgfx? ( sdl )"
 
 RDEPEND="virtual/jpeg
 	quicktime? ( media-libs/libquicktime )
 	dv? ( >=media-libs/libdv-0.99 )
 	png? ( media-libs/libpng )
 	dga? ( x11-libs/libXxf86dga )
-	X? ( x11-libs/libX11
+	gtk? ( x11-libs/gtk+:2 )
+	sdl? ( >=media-libs/libsdl-1.2.7-r3
+		x11-libs/libX11
 		x11-libs/libXt
-		gtk? ( x11-libs/gtk+:2 )
-		sdl? ( >=media-libs/libsdl-1.2.7-r3
-			sdlgfx? ( media-libs/sdl-gfx )
-		)
+		sdlgfx? ( media-libs/sdl-gfx )
 	 )"
 
 DEPEND="${RDEPEND}
@@ -73,7 +70,7 @@ src_configure() {
 		$(use_with sdl libsdl) \
 		$(use_with sdlgfx) \
 		$(use_with v4l) \
-		$(use_with X x)
+		$(use_with sdl x)
 }
 
 src_install() {
