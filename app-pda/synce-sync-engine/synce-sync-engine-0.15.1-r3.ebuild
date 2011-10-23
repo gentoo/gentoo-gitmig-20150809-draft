@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-sync-engine/synce-sync-engine-0.15.1-r3.ebuild,v 1.1 2011/03/30 18:20:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-sync-engine/synce-sync-engine-0.15.1-r3.ebuild,v 1.2 2011/10/23 22:04:47 tetromino Exp $
 
 EAPI=3
 
@@ -25,7 +25,7 @@ RDEPEND="dev-libs/librapi2[python]
 	dev-libs/libxml2[python]
 	dev-libs/libxslt[python]
 	dev-python/dbus-python
-	dev-python/pygobject
+	dev-python/pygobject:2
 	opensync? ( || (
 		>=app-pda/libopensync-0.39[python]
 		( =app-pda/libopensync-0.22*[python] app-pda/libopensync-plugin-python )
