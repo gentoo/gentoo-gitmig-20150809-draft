@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.406 2011/10/22 11:55:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.407 2011/10/23 08:24:08 xarthisius Exp $
+
+  23 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> clamav-0.97.3.ebuild:
+  Apply TOC workaround for ppc64, ppc/ppc64 stable wrt #387521
 
   22 Oct 2011; Raúl Porcel <armin76@gentoo.org> clamav-0.97.3.ebuild:
   alpha/ia64/sparc stable wrt #387521

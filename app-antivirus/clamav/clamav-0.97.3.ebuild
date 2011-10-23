@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.3.ebuild,v 1.5 2011/10/22 11:55:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.97.3.ebuild,v 1.6 2011/10/23 08:24:08 xarthisius Exp $
 
 EAPI=4
 
-inherit eutils autotools-utils
+inherit eutils autotools-utils flag-o-matic
 
 DESCRIPTION="Clam Anti-Virus Scanner"
 HOMEPAGE="http://www.clamav.net/"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="bzip2 clamdtop iconv ipv6 milter selinux static-libs"
 
 CDEPEND="bzip2? ( app-arch/bzip2 )
@@ -38,6 +38,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.97-nls.patch
+	use ppc64 && append-flags -mminimal-toc
 }
 
 src_configure() {
