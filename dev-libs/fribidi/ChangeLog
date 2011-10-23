@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/fribidi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.43 2011/10/23 11:27:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/ChangeLog,v 1.44 2011/10/23 21:41:03 maekke Exp $
+
+  23 Oct 2011; Markus Meier <maekke@gentoo.org> fribidi-0.19.2-r1.ebuild:
+  x86 stable, bug #385239
 
   23 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> -fribidi-0.10.9.ebuild,
   -fribidi-0.19.1.ebuild, -fribidi-0.19.2.ebuild, fribidi-0.19.2-r1.ebuild,
