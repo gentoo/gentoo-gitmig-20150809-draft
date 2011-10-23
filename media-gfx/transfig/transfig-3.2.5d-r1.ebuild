@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.5d-r1.ebuild,v 1.7 2011/09/21 00:48:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/transfig/transfig-3.2.5d-r1.ebuild,v 1.8 2011/10/23 19:18:57 grobian Exp $
 
 EAPI="4"
 inherit toolchain-funcs eutils flag-o-matic
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/mcj/${MY_P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE=""
 
 RDEPEND="x11-libs/libXpm
@@ -54,6 +54,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-precision.patch
 	epatch "${FILESDIR}"/${P}-MAXWIDTH.patch
 	epatch "${FILESDIR}"/${P}-libpng-1.5.patch #356751
+	epatch "${FILESDIR}"/${PN}-3.2.5-solaris.patch
 
 	sed -e 's:-L$(ZLIBDIR) -lz::' \
 		-e 's: -lX11::' \
