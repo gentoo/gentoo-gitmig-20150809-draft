@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.54 2011/09/29 06:10:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.55 2011/10/23 08:46:17 graaff Exp $
+
+  23 Oct 2011; Hans de Graaff <graaff@gentoo.org> minitest-2.6.1.ebuild:
+  Add missing dependency on rdoc.
 
 *minitest-2.6.1 (29 Sep 2011)
 
