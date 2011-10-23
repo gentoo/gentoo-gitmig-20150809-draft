@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.5.1.7.ebuild,v 1.6 2011/10/05 05:52:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/dash-0.5.5.1.7.ebuild,v 1.7 2011/10/23 08:39:23 nixnut Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ SRC_URI="http://gondor.apana.org.au/~herbert/dash/files/${PN}-${DEB_PV}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86"
 IUSE="libedit static"
 
 RDEPEND="!static? ( libedit? ( dev-libs/libedit ) )"
