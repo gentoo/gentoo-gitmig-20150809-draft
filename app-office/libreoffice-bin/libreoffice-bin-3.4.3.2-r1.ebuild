@@ -1,37 +1,57 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.3.2-r1.ebuild,v 1.4 2011/10/22 12:26:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-3.4.3.2-r1.ebuild,v 1.5 2011/10/23 09:39:44 scarabeus Exp $
 
 EAPI=4
 
 KDE_REQUIRED="optional"
 CMAKE_REQUIRED="never"
 
-BASE_URI="http://dev.gentooexperimental.org/~scarabeus/libreo_binary/amd64/"
+BASE_URI="http://dev.gentooexperimental.org/~scarabeus/libreo_binary/"
 
 inherit kde4-base java-pkg-opt-2 pax-utils
 
 DESCRIPTION="LibreOffice, a full office productivity suite. Binary package"
 HOMEPAGE="http://www.libreoffice.org"
-SRC_URI="
+SRC_URI_AMD64="
 	kde? (
-		!java? ( ${BASE_URI}/${PN/-bin}-kde-${PVR}.tbz2 )
-		java? ( ${BASE_URI}/${PN/-bin}-kde-java-${PVR}.tbz2 )
+		!java? ( ${BASE_URI}/amd64/${PN/-bin}-kde-${PVR}.tbz2 -> ${PN/-bin}-kde-amd64-${PVR}.tbz2 )
+		java? ( ${BASE_URI}/amd64/${PN/-bin}-kde-java-${PVR}.tbz2 -> ${PN/-bin}-kde-java-amd64-${PVR}.tbz2 )
 	)
 	gnome? (
-		!java? ( ${BASE_URI}/${PN/-bin}-gnome-${PVR}.tbz2 )
-		java? ( ${BASE_URI}/${PN/-bin}-gnome-java-${PVR}.tbz2 )
+		!java? ( ${BASE_URI}/amd64/${PN/-bin}-gnome-${PVR}.tbz2 -> ${PN/-bin}-gnome-amd64-${PVR}.tbz2 )
+		java? ( ${BASE_URI}/amd64/${PN/-bin}-gnome-java-${PVR}.tbz2 -> ${PN/-bin}-gnome-java-amd64-${PVR}.tbz2 )
 	)
 	!kde? ( !gnome? (
-		!java? ( ${BASE_URI}/${PN/-bin}-base-${PVR}.tbz2 )
-		java? ( ${BASE_URI}/${PN/-bin}-base-java-${PVR}.tbz2 )
+		!java? ( ${BASE_URI}/amd64/${PN/-bin}-base-${PVR}.tbz2 -> ${PN/-bin}-base-amd64-${PVR}.tbz2 )
+		java? ( ${BASE_URI}/amd64/${PN/-bin}-base-java-${PVR}.tbz2 -> ${PN/-bin}-base-java-amd64-${PVR}.tbz2 )
 	) )
+"
+
+SRC_URI_X86="
+	kde? (
+		!java? ( ${BASE_URI}/x86/${PN/-bin}-kde-${PVR}.tbz2 -> ${PN/-bin}-kde-x86-${PVR}.tbz2 )
+		java? ( ${BASE_URI}/x86/${PN/-bin}-kde-java-${PVR}.tbz2 -> ${PN/-bin}-kde-java-x86-${PVR}.tbz2 )
+	)
+	gnome? (
+		!java? ( ${BASE_URI}/x86/${PN/-bin}-gnome-${PVR}.tbz2 -> ${PN/-bin}-gnome-x86-${PVR}.tbz2 )
+		java? ( ${BASE_URI}/x86/${PN/-bin}-gnome-java-${PVR}.tbz2 -> ${PN/-bin}-gnome-java-x86-${PVR}.tbz2 )
+	)
+	!kde? ( !gnome? (
+		!java? ( ${BASE_URI}/x86/${PN/-bin}-base-${PVR}.tbz2 -> ${PN/-bin}-base-x86-${PVR}.tbz2 )
+		java? ( ${BASE_URI}/x86/${PN/-bin}-base-java-${PVR}.tbz2 -> ${PN/-bin}-base-java-x86-${PVR}.tbz2 )
+	) )
+"
+
+SRC_URI="
+	amd64? ( ${SRC_URI_AMD64} )
+	x86? ( ${SRC_URI_X86} )
 "
 
 IUSE="gnome java kde"
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 COMMON_DEPEND="
 	app-arch/zip
