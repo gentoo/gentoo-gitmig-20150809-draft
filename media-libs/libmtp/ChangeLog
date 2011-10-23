@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmtp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.95 2011/06/08 18:32:46 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.96 2011/10/23 15:27:57 ken69267 Exp $
+
+*libmtp-1.1.1 (23 Oct 2011)
+
+  23 Oct 2011; Kenneth Prugh <ken69267@gentoo.org> +libmtp-1.1.1.ebuild:
+  version bump
 
 *libmtp-1.1.0 (08 Jun 2011)
 
