@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.77 2011/10/15 19:31:35 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.78 2011/10/23 16:16:07 armin76 Exp $
+
+  23 Oct 2011; Raúl Porcel <armin76@gentoo.org> celestia-1.6.0.ebuild,
+  celestia-1.6.1.ebuild:
+  Drop sparc keywords
 
   15 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> celestia-1.6.1.ebuild:
   ppc stable wrt #385985
