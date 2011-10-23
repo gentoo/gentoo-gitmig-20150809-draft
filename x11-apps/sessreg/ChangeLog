@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/sessreg
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/sessreg/ChangeLog,v 1.78 2010/10/21 15:07:13 scarabeus Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/sessreg/ChangeLog,v 1.79 2011/10/23 10:24:05 chithanh Exp $
+
+*sessreg-1.0.7 (23 Oct 2011)
+
+  23 Oct 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +sessreg-1.0.7.ebuild:
+  Version bump.
 
   21 Oct 2010; Tomáš Chvátal <scarabeus@gentoo.org>
   -sessreg-1.0.5.ebuild:
