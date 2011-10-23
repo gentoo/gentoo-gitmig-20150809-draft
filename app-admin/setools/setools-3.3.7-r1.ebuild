@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.3.7-r1.ebuild,v 1.1 2011/08/19 17:16:46 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.3.7-r1.ebuild,v 1.2 2011/10/23 12:40:56 swift Exp $
 
 EAPI="2"
 PYTHON_DEPEND="python? 2"
@@ -15,7 +15,7 @@ SRC_URI="http://oss.tresys.com/projects/setools/chrome/site/dists/${P}/${P}.tar.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="X debug java python"
 
 DEPEND=">=sys-libs/libsepol-2.1.0
