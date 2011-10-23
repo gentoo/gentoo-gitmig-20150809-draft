@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-9999.ebuild,v 1.27 2011/01/07 15:11:45 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-9999.ebuild,v 1.28 2011/10/23 13:14:01 patrick Exp $
 
-EAPI=1
+EAPI=2
 
-inherit eutils fdo-mime flag-o-matic linux-mod pax-utils qt4 subversion toolchain-funcs
+inherit eutils fdo-mime flag-o-matic linux-mod pax-utils qt4-r2 subversion toolchain-funcs
 
 DESCRIPTION="Softwarefamily of powerful x86 virtualization"
 HOMEPAGE="http://www.virtualbox.org/"
@@ -18,6 +18,8 @@ IUSE="alsa headless pulseaudio python +qt4 sdk"
 RDEPEND="!app-emulation/virtualbox-bin
 	!app-emulation/virtualbox-additions
 	!app-emulation/virtualbox-modules
+	app-arch/makeself
+	app-cdr/cdrtools
 	dev-libs/libIDL
 	>=dev-libs/libxslt-1.1.19
 	dev-libs/xalan-c
@@ -31,6 +33,7 @@ RDEPEND="!app-emulation/virtualbox-bin
 			x11-libs/qt-opengl:4
 		)
 		x11-libs/libXcursor
+		x11-libs/libXinerama
 		media-libs/libsdl
 		x11-libs/libXt
 		media-libs/mesa )
@@ -72,7 +75,7 @@ pkg_setup() {
 	enewgroup vboxusers
 }
 
-src_compile() {
+src_configure() {
 
 	local myconf
 	# Don't build vboxdrv kernel module
@@ -96,6 +99,9 @@ src_compile() {
 
 	./configure --with-gcc="$(tc-getCC)" --with-g++="$(tc-getCXX)" \
 	${myconf} || die "configure failed"
+}
+
+src_compile() {
 	source ./env.sh
 
 	# Force kBuild to respect C[XX]FLAGS and MAKEOPTS (bug #178529)
