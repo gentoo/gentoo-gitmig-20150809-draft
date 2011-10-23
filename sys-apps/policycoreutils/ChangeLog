@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.92 2011/10/23 11:11:10 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.93 2011/10/23 12:40:16 swift Exp $
+
+  23 Oct 2011; <swift@gentoo.org> policycoreutils-2.1.0-r1.ebuild:
+  Stabilization (tracker #384231)
 
   23 Oct 2011; <swift@gentoo.org> policycoreutils-2.0.82-r1.ebuild:
   Stabilize 2.0.82-r1 to fix #372807
