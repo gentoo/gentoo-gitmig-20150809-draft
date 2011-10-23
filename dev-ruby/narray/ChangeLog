@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/narray
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.47 2011/10/13 21:33:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.48 2011/10/23 15:30:21 armin76 Exp $
+
+  23 Oct 2011; Raúl Porcel <armin76@gentoo.org> narray-0.5.9_p6.ebuild,
+  narray-0.6.0.1.ebuild:
+  Drop alpha/ia64/sparc keywords
 
   13 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> narray-0.6.0.1.ebuild:
   x86 stable wrt bug #386135
