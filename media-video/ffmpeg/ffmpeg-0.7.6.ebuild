@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.7.6.ebuild,v 1.7 2011/10/12 15:11:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.7.6.ebuild,v 1.8 2011/10/23 08:18:24 xarthisius Exp $
 
 EAPI="2"
 
@@ -96,6 +96,7 @@ src_prepare() {
 	if [ "${PV%_p*}" != "${PV}" ] ; then # Snapshot
 		export revision=git-N-${FFMPEG_REVISION}
 	fi
+	epatch "${FILESDIR}"/${P}-fix_ppc64_32ul.patch #387207
 }
 
 src_configure() {

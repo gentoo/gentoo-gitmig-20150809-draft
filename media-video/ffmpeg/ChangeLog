@@ -1,6 +1,11 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.474 2011/10/21 12:52:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.475 2011/10/23 08:18:24 xarthisius Exp $
+
+  23 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/ffmpeg-0.7.6-fix_ppc64_32ul.patch, ffmpeg-0.7.6.ebuild:
+  (non-maintainer commit) Backport patch that allows build system to properly
+  detect arch on ppc64 with 32ul. Fixes bug 341235 and 387207
 
   21 Oct 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   bump x264 dep
