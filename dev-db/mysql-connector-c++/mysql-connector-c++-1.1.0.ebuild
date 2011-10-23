@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-connector-c++/mysql-connector-c++-1.1.0.ebuild,v 1.1 2011/07/30 12:20:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-connector-c++/mysql-connector-c++-1.1.0.ebuild,v 1.2 2011/10/23 14:52:43 scarabeus Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ src_configure() {
 	# native lib/wrapper needs this!
 	append-flags "-fno-strict-aliasing"
 
-	mycmakeargs=(
+	local mycmakeargs=(
 		"-DMYSQLCPPCONN_BUILD_EXAMPLES=OFF"
 		"-DMYSQLCPPCONN_ICU_ENABLE=OFF"
 		$(cmake-utils_use debug MYSQLCPPCONN_TRACE_ENABLE)
@@ -50,6 +50,10 @@ src_install() {
 	else
 		rm -f "${ED}"/usr/$(get_libdir)/libmysqlcppconn-static.a
 	fi
+
+	# docs are installed poorly
+	rm -rf ${ED}/usr/{ANNOUNCEMENT,COPYING,README}
+	dodoc ANNOUNCEMENT README
 
 	# examples
 	if use examples; then
