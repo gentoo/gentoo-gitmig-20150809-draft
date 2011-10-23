@@ -3,9 +3,31 @@
 <pkgmetadata>
   <herd>base-system</herd>
   <use>
+    <flag name='bzip2'>
+      Add support for pcregrep command to search within
+      bzip2-compressed files, through <pkg>sys-libs/zlib</pkg>.
+    </flag>
+
+    <flag name='jit'>
+      Enable Just-In-Time compilation of regexp bytecode to machine
+      code, through the SLJIT compiler. This feature might conflict
+      wtih security mitigation strategies such as NX/PaX as enabled by
+      Gentoo Hardened.
+    </flag>
+
+    <flag name='readline'>
+      Add support for command line editing to pcretest, through
+      <pkg>sys-libs/readline</pkg>.
+    </flag>
+
     <flag name='recursion-limit'>
       Limit match recursion to 8192; if disabled, the default limit is
       used, which is the same as the match limit.
+    </flag>
+
+    <flag name='zlib'>
+      Add support for pcregrep command to search within
+      gzip-compressed files, through <pkg>app-arch/gzip</pkg>.
     </flag>
   </use>
 </pkgmetadata>

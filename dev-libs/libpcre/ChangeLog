@@ -1,6 +1,17 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.184 2011/09/17 04:47:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.185 2011/10/23 16:06:55 flameeyes Exp $
+
+*libpcre-8.20 (23 Oct 2011)
+
+  23 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org> libpcre-8.13-r1.ebuild,
+  +libpcre-8.20.ebuild, metadata.xml:
+  Version bump (I need the new version with JIT to test new ModSecurity code);
+  add an enabled-by-default (following upstream) jit USE flag to enable the new
+  Just-in-Time compiler of regular expressions. Also add a readline USE flag
+  for pcretest that now can use command line editing. Add description of USE
+  flags to metadata.xml. Also fix in 8.13 the wrong _rc conditional to fix the
+  SRC_URI setting.
 
 *libpcre-8.13-r1 (17 Sep 2011)
 
