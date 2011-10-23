@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.217 2011/10/19 00:23:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.218 2011/10/23 17:35:28 armin76 Exp $
+
+  23 Oct 2011; Raúl Porcel <armin76@gentoo.org> rrdtool-1.4.5-r1.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #387171
 
   19 Oct 2011; Jeroen Roovers <jer@gentoo.org> rrdtool-1.4.5-r1.ebuild:
   Stable for HPPA (bug #387171).
