@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/grace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.57 2011/10/23 15:36:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/grace/ChangeLog,v 1.58 2011/10/23 20:08:59 ssuominen Exp $
+
+  23 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> -grace-5.1.22-r1.ebuild:
+  old
 
   23 Oct 2011; Raúl Porcel <armin76@gentoo.org> grace-5.1.22-r2.ebuild:
   alpha/ia64/sparc stable wrt #385807
