@@ -1,0 +1,11 @@
+# ChangeLog for net-wireless/ar9271-firmware
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ar9271-firmware/ChangeLog,v 1.1 2011/10/23 12:25:02 slyfox Exp $
+
+*ar9271-firmware-1.3 (23 Oct 2011)
+
+  23 Oct 2011; Sergei Trofimovich <slyfox@gentoo.org>
+  +ar9271-firmware-1.3.ebuild, +metadata.xml:
+  Initial version. Tested in AP/managed mode on amd64 and armv5 (kernel
+  3.1.0-rc10+).
+
