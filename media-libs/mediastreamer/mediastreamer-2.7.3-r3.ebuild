@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.7.3-r3.ebuild,v 1.9 2011/10/14 07:22:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.7.3-r3.ebuild,v 1.10 2011/10/23 11:43:51 scarabeus Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ KEYWORDS="amd64 ~ppc ~ppc64 x86 ~ppc-macos ~x64-macos ~x86-macos"
 # not built with v4l2 support (taken from configure.ac)
 # TODO: run-time test for ipv6: does it really need ortp[ipv6] ?
 IUSE="+alsa amr bindist coreaudio debug examples gsm ilbc ipv6 jack oss portaudio
-pulseaudio sdl +speex theora v4l video x264 X"
+pulseaudio sdl +speex static-libs theora v4l video x264 X"
 REQUIRED_USE="|| ( oss alsa jack portaudio coreaudio pulseaudio )
 	video? ( || ( sdl X ) )
 	theora? ( video )
@@ -47,6 +47,8 @@ DEPEND="${RDEPEND}
 PDEPEND="amr? ( !bindist? ( media-plugins/mediastreamer-amr ) )
 	ilbc? ( media-plugins/mediastreamer-ilbc )
 	video? ( x264? ( media-plugins/mediastreamer-x264 ) )"
+
+DOCS=( AUTHORS ChangeLog NEWS README )
 
 src_prepare() {
 	# respect user's CFLAGS
@@ -105,6 +107,7 @@ src_configure() {
 		$(use_enable oss) \
 		$(use_enable portaudio) \
 		$(use_enable speex) \
+		$(use_enable static-libs static) \
 		$(use_enable theora) \
 		$(use_enable video) \
 		$(use_enable v4l) \
@@ -115,9 +118,8 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-
-	dodoc AUTHORS ChangeLog NEWS README
+	default
+	find "${ED}" -name '*.la' -exec rm -f {} +
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples

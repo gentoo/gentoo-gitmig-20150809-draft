@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/mediastreamer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.48 2011/10/14 07:22:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.49 2011/10/23 11:43:51 scarabeus Exp $
+
+  23 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -mediastreamer-2.2.3_p1-r1.ebuild,
+  -files/mediastreamer-2.2.3_p1-autodeps.patch, -mediastreamer-2.5.0.ebuild,
+  -mediastreamer-2.6.0.ebuild, mediastreamer-2.7.3-r3.ebuild:
+  Punt static libraries and libtool archives, remove overshadowed versions.
 
   14 Oct 2011; Peter Volkov <pva@gentoo.org> mediastreamer-2.7.3-r3.ebuild:
   Allow building with pulseaudio only, bug #384961 wrt niks1024 AT gmail.com
