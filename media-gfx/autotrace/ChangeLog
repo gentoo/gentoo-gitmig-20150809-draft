@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/autotrace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.52 2011/10/23 15:24:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.53 2011/10/23 16:42:27 ssuominen Exp $
+
+  23 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  -autotrace-0.31.1-r5.ebuild:
+  old
 
   23 Oct 2011; Raúl Porcel <armin76@gentoo.org> autotrace-0.31.1-r6.ebuild:
   alpha/ia64/sparc stable wrt #386007
