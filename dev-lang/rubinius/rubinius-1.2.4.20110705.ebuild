@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/rubinius-1.2.4.20110705.ebuild,v 1.2 2011/10/21 06:55:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/rubinius-1.2.4.20110705.ebuild,v 1.3 2011/10/23 13:38:11 graaff Exp $
 
 EAPI=4
 inherit eutils flag-o-matic multilib versionator
@@ -67,5 +67,5 @@ src_install() {
 
 	insinto /${librbx}/${minor_version}/site
 	doins "${FILESDIR}/auto_gem.rb" || die "Couldn't install rbx auto_gem.rb"
-	bin/rbx compile "${D}/${librbx}/${minor_version}/site/auto_gem.rb" || die "Couldn't bytecompile auto_gem.rb"
+	RBX_RUNTIME="${S}/runtime" RBX_LIB="${S}/lib" bin/rbx compile "${D}/${librbx}/${minor_version}/site/auto_gem.rb" || die "Couldn't bytecompile auto_gem.rb"
 }
