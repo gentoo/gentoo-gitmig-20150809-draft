@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/gramps
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.147 2011/07/03 14:53:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.148 2011/10/23 17:10:59 fauli Exp $
+
+  23 Oct 2011; Christian Faulhammer <fauli@gentoo.org> gramps-3.2.5.ebuild,
+  gramps-3.2.6.ebuild, gramps-3.3.0.ebuild:
+  use /usr/bin/python2 as default engine, so a switch to Python as main engine
+  will not show any problems, see bug 383981 by christianasseburg AT yahoo DOT
+  co DOT uk
 
   03 Jul 2011; Christian Faulhammer <fauli@gentoo.org> gramps-3.2.5.ebuild,
   gramps-3.2.6.ebuild, gramps-3.3.0.ebuild, metadata.xml:
