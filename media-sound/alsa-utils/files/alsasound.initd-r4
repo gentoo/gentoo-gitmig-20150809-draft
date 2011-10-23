@@ -1,12 +1,12 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound.initd-r4,v 1.1 2009/08/02 11:27:26 ssuominen Exp $
-# Copyright 2007 Gentoo Foundation
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound.initd-r4,v 1.2 2011/10/23 15:59:07 polynomial-c Exp $
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 alsastatedir=/var/lib/alsa
 alsascrdir=/etc/alsa.d
 
-opts="save restore"
+extra_commands="save restore"
 
 depend() {
 	need localmount
