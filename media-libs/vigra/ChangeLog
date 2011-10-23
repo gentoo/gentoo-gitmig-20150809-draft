@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vigra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.40 2011/10/18 07:30:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.41 2011/10/23 16:10:54 armin76 Exp $
+
+  23 Oct 2011; Raúl Porcel <armin76@gentoo.org> vigra-1.6.0.ebuild:
+  Move to ~sparc
 
   18 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> vigra-1.7.1-r1.ebuild:
   Forgot on pkg_setup.

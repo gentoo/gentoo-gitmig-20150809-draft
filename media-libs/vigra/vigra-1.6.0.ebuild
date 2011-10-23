@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.6.0.ebuild,v 1.9 2010/11/07 19:33:53 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.6.0.ebuild,v 1.10 2011/10/23 16:10:54 armin76 Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://kogs-www.informatik.uni-hamburg.de/~koethe/vigra/${P/-}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 IUSE="doc fftw jpeg png tiff zlib test"
 
 RDEPEND="png? ( media-libs/libpng )
