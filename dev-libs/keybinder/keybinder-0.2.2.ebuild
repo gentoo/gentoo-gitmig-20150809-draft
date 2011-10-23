@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/keybinder/keybinder-0.2.2.ebuild,v 1.3 2011/03/22 10:51:24 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/keybinder/keybinder-0.2.2.ebuild,v 1.4 2011/10/23 22:17:57 tetromino Exp $
 
 EAPI=3
 
@@ -22,7 +22,7 @@ RDEPEND=">=x11-libs/gtk+-2.20:2
 	x11-libs/libXrender
 	x11-libs/libX11
 	lua? ( >=dev-lang/lua-5.1 )
-	python? ( >=dev-python/pygobject-2.15.3
+	python? ( >=dev-python/pygobject-2.15.3:2
 		>=dev-python/pygtk-2.12 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
