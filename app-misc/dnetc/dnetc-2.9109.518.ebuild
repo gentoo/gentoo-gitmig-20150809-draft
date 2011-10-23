@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9109.518.ebuild,v 1.1 2011/10/23 06:02:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9109.518.ebuild,v 1.2 2011/10/23 06:12:17 robbat2 Exp $
 
 EAPI=2
 inherit eutils
@@ -10,10 +10,11 @@ MIN_PV=${PV:7:9}
 
 DESCRIPTION="distributed.net client"
 HOMEPAGE="http://www.distributed.net"
-SRC_URI_x86="x86? ( http://http.distributed.net/pub/dcti/v${MAJ_PV}/dnetc${MIN_PV}-linux-x86-elf-uclibc.tar.gz )"
+#SRC_URI_x86="x86? ( http://http.distributed.net/pub/dcti/v${MAJ_PV}/dnetc${MIN_PV}-linux-x86-elf-uclibc.tar.gz )"
 SRC_URI_amd64="amd64? ( http://http.distributed.net/pub/dcti/v${MAJ_PV}/dnetc${MIN_PV}-linux-amd64.tar.gz )"
 SRC_URI_ppc="ppc? ( http://http.distributed.net/pub/dcti/v${MAJ_PV}/dnetc${MIN_PV}-linux-ppc-uclibc.tar.gz )"
-SRC_URI="${SRC_URI_amd64} ${SRC_URI_ppc}"
+#SRC_URI_sparc="sparc? ( http://http.distributed.net/pub/dcti/v${MAJ_PV}/dnetc${MIN_PV}-linux-sparc-v7.tar.gz )"
+SRC_URI="${SRC_URI_amd64} ${SRC_URI_ppc} ${SRC_URI_x86} ${SRC_URI_sparc}"
 
 LICENSE="distributed.net"
 SLOT="0"
