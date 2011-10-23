@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/vips-7.26.3.ebuild,v 1.2 2011/10/15 19:43:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/vips-7.26.3.ebuild,v 1.3 2011/10/23 11:49:17 maekke Exp $
 
 EAPI=3
 PYTHON_DEPEND="python? 2"
@@ -16,7 +16,7 @@ HOMEPAGE="http://vips.sourceforge.net"
 
 LICENSE="LGPL-2.1"
 SLOT="1"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug exif fits fftw imagemagick jpeg lcms openexr +orc png python static-libs tiff"
 
 RDEPEND=">=dev-libs/glib-2.6:2

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vips
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/ChangeLog,v 1.47 2011/10/15 19:43:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/ChangeLog,v 1.48 2011/10/23 11:49:17 maekke Exp $
+
+  23 Oct 2011; Markus Meier <maekke@gentoo.org> vips-7.26.3.ebuild:
+  x86 stable, bug #386023
 
   15 Oct 2011; Markos Chandras <hwoarang@gentoo.org> vips-7.26.3.ebuild:
   Stable on amd64 wrt bug #386023
