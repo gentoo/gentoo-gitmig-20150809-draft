@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.7.ebuild,v 1.9 2011/07/13 15:49:01 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.7.ebuild,v 1.10 2011/10/23 11:40:12 scarabeus Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.hdfgroup.org/ftp/HDF5/current/src/${P}.tar.bz2"
 LICENSE="NCSA-HDF"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
-IUSE="cxx debug examples fortran mpi szip threads zlib"
+IUSE="cxx debug examples fortran mpi static-libs szip threads zlib"
 
 RDEPEND="
 	fortran? ( virtual/fortran )
@@ -90,6 +90,7 @@ src_configure() {
 		--enable-deprecated-symbols \
 		--enable-shared \
 		--disable-silent-rules \
+		$(use_enable static-libs static) \
 		$(use_enable debug debug all) \
 		$(use_enable fortran) \
 		$(use_enable mpi parallel) \
@@ -101,6 +102,8 @@ src_configure() {
 
 src_install() {
 	default
+	use static-libs || find "${ED}" -name '*.la' -exec rm -f {} +
+
 	if use examples; then
 		emake DESTDIR="${D}" install-examples
 	fi
