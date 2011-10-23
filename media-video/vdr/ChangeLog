@@ -1,6 +1,13 @@
 # ChangeLog for media-video/vdr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.147 2011/10/22 19:02:14 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.148 2011/10/23 15:50:05 hd_brummy Exp $
+
+*vdr-1.6.0_p2-r7 (23 Oct 2011)
+
+  23 Oct 2011; Joerg Bornkessel <hd_brummy@gentoo.org> +vdr-1.6.0_p2-r7.ebuild,
+  +files/vdr-1.6.0-shared-tinyxml.diff:
+  eapi=4; removed tinyxml bundle, use now externel tinyxml lib; keyword ~arm
+  droped; removed dxr3 patch, updated vdr-dxr3 dont need the patch anymore
 
   22 Oct 2011; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-1.6.0_p2-r6.ebuild:
   keyworded ~arm
