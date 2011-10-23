@@ -1,6 +1,9 @@
 # ChangeLog for net-im/psi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.218 2011/10/22 16:00:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.219 2011/10/23 11:33:51 maekke Exp $
+
+  23 Oct 2011; Markus Meier <maekke@gentoo.org> psi-0.14-r4.ebuild:
+  x86 stable, bug #384227
 
   22 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> psi-0.14-r4.ebuild:
   ppc/ppc64 stable wrt #384227
