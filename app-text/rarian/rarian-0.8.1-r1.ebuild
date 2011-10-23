@@ -1,31 +1,27 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/rarian-0.8.1-r1.ebuild,v 1.9 2010/09/11 18:26:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/rarian-0.8.1-r1.ebuild,v 1.10 2011/10/23 11:19:26 scarabeus Exp $
 
-inherit eutils gnome2
+EAPI=4
+
+inherit eutils
 
 DESCRIPTION="A documentation metadata library"
-HOMEPAGE="http://www.freedesktop.org"
+HOMEPAGE="http://rarian.freedesktop.org/"
+SRC_URI="http://${PN}.freedesktop.org/Releases/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
-IUSE=""
+IUSE="static-libs"
 
 RDEPEND="dev-libs/libxslt"
 DEPEND="${RDEPEND}
 	!<app-text/scrollkeeper-9999"
 
-DOCS="ChangeLog NEWS README"
+DOCS=( ChangeLog NEWS README )
 
-GCONF=""
-
-src_unpack() {
-	# You cannot run src_unpack from gnome2; it will break the install by
-	# calling gnome2_omf_fix
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Fix uri of omf files produced by rarian-sk-preinstall, see bug #302900
 	epatch "${FILESDIR}/${P}-fix-old-doc.patch"
 
@@ -35,6 +31,13 @@ src_unpack() {
 	elibtoolize ${ELTCONF}
 }
 
-src_compile() {
-	gnome2_src_compile --localstatedir=/var
+src_configure() {
+	econf \
+		--localstatedir=/var \
+		$(use_enable static-libs static)
+}
+
+src_install() {
+	default
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }

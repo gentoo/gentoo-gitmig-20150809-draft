@@ -1,6 +1,11 @@
 # ChangeLog for app-text/rarian
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/ChangeLog,v 1.50 2010/09/11 18:26:29 josejx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/ChangeLog,v 1.51 2011/10/23 11:19:26 scarabeus Exp $
+
+  23 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> -rarian-0.8.1.ebuild,
+  rarian-0.8.1-r1.ebuild:
+  Update the ebuild not to ship .la and .a archives, punt the overshadowed
+  version.
 
   11 Sep 2010; Joseph Jezak <josejx@gentoo.org> rarian-0.8.1-r1.ebuild:
   Marked ppc for bug #324077.
