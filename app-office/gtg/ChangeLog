@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gtg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gtg/ChangeLog,v 1.10 2011/03/05 15:45:52 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gtg/ChangeLog,v 1.11 2011/10/23 22:02:52 tetromino Exp $
+
+  23 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> gtg-0.2.4-r1.ebuild:
+  Use correct slot of pygobject.
 
   05 Mar 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -gtg-0.2.4.ebuild:
