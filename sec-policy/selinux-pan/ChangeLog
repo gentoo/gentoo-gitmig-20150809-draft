@@ -1,5 +1,10 @@
 
 
+*selinux-pan-2.20110726-r2 (23 Oct 2011)
+
+  23 Oct 2011; <swift@gentoo.org> +selinux-pan-2.20110726-r2.ebuild:
+  Add support for XDG
+
 *selinux-pan-2.20110726-r1 (28 Aug 2011)
 
   28 Aug 2011; <swift@gentoo.org> +selinux-pan-2.20110726-r1.ebuild:

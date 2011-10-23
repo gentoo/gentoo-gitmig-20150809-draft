@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-skype
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-skype/ChangeLog,v 1.5 2011/08/28 21:12:33 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-skype/ChangeLog,v 1.6 2011/10/23 11:00:19 swift Exp $
+
+*selinux-skype-2.20110726-r2 (23 Oct 2011)
+
+  23 Oct 2011; <swift@gentoo.org> +selinux-skype-2.20110726-r2.ebuild:
+  Add support for XDG types
 
 *selinux-skype-2.20110726-r1 (28 Aug 2011)
 

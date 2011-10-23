@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-mozilla
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mozilla/ChangeLog,v 1.8 2011/09/17 16:20:16 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mozilla/ChangeLog,v 1.9 2011/10/23 11:00:18 swift Exp $
+
+*selinux-mozilla-2.20110726-r3 (23 Oct 2011)
+
+  23 Oct 2011; <swift@gentoo.org> +selinux-mozilla-2.20110726-r3.ebuild:
+  Add support for XDG type
 
 *selinux-mozilla-2.20110726-r2 (17 Sep 2011)
 
