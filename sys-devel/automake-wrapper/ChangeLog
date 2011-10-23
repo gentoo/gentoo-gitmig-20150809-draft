@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/automake-wrapper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/ChangeLog,v 1.52 2011/10/20 14:11:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/ChangeLog,v 1.53 2011/10/23 08:53:21 nixnut Exp $
+
+  23 Oct 2011; nixnut <nixnut@gentoo.org> automake-wrapper-5.ebuild:
+  ppc stable #387467
 
   20 Oct 2011; Mike Frysinger <vapier@gentoo.org> automake-wrapper-5.ebuild:
   Mark alpha/arm/ia64/m68k/s390/sh stable #387467.
