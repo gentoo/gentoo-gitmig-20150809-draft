@@ -1,0 +1,11 @@
+# ChangeLog for gnome-extra/office-runner
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/office-runner/ChangeLog,v 1.1 2011/10/23 23:41:50 tetromino Exp $
+
+*office-runner-0.0_pre20110916 (23 Oct 2011)
+
+  23 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +office-runner-0.0_pre20110916.ebuild, +metadata.xml:
+  New package; see http://www.hadess.net/2011/09/omg-i-haz-designed-bug-fix.html
+  for the background.
+
