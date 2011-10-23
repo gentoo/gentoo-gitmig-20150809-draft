@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.125 2011/10/22 18:59:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.126 2011/10/23 11:39:35 maekke Exp $
+
+  23 Oct 2011; Markus Meier <maekke@gentoo.org> stunnel-4.44.ebuild:
+  arm stable, bug #379859
 
   22 Oct 2011; Markos Chandras <hwoarang@gentoo.org> stunnel-4.44.ebuild:
   Stable on amd64 wrt bug #379859
