@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/fakeroot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.73 2011/10/13 21:45:13 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.74 2011/10/23 09:05:11 nixnut Exp $
+
+  23 Oct 2011; nixnut <nixnut@gentoo.org> fakeroot-1.18.ebuild:
+  ppc stable #386739
 
   13 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> fakeroot-1.18.ebuild:
   x86 stable wrt bug #386739
