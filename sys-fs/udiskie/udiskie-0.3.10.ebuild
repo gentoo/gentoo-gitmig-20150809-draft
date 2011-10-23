@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udiskie/udiskie-0.3.10.ebuild,v 1.2 2011/10/20 02:48:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udiskie/udiskie-0.3.10.ebuild,v 1.3 2011/10/23 20:23:23 ssuominen Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ SRC_URI="http://bitbucket.org/byronclark/${PN}/downloads/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-python/dbus-python
