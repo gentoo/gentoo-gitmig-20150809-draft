@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.135 2011/10/23 16:17:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.136 2011/10/23 16:35:24 ssuominen Exp $
+
+  23 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> -sox-14.3.0.ebuild,
+  -sox-14.3.1.ebuild, -files/sox-14.3.1-libpng15.patch,
+  -files/sox-14.3.1-nomad.patch, -sox-14.3.2.ebuild:
+  old
 
   23 Oct 2011; Raúl Porcel <armin76@gentoo.org> sox-14.3.2-r1.ebuild:
   alpha/sparc stable wrt #386005
