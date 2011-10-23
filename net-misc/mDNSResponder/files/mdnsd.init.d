@@ -1,9 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/files/mdnsd.init.d,v 1.2 2005/08/27 16:46:45 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/files/mdnsd.init.d,v 1.3 2011/10/23 18:15:50 polynomial-c Exp $
 
-opts="${opts} reload dump"
+extra_started_commands="reload dump"
 
 depend() {
 	after net
@@ -25,12 +25,12 @@ stop() {
 
 reload() {
 	ebegin "Reloading mdnsd"
-	kill -HUP `cat /var/run/mdnsd.pid` >&/dev/null
+	kill -HUP `cat /var/run/mdnsd.pid` >/dev/null 2>&1
 	eend $? "Failed to reload mdnsd"
 }
 
 dump() {
 	ebegin "Dump mdnsd state to logs"
-	kill -USR1 `cat /var/run/mdnsd.pid` >&/dev/null
+	kill -USR1 `cat /var/run/mdnsd.pid` >/dev/null 2>&1
 	eend $? "Failed to dump mdnsd state"
 }

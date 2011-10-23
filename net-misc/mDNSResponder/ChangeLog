@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/mDNSResponder
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.56 2010/08/13 14:09:40 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mDNSResponder/ChangeLog,v 1.57 2011/10/23 18:15:50 polynomial-c Exp $
+
+  23 Oct 2011; Lars Wendler <polynomial-c@gentoo.org> files/dnsextd.init.d,
+  files/mDNSResponderPosix.init.d, files/mdnsd.init.d:
+  non-maintainer commit: Removed bashisms from init scripts reported by Timothy
+  Redaelli in bug #260155. Replaced deprecated opts variable in init scripts.
 
   13 Aug 2010; Markos Chandras <hwoarang@gentoo.org>
   mDNSResponder-212.1-r1.ebuild:
