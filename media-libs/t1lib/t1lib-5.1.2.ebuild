@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.1.2.ebuild,v 1.12 2011/10/23 11:54:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.1.2.ebuild,v 1.13 2011/10/23 11:55:33 scarabeus Exp $
 
 EAPI=4
 
@@ -44,8 +44,6 @@ src_configure() {
 		$(use_enable static-libs static) \
 		$(use_with X x)
 }
-
-
 
 src_compile() {
 	local myopt=""
