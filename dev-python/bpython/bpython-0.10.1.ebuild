@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/bpython-0.10.1.ebuild,v 1.1 2011/08/09 13:30:55 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/bpython-0.10.1.ebuild,v 1.2 2011/10/23 22:27:11 tetromino Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*:2.5"
@@ -21,7 +21,7 @@ IUSE="gtk urwid"
 
 RDEPEND="dev-python/pygments
 	dev-python/setuptools
-	gtk? ( dev-python/pygobject dev-python/pygtk )
+	gtk? ( dev-python/pygobject:2 dev-python/pygtk )
 	urwid? ( dev-python/urwid )"
 DEPEND="${RDEPEND}"
 

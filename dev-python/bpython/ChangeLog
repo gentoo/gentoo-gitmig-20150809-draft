@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/bpython
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.28 2011/08/09 13:30:55 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.29 2011/10/23 22:27:11 tetromino Exp $
+
+  23 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  bpython-0.9.7.1.ebuild, bpython-0.10.1.ebuild:
+  Use correct slot of pygobject.
 
 *bpython-0.10.1 (09 Aug 2011)
 
