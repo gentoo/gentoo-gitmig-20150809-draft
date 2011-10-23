@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/rarian-0.8.1-r1.ebuild,v 1.10 2011/10/23 11:19:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rarian/rarian-0.8.1-r1.ebuild,v 1.11 2011/10/23 19:07:15 tetromino Exp $
 
 EAPI=4
 
-inherit eutils
+inherit eutils libtool
 
 DESCRIPTION="A documentation metadata library"
 HOMEPAGE="http://rarian.freedesktop.org/"
