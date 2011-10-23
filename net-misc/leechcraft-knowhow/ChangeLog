@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/leechcraft-knowhow
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-knowhow/ChangeLog,v 1.1 2011/10/23 17:48:27 maksbotan Exp $
+
+*leechcraft-knowhow-9999 (23 Oct 2011)
+
+  23 Oct 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  +leechcraft-knowhow-9999.ebuild, +metadata.xml:
+  Add leechcraft-knowhow, thanks to 0xd34df00d
+
