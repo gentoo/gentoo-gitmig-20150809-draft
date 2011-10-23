@@ -1,6 +1,10 @@
 # ChangeLog for app-text/podofo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.27 2011/10/16 18:11:55 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.28 2011/10/23 20:04:29 ssuominen Exp $
+
+  23 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> -podofo-0.7.0.ebuild,
+  -podofo-0.8.1-r1.ebuild, -podofo-0.8.2.ebuild, -podofo-0.8.4.ebuild:
+  old
 
   16 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> podofo-0.9.1.ebuild:
   ppc stable wrt #385913
