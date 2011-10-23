@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/docutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.142 2011/10/17 14:16:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.143 2011/10/23 16:23:22 armin76 Exp $
+
+  23 Oct 2011; Raúl Porcel <armin76@gentoo.org> docutils-0.8.1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #386065
 
   17 Oct 2011; Jeroen Roovers <jer@gentoo.org> docutils-0.8.1.ebuild:
   Stable for HPPA (bug #386065).
