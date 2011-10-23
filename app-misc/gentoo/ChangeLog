@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.99 2011/10/15 17:28:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.100 2011/10/23 15:47:14 armin76 Exp $
+
+  23 Oct 2011; Raúl Porcel <armin76@gentoo.org> gentoo-0.19.10.ebuild:
+  alpha/ia64/sparc stable wrt #386639
 
   15 Oct 2011; Jeroen Roovers <jer@gentoo.org> gentoo-0.19.10.ebuild:
   Stable for HPPA (bug #386639).
