@@ -5,4 +5,7 @@
   <email>ikelos@gentoo.org</email>
     <name>Mike Auty</name>
 </maintainer>
+<use>
+  <flag name="tables">Require the additional tables used to carry out cracking (<pkg>app-crypt/ophcrack-tables</pkg>)</flag>
+</use>
 </pkgmetadata>

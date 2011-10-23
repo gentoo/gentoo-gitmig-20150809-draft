@@ -1,8 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ophcrack-3.3.1.ebuild,v 1.1 2009/09/30 11:30:17 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ophcrack-3.3.1.ebuild,v 1.2 2011/10/23 12:52:59 ikelos Exp $
 
-EAPI="1"
+EAPI="3"
 inherit eutils
 
 DESCRIPTION="A time-memory-trade-off-cracker"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="qt4 debug"
+IUSE="qt4 debug +tables"
 
 CDEPEND="dev-libs/openssl
 		 net-libs/netwib
@@ -20,17 +20,17 @@ CDEPEND="dev-libs/openssl
 DEPEND="app-arch/unzip
 		>=dev-util/pkgconfig-0.22
 		${CDEPEND}"
-RDEPEND="app-crypt/ophcrack-tables
+RDEPEND="tables? ( app-crypt/ophcrack-tables )
 		 ${CDEPEND}"
 
-src_compile() {
+src_configure() {
+
 	local myconf
 
 	myconf="$(use_enable qt4 gui)"
 	myconf="${myconf} $(use_enable debug)"
 
 	econf ${myconf} || die "Failed to compile"
-	emake || die "Failed to make"
 }
 
 src_install() {
