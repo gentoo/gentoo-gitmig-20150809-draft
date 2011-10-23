@@ -1,11 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.5.025.ebuild,v 1.14 2011/10/21 16:40:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mkl/mkl-10.0.5.025.ebuild,v 1.15 2011/10/23 21:21:28 jlec Exp $
 
 inherit eutils fortran-2 toolchain-funcs check-reqs
 
 PID=1232
 PB=${PN}
+
 DESCRIPTION="Intel(R) Math Kernel Library: linear algebra, fft, math functions"
 HOMEPAGE="http://developer.intel.com/software/products/mkl/"
 SRC_URI="http://registrationcenter-download.intel.com/irc_nas/${PID}/l_${PN}_p_${PV}.tgz"
@@ -58,8 +59,8 @@ pkg_setup() {
 	fi
 
 	# Check if we have enough free diskspace to install
-	CHECKREQS_DISK_BUILD="1100"
-	check_reqs
+	CHECKREQS_DISK_BUILD="1100M"
+	check_reqs_pkg_setup
 
 	# Check and setup fortran
 	if use fortran95; then
