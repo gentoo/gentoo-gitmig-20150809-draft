@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/libgnomecanvas
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/ChangeLog,v 1.145 2011/04/10 10:47:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/ChangeLog,v 1.146 2011/10/23 23:11:36 abcd Exp $
+
+  23 Oct 2011; Jonathan Callen <abcd@gentoo.org> libgnomecanvas-2.30.3.ebuild:
+  Copy keywords from prefix overlay
 
   10 Apr 2011; Samuli Suominen <ssuominen@gentoo.org>
   libgnomecanvas-2.30.3.ebuild:
