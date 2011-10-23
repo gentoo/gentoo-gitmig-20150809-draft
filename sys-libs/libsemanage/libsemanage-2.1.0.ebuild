@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.1.0.ebuild,v 1.3 2011/09/27 18:27:57 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.1.0.ebuild,v 1.4 2011/10/23 12:39:35 swift Exp $
 
 EAPI="3"
 # Support for 4 depends on python.eclass
@@ -19,7 +19,7 @@ SRC_URI="http://userspace.selinuxproject.org/releases/20110727/devel/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="python ruby"
 
 RDEPEND=">=sys-libs/libsepol-${SEPOL_VER}
