@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/vigra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.41 2011/10/23 16:10:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.42 2011/10/23 16:18:37 scarabeus Exp $
+
+  23 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> -vigra-1.6.0.ebuild,
+  -files/vigra-1.6.0-gcc44.patch, -files/vigra-1.6.0-ldflags.patch:
+  Remove overshadowed version of vigra.
 
   23 Oct 2011; Raúl Porcel <armin76@gentoo.org> vigra-1.6.0.ebuild:
   Move to ~sparc
