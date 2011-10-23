@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jinja
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.53 2011/10/17 14:18:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.54 2011/10/23 16:29:14 armin76 Exp $
+
+  23 Oct 2011; Raúl Porcel <armin76@gentoo.org> jinja-2.6.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #386053
 
   17 Oct 2011; Jeroen Roovers <jer@gentoo.org> jinja-2.6.ebuild:
   Stable for HPPA (bug #386053).
