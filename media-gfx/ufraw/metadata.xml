@@ -9,12 +9,6 @@
 		<flag name='fits'>
 			Enable support for the FITS image format through <pkg>sci-libs/cfitsio</pkg>
 		</flag>
-		<flag name='hotpixels'>
-			enable hot pixel elimination
-		</flag>
-		<flag name='lensfun'>
-			enable the lensfun lens-correction library
-		</flag>
 		<flag name='timezone'>
 			enable DST correction for file timestamps
 		</flag>
