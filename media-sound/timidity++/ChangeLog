@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.143 2011/10/15 22:52:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.144 2011/10/23 16:12:19 armin76 Exp $
+
+  23 Oct 2011; Raúl Porcel <armin76@gentoo.org> timidity++-2.13.2-r13.ebuild:
+  sparc stable wrt #385757
 
   15 Oct 2011; Markus Meier <maekke@gentoo.org> timidity++-2.13.2-r13.ebuild:
   arm stable, bug #385757
