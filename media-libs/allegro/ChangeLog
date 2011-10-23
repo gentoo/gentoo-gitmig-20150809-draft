@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.115 2011/10/13 21:24:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.116 2011/10/23 20:10:54 ssuominen Exp $
+
+  23 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  -allegro-4.4.1.1-r1.ebuild, -files/allegro-4.4.1.1-optional_drivers.patch,
+  -files/allegro-4.4.1.1-rpath.patch, -files/allegro-4.4.1.1-shared.patch,
+  -files/allegro-4.4.1.1-underlink.patch, -allegro-5.0.1.ebuild,
+  -files/allegro-5.0.1-underlink.patch, -allegro-5.0.3.ebuild,
+  -files/allegro-5.0.3-underlink.patch:
+  old
 
   13 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> allegro-5.0.4.ebuild:
   x86 stable wrt bug #385823
