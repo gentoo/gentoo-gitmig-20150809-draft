@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/amsn-skins
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/amsn-skins/ChangeLog,v 1.19 2007/07/02 15:03:46 peper Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/amsn-skins/ChangeLog,v 1.20 2011/10/23 16:00:02 armin76 Exp $
+
+  23 Oct 2011; Raúl Porcel <armin76@gentoo.org> amsn-skins-20040223.ebuild,
+  amsn-skins-20061125.ebuild:
+  Drop alpha keywords
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   amsn-skins-20040223.ebuild, amsn-skins-20061125.ebuild:
