@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/ardour
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.99 2011/09/28 22:48:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.100 2011/10/23 21:56:49 ssuominen Exp $
+
+  23 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  -ardour-2.8.11-r20.ebuild, -files/ardour-2.8.11-gcc46.patch,
+  -files/ardour-2.8.11-ldpath.patch, -files/ardour-2.8.11-raptor2.patch,
+  -files/ardour-2.8.11-syslibs.patch, -files/ardour-2.8.11-type.patch:
+  old
 
   28 Sep 2011; Samuli Suominen <ssuominen@gentoo.org> ardour-2.8.12.ebuild:
   Use gentoo mirrors.

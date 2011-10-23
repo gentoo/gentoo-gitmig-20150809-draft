@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rosegarden
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.87 2011/05/31 20:45:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.88 2011/10/23 21:59:51 ssuominen Exp $
+
+  23 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  -rosegarden-10.04.2.ebuild, -rosegarden-10.10.ebuild:
+  old
 
   31 May 2011; Markus Meier <maekke@gentoo.org> rosegarden-11.02.ebuild:
   x86 stable, bug #368149
