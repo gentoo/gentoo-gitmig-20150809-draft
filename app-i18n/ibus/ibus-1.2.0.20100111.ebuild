@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.2.0.20100111.ebuild,v 1.10 2011/04/16 22:04:35 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.2.0.20100111.ebuild,v 1.11 2011/10/23 21:50:31 tetromino Exp $
 
 EAPI="3"
 inherit confutils eutils gnome2-utils python
@@ -22,7 +22,7 @@ RDEPEND=">=dev-libs/glib-2.18:2
 	app-text/iso-codes
 	x11-libs/libX11
 	>=dev-lang/python-2.5
-	>=dev-python/pygobject-2.14
+	>=dev-python/pygobject-2.14:2
 	dev-python/notify-python
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
