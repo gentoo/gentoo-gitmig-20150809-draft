@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-9999.ebuild,v 1.3 2011/09/24 17:49:27 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/leechcraft-azoth/leechcraft-azoth-9999.ebuild,v 1.4 2011/10/23 17:23:50 maksbotan Exp $
 
 EAPI="2"
 
@@ -11,9 +11,9 @@ DESCRIPTION="Azoth, the modular IM client for LeechCraft."
 SLOT="0"
 KEYWORDS=""
 IUSE="debug +acetamide +adiumstyles +autoidler +autopaste +chathistory +crypt
-		+depester +embedmedia +herbicide +hili +juick +lastseen +metacontacts
-		+modnok +nativeemoticons +otroid +p100q +rosenthal +standardstyles +xoox
-		+xtazy"
+		+depester +embedmedia +herbicide +hili +isterique +juick +lastseen
+		+metacontacts +modnok +nativeemoticons +otroid +p100q +rosenthal
+		+standardstyles +xoox +xtazy"
 
 DEPEND="=net-misc/leechcraft-core-${PV}
 		x11-libs/qt-webkit
@@ -43,6 +43,7 @@ src_configure() {
 		$(cmake-utils_use_enable embedmedia AZOTH_EMBEDMEDIA)
 		$(cmake-utils_use_enable herbicide AZOTH_HERBICIDE)
 		$(cmake-utils_use_enable hili AZOTH_HILI)
+		$(cmake-utils_use_enable isterique AZOTH_ISTERIQUE)
 		$(cmake-utils_use_enable juick AZOTH_JUICK)
 		$(cmake-utils_use_enable lastseen AZOTH_LASTSEEN)
 		$(cmake-utils_use_enable metacontacts AZOTH_LASTSEEN)

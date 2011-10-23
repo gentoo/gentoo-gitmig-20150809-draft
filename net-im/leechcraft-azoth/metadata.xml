@@ -12,6 +12,7 @@
 	<flag name="embedmedia">Build EmbedMedia for embedding flash videos and images directly into chat windows</flag>
 	<flag name="herbicide">Build Herbicide, a basic antispam plugin</flag>
 	<flag name="hili">Build HiLi which allows to customize highlight settings in MUCs</flag>
+	<flag name="isterique">Build Isterique plugin for neutralizing excessive caps lock usage</flag>
 	<flag name="juick">Build plugin for the Juick.com microblogging service</flag>
 	<flag name="lastseen">Build plugin for client-side recording of the last online/available time</flag>
 	<flag name="metacontacts">Build plugin for metacontacts support</flag>
