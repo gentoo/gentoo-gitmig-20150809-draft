@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5819 2011/10/22 11:53:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5820 2011/10/23 08:47:54 grobian Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Oct 2011; Fabian Groffen <grobian@gentoo.org> updates/4Q-2011:
+  Drop move dev-php5/dev-php5/pecl-ssh2 dev-php/dev-php5/pecl-ssh2 from
+  Q4-2011, because it is an invalid atom that breaks Portage
 
   22 Oct 2011; Hans de Graaff <graaff@gentoo.org> package.mask:
   Remove dev-ruby/rubygems mask now that all needed targets are supported.
