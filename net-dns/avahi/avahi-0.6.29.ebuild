@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.29.ebuild,v 1.1 2011/03/17 07:11:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.29.ebuild,v 1.2 2011/10/23 16:40:49 polynomial-c Exp $
 
 EAPI="3"
 
@@ -92,6 +92,9 @@ src_prepare() {
 	sed -i\
 		-e "s:\\.\\./\\.\\./\\.\\./doc/avahi-docs/html/:../../../doc/${PF}/html/:" \
 		doxygen_to_devhelp.xsl || die
+
+	# Fix init scripts for >=openrc-0.9.0 (bug #383641)
+	epatch "${FILESDIR}/${PN}-0.6.x-openrc-0.9.x-init-scripts-fixes.patch"
 }
 
 src_configure() {

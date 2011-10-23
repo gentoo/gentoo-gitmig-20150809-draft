@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.30-r1.ebuild,v 1.2 2011/10/02 20:18:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.30-r1.ebuild,v 1.3 2011/10/23 16:40:49 polynomial-c Exp $
 
 EAPI="3"
 
@@ -99,6 +99,9 @@ src_prepare() {
 
 	# Make gtk utils optional
 	epatch "${FILESDIR}/${PN}-0.6.30-optional-gtk-utils.patch"
+
+	# Fix init scripts for >=openrc-0.9.0 (bug #383641)
+	epatch "${FILESDIR}/${PN}-0.6.x-openrc-0.9.x-init-scripts-fixes.patch"
 
 	# Drop DEPRECATED flags, bug #384743
 	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED=1::g' avahi-ui/Makefile.am || die

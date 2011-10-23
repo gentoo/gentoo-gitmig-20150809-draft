@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/avahi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.206 2011/10/02 20:18:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/ChangeLog,v 1.207 2011/10/23 16:40:49 polynomial-c Exp $
+
+  23 Oct 2011; Lars Wendler <polynomial-c@gentoo.org>
+  +files/avahi-0.6.x-openrc-0.9.x-init-scripts-fixes.patch,
+  avahi-0.6.29.ebuild, avahi-0.6.30.ebuild, avahi-0.6.30-r1.ebuild:
+  non-maintainer commit: Replaced deprecated opts variable in init scripts (bug
+  #383641).
 
   02 Oct 2011; Pacho Ramos <pacho@gentoo.org> avahi-0.6.30-r1.ebuild:
   Drop DEPRECATED flags, bug #384743
