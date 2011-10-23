@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope-interface
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/ChangeLog,v 1.29 2011/10/17 20:39:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-interface/ChangeLog,v 1.30 2011/10/23 17:14:36 armin76 Exp $
+
+  23 Oct 2011; Raúl Porcel <armin76@gentoo.org> zope-interface-3.7.0.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #386069
 
   17 Oct 2011; Markus Meier <maekke@gentoo.org> zope-interface-3.7.0.ebuild:
   arm stable, bug #386069
