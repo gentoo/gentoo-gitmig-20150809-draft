@@ -1,8 +1,9 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.10.2-r3.ebuild,v 1.10 2010/01/21 22:46:49 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.10.2-r3.ebuild,v 1.11 2011/10/23 12:00:55 scarabeus Exp $
 
-EAPI=2
+EAPI=4
+
 inherit autotools eutils flag-o-matic libtool toolchain-funcs versionator
 
 MY_P=${PN}-III-$(get_version_component_range 2-3)
@@ -14,7 +15,7 @@ SRC_URI="http://downloads.xiph.org/releases/${PN}/${MY_P}.src.tgz
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~amd64-linux ~x86-linux"
-IUSE=""
+IUSE="static-libs"
 
 S=${WORKDIR}/${MY_P}
 
@@ -37,10 +38,10 @@ src_configure() {
 }
 
 src_compile() {
-	emake OPT="${CFLAGS}" || die "emake failed"
+	emake OPT="${CFLAGS}"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc README
+	default
+	use static-libs || find "${ED}" -name '*.a' -exec rm -f {} +
 }
