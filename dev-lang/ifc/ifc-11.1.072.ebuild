@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-11.1.072.ebuild,v 1.3 2011/09/03 19:08:50 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-11.1.072.ebuild,v 1.4 2011/10/23 21:13:14 jlec Exp $
 
-EAPI="3"
+EAPI=4
 
 inherit check-reqs rpm versionator
 
@@ -15,7 +15,8 @@ PID=1769
 DESCRIPTION="Intel FORTRAN compiler suite for Linux"
 HOMEPAGE="http://software.intel.com/en-us/articles/fortran-compilers/"
 SRC_COM="http://registrationcenter-download.intel.com/irc_nas/${PID}/${PACKAGEID}"
-SRC_URI="amd64? ( ${SRC_COM}_intel64.tgz )
+SRC_URI="
+	amd64? ( ${SRC_COM}_intel64.tgz )
 	ia64? ( ${SRC_COM}_ia64.tgz )
 	x86?  ( ${SRC_COM}_ia32.tgz )"
 
@@ -27,7 +28,8 @@ KEYWORDS="~amd64 ~ia64 ~x86 ~amd64-linux ~x86-linux"
 RESTRICT="mirror"
 
 DEPEND=""
-RDEPEND="~virtual/libstdc++-3.3
+RDEPEND="
+	~virtual/libstdc++-3.3
 	amd64? ( app-emulation/emul-linux-x86-compat )"
 
 DESTINATION="opt/intel/Compiler/${RELEASE}/${BUILD}"
@@ -44,10 +46,10 @@ QA_DT_HASH="
 	${EDESTINATION}/idb/*/*/.*"
 
 pkg_setup() {
-	CHECKREQS_MEMORY=1024
-	CHECKREQS_DISK_BUILD=1536
-	use idb && use mkl && CHECKREQS_DISK_BUILD=2048
-	check_reqs
+	CHECKREQS_MEMORY=1024M
+	CHECKREQS_DISK_BUILD=1536M
+	use idb && use mkl && CHECKREQS_DISK_BUILD=2048M
+	check-reqs_pkg_setup
 	IARCH=ia32
 	use amd64 && IARCH=intel64
 	use ia64 && IARCH=ia64
