@@ -1,6 +1,10 @@
 # ChangeLog for net-nntp/slrn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/slrn/ChangeLog,v 1.27 2011/10/10 18:36:54 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/slrn/ChangeLog,v 1.28 2011/10/23 15:09:58 armin76 Exp $
+
+  23 Oct 2011; Raúl Porcel <armin76@gentoo.org> slrn-0.9.8.1_p1.ebuild,
+  slrn-0.9.9_p1.ebuild:
+  Drop alpha/ia64/sparc keywords
 
   10 Oct 2011; Fabian Groffen <grobian@gentoo.org> slrn-1.0.0_pre18.ebuild:
   Marked ~{amd64,x86}-linux, bug #385065
