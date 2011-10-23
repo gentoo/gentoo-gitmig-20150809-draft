@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-gnupg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-gnupg/ChangeLog,v 1.33 2011/07/25 22:35:28 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-gnupg/ChangeLog,v 1.34 2011/10/23 12:42:29 swift Exp $
+
+  23 Oct 2011; <swift@gentoo.org> selinux-gnupg-2.20101213-r2.ebuild:
+  Stabilization (tracker #384231)
 
 *selinux-gnupg-2.20101213-r2 (25 Jul 2011)
 

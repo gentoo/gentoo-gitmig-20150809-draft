@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-xfce4/selinux-xfce4-2.20110427.ebuild,v 1.1 2011/08/28 21:12:33 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-xfce4/selinux-xfce4-2.20110427.ebuild,v 1.2 2011/10/23 12:42:45 swift Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=sec-policy/selinux-base-policy-2.20110726-r1"
