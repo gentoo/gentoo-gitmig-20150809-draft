@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.101 2011/07/25 17:51:31 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.102 2011/10/23 22:36:31 tetromino Exp $
+
+  23 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gst-python-0.10.20.ebuild, gst-python-0.10.21.ebuild:
+  Depend on correct slot of pygobject.
 
   25 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gst-python-0.10.21.ebuild:

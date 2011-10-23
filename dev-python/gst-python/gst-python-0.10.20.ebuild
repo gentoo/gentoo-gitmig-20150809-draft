@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.20.ebuild,v 1.7 2011/03/13 10:19:52 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.20.ebuild,v 1.8 2011/10/23 22:36:31 tetromino Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -18,7 +18,7 @@ SLOT="0.10"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="examples test"
 
-RDEPEND="|| ( >=dev-python/pygobject-2.11.2 >=dev-python/pygtk-2.6.3 )
+RDEPEND="|| ( >=dev-python/pygobject-2.11.2:2 >=dev-python/pygtk-2.6.3 )
 	>=media-libs/gstreamer-0.10.31
 	>=media-libs/gst-plugins-base-0.10.31
 	dev-libs/libxml2"
