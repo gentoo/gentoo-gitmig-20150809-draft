@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/groff
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.120 2011/05/07 18:02:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/ChangeLog,v 1.121 2011/10/23 19:42:35 grobian Exp $
+
+*groff-1.21-r1 (23 Oct 2011)
+
+  23 Oct 2011; Fabian Groffen <grobian@gentoo.org> +groff-1.21-r1.ebuild,
+  +files/groff-1.21-makefile.patch, +files/groff-1.21-gnulib.patch:
+  Revbump for Prefix changes, bump to EAPI3, add necessary patches from
+  upstream, added Prefix keywords, bug #388193
 
   07 May 2011; Raúl Porcel <armin76@gentoo.org> groff-1.21.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #362561
