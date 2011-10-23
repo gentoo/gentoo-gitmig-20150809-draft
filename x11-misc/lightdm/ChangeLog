@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/lightdm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.13 2011/10/23 16:50:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/ChangeLog,v 1.14 2011/10/23 17:11:05 ssuominen Exp $
+
+*lightdm-1.1.0-r1 (23 Oct 2011)
+
+  23 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> +lightdm-1.1.0-r1.ebuild,
+  +files/lightdm:
+  Don't use system-local-login because of conflict with pam_ck_connector.so.
+  This would require pambase to separate console and graphical logins for nox11
+  parameter. This pam.d file is copied from gnome-base/gdm.
 
 *lightdm-1.1.0 (23 Oct 2011)
 
