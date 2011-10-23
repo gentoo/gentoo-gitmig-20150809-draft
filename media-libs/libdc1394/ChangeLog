@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdc1394
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.65 2011/10/18 17:47:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.66 2011/10/23 17:31:18 armin76 Exp $
+
+  23 Oct 2011; Raúl Porcel <armin76@gentoo.org> libdc1394-2.1.3-r1.ebuild:
+  alpha/ia64/sparc stable wrt #382861
 
   18 Oct 2011; Jeroen Roovers <jer@gentoo.org> libdc1394-2.1.3-r1.ebuild:
   Stable for HPPA (bug #382861).
