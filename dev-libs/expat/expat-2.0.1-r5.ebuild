@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-2.0.1-r5.ebuild,v 1.6 2011/10/05 05:55:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-2.0.1-r5.ebuild,v 1.7 2011/10/23 12:55:47 armin76 Exp $
 
 EAPI=4
 inherit eutils libtool toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/expat/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="elibc_FreeBSD examples static-libs"
 
 src_prepare() {
