@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/papyon/papyon-0.5.4.ebuild,v 1.5 2011/03/22 20:06:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/papyon/papyon-0.5.4.ebuild,v 1.6 2011/10/23 23:47:08 tetromino Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86"
 IUSE=""
 
-RDEPEND=">=dev-python/pygobject-2.10
+RDEPEND=">=dev-python/pygobject-2.10:2
 	>=dev-python/pyopenssl-0.6
 	dev-python/gst-python
 	dev-python/pycrypto
