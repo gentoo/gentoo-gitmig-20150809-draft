@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.138 2011/10/04 04:52:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.139 2011/10/23 12:53:16 armin76 Exp $
+
+  23 Oct 2011; Raúl Porcel <armin76@gentoo.org> alsa-plugins-1.0.24.ebuild:
+  alpha/ia64/sh/sparc stable wrt #379423
 
   04 Oct 2011; Markus Meier <maekke@gentoo.org> alsa-plugins-1.0.24.ebuild:
   arm stable, bug #379423
