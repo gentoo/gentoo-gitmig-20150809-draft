@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/flac-image
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/flac-image/ChangeLog,v 1.1 2011/10/23 17:36:16 sbriesen Exp $
+
+*flac-image-1.00 (23 Oct 2011)
+
+  23 Oct 2011; Stefan Briesenick <sbriesen@gentoo.org> +flac-image-1.00.ebuild,
+  +metadata.xml:
+  initial commit
+
