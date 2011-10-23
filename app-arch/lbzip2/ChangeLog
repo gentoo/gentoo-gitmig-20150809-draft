@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lbzip2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.22 2011/10/13 21:21:57 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lbzip2/ChangeLog,v 1.23 2011/10/23 15:26:58 armin76 Exp $
+
+  23 Oct 2011; Raúl Porcel <armin76@gentoo.org> lbzip2-0.23-r2.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #370685
 
   13 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> lbzip2-0.23-r2.ebuild:
   x86 stable wrt bug #370685
