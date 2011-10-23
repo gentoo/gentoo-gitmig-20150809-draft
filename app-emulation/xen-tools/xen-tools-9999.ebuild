@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-9999.ebuild,v 1.6 2011/09/12 18:59:01 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-9999.ebuild,v 1.7 2011/10/23 10:49:29 patrick Exp $
 
 EAPI="3"
 
@@ -28,6 +28,7 @@ SLOT="0"
 IUSE="api custom-cflags debug doc flask hvm ioemu pygrub screen xend"
 
 CDEPEND="dev-lang/python
+	<dev-libs/yajl-2
 	dev-python/lxml
 	sys-libs/zlib
 	hvm? ( media-libs/libsdl
@@ -169,11 +170,6 @@ src_prepare() {
 
 	# Fix build for gcc-4.6
 	sed -e "s:-Werror::g" -i  tools/xenstat/xentop/Makefile
-	# Fix network broadcast on bridged networks
-	epatch "${FILESDIR}/${PN}-3.4.0-network-bridge-broadcast.patch"
-
-	# Do not strip binaries
-	epatch "${FILESDIR}/${PN}-3.3.0-nostrip.patch"
 
 	# Prevent the downloading of ipxe
 	sed -e 's:^\tif ! wget -O _$T:#\tif ! wget -O _$T:' \
