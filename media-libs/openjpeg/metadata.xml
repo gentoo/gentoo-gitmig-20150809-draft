@@ -2,7 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>graphics</herd>
-  <use>
-    <flag name="tools">Installs tools (j2k_to_image and image_to_j2k)</flag>
-  </use>
 </pkgmetadata>
