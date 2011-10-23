@@ -1,18 +1,17 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.3.0.ebuild,v 1.3 2011/10/23 17:10:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/gramps-3.3.1.ebuild,v 1.1 2011/10/23 17:14:31 fauli Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="2:2.6"
 GCONF_DEBUG="no"
-MY_P=${P}-1
 
 inherit eutils gnome2 python
 
 DESCRIPTION="Genealogical Research and Analysis Management Programming System"
 HOMEPAGE="http://www.gramps-project.org/"
-SRC_URI="mirror://sourceforge/gramps/Stable/${PV}/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/gramps/Stable/${PV}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -47,7 +46,7 @@ pkg_setup() {
 src_prepare() {
 	gnome2_src_prepare
 
-	epatch "${FILESDIR}/${P}-use_bsddb3.patch"
+	epatch "${FILESDIR}/${PN}-3.3.0-use_bsddb3.patch"
 
 	# This is for bug 215944, so .pyo/.pyc files don't get into the
 	# file system
