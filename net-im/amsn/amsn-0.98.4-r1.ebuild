@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.98.4-r1.ebuild,v 1.9 2011/10/15 10:41:15 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.98.4-r1.ebuild,v 1.10 2011/10/23 16:05:20 armin76 Exp $
 
 EAPI=4
 inherit autotools eutils fdo-mime gnome2-utils toolchain-funcs
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.amsn-project.net"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ppc -sparc x86"
+KEYWORDS="amd64 hppa ppc -sparc x86"
 IUSE="debug"
 
 DEPEND=">=dev-lang/tcl-8.4
