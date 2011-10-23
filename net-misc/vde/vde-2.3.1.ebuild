@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/vde-2.3.1.ebuild,v 1.1 2010/08/26 01:28:02 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/vde-2.3.1.ebuild,v 1.2 2011/10/23 12:18:42 scarabeus Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
-IUSE="pcap ssl"
+IUSE="pcap ssl static-libs"
 
 RDEPEND="pcap? ( net-libs/libpcap )
 	ssl? ( dev-libs/openssl )"
@@ -25,15 +25,16 @@ DEPEND="${RDEPEND}"
 src_configure() {
 	econf \
 		$(use_enable pcap) \
-		$(use_enable ssl cryptcab)
+		$(use_enable ssl cryptcab) \
+		$(use_enable static-libs static)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	newinitd "${FILESDIR}"/vde.init vde || die
-	newconfd "${FILESDIR}"/vde.conf vde || die
+	default
+	use static-libs || find "${ED}" -name '*.la' -exec rm -f {} +
 
-	dodoc README Changelog || die
+	newinitd "${FILESDIR}"/vde.init vde
+	newconfd "${FILESDIR}"/vde.conf vde
 }
 
 pkg_postinst() {
