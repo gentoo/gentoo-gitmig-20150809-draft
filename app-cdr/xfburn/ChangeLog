@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/xfburn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/ChangeLog,v 1.34 2011/04/27 20:24:50 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/ChangeLog,v 1.35 2011/10/23 10:39:36 ssuominen Exp $
+
+*xfburn-0.4.3-r2 (23 Oct 2011)
+
+  23 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> +xfburn-0.4.3-r2.ebuild,
+  +files/xfburn-0.4.3-empty_directory_segmentation_fault.patch:
+  Fix segmentation fault with empty directories wrt #331135 by "Vladimir"
 
   27 Apr 2011; Christoph Mende <angelos@gentoo.org> xfburn-0.4.3-r1.ebuild:
   Fixed gstreamer slot deps
