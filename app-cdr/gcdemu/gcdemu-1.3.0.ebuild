@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcdemu/gcdemu-1.3.0.ebuild,v 1.3 2011/06/13 15:00:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcdemu/gcdemu-1.3.0.ebuild,v 1.4 2011/10/23 21:48:29 tetromino Exp $
 
 EAPI="3"
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="libnotify"
 
 COMMON_DEPEND=">=dev-python/pygtk-2.6
-	>=dev-python/pygobject-2.6
+	>=dev-python/pygobject-2.6:2
 	>=dev-python/libgnome-python-2.6
 	>=dev-python/gnome-applets-python-2.6
 	dev-python/gconf-python
