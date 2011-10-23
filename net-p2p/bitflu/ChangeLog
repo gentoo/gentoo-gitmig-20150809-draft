@@ -1,5 +1,10 @@
 
 
+*bitflu-1.39 (23 Oct 2011)
+
+  23 Oct 2011; Anthony G. Basile <blueness@gentoo.org> +bitflu-1.39.ebuild:
+  Version bump
+
   04 Sep 2011; Markus Meier <maekke@gentoo.org> bitflu-1.37.ebuild:
   x86 stable, bug #380079
 
