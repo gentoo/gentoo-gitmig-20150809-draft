@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5825 2011/10/24 07:22:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5826 2011/10/24 18:29:00 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Oct 2011; Pacho Ramos <pacho@gentoo.org> arch/alpha/package.use.mask,
+  arch/ia64/package.use.mask:
+  Mask map empathy USE flag on some arches due missing keywords, bug 388367
 
   24 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
   Unmask v8-3.5.x, mask v8-3.6.x.
