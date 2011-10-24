@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.5.ebuild,v 1.6 2011/08/15 19:09:46 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.5.ebuild,v 1.7 2011/10/24 06:36:35 tetromino Exp $
 
 EAPI=3
 
@@ -43,7 +43,7 @@ DEPEND="${COMMON_DEPEND}
 RDEPEND="${COMMON_DEPEND}
 	>=app-text/ghostscript-gpl-8.71-r3
 	!minimal? (
-		dev-python/pygobject
+		dev-python/pygobject:2
 		kernel_linux? ( >=sys-fs/udev-114 )
 		scanner? (
 			dev-python/imaging
