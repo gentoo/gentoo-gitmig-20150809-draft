@@ -1,7 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/soundconverter-1.5.4.ebuild,v 1.4 2011/08/21 03:24:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundconverter/soundconverter-1.5.4.ebuild,v 1.5 2011/10/24 06:02:22 tetromino Exp $
 
+EAPI="1"
 PYTHON_DEPEND="2"
 GCONF_DEBUG="no"
 
@@ -21,7 +22,7 @@ IUSE="aac flac mp3 vorbis"
 RESTRICT="test"
 
 RDEPEND=">=dev-python/pygtk-2.12
-	dev-python/pygobject
+	dev-python/pygobject:2
 	dev-python/gconf-python
 	dev-python/libgnome-python
 	dev-python/gnome-vfs-python
