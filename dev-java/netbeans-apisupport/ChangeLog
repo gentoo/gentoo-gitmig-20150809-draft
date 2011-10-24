@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/netbeans-apisupport
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-apisupport/ChangeLog,v 1.6 2011/09/16 19:35:05 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-apisupport/ChangeLog,v 1.7 2011/10/24 23:52:11 fordfrog Exp $
+
+  24 Oct 2011; Miroslav Šulc <fordfrog@gentoo.org>
+  netbeans-apisupport-7.0.1.ebuild:
+  Filtering ecj compilers as the package does not compile using them
 
   16 Sep 2011; Miroslav Šulc <fordfrog@gentoo.org>
   netbeans-apisupport-7.0.1.ebuild:
