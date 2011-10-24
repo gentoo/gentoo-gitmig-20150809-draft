@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/radiotray
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/ChangeLog,v 1.13 2011/10/22 22:24:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/radiotray/ChangeLog,v 1.14 2011/10/24 05:55:58 tetromino Exp $
+
+  24 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  radiotray-0.6.3.ebuild, radiotray-0.6.4.ebuild, radiotray-9999.ebuild:
+  Depend on correct slot of pygobject.
 
   22 Oct 2011; Markos Chandras <hwoarang@gentoo.org> radiotray-0.6.4.ebuild:
   Stable on amd64 wrt bug #387745
