@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-2010.11.25.ebuild,v 1.3 2011/03/25 13:36:58 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/uzbl-2010.11.25.ebuild,v 1.4 2011/10/24 06:43:25 tetromino Exp $
 
 EAPI="2"
 
@@ -49,7 +49,7 @@ RDEPEND="
 	)
 	helpers? (
 		dev-python/pygtk
-		dev-python/pygobject
+		dev-python/pygobject:2
 		gnome-extra/zenity
 		net-misc/socat
 		x11-libs/pango
@@ -68,7 +68,7 @@ pkg_setup() {
 		elog "uzbl's extra scripts use various optional applications:"
 		elog
 		elog "   dev-python/pygtk"
-		elog "   dev-python/pygobject"
+		elog "   dev-python/pygobject:2"
 		elog "   gnome-extra/zenity"
 		elog "   net-misc/socat"
 		elog "   x11-libs/pango"
