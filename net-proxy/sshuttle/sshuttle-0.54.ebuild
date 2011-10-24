@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshuttle/sshuttle-0.54.ebuild,v 1.1 2011/07/04 22:17:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshuttle/sshuttle-0.54.ebuild,v 1.2 2011/10/24 21:29:20 radhermit Exp $
 
 EAPI=3
 PYTHON_DEPEND="2"
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
+DEPEND="app-arch/xz-utils"
 RDEPEND="net-firewall/iptables
 	|| ( app-admin/sudo sys-apps/shadow )"
 
