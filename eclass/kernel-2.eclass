@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.260 2011/08/29 01:28:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.261 2011/10/24 23:58:11 mpagano Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -231,7 +231,8 @@ detect_version() {
 			KERNEL_BASE_URI="${KERNEL_BASE_URI}/longterm/v${KV_MAJOR}.${KV_PATCH_ARR}"
 	else
 		#KERNEL_BASE_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.0"
-		KERNEL_BASE_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}"
+		#KERNEL_BASE_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}"
+		KERNEL_BASE_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.x"
 		[[ -n "${K_LONGTERM}" ]] &&
 			KERNEL_BASE_URI="${KERNEL_BASE_URI}/longterm/v${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}"
 	fi
