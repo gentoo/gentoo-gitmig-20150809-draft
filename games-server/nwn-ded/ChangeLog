@@ -1,6 +1,9 @@
 # ChangeLog for games-server/nwn-ded
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/ChangeLog,v 1.24 2011/10/22 21:43:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/ChangeLog,v 1.25 2011/10/24 19:55:23 maekke Exp $
+
+  24 Oct 2011; Markus Meier <maekke@gentoo.org> nwn-ded-1.69.ebuild:
+  x86 stable, bug #387371
 
   22 Oct 2011; Markos Chandras <hwoarang@gentoo.org> nwn-ded-1.69.ebuild:
   Stable on amd64 wrt bug #387371
