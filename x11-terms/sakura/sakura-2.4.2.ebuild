@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/sakura-2.4.2.ebuild,v 1.1 2011/09/20 03:55:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/sakura-2.4.2.ebuild,v 1.2 2011/10/24 21:53:02 radhermit Exp $
 
 EAPI=4
 inherit cmake-utils
@@ -25,6 +25,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 "
 
+PATCHES=( "${FILESDIR}"/${P}-cflags.patch )
+
 DOCS=( AUTHORS INSTALL )
 
 src_prepare() {
@@ -35,4 +37,6 @@ src_prepare() {
 			rm -f po/${lang}.po || die
 		fi
 	done
+
+	base_src_prepare
 }
