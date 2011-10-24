@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-rtsp-server/gst-rtsp-server-0.10.8.ebuild,v 1.4 2011/09/01 20:10:30 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-rtsp-server/gst-rtsp-server-0.10.8.ebuild,v 1.5 2011/10/24 05:52:31 tetromino Exp $
 
 EAPI=3
 
@@ -23,7 +23,7 @@ PYGOBJECT_REQ=2.11.2
 RDEPEND="
 	>=dev-libs/glib-2.10.0
 	dev-libs/libxml2
-	>=dev-python/pygobject-${PYGOBJECT_REQ}
+	>=dev-python/pygobject-${PYGOBJECT_REQ}:2
 	dev-python/gst-python:0.10
 	introspection? ( >=dev-libs/gobject-introspection-0.6.3 )
 	>=media-libs/gstreamer-0.10.29[introspection?]

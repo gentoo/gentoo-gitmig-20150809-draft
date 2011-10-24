@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libgpod
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.85 2011/03/29 12:40:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.86 2011/10/24 05:54:05 tetromino Exp $
+
+  24 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libgpod-0.8.0.ebuild:
+  Depend on correct slot of pygobject.
 
   29 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   "ios" is now global USE flag.

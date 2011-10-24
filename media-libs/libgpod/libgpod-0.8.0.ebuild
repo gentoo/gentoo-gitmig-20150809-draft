@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.8.0.ebuild,v 1.6 2011/03/27 15:37:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.8.0.ebuild,v 1.7 2011/10/24 05:54:05 tetromino Exp $
 
 EAPI=3
 
@@ -25,7 +25,7 @@ RDEPEND=">=app-pda/libplist-1.0
 	gtk? ( || ( x11-libs/gdk-pixbuf:2 <x11-libs/gtk+-2.22:2 ) )
 	ios? ( app-pda/libimobiledevice )
 	python? ( >=media-libs/mutagen-1.8
-		>=dev-python/pygobject-2.8 )
+		>=dev-python/pygobject-2.8:2 )
 	udev? ( sys-fs/udev )
 	mono? ( >=dev-lang/mono-1.9.1
 		>=dev-dotnet/gtk-sharp-2.12 )"
