@@ -1,0 +1,10 @@
+# ChangeLog for app-text/notmuch
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/notmuch/ChangeLog,v 1.1 2011/10/24 00:03:22 aidecoe Exp $
+
+*notmuch-0.9 (23 Oct 2011)
+
+  23 Oct 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +files/0.9-fix-lib-makefile-local.patch, +notmuch-0.9.ebuild, +metadata.xml:
+  Initial ebuild without python and ruby bindings yet.
+
