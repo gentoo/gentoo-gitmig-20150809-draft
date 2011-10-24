@@ -1,6 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.99 2011/10/09 19:29:01 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.100 2011/10/24 18:31:10 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (24 Oct 2011)
+# Missing keywords in needed packages, bug #388367
+net-im/empathy map
 
 # Pacho Ramos <pacho@gentoo.org> (26 Sep 2011)
 # Dependencies not keyworded yet, bug #372245

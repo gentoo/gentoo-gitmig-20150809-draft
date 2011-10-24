@@ -1,6 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.84 2011/10/08 18:48:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.85 2011/10/24 18:31:10 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (24 Oct 2011)
+# Missing keywords in needed packages, bug #388367
+net-im/empathy map
 
 # Raúl Porcel <armin76@gentoo.org> (08 Oct 2011)
 # Needs media-sound/lilypond
