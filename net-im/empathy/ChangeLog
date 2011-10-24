@@ -1,6 +1,16 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.90 2011/08/18 06:22:13 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.91 2011/10/24 18:33:23 pacho Exp $
+
+*empathy-2.34.0-r2 (24 Oct 2011)
+
+  24 Oct 2011; Pacho Ramos <pacho@gentoo.org> +empathy-2.34.0-r2.ebuild,
+  +files/empathy-2.34.0-CVE-2011-3635.patch,
+  +files/empathy-2.34.0-missing-include.patch:
+  Fix script injection vulnerability (CVE-2011-3635), bug #388051 (backported
+  patch by Tetromino); fix compilation error due missing header, bug #388203 by
+  My Th. Readd dropped keywords after masking offending map USE flag for them,
+  that arches shouldn't stick with old 2.32.x versions.
 
 *empathy-3.0.2 (18 Aug 2011)
 
