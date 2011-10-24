@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/libpar2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/libpar2/ChangeLog,v 1.12 2011/10/24 10:10:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/libpar2/ChangeLog,v 1.13 2011/10/24 10:23:21 radhermit Exp $
+
+*libpar2-0.2-r2 (24 Oct 2011)
+
+  24 Oct 2011; Tim Harder <radhermit@gentoo.org> +libpar2-0.2-r2.ebuild:
+  Revbump to update to EAPI 4 and add static-libs use flag.
 
   24 Oct 2011; Tim Harder <radhermit@gentoo.org> -libpar2-0.2.ebuild,
   metadata.xml:
