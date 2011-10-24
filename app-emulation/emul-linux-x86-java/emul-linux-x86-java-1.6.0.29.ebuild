@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.29.ebuild,v 1.1 2011/10/22 23:49:01 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.6.0.29.ebuild,v 1.2 2011/10/24 03:17:06 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -95,7 +95,7 @@ src_install() {
 # 		-e "s#Icon=.*#Icon=/opt/${P}/lib/desktop/icons/hicolor/48x48/apps/sun-jcontrol.png#" \
 # 		"${ED}"/opt/${P}/lib/desktop/applications/sun_java.desktop > \
 # 		"${T}"/${VMHANDLE}.desktop
-# 
+#
 # 	domenu "${T}"/${VMHANDLE}.desktop
 
 	# bug #56444
