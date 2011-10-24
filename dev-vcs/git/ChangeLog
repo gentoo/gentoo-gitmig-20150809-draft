@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.101 2011/10/03 10:07:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.102 2011/10/24 08:34:13 robbat2 Exp $
+
+*git-1.7.7.1 (24 Oct 2011)
+
+  24 Oct 2011; Robin H. Johnson <robbat2@gentoo.org> +git-1.7.7.1.ebuild:
+  Version bump.
 
   03 Oct 2011; Robin H. Johnson <robbat2@gentoo.org> git-9999.ebuild:
   Update live ebuild to sync.
