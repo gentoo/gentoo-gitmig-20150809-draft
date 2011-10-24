@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13171 2011/10/23 23:27:35 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13172 2011/10/24 07:22:54 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (24 Oct 2011)
+# Mask v8 versions used for www-client/chromium dev channel releases.
+# Currently v8-3.6 versions are used for chromium-16.x versions.
+>=dev-lang/v8-3.6
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (21 Oct 2011)
 # Live ebuild (seabios) shouldn't have been keyworded ~arch
@@ -517,11 +522,6 @@ dev-php/roadsend-php
 # could reappear in the future if a 2.x release is launched
 # some day. bug #381221, removal in 30 days.
 net-irc/conspire
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (30 Aug 2011)
-# Mask v8 versions used for www-client/chromium dev channel releases.
-# Currently v8-3.5 versions are used for chromium-15.x versions.
->=dev-lang/v8-3.5
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (28 Aug 2011)
 # Breaks lots of rdeps.

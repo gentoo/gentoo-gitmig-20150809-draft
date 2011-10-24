@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5824 2011/10/23 23:27:35 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5825 2011/10/24 07:22:54 phajdan.jr Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
+  Unmask v8-3.5.x, mask v8-3.6.x.
 
   23 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
   Mask office-runner (requires gnome-settings-daemon-3).
