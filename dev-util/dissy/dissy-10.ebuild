@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dissy/dissy-10.ebuild,v 1.2 2011/07/28 23:27:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dissy/dissy-10.ebuild,v 1.3 2011/10/24 05:42:57 tetromino Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -19,7 +19,7 @@ IUSE=""
 DEPEND=""
 RDEPEND="sys-devel/binutils
 	dev-python/pygtk
-	dev-python/pygobject
+	dev-python/pygobject:2
 	dev-python/pywebkitgtk"
 
 pkg_setup() {
