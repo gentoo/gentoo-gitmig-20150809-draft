@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.101 2011/10/23 10:49:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.102 2011/10/24 12:02:08 alexxy Exp $
+
+  24 Oct 2011; Alexey Shvetsov <alexxy@gentoo.org> xen-tools-4.1.1-r6.ebuild,
+  +files/xen-tools-4.1.1-bridge.patch, +files/xen-tools-4.1.1-curl.patch:
+  Patch to curl config, fixes Bug #386487, tiny change to bridging fixes Bug
+  #362575 by Klas Meder Boqvist, patch prepared by Ian Delaney aka idella4
 
   23 Oct 2011; Patrick Lauer <patrick@gentoo.org> xen-tools-9999.ebuild:
   Bump for #386461, thanks to Ian Delaney

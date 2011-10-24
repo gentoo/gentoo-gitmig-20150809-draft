@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r6.ebuild,v 1.1 2011/10/22 23:25:50 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.1-r6.ebuild,v 1.2 2011/10/24 12:02:08 alexxy Exp $
 
 EAPI="3"
 
@@ -192,6 +192,12 @@ src_prepare() {
 		-e 's:^\tfi:#\tfi:' -i \
 		-e 's:^\tmv _$T $T:#\tmv _$T $T:' \
 		-i tools/firmware/etherboot/Makefile || die
+
+	# Fix bridge by idella4, bug #362575
+	epatch "${FILESDIR}/${P}-bridge.patch"
+
+	# Patch for curl-config from bug #386487
+	epatch "${FILESDIR}/${P}-curl.patch" || die
 
 	# Don't build ipxe with pie on hardened, Bug #360805
 	if gcc-specs-pie ; then
