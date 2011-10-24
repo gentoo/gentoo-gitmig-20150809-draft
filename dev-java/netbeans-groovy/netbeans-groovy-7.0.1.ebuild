@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-groovy/netbeans-groovy-7.0.1.ebuild,v 1.2 2011/09/16 19:41:42 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-groovy/netbeans-groovy-7.0.1.ebuild,v 1.3 2011/10/24 23:58:33 fordfrog Exp $
 
 EAPI="4"
 WANT_ANT_TASKS="ant-nodeps"
@@ -33,6 +33,7 @@ INSTALL_DIR="/usr/share/${PN}-${SLOT}"
 EANT_BUILD_XML="nbbuild/build.xml"
 EANT_BUILD_TARGET="rebuild-cluster"
 EANT_EXTRA_ARGS="-Drebuild.cluster.name=nb.cluster.groovy -Dext.binaries.downloaded=true"
+EANT_FILTER_COMPILER="ecj-3.3 ecj-3.4 ecj-3.5 ecj-3.6 ecj-3.7"
 JAVA_PKG_BSFIX="off"
 
 src_unpack() {
