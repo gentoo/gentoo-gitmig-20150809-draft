@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.3.3.ebuild,v 1.4 2011/09/20 14:35:10 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.3.3.ebuild,v 1.5 2011/10/24 06:34:50 tetromino Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -28,7 +28,7 @@ RDEPEND="${DEPEND}
 	>=dev-python/twisted-web-8.1
 	gtk? (
 		dev-python/pygame
-		dev-python/pygobject
+		dev-python/pygobject:2
 		>=dev-python/pygtk-2.12
 		gnome-base/librsvg
 		libnotify? ( dev-python/notify-python )
