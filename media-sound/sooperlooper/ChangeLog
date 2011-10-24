@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sooperlooper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/ChangeLog,v 1.18 2011/06/09 09:50:09 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/ChangeLog,v 1.19 2011/10/24 04:28:10 radhermit Exp $
+
+*sooperlooper-1.6.18 (24 Oct 2011)
+
+  24 Oct 2011; Tim Harder <radhermit@gentoo.org> +sooperlooper-1.6.18.ebuild:
+  Version bump.
 
 *sooperlooper-1.6.17 (09 Jun 2011)
 
