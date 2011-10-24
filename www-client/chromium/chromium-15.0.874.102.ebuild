@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-15.0.874.102.ebuild,v 1.1 2011/10/21 21:26:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-15.0.874.102.ebuild,v 1.2 2011/10/24 14:20:54 phajdan.jr Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -15,7 +15,7 @@ SRC_URI="http://commondatastorage.googleapis.com/chromium-browser-official/${P}.
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="bindist chromedriver cups gnome gnome-keyring kerberos pulseaudio"
+IUSE="bindist cups gnome gnome-keyring kerberos pulseaudio"
 
 # en_US is ommitted on purpose from the list below. It must always be available.
 LANGS="am ar bg bn ca cs da de el en_GB es es_LA et fa fi fil fr gu he hi hr
@@ -271,11 +271,8 @@ src_configure() {
 }
 
 src_compile() {
-	emake chrome chrome_sandbox BUILDTYPE=Release V=1 || die
+	emake chrome chrome_sandbox chromedriver BUILDTYPE=Release V=1 || die
 	pax-mark m out/Release/chrome
-	if use chromedriver; then
-		emake chromedriver BUILDTYPE=Release V=1 || die
-	fi
 	if use test; then
 		emake {base,crypto,googleurl,net}_unittests BUILDTYPE=Release V=1 || die
 		pax-mark m out/Release/{base,crypto,googleurl,net}_unittests
@@ -318,9 +315,7 @@ src_install() {
 	doexe out/Release/chrome_sandbox || die
 	fperms 4755 "${CHROMIUM_HOME}/chrome_sandbox"
 
-	if use chromedriver; then
-		doexe out/Release/chromedriver || die
-	fi
+	doexe out/Release/chromedriver || die
 
 	# Install Native Client files on platforms that support it.
 	# insinto "${CHROMIUM_HOME}"
