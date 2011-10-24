@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.829 2011/10/09 16:59:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.830 2011/10/24 18:00:36 armin76 Exp $
+
+  24 Oct 2011; Raúl Porcel <armin76@gentoo.org> gcc-4.5.3-r1.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #357478
 
   09 Oct 2011; Markus Meier <maekke@gentoo.org> gcc-4.5.3-r1.ebuild:
   arm stable, bug #357479
