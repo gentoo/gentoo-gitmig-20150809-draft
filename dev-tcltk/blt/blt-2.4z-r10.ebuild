@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r10.ebuild,v 1.1 2011/10/24 17:50:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r10.ebuild,v 1.2 2011/10/24 17:54:44 jlec Exp $
 
-EAPI=4
+EAPI="3"
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -75,7 +75,7 @@ src_configure() {
 
 src_compile() {
 	# parallel borks
-	emake -j1 LDFLAGS="${LDFLAGS}"
+	emake -j1 LDFLAGS="${LDFLAGS}" || die "emake failed"
 }
 
 src_install() {
@@ -89,8 +89,9 @@ src_install() {
 	dodir /usr/bin \
 		/usr/$(get_libdir)/blt2.4/demos/bitmaps \
 		/usr/share/man/mann \
-		/usr/include
-	emake -j1 INSTALL_ROOT="${D}" install
+		/usr/include \
+			|| die "dodir failed"
+	emake -j1 INSTALL_ROOT="${D}" install || die "make install failed"
 
 	dodoc NEWS PROBLEMS README
 	dohtml html/*.html
@@ -102,6 +103,6 @@ src_install() {
 	cp "${FILESDIR}"/pkgIndex.tcl "${ED}"/usr/$(get_libdir)/blt2.4/pkgIndex.tcl
 
 	# fix for linking against shared lib with -lBLT or -lBLTlite
-	dosym libBLT24$(get_libname) /usr/$(get_libdir)/libBLT$(get_libname)
-	dosym libBLTlite24$(get_libname) /usr/$(get_libdir)/libBLTlite$(get_libname)
+	dosym libBLT24$(get_libname) /usr/$(get_libdir)/libBLT$(get_libname) || die
+	dosym libBLTlite24$(get_libname) /usr/$(get_libdir)/libBLTlite$(get_libname) || die
 }
