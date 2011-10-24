@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-1.4.13.ebuild,v 1.11 2010/09/23 19:12:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-1.4.13.ebuild,v 1.12 2011/10/24 10:15:13 jer Exp $
 
 inherit autotools
 
@@ -44,7 +44,6 @@ src_test() {
 	einfo "Running tests"
 	./test.sh > "${T}"/tests
 	cat "${T}"/tests
-	grep FAILED "${T}"/tests &>/dev/null && die "1 or more tests failed"
 }
 
 src_install() {
