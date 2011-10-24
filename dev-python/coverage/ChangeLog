@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/coverage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.43 2011/10/24 09:44:42 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.44 2011/10/24 19:52:38 hwoarang Exp $
+
+  24 Oct 2011; Markos Chandras <hwoarang@gentoo.org> coverage-3.5.ebuild:
+  Stable on amd64 wrt bug #388311
 
 *coverage-3.5.1 (24 Oct 2011)
 
