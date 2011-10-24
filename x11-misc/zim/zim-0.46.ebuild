@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/zim-0.46.ebuild,v 1.4 2011/03/27 22:56:04 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/zim-0.46.ebuild,v 1.5 2011/10/24 06:44:49 tetromino Exp $
 
 PYTHON_USE_WITH="sqlite"
 PYTHON_DEPEND="2:2.5"
@@ -19,7 +19,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="graphviz latex screenshot spell test"
 
 RDEPEND="|| ( >=dev-lang/python-2.6 dev-python/simplejson )
-	dev-python/pygobject
+	dev-python/pygobject:2
 	dev-python/pygtk
 	x11-libs/gtk+:2
 	x11-misc/xdg-utils
