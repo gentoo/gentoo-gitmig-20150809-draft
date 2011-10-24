@@ -1,6 +1,12 @@
 # ChangeLog for app-text/notmuch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/notmuch/ChangeLog,v 1.1 2011/10/24 00:03:22 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/notmuch/ChangeLog,v 1.2 2011/10/24 12:17:18 aidecoe Exp $
+
+  24 Oct 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.9.ebuild,
+  metadata.xml:
+  Checking emacs version in pkg_setup(), not in pkg_pretend().  Paths in
+  src_install() were prefixed with ${ROOT} and emacs files were put into ${PN}
+  subdirectory.  Better descriptions for vim and emacs flags in metadata.xml.
 
 *notmuch-0.9 (23 Oct 2011)
 

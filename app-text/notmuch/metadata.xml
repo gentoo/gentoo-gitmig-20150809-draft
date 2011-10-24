@@ -6,8 +6,8 @@
 		<name>Amadeusz Żołnowski</name>
 	</maintainer>
 	<use>
-		<flag name="vim">Install Vim script which allows reading notmuch mail
-			through Vim</flag>
+		<flag name="emacs">Install Notmuch client for Emacs (main client)</flag>
+		<flag name="vim">Install Notmuch client for Vim (experimental)</flag>
 	</use>
 	<longdescription lang="en">
 		Notmuch is a system for indexing, searching, reading, and tagging large
