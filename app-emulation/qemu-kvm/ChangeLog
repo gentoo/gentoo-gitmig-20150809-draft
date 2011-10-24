@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.72 2011/10/22 23:00:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.73 2011/10/24 18:27:09 cardoe Exp $
+
+  24 Oct 2011; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-0.15.1.ebuild:
+  Add 2nd argument to dosym. bug #388039
 
   22 Oct 2011; Doug Goldstein <cardoe@gentoo.org> qemu-kvm-0.15.1.ebuild:
   Only depend on sys-apps/seabios on x86 & amd64 since it will only compile

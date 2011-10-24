@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.15.1.ebuild,v 1.4 2011/10/22 23:00:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-0.15.1.ebuild,v 1.5 2011/10/24 18:27:09 cardoe Exp $
 
 #BACKPORTS=1
 
@@ -276,7 +276,7 @@ src_install() {
 		# Remove SeaBIOS since we're using the SeaBIOS packaged one
 		rm "${D}/usr/share/qemu/bios.bin"
 		insinto /usr/share/qemu
-		dosym ../seabios/bios.bin
+		dosym ../seabios/bios.bin bios.bin
 	fi
 }
 
