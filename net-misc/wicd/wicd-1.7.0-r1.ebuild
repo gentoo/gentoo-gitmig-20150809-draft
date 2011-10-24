@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.0-r1.ebuild,v 1.4 2011/10/01 16:18:28 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.0-r1.ebuild,v 1.5 2011/10/24 06:32:15 tetromino Exp $
 
 EAPI=3
 
@@ -45,13 +45,13 @@ RDEPEND="
 		sys-apps/net-tools
 		sys-apps/ethtool
 	)
-	!gtk? ( dev-python/pygobject )
+	!gtk? ( dev-python/pygobject:2 )
 	ioctl? ( dev-python/python-iwscan dev-python/python-wpactrl )
 	libnotify? ( dev-python/notify-python )
 	ncurses? (
 		>=dev-python/urwid-0.9.9.1
 		<dev-python/urwid-1.0.0
-		dev-python/pygobject
+		dev-python/pygobject:2
 	)
 	pm-utils? ( >=sys-power/pm-utils-1.1.1 )
 	"
