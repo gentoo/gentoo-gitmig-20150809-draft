@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-specimen/gnome-specimen-0.4.ebuild,v 1.6 2011/01/31 13:34:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-specimen/gnome-specimen-0.4.ebuild,v 1.7 2011/10/24 05:51:12 tetromino Exp $
 
 EAPI=3
 
@@ -21,7 +21,7 @@ IUSE=""
 RDEPEND="dev-python/gconf-python
 	dev-python/libgnome-python
 	dev-python/pygtk
-	dev-python/pygobject"
+	dev-python/pygobject:2"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig
