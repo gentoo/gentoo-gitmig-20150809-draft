@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/ufw-frontends
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw-frontends/ChangeLog,v 1.2 2011/09/13 06:45:13 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw-frontends/ChangeLog,v 1.3 2011/10/24 06:03:57 tetromino Exp $
+
+  24 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  ufw-frontends-0.2.0.ebuild, ufw-frontends-0.3.1.ebuild:
+  Depend on correct slot of pygobject.
 
 *ufw-frontends-0.3.1 (13 Sep 2011)
 

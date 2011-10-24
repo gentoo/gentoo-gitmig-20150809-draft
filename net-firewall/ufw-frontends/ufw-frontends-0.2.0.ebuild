@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw-frontends/ufw-frontends-0.2.0.ebuild,v 1.1 2011/07/28 07:20:19 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ufw-frontends/ufw-frontends-0.2.0.ebuild,v 1.2 2011/10/24 06:03:57 tetromino Exp $
 
 EAPI=3
 PYTHON_DEPEND="2:2.6"
@@ -18,7 +18,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}
-	dev-python/pygobject
+	dev-python/pygobject:2
 	dev-python/pygtk
 	net-firewall/ufw
 	x11-libs/gksu"
