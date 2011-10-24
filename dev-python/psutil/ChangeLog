@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/psutil
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psutil/ChangeLog,v 1.4 2011/10/18 10:23:45 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psutil/ChangeLog,v 1.5 2011/10/24 19:56:15 maekke Exp $
+
+  24 Oct 2011; Markus Meier <maekke@gentoo.org> psutil-0.3.0.ebuild:
+  x86 stable, bug #387455
 
   18 Oct 2011; Tony Vroon <chainsaw@gentoo.org> psutil-0.3.0.ebuild:
   Marked stable on AMD64 as a dependency of app-vim/automatictexplugin, based
