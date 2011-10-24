@@ -13,4 +13,7 @@
   <email>swapon@gmail.com</email>
   <name>Alessio Cassibba</name>
 </maintainer>
+<use>
+	<flag name="pax_kernel">Apply patch needed for pax enabled kernels</flag>
+</use>
 </pkgmetadata>

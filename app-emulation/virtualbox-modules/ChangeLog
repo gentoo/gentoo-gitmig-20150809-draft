@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox-modules
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.90 2011/10/04 17:56:11 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.91 2011/10/24 22:12:42 polynomial-c Exp $
+
+  24 Oct 2011; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-modules-4.1.4.ebuild,
+  +files/virtualbox-modules-4.1.4-pax-const.patch:
+  Fixed compilation with >=3.0.4 hardened kernel. Thanks to letrec for
+  providing the patch and blueness for giving the correct hints wrt. USE flag
+  naming (bug #386497).
 
 *virtualbox-modules-4.1.4 (04 Oct 2011)
 
