@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/rabbitvcs-0.14.1.1.ebuild,v 1.2 2011/05/10 07:55:36 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/rabbitvcs-0.14.1.1.ebuild,v 1.3 2011/10/24 05:45:29 tetromino Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="cli diff gedit git nautilus spell thunar"
 
 RDEPEND="dev-python/configobj
-	dev-python/pygobject
+	dev-python/pygobject:2
 	dev-python/pygtk
 	dev-python/pysvn
 	dev-python/simplejson

@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/rabbitvcs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/ChangeLog,v 1.4 2011/06/07 12:31:01 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/ChangeLog,v 1.5 2011/10/24 05:45:30 tetromino Exp $
+
+  24 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  rabbitvcs-0.14.1.1.ebuild, rabbitvcs-0.14.2.1.ebuild:
+  Depend on correct slot of pygobject.
 
   07 Jun 2011; Peter Volkov <pva@gentoo.org> rabbitvcs-0.14.2.1.ebuild:
   Update elog message: don't need to run nautilus twice any more, thank Rion
