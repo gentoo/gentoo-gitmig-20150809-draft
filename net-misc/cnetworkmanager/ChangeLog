@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/cnetworkmanager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cnetworkmanager/ChangeLog,v 1.5 2011/04/05 18:08:43 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cnetworkmanager/ChangeLog,v 1.6 2011/10/24 06:21:24 tetromino Exp $
+
+  24 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  cnetworkmanager-0.21.1.ebuild:
+  Depend on correct slot of pygobject.
 
   05 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   cnetworkmanager-0.21.1.ebuild:

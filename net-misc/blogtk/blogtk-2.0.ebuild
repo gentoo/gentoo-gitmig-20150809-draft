@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/blogtk-2.0.ebuild,v 1.5 2011/01/13 20:34:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/blogtk-2.0.ebuild,v 1.6 2011/10/24 06:20:13 tetromino Exp $
 
 EAPI="2"
 PYTHON_DEPEND="2:2.6"
@@ -19,7 +19,7 @@ IUSE=""
 RESTRICT="mirror"
 
 RDEPEND=">=dev-python/pygtk-2
-	>=dev-python/pygobject-2
+	>=dev-python/pygobject-2:2
 	>=gnome-base/gconf-2.2
 	>=gnome-base/libgnome-2
 	dev-python/gdata

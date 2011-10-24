@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/blogtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/ChangeLog,v 1.22 2011/01/14 10:13:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/ChangeLog,v 1.23 2011/10/24 06:20:13 tetromino Exp $
+
+  24 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> blogtk-2.0.ebuild:
+  Depend on correct slot of pygobject.
 
   14 Jan 2011; Gilles Dartiguelongue <eva@gentoo.org> -blogtk-1.0.ebuild,
   -files/blogtk-1.0-destdir.patch, -blogtk-1.1.ebuild,
