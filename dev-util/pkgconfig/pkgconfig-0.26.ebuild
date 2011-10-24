@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.26.ebuild,v 1.7 2011/07/31 19:27:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.26.ebuild,v 1.8 2011/10/24 00:16:57 abcd Exp $
 
 EAPI=4
-inherit flag-o-matic multilib
+inherit flag-o-matic multilib libtool
 
 MY_P=pkg-config-${PV}
 
@@ -13,7 +13,7 @@ SRC_URI="http://pkgconfig.freedesktop.org/releases/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~ppc-aix ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="elibc_FreeBSD hardened"
 
 RDEPEND="dev-libs/glib:2
@@ -24,9 +24,13 @@ S=${WORKDIR}/${MY_P}
 
 DOCS=( AUTHORS NEWS README )
 
+src_prepare() {
+	elibtoolize # for FreeMiNT, bug #333429
+}
+
 src_configure() {
 	if ! has_version dev-util/pkgconfig; then
-		export GLIB_CFLAGS="-I/usr/include/glib-2.0 -I/usr/$(get_libdir)/glib-2.0/include"
+		export GLIB_CFLAGS="-I${EPREFIX}/usr/include/glib-2.0 -I${EPREFIX}/usr/$(get_libdir)/glib-2.0/include"
 		export GLIB_LIBS="-lglib-2.0"
 	fi
 
@@ -38,7 +42,18 @@ src_configure() {
 	use elibc_FreeBSD && myconf="--enable-indirect-deps"
 
 	econf \
-		--docdir=/usr/share/doc/${PF}/html \
+		--docdir="${EPREFIX}"/usr/share/doc/${PF}/html \
 		--with-installed-popt \
 		${myconf}
+}
+
+src_install() {
+	default
+
+	if use prefix; then
+		# Add an explicit reference to $EPREFIX to PKG_CONFIG_PATH to
+		# simplify cross-prefix builds
+		echo "PKG_CONFIG_PATH=${EPREFIX}/usr/$(libdir)/pkgconfig:${EPREFIX}/usr/share/pkgconfig" >> "${T}"/99${PN}
+		doenvd "${T}"/99${PN}
+	fi
 }

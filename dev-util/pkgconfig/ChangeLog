@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.101 2011/10/13 20:00:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.102 2011/10/24 00:16:57 abcd Exp $
+
+  24 Oct 2011; Jonathan Callen <abcd@gentoo.org> pkgconfig-0.26.ebuild:
+  Add prefix support; move prefix keywords from overlay
 
   13 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
   -pkgconfig-0.25-r2.ebuild, -files/pkgconfig-0.25-dnl.patch:
