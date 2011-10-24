@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/notmuch/notmuch-0.9.ebuild,v 1.3 2011/10/24 18:43:09 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/notmuch/notmuch-0.9.ebuild,v 1.4 2011/10/24 22:04:52 aidecoe Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="${HOMEPAGE}/releases/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64"
 IUSE="bash-completion debug emacs vim zsh-completion"
 
 DEPEND="
