@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.104 2011/09/22 09:24:47 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.105 2011/10/24 09:43:56 aidecoe Exp $
+
+  24 Oct 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> files/hddgentoo.db:
+  Added "WDC WD3200BEKT-00F3T0" to hddgentoo.db.  Fixes bug #388221.
 
   22 Sep 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> files/hddgentoo.db:
   Corrected ST31500541AS desc, added ST31500341AS. Fixes bug #383379.
