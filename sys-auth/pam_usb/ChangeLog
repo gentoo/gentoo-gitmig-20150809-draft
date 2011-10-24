@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/pam_usb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/ChangeLog,v 1.19 2011/04/22 16:13:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_usb/ChangeLog,v 1.20 2011/10/24 06:39:19 tetromino Exp $
+
+  24 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  pam_usb-0.5.0.ebuild:
+  Depend on correct slot of pygobject.
 
   22 Apr 2011; Samuli Suominen <ssuominen@gentoo.org> pam_usb-0.5.0.ebuild,
   +files/pam_usb-0.5.0-openpam.patch:
