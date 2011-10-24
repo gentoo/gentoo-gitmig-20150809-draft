@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/broadcom-sta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.37 2011/07/13 19:42:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.38 2011/10/24 00:43:18 matsuu Exp $
+
+*broadcom-sta-5.100.82.111 (24 Oct 2011)
+
+  24 Oct 2011; MATSUU Takuto <matsuu@gentoo.org>
+  +broadcom-sta-5.100.82.111.ebuild,
+  +files/broadcom-sta-5.100.82.111-linux-3.0.patch:
+  Version bumped, bug #388053.
 
   13 Jul 2011; Markus Meier <maekke@gentoo.org>
   broadcom-sta-5.100.82.38-r1.ebuild:
