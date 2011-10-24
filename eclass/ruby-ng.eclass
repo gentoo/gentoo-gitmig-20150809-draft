@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.42 2011/10/22 10:08:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-ng.eclass,v 1.43 2011/10/24 18:20:05 graaff Exp $
 
 # @ECLASS: ruby-ng.eclass
 # @MAINTAINER:
@@ -507,10 +507,10 @@ _each_ruby_check_install() {
 
 	has "${EAPI}" 2 && ! use prefix && EPREFIX=
 
-	local libruby_basename=$(${RUBY} -rrbconfig -e 'puts Config::CONFIG["LIBRUBY_SO"]')
+	local libruby_basename=$(${RUBY} -rrbconfig -e 'puts RbConfig::CONFIG["LIBRUBY_SO"]')
 	local libruby_soname=$(basename $(${scancmd} -F "%S#F" -qS "${EPREFIX}/usr/$(get_libdir)/${libruby_basename}") 2>/dev/null)
-	local sitedir=$(${RUBY} -rrbconfig -e 'puts Config::CONFIG["sitedir"]')
-	local sitelibdir=$(${RUBY} -rrbconfig -e 'puts Config::CONFIG["sitelibdir"]')
+	local sitedir=$(${RUBY} -rrbconfig -e 'puts RbConfig::CONFIG["sitedir"]')
+	local sitelibdir=$(${RUBY} -rrbconfig -e 'puts RbConfig::CONFIG["sitelibdir"]')
 
 	# Look for wrong files in sitedir
 	# if [[ -d "${D}${sitedir}" ]]; then
@@ -560,7 +560,7 @@ ruby-ng_src_install() {
 # @USAGE: rbconfig item
 # @RETURN: Returns the value of the given rbconfig item of the Ruby interpreter in ${RUBY}.
 ruby_rbconfig_value() {
-	echo $(${RUBY} -rrbconfig -e "puts Config::CONFIG['$1']")
+	echo $(${RUBY} -rrbconfig -e "puts RbConfig::CONFIG['$1']")
 }
 
 # @FUNCTION: doruby
@@ -581,7 +581,7 @@ doruby() {
 # @FUNCTION: ruby_get_libruby
 # @RETURN: The location of libruby*.so belonging to the Ruby interpreter in ${RUBY}.
 ruby_get_libruby() {
-	${RUBY} -rrbconfig -e 'puts File.join(Config::CONFIG["libdir"], Config::CONFIG["LIBRUBY"])'
+	${RUBY} -rrbconfig -e 'puts File.join(RbConfig::CONFIG["libdir"], RbConfig::CONFIG["LIBRUBY"])'
 }
 
 # @FUNCTION: ruby_get_hdrdir
