@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-geolocation/claws-mail-geolocation-0.0.6.ebuild,v 1.1 2011/08/30 10:09:50 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-geolocation/claws-mail-geolocation-0.0.6.ebuild,v 1.2 2011/10/24 20:05:05 maekke Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.claws-mail.org/downloads/plugins/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 # Check if other versions of libchamplain ship the same pc file
