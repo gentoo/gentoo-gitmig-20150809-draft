@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gudev/python-gudev-147.2.ebuild,v 1.6 2011/06/08 22:26:09 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-gudev/python-gudev-147.2.ebuild,v 1.7 2011/10/24 05:38:59 tetromino Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="dev-python/pygobject
+DEPEND="dev-python/pygobject:2
 || ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-147[extras] )"
 RDEPEND="${DEPEND}"
 

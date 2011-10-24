@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyudev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/ChangeLog,v 1.8 2011/09/13 08:00:09 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/ChangeLog,v 1.9 2011/10/24 05:40:34 tetromino Exp $
+
+  24 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> pyudev-0.11.ebuild,
+  pyudev-0.12.ebuild:
+  Depend on correct slot of pygobject.
 
 *pyudev-0.12 (13 Sep 2011)
 

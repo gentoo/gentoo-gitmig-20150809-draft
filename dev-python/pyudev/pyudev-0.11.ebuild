@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/pyudev-0.11.ebuild,v 1.1 2011/07/10 01:51:58 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyudev/pyudev-0.11.ebuild,v 1.2 2011/10/24 05:40:34 tetromino Exp $
 
 EAPI="3"
 PYTHON_DEPEND="*:2.6"
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="pygobject pyqt4 pyside"
 
 RDEPEND=">=sys-fs/udev-151
-	pygobject? ( dev-python/pygobject )
+	pygobject? ( dev-python/pygobject:2 )
 	pyqt4? ( dev-python/PyQt4 )
 	pyside? ( dev-python/pyside )"
 DEPEND="${RDEPEND}
