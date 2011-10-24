@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/dcc-1.3.140.ebuild,v 1.1 2011/10/22 22:57:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/dcc-1.3.140-r1.ebuild,v 1.1 2011/10/24 21:38:44 robbat2 Exp $
 
 EAPI=2
 
@@ -28,6 +28,10 @@ dcc_homedir=/var/dcc
 dcc_libexec=/usr/sbin
 dcc_man=/usr/share/man
 dcc_rundir=/var/run/dcc
+
+src_prepare() {
+	epatch "${FILESDIR}"/dcc-1.3.140-configure-fix.patch
+}
 
 src_configure() {
 	local myconf

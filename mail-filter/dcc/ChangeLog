@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/dcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/ChangeLog,v 1.64 2011/10/22 22:57:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/ChangeLog,v 1.65 2011/10/24 21:38:44 robbat2 Exp $
+
+*dcc-1.3.140-r1 (24 Oct 2011)
+
+  24 Oct 2011; Robin H. Johnson <robbat2@gentoo.org> -dcc-1.3.140.ebuild,
+  +dcc-1.3.140-r1.ebuild, +files/dcc-1.3.140-configure-fix.patch:
+  Bug #388383: USE=-cgi installed the cgi files anyway, in /no/ due to bug in
+  upstream configure.
 
 *dcc-1.3.140 (22 Oct 2011)
 
