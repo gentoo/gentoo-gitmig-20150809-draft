@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.410 2011/08/23 21:55:04 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.411 2011/10/24 14:55:19 jmbsvicetto Exp $
+
+  24 Oct 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  amarok-2.4.3.ebuild:
+  [media-sound/amarok] Replace the mysql dependency - bug 388059.
 
   23 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> amarok-2.4.0.ebuild,
   amarok-2.4.1.ebuild, amarok-2.4.3.ebuild:

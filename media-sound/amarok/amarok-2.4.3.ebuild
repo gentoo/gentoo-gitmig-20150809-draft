@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.4.3.ebuild,v 1.2 2011/08/23 21:55:04 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.4.3.ebuild,v 1.3 2011/10/24 14:55:19 jmbsvicetto Exp $
 
 EAPI=4
 
@@ -37,19 +37,13 @@ COMMONDEPEND="
 		$(add_kdebase_dep kdelibs 'opengl?,semantic-desktop?')
 		$(add_kdebase_dep kdebase-kioslaves)
 		sys-libs/zlib
-		>=virtual/mysql-5.1
+		>=virtual/mysql-5.1[embedded?]
 		x11-libs/qt-script
 		>=x11-libs/qtscriptgenerator-0.1.0
 		cdda? (
 			$(add_kdebase_dep libkcddb)
 			$(add_kdebase_dep libkcompactdisc)
 			$(add_kdebase_dep kdemultimedia-kioslaves)
-		)
-		embedded? (
-			|| (
-				>=dev-db/mysql-5.1.50-r3[embedded]
-				>=dev-db/mariadb-5.1.50[embedded]
-			)
 		)
 		ipod? ( >=media-libs/libgpod-0.7.0[gtk] )
 		lastfm? ( >=media-libs/liblastfm-0.3.0 )
@@ -145,7 +139,7 @@ pkg_postinst() {
 			elog "to configure the external db and migrate your data from the embedded database."
 			echo
 
-			if has_version "dev-db/mysql[minimal]"; then
+			if has_version "virtual/mysql[minimal]"; then
 				elog "You built mysql with the minimal use flag, so it doesn't include the server."
 				elog "You won't be able to use the local mysql installation to store your amarok collection."
 				echo
