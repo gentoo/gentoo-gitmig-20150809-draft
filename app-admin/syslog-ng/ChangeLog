@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.308 2011/10/19 06:19:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.309 2011/10/24 16:22:23 mr_bones_ Exp $
+
+  24 Oct 2011; Michael Sterrett <mr_bones_@gentoo.org> syslog-ng-3.3.1.ebuild,
+  +files/syslog-ng-3.3.1-filter.patch:
+  add upstream patch to fix filter function
 
   19 Oct 2011; Michael Sterrett <mr_bones_@gentoo.org> files/syslog-ng.rc6.3.3:
   move reload to extra_started_commands

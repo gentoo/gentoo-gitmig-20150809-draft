@@ -13,8 +13,6 @@ Signed-off-by: Gergely Nagy <algernon@balabit.hu>
  tests/loggen/loggen.c |    3 +++
  4 files changed, 14 insertions(+), 0 deletions(-)
 
-diff --git a/configure.in b/configure.in
-index 13bc874..686911e 100644
 --- a/configure.in
 +++ b/configure.in
 @@ -679,6 +679,10 @@ else
@@ -28,8 +26,6 @@ index 13bc874..686911e 100644
  dnl
  dnl Right now, openssl is never linked statically as it is only used by the
  dnl TLS build of the afsocket plugin which is loaded dynamically anyway.
-diff --git a/lib/crypto.c b/lib/crypto.c
-index 702609c..ac4d070 100644
 --- a/lib/crypto.c
 +++ b/lib/crypto.c
 @@ -29,6 +29,8 @@
@@ -47,8 +43,6 @@ index 702609c..ac4d070 100644
  /* the crypto options (seed) are handled in main.c */
 +
 +#endif
-diff --git a/modules/afsql/afsql.c b/modules/afsql/afsql.c
-index eb59b57..02b9f83 100644
 --- a/modules/afsql/afsql.c
 +++ b/modules/afsql/afsql.c
 @@ -35,7 +35,10 @@
@@ -62,8 +56,6 @@ index eb59b57..02b9f83 100644
  
  /* field flags */
  enum
-diff --git a/tests/loggen/loggen.c b/tests/loggen/loggen.c
-index c5399a7..bf11a1e 100644
 --- a/tests/loggen/loggen.c
 +++ b/tests/loggen/loggen.c
 @@ -14,11 +14,14 @@
