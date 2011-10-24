@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/bip-0.8.8.ebuild,v 1.1 2011/09/17 16:10:09 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/bip-0.8.8.ebuild,v 1.2 2011/10/24 19:29:51 hwoarang Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.duckcorp.org/bip/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="debug freenode noctcp ssl vim-syntax oidentd"
 
 DEPEND="ssl? ( dev-libs/openssl )"
