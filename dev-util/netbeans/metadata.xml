@@ -18,7 +18,4 @@ In June of 2000 NetBeans was made Open Source by Sun Microsystems who remains th
 NetBeans IDE and NetBeans Platform. Both products are free for commercial and noncommercial use. The source code to both are available
 to anyone, to reuse as they see fit, under the terms of use.
 	</longdescription>
-	<use>
-		<flag name="keychain">enables support for keychain in netbeans start script</flag>
-	</use>
 </pkgmetadata>

@@ -1,6 +1,19 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.158 2011/10/03 21:52:22 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.159 2011/10/24 23:49:04 fordfrog Exp $
+
+  24 Oct 2011; Miroslav Šulc <fordfrog@gentoo.org>
+  -files/6.5/all-visualweb.insync.JspxSerializer.java.patch,
+  -netbeans-6.5-r4.ebuild, -files/6.5/nbbuild_build.xml.patch,
+  -netbeans-6.7.1.ebuild, -files/6.5/nbbuild_templates_projectized.xml.patch,
+  -netbeans-6.9-r2.ebuild, -files/6.7/nbbuild_build.xml.patch,
+  -netbeans-6.9-r3.ebuild, -files/6.7/nbbuild_templates_projectized.xml.patch,
+  -netbeans-6.9.1.ebuild, -files/6.9/cnd.model.services-build.xml.patch,
+  -netbeans-7.0.1.ebuild, -files/6.9/nbbuild_build.xml.patch,
+  -files/6.9/nbbuild_templates_projectized.xml.patch,
+  -files/6.9/netbeans-keychain.patch, -files/6.9/o.jruby.distro_disable.patch,
+  metadata.xml:
+  Moving obsolete ebuilds to java-overlay
 
 *netbeans-7.0.1-r1 (03 Oct 2011)
 
