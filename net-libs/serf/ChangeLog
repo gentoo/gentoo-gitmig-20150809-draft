@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/serf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.61 2011/09/18 13:55:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.62 2011/10/24 19:05:52 hwoarang Exp $
+
+*serf-1.0.0 (24 Oct 2011)
+
+  24 Oct 2011; Markos Chandras <hwoarang@gentoo.org> +serf-1.0.0.ebuild:
+  Version bump. Ebuild by Arfrever
 
   18 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Add Arfrever as proxy maintainer with proxy-maintainers as herd.
