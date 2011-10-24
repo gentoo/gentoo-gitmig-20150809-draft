@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/xxxterm-1.518.ebuild,v 1.3 2011/10/22 18:56:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/xxxterm/xxxterm-1.518.ebuild,v 1.4 2011/10/24 20:22:05 maekke Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ if [[ ${PV} = *9999* ]]; then
 	EGIT_SOURCEDIR="${WORKDIR}/${P}"
 else
 	SRC_URI="http://opensource.conformal.com/snapshots/${PN}/${P}.tgz"
-	KEYWORDS="amd64 ~x86"
+	KEYWORDS="amd64 x86"
 fi
 
 LICENSE="ISC"
