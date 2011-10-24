@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/vim-spell-de
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-de/ChangeLog,v 1.12 2009/12/17 11:04:15 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-spell-de/ChangeLog,v 1.13 2011/10/24 13:38:25 darkside Exp $
+
+  24 Oct 2011; Jeremy Olexa <darkside@gentoo.org> vim-spell-de-20080213.ebuild:
+  add ~x64-macos, bug 388333
 
   17 Dec 2009; Christian Faulhammer <fauli@gentoo.org>
   vim-spell-de-20051008.ebuild, vim-spell-de-20080213.ebuild:
