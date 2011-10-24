@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/pecl-mysqlnd_qc
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-mysqlnd_qc/ChangeLog,v 1.1 2011/10/24 09:52:20 olemarkus Exp $
+
+*pecl-mysqlnd_qc-1.0.1 (24 Oct 2011)
+
+  24 Oct 2011; Ole Markus With <olemarkus@gentoo.org>
+  +pecl-mysqlnd_qc-1.0.1.ebuild, +metadata.xml:
+  New package, pecl-mysqlnd_qc. Thanks to Pavel Stratil
+
