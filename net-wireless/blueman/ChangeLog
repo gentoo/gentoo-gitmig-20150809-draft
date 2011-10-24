@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/blueman
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.10 2011/03/27 17:25:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.11 2011/10/24 06:38:03 tetromino Exp $
+
+  24 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  blueman-1.21-r1.ebuild:
+  Depend on correct slot of pygobject.
 
   27 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> blueman-1.21-r1.ebuild:
   Remove sys-apps/hal support wrt #313389.
