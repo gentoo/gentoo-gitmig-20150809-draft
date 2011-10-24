@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.2.ebuild,v 1.1 2011/08/17 23:37:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.2.ebuild,v 1.2 2011/10/24 21:57:11 polynomial-c Exp $
 
 EAPI=4
 
-inherit eutils fdo-mime flag-o-matic linux-info pax-utils qt4-r2 toolchain-funcs java-pkg-opt-2
+inherit eutils fdo-mime flag-o-matic linux-info pax-utils python qt4-r2 toolchain-funcs java-pkg-opt-2
 
 if [[ ${PV} == "9999" ]] ; then
 	# XXX: should finish merging the -9999 ebuild into this one ...
@@ -16,13 +16,13 @@ else
 	S="${WORKDIR}/${MY_P}_OSE"
 fi
 
-DESCRIPTION="Software family of powerful x86 virtualization"
+DESCRIPTION="Family of powerful x86 virtualization products for enterprise as well as home use"
 HOMEPAGE="http://www.virtualbox.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+additions alsa doc extensions headless java pulseaudio +opengl python +qt4 +sdk vboxwebsrv vnc"
+IUSE="+additions alsa doc extensions headless java pam pulseaudio +opengl python +qt4 +sdk vboxwebsrv vnc"
 
 RDEPEND="!app-emulation/virtualbox-bin
 	~app-emulation/virtualbox-modules-${PV}
@@ -56,7 +56,7 @@ DEPEND="${RDEPEND}
 	sys-devel/dev86
 	sys-power/iasl
 	media-libs/libpng
-	sys-libs/pam
+	pam? ( sys-libs/pam )
 	sys-libs/libcap
 	doc? (
 		dev-texlive/texlive-basic
@@ -71,7 +71,6 @@ DEPEND="${RDEPEND}
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
 	!headless? ( x11-libs/libXinerama )
 	pulseaudio? ( media-sound/pulseaudio )
-	python? ( >=dev-lang/python-2.3[threads] )
 	vboxwebsrv? ( >=net-libs/gsoap-2.7.13 )"
 PDEPEND="additions? ( ~app-emulation/virtualbox-additions-${PV} )
 	extensions? ( ~app-emulation/virtualbox-extpack-oracle-${PV} )"
@@ -110,7 +109,11 @@ QA_TEXTRELS_x86="usr/lib/virtualbox-ose/VBoxGuestPropSvc.so
 	usr/lib/virtualbox/VBoxOGLhostcrutil.so
 	usr/lib/virtualbox/VBoxNetDHCP.so"
 
-REQUIRED_USE="java? ( sdk ) python? ( sdk )"
+REQUIRED_USE="
+	java? ( sdk )
+	python? ( sdk )
+	vboxwebsrv? ( java )
+"
 
 pkg_setup() {
 	if built_with_use sys-devel/gcc hardened && gcc-config -c | grep -qv -E "hardenednopie|vanilla"; then
@@ -135,6 +138,8 @@ pkg_setup() {
 		einfo "the OpenGL feature."
 	fi
 	java-pkg-opt-2_pkg_setup
+	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
@@ -162,6 +167,14 @@ src_prepare() {
 
 	# Don't build vboxpci.ko module (D'oh!)
 	epatch "${FILESDIR}"/${P}-vboxpci-build.patch
+
+	# Use PAM only when pam USE flag is enbaled (bug #376531)
+	if ! use pam ; then
+		elog "Disabling PAM removes the possibility to use the VRDP features."
+		sed -i 's/^.*VBOX_WITH_PAM/#VBOX_WITH_PAM/' Config.kmk || die
+		sed -i 's;\(.*/auth/Makefile.kmk.*\);#\1;' \
+			src/VBox/HostServices/Makefile.kmk || die
+	fi
 
 	# add correct java path
 	if use java ; then
@@ -204,7 +217,7 @@ src_compile() {
 	# strip-flags
 
 	MAKE="kmk" emake \
-		VBOX_VERSION_STRING='$(VBOX_VERSION_MAJOR).$(VBOX_VERSION_MINOR).$(VBOX_VERSION_BUILD)'-Gentoo \
+		VBOX_VERSION_STRING='$(VBOX_VERSION_MAJOR).$(VBOX_VERSION_MINOR).$(VBOX_VERSION_BUILD)'-Gentoo_ \
 		TOOL_GCC3_CC="$(tc-getCC)" TOOL_GCC3_CXX="$(tc-getCXX)" \
 		TOOL_GCC3_AS="$(tc-getCC)" TOOL_GCC3_AR="$(tc-getAR)" \
 		TOOL_GCC3_LD="$(tc-getCXX)" TOOL_GCC3_LD_SYSMOD="$(tc-getLD)" \

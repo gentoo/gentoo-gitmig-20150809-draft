@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.87 2011/10/23 13:14:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.88 2011/10/24 21:57:11 polynomial-c Exp $
+
+  24 Oct 2011; Lars Wendler <polynomial-c@gentoo.org> virtualbox-4.0.12.ebuild,
+  virtualbox-4.1.2.ebuild, virtualbox-4.1.4.ebuild:
+  Forced python-2 on installation (bug #350237). Made the package's decription
+  the same as virtualbox-bin (bug #366305). Made pam support optional with
+  changes provided by René 'Necoro' Neumann (bug #376531). Added
+  vboxwebsrv<->java dependency to REQUIRED_USE (bug #382061).
 
   23 Oct 2011; Patrick Lauer <patrick@gentoo.org> virtualbox-9999.ebuild:
   Fixing deps of the 9999 ebuild so that it might maybe build
