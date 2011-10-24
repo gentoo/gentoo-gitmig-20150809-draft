@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.3.ebuild,v 1.3 2011/10/08 16:31:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.3.ebuild,v 1.4 2011/10/24 04:12:24 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -47,7 +47,6 @@ RDEPEND="
 	dga? ( x11-libs/libXxf86dga )
 	xrandr? ( x11-libs/libXrandr )"
 DEPEND="${RDEPEND}
-	virtual/texi2dvi
 	dev-util/pkgconfig
 	x11-apps/bdftopcf
 	x11-apps/mkfontdir
@@ -59,6 +58,7 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-notexi.patch
 	sed -i \
 		-e "s:/usr/local/lib/VICE:${GAMES_DATADIR}/${PN}:" \
 		man/vice.1 \

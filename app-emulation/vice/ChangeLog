@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.77 2011/10/08 16:31:21 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.78 2011/10/24 04:12:24 mr_bones_ Exp $
+
+  24 Oct 2011; Michael Sterrett <mr_bones_@gentoo.org> vice-2.3.ebuild,
+  +files/vice-2.3-notexi.patch:
+  Avoid building pre-built docs (bug #379633) with patch from Jared B.
 
   08 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> vice-2.3.ebuild:
   x86 stable wrt bug #385895
