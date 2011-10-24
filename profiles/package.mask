@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13172 2011/10/24 07:22:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13173 2011/10/24 21:25:11 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -35,11 +35,6 @@
 # Mask v8 versions used for www-client/chromium dev channel releases.
 # Currently v8-3.6 versions are used for chromium-16.x versions.
 >=dev-lang/v8-3.6
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (21 Oct 2011)
-# Live ebuild (seabios) shouldn't have been keyworded ~arch
-=app-emulation/qemu-kvm-0.15.1
-sys-apps/seabios
 
 # Stefan Briesenick <sbriesen@gentoo.org> (20 Oct 2011)
 # unmaintained upstream, obsolete in general. (bug #337657)
