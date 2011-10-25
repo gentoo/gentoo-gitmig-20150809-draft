@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mairix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/ChangeLog,v 1.35 2011/10/22 18:52:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mairix/ChangeLog,v 1.36 2011/10/25 16:42:01 phajdan.jr Exp $
+
+  25 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> mairix-0.23.ebuild:
+  x86 stable wrt bug #388023
 
   22 Oct 2011; Markos Chandras <hwoarang@gentoo.org> mairix-0.23.ebuild:
   Stable on amd64 wrt bug #388023
