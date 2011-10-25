@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.32.0-r1.ebuild,v 1.1 2011/10/23 06:23:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.32.0-r1.ebuild,v 1.2 2011/10/25 07:18:17 jlec Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Tools aimed to make easy the administration of UNIX systems"
 HOMEPAGE="http://www.gnome.org/projects/gst/"
@@ -48,4 +48,9 @@ pkg_setup() {
 	if ! use nfs && ! use samba; then
 		G2CONF="${G2CONF} --disable-shares"
 	fi
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gold.patch
+	gnome2_src_prepare
 }
