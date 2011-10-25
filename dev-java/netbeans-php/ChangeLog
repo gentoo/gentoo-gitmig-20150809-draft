@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/netbeans-php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-php/ChangeLog,v 1.6 2011/09/16 19:53:08 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-php/ChangeLog,v 1.7 2011/10/25 00:24:07 fordfrog Exp $
+
+  25 Oct 2011; Miroslav Šulc <fordfrog@gentoo.org> netbeans-php-7.0.1.ebuild:
+  Filtering ecj compilers as the package does not compile using them
 
   16 Sep 2011; Miroslav Šulc <fordfrog@gentoo.org> netbeans-php-7.0.1.ebuild:
   Building NetBeans is supported only with JDK 1.6
