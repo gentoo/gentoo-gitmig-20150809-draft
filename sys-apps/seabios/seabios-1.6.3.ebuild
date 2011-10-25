@@ -1,11 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/seabios/seabios-1.6.3.ebuild,v 1.1 2011/10/24 21:14:29 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/seabios/seabios-1.6.3.ebuild,v 1.2 2011/10/25 14:09:06 flameeyes Exp $
 
 EAPI=4
 
 #BACKPORTS=1
-EGIT_COMMIT="8e301472e324b6d6496d8b4ffc66863e99d7a505"
 
 if [[ ${PV} = *9999* || ! -z "${EGIT_COMMIT}" ]]; then
 	EGIT_REPO_URI="git://git.seabios.org/seabios.git"
