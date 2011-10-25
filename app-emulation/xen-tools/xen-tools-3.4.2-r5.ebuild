@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.4.2-r5.ebuild,v 1.3 2011/10/05 18:59:29 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.4.2-r5.ebuild,v 1.4 2011/10/25 18:40:28 alexxy Exp $
 
 EAPI="3"
 
@@ -45,8 +45,8 @@ DEPEND="${CDEPEND}
 		dev-tex/latexmk
 		dev-texlive/texlive-latex
 		dev-texlive/texlive-pictures
-                dev-texlive/texlive-latexextra
- 		dev-texlive/texlive-latexrecommended
+		dev-texlive/texlive-latexextra
+		dev-texlive/texlive-latexrecommended
 	)
 	hvm? (
 		x11-proto/xproto
