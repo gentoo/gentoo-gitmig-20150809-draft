@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.9.1.1.ebuild,v 1.3 2011/10/09 10:27:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.9.1.1.ebuild,v 1.4 2011/10/25 04:06:33 dirtyepic Exp $
 
 EAPI="3"
 
@@ -56,6 +56,7 @@ S="${WORKDIR}/wxPython-src-${PV}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-collision.patch
+	epatch "${FILESDIR}"/${PN}-2.8.11-libpng15.patch
 }
 
 src_configure() {
