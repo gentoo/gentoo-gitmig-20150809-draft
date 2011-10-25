@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gmic/gmic-1.5.0.4.ebuild,v 1.1 2011/10/25 07:42:26 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gmic/gmic-1.5.0.4.ebuild,v 1.2 2011/10/25 17:50:49 radhermit Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ RDEPEND="
 	ffmpeg? ( virtual/ffmpeg )
 	fftw? ( sci-libs/fftw:3.0 )
 	graphicsmagick? ( media-gfx/graphicsmagick )
-	jpeg? ( media-libs/jpeg )
+	jpeg? ( virtual/jpeg )
 	opencv? ( media-libs/opencv )
 	openexr? (
 		media-libs/ilmbase
