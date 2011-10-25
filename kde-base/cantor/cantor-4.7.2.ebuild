@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cantor/cantor-4.7.2.ebuild,v 1.1 2011/10/06 18:10:47 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cantor/cantor-4.7.2.ebuild,v 1.2 2011/10/25 20:13:38 dilfridge Exp $
 
 EAPI=4
 
@@ -20,6 +20,9 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=dev-cpp/eigen-2.0.3:2
 "
+
+# bug 386491
+RESTRICT="test"
 
 src_configure() {
 	mycmakeargs+="
