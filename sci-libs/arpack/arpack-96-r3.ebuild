@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-96-r3.ebuild,v 1.5 2011/06/21 15:42:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/arpack-96-r3.ebuild,v 1.6 2011/10/25 19:58:32 xarthisius Exp $
 
 EAPI=4
 
@@ -60,7 +60,7 @@ src_prepare() {
 		PARPACK/EXAMPLES/MPI/makefile || die "sed failed"
 
 	# bug #354993
-	rm -f PARPACK/SRC/MPI/mpif.h
+	rm -f PARPACK/{SRC,UTIL,EXAMPLES}/MPI/mpif.h
 	#ln -s "${EPREFIX}"/usr/include/mpif*.h PARPACK/SRC/MPI/
 	eautoreconf
 }
