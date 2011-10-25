@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.178 2011/10/21 07:56:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.179 2011/10/25 09:08:26 scarabeus Exp $
+
+  25 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-3.3.4.ebuild, +files/libreoffice-3.3.4-poppler-0.18.0.diff:
+  Fix build with poppler 0.18 also for 3.3 branch. Patch adjusted by Petr Pisar
+  <petr.pisar [at] atlas.cz> all kudos to him.
 
   21 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   libreoffice-9999-r1.ebuild:
