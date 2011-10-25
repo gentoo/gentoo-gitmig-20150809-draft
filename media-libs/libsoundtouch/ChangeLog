@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsoundtouch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/ChangeLog,v 1.44 2011/10/20 15:54:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/ChangeLog,v 1.45 2011/10/25 22:20:33 radhermit Exp $
+
+  25 Oct 2011; Tim Harder <radhermit@gentoo.org> libsoundtouch-1.6.0.ebuild:
+  Update sed line (fixes bug #380489) and use D instead of ED.
 
   20 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
   libsoundtouch-1.6.0.ebuild:

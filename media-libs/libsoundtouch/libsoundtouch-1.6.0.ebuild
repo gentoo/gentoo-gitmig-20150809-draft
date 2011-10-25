@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo FoundationOU
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/libsoundtouch-1.6.0.ebuild,v 1.3 2011/10/20 15:54:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/libsoundtouch-1.6.0.ebuild,v 1.4 2011/10/25 22:20:33 radhermit Exp $
 
 EAPI=4
 inherit autotools-utils eutils flag-o-matic
@@ -26,7 +26,7 @@ src_prepare() {
 	if use sse2; then
 		append-flags -msse2
 	else
-		sed -i -e '/^.*#define ALLOW_X86_OPTIMIZATIONS.*$/d' \
+		sed -i -e '/#define SOUNDTOUCH_ALLOW_X86_OPTIMIZATIONS/d' \
 			include/STTypes.h || die
 	fi
 }
@@ -43,6 +43,6 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${ED}" pkgdocdir="${EPREFIX}/usr/share/doc/${PF}/html" install
+	emake DESTDIR="${D}" pkgdocdir="${EPREFIX}/usr/share/doc/${PF}/html" install
 	remove_libtool_files all
 }
