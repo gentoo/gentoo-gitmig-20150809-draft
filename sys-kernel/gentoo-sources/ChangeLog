@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.891 2011/10/24 20:28:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.892 2011/10/25 15:23:45 mpagano Exp $
+
+*gentoo-sources-3.1.0 (25 Oct 2011)
+
+  25 Oct 2011; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-3.1.0.ebuild:
+  Linux version 3.1.0. Change firmware download url for dvb tda10046. Eliminate
+  false warnings regarding logical APIC ID mismatches for i386/bigsmp. Add 0.10
+  version of Alps patch from Seth Forshee of Canonical. See bug #318567
 
   24 Oct 2011; Markus Meier <maekke@gentoo.org> gentoo-sources-3.0.6.ebuild:
   arm/x86 stable, bug #387047
