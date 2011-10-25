@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/openocd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.20 2011/10/19 20:39:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.21 2011/10/25 21:05:29 hwoarang Exp $
+
+  25 Oct 2011; Markos Chandras <hwoarang@gentoo.org> openocd-9999.ebuild:
+  Bring back src_prepare. Thanks to Alexander Stein <alexander.stein@informatik
+  .tu-chemnitz.de>. Bug #388455
 
   19 Oct 2011; Markos Chandras <hwoarang@gentoo.org> openocd-0.5.0.ebuild,
   openocd-9999.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.17 2011/10/19 20:39:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.18 2011/10/25 21:05:29 hwoarang Exp $
 
 EAPI="4"
 
@@ -31,6 +31,11 @@ DEPEND="dev-lang/jimtcl
 RDEPEND="${DEPEND}"
 
 REQUIRED_USE="blaster? ( || ( ftdi ftd2xx ) ) ftdi? ( !ftd2xx )"
+
+src_prepare() {
+	sed -i -e "/@include version.texi/d" doc/${PN}.texi || die
+	AT_NO_RECURSIVE=yes eautoreconf
+}
 
 src_configure() {
 	# Here are some defaults
