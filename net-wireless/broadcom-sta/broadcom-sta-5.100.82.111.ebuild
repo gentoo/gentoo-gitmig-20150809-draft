@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/broadcom-sta-5.100.82.111.ebuild,v 1.1 2011/10/24 00:43:18 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/broadcom-sta-5.100.82.111.ebuild,v 1.2 2011/10/25 14:00:22 matsuu Exp $
 
 EAPI="2"
 inherit eutils linux-mod
@@ -32,7 +32,7 @@ pkg_setup() {
 	# b43 via udev rules. Moreover, previous fix broke binpkgs support.
 	CONFIG_CHECK="~!B43 ~!SSB"
 	if kernel_is ge 2 6 32; then
-		CONFIG_CHECK="${CONFIG_CHECK} CFG80211 ~!MAC80211"
+		CONFIG_CHECK="${CONFIG_CHECK} CFG80211 LIB80211 ~!MAC80211"
 	elif kernel_is ge 2 6 31; then
 		CONFIG_CHECK="${CONFIG_CHECK} LIB80211 WIRELESS_EXT ~!MAC80211"
 	elif kernel_is ge 2 6 29; then
