@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/monomer-db/monomer-db-5.30.ebuild,v 1.1 2011/06/26 15:16:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/monomer-db/monomer-db-5.30.ebuild,v 1.2 2011/10/25 06:06:56 jlec Exp $
 
 EAPI=4
 
@@ -15,9 +15,7 @@ LICENSE="ccp4"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND="
-	!<sci-chemistry/ccp4-6.1.3
-	!<sci-libs/ccp4-libs-6.1.3"
+RDEPEND="!<sci-chemistry/ccp4-6.1.3"
 DEPEND="${RDEPEND}"
 
 RESTRICT="binchecks strip"
