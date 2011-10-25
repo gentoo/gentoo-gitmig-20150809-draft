@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ack/ChangeLog,v 1.22 2011/10/23 18:26:04 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ack/ChangeLog,v 1.23 2011/10/25 16:47:31 phajdan.jr Exp $
+
+  25 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> ack-1.94-r1.ebuild:
+  x86 stable wrt bug #384111
 
 *ack-1.96 (23 Oct 2011)
 

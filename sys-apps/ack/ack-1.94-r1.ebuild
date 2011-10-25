@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ack/ack-1.94-r1.ebuild,v 1.1 2011/04/11 11:44:06 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ack/ack-1.94-r1.ebuild,v 1.2 2011/10/25 16:47:31 phajdan.jr Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ SRC_URI+=" http://dev.gentoo.org/~tove/distfiles/${CATEGORY}/${PN}/${ACK_PATCH}.
 
 LICENSE="Artistic-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-interix ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="~amd64 x86 ~x86-interix ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
 DEPEND=">=dev-perl/File-Next-1.02"
