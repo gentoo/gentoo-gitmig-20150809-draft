@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.2.1.ebuild,v 1.3 2011/10/21 19:20:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.2.1.ebuild,v 1.4 2011/10/25 15:11:02 jer Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ SLOT="3"
 # I tried this and got it all compiling, but the end result is unusable as it
 # horribly mixes up the backends -- grobian
 IUSE="aqua colord cups debug doc examples +introspection packagekit test vim-syntax xinerama"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~hppa ~x86"
 
 # FIXME: introspection data is built against system installation of gtk+:3
 # NOTE: cairo[svg] dep is due to bug 291283 (not patched to avoid eautoreconf)
