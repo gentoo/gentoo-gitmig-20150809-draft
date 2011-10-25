@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14-r4.ebuild,v 1.5 2011/10/23 11:33:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14-r4.ebuild,v 1.6 2011/10/25 10:13:42 pva Exp $
 
 EAPI=4
 
@@ -36,7 +36,8 @@ RDEPEND=">=x11-libs/qt-gui-4.4:4[qt3support,dbus?]
 	spell? ( >=app-text/enchant-1.3.0 )
 	xscreensaver? ( x11-libs/libXScrnSaver )
 	extras? ( webkit? ( x11-libs/qt-webkit ) )
-	app-arch/unzip"
+	app-arch/unzip
+	|| ( >=sys-libs/zlib-1.2.5.1-r2[minizip] <sys-libs/zlib-1.2.5.1-r1 )"
 
 DEPEND="${RDEPEND}
 	extras? ( sys-devel/qconf )
@@ -76,8 +77,6 @@ src_prepare() {
 		sed -e 's/\(^#define PROG_CAPS_NODE	\).*/\1"http:\/\/psi-dev.googlecode.com\/caps";/' \
 			-e 's:\(^#define PROG_NAME "Psi\):\1+:' \
 				-i src/applicationinfo.cpp || die
-
-		qconf || die "Failed to create ./configure."
 	else
 		if use webkit; then
 			ewarn "Webkit support disabled as it is only available in Psi+"
@@ -85,6 +84,7 @@ src_prepare() {
 		fi
 	fi
 
+	qconf || die "Failed to create ./configure."
 	rm -rf third-party/qca || die # We use system libraries.
 }
 

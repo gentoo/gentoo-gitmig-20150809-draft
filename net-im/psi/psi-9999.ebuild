@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-9999.ebuild,v 1.12 2011/06/30 09:23:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-9999.ebuild,v 1.13 2011/10/25 10:13:42 pva Exp $
 
 EAPI="4"
 
@@ -41,6 +41,7 @@ RDEPEND="
 	xscreensaver? ( x11-libs/libXScrnSaver )
 	extras? ( webkit? ( x11-libs/qt-webkit:4 ) )
 	app-arch/unzip
+	|| ( >=sys-libs/zlib-1.2.5.1-r2[minizip] <sys-libs/zlib-1.2.5.1-r1 )
 "
 DEPEND="${RDEPEND}
 	extras? (

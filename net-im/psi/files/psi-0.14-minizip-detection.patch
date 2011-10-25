@@ -1,6 +1,6 @@
 === modified file 'conf_windows.pri'
---- conf_windows.pri	2011-10-04 06:27:15 +0000
-+++ conf_windows.pri	2011-10-04 06:27:28 +0000
+--- conf_windows.pri	2011-10-25 10:03:42 +0000
++++ conf_windows.pri	2011-10-25 10:04:13 +0000
 @@ -5,7 +5,7 @@
  #CONFIG += qca-static
  
@@ -12,8 +12,8 @@
  qca-static {
 
 === modified file 'configure'
---- configure	2011-10-04 06:27:15 +0000
-+++ configure	2011-10-04 06:27:38 +0000
+--- configure	2011-10-25 10:03:42 +0000
++++ configure	2011-10-25 10:04:13 +0000
 @@ -955,41 +955,68 @@
  	{
  #ifdef Q_OS_WIN
@@ -115,8 +115,8 @@
  #endif
 
 === modified file 'qcm/zlib.qcm'
---- qcm/zlib.qcm	2011-10-04 06:27:15 +0000
-+++ qcm/zlib.qcm	2011-10-04 06:27:38 +0000
+--- qcm/zlib.qcm	2011-10-25 10:03:42 +0000
++++ qcm/zlib.qcm	2011-10-25 10:04:13 +0000
 @@ -26,41 +26,68 @@
  	{
  #ifdef Q_OS_WIN
@@ -218,8 +218,8 @@
  #endif
 
 === modified file 'src/conf_iris.pri'
---- src/conf_iris.pri	2011-10-04 06:27:15 +0000
-+++ src/conf_iris.pri	2011-10-04 06:27:28 +0000
+--- src/conf_iris.pri	2011-10-25 10:03:42 +0000
++++ src/conf_iris.pri	2011-10-25 10:04:13 +0000
 @@ -13,11 +13,6 @@
  	CONFIG += crypto
  }
@@ -234,8 +234,8 @@
  	qc_universal:contains(QT_CONFIG,x86):contains(QT_CONFIG,ppc) {
 
 === modified file 'src/libpsi/tools/zip/zip.cpp'
---- src/libpsi/tools/zip/zip.cpp	2011-10-04 06:27:15 +0000
-+++ src/libpsi/tools/zip/zip.cpp	2011-10-04 06:27:43 +0000
+--- src/libpsi/tools/zip/zip.cpp	2011-10-25 10:03:42 +0000
++++ src/libpsi/tools/zip/zip.cpp	2011-10-25 10:04:13 +0000
 @@ -22,7 +22,11 @@
  #include <QStringList>
  #include <QFile>
@@ -250,25 +250,28 @@
  class UnZipPrivate
 
 === modified file 'src/libpsi/tools/zip/zip.pri'
---- src/libpsi/tools/zip/zip.pri	2011-10-04 06:27:15 +0000
-+++ src/libpsi/tools/zip/zip.pri	2011-10-04 06:29:25 +0000
-@@ -2,17 +2,21 @@
+--- src/libpsi/tools/zip/zip.pri	2011-10-25 10:03:42 +0000
++++ src/libpsi/tools/zip/zip.pri	2011-10-25 10:04:13 +0000
+@@ -2,17 +2,20 @@
  	$$PWD/zip.h
  
  SOURCES += \
 -	$$PWD/zip.cpp \
 -	$$PWD/minizip/unzip.c
+-
+-INCLUDEPATH += $$PWD
+-DEPENDPATH  += $$PWD
+-
+-win32: {
 + 	$$PWD/zip.cpp
 + 
 +psi-minizip {
 +	SOURCES += $$PWD/minizip/unzip.c
 +	DEFINES += PSIMINIZIP
++	INCLUDEPATH += $$PWD
++	DEPENDPATH  += $$PWD
 +}
- 
- INCLUDEPATH += $$PWD
- DEPENDPATH  += $$PWD
- 
--win32: {
++
 +psi-winzlib {
  	INCLUDEPATH += $$PWD/minizip/win32
  	DEPENDPATH  += $$PWD/minizip/win32
