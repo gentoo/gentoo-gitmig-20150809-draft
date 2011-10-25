@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/quagga
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.126 2011/10/21 22:51:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.127 2011/10/25 16:40:26 phajdan.jr Exp $
+
+  25 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  quagga-0.99.20-r1.ebuild:
+  x86 stable wrt bug #387375
 
 *quagga-0.99.20-r1 (21 Oct 2011)
 
