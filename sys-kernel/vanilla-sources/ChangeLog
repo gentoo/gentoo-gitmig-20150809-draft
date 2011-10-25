@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.913 2011/10/25 13:44:21 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.914 2011/10/25 13:57:29 mpagano Exp $
+
+  25 Oct 2011; Michael Pagano <mpagano@gentoo.org>
+  vanilla-sources-3.1.0.ebuild:
+  Enable deblob support for 3.1 as deblob script has been released
 
 *vanilla-sources-3.0.8 (25 Oct 2011)
 
