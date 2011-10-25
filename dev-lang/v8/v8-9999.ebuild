@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.17 2011/10/22 11:44:36 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.18 2011/10/25 00:35:35 floppym Exp $
 
 EAPI="3"
 
@@ -95,21 +95,27 @@ src_install() {
 }
 
 pkg_preinst() {
-	local preserved_candidates="$(find /usr/$(get_libdir) -maxdepth 1 -name libv8-\*$(get_libname))"
-	preserved_libs=""
-	for candidate in ${preserved_candidates}; do
-		if [[ -f "${D}/usr/$(get_libdir)/`basename ${candidate}`" ]]; then
-			continue
+	preserved_libs=()
+	local baselib
+
+	eshopts_push -s nullglob
+
+	for candidate in "${EROOT}usr/$(get_libdir)"/libv8-*$(get_libname); do
+		baselib=${candidate##*/}
+		if [[ ${baselib} != libv8-${soname_version}$(get_libname) ]]; then
+			preserved_libs+=( "${EPREFIX}/usr/$(get_libdir)/${baselib}" )
 		fi
-		preserved_libs+=" ${candidate}"
 	done
-	if [[ "${preserved_libs}" != "" ]]; then
-		preserve_old_lib ${preserved_libs}
+
+	eshopts_pop
+
+	if [[ ${#preserved_libs[@]} -gt 0 ]]; then
+		preserve_old_lib "${preserved_libs[@]}"
 	fi
 }
 
 pkg_postinst() {
-	if [[ "${preserved_libs}" != "" ]]; then
-		preserve_old_lib_notify ${preserved_libs}
+	if [[ ${#preserved_libs[@]} -gt 0 ]]; then
+		preserve_old_lib_notify "${preserved_libs[@]}"
 	fi
 }
