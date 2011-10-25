@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ii/ii-1.6.ebuild,v 1.1 2011/10/20 18:14:07 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ii/ii-1.6.ebuild,v 1.2 2011/10/25 19:20:07 binki Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://dl.suckless.org/tools/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux"
 IUSE=""
 
 DEPEND=""
