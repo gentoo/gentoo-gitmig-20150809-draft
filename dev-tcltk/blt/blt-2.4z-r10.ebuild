@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r10.ebuild,v 1.2 2011/10/24 17:54:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r10.ebuild,v 1.3 2011/10/25 05:59:59 jlec Exp $
 
 EAPI="3"
 
@@ -14,7 +14,7 @@ HOMEPAGE="
 	http://jos.decoster.googlepages.com/bltfortk8.5.2"
 SRC_URI="http://jos.decoster.googlepages.com/${PN}${PV}${MY_V_SUFFIX}.tar.gz"
 
-IUSE="jpeg X"
+IUSE="jpeg static-libs X"
 SLOT="0"
 LICENSE="BSD"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
@@ -105,4 +105,8 @@ src_install() {
 	# fix for linking against shared lib with -lBLT or -lBLTlite
 	dosym libBLT24$(get_libname) /usr/$(get_libdir)/libBLT$(get_libname) || die
 	dosym libBLTlite24$(get_libname) /usr/$(get_libdir)/libBLTlite$(get_libname) || die
+
+	use static-libs || \
+		find "${ED}"/usr/$(get_libdir) -name "*.a" -print0 | \
+		xargs -r -0 rm -fv
 }

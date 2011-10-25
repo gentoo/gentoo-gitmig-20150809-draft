@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/blt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.50 2011/10/24 20:25:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.51 2011/10/25 05:59:59 jlec Exp $
+
+  25 Oct 2011; Justin Lecher <jlec@gentoo.org> blt-2.4z-r10.ebuild:
+  Added USE=static-libs requested by ago
 
   24 Oct 2011; Markus Meier <maekke@gentoo.org> blt-2.4z-r5.ebuild:
   arm stable, bug #387849
