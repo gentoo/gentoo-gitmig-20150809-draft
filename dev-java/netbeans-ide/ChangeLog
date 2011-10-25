@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/netbeans-ide
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-ide/ChangeLog,v 1.8 2011/09/16 19:44:37 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-ide/ChangeLog,v 1.9 2011/10/25 00:01:10 fordfrog Exp $
+
+  25 Oct 2011; Miroslav Šulc <fordfrog@gentoo.org> netbeans-ide-7.0.1.ebuild:
+  Filtering ecj compilers as the package does not compile using them
 
   16 Sep 2011; Miroslav Šulc <fordfrog@gentoo.org> netbeans-ide-7.0.1.ebuild:
   Building NetBeans is supported only with JDK 1.6
