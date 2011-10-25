@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/geany-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/ChangeLog,v 1.8 2011/10/15 23:33:07 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/ChangeLog,v 1.9 2011/10/25 16:04:15 binki Exp $
+
+  25 Oct 2011; Nathan Phillip Brink <binki@gentoo.org>
+  geany-plugins-0.19.ebuild, geany-plugins-0.20-r1.ebuild:
+  Depend on app-text/gtkspell:0 in anticipation of app-text/gtkspell:3. Fixes
+  bug #388423.
 
   15 Oct 2011; Nathan Phillip Brink <binki@gentoo.org>
   geany-plugins-0.20-r1.ebuild, +files/geany-plugins-0.20-config.h.patch:
