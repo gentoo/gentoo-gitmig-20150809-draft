@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.95 2011/10/25 02:07:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.96 2011/10/25 21:47:25 floppym Exp $
+
+  25 Oct 2011; Mike Gilbert <floppym@gentoo.org> v8-3.5.10.22.ebuild:
+  Stable on amd64 wrt bug 388461. Arch tested by ago.
 
   25 Oct 2011; Mike Gilbert <floppym@gentoo.org> v8-3.6.6.5.ebuild,
   v8-9999.ebuild:
