@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/sakura
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.21 2011/10/24 21:53:02 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.22 2011/10/25 16:45:58 phajdan.jr Exp $
+
+  25 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> sakura-2.4.2.ebuild:
+  x86 stable wrt bug #388313
 
   24 Oct 2011; Tim Harder <radhermit@gentoo.org> sakura-2.4.2.ebuild,
   +files/sakura-2.4.2-cflags.patch:
