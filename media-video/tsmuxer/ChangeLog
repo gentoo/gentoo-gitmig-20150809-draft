@@ -1,6 +1,10 @@
 # ChangeLog for media-video/tsmuxer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/ChangeLog,v 1.5 2011/07/10 02:24:10 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/ChangeLog,v 1.6 2011/10/25 15:44:22 sbriesen Exp $
+
+  25 Oct 2011; Stefan Briesenick <sbriesen@gentoo.org>
+  tsmuxer-1.10.6-r1.ebuild:
+  fixing $HOMEPAGE, some ebuild cleanups, solving bug #388393.
 
   10 Jul 2011; Stefan Briesenick <sbriesen@gentoo.org>
   tsmuxer-1.10.6-r1.ebuild, -files/icon.png:

@@ -1,15 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/tsmuxer-1.10.6-r1.ebuild,v 1.4 2011/07/10 02:24:10 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/tsmuxer-1.10.6-r1.ebuild,v 1.5 2011/10/25 15:44:22 sbriesen Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit base qt4-r2
 
 DESCRIPTION="Utility to create and demux TS and M2TS files"
-HOMEPAGE="http://www.smlabs.net/tsmuxer_en.html"
+HOMEPAGE="http://www.smlabs.net/en/products/tsmuxer/"
 SRC_URI="http://www.smlabs.net/tsMuxer/tsMuxeR_shared_${PV}.tar.gz
-	http://sbriesen.de/gentoo/distfiles/tsmuxer-icon.png"
+	http://gentoo.sbriesen.de/distfiles/tsmuxer-icon.png"
 LICENSE="SmartLabs"
 SLOT="0"
 
@@ -24,16 +24,16 @@ DEPEND="|| (
 )"
 RDEPEND="
 	x86? (
+		sys-libs/glibc
 		media-libs/freetype:2
 		qt4? (
 			x11-libs/qt-gui:4
 			media-libs/libpng:1.2
 		)
-		sys-libs/glibc
 	)
 	amd64? (
-		app-emulation/emul-linux-x86-baselibs
 		app-emulation/emul-linux-x86-xlibs
+		app-emulation/emul-linux-x86-baselibs
 		qt4? ( >=app-emulation/emul-linux-x86-qtlibs-20081109 )
 	)"
 
@@ -51,11 +51,11 @@ src_install() {
 	exeinto /opt/${PN}/bin
 
 	doexe tsMuxeR
-	dosym ../${PN}/bin/tsMuxeR /opt/bin
+	dosym ../${PN}/bin/tsMuxeR /opt/bin/tsMuxeR
 
 	if use qt4; then
 		doexe tsMuxerGUI
-		dosym ../${PN}/bin/tsMuxerGUI /opt/bin
+		dosym ../${PN}/bin/tsMuxerGUI /opt/bin/tsMuxerGUI
 		newicon "${DISTDIR}/${PN}-icon.png" "${PN}.png"
 		make_desktop_entry tsMuxerGUI "tsMuxeR GUI" "${PN}" "Qt;AudioVideo;Video"
 	fi
