@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xmlto
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.70 2011/10/24 19:30:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.71 2011/10/25 16:41:04 phajdan.jr Exp $
+
+  25 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> xmlto-0.0.24-r1.ebuild:
+  x86 stable wrt bug #388273
 
   24 Oct 2011; Markos Chandras <hwoarang@gentoo.org> xmlto-0.0.24-r1.ebuild:
   Stable on amd64 wrt bug #388273
