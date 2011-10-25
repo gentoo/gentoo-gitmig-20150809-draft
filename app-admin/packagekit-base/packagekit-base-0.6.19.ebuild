@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/packagekit-base-0.6.19.ebuild,v 1.1 2011/10/06 19:25:14 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/packagekit-base-0.6.19.ebuild,v 1.2 2011/10/25 15:09:06 jer Exp $
 
 EAPI="3"
 
@@ -18,7 +18,7 @@ SRC_URI="http://www.packagekit.org/releases/${MY_P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~x86"
 IUSE="connman cron doc +introspection networkmanager nsplugin pm-utils +policykit entropy static-libs test udev"
 
 CDEPEND="connman? ( net-misc/connman )
