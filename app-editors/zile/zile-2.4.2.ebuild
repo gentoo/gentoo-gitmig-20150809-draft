@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.4.2.ebuild,v 1.1 2011/10/08 11:44:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-2.4.2.ebuild,v 1.2 2011/10/25 20:35:03 ulm Exp $
 
 EAPI=4
 
@@ -11,21 +11,19 @@ SRC_URI="mirror://gnu/zile/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
-IUSE="acl test valgrind"
+IUSE="acl test"
 
 RDEPEND="dev-libs/boehm-gc
 	sys-libs/ncurses
 	acl? ( virtual/acl )"
 
-DEPEND="${RDEPEND}
-	test? ( valgrind? ( dev-util/valgrind ) )"
+DEPEND="${RDEPEND}"
 
 src_configure() {
 	econf \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		--disable-silent-rules \
-		$(use_enable acl) \
-		$(use test && use_with valgrind || echo --without-valgrind)
+		$(use_enable acl)
 }
 
 src_install() {
