@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5826 2011/10/24 18:29:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5827 2011/10/25 18:52:06 scarabeus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
+  Mask libreoffice 3.4.4.0
 
   24 Oct 2011; Pacho Ramos <pacho@gentoo.org> arch/alpha/package.use.mask,
   arch/ia64/package.use.mask:
