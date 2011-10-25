@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.145 2011/10/23 11:22:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.146 2011/10/25 23:07:45 radhermit Exp $
+
+*libtasn1-2.10 (25 Oct 2011)
+
+  25 Oct 2011; Tim Harder <radhermit@gentoo.org> +libtasn1-2.10.ebuild:
+  Version bump.
 
   23 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> libtasn1-2.9-r1.ebuild:
   Do not install libtool archive and static library unconditionaly.
