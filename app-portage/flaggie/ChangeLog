@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/flaggie
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/ChangeLog,v 1.21 2011/10/16 21:26:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/ChangeLog,v 1.22 2011/10/26 06:53:52 mgorny Exp $
+
+  26 Oct 2011; Michał Górny <mgorny@gentoo.org> flaggie-0.1.4.ebuild:
+  Restrict Python 3 due to bugs in it.
 
   16 Oct 2011; Michał Górny <mgorny@gentoo.org> flaggie-0.1.4.ebuild:
   Migrate to bash-completion-r1.
