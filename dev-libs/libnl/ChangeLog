@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.52 2011/10/10 11:05:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.53 2011/10/26 15:43:37 jer Exp $
+
+  26 Oct 2011; Jeroen Roovers <jer@gentoo.org> libnl-1.1-r2.ebuild,
+  -libnl-2.0.ebuild, -libnl-3.0.ebuild, -libnl-3.1.ebuild, libnl-3.2.1.ebuild:
+  Introduce SLOTting thanks to Azamat H. Hackimov (bug #384229).
 
 *libnl-3.2.1 (10 Oct 2011)
 
