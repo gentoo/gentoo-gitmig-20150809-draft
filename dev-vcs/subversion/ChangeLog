@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.63 2011/10/19 00:29:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.64 2011/10/26 14:31:06 chainsaw Exp $
+
+*subversion-1.7.1 (26 Oct 2011)
+
+  26 Oct 2011; Tony Vroon <chainsaw@gentoo.org> +subversion-1.7.1.ebuild:
+  Bugfix release in the 1.7 branch; also brings performance improvements. As
+  requested by Joakim in bug #388541.
 
   19 Oct 2011; Jeroen Roovers <jer@gentoo.org> subversion-1.6.17-r7.ebuild:
   Stable for HPPA (bug #386899).
