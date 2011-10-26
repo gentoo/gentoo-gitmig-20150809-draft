@@ -1,8 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-2.5.1.ebuild,v 1.1 2011/10/26 20:35:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-2.5.1.ebuild,v 1.2 2011/10/26 23:10:38 dilfridge Exp $
 
 EAPI=4
+
+KDE_LINGUAS="cs da de es fr hr hu it ja nb nn pl pt ro ru sk sr sv tr zh_CN"
+KDE_HANDBOOK="optional"
+
 inherit kde4-base
 
 DESCRIPTION="A graphical debugger interface"
@@ -20,11 +24,8 @@ DEPEND="${RDEPEND}"
 DOCS=( BUGS README ReleaseNotes-${PV} TODO )
 
 src_prepare() {
+	mv kdbg/doc . || die
 	sed -i -e '/add_subdirectory(doc)/d' kdbg/CMakeLists.txt || die
-}
-
-src_install() {
-	kde4-base_src_install
-	dohtml -r kdbg/doc/*
-	rm -f "${ED}"usr/share/doc/${PF}/ChangeLog-pre*
+	echo "add_subdirectory ( doc ) " >> CMakeLists.txt || die
+	kde4-base_src_prepare
 }
