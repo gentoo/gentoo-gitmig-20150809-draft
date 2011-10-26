@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.4.12.ebuild,v 1.1 2011/10/06 11:21:27 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.4.12.ebuild,v 1.2 2011/10/26 15:19:47 chainsaw Exp $
 
 EAPI=4
 inherit eutils db-use multilib
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.cyrusimap.org/cyrus-imapd/cyrus-imapd-${MY_PV}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="afs berkdb kerberos snmp ssl tcpd"
 
 RDEPEND=">=dev-libs/cyrus-sasl-2.1.13
