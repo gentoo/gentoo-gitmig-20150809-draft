@@ -1,13 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5829 2011/10/26 15:45:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5830 2011/10/26 15:46:18 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
 
   26 Oct 2011; Jeroen Roovers <jer@gentoo.org> package.mask:
-  Unmask dev-libs/libnl now that it is SLOTted.
+  Unmask dev-libs/libnl now that it is SLOTted (bug #342461).
 
   25 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
   Fix the version for lo, it is 3.4.4.1
