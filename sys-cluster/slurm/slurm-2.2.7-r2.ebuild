@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.2.7-r2.ebuild,v 1.1 2011/10/26 14:05:31 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/slurm-2.2.7-r2.ebuild,v 1.2 2011/10/26 16:00:57 alexxy Exp $
 
 EAPI=4
 
@@ -72,11 +72,17 @@ src_configure() {
 		$(use_with munge) \
 		$(use_enable static-libs static)
 	if use perl ; then
+		# small hack to make it compile
+		mkdir -p "${S}/src/api/.libs"
+		mkdir -p "${S}/src/db_api/.libs"
+		touch "${S}/src/api/.libs/libslurm.so"
+		touch "${S}/src/db_api/.libs/libslurmdb.so"
 		cd "${LIBSLURM_PERL_S}"
 		S="${LIBSLURM_PERL_S}" SRC_PREP="no" perl-module_src_configure
 		cd "${LIBSLURMDB_PERL_S}"
 		S="${LIBSLURMDB_PERL_S}" SRC_PREP="no" perl-module_src_configure
 		cd "${S}"
+		rm -rf "${S}/src/api/.libs" "${S}/src/db_api/.libs"
 	fi
 }
 
