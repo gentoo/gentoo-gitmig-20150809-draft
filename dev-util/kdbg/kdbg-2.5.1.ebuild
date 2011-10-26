@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-2.5.1.ebuild,v 1.2 2011/10/26 23:10:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-2.5.1.ebuild,v 1.3 2011/10/26 23:28:18 ssuominen Exp $
 
 EAPI=4
 
@@ -28,4 +28,9 @@ src_prepare() {
 	sed -i -e '/add_subdirectory(doc)/d' kdbg/CMakeLists.txt || die
 	echo "add_subdirectory ( doc ) " >> CMakeLists.txt || die
 	kde4-base_src_prepare
+}
+
+src_install() {
+	kde4-base_src_install
+	rm -f "${ED}"usr/share/doc/${PF}/ChangeLog-pre*
 }
