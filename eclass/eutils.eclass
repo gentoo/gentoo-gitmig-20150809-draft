@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.366 2011/09/30 16:51:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.367 2011/10/26 23:27:16 vapier Exp $
 
 # @ECLASS: eutils.eclass
 # @MAINTAINER:
@@ -2045,6 +2045,17 @@ in_iuse() {
 	local liuse=( ${IUSE} )
 
 	has "${flag}" "${liuse[@]#[+-]}"
+}
+
+# @FUNCTION: use_if_iuse
+# @USAGE: <flag>
+# @DESCRIPTION:
+# Return true if the given flag is in USE and IUSE.
+#
+# Note that this function should not be used in the global scope.
+use_if_iuse() {
+	in_iuse $1 || return 1
+	use $1
 }
 
 # @FUNCTION: usex
