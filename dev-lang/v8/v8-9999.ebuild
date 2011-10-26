@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.19 2011/10/25 02:07:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.20 2011/10/26 17:02:43 floppym Exp $
 
 EAPI="3"
 
@@ -102,7 +102,7 @@ pkg_preinst() {
 
 	for candidate in "${EROOT}usr/$(get_libdir)"/libv8-*$(get_libname); do
 		baselib=${candidate##*/}
-		if [[ ${baselib} != libv8-${soname_version}$(get_libname) ]]; then
+		if [[ ! -e "${ED}usr/$(get_libdir)/${baselib}" ]]; then
 			preserved_libs+=( "${EPREFIX}/usr/$(get_libdir)/${baselib}" )
 		fi
 	done
