@@ -1,6 +1,6 @@
 (add-to-list 'load-path "@SITELISP@")
 (if (boundp 'image-load-path)
-    (add-to-list 'image-load-path "/usr/share/emacs/etc/notmuch" t))
+    (add-to-list 'image-load-path "@SITEETC@" t))
 (autoload 'notmuch "notmuch" nil t)
 (autoload 'notmuch-search "notmuch" nil t)
 (autoload 'notmuch-hello "notmuch-hello" nil t)

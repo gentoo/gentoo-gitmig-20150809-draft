@@ -1,6 +1,9 @@
 # ChangeLog for app-text/notmuch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/notmuch/ChangeLog,v 1.4 2011/10/24 22:04:52 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/notmuch/ChangeLog,v 1.5 2011/10/26 05:50:37 ulm Exp $
+
+  26 Oct 2011; Ulrich Mueller <ulm@gentoo.org> files/50notmuch-gentoo.el:
+  Use SITEETC instead of absolute path in emacs site-init file.
 
   24 Oct 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.9.ebuild:
   ~amd64 keyword. Notmuch works fine in terminal, Vim and Emacs.
