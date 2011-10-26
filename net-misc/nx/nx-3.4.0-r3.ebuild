@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.4.0-r3.ebuild,v 1.6 2011/06/30 14:50:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.4.0-r3.ebuild,v 1.7 2011/10/26 18:34:04 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils multilib
@@ -50,6 +50,7 @@ src_prepare() {
 	# Quiet some warnings
 	cd "${WORKDIR}"/nxcomp
 	epatch "${FILESDIR}"/${PN}-2.1.0-invalid-options.patch
+	epatch "${FILESDIR}"/${PN}-3.5.0-libpng15.patch
 	# GCC 4.4 + glibc 2.10
 	epatch "${FILESDIR}"/${PN}-3.3.0-nxcomp-glibc2.10.patch
 
