@@ -1,19 +1,19 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/smart-live-rebuild-1.2.ebuild,v 1.1 2011/08/31 08:22:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/smart-live-rebuild-1.2.ebuild,v 1.2 2011/10/26 07:52:52 mgorny Exp $
 
 EAPI=3
 
-PYTHON_DEPEND='*:2.6'
+PYTHON_DEPEND='2:2.6'
 SUPPORT_PYTHON_ABIS=1
-RESTRICT_PYTHON_ABIS='2.4 2.5'
+RESTRICT_PYTHON_ABIS='2.4 2.5 3.*'
 DISTUTILS_SRC_TEST=setup.py
 
 inherit base distutils
 
 DESCRIPTION="Check live packages for updates and emerge them as necessary"
 HOMEPAGE="https://github.com/mgorny/smart-live-rebuild/"
-SRC_URI="http://cloud.github.com/downloads/mgorny/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://github/mgorny/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD-2"
 SLOT="0"

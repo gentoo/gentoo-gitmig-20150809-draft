@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gentoopm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.9 2011/08/15 16:06:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.10 2011/10/26 07:50:23 mgorny Exp $
+
+  26 Oct 2011; Michał Górny <mgorny@gentoo.org> gentoopm-0.2.1.ebuild:
+  Restrict Python 3 due to bugs in it, use mirror://github.
 
 *gentoopm-0.2.1 (15 Aug 2011)
 

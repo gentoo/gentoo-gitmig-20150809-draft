@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/smart-live-rebuild
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.29 2011/08/31 08:22:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/ChangeLog,v 1.30 2011/10/26 07:52:52 mgorny Exp $
+
+  26 Oct 2011; Michał Górny <mgorny@gentoo.org>
+  smart-live-rebuild-1.2.ebuild:
+  Restrict Python 3 due to bugs in it, use mirror://github.
 
 *smart-live-rebuild-1.2 (31 Aug 2011)
 
