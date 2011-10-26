@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/vigra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.42 2011/10/23 16:18:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.43 2011/10/26 15:41:09 chainsaw Exp $
+
+  26 Oct 2011; Tony Vroon <chainsaw@gentoo.org> vigra-1.7.1-r1.ebuild:
+  Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney &
+  Agostino "ago" Sarubbo in bug #387187.
 
   23 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> -vigra-1.6.0.ebuild,
   -files/vigra-1.6.0-gcc44.patch, -files/vigra-1.6.0-ldflags.patch:
