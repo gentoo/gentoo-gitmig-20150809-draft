@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/test_declarative
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test_declarative/ChangeLog,v 1.4 2011/07/24 09:39:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test_declarative/ChangeLog,v 1.5 2011/10/26 17:56:21 graaff Exp $
+
+  26 Oct 2011; Hans de Graaff <graaff@gentoo.org>
+  test_declarative-0.0.5.ebuild:
+  Move to EAPI=4 to fix deprecations. Add ruby19, rbx.
 
   24 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   test_declarative-0.0.5.ebuild:
