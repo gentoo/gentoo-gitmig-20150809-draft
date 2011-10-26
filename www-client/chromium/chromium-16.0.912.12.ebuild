@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-16.0.912.0.ebuild,v 1.1 2011/10/19 21:49:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-16.0.912.12.ebuild,v 1.1 2011/10/26 09:26:44 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -10,12 +10,12 @@ inherit eutils fdo-mime flag-o-matic gnome2-utils linux-info multilib \
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://chromium.org/"
-SRC_URI="http://build.chromium.org/official/${P}.tar.bz2"
+SRC_URI="http://commondatastorage.googleapis.com/chromium-browser-official/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="bindist chromedriver cups gnome gnome-keyring kerberos pulseaudio"
+IUSE="bindist cups gnome gnome-keyring kerberos pulseaudio"
 
 # en_US is ommitted on purpose from the list below. It must always be available.
 LANGS="am ar bg bn ca cs da de el en_GB es es_LA et fa fi fil fr gu he hi hr
@@ -56,14 +56,15 @@ RDEPEND="app-arch/bzip2
 DEPEND="${RDEPEND}
 	dev-lang/nacl-toolchain-newlib
 	dev-lang/perl
+	dev-python/simplejson
 	>=dev-util/gperf-3.0.3
 	>=dev-util/pkgconfig-0.23
-	dev-python/simplejson
 	>=sys-devel/bison-2.4.3
 	sys-devel/flex
 	>=sys-devel/make-3.81-r2
 	test? ( dev-python/pyftpdlib )"
 RDEPEND+="
+	!=www-client/chromium-9999
 	x11-misc/xdg-utils
 	virtual/ttf-fonts"
 
@@ -147,7 +148,12 @@ chromium-pkg_die() {
 }
 
 pkg_setup() {
-	CHROMIUM_HOME="/usr/$(get_libdir)/chromium-browser"
+	if [[ "${SLOT}" == "0" ]]; then
+		CHROMIUM_SUFFIX=""
+	else
+		CHROMIUM_SUFFIX="-${SLOT}"
+	fi
+	CHROMIUM_HOME="/usr/$(get_libdir)/chromium-browser${CHROMIUM_SUFFIX}"
 
 	# Make sure the build system will use the right tools, bug #340795.
 	tc-export AR CC CXX RANLIB
@@ -321,11 +327,8 @@ src_configure() {
 }
 
 src_compile() {
-	emake chrome chrome_sandbox BUILDTYPE=Release V=1 || die
+	emake chrome chrome_sandbox chromedriver BUILDTYPE=Release V=1 || die
 	pax-mark m out/Release/chrome
-	if use chromedriver; then
-		emake chromedriver BUILDTYPE=Release V=1 || die
-	fi
 	if use test; then
 		emake {base,crypto,googleurl,net}_unittests BUILDTYPE=Release V=1 || die
 		pax-mark m out/Release/{base,crypto,googleurl,net}_unittests
@@ -368,9 +371,7 @@ src_install() {
 	doexe out/Release/chrome_sandbox || die
 	fperms 4755 "${CHROMIUM_HOME}/chrome_sandbox"
 
-	if use chromedriver; then
-		doexe out/Release/chromedriver || die
-	fi
+	doexe out/Release/chromedriver || die
 
 	# Install Native Client files on platforms that support it.
 	insinto "${CHROMIUM_HOME}"
@@ -386,12 +387,20 @@ src_install() {
 	esac
 
 	newexe "${FILESDIR}"/chromium-launcher-r2.sh chromium-launcher.sh || die
+	if [[ "${CHROMIUM_SUFFIX}" != "" ]]; then
+		sed "s:chromium-browser:chromium-browser${CHROMIUM_SUFFIX}:g" \
+			-i "${ED}"/"${CHROMIUM_HOME}"/chromium-launcher.sh || die
+		sed "s:chromium.desktop:chromium${CHROMIUM_SUFFIX}.desktop:g" \
+			-i "${ED}"/"${CHROMIUM_HOME}"/chromium-launcher.sh || die
+		sed "s:plugins:plugins --user-data-dir=\${HOME}/.config/chromium${CHROMIUM_SUFFIX}:" \
+			-i "${ED}"/"${CHROMIUM_HOME}"/chromium-launcher.sh || die
+	fi
 
 	# It is important that we name the target "chromium-browser",
 	# xdg-utils expect it; bug #355517.
-	dosym "${CHROMIUM_HOME}/chromium-launcher.sh" /usr/bin/chromium-browser || die
+	dosym "${CHROMIUM_HOME}/chromium-launcher.sh" /usr/bin/chromium-browser${CHROMIUM_SUFFIX} || die
 	# keep the old symlink around for consistency
-	dosym "${CHROMIUM_HOME}/chromium-launcher.sh" /usr/bin/chromium || die
+	dosym "${CHROMIUM_HOME}/chromium-launcher.sh" /usr/bin/chromium${CHROMIUM_SUFFIX} || die
 
 	# Allow users to override command-line options, bug #357629.
 	dodir /etc/chromium || die
@@ -443,8 +452,8 @@ src_install() {
 	doins -r out/Release/locales || die
 	doins -r out/Release/resources || die
 
-	newman out/Release/chrome.1 chromium.1 || die
-	newman out/Release/chrome.1 chromium-browser.1 || die
+	newman out/Release/chrome.1 chromium${CHROMIUM_SUFFIX}.1 || die
+	newman out/Release/chrome.1 chromium-browser${CHROMIUM_SUFFIX}.1 || die
 
 	# Chromium looks for these in its folder
 	# See media_posix.cc and base_paths_linux.cc
@@ -457,11 +466,14 @@ src_install() {
 	for SIZE in 16 22 24 32 48 64 128 256 ; do
 		insinto /usr/share/icons/hicolor/${SIZE}x${SIZE}/apps
 		newins chrome/app/theme/chromium/product_logo_${SIZE}.png \
-			chromium-browser.png || die
+			chromium-browser${CHROMIUM_SUFFIX}.png || die
 	done
 	local mime_types="text/html;text/xml;application/xhtml+xml;"
 	mime_types+="x-scheme-handler/http;x-scheme-handler/https;" # bug #360797
-	make_desktop_entry chromium-browser "Chromium" chromium-browser \
+	make_desktop_entry \
+		chromium-browser${CHROMIUM_SUFFIX} \
+		"Chromium${CHROMIUM_SUFFIX}" \
+		chromium-browser${CHROMIUM_SUFFIX} \
 		"Network;WebBrowser" \
 		"MimeType=${mime_types}\nStartupWMClass=chromium-browser"
 	sed -e "/^Exec/s/$/ %U/" -i "${ED}"/usr/share/applications/*.desktop || die
@@ -470,7 +482,11 @@ src_install() {
 	if use gnome; then
 		dodir /usr/share/gnome-control-center/default-apps || die
 		insinto /usr/share/gnome-control-center/default-apps
-		doins "${FILESDIR}"/chromium-browser.xml || die
+		newins "${FILESDIR}"/chromium-browser.xml chromium-browser${CHROMIUM_SUFFIX}.xml || die
+		if [[ "${CHROMIUM_SUFFIX}" != "" ]]; then
+			sed "s:chromium-browser:chromium-browser${CHROMIUM_SUFFIX}:g" -i \
+				"${ED}"/usr/share/gnome-control-center/default-apps/chromium-browser${CHROMIUM_SUFFIX}.xml
+		fi
 	fi
 }
 

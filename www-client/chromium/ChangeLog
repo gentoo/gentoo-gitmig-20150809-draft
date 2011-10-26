@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.476 2011/10/25 21:49:05 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.477 2011/10/26 09:26:44 phajdan.jr Exp $
+
+*chromium-16.0.912.12 (26 Oct 2011)
+
+  26 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-16.0.912.0.ebuild, +chromium-16.0.912.12.ebuild,
+  chromium-9999-r1.ebuild:
+  Version bump for dev channel release. Further reduce number of differences
+  between live and non-live ebuilds. Remove old.
 
   25 Oct 2011; Mike Gilbert <floppym@gentoo.org> chromium-15.0.874.102.ebuild:
   Stable on amd64 wrt bug 388461. Arch tested by ago.
