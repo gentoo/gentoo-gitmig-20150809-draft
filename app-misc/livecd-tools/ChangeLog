@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/livecd-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.121 2011/10/25 03:05:17 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.122 2011/10/26 22:47:17 williamh Exp $
+
+*livecd-tools-2.0.2 (26 Oct 2011)
+
+  26 Oct 2011; William Hubbs <williamh@gentoo.org> +livecd-tools-2.0.2.ebuild:
+  version bump
 
   25 Oct 2011; William Hubbs <williamh@gentoo.org> livecd-tools-9999.ebuild:
   drop spind from live ebuild
