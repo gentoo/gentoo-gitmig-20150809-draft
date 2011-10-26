@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/qudos
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/ChangeLog,v 1.13 2011/10/21 13:32:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/qudos/ChangeLog,v 1.14 2011/10/26 18:00:22 mr_bones_ Exp $
+
+  26 Oct 2011; Michael Sterrett <mr_bones_@gentoo.org> qudos-0.40.1.ebuild,
+  +files/qudos-0.40.1-gnusource.patch:
+  add patch for building on amd64 (bug #382197) with patch from Jared B.
 
   21 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> qudos-0.40.1.ebuild,
   +files/qudos-0.40.1-libpng15.patch:
