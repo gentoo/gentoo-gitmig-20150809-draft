@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/dahdi-2.5.0.1.ebuild,v 1.2 2011/10/20 12:51:58 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/dahdi-2.5.0.2.ebuild,v 1.1 2011/10/26 09:20:17 chainsaw Exp $
 
 EAPI=4
 
@@ -18,8 +18,8 @@ http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fw-oct6114-064
 http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fw-oct6114-128-1.05.01.tar.gz
 http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fw-tc400m-MR6.12.tar.gz
 http://downloads.digium.com/pub/telephony/firmware/releases/dahdi-fw-hx8-2.06.tar.gz
-mirror://gentoo/gentoo-dahdi-patchset-0.8.tar.bz2
-http://www.junghanns.net/downloads/jnet-dahdi-drivers-1.0.11.tar.gz"
+mirror://gentoo/gentoo-dahdi-patchset-0.9.tar.bz2
+http://www.junghanns.net/downloads/jnet-dahdi-drivers-1.0.13.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -43,9 +43,9 @@ src_unpack() {
 	done
 	# But without the .bin's it'll still fall over and die, so copy those too.
 	cp *.bin "${MY_P}"/drivers/dahdi/firmware/
-	cp -p "${WORKDIR}"/jnet-dahdi-drivers-1.0.11/cwain/*.[ch] "${MY_P}"/drivers/dahdi/
-	cp -p "${WORKDIR}"/jnet-dahdi-drivers-1.0.11/qozap/*.[ch] "${MY_P}"/drivers/dahdi/
-	cp -p "${WORKDIR}"/jnet-dahdi-drivers-1.0.11/ztgsm/*.[ch] "${MY_P}"/drivers/dahdi/
+	cp -p "${WORKDIR}"/jnet-dahdi-drivers-1.0.13/cwain/*.[ch] "${MY_P}"/drivers/dahdi/
+	cp -p "${WORKDIR}"/jnet-dahdi-drivers-1.0.13/qozap/*.[ch] "${MY_P}"/drivers/dahdi/
+	cp -p "${WORKDIR}"/jnet-dahdi-drivers-1.0.13/ztgsm/*.[ch] "${MY_P}"/drivers/dahdi/
 }
 
 src_prepare() {
@@ -58,11 +58,11 @@ src_prepare() {
 
 src_compile() {
 	unset ARCH
-	emake CC=$(tc-getCC) LD=$(tc-getLD) KSRC="${KERNEL_DIR}" DESTDIR="${D}" DAHDI_MODULES_EXTRA="cwain.o qozap.o ztgsm.o" all
+	emake CC=$(tc-getCC) LD=$(tc-getLD) KSRC="${KBUILD_OUTPUT}" DESTDIR="${D}" DAHDI_MODULES_EXTRA="cwain.o qozap.o ztgsm.o" all
 }
 
 src_install() {
 	einfo "Installing kernel module"
-	emake KSRC="${KERNEL_DIR}" DESTDIR="${D}" DAHDI_MODULES_EXTRA="cwain.o qozap.o ztgsm.o" install
+	emake KSRC="${KBUILD_OUTPUT}" DESTDIR="${D}" DAHDI_MODULES_EXTRA="cwain.o qozap.o ztgsm.o" install
 	rm -rf "$D"/lib/modules/*/modules.*
 }
