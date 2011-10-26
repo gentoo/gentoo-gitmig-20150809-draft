@@ -8,5 +8,6 @@
 	<use>
 		<flag name='maui'>Enable maui scheduler support</flag>
 		<flag name='munge'>Enable authentication via munge</flag>
+		<flag name='torque'>Enable perl scripts that emulates pbs (qstat, qsub etc.)</flag>
 	</use>
 </pkgmetadata>

@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/slurm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/ChangeLog,v 1.5 2011/08/31 15:32:17 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/slurm/ChangeLog,v 1.6 2011/10/26 14:05:31 alexxy Exp $
+
+*slurm-2.2.7-r2 (26 Oct 2011)
+
+  26 Oct 2011; Alexey Shvetsov <alexxy@gentoo.org> +slurm-2.2.7-r2.ebuild,
+  metadata.xml:
+  Added torque pbs compatibility layer
 
 *slurm-2.2.7-r1 (31 Aug 2011)
 
