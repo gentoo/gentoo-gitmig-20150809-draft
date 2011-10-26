@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13175 2011/10/25 18:55:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13176 2011/10/26 15:45:06 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -964,10 +964,6 @@ net-analyzer/ncrack
 # 2.0.9999 instead if you want a kmess
 # that actually builds
 =net-im/kmess-9999
-
-# Jeroen Roovers <jer@gentoo.org> (25 Oct 2010)
-# Masked until reverse dependencies are sorted out (bug #342461)
->dev-libs/libnl-2
 
 # Robin H. Johnson <robbat2@gentoo.org> (08 Oct 2010)
 # Masked for testing, and some testsuite failures.
