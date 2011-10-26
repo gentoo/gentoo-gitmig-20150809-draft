@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.355 2011/10/21 17:04:03 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.356 2011/10/26 09:04:56 chainsaw Exp $
+
+*asterisk-1.8.7.1-r1 (26 Oct 2011)
+
+  26 Oct 2011; Tony Vroon <chainsaw@gentoo.org> +asterisk-1.8.7.1-r1.ebuild:
+  Patch by Erik Wallin to restore PRI symbols solves lack of working BRI PTMP
+  signalling in DAHDI. Closes bug #388179 by Felix Tiede.
 
   21 Oct 2011; Tony Vroon <chainsaw@gentoo.org> -asterisk-1.8.6.0.ebuild:
   Purge vulnerable ebuilds for security bug #387453 now that stabling has
