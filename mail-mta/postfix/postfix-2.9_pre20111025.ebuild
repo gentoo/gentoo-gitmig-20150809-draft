@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9_pre20111012.ebuild,v 1.1 2011/10/17 09:16:25 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9_pre20111025.ebuild,v 1.1 2011/10/26 19:24:56 eras Exp $
 
 EAPI=4
 
@@ -281,10 +281,8 @@ pkg_postinst() {
 		ewarn
 	fi
 
-	elog
 	elog "See the RELEASE_NOTES file in /usr/share/doc/${PF}"
 	elog "for incompatibilities and other major changes between releases."
-	elog
 
 	if [[ ${REPLACING_VERSIONS} < 2.9 ]]; then
 		elog "If you are using old style postfix instances by symlinking"
