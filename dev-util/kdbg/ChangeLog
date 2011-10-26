@@ -1,0 +1,9 @@
+# ChangeLog for dev-util/kdbg
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.68 2011/10/26 20:35:33 ssuominen Exp $
+
+*kdbg-2.5.1 (26 Oct 2011)
+
+  26 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> +kdbg-2.5.1.ebuild:
+  Restore kdbg now that is has been ported to KDE 4.x wrt #292780
+
