@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/eclean-kernel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eclean-kernel/ChangeLog,v 1.1 2011/10/24 09:25:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eclean-kernel/ChangeLog,v 1.2 2011/10/26 19:49:36 mgorny Exp $
+
+*eclean-kernel-0.1.1 (26 Oct 2011)
+
+  26 Oct 2011; Michał Górny <mgorny@gentoo.org> -eclean-kernel-0.1.ebuild,
+  +eclean-kernel-0.1.1.ebuild:
+  Version bump. The new version adds removing old kernel build dirs.
 
 *eclean-kernel-0.1 (24 Oct 2011)
 
