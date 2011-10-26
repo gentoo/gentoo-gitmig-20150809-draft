@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/broadcom-sta-5.100.82.38.ebuild,v 1.4 2011/04/28 18:57:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/broadcom-sta-5.100.82.112.ebuild,v 1.1 2011/10/26 23:32:27 matsuu Exp $
 
 EAPI="2"
 inherit eutils linux-mod
@@ -12,7 +12,7 @@ SRC_URI="x86? ( ${SRC_BASE}32-v${PV//\./_}.tar.gz )
 	amd64? ( ${SRC_BASE}64-v${PV//\./_}.tar.gz )"
 
 LICENSE="Broadcom"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RESTRICT="mirror"
@@ -25,19 +25,14 @@ S="${WORKDIR}"
 MODULE_NAMES="wl(net/wireless)"
 MODULESD_WL_ALIASES=("wlan0 wl")
 
-PROPERTIES="interactive"
-
 pkg_setup() {
-	check_license
-
 	# bug #300570
 	# NOTE<lxnay>: module builds correctly anyway with b43 and SSB enabled
 	# make checks non-fatal. The correct fix is blackisting ssb and, perhaps
 	# b43 via udev rules. Moreover, previous fix broke binpkgs support.
 	CONFIG_CHECK="~!B43 ~!SSB"
-	if kernel_is ge 2 6 33; then
-		CONFIG_CHECK="${CONFIG_CHECK} LIB80211 WIRELESS_EXT CFG80211_WEXT WEXT_PRIV ~!MAC80211"
-		ERROR_WEXT_PRIV="Starting with 2.6.33, it is not possible to set WEXT_PRIV directly. We recommend to set another symbol selecting WEXT_PRIV, for example, PRISM54, IPW2200 and so on. See Bug #248450 comment#98."
+	if kernel_is ge 2 6 32; then
+		CONFIG_CHECK="${CONFIG_CHECK} CFG80211 LIB80211 ~!MAC80211"
 	elif kernel_is ge 2 6 31; then
 		CONFIG_CHECK="${CONFIG_CHECK} LIB80211 WIRELESS_EXT ~!MAC80211"
 	elif kernel_is ge 2 6 29; then
@@ -53,5 +48,6 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-5.10.91.9-license.patch" \
-		"${FILESDIR}/${PN}-5.100.82.38-gcc.patch"
+		"${FILESDIR}/${PN}-5.100.82.38-gcc.patch" \
+		"${FILESDIR}/${PN}-5.100.82.111-linux-3.0.patch"
 }
