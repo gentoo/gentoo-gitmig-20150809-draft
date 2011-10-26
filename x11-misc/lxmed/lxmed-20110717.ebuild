@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lxmed/lxmed-20110717.ebuild,v 1.3 2011/10/26 18:55:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lxmed/lxmed-20110717.ebuild,v 1.4 2011/10/26 19:06:38 ssuominen Exp $
 
 EAPI=4
 inherit eutils java-utils-2
@@ -26,14 +26,7 @@ src_prepare() {
 
 src_install() {
 	java-pkg_dojar LXMenuEditor.jar
-
-	cat <<-EOF > "${T}"/lxmed
-	#!/bin/bash
-	gksu 'java -jar /usr/share/lxmed/lib/LXMenuEditor.jar'
-	EOF
-
-	dobin "${T}"/lxmed
-
+	java-pkg_dolauncher lxmed --jar LXMenuEditor.jar
 	doicon lxmed.png
 	domenu lxmed.desktop
 }
