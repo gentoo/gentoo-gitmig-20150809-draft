@@ -1,10 +1,10 @@
 # ChangeLog for dev-util/kdbg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.70 2011/10/26 23:28:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.71 2011/10/26 23:29:11 ssuominen Exp $
 
   26 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> kdbg-2.5.1.ebuild:
   Restore dropped line that removed ChangeLog-pre* since kde4-base.eclass is
-  wrongly appending to DOCS not replacing it.
+  appending to DOCS, not replacing it.
 
   26 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org> kdbg-2.5.1.ebuild:
   Added LINGUAS handling
