@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.9.ebuild,v 1.6 2010/01/14 14:36:18 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.6.9.ebuild,v 1.7 2011/10/27 17:12:33 jer Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE="ipv6 logwatch madwifi +ssl +wps"
 
 DEPEND="ssl? ( dev-libs/openssl )
-	>=dev-libs/libnl-1.1
+	dev-libs/libnl:1.1
 	madwifi? ( ||
 		( >net-wireless/madwifi-ng-tools-0.9.3
 		net-wireless/madwifi-old ) )"

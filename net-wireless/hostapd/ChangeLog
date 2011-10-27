@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.114 2011/09/25 14:03:46 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.115 2011/10/27 17:12:33 jer Exp $
+
+  27 Oct 2011; Jeroen Roovers <jer@gentoo.org> hostapd-0.6.9.ebuild:
+  Fix libnl dependency (bug #342461).
 
   25 Sep 2011; <gurligebis@gentoo.org> files/hostapd-init.d:
   Changed extra_commands to extra_started_commands in initscript.
