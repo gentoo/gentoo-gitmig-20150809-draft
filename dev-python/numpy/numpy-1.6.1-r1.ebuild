@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.6.1-r1.ebuild,v 1.1 2011/10/07 15:36:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/numpy-1.6.1-r1.ebuild,v 1.2 2011/10/27 17:21:04 jlec Exp $
 
 EAPI=3
 
@@ -72,15 +72,6 @@ src_unpack() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-atlas.patch
-
-	# Gentoo patch for ATLAS library names
-	sed -i \
-		-e "s:'f77blas':'blas':g" \
-		-e "s:'ptf77blas':'blas':g" \
-		-e "s:'ptcblas':'cblas':g" \
-		-e "s:'lapack_atlas':'lapack':g" \
-		numpy/distutils/system_info.py \
-		|| die "sed system_info.py failed"
 
 	if use lapack; then
 		append-ldflags "$(pkg-config --libs-only-other cblas lapack)"
