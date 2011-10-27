@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.3-r5.ebuild,v 1.2 2011/10/18 17:54:55 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.8.3-r5.ebuild,v 1.3 2011/10/27 12:37:00 aidecoe Exp $
 
 EAPI="3"
 
@@ -30,7 +30,7 @@ DEPEND="${COMMON_DEPEND}
 	"
 RDEPEND="${COMMON_DEPEND}
 	>=sys-kernel/dracut-008-r1[dracut_modules_plymouth]
-	openrc? ( sys-boot/plymouth-openrc-plugin )
+	openrc? ( sys-boot/plymouth-openrc-plugin !sys-apps/systemd )
 	"
 
 DOCS=(AUTHORS ChangeLog NEWS README TODO)

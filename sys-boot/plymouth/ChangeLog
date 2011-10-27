@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/plymouth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.18 2011/10/27 12:07:39 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/ChangeLog,v 1.19 2011/10/27 12:37:00 aidecoe Exp $
+
+  27 Oct 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  plymouth-0.8.3-r5.ebuild, plymouth-0.9_pre20111013-r1.ebuild:
+  Block sys-apps/systemd for openrc flag to not interfere with systemd plymouth
+  support. Refs bug #383067.
 
   27 Oct 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
   -plymouth-0.8.3-r2.ebuild, -plymouth-0.8.3-r4.ebuild,
