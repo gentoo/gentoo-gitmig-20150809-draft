@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.173 2011/09/25 19:13:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.174 2011/10/27 23:36:15 vapier Exp $
+
+  27 Oct 2011; Mike Frysinger <vapier@gentoo.org> ntp-4.2.6_p3-r1.ebuild,
+  ntp-4.2.6_p4.ebuild:
+  Fix typo in ntp-signd flag #375159#3 by Mark LaCroix.
 
 *ntp-4.2.6_p4 (25 Sep 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.6_p4.ebuild,v 1.1 2011/09/25 19:13:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.6_p4.ebuild,v 1.2 2011/10/27 23:36:15 vapier Exp $
 
 EAPI="2"
 
@@ -56,7 +56,7 @@ src_configure() {
 		$(use_enable parse-clocks) \
 		$(use_enable ipv6) \
 		$(use_enable debug debugging) \
-		$(use_with samba ntp-signd) \
+		$(use_enable samba ntp-signd) \
 		$(use_with snmp ntpsnmpd) \
 		$(use_with ssl crypto)
 }
