@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/iw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.39 2011/10/27 16:03:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.40 2011/10/27 16:06:43 jer Exp $
+
+  27 Oct 2011; Jeroen Roovers <jer@gentoo.org> iw-0.9.17.ebuild,
+  iw-0.9.22.ebuild:
+  EAPI=1 should be good enough.
 
   27 Oct 2011; Jeroen Roovers <jer@gentoo.org> iw-0.9.17.ebuild,
   iw-0.9.22.ebuild, iw-3.1.ebuild:
