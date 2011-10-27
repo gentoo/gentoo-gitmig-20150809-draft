@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5835 2011/10/27 18:10:53 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5836 2011/10/27 19:32:58 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Oct 2011; Jeroen Roovers <jer@gentoo.org> updates/4Q-2011:
+  Move dev-libs/libnl to new SLOTs.
 
   27 Oct 2011; MATSUU Takuto <matsuu@gentoo.org> package.mask:
   Mask >=sys-devel/distcc-3.2_rc1
