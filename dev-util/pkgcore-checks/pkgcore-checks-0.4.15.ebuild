@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-0.4.13.ebuild,v 1.4 2011/08/06 09:06:39 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcore-checks/pkgcore-checks-0.4.15.ebuild,v 1.1 2011/10/27 08:23:03 ferringb Exp $
 
 EAPI="3"
 DISTUTILS_SRC_TEST="setup.py"
@@ -16,8 +16,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-RDEPEND=">=sys-apps/pkgcore-0.5.9
-	>=dev-python/snakeoil-0.3.6"
+RDEPEND=">=sys-apps/pkgcore-0.7.3
+	>=dev-python/snakeoil-0.4.4"
 DEPEND="${RDEPEND}"
 
 DOCS="AUTHORS NEWS"
