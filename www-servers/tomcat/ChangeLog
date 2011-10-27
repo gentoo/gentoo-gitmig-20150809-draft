@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.265 2011/10/22 18:53:30 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.266 2011/10/27 15:54:43 chainsaw Exp $
+
+  27 Oct 2011; Tony Vroon <chainsaw@gentoo.org> tomcat-6.0.33.ebuild:
+  Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney &
+  Agostino "ago" Sarubbo in bug #388131.
 
   22 Oct 2011; Miroslav Šulc <fordfrog@gentoo.org> -files/6/build-xml.patch,
   -files/6/examples-cal.patch, -files/6/tomcat.init,
