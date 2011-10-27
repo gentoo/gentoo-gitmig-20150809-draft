@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.1 2011/10/27 07:16:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.2 2011/10/27 07:26:55 vapier Exp $
 
 # @ECLASS: user.eclass
 # @MAINTAINER:
@@ -12,6 +12,18 @@
 # @DESCRIPTION:
 # The user eclass contains a suite of functions that allow ebuilds
 # to quickly make sure users in the installed system are sane.
+
+# @FUNCTION: _assert_pkg_ebuild_phase
+# @INTERNAL
+# @USAGE: <calling func name>
+_assert_pkg_ebuild_phase() {
+	case ${EBUILD_PHASE} in
+	unpack|prepare|configure|compile|test|install)
+		eerror "'$1()' called from '${EBUILD_PHASE}()' which is not a pkg_* function."
+		eerror "Package fails at QA and at life.  Please file a bug."
+		die "Bad package!  $1 is only for use in pkg_* functions!"
+	esac
+}
 
 # @FUNCTION: egetent
 # @USAGE: <database> <key>
@@ -75,12 +87,7 @@ egetent() {
 # /bin/false, default homedir is /dev/null, there are no default groups,
 # and default params sets the comment as 'added by portage for ${PN}'.
 enewuser() {
-	case ${EBUILD_PHASE} in
-		unpack|compile|test|install)
-		eerror "'enewuser()' called from '${EBUILD_PHASE}()' which is not a pkg_* function."
-		eerror "Package fails at QA and at life.  Please file a bug."
-		die "Bad package!  enewuser is only for use in pkg_* functions!"
-	esac
+	_assert_pkg_ebuild_phase enewuser
 
 	# get the username
 	local euser=$1; shift
@@ -282,12 +289,7 @@ enewuser() {
 # do the rest.  You may specify the gid for the group or allow the group to
 # allocate the next available one.
 enewgroup() {
-	case ${EBUILD_PHASE} in
-		unpack|compile|test|install)
-		eerror "'enewgroup()' called from '${EBUILD_PHASE}()' which is not a pkg_* function."
-		eerror "Package fails at QA and at life.  Please file a bug."
-		die "Bad package!  enewgroup is only for use in pkg_* functions!"
-	esac
+	_assert_pkg_ebuild_phase enewgroup
 
 	# get the group
 	local egroup="$1"; shift
@@ -393,18 +395,18 @@ enewgroup() {
 #
 # To use that, inherit eutils, not portability!
 egethome() {
-	ent=$(egetent passwd $1)
+	local pos
 
 	case ${CHOST} in
 	*-darwin*|*-freebsd*|*-dragonfly*)
-		# Darwin, OSX, FreeBSD and DragonFly use position 9 to store homedir
-		echo ${ent} | cut -d: -f9
+		pos=9
 		;;
-	*)
-		# Linux, NetBSD and OpenBSD use position 6 instead
-		echo ${ent} | cut -d: -f6
+	*)	# Linux, NetBSD, OpenBSD, etc...
+		pos=6
 		;;
 	esac
+
+	egetent passwd $1 | cut -d: -f${pos}
 }
 
 # Gets the shell for the specified user
@@ -413,26 +415,25 @@ egethome() {
 #
 # To use that, inherit eutils, not portability!
 egetshell() {
-	ent=$(egetent passwd "$1")
+	local pos
 
 	case ${CHOST} in
 	*-darwin*|*-freebsd*|*-dragonfly*)
-		# Darwin, OSX, FreeBSD and DragonFly use position 9 to store homedir
-		echo ${ent} | cut -d: -f10
+		pos=10
 		;;
-	*)
-		# Linux, NetBSD and OpenBSD use position 6 instead
-		echo ${ent} cut -d: -f7
+	*)	# Linux, NetBSD, OpenBSD, etc...
+		pos=7
 		;;
 	esac
+
+	egetent passwd "$1" | cut -d: -f${pos}
 }
 
 # Returns true if specified user has a shell that precludes logins
 # on whichever operating system.
 is-login-disabled() {
-	shell=$(egetshell "$1")
 
-	case ${shell} in
+	case $(egetshell "$1") in
 		/bin/false|/usr/bin/false|/sbin/nologin|/usr/sbin/nologin)
 			return 0 ;;
 		*)
