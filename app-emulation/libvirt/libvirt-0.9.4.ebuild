@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.4.ebuild,v 1.5 2011/09/14 15:10:26 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.4.ebuild,v 1.6 2011/10/27 18:57:28 cardoe Exp $
 
 #BACKPORTS=2
 #AUTOTOOLIZE=yes
@@ -49,7 +49,7 @@ RDEPEND="sys-libs/readline
 	sys-libs/ncurses
 	>=net-misc/curl-7.18.0
 	>=dev-libs/libxml2-2.7.6
-	>=dev-libs/libnl-1.1
+	>=dev-libs/libnl-1.1:1.1
 	>=net-libs/gnutls-1.0.25
 	>=sys-apps/util-linux-2.17
 	sys-devel/gettext
@@ -60,7 +60,6 @@ RDEPEND="sys-libs/readline
 	json? ( dev-libs/yajl )
 	libvirtd? ( net-misc/bridge-utils )
 	lvm? ( >=sys-fs/lvm2-2.02.48-r2 )
-	macvtap? ( >=dev-libs/libnl-1.1 )
 	nfs? ( net-fs/nfs-utils )
 	numa? ( >sys-process/numactl-2.0.2 )
 	openvz? ( sys-kernel/openvz-sources )
