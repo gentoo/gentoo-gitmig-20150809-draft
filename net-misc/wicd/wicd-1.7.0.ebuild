@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.0.ebuild,v 1.12 2011/10/24 06:32:15 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.0.ebuild,v 1.13 2011/10/27 21:04:41 tomka Exp $
 
 EAPI=3
 
@@ -23,7 +23,6 @@ RDEPEND="
 	dev-python/dbus-python
 	X? ( gtk? ( dev-python/pygtk
 		|| (
-			x11-misc/ktsuss
 			x11-libs/gksu
 			kde-base/kdesu
 			)

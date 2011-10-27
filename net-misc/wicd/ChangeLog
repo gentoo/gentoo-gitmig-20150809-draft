@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.96 2011/10/24 06:32:15 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.97 2011/10/27 21:04:41 tomka Exp $
+
+  27 Oct 2011; Thomas Kahle <tomka@gentoo.org> wicd-1.7.0.ebuild,
+  wicd-1.7.0-r1.ebuild, wicd-1.7.1_beta2-r3.ebuild, wicd-1.7.1_beta2-r4.ebuild,
+  wicd-1.7.1_beta2-r6.ebuild, wicd-1.7.1_beta2-r7.ebuild:
+  dropping x11-misc/ktsuss from deps per bug 381115
 
   24 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> wicd-1.7.0.ebuild,
   wicd-1.7.0-r1.ebuild, wicd-1.7.1_beta2-r3.ebuild, wicd-1.7.1_beta2-r4.ebuild,
