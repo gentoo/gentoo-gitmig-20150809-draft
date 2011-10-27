@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.4.2.ebuild,v 1.2 2011/08/15 16:06:44 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.4.5.ebuild,v 1.1 2011/10/27 16:57:55 ramereth Exp $
 
 EAPI=2
 
-inherit eutils confutils bash-completion
+inherit eutils confutils bash-completion-r1
 
 MY_PV="${PV/_rc/~rc}"
 #MY_PV="${PV/_beta/~beta}"
@@ -15,7 +15,7 @@ SRC_URI="http://ganeti.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="kvm xen drbd +filestorage syslog ipv6"
 
 S="${WORKDIR}/${MY_P}"
@@ -37,12 +37,17 @@ DEPEND="xen? ( >=app-emulation/xen-3.0 )
 	net-misc/openssh
 	net-misc/socat
 	sys-apps/iproute2
-	sys-fs/lvm2"
+	sys-fs/lvm2
+	>=sys-apps/baselayout-2.0"
 RDEPEND="${DEPEND}
 	!<app-emulation/ganeti-htools-0.3"
 
 pkg_setup () {
 	confutils_require_any kvm xen
+}
+
+src_prepare () {
+	epatch "${FILESDIR}/${PN}-fix-start-stop.patch"
 }
 
 src_configure () {
@@ -67,7 +72,7 @@ src_install () {
 	newconfd "${FILESDIR}"/ganeti.confd ganeti
 	use kvm && newinitd "${FILESDIR}"/ganeti-kvm-poweroff.initd ganeti-kvm-poweroff
 	use kvm && newconfd "${FILESDIR}"/ganeti-kvm-poweroff.confd ganeti-kvm-poweroff
-	dobashcompletion doc/examples/bash_completion ganeti
+	newbashcomp doc/examples/bash_completion ganeti
 	dodoc INSTALL UPGRADE NEWS README doc/*.rst
 	rm -rf "${D}"/usr/share/doc/ganeti
 	docinto examples
@@ -79,8 +84,4 @@ src_install () {
 	keepdir /var/{lib,log,run}/ganeti/
 	keepdir /usr/share/ganeti/os/
 	keepdir /var/lib/ganeti-storage/{export,file}/
-}
-
-pkg_postinst () {
-	bash-completion_pkg_postinst
 }
