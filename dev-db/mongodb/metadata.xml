@@ -26,6 +26,7 @@
 		<flag name="v8">Use V8 JavaScript engine
 			(<pkg>dev-lang/v8</pkg>) instead of SpiderMonkey
 			(<pkg>dev-lang/spidermonkey</pkg>)</flag>
+		<flag name="mms-agent">Install the MongoDB Monitoring Service agent</flag>
 	</use>
 </pkgmetadata>
 
