@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/portato-0.14.1.ebuild,v 1.3 2011/03/23 06:15:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/portato-0.14.1.ebuild,v 1.4 2011/10/27 20:58:09 tomka Exp $
 
 EAPI="3"
 
@@ -29,7 +29,7 @@ RDEPEND="$COMMON_DEPEND
 	>=sys-apps/portage-2.1.7.17
 
 	kde? ( kde-base/kdesu )
-	!kde? ( || ( x11-misc/ktsuss x11-libs/gksu ) )
+	!kde? ( x11-libs/gksu )
 	libnotify? ( dev-python/notify-python )
 	nls? ( virtual/libintl )
 	eix? ( >=app-portage/eix-0.15.4 )"
