@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.6.1.ebuild,v 1.4 2011/06/30 14:13:02 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.6.1.ebuild,v 1.5 2011/10/27 06:02:25 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE="+applet eds galago"
 
-RDEPEND="app-text/gtkspell
+RDEPEND="app-text/gtkspell:2
 	dev-dotnet/gconf-sharp:2
 	dev-dotnet/gtk-sharp:2
 	dev-dotnet/mono-addins[gtk]

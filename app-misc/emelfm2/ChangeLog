@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/emelfm2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.45 2011/05/31 20:36:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.46 2011/10/27 05:53:51 tetromino Exp $
+
+  27 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  emelfm2-0.7.2-r1.ebuild, emelfm2-0.7.4.ebuild, emelfm2-0.7.5.ebuild:
+  Slot gtkspell dependency to 2 in preparation for gtkspell-3.
 
   31 May 2011; Markus Meier <maekke@gentoo.org> emelfm2-0.7.5.ebuild:
   x86 stable, bug #368267

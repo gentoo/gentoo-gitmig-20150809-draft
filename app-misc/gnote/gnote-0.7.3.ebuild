@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-0.7.3.ebuild,v 1.2 2011/03/07 00:18:51 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-0.7.3.ebuild,v 1.3 2011/10/27 05:58:50 tetromino Exp $
 
 EAPI="3"
 
@@ -21,7 +21,7 @@ RDEPEND=">=x11-libs/gtk+-2.20:2
 	dev-libs/libxslt
 	>=gnome-base/gconf-2:2
 	>=dev-libs/libpcre-7.8:3[cxx]
-	>=app-text/gtkspell-2.0.9
+	>=app-text/gtkspell-2.0.9:2
 	>=dev-libs/boost-1.34
 	sys-libs/e2fsprogs-libs
 	applet? (

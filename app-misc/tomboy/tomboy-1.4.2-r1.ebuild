@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.4.2-r1.ebuild,v 1.7 2011/03/15 08:51:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-1.4.2-r1.ebuild,v 1.8 2011/10/27 06:02:25 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -25,7 +25,7 @@ RDEPEND=">=dev-lang/mono-2
 	>=x11-libs/gtk+-2.12.0:2
 	>=dev-libs/atk-1.2.4
 	>=gnome-base/gconf-2:2
-	>=app-text/gtkspell-2.0.9
+	>=app-text/gtkspell-2.0.9:2
 	applet? (
 		|| ( gnome-base/gnome-panel[bonobo] <gnome-base/gnome-panel-2.32 )
 		>=dev-dotnet/gnome-panel-sharp-2.24.0:2 )

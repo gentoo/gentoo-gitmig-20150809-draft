@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.7.4.ebuild,v 1.2 2010/12/26 13:43:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.7.4.ebuild,v 1.3 2011/10/27 05:53:51 tetromino Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/glib-2.22:2
 	acl? ( sys-apps/acl )
 	gimp? ( media-gfx/gimp )
 	policykit? ( sys-auth/polkit )
-	spell? ( app-text/gtkspell )
+	spell? ( app-text/gtkspell:2 )
 	udev? ( sys-fs/udisks
 		dev-libs/dbus-glib )"
 DEPEND="${RDEPEND}
