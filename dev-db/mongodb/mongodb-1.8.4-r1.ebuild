@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-1.8.4.ebuild,v 1.1 2011/10/27 07:56:16 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-1.8.4-r1.ebuild,v 1.1 2011/10/27 12:55:50 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -77,6 +77,7 @@ src_install() {
 		doins "${WORKDIR}/${MY_PN}/"*
 		fowners -R mongodb:mongodb ${MY_D}
 		newinitd "${FILESDIR}/${MY_PN}.initd" ${MY_PN}
+		newconfd "${FILESDIR}/${MY_PN}.confd" ${MY_PN}
 	fi
 }
 
