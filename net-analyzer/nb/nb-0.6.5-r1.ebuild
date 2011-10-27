@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nb/nb-0.6.5-r1.ebuild,v 1.2 2010/02/11 15:57:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nb/nb-0.6.5-r1.ebuild,v 1.3 2011/10/27 18:42:06 jer Exp $
 
 inherit eutils autotools
 
@@ -14,7 +14,10 @@ KEYWORDS="~ppc ~x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"
-RDEPEND="!sys-boot/netboot"
+RDEPEND="
+	!sys-boot/netboot
+	!www-apps/nanoblogger
+"
 
 src_unpack() {
 	unpack ${A}
