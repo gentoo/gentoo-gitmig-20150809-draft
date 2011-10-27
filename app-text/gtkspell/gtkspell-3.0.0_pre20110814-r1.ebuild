@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-3.0.0_pre20110814-r1.ebuild,v 1.1 2011/10/27 07:02:37 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-3.0.0_pre20110814-r1.ebuild,v 1.2 2011/10/27 18:44:31 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gtkspell.sourceforge.net/"
 # gtkspell doesn't use sourceforge mirroring system it seems.
 #SRC_URI="http://${PN}.sourceforge.net/download/${PN}-2.0.16.tar.gz"
 # Prerelease snapshot
-SRC_URI="mirrors://gentoo/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="3"
