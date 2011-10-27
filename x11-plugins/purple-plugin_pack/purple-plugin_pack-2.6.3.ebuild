@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/purple-plugin_pack-2.6.3.ebuild,v 1.6 2011/10/11 19:35:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/purple-plugin_pack/purple-plugin_pack-2.6.3.ebuild,v 1.7 2011/10/27 06:46:56 tetromino Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ IUSE="debug gtk ncurses spell talkfilters"
 
 RDEPEND="net-im/pidgin[gtk?,ncurses?]
 	talkfilters? ( app-text/talkfilters )
-	spell? ( app-text/gtkspell )"
+	spell? ( app-text/gtkspell:2 )"
 DEPEND="${RDEPEND}
 	=dev-lang/python-2*"
 
