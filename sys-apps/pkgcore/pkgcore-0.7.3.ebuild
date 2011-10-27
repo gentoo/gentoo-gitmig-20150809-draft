@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.7.1-r1.ebuild,v 1.1 2011/09/05 20:18:28 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-0.7.3.ebuild,v 1.1 2011/10/27 08:05:16 ferringb Exp $
 
 EAPI="3"
 DISTUTILS_SRC_TEST="setup.py"
@@ -14,11 +14,10 @@ SRC_URI="http://pkgcore.googlecode.com/files/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="-doc"
+IUSE="-doc build"
 
 RDEPEND=">=dev-lang/python-2.4
-	>=dev-python/snakeoil-0.4.2
-	dev-python/pyparsing
+	>=dev-python/snakeoil-0.4.4
 	|| ( >=dev-lang/python-2.5 dev-python/pycrypto )"
 DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx )"
