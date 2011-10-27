@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.26-r2.ebuild,v 1.1 2011/10/08 00:17:14 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.26-r2.ebuild,v 1.2 2011/10/27 16:15:12 jer Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ia64 ppc ppc64 s390 sparc x86"
 IUSE="static-libs"
 
 RDEPEND=">=sys-libs/ncurses-5.2
-	dev-libs/libnl
+	dev-libs/libnl:1.1
 	>=dev-libs/popt-1.16"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
