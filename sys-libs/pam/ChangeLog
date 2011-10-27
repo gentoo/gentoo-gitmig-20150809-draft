@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.302 2011/10/25 19:20:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.303 2011/10/27 19:56:01 hwoarang Exp $
+
+  27 Oct 2011; Markos Chandras <hwoarang@gentoo.org> pam-1.1.5.ebuild:
+  Stable on amd64 wrt bug #388431
 
 *pam-1.1.5 (25 Oct 2011)
 
