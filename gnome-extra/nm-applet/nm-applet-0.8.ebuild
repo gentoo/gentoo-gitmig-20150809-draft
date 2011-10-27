@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.8.ebuild,v 1.8 2011/03/29 14:15:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.8.ebuild,v 1.9 2011/10/27 16:53:31 jer Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	>=gnome-base/libglade-2:2.0
 	>=gnome-base/gnome-keyring-2.20
 
-	>=dev-libs/libnl-1.1
+	dev-libs/libnl:1.1
 	>=net-misc/networkmanager-${PV}
 	>=net-wireless/wireless-tools-28_pre9
 	>=net-wireless/wpa_supplicant-0.5.7
