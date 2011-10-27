@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2010.01.1-r1.ebuild,v 1.2 2010/04/15 07:17:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2010.01.1-r1.ebuild,v 1.3 2011/10/27 16:10:23 jer Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="+client kernel_linux +pcre +pcap +suid" # ${KISMET_PLUGINS}"
 
 RDEPEND="client? ( sys-libs/ncurses )
-	kernel_linux? (	dev-libs/libnl
+	kernel_linux? (	dev-libs/libnl:1.1
 		sys-libs/libcap	)
 	pcap? ( net-libs/libpcap )
 	pcre? ( dev-libs/libpcre )"

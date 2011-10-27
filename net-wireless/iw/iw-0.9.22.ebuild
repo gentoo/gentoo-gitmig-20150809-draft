@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/iw-0.9.22.ebuild,v 1.4 2011/10/03 18:32:43 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/iw-0.9.22.ebuild,v 1.5 2011/10/27 16:03:02 jer Exp $
+
+EAPI="2"
 
 inherit toolchain-funcs
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ~arm ppc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND=">=dev-libs/libnl-1.1"
+RDEPEND="dev-libs/libnl:1.1"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 

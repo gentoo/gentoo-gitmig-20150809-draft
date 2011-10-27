@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-1.1.2.ebuild,v 1.5 2011/09/20 21:18:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-1.1.2.ebuild,v 1.6 2011/10/27 16:07:00 jer Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~x86"
 IUSE=""
 RDEPEND="dev-libs/libgcrypt
-	dev-libs/libnl
+	dev-libs/libnl:1.1
 	net-wireless/wireless-regdb"
 DEPEND="${RDEPEND}
 	dev-python/m2crypto"
@@ -23,7 +23,7 @@ RDEPEND="${RDEPEND}
 	>=sys-fs/udev-152"
 
 src_prepare() {
-	epatch "${FILESDIR}/libnl31-support.diff"
+	epatch "${FILESDIR}/libnl:1.131-support.diff"
 	sed -i \
 		-e "s:\<pkg-config\>:$(tc-getPKG_CONFIG):" \
 		Makefile || die

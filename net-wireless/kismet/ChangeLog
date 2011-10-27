@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/kismet
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.108 2010/04/15 01:32:42 steev Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.109 2011/10/27 16:10:23 jer Exp $
+
+  27 Oct 2011; Jeroen Roovers <jer@gentoo.org> kismet-2010.01.1.ebuild,
+  kismet-2010.01.1-r1.ebuild:
+  Fix libnl dependency (bug #388657).
 
 *kismet-2010.01.1-r1 (15 Apr 2010)
 

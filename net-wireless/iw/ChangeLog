@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/iw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.38 2011/10/13 23:04:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.39 2011/10/27 16:03:02 jer Exp $
+
+  27 Oct 2011; Jeroen Roovers <jer@gentoo.org> iw-0.9.17.ebuild,
+  iw-0.9.22.ebuild, iw-3.1.ebuild:
+  Fix libnl dependency (bug #388657).
 
   13 Oct 2011; Mike Frysinger <vapier@gentoo.org> iw-3.1.ebuild:
   Move toolchain setup out of global scope and into src_prepare.

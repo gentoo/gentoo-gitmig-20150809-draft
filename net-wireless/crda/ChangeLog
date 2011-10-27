@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/crda
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.25 2011/09/20 21:18:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.26 2011/10/27 16:07:00 jer Exp $
+
+  27 Oct 2011; Jeroen Roovers <jer@gentoo.org> crda-1.0.1-r1.ebuild,
+  crda-1.0.2.ebuild, crda-1.1.2.ebuild:
+  Fix libnl dependency (bug #388657).
 
   20 Sep 2011; Mike Frysinger <vapier@gentoo.org> crda-1.1.2.ebuild:
   Use correct pkg-config rather than hardcoded `pkg-config` #383861#1 by Tony
