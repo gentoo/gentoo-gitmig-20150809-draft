@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/osmo/osmo-0.2.10.ebuild,v 1.7 2011/04/25 13:35:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/osmo/osmo-0.2.10.ebuild,v 1.8 2011/10/27 06:05:59 tetromino Exp $
 
 EAPI=3
 inherit eutils flag-o-matic
@@ -19,7 +19,7 @@ RDEPEND=">=x11-libs/gtk+-2.12:2
 	dev-libs/libxml2:2
 	dev-libs/libgringotts
 	>=dev-libs/libical-0.33
-	app-text/gtkspell
+	app-text/gtkspell:2
 	gnome-extra/gtkhtml:2
 	>=x11-libs/libnotify-0.7"
 DEPEND="${RDEPEND}
