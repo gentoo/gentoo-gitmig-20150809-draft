@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/wimax-1.5.2.ebuild,v 1.1 2011/04/20 17:16:27 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/wimax-1.5.2.ebuild,v 1.2 2011/10/27 03:56:19 tetromino Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-libs/libnl-1.1
+DEPEND=">=dev-libs/libnl-1.1:1.1
 		>=sys-kernel/linux-headers-2.6.34"
 RDEPEND="${DEPEND}
 		net-wireless/wimax-tools

@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wimax
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/ChangeLog,v 1.10 2011/04/20 17:16:27 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wimax/ChangeLog,v 1.11 2011/10/27 03:56:19 tetromino Exp $
+
+  27 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> wimax-1.5.2.ebuild:
+  Depend on same slot of libnl as wimax-tools.
 
 *wimax-1.5.2 (20 Apr 2011)
 
