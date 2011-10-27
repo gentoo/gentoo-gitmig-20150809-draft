@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.2.6-r1.ebuild,v 1.9 2011/03/28 14:50:00 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.2.6-r1.ebuild,v 1.10 2011/10/27 06:38:39 tetromino Exp $
 
 EAPI="1"
 
@@ -25,7 +25,7 @@ RDEPEND="net-libs/libgadu
 	perl? ( dev-lang/perl dev-perl/XML-Parser )
 	esd? ( media-sound/esound )
 	tlen? ( net-libs/libtlen )
-	spell? ( app-text/gtkspell )
+	spell? ( app-text/gtkspell:2 )
 	gnutls? ( net-libs/gnutls )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext

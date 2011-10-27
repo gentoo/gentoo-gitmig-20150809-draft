@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kf/kf-0.1.5.ebuild,v 1.3 2011/03/02 21:03:56 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kf/kf-0.1.5.ebuild,v 1.4 2011/10/27 06:40:08 tetromino Exp $
 
 EAPI=2
 inherit eutils
@@ -14,7 +14,7 @@ IUSE="spell"
 DEPEND="x11-libs/gtk+:2
 	>=net-libs/loudmouth-0.16
 	>=gnome-base/libglade-2
-	spell? ( >=app-text/gtkspell-2.0.4 )"
+	spell? ( >=app-text/gtkspell-2.0.4:2 )"
 KEYWORDS="~x86 ~ppc ~sparc"
 
 src_prepare() {

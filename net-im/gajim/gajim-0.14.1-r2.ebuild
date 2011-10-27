@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.14.1-r2.ebuild,v 1.13 2011/10/04 17:08:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.14.1-r2.ebuild,v 1.14 2011/10/27 06:35:47 tetromino Exp $
 
 EAPI=3
 
@@ -54,7 +54,7 @@ RDEPEND="${COMMON_DEPEND}
 			dev-python/libasyncns-python
 			net-dns/bind-tools )
 		)
-	spell? ( app-text/gtkspell )
+	spell? ( app-text/gtkspell:2 )
 	xhtml? ( dev-python/docutils )"
 
 pkg_setup() {

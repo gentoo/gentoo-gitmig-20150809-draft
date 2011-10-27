@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.99.16.ebuild,v 1.1 2011/03/29 14:24:59 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomeicu/gnomeicu-0.99.16.ebuild,v 1.2 2011/10/27 06:37:18 tetromino Exp $
 
 EAPI=2
 inherit gnome2
@@ -22,7 +22,7 @@ RDEPEND="x11-libs/gtk+:2
 	>=sys-libs/gdbm-1.8
 	>=gnome-base/libglade-2
 	>=gnome-base/gconf-2
-	spell? ( >=app-text/gtkspell-2.0.4 )
+	spell? ( >=app-text/gtkspell-2.0.4:2 )
 	x11-libs/libXScrnSaver"
 
 DEPEND="${RDEPEND}
