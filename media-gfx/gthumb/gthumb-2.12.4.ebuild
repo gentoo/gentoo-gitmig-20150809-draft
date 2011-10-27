@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.12.4.ebuild,v 1.1 2011/10/16 10:17:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.12.4.ebuild,v 1.2 2011/10/27 16:28:05 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -44,6 +44,8 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	>=dev-util/intltool-0.35
 	app-text/gnome-doc-utils
+	sys-devel/bison
+	sys-devel/flex
 	test? ( ~app-text/docbook-xml-dtd-4.1.2 )"
 # eautoreconf needs:
 #	gnome-base/gnome-common
