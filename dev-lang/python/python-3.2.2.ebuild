@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.2.ebuild,v 1.1 2011/09/16 20:47:06 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.2.ebuild,v 1.2 2011/10/27 13:56:55 neurogeek Exp $
 
 EAPI="3"
 WANT_AUTOMAKE="none"
@@ -310,7 +310,10 @@ src_install() {
 		fi
 	fi
 
-	sed -e "s:@PYDOC@:pydoc${SLOT}:" -i "${ED}etc/init.d/pydoc-${SLOT}" || die "sed failed"
+	sed \
+		-e "s:@PYDOC_PORT_VARIABLE@:PYDOC${SLOT/./_}_PORT:" \
+		-e "s:@PYDOC@:pydoc${SLOT}:" \
+		-i "${ED}etc/conf.d/pydoc-${SLOT}" "${ED}etc/init.d/pydoc-${SLOT}" || die "sed failed"
 }
 
 pkg_preinst() {
