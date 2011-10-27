@@ -1,6 +1,13 @@
 # ChangeLog for sys-block/megacli
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/ChangeLog,v 1.8 2011/07/11 18:42:13 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/ChangeLog,v 1.9 2011/10/27 23:11:13 radhermit Exp $
+
+*megacli-8.02.16 (27 Oct 2011)
+
+  27 Oct 2011; Tim Harder <radhermit@gentoo.org> +megacli-8.02.16.ebuild,
+  +files/megacli-wrapper:
+  Version bump (bug #387933, acked by Ramereth). Rebundle libsysfs library
+  (fixes bugs #377701 and #382839) and update to EAPI 4.
 
 *megacli-8.01.06 (11 Jul 2011)
 
