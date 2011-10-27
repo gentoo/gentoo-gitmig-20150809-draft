@@ -1,6 +1,11 @@
 # ChangeLog for net-print/gutenprint
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/ChangeLog,v 1.26 2011/09/15 21:30:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/ChangeLog,v 1.27 2011/10/27 05:57:18 radhermit Exp $
+
+  27 Oct 2011; Tim Harder <radhermit@gentoo.org> gutenprint-5.2.7-r1.ebuild,
+  +files/gutenprint-5.2.7-stdio.patch:
+  Fix build issue due to missing header (bug #385037, patch by Rafał
+  Mużyło).
 
 *gutenprint-5.2.7-r1 (15 Sep 2011)
 
