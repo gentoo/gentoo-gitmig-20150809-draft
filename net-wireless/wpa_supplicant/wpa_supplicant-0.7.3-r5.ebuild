@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r5.ebuild,v 1.6 2011/09/10 11:42:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r5.ebuild,v 1.7 2011/10/27 15:32:02 mgorny Exp $
 
 EAPI=4
 
@@ -88,6 +88,9 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-dbus-api-changes.patch"
 	# bug (374089)
 	epatch "${FILESDIR}/${P}-dbus-WPAIE-fix.patch"
+	# systemd entries to D-Bus service files (bug #372877)
+	echo 'SystemdService=wpa_supplicant.service' \
+		| tee -a dbus/*.service >/dev/null || die
 }
 
 src_configure() {
