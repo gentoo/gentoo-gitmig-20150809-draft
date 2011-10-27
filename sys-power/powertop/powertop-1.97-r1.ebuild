@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-1.97-r1.ebuild,v 1.3 2011/03/15 09:42:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powertop/powertop-1.97-r1.ebuild,v 1.4 2011/10/27 16:21:54 jer Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="unicode"
 
 DEPEND="
-	dev-libs/libnl
+	dev-libs/libnl:1.1
 	sys-apps/pciutils
 	sys-devel/gettext
 	sys-libs/ncurses[unicode?]
