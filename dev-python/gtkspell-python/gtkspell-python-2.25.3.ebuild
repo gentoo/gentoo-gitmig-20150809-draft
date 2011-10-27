@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkspell-python/gtkspell-python-2.25.3.ebuild,v 1.8 2011/02/26 13:22:16 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkspell-python/gtkspell-python-2.25.3.ebuild,v 1.9 2011/10/27 06:23:47 tetromino Exp $
 
 EAPI="2"
 G_PY_PN="gnome-python-extras"
@@ -21,7 +21,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc examples"
 
-RDEPEND="=app-text/gtkspell-2*"
+RDEPEND="app-text/gtkspell:2"
 DEPEND="${RDEPEND}"
 
 EXAMPLES="examples/gtkspell/*"
