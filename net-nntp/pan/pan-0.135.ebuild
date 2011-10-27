@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.135.ebuild,v 1.1 2011/09/20 07:10:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/pan-0.135.ebuild,v 1.2 2011/10/27 06:45:25 tetromino Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ IUSE="spell"
 RDEPEND=">=dev-libs/glib-2.14:2
 	>=x11-libs/gtk+-2.16:2
 	dev-libs/gmime:2.6
-	spell? ( >=app-text/gtkspell-2.0.7 )"
+	spell? ( >=app-text/gtkspell-2.0.7:2 )"
 
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35.5

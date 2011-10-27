@@ -1,6 +1,10 @@
 # ChangeLog for net-nntp/pan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.89 2011/09/21 08:42:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/pan/ChangeLog,v 1.90 2011/10/27 06:45:25 tetromino Exp $
+
+  27 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> pan-0.133-r1.ebuild,
+  pan-0.134.ebuild, pan-0.135.ebuild, pan-9999.ebuild:
+  Slot gtkspell dependency to 2 in preparation for gtkspell-3.
 
   21 Sep 2011; Michał Górny <mgorny@gentoo.org> pan-9999.ebuild:
   Migrate to git-2.
