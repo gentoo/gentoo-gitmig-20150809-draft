@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.2 2011/10/27 07:26:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.3 2011/10/27 07:49:53 vapier Exp $
 
 # @ECLASS: user.eclass
 # @MAINTAINER:
@@ -72,7 +72,8 @@ egetent() {
 		grep "$2:\*:" /etc/$1
 		;;
 	*)
-		type -p nscd >& /dev/null && nscd -i "$1"
+		# ignore output if nscd doesn't exist, or we're not running as root
+		nscd -i "$1" 2>/dev/null
 		getent "$1" "$2"
 		;;
 	esac
