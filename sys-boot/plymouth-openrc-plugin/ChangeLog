@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/plymouth-openrc-plugin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth-openrc-plugin/ChangeLog,v 1.5 2011/07/11 12:52:18 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth-openrc-plugin/ChangeLog,v 1.6 2011/10/27 12:50:58 aidecoe Exp $
+
+  27 Oct 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  plymouth-openrc-plugin-0.1.2.ebuild:
+  Block sys-apps/systemd to not interfere with systemd plymouth support. Refs
+  bug #383067.
 
   11 Jul 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
   -plymouth-openrc-plugin-0.1.1.ebuild:
