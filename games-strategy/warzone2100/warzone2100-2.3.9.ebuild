@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-2.3.7.ebuild,v 1.4 2011/03/18 12:16:49 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-2.3.9.ebuild,v 1.1 2011/10/27 02:33:47 mr_bones_ Exp $
 
 EAPI=2
-inherit versionator games
+inherit autotools versionator games
 
 MY_PV=$(get_version_component_range -2)
 VIDEOS_PV=2.2
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/warzone2100/${P}.tar.gz
 
 LICENSE="GPL-2 CCPL-Attribution-ShareAlike-3.0 public-domain"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 # upstream requested debug support
 IUSE="debug nls videos"
 
@@ -40,8 +40,13 @@ DEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
 	media-fonts/dejavu"
 
+src_prepare() {
+	eautoreconf
+}
+
 src_configure() {
 	egamesconf \
+		--disable-motif \
 		--disable-dependency-tracking \
 		--docdir=/usr/share/doc/${PF} \
 		--localedir=/usr/share/locale \
@@ -59,6 +64,6 @@ src_install() {
 		insinto "${GAMES_DATADIR}"/${PN}
 		newins "${DISTDIR}"/${VIDEOS_P} sequences.wz || die
 	fi
-	doman pkg/dpkg/warzone2100.6
+	doman doc/warzone2100.6
 	prepgamesdirs
 }
