@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.8-r2.ebuild,v 1.15 2011/09/03 16:36:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-2.8.8-r2.ebuild,v 1.16 2011/10/27 06:42:00 tetromino Exp $
 
 EAPI=3
 
@@ -26,7 +26,7 @@ RDEPEND=">=dev-libs/glib-2.6.0:2
 	python? ( =dev-lang/python-2* )
 	tcl? ( dev-lang/tcl )
 	dbus? ( >=dev-libs/dbus-glib-0.71 )
-	spell? ( app-text/gtkspell )
+	spell? ( app-text/gtkspell:2 )
 	libnotify? ( x11-libs/libnotify )
 	ntlm? ( net-libs/libntlm )
 	x11-libs/pango
