@@ -1,9 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.278 2011/10/22 17:07:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.279 2011/10/27 08:00:41 tetromino Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Oct 2011)
+# GNOME 3 package.use.mask for flags in unmasked packages that
+# would pull in masked ones
+>=app-misc/gnote-0.8 applet
 
 # Samuli Suominen <ssuominen@gentoo.org> (16 Oct 2011)
 # Mask libbluray support here, and enable it per arch instead
