@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/megacli-8.02.16.ebuild,v 1.1 2011/10/27 23:11:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/megacli-8.02.16.ebuild,v 1.2 2011/10/27 23:27:33 radhermit Exp $
 
 EAPI="4"
 
@@ -53,7 +53,7 @@ src_install() {
 
 	dodoc ${PV}_MegaCLI.txt
 
-	# Get a rid of DT_RPATH
+	# Remove DT_RPATH
 	chrpath -d "${D}"/opt/megacli/megacli
 }
 

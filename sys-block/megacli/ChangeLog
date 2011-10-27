@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/megacli
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/ChangeLog,v 1.10 2011/10/27 23:19:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/ChangeLog,v 1.11 2011/10/27 23:27:33 radhermit Exp $
+
+  27 Oct 2011; Tim Harder <radhermit@gentoo.org> megacli-8.02.16.ebuild:
+  Fix grammar.
 
   27 Oct 2011; Tim Harder <radhermit@gentoo.org> -megacli-8.01.06.ebuild:
   Remove old (fixes bug #377701).
