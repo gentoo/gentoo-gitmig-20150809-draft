@@ -1,6 +1,14 @@
 # ChangeLog for app-text/gtkspell
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.89 2011/10/27 04:50:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.90 2011/10/27 07:02:37 tetromino Exp $
+
+*gtkspell-3.0.0_pre20110814-r1 (27 Oct 2011)
+
+  27 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gtkspell-2.0.16.ebuild, +gtkspell-3.0.0_pre20110814-r1.ebuild:
+  Add prerelease of gtkspell-3 from the gnome overlay; the only real change is
+  that it's now gtk3-based. Sedding po/Makefile.in.in is no longer needed.
+  Update DESCRIPTION to reflect that all gtk versions are supported.
 
   27 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   gtkspell-2.0.16.ebuild:

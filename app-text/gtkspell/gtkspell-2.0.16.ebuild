@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.16.ebuild,v 1.10 2011/10/27 04:50:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.16.ebuild,v 1.11 2011/10/27 07:02:37 tetromino Exp $
 
 EAPI=4
 
-DESCRIPTION="Spell checking widget for GTK2"
+DESCRIPTION="Spell checking widget for GTK"
 HOMEPAGE="http://gtkspell.sourceforge.net/"
 # gtkspell doesn't use sourceforge mirroring system it seems.
 SRC_URI="http://${PN}.sourceforge.net/download/${P}.tar.gz"
