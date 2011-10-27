@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.111 2011/04/29 16:53:45 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.112 2011/10/27 06:15:04 tetromino Exp $
+
+  27 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  java-gnome-4.0.18-r2.ebuild, java-gnome-4.0.19.ebuild:
+  Slot gtkspell dependency to 2 in preparation for gtkspell-3.
 
   29 Apr 2011; Kacper Kowalik <xarthisius@gentoo.org> java-gnome-4.0.19.ebuild:
   ppc stable wrt #358733
