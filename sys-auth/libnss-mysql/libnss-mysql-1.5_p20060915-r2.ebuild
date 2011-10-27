@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-mysql/libnss-mysql-1.5_p20060915-r2.ebuild,v 1.2 2011/10/25 16:37:53 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libnss-mysql/libnss-mysql-1.5_p20060915-r2.ebuild,v 1.3 2011/10/27 13:28:01 hanno Exp $
 
 EAPI=2
 
@@ -16,6 +16,7 @@ SLOT="0"
 IUSE="debug"
 
 DEPEND="virtual/mysql"
+RDEPEND="${DEPEND}"
 S="${WORKDIR}/${PN}"
 
 src_prepare() {
