@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/drivel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.50 2011/10/13 21:33:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.51 2011/10/27 06:43:33 tetromino Exp $
+
+  27 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> drivel-3.0.0.ebuild,
+  drivel-3.0.3.ebuild:
+  Slot gtkspell dependency to 2 in preparation for gtkspell-3.
 
   13 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> drivel-3.0.3.ebuild:
   x86 stable wrt bug #386231

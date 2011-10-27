@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/drivel-3.0.0.ebuild,v 1.8 2011/03/21 22:58:15 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/drivel-3.0.0.ebuild,v 1.9 2011/10/27 06:43:33 tetromino Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2.16.6:2
 	>=x11-libs/gtksourceview-2.2.2:2.0
 	>=net-libs/libsoup-2.4.1:2.4
 	>=dev-libs/libxml2-2.4.0:2
-	spell? ( >=app-text/gtkspell-2.0.10 )
+	spell? ( >=app-text/gtkspell-2.0.10:2 )
 	dbus? ( >=dev-libs/dbus-glib-0.78 )"
 
 DEPEND="${RDEPEND}
