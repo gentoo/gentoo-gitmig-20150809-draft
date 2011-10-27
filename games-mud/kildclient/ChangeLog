@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/kildclient
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kildclient/ChangeLog,v 1.3 2011/06/20 07:29:36 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kildclient/ChangeLog,v 1.4 2011/10/27 06:25:17 tetromino Exp $
+
+  27 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  kildclient-2.9.0.ebuild:
+  Slot gtkspell dependency to 2 in preparation for gtkspell-3.
 
   20 Jun 2011; Tupone Alfredo <tupone@gentoo.org> kildclient-2.9.0.ebuild,
   +files/kildclient-2.9.0-underlink.patch:
