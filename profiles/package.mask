@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13177 2011/10/26 23:14:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13178 2011/10/27 18:10:53 matsuu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# MATSUU Takuto <matsuu@gentoo.org> (27 Oct 2011)
+# Mask for testing
+>=sys-devel/distcc-3.2_rc1
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (25 Oct 2011)
 # Mask the RC unless it is declared as release.
