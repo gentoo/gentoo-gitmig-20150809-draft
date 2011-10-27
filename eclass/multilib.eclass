@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.94 2011/10/17 19:14:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.95 2011/10/27 05:50:40 vapier Exp $
 
 # @ECLASS: multilib.eclass
 # @MAINTAINER:
@@ -399,7 +399,6 @@ multilib_toolchain_setup() {
 		# Set the CHOST native first so that we pick up the native
 		# toolchain and not a cross-compiler by accident #202811.
 		export CHOST=$(get_abi_CHOST ${DEFAULT_ABI})
-		export AS="$(tc-getAS) $(get_abi_ASFLAGS)"
 		export CC="$(tc-getCC) $(get_abi_CFLAGS)"
 		export CXX="$(tc-getCXX) $(get_abi_CFLAGS)"
 		export LD="$(tc-getLD) $(get_abi_LDFLAGS)"
