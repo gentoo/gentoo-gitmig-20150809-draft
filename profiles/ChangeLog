@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5832 2011/10/26 23:14:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5833 2011/10/27 04:50:19 tetromino Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> updates/4Q-2011:
+  Slotmove gkt2-based gtkspell to 2 in preparation for gtkspell-3.
 
   26 Oct 2011; Pacho Ramos <pacho@gentoo.org> package.mask:
   Unmask gthumb-2.14
