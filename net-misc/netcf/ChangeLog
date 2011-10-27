@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netcf
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netcf/ChangeLog,v 1.1 2010/07/07 17:46:20 cardoe Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netcf/ChangeLog,v 1.2 2011/10/27 17:05:33 jer Exp $
+
+  27 Oct 2011; Jeroen Roovers <jer@gentoo.org> netcf-0.1.6.ebuild:
+  Fix libnl dependency (bug #342461).
 
 *netcf-0.1.6 (07 Jul 2010)
 

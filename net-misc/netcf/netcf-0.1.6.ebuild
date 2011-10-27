@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netcf/netcf-0.1.6.ebuild,v 1.1 2010/07/07 17:46:20 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netcf/netcf-0.1.6.ebuild,v 1.2 2011/10/27 17:05:33 jer Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=app-admin/augeas-0.5.0
-		dev-libs/libnl
+		dev-libs/libnl:1.1
 		dev-libs/libxml2
 		dev-libs/libxslt
 		sys-libs/readline"
