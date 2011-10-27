@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/tig
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tig/ChangeLog,v 1.10 2011/09/09 16:38:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tig/ChangeLog,v 1.11 2011/10/27 15:43:14 chainsaw Exp $
+
+  27 Oct 2011; Tony Vroon <chainsaw@gentoo.org> tig-0.18.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani & Agostino "ago" Sarubbo in bug #388505.
 
   09 Sep 2011; Michał Górny <mgorny@gentoo.org> tig-0.18.ebuild:
   Migrate to bash-completion-r1.
