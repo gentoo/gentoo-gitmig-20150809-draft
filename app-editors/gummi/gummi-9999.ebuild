@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/gummi-9999.ebuild,v 1.2 2011/09/15 07:55:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/gummi-9999.ebuild,v 1.3 2011/10/27 05:42:07 tetromino Exp $
 
 EAPI=2
 inherit base eutils subversion
@@ -27,7 +27,7 @@ RDEPEND=">=dev-libs/glib-2.16:2
 	dev-texlive/texlive-latexextra
 	>=x11-libs/gtk+-2.16:2"
 DEPEND="${RDEPEND}
-	app-text/gtkspell
+	app-text/gtkspell:2
 	app-text/poppler[cairo]
 	x11-libs/gtksourceview:2.0
 	x11-libs/pango"

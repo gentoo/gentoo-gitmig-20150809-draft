@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/gummi-0.5.5-r1.ebuild,v 1.4 2011/03/28 13:28:59 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gummi/gummi-0.5.5-r1.ebuild,v 1.5 2011/10/27 05:42:07 tetromino Exp $
 
 EAPI=2
 inherit base eutils
@@ -20,7 +20,7 @@ for X in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${X}"
 done
 
-RDEPEND="app-text/gtkspell
+RDEPEND="app-text/gtkspell:2
 	>=dev-libs/glib-2.16:2
 	dev-texlive/texlive-latex
 	dev-texlive/texlive-latexextra
