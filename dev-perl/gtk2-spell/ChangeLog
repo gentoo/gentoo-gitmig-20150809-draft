@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gtk2-spell
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-spell/ChangeLog,v 1.22 2011/03/04 17:15:00 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-spell/ChangeLog,v 1.23 2011/10/27 06:18:34 tetromino Exp $
+
+  27 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gtk2-spell-1.30.0.ebuild:
+  Slot gtkspell dependency to 2 in preparation for gtkspell-3.
 
 *gtk2-spell-1.30.0 (04 Mar 2011)
 
