@@ -1,12 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.17 2010/09/24 14:29:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.18 2011/10/27 07:16:08 vapier Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 #
 # This eclass is created to avoid using non-portable GNUisms inside ebuilds
 #
 # NB:  If you add anything, please comment it!
+
+inherit user
 
 # treecopy orig1 orig2 orig3 .... dest
 #
@@ -81,59 +83,6 @@ dlopen_lib() {
 	esac
 }
 
-# Gets the home directory for the specified user
-# it's a wrap around egetent as the position of the home directory in the line
-# varies depending on the os used.
-#
-# To use that, inherit eutils, not portability!
-egethome() {
-	ent=$(egetent passwd $1)
-
-	case ${CHOST} in
-	*-darwin*|*-freebsd*|*-dragonfly*)
-		# Darwin, OSX, FreeBSD and DragonFly use position 9 to store homedir
-		echo ${ent} | cut -d: -f9
-		;;
-	*)
-		# Linux, NetBSD and OpenBSD use position 6 instead
-		echo ${ent} | cut -d: -f6
-		;;
-	esac
-}
-
-# Gets the shell for the specified user
-# it's a wrap around egetent as the position of the home directory in the line
-# varies depending on the os used.
-#
-# To use that, inherit eutils, not portability!
-egetshell() {
-	ent=$(egetent passwd "$1")
-
-	case ${CHOST} in
-	*-darwin*|*-freebsd*|*-dragonfly*)
-		# Darwin, OSX, FreeBSD and DragonFly use position 9 to store homedir
-		echo ${ent} | cut -d: -f10
-		;;
-	*)
-		# Linux, NetBSD and OpenBSD use position 6 instead
-		echo ${ent} cut -d: -f7
-		;;
-	esac
-}
-
-# Returns true if specified user has a shell that precludes logins
-# on whichever operating system.
-is-login-disabled() {
-	shell=$(egetshell "$1")
-
-	case ${shell} in
-		/bin/false|/usr/bin/false|/sbin/nologin|/usr/sbin/nologin)
-			return 0 ;;
-		*)
-			return 1 ;;
-	esac
-}
-
 # Gets the name of the BSD-ish make command (pmake from NetBSD)
 #
 # This will return make (provided by system packages) for BSD userlands,
@@ -180,4 +129,3 @@ get_mounts() {
 		echo "${point// /\040} ${node// /\040} ${fs%% *} ${opts// /\040}"
 	done
 }
-
