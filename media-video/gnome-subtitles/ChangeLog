@@ -1,6 +1,10 @@
 # ChangeLog for media-video/gnome-subtitles
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-subtitles/ChangeLog,v 1.32 2011/06/30 14:17:37 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-subtitles/ChangeLog,v 1.33 2011/10/27 06:34:01 tetromino Exp $
+
+  27 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-subtitles-0.9.1.ebuild, gnome-subtitles-1.1.ebuild:
+  Slot gtkspell dependency to 2 in preparation for gtkspell-3.
 
   30 Jun 2011; Christoph Mende <angelos@gentoo.org> gnome-subtitles-1.1.ebuild:
   Stable on amd64 wrt bug #371163
