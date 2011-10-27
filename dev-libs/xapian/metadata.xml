@@ -18,4 +18,12 @@
 		to easily add advanced indexing and search facilities to their own
 		applications.
 	</longdescription>
+	<use>
+		<flag name='nosse'>Disable all sse support</flag>
+		<flag name='brass'>Enabled brass backend db support</flag>
+		<flag name='chert'>Enabled chert backend db support</flag>
+		<flag name='flint'>Enabled flint backend db support</flag>
+		<flag name='inmemory'>Enabled inmemory backend db support</flag>
+		<flag name='remote'>Enabled remot backend db support</flag>
+	</use>
 </pkgmetadata>
