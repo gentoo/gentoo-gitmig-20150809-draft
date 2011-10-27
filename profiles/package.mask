@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13179 2011/10/27 20:19:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13180 2011/10/27 21:41:08 tomka Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -240,11 +240,6 @@ games-fps/ut2004-redorchestra
 # Included in app-editors/emacs-23 and later.
 # Masked for removal in 30 days, bug 384561.
 app-emacs/rst
-
-# Thomas Kahle <tomka@gentoo.org> (25 Sep 2011)
-# Masked for removal in 30 days.  Unfixed security
-# issues (Bug 381115), dead upstream. 
-x11-misc/ktsuss
 
 # Pawel Hajdan jr <phajdan.jr@gentoo.org> (24 Sep 2011)
 # Dev channel releases are only for people who are developers or want more
