@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.4.0-r2.ebuild,v 1.5 2011/10/09 16:28:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8.4.0-r2.ebuild,v 1.6 2011/10/27 05:50:07 tetromino Exp $
 
 EAPI="3"
 GNOME_ORG_MODULE="NetworkManager"
@@ -21,7 +21,7 @@ RDEPEND=">=sys-apps/dbus-1.2
 	|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-145[extras] )
 	>=dev-libs/glib-2.18
 	>=sys-auth/polkit-0.92
-	>=dev-libs/libnl-1.1
+	>=dev-libs/libnl-1.1:1.1
 	ppp? ( >=net-misc/modemmanager-0.4
 		>=net-dialup/ppp-2.4.5 )
 	>=net-wireless/wpa_supplicant-0.5.10[dbus]

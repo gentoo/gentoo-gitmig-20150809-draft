@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.0.ebuild,v 1.1 2011/08/23 23:17:09 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.0.ebuild,v 1.2 2011/10/27 05:50:07 tetromino Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager"
@@ -29,7 +29,7 @@ COMMON_DEPEND=">=sys-apps/dbus-1.2
 	|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-147[extras] )
 	>=dev-libs/glib-2.26
 	>=sys-auth/polkit-0.97
-	>=dev-libs/libnl-1.1
+	>=dev-libs/libnl-1.1:1.1
 	>=net-wireless/wpa_supplicant-0.7.3-r3[dbus]
 	bluetooth? ( >=net-wireless/bluez-4.82 )
 	avahi? ( net-dns/avahi[autoipd] )

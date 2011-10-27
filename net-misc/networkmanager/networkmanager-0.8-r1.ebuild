@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8-r1.ebuild,v 1.12 2011/06/09 01:41:03 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.8-r1.ebuild,v 1.13 2011/10/27 05:50:07 tetromino Exp $
 
 EAPI="2"
 
@@ -25,7 +25,7 @@ RDEPEND=">=sys-apps/dbus-1.2
 	|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-145[extras] )
 	>=dev-libs/glib-2.18
 	>=sys-auth/polkit-0.92
-	>=dev-libs/libnl-1.1
+	>=dev-libs/libnl-1.1:1.1
 	>=net-misc/modemmanager-0.2
 	>=net-wireless/wpa_supplicant-0.5.10[dbus]
 	bluetooth? ( net-wireless/bluez )
