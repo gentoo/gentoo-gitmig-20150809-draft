@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/geany-plugins-0.20-r1.ebuild,v 1.4 2011/10/25 16:04:15 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/geany-plugins-0.20-r1.ebuild,v 1.5 2011/10/27 04:51:22 tetromino Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-util/geany-$(get_version_component_range 1-2)
 	dev-libs/libxml2:2
 	dev-libs/glib:2
 	enchant? ( app-text/enchant )
-	gtkspell? ( app-text/gtkspell:0 )
+	gtkspell? ( app-text/gtkspell:2 )
 	lua? ( dev-lang/lua )
 	soup? ( net-libs/libsoup )
 	webkit? (

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/geany-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/ChangeLog,v 1.9 2011/10/25 16:04:15 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/ChangeLog,v 1.10 2011/10/27 04:51:22 tetromino Exp $
+
+  27 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  geany-plugins-0.19.ebuild, geany-plugins-0.20-r1.ebuild:
+  Re-slot gtkspell dependency to 2.
 
   25 Oct 2011; Nathan Phillip Brink <binki@gentoo.org>
   geany-plugins-0.19.ebuild, geany-plugins-0.20-r1.ebuild:
