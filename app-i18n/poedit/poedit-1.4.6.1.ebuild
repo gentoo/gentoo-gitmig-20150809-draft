@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/poedit-1.4.6.1.ebuild,v 1.8 2011/05/15 15:16:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/poedit/poedit-1.4.6.1.ebuild,v 1.9 2011/10/27 05:43:31 tetromino Exp $
 
 EAPI=2
 WX_GTK_VER=2.8
@@ -18,7 +18,7 @@ IUSE="spell"
 
 RDEPEND="x11-libs/wxGTK:2.8[X]
 	>=sys-libs/db-3.1
-	spell? ( >=app-text/gtkspell-2.0.0 )"
+	spell? ( >=app-text/gtkspell-2.0.0:2 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
