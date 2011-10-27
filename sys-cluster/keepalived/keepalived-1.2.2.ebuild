@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/keepalived-1.2.2.ebuild,v 1.7 2011/06/08 05:38:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/keepalived/keepalived-1.2.2.ebuild,v 1.8 2011/10/27 16:18:50 jer Exp $
 
 EAPI=3
 
@@ -17,7 +17,7 @@ IUSE="debug"
 
 RDEPEND="dev-libs/popt
 	sys-apps/iproute2
-	dev-libs/libnl
+	dev-libs/libnl:1.1
 	dev-libs/openssl"
 DEPEND="${RDEPEND}
 	=sys-kernel/linux-headers-2.6*"
