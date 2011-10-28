@@ -1,6 +1,12 @@
 # ChangeLog for games-action/violetland
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/violetland/ChangeLog,v 1.20 2011/08/21 03:29:30 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/violetland/ChangeLog,v 1.21 2011/10/28 06:21:52 mr_bones_ Exp $
+
+*violetland-0.4.3 (28 Oct 2011)
+
+  28 Oct 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  -violetland-0.3.1.ebuild, -violetland-0.4.0.ebuild, +violetland-0.4.3.ebuild:
+  version bump
 
   21 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> violetland-0.4.2.ebuild:
   x86 stable wrt bug #378727
