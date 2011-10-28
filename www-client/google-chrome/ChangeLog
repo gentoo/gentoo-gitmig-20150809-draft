@@ -1,6 +1,13 @@
 # ChangeLog for www-client/google-chrome
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/ChangeLog,v 1.42 2011/10/26 20:32:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/ChangeLog,v 1.43 2011/10/28 01:47:55 floppym Exp $
+
+*google-chrome-16.0.912.15_alpha107511 (28 Oct 2011)
+
+  28 Oct 2011; Mike Gilbert <floppym@gentoo.org>
+  -google-chrome-16.0.912.12_alpha107048.ebuild,
+  +google-chrome-16.0.912.15_alpha107511.ebuild:
+  Version bump for dev channel release.
 
 *google-chrome-16.0.912.12_alpha107048 (26 Oct 2011)
 *google-chrome-15.0.874.106_p107270 (26 Oct 2011)
