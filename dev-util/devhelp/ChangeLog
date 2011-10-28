@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.125 2011/08/15 12:51:06 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.126 2011/10/28 00:14:40 tetromino Exp $
+
+*devhelp-3.2.0 (28 Oct 2011)
+
+  28 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -devhelp-3.0.0.ebuild, +devhelp-3.2.0.ebuild:
+  Bump to 3.2.0 and drop old. Switch to EAPI4. Notable changes: minor UI fixes.
 
 *devhelp-3.0.0 (15 Aug 2011)
 

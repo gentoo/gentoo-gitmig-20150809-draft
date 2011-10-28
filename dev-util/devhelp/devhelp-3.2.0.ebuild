@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-3.0.0.ebuild,v 1.1 2011/08/15 12:51:06 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-3.2.0.ebuild,v 1.1 2011/10/28 00:14:40 tetromino Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="2"
@@ -28,11 +28,12 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"
 
 pkg_setup() {
-	DOCS="AUTHORS ChangeLog NEWS README"
+	DOCS="AUTHORS NEWS README"
 	# ICC is crazy, silence warnings (bug #154010)
 	if [[ $(tc-getCC) == "icc" ]] ; then
 		G2CONF="${G2CONF} --with-compile-warnings=no"
 	fi
+	python_pkg_setup
 	python_set_active_version 2
 }
 
@@ -40,7 +41,7 @@ src_prepare() {
 	gnome2_src_prepare
 
 	# disable pyc compiling
-	ln -sfn $(type -P true) py-compile
+	ln -sfn $(type -P true) build-aux/py-compile
 }
 
 pkg_preinst() {
