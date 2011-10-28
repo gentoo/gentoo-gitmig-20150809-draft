@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/superkaramba-4.7.2.ebuild,v 1.1 2011/10/06 18:11:00 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/superkaramba-4.7.2-r1.ebuild,v 1.1 2011/10/28 20:04:53 abcd Exp $
 
-EAPI=3
+EAPI=4
 
 PYTHON_DEPEND="python? 2"
 KDE_SCM="git"
@@ -29,8 +29,9 @@ RDEPEND="${DEPEND}
 PATCHES=( "${FILESDIR}/${PN}-as-needed.patch" )
 
 pkg_setup() {
-	${kde_eclass}_pkg_setup
 	python_set_active_version 2
+	python_pkg_setup
+	${kde_eclass}_pkg_setup
 }
 
 src_configure() {

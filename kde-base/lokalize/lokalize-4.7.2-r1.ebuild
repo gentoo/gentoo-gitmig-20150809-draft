@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/lokalize-4.7.2.ebuild,v 1.1 2011/10/06 18:10:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lokalize/lokalize-4.7.2-r1.ebuild,v 1.1 2011/10/28 19:56:28 abcd Exp $
 
-EAPI=3
+EAPI=4
 
 KDE_HANDBOOK="optional"
 KMNAME="kdesdk"
@@ -27,8 +27,9 @@ RDEPEND="${DEPEND}
 PATCHES=( "${FILESDIR}/${PN}"-4.6.5-hunspell.patch )
 
 pkg_setup() {
-	kde4-meta_pkg_setup
 	python_set_active_version 2
+	python_pkg_setup
+	kde4-meta_pkg_setup
 }
 
 src_install() {

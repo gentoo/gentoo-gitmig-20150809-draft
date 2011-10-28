@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.7.2.ebuild,v 1.1 2011/10/06 18:11:08 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.7.2-r1.ebuild,v 1.1 2011/10/28 19:57:38 abcd Exp $
 
-EAPI=3
+EAPI=4
 
 KDE_HANDBOOK="optional"
 KDE_REQUIRED="optional"
@@ -34,6 +34,7 @@ PATCHES=(
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 	kde4-base_pkg_setup
 }
 
