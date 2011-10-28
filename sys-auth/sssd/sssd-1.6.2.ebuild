@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.6.1-r1.ebuild,v 1.2 2011/09/17 09:35:47 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/sssd-1.6.2.ebuild,v 1.1 2011/10/28 17:13:52 maksbotan Exp $
 
 EAPI=3
 
@@ -47,12 +47,16 @@ DEPEND="${COMMON_DEP}
 
 CONFIG_CHECK="~KEYS"
 AUTOTOOLS_IN_SOURCE_BUILD=1
-PATCHES=("${FILESDIR}"/allow_xdm.patch)
+#PATCHES=("${FILESDIR}"/new_openrc.patch)
 
 pkg_setup(){
 	python_set_active_version 2
 	python_need_rebuild
 	linux-info_pkg_setup
+}
+
+src_prepare() {
+	cp -f  "${FILESDIR}"/sssd "${S}/"src/sysv/gentoo/sssd
 }
 
 src_configure(){
@@ -91,6 +95,7 @@ src_install(){
 		python_clean_installation_image
 		python_convert_shebangs 2 "${ED}$(python_get_sitedir)/"*.py
 	fi
+	newconfd "${FILESDIR}"/sssd.conf sssd
 }
 
 src_test() {
