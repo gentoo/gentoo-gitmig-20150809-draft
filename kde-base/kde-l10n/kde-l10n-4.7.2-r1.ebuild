@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.7.2.ebuild,v 1.1 2011/10/06 18:10:44 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.7.2-r1.ebuild,v 1.1 2011/10/28 19:48:03 abcd Exp $
 
-EAPI="3"
+EAPI="4"
 
 inherit kde4-base
 
@@ -46,7 +46,6 @@ src_unpack() {
 		elog
 	fi
 
-	# For EAPI >= 3, or if not using .tar.xz archives:
 	[[ -n ${A} ]] && unpack ${A}
 	cd "${S}"
 
