@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/sakura
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.22 2011/10/25 16:45:58 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/sakura/ChangeLog,v 1.23 2011/10/28 09:19:47 chainsaw Exp $
+
+  28 Oct 2011; Tony Vroon <chainsaw@gentoo.org> sakura-2.4.2.ebuild:
+  Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney,
+  Agostino "ago" Sarubbo, Tomáš "Mepho" Pružina & Elijah "Armageddon" El
+  Lazkani in bug #388313.
 
   25 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> sakura-2.4.2.ebuild:
   x86 stable wrt bug #388313
