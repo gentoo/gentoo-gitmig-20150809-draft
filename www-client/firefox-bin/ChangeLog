@@ -1,6 +1,10 @@
 # ChangeLog for www-client/firefox-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.68 2011/10/15 11:29:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/ChangeLog,v 1.69 2011/10/28 08:42:54 chainsaw Exp $
+
+  28 Oct 2011; Tony Vroon <chainsaw@gentoo.org> firefox-bin-7.0.1.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani & Agostino "ago" Sarubbo in security bug #381245.
 
 *firefox-bin-7.0.1 (15 Oct 2011)
 
