@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.140 2011/10/22 03:10:55 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.141 2011/10/28 05:04:13 tetromino Exp $
+
+  28 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> use.mask:
+  use.mask colord to allow gtk+-3.2 unmasking. use.mask instead of p.use.mask
+  because other packages with this flag are coming. Bug #387959.
 
   22 Oct 2011; Matt Turner <mattst88@gentoo.org> use.mask:
   un-use.mask arm's iwmmxt flag.

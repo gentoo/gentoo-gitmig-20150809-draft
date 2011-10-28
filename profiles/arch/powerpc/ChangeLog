@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.143 2011/10/18 22:48:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.144 2011/10/28 05:04:13 tetromino Exp $
+
+  28 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> use.mask:
+  use.mask colord and packagekit to allow gtk+-3.2 unmasking. use.mask instead
+  of p.use.mask because other packages with these flags are coming. Bug
+  #387959.
 
   18 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Add kdepim-l10n to kde-4.7 mask

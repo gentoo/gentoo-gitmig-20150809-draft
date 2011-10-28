@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.51 2011/08/21 02:51:31 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.52 2011/10/28 05:04:13 tetromino Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -77,6 +77,11 @@ libev
 prelude
 
 # Other
+
+# Alexandre Rostovtsev <tetromino@gmail.com> (28 Oct 2011)
+# x11-misc/colord and app-admin/packagekit-base not tested. Bug #387959.
+colord
+packagekit
 
 # Raúl Porcel <armin76@gentoo.org> (23 Apr 2011)
 # Needs to be tested

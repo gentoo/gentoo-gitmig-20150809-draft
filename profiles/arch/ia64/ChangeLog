@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.111 2011/09/04 03:52:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.112 2011/10/28 05:04:13 tetromino Exp $
+
+  28 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> use.mask:
+  use.mask colord and packagekit to allow gtk+-3.2 unmasking. use.mask instead
+  of p.use.mask because other packages with these flags are coming. Bug
+  #387959.
 
   04 Sep 2011; Robin H. Johnson <robbat2@gentoo.org> package.use.mask:
   Bug #381737: block dev-libs/libmemcached[tcmalloc] until

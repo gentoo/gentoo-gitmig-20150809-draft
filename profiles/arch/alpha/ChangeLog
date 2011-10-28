@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.99 2011/10/08 18:47:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.100 2011/10/28 05:04:13 tetromino Exp $
+
+  28 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> use.mask:
+  use.mask colord and packagekit to allow gtk+-3.2 unmasking. use.mask instead
+  of p.use.mask because other packages with these flags are coming. Bug #387959
 
   08 Oct 2011; Raúl Porcel <armin76@gentoo.org> package.use.mask:
   p.use.mask app-text/asciidoc test
