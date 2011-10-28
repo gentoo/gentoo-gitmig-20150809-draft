@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/linux-docs
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/ChangeLog,v 1.26 2010/11/21 00:41:23 mpagano Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-docs/ChangeLog,v 1.27 2011/10/28 12:38:50 mpagano Exp $
+
+*linux-docs-3.1 (28 Oct 2011)
+
+  28 Oct 2011; Michael Pagano <mpagano@gentoo.org> +linux-docs-3.1.ebuild:
+  Version bump
 
 *linux-docs-2.6.36 (21 Nov 2010)
 *linux-docs-2.6.35.2 (21 Nov 2010)
