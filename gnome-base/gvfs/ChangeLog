@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gvfs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.157 2011/10/26 20:45:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/ChangeLog,v 1.158 2011/10/28 20:09:48 maekke Exp $
+
+  28 Oct 2011; Markus Meier <maekke@gentoo.org> gvfs-1.6.7-r1.ebuild:
+  arm stable, bug #385699
 
   26 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> gvfs-1.10.1.ebuild:
   Remove "prefix" from IUSE since according to Jeremy Olexa it isn't required.
