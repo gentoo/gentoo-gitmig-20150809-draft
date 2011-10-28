@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-2.32.1-r1.ebuild,v 1.6 2011/04/30 17:40:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-2.32.1-r1.ebuild,v 1.7 2011/10/28 00:57:44 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -31,7 +31,7 @@ RDEPEND="x11-libs/libXft
 	>=gnome-base/libgnomekbd-2.31.2
 	<gnome-base/libgnomekbd-2.91.0
 	>=gnome-base/gnome-desktop-2.29.4:2
-	>=gnome-base/gnome-menus-2.11.1
+	>=gnome-base/gnome-menus-2.11.1:0
 	gnome-base/gnome-settings-daemon
 
 	dev-libs/libunique:1

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.0.2-r2.ebuild,v 1.2 2011/09/05 19:56:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.0.2-r2.ebuild,v 1.3 2011/10/28 00:57:44 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -34,7 +34,7 @@ COMMON_DEPEND="
 
 	app-text/iso-codes
 	dev-libs/libxml2:2
-	gnome-base/gnome-menus
+	gnome-base/gnome-menus:0
 	gnome-base/libgtop:2
 	media-libs/fontconfig
 

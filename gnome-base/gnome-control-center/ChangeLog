@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-control-center
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.90 2011/09/05 19:56:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.91 2011/10/28 00:57:44 tetromino Exp $
+
+  28 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-control-center-2.32.1-r1.ebuild, gnome-control-center-3.0.2-r2.ebuild:
+  Slot gnome-menus dependency to 0 in preparation for gnome-menus-3.2.
 
   05 Sep 2011; Markus Meier <maekke@gentoo.org>
   gnome-control-center-3.0.2-r2.ebuild:
