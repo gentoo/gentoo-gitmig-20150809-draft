@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukitwo/zukitwo-0_pre20111023.ebuild,v 1.1 2011/10/28 08:59:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukitwo/zukitwo-0_pre20111023.ebuild,v 1.2 2011/10/28 15:36:48 mr_bones_ Exp $
 
 EAPI="4"
 
 DESCRIPTION="Theme for GNOME 2 and 3"
 HOMEPAGE="http://gnome-look.org/content/show.php/Zukitwo?content=140562"
 # Upstream download URI updates file contents without changing the filename
-SRC_URI="mirrors://gentoo/${P}.tar.xz"
+SRC_URI="mirror://gentoo/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
