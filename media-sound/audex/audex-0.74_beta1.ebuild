@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audex/audex-0.74_beta1.ebuild,v 1.1 2011/02/05 01:41:10 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audex/audex-0.74_beta1.ebuild,v 1.2 2011/10/28 23:48:43 abcd Exp $
 
-EAPI=3
+EAPI=4
 
 KDE_LINGUAS="cs da de en_GB eo es fr ga it ja km lt mai nds nl pt pt_BR ru sv tr uk"
 inherit kde4-base
