@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-2.0.9999.ebuild,v 1.4 2011/06/25 08:53:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-2.0.9999.ebuild,v 1.5 2011/10/28 23:24:03 abcd Exp $
 
-EAPI=3
+EAPI=4
 
 EGIT_HAS_SUBMODULES="true"
 KDE_LINGUAS="ar ca da de el es et fi fr hu it ko nb nl pt_BR sk sl sv th tr zh_CN zh_TW"
