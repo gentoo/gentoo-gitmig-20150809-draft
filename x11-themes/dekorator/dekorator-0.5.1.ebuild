@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/dekorator/dekorator-0.5.1.ebuild,v 1.2 2011/02/02 05:49:54 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/dekorator/dekorator-0.5.1.ebuild,v 1.3 2011/10/28 20:40:04 abcd Exp $
 
-EAPI=3
+EAPI=4
 inherit kde4-base
 
 DESCRIPTION="A window decoration engine for KDE4"

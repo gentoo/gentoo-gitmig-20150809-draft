@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/polyester
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/polyester/ChangeLog,v 1.5 2011/02/02 05:51:44 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/polyester/ChangeLog,v 1.6 2011/10/28 20:39:33 abcd Exp $
+
+  28 Oct 2011; Jonathan Callen <abcd@gentoo.org> polyester-2.0.0.ebuild:
+  Bump EAPI to 4
 
   02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org> polyester-2.0.0.ebuild:
   EAPI3

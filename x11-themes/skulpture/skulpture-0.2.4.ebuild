@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/skulpture/skulpture-0.2.4.ebuild,v 1.2 2011/02/02 20:38:55 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/skulpture/skulpture-0.2.4.ebuild,v 1.3 2011/10/28 20:35:04 abcd Exp $
 
-EAPI=3
+EAPI=4
 
 inherit kde4-base
 
