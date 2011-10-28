@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ascii85/ascii85-1.0.1.ebuild,v 1.1 2011/05/24 08:16:15 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ascii85/ascii85-1.0.1.ebuild,v 1.2 2011/10/28 15:44:45 jer Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://ascii85.rubyforge.org/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~hppa"
 IUSE=""
 
 ruby_add_bdepend "test? ( >=dev-ruby/rspec-2.4.0:2 )"
