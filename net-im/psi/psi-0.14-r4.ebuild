@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14-r4.ebuild,v 1.7 2011/10/25 16:45:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.14-r4.ebuild,v 1.8 2011/10/28 12:44:03 pva Exp $
 
 EAPI=4
 
@@ -40,7 +40,7 @@ RDEPEND=">=x11-libs/qt-gui-4.4:4[qt3support,dbus?]
 	|| ( >=sys-libs/zlib-1.2.5.1-r2[minizip] <sys-libs/zlib-1.2.5.1-r1 )"
 
 DEPEND="${RDEPEND}
-	extras? ( sys-devel/qconf )
+	sys-devel/qconf
 	doc? ( app-doc/doxygen )"
 
 PDEPEND="crypt? ( app-crypt/qca-gnupg:2 )
