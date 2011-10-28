@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/scim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.145 2011/05/25 16:57:29 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.146 2011/10/28 07:56:51 naota Exp $
+
+*scim-1.4.11 (28 Oct 2011)
+
+  28 Oct 2011; Naohiro Aota <naota@gentoo.org> +scim-1.4.11.ebuild:
+  Version bumped.
 
 *scim-1.4.9-r2 (25 May 2011)
 
