@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1-r2.ebuild,v 1.7 2011/10/05 17:20:21 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1-r2.ebuild,v 1.8 2011/10/28 01:03:13 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -26,7 +26,7 @@ RDEPEND=">=gnome-base/gnome-desktop-2.26:2
 	dev-libs/libxml2:2
 	>=gnome-base/gconf-2.6.1:2[introspection?]
 	>=media-libs/libcanberra-0.23[gtk]
-	>=gnome-base/gnome-menus-2.27.92
+	>=gnome-base/gnome-menus-2.27.92:0
 	gnome-base/librsvg:2
 	>=dev-libs/dbus-glib-0.80
 	>=sys-apps/dbus-1.1.2
