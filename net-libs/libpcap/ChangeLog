@@ -1,9 +1,11 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.150 2011/09/12 08:12:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.151 2011/10/28 17:00:28 jer Exp $
 
-  12 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> libpcap-1.1.1-r1.ebuild,
-  libpcap-1.1.1-r1.ebuild:
+  28 Oct 2011; Jeroen Roovers <jer@gentoo.org> libpcap-1.1.1.ebuild:
+  Fix libnl dependency (bug #342461).
+
+  12 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> libpcap-1.1.1-r1.ebuild:
   Move to eapi4, remove static libs, fix building with >libnl-2. Closes bug
   #343621. Remove older overshadowed versions.
 
