@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kgamma
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.186 2011/10/15 17:25:50 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.187 2011/10/28 19:03:20 dilfridge Exp $
+
+  28 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org> -kgamma-4.7.1.ebuild:
+  Drop KDEpim 4.6.1 and KDE 4.7.1
 
   15 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org> -kgamma-4.7.0.ebuild:
   Drop KDE 4.7.0

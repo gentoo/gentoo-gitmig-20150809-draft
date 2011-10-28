@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkexiv2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkexiv2/ChangeLog,v 1.90 2011/10/15 17:26:07 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkexiv2/ChangeLog,v 1.91 2011/10/28 19:03:39 dilfridge Exp $
+
+  28 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -libkexiv2-4.7.1.ebuild:
+  Drop KDEpim 4.6.1 and KDE 4.7.1
 
   15 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -libkexiv2-4.7.0.ebuild:

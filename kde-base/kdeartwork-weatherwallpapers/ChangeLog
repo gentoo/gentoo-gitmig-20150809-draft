@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-weatherwallpapers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-weatherwallpapers/ChangeLog,v 1.67 2011/10/15 17:26:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-weatherwallpapers/ChangeLog,v 1.68 2011/10/28 19:03:32 dilfridge Exp $
+
+  28 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kdeartwork-weatherwallpapers-4.7.1.ebuild:
+  Drop KDEpim 4.6.1 and KDE 4.7.1
 
   15 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -kdeartwork-weatherwallpapers-4.7.0.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-styles
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-styles/ChangeLog,v 1.183 2011/10/15 17:26:04 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-styles/ChangeLog,v 1.184 2011/10/28 19:03:25 dilfridge Exp $
+
+  28 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kdeartwork-styles-4.7.1.ebuild:
+  Drop KDEpim 4.6.1 and KDE 4.7.1
 
   15 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -kdeartwork-styles-4.7.0.ebuild:
