@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/test-spec
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/ChangeLog,v 1.21 2011/07/23 10:22:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-spec/ChangeLog,v 1.22 2011/10/28 15:49:17 jer Exp $
+
+  28 Oct 2011; Jeroen Roovers <jer@gentoo.org> test-spec-0.10.0-r3.ebuild:
+  Marked ~hppa (bug #388355).
 
   23 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org>
   test-spec-0.10.0-r2.ebuild:
