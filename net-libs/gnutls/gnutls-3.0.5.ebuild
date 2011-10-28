@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.0.3.ebuild,v 1.2 2011/09/21 10:05:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.0.5.ebuild,v 1.1 2011/10/28 22:47:44 radhermit Exp $
 
 EAPI=4
 
-inherit autotools libtool
+inherit autotools-utils libtool
 
 DESCRIPTION="A TLS 1.2 and SSL 3.0 implementation for the GNU project"
 HOMEPAGE="http://www.gnutls.org/"
@@ -99,7 +99,7 @@ src_test() {
 src_install() {
 	default
 
-	find "${ED}" -name '*.la' -exec rm -f {} +
+	remove_libtool_files all
 
 	if use doc; then
 		dodoc doc/gnutls.{pdf,ps}
