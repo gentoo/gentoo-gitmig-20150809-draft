@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/system-config-printer-kde/system-config-printer-kde-4.7.2-r1.ebuild,v 1.1 2011/10/28 17:54:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/system-config-printer-kde/system-config-printer-kde-4.7.2-r1.ebuild,v 1.2 2011/10/28 20:07:57 abcd Exp $
 
 EAPI=4
 
@@ -22,9 +22,9 @@ RDEPEND="${DEPEND}
 "
 
 pkg_setup() {
-	kde4-meta_pkg_setup
 	python_set_active_version 2
 	python_pkg_setup
+	kde4-meta_pkg_setup
 }
 
 src_install() {
