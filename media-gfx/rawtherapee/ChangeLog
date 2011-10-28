@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/rawtherapee
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawtherapee/ChangeLog,v 1.1 2011/10/28 19:55:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawtherapee/ChangeLog,v 1.2 2011/10/28 20:26:31 radhermit Exp $
+
+  28 Oct 2011; Tim Harder <radhermit@gentoo.org> rawtherapee-4.0.4.ebuild:
+  Use lcms slot dep and fix check for openmp support (thanks to ssuominen).
 
 *rawtherapee-4.0.4 (28 Oct 2011)
 

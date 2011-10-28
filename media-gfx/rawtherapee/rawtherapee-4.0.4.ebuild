@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawtherapee/rawtherapee-4.0.4.ebuild,v 1.1 2011/10/28 19:55:01 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawtherapee/rawtherapee-4.0.4.ebuild,v 1.2 2011/10/28 20:26:31 radhermit Exp $
 
 EAPI="4"
 
-inherit cmake-utils
+inherit cmake-utils toolchain-funcs
 
 DESCRIPTION="Digital photo editing tool focused on RAW image file manipulation and conversion"
 HOMEPAGE="http://www.rawtherapee.com/"
@@ -22,17 +22,20 @@ RDEPEND="bzip2? ( app-arch/bzip2 )
 	media-libs/tiff
 	media-libs/libpng
 	media-libs/libiptcdata
-	media-libs/lcms
+	media-libs/lcms:2
 	sys-libs/zlib
 	virtual/jpeg"
 DEPEND="${RDEPEND}
 	app-arch/xz-utils
-	dev-util/pkgconfig
-	openmp? ( sys-devel/gcc[openmp] )"
+	dev-util/pkgconfig"
 
 PATCHES=( "${FILESDIR}"/${P}-nohg.patch )
 
 pkg_setup() {
+	if use openmp ; then
+		tc-has-openmp || die "Please switch to an openmp compatible compiler"
+	fi
+
 	mycmakeargs=(
 		$(cmake-utils_use openmp OPTION_OMP)
 		$(cmake-utils_use_with bzip2 BZIP)
