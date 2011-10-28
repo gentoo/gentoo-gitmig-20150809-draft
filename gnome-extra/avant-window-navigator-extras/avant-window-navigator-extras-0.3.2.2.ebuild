@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/avant-window-navigator-extras-0.3.2.2.ebuild,v 1.5 2011/04/25 20:48:02 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator-extras/avant-window-navigator-extras-0.3.2.2.ebuild,v 1.6 2011/10/28 00:52:30 tetromino Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -29,7 +29,7 @@ COMMON_DEPEND="
 	>=x11-libs/libwnck-2.22:1
 	x11-libs/vte:0
 	gnome? (
-		gnome-base/gnome-menus
+		gnome-base/gnome-menus:0
 		>=gnome-base/gconf-2:2
 		>=gnome-base/gnome-vfs-2:2
 		>=gnome-base/libgtop-2

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-packagekit/gnome-packagekit-3.0.3.ebuild,v 1.1 2011/10/01 14:23:21 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-packagekit/gnome-packagekit-3.0.3.ebuild,v 1.2 2011/10/28 00:55:20 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -24,7 +24,7 @@ RDEPEND="
 
 	>=app-admin/packagekit-base-0.6.5[udev]
 	>=app-admin/packagekit-gtk-0.6.5
-	>=gnome-base/gnome-menus-2.24.1
+	>=gnome-base/gnome-menus-2.24.1:0
 	>=media-libs/libcanberra-0.10[gtk3]
 	>=sys-apps/dbus-1.1.2
 	>=sys-power/upower-0.9.0
