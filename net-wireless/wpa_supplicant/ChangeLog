@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.169 2011/10/27 19:24:26 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.170 2011/10/28 05:31:07 mgorny Exp $
+
+  28 Oct 2011; Michał Górny <mgorny@gentoo.org>
+  wpa_supplicant-0.7.3-r5.ebuild:
+  Fix systemd patching to work w/ USE=wimax.
 
   27 Oct 2011; <gurligebis@gentoo.org> wpa_supplicant-0.7.3-r5.ebuild:
   Changing libnl dependency to 1.1 to fix bug #388589

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r5.ebuild,v 1.8 2011/10/27 19:24:26 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.7.3-r5.ebuild,v 1.9 2011/10/28 05:31:07 mgorny Exp $
 
 EAPI=4
 
@@ -74,6 +74,10 @@ src_prepare() {
 
 	epatch "${FILESDIR}/${P}-dbus_path_fix.patch"
 
+	# systemd entries to D-Bus service files (bug #372877)
+	echo 'SystemdService=wpa_supplicant.service' \
+		| tee -a dbus/*.service >/dev/null || die
+
 	if use wimax; then
 		cd "${WORKDIR}/${P}"
 		epatch "${FILESDIR}/${P}-generate-libeap-peer.patch"
@@ -88,9 +92,6 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-dbus-api-changes.patch"
 	# bug (374089)
 	epatch "${FILESDIR}/${P}-dbus-WPAIE-fix.patch"
-	# systemd entries to D-Bus service files (bug #372877)
-	echo 'SystemdService=wpa_supplicant.service' \
-		| tee -a dbus/*.service >/dev/null || die
 }
 
 src_configure() {
