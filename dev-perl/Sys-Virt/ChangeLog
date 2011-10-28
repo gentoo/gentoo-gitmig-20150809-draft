@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/Sys-Virt
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Virt/ChangeLog,v 1.1 2011/10/28 17:38:57 maksbotan Exp $
+
+*Sys-Virt-0.2.4 (28 Oct 2011)
+
+  28 Oct 2011; Maxim Koltsov <maksbotan@gentoo.org> +Sys-Virt-0.2.4.ebuild,
+  +metadata.xml:
+  Add dev-perl/Sys-Virt, bug #342389. Thanks to slepnoga
