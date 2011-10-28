@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.2.1.ebuild,v 1.4 2011/10/25 15:11:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.2.1.ebuild,v 1.5 2011/10/28 05:09:08 tetromino Exp $
 
 EAPI="4"
 
@@ -17,7 +17,7 @@ SLOT="3"
 # I tried this and got it all compiling, but the end result is unusable as it
 # horribly mixes up the backends -- grobian
 IUSE="aqua colord cups debug doc examples +introspection packagekit test vim-syntax xinerama"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 
 # FIXME: introspection data is built against system installation of gtk+:3
 # NOTE: cairo[svg] dep is due to bug 291283 (not patched to avoid eautoreconf)
@@ -102,7 +102,7 @@ src_prepare() {
 		-i tests/Makefile.* || die "sed 3 failed"
 
 	# Test results depend on the list of mounted filesystems!
-	rm tests/a11y/pickers.{ui,txt} || die "rm failed"
+	rm -v tests/a11y/pickers.{ui,txt} || die "rm failed"
 
 	# Failing treeview scrolling tests; bug #384855,
 	# https://bugzilla.gnome.org/show_bug.cgi?id=660931
@@ -164,7 +164,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog* HACKING NEWS* README*
 
 	# Remove unneeded *.la files
-	find "${ED}" -name "*.la" -delete
+	find "${D}" -name '*.la' -exec rm -f {} +
 
 	# add -framework Carbon to the .pc files
 	use aqua && for i in gtk+-3.0.pc gtk+-quartz-3.0.pc gtk+-unix-print-3.0.pc; do
