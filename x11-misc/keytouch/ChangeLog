@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/keytouch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/ChangeLog,v 1.20 2011/03/29 13:02:56 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/ChangeLog,v 1.21 2011/10/28 01:05:09 tetromino Exp $
+
+  28 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  keytouch-2.4.1.ebuild:
+  Slot gnome-menus dependency to 0 in preparation for gnome-menus-3.2.
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org> keytouch-2.4.1.ebuild:
   Fix gtk+ slot deps

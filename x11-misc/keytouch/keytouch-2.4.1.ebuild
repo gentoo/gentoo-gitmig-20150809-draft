@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/keytouch-2.4.1.ebuild,v 1.5 2011/03/29 13:02:56 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch/keytouch-2.4.1.ebuild,v 1.6 2011/10/28 01:05:09 tetromino Exp $
 
 EAPI=2
 inherit eutils linux-info
@@ -16,7 +16,7 @@ IUSE="acpi kde"
 
 RDEPEND="x11-libs/gtk+:2
 	x11-libs/libXtst
-	gnome-base/gnome-menus
+	gnome-base/gnome-menus:0
 	media-libs/alsa-lib"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
