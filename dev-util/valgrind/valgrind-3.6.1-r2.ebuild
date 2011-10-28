@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.6.1-r2.ebuild,v 1.2 2011/10/19 17:24:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-3.6.1-r2.ebuild,v 1.3 2011/10/28 00:35:54 blueness Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic toolchain-funcs multilib pax-utils
@@ -93,11 +93,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	if use ppc || use ppc64 || use amd64 ; then
-		ewarn "Valgrind will not work on ppc, ppc64 or amd64 if glibc does not have"
-		ewarn "debug symbols (see https://bugs.gentoo.org/show_bug.cgi?id=214065"
-		ewarn "and http://bugs.gentoo.org/show_bug.cgi?id=274771)."
-		ewarn "To fix this you can add splitdebug to FEATURES in make.conf and"
-		ewarn "remerge glibc."
-	fi
+	ewarn "Valgrind will not work if glibc does not have debug symbols."
+	ewarn "To fix this you can add splitdebug to FEATURES in make.conf"
+	ewarn "and remerge glibc.  See:"
+	ewarn "https://bugs.gentoo.org/show_bug.cgi?id=214065"
+	ewarn "https://bugs.gentoo.org/show_bug.cgi?id=274771"
+	ewarn "https://bugs.gentoo.org/show_bug.cgi?id=388703"
 }
