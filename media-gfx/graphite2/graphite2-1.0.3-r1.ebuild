@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.0.3.ebuild,v 1.2 2011/10/26 15:38:22 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.0.3-r1.ebuild,v 1.1 2011/10/28 08:39:02 scarabeus Exp $
 
 EAPI=4
 
@@ -31,6 +31,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-includes-libs-perl.patch"
 	"${FILESDIR}/${PN}-fix_wrong_linker_opts.patch"
 	"${FILESDIR}/${PN}-1.0.2-no_harfbuzz_tests.patch"
+	"${FILESDIR}/${PN}-1.0.3-no-test-binaries.patch"
 )
 
 pkg_setup() {

@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/graphite2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/ChangeLog,v 1.16 2011/10/26 15:38:22 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/ChangeLog,v 1.17 2011/10/28 08:39:02 scarabeus Exp $
+
+*graphite2-1.0.3-r1 (28 Oct 2011)
+
+  28 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> -graphite2-1.0.3.ebuild,
+  +graphite2-1.0.3-r1.ebuild, +files/graphite2-1.0.3-no-test-binaries.patch:
+  Do not install test binary, revbump to ensure it is not installed, keep the
+  keywords. Wrt bug #388733.
 
   26 Oct 2011; Tony Vroon <chainsaw@gentoo.org> graphite2-1.0.3.ebuild:
   Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney &
