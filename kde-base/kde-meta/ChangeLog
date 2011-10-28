@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kde-meta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.201 2011/10/28 19:03:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.202 2011/10/28 19:15:15 dilfridge Exp $
+
+  28 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org> kde-meta-4.7.2.ebuild,
+  metadata.xml:
+  Remove oldpim useflag as it is not really needed
 
   28 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -kde-meta-4.7.1.ebuild:
