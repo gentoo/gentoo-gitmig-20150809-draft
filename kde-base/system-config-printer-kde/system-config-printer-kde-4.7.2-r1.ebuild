@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/system-config-printer-kde/system-config-printer-kde-4.7.2.ebuild,v 1.1 2011/10/06 18:10:45 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/system-config-printer-kde/system-config-printer-kde-4.7.2-r1.ebuild,v 1.1 2011/10/28 17:54:21 dilfridge Exp $
 
-EAPI=3
+EAPI=4
 
 KMNAME="kdeadmin"
 PYTHON_DEPEND="2"
@@ -24,6 +24,7 @@ RDEPEND="${DEPEND}
 pkg_setup() {
 	kde4-meta_pkg_setup
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_install() {
