@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/soundkonverter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/ChangeLog,v 1.20 2011/08/11 19:46:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/ChangeLog,v 1.21 2011/10/28 23:29:28 abcd Exp $
+
+  28 Oct 2011; Jonathan Callen <abcd@gentoo.org>
+  -soundkonverter-1.0.0_rc2.ebuild:
+  remove old
 
   11 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   soundkonverter-1.0.0.ebuild, +files/soundkonverter-1.0.0-underlinking.patch:

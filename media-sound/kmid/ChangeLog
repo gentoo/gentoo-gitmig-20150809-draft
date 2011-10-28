@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kmid
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmid/ChangeLog,v 1.17 2011/02/16 22:25:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmid/ChangeLog,v 1.18 2011/10/28 23:36:52 abcd Exp $
+
+  28 Oct 2011; Jonathan Callen <abcd@gentoo.org> -kmid-2.3.0-r1.ebuild:
+  remove old
 
   16 Feb 2011; Markos Chandras <hwoarang@gentoo.org> kmid-2.4.0.ebuild:
   Stable on amd64 wrt bug #353476

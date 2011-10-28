@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kstreamripper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kstreamripper/ChangeLog,v 1.25 2011/09/27 20:23:19 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kstreamripper/ChangeLog,v 1.26 2011/10/28 23:33:16 abcd Exp $
+
+  28 Oct 2011; Jonathan Callen <abcd@gentoo.org> -kstreamripper-0.7.74.ebuild:
+  remove old
 
 *kstreamripper-0.7.100 (27 Sep 2011)
 
