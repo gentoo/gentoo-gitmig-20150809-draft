@@ -12,8 +12,8 @@ MAX_NET_INTERFACES. For more info, see sf.net #2872682 and gentoo bug #384505
 
 diff --git a/configure.ac.in b/configure.ac.in
 index 0f00237..d52d998 100644
---- a/configure.ac.in
-+++ b/configure.ac.in
+--- a/configure.ac
++++ b/configure.ac
 @@ -802,7 +802,7 @@ AC_DEFINE(CONFIG_FILE, "$HOME/.conkyrc", [Configfile of the user])
  AC_DEFINE(MAX_SPECIALS_DEFAULT, 512, [Default maximum number of special things, e.g. fonts, offsets, aligns, etc.])
  AC_DEFINE(MAX_USER_TEXT_DEFAULT, 16384, [Default maximum size of config TEXT buffer, i.e. below TEXT line.])
