@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-9999.ebuild,v 1.1 2011/06/12 18:15:27 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-9999.ebuild,v 1.2 2011/10/28 22:51:07 naota Exp $
 
 EAPI=3
 
@@ -26,13 +26,13 @@ SLOT="0"
 IUSE="+libnotify sound"
 
 DEPEND=""
-RDEPEND="$(ruby_implementation_depend ruby18 '>=' -1.8.7)[ssl]
-	libnotify? ( x11-libs/libnotify )
+RDEPEND="libnotify? ( x11-libs/libnotify )
 	sound? ( media-sound/alsa-utils )"
 
 ruby_add_rdepend "dev-ruby/ruby-gtk2
 	dev-ruby/rcairo
-	dev-ruby/httpclient"
+	dev-ruby/httpclient
+	virtual/ruby-ssl"
 
 S="${WORKDIR}/${PN}"
 
