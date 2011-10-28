@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.134 2011/10/21 13:02:10 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.135 2011/10/28 19:34:28 maekke Exp $
+
+  28 Oct 2011; Markus Meier <maekke@gentoo.org> brasero-2.32.1-r1.ebuild:
+  arm stable, bug #385699
 
   21 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   brasero-2.32.1-r1.ebuild:
