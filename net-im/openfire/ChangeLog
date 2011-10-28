@@ -1,6 +1,14 @@
 # ChangeLog for net-im/openfire
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/ChangeLog,v 1.40 2011/03/22 15:11:38 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/ChangeLog,v 1.41 2011/10/28 12:15:37 slyfox Exp $
+
+*openfire-3.7.1 (28 Oct 2011)
+
+  28 Oct 2011; Sergei Trofimovich <slyfox@gentoo.org> +openfire-3.7.1.ebuild,
+  files/openfire-initd:
+  Version bump. Bug #386687 by Thomas Raschbacher. Shoud also fix #364541 by
+  Stefan Briesenick (doesn't work: dialback broken). init.d script now uses
+  --user/--exec.
 
   22 Mar 2011; Peter Volkov <pva@gentoo.org> openfire-3.6.1.ebuild,
   openfire-3.6.3.ebuild, openfire-3.6.4.ebuild, openfire-3.7.0.ebuild:

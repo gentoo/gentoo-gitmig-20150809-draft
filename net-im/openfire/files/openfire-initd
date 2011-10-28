@@ -13,7 +13,13 @@ start() {
 	OPENFIRE_CMD=`GENTOO_VM=${GENTOO_VM} java-config -J`
 
 	ebegin "Starting Openfire Server"
-        start-stop-daemon --chuid jabber --background --make-pidfile --pidfile /var/run/jabber/openfire.pid --start --startas ${OPENFIRE_CMD} -- ${OPENFIRE_ARGS} > /var/log/openfire.log 2>&1
+	start-stop-daemon \
+		--user jabber \
+		--background \
+		--make-pidfile \
+		--pidfile /var/run/jabber/openfire.pid \
+		--start \
+		--exec ${OPENFIRE_CMD} -- ${OPENFIRE_ARGS} > /var/log/openfire.log 2>&1
 	eend
 }
 
