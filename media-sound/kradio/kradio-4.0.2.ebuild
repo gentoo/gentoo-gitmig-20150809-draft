@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/kradio-4.0.2.ebuild,v 1.4 2011/10/01 19:01:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/kradio-4.0.2.ebuild,v 1.5 2011/10/28 23:34:35 abcd Exp $
 
-EAPI=3
+EAPI=4
 
 KDE_LINGUAS="cs de es is pl pt pt_BR ru uk"
 inherit kde4-base
