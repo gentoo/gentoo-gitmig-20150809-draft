@@ -1,0 +1,11 @@
+# ChangeLog for x11-themes/zukitwo
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukitwo/ChangeLog,v 1.1 2011/10/28 08:59:49 tetromino Exp $
+
+*zukitwo-0_pre20111023 (28 Oct 2011)
+
+  28 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +zukitwo-0_pre20111023.ebuild, +metadata.xml:
+  New ebuild for Zukitwo gnome theme (bug #377731); thanks to Christoph Brill
+  <egore@gmx.de>.
+
