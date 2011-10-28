@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libwnck
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.273 2011/10/28 20:22:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.274 2011/10/28 22:31:42 tetromino Exp $
+
+*libwnck-3.2.1 (28 Oct 2011)
+
+  28 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libwnck-3.2.1.ebuild:
+  Add libwnck-3.2.1 from the gnome overlay. Notable changes: new API for
+  getting class group/instance name of a WnckWindow.
 
   28 Oct 2011; Markus Meier <maekke@gentoo.org> libwnck-2.30.7.ebuild:
   arm stable, bug #385699
