@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13182 2011/10/28 05:16:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13183 2011/10/28 21:48:26 tetromino Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -750,8 +750,10 @@ sci-chemistry/webmo
 # GNOME 3.2 mask
 >=dev-libs/gobject-introspection-1.29
 >=dev-libs/gjs-1.29
+>=dev-libs/libpeas-1.2
 >=dev-python/pygobject-2.28.6-r50
-=media-libs/clutter-1.7*
+>=media-libs/clutter-1.7
+>=media-libs/cogl-1.7
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (8 Jun 2011)
 # Broken upstream
