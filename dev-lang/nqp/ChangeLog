@@ -1,0 +1,10 @@
+# ChangeLog for dev-lang/nqp
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/ChangeLog,v 1.1 2011/10/28 15:18:17 patrick Exp $
+
+*nqp-2011.10 (28 Oct 2011)
+
+  28 Oct 2011; Patrick Lauer <patrick@gentoo.org> +nqp-2011.10.ebuild,
+  +metadata.xml:
+  Initial import for #388173, ebuild by Martin von Gagern
+
