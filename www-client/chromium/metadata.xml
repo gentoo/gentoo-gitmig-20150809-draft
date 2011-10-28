@@ -3,9 +3,4 @@
 <pkgmetadata>
 	<herd>chromium</herd>
 	<longdescription>Chromium is the open-source web browser project behind Google Chrome</longdescription>
-	<use>
-		<flag name="chromedriver">Also build and install ChromeDriver, a tool that
-		can control the browser using automation proxy framework. This is mostly
-		intended for automated testing of web applications.</flag>
-	</use>
 </pkgmetadata>
