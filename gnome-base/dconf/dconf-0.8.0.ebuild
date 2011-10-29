@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/dconf-0.8.0.ebuild,v 1.6 2011/10/28 19:56:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/dconf-0.8.0.ebuild,v 1.7 2011/10/29 17:00:16 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -20,8 +20,10 @@ RDEPEND=">=dev-libs/glib-2.27.3:2
 	X? ( >=dev-libs/libxml2-2.7.7
 		x11-libs/gtk+:3 )"
 DEPEND="${RDEPEND}
+	dev-util/gtk-doc-am
 	doc? ( >=dev-util/gtk-doc-1.15 )
 	vala? ( >=dev-lang/vala-0.11.7:0.12 )"
+# eautoreconf requires gtk-doc-am
 
 pkg_setup() {
 	G2CONF="${G2CONF}

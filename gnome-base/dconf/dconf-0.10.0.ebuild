@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/dconf-0.10.0.ebuild,v 1.1 2011/10/29 00:49:04 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/dconf-0.10.0.ebuild,v 1.2 2011/10/29 17:00:16 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -21,8 +21,10 @@ RDEPEND=">=dev-libs/glib-2.29.90:2
 		x11-libs/gtk+:3 )"
 # vala:0.14 due to an automagic version-check #ifdef (commit a15d9621)
 DEPEND="${RDEPEND}
+	dev-util/gtk-doc-am
 	doc? ( >=dev-util/gtk-doc-1.15 )
 	vala? ( dev-lang/vala:0.14 )"
+# eautoreconf requires gtk-doc-am
 
 pkg_setup() {
 	G2CONF="${G2CONF}
