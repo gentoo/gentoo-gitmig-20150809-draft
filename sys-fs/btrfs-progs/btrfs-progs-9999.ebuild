@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.14 2011/09/21 08:11:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.15 2011/10/29 05:17:45 slyfox Exp $
 
 inherit eutils git-2
 
@@ -20,7 +20,7 @@ DEPEND="debug-utils? ( dev-python/matplotlib )
 	)"
 RDEPEND="${DEPEND}"
 
-EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/kernel/git/mason/btrfs-progs-unstable.git"
+EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/kernel/git/mason/btrfs-progs.git"
 
 src_unpack() {
 	git-2_src_unpack
