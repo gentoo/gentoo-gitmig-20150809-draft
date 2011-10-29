@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdesudo/kdesudo-3.4.2.4.ebuild,v 1.2 2011/10/29 00:39:21 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdesudo/kdesudo-3.4.2.4.ebuild,v 1.3 2011/10/29 21:39:11 dilfridge Exp $
 
-EAPI=3
+EAPI=4
 # FIXME. What is linguas_jv, different Japanese translation?
 KDE_LINGUAS="ar cs da de el en_GB es et fa fi fr gl he hr hu id is it ja kk ko
 lt lv ms nb nl oc pl pt pt_BR ro ru sk sv tl tr uk zh_CN zh_TW"
