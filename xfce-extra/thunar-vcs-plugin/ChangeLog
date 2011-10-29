@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/thunar-vcs-plugin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vcs-plugin/ChangeLog,v 1.14 2011/03/20 13:25:50 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-vcs-plugin/ChangeLog,v 1.15 2011/10/29 20:30:00 ssuominen Exp $
+
+  29 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  thunar-vcs-plugin-0.1.4.ebuild:
+  Import missing ru.po from git wrt #379051 by Dmitri Bogomolov
 
 *thunar-vcs-plugin-0.1.4 (20 Mar 2011)
 
