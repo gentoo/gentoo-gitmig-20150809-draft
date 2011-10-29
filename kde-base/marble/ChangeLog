@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.111 2011/10/28 19:57:38 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.112 2011/10/29 18:28:12 dilfridge Exp $
+
+  29 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  marble-4.7.2-r1.ebuild:
+  FindMarbleWidget.cmake has not been there for a while already, so dont try to
+  install it, bug 388839
 
 *marble-4.7.2-r1 (28 Oct 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.7.2-r1.ebuild,v 1.1 2011/10/28 19:57:38 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.7.2-r1.ebuild,v 1.2 2011/10/29 18:28:12 dilfridge Exp $
 
 EAPI=4
 
@@ -66,12 +66,4 @@ src_configure() {
 	find "${S}/marble/src/bindings/python/sip" -name "*.sip" | xargs -- sed -i 's/#include <marble\//#include </'
 
 	kde4-base_src_configure
-}
-
-src_install() {
-	if use plasma; then
-		insinto /usr/share/apps/cmake/modules
-		doins "${S}"/cmake/modules/FindMarbleWidget.cmake
-	fi
-	kde4-base_src_install
 }
