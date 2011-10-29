@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/ndiswrapper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.117 2011/04/30 15:31:54 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.118 2011/10/29 08:14:01 angelos Exp $
+
+*ndiswrapper-1.57_rc1 (29 Oct 2011)
+
+  29 Oct 2011; Christoph Mende <angelos@gentoo.org>
+  +ndiswrapper-1.57_rc1.ebuild:
+  Version bump (bug #387439), depend on WEXT_PRIV instead of just WIRELESS_EXT
+  (bug #387131)
 
   30 Apr 2011; Christoph Mende <angelos@gentoo.org>
   -files/ndiswrapper-1.55-2.6.31.patch:
