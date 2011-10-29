@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/quickaccess/quickaccess-0.8.1b.ebuild,v 1.2 2011/08/22 21:50:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/quickaccess/quickaccess-0.8.1b.ebuild,v 1.3 2011/10/29 00:10:27 abcd Exp $
 
-EAPI=3
+EAPI=4
 
 inherit kde4-base
 

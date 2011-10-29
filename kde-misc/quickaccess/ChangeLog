@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/quickaccess
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/quickaccess/ChangeLog,v 1.5 2011/08/22 21:50:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/quickaccess/ChangeLog,v 1.6 2011/10/29 00:10:27 abcd Exp $
+
+  29 Oct 2011; Jonathan Callen <abcd@gentoo.org> -quickaccess-0.8.1.ebuild,
+  quickaccess-0.8.1b.ebuild:
+  Bump to EAPI=4; remove old
 
   22 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   quickaccess-0.8.1b.ebuild:
