@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/nm-applet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.69 2011/10/27 16:53:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.70 2011/10/29 06:35:48 tetromino Exp $
+
+*nm-applet-0.9.1.90 (29 Oct 2011)
+
+  29 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +nm-applet-0.9.1.90.ebuild:
+  Bump to 0.9.1.90 from the gnome overlay. Adds libnm-gtk, needed for
+  gnome-3.2.
 
   27 Oct 2011; Jeroen Roovers <jer@gentoo.org> nm-applet-0.8.ebuild:
   Fix libnl dependency.
