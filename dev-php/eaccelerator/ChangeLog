@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/eaccelerator
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/ChangeLog,v 1.22 2011/03/13 08:47:58 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/eaccelerator/ChangeLog,v 1.23 2011/10/29 10:20:29 hwoarang Exp $
+
+  29 Oct 2011; Markos Chandras <hwoarang@gentoo.org>
+  eaccelerator-0.9.6.1-r4.ebuild:
+  Stable on amd64 wrt bug #388523
 
   13 Mar 2011; <olemarkus@gentoo.org> -eaccelerator-0.9.5.3-r1.ebuild,
   -eaccelerator-0.9.6.ebuild, -eaccelerator-0.9.6.1.ebuild,
