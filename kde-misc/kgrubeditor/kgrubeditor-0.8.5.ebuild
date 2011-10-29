@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgrubeditor/kgrubeditor-0.8.5.ebuild,v 1.3 2011/01/31 05:00:05 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgrubeditor/kgrubeditor-0.8.5.ebuild,v 1.4 2011/10/29 00:37:30 abcd Exp $
 
-EAPI=3
+EAPI=4
 
 inherit kde4-base
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio_gopher/kio_gopher-0.1.3.ebuild,v 1.3 2011/02/18 20:02:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio_gopher/kio_gopher-0.1.3.ebuild,v 1.4 2011/10/29 00:35:51 abcd Exp $
 
-EAPI=3
+EAPI=4
 KDE_LINGUAS="ar bg br ca cs cy da de el en_GB es et fr ga gl is it ka km lt lv
 ms nb nds nl nn pa pl pt pt_BR ro ru rw sk sv ta tr uk zh_CN zh_TW"
 inherit kde4-base

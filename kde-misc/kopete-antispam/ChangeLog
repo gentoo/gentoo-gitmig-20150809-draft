@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kopete-antispam
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kopete-antispam/ChangeLog,v 1.5 2011/01/31 05:39:38 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kopete-antispam/ChangeLog,v 1.6 2011/10/29 00:31:50 abcd Exp $
+
+  29 Oct 2011; Jonathan Callen <abcd@gentoo.org> kopete-antispam-0.5.ebuild:
+  Bump to EAPI=4
 
   31 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org>
   kopete-antispam-0.5.ebuild:

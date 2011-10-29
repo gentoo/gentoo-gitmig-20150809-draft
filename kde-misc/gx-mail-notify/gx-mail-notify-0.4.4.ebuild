@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/gx-mail-notify/gx-mail-notify-0.4.4.ebuild,v 1.1 2010/10/06 20:45:44 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/gx-mail-notify/gx-mail-notify-0.4.4.ebuild,v 1.2 2011/10/29 00:42:11 abcd Exp $
 
-EAPI=3
+EAPI=4
 
 OPENGL_REQUIRED=always
 inherit kde4-base
