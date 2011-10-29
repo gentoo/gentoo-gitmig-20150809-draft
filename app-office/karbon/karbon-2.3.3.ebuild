@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/karbon-2.3.3.ebuild,v 1.4 2011/08/04 16:29:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/karbon-2.3.3.ebuild,v 1.5 2011/10/29 21:51:12 dilfridge Exp $
 
 EAPI=3
 KMNAME="koffice"
@@ -16,7 +16,7 @@ IUSE="+pstoedit wpg"
 DEPEND="
 	media-libs/libart_lgpl
 	pstoedit? ( media-gfx/pstoedit )
-	wpg? ( app-text/libwpg )
+	wpg? ( app-text/libwpg:0.1 )
 "
 RDEPEND="${DEPEND}"
 
