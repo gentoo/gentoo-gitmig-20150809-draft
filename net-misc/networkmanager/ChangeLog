@@ -1,6 +1,19 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.116 2011/10/27 05:50:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.117 2011/10/29 06:30:47 tetromino Exp $
+
+*networkmanager-0.9.1.90-r3 (29 Oct 2011)
+
+  29 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +files/01-org.freedesktop.NetworkManager.settings.modify.system.pkla,
+  +networkmanager-0.9.1.90-r3.ebuild,
+  +files/networkmanager-0.9.1.90-force-libnl1.1.patch,
+  +files/networkmanager-0.9.1.90-if.h.patch,
+  +files/networkmanager-0.9.1.90-rfkill.patch:
+  Bump to 0.9.1.90 from the gnome overlay. Allow users in plugdev group to
+  modify system connections (so dropped wireless connections no longer bring up
+  a modal root password prompt), thanks to Samuli Suominen for the solution.
+  Numerous code changes.
 
   27 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   networkmanager-0.8-r1.ebuild, networkmanager-0.8.4.0-r2.ebuild,
