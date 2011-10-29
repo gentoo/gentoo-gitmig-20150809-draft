@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kosd/kosd-0.7.1.ebuild,v 1.1 2011/08/22 01:17:46 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kosd/kosd-0.7.1.ebuild,v 1.2 2011/10/29 00:31:01 abcd Exp $
 
-EAPI=3
+EAPI=4
 KDE_MINIMAL=4.6
 inherit kde4-base
 
@@ -25,6 +25,6 @@ RDEPEND="${DEPEND}"
 
 pkg_postinst() {
 	kde4-base_pkg_postinstall
-	elog Since version 0.5 kosd is a Plasma-based kded plugin and can be
-	elog configured in the systemsettings dialog \"Shortcuts and Gestures\".
+	elog "Since version 0.5 kosd is a Plasma-based kded plugin and can be"
+	elog "configured in the systemsettings dialog \"Shortcuts and Gestures\"."
 }
