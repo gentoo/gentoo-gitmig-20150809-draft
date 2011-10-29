@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kgrab/kgrab-0.1.1.ebuild,v 1.3 2011/02/02 03:03:05 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kgrab/kgrab-0.1.1.ebuild,v 1.4 2011/10/29 00:01:09 abcd Exp $
 
-EAPI=3
+EAPI=4
 
 KDE_LINGUAS="ar be bg ca cs da de el en_GB eo es et fi fr ga gl he hi hne hr hu
 is it ja km lt lv mai nb nds nl nn pa pl pt pt_BR ro se sk sv th tr uk vi zh_CN
