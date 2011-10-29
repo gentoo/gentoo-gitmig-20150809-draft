@@ -1,11 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-1.6.ebuild,v 1.1 2011/10/29 16:28:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-1.6.ebuild,v 1.2 2011/10/29 18:53:12 hwoarang Exp $
 
 EAPI="4"
-LANGS="ar es pt_BR pt_PT uk"
-LANGSLONG="bg_BG cs_CZ de_DE el_GR es he_IL hr_HR hu_HU fr_FR fi_FI it_IT
-ja_JP nl_NL nb_NO pl_PL ro_RO ru_RU tr_TR"
+LANGS="ar ca da es el fr hr hu it nl pt ro ru tr uk"
+LANGSLONG="cs_CZ de_DE el_GR es_AR es_ES fi_FI he_IL nb_NO pl_PL pt_BR"
 
 inherit qt4-r2
 
