@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-2.32.1-r2.ebuild,v 1.5 2011/10/28 20:07:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-2.32.1-r2.ebuild,v 1.6 2011/10/29 18:50:37 ssuominen Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -27,7 +27,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.74
 	>=dev-libs/glib-2.18:2
 	>=x11-libs/gtk+-2.21.2:2
 	>=gnome-base/gconf-2.6.1:2
-	>=gnome-base/libgnomekbd-2.31.2
+	>=gnome-base/libgnomekbd-2.32.0-r1
 	<gnome-base/libgnomekbd-2.91.0
 	>=gnome-base/gnome-desktop-2.29.92:2
 
