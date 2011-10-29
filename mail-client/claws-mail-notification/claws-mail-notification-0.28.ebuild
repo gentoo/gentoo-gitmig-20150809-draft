@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/claws-mail-notification-0.28.ebuild,v 1.2 2011/10/24 20:08:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/claws-mail-notification-0.28.ebuild,v 1.3 2011/10/29 11:11:52 hwoarang Exp $
 
 EAPI=4
 inherit multilib
@@ -13,7 +13,7 @@ SRC_URI="http://www.claws-mail.org/downloads/plugins/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="libnotify"
 
 RDEPEND=">=mail-client/claws-mail-3.7.10

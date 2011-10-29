@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-gdata
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gdata/ChangeLog,v 1.3 2011/10/24 20:08:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gdata/ChangeLog,v 1.4 2011/10/29 11:11:14 hwoarang Exp $
+
+  29 Oct 2011; Markos Chandras <hwoarang@gentoo.org>
+  claws-mail-gdata-0.2.ebuild:
+  Stable on amd64 wrt bug #387547
 
   24 Oct 2011; Markus Meier <maekke@gentoo.org> claws-mail-gdata-0.2.ebuild:
   x86 stable, bug #387547
