@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krunner-kopete-contacts/krunner-kopete-contacts-0.4.ebuild,v 1.1 2011/01/15 15:31:36 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krunner-kopete-contacts/krunner-kopete-contacts-0.4.ebuild,v 1.2 2011/10/29 00:27:41 abcd Exp $
 
-EAPI=3
+EAPI=4
 inherit kde4-base
 
 DESCRIPTION="A krunner plug-in that allows you to open conversation with your contact"
@@ -20,4 +20,4 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-DOCS="README"
+DOCS=(README)

@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/ktrafficanalyzer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ktrafficanalyzer/ChangeLog,v 1.7 2011/05/04 11:03:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ktrafficanalyzer/ChangeLog,v 1.8 2011/10/29 00:25:51 abcd Exp $
+
+  29 Oct 2011; Jonathan Callen <abcd@gentoo.org>
+  ktrafficanalyzer-0.5.4.1.ebuild:
+  Bump to EAPI=4; make DOCS an array
 
   04 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/ktrafficanalyzer-0.5.3-gcc45.patch:

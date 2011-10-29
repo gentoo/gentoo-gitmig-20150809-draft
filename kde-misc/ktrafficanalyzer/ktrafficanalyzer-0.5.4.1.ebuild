@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ktrafficanalyzer/ktrafficanalyzer-0.5.4.1.ebuild,v 1.2 2011/01/31 06:09:19 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ktrafficanalyzer/ktrafficanalyzer-0.5.4.1.ebuild,v 1.3 2011/10/29 00:25:51 abcd Exp $
 
-EAPI=3
+EAPI=4
 inherit kde4-base
 
 MY_P=KTrafficAnalyzer-${PV}
@@ -18,4 +18,4 @@ IUSE="debug"
 
 S=${WORKDIR}/${MY_P}
 
-DOCS="CHANGELOG SSHUsage TODO"
+DOCS=(CHANGELOG SSHUsage TODO)
