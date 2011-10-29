@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.102 2011/10/23 22:36:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.103 2011/10/29 18:26:51 leio Exp $
+
+*gst-python-0.10.22 (29 Oct 2011)
+
+  29 Oct 2011; Mart Raudsepp <leio@gentoo.org> +gst-python-0.10.22.ebuild:
+  Version bump. Fixes pad probes, fixes for encoding profiles and encodebin.
+  Installs header for use by other gstreamer python bindings, such as bindings
+  for gst-editing-services.
 
   23 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   gst-python-0.10.20.ebuild, gst-python-0.10.21.ebuild:
