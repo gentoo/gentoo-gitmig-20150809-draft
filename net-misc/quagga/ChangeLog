@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/quagga
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.128 2011/10/28 15:23:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.129 2011/10/29 10:37:31 hwoarang Exp $
+
+  29 Oct 2011; Markos Chandras <hwoarang@gentoo.org> quagga-0.99.20-r1.ebuild:
+  Stable on amd64 wrt bug #387375
 
   28 Oct 2011; Jeroen Roovers <jer@gentoo.org> quagga-0.99.20-r1.ebuild:
   Stable for HPPA (bug #387375).
