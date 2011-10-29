@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/gsettings-desktop-schemas
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gsettings-desktop-schemas/ChangeLog,v 1.17 2011/10/28 20:08:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gsettings-desktop-schemas/ChangeLog,v 1.18 2011/10/29 06:45:15 tetromino Exp $
+
+*gsettings-desktop-schemas-3.2.0-r1 (29 Oct 2011)
+
+  29 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gsettings-desktop-schemas-3.2.0-r1.ebuild,
+  +files/gsettings-desktop-schemas-3.2.0-unix-software.patch:
+  Bump to 3.2.0 from the gnome overlay. Adds schemas needed for gnome-3.2.
 
   28 Oct 2011; Markus Meier <maekke@gentoo.org>
   gsettings-desktop-schemas-3.0.1.ebuild:
