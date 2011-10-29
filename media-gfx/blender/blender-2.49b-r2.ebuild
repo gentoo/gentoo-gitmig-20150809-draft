@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.49b-r2.ebuild,v 1.9 2011/10/29 04:41:08 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.49b-r2.ebuild,v 1.10 2011/10/29 21:49:19 sping Exp $
 
 EAPI=2
 
@@ -32,7 +32,7 @@ RDEPEND="ffmpeg? ( virtual/ffmpeg[encode,theora] )
 	ogg? ( media-libs/libogg )
 	virtual/jpeg
 	virtual/opengl"
-DEPEND=">=dev-util/scons-0.98
+DEPEND=">=dev-util/scons-2
 	sys-devel/gcc[openmp?]
 	x11-base/xorg-server
 	${RDEPEND}"
