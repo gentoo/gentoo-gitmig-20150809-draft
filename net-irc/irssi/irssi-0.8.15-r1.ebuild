@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.15-r1.ebuild,v 1.3 2011/09/08 19:00:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.15-r1.ebuild,v 1.4 2011/10/29 17:34:04 binki Exp $
 
 EAPI=3
 
@@ -26,8 +26,7 @@ RDEPEND="sys-libs/ncurses
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9.0"
 RDEPEND="${RDEPEND}
-	perl? ( !net-im/silc-client )
-	!net-irc/irssi-svn"
+	perl? ( !net-im/silc-client )"
 
 S=${WORKDIR}/${MY_P}
 

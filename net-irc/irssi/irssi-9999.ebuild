@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-9999.ebuild,v 1.1 2011/07/22 02:07:05 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-9999.ebuild,v 1.2 2011/10/29 17:34:04 binki Exp $
 
 EAPI=4
 
@@ -28,8 +28,7 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	www-client/lynx"
 RDEPEND="${RDEPEND}
-	perl? ( !net-im/silc-client )
-	!net-irc/irssi-svn"
+	perl? ( !net-im/silc-client )"
 
 src_prepare() {
 	TZ=UTC svn log -v "${ESVN_REPO_URI}" > "${S}"/ChangeLog || die

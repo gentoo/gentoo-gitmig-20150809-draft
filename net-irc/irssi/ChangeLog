@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/irssi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.168 2011/09/08 19:00:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.169 2011/10/29 17:34:04 binki Exp $
+
+  29 Oct 2011; Nathan Phillip Brink <binki@gentoo.org> irssi-0.8.15.ebuild,
+  irssi-0.8.15-r1.ebuild, irssi-9999.ebuild:
+  Drop blocker on net-irc/irssi-svn which was pkgmoved to net-irc/irssi.
 
   08 Sep 2011; Fabian Groffen <grobian@gentoo.org> irssi-0.8.15-r1.ebuild:
   Marked ~sparc-solaris
