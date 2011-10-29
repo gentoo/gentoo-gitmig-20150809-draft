@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.49b-r2.ebuild,v 1.8 2011/07/09 16:56:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.49b-r2.ebuild,v 1.9 2011/10/29 04:41:08 sping Exp $
 
 EAPI=2
 
@@ -57,6 +57,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.44-scriptsdir.patch
 	epatch "${FILESDIR}"/${PN}-2.49a-sys-openjpeg.patch
 	epatch "${FILESDIR}"/${PN}-2.49b-CVE-2009-3850-v4.patch
+	epatch "${FILESDIR}"/${PN}-2.57-linux-3.patch  # Bug #381099
+	epatch "${FILESDIR}"/${PN}-2.49b-subversion-1.7.patch
 	rm -f "${S}/release/scripts/bpymodules/"*.pyc
 }
 
