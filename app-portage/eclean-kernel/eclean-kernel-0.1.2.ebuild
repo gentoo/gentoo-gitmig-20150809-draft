@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eclean-kernel/eclean-kernel-0.1.1.ebuild,v 1.1 2011/10/26 19:49:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eclean-kernel/eclean-kernel-0.1.2.ebuild,v 1.1 2011/10/29 18:23:01 mgorny Exp $
 
 EAPI=4
 PYTHON_DEPEND='*:2.6'
