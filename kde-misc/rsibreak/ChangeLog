@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/rsibreak
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/ChangeLog,v 1.36 2011/01/31 06:39:18 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/ChangeLog,v 1.37 2011/10/29 00:09:07 abcd Exp $
+
+  29 Oct 2011; Jonathan Callen <abcd@gentoo.org> rsibreak-0.11.ebuild:
+  Bump to EAPI=4; set KDE_HANDBOOK
 
 *rsibreak-0.11 (31 Jan 2011)
 
