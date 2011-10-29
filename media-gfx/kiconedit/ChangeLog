@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/kiconedit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kiconedit/ChangeLog,v 1.6 2011/02/02 03:03:58 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kiconedit/ChangeLog,v 1.7 2011/10/28 23:58:39 abcd Exp $
+
+  28 Oct 2011; Jonathan Callen <abcd@gentoo.org> kiconedit-4.4.0.ebuild:
+  Bump to EAPI=4; set KDE_HANDBOOK
 
   02 Feb 2011; Theo Chatzimichos <tampakrap@gentoo.org> kiconedit-4.4.0.ebuild:
   EAPI3
