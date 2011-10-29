@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/kile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.145 2011/08/07 03:19:10 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.146 2011/10/29 01:09:05 abcd Exp $
+
+  29 Oct 2011; Jonathan Callen <abcd@gentoo.org> -kile-2.1_beta5.ebuild:
+  remove old
 
   07 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> kile-2.1.ebuild:
   x86 stable wrt bug #377533
