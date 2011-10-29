@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sonata
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.55 2011/07/09 22:04:43 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.56 2011/10/29 09:45:35 angelos Exp $
+
+  29 Oct 2011; Christoph Mende <angelos@gentoo.org> sonata-1.6.2.1.ebuild:
+  Use codingteam.net mirror instead of berlios
 
   09 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> sonata-1.6.2.1.ebuild:
   Dropped ~ppc64
