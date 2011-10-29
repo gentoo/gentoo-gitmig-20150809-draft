@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kvkbd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kvkbd/ChangeLog,v 1.6 2011/08/11 20:10:51 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kvkbd/ChangeLog,v 1.7 2011/10/29 00:25:05 abcd Exp $
+
+  29 Oct 2011; Jonathan Callen <abcd@gentoo.org> kvkbd-0.6.ebuild:
+  Bump to EAPI=4
 
   11 Aug 2011; Andreas K. Huettel <dilfridge@gentoo.org> kvkbd-0.6.ebuild,
   +files/kvkbd-0.6-underlinking.patch:

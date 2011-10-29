@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/plasma-applet-daisy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-applet-daisy/ChangeLog,v 1.5 2011/01/31 14:28:25 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-applet-daisy/ChangeLog,v 1.6 2011/10/29 00:22:20 abcd Exp $
+
+  29 Oct 2011; Jonathan Callen <abcd@gentoo.org>
+  plasma-applet-daisy-0.0.4.25.ebuild:
+  Bump to EAPI=4
 
   31 Jan 2011; Theo Chatzimichos <tampakrap@gentoo.org>
   -plasma-applet-daisy-0.0.4.23.ebuild, plasma-applet-daisy-0.0.4.25.ebuild:

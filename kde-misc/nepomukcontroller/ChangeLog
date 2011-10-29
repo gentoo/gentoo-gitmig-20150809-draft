@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/nepomukcontroller
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/nepomukcontroller/ChangeLog,v 1.1 2011/02/27 15:26:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/nepomukcontroller/ChangeLog,v 1.2 2011/10/29 00:24:11 abcd Exp $
+
+  29 Oct 2011; Jonathan Callen <abcd@gentoo.org> nepomukcontroller-0.2.ebuild:
+  Bump to EAPI=4
 
 *nepomukcontroller-0.2 (27 Feb 2011)
 

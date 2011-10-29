@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/nepomukcontroller/nepomukcontroller-0.2.ebuild,v 1.1 2011/02/27 15:26:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/nepomukcontroller/nepomukcontroller-0.2.ebuild,v 1.2 2011/10/29 00:24:11 abcd Exp $
 
-EAPI=3
+EAPI=4
 
 KDE_MINIMAL="4.6"
 inherit kde4-base
