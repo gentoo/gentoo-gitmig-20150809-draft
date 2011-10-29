@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.3-r2.ebuild,v 1.1 2011/10/23 10:39:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.3-r2.ebuild,v 1.2 2011/10/29 17:06:28 ssuominen Exp $
 
 EAPI=4
 inherit xfconf
@@ -30,7 +30,10 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 pkg_setup() {
-	PATCHES=( "${FILESDIR}"/${P}-empty_directory_segmentation_fault.patch )
+	PATCHES=(
+		"${FILESDIR}"/${P}-update_desktop_entry.patch
+		"${FILESDIR}"/${P}-empty_directory_segmentation_fault.patch
+		)
 
 	XFCONF=(
 		$(use_enable dbus)
