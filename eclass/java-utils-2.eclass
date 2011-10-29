@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.146 2011/10/29 13:17:15 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.147 2011/10/29 14:05:48 caster Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -2009,6 +2009,8 @@ eant() {
 		antflags="${antflags} -DJunit.present=true"
 		[[ ${ANT_TASKS} = *ant-junit* ]] && gcp="${gcp} junit"
 		getjarsarg="--with-dependencies"
+	else
+		antflags="${antflags} -Dmaven.test.skip=true"
 	fi
 
 	local cp
