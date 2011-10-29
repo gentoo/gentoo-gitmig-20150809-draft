@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/alure
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alure/ChangeLog,v 1.4 2011/08/22 06:28:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alure/ChangeLog,v 1.5 2011/10/29 10:28:10 hwoarang Exp $
+
+  29 Oct 2011; Markos Chandras <hwoarang@gentoo.org> alure-1.2.ebuild:
+  Stable on amd64 wrt bug #388577
 
 *alure-1.2 (22 Aug 2011)
 
