@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/plasmatvgr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasmatvgr/ChangeLog,v 1.4 2011/06/13 15:07:28 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasmatvgr/ChangeLog,v 1.5 2011/10/29 00:12:40 abcd Exp $
+
+  29 Oct 2011; Jonathan Callen <abcd@gentoo.org> plasmatvgr-0.47.ebuild:
+  Bump to EAPI=4
 
   13 Jun 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Remove myself from metadata.xml
