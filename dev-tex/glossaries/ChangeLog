@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/glossaries
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.44 2011/10/25 11:38:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.45 2011/10/29 19:27:49 maekke Exp $
+
+  29 Oct 2011; Markus Meier <maekke@gentoo.org> glossaries-3.01.ebuild:
+  arm stable, bug #387579
 
   25 Oct 2011; Jeroen Roovers <jer@gentoo.org> glossaries-3.01.ebuild:
   Stable for HPPA (bug #387579).
