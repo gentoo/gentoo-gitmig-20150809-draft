@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.3.82.ebuild,v 1.2 2011/10/17 15:25:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-2.3.83.ebuild,v 1.1 2011/10/29 17:44:14 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -11,7 +11,10 @@ EAPI=4
 KDE_SCM=git
 KDE_MINIMAL=4.6.4
 OPENGL_REQUIRED=optional
-KDE_HANDBOOK=optional
+
+# KDE_HANDBOOK=optional
+# no handbook in 83
+
 KDE_LINGUAS_LIVE_OVERRIDE=true
 inherit kde4-base
 
@@ -162,6 +165,7 @@ src_configure() {
 		$(cmake-utils_use_with pdf Pstoedit)
 		$(cmake-utils_use_with postgres PostgreSQL)
 		$(cmake-utils_use_with semantic-desktop Soprano)
+		$(cmake-utils_use semantic-desktop NEPOMUK)
 		$(cmake-utils_use_with ssl OpenSSL)
 		$(cmake-utils_use_with sybase FreeTDS)
 		$(cmake-utils_use_with tiff TIFF)

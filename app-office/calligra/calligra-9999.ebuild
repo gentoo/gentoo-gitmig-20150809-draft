@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.3 2011/10/17 15:25:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/calligra/calligra-9999.ebuild,v 1.4 2011/10/29 17:44:14 dilfridge Exp $
 
 # note: files that need to be checked for dependencies etc:
 # CMakeLists.txt, kexi/CMakeLists.txt kexi/migration/CMakeLists.txt
@@ -162,6 +162,7 @@ src_configure() {
 		$(cmake-utils_use_with pdf Pstoedit)
 		$(cmake-utils_use_with postgres PostgreSQL)
 		$(cmake-utils_use_with semantic-desktop Soprano)
+		$(cmake-utils_use semantic-desktop NEPOMUK)
 		$(cmake-utils_use_with ssl OpenSSL)
 		$(cmake-utils_use_with sybase FreeTDS)
 		$(cmake-utils_use_with tiff TIFF)
