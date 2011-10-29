@@ -1,6 +1,12 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.128 2011/10/27 06:35:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.129 2011/10/29 19:55:46 jlec Exp $
+
+*gajim-0.14.4-r2 (29 Oct 2011)
+
+  29 Oct 2011; Justin Lecher <jlec@gentoo.org> +gajim-0.14.4-r2.ebuild,
+  +files/gajim-0.14.4-debian_patches_unicode.patch:
+  Try debian solution for the unicode problem, #383463
 
   27 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   gajim-0.14.1-r2.ebuild, gajim-0.14.4.ebuild, gajim-0.14.4-r1.ebuild:
