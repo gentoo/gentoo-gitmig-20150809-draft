@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/subtle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/subtle/ChangeLog,v 1.2 2011/09/19 22:07:42 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/subtle/ChangeLog,v 1.3 2011/10/29 05:38:09 radhermit Exp $
+
+  29 Oct 2011; Tim Harder <radhermit@gentoo.org> subtle-0.10.3008.ebuild,
+  subtle-9999.ebuild:
+  Remove unused test use flag.
 
   19 Sep 2011; Tim Harder <radhermit@gentoo.org> subtle-0.10.3008.ebuild,
   subtle-9999.ebuild:
