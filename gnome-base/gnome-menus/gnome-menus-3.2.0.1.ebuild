@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-3.0.1.ebuild,v 1.2 2011/10/23 23:03:09 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-3.2.0.1.ebuild,v 1.1 2011/10/29 01:58:08 tetromino Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-PYTHON_DEPEND="python? 2:2.4"
+PYTHON_DEPEND="2:2.4"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
@@ -16,20 +16,30 @@ DESCRIPTION="The GNOME menu system, implementing the F.D.O cross-desktop spec"
 HOMEPAGE="http://www.gnome.org"
 
 LICENSE="GPL-2 LGPL-2"
-SLOT="0"
+SLOT="3"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 
-IUSE="debug +introspection python"
+# +python for gmenu-simple-editor
+IUSE="debug +introspection +python test"
 
-RDEPEND=">=dev-libs/glib-2.18
-	python? ( dev-python/pygtk )
-	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )"
-DEPEND="${RDEPEND}
+COMMON_DEPEND=">=dev-libs/glib-2.29.15:2
+	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
+	python? (
+		>=dev-libs/gobject-introspection-0.9.5
+		dev-python/pygobject:3
+		x11-libs/gdk-pixbuf:2[introspection]
+		x11-libs/gtk+:3[introspection] )"
+# Older versions of slot 0 install the menu editor and the desktop directories
+RDEPEND="${COMMON_DEPEND}
+	!<gnome-base/gnome-menus-3.0.1-r1:0"
+DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext
 	>=dev-util/pkgconfig-0.9
-	>=dev-util/intltool-0.40"
+	>=dev-util/intltool-0.40
+	test? ( dev-libs/gjs )"
 
 pkg_setup() {
+	python_pkg_setup
 	DOCS="AUTHORS ChangeLog HACKING NEWS README"
 
 	# Do NOT compile with --disable-debug/--enable-debug=no
@@ -38,10 +48,14 @@ pkg_setup() {
 		G2CONF="${G2CONF} --enable-debug=minimum"
 	fi
 
-	G2CONF="${G2CONF}
-		--disable-static
-		$(use_enable python)
-		$(use_enable introspection)"
+	if use python || use introspection; then
+		use introspection || ewarn "Enabling introspection due to USE=python"
+		G2CONF="${G2CONF} --enable-introspection"
+	else
+		G2CONF="${G2CONF} --disable-introspection"
+	fi
+
+	G2CONF="${G2CONF} --disable-static"
 }
 
 src_prepare() {
@@ -78,7 +92,7 @@ src_install() {
 		"${ED}"/etc/xdg/menus/gnome-applications.menu || die "menu move failed"
 
 	exeinto /etc/X11/xinit/xinitrc.d/
-	doexe "${FILESDIR}/10-xdg-menu-gnome" || die "doexe failed"
+	doexe "${FILESDIR}/10-xdg-menu-gnome"
 }
 
 pkg_postinst() {
