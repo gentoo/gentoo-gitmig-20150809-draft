@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.201 2011/07/09 16:56:25 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.202 2011/10/29 03:36:58 sping Exp $
+
+  29 Oct 2011; Sebastian Pipping <sping@gentoo.org> blender-2.57-r1.ebuild,
+  +files/blender-2.57-linux-3.patch:
+  Allow compilation of Blender 2.57-r1 against Linux 3.x (bug #381099)
 
   09 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> blender-2.49b-r2.ebuild:
   ppc64 stable wrt #349847
