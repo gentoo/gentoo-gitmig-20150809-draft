@@ -1,11 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/fancytasks/fancytasks-1.0.94.ebuild,v 1.1 2011/01/06 18:18:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/fancytasks/fancytasks-1.0.94.ebuild,v 1.2 2011/10/29 00:46:44 abcd Exp $
 
-EAPI=3
+EAPI=4
 KDE_LINGUAS="da de en_GB es et fr km nds pl pt ru sv tr uk"
-KDE_LINGUAS_DIR="applet/po"
-# KDE_LINGUAS_DIR doesn't have support for multiple directories: containment/po
+KDE_LINGUAS_DIR=( applet/po containment/po )
 inherit kde4-base
 
 DESCRIPTION="Task and launch representation plasmoid"
@@ -26,9 +25,4 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-DOCS="CHANGELOG README TODO"
-
-src_prepare() {
-	kde4-base_src_prepare
-	use linguas_pl || rm -f containment/po/pl.po
-}
+DOCS=( CHANGELOG README TODO )
