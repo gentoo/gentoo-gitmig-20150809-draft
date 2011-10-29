@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/libgnomekbd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomekbd/ChangeLog,v 1.95 2011/10/29 18:48:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomekbd/ChangeLog,v 1.96 2011/10/29 18:54:40 ssuominen Exp $
+
+  29 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  -libgnomekbd-2.32.0.ebuild:
+  old
 
   29 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
   libgnomekbd-2.32.0-r1.ebuild:
