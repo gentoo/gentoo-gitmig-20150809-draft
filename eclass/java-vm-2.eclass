@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.34 2011/10/11 10:55:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.35 2011/10/29 14:36:34 caster Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -24,6 +24,7 @@ export WANT_JAVA_CONFIG=2
 
 JAVA_VM_CONFIG_DIR="/usr/share/java-config-2/vm"
 JAVA_VM_DIR="/usr/lib/jvm"
+JAVA_VM_SYSTEM="/etc/java-config-2/current-system-vm"
 JAVA_VM_BUILD_ONLY="${JAVA_VM_BUILD_ONLY:-FALSE}"
 
 EXPORT_FUNCTIONS pkg_setup pkg_postinst pkg_prerm pkg_postrm
@@ -37,9 +38,18 @@ java-vm-2_pkg_setup() {
 }
 
 java-vm-2_pkg_postinst() {
-	# Set the generation-2 system VM, if it isn't set
-	if [[ -z "$(java-config-2 -f)" ]]; then
+	# Set the generation-2 system VM, if it isn't set or the setting is invalid
+	# Note that we cannot rely on java-config here, as it will silently recognize
+	# e.g. icedtea6-bin as valid system VM if icedtea6 is set but invalid (e.g. due
+	# to the migration to icedtea-6)
+	if [[ ! -L "${JAVA_VM_SYSTEM}" ]]; then
 		java_set_default_vm_
+	else
+		local current_vm_path="$(readlink "${JAVA_VM_SYSTEM}")"
+		local current_vm="$(basename "${current_vm_path}")"
+		if [[ ! -L "${JAVA_VM_DIR}/${current_vm}" ]]; then
+			java_set_default_vm_
+		fi
 	fi
 
 	java-vm_check-nsplugin
@@ -85,7 +95,8 @@ java-vm_set-nsplugin() {
 }
 
 java-vm-2_pkg_prerm() {
-	if [[ "$(java-config -f 2>/dev/null)" == "${VMHANDLE}" ]]; then
+	# Although REPLACED_BY_VERSION is EAPI=4, we shouldn't need to check EAPI for this use case
+	if [[ "$(java-config -f 2>/dev/null)" == "${VMHANDLE}" && -z "${REPLACED_BY_VERSION}" ]]; then
 		ewarn "It appears you are removing your system-vm!"
 		ewarn "Please run java-config -L to list available VMs,"
 		ewarn "then use java-config -S to set a new system-vm!"
