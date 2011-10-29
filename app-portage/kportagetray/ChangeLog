@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/kportagetray
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/kportagetray/ChangeLog,v 1.10 2011/10/04 21:53:21 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/kportagetray/ChangeLog,v 1.11 2011/10/29 01:06:37 abcd Exp $
+
+  29 Oct 2011; Jonathan Callen <abcd@gentoo.org> kportagetray-0.2.4.ebuild:
+  Bump to EAPI=4; cleanup
 
   04 Oct 2011; Joseph Jezak <josejx@gentoo.org> kportagetray-0.2.4.ebuild:
   Marked ~ppc for bug #322703.
