@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/rep-gtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.72 2011/10/21 15:06:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/rep-gtk/ChangeLog,v 1.73 2011/10/30 17:44:53 armin76 Exp $
+
+  30 Oct 2011; Raúl Porcel <armin76@gentoo.org> rep-gtk-0.90.7.ebuild:
+  alpha/ia64/sparc stable wrt #385699
 
   21 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> rep-gtk-0.90.7.ebuild:
   x86 stable wrt bug #385699
