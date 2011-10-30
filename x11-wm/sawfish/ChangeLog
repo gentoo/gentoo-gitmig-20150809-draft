@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.105 2011/10/21 15:08:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.106 2011/10/30 18:06:40 armin76 Exp $
+
+  30 Oct 2011; Raúl Porcel <armin76@gentoo.org> sawfish-1.8.2.ebuild:
+  alpha/ia64/sh/sparc stable wrt #385699
 
   21 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> sawfish-1.8.2.ebuild:
   x86 stable wrt bug #385699
