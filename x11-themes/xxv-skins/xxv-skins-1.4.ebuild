@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xxv-skins/xxv-skins-1.4.ebuild,v 1.1 2009/08/16 18:30:05 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xxv-skins/xxv-skins-1.4.ebuild,v 1.2 2011/10/30 19:46:02 hd_brummy Exp $
 
 inherit eutils
 
 DESCRIPTION="Additional skins for XXV"
-HOMEPAGE="http://xxv.berlios.de/content/view/43/1/"
-SRC_URI="mirror://berlios/xxv/${P}.tgz"
+HOMEPAGE=""
+SRC_URI="mirror://gentoo/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
