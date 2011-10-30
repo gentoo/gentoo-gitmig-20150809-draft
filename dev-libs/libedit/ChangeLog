@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libedit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.58 2011/10/23 08:34:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.59 2011/10/30 16:12:02 armin76 Exp $
+
+  30 Oct 2011; Raúl Porcel <armin76@gentoo.org> libedit-20110709.3.0.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #383057
 
   23 Oct 2011; nixnut <nixnut@gentoo.org> libedit-20110709.3.0.ebuild:
   ppc stable #383057
