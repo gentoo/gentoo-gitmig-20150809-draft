@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-9999.ebuild,v 1.1 2011/09/14 08:32:02 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/znc-9999.ebuild,v 1.2 2011/10/30 22:35:45 wired Exp $
 
 EAPI=3
 
@@ -20,7 +20,7 @@ IUSE="ares debug extras ipv6 perl python ssl sasl tcl"
 
 RDEPEND="
 	ares? ( >=net-dns/c-ares-1.5 )
-	perl? ( dev-lang/perl )
+	perl? ( >=dev-lang/perl-5.10 )
 	sasl? ( >=dev-libs/cyrus-sasl-2 )
 	ssl? ( >=dev-libs/openssl-0.9.7d )
 	tcl? ( dev-lang/tcl )
@@ -28,7 +28,10 @@ RDEPEND="
 DEPEND="
 	dev-util/pkgconfig
 	perl? ( dev-lang/swig )
-	python? ( dev-lang/swig )
+	python? (
+		>=dev-lang/swig-2.0.2
+		>=dev-lang/perl-5.10
+	)
 	${RDEPEND}
 "
 
