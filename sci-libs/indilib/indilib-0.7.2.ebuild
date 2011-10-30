@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/indilib-0.7.2.ebuild,v 1.5 2011/07/13 14:49:49 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/indilib-0.7.2.ebuild,v 1.6 2011/10/30 15:47:38 ssuominen Exp $
 
 EAPI=3
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN/lib/}/${MY_P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~hppa ppc ppc64 x86"
-IUSE="fits nova usb v4l2"
+IUSE="fits nova usb v4l"
 
 # libfli: not in portage
 # fli? ( >=sci-libs/fli-1.71 )
@@ -24,9 +24,10 @@ RDEPEND="
 	fits? ( >=sci-libs/cfitsio-3.140 )
 	nova? ( >=sci-libs/libnova-0.12.1 )
 	usb? ( virtual/libusb:0 )
-	v4l2? ( >=sys-kernel/linux-headers-2.6 )
 "
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	v4l? ( >=sys-kernel/linux-headers-2.6 )
+"
 
 PATCHES=(
 	"${FILESDIR}/0.6.2-fix_fits_harddep.patch"
