@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.18.ebuild,v 1.1 2011/07/28 06:02:23 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.4.18.ebuild,v 1.2 2011/10/30 13:42:21 sping Exp $
 
 # genkernel-9999        -> latest Git branch "master"
 # genkernel-VERSION     -> normal genkernel release
@@ -37,9 +37,9 @@ COMMON_URI="${DM_HOME}/dmraid-${VERSION_DMRAID}.tar.bz2
 
 if [[ ${PV} == 9999* ]]
 then
-	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/genkernel.git"
-	EGIT_BRANCH=master
-	inherit git bash-completion eutils
+	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/${PN}.git
+		http://git.overlays.gentoo.org/gitroot/proj/${PN}.git"
+	inherit git-2 bash-completion eutils
 	S="${WORKDIR}/${PN}"
 	SRC_URI="${COMMON_URI}"
 	KEYWORDS=""
@@ -71,7 +71,7 @@ fi
 
 src_unpack() {
 	if [[ ${PV} == 9999* ]] ; then
-		git_src_unpack
+		git-2_src_unpack
 	else
 		unpack ${P}.tar.bz2
 	fi
