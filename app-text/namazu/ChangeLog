@@ -1,6 +1,12 @@
 # ChangeLog for app-text/namazu
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.35 2010/08/12 09:18:37 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/ChangeLog,v 1.36 2011/10/30 07:11:31 naota Exp $
+
+*namazu-2.0.21 (30 Oct 2011)
+
+  30 Oct 2011; Naohiro Aota <naota@gentoo.org> +namazu-2.0.21.ebuild,
+  +files/namazu-2.0.21-search.patch:
+  Version bump.
 
   12 Aug 2010; Markus Meier <maekke@gentoo.org> namazu-2.0.20.ebuild:
   amd64 stable, bug #306051
