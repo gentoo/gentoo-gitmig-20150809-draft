@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/luajit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/luajit/ChangeLog,v 1.7 2011/05/07 11:06:00 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/luajit/ChangeLog,v 1.8 2011/10/30 21:21:57 flameeyes Exp $
+
+*luajit-2.0.0_beta8_p1 (30 Oct 2011)
+
+  30 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +luajit-2.0.0_beta8_p1.ebuild, +files/LuaJIT-2.0.0-beta8-gentoo.patch:
+  As discussed with Rafael: version bump with a twist: cleanup versioning so
+  that it's more reliable. Consider this experimental as it breaks compatibility
+  with about everything, and it might just be dropped if upstream takes a
+  different road.
 
 *luajit-2.0.0_beta7 (07 May 2011)
 
