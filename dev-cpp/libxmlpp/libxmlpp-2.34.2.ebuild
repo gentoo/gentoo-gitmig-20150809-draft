@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-2.34.2.ebuild,v 1.5 2011/10/21 14:08:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/libxmlpp-2.34.2.ebuild,v 1.6 2011/10/30 14:54:39 armin76 Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="http://libxmlplusplus.sourceforge.net/"
 
 LICENSE="LGPL-2.1"
 SLOT="2.6"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/libxml2-2.6.1

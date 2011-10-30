@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libxmlpp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.118 2011/10/21 14:08:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.119 2011/10/30 14:54:39 armin76 Exp $
+
+  30 Oct 2011; Raúl Porcel <armin76@gentoo.org> libxmlpp-2.34.2.ebuild:
+  alpha/ia64/sparc stable wrt #385699
 
   21 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> libxmlpp-2.34.2.ebuild:
   x86 stable wrt bug #385699
