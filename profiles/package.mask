@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13188 2011/10/30 09:42:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13189 2011/10/30 13:46:07 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -568,6 +568,7 @@ dev-tex/pdftex
 # Andreas K. Huettel <dilfridge@gentoo.org> (15 Aug 2011)
 # Mask for testing, depends on masked networkmanager
 >=kde-misc/knetworkmanager-0.8.80
+>=kde-misc/networkmanagement-0.8.80
 
 # Robert Piasek <dagger@gentoo.org> (09 Aug 2011)
 # Masking for testing
