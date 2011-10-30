@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.10.4.ebuild,v 1.1 2011/10/21 22:40:29 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-6.1.10.4.ebuild,v 1.2 2011/10/30 14:09:13 caster Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -83,7 +83,7 @@ DEPEND="${RDEPEND}
 	|| (
 		( >=dev-java/gcj-jdk-4.3 >=app-admin/eselect-ecj-0.5-r1 )
 		( >=dev-java/cacao-0.99.2 >=app-admin/eselect-ecj-0.5-r1 )
-		dev-java/icedtea6-bin
+		dev-java/icedtea-bin:${SLOT}
 		dev-java/icedtea:${SLOT}
 	)
 	app-arch/zip
@@ -138,7 +138,7 @@ pkg_setup() {
 		JAVA_PKG_FORCE_VM="icedtea6"
 	elif has_version dev-java/icedtea6; then
 		JAVA_PKG_FORCE_VM="icedtea6"
-	elif has_version dev-java/icedtea6-bin; then
+	elif has_version dev-java/icedtea-bin:${SLOT}; then
 		JAVA_PKG_FORCE_VM="icedtea6-bin"
 	elif has_version dev-java/gcj-jdk; then
 		JAVA_PKG_FORCE_VM="gcj-jdk"
