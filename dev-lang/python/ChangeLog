@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.554 2011/10/27 15:58:07 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.555 2011/10/30 15:03:40 armin76 Exp $
+
+  30 Oct 2011; Raúl Porcel <armin76@gentoo.org> python-2.7.2-r3.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #387849
 
   27 Oct 2011; Tony Vroon <chainsaw@gentoo.org> python-2.7.2-r3.ebuild,
   python-3.1.4-r3.ebuild:
