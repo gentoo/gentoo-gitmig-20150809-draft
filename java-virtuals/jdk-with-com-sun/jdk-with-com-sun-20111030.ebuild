@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jdk-with-com-sun/jdk-with-com-sun-20111030.ebuild,v 1.1 2011/10/30 09:01:19 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jdk-with-com-sun/jdk-with-com-sun-20111030.ebuild,v 1.2 2011/10/30 14:08:24 caster Exp $
 
 EAPI=1
 
@@ -17,8 +17,8 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="|| (
-			dev-java/icedtea6-bin
-			=dev-java/icedtea-6*
+			dev-java/icedtea-bin:6
+			dev-java/icedtea:6
 			dev-java/sun-jdk:1.6
 			dev-java/sun-jdk:1.5
 			dev-java/sun-jdk:1.4

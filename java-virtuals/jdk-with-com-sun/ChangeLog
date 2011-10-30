@@ -1,6 +1,11 @@
 # ChangeLog for java-virtuals/jdk-with-com-sun
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jdk-with-com-sun/ChangeLog,v 1.13 2011/10/30 09:01:19 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jdk-with-com-sun/ChangeLog,v 1.14 2011/10/30 14:08:24 caster Exp $
+
+  30 Oct 2011; Vlastimil Babka <caster@gentoo.org>
+  jdk-with-com-sun-20100419.ebuild, jdk-with-com-sun-20110911.ebuild,
+  jdk-with-com-sun-20111030.ebuild:
+  Package move icedtea6-bin to icedtea-bin.
 
 *jdk-with-com-sun-20111030 (30 Oct 2011)
 
