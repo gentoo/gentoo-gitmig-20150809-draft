@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.346 2011/10/28 19:58:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.347 2011/10/30 15:56:11 armin76 Exp $
+
+  30 Oct 2011; Raúl Porcel <armin76@gentoo.org> gdm-2.20.11-r1.ebuild:
+  alpha/ia64/sh/sparc stable wrt #385699
 
   28 Oct 2011; Markus Meier <maekke@gentoo.org> gdm-2.20.11-r1.ebuild:
   arm stable, bug #385699
