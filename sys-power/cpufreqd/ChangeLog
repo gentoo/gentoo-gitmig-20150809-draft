@@ -1,6 +1,14 @@
 # ChangeLog for sys-power/cpufreqd
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.63 2010/07/19 19:18:34 josejx Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpufreqd/ChangeLog,v 1.64 2011/10/30 04:58:01 binki Exp $
+
+*cpufreqd-2.4.2-r1 (30 Oct 2011)
+
+  30 Oct 2011; Nathan Phillip Brink <binki@gentoo.org>
+  +cpufreqd-2.4.2-r1.ebuild, +files/cpufreqd-2.4.2-PATH_MAX.patch:
+  Add patch from bug #318287 by Sven Eden <yamakuzure@gmx.net> fixing glibc
+  abort() for potential buffer overflow on startup when compiled with gcc-4.5
+  and CFLAGS="-O1" and passed the -f flag. OKed by steev_.
 
   19 Jul 2010; Joseph Jezak <josejx@gentoo.org> cpufreqd-2.4.2.ebuild:
   Marked ppc stable for bug #323195.
