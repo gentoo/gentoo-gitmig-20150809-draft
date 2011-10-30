@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r3.ebuild,v 1.8 2011/10/29 19:29:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r3.ebuild,v 1.9 2011/10/30 18:41:51 ssuominen Exp $
 
 EAPI="2"
 
@@ -41,7 +41,7 @@ src_prepare() {
 	fi
 	if ! use zlib ; then
 		sed -i -r \
-			-e '/^bin_PROGRAMS/,/^noinst_PROGRAMS/s:(gd2topng|gd2copypal|gd2togif|giftogd2|gdparttopng)..EXEEXT.::g' \
+			-e '/^bin_PROGRAMS/,/^noinst_PROGRAMS/s:(gd2topng|gd2copypal|gd2togif|giftogd2|gdparttopng|pngtogd2)..EXEEXT.::g' \
 			Makefile.in || die
 	fi
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.74 2011/10/29 19:29:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.75 2011/10/30 18:41:51 ssuominen Exp $
+
+  30 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> gd-2.0.35-r3.ebuild:
+  Fix building with USE="png -zlib" wrt #381729 by Brennan Shacklett
 
   29 Oct 2011; Markus Meier <maekke@gentoo.org> gd-2.0.35-r3.ebuild:
   arm stable, bug #387291
