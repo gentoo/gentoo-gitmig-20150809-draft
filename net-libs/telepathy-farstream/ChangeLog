@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/telepathy-farstream
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-farstream/ChangeLog,v 1.1 2011/10/30 03:26:26 tetromino Exp $
+
+*telepathy-farstream-0.1.1 (30 Oct 2011)
+
+  30 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +telepathy-farstream-0.1.1.ebuild, +metadata.xml:
+  New ebuild, moved from the gnome overlay, used by empathy-3.2.
+
