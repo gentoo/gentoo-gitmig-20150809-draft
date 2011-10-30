@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13185 2011/10/30 00:56:53 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13186 2011/10/30 05:11:59 tetromino Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -751,6 +751,7 @@ sci-chemistry/webmo
 >=app-misc/tracker-0.12
 >=dev-libs/gobject-introspection-1.29
 >=dev-libs/gjs-1.29
+>=dev-libs/libgdata-0.9
 >=dev-libs/libpeas-1.2
 >=dev-python/pygobject-2.28.6-r50
 gnome-extra/gnome-contacts
