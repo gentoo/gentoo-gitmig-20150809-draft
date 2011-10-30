@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/assets/assets-0.1.1.ebuild,v 1.1 2011/10/30 16:28:58 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/assets/assets-0.1.1.ebuild,v 1.2 2011/10/30 16:43:38 maksbotan Exp $
 
 EAPI=3
 
@@ -19,6 +19,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-python/nose"
 RDEPEND=""
+DEPEND="${RDEPEND}"
 DOCS="README TODO AUTHORS"
