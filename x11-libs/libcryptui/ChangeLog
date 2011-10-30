@@ -1,0 +1,11 @@
+# ChangeLog for x11-libs/libcryptui
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcryptui/ChangeLog,v 1.1 2011/10/30 07:47:05 tetromino Exp $
+
+*libcryptui-3.2.0 (30 Oct 2011)
+
+  30 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libcryptui-3.2.0.ebuild, +metadata.xml:
+  New ebuild from the gnome overlay. Contains the widget library that was split
+  off from app-crypt/seahorse in gnome-3.1.x.
+
