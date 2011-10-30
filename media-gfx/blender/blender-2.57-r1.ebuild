@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.57-r1.ebuild,v 1.5 2011/10/29 21:49:19 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.57-r1.ebuild,v 1.6 2011/10/30 12:59:41 sping Exp $
 
 PYTHON_DEPEND="3:3.2"
 
@@ -11,7 +11,7 @@ SCM="subversion"
 ESVN_REPO_URI="https://svn.blender.org/svnroot/bf-blender/trunk/blender"
 fi
 
-inherit eutils python versionator flag-o-matic toolchain-funcs ${SCM}
+inherit scons-utils eutils python versionator flag-o-matic toolchain-funcs ${SCM}
 
 IUSE="+game-engine player +elbeem +openexr ffmpeg jpeg2k openal openmp \
 	+dds debug fftw jack apidoc sndfile lcms tweak-mode sdl sse \
@@ -292,7 +292,7 @@ src_configure() {
 }
 
 src_compile() {
-	scons || die \
+	escons || die \
 		'!!! Please add "${S}/scons.config" when filing bugs reports \
 		to bugs.gentoo.org'
 

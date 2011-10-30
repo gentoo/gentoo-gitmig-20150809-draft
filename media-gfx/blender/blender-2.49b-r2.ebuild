@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.49b-r2.ebuild,v 1.10 2011/10/29 21:49:19 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.49b-r2.ebuild,v 1.11 2011/10/30 12:59:41 sping Exp $
 
 EAPI=2
 
-inherit multilib eutils python
+inherit scons-utils multilib eutils python
 
 IUSE="blender-game ffmpeg nls ogg openmp verse openal"
 
@@ -110,8 +110,7 @@ src_configure() {
 }
 
 src_compile() {
-	# scons uses -l differently -> remove it
-	scons ${MAKEOPTS/-l[0-9]} || die \
+	escons || die \
 	'!!! Please add "${S}/scons.config" when filing bugs reports \
 	to bugs.gentoo.org'
 
