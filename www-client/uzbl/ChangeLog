@@ -1,6 +1,11 @@
 # ChangeLog for www-client/uzbl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.45 2011/10/24 06:43:25 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/uzbl/ChangeLog,v 1.46 2011/10/30 22:47:01 wired Exp $
+
+*uzbl-2011.10.01 (30 Oct 2011)
+
+  30 Oct 2011; Alex Alexander <wired@gentoo.org> +uzbl-2011.10.01.ebuild:
+  version bump, bug 388761
 
   24 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   uzbl-2010.08.05.ebuild, uzbl-2010.11.25.ebuild, uzbl-2011.02.15.ebuild,
