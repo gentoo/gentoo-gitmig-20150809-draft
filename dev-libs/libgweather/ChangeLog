@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libgweather
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.81 2011/10/19 18:21:34 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/ChangeLog,v 1.82 2011/10/30 02:10:51 tetromino Exp $
+
+*libgweather-3.2.1 (30 Oct 2011)
+
+  30 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -libgweather-3.0.2.ebuild, +libgweather-3.2.1.ebuild:
+  Bump to 3.2.1 from the gnome overlay, drop old. Fixes fetching weather
+  updates for UK and Australia.
 
   19 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   libgweather-2.30.3.ebuild:

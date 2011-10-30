@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/libgweather-3.0.2.ebuild,v 1.1 2011/08/18 07:38:21 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/libgweather-3.2.1.ebuild,v 1.1 2011/10/30 02:10:53 tetromino Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
@@ -27,7 +27,7 @@ COMMON_DEPEND=">=x11-libs/gtk+-2.90.0:3[introspection?]
 
 	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )"
 DEPEND="${COMMON_DEPEND}
-	>=dev-util/intltool-0.40.3
+	>=dev-util/intltool-0.40.6
 	>=dev-util/pkgconfig-0.19
 	>=dev-util/gtk-doc-am-1.9
 	sys-devel/gettext
