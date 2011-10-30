@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cyberjack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/ChangeLog,v 1.21 2011/10/30 14:12:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/ChangeLog,v 1.22 2011/10/30 14:13:33 ssuominen Exp $
+
+  30 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  -cyberjack-3.99.5_p02.ebuild:
+  old
 
 *cyberjack-3.99.5_p02-r1 (30 Oct 2011)
 
