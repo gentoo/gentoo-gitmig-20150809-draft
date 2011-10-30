@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/gst-plugins-meta-0.10-r6.ebuild,v 1.10 2011/10/30 14:43:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-meta/gst-plugins-meta-0.10-r6.ebuild,v 1.11 2011/10/30 15:36:36 ssuominen Exp $
 
 DESCRIPTION="Meta ebuild to pull in gst plugins for apps"
 HOMEPAGE="http://www.gentoo.org"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.gentoo.org"
 LICENSE="GPL-2"
 SLOT="0.10"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
-IUSE="aac a52 alsa dts dv dvb dvd esd ffmpeg flac lame mms mp3 mpeg musepack mythtv ogg oss pulseaudio taglib theora v4l2 vcd vorbis vpx wavpack X xv"
+IUSE="aac a52 alsa dts dv dvb dvd esd ffmpeg flac lame mms mp3 mpeg musepack mythtv ogg oss pulseaudio taglib theora v4l vcd vorbis vpx wavpack X xv"
 
 RDEPEND="=media-libs/gstreamer-0.10*
 	=media-libs/gst-plugins-base-0.10*
@@ -44,7 +44,7 @@ RDEPEND="=media-libs/gstreamer-0.10*
 		>=media-plugins/gst-plugins-ogg-0.10
 		>=media-plugins/gst-plugins-theora-0.10 )
 	taglib? ( media-plugins/gst-plugins-taglib )
-	v4l2? ( >=media-plugins/gst-plugins-v4l2-0.10 )
+	v4l? ( >=media-plugins/gst-plugins-v4l2-0.10 )
 	vcd? (	>=media-plugins/gst-plugins-mplex-0.10
 		>=media-plugins/gst-plugins-mpeg2dec-0.10 )
 	vorbis? (
