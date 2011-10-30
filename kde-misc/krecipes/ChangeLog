@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/krecipes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/ChangeLog,v 1.42 2011/10/29 00:28:59 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/ChangeLog,v 1.43 2011/10/30 10:22:00 dilfridge Exp $
+
+  30 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  krecipes-2.0_beta2.ebuild:
+  Project is dead upstream, no need to track failing tests anymore. Bug 330065.
 
   29 Oct 2011; Jonathan Callen <abcd@gentoo.org> krecipes-2.0_beta2.ebuild:
   Bump to EAPI=4; set KDE_HANDBOOK

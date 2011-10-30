@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/krecipes-2.0_beta2.ebuild,v 1.4 2011/10/29 00:28:59 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krecipes/krecipes-2.0_beta2.ebuild,v 1.5 2011/10/30 10:22:00 dilfridge Exp $
 
 EAPI=4
 
@@ -31,4 +31,5 @@ S=${WORKDIR}/${P/_/-}
 
 DOCS=( AUTHORS BUGS README TODO ChangeLog )
 
-RESTRICT="test"
+src_test() { :; }
+# bug 330065
