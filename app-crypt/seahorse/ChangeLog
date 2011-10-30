@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.150 2011/08/16 23:22:14 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.151 2011/10/30 07:39:19 tetromino Exp $
+
+*seahorse-3.2.1 (30 Oct 2011)
+
+  30 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +seahorse-3.2.1.ebuild:
+  Bump to 3.2.1 from the gnome overlay. The widget library has been split off
+  into a separate package (x11-libs/libcryptui). Drop alpha, ia64, ppc, ppc64,
+  sparc keywords due to gnome-keyring-3.2 dependency.
 
 *seahorse-3.0.2 (16 Aug 2011)
 
