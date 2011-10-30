@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-3.99.5_p02.ebuild,v 1.2 2011/10/13 19:34:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-3.99.5_p02.ebuild,v 1.3 2011/10/30 14:05:00 ssuominen Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -14,13 +14,15 @@ SRC_URI="http://support.reiner-sct.de/downloads/LINUX/V${PV/_p/_SP}/${MY_P}.tar.
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="fox xml"
+IUSE="fox kernel_linux xml"
 
-RDEPEND="sys-apps/pcsc-lite
+COMMON_DEPEND="sys-apps/pcsc-lite
 	virtual/libusb:1
 	fox? ( >=x11-libs/fox-1.6 )
 	xml? ( dev-libs/libxml2 )"
-DEPEND="${RDEPEND}
+RDEPEND="${COMMON_DEPEND}
+	kernel_linux? ( sys-fs/udev )"
+DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P/_/-}
@@ -49,6 +51,12 @@ src_install() {
 
 	rm -f "${D}"usr/lib*/cyberjack/pcscd_init.diff
 	find "${D}"usr -name '*.la' -exec rm -f {} +
+
+	# http://bugs.gentoo.org/388329
+	if use kernel_linux; then
+		insinto /lib/udev/rules.d
+		newins "${FILESDIR}"/${PN}.rules 99-${PN}.rules
+	fi
 }
 
 pkg_postinst() {

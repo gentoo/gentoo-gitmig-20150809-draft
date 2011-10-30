@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cyberjack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/ChangeLog,v 1.19 2011/10/13 19:34:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/ChangeLog,v 1.20 2011/10/30 14:05:00 ssuominen Exp $
+
+  30 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  cyberjack-3.99.5_p02.ebuild, +files/cyberjack.rules:
+  Install udev rules file wrt #388329 by Christoph Brill
 
   13 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
   cyberjack-3.99.5_p02.ebuild:
