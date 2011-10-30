@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/bluedevil
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/ChangeLog,v 1.17 2011/10/10 12:08:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/ChangeLog,v 1.18 2011/10/30 07:05:40 scarabeus Exp $
+
+*bluedevil-1.2.2 (30 Oct 2011)
+
+  30 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -bluedevil-1.1-r2.ebuild, bluedevil-1.2.1.ebuild, +bluedevil-1.2.2.ebuild,
+  -files/bluedevil-mimetypes.patch:
+  Version bump to 1.2.2 stabilise 1.2.1 on x86 and amd64. Drop overshadowed
+  version.
 
   10 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> bluedevil-1.2.1.ebuild:
   Drop handbook useflag, doc is just empty folder and it confuses the unpack.
