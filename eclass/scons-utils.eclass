@@ -1,6 +1,6 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/scons-utils.eclass,v 1.6 2011/08/29 01:28:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/scons-utils.eclass,v 1.7 2011/10/30 14:29:54 mgorny Exp $
 
 # @ECLASS: scons-utils.eclass
 # @MAINTAINER:
@@ -129,7 +129,7 @@ scons_clean_makeopts() {
 				;;
 			# need to take a look at the next arg and guess
 			--jobs)
-				if [[ ${#} -gt 1 && ${2} =~ [0-9]+ ]]; then
+				if [[ ${#} -gt 1 && ${2} =~ ^[0-9]+$ ]]; then
 					new_makeopts="${new_makeopts+${new_makeopts} }${1} ${2}"
 					shift
 				else
@@ -153,7 +153,7 @@ scons_clean_makeopts() {
 							;;
 						# -j needs to come last
 						j)
-							if [[ ${#} -gt 1 && ${2} =~ [0-9]+ ]]; then
+							if [[ ${#} -gt 1 && ${2} =~ ^[0-9]+$ ]]; then
 								new_optstr="${new_optstr}j ${2}"
 								shift
 							else
