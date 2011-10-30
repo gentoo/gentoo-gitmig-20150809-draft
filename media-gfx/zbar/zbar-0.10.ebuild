@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zbar/zbar-0.10.ebuild,v 1.1 2011/10/03 16:13:50 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zbar/zbar-0.10.ebuild,v 1.2 2011/10/30 15:53:55 ssuominen Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/zbar/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="gtk imagemagick jpeg python qt4 static-libs +threads v4l v4l2 X xv"
+IUSE="gtk imagemagick jpeg python qt4 static-libs +threads v4l X xv"
 
 RDEPEND="gtk? ( =dev-libs/glib-2* =x11-libs/gtk+-2* )
 	imagemagick? ( >=media-gfx/imagemagick-6.2.6 )
@@ -27,12 +27,7 @@ RDEPEND="gtk? ( =dev-libs/glib-2* =x11-libs/gtk+-2* )
 DEPEND="${RDEPEND}"
 
 src_configure() {
-	local conf="--disable-video"
-	if use v4l || use v4l2 ; then
-		conf="--enable-video"
-	fi
-
-	econf ${conf} \
+	econf \
 		$(use_with jpeg) \
 		$(use_with gtk) \
 		$(use_with imagemagick) \
@@ -41,7 +36,8 @@ src_configure() {
 		$(use_enable static-libs static) \
 		$(use_enable threads pthread) \
 		$(use_with X x) \
-		$(use_with xv xv)
+		$(use_with xv xv) \
+		$(use_enable v4l video)
 }
 
 src_install() {
