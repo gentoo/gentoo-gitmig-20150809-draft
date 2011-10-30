@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.32.0-r1.ebuild,v 1.4 2011/10/21 15:04:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.32.0-r1.ebuild,v 1.5 2011/10/30 17:36:45 armin76 Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -14,7 +14,7 @@ HOMEPAGE="http://projects.gnome.org/epiphany/extensions.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86"
 IUSE="dbus examples pcre"
 
 RDEPEND=">=www-client/epiphany-2.30.0
