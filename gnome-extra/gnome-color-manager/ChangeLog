@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/gnome-color-manager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/ChangeLog,v 1.8 2011/08/19 11:09:04 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-color-manager/ChangeLog,v 1.9 2011/10/30 01:46:38 tetromino Exp $
+
+*gnome-color-manager-3.2.1 (30 Oct 2011)
+
+  30 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-color-manager-3.2.1.ebuild, metadata.xml:
+  Bump to 3.2.1 from the gnome overlay. In gnome-3.2, much of
+  gnome-color-manager's functionality has been split out and moved to colord
+  and gnome-settings-daemon.
 
 *gnome-color-manager-3.0.0-r2 (19 Aug 2011)
 
