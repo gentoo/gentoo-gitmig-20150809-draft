@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/knemo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/ChangeLog,v 1.55 2011/10/16 09:46:49 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knemo/ChangeLog,v 1.56 2011/10/30 10:41:52 dilfridge Exp $
+
+  30 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org> knemo-0.7.0.ebuild,
+  knemo-0.7.2.ebuild:
+  Specify libnl slot, bug 388625
 
 *knemo-0.7.2 (16 Oct 2011)
 
