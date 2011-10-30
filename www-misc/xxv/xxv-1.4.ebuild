@@ -1,14 +1,14 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/xxv-1.4.ebuild,v 1.2 2010/01/03 23:09:35 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/xxv-1.4.ebuild,v 1.3 2011/10/30 19:36:55 hd_brummy Exp $
 
 EAPI="2"
 
 inherit eutils versionator
 
 DESCRIPTION="WWW Admin for the VDR (Video Disk Recorder)"
-HOMEPAGE="http://xxv.berlios.de/content/view/44/1/"
-SRC_URI="mirror://berlios/${PN}/${P}.tgz"
+HOMEPAGE=""
+SRC_URI="mirror://gentoo/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
