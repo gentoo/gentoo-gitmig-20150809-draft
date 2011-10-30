@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.95 2011/10/16 09:59:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.96 2011/10/30 14:21:14 hwoarang Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -22,6 +22,10 @@ if version_is_at_least 4.5.99999999; then
 			IUSE="+exceptions"
 else
 	MY_P=qt-x11-opensource-src-${MY_PV}
+fi
+
+if version_is_at_least 4.7.99999999; then
+	IUSE+=" c++0x qpa"
 fi
 
 HOMEPAGE="http://qt.nokia.com/"
@@ -209,13 +213,21 @@ qt4-build_src_prepare() {
 		# qmake bus errors with -O2 but -O3 works
 		replace-flags -O2 -O3
 	fi
-
+	
 	# Bug 178652
 	if [[ $(gcc-major-version) == 3 ]] && use amd64; then
 		ewarn "Appending -fno-gcse to CFLAGS/CXXFLAGS"
 		append-flags -fno-gcse
 	fi
 
+	if has c++0x ${IUSE//+} && use c++0x; then
+		ewarn "You are about to build Qt4 using the C++11 standard. Even though"
+		ewarn "this is an official standard, some of the reverse dependencies"
+		ewarn "may fail to compile or link againt the Qt4 libraries. Before"
+		ewarn "reporting a bug, make sure your bug is reproducible with c++0x"
+		ewarn "disabled."
+		append-flags -std=c++0x
+	fi
 	# Unsupported old gcc versions - hardened needs this :(
 	if [[ $(gcc-major-version) -lt 4 ]] ; then
 		ewarn "Appending -fno-stack-protector to CXXFLAGS"
@@ -320,6 +332,15 @@ qt4-build_src_configure() {
 		# avoid the -pthread argument
 		myconf+=" ${glibflags//-pthread}"
 		unset glibflags
+	fi
+
+	if has qpa ${IUSE//+} && use qpa; then
+		ewarn
+		ewarn "The qpa useflag enables the Qt Platform Abstraction, formely"
+		ewarn "known as Qt Lighthouse. If you are not sure what that is, then"
+		ewarn "disable it before reporting any bugs related to this useflag."
+		ewarn
+		myconf+=" -qpa"
 	fi
 
 	if use aqua ; then
