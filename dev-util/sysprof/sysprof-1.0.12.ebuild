@@ -1,14 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sysprof/sysprof-1.0.12.ebuild,v 1.3 2011/03/27 13:09:22 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sysprof/sysprof-1.0.12.ebuild,v 1.4 2011/10/30 18:43:18 tetromino Exp $
 
 EAPI="1"
 
 inherit eutils linux-mod
 
 DESCRIPTION="System-wide Linux Profiler"
-HOMEPAGE="http://www.daimi.au.dk/~sandmann/sysprof/"
-SRC_URI="http://www.daimi.au.dk/~sandmann/sysprof/${P}.tar.gz"
+HOMEPAGE="http://sysprof.com/"
+SRC_URI="http://sysprof.com/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

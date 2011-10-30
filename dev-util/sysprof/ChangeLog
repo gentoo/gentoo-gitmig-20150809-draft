@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/sysprof
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sysprof/ChangeLog,v 1.16 2011/03/27 13:09:22 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sysprof/ChangeLog,v 1.17 2011/10/30 18:43:17 tetromino Exp $
+
+*sysprof-1.1.8 (30 Oct 2011)
+
+  30 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  sysprof-1.0.12.ebuild, sysprof-1.0.12-r1.ebuild, +sysprof-1.1.8.ebuild,
+  metadata.xml:
+  Bump to 1.1.8 from the gnome overlay. Adding myself as co-maintainer (acked
+  by leio). Update project homepage and SRC_URI.
+  Notable changes: uses the perf counter interface introduced in kernel 2.6.31
+  instead of building its own kernel module; adds a command-line interface.
 
   27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org> sysprof-1.0.12.ebuild,
   sysprof-1.0.12-r1.ebuild:
