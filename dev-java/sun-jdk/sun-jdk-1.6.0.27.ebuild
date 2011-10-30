@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.27.ebuild,v 1.1 2011/09/01 13:46:06 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.27.ebuild,v 1.2 2011/10/30 14:17:41 caster Exp $
 
 inherit versionator java-vm-2 eutils pax-utils
 
@@ -56,7 +56,7 @@ pkg_nofetch() {
 	fi
 
 	einfo "Due to Oracle no longer providing the distro-friendly DLJ bundles, the package has become fetch restricted again."
-	einfo "Alternatives are switching to dev-java/icedtea6-bin or the source-based dev-java/icedtea:6"
+	einfo "Alternatives are switching to dev-java/icedtea-bin:6 or the source-based dev-java/icedtea:6"
 
 	einfo "Please download ${AT} from:"
 	einfo "${DOWNLOAD_LINK}"
