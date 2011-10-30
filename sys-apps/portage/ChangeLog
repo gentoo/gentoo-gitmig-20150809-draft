@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.895 2011/10/23 23:00:12 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.896 2011/10/30 08:12:17 zmedico Exp $
+
+*portage-2.1.10.32 (30 Oct 2011)
+
+  30 Oct 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.32.ebuild:
+  2.1.10.32 version bump. This fixes bug #388031 (layout.conf profile-formats
+  setting), bug #388233 (emerge --check-news action), bug #388593 (run
+  pkg_pretend inside PORTAGE_TMPDIR), bug #388615 (optimize prelink-checksums
+  FEATURES setting), and bug #388773 (quickpkg unicode handling). This also
+  includes various fixes and improvements in metadata cache handling, including
+  layout.conf cache-formats support for md5-dict format which can now be
+  generated with egencache. Bug #381649 tracks all bugs fixed since
+  portage-2.1.10.11.
 
   23 Oct 2011; Zac Medico <zmedico@gentoo.org> -portage-2.2.0_alpha67.ebuild,
   -portage-2.1.10.27.ebuild, -portage-2.1.10.29.ebuild,
