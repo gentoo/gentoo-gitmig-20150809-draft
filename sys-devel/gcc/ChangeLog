@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.830 2011/10/24 18:00:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.831 2011/10/30 19:40:28 dirtyepic Exp $
+
+*gcc-4.6.2 (30 Oct 2011)
+
+  30 Oct 2011; Ryan Hill <dirtyepic@gentoo.org> +gcc-4.6.2.ebuild:
+  Version bump. Also fixes bug #364319 (preprocessor flag canonicalization
+  patch broke gcj), and bug #387483 (broken clang++).
 
   24 Oct 2011; Raúl Porcel <armin76@gentoo.org> gcc-4.5.3-r1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #357478
