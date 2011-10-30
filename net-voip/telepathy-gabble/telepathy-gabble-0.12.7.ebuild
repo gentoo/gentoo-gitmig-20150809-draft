@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.12.7.ebuild,v 1.4 2011/10/21 15:02:18 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.12.7.ebuild,v 1.5 2011/10/30 17:31:20 armin76 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -13,7 +13,7 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 ~sparc x86 ~x86-linux"
+KEYWORDS="alpha amd64 ia64 ppc ~ppc64 sparc x86 ~x86-linux"
 IUSE="debug test"
 
 RDEPEND=">=dev-libs/glib-2.24:2

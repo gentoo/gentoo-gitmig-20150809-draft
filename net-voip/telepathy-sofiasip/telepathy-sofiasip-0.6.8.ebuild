@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-sofiasip/telepathy-sofiasip-0.6.8.ebuild,v 1.5 2011/10/21 15:03:33 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-sofiasip/telepathy-sofiasip-0.6.8.ebuild,v 1.6 2011/10/30 17:35:18 armin76 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -13,7 +13,7 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 ppc ~sparc x86 ~x86-linux"
+KEYWORDS="alpha amd64 ia64 ppc sparc x86 ~x86-linux"
 IUSE="test"
 
 RDEPEND=">=net-libs/sofia-sip-1.12.11
