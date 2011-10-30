@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.35 2011/10/29 14:36:34 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.36 2011/10/30 11:06:38 caster Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -96,7 +96,7 @@ java-vm_set-nsplugin() {
 
 java-vm-2_pkg_prerm() {
 	# Although REPLACED_BY_VERSION is EAPI=4, we shouldn't need to check EAPI for this use case
-	if [[ "$(java-config -f 2>/dev/null)" == "${VMHANDLE}" && -z "${REPLACED_BY_VERSION}" ]]; then
+	if [[ "$(GENTOO_VM="" java-config -f 2>/dev/null)" == "${VMHANDLE}" && -z "${REPLACED_BY_VERSION}" ]]; then
 		ewarn "It appears you are removing your system-vm!"
 		ewarn "Please run java-config -L to list available VMs,"
 		ewarn "then use java-config -S to set a new system-vm!"
