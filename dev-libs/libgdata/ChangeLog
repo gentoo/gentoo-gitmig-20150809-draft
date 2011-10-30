@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libgdata
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/ChangeLog,v 1.35 2011/10/05 16:55:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/ChangeLog,v 1.36 2011/10/30 06:15:19 tetromino Exp $
+
+*libgdata-0.10.0 (30 Oct 2011)
+
+  30 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libgdata-0.10.0.ebuild:
+  Bump to 0.10.0 from the gnome overlay. Required for gnome-3.2. Has
+  significant API differences with version 0.8.x. Dropped alpha, arm, ia64,
+  ppc, ppc64, sparc keywords due to new liboauth dependency.
 
   05 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> libgdata-0.8.1.ebuild:
   ppc/ppc64 stable wrt #369909
