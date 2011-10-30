@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/gnome-power-manager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.163 2011/10/21 14:24:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.164 2011/10/30 01:52:43 tetromino Exp $
+
+*gnome-power-manager-3.2.1 (30 Oct 2011)
+
+  30 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-power-manager-3.2.1.ebuild:
+  Bump to 3.2.1 from the gnome overlay. The docbook-docs are gone. In
+  gnome-3.2, most of gnome-power-manager's functionality has been moved to
+  gnome-settings-daemon.
 
   21 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gnome-power-manager-2.32.0-r2.ebuild:
