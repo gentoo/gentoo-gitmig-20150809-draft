@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgee
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/ChangeLog,v 1.33 2011/10/28 19:43:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/ChangeLog,v 1.34 2011/10/30 15:06:44 armin76 Exp $
+
+  30 Oct 2011; Raúl Porcel <armin76@gentoo.org> libgee-0.6.2.1.ebuild:
+  alpha/ia64/sh/sparc stable wrt #385699
 
   28 Oct 2011; Markus Meier <maekke@gentoo.org> libgee-0.6.2.1.ebuild:
   arm stable, bug #385699
