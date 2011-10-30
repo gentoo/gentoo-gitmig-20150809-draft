@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.294 2011/10/28 20:24:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.295 2011/10/30 17:46:47 armin76 Exp $
+
+  30 Oct 2011; Raúl Porcel <armin76@gentoo.org> vte-0.28.2-r200.ebuild:
+  alpha/ia64/sh/sparc stable wrt #385699
 
   28 Oct 2011; Markus Meier <maekke@gentoo.org> vte-0.28.2-r300.ebuild:
   arm stable, bug #385699
