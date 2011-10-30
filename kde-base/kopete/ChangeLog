@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.295 2011/10/28 19:03:28 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.296 2011/10/30 15:34:32 ssuominen Exp $
+
+  30 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> kopete-4.6.3.ebuild,
+  kopete-4.6.5.ebuild, kopete-4.7.2.ebuild:
+  Rename obsolete USE="v4l2" to USE="v4l" wrt #385241
 
   28 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org> -kopete-4.7.1.ebuild:
   Drop KDEpim 4.6.1 and KDE 4.7.1
