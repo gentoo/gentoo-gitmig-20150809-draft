@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.9999.ebuild,v 1.1 2011/10/15 21:59:42 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.9999.ebuild,v 1.2 2011/10/30 15:57:51 ssuominen Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ KEYWORDS=""
 IUSE="a52 aac aalib alsa altivec antialiasing asf directfb dts debug dvb dxr3
 esd fbcon flac fontconfig fusion gdk-pixbuf glu gnome imagemagick ipv6 jack
 real libcaca libv4l mad mmap mng modplug musepack nls nosefart opengl oss pulseaudio
-samba sdl speex static-libs theora truetype v4l v4l2 vcd vdpau vdr vidix vis vorbis
+samba sdl speex static-libs theora truetype v4l vcd vdpau vdr vidix vis vorbis
 wavpack win32codecs X xcb xinerama xv xvmc"
 
 REQUIRED_USE="fontconfig? ( truetype )
@@ -85,7 +85,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( virtual/libintl )
 	v4l? ( virtual/os-headers )
-	v4l2? ( virtual/os-headers )
 	oss? ( virtual/os-headers )
 
 	X? ( x11-proto/xproto
@@ -150,8 +149,8 @@ src_configure() {
 		$(use_enable dvb) \
 		$(use_enable gnome gnomevfs) \
 		$(use_enable samba) \
-		$(use_enable v4l) \
-		$(use_enable v4l2) \
+		--disable-v4l \
+		$(use_enable v4l v4l2) \
 		$(use_enable libv4l) \
 		$(use_enable vcd) \
 		$(use_enable vdr) \
