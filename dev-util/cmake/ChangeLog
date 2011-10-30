@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.173 2011/10/29 21:49:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.174 2011/10/30 10:15:31 dilfridge Exp $
+
+  30 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org> -cmake-2.8.5.ebuild,
+  -cmake-2.8.5-r2.ebuild:
+  Remove old
 
 *cmake-2.8.6-r2 (29 Oct 2011)
 
