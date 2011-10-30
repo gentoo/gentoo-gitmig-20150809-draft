@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/crda
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.26 2011/10/27 16:07:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.27 2011/10/30 16:47:07 ssuominen Exp $
+
+  30 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> crda-1.1.2.ebuild:
+  Fix filename in epatch -line wrt #388991
 
   27 Oct 2011; Jeroen Roovers <jer@gentoo.org> crda-1.0.1-r1.ebuild,
   crda-1.0.2.ebuild, crda-1.1.2.ebuild:
