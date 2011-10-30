@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzrtools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzrtools/ChangeLog,v 1.19 2011/10/01 10:30:08 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzrtools/ChangeLog,v 1.20 2011/10/30 11:43:12 hwoarang Exp $
+
+  30 Oct 2011; Markos Chandras <hwoarang@gentoo.org> bzrtools-2.4.0.ebuild:
+  Stable on amd64 wrt bug #383751
 
 *bzrtools-2.4.1 (01 Oct 2011)
 
