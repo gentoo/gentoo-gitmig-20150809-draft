@@ -1,30 +1,23 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-3.0.1.ebuild,v 1.1 2011/08/19 14:35:28 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-3.2.1.ebuild,v 1.1 2011/10/30 02:01:30 tetromino Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
 
 inherit eutils gnome2
-if [[ ${PV} = 9999 ]]; then
-	inherit gnome2-live
-fi
 
 DESCRIPTION="The Gnome Terminal"
 HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-3"
 SLOT="0"
-if [[ ${PV} = 9999 ]]; then
-	KEYWORDS=""
-else
-	KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
-fi
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.26.0:2
 	>=x11-libs/gtk+-3.0:3
-	>=x11-libs/vte-0.27.3:2.90
+	>=x11-libs/vte-0.30.0:2.90
 	>=gnome-base/gconf-2.31.3
 	>=gnome-base/gsettings-desktop-schemas-0.1.0
 	x11-libs/libSM

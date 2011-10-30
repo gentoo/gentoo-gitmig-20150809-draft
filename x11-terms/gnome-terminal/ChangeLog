@@ -1,6 +1,13 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.238 2011/08/19 14:35:28 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.239 2011/10/30 02:01:30 tetromino Exp $
+
+*gnome-terminal-3.2.1 (30 Oct 2011)
+
+  30 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -files/gnome-terminal-2.33.5-remove-libgnome-dep.patch,
+  -gnome-terminal-3.0.1.ebuild, +gnome-terminal-3.2.1.ebuild:
+  Bump to 3.2.1 from the gnome overlay. Drop old. Remove unused patch.
 
 *gnome-terminal-3.0.1 (19 Aug 2011)
 
