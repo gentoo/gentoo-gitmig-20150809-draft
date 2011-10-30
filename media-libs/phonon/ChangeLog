@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/phonon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.21 2011/10/28 15:16:55 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.22 2011/10/30 23:22:41 dilfridge Exp $
+
+*phonon-4.5.1-r1 (30 Oct 2011)
+*phonon-4.5.0-r2 (30 Oct 2011)
+
+  30 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +phonon-4.5.0-r2.ebuild, +phonon-4.5.1-r1.ebuild,
+  +files/phonon-4.5.1-qmakeworkaround.patch:
+  Add workaround for qmake misbehaviour, bug 388675
 
   28 Oct 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   phonon-4.5.1.ebuild:
