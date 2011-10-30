@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/nted
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/ChangeLog,v 1.21 2011/05/18 17:47:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/ChangeLog,v 1.22 2011/10/30 11:57:01 hwoarang Exp $
+
+  30 Oct 2011; Markos Chandras <hwoarang@gentoo.org> nted-1.10.18.ebuild:
+  drop debug useflag since its only purpose was to append -g to cflags. Bug
+  #388851
 
 *nted-1.10.18 (18 May 2011)
 

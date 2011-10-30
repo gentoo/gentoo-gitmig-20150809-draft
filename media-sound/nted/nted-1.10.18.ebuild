@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/nted-1.10.18.ebuild,v 1.1 2011/05/18 17:47:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/nted-1.10.18.ebuild,v 1.2 2011/10/30 11:57:01 hwoarang Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SRC_URI="http://vsr.informatik.tu-chemnitz.de/staff/jan/${PN}/sources/${P}.tar.g
 LICENSE="|| ( GPL-2 FDL-1.2 NTED_FONT )"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc nls debug"
+IUSE="doc nls"
 RDEPEND="doc? ( gnome-extra/yelp app-text/xmlto )
 	x11-libs/cairo
 	x11-libs/gtk+:2
