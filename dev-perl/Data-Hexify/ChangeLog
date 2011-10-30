@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Data-Hexify
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Hexify/ChangeLog,v 1.1 2011/10/30 15:51:40 maksbotan Exp $
+
+*Data-Hexify-1.00 (30 Oct 2011)
+
+  30 Oct 2011; Maxim Koltsov <maksbotan@gentoo.org> +Data-Hexify-1.00.ebuild,
+  +metadata.xml:
+  Add dev-perl/Data-Hexify-1.00, thanks to slepnoga
+
