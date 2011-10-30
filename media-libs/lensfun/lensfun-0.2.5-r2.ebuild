@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.5-r2.ebuild,v 1.11 2011/10/23 16:30:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.5-r2.ebuild,v 1.12 2011/10/30 19:13:18 dilfridge Exp $
 
 EAPI=2
 inherit eutils python toolchain-funcs
 
 DESCRIPTION="lensfun: A library for rectifying and simulating photographic lens distortions"
 HOMEPAGE="http://lensfun.berlios.de/"
-SRC_URI="mirror://berlios/lensfun/${P}.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~dilfridge/distfiles/${P}.tar.bz2"
 
 LICENSE="LGPL-3"
 SLOT="0"
