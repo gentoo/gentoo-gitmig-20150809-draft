@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xmlgraphics-commons
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlgraphics-commons/ChangeLog,v 1.21 2010/05/03 12:12:18 caster Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlgraphics-commons/ChangeLog,v 1.22 2011/10/30 14:19:01 caster Exp $
+
+  30 Oct 2011; Vlastimil Babka <caster@gentoo.org>
+  xmlgraphics-commons-1.2.ebuild:
+  Package move icedtea6-bin to icedtea-bin.
 
   03 May 2010; Vlastimil Babka <caster@gentoo.org>
   xmlgraphics-commons-1.2.ebuild:
