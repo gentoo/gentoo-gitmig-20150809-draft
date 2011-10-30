@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/scrapy-0.12.0.2539.ebuild,v 1.1 2011/04/03 19:19:59 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/scrapy-0.12.0.2548.ebuild,v 1.1 2011/10/30 16:50:17 maksbotan Exp $
 
 EAPI="3"
 
