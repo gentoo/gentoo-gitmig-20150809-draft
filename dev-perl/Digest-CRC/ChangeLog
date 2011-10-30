@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Digest-CRC
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-CRC/ChangeLog,v 1.1 2011/10/30 15:43:47 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-CRC/ChangeLog,v 1.2 2011/10/30 16:09:53 maksbotan Exp $
+
+*Digest-CRC-0.170.0 (30 Oct 2011)
+
+  30 Oct 2011; Maxim Koltsov <maksbotan@gentoo.org> -Digest-CRC-0.17.ebuild,
+  +Digest-CRC-0.170.0.ebuild, metadata.xml:
+  Fix version according to Gentoo-PerlMod-Version, add perl herd. Thanks to
+  tove
 
 *Digest-CRC-0.17 (30 Oct 2011)
 
