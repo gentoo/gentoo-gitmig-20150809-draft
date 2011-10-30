@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.7-r1.ebuild,v 1.6 2011/09/13 18:18:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.7-r1.ebuild,v 1.7 2011/10/30 15:50:27 ssuominen Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
 # default enabled are features from 'minsize', the most used according to ptlib
 IUSE="alsa +asn +audio debug doc dtmf esd examples ffmpeg ftp http ipv6
 jabber ldap mail odbc oss pch qos remote sasl sdl serial shmvideo snmp soap
-socks ssl +stun telnet tts v4l2 +video vxml wav xml xmlrpc"
+socks ssl +stun telnet tts v4l +video vxml wav xml xmlrpc"
 
 CDEPEND="
 	audio? ( alsa? ( media-libs/alsa-lib )
@@ -28,7 +28,7 @@ CDEPEND="
 	sasl? ( dev-libs/cyrus-sasl:2 )
 	sdl? ( media-libs/libsdl )
 	ssl? ( dev-libs/openssl )
-	video? ( v4l2? ( media-libs/libv4l ) )
+	video? ( v4l? ( media-libs/libv4l ) )
 	xml? ( dev-libs/expat )
 	!!dev-libs/pwlib"
 RDEPEND="${CDEPEND}
@@ -37,7 +37,7 @@ DEPEND="${CDEPEND}
 	dev-util/pkgconfig
 	sys-devel/bison
 	sys-devel/flex
-	video? ( v4l2? ( sys-kernel/linux-headers ) )"
+	video? ( v4l? ( sys-kernel/linux-headers ) )"
 
 # NOTES:
 # media-libs/libdc1394:2 should be supported but headers location have changed
@@ -197,7 +197,7 @@ src_configure() {
 		$(use_enable telnet) \
 		$(use_enable tts) \
 		--disable-v4l \
-		$(use_enable v4l2) \
+		$(use_enable v4l v4l2) \
 		$(use_enable video) $(use_enable video vidfile) \
 		$(use_enable vxml) \
 		$(use_enable wav wavfile) \
