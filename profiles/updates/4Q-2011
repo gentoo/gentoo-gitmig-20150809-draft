@@ -8,3 +8,5 @@ slotmove <dev-libs/libnl-2 0 1.1
 slotmove >=dev-libs/libnl-2 0 3
 move dev-php5/pecl-timezonedb dev-php/pecl-timezonedb
 move kde-misc/knetworkmanager kde-misc/networkmanagement
+move dev-java/icedtea6-bin dev-java/icedtea-bin
+slotmove =dev-java/icedtea-bin-1* 0 6

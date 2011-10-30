@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5848 2011/10/30 13:53:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5849 2011/10/30 14:10:21 caster Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Oct 2011; Vlastimil Babka <caster@gentoo.org> updates/4Q-2011:
+  Package move icedtea6-bin to icedtea-bin.
 
   30 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org> updates/4Q-2011:
   Package move kde-misc/knetworkmanager > kde-misc/networkmanagement, following
