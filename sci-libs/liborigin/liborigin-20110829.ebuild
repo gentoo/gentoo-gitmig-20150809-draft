@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/liborigin-20110829.ebuild,v 1.1 2011/09/01 04:57:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/liborigin-20110829.ebuild,v 1.2 2011/10/30 19:30:57 dilfridge Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit eutils qt4-r2
 
 DESCRIPTION="Library for reading OriginLab OPJ project files"
 HOMEPAGE="http://soft.proindependent.com/liborigin2/"
-SRC_URI="mirror://berlios/qtiplot/${PN}2-${PV}.zip"
+SRC_URI="http://dev.gentoo.org/~dilfridge/distfiles/${PN}2-${PV}.zip"
 
 LICENSE="GPL-3"
 SLOT="2"

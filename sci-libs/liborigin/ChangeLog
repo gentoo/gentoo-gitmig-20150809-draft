@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/liborigin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/ChangeLog,v 1.30 2011/09/01 04:57:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/liborigin/ChangeLog,v 1.31 2011/10/30 19:30:57 dilfridge Exp $
+
+  30 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  liborigin-20110829.ebuild:
+  Berlios is going away :|
 
 *liborigin-20110829 (01 Sep 2011)
 
