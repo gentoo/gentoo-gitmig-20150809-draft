@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.26.ebuild,v 1.8 2011/10/24 00:16:57 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.26.ebuild,v 1.9 2011/10/30 02:50:22 abcd Exp $
 
 EAPI=4
 inherit flag-o-matic multilib libtool
@@ -53,7 +53,7 @@ src_install() {
 	if use prefix; then
 		# Add an explicit reference to $EPREFIX to PKG_CONFIG_PATH to
 		# simplify cross-prefix builds
-		echo "PKG_CONFIG_PATH=${EPREFIX}/usr/$(libdir)/pkgconfig:${EPREFIX}/usr/share/pkgconfig" >> "${T}"/99${PN}
+		echo "PKG_CONFIG_PATH=${EPREFIX}/usr/$(get_libdir)/pkgconfig:${EPREFIX}/usr/share/pkgconfig" >> "${T}"/99${PN}
 		doenvd "${T}"/99${PN}
 	fi
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.102 2011/10/24 00:16:57 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.103 2011/10/30 02:50:22 abcd Exp $
+
+  30 Oct 2011; Jonathan Callen <abcd@gentoo.org> pkgconfig-0.26.ebuild:
+  -m Fix typo ($(libdir) -> $(get_libdir)) (bug 388925)
 
   24 Oct 2011; Jonathan Callen <abcd@gentoo.org> pkgconfig-0.26.ebuild:
   Add prefix support; move prefix keywords from overlay
