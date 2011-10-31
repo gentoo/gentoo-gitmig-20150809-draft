@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.294 2011/10/28 08:02:27 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.295 2011/10/31 06:27:30 hollow Exp $
+
+  31 Oct 2011; Benedikt Böhm <hollow@gentoo.org> nginx-1.0.8.ebuild,
+  nginx-1.1.6.ebuild:
+  fix location of README for cache purge module
 
   28 Oct 2011; Benedikt Böhm <hollow@gentoo.org> nginx-1.0.8.ebuild,
   nginx-1.1.6.ebuild:
