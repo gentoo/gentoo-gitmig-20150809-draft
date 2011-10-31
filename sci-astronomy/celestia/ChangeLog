@@ -1,6 +1,13 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.79 2011/10/31 20:08:58 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.80 2011/10/31 23:20:37 ssuominen Exp $
+
+  31 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
+  -files/celestia-1.4.1-as-needed.patch, -files/celestia-1.5.1-gcc44.patch,
+  -celestia-1.6.0.ebuild, -files/celestia-1.6.0-gcc45.patch,
+  -files/celestia-1.6.0-kde-3.5.patch, -files/celestia-1.6.0-libpng14.patch,
+  -files/celestia-1.6.0-parallel_install.patch:
+  old
 
   31 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org> celestia-1.6.1.ebuild,
   +files/celestia-1.6.1-underlinking.patch:
