@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.8.1.ebuild,v 1.7 2011/10/23 16:23:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/docutils-0.8.1.ebuild,v 1.8 2011/10/31 19:55:31 hwoarang Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
+PYTHON_TESTS_FAILURES_TOLERANT_ABIS="*-jython"
 
 inherit distutils eutils
 

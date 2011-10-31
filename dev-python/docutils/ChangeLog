@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/docutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.143 2011/10/23 16:23:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.144 2011/10/31 19:55:31 hwoarang Exp $
+
+  31 Oct 2011; Markos Chandras <hwoarang@gentoo.org> docutils-0.8.1.ebuild:
+  Ignore tests failures with Jython. Patch by Arfrever.
 
   23 Oct 2011; Raúl Porcel <armin76@gentoo.org> docutils-0.8.1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #386065
