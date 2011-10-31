@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.5.0.ebuild,v 1.2 2011/10/19 20:39:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-0.5.0.ebuild,v 1.3 2011/10/31 03:46:58 vapier Exp $
 
 EAPI="4"
 
@@ -19,7 +19,7 @@ HOMEPAGE="http://openocd.sourceforge.net"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="blaster dummy ftd2xx ftdi minidriver parport presto segger versaloon usb"
+IUSE="blaster dummy ftd2xx ftdi minidriver parport presto segger usb versaloon"
 RESTRICT="strip" # includes non-native binaries
 
 # libftd2xx is the default because it is reported to work better.
@@ -32,6 +32,13 @@ RDEPEND="${DEPEND}"
 
 REQUIRED_USE="blaster? ( || ( ftdi ftd2xx ) ) ftdi? ( !ftd2xx )"
 
+src_prepare() {
+	if [[ ${PV} == "9999" ]] ; then
+		sed -i -e "/@include version.texi/d" doc/${PN}.texi || die
+		AT_NO_RECURSIVE=yes eautoreconf
+	fi
+}
+
 src_configure() {
 	# Here are some defaults
 	myconf="--enable-buspirate --enable-ioutil --disable-werror
@@ -39,7 +46,7 @@ src_configure() {
 	--enable-ep93xx --enable-at91rm9200 --enable-gw16012
 	--enable-oocd_trace"
 
-	if use usb;then
+	if use usb; then
 		myconf="${myconf} --enable-usbprog --enable-jlink --enable-rlink \
 			--enable-vsllink --enable-arm-jtag-ew"
 	fi
