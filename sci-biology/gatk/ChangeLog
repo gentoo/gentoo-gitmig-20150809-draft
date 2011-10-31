@@ -1,0 +1,11 @@
+# ChangeLog for sci-biology/gatk
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/gatk/ChangeLog,v 1.1 2011/10/31 21:18:17 weaver Exp $
+
+*gatk-9999 (31 Oct 2011)
+*gatk-1.2 (31 Oct 2011)
+
+  31 Oct 2011; Andrey Kislyuk <weaver@gentoo.org> +gatk-1.2.ebuild,
+  +gatk-9999.ebuild, +metadata.xml:
+  New package, ebuild written by me
+
