@@ -1,6 +1,26 @@
 # ChangeLog for sys-fs/aufs2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/ChangeLog,v 1.45 2011/09/14 07:40:24 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/ChangeLog,v 1.46 2011/10/31 14:46:12 jlec Exp $
+
+*aufs2-2.2_p20111031 (31 Oct 2011)
+*aufs2-2.1_p20111031 (31 Oct 2011)
+
+  31 Oct 2011; Justin Lecher <jlec@gentoo.org> -aufs2-0_p20110627.ebuild,
+  +aufs2-2.1_p20111031.ebuild, +aufs2-2.2_p20111031.ebuild,
+  -files/aufs2-base-27.patch, -files/aufs2-standalone-27.patch,
+  -files/aufs2-base-28.patch, -files/aufs2-standalone-28.patch,
+  -files/aufs2-base-29.patch, -files/aufs2-standalone-29.patch,
+  -files/aufs2-base-30.patch, -files/aufs2-standalone-30.patch,
+  -files/aufs2-base-31.patch, -files/aufs2-standalone-31.patch,
+  -files/aufs2-base-32.patch, -files/aufs2-standalone-32.patch,
+  -files/aufs2-base-33.patch, -files/aufs2-standalone-33.patch,
+  -files/aufs2-base-34.patch, -files/aufs2-standalone-34.patch,
+  -files/aufs2-base-35.patch, -files/aufs2-standalone-35.patch,
+  -files/aufs2-base-36.patch, -files/aufs2-standalone-36.patch,
+  -files/aufs2-base-37.patch, -files/aufs2-standalone-37.patch,
+  -files/aufs2-base-38.patch, -files/aufs2-standalone-38.patch,
+  -files/aufs2-base-39.patch, -files/aufs2-standalone-39.patch:
+  Version Bump, cleaned old
 
   14 Sep 2011; Andreas Schuerch <nativemad@gentoo.org>
   aufs2-2.1_p20110817.ebuild:

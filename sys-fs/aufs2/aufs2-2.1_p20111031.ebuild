@@ -1,10 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20110627.ebuild,v 1.3 2011/08/15 19:11:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-2.1_p20111031.ebuild,v 1.1 2011/10/31 14:46:12 jlec Exp $
 
 EAPI=4
 
 inherit linux-mod multilib toolchain-funcs
+
+AUFS_VERSION="${PV%%_p*}"
 
 DESCRIPTION="An entirely re-designed and re-implemented Unionfs"
 HOMEPAGE="http://aufs.sourceforge.net/"
@@ -27,7 +29,7 @@ MODULE_NAMES="aufs(misc:${S})"
 pkg_setup() {
 	CONFIG_CHECK="${CONFIG_CHECK} ~EXPERIMENTAL"
 	use inotify && CONFIG_CHECK="${CONFIG_CHECK} ~FSNOTIFY"
-	use nfs && CONFIG_CHECK="${CONFIG_CHECK} ~EXPORTFS"
+	use nfs && CONFIG_CHECK="${CONFIG_CHECK} EXPORTFS"
 	use fuse && CONFIG_CHECK="${CONFIG_CHECK} ~FUSE_FS"
 	use hfs && CONFIG_CHECK="${CONFIG_CHECK} ~HFSPLUS_FS"
 
@@ -36,7 +38,7 @@ pkg_setup() {
 
 	get_version
 	kernel_is lt 2 6 31 && die "kernel too old"
-	kernel_is gt 2 6 39 && die "kernel too new"
+	kernel_is gt 2 6 34 && die "kernel too new"
 
 	linux-mod_pkg_setup
 	if ! ( patch -p1 --dry-run --force -R -d ${KV_DIR} < "${FILESDIR}"/${PN}-standalone-${KV_PATCH}.patch >/dev/null && \
@@ -44,9 +46,9 @@ pkg_setup() {
 		if use kernel-patch; then
 			cd ${KV_DIR}
 			ewarn "Patching your kernel..."
-			patch --no-backup-if-mismatch --force -p1 -R -d ${KV_DIR} < "${FILESDIR}"/${PN}-standalone-${KV_PATCH}.patch >/dev/null
-			patch --no-backup-if-mismatch --force -p1 -R -d ${KV_DIR} < "${FILESDIR}"/${PN}-base-${KV_PATCH}.patch >/dev/null
-			epatch "${FILESDIR}"/${PN}-{base,standalone}-${KV_PATCH}.patch
+			patch --no-backup-if-mismatch --force -p1 -R -d ${KV_DIR} < "${FILESDIR}"/${AUFS_VERSION}/${PN}-standalone-${KV_PATCH}.patch >/dev/null
+			patch --no-backup-if-mismatch --force -p1 -R -d ${KV_DIR} < "${FILESDIR}"/${AUFS_VERSION}/${PN}-base-${KV_PATCH}.patch >/dev/null
+			epatch "${FILESDIR}"/${AUFS_VERSION}/${PN}-{base,standalone}-${KV_PATCH}.patch
 			ewarn "You need to compile your kernel with the applied patch"
 			ewarn "to be able to load and use the aufs kernel module"
 		else
@@ -68,7 +70,7 @@ set_config() {
 }
 
 src_prepare() {
-	local branch=origin/aufs2.1-${KV_PATCH}
+	local branch=origin/aufs${AUFS_VERSION}-${KV_PATCH}
 	git checkout -q $branch || die
 
 	# All config options to off
@@ -92,7 +94,7 @@ src_prepare() {
 	sed -i "s:__user::g" include/linux/aufs_type.h || die
 
 	cd "${WORKDIR}"/${PN}-util
-	git checkout -q origin/aufs2.1
+	git checkout -q origin/aufs${AUFS_VERSION}
 	sed -i "/LDFLAGS += -static -s/d" Makefile || die
 	sed -i -e "s:m 644 -s:m 644:g" -e "s:/usr/lib:/usr/$(get_libdir):g" libau/Makefile || die
 }
