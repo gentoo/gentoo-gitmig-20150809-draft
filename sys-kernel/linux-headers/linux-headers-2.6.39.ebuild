@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.39.ebuild,v 1.6 2011/10/28 20:28:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.39.ebuild,v 1.7 2011/10/31 00:24:03 vapier Exp $
 
 EAPI="3"
 
@@ -15,7 +15,8 @@ SRC_URI="mirror://gentoo/gentoo-headers-base-${PV}.tar.xz"
 
 KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-linux ~x86-linux"
 
-DEPEND="app-arch/xz-utils"
+DEPEND="app-arch/xz-utils
+	dev-lang/perl"
 RDEPEND=""
 
 S=${WORKDIR}/gentoo-headers-base-${PV}
