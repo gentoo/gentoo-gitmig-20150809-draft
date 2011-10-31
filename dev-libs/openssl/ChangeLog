@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.408 2011/10/01 07:28:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.409 2011/10/31 20:21:25 vapier Exp $
+
+  31 Oct 2011; Mike Frysinger <vapier@gentoo.org> openssl-0.9.8r.ebuild:
+  Update to EAPI=2 to keep down differences with newer openssl ebuilds, and fix
+  path to enginedir in multilib setup.
 
   01 Oct 2011; Peter Volkov <pva@gentoo.org> openssl-1.0.0e.ebuild:
   Install README.gost when USE=rfc3779, bug #385027.

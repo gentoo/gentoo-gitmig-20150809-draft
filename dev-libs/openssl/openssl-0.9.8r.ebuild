@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8r.ebuild,v 1.5 2011/07/05 07:01:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.8r.ebuild,v 1.6 2011/10/31 20:21:25 vapier Exp $
 
 # this ebuild is only for the libcrypto.so.0.9.8 and libssl.so.0.9.8 SONAME for ABI compat
 
-EAPI="1"
+EAPI="2"
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -34,10 +34,7 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.9.8e-bsd-sparc64.patch
 	epatch "${FILESDIR}"/${PN}-0.9.8h-ldflags.patch #181438
 	epatch "${FILESDIR}"/${PN}-0.9.8m-binutils.patch #289130
@@ -56,6 +53,10 @@ src_unpack() {
 		|| die
 	# show the actual commands in the log
 	sed -i '/^SET_X/s:=.*:=set -x:' Makefile.shared
+	# update the enginedir path
+	sed -i \
+		-e "/foo.*engines/s|/lib/engines|/$(get_libdir)/engines|" \
+		Configure || die
 
 	# allow openssl to be cross-compiled
 	cp "${FILESDIR}"/gentoo.config-0.9.8 gentoo.config || die "cp cross-compile failed"
@@ -69,7 +70,7 @@ src_unpack() {
 	./config --test-sanity || die "I AM NOT SANE"
 }
 
-src_compile() {
+src_configure() {
 	unset APPS #197996
 	unset SCRIPTS #312551
 
@@ -123,7 +124,9 @@ src_compile() {
 		-e "/^CFLAG/s|=.*|=${CFLAG} ${CFLAGS}|" \
 		-e "/^SHARED_LDFLAGS=/s|$| ${LDFLAGS}|" \
 		Makefile || die
+}
 
+src_compile() {
 	# depend is needed to use $confopts
 	emake -j1 depend || die "depend failed"
 	emake -j1 build_libs || die "make build_libs failed"
