@@ -1,14 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.18 2011/10/27 07:16:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.19 2011/10/31 17:39:52 vapier Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 #
 # This eclass is created to avoid using non-portable GNUisms inside ebuilds
 #
 # NB:  If you add anything, please comment it!
-
-inherit user
 
 # treecopy orig1 orig2 orig3 .... dest
 #
@@ -129,3 +127,8 @@ get_mounts() {
 		echo "${point// /\040} ${node// /\040} ${fs%% *} ${opts// /\040}"
 	done
 }
+
+_dead_portability_user_funcs() { die "if you really need this, please file a bug for base-system@gentoo.org"; }
+egethome() { _dead_portability_user_funcs; }
+egetshell() { _dead_portability_user_funcs; }
+is-login-disabled() { _dead_portability_user_funcs; }

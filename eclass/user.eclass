@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.3 2011/10/27 07:49:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.4 2011/10/31 17:39:52 vapier Exp $
 
 # @ECLASS: user.eclass
 # @MAINTAINER:
@@ -388,56 +388,4 @@ enewgroup() {
 		;;
 	esac
 	export SANDBOX_ON="${oldsandbox}"
-}
-
-# Gets the home directory for the specified user
-# it's a wrap around egetent as the position of the home directory in the line
-# varies depending on the os used.
-#
-# To use that, inherit eutils, not portability!
-egethome() {
-	local pos
-
-	case ${CHOST} in
-	*-darwin*|*-freebsd*|*-dragonfly*)
-		pos=9
-		;;
-	*)	# Linux, NetBSD, OpenBSD, etc...
-		pos=6
-		;;
-	esac
-
-	egetent passwd $1 | cut -d: -f${pos}
-}
-
-# Gets the shell for the specified user
-# it's a wrap around egetent as the position of the home directory in the line
-# varies depending on the os used.
-#
-# To use that, inherit eutils, not portability!
-egetshell() {
-	local pos
-
-	case ${CHOST} in
-	*-darwin*|*-freebsd*|*-dragonfly*)
-		pos=10
-		;;
-	*)	# Linux, NetBSD, OpenBSD, etc...
-		pos=7
-		;;
-	esac
-
-	egetent passwd "$1" | cut -d: -f${pos}
-}
-
-# Returns true if specified user has a shell that precludes logins
-# on whichever operating system.
-is-login-disabled() {
-
-	case $(egetshell "$1") in
-		/bin/false|/usr/bin/false|/sbin/nologin|/usr/sbin/nologin)
-			return 0 ;;
-		*)
-			return 1 ;;
-	esac
 }
