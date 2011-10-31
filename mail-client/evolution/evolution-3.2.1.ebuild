@@ -1,24 +1,21 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.2-r3.ebuild,v 1.7 2011/10/31 07:35:16 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.2.1.ebuild,v 1.1 2011/10/31 07:35:16 tetromino Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="python? 2:2.4"
 
-inherit autotools flag-o-matic gnome2 python versionator
-
-MY_MAJORV=$(get_version_component_range 1-2)
+inherit autotools eutils flag-o-matic gnome2 python
 
 DESCRIPTION="Integrated mail, addressbook and calendaring functionality"
 HOMEPAGE="http://www.gnome.org/projects/evolution/"
 
-SRC_URI="${SRC_URI} http://dev.gentoo.org/~pacho/gnome/${P}-patches-r1.tar.bz2"
-
 LICENSE="GPL-2 LGPL-2 OPENLDAP"
 SLOT="2.0"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="clutter crypt doc gstreamer kerberos ldap networkmanager python ssl"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+IUSE="clutter connman crypt doc +gnome-online-accounts gstreamer kerberos ldap map networkmanager python ssl"
 
 # We need a graphical pinentry frontend to be able to ask for the GPG
 # password from inside evolution, bug 160302
@@ -28,48 +25,52 @@ PINENTRY_DEPEND="|| ( app-crypt/pinentry[gtk] app-crypt/pinentry-qt app-crypt/pi
 # glade-3 support is for maintainers only per configure.ac
 # mono plugin disabled as it's incompatible with 2.8 and lacks maintainance (see bgo#634571)
 # pst is not mature enough and changes API/ABI frequently
-RDEPEND=">=dev-libs/glib-2.25.12:2
-	>=x11-libs/gtk+-2.20.0:2
-	>=dev-libs/libunique-1.1.2:1
-	>=gnome-base/gnome-desktop-2.26:2
-	>=dev-libs/libgweather-2.25.3:2
-	media-libs/libcanberra[gtk]
-	>=x11-libs/libnotify-0.3
-	>=gnome-extra/evolution-data-server-${PV}[weather]
-	>=gnome-extra/gtkhtml-3.31.90:3.14
+COMMON_DEPEND=">=dev-libs/glib-2.28:2
+	>=x11-libs/cairo-1.9.15[glib]
+	>=x11-libs/gtk+-3.0.2:3
+	>=gnome-base/gnome-desktop-2.91.3:3
+	>=gnome-base/gsettings-desktop-schemas-2.91.92
+	>=dev-libs/libgweather-2.90.0:2
+	>=media-libs/libcanberra-0.25[gtk3]
+	>=x11-libs/libnotify-0.7
+	>=gnome-extra/evolution-data-server-${PV}[gnome-online-accounts?,weather]
+	>=gnome-extra/gtkhtml-4.1.2:4.0
 	>=gnome-base/gconf-2:2
 	dev-libs/atk
 	>=dev-libs/libxml2-2.7.3:2
-	>=net-libs/libsoup-2.4:2.4
-	>=media-gfx/gtkimageview-1.6
+	>=net-libs/libsoup-gnome-2.31.2:2.4
 	>=x11-misc/shared-mime-info-0.22
 	>=x11-themes/gnome-icon-theme-2.30.2.1
-	>=dev-libs/libgdata-0.4
+	>=dev-libs/libgdata-0.9.1
+
+	x11-libs/libSM
+	x11-libs/libICE
 
 	clutter? (
 		>=media-libs/clutter-1.0.0:1.0
 		>=media-libs/clutter-gtk-0.90:1.0
 		x11-libs/mx:1.0 )
+	connman? ( net-misc/connman )
 	crypt? ( || (
-				  ( >=app-crypt/gnupg-2.0.1-r2
-					${PINENTRY_DEPEND} )
-				  =app-crypt/gnupg-1.4* ) )
+		( >=app-crypt/gnupg-2.0.1-r2 ${PINENTRY_DEPEND} )
+		=app-crypt/gnupg-1.4* ) )
+	gnome-online-accounts? ( >=net-libs/gnome-online-accounts-3.1.1 )
 	gstreamer? (
 		>=media-libs/gstreamer-0.10:0.10
 		>=media-libs/gst-plugins-base-0.10:0.10 )
 	kerberos? ( virtual/krb5 )
 	ldap? ( >=net-nds/openldap-2 )
+	map? (
+		>=app-misc/geoclue-0.11.1
+		media-libs/libchamplain:0.10 )
 	networkmanager? ( >=net-misc/networkmanager-0.7 )
 	ssl? (
 		>=dev-libs/nspr-4.6.1
-		>=dev-libs/nss-3.11 )
-
-	!<gnome-extra/evolution-exchange-2.32"
-
-DEPEND="${RDEPEND}
+		>=dev-libs/nss-3.11 )"
+DEPEND="${COMMON_DEPEND}
 	>=dev-util/pkgconfig-0.16
-	>=dev-util/intltool-0.35.5
-	sys-devel/gettext
+	>=dev-util/intltool-0.40.0
+	>=sys-devel/gettext-0.17
 	sys-devel/bison
 	app-text/scrollkeeper
 	>=app-text/gnome-doc-utils-0.9.1
@@ -80,31 +81,39 @@ DEPEND="${RDEPEND}
 # eautoreconf needs:
 #	>=gnome-base/gnome-common-2.12
 #	>=dev-util/gtk-doc-am-1.9
+RDEPEND="${COMMON_DEPEND}
+	!<gnome-extra/evolution-exchange-2.32"
+
+# contact maps require clutter
+# NM and connman support cannot coexist
+REQUIRED_USE="map? ( clutter )
+	connman? ( !networkmanager )
+	networkmanager? ( !connman )"
 
 pkg_setup() {
 	ELTCONF="--reverse-deps"
 	DOCS="AUTHORS ChangeLog* HACKING MAINTAINERS NEWS* README"
+	# image-inline plugin needs a gtk+:3 gtkimageview, which does not exist yet
 	G2CONF="${G2CONF}
+		--without-glade-catalog
 		--without-kde-applnk-path
 		--enable-plugins=experimental
-		--enable-image-inline
+		--disable-image-inline
+		--disable-mono
+		--disable-pst-import
 		--enable-canberra
 		--enable-weather
 		$(use_enable ssl nss)
 		$(use_enable ssl smime)
 		$(use_enable networkmanager nm)
+		$(use_enable connman)
+		$(use_enable gnome-online-accounts goa)
 		$(use_enable gstreamer audio-inline)
-		--disable-profiling
-		--disable-pst-import
+		$(use_enable map contact-maps)
 		$(use_enable python)
 		$(use_with clutter)
 		$(use_with ldap openldap)
-		$(use_with kerberos krb5 /usr)
-		--disable-contacts-map
-		--without-glade-catalog
-		--disable-mono
-		--disable-gtk3
-		--disable-connman"
+		$(use_with kerberos krb5 ${EPREFIX}/usr)"
 
 	# dang - I've changed this to do --enable-plugins=experimental.  This will
 	# autodetect new-mail-notify and exchange, but that cannot be helped for the
@@ -123,57 +132,34 @@ pkg_setup() {
 	fi
 
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
+	# https://bugzilla.gnome.org/show_bug.cgi?id=663077, requires eautoreconf
+	epatch "${FILESDIR}/${PN}-3.2.1-reorder-mx-clutter-gtk.patch"
+	eautoreconf
+
 	gnome2_src_prepare
 
-	epatch "${FILESDIR}"/${PN}-2.32.1-libnotify-0.7.patch
-
-	# Fix invalid use of la file in contact-editor, upstream bug #635002
-	epatch "${FILESDIR}/${PN}-2.32.0-wrong-lafile-usage.patch"
-
-	# Fix compilation with --disable-smime, bug #356471
-	epatch "${FILESDIR}/${PN}-2.32.2-smime-fix.patch"
-
-	# Fix desktop file to work with latest glib
-	epatch "${FILESDIR}/${PN}-2.32.2-mime-handler.patch"
-
-	# Apply multiple backports from master fixing important bugs
-	epatch "${WORKDIR}/${P}-patches-r1"/*.patch
-
-	# Use NSS/NSPR only if 'ssl' is enabled.
-	if use ssl ; then
-		sed -e 's|mozilla-nss|nss|' \
-			-e 's|mozilla-nspr|nspr|' \
-			-i configure.ac configure || die "sed 2 failed"
-	fi
-
 	# Fix compilation flags crazyness
-	sed -e 's/-D.*_DISABLE_DEPRECATED//' \
-		-i configure.ac configure || die "sed 1 failed"
-
-	intltoolize --force --copy --automake || die "intltoolize failed"
-	eautoreconf
-}
-
-src_install() {
-	gnome2_src_install
-
-	find "${ED}"/usr/$(get_libdir)/evolution/${MY_MAJORV}/plugins \
-		-name "*.la" -delete || die "la files removal failed 1"
-	find "${ED}"/usr/$(get_libdir)/evolution/${MY_MAJORV}/modules \
-		-name "*.la" -delete || die "la files removal failed 2"
+	sed -e 's/\(AM_CPPFLAGS="\)$WARNING_FLAGS/\1/' \
+		-i configure || die "CPPFLAGS sed failed"
 }
 
 pkg_postinst() {
 	gnome2_pkg_postinst
 
-	elog "To change the default browser if you are not using GNOME, do:"
-	elog "gconftool-2 --set /desktop/gnome/url-handlers/http/command -t string 'firefox %s'"
-	elog "gconftool-2 --set /desktop/gnome/url-handlers/https/command -t string 'firefox %s'"
+	elog "To change the default browser if you are not using GNOME, edit"
+	elog "~/.local/share/applications/mimeapps.list so it includes the"
+	elog "following content:"
 	elog ""
-	elog "Replace 'firefox %s' with which ever browser you use."
+	elog "[Default Applications]"
+	elog "x-scheme-handler/http=firefox.desktop"
+	elog "x-scheme-handler/https=firefox.desktop"
+	elog ""
+	elog "(replace firefox.desktop with the name of the appropriate .desktop"
+	elog "file from /usr/share/applications if you use a different browser)."
 	elog ""
 	elog "Junk filters are now a run-time choice. You will get a choice of"
 	elog "bogofilter or spamassassin based on which you have installed"

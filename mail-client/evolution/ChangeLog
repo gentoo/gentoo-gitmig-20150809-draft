@@ -1,6 +1,17 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.349 2011/10/30 16:26:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.350 2011/10/31 07:35:16 tetromino Exp $
+
+*evolution-3.2.1 (31 Oct 2011)
+
+  31 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  evolution-2.32.2-r3.ebuild, evolution-2.32.3.ebuild,
+  evolution-2.32.3-r1.ebuild, evolution-3.0.3.ebuild, +evolution-3.2.1.ebuild,
+  +files/evolution-3.2.1-reorder-mx-clutter-gtk.patch, metadata.xml:
+  Bump to 3.2.1 from the gnome overlay. Add a patch to fix building when
+  clutter-gtk:0.10 is installed. Switch to EAPI4 and add a REQUIRED_USE. Update
+  the CPPFLAGS sed for configure.ac changes.
+  In addition, fix clutter dependencies in existing evolution ebuilds.
 
   30 Oct 2011; Raúl Porcel <armin76@gentoo.org> evolution-2.32.3.ebuild:
   alpha/ia64/sparc stable wrt #385699

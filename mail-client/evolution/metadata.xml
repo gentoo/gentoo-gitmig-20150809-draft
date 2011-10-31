@@ -8,6 +8,8 @@
 		'networkmanager' USE flag to be disabled).</flag>
 		<flag name="crypt">Enable GPG encryption support using
 			<pkg>app-crypt/gnupg</pkg> and <pkg>app-crypt/pinentry</pkg></flag>
+		<flag name="gnome-online-accounts">Enable using
+			<pkg>net-libs/gnome-online-accounts</pkg> for authorization</flag>
 		<flag name="ldap">Enable support for fetching contacts from an LDAP or
 			Active Directory server using <pkg>net-nds/openldap</pkg></flag>
 		<flag name="map">Enable support for displaying contacts on a map inside

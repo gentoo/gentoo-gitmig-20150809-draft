@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.3-r1.ebuild,v 1.1 2011/10/08 21:25:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.3-r1.ebuild,v 1.2 2011/10/31 07:35:16 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -47,7 +47,10 @@ RDEPEND=">=dev-libs/glib-2.25.12:2
 	>=x11-themes/gnome-icon-theme-2.30.2.1
 	>=dev-libs/libgdata-0.4
 
-	clutter? ( media-libs/clutter:1.0[gtk] )
+	clutter? (
+		>=media-libs/clutter-1.0.0:1.0
+		>=media-libs/clutter-gtk-0.90:1.0
+		x11-libs/mx:1.0 )
 	connman? ( net-misc/connman )
 	crypt? ( || (
 				  ( >=app-crypt/gnupg-2.0.1-r2

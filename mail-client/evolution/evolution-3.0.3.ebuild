@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.0.3.ebuild,v 1.1 2011/09/30 18:45:22 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.0.3.ebuild,v 1.2 2011/10/31 07:35:16 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -50,7 +50,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.28:2
 	clutter? (
 		>=media-libs/clutter-1.0.0:1.0
 		>=media-libs/clutter-gtk-0.90:1.0
-		x11-libs/mx )
+		x11-libs/mx:1.0 )
 	connman? ( net-misc/connman )
 	crypt? ( || (
 		( >=app-crypt/gnupg-2.0.1-r2 ${PINENTRY_DEPEND} )
