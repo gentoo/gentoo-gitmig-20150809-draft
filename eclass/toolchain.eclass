@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.476 2011/10/31 01:10:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.477 2011/10/31 01:12:33 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1290,8 +1290,11 @@ gcc_do_configure() {
 	# LTO support was added in 4.5, which depends upon elfutils.  This allows
 	# users to enable that option, and pull in the additional library.  In 4.6,
 	# the dependency is no longer required.
-	[[ ${GCC_BRANCH_VER} == 4.5 ]] && confgcc+=" $(use_enable lto)"
-	[[ ${GCC_BRANCH_VER} > 4.5 ]] && confgcc+=" --enable-lto"
+	if tc_version_is_at_least "4.6" ; then
+		confgcc+=" --enable-lto"
+	elif tc_version_is_at_least "4.5" ; then
+		confgcc+=" $(use_enable lto)"
+	fi
 
 	[[ $(tc-is-softfloat) == "yes" ]] && confgcc+=" --with-float=soft"
 	[[ $(tc-is-hardfloat) == "yes" ]] && confgcc+=" --with-float=hard"
