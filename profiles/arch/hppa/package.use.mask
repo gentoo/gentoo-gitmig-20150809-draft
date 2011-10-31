@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.89 2011/10/25 15:08:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.90 2011/10/31 17:32:27 jer Exp $
 
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
 # Jeroen Roovers <jer@gentoo.org> (25 Oct 2011)
 # Untested, probably never needed (bug #387959)
-app-admin/packagekit-base connman entropy
+app-admin/packagekit-base connman entropy nsplugin
 
 # Robin H. Johnson <robbat2@gentoo.org> (03 Sep 2011)
 # Remove this for your arch after you keyword dev-utils/google-perftools and virtual/gsasl (bug #381737
