@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/openmsx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.42 2011/10/15 11:23:39 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.43 2011/10/31 23:02:27 ssuominen Exp $
+
+  31 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> -openmsx-0.7.2.ebuild,
+  -openmsx-0.8.0.ebuild:
+  old
 
   15 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> openmsx-0.8.1.ebuild:
   ppc stable wrt #380179
