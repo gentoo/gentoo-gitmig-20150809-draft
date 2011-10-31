@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Mail-Builder
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Builder/ChangeLog,v 1.5 2011/10/30 10:02:25 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Builder/ChangeLog,v 1.6 2011/10/31 04:04:21 tove Exp $
+
+*Mail-Builder-2.70.0 (31 Oct 2011)
+
+  31 Oct 2011; Torsten Veller <tove@gentoo.org> +Mail-Builder-2.70.0.ebuild:
+  Version bump
 
 *Mail-Builder-2.60.0 (30 Oct 2011)
 
