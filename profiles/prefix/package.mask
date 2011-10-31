@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.mask,v 1.93 2011/10/28 16:39:51 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.mask,v 1.94 2011/10/31 17:54:02 grobian Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked.  This file is for
@@ -47,10 +47,6 @@ www-apps/trac
 # for upstream to sanitise their code (or someone else to do it, since
 # many people are affected: uClibc, BSD, ...)
 =sys-fs/e2fsprogs-1.41.14
-
-# Jeremy Olexa <darkside@gentoo.org> (14 Jul 2010)
-# Needs testing from the brave users.
-=app-admin/python-updater-0.8
 
 # Jeremy Olexa <darkside@gentoo.org> (21 Aug 2009)
 # python-3 will most certainly cause problems if it ever gets unleashed without
