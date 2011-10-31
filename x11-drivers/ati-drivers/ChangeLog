@@ -1,6 +1,16 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.260 2011/10/02 02:28:03 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.261 2011/10/31 19:34:18 chithanh Exp $
+
+*ati-drivers-11.10 (31 Oct 2011)
+
+  31 Oct 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -files/ati-drivers-2.6.36.patch, -files/ati-drivers-2.6.37.patch,
+  -files/ati-drivers-2.6.38.patch, -ati-drivers-10.10.ebuild,
+  -ati-drivers-10.11.ebuild, -ati-drivers-10.12.ebuild,
+  -ati-drivers-11.2.ebuild, -ati-drivers-11.3.ebuild,
+  +ati-drivers-11.10.ebuild, files/switchlibGL:
+  Version bump, remove drivers older than 6 months.
 
 *ati-drivers-11.9 (02 Oct 2011)
 
