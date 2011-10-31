@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/libs3
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libs3/ChangeLog,v 1.1 2011/10/31 02:36:11 weaver Exp $
+
+*libs3-2.0 (31 Oct 2011)
+
+  31 Oct 2011; Andrey Kislyuk <weaver@gentoo.org> +libs3-2.0.ebuild,
+  +metadata.xml:
+  New package, ebuild written by me
+
