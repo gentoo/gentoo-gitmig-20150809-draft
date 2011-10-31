@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/dahdi-2.5.0.2-r1.ebuild,v 1.1 2011/10/26 14:21:36 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/dahdi-2.5.0.2-r1.ebuild,v 1.2 2011/10/31 14:34:14 flameeyes Exp $
 
 EAPI=4
 
@@ -58,11 +58,11 @@ src_prepare() {
 
 src_compile() {
 	unset ARCH
-	emake CC=$(tc-getCC) LD=$(tc-getLD) KSRC="${KBUILD_OUTPUT}" DESTDIR="${D}" DAHDI_MODULES_EXTRA="cwain.o qozap.o ztgsm.o" all
+	emake CC=$(tc-getCC) LD=$(tc-getLD) KSRC="${KV_OUT_DIR}" DESTDIR="${D}" DAHDI_MODULES_EXTRA="cwain.o qozap.o ztgsm.o" all
 }
 
 src_install() {
 	einfo "Installing kernel module"
-	emake KSRC="${KBUILD_OUTPUT}" DESTDIR="${D}" DAHDI_MODULES_EXTRA="cwain.o qozap.o ztgsm.o" install
+	emake KSRC="${KV_OUT_DIR}" DESTDIR="${D}" DAHDI_MODULES_EXTRA="cwain.o qozap.o ztgsm.o" install
 	rm -rf "$D"/lib/modules/*/modules.*
 }

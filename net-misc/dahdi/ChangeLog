@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.31 2011/10/26 14:21:36 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.32 2011/10/31 14:34:14 flameeyes Exp $
+
+  31 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org> dahdi-2.5.0.2-r1.ebuild:
+  QA: use KV_OUT_DIR rather than KBUILD_OUTPUT to find which sources to build
+  for. This is basically the best-of between the variables used before
+  (KERNEL_DIR and KBUILD_OUTPUT).
 
 *dahdi-2.5.0.2-r1 (26 Oct 2011)
 
