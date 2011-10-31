@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/thinkfinger-0.3-r3.ebuild,v 1.2 2011/08/26 18:25:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/thinkfinger/thinkfinger-0.3-r3.ebuild,v 1.3 2011/10/31 00:28:57 dirtyepic Exp $
 
-EAPI=2
+EAPI="4"
 
-inherit eutils linux-info multilib pam
+inherit autotools-utils eutils linux-info pam
 
 DESCRIPTION="Support for the UPEK/SGS Thomson Microelectronics fingerprint reader, often seen in Thinkpads"
 HOMEPAGE="http://thinkfinger.sourceforge.net/"
@@ -13,24 +13,21 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug pam"
+IUSE="debug pam static-libs"
 
-RDEPEND=">=dev-libs/libusb-0.1.12
+RDEPEND=">=dev-libs/libusb-0.1.12:0
 	pam? ( virtual/pam )"
 DEPEND="${RDEPEND}
 	sys-devel/libtool
 	>=dev-util/pkgconfig-0.9.0"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${PV}-direct_set_config_usb_hello.patch || die
-	epatch "${FILESDIR}"/${PV}-carriagereturn.patch || die
-	epatch "${FILESDIR}"/${PV}-send-sync-event.patch || die
-	epatch "${FILESDIR}"/${PV}-tftoolgroup.patch || die
-}
-
-pkg_preinst() {
-	enewgroup fingerprint
-}
+PATCHES=(
+	"${FILESDIR}"/${PV}-direct_set_config_usb_hello.patch
+	"${FILESDIR}"/${PV}-carriagereturn.patch
+	"${FILESDIR}"/${PV}-send-sync-event.patch
+	"${FILESDIR}"/${PV}-tftoolgroup.patch
+	"${FILESDIR}"/${PV}-strip-strip.patch
+)
 
 pkg_setup() {
 	if use pam ; then
@@ -41,19 +38,25 @@ pkg_setup() {
 }
 
 src_configure() {
-	econf \
+	local myeconfargs=(
 		$(use_enable pam) \
 		$(use_enable debug usb-debug) \
-		"--with-securedir=$(getpam_mod_dir)" \
-		|| die
+		"--with-securedir=$(getpam_mod_dir)"
+	)
+	autotools-utils_src_configure
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	DOCS=( AUTHORS ChangeLog NEWS README )
+	autotools-utils_src_install
+
 	keepdir /etc/pam_thinkfinger
-	dodoc AUTHORS ChangeLog NEWS README || die
-	insinto /$(get_libdir)/udev/rules.d
-	doins "${FILESDIR}"/60-thinkfinger.rules || die
+	insinto /lib/udev/rules.d
+	doins "${FILESDIR}"/60-thinkfinger.rules
+}
+
+pkg_preinst() {
+	enewgroup fingerprint
 }
 
 pkg_postinst() {
