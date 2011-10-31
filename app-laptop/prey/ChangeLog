@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/prey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/prey/ChangeLog,v 1.1 2011/09/19 16:25:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/prey/ChangeLog,v 1.2 2011/10/31 17:15:40 ssuominen Exp $
+
+  31 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> prey-0.5.3.ebuild:
+  Fix media-video/mplayer USE depend from "v4l2" to "v4l" wrt #385241
 
 *prey-0.5.3 (19 Sep 2011)
 

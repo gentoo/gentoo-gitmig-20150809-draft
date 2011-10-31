@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/prey/prey-0.5.3.ebuild,v 1.1 2011/09/19 16:25:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/prey/prey-0.5.3.ebuild,v 1.2 2011/10/31 17:15:40 ssuominen Exp $
 
 EAPI=4
 
@@ -42,7 +42,7 @@ RDEPEND="${DEPEND}
 	session? ( sys-apps/iproute2
 			   || ( media-gfx/scrot media-gfx/imagemagick )
 			 )
-	webcam? ( || ( ( media-video/mplayer[encode,jpeg,v4l2] ) ( media-tv/xawtv ) ) )"
+	webcam? ( || ( ( media-video/mplayer[encode,jpeg,v4l] ) ( media-tv/xawtv ) ) )"
 
 S=${WORKDIR}/${PN}
 
