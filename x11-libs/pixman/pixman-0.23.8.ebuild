@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/pixman-0.23.6.ebuild,v 1.1 2011/10/22 03:15:32 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/pixman-0.23.8.ebuild,v 1.1 2011/10/31 19:40:17 chithanh Exp $
 
 EAPI=4
 inherit xorg-2 toolchain-funcs versionator
