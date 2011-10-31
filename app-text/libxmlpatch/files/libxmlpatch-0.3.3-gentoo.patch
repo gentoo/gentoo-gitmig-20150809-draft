@@ -10,7 +10,7 @@ Index: libxmlpatch-0.3.3/tests/check_diff.c
 +    _tcase_add_test (tc, arr_tests[i].fn, arr_tests[i].name,
 +#if CHECK_MAJOR_VERSION > 0 || \
 +  (CHECK_MAJOR_VERSION == 0 && CHECK_MINOR_VERSION > 9) || \
-+  (CHECK_MAJOR_VERSION == 0 && CHECK_MINOR_VERSION == 9 && CHECK_MICRO_VERSION >= 8)
++  (CHECK_MAJOR_VERSION == 0 && CHECK_MINOR_VERSION == 9 && CHECK_MICRO_VERSION >= 7)
 +                     0,
 +#endif
 +                     0, 0, 1);
