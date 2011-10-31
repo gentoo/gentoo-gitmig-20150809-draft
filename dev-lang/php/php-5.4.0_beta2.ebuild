@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.0_beta2.ebuild,v 1.1 2011/10/20 08:27:33 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.0_beta2.ebuild,v 1.2 2011/10/31 16:18:04 mabi Exp $
 
 EAPI=4
 
@@ -323,7 +323,7 @@ eblit-pkg pkg_setup v3
 
 src_prepare() { eblit-run src_prepare v4 ; }
 src_configure() { eblit-run src_configure v3 ; }
-src_compile() { eblit-run src_compile v1 ; }
+src_compile() { eblit-run src_compile v2 ; }
 src_install() { eblit-run src_install v3 ; }
 src_test() { eblit-run src_test v1 ; }
 pkg_postinst() { eblit-run pkg_postinst v2 ; }

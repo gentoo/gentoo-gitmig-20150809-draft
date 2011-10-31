@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v3.eblit,v 1.3 2011/09/16 07:02:57 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v3.eblit,v 1.4 2011/10/31 16:18:04 mabi Exp $
 
 eblit-php-src_install() {
 	# see bug #324739 for what happens when we don't have that
@@ -36,20 +36,39 @@ eblit-php-src_install() {
 		if use "${sapi}" ; then
 			einfo "Installing SAPI: ${sapi}"
 			cd "${WORKDIR}/sapis-build/${sapi}"
-			# needed each time, php_install_ini would reset it
-			into "${PHP_DESTDIR}"
-			file=$(find "${SAPI_DIR}/${sapi}/" -type f | head -n 1)
 
-			if [[ "${file: -3}" == ".so" ]]; then 
-				if [[ "${sapi}" == "apache2" ]]; then
-					insinto "${PHP_DESTDIR}/apache2/"
-					newins "${file}" "${file/*\/}"
-                    keepdir "/usr/$(get_libdir)/apache2/modules"
-				else
-					dolib.so "${file}" || die "Unable to install ${sapi} sapi"
-				fi
+			if [[ "${sapi}" == "apache2" ]] ; then
+				# We're specifically not using emake install-sapi as libtool
+				# may cause unnecessary relink failures (see bug #351266)
+				insinto "${PHP_DESTDIR}/apache2/"
+				newins ".libs/libphp5.so" "libphp${PHP_MV}.so"
+				keepdir "/usr/$(get_libdir)/apache2/modules"
 			else
-				dobin "${file}" || die "Unable to install ${sapi} sapi"
+				# needed each time, php_install_ini would reset it
+				into "${PHP_DESTDIR}"
+			    case "$sapi" in
+					cli)
+						source="sapi/cli/php"
+						;;
+					cgi)
+						source="sapi/cgi/php-cgi"
+						;;
+					fpm)
+						source="sapi/fpm/php-fpm"
+						;;
+					embed)
+						source="libs/libphp${PHP_MV}.so"
+						;;
+					*)
+						die "unhandled sapi in src_install"
+						;;
+				esac
+
+				if [[ "${source: -3}" == ".so" ]]; then 
+					dolib.so "${source}" || die "Unable to install ${sapi} sapi"
+				else
+					dobin "${source}" || die "Unable to install ${sapi} sapi"
+				fi
 			fi
 
 			php_install_ini "${sapi}"
@@ -57,7 +76,7 @@ eblit-php-src_install() {
 			# construct correct SAPI string for php-config
 			# thanks to ferringb for the bash voodoo
 			if [[ "${sapi}" == "apache2" ]]; then
-			    sapi_list="${sapi_list:+${sapi_list} }apache2handler"
+				sapi_list="${sapi_list:+${sapi_list} }apache2handler"
 			else
 				sapi_list="${sapi_list:+${sapi_list} }${sapi}"
 			fi
