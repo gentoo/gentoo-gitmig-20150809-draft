@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.475 2011/10/26 23:27:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.476 2011/10/31 01:10:49 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -86,9 +86,9 @@ IUSE="build multislot nls nptl test vanilla"
 if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
 	IUSE+=" altivec fortran nocxx"
 	[[ -n ${PIE_VER} ]] && IUSE+=" nopie"
-	[[ -n ${PP_VER}	 ]] && IUSE+=" nossp"
 	[[ -n ${HTB_VER} ]] && IUSE+=" boundschecking"
-	[[ -n ${D_VER}	 ]] && IUSE+=" d"
+	[[ -n ${D_VER}   ]] && IUSE+=" d"
+	[[ -n ${PP_VER}${SPECS_VER} ]] && IUSE+=" nossp"
 
 	if tc_version_is_at_least 3 ; then
 		IUSE+=" bootstrap doc gcj gtk hardened libffi multilib objc"
@@ -97,10 +97,7 @@ if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
 		tc_version_is_at_least "4.1" && IUSE+=" objc++"
 		tc_version_is_at_least "4.2" && IUSE+=" openmp"
 		tc_version_is_at_least "4.3" && IUSE+=" fixed-point"
-		if tc_version_is_at_least "4.4" ; then
-			IUSE+=" graphite"
-			[[ -n ${SPECS_VER} ]] && IUSE+=" nossp"
-		fi
+		tc_version_is_at_least "4.4" && IUSE+=" graphite"
 		[[ ${GCC_BRANCH_VER} == 4.5 ]] && IUSE+=" lto"
 		tc_version_is_at_least "4.6" && IUSE+=" go"
 	fi
