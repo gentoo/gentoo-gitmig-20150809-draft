@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ledger-2.6.3-r1.ebuild,v 1.2 2011/09/05 22:32:58 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ledger-2.6.3-r1.ebuild,v 1.3 2011/10/31 18:15:31 radhermit Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ inherit eutils elisp-common autotools
 
 DESCRIPTION="A double-entry accounting system with a command-line reporting interface"
 HOMEPAGE="http://ledger-cli.org/"
-SRC_URI="http://cloud.github.com/downloads/jwiegley/${PN}/${P}.tar.gz"
+SRC_URI="mirror://github/jwiegley/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x64-macos"
