@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.3.1.ebuild,v 1.6 2011/09/28 11:14:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.3.1.ebuild,v 1.7 2011/10/31 12:28:31 jer Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -32,7 +32,7 @@ if [[ ${PV} == *_pre* ]] ; then
 	LANGPACK_PREFIX=""
 	LANGPACK_SUFFIX=""
 	#KEYWORDS=""
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ppc ~ppc64 ~x86"
+	KEYWORDS="~alpha ~amd64 ~arm ppc ~ppc64 ~x86"
 	#HAS_LANGS="false"
 else
 	# This is where arch teams should change the KEYWORDS.
@@ -40,7 +40,7 @@ else
 	#REL_URI="http://releases.mozilla.org/pub/mozilla.org/${PN}/releases/${MY_PV}"
 	REL_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/${MY_PV}"
 	LANG_URI="${REL_URI}/langpack"
-	KEYWORDS="~alpha amd64 ~arm ~hppa ppc ~ppc64 x86"
+	KEYWORDS="~alpha amd64 ~arm ppc ~ppc64 x86"
 	[[ ${PV} == *alpha* ]] && HAS_LANGS="false"
 fi
 
