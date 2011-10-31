@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.6.1.ebuild,v 1.8 2011/10/23 16:16:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/celestia-1.6.1.ebuild,v 1.9 2011/10/31 20:08:58 dilfridge Exp $
 
 EAPI=2
 
@@ -62,6 +62,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-gold.patch
 	# missing zlib.h include with libpng15
 	epatch "${FILESDIR}"/${P}-libpng15.patch
+	# another underlinking fix, bug 387609
+	epatch "${FILESDIR}"/${P}-underlinking.patch
 
 	# remove flags to let the user decide
 	for cf in -O2 -ffast-math \

@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.78 2011/10/23 16:16:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.79 2011/10/31 20:08:58 dilfridge Exp $
+
+  31 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org> celestia-1.6.1.ebuild,
+  +files/celestia-1.6.1-underlinking.patch:
+  Another underlinking fix, bug 387609
 
   23 Oct 2011; Raúl Porcel <armin76@gentoo.org> celestia-1.6.0.ebuild,
   celestia-1.6.1.ebuild:

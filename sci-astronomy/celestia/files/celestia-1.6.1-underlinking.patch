@@ -1,0 +1,21 @@
+diff -ruN celestia-1.6.1.orig/src/celestia/Makefile.am celestia-1.6.1/src/celestia/Makefile.am
+--- celestia-1.6.1.orig/src/celestia/Makefile.am	2011-06-05 18:11:13.000000000 +0200
++++ celestia-1.6.1/src/celestia/Makefile.am	2011-10-31 21:02:23.000000000 +0100
+@@ -80,7 +80,6 @@
+ celestia_LDADD = \
+ 	$(celestiaKDELIBS) \
+ 	$(celestiaGTKLIBS) \
+-	$(DL_LIBS) \
+ 	$(LUA_LIBS) \
+ 	$(THEORA_LIBS) \
+ 	../celengine/libcelengine.a \
+@@ -88,7 +87,8 @@
+ 	../cel3ds/libcel3ds.a \
+ 	../celmath/libcelmath.a \
+ 	../celutil/libcelutil.a \
+-	$(SPICE_LIBS)
++	$(SPICE_LIBS) \
++	$(DL_LIBS)
+ 
+ noinst_HEADERS = $(wildcard *.h)
+ noinst_DATA = ../../celestia
