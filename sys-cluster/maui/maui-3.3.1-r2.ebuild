@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/maui-3.3.1-r2.ebuild,v 1.3 2011/09/06 08:23:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/maui/maui-3.3.1-r2.ebuild,v 1.4 2011/10/31 10:30:09 jlec Exp $
 
 EAPI="4"
 
@@ -40,8 +40,8 @@ src_prepare() {
 
 src_configure() {
 	local myconf
-	use pbs && myconf="--with-pbs="${EPREFIX}"/usr"
-	use slurm && myconf="--with-wiki --with-key=${MAUI_KEY}"
+	use pbs && myconf="--with-pbs=${EPREFIX}/usr"
+	use slurm && myconf+=" --with-wiki --with-key=${MAUI_KEY}"
 	econf \
 		--with-spooldir="${EPREFIX}"/var/spool/${PN} \
 		${myconf}
