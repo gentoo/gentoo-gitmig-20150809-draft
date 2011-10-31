@@ -1,6 +1,11 @@
 # ChangeLog for media-radio/qrq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/qrq/ChangeLog,v 1.3 2011/05/11 08:00:17 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/qrq/ChangeLog,v 1.4 2011/10/31 14:05:52 tomjbe Exp $
+
+*qrq-0.2.0 (31 Oct 2011)
+
+  31 Oct 2011; Thomas Beierlein <tomjbe@gentoo.org> +qrq-0.2.0.ebuild:
+  version bump
 
   11 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> qrq-0.1.4.ebuild:
   x86 stable wrt bug #364813
