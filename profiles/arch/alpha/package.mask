@@ -1,0 +1,7 @@
+# Copyright 1999-2011 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.mask,v 1.25 2011/10/31 13:37:50 klausman Exp $
+
+# Tobias Klausman <klausman@gentoo.org> (31 Oct 2011)
+# Breaks since accept4() is not implemented on alpha
+>=sys-fs/udev-167
