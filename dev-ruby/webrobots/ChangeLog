@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/webrobots
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrobots/ChangeLog,v 1.2 2011/08/12 18:27:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrobots/ChangeLog,v 1.3 2011/10/31 06:50:15 graaff Exp $
+
+  31 Oct 2011; Hans de Graaff <graaff@gentoo.org> -webrobots-0.0.10.ebuild:
+  Remove old version.
 
 *webrobots-0.0.11 (12 Aug 2011)
 
