@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.10.10-r3.ebuild,v 1.2 2011/09/13 18:21:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.10.10-r3.ebuild,v 1.3 2011/10/31 16:35:33 ssuominen Exp $
 
 EAPI="1"
 
 inherit eutils flag-o-matic multilib autotools toolchain-funcs
 
-IUSE="alsa debug ipv6 ldap oss sasl sdl ssl v4l2 xml"
+IUSE="alsa debug ipv6 ldap oss sasl sdl ssl v4l xml"
 
 DESCRIPTION="Portable Multiplatform Class Libraries used by several VoIP applications"
 HOMEPAGE="http://www.ekiga.org"
@@ -72,7 +72,7 @@ src_compile() {
 	econf \
 		--enable-plugins \
 		--disable-avc \
-		$(use_enable v4l2) \
+		$(use_enable v4l v4l2) \
 		--disable-v4l \
 		--disable-dc \
 		$(use_enable oss) \
