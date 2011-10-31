@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.178 2011/10/22 11:40:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.179 2011/10/31 09:14:03 a3li Exp $
+
+*rubygems-1.8.10-r1 (31 Oct 2011)
+
+  31 Oct 2011; Alex Legler <a3li@gentoo.org> -rubygems-1.8.10.ebuild,
+  +rubygems-1.8.10-r1.ebuild, files/gentoo-defaults.rb:
+  Fix default gem binaries directory that would point to /usr/local for user
+  installations as well, causing permission errors. Revbump to update the
+  changes.
 
   22 Oct 2011; Hans de Graaff <graaff@gentoo.org> -rubygems-1.8.5.ebuild,
   -rubygems-1.8.7.ebuild:

@@ -21,7 +21,7 @@ module Gem
 
     undef :default_bindir
     def default_bindir
-      "@GENTOO_PORTAGE_EPREFIX@/usr/local/bin"
+      Process.euid == 0 ? "@GENTOO_PORTAGE_EPREFIX@/usr/local/bin" : File.join(user_dir, 'bin')
     end
 
     undef :ruby_engine
