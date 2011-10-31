@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.10.2-r2.ebuild,v 1.2 2011/10/10 10:42:43 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.10.2-r2.ebuild,v 1.3 2011/10/31 01:17:19 polynomial-c Exp $
 
 inherit eutils flag-o-matic autotools pam
 
@@ -58,15 +58,17 @@ src_compile() {
 src_install() {
 	make install IROOT="${D}" || die
 
-	# Don't install .SEQ file when it's already installed (bug #386625)
-	if [ -e "${ROOT}/var/spool/at/atjobs/.SEQ" ] ; then
-		rm "${D}/var/spool/at/atjobs/.SEQ" || die
-	fi
-
 	newinitd "${FILESDIR}"/atd.rc6 atd
 	newconfd "${FILESDIR}"/atd.confd atd
 	newpamd "${FILESDIR}"/at.pamd atd
 	prepalldocs
+
+	# Preserve existing .SEQ files (bug #386625)
+	local seq_file="${ROOT}/var/spool/at/atjobs/.SEQ"
+	if [ -f "${seq_file}" ] ; then
+		einfo"Preserving existing .SEQ file (bug #386625)."
+		cp -p "${seq_file}" "${D}"/var/spool/at/atjobs/ || die
+	fi
 }
 
 pkg_postinst() {
