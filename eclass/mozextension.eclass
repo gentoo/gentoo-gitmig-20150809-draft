@@ -1,8 +1,13 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozextension.eclass,v 1.5 2010/12/30 03:06:04 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozextension.eclass,v 1.6 2011/10/31 12:28:14 anarchy Exp $
 #
-# mozextention.eclass: installing firefox extensions and language packs
+# @ECLASS: mozextension.eclass
+# @MAINTAINER:
+# Mozilla team <mozilla@gentoo.org>
+# @DESCRIPTION:
+# Install extensions for use in mozilla products.
+
 
 inherit eutils
 
@@ -28,8 +33,7 @@ xpi_unpack() {
 		case "${xpi##*.}" in
 			ZIP|zip|jar|xpi)
 				mkdir "${WORKDIR}/${xpiname}" && \
-					cd "${WORKDIR}/${xpiname}" && \
-					unzip -qo "${srcdir}${xpi}" ||  die "failed to unpack ${xpi}"
+                                       unzip -qo "${srcdir}${xpi}" -d "${WORKDIR}/${xpiname}" ||  die "failed to unpack ${xpi}"
 				;;
 			*)
 				einfo "unpack ${xpi}: file format not recognized. Ignoring."
