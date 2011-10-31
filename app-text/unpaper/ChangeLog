@@ -1,6 +1,10 @@
 # ChangeLog for app-text/unpaper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unpaper/ChangeLog,v 1.7 2011/10/10 12:05:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unpaper/ChangeLog,v 1.8 2011/10/31 13:04:47 flameeyes Exp $
+
+  31 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org> -unpaper-0.3.ebuild:
+  Remove 0.3 version as it relies on berlios mirrors (I have a copy of it
+  anyway).
 
   10 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> unpaper-0.4.ebuild,
   unpaper-9999.ebuild:
