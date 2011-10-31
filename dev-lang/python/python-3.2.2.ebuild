@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.2.ebuild,v 1.2 2011/10/27 13:56:55 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.2.2.ebuild,v 1.3 2011/10/31 04:02:01 vapier Exp $
 
 EAPI="3"
 WANT_AUTOMAKE="none"
@@ -106,10 +106,8 @@ src_prepare() {
 
 	EPATCH_EXCLUDE="${excluded_patches}" EPATCH_SUFFIX="patch" epatch "${patchset_dir}"
 
-	#Linux-3 compat. Bug #374579 (upstream issue12571)
-	if use kernel_linux; then
-		cp -r "${S}/Lib/plat-linux2" "${S}/Lib/plat-linux3" || die "copy plat-linux failed"
-	fi
+	# Linux-3 compat. Bug #374579 (upstream issue12571)
+	cp -r "${S}/Lib/plat-linux2" "${S}/Lib/plat-linux3" || die
 
 	sed -i -e "s:@@GENTOO_LIBDIR@@:$(get_libdir):g" \
 		Lib/distutils/command/install.py \
