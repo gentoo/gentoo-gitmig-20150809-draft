@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Stash/Package-Stash-0.320.0.ebuild,v 1.2 2011/09/24 13:29:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Stash/Package-Stash-0.320.0.ebuild,v 1.3 2011/10/31 13:19:06 jer Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Routines for manipulating stashes"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x64-macos"
+KEYWORDS="~amd64 ~hppa ~x86 ~x64-macos"
 IUSE="test"
 
 RDEPEND="

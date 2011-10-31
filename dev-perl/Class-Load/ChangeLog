@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-Load
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Load/ChangeLog,v 1.14 2011/10/30 17:18:51 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Load/ChangeLog,v 1.15 2011/10/31 13:19:45 jer Exp $
+
+  31 Oct 2011; Jeroen Roovers <jer@gentoo.org> Class-Load-0.120.0.ebuild:
+  Marked ~hppa (bug #389001).
 
 *Class-Load-0.120.0 (30 Oct 2011)
 
