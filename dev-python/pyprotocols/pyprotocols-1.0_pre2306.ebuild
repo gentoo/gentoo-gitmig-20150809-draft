@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprotocols/pyprotocols-1.0_pre2306.ebuild,v 1.10 2010/06/29 20:40:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprotocols/pyprotocols-1.0_pre2306.ebuild,v 1.11 2011/10/31 21:36:51 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -18,13 +18,14 @@ HOMEPAGE="http://peak.telecommunity.com/PyProtocols.html http://pypi.python.org/
 # http://svn.eby-sarna.com/PyProtocols/
 SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
-LICENSE="|| ( PSF-2.4 ZPL )"
+LICENSE="|| ( PSF-2 ZPL )"
 SLOT="0"
 KEYWORDS="amd64 ~ia64 ppc x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE=""
 
 RDEPEND=">=dev-python/decoratortools-1.4"
 DEPEND="${RDEPEND}
+	dev-python/pyrex
 	dev-python/setuptools"
 
 S="${WORKDIR}/${MY_PN}"
