@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.310 2011/10/27 08:00:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.311 2011/10/31 05:33:33 tetromino Exp $
+
+  31 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  mx-1.0 is in portage, evolution[clutter] can be enabled. However, it
+  shouldn't be dropped on gnome2 stable users without some testing.
 
   27 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   Mask USE=applet for gtk3-based gnote, it pulls in masked gnome-panel-3.

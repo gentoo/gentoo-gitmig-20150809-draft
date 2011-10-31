@@ -1,9 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.279 2011/10/27 08:00:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.280 2011/10/31 05:33:33 tetromino Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (31 Oct 2011)
+# Let's not suddenly enable clutter on stable evolution versions
+<mail-client/evolution-3 clutter
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (27 Oct 2011)
 # GNOME 3 package.use.mask for flags in unmasked packages that
@@ -144,11 +148,6 @@ media-plugins/audacious-plugins jack
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (28 Nov 2010)
 # sys-devel/llvm is not keyworded on many arches, bug #320221
 media-libs/mesa llvm
-
-# Pacho Ramos <pacho@gentoo.org> (18 Nov 2010)
-# clutter support requires mx-1.0 that is still not in the tree,
-# bug #345937
-mail-client/evolution clutter
 
 # Justin Lecher <jlec@gentoo.org> (17 Nov 2010)
 # Upstream didn't release patches for aria yet
