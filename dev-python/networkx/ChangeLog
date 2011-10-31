@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/networkx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/ChangeLog,v 1.11 2011/07/28 20:46:36 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/ChangeLog,v 1.12 2011/10/31 21:27:17 hwoarang Exp $
+
+  31 Oct 2011; Markos Chandras <hwoarang@gentoo.org> networkx-1.5.ebuild:
+  Add CVS header.
 
 *networkx-1.5 (28 Jul 2011)
 
