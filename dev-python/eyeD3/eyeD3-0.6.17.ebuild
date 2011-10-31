@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/eyeD3-0.6.17.ebuild,v 1.14 2010/11/01 00:28:13 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eyeD3/eyeD3-0.6.17.ebuild,v 1.15 2011/10/31 19:59:11 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -30,6 +30,13 @@ src_configure() {
 src_install() {
 	dohtml *.html && rm -f *.html
 	distutils_src_install
-	dobin bin/eyeD3 || die "dobin failed"
+
+	install_script() {
+		mkdir -p "${T}/images/${PYTHON_ABI}${EPREFIX}/usr/bin"
+		cp bin/eyeD3 "${T}/images/${PYTHON_ABI}${EPREFIX}/usr/bin"
+	}
+	python_execute_function -q install_script
+	python_merge_intermediate_installation_images "${T}/images"
+
 	doman doc/*.1
 }
