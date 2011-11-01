@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.57-r1.ebuild,v 1.6 2011/10/30 12:59:41 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.57-r1.ebuild,v 1.7 2011/11/01 20:37:44 sping Exp $
 
 PYTHON_DEPEND="3:3.2"
 
@@ -66,7 +66,7 @@ RDEPEND="virtual/jpeg
 	sndfile? ( media-libs/libsndfile )
 	lcms? ( media-libs/lcms )"
 
-DEPEND=">=dev-util/scons-2
+DEPEND=">=dev-util/scons-2.0.1-r1
 	apidoc? (
 		dev-python/sphinx
 		>=app-doc/doxygen-1.5.7[-nodot]
