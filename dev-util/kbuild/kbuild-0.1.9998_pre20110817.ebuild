@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/kbuild-0.1.9998_pre20110817.ebuild,v 1.2 2011/08/20 13:09:50 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/kbuild-0.1.9998_pre20110817.ebuild,v 1.3 2011/11/01 11:01:17 chainsaw Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ SRC_URI="http://dev.gentoo.org/~polynomial-c/${MY_P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 DEPEND="sys-devel/flex
