@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/perf
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.17 2010/07/11 20:57:52 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perf/ChangeLog,v 1.18 2011/11/01 07:33:12 robbat2 Exp $
+
+*perf-3.1 (01 Nov 2011)
+
+  01 Nov 2011; Robin H. Johnson <robbat2@gentoo.org> +perf-3.1.ebuild:
+  Version bump. Improve install phase. Fix automagic dependency on
+  dev-libs/newt and python. Install python+perl tools. Ensure DWARF is built on
+  amd64.
 
 *perf-2.6.35_rc4 (11 Jul 2010)
 
