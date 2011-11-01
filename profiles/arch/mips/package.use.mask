@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.41 2011/07/31 06:09:00 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.42 2011/11/01 00:59:53 ssuominen Exp $
 
 # Kacper Kowalik <xarthisius@gentoo.org> (20 May 2011)
 # depends on dev-libs/dmalloc which is not keyworded
@@ -29,7 +29,7 @@ dev-libs/apr-util mysql
 # Stuart Longland <redhatter@gentoo.org> (07 Sep 2007)
 # mplayer not tested with these flags yet.  I may remove these slowly as I test
 # more functions of mplayer.
-media-video/mplayer bidi bl cddb cdio cdparanoia cpudetection dga dv dvb enca esd joystick live mad openal pnm pvr radio rar rtc svga tga v4l2 xanim xinerama zoran
+media-video/mplayer bidi bl cddb cdio cdparanoia cpudetection dga dv dvb enca esd joystick live mad openal pnm pvr radio rar rtc svga tga xanim xinerama zoran
 
 # Gilles Dartiguelongue <eva@gentoo.org> (19 Oct 2007)
 # gdm depends on zenity which is not keyworded

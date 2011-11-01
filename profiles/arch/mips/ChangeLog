@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.84 2011/10/11 21:10:38 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.85 2011/11/01 00:59:53 ssuominen Exp $
+
+  01 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Remove obsolete entry for media-video/mplayer and USE="v4l2"
 
   11 Oct 2011; Matt Turner <mattst88@gentoo.org> package.mask:
   Remove >=baselayout-2.1 from package.mask. (That was quick)
