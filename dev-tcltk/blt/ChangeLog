@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/blt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.54 2011/10/30 14:56:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.55 2011/11/01 14:11:31 chainsaw Exp $
+
+  01 Nov 2011; Tony Vroon <chainsaw@gentoo.org> blt-2.4z-r10.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
+  "idella4" Delaney in bug #368583.
 
   30 Oct 2011; Raúl Porcel <armin76@gentoo.org> blt-2.4z-r10.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #387849
