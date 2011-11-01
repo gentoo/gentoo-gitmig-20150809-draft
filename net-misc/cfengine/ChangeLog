@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.139 2011/11/01 18:47:11 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.140 2011/11/01 22:27:01 idl0r Exp $
+
+*cfengine-3.2.3 (01 Nov 2011)
+
+  01 Nov 2011; Christian Ruppert <idl0r@gentoo.org> -cfengine-3.2.1.ebuild,
+  +cfengine-3.2.3.ebuild:
+  Version bump to 3.2.3.
 
 *cfengine-2.2.10-r4 (01 Nov 2011)
 
