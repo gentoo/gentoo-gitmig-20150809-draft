@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/icedtea-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.1 2011/10/30 13:53:19 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.2 2011/11/01 11:18:26 chainsaw Exp $
+
+  01 Nov 2011; Tony Vroon <chainsaw@gentoo.org> icedtea-bin-1.10.4.ebuild:
+  Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney &
+  Agostino "ago" Sarubbo in security bug #387637.
 
 *icedtea-bin-1.10.4 (30 Oct 2011)
 *icedtea-bin-1.10.3-r2 (30 Oct 2011)

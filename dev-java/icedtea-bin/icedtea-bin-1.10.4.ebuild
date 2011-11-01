@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-1.10.4.ebuild,v 1.1 2011/10/30 13:53:19 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-1.10.4.ebuild,v 1.2 2011/11/01 11:18:26 chainsaw Exp $
 
 EAPI="3"
 
@@ -34,7 +34,7 @@ RESTRICT="strip"
 
 LICENSE="GPL-2-with-linking-exception"
 SLOT="6"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 
 S="${WORKDIR}/${XP}"
 
