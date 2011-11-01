@@ -4,12 +4,14 @@
   <herd>desktop-misc</herd>
   <maintainer>
     <email>wired@gentoo.org</email>
+    <name>Alex Alexander</name>
   </maintainer>
   <maintainer>
     <email>slyfox@gentoo.org</email>
     <name>Sergei Trofimovich</name>
   </maintainer>
   <use>
-    <flag name="edit">Build mcedit application</flag>
+    <flag name="edit">Compile and install the mcedit application</flag>
+    <flag name="mclib">Compile and install the libmc.so shared library</flag>
   </use>
 </pkgmetadata>
