@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.7.6.ebuild,v 1.8 2011/10/23 08:18:24 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.7.6.ebuild,v 1.9 2011/11/01 00:37:26 ssuominen Exp $
 
 EAPI="2"
 
@@ -32,8 +32,8 @@ IUSE="
 	+3dnow +3dnowext aac alsa altivec amr avx bindist +bzip2 celt cpudetection
 	custom-cflags debug dirac doc +encode faac frei0r gsm +hardcoded-tables
 	ieee1394 jack jpeg2k +mmx +mmxext mp3 network oss pic qt-faststart rtmp
-	schroedinger sdl speex +ssse3 static-libs test theora threads truetype v4l
-	v4l2 vaapi vdpau vorbis vpx X x264 xvid +zlib
+	schroedinger sdl speex +ssse3 static-libs test theora threads truetype
+	v4l vaapi vdpau vorbis vpx X x264 xvid +zlib
 	"
 
 VIDEO_CARDS="nvidia"
@@ -87,7 +87,6 @@ DEPEND="${RDEPEND}
 	test? ( net-misc/wget )
 	truetype? ( dev-util/pkgconfig )
 	v4l? ( sys-kernel/linux-headers )
-	v4l2? ( sys-kernel/linux-headers )
 "
 
 S=${WORKDIR}/${P/_/-}
@@ -143,7 +142,10 @@ src_configure() {
 	# libavdevice options
 	use ieee1394 && myconf="${myconf} --enable-libdc1394"
 	# Indevs
-	for i in v4l v4l2 alsa oss jack ; do
+	# v4l1 gone since linux-headers-2.6.38
+	myconf="${myconf} --disable-indev=v4l"
+	use v4l || myconf="${myconf} --disable-indev=v4l2"
+	for i in alsa oss jack ; do
 		use ${i} || myconf="${myconf} --disable-indev=${i}"
 	done
 	use X && myconf="${myconf} --enable-x11grab"

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.8.5.ebuild,v 1.1 2011/10/05 14:06:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.8.5.ebuild,v 1.2 2011/11/01 00:37:26 ssuominen Exp $
 
 EAPI="4"
 
@@ -32,7 +32,7 @@ IUSE="
 	aac aacplus alsa amr bindist +bzip2 celt cpudetection debug dirac doc
 	+encode faac frei0r gsm +hardcoded-tables ieee1394 jack jpeg2k mp3 network
 	oss pic qt-faststart rtmp schroedinger sdl speex static-libs test theora
-	threads truetype v4l v4l2 vaapi vdpau vorbis vpx X x264 xvid +zlib
+	threads truetype v4l vaapi vdpau vorbis vpx X x264 xvid +zlib
 	"
 
 # String for CPU features in the useflag[:configure_option] form
@@ -89,7 +89,6 @@ DEPEND="${RDEPEND}
 	test? ( net-misc/wget )
 	truetype? ( dev-util/pkgconfig )
 	v4l? ( sys-kernel/linux-headers )
-	v4l2? ( sys-kernel/linux-headers )
 "
 # faac is license-incompatible with ffmpeg
 REQUIRED_USE="bindist? ( encode? ( !faac !aacplus ) )"
@@ -134,7 +133,10 @@ src_configure() {
 	# libavdevice options
 	use ieee1394 && myconf="${myconf} --enable-libdc1394"
 	# Indevs
-	for i in v4l v4l2 alsa oss jack ; do
+	# v4l1 is gone since linux-headers-2.6.38
+	myconf="${myconf} --disable-indev=v4l"
+	use v4l || myconf="${myconf} --disable-indev=v4l2"
+	for i in alsa oss jack ; do
 		use ${i} || myconf="${myconf} --disable-indev=${i}"
 	done
 	use X && myconf="${myconf} --enable-x11grab"
