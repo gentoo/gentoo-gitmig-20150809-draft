@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.90 2011/10/25 18:43:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.91 2011/11/01 10:14:55 chainsaw Exp $
+
+  01 Nov 2011; Tony Vroon <chainsaw@gentoo.org> xen-4.1.1-r2.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani & Ian "idella4" Delaney in bug #360621.
 
 *xen-4.1.2 (25 Oct 2011)
 

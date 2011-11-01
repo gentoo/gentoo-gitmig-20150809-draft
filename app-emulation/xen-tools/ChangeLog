@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.103 2011/10/25 18:40:28 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.104 2011/11/01 10:14:16 chainsaw Exp $
+
+  01 Nov 2011; Tony Vroon <chainsaw@gentoo.org> xen-tools-4.1.1-r6.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani & Ian "idella4" Delaney in bug #360621.
 
 *xen-tools-4.1.2 (25 Oct 2011)
 

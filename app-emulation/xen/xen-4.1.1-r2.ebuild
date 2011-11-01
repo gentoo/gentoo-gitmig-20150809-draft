@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.1.1-r2.ebuild,v 1.3 2011/10/13 19:21:06 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.1.1-r2.ebuild,v 1.4 2011/11/01 10:14:55 chainsaw Exp $
 
 EAPI="4"
 
@@ -11,7 +11,7 @@ if [[ $PV == *9999 ]]; then
 	S="${WORKDIR}/${REPO}"
 	live_eclass="mercurial"
 else
-	KEYWORDS="~amd64 x86"
+	KEYWORDS="amd64 x86"
 	SRC_URI="http://bits.xensource.com/oss-xen/release/${PV}/xen-${PV}.tar.gz"
 fi
 
