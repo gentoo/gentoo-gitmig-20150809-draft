@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-5.2.36.ebuild,v 1.1 2011/11/01 07:35:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-5.2.36.ebuild,v 1.2 2011/11/01 16:00:42 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils db flag-o-matic java-pkg-opt-2 autotools libtool
@@ -51,7 +51,7 @@ src_prepare() {
 	done
 	#epatch "${FILESDIR}"/${PN}-4.8-libtool.patch
 	# upstreamed:5.2.36
-	#epatch "${FILESDIR}"/${PN}-4.8.24-java-manifest-location.patch 
+	#epatch "${FILESDIR}"/${PN}-4.8.24-java-manifest-location.patch
 
 	# use the includes from the prefix
 	epatch "${FILESDIR}"/${PN}-4.6-jni-check-prefix-first.patch
