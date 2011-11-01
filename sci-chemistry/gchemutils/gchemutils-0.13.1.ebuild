@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/gchemutils-0.13.1.ebuild,v 1.3 2011/04/24 17:20:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/gchemutils-0.13.1.ebuild,v 1.4 2011/11/01 12:24:48 pacho Exp $
 
 EAPI=3
 
@@ -53,6 +53,14 @@ pkg_setup() {
 	fi
 
 	DOCS="AUTHORS ChangeLog README TODO NEWS"
+}
+
+src_prepare() {
+	gnome2_src_prepare
+
+	# Drop DEPRECATED flags, bug #388509
+	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED::g' \
+		configure configure.ac || die
 }
 
 src_test() {
