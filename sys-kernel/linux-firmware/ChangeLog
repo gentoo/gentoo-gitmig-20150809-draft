@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/linux-firmware
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.29 2011/08/28 19:58:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.30 2011/11/01 14:40:57 chithanh Exp $
+
+  01 Nov 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -linux-firmware-20110604.ebuild, -linux-firmware-20110709.ebuild,
+  linux-firmware-20110731.ebuild, linux-firmware-20110818.ebuild,
+  linux-firmware-99999999.ebuild:
+  Add net-wireless/ar9271-firmware to blockers, remove old.
 
   28 Aug 2011; Markus Meier <maekke@gentoo.org> linux-firmware-20110731.ebuild:
   arm stable, bug #379997
