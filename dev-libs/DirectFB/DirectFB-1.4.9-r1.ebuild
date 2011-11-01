@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.4.9-r1.ebuild,v 1.5 2011/10/04 13:51:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.4.9-r1.ebuild,v 1.6 2011/11/01 01:06:23 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -32,7 +32,7 @@ SRC_URI="http://directfb.org/downloads/Core/${PN}-${PV:0:3}/${P}.tar.gz
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 -mips ppc ppc64 sh -sparc x86"
-IUSE="debug doc fbcon gif jpeg mmx png sdl sse static-libs sysfs truetype v4l v4l2 X zlib ${IUV} ${IUD}"
+IUSE="debug doc fbcon gif jpeg mmx png sdl sse static-libs sysfs truetype v4l X zlib ${IUV} ${IUD}"
 
 RDEPEND="sdl? ( media-libs/libsdl )
 	gif? ( media-libs/giflib )
@@ -100,8 +100,8 @@ src_configure() {
 		$(use_enable debug) \
 		$(use_enable sysfs) \
 		$(use_enable zlib) \
-		$(use_enable v4l video4linux) \
-		$(use_enable v4l2 video4linux2) \
+		--disable-video4linux \
+		$(use_enable v4l video4linux2) \
 		${sdlconf} \
 		--with-gfxdrivers="$(driver_list video_cards ${IUSE_VIDEO_CARDS})" \
 		--with-inputdrivers="$(driver_list input_devices ${IUSE_INPUT_DEVICES})" \
