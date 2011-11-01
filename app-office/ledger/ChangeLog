@@ -1,6 +1,10 @@
 # ChangeLog for app-office/ledger
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ChangeLog,v 1.25 2011/10/31 18:15:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ChangeLog,v 1.26 2011/11/01 14:15:45 chainsaw Exp $
+
+  01 Nov 2011; Tony Vroon <chainsaw@gentoo.org> ledger-2.6.3-r1.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah "Armageddon" El Lazkani in bug #389061.
 
   31 Oct 2011; Tim Harder <radhermit@gentoo.org> ledger-2.6.3-r1.ebuild:
   Use github mirror.
