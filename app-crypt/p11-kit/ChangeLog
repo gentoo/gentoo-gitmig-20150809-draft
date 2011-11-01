@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/p11-kit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.4 2011/10/01 08:21:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.5 2011/11/01 05:51:23 maekke Exp $
+
+  01 Nov 2011; Markus Meier <maekke@gentoo.org> p11-kit-0.7.ebuild:
+  add ~arm, bug #383453
 
 *p11-kit-0.7 (01 Oct 2011)
 
