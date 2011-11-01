@@ -1,6 +1,9 @@
 # ChangeLog for net-print/gutenprint
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/ChangeLog,v 1.30 2011/10/27 20:11:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gutenprint/ChangeLog,v 1.31 2011/11/01 17:05:10 jer Exp $
+
+  01 Nov 2011; Jeroen Roovers <jer@gentoo.org> gutenprint-5.2.7-r1.ebuild:
+  Stable for HPPA (bug #388639).
 
   27 Oct 2011; Markos Chandras <hwoarang@gentoo.org> gutenprint-5.2.7-r1.ebuild:
   Stable on amd64 wrt bug #388639
