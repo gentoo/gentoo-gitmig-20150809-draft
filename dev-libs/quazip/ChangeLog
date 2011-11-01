@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/quazip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/ChangeLog,v 1.8 2011/10/11 19:21:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quazip/ChangeLog,v 1.9 2011/11/01 05:47:49 maekke Exp $
+
+  01 Nov 2011; Markus Meier <maekke@gentoo.org> quazip-0.4.3-r1.ebuild:
+  add ~arm, bug #383945
 
   11 Oct 2011; Jeroen Roovers <jer@gentoo.org> quazip-0.4.3-r1.ebuild:
   Marked ~hppa (bug #383945).
