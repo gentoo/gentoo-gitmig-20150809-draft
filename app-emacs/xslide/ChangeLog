@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/xslide
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/xslide/ChangeLog,v 1.16 2007/12/18 08:20:42 opfer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/xslide/ChangeLog,v 1.17 2011/11/01 19:48:51 ulm Exp $
+
+  01 Nov 2011; Ulrich Mueller <ulm@gentoo.org> files/50xslide-gentoo.el,
+  xslide-0.2.2.ebuild:
+  Fix regexp in site-init file, bug 389193. Change EAPI to 4.
 
   18 Dec 2007; Christian Faulhammer <opfer@gentoo.org> xslide-0.2.2.ebuild:
   stable amd64

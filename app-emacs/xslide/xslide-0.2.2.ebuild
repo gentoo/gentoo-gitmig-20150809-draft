@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/xslide/xslide-0.2.2.ebuild,v 1.10 2007/12/18 08:20:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/xslide/xslide-0.2.2.ebuild,v 1.11 2011/11/01 19:48:51 ulm Exp $
+
+EAPI=4
 
 inherit elisp
 
@@ -16,9 +18,9 @@ IUSE=""
 DEPEND="app-arch/unzip"
 RDEPEND=""
 
-SITEFILE=50${PN}-gentoo.el
+SITEFILE="50${PN}-gentoo.el"
 DOCS="ChangeLog NEWS README.TXT TODO"
 
 src_compile() {
-	emake EMACS=emacs || die "emake failed"
+	emake EMACS=emacs
 }
