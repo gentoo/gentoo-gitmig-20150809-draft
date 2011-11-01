@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xdg-user-dirs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs/ChangeLog,v 1.20 2011/10/25 12:06:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs/ChangeLog,v 1.21 2011/11/01 05:41:18 maekke Exp $
+
+  01 Nov 2011; Markus Meier <maekke@gentoo.org> xdg-user-dirs-0.14.ebuild:
+  arm stable, bug #388011
 
   25 Oct 2011; Jeroen Roovers <jer@gentoo.org> xdg-user-dirs-0.14.ebuild:
   Stable for HPPA (bug #388011).
