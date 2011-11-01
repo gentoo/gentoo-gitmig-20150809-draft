@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.13.6.ebuild,v 1.3 2011/09/20 10:21:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ogmrip-0.13.6.ebuild,v 1.4 2011/11/01 12:34:51 pacho Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -74,9 +74,9 @@ pkg_setup() {
 }
 
 src_prepare() {
-	sed -i \
-		-e '/DISABLE_DEPRECATED/d' \
-		configure || die
+	# Drop DEPRECATED flags
+	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED::g' \
+		configure.in configure || die
 
 	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
 	epatch "${FILESDIR}"/${P}-libpng15.patch

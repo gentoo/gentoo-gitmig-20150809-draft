@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ogmrip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ChangeLog,v 1.45 2011/09/20 10:21:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogmrip/ChangeLog,v 1.46 2011/11/01 12:34:51 pacho Exp $
+
+  01 Nov 2011; Pacho Ramos <pacho@gentoo.org> ogmrip-0.13.6.ebuild:
+  Drop DEPRECATED flags to make it compile with glib-2.30 and upcoming releases.
 
   20 Sep 2011; Markos Chandras <hwoarang@gentoo.org> ogmrip-0.13.6.ebuild,
   +files/ogmrip-0.13.6-libpng15.patch:
