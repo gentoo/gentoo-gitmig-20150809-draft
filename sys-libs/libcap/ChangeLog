@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.107 2011/06/15 05:28:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.108 2011/11/01 20:42:29 vapier Exp $
+
+*libcap-2.22 (01 Nov 2011)
+
+  01 Nov 2011; Mike Frysinger <vapier@gentoo.org> +libcap-2.22.ebuild,
+  +files/libcap-2.22-build-system-fixes.patch:
+  Version bump #389201 by Jack Szpot.
 
 *libcap-2.21 (15 Jun 2011)
 
