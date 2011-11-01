@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-clipman-plugin/xfce4-clipman-plugin-1.2.1.ebuild,v 1.1 2011/10/31 23:14:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-clipman-plugin/xfce4-clipman-plugin-1.2.1.ebuild,v 1.2 2011/11/01 15:46:13 ssuominen Exp $
 
 EAPI=4
 inherit xfconf
@@ -32,6 +32,7 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	XFCONF=(
 		--docdir="${EPREFIX}"/usr/share/doc/${PF}
+		--disable-static
 		$(xfconf_use_debug)
 		)
 

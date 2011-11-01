@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-clipman-plugin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-clipman-plugin/ChangeLog,v 1.31 2011/10/31 23:14:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-clipman-plugin/ChangeLog,v 1.32 2011/11/01 15:46:13 ssuominen Exp $
+
+  01 Nov 2011; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-clipman-plugin-1.2.1.ebuild:
+  Disable building of useless static archive for plug-in.
 
 *xfce4-clipman-plugin-1.2.1 (31 Oct 2011)
 
