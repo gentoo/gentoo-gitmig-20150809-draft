@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/leechcraft-full
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.3 2011/10/23 17:53:21 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/leechcraft-full/ChangeLog,v 1.4 2011/11/01 13:20:11 maksbotan Exp $
+
+  01 Nov 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  leechcraft-full-9999.ebuild:
+  Fix typo in depend
 
   23 Oct 2011; Maxim Koltsov <maksbotan@gentoo.org>
   leechcraft-full-9999.ebuild:
