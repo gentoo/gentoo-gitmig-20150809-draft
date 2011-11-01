@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/use.mask,v 1.10 2011/09/18 09:24:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/use.mask,v 1.11 2011/11/01 00:53:37 ssuominen Exp $
 
 # Mart Raudsepp <leio@gentoo.org>
 # net-misc/networkmanager not keyworded
@@ -15,7 +15,6 @@ nptl
 alsa
 aoss
 v4l
-v4l2
 fbcon
 directfb
 ev6

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.112 2011/10/28 05:04:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.113 2011/11/01 00:58:21 ssuominen Exp $
+
+  01 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> use.mask:
+  Remove obsolete entry for USE="v4l2"
 
   28 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> use.mask:
   use.mask colord and packagekit to allow gtk+-3.2 unmasking. use.mask instead

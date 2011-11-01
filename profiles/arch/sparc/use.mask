@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.77 2011/10/28 05:04:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.78 2011/11/01 00:57:12 ssuominen Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
@@ -81,7 +81,6 @@ xfs
 # Need testing
 musepack
 pyste
-v4l2
 topal
 lqr
 epos
