@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/linux-misc-apps
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/linux-misc-apps/ChangeLog,v 1.1 2011/11/01 09:06:05 robbat2 Exp $
+
+*linux-misc-apps-3.1 (01 Nov 2011)
+
+  01 Nov 2011; Robin H. Johnson <robbat2@gentoo.org>
+  +linux-misc-apps-3.1.ebuild, +metadata.xml:
+  Initial commit.
+
