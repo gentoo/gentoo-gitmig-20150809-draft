@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.184 2011/10/30 16:23:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.185 2011/11/01 11:29:34 pacho Exp $
+
+*libgda-4.2.10 (01 Nov 2011)
+
+  01 Nov 2011; Pacho Ramos <pacho@gentoo.org> -libgda-4.2.7.ebuild,
+  +libgda-4.2.10.ebuild, -libgda-4.99.4.ebuild:
+  Version bump, drop fix-build-order patch as it seems to be no longer needed
+  and breaks things (bug #341365 by Mark Purtill and Robert Bradbury). Drop
+  old.
 
   30 Oct 2011; Raúl Porcel <armin76@gentoo.org> libgda-4.2.9.ebuild:
   alpha/ia64/sparc stable wrt #385699
