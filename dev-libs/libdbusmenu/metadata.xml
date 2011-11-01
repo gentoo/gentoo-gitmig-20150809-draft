@@ -3,7 +3,8 @@
 <pkgmetadata>
   <herd>kde</herd>
   <use>
-    <flag name="introspection">Use dev-libs/gobject-introspection for introspection</flag>
+    <flag name="gtk3">Build gtk3 version instead of using gtk2</flag>
+    <flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg> for introspection</flag>
     <flag name="vala">Enable bindings for dev-lang/vala</flag>
   </use>
 </pkgmetadata>
