@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.7.9999.ebuild,v 1.2 2011/07/21 21:38:10 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-0.7.9999.ebuild,v 1.3 2011/11/01 00:45:41 ssuominen Exp $
 
 EAPI=4
 
@@ -27,7 +27,7 @@ SLOT="0"
 [[ ${PV} == *9999 ]] || KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64
 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 ~x64-solaris ~x86-solaris"
-IUSE="+3dnow +3dnowext aac alsa altivec amr bindist +bzip2 cpudetection custom-cflags debug dirac doc +encode faac frei0r +gpl gsm +hardcoded-tables ieee1394 jack jpeg2k +mmx +mmxext mp3 network oss pic qt-faststart rtmp schroedinger sdl speex +ssse3 static-libs test theora threads v4l v4l2 vaapi vdpau vorbis vpx X x264 xvid +zlib"
+IUSE="+3dnow +3dnowext aac alsa altivec amr bindist +bzip2 cpudetection custom-cflags debug dirac doc +encode faac frei0r +gpl gsm +hardcoded-tables ieee1394 jack jpeg2k +mmx +mmxext mp3 network oss pic qt-faststart rtmp schroedinger sdl speex +ssse3 static-libs test theora threads v4l vaapi vdpau vorbis vpx X x264 xvid +zlib"
 
 VIDEO_CARDS="nvidia"
 for x in ${VIDEO_CARDS}; do
@@ -75,7 +75,6 @@ DEPEND="${RDEPEND}
 	schroedinger? ( dev-util/pkgconfig )
 	test? ( net-misc/wget )
 	v4l? ( sys-kernel/linux-headers )
-	v4l2? ( sys-kernel/linux-headers )
 "
 
 # faac can't be binary distributed
@@ -137,7 +136,10 @@ src_configure() {
 	# libavdevice options
 	use ieee1394 && myconf+=" --enable-libdc1394"
 	# Indevs
-	for i in v4l v4l2 alsa oss jack; do
+	# v4l1 is gone since linux-headers-2.6.38
+	myconf+=" --disable-indev=v4l"
+	use v4l || myconf+=" --disable-indev=v4l2"
+	for i in alsa oss jack; do
 		use ${i} || myconf+=" --disable-indev=${i}"
 	done
 	use X && myconf+=" --enable-x11grab"
