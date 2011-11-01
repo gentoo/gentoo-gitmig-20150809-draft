@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.140 2011/10/20 22:54:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.141 2011/11/01 11:54:05 pacho Exp $
+
+*banshee-2.2.0-r1 (01 Nov 2011)
+
+  01 Nov 2011; Pacho Ramos <pacho@gentoo.org> +banshee-2.2.0-r1.ebuild,
+  +files/banshee-2.2.0-fix-equalizer-values.patch, -banshee-2.0.1.ebuild,
+  -banshee-2.2.0.ebuild, -files/banshee-2.0.1-audiocd-metadata.patch,
+  -files/banshee-2.0.1-musicbrainz-useragent-fixes.patch,
+  -files/banshee-2.0.1-musicbrainz-useragent.patch:
+  Add a fix for smiley face curve equalizer, drop old.
 
   20 Oct 2011; Pacho Ramos <pacho@gentoo.org> banshee-2.2.0.ebuild:
   soundmenu needs a properly maintained and updated indicate-sharp, disabling

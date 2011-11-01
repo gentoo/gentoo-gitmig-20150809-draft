@@ -1,25 +1,20 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.0.1.ebuild,v 1.1 2011/07/08 16:41:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-2.2.0-r1.ebuild,v 1.1 2011/11/01 11:54:05 pacho Exp $
 
 EAPI="4"
 
-inherit eutils autotools mono gnome2-utils fdo-mime versionator
+inherit eutils autotools mono gnome2-utils fdo-mime versionator gnome.org
 
 GVER=0.10.7
 
 DESCRIPTION="Import, organize, play, and share your music using a simple and powerful interface."
 HOMEPAGE="http://banshee.fm/"
 
-#BANSHEE_V2=$(get_version_component_range 2)
-#[[ $((${BANSHEE_V2} % 2)) -eq 0 ]] && RELTYPE=stable || RELTYPE=unstable
-#SRC_URI="http://download.banshee-project.org/${PN}/${RELTYPE}/${PV}/${PN}-1-${PV}.tar.bz2"
-SRC_URI="http://download.banshee-project.org/${PN}/stable/${PV}/${P}.tar.bz2"
-
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+aac +cdda boo daap doc +encode ipod karma mtp podcast test udev +web youtube"
+IUSE="+aac +cdda boo daap doc +encode ipod karma mtp test udev +web youtube"
 
 RDEPEND=">=dev-lang/mono-2.4.3
 	gnome-base/gnome-settings-daemon
@@ -43,8 +38,8 @@ RDEPEND=">=dev-lang/mono-2.4.3
 		)
 	)
 	media-libs/musicbrainz:1
-	>=dev-dotnet/ndesk-dbus-glib-0.4.1
-	>=dev-dotnet/ndesk-dbus-0.6.1a
+	dev-dotnet/dbus-sharp
+	dev-dotnet/dbus-sharp-glib
 	>=dev-dotnet/mono-addins-0.4[gtk]
 	>=dev-dotnet/taglib-sharp-2.0.3.7
 	>=dev-db/sqlite-3.4:3
@@ -86,19 +81,14 @@ RDEPEND=">=dev-lang/mono-2.4.3
 	)"
 
 DEPEND="${RDEPEND}
+	app-arch/xz-utils
 	dev-util/pkgconfig"
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README"
 
 src_prepare () {
-	# MusicBrainz: Allow specifying a UserAgent
-	epatch "${FILESDIR}/${P}-musicbrainz-useragent.patch"
-
-	# Set UserAgent when doing MusicBrainz queries (bgo#649401)
-	epatch "${FILESDIR}/${P}-musicbrainz-useragent-fixes.patch"
-
-	# AudioCd: Fix metadata fetching with multiple results (bgo#587264)
-	epatch "${FILESDIR}/${P}-audiocd-metadata.patch"
+	# EqualizerManager: Update values for the Smiley Face preset (bgo#661224)
+	epatch "${FILESDIR}/${PN}-2.2.0-fix-equalizer-values.patch"
 
 	epatch "${FILESDIR}/${PN}-1.7.4-make-webkit-optional.patch" # upstream bug 628518
 	AT_M4DIR="-I build/m4/banshee -I build/m4/shamrock -I build/m4/shave" \
@@ -106,19 +96,20 @@ src_prepare () {
 }
 
 src_configure() {
+	# soundmenu needs a properly maintained and updated indicate-sharp
 	local myconf="--disable-dependency-tracking
 		--disable-static
+		--disable-maintainer-mode
 		--enable-gnome
 		--enable-schemas-install
 		--with-gconf-schema-file-dir=/etc/gconf/schemas
 		--with-vendor-build-id=Gentoo/${PN}/${PVR}
 		--enable-gapless-playback
 		--disable-gst-sharp
-		--disable-hal
 		--disable-torrent
 		--disable-shave
 		--disable-ubuntuone
-		--enable-soundmenu"
+		--disable-soundmenu"
 
 	econf \
 		$(use_enable doc docs) \
@@ -126,8 +117,7 @@ src_configure() {
 		$(use_enable boo) \
 		$(use_enable mtp) \
 		$(use_enable daap) \
-		$(use_enable ipod appledevice) --disable-ipod \
-		$(use_enable podcast) \
+		$(use_enable ipod appledevice) \
 		$(use_enable karma) \
 		$(use_enable web webkit) \
 		$(use_enable youtube) \
