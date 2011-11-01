@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/fatsort
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fatsort/ChangeLog,v 1.15 2011/10/16 18:40:42 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fatsort/ChangeLog,v 1.16 2011/11/01 09:21:11 chainsaw Exp $
+
+  01 Nov 2011; Tony Vroon <chainsaw@gentoo.org> fatsort-0.9.15.247.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani & Ian "idella4" Delaney in bug #388979.
 
 *fatsort-0.9.15.247 (16 Oct 2011)
 
