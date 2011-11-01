@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-7.0.1-r1.ebuild,v 1.1 2011/10/03 21:52:22 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-7.0.1-r2.ebuild,v 1.1 2011/11/01 10:33:03 fordfrog Exp $
 
 EAPI="4"
 inherit eutils java-pkg-2 java-ant-2
@@ -139,6 +139,8 @@ pkg_setup() {
 			fi
 		fi
 	done
+
+	java-pkg-2_pkg_setup
 }
 
 src_unpack() {
