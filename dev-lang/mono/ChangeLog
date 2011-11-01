@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mono
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.230 2011/09/16 13:48:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.231 2011/11/01 23:19:36 pacho Exp $
+
+*mono-2.10.6 (01 Nov 2011)
+
+  01 Nov 2011; Pacho Ramos <pacho@gentoo.org> +mono-2.10.6.ebuild:
+  Version bump.
 
   16 Sep 2011; Pacho Ramos <pacho@gentoo.org> mono-2.10.5.ebuild:
   Add virtual/yacc to DEPEND per bug #382911 by bay.
