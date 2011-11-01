@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/fossil
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/ChangeLog,v 1.8 2011/03/08 19:22:34 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/fossil/ChangeLog,v 1.9 2011/11/01 01:38:13 titanofold Exp $
+
+*fossil-20111021125253 (01 Nov 2011)
+
+  01 Nov 2011; Aaron W. Swenson <titanofold@gentoo.org>
+  +fossil-20111021125253.ebuild, metadata.xml:
+  Version bump. Moved to EAPI4. Add myself as co-maintainer.
 
 *fossil-20110301190432 (08 Mar 2011)
 
