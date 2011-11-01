@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.9.9.ebuild,v 1.13 2010/12/22 18:25:24 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.9.9.ebuild,v 1.14 2011/11/01 03:56:58 ssuominen Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/libvncserver/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris"
-IUSE="fbcon +jpeg +zlib threads ssl crypt v4l xinerama avahi system-libvncserver"
+IUSE="fbcon +jpeg +zlib threads ssl crypt xinerama avahi system-libvncserver"
 
 RDEPEND="system-libvncserver? ( >=net-libs/libvncserver-0.9.7[threads=,jpeg=,zlib=] )
 	!system-libvncserver? (
@@ -54,6 +54,7 @@ src_prepare() {
 }
 
 src_configure() {
+	# --without-v4l because of missing video4linux 2.x support wrt #389079
 	econf \
 		$(use_with system-libvncserver) \
 		$(use_with avahi) \
@@ -61,12 +62,11 @@ src_configure() {
 		$(use_with ssl) \
 		$(use_with ssl crypto) \
 		$(use_with crypt) \
-		$(use_with v4l) \
+		--without-v4l \
 		$(use_with jpeg) \
 		$(use_with zlib) \
 		$(use_with threads pthread) \
-		$(use_with fbcon fbdev) \
-		|| die "econf failed"
+		$(use_with fbcon fbdev)
 }
 
 src_install() {

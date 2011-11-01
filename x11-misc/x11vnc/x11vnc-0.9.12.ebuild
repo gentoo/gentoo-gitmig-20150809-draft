@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.9.12.ebuild,v 1.4 2011/04/09 17:42:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/x11vnc-0.9.12.ebuild,v 1.5 2011/11/01 03:56:58 ssuominen Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/libvncserver/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris"
-IUSE="avahi crypt fbcon +jpeg ssl system-libvncserver threads tk v4l xinerama +zlib"
+IUSE="avahi crypt fbcon +jpeg ssl system-libvncserver threads tk xinerama +zlib"
 
 RDEPEND="system-libvncserver? ( >=net-libs/libvncserver-0.9.7[threads=,jpeg=,zlib=] )
 	!system-libvncserver? (
@@ -51,6 +51,7 @@ src_prepare() {
 }
 
 src_configure() {
+	# --without-v4l because of missing video4linux 2.x support wrt #389079
 	econf \
 		$(use_with system-libvncserver) \
 		$(use_with avahi) \
@@ -58,7 +59,7 @@ src_configure() {
 		$(use_with ssl) \
 		$(use_with ssl crypto) \
 		$(use_with crypt) \
-		$(use_with v4l) \
+		--without-v4l \
 		$(use_with jpeg) \
 		$(use_with zlib) \
 		$(use_with threads pthread) \
