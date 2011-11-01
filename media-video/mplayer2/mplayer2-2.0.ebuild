@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0.ebuild,v 1.20 2011/11/01 01:05:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer2/mplayer2-2.0.ebuild,v 1.21 2011/11/01 20:20:23 mattst88 Exp $
 
 EAPI=4
 
@@ -156,7 +156,7 @@ DEPEND="${RDEPEND}
 SLOT="0"
 LICENSE="GPL-3"
 if [[ ${PV} != *9999* ]]; then
-	KEYWORDS="amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux"
+	KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux"
 else
 	KEYWORDS=""
 fi
