@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.481 2011/11/01 03:32:28 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.482 2011/11/01 04:42:17 floppym Exp $
+
+  01 Nov 2011; Mike Gilbert <floppym@gentoo.org> chromium-9999-r1.ebuild:
+  Disable gclient runhooks so we use the system nacl-toolchain-newlib.
 
   01 Nov 2011; Mike Gilbert <floppym@gentoo.org> chromium-9999-r1.ebuild:
   Keep third_party/jsoncpp. Bug 388915 by Ralf Mayer.
