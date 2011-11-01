@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ldb-1.1.3.ebuild,v 1.1 2011/10/23 16:58:31 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ldb-1.1.3.ebuild,v 1.2 2011/11/01 01:01:29 vostorga Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -27,6 +27,7 @@ RDEPEND="dev-libs/popt
 
 DEPEND="dev-libs/libxslt
 	doc? ( app-doc/doxygen )
+	dev-util/pkgconfig
 	${RDEPEND}"
 
 WAF_BINARY="${S}/buildtools/bin/waf-svn"
