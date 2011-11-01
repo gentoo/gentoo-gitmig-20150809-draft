@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999-r1.ebuild,v 1.16 2011/10/19 09:31:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999-r1.ebuild,v 1.17 2011/11/01 10:11:19 scarabeus Exp $
 
 EAPI=4
 
@@ -120,7 +120,10 @@ COMMON_DEPEND="
 	x11-libs/libXrender
 	dbus? ( >=dev-libs/dbus-glib-0.92 )
 	eds? ( gnome-extra/evolution-data-server )
-	gnome? ( gnome-base/gconf:2 )
+	gnome? (
+		gnome-base/gconf:2
+		gnome-base/orbit:2
+	)
 	gtk? ( >=x11-libs/gtk+-2.24:2 )
 	graphite? ( media-gfx/graphite2 )
 	gstreamer? (
