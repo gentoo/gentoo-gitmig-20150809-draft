@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/virtualbox-additions
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-additions/ChangeLog,v 1.35 2011/10/04 17:57:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-additions/ChangeLog,v 1.36 2011/11/01 10:57:40 chainsaw Exp $
+
+  01 Nov 2011; Tony Vroon <chainsaw@gentoo.org>
+  virtualbox-additions-4.1.4.ebuild:
+  Marked stable on AMD64 based on arch testing by Tomáš "Mepho" Pružina,
+  Blain "doc235" Anderson & Elijah "Armageddon" El Lazkani in security bug
+  #386317.
 
 *virtualbox-additions-4.1.4 (04 Oct 2011)
 
