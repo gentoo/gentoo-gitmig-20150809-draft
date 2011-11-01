@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/srm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/ChangeLog,v 1.19 2011/09/29 02:16:48 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/ChangeLog,v 1.20 2011/11/01 09:30:00 chainsaw Exp $
+
+  01 Nov 2011; Tony Vroon <chainsaw@gentoo.org> srm-1.2.11-r1.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah "Armageddon" El Lazkani in bug #388955.
 
   29 Sep 2011; Aaron W. Swenson <titanofold@gentoo.org> +files/cflags.patch:
   Added forgotten patch.

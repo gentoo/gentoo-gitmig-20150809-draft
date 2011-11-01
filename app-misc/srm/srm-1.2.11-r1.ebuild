@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/srm-1.2.11-r1.ebuild,v 1.1 2011/09/29 02:14:12 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/srm-1.2.11-r1.ebuild,v 1.2 2011/11/01 09:30:00 chainsaw Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="debug"
 
 DEPEND="!app-misc/secure-delete
