@@ -1,6 +1,11 @@
 # ChangeLog for media-video/minitube
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.59 2011/10/30 00:05:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.60 2011/11/01 10:49:58 chainsaw Exp $
+
+  01 Nov 2011; Tony Vroon <chainsaw@gentoo.org> minitube-1.6.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo,
+  Elijah "Armageddon" El Lazkani & Tomáš "Mepho" Pružina in security bug
+  #388867.
 
   30 Oct 2011; Markos Chandras <hwoarang@gentoo.org> minitube-1.6.ebuild:
   more lingua fixes
