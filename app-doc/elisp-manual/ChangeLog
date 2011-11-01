@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/elisp-manual
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/ChangeLog,v 1.36 2011/09/24 16:58:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/ChangeLog,v 1.37 2011/11/01 10:16:07 ulm Exp $
+
+  01 Nov 2011; Ulrich Mueller <ulm@gentoo.org> elisp-manual-23.3.ebuild,
+  -elisp-manual-23.3.0-r1.ebuild:
+  Stable on all architectures, bug 379761. Remove old.
 
   24 Sep 2011; Raúl Porcel <armin76@gentoo.org> elisp-manual-23.3.ebuild:
   sparc stable wrt #379761
