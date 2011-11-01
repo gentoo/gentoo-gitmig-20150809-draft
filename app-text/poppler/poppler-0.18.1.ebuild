@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.18.0.ebuild,v 1.1 2011/09/28 23:06:04 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.18.1.ebuild,v 1.1 2011/11/01 14:03:41 reavertm Exp $
 
 EAPI="4"
 
@@ -50,11 +50,11 @@ RDEPEND="${COMMON_DEPEND}
 	cjk? ( >=app-text/poppler-data-0.4.4 )
 "
 
-DOCS=(AUTHORS ChangeLog NEWS README README-XPDF TODO)
-
 PATCHES=(
-	"${FILESDIR}/${P}-poppler_page_get_image-crash.patch"
+	"${FILESDIR}/${P}-pkgconfig.patch"
 )
+
+DOCS=(AUTHORS ChangeLog NEWS README README-XPDF TODO)
 
 src_configure() {
 	mycmakeargs=(
