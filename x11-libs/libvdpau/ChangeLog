@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libvdpau
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/ChangeLog,v 1.17 2011/08/20 08:10:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libvdpau/ChangeLog,v 1.18 2011/11/01 20:12:08 mattst88 Exp $
+
+  01 Nov 2011; Matt Turner <mattst88@gentoo.org> libvdpau-0.4.1.ebuild:
+  Add ~alpha (vdpau works with g3dvl/radeon)
 
   20 Aug 2011; Alexis Ballier <aballier@gentoo.org> libvdpau-0.4.ebuild,
   libvdpau-0.4.1.ebuild:
