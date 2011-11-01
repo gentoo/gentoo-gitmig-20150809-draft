@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/minicom
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.82 2011/10/31 06:07:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.83 2011/11/01 14:14:32 chainsaw Exp $
+
+  01 Nov 2011; Tony Vroon <chainsaw@gentoo.org> minicom-2.5.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah "Armageddon" El Lazkani in bug #389063.
 
   31 Oct 2011; Tim Harder <radhermit@gentoo.org> minicom-2.5.ebuild:
   Use default instead of default_src_install.
