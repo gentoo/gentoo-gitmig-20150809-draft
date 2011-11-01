@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.10-r1.ebuild,v 1.1 2011/11/01 12:37:10 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.10-r1.ebuild,v 1.2 2011/11/01 15:13:51 billie Exp $
 
-EAPI=3
+EAPI=4
 
 PYTHON_DEPEND="!minimal? 2"
 PYTHON_USE_WITH="threads xml"
@@ -103,7 +103,7 @@ src_prepare() {
 	# Fix for Gentoo bug #345725
 	sed -i -e "s|/etc/udev/rules.d|/$(get_libdir)/udev/rules.d|" \
 		$(find ./ -type f -exec grep -l '/etc/udev/rules.d' '{}' '+') \
-		|| die "sed udev rules"
+		|| die
 
 	# Do not install desktop files if there is no gui
 	# Upstream bug: https://bugs.launchpad.net/hplip/+bug/452113
@@ -216,7 +216,6 @@ src_configure() {
 	fi
 
 	econf \
-		--disable-dependency-tracking \
 		--disable-cups11-build \
 		--disable-lite-build \
 		--disable-foomatic-rip-hplip-install \
@@ -238,11 +237,14 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	default
 
 	# Installed by sane-backends
 	# Gentoo Bug: #201023
 	rm -f "${D}"/etc/sane.d/dll.conf || die
+
+	rm -f "${D}"/usr/share/doc/hplip-3.11.10-r1/{copyright,README_LIBJPG,COPYING} || die
+	rmdir "${D}"/usr/share/doc/hplip-3.11.10-r1/ >/dev/null
 
 	find "${D}" -name '*.la' -exec rm -rf '{}' '+' || die
 }
