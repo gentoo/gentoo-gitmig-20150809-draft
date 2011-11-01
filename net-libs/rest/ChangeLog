@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/rest
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/ChangeLog,v 1.2 2011/04/28 01:46:14 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/ChangeLog,v 1.3 2011/11/01 11:36:20 pacho Exp $
+
+*rest-0.7.11 (01 Nov 2011)
+
+  01 Nov 2011; Pacho Ramos <pacho@gentoo.org> +rest-0.7.11.ebuild:
+  Version bump.
 
   28 Apr 2011; Nirbheek Chauhan <nirbheek@gentoo.org> rest-0.7.10.ebuild,
   -files/rest-0.7.10-disable-broken-test.patch:
