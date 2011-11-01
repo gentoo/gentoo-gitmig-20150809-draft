@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/cmake-fedora
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake-fedora/ChangeLog,v 1.1 2011/11/01 17:50:50 naota Exp $
+
+*cmake-fedora-0.8.1 (01 Nov 2011)
+
+  01 Nov 2011; Naohiro Aota <naota@gentoo.org> +cmake-fedora-0.8.1.ebuild,
+  +metadata.xml:
+  New package dev-util/cmake-fedora
+
