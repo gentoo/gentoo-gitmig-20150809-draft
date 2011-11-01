@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.8.2.ebuild,v 1.1 2011/10/31 22:00:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/kdenlive-0.8.2.ebuild,v 1.2 2011/11/01 17:06:57 dilfridge Exp $
 
 EAPI=4
 KDE_LINGUAS="ca cs da de el es et fi fr gl he hr hu it nl pl pt pt_BR ru sl tr
 uk zh zh_CN zh_TW"
+KDE_HANDBOOK="optional"
 inherit kde4-base
 
 DESCRIPTION="Kdenlive! (pronounced Kay-den-live) is a Non Linear Video Editing Suite for KDE."
