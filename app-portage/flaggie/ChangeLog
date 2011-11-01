@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/flaggie
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/ChangeLog,v 1.22 2011/10/26 06:53:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/flaggie/ChangeLog,v 1.23 2011/11/01 14:09:52 chainsaw Exp $
+
+  01 Nov 2011; Tony Vroon <chainsaw@gentoo.org> flaggie-0.1.4.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
+  "idella4" Delaney in bug #345441.
 
   26 Oct 2011; Michał Górny <mgorny@gentoo.org> flaggie-0.1.4.ebuild:
   Restrict Python 3 due to bugs in it.
