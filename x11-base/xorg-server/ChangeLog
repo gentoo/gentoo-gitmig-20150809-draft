@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.622 2011/10/22 20:37:41 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.623 2011/11/01 22:53:10 hwoarang Exp $
+
+  01 Nov 2011; Markos Chandras <hwoarang@gentoo.org> files/xdm.initd-3:
+  add support for lightdm. bug #389039 thanks to Tobias Wallura
+  <Tobias.Wallura@gmail.com>
 
   22 Oct 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   -xorg-server-1.9.4.ebuild, -xorg-server-1.9.5.ebuild,
