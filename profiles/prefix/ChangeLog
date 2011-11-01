@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.298 2011/10/31 17:54:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.299 2011/11/01 00:56:21 ssuominen Exp $
+
+  01 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> aix/use.mask,
+  bsd/use.mask, darwin/use.mask, hpux/use.mask, irix/use.mask, mint/use.mask,
+  sunos/use.mask, windows/interix/use.mask, windows/winnt/use.mask:
+  Remove obsolete entries for USE="v4l2"
 
   31 Oct 2011; Fabian Groffen <grobian@gentoo.org> package.mask:
   Drop mask for no longer existing python-updater-0.8
