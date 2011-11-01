@@ -83,8 +83,12 @@ Index: ekeyd-1.1.4/udev/fedora15/60-entropykey.rules
 ===================================================================
 --- ekeyd-1.1.4.orig/udev/fedora15/60-entropykey.rules
 +++ ekeyd-1.1.4/udev/fedora15/60-entropykey.rules
-@@ -12,7 +12,7 @@
- ACTION=="add|change|remove", SUBSYSTEM=="tty", KERNEL=="ttyACM[0-9]*", BUS=="usb", ATTRS{idVendor}=="20df", ATTRS{idProduct}=="0001", IMPORT{program}="usb_id --export %p"
+@@ -9,10 +9,10 @@
+ # For licence terms refer to the COPYING file distributed with the source.
+ 
+ # Detect an Entropy Key being inserted and add info values to environment
+-ACTION=="add|change|remove", SUBSYSTEM=="tty", KERNEL=="ttyACM[0-9]*", BUS=="usb", ATTRS{idVendor}=="20df", ATTRS{idProduct}=="0001", IMPORT{program}="usb_id --export %p"
++ACTION=="add|change|remove", SUBSYSTEM=="tty", KERNEL=="ttyACM[0-9]*", ATTRS{idVendor}=="20df", ATTRS{idProduct}=="0001", IMPORT{program}="usb_id --export %p"
  
  # Detect an Entropy Key being inserted and extract serial number
 -ACTION=="add|change|remove", SUBSYSTEM=="tty", KERNEL=="ttyACM[0-9]*", ATTRS{idVendor}=="20df", ATTRS{idProduct}=="0001", IMPORT{program}="/bin/echo ENTROPY_KEY_SERIAL=$env{ID_SERIAL_SHORT}"
@@ -101,7 +105,7 @@ Index: ekeyd-1.1.4/udev/fedora15/60-entropykey-uds.rules
  
  # Detect an Entropy Key being inserted and extract serial number
 -ACTION=="add|change|remove", SUBSYSTEM=="usb", BUS=="usb", ATTRS{idVendor}=="20df", ATTRS{idProduct}=="0001", IMPORT{program}="/bin/echo ENTROPY_KEY_SERIAL=$attr{serial}"
-+ACTION=="add|change|remove", SUBSYSTEM=="usb", BUS=="usb", ATTRS{idVendor}=="20df", ATTRS{idProduct}=="0001", IMPORT{program}="/bin/sh -c '/bin/echo ENTROPY_KEY_SERIAL=$env{ID_SERIAL_SHORT} | /bin/sed -e s:/:_:g'"
++ACTION=="add|change|remove", SUBSYSTEM=="usb", ATTRS{idVendor}=="20df", ATTRS{idProduct}=="0001", IMPORT{program}="/bin/sh -c '/bin/echo ENTROPY_KEY_SERIAL=$env{ID_SERIAL_SHORT} | /bin/sed -e s:/:_:g'"
  
  # And tell the ekeyd about the device action.
  ENV{ENTROPY_KEY_SERIAL}!="", RUN+="/lib/udev/entropykey.sh"
