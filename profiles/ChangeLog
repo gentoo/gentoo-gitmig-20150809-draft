@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5857 2011/11/02 17:42:38 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5858 2011/11/02 19:17:16 scarabeus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Nov 2011; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
+  Bump the lo rc version.
 
   02 Nov 2011; Lars Wendler <polynomial-c@gentoo.org> package.mask:
   Removed mask for libcap-2.22 again.
