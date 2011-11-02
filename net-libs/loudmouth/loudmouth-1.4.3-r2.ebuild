@@ -1,17 +1,21 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.4.3-r1.ebuild,v 1.12 2011/11/02 02:56:39 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.4.3-r2.ebuild,v 1.1 2011/11/02 02:56:40 tetromino Exp $
 
-inherit autotools gnome2
+EAPI="4"
+GNOME_TARBALL_SUFFIX="bz2"
+GNOME2_LA_PUNT="yes"
+
+inherit autotools eutils gnome2
 
 DESCRIPTION="Lightweight C Jabber library"
 HOMEPAGE="https://github.com/engineyard/loudmouth"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~ppc-macos"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~ppc-macos"
 
-IUSE="asyncns doc ssl debug test"
+IUSE="asyncns debug doc ssl static-libs test"
 
 RDEPEND=">=dev-libs/glib-2.4
 	ssl? ( >=net-libs/gnutls-1.4.0 )
@@ -28,7 +32,7 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
-	G2CONF="${G2CONF} $(use_enable debug)"
+	G2CONF="${G2CONF} $(use_enable debug) $(use_enable static-libs static)"
 
 	if use ssl; then
 		G2CONF="${G2CONF} --with-ssl=gnutls"
@@ -43,8 +47,8 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	gnome2_src_unpack
+src_prepare() {
+	gnome2_src_prepare
 
 	# Use system libasyncns, bug #236844
 	epatch "${FILESDIR}/${P}-asyncns-system.patch"
@@ -63,6 +67,19 @@ src_unpack() {
 	# Don't check for sync dns problems when using asyncns [#33]
 	# From debian..
 	epatch "${FILESDIR}/${P}-async-fix.patch"
+
+	# Don't append id tag in opening headers [#30]
+	epatch "${FILESDIR}/${P}-id-tag-in-opening-headers.patch"
+
+	# Silence chdir, from engineyard git
+	epatch "${FILESDIR}/${P}-silence-chdir.patch"
+
+	# Don't free connection internals before connection is closed [#34]
+	epatch "${FILESDIR}/${P}-free-before-closed.patch"
+
+	# Check for invalid utf8, bug #389127
+	# Upstream: http://loudmouth.lighthouseapp.com/projects/17276/tickets/61
+	epatch "${FILESDIR}/${P}-invalid-unicode.patch"
 
 	eautoreconf
 }

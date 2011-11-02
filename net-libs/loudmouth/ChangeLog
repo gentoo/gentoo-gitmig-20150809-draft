@@ -1,6 +1,22 @@
 # ChangeLog for net-libs/loudmouth
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.97 2010/09/09 13:36:28 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.98 2011/11/02 02:56:40 tetromino Exp $
+
+*loudmouth-1.4.3-r2 (02 Nov 2011)
+
+  02 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  loudmouth-1.4.3.ebuild, loudmouth-1.4.3-r1.ebuild,
+  +loudmouth-1.4.3-r2.ebuild, +files/loudmouth-1.4.3-free-before-closed.patch,
+  +files/loudmouth-1.4.3-id-tag-in-opening-headers.patch,
+  +files/loudmouth-1.4.3-invalid-unicode.patch,
+  +files/loudmouth-1.4.3-silence-chdir.patch:
+  Add patches fixing rfc-3920 compliance, preventing segfaults and excessive
+  debug messages, and fixing utf-8 validation of incoming messages (bug
+  #389127, many thanks to Dmitry Potapov <potapov.d@gmail.com> for reporting).
+  Also, move to EAPI4 and add USE=static-libs support.
+  The Imendio upstream is gone, so use gnome.org for SRC_URI and set the github
+  repo which is supposedly considered the closest thing to official that
+  loudmouth has these days as the homepage.
 
   09 Sep 2010; Brent Baude <ranger@gentoo.org> loudmouth-1.4.3-r1.ebuild:
   Marking loudmouth-1.4.3-r1 ppc64 for bug 320273
