@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.108 2011/11/01 20:42:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.109 2011/11/02 15:58:33 jer Exp $
+
+  02 Nov 2011; Jeroen Roovers <jer@gentoo.org> libcap-2.22.ebuild:
+  Stable for HPPA (bug #389201).
 
 *libcap-2.22 (01 Nov 2011)
 
