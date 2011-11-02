@@ -1,0 +1,20 @@
+Gentoo bug #359009
+
+--- libgsasl-1.6.0/gl/gss-extra.c.orig	2011-03-15 18:08:06.534086334 +0100
++++ libgsasl-1.6.0/gl/gss-extra.c	2011-03-15 18:08:50.114086334 +0100
+@@ -33,6 +33,7 @@
+ /* Get malloc, free. */
+ #include <stdlib.h>
+ 
++#if (defined _WIN32 || defined __WIN32__)
+ #ifndef HAVE_GSS_C_NT_HOSTBASED_SERVICE
+ 
+ /* MIT Kerberos for Windows version 3.2.2 lacks this. */
+@@ -43,6 +44,7 @@
+ gss_OID GSS_C_NT_HOSTBASED_SERVICE = &tmp;
+ 
+ #endif
++#endif
+ 
+ #ifndef HAVE_GSS_OID_EQUAL
+ 

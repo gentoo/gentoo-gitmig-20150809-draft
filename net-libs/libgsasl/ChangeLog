@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libgsasl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.65 2011/09/12 21:02:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/ChangeLog,v 1.66 2011/11/02 08:35:31 eras Exp $
+
+  02 Nov 2011; Eray Aslan <eras@gentoo.org> libgsasl-1.6.1.ebuild,
+  +files/libgsasl-gss-extra.patch:
+  Fix compiling against heimdal - bug #359005. Thanks to Torsten Kurbad
 
   12 Sep 2011; Markus Meier <maekke@gentoo.org> libgsasl-1.6.1.ebuild:
   add ~arm, bug #381929

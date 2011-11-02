@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/libgsasl-1.6.1.ebuild,v 1.7 2011/09/12 21:02:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgsasl/libgsasl-1.6.1.ebuild,v 1.8 2011/11/02 08:35:31 eras Exp $
 
 EAPI="3"
 
@@ -24,6 +24,10 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	!net-misc/gsasl"
+
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-gss-extra.patch"
+}
 
 src_configure() {
 	econf \
