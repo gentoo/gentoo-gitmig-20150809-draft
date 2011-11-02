@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.5.1.ebuild,v 1.2 2011/10/23 12:00:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.5.1.ebuild,v 1.3 2011/11/02 10:14:51 eras Exp $
 
 EAPI=2
 # PYTHON_BDEPEND="2"
@@ -122,4 +122,10 @@ src_install() {
 
 	# default database dir
 	keepdir /var/heimdal
+}
+
+pkg_preinst() {
+	if has_version "<${CATEGORY}/${PN}-1.4.0" ; then
+		ewarn "Please make sure to run \"revdep-rebuild\" after upgrading."
+	fi
 }
