@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.13.ebuild,v 1.2 2010/08/12 21:37:57 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.13.ebuild,v 1.3 2011/11/02 21:53:44 vapier Exp $
 
 inherit eutils python multilib
 
@@ -33,7 +33,7 @@ pkg_setup() {
 	# need to add mailman here for compile process.
 	# Duplicated at pkg_postinst() for binary install.
 	enewgroup ${MAILGRP} ${MAILGID}
-	enewuser  ${MAILUSR} ${MAILUID} /bin/bash ${INSTALLDIR} mailman -G cron -c "mailman"
+	enewuser  ${MAILUSR} ${MAILUID} /bin/bash ${INSTALLDIR} mailman -G cron
 }
 
 src_unpack() {
@@ -114,7 +114,7 @@ pkg_postinst() {
 		${INSTALLDIR}/pythonlib/*/
 
 	enewgroup ${MAILGRP} ${MAILGID}
-	enewuser  ${MAILUSR} ${MAILUID} -1 ${INSTALLDIR} mailman -G cron -c "mailman"
+	enewuser  ${MAILUSR} ${MAILUID} -1 ${INSTALLDIR} mailman -G cron
 	elog
 	elog "Please read /usr/share/doc/${PF}/README.gentoo.bz2 for additional"
 	elog "Setup information, mailman will NOT run unless you follow"

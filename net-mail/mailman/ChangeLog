@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mailman
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.127 2010/10/15 12:49:32 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.128 2011/11/02 21:53:44 vapier Exp $
+
+  02 Nov 2011; Mike Frysinger <vapier@gentoo.org> mailman-2.1.9-r3.ebuild,
+  mailman-2.1.11.ebuild, mailman-2.1.12.ebuild, mailman-2.1.13.ebuild,
+  mailman-2.1.14_rc1.ebuild, mailman-2.1.14.ebuild:
+  Drop superfluous -c usage.
 
   15 Oct 2010; Brent Baude <ranger@gentoo.org> mailman-2.1.14.ebuild:
   Marking mailman-2.1.14 ppc for bug 337095
