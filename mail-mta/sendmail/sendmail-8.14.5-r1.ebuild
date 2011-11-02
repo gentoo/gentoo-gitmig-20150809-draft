@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.14.5-r1.ebuild,v 1.1 2011/09/08 06:41:38 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.14.5-r1.ebuild,v 1.2 2011/11/02 21:38:29 vapier Exp $
 
 EAPI="2"
 
@@ -48,11 +48,8 @@ PDEPEND="!mbox? ( mail-filter/procmail )"
 LIBMILTER_VER=1.0.2
 
 pkg_setup() {
-	einfo "checking for smmsp group...    create if missing."
-	enewgroup smmsp 209 || die "problem adding group smmsp"
-	einfo "checking for smmsp user...     create if missing."
-	enewuser smmsp 209 -1 /var/spool/mqueue smmsp \
-		|| die "problem adding user smmsp"
+	enewgroup smmsp 209
+	enewuser smmsp 209 -1 /var/spool/mqueue smmsp
 }
 
 src_prepare() {
