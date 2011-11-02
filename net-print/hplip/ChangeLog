@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.198 2011/11/01 15:13:51 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.199 2011/11/02 15:01:49 phajdan.jr Exp $
+
+  02 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> hplip-3.11.10.ebuild:
+  x86 stable wrt bug #388989
 
   01 Nov 2011; Daniel Pielmeier <billie@gentoo.org> hplip-3.11.10-r1.ebuild:
   Switch to EAPI 4. Remove Copyright files.
