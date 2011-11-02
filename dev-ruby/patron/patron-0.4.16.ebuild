@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/patron/patron-0.4.16.ebuild,v 1.1 2011/09/16 18:47:14 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/patron/patron-0.4.16.ebuild,v 1.2 2011/11/02 06:22:18 graaff Exp $
 
 EAPI=2
-USE_RUBY="ruby18 ree18"
+USE_RUBY="ruby18 ree18 ruby19"
 
 RUBY_FAKEGEM_TASK_TEST="spec"
 RUBY_FAKEGEM_EXTRADOC="README.txt"
