@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-3.0.10.ebuild,v 1.1 2011/08/19 12:49:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-3.0.10.ebuild,v 1.2 2011/11/02 21:52:16 vapier Exp $
 
 EAPI=2
 
@@ -81,7 +81,7 @@ RDEPEND="${DEPEND}
 OTRS_HOME="/var/lib/otrs"
 
 pkg_setup() {
-	enewuser otrs -1 -1 ${OTRS_HOME} apache -c "OTRS User"
+	enewuser otrs -1 -1 ${OTRS_HOME} apache
 	confutils_require_any mysql postgres
 }
 
