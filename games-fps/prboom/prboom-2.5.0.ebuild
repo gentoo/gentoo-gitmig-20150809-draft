@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.5.0.ebuild,v 1.8 2011/08/20 14:59:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/prboom-2.5.0.ebuild,v 1.9 2011/11/02 01:32:11 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -18,7 +18,7 @@ IUSE=""
 DEPEND="media-libs/libsdl[joystick,video]
 	media-libs/sdl-mixer
 	media-libs/sdl-net
-	!games-fps/lsdldoom
+	!<games-fps/lsdldoom-1.5
 	virtual/opengl
 	virtual/glu"
 

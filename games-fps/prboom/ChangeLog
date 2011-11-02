@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/prboom
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.35 2011/08/20 14:59:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.36 2011/11/02 01:32:11 mr_bones_ Exp $
+
+  02 Nov 2011; Michael Sterrett <mr_bones_@gentoo.org> prboom-2.5.0.ebuild:
+  Adjust lsdldoom blocker to reflect updates (bug #388495)
 
   20 Aug 2011; Michael Sterrett <mr_bones_@gentoo.org> prboom-2.5.0.ebuild:
   fix comment (bug #328069); disable x86 asm (bug #379909)
