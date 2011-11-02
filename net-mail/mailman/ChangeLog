@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/mailman
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.128 2011/11/02 21:53:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.129 2011/11/02 22:09:34 vapier Exp $
+
+  02 Nov 2011; Mike Frysinger <vapier@gentoo.org> mailman-2.1.9-r3.ebuild,
+  mailman-2.1.11.ebuild, mailman-2.1.12.ebuild, mailman-2.1.13.ebuild,
+  mailman-2.1.14_rc1.ebuild, mailman-2.1.14.ebuild:
+  Fold extra -G argument to enewuser into existing <groups> argument to
+  enewuser as enewuser takes care of splitting into -g/-G for us.
 
   02 Nov 2011; Mike Frysinger <vapier@gentoo.org> mailman-2.1.9-r3.ebuild,
   mailman-2.1.11.ebuild, mailman-2.1.12.ebuild, mailman-2.1.13.ebuild,
