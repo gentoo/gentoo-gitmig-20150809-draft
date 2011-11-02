@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.3.2-r1.ebuild,v 1.14 2011/11/02 12:28:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.3.2-r1.ebuild,v 1.15 2011/11/02 12:58:35 scarabeus Exp $
 
 EAPI=3
 
@@ -102,7 +102,7 @@ unset ADDONS_SRC
 
 IUSE="binfilter +branding custom-cflags dbus debug eds gnome graphite
 gstreamer gtk kde ldap mysql nsplugin odk opengl python templates test +vba
-webdav"
+webdav pdfimport"
 LICENSE="LGPL-3"
 SLOT="0"
 [[ ${PV} == *9999* ]] || KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
@@ -122,7 +122,6 @@ COMMON_DEPEND="
 	app-text/libwpd:0.9[tools]
 	app-text/libwpg:0.2
 	>=app-text/libwps-0.2.2
-	>=app-text/poppler-0.12.3-r3[xpdf-headers,cairo]
 	dev-db/unixODBC
 	dev-libs/expat
 	>=dev-libs/glib-2.28
@@ -144,6 +143,7 @@ COMMON_DEPEND="
 	x11-libs/libXinerama
 	x11-libs/libXrandr
 	x11-libs/libXrender
+	pdfimport? ( >=app-text/poppler-0.12.3-r3[xpdf-headers,cairo] )
 	dbus? ( >=dev-libs/dbus-glib-0.92 )
 	eds? ( gnome-extra/evolution-data-server )
 	gnome? (
@@ -374,7 +374,7 @@ src_configure() {
 
 	# list the extensions we are going to build by default
 	extensions="
-		--enable-ext-pdfimport
+		$(use_enable pdfimport ext-pdfimport)
 		--enable-ext-presenter-console
 		--enable-ext-presenter-minimizer
 	"
