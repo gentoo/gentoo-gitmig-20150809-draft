@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.96 2011/10/30 14:21:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.97 2011/11/02 18:01:00 jer Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -213,7 +213,7 @@ qt4-build_src_prepare() {
 		# qmake bus errors with -O2 but -O3 works
 		replace-flags -O2 -O3
 	fi
-	
+
 	# Bug 178652
 	if [[ $(gcc-major-version) == 3 ]] && use amd64; then
 		ewarn "Appending -fno-gcse to CFLAGS/CXXFLAGS"
