@@ -1,6 +1,11 @@
 # ChangeLog for virtual/gsasl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gsasl/ChangeLog,v 1.11 2011/09/12 21:03:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/gsasl/ChangeLog,v 1.12 2011/11/02 10:01:59 eras Exp $
+
+*gsasl-2 (02 Nov 2011)
+
+  02 Nov 2011; Eray Aslan <eras@gentoo.org> +gsasl-2.ebuild:
+  Move to unversioned virtual/gsasl
 
   12 Sep 2011; Markus Meier <maekke@gentoo.org> gsasl-1.6.1.ebuild:
   add ~arm, bug #381929
