@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.50 2011/11/02 16:53:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.51 2011/11/02 18:18:31 scarabeus Exp $
 
 EAPI=4
 
@@ -181,7 +181,6 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-libs/libxml2-2.7.8
 	dev-libs/libxslt
 	dev-perl/Archive-Zip
-	>=dev-python/translate-toolkit-1.8.0
 	dev-util/cppunit
 	>=dev-util/gperf-3
 	dev-util/intltool
