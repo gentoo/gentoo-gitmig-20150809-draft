@@ -2,7 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>python</herd>
-	<herd>openoffice</herd>
 <use>
 	<flag name="html">Support conversion between po and html files</flag>
 	<flag name="ical">Support conversion between po and ical files</flag>
