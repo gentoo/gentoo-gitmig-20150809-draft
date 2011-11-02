@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/isl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/ChangeLog,v 1.4 2011/08/21 06:41:25 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/ChangeLog,v 1.5 2011/11/02 18:39:40 ssuominen Exp $
+
+*isl-0.07-r1 (02 Nov 2011)
+
+  02 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> +isl-0.07-r1.ebuild:
+  Remove compile time LDFLAGS from Libs: in pkg-config file wrt #382737
 
 *isl-0.07 (21 Aug 2011)
 
