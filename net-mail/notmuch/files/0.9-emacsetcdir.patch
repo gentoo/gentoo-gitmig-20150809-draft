@@ -1,18 +1,17 @@
-From 38375cefb708081eab7e7c928dcb85a1d68da6f1 Mon Sep 17 00:00:00 2001
-From: =?UTF-8?q?Amadeusz=20=C5=BBo=C5=82nowski?= <aidecoe@aidecoe.name>
-Date: Mon, 24 Oct 2011 20:26:27 +0200
-Subject: [PATCH] Separate Emacs miscellaneous files directory from Emacs code
- directory.
+From e6d85fb97d86e103c2c62cd215f54a3fe37856d0 Mon Sep 17 00:00:00 2001
+From: =?utf8?q?Amadeusz=20=C5=BBo=C5=82nowski?= <aidecoe@aidecoe.name>
+Date: Tue, 25 Oct 2011 10:07:02 +0200
+Subject: [PATCH 1/1] Separate Emacs misc. files dir. from Emacs code dir.
 
---emacsetcdir was added, but it's set default to the same value as
---emacslispdir for backward compatibility.
+New option --emacsetcdir was added, but it's set default to the same
+value as --emacslispdir for backward compatibility.
 ---
- configure            |   14 ++++++++++++++
+ configure            |   15 +++++++++++++++
  emacs/Makefile.local |    3 ++-
- 2 files changed, 16 insertions(+), 1 deletions(-)
+ 2 files changed, 17 insertions(+), 1 deletions(-)
 
 diff --git a/configure b/configure
-index 3999ce8..37c0283 100755
+index 3999ce8..e90b76f 100755
 --- a/configure
 +++ b/configure
 @@ -97,6 +97,7 @@ Fine tuning of some installation directories is available:
@@ -47,11 +46,12 @@ index 3999ce8..37c0283 100755
  printf "Checking if emacs is available... "
  if emacs --quick --batch > /dev/null 2>&1; then
      printf "Yes.\n"
-@@ -614,6 +625,9 @@ sysconfdir = ${SYSCONFDIR:=\$(prefix)/etc}
+@@ -614,6 +625,10 @@ sysconfdir = ${SYSCONFDIR:=\$(prefix)/etc}
  # The directory to which emacs lisp files should be installed
  emacslispdir=${EMACSLISPDIR}
  
-+# The directory to which emacs lisp files should be installed
++# The directory to which emacs miscellaneous (machine-independent) files should
++# be installed
 +emacsetcdir=${EMACSETCDIR}
 +
  # Whether there's an emacs binary available for byte-compiling
@@ -71,5 +71,5 @@ index ce0c3f0..0c58b82 100644
  
  CLEAN := $(CLEAN) $(emacs_bytecode)
 -- 
-1.7.7.1
+1.7.0.4
 

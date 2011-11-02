@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.1 2011/11/02 15:30:50 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.2 2011/11/02 16:48:13 aidecoe Exp $
+
+  02 Nov 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  files/0.9-emacsetcdir.patch, files/0.9-fix-lib-makefile-local.patch,
+  notmuch-0.9.ebuild:
+  ~x86 keyword. Notmuch works fine in terminal, Vim and Emacs.
+
+  For x86 >=dev-libs/xapian-1.2.7-r2 is required.
 
   02 Nov 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
   +files/0.9-emacsetcdir.patch, +files/0.9-fix-lib-makefile-local.patch,
