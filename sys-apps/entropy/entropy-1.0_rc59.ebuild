@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/entropy-1.0_rc59.ebuild,v 1.1 2011/10/09 06:52:11 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/entropy/entropy-1.0_rc59.ebuild,v 1.2 2011/11/02 21:42:15 vapier Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -34,10 +34,10 @@ pkg_setup() {
 	# - update repos
 	# - update security advisories
 	# - handle on-disk cache (atm)
-	enewgroup entropy || die "failed to create entropy group"
+	enewgroup entropy
 	# Create unprivileged entropy user
-	enewgroup entropy-nopriv || die "failed to create entropy-nopriv group"
-	enewuser entropy-nopriv -1 -1 -1 entropy-nopriv || die "failed to create entropy-nopriv user"
+	enewgroup entropy-nopriv
+	enewuser entropy-nopriv -1 -1 -1 entropy-nopriv
 }
 
 src_compile() {
