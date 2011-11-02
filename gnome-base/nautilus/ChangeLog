@@ -1,6 +1,14 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.384 2011/10/05 17:33:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.385 2011/11/02 16:51:46 tetromino Exp $
+
+*nautilus-3.2.1 (02 Nov 2011)
+
+  02 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +nautilus-3.2.1.ebuild, metadata.xml:
+  Add 3.2.1 from the gnome overlay. The internal media previewer is gone,
+  gnome-extra/sushi is used for previewing instead. Has more-or-less working
+  app-misc/tracker support.
 
   05 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
   nautilus-2.32.2.1-r1.ebuild:
