@@ -1,14 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.6.6.3.ebuild,v 1.2 2011/10/20 23:07:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.6.6.6.ebuild,v 1.1 2011/11/02 02:33:46 floppym Exp $
 
 EAPI="3"
 
 PYTHON_DEPEND="2:2.6"
 
 inherit eutils multilib pax-utils python toolchain-funcs
-
-GYP_REV="1066"
 
 DESCRIPTION="Google's open source JavaScript engine"
 HOMEPAGE="http://code.google.com/p/v8"
@@ -21,6 +19,7 @@ IUSE=""
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
@@ -47,6 +46,7 @@ src_compile() {
 	mytarget=${myarch}.release
 
 	if [[ ${PV} == "9999" ]]; then
+		subversion_wc_info
 		soname_version="${PV}-${ESVN_WC_REVISION}"
 	else
 		soname_version="${PV}"
@@ -91,4 +91,30 @@ src_install() {
 	dosym libv8-${soname_version}$(get_libname) /usr/$(get_libdir)/libv8$(get_libname) || die
 
 	dodoc AUTHORS ChangeLog || die
+}
+
+pkg_preinst() {
+	preserved_libs=()
+	local baselib candidate
+
+	eshopts_push -s nullglob
+
+	for candidate in "${EROOT}usr/$(get_libdir)"/libv8-*$(get_libname); do
+		baselib=${candidate##*/}
+		if [[ ! -e "${ED}usr/$(get_libdir)/${baselib}" ]]; then
+			preserved_libs+=( "${EPREFIX}/usr/$(get_libdir)/${baselib}" )
+		fi
+	done
+
+	eshopts_pop
+
+	if [[ ${#preserved_libs[@]} -gt 0 ]]; then
+		preserve_old_lib "${preserved_libs[@]}"
+	fi
+}
+
+pkg_postinst() {
+	if [[ ${#preserved_libs[@]} -gt 0 ]]; then
+		preserve_old_lib_notify "${preserved_libs[@]}"
+	fi
 }
