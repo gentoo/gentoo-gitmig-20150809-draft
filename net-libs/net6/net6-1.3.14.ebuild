@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/net6/net6-1.3.14.ebuild,v 1.3 2011/11/02 14:46:24 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/net6/net6-1.3.14.ebuild,v 1.4 2011/11/02 17:42:05 xarthisius Exp $
 
 EAPI=4
 
@@ -31,4 +31,10 @@ src_configure() {
 src_install() {
 	default
 	use static-libs || rm -f "${D}"/usr/$(get_libdir)/lib${PN}.la
+}
+
+pkg_postinst() {
+	elog "Please note that because of the use of C++ templates"
+	elog "Gobby 0.4 has to be recompiled against the new ${PN}"
+	elog "to pick up the changes."
 }
