@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.24-r1.ebuild,v 1.1 2011/08/22 19:07:42 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.4.24-r1.ebuild,v 1.2 2011/11/02 09:10:53 eras Exp $
 
 EAPI=4
 inherit multilib
@@ -20,7 +20,7 @@ CDEPEND="idn? ( net-dns/libidn )
 		dev-python/gnome-keyring-python )
 	gnutls? ( >=net-libs/gnutls-1.2.0 )
 	!gnutls? ( ssl? ( >=dev-libs/openssl-0.9.6 ) )
-	sasl? ( >=virtual/gsasl-0.2.4 )"
+	sasl? ( virtual/gsasl )"
 
 RDEPEND="${CDEPEND}
 	mta? (	!mail-mta/courier
