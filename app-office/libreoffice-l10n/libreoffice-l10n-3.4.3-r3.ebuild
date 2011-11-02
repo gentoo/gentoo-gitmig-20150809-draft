@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.4.3-r3.ebuild,v 1.2 2011/10/26 15:28:33 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-3.4.3-r3.ebuild,v 1.3 2011/11/02 08:11:30 scarabeus Exp $
 
 EAPI=4
 
@@ -72,6 +72,9 @@ src_unpack() {
 	local lang dir rpmdir
 
 	for lang in ${LINGUAS}; do
+		# break away if not enabled; paludis support
+		use linguas_${lang} || continue
+
 		dir=${lang/_/-}
 
 		# for english we provide just helppack, as translation is always there
