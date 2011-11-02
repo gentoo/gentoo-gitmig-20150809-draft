@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fontbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fontbox/ChangeLog,v 1.9 2011/08/28 16:24:41 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fontbox/ChangeLog,v 1.10 2011/11/02 14:56:06 aballier Exp $
+
+  02 Nov 2011; Alexis Ballier <aballier@gentoo.org> fontbox-0.1.0.ebuild:
+  keyword ~x86-fbsd
 
   28 Aug 2011; Fabian Groffen <grobian@gentoo.org> fontbox-0.1.0.ebuild:
   Marked ~x64-macos

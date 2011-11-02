@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fontbox/fontbox-0.1.0.ebuild,v 1.9 2011/08/28 16:24:41 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fontbox/fontbox-0.1.0.ebuild,v 1.10 2011/11/02 14:56:06 aballier Exp $
 
 WANT_ANT_TASKS="ant-nodeps"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86 ~x64-macos"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd ~x64-macos"
 
 IUSE="doc source"
 
