@@ -1,0 +1,11 @@
+# ChangeLog for games-util/pyfa
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/pyfa/ChangeLog,v 1.1 2011/11/02 23:59:34 tetromino Exp $
+
+*pyfa-1.0.6 (02 Nov 2011)
+
+  02 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +files/pyfa-1.0.3-staticPath.patch, +pyfa-1.0.6.ebuild,
+  +files/configforced.py, +files/pyfa.desktop, +metadata.xml:
+  New ebuild for bug #352188, formerly maintained in Sunrise.
+
