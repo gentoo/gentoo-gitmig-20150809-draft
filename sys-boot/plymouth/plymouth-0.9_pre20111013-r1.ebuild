@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.9_pre20111013-r1.ebuild,v 1.2 2011/10/27 12:37:00 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/plymouth/plymouth-0.9_pre20111013-r1.ebuild,v 1.3 2011/11/02 13:07:17 aidecoe Exp $
 
 EAPI=4
 
@@ -20,6 +20,7 @@ IUSE="${IUSE_VIDEO_CARDS} gdm +libkms +openrc +pango static-libs"
 
 CDEPEND=">=media-libs/libpng-1.2.16
 	>=x11-libs/gtk+-2.12:2
+	libkms? ( x11-libs/libdrm[libkms] )
 	pango? ( >=x11-libs/pango-1.21 )
 	video_cards_intel? ( x11-libs/libdrm[video_cards_intel] )
 	video_cards_nouveau? ( x11-libs/libdrm[video_cards_nouveau] )
