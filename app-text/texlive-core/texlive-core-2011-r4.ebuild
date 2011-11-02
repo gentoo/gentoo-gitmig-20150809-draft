@@ -1,13 +1,15 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2011-r4.ebuild,v 1.2 2011/10/12 15:08:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2011-r4.ebuild,v 1.3 2011/11/02 21:06:43 aballier Exp $
 
 EAPI=3
 
+TL_UPSTREAM_PATCHLEVEL="1"
+PATCHLEVEL="31"
+TL_SOURCE_VERSION=20110705
+
 inherit eutils flag-o-matic toolchain-funcs libtool texlive-common
 
-PATCHLEVEL="30"
-TL_SOURCE_VERSION=20110705
 MY_PV=${PN%-core}-${TL_SOURCE_VERSION}-source
 
 DESCRIPTION="A complete TeX distribution"
@@ -18,7 +20,8 @@ LICENSE="GPL-2 LPPL-1.3c TeX"
 SRC_URI="mirror://gentoo/${MY_PV}.tar.xz"
 
 # Fetch patches
-SRC_URI="${SRC_URI} mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.xz"
+SRC_URI="${SRC_URI} mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.xz
+	mirror://gentoo/texlive-core-upstream-patches-${TL_UPSTREAM_PATCHLEVEL}.tar.xz"
 
 TL_CORE_BINEXTRA_MODULES="
 	a2ping asymptote bibtex8 bundledoc ctie cweb de-macro dtl dvi2tty dviasm
@@ -113,6 +116,7 @@ S="${WORKDIR}/${MY_PV}"
 src_prepare() {
 	mv "${WORKDIR}"/texmf* "${S}" || die "failed to move texmf files"
 
+	EPATCH_MULTI_MSG="Applying patches from upstream bugfix branch..." EPATCH_SUFFIX="patch" epatch "${WORKDIR}/gentoo_branch2011_patches"
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
 
 	elibtoolize
