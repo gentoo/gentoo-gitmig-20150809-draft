@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Algorithm-Diff
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Diff/ChangeLog,v 1.41 2011/10/04 17:41:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Diff/ChangeLog,v 1.42 2011/11/02 15:27:36 aballier Exp $
+
+  02 Nov 2011; Alexis Ballier <aballier@gentoo.org>
+  Algorithm-Diff-1.190.200.ebuild:
+  keyword ~x86-fbsd
 
   04 Oct 2011; Jeroen Roovers <jer@gentoo.org> Algorithm-Diff-1.190.200.ebuild:
   Stable for HPPA (bug #355085).
