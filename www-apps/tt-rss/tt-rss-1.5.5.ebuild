@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-1.5.5.ebuild,v 1.1 2011/07/17 15:09:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/tt-rss-1.5.5.ebuild,v 1.2 2011/11/02 21:43:18 vapier Exp $
 
 EAPI="2"
 
@@ -27,10 +27,8 @@ pkg_setup() {
 	use postgres && require_php_with_use postgres
 	if use daemon; then
 		require_php_with_use pcntl
-		einfo "Checking for ttrssd group ..."
-		enewgroup ttrssd || die "Failed to check/add needed group"
-		einfo "Checking for ttrssd user ..."
-		enewuser ttrssd -1 /bin/sh /dev/null ttrssd || die "Failed to check/add needed user"
+		enewgroup ttrssd
+		enewuser ttrssd -1 /bin/sh /dev/null ttrssd
 	fi
 }
 

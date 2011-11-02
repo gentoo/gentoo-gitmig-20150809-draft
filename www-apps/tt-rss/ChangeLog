@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/tt-rss
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.3 2011/08/24 20:20:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tt-rss/ChangeLog,v 1.4 2011/11/02 21:43:18 vapier Exp $
+
+  02 Nov 2011; Mike Frysinger <vapier@gentoo.org> tt-rss-1.5.5.ebuild:
+  Drop "die" from enew{user,group} since these have always taken care of
+  calling it when necessary.
 
   24 Aug 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add package to proxy-maintainers herd
