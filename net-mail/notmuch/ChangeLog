@@ -1,0 +1,32 @@
+# ChangeLog for net-mail/notmuch
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.1 2011/11/02 15:30:50 aidecoe Exp $
+
+  02 Nov 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +files/0.9-emacsetcdir.patch, +files/0.9-fix-lib-makefile-local.patch,
+  +notmuch-0.9.ebuild, +files/50notmuch-gentoo.el, +metadata.xml:
+  Moved from app-text/notmuch to net-mail/notmuch.
+
+  26 Oct 2011; Ulrich Mueller <ulm@gentoo.org> files/50notmuch-gentoo.el:
+  Use SITEETC instead of absolute path in emacs site-init file.
+
+  24 Oct 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.9.ebuild:
+  ~amd64 keyword. Notmuch works fine in terminal, Vim and Emacs.
+
+  24 Oct 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +files/0.9-emacsetcdir.patch, +files/50notmuch-gentoo.el, notmuch-0.9.ebuild:
+  Improved emacs support. Added site-init file by Ulrich Müller
+  <ulm@gentoo.org>.
+
+  24 Oct 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.9.ebuild,
+  metadata.xml:
+  Checking emacs version in pkg_setup(), not in pkg_pretend().  Paths in
+  src_install() were prefixed with ${ROOT} and emacs files were put into ${PN}
+  subdirectory.  Better descriptions for vim and emacs flags in metadata.xml.
+
+*notmuch-0.9 (23 Oct 2011)
+
+  23 Oct 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +files/0.9-fix-lib-makefile-local.patch, +notmuch-0.9.ebuild, +metadata.xml:
+  Initial ebuild without python and ruby bindings yet.
+
