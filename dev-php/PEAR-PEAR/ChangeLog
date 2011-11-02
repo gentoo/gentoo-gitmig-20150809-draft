@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-PEAR
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.150 2011/09/07 11:24:20 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.151 2011/11/02 12:32:44 olemarkus Exp $
+
+*PEAR-PEAR-1.9.4 (02 Nov 2011)
+
+  02 Nov 2011; Ole Markus With <olemarkus@gentoo.org> +PEAR-PEAR-1.9.4.ebuild:
+  Version bump
 
   07 Sep 2011; Ole Markus With <olemarkus@gentoo.org>
   -files/1.6.2-accept-encoding-bug_12116.patch, -PEAR-PEAR-1.9.2.ebuild,
