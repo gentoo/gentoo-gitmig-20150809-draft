@@ -1,43 +1,47 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.0.1.ebuild,v 1.3 2011/11/02 06:53:22 qiaomuf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.1.2.ebuild,v 1.1 2011/11/02 06:53:22 qiaomuf Exp $
 
 EAPI="3"
 
-inherit eutils
+inherit cmake-utils eutils
 
 DESCRIPTION="Free Chinese Input Toy for X. Another Chinese XIM Input Method"
 HOMEPAGE="http://www.fcitx.org/"
-SRC_URI="http://fcitx.googlecode.com/files/${P}_all.tar.gz"
+SRC_URI="http://fcitx.googlecode.com/files/${P}_all.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="dbus pango"
+KEYWORDS="~amd64 ~x86"
+IUSE="cairo dbus debug gtk gtk3 opencc pango"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXrender
-	x11-libs/cairo[X]
 	media-libs/fontconfig
 	pango? ( x11-libs/pango )
-	dbus? ( >=sys-apps/dbus-0.2 )"
+	opencc? ( app-i18n/opencc )
+	gtk? ( x11-libs/gtk+:2 )
+	gtk3? ( x11-libs/gtk+:3 )
+	cairo? ( x11-libs/cairo[X] )
+	dbus? ( sys-apps/dbus )"
 DEPEND="${RDEPEND}
 	x11-proto/xproto
 	dev-util/pkgconfig"
 
-src_prepare() {
-	# fix a bug when compiling without pango
-	epatch "${FILESDIR}/${P}-fix-pango.patch"
-}
-
 src_configure() {
-	econf \
-		$(use_enable dbus) \
-		$(use_enable pango) || die
+	local mycmakeargs="
+		$(cmake-utils_use_enable cairo)
+		$(cmake-utils_use_enable dbus)
+		$(cmake-utils_use_enable debug)
+		$(cmake-utils_use_enable gtk gtk2_im_module)
+		$(cmake-utils_use_enable gtk3 gtk3_im_module)
+		$(cmake-utils_use_enable opencc)
+		$(cmake-utils_use_enable pango)"
+		cmake-utils_src_configure
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	cmake-utils_src_install
 
 	dodoc AUTHORS ChangeLog README THANKS TODO || die
 
