@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.152 2011/10/31 17:23:39 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.153 2011/11/02 14:27:15 jer Exp $
+
+  02 Nov 2011; Jeroen Roovers <jer@gentoo.org> postgresql-server-9.1.1.ebuild:
+  Stable for HPPA (bug #388489).
 
   31 Oct 2011; Tony Vroon <chainsaw@gentoo.org> postgresql-server-9.1.1.ebuild:
   Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney &

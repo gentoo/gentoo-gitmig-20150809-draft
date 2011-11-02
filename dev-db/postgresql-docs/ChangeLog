@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgresql-docs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.117 2011/10/31 17:22:04 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.118 2011/11/02 14:26:08 jer Exp $
+
+  02 Nov 2011; Jeroen Roovers <jer@gentoo.org> postgresql-docs-9.1.1.ebuild:
+  Stable for HPPA (bug #388489).
 
   31 Oct 2011; Tony Vroon <chainsaw@gentoo.org> postgresql-docs-9.1.1.ebuild:
   Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney &
