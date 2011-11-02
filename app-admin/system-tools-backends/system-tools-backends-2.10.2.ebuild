@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/system-tools-backends-2.10.2.ebuild,v 1.5 2011/10/05 17:04:43 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/system-tools-backends-2.10.2.ebuild,v 1.6 2011/11/02 21:46:07 vapier Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -33,7 +33,7 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		--localstatedir=/var"
 
-	enewgroup stb-admin || die "Failed to create stb-admin group"
+	enewgroup stb-admin
 }
 
 src_prepare() {

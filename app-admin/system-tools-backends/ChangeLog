@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/system-tools-backends
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.72 2011/10/05 17:04:43 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-tools-backends/ChangeLog,v 1.73 2011/11/02 21:46:07 vapier Exp $
+
+  02 Nov 2011; Mike Frysinger <vapier@gentoo.org>
+  system-tools-backends-2.10.1.ebuild, system-tools-backends-2.10.2.ebuild:
+  Drop "die" from enew{user,group} since these have always taken care of
+  calling it when necessary.
 
   05 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
   system-tools-backends-2.10.2.ebuild:
