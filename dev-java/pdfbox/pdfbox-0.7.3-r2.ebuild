@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/pdfbox-0.7.3-r2.ebuild,v 1.10 2011/08/28 16:27:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/pdfbox-0.7.3-r2.ebuild,v 1.11 2011/11/02 15:14:48 aballier Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc source"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.pdfbox.org"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86 ~x64-macos"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd ~x64-macos"
 IUSE=""
 
 CDEPEND="dev-java/fontbox
