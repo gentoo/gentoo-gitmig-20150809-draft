@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/android-sdk-update-manager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/ChangeLog,v 1.27 2011/10/19 15:45:41 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/ChangeLog,v 1.28 2011/11/02 21:44:03 vapier Exp $
+
+  02 Nov 2011; Mike Frysinger <vapier@gentoo.org>
+  android-sdk-update-manager-10.ebuild,
+  android-sdk-update-manager-10-r1.ebuild,
+  android-sdk-update-manager-12.ebuild, android-sdk-update-manager-13.ebuild,
+  android-sdk-update-manager-14.ebuild:
+  Drop "die" from enew{user,group} since these have always taken care of
+  calling it when necessary.
 
 *android-sdk-update-manager-14 (19 Oct 2011)
 

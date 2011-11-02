@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-10-r1.ebuild,v 1.1 2011/06/04 20:09:42 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-10-r1.ebuild,v 1.2 2011/11/02 21:44:03 vapier Exp $
 
 EAPI="3"
 
@@ -41,7 +41,7 @@ QA_DT_HASH_amd64="${QA_DT_HASH_x86}"
 S="${WORKDIR}/android-sdk-linux_x86"
 
 pkg_setup() {
-	enewgroup android || die
+	enewgroup android
 }
 
 src_prepare(){
