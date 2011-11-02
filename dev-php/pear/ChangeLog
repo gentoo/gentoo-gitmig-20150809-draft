@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/pear
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pear/ChangeLog,v 1.30 2011/09/07 15:24:34 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pear/ChangeLog,v 1.31 2011/11/02 13:18:08 olemarkus Exp $
+
+*pear-1.9.4 (02 Nov 2011)
+
+  02 Nov 2011; Ole Markus With <olemarkus@gentoo.org> +pear-1.9.4.ebuild:
+  Version bump
 
   07 Sep 2011; Ole Markus With <olemarkus@gentoo.org> -pear-1.9.2.ebuild:
   Removed older versions
