@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-screenshooter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-screenshooter/ChangeLog,v 1.86 2011/10/23 12:01:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-screenshooter/ChangeLog,v 1.87 2011/11/02 14:19:46 jer Exp $
+
+  02 Nov 2011; Jeroen Roovers <jer@gentoo.org>
+  xfce4-screenshooter-1.8.0.ebuild:
+  Stable for HPPA (bug #386963).
 
   23 Oct 2011; Markus Meier <maekke@gentoo.org>
   xfce4-screenshooter-1.8.0.ebuild:
