@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.5.ebuild,v 1.2 2010/06/17 20:48:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/jabberd2-2.2.5.ebuild,v 1.3 2011/11/02 09:18:39 eras Exp $
 
 inherit db-use eutils flag-o-matic pam
 
@@ -16,7 +16,7 @@ IUSE="berkdb debug memdebug mysql ldap pam postgres sqlite ssl zlib"
 DEPEND="dev-libs/expat
 	net-libs/udns
 	>=net-dns/libidn-0.3
-	>=virtual/gsasl-0.2.27
+	virtual/gsasl
 	berkdb? ( >=sys-libs/db-4.1.25 )
 	mysql? ( virtual/mysql )
 	ldap? ( >=net-nds/openldap-2.1.0 )
