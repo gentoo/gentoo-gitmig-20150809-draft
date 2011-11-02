@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/hedgewars
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.31 2011/09/24 16:29:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.32 2011/11/02 08:04:03 mr_bones_ Exp $
+
+  02 Nov 2011; Michael Sterrett <mr_bones_@gentoo.org> hedgewars-0.9.16.ebuild:
+  fpc has its own idea about LDFLAGS (bug #389265)
 
   24 Sep 2011; Michael Sterrett <mr_bones_@gentoo.org> hedgewars-0.9.16.ebuild:
   Use a Release build instead of the default Debug build
