@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/realtime-base/realtime-base-0.1.ebuild,v 1.6 2011/10/23 15:20:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/realtime-base/realtime-base-0.1.ebuild,v 1.7 2011/11/02 21:40:45 vapier Exp $
 
 EAPI=3
 
@@ -24,7 +24,7 @@ rtgroup=realtime
 S=${WORKDIR}
 
 pkg_setup() {
-	enewgroup ${rtgroup} || die
+	enewgroup ${rtgroup}
 }
 
 print_limitsdfile() {
