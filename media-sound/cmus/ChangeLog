@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cmus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/ChangeLog,v 1.50 2011/11/01 09:25:04 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/ChangeLog,v 1.51 2011/11/02 14:53:45 phajdan.jr Exp $
+
+  02 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> cmus-2.4.2.ebuild:
+  x86 stable wrt bug #389059
 
   01 Nov 2011; Tony Vroon <chainsaw@gentoo.org> cmus-2.4.2.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
