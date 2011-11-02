@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/exo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.62 2011/10/23 11:47:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.63 2011/11/02 14:14:07 jer Exp $
+
+  02 Nov 2011; Jeroen Roovers <jer@gentoo.org> exo-0.6.2.ebuild:
+  Stable for HPPA (bug #386963).
 
   23 Oct 2011; Markus Meier <maekke@gentoo.org> exo-0.6.2.ebuild:
   arm stable, bug #386963

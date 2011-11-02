@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4-settings
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/ChangeLog,v 1.82 2011/10/23 11:55:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/ChangeLog,v 1.83 2011/11/02 14:17:18 jer Exp $
+
+  02 Nov 2011; Jeroen Roovers <jer@gentoo.org> xfce4-settings-4.8.3.ebuild:
+  Stable for HPPA (bug #386963).
 
   23 Oct 2011; Markus Meier <maekke@gentoo.org> xfce4-settings-4.8.3.ebuild:
   arm stable, bug #386963

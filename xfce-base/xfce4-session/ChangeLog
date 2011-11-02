@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4-session
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.144 2011/10/23 11:54:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/ChangeLog,v 1.145 2011/11/02 14:16:16 jer Exp $
+
+  02 Nov 2011; Jeroen Roovers <jer@gentoo.org> xfce4-session-4.8.2.ebuild:
+  Stable for HPPA (bug #386963).
 
   23 Oct 2011; Markus Meier <maekke@gentoo.org> xfce4-session-4.8.2.ebuild:
   arm stable, bug #386963
