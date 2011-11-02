@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mserv
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/ChangeLog,v 1.24 2008/02/02 15:31:53 hollow Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/ChangeLog,v 1.25 2011/11/02 22:13:13 vapier Exp $
+
+  02 Nov 2011; Mike Frysinger <vapier@gentoo.org> mserv-0.35-r1.ebuild:
+  Fold extra -G argument to enewuser into existing <groups> argument to
+  enewuser as enewuser takes care of splitting into -g/-G for us.
 
   02 Feb 2008; Benedikt Böhm <hollow@gentoo.org> mserv-0.35-r1.ebuild:
   use depend.apache eclass wrt #208033
