@@ -16,5 +16,6 @@ version</longdescription>
 		<flag name="templates">Enable installation of Sun templates</flag>
 		<flag name="vba">Enable support for VBA compatibility and ActiveX embedding</flag>
 		<flag name="webdav">Adds support for HTTP repositories via <pkg>net-libs/neon</pkg></flag>
+		<flag name="xmlsec">Adds support for document signing using internal modified <pkg>dev-libs/xmlsec</pkg> and system <pkg>dev-libs/nss</pkg></flag>
 	</use>
 </pkgmetadata>

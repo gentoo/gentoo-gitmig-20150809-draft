@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.49 2011/11/02 12:28:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.50 2011/11/02 16:53:26 scarabeus Exp $
 
 EAPI=4
 
@@ -55,7 +55,7 @@ unset DEV_URI
 # These are bundles that can't be removed for now due to huge patchsets.
 # If you want them gone, patches are welcome.
 ADDONS_SRC+=" ${ADDONS_URI}/fdb27bfe2dbe2e7b57ae194d9bf36bab-SampleICC-1.3.2.tar.gz"
-ADDONS_SRC+=" nsplugin? ( ${ADDONS_URI}/1f24ab1d39f4a51faf22244c94a6203f-xmlsec1-1.2.14.tar.gz )"
+ADDONS_SRC+=" xmlsec? ( ${ADDONS_URI}/1f24ab1d39f4a51faf22244c94a6203f-xmlsec1-1.2.14.tar.gz )"
 ADDONS_SRC+=" java? ( ${ADDONS_URI}/17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip )"
 ADDONS_SRC+=" java? ( ${ADDONS_URI}/798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip )"
 ADDONS_SRC+=" java? ( ${ADDONS_URI}/35c94d2df8893241173de1d16b6034c0-swingExSrc.zip )"
@@ -78,7 +78,7 @@ unset ADDONS_SRC
 
 IUSE="binfilter +branding dbus debug eds gnome +graphite gstreamer gtk
 +jemalloc kde ldap mysql nsplugin odk opengl pdfimport svg templates test +vba
-+webdav"
++webdav +xmlsec"
 LICENSE="LGPL-3"
 SLOT="0"
 [[ ${PV} == *9999* ]] || KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
@@ -89,6 +89,11 @@ for X in ${LANGUAGES} ; do
 	IUSE+=" linguas_${X}"
 done
 unset X
+
+NSS_DEPEND="
+	>=dev-libs/nspr-4.8.8
+	>=dev-libs/nss-3.12.9
+"
 
 COMMON_DEPEND="
 	app-arch/zip
@@ -146,13 +151,13 @@ COMMON_DEPEND="
 	mysql? ( >=dev-db/mysql-connector-c++-1.1.0 )
 	nsplugin? (
 		net-libs/xulrunner:1.9
-		>=dev-libs/nspr-4.8.8
-		>=dev-libs/nss-3.12.9
+		${NSS_DEPEND}
 	)
 	opengl? ( virtual/opengl )
 	pdfimport? ( >=app-text/poppler-0.16[xpdf-headers] )
 	svg? ( gnome-base/librsvg )
 	webdav? ( net-libs/neon )
+	xmlsec? ( ${NSS_DEPEND} )
 "
 
 RDEPEND="${COMMON_DEPEND}
@@ -447,6 +452,7 @@ src_configure() {
 		$(use_enable vba) \
 		$(use_enable vba activex-component) \
 		$(use_enable webdav neon) \
+		$(use_enable xmlsec) \
 		$(use_with java) \
 		$(use_with ldap openldap) \
 		$(use_with mysql system-mysql-cppconn) \
