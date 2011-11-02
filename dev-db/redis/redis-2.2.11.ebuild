@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.2.11.ebuild,v 1.1 2011/07/04 08:17:29 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/redis/redis-2.2.11.ebuild,v 1.2 2011/11/02 21:40:35 vapier Exp $
 
 EAPI="2"
 
@@ -30,8 +30,8 @@ REDIS_LOGPATH=/var/log/redis
 REDIS_LOGFILE=${REDIS_LOGPATH}/redis.log
 
 pkg_setup() {
-	enewgroup redis 75 || die "problem adding 'redis' group"
-	enewuser redis 75 -1 ${REDIS_DATAPATH} redis || die "problem adding 'redis' user"
+	enewgroup redis 75
+	enewuser redis 75 -1 ${REDIS_DATAPATH} redis
 	# set tcmalloc-variable for the build as specified in
 	# https://github.com/antirez/redis/blob/2.2/README. If build system gets
 	# better integrated into autotools, replace with append-flags and
