@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/tcsh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.104 2011/11/01 16:30:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/ChangeLog,v 1.105 2011/11/02 15:02:24 phajdan.jr Exp $
+
+  02 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> tcsh-6.17-r1.ebuild:
+  x86 stable wrt bug #389013
 
   01 Nov 2011; Jeroen Roovers <jer@gentoo.org> tcsh-6.17-r1.ebuild:
   Stable for HPPA (bug #389013).
