@@ -1,13 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.99-r2.ebuild,v 1.5 2011/10/04 18:23:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.99-r2.ebuild,v 1.6 2011/11/02 15:09:11 flameeyes Exp $
 
 EAPI=4
 
 if [[ ${PV} == "9999" ]] ; then
 	EBZR_REPO_URI="http://bzr.savannah.gnu.org/r/grub/trunk/grub/"
-	LIVE_ECLASS="autotools bzr"
+	LIVE_ECLASS="bzr"
 	SRC_URI=""
+	DO_AUTORECONF="true"
 else
 	MY_P=${P/_/\~}
 	SRC_URI="mirror://gnu/${PN}/${MY_P}.tar.xz
@@ -15,7 +16,7 @@ else
 	S=${WORKDIR}/${MY_P}
 fi
 
-inherit mount-boot eutils flag-o-matic pax-utils toolchain-funcs ${LIVE_ECLASS}
+inherit mount-boot eutils flag-o-matic pax-utils toolchain-funcs ${DO_AUTORECONF:+autotools} ${LIVE_ECLASS}
 unset LIVE_ECLASS
 
 DESCRIPTION="GNU GRUB boot loader"
@@ -58,8 +59,9 @@ DEPEND="${RDEPEND}
 	>=dev-lang/python-2.5.2
 	sys-devel/flex
 	virtual/yacc
+	sys-apps/texinfo
 "
-if [[ ${PV} == "9999" ]]; then
+if [[ -n ${DO_AUTORECONF} ]] ; then
 	DEPEND+=" >=sys-devel/autogen-5.10 sys-apps/help2man"
 else
 	DEPEND+=" app-arch/xz-utils"
@@ -170,8 +172,15 @@ src_prepare() {
 
 	epatch_user
 
+	# fix texinfo file name, as otherwise the grub2.info file will be
+	# useless
+	sed -i \
+		-e '/setfilename/s:grub.info:grub2.info:' \
+		-e 's:(grub):(grub2):' \
+		"${S}"/docs/grub.texi
+
 	# autogen.sh does more than just run autotools
-	if [[ ${PV} == "9999" ]] ; then
+	if [[ -n ${DO_AUTORECONF} ]] ; then
 		sed -i -e '/^autoreconf/s:^:set +e; e:' autogen.sh || die
 		(. ./autogen.sh) || die
 	fi

@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.169 2011/10/04 18:23:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.170 2011/11/02 15:09:11 flameeyes Exp $
+
+  02 Nov 2011; Diego E. Pettenò <flameeyes@gentoo.org> grub-1.99-r2.ebuild,
+  grub-9999.ebuild:
+  Fix info manual (was referencing old name); factor out autoreconf handling if
+  we were to execute that on a non-live ebuild.
 
   04 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> grub-1.99-r2.ebuild,
   grub-9999.ebuild:
