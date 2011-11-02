@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alure/alure-1.2.ebuild,v 1.2 2011/10/29 10:28:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alure/alure-1.2.ebuild,v 1.3 2011/11/02 14:54:37 phajdan.jr Exp $
 
 EAPI=4
 inherit cmake-utils
@@ -11,7 +11,7 @@ SRC_URI="http://kcat.strangesoft.net/alure-releases/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="dumb examples flac fluidsynth mp3 sndfile static-libs vorbis"
 
 RDEPEND=">=media-libs/openal-1.1
