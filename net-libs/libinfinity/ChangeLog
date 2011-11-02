@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libinfinity
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/ChangeLog,v 1.11 2011/08/02 09:13:42 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/ChangeLog,v 1.12 2011/11/02 09:29:16 eras Exp $
+
+  02 Nov 2011; Eray Aslan <eras@gentoo.org> libinfinity-0.5.1.ebuild:
+  Move to unversioned virtual/gsasl
 
 *libinfinity-0.5.1 (02 Aug 2011)
 

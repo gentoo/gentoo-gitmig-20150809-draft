@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/libinfinity-0.5.1.ebuild,v 1.1 2011/08/02 09:13:42 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libinfinity/libinfinity-0.5.1.ebuild,v 1.2 2011/11/02 09:29:16 eras Exp $
 
 EAPI=4
 
@@ -20,7 +20,7 @@ RDEPEND="dev-libs/glib:2
 	dev-libs/libxml2
 	net-libs/gnutls
 	sys-libs/pam
-	>=virtual/gsasl-0.2.21
+	virtual/gsasl
 	avahi? ( net-dns/avahi )
 	gtk? ( x11-libs/gtk+:3 )"
 DEPEND="${RDEPEND}
