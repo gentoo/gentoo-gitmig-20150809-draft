@@ -1,6 +1,18 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.115 2011/09/20 22:44:51 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.116 2011/11/02 16:23:58 tetromino Exp $
+
+*tracker-0.12.7 (02 Nov 2011)
+
+  02 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +files/tracker-0.12.3-strigi.patch, +tracker-0.12.7.ebuild, metadata.xml:
+  Add 0.12.7 from the gnome overlay. Used by gnome-3.2. Lots of changes and
+  improvements, including optional firefox and thunderbird support (firefox
+  support is controlled by USE=firefox-bookmarks so that users don't enable it
+  by accident, since it can slow down the browser). Some ugly hacks are
+  required to avoid thunderbird- and firefox-related access violations. The
+  nautilus extension has been split off into a separate package
+  (nautilus-tracker-tags) to avoid circular dependencies with nautilus-3.2.
 
   20 Sep 2011; Michał Górny <mgorny@gentoo.org> tracker-9999.ebuild:
   Migrate to git-2.

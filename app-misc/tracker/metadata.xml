@@ -4,6 +4,11 @@
 <herd>freedesktop</herd>
 <use>
   <flag name='applet'>Build tracker monitor applet</flag>
+  <!-- 'firefox-bookmarks' instead of 'firefox' to prevent most users from
+	   enabling this by accident; it has some stability problems and
+	   performance implications -->
+  <flag name='firefox-bookmarks'>Install bookmark data miner plugin for
+    <pkg>www-client/firefox</pkg> and <pkg>www-client/firefox-bin</pkg></flag>
   <flag name='flickr'>Build flickr data miner</flag>
   <flag name='gsf'>Enable <pkg>gnome-extra/libgsf</pkg> based data extractor and
   for ODT.</flag>
@@ -18,6 +23,9 @@
   <flag name="playlist">Add support for playlists</flag>
   <flag name="strigi">Add support for <pkg>app-misc/strigi</pkg> search
   engine.</flag>
+  <flag name="thunderbird">Install email data miner plugin for
+    <pkg>mail-client/thunderbird</pkg> and
+	<pkg>mail-client/thunderbird-bin</pkg></flag>
   <flag name="upnp">Add support for video extraction via <pkg>media-libs/gupnp-dlna</pkg>.</flag>
 </use>
 </pkgmetadata>
