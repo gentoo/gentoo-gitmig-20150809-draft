@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.6.7.ebuild,v 1.3 2011/10/04 18:21:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.6.7.ebuild,v 1.4 2011/11/02 21:55:06 vapier Exp $
 
 inherit webapp eutils depend.apache confutils
 
@@ -116,7 +116,7 @@ add_user_rt() {
 
 	elog " - Userid: ${euid}"
 
-	enewuser rt ${euid} -1 /dev/null rt > /dev/null
+	enewuser rt ${euid} -1 /dev/null rt
 	return 0
 }
 
@@ -129,7 +129,7 @@ pkg_setup() {
 	ewarn "and follow the included instructions."
 	ewarn
 	epause 5
-	enewgroup rt >/dev/null
+	enewgroup rt
 	add_user_rt || die "Could not add user"
 }
 
