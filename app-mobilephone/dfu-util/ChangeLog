@@ -1,6 +1,11 @@
 # ChangeLog for app-mobilephone/dfu-util
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/dfu-util/ChangeLog,v 1.6 2011/09/21 07:52:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/dfu-util/ChangeLog,v 1.7 2011/11/02 14:31:39 vapier Exp $
+
+*dfu-util-0.5 (02 Nov 2011)
+
+  02 Nov 2011; Mike Frysinger <vapier@gentoo.org> +dfu-util-0.5.ebuild:
+  Version bump.
 
   21 Sep 2011; Michał Górny <mgorny@gentoo.org> dfu-util-9999.ebuild:
   Migrate to git-2.
