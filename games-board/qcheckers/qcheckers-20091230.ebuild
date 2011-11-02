@@ -1,9 +1,9 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/qcheckers/qcheckers-20091230.ebuild,v 1.2 2010/02/08 14:52:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/qcheckers/qcheckers-20091230.ebuild,v 1.3 2011/11/02 01:34:40 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils qt4 games
+inherit eutils qt4-r2 games
 
 MY_PN=${PN/qc/QC}
 
