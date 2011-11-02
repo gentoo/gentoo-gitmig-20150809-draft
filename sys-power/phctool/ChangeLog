@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/phctool
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/phctool/ChangeLog,v 1.5 2011/02/06 18:01:20 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/phctool/ChangeLog,v 1.6 2011/11/02 21:42:43 vapier Exp $
+
+  02 Nov 2011; Mike Frysinger <vapier@gentoo.org> phctool-0.5.2.2.ebuild,
+  phctool-0.5.2.2-r1.ebuild:
+  Drop "die" from enew{user,group} since these have always taken care of
+  calling it when necessary.
 
   06 Feb 2011; Michael Weber <xmw@gentoo.org> phctool-0.5.2.2-r1.ebuild:
   dropped unused use flag
