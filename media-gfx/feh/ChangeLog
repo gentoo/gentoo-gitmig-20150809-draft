@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/feh
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.91 2011/10/28 09:00:17 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.92 2011/11/02 15:00:46 phajdan.jr Exp $
+
+  02 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> feh-1.16.2.ebuild:
+  x86 stable wrt bug #388471
 
   28 Oct 2011; Tony Vroon <chainsaw@gentoo.org> feh-1.16.2.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
