@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/soprano
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.82 2011/10/18 17:01:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/ChangeLog,v 1.83 2011/11/02 18:23:01 reavertm Exp $
+
+*soprano-2.7.3 (02 Nov 2011)
+
+  02 Nov 2011; Maciej Mrozowski <reavertm@gentoo.org>
+  +files/soprano-2.7.3-largefile-support.patch, +soprano-2.7.3.ebuild:
+  Version bump, also fix bug 389299 (largefile support)
 
   18 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Remove unused description for USE="java"
