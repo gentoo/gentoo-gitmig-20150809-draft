@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/normalize-0.7.7-r1.ebuild,v 1.2 2011/10/29 10:24:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/normalize-0.7.7-r1.ebuild,v 1.3 2011/11/02 14:57:49 phajdan.jr Exp $
 
 EAPI="4"
 
@@ -13,7 +13,7 @@ SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="audiofile mad nls userland_BSD"
 
 RDEPEND="mad? ( media-libs/libmad )
