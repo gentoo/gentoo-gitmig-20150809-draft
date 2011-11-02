@@ -1,10 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.30 2011/07/26 16:24:30 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.31 2011/11/02 05:26:03 zmedico Exp $
 
-# Require EAPI 2 since we now require at least python-2.6 (for python 3
-# syntax support) which also requires EAPI 2.
-EAPI=2
+EAPI=3
 inherit git-2 eutils multilib python
 
 DESCRIPTION="Portage is the package management and distribution system for Gentoo"
@@ -206,7 +204,7 @@ src_install() {
 		fi
 		symlinks=$(find . -mindepth 1 -maxdepth 1 -type l)
 		if [ -n "$symlinks" ] ; then
-			cp -P $symlinks "$D$portage_base/$x" || die "cp failed"
+			cp -P $symlinks "${ED}$portage_base/$x" || die "cp failed"
 		fi
 	done
 
@@ -219,7 +217,7 @@ src_install() {
 		doins *.py || die "doins failed"
 		symlinks=$(find . -mindepth 1 -maxdepth 1 -type l)
 		if [ -n "$symlinks" ] ; then
-			cp -P $symlinks "$D$portage_base/$x" || die "cp failed"
+			cp -P $symlinks "${ED}$portage_base/$x" || die "cp failed"
 		fi
 	done
 
@@ -237,7 +235,7 @@ src_install() {
 
 	# Symlinks to directories cause up/downgrade issues and the use of these
 	# modules outside of portage is probably negligible.
-	for x in "${D}${portage_base}/pym/"{cache,elog_modules} ; do
+	for x in "${ED}${portage_base}/pym/"{cache,elog_modules} ; do
 		[ ! -L "${x}" ] && continue
 		die "symlink to directory will cause upgrade/downgrade issues: '${x}'"
 	done
@@ -278,7 +276,7 @@ src_install() {
 pkg_preinst() {
 	if [[ $ROOT == / ]] ; then
 		# Run some minimal tests as a sanity check.
-		local test_runner=$(find "$D" -name runTests)
+		local test_runner=$(find "${ED}" -name runTests)
 		if [[ -n $test_runner && -x $test_runner ]] ; then
 			einfo "Running preinst sanity tests..."
 			"$test_runner" || die "preinst sanity tests failed"
@@ -293,8 +291,8 @@ pkg_preinst() {
 		ewarn "to enable RMD160 hash support."
 		ewarn "See bug #198398 for more information."
 	fi
-	if [ -f "${ROOT}/etc/make.globals" ]; then
-		rm "${ROOT}/etc/make.globals"
+	if [ ! -L "${EROOT}/etc/make.globals" ]; then
+		rm -f "${EROOT}/etc/make.globals"
 	fi
 
 	has_version "<${CATEGORY}/${PN}-2.2_alpha"
@@ -306,7 +304,7 @@ pkg_preinst() {
 	# If portage-2.1.6 is installed and the preserved_libs_registry exists,
 	# assume that the NEEDED.ELF.2 files have already been generated.
 	has_version "<=${CATEGORY}/${PN}-2.2_pre7" && \
-		! ( [ -e "$ROOT"var/lib/portage/preserved_libs_registry ] && \
+		! ( [ -e "${EROOT}"var/lib/portage/preserved_libs_registry ] && \
 		has_version ">=${CATEGORY}/${PN}-2.1.6_rc" )
 	NEEDED_REBUILD_UPGRADE=$?
 
@@ -321,14 +319,14 @@ pkg_postinst() {
 
 	if [ $WORLD_MIGRATION_UPGRADE = 0 ] ; then
 		einfo "moving set references from the worldfile into world_sets"
-		cd "${ROOT}/var/lib/portage/"
+		cd "${EROOT}/var/lib/portage/"
 		grep "^@" world >> world_sets
 		sed -i -e '/^@/d' world
 	fi
 
 	if [ $NEEDED_REBUILD_UPGRADE = 0 ] ; then
 		einfo "rebuilding NEEDED.ELF.2 files"
-		for cpv in "${ROOT}/var/db/pkg"/*/*; do
+		for cpv in "${EROOT}/var/db/pkg"/*/*; do
 			if [ -f "${cpv}/NEEDED" ]; then
 				rm -f "${cpv}/NEEDED.ELF.2"
 				while read line; do
