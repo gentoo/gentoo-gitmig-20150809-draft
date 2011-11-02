@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.67 2011/11/01 09:59:54 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.68 2011/11/02 04:32:47 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -424,10 +424,12 @@ src_install() {
 	insinto "${CHROMIUM_HOME}"
 	case "$(tc-arch)" in
 		amd64)
+			doexe out/Release/nacl_helper{,_bootstrap} || die
 			doins out/Release/nacl_irt_x86_64.nexe || die
 			doins out/Release/libppGoogleNaClPluginChrome.so || die
 		;;
 		x86)
+			doexe out/Release/nacl_helper{,_bootstrap} || die
 			doins out/Release/nacl_irt_x86_32.nexe || die
 			doins out/Release/libppGoogleNaClPluginChrome.so || die
 		;;
