@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/pure-ftpd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.127 2011/10/18 17:04:00 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/ChangeLog,v 1.128 2011/11/02 13:16:54 polynomial-c Exp $
+
+*pure-ftpd-1.0.34 (02 Nov 2011)
+
+  02 Nov 2011; Lars Wendler <polynomial-c@gentoo.org> -pure-ftpd-1.0.32.ebuild,
+  +pure-ftpd-1.0.34.ebuild:
+  Version bump. Removed old.
 
   18 Oct 2011; Lars Wendler <polynomial-c@gentoo.org> files/pure-ftpd.rc11:
   Fixed init script once again to be POSIX compliant.
