@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/phpunit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/ChangeLog,v 1.5 2011/07/30 10:00:16 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpunit/ChangeLog,v 1.6 2011/11/03 09:43:18 olemarkus Exp $
+
+*phpunit-3.6.0 (03 Nov 2011)
+
+  03 Nov 2011; Ole Markus With <olemarkus@gentoo.org> +phpunit-3.6.0.ebuild:
+  Version bump
 
 *phpunit-3.5.14 (30 Jul 2011)
 
