@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.893 2011/10/26 20:00:01 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.894 2011/11/03 12:18:15 mpagano Exp $
+
+  03 Nov 2011; Michael Pagano <mpagano@gentoo.org> ChangeLog:
+  Trim changelog
 
   26 Oct 2011; Michael Pagano <mpagano@gentoo.org> ChangeLog:
   Trim changelog
