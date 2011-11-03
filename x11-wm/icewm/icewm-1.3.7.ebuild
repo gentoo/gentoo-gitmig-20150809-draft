@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.3.7.ebuild,v 1.1 2011/07/19 13:17:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.3.7.ebuild,v 1.2 2011/11/03 21:03:49 xarthisius Exp $
 
 EAPI="4"
+
+inherit eutils
 
 DESCRIPTION="Ice Window Manager with Themes"
 HOMEPAGE="http://www.icewm.org/"
@@ -45,11 +47,12 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 	cd "${S}/src"
-	use uclibc && epatch "${FILESDIR}/icewm-uclibc.patch"
+	use uclibc && epatch "${FILESDIR}/${PN}-uclibc.patch"
 
-	echo "#!/bin/sh" > "$T/icewm"
-	echo "/usr/bin/icewm-session" >> "$T/icewm"
+	echo "#!/bin/sh" > "$T/${PN}"
+	echo "/usr/bin/icewm-session" >> "$T/${PN}"
 }
 
 src_configure() {
