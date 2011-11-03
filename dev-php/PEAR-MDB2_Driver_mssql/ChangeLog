@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-MDB2_Driver_mssql
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_mssql/ChangeLog,v 1.27 2011/09/12 18:09:49 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_mssql/ChangeLog,v 1.28 2011/11/03 11:37:44 chainsaw Exp $
+
+  03 Nov 2011; Tony Vroon <chainsaw@gentoo.org>
+  PEAR-MDB2_Driver_mssql-1.5.0_beta3.ebuild:
+  Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney &
+  Agostino "ago" Sarubbo in bug #388763.
 
   12 Sep 2011; Mark Loeser <halcy0n@gentoo.org>
   PEAR-MDB2_Driver_mssql-1.2.1.ebuild,

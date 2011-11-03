@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_IDNA2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_IDNA2/ChangeLog,v 1.1 2011/10/01 19:38:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_IDNA2/ChangeLog,v 1.2 2011/11/03 11:39:16 chainsaw Exp $
+
+  03 Nov 2011; Tony Vroon <chainsaw@gentoo.org> PEAR-Net_IDNA2-0.1.1.ebuild:
+  Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney &
+  Agostino "ago" Sarubbo in bug #388763.
 
 *PEAR-Net_IDNA2-0.1.1 (01 Oct 2011)
 
