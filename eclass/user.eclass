@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.5 2011/11/03 00:24:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.6 2011/11/03 00:26:17 vapier Exp $
 
 # @ECLASS: user.eclass
 # @MAINTAINER:
@@ -403,4 +403,23 @@ enewgroup() {
 		;;
 	esac
 	export SANDBOX_ON="${oldsandbox}"
+}
+
+# @FUNCTION: egethome
+# @USAGE: <user>
+# @DESCRIPTION:
+# Gets the home directory for the specified user.
+egethome() {
+	local pos
+
+	case ${CHOST} in
+	*-darwin*|*-freebsd*|*-dragonfly*)
+		pos=9
+		;;
+	*)	# Linux, NetBSD, OpenBSD, etc...
+		pos=6
+		;;
+	esac
+
+	egetent passwd $1 | cut -d: -f${pos}
 }
