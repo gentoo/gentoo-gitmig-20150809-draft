@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ldb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.14 2011/11/03 14:03:41 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ldb/ChangeLog,v 1.15 2011/11/03 19:04:09 jer Exp $
+
+  03 Nov 2011; Jeroen Roovers <jer@gentoo.org> ldb-1.1.3.ebuild:
+  Marked ~hppa (bug #377809).
 
   03 Nov 2011; Naohiro Aota <naota@gentoo.org> ldb-1.1.3.ebuild:
   Add ~x86-fbsd
