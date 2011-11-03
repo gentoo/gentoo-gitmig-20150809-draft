@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5860 2011/11/03 08:41:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5861 2011/11/03 11:45:14 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Nov 2011; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Mask new version of dev-ruby/rake for testing.
 
   02 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org> license_groups:
   Add CCPL-Attribution-2.5 to FREE-DOCUMENTS license group, acked by robbat2.
