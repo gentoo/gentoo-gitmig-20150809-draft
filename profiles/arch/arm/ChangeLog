@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.141 2011/10/28 05:04:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.142 2011/11/03 18:25:01 tetromino Exp $
+
+  03 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  p.use.masking gnome-extra/gnome-media[aac,mp3,speex,twolame] due to missing
+  keywords in gst-plugins-{faac,lame,speex,twolame}, bug #389433.
 
   28 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> use.mask:
   use.mask colord to allow gtk+-3.2 unmasking. use.mask instead of p.use.mask
