@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.33.ebuild,v 1.3 2011/08/20 07:28:13 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.33.ebuild,v 1.4 2011/11/03 00:29:15 vapier Exp $
 
 EAPI=4
 
-inherit autotools eutils fixheadtails qmail
+inherit autotools eutils fixheadtails qmail user
 
 HOMEPAGE="http://www.inter7.com/index.php?page=vpopmail"
 DESCRIPTION="A collection of programs to manage virtual email domains and accounts on your Qmail mail servers."
@@ -25,7 +25,7 @@ RDEPEND="${DEPEND}"
 VPOP_DEFAULT_HOME="/var/vpopmail"
 
 vpopmail_set_homedir() {
-	VPOP_HOME=$(getent passwd vpopmail | cut -d: -f6)
+	VPOP_HOME=$(egethome)
 	if [[ -z "${VPOP_HOME}" ]]; then
 		ebeep
 		eerror "vpopmail's home directory is null in passwd data!"
