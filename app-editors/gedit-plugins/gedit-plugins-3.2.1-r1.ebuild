@@ -1,9 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-3.0.7.ebuild,v 1.2 2011/09/27 17:25:55 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-3.2.1-r1.ebuild,v 1.1 2011/11/03 05:01:43 tetromino Exp $
 
-EAPI="3"
-GNOME_TARBALL_SUFFIX="xz"
+EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes" # plugins are dlopened
 PYTHON_DEPEND="python? 2:2.6"
@@ -22,18 +21,18 @@ SLOT="0"
 IUSE_plugins="charmap synctex terminal"
 IUSE="+python ${IUSE_plugins}"
 
-RDEPEND=">=app-editors/gedit-3.0.0[python?]
+RDEPEND=">=app-editors/gedit-3.2.0[python?]
 	>=dev-libs/glib-2.26.0:2
 	>=dev-libs/libpeas-0.7.3[gtk,python?]
 	>=x11-libs/gtk+-3.0.0:3
 	>=x11-libs/gtksourceview-3.0.0:3.0
 	python? (
-		dev-libs/gobject-introspection
-		x11-libs/gdk-pixbuf:2[introspection]
+		>=app-editors/gedit-3.0.0[introspection]
+		|| ( dev-python/pygobject:2[introspection] dev-python/pygobject:3 )
 		>=x11-libs/gtk+-3.0.0:3[introspection]
 		>=x11-libs/gtksourceview-3.0.0:3.0[introspection]
 		x11-libs/pango[introspection]
-		>=app-editors/gedit-3.0.0[introspection]
+		x11-libs/gdk-pixbuf:2[introspection]
 	)
 	charmap? ( >=gnome-extra/gucharmap-3.0.0:2.90[introspection] )
 	synctex? ( >=dev-python/dbus-python-0.82 )
@@ -83,16 +82,16 @@ src_prepare() {
 }
 
 src_test() {
-	emake check || die "make check failed"
+	emake check
 }
 
 pkg_postinst() {
 	gnome2_pkg_postinst
 	python_need_rebuild
-	python_mod_optimize /usr/$(get_libdir)/gedit/plugins
+	python_mod_optimize /usr/{$(get_libdir),share}/gedit/plugins
 }
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_mod_cleanup /usr/$(get_libdir)/gedit/plugins
+	python_mod_cleanup /usr/{$(get_libdir),share}/gedit/plugins
 }

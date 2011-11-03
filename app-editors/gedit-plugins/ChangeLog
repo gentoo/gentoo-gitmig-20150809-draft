@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/gedit-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.20 2011/10/21 13:02:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/ChangeLog,v 1.21 2011/11/03 05:01:43 tetromino Exp $
+
+*gedit-plugins-3.2.1-r1 (03 Nov 2011)
+
+  03 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gedit-plugins-3.0.7.ebuild, +gedit-plugins-3.2.1-r1.ebuild:
+  Bump to 3.2.1 from the gnome overlay. Drop old. Move to EAPI4 and make sure
+  to optimize the python files that the commander plugin installs in
+  /usr/share.
 
   21 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gedit-plugins-2.32.0.ebuild:
