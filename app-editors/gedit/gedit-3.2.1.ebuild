@@ -1,10 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.0.6.ebuild,v 1.1 2011/08/16 20:58:56 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-3.2.1.ebuild,v 1.1 2011/11/03 05:01:15 tetromino Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
-GNOME_TARBALL_SUFFIX="xz"
 GNOME2_LA_PUNT="yes" # plugins are dlopened
 PYTHON_DEPEND="2"
 
@@ -15,17 +14,17 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="doc +introspection python spell"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux"
+IUSE="doc +introspection +python spell"
+KEYWORDS="~amd64 ~mips ~sh ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux"
 
 # X libs are not needed for OSX (aqua)
-RDEPEND="
+COMMON_DEPEND="
 	>=x11-libs/libSM-1.0
 	>=dev-libs/libxml2-2.5.0:2
 	>=dev-libs/glib-2.28:2
-	>=x11-libs/gtk+-3.0:3[introspection?]
+	>=x11-libs/gtk+-3.1.6:3[introspection?]
 	>=x11-libs/gtksourceview-3.0.0:3.0[introspection?]
-	>=dev-libs/libpeas-0.7.3[gtk]
+	>=dev-libs/libpeas-1.1.0[gtk]
 
 	gnome-base/gsettings-desktop-schemas
 	gnome-base/gvfs
@@ -41,14 +40,16 @@ RDEPEND="
 		>=dev-libs/gobject-introspection-0.9.3
 		>=x11-libs/gtk+-3.0:3[introspection]
 		>=x11-libs/gtksourceview-2.91.9:3.0[introspection]
-		>=dev-libs/libpeas-0.7.4[gtk]
-		>=dev-python/pygobject-2.28.0[introspection] )
+		>=dev-python/pygobject-3.0.0:3 )
 	spell? (
 		>=app-text/enchant-1.2
 		>=app-text/iso-codes-0.35
 	)"
 
-DEPEND="${RDEPEND}
+RDEPEND="${COMMON_DEPEND}
+	x11-themes/gnome-icon-theme-symbolic"
+
+DEPEND="${COMMON_DEPEND}
 	>=sys-devel/gettext-0.17
 	>=dev-util/intltool-0.40
 	>=dev-util/pkgconfig-0.9
@@ -64,17 +65,16 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		--disable-zeitgeist
 		--disable-deprecations
-		--disable-maintainer-mode
 		--disable-schemas-compile
 		--disable-scrollkeeper
 		--enable-updater
 		--enable-gvfs-metadata
 		$(use_enable introspection)
+		$(use_enable python)
 		$(use_enable spell)"
 
-	if use python || use introspection; then
-		python_set_active_version 2
-	fi
+	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
@@ -89,7 +89,7 @@ src_test() {
 	# FIXME: this should be handled at eclass level
 	"${EROOT}${GLIB_COMPILE_SCHEMAS}" --allow-any-name "${S}/data" || die
 
-	GSETTINGS_SCHEMA_DIR="${S}/data" Xemake check || die "make check failed"
+	GSETTINGS_SCHEMA_DIR="${S}/data" Xemake check
 }
 
 pkg_postinst() {

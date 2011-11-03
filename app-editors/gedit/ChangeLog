@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.329 2011/08/16 20:58:56 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.330 2011/11/03 05:01:15 tetromino Exp $
+
+*gedit-3.2.1 (03 Nov 2011)
+
+  03 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org> -gedit-3.0.6.ebuild,
+  +gedit-3.2.1.ebuild:
+  Bump to 3.2.1 from the gnome overlay. Drop old. Drop alpha, arm, ia64, ppc,
+  ppc64, sparc keywords due to libpeas dependency. Notable changes: snippet
+  updates, UI fixes, pygobject-3 compatibility.
 
 *gedit-3.0.6 (16 Aug 2011)
 
