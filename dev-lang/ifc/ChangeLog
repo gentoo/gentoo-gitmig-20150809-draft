@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ifc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.61 2011/10/17 20:40:35 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.62 2011/11/03 16:14:46 jlec Exp $
+
+  03 Nov 2011; Justin Lecher <jlec@gentoo.org> ifc-11.1.072.ebuild:
+  Fixed again the usage of check-reqs.eclass at EAPI=4, #389401
 
   17 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> ifc-10.0.026-r1.ebuild:
   Drop stable keywords as that version is buggy, ancient and it's causing
