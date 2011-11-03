@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/storm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/ChangeLog,v 1.10 2010/10/31 20:32:03 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/ChangeLog,v 1.11 2011/11/03 17:00:09 radhermit Exp $
+
+*storm-0.19 (03 Nov 2011)
+
+  03 Nov 2011; Tim Harder <radhermit@gentoo.org> +storm-0.19.ebuild:
+  Version bump (bug #389329).
 
 *storm-0.18 (31 Oct 2010)
 
