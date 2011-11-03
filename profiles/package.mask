@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13197 2011/11/03 11:45:14 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13198 2011/11/03 16:04:03 phajdan.jr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (03 Nov 2011)
+# Dev channel releases are only for people who are developers or want more
+# experimental features and accept a more unstable release.
+>=www-client/chromium-17
+
+# Pawel Hajdan jr <phajdan.jr@gentoo.org> (03 Nov 2011)
+# Mask v8 versions used for www-client/chromium dev channel releases.
+# Currently v8-3.7 versions are used for chromium-17.x versions.
+>=dev-lang/v8-3.7
 
 # Hans de Graaff <graaff@gentoo.org> (3 Nov 2011)
 # Mask for testing and until we can add all ruby targets again.
@@ -89,11 +99,6 @@ games-strategy/dark-oberon
 # Tomáš Chvátal <scarabeus@gentoo.org> (25 Oct 2011)
 # Mask the RC unless it is declared as release.
 ~app-office/libreoffice-3.4.4.2
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (24 Oct 2011)
-# Mask v8 versions used for www-client/chromium dev channel releases.
-# Currently v8-3.6 versions are used for chromium-16.x versions.
->=dev-lang/v8-3.6
 
 # Stefan Briesenick <sbriesen@gentoo.org> (20 Oct 2011)
 # unmaintained upstream, obsolete in general. (bug #337657)
@@ -183,12 +188,6 @@ dev-python/pypax
 games-action/xpilot-ng
 games-puzzle/londonlaw
 
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (06 Oct 2011)
-# Extremely experimental. Masked while it's being tested.
-# Note: it is only useful for building NaCl IRT, if you're not
-# compiling IRT this is _not_ what you want.
-dev-lang/nacl-toolchain-newlib
-
 # Alexis Ballier <aballier@gentoo.org> (05 Oct 2011)
 # Packages used only in TeX Live prior to 2010
 # Removal on 05 Nov 2011
@@ -271,11 +270,6 @@ games-fps/ut2004-redorchestra
 # Included in app-editors/emacs-23 and later.
 # Masked for removal in 30 days, bug 384561.
 app-emacs/rst
-
-# Pawel Hajdan jr <phajdan.jr@gentoo.org> (24 Sep 2011)
-# Dev channel releases are only for people who are developers or want more
-# experimental features and accept a more unstable release.
->=www-client/chromium-16
 
 # Michael Sterrett <mr_bones_@gentoo.org> (22 Sep 2011)
 # Doesn't work and upstream has gone away.

@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5861 2011/11/03 11:45:14 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5862 2011/11/03 16:04:03 phajdan.jr Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
+  Unmask www-client/chromium-16 (now in beta) and corresponding v8 version and
+  dev-lang/nacl-toolchain-newlib, and mask chromium-17 and corresponding v8
+  version.
 
   03 Nov 2011; Hans de Graaff <graaff@gentoo.org> package.mask:
   Mask new version of dev-ruby/rake for testing.
