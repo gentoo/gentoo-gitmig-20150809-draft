@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/net6/net6-1.3.14.ebuild,v 1.4 2011/11/02 17:42:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/net6/net6-1.3.14.ebuild,v 1.5 2011/11/03 08:19:08 xarthisius Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://releases.0x539.de/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~ppc x86"
+KEYWORDS="amd64 hppa ppc x86"
 IUSE="nls static-libs"
 
 RDEPEND="dev-libs/libsigc++:2
