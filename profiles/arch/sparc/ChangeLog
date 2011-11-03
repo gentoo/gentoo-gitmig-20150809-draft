@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.141 2011/11/01 00:57:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.142 2011/11/03 18:27:06 tetromino Exp $
+
+  03 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
+  p.use.masking gnome-extra/gnome-media[aac] due to missing keywords in
+  gst-plugins-faac, bug #389433.
 
   01 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> use.mask:
   Remove obsolete entry for USE="v4l2"

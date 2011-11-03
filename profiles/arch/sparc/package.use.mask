@@ -1,6 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.85 2011/10/24 18:31:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.86 2011/11/03 18:27:06 tetromino Exp $
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (03 Nov 2011)
+# Missing keywords in gst-plugins-faac, bug #389433
+gnome-extra/gnome-media aac
 
 # Pacho Ramos <pacho@gentoo.org> (24 Oct 2011)
 # Missing keywords in needed packages, bug #388367
