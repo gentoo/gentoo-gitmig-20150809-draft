@@ -1,6 +1,17 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.325 2011/10/05 17:54:16 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.326 2011/11/03 06:18:47 tetromino Exp $
+
+*totem-3.2.1 (03 Nov 2011)
+
+  03 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -files/totem-2.90.0-smclient-target-detection.patch, -totem-3.0.1.ebuild,
+  +totem-3.2.1.ebuild, metadata.xml:
+  Bump to 3.2.1 from the gnome overlay. Drop old. Move to EAPI4. Drop alpha,
+  arm, ia64. ppc, ppc64, sparc keywords due to libpeas, mx, clutter-{gst,gtk}
+  dependencies. Notable changes: video is now rendered using clutter; the grilo
+  plugin (auto-activated if built) replaces several plugins in older versions;
+  pygobject-3 compatibility.
 
   05 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> totem-2.32.0-r2.ebuild:
   ppc/ppc64 stable wrt #369909
