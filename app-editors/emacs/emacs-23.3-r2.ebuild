@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.3-r2.ebuild,v 1.10 2011/10/11 17:03:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.3-r2.ebuild,v 1.11 2011/11/03 12:48:38 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -232,7 +232,10 @@ src_install () {
 		insinto /usr/share/emacs/${FULL_VERSION}/src
 		# This is not meant to install all the source -- just the
 		# C source you might find via find-function
-		doins src/*.[ch]
+		doins src/*.{c,h,m}
+		doins -r src/{m,s}
+		rm "${ED}"/usr/share/emacs/${FULL_VERSION}/src/Makefile.c
+		rm "${ED}"/usr/share/emacs/${FULL_VERSION}/src/{m,s}/README
 		c=""
 	fi
 

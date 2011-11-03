@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.437 2011/10/11 17:03:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.438 2011/11/03 12:48:38 ulm Exp $
+
+  03 Nov 2011; Ulrich Mueller <ulm@gentoo.org> emacs-23.3-r2.ebuild:
+  Adjust the set of source files installed with USE=source.
 
   11 Oct 2011; Jeroen Roovers <jer@gentoo.org> emacs-23.3-r2.ebuild:
   Stable for HPPA (bug #384297).
