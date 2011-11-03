@@ -1,6 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.58 2011/10/24 18:29:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.59 2011/11/03 18:26:15 tetromino Exp $
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (03 Nov 2011)
+# Missing keywords in gst-plugins-{faac,lame,twolame}, bug #389433
+gnome-extra/gnome-media aac mp3 twolame
 
 # Pacho Ramos <pacho@gentoo.org> (24 Oct 2011)
 # Missing keywords in needed packages, bug #388367
