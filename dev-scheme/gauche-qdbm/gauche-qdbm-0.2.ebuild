@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-qdbm/gauche-qdbm-0.2.ebuild,v 1.6 2008/06/19 15:29:46 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-qdbm/gauche-qdbm-0.2.ebuild,v 1.7 2011/11/03 09:24:52 hattya Exp $
+
+EAPI="4"
 
 inherit autotools eutils
-
-IUSE=""
 
 MY_P="${P/g/G}"
 
@@ -13,33 +13,24 @@ HOMEPAGE="http://sourceforge.jp/projects/gauche/"
 SRC_URI="mirror://sourceforge.jp/gauche/6988/${MY_P}.tar.gz"
 
 LICENSE="BSD"
-KEYWORDS="~sparc x86"
 SLOT="0"
+KEYWORDS="~sparc x86"
+IUSE=""
+
+RDEPEND="dev-scheme/gauche
+	dev-db/qdbm"
+DEPEND="${RDEPEND}"
 S="${WORKDIR}/${MY_P}"
 
-DEPEND="dev-scheme/gauche
-	dev-db/qdbm"
-
-src_unpack() {
-
-	unpack ${A}
-	cd "${S}"
-
-	if has_version '>=dev-scheme/gauche-0.8'; then
-		epatch "${FILESDIR}"/${P}-gpd.diff
-		eautoreconf
-	fi
-
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gpd.diff
+	eautoreconf
 }
 
 src_install() {
-
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	dodoc README
 
-	if has_version '>=dev-scheme/gauche-0.8'; then
-		insinto $(gauche-config --sitelibdir)/.packages
-		doins ${MY_P%-*}.gpd
-	fi
-
+	insinto "$(gauche-config --sitelibdir)"/.packages
+	doins ${MY_P%-*}.gpd
 }
