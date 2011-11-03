@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.32.0-r1.ebuild,v 1.6 2011/10/30 17:20:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-2.32.0-r1.ebuild,v 1.7 2011/11/03 18:36:03 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -63,6 +63,6 @@ src_prepare() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-	ewarn "If ${PN} does not rip to some music format, please check your"
-	ewarn "USE flags on media-plugins/gst-plugins-meta"
+	ewarn "If ${PN} does not rip to some music format, please check your USE"
+	ewarn "flags on gnome-extra/gnome-media and media-plugins/gst-plugins-meta"
 }
