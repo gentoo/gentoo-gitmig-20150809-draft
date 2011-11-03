@@ -1,0 +1,33 @@
+cbec20b5dedd91005dcf64c730c411 Mon Sep 17 00:00:00 2001
+From: Sebastian Hahn <sebastian@torproject.org>
+Date: Wed, 22 Dec 2010 08:34:41 +0100
+Subject: [PATCH] Disable stats requiring geoip info if we have none
+
+In other parts of the code we will otherwise attempt to collect these
+statistics, and that will lead to crashes.
+---
+ src/or/config.c |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+diff --git a/src/or/config.c b/src/or/config.c
+index 78e4336..ca4e71c 100644
+--- a/src/or/config.c
++++ b/src/or/config.c
+@@ -1425,6 +1425,7 @@ options_act(or_options_t *old_options)
+         geoip_dirreq_stats_init(now);
+         print_notice = 1;
+       } else {
++        options->DirReqStatistics = 0;
+         log_notice(LD_CONFIG, "Configured to measure directory request "
+                               "statistics, but no GeoIP database found! "
+                               "Please specify a GeoIP database using the "
+@@ -1437,6 +1438,7 @@ options_act(or_options_t *old_options)
+         geoip_entry_stats_init(now);
+         print_notice = 1;
+       } else {
++        options->EntryStatistics = 0;
+         log_notice(LD_CONFIG, "Configured to measure entry node "
+                               "statistics, but no GeoIP database found! "
+                               "Please specify a GeoIP database using the "
+-- 
+1.7.2.5
