@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/eog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.284 2011/10/19 21:28:27 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.285 2011/11/03 05:42:21 tetromino Exp $
+
+*eog-3.2.1 (03 Nov 2011)
+
+  03 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org> -eog-3.0.2.ebuild,
+  +eog-3.2.1.ebuild:
+  Bump to 3.2.1 from the gnome overlay. Drop old. Drop alpha, arm, ia64, ppc,
+  ppc64, sparc keywords due to libpeas dependency. Notable changes: better SVG
+  support.
 
   19 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> eog-2.32.1.ebuild:
   Depend on correct slot of pygobject.
