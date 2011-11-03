@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.30-r2.ebuild,v 1.4 2011/11/03 00:29:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.30-r2.ebuild,v 1.5 2011/11/03 00:30:51 vapier Exp $
 
 EAPI="2"
 
@@ -25,7 +25,7 @@ RDEPEND="${DEPEND}"
 VPOP_DEFAULT_HOME="/var/vpopmail"
 
 vpopmail_set_homedir() {
-	VPOP_HOME=$(egethome)
+	VPOP_HOME=$(egethome vpopmail)
 	if [[ -z "${VPOP_HOME}" ]]; then
 		ebeep
 		eerror "vpopmail's home directory is null in passwd data!"
