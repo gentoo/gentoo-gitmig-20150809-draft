@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.7.2-r1.ebuild,v 1.2 2011/10/29 18:28:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.7.2-r1.ebuild,v 1.3 2011/11/03 10:52:25 tampakrap Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ RDEPEND="${DEPEND}
 "
 
 PATCHES=(
-			"${FILESDIR}/${PN}-4.7-magic-r1.patch"
+	"${FILESDIR}/${PN}-4.7-magic-r1.patch"
 )
 
 pkg_setup() {

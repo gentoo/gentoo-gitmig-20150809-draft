@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.113 2011/11/02 20:48:06 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.114 2011/11/03 10:52:25 tampakrap Exp $
+
+  03 Nov 2011; Theo Chatzimichos <tampakrap@gentoo.org> marble-4.7.2-r1.ebuild,
+  marble-4.7.3.ebuild:
+  Remove src_install, remove whitespace
 
 *marble-4.7.3 (02 Nov 2011)
 
