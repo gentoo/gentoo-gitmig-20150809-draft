@@ -14,5 +14,6 @@
 		<flag name="nautilus">Enable property page extension in <pkg>gnome-base/nautilus</pkg></flag>
 		<flag name="t1lib">Enable the Type-1 fonts for the built-in DVI viewer
     (<pkg>media-libs/t1lib</pkg>)</flag>
+		<flag name="xps">Enable XPS viewer using <pkg>app-text/libgxps</pkg></flag>
 	</use>
 </pkgmetadata>

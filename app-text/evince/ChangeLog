@@ -1,6 +1,14 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.229 2011/10/17 18:20:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.230 2011/11/03 05:31:59 tetromino Exp $
+
+*evince-3.2.1 (03 Nov 2011)
+
+  03 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -files/evince-2.91.5-fix-evinceview-introspection.patch,
+  -evince-3.0.2.ebuild, +evince-3.2.1.ebuild, metadata.xml:
+  Bump to 3.2.1 from the gnome overlay. Drop old. Add several missing
+  dependencies. Notable changes: UI fixes, stability improvements, XPS support.
 
   17 Oct 2011; Justin Lecher <jlec@gentoo.org> +files/evince-2.32.0-gold.patch,
   metadata.xml, evince-2.32.0-r3.ebuild:
