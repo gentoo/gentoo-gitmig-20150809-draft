@@ -1,0 +1,89 @@
+From 1563eb6b72781fecd58495c358b1fc877c904043 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Diego=20Elio=20Petten=C3=B2?= <flameeyes@flameeyes.eu>
+Date: Mon, 22 Aug 2011 15:06:11 +0200
+Subject: [PATCH] apc_nis: support rewriting host and port in configuration
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+It is possible for APCUPSD to manage multiple UPSes on the same box, and to
+export its information to external systems as well.
+
+Since each UPS needs its own NIS host/port pair to be accessible, allow the
+user to access non-default hosts and ports. This also allows to monitor
+remote UPSes with Munin.
+
+Signed-off-by: Diego Elio Pettenò <flameeyes@flameeyes.eu>
+---
+ plugins/node.d/apc_nis.in |   38 +++++++++++++++++++++++---------------
+ 1 files changed, 23 insertions(+), 15 deletions(-)
+
+diff --git a/plugins/node.d/apc_nis.in b/plugins/node.d/apc_nis.in
+index 6c06459..9adf96d 100644
+--- a/plugins/node.d/apc_nis.in
++++ b/plugins/node.d/apc_nis.in
+@@ -5,17 +5,25 @@
+ 
+ apc_nis - Plugin to monitor APC UPS via the nis port of apcupsd
+ 
+-=cut
++=head1 CONFIGURATION
++
++The following configuration parameters are used by this plugin
++
++ [apc_nis]
++  env.host     - hostname to connect to
++  env.port     - port number to connect to
++
++=head2 DEFAULT CONFIGURATION
++
++ [apc_nis]
++  env.host 127.0.0.1
++  env.port 3551
+ 
+-# 
+-#
+-# Parameters:
+-#
+-#   config   (required)
+-#
+-# Magic markers (optional - used by munin-config and some installation
+-# scripts):
+-#%# family=contrib
++=head1 MAGIC MARKERS
++
++ #%# family=contrib
++
++=cut
+ 
+ use IO::Socket;
+ use strict;
+@@ -25,8 +33,11 @@ if($ARGV[0] and $ARGV[0] eq "autoconfig") {
+ 	exit 0;
+ }
+ 
++my $host = exists $ENV{'host'} ? $ENV{'host'} : "127.0.0.1";
++my $port = exists $ENV{'port'} ? $ENV{'port'} : "3551";
++
+ if($ARGV[0] and $ARGV[0] eq "config") {
+-	print "graph_title apcupsd\n";
++	print "graph_title apcupsd $host:$port\n";
+ 	print "graph_args -l 0 --base 1000\n";
+ 	print "graph_vlabel A bit of all (Volt, time, %)\n";
+ 	print "battery_volt.label batt volt (V)\n";
+@@ -50,11 +61,8 @@ if($ARGV[0] and $ARGV[0] eq "config") {
+     exit 0;
+ }
+ 
+-my $server = "localhost";
+-my $port = "3551";
+-
+ my $sock = new IO::Socket::INET (
+-	PeerAddr => $server,
++	PeerAddr => $host,
+ 	PeerPort => $port,
+ 	Proto => 'tcp'
+ 	);
+-- 
+1.7.6
+

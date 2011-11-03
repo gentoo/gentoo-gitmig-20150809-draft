@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.61 2011/10/01 03:23:11 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.62 2011/11/03 18:08:56 flameeyes Exp $
+
+*munin-1.4.6-r3 (03 Nov 2011)
+
+  03 Nov 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/munin-1.4.6-apc-multi.patch, +files/munin-1.4.6-if_-hardened.patch,
+  +munin-1.4.6-r3.ebuild:
+  Add two more patches (applied upstream), to support multiple APC UPSes and to
+  allow using the if_ plugin on grsec-enabled kernels. Closes bug #384921.
 
   01 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> munin-1.4.6-r2.ebuild:
   x86 stable wrt bug #383683
