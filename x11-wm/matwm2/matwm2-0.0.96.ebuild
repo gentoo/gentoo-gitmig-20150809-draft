@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matwm2/matwm2-0.0.96.ebuild,v 1.2 2011/11/03 20:28:24 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matwm2/matwm2-0.0.96.ebuild,v 1.3 2011/11/03 20:31:36 xarthisius Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs

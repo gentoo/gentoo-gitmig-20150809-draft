@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/matwm2
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matwm2/ChangeLog,v 1.1 2010/01/04 14:52:50 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matwm2/ChangeLog,v 1.2 2011/11/03 20:31:36 xarthisius Exp $
+
+  03 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> matwm2-0.0.96.ebuild:
+  Fix HOMEPAGE and SRC_URI wrt bug 379631 by Jesus Guerrero
 
 *matwm2-0.0.96 (04 Jan 2010)
 
