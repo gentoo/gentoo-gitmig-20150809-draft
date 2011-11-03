@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/pnp4nagios-0.6.11.ebuild,v 1.1 2011/04/11 18:41:28 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pnp4nagios/pnp4nagios-0.6.11.ebuild,v 1.2 2011/11/03 16:31:44 jlec Exp $
 
 EAPI="2"
 
@@ -42,7 +42,7 @@ src_configure() {
 		--sysconfdir=/etc/pnp \
 		--datarootdir=/usr/share/pnp \
 		--with-perfdata-dir=/var/nagios/perfdata \
-		--with-perfdata-spool-dir=/var/spool/pnp  || die "econf failed"
+		--with-perfdata-spool-dir=/var/spool/pnp
 }
 
 src_compile() {
