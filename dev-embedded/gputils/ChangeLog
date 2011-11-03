@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/gputils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gputils/ChangeLog,v 1.43 2011/01/20 18:25:16 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gputils/ChangeLog,v 1.44 2011/11/03 18:36:29 radhermit Exp $
+
+*gputils-0.14.0 (03 Nov 2011)
+
+  03 Nov 2011; Tim Harder <radhermit@gentoo.org> +gputils-0.14.0.ebuild:
+  Version bump.
 
   20 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gputils-0.13.6-r1.ebuild:
