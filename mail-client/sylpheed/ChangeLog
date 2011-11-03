@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/sylpheed
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.293 2011/10/27 06:29:27 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.294 2011/11/03 07:07:23 hattya Exp $
+
+  03 Nov 2011; Akinori Hattori <hattya@gentoo.org> sylpheed-3.1.1.ebuild:
+  remove dev-libs/dbus-glib from (R)DEPEND.
 
   27 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   sylpheed-2.6.0.ebuild, sylpheed-3.1.1.ebuild:

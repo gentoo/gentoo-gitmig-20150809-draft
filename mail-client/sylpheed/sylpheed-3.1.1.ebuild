@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-3.1.1.ebuild,v 1.4 2011/10/27 06:29:27 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-3.1.1.ebuild,v 1.5 2011/11/03 07:07:23 hattya Exp $
 
 EAPI="4"
 
@@ -21,10 +21,7 @@ CDEPEND="x11-libs/gtk+:2
 	ldap? ( net-nds/openldap )
 	oniguruma? ( dev-libs/oniguruma )
 	pda? ( app-pda/jpilot )
-	spell? (
-		app-text/gtkspell:2
-		dev-libs/dbus-glib
-	)
+	spell? ( app-text/gtkspell:2 )
 	ssl? ( dev-libs/openssl )"
 RDEPEND="${CDEPEND}
 	app-misc/mime-types
