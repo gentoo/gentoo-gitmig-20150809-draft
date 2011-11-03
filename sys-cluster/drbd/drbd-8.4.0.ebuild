@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.3.11.ebuild,v 1.1 2011/10/10 08:42:32 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.4.0.ebuild,v 1.1 2011/11/03 13:24:53 ultrabug Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit eutils multilib versionator
 
@@ -17,6 +17,7 @@ IUSE="bash-completion heartbeat pacemaker +udev xen"
 SLOT="0"
 
 src_prepare() {
+	epatch "${FILESDIR}/drbd-8.3.11-kernel3.patch"
 	# respect LDFLAGS
 	sed -i -e "s/\$(CC) -o/\$(CC) \$(LDFLAGS) -o/" user/Makefile.in || die
 	# respect multilib
@@ -45,18 +46,18 @@ src_configure() {
 
 src_compile() {
 	# only compile the tools
-	emake OPTFLAGS="${CFLAGS}" tools || die
+	emake OPTFLAGS="${CFLAGS}" tools
 }
 
 src_install() {
 	# only install the tools
-	emake DESTDIR="${D}" install-tools || die
-	dodoc README ChangeLog || die
+	emake DESTDIR="${D}" install-tools
+	dodoc README ChangeLog
 
 	# install our own init script
-	newinitd "${FILESDIR}"/${PN}-8.0.rc ${PN} || die
+	newinitd "${FILESDIR}"/${PN}-8.0.rc ${PN}
 
-	dodoc scripts/drbd.conf.example || die
+	dodoc scripts/drbd.conf.example
 }
 
 pkg_postinst() {
