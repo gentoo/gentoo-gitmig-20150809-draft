@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.20 2011/11/03 00:26:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/portability.eclass,v 1.21 2011/11/03 00:59:16 vapier Exp $
 #
 # Author: Diego Pettenò <flameeyes@gentoo.org>
 #
@@ -129,5 +129,4 @@ get_mounts() {
 }
 
 _dead_portability_user_funcs() { die "if you really need this, please file a bug for base-system@gentoo.org"; }
-egetshell() { _dead_portability_user_funcs; }
 is-login-disabled() { _dead_portability_user_funcs; }

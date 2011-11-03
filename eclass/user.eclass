@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.7 2011/11/03 00:35:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.8 2011/11/03 00:59:16 vapier Exp $
 
 # @ECLASS: user.eclass
 # @MAINTAINER:
@@ -424,4 +424,25 @@ egethome() {
 	esac
 
 	egetent passwd $1 | cut -d: -f${pos}
+}
+
+# @FUNCTION: egetshell
+# @USAGE: <user>
+# @DESCRIPTION:
+# Gets the shell for the specified user.
+egetshell() {
+	local pos
+
+	[[ $# -eq 1 ]] || die "usage: egetshell <user>"
+
+	case ${CHOST} in
+	*-darwin*|*-freebsd*|*-dragonfly*)
+		pos=10
+		;;
+	*)	# Linux, NetBSD, OpenBSD, etc...
+		pos=7
+		;;
+	esac
+
+	egetent passwd "$1" | cut -d: -f${pos}
 }
