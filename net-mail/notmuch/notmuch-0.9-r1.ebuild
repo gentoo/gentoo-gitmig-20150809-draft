@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.9-r1.ebuild,v 1.1 2011/11/03 13:54:52 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.9-r1.ebuild,v 1.2 2011/11/03 17:35:07 aidecoe Exp $
 
 EAPI=4
 
@@ -18,9 +18,10 @@ SRC_URI="${HOMEPAGE}/releases/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="bash-completion debug emacs python vim zsh-completion"
+REQUIRED_USE="test? ( emacs )"
+IUSE="bash-completion debug emacs python test vim zsh-completion"
 
-DEPEND="
+CDEPEND="
 	>=dev-libs/glib-2.14
 	dev-libs/gmime:2.4
 	dev-libs/xapian
@@ -30,7 +31,10 @@ DEPEND="
 	x86? ( >=dev-libs/xapian-1.2.7-r2 )
 	vim? ( || ( >=app-editors/vim-7.0 >=app-editors/gvim-7.0 ) )
 	"
-RDEPEND="${DEPEND}
+DEPEND="${CDEPEND}
+	test? ( sys-devel/gdb )
+	"
+RDEPEND="${CDEPEND}
 	zsh-completion? ( app-shells/zsh )
 	"
 
