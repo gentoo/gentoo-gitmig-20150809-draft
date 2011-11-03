@@ -1,6 +1,17 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.603 2011/09/18 06:42:42 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.604 2011/11/03 01:58:08 williamh Exp $
+
+  03 Nov 2011; William Hubbs <williamh@gentoo.org> udev-9999.ebuild:
+  Major updates to the live ebuild:
+  - The src_test function was set back to the default per upstream's
+  recommendations. Also, test has been restricted to run if userpriv is
+  not active.
+  - The src_unpack and pkg_preinst functions were removed.
+  - a new version of the udev startup scripts was included which is more
+  integrated to openrc and has had some outdated files removed.
+  - Now the ebuild manually installs the files from udev-gentoo-scripts.
+  - Several other small code cleanups.
 
   18 Sep 2011; Zac Medico <zmedico@gentoo.org> udev-171-r2.ebuild,
   udev-9999.ebuild:
