@@ -1,10 +1,11 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.6 2011/11/03 18:24:53 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.7 2011/11/03 18:29:56 aidecoe Exp $
 
   03 Nov 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.9-r1.ebuild,
   metadata.xml:
-  Added 'crypt' flag which just pulls app-crypt/gnupg.
+  Added 'crypt' flag which just pulls app-crypt/gnupg and missing build time
+  dev-util/pkgconfig dependency.
 
   03 Nov 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.9-r1.ebuild:
   Added support for test suite.
