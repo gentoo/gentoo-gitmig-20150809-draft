@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/tig
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tig/ChangeLog,v 1.12 2011/11/02 14:48:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tig/ChangeLog,v 1.13 2011/11/03 04:35:17 radhermit Exp $
+
+  03 Nov 2011; Tim Harder <radhermit@gentoo.org> -tig-0.17.ebuild:
+  Remove old.
 
   02 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> tig-0.18.ebuild:
   x86 stable wrt bug #388505
