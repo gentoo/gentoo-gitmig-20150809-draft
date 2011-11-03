@@ -1,13 +1,13 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matwm2/matwm2-0.0.96.ebuild,v 1.1 2010/01/04 14:52:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matwm2/matwm2-0.0.96.ebuild,v 1.2 2011/11/03 20:28:24 xarthisius Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Simple EWMH compatible window manager with titlebars and frames"
-HOMEPAGE="http://www.gatorgitter.com/~maties/"
-SRC_URI="http://www.gatorgitter.com/~maties/${P}.tar.gz"
+HOMEPAGE="http://squidjam.com/matwm/"
+SRC_URI="http://squidjam.com/matwm/pub/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
