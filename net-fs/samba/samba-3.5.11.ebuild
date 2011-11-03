@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.11.ebuild,v 1.9 2011/08/27 11:27:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.5.11.ebuild,v 1.10 2011/11/03 09:24:01 naota Exp $
 
 EAPI=4
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://samba/${P}.tar.gz
 	http://dev.gentoo.org/~dagger/files/smb_traffic_analyzer_v2.diff.bz2"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="acl addns ads +aio avahi caps +client cluster cups debug doc examples fam
 	ldap ldb +netapi pam quota +readline +server +smbclient smbsharemodes smbtav2
 	swat syslog winbind"
@@ -140,6 +140,12 @@ src_configure() {
 		myconf+=" --without-cifsupcall"
 	fi
 
+	if use client && use kernel_linux ; then
+		myconf+=" --with-cifsmount --with-cifsumount"
+	else
+		myconf+=" --without-cifsmount --without-cifsumount"
+	fi
+
 	# Notes:
 	# - automount is only needed in conjunction with NIS and we don't have that
 	# anymore => LDAP?
@@ -175,8 +181,6 @@ src_configure() {
 		$(use_with ads krb5 /usr) \
 		$(use_with ads dnsupdate) \
 		--without-automount \
-		$(use_with client cifsmount) \
-		$(use_with client cifsumount) \
 		$(use_with pam) \
 		$(use_with pam pam_smbpass) \
 		$(use_with syslog) \
@@ -248,7 +252,7 @@ src_compile() {
 		emake ${KRBPLUGIN}${PLUGINEXT}
 	fi
 
-	if use client ; then
+	if use client && use kernel_linux; then
 		einfo "make {,u}mount.cifs"
 		emake bin/{,u}mount.cifs
 	fi
@@ -376,7 +380,7 @@ src_install() {
 	fi
 
 	# install client files ({u,}mount.cifs into /)
-	if use client ; then
+	if use client && use kernel_linux ; then
 		into /
 		dosbin bin/{u,}mount.cifs
 		doman ../docs/manpages/{u,}mount.cifs.8
