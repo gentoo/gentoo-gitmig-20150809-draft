@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libgnome-media-profiles
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgnome-media-profiles/ChangeLog,v 1.1 2011/08/19 21:38:38 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgnome-media-profiles/ChangeLog,v 1.2 2011/11/03 17:58:29 tetromino Exp $
+
+  03 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libgnome-media-profiles-3.0.0.ebuild, metadata.xml:
+  Add USE flags to pull in the correct encoders used by the audio profiles
+  installed by this ebuild (bug #389119, thanks to James Broadhead
+  <jamesbroadhead@gmail.com> for reporting). No revbump; there is no change to
+  the files installed by this ebuild.
 
 *libgnome-media-profiles-3.0.0 (19 Aug 2011)
 

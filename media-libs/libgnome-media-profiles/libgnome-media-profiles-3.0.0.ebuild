@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgnome-media-profiles/libgnome-media-profiles-3.0.0.ebuild,v 1.1 2011/08/19 21:38:38 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgnome-media-profiles/libgnome-media-profiles-3.0.0.ebuild,v 1.2 2011/11/03 17:58:29 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ HOMEPAGE="http://git.gnome.org/browse/libgnome-media-profiles"
 LICENSE="LGPL-2"
 SLOT="3"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="aac flac mp3 speex twolame vorbis"
 
 # FIXME: automagic dep on gladeui-3.0
 # these guys are just copy-pasting configure code b/w modules with all the bugs
@@ -25,9 +25,25 @@ COMMON_DEPEND="
 	>=media-libs/gstreamer-0.10.23:0.10
 	>=media-libs/gst-plugins-base-0.10.23:0.10
 	gnome-base/gconf:2"
+# Specific gst plugins are used by the default audio encoding profiles
 # NOTE: Audio profile stuff moved from gnome-media to here, so we add a blocker
 #       to avoid collisions
 RDEPEND="${COMMON_DEPEND}
+	media-plugins/gst-plugins-meta:0.10[flac?,vorbis?]
+	aac? (
+		media-plugins/gst-plugins-faac:0.10
+		media-plugins/gst-plugins-ffmpeg:0.10 )
+	mp3? (
+		media-libs/gst-plugins-ugly:0.10
+		media-plugins/gst-plugins-taglib:0.10
+		media-plugins/gst-plugins-lame:0.10 )
+	speex? (
+		media-plugins/gst-plugins-ogg:0.10
+		media-plugins/gst-plugins-speex:0.10 )
+	twolame? (
+		media-plugins/gst-plugins-taglib:0.10
+		media-plugins/gst-plugins-twolame:0.10 )
+
 	!<gnome-extra/gnome-media-2.32.0-r300"
 DEPEND="${COMMON_DEPEND}
 	app-text/gnome-doc-utils
