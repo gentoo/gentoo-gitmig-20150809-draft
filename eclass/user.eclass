@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.4 2011/10/31 17:39:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.5 2011/11/03 00:24:19 vapier Exp $
 
 # @ECLASS: user.eclass
 # @MAINTAINER:
@@ -30,51 +30,66 @@ _assert_pkg_ebuild_phase() {
 # @DESCRIPTION:
 # Small wrapper for getent (Linux), nidump (< Mac OS X 10.5),
 # dscl (Mac OS X 10.5), and pw (FreeBSD) used in enewuser()/enewgroup().
+#
+# Supported databases: group passwd
 egetent() {
+	local db=$1 key=$2
+
+	[[ $# -ge 3 ]] && die "usage: egetent <database> <key>"
+
+	case ${db} in
+	passwd|group) ;;
+	*) die "sorry, database '${db}' not yet supported; file a bug" ;;
+	esac
+
 	case ${CHOST} in
 	*-darwin[678])
-		case "$2" in
+		case ${key} in
 		*[!0-9]*) # Non numeric
-			nidump $1 . | awk -F":" "{ if (\$1 ~ /^$2\$/) {print \$0;exit;} }"
+			nidump ${db} . | awk -F: "(\$1 ~ /^${key}\$/) {print;exit;}"
 			;;
 		*)	# Numeric
-			nidump $1 . | awk -F":" "{ if (\$3 == $2) {print \$0;exit;} }"
+			nidump ${db} . | awk -F: "(\$3 == ${key}) {print;exit;}"
 			;;
 		esac
 		;;
 	*-darwin*)
-		local mytype=$1
-		[[ "passwd" == $mytype ]] && mytype="Users"
-		[[ "group" == $mytype ]] && mytype="Groups"
-		case "$2" in
+		local mykey
+		case ${db} in
+		passwd) db="Users"  mykey="UniqueID" ;;
+		group)  db="Groups" mykey="PrimaryGroupID" ;;
+		esac
+
+		case ${key} in
 		*[!0-9]*) # Non numeric
-			dscl . -read /$mytype/$2 2>/dev/null |grep RecordName
+			dscl . -read /${db}/${key} 2>/dev/null |grep RecordName
 			;;
 		*)	# Numeric
-			local mykey="UniqueID"
-			[[ $mytype == "Groups" ]] && mykey="PrimaryGroupID"
-			dscl . -search /$mytype $mykey $2 2>/dev/null
+			dscl . -search /${db} ${mykey} ${key} 2>/dev/null
 			;;
 		esac
 		;;
 	*-freebsd*|*-dragonfly*)
-		local opts action="user"
-		[[ $1 == "passwd" ]] || action="group"
+		case ${db} in
+		passwd) db="user" ;;
+		*) ;;
+		esac
 
 		# lookup by uid/gid
-		if [[ $2 == [[:digit:]]* ]] ; then
+		local opts
+		if [[ ${key} == [[:digit:]]* ]] ; then
 			[[ ${action} == "user" ]] && opts="-u" || opts="-g"
 		fi
 
-		pw show ${action} ${opts} "$2" -q
+		pw show ${action} ${opts} "${key}" -q
 		;;
 	*-netbsd*|*-openbsd*)
-		grep "$2:\*:" /etc/$1
+		grep "${key}:\*:" /etc/${db}
 		;;
 	*)
 		# ignore output if nscd doesn't exist, or we're not running as root
-		nscd -i "$1" 2>/dev/null
-		getent "$1" "$2"
+		nscd -i "${db}" 2>/dev/null
+		getent "${db}" "${key}"
 		;;
 	esac
 }
