@@ -1,12 +1,12 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.27-r4.ebuild,v 1.2 2009/11/02 21:44:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-5.5.27-r4.ebuild,v 1.3 2011/11/03 00:46:33 vapier Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
 WANT_ANT_TASKS="ant-trax"
 
-inherit eutils java-pkg-2 java-ant-2
+inherit eutils java-pkg-2 java-ant-2 user
 
 DESCRIPTION="Tomcat Servlet-2.4/JSP-2.0 Container"
 
@@ -273,7 +273,7 @@ set_webapps_perms() {
 
 pkg_config() {
 	# Better suggestions are welcome
-	local currentdir="$(getent passwd tomcat | gawk -F':' '{ print $6 }')"
+	local currentdir=$(egethome tomcat)
 
 	elog "The default home directory for Tomcat is /dev/null."
 	elog "You need to change it if your applications needs it to"
