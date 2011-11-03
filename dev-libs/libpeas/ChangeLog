@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libpeas
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/ChangeLog,v 1.1 2011/08/16 18:57:21 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/ChangeLog,v 1.2 2011/11/03 04:16:16 tetromino Exp $
+
+*libpeas-1.2.0-r1 (03 Nov 2011)
+
+  03 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libpeas-1.2.0-r1.ebuild,
+  +files/libpeas-1.2.0-PeasPluginInfo-annotation.patch, metadata.xml:
+  Bump to 1.2.0 from the gnome overlay. Notable changes: optional gjs support,
+  pygobject-3 compatibility.
 
 *libpeas-1.0.0 (16 Aug 2011)
 
