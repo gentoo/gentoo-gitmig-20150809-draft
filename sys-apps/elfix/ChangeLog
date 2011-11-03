@@ -1,5 +1,11 @@
 
 
+*elfix-0.3.1 (03 Nov 2011)
+
+  03 Nov 2011; Anthony G. Basile <blueness@gentoo.org> -elfix-0.3.0.ebuild,
+  +elfix-0.3.1.ebuild:
+  Version bump, adds file globbing to paxctl-ng
+
 *elfix-0.3.0 (23 Oct 2011)
 
   23 Oct 2011; Anthony G. Basile <blueness@gentoo.org> +elfix-0.3.0.ebuild:
