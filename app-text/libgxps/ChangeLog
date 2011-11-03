@@ -1,0 +1,11 @@
+# ChangeLog for app-text/libgxps
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/libgxps/ChangeLog,v 1.1 2011/11/03 05:10:47 tetromino Exp $
+
+*libgxps-0.1.0 (03 Nov 2011)
+
+  03 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libgxps-0.1.0.ebuild, +metadata.xml:
+  New ebuild, moved from the gnome overlay. Used by evince to render XPS
+  documents.
+
