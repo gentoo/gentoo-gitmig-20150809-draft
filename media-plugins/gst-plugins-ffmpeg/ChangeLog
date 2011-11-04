@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.130 2011/08/10 23:48:31 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.131 2011/11/04 06:21:44 ford_prefect Exp $
+
+*gst-plugins-ffmpeg-0.10.13 (04 Nov 2011)
+
+  04 Nov 2011; Arun Raghavan <ford_prefect@gentoo.org>
+  +gst-plugins-ffmpeg-0.10.13.ebuild:
+  Bump to 0.10.13. Switches internal libav to 0.7.2 and adds a bunch of other
+  fixes.
 
 *gst-plugins-ffmpeg-0.10.12 (10 Aug 2011)
 
