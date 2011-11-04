@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13202 2011/11/04 16:37:30 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13203 2011/11/04 19:49:20 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (04 Nov 2011)
+# Masked for removal in 30 days because the datafeed is no longer available:
+# http://mail.xfce.org/pipermail/goodies-dev/2011-October/003139.html
+<=xfce-extra/xfce4-weather-plugin-0.7.4
 
 # Michael Weber <xmw@gentoo.org> (04 Nov 2011)
 # Masked due security issue bug 385967
