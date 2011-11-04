@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/yelp-xsl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp-xsl/ChangeLog,v 1.1 2011/08/19 11:02:44 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp-xsl/ChangeLog,v 1.2 2011/11/04 06:02:03 tetromino Exp $
+
+*yelp-xsl-3.2.1 (04 Nov 2011)
+
+  04 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -yelp-xsl-3.0.2.ebuild, +yelp-xsl-3.2.1.ebuild:
+  Bump to 3.2.1 from the gnome overlay. Drop old. Notable changes: JavaScript
+  and CSS updates, DocBook fixes, peformance improvements. Drop alpha, arm,
+  hppa, ia64, ppc, ppc64, sparc keywords for itstool dependency.
 
 *yelp-xsl-3.0.2 (19 Aug 2011)
 
