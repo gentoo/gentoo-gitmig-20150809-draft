@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-1.1.ebuild,v 1.1 2011/10/10 07:06:50 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-1.1.ebuild,v 1.2 2011/11/04 22:24:34 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -22,12 +22,12 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="doc latex"
 
-RDEPEND=">=dev-python/docutils-0.7
+DEPEND=">=dev-python/docutils-0.7
 	>=dev-python/jinja-2.3
 	>=dev-python/pygments-1.2
+	dev-python/setuptools
 	latex? ( dev-texlive/texlive-latexextra )"
-DEPEND="${RDEPEND}
-	dev-python/setuptools"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -39,7 +39,7 @@ src_compile() {
 	if use doc; then
 		pushd doc > /dev/null
 		einfo "Generation of documentation"
-		PYTHONPATH="../" emake SPHINXBUILD="$(PYTHON -f) ../sphinx-build.py" html || die "Generation of documentation failed"
+		PYTHONPATH=".." emake SPHINXBUILD="$(PYTHON -f) ../sphinx-build.py" html || die "Generation of documentation failed"
 		popd > /dev/null
 	fi
 }
@@ -60,8 +60,8 @@ pkg_postinst() {
 		"$(PYTHON)" -c "import sys; sys.path.insert(0, '${EROOT}$(python_get_sitedir -b)'); from sphinx.pycode.pgen2.driver import load_grammar; load_grammar('${EROOT}$(python_get_sitedir -b)/sphinx/pycode/Grammar.txt')"
 	}
 	python_execute_function \
-		--action-message 'Generation of Grammar pickle with $(python_get_implementation) $(python_get_version)...' \
-		--failure-message 'Generation of Grammar pickle with $(python_get_implementation) $(python_get_version) failed' \
+		--action-message 'Generation of Grammar pickle with $(python_get_implementation_and_version)...' \
+		--failure-message 'Generation of Grammar pickle with $(python_get_implementation_and_version) failed' \
 		generation_of_grammar_pickle
 }
 
@@ -79,7 +79,7 @@ pkg_postrm() {
 		done
 	}
 	python_execute_function \
-		--action-message 'Deletion of Grammar pickle with $(python_get_implementation) $(python_get_version)...' \
-		--failure-message 'Deletion of Grammar pickle with $(python_get_implementation) $(python_get_version) failed' \
+		--action-message 'Deletion of Grammar pickle with $(python_get_implementation_and_version)...' \
+		--failure-message 'Deletion of Grammar pickle with $(python_get_implementation_and_version) failed' \
 		deletion_of_grammar_pickle
 }
