@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/picard
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/ChangeLog,v 1.36 2011/11/04 09:38:21 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/ChangeLog,v 1.37 2011/11/04 17:09:06 radhermit Exp $
+
+  04 Nov 2011; Tim Harder <radhermit@gentoo.org> -picard-0.12.1-r1.ebuild,
+  -picard-0.13.ebuild, -files/picard-0.13-ffmpeg.patch, -picard-0.14.ebuild:
+  Remove old.
 
   04 Nov 2011; Tony Vroon <chainsaw@gentoo.org> picard-0.15.1-r1.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
