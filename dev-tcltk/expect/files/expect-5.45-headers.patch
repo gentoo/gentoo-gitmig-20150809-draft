@@ -1,5 +1,15 @@
 https://sourceforge.net/tracker/?func=detail&aid=3071706&group_id=13179&atid=113179
-
+--- a/configure.in
++++ b/configure.in
+@@ -133,6 +133,8 @@ AC_CHECK_HEADER(sys/fcntl.h,     AC_DEFINE(HAVE_SYS_FCNTL_H))
+ AC_CHECK_HEADER(sys/ptem.h,      AC_DEFINE(HAVE_SYS_PTEM_H))
+ AC_CHECK_HEADER(sys/strredir.h,  AC_DEFINE(HAVE_STRREDIR_H))
+ AC_CHECK_HEADER(sys/strpty.h,    AC_DEFINE(HAVE_STRPTY_H))
++AC_CHECK_HEADER(pty.h,           AC_DEFINE(HAVE_PTY_H))
++AC_CHECK_HEADER(libutil.h,       AC_DEFINE(HAVE_LIBUTIL_H))
+ 
+ AC_MSG_CHECKING([for sys/bsdtypes.h])
+ if test "ISC_${ISC}" = "ISC_1"   ;    then
 --- a/exp_clib.c
 +++ b/exp_clib.c
 @@ -15,6 +15,12 @@
@@ -27,12 +37,18 @@ https://sourceforge.net/tracker/?func=detail&aid=3071706&group_id=13179&atid=113
  #include <sys/wait.h>
 --- a/pty_termios.c
 +++ b/pty_termios.c
-@@ -9,6 +9,8 @@
+@@ -9,6 +9,14 @@
  
  #include <stdio.h>
  #include <signal.h>
 +#include <string.h>
++#ifdef HAVE_PTY_H
 +#include <pty.h>
++#endif
++#ifdef HAVE_LIBUTIL_H
++#include <sys/types.h>
++#include <libutil.h>
++#endif
  
  #if defined(SIGCLD) && !defined(SIGCHLD)
  #define SIGCHLD SIGCLD
