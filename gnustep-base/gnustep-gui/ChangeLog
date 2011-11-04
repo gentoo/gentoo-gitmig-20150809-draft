@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-base/gnustep-gui
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.90 2011/08/10 09:08:01 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.91 2011/11/04 15:06:49 voyageur Exp $
+
+  04 Nov 2011; Bernard Cafarelli <voyageur@gentoo.org>
+  gnustep-gui-0.18.0.ebuild, +files/gnustep-gui-0.18.0-libpng15.patch:
+  Add suport for libpng 1.5 in stable, thanks to ssuominen. Closes bug #389363
 
   10 Aug 2011; Fabian Groffen <grobian@gentoo.org> gnustep-gui-0.20.0.ebuild:
   Remove -Werror from OBJ_CFLAGS, bug #378179

@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.18.0.ebuild,v 1.7 2010/11/08 13:21:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.18.0.ebuild,v 1.8 2011/11/04 15:06:49 voyageur Exp $
 
 EAPI="3"
 
-inherit gnustep-base multilib
+inherit eutils gnustep-base multilib
 
 DESCRIPTION="Library of GUI classes written in Obj-C"
 HOMEPAGE="http://www.gnustep.org/"
@@ -27,6 +27,11 @@ DEPEND="${GNUSTEP_CORE_DEPEND}
 	media-libs/audiofile
 	app-text/aspell"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libpng15.patch
+	gnustep-base_src_prepare
+}
 
 src_configure() {
 	egnustep_env
