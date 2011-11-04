@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyspf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.13 2011/07/22 12:06:45 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.14 2011/11/04 22:21:39 hwoarang Exp $
+
+  04 Nov 2011; Markos Chandras <hwoarang@gentoo.org> pyspf-2.0.5.ebuild:
+  Update LICENSE. Patch by Arfrever.
 
   22 Jul 2011; Jesus Rivero <neurogeek@gentoo.org> metadata.xml:
   Changed herd to python
