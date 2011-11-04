@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nxnode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.67 2011/09/23 09:41:30 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.68 2011/11/04 15:34:11 voyageur Exp $
+
+*nxnode-3.5.0.7 (04 Nov 2011)
+
+  04 Nov 2011; Bernard Cafarelli <voyageur@gentoo.org> +nxnode-3.5.0.7.ebuild:
+  Maintenance release bump, mostly fixes for rootless, shadow and vnc sessions
 
   23 Sep 2011; Bernard Cafarelli <voyageur@gentoo.org> -nxnode-3.4.0.6.ebuild,
   -nxnode-3.4.0.16-r1.ebuild, -nxnode-3.5.0.3.ebuild, nxnode-3.5.0.4.ebuild,
