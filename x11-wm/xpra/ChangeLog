@@ -1,0 +1,10 @@
+# ChangeLog for x11-wm/xpra
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.1 2011/11/04 13:02:21 xmw Exp $
+
+*xpra-0.0.7.30 (04 Nov 2011)
+
+  04 Nov 2011; Michael Weber <xmw@gentoo.org> +xpra-0.0.7.30.ebuild,
+  +metadata.xml:
+  Initial import (thanks to Antoine Martin, soxx, bug 352974, bug 353661)
+
