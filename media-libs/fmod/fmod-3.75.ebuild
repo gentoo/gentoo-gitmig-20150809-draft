@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-3.75.ebuild,v 1.1 2007/02/11 02:41:01 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-3.75.ebuild,v 1.2 2011/11/04 19:10:49 ssuominen Exp $
 
 MY_P="fmodapi${PV/.}linux"
 S=${WORKDIR}/${MY_P}
@@ -8,7 +8,7 @@ DESCRIPTION="music and sound effects library, and a sound processing system"
 HOMEPAGE="http://www.fmod.org/"
 SRC_URI="http://www.fmod.org/files/${MY_P}.tar.gz"
 
-LICENSE="fmod"
+LICENSE="BSD fmod-3.75" # BSD is for OggVorbis from README.txt
 SLOT="0"
 KEYWORDS="-* x86"
 IUSE=""
