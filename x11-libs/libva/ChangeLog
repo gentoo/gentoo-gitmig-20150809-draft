@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libva
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.28 2011/11/04 13:04:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/ChangeLog,v 1.29 2011/11/04 13:10:56 aballier Exp $
+
+  04 Nov 2011; Alexis Ballier <aballier@gentoo.org> metadata.xml:
+  Emil has been moved to co-maintainer of libva-intel-driver
 
   04 Nov 2011; Alexis Ballier <aballier@gentoo.org> libva-9999.ebuild:
   update to new repo with split out intel driver

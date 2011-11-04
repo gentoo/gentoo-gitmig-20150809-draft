@@ -5,10 +5,4 @@
     <email>aballier@gentoo.org</email>
     <name>Alexis Ballier</name>
   </maintainer>
-  <maintainer>
-	<email>jkarlson@cc.hut.fi</email>
-	<name>Emil Karlson</name>
-	<description>Proxy maintainer for the intel driver. Please CC on bugs
-		concerning intel cards.</description>
-  </maintainer>
 </pkgmetadata>
