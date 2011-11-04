@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.9_rc1.ebuild,v 1.1 2011/11/04 10:21:20 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.3.9_rc1.ebuild,v 1.2 2011/11/04 16:27:02 mr_bones_ Exp $
 
 EAPI=4
 
@@ -364,7 +364,6 @@ pkg_postinst() {
 		apache-module_pkg_postinst
 	fi
 
-	
 	# Create the symlinks for php
 	for m in ${SAPIS}; do
 		[[ ${m} == 'embed' ]] && continue;
