@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/frakturx/frakturx-20070103.ebuild,v 1.3 2011/10/01 03:22:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/frakturx/frakturx-20070103.ebuild,v 1.4 2011/11/04 09:24:49 chainsaw Exp $
 
 EAPI=4
 
@@ -24,7 +24,7 @@ SRC_URI="mirror://gentoo/${P}-base.zip
 
 LICENSE="LPPL-1.2 free-noncomm"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
