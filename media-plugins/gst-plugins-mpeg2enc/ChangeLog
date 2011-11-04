@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-mpeg2enc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mpeg2enc/ChangeLog,v 1.4 2011/11/04 07:30:05 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mpeg2enc/ChangeLog,v 1.5 2011/11/04 07:34:19 ford_prefect Exp $
+
+  04 Nov 2011; Arun Raghavan <ford_prefect@gentoo.org>
+  -gst-plugins-mpeg2enc-0.10.19.ebuild:
+  Remove old version
 
 *gst-plugins-mpeg2enc-0.10.22-r1 (04 Nov 2011)
 
