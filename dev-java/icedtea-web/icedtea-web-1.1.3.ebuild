@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.1.3.ebuild,v 1.1 2011/09/29 13:06:23 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/icedtea-web-1.1.3.ebuild,v 1.2 2011/11/04 09:39:42 caster Exp $
 # Build written by Andrew John Hughes (ahughes@redhat.com)
 
 EAPI="2"
@@ -34,7 +34,12 @@ pkg_setup() {
 	if [[ -n "${JAVA_PKG_FORCE_VM}" ]]; then
 		einfo "Honoring user-set JAVA_PKG_FORCE_VM"
 	elif has_version dev-java/icedtea:${SLOT}; then
-		JAVA_PKG_FORCE_VM="icedtea${SLOT}"
+		# migration logic
+		if [[ -L /usr/lib/jvm/icedtea${SLOT} ]]; then
+			JAVA_PKG_FORCE_VM="icedtea${SLOT}"
+		else
+			JAVA_PKG_FORCE_VM="icedtea-${SLOT}"
+		fi
 	else
 		JAVA_PKG_FORCE_VM=""
 		# don't die just yet if merging a binpkg - bug #258423
