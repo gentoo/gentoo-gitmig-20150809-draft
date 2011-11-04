@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1 2011/11/03 23:24:26 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.2 2011/11/04 13:08:23 naota Exp $
+
+  04 Nov 2011; Naohiro Aota <naota@gentoo.org> mysql.eclass, user.eclass:
+  Change possible mis-used ${action} to ${db}
 
   03 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org> +ChangeLog:
   Created ChangeLog

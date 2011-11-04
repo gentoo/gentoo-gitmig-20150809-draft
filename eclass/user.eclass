@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.9 2011/11/03 15:29:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/user.eclass,v 1.10 2011/11/04 13:08:23 naota Exp $
 
 # @ECLASS: user.eclass
 # @MAINTAINER:
@@ -78,10 +78,10 @@ egetent() {
 		# lookup by uid/gid
 		local opts
 		if [[ ${key} == [[:digit:]]* ]] ; then
-			[[ ${action} == "user" ]] && opts="-u" || opts="-g"
+			[[ ${db} == "user" ]] && opts="-u" || opts="-g"
 		fi
 
-		pw show ${action} ${opts} "${key}" -q
+		pw show ${db} ${opts} "${key}" -q
 		;;
 	*-netbsd*|*-openbsd*)
 		grep "${key}:\*:" /etc/${db}
