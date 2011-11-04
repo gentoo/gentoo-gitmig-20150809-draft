@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.8 2011/11/03 18:32:23 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.9 2011/11/04 14:49:13 aidecoe Exp $
+
+*notmuch-0.9-r2 (04 Nov 2011)
+
+  04 Nov 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +notmuch-0.9-r2.ebuild, metadata.xml:
+  Added ruby bindings and API documentation for both python and ruby bindings.
 
   03 Nov 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> -notmuch-0.9.ebuild:
   Removed old 0.9 revision.

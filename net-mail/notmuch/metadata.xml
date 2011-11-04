@@ -6,6 +6,7 @@
 		<name>Amadeusz Żołnowski</name>
 	</maintainer>
 	<use>
+		<flag name="doc">Install API documentation for enabled bindings</flag>
 		<flag name="crypt">Support decryption and verification of PGP/MIME
 			messages and in Emacs UI - encryption</flag>
 		<flag name="emacs">Install Notmuch client for Emacs (main client)</flag>
