@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.12.42.ebuild,v 1.1 2011/11/04 14:01:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.12.42.ebuild,v 1.2 2011/11/04 19:22:44 scarabeus Exp $
 
 EAPI=4
 
@@ -45,7 +45,6 @@ DEPEND="${RDEPEND}
 
 PATCHES=(
 	"${FILESDIR}/6.12.26-fix_subdirs.patch"
-	"${FILESDIR}/6.12.26-libnotify-0.7.patch"
 )
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
