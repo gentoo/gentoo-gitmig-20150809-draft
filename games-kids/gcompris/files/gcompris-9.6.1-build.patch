@@ -1,6 +1,5 @@
-diff -ru gcompris-9.5.orig/Makefile.am gcompris-9.5/Makefile.am
---- gcompris-9.5.orig/Makefile.am	2010-04-05 08:57:18.000000000 -0400
-+++ gcompris-9.5/Makefile.am	2011-01-06 12:15:53.891564989 -0500
+--- gcompris-9.5.orig/Makefile.am
++++ gcompris-9.5/Makefile.am
 @@ -17,7 +17,7 @@
  # endif
  
@@ -19,9 +18,8 @@ diff -ru gcompris-9.5.orig/Makefile.am gcompris-9.5/Makefile.am
  Applications_in_files = gcompris.desktop.in gcompris-edit.desktop.in
  Applications_DATA = gcompris.desktop gcompris-edit.desktop
  endif
-diff -ru gcompris-9.5.orig/configure.ac gcompris-9.5/configure.ac
---- gcompris-9.5.orig/configure.ac	2010-12-06 15:26:21.000000000 -0500
-+++ gcompris-9.5/configure.ac	2011-01-06 12:19:29.657036163 -0500
+--- gcompris-9.5.orig/configure.ac
++++ gcompris-9.5/configure.ac
 @@ -203,10 +203,8 @@
            USE_DEBUG="$enableval", USE_DEBUG="no")
  if test "x$USE_DEBUG" == "xyes" ; then
@@ -68,9 +66,8 @@ diff -ru gcompris-9.5.orig/configure.ac gcompris-9.5/configure.ac
    if test x$GNUCHESS = xno; then
      AC_MSG_ERROR(Couldn't find gnuchess, please install the gnuchess package version 5 or above)
    fi
-diff -ru gcompris-9.5.orig/docs/C/Makefile.am gcompris-9.5/docs/C/Makefile.am
---- gcompris-9.5.orig/docs/C/Makefile.am	2009-08-30 12:24:49.000000000 -0400
-+++ gcompris-9.5/docs/C/Makefile.am	2011-01-06 12:19:44.308216363 -0500
+--- gcompris-9.5.orig/docs/C/Makefile.am
++++ gcompris-9.5/docs/C/Makefile.am
 @@ -10,7 +10,7 @@
  	     overview.dia \
  	     $(man_MANS)
@@ -80,9 +77,8 @@ diff -ru gcompris-9.5.orig/docs/C/Makefile.am gcompris-9.5/docs/C/Makefile.am
  
  all: $(doc)
  
-diff -ru gcompris-9.5.orig/docs/eu/Makefile.am gcompris-9.5/docs/eu/Makefile.am
---- gcompris-9.5.orig/docs/eu/Makefile.am	2010-03-23 18:21:41.000000000 -0400
-+++ gcompris-9.5/docs/eu/Makefile.am	2011-01-06 12:19:54.444265564 -0500
+--- gcompris-9.5.orig/docs/eu/Makefile.am
++++ gcompris-9.5/docs/eu/Makefile.am
 @@ -8,7 +8,7 @@
  	     overview.dia \
  	     gcompris.texi
@@ -92,9 +88,8 @@ diff -ru gcompris-9.5.orig/docs/eu/Makefile.am gcompris-9.5/docs/eu/Makefile.am
  
  all: $(doc)
  
-diff -ru gcompris-9.5.orig/docs/fr/Makefile.am gcompris-9.5/docs/fr/Makefile.am
---- gcompris-9.5.orig/docs/fr/Makefile.am	2010-03-23 18:21:41.000000000 -0400
-+++ gcompris-9.5/docs/fr/Makefile.am	2011-01-06 12:19:59.760242448 -0500
+--- gcompris-9.5.orig/docs/fr/Makefile.am
++++ gcompris-9.5/docs/fr/Makefile.am
 @@ -8,7 +8,7 @@
  	     overview.dia \
  	     gcompris.texi
@@ -104,9 +99,8 @@ diff -ru gcompris-9.5.orig/docs/fr/Makefile.am gcompris-9.5/docs/fr/Makefile.am
  
  all: $(doc)
  
-diff -ru gcompris-9.5.orig/po/Makefile.in.in gcompris-9.5/po/Makefile.in.in
---- gcompris-9.5.orig/po/Makefile.in.in	2010-12-06 15:29:45.000000000 -0500
-+++ gcompris-9.5/po/Makefile.in.in	2011-01-06 12:20:28.901633920 -0500
+--- gcompris-9.5.orig/po/Makefile.in.in
++++ gcompris-9.5/po/Makefile.in.in
 @@ -34,7 +34,7 @@
  datarootdir = @datarootdir@
  libdir = @libdir@
@@ -116,9 +110,8 @@ diff -ru gcompris-9.5.orig/po/Makefile.in.in gcompris-9.5/po/Makefile.in.in
  subdir = po
  install_sh = @install_sh@
  # Automake >= 1.8 provides @mkdir_p@.
-diff -ru gcompris-9.5.orig/src/gcompris/gcompris.c gcompris-9.5/src/gcompris/gcompris.c
---- gcompris-9.5.orig/src/gcompris/gcompris.c	2010-12-05 13:08:35.000000000 -0500
-+++ gcompris-9.5/src/gcompris/gcompris.c	2011-01-06 12:21:01.535353344 -0500
+--- gcompris-9.5.orig/src/gcompris/gcompris.c
++++ gcompris-9.5/src/gcompris/gcompris.c
 @@ -1308,7 +1308,7 @@
      properties->package_plugin_dir = g_strconcat(pkg_clib_dir, "/gcompris", NULL);
      properties->package_python_plugin_dir = g_strconcat(pkg_data_dir, "/gcompris/python",

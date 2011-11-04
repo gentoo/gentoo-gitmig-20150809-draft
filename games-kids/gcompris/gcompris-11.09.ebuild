@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-9.6.ebuild,v 1.3 2011/04/21 10:25:48 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-11.09.ebuild,v 1.1 2011/11/04 18:04:45 mr_bones_ Exp $
 
 EAPI=2
 
@@ -8,15 +8,15 @@ PYTHON_DEPEND="python? 2:2.6"
 PYTHON_USE_WITH_OPT="python"
 PYTHON_USE_WITH="sqlite threads"
 
-inherit autotools eutils python versionator games
+inherit autotools eutils python games
 
 DESCRIPTION="full featured educational application for children from 2 to 10"
 HOMEPAGE="http://gcompris.net/"
-SRC_URI="mirror://sourceforge/gcompris/${PN}-$(replace_version_separator 2 -).tar.gz"
+SRC_URI="mirror://sourceforge/gcompris/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gnet python"
 
 RDEPEND="x11-libs/gtk+:2
@@ -45,8 +45,6 @@ RDEPEND="${RDEPEND}
 	media-gfx/tuxpaint
 	sci-electronics/gnucap"
 
-S=${WORKDIR}/${PN}-$(get_version_component_range 1-2)
-
 pkg_setup() {
 	if use python; then
 		python_set_active_version 2
@@ -56,6 +54,12 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Drop DEPRECATED flags, bug #387817
+	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' \
+		src/gcompris/Makefile.am src/gcompris/Makefile.in \
+		src/goocanvas/src/Makefile.am src/goocanvas/src/Makefile.in \
+		|| die
+
 	epatch "${FILESDIR}"/${P}-build.patch
 	cp /usr/share/gettext/config.rpath .
 	eautoreconf
