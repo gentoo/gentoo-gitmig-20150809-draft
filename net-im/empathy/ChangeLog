@@ -1,6 +1,14 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.93 2011/10/30 12:37:51 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.94 2011/11/04 05:12:33 tetromino Exp $
+
+*empathy-3.2.1.1 (04 Nov 2011)
+
+  04 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -empathy-3.0.2.ebuild, +empathy-3.2.1.1.ebuild, metadata.xml:
+  Bump to 3.2.1.1 from the gnome overlay. Remove old (and vulnerable) 3.0.2.
+  Notable changes: optional farstream call support, better theming, new log
+  viewer, google talk support via gnome-online-accounts.
 
   30 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   empathy-2.34.0-r2.ebuild:
