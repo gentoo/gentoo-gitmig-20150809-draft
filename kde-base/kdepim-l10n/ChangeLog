@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdepim-l10n
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/ChangeLog,v 1.16 2011/10/28 19:03:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-l10n/ChangeLog,v 1.17 2011/11/04 00:22:44 dilfridge Exp $
+
+*kdepim-l10n-4.7.3 (04 Nov 2011)
+
+  04 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kdepim-l10n-4.7.3.ebuild:
+  Version bump
 
   28 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -kdepim-l10n-4.7.1.ebuild:
