@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.199 2011/11/02 15:01:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.200 2011/11/04 09:28:39 chainsaw Exp $
+
+  04 Nov 2011; Tony Vroon <chainsaw@gentoo.org> hplip-3.11.10.ebuild:
+  Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney &
+  Agostino "ago" Sarubbo in bug #388989.
 
   02 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> hplip-3.11.10.ebuild:
   x86 stable wrt bug #388989
