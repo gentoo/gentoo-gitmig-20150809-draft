@@ -1,0 +1,29 @@
+--- audtty-0.1.12.ORIG/Makefile.in	2011-11-04 10:48:58.715132072 +0000
++++ audtty-0.1.12/Makefile.in	2011-11-04 10:51:28.352134317 +0000
+@@ -20,18 +20,18 @@
+ all: audtty
+ 
+ audtty: ${BINS}
+-	cc -g -O2 -g2 -Wall -Werror -lncursesw -laudclient ${LDFLAGS} -o audtty $(BINS)
++	$(CC) -Wall ${LDFLAGS} -o audtty $(BINS) -lncursesw -laudclient -lglib-2.0 -ldbus-glib-1 -lgobject-2.0
+ 
+ .c.o:
+-	cc -g -Wall ${AUDACIOUS_CFLAGS} ${CFLAGS} -o $@ -c $<
++	$(CC) -Wall ${AUDACIOUS_CFLAGS} ${CFLAGS} -o $@ -c $<
+ 
+ install: audtty
+-	mkdir -p ${bindir}
+-	install -m 0755 audtty ${bindir}/audtty
+-	mkdir -p ${mandir}
+-	install -m 0644 audtty.1 ${mandir}/audtty.1
+-	mkdir -p ${sysconfdir}
+-	install -m 0644 audtty.conf ${sysconfdir}/audtty.conf
++	mkdir -p $(DESTDIR)${bindir}
++	install -m 0755 audtty $(DESTDIR)${bindir}/audtty
++	mkdir -p $(DESTDIR)${mandir}
++	install -m 0644 audtty.1 $(DESTDIR)${mandir}/audtty.1
++	mkdir -p $(DESTDIR)${sysconfdir}
++	install -m 0644 audtty.conf $(DESTDIR)${sysconfdir}/audtty.conf
+ 
+ uninstall:
+ 	rm ${bindir}/audtty || false

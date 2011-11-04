@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/audtty
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/ChangeLog,v 1.22 2009/08/09 11:37:24 nixnut Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/ChangeLog,v 1.23 2011/11/04 11:00:58 chainsaw Exp $
+
+*audtty-0.1.12 (04 Nov 2011)
+
+  04 Nov 2011; Tony Vroon <chainsaw@gentoo.org> +audtty-0.1.12.ebuild,
+  +files/audtty-0.1.12-cc-and-destdir.patch:
+  Version bump. Address underlinking as pointed out by Diego Elio Pettenò in
+  bug #369707.
 
   09 Aug 2009; nixnut <nixnut@gentoo.org> audtty-0.1.9a-r1.ebuild:
   ppc stable #272326
