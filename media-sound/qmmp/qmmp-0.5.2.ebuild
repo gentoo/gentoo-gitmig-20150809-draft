@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.5.2.ebuild,v 1.3 2011/10/18 06:35:26 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.5.2.ebuild,v 1.4 2011/11/04 21:00:36 hwoarang Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 # KEYWORDS further up
-IUSE="aac +alsa +dbus bs2b cdda cover crossfade enca ffmpeg flac jack kde ladspa
+IUSE="aac +alsa +dbus bs2b cdda cover crossfade enca ffmpeg flac jack game kde ladspa
 libsamplerate lyrics +mad midi mms modplug mplayer mpris musepack notifier oss
 projectm pulseaudio scrobbler sndfile stereo tray udev +vorbis wavpack"
 
@@ -34,6 +34,7 @@ RDEPEND="x11-libs/qt-qt3support:4
 	aac? ( media-libs/faad2 )
 	enca? ( app-i18n/enca )
 	flac? ( media-libs/flac )
+	game? ( media-libs/game-music-emu )
 	ladspa? ( media-libs/ladspa-cmt )
 	libsamplerate? ( media-libs/libsamplerate )
 	mad? ( media-libs/libmad )
@@ -72,6 +73,7 @@ src_configure() {
 		$(cmake-utils_use_use enca)
 		$(cmake-utils_use_use ffmpeg)
 		$(cmake-utils_use_use flac)
+		$(cmake-utils_use_use game GME)
 		-DUSE_HAL=OFF
 		$(cmake-utils_use_use jack)
 		$(cmake-utils_use_use kde KDENOTIFY)

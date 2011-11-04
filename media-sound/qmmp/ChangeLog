@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qmmp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.76 2011/10/18 20:59:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.77 2011/11/04 21:00:36 hwoarang Exp $
+
+  04 Nov 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml,
+  qmmp-9999.ebuild, qmmp-0.5.2.ebuild:
+  Add missing game useflag. BUg #388767. Thanks to Dmitry <bigsiama@yandex.ru>
 
   18 Oct 2011; Markos Chandras <hwoarang@gentoo.org> -qmmp-0.5.1.ebuild:
   old
