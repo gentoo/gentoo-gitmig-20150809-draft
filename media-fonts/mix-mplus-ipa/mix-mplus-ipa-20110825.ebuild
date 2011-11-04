@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mix-mplus-ipa/mix-mplus-ipa-20110825.ebuild,v 1.1 2011/09/18 00:21:36 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mix-mplus-ipa/mix-mplus-ipa-20110825.ebuild,v 1.2 2011/11/04 11:53:39 naota Exp $
 
 EAPI="4"
 inherit font
@@ -19,7 +19,7 @@ SRC_URI="mirror://sourceforge.jp/mix-mplus-ipa/53033/MigMix-1M-${PV}.zip
 
 LICENSE="mplus-fonts IPAfont"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE=""
 
 S="${WORKDIR}"
