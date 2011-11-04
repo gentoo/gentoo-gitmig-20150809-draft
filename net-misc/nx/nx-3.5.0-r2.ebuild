@@ -1,18 +1,18 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.5.0.ebuild,v 1.2 2011/09/14 12:44:37 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.5.0-r2.ebuild,v 1.1 2011/11/04 15:52:52 voyageur Exp $
 
-EAPI=2
+EAPI=4
 inherit autotools eutils multilib
 
 DESCRIPTION="NX compression technology core libraries"
 HOMEPAGE="http://www.nomachine.com/developers.php"
 
 URI_BASE="http://web04.nomachine.com/download/${PV}/sources"
-SRC_NX_X11="nx-X11-$PV-1.tar.gz"
-SRC_NXAGENT="nxagent-$PV-2.tar.gz"
+SRC_NX_X11="nx-X11-$PV-2.tar.gz"
+SRC_NXAGENT="nxagent-$PV-7.tar.gz"
 SRC_NXAUTH="nxauth-$PV-1.tar.gz"
-SRC_NXCOMP="nxcomp-$PV-1.tar.gz"
+SRC_NXCOMP="nxcomp-$PV-2.tar.gz"
 SRC_NXCOMPEXT="nxcompext-$PV-1.tar.gz"
 SRC_NXCOMPSHAD="nxcompshad-$PV-2.tar.gz"
 SRC_NXPROXY="nxproxy-$PV-1.tar.gz"
@@ -22,9 +22,10 @@ SRC_URI="$URI_BASE/$SRC_NX_X11 $URI_BASE/$SRC_NXAGENT $URI_BASE/$SRC_NXPROXY $UR
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE=""
+IUSE="elibc_glibc"
 
-RDEPEND="x11-libs/libXau
+RDEPEND="elibc_glibc? ( || ( net-libs/libtirpc <sys-libs/glibc-2.14 ) )
+	x11-libs/libXau
 	x11-libs/libXcomposite
 	x11-libs/libXdamage
 	x11-libs/libXdmcp
@@ -46,6 +47,10 @@ src_prepare() {
 	# For nxcl/qtnx
 	cd "${WORKDIR}"/nxproxy
 	epatch "${FILESDIR}"/${PN}-3.2.0-nxproxy_read_from_stdin.patch
+
+	# libpn-1.5 support
+	cd "${WORKDIR}"/nxcomp
+	epatch "${FILESDIR}"/${P}-libpng15.patch
 
 	cd "${WORKDIR}"
 	# Fix sandbox violation
@@ -70,39 +75,29 @@ src_prepare() {
 	# Respect LDFLAGS
 	echo "#define ExtraLoadFlags ${LDFLAGS}" >> ${HOSTCONF}
 	echo "#define SharedLibraryLoadFlags -shared ${LDFLAGS}" >> ${HOSTCONF}
+	echo "#define BuildXInputLib YES" >> ${HOSTCONF}
 }
 
 src_configure() {
-	cd "${WORKDIR}"/nxcomp || die "No nxcomp directory found"
-	econf || die "nxcomp econf failed"
-
-	cd "${WORKDIR}"/nxcompshad || die "No nxcompshad directory found"
-	econf || die "nxcompshad econf failed"
-
-	cd "${WORKDIR}"/nxproxy || die "No nxproxy directory found"
-	econf || die "nxproxy econf failed"
-
-	cd "${WORKDIR}"/nxcompext || die "No nxcompext directory found"
-	econf || die "nxcompext econf failed"
+	for i in nxcomp nxcompshad nxproxy nxcompext ; do
+		cd "${WORKDIR}"/${i}
+		econf
+	done
 }
 
 src_compile() {
-	cd "${WORKDIR}"/nxcomp || die "No nxcomp directory found"
-	emake || die "nxcomp emake failed"
+	for i in nxcomp nxcompshad nxproxy; do
+		cd "${WORKDIR}"/${i}
+		emake
+	done
 
-	cd "${WORKDIR}"/nxcompshad || die "No nxcompshad directory found"
-	emake || die "nxcompshad emake failed"
-
-	cd "${WORKDIR}"/nxproxy || die "No nxproxy directory found"
-	emake || die "nxproxy emake failed"
-
-	cd "${S}" || die "No nx-X11 directory found"
+	cd "${S}"
 	# Again, from xorg-x11-6.9.0-r3.ebuild
 	unset MAKE_OPTS
-	FAST=1 emake -j1 World WORLDOPTS="" MAKE="make" || die "nx-X11 emake failed"
+	FAST=1 emake -j1 World WORLDOPTS="" MAKE="make"
 
-	cd "${WORKDIR}"/nxcompext || die "No nxcompext directory found"
-	emake || die "nxcompext emake failed"
+	cd "${WORKDIR}"/nxcompext
+	emake
 }
 
 src_install() {
@@ -120,6 +115,7 @@ src_install() {
 
 	dolib.so "${S}"/lib/X11/libX11.so*
 	dolib.so "${S}"/lib/Xext/libXext.so*
+	dolib.so "${S}"/lib/Xi/libXi.so*
 	dolib.so "${S}"/lib/Xrender/libXrender.so*
 	dolib.so "${WORKDIR}"/nxcomp/libXcomp.so*
 	dolib.so "${WORKDIR}"/nxcompext/libXcompext.so*
