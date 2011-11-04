@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libindicate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.19 2011/08/28 17:36:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.20 2011/11/04 23:04:20 dilfridge Exp $
+
+  04 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  libindicate-0.4.4-r2.ebuild:
+  Use and require latest stable vala and vapigen, bug 383355
 
   28 Aug 2011; Justin Lecher <jlec@gentoo.org> libindicate-0.2.3-r1.ebuild,
   libindicate-0.4.4.ebuild, libindicate-0.4.4-r1.ebuild,

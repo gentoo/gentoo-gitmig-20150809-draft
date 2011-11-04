@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.4.4-r2.ebuild,v 1.6 2011/08/28 17:36:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/libindicate-0.4.4-r2.ebuild,v 1.7 2011/11/04 23:04:20 dilfridge Exp $
 
 EAPI=2
 
@@ -31,7 +31,9 @@ DEPEND="${RDEPEND}
 	app-text/gnome-doc-utils
 	doc? ( dev-util/gtk-doc )
 	dev-util/gtk-doc-am
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	introspection? ( dev-lang/vala:0.14[vapigen] )
+"
 
 src_prepare() {
 	# Without patches:
@@ -65,7 +67,7 @@ src_prepare() {
 	# Drop -Werror in a release
 	sed -e 's:-Werror::g' -i libindicate/Makefile.am libindicate-gtk/Makefile.am || die "sed failed"
 	# Find slotted vapigen
-	sed -e 's:vapigen:vapigen-0.12:g' -i configure.ac || die
+	sed -e 's:vapigen:vapigen-0.14:g' -i configure.ac || die
 	eautoreconf
 }
 
