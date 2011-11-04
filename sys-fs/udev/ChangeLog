@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.604 2011/11/03 01:58:08 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.605 2011/11/04 18:32:12 williamh Exp $
+
+  04 Nov 2011; William Hubbs <williamh@gentoo.org> udev-9999.ebuild:
+  Live ebuild now pulls udev gentoo scripts from git.
 
   03 Nov 2011; William Hubbs <williamh@gentoo.org> udev-9999.ebuild:
   Major updates to the live ebuild:

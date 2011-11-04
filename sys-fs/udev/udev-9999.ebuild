@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.54 2011/11/03 01:58:08 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.55 2011/11/04 18:32:12 williamh Exp $
 
 EAPI=4
 
@@ -23,9 +23,9 @@ then
 	then
 		SRC_URI="${SRC_URI} mirror://gentoo/${PATCHSET}.tar.bz2"
 	fi
+	scriptname="${scriptname}-${scriptversion}"
+	SRC_URI="${SRC_URI} mirror://gentoo/${scriptname}.tar.bz2"
 fi
-scriptname="${scriptname}-${scriptversion}"
-SRC_URI="${SRC_URI} mirror://gentoo/${scriptname}.tar.bz2"
 
 DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
@@ -106,6 +106,22 @@ pkg_setup()
 		NO_RESTART=1
 	fi
 }
+
+if [[ $PV == 9999 ]]
+then
+	src_unpack()
+	{
+		git-2_src_unpack
+		unset EGIT_BRANCH
+		unset EGIT_COMMIT
+		unset EGIT_DIR
+		unset EGIT_MASTER
+		EGIT_PROJECT="${scriptname}"
+		EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/${scriptname}.git"
+		EGIT_SOURCEDIR="${WORKDIR}/${scriptname}"
+		git-2_src_unpack
+	}
+fi
 
 src_prepare()
 {
