@@ -1,0 +1,10 @@
+# ChangeLog for app-text/yelp-tools
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/yelp-tools/ChangeLog,v 1.1 2011/11/04 06:09:18 tetromino Exp $
+
+*yelp-tools-3.2.1 (04 Nov 2011)
+
+  04 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +yelp-tools-3.2.1.ebuild, +metadata.xml:
+  Add new gnome-3.2 documentation build tools from the gnome overlay.
+
