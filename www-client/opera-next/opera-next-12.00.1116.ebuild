@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.00.1116.ebuild,v 1.1 2011/10/20 12:22:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.00.1116.ebuild,v 1.2 2011/11/04 16:56:15 jer Exp $
 
 EAPI="4"
 
@@ -161,9 +161,10 @@ src_prepare() {
 
 	# Create /usr/bin/opera wrapper
 	echo '#!/bin/sh' > ${PN}
-	echo 'export OPERA_DIR=/usr/share/'"${PN}" >> ${PN}
+	echo 'export OPERA_DIR="/usr/share/'"${PN}"'"' >> ${PN}
 	echo 'export OPERA_PERSONALDIR=${OPERA_PERSONALDIR:-"${HOME}/.'${PN}'"}' \
 		>> ${PN}
+	echo 'export LD_PRELOAD="/usr/'$(get_libdir)'/libgtk-x11-2.0.so"' >> ${PN}
 	echo 'exec '"${OPREFIX}/${PN}/${PN}"' "$@"' >> ${PN}
 
 	# Change libz.so.3 to libz.so.1 for gentoo/freebsd
