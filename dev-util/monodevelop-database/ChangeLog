@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/monodevelop-database
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-database/ChangeLog,v 1.18 2011/09/12 15:33:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-database/ChangeLog,v 1.19 2011/11/04 12:35:52 phajdan.jr Exp $
+
+  04 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  monodevelop-database-2.6.ebuild:
+  x86 stable wrt bug #389181
 
 *monodevelop-database-2.6 (12 Sep 2011)
 

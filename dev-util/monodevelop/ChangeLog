@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/monodevelop
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.91 2011/10/05 21:47:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/ChangeLog,v 1.92 2011/11/04 12:38:12 phajdan.jr Exp $
+
+  04 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> monodevelop-2.6.ebuild:
+  x86 stable wrt bug #389181
 
   05 Oct 2011; Pacho Ramos <pacho@gentoo.org> monodevelop-2.6.ebuild:
   Raise mono-addins dep, bug #385383 by Anton Romanov.
