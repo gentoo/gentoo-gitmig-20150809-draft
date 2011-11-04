@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.35 2011/11/04 09:44:17 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.36 2011/11/04 09:47:02 caster Exp $
+
+  04 Nov 2011; Vlastimil Babka <caster@gentoo.org>
+  -files/6.1.10.2-371405-linux_version.patch, -files/6.1.9.6-sparc.patch:
+  Remove unused patches.
 
 *icedtea-6.1.10.4-r1 (04 Nov 2011)
 
