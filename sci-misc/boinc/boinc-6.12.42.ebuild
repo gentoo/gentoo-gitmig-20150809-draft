@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.12.33.ebuild,v 1.1 2011/07/11 21:15:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.12.42.ebuild,v 1.1 2011/11/04 14:01:11 scarabeus Exp $
 
 EAPI=4
 
@@ -142,7 +142,7 @@ pkg_postinst() {
 	fi
 	if use cuda; then
 		elog "To be able to use CUDA you should add boinc user to video group."
-		elog "To do so run as root:"
+		elog "Run as root:"
 		elog "gpasswd -a boinc video"
 	fi
 }
