@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.9-r2.ebuild,v 1.3 2011/11/01 05:50:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.9-r2.ebuild,v 1.4 2011/11/04 17:14:02 sping Exp $
 
 EAPI="2"
 LANGS="bg ca cs de en_US es et eu fi fr gl hu it ja ka ko ku mk nl pl pt_BR
@@ -32,7 +32,7 @@ DEPEND="x11-libs/qt-gui:4
 	dev-libs/quazip"
 MPLAYER_USE="[ass,png]"
 RDEPEND="${DEPEND}
-	|| ( media-video/mplayer${MPLAYER_USE} media-video/mplayer2[libass,png] media-video/mplayer2${MPLAYER_USE} )"
+	|| ( media-video/mplayer${MPLAYER_USE} media-video/mplayer2${MPLAYER_USE} )"
 
 src_prepare() {
 	# Force Ctrl+Q as default quit shortcut
