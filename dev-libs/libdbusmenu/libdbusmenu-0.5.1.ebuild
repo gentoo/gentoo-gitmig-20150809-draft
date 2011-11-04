@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-0.5.1.ebuild,v 1.1 2011/11/01 22:21:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-0.5.1.ebuild,v 1.2 2011/11/04 22:12:01 dilfridge Exp $
 
 EAPI=4
 
@@ -37,6 +37,7 @@ DEPEND="${RDEPEND}
 		dev-util/dbus-test-runner
 	)
 	vala? ( dev-lang/vala:0.14 )
+	app-text/gnome-doc-utils
 	dev-util/intltool
 	dev-util/pkgconfig
 "
