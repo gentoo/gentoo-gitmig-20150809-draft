@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.2.ebuild,v 1.2 2011/10/24 21:57:11 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/virtualbox-4.1.6.ebuild,v 1.1 2011/11/04 23:05:40 polynomial-c Exp $
 
 EAPI=4
 
@@ -156,7 +156,7 @@ src_prepare() {
 		"${FILESDIR}/${PN}-4-mkisofs-check.patch"
 
 	# fix build with --as-needed (bug #249295 and bug #350907)
-	epatch "${FILESDIR}/${PN}-4-asneeded.patch"
+	epatch "${FILESDIR}/${PN}-4.1.4-asneeded.patch"
 
 	# Respect LDFLAGS
 	sed -e "s/_LDFLAGS\.${ARCH}*.*=/& ${LDFLAGS}/g" \
@@ -166,7 +166,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-4.0.2-restore_old_machines_dir.patch"
 
 	# Don't build vboxpci.ko module (D'oh!)
-	epatch "${FILESDIR}"/${P}-vboxpci-build.patch
+	epatch "${FILESDIR}"/${PN}-4.1.2-vboxpci-build.patch
 
 	# Use PAM only when pam USE flag is enbaled (bug #376531)
 	if ! use pam ; then

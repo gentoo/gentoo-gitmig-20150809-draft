@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.1.2.ebuild,v 1.1 2011/08/17 23:35:56 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-4.1.6.ebuild,v 1.1 2011/11/04 23:02:33 polynomial-c Exp $
 
 EAPI=2
 
 inherit eutils fdo-mime pax-utils
 
-MY_PV=${PV}-73507
+MY_PV=${PV}-74713
 SDK_PV=${MY_PV}
 EXTP_PV=${MY_PV}
 MY_P=VirtualBox-${MY_PV}-Linux
