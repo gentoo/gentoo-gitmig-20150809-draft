@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/herqq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/herqq/ChangeLog,v 1.6 2011/08/15 17:02:20 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/herqq/ChangeLog,v 1.7 2011/11/04 21:52:06 dilfridge Exp $
+
+  04 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
+  Added herd kde to metadata
 
   15 Aug 2011; Christoph Junghans <ottxor@gentoo.org> herqq-1.0.0-r1.ebuild:
   fixed deps (bug #378853)

@@ -5,4 +5,5 @@
 		<email>ottxor@gentoo.org</email>
 		<name>Christoph Junghans</name>
 	</maintainer>
+	<herd>kde</herd>
 </pkgmetadata>
