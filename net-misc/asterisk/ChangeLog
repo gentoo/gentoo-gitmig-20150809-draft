@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.356 2011/10/26 09:04:56 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.357 2011/11/04 10:19:05 chainsaw Exp $
+
+*asterisk-1.8.7.1-r2 (04 Nov 2011)
+
+  04 Nov 2011; Tony Vroon <chainsaw@gentoo.org> +asterisk-1.8.7.1-r2.ebuild:
+  Broken SSL USE-flag removed, now hardcoded on. Module selection clean-up by
+  Diego Elio Pettenò closes bug #389271.
 
 *asterisk-1.8.7.1-r1 (26 Oct 2011)
 
