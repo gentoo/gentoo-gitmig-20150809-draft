@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/wfmath/wfmath-0.3.11.ebuild,v 1.1 2011/09/26 08:11:18 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/wfmath/wfmath-0.3.11.ebuild,v 1.2 2011/11/04 09:30:04 chainsaw Exp $
 
 EAPI=2
 DESCRIPTION="Worldforge math library"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/worldforge/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="doc static-libs"
 
 RDEPEND=""

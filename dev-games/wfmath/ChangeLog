@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/wfmath
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/wfmath/ChangeLog,v 1.17 2011/09/26 08:11:18 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/wfmath/ChangeLog,v 1.18 2011/11/04 09:30:04 chainsaw Exp $
+
+  04 Nov 2011; Tony Vroon <chainsaw@gentoo.org> wfmath-0.3.11.ebuild:
+  Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
+  Lazkani & Ian "idella4" Delaney in bug #389263.
 
 *wfmath-0.3.11 (26 Sep 2011)
 
