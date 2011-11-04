@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.7.3.ebuild,v 1.2 2011/09/08 20:15:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.7.3.ebuild,v 1.3 2011/11/04 15:45:09 dagger Exp $
 
 EAPI=4
 
@@ -163,4 +163,7 @@ pkg_config() {
 			einfo "Remove it if you want to create new one."
 		fi
 	fi
+
+	# Make it work on systems with PAX
+	[[ -x /sbin/paxctl ]] && /sbin/paxctl -m /usr/bin/quasselcore
 }
