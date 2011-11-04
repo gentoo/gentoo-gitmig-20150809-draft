@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/radvd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.66 2011/08/29 10:46:49 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.67 2011/11/04 16:31:58 xmw Exp $
+
+*radvd-1.8.2 (04 Nov 2011)
+
+  04 Nov 2011; Michael Weber <xmw@gentoo.org> +radvd-1.8.2.ebuild:
+  Version bump to address security issue bug 381895.
 
 *radvd-1.8.1 (29 Aug 2011)
 
