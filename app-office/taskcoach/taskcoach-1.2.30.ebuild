@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/taskcoach-1.1.4-r1.ebuild,v 1.5 2011/09/27 12:47:18 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/taskcoach-1.2.30.ebuild,v 1.1 2011/11/04 23:23:25 caster Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="2.4 3.*"
+RESTRICT_PYTHON_ABIS="2.4 2.5 3.*"
 PYTHON_MODNAME="buildlib taskcoachlib"
 
 inherit distutils eutils
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.taskcoach.org http://pypi.python.org/pypi/TaskCoach"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="libnotify"
 DEPEND=">=dev-python/wxpython-2.8.9.2:2.8"
 RDEPEND="${DEPEND}
@@ -28,12 +28,6 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${MY_P}"
 
 DOCS="CHANGES.txt"
-
-src_prepare() {
-	distutils_src_prepare
-
-	epatch "${FILESDIR}/3081666.patch"
-}
 
 src_install() {
 	distutils_src_install
