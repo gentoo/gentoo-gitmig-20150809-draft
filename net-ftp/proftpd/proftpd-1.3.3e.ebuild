@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.3e.ebuild,v 1.7 2011/07/21 17:16:12 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.3e.ebuild,v 1.8 2011/11/04 14:45:35 voyageur Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -186,7 +186,6 @@ src_install() {
 
 	insinto /etc/proftpd
 	doins "${FILESDIR}"/proftpd.conf.sample
-	keepdir /var/run/proftpd
 	newinitd "${FILESDIR}"/proftpd.initd proftpd
 	if use xinetd ; then
 		insinto /etc/xinetd.d
