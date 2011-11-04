@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/coccinelle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.11 2011/10/05 19:01:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.12 2011/11/04 08:07:40 radhermit Exp $
+
+*coccinelle-1.0.0_rc7 (04 Nov 2011)
+
+  04 Nov 2011; Tim Harder <radhermit@gentoo.org> +coccinelle-1.0.0_rc7.ebuild,
+  +files/coccinelle-1.0.0_rc7-parallel-make.patch,
+  +files/coccinelle-1.0.0_rc7-pcre.patch,
+  +files/coccinelle-1.0.0_rc7-pcre-linking.patch:
+  Version bump (fixes bug #369343). Update to EAPI 4 and improve python support
+  (bug #324381).
 
   05 Oct 2011; Alexis Ballier <aballier@gentoo.org> coccinelle-0.2.5-r2.ebuild:
   remove ptex dep as it is going away
