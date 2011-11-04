@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-3.0.2.ebuild,v 1.3 2011/10/21 03:43:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-3.2.1.ebuild,v 1.1 2011/11/04 21:52:33 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -55,7 +55,6 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-lang/vala-0.11.6:0.12
 	>=app-text/gnome-doc-utils-0.20
 	>=dev-util/intltool-0.40
-	>=sys-devel/gettext-0.17
 	dev-util/pkgconfig
 	x11-proto/xf86vidmodeproto
 	app-text/docbook-xml-dtd:4.3
@@ -65,8 +64,15 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		VALAC=$(type -p valac-0.12)
 		$(use_enable introspection)
-		--disable-maintainer-mode
 		--disable-scrollkeeper
 		--disable-static"
 	DOCS="AUTHORS ChangeLog NEWS README"
+}
+
+src_compile() {
+	# Clutter-related sandbox violations when USE="doc introspection" and
+	# FEATURES="-userpriv" (see bug #385917).
+	# Work around the issue with the same horrible hack as in bug #385433.
+	DISPLAY="999invalid"
+	gnome2_src_compile
 }

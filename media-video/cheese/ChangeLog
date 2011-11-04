@@ -1,6 +1,13 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.52 2011/10/21 03:43:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.53 2011/11/04 21:52:33 tetromino Exp $
+
+*cheese-3.2.1 (04 Nov 2011)
+
+  04 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -cheese-3.0.2.ebuild, +cheese-3.2.1.ebuild:
+  Bump to 3.2.1 from the gnome overlay, drop old. Notable changes: UI
+  improvements, stability fixes.
 
   21 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> cheese-3.0.2.ebuild:
   Needs gst-plugins-jpeg for capturing still photos (bug #379649 comment 4).
