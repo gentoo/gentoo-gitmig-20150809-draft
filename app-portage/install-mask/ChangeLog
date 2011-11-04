@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/install-mask
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/install-mask/ChangeLog,v 1.1 2011/09/19 08:26:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/install-mask/ChangeLog,v 1.2 2011/11/04 20:04:50 mgorny Exp $
+
+*install-mask-0.0.2 (04 Nov 2011)
+
+  04 Nov 2011; Michał Górny <mgorny@gentoo.org> -install-mask-0.0.1.ebuild,
+  +install-mask-0.0.2.ebuild:
+  Version bump. The new version prints slotted atoms on --rebuild.
 
 *install-mask-0.0.1 (19 Sep 2011)
 
