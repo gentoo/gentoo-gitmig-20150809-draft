@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5869 2011/11/04 23:05:51 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5870 2011/11/04 23:51:31 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Remove entries for removed pkgs like xfce4-xfapplet-plugin and some
+  GTK+-1.2.x reverse dependencies.
 
   04 Nov 2011; Vlastimil Babka <caster@gentoo.org> package.mask:
   Unmask jdk-7 and jre-7 now that icedtea-7 is in tree.
