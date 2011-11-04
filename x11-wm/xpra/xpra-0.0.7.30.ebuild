@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.0.7.30.ebuild,v 1.1 2011/11/04 13:02:21 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.0.7.30.ebuild,v 1.2 2011/11/04 15:31:02 xmw Exp $
 
 EAPI=3
 
 PYTHON_DEPEND="2"
 RESTRICT_PYTHON_ABIS="2.4 2.5 3.*"
 SUPPORT_PYTHON_ABIS="1"
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="X Persistent Remote Apps (xpra) and Partitioning WM (parti) based on wimpiggy"
 HOMEPAGE="http://xpra.org/"
@@ -41,5 +41,9 @@ DEPEND="${COMMON_DEPEND}
 	server? ( dev-python/cython )"
 
 src_prepare() {
+	if ! use server; then
+		epatch disable-posix-server.patch
+	fi
+
 	$(PYTHON -2) make_constants_pxi.py wimpiggy/lowlevel/constants.txt wimpiggy/lowlevel/constants.pxi || die
 }
