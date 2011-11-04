@@ -1,6 +1,13 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.165 2011/10/29 23:52:45 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.166 2011/11/04 21:38:49 zmedico Exp $
+
+*calibre-0.8.24-r1 (04 Nov 2011)
+
+  04 Nov 2011; Zac Medico <zmedico@gentoo.org> +calibre-0.8.24-r1.ebuild,
+  -calibre-0.8.23.ebuild, -calibre-0.8.24.ebuild:
+  Bug 389515 - Substitute vulnerable suid calibre-mount-helper with udisks shell
+  script wrapper from debian, and remove vulnerable versions.
 
 *calibre-0.8.24 (29 Oct 2011)
 

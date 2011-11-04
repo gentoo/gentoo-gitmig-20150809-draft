@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.23.ebuild,v 1.1 2011/10/21 21:33:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.24-r1.ebuild,v 1.1 2011/11/04 21:38:49 zmedico Exp $
 
 EAPI=3
 PYTHON_DEPEND=2:2.7
@@ -10,7 +10,8 @@ inherit python distutils eutils fdo-mime bash-completion-r1 multilib
 
 DESCRIPTION="Ebook management application."
 HOMEPAGE="http://calibre-ebook.com/"
-SRC_URI="http://sourceforge.net/projects/calibre/files/${PV}/${P}.tar.gz"
+SRC_URI="http://sourceforge.net/projects/calibre/files/${PV}/${P}.tar.gz
+http://bazaar.launchpad.net/~calibre-packagers/calibre/debian/download/head:/calibremounthelper-20100617213106-931ymwfegqq1dxbt-1/calibre-mount-helper -> calibre-mount-helper-debian-20100617"
 
 LICENSE="GPL-2"
 
@@ -40,7 +41,8 @@ COMMON_DEPEND="
 	>=x11-misc/xdg-utils-1.0.2"
 
 RDEPEND="${COMMON_DEPEND}
-	>=dev-python/reportlab-2.1"
+	>=dev-python/reportlab-2.1
+	sys-fs/udisks"
 
 DEPEND="${COMMON_DEPEND}
 	>=dev-python/setuptools-0.6_rc5
@@ -120,6 +122,13 @@ src_install() {
 
 	grep -rlZ "${ED}" "${ED}" | xargs -0 sed -e "s:${D}:/:g" -i ||
 		die "failed to fix harcoded \$D in paths"
+
+	# Bug 389515 - Substitute vulnerable suid calibre-mount-helper
+	# with udisks shell script wrapper from debian.
+	rm "${ED}usr/bin/calibre-mount-helper" || die
+	exeinto /usr/bin || die
+	newexe "${DISTDIR}"/calibre-mount-helper-debian-20100617 \
+		calibre-mount-helper || die
 
 	find "${ED}"usr/share/calibre/man -type f -print0 | \
 		while read -r -d $'\0' ; do
