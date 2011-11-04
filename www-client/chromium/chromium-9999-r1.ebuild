@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.68 2011/11/02 04:32:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.69 2011/11/04 14:49:03 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -153,7 +153,7 @@ pkg_pretend() {
 		# bug #363907.
 		ERROR_PID_NS="PID_NS is required for sandbox to work"
 		ERROR_NET_NS="NET_NS is required for sandbox to work"
-		CONFIG_CHECK="PID_NS NET_NS"
+		CONFIG_CHECK="~PID_NS ~NET_NS"
 		check_extra_config
 	fi
 }

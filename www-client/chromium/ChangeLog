@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.485 2011/11/02 04:32:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.486 2011/11/04 14:49:03 phajdan.jr Exp $
+
+  04 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-16.0.912.21.ebuild, chromium-9999-r1.ebuild:
+  Make kernel checks non-fatal again, people don't like them being fatal.
 
   02 Nov 2011; Mike Gilbert <floppym@gentoo.org> chromium-16.0.912.21.ebuild,
   chromium-9999-r1.ebuild:
