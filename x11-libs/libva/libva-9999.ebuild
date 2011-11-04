@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-9999.ebuild,v 1.2 2011/07/29 01:10:12 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libva/libva-9999.ebuild,v 1.3 2011/11/04 13:04:33 aballier Exp $
 
 EAPI="3"
 
@@ -8,7 +8,7 @@ SCM=""
 if [ "${PV%9999}" != "${PV}" ] ; then # Live ebuild
 	SCM=git-2
 	EGIT_BRANCH=master
-	EGIT_REPO_URI="git://anongit.freedesktop.org/git/libva"
+	EGIT_REPO_URI="git://anongit.freedesktop.org/vaapi/libva"
 fi
 
 inherit autotools ${SCM} multilib
@@ -19,7 +19,7 @@ if [ "${PV%9999}" != "${PV}" ] ; then # Live ebuild
 	SRC_URI=""
 	S="${WORKDIR}/${PN}"
 else
-	SRC_URI="http://cgit.freedesktop.org/libva/snapshot/${P}.tar.bz2"
+	SRC_URI="http://cgit.freedesktop.org/vaapi/libva/snapshot/${P}.tar.bz2"
 fi
 
 LICENSE="MIT"
@@ -37,7 +37,6 @@ for x in ${VIDEO_CARDS}; do
 done
 
 RDEPEND=">=x11-libs/libdrm-2.4
-	video_cards_intel? ( >=x11-libs/libdrm-2.4.23[video_cards_intel] )
 	video_cards_dummy? ( sys-fs/udev )
 	x11-libs/libX11
 	x11-libs/libXext
@@ -47,7 +46,9 @@ RDEPEND=">=x11-libs/libdrm-2.4
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 PDEPEND="video_cards_nvidia? ( x11-libs/vdpau-video )
-	video_cards_fglrx? ( x11-libs/xvba-video )"
+	video_cards_fglrx? ( x11-libs/xvba-video )
+	video_cards_intel? ( x11-libs/libva-intel-driver )
+	"
 
 src_prepare() {
 	eautoreconf
@@ -58,7 +59,6 @@ src_configure() {
 		--with-drivers-path="${EPREFIX}/usr/$(get_libdir)/va/drivers" \
 		$(use_enable video_cards_dummy dummy-driver) \
 		$(use_enable video_cards_dummy dummy-backend) \
-		$(use_enable video_cards_intel i965-driver) \
 		$(use_enable opengl glx)
 }
 
