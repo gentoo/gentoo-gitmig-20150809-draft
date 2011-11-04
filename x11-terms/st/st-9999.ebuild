@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/st-9999.ebuild,v 1.1 2011/05/31 03:40:26 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/st/st-9999.ebuild,v 1.2 2011/11/04 13:32:06 xmw Exp $
 
 EAPI=3
 
@@ -19,6 +19,13 @@ IUSE=""
 RDEPEND="x11-libs/libX11"
 DEPEND="${RDEPEND}
 	sys-libs/ncurses"
+
+pkg_setup() {
+	elog "Please ensure an usable font is installed, like"
+	elog "    media-fonts/corefonts"
+	elog "    media-fonts/dejavu"
+	elog "    media-fonts/urw-fonts"
+}
 
 src_prepare() {
 	sed -e '/^CFLAGS/s:[[:space:]]-Wall[[:space:]]: :' \
