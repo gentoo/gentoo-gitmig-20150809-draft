@@ -1,5 +1,10 @@
 
 
+*torsocks-1.2 (04 Nov 2011)
+
+  04 Nov 2011; Anthony G. Basile <blueness@gentoo.org> +torsocks-1.2.ebuild:
+  Version bump
+
   18 Sep 2011; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
   Added no-herd to metadata.xml
 
