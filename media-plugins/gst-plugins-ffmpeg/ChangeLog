@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.131 2011/11/04 06:21:44 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.132 2011/11/04 09:44:04 ford_prefect Exp $
+
+*gst-plugins-ffmpeg-0.10.13-r1 (04 Nov 2011)
+
+  04 Nov 2011; Arun Raghavan <ford_prefect@gentoo.org>
+  -gst-plugins-ffmpeg-0.10.13.ebuild, +gst-plugins-ffmpeg-0.10.13-r1.ebuild:
+  For hardened systems, disable mmx and mmx2 optimisations, since these
+  introduce TEXTRELs. (bug #389471)
 
 *gst-plugins-ffmpeg-0.10.13 (04 Nov 2011)
 

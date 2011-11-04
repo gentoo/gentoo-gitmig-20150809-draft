@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.13.ebuild,v 1.1 2011/11/04 06:21:44 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/gst-plugins-ffmpeg-0.10.13-r1.ebuild,v 1.1 2011/11/04 09:44:04 ford_prefect Exp $
 
 EAPI=1
 
@@ -21,7 +21,7 @@ SRC_URI="http://gstreamer.freedesktop.org/src/${MY_PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="+orc"
+IUSE="+orc hardened"
 
 S=${WORKDIR}/${MY_P}
 
@@ -34,7 +34,14 @@ DEPEND="${RDEPEND}
 src_compile() {
 	append-flags -fno-strict-aliasing
 
-	econf $(use_enable orc)
+	if ! use hardened; then
+		econf $(use_enable orc)
+	else
+		# On hardened, we need to disable mmx and mmx2 to avoid TEXTRELs
+		econf $(use_enable orc) \
+			--with-ffmpeg-extra-configure='--disable-mmx --disable-mmx2'
+	fi
+
 	emake || die "emake failed."
 }
 
