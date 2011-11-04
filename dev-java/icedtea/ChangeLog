@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.37 2011/11/04 11:19:30 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.38 2011/11/04 14:59:46 caster Exp $
+
+  04 Nov 2011; Vlastimil Babka <caster@gentoo.org> icedtea-7.2.0-r1.ebuild:
+  Add ~x86 keyword.
 
 *icedtea-7.2.0-r1 (04 Nov 2011)
 
