@@ -4,6 +4,10 @@
 <maintainer>
  <email>vapier@gentoo.org</email>
 </maintainer>
+<maintainer>
+	<email>floppym@gentoo.org</email>
+	<name>Mike Gilbert</name>
+</maintainer>
 <use>
 	<flag name="transcode">Install optional dependencies for transcoding support via media-video/mplayer</flag>
 	<flag name="tsmuxer">Install optional dependencies for transcoding support via media-video/tsmuxer</flag>
