@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/synaptiks
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.19 2011/10/18 22:12:54 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/synaptiks/ChangeLog,v 1.20 2011/11/04 23:17:44 dilfridge Exp $
+
+  04 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  synaptiks-0.8.0.ebuild:
+  Use kde4-base.eclass to automatically handle handbook useflag, bug 387421
 
   18 Oct 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   synaptiks-0.8.0.ebuild:
