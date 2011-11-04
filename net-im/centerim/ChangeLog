@@ -1,6 +1,11 @@
 # ChangeLog for net-im/centerim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/ChangeLog,v 1.47 2011/03/12 13:29:58 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/ChangeLog,v 1.48 2011/11/04 18:34:59 xarthisius Exp $
+
+  04 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> centerim-4.22.10.ebuild,
+  +files/centerim-4.22.10-gcc46.patch:
+  non-maintainer commit: fix building with gcc-4.6 wrt #363017 by Diego Elio
+  Petteno
 
   12 Mar 2011; Sven Wegener <swegener@gentoo.org>
   -centerim-4.22.7-r1.ebuild,

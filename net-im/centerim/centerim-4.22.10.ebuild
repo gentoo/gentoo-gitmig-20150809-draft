@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.10.ebuild,v 1.2 2011/02/26 19:41:09 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.10.ebuild,v 1.3 2011/11/04 18:34:59 xarthisius Exp $
 
 EAPI="2"
+
+inherit eutils
 
 PROTOCOL_IUSE="+aim gadu +icq +irc +jabber lj +msn rss +yahoo"
 IUSE="${PROTOCOL_IUSE} bidi nls ssl crypt jpeg otr"
@@ -87,7 +89,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	default
+	epatch "${FILESDIR}"/${P}-gcc46.patch
 
 	# Don't execute git commands, bug #228151
 	cat >"${S}"/misc/git-version-gen <<-EOF
