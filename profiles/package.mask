@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13199 2011/11/03 16:23:10 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13200 2011/11/04 12:13:55 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexis Ballier <aballier@gentoo.org> (04 Nov 2011)
+# Pre-releases of vlc 1.2. Mask it until final version is out
+>=media-video/vlc-1.2_pre
 
 # Mike Gilbert <floppym@gentoo.org> (03 Nov 2011)
 # Dev channel releases are only for people who are developers or want more
