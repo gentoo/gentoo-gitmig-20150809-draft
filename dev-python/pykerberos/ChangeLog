@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pykerberos
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykerberos/ChangeLog,v 1.1 2011/11/04 20:58:12 maksbotan Exp $
+
+*pykerberos-1.1 (04 Nov 2011)
+
+  04 Nov 2011; Maxim Koltsov <maksbotan@gentoo.org> +pykerberos-1.1.ebuild,
+  +files/PyKerberos-delegation.patch, +metadata.xml:
+  Add dev-python/pykerberos-1.1, bug #388965. Thanks to slepnoga.
+
