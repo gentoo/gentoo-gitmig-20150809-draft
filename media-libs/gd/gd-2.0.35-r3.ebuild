@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r3.ebuild,v 1.9 2011/10/30 18:41:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r3.ebuild,v 1.10 2011/11/05 18:24:22 armin76 Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://libgd.org/releases/${P}.tar.bz2"
 
 LICENSE="|| ( as-is BSD )"
 SLOT="2"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="fontconfig jpeg png static-libs truetype xpm zlib"
 
 RDEPEND="fontconfig? ( media-libs/fontconfig )
