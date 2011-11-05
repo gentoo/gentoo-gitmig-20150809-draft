@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.200 2011/11/05 10:10:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.201 2011/11/05 23:37:42 caster Exp $
+
+  05 Nov 2011; Vlastimil Babka <caster@gentoo.org>
+  -sun-jre-bin-1.6.0.26.ebuild, -sun-jre-bin-1.6.0.27.ebuild,
+  sun-jre-bin-1.6.0.29.ebuild:
+  Remove old. Change icedtea6-bin to icedtea-bin.
 
   05 Nov 2011; Markos Chandras <hwoarang@gentoo.org>
   sun-jre-bin-1.6.0.29.ebuild:
