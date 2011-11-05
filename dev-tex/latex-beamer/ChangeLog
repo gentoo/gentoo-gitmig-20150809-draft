@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex-beamer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.79 2011/10/29 19:41:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-beamer/ChangeLog,v 1.80 2011/11/05 19:03:34 armin76 Exp $
+
+  05 Nov 2011; Raúl Porcel <armin76@gentoo.org> latex-beamer-3.11.ebuild:
+  alpha/ia64/s390/sh/sparc stable wrt #387573
 
   29 Oct 2011; Markus Meier <maekke@gentoo.org> latex-beamer-3.11.ebuild:
   arm stable, bug #387573
