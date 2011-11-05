@@ -1,6 +1,14 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.103 2011/08/19 11:33:49 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.104 2011/11/05 05:14:38 tetromino Exp $
+
+*orca-3.2.1 (05 Nov 2011)
+
+  05 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org> -orca-3.0.3.ebuild,
+  +orca-3.2.1.ebuild:
+  Bump to 3.2.1 from the gnome overlay, drop old. Notable changes: now uses
+  at-spi2-core and pygobject-3. Dropped alpha, ia64, ppc, ppc64, sparc keywords
+  due to at-spi2-core dependency.
 
   19 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> orca-2.32.1.ebuild:
   Fix slot dep on at-spi, etc.
