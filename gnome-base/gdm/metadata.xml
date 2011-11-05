@@ -3,10 +3,17 @@
 <pkgmetadata>
 <herd>gnome</herd>
 <use>
-	<flag name="dmx">Enables Distributed Multihead X (DMX) support</flag>
-	<flag name="remote">Enables support for secure remote connections</flag>
 	<flag name="consolekit">Allow proper handling of removable media according
 		to who is actually present on the machine.</flag>
+	<flag name="dmx">Enables Distributed Multihead X (DMX) support</flag>
+	<flag name="fprint">Enables experimental fingerprint authentication using
+		<pkg>sys-auth/fprintd</pkg></flag>
+	<flag name="gnome-shell">Enables a greeter based on GNOME Shell (uses
+		OpenGL)</flag>
+	<flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>
+		for introspection</flag>
+	<flag name="remote">Enables support for secure remote connections</flag>
+	<flag name="smartcard">Enables experimental smartcard authentication</flag>
 	<flag name="xklavier">Use <pkg>x11-libs/libxklavier</pkg> for keyboard
 		management</flag>
 </use>
