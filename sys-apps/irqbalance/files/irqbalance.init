@@ -1,23 +1,25 @@
 #!/sbin/runscript
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/files/irqbalance.init,v 1.3 2007/01/21 19:07:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/files/irqbalance.init,v 1.4 2011/11/05 17:59:25 vapier Exp $
 
 depend() {
 	need localmount
 	after bootmisc
 }
 
+ssd() {
+	start-stop-daemon --exec /sbin/irqbalance "$@"
+}
+
 start() {
 	ebegin "Starting irqbalance"
-	start-stop-daemon --start --exec /sbin/irqbalance \
-	        --pidfile /var/run/irqbalance.pid
+	ssd --start -- ${IRQBALANCE_OPTS}
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping irqbalance"
-	start-stop-daemon --stop --exec /sbin/irqbalance \
-		--pidfile /var/run/irqbalance.pid
+	ssd --stop
 	eend $?
 }
