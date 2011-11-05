@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.29.ebuild,v 1.4 2011/10/30 14:17:41 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.6.0.29.ebuild,v 1.5 2011/11/05 10:08:24 hwoarang Exp $
 
 EAPI="4"
 
@@ -21,7 +21,7 @@ SRC_URI="x86? ( ${X86_AT} )
 	amd64? ( ${AMD64_AT} )"
 
 LICENSE="Oracle-BCLA-JavaSE"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 SLOT="1.6"
 IUSE="X alsa derby doc examples jce nsplugin"
 
