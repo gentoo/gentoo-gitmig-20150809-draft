@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aqsis/aqsis-1.6.0.ebuild,v 1.4 2011/11/05 08:40:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aqsis/aqsis-1.6.0.ebuild,v 1.5 2011/11/05 08:45:07 ssuominen Exp $
 
 EAPI=2
 
@@ -32,7 +32,7 @@ RDEPEND="
 	>=dev-libs/boost-1.34.0
 	>=media-libs/tiff-3.7.1
 	>=sys-libs/zlib-1.1.4
-	fltk? ( >=x11-libs/fltk-1.1.10-r2:1[threads] )
+	fltk? ( >=x11-libs/fltk-1.1.10-r2:1 )
 	openexr? ( media-libs/openexr )"
 
 DEPEND="
