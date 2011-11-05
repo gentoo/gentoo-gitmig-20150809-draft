@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXCalibrate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXCalibrate/ChangeLog,v 1.19 2011/01/06 20:12:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXCalibrate/ChangeLog,v 1.20 2011/11/05 17:04:03 ssuominen Exp $
+
+  05 Nov 2011; Samuli Suominen <ssuominen@gentoo.org>
+  libXCalibrate-0.1_pre20081207-r1.ebuild:
+  Use xorg-2.eclass in order to support USE="static-libs" and to remove useless
+  libtool archive.
 
   06 Jan 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -libXCalibrate-0.1_pre20081207.ebuild:
