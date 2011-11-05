@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/denyhosts
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.44 2011/09/13 18:18:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/ChangeLog,v 1.45 2011/11/05 07:35:46 lxnay Exp $
+
+  05 Nov 2011; Fabio Erculiani <lxnay@gentoo.org> denyhosts-2.6-r4.ebuild:
+  PYTHON_DEPEND must be declared before inherit
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #225633
