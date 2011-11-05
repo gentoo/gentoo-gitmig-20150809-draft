@@ -1,6 +1,6 @@
 # Copyright 2010-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-4.1.ebuild,v 1.5 2011/11/05 16:30:56 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-4.2.ebuild,v 1.1 2011/11/05 16:30:56 grobian Exp $
 
 EAPI="3"
 
@@ -8,8 +8,8 @@ inherit eutils flag-o-matic toolchain-funcs
 
 RESTRICT="test" # the test suite will test what's installed.
 
-LD64=ld64-123.2.1
-CCTOOLS=cctools-806
+LD64=ld64-127.2
+CCTOOLS=cctools-809
 LIBUNWIND=libunwind-30
 DYLD=dyld-195.5
 # http://lists.apple.com/archives/Darwin-dev/2009/Sep/msg00025.html
@@ -64,7 +64,7 @@ src_prepare() {
 	cp "${FILESDIR}"/${LIBUNWIND}-Makefile Makefile
 
 	cd "${S}"/${LD64}/src
-	cp "${FILESDIR}"/${LD64%.1}-Makefile Makefile
+	cp "${FILESDIR}"/ld64-123.2-Makefile Makefile
 	epatch "${FILESDIR}"/${LD64}-lto.patch
 
 	ln -s ../../${CCTOOLS}/include
@@ -88,9 +88,9 @@ src_prepare() {
 	local VER_STR="\"@(#)PROGRAM:ld  PROJECT:${LD64} (Gentoo ${PN}-${PVR})\\n\""
 	echo "char ldVersionString[] = ${VER_STR};" > version.cpp
 
-	epatch "${FILESDIR}"/${LD64%.1}-debug-backtrace.patch
+	epatch "${FILESDIR}"/ld64-123.2-debug-backtrace.patch
 	if [[ ${CHOST} == powerpc*-darwin* ]] ; then
-		epatch "${FILESDIR}"/${LD64%.1}-darwin8-no-mlong-branch-warning.patch
+		epatch "${FILESDIR}"/ld64-123.2.1-darwin8-no-mlong-branch-warning.patch
 		sed -i -e '/#include <mach-o\/loader.h>/a\#include <mach/i386/thread_status.h>' \
 			ld/HeaderAndLoadCommands.hpp || die
 	fi
@@ -100,12 +100,13 @@ src_prepare() {
 
 	cd "${S}"/${CCTOOLS}
 	epatch "${FILESDIR}"/${PN}-4.0-as.patch
-	epatch "${FILESDIR}"/${PN}-4.0-as-dir.patch
+	epatch "${FILESDIR}"/${PN}-4.2-as-dir.patch
 	epatch "${FILESDIR}"/${PN}-3.2.3-ranlib.patch
 	epatch "${FILESDIR}"/${PN}-3.1.1-libtool-ranlib.patch
 	epatch "${FILESDIR}"/${PN}-3.1.1-nmedit.patch
 	epatch "${FILESDIR}"/${PN}-3.1.1-no-headers.patch
 	epatch "${FILESDIR}"/${PN}-4.0-no-oss-dir.patch
+	epatch "${FILESDIR}"/${PN}-4.2-lto.patch
 
 	# clean up test suite
 	cd "${S}"/${LD64}
