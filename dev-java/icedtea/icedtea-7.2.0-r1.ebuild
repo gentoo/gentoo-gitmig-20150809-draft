@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.0-r1.ebuild,v 1.3 2011/11/05 05:14:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.0-r1.ebuild,v 1.4 2011/11/05 23:35:28 caster Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -57,7 +57,7 @@ RDEPEND=">=net-print/cups-1.2.12
 	 virtual/jpeg
 	 >=media-libs/libpng-1.2
 	 >=media-libs/giflib-4.1.6
-	 >=media-libs/lcms-2.2
+	 media-libs/lcms:2
 	 >=sys-libs/zlib-1.2.3
 	 x11-proto/inputproto
 	 x11-proto/xineramaproto
