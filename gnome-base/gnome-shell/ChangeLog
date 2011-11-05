@@ -1,6 +1,17 @@
 # ChangeLog for gnome-base/gnome-shell
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/ChangeLog,v 1.2 2011/10/21 02:22:11 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/ChangeLog,v 1.3 2011/11/05 07:51:56 tetromino Exp $
+
+*gnome-shell-3.2.1-r1 (05 Nov 2011)
+
+  05 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-shell-3.2.1-r1.ebuild,
+  +files/gnome-shell-3.2.1-messageTray-reduce-fade.patch,
+  +files/gnome-shell-3.2.1-theme-lighten-sent-message.patch:
+  Bump to 3.2.1 from the gnome overlay. Notable changes: built-in (and
+  non-optional) networkmanager UI, telepathy chat integration, removable media
+  UI, completely overhauled extension system, login-screen mode for gdm, and
+  many improvements and bugfixes.
 
   21 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-shell-3.0.2-r1.ebuild:
