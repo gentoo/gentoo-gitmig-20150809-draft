@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iodine/iodine-0.6.0_rc1.ebuild,v 1.2 2011/06/07 20:25:29 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iodine/iodine-0.6.0_rc1.ebuild,v 1.3 2011/11/05 22:38:07 robbat2 Exp $
 
 inherit linux-info eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="IP over DNS tunnel"
 HOMEPAGE="http://code.kryo.se/iodine/"
 SRC_URI="http://code.kryo.se/${PN}/${MY_P}.tar.gz"
 
-CONFIG_CHECK="TUN"
+CONFIG_CHECK="~TUN"
 
 LICENSE="ISC"
 SLOT="0"
