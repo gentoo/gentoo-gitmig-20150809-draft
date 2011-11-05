@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-2.2.0.ebuild,v 1.2 2011/10/16 11:01:42 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-2.2.0-r1.ebuild,v 1.1 2011/11/05 19:26:07 dilfridge Exp $
 
 EAPI=4
 
@@ -71,6 +71,7 @@ S=${WORKDIR}/${MY_P}/extra/${PN}
 PATCHES=(
 	"${FILESDIR}/${PN}-1.7.0-expoblending.patch"
 	"${FILESDIR}/${PN}-2.0.0-tests.patch"
+	"${FILESDIR}/${PN}-2.2.0-panorama.patch"
 )
 
 src_prepare() {
@@ -110,6 +111,7 @@ src_configure() {
 		$(cmake-utils_use_with crypt QCA2)
 		$(cmake-utils_use_with scanner Sane)
 		$(cmake-utils_use_enable expoblending)
+		$(cmake-utils_use_enable panorama)
 	)
 
 	kde4-base_src_configure
