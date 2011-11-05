@@ -1,6 +1,13 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.205 2011/09/03 02:02:28 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.206 2011/11/05 21:30:54 nerdboy Exp $
+
+*doxygen-1.7.5.1 (05 Nov 2011)
+
+  05 Nov 2011; Steve Arnold <nerdboy@gentoo.org> +doxygen-1.7.5.1.ebuild,
+  +files/doxygen-1.7.5.1-dot-eps.patch:
+  Updated to latest upstream release, removed external Tcl patch (see bug
+  #388863).  Thanks to Philipp for the updated no-dot patch.
 
   03 Sep 2011; Steve Arnold <nerdboy@gentoo.org> doxygen-1.7.4.ebuild:
   Newer (and cleaner) version using more of the qt4-r2 functionality.
