@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.223 2011/10/30 12:39:15 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.224 2011/11/05 11:03:47 polynomial-c Exp $
+
+*nss-3.13.1 (05 Nov 2011)
+
+  05 Nov 2011; Lars Wendler <polynomial-c@gentoo.org> -nss-3.12.8.ebuild,
+  -nss-3.12.9.ebuild, -nss-3.12.11.ebuild, +nss-3.13.1.ebuild,
+  +files/nss-3.13.1-solaris-gcc.patch:
+  Version bump. Removed old.
 
   30 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> nss-3.12.11-r1.ebuild:
   x86 stable wrt bug #388045
