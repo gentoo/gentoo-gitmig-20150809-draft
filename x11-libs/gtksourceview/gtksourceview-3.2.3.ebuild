@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-3.0.5-r1.ebuild,v 1.1 2011/08/26 21:49:45 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-3.2.3.ebuild,v 1.1 2011/11/05 19:32:11 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -16,7 +16,6 @@ SLOT="3.0"
 IUSE="doc glade +introspection"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-solaris"
 
-# Note: has native OSX support, prefix teams, attack!
 RDEPEND=">=x11-libs/gtk+-3.0:3[introspection?]
 	>=dev-libs/libxml2-2.6:2
 	>=dev-libs/glib-2.28:2
@@ -32,21 +31,20 @@ pkg_setup() {
 	DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README"
 	G2CONF="${G2CONF}
 		--disable-deprecations
-		--disable-maintainer-mode
 		--enable-providers
 		$(use_enable glade glade-catalog)
 		$(use_enable introspection)"
 }
 
 src_prepare() {
+	gnome2_src_prepare
+
 	sed -i -e 's:--warn-all::' gtksourceview/Makefile.in || die
 
 	# Skip broken test until upstream bug #621383 is solved
 	sed -e "/guess-language/d" \
 		-e "/get-language/d" \
 		-i tests/test-languagemanager.c || die
-
-	gnome2_src_prepare
 }
 
 src_test() {
