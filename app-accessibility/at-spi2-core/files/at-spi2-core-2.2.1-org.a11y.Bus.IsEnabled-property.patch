@@ -1,0 +1,27 @@
+From 166209e13b1eae0b6b239c868ae532702032831f Mon Sep 17 00:00:00 2001
+From: Mike Gorse <mgorse@novell.com>
+Date: Fri, 21 Oct 2011 14:25:30 -0500
+Subject: [PATCH] Fix return type of org.a11y.Bus.IsEnabled property
+
+org.a11y.Bus.Enabled was returning a variant struct with a bool, where
+it should directly be returning a bool in the variant.
+---
+ bus/at-spi-bus-launcher.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/bus/at-spi-bus-launcher.c b/bus/at-spi-bus-launcher.c
+index 3133a39..290ccbd 100644
+--- a/bus/at-spi-bus-launcher.c
++++ b/bus/at-spi-bus-launcher.c
+@@ -247,7 +247,7 @@ handle_get_property  (GDBusConnection       *connection,
+ 
+   if (g_strcmp0 (property_name, "IsEnabled") == 0)
+     {
+-      return g_variant_new ("(b)", app->a11y_enabled);
++      return g_variant_new ("b", app->a11y_enabled);
+     }
+   else
+     return NULL;
+-- 
+1.7.7.2
+
