@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwimax/madwimax-0.1.1.ebuild,v 1.2 2011/10/02 20:04:56 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwimax/madwimax-0.1.1.ebuild,v 1.3 2011/11/05 22:43:42 robbat2 Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ RDEPEND="virtual/libusb:1"
 DEPEND="${RDEPEND}
 		doc? ( app-text/asciidoc
 			app-text/docbook2X )"
-CONFIG_CHECK="TUN"
+CONFIG_CHECK="~TUN"
 
 src_prepare() {
 	sed -i -e "s:\(for name in docbook2\)x-man:\1man\.pl:" configure.ac || die
