@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/grantlee-0.1.8.ebuild,v 1.2 2011/06/18 16:35:41 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/grantlee/grantlee-0.1.8.ebuild,v 1.3 2011/11/05 19:32:07 xarthisius Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gitorious.org/grantlee/pages/Home"
 SRC_URI="http://www.loegria.net/grantlee/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 SLOT="0"
 IUSE="debug doc test"
 
