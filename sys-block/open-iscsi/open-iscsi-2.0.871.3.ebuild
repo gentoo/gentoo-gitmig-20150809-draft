@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.871.3.ebuild,v 1.6 2011/06/19 13:56:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.871.3.ebuild,v 1.7 2011/11/05 23:03:00 robbat2 Exp $
 
 EAPI=2
 inherit versionator linux-info eutils flag-o-matic
@@ -31,7 +31,7 @@ pkg_setup() {
 	CONFIG_CHECK_MODULES="SCSI_ISCSI_ATTRS ISCSI_TCP"
 	if linux_config_exists; then
 		for module in ${CONFIG_CHECK_MODULES}; do
-			linux_chkconfig_module ${module} || die "${module} needs to be built as module (builtin doesn't work)"
+			linux_chkconfig_module ${module} || ewarn "${module} needs to be built as module (builtin doesn't work)"
 		done
 	fi
 }

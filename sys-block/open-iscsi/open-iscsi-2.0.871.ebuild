@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.871.ebuild,v 1.3 2011/06/13 01:47:26 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/open-iscsi/open-iscsi-2.0.871.ebuild,v 1.4 2011/11/05 23:03:00 robbat2 Exp $
 
 inherit versionator linux-mod eutils flag-o-matic
 
@@ -36,7 +36,7 @@ pkg_setup() {
 	# If there's a new release, check whether this is still valid!
 
 	for module in ${CONFIG_CHECK_MODULES}; do
-		linux_chkconfig_module ${module} || die "${module} needs to be built as module (builtin doesn't work)"
+		linux_chkconfig_module ${module} || ewarn "${module} needs to be built as module (builtin doesn't work)"
 	done
 }
 
