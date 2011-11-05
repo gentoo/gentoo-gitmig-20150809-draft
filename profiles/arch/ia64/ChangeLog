@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.114 2011/11/03 18:26:15 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.115 2011/11/05 20:58:31 armin76 Exp $
+
+  05 Nov 2011; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  Package.use.mask dev-libs/libpcre jit since it isn't supported on this arch
 
   03 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   p.use.masking gnome-extra/gnome-media[aac,mp3,twolame] due to missing
