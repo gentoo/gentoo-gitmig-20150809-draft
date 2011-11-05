@@ -1,12 +1,13 @@
-Index: data/lightdm.conf
+Index: lightdm-1.0.6/data/lightdm.conf
 ===================================================================
---- data.orig/lightdm.conf
-+++ data/lightdm.conf
-@@ -25,6 +25,7 @@
- #cache-directory=/var/cache/lightdm
- #xsessions-directory=/usr/share/xsessions
- #xgreeters-directory=/usr/share/xgreeters
+--- lightdm-1.0.6.orig/data/lightdm.conf
++++ lightdm-1.0.6/data/lightdm.conf
+@@ -65,7 +65,7 @@
+ #user-session=default
+ #allow-guest=true
+ #guest-session=UNIMPLEMENTED
+-#session-wrapper=lightdm-session
 +session-wrapper=/etc/lightdm/Xsession
- 
- #
- # Seat defaults
+ #display-setup-script=
+ #greeter-setup-script=
+ #session-setup-script=
