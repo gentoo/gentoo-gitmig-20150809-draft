@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.78 2011/11/04 21:41:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.79 2011/11/05 20:35:34 ulm Exp $
 
 # Please report bugs or other requests at bugs.gentoo.org and assign to
 # licenses@gentoo.org
@@ -9,7 +9,7 @@
 # http://www.gentoo.org/proj/en/glep/glep-0023.html
 
 # http://www.fsf.org/licensing/licenses/
-GPL-COMPATIBLE AGPL-3 Apache-2.0 Artistic-2 as-is Boost-1.0 BSD BSD-2 CeCILL-2 Clarified-Artistic DB FTL gcc-runtime-library-exception-3.1 GPL-1 GPL-2 GPL-2-with-font-exception GPL-2-with-Linden-Lab-FLOSS-exception GPL-2-with-MySQL-FLOSS-exception GPL-3 GPL-3-with-font-exception ISC LGPL-2 LGPL-2.1 LGPL-2.1-FPC LGPL-3 libgcc libstdc++ MIT OPENLDAP OracleDB PSF-2 PSF-2.2 PSF-2.3 PSF-2.4 public-domain PYTHON Ruby SGI-B-2.0 tanuki-community unicode UoI-NCSA vim W3C WTFPL-2 ZLIB ZPL zpaq
+GPL-COMPATIBLE AGPL-3 Apache-2.0 Artistic-2 as-is Boost-1.0 BSD BSD-2 CeCILL-2 Clarified-Artistic DB FTL gcc-runtime-library-exception-3.1 GPL-1 GPL-2 GPL-2-with-font-exception GPL-2-with-Linden-Lab-FLOSS-exception GPL-2-with-MySQL-FLOSS-exception GPL-3 GPL-3-with-font-exception ISC LGPL-2 LGPL-2.1 LGPL-2.1-FPC LGPL-3 libgcc libstdc++ MIT OPENLDAP OracleDB PSF-2 PSF-2.2 PSF-2.3 PSF-2.4 public-domain PYTHON Ruby SGI-B-2.0 tanuki-community unicode UoI-NCSA vim W3C WTFPL-2 ZLIB ZPL
 
 FSF-APPROVED @GPL-COMPATIBLE AFL-2.0 AFL-2.1 AFL-3.0 Apache-1.1 APSL-2 BitTorrent BSD-4 CDDL CNRI CPL-1.0 EPL-1.0 IBM LPPL-1.2 MPL-1.0 MPL-1.1 Ms-PL NPL-1.1 openssl OSL-1.1 OSL-2.0 OSL-2.1 PHP-3.01 QPL QPL-1.0 SPL
 
@@ -23,7 +23,7 @@ OSI-APPROVED AFL-3.0 Apache-2.0 APL-1.0 Artistic Artistic-2 Boost-1.0 BSD BSD-2 
 # Licenses in this list should NOT appear directly or indirectly in @FSF-APPROVED or @OSI-APPROVED
 # TODO: maybe add a category for BSD-alike MISC-FREE licenses for easy seperation?
 # BSD-4 alikes: dom4j FastCGI icu jaxen JDOM saxpath
-MISC-FREE Allegro ANTLR bea.ri.jsr173 BEER-WARE BZIP2 CC0-1.0-Universal CDDL-Schily CMake CPL-0.5 CRACKLIB cryptopp dom4j eGenixPublic-1.1 ElementTree Emacs FastCGI FLEX FLTK FVWM gmtp gnuplot GPL-2-with-exceptions GPL-2-with-linking-exception gsm HTML-Tidy iASL icu IDPL imagemagick Info-ZIP JamesClark JasPer2.0 jaxen JDOM JNIC kilgard LLGPL-2.1 LPPL-1.3 LPPL-1.3b LPPL-1.3c lsof MaxMind NCSA-HDF No-Problem-Bugroff OpenSoftware otter PBZIP2 perforce PHP-2.02 PHP-3 POSTGRESQL Princeton pysqlite RSA-MD4 RSA-MD5 saxpath Scintilla Sendmail SMAIL Subversion tcp_wrappers_license TeX w3m wxWinLL-3 Xdebug ZSH
+MISC-FREE Allegro ANTLR bea.ri.jsr173 BEER-WARE BZIP2 CC0-1.0-Universal CDDL-Schily CMake CPL-0.5 CRACKLIB cryptopp dom4j eGenixPublic-1.1 ElementTree Emacs FastCGI FLEX FLTK FVWM gmtp gnuplot GPL-2-with-exceptions GPL-2-with-linking-exception gsm HTML-Tidy iASL icu IDPL imagemagick Info-ZIP JamesClark JasPer2.0 jaxen JDOM JNIC kilgard LLGPL-2.1 LPPL-1.3 LPPL-1.3b LPPL-1.3c lsof MaxMind NCSA-HDF No-Problem-Bugroff OpenSoftware otter PBZIP2 perforce PHP-2.02 PHP-3 POSTGRESQL Princeton pysqlite RSA-MD4 RSA-MD5 saxpath Scintilla Sendmail SMAIL Subversion tcp_wrappers_license TeX w3m wxWinLL-3 Xdebug zpaq ZSH
 # The following are NOT valid in @MISC-FREE:
 # arj - usage restrictions
 # freedist - Doesn't grant the right to do modifications.
