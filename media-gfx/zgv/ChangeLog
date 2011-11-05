@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/zgv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zgv/ChangeLog,v 1.18 2011/02/28 17:49:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zgv/ChangeLog,v 1.19 2011/11/05 06:54:22 ssuominen Exp $
+
+  05 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> zgv-5.9.ebuild,
+  +files/zgv-5.9-libpng15.patch:
+  Fix building with libpng15 wrt #389591 by Navid Zamani
 
   28 Feb 2011; Samuli Suominen <ssuominen@gentoo.org> zgv-5.9.ebuild:
   Use virtual/jpeg.
