@@ -1,6 +1,9 @@
 # ChangeLog for virtual/libstdc++
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libstdc++/ChangeLog,v 1.16 2010/01/11 11:05:59 ulm Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/libstdc++/ChangeLog,v 1.17 2011/11/05 16:58:32 vapier Exp $
+
+  05 Nov 2011; Mike Frysinger <vapier@gentoo.org> libstdc++-3.3.ebuild:
+  Add arm love #389563 by Norman Shulman.
 
   11 Jan 2010; Ulrich Mueller <ulm@gentoo.org> libstdc++-3.3.ebuild:
   Set empty HOMEPAGE and LICENSE.
