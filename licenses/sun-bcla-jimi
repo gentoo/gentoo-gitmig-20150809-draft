@@ -1,11 +1,11 @@
-Sun Microsystems, Inc. 
+Sun Microsystems, Inc.
 Binary Code License Agreement
 
 READ THE TERMS OF THIS AGREEMENT AND ANY PROVIDED SUPPLEMENTAL LICENSE TERMS (COLLECTIVELY "AGREEMENT") CAREFULLY BEFORE DOWNLOADING OR USING THE SOFTWARE. BY DOWNLOADING OR USING THE SOFTWARE, YOU AGREE TO THE TERMS OF THIS AGREEMENT. IF YOU DO NOT AGREE TO ALL THESE TERMS, YOU ARE NOT AUTHORIZED TO DOWNLOAD OR USE THE SOFTWARE IN ANY MANNER.
 
 1. LICENSE TO USE.  Sun grants you a non-exclusive and non-transferable license for the internal use only, for the accompanying software and documentation (collectively "Software"). This is a one time code drop and will not be updated or otherwise supported by Sun.
 
-2. RESTRICTIONS Software is confidential and copyrighted. Title to Software and all associated intellectual property rights is retained by Sun and/or its licensors. Except as specifically authorized in any Supplemental License Terms, you may not make copies of Software, other than a single copy of Software for archival purposes. Unless enforcement is prohibited by applicable law, you may not modify, decompile, reverse engineer Software. 
+2. RESTRICTIONS Software is confidential and copyrighted. Title to Software and all associated intellectual property rights is retained by Sun and/or its licensors. Except as specifically authorized in any Supplemental License Terms, you may not make copies of Software, other than a single copy of Software for archival purposes. Unless enforcement is prohibited by applicable law, you may not modify, decompile, reverse engineer Software.
 
 3. LIMITED WARRANTY. Sun warrants to you that for a period of ninety (90) days from the date of purchase, as evidenced by a copy of the receipt, the media on which Software is furnished (if any) will be free of defects in materials and workmanship under normal use. Except for the foregoing, Software is provided "AS IS". Your exclusive remedy and Sun's entire liability under this limited warranty will be at Sun's option to replace Software media or refund the fee paid for Software.
 
@@ -35,7 +35,7 @@ SUPPLEMENTAL LICENSE TERMS
 
 These supplemental terms ("Supplement") add to the terms of the Binary Code License Agreement ("Agreement"). Capitalized terms not defined herein shall have the same meanings ascribed to them in the Agreement. The Supplement terms shall supersede any inconsistent or conflicting terms in the Agreement.
 
-1. Limited License Grant. 
+1. Limited License Grant.
 
 a. Software Development License. Subject to your obligation to indemnify Sun pursuant to Section 3 below, Sun grants to you a non-exclusive, non-transferable limited license to use the Software without fee for evaluation of the Software and for development of Java(TM) applets and applications provided that you may not re-distribute the Software in whole or in part, except as provided in Section 1.b below. The Software may contain source code which is provided for reference purposes only, and may not be modified (except for the purpose of correcting errors) or redistributed.
 
@@ -44,9 +44,6 @@ specified by Sun in any class file naming convention.
 
  2. Java Platform Interface. In the event that Licensee creates an additional API(s) which: (i) extends the functionality of a Java Environment; and, (ii) is exposed to third party software developers for the purpose of developing additional software which invokes such additional API, Licensee must promptly publish broadly an accurate specification for such API for free use by all developers.
 
-3.Indemnity to Sun. As a condition precedent to each license grant in this Agreement, you agree to indemnify, hold harmless, and defend Sun and its licensors from and against any and all claims, lawsuits, liabilities, demands and expenses (including attorneys' fees), that arise or result from the use or distribution of the Software or the Program, including without limitation, those brought by Unisys Corporation, its successors and assigns, with respect to U.S. Patent Number 4,558,302 and all foreign counterparts thereto which Unisys Corporation may now have or acquire in the future (the "LZW Patents") relating to your making, using, selling, licensing, importing, offering to sell, or otherwise transferring the GIF encoding and/or decoding feature of the Software or the Program. This Agreement does not grant any rights to you with respect to the LZW Patents. 
+3.Indemnity to Sun. As a condition precedent to each license grant in this Agreement, you agree to indemnify, hold harmless, and defend Sun and its licensors from and against any and all claims, lawsuits, liabilities, demands and expenses (including attorneys' fees), that arise or result from the use or distribution of the Software or the Program, including without limitation, those brought by Unisys Corporation, its successors and assigns, with respect to U.S. Patent Number 4,558,302 and all foreign counterparts thereto which Unisys Corporation may now have or acquire in the future (the "LZW Patents") relating to your making, using, selling, licensing, importing, offering to sell, or otherwise transferring the GIF encoding and/or decoding feature of the Software or the Program. This Agreement does not grant any rights to you with respect to the LZW Patents.
 
 4. Trademarks and Logos. This Agreement does not authorize you to use any Sun name, trademark or logo. Licensee acknowledges as between it and Sun that Sun owns the Java trademark and all Java-related trademarks, logos and icons including the Coffee Cup and Duke ("Java Marks") and agrees to comply with the Java Trademark Guidelines at http://java.sun.com/trademarks.html.
-
-
-

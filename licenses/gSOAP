@@ -9,13 +9,13 @@
  td div.comb { margin-top: -0.6ex; margin-bottom: -.6ex;}
  td div.hrcomp { line-height: 0.9; margin-top: -0.8ex; margin-bottom: -1ex;}
  td div.norm {line-height:normal;}
- span.roman {font-family: serif; font-style: normal; font-weight: normal;} 
+ span.roman {font-family: serif; font-style: normal; font-weight: normal;}
  span.overacc2 {position: relative;  left: .8em; top: -1.2ex;}
  span.overacc1 {position: relative;  left: .6em; top: -1.2ex;} --></style>
 
 
 <title>  gSOAP Public License</title>
- 
+
 <h1 align="center"><b>gSOAP Public License</b> </h1>
 
 <h3 align="center">Version 1.3a </h3>
@@ -170,7 +170,7 @@ distribute the Modifications created by such Contributor (or portions thereof)
 either on an unmodified basis, with other Modifications, as Covered Code and/or
 as part of a Larger Work; and</dd>
  <dt><b><u>(b)</u></b></dt>
-	<dd> 
+	<dd>
 under patents now or hereafter owned or controlled by Contributor, to make,
 have made, use and sell ("offer to sell and import") the Contributor Version
 (or portions thereof), but solely to the extent that any such patent is

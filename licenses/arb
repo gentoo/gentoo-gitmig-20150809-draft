@@ -22,7 +22,7 @@ ARB copyright and license information
 
         Since many of the included programs is free software and
         nobody is allowed to sell that software you may safely assume
-        ARB will never become a commercial product. 
+        ARB will never become a commercial product.
 
     REDISTRIBUTION LICENSE
 
@@ -48,9 +48,9 @@ ARB copyright and license information
         Hereby anybody is granted the right to build debian-pakets
         of the ARB software package (http:://www.arb-home.de/) and
         publish them on debian mirrors (or any other way of
-        debian-distribution). 
+        debian-distribution).
 
-        This includes any debian derivates like ubuntu. 
+        This includes any debian derivates like ubuntu.
 
         The ARB developers may (but most likely wont ever) revoke
         this granting. If really done so, it'll only affect ARB
@@ -115,7 +115,7 @@ Copyright notices for programs distributes together with ARB
                             VERSION 1.02 - JUNE 1983
                             VERSION 1.03 - JULY 1983
 
-      - ´C´ version by Michael Macuikenas, University of Illinois
+      - 'C' version by Michael Macuikenas, University of Illinois
 
         REFERENCE: DE SOETE, G. A LEAST SQUARES ALGORITHM FOR FITTING
            ADDITIVE TREES TO PROXIMITY DATA. PSYCHOMETRIKA, 1983, 48,
@@ -157,7 +157,7 @@ Copyright notices for programs distributes together with ARB
         *
         *  This software/database is a "United States Government Work" under the
         *  terms of the United States Copyright Act.  It was written as part of
-        *  the author´s official duties as a United States Government employee and
+        *  the author's official duties as a United States Government employee and
         *  thus cannot be copyrighted.  This software/database is freely available
         *  to the public for use. The National Library of Medicine and the U.S.
         *  Government have not placed any restriction on its use or reproduction.
@@ -238,17 +238,17 @@ Copyright notices for programs distributes together with ARB
     molphy
 
         MOLPHY: A Computer Program Package for Molecular Phylogenetics
-        
+
         Readme
                This is the MOLPHY (ProtML) distribution,  version 2.3.
                 Copyright (c) 1992-1996, Jun Adachi & Masami Hasegawa.
                                  All rights reserved.
-        
+
                 MOLPHY is a program package for MOLecular PHYlogenetics.
-        
+
         ProtML is a main program in MOLPHY for inferring evolutionary trees from
         PROTein (amino acid) sequences by using the Maximum Likelihood method.
-        
+
         Programs (C language)
           ProtML: Maximum Likelihood Inference of Protein Phylogeny
           NucML:  Maximum Likelihood Inference of Nucleic Acid Phylogeny
@@ -264,14 +264,14 @@ Copyright notices for programs distributes together with ARB
           inl2mol:  Interleaved -> MOLPHY       mol2inl:  MOLPHY -> Interleaved
           mol2phy:  MOLPHY -> Sequential        phy2mol:  Sequential -> MOLPHY
           must2mol: MUST -> MOLPHY              etc.
-        
+
         MOLPHY is a free software, and you can use and redistribute it.
         The programs are written in a standard subset of C with UNIX-like OS.
         The utilities are written in the "Perl" (Ver.4.036) with UNIX-like OS.
         MOLPHY has been tested on SUN4's (cc & gcc with SUN-OS 4.1.3) and
         HP9000/700 (cc, c89 & gcc with HP-UX 9.05).
         However, MOLPHY has NOT been tested on VAX, IBM-PC, and Macintosh.
-        
+
         NETWORK DISTRIBUTION ONLY: The latest version of MOLPHY is always available
         by anonymous ftp in ftp.ism.ac.jp: /pub/ISMLIB/MOLPHY/.
 
@@ -279,24 +279,18 @@ Copyright notices for programs distributes together with ARB
 
 
          ReadSeq  -- 1 Feb 93
-         
+
          Reads and writes nucleic/protein sequences in various
          formats. Data files may have multiple sequences.
-         
+
          Copyright 1990 by d.g.gilbert
          biology dept., indiana university, bloomington, in 47405
          e-mail: gilbertd@bio.indiana.edu
-         
+
          This program may be freely copied and used by anyone.
          Developers are encourged to incorporate parts in their
          programs, rather than devise their own private sequence
          format.
-         
+
          This should compile and run with any ANSI C compiler.
          Please advise me of any bugs, additions or corrections.
-
-
-
-
-
-

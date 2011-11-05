@@ -1,5 +1,5 @@
 /*-
- * $Id: Roadrunner,v 1.1 2004/05/07 00:53:56 dragonheart Exp $
+ * $Id: Roadrunner,v 1.2 2011/11/05 02:29:54 ulm Exp $
  */
 
 The following is the license that applies to this copy of the RoadRunner
@@ -10,7 +10,7 @@ Web at http://www.codefactory.se/.
 
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 /*
- * Copyright (c) 2002 Jonas Borgström <jonas@codefactory.se>
+ * Copyright (c) 2002 Jonas BorgstrÃ¶m <jonas@codefactory.se>
  * Copyright (c) 2002 Daniel Lundin   <daniel@codefactory.se>
  * Copyright (c) 2002 CodeFactory AB.  All rights reserved.
  *
@@ -24,11 +24,11 @@ Web at http://www.codefactory.se/.
  *    documentation and/or other materials provided with the distribution.
  * 3. Redistributions in any form must be accompanied by information on
  *    how to obtain complete source code for the RoadRunner software and
- *    any accompanying software that uses the RoadRunner software.  The 
- *    source code must either be included in the distribution or be 
- *    available for no more than the cost of distribution plus a nominal 
+ *    any accompanying software that uses the RoadRunner software.  The
+ *    source code must either be included in the distribution or be
+ *    available for no more than the cost of distribution plus a nominal
  *    fee, and must be freely redistributable under reasonable conditions.
- *    For an executable file, complete source code means the source code 
+ *    For an executable file, complete source code means the source code
  *    for all modules it contains.  It does not include source code for
  *    modules or files that typically accompany the major components of
  *    the operating system on which the executable file runs.

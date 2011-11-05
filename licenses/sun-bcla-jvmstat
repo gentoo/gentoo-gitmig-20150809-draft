@@ -1,4 +1,4 @@
-Sun Microsystems, Inc. 
+Sun Microsystems, Inc.
 Binary Code License Agreement
 
 READ THE TERMS OF THIS AGREEMENT AND ANY PROVIDED SUPPLEMENTAL LICENSE
@@ -12,14 +12,14 @@ OF PURCHASE FOR A REFUND OR, IF THE SOFTWARE IS ACCESSED
 ELECTRONICALLY, SELECT THE "DECLINE" BUTTON AT THE END OF THIS
 AGREEMENT.
 
-1.  LICENSE TO USE.  
+1.  LICENSE TO USE.
   Sun grants you a non-exclusive and non-transferable license for the
   internal use only of the accompanying software and documentation and
   any error corrections provided by Sun (collectively "Software"), by
   the number of users and the class of computer hardware for which the
   corresponding fee has been paid.
 
-2.  RESTRICTIONS.  
+2.  RESTRICTIONS.
   Software is confidential and copyrighted. Title to Software and all
   associated intellectual property rights is retained by Sun and/or
   its licensors.  Except as specifically authorized in any
@@ -34,7 +34,7 @@ AGREEMENT.
   trademark, service mark, logo or trade name of Sun or its licensors
   is granted under this Agreement.
 
-3.  LIMITED WARRANTY.  
+3.  LIMITED WARRANTY.
   Sun warrants to you that for a period of ninety (90) days from the
   date of purchase, as evidenced by a copy of the receipt, the media on
   which Software is furnished (if any) will be free of defects in
@@ -43,14 +43,14 @@ AGREEMENT.
   liability under this limited warranty will be at Sun's option to
   replace Software media or refund the fee paid for Software.
 
-4.  DISCLAIMER OF WARRANTY.  
+4.  DISCLAIMER OF WARRANTY.
   UNLESS SPECIFIED IN THIS AGREEMENT, ALL EXPRESS OR IMPLIED CONDITIONS,
   REPRESENTATIONS AND WARRANTIES, INCLUDING ANY IMPLIED WARRANTY OF
   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR
   NON-INFRINGEMENT ARE DISCLAIMED, EXCEPT TO THE EXTENT THAT THESE
   DISCLAIMERS ARE HELD TO BE LEGALLY INVALID.
 
-5.  LIMITATION OF LIABILITY.  
+5.  LIMITATION OF LIABILITY.
   TO THE EXTENT NOT PROHIBITED BY LAW, IN NO EVENT WILL SUN OR ITS
   LICENSORS BE LIABLE FOR ANY LOST REVENUE, PROFIT OR DATA, OR FOR
   SPECIAL, INDIRECT, CONSEQUENTIAL, INCIDENTAL OR PUNITIVE DAMAGES,
@@ -62,14 +62,14 @@ AGREEMENT.
   Software under this Agreement.  The foregoing limitations will apply
   even if the above stated warranty fails of its essential purpose.
 
-6.  Termination.  
+6.  Termination.
   This Agreement is effective until terminated.  You may terminate this
   Agreement at any time by destroying all copies of Software.  This
   Agreement will terminate immediately without notice from Sun if you
   fail to comply with any provision of this Agreement.  Upon
   Termination, you must destroy all copies of Software.
 
-7.  Export Regulations. 
+7.  Export Regulations.
   All Software and technical data delivered under this Agreement are
   subject to US export control laws and may be subject to export or
   import regulations in other countries.  You agree to comply strictly
@@ -77,7 +77,7 @@ AGREEMENT.
   responsibility to obtain such licenses to export, re-export, or
   import as may be required after delivery to you.
 
-8.  U.S. Government Restricted Rights.  
+8.  U.S. Government Restricted Rights.
   If Software is being acquired by or on behalf of the U.S. Government
   or by a U.S. Government prime contractor or subcontractor (at any
   tier), then the Government's rights in Software and accompanying
@@ -86,18 +86,18 @@ AGREEMENT.
   Department of Defense (DOD) acquisitions) and with 48 CFR 2.101 and
   12.212 (for non-DOD acquisitions).
 
-9.  Governing Law.  
+9.  Governing Law.
   Any action related to this Agreement will be governed by California
   law and controlling U.S. federal law.  No choice of law rules of any
   jurisdiction will apply.
 
-10. Severability. 
+10. Severability.
   If any provision of this Agreement is held to be unenforceable, this
   Agreement will remain in effect with the provision omitted, unless
   omission would frustrate the intent of the parties, in which case
   this Agreement will immediately terminate.
 
-11. Integration.  
+11. Integration.
   This Agreement is the entire agreement between you
   and Sun relating to its subject matter.  It supersedes all prior
   or contemporaneous oral or written communications, proposals,
@@ -108,15 +108,15 @@ AGREEMENT.
   Agreement will be binding, unless in writing and signed by an
   authorized representative of each party.
 
-For inquiries please contact: 
-Sun Microsystems, Inc. 
+For inquiries please contact:
+Sun Microsystems, Inc.
 4150 Network Circle
-Santa Clara, California 95054. 
+Santa Clara, California 95054.
 
 
-DEVELOPMENT TOOLS 
+DEVELOPMENT TOOLS
 
-JVMSTAT 3.0 
+JVMSTAT 3.0
 
 SUPPLEMENTAL LICENSE TERMS
 
@@ -126,25 +126,25 @@ the "Agreement"). Capitalized terms not defined in these Supplemental
 Terms shall have the same meanings ascribed to them in the
 Agreement. These Supplemental Terms shall supersede any inconsistent
 or conflicting terms in the Binary Code License Agreement, or in any
-license contained within the Software.    
+license contained within the Software.
 
-A. Software Internal Use and Development License Grant. 
+A. Software Internal Use and Development License Grant.
   Subject to the terms and conditions of this Agreement, including,
   but not limited to Section B (Java Technology Restrictions) of these
   Supplemental Terms, Sun grants you a non-exclusive, non-transferable,
   limited license to reproduce internally and use internally the binary
   form of the Software complete and unmodified for the sole purpose of
   designing, developing and testing your Java applets and applications
-  intended to run on the Java platform ("Programs").   
+  intended to run on the Java platform ("Programs").
 
-B. Java Technology Restrictions.  
+B. Java Technology Restrictions.
   You may not create, modify, or change the behavior of, or authorize your
   licensees to create, modify, or change the behavior of, classes,
   interfaces, or subpackages that are in any way identified as "java",
   "javax", "sun" or similar convention as specified by Sun in any naming
   convention designation.
 
-C. Trademarks and Logos. 
+C. Trademarks and Logos.
   You acknowledge and agree as between you and Sun that Sun owns the
   SUN, SOLARIS, JAVA, JINI, FORTE, and iPLANET trademarks and all SUN,
   SOLARIS, JAVA, JINI, FORTE, and iPLANET-related trademarks, service
@@ -153,20 +153,19 @@ C. Trademarks and Logos.
   located at http://www.sun.com/policies/trademarks. Any use you make of
   the Sun Marks inures to Sun's benefit.
 
-D. Source Code. 
+D. Source Code.
   Software may contain source code that is provided solely for reference
   purposes pursuant to the terms of this Agreement.  Source code may not
   be redistributed unless expressly provided for in this Agreement.
 
-E. Termination for Infringement.  
+E. Termination for Infringement.
   Either party may terminate this Agreement immediately should any
   Software become, or in either party's opinion be likely to become, the
   subject of a claim of infringement of any intellectual property right.
- 
-For inquiries please contact: 
-Sun Microsystems, Inc. 
+
+For inquiries please contact:
+Sun Microsystems, Inc.
 4150 Network Circle, Santa Clara
 California 95054
 
 (LFI#143715/Form ID#011801)
-
