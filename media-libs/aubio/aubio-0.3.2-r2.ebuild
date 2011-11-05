@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aubio/aubio-0.3.2-r2.ebuild,v 1.3 2011/10/01 10:54:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aubio/aubio-0.3.2-r2.ebuild,v 1.4 2011/11/05 19:26:16 hwoarang Exp $
 
 EAPI=3
 
@@ -20,7 +20,6 @@ IUSE="alsa doc examples jack lash static-libs"
 RDEPEND="sci-libs/fftw:3.0
 	media-libs/libsndfile
 	media-libs/libsamplerate
-	|| ( dev-lang/python:2.7 dev-lang/python:2.6 )
 	alsa? ( media-libs/alsa-lib )
 	jack? ( media-sound/jack-audio-connection-kit )
 	lash? ( media-sound/lash )"
