@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fbida
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.85 2011/10/28 16:21:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.86 2011/11/05 21:18:47 maekke Exp $
+
+  05 Nov 2011; Markus Meier <maekke@gentoo.org> fbida-2.08.ebuild:
+  arm stable, bug #388287
 
   28 Oct 2011; Jeroen Roovers <jer@gentoo.org> fbida-2.08.ebuild:
   Stable for HPPA (bug #388287).
