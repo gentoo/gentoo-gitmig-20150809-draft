@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.299 2011/10/24 13:44:20 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.300 2011/11/05 13:08:11 eras Exp $
+
+*mit-krb5-1.9.2 (05 Nov 2011)
+*mit-krb5-1.8.5 (05 Nov 2011)
+
+  05 Nov 2011; Eray Aslan <eras@gentoo.org>
+  +files/mit-krb5-kprop_exit_on_error.patch, +mit-krb5-1.8.5.ebuild,
+  +mit-krb5-1.9.2.ebuild:
+  version bump - bug #389573
 
   24 Oct 2011; Eray Aslan <eras@gentoo.org> mit-krb5-1.8.3-r5.ebuild,
   -mit-krb5-1.8.4.ebuild, -mit-krb5-1.9.1.ebuild, -mit-krb5-1.9.1-r1.ebuild:
