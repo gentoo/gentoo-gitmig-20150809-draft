@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/coccinelle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.12 2011/11/04 08:07:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.13 2011/11/05 15:38:18 radhermit Exp $
+
+  05 Nov 2011; Tim Harder <radhermit@gentoo.org> coccinelle-1.0.0_rc7.ebuild:
+  Conditionalize python related setup.
 
 *coccinelle-1.0.0_rc7 (04 Nov 2011)
 

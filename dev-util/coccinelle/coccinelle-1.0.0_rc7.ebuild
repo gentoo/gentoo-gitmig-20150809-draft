@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/coccinelle-1.0.0_rc7.ebuild,v 1.1 2011/11/04 08:07:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/coccinelle-1.0.0_rc7.ebuild,v 1.2 2011/11/05 15:38:18 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -36,8 +36,10 @@ DOCS=( authors.txt bugs.txt changes.txt credits.txt readme.txt )
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
+	if use python ; then
+		python_set_active_version 2
+		python_pkg_setup
+	fi
 }
 
 src_prepare() {
@@ -45,10 +47,12 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-pcre-linking.patch
 	epatch "${FILESDIR}"/${P}-parallel-make.patch
 
-	# Fix python install location
-	sed -i -e "s:\$(SHAREDIR)/python:$(python_get_sitedir):" Makefile || die
-	sed -i -e "/export PYTHONPATH/s:\$COCCINELLE_HOME/python:$(python_get_sitedir):" \
-		scripts/spatch.sh || die
+	if use python ; then
+		# Fix python install location
+		sed -i -e "s:\$(SHAREDIR)/python:$(python_get_sitedir):" Makefile || die
+		sed -i -e "/export PYTHONPATH/s:\$COCCINELLE_HOME/python:$(python_get_sitedir):" \
+			scripts/spatch.sh || die
+	fi
 }
 
 src_configure() {
