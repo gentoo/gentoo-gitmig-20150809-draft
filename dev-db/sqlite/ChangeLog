@@ -1,11 +1,11 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.392 2011/11/05 19:30:26 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.393 2011/11/05 19:31:58 hwoarang Exp $
 
 *sqlite-3.7.9 (05 Nov 2011)
 
   05 Nov 2011; Markos Chandras <hwoarang@gentoo.org> +sqlite-3.7.9.ebuild:
-  Version
+  Version bump. Ebuild by Arfrever.
 
 *sqlite-3.7.8 (20 Sep 2011)
 
@@ -21,7 +21,7 @@
 *sqlite-3.7.7.1-r1 (09 Sep 2011)
 *sqlite-2.8.16-r5 (09 Sep 2011)
 
-  09 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  09 Sep 2011; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org>
   -sqlite-2.8.16-r4.ebuild, +sqlite-2.8.16-r5.ebuild,
   -files/sqlite-3.6.22-dlopen.patch,
   -files/sqlite-3.6.22-interix-fixes-amalgamation.patch, -sqlite-3.7.5.ebuild,
@@ -31,7 +31,7 @@
   Disable static libraries. Remove libtool archives. Use eapi4 on 3 series
   ebuild. Remove overshadowed versions.
 
-  03 Sep 2011; Raúl Porcel <armin76@gentoo.org> sqlite-3.7.7.1.ebuild:
+  03 Sep 2011; RaÃºl Porcel <armin76@gentoo.org> sqlite-3.7.7.1.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #372745
 
   28 Aug 2011; Markus Meier <maekke@gentoo.org> sqlite-3.7.7.1.ebuild:
@@ -56,7 +56,7 @@
   25 Aug 2011; Jeroen Roovers <jer@gentoo.org> sqlite-3.7.7.1.ebuild:
   Stable for HPPA (bug #372745).
 
-  07 Aug 2011; Raúl Porcel <armin76@gentoo.org> sqlite-3.7.6.3.ebuild:
+  07 Aug 2011; RaÃºl Porcel <armin76@gentoo.org> sqlite-3.7.6.3.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #372307
 
   20 Jul 2011; Mark Loeser <halcy0n@gentoo.org> sqlite-3.7.6.3.ebuild:
@@ -104,7 +104,7 @@
   22 Mar 2011; Brent Baude <ranger@gentoo.org> sqlite-3.7.5.ebuild:
   Marking sqlite-3.7.5 ppc64 and ppc for bug 357849
 
-  20 Mar 2011; Raúl Porcel <armin76@gentoo.org> sqlite-3.7.5.ebuild:
+  20 Mar 2011; RaÃºl Porcel <armin76@gentoo.org> sqlite-3.7.5.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #357849
 
   19 Mar 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> sqlite-3.7.5.ebuild:
@@ -147,7 +147,7 @@
   28 Nov 2010; Brent Baude <ranger@gentoo.org> sqlite-3.7.3.ebuild:
   Marking sqlite-3.7.3 ppc64 for bug 342323
 
-  14 Nov 2010; Raúl Porcel <armin76@gentoo.org> sqlite-3.7.2.ebuild:
+  14 Nov 2010; RaÃºl Porcel <armin76@gentoo.org> sqlite-3.7.2.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #342323
 
   01 Nov 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
@@ -156,7 +156,7 @@
 
 *sqlite-3.7.3 (31 Oct 2010)
 
-  31 Oct 2010; Petteri Räty <betelgeuse@gentoo.org> +sqlite-3.7.3.ebuild:
+  31 Oct 2010; Petteri RÃ¤ty <betelgeuse@gentoo.org> +sqlite-3.7.3.ebuild:
   Version bump. Enables extensions use flag by default as that's the
   upstream default. Fixes bug #341257 and bug #335506. Tests still fail with
   icu use flag like in 3.7.2.
@@ -186,18 +186,18 @@
   06 Sep 2010; Brent Baude <ranger@gentoo.org> sqlite-3.6.23.1.ebuild:
   Marking sqlite-3.6.23.1 ppc64 for bug 320467
 
-  30 Aug 2010; Petteri Räty <betelgeuse@gentoo.org> sqlite-3.7.2.ebuild:
+  30 Aug 2010; Petteri RÃ¤ty <betelgeuse@gentoo.org> sqlite-3.7.2.ebuild:
   Fix running tests with USE=-tcl. Fixes bug #335179.
 
 *sqlite-3.7.2 (29 Aug 2010)
 
-  29 Aug 2010; Petteri Räty <betelgeuse@gentoo.org> +sqlite-3.7.2.ebuild:
+  29 Aug 2010; Petteri RÃ¤ty <betelgeuse@gentoo.org> +sqlite-3.7.2.ebuild:
   Version bump. Fixes bug #332747.
 
   19 Aug 2010; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Remove arfrever.
 
-  14 Aug 2010; Raúl Porcel <armin76@gentoo.org> sqlite-3.6.23.1.ebuild:
+  14 Aug 2010; RaÃºl Porcel <armin76@gentoo.org> sqlite-3.6.23.1.ebuild:
   ia64/s390/sh/sparc stable wrt #320467
 
 *sqlite-3.7.0 (23 Jul 2010)
@@ -246,7 +246,7 @@
   Fix compilation on older Mac OS X systems by disabling new locking methods
   that require features from Snow Leopard (10.6)
 
-  14 Mar 2010; Raúl Porcel <armin76@gentoo.org> sqlite-3.6.21.ebuild,
+  14 Mar 2010; RaÃºl Porcel <armin76@gentoo.org> sqlite-3.6.21.ebuild,
   sqlite-3.6.22-r2.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #300145
 
@@ -271,7 +271,7 @@
 
 *sqlite-3.6.22-r2 (11 Feb 2010)
 
-  11 Feb 2010; Petteri Räty <betelgeuse@gentoo.org>
+  11 Feb 2010; Petteri RÃ¤ty <betelgeuse@gentoo.org>
   +sqlite-3.6.22-r2.ebuild, metadata.xml:
   Add use flag for secure delete functionality in sqlite. Fixes bug #303058.
 
@@ -332,10 +332,10 @@
   +sqlite-3.6.22.ebuild:
   Version bump.
 
-  03 Jan 2010; Petteri Räty <betelgeuse@gentoo.org> sqlite-3.6.21.ebuild:
+  03 Jan 2010; Petteri RÃ¤ty <betelgeuse@gentoo.org> sqlite-3.6.21.ebuild:
   Turn on fts3 by default because FF3 needs it.
 
-  02 Jan 2010; Raúl Porcel <armin76@gentoo.org> sqlite-3.6.20-r1.ebuild:
+  02 Jan 2010; RaÃºl Porcel <armin76@gentoo.org> sqlite-3.6.20-r1.ebuild:
   alpha/ia64/sparc stable
 
   02 Jan 2010; Markus Meier <maekke@gentoo.org> sqlite-3.6.20-r1.ebuild:
@@ -364,10 +364,10 @@
   20 Dec 2009; Brent Baude <ranger@gentoo.org> sqlite-3.6.20.ebuild:
   Marking sqlite-3.6.20 ppc64 for bug 297532
 
-  19 Dec 2009; Petteri Räty <betelgeuse@gentoo.org> sqlite-3.6.21.ebuild:
+  19 Dec 2009; Petteri RÃ¤ty <betelgeuse@gentoo.org> sqlite-3.6.21.ebuild:
   Fix a couple QA issues with the last commit.
 
-  19 Dec 2009; Petteri Räty <betelgeuse@gentoo.org> sqlite-3.6.21.ebuild:
+  19 Dec 2009; Petteri RÃ¤ty <betelgeuse@gentoo.org> sqlite-3.6.21.ebuild:
   Make building work without tcl installed using the amalgamation tarball
   from upstream. Fixes tests to work with -tcl. Thanks to Andrew
   <abrouwers@gmail.com>. Fixes bug #297113 and bug #297332.
@@ -384,10 +384,10 @@
   +sqlite-3.6.21.ebuild:
   Version bump.
 
-  29 Nov 2009; Raúl Porcel <armin76@gentoo.org> sqlite-3.6.19.ebuild:
+  29 Nov 2009; RaÃºl Porcel <armin76@gentoo.org> sqlite-3.6.19.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #291913
 
-  22 Nov 2009; Petteri Räty <betelgeuse@gentoo.org>
+  22 Nov 2009; Petteri RÃ¤ty <betelgeuse@gentoo.org>
   sqlite-3.6.20-r1.ebuild, +files/sqlite-3.6.20-fts3.patch:
   Fix bug #293405 so that fts3 support compiles when tcl is not installed.
   The patch is applied only when tcl is not installed because otherwise the
@@ -402,7 +402,7 @@
 
 *sqlite-3.6.20-r1 (15 Nov 2009)
 
-  15 Nov 2009; Petteri Räty <betelgeuse@gentoo.org>
+  15 Nov 2009; Petteri RÃ¤ty <betelgeuse@gentoo.org>
   +sqlite-3.6.20-r1.ebuild, metadata.xml:
   Add support for the fts3 module requested in bug #207701.
 
@@ -517,7 +517,7 @@
   11 Jul 2009; <chainsaw@gentoo.org> sqlite-3.6.14.2.ebuild:
   Marked stable on AMD64 for bug #275592; tested on a dual Opteron 2354.
 
-  01 Jul 2009; Raúl Porcel <armin76@gentoo.org> sqlite-3.6.14.2.ebuild:
+  01 Jul 2009; RaÃºl Porcel <armin76@gentoo.org> sqlite-3.6.14.2.ebuild:
   arm/ia64/s390/sh stable wrt #275592
 
   30 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
@@ -574,7 +574,7 @@
   sqlite-3.6.13.ebuild:
   stable amd64, bug 269998
 
-  22 May 2009; Raúl Porcel <armin76@gentoo.org> sqlite-3.6.12.ebuild,
+  22 May 2009; RaÃºl Porcel <armin76@gentoo.org> sqlite-3.6.12.ebuild,
   sqlite-3.6.14.ebuild, sqlite-3.6.14.1.ebuild:
   Mark -sparc the versions that sigbus
 
@@ -608,7 +608,7 @@
   -files/sqlite-3.6.10-tcl-install.patch, +sqlite-3.6.14.ebuild:
   Version bump.
 
-  07 May 2009; Raúl Porcel <armin76@gentoo.org> sqlite-3.6.13.ebuild:
+  07 May 2009; RaÃºl Porcel <armin76@gentoo.org> sqlite-3.6.13.ebuild:
   arm/ia64/s390/sh/sparc stable wrt #267528
 
   04 May 2009; Brent Baude <ranger@gentoo.org> sqlite-3.6.12.ebuild:
@@ -675,7 +675,7 @@
   21 Feb 2009; Jeroen Roovers <jer@gentoo.org> sqlite-3.6.10.ebuild:
   Stable for HPPA (bug #259462).
 
-  20 Feb 2009; Raúl Porcel <armin76@gentoo.org> sqlite-3.6.10.ebuild:
+  20 Feb 2009; RaÃºl Porcel <armin76@gentoo.org> sqlite-3.6.10.ebuild:
   alpha/arm/ia64/s390/sh/x86 stable wrt #259462
 
   19 Feb 2009; nixnut <nixnut@gentoo.org> sqlite-3.6.10.ebuild:
@@ -688,7 +688,7 @@
   18 Feb 2009; Ferris McCormick <fmccor@gentoo.org> sqlite-3.6.10.ebuild:
   Sparc stable, Bug #259462.
 
-  18 Feb 2009; Petteri Räty <betelgeuse@gentoo.org> -sqlite-3.4.1.ebuild,
+  18 Feb 2009; Petteri RÃ¤ty <betelgeuse@gentoo.org> -sqlite-3.4.1.ebuild,
   -sqlite-3.5.3.ebuild, -sqlite-3.5.6.ebuild, -sqlite-3.5.9.ebuild,
   -sqlite-3.6.8.ebuild:
   Remove old versions.
@@ -703,12 +703,12 @@
   +files/sqlite-3.6.10-tcl-install.patch, sqlite-3.6.10.ebuild:
   Fixup tcl lib install by using libtool rather than manual copy.
 
-  23 Jan 2009; Raúl Porcel <armin76@gentoo.org> sqlite-3.6.6.2.ebuild:
+  23 Jan 2009; RaÃºl Porcel <armin76@gentoo.org> sqlite-3.6.6.2.ebuild:
   arm/ia64/s390/sh stable wrt #254684
 
 *sqlite-3.6.10 (18 Jan 2009)
 
-  18 Jan 2009; Petteri Räty <betelgeuse@gentoo.org> +sqlite-3.6.10.ebuild:
+  18 Jan 2009; Petteri RÃ¤ty <betelgeuse@gentoo.org> +sqlite-3.6.10.ebuild:
   Version bump. Fixes bug #255406.
 
   18 Jan 2009; Markus Meier <maekke@gentoo.org> sqlite-3.6.6.2.ebuild:
@@ -734,10 +734,10 @@
 
 *sqlite-3.6.8 (13 Jan 2009)
 
-  13 Jan 2009; Petteri Räty <betelgeuse@gentoo.org> +sqlite-3.6.8.ebuild:
+  13 Jan 2009; Petteri RÃ¤ty <betelgeuse@gentoo.org> +sqlite-3.6.8.ebuild:
   Version bump. Fixes bug #251461.
 
-  04 Dec 2008; Petteri Räty <betelgeuse@gentoo.org> sqlite-3.6.6.2.ebuild:
+  04 Dec 2008; Petteri RÃ¤ty <betelgeuse@gentoo.org> sqlite-3.6.6.2.ebuild:
   Add link to upstream bug on doc naming schema.
 
   04 Dec 2008; Zac Medico <zmedico@gentoo.org> sqlite-3.6.6.2.ebuild:
@@ -751,14 +751,14 @@
 
 *sqlite-3.6.2 (15 Sep 2008)
 
-  15 Sep 2008; Petteri Räty <betelgeuse@gentoo.org> +sqlite-3.6.2.ebuild:
+  15 Sep 2008; Petteri RÃ¤ty <betelgeuse@gentoo.org> +sqlite-3.6.2.ebuild:
   Version bump. Fixes bug #234414 and bug #237222. Can possibly break code
   building against sqlite, see upstream release notes.
 
   05 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
 
-  07 Jul 2008; Raúl Porcel <armin76@gentoo.org> sqlite-3.5.9.ebuild:
+  07 Jul 2008; RaÃºl Porcel <armin76@gentoo.org> sqlite-3.5.9.ebuild:
   alpha/ia64 stable wrt #230643
 
   05 Jul 2008; Thomas Anderson <gentoofan23@gentoo.org> sqlite-3.5.9.ebuild:
@@ -781,7 +781,7 @@
 
 *sqlite-3.5.9 (22 May 2008)
 
-  22 May 2008; Petteri Räty <betelgeuse@gentoo.org> +sqlite-3.5.9.ebuild:
+  22 May 2008; Petteri RÃ¤ty <betelgeuse@gentoo.org> +sqlite-3.5.9.ebuild:
   Version bump. Fixes bug #209796, bug #214015 and bug #213504."
 
   21 Mar 2008; Brent Baude <ranger@gentoo.org> sqlite-3.5.6.ebuild:
@@ -790,13 +790,13 @@
   16 Mar 2008; Kenneth Prugh <ken69267@gentoo.org> sqlite-3.5.6.ebuild:
   amd64 stable, bug #213500
 
-  16 Mar 2008; Raúl Porcel <armin76@gentoo.org> sqlite-3.5.6.ebuild:
+  16 Mar 2008; RaÃºl Porcel <armin76@gentoo.org> sqlite-3.5.6.ebuild:
   alpha/ia64 stable wrt #213500
 
   16 Mar 2008; Jeroen Roovers <jer@gentoo.org> sqlite-3.5.6.ebuild:
   Stable for HPPA (bug #213500).
 
-  16 Mar 2008; Dawid Węgliński <cla@gentoo.org> sqlite-3.5.6.ebuild:
+  16 Mar 2008; Dawid WÄgliÅski <cla@gentoo.org> sqlite-3.5.6.ebuild:
   Stable on x86 (bug #213500)
 
   15 Mar 2008; Ferris McCormick <fmccor@gentoo.org> sqlite-3.5.6.ebuild:
@@ -806,10 +806,10 @@
   15 Mar 2008; Tobias Scherbaum <dertobi123@gentoo.org> sqlite-3.5.6.ebuild:
   ppc stable, bug #213500
 
-  11 Mar 2008; Petteri Räty <betelgeuse@gentoo.org> -sqlite-3.5.4.ebuild:
+  11 Mar 2008; Petteri RÃ¤ty <betelgeuse@gentoo.org> -sqlite-3.5.4.ebuild:
   Remove package.masked ebuild.
 
-  11 Mar 2008; Petteri Räty <betelgeuse@gentoo.org> -sqlite-3.3.17.ebuild,
+  11 Mar 2008; Petteri RÃ¤ty <betelgeuse@gentoo.org> -sqlite-3.3.17.ebuild,
   sqlite-3.5.3.ebuild, sqlite-3.5.6.ebuild:
   Add DEPEND on app-arch/unzip for use doc. Fixes bug #213055. Remove old
   stable mips version because we don't have a stable tcl any more.
@@ -819,13 +819,13 @@
 
 *sqlite-3.5.6 (10 Feb 2008)
 
-  10 Feb 2008; Petteri Räty <betelgeuse@gentoo.org> +sqlite-3.5.6.ebuild:
+  10 Feb 2008; Petteri RÃ¤ty <betelgeuse@gentoo.org> +sqlite-3.5.6.ebuild:
   Version bump. Fixes bug #209592.
 
   15 Jan 2008; Jeroen Roovers <jer@gentoo.org> sqlite-3.5.3.ebuild:
   Stable for HPPA (bug #205556).
 
-  15 Jan 2008; Raúl Porcel <armin76@gentoo.org> sqlite-3.5.3.ebuild:
+  15 Jan 2008; RaÃºl Porcel <armin76@gentoo.org> sqlite-3.5.3.ebuild:
   alpha/ia64/sparc stable wrt #205556
 
   13 Jan 2008; Christian Faulhammer <opfer@gentoo.org> sqlite-3.5.3.ebuild:
@@ -837,26 +837,26 @@
   13 Jan 2008; nixnut <nixnut@gentoo.org> sqlite-3.5.3.ebuild:
   Stable on ppc wrt bug 205556
 
-  13 Jan 2008; Petteri Räty <betelgeuse@gentoo.org> sqlite-3.5.4.ebuild:
+  13 Jan 2008; Petteri RÃ¤ty <betelgeuse@gentoo.org> sqlite-3.5.4.ebuild:
   Fix doc bundle installation for 3.5.4. Upstream changed the directory name.
 
-  08 Jan 2008; Petteri Räty <betelgeuse@gentoo.org> sqlite-3.5.3.ebuild,
+  08 Jan 2008; Petteri RÃ¤ty <betelgeuse@gentoo.org> sqlite-3.5.3.ebuild,
   sqlite-3.5.4.ebuild:
   Fix doc use flag. The documentation comes in a separate tarball since 3.5.
   Fixes bug #203107.
 
-  08 Jan 2008; Petteri Räty <betelgeuse@gentoo.org> -sqlite-3.3.12.ebuild,
+  08 Jan 2008; Petteri RÃ¤ty <betelgeuse@gentoo.org> -sqlite-3.3.12.ebuild,
   -sqlite-3.4.2.ebuild:
   Remove obsolete versions.
 
 *sqlite-3.5.4 (17 Dec 2007)
 
-  17 Dec 2007; Petteri Räty <betelgeuse@gentoo.org> +sqlite-3.5.4.ebuild:
+  17 Dec 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org> +sqlite-3.5.4.ebuild:
   Version bump.
 
 *sqlite-3.5.3 (07 Dec 2007)
 
-  07 Dec 2007; Petteri Räty <betelgeuse@gentoo.org> +sqlite-3.5.3.ebuild:
+  07 Dec 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org> +sqlite-3.5.3.ebuild:
   Version bump. Fixes bug #194806. Thanks to Arfrever Frehtes Taifersar
   Arahesis <Arfrever.FTA@GMail.Com>. Now uses EAPI 1 for default use flag
   values so change the nothreadsafe use flag to threadsafe.
@@ -864,7 +864,7 @@
   18 Nov 2007; Tobias Scherbaum <dertobi123@gentoo.org> sqlite-3.4.1.ebuild:
   ppc stable, bug #194812
 
-  12 Nov 2007; Raúl Porcel <armin76@gentoo.org> sqlite-3.4.1.ebuild:
+  12 Nov 2007; RaÃºl Porcel <armin76@gentoo.org> sqlite-3.4.1.ebuild:
   alpha stable wrt security #194812
 
   18 Oct 2007; Christoph Mende <angelos@gentoo.org> sqlite-3.4.1.ebuild:
@@ -881,7 +881,7 @@
   06 Oct 2007; Jeroen Roovers <jer@gentoo.org> sqlite-3.4.1.ebuild:
   Stable for HPPA (bug #194812).
 
-  06 Oct 2007; Raúl Porcel <armin76@gentoo.org> sqlite-3.4.1.ebuild:
+  06 Oct 2007; RaÃºl Porcel <armin76@gentoo.org> sqlite-3.4.1.ebuild:
   ia64/x86 stable wrt #194812
 
   05 Oct 2007; Ferris McCormick <fmccor@gentoo.org> sqlite-3.4.1.ebuild:
@@ -890,15 +890,15 @@
   20 Sep 2007; Anant Narayanan <anant@gentoo.org> ChangeLog:
   Fix digest
 
-  24 Jul 2007; Raúl Porcel <armin76@gentoo.org> sqlite-3.3.17.ebuild:
+  24 Jul 2007; RaÃºl Porcel <armin76@gentoo.org> sqlite-3.3.17.ebuild:
   ia64 stable
 
 *sqlite-3.4.1 (24 Jul 2007)
 
-  24 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> +sqlite-3.4.1.ebuild:
+  24 Jul 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org> +sqlite-3.4.1.ebuild:
   Version bump. Fixes bug #185574.
 
-  02 Jul 2007; Petteri Räty <betelgeuse@gentoo.org>
+  02 Jul 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org>
   -sqlite-3.3.5-r1.ebuild:
   Remove old version.
 
@@ -909,7 +909,7 @@
   sqlite-3.3.17.ebuild:
   ppc stable, bug #182013
 
-  15 Jun 2007; Raúl Porcel <armin76@gentoo.org> sqlite-3.3.17.ebuild:
+  15 Jun 2007; RaÃºl Porcel <armin76@gentoo.org> sqlite-3.3.17.ebuild:
   ia64 stable wrt #182013
 
   15 Jun 2007; Markus Rothe <corsair@gentoo.org> sqlite-3.3.17.ebuild:
@@ -918,15 +918,15 @@
   15 Jun 2007; Christoph Mende <angelos@gentoo.org> sqlite-3.3.17.ebuild:
   Stable on amd64 wrt bug 182013
 
-  14 Jun 2007; Petteri Räty <betelgeuse@gentoo.org>
+  14 Jun 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org>
   sqlite-2.8.16-r4.ebuild, sqlite-3.3.5-r1.ebuild, sqlite-3.3.12.ebuild:
   Fix the rest of the ebuilds wrt tcl and test suite.
 
-  14 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> sqlite-3.3.17.ebuild:
+  14 Jun 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org> sqlite-3.3.17.ebuild:
   Fix the test broken RESTRICT atom that Cardoe added. The tcl use flag must
   be on, not off for the test suite to work.
 
-  14 Jun 2007; Raúl Porcel <armin76@gentoo.org> sqlite-3.3.17.ebuild:
+  14 Jun 2007; RaÃºl Porcel <armin76@gentoo.org> sqlite-3.3.17.ebuild:
   alpha/ia64/x86 stable wrt #182013
 
   14 Jun 2007; Jeroen Roovers <jer@gentoo.org> sqlite-3.3.17.ebuild:
@@ -957,12 +957,12 @@
   04 May 2007; Gustavo Zacarias <gustavoz@gentoo.org> sqlite-3.3.12.ebuild:
   Stable on sparc wrt #176942
 
-  04 May 2007; Raúl Porcel <armin76@gentoo.org> sqlite-3.3.12.ebuild:
+  04 May 2007; RaÃºl Porcel <armin76@gentoo.org> sqlite-3.3.12.ebuild:
   ia64 + x86 stable wrt #176942
 
 *sqlite-3.3.17 (03 May 2007)
 
-  03 May 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
+  03 May 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org> metadata.xml,
   +sqlite-3.3.17.ebuild:
   Version bump. Makes the soundex function available with the soundex local
   use flag. Fixes bug #168304 and bug #143794. Add myself to metadata.xml
@@ -979,42 +979,42 @@
   -sqlite-3.3.6.ebuild, sqlite-3.3.12.ebuild:
   Cleanup/fixup ebuilds, remove old ebuilds and patches, fix bug #156299.
 
-  02 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> sqlite-3.3.12.ebuild:
+  02 Feb 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org> sqlite-3.3.12.ebuild:
   The optional tcl support in sqlite must be enabled in sqlite to run tests.
   Just having tcl is not enough.
 
 *sqlite-3.3.12 (02 Feb 2007)
 
-  02 Feb 2007; Petteri Räty <betelgeuse@gentoo.org> +sqlite-3.3.12.ebuild:
+  02 Feb 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org> +sqlite-3.3.12.ebuild:
   Version bump. Fixes bug #157214 and bug #159197.
 
   31 Jan 2007; Marius Mauch <genone@gentoo.org> sqlite-2.8.16-r4.ebuild:
   Replacing einfo with elog
 
-  01 Jan 2007; Petteri Räty <betelgeuse@gentoo.org>
+  01 Jan 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org>
   sqlite-2.8.16-r1.ebuild, sqlite-3.2.1-r3.ebuild, sqlite-3.3.5-r1.ebuild,
   sqlite-3.3.6.ebuild:
   Remove virtual/libc from DEPEND.
 
-  01 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> -sqlite-2.8.15.ebuild,
+  01 Jan 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org> -sqlite-2.8.15.ebuild,
   -sqlite-2.8.16-r3.ebuild, -sqlite-3.2.7-r1.ebuild, -sqlite-3.3.4.ebuild,
   -sqlite-3.3.5.ebuild:
   Removed old versions.
 
-  01 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
+  01 Jan 2007; Petteri RÃ¤ty <betelgeuse@gentoo.org> metadata.xml:
   Removed arj as he is retired
 
-  15 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> sqlite-3.3.6.ebuild:
+  15 Nov 2006; Diego PettenÃ² <flameeyes@gentoo.org> sqlite-3.3.6.ebuild:
   Run elibtoolize.
 
-  11 Nov 2006; Alexander H. Færøy <eroyf@gentoo.org>
+  11 Nov 2006; Alexander H. FÃ¦rÃ¸y <eroyf@gentoo.org>
   sqlite-2.8.16-r4.ebuild:
   Stable on MIPS. Bug 118429.
 
   27 Oct 2006; Roy Marples <uberlord@gentoo.org> sqlite-3.3.6.ebuild:
   Added ~sparc-fbsd keyword.
 
-  21 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
+  21 Oct 2006; Bryan Ãstergaard <kloeri@gentoo.org>
   sqlite-2.8.16-r4.ebuild:
   Stable on Alpha.
 
@@ -1172,7 +1172,7 @@
   sqlite-3.2.2.ebuild:
   Added ~mips.
 
-  03 Jul 2005; Bryan Østergaard <kloeri@gentoo.org> sqlite-3.2.1-r3.ebuild:
+  03 Jul 2005; Bryan Ãstergaard <kloeri@gentoo.org> sqlite-3.2.1-r3.ebuild:
   Stable on alpha.
 
   18 Jun 2005; Michael Hanselmann <hansmi@gentoo.org>
@@ -1223,7 +1223,7 @@
   17 Apr 2005; Anders Rune Jensen <arj@gentoo.org> sqlite-3.2.1-r1.ebuild:
   Stable on x86 and amd64.
 	
-  14 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
+  14 Apr 2005; Bryan Ãstergaard <kloeri@gentoo.org>
   sqlite-2.8.16-r1.ebuild:
   Stable on alpha.
 
@@ -1310,7 +1310,7 @@
   20 Dec 2004; Dylan Carlson <absinthe@gentoo.org> sqlite-2.8.15.ebuild:
   Stable on amd64.
 
-  12 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> sqlite-2.8.15.ebuild:
+  12 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org> sqlite-2.8.15.ebuild:
   Stable on alpha.
 
 *sqlite-3.0.8-r1 (04 Dec 2004)
@@ -1375,7 +1375,7 @@
   10 Sep 2004; Hasan Khalil <gongloo@gentoo.org> sqlite-2.8.15.ebuild:
   Stable on macos.
 
-  06 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> sqlite-2.8.14.ebuild:
+  06 Sep 2004; Bryan Ãstergaard <kloeri@gentoo.org> sqlite-2.8.14.ebuild:
   Stable on alpha.
 
 *sqlite-3.0.6 (05 Sep 2004)
