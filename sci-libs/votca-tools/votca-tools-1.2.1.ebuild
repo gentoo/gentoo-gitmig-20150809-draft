@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/votca-tools-1.2.1.ebuild,v 1.1 2011/08/25 20:10:13 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/votca-tools/votca-tools-1.2.1.ebuild,v 1.2 2011/11/05 02:41:25 ottxor Exp $
 
 EAPI="3"
 
-inherit cmake-utils eutils
+inherit cmake-utils eutils multilib
 
 if [ "${PV}" != "9999" ]; then
 	SRC_URI="system-boost? ( http://votca.googlecode.com/files/${PF}_pristine.tar.gz )
@@ -54,6 +54,7 @@ src_configure() {
 		$(cmake-utils_use_with fftw FFTW)
 		$(cmake-utils_use_with sqlite SQLITE3)
 		-DWITH_RC_FILES=OFF
+		-DLIB=$(get_libdir)
 	)
 	cmake-utils_src_configure || die
 }
