@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.4.3-r200.ebuild,v 1.6 2011/10/30 17:27:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.4.3-r200.ebuild,v 1.7 2011/11/05 13:21:15 pacho Exp $
 
 EAPI="4"
 
@@ -58,10 +58,6 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	DOCS="Source/WebKit/gtk/NEWS Source/WebKit/gtk/ChangeLog"
-
-	# FIXME: Fix unaligned accesses on ARM, IA64 and SPARC
-	# https://bugs.webkit.org/show_bug.cgi?id=19775
-	use sparc && epatch "${FILESDIR}"/${PN}-1.1.15.2-unaligned.patch
 
 	# intermediate MacPorts hack while upstream bug is not fixed properly
 	# https://bugs.webkit.org/show_bug.cgi?id=28727
