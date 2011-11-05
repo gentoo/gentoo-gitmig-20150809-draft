@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.0.6-r1.ebuild,v 1.1 2011/11/05 01:44:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.0.6-r1.ebuild,v 1.2 2011/11/05 13:52:47 hwoarang Exp $
 
 EAPI=4
 inherit autotools eutils pam
@@ -38,7 +38,7 @@ DOCS=( NEWS )
 
 src_prepare() {
 	sed -i -e "/minimum-uid/s:500:1000:" "${S}"/data/users.conf	|| die
-	sed -i -e "s:gtk+-3.0:gtk+-2.0:" "${S}"/configure.ac || die
+	sed -i -e "s:gtk+-3.0:gtk+-2.0:" -e "/^GNOME_COMPILE_WARNINGS/d" "${S}"/configure.ac || die
 	epatch "${FILESDIR}"/session-wrapper-${PN}.patch
 	eautoreconf
 }
