@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13206 2011/11/05 15:07:13 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13207 2011/11/05 19:10:51 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -166,11 +166,6 @@ dev-java/jnlp-bin
 # This package is obsolete and depends on dev-java/jnlp-bin
 # (bug https://bugs.gentoo.org/show_bug.cgi?id=377967)
 app-misc/openjnlp
-
-# Markos Chandras <hwoarang@gentoo.org> (18 Oct 2011)
-# Mask openbox and obconf snapshots for testing
-~x11-wm/openbox-3.5.0_p20111019
-~x11-misc/obconf-2.0.3_p20111019
 
 # Jeroen Roovers <jer@gentoo.org> (18 Oct 2011)
 # Masked for removal on 18 Nov 2011

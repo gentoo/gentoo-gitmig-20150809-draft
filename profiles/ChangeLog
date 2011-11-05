@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5871 2011/11/05 15:07:12 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5872 2011/11/05 19:10:51 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Nov 2011; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Unmask openbox and obconf snapshots
 
   05 Nov 2011; Vadim Kuznetsov <vadimk@gentoo.org> package.mask:
   Masked <app-emulation/vmware-{player-3.1.5,workstation-7.1.5}
