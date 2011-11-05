@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.204 2011/08/19 10:54:09 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.205 2011/11/05 05:03:48 tetromino Exp $
+
+*zenity-3.2.0 (05 Nov 2011)
+
+  05 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -zenity-3.0.0.ebuild, -files/zenity-3.0.0-libnotify-ifdef.patch,
+  +zenity-3.2.0.ebuild, metadata.xml:
+  Bump to 3.2.0 from the gnome overlay, drop old. Notable changes: HTML
+  rendering using webkit-gtk, better timeout support.
 
 *zenity-3.0.0 (19 Aug 2011)
 
