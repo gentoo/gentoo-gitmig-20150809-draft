@@ -1,10 +1,10 @@
 # ChangeLog for dev-tex/dvi2tty
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvi2tty/ChangeLog,v 1.25 2011/11/05 19:43:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvi2tty/ChangeLog,v 1.26 2011/11/05 19:49:05 ssuominen Exp $
 
   05 Nov 2011; Samuli Suominen <ssuominen@gentoo.org>
   files/dvi2tty-5.3.4-cflags.patch:
-  Remove forced -O2 optimization.
+  Remove forced -O2 optimization and respect CC from environment again.
 
 *dvi2tty-5.3.4 (05 Nov 2011)
 
