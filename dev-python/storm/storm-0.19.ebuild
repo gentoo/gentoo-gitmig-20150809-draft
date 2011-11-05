@@ -1,11 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/storm-0.19.ebuild,v 1.1 2011/11/03 17:00:08 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/storm-0.19.ebuild,v 1.2 2011/11/05 19:33:08 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
+PYTHON_TESTS_FAILURES_TOLERANT_ABIS="*-jython"
 
 inherit distutils
 
@@ -26,7 +27,19 @@ DEPEND="dev-python/setuptools
 
 PYTHON_CFLAGS=("2.* + -fno-strict-aliasing")
 
+DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
 DOCS="tests/tutorial.txt"
+
+src_prepare() {
+	distutils_src_prepare
+
+	preparation() {
+		if [[ "$(python_get_implementation)" == "Jython" ]]; then
+			sed -e "s/BUILD_CEXTENSIONS = True/BUILD_CEXTENSIONS = False/" -i setup.py
+		fi
+	}
+	python_execute_function -s preparation
+}
 
 src_test() {
 	if use mysql; then
@@ -45,7 +58,12 @@ src_test() {
 	fi
 
 	testing() {
-		PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib*)" "$(PYTHON)" test --verbose
+		PYTHONPATH="$(ls -d build/lib*)" "$(PYTHON)" test --verbose
 	}
-	python_execute_function testing
+	python_execute_function -s testing
+}
+
+src_install() {
+	distutils_src_install
+	python_clean_installation_image
 }
