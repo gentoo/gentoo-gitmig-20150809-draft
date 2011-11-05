@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-vdagent/spice-vdagent-0.8.1-r1.ebuild,v 1.1 2011/08/15 00:42:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-vdagent/spice-vdagent-0.8.1-r1.ebuild,v 1.2 2011/11/05 21:53:44 robbat2 Exp $
 
 EAPI=4
 
@@ -23,7 +23,7 @@ RDEPEND="x11-libs/libXfixes
 DEPEND="dev-util/pkgconfig
 	${RDEPEND}"
 
-CONFIG_CHECK="INPUT_UINPUT"
+CONFIG_CHECK="~INPUT_UINPUT"
 ERROR_INPUT_UINPUT="User level driver support is required to run the spice-vdagent daemon"
 
 src_configure() {
