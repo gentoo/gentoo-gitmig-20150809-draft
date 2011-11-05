@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/mutter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/ChangeLog,v 1.1 2011/09/30 16:35:42 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/mutter/ChangeLog,v 1.2 2011/11/05 07:51:29 tetromino Exp $
+
+*mutter-3.2.1 (05 Nov 2011)
+
+  05 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +mutter-3.2.1.ebuild:
+  Bump to 3.2.1 from the gnome overlay. Notable changes: better performance,
+  improved handling for transparent windows, visual improvements.
 
 *mutter-3.0.2.1 (30 Sep 2011)
 
