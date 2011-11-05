@@ -1,6 +1,9 @@
 # ChangeLog for games-board/freedoko
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/ChangeLog,v 1.14 2011/09/21 19:42:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/freedoko/ChangeLog,v 1.15 2011/11/05 10:12:29 hwoarang Exp $
+
+  05 Nov 2011; Markos Chandras <hwoarang@gentoo.org> freedoko-0.7.10.ebuild:
+  Stable on amd64 wrt bug #389267
 
 *freedoko-0.7.10 (21 Sep 2011)
 
