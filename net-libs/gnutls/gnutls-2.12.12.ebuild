@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.12.ebuild,v 1.1 2011/10/21 19:10:25 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.12.ebuild,v 1.2 2011/11/05 19:28:49 hwoarang Exp $
 
 EAPI="3"
 
@@ -29,9 +29,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="bindist +cxx doc examples guile lzo +nettle nls test zlib"
 
-# lib/m4/hooks.m4 says that GnuTLS uses a fork of PaKChoiS.
-RDEPEND="
-	app-crypt/p11-kit
+RDEPEND="app-crypt/p11-kit
 	>=dev-libs/libtasn1-0.3.4
 	nls? ( virtual/libintl )
 	guile? ( >=dev-scheme/guile-1.8[networking] )
