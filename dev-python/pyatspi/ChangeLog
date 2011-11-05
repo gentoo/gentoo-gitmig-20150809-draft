@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pyatspi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/ChangeLog,v 1.1 2011/08/19 14:15:49 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyatspi/ChangeLog,v 1.2 2011/11/05 04:51:38 tetromino Exp $
+
+*pyatspi-2.2.1 (05 Nov 2011)
+
+  05 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +files/pyatspi-2.2.0-AM_CHECK_PYMOD-pygtk.patch, +pyatspi-2.2.1.ebuild:
+  Bump to 2.2.1 from the gnome overlay. Notable changes: updates for
+  at-spi2-core changes and pygobject-3.
 
 *pyatspi-2.0.2 (19 Aug 2011)
 
