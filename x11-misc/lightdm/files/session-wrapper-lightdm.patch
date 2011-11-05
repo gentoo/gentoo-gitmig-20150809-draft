@@ -1,0 +1,12 @@
+Index: data/lightdm.conf
+===================================================================
+--- data.orig/lightdm.conf
++++ data/lightdm.conf
+@@ -25,6 +25,7 @@
+ #cache-directory=/var/cache/lightdm
+ #xsessions-directory=/usr/share/xsessions
+ #xgreeters-directory=/usr/share/xgreeters
++session-wrapper=/etc/lightdm/Xsession
+ 
+ #
+ # Seat defaults

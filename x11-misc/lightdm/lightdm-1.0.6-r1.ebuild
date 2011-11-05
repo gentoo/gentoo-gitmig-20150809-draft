@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.0.6.ebuild,v 1.1 2011/11/04 20:24:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.0.6-r1.ebuild,v 1.1 2011/11/05 01:44:15 hwoarang Exp $
 
 EAPI=4
 inherit autotools eutils pam
@@ -39,7 +39,7 @@ DOCS=( NEWS )
 src_prepare() {
 	sed -i -e "/minimum-uid/s:500:1000:" "${S}"/data/users.conf	|| die
 	sed -i -e "s:gtk+-3.0:gtk+-2.0:" "${S}"/configure.ac || die
-
+	epatch "${FILESDIR}"/session-wrapper-${PN}.patch
 	eautoreconf
 }
 
@@ -77,6 +77,8 @@ src_install() {
 	# Install missing files
 	insinto /etc/${PN}/
 	doins "${S}"/data/{users,keys}.conf
+	doins "${FILESDIR}"/Xsession
+
 	# remove .la files
 	find "${ED}" -name "*.la" -exec rm -rf {} +
 	rm -Rf "${ED}"/etc/init || die
