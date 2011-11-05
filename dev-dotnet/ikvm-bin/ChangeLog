@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/ikvm-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ChangeLog,v 1.18 2011/11/04 12:32:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ikvm-bin/ChangeLog,v 1.19 2011/11/05 12:19:36 hwoarang Exp $
+
+  05 Nov 2011; Markos Chandras <hwoarang@gentoo.org> ikvm-bin-0.46.0.1.ebuild:
+  Stable on amd64 wrt bug #389181
 
   04 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   ikvm-bin-0.46.0.1.ebuild:
