@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/bio2jack
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/ChangeLog,v 1.37 2010/12/02 18:24:24 flameeyes Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/ChangeLog,v 1.38 2011/11/05 10:00:42 hwoarang Exp $
+
+  05 Nov 2011; Markos Chandras <hwoarang@gentoo.org> bio2jack-0.9-r1.ebuild:
+  Stable on amd64 wrt bug #389439
 
 *bio2jack-0.9-r1 (02 Dec 2010)
 
