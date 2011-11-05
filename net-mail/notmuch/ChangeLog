@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.9 2011/11/04 14:49:13 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.10 2011/11/05 11:33:36 aidecoe Exp $
+
+  05 Nov 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.9-r2.ebuild:
+  Use elog instead of einfo in postinst.
 
 *notmuch-0.9-r2 (04 Nov 2011)
 
