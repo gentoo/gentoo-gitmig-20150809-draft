@@ -1,0 +1,10 @@
+# ChangeLog for games-engines/love
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/love/ChangeLog,v 1.1 2011/11/05 19:29:17 chithanh Exp $
+
+*love-0.7.2 (05 Nov 2011)
+
+  05 Nov 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +love-0.7.2.ebuild:
+  Initial commit, taken from the gamerlay overlay.
+
