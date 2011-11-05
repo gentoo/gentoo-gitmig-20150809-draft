@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/binutils-apple
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.24 2011/11/05 16:30:56 grobian Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.25 2011/11/05 16:37:23 grobian Exp $
+
+*binutils-apple-4.2 (05 Nov 2011)
+
+  05 Nov 2011; Fabian Groffen <grobian@gentoo.org>
+  +binutils-apple-4.2.ebuild, +files/binutils-apple-4.2-as-dir.patch,
+  +files/binutils-apple-4.2-lto.patch, +files/ld64-127.2-lto.patch:
+  Bump to version from Developer Tools 4.2
 
   19 Oct 2011; Fabian Groffen <grobian@gentoo.org> files/ld64-123.2-Makefile:
   Fix compilation of ld64, add back wrongly dropped LD64LIBS, thanks Charles
