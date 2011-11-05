@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-2.22.ebuild,v 1.3 2011/11/03 10:16:27 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-2.22.ebuild,v 1.4 2011/11/05 22:47:20 vapier Exp $
 
 EAPI="2"
 
@@ -25,15 +25,14 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.20-ignore-RAISE_SETFCAP-install-failures.patch
 	epatch "${FILESDIR}"/${PN}-2.21-include.patch
 	sed -i \
-		-e "/^PAM_CAP/s:=.*:=$(use pam && echo yes || echo no):" \
+		-e "/^PAM_CAP/s:=.*:=$(usex pam):" \
 		-e '/^DYNAMIC/s:=.*:=yes:' \
 		-e "/^lib=/s:=.*:=/usr/$(get_libdir):" \
 		Make.Rules
 }
 
-src_compile() {
+src_configure() {
 	tc-export BUILD_CC CC AR RANLIB
-	emake || die
 }
 
 src_install() {
@@ -41,6 +40,7 @@ src_install() {
 
 	gen_usr_ldscript -a cap
 
+	rm -rf "${D}"/usr/$(get_libdir)/security
 	dopammod pam_cap/pam_cap.so
 	dopamsecurity '' pam_cap/capability.conf
 
