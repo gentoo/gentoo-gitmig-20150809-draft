@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.0.6-r1.ebuild,v 1.3 2011/11/05 14:09:08 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm/lightdm-1.0.6-r1.ebuild,v 1.4 2011/11/05 19:38:12 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils pam
@@ -8,6 +8,7 @@ inherit autotools eutils pam
 DESCRIPTION="A lightweight display manager"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/LightDM"
 SRC_URI="http://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.gz
+	mirror://gentoo/introspection-20110205.m4.tar.bz2
 	gtk? ( http://dev.gentoo.org/~hwoarang/distfiles/${PN}-gentoo-patch.tar.gz )"
 
 LICENSE="GPL-3 LGPL-3"
@@ -23,6 +24,7 @@ RDEPEND="dev-libs/glib:2
 	gtk? ( x11-libs/gtk+:3
 		x11-themes/gnome-themes-standard
 		x11-themes/gnome-icon-theme )
+	introspection? ( dev-libs/gobject-introspection )
 	qt4? ( x11-libs/qt-core:4
 		x11-libs/qt-dbus:4 )
 	sys-apps/accountsservice"
@@ -31,17 +33,21 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	dev-util/pkgconfig
 	gnome-base/gnome-common
-	sys-devel/gettext
-	introspection? ( dev-libs/gobject-introspection )"
+	sys-devel/gettext"
 
 REQUIRED_USE="branding? ( gtk ) || ( gtk qt4 )"
 DOCS=( NEWS )
 
 src_prepare() {
-	sed -i -e "/minimum-uid/s:500:1000:" "${S}"/data/users.conf	|| die
-	sed -i -e "s:gtk+-3.0:gtk+-2.0:" "${S}"/configure.ac || die
+	sed -i -e "/minimum-uid/s:500:1000:" data/users.conf || die
+	sed -i -e "s:gtk+-3.0:gtk+-2.0:" configure.ac || die
 	epatch "${FILESDIR}"/session-wrapper-${PN}.patch
-	eautoreconf
+
+	if has_version dev-libs/gobject-introspection; then
+		eautoreconf
+	else
+		AT_M4DIR=${WORKDIR} eautoreconf
+	fi
 }
 
 src_configure() {
