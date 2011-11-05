@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kleopatra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/ChangeLog,v 1.91 2011/11/02 20:48:14 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/ChangeLog,v 1.92 2011/11/05 19:59:11 xarthisius Exp $
+
+  05 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> kleopatra-4.7.3.ebuild:
+  Marked ~ppc/~ppc64 wrt #379471
 
 *kleopatra-4.7.3 (02 Nov 2011)
 

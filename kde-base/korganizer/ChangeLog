@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/korganizer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.206 2011/11/02 20:48:14 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.207 2011/11/05 19:56:10 xarthisius Exp $
+
+  05 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> korganizer-4.7.3.ebuild:
+  Marked ~ppc/~ppc64 wrt #379471
 
 *korganizer-4.7.3 (02 Nov 2011)
 

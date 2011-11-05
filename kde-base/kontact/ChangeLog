@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kontact
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/ChangeLog,v 1.195 2011/11/02 20:48:06 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/ChangeLog,v 1.196 2011/11/05 19:56:59 xarthisius Exp $
+
+  05 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> kontact-4.7.3.ebuild:
+  Marked ~ppc/~ppc64 wrt #379471
 
 *kontact-4.7.3 (02 Nov 2011)
 

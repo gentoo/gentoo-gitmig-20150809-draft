@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ktimetracker
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimetracker/ChangeLog,v 1.89 2011/11/02 20:48:17 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimetracker/ChangeLog,v 1.90 2011/11/05 19:55:18 xarthisius Exp $
+
+  05 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  ktimetracker-4.7.3.ebuild:
+  Marked ~ppc/~ppc64 wrt #379471
 
 *ktimetracker-4.7.3 (02 Nov 2011)
 
