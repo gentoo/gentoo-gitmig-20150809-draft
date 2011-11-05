@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13205 2011/11/04 23:51:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13206 2011/11/05 15:07:13 vadimk Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Vadim Kuznetsov <vadimk@gentoo.org> (05 Nov 2011)
+# Masked for removal in 30 days
+# due to end of support (upstream) and
+# security issue: bug 385727
+<app-emulation/vmware-modules-238.5
+<app-emulation/vmware-player-3.1.5
+<app-emulation/vmware-workstation-7.1.5
 
 # Samuli Suominen <ssuominen@gentoo.org> (04 Nov 2011)
 # Masked for removal in 30 days because the datafeed is no longer available:
