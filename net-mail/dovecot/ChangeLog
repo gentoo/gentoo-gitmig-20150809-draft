@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.318 2011/11/02 14:47:49 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.319 2011/11/05 21:25:09 maekke Exp $
+
+  05 Nov 2011; Markus Meier <maekke@gentoo.org> dovecot-2.0.15.ebuild:
+  arm stable, bug #388373
 
   02 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> dovecot-2.0.15.ebuild:
   x86 stable wrt bug #388373
