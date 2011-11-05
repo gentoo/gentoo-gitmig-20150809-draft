@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/denyhosts-2.6-r4.ebuild,v 1.3 2011/11/05 07:35:46 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/denyhosts/denyhosts-2.6-r4.ebuild,v 1.4 2011/11/05 07:46:40 lxnay Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
+PYTHON_DEPEND="2"
 
 inherit distutils eutils
 
