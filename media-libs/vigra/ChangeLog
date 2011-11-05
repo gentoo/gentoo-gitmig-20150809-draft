@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vigra
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.43 2011/10/26 15:41:09 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/ChangeLog,v 1.44 2011/11/05 19:27:29 hwoarang Exp $
+
+  05 Nov 2011; Markos Chandras <hwoarang@gentoo.org> vigra-1.7.1-r1.ebuild:
+  Call python_mod_optimize() and python_mod_cleanup(). Patch by Arfrever.
 
   26 Oct 2011; Tony Vroon <chainsaw@gentoo.org> vigra-1.7.1-r1.ebuild:
   Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney &
