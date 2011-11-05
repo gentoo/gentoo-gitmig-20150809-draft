@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/votca-csg-1.2.1.ebuild,v 1.2 2011/09/10 15:02:16 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/votca-csg-1.2.1.ebuild,v 1.3 2011/11/05 02:46:25 ottxor Exp $
 
 EAPI=4
 
-inherit bash-completion-r1 cmake-utils
+inherit bash-completion-r1 cmake-utils multilib
 
 IUSE="doc examples extras +gromacs +system-boost"
 PDEPEND="extras? ( =sci-chemistry/votca-csgapps-${PV} )"
@@ -51,6 +51,7 @@ src_configure() {
 		$(cmake-utils_use_with gromacs GMX)
 		${extra}
 		-DWITH_RC_FILES=OFF
+		-DLIB=$(get_libdir)
 	)
 	cmake-utils_src_configure
 }

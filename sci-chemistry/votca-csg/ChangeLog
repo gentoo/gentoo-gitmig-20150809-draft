@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/votca-csg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/ChangeLog,v 1.9 2011/09/10 15:02:16 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/votca-csg/ChangeLog,v 1.10 2011/11/05 02:46:25 ottxor Exp $
+
+  05 Nov 2011; Christoph Junghans <ottxor@gentoo.org> votca-csg-1.2.1.ebuild:
+  multilib support
 
   10 Sep 2011; Christoph Junghans <ottxor@gentoo.org> votca-csg-1.2.1.ebuild:
   Migrate to the bash-completion-r1 eclass manifest
