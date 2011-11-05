@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-dropbox/nautilus-dropbox-0.6.7-r1.ebuild,v 1.1 2011/05/11 15:34:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-dropbox/nautilus-dropbox-0.6.7-r1.ebuild,v 1.2 2011/11/05 22:05:08 robbat2 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README"
 G2CONF="${G2CONF} $(use_enable debug) --disable-static"
 
-CONFIG_CHECK="INOTIFY_USER"
+CONFIG_CHECK="~INOTIFY_USER"
 
 pkg_setup () {
 	check_extra_config
