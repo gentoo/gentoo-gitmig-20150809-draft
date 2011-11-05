@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.103 2011/10/22 13:16:13 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.104 2011/11/05 07:27:21 ssuominen Exp $
+
+*gparted-0.10.0 (05 Nov 2011)
+
+  05 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> +gparted-0.10.0.ebuild:
+  Version bump.
 
   22 Oct 2011; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml:
   Add flag description for gtk, bug #387353.
