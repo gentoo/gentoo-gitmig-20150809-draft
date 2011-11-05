@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.100 2011/10/24 18:31:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.101 2011/11/05 20:26:24 xarthisius Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (24 Oct 2011)
 # Missing keywords in needed packages, bug #388367
@@ -63,6 +63,7 @@ mail-client/claws-mail pda
 # Mask unsatisfied kde-deps bug #357403
 =kde-base/kdelibs-4.6* policykit
 =kde-base/solid-4.6* bluetooth
+=kde-base/solid-4.7* bluetooth
 
 # Sebastian Pipping <sping@gentoo.org> (22 Feb 2011)
 # No media-sound/lilypond here, yet (bug #356069)
