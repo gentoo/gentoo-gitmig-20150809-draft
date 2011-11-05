@@ -1,0 +1,11 @@
+# ChangeLog for dev-db/mydumper
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mydumper/ChangeLog,v 1.1 2011/11/05 12:25:26 flameeyes Exp $
+
+*mydumper-0.5.1 (05 Nov 2011)
+
+  05 Nov 2011; Diego E. Pettenò <flameeyes@gentoo.org> +metadata.xml,
+  +mydumper-0.5.1.ebuild:
+  Initial import of mydumper ebuild by Pavel Stratil (who will proxy maintain
+  it).
+
