@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/roxterm-2.2.2.ebuild,v 1.1 2011/10/14 20:49:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/roxterm-2.2.2.ebuild,v 1.2 2011/11/05 10:19:53 hwoarang Exp $
 
 EAPI=4
 inherit flag-o-matic gnome2-utils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/roxterm/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/dbus-glib
