@@ -1,12 +1,11 @@
-diff -ur dvi2tty-5.3.4.orig//Makefile dvi2tty-5.3.4/Makefile
---- dvi2tty-5.3.4/Makefile	2010-10-27 17:01:32.000000000 +0800
-+++ dvi2tty-5.3.4/Makefile	2011-11-06 00:50:37.738815333 +0800
+--- Makefile
++++ Makefile
 @@ -8,9 +8,8 @@
  #
  CC = gcc
  
 -CFLAGS = -Wall -O2
-+CFLAGS += -Wall -O2
++CFLAGS += -Wall
  # CFLAGS = -Wall -O2 -fomit-frame-pointer
 -LDFLAGS = -s
  

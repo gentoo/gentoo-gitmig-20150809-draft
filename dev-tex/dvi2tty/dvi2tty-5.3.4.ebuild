@@ -1,9 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvi2tty/dvi2tty-5.3.4.ebuild,v 1.1 2011/11/05 18:51:57 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvi2tty/dvi2tty-5.3.4.ebuild,v 1.2 2011/11/05 19:43:02 ssuominen Exp $
 
-EAPI="4"
-
+EAPI=4
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Preview dvi-files on text-only devices"
@@ -16,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-
 IUSE=""
 
 src_prepare() {
-        epatch "${FILESDIR}/${PN}-${PV}-cflags.patch"
+	epatch "${FILESDIR}"/${P}-cflags.patch
 }
 
 src_compile() {
