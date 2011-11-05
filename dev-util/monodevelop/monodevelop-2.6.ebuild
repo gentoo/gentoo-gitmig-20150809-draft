@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-2.6.ebuild,v 1.3 2011/11/04 12:38:12 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop/monodevelop-2.6.ebuild,v 1.4 2011/11/05 12:26:49 hwoarang Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.mono-project.com/sources/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="+subversion +git"
 
 RDEPEND="sys-apps/dbus[X]

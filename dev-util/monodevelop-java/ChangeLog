@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/monodevelop-java
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-java/ChangeLog,v 1.19 2011/11/04 12:36:52 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-java/ChangeLog,v 1.20 2011/11/05 12:24:53 hwoarang Exp $
+
+  05 Nov 2011; Markos Chandras <hwoarang@gentoo.org>
+  monodevelop-java-2.6.ebuild:
+  Stable on amd64 wrt bug #389181
 
   04 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   monodevelop-java-2.6.ebuild:
