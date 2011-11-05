@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/polkit-kde-kcmodules
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/polkit-kde-kcmodules/ChangeLog,v 1.4 2011/08/14 17:56:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/polkit-kde-kcmodules/ChangeLog,v 1.5 2011/11/05 20:19:27 xarthisius Exp $
+
+  05 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  polkit-kde-kcmodules-0.98_pre20101127.ebuild:
+  Marked ~ppc/~ppc64 for KDE SC 4.7.3
 
   14 Aug 2011; Markus Meier <maekke@gentoo.org>
   polkit-kde-kcmodules-0.98_pre20101127.ebuild:
