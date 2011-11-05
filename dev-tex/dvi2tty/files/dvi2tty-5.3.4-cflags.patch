@@ -1,0 +1,32 @@
+diff -ur dvi2tty-5.3.4.orig//Makefile dvi2tty-5.3.4/Makefile
+--- dvi2tty-5.3.4/Makefile	2010-10-27 17:01:32.000000000 +0800
++++ dvi2tty-5.3.4/Makefile	2011-11-06 00:50:37.738815333 +0800
+@@ -8,9 +8,8 @@
+ #
+ CC = gcc
+ 
+-CFLAGS = -Wall -O2
++CFLAGS += -Wall -O2
+ # CFLAGS = -Wall -O2 -fomit-frame-pointer
+-LDFLAGS = -s
+ 
+ prefix = ${DESTDIR}/usr
+ mandir = $(prefix)/share/man/man1
+@@ -20,10 +19,10 @@
+ all:	dvi2tty disdvi
+ 
+ dvi2tty:dvi2tty.o dvistuff.o
+-	$(CC) $(LFLAGS) -o dvi2tty dvi2tty.o dvistuff.o
++	$(CC) $(LDFLAGS) -o dvi2tty dvi2tty.o dvistuff.o
+ 
+ disdvi:disdvi.o
+-	$(CC) $(LFLAGS) -o disdvi disdvi.o
++	$(CC) $(LDFLAGS) -o disdvi disdvi.o
+ 
+ dvi2tty.o: dvi2tty.c dvi2tty.h
+ 
+@@ -37,4 +36,3 @@
+ install:	all
+ 	install dvi2tty disdvi $(bindir)
+ 	install dvi2tty.1 $(mandir)
+-	install disdvi.1 $(mandir)
