@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.142 2011/11/03 18:25:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.143 2011/11/06 17:23:25 maekke Exp $
+
+  06 Nov 2011; Markus Meier <maekke@gentoo.org> use.mask:
+  remove colord use.mask, bug #387959
 
   03 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   p.use.masking gnome-extra/gnome-media[aac,mp3,speex,twolame] due to missing

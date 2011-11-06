@@ -4,10 +4,6 @@
 # Unmask arm arch specific flags
 -iwmmxt
 
-# Alexandre Rostovtsev <tetromino@gmail.com> (28 Oct 2011)
-# x11-misc/colord not tested. Bug #387959.
-colord
-
 # Markus Meier <maekke@gentoo.org> (22 Aug 2010)
 # net-wireless/wimax not tested
 wimax
