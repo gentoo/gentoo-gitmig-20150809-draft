@@ -1,6 +1,11 @@
 # ChangeLog for net-voip/linphone
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.62 2011/10/23 11:36:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.63 2011/11/06 12:47:49 grobian Exp $
+
+  06 Nov 2011; Fabian Groffen <grobian@gentoo.org> linphone-3.4.3-r1.ebuild,
+  linphone-3.4.3.ebuild, linphone-3.3.2.ebuild:
+  Drop ~ppc-macos keyword for versions that (indirectly) depend on
+  mediastreamer-2.7.3
 
   23 Oct 2011; Markus Meier <maekke@gentoo.org> linphone-3.4.3-r1.ebuild:
   x86 stable, bug #363311
