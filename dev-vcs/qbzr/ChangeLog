@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/qbzr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/ChangeLog,v 1.23 2011/10/30 11:43:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/qbzr/ChangeLog,v 1.24 2011/11/06 16:20:28 ranger Exp $
+
+  06 Nov 2011; Brent Baude <ranger@gentoo.org> qbzr-0.21.1.ebuild:
+  Marking qbzr-0.21.1 ppc stable for bug 
 
   30 Oct 2011; Markos Chandras <hwoarang@gentoo.org> qbzr-0.21.1.ebuild:
   Stable on amd64 wrt bug #383751
