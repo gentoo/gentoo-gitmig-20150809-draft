@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.55 2011/11/04 18:32:12 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.56 2011/11/06 02:36:06 williamh Exp $
 
 EAPI=4
 
@@ -8,7 +8,7 @@ KV_min=2.6.34
 #PATCHSET=${P}-gentoo-patchset-v1
 scriptversion=5
 scriptname=${PN}-gentoo-scripts
-udev_rules_md5=9fadfc5642284b82e75005c4e85142f1
+udev_rules_md5=a585b848976900cd15cf729e8ef11c61
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/hotplug/udev.git"
 
@@ -52,12 +52,10 @@ DEPEND="${COMMON_DEPEND}
 	!<sys-kernel/linux-headers-2.6.34
 	test? ( app-text/tree )"
 
-if [[ ${PV} == "9999" ]]
+if [[ ${PV} == "9999" ]] || use doc
 then
 	# for documentation processing with xsltproc
 	DEPEND="${DEPEND}
-		app-text/docbook-xsl-stylesheets
-		app-text/docbook-xml-dtd
 		dev-util/gtk-doc"
 fi
 
