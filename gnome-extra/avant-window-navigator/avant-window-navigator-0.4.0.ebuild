@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.4.0.ebuild,v 1.1 2011/11/06 07:09:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.4.0.ebuild,v 1.2 2011/11/06 08:12:59 ssuominen Exp $
 
 EAPI="4"
 
@@ -27,6 +27,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.80
 	dev-python/pygobject:2
 	>=dev-python/pygtk-2.12:2
 	dev-python/pyxdg
+	dev-vcs/bzr
 	>=gnome-base/libgtop-2
 	>=x11-libs/gtk+-2.12:2
 	>=x11-libs/libdesktop-agnostic-0.3.9[gconf?]
