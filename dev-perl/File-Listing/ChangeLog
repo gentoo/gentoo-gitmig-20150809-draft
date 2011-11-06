@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Listing
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Listing/ChangeLog,v 1.14 2011/11/06 14:03:02 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Listing/ChangeLog,v 1.15 2011/11/06 21:06:00 maekke Exp $
+
+  06 Nov 2011; Markus Meier <maekke@gentoo.org> File-Listing-6.30.0.ebuild:
+  arm stable, bug #386309
 
   06 Nov 2011; Andreas Schuerch <nativemad@gentoo.org>
   File-Listing-6.30.0.ebuild:

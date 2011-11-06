@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTTP-Negotiate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Negotiate/ChangeLog,v 1.10 2011/11/06 14:07:46 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Negotiate/ChangeLog,v 1.11 2011/11/06 21:03:17 maekke Exp $
+
+  06 Nov 2011; Markus Meier <maekke@gentoo.org> HTTP-Negotiate-6.0.0.ebuild:
+  arm stable, bug #386309
 
   06 Nov 2011; Andreas Schuerch <nativemad@gentoo.org>
   HTTP-Negotiate-6.0.0.ebuild:
