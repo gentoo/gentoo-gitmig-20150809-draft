@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.225 2011/11/05 21:11:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.226 2011/11/06 16:23:31 ranger Exp $
+
+  06 Nov 2011; Brent Baude <ranger@gentoo.org> nss-3.12.11-r1.ebuild:
+  Marking nss-3.12.11-r1 ppc for bug 388045
 
   05 Nov 2011; Markus Meier <maekke@gentoo.org> nss-3.12.11-r1.ebuild:
   arm stable, bug #388045
