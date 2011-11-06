@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-web-photo/gnome-web-photo-0.9.ebuild,v 1.6 2011/03/21 23:04:32 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-web-photo/gnome-web-photo-0.9.ebuild,v 1.7 2011/11/06 06:09:27 tetromino Exp $
 
 EAPI="2"
 
 inherit autotools gnome2
 
-DESCRIPTION="a tool to generate images and thumbnails from HTML files"
-HOMEPAGE="ftp://ftp.gnome.org/pub/gnome/sources/gnome-web-photo"
+DESCRIPTION="A tool to generate images and thumbnails from HTML files"
+HOMEPAGE="http://git.gnome.org/browse/gnome-web-photo/"
 
 LICENSE="GPL-2"
 SLOT="0"

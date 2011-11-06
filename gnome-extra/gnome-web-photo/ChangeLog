@@ -1,6 +1,15 @@
 # ChangeLog for gnome-extra/gnome-web-photo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-web-photo/ChangeLog,v 1.14 2011/07/24 13:18:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-web-photo/ChangeLog,v 1.15 2011/11/06 06:09:27 tetromino Exp $
+
+*gnome-web-photo-0.10.4 (06 Nov 2011)
+
+  06 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-web-photo-0.9.ebuild, -gnome-web-photo-0.10.1.ebuild,
+  gnome-web-photo-0.10.2.ebuild, +gnome-web-photo-0.10.4.ebuild:
+  Bump to 0.10.4 from the gnome overlay, drop old. Use gtk3 (gtk2 is becoming
+  legacy). Notable changes: adds support for delay and disabling plugins. Also.
+  update the homepage to something more useful, and capitalize the description.
 
 *gnome-web-photo-0.10.2 (24 Jul 2011)
 
