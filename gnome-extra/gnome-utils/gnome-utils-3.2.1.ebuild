@@ -1,11 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-3.0.1.ebuild,v 1.1 2011/08/19 11:54:28 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-3.2.1.ebuild,v 1.1 2011/11/06 04:23:12 tetromino Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
-GNOME_TARBALL_SUFFIX="bz2"
 
 inherit gnome2
 
@@ -18,7 +17,7 @@ IUSE="doc ipv6 test"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 
 # libcanberra 0.26-r2 is needed for gtk+:3 fixes
-COMMON_DEPEND=">=dev-libs/glib-2.28.0:2
+COMMON_DEPEND=">=dev-libs/glib-2.29.14:2
 	>=x11-libs/gtk+-3.0.3:3
 	>=gnome-base/gconf-2:2
 	>=gnome-base/gsettings-desktop-schemas-0.1.0
@@ -34,8 +33,10 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-util/pkgconfig-0.9
 	doc? ( >=dev-util/gtk-doc-1.10 )"
 
-# file collisions
+# file collisions with g-c-c
+# nautilus is used via dbus
 RDEPEND="${COMMON_DEPEND}
+	>=gnome-base/nautilus-3.0.0
 	!<gnome-base/gnome-control-center-2.90"
 
 pkg_setup() {

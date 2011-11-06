@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gnome-utils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.223 2011/10/05 17:41:26 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/ChangeLog,v 1.224 2011/11/06 04:23:12 tetromino Exp $
+
+*gnome-utils-3.2.1 (06 Nov 2011)
+
+  06 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnome-utils-3.0.1.ebuild, +gnome-utils-3.2.1.ebuild:
+  Bump to 3.2.1 from the gnome overlay, drop old. Notable changes: improved
+  screenshot tool.
 
   05 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org>
   gnome-utils-2.32.0-r2.ebuild:
