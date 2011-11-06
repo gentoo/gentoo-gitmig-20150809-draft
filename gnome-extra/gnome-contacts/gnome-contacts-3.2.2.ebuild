@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-contacts/gnome-contacts-3.2.2.ebuild,v 1.1 2011/11/04 05:25:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-contacts/gnome-contacts-3.2.2.ebuild,v 1.2 2011/11/06 21:33:10 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -35,4 +35,9 @@ DEPEND="${RDEPEND}
 #	>=dev-lang/vala-0.14.0:0.14
 #	net-libs/telepathy-glib[vala]
 
-DOCS="AUTHORS ChangeLog NEWS" # README is empty
+pkg_setup() {
+	DOCS="AUTHORS ChangeLog NEWS" # README is empty
+	# We do not need valac when building from pre-generated C sources,
+	# but configure checks for it anyway
+	G2CONF="${G2CONF} VALAC=$(type -P true)"
+}
