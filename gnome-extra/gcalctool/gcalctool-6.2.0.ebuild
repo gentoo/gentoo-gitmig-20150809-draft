@@ -1,10 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/gcalctool-6.0.2.ebuild,v 1.1 2011/08/19 11:20:17 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/gcalctool-6.2.0.ebuild,v 1.1 2011/11/06 04:10:33 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
-GNOME_TARBALL_SUFFIX="bz2"
 
 inherit gnome2
 
@@ -24,7 +23,7 @@ DEPEND="${COMMON_DEPEND}
 	app-text/scrollkeeper
 	>=dev-util/intltool-0.35
 	>=dev-util/pkgconfig-0.9
-	virtual/yacc
+	sys-devel/bison
 	sys-devel/flex
 	sys-devel/gettext"
 RDEPEND="${COMMON_DEPEND}
@@ -32,8 +31,6 @@ RDEPEND="${COMMON_DEPEND}
 
 pkg_setup() {
 	G2CONF="${G2CONF}
-		--disable-maintainer-mode
-		--disable-schemas-compile
-		--with-gtk=3.0"
+		--disable-schemas-compile"
 	DOCS="AUTHORS ChangeLog* NEWS README"
 }

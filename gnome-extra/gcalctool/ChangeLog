@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/gcalctool
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.218 2011/09/11 09:12:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.219 2011/11/06 04:10:33 tetromino Exp $
+
+*gcalctool-6.2.0 (06 Nov 2011)
+
+  06 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gcalctool-6.0.2.ebuild, +gcalctool-6.2.0.ebuild:
+  Bump to 6.2.0 from the gnome overlay, drop old. Change dependency from yacc
+  to bison (gcalctool-6 specifically requires bison). Notable changes: unit
+  conversion fixes, correct order of operations in implied multiplication.
 
   11 Sep 2011; Pacho Ramos <pacho@gentoo.org> gcalctool-5.32.2.ebuild,
   +files/gcalctool-5.32.2-missing-header.patch:
