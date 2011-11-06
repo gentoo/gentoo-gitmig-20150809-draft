@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-3.0.1-r1.ebuild,v 1.1 2011/08/19 11:47:29 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/gnome-system-monitor-3.2.1.ebuild,v 1.1 2011/11/06 03:59:21 tetromino Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
 
-inherit eutils gnome2
+inherit gnome2
 
 DESCRIPTION="The Gnome System Monitor"
 HOMEPAGE="http://www.gnome.org/"
@@ -36,14 +36,4 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		--disable-schemas-compile
 		--disable-scrollkeeper"
-}
-
-src_prepare() {
-	# Add some useful patches from upstream git master
-	# Use the correct maximum nice value on Linux
-	epatch "${FILESDIR}/${PN}-3.0.1-linux-nice.patch"
-	# Don't overflow the network history totals counters on 32-bit machines
-	epatch "${FILESDIR}/${PN}"-3.0.1-32-bit-network-totals-overflow-{1,2,3}.patch
-
-	gnome2_src_prepare
 }
