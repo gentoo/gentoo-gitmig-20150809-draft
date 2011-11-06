@@ -2,9 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <use>
-    <flag name='gconf'>Enable support for the GConf configuration backend</flag>
-    <flag name='thunar'>Enable support for the deprecated Thunar VFS layer</flag>
-    <flag name='vala'>Enable support for applets written in <pkg>dev-lang/vala</pkg></flag>
+    <flag name='gconf'>Enable GConf as configuration backend</flag>
+    <flag name='vala'>Enable installation of <pkg>dev-lang/vala</pkg> binding</flag>
   </use>
   <herd>desktop-effects</herd>
   <longdescription>
