@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mediastreamer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.49 2011/10/23 11:43:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.50 2011/11/06 12:37:14 grobian Exp $
+
+  06 Nov 2011; Fabian Groffen <grobian@gentoo.org>
+  mediastreamer-2.7.3-r3.ebuild:
+  Drop ~ppc-macos, since 2.7 no longer compiles on OSX 10.5 (last ppc version)
 
   23 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   -mediastreamer-2.2.3_p1-r1.ebuild,
