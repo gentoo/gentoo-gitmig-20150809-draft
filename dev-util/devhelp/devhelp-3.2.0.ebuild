@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-3.2.0.ebuild,v 1.1 2011/10/28 00:14:40 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-3.2.0.ebuild,v 1.2 2011/11/06 02:49:21 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -33,8 +33,8 @@ pkg_setup() {
 	if [[ $(tc-getCC) == "icc" ]] ; then
 		G2CONF="${G2CONF} --with-compile-warnings=no"
 	fi
-	python_pkg_setup
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
