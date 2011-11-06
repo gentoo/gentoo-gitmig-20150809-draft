@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-4.1.4.ebuild,v 1.3 2011/11/01 10:54:11 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/virtualbox-modules-4.1.4.ebuild,v 1.4 2011/11/06 13:16:19 polynomial-c Exp $
 
 # XXX: the tarball here is just the kernel modules split out of the binary
 #      package that comes from virtualbox-bin
@@ -40,7 +40,9 @@ src_prepare() {
 		grep -lR linux/autoconf.h *  | xargs sed -i -e 's:<linux/autoconf.h>:<generated/autoconf.h>:'
 	fi
 
-	use pax_kernel && epatch "${FILESDIR}"/${PN}-4.1.4-pax-const.patch
+	if use pax_kernel && kernel_is -ge 3 0 0 ; then
+		epatch "${FILESDIR}"/${PN}-4.1.4-pax-const.patch
+	fi
 }
 
 src_install() {
@@ -53,9 +55,5 @@ pkg_postinst() {
 	elog "be sure to load all the needed modules."
 	elog ""
 	elog "Please add \"vboxdrv\", \"vboxnetflt\" and \"vboxnetadp\" to:"
-	if has_version sys-apps/openrc; then
-		elog "/etc/conf.d/modules"
-	else
-		elog "/etc/modules.autoload.d/kernel-${KV_MAJOR}.${KV_MINOR}"
-	fi
+	elog "/etc/conf.d/modules"
 }
