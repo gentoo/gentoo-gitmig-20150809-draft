@@ -1,0 +1,46 @@
+From 2bba98d6214cffae2eb5cecb9d7c1f6b6d244052 Mon Sep 17 00:00:00 2001
+From: "Jasper St. Pierre" <jstpierre@mecheye.net>
+Date: Tue, 25 Oct 2011 14:21:01 -0400
+Subject: systemMonitor: Properly enable/disable
+
+https://bugzilla.gnome.org/show_bug.cgi?id=662705
+---
+ extensions/systemMonitor/extension.js |    9 ++++++++-
+ 1 files changed, 8 insertions(+), 1 deletions(-)
+
+diff --git a/extensions/systemMonitor/extension.js b/extensions/systemMonitor/extension.js
+index 39801ab..6aa117a 100644
+--- a/extensions/systemMonitor/extension.js
++++ b/extensions/systemMonitor/extension.js
+@@ -35,13 +35,18 @@ Indicator.prototype = {
+                                   reactive: true});
+         this.actor.add_actor(this.drawing_area);
+ 
+-        Mainloop.timeout_add(INDICATOR_UPDATE_INTERVAL, Lang.bind(this, function () {
++        this._timeout = Mainloop.timeout_add(INDICATOR_UPDATE_INTERVAL, Lang.bind(this, function () {
+             this._updateValues();
+             this.drawing_area.queue_repaint();
+             return true;
+         }));
+     },
+ 
++    destroy: function() {
++        Mainloop.source_remove(this._timeout);
++        this.actor.destroy();
++    },
++
+     _initValues: function() {
+     },
+ 
+@@ -239,6 +244,8 @@ function enable() {
+ 
+ function disable() {
+     _cpuIndicator.destroy();
++    _cpuIndicator = null;
+     _memIndicator.destroy();
++    _memIndicator = null;
+     _box.destroy();
+ }
+-- 
+1.7.7.2
+
