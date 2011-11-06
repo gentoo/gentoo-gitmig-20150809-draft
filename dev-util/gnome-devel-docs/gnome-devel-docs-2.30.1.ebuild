@@ -1,11 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnome-devel-docs/gnome-devel-docs-2.30.1.ebuild,v 1.3 2010/09/11 08:26:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnome-devel-docs/gnome-devel-docs-2.30.1.ebuild,v 1.4 2011/11/06 02:39:02 tetromino Exp $
 
 inherit gnome2
 
 DESCRIPTION="Documentation for developing for the GNOME desktop environment"
-HOMEPAGE="http://www.gnome.org"
+HOMEPAGE="http://developer.gnome.org/"
 
 LICENSE="FDL-1.1"
 SLOT="0"
