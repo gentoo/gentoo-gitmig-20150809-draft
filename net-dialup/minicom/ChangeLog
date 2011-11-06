@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/minicom
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.85 2011/11/02 14:50:58 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.86 2011/11/06 17:02:08 maekke Exp $
+
+  06 Nov 2011; Markus Meier <maekke@gentoo.org> minicom-2.5.ebuild:
+  arm stable, bug #389063
 
   02 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> minicom-2.5.ebuild:
   x86 stable wrt bug #389063
