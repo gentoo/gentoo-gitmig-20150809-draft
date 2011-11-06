@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-37.ebuild,v 1.1 2011/10/16 17:27:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-37.ebuild,v 1.2 2011/11/06 15:19:08 mgorny Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="acl audit cryptsetup gtk pam plymouth selinux tcpd"
 
 COMMON_DEPEND=">=sys-apps/dbus-1.4.10

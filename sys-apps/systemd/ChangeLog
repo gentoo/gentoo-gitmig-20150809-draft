@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.14 2011/10/16 17:27:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.15 2011/11/06 15:19:08 mgorny Exp $
+
+  06 Nov 2011; Michał Górny <mgorny@gentoo.org> systemd-37.ebuild:
+  Re-introduce keywords to the systemd ebuild as package.mask entry was
+  introduced.
 
 *systemd-37 (16 Oct 2011)
 
