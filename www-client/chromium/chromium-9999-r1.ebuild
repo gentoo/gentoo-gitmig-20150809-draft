@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.70 2011/11/04 18:10:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.71 2011/11/06 20:59:05 mr_bones_ Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -103,7 +103,7 @@ src_unpack() {
 	gclient_sync
 
 	# Disabled so that we do not download nacl toolchain.
-	#gclient_runhooks 
+	#gclient_runhooks
 	# Remove any lingering nacl toolchain files.
 	rm -rf src/native_client/toolchain/linux_x86_newlib
 
