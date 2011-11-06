@@ -1,6 +1,15 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.274 2011/08/19 14:55:22 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.275 2011/11/06 04:57:01 tetromino Exp $
+
+*epiphany-3.2.1 (06 Nov 2011)
+
+  06 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -epiphany-3.0.4.ebuild, +files/epiphany-3.2.0-optional-networkmanager.patch,
+  +epiphany-3.2.1.ebuild:
+  Bump to 3.2.1 from the gnome overlay, drop old. Notable changes: can save
+  pages as web applications, support for webkit-gtk's spell checker, UI
+  improvements, stability improvements, about:plugins.
 
 *epiphany-3.0.4 (19 Aug 2011)
 
