@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.302 2011/10/05 22:08:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.303 2011/11/06 03:28:11 tetromino Exp $
+
+*file-roller-3.2.1 (06 Nov 2011)
+
+  06 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +files/3.1.2-packages.match, -file-roller-3.0.2-r1.ebuild,
+  -files/file-roller-3.0.2-pointer-arithmetic.patch, +file-roller-3.2.1.ebuild:
+  Bump to 3.2.1 from the gnome overlay, drop old. Notable changes: UI fixes,
+  some 7zip bugfixes.
 
   05 Oct 2011; Pacho Ramos <pacho@gentoo.org> -file-roller-2.32.1.ebuild,
   file-roller-2.32.2.ebuild:

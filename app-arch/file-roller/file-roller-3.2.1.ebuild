@@ -1,11 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-3.0.2-r1.ebuild,v 1.2 2011/09/05 19:47:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-3.2.1.ebuild,v 1.1 2011/11/06 03:28:11 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-GNOME_TARBALL_SUFFIX="bz2"
 
 inherit eutils gnome2
 
@@ -17,9 +16,15 @@ SLOT="0"
 IUSE="nautilus packagekit"
 KEYWORDS="~amd64 ~arm ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 
-RDEPEND=">=dev-libs/glib-2.25.5:2
-	>=x11-libs/gtk+-3.0.2:3
+# gdk-pixbuf used extensively in the source
+# cairo used in eggtreemultidnd.c
+# pango used in fr-window
+RDEPEND=">=dev-libs/glib-2.29.14:2
 	sys-apps/file
+	x11-libs/cairo
+	x11-libs/gdk-pixbuf:2
+	>=x11-libs/gtk+-3.0.2:3
+	x11-libs/pango
 	nautilus? ( >=gnome-base/nautilus-3.0.0 )
 	packagekit? ( app-admin/packagekit-base )
 "
@@ -32,13 +37,14 @@ DEPEND="${RDEPEND}
 #	gnome-base/gnome-common
 
 pkg_setup() {
+	# --disable-debug because enabling it adds -O0 to CFLAGS
 	G2CONF="${G2CONF}
 		--disable-dependency-tracking
 		--disable-scrollkeeper
 		--disable-run-in-place
 		--disable-static
-		--disable-deprecations
 		--disable-schemas-compile
+		--disable-debug
 		--enable-magic
 		$(use_enable nautilus nautilus-actions)
 		$(use_enable packagekit)"
@@ -52,8 +58,8 @@ src_prepare() {
 	# options. On Gentoo, star is /usr/bin/tar, GNU tar is /bin/tar
 	epatch "${FILESDIR}"/${PN}-2.10.3-use_bin_tar.patch
 
-	# Upstream patch to fix path parsing in 7z files, will be in next release
-	epatch "${FILESDIR}/${P}-pointer-arithmetic.patch"
+	# File providing Gentoo package names for various archivers
+	cp -f "${FILESDIR}/3.1.2-packages.match" data/packages.match || die
 }
 
 pkg_postinst() {
