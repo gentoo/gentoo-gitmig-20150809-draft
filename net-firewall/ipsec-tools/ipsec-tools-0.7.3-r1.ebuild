@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.7.3-r1.ebuild,v 1.4 2011/06/06 00:24:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.7.3-r1.ebuild,v 1.5 2011/11/06 16:30:17 phajdan.jr Exp $
+
+EAPI="4"
 
 inherit eutils flag-o-matic autotools linux-info
 
@@ -31,66 +33,61 @@ DEPEND="${DEPEND_COMMON}
 
 pkg_setup() {
 	get_version
-	if kernel_is -ge 2 6 ; then
-		if test "${KV_PATCH}" -ge 19 ; then
-		# Just for kernel >=2.6.19
-			einfo "Checking for suitable kernel configuration (Networking | Networking support | Networking options)"
+	if kernel_is -ge 2 6 19 ; then
+		einfo "Checking for suitable kernel configuration (Networking | Networking support | Networking options)"
 
-			if use nat; then
-				CONFIG_CHECK="${CONFIG_CHECK} ~NETFILTER_XT_MATCH_POLICY"
-				export WARNING_NETFILTER_XT_MATCH_POLICY="NAT support may fail weirdly unless you enable this option in your kernel"
-			fi
-
-			for i in XFRM_USER NET_KEY; do
-				CONFIG_CHECK="${CONFIG_CHECK} ~${i}"
-				eval "export WARNING_${i}='No tunnels will be available at all'"
-			done
-
-			for i in INET_IPCOMP INET_AH INET_ESP \
-				INET_XFRM_MODE_TRANSPORT \
-				INET_XFRM_MODE_TUNNEL \
-				INET_XFRM_MODE_BEET ; do
-				CONFIG_CHECK="${CONFIG_CHECK} ~${i}"
-				eval "export WARNING_${i}='IPv4 tunnels will not be available'"
-			done
-
-			for i in INET6_IPCOMP INET6_AH INET6_ESP \
-				INET6_XFRM_MODE_TRANSPORT \
-				INET6_XFRM_MODE_TUNNEL \
-				INET6_XFRM_MODE_BEET ; do
-				CONFIG_CHECK="${CONFIG_CHECK} ~${i}"
-				eval "export WARNING_${i}='IPv6 tunnels will not be available'"
-			done
-
-			CONFIG_CHECK="${CONFIG_CHECK} ~CRYPTO_NULL"
-			export WARNING_CRYPTO_NULL="Unencrypted tunnels will not be available"
-			export CONFIG_CHECK
-
-			check_extra_config
-		else
-			eerror "You must have a kernel >=2.6.19 to run ipsec-tools."
-			eerror "Building now, assuming that you will run on a different kernel"
+		if use nat; then
+			CONFIG_CHECK="${CONFIG_CHECK} ~NETFILTER_XT_MATCH_POLICY"
+			export WARNING_NETFILTER_XT_MATCH_POLICY="NAT support may fail weirdly unless you enable this option in your kernel"
 		fi
+
+		for i in XFRM_USER NET_KEY; do
+			CONFIG_CHECK="${CONFIG_CHECK} ~${i}"
+			eval "export WARNING_${i}='No tunnels will be available at all (${i})'"
+		done
+
+		for i in INET_IPCOMP INET_AH INET_ESP \
+			INET_XFRM_MODE_TRANSPORT \
+			INET_XFRM_MODE_TUNNEL \
+			INET_XFRM_MODE_BEET ; do
+			CONFIG_CHECK="${CONFIG_CHECK} ~${i}"
+			eval "export WARNING_${i}='IPv4 tunnels will not be available (${i})'"
+		done
+
+		for i in INET6_IPCOMP INET6_AH INET6_ESP \
+			INET6_XFRM_MODE_TRANSPORT \
+			INET6_XFRM_MODE_TUNNEL \
+			INET6_XFRM_MODE_BEET ; do
+			CONFIG_CHECK="${CONFIG_CHECK} ~${i}"
+			eval "export WARNING_${i}='IPv6 tunnels will not be available (${i})'"
+		done
+
+		CONFIG_CHECK="${CONFIG_CHECK} ~CRYPTO_NULL"
+		export WARNING_CRYPTO_NULL="Unencrypted tunnels will not be available (CRYPTO_NULL)"
+		export CONFIG_CHECK
+
+		check_extra_config
+	else
+		eerror "You must have a kernel >=2.6.19 to run ipsec-tools."
+		eerror "Building now, assuming that you will run on a different kernel"
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	# fix for bug #76741
-	sed -i 's:#include <sys/sysctl.h>::' src/racoon/pfkey.c src/setkey/setkey.c
+	sed -i 's:#include <sys/sysctl.h>::' src/racoon/pfkey.c src/setkey/setkey.c || die
 	# fix for bug #124813
-	sed -i 's:-Werror::g' "${S}"/configure.ac
+	sed -i 's:-Werror::g' "${S}"/configure.ac || die
 	# Fixing duplicate specification of vmbuf.h #300161
 	epatch "${FILESDIR}"/${PN}-duplicate-header.patch
 	# fix for building with gcc-4.6
-	sed -i 's: -R: -Wl,-R:' "${S}"/configure.ac
+	sed -i 's: -R: -Wl,-R:' "${S}"/configure.ac || die
 
 	AT_M4DIR="${S}" eautoreconf
 	epunt_cxx
 }
 
-src_compile() {
+src_configure() {
 	# fix for bug #61025
 	filter-flags -march=c3
 
@@ -136,27 +133,22 @@ src_compile() {
 	# See bug #77369
 	#myconf="${myconf} --enable-samode-unspec"
 
-	econf ${myconf} || die
-	emake -j1 || die
+	econf ${myconf}
+}
+
+src_compile() {
+	emake -j1
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	keepdir /var/lib/racoon
 	newconfd "${FILESDIR}"/racoon.conf.d racoon
 	newinitd "${FILESDIR}"/racoon.init.d racoon
 
 	dodoc ChangeLog README NEWS
-	dodoc src/racoon/samples/*
+	dodoc -r src/racoon/samples
 	dodoc src/racoon/doc/*
-
-	docinto roadwarrior
-	dodoc src/racoon/samples/roadwarrior/*
-
-	docinto roadwarrior/client
-	dodoc src/racoon/samples/roadwarrior/client/*
-	docinto roadwarrior/server
-	dodoc src/racoon/samples/roadwarrior/server/*
 
 	docinto setkey
 	dodoc src/setkey/sample.cf
