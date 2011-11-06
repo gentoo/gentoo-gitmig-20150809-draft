@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/echinus/echinus-0.4.3.2.ebuild,v 1.1 2010/06/07 12:24:52 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/echinus/echinus-0.4.9.ebuild,v 1.1 2011/11/06 11:33:30 xarthisius Exp $
+
+EAPI=4
 
 inherit eutils toolchain-funcs
 
@@ -11,28 +13,32 @@ SRC_URI="http://plhk.ru/static/${PN}/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="xrandr"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXft
-	x11-libs/libXrandr"
+	xrandr? ( x11-libs/libXrandr )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+DOCS=( README )
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gentoo.diff
+pkg_setup() {
+	tc-export CC
+	use xrandr && export MULTIHEAD=1
 }
 
-src_compile() {
-	emake CC=$(tc-getCC) || die "emake failed"
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gentoo.diff
+	sed -i -e "s|CONFDIR|/usr/share/${PN}|g" echinus.1 README || die
+	sed -i -e "s|/usr/lib|/usr/$(get_libdir)|g" config.mk || die
 }
 
 src_install() {
-	emake DESTDIR="${D}" PREFIX="/usr" install || die "emake install failed"
-	dodoc README || die
-
+	dobin ${PN}
+	doman ${PN}.1
+	dodoc README
+	insinto /usr/share/${PN}
+	doins {close,iconify,max}.xbm ${PN}rc
 	insinto /usr/share/xsessions
 	doins "${FILESDIR}"/${PN}.desktop
 }
@@ -45,14 +51,8 @@ pkg_postinst() {
 		elog "to launch dmenu_run. Check echinus documentation for details."
 		elog ""
 	fi
-	# x11-misc/ourico is not in portage atm, this will change soon.
-	#if ! has_version x11-misc/ourico; then
-	#	elog "Installing ${PN} without x11-misc/ourico"
-	#	elog "To have a taskbar you can install x11-misc/ourico"
-	#	elog ""
-	#fi
 	elog "A standard config file with its pixmaps has been installed to:"
-	elog "${PREFIX}/usr/share/${PN}/examples"
+	elog "${EPREFIX}/usr/share/${PN}/examples"
 	elog "Copy this folder to ~/.${PN}/ and modify the echinusrc as you wish."
 	elog ""
 	elog "For changing the modkey you can use \"Echinus*modkey: X\""

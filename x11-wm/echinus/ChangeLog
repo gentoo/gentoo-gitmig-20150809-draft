@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/echinus
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/echinus/ChangeLog,v 1.8 2010/06/11 18:57:48 yngwin Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/echinus/ChangeLog,v 1.9 2011/11/06 11:33:30 xarthisius Exp $
+
+*echinus-0.4.9 (06 Nov 2011)
+
+  06 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> -echinus-0.4.3.2.ebuild,
+  -files/echinus-0.4.3.2-gentoo.diff, +echinus-0.4.9.ebuild,
+  +files/echinus-0.4.9-gentoo.diff, metadata.xml:
+  Version bump wrt #382777 by Tim Harder. Make multihead optional, drop old
 
   11 Jun 2010; Ben de Groot <yngwin@gentoo.org> metadata.xml:
   Removing myself as proxy

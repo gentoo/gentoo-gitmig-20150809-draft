@@ -6,4 +6,7 @@
 		<email>nico@lifeisabug.com</email>
 		<name>Nico R. Wohlgemuth</name>
 	</maintainer>
+	<use>
+		<flag name='xrandr'>Enable support for multihead configuration</flag>
+	</use>
 </pkgmetadata>
