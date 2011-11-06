@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13209 2011/11/06 14:49:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13210 2011/11/06 15:13:18 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -32,11 +32,12 @@
 #--- END OF EXAMPLES ---
 
 # William Hubbs <williamh@gentoo.org> (6 Nov 2011)
-# Masking this version of udev until we have a default solution for the
-# following issue:
+# Masking this version of udev and its dependencies until we have a default
+# solution for the following issue:
 #
 # http://www.freedesktop.org/wiki/Software/systemd/separate-usr-is-broken
 =sys-fs/udev-174
+>=sys-apps/systemd-30
 
 # Vadim Kuznetsov <vadimk@gentoo.org> (05 Nov 2011)
 # Masked for removal in 30 days
