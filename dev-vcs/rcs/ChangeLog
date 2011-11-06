@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/rcs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rcs/ChangeLog,v 1.4 2011/10/12 17:21:19 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rcs/ChangeLog,v 1.5 2011/11/06 00:22:14 hwoarang Exp $
+
+  06 Nov 2011; Markos Chandras <hwoarang@gentoo.org> rcs-5.8.ebuild:
+  Stable on amd64 wrt bug #389407
 
 *rcs-5.8 (12 Oct 2011)
 
