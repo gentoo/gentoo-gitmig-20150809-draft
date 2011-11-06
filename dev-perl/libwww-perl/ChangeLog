@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/libwww-perl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.151 2011/10/17 19:40:02 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.152 2011/11/06 13:02:27 ranger Exp $
+
+  06 Nov 2011; Brent Baude <ranger@gentoo.org> libwww-perl-6.30.0.ebuild:
+  Marking libwww-perl-6.30.0 ppc stable for bug 386309
 
 *libwww-perl-6.30.0 (16 Oct 2011)
 
