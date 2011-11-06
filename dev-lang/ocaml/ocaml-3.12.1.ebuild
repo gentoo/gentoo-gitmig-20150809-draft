@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.12.1.ebuild,v 1.8 2011/10/17 15:20:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.12.1.ebuild,v 1.9 2011/11/06 13:41:53 ranger Exp $
 
 EAPI="1"
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.inria.fr/INRIA/Projects/cristal/ocaml/ocaml-$(get_version_com
 
 LICENSE="QPL-1.0 LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="emacs gdbm latex ncurses +ocamlopt tk X xemacs"
 
 DEPEND="tk? ( >=dev-lang/tk-3.3.3 )

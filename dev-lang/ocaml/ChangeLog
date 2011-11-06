@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.200 2011/10/17 15:20:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.201 2011/11/06 13:41:53 ranger Exp $
+
+  06 Nov 2011; Brent Baude <ranger@gentoo.org> ocaml-3.12.1.ebuild:
+  Marking ocaml-3.12.1 ppc for bug 361767
 
   17 Oct 2011; Jeroen Roovers <jer@gentoo.org> ocaml-3.12.1.ebuild:
   Stable for HPPA (bug #361767).
