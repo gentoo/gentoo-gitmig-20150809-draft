@@ -8,6 +8,11 @@
 <maintainer>
 	<email>marsoft@ya.ru</email>
 </maintainer>
-<longdescription>Fortune database of quotes from gentoo.ru forum and
- gentoo@conference.gentoo.ru and more russian gentoo resourses</longdescription> 
+<maintainer>
+	<email>pva@gentoo.org</email>
+</maintainer>
+<longdescription>
+Fortune database of quotes from gentoo.ru forum and gentoo@conference.gentoo.ru
+and other russian gentoo related resourses.
+</longdescription>
 </pkgmetadata>
