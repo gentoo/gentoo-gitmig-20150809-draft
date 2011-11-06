@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.624 2011/11/05 12:50:15 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.625 2011/11/06 09:54:39 scarabeus Exp $
+
+  06 Nov 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  xorg-server-1.11.1-r1.ebuild, xorg-server-1.11.2.ebuild, +files/xdm.confd-4,
+  -files/xdm.initd:
+  Remove the kdeprefix specific notes from xdm config as it is gone.
 
 *xorg-server-1.11.2 (05 Nov 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.11.1-r1.ebuild,v 1.1 2011/10/18 16:26:04 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.11.1-r1.ebuild,v 1.2 2011/11/06 09:54:40 scarabeus Exp $
 
 EAPI=4
 
@@ -186,7 +186,7 @@ src_install() {
 
 	newinitd "${FILESDIR}"/xdm-setup.initd-1 xdm-setup
 	newinitd "${FILESDIR}"/xdm.initd-3 xdm
-	newconfd "${FILESDIR}"/xdm.confd-3 xdm
+	newconfd "${FILESDIR}"/xdm.confd-4 xdm
 
 	# install the @x11-module-rebuild set for Portage
 	insinto /usr/share/portage/config/sets
