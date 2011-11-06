@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/hivex-1.3.2.ebuild,v 1.3 2011/11/06 08:13:35 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/hivex-1.3.2.ebuild,v 1.4 2011/11/06 09:09:07 maksbotan Exp $
 
 EAPI=4
 
@@ -40,7 +40,7 @@ PATCHES=("${FILESDIR}"/autoconf_fix-${PV}.patch
 "${FILESDIR}"/python-test-fix-${PV}.patch)
 DOCS=(README)
 
-pkg_config() {
+pkg_setup() {
 	if use python; then
 		python_set_active_version 2
 		python_need_rebuild
