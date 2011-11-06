@@ -1,6 +1,13 @@
 # ChangeLog for net-im/kmess
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/ChangeLog,v 1.82 2011/10/28 23:24:03 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/ChangeLog,v 1.83 2011/11/06 10:33:05 hwoarang Exp $
+
+*kmess-2.0.6-r2 (06 Nov 2011)
+
+  06 Nov 2011; Markos Chandras <hwoarang@gentoo.org> +kmess-2.0.6-r2.ebuild,
+  +files/kmess-2.0.6-contact-list.patch:
+  Apply patch from http://kmess.org/board/viewtopic.php?f=4&t=20549 to fix
+  recent contact list problem
 
   28 Oct 2011; Jonathan Callen <abcd@gentoo.org> kmess-2.0.9999.ebuild,
   kmess-9999.ebuild:

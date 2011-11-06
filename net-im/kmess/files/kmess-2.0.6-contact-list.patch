@@ -1,0 +1,38 @@
+Index: kmess-2.0.6/src/network/soap/addressbookservice.cpp
+===================================================================
+--- kmess-2.0.6.orig/src/network/soap/addressbookservice.cpp
++++ kmess-2.0.6/src/network/soap/addressbookservice.cpp
+@@ -35,13 +35,12 @@
+ /**
+  * @brief URL of the Address Book Service
+  */
+-#define SERVICE_URL_ADDRESSBOOK           "https://omega.contacts.msn.com/abservice/abservice.asmx"
++#define SERVICE_URL_ADDRESSBOOK           "https://local-sn.contacts.msn.com/abservice/abservice.asmx"
+ 
+ /**
+  * @brief URL of the Address Book Sharing Service
+  */
+-#define SERVICE_URL_ADDRESSBOOK_SHARING   "https://omega.contacts.msn.com/abservice/SharingService.asmx"
+-
++#define SERVICE_URL_ADDRESSBOOK_SHARING   "https://local-sn.contacts.msn.com/abservice/SharingService.asmx"
+ 
+ 
+ /**
+Index: kmess-2.0.6/src/network/soap/httpsoapconnection.cpp
+===================================================================
+--- kmess-2.0.6.orig/src/network/soap/httpsoapconnection.cpp
++++ kmess-2.0.6/src/network/soap/httpsoapconnection.cpp
+@@ -546,6 +546,13 @@ void HttpSoapConnection::slotRequestFini
+         kmDebug() << "Received hostname suggestion from:" << originalUrl << "to:" << preferredHostName;
+ #endif
+ 
++        if( preferredHostName.compare("proxy-sn.contacts.msn.com") == 0 )
++        {
++#ifdef KMESSDEBUG_HTTPSOAPCONNECTION_GENERAL
++          kmDebug() << "Overriding hostname" << preferredHostName << "with local-sn.contacts.msn.com";
++#endif
++          preferredHostName = "local-sn.contacts.msn.com";
++ 	}
+         redirectionCounts_[ originalHost ] = 0;
+         redirections_[ originalHost ] = preferredHostName;
+       }
