@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libconfig
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/ChangeLog,v 1.33 2011/08/16 20:48:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/ChangeLog,v 1.34 2011/11/06 17:26:11 armin76 Exp $
+
+  06 Nov 2011; Raúl Porcel <armin76@gentoo.org> libconfig-1.4.7.ebuild:
+  sparc stable wrt #367889
 
 *libconfig-1.4.8 (16 Aug 2011)
 
