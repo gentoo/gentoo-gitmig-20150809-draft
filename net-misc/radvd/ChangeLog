@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/radvd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.69 2011/11/06 00:26:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.70 2011/11/06 14:16:40 nativemad Exp $
+
+  06 Nov 2011; Andreas Schuerch <nativemad@gentoo.org> radvd-1.8.2.ebuild:
+  x86 stable, see bug 385967
 
   06 Nov 2011; Markos Chandras <hwoarang@gentoo.org> radvd-1.8.2.ebuild:
   Stable on amd64 wrt bug #385967
