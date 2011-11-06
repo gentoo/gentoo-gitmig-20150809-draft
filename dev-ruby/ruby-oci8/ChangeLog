@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-oci8
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-oci8/ChangeLog,v 1.18 2010/07/05 18:52:32 graaff Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-oci8/ChangeLog,v 1.19 2011/11/06 10:25:30 graaff Exp $
+
+*ruby-oci8-2.0.6 (06 Nov 2011)
+
+  06 Nov 2011; Hans de Graaff <graaff@gentoo.org> +ruby-oci8-2.0.6.ebuild:
+  Version bump proxied for Troy Bowman in bug 388711.
 
   05 Jul 2010; Hans de Graaff <graaff@gentoo.org> -ruby-oci8-1.0.3.ebuild,
   -ruby-oci8-1.0.7.ebuild:
