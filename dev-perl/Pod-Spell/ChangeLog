@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Pod-Spell
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Spell/ChangeLog,v 1.5 2011/11/06 16:36:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Spell/ChangeLog,v 1.6 2011/11/06 18:24:51 grobian Exp $
+
+  06 Nov 2011; Fabian Groffen <grobian@gentoo.org> Pod-Spell-1.10.0.ebuild:
+  Add Prefix keywords, bug #355385
 
   06 Nov 2011; Raúl Porcel <armin76@gentoo.org> Pod-Spell-1.10.0.ebuild:
   Add ~sparc wrt #355385
