@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.113 2011/11/06 17:04:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.114 2011/11/06 23:41:41 ranger Exp $
+
+  06 Nov 2011; Brent Baude <ranger@gentoo.org> libcap-2.22.ebuild:
+  Marking libcap-2.22 ppc for bug 389201
 
   06 Nov 2011; Markus Meier <maekke@gentoo.org> libcap-2.22.ebuild:
   arm stable, bug #389201
