@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5874 2011/11/06 05:47:09 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5875 2011/11/06 10:14:10 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Nov 2011; Ulrich Mueller <ulm@gentoo.org> license_groups:
+  Remove PHP from OSI-APPROVED and kilgard, MaxMind, and No-Problem-Bugroff
+  from MISC-FREE, as they are all gone from the tree. Move EPL (Erlang license)
+  to MISC-FREE, as it is not OSI-APPROVED.
 
   06 Nov 2011; William Hubbs <williamh@gentoo.org> package.mask:
   mask udev-174
