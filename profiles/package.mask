@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13208 2011/11/06 05:47:09 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13209 2011/11/06 14:49:31 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -241,12 +241,6 @@ dev-texlive/texlive-documentation-greek
 # version of ruby-activeldap should be stable soon, bug 384827.
 =dev-ruby/ruby-activeldap-1.2.1
 
-# Michael Sterrett <mr_bones_@gentoo.org> (03 Oct 2011)
-# Looks like a rewrite which is only in alpha status from upstream.
-# Masked for removal on 20111102
-# bug #338754
-games-fps/quake3-rally
-
 # Peter Volkov <pva@gentoo.org> (02 Oct 2011)
 # Old package for very old kernel, unmaintained, fails to build, bug #362827
 net-wireless/madwifi-old
@@ -274,22 +268,10 @@ dev-perl/perl-PBS
 ~dev-libs/soprano-2.6.1
 ~dev-libs/soprano-2.7.1
 
-# Michael Sterrett <mr_bones_@gentoo.org> (27 Sep 2011)
-# Upstream has gone away and the files aren't mirrored on liflg.org anymore.
-# Masked for removal on 20111027
-# bug #335562
-games-fps/ut2004-redorchestra
-
 # Ulrich Mueller <ulm@gentoo.org> (26 Sep 2011)
 # Included in app-editors/emacs-23 and later.
 # Masked for removal in 30 days, bug 384561.
 app-emacs/rst
-
-# Michael Sterrett <mr_bones_@gentoo.org> (22 Sep 2011)
-# Doesn't work and upstream has gone away.
-# Masked for removal on 20111022
-# See bug #382831
-games-action/dungeon
 
 # Olivier Crete <tester@gentoo.org> (20 Sep 2011)
 # Masked because the API was broken and it will  causes crashes in 
