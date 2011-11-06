@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Encode-Locale
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-Locale/ChangeLog,v 1.13 2011/11/06 13:58:26 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-Locale/ChangeLog,v 1.14 2011/11/06 20:48:09 maekke Exp $
+
+  06 Nov 2011; Markus Meier <maekke@gentoo.org> Encode-Locale-1.20.0.ebuild:
+  arm stable, bug #386309
 
   06 Nov 2011; Andreas Schuerch <nativemad@gentoo.org>
   Encode-Locale-1.20.0.ebuild:
