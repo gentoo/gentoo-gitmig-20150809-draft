@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gnome-games
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.310 2011/08/23 15:40:15 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/ChangeLog,v 1.311 2011/11/06 05:50:58 tetromino Exp $
+
+*gnome-games-2.30.2-r2 (06 Nov 2011)
+
+  06 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-games-2.30.2-r2.ebuild:
+  Convert python shebangs in gnome-sudoku, it's python2-only; fixes bug
+  #389615, thanks to christianasseburg@yahoo.co.uk for reporting.
 
   23 Aug 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gnome-games-3.0.2.ebuild:
   Don't depend on glib[introspection]
