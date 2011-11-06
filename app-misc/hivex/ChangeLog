@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/hivex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/ChangeLog,v 1.7 2011/11/06 07:44:20 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/ChangeLog,v 1.8 2011/11/06 08:13:35 maksbotan Exp $
+
+  06 Nov 2011; Maxim Koltsov <maksbotan@gentoo.org> hivex-1.3.2.ebuild,
+  +files/python-test-fix-1.3.2.patch:
+  Add patch for python tests and make python_need_rebuild use-conditional. Bug
+  #389691
 
   06 Nov 2011; Maxim Koltsov <maksbotan@gentoo.org> hivex-1.3.2.ebuild:
   Fix ebuild syntax, bug #389691.
