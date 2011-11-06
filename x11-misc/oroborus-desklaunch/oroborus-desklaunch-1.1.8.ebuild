@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/oroborus-desklaunch/oroborus-desklaunch-1.1.7.ebuild,v 1.1 2010/05/31 15:45:17 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/oroborus-desklaunch/oroborus-desklaunch-1.1.8.ebuild,v 1.1 2011/11/06 10:50:34 xarthisius Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils toolchain-funcs
 
@@ -25,16 +25,12 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_PN}-${PV}
+DOCS=( README debian/changelog debian/example_rc )
 
 pkg_setup() {
 	tc-export CC
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gentoo.diff
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc README debian/changelog debian/example_rc || die
+	epatch "${FILESDIR}"/${PN}-1.1.7-gentoo.diff
 }
