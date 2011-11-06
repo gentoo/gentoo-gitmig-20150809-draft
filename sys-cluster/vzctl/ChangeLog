@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.86 2011/10/12 11:20:25 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.87 2011/11/06 18:12:32 pva Exp $
+
+  06 Nov 2011; Peter Volkov <pva@gentoo.org> -vzctl-3.0.28.3.ebuild,
+  -files/vzctl-3.0.28.3-vzeventd-stop.patch, vzctl-3.0.29.3.ebuild:
+  amd64/x86 stable, bug #199738. Removed old.
 
   12 Oct 2011; Peter Volkov <pva@gentoo.org> vzctl-3.0.28.3-r1.ebuild:
   amd64/x86 stable, bug #199738.
