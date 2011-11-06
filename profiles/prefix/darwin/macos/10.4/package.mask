@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/10.4/package.mask,v 1.3 2011/07/11 07:36:02 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/10.4/package.mask,v 1.4 2011/11/06 12:41:06 grobian Exp $
 
 # Fabian Groffen <grobian@gentoo.org> (11 Jul 2011)
 # Needs headers only available starting from 10.5 (Leopard)
@@ -8,7 +8,7 @@ sys-process/lsof
 
 # Fabian Groffen <grobian@gentoo.org> (30 Apr 2011)
 # These releases got a rewrite that is no longer compatible with
-# CoreAudio as available on Tiger
+# CoreAudio as available on Tiger and Leopard
 >=media-libs/mediastreamer-2.7.3
 
 # Elias Pipping <pipping@gentoo.org> (19 Dec 2007)
