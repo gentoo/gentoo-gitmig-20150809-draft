@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/hivex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/ChangeLog,v 1.6 2011/10/30 16:45:33 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/ChangeLog,v 1.7 2011/11/06 07:44:20 maksbotan Exp $
+
+  06 Nov 2011; Maxim Koltsov <maksbotan@gentoo.org> hivex-1.3.2.ebuild:
+  Fix ebuild syntax, bug #389691.
 
   30 Oct 2011; Maxim Koltsov <maksbotan@gentoo.org> metadata.xml:
   Fix mantainer email

@@ -1,17 +1,16 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/hivex-1.3.2.ebuild,v 1.1 2011/10/28 17:25:25 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/hivex-1.3.2.ebuild,v 1.2 2011/11/06 07:44:20 maksbotan Exp $
 
 EAPI=4
 
 WANT_AUTOMAKE="1.11"
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
-inherit base autotools-utils  perl-app python
-
 PYTHON_DEPEND="python? 2:2.6"
+inherit base autotools-utils perl-app python
 
-DESCRIPTION="Library for reading and writing Windows Registry "hive" binary files."
+DESCRIPTION="Library for reading and writing Windows Registry 'hive' binary files"
 HOMEPAGE="http://libguestfs.org"
 SRC_URI="http://libguestfs.org/download/${PN}/${P}.tar.gz"
 
