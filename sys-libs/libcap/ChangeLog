@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.111 2011/11/05 22:47:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.112 2011/11/06 15:03:41 nativemad Exp $
+
+  06 Nov 2011; Andreas Schuerch <nativemad@gentoo.org> libcap-2.22.ebuild:
+  x86 stable, bug 389201. Thanks JD and Myckel.
 
   05 Nov 2011; Mike Frysinger <vapier@gentoo.org> libcap-2.22.ebuild:
   Trim spurious pam lib in /usr, and touchup ebuild.
