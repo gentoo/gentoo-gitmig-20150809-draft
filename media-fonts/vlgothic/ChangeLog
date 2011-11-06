@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/vlgothic
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/vlgothic/ChangeLog,v 1.56 2011/11/04 09:40:37 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/vlgothic/ChangeLog,v 1.57 2011/11/06 23:32:10 ranger Exp $
+
+  06 Nov 2011; Brent Baude <ranger@gentoo.org> vlgothic-20110722.ebuild:
+  Marking vlgothic-20110722 ppc for bug 389223
 
   04 Nov 2011; Tony Vroon <chainsaw@gentoo.org> vlgothic-20110722.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
