@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/pam
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.306 2011/10/31 14:21:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.307 2011/11/06 13:03:00 ranger Exp $
+
+  06 Nov 2011; Brent Baude <ranger@gentoo.org> pam-1.1.5.ebuild:
+  Marking pam-1.1.5 ppc for bug 388431
 
   31 Oct 2011; Diego E. Pettenò <flameeyes@gentoo.org> -pam-1.1.4.ebuild,
   pam-1.1.5.ebuild:
