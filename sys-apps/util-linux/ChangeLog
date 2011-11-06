@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.357 2011/10/23 15:07:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.358 2011/11/06 23:39:52 ranger Exp $
+
+  06 Nov 2011; Brent Baude <ranger@gentoo.org> util-linux-2.19.1-r1.ebuild:
+  Marking util-linux-2.19.1-r1 ppc for bug 384305
 
   23 Oct 2011; Raúl Porcel <armin76@gentoo.org> util-linux-2.19.1-r1.ebuild:
   sparc stable wrt #384305
