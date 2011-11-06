@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTTP-Date
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Date/ChangeLog,v 1.10 2011/11/06 13:04:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Date/ChangeLog,v 1.11 2011/11/06 14:04:53 nativemad Exp $
+
+  06 Nov 2011; Andreas Schuerch <nativemad@gentoo.org> HTTP-Date-6.0.0.ebuild:
+  x86 stable, bug 386309. Thanks Myckel Habets.
 
   06 Nov 2011; Brent Baude <ranger@gentoo.org> HTTP-Date-6.0.0.ebuild:
   Marking HTTP-Date-6.0.0 ppc stable for bug 386309

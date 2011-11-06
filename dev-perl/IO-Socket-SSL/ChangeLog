@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/IO-Socket-SSL
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-SSL/ChangeLog,v 1.156 2011/11/06 13:11:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-SSL/ChangeLog,v 1.157 2011/11/06 13:53:36 nativemad Exp $
+
+  06 Nov 2011; Andreas Schuerch <nativemad@gentoo.org>
+  IO-Socket-SSL-1.440.0.ebuild:
+  x86 stable, bug 386309. Thanks Myckel Habets.
 
   06 Nov 2011; Brent Baude <ranger@gentoo.org> IO-Socket-SSL-1.440.0.ebuild:
   Marking IO-Socket-SSL-1.440.0 ppc stable for bug 386309

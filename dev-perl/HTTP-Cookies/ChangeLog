@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTTP-Cookies
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Cookies/ChangeLog,v 1.9 2011/11/06 13:09:35 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-Cookies/ChangeLog,v 1.10 2011/11/06 13:56:03 nativemad Exp $
+
+  06 Nov 2011; Andreas Schuerch <nativemad@gentoo.org>
+  HTTP-Cookies-6.0.0.ebuild:
+  x86 stable, bug 386309. Thanks Myckel Habets.
 
   06 Nov 2011; Brent Baude <ranger@gentoo.org> HTTP-Cookies-6.0.0.ebuild:
   Marking HTTP-Cookies-6.0.0 ppc stable for bug 386309

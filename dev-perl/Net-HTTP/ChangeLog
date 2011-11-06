@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-HTTP
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-HTTP/ChangeLog,v 1.11 2011/11/06 13:06:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-HTTP/ChangeLog,v 1.12 2011/11/06 14:00:46 nativemad Exp $
+
+  06 Nov 2011; Andreas Schuerch <nativemad@gentoo.org> Net-HTTP-6.10.0.ebuild:
+  x86 stable, bug 386309. Thanks Myckel Habets.
 
   06 Nov 2011; Brent Baude <ranger@gentoo.org> Net-HTTP-6.10.0.ebuild:
   Marking Net-HTTP-6.10.0 ppc stable for bug 386309
