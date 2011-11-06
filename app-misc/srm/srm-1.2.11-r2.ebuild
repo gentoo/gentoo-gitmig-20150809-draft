@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/srm-1.2.11-r2.ebuild,v 1.1 2011/11/06 16:59:50 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/srm/srm-1.2.11-r2.ebuild,v 1.2 2011/11/06 17:47:33 titanofold Exp $
 
 EAPI="4"
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="A command-line compatible rm which destroys file contents before unlinking."
 HOMEPAGE="http://sourceforge.net/projects/srm/"
