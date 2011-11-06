@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.65 2011/10/30 15:39:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.66 2011/11/06 16:07:18 ranger Exp $
+
+  06 Nov 2011; Brent Baude <ranger@gentoo.org> subversion-1.6.17-r7.ebuild:
+  Marking subversion-1.6.17-r7 ppc for bug 386899
 
   30 Oct 2011; Raúl Porcel <armin76@gentoo.org> subversion-1.6.17-r7.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #386899
