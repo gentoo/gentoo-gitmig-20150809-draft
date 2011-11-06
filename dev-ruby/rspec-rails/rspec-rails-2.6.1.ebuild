@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-rails/rspec-rails-2.6.1.ebuild,v 1.2 2011/07/24 10:10:13 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-rails/rspec-rails-2.6.1.ebuild,v 1.3 2011/11/06 17:06:48 armin76 Exp $
 
 EAPI=2
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://rspec.info/"
 
 LICENSE="MIT"
 SLOT="2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 ruby_add_rdepend "dev-ruby/activesupport:3.0
