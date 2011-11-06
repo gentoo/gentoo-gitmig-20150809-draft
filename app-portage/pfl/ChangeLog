@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/pfl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.33 2011/10/19 17:46:21 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.34 2011/11/06 16:45:12 ranger Exp $
+
+  06 Nov 2011; Brent Baude <ranger@gentoo.org> pfl-2.2.ebuild:
+  Marking pfl-2.2 ppc for bug 370855
 
 *pfl-2.3 (19 Oct 2011)
 
