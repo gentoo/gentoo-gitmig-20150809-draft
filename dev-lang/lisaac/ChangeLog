@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/lisaac
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lisaac/ChangeLog,v 1.5 2011/09/28 11:45:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lisaac/ChangeLog,v 1.6 2011/11/06 16:38:23 phajdan.jr Exp $
+
+  06 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> lisaac-0.13.1.ebuild,
+  metadata.xml:
+  Use USE=vim-syntax instead of USE=vim, bug #352099 by Dan Wallis.
 
   28 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer as talked with him.
