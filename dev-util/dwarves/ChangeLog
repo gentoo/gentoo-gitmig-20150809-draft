@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/dwarves
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/ChangeLog,v 1.14 2011/10/17 21:53:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dwarves/ChangeLog,v 1.15 2011/11/06 01:49:41 flameeyes Exp $
+
+  06 Nov 2011; Diego E. Pettenò <flameeyes@gentoo.org> dwarves-9999.ebuild:
+  Change GIT repository to point to Arnaldo's github copy, as kernel.org is
+  down.
 
 *dwarves-1.9 (17 Oct 2011)
 
