@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c-tools/i2c-tools-3.0.3.ebuild,v 1.2 2011/03/05 17:14:21 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c-tools/i2c-tools-3.0.3.ebuild,v 1.3 2011/11/06 17:00:50 armin76 Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -15,7 +15,7 @@ SRC_URI="http://dl.lm-sensors.org/i2c-tools/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86"
+KEYWORDS="~amd64 ~arm ~sparc ~x86"
 IUSE="python"
 
 DEPEND="!<sys-apps/lm_sensors-3"
