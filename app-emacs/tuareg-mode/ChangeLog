@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/tuareg-mode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/ChangeLog,v 1.38 2011/09/05 14:07:24 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/ChangeLog,v 1.39 2011/11/06 17:30:54 armin76 Exp $
+
+  06 Nov 2011; Raúl Porcel <armin76@gentoo.org> tuareg-mode-1.45.6.ebuild,
+  tuareg-mode-2.0.1.ebuild, tuareg-mode-2.0.4.ebuild:
+  Drop sparc keywords
 
   05 Sep 2011; Naohiro Aota <naota@gentoo.org> tuareg-mode-2.0.4.ebuild:
   Add ~x86-fbsd
