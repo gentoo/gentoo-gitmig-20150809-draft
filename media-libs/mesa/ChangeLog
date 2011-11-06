@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.369 2011/10/03 17:47:54 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.370 2011/11/06 12:33:57 xarthisius Exp $
+
+  06 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> mesa-7.11.ebuild:
+  Workaround TOC issues wrt #386545 by Stephen Lewis
 
   03 Oct 2011; Joseph Jezak <josejx@gentoo.org> mesa-7.11.ebuild:
   Marked ppc/ppc64 stable for bug #380421.

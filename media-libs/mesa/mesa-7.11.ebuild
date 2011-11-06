@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.11.ebuild,v 1.12 2011/10/03 17:47:54 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.11.ebuild,v 1.13 2011/11/06 12:33:57 xarthisius Exp $
 
 EAPI=3
 
@@ -118,6 +118,8 @@ pkg_setup() {
 
 	# recommended by upstream
 	append-flags -ffast-math
+	# workaround toc-issue wrt #386545
+	use ppc64 && append-flags -mminimal-toc
 
 	python_set_active_version 2
 	python_pkg_setup
