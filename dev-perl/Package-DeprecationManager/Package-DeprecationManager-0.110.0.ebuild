@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-DeprecationManager/Package-DeprecationManager-0.110.0.ebuild,v 1.3 2011/10/31 13:17:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-DeprecationManager/Package-DeprecationManager-0.110.0.ebuild,v 1.4 2011/11/06 17:43:54 maekke Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ DESCRIPTION="Manage deprecation warnings for your distribution"
 
 LICENSE="Artistic-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~x86 ~x64-macos"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~x86 ~x64-macos"
 IUSE="test"
 
 RDEPEND="dev-perl/List-MoreUtils
