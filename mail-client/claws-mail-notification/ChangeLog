@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-notification
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/ChangeLog,v 1.65 2011/10/29 11:11:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/ChangeLog,v 1.66 2011/11/06 16:27:40 ranger Exp $
+
+  06 Nov 2011; Brent Baude <ranger@gentoo.org>
+  claws-mail-notification-0.28.ebuild:
+  Marking claws-mail-notification-0.28 ppc stable for bug 387547
 
   29 Oct 2011; Markos Chandras <hwoarang@gentoo.org>
   claws-mail-notification-0.28.ebuild:
