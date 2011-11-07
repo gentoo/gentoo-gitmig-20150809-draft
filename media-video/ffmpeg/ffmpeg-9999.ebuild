@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.59 2011/11/02 14:08:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.60 2011/11/07 13:17:18 aballier Exp $
 
 EAPI="4"
 
@@ -31,9 +31,9 @@ fi
 IUSE="
 	aac aacplus alsa amr bindist +bzip2 cdio celt cpudetection debug dirac doc
 	+encode faac frei0r gsm +hardcoded-tables ieee1394 jack jpeg2k modplug mp3
-	network openal oss pic pulseaudio qt-faststart rtmp schroedinger sdl speex
-	static-libs test theora threads truetype v4l vaapi vdpau vorbis vpx X x264
-	xvid +zlib
+	network openal openssl oss pic pulseaudio qt-faststart rtmp schroedinger sdl
+	speex static-libs test theora threads truetype v4l vaapi vdpau vorbis vpx X
+	x264 xvid +zlib
 	"
 
 # String for CPU features in the useflag[:configure_option] form
@@ -96,7 +96,7 @@ DEPEND="${RDEPEND}
 	v4l? ( sys-kernel/linux-headers )
 "
 # faac is license-incompatible with ffmpeg
-REQUIRED_USE="bindist? ( encode? ( !faac !aacplus ) )"
+REQUIRED_USE="bindist? ( encode? ( !faac !aacplus ) !openssl )"
 
 S=${WORKDIR}/${P/_/-}
 
@@ -119,6 +119,7 @@ src_configure() {
 	use sdl || myconf="${myconf} --disable-ffplay"
 
 	use cpudetection && myconf="${myconf} --enable-runtime-cpudetect"
+	use openssl && myconf="${myconf} --enable-openssl --enable-nonfree"
 
 	# Encoders
 	if use encode
