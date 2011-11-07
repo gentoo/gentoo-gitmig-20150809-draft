@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.118 2011/11/05 14:52:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.119 2011/11/07 18:27:29 tetromino Exp $
+
+*networkmanager-0.9.1.95 (07 Nov 2011)
+
+  07 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  networkmanager-0.9.0.ebuild, networkmanager-0.9.1.90-r3.ebuild,
+  +networkmanager-0.9.1.95.ebuild,
+  +files/networkmanager-0.9.1.95-dns-routing-unmanaged-devices.patch,
+  +files/networkmanager-0.9.1.95-force-libnl1.1.patch,
+  +files/networkmanager-0.9.1.95-glib-2.31.patch,
+  +files/networkmanager-0.9.1.95-keyfile-scheme.patch:
+  Bump to 0.9.1.95; lots of bugfixes. Also, fix src_install so it doesn't try
+  to chmod things in the live filesystem.
 
   05 Nov 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   networkmanager-0.9.0.ebuild, networkmanager-0.9.1.90-r3.ebuild:

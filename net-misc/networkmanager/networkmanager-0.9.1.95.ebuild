@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.0.ebuild,v 1.4 2011/11/07 18:27:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.1.95.ebuild,v 1.1 2011/11/07 18:27:29 tetromino Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager"
@@ -22,6 +22,8 @@ REQUIRED_USE="
 
 # gobject-introspection-0.10.3 is needed due to gnome bug 642300
 # wpa_supplicant-0.7.3-r3 is needed due to bug 359271
+# libnl:1.1 is needed for linking to net-wireless/wimax libraries
+# XXX: on bump, check that net-wireless/wimax is still using libnl:1.1 !
 # TODO: Qt support?
 COMMON_DEPEND=">=sys-apps/dbus-1.2
 	>=dev-libs/dbus-glib-0.75
@@ -29,7 +31,7 @@ COMMON_DEPEND=">=sys-apps/dbus-1.2
 	|| ( >=sys-fs/udev-171[gudev] >=sys-fs/udev-147[extras] )
 	>=dev-libs/glib-2.26
 	>=sys-auth/polkit-0.97
-	>=dev-libs/libnl-1.1:1.1
+	dev-libs/libnl:1.1
 	>=net-wireless/wpa_supplicant-0.7.3-r3[dbus]
 	bluetooth? ( >=net-wireless/bluez-4.82 )
 	avahi? ( net-dns/avahi[autoipd] )
@@ -84,9 +86,22 @@ pkg_pretend() {
 	fi
 }
 
+pkg_setup() {
+	enewgroup plugdev
+}
+
 src_prepare() {
 	# Don't build tests
 	epatch "${FILESDIR}/${PN}-0.9_rc3-fix-tests.patch"
+	# Build against libnl:1.1 for net-wireless/wimax-1.5.2 compatibility
+	epatch "${FILESDIR}/${PN}-0.9.1.95-force-libnl1.1.patch"
+	# Fix building with glib-2.31, will be in next release
+	epatch "${FILESDIR}/${P}-glib-2.31.patch"
+	# Typo fix, will be in next release
+	epatch "${FILESDIR}/${P}-keyfile-scheme.patch"
+	# Do not blow away configs for devices not managed by nm; in next release
+	epatch "${FILESDIR}/${P}-dns-routing-unmanaged-devices.patch"
+
 	eautoreconf
 	default
 }
@@ -132,6 +147,15 @@ src_install() {
 	insinto /etc/NetworkManager
 	newins "${FILESDIR}/nm-system-settings.conf-ifnet" nm-system-settings.conf
 
+	# Allow users in plugdev group to modify system connections
+	insinto /etc/polkit-1/localauthority/10-vendor.d
+	doins "${FILESDIR}/01-org.freedesktop.NetworkManager.settings.modify.system.pkla"
+
 	# Remove useless .la files
 	find "${D}" -name '*.la' -exec rm -f {} + || die "la file removal failed"
+}
+
+pkg_postinst() {
+	elog "To modify system network connections without needing to enter the"
+	elog "root password, add your user account to the 'plugdev' group."
 }
