@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0_rc1.ebuild,v 1.2 2011/11/07 16:06:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0_rc1.ebuild,v 1.3 2011/11/07 16:46:26 aballier Exp $
 
 EAPI=2
 
@@ -53,7 +53,8 @@ if [ "${CTARGET}" = "${CHOST}" -a "${CATEGORY#*cross-}" != "${CATEGORY}" ]; then
 fi
 
 IUSE="atm bluetooth ssl hesiod ipv6 kerberos usb netware
-	build bootstrap crosscompile_opts_headers-only zfs"
+	build bootstrap crosscompile_opts_headers-only zfs
+	userland_GNU userland_BSD"
 
 pkg_setup() {
 	[ -c /dev/zero ] || \
@@ -187,12 +188,20 @@ src_prepare() {
 	sed -e 's/LDFLAGS/RAW_LDFLAGS/g' \
 		-i "${S}/csu/i386-elf/Makefile" \
 		-i "${S}/csu/ia64/Makefile" || die
+	# Try to fix sed calls for GNU sed. Do it only with GNU userland and force
+	# BSD's sed on BSD.
+	if use userland_GNU; then
+		find . -name Makefile -exec sed -ibak 's/sed -i /sed -i/' {} \;
+	fi
 }
 
 src_compile() {
 	# Does not work with GNU sed
-	export ESED=/usr/bin/sed
-	unalias sed
+	# Force BSD's sed on BSD.
+	if use userland_BSD ; then
+		export ESED=/usr/bin/sed
+		unalias sed
+	fi
 
 	cd "${WORKDIR}/include"
 	$(freebsd_get_bmake) CC="$(tc-getCC)" || die "make include failed"
