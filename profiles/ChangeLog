@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5879 2011/11/07 13:15:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5880 2011/11/07 21:28:02 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Nov 2011; Ulrich Mueller <ulm@gentoo.org> license_groups:
+  Add AGPL-3, APSL-2, as-is, CPAL-1.0, DB, EUPL-1.1, LPPL-1.3c, NOSA, OFL-1.1,
+  OracleDB, PHP-3, PHP-3.01, POSTGRESQL, and W3C to OSI-APPROVED. Remove
+  LPPL-1.3c, PHP-3, and POSTGRESQL from MISC-FREE. Remove PSF-2.2, PSF-2.3,
+  PSF-2.4, and PYTHON from OSI-APPROVED.
 
   07 Nov 2011; Alexis Ballier <aballier@gentoo.org> package.mask:
   remove mask for texlive packages that are now gone
