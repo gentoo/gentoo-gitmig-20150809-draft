@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/cntlm
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/cntlm/ChangeLog,v 1.1 2010/02/24 13:18:15 mduft Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/cntlm/ChangeLog,v 1.2 2011/11/07 07:29:31 mduft Exp $
+
+*cntlm-0.35.1-r2 (07 Nov 2011)
+
+  07 Nov 2011; Markus Duft <mduft@gentoo.org> +cntlm-0.35.1-r2.ebuild,
+  files/cntlm.initd:
+  bug#307523: fixed init script wrt stopping, and revbumped
 
 *cntlm-0.35.1-r1 (24 Feb 2010)
 
