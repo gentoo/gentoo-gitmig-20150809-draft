@@ -1,6 +1,11 @@
 # ChangeLog for media-video/snappy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/snappy/ChangeLog,v 1.4 2011/09/21 09:01:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/snappy/ChangeLog,v 1.5 2011/11/07 07:43:30 nirbheek Exp $
+
+  07 Nov 2011; Nirbheek Chauhan <nirbheek@gentoo.org> snappy-0.2.ebuild,
+  snappy-9999.ebuild:
+  Collides with spice-gtk, add a blocker for now with a FIXME so that it
+  doesn't get forgotten.
 
   21 Sep 2011; Michał Górny <mgorny@gentoo.org> snappy-9999.ebuild:
   Migrate to git-2.

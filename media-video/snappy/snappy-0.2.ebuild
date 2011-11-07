@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/snappy/snappy-0.2.ebuild,v 1.1 2011/06/20 16:31:09 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/snappy/snappy-0.2.ebuild,v 1.2 2011/11/07 07:43:30 nirbheek Exp $
 
 EAPI="4"
 
@@ -32,7 +32,9 @@ RDEPEND=">=dev-libs/glib-2.26:2
 	>=media-libs/gstreamer-0.10.30:0.10
 	>=media-libs/gst-plugins-base-0.10.30:0.10
 
-	>=media-plugins/gst-plugins-meta-0.10-r2:0.10"
+	>=media-plugins/gst-plugins-meta-0.10-r2:0.10
+
+	!!net-misc/spice-gtk" # FIXME: File collision -- /usr/bin/snappy
 DEPEND="${RDEPEND}"
 
 # Re-add ToDo, docs/ for next release
