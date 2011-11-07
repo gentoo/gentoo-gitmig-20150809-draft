@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.894 2011/11/03 12:18:15 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.895 2011/11/07 19:04:44 mpagano Exp $
+
+*gentoo-sources-3.1.0-r1 (07 Nov 2011)
+
+  07 Nov 2011; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-3.1.0-r1.ebuild:
+  Patch to fix issue in md/raid10 when activating a hot-spare. bug #389737
 
   03 Nov 2011; Michael Pagano <mpagano@gentoo.org> ChangeLog:
   Trim changelog
