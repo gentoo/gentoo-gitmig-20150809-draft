@@ -1,6 +1,6 @@
-diff -aurp a/crda.c b/crda.c
---- a/crda.c	2011-09-09 23:36:23.742094512 +0000
-+++ b/crda.c	2011-09-09 23:36:02.109096391 +0000
+diff -aurp a/crda-1.1.2/crda.c b/crda-1.1.2/crda.c
+--- a/crda-1.1.2/crda.c	2011-11-07 19:52:28.884873650 +0000
++++ b/crda-1.1.2/crda.c	2011-11-07 19:53:30.501874372 +0000
 @@ -21,7 +21,7 @@
  #include "regdb.h"
  #include "reglib.h"
@@ -19,9 +19,9 @@ diff -aurp a/crda.c b/crda.c
  
  struct nl80211_state {
  	struct nl_sock *nl_sock;
-diff -aurp a/Makefile b/Makefile
---- a/Makefile	2011-09-09 23:36:23.743094561 +0000
-+++ b/Makefile	2011-09-09 23:36:02.109096391 +0000
+diff -aurp a/crda-1.1.2/Makefile b/crda-1.1.2/Makefile
+--- a/crda-1.1.2/Makefile	2011-11-07 19:52:28.884873650 +0000
++++ b/crda-1.1.2/Makefile	2011-11-07 19:54:25.906872386 +0000
 @@ -48,19 +48,26 @@ INSTALL ?= install
  NL1FOUND := $(shell pkg-config --atleast-version=1 libnl-1 && echo Y)
  NL2FOUND := $(shell pkg-config --atleast-version=2 libnl-2.0 && echo Y)
@@ -31,16 +31,18 @@ diff -aurp a/Makefile b/Makefile
 -ifeq ($(NL3FOUND),Y)
 +ifeq ($(NL31FOUND),Y)
  CFLAGS += -DCONFIG_LIBNL30
- NLLIBS += -lnl-genl
+-NLLIBS += -lnl-genl
 -NLLIBNAME = libnl-3.0
++NLLIBS += $(shell pkg-config --libs libnl-genl-3.1)
 +NLLIBNAME = libnl-3.1
  else
 -	ifeq ($(NL2FOUND),Y)
 -	CFLAGS += -DCONFIG_LIBNL20
+-	NLLIBS += -lnl-genl
+-	NLLIBNAME = libnl-2.0
 +	ifeq ($(NL3FOUND),Y)
 +	CFLAGS += -DCONFIG_LIBNL30
- 	NLLIBS += -lnl-genl
--	NLLIBNAME = libnl-2.0
++	NLLIBS += $(shell pkg-config --libs libnl-genl-3.0)
 +	NLLIBNAME = libnl-3.0
  	else
 -		ifeq ($(NL1FOUND),Y)
