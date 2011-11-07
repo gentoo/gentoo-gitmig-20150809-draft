@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.6.29.ebuild,v 1.2 2011/06/06 06:18:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.6.37.ebuild,v 1.1 2011/11/07 21:56:58 mrness Exp $
 
 EAPI="2"
 
@@ -14,6 +14,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="caps curl ldap pam ssl extra-algorithms weak-algorithms nocrypto-algorithms ms-bad-proposal nss"
+
+RESTRICT="test" # requires user mode linux setup
 
 COMMON_DEPEND="!net-misc/strongswan
 	dev-libs/gmp
@@ -40,8 +42,7 @@ pkg_setup() {
 	linux-info_pkg_setup
 
 	if kernel_is -ge 2 6; then
-		einfo "This ebuild will set ${P} to use 2.6 native IPsec (KAME)."
-		einfo "KLIPS will not be compiled/installed."
+		einfo "This ebuild will set ${P} to use kernel native IPsec (KAME)."
 		MYMAKE="programs"
 
 	elif kernel_is 2 4; then
@@ -79,8 +80,10 @@ get_make_options() {
 		INC_USRLOCAL=/usr\
 		INC_MANDIR=share/man\
 		FINALDOCDIR=/usr/share/doc/${PF}/html\
+		FINALLIBDIR=/usr/$(get_libdir)/ipsec\
 		DESTDIR=\"${D}\"\
 		USERCOMPILE=\"${CFLAGS}\"\
+		USERLINK=\"-Wl,-z,relro ${LDFLAGS}\"\
 		CC=\"$(tc-getCC)\"
 
 	use caps\
@@ -138,9 +141,11 @@ src_install() {
 	emake "$@" install || die "emake install failed"
 
 	dodoc docs/{KNOWN_BUGS*,RELEASE-NOTES*,PATENTS*,debugging*}
-	dohtml doc/*.html
 	docinto quickstarts
-	dodoc doc/quickstarts/*
+	dodoc docs/quickstarts/*
+
+	insinto /usr/share/doc/${PF}
+	doins -r contrib
 
 	newinitd "${FILESDIR}"/ipsec-initd ipsec || die "failed to install init script"
 

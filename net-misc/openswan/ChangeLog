@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/openswan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.76 2011/06/06 06:18:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.77 2011/11/07 21:56:58 mrness Exp $
+
+*openswan-2.6.37 (07 Nov 2011)
+
+  07 Nov 2011; Alin Năstac <mrness@gentoo.org> -openswan-2.6.29.ebuild,
+  -files/openswan-2.6.29-gentoo.patch, +openswan-2.6.37.ebuild,
+  +files/openswan-2.6.37-gentoo.patch:
+  Version bump (#368903); install cotrib files (#350083); use LDFLAGS
+  (#351019).
 
   06 Jun 2011; Robin H. Johnson <robbat2@gentoo.org> openswan-2.4.15-r2.ebuild,
   openswan-2.6.29.ebuild, openswan-2.6.31.ebuild:
