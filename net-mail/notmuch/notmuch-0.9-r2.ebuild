@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.9-r2.ebuild,v 1.2 2011/11/05 11:33:36 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.9-r2.ebuild,v 1.3 2011/11/07 15:25:25 aidecoe Exp $
 
 EAPI=4
 
@@ -68,7 +68,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	echo "S=${S}"
 	autotools-utils_src_prepare
 	bindings python distutils_src_prepare
 }
