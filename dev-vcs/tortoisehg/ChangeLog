@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/tortoisehg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.4 2011/11/04 19:17:08 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/tortoisehg/ChangeLog,v 1.5 2011/11/07 20:39:34 floppym Exp $
+
+*tortoisehg-2.2 (07 Nov 2011)
+
+  07 Nov 2011; Mike Gilbert <floppym@gentoo.org> +tortoisehg-2.2.ebuild,
+  tortoisehg-9999.ebuild:
+  Version bump. Merge with live ebuild.
 
 *tortoisehg-9999 (04 Nov 2011)
 
