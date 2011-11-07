@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Params-Classify
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Classify/ChangeLog,v 1.3 2011/11/06 17:23:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Classify/ChangeLog,v 1.4 2011/11/07 08:14:29 grobian Exp $
+
+  07 Nov 2011; Fabian Groffen <grobian@gentoo.org>
+  Params-Classify-0.13.0.ebuild:
+  Added Prefix keywords, bug #389001
 
   06 Nov 2011; Markus Meier <maekke@gentoo.org> Params-Classify-0.13.0.ebuild:
   add ~arm, bug #389001

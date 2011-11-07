@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-Load
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Load/ChangeLog,v 1.16 2011/11/06 19:07:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Load/ChangeLog,v 1.17 2011/11/07 08:15:56 grobian Exp $
+
+  07 Nov 2011; Fabian Groffen <grobian@gentoo.org> Class-Load-0.120.0.ebuild:
+  Added Prefix keywords, bug #389001
 
   06 Nov 2011; Markus Meier <maekke@gentoo.org> Class-Load-0.120.0.ebuild:
   add ~arm, bug #389001
