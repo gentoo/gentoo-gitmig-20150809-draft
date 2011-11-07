@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/XSLoader
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/XSLoader/ChangeLog,v 1.10 2011/04/25 16:29:47 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/XSLoader/ChangeLog,v 1.11 2011/11/07 08:12:38 grobian Exp $
+
+  07 Nov 2011; Fabian Groffen <grobian@gentoo.org> XSLoader-0.150.0.ebuild:
+  Added Prefix keywords, bug #389001
 
   25 Apr 2011; Fabian Groffen <grobian@gentoo.org> XSLoader-0.150.0.ebuild:
   Marked *-macos
