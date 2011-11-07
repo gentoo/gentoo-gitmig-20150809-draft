@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/crda
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.28 2011/11/07 19:59:53 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.29 2011/11/07 21:07:54 gurligebis Exp $
+
+*crda-1.1.2-r1 (07 Nov 2011)
+
+  07 Nov 2011; <gurligebis@gentoo.org> +crda-1.1.2-r1.ebuild:
+  Bumping to -r1, hopefully fixing problems with udev rules and external 
+  keys loading.
 
   07 Nov 2011; <gurligebis@gentoo.org> files/libnl31-support.diff:
   Updated patch with patch from bug #388991
