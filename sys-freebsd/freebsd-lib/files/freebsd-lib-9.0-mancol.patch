@@ -1,0 +1,11 @@
+--- lib/libedit/Makefile.old	2011-11-07 16:02:33.000000000 +0000
++++ lib/libedit/Makefile	2011-11-07 16:02:53.000000000 +0000
+@@ -17,7 +17,7 @@
+ 
+ MLINKS=	editline.3 el_deletestr.3 editline.3 el_end.3 editline.3 el_init.3 \
+ 	editline.3 el_get.3 editline.3 el_getc.3 editline.3 el_gets.3 \
+-	editline.3 history.3 editline.3 history_end.3 \
++	editline.3 history_libedit.3 editline.3 history_end.3 \
+ 	editline.3 history_init.3 editline.3 el_insertstr.3 \
+ 	editline.3 el_line.3 editline.3 el_parse.3 editline.3 el_push.3 \
+ 	editline.3 el_reset.3 editline.3 el_resize.3 editline.3 el_set.3 \

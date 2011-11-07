@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0_rc1.ebuild,v 1.3 2011/11/07 16:46:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.0_rc1.ebuild,v 1.4 2011/11/07 22:47:46 aballier Exp $
 
 EAPI=2
 
@@ -89,6 +89,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-6.2-bluetooth.patch"
 	"${FILESDIR}/${PN}-8.0-rpcsec_gss.patch"
 	"${FILESDIR}/${PN}-9.0-liblink.patch"
+	"${FILESDIR}/${PN}-9.0-mancol.patch"
 	"${FILESDIR}/${PN}-bsdxml2expat.patch" )
 
 # Here we disable and remove source which we don't need or want
