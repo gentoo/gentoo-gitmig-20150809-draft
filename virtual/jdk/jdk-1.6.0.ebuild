@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/jdk-1.6.0.ebuild,v 1.22 2011/11/04 15:14:43 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/jdk-1.6.0.ebuild,v 1.23 2011/11/07 16:05:27 caster Exp $
 
 DESCRIPTION="Virtual for JDK"
 HOMEPAGE=""
@@ -27,7 +27,9 @@ COMMON_INC="
 		=dev-java/winjdk-bin-1.6.0*
 "
 
+# icedtea-bin-1* is old versioning scheme of icedtea-bin-6*
 X86_OPTS="|| (
+		=dev-java/icedtea-bin-6*
 		=dev-java/icedtea-bin-1*
 		=dev-java/icedtea-6*
 		=dev-java/sun-jdk-1.6.0*
@@ -35,6 +37,7 @@ X86_OPTS="|| (
 	)"
 
 X86_PREFIX_OPTS="|| (
+		=dev-java/icedtea-bin-6*
 		=dev-java/icedtea-bin-1*
 		=dev-java/sun-jdk-1.6.0*
 		${COMMON_INC}
