@@ -1,0 +1,10 @@
+# ChangeLog for gnome-base/gnome-core-libs
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-libs/ChangeLog,v 1.1 2011/11/07 07:48:08 tetromino Exp $
+
+*gnome-core-libs-3.2.1 (07 Nov 2011)
+
+  07 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-core-libs-3.2.1.ebuild, +metadata.xml:
+  Add the sub-meta package for core gnome-3 libraries from the gnome overlay.
+
