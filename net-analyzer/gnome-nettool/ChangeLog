@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/gnome-nettool
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.114 2011/03/27 12:33:53 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/ChangeLog,v 1.115 2011/11/07 02:16:10 tetromino Exp $
+
+*gnome-nettool-3.0.0-r1 (07 Nov 2011)
+
+  07 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-nettool-3.0.0-r1.ebuild:
+  Bump to 3.0.0 from the gnome overlay. Notable changes: uses gsettings and
+  gtk3.
 
   27 Mar 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
   -gnome-nettool-2.30.0.ebuild, gnome-nettool-2.32.0.ebuild:
