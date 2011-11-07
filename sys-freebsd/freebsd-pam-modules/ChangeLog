@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-pam-modules
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pam-modules/ChangeLog,v 1.27 2011/07/06 06:03:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pam-modules/ChangeLog,v 1.28 2011/11/07 12:28:01 aballier Exp $
+
+*freebsd-pam-modules-9.0_rc1 (07 Nov 2011)
+
+  07 Nov 2011; Alexis Ballier <aballier@gentoo.org>
+  +freebsd-pam-modules-9.0_rc1.ebuild,
+  +files/freebsd-pam-modules-9.0-gentoo.patch:
+  bump to 9.0_rc1
 
 *freebsd-pam-modules-8.2 (06 Jul 2011)
 

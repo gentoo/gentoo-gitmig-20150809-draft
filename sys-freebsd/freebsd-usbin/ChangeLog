@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-usbin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.69 2011/09/05 14:53:54 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.70 2011/11/07 12:42:54 aballier Exp $
+
+*freebsd-usbin-9.0_rc1 (07 Nov 2011)
+
+  07 Nov 2011; Alexis Ballier <aballier@gentoo.org>
+  +freebsd-usbin-9.0_rc1.ebuild, +files/freebsd-usbin-9.0-libarchive.patch,
+  +files/freebsd-usbin-9.0-newsyslog.patch:
+  bump to 9.0_rc1
 
 *freebsd-usbin-8.2-r2 (05 Sep 2011)
 
