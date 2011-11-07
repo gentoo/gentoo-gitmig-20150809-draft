@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha21-r1.ebuild,v 1.9 2011/10/22 01:30:14 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/freewnn/freewnn-1.1.1_alpha21-r1.ebuild,v 1.10 2011/11/07 08:49:51 naota Exp $
 
 inherit eutils
 
@@ -34,6 +34,8 @@ src_unpack() {
 
 	#bug #318593
 	epatch "${FILESDIR}"/${P}-gcc45.patch
+
+	epatch "${FILESDIR}"/${P}-ldflags.patch
 }
 
 src_compile() {
