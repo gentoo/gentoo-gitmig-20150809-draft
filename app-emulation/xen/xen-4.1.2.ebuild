@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.1.2.ebuild,v 1.1 2011/10/25 18:43:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.1.2.ebuild,v 1.2 2011/11/07 17:34:55 alexxy Exp $
 
 EAPI="4"
 
@@ -73,14 +73,14 @@ src_prepare() {
 			-e 's/CFLAGS\(.*\)=\(.*\)-fomit-frame-pointer\(.*\)/CFLAGS\1=\2\3/' \
 			-e 's/CFLAGS\(.*\)=\(.*\)-g3*\s\(.*\)/CFLAGS\1=\2 \3/' \
 			-e 's/CFLAGS\(.*\)=\(.*\)-O2\(.*\)/CFLAGS\1=\2\3/' \
-			-i {} \;
+			-i {} \; || die "failed to re-set custom-cflags"
 	fi
 
 	# remove -Werror for gcc-4.6's sake
 	find "${S}" -name 'Makefile*' -o -name '*.mk' -o -name 'common.make' | \
 		xargs sed -i 's/ *-Werror */ /'
 	# not strictly necessary to fix this
-	sed -i 's/, "-Werror"//' "${S}/tools/python/setup.py"
+	sed -i 's/, "-Werror"//' "${S}/tools/python/setup.py" || die "failed to re-set setup.py"
 }
 
 src_configure() {
@@ -97,7 +97,7 @@ src_configure() {
 
 src_compile() {
 	# Send raw LDFLAGS so that --as-needed works
-	emake CC="$(tc-getCC)" LDFLAGS="$(raw-ldflags)" -C xen ${myopt} || die "compile failed"
+	emake CC="$(tc-getCC)" LDFLAGS="$(raw-ldflags)" LD="$(tc-getLD)"  -C xen ${myopt}
 }
 
 src_install() {
@@ -105,7 +105,7 @@ src_install() {
 	use debug && myopt="${myopt} debug=y"
 	use pae && myopt="${myopt} pae=y"
 
-	emake LDFLAGS="$(raw-ldflags)" DESTDIR="${D}" -C xen ${myopt} install || die "install failed"
+	emake LDFLAGS="$(raw-ldflags)" DESTDIR="${ED}" -C xen ${myopt} install
 }
 
 pkg_postinst() {

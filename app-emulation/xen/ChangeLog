@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.91 2011/11/01 10:14:55 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.92 2011/11/07 17:34:55 alexxy Exp $
+
+  07 Nov 2011; Alexey Shvetsov <alexxy@gentoo.org> xen-4.1.1-r2.ebuild,
+  xen-4.1.2.ebuild:
+  adding of tc-getLD, prepared by Ian Delaney aka idella4
 
   01 Nov 2011; Tony Vroon <chainsaw@gentoo.org> xen-4.1.1-r2.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
