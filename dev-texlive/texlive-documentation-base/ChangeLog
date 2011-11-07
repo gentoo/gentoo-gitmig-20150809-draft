@@ -1,6 +1,11 @@
 # ChangeLog for dev-texlive/texlive-documentation-base
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-base/ChangeLog,v 1.42 2011/10/04 17:56:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-documentation-base/ChangeLog,v 1.43 2011/11/07 13:51:46 aballier Exp $
+
+  07 Nov 2011; Alexis Ballier <aballier@gentoo.org>
+  -texlive-documentation-base-2008.ebuild,
+  -texlive-documentation-base-2009.ebuild:
+  remove old
 
   04 Oct 2011; Jeroen Roovers <jer@gentoo.org>
   texlive-documentation-base-2010.ebuild:
