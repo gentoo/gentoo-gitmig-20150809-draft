@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-1.8.2.ebuild,v 1.5 2011/11/06 16:53:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-1.8.2.ebuild,v 1.6 2011/11/07 12:43:06 jer Exp $
 
 EAPI=2
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://v6web.litech.org/radvd/dist/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 arm ~hppa ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 arm hppa ppc ~sparc x86 ~x86-fbsd"
 IUSE="kernel_FreeBSD"
 
 DEPEND="sys-devel/bison
