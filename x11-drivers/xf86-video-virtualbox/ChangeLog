@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-virtualbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.77 2011/11/06 23:40:24 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.78 2011/11/07 15:44:13 lxnay Exp $
+
+  07 Nov 2011; Fabio Erculiani <lxnay@gentoo.org>
+  xf86-video-virtualbox-4.0.12.ebuild, xf86-video-virtualbox-4.1.4.ebuild:
+  add missing runtime dep x11-libs/libXcomposite (vboxvideo_dri.so wants it)
 
 *xf86-video-virtualbox-4.1.6-r1 (06 Nov 2011)
 
