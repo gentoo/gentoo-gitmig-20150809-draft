@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9_pre20111025.ebuild,v 1.1 2011/10/26 19:24:56 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9_pre20111106.ebuild,v 1.1 2011/11/07 09:31:29 eras Exp $
 
 EAPI=4
 
@@ -9,7 +9,7 @@ inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam
 MY_PV="${PV/_pre/-}"
 MY_SRC="${PN}-${MY_PV}"
 MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/experimental"
-VDA_PV="2.8.3"
+VDA_PV="2.8.5"
 VDA_P="${PN}-vda-v10-${VDA_PV}"
 RC_VER="2.6"
 
@@ -21,11 +21,11 @@ SRC_URI="${MY_URI}/${MY_SRC}.tar.gz
 LICENSE="IBM"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="cdb doc dovecot-sasl hardened ipv6 ldap ldap-bind mbox mysql nis pam postgres sasl selinux sqlite ssl vda"
+IUSE="+berkdb cdb doc dovecot-sasl hardened ipv6 ldap ldap-bind mbox mysql nis pam postgres sasl selinux sqlite ssl vda"
 
-DEPEND=">=sys-libs/db-3.2
-	>=dev-libs/libpcre-3.4
+DEPEND=">=dev-libs/libpcre-3.4
 	dev-lang/perl
+	berkdb? ( >=sys-libs/db-3.2 )
 	cdb? ( || ( >=dev-db/tinycdb-0.76 >=dev-db/cdb-0.75-r1 ) )
 	ldap? ( net-nds/openldap )
 	ldap-bind? ( net-nds/openldap[sasl] )
@@ -58,18 +58,11 @@ REQUIRED_USE="ldap-bind? ( ldap sasl )"
 
 S="${WORKDIR}/${MY_SRC}"
 
-group_user_check() {
-	einfo "Checking for postfix group ..."
-	enewgroup postfix 207
-	einfo "Checking for postdrop group ..."
-	enewgroup postdrop 208
-	einfo "Checking for postfix user ..."
-	enewuser postfix 207 -1 /var/spool/postfix postfix,mail
-}
-
 pkg_setup() {
 	# Add postfix, postdrop user/group (bug #77565)
-	group_user_check || die "Failed to check/add needed user/group"
+	enewgroup postfix 207
+	enewgroup postdrop 208
+	enewuser postfix 207 -1 /var/spool/postfix postfix,mail
 }
 
 src_prepare() {
@@ -132,6 +125,12 @@ src_configure() {
 	if ! use nis ; then
 		sed -i -e "s|#define HAS_NIS|//#define HAS_NIS|g" \
 			src/util/sys_defs.h || die "sed failed"
+	fi
+
+	if ! use berkdb; then
+		# change default hash format from Berkeley DB to cdb
+		sed -i -e "s|#define HAS_DB$|//#define HAS_DB|g" -e "s/hash/cdb/" \
+			src/util/sys_defs.h || die
 	fi
 
 	if use cdb ; then
