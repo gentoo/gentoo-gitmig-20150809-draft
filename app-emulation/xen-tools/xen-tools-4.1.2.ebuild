@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.2.ebuild,v 1.1 2011/10/25 18:40:28 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.2.ebuild,v 1.2 2011/11/07 17:31:40 alexxy Exp $
 
 EAPI="3"
 
@@ -30,6 +30,7 @@ IUSE="api custom-cflags debug doc flask hvm qemu pygrub screen xend"
 CDEPEND="dev-lang/python
 	<dev-libs/yajl-2
 	dev-python/lxml
+	dev-python/pypam
 	sys-libs/zlib
 	hvm? ( media-libs/libsdl
 		sys-power/iasl )
@@ -61,7 +62,6 @@ DEPEND="${CDEPEND}
 RDEPEND="${CDEPEND}
 	sys-apps/iproute2
 	net-misc/bridge-utils
-	dev-python/pyxml
 	>=dev-lang/ocaml-3.12.0
 	screen? (
 		app-misc/screen
@@ -74,6 +74,7 @@ RDEPEND="${CDEPEND}
 QA_WX_LOAD="usr/lib/xen/boot/hvmloader"
 QA_EXECSTACK="usr/share/xen/qemu/openbios-sparc32
 	usr/share/xen/qemu/openbios-sparc64"
+RESTRICT="test"
 
 pkg_setup() {
 	export "CONFIG_LOMOUNT=y"
@@ -135,6 +136,7 @@ pkg_setup() {
 src_prepare() {
 	cp "$DISTDIR/ipxe-git-v1.0.0.tar.gz" tools/firmware/etherboot/ipxe.tar.gz
 	sed -e 's/-Wall//' -i Config.mk || die "Couldn't sanitize CFLAGS"
+
 	# Drop .config
 	sed -e '/-include $(XEN_ROOT)\/.config/d' -i Config.mk || die "Couldn't drop"
 	# Xend
@@ -147,35 +149,37 @@ src_prepare() {
 	# if the user *really* wants to use their own custom-cflags, let them
 	if use custom-cflags; then
 		einfo "User wants their own CFLAGS - removing defaults"
-		# try and remove all the default custom-cflags
-		find "${S}" -name Makefile -o -name Rules.mk -o -name Config.mk -exec sed \
-			-e 's/CFLAGS\(.*\)=\(.*\)-O3\(.*\)/CFLAGS\1=\2\3/' \
-			-e 's/CFLAGS\(.*\)=\(.*\)-march=i686\(.*\)/CFLAGS\1=\2\3/' \
-			-e 's/CFLAGS\(.*\)=\(.*\)-fomit-frame-pointer\(.*\)/CFLAGS\1=\2\3/' \
-			-e 's/CFLAGS\(.*\)=\(.*\)-g3*\s\(.*\)/CFLAGS\1=\2 \3/' \
-			-e 's/CFLAGS\(.*\)=\(.*\)-O2\(.*\)/CFLAGS\1=\2\3/' \
-			-i {} \;
+	# try and remove all the default custom-cflags
+	find "${S}" -name Makefile -o -name Rules.mk -o -name Config.mk -exec sed \
+		-e 's/CFLAGS\(.*\)=\(.*\)-O3\(.*\)/CFLAGS\1=\2\3/' \
+		-e 's/CFLAGS\(.*\)=\(.*\)-march=i686\(.*\)/CFLAGS\1=\2\3/' \
+		-e 's/CFLAGS\(.*\)=\(.*\)-fomit-frame-pointer\(.*\)/CFLAGS\1=\2\3/' \
+		-e 's/CFLAGS\(.*\)=\(.*\)-g3*\s\(.*\)/CFLAGS\1=\2 \3/' \
+		-e 's/CFLAGS\(.*\)=\(.*\)-O2\(.*\)/CFLAGS\1=\2\3/' \
+		-i {} \; || die "failed to re-set custom-cflags"
 	fi
 
 	# Disable hvm support on systems that don't support x86_32 binaries.
 	if ! use hvm; then
 		chmod 644 tools/check/check_x11_devel
-		sed -e '/^CONFIG_IOEMU := y$/d' -i config/*.mk
-		sed -e '/SUBDIRS-$(CONFIG_X86) += firmware/d' -i tools/Makefile
+		sed -e '/^CONFIG_IOEMU := y$/d' -i config/*.mk || die
+		sed -e '/SUBDIRS-$(CONFIG_X86) += firmware/d' -i tools/Makefile || die
 	fi
 
 	if ! use pygrub; then
-		sed -e '/^SUBDIRS-$(PYTHON_TOOLS) += pygrub$/d' -i tools/Makefile
+		sed -e '/^SUBDIRS-$(PYTHON_TOOLS) += pygrub$/d' -i tools/Makefile || die
 	fi
+
 	# Don't bother with qemu, only needed for fully virtualised guests
 	if ! use qemu; then
 		sed -e "/^CONFIG_IOEMU := y$/d" -i config/*.mk
 		sed -e "s:install-tools\: tools/ioemu-dir:install-tools\: :g" \
-			-i Makefile
+			-i Makefile || die
 	fi
 
 	# Fix build for gcc-4.6
-	sed -e "s:-Werror::g" -i  tools/xenstat/xentop/Makefile
+	sed -e "s:-Werror::g" -i  tools/xenstat/xentop/Makefile || die
+
 	# Fix network broadcast on bridged networks
 	epatch "${FILESDIR}/${PN}-3.4.0-network-bridge-broadcast.patch"
 
@@ -191,13 +195,18 @@ src_prepare() {
 	# Fix bridge by idella4, bug #362575
 	epatch "${FILESDIR}/${PN}-4.1.1-bridge.patch"
 
-	# Patch for curl-config from bug #386487
-	epatch "${FILESDIR}/${PN}-4.1.1-curl.patch" || die
+        # Remove check_curl, new fix to Bug #386487
+	epatch "${FILESDIR}/xen-tools-4.1.1-curl.patch" || die
+	sed -i -e 's|has_or_fail curl-config|has_or_fail curl-config\nset -ux|' \
+		tools/check/check_curl
 
 	# Don't build ipxe with pie on hardened, Bug #360805
 	if gcc-specs-pie ; then
 		epatch "${FILESDIR}/ipxe-nopie.patch" || die "Could not apply ipxe-nopie patch"
 	fi
+
+	# Fix create.py for pyxml Bug 367735
+	epatch "${FILESDIR}/xen-tools-4.1.2-pyxml.patch" || die "Could not apply pyxml.patch"
 }
 
 src_compile() {

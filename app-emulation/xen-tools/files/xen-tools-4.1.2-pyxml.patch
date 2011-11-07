@@ -1,0 +1,18 @@
+--- xml/__init__.py
++++ xml/__init__.py
+@@ -21,12 +21,14 @@
+ 
+ _MINIMUM_XMLPLUS_VERSION = (0, 8, 4)
+ 
++import pprint
++import sys
+ 
+ def use_pyxml():
++    pprint.pprint(sys.modules)
+     import _xmlplus
+     v = _xmlplus.version_info
+     if v >= _MINIMUM_XMLPLUS_VERSION:
+-        import sys
+         _xmlplus.__path__.extend(__path__)
+         sys.modules[__name__] = _xmlplus
+         modules = []
