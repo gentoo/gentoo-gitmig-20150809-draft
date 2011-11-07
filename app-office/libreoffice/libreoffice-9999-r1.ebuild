@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.52 2011/11/02 18:27:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.53 2011/11/07 18:04:49 scarabeus Exp $
 
 EAPI=4
 
@@ -77,7 +77,7 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="binfilter +branding dbus debug eds gnome +graphite gstreamer gtk
-+jemalloc kde ldap mysql nsplugin odk opengl pdfimport svg templates test +vba
++jemalloc kde mysql nsplugin odk opengl pdfimport svg templates test +vba
 +webdav +xmlsec"
 LICENSE="LGPL-3"
 SLOT="0"
@@ -147,7 +147,6 @@ COMMON_DEPEND="
 		dev-java/saxon:0
 	)
 	jemalloc? ( dev-libs/jemalloc )
-	ldap? ( net-nds/openldap )
 	mysql? ( >=dev-db/mysql-connector-c++-1.1.0 )
 	nsplugin? (
 		net-libs/xulrunner:1.9
@@ -366,6 +365,7 @@ src_configure() {
 	# --disable-gnome-vfs: old gnome virtual fs support
 	# --disable-kdeab: kde3 adressbook
 	# --disable-kde: kde3 support
+	# --disable-ldap: ldap requires internal mozilla stuff, same like mozab
 	# --disable-pch: precompiled headers cause build crashes
 	# --disable-rpath: relative runtime path is not desired
 	# --disable-static-gtk: ensure that gtk is linked dynamically
@@ -398,6 +398,7 @@ src_configure() {
 		--disable-ext-report-builder \
 		--disable-kdeab \
 		--disable-kde \
+		--disable-ldap \
 		--disable-online-update \
 		--disable-pch \
 		--disable-rpath \
@@ -439,7 +440,6 @@ src_configure() {
 		$(use_enable gtk systray) \
 		$(use_enable java ext-scripting-beanshell) \
 		$(use_enable kde kde4) \
-		$(use_enable ldap) \
 		$(use_enable mysql ext-mysql-connector) \
 		$(use_enable nsplugin mozilla) \
 		$(use_enable odk) \
@@ -452,7 +452,6 @@ src_configure() {
 		$(use_enable webdav neon) \
 		$(use_enable xmlsec) \
 		$(use_with java) \
-		$(use_with ldap openldap) \
 		$(use_with mysql system-mysql-cppconn) \
 		$(use_with nsplugin system-mozilla libxul) \
 		$(use_with templates sun-templates) \

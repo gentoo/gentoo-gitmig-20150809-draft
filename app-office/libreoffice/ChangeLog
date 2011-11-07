@@ -1,6 +1,12 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.190 2011/11/02 19:18:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.191 2011/11/07 18:04:49 scarabeus Exp $
+
+  07 Nov 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-3.4.4.2.ebuild, libreoffice-3.4.9999-r1.ebuild,
+  libreoffice-9999-r1.ebuild:
+  Punt ldap until fixed updstream, feature is nice but non-working with system
+  libs.
 
 *libreoffice-3.4.4.2 (02 Nov 2011)
 

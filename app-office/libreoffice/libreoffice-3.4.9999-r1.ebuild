@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999-r1.ebuild,v 1.18 2011/11/02 12:28:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999-r1.ebuild,v 1.19 2011/11/07 18:04:49 scarabeus Exp $
 
 EAPI=4
 
@@ -76,7 +76,7 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="binfilter +branding custom-cflags dbus debug eds gnome graphite
-gstreamer gtk jemalloc kde ldap mysql nsplugin odk opengl pdfimport python
+gstreamer gtk jemalloc kde mysql nsplugin odk opengl pdfimport python
 templates test +vba webdav"
 LICENSE="LGPL-3"
 SLOT="0"
@@ -137,7 +137,6 @@ COMMON_DEPEND="
 		dev-java/saxon:0
 	)
 	jemalloc? ( dev-libs/jemalloc )
-	ldap? ( net-nds/openldap )
 	mysql? ( >=dev-db/mysql-connector-c++-1.1.0 )
 	nsplugin? (
 		net-libs/xulrunner:1.9
@@ -441,6 +440,7 @@ src_configure() {
 		--disable-gnome-vfs \
 		--disable-kdeab \
 		--disable-kde \
+		--disable-ldap \
 		--disable-online-update \
 		--disable-pch \
 		--disable-rpath \
@@ -480,7 +480,6 @@ src_configure() {
 		$(use_enable gtk systray) \
 		$(use_enable java ext-scripting-beanshell) \
 		$(use_enable kde kde4) \
-		$(use_enable ldap) \
 		$(use_enable mysql ext-mysql-connector) \
 		$(use_enable nsplugin mozilla) \
 		$(use_enable odk) \
@@ -491,7 +490,6 @@ src_configure() {
 		$(use_enable vba activex-component) \
 		$(use_enable webdav neon) \
 		$(use_with java) \
-		$(use_with ldap openldap) \
 		$(use_with mysql system-mysql-cppconn) \
 		$(use_with nsplugin system-mozilla libxul) \
 		$(use_with templates sun-templates) \
