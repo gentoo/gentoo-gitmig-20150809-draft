@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-mk-defs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/ChangeLog,v 1.39 2011/11/07 13:54:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/ChangeLog,v 1.40 2011/11/07 17:07:37 aballier Exp $
+
+  07 Nov 2011; Alexis Ballier <aballier@gentoo.org>
+  files/freebsd-mk-defs-9.0-gnu.patch:
+  more fixes for the gnu patch
 
   07 Nov 2011; Alexis Ballier <aballier@gentoo.org>
   freebsd-mk-defs-9.0_rc1.ebuild, +files/freebsd-mk-defs-9.0-gnu.patch:
