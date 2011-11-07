@@ -1,0 +1,64 @@
+From e06a4b0d2f96fd185ed6c85a07d4f2c8c0077fdd Mon Sep 17 00:00:00 2001
+From: Dan Williams <dcbw@redhat.com>
+Date: Thu, 3 Nov 2011 18:12:50 -0500
+Subject: [PATCH] trivial: fix compat with glib 2.31+
+
+g_value_get_char is deprecated.
+---
+ src/connection-editor/ce-page.c   |    7 ++++++-
+ src/gconf-helpers/gconf-helpers.c |    7 ++++++-
+ 2 files changed, 12 insertions(+), 2 deletions(-)
+
+diff --git a/src/connection-editor/ce-page.c b/src/connection-editor/ce-page.c
+index 25e2240..44fd952 100644
+--- a/src/connection-editor/ce-page.c
++++ b/src/connection-editor/ce-page.c
+@@ -35,6 +35,11 @@
+ #include "ce-page.h"
+ #include "nma-marshal.h"
+ 
++#if !GLIB_CHECK_VERSION(2,31,0)
++#define g_value_set_schar g_value_set_char
++#define g_value_get_schar g_value_get_char
++#endif
++
+ G_DEFINE_ABSTRACT_TYPE (CEPage, ce_page, G_TYPE_OBJECT)
+ 
+ enum {
+@@ -88,7 +93,7 @@ ce_get_property_default (NMSetting *setting, const char *property_name)
+ 	g_param_value_set_default (spec, &value);
+ 
+ 	if (G_VALUE_HOLDS_CHAR (&value))
+-		return (int) g_value_get_char (&value);
++		return (int) g_value_get_schar (&value);
+ 	else if (G_VALUE_HOLDS_INT (&value))
+ 		return g_value_get_int (&value);
+ 	else if (G_VALUE_HOLDS_INT64 (&value))
+diff --git a/src/gconf-helpers/gconf-helpers.c b/src/gconf-helpers/gconf-helpers.c
+index 2327c62..10c522d 100644
+--- a/src/gconf-helpers/gconf-helpers.c
++++ b/src/gconf-helpers/gconf-helpers.c
+@@ -54,6 +54,11 @@
+ #include "gconf-helpers.h"
+ #include "gconf-upgrade.h"
+ 
++#if !GLIB_CHECK_VERSION(2,31,0)
++#define g_value_set_schar g_value_set_char
++#define g_value_get_schar g_value_get_char
++#endif
++
+ #define S390_OPT_KEY_PREFIX "s390-opt-"
+ 
+ #define DBUS_TYPE_G_ARRAY_OF_OBJECT_PATH    (dbus_g_type_get_collection ("GPtrArray", DBUS_TYPE_G_OBJECT_PATH))
+@@ -2664,7 +2669,7 @@ copy_one_setting_value_to_gconf (NMSetting *setting,
+ 	} else if (type == G_TYPE_CHAR) {
+ 		nm_gconf_set_int_helper (info->client, info->dir,
+ 							key, setting_name,
+-							g_value_get_char (value));
++							g_value_get_schar (value));
+ 	} else if (type == DBUS_TYPE_G_UCHAR_ARRAY) {
+ 		GByteArray *ba_val = (GByteArray *) g_value_get_boxed (value);
+ 
+-- 
+1.7.7.2
+
