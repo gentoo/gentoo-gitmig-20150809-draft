@@ -1,6 +1,10 @@
 # ChangeLog for virtual/perl-parent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-parent/ChangeLog,v 1.17 2011/11/06 17:22:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-parent/ChangeLog,v 1.18 2011/11/07 08:09:50 grobian Exp $
+
+  07 Nov 2011; Fabian Groffen <grobian@gentoo.org>
+  perl-parent-0.225.0-r2.ebuild:
+  Added Prefix keywords, bug #389001
 
   06 Nov 2011; Markus Meier <maekke@gentoo.org> perl-parent-0.225.0-r2.ebuild:
   add ~arm, bug #389001
