@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.60 2011/11/07 13:17:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999.ebuild,v 1.61 2011/11/07 13:23:08 aballier Exp $
 
 EAPI="4"
 
@@ -30,10 +30,10 @@ if [ "${PV#9999}" = "${PV}" ] ; then
 fi
 IUSE="
 	aac aacplus alsa amr bindist +bzip2 cdio celt cpudetection debug dirac doc
-	+encode faac frei0r gsm +hardcoded-tables ieee1394 jack jpeg2k modplug mp3
-	network openal openssl oss pic pulseaudio qt-faststart rtmp schroedinger sdl
-	speex static-libs test theora threads truetype v4l vaapi vdpau vorbis vpx X
-	x264 xvid +zlib
+	+encode faac frei0r gnutls gsm +hardcoded-tables ieee1394 jack jpeg2k
+	modplug mp3 network openal openssl oss pic pulseaudio qt-faststart rtmp
+	schroedinger sdl speex static-libs test theora threads truetype v4l vaapi
+	vdpau vorbis vpx X x264 xvid +zlib
 	"
 
 # String for CPU features in the useflag[:configure_option] form
@@ -63,6 +63,7 @@ RDEPEND="
 		xvid? ( >=media-libs/xvid-1.1.0 )
 	)
 	frei0r? ( media-plugins/frei0r-plugins )
+	gnutls? ( net-libs/gnutls )
 	gsm? ( >=media-sound/gsm-1.0.12-r1 )
 	ieee1394? ( media-libs/libdc1394 sys-libs/libraw1394 )
 	jack? ( media-sound/jack-audio-connection-kit )
@@ -87,6 +88,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/make-3.81
 	dirac? ( dev-util/pkgconfig )
 	doc? ( app-text/texi2html )
+	gnutls? ( dev-util/pkgconfig )
 	ieee1394? ( dev-util/pkgconfig )
 	mmx? ( dev-lang/yasm )
 	rtmp? ( dev-util/pkgconfig )
@@ -120,6 +122,7 @@ src_configure() {
 
 	use cpudetection && myconf="${myconf} --enable-runtime-cpudetect"
 	use openssl && myconf="${myconf} --enable-openssl --enable-nonfree"
+	use gnutls && myconf="${myconf} --enable-gnutls"
 
 	# Encoders
 	if use encode
