@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/xapian
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.66 2011/11/06 22:26:04 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.67 2011/11/07 09:32:30 blueness Exp $
+
+  07 Nov 2011; Anthony G. Basile <blueness@gentoo.org> -xapian-1.2.7-r2.ebuild,
+  metadata.xml:
+  Removed version with bloated use flags
 
 *xapian-1.2.7-r3 (06 Nov 2011)
 

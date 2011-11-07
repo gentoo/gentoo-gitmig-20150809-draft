@@ -19,7 +19,6 @@
 		applications.
 	</longdescription>
 	<use>
-		<flag name='nosse'>Disable all sse support</flag>
 		<flag name='brass'>Enabled brass backend db support</flag>
 		<flag name='chert'>Enabled chert backend db support</flag>
 		<flag name='flint'>Enabled flint backend db support</flag>
