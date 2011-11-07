@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xmlto
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.73 2011/11/05 17:51:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.74 2011/11/07 00:23:41 ranger Exp $
+
+  07 Nov 2011; Brent Baude <ranger@gentoo.org> xmlto-0.0.24-r1.ebuild:
+  Marking xmlto-0.0.24-r1 ppc for bug 388273
 
   05 Nov 2011; Raúl Porcel <armin76@gentoo.org> xmlto-0.0.24-r1.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #388273
