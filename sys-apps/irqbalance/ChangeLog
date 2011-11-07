@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/irqbalance
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/ChangeLog,v 1.32 2011/11/06 23:38:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/ChangeLog,v 1.33 2011/11/07 15:34:59 chainsaw Exp $
+
+  07 Nov 2011; Tony Vroon <chainsaw@gentoo.org> irqbalance-0.56.ebuild:
+  Marked stable on AMD64 based on arch tesitng by Agostino "ago" Sarubbo & Ian
+  "idella4" Delaney in bug #383955.
 
   06 Nov 2011; Brent Baude <ranger@gentoo.org> irqbalance-0.56.ebuild:
   Marking irqbalance-0.56 ppc for bug 383955
