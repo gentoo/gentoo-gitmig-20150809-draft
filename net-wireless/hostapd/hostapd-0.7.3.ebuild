@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.7.3.ebuild,v 1.6 2011/09/09 22:56:50 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-0.7.3.ebuild,v 1.7 2011/11/07 19:50:23 gurligebis Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ KEYWORDS="amd64 ~mips ppc x86"
 IUSE="debug ipv6 logwatch madwifi +ssl +wps"
 
 DEPEND="ssl? ( dev-libs/openssl )
-	>=dev-libs/libnl-1.1
+	dev-libs/libnl:1.1
 	madwifi? ( ||
 		( >net-wireless/madwifi-ng-tools-0.9.3
 		net-wireless/madwifi-old ) )"
@@ -108,9 +108,11 @@ src_configure() {
 	fi
 
 	# If we are using libnl 2.0 and above, enable support for it
-	if has_version ">=dev-libs/libnl-2.0"; then
-		echo "CONFIG_LIBNL20=y" >> .config
-	fi
+	# Removed for now, since the 3.2 version is broken, and we don't
+	# support it.
+	#if has_version ">=dev-libs/libnl-2.0"; then
+	#	echo "CONFIG_LIBNL20=y" >> .config
+	#fi
 
 	# TODO: Add support for BSD drivers
 

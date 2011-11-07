@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.115 2011/10/27 17:12:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.116 2011/11/07 19:50:23 gurligebis Exp $
+
+  07 Nov 2011; <gurligebis@gentoo.org> hostapd-0.7.3.ebuild:
+  Fixing compiling with both libnl-1.1 and libnl-3 installed.
 
   27 Oct 2011; Jeroen Roovers <jer@gentoo.org> hostapd-0.6.9.ebuild:
   Fix libnl dependency (bug #342461).
