@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.164 2011/09/18 10:51:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.165 2011/11/07 15:46:30 darkside Exp $
+
+  07 Nov 2011; Jeremy Olexa <darkside@gentoo.org> files/rtorrentd.init:
+  remove deprecated init option, bug 384541 (no revbump on purpose)
 
   18 Sep 2011; Michał Górny <mgorny@gentoo.org> rtorrent-0.8.9.ebuild:
   Fix implicit $(use_enable debug).
