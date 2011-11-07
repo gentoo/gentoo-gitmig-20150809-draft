@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13211 2011/11/06 18:03:04 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13212 2011/11/07 01:05:16 williamh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -36,7 +36,7 @@
 # solution for the following issue:
 #
 # http://www.freedesktop.org/wiki/Software/systemd/separate-usr-is-broken
-=sys-fs/udev-174
+~sys-fs/udev-174
 >=sys-apps/systemd-30
 
 # Vadim Kuznetsov <vadimk@gentoo.org> (05 Nov 2011)

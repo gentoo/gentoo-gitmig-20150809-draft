@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5877 2011/11/06 18:03:04 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5878 2011/11/07 01:05:16 williamh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Nov 2011; William Hubbs <williamh@gentoo.org> package.mask:
+  adjust udev mask to cover all revisions of udev-174.
 
   06 Nov 2011; Peter Volkov <pva@gentoo.org> package.mask:
   net-wireless/madwifi-old{,-tools} removed from the tree, see #362827 for
