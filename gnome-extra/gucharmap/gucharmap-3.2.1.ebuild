@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-3.0.1-r300.ebuild,v 1.2 2011/08/23 15:55:00 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-3.2.1.ebuild,v 1.1 2011/11/07 07:03:21 tetromino Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 
@@ -23,7 +23,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.16.3
 	gnome? ( gnome-base/gconf:2 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.0 )"
 RDEPEND="${COMMON_DEPEND}
-	!!<gnome-extra/gucharmap-3:0"
+	!<gnome-extra/gucharmap-3:0"
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	>=dev-util/pkgconfig-0.9
@@ -39,8 +39,6 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		--disable-static
 		--disable-scrollkeeper
-		--disable-maintainer-mode
-		--with-gtk=3.0
 		$(use_enable gnome gconf)
 		$(use_enable introspection)
 		$(use_enable cjk unihan)"
