@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen-pvgrub
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.9 2011/11/01 10:19:29 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/ChangeLog,v 1.10 2011/11/07 17:40:42 alexxy Exp $
+
+  07 Nov 2011; Alexey Shvetsov <alexxy@gentoo.org> xen-pvgrub-4.1.2.ebuild:
+  Minor sytax changes; rm -j1 from install, added die statements, prepared by
+  Ian Delaney aka idella4
 
   01 Nov 2011; Tony Vroon <chainsaw@gentoo.org> xen-pvgrub-4.1.1-r1.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El

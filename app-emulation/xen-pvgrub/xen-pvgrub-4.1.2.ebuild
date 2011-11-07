@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.1.2.ebuild,v 1.1 2011/10/25 18:47:03 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-pvgrub/xen-pvgrub-4.1.2.ebuild,v 1.2 2011/11/07 17:40:42 alexxy Exp $
 
 EAPI="2"
 
@@ -80,7 +80,6 @@ src_prepare() {
 		-e 's:^\t$(WGET) $(OCAML_URL):#\t$(WGET) $(OCAML_URL):' \
 		-e 's:^\t$(WGET) $(GRUB_URL):#$(WGET) $(GRUB_URL):' \
                 -i stubdom/Makefile || die "stubdom/Makefile could not be adjusted"
-        einfo "1st Makefile adjusted"
 }
 
 src_compile() {
@@ -89,32 +88,34 @@ src_compile() {
 		append-flags -fno-strict-overflow
 	fi
 
-	emake CC=$(tc-getCC) LD=$(tc-getLD) -C tools/include || die "prepare libelf headers failed"
+	emake CC="$(tc-getCC)" LD="$(tc-getLD)" -C tools/include || die "prepare libelf headers failed"
 
 	if use x86; then
-		emake -j1 CC=$(tc-getCC) LD=$(tc-getLD) \
+		emake -j1 CC="$(tc-getCC)" LD="$(tc-getLD)" \
 		XEN_TARGET_ARCH="x86_32" -C stubdom pv-grub || \
 		die "compile pv-grub_x86_32 failed"
 	fi
 	if use amd64; then
-		emake -j1 CC=$(tc-getCC) LD=$(tc-getLD) \
+		emake -j1 CC="$(tc-getCC)" LD="$(tc-getLD)" \
 		XEN_TARGET_ARCH="x86_64" -C stubdom pv-grub || \
 		die "compile pv-grub_x86_64 failed"
 		if use multilib; then
 			multilib_toolchain_setup x86
-			emake -j1 XEN_TARGET_ARCH="x86_32" -C stubdom pv-grub || die "compile pv-grub_x86_32 failed"
+			emake -j1 \
+			XEN_TARGET_ARCH="x86_32" -C stubdom pv-grub || \
+			die "compile pv-grub_x86_32 failed"
 		fi
 	fi
 }
 
 src_install() {
 	if use x86; then
-		emake -j1 XEN_TARGET_ARCH="x86_32" DESTDIR="${D}" -C stubdom install-grub || die "install pv-grub_x86_32 failed"
+		emake XEN_TARGET_ARCH="x86_32" DESTDIR="${D}" -C stubdom install-grub || die "install pv-grub_x86_32 failed"
 	fi
 	if use amd64; then
-		emake -j1 XEN_TARGET_ARCH="x86_64" DESTDIR="${D}" -C stubdom install-grub || die "install pv-grub_x86_64 failed"
+		emake XEN_TARGET_ARCH="x86_64" DESTDIR="${D}" -C stubdom install-grub || die "install pv-grub_x86_64 failed"
 		if use multilib; then
-			emake -j1 XEN_TARGET_ARCH="x86_32" DESTDIR="${D}" -C stubdom install-grub || die "install pv-grub_x86_32 failed"
+			emake XEN_TARGET_ARCH="x86_32" DESTDIR="${D}" -C stubdom install-grub || die "install pv-grub_x86_32 failed"
 		fi
 	fi
 }
