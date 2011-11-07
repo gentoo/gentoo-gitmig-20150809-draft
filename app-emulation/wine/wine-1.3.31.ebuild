@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.95 2011/11/07 01:57:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.3.31.ebuild,v 1.1 2011/11/07 01:57:08 vapier Exp $
 
 EAPI="2"
 
@@ -139,7 +139,7 @@ do_configure() {
 		$(use_with jpeg) \
 		$(use_with ldap) \
 		$(use_with mp3 mpg123) \
-		$(use_with nls gettext) \
+		$(use_with nls gettextpo) \
 		$(use_with openal) \
 		$(use_with opencl) \
 		$(use_with opengl) \
