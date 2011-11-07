@@ -1,6 +1,17 @@
 # ChangeLog for media-plugins/grilo-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/ChangeLog,v 1.5 2011/10/19 21:52:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/ChangeLog,v 1.6 2011/11/07 00:39:33 tetromino Exp $
+
+*grilo-plugins-0.1.17-r2 (07 Nov 2011)
+
+  07 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +grilo-plugins-0.1.17-r2.ebuild,
+  +files/grilo-plugins-0.1.17-tracker-0.12.patch,
+  +files/grilo-plugins-0.1.17-upnp-filter-containers.patch, metadata.xml:
+  Add patches for tracker-0.12 compatibility and for fixing upnp search. Enable
+  optional tracker support. Let the eclass take care of maintainer mode. Fix
+  gmime dependency to 2.6 (automagic choice between slots is inappropriate).
+  Alphabetize a bit.
 
 *grilo-plugins-0.1.17-r1 (19 Oct 2011)
 

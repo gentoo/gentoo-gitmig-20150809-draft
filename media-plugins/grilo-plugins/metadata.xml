@@ -2,11 +2,13 @@
 <pkgmetadata>
 	<herd>gnome</herd>
 	<use>
-		<flag name="youtube">Build support for YouTube content discovery using
-			<pkg>dev-libs/libgdata</pkg></flag>
+		<flag name="tracker">Build support for content discovery using the
+			<pkg>app-misc/tracker</pkg> indexer</flag>
 		<flag name="upnp">Build support for UPnP devices using
 			<pkg>net-libs/gupnp</pkg> and <pkg>net-libs/gupnp-av</pkg></flag>
 		<flag name="vimeo">Build support for Vimeo content discovery using
 			<pkg>net-libs/libsoup</pkg> and <pkg>dev-libs/libgcrypt</pkg></flag>
+		<flag name="youtube">Build support for YouTube content discovery using
+			<pkg>dev-libs/libgdata</pkg></flag>
 	</use>
 </pkgmetadata>
