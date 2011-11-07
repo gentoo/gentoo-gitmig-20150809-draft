@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/freebsd-mk-defs-9.0_rc1.ebuild,v 1.1 2011/11/07 12:26:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/freebsd-mk-defs-9.0_rc1.ebuild,v 1.2 2011/11/07 13:54:04 aballier Exp $
 
 EAPI=3
 
@@ -23,7 +23,7 @@ S="${WORKDIR}/share/mk"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-9.0-gentoo.patch"
-	use userland_GNU && epatch "${FILESDIR}/${PN}-8.0-gnu.patch"
+	use userland_GNU && epatch "${FILESDIR}/${PN}-9.0-gnu.patch"
 }
 
 src_compile() { :; }

@@ -1,0 +1,36 @@
+Index: work/share/mk/bsd.lib.mk
+===================================================================
+--- work.orig/share/mk/bsd.lib.mk
++++ work/share/mk/bsd.lib.mk
+@@ -245,13 +245,6 @@ _EXTRADEPEND:
+ 
+ .if !target(install)
+ 
+-.if defined(PRECIOUSLIB)
+-.if !defined(NO_FSCHG)
+-SHLINSTALLFLAGS+= -fschg
+-.endif
+-SHLINSTALLFLAGS+= -S
+-.endif
+-
+ _INSTALLFLAGS:=	${INSTALLFLAGS}
+ .for ie in ${INSTALLFLAGS_EDIT}
+ _INSTALLFLAGS:=	${_INSTALLFLAGS${ie}}
+Index: work/share/mk/bsd.prog.mk
+===================================================================
+--- work.orig/share/mk/bsd.prog.mk
++++ work/share/mk/bsd.prog.mk
+@@ -134,13 +134,6 @@ _EXTRADEPEND:
+ 
+ .if !target(install)
+ 
+-.if defined(PRECIOUSPROG)
+-.if !defined(NO_FSCHG)
+-INSTALLFLAGS+= -fschg
+-.endif
+-INSTALLFLAGS+= -S
+-.endif
+-
+ _INSTALLFLAGS:=	${INSTALLFLAGS}
+ .for ie in ${INSTALLFLAGS_EDIT}
+ _INSTALLFLAGS:=	${_INSTALLFLAGS${ie}}
