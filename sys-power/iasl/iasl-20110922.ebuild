@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20110922.ebuild,v 1.1 2011/11/07 03:39:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20110922.ebuild,v 1.2 2011/11/07 11:30:29 robbat2 Exp $
 
 EAPI=4
 
@@ -41,6 +41,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-20110922-locale.patch"
 	epatch "${FILESDIR}/${PN}-20110922-parallelmake-001.patch"
 	epatch "${FILESDIR}/${PN}-20110922-parallelmake-002.patch"
+	epatch "${FILESDIR}/${PN}-20110922-parallelmake-003.patch"
 
 	find "${S}" -type f -name 'Makefile*' -print0 | \
 		xargs -0 -I '{}' \
