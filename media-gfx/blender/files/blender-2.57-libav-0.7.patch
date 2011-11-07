@@ -276,3 +276,21 @@ diff -burN blender-2.57.orig//source/gameengine/VideoTexture/VideoFFmpeg.h blend
  #include <libswscale/swscale.h>
  #include "DNA_listBase.h"
  #include "BLI_threads.h"
+diff -burN blender-2.57.orig/source/blender/blenkernel/intern/writeffmpeg.c /var/tmp/portage/media-gfx/blender-2.57-r1/work/blender-2.57/source/blender/blenkernel/intern/writeffmpeg.c
+--- blender-2.57.orig/source/blender/blenkernel/intern/writeffmpeg.c	2011-11-07 13:17:59.001736099 -0800
++++ blender-2.57/source/blender/blenkernel/intern/writeffmpeg.c	2011-11-07 13:18:35.726734562 -0800
+@@ -1101,12 +1101,12 @@
+ 	switch (o->type) {
+ 	case FF_OPT_TYPE_INT:
+ 	case FF_OPT_TYPE_INT64:
+-		val.i = o->default_val;
++		val.i = o->default_val.dbl;
+ 		idp_type = IDP_INT;
+ 		break;
+ 	case FF_OPT_TYPE_DOUBLE:
+ 	case FF_OPT_TYPE_FLOAT:
+-		val.f = o->default_val;
++		val.f = o->default_val.dbl;
+ 		idp_type = IDP_FLOAT;
+ 		break;
+ 	case FF_OPT_TYPE_STRING:

@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.207 2011/11/01 20:37:44 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.208 2011/11/07 21:51:39 lu_zero Exp $
+
+  07 Nov 2011; Luca Barbato <lu_zero@gentoo.org> blender-2.57-r1.ebuild,
+  +files/blender-2.57-enable_site_module.patch,
+  files/blender-2.57-libav-0.7.patch:
+  Update ebuild to fix #369931 and #374339
 
   01 Nov 2011; Sebastian Pipping <sping@gentoo.org> blender-2.57-r1.ebuild:
   Bump scons dependency to 2.0.1-r1 (bug #388861)
