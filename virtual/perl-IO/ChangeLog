@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-IO
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO/ChangeLog,v 1.32 2011/11/06 19:12:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-IO/ChangeLog,v 1.33 2011/11/07 13:05:39 jer Exp $
+
+  07 Nov 2011; Jeroen Roovers <jer@gentoo.org> perl-IO-1.25.ebuild:
+  Stable for HPPA (bug #386309).
 
   06 Nov 2011; Markus Meier <maekke@gentoo.org> perl-IO-1.25.ebuild:
   arm stable, bug #386309
