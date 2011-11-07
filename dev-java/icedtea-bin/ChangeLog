@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/icedtea-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.2 2011/11/01 11:18:26 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.3 2011/11/07 22:09:46 caster Exp $
+
+*icedtea-bin-6.1.10.4 (07 Nov 2011)
+
+  07 Nov 2011; Vlastimil Babka <caster@gentoo.org>
+  +icedtea-bin-6.1.10.4.ebuild, +files/icedtea-bin-6.env:
+  Revbump to migrate the icedtea-bin handle from 'icedtea6-bin' to the standard
+  'icedtea-bin-6'. System VM setting is migrated automatically, but this may
+  break user VM setting, sorry. Fixes bug #380813. Add updated timezone data
+  compiled from 2011n, fixes e.g. Russian DST, bug #389411.
 
   01 Nov 2011; Tony Vroon <chainsaw@gentoo.org> icedtea-bin-1.10.4.ebuild:
   Marked stable on AMD64 based on arch testing by Ian "idella4" Delaney &
