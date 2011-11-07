@@ -1,6 +1,12 @@
 # ChangeLog for sys-power/nut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.93 2011/04/27 19:05:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.94 2011/11/07 23:28:29 robbat2 Exp $
+
+*nut-2.6.2 (07 Nov 2011)
+
+  07 Nov 2011; Robin H. Johnson <robbat2@gentoo.org> +nut-2.6.2.ebuild,
+  +files/nut-2.6.2-lowspeed-buffer-size.patch:
+  Version bump, bug #371641.
 
   27 Apr 2011; Raúl Porcel <armin76@gentoo.org> nut-2.6.0-r1.ebuild:
   sparc stable wrt #360739
