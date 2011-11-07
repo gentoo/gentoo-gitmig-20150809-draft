@@ -5,8 +5,6 @@
 	<use>
 		<flag name="applet">Enable vinagre applet for
 			<pkg>gnome-base/gnome-panel</pkg></flag>
-		<flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg>
-			for introspection</flag>
 		<flag name="ssh">Enable ssh plugin using <pkg>x11-libs/vte</pkg></flag>
 		<flag name="telepathy">Enable access to remote desktop via a
 			<pkg>net-libs/telepathy-glib</pkg> client</flag>

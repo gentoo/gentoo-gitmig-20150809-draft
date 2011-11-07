@@ -1,0 +1,375 @@
+From a72e3da5c6c28633c7d9db640c10f181aac425ce Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gmail.com>
+Date: Fri, 30 Sep 2011 14:01:45 -0400
+Subject: [PATCH] Fix vinagre_dirs_*, vinagre_utils_* implicit function
+ declarations
+
+Fix numerous vinagre_utils_* and vinagre_dirs_* implicit function
+declarations by generating a header (vinagre/vinagre-vala.h) from the
+vala source, and including it in half the .c files in the source tree.
+
+Add the vinagre-vala.h to dist_noinst_DATA to make sure it goes in the
+release tarballs, and to BUILT_SOURCES to ensure that it gets generated
+before the C sources that #include it are compiled.
+
+Unfortunately, automake does not support per-target VALAFLAGS. We cannot
+simply add a "--header vinagre/vinagre-vala.h" option to AM_VALAFLAGS
+or VALAFLAGS because if we ever use a .vala file in another target (such
+as one of the vinagre plugins), vinagre-vala.h will get clobbered.
+
+The only way to prevent valac from running multiple times and safely
+support parallel make without adding a ticking time bomb that could
+clobber vinagre-vala.h is to manually write a stamp target for the vala
+sources used in libvinagre, and manually pass a --header argument to
+valac in the rule for the stamp.
+
+Pick "libvinagre_vala.stamp" as the name for it to avoid potential
+collisions with automake's vala stamp naming conventions. And make sure
+to add the stamp to dist_noinst_DATA so that people who download the
+source tarball aren't forced to use vala to build vinagre.
+
+Also, add an explicit rule for generating vinagre-vala.h for those who
+do not have it and are building from git (otherwise, make fill fail due
+to vinagre-vala.h's presence in dist_noinst_DATA).
+---
+ Makefile.am                                   |   29 ++++++++++++++++++++++--
+ plugins/rdp/vinagre-rdp-tab.c                 |    1 +
+ plugins/spice/vinagre-spice-connection.c      |    1 +
+ plugins/spice/vinagre-spice-tab.c             |    1 +
+ plugins/vnc/vinagre-vnc-connection.c          |    1 +
+ plugins/vnc/vinagre-vnc-tab.c                 |    1 +
+ vinagre/vinagre-bookmarks-migration.c         |    1 +
+ vinagre/vinagre-bookmarks-ui.c                |    1 +
+ vinagre/vinagre-bookmarks.c                   |    1 +
+ vinagre/vinagre-cache-prefs.c                 |    1 +
+ vinagre/vinagre-commands.c                    |    1 +
+ vinagre/vinagre-connect.c                     |    1 +
+ vinagre/vinagre-connection.c                  |    1 +
+ vinagre/vinagre-notebook.c                    |    1 +
+ vinagre/vinagre-options.c                     |    2 +
+ vinagre/vinagre-reverse-vnc-listener-dialog.c |    1 +
+ vinagre/vinagre-reverse-vnc-listener.c        |    1 +
+ vinagre/vinagre-ssh.c                         |    1 +
+ vinagre/vinagre-tab.c                         |    1 +
+ vinagre/vinagre-tube-handler.c                |    1 +
+ vinagre/vinagre-window.c                      |    1 +
+ 21 files changed, 47 insertions(+), 3 deletions(-)
+
+diff --git a/Makefile.am b/Makefile.am
+index 6c6b90a..05c2412 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -84,6 +84,10 @@ noinst_vinagreh_headers = \
+ # The main library
+ noinst_LTLIBRARIES = libvinagre.la
+ 
++libvinagre_vala_sources = \
++	vinagre/vinagre-dirs.vala \
++	vinagre/vinagre-utils.vala
++
+ handwritten_sources = \
+ 	vinagre/view/autoDrawer.c \
+ 	vinagre/view/drawer.c \
+@@ -97,14 +101,12 @@ handwritten_sources = \
+ 	vinagre/vinagre-connect.c \
+ 	vinagre/vinagre-connection.c \
+ 	vinagre/vinagre-debug.c \
+-	vinagre/vinagre-dirs.vala \
+ 	vinagre/vinagre-notebook.c \
+ 	vinagre/vinagre-prefs.c \
+ 	vinagre/vinagre-reverse-vnc-listener.c \
+ 	vinagre/vinagre-reverse-vnc-listener-dialog.c \
+ 	vinagre/vinagre-static-extension.c \
+ 	vinagre/vinagre-tab.c \
+-	vinagre/vinagre-utils.vala \
+ 	vinagre/vinagre-window.c \
+ 	vinagre/vinagre-ssh.c \
+ 	vinagre/vinagre-cache-prefs.c \
+@@ -120,7 +122,8 @@ handwritten_sources += \
+ endif
+ 
+ libvinagre_la_SOURCES = \
+-	$(handwritten_sources)
++	$(handwritten_sources) \
++	$(libvinagre_vala_sources:.vala=.c)
+ 
+ if VINAGRE_HAVE_AVAHI
+ libvinagre_la_SOURCES += \
+@@ -223,6 +226,24 @@ libvnc_la_SOURCES = \
+ libvnc_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS)
+ libvnc_la_LIBADD = $(VNC_LIBS)
+ 
++# Ensure vinagre-vala.h is available immediately since C sources #include it
++BUILT_SOURCES = \
++	vinagre/vinagre-vala.h
++
++# We have to write an explicit rule instead of just adding --header AM_VALAFLAGS
++# or VALAFLAGS because automake does not support per-target VALAFLAGS, so if in
++# the future we use a .vala file in a plugin, vinagre-vala.h will get clobbered.
++libvinagre_vala.stamp: $(libvinagre_vala_sources)
++	$(AM_V_VALAC)$(VALAC) $(AM_VALAFLAGS) $(VALAFLAGS) --header vinagre/vinagre-vala.h -C $(libvinagre_vala_sources)
++	$(AM_V_at)touch $@
++
++# Automake doesn't have an implicit rule to generate headers from vala
++vinagre/vinagre-vala.h $(libvinagre_vala_sources:.vala=.c): $(srcdir)/libvinagre_vala.stamp
++	@if test -f $@; then :; else \
++	  rm -f $(srcdir)/libvinagre_vala.stamp; \
++	  $(am__cd) $(srcdir) && $(MAKE) $(AM_MAKEFLAGS) libvinagre_vala.stamp; \
++	fi
++
+ iconthemedir = $(datadir)/icons/hicolor
+ mimeicon16dir = $(iconthemedir)/16x16/mimetypes
+ mimeicon22dir = $(iconthemedir)/22x22/mimetypes
+@@ -328,6 +349,8 @@ dist-changelog:
+ 
+ dist_noinst_DATA = \
+ 	$(noinst_vinagreh_headers) \
++	vinagre/vinagre-vala.h \
++	libvinagre_vala.stamp \
+ 	$(noinst_plugin_headers) \
+ 	ChangeLog.pre-git \
+ 	data/vinagre-mime.xml.in \
+diff --git a/plugins/rdp/vinagre-rdp-tab.c b/plugins/rdp/vinagre-rdp-tab.c
+index d7647dd..389b678 100644
+--- a/plugins/rdp/vinagre-rdp-tab.c
++++ b/plugins/rdp/vinagre-rdp-tab.c
+@@ -30,6 +30,7 @@
+ 
+ #include "vinagre-rdp-tab.h"
+ #include "vinagre-rdp-connection.h"
++#include "vinagre-vala.h"
+ 
+ #define VINAGRE_RDP_TAB_GET_PRIVATE(object)(G_TYPE_INSTANCE_GET_PRIVATE ((object), VINAGRE_TYPE_RDP_TAB, VinagreRdpTabPrivate))
+ 
+diff --git a/plugins/spice/vinagre-spice-connection.c b/plugins/spice/vinagre-spice-connection.c
+index 869096c..0bbe4e2 100644
+--- a/plugins/spice/vinagre-spice-connection.c
++++ b/plugins/spice/vinagre-spice-connection.c
+@@ -25,6 +25,7 @@
+ #include <vinagre/vinagre-cache-prefs.h>
+ 
+ #include "vinagre-spice-connection.h"
++#include "vinagre-vala.h"
+ 
+ struct _VinagreSpiceConnectionPrivate
+ {
+diff --git a/plugins/spice/vinagre-spice-tab.c b/plugins/spice/vinagre-spice-tab.c
+index 7781c98..a194632 100644
+--- a/plugins/spice/vinagre-spice-tab.c
++++ b/plugins/spice/vinagre-spice-tab.c
+@@ -32,6 +32,7 @@
+ #include "vinagre-spice-tab.h"
+ #include "vinagre-spice-connection.h"
+ #include "vinagre-spice-tunnel.h"
++#include "vinagre-vala.h"
+ 
+ #define VINAGRE_SPICE_TAB_GET_PRIVATE(object)(G_TYPE_INSTANCE_GET_PRIVATE ((object), VINAGRE_TYPE_SPICE_TAB, VinagreSpiceTabPrivate))
+ 
+diff --git a/plugins/vnc/vinagre-vnc-connection.c b/plugins/vnc/vinagre-vnc-connection.c
+index 2182743..6856112 100644
+--- a/plugins/vnc/vinagre-vnc-connection.c
++++ b/plugins/vnc/vinagre-vnc-connection.c
+@@ -25,6 +25,7 @@
+ #include <vinagre/vinagre-cache-prefs.h>
+ 
+ #include "vinagre-vnc-connection.h"
++#include "vinagre-vala.h"
+ 
+ struct _VinagreVncConnectionPrivate
+ {
+diff --git a/plugins/vnc/vinagre-vnc-tab.c b/plugins/vnc/vinagre-vnc-tab.c
+index 914cdea..10bed13 100644
+--- a/plugins/vnc/vinagre-vnc-tab.c
++++ b/plugins/vnc/vinagre-vnc-tab.c
+@@ -29,6 +29,7 @@
+ #include "vinagre-vnc-tab.h"
+ #include "vinagre-vnc-connection.h"
+ #include "vinagre-vnc-tunnel.h"
++#include "vinagre-vala.h"
+ 
+ #define VINAGRE_VNC_TAB_GET_PRIVATE(object)(G_TYPE_INSTANCE_GET_PRIVATE ((object), VINAGRE_TYPE_VNC_TAB, VinagreVncTabPrivate))
+ 
+diff --git a/vinagre/vinagre-bookmarks-migration.c b/vinagre/vinagre-bookmarks-migration.c
+index 3fae66b..1289c01 100644
+--- a/vinagre/vinagre-bookmarks-migration.c
++++ b/vinagre/vinagre-bookmarks-migration.c
+@@ -36,6 +36,7 @@
+ #include "vinagre-bookmarks-migration.h"
+ #include "vinagre-bookmarks.h"
+ #include "vinagre-plugins-engine.h"
++#include "vinagre-vala.h"
+ 
+ static void
+ fill_xml (GSList *list, xmlTextWriter *writer)
+diff --git a/vinagre/vinagre-bookmarks-ui.c b/vinagre/vinagre-bookmarks-ui.c
+index 5f37aa2..fdc5e0a 100644
+--- a/vinagre/vinagre-bookmarks-ui.c
++++ b/vinagre/vinagre-bookmarks-ui.c
+@@ -25,6 +25,7 @@
+ #include "vinagre-bookmarks-ui.h"
+ #include "vinagre-bookmarks-tree.h"
+ #include "vinagre-plugins-engine.h"
++#include "vinagre-vala.h"
+ 
+ static void
+ control_save_button_visibility (GtkEntry *ed, GtkWidget *bt)
+diff --git a/vinagre/vinagre-bookmarks.c b/vinagre/vinagre-bookmarks.c
+index 968be99..ae130d7 100644
+--- a/vinagre/vinagre-bookmarks.c
++++ b/vinagre/vinagre-bookmarks.c
+@@ -30,6 +30,7 @@
+ #include "vinagre-bookmarks-migration.h"
+ #include "vinagre-connection.h"
+ #include "vinagre-plugins-engine.h"
++#include "vinagre-vala.h"
+ 
+ struct _VinagreBookmarksPrivate
+ {
+diff --git a/vinagre/vinagre-cache-prefs.c b/vinagre/vinagre-cache-prefs.c
+index 4330d74..532281d 100644
+--- a/vinagre/vinagre-cache-prefs.c
++++ b/vinagre/vinagre-cache-prefs.c
+@@ -21,6 +21,7 @@
+ #include <config.h>
+ #include <glib/gi18n.h>
+ #include "vinagre-cache-prefs.h"
++#include "vinagre-vala.h"
+ 
+ static GKeyFile *keyfile = NULL;
+ static char* filename = NULL;
+diff --git a/vinagre/vinagre-commands.c b/vinagre/vinagre-commands.c
+index fefd40b..e9dd12b 100644
+--- a/vinagre/vinagre-commands.c
++++ b/vinagre/vinagre-commands.c
+@@ -39,6 +39,7 @@
+ #include "vinagre-cache-prefs.h"
+ #include "vinagre-plugins-engine.h"
+ #include "vinagre-reverse-vnc-listener-dialog.h"
++#include "vinagre-vala.h"
+ 
+ void
+ vinagre_cmd_direct_connect (VinagreConnection *conn,
+diff --git a/vinagre/vinagre-connect.c b/vinagre/vinagre-connect.c
+index 9b78de9..038a87b 100644
+--- a/vinagre/vinagre-connect.c
++++ b/vinagre/vinagre-connect.c
+@@ -36,6 +36,7 @@
+ #include "vinagre-prefs.h"
+ #include "vinagre-cache-prefs.h"
+ #include "vinagre-plugins-engine.h"
++#include "vinagre-vala.h"
+ 
+ typedef struct {
+   GtkBuilder *xml;
+diff --git a/vinagre/vinagre-connection.c b/vinagre/vinagre-connection.c
+index 2bb6245..60a9c1b 100644
+--- a/vinagre/vinagre-connection.c
++++ b/vinagre/vinagre-connection.c
+@@ -27,6 +27,7 @@
+ #include "vinagre-connection.h"
+ #include "vinagre-bookmarks.h"
+ #include "vinagre-plugins-engine.h"
++#include "vinagre-vala.h"
+ 
+ struct _VinagreConnectionPrivate
+ {
+diff --git a/vinagre/vinagre-notebook.c b/vinagre/vinagre-notebook.c
+index e7bd82f..498cc07 100644
+--- a/vinagre/vinagre-notebook.c
++++ b/vinagre/vinagre-notebook.c
+@@ -26,6 +26,7 @@
+ 
+ #include "vinagre-dnd.h"
+ #include "vinagre-prefs.h"
++#include "vinagre-vala.h"
+ 
+ #define VINAGRE_NOTEBOOK_GET_PRIVATE(object)(G_TYPE_INSTANCE_GET_PRIVATE ((object), VINAGRE_TYPE_NOTEBOOK, VinagreNotebookPrivate))
+ 
+diff --git a/vinagre/vinagre-options.c b/vinagre/vinagre-options.c
+index 25a68d5..67a27af 100644
+--- a/vinagre/vinagre-options.c
++++ b/vinagre/vinagre-options.c
+@@ -23,6 +23,8 @@
+ #include "vinagre-connection.h"
+ #include "vinagre-window.h"
+ #include "vinagre-commands.h"
++#include "vinagre-options.h"
++#include "vinagre-vala.h"
+ 
+ const GOptionEntry all_options [] =
+ {
+diff --git a/vinagre/vinagre-reverse-vnc-listener-dialog.c b/vinagre/vinagre-reverse-vnc-listener-dialog.c
+index 9f649b9..02c7ccc 100644
+--- a/vinagre/vinagre-reverse-vnc-listener-dialog.c
++++ b/vinagre/vinagre-reverse-vnc-listener-dialog.c
+@@ -44,6 +44,7 @@
+ #include "vinagre-prefs.h"
+ #include "vinagre-reverse-vnc-listener-dialog.h"
+ #include "vinagre-reverse-vnc-listener.h"
++#include "vinagre-vala.h"
+ 
+ typedef struct
+ {
+diff --git a/vinagre/vinagre-reverse-vnc-listener.c b/vinagre/vinagre-reverse-vnc-listener.c
+index ab314f5..7f6e0a0 100644
+--- a/vinagre/vinagre-reverse-vnc-listener.c
++++ b/vinagre/vinagre-reverse-vnc-listener.c
+@@ -37,6 +37,7 @@
+ #include "vinagre-commands.h"
+ #include "vinagre-reverse-vnc-listener.h"
+ #include "plugins/vnc/vinagre-vnc-connection.h"
++#include "vinagre-vala.h"
+ 
+ struct _VinagreReverseVncListenerPrivate
+ {
+diff --git a/vinagre/vinagre-ssh.c b/vinagre/vinagre-ssh.c
+index 8bfa507..0e17f38 100644
+--- a/vinagre/vinagre-ssh.c
++++ b/vinagre/vinagre-ssh.c
+@@ -22,6 +22,7 @@
+ #include <config.h>
+ 
+ #include "vinagre-ssh.h"
++#include "vinagre-vala.h"
+ #include "pty_open.h"
+ 
+ #ifdef G_OS_WIN32
+diff --git a/vinagre/vinagre-tab.c b/vinagre/vinagre-tab.c
+index 041de8f..d0c7453 100644
+--- a/vinagre/vinagre-tab.c
++++ b/vinagre/vinagre-tab.c
+@@ -31,6 +31,7 @@
+ #include "vinagre-prefs.h"
+ #include "view/autoDrawer.h"
+ #include "vinagre-plugins-engine.h"
++#include "vinagre-vala.h"
+ 
+ #define VINAGRE_TAB_GET_PRIVATE(object)(G_TYPE_INSTANCE_GET_PRIVATE ((object), VINAGRE_TYPE_TAB, VinagreTabPrivate))
+ 
+diff --git a/vinagre/vinagre-tube-handler.c b/vinagre/vinagre-tube-handler.c
+index 5932382..2116df8 100644
+--- a/vinagre/vinagre-tube-handler.c
++++ b/vinagre/vinagre-tube-handler.c
+@@ -40,6 +40,7 @@
+ #include "vinagre-protocol.h"
+ #include "vinagre-plugins-engine.h"
+ #include "plugins/vnc/vinagre-vnc-connection.h"
++#include "vinagre-vala.h"
+ 
+ G_DEFINE_TYPE (VinagreTubeHandler, vinagre_tube_handler, G_TYPE_OBJECT);
+ 
+diff --git a/vinagre/vinagre-window.c b/vinagre/vinagre-window.c
+index 92c20b3..8cb98d1 100644
+--- a/vinagre/vinagre-window.c
++++ b/vinagre/vinagre-window.c
+@@ -41,6 +41,7 @@
+ #include "vinagre-window-private.h"
+ #include "vinagre-bookmarks-entry.h"
+ #include "vinagre-plugins-engine.h"
++#include "vinagre-vala.h"
+ 
+ #ifdef VINAGRE_HAVE_AVAHI
+ #include "vinagre-mdns.h"
+-- 
+1.7.7.2
+
