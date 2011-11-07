@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/i3lock
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3lock/ChangeLog,v 1.1 2011/07/22 09:41:18 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3lock/ChangeLog,v 1.2 2011/11/07 19:23:44 xarthisius Exp $
+
+*i3lock-2.2 (07 Nov 2011)
+
+  07 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> -i3lock-2.1.ebuild,
+  -files/i3lock-2.1-makefile.patch, +i3lock-2.2.ebuild:
+  Version bump, drop old. Fixes bug 389733 by Simeon Maryasin
 
 *i3lock-2.1 (22 Jul 2011)
 
