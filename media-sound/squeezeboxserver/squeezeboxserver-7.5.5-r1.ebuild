@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/squeezeboxserver-7.5.5.ebuild,v 1.1 2011/08/10 23:58:34 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/squeezeboxserver-7.5.5-r1.ebuild,v 1.1 2011/11/07 21:41:50 lavajoe Exp $
 
 EAPI="3"
 

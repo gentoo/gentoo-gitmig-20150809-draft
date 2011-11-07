@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/squeezeboxserver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/ChangeLog,v 1.19 2011/08/10 23:58:34 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezeboxserver/ChangeLog,v 1.20 2011/11/07 21:41:50 lavajoe Exp $
+
+*squeezeboxserver-7.5.5-r1 (07 Nov 2011)
+
+  07 Nov 2011; Joe Peterson <lavajoe@gentoo.org>
+  -squeezeboxserver-7.5.5.ebuild, +squeezeboxserver-7.5.5-r1.ebuild,
+  files/squeezeboxserver.logrotate.d:
+  Fix logrotate issue (bug #388939)
 
 *squeezeboxserver-7.5.5 (10 Aug 2011)
 
