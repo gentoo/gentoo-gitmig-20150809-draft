@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/colorschemes
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/ChangeLog,v 1.61 2011/10/18 21:16:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/ChangeLog,v 1.62 2011/11/07 20:32:18 radhermit Exp $
+
+*colorschemes-20111107 (07 Nov 2011)
+
+  07 Nov 2011; Tim Harder <radhermit@gentoo.org> +colorschemes-20111107.ebuild:
+  Version bump.
 
   18 Oct 2011; Tim Harder <radhermit@gentoo.org> -colorschemes-20100218.ebuild,
   -colorschemes-20101121.ebuild:
