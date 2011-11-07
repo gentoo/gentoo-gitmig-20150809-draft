@@ -1,6 +1,12 @@
 # ChangeLog for dev-texlive/texlive-latex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latex/ChangeLog,v 1.54 2011/10/04 17:58:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-latex/ChangeLog,v 1.55 2011/11/07 13:36:07 aballier Exp $
+
+  07 Nov 2011; Alexis Ballier <aballier@gentoo.org>
+  -texlive-latex-2008-r2.ebuild,
+  -files/texlive-latex-2008-latex-oldwarning.patch,
+  -files/texlive-latex-2008-luatex-0.40.patch, -texlive-latex-2009.ebuild:
+  remove old
 
   04 Oct 2011; Jeroen Roovers <jer@gentoo.org> texlive-latex-2010.ebuild:
   Stable for HPPA (bug #355085).
