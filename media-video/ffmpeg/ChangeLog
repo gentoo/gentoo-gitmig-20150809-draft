@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.481 2011/11/07 13:23:08 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.482 2011/11/07 13:30:57 aballier Exp $
+
+  07 Nov 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild,
+  metadata.xml:
+  add libv4l useflag
 
   07 Nov 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   add gnutls useflag
