@@ -1,6 +1,13 @@
 # ChangeLog for java-virtuals/jdk-with-com-sun
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jdk-with-com-sun/ChangeLog,v 1.14 2011/10/30 14:08:24 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jdk-with-com-sun/ChangeLog,v 1.15 2011/11/07 16:08:10 caster Exp $
+
+*jdk-with-com-sun-20111107 (07 Nov 2011)
+
+  07 Nov 2011; Vlastimil Babka <caster@gentoo.org>
+  -jdk-with-com-sun-20080505-r1.ebuild, -jdk-with-com-sun-20100419.ebuild,
+  -jdk-with-com-sun-20110911.ebuild, +jdk-with-com-sun-20111107.ebuild:
+  Prepare for icedtea-bin version and VMHANDLE migration.
 
   30 Oct 2011; Vlastimil Babka <caster@gentoo.org>
   jdk-with-com-sun-20100419.ebuild, jdk-with-com-sun-20110911.ebuild,
