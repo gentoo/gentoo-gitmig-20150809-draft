@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/packagekit-gtk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-gtk/ChangeLog,v 1.6 2011/10/06 19:25:27 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-gtk/ChangeLog,v 1.7 2011/11/07 13:28:20 lxnay Exp $
+
+*packagekit-gtk-0.6.20 (07 Nov 2011)
+
+  07 Nov 2011; Fabio Erculiani <lxnay@gentoo.org>
+  +packagekit-gtk-0.6.20.ebuild:
+  version bump
 
 *packagekit-gtk-0.6.19 (06 Oct 2011)
 

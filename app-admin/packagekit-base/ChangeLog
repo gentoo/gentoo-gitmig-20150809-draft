@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/packagekit-base
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/ChangeLog,v 1.9 2011/10/25 15:09:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/packagekit-base/ChangeLog,v 1.10 2011/11/07 13:28:16 lxnay Exp $
+
+*packagekit-base-0.6.20 (07 Nov 2011)
+
+  07 Nov 2011; Fabio Erculiani <lxnay@gentoo.org>
+  +packagekit-base-0.6.20.ebuild:
+  version bump
 
   25 Oct 2011; Jeroen Roovers <jer@gentoo.org> packagekit-base-0.6.19.ebuild:
   Marked ~hppa (bug #387959).
