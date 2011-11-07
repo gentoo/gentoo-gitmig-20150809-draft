@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.73 2011/11/07 06:09:22 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.74 2011/11/07 06:12:13 nirbheek Exp $
+
+  07 Nov 2011; Nirbheek Chauhan <nirbheek@gentoo.org> Manifest:
+  Fix manifest
 
   07 Nov 2011; Nirbheek Chauhan <nirbheek@gentoo.org> gtk-vnc-0.4.3-r1.ebuild,
   -files/gtk-vnc-0.4.3-outoftree-build.patch:
