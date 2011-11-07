@@ -1,6 +1,9 @@
 # ChangeLog for virtual/perl-Encode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Encode/ChangeLog,v 1.32 2011/11/06 19:17:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Encode/ChangeLog,v 1.33 2011/11/07 12:57:35 jer Exp $
+
+  07 Nov 2011; Jeroen Roovers <jer@gentoo.org> perl-Encode-2.40.ebuild:
+  Stable for HPPA (bug #386309).
 
   06 Nov 2011; Markus Meier <maekke@gentoo.org> perl-Encode-2.40.ebuild:
   arm stable, bug #386309
