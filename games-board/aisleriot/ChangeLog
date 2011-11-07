@@ -1,0 +1,11 @@
+# ChangeLog for games-board/aisleriot
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/aisleriot/ChangeLog,v 1.1 2011/11/07 04:02:29 tetromino Exp $
+
+*aisleriot-3.2.1 (07 Nov 2011)
+
+  07 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +aisleriot-3.2.1.ebuild, +metadata.xml:
+  Add the gnome solitaire game collection from the gnome overlay. Formerly a
+  part of gnome-extra/gnome-games, now split off into a separate package.
+
