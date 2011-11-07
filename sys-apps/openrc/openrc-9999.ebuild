@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.87 2011/09/10 23:47:46 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.88 2011/11/07 12:57:19 aballier Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ SLOT="0"
 IUSE="debug elibc_glibc ncurses pam selinux unicode kernel_linux kernel_FreeBSD"
 
 RDEPEND="virtual/init
-	kernel_FreeBSD? ( sys-process/fuser-bsd )
+	kernel_FreeBSD? ( || ( >=sys-freebsd/freebsd-ubin-9.0_rc sys-process/fuser-bsd ) )
 	elibc_glibc? ( >=sys-libs/glibc-2.5 )
 	ncurses? ( sys-libs/ncurses )
 	pam? ( virtual/pam )
