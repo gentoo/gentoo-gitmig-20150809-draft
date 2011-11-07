@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ctags
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.80 2011/11/05 18:12:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.81 2011/11/07 00:20:33 ranger Exp $
+
+  07 Nov 2011; Brent Baude <ranger@gentoo.org> ctags-5.8.ebuild:
+  Marking ctags-5.8 ppc for bug 387175
 
   05 Nov 2011; Raúl Porcel <armin76@gentoo.org> ctags-5.8.ebuild:
   alpha/ia64/m68k/s390/sh/sparc stable wrt #387175
