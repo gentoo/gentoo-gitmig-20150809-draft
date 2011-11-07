@@ -1,14 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.3.3-r1.ebuild,v 1.3 2011/10/31 12:28:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.4.1-r2.ebuild,v 1.1 2011/11/07 22:03:54 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib fdo-mime autotools mozextension python
 
-PATCH="${PN}-2.3.3-patches-02"
-EMVER="1.3.2"
+PATCH="${PN}-2.4.1-patches-01"
+EMVER="1.3.3"
 
 LANGS="be ca cs de en en-GB en-US es-AR es-ES fi fr gl hu it ja lt nb-NO nl pl pt-PT ru sk sv-SE tr zh-CN"
 NOSHORTLANGS="en-GB en-US es-AR"
@@ -83,8 +83,10 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 	>=media-libs/mesa-7.10
 	>=media-libs/libpng-1.4.1[apng]
 	>=x11-libs/cairo-1.10
+	>=x11-libs/pango-1.14.0
+	>=x11-libs/gtk+-2.14
 	virtual/libffi
-	system-sqlite? ( >=dev-db/sqlite-3.7.4[fts3,secure-delete,unlock-notify,debug=] )
+	system-sqlite? ( >=dev-db/sqlite-3.7.5[fts3,secure-delete,unlock-notify,debug=] )
 	crypt? ( >=app-crypt/gnupg-1.4 )
 	webm? ( media-libs/libvpx
 		media-libs/alsa-lib )"
@@ -167,14 +169,15 @@ src_prepare() {
 	popd &>/dev/null || die
 
 	# mailnews patches go here
-	#pushd "${S}"/mailnews &>/dev/null || die
-	#EPATCH_SUFFIX="patch" \
-	#EPATCH_FORCE="yes" \
-	#epatch "${WORKDIR}/_mailnews"
-	#popd &>/dev/null || die
+	pushd "${S}"/mailnews &>/dev/null || die
+	EPATCH_SUFFIX="patch" \
+	EPATCH_FORCE="yes" \
+	epatch "${WORKDIR}/_mailnews"
+	popd &>/dev/null || die
 
 	epatch "${FILESDIR}"/${PN}-2.2-curl7217-includes-fix.patch \
-		"${FILESDIR}"/${PN}-2.3.1-scrollbar-mouse-interaction-improvement.patch
+		"${FILESDIR}"/${PN}-2.3.1-scrollbar-mouse-interaction-improvement.patch \
+		"${FILESDIR}"/Copy_xpcshell_only_if_tests_are_enabled.patch
 
 	# Allow user to apply any additional patches without modifing ebuild
 	epatch_user
@@ -220,10 +223,10 @@ src_configure() {
 	use alpha && append-ldflags "-Wl,--no-relax"
 
 	if ! use chatzilla ; then
-		MEXTENSIONS="${MEXTENSIONS},-irc"
+		MEXTENSIONS+=",-irc"
 	fi
 	if ! use roaming ; then
-		MEXTENSIONS="${MEXTENSIONS},-sroaming"
+		MEXTENSIONS+=",-sroaming"
 	fi
 
 	mozconfig_annotate '' --enable-extensions="${MEXTENSIONS}"
@@ -231,6 +234,9 @@ src_configure() {
 	mozconfig_annotate '' --enable-jsd
 	mozconfig_annotate '' --enable-canvas
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
+	mozconfig_annotate '' --enable-system-ffi
+
+	mozconfig_annotate '' --target="${CTARGET:-${CHOST}}"
 
 	mozconfig_use_enable system-sqlite
 	mozconfig_use_enable methodjit
