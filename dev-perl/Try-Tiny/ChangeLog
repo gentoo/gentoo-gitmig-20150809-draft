@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Try-Tiny
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.27 2011/09/24 13:25:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Try-Tiny/ChangeLog,v 1.28 2011/11/07 08:07:19 grobian Exp $
+
+  07 Nov 2011; Fabian Groffen <grobian@gentoo.org> Try-Tiny-0.110.0.ebuild:
+  Added Prefix keywords, bug #389001
 
   24 Sep 2011; Fabian Groffen <grobian@gentoo.org> Try-Tiny-0.110.0.ebuild:
   Marked ~x64-macos

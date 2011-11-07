@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Package-Stash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Stash/ChangeLog,v 1.28 2011/11/06 17:48:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Package-Stash/ChangeLog,v 1.29 2011/11/07 08:05:52 grobian Exp $
+
+  07 Nov 2011; Fabian Groffen <grobian@gentoo.org> Package-Stash-0.330.0.ebuild:
+  Added Prefix keywords, bug #389001
 
   06 Nov 2011; Markus Meier <maekke@gentoo.org> Package-Stash-0.330.0.ebuild:
   add ~arm, bug #389001

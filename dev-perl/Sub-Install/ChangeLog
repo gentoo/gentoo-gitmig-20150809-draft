@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Sub-Install
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Install/ChangeLog,v 1.15 2011/09/24 13:29:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sub-Install/ChangeLog,v 1.16 2011/11/07 07:58:02 grobian Exp $
+
+  07 Nov 2011; Fabian Groffen <grobian@gentoo.org> Sub-Install-0.925.0.ebuild:
+  Added Prefix keywords, bug #389001
 
   24 Sep 2011; Fabian Groffen <grobian@gentoo.org> Sub-Install-0.925.0.ebuild:
   Marked ~x64-macos
