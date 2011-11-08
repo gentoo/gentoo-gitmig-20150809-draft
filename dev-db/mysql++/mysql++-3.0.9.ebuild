@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-3.0.9.ebuild,v 1.2 2009/12/23 15:37:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-3.0.9.ebuild,v 1.3 2011/11/08 10:22:20 grobian Exp $
 
 inherit eutils
 
@@ -10,12 +10,12 @@ SRC_URI="http://www.tangentsoft.net/mysql++/releases/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="3"
-KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86 ~amd64-linux ~ppc-macos"
+KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE=""
 
 RDEPEND=">=virtual/mysql-4.0"
 DEPEND="${RDEPEND}
-		>=sys-devel/gcc-3"
+		|| ( >=sys-devel/gcc-3 >=sys-devel/gcc-apple-4 )"
 
 src_unpack() {
 	unpack ${A}
@@ -34,6 +34,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf
+	use prefix || local EPREFIX=
 	myconf="--enable-thread-check --with-mysql=${EPREFIX}/usr"
 
 	CFLAGS="${CFLAGS}" CXXFLAGS="${CXXFLAGS}" \
