@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5882 2011/11/08 07:40:06 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5883 2011/11/08 15:59:03 williamh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Nov 2011; William Hubbs <williamh@gentoo.org> package.mask:
+  remove udev 174 from the mask since it is now gone from the tree.
 
   08 Nov 2011; William Hubbs <williamh@gentoo.org> package.mask:
   add udev-175 to the udev mask.
