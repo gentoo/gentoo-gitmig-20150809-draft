@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/msmtp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.115 2011/11/02 09:10:53 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/ChangeLog,v 1.116 2011/11/08 00:43:29 radhermit Exp $
+
+  08 Nov 2011; Tim Harder <radhermit@gentoo.org> msmtp-1.4.25.ebuild:
+  Add rdep on net-mail/mailbase (bug #389797 by Tiziano Müller).
 
   02 Nov 2011; Eray Aslan <eras@gentoo.org> msmtp-1.4.24.ebuild,
   msmtp-1.4.24-r1.ebuild:
