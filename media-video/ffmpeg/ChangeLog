@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.482 2011/11/07 13:30:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.483 2011/11/08 03:23:40 rich0 Exp $
+
+  08 Nov 2011; Richard Freeman <rich0@gentoo.org> ffmpeg-0.7.7.ebuild:
+  amd64 stable - 389807
 
   07 Nov 2011; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild,
   metadata.xml:
