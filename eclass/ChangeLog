@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.3 2011/11/08 01:05:22 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.4 2011/11/08 12:16:29 voyageur Exp $
+
+  08 Nov 2011; Bernard Cafarelli <voyageur@gentoo.org> gnustep-base.eclass:
+  Fix sandbox access violation on /root/GNUstep, bug #383665
 
   08 Nov 2011; Michael Pagano <mpagano@gentoo.org> kernel-2.eclass:
   Modify to support new location of 2.6 kernels on kernel.org and mirrors
