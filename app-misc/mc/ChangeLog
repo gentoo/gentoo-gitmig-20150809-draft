@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.228 2011/11/01 08:37:27 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/ChangeLog,v 1.229 2011/11/08 11:45:43 naota Exp $
+
+  08 Nov 2011; Naohiro Aota <naota@gentoo.org> mc-4.7.5.2.ebuild:
+  Install cons.saver only on Linux. Bug #376943
 
 *mc-4.8.0-r1 (01 Nov 2011)
 
