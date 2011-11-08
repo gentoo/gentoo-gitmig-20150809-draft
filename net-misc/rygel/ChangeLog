@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/rygel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.17 2011/10/16 13:59:53 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/ChangeLog,v 1.18 2011/11/08 21:06:10 eva Exp $
+
+*rygel-0.12.5 (08 Nov 2011)
+
+  08 Nov 2011; Gilles Dartiguelongue <eva@gentoo.org> -rygel-0.12.0.ebuild,
+  -rygel-0.12.1.ebuild, -rygel-0.12.3.ebuild, +rygel-0.12.5.ebuild:
+  Version bump. Fix SSDP notifications on shutdown. Fix some crash. Clean up
+  old revisions.
 
 *rygel-0.12.4 (16 Oct 2011)
 

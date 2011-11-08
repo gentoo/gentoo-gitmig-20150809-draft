@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.12.1.ebuild,v 1.1 2011/09/15 21:26:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rygel/rygel-0.12.5.ebuild,v 1.1 2011/11/08 21:06:10 eva Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -25,7 +25,7 @@ RDEPEND="
 	>=media-libs/gstreamer-0.10.28
 	>=media-libs/gst-plugins-base-0.10.28
 	>=net-libs/gssdp-0.11
-	>=net-libs/gupnp-0.17
+	>=net-libs/gupnp-0.17.1
 	>=net-libs/gupnp-av-0.9
 	>=net-libs/libsoup-2.34:2.4
 	>=sys-libs/e2fsprogs-libs-1.41.3
@@ -52,6 +52,7 @@ pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
 	G2CONF="${G2CONF}
 		--enable-gst-launch-plugin
+		--enable-mediathek-plugin
 		$(use_enable nls)
 		$(use_enable sqlite media-export-plugin)
 		$(use_enable tracker tracker-plugin)
