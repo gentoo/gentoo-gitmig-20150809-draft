@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.60.1144.ebuild,v 1.1 2011/11/08 15:01:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.60.1144.ebuild,v 1.2 2011/11/08 19:22:39 jer Exp $
 
 EAPI="4"
 
@@ -62,8 +62,9 @@ KDERDEPEND="
 GSTRDEPEND="
 	dev-libs/glib
 	dev-libs/libxml2
-	media-plugins/gst-plugins-meta
+	media-libs/gst-plugins-base
 	media-libs/gstreamer
+	media-plugins/gst-plugins-meta
 "
 RDEPEND="
 	media-libs/fontconfig
@@ -77,6 +78,7 @@ RDEPEND="
 	x11-libs/libXext
 	x11-libs/libXft
 	x11-libs/libXrender
+	x11-libs/libXt
 	gtk? ( ${GTKRDEPEND} )
 	gtk3? ( ${GTKRDEPEND} )
 	kde? ( ${KDERDEPEND} )
