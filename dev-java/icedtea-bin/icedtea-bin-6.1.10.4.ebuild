@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-6.1.10.4.ebuild,v 1.1 2011/11/07 22:09:46 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-6.1.10.4.ebuild,v 1.2 2011/11/08 23:47:31 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -104,7 +104,6 @@ pkg_preinst() {
 		elog "and the same holds for any user VM settings. Sorry for the inconvenience."
 	fi
 }
-
 
 pkg_postinst() {
 	# Set as default VM if none exists
