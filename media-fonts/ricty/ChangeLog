@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/ricty
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ricty/ChangeLog,v 1.1 2011/09/17 06:16:30 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ricty/ChangeLog,v 1.2 2011/11/08 09:50:04 naota Exp $
+
+  08 Nov 2011; Naohiro Aota <naota@gentoo.org> metadata.xml:
+  Fix herd name typo.
 
 *ricty-3.1.1 (17 Sep 2011)
 
