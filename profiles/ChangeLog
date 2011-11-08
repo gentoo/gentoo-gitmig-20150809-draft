@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5880 2011/11/07 21:28:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5881 2011/11/08 02:47:12 binki Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Nov 2011; Nathan Phillip Brink <binki@gentoo.org> package.mask:
+  Drop the indefinite mask on net-irc/atheme-services requested by upstream
+  which has changed its policy. Mask the development releases of
+  net-irc/atheme-services.
 
   07 Nov 2011; Ulrich Mueller <ulm@gentoo.org> license_groups:
   Add AGPL-3, APSL-2, as-is, CPAL-1.0, DB, EUPL-1.1, LPPL-1.3c, NOSA, OFL-1.1,
