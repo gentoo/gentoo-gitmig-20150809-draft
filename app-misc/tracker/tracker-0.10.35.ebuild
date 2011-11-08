@@ -1,10 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.10.26.ebuild,v 1.3 2011/09/15 21:22:20 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.10.35.ebuild,v 1.1 2011/11/08 21:45:34 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
+GNOME_TARBALL_SUFFIX="xz"
 PYTHON_DEPEND="2:2.6"
 
 inherit eutils gnome2 linux-info python virtualx
@@ -27,7 +28,7 @@ RDEPEND="
 	>=app-i18n/enca-1.9
 	>=dev-db/sqlite-3.7[threadsafe]
 	>=dev-libs/dbus-glib-0.82-r1
-	>=dev-libs/glib-2.26:2
+	>=dev-libs/glib-2.28:2
 	>=dev-libs/icu-4
 	|| (
 		>=media-gfx/imagemagick-5.2.1[png,jpeg=]
