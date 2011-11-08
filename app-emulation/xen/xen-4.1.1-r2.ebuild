@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.1.1-r2.ebuild,v 1.6 2011/11/07 17:49:55 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.1.1-r2.ebuild,v 1.7 2011/11/08 23:46:38 mr_bones_ Exp $
 
 EAPI="4"
 
@@ -77,7 +77,7 @@ src_prepare() {
 	# remove -Werror for gcc-4.6's sake
 	find "${S}" -name 'Makefile*' -o -name '*.mk' -o -name 'common.make' | \
 		xargs sed -i 's/ *-Werror */ /' || die "failed to remove -Werror"
-	# not strictly necessary to fix this 
+	# not strictly necessary to fix this
 	sed -i 's/, "-Werror"//' "${S}/tools/python/setup.py" || die "failed to remove -Werror on setup.py"
 
 	# Add sccurity fix bug #379241
