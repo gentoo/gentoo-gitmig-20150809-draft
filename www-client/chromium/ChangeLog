@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.488 2011/11/04 18:10:52 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.489 2011/11/08 00:37:39 robbat2 Exp $
+
+  08 Nov 2011; Robin H. Johnson <robbat2@gentoo.org>
+  chromium-16.0.912.15.ebuild:
+  Make CONFIG_CHECK non-fatal, like other ebuilds.
 
   04 Nov 2011; Mike Gilbert <floppym@gentoo.org> chromium-9999-r1.ebuild:
   Remove any leftover nacl toolchain files.
