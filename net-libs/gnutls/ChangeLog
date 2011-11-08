@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.319 2011/11/05 19:28:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.320 2011/11/08 22:43:31 radhermit Exp $
+
+*gnutls-3.0.7 (08 Nov 2011)
+*gnutls-2.12.14 (08 Nov 2011)
+
+  08 Nov 2011; Tim Harder <radhermit@gentoo.org> +gnutls-2.12.14.ebuild,
+  +gnutls-3.0.7.ebuild:
+  Version bump to latest releases. Update gnutls-2.12.14 to use EAPI 4 and add
+  pkcs11/static-libs use flags.
 
   05 Nov 2011; Markos Chandras <hwoarang@gentoo.org> gnutls-2.12.12.ebuild,
   gnutls-3.0.5.ebuild:
