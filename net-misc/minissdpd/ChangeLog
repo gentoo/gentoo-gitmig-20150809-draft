@@ -1,5 +1,12 @@
 
 
+*minissdpd-1.1.20111007-r1 (08 Nov 2011)
+
+  08 Nov 2011; Anthony G. Basile <blueness@gentoo.org>
+  +minissdpd-1.1.20111007-r1.ebuild, +files/minissdpd.confd,
+  +files/minissdpd.initd-r1:
+  Allow configuration of interfaces on which to listen
+
 *minissdpd-1.1.20111007 (14 Oct 2011)
 
   14 Oct 2011; Anthony G. Basile <blueness@gentoo.org>
