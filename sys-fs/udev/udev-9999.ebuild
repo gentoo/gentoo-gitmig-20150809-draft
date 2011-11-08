@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.57 2011/11/07 04:55:18 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.58 2011/11/08 16:49:35 williamh Exp $
 
 EAPI=4
 
 KV_min=2.6.34
-patchversion=1
+# patchversion=1
 scriptversion=5
-udev_rules_md5=f7ceae528475742f75516c532ec95a88
+udev_rules_md5=7a7180a394e5bdea9011f68582b94fe8
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/hotplug/udev.git"
 
