@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.50 2011/11/04 16:56:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.51 2011/11/08 19:31:19 jer Exp $
+
+  08 Nov 2011; Jeroen Roovers <jer@gentoo.org> opera-next-12.00.1116.ebuild,
+  metadata.xml:
+  Add USE=gtk3. Add more runtime dependencies.
 
   04 Nov 2011; Jeroen Roovers <jer@gentoo.org> opera-next-12.00.1116.ebuild:
   Add LD_PRELOAD hack to prevent operapluginwrapper from segfaulting when

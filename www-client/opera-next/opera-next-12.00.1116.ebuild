@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.00.1116.ebuild,v 1.2 2011/11/04 16:56:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/opera-next-12.00.1116.ebuild,v 1.3 2011/11/08 19:31:19 jer Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.opera.com/"
 SLOT="0"
 LICENSE="OPERA-11 LGPL-2 LGPL-3"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
-IUSE="elibc_FreeBSD gtk kde +gstreamer"
+IUSE="elibc_FreeBSD gtk gtk3 kde +gstreamer"
 
 O_V="$(get_version_component_range 1-2)" # Major version, i.e. 11.00
 O_B="$(get_version_component_range 3)"   # Build version, i.e. 1156
@@ -49,7 +49,8 @@ GTKRDEPEND="
 	dev-libs/glib:2
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
-	x11-libs/gtk+:2
+	gtk? ( x11-libs/gtk+:2 )
+	gtk3? ( x11-libs/gtk+:3 )
 	x11-libs/pango
 	x11-libs/pixman
 "
@@ -61,8 +62,9 @@ KDERDEPEND="
 GSTRDEPEND="
 	dev-libs/glib
 	dev-libs/libxml2
-	media-plugins/gst-plugins-meta
+	media-libs/gst-plugins-base
 	media-libs/gstreamer
+	media-plugins/gst-plugins-meta
 "
 RDEPEND="
 	media-libs/fontconfig
@@ -76,7 +78,9 @@ RDEPEND="
 	x11-libs/libXext
 	x11-libs/libXft
 	x11-libs/libXrender
+	x11-libs/libXt
 	gtk? ( ${GTKRDEPEND} )
+	gtk3? ( ${GTKRDEPEND} )
 	kde? ( ${KDERDEPEND} )
 	gstreamer? ( ${GSTRDEPEND} )
 "
@@ -131,6 +135,9 @@ src_prepare() {
 	# Optional libraries
 	if ! use gtk; then
 		rm lib/${PN}/liboperagtk2.so || die
+	fi
+	if ! use gtk3; then
+		rm lib/${PN}/liboperagtk3.so || die
 	fi
 	if ! use kde; then
 		rm lib/${PN}/liboperakde4.so || die
