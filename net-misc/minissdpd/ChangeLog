@@ -1,5 +1,9 @@
 
 
+  08 Nov 2011; Anthony G. Basile <blueness@gentoo.org>
+  files/minissdpd.initd-r1:
+  Fixed confusion between two variable names
+
 *minissdpd-1.1.20111007-r1 (08 Nov 2011)
 
   08 Nov 2011; Anthony G. Basile <blueness@gentoo.org>

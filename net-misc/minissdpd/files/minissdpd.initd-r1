@@ -12,9 +12,9 @@ depend() {
 }
 
 checkconfig() {
-	if [ "x$MINISSDPD" != "x" ]; then
+	if [ "x$MINISSDPD_IFACE" != "x" ]; then
 		interfaces=$($IFCONFIG | grep "Link encap" | awk '{ print $1 }')
-		for interface in $MINISSDPD; do
+		for interface in $MINISSDPD_IFACE; do
 			hit=0
 			for available in $interfaces; do
 				if [ "$interface" = "$available" ]; then
@@ -34,14 +34,14 @@ start() {
 	ebegin "Starting minissdpd"
 	checkconfig || return 1
 
-	if [ "x$MINISSDPD" = "x" ]; then
+	if [ "x$MINISSDPD_IFACE" = "x" ]; then
 		# We assume that the default interface has an IP address
 		interface=$($ROUTE | grep default | awk -- '{ print $8 }')
 		IP="$($IFCONFIG $interface | grep 'inet addr' | sed 's/.\+inet addr:\([0-9.]\+\).\+/\1/')"
 		ARGS="-i $IP "
 	else
 		ARGS=""
-		for interface in $MINISSDPD; do
+		for interface in $MINISSDPD_IFACE; do
 			# An interface may not have an IP address, so don't listen if it doesn't
 			IP="$($IFCONFIG $interface | grep 'inet addr' | sed 's/.\+inet addr:\([0-9.]\+\).\+/\1/')"
 			if [ "x$IP" != "x" ]; then
