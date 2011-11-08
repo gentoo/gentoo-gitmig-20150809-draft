@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/WWW-RobotRules
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-RobotRules/ChangeLog,v 1.14 2011/11/07 13:12:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-RobotRules/ChangeLog,v 1.15 2011/11/08 23:24:29 chainsaw Exp $
+
+  08 Nov 2011; Tony Vroon <chainsaw@gentoo.org> WWW-RobotRules-6.10.0.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
+  "idella4" Delaney in security bug #386309.
 
   07 Nov 2011; Jeroen Roovers <jer@gentoo.org> WWW-RobotRules-6.10.0.ebuild:
   Stable for HPPA (bug #386309).
