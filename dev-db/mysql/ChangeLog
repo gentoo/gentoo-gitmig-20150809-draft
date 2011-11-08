@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.586 2011/09/30 02:46:36 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.587 2011/11/08 20:25:09 grobian Exp $
+
+  08 Nov 2011; Fabian Groffen <grobian@gentoo.org> mysql-5.1.59.ebuild:
+  Marked ~amd64-linux, bug #380703
 
 *mysql-5.5.16 (30 Sep 2011)
 *mysql-5.1.59 (30 Sep 2011)
