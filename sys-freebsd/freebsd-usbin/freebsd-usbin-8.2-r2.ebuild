@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-8.2-r2.ebuild,v 1.1 2011/09/05 14:53:54 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-8.2-r2.ebuild,v 1.2 2011/11/08 11:11:59 naota Exp $
 
 EAPI=2
 
@@ -26,7 +26,6 @@ RDEPEND="=sys-freebsd/freebsd-lib-${RV}*[usb?,bluetooth?,netware?]
 	acpi? ( sys-power/iasl )
 	build? ( sys-apps/baselayout )
 	ssl? ( dev-libs/openssl )
-	tcpd? ( sys-apps/tcp-wrappers )
 	dev-libs/libelf
 	dev-libs/libedit
 	net-libs/libpcap"
@@ -39,7 +38,7 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/usr.sbin"
 
-IUSE="acpi atm audit bluetooth floppy ipv6 isdn minimal netware nis pam ssl tcpd usb build"
+IUSE="acpi atm audit bluetooth floppy ipv6 minimal netware nis pam ssl usb build"
 
 pkg_setup() {
 	# Release crunch is something like minimal. It seems to remove everything
@@ -51,14 +50,12 @@ pkg_setup() {
 	use audit || mymakeopts="${mymakeopts} WITHOUT_AUDIT= "
 	use bluetooth || mymakeopts="${mymakeopts} WITHOUT_BLUETOOTH= "
 	use ipv6 || mymakeopts="${mymakeopts} WITHOUT_INET6= WITHOUT_INET6_SUPPORT= "
-	use isdn || mymakeopts="${mymakeopts} WITHOUT_I4B= "
 	use netware || mymakeopts="${mymakeopts} WITHOUT_IPX= WITHOUT_IPX_SUPPORT= WITHOUT_NCP= "
 	use nis || mymakeopts="${mymakeopts} WITHOUT_NIS= "
 	use pam || mymakeopts="${mymakeopts} WITHOUT_PAM_SUPPORT= "
 	use ssl || mymakeopts="${mymakeopts} WITHOUT_OPENSSL= "
 	use usb || mymakeopts="${mymakeopts} WITHOUT_USB= "
 	use floppy || mymakeopts="${mymakeopts} WITHOUT_FLOPPY= "
-	use tcpd || mymakeopts="${mymakeopts} NO_WRAP="
 
 	mymakeopts="${mymakeopts} WITHOUT_BIND_NAMED= WITHOUT_BIND_DNSSEC= WITHOUT_PF= WITHOUT_LPR= WITHOUT_SENDMAIL= WITHOUT_AUTHPF= WITHOUT_MAILWRAPPER= "
 
@@ -131,12 +128,6 @@ EOS
 
 	insinto /etc/ppp
 	doins ppp/ppp.conf || die
-
-	if use isdn; then
-		insinto /etc/isdn
-		doins isdn/* || die
-		rm -f "${D}"/etc/isdn/Makefile
-	fi
 
 	if use bluetooth; then
 		insinto /etc/bluetooth
