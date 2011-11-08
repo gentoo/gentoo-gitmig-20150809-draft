@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/phonon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.22 2011/10/30 23:22:41 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.23 2011/11/08 19:04:23 flameeyes Exp $
+
+  08 Nov 2011; Diego E. Pettenò <flameeyes@gentoo.org> phonon-9999.ebuild:
+  QA: fix GIT_ECLASS setting, so that the ebuild actually works. Thanks to
+  Davide Bettio for reporting.
 
 *phonon-4.5.1-r1 (30 Oct 2011)
 *phonon-4.5.0-r2 (30 Oct 2011)
