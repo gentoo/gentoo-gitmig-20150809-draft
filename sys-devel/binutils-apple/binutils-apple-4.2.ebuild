@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-4.2.ebuild,v 1.2 2011/11/05 16:37:23 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-4.2.ebuild,v 1.3 2011/11/08 14:02:59 grobian Exp $
 
 EAPI="3"
 
@@ -90,7 +90,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/ld64-123.2-debug-backtrace.patch
 	if [[ ${CHOST} == powerpc*-darwin* ]] ; then
-		epatch "${FILESDIR}"/ld64-123.2.1-darwin8-no-mlong-branch-warning.patch
+		epatch "${FILESDIR}"/ld64-123.2-darwin8-no-mlong-branch-warning.patch
 		sed -i -e '/#include <mach-o\/loader.h>/a\#include <mach/i386/thread_status.h>' \
 			ld/HeaderAndLoadCommands.hpp || die
 	fi
