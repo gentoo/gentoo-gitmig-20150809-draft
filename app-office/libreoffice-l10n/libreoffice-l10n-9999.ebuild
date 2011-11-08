@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-9999.ebuild,v 1.4 2011/11/02 09:27:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-9999.ebuild,v 1.5 2011/11/08 21:20:35 scarabeus Exp $
 
 EAPI=4
 
@@ -105,7 +105,7 @@ src_install() {
 	if [[ -d "${dir}" ]] ; then
 		if [[ ${PV} == 9999 ]]; then
 			# Bump me when it gets slotted ; also do revision bump
-			insinto /usr/$(get_libdir)/${PN/-l10n/}/basis3.5/
+			insinto /usr/$(get_libdir)/${PN/-l10n/}/
 		else
 			insinto /usr/$(get_libdir)/${PN/-l10n/}/basis$(get_version_component_range 1-2)/
 		fi
