@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.18 2011/11/01 00:45:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.19 2011/11/08 20:40:30 lu_zero Exp $
 
 EAPI=4
 
@@ -27,7 +27,11 @@ SLOT="0"
 [[ ${PV} == *9999 ]] || KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64
 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 ~x64-solaris ~x86-solaris"
-IUSE="+3dnow +3dnowext aac alsa altivec amr bindist +bzip2 cpudetection custom-cflags debug dirac doc +encode faac frei0r +gpl gsm +hardcoded-tables ieee1394 jack jpeg2k +mmx +mmxext mp3 network oss pic qt-faststart rtmp schroedinger sdl speex +ssse3 static-libs test theora threads v4l vaapi vdpau vorbis vpx X x264 xvid +zlib"
+IUSE="+3dnow +3dnowext aac alsa altivec amr bindist +bzip2 cpudetection
+	  custom-cflags debug dirac doc +encode faac truetype frei0r +gpl gsm
+      +hardcoded-tables ieee1394 jack jpeg2k +mmx +mmxext mp3 network oss
+	  pic qt-faststart rtmp schroedinger sdl speex +ssse3 static-libs test
+	  theora threads v4l vaapi vdpau vorbis vpx X x264 xvid +zlib"
 
 VIDEO_CARDS="nvidia"
 for x in ${VIDEO_CARDS}; do
@@ -50,6 +54,7 @@ RDEPEND="
 		x264? ( >=media-libs/x264-0.0.20110426 )
 		xvid? ( >=media-libs/xvid-1.1.0 )
 	)
+	truetype? ( media-libs/truetype )
 	frei0r? ( media-plugins/frei0r-plugins )
 	gsm? ( >=media-sound/gsm-1.0.12-r1 )
 	ieee1394? ( media-libs/libdc1394 sys-libs/libraw1394 )
@@ -152,6 +157,7 @@ src_configure() {
 	done
 	# libavfilter options
 	use frei0r && myconf+=" --enable-frei0r"
+	use truetype &&  myconf+=" --enable-libfreetype"
 
 	# Threads; we only support pthread for now but ffmpeg supports more
 	use threads && myconf+=" --enable-pthreads"

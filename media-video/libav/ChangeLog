@@ -1,6 +1,9 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.31 2011/11/01 00:45:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.32 2011/11/08 20:40:30 lu_zero Exp $
+
+  08 Nov 2011; Luca Barbato <lu_zero@gentoo.org> libav-9999.ebuild:
+  Add support for drawtext
 
   01 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> libav-0.6.2.ebuild,
   libav-0.6.9999.ebuild, libav-0.7.2.ebuild, libav-0.7.9999.ebuild,
@@ -8,7 +11,7 @@
   Rename USE="v4l2" to USE="v4l" while removing support for video4linux 1.x wrt
   #385241
 
-  07 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  07 Oct 2011; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org>
   -libav-0.7_pre20110327.ebuild, -libav-0.7.ebuild, -libav-0.7.1.ebuild:
   Drop quite few overshadowed versions.
 
@@ -57,27 +60,27 @@
 *libav-0.7.9999 (21 Jun 2011)
 *libav-0.7 (21 Jun 2011)
 
-  21 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> -libav-0.7_rc1.ebuild,
+  21 Jun 2011; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org> -libav-0.7_rc1.ebuild,
   +libav-0.7.ebuild, +libav-0.7.9999.ebuild:
   Version bump to final 0.7 release. Remove older RC. Add 0.7 branch live
   ebuild.
 
 *libav-0.7_rc1 (15 Jun 2011)
 
-  15 Jun 2011; Tomáš Chvátal <scarabeus@gentoo.org> -libav-0.7_beta2.ebuild,
+  15 Jun 2011; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org> -libav-0.7_beta2.ebuild,
   +libav-0.7_rc1.ebuild:
   Version bump to rc1, drop older beta.
 
-  24 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> libav-9999.ebuild:
+  24 May 2011; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org> libav-9999.ebuild:
   Bump dependency over x264.
 
 *libav-0.7_beta2 (13 May 2011)
 
-  13 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> -libav-0.7_beta1.ebuild,
+  13 May 2011; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org> -libav-0.7_beta1.ebuild,
   +libav-0.7_beta2.ebuild, libav-9999.ebuild:
   Version bump to beta2 drop beta1.
 
-  20 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> libav-0.6.9999.ebuild,
+  20 Apr 2011; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org> libav-0.6.9999.ebuild,
   libav-9999.ebuild:
   Migrate to git-2 eclass.
 
@@ -86,18 +89,18 @@
   19 Apr 2011; Luca Barbato <lu_zero@gentoo.org> +libav-0.7_beta1.ebuild:
   Prerelease
 
-  12 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> libav-9999.ebuild,
+  12 Apr 2011; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org> libav-9999.ebuild,
   metadata.xml:
   Try to split up gpl code so user can compile just LGPL version.
 
-  12 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> libav-9999.ebuild:
+  12 Apr 2011; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org> libav-9999.ebuild:
   Update deps to match latest reality.
 
   11 Apr 2011; Luca Barbato <lu_zero@gentoo.org> metadata.xml,
   libav-9999.ebuild:
   Add support for the Google/VisualOn encoders for aac and amrwb
 
-  01 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> libav-0.6.2.ebuild,
+  01 Apr 2011; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org> libav-0.6.2.ebuild,
   libav-0.6.9999.ebuild:
   Drop frei0r option that is availible only in trunk.
 
@@ -108,7 +111,7 @@
   libav-0.6.9999.ebuild, libav-0.7_pre20110327.ebuild, libav-9999.ebuild:
   Add Gentoo Prefix support
 
-  27 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> libav-0.6.9999.ebuild,
+  27 Mar 2011; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org> libav-0.6.9999.ebuild,
   libav-0.7_pre20110327.ebuild, libav-9999.ebuild:
   Fixup version settings in snapshot. Remove useless quoting. Handle branching
   magically.
@@ -129,7 +132,7 @@
   libav-0.6.9999.ebuild, libav-9999.ebuild:
   Typo fix
 
-  22 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  22 Mar 2011; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org> metadata.xml:
   Fix whitespace in metadata.xml to be nicer. Drop unused flag (result of copy
   from ffmpeg).
 
@@ -137,7 +140,7 @@
 *libav-0.6.9999 (22 Mar 2011)
 *libav-0.6.2 (22 Mar 2011)
 
-  22 Mar 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  22 Mar 2011; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org>
   +files/0.6.2-fix_enable_hardcoded_tables.patch, +libav-9999.ebuild,
   +files/0.6.2-float_arrays.patch, +libav-0.6.2.ebuild, +libav-0.6.9999.ebuild,
   +metadata.xml:
