@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5881 2011/11/08 02:47:12 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5882 2011/11/08 07:40:06 williamh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Nov 2011; William Hubbs <williamh@gentoo.org> package.mask:
+  add udev-175 to the udev mask.
 
   08 Nov 2011; Nathan Phillip Brink <binki@gentoo.org> package.mask:
   Drop the indefinite mask on net-irc/atheme-services requested by upstream
