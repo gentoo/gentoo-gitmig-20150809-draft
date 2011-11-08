@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.53 2011/11/07 18:04:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.54 2011/11/08 11:03:49 scarabeus Exp $
 
 EAPI=4
 
@@ -77,7 +77,7 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="binfilter +branding dbus debug eds gnome +graphite gstreamer gtk
-+jemalloc kde mysql nsplugin odk opengl pdfimport svg templates test +vba
++jemalloc kde mysql odk opengl pdfimport svg templates test +vba
 +webdav +xmlsec"
 LICENSE="LGPL-3"
 SLOT="0"
@@ -148,10 +148,6 @@ COMMON_DEPEND="
 	)
 	jemalloc? ( dev-libs/jemalloc )
 	mysql? ( >=dev-db/mysql-connector-c++-1.1.0 )
-	nsplugin? (
-		net-libs/xulrunner:1.9
-		${NSS_DEPEND}
-	)
 	opengl? ( virtual/opengl )
 	pdfimport? ( >=app-text/poppler-0.16[xpdf-headers] )
 	svg? ( gnome-base/librsvg )
@@ -187,6 +183,7 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-util/pkgconfig-0.26
 	>=media-libs/vigra-1.7
 	>=net-misc/curl-7.21.4
+	net-misc/npapi-sdk
 	>=sys-apps/findutils-4.4.2
 	sys-devel/bison
 	sys-apps/coreutils
@@ -212,7 +209,6 @@ PATCHES=(
 REQUIRED_USE="
 	|| ( gtk gnome kde )
 	gnome? ( gtk )
-	nsplugin? ( gtk )
 "
 
 S="${WORKDIR}/${PN}-core-${PV}"
@@ -238,8 +234,8 @@ pkg_setup() {
 	python_pkg_setup
 
 	if ! use gtk; then
-		ewarn "If you want the LibreOffice systray quickstarter to work"
-		ewarn "activate the 'gtk' use flag."
+		ewarn "If you want the LibreOffice systray quickstarter or nsplugin to"
+		ewarn "work activate the 'gtk' use flag."
 		ewarn
 	fi
 }
@@ -366,6 +362,8 @@ src_configure() {
 	# --disable-kdeab: kde3 adressbook
 	# --disable-kde: kde3 support
 	# --disable-ldap: ldap requires internal mozilla stuff, same like mozab
+	# --disable-mozilla: disable mozilla build that is used for adresbook, not
+	#   affecting the nsplugin that is always ON
 	# --disable-pch: precompiled headers cause build crashes
 	# --disable-rpath: relative runtime path is not desired
 	# --disable-static-gtk: ensure that gtk is linked dynamically
@@ -399,6 +397,7 @@ src_configure() {
 		--disable-kdeab \
 		--disable-kde \
 		--disable-ldap \
+		--disable-mozilla \
 		--disable-online-update \
 		--disable-pch \
 		--disable-rpath \
@@ -425,6 +424,7 @@ src_configure() {
 		--without-myspell-dicts \
 		--without-ppds \
 		--without-stlport \
+		--without-system-mozilla \
 		--without-helppack-integration \
 		$(use_enable binfilter) \
 		$(use_enable dbus) \
@@ -441,7 +441,6 @@ src_configure() {
 		$(use_enable java ext-scripting-beanshell) \
 		$(use_enable kde kde4) \
 		$(use_enable mysql ext-mysql-connector) \
-		$(use_enable nsplugin mozilla) \
 		$(use_enable odk) \
 		$(use_enable opengl) \
 		$(use_enable pdfimport ext-pdfimport) \
@@ -453,7 +452,6 @@ src_configure() {
 		$(use_enable xmlsec) \
 		$(use_with java) \
 		$(use_with mysql system-mysql-cppconn) \
-		$(use_with nsplugin system-mozilla libxul) \
 		$(use_with templates sun-templates) \
 		${internal_libs} \
 		${java_opts}
@@ -476,8 +474,8 @@ src_install() {
 	newbashcomp "${ED}"/etc/bash_completion.d/libreoffice.sh ${PN}
 	rm -rf "${ED}"/etc/
 
-	# symlink the plugin to system location
-	if use nsplugin; then
+	# symlink the nsplugin to system location
+	if use gtk; then
 		inst_plugin /usr/$(get_libdir)/libreoffice/program/libnpsoplugin.so
 	fi
 
