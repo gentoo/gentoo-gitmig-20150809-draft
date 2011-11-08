@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.use.mask,v 1.13 2011/08/04 12:44:00 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.use.mask,v 1.14 2011/11/08 11:49:30 naota Exp $
 
 # Jim Ramsay <lack@gentoo.org> (5 Nov 2008)
 # app-admin/gkrellm may pull in net-libs/libntlm, which is not keyworded
@@ -94,3 +94,8 @@ net-libs/libproxy xulrunner
 # ads require krb5, which is maksed on FreeBSD
 # cluster require ctdb, which doesn't support FreeBSD
 net-fs/samba ads cluster
+
+# Naohiro Aota <naota@gentoo.org> (08 Nov 2011)
+# capi require Linux features
+# hardened require prelink which depends on glibc
+app-emulation/wine capi
