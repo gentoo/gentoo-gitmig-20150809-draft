@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-4.6.0.ebuild,v 1.1 2011/08/09 22:10:57 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney/kmymoney-4.6.1.ebuild,v 1.1 2011/11/08 19:27:40 dilfridge Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ COMMON_DEPEND="
 	app-crypt/gpgme
 	>=app-office/libalkimia-4.3.1
 	dev-cpp/glibmm:2
-	dev-cpp/libxmlpp
+	dev-cpp/libxmlpp:2.6
 	dev-libs/boost
 	dev-libs/glib:2
 	dev-libs/gmp
@@ -52,8 +52,6 @@ DEPEND="${COMMON_DEPEND}
 	doc? ( app-doc/doxygen )
 	test? ( dev-util/cppunit )
 "
-
-PATCHES=( "${FILESDIR}/${PN}-4.5.3-underlinking.patch" )
 
 src_configure() {
 	mycmakeargs=(
