@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.0-r1.ebuild,v 1.6 2011/11/07 16:02:21 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.0-r1.ebuild,v 1.7 2011/11/08 19:01:23 sera Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -171,7 +171,7 @@ src_configure() {
 	local config procs rhino_jar
 	local vm=$(java-pkg_get-current-vm)
 
-	if [[ "${vm}" == "icedtea6" || "${vm}" == "icedtea-6" || "${vm}" == "icedtea6-bin" ]] ; then
+	if [[ "${vm}" == "icedtea6" || "${vm}" == "icedtea-6" || "${vm}" == "icedtea6-bin" || "${vm}" == "icedtea-bin-6" ]] ; then
 		# We can't currently bootstrap with a IcedTea6 JVM :(
 		config="${config} --disable-bootstrap"
 	elif [[ "${vm}" != "gcj-jdk" && "${vm}" != "cacao" && "${vm}" != "icedtea7" && "${vm}" != "icedtea-7" ]] ; then

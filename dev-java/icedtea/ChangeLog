@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.42 2011/11/07 16:02:21 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.43 2011/11/08 19:01:23 sera Exp $
+
+  08 Nov 2011; Ralph Sennhauser <sera@gentoo.org> icedtea-6.1.10.4-r1.ebuild,
+  icedtea-7.2.0-r1.ebuild:
+  Allow building of icedtea with icedtea-bin-6, bug 389885
 
   07 Nov 2011; Vlastimil Babka <caster@gentoo.org> -icedtea-6.1.10.4.ebuild,
   icedtea-6.1.10.4-r1.ebuild, icedtea-7.2.0-r1.ebuild:
