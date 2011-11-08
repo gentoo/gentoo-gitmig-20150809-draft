@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.12.7.ebuild,v 1.1 2011/11/02 16:23:58 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.12.7.ebuild,v 1.2 2011/11/08 22:25:58 eva Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -158,6 +158,7 @@ pkg_setup() {
 	# nautilus extension is in a separate package, nautilus-tracker-tags
 	G2CONF="${G2CONF}
 		--disable-hal
+		--disable-libcue
 		--enable-tracker-fts
 		--with-enca
 		--with-unicode-support=libicu
