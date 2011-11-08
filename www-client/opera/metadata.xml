@@ -11,7 +11,8 @@ version runs on GNU/Linux and FreeBSD. Versions for Macintosh and
 Windows are also available.
 </longdescription>
 <use>
-<flag name='gtk'>Set runtime dependencies to support GTK+/GNOME desktop integration</flag>
+<flag name='gtk'>Set runtime dependencies to support GTK+/GNOME version 2 desktop integration</flag>
+<flag name='gtk3'>Set runtime dependencies to support GTK+/GNOME version 3 desktop integration</flag>
 <flag name='kde'>Set runtime dependencies to support KDE desktop integration</flag>
 </use>
 </pkgmetadata>
