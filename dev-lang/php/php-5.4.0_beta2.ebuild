@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.0_beta2.ebuild,v 1.2 2011/10/31 16:18:04 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-5.4.0_beta2.ebuild,v 1.3 2011/11/08 18:14:08 olemarkus Exp $
 
 EAPI=4
 
@@ -56,6 +56,9 @@ PHP_SRC_URI="$(php_get_uri "${PHP_RELEASE}" "${PHP_P}.tar.bz2")"
 PHP_PATCHSET="0"
 PHP_PATCHSET_URI="
 	$(php_get_uri "${PHP_PATCHSET_LOC}" "php-patchset-${PV}-r${PHP_PATCHSET}.tar.bz2")"
+
+PHP_FPM_INIT_VER="4"
+PHP_FPM_CONF_VER="1"
 
 if [[ ${SUHOSIN_VERSION} == *-gentoo ]]; then
 	# in some cases we use our own suhosin patch (very recent version,

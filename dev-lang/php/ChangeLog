@@ -1,6 +1,17 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.518 2011/11/04 10:21:20 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.519 2011/11/08 18:14:08 olemarkus Exp $
+
+  08 Nov 2011; Ole Markus With <olemarkus@gentoo.org>
+  -files/70_mod_php5.conf-apache2-r1, -files/eblits/src_install-v1.eblit,
+  php-5.4.0_beta2.ebuild, -files/eblits/pkg_postinst-v1.eblit,
+  -files/eblits/pkg_setup-v1.eblit, -files/php-fpm-gentooified-5.3.4.patch,
+  -php-5.4.0_beta1.ebuild, -files/eblits/src_configure-snapshots.eblit,
+  -files/eblits/src_configure-v1.eblit,
+  -files/eblits/src_prepare-snapshots.eblit, -files/php-fpm.conf,
+  -files/php-fpm-gentooified.patch, -files/php-fpm-r0.conf,
+  -files/php-fpm-r3.init, files/eblits/src_install-v3.eblit:
+  Major cleanup of the ./files. Hopefully I did not break anything
 
 *php-5.3.9_rc1 (04 Nov 2011)
 

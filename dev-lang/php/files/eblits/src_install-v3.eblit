@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v3.eblit,v 1.4 2011/10/31 16:18:04 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/files/eblits/src_install-v3.eblit,v 1.5 2011/11/08 18:14:08 olemarkus Exp $
 
 eblit-php-src_install() {
 	# see bug #324739 for what happens when we don't have that
@@ -132,12 +132,14 @@ php_install_ini() {
 	fi
 
 	if [[ "${sapi}" == "fpm" ]] ; then
+        [[ -z ${PHP_FPM_INIT_VER} ]] && PHP_FPM_INIT_VER=3
+        [[ -z ${PHP_FPM_CONF_VER} ]] && PHP_FPM_CONF_VER=0
 		einfo "Installing FPM CGI config file php-fpm.conf"
 		insinto ${PHP_INI_DIR}
-		doins "${FILESDIR}/php-fpm.conf"
+		newins "${FILESDIR}/php-fpm-r${PHP_FPM_CONF_VER}.conf" php-fpm.conf
 		dodir "/etc/init.d"
 		insinto "/etc/init.d"
-		newinitd "${FILESDIR}/php-fpm-r3.init" "php-fpm"
+		newinitd "${FILESDIR}/php-fpm-r${PHP_FPM_INIT_VER}.init" "php-fpm"
 		#dosym "${PHP_DESTDIR}/bin/php-fpm" "/usr/bin/php-fpm"
 		
 		# Remove bogus /etc/php-fpm.conf.default (bug 359906)
