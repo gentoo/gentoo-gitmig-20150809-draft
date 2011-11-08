@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-texttemplate/php-texttemplate-1.1.1.ebuild,v 1.1 2011/11/03 09:18:07 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-texttemplate/php-texttemplate-1.1.1.ebuild,v 1.2 2011/11/08 10:45:33 olemarkus Exp $
 
 EAPI="4"
 
@@ -17,3 +17,5 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+DEPENDS=">=dev-php/pear-1.9.4"

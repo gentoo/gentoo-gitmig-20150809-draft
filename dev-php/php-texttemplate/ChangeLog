@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/php-texttemplate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-texttemplate/ChangeLog,v 1.3 2011/11/03 09:18:07 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-texttemplate/ChangeLog,v 1.4 2011/11/08 10:45:33 olemarkus Exp $
+
+  08 Nov 2011; Ole Markus With <olemarkus@gentoo.org>
+  php-texttemplate-1.1.1.ebuild:
+  Fixed dependency on pear (Bug #389649)
 
 *php-texttemplate-1.1.1 (03 Nov 2011)
 
