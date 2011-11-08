@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.489 2011/11/08 00:37:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.490 2011/11/08 16:16:54 phajdan.jr Exp $
+
+*chromium-17.0.932.0 (08 Nov 2011)
+
+  08 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  +chromium-17.0.932.0.ebuild, chromium-9999-r1.ebuild:
+  Version bump for dev channel release. Use system yasm. Move kernel options
+  checking back to pkg_setup to make it visible in the logs. NaCl doesn't work
+  (bug #389379 by Tatsh).
 
   08 Nov 2011; Robin H. Johnson <robbat2@gentoo.org>
   chromium-16.0.912.15.ebuild:
