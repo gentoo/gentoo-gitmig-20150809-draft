@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.0_rc1.ebuild,v 1.1 2011/11/09 15:11:05 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.0_rc3.ebuild,v 1.1 2011/11/09 22:54:04 voyageur Exp $
 
 EAPI="3"
 inherit eutils flag-o-matic multilib toolchain-funcs
 
 DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="http://llvm.org/"
-SRC_URI="http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.0_}/sources/${P/_}.src.tar.gz"
+SRC_URI="http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.0_}/${P/_}.src.tar.gz"
 
 LICENSE="UoI-NCSA"
 SLOT="0"
@@ -29,7 +29,7 @@ RDEPEND="dev-lang/perl
 	libffi? ( virtual/libffi )
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )"
 
-S=${WORKDIR}/${P/_}
+S=${WORKDIR}/${P/_}.src
 
 pkg_setup() {
 	# need to check if the active compiler is ok
