@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediawiki/libmediawiki-2.0.0.ebuild,v 1.2 2011/08/09 06:48:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediawiki/libmediawiki-2.3.0.ebuild,v 1.1 2011/11/09 02:44:06 dilfridge Exp $
 
 EAPI=4
 
@@ -29,11 +29,6 @@ DEPEND=""
 RDEPEND=${DEPEND}
 
 S=${WORKDIR}/${MY_P}/extra/${PN}
-
-# bug 376761
-# RESTRICT="test"
-
-PATCHES=( "${FILESDIR}/${P}-tests.patch" )
 
 src_configure() {
 	mycmakeargs=(
