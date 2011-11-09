@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5883 2011/11/08 15:59:03 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5884 2011/11/09 01:31:23 chutzpah Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Nov 2011; Patrick McLean <chutzpah@gentoo.org>
+  arch/alpha/package.use.mask, arch/arm/package.use.mask,
+  arch/powerpc/ppc64/64ul/package.use.mask:
+  Add net-dns/dnsmasq conntrack to package.use.mask on ppc64/64ul, arm and
+  alpha as net-libs/libnetfilter_conntrack is not available.
 
   08 Nov 2011; William Hubbs <williamh@gentoo.org> package.mask:
   remove udev 174 from the mask since it is now gone from the tree.
