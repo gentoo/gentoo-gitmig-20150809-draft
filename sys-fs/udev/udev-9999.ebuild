@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.59 2011/11/09 04:15:20 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.60 2011/11/09 04:44:15 williamh Exp $
 
 EAPI=4
 
@@ -56,9 +56,9 @@ then
 	DEPEND="${DEPEND}
 		dev-util/gtk-doc
 		test? ( app-text/tree )"
-	else
+else
 	DEPEND="${DEPEND}
-	doc? ( dev-util/gtk-doc )"
+		doc? ( dev-util/gtk-doc )"
 fi
 
 RDEPEND="${COMMON_DEPEND}
