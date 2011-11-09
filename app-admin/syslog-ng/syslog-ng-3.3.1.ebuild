@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.3.1.ebuild,v 1.5 2011/10/24 16:22:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-3.3.1.ebuild,v 1.6 2011/11/09 17:36:10 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools fixheadtails eutils multilib
@@ -108,6 +108,9 @@ src_install() {
 }
 
 pkg_postinst() {
+	elog "For detailed documentation please see the upstream website:"
+	elog "http://www.balabit.com/sites/default/files/documents/syslog-ng-ose-3.3-guides/syslog-ng-ose-v3.3-guide-admin-en.html/index.html"
+
 	# bug #355257
 	if ! has_version app-admin/logrotate ; then
 		echo
