@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.6-r2.ebuild,v 1.27 2011/09/26 17:38:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.6-r2.ebuild,v 1.28 2011/11/09 19:22:56 vapier Exp $
 
 MAN_VER=""
 PATCH_VER="1.6"
@@ -46,40 +46,10 @@ IUSE="ip28 ip32r10k n32 n64"
 # NOTE: we SHOULD be using at least binutils 2.15.90.0.1 everywhere for proper
 # .eh_frame ld optimisation and symbol visibility support, but it hasnt been
 # well tested in gentoo on any arch other than amd64!!
-RDEPEND=">=sys-devel/gcc-config-1.4
-	>=sys-libs/zlib-1.1.4
-	virtual/libiconv
-	elibc_glibc? (
-		>=sys-libs/glibc-2.3.3_pre20040420-r1
-		hardened? ( >=sys-libs/glibc-2.3.3_pre20040529 )
-	)
-	!build? (
-		gcj? (
-			gtk? (
-				x11-libs/libXt
-				x11-libs/libX11
-				x11-libs/libXtst
-				x11-proto/xproto
-				x11-proto/xextproto
-				=x11-libs/gtk+-2*
-			)
-			>=media-libs/libart_lgpl-2.1
-		)
-		>=sys-libs/ncurses-5.2-r2
-		nls? ( sys-devel/gettext )
-	)"
-
-if [[ ${CATEGORY/cross-} != ${CATEGORY} ]]; then
-	RDEPEND="${RDEPEND} ${CATEGORY}/binutils"
-fi
-
+RDEPEND=""
 DEPEND="${RDEPEND}
-	>=sys-apps/texinfo-4.2-r4
-	>=sys-devel/bison-1.875
-	sys-devel/flex
 	>=sys-devel/binutils-2.14.90.0.8-r1
 	amd64? ( >=sys-devel/binutils-2.15.90.0.1.1-r1 )"
-PDEPEND=">=sys-devel/gcc-config-1.4"
 
 src_unpack() {
 	toolchain_src_unpack

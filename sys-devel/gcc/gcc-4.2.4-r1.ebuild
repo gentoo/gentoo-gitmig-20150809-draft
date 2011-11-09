@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.2.4-r1.ebuild,v 1.9 2011/09/26 17:38:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.2.4-r1.ebuild,v 1.10 2011/11/09 19:22:57 vapier Exp $
 
 PATCH_VER="1.1"
 UCLIBC_VER="1.0"
@@ -15,45 +15,12 @@ DESCRIPTION="The GNU Compiler Collection"
 
 LICENSE="GPL-3 LGPL-2.1 || ( GPL-3 libgcc libstdc++ ) FDL-1.2"
 KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~m68k ~ppc ~ppc64 ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE=""
 
-RDEPEND=">=sys-libs/zlib-1.1.4
-	>=sys-devel/gcc-config-1.4
-	virtual/libiconv
-	fortran? (
-		>=dev-libs/gmp-4.2.1
-		>=dev-libs/mpfr-2.2.0_p10
-	)
-	!build? (
-		gcj? (
-			gtk? (
-				x11-libs/libXt
-				x11-libs/libX11
-				x11-libs/libXtst
-				x11-proto/xproto
-				x11-proto/xextproto
-				=x11-libs/gtk+-2*
-				x11-libs/pango
-			)
-			>=media-libs/libart_lgpl-2.1
-			app-arch/zip
-			app-arch/unzip
-		)
-		>=sys-libs/ncurses-5.2-r2
-		nls? ( sys-devel/gettext )
-	)"
+RDEPEND=""
 DEPEND="${RDEPEND}
-	test? ( sys-devel/autogen dev-util/dejagnu )
-	>=sys-apps/texinfo-4.2-r4
-	>=sys-devel/bison-1.875
-	sys-devel/flex
 	ppc? ( >=${CATEGORY}/binutils-2.17 )
 	ppc64? ( >=${CATEGORY}/binutils-2.17 )
 	>=${CATEGORY}/binutils-2.15.94"
-PDEPEND=">=sys-devel/gcc-config-1.4"
-if [[ ${CATEGORY} != cross-* ]] ; then
-	PDEPEND="${PDEPEND} elibc_glibc? ( >=sys-libs/glibc-2.3.6 )"
-fi
 
 src_unpack() {
 	toolchain_src_unpack

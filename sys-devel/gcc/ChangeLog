@@ -1,6 +1,17 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.831 2011/10/30 19:40:28 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.832 2011/11/09 19:22:57 vapier Exp $
+
+  09 Nov 2011; Mike Frysinger <vapier@gentoo.org> gcc-2.95.3-r10.ebuild,
+  gcc-3.3.6-r1.ebuild, gcc-3.4.6-r2.ebuild, gcc-4.0.4.ebuild, gcc-4.1.2.ebuild,
+  gcc-4.2.4-r1.ebuild, gcc-4.3.3-r2.ebuild, gcc-4.3.4.ebuild, gcc-4.3.5.ebuild,
+  gcc-4.3.6-r1.ebuild, gcc-4.4.2.ebuild, gcc-4.4.3-r3.ebuild,
+  gcc-4.4.4-r2.ebuild, gcc-4.4.5.ebuild, gcc-4.4.6-r1.ebuild,
+  gcc-4.5.1-r1.ebuild, gcc-4.5.2.ebuild, gcc-4.5.3-r1.ebuild, gcc-4.6.0.ebuild,
+  gcc-4.6.1-r1.ebuild, gcc-4.6.2.ebuild:
+  Drop most dependencies now that toolchain.eclass takes care of them. Also
+  drop the ncurses dep as that seems to be purely a workaround for an ancient
+  issue #4411 which we have addressed in different ways.
 
 *gcc-4.6.2 (30 Oct 2011)
 

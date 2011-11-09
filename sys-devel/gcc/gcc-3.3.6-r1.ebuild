@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.6-r1.ebuild,v 1.19 2011/09/26 17:38:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.6-r1.ebuild,v 1.20 2011/11/09 19:22:56 vapier Exp $
 
 MAN_VER=""
 PATCH_VER="1.7"
@@ -34,41 +34,13 @@ DESCRIPTION="The GNU Compiler Collection"
 
 # ia64 - broken static handling; USE=static emerge busybox
 KEYWORDS="~amd64 ~x86"
-IUSE=""
 
 # NOTE: we SHOULD be using at least binutils 2.15.90.0.1 everywhere for proper
 # .eh_frame ld optimisation and symbol visibility support, but it hasnt been
 # well tested in gentoo on any arch other than amd64!!
-RDEPEND=">=sys-devel/gcc-config-1.4
-	>=sys-libs/zlib-1.1.4
-	elibc_glibc? ( >=sys-libs/glibc-2.3.2-r9 )
-	>=sys-devel/binutils-2.14.90.0.6-r1
-	sparc? ( hardened? ( >=sys-libs/glibc-2.3.3.20040420 ) )
-	!build? (
-		gcj? (
-			gtk? (
-				x11-libs/libXt
-				x11-libs/libX11
-				x11-libs/libXtst
-				x11-proto/xproto
-				x11-proto/xextproto
-				=x11-libs/gtk+-2*
-			)
-			>=media-libs/libart_lgpl-2.1
-		)
-		>=sys-libs/ncurses-5.2-r2
-		nls? ( sys-devel/gettext )
-	)"
-
-if [[ ${CATEGORY/cross-} != ${CATEGORY} ]]; then
-	RDEPEND="${RDEPEND} ${CATEGORY}/binutils"
-fi
-
+RDEPEND=">=sys-devel/binutils-2.14.90.0.6-r1"
 DEPEND="${RDEPEND}
-	>=sys-apps/texinfo-4.2-r4
-	>=sys-devel/bison-1.875
 	amd64? ( >=sys-devel/binutils-2.15.90.0.1.1-r1 )"
-PDEPEND=">=sys-devel/gcc-config-1.4"
 
 src_unpack() {
 	toolchain_src_unpack
