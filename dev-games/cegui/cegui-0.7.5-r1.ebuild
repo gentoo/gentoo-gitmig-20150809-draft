@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.7.5-r1.ebuild,v 1.5 2011/11/09 02:04:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.7.5-r1.ebuild,v 1.6 2011/11/09 06:56:24 mr_bones_ Exp $
 
 EAPI=4
 inherit eutils
@@ -49,6 +49,7 @@ src_prepare() {
 
 	# build with newer zlib (bug #389863)
 	sed -i -e '74i#define OF(x) x' cegui/src/minizip/unzip.h || die
+	sed -i -e '125i#define OF(x) x' cegui/src/minizip/ioapi.h || die
 	if use examples ; then
 		cp -r Samples Samples.clean
 		rm -f $(find Samples.clean -name 'Makefile*')
