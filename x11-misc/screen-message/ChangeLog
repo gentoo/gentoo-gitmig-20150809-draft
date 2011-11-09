@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/screen-message
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/screen-message/ChangeLog,v 1.1 2011/11/09 16:45:41 sping Exp $
+
+*screen-message-0.19 (09 Nov 2011)
+
+  09 Nov 2011; Sebastian Pipping <sping@gentoo.org>
+  +screen-message-0.19.ebuild, +metadata.xml:
+  New package
+
