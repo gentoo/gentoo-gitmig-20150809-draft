@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13216 2011/11/08 15:59:03 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13217 2011/11/09 03:12:26 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (8 Nov 2011)
+# Dead project, and has started crashing KDE apps, see bug 388261 and
+# the comments on its homepage. Masked for lastriting
+x11-themes/polyester
 
 # Nathan Phillip Brink <binki@gentoo.org> (8 Nov 2011)
 # Masking alpha release series.
