@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.18 2011/11/09 15:11:48 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.19 2011/11/09 22:55:22 voyageur Exp $
 
 EAPI=3
 
@@ -19,7 +19,6 @@ SLOT="0"
 KEYWORDS=""
 IUSE="debug multitarget +static-analyzer +system-cxx-headers test"
 
-# Note: for LTO support, clang will depend on binutils with gold plugins, and LLVM built after that - http://llvm.org/docs/GoldPlugin.html
 DEPEND="static-analyzer? ( dev-lang/perl )"
 RDEPEND="~sys-devel/llvm-${PV}[multitarget=]"
 
