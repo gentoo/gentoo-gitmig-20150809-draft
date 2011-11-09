@@ -1,0 +1,25 @@
+Bug #387309
+
+--- llvm/tools/clang/lib/Driver/ToolChains.cpp.orig	2011-10-16 19:27:45.505711873 +0200
++++ llvm/tools/clang/lib/Driver/ToolChains.cpp	2011-10-16 19:30:22.810705290 +0200
+@@ -1563,15 +1563,16 @@
+     // and this function would return
+     // CXX_GCC_ROOT/lib/gcc/CXX_INCLUDE_ARCH/CXX_GCC_VER
+     if (CxxIncludeRoot != "") {
+-      // This is of the form /foo/bar/include/c++/4.5.2/
++      // This is of the form /usr/lib/gcc/<ARCH>/<Version>/include/g++-v4
+       if (CxxIncludeRoot.back() == '/')
+         llvm::sys::path::remove_filename(CxxIncludeRoot); // remove the /
++      llvm::sys::path::remove_filename(CxxIncludeRoot); // remove the g++-v4
++      llvm::sys::path::remove_filename(CxxIncludeRoot); // remove the include
+       StringRef Version = llvm::sys::path::filename(CxxIncludeRoot);
+       llvm::sys::path::remove_filename(CxxIncludeRoot); // remove the version
+-      llvm::sys::path::remove_filename(CxxIncludeRoot); // remove the c++
+-      llvm::sys::path::remove_filename(CxxIncludeRoot); // remove the include
++      llvm::sys::path::remove_filename(CxxIncludeRoot); // remove the ARCH
+       GccInstallPath = CxxIncludeRoot.str();
+-      GccInstallPath.append("/lib/gcc/");
++      GccInstallPath.append("/");
+       GccInstallPath.append(CXX_INCLUDE_ARCH);
+       GccInstallPath.append("/");
+       GccInstallPath.append(Version);

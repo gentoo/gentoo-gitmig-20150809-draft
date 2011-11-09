@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/clang
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.43 2011/10/04 11:52:07 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/ChangeLog,v 1.44 2011/11/09 15:11:48 voyageur Exp $
+
+*clang-3.0_rc1 (09 Nov 2011)
+
+  09 Nov 2011; Bernard Cafarelli <voyageur@gentoo.org> +clang-3.0_rc1.ebuild,
+  +files/clang-3.0-fix_cxx_include_root.patch, clang-9999.ebuild:
+  Add rc release to prepare for 3.0, remove llvm-gcc detection code (not used
+  in configure anymore). Also fix bug #387309, thanks to Stephan Wezel
+  <s.wezel@web.de> for the patch
 
   04 Oct 2011; Bernard Cafarelli <voyageur@gentoo.org> clang-2.8-r3.ebuild,
   clang-2.9-r1.ebuild, clang-9999.ebuild:

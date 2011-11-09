@@ -1,37 +1,37 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-9999.ebuild,v 1.18 2011/11/09 15:11:48 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.0_rc1.ebuild,v 1.1 2011/11/09 15:11:48 voyageur Exp $
 
 EAPI=3
 
 RESTRICT_PYTHON_ABIS="3.*"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit subversion eutils multilib python
+inherit eutils multilib python
 
 DESCRIPTION="C language family frontend for LLVM"
 HOMEPAGE="http://clang.llvm.org/"
-SRC_URI=""
-ESVN_REPO_URI="http://llvm.org/svn/llvm-project/cfe/trunk"
+# Fetching LLVM as well: see http://llvm.org/bugs/show_bug.cgi?id=4840
+SRC_URI="http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.0_}/sources/llvm-${PV/_}.src.tar.gz
+	http://llvm.org/pre-releases/${PV/_rc*}/${PV/3.0_}/sources/${P/_}.src.tar.gz"
 
 LICENSE="UoI-NCSA"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="debug multitarget +static-analyzer +system-cxx-headers test"
 
 # Note: for LTO support, clang will depend on binutils with gold plugins, and LLVM built after that - http://llvm.org/docs/GoldPlugin.html
 DEPEND="static-analyzer? ( dev-lang/perl )"
 RDEPEND="~sys-devel/llvm-${PV}[multitarget=]"
 
-S="${WORKDIR}/llvm"
-
-src_unpack() {
-	# Fetching LLVM as well: see http://llvm.org/bugs/show_bug.cgi?id=4840
-	ESVN_PROJECT=llvm subversion_fetch "http://llvm.org/svn/llvm-project/llvm/trunk"
-	ESVN_PROJECT=clang S="${S}"/tools/clang subversion_fetch
-}
+S="${WORKDIR}/llvm-${PV/_}"
 
 src_prepare() {
+	# Leftover in rc1, remove for real release
+	rm -f "${S}"/tools/clang
+
+	mv "${WORKDIR}"/clang-${PV/_} "${S}"/tools/clang || die "clang source directory not found"
+
 	# Same as llvm doc patches
 	epatch "${FILESDIR}"/${PN}-2.7-fixdoc.patch
 
@@ -40,7 +40,7 @@ src_prepare() {
 		-i tools/clang/lib/Headers/Makefile \
 		|| die "clang Makefile failed"
 	# Fix cxx_include_root path for Gentoo
-	epatch "${FILESDIR}"/${PN}-3.0-fix_cxx_include_root.patch
+	epatch "${FILESDIR}"/${P/_*}-fix_cxx_include_root.patch
 	# fix the static analyzer for in-tree install
 	sed -e 's/import ScanView/from clang \0/'  \
 		-i tools/clang/tools/scan-view/scan-view \
