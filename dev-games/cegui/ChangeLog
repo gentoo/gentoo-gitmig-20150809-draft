@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/cegui
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.38 2011/10/09 16:44:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.39 2011/11/09 02:04:08 mr_bones_ Exp $
+
+  09 Nov 2011; Michael Sterrett <mr_bones_@gentoo.org> cegui-0.7.5-r1.ebuild:
+  build with newer zlib (bug #389863); kill ogre use flag (bug #387103)
 
   09 Oct 2011; Markus Meier <maekke@gentoo.org> cegui-0.7.5-r1.ebuild:
   x86 stable, bug #375503

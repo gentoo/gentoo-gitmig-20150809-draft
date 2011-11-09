@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.7.5-r1.ebuild,v 1.4 2011/10/09 16:44:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.7.5-r1.ebuild,v 1.5 2011/11/09 02:04:08 mr_bones_ Exp $
 
 EAPI=4
 inherit eutils
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/crayzedsgui/${MY_P}.tar.gz
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64 -ppc x86"
-IUSE="bidi debug devil doc examples expat gtk irrlicht lua ogre opengl pcre static-libs tinyxml truetype xerces-c xml zip"
+IUSE="bidi debug devil doc examples expat gtk irrlicht lua opengl pcre static-libs tinyxml truetype xerces-c xml zip"
 REQUIRED_USE="|| ( xml tinyxml )" # bug 362223
 
 RDEPEND="bidi? ( dev-libs/fribidi )
@@ -27,7 +27,6 @@ RDEPEND="bidi? ( dev-libs/fribidi )
 		dev-lang/lua
 		dev-lua/toluapp
 	)
-	ogre? ( dev-games/ogre )
 	opengl? (
 		virtual/opengl
 		virtual/glu
@@ -48,6 +47,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-tinyxml.patch \
 		"${FILESDIR}"/${P}-gcc46.patch
 
+	# build with newer zlib (bug #389863)
+	sed -i -e '74i#define OF(x) x' cegui/src/minizip/unzip.h || die
 	if use examples ; then
 		cp -r Samples Samples.clean
 		rm -f $(find Samples.clean -name 'Makefile*')
@@ -55,7 +56,9 @@ src_prepare() {
 }
 
 src_configure() {
+	# ogre-1.6.5 needs older cegui (bug #387103)
 	econf \
+		--disable-ogre-renderer \
 		$(use_enable bidi bidirectional-text) \
 		$(use_enable debug) \
 		$(use_enable devil) \
@@ -66,7 +69,6 @@ src_configure() {
 		$(use_enable lua lua-module) \
 		$(use_enable lua toluacegui) \
 		--enable-external-toluapp \
-		$(use_enable ogre ogre-renderer) \
 		$(use_enable opengl opengl-renderer) \
 		--enable-external-glew \
 		$(use_enable pcre) \
