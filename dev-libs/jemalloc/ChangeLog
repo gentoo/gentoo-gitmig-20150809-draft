@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/jemalloc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.6 2011/09/17 12:24:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jemalloc/ChangeLog,v 1.7 2011/11/09 19:53:21 xarthisius Exp $
+
+  09 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> jemalloc-2.2.3.ebuild:
+  Marked ~ppc/~ppc64 at the request of Tomáš Chvátal <scarabeus@gentoo.org>
 
 *jemalloc-2.2.3 (17 Sep 2011)
 
