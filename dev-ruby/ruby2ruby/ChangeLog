@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby2ruby
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ChangeLog,v 1.39 2011/09/16 05:57:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby2ruby/ChangeLog,v 1.40 2011/11/09 06:15:23 graaff Exp $
+
+*ruby2ruby-1.3.1 (09 Nov 2011)
+
+  09 Nov 2011; Hans de Graaff <graaff@gentoo.org> +ruby2ruby-1.3.1.ebuild:
+  Version bump. Fix dependencies to match gemspec.
 
 *ruby2ruby-1.3.0 (16 Sep 2011)
 
