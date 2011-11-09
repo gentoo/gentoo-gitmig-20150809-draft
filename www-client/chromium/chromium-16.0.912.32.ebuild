@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-16.0.912.15.ebuild,v 1.3 2011/11/08 00:37:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-16.0.912.32.ebuild,v 1.1 2011/11/09 02:59:23 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -98,17 +98,6 @@ get_installed_v8_version() {
 	best_version dev-lang/v8 | sed -e 's@dev-lang/v8-@@g'
 }
 
-pkg_pretend() {
-	if [[ "${MERGE_TYPE}" == "source" || "${MERGE_TYPE}" == "binary" ]]; then
-		# Fail if the kernel doesn't support features needed for sandboxing,
-		# bug #363907.
-		ERROR_PID_NS="PID_NS is required for sandbox to work"
-		ERROR_NET_NS="NET_NS is required for sandbox to work"
-		CONFIG_CHECK="~PID_NS ~NET_NS"
-		check_extra_config
-	fi
-}
-
 if ! has chromium-pkg_die ${EBUILD_DEATH_HOOKS}; then
 	EBUILD_DEATH_HOOKS+=" chromium-pkg_die";
 fi
@@ -159,6 +148,15 @@ pkg_setup() {
 	# Make sure the build system will use the right python, bug #344367.
 	python_set_active_version 2
 	python_pkg_setup
+
+	if [[ "${MERGE_TYPE}" == "source" || "${MERGE_TYPE}" == "binary" ]]; then
+		# Fail if the kernel doesn't support features needed for sandboxing,
+		# bug #363907.
+		ERROR_PID_NS="PID_NS is required for sandbox to work"
+		ERROR_NET_NS="NET_NS is required for sandbox to work"
+		CONFIG_CHECK="~PID_NS ~NET_NS"
+		check_extra_config
+	fi
 
 	if use bindist; then
 		elog "bindist enabled: H.264 video support will be disabled."
@@ -374,10 +372,12 @@ src_install() {
 	insinto "${CHROMIUM_HOME}"
 	case "$(tc-arch)" in
 		amd64)
+			doexe out/Release/nacl_helper{,_bootstrap} || die
 			doins out/Release/nacl_irt_x86_64.nexe || die
 			doins out/Release/libppGoogleNaClPluginChrome.so || die
 		;;
 		x86)
+			doexe out/Release/nacl_helper{,_bootstrap} || die
 			doins out/Release/nacl_irt_x86_32.nexe || die
 			doins out/Release/libppGoogleNaClPluginChrome.so || die
 		;;
