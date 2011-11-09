@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-pango
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.57 2011/09/18 04:08:18 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.58 2011/11/09 13:45:00 naota Exp $
+
+*ruby-pango-1.0.3 (09 Nov 2011)
+
+  09 Nov 2011; Naohiro Aota <naota@gentoo.org> +ruby-pango-1.0.3.ebuild:
+  Version bump.
 
 *ruby-pango-1.0.0 (18 Sep 2011)
 

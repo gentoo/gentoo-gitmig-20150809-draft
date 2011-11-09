@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-gdkpixbuf2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf2/ChangeLog,v 1.62 2011/09/18 07:23:21 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf2/ChangeLog,v 1.63 2011/11/09 13:45:47 naota Exp $
+
+*ruby-gdkpixbuf2-1.0.3 (09 Nov 2011)
+
+  09 Nov 2011; Naohiro Aota <naota@gentoo.org> +ruby-gdkpixbuf2-1.0.3.ebuild:
+  Version bump.
 
   18 Sep 2011; Naohiro Aota <naota@gentoo.org> ruby-gdkpixbuf2-0.90.9.ebuild,
   ruby-gdkpixbuf2-1.0.0.ebuild:
