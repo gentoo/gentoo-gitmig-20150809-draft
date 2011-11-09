@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.477 2011/10/31 01:12:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.478 2011/11/09 17:25:43 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -123,12 +123,18 @@ if tc_version_is_at_least 3 ; then
 	RDEPEND+=" virtual/libiconv"
 fi
 if tc_version_is_at_least 4 ; then
-	RDEPEND+=" >=dev-libs/gmp-4.2.1 >=dev-libs/mpfr-2.3.2"
+	GMP_MPFR_DEPS=">=dev-libs/gmp-4.3.2 >=dev-libs/mpfr-2.4.2"
+	if tc_version_is_at_least 4.3 ; then
+		RDEPEND+=" ${GMP_MPFR_DEPS}"
+	elif in_iuse fortran ; then
+		RDEPEND+=" fortran? ( ${GMP_MPFR_DEPS} )"
+	fi
 	if tc_version_is_at_least 4.5 ; then
 		RDEPEND+=" >=dev-libs/mpc-0.8.1"
 	fi
+	in_iuse lto && RDEPEND+=" lto? ( || ( >=dev-libs/elfutils-0.143 dev-libs/libelf ) )"
 fi
-if has graphite ${IUSE} ; then
+if in_iuse graphite ; then
 	RDEPEND+="
 	    graphite? (
 	        >=dev-libs/cloog-ppl-0.15.10
@@ -144,8 +150,18 @@ DEPEND="${RDEPEND}
 		>=dev-util/dejagnu-1.4.4
 		>=sys-devel/autogen-5.5.4
 	)"
-if tc_version_is_at_least 4.2 && has gcj ${IUSE} ; then
-	DEPEND+=" gcj? ( app-arch/zip app-arch/unzip )"
+if in_iuse gcj ; then
+	GCJ_GTK_DEPS="
+		x11-libs/libXt
+		x11-libs/libX11
+		x11-libs/libXtst
+		x11-proto/xproto
+		x11-proto/xextproto
+		=x11-libs/gtk+-2*"
+	tc_version_is_at_least 3.4 && GCJ_GTK_DEPS+=" x11-libs/pango"
+	GCJ_DEPS=">=media-libs/libart_lgpl-2.1"
+	tc_version_is_at_least 4.2 && GCJ_DEPS+=" app-arch/zip app-arch/unzip"
+	DEPEND+=" gcj? ( gtk? ( ${GCJ_GTK_DEPS} ) ${GCJ_DEPS} )"
 fi
 
 PDEPEND=">=sys-devel/gcc-config-1.4"
@@ -1068,7 +1084,7 @@ gcc-compiler-configure() {
 	gcc-multilib-configure
 
 	if tc_version_is_at_least "4.0" ; then
-		if has mudflap ${IUSE} ; then
+		if in_iuse mudflap ; then
 			confgcc+=" $(use_enable mudflap libmudflap)"
 		else
 			confgcc+=" --disable-libmudflap"
@@ -1087,7 +1103,7 @@ gcc-compiler-configure() {
 		fi
 
 		if tc_version_is_at_least "4.2" ; then
-			if has openmp ${IUSE} ; then
+			if in_iuse openmp ; then
 				# Make sure target has pthreads support. #326757 #335883
 				# There shouldn't be a chicken&egg problem here as openmp won't
 				# build without a C library, and you can't build that w/out
@@ -2403,7 +2419,7 @@ is_ada() {
 }
 
 is_treelang() {
-	has boundschecking ${IUSE} && use boundschecking && return 1 #260532
+	use_if_iuse boundschecking && return 1 #260532
 	is_crosscompile && return 1 #199924
 	gcc-lang-supported treelang || return 1
 	#use treelang
