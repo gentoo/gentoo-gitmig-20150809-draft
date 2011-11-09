@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkvkontakte/libkvkontakte-2.1.0.ebuild,v 1.1 2011/09/09 19:22:28 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkvkontakte/libkvkontakte-2.3.0.ebuild,v 1.1 2011/11/09 02:49:24 dilfridge Exp $
 
 EAPI=4
 
@@ -29,10 +29,7 @@ RDEPEND=${DEPEND}
 
 S=${WORKDIR}/${MY_P}/extra/${PN}
 
-PATCHES=(
-	"${FILESDIR}/${P}-libsuffix.patch"
-	"${FILESDIR}/${P}-definstall.patch"
-)
+PATCHES=( "${FILESDIR}/${PN}-2.2.0-libdir.patch" )
 
 src_configure() {
 	mycmakeargs=(

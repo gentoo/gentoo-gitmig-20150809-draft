@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libkvkontakte
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libkvkontakte/ChangeLog,v 1.2 2011/10/03 18:04:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libkvkontakte/ChangeLog,v 1.3 2011/11/09 02:49:24 dilfridge Exp $
+
+*libkvkontakte-2.3.0 (09 Nov 2011)
+
+  09 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -libkvkontakte-2.1.0.ebuild, -files/libkvkontakte-2.1.0-definstall.patch,
+  -files/libkvkontakte-2.1.0-libsuffix.patch, +libkvkontakte-2.3.0.ebuild:
+  Version bump; remove old
 
 *libkvkontakte-2.2.0 (03 Oct 2011)
 
