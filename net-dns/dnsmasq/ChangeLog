@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.209 2011/05/22 23:57:47 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.210 2011/11/09 01:32:08 chutzpah Exp $
+
+*dnsmasq-2.59 (09 Nov 2011)
+
+  09 Nov 2011; Patrick McLean <chutzpah@gentoo.org> +dnsmasq-2.59.ebuild,
+  +files/dnsmasq-init-r1, metadata.xml:
+  Version bump (bug #383257). Change opts to extra_commands in new init script
+  (bug #386763). Change license to GPL-2 or GPL-3 (bug #383259).
 
   22 May 2011; Joseph Jezak <josejx@gentoo.org> dnsmasq-2.57.ebuild:
   Marked ppc/ppc64 stable for bug #361149.
