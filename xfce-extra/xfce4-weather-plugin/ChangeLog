@@ -1,6 +1,13 @@
 # ChangeLog for xfce-extra/xfce4-weather-plugin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather-plugin/ChangeLog,v 1.13 2011/02/03 22:30:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather-plugin/ChangeLog,v 1.14 2011/11/09 18:42:49 ssuominen Exp $
+
+*xfce4-weather-plugin-0.7.4-r1 (09 Nov 2011)
+
+  09 Nov 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-weather-plugin-0.7.4-r1.ebuild:
+  Change PARTNER_ID and LICENSE_KEY wrt upstream
+  http://bugzilla.xfce.org/show_bug.cgi?id=8105
 
 *xfce4-weather-plugin-0.7.4 (03 Feb 2011)
 
