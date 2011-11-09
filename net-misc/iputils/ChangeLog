@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/iputils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.98 2011/09/21 09:01:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.99 2011/11/09 22:34:11 vapier Exp $
+
+*iputils-20101006-r2 (09 Nov 2011)
+
+  09 Nov 2011; Mike Frysinger <vapier@gentoo.org> +iputils-20101006-r2.ebuild,
+  +files/iputils-20101006-owl-pingsock.diff, iputils-99999999.ebuild:
+  Add patch from OWL for non-root/set*id/cap ping support.
 
   21 Sep 2011; Michał Górny <mgorny@gentoo.org> iputils-99999999.ebuild:
   Migrate to git-2.
