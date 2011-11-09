@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-563.ebuild,v 1.1 2011/10/13 19:25:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/unetbootin-563.ebuild,v 1.2 2011/11/09 16:31:32 jer Exp $
 
 EAPI="4"
 
@@ -56,7 +56,7 @@ src_install() {
 	for lingua in ${UNETBOOTIN_LINGUAS}; do
 		if use linguas_${lingua}; then
 			insinto /usr/share/${PN}
-			doins ${PN}_${lingua}.qm || die
+			doins ${PN}_${lingua}.qm
 		fi
 	done
 }
