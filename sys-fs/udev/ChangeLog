@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.612 2011/11/08 16:49:35 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.613 2011/11/09 04:15:20 williamh Exp $
+
+  09 Nov 2011; William Hubbs <williamh@gentoo.org> udev-175.ebuild,
+  udev-9999.ebuild:
+  QA Fixes: use should not be called in global scope and clean up the
+  conditional declarations for IUSE and RESTRICT.
+  Thanks to mr_bones_ for pointing these out.
 
   08 Nov 2011; William Hubbs <williamh@gentoo.org> udev-175.ebuild,
   udev-9999.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-175.ebuild,v 1.2 2011/11/08 16:49:35 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-175.ebuild,v 1.3 2011/11/09 04:15:20 williamh Exp $
 
 EAPI=4
 
@@ -35,9 +35,6 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="build selinux debug +rule_generator hwdb acl gudev introspection
 	keymap floppy edd doc"
-[[ ${PV} == "9999" ]] && IUSE="${IUSE} test"
-
-RESTRICT="test? ( userpriv )"
 
 COMMON_DEPEND="selinux? ( sys-libs/libselinux )
 	acl? ( sys-apps/acl dev-libs/glib:2 )
@@ -54,15 +51,14 @@ DEPEND="${COMMON_DEPEND}
 
 if [[ $PV == "9999" ]]
 then
+	RESTRICT="test? ( userpriv )"
+	IUSE="${IUSE} test"
 	DEPEND="${DEPEND}
+		dev-util/gtk-doc
 		test? ( app-text/tree )"
-fi
-
-if [[ ${PV} == "9999" ]] || use doc
-then
-	# for documentation processing with xsltproc
+	else
 	DEPEND="${DEPEND}
-		dev-util/gtk-doc"
+	doc? ( dev-util/gtk-doc )"
 fi
 
 RDEPEND="${COMMON_DEPEND}
