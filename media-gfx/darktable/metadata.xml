@@ -8,6 +8,7 @@
 	</maintainer>
 	<use>
 		<flag name="flickr">Add support for uploading photos to flickr</flag>
+		<flag name="opencl">Enable opencl support</flag>
 		<flag name="rawspeed">Enable the rawspeed backend</flag>
 		<flag name="slideshow">Build the opengl slideshow viewer</flag>
 	</use>
