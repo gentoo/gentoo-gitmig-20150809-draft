@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/less
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.131 2011/10/28 05:33:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.132 2011/11/09 18:43:05 vapier Exp $
+
+*less-445-r1 (09 Nov 2011)
+
+  09 Nov 2011; Mike Frysinger <vapier@gentoo.org> +less-445-r1.ebuild:
+  Update to EAPI=2, add editor-wrapper support, and USE=pcre support #389935.
 
 *less-445 (28 Oct 2011)
 
