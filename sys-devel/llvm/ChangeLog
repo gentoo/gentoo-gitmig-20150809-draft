@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.47 2011/10/04 11:43:37 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.48 2011/11/09 15:11:05 voyageur Exp $
+
+*llvm-3.0_rc1 (09 Nov 2011)
+
+  09 Nov 2011; Bernard Cafarelli <voyageur@gentoo.org> +llvm-3.0_rc1.ebuild,
+  llvm-9999.ebuild:
+  Add rc release to prepare for 3.0, remove llvm-gcc detection code (not used
+  in configure anymore)
 
   04 Oct 2011; Bernard Cafarelli <voyageur@gentoo.org> llvm-2.8-r2.ebuild,
   -llvm-2.8-r4.ebuild, llvm-2.9-r2.ebuild, llvm-9999.ebuild:
