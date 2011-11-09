@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.4.2.ebuild,v 1.2 2011/11/07 18:04:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.4.2-r1.ebuild,v 1.1 2011/11/09 19:08:40 scarabeus Exp $
 
 EAPI=4
 
@@ -23,6 +23,7 @@ EXT_URI="http://ooo.itc.hu/oxygenoffice/download/libreoffice"
 ADDONS_URI="http://dev-www.libreoffice.org/src/"
 
 BRANDING="${PN}-branding-gentoo-0.3.tar.xz"
+PATCHSET="${P}-patchset-01.tar.xz"
 
 [[ ${PV} == *9999* ]] && SCM_ECLASS="git-2"
 inherit base autotools bash-completion-r1 check-reqs eutils java-pkg-opt-2 kde4-base pax-utils prefix python multilib toolchain-funcs flag-o-matic nsplugins versionator ${SCM_ECLASS}
@@ -31,6 +32,7 @@ unset SCM_ECLASS
 DESCRIPTION="LibreOffice, a full office productivity suite."
 HOMEPAGE="http://www.libreoffice.org"
 SRC_URI="branding? ( http://dev.gentooexperimental.org/~scarabeus/${BRANDING} )"
+[[ -n ${PATCHSET} ]] && SRC_URI+=" http://dev.gentooexperimental.org/~scarabeus/${PATCHSET}"
 
 # Bootstrap MUST be first!
 MODULES="bootstrap artwork base calc components extensions extras filters help
@@ -299,6 +301,8 @@ src_unpack() {
 		unset EGIT_PROJECT EGIT_SOURCEDIR EGIT_REPO_URI EGIT_BRANCH
 	fi
 
+	[[ -n ${PATCHSET} ]] && unpack ${PATCHSET}
+
 	# copy extension templates; o what fun ...
 	if use templates; then
 		dest="${S}/extras/source/extensions"
@@ -329,6 +333,13 @@ src_prepare() {
 	# silent miscompiles; LO/OOo adds -O2/1/0 where appropriate
 	filter-flags "-O*"
 
+	if [[ -n ${PATCHSET} ]]; then
+		EPATCH_FORCE="yes" \
+		EPATCH_SOURCE="${WORKDIR}/${PATCHSET/.tar.xz/}" \
+		EPATCH_SUFFIX="patch" \
+		epatch
+	fi
+
 	base_src_prepare
 	eautoreconf
 }
@@ -357,9 +368,9 @@ src_configure() {
 	# hsqldb: requires just 1.8.0 not 1.8.1 which we don't ship at all
 	# dmake: not worth of splitting out
 	# cppunit: patched not to run anything, just main() { return 0; }
-	#          workaround to upstream running the tests during build
+	#		  workaround to upstream running the tests during build
 	# sane: just sane.h header that is used for scan in writer, not
-	#       linked or anything else, worthless to depend on
+	#	   linked or anything else, worthless to depend on
 	internal_libs+="
 		--without-system-hsqldb
 		--without-system-cppunit

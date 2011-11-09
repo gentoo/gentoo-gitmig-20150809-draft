@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999-r1.ebuild,v 1.19 2011/11/07 18:04:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999-r1.ebuild,v 1.20 2011/11/09 19:08:40 scarabeus Exp $
 
 EAPI=4
 
@@ -23,6 +23,7 @@ EXT_URI="http://ooo.itc.hu/oxygenoffice/download/libreoffice"
 ADDONS_URI="http://dev-www.libreoffice.org/src/"
 
 BRANDING="${PN}-branding-gentoo-0.3.tar.xz"
+# PATCHSET="${P}-patchset-01.tar.xz"
 
 [[ ${PV} == *9999* ]] && SCM_ECLASS="git-2"
 inherit base autotools bash-completion-r1 check-reqs eutils java-pkg-opt-2 kde4-base pax-utils prefix python multilib toolchain-funcs flag-o-matic nsplugins versionator ${SCM_ECLASS}
@@ -31,6 +32,7 @@ unset SCM_ECLASS
 DESCRIPTION="LibreOffice, a full office productivity suite."
 HOMEPAGE="http://www.libreoffice.org"
 SRC_URI="branding? ( http://dev.gentooexperimental.org/~scarabeus/${BRANDING} )"
+[[ -n ${PATCHSET} ]] && SRC_URI+=" http://dev.gentooexperimental.org/~scarabeus/${PATCHSET}"
 
 # Bootstrap MUST be first!
 MODULES="bootstrap artwork base calc components extensions extras filters help
@@ -270,6 +272,7 @@ pkg_setup() {
 src_unpack() {
 	local mod dest tmplfile tmplname mypv
 
+	[[ -n ${PATCHSET} ]] && unpack ${PATCHSET}
 	if use branding; then
 		unpack "${BRANDING}"
 	fi
@@ -328,6 +331,14 @@ src_prepare() {
 	use debug || filter-flags "-g*"
 	# silent miscompiles; LO/OOo adds -O2/1/0 where appropriate
 	filter-flags "-O*"
+
+	# patchset
+	if [[ -n ${PATCHSET} ]]; then
+		EPATCH_FORCE="yes" \
+		EPATCH_SOURCE="${WORKDIR}/${PATCHSET/.tar.xz/}" \
+		EPATCH_SUFFIX="patch" \
+		epatch
+	fi
 
 	base_src_prepare
 	eautoreconf
