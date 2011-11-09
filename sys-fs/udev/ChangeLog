@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.614 2011/11/09 04:44:15 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.615 2011/11/09 22:53:09 williamh Exp $
+
+  09 Nov 2011; William Hubbs <williamh@gentoo.org> udev-175.ebuild,
+  udev-9999.ebuild:
+  add warning about separate /usr partition.
 
   09 Nov 2011; William Hubbs <williamh@gentoo.org> udev-175.ebuild,
   udev-9999.ebuild:
