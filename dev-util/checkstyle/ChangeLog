@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/checkstyle
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/ChangeLog,v 1.41 2010/02/21 01:13:24 abcd Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/ChangeLog,v 1.42 2011/11/09 19:23:15 sera Exp $
+
+*checkstyle-5.4 (09 Nov 2011)
+
+  09 Nov 2011; Ralph Sennhauser <sera@gentoo.org> +checkstyle-5.4.ebuild:
+  Version bump, bug 388485
 
   21 Feb 2010; Jonathan Callen <abcd@gentoo.org> checkstyle-4.4.ebuild:
   Transfer prefix keywords (no other changes)
