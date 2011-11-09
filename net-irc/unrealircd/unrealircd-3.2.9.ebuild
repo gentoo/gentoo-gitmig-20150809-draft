@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.9.ebuild,v 1.1 2011/11/06 02:58:47 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.9.ebuild,v 1.2 2011/11/09 18:13:51 binki Exp $
 
 EAPI=4
 
@@ -34,6 +34,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-disabled-stacked-extbans.patch
+
 	# QA check against bundled pkgs
 	rm extras/*.gz || die
 
