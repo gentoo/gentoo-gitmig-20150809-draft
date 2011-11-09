@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.54 2011/11/08 11:03:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.55 2011/11/09 10:12:48 scarabeus Exp $
 
 EAPI=4
 
@@ -34,7 +34,7 @@ SRC_URI="branding? ( http://dev.gentooexperimental.org/~scarabeus/${BRANDING} )"
 
 # Split modules following git/tarballs
 # Core MUST be first!
-MODULES="core binfilter dictionaries help"
+MODULES="core binfilter"
 # Only release has the tarballs
 if [[ ${PV} != *9999* ]]; then
 	for i in ${DEV_URI}; do
@@ -425,6 +425,7 @@ src_configure() {
 		--without-ppds \
 		--without-stlport \
 		--without-system-mozilla \
+		--without-help \
 		--without-helppack-integration \
 		$(use_enable binfilter) \
 		$(use_enable dbus) \
