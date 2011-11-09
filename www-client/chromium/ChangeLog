@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.491 2011/11/09 02:59:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.492 2011/11/09 18:56:01 floppym Exp $
+
+  09 Nov 2011; Mike Gilbert <floppym@gentoo.org> chromium-9999-r1.ebuild:
+  Restore cups USE flag for live ebuild. Bug 388497.
 
 *chromium-16.0.912.32 (09 Nov 2011)
 
