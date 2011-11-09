@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.311 2011/10/31 05:33:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.312 2011/11/09 08:53:18 xarthisius Exp $
+
+  09 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
+  dev-lang/path64[debugger]: pathdb works only as a SIGSEGV generator, mask
+  until upstream fixes it, bug #385683
 
   31 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask:
   mx-1.0 is in portage, evolution[clutter] can be enabled. However, it

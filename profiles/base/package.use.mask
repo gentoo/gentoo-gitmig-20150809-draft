@@ -1,9 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.280 2011/10/31 05:33:33 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.281 2011/11/09 08:53:18 xarthisius Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Kacper Kowalik <xarthisius@gentoo.org> (9 Nov 2011)
+# pathdb works only as a SIGSEGV generator, mask until upstream
+# fixes it bug #385683
+dev-lang/path64 debugger
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (31 Oct 2011)
 # Let's not suddenly enable clutter on stable evolution versions
