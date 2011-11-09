@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/c-ares
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/c-ares/ChangeLog,v 1.67 2011/08/21 11:23:15 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/c-ares/ChangeLog,v 1.68 2011/11/09 20:08:44 vapier Exp $
+
+  09 Nov 2011; Mike Frysinger <vapier@gentoo.org> c-ares-1.7.4.ebuild:
+  Update HOMEPAGE/SRC_URI in stable ebuild too.
 
 *c-ares-1.7.5 (21 Aug 2011)
 
