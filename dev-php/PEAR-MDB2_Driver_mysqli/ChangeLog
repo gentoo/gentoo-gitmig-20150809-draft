@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-MDB2_Driver_mysqli
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_mysqli/ChangeLog,v 1.31 2011/11/04 09:19:25 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_mysqli/ChangeLog,v 1.32 2011/11/10 18:43:45 jer Exp $
+
+  10 Nov 2011; Jeroen Roovers <jer@gentoo.org>
+  PEAR-MDB2_Driver_mysqli-1.5.0_beta3.ebuild:
+  Stable for HPPA (bug #388763).
 
   04 Nov 2011; Andreas Schuerch <nativemad@gentoo.org>
   PEAR-MDB2_Driver_mysqli-1.5.0_beta3.ebuild:
