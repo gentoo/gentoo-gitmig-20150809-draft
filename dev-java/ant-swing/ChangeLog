@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ant-swing
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-swing/ChangeLog,v 1.24 2011/07/18 06:14:09 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-swing/ChangeLog,v 1.25 2011/11/10 08:07:59 grobian Exp $
+
+  10 Nov 2011; Fabian Groffen <grobian@gentoo.org> ant-swing-1.8.1.ebuild:
+  Marked ~sparc64-solaris
 
   18 Jul 2011; Kacper Kowalik <xarthisius@gentoo.org> ant-swing-1.8.1.ebuild:
   ppc stable wrt #305929
