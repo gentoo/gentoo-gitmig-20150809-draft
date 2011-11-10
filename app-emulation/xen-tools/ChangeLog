@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.105 2011/11/07 17:31:40 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.106 2011/11/10 12:06:07 alexxy Exp $
+
+  10 Nov 2011; Alexey Shvetsov <alexxy@gentoo.org>
+  files/xen-tools-4.1.2-pyxml.patch:
+  Fix pyxml patch
 
   07 Nov 2011; Alexey Shvetsov <alexxy@gentoo.org>
   +files/xen-tools-4.1.2-pyxml.patch, files/xen-tools-4.1.1-curl.patch,
