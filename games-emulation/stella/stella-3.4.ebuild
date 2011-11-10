@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/stella-3.4.ebuild,v 1.3 2011/08/01 19:07:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/stella-3.4.ebuild,v 1.4 2011/11/10 16:39:06 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -29,6 +29,8 @@ src_prepare() {
 		-e '/INSTALL.*\/applications/d' \
 		Makefile \
 		|| die "sed failed"
+	# build with newer zlib (bug #390093)
+	sed -i -e '60i#define OF(x) x' src/emucore/unzip.h || die
 }
 
 src_configure() {
