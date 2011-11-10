@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/m17n-db-1.6.3.ebuild,v 1.1 2011/11/10 15:17:39 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/m17n-db-1.6.3.ebuild,v 1.2 2011/11/10 16:06:22 naota Exp $
 
 EAPI=4
 
@@ -17,10 +17,6 @@ IUSE=""
 
 DEPEND="sys-devel/gettext"
 RDEPEND="virtual/libintl"
-
-src_prepare() {
-	epatch "${FILESDIR}"/do-not-commit-extra-space.patch
-}
 
 src_install() {
 	emake DESTDIR="${D}" install || die
