@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cppcheck
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/ChangeLog,v 1.27 2011/10/15 08:50:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/ChangeLog,v 1.28 2011/11/10 23:58:52 xmw Exp $
+
+  10 Nov 2011; Michael Weber <xmw@gentoo.org> -cppcheck-1.48.ebuild,
+  -cppcheck-1.49.ebuild, -cppcheck-1.50.ebuild:
+  Remove old versions
 
 *cppcheck-1.51 (15 Oct 2011)
 
