@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/split2flac/split2flac-0.1_pre20110712.ebuild,v 1.2 2011/10/13 18:47:09 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/split2flac/split2flac-0.1_pre20111110.ebuild,v 1.1 2011/11/10 12:57:46 maksbotan Exp $
 
 EAPI="4"
 
