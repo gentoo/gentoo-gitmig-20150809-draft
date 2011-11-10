@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.195 2011/10/23 15:18:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.196 2011/11/10 21:27:20 phosphan Exp $
+
+*sane-backends-1.0.22-r2 (10 Nov 2011)
+
+  10 Nov 2011; Patrick Kursawe <phosphan@gentoo.org>
+  +sane-backends-1.0.22-r2.ebuild:
+  Making it possible to build the pnm test backend. Disabled by default because
+  of security concerns, see bug #389911.
 
   23 Oct 2011; Raúl Porcel <armin76@gentoo.org>
   sane-backends-1.0.22-r1.ebuild:
