@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/tardy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tardy/ChangeLog,v 1.15 2011/10/12 01:59:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tardy/ChangeLog,v 1.16 2011/11/10 19:11:15 radhermit Exp $
+
+*tardy-1.25 (10 Nov 2011)
+
+  10 Nov 2011; Tim Harder <radhermit@gentoo.org> +tardy-1.25.ebuild:
+  Version bump.
 
   12 Oct 2011; Jeroen Roovers <jer@gentoo.org> tardy-1.12.ebuild,
   tardy-1.16.ebuild, tardy-1.17-r1.ebuild:
