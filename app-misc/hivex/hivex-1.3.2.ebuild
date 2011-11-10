@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/hivex-1.3.2.ebuild,v 1.4 2011/11/06 09:09:07 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/hivex-1.3.2.ebuild,v 1.5 2011/11/10 12:53:10 maksbotan Exp $
 
 EAPI=4
 
@@ -43,6 +43,7 @@ DOCS=(README)
 pkg_setup() {
 	if use python; then
 		python_set_active_version 2
+		python_pkg_setup
 		python_need_rebuild
 	fi
 }

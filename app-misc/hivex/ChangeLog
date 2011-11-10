@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/hivex
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/ChangeLog,v 1.9 2011/11/06 09:09:07 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hivex/ChangeLog,v 1.10 2011/11/10 12:53:10 maksbotan Exp $
+
+  10 Nov 2011; Maxim Koltsov <maksbotan@gentoo.org> hivex-1.3.2.ebuild:
+  Fix pkg_setup to call python_pkg_setup, bug #389691. Thanks to Arfrever.
 
   06 Nov 2011; Maxim Koltsov <maksbotan@gentoo.org> hivex-1.3.2.ebuild:
   Replace pkg_config with pkg_setup, thanks to Arfrever, Bug #389691.
