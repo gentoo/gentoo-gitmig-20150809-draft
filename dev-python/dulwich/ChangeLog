@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dulwich
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.37 2011/10/31 20:52:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.38 2011/11/10 10:33:34 grobian Exp $
+
+  10 Nov 2011; Fabian Groffen <grobian@gentoo.org> dulwich-0.8.1.ebuild:
+  Marked ~amd64-linux
 
 *dulwich-0.8.1 (31 Oct 2011)
 
