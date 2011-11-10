@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdoc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.67 2011/09/14 17:14:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdoc/ChangeLog,v 1.68 2011/11/10 11:20:06 naota Exp $
+
+  10 Nov 2011; Naohiro Aota <naota@gentoo.org> rdoc-3.6.1.ebuild:
+  Add ~x86-fbsd
 
   14 Sep 2011; Jeroen Roovers <jer@gentoo.org> rdoc-3.5.1.ebuild:
   Stable for HPPA (bug #369573).
