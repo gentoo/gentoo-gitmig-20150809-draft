@@ -1,0 +1,28 @@
+From d0320842a1b749612b3cdb6f30617760c29ced75 Mon Sep 17 00:00:00 2001
+From: Brian Harring <ferringb@gmail.com>
+Date: Wed, 9 Nov 2011 15:28:32 -0800
+Subject: [PATCH] force python binary used for pinspect calls.
+
+---
+ .../ebuild/eapi-bash/ebuild-default-functions.lib  |    5 +++--
+ 1 files changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/pkgcore/ebuild/eapi-bash/ebuild-default-functions.lib b/pkgcore/ebuild/eapi-bash/ebuild-default-functions.lib
+index 3ee5e99..cff5405 100644
+--- a/pkgcore/ebuild/eapi-bash/ebuild-default-functions.lib
++++ b/pkgcore/ebuild/eapi-bash/ebuild-default-functions.lib
+@@ -13,8 +13,9 @@ portageq() {
+ 	# being snagged by the sandbox
+ 	local portageq_str=portageq
+ 	${PKGCORE_DISABLE_COMPAT-false} && portageq_str=query
+-	SANDBOX_on=0 PYTHONPATH="$PKGCORE_PYTHONPATH" "${PKGCORE_BIN_PATH}/pinspect" ${portageq_str} "${command}" \
+-	    --eapi "${EAPI:--1}" --use "${USE}" "$@"
++	SANDBOX_on=0 PYTHONPATH="$PKGCORE_PYTHONPATH" "${PKGCORE_PYTHON_BINARY}" \
++		"${PKGCORE_BIN_PATH}/pinspect" ${portageq_str} "${command}" \
++			--eapi "${EAPI:--1}" --use "${USE}" "$@"
+ 	local ret="$?"
+ 	[ "$ret" == 127 ] && die "pinspect couldn't be found; broken pkgcore installation?"
+ 	return $(( $ret ))
+-- 
+1.7.8.rc1
+
