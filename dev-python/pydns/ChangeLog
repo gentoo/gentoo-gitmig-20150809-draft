@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/pydns
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/ChangeLog,v 1.10 2011/07/10 00:51:10 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydns/ChangeLog,v 1.11 2011/11/10 23:23:01 sbriesen Exp $
+
+*pydns-3.0.1 (10 Nov 2011)
+*pydns-2.3.5-r1 (10 Nov 2011)
+
+  10 Nov 2011; Stefan Briesenick <sbriesen@gentoo.org> +pydns-2.3.5-r1.ebuild,
+  +pydns-3.0.1.ebuild:
+  rev-bump and slotting python2 version, version-bump and slotting python3
+  version. slot=3 replaces dev-python/py3dns.
 
 *pydns-2.3.5 (10 Jul 2011)
 
