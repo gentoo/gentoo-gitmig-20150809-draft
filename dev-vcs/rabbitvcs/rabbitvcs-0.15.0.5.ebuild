@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/rabbitvcs-0.14.1.1.ebuild,v 1.3 2011/10/24 05:45:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/rabbitvcs-0.15.0.5.ebuild,v 1.1 2011/11/10 10:27:24 xmw Exp $
 
-EAPI=2
+EAPI=4
 
 PYTHON_DEPEND="2:2.5"
 SUPPORT_PYTHON_ABIS="1"
@@ -12,7 +12,7 @@ inherit gnome2-utils distutils
 
 DESCRIPTION="Integrated version control support for your desktop"
 HOMEPAGE="http://rabbitvcs.org"
-SRC_URI="http://rabbitvcs.googlecode.com/files/${P}.tar.gz"
+SRC_URI="http://rabbitvcs.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -48,21 +48,24 @@ src_install() {
 	distutils_src_install
 
 	if use cli ; then
-		dobin clients/cli/${PN} || die
+		dobin clients/cli/${PN}
 	fi
 	if use gedit ; then
 		insinto /usr/$(get_libdir)/gedit-2/plugins
-		doins clients/gedit/${PN}-plugin.py || die
-		doins clients/gedit/${PN}.gedit-plugin || die
+		doins clients/gedit/${PN}-plugin.py
+		doins clients/gedit/${PN}.gedit-plugin
 	fi
 	if use nautilus ; then
 		insinto /usr/$(get_libdir)/nautilus/extensions-2.0/python
-		doins clients/nautilus/RabbitVCS.py || die
-	fi
+		doins clients/nautilus/RabbitVCS.py
+		insinto /usr/$(get_libdir)/nautilus/extensions-3.0/python
+		doins clients/nautilus-3.0/RabbitVCS.py
+	fi 
 	if use thunar ; then
-		has_version '>=xfce-base/thunar-1.1.0' && tv=2 || tv=1
-		insinto "/usr/$(get_libdir)/thunarx-${tv}/python"
-		doins clients/thunar/RabbitVCS.py || die
+		insinto "/usr/$(get_libdir)/thunarx-2/python"
+		doins clients/thunar/RabbitVCS.py
+		insinto "/usr/$(get_libdir)/thunarx-1/python"
+		doins clients/thunar/RabbitVCS.py
 	fi
 }
 
@@ -75,7 +78,7 @@ pkg_postinst() {
 	gnome2_icon_cache_update
 
 	elog "You should restart file manager to changes take effect:"
-	use nautilus && elog "\$ nautilus -q && nautilus &"
+	use nautilus && elog "\$ nautilus -q"
 	use thunar && elog "\$ thunar -q && thunar &"
 	elog ""
 	elog "Also you should really look at known issues page:"
