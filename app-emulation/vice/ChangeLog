@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.78 2011/10/24 04:12:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.79 2011/11/10 03:42:00 ssuominen Exp $
+
+  10 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> -vice-2.2.ebuild,
+  -files/vice-2.2-xshm.patch:
+  old
 
   24 Oct 2011; Michael Sterrett <mr_bones_@gentoo.org> vice-2.3.ebuild,
   +files/vice-2.3-notexi.patch:
