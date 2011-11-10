@@ -1,6 +1,9 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.496 2011/11/10 22:08:08 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.497 2011/11/10 23:49:09 floppym Exp $
+
+  10 Nov 2011; Mike Gilbert <floppym@gentoo.org> chromium-9999-r1.ebuild:
+  Apply workaround for bug 383371 to zip_internal.cc. Reported by godmachine-x6.
 
   10 Nov 2011; Mike Gilbert <floppym@gentoo.org> chromium-15.0.874.120.ebuild:
   Stable on amd64 based on testing by ago. Security bug 390113.
