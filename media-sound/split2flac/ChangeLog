@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/split2flac
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/split2flac/ChangeLog,v 1.7 2011/11/10 12:57:46 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/split2flac/ChangeLog,v 1.8 2011/11/10 17:00:54 maksbotan Exp $
+
+*split2flac-0.1_pre20111110-r1 (10 Nov 2011)
+
+  10 Nov 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  -split2flac-0.1_pre20111110.ebuild, +split2flac-0.1_pre20111110-r1.ebuild,
+  split2flac-9999.ebuild, metadata.xml:
+  Add support for enca, thanks to Nikoli
 
 *split2flac-0.1_pre20111110 (10 Nov 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/split2flac/split2flac-0.1_pre20111110.ebuild,v 1.1 2011/11/10 12:57:46 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/split2flac/split2flac-0.1_pre20111110-r1.ebuild,v 1.1 2011/11/10 17:00:54 maksbotan Exp $
 
 EAPI="4"
 
@@ -11,13 +11,14 @@ SRC_URI="http://dev.gentoo.org/~maksbotan/${PN}-${PV##*_pre}.sh"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="flake imagemagick mac mp3 mp4 ogg replaygain wavpack"
+IUSE="enca flake imagemagick mac mp3 mp4 ogg replaygain wavpack"
 
 RDEPEND="
 	app-cdr/cuetools
 	media-sound/shntool[mac?]
 	virtual/libiconv
 	media-libs/flac
+	enca? ( app-i18n/enca )
 	flake? ( media-sound/flake )
 	mp3? ( media-sound/lame || ( media-libs/mutagen media-libs/id3lib ) )
 	mp4? ( media-libs/faac media-libs/libmp4v2[utils] )
