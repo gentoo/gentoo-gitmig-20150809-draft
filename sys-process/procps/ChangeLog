@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.53 2011/09/26 23:09:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.54 2011/11/10 10:14:47 chainsaw Exp $
+
+  10 Nov 2011; Tony Vroon <chainsaw@gentoo.org> procps-3.2.8_p11.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah "Armageddon" El Lazkani in bug #390003.
 
 *procps-3.2.8_p11 (26 Sep 2011)
 
