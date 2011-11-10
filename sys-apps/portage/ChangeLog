@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.901 2011/11/10 06:07:09 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.902 2011/11/10 16:18:28 zmedico Exp $
+
+  10 Nov 2011; Zac Medico <zmedico@gentoo.org> portage-2.1.6.13.ebuild,
+  portage-2.1.6.7.ebuild:
+  Reference bug #330937 for the python-2.6.6 blocker in old portage. This
+  blocker breaks the upgrade path from <python-2.6 since python-2.6.5 is no
+  longer in the tree.
 
 *portage-2.2.0_alpha73 (10 Nov 2011)
 
