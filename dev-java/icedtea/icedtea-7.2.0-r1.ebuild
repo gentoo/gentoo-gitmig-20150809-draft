@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.0-r1.ebuild,v 1.7 2011/11/08 19:01:23 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.0-r1.ebuild,v 1.8 2011/11/10 21:42:12 sera Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -126,6 +126,9 @@ pkg_setup() {
 	if [[ "${MERGE_TYPE}" == "binary" ]]; then
 		return
 	fi
+
+	# icedtea doesn't like some locales. #330433 #389717
+	export LANG="C" LC_ALL="C"
 
 	# quite a hack since java-config does not provide a way for a package
 	# to limit supported VM's for building and their preferred order
