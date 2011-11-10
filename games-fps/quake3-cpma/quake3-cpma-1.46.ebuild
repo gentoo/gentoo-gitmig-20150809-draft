@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-cpma/quake3-cpma-1.46.ebuild,v 1.4 2009/10/10 17:25:18 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-cpma/quake3-cpma-1.46.ebuild,v 1.5 2011/11/10 16:05:01 mr_bones_ Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.challenge-tv.com/demostorage/files/cpm/cpma${PV//.}-nomaps.z
 	http://www.promode.org/files/cpma-mappack-full.zip"
 
 LICENSE="as-is"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~ppc x86"
 IUSE="dedicated opengl"
 
 src_prepare() {
