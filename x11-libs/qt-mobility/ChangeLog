@@ -1,0 +1,10 @@
+# ChangeLog for x11-libs/qt-mobility
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-mobility/ChangeLog,v 1.1 2011/11/10 23:16:04 pesa Exp $
+
+*qt-mobility-1.2.0 (10 Nov 2011)
+
+  10 Nov 2011; Davide Pesavento <pesa@gentoo.org> +qt-mobility-1.2.0.ebuild,
+  +metadata.xml:
+  Initial commit, imported from qting-edge overlay.
+
