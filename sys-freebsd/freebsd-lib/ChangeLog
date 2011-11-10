@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.103 2011/11/07 22:47:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.104 2011/11/10 14:29:54 aballier Exp $
+
+  10 Nov 2011; Alexis Ballier <aballier@gentoo.org> freebsd-lib-9.0_rc1.ebuild:
+  drop useless patch
 
   07 Nov 2011; Alexis Ballier <aballier@gentoo.org> freebsd-lib-9.0_rc1.ebuild,
   +files/freebsd-lib-9.0-mancol.patch:
