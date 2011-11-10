@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/pianobar
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pianobar/ChangeLog,v 1.9 2011/11/09 23:27:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pianobar/ChangeLog,v 1.10 2011/11/10 00:26:23 radhermit Exp $
+
+*pianobar-2011.11.09_p1 (10 Nov 2011)
+
+  10 Nov 2011; Tim Harder <radhermit@gentoo.org>
+  -files/pianobar-2011.07.09-tests.patch, -pianobar-2011.11.09.ebuild,
+  +pianobar-2011.11.09_p1.ebuild, +files/pianobar-2011.11.09_p1-tests.patch:
+  Bump to working snapshot with ssl support and remove old.
 
 *pianobar-2011.11.09 (09 Nov 2011)
 
