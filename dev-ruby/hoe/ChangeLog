@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hoe
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.123 2011/09/12 18:38:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hoe/ChangeLog,v 1.124 2011/11/10 11:56:55 naota Exp $
+
+  10 Nov 2011; Naohiro Aota <naota@gentoo.org> hoe-2.12.3.ebuild:
+  Add ~x86-fbsd
 
   12 Sep 2011; Hans de Graaff <graaff@gentoo.org> hoe-2.12.3.ebuild:
   Depend on rdoc gem since the code explicitly requires it now. Fixes 381233.
