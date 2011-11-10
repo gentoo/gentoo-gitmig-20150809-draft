@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/rabbitvcs-0.15.0.5.ebuild,v 1.1 2011/11/10 10:27:24 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rabbitvcs/rabbitvcs-0.15.0.5.ebuild,v 1.2 2011/11/10 16:05:20 mr_bones_ Exp $
 
 EAPI=4
 
@@ -60,7 +60,7 @@ src_install() {
 		doins clients/nautilus/RabbitVCS.py
 		insinto /usr/$(get_libdir)/nautilus/extensions-3.0/python
 		doins clients/nautilus-3.0/RabbitVCS.py
-	fi 
+	fi
 	if use thunar ; then
 		insinto "/usr/$(get_libdir)/thunarx-2/python"
 		doins clients/thunar/RabbitVCS.py
