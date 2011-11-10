@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.3-r1.ebuild,v 1.8 2011/10/27 18:57:28 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.9.3-r1.ebuild,v 1.9 2011/11/10 22:10:12 cardoe Exp $
 
 BACKPORTS=2
 AUTOTOOLIZE=yes
@@ -69,7 +69,7 @@ RDEPEND="sys-libs/readline
 	virt-network? ( net-dns/dnsmasq
 		>=net-firewall/iptables-1.4.10
 		net-firewall/ebtables
-		sys-apps/iproute2 )
+		sys-apps/iproute2[-minimal] )
 	elibc_glibc? ( || ( >=net-libs/libtirpc-0.2.2-r1 <sys-libs/glibc-2.14 ) )"
 # one? ( dev-libs/xmlrpc-c )
 DEPEND="${RDEPEND}
