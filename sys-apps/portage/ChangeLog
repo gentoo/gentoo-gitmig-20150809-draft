@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.898 2011/11/02 05:26:03 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.899 2011/11/10 05:55:22 zmedico Exp $
+
+  10 Nov 2011; Zac Medico <zmedico@gentoo.org> -portage-2.1.10.31.ebuild,
+  -portage-2.2.0_alpha71.ebuild:
+  Remove old versions.
 
   02 Nov 2011; Zac Medico <zmedico@gentoo.org> portage-9999.ebuild:
   Bump to EAPI 3 and add prefix support.
