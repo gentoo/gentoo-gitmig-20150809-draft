@@ -1,6 +1,14 @@
 # ChangeLog for sys-power/phctool
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/phctool/ChangeLog,v 1.6 2011/11/02 21:42:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/phctool/ChangeLog,v 1.7 2011/11/10 09:55:40 xmw Exp $
+
+*phctool-0.5.2.2-r2 (10 Nov 2011)
+
+  10 Nov 2011; Michael Weber <xmw@gentoo.org> -phctool-0.5.2.2.ebuild,
+  +phctool-0.5.2.2-r2.ebuild, +files/phctool-0.5.2.2_gui_kernel_2.6.38.patch,
+  files/phctool-0.5.2.2_kernel_2.6.36.patch:
+  Added gui patch for 2.6.28 and newer kernels (thanks to Fabio Veronese for
+  the patch, bug 360009)
 
   02 Nov 2011; Mike Frysinger <vapier@gentoo.org> phctool-0.5.2.2.ebuild,
   phctool-0.5.2.2-r1.ebuild:

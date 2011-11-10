@@ -1,5 +1,5 @@
---- ./phctool/inc/libs/cpuinfo.py	2007-10-17 18:08:27.000000000 +0200
-+++ attachment.cgi?id=260511	2011-02-06 18:40:56.746419981 +0100
+--- phctool-0.5.2-2/phctool/inc/libs/cpuinfo.py
++++ phctool-0.5.2-2/phctool/inc/libs/cpuinfo.py
 @@ -14,33 +14,49 @@
  
  
