@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/freeipmi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.41 2011/10/28 14:53:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.42 2011/11/10 17:34:29 phajdan.jr Exp $
+
+  10 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> freeipmi-0.8.9.ebuild:
+  Drop stable x86 keywords wrt bug #364485.
 
 *freeipmi-1.0.8 (28 Oct 2011)
 
