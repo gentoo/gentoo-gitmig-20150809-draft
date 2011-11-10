@@ -1,6 +1,13 @@
 # ChangeLog for app-office/libreoffice-l10n
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.14 2011/11/08 21:20:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.15 2011/11/10 20:35:58 scarabeus Exp $
+
+*libreoffice-l10n-3.4.4 (10 Nov 2011)
+
+  10 Nov 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  +libreoffice-l10n-3.4.4.ebuild, libreoffice-l10n-9999.ebuild,
+  +files/lo_gen_langs.sh:
+  Version bump, fill all the missing langs.
 
   08 Nov 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   libreoffice-l10n-9999.ebuild:
