@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/aqualung
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/ChangeLog,v 1.22 2011/09/11 19:34:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/ChangeLog,v 1.23 2011/11/10 12:18:56 aballier Exp $
+
+  10 Nov 2011; Alexis Ballier <aballier@gentoo.org>
+  aqualung-0.9_beta11-r1.ebuild, +files/aqualung-0.9_beta11-ffmpeg.patch:
+  fix build with ffmpeg/libav trunk, bug #379075
 
   11 Sep 2011; Samuli Suominen <ssuominen@gentoo.org>
   -aqualung-0.9_beta11.ebuild:
