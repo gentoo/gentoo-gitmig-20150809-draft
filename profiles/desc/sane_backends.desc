@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/sane_backends.desc,v 1.3 2011/05/08 19:35:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/sane_backends.desc,v 1.4 2011/11/10 20:53:03 phosphan Exp $
 
 # This file contains descriptions of SANE_BACKENDS USE_EXPAND flags for media-gfx/sane-backends.
 
@@ -67,6 +67,7 @@ pint - SANE_BACKENDS setting for building the pint backend
 pixma - SANE_BACKENDS setting for building the pixma backend
 plustek - SANE_BACKENDS setting for building the plustek backend
 plustek_pp - SANE_BACKENDS setting for building the plustek_pp backend
+pnm - SANE_BACKENDS settings for building the pnm test backend, considered a possible security risk
 qcam - SANE_BACKENDS setting for building the qcam backend
 ricoh - SANE_BACKENDS setting for building the ricoh backend
 rts8891 - SANE_BACKENDS setting for building the rts8891 backend
