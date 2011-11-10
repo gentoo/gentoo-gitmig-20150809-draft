@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/bitbake
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/ChangeLog,v 1.37 2011/08/19 23:33:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/bitbake/ChangeLog,v 1.38 2011/11/10 19:34:58 radhermit Exp $
+
+*bitbake-1.14.0 (10 Nov 2011)
+
+  10 Nov 2011; Tim Harder <radhermit@gentoo.org> +bitbake-1.14.0.ebuild:
+  Version bump.
 
   19 Aug 2011; Tim Harder <radhermit@gentoo.org> bitbake-1.13.2.ebuild,
   bitbake-1.13.3.ebuild:
