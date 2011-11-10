@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/less
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.132 2011/11/09 18:43:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/less/ChangeLog,v 1.133 2011/11/10 10:52:11 chainsaw Exp $
+
+  10 Nov 2011; Tony Vroon <chainsaw@gentoo.org> less-444.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah "Armageddon" El Lazkani in bug #389995.
 
 *less-445-r1 (09 Nov 2011)
 
