@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.4.ebuild,v 1.7 2011/10/25 09:08:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.3.4.ebuild,v 1.8 2011/11/10 21:11:30 scarabeus Exp $
 
 EAPI="3"
 
@@ -272,7 +272,7 @@ src_prepare() {
 	cp -f "${FILESDIR}/${PN}-libdb5-fix-check.diff" "${S}/patches/hotfixes"
 	cp -f "${FILESDIR}/${PN}-3.3.2-bison25.diff" "${S}/patches/hotfixes"
 	# Bug #387735
-	cp -f "${FILESDIR}/${PN}-3.3.4-poppler-0.18.0.diff" "${S}/patches/hotfixes"
+	use java && cp -f "${FILESDIR}/${PN}-3.3.4-poppler-0.18.0.diff" "${S}/patches/hotfixes"
 
 	#Use flag checks
 	if use java ; then
