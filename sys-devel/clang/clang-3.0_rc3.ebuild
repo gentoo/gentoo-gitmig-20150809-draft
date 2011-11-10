@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.0_rc3.ebuild,v 1.1 2011/11/09 22:55:22 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.0_rc3.ebuild,v 1.2 2011/11/10 14:01:41 voyageur Exp $
 
 EAPI=3
 
@@ -99,7 +99,14 @@ src_configure() {
 }
 
 src_compile() {
-	emake VERBOSE=1 KEEP_SYMBOLS=1 REQUIRES_RTTI=1 clang-only || die "emake failed"
+	local COMPILE_TARGET
+	if use test; then
+		COMPILE_TARGET="all"
+	else
+		COMPILE_TARGET="clang-only"
+	fi
+	emake VERBOSE=1 KEEP_SYMBOLS=1 REQUIRES_RTTI=1 \
+		${COMPILE_TARGET} || die "emake failed"
 }
 
 src_test() {
@@ -107,6 +114,10 @@ src_test() {
 	emake site.exp || die "updating llvm site.exp failed"
 
 	cd "${S}"/tools/clang || die "cd clang failed"
+
+	# Broken test always assuming i386 host with multilib gcc 4.6.0
+	# http://llvm.org/bugs/show_bug.cgi?id=11094
+	rm -f test/Driver/linux-ld.c
 
 	echo ">>> Test phase [test]: ${CATEGORY}/${PF}"
 	if ! emake -j1 VERBOSE=1 test; then
