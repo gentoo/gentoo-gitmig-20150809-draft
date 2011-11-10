@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.1.1.ebuild,v 1.4 2011/07/09 00:20:27 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-4.1.1.ebuild,v 1.5 2011/11/10 13:22:19 naota Exp $
 
 EAPI="2"
 inherit flag-o-matic toolchain-funcs eutils
@@ -19,7 +19,7 @@ RDEPEND="net-libs/libpcap
 	smi? ( net-libs/libsmi )
 	ssl? ( >=dev-libs/openssl-0.9.6m )"
 DEPEND="${RDEPEND}
-	test? ( app-arch/sharutils
+	test? ( || ( app-arch/sharutils sys-freebsd/freebsd-ubin )
 		dev-lang/perl )"
 
 pkg_setup() {
