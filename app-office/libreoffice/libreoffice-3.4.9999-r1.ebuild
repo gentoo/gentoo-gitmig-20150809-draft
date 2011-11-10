@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999-r1.ebuild,v 1.20 2011/11/09 19:08:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999-r1.ebuild,v 1.21 2011/11/10 12:28:02 scarabeus Exp $
 
 EAPI=4
 
@@ -211,9 +211,9 @@ PATCHES=(
 )
 
 REQUIRED_USE="
-	|| ( gtk gnome kde )
 	gnome? ( gtk )
 	nsplugin? ( gtk )
+	eds? ( gnome )
 "
 
 # Needs lots and lots of work and compiling
