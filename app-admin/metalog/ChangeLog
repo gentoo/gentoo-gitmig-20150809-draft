@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/metalog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.95 2011/11/10 10:49:51 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.96 2011/11/10 23:53:29 jer Exp $
+
+  10 Nov 2011; Jeroen Roovers <jer@gentoo.org> metalog-2.ebuild:
+  Stable for HPPA (bug #390033).
 
   10 Nov 2011; Tony Vroon <chainsaw@gentoo.org> metalog-2.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
