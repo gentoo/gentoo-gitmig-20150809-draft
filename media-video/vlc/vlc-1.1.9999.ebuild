@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.9999.ebuild,v 1.34 2011/10/31 16:32:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.1.9999.ebuild,v 1.35 2011/11/11 12:21:09 aballier Exp $
 
 EAPI="3"
 
@@ -89,7 +89,7 @@ RDEPEND="
 		kate? ( >=media-libs/libkate-0.1.1 )
 		libass? ( >=media-libs/libass-0.9.6 media-libs/fontconfig )
 		libcaca? ( >=media-libs/libcaca-0.99_beta14 )
-		libnotify? ( x11-libs/libnotify )
+		libnotify? ( x11-libs/libnotify x11-libs/gtk+:2 )
 		libproxy? ( net-libs/libproxy )
 		libtiger? ( media-libs/libtiger )
 		lirc? ( app-misc/lirc )
