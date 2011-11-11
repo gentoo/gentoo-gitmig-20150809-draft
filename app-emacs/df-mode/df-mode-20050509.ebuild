@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/df-mode/df-mode-20050509.ebuild,v 1.5 2009/03/03 06:54:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/df-mode/df-mode-20050509.ebuild,v 1.6 2011/11/11 21:51:34 ulm Exp $
+
+EAPI=4
 
 inherit elisp
 
@@ -16,10 +18,3 @@ KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 SITEFILE="50${PN}-gentoo.el"
-
-pkg_postinst() {
-	elisp-site-regen
-	einfo "If you are updating from df-1.5: The user interface for df-mode"
-	einfo "has changed. See <http://www.emacswiki.org/cgi-bin/wiki/DfMode>"
-	einfo "for documentation."
-}
