@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/roxterm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.51 2011/11/07 00:33:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/roxterm/ChangeLog,v 1.52 2011/11/11 09:23:34 phajdan.jr Exp $
+
+  11 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> roxterm-2.2.2.ebuild:
+  x86 stable wrt bug #389583
 
   07 Nov 2011; Brent Baude <ranger@gentoo.org> roxterm-2.2.2.ebuild:
   Marking roxterm-2.2.2 ppc for bug 389583
