@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.99 2011/10/28 08:44:36 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.100 2011/11/11 01:46:45 anarchy Exp $
+
+*thunderbird-8.0 (11 Nov 2011)
+
+  11 Nov 2011; Jory A. Pratt <anarchy@gentoo.org> +thunderbird-8.0.ebuild:
+  Version bump, security bug #389923
 
   28 Oct 2011; Tony Vroon <chainsaw@gentoo.org> thunderbird-7.0.1-r1.ebuild:
   Marked stable on AMD64 based on arch testing by Elijah "Armageddon" El
