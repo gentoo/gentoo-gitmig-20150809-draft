@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20110923.491607.ebuild,v 1.2 2011/11/11 14:20:19 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20111026.514583.ebuild,v 1.1 2011/11/11 14:20:19 vadimk Exp $
 
 EAPI="2"
 
@@ -58,7 +58,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/default-scripts.patch"
+	#epatch "${FILESDIR}/default-scripts.patch"
 	#epatch "${FILESDIR}/checkvm-pie-safety.patch"
 	#sed -i -e 's/proc-3.2.7/proc/g' configure || die "sed configure failed"
 	# Do not filter out Werror
@@ -100,6 +100,9 @@ src_install() {
 
 	newinitd "${FILESDIR}/open-vm-tools.initd" vmware-tools || die "failed to newinitd"
 	newconfd "${FILESDIR}/open-vm.confd" vmware-tools || die "failed to newconfd"
+
+	exeinto /etc/vmware-tools/scripts/vmware/
+	doexe "${FILESDIR}"/network
 
 	if use X;
 	then
