@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/mldonkey
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mldonkey/ChangeLog,v 1.23 2010/06/27 07:37:02 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mldonkey/ChangeLog,v 1.24 2011/11/11 22:14:23 ulm Exp $
+
+  11 Nov 2011; Ulrich Mueller <ulm@gentoo.org> +files/50mldonkey-gentoo.el,
+  -files/51mldonkey-gentoo.el, mldonkey-0.0.4b-r1.ebuild:
+  Upgrade postinst message from einfo to elog. Bump EAPI to 4. Move site-init
+  file to its canonical name.
 
   27 Jun 2010; Christian Faulhammer <fauli@gentoo.org>
   mldonkey-0.0.4b-r1.ebuild:
