@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/shigofumi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/shigofumi/ChangeLog,v 1.4 2011/05/03 11:26:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/shigofumi/ChangeLog,v 1.5 2011/11/11 11:30:01 scarabeus Exp $
+
+  11 Nov 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
+  Drop me from maint.
 
   03 May 2011; Tomáš Chvátal <scarabeus@gentoo.org> shigofumi-9999.ebuild:
   Bump eapi to latest.
