@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.64.3.ebuild,v 1.1 2011/08/24 18:28:06 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.64.3.ebuild,v 1.2 2011/11/11 20:12:43 vapier Exp $
 
 inherit bash-completion eutils
 
@@ -37,7 +37,7 @@ DEPEND="${COMMON_DEPEND}
 		ruby-bindings? ( dev-ruby/syntax dev-ruby/allison )
 	)
 	dev-util/pkgconfig
-	dev-util/gtest"
+	dev-cpp/gtest"
 
 RDEPEND="${COMMON_DEPEND}
 	sys-apps/sandbox"
@@ -60,10 +60,10 @@ pkg_setup() {
 		die "Rebuild dev-libs/libpcre with USE=cxx"
 	fi
 
-	if ! built_with_use dev-util/gtest threads ; then
-		eerror "Paludis needs dev-util/gtest built with threads support"
-		eerror "Please build dev-util/gtest with USE=threads support"
-		die "Rebuild dev-util/gtest with USE threads"
+	if ! built_with_use dev-cpp/gtest threads ; then
+		eerror "Paludis needs dev-cpp/gtest built with threads support"
+		eerror "Please build dev-cpp/gtest with USE=threads support"
+		die "Rebuild dev-cpp/gtest with USE threads"
 	fi
 
 	if use python-bindings && \
