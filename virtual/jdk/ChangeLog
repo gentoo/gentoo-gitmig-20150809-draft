@@ -1,6 +1,9 @@
 # ChangeLog for virtual/jdk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.41 2011/11/07 16:05:27 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/jdk/ChangeLog,v 1.42 2011/11/11 10:54:24 caster Exp $
+
+  11 Nov 2011; Vlastimil Babka <caster@gentoo.org> jdk-1.7.0.ebuild:
+  Add icedtea-bin-7 variant.
 
   07 Nov 2011; Vlastimil Babka <caster@gentoo.org> jdk-1.6.0.ebuild:
   Prepare for icedtea-bin version and VMHANDLE migration.
