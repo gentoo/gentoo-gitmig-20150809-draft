@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.3-r2.ebuild,v 1.11 2011/11/03 12:48:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.3-r2.ebuild,v 1.12 2011/11/11 21:38:52 ulm Exp $
 
 EAPI=4
 WANT_AUTOMAKE="none"
@@ -266,8 +266,8 @@ src_install () {
 		rm -rf "${ED}"/Applications/Gentoo/Emacs${EMACS_SUFFIX#emacs}.app
 		mv nextstep/Emacs.app \
 			"${ED}"/Applications/Gentoo/Emacs${EMACS_SUFFIX#emacs}.app || die
-		einfo "Emacs${EMACS_SUFFIX#emacs}.app is in ${EPREFIX}/Applications/Gentoo."
-		einfo "You may want to copy or symlink it into /Applications by yourself."
+		elog "Emacs${EMACS_SUFFIX#emacs}.app is in ${EPREFIX}/Applications/Gentoo."
+		elog "You may want to copy or symlink it into /Applications by yourself."
 	fi
 }
 
