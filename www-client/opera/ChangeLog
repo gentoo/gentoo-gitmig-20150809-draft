@@ -1,6 +1,12 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.662 2011/11/10 11:25:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.663 2011/11/11 17:57:03 jer Exp $
+
+*opera-11.60.1150 (11 Nov 2011)
+
+  11 Nov 2011; Jeroen Roovers <jer@gentoo.org> +opera-11.60.1150.ebuild:
+  http://my.opera.com/desktopteam/blog/2011/11/11/the-first-opera-11-60-post-be
+  ta-snapshot
 
   10 Nov 2011; Jeroen Roovers <jer@gentoo.org> opera-11.60.1147.ebuild:
   http://my.opera.com/desktopteam/blog/2011/11/10/tunny-beta
