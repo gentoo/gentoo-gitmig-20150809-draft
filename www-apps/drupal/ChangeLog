@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.74 2011/09/05 05:34:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.75 2011/11/11 04:56:32 radhermit Exp $
+
+*drupal-7.9 (11 Nov 2011)
+
+  11 Nov 2011; Tim Harder <radhermit@gentoo.org> +drupal-7.9.ebuild:
+  Version bump.
 
 *drupal-7.8 (05 Sep 2011)
 
