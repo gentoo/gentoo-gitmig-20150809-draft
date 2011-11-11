@@ -1,6 +1,11 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.104 2011/10/31 00:35:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.105 2011/11/11 01:36:32 anarchy Exp $
+
+*firefox-8.0 (11 Nov 2011)
+
+  11 Nov 2011; Jory A. Pratt <anarchy@gentoo.org> +firefox-8.0.ebuild:
+  Version bump, security bug #389923
 
   31 Oct 2011; Jeroen Roovers <jer@gentoo.org> firefox-3.6.20.ebuild,
   firefox-3.6.21.ebuild, firefox-3.6.22.ebuild:
