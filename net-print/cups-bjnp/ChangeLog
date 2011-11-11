@@ -1,6 +1,9 @@
 # ChangeLog for net-print/cups-bjnp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups-bjnp/ChangeLog,v 1.1 2011/10/08 18:22:59 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups-bjnp/ChangeLog,v 1.2 2011/11/11 13:46:43 vadimk Exp $
+
+  11 Nov 2011; Vadim Kuznetsov <vadimk@gentoo.org> cups-bjnp-1.0.ebuild:
+  Fix QA issues: Bug 386583. Thanks Tiziano Muller
 
 *cups-bjnp-1.0 (08 Oct 2011)
 
