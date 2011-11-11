@@ -1,10 +1,11 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.43.ebuild,v 1.15 2010/03/13 19:14:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.43.ebuild,v 1.16 2011/11/11 20:36:37 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="3.* *-jython"
 DISTUTILS_SRC_TEST="trial"
 DISTUTILS_DISABLE_TEST_DEPENDENCY="1"
 
@@ -18,63 +19,68 @@ SRC_URI="mirror://debian/pool/main/l/ldaptor/${PN}_${PV}.orig.tar.gz
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 ia64 ppc sparc x86"
-IUSE="web doc samba"
+IUSE="doc samba web"
 
-DEPEND=">=dev-python/twisted-2
-	dev-python/twisted-names
+DEPEND="dev-python/pyparsing
+	>=dev-python/twisted-2
 	dev-python/twisted-mail
-	dev-python/pyparsing
-	web? (
-		>=dev-python/nevow-0.3
-		dev-python/twisted-web
-		dev-python/webut
-	)
+	dev-python/twisted-names
 	doc? (
 		dev-python/epydoc
 		dev-libs/libxslt
 		app-text/docbook-xsl-stylesheets
 	)
-	samba? ( dev-python/pycrypto )"
+	samba? ( dev-python/pycrypto )
+	web? (
+		>=dev-python/nevow-0.3
+		dev-python/twisted-web
+		dev-python/webut
+	)"
 RDEPEND="${DEPEND}"
-RESTRICT_PYTHON_ABIS="3.*"
 
 DOCS="README TODO ldaptor.schema"
 
 src_prepare() {
+	distutils_src_prepare
 	epatch "${FILESDIR}/${P}-zope_interface.patch"
 	epatch "${FILESDIR}/${P}-usage-exception.patch"
+
+	# Delete test with additional dependencies.
+	if ! use web; then
+		rm -f ldaptor/test/test_webui.py
+	fi
 }
 
 src_compile() {
 	distutils_src_compile
+
 	if use doc; then
 		cp "${WORKDIR}/ldaptor-pictures/"*.dia.png doc/
-		cd doc
+		pushd doc > /dev/null
 		# skip the slides generation because it doesn't work
 		sed -e "/\$(SLIDES:%\.xml=%\/index\.html) /d" -i Makefile
 		# replace the docbook.xsl with something that exists
 		stylesheet='xsl-stylesheets'
 		sed -e "s#stylesheet/xsl/nwalsh#${stylesheet}#" -i Makefile
 		emake || die "make failed"
-		cd ..
+		popd > /dev/null
 	fi
-}
-
-src_test() {
-	# Delete test with additional dependencies.
-	if ! use web; then
-		rm -f ldaptor/test/test_webui.py
-	fi
-
-	distutils_src_test
 }
 
 src_install() {
 	distutils_src_install
 
+	delete_tests() {
+		rm -fr "${ED}$(python_get_sitedir)/ldaptor/test"
+	}
+	python_execute_function -q delete_tests
+
 	if ! use web; then
-		rm -f "${D}"usr/bin/ldaptor-webui*
-		rm -fr "${D}"usr/$(get_libdir)/python*/site-packages/ldaptor/apps/webui
+		rm -f "${ED}"usr/bin/ldaptor-webui*
+		delete_webui() {
+			rm -fr "${ED}$(python_get_sitedir)/ldaptor/apps/webui"
+		}
+		python_execute_function -q delete_webui
 	else
 		copy_skin-default() {
 			cp ldaptor/apps/webui/skin-default.html "${D}$(python_get_sitedir)/ldaptor/apps/webui"
