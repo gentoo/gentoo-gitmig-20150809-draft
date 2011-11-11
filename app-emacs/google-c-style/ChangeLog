@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/google-c-style
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/google-c-style/ChangeLog,v 1.4 2010/11/17 10:56:52 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/google-c-style/ChangeLog,v 1.5 2011/11/11 22:04:44 ulm Exp $
+
+  11 Nov 2011; Ulrich Mueller <ulm@gentoo.org>
+  google-c-style-20091009-r1.ebuild:
+  Upgrade postinst message from einfo to elog. Bump EAPI to 4.
 
   17 Nov 2010; Markus Meier <maekke@gentoo.org>
   google-c-style-20091009-r1.ebuild:

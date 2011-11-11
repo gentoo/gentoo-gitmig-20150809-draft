@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/google-c-style/google-c-style-20091009-r1.ebuild,v 1.3 2010/11/17 10:56:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/google-c-style/google-c-style-20091009-r1.ebuild,v 1.4 2011/11/11 22:04:44 ulm Exp $
+
+EAPI=4
 
 inherit elisp
 
@@ -13,12 +15,13 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
+S="${WORKDIR}"
 SITEFILE="50${PN}-gentoo.el"
 
 pkg_postinst() {
 	elisp-site-regen
 
-	einfo "Example usage (.emacs):"
-	einfo "  (add-hook 'c-mode-common-hook 'google-set-c-style)"
-	einfo "  (add-hook 'c-mode-common-hook 'google-make-newline-indent)"
+	elog "Example usage (~/.emacs):"
+	elog "  (add-hook 'c-mode-common-hook 'google-set-c-style)"
+	elog "  (add-hook 'c-mode-common-hook 'google-make-newline-indent)"
 }
