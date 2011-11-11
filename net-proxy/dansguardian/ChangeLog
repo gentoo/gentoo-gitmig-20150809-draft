@@ -1,6 +1,6 @@
 # ChangeLog for net-proxy/dansguardian
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.50 2011/11/11 17:25:09 phajdan.jr Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.51 2011/11/11 20:37:34 phajdan.jr Exp $
 
 *dansguardian-2.10.1.1-r1 (11 Nov 2011)
 
@@ -10,7 +10,7 @@
 
 *dansguardian-2.10.1.1 (05 Jul 2009)
 
-  05 Jul 2009; Alin NÄstac <mrness@gentoo.org>
+  05 Jul 2009; Alin Năstac <mrness@gentoo.org>
   +files/dansguardian-2.10.0.3-gcc44.patch,
   +files/dansguardian-2.10.1.1-gcc44.patch,
   -files/dansguardian-2.10-uclibc++.patch, -dansguardian-2.10-r1.ebuild,
@@ -27,13 +27,13 @@
   12 Apr 2009; Brent Baude <ranger@gentoo.org> dansguardian-2.10.0.3.ebuild:
   stable ppc64, bug 265496
 
-  08 Apr 2009; Alin NÄstac <mrness@gentoo.org>
+  08 Apr 2009; Alin Năstac <mrness@gentoo.org>
   dansguardian-2.10.0.3.ebuild:
   Remove libclamav support, broken by clamav-0.95 (#264820).
 
 *dansguardian-2.10.0.3 (17 Feb 2009)
 
-  17 Feb 2009; Alin NÄstac <mrness@gentoo.org>
+  17 Feb 2009; Alin Năstac <mrness@gentoo.org>
   -files/dansguardian-xnaughty-2.7.6-1.diff,
   -files/dansguardian-2.8.0.6-ctime.patch,
   -files/dansguardian-2.8.0.6-gentoo.patch,
@@ -43,7 +43,7 @@
 
 *dansguardian-2.10-r2 (01 Dec 2008)
 
-  01 Dec 2008; Alin NÄstac <mrness@gentoo.org>
+  01 Dec 2008; Alin Năstac <mrness@gentoo.org>
   +files/dansguardian-2.10-uclibc++.patch, +dansguardian-2.10-r2.ebuild:
   Fix broken build when compiled using uclibc++, thanks to Natanael Copa
   <natanael dot copa at gmail dot com> (#247547).
@@ -59,13 +59,13 @@
 
 *dansguardian-2.10-r1 (12 Oct 2008)
 
-  12 Oct 2008; Alin NÄstac <mrness@gentoo.org> -dansguardian-2.10.ebuild,
+  12 Oct 2008; Alin Năstac <mrness@gentoo.org> -dansguardian-2.10.ebuild,
   +dansguardian-2.10-r1.ebuild:
   Install doc files using the Gentoo's standard path (#241314).
 
 *dansguardian-2.10 (09 Oct 2008)
 
-  09 Oct 2008; Alin NÄstac <mrness@gentoo.org>
+  09 Oct 2008; Alin Năstac <mrness@gentoo.org>
   -files/dansguardian-2.9.9.4-gentoo.patch,
   -dansguardian-2.9.9.4_beta.ebuild, +dansguardian-2.10.ebuild:
   Version bump (#240686).
@@ -75,7 +75,7 @@
 
 *dansguardian-2.9.9.5_beta (13 Jul 2008)
 
-  13 Jul 2008; Alin NÄstac <mrness@gentoo.org>
+  13 Jul 2008; Alin Năstac <mrness@gentoo.org>
   -files/dansguardian-2.9.9.3-gentoo.patch,
   +files/dansguardian-2.9.9.5-gentoo.patch,
   -dansguardian-2.9.9.3_beta.ebuild, +dansguardian-2.9.9.5_beta.ebuild:
@@ -83,7 +83,7 @@
 
 *dansguardian-2.9.9.4_beta (14 May 2008)
 
-  14 May 2008; Alin NÄstac <mrness@gentoo.org>
+  14 May 2008; Alin Năstac <mrness@gentoo.org>
   -files/dansguardian-2.9.9.2-gentoo.patch,
   +files/dansguardian-2.9.9.4-gentoo.patch,
   -dansguardian-2.9.9.2_beta.ebuild, +dansguardian-2.9.9.4_beta.ebuild:
@@ -91,7 +91,7 @@
 
 *dansguardian-2.9.9.3_beta (20 Apr 2008)
 
-  20 Apr 2008; Alin NÄstac <mrness@gentoo.org>
+  20 Apr 2008; Alin Năstac <mrness@gentoo.org>
   -files/dansguardian-2.9.9.1-gentoo.patch,
   -files/dansguardian-2.9.9.1-no-default-lists.patch,
   -files/dansguardian-2.9.9.1-uclibc++.patch,
@@ -101,7 +101,7 @@
 
 *dansguardian-2.9.9.2_beta (30 Dec 2007)
 
-  30 Dec 2007; Alin NÄstac <mrness@gentoo.org>
+  30 Dec 2007; Alin Năstac <mrness@gentoo.org>
   -files/dansguardian-2.9.9.0-gentoo.patch,
   -files/dansguardian-2.9.9.0-no-default-lists.patch,
   -files/dansguardian-2.9.9.0-uclibc++.patch,
@@ -111,7 +111,7 @@
 
 *dansguardian-2.9.9.1_beta (09 Sep 2007)
 
-  09 Sep 2007; Alin NÄstac <mrness@gentoo.org>
+  09 Sep 2007; Alin Năstac <mrness@gentoo.org>
   -files/dansguardian-2.9.8.5-gentoo.patch,
   -files/dansguardian-2.9.8.5-uclibc++.patch,
   +files/dansguardian-2.9.9.1-gentoo.patch,
@@ -122,7 +122,7 @@
 
 *dansguardian-2.9.9.0_beta (18 Aug 2007)
 
-  18 Aug 2007; Alin NÄstac <mrness@gentoo.org>
+  18 Aug 2007; Alin Năstac <mrness@gentoo.org>
   +files/dansguardian-2.9.9.0-gentoo.patch,
   +files/dansguardian-2.9.9.0-no-default-lists.patch,
   +files/dansguardian-2.9.9.0-uclibc++.patch,
@@ -130,7 +130,7 @@
   +dansguardian-2.9.9.0_beta.ebuild:
   Version bump. Remove dansguardian-dgav block atom from DEPENDs.
 
-  17 Jun 2007; Alin NÄstac <mrness@gentoo.org>
+  17 Jun 2007; Alin Năstac <mrness@gentoo.org>
   -files/dansguardian-2.9.8.2-gentoo.patch,
   -files/dansguardian-2.9.8.2-uclibc++.patch,
   -dansguardian-2.9.8.2_beta-r1.ebuild, dansguardian-2.9.8.5_beta.ebuild:
@@ -143,7 +143,7 @@
 
 *dansguardian-2.9.8.5_beta (04 Apr 2007)
 
-  04 Apr 2007; Alin NÄstac <mrness@gentoo.org>
+  04 Apr 2007; Alin Năstac <mrness@gentoo.org>
   +files/dansguardian-2.9.8.5-gentoo.patch,
   +files/dansguardian-2.9.8.5-uclibc++.patch,
   +dansguardian-2.9.8.5_beta.ebuild:
@@ -151,7 +151,7 @@
 
 *dansguardian-2.9.8.2_beta-r1 (26 Mar 2007)
 
-  26 Mar 2007; Alin NÄstac <mrness@gentoo.org>
+  26 Mar 2007; Alin Năstac <mrness@gentoo.org>
   -files/dansguardian-2.9.8.1-gentoo.patch,
   -files/dansguardian-2.9.8.1-uclibc++.patch,
   -dansguardian-2.9.8.1_beta.ebuild, -dansguardian-2.9.8.2_beta.ebuild,
@@ -161,7 +161,7 @@
 
 *dansguardian-2.9.8.2_beta (01 Feb 2007)
 
-  01 Feb 2007; Alin NÄstac <mrness@gentoo.org>
+  01 Feb 2007; Alin Năstac <mrness@gentoo.org>
   -files/dansguardian-2.9.8.0-gentoo.patch,
   -files/dansguardian-2.9.8.0-uclibc++.patch,
   +files/dansguardian-2.9.8.2-gentoo.patch,
@@ -171,7 +171,7 @@
 
 *dansguardian-2.9.8.1_beta (19 Dec 2006)
 
-  19 Dec 2006; Alin NÄstac <mrness@gentoo.org>
+  19 Dec 2006; Alin Năstac <mrness@gentoo.org>
   -files/dansguardian-2.9.7.5-ctime.patch,
   -files/dansguardian-2.9.7.5-lm.patch,
   -files/dansguardian-2.9.7.5_alpha-gentoo.patch,
