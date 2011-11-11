@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13225 2011/11/11 17:37:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13226 2011/11/11 20:20:19 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -66,11 +66,6 @@ x11-themes/polyester
 <app-emulation/vmware-modules-238.5
 <app-emulation/vmware-player-3.1.5
 <app-emulation/vmware-workstation-7.1.5
-
-# Samuli Suominen <ssuominen@gentoo.org> (04 Nov 2011)
-# Masked for removal in 30 days because the datafeed is no longer available:
-# http://mail.xfce.org/pipermail/goodies-dev/2011-October/003139.html
-<=xfce-extra/xfce4-weather-plugin-0.7.4
 
 # Michael Weber <xmw@gentoo.org> (04 Nov 2011)
 # Masked due security issue bug 385967
@@ -237,12 +232,6 @@ games-roguelike/fargoal
 # Anthony G. Basile <blueness@gentoo.org> (08 Oct 2011)
 # Masked while testing potentially dangerous utility
 dev-python/pypax
-
-# Samuli Suominen <ssuominen@gentoo.org> (06 Oct 2011)
-# Part of wxGTK-2.6 removal wrt bug #330683
-# Removal in 30 days
-games-action/xpilot-ng
-games-puzzle/londonlaw
 
 # Hans de Graaff <graaff@gentoo.org> (04 Oct 2011)
 # Mask stable version of ruby-activeldap since the sole version
@@ -536,12 +525,6 @@ dev-php/roadsend-php
 # Sebastian Pipping <sping@gentoo.org> (31 Aug 2011)
 # Upcoming bump, afraid of ~arch for now (bug #283152)
 ~media-gfx/gimp-2.7.3
-
-# Pacho Ramos <pacho@gentoo.org> (31 Ago 2011)
-# It still needs libsexy and was tagged as dead by upstream,
-# could reappear in the future if a 2.x release is launched
-# some day. bug #381221, removal in 30 days.
-net-irc/conspire
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (28 Aug 2011)
 # Breaks lots of rdeps.
