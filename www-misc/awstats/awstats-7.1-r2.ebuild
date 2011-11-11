@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/awstats-7.1-r1.ebuild,v 1.1 2011/11/11 12:32:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/awstats-7.1-r2.ebuild,v 1.1 2011/11/11 17:31:21 flameeyes Exp $
 
 EAPI=4
 
@@ -42,7 +42,7 @@ src_prepare() {
 	# change default installation directory
 	find . -type f -exec sed \
 		-e "s#/usr/local/awstats/wwwroot#/usr/share/awstats/wwwroot#g" \
-		-e '/PossibleLibDir/s:(.*):("/usr/share/awstats/wwwroot/lib"):' \
+		-e '/PossibleLibDir/s:(.*):("/usr/share/awstats/wwwroot/cgi-bin/lib"):' \
 		-i {} + || die "find/sed failed"
 
 	# set default values for directories; use apache log as an example
@@ -83,7 +83,7 @@ src_install() {
 		"${S}"/wwwroot/classes/src || die
 
 	insinto /usr/share/awstats
-	doins -r wwwroot || die
+	doins -r wwwroot
 	chmod +x "${D}"/usr/share/awstats/wwwroot/cgi-bin/*.pl
 
 	cd "${S}"/tools

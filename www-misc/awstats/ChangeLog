@@ -1,6 +1,12 @@
 # ChangeLog for www-misc/awstats
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/ChangeLog,v 1.23 2011/11/11 12:32:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/awstats/ChangeLog,v 1.24 2011/11/11 17:31:21 flameeyes Exp $
+
+*awstats-7.1-r2 (11 Nov 2011)
+
+  11 Nov 2011; Diego E. Pettenò <flameeyes@gentoo.org> +awstats-7.1-r2.ebuild,
+  -awstats-7.1-r1.ebuild:
+  Properly fix the mistake.
 
 *awstats-7.1-r1 (11 Nov 2011)
 
