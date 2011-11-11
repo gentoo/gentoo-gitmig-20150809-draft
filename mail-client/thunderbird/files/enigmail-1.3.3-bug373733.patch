@@ -1,0 +1,20 @@
+--- a/mailnews/extensions/enigmail/package/enigmail.js	2011-09-19 10:46:49.000000000 -0500
++++ b/mailnews/extensions/enigmail/package/enigmail.js	2011-11-11 06:30:21.000000000 -0600
+@@ -924,7 +924,7 @@
+           Components.classes["@mozilla.org/file/directory_service;1"].
+           getService(Components.interfaces.nsIProperties);
+ 
+-        var extensionLoc = directoryService.get("ProfD", Components.interfaces.nsIFile);
++        var extensionLoc = directoryService.get("CurProcD", Components.interfaces.nsIFile);
+         extensionLoc.append("extensions");
+         extensionLoc.append(ENIGMAIL_EXTENSION_ID);
+         extensionLoc.append("wrappers");
+@@ -1460,7 +1460,7 @@
+                 Components.classes["@mozilla.org/file/directory_service;1"].
+                 getService(Components.interfaces.nsIProperties);
+             var extensionLoc =
+-                directoryService.get("ProfD", Components.interfaces.nsIFile);
++                directoryService.get("CurProcD", Components.interfaces.nsIFile);
+             extensionLoc.append("extensions");
+             extensionLoc.append(ENIGMAIL_EXTENSION_ID);
+             extensionLoc.append("wrappers");

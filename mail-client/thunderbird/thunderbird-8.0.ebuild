@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-8.0.ebuild,v 1.1 2011/11/11 01:46:45 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-8.0.ebuild,v 1.2 2011/11/11 23:40:14 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -144,6 +144,8 @@ src_prepare() {
 
 	if use crypt ; then
 		mv "${WORKDIR}"/enigmail "${S}"/mailnews/extensions/enigmail
+		# Ensure enigmail can find its scripts for gpg
+		epatch "${FILESDIR}"/enigmail-1.3.3-bug373733.patch
 		cd "${S}"/mailnews/extensions/enigmail || die
 		./makemake -r 2&> /dev/null
 		sed -i -e 's:@srcdir@:${S}/mailnews/extensions/enigmail:' Makefile.in
