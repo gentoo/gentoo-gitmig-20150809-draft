@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdlna/libdlna-0.2.3.ebuild,v 1.2 2011/04/04 09:59:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdlna/libdlna-0.2.3.ebuild,v 1.3 2011/11/11 12:36:39 aballier Exp $
 
 EAPI=2
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="A reference open-source implementation of DLNA (Digital Living Network Alliance) standards."
 HOMEPAGE="http://libdlna.geexbox.org"
@@ -14,11 +14,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="virtual/ffmpeg"
+DEPEND=">=virtual/ffmpeg-0.6.90"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-libavcodec-libavformat-include-paths.patch"
+	epatch "${FILESDIR}/${P}-libavcodec-libavformat-include-paths.patch" \
+		"${FILESDIR}/${P}-ffmpeg_api.patch"
 }
 
 src_configure() {
@@ -26,6 +27,7 @@ src_configure() {
 	# --host is not implemented in ./configure file
 	./configure \
 		--prefix=/usr \
+		--libdir=/usr/$(get_libdir) \
 		|| die "./configure failed"
 }
 
