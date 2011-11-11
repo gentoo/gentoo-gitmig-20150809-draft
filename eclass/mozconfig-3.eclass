@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.23 2011/08/20 21:51:25 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.24 2011/11/11 01:37:44 anarchy Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -61,26 +61,24 @@ mozconfig_config() {
 		mozconfig_annotate 'mozjs' --enable-shared-js
 	fi
 
-	if [[ ${PN} != thunderbird ]]; then
-		if has +webm ${IUSE} && use webm; then
-			if ! use alsa; then
-				echo "Enabling alsa support due to webm request"
-				mozconfig_annotate '+webm -alsa' --enable-ogg
-				mozconfig_annotate '+webm -alsa' --enable-wave
-				mozconfig_annotate '+webm' --enable-webm
-				mozconfig_annotate '+webm' --with-system-libvpx="${EPREFIX}"/usr
-			else
-				mozconfig_use_enable webm
-				mozconfig_annotate '+webm' --with-system-libvpx="${EPREFIX}"/usr
-			fi
+	if has +webm ${IUSE} && use webm; then
+		if ! use alsa; then
+			echo "Enabling alsa support due to webm request"
+			mozconfig_annotate '+webm -alsa' --enable-ogg
+			mozconfig_annotate '+webm -alsa' --enable-wave
+			mozconfig_annotate '+webm' --enable-webm
+			mozconfig_annotate '+webm' --with-system-libvpx="${EPREFIX}"/usr
 		else
-			mozconfig_annotate '' --disable-webm
-			mozconfig_annotate '' --disable-system-libvpx
+			mozconfig_use_enable webm
+			mozconfig_annotate '+webm' --with-system-libvpx="${EPREFIX}"/usr
 		fi
+	else
+		mozconfig_annotate '' --disable-webm
+		mozconfig_annotate '' --disable-system-libvpx
+	fi
 
-		if use amd64 || use x86 || use arm || use sparc; then
-			mozconfig_annotate '' --enable-tracejit
-		fi
+	if use amd64 || use x86 || use arm || use sparc; then
+		mozconfig_annotate '' --enable-tracejit
 	fi
 
 	# These are enabled by default in all mozilla applications
