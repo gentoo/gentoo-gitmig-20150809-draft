@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.274 2011/11/11 01:02:03 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.275 2011/11/11 12:07:15 flameeyes Exp $
+
+  11 Nov 2011; Diego E. Pettenò <flameeyes@gentoo.org> ppp-2.4.5-r2.ebuild:
+  QA: fetch the patchset from dev.gentoo.org rather than mirrors.
 
 *ppp-2.4.5-r2 (11 Nov 2011)
 

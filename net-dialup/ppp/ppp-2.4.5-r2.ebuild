@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.5-r2.ebuild,v 1.1 2011/11/11 01:02:03 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.5-r2.ebuild,v 1.2 2011/11/11 12:07:15 flameeyes Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit eutils toolchain-funcs linux-info pam
 DESCRIPTION="Point-to-Point Protocol (PPP)"
 HOMEPAGE="http://www.samba.org/ppp"
 SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz
-	mirror://gentoo/${P}-gentoo-20111111.tar.gz
+	http://dev.gentoo.org/~flameeyes/qa-copies/${P}-gentoo-20111111.tar.gz
 	dhcp? ( http://www.netservers.co.uk/gpl/ppp-dhcpc.tgz )"
 
 LICENSE="BSD GPL-2"
@@ -192,9 +192,9 @@ src_install() {
 	dodoc "${FILESDIR}/README.mpls"
 
 	dosbin scripts/pon && \
-	    dosbin scripts/poff && \
-	    dosbin scripts/plog && \
-	    doman scripts/pon.1 || die "failed to install pon&poff scripts"
+		dosbin scripts/poff && \
+		dosbin scripts/plog && \
+		doman scripts/pon.1 || die "failed to install pon&poff scripts"
 
 	# Adding misc. specialized scripts to doc dir
 	insinto /usr/share/doc/${PF}/scripts/chatchat
