@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/nvidiabl/nvidiabl-0.69.ebuild,v 1.1 2011/04/14 14:17:15 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/nvidiabl/nvidiabl-0.72.ebuild,v 1.1 2011/11/11 16:38:50 angelos Exp $
 
-EAPI=3
+EAPI=4
 inherit linux-mod
 
 DESCRIPTION="Linux driver for setting the backlight brightness on laptops using
@@ -20,9 +20,13 @@ RDEPEND=""
 
 BUILD_TARGETS="modules"
 MODULE_NAMES="nvidiabl()"
-CONFIG_CHECK="FB_BACKLIGHT"
 
 S=${WORKDIR}/dkms_source_tree
+
+pkg_pretend() {
+	CONFIG_CHECK="FB_BACKLIGHT"
+	linux-mod_pkg_setup
+}
 
 src_compile() {
 	BUILD_PARAMS="KVER=${KV_FULL}"
