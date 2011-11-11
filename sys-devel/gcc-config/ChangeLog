@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.194 2011/06/18 18:46:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.195 2011/11/11 05:02:38 dirtyepic Exp $
+
+  11 Nov 2011; Ryan Hill <dirtyepic@gentoo.org> gcc-config-1.5-r1.ebuild:
+  Keyword 1.5 (needed for gccgo support).
 
   18 Jun 2011; Mike Frysinger <vapier@gentoo.org> files/wrapper-1.5.2.c:
   Link g77/g95 to gfortran #278772 by Sébastien Fabbro.
