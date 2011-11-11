@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-mozc/ibus-mozc-1.0.558.102.ebuild,v 1.3 2011/04/21 12:39:21 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-mozc/ibus-mozc-1.0.558.102.ebuild,v 1.4 2011/11/11 20:12:05 vapier Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -25,7 +25,7 @@ RDEPEND="dev-libs/glib:2
 	scim? ( app-i18n/scim )
 	qt4? ( x11-libs/qt-gui:4 )"
 DEPEND="${RDEPEND}
-	dev-util/gtest
+	dev-cpp/gtest
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"
