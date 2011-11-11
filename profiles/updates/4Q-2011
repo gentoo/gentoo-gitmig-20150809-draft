@@ -11,3 +11,4 @@ move kde-misc/knetworkmanager kde-misc/networkmanagement
 move dev-java/icedtea6-bin dev-java/icedtea-bin
 slotmove =dev-java/icedtea-bin-1* 0 6
 move app-text/notmuch net-mail/notmuch
+move dev-util/gtest dev-cpp/gtest
