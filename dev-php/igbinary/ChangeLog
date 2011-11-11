@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/igbinary
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/igbinary/ChangeLog,v 1.1 2011/02/07 10:20:45 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/igbinary/ChangeLog,v 1.2 2011/11/11 19:59:16 olemarkus Exp $
+
+*igbinary-1.1.1-r1 (11 Nov 2011)
+
+  11 Nov 2011; Ole Markus With <olemarkus@gentoo.org>
+  +igbinary-1.1.1-r1.ebuild:
+  Revbump - adding support for 5.4
 
 *igbinary-1.1.1 (07 Feb 2011)
 
