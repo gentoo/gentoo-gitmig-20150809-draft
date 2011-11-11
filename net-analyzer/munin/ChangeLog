@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.62 2011/11/03 18:08:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.63 2011/11/11 11:36:04 flameeyes Exp $
+
+*munin-1.4.6-r4 (11 Nov 2011)
+
+  11 Nov 2011; Diego E. Pettenò <flameeyes@gentoo.org> +munin-1.4.6-r4.ebuild,
+  -munin-1.4.6-r3.ebuild, files/munin-1.4.6-if_-hardened.patch:
+  Complete the if_-hardened patch that was incomplete, and backport one more fix
+  (for a bug introduced in said patch).
 
 *munin-1.4.6-r3 (03 Nov 2011)
 
