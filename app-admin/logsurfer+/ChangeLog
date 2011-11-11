@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/logsurfer+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsurfer+/ChangeLog,v 1.4 2011/10/22 12:09:04 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsurfer+/ChangeLog,v 1.5 2011/11/11 16:45:30 matsuu Exp $
+
+*logsurfer+-1.8-r1 (11 Nov 2011)
+
+  11 Nov 2011; MATSUU Takuto <matsuu@gentoo.org> +logsurfer+-1.8-r1.ebuild,
+  +files/logsurfer-1.8.initd:
+  Added logsurfer user. Fixed init.d issue, bug #387397.
 
 *logsurfer+-1.8 (22 Oct 2011)
 
