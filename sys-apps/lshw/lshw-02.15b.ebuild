@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-02.15b.ebuild,v 1.13 2011/07/29 08:01:02 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-02.15b.ebuild,v 1.14 2011/11/11 17:23:49 flameeyes Exp $
 
 EAPI=3
 inherit flag-o-matic eutils toolchain-funcs
@@ -40,7 +40,7 @@ src_compile() {
 
 	emake SQLITE=$sqlite || die "emake failed"
 	if use gtk ; then
-		emake gui || die "emake gui failed"
+		emake SQLITE=$sqlite gui || die "emake gui failed"
 	fi
 }
 
