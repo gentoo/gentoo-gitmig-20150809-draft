@@ -5,11 +5,6 @@
 		<email>raxas@pavouk-v-rohu.net</email>
 		<name>Petr Kocmid</name>
 	</maintainer>
-	<maintainer>
-		<email>scarabeus@gentoo.org</email>
-		<name>Tomas Chvatal</name>
-		<description>Proxy commiter for the above maintainer</description>
-	</maintainer>
 	<longdescription lang="en">
 		Assembler for Atmel AVR microprocessors
 	</longdescription>
