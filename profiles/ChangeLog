@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5889 2011/11/10 20:53:03 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5890 2011/11/11 17:37:14 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Nov 2011; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Mask new opera 11.60 snapshot.
 
   11 Nov 2011: Patrick Kursawe <phosphan@gentoo.org> desc/sane_backends.desc:
   Added pnm backend description.
