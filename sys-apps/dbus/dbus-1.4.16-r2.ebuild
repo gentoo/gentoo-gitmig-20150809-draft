@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.16-r2.ebuild,v 1.1 2011/11/05 13:56:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.4.16-r2.ebuild,v 1.2 2011/11/11 17:37:43 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils multilib flag-o-matic python systemd virtualx
@@ -34,8 +34,9 @@ DEPEND="${RDEPEND}
 	)
 	test? (
 		=dev-lang/python-2*
-		>=dev-libs/glib-2.22:2
+		>=dev-libs/glib-2.30.1-r2:2
 	)
+	!<dev-libs/glib-2.30.1-r2
 "
 
 # out of sources build directory
