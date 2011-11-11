@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-16.0.912.21.ebuild,v 1.3 2011/11/04 14:49:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-16.0.912.36.ebuild,v 1.1 2011/11/11 17:44:49 floppym Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -15,7 +15,7 @@ SRC_URI="http://commondatastorage.googleapis.com/chromium-browser-official/${P}.
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="bindist gnome gnome-keyring kerberos pulseaudio"
+IUSE="bindist cups gnome gnome-keyring kerberos pulseaudio"
 
 # en_US is ommitted on purpose from the list below. It must always be available.
 LANGS="am ar bg bn ca cs da de el en_GB es es_LA et fa fi fil fr gu he hi hr
@@ -26,12 +26,15 @@ for lang in ${LANGS}; do
 done
 
 RDEPEND="app-arch/bzip2
+	cups? (
+		dev-libs/libgcrypt
+		>=net-print/cups-1.3.11
+	)
 	>=dev-lang/v8-3.6.5.1
 	dev-libs/dbus-glib
 	dev-libs/elfutils
 	>=dev-libs/icu-4.4.1
 	>=dev-libs/libevent-1.4.13
-	dev-libs/libgcrypt
 	dev-libs/libxml2[icu]
 	dev-libs/libxslt
 	>=dev-libs/nss-3.12.3
@@ -43,7 +46,6 @@ RDEPEND="app-arch/bzip2
 	media-libs/libpng
 	>=media-libs/libwebp-0.1.2
 	media-libs/speex
-	>=net-print/cups-1.3.11
 	pulseaudio? ( media-sound/pulseaudio )
 	sys-libs/zlib
 	x11-libs/gtk+:2
@@ -98,17 +100,6 @@ get_installed_v8_version() {
 	best_version dev-lang/v8 | sed -e 's@dev-lang/v8-@@g'
 }
 
-pkg_pretend() {
-	if [[ "${MERGE_TYPE}" == "source" || "${MERGE_TYPE}" == "binary" ]]; then
-		# Fail if the kernel doesn't support features needed for sandboxing,
-		# bug #363907.
-		ERROR_PID_NS="PID_NS is required for sandbox to work"
-		ERROR_NET_NS="NET_NS is required for sandbox to work"
-		CONFIG_CHECK="~PID_NS ~NET_NS"
-		check_extra_config
-	fi
-}
-
 if ! has chromium-pkg_die ${EBUILD_DEATH_HOOKS}; then
 	EBUILD_DEATH_HOOKS+=" chromium-pkg_die";
 fi
@@ -160,6 +151,15 @@ pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
 
+	if [[ "${MERGE_TYPE}" == "source" || "${MERGE_TYPE}" == "binary" ]]; then
+		# Fail if the kernel doesn't support features needed for sandboxing,
+		# bug #363907.
+		ERROR_PID_NS="PID_NS is required for sandbox to work"
+		ERROR_NET_NS="NET_NS is required for sandbox to work"
+		CONFIG_CHECK="~PID_NS ~NET_NS"
+		check_extra_config
+	fi
+
 	if use bindist; then
 		elog "bindist enabled: H.264 video support will be disabled."
 	else
@@ -175,6 +175,8 @@ src_prepare() {
 	sed -i '1i#define OF(x) x' \
 		third_party/zlib/contrib/minizip/{ioapi,{,un}zip}.c \
 		chrome/common/zip.cc || die
+
+	epatch "${FILESDIR}/${PN}-cups-r0.patch"
 
 	epatch_user
 
@@ -271,6 +273,7 @@ src_configure() {
 	# Optional dependencies.
 	# TODO: linux_link_kerberos, bug #381289.
 	myconf+="
+		$(gyp_use cups use_cups)
 		$(gyp_use gnome use_gconf)
 		$(gyp_use gnome-keyring use_gnome_keyring)
 		$(gyp_use gnome-keyring linux_link_gnome_keyring)
@@ -317,8 +320,9 @@ src_configure() {
 	# the build to fail because of that.
 	myconf+=" -Dwerror="
 
-	# Avoid a build error with -Os, bug #352457.
+	# Avoid CFLAGS problems, bug #352457, bug #390147.
 	replace-flags "-Os" "-O2"
+	strip-flags
 
 	egyp ${myconf} || die
 }
