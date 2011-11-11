@@ -2,12 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-	<email>scarabeus@gentoo.org</email>
-	<name>Tomáš Chvátal</name>
-</maintainer>
-<maintainer>
 	<email>corvus-gentoo@cybertrench.com</email>
 	<name>Corvus Corax</name>
-	<!-- proxy maintainer, cc him on bugs -->
 </maintainer>
 </pkgmetadata>
