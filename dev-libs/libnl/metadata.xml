@@ -6,4 +6,7 @@
     <email>vanquirius@gentoo.org</email>
     <name>Marcelo Goes</name>
 </maintainer>
+<use>
+<flag name="utils">Install command line interface utils</flag>
+</use>
 </pkgmetadata>
