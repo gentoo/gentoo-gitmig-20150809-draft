@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/dvisvgm-1.0.9.ebuild,v 1.1 2011/11/02 15:13:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/dvisvgm-1.0.9.ebuild,v 1.2 2011/11/11 20:12:42 vapier Exp $
 
 EAPI=3
 
@@ -24,7 +24,7 @@ RDEPEND="virtual/tex-base
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	test? ( dev-util/gtest )"
+	test? ( dev-cpp/gtest )"
 
 src_install() {
 	emake DESTDIR="${D}" install || die
