@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/udns
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/ChangeLog,v 1.19 2011/10/11 04:58:23 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/udns/ChangeLog,v 1.20 2011/11/11 09:27:19 phajdan.jr Exp $
+
+  11 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> udns-0.1.ebuild:
+  x86 stable wrt bug #389741
 
   11 Oct 2011; Peter Volkov <pva@gentoo.org> metadata.xml:
   Take maintaining.
