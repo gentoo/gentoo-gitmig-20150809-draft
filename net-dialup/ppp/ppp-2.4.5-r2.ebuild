@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.5.ebuild,v 1.3 2011/04/02 12:51:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.5-r2.ebuild,v 1.1 2011/11/11 01:02:03 mrness Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit eutils toolchain-funcs linux-info pam
 DESCRIPTION="Point-to-Point Protocol (PPP)"
 HOMEPAGE="http://www.samba.org/ppp"
 SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz
-	mirror://gentoo/${P}-gentoo-20100903.tar.gz
+	mirror://gentoo/${P}-gentoo-20111111.tar.gz
 	dhcp? ( http://www.netservers.co.uk/gpl/ppp-dhcpc.tgz )"
 
 LICENSE="BSD GPL-2"
@@ -41,11 +41,13 @@ src_prepare() {
 	epatch "${WORKDIR}/patch/connect-errors.patch"
 	epatch "${WORKDIR}/patch/Makefile.patch"
 	epatch "${WORKDIR}/patch/pppol2tpv3-2.6.35.patch"
+	epatch "${WORKDIR}/patch/pado-timeout.patch"
+	epatch "${WORKDIR}/patch/lcp-echo-adaptive.patch"
 
 	use eap-tls && {
 		# see http://www.nikhef.nl/~janjust/ppp for more info
 		einfo "Enabling EAP-TLS support"
-		epatch "${WORKDIR}/patch/eaptls-mppe-0.98-gentoo.patch"
+		epatch "${WORKDIR}/patch/eaptls-mppe-0.991-gentoo.patch"
 	}
 
 	use atm && {

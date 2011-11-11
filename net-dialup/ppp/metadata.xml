@@ -16,7 +16,7 @@
     by a DHCP server (see http://www.netservers.co.uk/gpl/)</flag>
     <flag name="eap-tls">Enables support for Extensible Authentication
     Protocol and Transport Level Security (see
-    http://eaptls.spe.net/index.html)</flag>
+    http://www.nikhef.nl/~janjust/ppp/index.html)</flag>
     <flag name="gtk">Installs GTK+ password prompting program that can be used
     by passprompt.so PPP plugin for reading the password from a X11 input
     terminal</flag>
