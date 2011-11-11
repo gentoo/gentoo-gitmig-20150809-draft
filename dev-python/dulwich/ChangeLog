@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/dulwich
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.39 2011/11/10 10:37:36 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.40 2011/11/11 19:21:43 hwoarang Exp $
+
+  11 Nov 2011; Markos Chandras <hwoarang@gentoo.org> dulwich-0.8.1.ebuild:
+  Don't inherit unused eclass. Fix dependencies. Simplify
+  distutils_src_test_pre_hook(). Patch by Arfrever.
 
   10 Nov 2011; Fabian Groffen <grobian@gentoo.org> dulwich-0.8.1.ebuild:
   Marked ~x86-linux
