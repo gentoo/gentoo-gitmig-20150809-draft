@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.6 2011/11/10 19:09:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.7 2011/11/11 07:06:25 dirtyepic Exp $
+
+  11 Nov 2011; Ryan Hill <dirtyepic@gentoo.org> flag-o-matic.eclass:
+  Test that appended flags are valid. This allows people to add flags that were
+  unsupported in earlier releases without needing to do version checking.
 
   10 Nov 2011; Pacho Ramos <pacho@gentoo.org> gtk-sharp-module.eclass:
   gnome-desktop-sharp stuff need gnome-desktop:2, bug #389181 by Kacper
