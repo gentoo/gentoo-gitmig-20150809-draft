@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.6-r3.ebuild,v 1.2 2011/03/20 21:27:05 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.6-r3.ebuild,v 1.3 2011/11/11 22:54:51 ssuominen Exp $
 
 EAPI="2"
 
@@ -13,7 +13,8 @@ SRC_URI="http://releases.compiz.org/${PV}/${P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2.1 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="+cairo dbus fuse gnome gconf gtk kde +svg"
+# dbus has been disabled because of bug 365121
+IUSE="+cairo fuse gnome gconf gtk kde +svg" # dbus
 
 COMMONDEPEND="
 	dev-libs/glib:2
@@ -22,7 +23,7 @@ COMMONDEPEND="
 	media-libs/libpng
 	>=media-libs/mesa-6.5.1-r1
 	>=x11-base/xorg-server-1.1.1-r1
-	|| ( <x11-libs/libX11-1.3.99.901[xcb] >=x11-libs/libX11-1.3.99.901 )
+	>=x11-libs/libX11-1.4
 	x11-libs/libxcb
 	x11-libs/libXcomposite
 	x11-libs/libXdamage
@@ -35,7 +36,6 @@ COMMONDEPEND="
 	cairo? (
 		x11-libs/cairo[X]
 	)
-	dbus? ( >=sys-apps/dbus-1.0 )
 	fuse? ( sys-fs/fuse )
 	gnome? (
 		>=gnome-base/gnome-control-center-2.16.1:2
@@ -58,6 +58,7 @@ COMMONDEPEND="
 		>=x11-libs/cairo-1.0
 	)
 "
+# dbus? ( >=sys-apps/dbus-1.0 )
 
 DEPEND="${COMMONDEPEND}
 	dev-util/pkgconfig
@@ -96,15 +97,16 @@ src_configure() {
 		myconf="${myconf} --disable-gconf"
 	fi
 
-	econf --disable-dependency-tracking \
+	econf \
+		--disable-dependency-tracking \
 		--enable-fast-install \
 		--disable-static \
 		--disable-gnome-keybindings \
 		--with-default-plugins \
 		$(use_enable svg librsvg) \
 		$(use_enable cairo annotate) \
-		$(use_enable dbus) \
-		$(use_enable dbus dbus-glib) \
+		--disable-dbus \
+		--disable-dbus-glib \
 		$(use_enable fuse) \
 		$(use_enable gnome) \
 		$(use_enable gnome metacity) \
@@ -112,6 +114,9 @@ src_configure() {
 		$(use_enable kde kde4) \
 		--disable-kde \
 		${myconf}
+
+		# $(use_enable dbus)
+		# $(use_enable dbus dbus-glib)
 }
 
 src_install() {
