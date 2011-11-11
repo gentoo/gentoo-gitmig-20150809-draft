@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mbrowse/mbrowse-0.4.3.ebuild,v 1.1 2011/05/08 20:43:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mbrowse/mbrowse-0.4.3.ebuild,v 1.2 2011/11/11 09:24:36 phajdan.jr Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="
