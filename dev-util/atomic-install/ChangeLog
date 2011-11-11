@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/atomic-install
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/atomic-install/ChangeLog,v 1.1 2011/11/11 16:29:42 mgorny Exp $
+
+*atomic-install-0.1 (11 Nov 2011)
+
+  11 Nov 2011; Michał Górny <mgorny@gentoo.org> +atomic-install-0.1.ebuild,
+  +metadata.xml:
+  Add initial version of atomic-install, atomic fileset installation tool.
+
