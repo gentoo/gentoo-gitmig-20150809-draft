@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.0.ebuild,v 1.2 2011/10/21 11:09:36 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.8.0.ebuild,v 1.3 2011/11/11 13:23:20 naota Exp $
 
 EAPI=4
 
@@ -65,7 +65,7 @@ src_install() {
 	dodoc AUTHORS README
 
 	# fix bug #334383
-	if [[ ${EUID} == 0 ]] ; then
+	if use kernel_linux && [[ ${EUID} == 0 ]] ; then
 		fowners root:tty /usr/libexec/mc/cons.saver ||
 			die "setting cons.saver's owner failed"
 		fperms g+s /usr/libexec/mc/cons.saver ||
