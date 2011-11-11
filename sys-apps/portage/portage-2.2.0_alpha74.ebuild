@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha73.ebuild,v 1.1 2011/11/10 06:07:09 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha74.ebuild,v 1.1 2011/11/11 19:06:30 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -61,7 +61,7 @@ prefix_src_archives() {
 
 PV_PL="2.1.2"
 PATCHVER_PL=""
-TARBALL_PV=2.2.0_alpha72
+TARBALL_PV=2.2.0_alpha74
 SRC_URI="mirror://gentoo/${PN}-${TARBALL_PV}.tar.bz2
 	$(prefix_src_archives ${PN}-${TARBALL_PV}.tar.bz2)
 	linguas_pl? ( mirror://gentoo/${PN}-man-pl-${PV_PL}.tar.bz2
@@ -320,21 +320,21 @@ pkg_preinst() {
 		rm "${ROOT}/etc/make.globals"
 	fi
 
-	has_version "<${CATEGORY}/${PN}-2.2_alpha"
-	MINOR_UPGRADE=$?
+	has_version "<${CATEGORY}/${PN}-2.2_alpha" \
+		&& MINOR_UPGRADE=true || MINOR_UPGRADE=false
 
-	has_version "<=${CATEGORY}/${PN}-2.2_pre5"
-	WORLD_MIGRATION_UPGRADE=$?
+	has_version "<=${CATEGORY}/${PN}-2.2_pre5" \
+		&& WORLD_MIGRATION_UPGRADE=true || WORLD_MIGRATION_UPGRADE=false
 
 	# If portage-2.1.6 is installed and the preserved_libs_registry exists,
 	# assume that the NEEDED.ELF.2 files have already been generated.
 	has_version "<=${CATEGORY}/${PN}-2.2_pre7" && \
-		! ( [ -e "$ROOT"var/lib/portage/preserved_libs_registry ] && \
-		has_version ">=${CATEGORY}/${PN}-2.1.6_rc" )
-	NEEDED_REBUILD_UPGRADE=$?
+		! ( [ -e "${EROOT}"var/lib/portage/preserved_libs_registry ] && \
+		has_version ">=${CATEGORY}/${PN}-2.1.6_rc" ) \
+		&& NEEDED_REBUILD_UPGRADE=true || NEEDED_REBUILD_UPGRADE=false
 
-	[[ -n $PORTDIR_OVERLAY ]] && has_version "<${CATEGORY}/${PN}-2.1.6.12"
-	REPO_LAYOUT_CONF_WARN=$?
+	[[ -n $PORTDIR_OVERLAY ]] && has_version "<${CATEGORY}/${PN}-2.1.6.12" \
+		&& REPO_LAYOUT_CONF_WARN=true || REPO_LAYOUT_CONF_WARN=false
 }
 
 pkg_postinst() {
@@ -342,14 +342,14 @@ pkg_postinst() {
 	# will be identified and removed in postrm.
 	python_mod_optimize /usr/$(get_libdir)/portage/pym
 
-	if [ $WORLD_MIGRATION_UPGRADE = 0 ] ; then
+	if $WORLD_MIGRATION_UPGRADE ; then
 		einfo "moving set references from the worldfile into world_sets"
 		cd "${ROOT}/var/lib/portage/"
 		grep "^@" world >> world_sets
 		sed -i -e '/^@/d' world
 	fi
 
-	if [ $NEEDED_REBUILD_UPGRADE = 0 ] ; then
+	if $NEEDED_REBUILD_UPGRADE ; then
 		einfo "rebuilding NEEDED.ELF.2 files"
 		for cpv in "${ROOT}/var/db/pkg"/*/*; do
 			if [ -f "${cpv}/NEEDED" ]; then
@@ -368,7 +368,7 @@ pkg_postinst() {
 		done
 	fi
 
-	if [ $REPO_LAYOUT_CONF_WARN = 0 ] ; then
+	if $REPO_LAYOUT_CONF_WARN ; then
 		ewarn
 		echo "If you want overlay eclasses to override eclasses from" \
 			"other repos then see the portage(5) man page" \
@@ -383,7 +383,7 @@ pkg_postinst() {
 	einfo "at http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3"
 	einfo
 
-	if [ $MINOR_UPGRADE = 0 ] ; then
+	if $MINOR_UPGRADE ; then
 		elog "If you're upgrading from a pre-2.2 version of portage you might"
 		elog "want to remerge world (emerge -e world) to take full advantage"
 		elog "of some of the new features in 2.2."
