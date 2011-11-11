@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.201 2011/11/05 23:37:42 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.202 2011/11/11 21:06:44 sera Exp $
+
+*sun-jre-bin-1.6.0.29-r1 (11 Nov 2011)
+
+  11 Nov 2011; Ralph Sennhauser <sera@gentoo.org>
+  +sun-jre-bin-1.6.0.29-r1.ebuild:
+  Fix jce symlinks, bug #377665. Thanks to Philippe Chaintreuil
+  <gentoo_bugs_peep@parallaxshift.com> for investigating the issue
 
   05 Nov 2011; Vlastimil Babka <caster@gentoo.org>
   -sun-jre-bin-1.6.0.26.ebuild, -sun-jre-bin-1.6.0.27.ebuild,
