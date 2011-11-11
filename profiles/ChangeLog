@@ -1,13 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5892 2011/11/11 21:30:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5893 2011/11/11 21:43:58 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
 
   11 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
-  Lastrite dev-python/pythoncard.
+  Lastrite dev-util/boa-constructor and dev-python/pythoncard.
 
   11 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Remove entries for fixed xfce4-weather-plugin and removed xpilot-ng,
