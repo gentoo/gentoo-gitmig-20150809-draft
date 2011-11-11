@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.129 2011/10/28 00:35:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.130 2011/11/11 01:40:06 blueness Exp $
+
+*valgrind-3.7.0 (11 Nov 2011)
+
+  11 Nov 2011; Anthony G. Basile <blueness@gentoo.org> +valgrind-3.7.0.ebuild,
+  +files/valgrind-3.7.0-fix-gcc-regex.patch,
+  +files/valgrind-3.7.0-fno-stack-protector.patch,
+  +files/valgrind-3.7.0-non-exec-stack.patch,
+  +files/valgrind-3.7.0-respect-flags.patch:
+  Version bump
 
   28 Oct 2011; Anthony G. Basile <blueness@gentoo.org>
   valgrind-3.6.1-r2.ebuild:
