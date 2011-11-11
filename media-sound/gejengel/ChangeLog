@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gejengel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/ChangeLog,v 1.19 2011/04/03 19:16:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/ChangeLog,v 1.20 2011/11/11 20:26:09 ssuominen Exp $
+
+  11 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> gejengel-0.1.4.ebuild:
+  Remove libsexymm from dependencies wrt #381205
 
   03 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> gejengel-0.1.4.ebuild:
   Use virtual/ffmpeg instead of media-video/ffmpeg.

@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/gejengel-0.1.4.ebuild,v 1.6 2011/04/03 19:16:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/gejengel-0.1.4.ebuild,v 1.7 2011/11/11 20:26:09 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit eutils multilib
 
 DESCRIPTION="Lightweight audio player"
@@ -16,7 +16,6 @@ IUSE="+alsa audioscrobbler debug dbus +ffmpeg flac libnotify mad openal pulseaud
 
 RDEPEND="dev-cpp/gtkmm:2.4
 	dev-cpp/pangomm:1.4
-	dev-cpp/libsexymm
 	media-libs/taglib
 	dev-db/sqlite:3
 	|| ( media-gfx/imagemagick[cxx]
@@ -34,13 +33,14 @@ DEPEND="${RDEPEND}
 	dev-libs/libxdg-basedir
 	>=sys-devel/automake-1.11"
 
+DOCS=( AUTHORS ChangeLog README TODO )
+
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
 }
 
 src_configure() {
 	econf \
-		--disable-dependency-tracking \
 		--disable-shared \
 		$(use_enable syslog logging) \
 		$(use_enable debug) \
@@ -57,7 +57,8 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog README TODO
-	rm -f "${D}"/usr/$(get_libdir)/libgejengel.{a,la}
+	default
+	# The libgejengel.a is used by the package when building but shouldn't end
+	# up in the installation target
+	rm -f "${ED}"usr/$(get_libdir)/libgejengel.{a,la}
 }
