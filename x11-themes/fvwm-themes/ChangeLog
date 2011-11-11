@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/fvwm-themes
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-themes/ChangeLog,v 1.18 2010/05/28 12:39:31 xarthisius Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-themes/ChangeLog,v 1.19 2011/11/11 17:13:22 ssuominen Exp $
+
+  11 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> fvwm-themes-0.7.0.ebuild:
+  Revert everything except amd64 and x86 to ~arch wrt #390025
 
   28 May 2010; Kacper Kowalik <xarthisius@gentoo.org>
   fvwm-themes-0.7.0.ebuild, files/fvwm-themes-0.7.0-posix-sort.patch:
