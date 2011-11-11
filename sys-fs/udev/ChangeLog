@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.615 2011/11/09 22:53:09 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.616 2011/11/11 19:34:18 vapier Exp $
+
+  11 Nov 2011; Mike Frysinger <vapier@gentoo.org> udev-171-r2.ebuild,
+  udev-175.ebuild, udev-9999.ebuild:
+  If we don't run eautoreconf, then run elibtoolize so the local libtool code
+  gets workarounds added to it (e.g. cross-compiling fixes).
 
   09 Nov 2011; William Hubbs <williamh@gentoo.org> udev-175.ebuild,
   udev-9999.ebuild:

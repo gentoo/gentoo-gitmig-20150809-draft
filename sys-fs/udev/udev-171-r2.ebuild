@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r2.ebuild,v 1.2 2011/09/18 06:42:42 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-171-r2.ebuild,v 1.3 2011/11/11 19:34:18 vapier Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ then
 	vcs="git-2 autotools"
 fi
 
-inherit ${vcs} eutils flag-o-matic multilib toolchain-funcs linux-info systemd
+inherit ${vcs} eutils flag-o-matic multilib toolchain-funcs linux-info systemd libtool
 
 if [[ ${PV} != "9999" ]]
 then
@@ -185,6 +185,8 @@ src_prepare() {
 	then
 		gtkdocize --copy || die "gtkdocize failed"
 		eautoreconf
+	else
+		elibtoolize
 	fi
 }
 

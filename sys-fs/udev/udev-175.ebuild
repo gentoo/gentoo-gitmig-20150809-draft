@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-175.ebuild,v 1.5 2011/11/09 22:53:09 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-175.ebuild,v 1.6 2011/11/11 19:34:18 vapier Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ udev_rules_md5=7a7180a394e5bdea9011f68582b94fe8
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/hotplug/udev.git"
 
 [[ ${PV} == "9999" ]] && vcs="git-2 autotools"
-inherit ${vcs} eutils flag-o-matic multilib toolchain-funcs linux-info systemd
+inherit ${vcs} eutils flag-o-matic multilib toolchain-funcs linux-info systemd libtool
 
 scriptname=${PN}-gentoo-scripts
 if [[ ${PV} != "9999" ]]
@@ -155,6 +155,8 @@ src_prepare()
 	then
 		gtkdocize --copy || die "gtkdocize failed"
 		eautoreconf
+	else
+		elibtoolize
 	fi
 }
 
