@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.6.11.ebuild,v 1.3 2011/09/06 18:11:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.6.11.ebuild,v 1.4 2011/11/11 20:12:59 vapier Exp $
 
 EAPI=3
 
@@ -24,7 +24,7 @@ RDEPEND="sci-libs/hdf5[mpi?]
 	python? ( dev-python/numpy )"
 DEPEND="${RDEPEND}
 	app-arch/unzip
-	test? ( dev-util/gtest )"
+	test? ( dev-cpp/gtest )"
 
 S="${WORKDIR}"/${P}-src
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.6.10.ebuild,v 1.4 2011/08/02 19:09:42 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/flann/flann-1.6.10.ebuild,v 1.5 2011/11/11 20:12:59 vapier Exp $
 
 EAPI=3
 
@@ -25,7 +25,7 @@ RDEPEND="
 	python? ( dev-python/numpy )"
 DEPEND="${DEPEND}
 	app-arch/unzip
-	test? ( dev-util/gtest )"
+	test? ( dev-cpp/gtest )"
 
 S="${WORKDIR}"/${P}-src
 
