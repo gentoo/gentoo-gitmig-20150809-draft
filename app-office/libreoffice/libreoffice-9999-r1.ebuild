@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.57 2011/11/10 12:28:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.58 2011/11/11 14:54:04 scarabeus Exp $
 
 EAPI=4
 
@@ -79,7 +79,7 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="binfilter +branding dbus debug eds gnome +graphite gstreamer gtk
-+jemalloc kde mysql odk opengl pdfimport svg templates test +vba
++jemalloc kde mysql nsplugin odk opengl pdfimport svg templates test +vba
 +webdav +xmlsec"
 LICENSE="LGPL-3"
 SLOT="0"
@@ -209,6 +209,7 @@ PATCHES=(
 )
 
 REQUIRED_USE="
+	nsplugin? ( gtk )
 	gnome? ( gtk )
 	eds? ( gnome )
 "
@@ -453,6 +454,7 @@ src_configure() {
 		$(use_enable java ext-scripting-beanshell) \
 		$(use_enable kde kde4) \
 		$(use_enable mysql ext-mysql-connector) \
+		$(use_enable nsplugin) \
 		$(use_enable odk) \
 		$(use_enable opengl) \
 		$(use_enable pdfimport ext-pdfimport) \
@@ -487,7 +489,7 @@ src_install() {
 	rm -rf "${ED}"/etc/
 
 	# symlink the nsplugin to system location
-	if use gtk; then
+	if use nsplugin; then
 		inst_plugin /usr/$(get_libdir)/libreoffice/program/libnpsoplugin.so
 	fi
 
