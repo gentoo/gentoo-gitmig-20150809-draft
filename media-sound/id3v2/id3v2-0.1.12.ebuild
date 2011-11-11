@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/id3v2-0.1.12.ebuild,v 1.1 2010/04/12 09:54:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/id3v2-0.1.12.ebuild,v 1.2 2011/11/11 01:19:34 xmw Exp $
 
 EAPI=2
 
@@ -27,7 +27,7 @@ src_configure() {
 }
 
 src_install() {
-	dobin id3v2
-	doman id3v2.1
-	dodoc README
+	dobin id3v2 || die
+	doman id3v2.1 || die
+	dodoc README || die
 }
