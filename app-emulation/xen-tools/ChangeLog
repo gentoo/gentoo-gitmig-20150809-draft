@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.106 2011/11/10 12:06:07 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.107 2011/11/11 17:00:26 neurogeek Exp $
+
+  11 Nov 2011; Jesus Rivero <neurogeek@gentoo.org> xen-tools-4.1.2.ebuild:
+  Fix for improving Python-related code (bug #311207). Proxying for idella4
 
   10 Nov 2011; Alexey Shvetsov <alexxy@gentoo.org>
   files/xen-tools-4.1.2-pyxml.patch:

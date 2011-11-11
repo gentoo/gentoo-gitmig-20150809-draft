@@ -1,8 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.2.ebuild,v 1.2 2011/11/07 17:31:40 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-4.1.2.ebuild,v 1.3 2011/11/11 17:00:26 neurogeek Exp $
 
 EAPI="3"
+
+PYTHON_DEPEND="2"
+PYTHON_USE_WITH="xml"
 
 if [[ $PV == *9999 ]]; then
 	KEYWORDS=""
@@ -27,10 +30,10 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="api custom-cflags debug doc flask hvm qemu pygrub screen xend"
 
-CDEPEND="dev-lang/python
-	<dev-libs/yajl-2
+CDEPEND="<dev-libs/yajl-2
 	dev-python/lxml
 	dev-python/pypam
+	dev-python/pyxml
 	sys-libs/zlib
 	hvm? ( media-libs/libsdl
 		sys-power/iasl )
@@ -77,6 +80,9 @@ QA_EXECSTACK="usr/share/xen/qemu/openbios-sparc32
 RESTRICT="test"
 
 pkg_setup() {
+	python_set_active_version 2
+	python_pkg_setup
+
 	export "CONFIG_LOMOUNT=y"
 
 	if use qemu; then
@@ -195,7 +201,7 @@ src_prepare() {
 	# Fix bridge by idella4, bug #362575
 	epatch "${FILESDIR}/${PN}-4.1.1-bridge.patch"
 
-        # Remove check_curl, new fix to Bug #386487
+	# Remove check_curl, new fix to Bug #386487
 	epatch "${FILESDIR}/xen-tools-4.1.1-curl.patch" || die
 	sed -i -e 's|has_or_fail curl-config|has_or_fail curl-config\nset -ux|' \
 		tools/check/check_curl
@@ -238,6 +244,8 @@ src_install() {
 
 	make DESTDIR="${D}" DOCDIR="/usr/share/doc/${PF}" XEN_PYTHON_NATIVE_INSTALL=y install-tools  \
 		|| die "install failed"
+
+	python_convert_shebangs -r 2 "${ED}"
 
 	# Remove RedHat-specific stuff
 	rm -r "${D}"/etc/init.d/xen* "${D}"/etc/default || die
