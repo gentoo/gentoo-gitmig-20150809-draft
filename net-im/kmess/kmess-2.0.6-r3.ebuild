@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-2.0.6-r2.ebuild,v 1.1 2011/11/06 10:33:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-2.0.6-r3.ebuild,v 1.1 2011/11/11 20:15:42 hwoarang Exp $
 
 EAPI=3
 
@@ -41,7 +41,7 @@ S="${WORKDIR}/${MY_P}"
 
 PATCHES=(
 	"${FILESDIR}"/${P}-login-fix.patch
-	"${FILESDIR}"/${P}-contact-list.patch
+	"${FILESDIR}"/${P}-follow-location-redirects.patch
 )
 
 src_configure() {
