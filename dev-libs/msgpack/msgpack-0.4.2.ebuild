@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/msgpack/msgpack-0.4.2.ebuild,v 1.2 2011/05/10 10:55:37 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/msgpack/msgpack-0.4.2.ebuild,v 1.3 2011/11/11 20:12:02 vapier Exp $
 
 EAPI="2"
 inherit autotools eutils
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="test"
 
-DEPEND="test? ( dev-util/gtest )"
+DEPEND="test? ( dev-cpp/gtest )"
 RDEPEND=""
 
 src_prepare() {

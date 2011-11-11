@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/msgpack/msgpack-0.5.6.ebuild,v 1.1 2011/05/10 14:16:23 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/msgpack/msgpack-0.5.6.ebuild,v 1.2 2011/11/11 20:12:02 vapier Exp $
 
 EAPI="3"
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="static-libs test"
 
-DEPEND="test? ( dev-util/gtest )"
+DEPEND="test? ( dev-cpp/gtest )"
 RDEPEND=""
 
 src_configure() {
