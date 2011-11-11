@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.903 2011/11/11 18:21:44 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.904 2011/11/11 19:04:22 zmedico Exp $
+
+*portage-2.1.10.34 (11 Nov 2011)
+
+  11 Nov 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.34.ebuild,
+  -portage-2.1.10.33.ebuild:
+  2.1.10.34 version bump. The emerge --quiet-build option is now enabled by
+  default. Set --quiet-build=n in EMERGE_DEFAULT_OPTS if you want to disable it
+  by default. See the emerge(1) man page for more information about this option.
+  Bug #381649 tracks all bugs fixed since portage-2.1.10.11.
 
   11 Nov 2011; Zac Medico <zmedico@gentoo.org> portage-9999.ebuild:
   Remove obsolete less dependency (bug #384663) and tweak style of

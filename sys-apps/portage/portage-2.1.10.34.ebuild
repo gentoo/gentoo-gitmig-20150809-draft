@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.10.33.ebuild,v 1.1 2011/11/10 06:05:49 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.10.34.ebuild,v 1.1 2011/11/11 19:04:22 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -329,8 +329,11 @@ pkg_preinst() {
 		chmod g+ws "${ROOT}var/log/portage"
 	fi
 
-	[[ -n $PORTDIR_OVERLAY ]] && has_version "<${CATEGORY}/${PN}-2.1.6.12"
-	REPO_LAYOUT_CONF_WARN=$?
+	[[ -n $PORTDIR_OVERLAY ]] && has_version "<${CATEGORY}/${PN}-2.1.6.12" \
+		&& REPO_LAYOUT_CONF_WARN=true || REPO_LAYOUT_CONF_WARN=false
+
+	has_version "<${CATEGORY}/${PN}-2.1.10.34" \
+		&& QUIET_BUILD_WARN=true || QUIET_BUILD_WARN=false
 }
 
 pkg_postinst() {
@@ -338,7 +341,7 @@ pkg_postinst() {
 	# will be identified and removed in postrm.
 	python_mod_optimize /usr/$(get_libdir)/portage/pym
 
-	if [ $REPO_LAYOUT_CONF_WARN = 0 ] ; then
+	if $REPO_LAYOUT_CONF_WARN ; then
 		ewarn
 		echo "If you want overlay eclasses to override eclasses from" \
 			"other repos then see the portage(5) man page" \
@@ -346,6 +349,17 @@ pkg_postinst() {
 			"configuration files." \
 			| fmt -w 75 | while read -r ; do ewarn "$REPLY" ; done
 		ewarn
+	fi
+
+	if $QUIET_BUILD_WARN ; then
+		elog
+		echo "NOTE: Beginning with portage-2.1.10.34, the emerge" \
+			"--quiet-build option is enabled by default." \
+			"Set --quiet-build=n in EMERGE_DEFAULT_OPTS if" \
+			"you want to disable it by default. See the emerge(1)" \
+			"man page for more information about this option." \
+			| fmt -w 75 | while read -r ; do elog "$REPLY" ; done
+		elog
 	fi
 
 	einfo
