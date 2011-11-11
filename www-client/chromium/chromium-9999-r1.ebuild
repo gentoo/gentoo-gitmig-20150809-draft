@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.75 2011/11/10 23:49:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999-r1.ebuild,v 1.76 2011/11/11 15:46:22 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -373,8 +373,9 @@ src_configure() {
 	# the build to fail because of that.
 	myconf+=" -Dwerror="
 
-	# Avoid a build error with -Os, bug #352457.
+	# Avoid CFLAGS problems, bug #352457, bug #390147.
 	replace-flags "-Os" "-O2"
+	strip-flags
 
 	egyp ${myconf} || die
 }
