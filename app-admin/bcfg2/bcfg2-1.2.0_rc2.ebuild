@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/bcfg2-1.1.2.ebuild,v 1.1 2011/06/12 16:35:17 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/bcfg2-1.2.0_rc2.ebuild,v 1.1 2011/11/11 00:21:13 xmw Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"

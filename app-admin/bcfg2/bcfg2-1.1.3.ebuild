@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/bcfg2-1.1.0.ebuild,v 1.4 2011/04/12 22:13:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/bcfg2-1.1.3.ebuild,v 1.1 2011/11/11 00:21:13 xmw Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.6"
@@ -11,7 +11,7 @@ RESTRICT_PYTHON_ABIS="2.4 2.5 3.*"
 inherit distutils
 
 DESCRIPTION="Bcfg2 is a configuration management tool."
-HOMEPAGE="http://trac.mcs.anl.gov/projects/bcfg2"
+HOMEPAGE="http://bcfg2.org"
 
 # handle the "pre" case
 MY_P="${P/_/}"
