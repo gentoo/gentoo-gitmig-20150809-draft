@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/paramiko-1.7.7.1.ebuild,v 1.7 2011/10/23 17:19:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paramiko/paramiko-1.7.7.1.ebuild,v 1.8 2011/11/11 19:22:52 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.* *-jython"
 
-inherit distutils eutils
+inherit distutils
 
 DESCRIPTION="SSH2 protocol library"
 HOMEPAGE="http://www.lag.net/paramiko/ http://pypi.python.org/pypi/paramiko"
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 
 src_test() {
 	testing() {
-		"$(PYTHON)" test.py --verbose
+		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" test.py --verbose
 	}
 	python_execute_function testing
 }
