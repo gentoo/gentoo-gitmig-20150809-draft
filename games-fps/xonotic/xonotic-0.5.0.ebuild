@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/xonotic/xonotic-0.5.0.ebuild,v 1.3 2011/11/05 10:18:54 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/xonotic/xonotic-0.5.0.ebuild,v 1.4 2011/11/11 09:20:06 phajdan.jr Exp $
 
 EAPI=2
 inherit eutils check-reqs games
@@ -12,7 +12,7 @@ SRC_URI="http://dl.xonotic.org/${P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="alsa debug dedicated doc sdl"
 
 UIRDEPEND="
