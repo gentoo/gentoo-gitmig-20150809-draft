@@ -2,12 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-	<email>scarabeus@gentoo.org</email>
-	<name>Tomáš Chvátal</name>
-	<description>
-		Proxy commiter for Jan Kundrát (jkt@g.o).
-		CC him on all bugs.
-	</description>
+	<email>jkt@gentoo.org</email>
+	<name>Jan Kundrát</name>
 </maintainer>
 <herd>qt</herd>
 </pkgmetadata>
