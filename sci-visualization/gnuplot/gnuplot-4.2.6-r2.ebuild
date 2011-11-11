@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.6-r2.ebuild,v 1.5 2011/07/16 16:58:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.2.6-r2.ebuild,v 1.6 2011/11/11 22:56:21 ulm Exp $
 
 EAPI=2
 
@@ -213,17 +213,17 @@ pkg_postinst() {
 	use latex && texmf-update
 
 	if use svga; then
-		einfo "In order to enable ordinary users to use SVGA console graphics"
-		einfo "gnuplot needs to be set up as setuid root.  Please note that"
-		einfo "this is usually considered to be a security hazard."
-		einfo "As root, manually \"chmod u+s /usr/bin/gnuplot\"."
+		elog "In order to enable ordinary users to use SVGA console graphics"
+		elog "gnuplot needs to be set up as setuid root. Please note that"
+		elog "this is usually considered to be a security hazard."
+		elog "As root, manually \"chmod u+s /usr/bin/gnuplot\"."
 	fi
 	if use gd; then
 		echo
-		einfo "For font support in png/jpeg/gif output, you may have to"
-		einfo "set the GDFONTPATH and GNUPLOT_DEFAULT_GDFONT environment"
-		einfo "variables. See the FAQ file in /usr/share/doc/${PF}/"
-		einfo "for more information."
+		elog "For font support in png/jpeg/gif output, you may have to"
+		elog "set the GDFONTPATH and GNUPLOT_DEFAULT_GDFONT environment"
+		elog "variables. See the FAQ file in /usr/share/doc/${PF}/"
+		elog "for more information."
 	fi
 }
 

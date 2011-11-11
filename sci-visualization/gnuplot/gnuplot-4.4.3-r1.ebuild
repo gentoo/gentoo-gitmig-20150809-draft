@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.4.3-r1.ebuild,v 1.10 2011/10/18 21:03:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/gnuplot-4.4.3-r1.ebuild,v 1.11 2011/11/11 22:56:21 ulm Exp $
 
 EAPI=3
 
@@ -227,23 +227,23 @@ pkg_postinst() {
 	use emacs && elisp-site-regen
 	use latex && texmf-update
 
-	einfo "Gnuplot no longer links against pdflib, see the ChangeLog for"
-	einfo "details. You can use the \"pdfcairo\" terminal for PDF output."
-	use cairo || einfo "It is available with USE=\"cairo\"."
+	elog "Gnuplot no longer links against pdflib, see the ChangeLog for"
+	elog "details. You can use the \"pdfcairo\" terminal for PDF output."
+	use cairo || elog "It is available with USE=\"cairo\"."
 
 	if use svga; then
 		echo
-		einfo "In order to enable ordinary users to use SVGA console graphics"
-		einfo "gnuplot needs to be set up as setuid root.  Please note that"
-		einfo "this is usually considered to be a security hazard."
-		einfo "As root, manually \"chmod u+s /usr/bin/gnuplot\"."
+		elog "In order to enable ordinary users to use SVGA console graphics"
+		elog "gnuplot needs to be set up as setuid root. Please note that"
+		elog "this is usually considered to be a security hazard."
+		elog "As root, manually \"chmod u+s /usr/bin/gnuplot\"."
 	fi
 	if use gd; then
 		echo
-		einfo "For font support in png/jpeg/gif output, you may have to"
-		einfo "set the GDFONTPATH and GNUPLOT_DEFAULT_GDFONT environment"
-		einfo "variables. See the FAQ file in /usr/share/doc/${PF}/"
-		einfo "for more information."
+		elog "For font support in png/jpeg/gif output, you may have to"
+		elog "set the GDFONTPATH and GNUPLOT_DEFAULT_GDFONT environment"
+		elog "variables. See the FAQ file in /usr/share/doc/${PF}/"
+		elog "for more information."
 	fi
 }
 
