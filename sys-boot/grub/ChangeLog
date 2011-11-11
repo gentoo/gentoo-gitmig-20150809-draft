@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.171 2011/11/11 11:33:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.172 2011/11/11 13:42:09 flameeyes Exp $
+
+  11 Nov 2011; Diego E. Pettenò <flameeyes@gentoo.org> grub-1.99-r2.ebuild,
+  grub-9999.ebuild:
+  Fix build of live ebuild after info manual fixes (bug #389685).
 
   11 Nov 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Drop me from maint.

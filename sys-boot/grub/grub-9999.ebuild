@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.45 2011/11/02 15:09:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.46 2011/11/11 13:42:09 flameeyes Exp $
 
 EAPI=4
 
@@ -221,9 +221,14 @@ src_install() {
 		grub_run_phase ${FUNCNAME} ${i}
 	done
 
-	# slot all collisions with grub legacy
-	mv "${ED}"/usr/share/info/grub.info \
-		"${ED}"/usr/share/info/grub2.info || die
+	# No need to move the info file with the live ebuild since we
+	# already changed the generated file name during the preparation
+	# phase.
+	if [[ ${PV} != "9999" ]]; then
+		# slot all collisions with grub legacy
+		mv "${ED}"/usr/share/info/grub.info \
+			"${ED}"/usr/share/info/grub2.info || die
+	fi
 
 	# Do pax marking
 	local PAX=(
