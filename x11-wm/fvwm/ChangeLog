@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.182 2011/10/23 21:42:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.183 2011/11/11 17:14:18 ssuominen Exp $
+
+  11 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> -fvwm-2.5.28.ebuild,
+  -files/fvwm-2.5.28-libpng14.patch, -fvwm-2.5.31.ebuild:
+  old
 
   23 Oct 2011; Markus Meier <maekke@gentoo.org> fvwm-2.6.2.ebuild:
   x86 stable, bug #385143
