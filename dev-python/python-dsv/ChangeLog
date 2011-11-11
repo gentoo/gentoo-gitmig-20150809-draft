@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-dsv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dsv/ChangeLog,v 1.6 2011/11/11 21:41:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dsv/ChangeLog,v 1.7 2011/11/11 21:45:09 ssuominen Exp $
+
+  11 Nov 2011; Samuli Suominen <ssuominen@gentoo.org>
+  -python-dsv-1.4.0-r1.ebuild, -files/python-dsv-1.4.0-wxversion.patch:
+  old
 
 *python-dsv-1.4.1 (11 Nov 2011)
 
