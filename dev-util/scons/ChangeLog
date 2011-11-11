@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/scons
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.101 2011/10/02 06:09:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.102 2011/11/11 19:24:06 hwoarang Exp $
+
+  11 Nov 2011; Markos Chandras <hwoarang@gentoo.org>
+  +files/scons-2.1.0-jython.patch, scons-2.1.0.ebuild:
+  Fix building with Jython. Patch by Arfrever.
 
 *scons-2.1.0 (02 Oct 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-2.1.0.ebuild,v 1.1 2011/10/02 06:09:30 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/scons-2.1.0.ebuild,v 1.2 2011/11/11 19:24:06 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.4"
@@ -30,6 +30,7 @@ DOCS="CHANGES.txt RELEASE.txt"
 src_prepare() {
 	distutils_src_prepare
 	epatch "${FILESDIR}/scons-1.2.0-popen.patch"
+	epatch "${FILESDIR}/${P}-jython.patch"
 
 	# https://bugs.gentoo.org/show_bug.cgi?id=361061
 	sed -i -e "s|/usr/local/bin:/opt/bin:/bin:/usr/bin|${EPREFIX}usr/local/bin:${EPREFIX}opt/bin:${EPREFIX}bin:${EPREFIX}usr/bin:/usr/local/bin:/opt/bin:/bin:/usr/bin|g" engine/SCons/Platform/posix.py || die
