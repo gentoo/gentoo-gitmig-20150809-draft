@@ -1,8 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gmock/gmock-1.5.0.ebuild,v 1.2 2011/11/11 20:12:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gmock/gmock-1.5.0.ebuild,v 1.3 2011/11/11 20:35:50 vapier Exp $
 
 EAPI="4"
+
+inherit libtool
 
 DESCRIPTION="Google's C++ mocking framework"
 HOMEPAGE="http://code.google.com/p/googlemock/"
@@ -20,6 +22,10 @@ src_unpack() {
 	default
 	# make sure we always use the system one
 	rm -r "${S}"/gtest/Makefile* || die
+}
+
+src_prepare() {
+	elibtoolize
 }
 
 src_configure() {
