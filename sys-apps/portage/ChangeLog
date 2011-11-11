@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.902 2011/11/10 16:18:28 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.903 2011/11/11 18:21:44 zmedico Exp $
+
+  11 Nov 2011; Zac Medico <zmedico@gentoo.org> portage-9999.ebuild:
+  Remove obsolete less dependency (bug #384663) and tweak style of
+  preinst/postinst boolean conditions.
 
   10 Nov 2011; Zac Medico <zmedico@gentoo.org> portage-2.1.6.13.ebuild,
   portage-2.1.6.7.ebuild:
