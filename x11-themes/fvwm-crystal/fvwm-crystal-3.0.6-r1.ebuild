@@ -1,19 +1,20 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-3.0.6-r1.ebuild,v 1.4 2011/09/27 13:52:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-3.0.6-r1.ebuild,v 1.5 2011/11/11 17:07:35 ssuominen Exp $
 
-EAPI="2"
-
+EAPI=2
 inherit eutils
 
 DESCRIPTION="Configurable and full featured theme for FVWM, with lots of transparency"
 HOMEPAGE="http://gna.org/projects/fvwm-crystal/"
 SRC_URI="http://download.gna.org/${PN}/${PV}/${P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE=""
-RDEPEND=">=x11-wm/fvwm-2.5.13[png]
+
+RDEPEND=">=x11-wm/fvwm-2.6.2[png]
 	dev-lang/python
 	media-gfx/imagemagick
 	|| ( x11-misc/stalonetray x11-misc/trayer )
@@ -23,11 +24,11 @@ RDEPEND=">=x11-wm/fvwm-2.5.13[png]
 
 src_prepare() {
 	find . -type d -name '.svn' -prune -exec rm -rf {} ';' || die
-	epatch "${FILESDIR}/fvwm-crystal.apps.patch"
+	epatch "${FILESDIR}"/fvwm-crystal.apps.patch
 }
 
 src_install() {
-	einstall || die "einstall failed"
+	einstall || die
 
 	dodoc AUTHORS README INSTALL NEWS ChangeLog doc/* || die
 
