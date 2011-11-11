@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-9.6.1.ebuild,v 1.5 2011/10/20 22:32:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gcompris/gcompris-9.6.1.ebuild,v 1.6 2011/11/11 21:11:44 mr_bones_ Exp $
 
 EAPI=2
 
@@ -20,6 +20,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE="gnet python"
 
 RDEPEND="x11-libs/gtk+:2
+	gnome-base/librsvg[gtk]
 	media-libs/gstreamer:0.10
 	media-libs/gst-plugins-good
 	media-plugins/gst-plugins-ogg
