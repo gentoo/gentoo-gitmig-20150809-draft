@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.60.1144.ebuild,v 1.2 2011/11/08 19:22:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-11.60.1144.ebuild,v 1.3 2011/11/12 15:43:21 jer Exp $
 
 EAPI="4"
 
@@ -60,7 +60,7 @@ KDERDEPEND="
 	x11-libs/qt-gui
 "
 GSTRDEPEND="
-	dev-libs/glib
+	dev-libs/glib:2
 	dev-libs/libxml2
 	media-libs/gst-plugins-base
 	media-libs/gstreamer

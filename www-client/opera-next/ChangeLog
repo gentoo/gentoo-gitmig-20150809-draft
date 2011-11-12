@@ -1,6 +1,13 @@
 # ChangeLog for www-client/opera-next
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.51 2011/11/08 19:31:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-next/ChangeLog,v 1.52 2011/11/12 15:44:11 jer Exp $
+
+  12 Nov 2011; Jeroen Roovers <jer@gentoo.org> opera-next-12.00.1054.ebuild,
+  opera-next-12.00.1060.ebuild, opera-next-12.00.1065.ebuild,
+  opera-next-12.00.1076.ebuild, opera-next-12.00.1085.ebuild,
+  opera-next-12.00.1090.ebuild, opera-next-12.00.1105.ebuild,
+  opera-next-12.00.1116.ebuild:
+  Correct dev-libs/glib SLOT dependency.
 
   08 Nov 2011; Jeroen Roovers <jer@gentoo.org> opera-next-12.00.1116.ebuild,
   metadata.xml:
