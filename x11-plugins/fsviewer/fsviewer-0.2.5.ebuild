@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/fsviewer-0.2.5.ebuild,v 1.10 2010/11/08 16:34:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/fsviewer/fsviewer-0.2.5.ebuild,v 1.11 2011/11/12 10:43:57 jlec Exp $
+
+EAPI=1
 
 inherit eutils
 
@@ -15,29 +17,30 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND=">=x11-wm/windowmaker-0.92.0-r3
-	x11-libs/libX11
-	x11-libs/libXft
-	x11-libs/libXmu
-	x11-libs/libPropList
-	x11-libs/libXpm
-	x11-libs/libXext
-	x11-libs/libXrender
-	x11-libs/libXt
-	x11-libs/libSM
-	x11-libs/libICE
-	x11-libs/libXau
-	x11-libs/libXdmcp
-	x11-proto/xproto
-	x11-proto/xextproto
-	media-libs/tiff
-	virtual/jpeg
+DEPEND="
+	dev-libs/expat
+	media-libs/tiff:0
 	media-libs/giflib
-	media-libs/libpng
+	media-libs/libpng:0
 	media-libs/fontconfig
 	media-libs/freetype
-	dev-libs/expat
-	sys-libs/zlib"
+	sys-libs/zlib
+	virtual/jpeg
+	x11-libs/libPropList
+	x11-libs/libSM
+	x11-libs/libICE
+	x11-libs/libX11
+	x11-libs/libXau
+	x11-libs/libXdmcp
+	x11-libs/libXext
+	x11-libs/libXft
+	x11-libs/libXmu
+	x11-libs/libXpm
+	x11-libs/libXrender
+	x11-libs/libXt
+	x11-proto/xextproto
+	x11-proto/xproto
+	x11-wm/windowmaker"
 
 S=${WORKDIR}/${MY_PN}.app-${PV}
 
