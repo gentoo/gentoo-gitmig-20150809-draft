@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/mp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.80 2011/06/16 18:47:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.81 2011/11/12 00:47:44 xmw Exp $
+
+*mp-5.2.1 (12 Nov 2011)
+
+  12 Nov 2011; Michael Weber <xmw@gentoo.org> -mp-5.2.0.ebuild,
+  -files/mp-5.2.0-make.patch, +mp-5.2.1.ebuild, +files/mp-5.2.1-prll.patch:
+  Version bump, thanks to Rafał Mużyło (bug 390211)
 
   16 Jun 2011; Jeroen Roovers <jer@gentoo.org> mp-5.2.0.ebuild,
   +files/mp-5.2.0-make.patch:
