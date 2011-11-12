@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libqxt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/ChangeLog,v 1.17 2011/11/12 00:09:01 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/ChangeLog,v 1.18 2011/11/12 16:22:31 pesa Exp $
+
+*libqxt-0.6.1 (12 Nov 2011)
+
+  12 Nov 2011; Davide Pesavento <pesa@gentoo.org> +libqxt-0.6.1.ebuild,
+  -libqxt-0.6.0-r2.ebuild, metadata.xml:
+  Version bump. Renamed 'crypt' useflag to 'ssl' and fixed description of 'web'
+  useflag. Removed old.
 
   12 Nov 2011; Davide Pesavento <pesa@gentoo.org>
   -files/libqxt-0.5.0-gcc4.4.patch, -libqxt-0.2.5-r1.ebuild,
