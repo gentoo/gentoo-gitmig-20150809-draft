@@ -1,11 +1,16 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.281 2011/11/09 08:53:18 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.282 2011/11/12 16:26:45 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
 
-# Kacper Kowalik <xarthisius@gentoo.org> (9 Nov 2011)
+# Samuli Suominen <ssuominen@gentoo.org> (12 Nov 2011)
+# This entry can be removed once tovid-0.31 has left the building
+# That means you!
+<media-video/tovid-0.34 wxwidgets
+
+# Kacper Kowalik <xarthisius@gentoo.org> (09 Nov 2011)
 # pathdb works only as a SIGSEGV generator, mask until upstream
 # fixes it bug #385683
 dev-lang/path64 debugger
