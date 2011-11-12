@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/clipgrab
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clipgrab/ChangeLog,v 1.9 2011/11/12 01:23:36 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clipgrab/ChangeLog,v 1.10 2011/11/12 10:17:52 xmw Exp $
+
+  12 Nov 2011; Michael Weber <xmw@gentoo.org> clipgrab-3.1.0.2.ebuild:
+  dropping ~sparc
+
+  12 Nov 2011; Michael Weber <xmw@gentoo.org> clipgrab-3.1.0.2.ebuild:
+  Change dep to x11-libs/qt-webkit:4 (thanks to Mithodin, bug 379269)
 
 *clipgrab-3.1.0.2 (12 Nov 2011)
 
