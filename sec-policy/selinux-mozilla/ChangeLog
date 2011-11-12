@@ -1,6 +1,13 @@
 # ChangeLog for sec-policy/selinux-mozilla
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mozilla/ChangeLog,v 1.10 2011/10/23 12:42:46 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mozilla/ChangeLog,v 1.11 2011/11/12 20:53:31 swift Exp $
+
+  12 Nov 2011; <swift@gentoo.org> -files/fix-apps-mozilla-r2.patch,
+  -files/fix-apps-mozilla-r3.patch, -files/fix-apps-mozilla-r4.patch,
+  -selinux-mozilla-2.20101213-r2.ebuild, -selinux-mozilla-2.20101213-r3.ebuild,
+  -selinux-mozilla-2.20101213-r4.ebuild, -selinux-mozilla-2.20110726-r1.ebuild,
+  -files/fix-mozilla.patch:
+  Removing old policies
 
   23 Oct 2011; <swift@gentoo.org> selinux-mozilla-2.20110726-r2.ebuild:
   Stabilization (tracker #384231)

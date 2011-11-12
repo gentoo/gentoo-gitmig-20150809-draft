@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-mutt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mutt/ChangeLog,v 1.7 2011/10/23 12:42:32 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mutt/ChangeLog,v 1.8 2011/11/12 20:53:07 swift Exp $
+
+  12 Nov 2011; <swift@gentoo.org> -files/add-apps-mutt-r1.patch,
+  -files/add-apps-mutt-r2.patch, -selinux-mutt-2.20101213-r2.ebuild,
+  -selinux-mutt-2.20110726-r1.ebuild, -files/add-apps-mutt.patch:
+  Removing old policies
 
   23 Oct 2011; <swift@gentoo.org> selinux-mutt-2.20110726-r2.ebuild:
   Stabilization (tracker #384231)

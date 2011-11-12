@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-haveged
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-haveged/ChangeLog,v 1.2 2011/10/23 12:43:03 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-haveged/ChangeLog,v 1.3 2011/11/12 20:53:46 swift Exp $
+
+  12 Nov 2011; <swift@gentoo.org> -files/fix-services-haveged-r1.patch,
+  -selinux-haveged-2.20101213-r1.ebuild:
+  Removing old policies
 
   23 Oct 2011; <swift@gentoo.org> selinux-haveged-2.20101213-r2.ebuild:
   Stabilization (tracker #384231)

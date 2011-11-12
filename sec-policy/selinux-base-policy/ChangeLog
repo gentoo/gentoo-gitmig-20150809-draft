@@ -1,6 +1,19 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.86 2011/10/23 12:42:53 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.87 2011/11/12 20:53:21 swift Exp $
+
+  12 Nov 2011; <swift@gentoo.org> -selinux-base-policy-2.20090730.ebuild,
+  -selinux-base-policy-2.20090814.ebuild,
+  -selinux-base-policy-2.20091215.ebuild,
+  -selinux-base-policy-2.20101213-r16.ebuild,
+  -selinux-base-policy-2.20101213-r17.ebuild,
+  -selinux-base-policy-2.20101213-r18.ebuild,
+  -selinux-base-policy-2.20101213-r20.ebuild,
+  -selinux-base-policy-2.20101213-r21.ebuild,
+  -selinux-base-policy-2.20101213-r22.ebuild,
+  -selinux-base-policy-2.20110726-r3.ebuild,
+  -files/modules.conf.strict.20090730, -files/modules.conf.targeted.20090730:
+  Removing old policies
 
   23 Oct 2011; <swift@gentoo.org> selinux-base-policy-2.20110726-r4.ebuild:
   Stabilization (tracker #384231)

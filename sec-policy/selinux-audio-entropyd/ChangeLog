@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-audio-entropyd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-audio-entropyd/ChangeLog,v 1.24 2011/10/23 12:42:35 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-audio-entropyd/ChangeLog,v 1.25 2011/11/12 20:53:28 swift Exp $
+
+  12 Nov 2011; <swift@gentoo.org> -files/fix-services-audioentropy-r1.patch,
+  -selinux-audio-entropyd-2.20101213.ebuild,
+  -selinux-audio-entropyd-2.20101213-r1.ebuild:
+  Removing old policies
 
   23 Oct 2011; <swift@gentoo.org> selinux-audio-entropyd-2.20110726.ebuild:
   Stabilization (tracker #384231)

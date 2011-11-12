@@ -1,6 +1,9 @@
 # ChangeLog for sec-policy/selinux-nfs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-nfs/ChangeLog,v 1.21 2011/10/23 12:42:42 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-nfs/ChangeLog,v 1.22 2011/11/12 20:52:55 swift Exp $
+
+  12 Nov 2011; <swift@gentoo.org> -selinux-nfs-2.20101213.ebuild:
+  Removing old policies
 
   23 Oct 2011; <swift@gentoo.org> selinux-nfs-2.20110726.ebuild:
   Stabilization (tracker #384231)

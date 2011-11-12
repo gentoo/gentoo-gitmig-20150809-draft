@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-ldap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ldap/ChangeLog,v 1.4 2011/10/23 12:42:28 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ldap/ChangeLog,v 1.5 2011/11/12 20:52:51 swift Exp $
+
+  12 Nov 2011; <swift@gentoo.org> -files/fix-services-ldap-r1.patch,
+  -selinux-ldap-2.20101213-r1.ebuild:
+  Removing old policies
 
   23 Oct 2011; <swift@gentoo.org> selinux-ldap-2.20110726-r1.ebuild:
   Stabilization (tracker #384231)
