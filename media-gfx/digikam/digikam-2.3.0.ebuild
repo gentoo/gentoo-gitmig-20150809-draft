@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-2.1.0-r2.ebuild,v 1.2 2011/10/19 19:11:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-2.3.0.ebuild,v 1.1 2011/11/12 15:52:28 dilfridge Exp $
 
 EAPI=4
 
@@ -19,7 +19,7 @@ MY_P="${PN}-${PV/_/-}"
 
 DESCRIPTION="Digital photo management application for KDE"
 HOMEPAGE="http://www.digikam.org/"
-[[ ${PV} != *9999* ]] && SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2 http://dev.gentoo.org/~dilfridge/distfiles/${P}-tag.patch.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2
 	handbook? ( FDL-1.2 )"
@@ -71,8 +71,6 @@ S="${WORKDIR}/${MY_P}/core"
 
 RESTRICT=test
 # bug 366505
-
-PATCHES=( "${DISTDIR}/${P}-tag.patch.bz2" )
 
 src_prepare() {
 	# just to make absolutely sure
