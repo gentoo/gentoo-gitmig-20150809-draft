@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.04-r4.ebuild,v 1.2 2011/10/31 06:07:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.04-r4.ebuild,v 1.3 2011/11/12 10:21:37 jlec Exp $
 
 EAPI=3
+
 inherit autotools eutils versionator flag-o-matic
 
 DESCRIPTION="Ghostscript is an interpreter for the PostScript language and for PDF"
@@ -11,21 +12,23 @@ HOMEPAGE="http://ghostscript.com/"
 MY_P=${P/-gpl}
 GSDJVU_PV=1.5
 PVM=$(get_version_component_range 1-2)
-SRC_URI="!bindist? ( djvu? ( mirror://sourceforge/djvu/gsdjvu-${GSDJVU_PV}.tar.gz ) )
+SRC_URI="
 	mirror://sourceforge/ghostscript/${MY_P}.tar.bz2
-	mirror://gentoo/${P}-patchset-3.tar.bz2"
+	mirror://gentoo/${P}-patchset-3.tar.bz2
+	!bindist? ( djvu? ( mirror://sourceforge/djvu/gsdjvu-${GSDJVU_PV}.tar.gz ) )"
 
 LICENSE="GPL-3 CPL-1.0"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="bindist cups dbus djvu gtk idn jpeg2k static-libs X"
 
-COMMON_DEPEND="app-text/libpaper
+COMMON_DEPEND="
+	app-text/libpaper
 	media-libs/fontconfig
 	media-libs/freetype:2
 	media-libs/lcms:0
 	>=media-libs/libpng-1.2.42
-	>=media-libs/tiff-3.9.2
+	media-libs/tiff:0
 	>=sys-libs/zlib-1.2.3
 	virtual/jpeg
 	!bindist? ( djvu? ( app-text/djvu ) )
