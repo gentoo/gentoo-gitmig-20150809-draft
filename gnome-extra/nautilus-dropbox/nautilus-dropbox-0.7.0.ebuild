@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-dropbox/nautilus-dropbox-0.6.7-r2.ebuild,v 1.2 2011/08/18 10:09:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-dropbox/nautilus-dropbox-0.7.0.ebuild,v 1.1 2011/11/12 10:37:27 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -43,14 +43,12 @@ src_prepare() {
 	gnome2_src_prepare
 	python_convert_shebangs 2 dropbox.in
 
-	# Use system rst2man.py.
-	sed -e "s/python rst2man.py/rst2man.py/" -i Makefile.am || die "sed failed"
-
 	# use sysem dropbox
 	sed -e "s|~/[.]dropbox-dist|/opt/dropbox|" \
 		-e 's|\(DROPBOXD_PATH = \).*|\1"/opt/dropbox/dropboxd"|' \
 			-i dropbox.in || die
-
+	# us system rst2man
+	epatch "${FILESDIR}"/${P}-system-rst2man.patch
 	eautoreconf
 }
 
