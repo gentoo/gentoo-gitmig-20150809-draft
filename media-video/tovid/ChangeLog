@@ -1,6 +1,13 @@
 # ChangeLog for media-video/tovid
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/ChangeLog,v 1.25 2011/05/28 23:50:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/ChangeLog,v 1.26 2011/11/12 16:06:15 ssuominen Exp $
+
+*tovid-0.34 (12 Nov 2011)
+
+  12 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> +tovid-0.34.ebuild:
+  Version bump wrt #347551 by Jory A. Pratt. Fix graphicsmagick vs. imagemagick
+  depend wrt #314345 by Wojciech Porczyk. Use distutils.eclass wrt #321911 by
+  Arfrever Frehtes Taifersar Arahesis.
 
   28 May 2011; Zac Medico <zmedico@gentoo.org> tovid-0.31-r2.ebuild:
   Pull in virtual/ffmpeg instead of media-video/ffmpeg.
