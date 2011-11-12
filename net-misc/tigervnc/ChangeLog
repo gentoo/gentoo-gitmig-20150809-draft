@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.111 2011/11/05 18:55:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.112 2011/11/12 18:05:41 armin76 Exp $
+
+*tigervnc-1.1.0-r1 (12 Nov 2011)
+*tigervnc-1.1.0 (12 Nov 2011)
+
+  12 Nov 2011; Raúl Porcel <armin76@gentoo.org> +files/xserver111.patch,
+  +tigervnc-1.1.0.ebuild, +tigervnc-1.1.0-r1.ebuild:
+  Version bump, fixes bug 387729
 
   05 Nov 2011; Raúl Porcel <armin76@gentoo.org>
   tigervnc-1.0.1_p20110618-r1.ebuild:
