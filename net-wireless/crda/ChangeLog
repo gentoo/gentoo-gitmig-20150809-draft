@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/crda
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.29 2011/11/07 21:07:54 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.30 2011/11/12 09:46:20 gurligebis Exp $
+
+*crda-1.1.2-r2 (12 Nov 2011)
+
+  12 Nov 2011; <gurligebis@gentoo.org> -crda-1.0.2.ebuild, -crda-1.1.2.ebuild,
+  -crda-1.1.2-r1.ebuild, +crda-1.1.2-r2.ebuild:
+  Fixing multilib problem and removing old versions.
 
 *crda-1.1.2-r1 (07 Nov 2011)
 

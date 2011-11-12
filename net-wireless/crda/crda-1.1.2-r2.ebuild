@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-1.1.2.ebuild,v 1.7 2011/10/30 16:47:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-1.1.2-r2.ebuild,v 1.1 2011/11/12 09:46:20 gurligebis Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
@@ -31,7 +31,7 @@ src_prepare() {
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" all_noverify
+	emake UDEV_RULE_DIR=/etc/udev/rules.d/ REG_BIN=/usr/$(get_libdir)/crda/regulatory.bin USE_OPENSSL=1 CC="$(tc-getCC)" all_noverify
 }
 
 src_test() {
@@ -39,5 +39,6 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	emake UDEV_RULE_DIR=/etc/udev/rules.d/ REG_BIN=/usr/$(get_libdir)/crda/regulatory.bin USE_OPENSSL=1 DESTDIR="${D}" install
+	keepdir /etc/wireless-regdb/pubkeys
 }
