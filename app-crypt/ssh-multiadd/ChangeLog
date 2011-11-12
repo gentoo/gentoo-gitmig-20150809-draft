@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/ssh-multiadd
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ssh-multiadd/ChangeLog,v 1.10 2007/05/13 18:05:41 bangert Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ssh-multiadd/ChangeLog,v 1.11 2011/11/12 19:49:26 maksbotan Exp $
+
+*ssh-multiadd-1.3.1-r1 (12 Nov 2011)
+
+  12 Nov 2011; Maxim Koltsov <maksbotan@gentoo.org>
+  +ssh-multiadd-1.3.1-r1.ebuild, metadata.xml:
+  Reassign to python & proxy-maintainers, fix bug #308341. Thanks to idella4
 
   13 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add herd
