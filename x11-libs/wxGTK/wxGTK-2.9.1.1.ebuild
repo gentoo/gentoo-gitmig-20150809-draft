@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.9.1.1.ebuild,v 1.4 2011/10/25 04:06:33 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.9.1.1.ebuild,v 1.5 2011/11/12 11:09:11 jlec Exp $
 
 EAPI="3"
 
 inherit eutils flag-o-matic
 
-DESCRIPTION="GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit."
+DESCRIPTION="GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit"
 HOMEPAGE="http://wxwidgets.org/"
 
 # we use the wxPython tarballs because they include the full wxGTK sources and
@@ -21,19 +21,22 @@ RDEPEND="
 	dev-libs/expat
 	sdl?    ( media-libs/libsdl )
 	X?  (
-		>=x11-libs/gtk+-2.18:2
 		>=dev-libs/glib-2.22:2
+		media-libs/libpng:0
+		sys-libs/zlib
 		virtual/jpeg
+		>=x11-libs/gtk+-2.18:2
 		x11-libs/libSM
 		x11-libs/libXinerama
 		x11-libs/libXxf86vm
+		x11-libs/pango
 		gnome? ( gnome-base/libgnomeprintui:2.2 )
 		gstreamer? (
 			gnome-base/gconf:2
 			>=media-libs/gstreamer-0.10
 			>=media-libs/gst-plugins-base-0.10 )
 		opengl? ( virtual/opengl )
-		tiff?   ( media-libs/tiff )
+		tiff?   ( media-libs/tiff:0 )
 		)"
 
 DEPEND="${RDEPEND}
@@ -109,7 +112,7 @@ src_configure() {
 	mkdir "${S}"/wxgtk_build
 	cd "${S}"/wxgtk_build
 
-	ECONF_SOURCE="${S}" econf ${myconf} || die "configure failed."
+	ECONF_SOURCE="${S}" econf ${myconf}
 }
 
 src_compile() {

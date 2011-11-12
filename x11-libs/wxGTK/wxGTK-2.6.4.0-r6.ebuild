@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.4.0-r6.ebuild,v 1.12 2011/09/15 19:24:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.4.0-r6.ebuild,v 1.13 2011/11/12 11:09:11 jlec Exp $
 
 EAPI=1
 inherit eutils versionator flag-o-matic
@@ -24,14 +24,17 @@ RDEPEND="
 	odbc?	( dev-db/unixODBC )
 	sdl?	( media-libs/libsdl )
 	X?	(
-		x11-libs/gtk+:2
-		dev-libs/glib:2
+		>=dev-libs/glib-2.22:2
+		media-libs/libpng:0
+		sys-libs/zlib
 		virtual/jpeg
-		media-libs/tiff
+		>=x11-libs/gtk+-2.18:2
+		media-libs/tiff:0
 		x11-libs/libSM
 		x11-libs/libXinerama
 		x11-libs/libXxf86vm
-		gnome?	( gnome-base/libgnomeprintui )
+		x11-libs/pango
+		gnome? ( gnome-base/libgnomeprintui )
 		opengl?	( virtual/opengl )
 		)"
 
@@ -201,8 +204,7 @@ build_wx() {
 
 	ECONF_SOURCE="${S}" econf \
 		${myconf} \
-		${build_wx_conf} \
-		|| die "Failed to configure $1."
+		${build_wx_conf}
 
 	emake || die "Failed to make $1."
 

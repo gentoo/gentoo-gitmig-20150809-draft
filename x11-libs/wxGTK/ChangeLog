@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.272 2011/10/25 04:06:33 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.273 2011/11/12 11:09:11 jlec Exp $
+
+  12 Nov 2011; Justin Lecher <jlec@gentoo.org> wxGTK-2.6.4.0-r6.ebuild,
+  wxGTK-2.8.10.1-r5.ebuild, wxGTK-2.8.11.0.ebuild, wxGTK-2.8.12.0.ebuild,
+  wxGTK-2.9.1.1.ebuild, metadata.xml:
+  Corrected slotting for png and tiff, resorted ebuild to fit common sense
+  order, removed unnessesary die
 
   25 Oct 2011; Ryan Hill <dirtyepic@gentoo.org> wxGTK-2.9.1.1.ebuild:
   Apply libpng-1.5 patch to 2.9 as well.

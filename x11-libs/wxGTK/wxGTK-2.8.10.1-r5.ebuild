@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.10.1-r5.ebuild,v 1.11 2011/02/27 14:32:40 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.10.1-r5.ebuild,v 1.12 2011/11/12 11:09:11 jlec Exp $
 
 EAPI="2"
 
 inherit eutils versionator flag-o-matic
 
-DESCRIPTION="GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit."
+DESCRIPTION="GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit"
 HOMEPAGE="http://wxwidgets.org/"
 
 BASE_PV="$(get_version_component_range 1-3)"
@@ -24,13 +24,16 @@ RDEPEND="
 	odbc?   ( dev-db/unixODBC )
 	sdl?    ( media-libs/libsdl )
 	X?  (
-		>=x11-libs/gtk+-2.4:2
-		>=dev-libs/glib-2.4:2
+		>=dev-libs/glib-2.22:2
+		media-libs/libpng:0
+		sys-libs/zlib
 		virtual/jpeg
-		media-libs/tiff
+		>=x11-libs/gtk+-2.18:2
+		media-libs/tiff:0
 		x11-libs/libSM
 		x11-libs/libXinerama
 		x11-libs/libXxf86vm
+		x11-libs/pango
 		gnome?  ( gnome-base/libgnomeprintui:2.2 )
 		gstreamer? (
 			gnome-base/gconf:2
@@ -116,7 +119,7 @@ src_configure() {
 	mkdir "${S}"/wxgtk_build
 	cd "${S}"/wxgtk_build
 
-	ECONF_SOURCE="${S}" econf ${myconf} || die "configure failed."
+	ECONF_SOURCE="${S}" econf ${myconf}
 }
 
 src_compile() {
