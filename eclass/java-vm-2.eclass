@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.36 2011/10/30 11:06:38 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.37 2011/11/12 13:05:33 sera Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -202,6 +202,28 @@ java-vm_revdep-mask() {
 	elog "missing dependencies (see bug #177925 for more info). Note that some parts"
 	elog "of the JVM may require dependencies that are pulled only through respective"
 	elog "USE flags (typically X, alsa, odbc) and some Java code may fail without them."
+}
+
+# -----------------------------------------------------------------------------
+# @ebuild-function java-vm_sandbox-predict
+#
+# Install a sandbox control file. Specified paths won't cause a sandbox
+# violation if opened read write but no write takes place. See bug 388937#c1
+#
+# @example
+#   java-vm_sandbox-predict /dev/random /proc/self/coredump_filter
+# -----------------------------------------------------------------------------
+java-vm_sandbox-predict() {
+	debug-print-function ${FUNCNAME} "$*"
+	[[ -z "${1}" ]] && die "${FUNCNAME} takes at least one argument"
+
+	has ${EAPI:-0} 0 1 2 && ! use prefix && ED="${D}"
+
+	local path path_arr=("$@")
+	IFS=":" path="${path_arr[*]}"
+	dodir /etc/sandbox.d
+	echo "SANDBOX_PREDICT=\"${path}\"" > "${ED}/etc/sandbox.d/20${VMHANDLE}" \
+		|| die "Failed to write sandbox control file"
 }
 
 java_get_plugin_dir_() {
