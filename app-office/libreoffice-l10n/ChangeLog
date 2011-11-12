@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice-l10n
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.17 2011/11/12 17:43:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.18 2011/11/12 21:27:12 zmedico Exp $
+
+  12 Nov 2011; Zac Medico <zmedico@gentoo.org> libreoffice-l10n-3.4.4-r1.ebuild:
+  Bug #390271 - Remove all KEYWORDS, as the current blockers are the equivalent
+  of RDEPEND.bad when expressed as positive dependencies.
 
 *libreoffice-l10n-9999-r1 (12 Nov 2011)
 *libreoffice-l10n-3.4.4-r1 (12 Nov 2011)
