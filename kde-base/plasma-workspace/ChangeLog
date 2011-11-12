@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/plasma-workspace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.131 2011/11/12 17:19:56 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.132 2011/11/12 21:12:10 dilfridge Exp $
+
+*plasma-workspace-4.7.3-r2 (12 Nov 2011)
+
+  12 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  -plasma-workspace-4.7.3-r1.ebuild, +plasma-workspace-4.7.3-r2.ebuild,
+  +files/plasma-workspace-4.7.3-taskcrash.patch:
+  Add another upstream plasma crash fix, kde-bug 272495
 
 *plasma-workspace-4.7.3-r1 (12 Nov 2011)
 
