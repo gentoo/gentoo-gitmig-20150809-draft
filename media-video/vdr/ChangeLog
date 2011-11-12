@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vdr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.149 2011/10/24 17:45:10 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.150 2011/11/12 13:22:02 hd_brummy Exp $
+
+  12 Nov 2011; Joerg Bornkessel <hd_brummy@gentoo.org> -vdr-1.6.0_p2.ebuild,
+  -vdr-1.6.0_p2-r2.ebuild, -vdr-1.6.0_p2-r3.ebuild, -vdr-1.6.0_p2-r4.ebuild,
+  -vdr-1.6.0_p2-r5.ebuild:
+  cleanup
 
   24 Oct 2011; Joerg Bornkessel <hd_brummy@gentoo.org> vdr-1.6.0_p2-r7.ebuild:
   keyworded ~arm
