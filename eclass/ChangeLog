@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.10 2011/11/12 19:01:56 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.11 2011/11/12 20:46:39 pesa Exp $
+
+  12 Nov 2011; Davide Pesavento <pesa@gentoo.org> qt4-r2.eclass:
+  Restore ${S} fallback, but with a deprecation notice saying that it will be
+  removed in 30 days.
 
   12 Nov 2011; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass:
   Set qt@g.o as maintainer, minor cleanups (quoting, whitespace, etc.)
