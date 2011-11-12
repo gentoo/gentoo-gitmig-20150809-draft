@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.8 2011/11/12 13:05:33 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.9 2011/11/12 18:26:59 pesa Exp $
+
+  12 Nov 2011; Davide Pesavento <pesa@gentoo.org> qt4-r2.eclass:
+  Remove ${S} fallback from src_unpack, set qt@g.o as maintainer, remove
+  unnecessary quoting.
 
   12 Nov 2011; Ralph Sennhauser <sera@gentoo.org> java-vm-2.eclass:
   Add java-vm_sandbox-predict for installing a sandbox control file along with
