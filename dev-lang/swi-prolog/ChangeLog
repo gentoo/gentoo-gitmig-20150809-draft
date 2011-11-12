@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/swi-prolog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.300 2011/11/12 00:08:53 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/ChangeLog,v 1.301 2011/11/12 23:07:01 keri Exp $
+
+  12 Nov 2011; <keri@gentoo.org> swi-prolog-5.10.5-r1.ebuild,
+  swi-prolog-5.11.30.ebuild:
+  Ensure SWIPL home points to build environment when running testsuite
 
 *swi-prolog-5.11.30 (12 Nov 2011)
 
