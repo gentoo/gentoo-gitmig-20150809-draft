@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.102.ebuild,v 1.1 2011/11/05 01:30:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.102.ebuild,v 1.2 2011/11/12 16:17:22 ssuominen Exp $
 
 # This ebuild is only for installing obsolete libpolkit-gtk-1 wrt #387663
 
@@ -37,7 +37,8 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install
-	rm -f \
+	rm -rf \
 		"${ED}"usr/lib*/polkit-gnome-authentication-agent-1 \
-		"${ED}"usr/lib*/libpolkit-gtk-1.la
+		"${ED}"usr/lib*/libpolkit-gtk-1.la \
+		"${ED}"usr/share/locale
 }
