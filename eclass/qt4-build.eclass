@@ -1,16 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.97 2011/11/02 18:01:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.98 2011/11/12 19:01:56 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
-# Ben de Groot <yngwin@gentoo.org>,
-# Markos Chandras <hwoarang@gentoo.org>,
-# Caleb Tennis <caleb@gentoo.org>
-# Alex Alexander <wired@gentoo.org>
+# Qt herd <qt@gentoo.org>
 # @BLURB: Eclass for Qt4 split ebuilds.
 # @DESCRIPTION:
-# This eclass contains various functions that are used when building Qt4
+# This eclass contains various functions that are used when building Qt4.
 
 inherit base eutils multilib toolchain-funcs flag-o-matic versionator
 
@@ -87,7 +84,7 @@ qt4-build_pkg_setup() {
 		fi
 	fi
 
-	if [[ "${PN}" == "qt-webkit" ]]; then
+	if [[ ${PN} == "qt-webkit" ]]; then
 		eshopts_push -s extglob
 		if is-flagq '-g?(gdb)?([1-9])'; then
 			echo
@@ -187,10 +184,11 @@ qt4-build_src_prepare() {
 			-i config.tests/unix/fvisibility.test ||
 				die "visibility fixing sed failed"
 	fi
-	# fix libx11 dependency on non X packages
+
+	# fix libX11 dependency on non X packages
 	if version_is_at_least "4.7.0_beta2"; then
-		local NOLIBX11PKG="qt-core qt-dbus qt-script qt-sql qt-test qt-xmlpatterns"
-		has ${PN} ${NOLIBX11PKG} && qt_nolibx11
+		local nolibx11_pkgs="qt-core qt-dbus qt-script qt-sql qt-test qt-xmlpatterns"
+		has ${PN} ${nolibx11_pkgs} && qt_nolibx11
 		[[ ${PN} == "qt-assistant" ]] && qt_assistant_cleanup
 	fi
 
@@ -228,6 +226,7 @@ qt4-build_src_prepare() {
 		ewarn "disabled."
 		append-flags -std=c++0x
 	fi
+
 	# Unsupported old gcc versions - hardened needs this :(
 	if [[ $(gcc-major-version) -lt 4 ]] ; then
 		ewarn "Appending -fno-stack-protector to CXXFLAGS"
@@ -246,7 +245,8 @@ qt4-build_src_prepare() {
 	# Bug 282984 && Bug 295530
 	sed -e "s:\(^SYSTEM_VARIABLES\):CC=\"$(tc-getCC)\"\nCXX=\"$(tc-getCXX)\"\nCFLAGS=\"${CFLAGS}\"\nCXXFLAGS=\"${CXXFLAGS}\"\nLDFLAGS=\"${LDFLAGS}\"\n\1:" \
 		-i configure || die "sed qmake compilers failed"
-	# bug 321335
+
+	# Bug 321335
 	if version_is_at_least 4.6; then
 		find ./config.tests/unix -name "*.test" -type f -exec grep -lZ \$MAKE '{}' \; | \
 			xargs -0 \
@@ -326,7 +326,7 @@ qt4-build_src_configure() {
 	use !elibc_glibc && [[ ${CHOST} != *-darwin* ]] && \
 		myconf+=" -liconv"
 
-	if has glib ${IUSE//+} && use glib; then
+	if use_if_iuse glib; then
 		# use -I, -L and -l from configure
 		local glibflags="$(pkg-config --cflags --libs glib-2.0 gthread-2.0)"
 		# avoid the -pthread argument
@@ -334,7 +334,7 @@ qt4-build_src_configure() {
 		unset glibflags
 	fi
 
-	if has qpa ${IUSE//+} && use qpa; then
+	if use_if_iuse qpa; then
 		ewarn
 		ewarn "The qpa useflag enables the Qt Platform Abstraction, formely"
 		ewarn "known as Qt Lighthouse. If you are not sure what that is, then"
@@ -427,10 +427,12 @@ fix_includes() {
 qt4-build_src_install() {
 	[[ ${EAPI} == 2 ]] && use !prefix && ED=${D}
 	setqtenv
+
 	install_directories ${QT4_TARGET_DIRECTORIES}
 	install_qconfigs
 	fix_library_files
 	fix_includes
+
 	# remove .la files since we are building only shared Qt libraries
 	find "${D}"${QTLIBDIR} -name "*.la" -print0 | xargs -0 rm
 }
@@ -536,7 +538,7 @@ standard_configure_options() {
 prepare_directories() {
 	for x in "$@"; do
 		pushd "${S}"/${x} >/dev/null
-		einfo "running qmake in: $x"
+		einfo "Running qmake in: ${x}"
 		# avoid running over the maximum argument number, bug #299810
 		{
 			echo "${S}"/mkspecs/common/*.conf
@@ -690,7 +692,7 @@ qt4-build_pkg_postinst() {
 # Don't need to build qmake, as it's already installed from qt-core
 skip_qmake_build_patch() {
 	# Don't need to build qmake, as it's already installed from qt-core
-	sed -i -e "s:if true:if false:g" "${S}"/configure || die "Sed failed"
+	sed -i -e "s:if true:if false:g" "${S}"/configure || die "sed failed"
 }
 
 # @FUNCTION: skip_project_generation_patch
@@ -699,7 +701,7 @@ skip_qmake_build_patch() {
 skip_project_generation_patch() {
 	# Exit the script early by throwing in an exit before all of the .pro files are scanned
 	sed -e "s:echo \"Finding:exit 0\n\necho \"Finding:g" \
-		-i "${S}"/configure || die "Sed failed"
+		-i "${S}"/configure || die "sed failed"
 }
 
 # @FUNCTION: symlink_binaries_to_buildtree
@@ -708,7 +710,7 @@ skip_project_generation_patch() {
 # time
 symlink_binaries_to_buildtree() {
 	for bin in qmake moc uic rcc; do
-		ln -s ${QTBINDIR}/${bin} "${S}"/bin/ || die "Symlinking ${bin} to ${S}/bin failed."
+		ln -s ${QTBINDIR}/${bin} "${S}"/bin/ || die "symlinking ${bin} to ${S}/bin failed"
 	done
 }
 
@@ -719,19 +721,19 @@ symlink_binaries_to_buildtree() {
 fix_library_files() {
 	for libfile in "${D}"/${QTLIBDIR}/{*.la,*.prl,pkgconfig/*.pc}; do
 		if [[ -e ${libfile} ]]; then
-			sed -i -e "s:${S}/lib:${QTLIBDIR}:g" ${libfile} || die "Sed on ${libfile} failed."
+			sed -i -e "s:${S}/lib:${QTLIBDIR}:g" ${libfile} || die "sed on ${libfile} failed"
 		fi
 	done
 
 	# pkgconfig files refer to WORKDIR/bin as the moc and uic locations.  Fix:
 	for libfile in "${D}"/${QTLIBDIR}/pkgconfig/*.pc; do
 		if [[ -e ${libfile} ]]; then
-			sed -i -e "s:${S}/bin:${QTBINDIR}:g" ${libfile} || die "Sed failed"
+			sed -i -e "s:${S}/bin:${QTBINDIR}:g" ${libfile} || die "sed failed"
 
 		# Move .pc files into the pkgconfig directory
 		dodir ${QTPCDIR#${EPREFIX}}
 		mv ${libfile} "${D}"/${QTPCDIR}/ \
-			|| die "Moving ${libfile} to ${D}/${QTPCDIR}/ failed."
+			|| die "moving ${libfile} to ${D}/${QTPCDIR}/ failed"
 		fi
 	done
 
@@ -790,7 +792,7 @@ qt_mkspecs_dir() {
 		*-linux-*|*-linux)
 			spec=linux ;;
 		*)
-			die "Unknown CHOST, no platform choosen."
+			die "Unknown CHOST, no platform chosen."
 	esac
 
 	CXX=$(tc-getCXX)
@@ -799,7 +801,7 @@ qt_mkspecs_dir() {
 	elif [[ ${CXX} == *icpc* ]]; then
 		spec+=-icc
 	else
-		die "Unknown compiler ${CXX}."
+		die "Unknown compiler '${CXX}'."
 	fi
 	if [[ -n ${LIBDIR/lib} ]]; then
 		spec+=-${LIBDIR/lib}
@@ -846,7 +848,7 @@ qt_assistant_cleanup() {
 # @DESCRIPTION:
 # Ignore X11 tests for packages that don't need X libraries installed
 qt_nolibx11() {
-	einfo "removing X11 check to allow X-less compilation"
+	einfo "Removing X11 check to allow X-less compilation"
 	sed -i "/unixtests\/compile.test.*config.tests\/x11\/xlib/,/fi$/d" "${S}"/configure ||
 		die "x11 check sed failed"
 }
