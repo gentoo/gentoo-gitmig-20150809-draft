@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-1.2.2.ebuild,v 1.4 2011/10/11 21:24:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-1.2.2.ebuild,v 1.5 2011/11/12 10:47:23 jlec Exp $
 
 EAPI=4
 
-DESCRIPTION="a program to render images of the earth into the X root window"
-HOMEPAGE="http://xplanet.sourceforge.net"
+DESCRIPTION="Render images of the earth into the X root window"
+HOMEPAGE="http://xplanet.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -13,19 +13,24 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ~hppa ppc ppc64 ~sparc x86"
 IUSE="gif jpeg X truetype tiff png"
 
-RDEPEND="X? ( x11-libs/libX11
-	x11-libs/libXScrnSaver
-	x11-libs/libXt
-	x11-libs/libXext )
+RDEPEND="
+	X? (
+		x11-libs/libX11
+		x11-libs/libXext
+		x11-libs/libXScrnSaver
+		x11-libs/libXt )
 	gif? ( media-libs/giflib )
 	jpeg? ( virtual/jpeg )
-	tiff? ( media-libs/tiff )
-	png? ( media-libs/libpng
+	png? (
+		media-libs/libpng:0
 		media-libs/netpbm )
-	truetype? ( =media-libs/freetype-2*
+	tiff? ( media-libs/tiff:0 )
+	truetype? (
+		media-libs/freetype:2
 		x11-libs/pango )"
 DEPEND="${RDEPEND}
-	X? ( x11-proto/xproto
+	X? (
+	x11-proto/xproto
 	x11-proto/scrnsaverproto )"
 
 src_configure() {
@@ -58,9 +63,4 @@ src_configure() {
 	econf \
 		--with-cspice=no \
 		${myconf}
-}
-
-src_install () {
-	emake DESTDIR="${D}" install
-	dodoc AUTHORS ChangeLog NEWS README TODO
 }
