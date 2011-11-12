@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.04-r4.ebuild,v 1.3 2011/11/12 10:21:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.04-r4.ebuild,v 1.4 2011/11/12 10:23:33 jlec Exp $
 
 EAPI=3
 
@@ -27,7 +27,7 @@ COMMON_DEPEND="
 	media-libs/fontconfig
 	media-libs/freetype:2
 	media-libs/lcms:0
-	>=media-libs/libpng-1.2.42
+	media-libs/libpng:0
 	media-libs/tiff:0
 	>=sys-libs/zlib-1.2.3
 	virtual/jpeg

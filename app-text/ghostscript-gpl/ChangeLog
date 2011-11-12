@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.128 2011/11/12 10:21:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.129 2011/11/12 10:23:33 jlec Exp $
+
+  12 Nov 2011; Justin Lecher <jlec@gentoo.org> ghostscript-gpl-9.04-r4.ebuild:
+  Fixed slotting for media-libs/libpng
 
   12 Nov 2011; Justin Lecher <jlec@gentoo.org> ghostscript-gpl-9.04-r4.ebuild,
   metadata.xml:
