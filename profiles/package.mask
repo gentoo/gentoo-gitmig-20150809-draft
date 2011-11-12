@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13228 2011/11/11 21:43:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13229 2011/11/12 10:44:44 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,10 +31,11 @@
 
 #--- END OF EXAMPLES ---
 
-# Samuli Suominen <ssuominen@gentoo.org> (11 Nov 2011)
+# Samuli Suominen <ssuominen@gentoo.org> (12 Nov 2011)
 # Masked for removal in 30 days since wxpython-2.6 is going away wrt bug 330683
 dev-python/pythoncard
 dev-util/boa-constructor
+net-p2p/bittornado
 
 # Michael Sterrett <mr_bones_@gentoo.org> (10 Nov 2011)
 # Masked for removal on 20111210
