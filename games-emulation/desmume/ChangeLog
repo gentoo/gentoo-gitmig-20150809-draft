@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/desmume
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/desmume/ChangeLog,v 1.17 2010/01/16 18:07:07 hanno Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/desmume/ChangeLog,v 1.18 2011/11/12 21:01:35 hanno Exp $
+
+*desmume-0.9.7 (12 Nov 2011)
+
+  12 Nov 2011; Hanno Boeck <hanno@gentoo.org> +desmume-0.9.7.ebuild,
+  +files/desmume-add-missing-potfiles.diff,
+  +files/desmume-fix-gcc-warning.diff:
+  Version bump, fix for make check and gcc warnings.
 
   16 Jan 2010; Hanno Boeck <hanno@gentoo.org> desmume-0.9.5.ebuild,
   +files/desmume-0.9.5-sse2-fix.diff:
