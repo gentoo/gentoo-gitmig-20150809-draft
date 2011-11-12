@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/argyllcms/argyllcms-1.3.4.ebuild,v 1.1 2011/10/22 17:52:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/argyllcms/argyllcms-1.3.4.ebuild,v 1.2 2011/11/12 23:56:50 dilfridge Exp $
 
 MY_P="Argyll_V${PV}"
 DESCRIPTION="Open source, ICC compatible color management system"
@@ -74,8 +74,8 @@ pkg_postinst() {
 	elog "\"argyll-refine\"."
 	elog
 	elog "If you have a Spyder2 you need to extract the firmware"
-	elog "from the spyder2_setup.exe (ColorVision CD)"
-	elog "and store it as /usr/bin/spyd2PLD.bin"
+	elog "from the CVSpyder.dll of the windows driver package"
+	elog "and store it as /usr/share/color/spyd2PLD.bin"
 	elog
 	elog "For further info on setting up instrument access read"
 	elog "http://www.argyllcms.com/doc/Installing_Linux.html"
