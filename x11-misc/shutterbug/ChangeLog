@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/shutterbug
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutterbug/ChangeLog,v 1.28 2011/02/26 22:45:19 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutterbug/ChangeLog,v 1.29 2011/11/12 10:48:10 jlec Exp $
+
+  12 Nov 2011; Justin Lecher <jlec@gentoo.org> shutterbug-1.6.36.ebuild:
+  Corrected slotting for png and tiff
 
   26 Feb 2011; Kevin McCarthy <signals@gentoo.org> shutterbug-1.6.36.ebuild:
   Updated depends from media-libs/jpeg to virtual/jpeg
