@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13229 2011/11/12 10:44:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13230 2011/11/12 15:45:14 titanofold Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -721,10 +721,6 @@ gnome-extra/office-runner
 # Justin Lecher <jlec@gentoo.org> (13 Jul 2011)
 # fails with libjpeg-turbo on tests
 >=dev-tcltk/tkimg-1.5_pre324
-
-# Aaron W. Swenson <titanofold@gentoo.org> (10 Jul 2011)
-# Beta Release
->=dev-db/pgadmin3-1.14.0_beta1
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (03 Jul 2011)
 # Mask js185 release, changes pkgconfig file, soname, etc
