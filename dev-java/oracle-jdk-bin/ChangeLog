@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/oracle-jdk-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.4 2011/11/12 13:18:42 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.5 2011/11/12 14:09:22 sera Exp $
+
+  12 Nov 2011; Ralph Sennhauser <sera@gentoo.org> -oracle-jdk-bin-1.7.0.ebuild,
+  -oracle-jdk-bin-1.7.0.1.ebuild:
+  Remove old/vulnarable
 
   12 Nov 2011; Ralph Sennhauser <sera@gentoo.org>
   oracle-jdk-bin-1.7.0.1-r1.ebuild:
