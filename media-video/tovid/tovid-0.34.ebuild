@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/tovid-0.34.ebuild,v 1.1 2011/11/12 16:06:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/tovid-0.34.ebuild,v 1.2 2011/11/12 16:12:43 ssuominen Exp $
 
 EAPI=3
 
@@ -9,7 +9,7 @@ PYTHON_USE_WITH="tk"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
 
-inherit distutils
+inherit distutils gnome2-utils
 
 DESCRIPTION="A collection of DVD authoring tools"
 HOMEPAGE="http://tovid.wikia.com/wiki/Tovid_Wiki"
@@ -38,3 +38,24 @@ RDEPEND="app-cdr/cdrdao
 DEPEND="app-text/txt2tags"
 
 DOCS="AUTHORS ChangeLog README"
+
+src_install() {
+	distutils_src_install
+
+	# punt at least .install.log
+	find "${ED}" -name '*.log' -exec rm -f {} +
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	distutils_pkg_postinst
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	distutils_pkg_postrm
+	gnome2_icon_cache_update
+}
