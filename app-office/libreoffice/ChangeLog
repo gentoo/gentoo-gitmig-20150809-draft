@@ -1,6 +1,15 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.197 2011/11/11 14:54:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.198 2011/11/12 12:32:14 scarabeus Exp $
+
+*libreoffice-9999-r2 (12 Nov 2011)
+*libreoffice-3.4.9999-r2 (12 Nov 2011)
+
+  12 Nov 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libreoffice-3.4.9999-r1.ebuild, +libreoffice-3.4.9999-r2.ebuild,
+  -libreoffice-9999-r1.ebuild, +libreoffice-9999-r2.ebuild:
+  Revision bump for versions without templates. This sovles binpkgs for the
+  sabayon.
 
   11 Nov 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   libreoffice-9999-r1.ebuild:

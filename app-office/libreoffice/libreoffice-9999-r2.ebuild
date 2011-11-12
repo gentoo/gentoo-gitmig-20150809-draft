@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r1.ebuild,v 1.58 2011/11/11 14:54:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.1 2011/11/12 12:32:14 scarabeus Exp $
 
 EAPI=4
 
@@ -64,33 +64,16 @@ ADDONS_SRC+=" java? ( ${ADDONS_URI}/35c94d2df8893241173de1d16b6034c0-swingExSrc.
 ADDONS_SRC+=" odk? ( http://download.go-oo.org/extern/185d60944ea767075d27247c3162b3bc-unowinreg.dll )"
 SRC_URI+=" ${ADDONS_SRC}"
 
-TDEPEND="${EXT_URI}/472ffb92d82cf502be039203c606643d-Sun-ODF-Template-Pack-en-US_1.0.0.oxt"
-TDEPEND+=" linguas_de? ( ${EXT_URI}/53ca5e56ccd4cab3693ad32c6bd13343-Sun-ODF-Template-Pack-de_1.0.0.oxt )"
-TDEPEND+=" linguas_en_GB? ( ${EXT_URI}/472ffb92d82cf502be039203c606643d-Sun-ODF-Template-Pack-en-US_1.0.0.oxt )"
-TDEPEND+=" linguas_en_ZA? ( ${EXT_URI}/472ffb92d82cf502be039203c606643d-Sun-ODF-Template-Pack-en-US_1.0.0.oxt )"
-TDEPEND+=" linguas_es? ( ${EXT_URI}/4ad003e7bbda5715f5f38fde1f707af2-Sun-ODF-Template-Pack-es_1.0.0.oxt )"
-TDEPEND+=" linguas_fr? ( ${EXT_URI}/a53080dc876edcddb26eb4c3c7537469-Sun-ODF-Template-Pack-fr_1.0.0.oxt )"
-TDEPEND+=" linguas_hu? ( ${EXT_URI}/09ec2dac030e1dcd5ef7fa1692691dc0-Sun-ODF-Template-Pack-hu_1.0.0.oxt )"
-TDEPEND+=" linguas_it? ( ${EXT_URI}/b33775feda3bcf823cad7ac361fd49a6-Sun-ODF-Template-Pack-it_1.0.0.oxt )"
-SRC_URI+=" templates? ( ${TDEPEND} )"
-
 unset ADDONS_URI
 unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="binfilter +branding dbus debug eds gnome +graphite gstreamer gtk
-+jemalloc kde mysql nsplugin odk opengl pdfimport svg templates test +vba
-+webdav +xmlsec"
++jemalloc kde mysql nsplugin odk opengl pdfimport svg test +vba +webdav
++xmlsec"
 LICENSE="LGPL-3"
 SLOT="0"
 [[ ${PV} == *9999* ]] || KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
-
-# lingua for templates
-LANGUAGES="de en_GB en_ZA es fr hu it"
-for X in ${LANGUAGES} ; do
-	IUSE+=" linguas_${X}"
-done
-unset X
 
 NSS_DEPEND="
 	>=dev-libs/nspr-4.8.8
@@ -278,24 +261,6 @@ src_unpack() {
 		done
 		unset EGIT_PROJECT EGIT_SOURCEDIR EGIT_REPO_URI EGIT_BRANCH
 	fi
-
-	# copy extension templates; o what fun ...
-	if use templates; then
-		dest="${S}/extras/source/extensions"
-		mkdir -p "${dest}"
-
-		for template in ${TDEPEND}; do
-			if [[ ${template} == *.oxt ]]; then
-				tmplfile="${DISTDIR}/$(basename ${template})"
-				tmplname="$(echo "${template}" | \
-					cut -f 2- -s -d - | cut -f 1 -d _)"
-				echo ">>> Unpacking ${tmplfile/\*/} to ${dest}"
-				if [[ -f ${tmplfile} && ! -f "${dest}/${tmplname}.oxt" ]]; then
-					cp -v "${tmplfile}" "${dest}/${tmplname}.oxt" || die
-				fi
-			fi
-		done
-	fi
 }
 
 src_prepare() {
@@ -439,6 +404,7 @@ src_configure() {
 		--without-system-mozilla \
 		--without-help \
 		--without-helppack-integration \
+		--without-sun-templates \
 		$(use_enable binfilter) \
 		$(use_enable dbus) \
 		$(use_enable debug crashdump) \
@@ -466,7 +432,6 @@ src_configure() {
 		$(use_enable xmlsec) \
 		$(use_with java) \
 		$(use_with mysql system-mysql-cppconn) \
-		$(use_with templates sun-templates) \
 		${internal_libs} \
 		${java_opts}
 }
