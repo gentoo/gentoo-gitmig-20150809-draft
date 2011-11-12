@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glog/glog-0.3.1.ebuild,v 1.1 2011/11/11 20:56:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glog/glog-0.3.1.ebuild,v 1.2 2011/11/12 00:27:22 vapier Exp $
 
 EAPI="4"
-inherit eutils versionator
+inherit eutils
 
 DESCRIPTION="Google's C++ logging library"
 HOMEPAGE="http://code.google.com/p/google-glog/"
