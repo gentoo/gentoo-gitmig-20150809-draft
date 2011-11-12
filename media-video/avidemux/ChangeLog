@@ -1,6 +1,18 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.186 2011/08/24 02:44:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.187 2011/11/12 08:10:33 radhermit Exp $
+
+  12 Nov 2011; Tim Harder <radhermit@gentoo.org>
+  -files/2.5.3_field_asm_fix.diff, -files/avidemux-2.4-cmake264.patch,
+  -files/avidemux-2.4.4-gcc-4.4.patch, -files/avidemux-2.4-i18n.patch,
+  -files/avidemux-2.4-ts-cmake.patch, -avidemux-2.5.1_p5428.ebuild,
+  -files/avidemux-2.5.1-build-plugins-fix.patch, -avidemux-2.5.2.ebuild,
+  -files/avidemux-2.5.2-altivec-bool.patch, -avidemux-2.5.3-r3.ebuild,
+  -files/avidemux-2.5.3-build-plugins-fix.patch,
+  -files/avidemux-2.5.3-fix-fgets-fortify.patch, -avidemux-2.5.4-r1.ebuild,
+  -files/avidemux-pulseaudiosimple.patch,
+  -files/lavcodec-mpegvideo_mmx-asm-fix.patch:
+  Remove old.
 
 *avidemux-2.5.5 (24 Aug 2011)
 
