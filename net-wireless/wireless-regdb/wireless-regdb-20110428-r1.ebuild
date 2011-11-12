@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/wireless-regdb-20091125.ebuild,v 1.1 2009/11/26 11:46:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-regdb/wireless-regdb-20110428-r1.ebuild,v 1.1 2011/11/12 09:49:40 gurligebis Exp $
 
 inherit multilib
 
@@ -11,7 +11,7 @@ SRC_URI="http://wireless.kernel.org/download/wireless-regdb/${MY_P}.tar.bz2"
 LICENSE="as-is"
 SLOT="0"
 
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~x86"
 IUSE=""
 
 S="${WORKDIR}/${MY_P}"
@@ -21,8 +21,12 @@ src_compile() {
 }
 
 src_install() {
-	insinto /usr/$(get_libdir)/crda/; doins regulatory.bin
-	insinto /usr/$(get_libdir)/crda/pubkeys; doins linville.key.pub.pem
+	insinto /usr/$(get_libdir)/crda/
+	doins regulatory.bin
+
+	insinto /etc/wireless-regdb/pubkeys
+	doins linville.key.pub.pem
+
 	doman regulatory.bin.5
 	dodoc README db.txt
 }
