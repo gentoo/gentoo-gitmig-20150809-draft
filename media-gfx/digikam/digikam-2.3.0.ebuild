@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-2.3.0.ebuild,v 1.1 2011/11/12 15:52:28 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-2.3.0.ebuild,v 1.2 2011/11/12 23:24:07 dilfridge Exp $
 
 EAPI=4
 
@@ -129,6 +129,11 @@ src_compile() {
 
 src_install() {
 	kde4-base_src_install
+
+	# someone had the great idea to install duplicate icons
+	einfo Removing duplicate icons
+	find "${ED}/usr/share/icons/oxygen" -name digikam.png -exec rm -v {} +
+	find "${ED}/usr/share/icons/oxygen" -name showfoto.png -exec rm -v {} +
 
 	if use doc; then
 		# install the api documentation
