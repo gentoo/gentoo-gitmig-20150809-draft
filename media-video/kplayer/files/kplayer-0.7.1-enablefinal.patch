@@ -1,0 +1,12 @@
+diff -ruN kplayer-0.7.1.orig/src/kplayerpropertiesdialog.cpp kplayer-0.7.1/src/kplayerpropertiesdialog.cpp
+--- kplayer-0.7.1.orig/src/kplayerpropertiesdialog.cpp	2011-06-10 22:16:25.000000000 +0200
++++ kplayer-0.7.1/src/kplayerpropertiesdialog.cpp	2011-11-12 23:02:00.529999063 +0100
+@@ -33,7 +33,7 @@
+ #define DEBUG_KPLAYER_PROPERTIES_DIALOG
+ #endif
+ 
+-QString listEntry (QComboBox* combo, bool hasDefault = false)
++QString listEntry (QComboBox* combo, bool hasDefault)
+ {
+   static QRegExp re_key_value ("^([^:]+): *(.*)$");
+   if ( hasDefault && combo -> currentIndex() == 0 )
