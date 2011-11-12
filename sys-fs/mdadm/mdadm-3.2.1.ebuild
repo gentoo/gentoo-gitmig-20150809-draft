@@ -1,7 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-3.2.1.ebuild,v 1.1 2011/04/08 00:13:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/mdadm-3.2.1.ebuild,v 1.2 2011/11/12 21:06:44 vapier Exp $
 
+EAPI="2"
 inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="A useful tool for running RAID systems - it can be used as a replacement for the raidtools"
@@ -15,20 +16,18 @@ SLOT="0"
 IUSE="static"
 
 DEPEND=""
-RDEPEND=">=sys-apps/util-linux-2.16"
+RDEPEND="!<sys-apps/baselayout-2
+	>=sys-apps/util-linux-2.16"
 
 # The tests edit values in /proc and run tests on software raid devices.
 # Thus, they shouldn't be run on systems with active software RAID devices.
 RESTRICT="test"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.0-dont-make-man.patch
 	epatch "${FILESDIR}"/${PN}-3.2.1-syslog-updates.patch
 	epatch "${FILESDIR}"/${PN}-3.2.1-mdassemble.patch #211426
 	epatch "${FILESDIR}"/${PN}-3.1.5-cflags.patch #336175
-	use static && append-ldflags -static
 }
 
 mdadm_emake() {
@@ -41,6 +40,7 @@ mdadm_emake() {
 }
 
 src_compile() {
+	use static && append-ldflags -static
 	mdadm_emake all mdassemble
 }
 
@@ -56,15 +56,11 @@ src_install() {
 	dosbin mdassemble || die
 	dodoc ChangeLog INSTALL TODO README* ANNOUNCE-${PV}
 
-	exeinto /$(get_libdir)/rcscripts/addons
-	newexe "${FILESDIR}"/raid-start.sh-3.0 raid-start.sh || die
-	newexe "${FILESDIR}"/raid-stop.sh raid-stop.sh || die
-
 	insinto /etc
 	newins mdadm.conf-example mdadm.conf
 	newinitd "${FILESDIR}"/mdadm.rc mdadm || die
 	newconfd "${FILESDIR}"/mdadm.confd mdadm || die
-	newinitd "${FILESDIR}"/mdraid.rc-3.1.1 mdraid || die
+	newinitd "${FILESDIR}"/mdraid.rc mdraid || die
 	newconfd "${FILESDIR}"/mdraid.confd mdraid || die
 
 	# do not rely on /lib -> /libXX link

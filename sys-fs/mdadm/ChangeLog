@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/mdadm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.145 2011/06/11 21:12:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mdadm/ChangeLog,v 1.146 2011/11/12 21:06:44 vapier Exp $
+
+  12 Nov 2011; Mike Frysinger <vapier@gentoo.org> mdadm-3.2.1.ebuild,
+  +files/mdraid.rc:
+  Drop support for baselayout-1, and move to EAPI=2.
 
   11 Jun 2011; Markus Meier <maekke@gentoo.org> mdadm-3.1.4.ebuild,
   mdadm-3.1.5.ebuild:
