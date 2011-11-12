@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha74.ebuild,v 1.1 2011/11/11 19:06:30 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha74.ebuild,v 1.2 2011/11/12 16:07:09 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -388,12 +388,6 @@ pkg_postinst() {
 		elog "want to remerge world (emerge -e world) to take full advantage"
 		elog "of some of the new features in 2.2."
 		elog "This is not required however for portage to function properly."
-		elog
-	fi
-
-	if [ -z "${PV/*_alpha*}" ]; then
-		elog "If you always want to use the latest development version of portage"
-		elog "please read http://www.gentoo.org/proj/en/portage/doc/testing.xml"
 		elog
 	fi
 }
