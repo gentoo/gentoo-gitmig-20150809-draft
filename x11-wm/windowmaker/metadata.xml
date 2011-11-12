@@ -3,10 +3,10 @@
 <pkgmetadata>
 	<herd>gnustep</herd>
 	<use>
-		<flag name='modelock'>Enable XKB language status lock support. README
+		<flag name="modelock">Enable XKB language status lock support. README
 			says: "If you don't know what it is you probably don't need
 			it."</flag>
-		<flag name='vdesktop'>Enable dynamic virtual desktop (conflicts with
+		<flag name="vdesktop">Enable dynamic virtual desktop (conflicts with
 			software that works on the edges of the screen)</flag>
 	</use>
 </pkgmetadata>

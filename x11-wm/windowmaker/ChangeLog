@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.128 2011/10/23 19:56:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.129 2011/11/12 10:36:45 jlec Exp $
+
+  12 Nov 2011; Justin Lecher <jlec@gentoo.org> windowmaker-0.92.0-r11.ebuild,
+  metadata.xml:
+  Corrected slotting for png and tiff, resorted ebuild to fit common sense
+  order, removed unnessesary die and illegal ebeep
 
   23 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
   -windowmaker-0.92.0-r9.ebuild, -windowmaker-0.92.0-r10.ebuild:

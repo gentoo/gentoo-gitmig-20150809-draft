@@ -1,37 +1,39 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r11.ebuild,v 1.8 2011/10/23 16:12:52 armin76 Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.92.0-r11.ebuild,v 1.9 2011/11/12 10:36:45 jlec Exp $
 EAPI=3
 
 inherit autotools eutils flag-o-matic
 
 # note: patchset is in gentoo/src/patchsets/windowmaker
 PATCHVER=5
-S=${WORKDIR}/${P/windowm/WindowM}
 
 DESCRIPTION="The fast and light GNUstep window manager"
-SRC_URI="ftp://ftp.windowmaker.info/pub/source/release/${P/windowm/WindowM}.tar.gz
+HOMEPAGE="http://www.windowmaker.info/"
+SRC_URI="
+	ftp://ftp.windowmaker.info/pub/source/release/${P/windowm/WindowM}.tar.gz
 	http://www.windowmaker.info/pub/source/release/WindowMaker-extra-0.1.tar.gz
 	mirror://gentoo/${P}-patchset-${PATCHVER}.tar.bz2"
-HOMEPAGE="http://www.windowmaker.info/"
 
+SLOT="0"
+LICENSE="GPL-2"
 IUSE="gif jpeg nls png tiff modelock +vdesktop xinerama"
-DEPEND="x11-libs/libXv
+KEYWORDS="alpha amd64 hppa ~mips ppc ~ppc64 sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+
+DEPEND="
+	media-libs/fontconfig
 	>=x11-libs/libXft-2.1.0
 	x11-libs/libXt
-	media-libs/fontconfig
+	x11-libs/libXv
 	gif? ( >=media-libs/giflib-4.1.0-r3 )
-	png? ( >=media-libs/libpng-1.2.1 )
+	png? ( media-libs/libpng:0 )
 	jpeg? ( virtual/jpeg )
-	tiff? ( >=media-libs/tiff-3.6.1-r2 )
+	tiff? ( media-libs/tiff:0 )
 	xinerama? ( x11-libs/libXinerama )"
 RDEPEND="${DEPEND}
 	nls? ( >=sys-devel/gettext-0.10.39 )"
 
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="alpha amd64 hppa ~mips ppc ~ppc64 sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+S=${WORKDIR}/${P/windowm/WindowM}
 
 src_prepare() {
 	local psd="${WORKDIR}"/${P}-patchset-${PATCHVER}
@@ -109,14 +111,14 @@ src_prepare() {
 		fi;
 	done;
 
-	eautoreconf || die "eautoreconf failed"
+	eautoreconf
 }
 
 src_configure() {
 	local myconf
 
 	is-flag -fstack-protector && filter-flags -fstack-protector \
-		&& ewarn "CFLAG -fstack-protector has been disabled, as it is known to cause bugs with WindowMaker (bug #78051)" && ebeep 2
+		&& ewarn "CFLAG -fstack-protector has been disabled, as it is known to cause bugs with WindowMaker (bug #78051)"
 	replace-flags "-Os" "-O2"
 	replace-flags "-O3" "-O2"
 
@@ -144,9 +146,9 @@ src_configure() {
 		--enable-usermenu \
 		--with-pixmapdir="${EPREFIX}"/usr/share/pixmaps \
 		--with-nlsdir="${EPREFIX}"/usr/share/locale \
-		${myconf} || die
+		${myconf}
 	cd ../WindowMaker-extra-0.1
-	econf || die "windowmaker-extra: configure has failed"
+	econf
 }
 
 src_compile() {
