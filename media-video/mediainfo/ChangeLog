@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mediainfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/ChangeLog,v 1.31 2011/10/28 08:52:08 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mediainfo/ChangeLog,v 1.32 2011/11/12 07:23:32 radhermit Exp $
+
+*mediainfo-0.7.51 (12 Nov 2011)
+
+  12 Nov 2011; Tim Harder <radhermit@gentoo.org> +mediainfo-0.7.51.ebuild:
+  Version bump.
 
   28 Oct 2011; Tony Vroon <chainsaw@gentoo.org> mediainfo-0.7.50.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
