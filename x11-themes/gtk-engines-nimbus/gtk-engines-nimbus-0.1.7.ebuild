@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-nimbus/gtk-engines-nimbus-0.1.7.ebuild,v 1.1 2011/11/12 22:50:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-nimbus/gtk-engines-nimbus-0.1.7.ebuild,v 1.2 2011/11/12 22:51:29 ssuominen Exp $
 
 EAPI=4
 AUTOTOOLS_AUTO_DEPEND=no
@@ -29,8 +29,8 @@ S=${WORKDIR}/${MY_P}
 DOCS=( AUTHORS ChangeLog )
 
 src_prepare() {
-#	echo light-index.theme.in >> po/POTFILES.skip
-#	echo dark-index.theme.in >> po/POTFILES.skip
+	echo light-index.theme.in >> po/POTFILES.skip
+	echo dark-index.theme.in >> po/POTFILES.skip
 
 	# Interix needs a full eautoreconf, but don't bother for other archs
 	[[ ${CHOST} == *-interix* ]] && eautoreconf
