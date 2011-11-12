@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.7.0.1-r1.ebuild,v 1.1 2011/11/04 09:24:55 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/oracle-jdk-bin-1.7.0.1-r1.ebuild,v 1.2 2011/11/12 13:18:42 sera Exp $
 
 EAPI="4"
 
@@ -159,10 +159,7 @@ src_install() {
 	insinto /opt/${P}/jre/lib/
 	doins "${T}"/fontconfig.properties
 
-	# bug #388127
-	dodir /etc/sandbox.d
-	echo 'SANDBOX_PREDICT="/dev/random:/proc/self/coredump_filter"' > "${D}/etc/sandbox.d/20${VMHANDLE}"
-
 	set_java_env
 	java-vm_revdep-mask
+	java-vm_sandbox-predict /dev/random /proc/self/coredump_filter
 }
