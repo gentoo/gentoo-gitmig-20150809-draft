@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-9999-r1.ebuild,v 1.1 2011/11/12 12:25:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/libreoffice-l10n-9999-r1.ebuild,v 1.2 2011/11/12 21:41:37 polynomial-c Exp $
 
 EAPI=4
 
@@ -78,10 +78,12 @@ unset i lingua TDEPEND EXT_URI
 
 # blockers for old libreoffice with bundled linguas
 RDEPEND+="
-	!<=app-office/libreoffice-3.4.4.2-r1
 	!=app-office/libreoffice-3.4.9999-r1
 	!=app-office/libreoffice-9999-r1
-	!<=app-office/libreoffice-bin-3.4.4.2-r1
+	|| (
+		>=app-office/libreoffice-3.4.4.2-r1
+		>=app-office/libreoffice-bin-3.4.4.2-r1
+	)
 "
 
 RESTRICT="strip"

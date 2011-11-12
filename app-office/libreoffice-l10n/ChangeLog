@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice-l10n
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.18 2011/11/12 21:27:12 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-l10n/ChangeLog,v 1.19 2011/11/12 21:41:37 polynomial-c Exp $
+
+  12 Nov 2011; Lars Wendler <polynomial-c@gentoo.org>
+  libreoffice-l10n-3.4.4-r1.ebuild, libreoffice-l10n-9999-r1.ebuild:
+  non-maintainer commit: Fixed dependency on libreoffice{,-bin} packages (bug
+  #390271). Changes added with kind permission from scarabeus.
 
   12 Nov 2011; Zac Medico <zmedico@gentoo.org> libreoffice-l10n-3.4.4-r1.ebuild:
   Bug #390271 - Remove all KEYWORDS, as the current blockers are the equivalent
