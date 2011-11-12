@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/checkpolicy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.62 2011/10/23 12:40:36 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.63 2011/11/12 18:14:27 swift Exp $
+
+  12 Nov 2011; <swift@gentoo.org> -checkpolicy-2.0.21.ebuild,
+  -checkpolicy-2.0.23.ebuild:
+  Removing obsoleted ebuilds
 
   23 Oct 2011; <swift@gentoo.org> checkpolicy-2.1.0.ebuild:
   Stabilization (tracker #384231)
