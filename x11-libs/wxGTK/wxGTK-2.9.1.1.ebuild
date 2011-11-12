@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.9.1.1.ebuild,v 1.6 2011/11/12 11:13:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.9.1.1.ebuild,v 1.7 2011/11/12 13:55:52 jlec Exp $
 
 EAPI="3"
 
@@ -29,7 +29,7 @@ RDEPEND="
 		x11-libs/libSM
 		x11-libs/libXinerama
 		x11-libs/libXxf86vm
-		x11-libs/pango
+		x11-libs/pango[X]
 		gnome? ( gnome-base/libgnomeprintui:2.2 )
 		gstreamer? (
 			gnome-base/gconf:2
@@ -40,7 +40,7 @@ RDEPEND="
 		)
 	aqua? (
 		>=x11-libs/gtk+-2.4[aqua=]
-		media-libs/jpeg
+		virtual/jpeg
 		tiff?   ( media-libs/tiff:0 )
 		)"
 
@@ -65,7 +65,6 @@ S="${WORKDIR}/wxPython-src-${PV}"
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-collision.patch
 	epatch "${FILESDIR}"/${PN}-2.8.11-libpng15.patch
-
 }
 
 src_configure() {
