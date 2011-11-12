@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.19.1-r1.ebuild,v 1.7 2011/11/11 13:35:07 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.19.1-r1.ebuild,v 1.8 2011/11/12 20:49:10 polynomial-c Exp $
 
 EAPI="3"
 
@@ -45,7 +45,11 @@ src_prepare() {
 		autopoint --force
 		eautoreconf
 	else
-		use loop-aes && epatch "${WORKDIR}"/util-linux-*.diff
+		if use loop-aes ; then
+			epatch "${WORKDIR}"/util-linux-*.diff \
+				"${FILESDIR}"/${P}-remove-useless-if-stuff-from-loopaes-patchset.diff
+		fi
+			
 	fi
 	epatch "${FILESDIR}"/${P}-mount-a-segv.patch #366213
 	epatch "${FILESDIR}"/${P}-umount-l-nfs.patch #370051
