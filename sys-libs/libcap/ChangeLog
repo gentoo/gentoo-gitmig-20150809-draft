@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.114 2011/11/06 23:41:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.115 2011/11/12 19:36:25 vapier Exp $
+
+  12 Nov 2011; Mike Frysinger <vapier@gentoo.org> libcap-2.22.ebuild,
+  +files/libcap-2.22-no-perl.patch:
+  Do not require perl to build #390263 by Bruno.
 
   06 Nov 2011; Brent Baude <ranger@gentoo.org> libcap-2.22.ebuild:
   Marking libcap-2.22 ppc for bug 389201

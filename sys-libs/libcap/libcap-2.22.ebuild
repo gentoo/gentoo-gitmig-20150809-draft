@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-2.22.ebuild,v 1.7 2011/11/06 23:41:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-2.22.ebuild,v 1.8 2011/11/12 19:36:25 vapier Exp $
 
 EAPI="2"
 
@@ -22,6 +22,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.22-build-system-fixes.patch
+	epatch "${FILESDIR}"/${PN}-2.22-no-perl.patch
 	epatch "${FILESDIR}"/${PN}-2.20-ignore-RAISE_SETFCAP-install-failures.patch
 	epatch "${FILESDIR}"/${PN}-2.21-include.patch
 	sed -i \
