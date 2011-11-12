@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/recoverjpeg
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/recoverjpeg/ChangeLog,v 1.4 2010/03/15 13:30:10 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/recoverjpeg/ChangeLog,v 1.5 2011/11/12 11:12:10 xmw Exp $
+
+*recoverjpeg-2.0-r1 (12 Nov 2011)
+
+  12 Nov 2011; Michael Weber <xmw@gentoo.org> +recoverjpeg-2.0-r1.ebuild,
+  metadata.xml:
+  Revbump to fix imagemagick dep (thanks Wojciech Porczyk, bug 314285), drop
+  python dependecy (bug 313513), drop minimal USE flag, taking maint.
 
 *recoverjpeg-2.0 (15 Mar 2010)
 
