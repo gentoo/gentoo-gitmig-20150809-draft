@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce4-panel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.206 2011/11/02 14:15:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.207 2011/11/12 15:23:17 ssuominen Exp $
+
+  12 Nov 2011; Samuli Suominen <ssuominen@gentoo.org>
+  -xfce4-panel-4.8.4.ebuild, -xfce4-panel-4.8.5.ebuild:
+  old
 
   02 Nov 2011; Jeroen Roovers <jer@gentoo.org> xfce4-panel-4.8.6.ebuild:
   Stable for HPPA (bug #386963).
