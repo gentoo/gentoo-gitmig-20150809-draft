@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cproto
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cproto/ChangeLog,v 1.24 2010/01/15 21:25:05 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cproto/ChangeLog,v 1.25 2011/11/12 13:28:09 xmw Exp $
+
+  12 Nov 2011; Michael Weber <xmw@gentoo.org> cproto-4.7e.ebuild:
+  Added dependencies virtual/yacc and sys-devel/flex (thanks to bay, bug
+  387649)
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org> cproto-4.7e.ebuild:
   Transfer Prefix keywords
