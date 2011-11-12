@@ -1,0 +1,11 @@
+# ChangeLog for net-libs/jreen
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/jreen/ChangeLog,v 1.1 2011/11/12 19:18:02 dilfridge Exp $
+
+*jreen-9999 (12 Nov 2011)
+*jreen-0_p20110709 (12 Nov 2011)
+
+  12 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +jreen-0_p20110709.ebuild, +jreen-9999.ebuild, +metadata.xml:
+  New library, dependency of media-sound/tomahawk; imported from KDE overlay.
+
