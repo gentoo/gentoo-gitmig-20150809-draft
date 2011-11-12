@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.906 2011/11/12 16:07:09 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.907 2011/11/12 16:16:11 zmedico Exp $
+
+  12 Nov 2011; Zac Medico <zmedico@gentoo.org> metadata.xml,
+  portage-2.1.10.11.ebuild, portage-2.1.10.32.ebuild, portage-2.1.10.34.ebuild,
+  portage-2.1.6.13.ebuild, portage-2.1.6.7.ebuild, portage-2.1.9.42.ebuild,
+  portage-2.2.0_alpha51.ebuild, portage-2.2.0_alpha72.ebuild,
+  portage-2.2.0_alpha74.ebuild, portage-9999.ebuild:
+  Use the metadata.xml upstream doc element to reference the 'Working with
+  Portage' section of the handbook, instead of calling einfo every time that
+  portage is installed.
 
   12 Nov 2011; Zac Medico <zmedico@gentoo.org> portage-2.2.0_alpha51.ebuild,
   portage-2.2.0_alpha72.ebuild, portage-2.2.0_alpha74.ebuild,

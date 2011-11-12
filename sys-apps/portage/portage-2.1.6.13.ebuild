@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.13.ebuild,v 1.25 2011/11/10 16:18:28 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.13.ebuild,v 1.26 2011/11/12 16:16:11 zmedico Exp $
 
 # EAPI 1 since python-2.5 is also EAPI 1.
 EAPI=1
@@ -253,11 +253,6 @@ pkg_postinst() {
 	# Compile all source files recursively. Any orphans
 	# will be identified and removed in postrm.
 	python_mod_optimize /usr/$(get_libdir)/portage/pym
-
-	einfo
-	einfo "For help with using portage please consult the Gentoo Handbook"
-	einfo "at http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3"
-	einfo
 
 	local warning_shown=0
 	if [ $REPO_LAYOUT_CONF_WARN = 0 ] ; then

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.33 2011/11/12 16:07:09 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.34 2011/11/12 16:16:11 zmedico Exp $
 
 EAPI=3
 inherit git-2 eutils multilib python
@@ -351,11 +351,6 @@ pkg_postinst() {
 			| fmt -w 75 | while read -r ; do ewarn "$REPLY" ; done
 		ewarn
 	fi
-
-	einfo
-	einfo "For help with using portage please consult the Gentoo Handbook"
-	einfo "at http://www.gentoo.org/doc/en/handbook/handbook-x86.xml?part=3"
-	einfo
 
 	if $MINOR_UPGRADE ; then
 		elog "If you're upgrading from a pre-2.2 version of portage you might"
