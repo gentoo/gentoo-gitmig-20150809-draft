@@ -1,6 +1,9 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.33 2011/11/09 16:56:26 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.34 2011/11/12 15:05:15 lu_zero Exp $
+
+  12 Nov 2011; Luca Barbato <lu_zero@gentoo.org> libav-9999.ebuild:
+  Remove typo
 
   08 Nov 2011; Luca Barbato <lu_zero@gentoo.org> libav-9999.ebuild:
   Add support for drawtext
