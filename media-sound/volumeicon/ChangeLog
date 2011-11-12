@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/volumeicon
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/volumeicon/ChangeLog,v 1.1 2011/11/12 10:17:53 ssuominen Exp $
+
+*volumeicon-0.4.5 (12 Nov 2011)
+
+  12 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> +volumeicon-0.4.5.ebuild:
+  Initial commit wrt #364101 by crok.r245 (bugzilla) and barul (freenode)
+
