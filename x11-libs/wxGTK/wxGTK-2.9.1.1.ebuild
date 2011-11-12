@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.9.1.1.ebuild,v 1.5 2011/11/12 11:09:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.9.1.1.ebuild,v 1.6 2011/11/12 11:13:41 jlec Exp $
 
 EAPI="3"
 
@@ -14,8 +14,8 @@ HOMEPAGE="http://wxwidgets.org/"
 SRC_URI="mirror://sourceforge/wxpython/wxPython-src-${PV}.tar.bz2"
 #	doc? ( mirror://sourceforge/wxpython/wxPython-docs-${PV}.tar.bz2 )"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="X doc debug gnome gstreamer opengl pch sdl tiff"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+IUSE="X aqua doc debug gnome gstreamer opengl pch sdl tiff"
 
 RDEPEND="
 	dev-libs/expat
@@ -36,6 +36,11 @@ RDEPEND="
 			>=media-libs/gstreamer-0.10
 			>=media-libs/gst-plugins-base-0.10 )
 		opengl? ( virtual/opengl )
+		tiff?   ( media-libs/tiff:0 )
+		)
+	aqua? (
+		>=x11-libs/gtk+-2.4[aqua=]
+		media-libs/jpeg
 		tiff?   ( media-libs/tiff:0 )
 		)"
 
@@ -60,6 +65,7 @@ S="${WORKDIR}/wxPython-src-${PV}"
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-collision.patch
 	epatch "${FILESDIR}"/${PN}-2.8.11-libpng15.patch
+
 }
 
 src_configure() {
@@ -104,10 +110,22 @@ src_configure() {
 			$(use_with !gnome gtkprint)
 			$(use_with tiff libtiff sys)"
 
+	use aqua && \
+		myconf="${myconf}
+			--enable-graphics_ctx
+			--enable-gui
+			--with-libpng=sys
+			--with-libxpm=sys
+			--with-libjpeg=sys
+			--with-mac
+			--with-opengl"
+			# cocoa toolkit seems to be broken
+
 	# wxBase options
-	use X || \
+	if use !X && use !aqua ; then
 		myconf="${myconf}
 			--disable-gui"
+	fi
 
 	mkdir "${S}"/wxgtk_build
 	cd "${S}"/wxgtk_build

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.273 2011/11/12 11:09:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.274 2011/11/12 11:13:41 jlec Exp $
+
+  12 Nov 2011; Justin Lecher <jlec@gentoo.org> wxGTK-2.9.1.1.ebuild:
+  Import prefix changes, all are triggered by USE=aqua
 
   12 Nov 2011; Justin Lecher <jlec@gentoo.org> wxGTK-2.6.4.0-r6.ebuild,
   wxGTK-2.8.10.1-r5.ebuild, wxGTK-2.8.11.0.ebuild, wxGTK-2.8.12.0.ebuild,
