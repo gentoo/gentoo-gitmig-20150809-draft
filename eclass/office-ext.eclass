@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/office-ext.eclass,v 1.1 2011/09/05 08:25:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/office-ext.eclass,v 1.2 2011/11/12 12:03:05 scarabeus Exp $
 
 # @ECLASS: office-ext.eclass
 # @AUTHOR:
@@ -15,9 +15,6 @@ case "${EAPI:-0}" in
 	4) OEXT_EXPORTED_FUNCTIONS="src_install pkg_postinst pkg_prerm" ;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
-
-EXPORT_FUNCTIONS ${OEXT_EXPORTED_FUNCTIONS}
-unset OEXT_EXPORTED_FUNCTIONS
 
 inherit eutils multilib
 
@@ -76,7 +73,7 @@ office-ext_add_extension() {
 	local tmpdir=$(mktemp -d --tmpdir="${T}")
 
 	debug-print "${FUNCNAME}: ${UNOPKG_BINARY} add --shared \"${ext}\""
-	ebegin "Adding extension: \"${ext}\""
+	ebegin "Adding office extension: \"${ext}\""
 	${UNOPKG_BINARY} add --shared "${ext}" \
 		"-env:UserInstallation=file:///${tmpdir}" \
 		"-env:JFW_PLUGIN_DO_NOT_CHECK_ACCESSIBILITY=1"
@@ -93,12 +90,12 @@ office-ext_remove_extension() {
 	local tmpdir=$(mktemp -d --tmpdir="${T}")
 
 	debug-print "${FUNCNAME}: ${UNOPKG_BINARY} remove --shared \"${ext}\""
-	ebegin "Removing extension: \"${ext}\""
+	ebegin "Removing office extension: \"${ext}\""
 	${UNOPKG_BINARY} remove --shared "${ext}" \
 		"-env:UserInstallation=file:///${tmpdir}" \
 		"-env:JFW_PLUGIN_DO_NOT_CHECK_ACCESSIBILITY=1"
 	eend $?
-	flush_unopkg_cache
+	office-ext_flush_unopkg_cache
 	rm -rf "${tmpdir}"
 }
 
@@ -107,12 +104,14 @@ office-ext_remove_extension() {
 # Install the extension source to the proper location.
 office-ext_src_install() {
 	debug-print-function ${FUNCNAME} "$@"
+	debug-print "Extensions: ${OO_EXTENSIONS[@]}"
 	local i
 
 	# subshell to not pollute rest of the env with the insinto redefinition
 	(
-		insinto $(openoffice-ext_get_implementation)/share/extension/install/
-		for i in "${OO_EXTENSIONS[@]}"; do
+		dodir $(office-ext_get_implementation)/share/extension/install/
+		insinto $(office-ext_get_implementation)/share/extension/install/
+		for i in ${OO_EXTENSIONS[@]}; do
 			doins "${i}"
 		done
 	)
@@ -120,7 +119,7 @@ office-ext_src_install() {
 	einfo "Remember that if you replace your office implementation,"
 	einfo "you need to recompile all the extensions."
 	einfo "Your current implementation location is: "
-	einfo "    $(openoffice-ext_get_implementation)"
+	einfo "    $(office-ext_get_implementation)"
 }
 
 # @FUNCTION: office-ext_pkg_postinst
@@ -128,10 +127,11 @@ office-ext_src_install() {
 # Add the extensions to the libreoffice/openoffice.
 office-ext_pkg_postinst() {
 	debug-print-function ${FUNCNAME} "$@"
+	debug-print "Extensions: ${OO_EXTENSIONS[@]}"
 	local i
 
-	for i in "${OO_EXTENSIONS[$@]}"; do
-		openoffice-ext_add_extension "${i}"
+	for i in ${OO_EXTENSIONS[@]}; do
+		office-ext_add_extension "$(office-ext_get_implementation)/share/extension/install/${i}"
 	done
 
 }
@@ -141,9 +141,13 @@ office-ext_pkg_postinst() {
 # Remove the extensions from the libreoffice/openoffice.
 office-ext_pkg_prerm() {
 	debug-print-function ${FUNCNAME} "$@"
+	debug-print "Extensions: ${OO_EXTENSIONS[@]}"
 	local i
 
-	for i in "${OO_EXTENSIONS[@]}"; do
-		openoffice-ext_remove_extension "${i}"
+	for i in ${OO_EXTENSIONS[@]}; do
+		office-ext_remove_extension "${i}"
 	done
 }
+
+EXPORT_FUNCTIONS ${OEXT_EXPORTED_FUNCTIONS}
+unset OEXT_EXPORTED_FUNCTIONS
