@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.3.1-r1.ebuild,v 1.1 2010/06/08 08:25:34 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/Ice-3.3.1-r1.ebuild,v 1.2 2011/11/13 20:27:38 vapier Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ IUSE="ncurses test debug"
 RDEPEND=">=dev-libs/expat-2.0.1
 	>=app-arch/bzip2-1.0.4
 	>=dev-libs/openssl-0.9.8g
-	=sys-libs/db-4.6.21*[-nocxx]
+	|| ( =sys-libs/db-4.6.21*[cxx] =sys-libs/db-4.6.21*[-nocxx] )
 	=dev-cpp/libmcpp-2.7.2"
 
 DEPEND="${RDEPEND}

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/Ice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.8 2011/09/24 13:05:32 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/Ice/ChangeLog,v 1.9 2011/11/13 20:27:38 vapier Exp $
+
+  13 Nov 2011; Mike Frysinger <vapier@gentoo.org> Ice-3.3.1.ebuild,
+  Ice-3.3.1-r1.ebuild, Ice-3.3.1-r2.ebuild, Ice-3.4.0.ebuild, Ice-3.4.1.ebuild,
+  Ice-3.4.2.ebuild:
+  Convert db[-nocxx] to db[cxx].
 
   24 Sep 2011; Tony Vroon <chainsaw@gentoo.org> Ice-3.4.2.ebuild,
   +files/Ice-3.4.2-gcc46.patch:
