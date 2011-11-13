@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.8.1.ebuild,v 1.2 2011/08/10 16:44:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.8.1.ebuild,v 1.3 2011/11/13 18:54:41 hwoarang Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ KEYWORDS="amd64 ~ppc ~x86"
 IUSE="debug"
 
 DEPEND="x11-libs/qt-gui:4
-	app-text/poppler"
+	app-text/poppler[qt4]"
 RDEPEND="${DEPEND}"
 
 DOCS="AUTHORS ChangeLog NEWS README THANKS TODO"
