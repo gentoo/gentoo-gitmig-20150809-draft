@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/crrcsim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/crrcsim/ChangeLog,v 1.2 2011/11/12 01:54:08 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/crrcsim/ChangeLog,v 1.3 2011/11/13 22:15:50 xmw Exp $
+
+  13 Nov 2011; Michael Weber <xmw@gentoo.org> crrcsim-0.9.11.ebuild,
+  +files/crrcsim-cgal_gmp.patch, files/crrcsim-buildsystem.patch:
+  fix sci-mathematics/cgal[gmp] problem (thanks rinus, bug 390309)
 
   12 Nov 2011; Michael Weber <xmw@gentoo.org> crrcsim-0.9.11.ebuild:
   Add dep on sci-mathematics/cgal, fix --docdir, clean up

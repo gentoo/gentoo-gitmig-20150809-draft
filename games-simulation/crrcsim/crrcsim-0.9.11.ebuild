@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/crrcsim/crrcsim-0.9.11.ebuild,v 1.2 2011/11/12 01:54:08 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/crrcsim/crrcsim-0.9.11.ebuild,v 1.3 2011/11/13 22:15:50 xmw Exp $
 
 EAPI=3
 
@@ -23,6 +23,9 @@ DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-buildsystem.patch
+	if built_with_use --missing false sci-mathematics/cgal gmp ; then
+		epatch "${FILESDIR}"/${PN}-cgal_gmp.patch
+	fi
 
 	eautoreconf
 }
