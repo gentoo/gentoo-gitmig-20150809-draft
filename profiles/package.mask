@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13238 2011/11/13 21:32:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13239 2011/11/13 22:13:05 tetromino Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (13 Nov 2011)
+# Fails to build or run with >=opencv-2.3. Incompatible with pyatspi-2.2 (and
+# therefore with gnome-3.2). No upstream activity since early 2010.
+# Masked for removal in 30 days. Bug #389979
+app-accessibility/gnome-mousetrap
 
 # Markos Chandras <hwoarang@gentoo.org> (13 Nov 2011)
 # Fails to link with gold linker. Uses tempnam instead
