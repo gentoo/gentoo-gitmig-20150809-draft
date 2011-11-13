@@ -1,6 +1,10 @@
 # ChangeLog for app-text/yelp-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yelp-tools/ChangeLog,v 1.1 2011/11/04 06:09:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yelp-tools/ChangeLog,v 1.2 2011/11/13 04:33:17 tetromino Exp $
+
+  13 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  yelp-tools-3.2.1.ebuild:
+  Fix LICENSE (yelp.m4 is GPL2 or freedist).
 
 *yelp-tools-3.2.1 (04 Nov 2011)
 
