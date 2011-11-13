@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.23.ebuild,v 1.9 2011/04/16 18:52:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/djvu-3.5.23.ebuild,v 1.10 2011/11/13 10:54:12 jlec Exp $
 
 EAPI="2"
 inherit fdo-mime autotools flag-o-matic
@@ -8,7 +8,7 @@ inherit fdo-mime autotools flag-o-matic
 MY_P="${PN}libre-${PV#*_p}"
 
 DESCRIPTION="DjVu viewers, encoders and utilities"
-HOMEPAGE="http://djvu.sourceforge.net"
+HOMEPAGE="http://djvu.sourceforge.net/"
 SRC_URI="mirror://sourceforge/djvu/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -17,7 +17,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="debug doc jpeg nls tiff xml"
 
 RDEPEND="jpeg? ( virtual/jpeg )
-	tiff? ( media-libs/tiff )"
+	tiff? ( media-libs/tiff:0 )"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}

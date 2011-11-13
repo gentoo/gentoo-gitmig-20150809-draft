@@ -1,6 +1,10 @@
 # ChangeLog for app-text/djvu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.124 2011/08/27 15:27:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djvu/ChangeLog,v 1.125 2011/11/13 10:54:12 jlec Exp $
+
+  13 Nov 2011; Justin Lecher <jlec@gentoo.org> djvu-3.5.22-r1.ebuild,
+  djvu-3.5.23.ebuild, djvu-3.5.24.ebuild:
+  Corrected Slotting of media-libs/tiff
 
   27 Aug 2011; Jeroen Roovers <jer@gentoo.org> djvu-3.5.24.ebuild:
   Stable for HPPA (bug #372593).
