@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.132 2011/11/05 14:27:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.133 2011/11/13 11:40:36 jlec Exp $
+
+  13 Nov 2011; Justin Lecher <jlec@gentoo.org> libgdiplus-2.10.ebuild:
+  Corrected Slotting of media-libs/tiff and media-libs/libpng
 
   05 Nov 2011; Samuli Suominen <ssuominen@gentoo.org>
   -libgdiplus-2.6.7-r1.ebuild, -files/libgdiplus-2.6.7-fix-overflows.patch,
