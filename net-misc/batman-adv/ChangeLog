@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/batman-adv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/batman-adv/ChangeLog,v 1.2 2011/06/05 08:31:28 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/batman-adv/ChangeLog,v 1.3 2011/11/13 23:39:30 xmw Exp $
+
+*batman-adv-2011.3.0 (13 Nov 2011)
+
+  13 Nov 2011; Michael Weber <xmw@gentoo.org> +batman-adv-2011.3.0.ebuild:
+  Version bump (thanks to Franz Schrober for the report, bug 381665)
 
   05 Jun 2011; Michael Weber <xmw@gentoo.org> batman-adv-2011.1.0.ebuild:
   Use from linux-mod as kernel source instead of uname -r (bug 370023)
