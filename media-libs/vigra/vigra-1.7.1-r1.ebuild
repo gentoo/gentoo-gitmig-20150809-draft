@@ -1,11 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.7.1-r1.ebuild,v 1.6 2011/11/13 10:12:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vigra/vigra-1.7.1-r1.ebuild,v 1.7 2011/11/13 10:14:43 ssuominen Exp $
 
 EAPI=4
 
-PYTHON_DEPEND="2"
-PYTHON_USE_WITH="threads,xml"
+PYTHON_DEPEND="python? 2:2.6"
+PYTHON_USE_WITH_OPT="python"
+PYTHON_USE_WITH="threads xml"
 
 MY_P=${P}-src
 
@@ -25,11 +26,8 @@ RDEPEND="
 	fftw? ( >=sci-libs/fftw-3 )
 	hdf5? ( sci-libs/hdf5 )
 	jpeg? ( virtual/jpeg )
-	png? ( media-libs/libpng )
-	python? (
-		|| ( dev-lang/python:2.6 dev-lang/python:2.7 )
-	)
-	tiff? ( media-libs/tiff )
+	png? ( media-libs/libpng:0 )
+	tiff? ( media-libs/tiff:0 )
 "
 DEPEND="${RDEPEND}
 	doc? (
