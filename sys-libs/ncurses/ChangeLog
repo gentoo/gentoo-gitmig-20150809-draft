@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.189 2011/05/22 18:19:56 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.190 2011/11/13 20:06:25 vapier Exp $
+
+  13 Nov 2011; Mike Frysinger <vapier@gentoo.org> -ncurses-5.6-r2.ebuild,
+  -ncurses-5.7-r3.ebuild, -ncurses-5.7-r5.ebuild, -ncurses-5.7-r6.ebuild:
+  Drop old ebuilds (to lose USE=nocxx).
 
   22 May 2011; Kacper Kowalik <xarthisius@gentoo.org> ncurses-5.7-r7.ebuild:
   ppc64 stable wrt #353437
