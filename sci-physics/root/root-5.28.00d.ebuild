@@ -1,9 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.28.00d.ebuild,v 1.3 2011/06/21 14:31:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.28.00d.ebuild,v 1.4 2011/11/13 11:21:12 jlec Exp $
 
 EAPI=3
+
 PYTHON_DEPEND="python? 2"
+
 inherit versionator eutils fortran-2 elisp-common fdo-mime python toolchain-funcs flag-o-matic
 
 #DOC_PV=$(get_major_version)_$(get_version_component_range 2)
@@ -14,7 +16,8 @@ PATCH_PV=5.28.00b
 
 DESCRIPTION="C++ data analysis framework and interpreter from CERN"
 HOMEPAGE="http://root.cern.ch/"
-SRC_URI="ftp://root.cern.ch/${PN}/${PN}_v${PV}.source.tar.gz
+SRC_URI="
+	ftp://root.cern.ch/${PN}/${PN}_v${PV}.source.tar.gz
 	http://dev.gentoo.org/~bicatali/${PN}-${PATCH_PV}-xrootd-prop-flags.patch.bz2
 	doc? ( ftp://root.cern.ch/${PN}/doc/Users_Guide_${DOC_PV}.pdf
 	math? (
@@ -28,13 +31,14 @@ IUSE="afs avahi clarens doc emacs examples fits fftw graphviz kerberos ldap
 	llvm +math mpi mysql ncurses odbc +opengl openmp oracle postgres pythia6
 	pythia8	python +reflex ruby qt4 ssl xft xml xinetd xrootd"
 
-CDEPEND=">=dev-lang/cfortran-4.4-r2
+CDEPEND="
+	>=dev-lang/cfortran-4.4-r2
 	dev-libs/libpcre
 	media-libs/ftgl
 	media-libs/giflib
 	media-libs/glew
-	media-libs/libpng
-	media-libs/tiff
+	media-libs/libpng:0
+	media-libs/tiff:0
 	sys-apps/shadow
 	virtual/jpeg
 	x11-libs/libX11
@@ -61,16 +65,18 @@ CDEPEND=">=dev-lang/cfortran-4.4-r2
 	postgres? ( dev-db/postgresql-base )
 	pythia6? ( sci-physics/pythia:6 )
 	pythia8? ( sci-physics/pythia:8 )
-	qt4? ( x11-libs/qt-gui:4
+	qt4? (
+		x11-libs/qt-gui:4
 		x11-libs/qt-opengl:4
 		x11-libs/qt-qt3support:4
 		x11-libs/qt-svg:4
 		x11-libs/qt-webkit:4
 		x11-libs/qt-xmlpatterns:4 )
-	ruby? ( dev-lang/ruby
+	ruby? (
+			dev-lang/ruby
 			dev-ruby/rubygems )
 	ssl? ( dev-libs/openssl )
-	xml? ( dev-libs/libxml2 )"
+	xml? ( dev-libs/libxml2:2 )"
 
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig"
@@ -85,14 +91,14 @@ S="${WORKDIR}/${PN}"
 
 pkg_setup() {
 	fortran-2_pkg_setup
-	elog
+	echo
 	elog "There are extra options on packages not yet in Gentoo:"
 	elog "AliEn, castor, Chirp, dCache, gfal, gLite, Globus,"
 	elog "HDFS, Monalisa, MaxDB/SapDB, SRP."
 	elog "You can use the env variable EXTRA_ECONF variable for this."
 	elog "For example, for SRP, you would set: "
 	elog "EXTRA_ECONF=\"--enable-srp --with-srp-libdir=/usr/$(get_libdir)\""
-	elog
+	echo
 	enewgroup rootd
 	enewuser rootd -1 -1 /var/spool/rootd rootd
 

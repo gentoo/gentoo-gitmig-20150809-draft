@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00e-r1.ebuild,v 1.11 2011/10/18 16:35:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.26.00e-r1.ebuild,v 1.12 2011/11/13 11:21:12 jlec Exp $
 
 EAPI=3
 
@@ -14,7 +14,8 @@ TMVA_DOC_PV=4
 
 DESCRIPTION="C++ data analysis framework and interpreter from CERN"
 HOMEPAGE="http://root.cern.ch/"
-SRC_URI="ftp://root.cern.ch/${PN}/${PN}_v${PV}.source.tar.gz
+SRC_URI="
+	ftp://root.cern.ch/${PN}/${PN}_v${PV}.source.tar.gz
 	mirror://gentoo/${P}-patches.tar.bz2
 	doc? (
 		ftp://root.cern.ch/root/doc/Users_Guide_${DOC_PV}.pdf
@@ -31,17 +32,18 @@ IUSE="afs clarens doc emacs examples fftw geant4 graphviz kerberos ldap
 # libafterimage ignored, to check every version
 # see https://savannah.cern.ch/bugs/?func=detailitem&item_id=30944
 #	|| ( >=media-libs/libafterimage-1.18 x11-wm/afterstep )
-CDEPEND=">=dev-lang/cfortran-4.4-r2
+CDEPEND="
+	>=dev-lang/cfortran-4.4-r2
 	dev-libs/libpcre
 	>=media-libs/ftgl-2.1.3_rc5
-	media-libs/libpng
-	virtual/jpeg
 	media-libs/giflib
 	media-libs/glew
-	media-libs/tiff
+	media-libs/libpng:0
+	media-libs/tiff:0
 	sys-apps/shadow
-	x11-libs/libXpm
+	virtual/jpeg
 	x11-libs/libXft
+	x11-libs/libXpm
 	afs? ( >=net-fs/openafs-1.4.7 )
 	clarens? ( dev-libs/xmlrpc-c )
 	emacs? ( virtual/emacs )
@@ -58,11 +60,13 @@ CDEPEND=">=dev-lang/cfortran-4.4-r2
 	postgres? ( dev-db/postgresql-base )
 	pythia6? ( sci-physics/pythia:6 )
 	pythia8? ( sci-physics/pythia:8 )
-	qt4? ( x11-libs/qt-gui:4
+	qt4? (
+		x11-libs/qt-gui:4
 		x11-libs/qt-opengl:4
 		x11-libs/qt-qt3support:4
 		x11-libs/qt-xmlpatterns:4 )
-	ruby? ( dev-lang/ruby
+	ruby? (
+			dev-lang/ruby
 			dev-ruby/rubygems )
 	ssl? ( dev-libs/openssl )
 	xml? ( dev-libs/libxml2:2 )"
@@ -72,21 +76,21 @@ DEPEND="${CDEPEND}
 
 RDEPEND="
 	virtual/fortran
-${CDEPEND}
+	${CDEPEND}
 	xinetd? ( sys-apps/xinetd )"
 
 S="${WORKDIR}/${PN}"
 
 pkg_setup() {
 	fortran-2_pkg_setup
-	elog
+	echo
 	elog "You may want to build ROOT with these non Gentoo extra packages:"
 	elog "AliEn, castor, Chirp, dCache, gfal, gLite, Globus,"
 	elog "Monalisa, MaxDB/SapDB, SRP."
 	elog "You can use the env variable EXTRA_ECONF variable for this."
 	elog "For example, for SRP, you would set: "
 	elog "EXTRA_ECONF=\"--enable-srp --with-srp-libdir=/usr/$(get_libdir)\""
-	elog
+	echo
 	enewgroup rootd
 	enewuser rootd -1 -1 /var/spool/rootd rootd
 
@@ -97,7 +101,6 @@ pkg_setup() {
 		ewarn "You are using gcc and OpenMP is available with gcc >= 4.2"
 		ewarn "If you want to build this package with OpenMP, abort now,"
 		ewarn "and set CC to an OpenMP capable compiler"
-		epause 5
 	elif use openmp; then
 		export USE_OPENMP=1
 		use math && export USE_PARALLEL_MINUIT2=1
@@ -106,7 +109,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${WORKDIR}"/${P}-make-3.82.patch \
+	epatch \
+		"${WORKDIR}"/${P}-make-3.82.patch \
 		"${WORKDIR}"/${P}-prop-ldflags.patch \
 		"${WORKDIR}"/${P}-configure-paths.patch \
 		"${WORKDIR}"/${P}-nobyte-compile.patch \
