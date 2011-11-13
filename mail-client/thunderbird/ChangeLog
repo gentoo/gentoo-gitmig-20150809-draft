@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.101 2011/11/11 23:40:14 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.102 2011/11/13 14:46:32 maekke Exp $
+
+  13 Nov 2011; Markus Meier <maekke@gentoo.org> thunderbird-7.0.1-r1.ebuild:
+  x86 stable, bug #381245
 
   11 Nov 2011; Jory A. Pratt <anarchy@gentoo.org>
   +files/enigmail-1.3.3-bug373733.patch, thunderbird-8.0.ebuild:
