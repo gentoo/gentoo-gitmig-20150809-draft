@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/rest
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/ChangeLog,v 1.3 2011/11/01 11:36:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/ChangeLog,v 1.4 2011/11/13 08:20:04 tetromino Exp $
+
+*rest-0.7.12 (13 Nov 2011)
+
+  13 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org> -rest-0.7.10.ebuild,
+  +rest-0.7.12.ebuild:
+  Bump, drop old. Notable changes: by default (i.e. when
+  SOUP_SESSION_SSL_STRICT is used) rest-0.7.12 will reject self-signed ssl
+  certificates.
 
 *rest-0.7.11 (01 Nov 2011)
 

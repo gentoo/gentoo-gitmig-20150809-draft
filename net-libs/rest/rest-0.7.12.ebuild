@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/rest-0.7.10.ebuild,v 1.2 2011/04/28 01:46:14 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rest/rest-0.7.12.ebuild,v 1.1 2011/11/13 08:20:04 tetromino Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
@@ -16,13 +16,14 @@ SLOT="0.7"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc +gnome +introspection test"
 
-# XXX: coverage testing should not be enabled
-RDEPEND=">=dev-libs/glib-2.18:2
+# Coverage testing should not be enabled
+RDEPEND="app-misc/ca-certificates
+	>=dev-libs/glib-2.22:2
 	dev-libs/libxml2:2
 	net-libs/libsoup:2.4
-
 	gnome? ( >=net-libs/libsoup-gnome-2.25.1:2.4 )
 	introspection? ( >=dev-libs/gobject-introspection-0.6.7 )"
+
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
 	dev-util/pkgconfig
@@ -33,9 +34,10 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		--disable-static
 		--disable-gcov
+		--with-ca-certificates=${EPREFIX}/etc/ssl/certs/ca-certificates.crt
 		$(use_with gnome)
 		$(use_enable introspection)"
-	DOCS="AUTHORS NEWS README"
+	DOCS="AUTHORS README"
 }
 
 src_test() {
