@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/lcms
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.129 2011/08/12 18:26:05 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.130 2011/11/13 10:56:24 jlec Exp $
+
+  13 Nov 2011; Justin Lecher <jlec@gentoo.org> lcms-1.19.ebuild,
+  lcms-2.0a.ebuild, lcms-2.1.ebuild, lcms-2.2.ebuild, lcms-2.2-r1.ebuild:
+  Corrected Slotting of media-libs/tiff
 
   12 Aug 2011; Sergei Trofimovich <slyfox@gentoo.org> lcms-2.2-r1.ebuild,
   +files/lcms-2.2-fix-test-on-sparc.patch:
