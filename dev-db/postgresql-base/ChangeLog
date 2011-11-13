@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgresql-base
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.149 2011/11/06 20:59:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/ChangeLog,v 1.150 2011/11/13 15:59:15 maekke Exp $
+
+  13 Nov 2011; Markus Meier <maekke@gentoo.org> postgresql-base-9.1.1.ebuild:
+  x86 stable, bug #388489
 
   06 Nov 2011; Markus Meier <maekke@gentoo.org> postgresql-base-9.1.1.ebuild:
   arm stable, bug #388489

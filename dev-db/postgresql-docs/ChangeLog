@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgresql-docs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.119 2011/11/06 20:53:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.120 2011/11/13 15:57:54 maekke Exp $
+
+  13 Nov 2011; Markus Meier <maekke@gentoo.org> postgresql-docs-9.1.1.ebuild:
+  x86 stable, bug #388489
 
   06 Nov 2011; Markus Meier <maekke@gentoo.org> postgresql-docs-9.1.1.ebuild:
   arm stable, bug #388489
