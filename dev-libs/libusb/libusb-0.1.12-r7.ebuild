@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.12-r7.ebuild,v 1.4 2011/11/13 19:03:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.12-r7.ebuild,v 1.5 2011/11/13 23:14:38 vapier Exp $
 
 EAPI="3"
 
@@ -33,11 +33,9 @@ src_prepare() {
 	eautoreconf
 
 	# Ensure that the documentation actually finds the DTD it needs
-	docbookdtd="${EPREFIX}/usr/share/sgml/docbook/sgml-dtd-4.2/docbook.dtd"
-	sysid='"-//OASIS//DTD DocBook V4.2//EN"'
-	sed -r -i -e \
-		"s,(${sysid}) \[\$,\1 \"${docbookdtd}\" \[,g" \
-		"${S}"/doc/manual.sgml
+	sed -i \
+		-e '1s|\[$|"http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd" [|' \
+		doc/manual.sgml || die
 }
 
 src_configure() {
