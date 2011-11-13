@@ -1,6 +1,9 @@
 # ChangeLog for app-text/podofo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.28 2011/10/23 20:04:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.29 2011/11/13 11:43:45 jlec Exp $
+
+  13 Nov 2011; Justin Lecher <jlec@gentoo.org> podofo-0.9.1.ebuild:
+  Corrected Slotting of media-libs/tiff and media-libs/libpng
 
   23 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> -podofo-0.7.0.ebuild,
   -podofo-0.8.1-r1.ebuild, -podofo-0.8.2.ebuild, -podofo-0.8.4.ebuild:

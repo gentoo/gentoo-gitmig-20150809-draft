@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.9.1.ebuild,v 1.6 2011/10/16 18:11:55 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/podofo-0.9.1.ebuild,v 1.7 2011/11/13 11:43:45 jlec Exp $
 
 EAPI=2
 inherit cmake-utils flag-o-matic multilib
@@ -19,8 +19,8 @@ RDEPEND="dev-lang/lua
 	media-libs/fontconfig
 	media-libs/freetype:2
 	virtual/jpeg
-	>=media-libs/libpng-1.4
-	media-libs/tiff
+	>=media-libs/libpng-1.4:0
+	media-libs/tiff:0
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
 	boost? ( dev-util/boost-build )
