@@ -1,47 +1,50 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.0.2-r2.ebuild,v 1.3 2011/10/28 00:57:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/gnome-control-center-3.2.2.ebuild,v 1.1 2011/11/13 18:02:54 tetromino Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes" # gmodule is used, which uses dlopen
 
-inherit gnome2
+inherit autotools gnome2
 
 DESCRIPTION="GNOME Desktop Configuration Tool"
 HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="2"
-IUSE="+cheese +cups +networkmanager +socialweb"
-KEYWORDS="~amd64 ~arm ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
+IUSE="+cheese +colord +cups +networkmanager +socialweb"
+KEYWORDS="~amd64 ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 
 # XXX: gnome-desktop-2.91.5 is needed for upstream commit c67f7efb
 # XXX: NetworkManager-0.9 support is automagic, make hard-dep once it's released
 #
 # gnome-session-2.91.6-r1 is needed so that 10-user-dirs-update is run at login
-# Latest gsettings-desktop-schemas is needed for commit 73f9bffb
+# Latest gsettings-desktop-schemas is neededfor commit 73f9bffb
+# gnome-settings-daemon-3.1.4 is needed for power panel (commit 4f08a325)
 COMMON_DEPEND="
-	>=dev-libs/glib-2.25.11:2
+	>=dev-libs/glib-2.29.14:2
 	>=x11-libs/gdk-pixbuf-2.23.0:2
-	>=x11-libs/gtk+-3.0.2:3
-	>=gnome-base/gsettings-desktop-schemas-2.91.92
+	>=x11-libs/gtk+-3.1.19:3
+	>=gnome-base/gsettings-desktop-schemas-3.0.2
 	>=gnome-base/gconf-2.0:2
 	>=dev-libs/dbus-glib-0.73
-	>=gnome-base/gnome-desktop-2.91.5:3
-	>=gnome-base/gnome-settings-daemon-2.91.94
+	>=gnome-base/gnome-desktop-3.1.0:3
+	>=gnome-base/gnome-settings-daemon-3.1.4[colord(+)?]
 	>=gnome-base/libgnomekbd-2.91.91
 
 	app-text/iso-codes
 	dev-libs/libxml2:2
-	gnome-base/gnome-menus:0
+	gnome-base/gnome-menus:3
 	gnome-base/libgtop:2
 	media-libs/fontconfig
+	net-libs/gnome-online-accounts
 
 	>=media-libs/libcanberra-0.13[gtk3]
 	>=media-sound/pulseaudio-0.9.16[glib]
 	>=sys-auth/polkit-0.97
 	>=sys-power/upower-0.9.1
+	>=x11-libs/libnotify-0.7.3
 
 	x11-apps/xmodmap
 	x11-libs/libX11
@@ -52,13 +55,19 @@ COMMON_DEPEND="
 	cheese? (
 		media-libs/gstreamer:0.10
 		>=media-video/cheese-2.91.91.1 )
+	colord? ( >=x11-misc/colord-0.1.8 )
 	cups? ( >=net-print/cups-1.4[dbus] )
-	networkmanager? ( >=net-misc/networkmanager-0.8.997 )
+	networkmanager? (
+		>=gnome-extra/nm-applet-0.9.1.90
+		>=net-misc/networkmanager-0.8.997 )
 	socialweb? ( net-libs/libsocialweb )"
+# <gnome-color-manager-3.1.2 has file collisions with g-c-c-3.1.x
 RDEPEND="${COMMON_DEPEND}
+	app-admin/apg
 	sys-apps/accountsservice
 	cups? ( net-print/cups-pk-helper )
 
+	!<gnome-extra/gnome-color-manager-3.1.2
 	!gnome-extra/gnome-media[pulseaudio]
 	!<gnome-extra/gnome-media-2.32.0-r300
 	!<gnome-base/gdm-2.91.94"
@@ -84,27 +93,20 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		--disable-update-mimedb
 		--disable-static
-		--disable-maintainer-mode
 		$(use_with cheese)
+		$(use_enable colord color)
 		$(use_enable cups)
 		$(use_with socialweb libsocialweb)"
 	DOCS="AUTHORS ChangeLog NEWS README TODO"
 }
 
 src_prepare() {
-	# https://bugzilla.gnome.org/show_bug.cgi?id=651162
-	# XXX: remove for next release
-	sed -e 's:no-undefined:-no-undefined:' \
-		-i libgnome-control-center/Makefile.* || die "sed failed"
+	# Upstream patch to not crash on missing metacity; will be in next release
+	epatch "${FILESDIR}/${P}-metacity-gconf.patch"
 
-	# cups-1.5 compatibility; will be in next release
-	epatch "${FILESDIR}/${P}-cups-ppd.h.patch"
-
-	# https://bugzilla.gnome.org/show_bug.cgi?id=653211, will be in next release
-	epatch "${FILESDIR}/${P}-https-handler.patch"
-
-	# fix deleting users on 32-bit systems, will be in next release
-	epatch "${FILESDIR}/${P}-delete-users-32-bit.patch"
+	# Make colord plugin optional; requires eautoreconf
+	epatch "${FILESDIR}/${PN}-3.2.1-optional-colord.patch"
+	eautoreconf
 
 	gnome2_src_prepare
 }

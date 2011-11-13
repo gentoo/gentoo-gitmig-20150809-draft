@@ -1,0 +1,29 @@
+From 24e0ee05784b8f6f74425971651b60cc8974cdbe Mon Sep 17 00:00:00 2001
+From: Bastien Nocera <hadess@hadess.net>
+Date: Fri, 11 Nov 2011 13:17:26 +0000
+Subject: [PATCH] universal-access: Avoid crashing when GConf is broken
+
+Or when metacity is badly installed. gconf_value_get_string()
+_can_ return NULL.
+
+https://bugzilla.redhat.com/show_bug.cgi?id=751007
+---
+ panels/universal-access/cc-ua-panel.c |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/panels/universal-access/cc-ua-panel.c b/panels/universal-access/cc-ua-panel.c
+index a615534..40c4900 100644
+--- a/panels/universal-access/cc-ua-panel.c
++++ b/panels/universal-access/cc-ua-panel.c
+@@ -550,7 +550,7 @@ visual_bell_type_notify_cb (GConfClient *client,
+ 
+   value = gconf_value_get_string (entry->value);
+ 
+-  if (!strcmp ("frame_flash", value))
++  if (g_strcmp0 ("frame_flash", value) == 0)
+     widget = WID (panel->priv->builder, "hearing_flash_window_title_button");
+   else
+     widget = WID (panel->priv->builder, "hearing_flash_screen_button");
+-- 
+1.7.8.rc1
+

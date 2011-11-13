@@ -1,6 +1,17 @@
 # ChangeLog for gnome-base/gnome-control-center
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.92 2011/10/29 06:53:44 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-control-center/ChangeLog,v 1.93 2011/11/13 18:02:54 tetromino Exp $
+
+*gnome-control-center-3.2.2 (13 Nov 2011)
+
+  13 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnome-control-center-3.0.2-r2.ebuild,
+  -files/gnome-control-center-3.0.2-cups-ppd.h.patch,
+  -files/gnome-control-center-3.0.2-delete-users-32-bit.patch,
+  -files/gnome-control-center-3.0.2-https-handler.patch,
+  +gnome-control-center-3.2.2.ebuild,
+  +files/gnome-control-center-3.2.2-metacity-gconf.patch:
+  Bump, drop old. Lots of bugfixes, particularly for the printers panel.
 
 *gnome-control-center-3.2.1 (29 Oct 2011)
 
