@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ekopath
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ChangeLog,v 1.9 2011/11/08 09:01:19 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ChangeLog,v 1.10 2011/11/13 14:18:13 xarthisius Exp $
+
+  13 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> Manifest:
+  Bump manifest due to upstream silently switching binaries
 
 *ekopath-4.0.12_pre20111108 (08 Nov 2011)
 
