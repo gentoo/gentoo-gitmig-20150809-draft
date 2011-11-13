@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/ppl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.36 2011/08/20 09:13:02 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.37 2011/11/13 19:27:25 vapier Exp $
+
+  13 Nov 2011; Mike Frysinger <vapier@gentoo.org> ppl-0.10.2-r1.ebuild,
+  ppl-0.11.2.ebuild:
+  Convert gmp[-nocxx] to gmp[cxx].
 
   20 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   ppl-0.11.2.ebuild:
