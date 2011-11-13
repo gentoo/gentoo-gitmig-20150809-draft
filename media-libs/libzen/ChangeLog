@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libzen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.22 2011/11/12 06:57:54 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libzen/ChangeLog,v 1.23 2011/11/13 14:53:23 maekke Exp $
+
+  13 Nov 2011; Markus Meier <maekke@gentoo.org> libzen-0.4.22.ebuild:
+  x86 stable, bug #388619
 
 *libzen-0.4.23 (12 Nov 2011)
 
