@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.18.1.1-r1.ebuild,v 1.9 2010/12/04 15:35:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.18.1.1-r1.ebuild,v 1.10 2011/11/13 19:21:31 vapier Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 LICENSE="GPL-3 LGPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="acl doc emacs +git nls nocxx openmp elibc_glibc"
+IUSE="acl doc emacs +git nls +cxx openmp elibc_glibc"
 
 DEPEND="virtual/libiconv
 	dev-libs/libxml2
@@ -36,7 +36,7 @@ src_configure() {
 	else
 		myconf="${myconf} --with-included-gettext --enable-nls"
 	fi
-	use nocxx && export CXX=$(tc-getCC)
+	use cxx || export CXX=$(tc-getCC)
 
 	# --without-emacs: Emacs support is now in a separate package
 	# --with-included-glib: glib depends on us so avoid circular deps
