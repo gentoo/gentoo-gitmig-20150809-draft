@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.16.901.ebuild,v 1.1 2011/10/31 19:50:30 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.16.902.ebuild,v 1.1 2011/11/13 16:15:34 chithanh Exp $
 
 EAPI=4
 
