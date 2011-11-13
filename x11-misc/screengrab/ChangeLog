@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/screengrab
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/screengrab/ChangeLog,v 1.15 2011/08/19 21:29:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/screengrab/ChangeLog,v 1.16 2011/11/13 19:38:09 hwoarang Exp $
+
+  13 Nov 2011; Markos Chandras <hwoarang@gentoo.org> screengrab-0.9.85.ebuild:
+  Respect CXXFLAGS thanks to Agostino Sarubbo (ago). Bug #387741
 
 *screengrab-0.9.85 (19 Aug 2011)
 

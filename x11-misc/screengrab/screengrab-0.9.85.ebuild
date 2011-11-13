@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/screengrab/screengrab-0.9.85.ebuild,v 1.1 2011/08/19 21:29:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/screengrab/screengrab-0.9.85.ebuild,v 1.2 2011/11/13 19:38:09 hwoarang Exp $
 
 EAPI="2"
 
@@ -23,7 +23,8 @@ src_prepare() {
 	sed -i "/LICENSE.txt/d" CMakeLists.txt \
 		|| die "failed to patch cmakelists"
 	# install docs in the right dir
-	sed -i "s#DESTINATION share/doc/screengrab#DESTINATION share/doc/${PF}#" \
+	sed -i -e "s#DESTINATION share/doc/screengrab#DESTINATION share/doc/${PF}#" \
+		-e "s:-Wnon-virtual-dtor -Woverloaded-virtual:${CXXFLAGS}:" \
 		CMakeLists.txt || die "failed to patch doc dir"
 	sed -i "s:screengrab%1html:${PF}%1html:" src/ui/mainwindow.cpp || die
 }
