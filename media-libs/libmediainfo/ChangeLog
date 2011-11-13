@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmediainfo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/ChangeLog,v 1.31 2011/11/13 14:54:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediainfo/ChangeLog,v 1.32 2011/11/13 18:18:40 radhermit Exp $
+
+  13 Nov 2011; Tim Harder <radhermit@gentoo.org>
+  -files/libmediainfo-0.7.44-libmms.patch, -libmediainfo-0.7.45.ebuild,
+  -libmediainfo-0.7.48-r1.ebuild, -libmediainfo-0.7.49.ebuild:
+  Remove old.
 
   13 Nov 2011; Markus Meier <maekke@gentoo.org> libmediainfo-0.7.50.ebuild:
   x86 stable, bug #388619
