@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.2.1.ebuild,v 1.13 2011/10/05 19:18:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/beecrypt-4.2.1.ebuild,v 1.14 2011/11/13 18:46:39 vapier Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2"
@@ -14,10 +14,10 @@ SRC_URI="mirror://sourceforge/beecrypt/${P}.tar.gz"
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos"
-IUSE="java nocxx python threads doc"
+IUSE="java cxx python threads doc"
 
 COMMONDEPEND="!<app-arch/rpm-4.2.1
-	!nocxx? ( threads? ( >=dev-libs/icu-2.8 ) )"
+	threads? ( cxx? ( >=dev-libs/icu-2.8 ) )"
 
 DEPEND="${COMMONDEPEND}
 	java? ( >=virtual/jdk-1.4 )
@@ -47,7 +47,7 @@ src_configure() {
 		--disable-expert-mode \
 		$(use_enable threads) \
 		$(use_with python python "${EPREFIX}"/usr/bin/python2) \
-		$(use threads && use_with !nocxx cplusplus || echo --without-cplusplus) \
+		$(use threads && use_with cxx cplusplus || echo --without-cplusplus) \
 		$(use_with java)
 }
 
