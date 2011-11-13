@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/frobby
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/frobby/ChangeLog,v 1.4 2010/12/20 00:50:26 hwoarang Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/frobby/ChangeLog,v 1.5 2011/11/13 19:38:32 vapier Exp $
+
+  13 Nov 2011; Mike Frysinger <vapier@gentoo.org> frobby-0.8.2-r1.ebuild:
+  Convert gmp[-nocxx] to gmp[cxx].
 
   20 Dec 2010; Markos Chandras <hwoarang@gentoo.org> frobby-0.8.2-r1.ebuild:
   Stable on amd64 wrt bug #348639

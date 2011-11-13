@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gfan/gfan-0.5.ebuild,v 1.2 2011/08/13 07:13:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gfan/gfan-0.5.ebuild,v 1.3 2011/11/13 19:41:07 vapier Exp $
 
 EAPI="3"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-libs/gmp[-nocxx]
+DEPEND="|| ( dev-libs/gmp[cxx] dev-libs/gmp[-nocxx] )
 	sci-libs/cddlib"
 RDEPEND="${DEPEND}"
 

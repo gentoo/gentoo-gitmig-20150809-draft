@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/normaliz-2.7.ebuild,v 1.2 2011/09/25 18:15:11 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/normaliz-2.7.ebuild,v 1.3 2011/11/13 19:42:46 vapier Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="extras openmp"
 
-RDEPEND="dev-libs/gmp[-nocxx]"
+RDEPEND="|| ( dev-libs/gmp[cxx] dev-libs/gmp[-nocxx] )"
 DEPEND="${RDEPEND}
 	app-arch/unzip
 	dev-libs/boost"

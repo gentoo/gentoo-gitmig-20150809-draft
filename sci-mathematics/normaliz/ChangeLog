@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/normaliz
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/ChangeLog,v 1.6 2011/09/25 18:15:11 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/ChangeLog,v 1.7 2011/11/13 19:42:46 vapier Exp $
+
+  13 Nov 2011; Mike Frysinger <vapier@gentoo.org> normaliz-2.5-r1.ebuild,
+  normaliz-2.7.ebuild:
+  Convert gmp[-nocxx] to gmp[cxx].
 
   25 Sep 2011; Thomas Kahle <tomka@gentoo.org> normaliz-2.7.ebuild:
   EAPI=4 and missing dep on boost
