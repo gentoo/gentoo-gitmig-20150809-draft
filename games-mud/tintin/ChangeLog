@@ -1,6 +1,12 @@
 # ChangeLog for games-mud/tintin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.114 2011/06/24 18:49:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/ChangeLog,v 1.115 2011/11/13 21:47:48 mr_bones_ Exp $
+
+*tintin-2.00.7 (13 Nov 2011)
+
+  13 Nov 2011; Michael Sterrett <mr_bones_@gentoo.org> -tintin-2.00.5.ebuild,
+  +tintin-2.00.7.ebuild, +files/tintin-2.00.7-ldpermission.patch:
+  version bump
 
   24 Jun 2011; Brent Baude <ranger@gentoo.org> tintin-2.00.6.ebuild:
   Marking tintin-2.00.6 ppc for bug 363639
