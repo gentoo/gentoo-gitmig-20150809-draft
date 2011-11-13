@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/asymptote
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.91 2011/09/07 13:01:42 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/ChangeLog,v 1.92 2011/11/13 19:07:27 vapier Exp $
+
+  13 Nov 2011; Mike Frysinger <vapier@gentoo.org> asymptote-2.13.ebuild:
+  Convert boehm-gc[-nocxx] to boehm-gc[cxx].
 
   07 Sep 2011; Andrey Grozin <grozin@gentoo.org> -asymptote-2.08.ebuild,
   -files/asymptote-2.08-configure-ac.patch, -files/asymptote-2.08-info.patch,
