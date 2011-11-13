@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.2 2011/11/12 14:40:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.3 2011/11/13 10:21:51 scarabeus Exp $
 
 EAPI=4
 
@@ -134,7 +134,7 @@ COMMON_DEPEND="
 	jemalloc? ( dev-libs/jemalloc )
 	mysql? ( >=dev-db/mysql-connector-c++-1.1.0 )
 	opengl? ( virtual/opengl )
-	pdfimport? ( >=app-text/poppler-0.16[xpdf-headers] )
+	pdfimport? ( >=app-text/poppler-0.16[xpdf-headers,cxx] )
 	svg? ( gnome-base/librsvg )
 	webdav? ( net-libs/neon )
 	xmlsec? ( ${NSS_DEPEND} )
