@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/gupnp-igd-0.1.10.ebuild,v 1.2 2011/10/24 06:08:54 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/gupnp-igd-0.2.0.ebuild,v 1.1 2011/11/13 21:34:27 eva Exp $
 
 EAPI="3"
 PYTHON_DEPEND="python? 2:2.5"
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="+introspection python"
 
-RDEPEND=">=net-libs/gupnp-0.13.2
+RDEPEND=">=net-libs/gupnp-0.18
 	>=dev-libs/glib-2.16:2
 	introspection? ( >=dev-libs/gobject-introspection-0.10 )
 	python? ( >=dev-python/pygobject-2.16:2 )"
@@ -37,7 +37,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.1.7-disable_static_modules.patch
+	epatch "${FILESDIR}"/${PN}-0.1.11-disable_static_modules.patch
 
 	# Disable byte-compilation of Python modules.
 	echo "#!/bin/sh" > py-compile
@@ -51,6 +51,7 @@ src_prepare() {
 src_configure() {
 	econf \
 		--disable-dependency-tracking \
+		--disable-static \
 		--disable-gtk-doc \
 		$(use_enable introspection) \
 		$(use_enable python)
@@ -89,6 +90,7 @@ src_install() {
 	fi
 
 	dodoc AUTHORS NEWS README TODO || die
+	find "${D}" -name "*.la" -delete
 }
 
 pkg_postinst() {
