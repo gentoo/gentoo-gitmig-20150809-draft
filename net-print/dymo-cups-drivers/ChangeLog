@@ -1,6 +1,9 @@
 # ChangeLog for net-print/dymo-cups-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/dymo-cups-drivers/ChangeLog,v 1.2 2011/08/28 13:42:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/dymo-cups-drivers/ChangeLog,v 1.3 2011/11/13 16:21:25 maekke Exp $
+
+  13 Nov 2011; Markus Meier <maekke@gentoo.org> dymo-cups-drivers-1.2.0.ebuild:
+  add ~x86, bug #390175
 
   28 Aug 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   dymo-cups-drivers-1.2.0.ebuild, +files/dymo-cups-drivers-1.2.0+gcc-4.6.patch:
