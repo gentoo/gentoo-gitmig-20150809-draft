@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.8-r22.ebuild,v 1.1 2011/08/28 23:20:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.8-r22.ebuild,v 1.2 2011/11/13 11:36:59 jlec Exp $
 
 EAPI=3
 
@@ -40,7 +40,7 @@ RDEPEND="
 	pam? ( virtual/pam )
 	perl? ( dev-lang/perl )
 	php? ( dev-lang/php )
-	png? ( >=media-libs/libpng-1.4.3 )
+	png? ( >=media-libs/libpng-1.4.3:0 )
 	slp? ( >=net-libs/openslp-1.0.4 )
 	ssl? (
 		gnutls? (
@@ -49,7 +49,7 @@ RDEPEND="
 		)
 		!gnutls? ( >=dev-libs/openssl-0.9.8g )
 	)
-	tiff? ( >=media-libs/tiff-3.5.5 )
+	tiff? ( >=media-libs/tiff-3.5.5:0 )
 	usb? ( virtual/libusb:0 )
 	X? ( x11-misc/xdg-utils )
 	xinetd? ( sys-apps/xinetd )

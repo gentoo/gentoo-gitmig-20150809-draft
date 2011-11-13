@@ -1,6 +1,11 @@
 # ChangeLog for net-print/cups
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.436 2011/09/18 08:11:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.437 2011/11/13 11:36:59 jlec Exp $
+
+  13 Nov 2011; Justin Lecher <jlec@gentoo.org> cups-1.3.11-r4.ebuild,
+  cups-1.4.6-r2.ebuild, cups-1.4.8-r1.ebuild, cups-1.4.8-r21.ebuild,
+  cups-1.4.8-r22.ebuild, cups-1.5.0-r1.ebuild, cups-1.5.0-r2.ebuild:
+  Corrected Slotting of media-libs/tiff and media-libs/libpng
 
   18 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> cups-1.5.0-r2.ebuild:
   cups 1.5 should handle the usb printing properly without any kernel hackery.

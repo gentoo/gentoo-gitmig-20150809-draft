@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.11-r4.ebuild,v 1.5 2011/04/30 15:10:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.11-r4.ebuild,v 1.6 2011/11/13 11:36:59 jlec Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic multilib pam
@@ -35,13 +35,13 @@ COMMON_DEPEND="
 	pam? ( virtual/pam )
 	perl? ( dev-lang/perl )
 	php? ( dev-lang/php )
-	png? ( >=media-libs/libpng-1.2.1 )
+	png? ( >=media-libs/libpng-1.2.1:0 )
 	python? ( dev-lang/python )
 	slp? ( >=net-libs/openslp-1.0.4 )
 	ssl? (
 		!gnutls? ( >=dev-libs/openssl-0.9.8g )
 	)
-	tiff? ( >=media-libs/tiff-3.5.5 )
+	tiff? ( >=media-libs/tiff-3.5.5:0 )
 	xinetd? ( sys-apps/xinetd )
 	zeroconf? (
 		!avahi? ( net-misc/mDNSResponder )
