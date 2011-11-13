@@ -1,11 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/libsocialweb-0.25.18.ebuild,v 1.1 2011/06/10 19:10:55 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/libsocialweb-0.25.20.ebuild,v 1.1 2011/11/13 08:36:45 tetromino Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-GNOME_TARBALL_SUFFIX="xz"
 PYTHON_DEPEND="2"
 
 inherit gnome2 python
@@ -44,6 +43,9 @@ DEPEND="${RDEPEND}
 		>=dev-lang/vala-0.10.0:0.12[vapigen]
 		>=dev-libs/gobject-introspection-0.9.6 )"
 
+# Introspection is needed for vala bindings
+REQUIRED_USE="vala? ( introspection )"
+
 pkg_setup() {
 	# TODO: enable sys-apps/keyutils support (--without-kernel-keyring)
 	G2CONF="${G2CONF}
@@ -62,16 +64,10 @@ pkg_setup() {
 	use connman && G2CONF="${G2CONF} --with-online=connman"
 	use networkmanager && G2CONF="${G2CONF} --with-online=networkmanager"
 
-	# Introspection is needed for vala bindings
-	# FIXME: Replace with USE_REQUIRED when python.eclass gets EAPI=4 support
-	if use vala && ! use introspection; then
-		ewarn "Introspection support is needed for Vala bindings, auto-enabling..."
-		G2CONF="${G2CONF} --enable-introspection"
-	fi
-
 	DOCS="AUTHORS README TODO"
 
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {

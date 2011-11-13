@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/libsocialweb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/ChangeLog,v 1.4 2011/07/24 15:25:17 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsocialweb/ChangeLog,v 1.5 2011/11/13 08:36:44 tetromino Exp $
+
+*libsocialweb-0.25.20 (13 Nov 2011)
+
+  13 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -libsocialweb-0.25.18.ebuild, +libsocialweb-0.25.20.ebuild, metadata.xml:
+  Bump, port to EAPI4, drop old. Notable changes: should no longer silently
+  attempt to connect to Twitter and other services without the user's
+  permission (bug #389999, CVE-2011-4129, thanks to Michael Harrison
+  <n0idx80@gmail.com> for reporting).
 
 *libsocialweb-0.25.19 (24 Jul 2011)
 
