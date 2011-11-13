@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.4.20_p4-r1.ebuild,v 1.7 2010/05/27 01:08:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.4.20_p4-r1.ebuild,v 1.8 2011/11/13 20:38:10 vapier Exp $
 
 inherit eutils db flag-o-matic java-pkg-opt-2 autotools libtool
 
@@ -28,7 +28,7 @@ done
 LICENSE="OracleDB BSD"
 SLOT="4.4"
 KEYWORDS="~amd64 ~arm ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="tcl java doc nocxx"
+IUSE="tcl java doc cxx"
 
 DEPEND="tcl? ( >=dev-lang/tcl-8.4 )
 	java? ( >=virtual/jdk-1.4 )
@@ -84,7 +84,7 @@ src_compile() {
 
 	use amd64 && myconf="${myconf} --with-mutex=x86/gcc-assembly"
 
-	myconf="${myconf} $(use_enable !nocxx cxx)"
+	myconf="${myconf} $(use_enable cxx)"
 
 	use tcl \
 		&& myconf="${myconf} --enable-tcl --with-tcl=/usr/$(get_libdir)" \

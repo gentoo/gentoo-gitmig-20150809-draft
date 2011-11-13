@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.3.29_p1-r1.ebuild,v 1.14 2009/09/20 19:52:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.3.29_p1-r1.ebuild,v 1.15 2011/11/13 20:38:10 vapier Exp $
 
 inherit eutils db flag-o-matic java-pkg-opt-2 autotools libtool
 
@@ -27,7 +27,7 @@ done
 LICENSE="DB"
 SLOT="4.3"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
-IUSE="tcl java doc nocxx"
+IUSE="tcl java doc cxx"
 
 DEPEND="tcl? ( >=dev-lang/tcl-8.4 )
 	java? ( >=virtual/jdk-1.4 )
@@ -90,7 +90,7 @@ src_compile() {
 
 	use amd64 && myconf="${myconf} --with-mutex=x86/gcc-assembly"
 
-	myconf="${myconf} $(use_enable !nocxx cxx)"
+	myconf="${myconf} $(use_enable cxx)"
 
 	use tcl \
 		&& myconf="${myconf} --enable-tcl --with-tcl=/usr/$(get_libdir)" \
