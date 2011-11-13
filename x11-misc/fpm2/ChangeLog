@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/fpm2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fpm2/ChangeLog,v 1.2 2011/07/07 22:10:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fpm2/ChangeLog,v 1.3 2011/11/13 19:04:08 hwoarang Exp $
+
+  13 Nov 2011; Markos Chandras <hwoarang@gentoo.org> fpm2-0.79.ebuild:
+  Fix dependencies. Thanks to Bruno <bonbons67@internet.lu>. Bug #387971
 
   07 Jul 2011; Markos Chandras <hwoarang@gentoo.org> fpm2-0.79.ebuild:
   Remove useless inherit
