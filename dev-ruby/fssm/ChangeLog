@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fssm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/ChangeLog,v 1.10 2011/08/14 07:23:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fssm/ChangeLog,v 1.11 2011/11/13 16:15:30 maekke Exp $
+
+  13 Nov 2011; Markus Meier <maekke@gentoo.org> fssm-0.2.7-r1.ebuild:
+  add ~x86, bug #379131
 
 *fssm-0.2.7-r1 (14 Aug 2011)
 
