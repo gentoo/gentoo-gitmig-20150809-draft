@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gdk-pixbuf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.42 2011/10/30 17:38:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gdk-pixbuf/ChangeLog,v 1.43 2011/11/13 11:52:14 jlec Exp $
+
+  13 Nov 2011; Justin Lecher <jlec@gentoo.org> gdk-pixbuf-2.22.1-r2.ebuild,
+  gdk-pixbuf-2.24.0-r1.ebuild:
+  Corrected Slotting of media-libs/tiff
 
   30 Oct 2011; Raúl Porcel <armin76@gentoo.org> gdk-pixbuf-2.24.0-r1.ebuild:
   alpha/ia64/sh/sparc stable wrt #385699
