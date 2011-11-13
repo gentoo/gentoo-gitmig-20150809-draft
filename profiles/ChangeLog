@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5901 2011/11/13 11:44:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5902 2011/11/13 16:15:17 chithanh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Nov 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  package.mask:
+  Update mask for xf86-video-intel development releases.
 
   13 Nov 2011; Alin Năstac <mrness@gentoo.org> package.mask:
   Lastrite net-mail/vmailmgr

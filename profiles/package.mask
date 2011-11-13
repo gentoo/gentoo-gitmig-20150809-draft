@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13233 2011/11/13 11:44:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13234 2011/11/13 16:15:17 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -128,7 +128,7 @@ x11-themes/polyester
 
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (31 Oct 2011)
 # mask development release
-=x11-drivers/xf86-video-intel-2.16.901
+=x11-drivers/xf86-video-intel-2.16.902
 
 # Markos Chandras <hwoarang@gentoo.org> (31 Oct 2011)
 # Masking 4.8 rc release. The ebuilds are still work in
