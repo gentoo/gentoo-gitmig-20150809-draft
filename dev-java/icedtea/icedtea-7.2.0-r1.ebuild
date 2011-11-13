@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.0-r1.ebuild,v 1.10 2011/11/12 14:50:14 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.0-r1.ebuild,v 1.11 2011/11/13 22:39:22 sera Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -167,6 +167,16 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${ICEDTEA_PKG}.tar.gz
+}
+
+java_prepare() {
+	# Fix building with PaX enabled kernels. Bug #389751
+	# Move applying test_gamma.patch to before creating boot copy.
+	if grep '^PaX:' /proc/self/status > /dev/null; then
+		sed -i -e 's|patches/boot/test_gamma.patch||' Makefile.in || die
+		sed -i -e 's|openjdk-boot|openjdk|g' patches/boot/test_gamma.patch || die
+		export DISTRIBUTION_PATCHES=patches/boot/test_gamma.patch
+	fi
 }
 
 unset_vars() {

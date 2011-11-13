@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.46 2011/11/12 14:50:14 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.47 2011/11/13 22:39:22 sera Exp $
+
+  13 Nov 2011; Ralph Sennhauser <sera@gentoo.org> icedtea-7.2.0-r1.ebuild:
+  Fix building with PaX enabled kernels. Bug #389751. Thanks to Daniel Kuehn
+  <enhaisa@gmail.com> and Magnus Granberg <zorry@gentoo.org> for their help
+  finding the patch
 
   12 Nov 2011; Ralph Sennhauser <sera@gentoo.org> icedtea-7.2.0-r1.ebuild:
   Use java-vm_sandbox-predict for installing the controle file
