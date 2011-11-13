@@ -1,6 +1,19 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.209 2011/11/13 07:19:54 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.210 2011/11/13 12:04:30 lu_zero Exp $
+
+*blender-2.60a (13 Nov 2011)
+
+  13 Nov 2011; Luca Barbato <lu_zero@gentoo.org> blender-2.57-r1.ebuild,
+  +files/blender-2.60-bmake.patch, +files/blender-2.60-doxyfile.patch,
+  +files/blender-2.60-eigen.patch, +files/blender-2.60-glew.patch,
+  +files/blender-2.60-openjpeg.patch, +blender-2.60a.ebuild,
+  +files/blender-2.60a-CVE-2009-3850-v3.patch,
+  +files/blender-2.60a-enable_site_module.patch,
+  +files/blender-2.60a-insecure.desktop, +files/blender-2.60a-libav-0.7.patch,
+  +files/blender-2.60a-linux-3.patch, +files/blender-desktop.patch:
+  New version, thanks to Anthoine Bourgeois <anthoine.bourgeois@gmail.com> and
+  everybody who helped on bug #369599
 
   13 Nov 2011; Luca Barbato <lu_zero@gentoo.org> blender-2.49b-r2.ebuild,
   +files/blender-2.49b-libav-0.7.patch:
