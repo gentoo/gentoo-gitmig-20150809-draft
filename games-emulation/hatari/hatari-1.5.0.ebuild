@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/hatari-1.5.0.ebuild,v 1.3 2011/08/24 19:33:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/hatari-1.5.0.ebuild,v 1.4 2011/11/13 21:54:12 mr_bones_ Exp $
 
 EAPI=2
 inherit toolchain-funcs cmake-utils games
@@ -25,6 +25,8 @@ RDEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
+	# build with newer zlib (bug #387829)
+	sed -i -e '1i#define OF(x) x' src/includes/unzip.h || die
 	rm -f doc/CMakeLists.txt
 }
 
