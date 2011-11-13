@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/notes/notes-0.11.ebuild,v 1.1 2011/09/14 23:07:38 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/notes/notes-0.12.8.ebuild,v 1.1 2011/11/13 20:43:07 radhermit Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ LICENSE="MIT"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=app-vim/xolox-misc-20110904
+RDEPEND=">=app-vim/xolox-misc-20110926
 	|| ( dev-lang/python:2.7[sqlite] dev-lang/python:2.6[sqlite] )"
 
 VIM_PLUGIN_HELPFILES="${PN}.txt"

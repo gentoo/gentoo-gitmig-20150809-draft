@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/easytags/easytags-2.5.4.ebuild,v 1.1 2011/09/05 04:42:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/easytags/easytags-2.7.2.ebuild,v 1.1 2011/11/13 20:39:32 radhermit Exp $
 
 EAPI=4
 
@@ -14,10 +14,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="|| ( dev-lang/python:2.7 dev-lang/python:2.6 )
-	>=app-vim/xolox-misc-20110831
+	>=app-vim/xolox-misc-20110926
 	dev-util/ctags"
 
-VIM_PLUGIN_HELPFILES="easytags.txt"
+VIM_PLUGIN_HELPFILES="${PN}.txt"
 
 src_unpack() {
 	unpack ${A}
@@ -25,8 +25,9 @@ src_unpack() {
 }
 
 src_prepare() {
-	rm INSTALL.md README.md
-	rm -rf autoload/xolox/misc
+	# Remove unnecessary files
+	rm INSTALL.md README.md || die
+	rm -r autoload/xolox/misc || die
 }
 
 src_install() {
