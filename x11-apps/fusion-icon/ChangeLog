@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/fusion-icon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/fusion-icon/ChangeLog,v 1.8 2011/04/18 21:58:54 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/fusion-icon/ChangeLog,v 1.9 2011/11/13 14:26:29 flameeyes Exp $
+
+*fusion-icon-0.1-r2 (13 Nov 2011)
+
+  13 Nov 2011; Diego E. Pettenò <flameeyes@gentoo.org>
+  +fusion-icon-0.1-r2.ebuild, -fusion-icon-0.1-r1.ebuild:
+  Revision bump to move to EAPI=4 and ensure that either gtk or qt4 are enabled.
 
   18 Apr 2011; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   fusion-icon-0.1-r1.ebuild:

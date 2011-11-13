@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/fusion-icon/fusion-icon-0.1-r1.ebuild,v 1.4 2011/04/18 21:58:54 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/fusion-icon/fusion-icon-0.1-r2.ebuild,v 1.1 2011/11/13 14:26:29 flameeyes Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="2"
 
 inherit distutils gnome2-utils
@@ -17,6 +17,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="gtk qt4"
+
+REQUIRED_USE="|| ( gtk qt4 )"
 
 RDEPEND="
 	>=dev-python/compizconfig-python-${MINIMUM_COMPIZ_RELEASE}
