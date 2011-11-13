@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13236 2011/11/13 19:14:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13237 2011/11/13 21:16:36 sping Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -36,10 +36,6 @@
 # of mkstemp which is a fatal error in recent gcc versions
 # Masked for removal in 30 days. Bug #371454
 games-mud/kmuddy
-
-# Sebastian Pipping <sping@gentoo.org> (13 Nov 2011)
-# No chance to build (bug #390427)
-~media-gfx/blender-2.60a
 
 # Alin Năstac <mrness@gentoo.org> (13 Nov 2011)
 # Dead project, masked for removal in 30 days
