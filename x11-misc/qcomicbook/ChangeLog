@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/qcomicbook
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.42 2011/11/13 18:54:41 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.43 2011/11/13 20:52:16 maekke Exp $
+
+  13 Nov 2011; Markus Meier <maekke@gentoo.org> qcomicbook-0.8.1.ebuild:
+  x86 stable, bug #378381
 
   13 Nov 2011; Markos Chandras <hwoarang@gentoo.org> qcomicbook-0.8.1.ebuild:
   Add qt4 use dependency on poppler. Bug #378381
