@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.1.90-r3.ebuild,v 1.3 2011/11/07 18:27:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.9.2.0.ebuild,v 1.1 2011/11/13 23:19:00 tetromino Exp $
 
 EAPI="4"
 GNOME_ORG_MODULE="NetworkManager"
@@ -94,11 +94,8 @@ src_prepare() {
 	# Don't build tests
 	epatch "${FILESDIR}/${PN}-0.9_rc3-fix-tests.patch"
 	# Build against libnl:1.1 for net-wireless/wimax-1.5.2 compatibility
-	epatch "${FILESDIR}/${P}-force-libnl1.1.patch"
-	# Fix <linux/if.h> & <net/if.h> conflict, in next release (bug #388609)
-	epatch "${FILESDIR}/${P}-if.h.patch"
-	# Fix rfkill handling, will be in next release
-	epatch "${FILESDIR}/${P}-rfkill.patch"
+	epatch "${FILESDIR}/${PN}-0.9.1.95-force-libnl1.1.patch"
+
 	eautoreconf
 	default
 }
