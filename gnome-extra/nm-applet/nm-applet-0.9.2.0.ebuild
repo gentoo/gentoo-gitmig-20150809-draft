@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.1.90.ebuild,v 1.1 2011/10/29 06:35:48 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.9.2.0.ebuild,v 1.1 2011/11/13 23:19:30 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
