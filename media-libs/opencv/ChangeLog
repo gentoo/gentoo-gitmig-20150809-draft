@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.56 2011/10/15 23:17:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.57 2011/11/13 14:27:17 dilfridge Exp $
+
+*opencv-2.3.1a (13 Nov 2011)
+
+  13 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org> +opencv-2.3.1a.ebuild,
+  +files/opencv-2.3.1a-convert_sets_to_options.patch,
+  +files/opencv-2.3.1a-libsuffix.patch, +files/opencv-2.3.1a-nocaps.patch:
+  Version bump, thanks to Andreas Sturmlechner for his help
 
   15 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Remove description for USE flags "deprecated" and "octave"
