@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.60a.ebuild,v 1.3 2011/11/13 19:31:11 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.60a.ebuild,v 1.4 2011/11/13 22:43:48 sping Exp $
 
 PYTHON_DEPEND="3:3.2"
 EAPI=4
@@ -116,7 +116,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-desktop.patch
+	epatch "${FILESDIR}"/${P}-desktop.patch
 	epatch "${FILESDIR}"/${PN}-${SLOT}-doxyfile.patch
 
 	# TODO: write a proper Makefile to replace the borked bmake script

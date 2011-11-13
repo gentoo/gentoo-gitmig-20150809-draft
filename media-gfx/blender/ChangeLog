@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.212 2011/11/13 19:31:11 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.213 2011/11/13 22:43:48 sping Exp $
+
+  13 Nov 2011; Sebastian Pipping <sping@gentoo.org> blender-2.60a.ebuild,
+  +files/blender-2.60a-desktop.patch, -files/blender-desktop.patch:
+  Move blender-desktop.patch to blender-2.60a-desktop.patch
 
   13 Nov 2011; Luca Barbato <lu_zero@gentoo.org> blender-2.60a.ebuild:
   Fix bug 390439 by setting properly get_libdir
