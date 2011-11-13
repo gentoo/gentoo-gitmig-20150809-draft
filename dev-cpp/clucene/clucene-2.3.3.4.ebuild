@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/clucene-2.3.3.4.ebuild,v 1.1 2011/11/12 19:07:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/clucene/clucene-2.3.3.4.ebuild,v 1.2 2011/11/13 21:12:13 mr_bones_ Exp $
 
 EAPI=4
 
@@ -35,7 +35,7 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_configure() {
 	# Disabled threads: see upstream bug
-	# https://sourceforge.net/tracker/?func=detail&aid=3237301&group_id=80013&atid=558446 
+	# https://sourceforge.net/tracker/?func=detail&aid=3237301&group_id=80013&atid=558446
 	local mycmakeargs=(
 		-DENABLE_ASCII_MODE=OFF
 		-DENABLE_PACKAGING=OFF
