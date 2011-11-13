@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.210 2011/11/13 12:04:30 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.211 2011/11/13 18:52:07 sping Exp $
+
+  13 Nov 2011; Sebastian Pipping <sping@gentoo.org> blender-2.60a.ebuild:
+  Disable 3D mouse (as libspnav is not packaged yet) to fix compilation (bug
+  #390427)
 
 *blender-2.60a (13 Nov 2011)
 
