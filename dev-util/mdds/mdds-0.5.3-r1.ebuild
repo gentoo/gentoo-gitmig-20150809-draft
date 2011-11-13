@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/mdds-0.5.3-r1.ebuild,v 1.3 2011/10/26 15:37:07 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mdds/mdds-0.5.3-r1.ebuild,v 1.4 2011/11/13 09:58:25 jlec Exp $
 
 EAPI=4
 
@@ -21,7 +21,7 @@ S=${WORKDIR}/${P/-/_}
 src_configure() {
 	econf \
 		--with-hash-container=boost \
-		--docdir=/usr/share/doc/${PF}
+		--docdir="${EPREFIX}/usr/share/doc/${PF}"
 }
 
 src_compile() { :; }
