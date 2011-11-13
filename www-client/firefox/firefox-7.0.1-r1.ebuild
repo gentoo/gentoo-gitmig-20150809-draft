@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-7.0.1-r1.ebuild,v 1.2 2011/10/28 08:38:38 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-7.0.1-r1.ebuild,v 1.3 2011/11/13 14:41:51 maekke Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -18,7 +18,7 @@ PATCH="${PN}-7.0-patches-0.5"
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.com/firefox"
 
-KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="bindist +crashreporter +ipc pgo system-sqlite +webm"
