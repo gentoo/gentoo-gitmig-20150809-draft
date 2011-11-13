@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5646.ebuild,v 1.8 2010/03/26 19:26:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.2.1_p5646.ebuild,v 1.9 2011/11/13 19:14:53 vapier Exp $
 
 EAPI="3"
 
@@ -37,7 +37,7 @@ fi
 
 KEYWORDS="~ppc-macos ~x64-macos ~x86-macos"
 
-IUSE="fortran nls +openmp objc objc++ nocxx"
+IUSE="fortran nls +openmp objc objc++ +cxx"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
 	>=sys-libs/ncurses-5.2-r2
@@ -139,7 +139,7 @@ src_prepare() {
 
 src_configure() {
 	local langs="c"
-	use nocxx || langs="${langs},c++"
+	use cxx && langs="${langs},c++"
 	use objc && langs="${langs},objc"
 	use objc++ && langs="${langs/,objc/},objc,obj-c++" # need objc with objc++
 	use fortran && langs="${langs},fortran"

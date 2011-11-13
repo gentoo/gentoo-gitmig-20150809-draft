@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.0.1_p5493.ebuild,v 1.3 2010/03/08 17:12:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.0.1_p5493.ebuild,v 1.4 2011/11/13 19:14:53 vapier Exp $
 
 EAPI="3"
 
@@ -23,7 +23,7 @@ fi
 
 KEYWORDS="~ppc-macos ~x64-macos ~x86-macos"
 
-IUSE="nls objc objc++ nocxx"
+IUSE="nls objc objc++ +cxx"
 
 RDEPEND=">=sys-libs/zlib-1.1.4
 	>=sys-libs/ncurses-5.2-r2
@@ -72,7 +72,7 @@ src_prepare() {
 
 src_configure() {
 	local langs="c"
-	use nocxx || langs="${langs},c++"
+	use cxx && langs="${langs},c++"
 	use objc && langs="${langs},objc"
 	use objc++ && langs="${langs/,objc/},objc,obj-c++" # need objc with objc++
 
