@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.2.1-r1.ebuild,v 1.1 2011/11/05 07:51:56 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.2.1-r1.ebuild,v 1.2 2011/11/13 10:07:07 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -81,7 +81,7 @@ RDEPEND="${COMMON_DEPEND}
 	>=gnome-base/gnome-settings-daemon-2.91
 	>=gnome-base/gnome-control-center-2.91.92-r1
 
-	>=sys-apps/accountsservice-0.6.14
+	>=sys-apps/accountsservice-0.6.14[introspection]
 
 	>=app-accessibility/caribou-0.3"
 DEPEND="${COMMON_DEPEND}
