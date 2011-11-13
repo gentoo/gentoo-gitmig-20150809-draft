@@ -1,16 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/emesene-2.11.7.ebuild,v 1.1 2011/08/03 13:30:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/emesene-2.11.11.ebuild,v 1.1 2011/11/13 20:41:33 hwoarang Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 PYTHON_USE_WITH="sqlite"
 SUPPORT_PYTHON_ABIS="1"
 RESTRICT_PYTHON_ABIS="3.*"
-
-GIT_COMMIT="0fe75b2"
-
-MY_P="${PN}-${PN}-${GIT_COMMIT}"
 
 inherit distutils eutils
 
@@ -27,8 +23,6 @@ RDEPEND="dev-python/pygtk:2
 	dev-python/papyon
 	dev-python/notify-python
 	jabber? ( dev-python/xmpppy )"
-
-S="${WORKDIR}/${PN}-${PN}-${GIT_COMMIT}"
 
 src_prepare() {
 	# do not import dummy session

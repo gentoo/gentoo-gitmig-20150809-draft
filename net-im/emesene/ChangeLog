@@ -1,6 +1,12 @@
 # ChangeLog for net-im/emesene
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/ChangeLog,v 1.13 2011/10/30 15:39:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/emesene/ChangeLog,v 1.14 2011/11/13 20:41:33 hwoarang Exp $
+
+*emesene-2.11.11 (13 Nov 2011)
+
+  13 Nov 2011; Markos Chandras <hwoarang@gentoo.org> +emesene-2.11.11.ebuild,
+  -emesene-2.11.7.ebuild:
+  version bump
 
   30 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> emesene-1.6.3.ebuild:
   Fix gst-plugins-meta dependency from USE="v4l2" to USE="v4l" wrt #385241
