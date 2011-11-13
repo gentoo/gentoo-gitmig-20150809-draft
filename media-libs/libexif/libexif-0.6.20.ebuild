@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.6.20.ebuild,v 1.1 2011/04/04 23:20:46 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.6.20.ebuild,v 1.2 2011/11/13 18:07:16 xmw Exp $
 
 EAPI=2
-inherit eutils libtool
+inherit autotools eutils libtool
 
 DESCRIPTION="Library for parsing, editing, and saving EXIF data"
 HOMEPAGE="http://libexif.sourceforge.net/"
@@ -22,7 +22,11 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.6.13-pkgconfig.patch
-	elibtoolize # FreeBSD .so version
+	#elibtoolize # FreeBSD .so version
+	sed -e '/FLAGS=/s:-g::g' \
+		-e '/FLAGS=/s:-Wall::g' \
+		-i configure.ac
+	eautoreconf
 }
 
 src_configure() {
@@ -38,5 +42,4 @@ src_install() {
 	emake DESTDIR="${D}" install || die
 	find "${D}" -name '*.la' -exec rm -f {} +
 	rm -f "${D}"usr/share/doc/${PF}/{ABOUT-NLS,COPYING}
-	prepalldocs
 }
