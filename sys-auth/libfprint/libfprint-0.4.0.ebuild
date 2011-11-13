@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/libfprint-0.4.0.ebuild,v 1.1 2011/06/16 23:28:59 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/libfprint/libfprint-0.4.0.ebuild,v 1.2 2011/11/13 23:53:00 xmw Exp $
 
-EAPI=3
+EAPI=4
 
 inherit autotools
 
@@ -21,7 +21,6 @@ RDEPEND="dev-libs/glib:2
 	dev-libs/nss
 	x11-libs/gtk+:2
 	|| ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )"
-
 DEPEND="${DEPEND}
 	dev-util/pkgconfig"
 
@@ -39,15 +38,13 @@ pkg_setup() {
 }
 
 src_configure() {
-	econf ${my_conf} \
+	econf \
 		$(use_enable debug debug-log) \
-		$(use_enable static-libs static) || die
+		$(use_enable static-libs static)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	if ! use static-libs ; then
-		rm -v "${D}"/usr/lib64/libfprint.la || die
-	fi
-	dodoc AUTHORS HACKING NEWS README THANKS TODO || die
+	emake DESTDIR="${D}" install
+	use static-libs || find "${D}" -name "*.la" -delete
+	dodoc AUTHORS HACKING NEWS README THANKS TODO
 }
