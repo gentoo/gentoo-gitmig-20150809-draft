@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-gsm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gsm/ChangeLog,v 1.1 2011/09/27 10:04:49 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gsm/ChangeLog,v 1.2 2011/11/13 16:15:40 maekke Exp $
+
+  13 Nov 2011; Markus Meier <maekke@gentoo.org> gst-plugins-gsm-0.10.22.ebuild:
+  add ~x86, bug #384787
 
 *gst-plugins-gsm-0.10.22 (27 Sep 2011)
 
