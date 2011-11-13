@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.79 2011/11/07 15:39:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.80 2011/11/13 14:59:02 maekke Exp $
+
+  13 Nov 2011; Markus Meier <maekke@gentoo.org>
+  nxserver-freenx-0.7.3_p104-r6.ebuild:
+  x86 stable, bug #388403
 
   07 Nov 2011; Tony Vroon <chainsaw@gentoo.org>
   nxserver-freenx-0.7.3_p104-r6.ebuild:
