@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/shorewall6-lite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6-lite/ChangeLog,v 1.33 2011/11/01 17:08:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall6-lite/ChangeLog,v 1.34 2011/11/13 14:58:10 maekke Exp $
+
+  13 Nov 2011; Markus Meier <maekke@gentoo.org>
+  shorewall6-lite-4.4.23.2.ebuild:
+  x86 stable, bug #388195
 
   01 Nov 2011; Jeroen Roovers <jer@gentoo.org> shorewall6-lite-4.4.23.2.ebuild:
   Stable for HPPA (bug #388195).

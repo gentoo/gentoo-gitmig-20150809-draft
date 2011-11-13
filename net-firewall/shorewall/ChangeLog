@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.198 2011/11/01 17:07:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.199 2011/11/13 14:55:09 maekke Exp $
+
+  13 Nov 2011; Markus Meier <maekke@gentoo.org> shorewall-4.4.23.2.ebuild:
+  x86 stable, bug #388195
 
   01 Nov 2011; Jeroen Roovers <jer@gentoo.org> shorewall-4.4.23.2.ebuild:
   Stable for HPPA (bug #388195).
