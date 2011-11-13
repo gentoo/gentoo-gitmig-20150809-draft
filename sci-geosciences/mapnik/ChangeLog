@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/mapnik
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.27 2011/09/26 07:45:56 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.28 2011/11/13 02:19:47 nerdboy Exp $
+
+*mapnik-2.0.0 (13 Nov 2011)
+
+  13 Nov 2011; Steve Arnold <nerdboy@gentoo.org> +mapnik-2.0.0.ebuild,
+  +files/mapnik-2.0.0-gentoo.patch:
+  Added mapnik2 ebuild, however, it breaks current gpsdrive, so it will be 
+  package.amsked for the time being.  Unmask if you want to try it.
 
   26 Sep 2011; Steve Arnold <nerdboy@gentoo.org> mapnik-0.7.1-r1.ebuild,
   +files/mapnik-0.7.1-libpng1.5.4.patch:
