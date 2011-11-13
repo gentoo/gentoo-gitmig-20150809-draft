@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.6.20.ebuild,v 1.2 2011/11/13 18:07:16 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/libexif-0.6.20.ebuild,v 1.3 2011/11/13 18:42:04 xmw Exp $
 
-EAPI=2
-inherit autotools eutils libtool
+EAPI=4
+
+inherit eutils libtool
 
 DESCRIPTION="Library for parsing, editing, and saving EXIF data"
 HOMEPAGE="http://libexif.sourceforge.net/"
@@ -22,16 +23,14 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.6.13-pkgconfig.patch
-	#elibtoolize # FreeBSD .so version
-	sed -e '/FLAGS=/s:-g::g' \
-		-e '/FLAGS=/s:-Wall::g' \
-		-i configure.ac
-	eautoreconf
+	elibtoolize # FreeBSD .so version
+
+	# remove -g from FLAGS bug (#390249)
+	sed -i -e '/FLAGS=/s:-g::g' -i configure || die
 }
 
 src_configure() {
 	econf \
-		--disable-dependency-tracking \
 		$(use_enable static-libs static) \
 		$(use_enable nls) \
 		$(use_enable doc docs) \
@@ -39,7 +38,7 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	find "${D}" -name '*.la' -exec rm -f {} +
 	rm -f "${D}"usr/share/doc/${PF}/{ABOUT-NLS,COPYING}
 }
