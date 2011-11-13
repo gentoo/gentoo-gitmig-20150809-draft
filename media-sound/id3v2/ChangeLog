@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/id3v2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/ChangeLog,v 1.29 2011/11/11 12:46:40 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3v2/ChangeLog,v 1.30 2011/11/13 14:47:40 maekke Exp $
+
+  13 Nov 2011; Markus Meier <maekke@gentoo.org> id3v2-0.1.12.ebuild:
+  x86 stable, bug #380721
 
   11 Nov 2011; Tony Vroon <chainsaw@gentoo.org> id3v2-0.1.12.ebuild:
   Marked stable on AMD64 based on arch testing by Tomáš "Mepho" Pružina &
