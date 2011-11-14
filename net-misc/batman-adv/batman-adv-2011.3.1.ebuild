@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/batman-adv/batman-adv-2011.3.0.ebuild,v 1.1 2011/11/13 23:39:30 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/batman-adv/batman-adv-2011.3.1.ebuild,v 1.1 2011/11/14 10:26:53 xmw Exp $
 
 EAPI=4
 
