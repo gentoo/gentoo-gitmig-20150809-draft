@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.4.ebuild,v 1.1 2011/11/14 10:17:48 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.4a.ebuild,v 1.1 2011/11/14 11:54:57 voyageur Exp $
 
 EAPI=4
 inherit eutils autotools
