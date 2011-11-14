@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-2.13.ebuild,v 1.5 2011/11/13 19:07:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-2.13.ebuild,v 1.6 2011/11/14 11:23:37 flameeyes Exp $
 
 EAPI=3
 SUPPORT_PYTHON_ABIS=1
@@ -20,7 +20,7 @@ RDEPEND=">=sys-libs/readline-4.3-r5
 	>=sys-libs/ncurses-5.4-r5
 	imagemagick? ( media-gfx/imagemagick[png] )
 	sigsegv? ( dev-libs/libsigsegv )
-	boehm-gc? ( || ( >=dev-libs/boehm-gc-7.0[cxx,threads] >=dev-libs/boehm-gc-7.0[-nocxx,threads] ) )
+	boehm-gc? ( >=dev-libs/boehm-gc-7.0[cxx,threads] )
 	fftw? ( >=sci-libs/fftw-3.0.1 )
 	gsl? ( sci-libs/gsl )
 	X? ( x11-misc/xdg-utils dev-lang/python dev-python/imaging[tk] )
