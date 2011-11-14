@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13240 2011/11/14 03:50:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13241 2011/11/14 04:08:51 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -251,13 +251,6 @@ app-admin/stow
 # Multiple open bugs (375071, 256850, 214192, 202497)
 # No maintainer. Removal in 30 days
 app-admin/mon
-
-# Michael Sterrett <mr_bones_@gentoo.org> (12 Oct 2011)
-# Upstream has moved to commercial development and
-# the latest version doesn't work with newer allegro.
-# Masked for removal on 20111111
-# bug #369271
-games-roguelike/fargoal
 
 # Tim Harder <radhermit@gentoo.org> (11 Oct 2011)
 # Mask development releases
