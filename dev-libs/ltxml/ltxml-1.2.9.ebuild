@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ltxml/ltxml-1.2.9.ebuild,v 1.1 2011/11/14 03:53:45 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ltxml/ltxml-1.2.9.ebuild,v 1.2 2011/11/14 04:11:11 xmw Exp $
 
 EAPI=4
 
@@ -21,6 +21,12 @@ RDEPEND=""
 PV_MAJ="${PV:0:1}${PV:2:1}"
 
 S=${WORKDIR}/${P}/XML
+
+src_prepare() {
+	sed -e '/CFLAGS=/s:-g::' \
+		-e '/CFLAGS=/s:-O2::' \
+		-i configure || die
+}
 
 src_compile() {
 	emake all
