@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc-fbsd profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/ChangeLog,v 1.23 2011/08/09 06:20:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/ChangeLog,v 1.24 2011/11/14 17:12:56 vapier Exp $
+
+  14 Nov 2011; Mike Frysinger <vapier@gentoo.org> packages:
+  Move sys-apps/net-tools to Linux profiles from base profile.
 
   09 Aug 2011; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Remove mask for <virtual/linux-sources-2.6 because versioning of the virtual

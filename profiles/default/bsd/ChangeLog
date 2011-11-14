@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.64 2011/11/08 11:49:30 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.65 2011/11/14 17:12:55 vapier Exp $
+
+  14 Nov 2011; Mike Frysinger <vapier@gentoo.org> packages:
+  sys-apps/net-tools is no longer in base profile.
 
   08 Nov 2011; Naohiro Aota <naota@gentoo.org> +fbsd/package.use.force,
   fbsd/package.use.mask:

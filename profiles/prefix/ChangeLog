@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.300 2011/11/06 12:41:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.301 2011/11/14 17:12:56 vapier Exp $
+
+  14 Nov 2011; Mike Frysinger <vapier@gentoo.org> packages:
+  sys-apps/net-tools is no longer in base profile.
 
   06 Nov 2011; Fabian Groffen <grobian@gentoo.org>
   +darwin/macos/10.5/package.mask, darwin/macos/10.4/package.mask:
