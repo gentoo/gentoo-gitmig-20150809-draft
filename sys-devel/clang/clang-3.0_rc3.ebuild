@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.0_rc3.ebuild,v 1.2 2011/11/10 14:01:41 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/clang/clang-3.0_rc3.ebuild,v 1.3 2011/11/14 15:02:31 voyageur Exp $
 
 EAPI=3
 
@@ -86,7 +86,7 @@ src_configure() {
 
 	if use system-cxx-headers; then
 		# Try to get current gcc headers path
-		local CXX_PATH=$(gcc-config -X| cut -d: -f1 | sed 's,/include/g++-v4$,,')
+		local CXX_PATH=$(gcc-config -L| cut -d: -f1)
 		CONF_FLAGS="${CONF_FLAGS} --with-c-include-dirs=/usr/include:${CXX_PATH}/include"
 		CONF_FLAGS="${CONF_FLAGS} --with-cxx-include-root=${CXX_PATH}/include/g++-v4"
 		CONF_FLAGS="${CONF_FLAGS} --with-cxx-include-arch=$CHOST"
