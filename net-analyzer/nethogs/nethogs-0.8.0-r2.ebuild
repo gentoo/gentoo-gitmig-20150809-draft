@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/nethogs-0.8.0-r1.ebuild,v 1.1 2011/11/14 12:00:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/nethogs-0.8.0-r2.ebuild,v 1.1 2011/11/14 19:38:30 jer Exp $
 
 EAPI="4"
 
@@ -26,6 +26,7 @@ src_prepare() {
 	sed -i Makefile \
 		-e '/^CFLAGS=/{s|=|+=|;s|-g||};/ -o /s|$(CFLAGS)|& $(LDFLAGS)|g' \
 		-e 's|share/man/|usr/&|g' \
+		-e 's|/sbin|/usr&|g' \
 		|| die
 	tc-export CC CXX
 }
