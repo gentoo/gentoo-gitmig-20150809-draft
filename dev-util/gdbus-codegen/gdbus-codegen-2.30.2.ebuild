@@ -1,10 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/gdbus-codegen-2.30.0.ebuild,v 1.1 2011/09/27 13:02:37 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gdbus-codegen/gdbus-codegen-2.30.2.ebuild,v 1.1 2011/11/14 08:10:36 tetromino Exp $
 
-EAPI="3"
+EAPI="4"
 GNOME_ORG_MODULE="glib"
-GNOME_TARBALL_SUFFIX="xz"
 PYTHON_DEPEND="2:2.5"
 PYTHON_USE_WITH="xml"
 
@@ -28,6 +27,7 @@ S="${WORKDIR}/glib-${PV}/gio/gdbus-2.0/codegen"
 
 pkg_setup() {
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
@@ -45,7 +45,8 @@ src_test() {
 
 src_install() {
 	insinto "/usr/$(get_libdir)/gdbus-2.0/codegen"
-	# keep in sync with Makefile.am
+
+	# Keep in sync with Makefile.am!
 	doins __init__.py \
 		codegen.py \
 		codegen_main.py \
@@ -53,10 +54,11 @@ src_install() {
 		config.py \
 		dbustypes.py \
 		parser.py \
-		utils.py || die "doins failed"
-	newbin gdbus-codegen.in gdbus-codegen || die "dobin failed"
-	doman "${WORKDIR}/glib-${PV}/docs/reference/gio/gdbus-codegen.1" ||
-		die "doman failed"
+		utils.py
+
+	newbin gdbus-codegen.in gdbus-codegen
+
+	doman "${WORKDIR}/glib-${PV}/docs/reference/gio/gdbus-codegen.1"
 }
 
 pkg_postinst() {
