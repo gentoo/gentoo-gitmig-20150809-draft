@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.22.0.ebuild,v 1.1 2011/09/17 08:55:15 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.22.0.ebuild,v 1.2 2011/11/14 17:10:55 angelos Exp $
 
 EAPI=4
 
@@ -16,11 +16,9 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="ares gnutls idn ipv6 kerberos ldap libssh2 nss ssl static-libs test threads"
 
 RDEPEND="ldap? ( net-nds/openldap )
-	ssl? (
-		gnutls? ( net-libs/gnutls dev-libs/libgcrypt app-misc/ca-certificates )
-		nss? ( !gnutls? ( dev-libs/nss app-misc/ca-certificates ) )
-		!gnutls? ( !nss? ( dev-libs/openssl ) )
-	)
+	gnutls? ( net-libs/gnutls dev-libs/libgcrypt app-misc/ca-certificates )
+	ssl? ( !gnutls? ( dev-libs/openssl ) )
+	nss? ( !gnutls? ( !ssl? ( dev-libs/nss app-misc/ca-certificates ) ) )
 	idn? ( net-dns/libidn )
 	ares? ( >=net-dns/c-ares-1.6 )
 	kerberos? ( virtual/krb5 )
@@ -41,8 +39,6 @@ DEPEND="${RDEPEND}
 # ares must be disabled for threads and both can be disabled
 # one can use wether gnutls or nss if ssl is enabled
 REQUIRED_USE="threads? ( !ares )
-	gnutls? ( ssl )
-	nss? ( ssl )
 	nss? ( !gnutls )"
 
 src_prepare() {
@@ -86,17 +82,15 @@ src_configure() {
 		--without-librtmp
 		--without-spnego"
 
-	if use ssl ; then
-		if use gnutls; then
-			myconf+=" --without-ssl --with-gnutls --without-nss"
-			myconf+=" --with-ca-bundle=${EPREFIX}/etc/ssl/certs/ca-certificates.crt"
-		elif use nss; then
-			myconf+=" --without-ssl --without-gnutls --with-nss"
-			myconf+=" --with-ca-bundle=${EPREFIX}/etc/ssl/certs/ca-certificates.crt"
-		else
-			myconf+=" --without-gnutls --without-nss --with-ssl"
-			myconf+=" --without-ca-bundle --with-ca-path=${EPREFIX}/etc/ssl/certs"
-		fi
+	if use gnutls; then
+		myconf+=" --without-ssl --with-gnutls --without-nss"
+		myconf+=" --with-ca-bundle=${EPREFIX}/etc/ssl/certs/ca-certificates.crt"
+	elif use ssl; then
+		myconf+=" --without-gnutls --without-nss --with-ssl"
+		myconf+=" --without-ca-bundle --with-ca-path=${EPREFIX}/etc/ssl/certs"
+	elif use nss; then
+		myconf+=" --without-ssl --without-gnutls --with-nss"
+		myconf+=" --with-ca-bundle=${EPREFIX}/etc/ssl/certs/ca-certificates.crt"
 	else
 		myconf+=" --without-gnutls --without-nss --without-ssl"
 	fi
