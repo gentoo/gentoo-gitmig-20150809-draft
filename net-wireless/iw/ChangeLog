@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/iw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.43 2011/11/14 12:05:37 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.44 2011/11/14 13:10:22 gurligebis Exp $
+
+  14 Nov 2011; <gurligebis@gentoo.org> iw-3.2.ebuild:
+  Removing dependency on python again, wrong ebuild :)
 
   14 Nov 2011; <gurligebis@gentoo.org> iw-3.2.ebuild:
   Adding build dependency on Python 2.7
