@@ -1,6 +1,10 @@
 # ChangeLog for virtual/pager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/pager/ChangeLog,v 1.7 2011/06/13 11:37:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/pager/ChangeLog,v 1.8 2011/11/14 22:31:48 fauli Exp $
+
+  14 Nov 2011; Christian Faulhammer <fauli@gentoo.org> pager-0.ebuild:
+  Add app-editors/vim with vim-pagers USE flag as reported in bug 390465 by
+  Douglas Freed <dwfreed AT mtu DOT edu>
 
   13 Jun 2011; Christian Faulhammer <fauli@gentoo.org> pager-0.ebuild:
   Add dependency on USE=ncurses on sys-apps/util-linux, see bug 370367 by
