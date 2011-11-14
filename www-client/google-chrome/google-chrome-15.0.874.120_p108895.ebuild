@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-15.0.874.120_p108895.ebuild,v 1.2 2011/11/13 20:10:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-15.0.874.120_p108895.ebuild,v 1.3 2011/11/14 20:41:06 floppym Exp $
 
 EAPI="4"
 
@@ -62,7 +62,7 @@ RDEPEND="app-arch/bzip2
 	net-print/cups
 	media-libs/libpng:1.2
 	sys-apps/dbus
-	|| ( >=sys-devel/gcc-4.4.0[cxx] >=sys-devel/gcc-4.4.0[-nocxx] )
+	|| ( >=sys-devel/gcc-4.4.0[-nocxx] >=sys-devel/gcc-4.4.0[cxx] )
 	sys-libs/zlib
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf
