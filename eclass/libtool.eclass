@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.94 2011/10/03 04:04:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.95 2011/11/14 17:08:49 vapier Exp $
 
 # @ECLASS: libtool.eclass
 # @MAINTAINER:
@@ -119,6 +119,7 @@ elibtoolize() {
 	local do_uclibc="yes"
 	local deptoremove=
 	local do_shallow="no"
+	local force="false"
 	local elt_patches="install-sh ltmain portage relink max_cmd_len sed test tmp cross as-needed"
 
 	for x in "$@" ; do
@@ -153,6 +154,9 @@ elibtoolize() {
 			--no-uclibc)
 				do_uclibc="no"
 				;;
+			--force)
+				force="true"
+				;;
 			*)
 				eerror "Invalid elibtoolize option: ${x}"
 				die "elibtoolize called with ${x} ??"
@@ -186,9 +190,15 @@ elibtoolize() {
 	for d in "$@" ; do
 		export ELT_APPLIED_PATCHES=
 
-		[[ -f ${d}/.elibtoolized ]] && continue
+		if [[ -f ${d}/.elibtoolized ]] ; then
+			${force} || continue
+		fi
 
 		einfo "Running elibtoolize in: ${d#${WORKDIR}/}/"
+		if [[ -f ${d}/.elibtoolized ]] ; then
+			ewarn "  We've already been run in this tree; you should"
+			ewarn "  avoid this if possible (perhaps by filing a bug)"
+		fi
 
 		for p in ${elt_patches} ; do
 			local ret=0
