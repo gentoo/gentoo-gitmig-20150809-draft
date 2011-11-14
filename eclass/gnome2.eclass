@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.102 2011/09/25 15:15:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.103 2011/11/14 06:10:32 tetromino Exp $
 
 # @ECLASS: gnome2.eclass
 # @MAINTAINER:
@@ -88,8 +88,8 @@ gnome2_src_unpack() {
 # Prepare environment for build, fix build of scrollkeeper documentation,
 # run elibtoolize.
 gnome2_src_prepare() {
-	# GST_REGISTRY is to work around gst utilities trying to read/write /root
-	export GST_REGISTRY="${T}/registry.xml"
+	# Prevent assorted access violations and test failures
+	gnome2_environment_reset
 
 	# Prevent scrollkeeper access violations
 	gnome2_omf_fix
