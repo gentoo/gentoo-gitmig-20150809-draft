@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.0.3.ebuild,v 1.5 2011/11/14 11:08:41 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.0.3.ebuild,v 1.6 2011/11/14 13:09:54 chainsaw Exp $
 
 EAPI=4
 
@@ -70,7 +70,6 @@ src_configure() {
 		--enable-chardet \
 		--enable-modplug \
 		--enable-neon \
-		--disable-projectm-1.0 \
 		$(use_enable adplug) \
 		$(use_enable aac) \
 		$(use_enable alsa) \

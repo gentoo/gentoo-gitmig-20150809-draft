@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.224 2011/11/14 11:08:41 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.225 2011/11/14 13:09:54 chainsaw Exp $
+
+  14 Nov 2011; Tony Vroon <chainsaw@gentoo.org> audacious-plugins-3.0.3.ebuild,
+  audacious-plugins-3.1.ebuild:
+  Do not try to set non-existent configure option; from arch testing by
+  Agostino "ago" Sarubbo.
 
   14 Nov 2011; Tony Vroon <chainsaw@gentoo.org> audacious-plugins-3.0.3.ebuild,
   audacious-plugins-3.1.ebuild:
