@@ -1,6 +1,10 @@
 # ChangeLog for media-video/libav
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.34 2011/11/12 15:05:15 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/ChangeLog,v 1.35 2011/11/14 02:05:00 lu_zero Exp $
+
+  13 Nov 2011; Luca Barbato <lu_zero@gentoo.org> libav-9999.ebuild,
+  metadata.xml:
+  Update useflags to expose new features
 
   12 Nov 2011; Luca Barbato <lu_zero@gentoo.org> libav-9999.ebuild:
   Remove typo

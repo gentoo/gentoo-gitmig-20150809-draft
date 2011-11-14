@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.20 2011/11/12 15:05:15 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.21 2011/11/14 02:05:00 lu_zero Exp $
 
 EAPI=4
 
@@ -27,15 +27,22 @@ SLOT="0"
 [[ ${PV} == *9999 ]] || KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64
 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos
 ~x64-solaris ~x86-solaris"
-IUSE="+3dnow +3dnowext aac alsa altivec amr bindist +bzip2 cpudetection
+IUSE="+3dnow +3dnowext aac alsa altivec amr bindist +bzip2 cdio cpudetection
 	  custom-cflags debug dirac doc +encode faac truetype frei0r +gpl gsm
-      +hardcoded-tables ieee1394 jack jpeg2k +mmx +mmxext mp3 network oss
-	  pic qt-faststart rtmp schroedinger sdl speex +ssse3 static-libs test
-	  theora threads v4l vaapi vdpau vorbis vpx X x264 xvid +zlib"
+      +hardcoded-tables ieee1394 jack jpeg2k +mmx +mmxext mp3 network openssl
+	  oss pic pulseaudio qt-faststart rtmp schroedinger sdl speex ssl +ssse3
+	  static-libs test theora threads v4l vaapi vdpau vorbis vpx X x264 xvid
+	  +zlib"
 
 VIDEO_CARDS="nvidia"
 for x in ${VIDEO_CARDS}; do
 	IUSE="${IUSE} video_cards_${x}"
+done
+
+CPU_FEATURES="3dnow:amd3dnow 3dnowext:amd3dnowext altivec avx mmx mmxext:mmx2 ssse3 vis neon iwmmxt"
+
+for i in ${CPU_FEATURES}; do
+	IUSE="${IUSE} ${i%:*}"
 done
 
 RDEPEND="
@@ -43,6 +50,7 @@ RDEPEND="
 	alsa? ( media-libs/alsa-lib )
 	amr? ( media-libs/opencore-amr )
 	bzip2? ( app-arch/bzip2 )
+	cdio? ( dev-libs/libcdio )
 	dirac? ( media-video/dirac )
 	encode? (
 		aac? ( media-libs/vo-aacenc )
@@ -61,6 +69,8 @@ RDEPEND="
 	jack? ( media-sound/jack-audio-connection-kit )
 	jpeg2k? ( >=media-libs/openjpeg-1.3-r2 )
 	rtmp? ( >=media-video/rtmpdump-2.2f )
+	ssl? ( openssl? ( dev-libs/openssl )
+		   !openssl? ( net-libs/gnutls ) )
 	sdl? ( >=media-libs/libsdl-1.2.13-r1[audio,video] )
 	schroedinger? ( media-libs/schroedinger )
 	speex? ( >=media-libs/speex-1.2_beta3 )
@@ -83,9 +93,10 @@ DEPEND="${RDEPEND}
 "
 
 # faac can't be binary distributed
+# openssl support marked as nonfree
 # faac and aac are concurent implementations
 # amr and aac require at least lgpl3
-REQUIRED_USE="bindist? ( !faac )
+REQUIRED_USE="bindist? ( !faac !openssl )
 	amr? ( gpl ) aac? ( gpl )"
 
 RESTRICT="test"
@@ -116,6 +127,11 @@ src_configure() {
 	use bzip2 || myconf+=" --disable-bzlib"
 	use sdl || myconf+=" --disable-avplay"
 
+	if use ssl; then
+		use openssl && myconf+=" --enable-openssl --enable-nonfree" \
+					|| myconf+=" --enable-gnutls"
+	fi
+
 	use custom-cflags && myconf+=" --disable-optimizations"
 	use cpudetection && myconf+=" --enable-runtime-cpudetect"
 
@@ -142,7 +158,9 @@ src_configure() {
 	fi
 
 	# libavdevice options
+	use cdio && myconf+=" --enable-libcdio"
 	use ieee1394 && myconf+=" --enable-libdc1394"
+	use pulseaudio && myconf+=" --enable-libpulse"
 	# Indevs
 	# v4l1 is gone since linux-headers-2.6.38
 	myconf+=" --disable-indev=v4l"
@@ -171,13 +189,10 @@ src_configure() {
 	use jpeg2k && myconf+=" --enable-libopenjpeg"
 
 	# CPU features
-	uses="mmx ssse3 altivec"
-	for i in ${uses}; do
-		use ${i} || myconf+=" --disable-${i}"
+	for i in ${CPU_FEATURES}; do
+		use ${i%:*} || myconf="${myconf} --disable-${i#*:}"
 	done
-	use mmxext || myconf+=" --disable-mmx2"
-	use 3dnow || myconf+=" --disable-amd3dnow"
-	use 3dnowext || myconf+=" --disable-amd3dnowext"
+
 	# disable mmx accelerated code if PIC is required
 	# as the provided asm decidedly is not PIC for x86.
 	if use pic && use x86 ; then
@@ -246,12 +261,11 @@ src_configure() {
 }
 
 src_compile() {
-	emake version.h
 	emake
 
 	if use qt-faststart; then
 		tc-export CC
-		emake -C tools qt-faststart
+		emake tools/qt-faststart
 	fi
 }
 
