@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/frobby/frobby-0.8.2-r1.ebuild,v 1.6 2011/11/13 19:40:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/frobby/frobby-0.8.2-r1.ebuild,v 1.7 2011/11/14 11:26:47 flameeyes Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="doc"
 
-RDEPEND="|| ( dev-libs/gmp[cxx] dev-libs/gmp[-nocxx] )"
+RDEPEND="dev-libs/gmp[cxx]"
 DEPEND="${RDEPEND}
 	doc? ( virtual/latex-base )"
 

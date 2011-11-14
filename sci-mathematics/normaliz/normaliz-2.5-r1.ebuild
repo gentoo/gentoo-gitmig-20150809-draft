@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/normaliz-2.5-r1.ebuild,v 1.6 2011/11/13 19:42:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/normaliz-2.5-r1.ebuild,v 1.7 2011/11/14 11:28:36 flameeyes Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="extras openmp"
 
-RDEPEND="|| ( dev-libs/gmp[cxx] dev-libs/gmp[-nocxx] )"
+RDEPEND="dev-libs/gmp[cxx]"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
