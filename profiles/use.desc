@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.468 2011/11/01 01:08:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.469 2011/11/14 20:15:44 vapier Exp $
 
 # Keep them sorted
 
@@ -249,7 +249,7 @@ nis - Support for NIS/YP services
 nls - Adds Native Language Support (using gettext - GNU locale utilities)
 nntp - Add support for newsgroups (Network News Transfer Protocol)
 nocd - Install all files required to run the application without a CD mounted
-nocxx - Disable support for C++ (DON'T USE THIS UNLESS YOU KNOW WHAT YOU'RE DOING)
+nocxx - Old flag -- USE=cxx from now on
 nptl - Enable support for Native POSIX Threads Library, the new threading module (requires linux-2.6 or better usually)
 nsplugin - Build plugin for browsers supporting the Netscape plugin architecture (that is almost any modern browser)
 ocaml - Adds support/bindings for the Ocaml language
