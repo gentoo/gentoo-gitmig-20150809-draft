@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-7.0.1-r1.ebuild,v 1.5 2011/11/13 14:46:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-7.0.1-r1.ebuild,v 1.6 2011/11/14 15:58:24 nirbheek Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -58,7 +58,6 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 	gconf? ( >=gnome-base/gconf-1.2.1:2 )
 	media-libs/libpng[apng]
 	virtual/libffi
-	!x11-plugins/lightning
 	!x11-plugins/enigmail
 	system-sqlite? ( >=dev-db/sqlite-3.7.5[fts3,secure-delete,unlock-notify,debug=] )
 	crypt?  ( || (

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-8.0.ebuild,v 1.4 2011/11/14 15:46:59 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-8.0.ebuild,v 1.5 2011/11/14 15:58:24 nirbheek Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -58,7 +58,6 @@ RDEPEND=">=sys-devel/binutils-2.16.1
 	webm? ( media-libs/libvpx
 		media-libs/alsa-lib )
 	virtual/libffi
-	!x11-plugins/lightning
 	!x11-plugins/enigmail
 	system-sqlite? ( >=dev-db/sqlite-3.7.5[fts3,secure-delete,unlock-notify,debug=] )
 	crypt?  ( || (
