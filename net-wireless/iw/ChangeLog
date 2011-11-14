@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/iw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.44 2011/11/14 13:10:22 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iw/ChangeLog,v 1.45 2011/11/14 13:14:45 gurligebis Exp $
+
+  14 Nov 2011; <gurligebis@gentoo.org> iw-3.2.ebuild:
+  Changing dependency to not require libnl-1.1 but any version.
 
   14 Nov 2011; <gurligebis@gentoo.org> iw-3.2.ebuild:
   Removing dependency on python again, wrong ebuild :)
