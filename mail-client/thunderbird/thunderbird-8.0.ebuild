@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-8.0.ebuild,v 1.3 2011/11/13 17:13:47 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-8.0.ebuild,v 1.4 2011/11/14 15:46:59 nirbheek Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -28,25 +28,23 @@ SRC_URI="${FTP_URI}/${TB_PV}/source/${TB_P}.source.tar.bz2
 	http://dev.gentoo.org/~anarchy/mozilla/patchsets/${PATCHFF}.tar.xz"
 
 if ! [[ ${PV} =~ alpha|beta ]]; then
-	# This list can be updated using get_langs.sh from the mozilla overlay
-	# Not supported yet bn-BD ro id be af el pa-IN bg
-	LANGS="ar ca cs da de en en-GB en-US es-AR es-ES et eu fi fr \
-	fy-NL ga-IE he hu is it ja ko lt nb-NO nl nn-NO pl pt-BR pt-PT ru si \
-	sk sl sq sv-SE tr uk zh-TW zh-CN"
-	NOSHORTLANGS="en-GB es-AR pt-BR zh-TW zh-CN"
+	# This list can be updated using scripts/get_langs.sh from the mozilla overlay
+	LANGS=(ar be bg bn-BD br ca cs da de el en en-GB en-US es-AR es-ES et eu fi
+	fr fy-NL ga-IE gd gl he hu id is it ja ko lt nb-NO nl nn-NO pa-IN pl pt-BR
+	pt-PT rm ro ru si sk sl sq sv-SE ta-LK tr uk vi zh-CN zh-TW)
 
-	for X in ${LANGS} ; do
-		if [ "${X}" != "en" ] && [ "${X}" != "en-US" ]; then
+	for X in "${LANGS[@]}" ; do
+		# en and en_US are handled internally
+		if [[ ${X} != en ]] && [[ ${X} != en-US ]]; then
 			SRC_URI="${SRC_URI}
-				linguas_${X/-/_}? ( ${FTP_URI}/${TB_PV}/linux-i686/xpi/${X}.xpi -> ${P}-${X}.xpi )"
+				linguas_${X/-/_}? ( ${FTP_URI}/${MY_PV}/linux-i686/xpi/${X}.xpi -> ${P}-${X}.xpi )"
 		fi
 		IUSE="${IUSE} linguas_${X/-/_}"
-		# english is handled internally
-		if [ "${#X}" == 5 ] && ! has ${X} ${NOSHORTLANGS}; then
-			if [ "${X}" != "en-US" ]; then
-				SRC_URI="${SRC_URI}
-					linguas_${X%%-*}? ( ${FTP_URI}/${TB_PV}/linux-i686/xpi/${X}.xpi -> ${P}-${X}.xpi )"
-			fi
+		# Install all the specific locale xpis if there's no generic locale xpi
+		# Example: there's no pt.xpi, so install all pt-*.xpi
+		if ! has ${X%%-*} "${LANGS[@]}"; then
+			SRC_URI="${SRC_URI}
+				linguas_${X%%-*}? ( ${FTP_URI}/${MY_PV}/linux-i686/xpi/${X}.xpi -> ${P}-${X}.xpi )"
 			IUSE="${IUSE} linguas_${X%%-*}"
 		fi
 	done
@@ -77,25 +75,31 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/comm-release
 
+# TODO: Move all the linguas crap to an eclass
 linguas() {
-	local LANG SLANG
-	for LANG in ${LINGUAS}; do
-		if has ${LANG} en en_US; then
-			has en ${linguas} || linguas="${linguas:+"${linguas} "}en"
+	# Generate the list of language packs called "linguas"
+	# This list is used to install the xpi language packs
+	local LINGUA
+	for LINGUA in ${LINGUAS}; do
+		if has ${LINGUA} en en_US; then
+			# For mozilla products, en and en_US are handled internally
 			continue
-		elif has ${LANG} ${LANGS//-/_}; then
-			has ${LANG//_/-} ${linguas} || linguas="${linguas:+"${linguas} "}${LANG//_/-}"
+		# If this language is supported by ${P},
+		elif has ${LINGUA} "${LANGS[@]//-/_}"; then
+			# Add the language to linguas, if it isn't already there
+			has ${LINGUA//_/-} "${linguas[@]}" || linguas+=(${LINGUA//_/-})
 			continue
-		elif [[ " ${LANGS} " == *" ${LANG}-"* ]]; then
-			for X in ${LANGS}; do
-				if [[ "${X}" == "${LANG}-"* ]] && \
-					[[ " ${NOSHORTLANGS} " != *" ${X} "* ]]; then
-					has ${X} ${linguas} || linguas="${linguas:+"${linguas} "}${X}"
+		# For each short LINGUA that isn't in LANGS,
+		# add *all* long LANGS to the linguas list
+		elif ! has ${LINGUA%%-*} "${LANGS[@]}"; then
+			for LANG in "${LANGS[@]}"; do
+				if [[ ${LANG} == ${LINGUA}-* ]]; then
+					has ${LANG} "${linguas[@]}" || linguas+=(${LANG})
 					continue 2
 				fi
 			done
 		fi
-		ewarn "Sorry, but ${PN} does not support the ${LANG} LINGUA"
+		ewarn "Sorry, but ${P} does not support the ${LINGUA} locale"
 	done
 }
 
@@ -123,13 +127,9 @@ src_unpack() {
 
 	if ! [[ ${PV} =~ alpha|beta ]]; then
 		linguas
-		for X in ${linguas}; do
-			# FIXME: Add support for unpacking xpis to portage
-			[[ ${X} != "en" ]] && xpi_unpack "${P}-${X}.xpi"
+		for X in "${linguas[@]}"; do
+			xpi_unpack "${P}-${X}.xpi"
 		done
-		if [[ ${linguas} != "" && ${linguas} != "en" ]]; then
-			einfo "Selected language packs (first will be default): ${linguas}"
-		fi
 	fi
 }
 
@@ -297,8 +297,8 @@ src_install() {
 
 	if ! [[ ${PV} =~ alpha|beta ]]; then
 		linguas
-		for X in ${linguas}; do
-			[[ ${X} != "en" ]] && xpi_install "${WORKDIR}"/"${P}-${X}"
+		for X in "${linguas[@]}"; do
+			xpi_install "${WORKDIR}/${P}-${X}"
 		done
 	fi
 
