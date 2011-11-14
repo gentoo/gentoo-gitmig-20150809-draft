@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/spice-protocol
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-protocol/ChangeLog,v 1.11 2011/09/04 10:14:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-protocol/ChangeLog,v 1.12 2011/11/14 08:40:46 dev-zero Exp $
+
+*spice-protocol-0.10.0 (14 Nov 2011)
+
+  14 Nov 2011; Tiziano Müller <dev-zero@gentoo.org>
+  +spice-protocol-0.10.0.ebuild, -spice-protocol-0.6.4.ebuild,
+  -spice-protocol-0.8.0-r1.ebuild:
+  Version bump. Dropped old.
 
   04 Sep 2011; Markus Meier <maekke@gentoo.org> spice-protocol-0.8.1.ebuild:
   x86 stable, bug #369601

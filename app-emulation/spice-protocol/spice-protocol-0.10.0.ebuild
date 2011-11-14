@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-protocol/spice-protocol-0.6.4.ebuild,v 1.2 2011/02/17 10:29:38 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice-protocol/spice-protocol-0.10.0.ebuild,v 1.1 2011/11/14 08:40:46 dev-zero Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ SRC_URI="http://spice-space.org/download/releases/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=""
