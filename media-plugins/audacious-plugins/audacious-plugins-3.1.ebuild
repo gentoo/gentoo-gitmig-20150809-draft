@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.1.ebuild,v 1.1 2011/11/14 10:44:06 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-3.1.ebuild,v 1.2 2011/11/14 11:08:41 chainsaw Exp $
 
 EAPI=4
 
@@ -21,6 +21,7 @@ lame libnotify libsamplerate midi mms mp3 mtp nls oss pulseaudio scrobbler sid s
 RDEPEND="app-arch/unzip
 	>=dev-libs/dbus-glib-0.60
 	dev-libs/libxml2:2
+	media-libs/libmodplug
 	>=media-sound/audacious-3.1
 	>=net-libs/neon-0.26.4
 	x11-libs/gtk+:3
