@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.0.22.ebuild,v 1.1 2011/09/02 21:30:18 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.0.22.ebuild,v 1.2 2011/11/14 01:47:19 xmw Exp $
 
-EAPI=2
+EAPI=4
 
 inherit eutils toolchain-funcs
 
@@ -35,14 +35,14 @@ src_configure() {
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" || die
+	emake CC="$(tc-getCC)"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 
-	newconfd "${FILESDIR}"/${PN}.confd ${PN} || die
-	newinitd "${FILESDIR}"/${PN}.initd ${PN} || die
+	newconfd "${FILESDIR}"/${PN}.confd ${PN}
+	newinitd "${FILESDIR}"/${PN}.initd ${PN}
 
-	dodoc README TODO || die
+	dodoc README TODO 
 }

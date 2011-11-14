@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/minidlna
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/ChangeLog,v 1.9 2011/09/02 21:30:18 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/ChangeLog,v 1.10 2011/11/14 01:47:19 xmw Exp $
+
+  14 Nov 2011; Michael Weber <xmw@gentoo.org> -minidlna-1.0.21.ebuild,
+  minidlna-1.0.22.ebuild:
+  remove old version, bump EAPI.
 
 *minidlna-1.0.22 (02 Sep 2011)
 
