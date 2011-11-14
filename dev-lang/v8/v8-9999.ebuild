@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.20 2011/10/26 17:02:43 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.21 2011/11/14 12:45:41 phajdan.jr Exp $
 
 EAPI="3"
 
@@ -48,7 +48,7 @@ src_compile() {
 
 	if [[ ${PV} == "9999" ]]; then
 		subversion_wc_info
-		soname_version="${PV}-${ESVN_WC_REVISION}"
+		soname_version="${PV}.${ESVN_WC_REVISION}"
 	else
 		soname_version="${PV}"
 	fi
@@ -84,12 +84,12 @@ src_install() {
 
 	if [[ ${CHOST} == *-darwin* ]] ; then
 		install_name_tool \
-			-id "${EPREFIX}"/usr/$(get_libdir)/libv8-${soname_version}$(get_libname) \
-			out/${mytarget}/lib.target/libv8-${soname_version}$(get_libname) || die
+			-id "${EPREFIX}"/usr/$(get_libdir)/libv8$(get_libname).${soname_version} \
+			out/${mytarget}/lib.target/libv8$(get_libname).${soname_version} || die
 	fi
 
-	dolib out/${mytarget}/lib.target/libv8-${soname_version}$(get_libname) || die
-	dosym libv8-${soname_version}$(get_libname) /usr/$(get_libdir)/libv8$(get_libname) || die
+	dolib out/${mytarget}/lib.target/libv8$(get_libname).${soname_version} || die
+	dosym libv8$(get_libname).${soname_version} /usr/$(get_libdir)/libv8$(get_libname) || die
 
 	dodoc AUTHORS ChangeLog || die
 }
@@ -101,6 +101,12 @@ pkg_preinst() {
 	eshopts_push -s nullglob
 
 	for candidate in "${EROOT}usr/$(get_libdir)"/libv8-*$(get_libname); do
+		baselib=${candidate##*/}
+		if [[ ! -e "${ED}usr/$(get_libdir)/${baselib}" ]]; then
+			preserved_libs+=( "${EPREFIX}/usr/$(get_libdir)/${baselib}" )
+		fi
+	done
+	for candidate in "${EROOT}usr/$(get_libdir)"/libv8$(get_libname).*; do
 		baselib=${candidate##*/}
 		if [[ ! -e "${ED}usr/$(get_libdir)/${baselib}" ]]; then
 			preserved_libs+=( "${EPREFIX}/usr/$(get_libdir)/${baselib}" )
