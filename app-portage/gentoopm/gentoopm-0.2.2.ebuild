@@ -1,19 +1,19 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/gentoopm-0.1.6.ebuild,v 1.1 2011/08/13 11:28:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/gentoopm-0.2.2.ebuild,v 1.1 2011/11/14 21:57:09 mgorny Exp $
 
-EAPI=3
+EAPI=4
 
-PYTHON_DEPEND='*:2.6'
+PYTHON_DEPEND='2:2.6 3:3.2'
 SUPPORT_PYTHON_ABIS=1
-RESTRICT_PYTHON_ABIS='2.4 2.5'
+RESTRICT_PYTHON_ABIS='2.4 2.5 3.1'
 DISTUTILS_SRC_TEST=setup.py
 
 inherit base distutils
 
 DESCRIPTION="A common interface to Gentoo package managers"
 HOMEPAGE="https://github.com/mgorny/gentoopm/"
-SRC_URI="http://cloud.github.com/downloads/mgorny/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://github/mgorny/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD-2"
 SLOT="0"
@@ -43,6 +43,6 @@ src_install() {
 	distutils_src_install
 
 	if use doc; then
-		dohtml -r doc/* || die
+		dohtml -r doc/*
 	fi
 }
