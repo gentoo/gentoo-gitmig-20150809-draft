@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/recoll
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/ChangeLog,v 1.1 2011/09/26 20:00:37 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/recoll/ChangeLog,v 1.2 2011/11/14 21:18:47 hwoarang Exp $
+
+  14 Nov 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml,
+  recoll-1.16.0.ebuild:
+  Fix use flag descriptions. Replace gs with ps use flag. Allow neither fam and
+  inotify to be enabled. Bug #389595. Thanks to Israel G. Lugo
+  <israel.lugo@lugosys.com>
 
 *recoll-1.16.0 (26 Sep 2011)
 
