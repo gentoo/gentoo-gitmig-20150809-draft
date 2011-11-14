@@ -31,6 +31,9 @@
 	<flag name="debug-svc">Enable static virtual channel debug messages</flag>
 	<flag name="debug-x11">Enable X11 Client debug messages</flag>
 	<flag name="debug-xv">Enable XVideo debug messages</flag>
+	<flag name="debug-scard">Print smartcard debug messages</flag>
+	<flag name="debug-orders">Print drawing orders debug messages</flag>
+	<flag name="debug-redir">Print redirection debug messages</flag>
 	<flag name="gnutls">Use GnuTLS as crypto backend</flag>
 	<flag name="nss">Use NSS as crypto backend</flag>
 	<flag name="polarssl">Use PolarSSL as crypto backend</flag>
