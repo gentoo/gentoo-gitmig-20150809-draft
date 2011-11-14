@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/crda
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.31 2011/11/14 09:07:21 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.32 2011/11/14 13:12:17 gurligebis Exp $
+
+  14 Nov 2011; <gurligebis@gentoo.org> crda-1.1.2-r2.ebuild:
+  Adding dependency for python2
 
   14 Nov 2011; <gurligebis@gentoo.org> crda-1.1.2-r2.ebuild:
   Forcing use of python-2 when generating keys, fixing bug #389851
