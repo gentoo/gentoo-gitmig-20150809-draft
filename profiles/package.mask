@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13239 2011/11/13 22:13:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13240 2011/11/14 03:50:29 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -57,6 +57,7 @@ net-mail/vmailmgr-tools
 =dev-python/wxpython-2.6*
 =dev-python/wxpython-docs-2.6*
 =x11-libs/wxGTK-2.6*
+games-util/mattricks
 
 # Samuli Suominen <ssuominen@gentoo.org> (12 Nov 2011)
 # Masked for removal in 30 days since wxpython-2.6 is going away wrt bug 330683
