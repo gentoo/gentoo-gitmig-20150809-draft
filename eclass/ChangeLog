@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.12 2011/11/14 06:10:32 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.13 2011/11/14 15:54:08 nirbheek Exp $
+
+  14 Nov 2011; Nirbheek Chauhan <nirbheek@gentoo.org> mozconfig-3.eclass:
+  Remove obsolete xorg-x11 dep from mozconfig-3
 
   14 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org> gnome2-utils.eclass,
   gnome2.eclass:
