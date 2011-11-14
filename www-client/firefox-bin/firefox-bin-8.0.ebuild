@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-8.0.ebuild,v 1.1 2011/11/14 15:34:36 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-8.0.ebuild,v 1.2 2011/11/14 15:45:23 anarchy Exp $
 
 EAPI="3"
 
-inherit eutils mozilla-launcher multilib mozextension
+inherit eutils mozilla-launcher multilib mozextension pax-utils
 
 # Can be updated using scripts/get_langs.sh from mozilla overlay
 LANGS=(af ak ar ast be bg bn-BD bn-IN br bs ca cs cy da de el en en-GB en-US
@@ -149,6 +149,9 @@ src_install() {
 
 	ln -sfn "/usr/$(get_libdir)/nsbrowser/plugins" \
 			"${D}${MOZILLA_FIVE_HOME}/plugins" || die
+
+	# Required in order to use plugins and even run firefox on hardened.
+	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/{firefox,firefox-bin,plugin-container}
 }
 
 pkg_postinst() {
