@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.30.2.ebuild,v 1.1 2011/11/14 08:11:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.30.2.ebuild,v 1.2 2011/11/14 19:06:22 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="utils? 2"
@@ -38,8 +38,7 @@ DEPEND="${RDEPEND}
 		=dev-lang/python-2*
 		>=dev-util/gdbus-codegen-${PV}
 		>=sys-apps/dbus-1.2.14 )
-	!<dev-util/gtk-doc-1.15-r2
-	!<sys-apps/dbus-1.4.16-r2"
+	!<dev-util/gtk-doc-1.15-r2"
 PDEPEND="!<gnome-base/gvfs-1.6.4-r990" # Earlier versions do not work with glib
 
 pkg_setup() {
