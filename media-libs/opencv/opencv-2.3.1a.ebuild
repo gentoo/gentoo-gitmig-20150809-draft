@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.3.1a.ebuild,v 1.2 2011/11/13 14:36:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.3.1a.ebuild,v 1.3 2011/11/14 04:53:45 lu_zero Exp $
 
 EAPI=3
 
@@ -24,9 +24,7 @@ RDEPEND="
 	sys-libs/zlib
 	cuda? ( >=dev-util/nvidia-cuda-toolkit-4 )
 	eigen? ( dev-cpp/eigen:2 )
-	ffmpeg? (
-		|| ( media-video/ffmpeg <=media-video/libav-0.7.9999 )
-	)
+	ffmpeg? ( virtual/ffmpeg )
 	gstreamer? (
 		media-libs/gstreamer
 		media-libs/gst-plugins-base
@@ -63,6 +61,7 @@ PATCHES=(
 	"${FILESDIR}/${P}-convert_sets_to_options.patch"
 	"${FILESDIR}/${P}-libsuffix.patch"
 	"${FILESDIR}/${P}-nocaps.patch"
+	"${FILESDIR}/${P}-libav-0.7.patch"
 )
 
 CMAKE_BUILD_TYPE="Release"
