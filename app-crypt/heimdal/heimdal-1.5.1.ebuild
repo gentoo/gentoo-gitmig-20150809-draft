@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.5.1.ebuild,v 1.3 2011/11/02 10:14:51 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.5.1.ebuild,v 1.4 2011/11/14 13:00:35 eras Exp $
 
 EAPI=2
 # PYTHON_BDEPEND="2"
 VIRTUALX_REQUIRED="manual"
 
-inherit autotools db-use eutils libtool python toolchain-funcs virtualx flag-o-matic
+inherit autotools-utils db-use eutils libtool python toolchain-funcs virtualx flag-o-matic
 
 MY_P="${P}"
 DESCRIPTION="Kerberos 5 implementation from KTH"
@@ -16,7 +16,7 @@ SRC_URI="http://www.h5l.org/dist/src/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE="afs +berkdb caps hdb-ldap ipv6 otp +pkinit ssl threads test X"
+IUSE="afs +berkdb caps hdb-ldap ipv6 otp +pkinit ssl static-libs threads test X"
 
 RDEPEND="ssl? ( dev-libs/openssl )
 	berkdb? ( sys-libs/db )
@@ -68,6 +68,7 @@ src_configure() {
 		$(use_enable otp) \
 		$(use_enable pkinit kx509) \
 		$(use_enable pkinit pk-init) \
+		$(use_enable static-libs static) \
 		$(use_enable threads pthread-support) \
 		$(use_with caps capng) \
 		$(use_with hdb-ldap openldap /usr) \
@@ -120,12 +121,16 @@ src_install() {
 		doins "${S}/lib/hdb/hdb.schema"
 	fi
 
+	use static-libs || remove_libtool_files
+
 	# default database dir
 	keepdir /var/heimdal
 }
 
 pkg_preinst() {
-	if has_version "<${CATEGORY}/${PN}-1.4.0" ; then
-		ewarn "Please make sure to run \"revdep-rebuild\" after upgrading."
-	fi
+	preserve_old_lib /usr/$(get_libdir)/libgssapi.so.2
+}
+
+pkg_postinst() {
+	preserve_old_lib_notify /usr/$(get_libdir)/libgssapi.so.2
 }

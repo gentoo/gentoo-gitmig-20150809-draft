@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.179 2011/11/02 10:14:51 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.180 2011/11/14 13:00:35 eras Exp $
+
+  14 Nov 2011; Eray Aslan <eras@gentoo.org> heimdal-1.5.1.ebuild:
+  Add static-libs USE flag. Use preserve_old_lib_notify to remind
+  revdep-rebuild usage.
 
   02 Nov 2011; Eray Aslan <eras@gentoo.org> heimdal-1.5.1.ebuild:
   Add revdep-rebuild warning.
