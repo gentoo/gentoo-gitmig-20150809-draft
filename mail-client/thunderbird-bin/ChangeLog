@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/thunderbird-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.41 2011/09/04 00:39:47 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/ChangeLog,v 1.42 2011/11/14 15:33:14 nirbheek Exp $
+
+*thunderbird-bin-8.0 (14 Nov 2011)
+*thunderbird-bin-3.1.16 (14 Nov 2011)
+
+  14 Nov 2011; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -thunderbird-bin-3.1.11.ebuild, +thunderbird-bin-3.1.16.ebuild,
+  +thunderbird-bin-8.0.ebuild:
+  Security bumps: 3.1.16, 8.0. Remove old.
 
   04 Sep 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   thunderbird-bin-3.1.12.ebuild:
