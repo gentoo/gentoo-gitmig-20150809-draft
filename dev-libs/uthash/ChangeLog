@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/uthash
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uthash/ChangeLog,v 1.1 2011/11/14 18:54:00 hwoarang Exp $
+
+*uthash-1.9.4 (14 Nov 2011)
+
+  14 Nov 2011; Markos Chandras <hwoarang@gentoo.org> +uthash-1.9.4.ebuild,
+  +metadata.xml:
+  Initial commit. Thanks to Johan Bergström <bugs@bergstroem.nu>. Bug #205911
+
