@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dbxml
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/ChangeLog,v 1.13 2011/11/13 20:34:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dbxml/ChangeLog,v 1.14 2011/11/14 11:21:42 flameeyes Exp $
+
+  14 Nov 2011; Diego E. Pettenò <flameeyes@gentoo.org> dbxml-2.5.16-r1.ebuild:
+  QA: cxx conditional was broken, fix it.
 
   13 Nov 2011; Mike Frysinger <vapier@gentoo.org> dbxml-2.5.16-r1.ebuild,
   dbxml-2.5.16-r2.ebuild:

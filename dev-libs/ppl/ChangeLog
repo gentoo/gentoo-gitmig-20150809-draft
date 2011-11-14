@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/ppl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.37 2011/11/13 19:27:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.38 2011/11/14 11:18:56 flameeyes Exp $
+
+  14 Nov 2011; Diego E. Pettenò <flameeyes@gentoo.org> ppl-0.10.2-r1.ebuild,
+  ppl-0.11.2.ebuild:
+  QA: cxx conditional was broken, fix it.
 
   13 Nov 2011; Mike Frysinger <vapier@gentoo.org> ppl-0.10.2-r1.ebuild,
   ppl-0.11.2.ebuild:
