@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.4_rc3.ebuild,v 1.1 2011/09/28 09:47:22 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.4.ebuild,v 1.1 2011/11/14 10:17:48 voyageur Exp $
 
 EAPI=4
 inherit eutils autotools
@@ -30,7 +30,7 @@ IUSE="acl authfile ban +caps case clamav copy ctrls deflate diskuse doc exec ifs
 	ipv6 kerberos ldap memcache mysql ncurses nls pam +pcre postgres qos radius ratio readme rewrite
 	selinux sftp shaper sitemisc softquota sqlite ssl tcpd test trace vroot xinetd"
 
-COMMON_DEPEND="acl? ( virtual/acl )
+CDEPEND="acl? ( virtual/acl )
 	caps? ( sys-libs/libcap )
 	clamav? ( app-antivirus/clamav )
 	kerberos? ( virtual/krb5 )
@@ -46,10 +46,9 @@ COMMON_DEPEND="acl? ( virtual/acl )
 	sqlite? ( dev-db/sqlite:3 )
 	ssl? ( dev-libs/openssl )
 	xinetd? ( virtual/inetd )"
-
-DEPEND="${COMMON_DEPEND}
+DEPEND="${CDEPEND}
 	test? ( dev-libs/check )"
-RDEPEND="${COMMON_DEPEND}
+RDEPEND="${CDEPEND}
 	net-ftp/ftpbase
 	selinux? ( sec-policy/selinux-ftpd )"
 
