@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.105 2011/10/24 09:43:56 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.106 2011/11/14 12:25:25 aidecoe Exp $
+
+  14 Nov 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  hddtemp-0.3_beta15-r3.ebuild, hddtemp-0.3_beta15-r4.ebuild:
+  Synchronized postinst messages between revisions and added suggestion about
+  --quiet option. Rels bug #390275.
 
   24 Oct 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> files/hddgentoo.db:
   Added "WDC WD3200BEKT-00F3T0" to hddgentoo.db.  Fixes bug #388221.
