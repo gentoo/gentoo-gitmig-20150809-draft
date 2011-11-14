@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/nethogs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/ChangeLog,v 1.16 2011/10/10 10:04:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/ChangeLog,v 1.17 2011/11/14 12:00:14 jer Exp $
+
+*nethogs-0.8.0-r1 (14 Nov 2011)
+
+  14 Nov 2011; Jeroen Roovers <jer@gentoo.org> -nethogs-0.8.0.ebuild,
+  +nethogs-0.8.0-r1.ebuild:
+  Install man page in the proper location by Samuli Suominen (bug #390385).
 
 *nethogs-0.8.0 (10 Oct 2011)
 
