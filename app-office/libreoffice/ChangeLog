@@ -1,6 +1,10 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.201 2011/11/13 10:21:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.202 2011/11/14 09:06:35 scarabeus Exp $
+
+  14 Nov 2011; Tomáš Chvátal <scarabeus@gentoo.org>
+  libreoffice-9999-r2.ebuild:
+  Drop deprecated configure option and bump libexttextcat dep.
 
   13 Nov 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   libreoffice-3.4.4.2-r1.ebuild, libreoffice-3.4.9999-r2.ebuild,

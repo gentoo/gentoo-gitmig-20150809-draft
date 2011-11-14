@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.3 2011/11/13 10:21:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.4 2011/11/14 09:06:35 scarabeus Exp $
 
 EAPI=4
 
@@ -85,7 +85,7 @@ COMMON_DEPEND="
 	app-arch/unzip
 	>=app-text/hunspell-1.3.2-r3
 	app-text/mythes
-	>=app-text/libexttextcat-3.1
+	>=app-text/libexttextcat-3.2
 	app-text/libwpd:0.9[tools]
 	app-text/libwpg:0.2
 	>=app-text/libwps-0.2.2
@@ -220,8 +220,8 @@ pkg_setup() {
 	python_pkg_setup
 
 	if ! use gtk; then
-		ewarn "If you want the LibreOffice systray quickstarter or nsplugin to"
-		ewarn "work activate the 'gtk' use flag."
+		ewarn "If you want the LibreOffice systray quickstarter to work"
+		ewarn "activate the 'gtk' use flag."
 		ewarn
 	fi
 }
@@ -364,7 +364,6 @@ src_configure() {
 		--enable-randr-link \
 		--enable-release-build \
 		--enable-unix-qstart-libpng \
-		--enable-xrender-link \
 		--disable-crashdump \
 		--disable-dependency-tracking \
 		--disable-epm \
