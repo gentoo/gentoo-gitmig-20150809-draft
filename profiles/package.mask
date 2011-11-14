@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13244 2011/11/14 15:54:43 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13245 2011/11/14 19:53:46 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -44,7 +44,7 @@ app-accessibility/gnome-mousetrap
 # Markos Chandras <hwoarang@gentoo.org> (13 Nov 2011)
 # Fails to link with gold linker. Uses tempnam instead
 # of mkstemp which is a fatal error in recent gcc versions
-# Masked for removal in 30 days. Bug #371454
+# Masked for removal in 30 days. Bug #371451
 games-mud/kmuddy
 
 # Alin Năstac <mrness@gentoo.org> (13 Nov 2011)
