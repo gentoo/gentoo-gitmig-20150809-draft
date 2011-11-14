@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.478 2011/11/09 17:25:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.479 2011/11/14 17:40:06 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -84,7 +84,7 @@ STDCXX_INCDIR=${TOOLCHAIN_STDCXX_INCDIR:-${LIBPATH}/include/g++-v${GCC_BRANCH_VE
 IUSE="build multislot nls nptl test vanilla"
 
 if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
-	IUSE+=" altivec fortran nocxx"
+	IUSE+=" altivec cxx fortran nocxx"
 	[[ -n ${PIE_VER} ]] && IUSE+=" nopie"
 	[[ -n ${HTB_VER} ]] && IUSE+=" boundschecking"
 	[[ -n ${D_VER}   ]] && IUSE+=" d"
@@ -776,10 +776,10 @@ toolchain_pkg_setup() {
 	# we dont want to use the installed compiler's specs to build gcc!
 	unset GCC_SPECS
 
-	if use nocxx ; then
-		use_if_iuse go && ewarn 'Go requires a C++ compiler, disabled due to USE="nocxx"'
-		use_if_iuse objc++ && ewarn 'Obj-C++ requires a C++ compiler, disabled due to USE="nocxx"'
-		use_if_iuse gcj && ewarn 'GCJ requires a C++ compiler, disabled due to USE="nocxx"'
+	if ! use cxx ; then
+		use_if_iuse go && ewarn 'Go requires a C++ compiler, disabled due to USE="-cxx"'
+		use_if_iuse objc++ && ewarn 'Obj-C++ requires a C++ compiler, disabled due to USE="-cxx"'
+		use_if_iuse gcj && ewarn 'GCJ requires a C++ compiler, disabled due to USE="-cxx"'
 	fi
 
 	want_libssp && libc_has_ssp && \
@@ -1250,6 +1250,13 @@ gcc-compiler-configure() {
 gcc_do_configure() {
 	local confgcc
 
+	# Sanity check for USE=nocxx -> USE=cxx migration
+	if (use cxx && use nocxx) || (use !cxx && use !nocxx) ; then
+		eerror "We are migrating USE=nocxx to USE=cxx, but your USE settings do not make"
+		eerror "sense.  Please make sure these two flags line up logically in your setup."
+		die "USE='cxx nocxx' and USE='-cxx -nocxx' make no sense"
+	fi
+
 	# Set configuration based on path variables
 	confgcc+=" \
 		--prefix=${PREFIX} \
@@ -1513,7 +1520,7 @@ gcc_do_make() {
 		${GCC_MAKE_TARGET} \
 		|| die "emake failed with ${GCC_MAKE_TARGET}"
 
-	if ! is_crosscompile && ! use nocxx && use doc ; then
+	if ! is_crosscompile && use cxx && use doc ; then
 		if type -p doxygen > /dev/null ; then
 			if tc_version_is_at_least 4.3 ; then
 				cd "${CTARGET}"/libstdc++-v3/doc
@@ -2366,7 +2373,7 @@ is_multilib() {
 
 is_cxx() {
 	gcc-lang-supported 'c++' || return 1
-	! use nocxx
+	use cxx
 }
 
 is_d() {
@@ -2391,12 +2398,12 @@ is_fortran() {
 
 is_gcj() {
 	gcc-lang-supported java || return 1
-	! use nocxx && use_if_iuse gcj
+	use cxx && use_if_iuse gcj
 }
 
 is_go() {
 	gcc-lang-supported go || return 1
-	! use nocxx && use_if_iuse go
+	use cxx && use_if_iuse go
 }
 
 is_libffi() {
@@ -2410,7 +2417,7 @@ is_objc() {
 
 is_objcxx() {
 	gcc-lang-supported 'obj-c++' || return 1
-	! use nocxx && use_if_iuse objc++
+	use cxx && use_if_iuse objc++
 }
 
 is_ada() {
