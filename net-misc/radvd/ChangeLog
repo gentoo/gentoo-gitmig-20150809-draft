@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/radvd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.74 2011/11/10 08:25:54 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.75 2011/11/14 02:23:26 xmw Exp $
+
+*radvd-1.8.3 (14 Nov 2011)
+
+  14 Nov 2011; Michael Weber <xmw@gentoo.org> +radvd-1.8.3.ebuild,
+  files/radvd.init:
+  Version bump. EAPI-4 (thanks Agostino Sarubbo, bug 385967). openrc-0.9 fix
+  (thanks Bjarke Istrup Pedersen, bug 386113)
 
   10 Nov 2011; Michael Weber <xmw@gentoo.org> -radvd-1.6.ebuild,
   -radvd-1.7.ebuild, -radvd-1.8.ebuild, -radvd-1.8.1.ebuild:
