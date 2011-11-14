@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/spice
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.18 2011/11/14 08:44:11 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/ChangeLog,v 1.19 2011/11/14 14:02:14 dev-zero Exp $
+
+  14 Nov 2011; Tiziano Müller <dev-zero@gentoo.org> spice-0.10.0.ebuild:
+  Updated dep to require spice-protocol >=0.10.0 (unfortunately spice and spice-
+  protocol are not always in sync to just depend on ~spice-protocol-${PV}
 
 *spice-0.10.0 (14 Nov 2011)
 

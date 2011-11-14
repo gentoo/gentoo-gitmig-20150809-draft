@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.10.0.ebuild,v 1.1 2011/11/14 08:44:11 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spice/spice-0.10.0.ebuild,v 1.2 2011/11/14 14:02:14 dev-zero Exp $
 
 EAPI=4
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+client +gui sasl static static-libs"
 
-RDEPEND=">=app-emulation/spice-protocol-0.8.1
+RDEPEND=">=app-emulation/spice-protocol-0.10.0
 	>=x11-libs/pixman-0.17.7
 	media-libs/alsa-lib
 	media-libs/celt:0.5.1
