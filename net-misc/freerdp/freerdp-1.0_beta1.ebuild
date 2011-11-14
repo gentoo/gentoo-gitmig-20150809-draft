@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.0_beta1.ebuild,v 1.2 2011/11/14 03:35:19 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freerdp/freerdp-1.0_beta1.ebuild,v 1.3 2011/11/14 19:09:44 floppym Exp $
 
 EAPI="4"
 
@@ -16,7 +16,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+alsa +cups directfb ffmpeg pulseaudio smartcard sse2 test +X +xcursor
 	+xext +xinerama +xkbfile +xv"
 
-FREERDP_DEBUG="transport chanman svc dvc kbd nla nego certificate license gdi rfx x11 rail xv"
+FREERDP_DEBUG="transport chanman svc dvc kbd nla nego certificate license gdi
+	rfx x11 rail xv scard orders redir"
 IUSE+=" $(printf 'debug-%s ' ${FREERDP_DEBUG})"
 
 RDEPEND="
