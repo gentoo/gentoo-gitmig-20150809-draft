@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/libgusb
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/ChangeLog,v 1.1 2011/11/14 01:41:41 tetromino Exp $
+
+*libgusb-0.1.2 (14 Nov 2011)
+
+  14 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libgusb-0.1.2.ebuild, +metadata.xml:
+  Add new gobject wrapper for libusb; it will be needed for future versions of
+  x11-misc/colord.
+
