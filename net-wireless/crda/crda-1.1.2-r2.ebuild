@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-1.1.2-r2.ebuild,v 1.1 2011/11/12 09:46:20 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/crda-1.1.2-r2.ebuild,v 1.2 2011/11/14 09:07:21 gurligebis Exp $
 
 EAPI=4
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs python
 
 DESCRIPTION="Central Regulatory Domain Agent for wireless networks."
 HOMEPAGE="http://wireless.kernel.org/en/developers/Regulatory"
@@ -24,6 +24,8 @@ RDEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/libnl31-support.diff
+
+	python_convert_shebangs 2 utils/key2pub.py
 
 	sed -i \
 		-e "s:\<pkg-config\>:$(tc-getPKG_CONFIG):" \
