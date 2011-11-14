@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/tomoyo-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tomoyo-tools/ChangeLog,v 1.8 2011/11/14 13:14:55 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tomoyo-tools/ChangeLog,v 1.9 2011/11/14 18:50:26 naota Exp $
+
+*tomoyo-tools-2.5.0_p20111025 (14 Nov 2011)
+
+  14 Nov 2011; Naohiro Aota <naota@gentoo.org>
+  +tomoyo-tools-2.5.0_p20111025.ebuild,
+  +files/tomoyo-tools-2.5.0_p20111025-flags-parallel.patch:
+  Version bump
 
 *tomoyo-tools-2.4.0_p20111025 (14 Nov 2011)
 
