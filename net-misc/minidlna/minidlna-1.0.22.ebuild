@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.0.22.ebuild,v 1.2 2011/11/14 01:47:19 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/minidlna/minidlna-1.0.22.ebuild,v 1.3 2011/11/14 01:48:33 xmw Exp $
 
 EAPI=4
 
@@ -44,5 +44,5 @@ src_install() {
 	newconfd "${FILESDIR}"/${PN}.confd ${PN}
 	newinitd "${FILESDIR}"/${PN}.initd ${PN}
 
-	dodoc README TODO 
+	dodoc README TODO
 }
