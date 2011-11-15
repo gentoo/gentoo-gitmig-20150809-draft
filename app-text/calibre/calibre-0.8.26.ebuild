@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.26.ebuild,v 1.1 2011/11/12 17:24:16 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.8.26.ebuild,v 1.2 2011/11/15 15:55:03 zmedico Exp $
 
 EAPI=4
 PYTHON_DEPEND=2:2.7
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 
 SLOT="0"
 
-IUSE=""
+IUSE="+udisks"
 
 COMMON_DEPEND="
 	>=app-text/podofo-0.8.2
@@ -41,7 +41,7 @@ COMMON_DEPEND="
 
 RDEPEND="${COMMON_DEPEND}
 	>=dev-python/reportlab-2.1
-	sys-fs/udisks"
+	udisks? ( sys-fs/udisks )"
 
 DEPEND="${COMMON_DEPEND}
 	>=dev-python/setuptools-0.6_rc5

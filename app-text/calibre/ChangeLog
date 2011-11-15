@@ -1,6 +1,11 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.169 2011/11/12 17:26:14 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.170 2011/11/15 15:55:03 zmedico Exp $
+
+  15 Nov 2011; Zac Medico <zmedico@gentoo.org> calibre-0.8.25.ebuild,
+  calibre-0.8.26.ebuild, metadata.xml:
+  Bug #390563 - Add a udisks USE flag, in order to disable the optional udisks
+  dependency.
 
   12 Nov 2011; Zac Medico <zmedico@gentoo.org> -calibre-0.8.24-r1.ebuild:
   Remove old.
