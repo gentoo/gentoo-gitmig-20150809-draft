@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/batctl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/batctl/ChangeLog,v 1.4 2011/11/15 22:11:40 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/batctl/ChangeLog,v 1.5 2011/11/15 22:16:26 xmw Exp $
+
+*batctl-2011.4.0 (15 Nov 2011)
+
+  15 Nov 2011; Michael Weber <xmw@gentoo.org> +batctl-2011.4.0.ebuild:
+  Version bump (thanks Franz Schrober, bug 390539)
 
   15 Nov 2011; Michael Weber <xmw@gentoo.org> batctl-2011.3.0.ebuild:
   Fix installation (Makefile changes), EAPI-4 (thanks Franz Schrober, bug
