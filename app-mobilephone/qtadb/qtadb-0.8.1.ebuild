@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/qtadb/qtadb-0.8.1.ebuild,v 1.2 2011/11/14 19:12:05 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/qtadb/qtadb-0.8.1.ebuild,v 1.3 2011/11/15 23:13:48 hwoarang Exp $
 
 EAPI="4"
 
@@ -18,8 +18,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="x11-libs/qt-gui:4"
-DEPEND="${DEPEND}
+RDEPEND="x11-libs/qt-gui:4
+	x11-libs/qt-declarative:4"
+DEPEND="${RDEPEND}
 	app-arch/unzip"
 
 S="${WORKDIR}/trunk"
