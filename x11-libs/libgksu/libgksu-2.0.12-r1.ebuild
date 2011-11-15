@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/libgksu-2.0.12-r1.ebuild,v 1.12 2011/09/10 17:27:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/libgksu-2.0.12-r1.ebuild,v 1.13 2011/11/15 23:11:17 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -38,8 +38,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# Fix compilation on bsd
 	epatch "${FILESDIR}"/${PN}-2.0.0-fbsd.patch
 
@@ -61,6 +59,7 @@ src_prepare() {
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
+	gnome2_src_prepare
 }
 
 src_install() {

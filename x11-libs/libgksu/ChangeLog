@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libgksu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.81 2011/09/10 17:27:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.82 2011/11/15 23:11:17 tetromino Exp $
+
+  15 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libgksu-2.0.12-r1.ebuild:
+  QA: eautoreconf should be before gnome2_src_prepare.
 
   10 Sep 2011; Pacho Ramos <pacho@gentoo.org> libgksu-2.0.12-r1.ebuild:
   Fix keyring dependency, bug #381915 by bay.
