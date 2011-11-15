@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.13 2011/11/14 15:54:08 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.14 2011/11/15 09:02:15 caster Exp $
+
+  15 Nov 2011; Vlastimil Babka <caster@gentoo.org> java-vm-2.eclass:
+  Drop the repetitive elogs about revdep rebuild control files for binary
+  JVM's.
 
   14 Nov 2011; Nirbheek Chauhan <nirbheek@gentoo.org> mozconfig-3.eclass:
   Remove obsolete xorg-x11 dep from mozconfig-3
