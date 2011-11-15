@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/clojure/clojure-1.3.0.ebuild,v 1.1 2011/10/14 17:35:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/clojure/clojure-1.3.0.ebuild,v 1.2 2011/11/15 21:52:31 hwoarang Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="source test"
@@ -13,7 +13,7 @@ SRC_URI="https://github.com/clojure/clojure/tarball/clojure-1.3.0 -> ${P}.tar.gz
 
 LICENSE="EPL-1.0"
 SLOT="1.3"
-KEYWORDS="~amd64 ~x86 ~x86-linux"
+KEYWORDS="amd64 ~x86 ~x86-linux"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.5"
