@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/ppl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.38 2011/11/14 11:18:56 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.39 2011/11/15 04:03:55 vapier Exp $
+
+*ppl-0.11.2-r1 (15 Nov 2011)
+
+  15 Nov 2011; Mike Frysinger <vapier@gentoo.org> +ppl-0.11.2-r1.ebuild:
+  Add USE=static-libs support.
 
   14 Nov 2011; Diego E. Pettenò <flameeyes@gentoo.org> ppl-0.10.2-r1.ebuild,
   ppl-0.11.2.ebuild:
