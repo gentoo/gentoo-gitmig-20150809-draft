@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eclean-kernel/eclean-kernel-0.1.2.ebuild,v 1.2 2011/11/02 17:46:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eclean-kernel/eclean-kernel-0.1.3.ebuild,v 1.1 2011/11/15 18:58:45 mgorny Exp $
 
 EAPI=4
-PYTHON_DEPEND='2:2.6 3:3.2'
+PYTHON_DEPEND='2:2.6'
 SUPPORT_PYTHON_ABIS=1
-RESTRICT_PYTHON_ABIS='2.4 2.5 3.1'
+RESTRICT_PYTHON_ABIS='2.4 2.5 3.*'
 
 inherit base distutils
 
