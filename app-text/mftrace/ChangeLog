@@ -1,6 +1,9 @@
 # ChangeLog for app-text/mftrace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.58 2011/08/22 09:39:12 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.59 2011/11/15 20:54:36 radhermit Exp $
+
+  15 Nov 2011; Tim Harder <radhermit@gentoo.org> mftrace-1.2.17.ebuild:
+  Update to EAPI 4, use correct python shebang, and fix test deps.
 
 *mftrace-1.2.17 (22 Aug 2011)
 
