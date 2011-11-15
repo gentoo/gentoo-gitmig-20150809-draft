@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.2.1.ebuild,v 1.1 2011/10/31 04:57:54 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-3.2.1.ebuild,v 1.2 2011/11/15 08:54:46 nirbheek Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -65,7 +65,10 @@ pkg_setup() {
 	DOCS="ChangeLog MAINTAINERS NEWS TODO"
 	# Uh, what to do about dbus-call-timeout ?
 	G2CONF="${G2CONF}
+		VALAC=$(type -P valac-0.14)
+		VAPIGEN=$(type -P vapigen-0.14)
 		$(use_enable gnome-online-accounts goa)
+		$(use_enable introspection)
 		$(use_enable ipv6)
 		$(use_with kerberos krb5 ${EPREFIX}/usr)
 		$(use_with ldap openldap)
@@ -77,10 +80,6 @@ pkg_setup() {
 		--enable-nntp
 		--enable-largefile
 		--with-libdb=${EPREFIX}/usr"
-	if use vala; then
-		G2CONF="${G2CONF}
-			VALAC=$(type -P valac-0.14) VAPIGEN=$(type -P vapigen-0.14)"
-	fi
 }
 
 src_prepare() {
