@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.275 2011/11/06 04:57:01 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.276 2011/11/15 23:14:50 tetromino Exp $
+
+  15 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  epiphany-2.30.6-r1.ebuild:
+  QA: eautoreconf should be before gnome2_src_prepare.
 
 *epiphany-3.2.1 (06 Nov 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.30.6-r1.ebuild,v 1.6 2011/04/30 17:38:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.30.6-r1.ebuild,v 1.7 2011/11/15 23:14:50 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -63,7 +63,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
 	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
 
 	# introspection: Fix build by telling g-ir-scanner what the prefix is
@@ -80,6 +79,7 @@ src_prepare() {
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
+	gnome2_src_prepare
 }
 
 src_compile() {
