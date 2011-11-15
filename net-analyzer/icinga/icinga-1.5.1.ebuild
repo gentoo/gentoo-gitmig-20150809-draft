@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/icinga-1.5.1.ebuild,v 1.1 2011/11/15 00:14:29 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/icinga-1.5.1.ebuild,v 1.2 2011/11/15 00:31:46 prometheanfire Exp $
 
 EAPI=2
 
@@ -31,7 +31,7 @@ want_apache2
 pkg_setup() {
 	depend.apache_pkg_setup
 	enewgroup icinga
-	enewuser icinga -1 -1 /var/spool/icinga icinga -c "icinga alert"
+	enewuser icinga -1 -1 /var/spool/icinga icinga
 	if use web ; then
 		elog "This does not include cgis that are perl-dependent"
 		elog "Currently traceroute.cgi is perl-dependent"
