@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.26.0-r1.ebuild,v 1.13 2011/04/03 14:00:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.26.0-r1.ebuild,v 1.14 2011/11/15 05:40:32 tetromino Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -46,8 +46,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# Fix FHS compliance, see upstream bug #535524
 	epatch "${FILESDIR}/${PN}-2.15.4-fix-codegen-location.patch"
 
@@ -71,6 +69,7 @@ src_prepare() {
 	ln -s $(type -P true) py-compile
 
 	eautoreconf
+	gnome2_src_prepare
 
 	python_copy_sources
 }

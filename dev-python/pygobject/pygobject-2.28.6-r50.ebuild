@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.28.6-r50.ebuild,v 1.1 2011/10/19 01:23:24 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.28.6-r50.ebuild,v 1.2 2011/11/15 05:40:32 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -57,8 +57,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# Fix FHS compliance, see upstream bug #535524
 	epatch "${FILESDIR}/${PN}-2.28.3-fix-codegen-location.patch"
 
@@ -75,6 +73,7 @@ src_prepare() {
 	ln -sfn $(type -P true) py-compile
 
 	eautoreconf
+	gnome2_src_prepare
 
 	python_copy_sources
 }

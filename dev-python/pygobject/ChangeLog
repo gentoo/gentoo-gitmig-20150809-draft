@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.127 2011/10/23 07:51:53 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.128 2011/11/15 05:40:32 tetromino Exp $
+
+  15 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  pygobject-2.26.0-r1.ebuild, pygobject-2.28.6.ebuild,
+  pygobject-2.28.6-r50.ebuild, pygobject-3.0.1.ebuild, pygobject-3.0.2.ebuild:
+  QA: eautoreconf should be before gnome2_src_prepare.
 
 *pygobject-3.0.2 (23 Oct 2011)
 
