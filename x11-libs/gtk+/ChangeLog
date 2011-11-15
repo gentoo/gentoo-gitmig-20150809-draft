@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.548 2011/11/14 08:44:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.549 2011/11/15 08:44:35 tetromino Exp $
+
+  15 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org> gtk+-3.2.2.ebuild:
+  Force vte:2.90 users to upgrade to vte-0.30.1-r1 (having a working Alt key in
+  a terminal is vital).
 
 *gtk+-3.2.2 (14 Nov 2011)
 
