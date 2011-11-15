@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>mozilla</herd>
+<maintainer>
+    <email>jdhore1@gmail.com</email>
+    <name>Jeff Horelick</name>
+</maintainer>
+<maintainer>
+    <email>polynomial-c@gentoo.org</email>
+    <name>Lars Wendler</name>
+    <description>Proxy maintainer for </description>
+</maintainer>
 </pkgmetadata>

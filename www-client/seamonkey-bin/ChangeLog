@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.103 2011/05/01 16:50:16 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.104 2011/11/15 22:28:40 polynomial-c Exp $
+
+  15 Nov 2011; Lars Wendler <polynomial-c@gentoo.org> metadata.xml:
+  Added new maintainer.
 
   01 May 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   seamonkey-bin-2.0.14.ebuild:
