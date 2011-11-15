@@ -1,6 +1,10 @@
 # ChangeLog for app-text/kiwix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kiwix/ChangeLog,v 1.7 2011/11/05 12:42:25 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kiwix/ChangeLog,v 1.8 2011/11/15 13:14:32 chithanh Exp $
+
+  15 Nov 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  kiwix-0.9_beta4.ebuild:
+  Set stricter dependencies on clucene and xulrunner, bug #390325.
 
 *kiwix-0.9_beta4 (05 Nov 2011)
 

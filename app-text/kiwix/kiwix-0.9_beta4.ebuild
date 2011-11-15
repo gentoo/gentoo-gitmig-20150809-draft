@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kiwix/kiwix-0.9_beta4.ebuild,v 1.1 2011/11/05 12:42:25 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kiwix/kiwix-0.9_beta4.ebuild,v 1.2 2011/11/15 13:14:32 chithanh Exp $
 
 EAPI=3
 
@@ -20,11 +20,12 @@ IUSE=""
 # No upgrade from 0.9_alpha possible, because a directory would be replaced
 # with a symlink, which PMS section 13.4 forbids. Bug #326685.
 RDEPEND="app-arch/xz-utils
+	=dev-cpp/clucene-0.9*
 	dev-lang/perl
 	dev-libs/icu
 	dev-libs/xapian
 	net-libs/libmicrohttpd
-	net-libs/xulrunner:1.9
+	=net-libs/xulrunner-1.9*
 	>=net-misc/aria2-1.10
 	!!<app-text/kiwix-0.9_beta"
 DEPEND="${RDEPEND}
