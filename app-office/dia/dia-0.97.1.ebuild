@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.1.ebuild,v 1.13 2011/08/07 16:14:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97.1.ebuild,v 1.14 2011/11/15 23:30:01 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -66,8 +66,6 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-libpng15.patch
 
-	gnome2_src_prepare
-
 	# Fix compilation in a gnome environment, bug #159831
 	epatch "${FILESDIR}/${PN}-0.97.0-gnome-doc.patch"
 
@@ -95,6 +93,7 @@ src_prepare() {
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
+	gnome2_src_prepare
 }
 
 src_install() {
