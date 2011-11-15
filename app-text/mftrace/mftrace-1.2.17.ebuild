@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.2.17.ebuild,v 1.2 2011/11/15 20:54:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.2.17.ebuild,v 1.3 2011/11/15 21:02:31 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -30,7 +30,9 @@ pkg_setup() {
 
 src_configure() {
 	tc-export CC
-	econf --datadir=$(python_get_sitedir) PYTHON="$(PYTHON)"
+	econf \
+		--datadir="$(python_get_sitedir)" \
+		PYTHON="$(PYTHON)"
 }
 
 src_compile() {
