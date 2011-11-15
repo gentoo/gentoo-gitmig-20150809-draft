@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.3_p1-r1.ebuild,v 1.1 2011/11/15 06:05:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.8.3_p1-r2.ebuild,v 1.1 2011/11/15 22:25:02 vapier Exp $
 
 EAPI="4"
 
-inherit eutils pam libtool
+inherit eutils pam multilib libtool
 
 MY_P=${P/_/}
 MY_P=${MY_P/beta/b}
@@ -100,6 +100,9 @@ src_configure() {
 
 	# audit: somebody got to explain me how I can test this before I
 	# enable it.. - Diego
+	# plugindir: autoconf code is crappy and does not delay evaluation
+	# until `make` time, so we have to use a full path here rather than
+	# basing off other values.
 	econf \
 		--enable-zlib=system \
 		--with-secure-path="${ROOTPATH}" \
@@ -114,7 +117,7 @@ src_configure() {
 		--without-opie \
 		--without-linux-audit \
 		--with-timedir=/var/db/sudo \
-		--with-plugindir='${libdir}'/sudo \
+		--with-plugindir=/usr/$(get_libdir)/sudo \
 		--docdir=/usr/share/doc/${PF}
 }
 
