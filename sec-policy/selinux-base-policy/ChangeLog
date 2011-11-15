@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.87 2011/11/12 20:53:21 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.88 2011/11/15 10:42:24 swift Exp $
+
+*selinux-base-policy-2.20110726-r6 (15 Nov 2011)
+
+  15 Nov 2011; <swift@gentoo.org> +selinux-base-policy-2.20110726-r6.ebuild:
+  Fixing #389579, #389917, #388875 and #389569. Also improves support for
+  gcc-config and updates VDE patch with upstream feedback
 
   12 Nov 2011; <swift@gentoo.org> -selinux-base-policy-2.20090730.ebuild,
   -selinux-base-policy-2.20090814.ebuild,
