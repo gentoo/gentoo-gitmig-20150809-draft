@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-17.0.928.0.ebuild,v 1.1 2011/11/04 18:05:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-17.0.938.0.ebuild,v 1.1 2011/11/15 10:33:25 phajdan.jr Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.6"
@@ -15,7 +15,7 @@ SRC_URI="http://commondatastorage.googleapis.com/chromium-browser-official/${P}.
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="bindist gnome gnome-keyring kerberos pulseaudio"
+IUSE="bindist cups gnome gnome-keyring kerberos pulseaudio"
 
 # en_US is ommitted on purpose from the list below. It must always be available.
 LANGS="am ar bg bn ca cs da de el en_GB es es_LA et fa fi fil fr gu he hi hr
@@ -26,12 +26,15 @@ for lang in ${LANGS}; do
 done
 
 RDEPEND="app-arch/bzip2
+	cups? (
+		dev-libs/libgcrypt
+		>=net-print/cups-1.3.11
+	)
 	>=dev-lang/v8-3.6.5.1
 	dev-libs/dbus-glib
 	dev-libs/elfutils
 	>=dev-libs/icu-4.4.1
 	>=dev-libs/libevent-1.4.13
-	dev-libs/libgcrypt
 	dev-libs/libxml2[icu]
 	dev-libs/libxslt
 	>=dev-libs/nss-3.12.3
@@ -43,7 +46,6 @@ RDEPEND="app-arch/bzip2
 	media-libs/libpng
 	>=media-libs/libwebp-0.1.2
 	media-libs/speex
-	>=net-print/cups-1.3.11
 	pulseaudio? ( media-sound/pulseaudio )
 	sys-libs/zlib
 	x11-libs/gtk+:2
@@ -54,6 +56,7 @@ RDEPEND="app-arch/bzip2
 DEPEND="${RDEPEND}
 	dev-lang/nacl-toolchain-newlib
 	dev-lang/perl
+	dev-lang/yasm
 	dev-python/simplejson
 	>=dev-util/gperf-3.0.3
 	>=dev-util/pkgconfig-0.23
@@ -96,17 +99,6 @@ get_bundled_v8_version() {
 
 get_installed_v8_version() {
 	best_version dev-lang/v8 | sed -e 's@dev-lang/v8-@@g'
-}
-
-pkg_pretend() {
-	if [[ "${MERGE_TYPE}" == "source" || "${MERGE_TYPE}" == "binary" ]]; then
-		# Fail if the kernel doesn't support features needed for sandboxing,
-		# bug #363907.
-		ERROR_PID_NS="PID_NS is required for sandbox to work"
-		ERROR_NET_NS="NET_NS is required for sandbox to work"
-		CONFIG_CHECK="~PID_NS ~NET_NS"
-		check_extra_config
-	fi
 }
 
 if ! has chromium-pkg_die ${EBUILD_DEATH_HOOKS}; then
@@ -159,6 +151,15 @@ pkg_setup() {
 	# Make sure the build system will use the right python, bug #344367.
 	python_set_active_version 2
 	python_pkg_setup
+
+	if [[ "${MERGE_TYPE}" == "source" || "${MERGE_TYPE}" == "binary" ]]; then
+		# Fail if the kernel doesn't support features needed for sandboxing,
+		# bug #363907.
+		ERROR_PID_NS="PID_NS is required for sandbox to work"
+		ERROR_NET_NS="NET_NS is required for sandbox to work"
+		CONFIG_CHECK="~PID_NS ~NET_NS"
+		check_extra_config
+	fi
 
 	if use bindist; then
 		elog "bindist enabled: H.264 video support will be disabled."
@@ -219,7 +220,6 @@ src_prepare() {
 		\! -path 'third_party/webdriver/*' \
 		\! -path 'third_party/webgl_conformance/*' \
 		\! -path 'third_party/webrtc/*' \
-		\! -path 'third_party/yasm/*' \
 		\! -path 'third_party/zlib/contrib/minizip/*' \
 		-delete || die
 
@@ -267,11 +267,13 @@ src_configure() {
 		-Duse_system_speex=1
 		-Duse_system_v8=1
 		-Duse_system_xdg_utils=1
+		-Duse_system_yasm=1
 		-Duse_system_zlib=1"
 
 	# Optional dependencies.
 	# TODO: linux_link_kerberos, bug #381289.
 	myconf+="
+		$(gyp_use cups use_cups)
 		$(gyp_use gnome use_gconf)
 		$(gyp_use gnome-keyring use_gnome_keyring)
 		$(gyp_use gnome-keyring linux_link_gnome_keyring)
@@ -318,8 +320,9 @@ src_configure() {
 	# the build to fail because of that.
 	myconf+=" -Dwerror="
 
-	# Avoid a build error with -Os, bug #352457.
+	# Avoid CFLAGS problems, bug #352457, bug #390147.
 	replace-flags "-Os" "-O2"
+	strip-flags
 
 	egyp ${myconf} || die
 }
@@ -328,8 +331,8 @@ src_compile() {
 	emake chrome chrome_sandbox chromedriver BUILDTYPE=Release V=1 || die
 	pax-mark m out/Release/chrome
 	if use test; then
-		emake {base,crypto,googleurl,net}_unittests BUILDTYPE=Release V=1 || die
-		pax-mark m out/Release/{base,crypto,googleurl,net}_unittests
+		emake {base,cacheinvalidation,crypto,googleurl,gpu,media,net,printing}_unittests BUILDTYPE=Release V=1 || die
+		pax-mark m out/Release/{base,cacheinvalidation,crypto,googleurl,gpu,media,net,printing}_unittests
 	fi
 }
 
@@ -353,14 +356,19 @@ src_test() {
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/base_unittests virtualmake \
 		'--gtest_filter=-ICUStringConversionsTest.*'
 
+	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/cacheinvalidation_unittests virtualmake
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/crypto_unittests virtualmake
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/googleurl_unittests virtualmake
+	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/gpu_unittests virtualmake
+	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/media_unittests virtualmake
 
 	# NetUtilTest: bug #361885.
 	# NetUtilTest.GenerateFileName: some locale-related mismatch.
 	# UDP: unstable, active development. We should revisit this later.
 	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/net_unittests virtualmake \
 		'--gtest_filter=-NetUtilTest.IDNToUnicode*:NetUtilTest.FormatUrl*:NetUtilTest.GenerateFileName:*UDP*'
+
+	LC_ALL="${mylocale}" VIRTUALX_COMMAND=out/Release/printing_unittests virtualmake
 }
 
 src_install() {
