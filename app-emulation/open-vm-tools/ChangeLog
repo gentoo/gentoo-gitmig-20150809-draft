@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/open-vm-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.56 2011/11/15 15:13:16 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.57 2011/11/15 15:19:41 vadimk Exp $
+
+  15 Nov 2011; Vadim Kuznetsov <vadimk@gentoo.org>
+  -open-vm-tools-0.0.20100616.268169-r1.ebuild,
+  -open-vm-tools-0.0.20100824.292196-r1.ebuild,
+  -open-vm-tools-0.0.20100919.301124.ebuild,
+  -open-vm-tools-0.0.20101219.339835-r1.ebuild:
+  cleanup
 
   15 Nov 2011; Vadim Kuznetsov <vadimk@gentoo.org> files/network:
   fixed default network script
