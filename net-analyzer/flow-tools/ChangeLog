@@ -1,6 +1,18 @@
 # ChangeLog for net-analyzer/flow-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.48 2011/03/27 19:35:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.49 2011/11/15 21:46:23 jer Exp $
+
+*flow-tools-0.68.5.1 (15 Nov 2011)
+
+  15 Nov 2011; Jeroen Roovers <jer@gentoo.org>
+  -files/flow-tools-0.67-memleak.patch, -files/flow-tools-0.67-nodebug.patch,
+  -flow-tools-0.68-r5.ebuild, -flow-tools-0.68-r7.ebuild,
+  -flow-tools-0.68-r8.ebuild, -files/flow-tools-0.68-249449-amd64.patch,
+  -files/flow-tools-0.68-another-amd64-casting-fixes.patch,
+  +flow-tools-0.68.5.1.ebuild, -files/flow-tools-0.68-db_tmp.patch,
+  -files/flow-tools-0.68-fix-a-zillion-warnings-updated.diff,
+  -files/flow-tools-0.68-fix-configure.diff:
+  Version bump.
 
   27 Mar 2011; Brent Baude <ranger@gentoo.org> flow-tools-0.68.5-r1.ebuild:
   stable ppc, bug 347591
