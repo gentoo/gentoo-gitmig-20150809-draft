@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libgdata
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/ChangeLog,v 1.37 2011/11/08 21:54:10 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgdata/ChangeLog,v 1.38 2011/11/15 22:54:00 tetromino Exp $
+
+*libgdata-0.8.1-r1 (15 Nov 2011)
+
+  15 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libgdata-0.8.1-r1.ebuild, +files/libgdata-0.8.1-gdata-symbols.patch:
+  Fix building with gobject-introspection-1.30.
 
 *libgdata-0.10.1 (08 Nov 2011)
 
