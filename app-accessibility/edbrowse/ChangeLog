@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/edbrowse
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/edbrowse/ChangeLog,v 1.6 2011/09/13 19:21:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/edbrowse/ChangeLog,v 1.7 2011/11/15 16:35:58 axs Exp $
+
+*edbrowse-3.4.8 (15 Nov 2011)
+
+  15 Nov 2011; Ian Stakenvicius <axs@gentoo.org> edbrowse-3.4.7.ebuild,
+  +edbrowse-3.4.8.ebuild:
+  adding new version that supports spidermonkey-1.8.5 and fixing deps of
+  current version
 
   13 Sep 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #353756
