@@ -1,0 +1,27 @@
+From 299e28dd3e5549b13ec54de991d583ac6a6ff11e Mon Sep 17 00:00:00 2001
+From: Alexandre Rostovtsev <tetromino@gentoo.org>
+Date: Tue, 15 Nov 2011 03:06:40 -0500
+Subject: [PATCH] Map both gdk's Meta and Alt to vte's Meta for >=gtk+-3.2.2
+ compatibility
+
+https://bugzilla.gnome.org/show_bug.cgi?id=663779
+---
+ src/keymap.h |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/src/keymap.h b/src/keymap.h
+index 243e22e..21d9b8e 100644
+--- a/src/keymap.h
++++ b/src/keymap.h
+@@ -27,7 +27,7 @@
+ 
+ G_BEGIN_DECLS
+ 
+-#define VTE_META_MASK		GDK_META_MASK
++#define VTE_META_MASK		(GDK_META_MASK | GDK_MOD1_MASK)
+ #define VTE_NUMLOCK_MASK	GDK_MOD2_MASK
+ 
+ /* Map the specified keyval/modifier setup, dependent on the mode, to either
+-- 
+1.7.8.rc1
+
