@@ -1,6 +1,10 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.230 2011/11/03 05:31:59 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.231 2011/11/15 23:20:08 tetromino Exp $
+
+  15 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  evince-2.32.0-r2.ebuild, evince-2.32.0-r3.ebuild:
+  QA: eautoreconf should be before gnome2_src_prepare.
 
 *evince-3.2.1 (03 Nov 2011)
 

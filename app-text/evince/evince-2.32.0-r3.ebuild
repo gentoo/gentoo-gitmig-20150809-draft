@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.32.0-r3.ebuild,v 1.8 2011/10/17 18:20:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-2.32.0-r3.ebuild,v 1.9 2011/11/15 23:20:08 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -84,8 +84,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# Check for NULL in synctex_backward_search preventing segfault, upstream bug #630845
 	epatch "${FILESDIR}"/${P}-libdocument-segfault.patch
 
@@ -130,6 +128,7 @@ src_prepare() {
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
+	gnome2_src_prepare
 }
 
 src_install() {
