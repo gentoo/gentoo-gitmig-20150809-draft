@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-8.0.ebuild,v 1.1 2011/11/14 15:33:14 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird-bin/thunderbird-bin-8.0.ebuild,v 1.2 2011/11/15 13:23:23 anarchy Exp $
 
 EAPI="3"
 
-inherit eutils multilib mozextension
+inherit eutils multilib mozextension pax-utils
 
 # Can be updated using scripts/get_langs.sh from mozilla overlay
 LANGS=(ar be bg bn-BD br ca cs da de el en en-GB en-US es-AR es-ES et eu fi fr
@@ -27,7 +27,7 @@ RESTRICT="strip"
 KEYWORDS="-* ~amd64 ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE=""
+IUSE="+crashreporter"
 
 for X in "${LANGS[@]}" ; do
 	# en and en_US are handled internally
@@ -49,10 +49,8 @@ DEPEND="app-arch/unzip"
 RDEPEND="x11-libs/libXrender
 	x11-libs/libXt
 	x11-libs/libXmu
-
 	>=x11-libs/gtk+-2.2:2
-	net-misc/curl[nss]
-"
+	crashreporter? ( net-misc/curl ) "
 
 S="${WORKDIR}/thunderbird"
 
@@ -127,30 +125,6 @@ EOF
 	cp "${FILESDIR}"/thunderbird-gentoo-default-prefs.js \
 		"${D}/${MOZILLA_FIVE_HOME}/defaults/pref/all-gentoo.js" || \
 		die "failed to cp thunderbird-gentoo-default-prefs.js"
-}
 
-pkg_postinst() {
-	#elog "For enigmail, please see instructions at"
-	#elog "  http://enigmail.mozdev.org/"
-
-	if use x86; then
-		if ! has_version 'gnome-base/gconf' || ! has_version 'gnome-base/orbit' ; then
-			einfo
-			einfo "For using the crashreporter, you need gnome-base/gconf,"
-			einfo "gnome-base/orbit and net-misc/curl emerged."
-			einfo
-		fi
-	else
-		einfo
-		einfo "NB: You just installed a 32-bit thunderbird"
-		einfo
-		einfo "Crashreporter won't work on amd64"
-		einfo
-	fi
-
-	einfo
-	elog 'We have moved away from mozilla-launcher, as it has major design flaws.'
-	elog 'You will need to update your symlinks to use thunderbird-bin as the executable'
-	elog 'to launch thunderbird-bin. If you are used to just typing thunderbird to start, you'
-	elog 'can create an alias in your ${HOME}/.bashrc. Example: alias thunderbird="thunderbird-bin"'
+	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/thunderbird-bin
 }
