@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/mpc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.29 2011/04/15 09:27:58 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.30 2011/11/15 03:35:12 vapier Exp $
+
+*mpc-0.9-r1 (15 Nov 2011)
+
+  15 Nov 2011; Mike Frysinger <vapier@gentoo.org> +mpc-0.9-r1.ebuild:
+  Add USE=static-libs support.
 
   15 Apr 2011; Fabian Groffen <grobian@gentoo.org> mpc-0.9.ebuild:
   mpc-0.9 requires on Solaris a fix in GCC's fix-included headers, only
