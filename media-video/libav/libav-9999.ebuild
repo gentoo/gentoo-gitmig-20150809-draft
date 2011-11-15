@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.21 2011/11/14 02:05:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/libav/libav-9999.ebuild,v 1.22 2011/11/15 13:01:17 lu_zero Exp $
 
 EAPI=4
 
@@ -190,8 +190,11 @@ src_configure() {
 
 	# CPU features
 	for i in ${CPU_FEATURES}; do
-		use ${i%:*} || myconf="${myconf} --disable-${i#*:}"
+		use ${i%:*} || myconf+=" --disable-${i#*:}"
 	done
+
+	# pass the right -mfpu as extra
+	use neon && myconf+=" --extra-cflags=-mfpu=neon"
 
 	# disable mmx accelerated code if PIC is required
 	# as the provided asm decidedly is not PIC for x86.
