@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nacl-toolchain-newlib/nacl-toolchain-newlib-0_p6869-r1.ebuild,v 1.2 2011/11/15 18:43:55 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nacl-toolchain-newlib/nacl-toolchain-newlib-0_p6869-r1.ebuild,v 1.3 2011/11/15 19:43:03 phajdan.jr Exp $
 
 EAPI="4"
 
-inherit eutils multilib
+inherit eutils flag-o-matic multilib
 
 BINUTILS_PV="2.20.1"
 NEWLIB_PV="1.18.0"
@@ -75,6 +75,7 @@ src_prepare() {
 }
 
 src_compile() {
+	strip-flags # See bug #390589.
 	emake PREFIX="${PWD}/${PN}" CANNED_REVISION="yes" build-with-newlib
 }
 
