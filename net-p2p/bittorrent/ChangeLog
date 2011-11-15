@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/bittorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.142 2011/09/29 10:28:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.143 2011/11/15 01:31:46 dirtyepic Exp $
+
+  15 Nov 2011; Ryan Hill <dirtyepic@gentoo.org> +bittorrent-4.4.0-r1.ebuild,
+  -bittorrent-5.2.2-r1.ebuild:
+  Restore latest stable 4.4 ebuild. Remove 5.2.2-r1 for bug #336166 (removal of
+  5.x series).
 
   15 Sep 2011; Samuli Suominen <ssuominen@gentoo.org>
   -bittorrent-4.4.0-r1.ebuild, -bittorrent-5.0.9-r1.ebuild,
