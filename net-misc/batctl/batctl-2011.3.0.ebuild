@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/batctl/batctl-2011.3.0.ebuild,v 1.1 2011/11/13 23:36:39 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/batctl/batctl-2011.3.0.ebuild,v 1.2 2011/11/15 22:11:40 xmw Exp $
 
 EAPI=4
 
@@ -27,11 +27,10 @@ pkg_setup() {
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" V=1
+	emake CC="$(tc-getCC)" V=1 REVISION=gentoo-"${PVR}"
 }
 
 src_install() {
-	emake INSTALL_PREFIX="${D}" install
+	emake DESTDIR="${D}" PREFIX="${EPREFIX}"/usr install
 	dodoc README
-	doman man/*
 }
