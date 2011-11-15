@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.116 2011/11/15 21:24:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.117 2011/11/15 22:12:22 hwoarang Exp $
+
+  15 Nov 2011; Markos Chandras <hwoarang@gentoo.org> libusb-0.1.12-r7.ebuild:
+  Stable on amd64 wrt bug #390441
 
   15 Nov 2011; Jeroen Roovers <jer@gentoo.org> libusb-0.1.12-r7.ebuild:
   Stable for HPPA (bug #390441).
