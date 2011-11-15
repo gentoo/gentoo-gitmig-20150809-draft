@@ -1,10 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.30.0-r1.ebuild,v 1.1 2011/10/30 19:05:07 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gobject-introspection/gobject-introspection-1.30.0-r1.ebuild,v 1.2 2011/11/15 09:05:10 nirbheek Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
-GNOME_TARBALL_SUFFIX="xz"
 GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="2:2.5"
 
@@ -39,6 +38,7 @@ pkg_setup() {
 		$(use_enable test tests)"
 
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {

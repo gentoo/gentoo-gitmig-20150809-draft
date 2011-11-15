@@ -1,10 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/gjs-1.30.0.ebuild,v 1.1 2011/09/30 14:49:28 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/gjs-1.30.0.ebuild,v 1.2 2011/11/15 09:06:58 nirbheek Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
-GNOME_TARBALL_SUFFIX="xz"
 GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="2"
 
@@ -40,6 +39,9 @@ pkg_setup() {
 		--disable-systemtap
 		--disable-dtrace
 		--disable-coverage"
+
+	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
