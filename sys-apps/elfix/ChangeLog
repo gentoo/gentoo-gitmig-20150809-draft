@@ -1,5 +1,10 @@
 
 
+*elfix-0.3.2 (15 Nov 2011)
+
+  15 Nov 2011; Anthony G. Basile <blueness@gentoo.org> +elfix-0.3.2.ebuild:
+  Version bump, adds test to compare pax flags between binary and its process
+
 *elfix-0.3.1 (03 Nov 2011)
 
   03 Nov 2011; Anthony G. Basile <blueness@gentoo.org> -elfix-0.3.0.ebuild,
