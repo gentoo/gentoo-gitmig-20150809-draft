@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.1.ebuild,v 1.8 2011/09/27 11:21:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.4.1.ebuild,v 1.9 2011/11/15 04:05:27 nerdboy Exp $
 
 EAPI=3
 
@@ -87,6 +87,8 @@ S="${WORKDIR}/${MY_P}"
 PATCHES=(
 	"${FILESDIR}"/${PN}-pkgconf.patch
 	"${FILESDIR}"/${P}-libpng15.patch
+	"${FILESDIR}"/${P}-nopycompile.patch
+	"${FILESDIR}"/${P}-timer_flags.patch
 )
 
 pkg_setup() {
@@ -124,8 +126,6 @@ pkg_setup() {
 
 src_prepare() {
 	use opengl || epatch "${FILESDIR}"/${PN}-6.4.0-html-nonviz.patch
-	# Hackish workaround to respect LDFLAGS. Bug #375999
-	sed -i -e "s:-c:${CFLAGS} ${LDFLAGS} &:" "${S}"/tools/timer/Makefile
 	base_src_prepare
 }
 
