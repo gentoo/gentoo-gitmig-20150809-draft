@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libssh2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.40 2011/11/15 15:56:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh2/ChangeLog,v 1.41 2011/11/15 22:08:23 hwoarang Exp $
+
+  15 Nov 2011; Markos Chandras <hwoarang@gentoo.org> libssh2-1.3.0.ebuild:
+  Stable on amd64 wrt bug #390555
 
   15 Nov 2011; Jeroen Roovers <jer@gentoo.org> libssh2-1.3.0.ebuild:
   Stable for HPPA (bug #390555).
