@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-7.2.0.ebuild,v 1.1 2011/11/11 10:53:07 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-7.2.0-r1.ebuild,v 1.1 2011/11/15 09:21:36 sera Exp $
 
 EAPI="4"
 
@@ -91,6 +91,7 @@ src_install() {
 
 	set_java_env
 	java-vm_revdep-mask "/opt/${P}"
+	java-vm_sandbox-predict /dev/random /proc/self/coredump_filter
 }
 
 pkg_postinst() {
