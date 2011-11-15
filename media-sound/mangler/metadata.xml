@@ -7,4 +7,7 @@
     <flag name="espeak">Text to speach engine</flag>
     <flag name="g15">Logitech g15 lcd support</flag>
   </use>
+  <maintainer>
+    <email>prometheanfire@gentoo.org</email>
+  </maintainer>
 </pkgmetadata>
