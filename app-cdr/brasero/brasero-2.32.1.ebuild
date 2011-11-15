@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.32.1.ebuild,v 1.11 2011/03/22 18:43:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.32.1.ebuild,v 1.12 2011/11/15 23:24:56 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -75,13 +75,12 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# Fix link against installed libraries, bug #340767
 	epatch "${FILESDIR}/${PN}-2.32.0-build-plugins-against-local-library.patch"
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
+	gnome2_src_prepare
 }
 
 src_install() {

@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.137 2011/11/04 08:20:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.138 2011/11/15 23:24:56 tetromino Exp $
+
+  15 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  brasero-2.32.1.ebuild, brasero-2.32.1-r1.ebuild:
+  QA: eautoreconf should be before gnome2_src_prepare.
 
 *brasero-3.2.0-r1 (04 Nov 2011)
 
