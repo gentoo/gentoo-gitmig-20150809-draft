@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/guava/guava-07.ebuild,v 1.1 2011/11/09 19:17:24 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/guava/guava-07.ebuild,v 1.2 2011/11/15 20:01:07 sera Exp $
 
 EAPI="4"
 
@@ -24,7 +24,7 @@ COMMON_DEP="
 RDEPEND="${COMMON_DEP}
 	>=virtual/jre-1.5"
 DEPEND="${COMMON_DEP}
-	>=virtual/jdk-1.5
+	>=virtual/jdk-1.6
 	app-arch/unzip"
 
 S="${WORKDIR}/${MY_P}"
