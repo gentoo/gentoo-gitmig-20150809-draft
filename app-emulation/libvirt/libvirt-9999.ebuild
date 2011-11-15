@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.13 2011/11/10 22:10:12 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.14 2011/11/15 18:53:20 cardoe Exp $
 
 #BACKPORTS=2
 #AUTOTOOLIZE=yes
@@ -83,7 +83,8 @@ RDEPEND="sys-libs/readline
 	elibc_glibc? ( || ( >=net-libs/libtirpc-0.2.2-r1 <sys-libs/glibc-2.14 ) )"
 # one? ( dev-libs/xmlrpc-c )
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	app-text/xhtml1"
 
 pkg_setup() {
 	python_set_active_version 2
