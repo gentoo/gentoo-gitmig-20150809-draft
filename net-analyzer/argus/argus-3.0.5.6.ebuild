@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-3.0.5.6.ebuild,v 1.2 2011/11/15 20:43:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-3.0.5.6.ebuild,v 1.3 2011/11/15 21:18:38 jer Exp $
 
 EAPI="4"
 
@@ -34,7 +34,6 @@ src_prepare() {
 		-e 's:#\(ARGUS_SETGROUP_ID=\).*:\1argus:' \
 		-e 's:\(#ARGUS_CHROOT_DIR=\).*:\1/var/lib/argus:' \
 			-i support/Config/argus.conf || die
-#	sed -e 's:.*="-O.*":true:g' -i acsite.m4 || die
 	epatch \
 		"${FILESDIR}"/${PN}-3.0.4-disable-tcp-wrappers-automagic.patch \
 		"${FILESDIR}"/${PN}-3.0.5-Makefile.patch

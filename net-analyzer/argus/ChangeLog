@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/argus
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/ChangeLog,v 1.36 2011/11/15 20:43:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/ChangeLog,v 1.37 2011/11/15 21:18:38 jer Exp $
+
+  15 Nov 2011; Jeroen Roovers <jer@gentoo.org> argus-3.0.5.6.ebuild,
+  files/argus-3.0.5-Makefile.patch:
+  Remove redundant sed script. Tweak Makefile patch to actually die properly.
 
   15 Nov 2011; Jeroen Roovers <jer@gentoo.org> argus-3.0.5.6.ebuild,
   +files/argus-3.0.5-Makefile.patch:
