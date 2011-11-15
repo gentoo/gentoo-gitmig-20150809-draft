@@ -1,9 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.4.24.ebuild,v 1.7 2011/10/05 16:53:02 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.4.28.ebuild,v 1.1 2011/11/15 21:38:27 eva Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
 
 inherit gnome2 eutils mono libtool
 
@@ -12,8 +13,8 @@ HOMEPAGE="http://spruce.sourceforge.net/gmime/"
 
 SLOT="2.4"
 LICENSE="LGPL-2.1"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
-IUSE="doc mono"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+IUSE="doc mono static-libs"
 
 RDEPEND=">=dev-libs/glib-2.12:2
 	sys-libs/zlib
@@ -29,7 +30,10 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS PORTING README TODO"
-	G2CONF="${G2CONF} $(use_enable mono) --enable-cryptography"
+	G2CONF="${G2CONF}
+		--enable-cryptography
+		$(use_enable mono)
+		$(use_enable static-libs static)"
 }
 
 src_prepare() {
@@ -57,15 +61,15 @@ src_prepare() {
 }
 
 src_compile() {
-	MONO_PATH="${S}" emake || die "emake failed"
+	MONO_PATH="${S}" gnome2_src_compile
 	if use doc; then
-		emake -C docs/tutorial html || die "emake html failed"
+		emake -C docs/tutorial html
 	fi
 }
 
 src_install() {
-	emake GACUTIL_FLAGS="/root '${ED}/usr/$(get_libdir)' /gacdir '${EPREFIX}/usr/$(get_libdir)' /package ${PN}" \
-		DESTDIR="${D}" install || die "installation failed"
+	GACUTIL_FLAGS="/root '${ED}/usr/$(get_libdir)' /gacdir '${EPREFIX}/usr/$(get_libdir)' /package ${PN}" \
+		gnome2_src_install
 
 	if use doc ; then
 		# we don't use docinto/dodoc, because we don't want html doc gzipped
@@ -73,10 +77,8 @@ src_install() {
 		doins docs/tutorial/html/*
 	fi
 
-	dodoc $DOCS || die "dodoc failed"
-
 	# rename these two, so they don't conflict with app-arch/sharutils
 	# (bug #70392)	Ticho, 2004-11-10
-	mv "${ED}/usr/bin/uuencode" "${ED}/usr/bin/gmime-uuencode-${SLOT}"
-	mv "${ED}/usr/bin/uudecode" "${ED}/usr/bin/gmime-uudecode-${SLOT}"
+	mv "${ED}/usr/bin/uuencode" "${ED}/usr/bin/gmime-uuencode-${SLOT}" || die
+	mv "${ED}/usr/bin/uudecode" "${ED}/usr/bin/gmime-uudecode-${SLOT}" || die
 }
