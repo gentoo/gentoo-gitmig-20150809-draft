@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.103 2011/11/14 12:45:41 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.104 2011/11/15 11:24:57 phajdan.jr Exp $
+
+*v8-3.7.6 (15 Nov 2011)
+
+  15 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> +v8-3.7.6.ebuild:
+  Version bump for dev channel release.
 
   14 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> v8-3.6.6.5.ebuild,
   v8-3.6.6.6.ebuild, v8-9999.ebuild:
