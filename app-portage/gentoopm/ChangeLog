@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/gentoopm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.13 2011/11/14 21:57:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoopm/ChangeLog,v 1.14 2011/11/15 19:02:59 mgorny Exp $
+
+*gentoopm-0.2.3 (15 Nov 2011)
+
+  15 Nov 2011; Michał Górny <mgorny@gentoo.org> -gentoopm-0.2.2.ebuild,
+  +gentoopm-0.2.3.ebuild:
+  Version bump. The new version fixes package sorting with pkgcore-0.7.5.
 
 *gentoopm-0.2.2 (14 Nov 2011)
 
