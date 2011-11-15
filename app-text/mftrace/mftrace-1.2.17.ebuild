@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.2.17.ebuild,v 1.3 2011/11/15 21:02:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.2.17.ebuild,v 1.4 2011/11/15 21:08:27 radhermit Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2"
@@ -16,11 +16,11 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 SLOT="1"
 IUSE="test truetype"
 
-RDEPEND="virtual/latex-base
-	>=app-text/t1utils-1.25
-	truetype? ( media-gfx/fontforge )"
-DEPEND="${RDEPEND}
+RDEPEND=">=app-text/t1utils-1.25
 	|| ( media-gfx/potrace >=media-gfx/autotrace-0.30 )
+	truetype? ( media-gfx/fontforge )
+	virtual/latex-base"
+DEPEND="${RDEPEND}
 	test? ( media-gfx/fontforge )"
 
 pkg_setup() {
