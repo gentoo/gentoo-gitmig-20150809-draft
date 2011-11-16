@@ -1,6 +1,10 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.304 2011/11/01 14:03:41 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.305 2011/11/16 10:07:39 jlec Exp $
+
+  16 Nov 2011; Justin Lecher <jlec@gentoo.org> poppler-0.16.7.ebuild,
+  poppler-0.18.1.ebuild:
+  Corrected Slotting of media-libs/tiff and media-libs/libpng
 
 *poppler-0.18.1 (01 Nov 2011)
 
