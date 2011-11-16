@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.4.21-r1.ebuild,v 1.14 2011/08/13 17:22:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/raptor-1.4.21-r1.ebuild,v 1.15 2011/11/16 18:32:49 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit eutils libtool
 
 DESCRIPTION="The RDF Parser Toolkit"
@@ -52,16 +52,16 @@ src_configure() {
 		$(use_enable static-libs static) \
 		$(use_enable unicode nfc-check) \
 		$(use_enable debug) \
-		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html \
 		${myconf}
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS ChangeLog NEWS NOTICE README
-	dohtml {NEWS,README,RELEASE}.html
-	find "${ED}" -name '*.la' -exec rm -f '{}' +
+	emake DESTDIR="${D}" install
 
-	# Fix file collision with SLOT="2"
-	rm -f "${ED}"/usr/bin/rapper "${ED}"/usr/share/man/man1/rapper.1*
+	find "${ED}" -name '*.la' -exec rm -f {} +
+
+	# Reduce installation of obsolete raptor1 to only mandatory files
+	rm -rf \
+		"${ED}"usr/bin/rapper \
+		"${ED}"usr/share
 }
