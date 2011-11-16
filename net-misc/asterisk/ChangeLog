@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.357 2011/11/04 10:19:05 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.358 2011/11/16 10:31:11 chainsaw Exp $
+
+*asterisk-10.0.0_rc2 (16 Nov 2011)
+
+  16 Nov 2011; Tony Vroon <chainsaw@gentoo.org> +asterisk-10.0.0_rc2.ebuild:
+  Release candidate for the long-term-support 10 branch; this will follow the
+  1.8 series up soon. Digium reports new T38 features, but you already had
+  backports of these in 1.8 ebuilds. ConfBridge has been greatly improved.
 
 *asterisk-1.8.7.1-r2 (04 Nov 2011)
 
