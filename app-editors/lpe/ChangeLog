@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/lpe
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/lpe/ChangeLog,v 1.24 2010/09/23 15:53:11 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/lpe/ChangeLog,v 1.25 2011/11/16 02:24:23 xmw Exp $
+
+  16 Nov 2011; Michael Weber <xmw@gentoo.org> lpe-1.2.6.13.ebuild:
+  Adding sys-libs/ncurses to RDEPEND (thanks Michael, bug 381021)
 
   23 Sep 2010; Samuli Suominen <ssuominen@gentoo.org> lpe-1.2.6.13.ebuild,
   +files/lpe-1.2.6.13-make-382.patch:
