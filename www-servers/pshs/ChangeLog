@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/pshs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pshs/ChangeLog,v 1.1 2011/11/11 16:34:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pshs/ChangeLog,v 1.2 2011/11/16 21:55:56 mgorny Exp $
+
+*pshs-0.2 (16 Nov 2011)
+
+  16 Nov 2011; Michał Górny <mgorny@gentoo.org> -pshs-0.1.ebuild,
+  +pshs-0.2.ebuild, metadata.xml:
+  Version bump. The new version introduces fixes to --no-upnp option, index
+  page and sendfile() support. It also adds support for getting local IP via
+  netlink and partial (Range) requests.
 
 *pshs-0.1 (11 Nov 2011)
 

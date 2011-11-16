@@ -8,6 +8,8 @@
 	<use>
 		<flag name='magic'>Enable automatic detection of Content-Type
 			using libmagic (<pkg>sys-apps/file</pkg>)</flag>
+		<flag name='netlink'>Use libnetlink (<pkg>sys-apps/iproute2</pkg>) to
+			get network interface addresses</flag>
 		<flag name='upnp'>Enable port forwarding using UPnP
 			via <pkg>net-libs/miniupnpc</pkg></flag>
 	</use>
