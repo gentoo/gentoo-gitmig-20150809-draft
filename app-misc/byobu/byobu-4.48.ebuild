@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/byobu-4.39.ebuild,v 1.1 2011/10/08 05:56:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/byobu-4.48.ebuild,v 1.1 2011/11/16 07:07:16 radhermit Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="2"
 
 inherit python
@@ -16,7 +16,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
 RDEPEND="|| ( app-misc/screen app-misc/tmux )
 	dev-libs/newt"
 
@@ -25,9 +24,9 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 
 	# Create symlinks for backends
-	dosym ${PN} /usr/bin/${PN}-screen || die
-	dosym ${PN} /usr/bin/${PN}-tmux || die
+	dosym ${PN} /usr/bin/${PN}-screen
+	dosym ${PN} /usr/bin/${PN}-tmux
 }
