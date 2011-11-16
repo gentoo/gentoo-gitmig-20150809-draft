@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-timer-plugin/xfce4-timer-plugin-0.6.2.ebuild,v 1.8 2011/11/02 14:19:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-timer-plugin/xfce4-timer-plugin-0.6.2.ebuild,v 1.9 2011/11/16 16:42:34 ssuominen Exp $
 
 EAPI=4
 inherit xfconf
@@ -10,7 +10,8 @@ HOMEPAGE="http://goodies.xfce.org/projects/panel-plugins/xfce4-timer-plugin"
 SRC_URI="mirror://xfce/src/panel-plugins/${PN}/0.6/${P}.tar.bz2
 	http://dev.gentoo.org/~ssuominen/${P}-ca.po.bz2
 	http://dev.gentoo.org/~ssuominen/${P}-hr.po.bz2
-	http://dev.gentoo.org/~ssuominen/${P}-nl.po.bz2"
+	http://dev.gentoo.org/~ssuominen/${P}-nl.po.bz2
+	http://dev.gentoo.org/~ssuominen/${P}-sk.po.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -29,8 +30,10 @@ pkg_setup() {
 }
 
 src_prepare() {
-	mv -vf "${WORKDIR}"/${P}-ca.po po/ca.po || die
-	mv -vf "${WORKDIR}"/${P}-hr.po po/hr.po || die
-	mv -vf "${WORKDIR}"/${P}-nl.po po/nl.po || die
+	local po
+	for po in ca hr nl sk; do
+		mv -vf "${WORKDIR}"/${P}-${po}.po po/${po}.po || die
+	done
+
 	xfconf_src_prepare
 }
