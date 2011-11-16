@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libexif
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.118 2011/11/13 18:42:04 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libexif/ChangeLog,v 1.119 2011/11/16 15:40:54 jer Exp $
+
+  16 Nov 2011; Jeroen Roovers <jer@gentoo.org> libexif-0.6.20.ebuild:
+  Stable for HPPA (bug #390249).
 
   13 Nov 2011; Michael Weber <xmw@gentoo.org> libexif-0.6.20.ebuild:
   bump EAPI to 4, sed configure directly, prepalldocs restored, -Wall restored
