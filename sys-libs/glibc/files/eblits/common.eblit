@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.22 2011/08/19 23:03:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.23 2011/11/16 16:07:46 vapier Exp $
 
 # We need to be able to set alternative headers for
 # compiling for non-native platform
@@ -210,9 +210,7 @@ want_nptl() {
 
 want_linuxthreads() {
 	[[ -z ${LT_VER} ]] && return 1
-	! use nptlonly && return 0
-	want_nptl || return 0
-	return 1
+	use linuxthreads
 }
 
 want_tls() {
