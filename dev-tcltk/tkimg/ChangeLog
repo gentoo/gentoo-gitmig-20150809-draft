@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/tkimg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.38 2011/10/23 11:55:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/ChangeLog,v 1.39 2011/11/16 10:35:11 jlec Exp $
+
+  16 Nov 2011; Justin Lecher <jlec@gentoo.org> tkimg-1.4-r3.ebuild,
+  -tkimg-1.4.20100510-r1.ebuild, -tkimg-1.5_pre324.ebuild,
+  -tkimg-1.5_pre324-r1.ebuild:
+  Remove all ebuilds which do not correctly build against system libs
 
   23 Oct 2011; Markus Meier <maekke@gentoo.org> tkimg-1.4-r3.ebuild:
   x86 stable, bug #386837
