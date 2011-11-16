@@ -1,9 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/pyalsaaudio-0.6.ebuild,v 1.4 2010/12/26 15:12:51 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/pyalsaaudio-0.6.ebuild,v 1.5 2011/11/16 19:01:42 hwoarang Exp $
 
-EAPI="2"
+EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
+RESTRICT_PYTHON_ABIS="*-jython"
 
 inherit distutils
 
@@ -11,7 +12,7 @@ DESCRIPTION="A Python wrapper for the ALSA API"
 HOMEPAGE="http://www.sourceforge.net/projects/pyalsaaudio http://pypi.python.org/pypi/pyalsaaudio"
 SRC_URI="mirror://sourceforge/pyalsaaudio/${P}.tar.gz mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
-LICENSE="PSF-2.4"
+LICENSE="PSF-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="doc"
