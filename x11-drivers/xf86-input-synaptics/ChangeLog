@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-input-synaptics
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.62 2011/07/20 23:34:56 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.63 2011/11/16 21:31:05 chithanh Exp $
+
+*xf86-input-synaptics-1.5.0 (16 Nov 2011)
+
+  16 Nov 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xf86-input-synaptics-1.5.0.ebuild:
+  Non-maintainer commit. Version bump, bug #385723. Drop dependency which is
+  already handled by xorg-2.eclass. Move kernel check to pkg_pretend().
 
   20 Jul 2011; Mark Loeser <halcy0n@gentoo.org>
   xf86-input-synaptics-1.4.0.ebuild:
