@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1-r1.ebuild,v 1.11 2011/10/28 01:03:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.32.1-r1.ebuild,v 1.12 2011/11/16 00:38:55 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -78,8 +78,6 @@ src_unpack() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# List the objects before the libraries to fix build with --as-needed
 	epatch "${FILESDIR}/${P}-as-needed.patch"
 
@@ -89,6 +87,7 @@ src_prepare() {
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	AT_M4DIR=${WORKDIR} eautoreconf
+	gnome2_src_prepare
 }
 
 src_install() {

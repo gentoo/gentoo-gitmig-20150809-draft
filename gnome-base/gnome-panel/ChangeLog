@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-panel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.347 2011/11/06 02:02:53 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.348 2011/11/16 00:38:55 tetromino Exp $
+
+  16 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-panel-2.32.1-r1.ebuild, gnome-panel-2.32.1-r2.ebuild,
+  gnome-panel-2.32.1-r3.ebuild:
+  QA: eautoreconf should be before gnome2_src_prepare.
 
 *gnome-panel-3.2.1 (06 Nov 2011)
 
