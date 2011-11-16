@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.106 2011/11/09 10:29:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.107 2011/11/16 22:06:45 robbat2 Exp $
+
+*git-1.7.8_rc1-r1 (16 Nov 2011)
+
+  16 Nov 2011; Robin H. Johnson <robbat2@gentoo.org> +git-1.7.8_rc1-r1.ebuild:
+  Bug #377883: build correctly with libpcre for git-grep -P.
 
 *git-1.7.7.3 (09 Nov 2011)
 
