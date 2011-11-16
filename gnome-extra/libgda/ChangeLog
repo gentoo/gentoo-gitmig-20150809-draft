@@ -1,6 +1,16 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.185 2011/11/01 11:29:34 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.186 2011/11/16 18:38:49 tetromino Exp $
+
+*libgda-5.0.1 (16 Nov 2011)
+*libgda-4.2.11 (16 Nov 2011)
+
+  16 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libgda-4.2.11.ebuild, +libgda-5.0.1.ebuild, metadata.xml:
+  Version bump for both slots; fixes several bugs, including building with
+  USE=doc (bug #388501). Enable mdb support for 4.2.11. Enable vala bindings
+  for 5.0.1 (they build now). Enable tests for 5.0.1 (the test suite now passes
+  when running from portage).
 
 *libgda-4.2.10 (01 Nov 2011)
 
