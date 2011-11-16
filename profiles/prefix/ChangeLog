@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.302 2011/11/16 15:44:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.303 2011/11/16 16:03:03 darkside Exp $
+
+  16 Nov 2011; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  lift games-misc/fortune-mod mask, bug 389943
 
   16 Nov 2011; Fabian Groffen <grobian@gentoo.org>
   +sunos/solaris/5.9/package.use.mask,
