@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.626 2011/11/16 02:29:48 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.627 2011/11/16 21:49:59 chithanh Exp $
+
+*xorg-server-1.11.2-r1 (16 Nov 2011)
+
+  16 Nov 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -xorg-server-1.11.1-r1.ebuild, -xorg-server-1.11.2.ebuild,
+  +xorg-server-1.11.2-r1.ebuild, +files/xdm.initd-4:
+  Add dependency on libXrender when building dmx, bug #390697. Prevent dbus
+  from starting too late, bug #390609.
 
   16 Nov 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   xorg-server-1.11.2.ebuild:

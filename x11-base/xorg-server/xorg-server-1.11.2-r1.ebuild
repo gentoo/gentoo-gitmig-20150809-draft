@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.11.1-r1.ebuild,v 1.2 2011/11/06 09:54:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.11.2-r1.ebuild,v 1.1 2011/11/16 21:49:59 chithanh Exp $
 
 EAPI=4
 
@@ -39,6 +39,7 @@ RDEPEND=">=app-admin/eselect-opengl-1.0.8
 		>=x11-libs/libXfixes-5.0
 		>=x11-libs/libXi-1.2.99.1
 		>=x11-libs/libXmu-1.0.3
+		x11-libs/libXrender
 		>=x11-libs/libXres-1.0.3
 		>=x11-libs/libXtst-1.0.99.2
 	)
@@ -110,12 +111,11 @@ PATCHES=(
 	"${UPSTREAMED_PATCHES[@]}"
 	"${FILESDIR}"/${PN}-disable-acpi.patch
 	"${FILESDIR}"/${PN}-1.9-nouveau-default.patch
-	"${FILESDIR}"/xorg-cve-2011-4028+4029.patch
 )
 
 pkg_pretend() {
 	# older gcc is not supported
-	[[ $(gcc-major-version) -lt 4 ]] && \
+	[[ "${MERGE_TYPE}" != "binary" && $(gcc-major-version) -lt 4 ]] && \
 		die "Sorry, but gcc earlier than 4.0 wont work for xorg-server."
 }
 
@@ -185,7 +185,7 @@ src_install() {
 	fi
 
 	newinitd "${FILESDIR}"/xdm-setup.initd-1 xdm-setup
-	newinitd "${FILESDIR}"/xdm.initd-3 xdm
+	newinitd "${FILESDIR}"/xdm.initd-4 xdm
 	newconfd "${FILESDIR}"/xdm.confd-4 xdm
 
 	# install the @x11-module-rebuild set for Portage
