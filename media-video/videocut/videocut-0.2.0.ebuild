@@ -1,13 +1,14 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/videocut/videocut-0.2.0.ebuild,v 1.1 2009/11/05 13:34:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/videocut/videocut-0.2.0.ebuild,v 1.2 2011/11/16 17:28:14 xarthisius Exp $
 
 EAPI=2
-inherit eutils qt4
+
+inherit eutils qt4-r2
 
 DESCRIPTION="A program to create compositions from video files"
 HOMEPAGE="http://code.google.com/p/videocut/"
-SRC_URI="http://videocut.googlecode.com/files/${PN}_${PV}.tar.gz"
+SRC_URI="http://${PN}.googlecode.com/files/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -15,13 +16,13 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="x11-libs/qt-gui:4
+	x11-libs/qt-svg:4
 	media-libs/xine-lib"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${P}.orig
 
-src_configure() {
-	eqmake4
-}
+PATCHES=( "${FILESDIR}"/01-fix-hardened-ftbfs.diff )
 
 src_compile() {
 	emake || die

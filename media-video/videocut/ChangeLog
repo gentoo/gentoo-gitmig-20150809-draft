@@ -1,6 +1,12 @@
 # ChangeLog for media-video/videocut
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/videocut/ChangeLog,v 1.1 2009/11/05 13:34:48 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/videocut/ChangeLog,v 1.2 2011/11/16 17:28:14 xarthisius Exp $
+
+  16 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/01-fix-hardened-ftbfs.diff, videocut-0.2.0.ebuild:
+  non-maintainer commit: add missing dependency on x11-libs/qt-svg:4, fix
+  building on hardened/with gcc-4.6 wrt #380439, drop redundant
+  src_configure(), use qt4-r2
 
 *videocut-0.2.0 (05 Nov 2009)
 
