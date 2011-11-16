@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/htbinit-0.8.5-r2.ebuild,v 1.1 2010/01/10 08:13:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/htbinit-0.8.5-r2.ebuild,v 1.2 2011/11/16 00:18:15 robbat2 Exp $
 
 EAPI=2
 inherit eutils linux-info
@@ -19,7 +19,6 @@ DEPEND="sys-apps/iproute2"
 S=${WORKDIR}
 
 pkg_setup() {
-	CONFIG_CHECK="~NET_SCH_HTB ~NET_SCH_SFQ ~NET_CLS_FW ~NET_CLS_U32 ~NET_CLS_ROUTE"
 	for i in NET_SCH_HTB NET_SCH_SFQ NET_CLS_FW NET_CLS_U32 NET_CLS_ROUTE ; do
 		CONFIG_CHECK="${CONFIG_CHECK} ~${i}"
 		eval "export WARNING_${i}='module needed at runtime!'"

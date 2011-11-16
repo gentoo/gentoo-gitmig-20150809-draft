@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/htbinit
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/ChangeLog,v 1.14 2010/01/10 08:13:42 robbat2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htbinit/ChangeLog,v 1.15 2011/11/16 00:18:15 robbat2 Exp $
+
+  16 Nov 2011; Robin H. Johnson <robbat2@gentoo.org> htbinit-0.8.5-r1.ebuild,
+  htbinit-0.8.5-r2.ebuild:
+  Backport linux-info config checks to stable revision, fix up dupe of some
+  checks.
 
 *htbinit-0.8.5-r2 (10 Jan 2010)
 
