@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libafterimage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.40 2011/10/23 19:57:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libafterimage/ChangeLog,v 1.41 2011/11/16 10:19:14 jlec Exp $
+
+  16 Nov 2011; Justin Lecher <jlec@gentoo.org> libafterimage-1.20.ebuild:
+  Corrected Slotting of media-libs/tiff and media-libs/libpng
 
   23 Oct 2011; Samuli Suominen <ssuominen@gentoo.org>
   -libafterimage-1.18-r1.ebuild, -files/libafterimage-1.18-glx.patch,
