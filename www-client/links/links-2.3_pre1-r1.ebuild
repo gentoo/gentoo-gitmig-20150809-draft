@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.3_pre1-r1.ebuild,v 1.7 2011/02/26 16:55:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.3_pre1-r1.ebuild,v 1.8 2011/11/16 10:15:12 jlec Exp $
 
 # SDL support is disabled in this version by upstream
 
@@ -30,23 +30,23 @@ RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6c )
 	gpm? ( sys-libs/gpm )
 	jpeg? ( virtual/jpeg )
 	fbcon? (
-		>=media-libs/libpng-1.4
+		>=media-libs/libpng-1.4:0
 		virtual/jpeg
 		sys-libs/gpm
 	)
-	tiff? ( >=media-libs/tiff-3.5.7 )
+	tiff? ( >=media-libs/tiff-3.5.7:0 )
 	svga? (
 		>=media-libs/svgalib-1.4.3
-		>=media-libs/libpng-1.4
+		>=media-libs/libpng-1.4:0
 	)
 	X? (
 		x11-libs/libXext
-		>=media-libs/libpng-1.4
+		>=media-libs/libpng-1.4:0
 	)
 	directfb? ( dev-libs/DirectFB )
 	sys-libs/ncurses
 	livecd? (
-		>=media-libs/libpng-1.4
+		>=media-libs/libpng-1.4:0
 		virtual/jpeg
 		sys-libs/gpm
 	)"
