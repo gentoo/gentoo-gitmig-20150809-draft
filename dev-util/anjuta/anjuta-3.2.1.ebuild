@@ -1,9 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.0.3.0.ebuild,v 1.1 2011/08/15 12:57:19 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-3.2.1.ebuild,v 1.1 2011/11/16 02:12:28 tetromino Exp $
 
-EAPI="3"
-GNOME_TARBALL_SUFFIX="xz"
+EAPI="4"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="2"
@@ -17,9 +16,15 @@ SRC_URI="${SRC_URI} mirror://gentoo/introspection.m4.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE="debug devhelp doc glade graphviz +introspection subversion test vala"
+IUSE="debug devhelp doc glade graphviz +introspection packagekit subversion test vala"
 
-RDEPEND=">=dev-libs/glib-2.28.0:2
+# FIXME: tests are fragile and may require a specific set of USE flags
+#RESTRICT="test"
+
+# FIXME: documentation fails to build when USE=test. But why?
+REQUIRED_USE="test? ( !doc )"
+
+COMMON_DEPEND=">=dev-libs/glib-2.29.2:2
 	x11-libs/gdk-pixbuf:2
 	>=x11-libs/gtk+-3.0.0:3
 	>=x11-libs/vte-0.27.6:2.90
@@ -29,7 +34,7 @@ RDEPEND=">=dev-libs/glib-2.28.0:2
 
 	sys-devel/autogen
 
-	>=gnome-extra/libgda-4.2.0:4
+	>=gnome-extra/libgda-4.99.0:5
 	dev-util/ctags
 
 	x11-libs/libXext
@@ -44,8 +49,10 @@ RDEPEND=">=dev-libs/glib-2.28.0:2
 		>=net-libs/neon-0.28.2
 		>=dev-libs/apr-1
 		>=dev-libs/apr-util-1 )
-	vala? ( >=dev-lang/vala-0.11.2:0.12 )"
-DEPEND="${RDEPEND}
+	vala? ( >=dev-lang/vala-0.13.3:0.14 )"
+RDEPEND="${COMMON_DEPEND}
+	packagekit? ( app-admin/packagekit-base )"
+DEPEND="${COMMON_DEPEND}
 	>=dev-lang/perl-5
 	!!dev-libs/gnome-build
 	>=sys-devel/gettext-0.17
@@ -55,12 +62,12 @@ DEPEND="${RDEPEND}
 	>=app-text/gnome-doc-utils-0.18
 	dev-util/gtk-doc-am
 	gnome-base/gnome-common
-	virtual/yacc
+	sys-devel/bison
 	sys-devel/flex
 	doc? ( >=dev-util/gtk-doc-1.4 )
 	test? (
-		~app-text/docbook-xml-dtd-4.1.2
-		~app-text/docbook-xml-dtd-4.5 )"
+		app-text/docbook-xml-dtd:4.1.2
+		app-text/docbook-xml-dtd:4.5 )"
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog FUTURE MAINTAINERS NEWS README ROADMAP THANKS TODO"
@@ -74,24 +81,22 @@ pkg_setup() {
 		$(use_enable glade plugin-glade)
 		$(use_enable graphviz)
 		$(use_enable introspection)
+		$(use_enable packagekit)
 		$(use_enable subversion plugin-subversion)
-		$(use_enable vala)
-		VALAC=$(type -P valac-0.12)"
+		$(use_enable vala)"
 
-	# Conflics with -pg in a plugin, bug #266777
+	if use vala; then
+		G2CONF="${G2CONF} VALAC=$(type -P valac-0.14)"
+	fi
+
+	# Conflicts with -pg in a plugin, bug #266777
 	filter-flags -fomit-frame-pointer
 
 	python_set_active_version 2
-
-	# FIXME: documentation fails to build when USE=test. But why?
-	# FIXME: change this to REQUIRED_USE when python.eclass allows EAPI4 <-- NO!
-	use test && use doc &&
-		die "For ${P}, doc USE flag must be disabled when FEATURES=test"
+	python_pkg_setup
 }
 
 #src_prepare() {
-#	gnome2_src_prepare
-
 	# Needed to preserve introspection configure option, see bgo#633730
 	# eautoreconf needs introspection.m4
 	#
@@ -100,6 +105,7 @@ pkg_setup() {
 #	cp "${WORKDIR}"/introspection.m4 . || die
 #	intltoolize --force --copy --automake || die "intltoolize failed"
 #	AT_M4DIR="." eautoreconf
+#	gnome2_src_prepare
 #}
 
 src_install() {
