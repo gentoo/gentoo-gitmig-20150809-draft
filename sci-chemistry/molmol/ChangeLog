@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/molmol
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/ChangeLog,v 1.28 2011/10/15 09:11:00 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/ChangeLog,v 1.29 2011/11/16 10:17:17 jlec Exp $
+
+  16 Nov 2011; Justin Lecher <jlec@gentoo.org> molmol-2k_p2-r2.ebuild:
+  Corrected Slotting of media-libs/libpng and media-libs/tiff
 
   15 Oct 2011; Kacper Kowalik <xarthisius@gentoo.org> -molmol-2k_p2.ebuild,
   molmol-2k_p2-r2.ebuild:
