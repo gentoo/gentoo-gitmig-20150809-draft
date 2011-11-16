@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/medusa
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/medusa/ChangeLog,v 1.32 2011/04/10 12:35:25 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/medusa/ChangeLog,v 1.33 2011/11/16 19:08:33 hwoarang Exp $
+
+  16 Nov 2011; Markos Chandras <hwoarang@gentoo.org> medusa-0.5.4.ebuild:
+  Update LICENSE. Patch by Arfrever
 
   10 Apr 2011; Tobias Klausmann <klausman@gentoo.org> medusa-0.5.4.ebuild:
   Stable on alpha, bug #343309
