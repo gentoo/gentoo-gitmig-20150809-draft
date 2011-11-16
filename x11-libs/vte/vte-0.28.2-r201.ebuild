@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.28.2-r201.ebuild,v 1.1 2011/11/16 08:12:53 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.28.2-r201.ebuild,v 1.2 2011/11/16 20:54:48 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 PYTHON_DEPEND="python? 2:2.4"
 
-inherit gnome2 python
+inherit eutils gnome2 python
 
 DESCRIPTION="GNOME terminal widget"
 HOMEPAGE="http://git.gnome.org/browse/vte"

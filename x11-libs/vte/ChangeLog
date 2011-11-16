@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/vte
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.298 2011/11/16 08:12:53 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.299 2011/11/16 20:54:48 tetromino Exp $
+
+  16 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  vte-0.28.2-r201.ebuild, vte-0.30.1-r1.ebuild:
+  Forgot to inherit eutils.
 
 *vte-0.28.2-r201 (16 Nov 2011)
 
