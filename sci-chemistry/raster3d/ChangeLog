@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/raster3d
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/ChangeLog,v 1.29 2011/10/09 15:00:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/ChangeLog,v 1.30 2011/11/16 09:58:55 jlec Exp $
+
+  16 Nov 2011; Justin Lecher <jlec@gentoo.org> raster3d-2.7c.ebuild,
+  raster3d-2.9.2.ebuild, raster3d-3.0.2.ebuild, metadata.xml:
+  Corrected Slotting of media-libs/libpng and media-libs/tiff
 
   09 Oct 2011; Markos Chandras <hwoarang@gentoo.org> raster3d-3.0.2.ebuild:
   Stable on amd64 wrt bug #385627
