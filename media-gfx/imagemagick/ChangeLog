@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.448 2011/10/17 17:14:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.449 2011/11/16 10:21:34 jlec Exp $
+
+  16 Nov 2011; Justin Lecher <jlec@gentoo.org> imagemagick-6.6.5.6.ebuild,
+  imagemagick-6.7.1.0.ebuild, imagemagick-6.7.3.0.ebuild:
+  Corrected Slotting of media-libs/tiff and media-libs/libpng
 
   17 Oct 2011; Jeroen Roovers <jer@gentoo.org> imagemagick-6.7.1.0.ebuild:
   Stable for HPPA (bug #378543).
