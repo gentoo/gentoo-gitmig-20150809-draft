@@ -1,6 +1,15 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.301 2011/11/14 17:12:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.302 2011/11/16 15:44:40 grobian Exp $
+
+  16 Nov 2011; Fabian Groffen <grobian@gentoo.org>
+  +sunos/solaris/5.9/package.use.mask,
+  +sunos/solaris/5.10/sparc/package.use.mask,
+  +sunos/solaris/5.11/sparc/package.use.mask,
+  sunos/solaris/5.10/sparc64/package.use.mask,
+  sunos/solaris/5.11/sparc64/package.use.mask:
+  Mask USE=jit for dev-libs/libpcre on all sparc-based Solaris profiles, there
+  is no ASM for sparc/sparcv9
 
   14 Nov 2011; Mike Frysinger <vapier@gentoo.org> packages:
   sys-apps/net-tools is no longer in base profile.
