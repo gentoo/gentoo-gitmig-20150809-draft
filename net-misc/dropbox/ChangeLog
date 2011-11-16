@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dropbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.6 2011/09/27 15:58:41 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbox/ChangeLog,v 1.7 2011/11/16 02:46:06 naota Exp $
+
+*dropbox-1.2.48 (16 Nov 2011)
+
+  16 Nov 2011; Naohiro Aota <naota@gentoo.org> +dropbox-1.2.48.ebuild:
+  Version bump. Bug #390133
 
 *dropbox-1.2.24-r1 (27 Sep 2011)
 
