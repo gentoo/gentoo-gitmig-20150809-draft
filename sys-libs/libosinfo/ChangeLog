@@ -1,0 +1,10 @@
+# ChangeLog for sys-libs/libosinfo
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libosinfo/ChangeLog,v 1.1 2011/11/16 01:50:40 nirbheek Exp $
+
+*libosinfo-0.0.1 (16 Nov 2011)
+
+  16 Nov 2011; Nirbheek Chauhan <nirbheek@gentoo.org> +libosinfo-0.0.1.ebuild,
+  +metadata.xml:
+  Add new package libosinfo, will be used by gnome-boxes
+
