@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.33 2011/09/09 20:54:53 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.34 2011/11/16 14:27:32 aidecoe Exp $
+
+*dracut-013-r2 (16 Nov 2011)
+
+  16 Nov 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> +dracut-013-r2.ebuild,
+  +files/dracut-013-makefile-manpages.patch:
+  Patched Makefile to install man pages properly. Fixes bug #390629. Btw, use
+  single call to epatch.
 
   09 Sep 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-010-r3.ebuild,
   dracut-011.ebuild, dracut-011-r1.ebuild, dracut-013.ebuild,
