@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.142 2011/11/15 18:53:20 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.143 2011/11/16 19:23:07 hwoarang Exp $
+
+  16 Nov 2011; Markos Chandras <hwoarang@gentoo.org> libvirt-0.9.6.ebuild:
+  Stable on amd64 wrt bug #390653
 
   15 Nov 2011; Doug Goldstein <cardoe@gentoo.org> libvirt-0.9.7.ebuild,
   libvirt-9999.ebuild:
