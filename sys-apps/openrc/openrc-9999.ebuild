@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.88 2011/11/07 12:57:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.89 2011/11/16 19:50:05 williamh Exp $
 
 EAPI=4
 
@@ -36,7 +36,6 @@ make_args() {
 	unset LIBDIR #266688
 
 	MAKE_ARGS="${MAKE_ARGS} LIBNAME=$(get_libdir) LIBEXECDIR=/$(get_libdir)/rc"
-	MAKE_ARGS="${MAKE_ARGS} MKOLDNET=yes"
 
 	local brand="Unknown"
 	if use kernel_linux ; then
@@ -95,9 +94,6 @@ src_install() {
 	make_args
 	emake ${MAKE_ARGS} DESTDIR="${D}" install
 
-	# install the readme for the new network scripts
-	dodoc README.newnet
-
 	# move the shared libs back to /usr so ldscript can install
 	# more of a minimal set of files
 	# disabled for now due to #270646
@@ -113,12 +109,8 @@ src_install() {
 	cp -PR "${D}"/etc/runlevels "${D}"/usr/share/${PN} || die
 	rm -rf "${D}"/etc/runlevels
 
-	# Stick with "old" net as the default for now
-	doconfd conf.d/net || die
-	pushd "${D}"/usr/share/${PN}/runlevels/boot > /dev/null
-	rm -f network staticroute
-	ln -s /etc/init.d/net.lo net.lo
-	popd > /dev/null
+	# Install the default net configuration
+	doconfd conf.d/net
 
 	# Setup unicode defaults for silly unicode users
 	set_config_yes_no /etc/rc.conf unicode use unicode
