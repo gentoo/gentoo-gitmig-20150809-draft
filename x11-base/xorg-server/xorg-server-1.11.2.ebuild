@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.11.2.ebuild,v 1.2 2011/11/06 09:54:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.11.2.ebuild,v 1.3 2011/11/16 02:29:48 chithanh Exp $
 
 EAPI=4
 
@@ -114,7 +114,7 @@ PATCHES=(
 
 pkg_pretend() {
 	# older gcc is not supported
-	[[ $(gcc-major-version) -lt 4 ]] && \
+	[[ "${MERGE_TYPE}" != "binary" && $(gcc-major-version) -lt 4 ]] && \
 		die "Sorry, but gcc earlier than 4.0 wont work for xorg-server."
 }
 

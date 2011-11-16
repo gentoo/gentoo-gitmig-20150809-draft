@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.625 2011/11/06 09:54:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.626 2011/11/16 02:29:48 chithanh Exp $
+
+  16 Nov 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  xorg-server-1.11.2.ebuild:
+  Disable gcc version check for binary merges, bug #383155.
 
   06 Nov 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   xorg-server-1.11.1-r1.ebuild, xorg-server-1.11.2.ebuild, +files/xdm.confd-4,
