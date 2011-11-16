@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.2-r3.ebuild,v 1.7 2011/10/31 07:35:16 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.32.2-r3.ebuild,v 1.8 2011/11/16 00:33:22 tetromino Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -126,8 +126,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	epatch "${FILESDIR}"/${PN}-2.32.1-libnotify-0.7.patch
 
 	# Fix invalid use of la file in contact-editor, upstream bug #635002
@@ -155,6 +153,7 @@ src_prepare() {
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
+	gnome2_src_prepare
 }
 
 src_install() {

@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.350 2011/10/31 07:35:16 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.351 2011/11/16 00:33:22 tetromino Exp $
+
+*evolution-3.2.2 (16 Nov 2011)
+
+  16 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  evolution-2.32.2-r3.ebuild, evolution-2.32.3.ebuild,
+  evolution-2.32.3-r1.ebuild, -evolution-3.0.3.ebuild, +evolution-3.2.2.ebuild:
+  Bump to 3.2.2 with assorted bugfixes. Drop old.
+  Also, QA: eautoreconf should be before gnome2_src_prepare.
 
 *evolution-3.2.1 (31 Oct 2011)
 
