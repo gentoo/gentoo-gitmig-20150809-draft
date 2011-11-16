@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libvncserver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.48 2011/11/16 01:57:17 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.49 2011/11/16 02:17:31 xmw Exp $
+
+  16 Nov 2011; Michael Weber <xmw@gentoo.org> -libvncserver-0.9.1.ebuild,
+  libvncserver-0.9.8.2.ebuild:
+  Drop storepasswd (bug 303117). Remove old version. non-maint commit.
 
 *libvncserver-0.9.8.2 (16 Nov 2011)
 

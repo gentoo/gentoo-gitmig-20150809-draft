@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.9.8.2.ebuild,v 1.1 2011/11/16 01:57:17 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.9.8.2.ebuild,v 1.2 2011/11/16 02:17:31 xmw Exp $
 
 EAPI="4"
 
@@ -51,6 +51,5 @@ src_compile() {
 
 src_install() {
 	emake install DESTDIR="${D}"
-	dobin examples/storepasswd
 	dodoc AUTHORS ChangeLog NEWS README TODO
 }
