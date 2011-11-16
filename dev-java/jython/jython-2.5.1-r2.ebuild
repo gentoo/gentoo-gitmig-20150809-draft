@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.5.1-r2.ebuild,v 1.1 2010/12/13 14:11:43 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.5.1-r2.ebuild,v 1.2 2011/11/16 19:05:54 hwoarang Exp $
 
 JAVA_PKG_IUSE="source doc examples oracle"
 #informix missing.  This is a jdbc driver, similar to oracle use flag
@@ -18,7 +18,7 @@ PYVER="2.5.5"
 SRC_URI="http://www.python.org/ftp/python/${PYVER%_*}/Python-${PYVER}.tgz
 	mirror://gentoo/${P}.tar.bz2"
 
-LICENSE="PSF-2.2"
+LICENSE="PSF-2"
 SLOT="2.5"
 PYTHON_ABI="${SLOT}-jython"
 KEYWORDS="~amd64 ~x86"
