@@ -1,6 +1,10 @@
 # ChangeLog for app-text/llpp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.14 2011/11/16 00:22:02 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.15 2011/11/16 17:27:18 chainsaw Exp $
+
+  16 Nov 2011; Tony Vroon <chainsaw@gentoo.org> llpp-7.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah "Armageddon" El Lazkani in bug #390683.
 
   16 Nov 2011; Michael Weber <xmw@gentoo.org> metadata.xml:
   Fix email.
