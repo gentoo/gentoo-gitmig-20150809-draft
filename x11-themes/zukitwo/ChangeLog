@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/zukitwo
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukitwo/ChangeLog,v 1.1 2011/10/28 08:59:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukitwo/ChangeLog,v 1.2 2011/11/16 09:21:26 tetromino Exp $
+
+*zukitwo-0_pre20111110 (16 Nov 2011)
+
+  16 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +zukitwo-0_pre20111110.ebuild:
+  Version bump, now uses the ubuntu font in the shell theme.
 
 *zukitwo-0_pre20111023 (28 Oct 2011)
 
