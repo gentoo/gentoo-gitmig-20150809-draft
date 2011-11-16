@@ -1,0 +1,11 @@
+# ChangeLog for dev-db/pgbouncer
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgbouncer/ChangeLog,v 1.1 2011/11/16 04:17:36 titanofold Exp $
+
+*pgbouncer-1.4.2 (16 Nov 2011)
+
+  16 Nov 2011; Aaron W. Swenson <titanofold@gentoo.org>
+  +pgbouncer-1.4.2.ebuild, +files/pgbouncer.initd, +metadata.xml:
+  Initial commit. Ebuild written by Johan Bergström <bugs@bergstroem.nu>.
+  Fixes bug 243232.
+
