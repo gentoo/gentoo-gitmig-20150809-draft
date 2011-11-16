@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/parallel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/parallel/ChangeLog,v 1.10 2011/06/02 07:26:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/parallel/ChangeLog,v 1.11 2011/11/16 17:06:59 darkside Exp $
+
+  16 Nov 2011; Jeremy Olexa <darkside@gentoo.org> parallel-20110522.ebuild:
+  add ~amd64-linux ~x86-linux, bug 387767
 
 *parallel-20110522 (02 Jun 2011)
 

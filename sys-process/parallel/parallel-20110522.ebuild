@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/parallel/parallel-20110522.ebuild,v 1.1 2011/06/02 07:26:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/parallel/parallel-20110522.ebuild,v 1.2 2011/11/16 17:06:59 darkside Exp $
 
 EAPI=3
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="dev-lang/perl"
