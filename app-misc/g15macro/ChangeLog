@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/g15macro
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15macro/ChangeLog,v 1.7 2010/03/06 20:17:19 robbat2 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15macro/ChangeLog,v 1.8 2011/11/16 21:43:07 robbat2 Exp $
+
+*g15macro-1.0.3-r1 (16 Nov 2011)
+
+  16 Nov 2011; Robin H. Johnson <robbat2@gentoo.org> +g15macro-1.0.3-r1.ebuild:
+  Bug 380259: avoid xtest automagic.
 
   06 Mar 2010; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Changing maintainer per emails of Jan 18th.
