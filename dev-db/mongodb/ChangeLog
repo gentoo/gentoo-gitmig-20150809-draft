@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/mongodb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.25 2011/10/27 13:34:28 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/ChangeLog,v 1.26 2011/11/16 09:44:09 ultrabug Exp $
+
+*mongodb-2.0.2_pre20111116 (16 Nov 2011)
+
+  16 Nov 2011; Ultrabug <ultrabug@gentoo.org>
+  +mongodb-2.0.2_pre20111116.ebuild, +files/mongodb-2.0-fix-scons.patch:
+  Bump for 2.x pre-release version.
 
   27 Oct 2011; Ultrabug <ultrabug@gentoo.org> mongodb-1.8.4-r1.ebuild:
   Fixed mms-agent SRC_URI
