@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-8.0.ebuild,v 1.5 2011/11/14 15:58:24 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-8.0-r1.ebuild,v 1.1 2011/11/16 14:50:59 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -37,14 +37,14 @@ if ! [[ ${PV} =~ alpha|beta ]]; then
 		# en and en_US are handled internally
 		if [[ ${X} != en ]] && [[ ${X} != en-US ]]; then
 			SRC_URI="${SRC_URI}
-				linguas_${X/-/_}? ( ${FTP_URI}/${MY_PV}/linux-i686/xpi/${X}.xpi -> ${P}-${X}.xpi )"
+				linguas_${X/-/_}? ( ${FTP_URI}/${TB_PV}/linux-i686/xpi/${X}.xpi -> ${P}-${X}.xpi )"
 		fi
 		IUSE="${IUSE} linguas_${X/-/_}"
 		# Install all the specific locale xpis if there's no generic locale xpi
 		# Example: there's no pt.xpi, so install all pt-*.xpi
 		if ! has ${X%%-*} "${LANGS[@]}"; then
 			SRC_URI="${SRC_URI}
-				linguas_${X%%-*}? ( ${FTP_URI}/${MY_PV}/linux-i686/xpi/${X}.xpi -> ${P}-${X}.xpi )"
+				linguas_${X%%-*}? ( ${FTP_URI}/${TB_PV}/linux-i686/xpi/${X}.xpi -> ${P}-${X}.xpi )"
 			IUSE="${IUSE} linguas_${X%%-*}"
 		fi
 	done
@@ -53,6 +53,7 @@ fi
 RDEPEND=">=sys-devel/binutils-2.16.1
 	>=dev-libs/nss-3.12.10
 	>=dev-libs/nspr-4.8.8
+	crashreporter? ( net-misc/curl )
 	gconf? ( >=gnome-base/gconf-1.2.1:2 )
 	media-libs/libpng[apng]
 	webm? ( media-libs/libvpx
@@ -105,15 +106,14 @@ linguas() {
 pkg_setup() {
 	moz_pkgsetup
 
-	if ! use crypt ; then
-		export MOZILLA_DIR="${S}/mozilla"
-	fi
+	export MOZILLA_DIR="${S}/mozilla"
 
 	if ! use bindist ; then
 		elog "You are enabling official branding. You may not redistribute this build"
 		elog "to any users on your network or the internet. Doing so puts yourself into"
 		elog "a legal problem with Mozilla Foundation"
 		elog "You can disable it by emerging ${PN} _with_ the bindist USE-flag"
+		elog
 	fi
 
 	# Ensure we have enough disk space to compile
@@ -145,6 +145,13 @@ src_prepare() {
 	epatch "${WORKDIR}/firefox"
 	popd &>/dev/null || die
 
+	if use lightning ; then
+		einfo "Fix lightning version to match upstream release"
+		einfo
+		sed -i -e 's:1.0b8pre:1.0:' "${S}"/calendar/sunbird/config/version.txt \
+			|| die "Failed to correct lightning version"
+	fi
+
 	if use crypt ; then
 		mv "${WORKDIR}"/enigmail "${S}"/mailnews/extensions/enigmail
 		# Ensure enigmail can find its scripts for gpg
@@ -166,11 +173,6 @@ src_prepare() {
 	epatch_user
 
 	eautoreconf
-
-	cd mozilla
-	eautoreconf
-	cd js/src
-	eautoreconf
 }
 
 src_configure() {
@@ -189,10 +191,6 @@ src_configure() {
 	# It doesn't compile on alpha without this LDFLAGS
 	use alpha && append-ldflags "-Wl,--no-relax"
 
-	if use crypt ; then
-		# omni.jar breaks enigmail
-		mozconfig_annotate '' --enable-chrome-format=jar
-	fi
 	mozconfig_annotate '' --enable-extensions="${MEXTENSIONS}"
 	mozconfig_annotate '' --with-default-mozilla-five-home="${EPREFIX}${MOZILLA_FIVE_HOME}"
 	mozconfig_annotate '' --with-user-appdir=.thunderbird
@@ -307,4 +305,11 @@ src_install() {
 	cp "${FILESDIR}"/thunderbird-gentoo-default-prefs-1.js \
 		"${ED}/${MOZILLA_FIVE_HOME}/defaults/pref/all-gentoo.js" || \
 		die "failed to cp thunderbird-gentoo-default-prefs.js"
+}
+
+pkg_postinst() {
+	elog
+	elog "If you are experience problems with plugins please issue the"
+	elog "following command : rm \${HOME}/.thunderbird/*/extensions.sqlite ,"
+	elog "then restart thunderbird"
 }
