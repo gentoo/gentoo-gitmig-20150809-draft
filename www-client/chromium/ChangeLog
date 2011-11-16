@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.502 2011/11/15 18:25:55 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.503 2011/11/16 01:55:37 floppym Exp $
+
+  16 Nov 2011; Mike Gilbert <floppym@gentoo.org> chromium-17.0.938.0.ebuild,
+  chromium-9999-r1.ebuild:
+  zip_reader.cc needs to be updated as well.
 
   15 Nov 2011; Mike Gilbert <floppym@gentoo.org> chromium-17.0.938.0.ebuild:
   Apply workaround for bug 383371 to zip_internal.cc. Bug 390633.
