@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.10-r1.ebuild,v 1.2 2011/11/01 15:13:51 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.11.10-r1.ebuild,v 1.3 2011/11/16 19:16:53 billie Exp $
 
 EAPI=4
 
@@ -245,6 +245,9 @@ src_install() {
 
 	rm -f "${D}"/usr/share/doc/hplip-3.11.10-r1/{copyright,README_LIBJPG,COPYING} || die
 	rmdir "${D}"/usr/share/doc/hplip-3.11.10-r1/ >/dev/null
+
+	# Remove hal fdi files
+	rm -rf "${D}"/usr/share/hal  || die
 
 	find "${D}" -name '*.la' -exec rm -rf '{}' '+' || die
 }

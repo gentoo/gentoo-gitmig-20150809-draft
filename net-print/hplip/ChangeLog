@@ -1,6 +1,10 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.201 2011/11/06 19:21:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.202 2011/11/16 19:16:53 billie Exp $
+
+  16 Nov 2011; Daniel Pielmeier <billie@gentoo.org> hplip-3.11.10-r1.ebuild:
+  Remove hal fdi files. This fixes bug #389645. Thanks to i.Dark_Templar for
+  the report.
 
   06 Nov 2011; Brent Baude <ranger@gentoo.org> hplip-3.11.10.ebuild:
   Marking hplip-3.11.10 ppc for bug 388989
