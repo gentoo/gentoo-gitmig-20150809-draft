@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/eclean-kernel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eclean-kernel/ChangeLog,v 1.5 2011/11/15 18:58:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eclean-kernel/ChangeLog,v 1.6 2011/11/16 22:44:53 mgorny Exp $
+
+*eclean-kernel-0.1.4 (16 Nov 2011)
+
+  16 Nov 2011; Michał Górny <mgorny@gentoo.org> -eclean-kernel-0.1.3.ebuild,
+  +eclean-kernel-0.1.4.ebuild:
+  Version bump. The new version fixes matching moduledir when path contains
+  symlinks and getting mtime when kernel no longer exists.
 
 *eclean-kernel-0.1.3 (15 Nov 2011)
 
