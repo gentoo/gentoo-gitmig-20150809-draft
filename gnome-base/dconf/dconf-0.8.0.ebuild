@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/dconf-0.8.0.ebuild,v 1.8 2011/10/30 15:52:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/dconf/dconf-0.8.0.ebuild,v 1.9 2011/11/16 17:10:54 darkside Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="http://live.gnome.org/dconf"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sh sparc x86"
+KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sh sparc x86 ~amd64-linux ~x86-linux"
 IUSE="doc vala +X"
 
 RDEPEND=">=dev-libs/glib-2.27.3:2
