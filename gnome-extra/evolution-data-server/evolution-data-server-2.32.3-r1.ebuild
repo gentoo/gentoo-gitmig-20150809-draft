@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.32.3-r1.ebuild,v 1.6 2011/10/30 16:18:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/evolution-data-server-2.32.3-r1.ebuild,v 1.7 2011/11/16 00:32:42 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -69,8 +69,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	gnome2_src_prepare
-
 	# Adjust to gentoo's /etc/service
 	epatch "${FILESDIR}/${PN}-2.31-gentoo_etc_services.patch"
 
@@ -99,6 +97,7 @@ src_prepare() {
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
+	gnome2_src_prepare
 }
 
 src_install() {
