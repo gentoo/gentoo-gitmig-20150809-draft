@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/warzone2100
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.68 2011/10/27 02:33:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.69 2011/11/16 02:17:23 mr_bones_ Exp $
+
+  16 Nov 2011; Michael Sterrett <mr_bones_@gentoo.org>
+  warzone2100-2.3.9.ebuild:
+  needs bison to build (bug #390689)
 
 *warzone2100-2.3.9 (27 Oct 2011)
 
