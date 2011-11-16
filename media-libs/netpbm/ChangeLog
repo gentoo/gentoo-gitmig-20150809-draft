@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.259 2011/10/23 19:53:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.260 2011/11/16 09:47:56 jlec Exp $
+
+  16 Nov 2011; Justin Lecher <jlec@gentoo.org> netpbm-10.51.00-r2.ebuild:
+  Corrected Slotting of media-libs/tiff and media-libs/libpng
 
   23 Oct 2011; Tim Harder <radhermit@gentoo.org>
   -files/netpbm-10.35.0-pnmtopng-zlib.patch, -files/netpbm-10.35.0-xml2.patch,

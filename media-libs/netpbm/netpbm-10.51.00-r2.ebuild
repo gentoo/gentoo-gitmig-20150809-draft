@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.51.00-r2.ebuild,v 1.4 2011/10/23 16:07:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.51.00-r2.ebuild,v 1.5 2011/11/16 09:47:56 jlec Exp $
 
 EAPI="3"
 
@@ -19,10 +19,10 @@ IUSE="jbig jpeg jpeg2k png rle svga tiff X xml zlib"
 RDEPEND="jbig? ( media-libs/jbigkit )
 	jpeg? ( virtual/jpeg )
 	jpeg2k? ( media-libs/jasper )
-	png? ( >=media-libs/libpng-1.4 )
+	png? ( >=media-libs/libpng-1.4:0 )
 	rle? ( media-libs/urt )
 	svga? ( media-libs/svgalib )
-	tiff? ( >=media-libs/tiff-3.5.5 )
+	tiff? ( >=media-libs/tiff-3.5.5:0 )
 	xml? ( dev-libs/libxml2 )
 	zlib? ( sys-libs/zlib )
 	X? ( x11-libs/libX11 )"
