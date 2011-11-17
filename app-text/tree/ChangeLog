@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tree
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.88 2011/10/17 15:31:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tree/ChangeLog,v 1.89 2011/11/17 18:21:09 mr_bones_ Exp $
+
+  17 Nov 2011; Michael Sterrett <mr_bones_@gentoo.org> tree-1.6.0.ebuild:
+  EAPI=4; fix lfs support (bug #390849)
 
   17 Oct 2011; Jeroen Roovers <jer@gentoo.org> tree-1.6.0.ebuild:
   Stable for HPPA (bug #380175).
