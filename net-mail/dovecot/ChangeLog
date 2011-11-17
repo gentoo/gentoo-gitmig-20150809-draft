@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.320 2011/11/17 06:45:04 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.321 2011/11/17 15:49:39 eras Exp $
+
+  17 Nov 2011; Eray Aslan <eras@gentoo.org> dovecot-2.0.16.ebuild:
+  Fix suid target - bug #390817
 
 *dovecot-2.0.16 (17 Nov 2011)
 

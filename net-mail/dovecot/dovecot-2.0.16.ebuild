@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0.16.ebuild,v 1.1 2011/11/17 06:45:04 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.0.16.ebuild,v 1.2 2011/11/17 15:49:39 eras Exp $
 
 EAPI=4
 
@@ -133,8 +133,8 @@ src_install () {
 	# better:
 	if use suid;then
 		einfo "Changing perms to allow deliver to be suided"
-		fowners root:mail "${ED}"/usr/libexec/dovecot/deliver
-		fperms 4750 "${ED}"/usr/libexec/dovecot/deliver
+		fowners root:mail "${EPREFIX}/usr/libexec/dovecot/dovecot-lda"
+		fperms 4750 "${EPREFIX}/usr/libexec/dovecot/dovecot-lda"
 	fi
 
 	newinitd "${FILESDIR}"/dovecot.init-r3 dovecot
