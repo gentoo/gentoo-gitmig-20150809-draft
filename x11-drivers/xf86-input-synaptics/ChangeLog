@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-synaptics
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.63 2011/11/16 21:31:05 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.64 2011/11/17 17:49:39 chithanh Exp $
+
+  17 Nov 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  metadata.xml:
+  Remove chainsaw and add x11 to maintainers, as per bug #385723 comment 8.
 
 *xf86-input-synaptics-1.5.0 (16 Nov 2011)
 
