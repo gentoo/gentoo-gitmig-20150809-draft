@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/zim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/ChangeLog,v 1.14 2011/10/24 06:44:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/ChangeLog,v 1.15 2011/11/17 13:04:40 xmw Exp $
+
+*zim-0.53 (17 Nov 2011)
+
+  17 Nov 2011; Michael Weber <xmw@gentoo.org> -zim-0.28.ebuild,
+  -files/zim-0.28-disable-updates.patch, -zim-0.46.ebuild,
+  -files/zim-0.46-disable-updates.patch, -zim-0.47.ebuild, +zim-0.53.ebuild:
+  Version bump (thanks to Alastair Murray for the report bug 390773), drop use
+  flags, remove old versions.
 
   24 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org> zim-0.46.ebuild:
   Depend on correct slot of pygobject.

@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/zim-0.46.ebuild,v 1.5 2011/10/24 06:44:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/zim/zim-0.53.ebuild,v 1.1 2011/11/17 13:04:40 xmw Exp $
 
 PYTHON_USE_WITH="sqlite"
 PYTHON_DEPEND="2:2.5"
 
-EAPI="3"
+EAPI=3
 
-inherit eutils virtualx fdo-mime distutils
+inherit distutils eutils fdo-mime virtualx
 
 DESCRIPTION="A desktop wiki"
 HOMEPAGE="http://zim-wiki.org/"
@@ -16,19 +16,13 @@ SRC_URI="http://zim-wiki.org/downloads/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="graphviz latex screenshot spell test"
+IUSE="test"
 
 RDEPEND="|| ( >=dev-lang/python-2.6 dev-python/simplejson )
-	dev-python/pygobject:2
-	dev-python/pygtk
-	x11-libs/gtk+:2
+	dev-python/pygtk"
+DEPEND="${RDEPEND}
 	x11-misc/xdg-utils
-	graphviz? ( media-gfx/graphviz )
-	latex? ( virtual/latex-base app-text/dvipng )
-	screenshot? ( media-gfx/scrot )
-	spell? ( dev-python/gtkspell-python )"
-
-DEPEND="${RDEPEND}"
+	test? ( dev-vcs/bzr )"
 
 pkg_setup() {
 	python_set_active_version 2
@@ -36,18 +30,16 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-disable-updates.patch"
-	# remove unneeded variables
-	sed -i "/^assert/s:^:#:g" "${S}"/zim/__init__.py
+	sed -i -e "s/'USER'/'LOGNAME'/g" zim/__init__.py zim/fs.py || die
 }
 
 src_test() {
-	VIRTUALX_COMMAND="$(PYTHON)" virtualmake test.py || die "src_test failed"
+	VIRTUALX_COMMAND="$(PYTHON)" virtualmake test.py || die
 }
 
 src_install () {
 	doicon data/${PN}.png || die "doicon failed"
-	distutils_src_install
+	distutils_src_install --skip-xdg-cmd
 }
 
 pkg_postinst() {
@@ -56,6 +48,15 @@ pkg_postinst() {
 	xdg-icon-resource install --context mimetypes --size 64 \
 		"${ROOT}/usr/share/pixmaps/zim.png" \
 		application-x-zim-notebook || die "xdg-icon-resource install failed"
+	ewarn "Please emerge these packages for additional functionality"
+	ewarn "    dev-lang/R"
+	ewarn "    dev-python/gtkspell-python"
+	ewarn "    dev-vcs/bzr"
+	ewarn "    media-gfx/graphviz"
+	ewarn "    media-gfx/imagemagick"
+	ewarn "    media-gfx/scrot"
+	ewarn "    sci-visualization/gnuplot"
+	ewarn "    virtual/latex-base app-text/dvipng"
 }
 
 pkg_postrm() {
