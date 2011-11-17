@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/uif2iso
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/uif2iso/ChangeLog,v 1.9 2011/11/15 22:11:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/uif2iso/ChangeLog,v 1.10 2011/11/17 18:47:32 phajdan.jr Exp $
+
+  17 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> uif2iso-0.1.7c.ebuild:
+  x86 stable wrt bug #390569
 
   15 Nov 2011; Markos Chandras <hwoarang@gentoo.org> uif2iso-0.1.7c.ebuild:
   Stable on amd64 wrt bug #390569
