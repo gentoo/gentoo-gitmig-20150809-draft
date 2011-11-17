@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/x86/make.defaults,v 1.9 2011/02/13 18:09:39 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/x86/make.defaults,v 1.10 2011/11/17 01:14:27 jmbsvicetto Exp $
 
 ARCH="x86"
 ACCEPT_KEYWORDS="x86"
@@ -8,9 +8,6 @@ ACCEPT_KEYWORDS="x86"
 CHOST="i686-pc-linux-gnu"
 CFLAGS="-march=i686 -O2 -pipe"
 CXXFLAGS="${CFLAGS}"
-
-# STAGE1_USE does not stack
-STAGE1_USE="hardened nptl nptlonly pic"
 
 USE="nptl nptlonly"
 

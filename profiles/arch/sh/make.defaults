@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/make.defaults,v 1.1 2008/04/01 17:40:02 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/make.defaults,v 1.2 2011/11/17 01:14:25 jmbsvicetto Exp $
 
 # Main SuperH profile
 
@@ -11,7 +11,9 @@ CHOST="sh-unknown-linux-gnu"
 CFLAGS="-O2"
 CXXFLAGS="${CFLAGS}"
 
-# We define our own STAGE1_USE, since we need to disable ssp.
-STAGE1_USE="nptl nptlonly unicode nossp"
+# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (16 Nov 2011)
+# Rename STAGE1_USE to BOOTSTRAP_USE and stack it to the parent value
+# We need to disable ssp.
+BOOTSTRAP_USE="${BOOTSTRAP_USE} nossp"
 
 USE="nossp"

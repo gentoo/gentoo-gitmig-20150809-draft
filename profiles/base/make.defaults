@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.71 2011/08/22 21:43:33 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.72 2011/11/17 01:14:26 jmbsvicetto Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -100,3 +100,7 @@ USE="${USE} cxx"
 # We usually don't want python to (re)write .py[co] files during phase runs
 # since it could cause sandbox violations
 PYTHONDONTWRITEBYTECODE="1"
+
+# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (16 Nov 2011)
+# Add default USE value for bootstrap and rename it from STAGE1_USE to BOOTSTRAP_USE
+BOOTSTRAP_USE="cxx unicode"

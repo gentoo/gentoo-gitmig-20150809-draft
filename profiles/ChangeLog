@@ -1,10 +1,29 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5917 2011/11/16 13:34:08 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5918 2011/11/17 01:14:25 jmbsvicetto Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Nov 2011; <atlantis@gentoo.org> arch/mips/make.defaults,
+  arch/sh/make.defaults, base/make.defaults,
+  features/32bit-native/make.defaults, features/32bit-userland/make.defaults,
+  features/64bit-native/make.defaults, features/multilib/make.defaults,
+  hardened/linux/amd64/make.defaults,
+  hardened/linux/amd64/no-multilib/make.defaults,
+  hardened/linux/ia64/make.defaults, hardened/linux/make.defaults,
+  hardened/linux/powerpc/ppc32/make.defaults,
+  hardened/linux/powerpc/ppc64/make.defaults,
+  hardened/linux/x86/10.0/make.defaults, hardened/linux/x86/make.defaults,
+  hardened/make.defaults, uclibc/make.defaults,
+  uclibc/mips/hardened/make.defaults,
+  uclibc/mips/mipsel/hardened/make.defaults, uclibc/ppc/hardened/make.defaults,
+  uclibc/x86/hardened/make.defaults:
+  Rename STAGE1_USE to BOOTSTRAP_USE, add "cxx unicode" to the base value on
+  base/make.defaults
+  and make it stack from derived profiles. This should allow gcc to build on
+  stage 2 - bug 390701.
 
   16 Nov 2011; Tony Vroon <chainsaw@gentoo.org> package.mask:
   Mask 10 branch of Asterisk due to module loading issues on hardened.
