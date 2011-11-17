@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/read-edid
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/read-edid/ChangeLog,v 1.24 2011/11/16 17:24:58 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/read-edid/ChangeLog,v 1.25 2011/11/17 18:44:44 phajdan.jr Exp $
+
+  17 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  read-edid-2.0.0-r1.ebuild:
+  x86 stable wrt bug #390679
 
   16 Nov 2011; Tony Vroon <chainsaw@gentoo.org> read-edid-2.0.0-r1.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
