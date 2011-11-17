@@ -1,13 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.2.ebuild,v 1.1 2011/10/31 00:24:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/libnl-3.2.2.ebuild,v 1.2 2011/11/17 16:48:28 jer Exp $
 
 EAPI="4"
 
 inherit eutils multilib autotools-utils
 
 DESCRIPTION="A library for applications dealing with netlink socket"
-HOMEPAGE="http://people.suug.ch/~tgr/libnl/"
+HOMEPAGE="http://www.infradead.org/~tgr/libnl/"
 SRC_URI="http://people.suug.ch/~tgr/libnl/files/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="3"
