@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/vuze
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.49 2011/03/23 19:18:36 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.50 2011/11/17 23:27:43 caster Exp $
+
+*vuze-4.7.0.0 (17 Nov 2011)
+
+  17 Nov 2011; Vlastimil Babka <caster@gentoo.org> -vuze-4.3.1.4-r2.ebuild,
+  +vuze-4.7.0.0.ebuild:
+  Version bump, bug #388635. Uses swt-3.7
 
   23 Mar 2011; Kacper Kowalik <xarthisius@gentoo.org> vuze-4.5.1.0.ebuild:
   ppc/ppc64 stable wrt #354171

@@ -1,26 +1,28 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.3.1.4-r2.ebuild,v 1.6 2011/01/24 19:51:54 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.7.0.0.ebuild,v 1.1 2011/11/17 23:27:43 caster Exp $
 
 EAPI=2
 
 JAVA_PKG_IUSE="source"
 
-inherit eutils fdo-mime java-pkg-2 java-ant-2
+inherit eutils fdo-mime java-pkg-2 java-ant-2 versionator
 
-PATCHSET_VER="4.3.1.2"
+MY_PV=$(replace_all_version_separators "")
+
+PATCHSET_VER="4.5.0.2"
 PATCHSET_DIR="${PN}-${PATCHSET_VER}-gentoo-patches"
 PATCHSET="${PATCHSET_DIR}.tar.bz2"
-SRC_TARBALL="Vuze_${PV}_source.zip"
+SRC_TARBALL="Vuze_${MY_PV}_source.zip"
 
 DESCRIPTION="BitTorrent client in Java, formerly called Azureus"
 HOMEPAGE="http://www.vuze.com/"
-SRC_URI="mirror://sourceforge/azureus/${SRC_TARBALL}
+SRC_URI="mirror://sourceforge/azureus/${PN}/Vuze_${MY_PV}/${SRC_TARBALL}
 	mirror://gentoo/${PATCHSET}"
 LICENSE="GPL-2 BSD"
 
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 # bundles parts of commons-lang, but modified
@@ -30,7 +32,7 @@ RDEPEND="
 	dev-java/bcprov:1.3
 	>=dev-java/commons-cli-1.0:1
 	>=dev-java/log4j-1.2.8:0
-	dev-java/swt:3.5[cairo,xulrunner]
+	dev-java/swt:3.7[cairo]
 	!net-p2p/azureus-bin
 	>=virtual/jre-1.5"
 
@@ -45,9 +47,16 @@ src_unpack() {
 	unpack ${PATCHSET}
 	mkdir "${S}" && cd "${S}" || die
 	unpack ${SRC_TARBALL}
+	# this is no longer needed
+	rm "${WORKDIR}/${PATCHSET_DIR}/0006-Remove-the-use-of-windows-only-Tree2-widget.patch" || die
 }
 
 java_prepare() {
+	# build.xml disappeared from 4.4.0.0 although it was there in 4.3.1.4
+	# hopefully that's just a packaging mistake
+	[[ -f build.xml ]] && die "upstream has build.xml again, don't overwrite"
+	cp "${FILESDIR}/build.xml" . || die "failed to copy build.xml"
+
 	EPATCH_FORCE="yes" EPATCH_SUFFIX="patch" epatch "${WORKDIR}/${PATCHSET_DIR}/"
 
 	### Removes OS X files and entries.
@@ -58,8 +67,7 @@ java_prepare() {
 	rm -v ./org/gudy/azureus2/ui/swt/win32/Win32UIEnhancer.java || die
 
 	### Removes test files.
-	rm -rv "org/gudy/azureus2/ui/swt/test" \
-		org/gudy/azureus2/ui/console/multiuser/TestUserManager.java || die
+	rm -rv org/gudy/azureus2/ui/console/multiuser/TestUserManager.java || die
 
 	### Removes bouncycastle (we use our own bcprov).
 	rm -rv "org/bouncycastle" || die
@@ -67,11 +75,15 @@ java_prepare() {
 	### Removes bundled json
 	rm -rv "org/json" || die
 
+	### The Tree2 file does not compile against Linux SWT and is used only on Windows.
+	### It's runtime-conditional use is thus patched out in the patchset.
+	rm -rf "org/eclipse" || die
+
 	mkdir -p build/libs || die
 }
 
 JAVA_ANT_REWRITE_CLASSPATH="true"
-EANT_GENTOO_CLASSPATH="swt-3.5,bcprov-1.3,json-simple,log4j,commons-cli-1"
+EANT_GENTOO_CLASSPATH="swt-3.6,bcprov-1.3,json-simple,log4j,commons-cli-1"
 
 src_compile() {
 	local mem
@@ -106,25 +118,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	###
-	### @Todo We should probably deactivate auto-update it by default,
-	###       or even remove the option - bug #218959
-	###
 	ewarn "Running Vuze as root is not supported and may result in untracked"
-	ewarn "updates to shared components and then collisions on updates via portage"
+	ewarn "updates to shared components and then collisions on updates via ebuilds"
 
 	elog "Vuze has been formerly called Azureus and many references to the old name remain."
-	elog
-	elog "Since version 4.1.0.0, plugins that are normally bundled by upstream"
-	elog "(and auto-installed in each user's ~/.azureus if not bundled)"
-	elog "are now installed into shared plugin directory by the vuze-coreplugins ebuild."
-	elog
-	elog "Vuze may warn that shared plugin dir is not writable, that's fine."
-	elog "It may also attempt to update some these plugins and fail to write."
-	elog "In that case look for or fill a bump bug in bugs.gentoo.org"
-	elog
-	elog "We plan to disable updater for shared components and plugins."
-	elog "See progress in bug #218959, patches welcome."
 	elog
 	elog "After running Vuze for the first time, configuration"
 	elog "options will be placed in '~/.azureus/gentoo.config'."
@@ -132,18 +129,12 @@ pkg_postinst() {
 	elog "modify this file, rather than the startup script."
 	elog "Using this config file you can start the console UI."
 	elog
-	elog "To switch from classic UI to Vuze use"
-	elog "1: Tools > Options > Interface > Start > Display Vuze UI Chooser"
-	elog "2: Toolbar (right-hand side)"
-	elog
-	elog "If you have problems starting Vuze, try starting it"
-	elog "from the command line to look at debugging output."
-	elog
-	elog "If vuze crashes with sun-jdk or icedtea and crash log includes CompileTask"
-	elog "add this line to the end of your ~/.axureus/gentoo.config file:"
-	local opts='-XX:CompileCommand=exclude,com/aelitis/net/udp/uc/impl/PRUDPPacketHandlerImpl$5,runSupport'
-	elog "JAVA_OPTIONS='${opts}'"
-	elog "This is a workaround for a bug in the JDK, see https://bugs.gentoo.org/show_bug.cgi?id=259884"
+
+	if ! has_version dev-java/swt:3.6[xulrunner]; then
+		elog
+		elog "Your dev-java/swt:3.6 was built without xulrunner support. Features such as Vuze HD Network will not work."
+		elog "Rebuild swt with USE=xulrunner (needs xulrunner-1.9) to use these features."
+	fi
 
 	fdo-mime_desktop_database_update
 }
