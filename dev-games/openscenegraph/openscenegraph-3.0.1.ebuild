@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-3.0.1.ebuild,v 1.1 2011/10/14 09:50:30 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-3.0.1.ebuild,v 1.2 2011/11/17 18:57:24 reavertm Exp $
 
 EAPI=3
 
@@ -84,6 +84,7 @@ DOCS=(AUTHORS.txt ChangeLog NEWS.txt)
 
 PATCHES=(
 	"${FILESDIR}/${P}-cmake.patch"
+	"${FILESDIR}/${PN}-3.0.1-libav-0.7.patch"
 )
 
 src_configure() {

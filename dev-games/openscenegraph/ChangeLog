@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/openscenegraph
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.43 2011/11/17 18:14:20 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.44 2011/11/17 18:57:24 reavertm Exp $
+
+  17 Nov 2011; Maciej Mrozowski <reavertm@gentoo.org>
+  +files/openscenegraph-3.0.1-libav-0.7.patch, openscenegraph-3.0.1.ebuild:
+  Fix the way ffmpeg headers are included, bug 390793.
 
   17 Nov 2011; Maciej Mrozowski <reavertm@gentoo.org> metadata.xml:
   Add myself as maintainer.
