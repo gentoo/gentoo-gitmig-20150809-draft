@@ -1,6 +1,9 @@
 # ChangeLog for net-im/kmess
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/ChangeLog,v 1.86 2011/11/15 08:56:30 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/ChangeLog,v 1.87 2011/11/17 18:51:51 phajdan.jr Exp $
+
+  17 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> kmess-2.0.6-r3.ebuild:
+  x86 stable wrt bug #389713
 
   15 Nov 2011; Tony Vroon <chainsaw@gentoo.org> kmess-2.0.6-r3.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
