@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gradm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.169 2011/11/17 14:10:34 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.170 2011/11/17 14:13:42 blueness Exp $
+
+  17 Nov 2011; Anthony G. Basile <blueness@gentoo.org>
+  gradm-2.2.2.201111011031.ebuild:
+  amd64, x86 stable
 
   17 Nov 2011; Anthony G. Basile <blueness@gentoo.org>
   -gradm-2.2.0.201011061849.ebuild, -files/gradm-udev.patch:
