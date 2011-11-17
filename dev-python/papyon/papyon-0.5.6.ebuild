@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/papyon/papyon-0.5.6.ebuild,v 1.1 2011/11/13 07:22:31 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/papyon/papyon-0.5.6.ebuild,v 1.2 2011/11/17 09:33:47 chainsaw Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -13,7 +13,7 @@ SRC_URI="http://www.freedesktop.org/software/${PN}/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-python/pygobject-2.10:2

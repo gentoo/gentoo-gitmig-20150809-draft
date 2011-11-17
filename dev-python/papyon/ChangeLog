@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/papyon
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/papyon/ChangeLog,v 1.30 2011/11/13 07:24:58 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/papyon/ChangeLog,v 1.31 2011/11/17 09:33:47 chainsaw Exp $
+
+  17 Nov 2011; Tony Vroon <chainsaw@gentoo.org> papyon-0.5.6.ebuild:
+  Fast-tracked to AMD64 stable based on arch testing by Agostino "ago" Sarubbo
+  & Michael "n0idx80" Harrison in bug #390349.
 
 *papyon-0.5.6 (13 Nov 2011)
 
