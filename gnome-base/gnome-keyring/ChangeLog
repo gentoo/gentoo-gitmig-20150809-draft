@@ -1,6 +1,16 @@
 # ChangeLog for gnome-base/gnome-keyring
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/ChangeLog,v 1.214 2011/10/30 15:58:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/ChangeLog,v 1.215 2011/11/17 06:09:12 tetromino Exp $
+
+*gnome-keyring-3.2.2 (17 Nov 2011)
+
+  17 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -files/gnome-keyring-3.0.2-automagic-libcap.patch,
+  -gnome-keyring-3.0.3-r200.ebuild, -gnome-keyring-3.0.3-r300.ebuild,
+  +gnome-keyring-3.2.2.ebuild:
+  Bump, drop old. Notable changes: no longer autostarts in xfce and lxde (they
+  don't support the new gnome-keyring dbus API), various bugfixes. Restrict
+  tests since there seems to be no good way to reliably run them from portage.
 
   30 Oct 2011; Raúl Porcel <armin76@gentoo.org>
   gnome-keyring-2.32.1-r1.ebuild:
