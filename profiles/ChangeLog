@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5918 2011/11/17 01:14:25 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5919 2011/11/17 16:11:03 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Nov 2011; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Mask www-client/opera snapshot.
 
   17 Nov 2011; <atlantis@gentoo.org> arch/mips/make.defaults,
   arch/sh/make.defaults, base/make.defaults,
