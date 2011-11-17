@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.14 2011/11/15 09:02:15 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.15 2011/11/17 16:04:02 dev-zero Exp $
+
+  17 Nov 2011; Tiziano Müller <dev-zero@gentoo.org> mysql-v2.eclass:
+  Fixed misplaced quotes in mysql-v2 eclass causing 'emerge --config mysql' to
+  fail (bug #388673).
 
   15 Nov 2011; Vlastimil Babka <caster@gentoo.org> java-vm-2.eclass:
   Drop the repetitive elogs about revdep rebuild control files for binary
