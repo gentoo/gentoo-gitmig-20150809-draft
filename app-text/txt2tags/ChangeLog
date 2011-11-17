@@ -1,6 +1,9 @@
 # ChangeLog for app-text/txt2tags
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/ChangeLog,v 1.42 2011/11/16 10:44:50 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/ChangeLog,v 1.43 2011/11/17 18:53:25 phajdan.jr Exp $
+
+  17 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> txt2tags-2.6.ebuild:
+  x86 stable wrt bug #357995
 
   16 Nov 2011; Tony Vroon <chainsaw@gentoo.org> txt2tags-2.6.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
