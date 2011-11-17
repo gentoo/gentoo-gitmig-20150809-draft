@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/bittorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.144 2011/11/17 15:42:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.145 2011/11/17 18:49:50 phajdan.jr Exp $
+
+  17 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  bittorrent-4.4.0-r2.ebuild:
+  x86 stable wrt bug #390591
 
   17 Nov 2011; Jeroen Roovers <jer@gentoo.org> bittorrent-4.4.0-r2.ebuild:
   Stable for HPPA (bug #390591).
