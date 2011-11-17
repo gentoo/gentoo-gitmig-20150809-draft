@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome-keyring/libgnome-keyring-3.0.3-r1.ebuild,v 1.2 2011/08/17 16:47:43 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnome-keyring/libgnome-keyring-3.2.2.ebuild,v 1.1 2011/11/17 06:10:33 tetromino Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
@@ -13,12 +13,12 @@ HOMEPAGE="http://live.gnome.org/GnomeKeyring"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~sparc-solaris"
+KEYWORDS="~amd64 ~mips ~sh ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~sparc-solaris"
 IUSE="debug doc test"
 
 RDEPEND=">=sys-apps/dbus-1.0
 	gnome-base/gconf
-	>=gnome-base/gnome-keyring-2.29[test?]"
+	>=gnome-base/gnome-keyring-3.1.92[test?]"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/intltool-0.35
@@ -38,11 +38,11 @@ src_prepare() {
 	# FIXME: Remove silly CFLAGS
 	sed -e 's:CFLAGS="$CFLAGS -Werror:CFLAGS="$CFLAGS:' \
 		-e 's:CFLAGS="$CFLAGS -g -O0:CFLAGS="$CFLAGS:' \
-		-i configure.in configure || die "sed failed"
+		-i configure.ac configure || die "sed failed"
 
 	# FIXME: Remove DISABLE_DEPRECATED flags
 	sed -e '/-D[A-Z_]*DISABLE_DEPRECATED/d' \
-		-i configure.in configure || die "sed 2 failed"
+		-i configure.ac configure || die "sed 2 failed"
 }
 
 src_test() {
