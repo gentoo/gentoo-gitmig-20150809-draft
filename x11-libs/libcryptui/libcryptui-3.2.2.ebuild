@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcryptui/libcryptui-3.2.0.ebuild,v 1.2 2011/11/17 06:09:57 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcryptui/libcryptui-3.2.2.ebuild,v 1.1 2011/11/17 06:09:57 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -46,7 +46,6 @@ RDEPEND="${COMMON_DEPEND}
 pkg_setup() {
 	G2CONF="${G2CONF}
 		--disable-static
-		--disable-scrollkeeper
 		--disable-update-mime-database
 		$(use_enable debug)
 		$(use_enable introspection)
