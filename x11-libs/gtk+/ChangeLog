@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.551 2011/11/16 23:44:46 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.552 2011/11/17 03:15:34 tetromino Exp $
+
+*gtk+-2.24.8-r1 (17 Nov 2011)
+
+  17 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org> -gtk+-2.24.8.ebuild,
+  +gtk+-2.24.8-r1.ebuild, +files/gtk+-2.24.8-iconview-layout.patch:
+  Add upstream patch to prevent segfault in gtk_icon_view_layout_single_row,
+  drop broken version. Thanks to Rafał Mużyło (galtgendo) for reporting.
 
 *gtk+-3.2.2-r1 (16 Nov 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.8.ebuild,v 1.1 2011/11/16 21:54:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.8-r1.ebuild,v 1.1 2011/11/17 03:15:34 tetromino Exp $
 
 EAPI="4"
 PYTHON_DEPEND="2:2.4"
@@ -93,6 +93,9 @@ src_prepare() {
 
 	# fix building with gir #372953, upstream bug #642085
 	epatch "${FILESDIR}"/${PN}-2.24.7-darwin-quartz-introspection.patch
+
+	# Upstream patch to fix iconview crash, will be in next release
+	epatch "${FILESDIR}/${P}-iconview-layout.patch"
 
 	# Stop trying to build unmaintained docs, bug #349754
 	strip_builddir SUBDIRS tutorial docs/Makefile.am docs/Makefile.in
