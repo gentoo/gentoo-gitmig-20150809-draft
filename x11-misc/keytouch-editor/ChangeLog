@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/keytouch-editor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch-editor/ChangeLog,v 1.9 2011/03/29 13:03:24 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/keytouch-editor/ChangeLog,v 1.10 2011/11/17 19:04:53 hwoarang Exp $
+
+  17 Nov 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Change developer's email
 
   29 Mar 2011; Christoph Mende <angelos@gentoo.org>
   keytouch-editor-3.1.3.ebuild:

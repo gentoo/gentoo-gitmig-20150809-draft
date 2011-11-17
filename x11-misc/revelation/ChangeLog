@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/revelation
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.19 2011/06/26 13:07:04 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.20 2011/11/17 19:05:19 hwoarang Exp $
+
+  17 Nov 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Change developer's email
 
   26 Jun 2011; Tristan Heaven <nyhm@gentoo.org> revelation-0.4.11-r2.ebuild,
   files/revelation-0.4.11-build.patch, metadata.xml:
