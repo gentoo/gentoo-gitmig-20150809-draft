@@ -1,9 +1,0 @@
---- blitters.S
-+++ blitters.S
-@@ -242,3 +242,6 @@
-  * Initial revision
-  *
-  */
-+#if defined(__linux__) && defined(__ELF__)
-+.section .note.GNU-stack,"",%progbits
-+#endif
