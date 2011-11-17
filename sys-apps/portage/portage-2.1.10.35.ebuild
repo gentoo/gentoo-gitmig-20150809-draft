@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.0_alpha72.ebuild,v 1.3 2011/11/12 16:16:11 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.10.35.ebuild,v 1.1 2011/11/17 06:19:41 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -10,7 +10,7 @@ inherit eutils multilib python
 DESCRIPTION="Portage is the package management and distribution system for Gentoo"
 HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
 LICENSE="GPL-2"
-KEYWORDS="~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 SLOT="0"
 IUSE="build doc epydoc +ipc linguas_pl python2 python3 selinux"
 
@@ -28,14 +28,14 @@ DEPEND="${python_dep}
 	!build? ( >=sys-apps/sed-4.0.5 )
 	doc? ( app-text/xmlto ~app-text/docbook-xml-dtd-4.4 )
 	epydoc? ( >=dev-python/epydoc-2.0 !<=dev-python/pysqlite-2.4.1 )"
-# Require sandbox-2.2 for bug #288863.
+
 RDEPEND="${python_dep}
 	!build? ( >=sys-apps/sed-4.0.5
 		>=app-shells/bash-3.2_p17
 		>=app-admin/eselect-1.2 )
 	elibc_FreeBSD? ( sys-freebsd/freebsd-bin )
-	elibc_glibc? ( >=sys-apps/sandbox-2.2 )
-	elibc_uclibc? ( >=sys-apps/sandbox-2.2 )
+	elibc_glibc? ( >=sys-apps/sandbox-1.6 )
+	elibc_uclibc? ( >=sys-apps/sandbox-1.6 )
 	>=app-misc/pax-utils-0.1.17
 	selinux? ( || ( >=sys-libs/libselinux-2.0.94[python] <sys-libs/libselinux-2.0.94 ) )
 	!<app-shells/bash-3.2_p17
@@ -61,7 +61,7 @@ prefix_src_archives() {
 
 PV_PL="2.1.2"
 PATCHVER_PL=""
-TARBALL_PV=2.2.0_alpha72
+TARBALL_PV=$PV
 SRC_URI="mirror://gentoo/${PN}-${TARBALL_PV}.tar.bz2
 	$(prefix_src_archives ${PN}-${TARBALL_PV}.tar.bz2)
 	linguas_pl? ( mirror://gentoo/${PN}-man-pl-${PV_PL}.tar.bz2
@@ -189,8 +189,6 @@ src_install() {
 	insinto /etc
 	doins etc-update.conf dispatch-conf.conf || die
 
-	insinto "$portage_share_config/sets"
-	doins "$S"/cnf/sets/*.conf || die
 	insinto "$portage_share_config"
 	doins "$S/cnf/make.globals" || die
 	if [ -f "make.conf.${ARCH}".diff ]; then
@@ -320,21 +318,22 @@ pkg_preinst() {
 		rm "${ROOT}/etc/make.globals"
 	fi
 
-	has_version "<${CATEGORY}/${PN}-2.2_alpha"
-	MINOR_UPGRADE=$?
+	if [[ -d ${ROOT}var/log/portage && \
+		$(ls -ld "${ROOT}var/log/portage") != *" portage portage "* ]] && \
+		has_version '<sys-apps/portage-2.1.10.11' ; then
+		# Initialize permissions for bug #378451 and bug #377177, since older
+		# portage does not create /var/log/portage with the desired default
+		# permissions.
+		einfo "Applying portage group permission to ${ROOT}var/log/portage for bug #378451"
+		chown portage:portage "${ROOT}var/log/portage"
+		chmod g+ws "${ROOT}var/log/portage"
+	fi
 
-	has_version "<=${CATEGORY}/${PN}-2.2_pre5"
-	WORLD_MIGRATION_UPGRADE=$?
+	[[ -n $PORTDIR_OVERLAY ]] && has_version "<${CATEGORY}/${PN}-2.1.6.12" \
+		&& REPO_LAYOUT_CONF_WARN=true || REPO_LAYOUT_CONF_WARN=false
 
-	# If portage-2.1.6 is installed and the preserved_libs_registry exists,
-	# assume that the NEEDED.ELF.2 files have already been generated.
-	has_version "<=${CATEGORY}/${PN}-2.2_pre7" && \
-		! ( [ -e "$ROOT"var/lib/portage/preserved_libs_registry ] && \
-		has_version ">=${CATEGORY}/${PN}-2.1.6_rc" )
-	NEEDED_REBUILD_UPGRADE=$?
-
-	[[ -n $PORTDIR_OVERLAY ]] && has_version "<${CATEGORY}/${PN}-2.1.6.12"
-	REPO_LAYOUT_CONF_WARN=$?
+	has_version "<${CATEGORY}/${PN}-2.1.10.34" \
+		&& QUIET_BUILD_WARN=true || QUIET_BUILD_WARN=false
 }
 
 pkg_postinst() {
@@ -342,33 +341,7 @@ pkg_postinst() {
 	# will be identified and removed in postrm.
 	python_mod_optimize /usr/$(get_libdir)/portage/pym
 
-	if [ $WORLD_MIGRATION_UPGRADE = 0 ] ; then
-		einfo "moving set references from the worldfile into world_sets"
-		cd "${ROOT}/var/lib/portage/"
-		grep "^@" world >> world_sets
-		sed -i -e '/^@/d' world
-	fi
-
-	if [ $NEEDED_REBUILD_UPGRADE = 0 ] ; then
-		einfo "rebuilding NEEDED.ELF.2 files"
-		for cpv in "${ROOT}/var/db/pkg"/*/*; do
-			if [ -f "${cpv}/NEEDED" ]; then
-				rm -f "${cpv}/NEEDED.ELF.2"
-				while read line; do
-					filename=${line% *}
-					needed=${line#* }
-					needed=${needed//+/++}
-					needed=${needed//#/##}
-					needed=${needed//%/%%}
-					newline=$(scanelf -BF "%a;%F;%S;%r;${needed}" $filename)
-					newline=${newline//  -  }
-					echo "${newline:3}" >> "${cpv}/NEEDED.ELF.2"
-				done < "${cpv}/NEEDED"
-			fi
-		done
-	fi
-
-	if [ $REPO_LAYOUT_CONF_WARN = 0 ] ; then
+	if $REPO_LAYOUT_CONF_WARN ; then
 		ewarn
 		echo "If you want overlay eclasses to override eclasses from" \
 			"other repos then see the portage(5) man page" \
@@ -378,11 +351,14 @@ pkg_postinst() {
 		ewarn
 	fi
 
-	if [ $MINOR_UPGRADE = 0 ] ; then
-		elog "If you're upgrading from a pre-2.2 version of portage you might"
-		elog "want to remerge world (emerge -e world) to take full advantage"
-		elog "of some of the new features in 2.2."
-		elog "This is not required however for portage to function properly."
+	if $QUIET_BUILD_WARN ; then
+		elog
+		echo "NOTE: Beginning with portage-2.1.10.34, the emerge" \
+			"--quiet-build option is enabled by default." \
+			"Set --quiet-build=n in EMERGE_DEFAULT_OPTS if" \
+			"you want to disable it by default. See the emerge(1)" \
+			"man page for more information about this option." \
+			| fmt -w 75 | while read -r ; do elog "$REPLY" ; done
 		elog
 	fi
 }

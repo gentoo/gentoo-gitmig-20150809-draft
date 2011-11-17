@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.907 2011/11/12 16:16:11 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.908 2011/11/17 06:19:41 zmedico Exp $
+
+*portage-2.1.10.35 (17 Nov 2011)
+
+  17 Nov 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.35.ebuild,
+  -portage-2.1.10.32.ebuild, -portage-2.2.0_alpha72.ebuild:
+  2.1.10.35 version bump. This fixes bug #390711 (clean up previous build prior
+  to pkg_pretend) and bug #390699 (support HOSTNAME variable for emerge quiet
+  mode xterm titles). Bug #381649 tracks all bugs fixed since portage-2.1.10.11.
 
   12 Nov 2011; Zac Medico <zmedico@gentoo.org> metadata.xml,
   portage-2.1.10.11.ebuild, portage-2.1.10.32.ebuild, portage-2.1.10.34.ebuild,
