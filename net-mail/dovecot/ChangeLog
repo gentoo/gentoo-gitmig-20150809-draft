@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.319 2011/11/05 21:25:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.320 2011/11/17 06:45:04 eras Exp $
+
+*dovecot-2.0.16 (17 Nov 2011)
+
+  17 Nov 2011; Eray Aslan <eras@gentoo.org> +dovecot-2.0.16.ebuild:
+  Version bump. Add static-libs USE flag.
 
   05 Nov 2011; Markus Meier <maekke@gentoo.org> dovecot-2.0.15.ebuild:
   arm stable, bug #388373
