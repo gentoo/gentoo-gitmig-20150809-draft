@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.0_rc6.ebuild,v 1.1 2011/10/18 10:51:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.0_rc6.ebuild,v 1.2 2011/11/17 17:05:54 jlec Exp $
 
 EAPI=3
 
@@ -25,8 +25,8 @@ COMMON_DEPEND="
 	media-libs/fontconfig
 	media-libs/freetype:2
 	media-libs/lcms:2
-	media-libs/libpng
-	media-libs/tiff
+	media-libs/libpng:0
+	media-libs/tiff:0
 	net-print/cups
 	sys-libs/zlib
 	x11-libs/qt-core:4
