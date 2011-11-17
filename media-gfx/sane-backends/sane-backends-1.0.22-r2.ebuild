@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.22-r2.ebuild,v 1.1 2011/11/10 21:27:20 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.22-r2.ebuild,v 1.2 2011/11/17 07:59:03 naota Exp $
 
 EAPI="4"
 
@@ -138,7 +138,7 @@ SRC_URI="ftp://ftp.sane-project.org/pub/sane/${P}/${P}.tar.gz
 	ftp://ftp.sane-project.org/pub/sane/old-versions/${P}/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2 public-domain"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 pkg_setup() {
 	enewgroup scanner
@@ -159,6 +159,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-libv4l-0.8.3.patch
 	# Bug #329047
 	epatch "${FILESDIR}"/niash_array_index.patch
+	epatch "${FILESDIR}"/${P}-freebsd.patch
 }
 
 src_configure() {
