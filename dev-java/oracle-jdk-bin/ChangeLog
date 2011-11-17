@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/oracle-jdk-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.5 2011/11/12 14:09:22 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jdk-bin/ChangeLog,v 1.6 2011/11/17 22:49:56 caster Exp $
+
+*oracle-jdk-bin-1.7.0.1-r2 (17 Nov 2011)
+
+  17 Nov 2011; Vlastimil Babka <caster@gentoo.org>
+  +oracle-jdk-bin-1.7.0.1-r2.ebuild, files/oracle-jdk-bin-1.7.env:
+  Revbump to make the LDPATH variable useful for building JNI libraries (as
+  used by lwjgl) instead of the bogus directories in java.library.path.
 
   12 Nov 2011; Ralph Sennhauser <sera@gentoo.org> -oracle-jdk-bin-1.7.0.ebuild,
   -oracle-jdk-bin-1.7.0.1.ebuild:
