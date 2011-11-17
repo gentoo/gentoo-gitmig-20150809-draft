@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13251 2011/11/17 17:46:29 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13252 2011/11/17 20:59:28 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -238,13 +238,6 @@ app-misc/openjnlp
 # Masked for removal on 18 Nov 2011
 # https://bugs.gentoo.org/377695
 sys-apps/lsparisc
-
-# Michael Sterrett <mr_bones_@gentoo.org> (17 Oct 2011)
-# Masked for removal on 20111116
-# https://bugs.gentoo.org/show_bug.cgi?id=295776
-# https://bugs.gentoo.org/show_bug.cgi?id=308375
-# https://bugs.gentoo.org/show_bug.cgi?id=383101
-games-arcade/stepmania
 
 # Markos Chandras <hwoarang@gentoo.org> (16 Oct 2011)
 # Does not build with newer kernels. Open bug for version bump
@@ -1070,38 +1063,6 @@ app-crypt/hmaccalc
 # Masked for testing, and some testsuite failures.
 # Bug 313769
 =sys-libs/db-5.0*
-
-# Michael Sterrett <mr_bones_@gentoo.org> (14 Apr 2010)
-# gtk+-1 is old and nasty.
-# Will be removed 20111116 
-# Read man 5 portage about package.unmask to unmask the package locally.
-games-arcade/cervi
-games-emulation/darcnes
-games-emulation/epsxe
-games-emulation/gtuxnes
-games-emulation/infones
-games-emulation/pcsx
-games-emulation/pcsx2
-games-emulation/ps2emu-cddvdlinuz
-games-emulation/ps2emu-cdvdiso
-games-emulation/ps2emu-dev9null
-games-emulation/ps2emu-gssoft
-games-emulation/ps2emu-padxwin
-games-emulation/ps2emu-spu2null
-games-emulation/ps2emu-usbnull
-games-emulation/psemu-cdriso
-games-emulation/psemu-padjoy
-games-emulation/psemu-padxwin
-games-emulation/psemu-peopssoftgpu
-games-emulation/psemu-peopsspu
-games-fps/wmquake
-games-kids/gtans
-games-mud/gMOO
-games-puzzle/codebreaker
-games-puzzle/glickomania
-games-puzzle/xpuyopuyo
-games-simulation/corewars
-games-strategy/xscorch
 
 # Pacho Ramos <pacho@gentoo.org> (10 Apr 2010)
 # This version provides packages from testing to let people using
