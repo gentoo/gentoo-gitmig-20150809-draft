@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13250 2011/11/17 16:11:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13251 2011/11/17 17:46:29 chithanh Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -152,10 +152,6 @@ x11-themes/polyester
 # Hans de Graaff <graaff@gentoo.org> (3 Nov 2011)
 # Mask for testing and until we can add all ruby targets again.
 =dev-ruby/rake-0.9*
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (31 Oct 2011)
-# mask development release
-=x11-drivers/xf86-video-intel-2.16.902
 
 # Markos Chandras <hwoarang@gentoo.org> (31 Oct 2011)
 # Masking 4.8 rc release. The ebuilds are still work in
