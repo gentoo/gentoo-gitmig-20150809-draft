@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-r/vim-r-110614.ebuild,v 1.1 2011/06/25 09:48:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vim-r/vim-r-111114.ebuild,v 1.1 2011/11/17 16:36:24 radhermit Exp $
 
 EAPI="4"
 VIM_PLUGIN_VIM_VERSION="7.3"
@@ -26,5 +26,5 @@ src_unpack() {
 }
 
 src_prepare() {
-	rm README
+	rm README || die
 }
