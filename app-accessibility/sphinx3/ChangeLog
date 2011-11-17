@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/sphinx3
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx3/ChangeLog,v 1.4 2009/04/01 18:05:03 williamh Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx3/ChangeLog,v 1.5 2011/11/17 17:45:56 neurogeek Exp $
+
+*sphinx3-0.8 (17 Nov 2011)
+
+  17 Nov 2011; Jesus Rivero <neurogeek@gentoo.org> +sphinx3-0.8.ebuild,
+  +files/sphinx3-0.8_heap_fix.patch:
+  Version bump. Closes bug #344991
 
   01 Apr 2009; William Hubbs <williamh@gentoo.org> sphinx3-0.6.3.ebuild:
   Stable on x86.
