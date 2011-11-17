@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/dmenu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.71 2011/11/16 17:23:45 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.72 2011/11/17 15:39:15 jer Exp $
+
+  17 Nov 2011; Jeroen Roovers <jer@gentoo.org> dmenu-4.4.1.ebuild:
+  Stable for HPPA (bug #389219).
 
   16 Nov 2011; Tony Vroon <chainsaw@gentoo.org> dmenu-4.4.1.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
