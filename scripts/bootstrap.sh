@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.93 2011/07/14 19:19:02 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.94 2011/11/17 01:51:06 jmbsvicetto Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -52,7 +52,7 @@ v_echo() {
 	env "$@"
 }
 
-cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.93 2011/07/14 19:19:02 zmedico Exp $"
+cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.94 2011/11/17 01:51:06 jmbsvicetto Exp $"
 cvsver=${cvsver##*,v }
 cvsver=${cvsver%%Exp*}
 cvsyear=${cvsver#* }
@@ -304,16 +304,16 @@ export CONFIG_PROTECT="-*"
 # disable collision-protection
 export FEATURES="${FEATURES} -collision-protect"
 
-# query STAGE1_USE from the profile
-STAGE1_USE=$(portageq envvar STAGE1_USE)
+# query BOOTSTRAP_USE from the profile
+BOOTSTRAP_USE=$(portageq envvar BOOTSTRAP_USE)
 
 if [ ${BOOTSTRAP_STAGE} -le 1 ] ; then
 	show_status 2 Updating portage
-	${V_ECHO} USE="-* build bootstrap ${ALLOWED_USE} ${STAGE1_USE}" emerge ${STRAP_EMERGE_OPTS} ${myPORTAGE} || cleanup 1
+	${V_ECHO} USE="-* build bootstrap ${ALLOWED_USE} ${BOOTSTRAP_USE}" emerge ${STRAP_EMERGE_OPTS} ${myPORTAGE} || cleanup 1
 	echo -------------------------------------------------------------------------------
 	set_bootstrap_stage 2
 fi
-export USE="-* bootstrap ${ALLOWED_USE} ${STAGE1_USE}"
+export USE="-* bootstrap ${ALLOWED_USE} ${BOOTSTRAP_USE}"
 
 # We can't unmerge headers which may or may not exist yet. If your
 # trying to use nptl, it may be needed to flush out any old headers
