@@ -1,6 +1,20 @@
 # ChangeLog for games-emulation/sdlmame
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.54 2011/09/30 16:50:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmame/ChangeLog,v 1.55 2011/11/17 06:47:50 mr_bones_ Exp $
+
+*sdlmame-0.144 (17 Nov 2011)
+
+  17 Nov 2011; Michael Sterrett <mr_bones_@gentoo.org> -sdlmame-0.136.ebuild,
+  -files/sdlmame-0.136-nodebug.patch, -sdlmame-0.141_p3.ebuild,
+  -sdlmame-0.142.ebuild, -files/sdlmame-0.142-makefile.patch,
+  -sdlmame-0.143_p4.ebuild, -sdlmame-0.143_p5.ebuild,
+  -files/sdlmame-0.143_p4-makefile.patch,
+  -files/sdlmame-0.143_p4-no-opengl.patch,
+  -files/sdlmame-0.143_p5-makefile.patch,
+  -files/sdlmame-0.143_p5-no-opengl.patch, +sdlmame-0.144.ebuild,
+  +files/sdlmame-0.144-makefile.patch, +files/sdlmame-0.144-no-opengl.patch,
+  -files/joymap.dat, -files/mame.ini.in:
+  version bump; drop ppc to ~
 
   30 Sep 2011; Mike Frysinger <vapier@gentoo.org> sdlmame-0.141_p3.ebuild,
   sdlmame-0.142.ebuild, sdlmame-0.142_p5.ebuild, sdlmame-0.143_p4.ebuild,

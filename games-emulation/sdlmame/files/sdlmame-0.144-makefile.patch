@@ -1,6 +1,6 @@
---- work.orig/makefile
-+++ work/makefile
-@@ -431,9 +431,6 @@
+--- work.orig/makefile	2011-11-09 22:40:30.000000000 -0500
++++ work/makefile	2011-11-16 19:24:24.615419949 -0500
+@@ -435,9 +435,6 @@
  CPPONLYFLAGS += -x c++ -std=gnu++98
  COBJFLAGS += -x objective-c++
  
@@ -10,7 +10,7 @@
  # add -g if we need symbols, and ensure we have frame pointers
  ifdef SYMBOLS
  CCOMFLAGS += -g$(SYMLEVEL) -fno-omit-frame-pointer
-@@ -449,23 +446,6 @@
+@@ -453,23 +450,6 @@
  CCOMFLAGS += -pg
  endif
  
@@ -34,10 +34,14 @@
  # add a basic set of warnings
  CCOMFLAGS += \
  	-Wall \
-@@ -523,16 +503,6 @@
- # linking flags
- #-------------------------------------------------
+@@ -524,20 +504,6 @@
+ endif
  
+ 
+-#-------------------------------------------------
+-# linking flags
+-#-------------------------------------------------
+-
 -# LDFLAGS are used generally; LDFLAGSEMULATOR are additional
 -# flags only used when linking the core emulator
 -LDFLAGS =
@@ -51,7 +55,7 @@
  LDFLAGSEMULATOR =
  
  # add profiling information for the linker
-@@ -540,13 +510,6 @@
+@@ -545,13 +511,6 @@
  LDFLAGS += -pg
  endif
  
