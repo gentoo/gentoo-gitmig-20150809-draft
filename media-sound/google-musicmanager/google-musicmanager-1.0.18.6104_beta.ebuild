@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.18.6104_beta.ebuild,v 1.2 2011/10/04 15:10:52 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.18.6104_beta.ebuild,v 1.3 2011/11/17 09:26:01 ferringb Exp $
 
 EAPI=4
 
@@ -75,7 +75,7 @@ src_install() {
 	#TODO unbundle this
 	doexe libaacdec.so libaudioenc.so.0 libmpgdec.so.0 libid3tag.so
 
-	dosym /"${INSTALL_BASE}"/google-musicmanager /opt/bin/
+	dosym /"${INSTALL_BASE}"/google-musicmanager /opt/bin/google-musicmanager
 
 	make_desktop_entry "${PN}" "Google Music Manager" \
 		"/${INSTALL_BASE}/product_logo_32.xpm" "AudioVideo;Audio;Player;Music"
