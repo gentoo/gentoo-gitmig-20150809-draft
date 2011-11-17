@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/remmina
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.5 2011/06/24 14:41:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.6 2011/11/17 18:54:09 hwoarang Exp $
+
+  17 Nov 2011; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Change developer's nickname
 
 *remmina-9999 (24 Jun 2011)
 
