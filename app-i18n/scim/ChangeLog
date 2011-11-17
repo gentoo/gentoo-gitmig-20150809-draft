@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/scim
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.146 2011/10/28 07:56:51 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.147 2011/11/17 09:06:46 naota Exp $
+
+*scim-1.4.11-r1 (17 Nov 2011)
+
+  17 Nov 2011; Naohiro Aota <naota@gentoo.org> +scim-1.4.11-r1.ebuild,
+  +files/scim-1.4.11-type-module-use.patch:
+  Add patch to make it work with Firefox and Thunderbird. Bug #390053
 
 *scim-1.4.11 (28 Oct 2011)
 
