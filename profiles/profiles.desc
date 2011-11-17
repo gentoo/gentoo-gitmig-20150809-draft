@@ -172,22 +172,6 @@ ppc64		hardened/linux/powerpc/ppc64/64bit-userland		dev
 x86		hardened/linux/x86					stable
 x86		hardened/linux/x86/selinux				stable
 
-# selinux profiles
-amd64		selinux/2007.0/amd64				dev
-amd64		selinux/2007.0/amd64/hardened			dev
-amd64		selinux/v2refpolicy/amd64			dev
-amd64		selinux/v2refpolicy/amd64/desktop		dev
-amd64		selinux/v2refpolicy/amd64/developer		dev
-amd64		selinux/v2refpolicy/amd64/hardened		dev
-amd64		selinux/v2refpolicy/amd64/server		dev
-x86		selinux/2007.0/x86				dev
-x86		selinux/2007.0/x86/hardened			dev
-x86		selinux/v2refpolicy/x86				dev
-x86		selinux/v2refpolicy/x86/desktop			dev
-x86		selinux/v2refpolicy/x86/developer		dev
-x86		selinux/v2refpolicy/x86/hardened		dev
-x86		selinux/v2refpolicy/x86/server			dev
-
 # uclibc/embedded multiarch profiles
 #amd64		uclibc/amd64					dev
 #arm		uclibc/arm					dev
