@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.794 2011/11/16 16:07:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.795 2011/11/17 21:22:53 vapier Exp $
+
+  17 Nov 2011; Mike Frysinger <vapier@gentoo.org> files/eblits/common.eblit:
+  When we filter flags, make sure we update CFLAGS_x86 to avoid endlessly
+  appending it as reported by Anush Elangovan.
 
   16 Nov 2011; Mike Frysinger <vapier@gentoo.org>
   glibc-2.9_p20081201-r3.ebuild, glibc-2.10.1-r1.ebuild, glibc-2.11.3.ebuild,
