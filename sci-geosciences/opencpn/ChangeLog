@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/opencpn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/opencpn/ChangeLog,v 1.5 2011/09/28 14:39:18 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/opencpn/ChangeLog,v 1.6 2011/11/17 18:45:10 phajdan.jr Exp $
+
+  17 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> opencpn-2.5.0.ebuild:
+  x86 stable wrt bug #390551
 
   28 Sep 2011; Marc Schiffbauer <mschiff@gentoo.org> opencpn-2.5.0.ebuild,
   +files/opencpn-2.5.0_tinyxml_stl.patch:
