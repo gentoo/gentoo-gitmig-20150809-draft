@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.18.6104_beta.ebuild,v 1.3 2011/11/17 09:26:01 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/google-musicmanager/google-musicmanager-1.0.22.3409_beta.ebuild,v 1.1 2011/11/17 15:13:10 ottxor Exp $
 
 EAPI=4
 
