@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.1.ebuild,v 1.6 2011/04/04 12:19:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/mediatomb-0.12.1.ebuild,v 1.7 2011/11/17 03:40:31 axs Exp $
 
 EAPI=2
-inherit eutils linux-info
+inherit autotools-utils eutils linux-info
 
 DESCRIPTION="MediaTomb is an open source UPnP MediaServer"
 HOMEPAGE="http://www.mediatomb.cc/"
@@ -50,6 +50,10 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-gcc46.patch"
+	if use javascript && has_version ">=dev-lang/spidermonkey-1.8.5" ; then
+		epatch "${FILESDIR}"/${P}-mozjs185.patch
+		eautoreconf
+	fi
 }
 
 src_configure() {

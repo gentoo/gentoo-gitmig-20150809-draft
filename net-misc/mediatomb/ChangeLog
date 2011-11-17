@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mediatomb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.22 2011/04/04 12:19:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.23 2011/11/17 03:40:31 axs Exp $
+
+  17 Nov 2011; Ian Stakenvicius <axs@gentoo.org> mediatomb-0.12.1.ebuild,
+  +files/mediatomb-0.12.1-mozjs185.patch:
+  in-place update to support dev-lang/spidermonkey-1.8.5 for bug 376993
 
   04 Apr 2011; Tomáš Chvátal <scarabeus@gentoo.org> mediatomb-0.12.1.ebuild:
   Move to virtual/ffmpeg from media-video/ffmpeg.
