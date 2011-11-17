@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.75 2011/10/23 11:40:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.76 2011/11/17 12:19:37 xarthisius Exp $
+
+*hdf5-1.8.8 (17 Nov 2011)
+
+  17 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/hdf5-1.8.8-buildsystem.patch, +hdf5-1.8.8.ebuild, metadata.xml:
+  Version bump wrt #390811 by Tolga Dalman, fixes bug #383843 by Cedric
 
   23 Oct 2011; Tomáš Chvátal <scarabeus@gentoo.org> -hdf5-1.8.6.ebuild,
   hdf5-1.8.7.ebuild:
