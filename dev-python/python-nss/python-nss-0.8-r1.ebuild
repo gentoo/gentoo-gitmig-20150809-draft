@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-nss/python-nss-0.8-r1.ebuild,v 1.1 2011/10/31 20:01:46 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-nss/python-nss-0.8-r1.ebuild,v 1.2 2011/11/17 17:09:43 pva Exp $
 
 EAPI="3"
 
@@ -10,7 +10,7 @@ RESTRICT_PYTHON_ABIS="3.*"
 inherit distutils eutils
 
 DESCRIPTION="Python bindings for Network Security Services (NSS)"
-HOMEPAGE="http://people.redhat.com/jdennis/python-nss/doc/api/html"
+HOMEPAGE="http://www.mozilla.org/projects/security/pki/python-nss/"
 SRC_URI="http://rion-overlay.googlecode.com/files/${P}.tar.lzma"
 
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2 )"
