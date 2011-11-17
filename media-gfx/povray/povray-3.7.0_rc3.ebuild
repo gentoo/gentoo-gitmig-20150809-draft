@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_rc3.ebuild,v 1.9 2011/10/29 19:49:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.7.0_rc3.ebuild,v 1.10 2011/11/17 17:02:27 jlec Exp $
 
 EAPI="3"
 
@@ -32,7 +32,7 @@ DEPEND="
 	openexr? (
 		media-libs/ilmbase
 		media-libs/openexr )
-	tiff? ( >=media-libs/tiff-3.6.1 )
+	tiff? ( >=media-libs/tiff-3.6.1:0 )
 	X? ( media-libs/libsdl )"
 RDEPEND="${DEPEND}"
 
