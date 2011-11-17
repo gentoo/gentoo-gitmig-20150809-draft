@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.1_p1.ebuild,v 1.1 2011/11/17 17:20:34 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.8.1_p1.ebuild,v 1.2 2011/11/17 18:12:20 idl0r Exp $
 
 # Re dlz/mysql and threads, needs to be verified..
 # MySQL uses thread local storage in its C api. Thus MySQL
@@ -90,7 +90,7 @@ src_prepare() {
 
 	if use dlz; then
 		# bug 382269
-		epatch "${FILESDIR}/${P}-sdlz_helper.patch"
+		epatch "${FILESDIR}/${PN}-9.8.1-sdlz_helper.patch"
 
 		# bind fails to reconnect to MySQL5 databases, bug #180720, patch by Nicolas Brousse
 		# (http://www.shell-tips.com/2007/09/04/bind-950-patch-dlz-mysql-5-for-auto-reconnect/)
