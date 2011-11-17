@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/mapserver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.44 2011/09/03 09:18:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.45 2011/11/17 11:33:21 jlec Exp $
+
+  17 Nov 2011; Justin Lecher <jlec@gentoo.org> mapserver-6.0.1.ebuild,
+  metadata.xml:
+  Do not hardcode 64bit multilib path, which is not present on 32bit, #390747
 
   03 Sep 2011; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   Drop unused local descs.

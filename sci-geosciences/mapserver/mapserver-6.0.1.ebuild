@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.1.ebuild,v 1.1 2011/07/22 22:52:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-6.0.1.ebuild,v 1.2 2011/11/17 11:33:21 jlec Exp $
 
 EAPI=3
 
@@ -22,10 +22,10 @@ PYTHON_MODNAME="mapscript.py"
 
 WEBAPP_MANUAL_SLOT=yes
 
-inherit eutils autotools depend.apache webapp distutils perl-module php-ext-source-r2 # ruby-ng
+inherit eutils autotools depend.apache webapp distutils perl-module php-ext-source-r2 multilib # ruby-ng
 
-DESCRIPTION="OpenSource development environment for constructing spatially enabled Internet-web applications."
-HOMEPAGE="http://mapserver.org"
+DESCRIPTION="OpenSource development environment for constructing spatially enabled Internet-web applications"
+HOMEPAGE="http://mapserver.org/"
 SRC_URI="http://download.osgeo.org/mapserver/${MY_P}.tar.gz"
 
 LICENSE="MIT"
@@ -135,7 +135,7 @@ src_configure() {
 	fi
 
 	# some scripts require configure time options so place it here
-	use php && myopts+=" --with-php=${EPREFIX}/usr/lib64/php5.3/include/php/"
+	use php && myopts+=" --with-php=${EPREFIX}/usr/$(get_libdir)/php5.3/include/php/"
 
 	# sde is ESRI package that you have to buy first
 	# oraclespatial needs oracle server for testing/usage
