@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xournal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.22 2011/11/16 23:40:03 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.23 2011/11/17 09:47:38 chainsaw Exp $
+
+  17 Nov 2011; Tony Vroon <chainsaw@gentoo.org> xournal-0.4.5_p20111022.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Elijah "Armageddon" El Lazkani in bug #390763.
 
   17 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   xournal-0.4.5_p20111022.ebuild, xournal-0.4.5_p20111022-r1.ebuild:
