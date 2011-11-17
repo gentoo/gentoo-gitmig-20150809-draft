@@ -7,5 +7,8 @@ Ibus-unikey is a IM Engine for IBus
 Use for type Vietnamese
 Support via forum at: http://forum.ubuntu-vn.com/viewforum.php?f=85
 </longdescription>
+<use>
+  <flag name='gtk3'>Enable support for gtk+3</flag>
+</use>
 </pkgmetadata>
 
