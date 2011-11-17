@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libmix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/ChangeLog,v 1.24 2011/05/21 21:56:39 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmix/ChangeLog,v 1.25 2011/11/17 21:08:07 vapier Exp $
+
+*libmix-2.05-r6 (17 Nov 2011)
+
+  17 Nov 2011; Mike Frysinger <vapier@gentoo.org> +libmix-2.05-r6.ebuild,
+  +files/libmix-2.05-gentoo-r1.patch:
+  Clean up gentoo patch to set SONAME, but not diff from the files actually
+  installed #390839 by Lars Wendler.
 
   21 May 2011; Christoph Mende <angelos@gentoo.org> -libmix-2.05.ebuild:
   Remove old
