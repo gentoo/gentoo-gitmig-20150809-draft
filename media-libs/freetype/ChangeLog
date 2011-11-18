@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.314 2011/11/17 01:28:20 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.315 2011/11/18 05:22:17 jer Exp $
+
+  18 Nov 2011; Jeroen Roovers <jer@gentoo.org> freetype-2.4.8.ebuild:
+  Stable for HPPA (bug #390623).
 
 *freetype-2.4.8 (17 Nov 2011)
 
