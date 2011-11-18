@@ -1,8 +1,10 @@
 # ChangeLog for dev-perl/Audio-Scan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Scan/ChangeLog,v 1.27 2011/11/18 15:36:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Scan/ChangeLog,v 1.28 2011/11/18 15:42:22 grobian Exp $
 
-  18 Nov 2011; Fabian Groffen <grobian@gentoo.org> Audio-Scan-0.930.0.ebuild:
+  18 Nov 2011; Fabian Groffen <grobian@gentoo.org>
+  Audio-Scan-0.870.0.ebuild, Audio-Scan-0.880.0.ebuild,
+  Audio-Scan-0.930.0.ebuild:
   Marked ~x86-solaris
 
 *Audio-Scan-0.930.0 (17 Sep 2011)
