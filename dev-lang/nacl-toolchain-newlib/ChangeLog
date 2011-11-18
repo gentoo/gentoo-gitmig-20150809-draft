@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/nacl-toolchain-newlib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nacl-toolchain-newlib/ChangeLog,v 1.7 2011/11/15 19:43:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nacl-toolchain-newlib/ChangeLog,v 1.8 2011/11/18 15:51:42 chainsaw Exp $
+
+  18 Nov 2011; Tony Vroon <chainsaw@gentoo.org>
+  nacl-toolchain-newlib-0_p6869-r1.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Michael "n0idx80" Harrison in bug #390299.
 
   15 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   nacl-toolchain-newlib-0_p6869-r1.ebuild:
