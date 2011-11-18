@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.8.10-r1.ebuild,v 1.1 2011/11/18 15:22:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-3.8.10-r1.ebuild,v 1.2 2011/11/18 18:22:31 flameeyes Exp $
 
 inherit webapp eutils depend.apache confutils
 
@@ -209,7 +209,7 @@ src_compile() {
 
 src_install() {
 	webapp_src_preinst
-	emake install || die
+	emake -j1 install || die
 
 	# make sure we don't clobber existing site configuration
 	rm -f "${D}"/${MY_HOSTROOTDIR}/${PF}/etc/RT_SiteConfig.pm
