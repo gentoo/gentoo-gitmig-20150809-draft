@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/scons-utils.eclass,v 1.8 2011/10/30 14:30:24 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/scons-utils.eclass,v 1.9 2011/11/18 20:51:10 mgorny Exp $
 
 # @ECLASS: scons-utils.eclass
 # @MAINTAINER:
@@ -19,7 +19,7 @@
 # src_configure() {
 # 	myesconsargs=(
 # 		CC="$(tc-getCC)"
-#		$(use_scons nls ENABLE_NLS)
+# 		$(use_scons nls ENABLE_NLS)
 # 	)
 # }
 #
@@ -28,7 +28,8 @@
 # }
 #
 # src_install() {
-# 	escons install
+# 	# note: this can be DESTDIR, INSTALL_ROOT, ... depending on package
+# 	escons DESTDIR="${D}" install
 # }
 # @CODE
 

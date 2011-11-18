@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.16 2011/11/18 14:23:03 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.17 2011/11/18 20:51:10 mgorny Exp $
+
+  18 Nov 2011; Michał Górny <mgorny@gentoo.org> scons-utils.eclass:
+  Add DESTDIR-like variable to the example.
 
   18 Nov 2011; Bernard Cafarelli <voyageur@gentoo.org> gnustep-base.eclass:
   Set VARTEXFONTS for doc generation, fix sandbox access violation on
