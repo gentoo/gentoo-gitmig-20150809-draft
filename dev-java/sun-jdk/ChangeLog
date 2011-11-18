@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.310 2011/11/05 10:08:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.311 2011/11/18 22:11:13 sera Exp $
+
+  18 Nov 2011; Ralph Sennhauser <sera@gentoo.org> sun-jdk-1.6.0.29.ebuild:
+  Add missing pax markings for x86. Bug 389751
 
   05 Nov 2011; Markos Chandras <hwoarang@gentoo.org> sun-jdk-1.6.0.29.ebuild:
   Stable on amd64 wrt bug #387851
