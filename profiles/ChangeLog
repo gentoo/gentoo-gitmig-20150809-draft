@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5925 2011/11/18 20:58:46 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5926 2011/11/18 21:36:38 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Nov 2011; Ulrich Mueller <ulm@gentoo.org> license_groups:
+  Move all GPL*with*exception* type licenses to the GPL-COMPATIBLE group.
+  Remove GPL-2-with-Linden-Lab-FLOSS-exception, it was removed from the tree.
 
   18 Nov 2011; Anthony G. Basile <blueness@gentoo.org> +hardened/README:
   Added README explaining the deprecation of old hardened/arches profiles
