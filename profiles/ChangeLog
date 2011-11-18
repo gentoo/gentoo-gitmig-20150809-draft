@@ -1,10 +1,39 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5923 2011/11/18 09:36:00 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5924 2011/11/18 20:25:33 blueness Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Nov 2011; Anthony G. Basile <blueness@gentoo.org>
+  -hardened/amd64/deprecated, -hardened/amd64/make.defaults,
+  -hardened/amd64/multilib/deprecated, -hardened/amd64/multilib/make.defaults,
+  -hardened/amd64/multilib/package.mask, -hardened/amd64/multilib/parent,
+  -hardened/amd64/multilib/use.mask, -hardened/amd64/package.mask,
+  -hardened/amd64/package.use.mask, -hardened/amd64/packages,
+  -hardened/amd64/parent, -hardened/amd64/profile.bashrc,
+  -hardened/amd64/use.mask, -hardened/ia64/deprecated,
+  -hardened/ia64/make.defaults, -hardened/ia64/package.mask,
+  -hardened/ia64/package.use.mask, -hardened/ia64/packages,
+  -hardened/ia64/parent, -hardened/ia64/use.mask, -hardened/make.defaults,
+  -hardened/package.mask, -hardened/package.use, -hardened/package.use.mask,
+  -hardened/packages, -hardened/packages.build, -hardened/parent,
+  -hardened/ppc/README, -hardened/ppc/deprecated, -hardened/ppc/make.defaults,
+  -hardened/ppc/package.mask, -hardened/ppc/package.use.mask,
+  -hardened/ppc/packages, -hardened/ppc/parent, -hardened/ppc/use.mask,
+  -hardened/ppc64/README, -hardened/ppc64/deprecated,
+  -hardened/ppc64/make.defaults, -hardened/ppc64/package.mask,
+  -hardened/ppc64/package.use.mask, -hardened/ppc64/packages,
+  -hardened/ppc64/parent, -hardened/ppc64/use.mask, -hardened/use.mask,
+  -hardened/x86/2.6/deprecated, -hardened/x86/2.6/profile.bashrc,
+  -hardened/x86/deprecated, -hardened/x86/make.defaults,
+  -hardened/x86/minimal/deprecated, -hardened/x86/minimal/make.defaults,
+  -hardened/x86/minimal/parent, -hardened/x86/minimal/use.mask,
+  -hardened/x86/package.mask, -hardened/x86/package.use,
+  -hardened/x86/package.use.mask, -hardened/x86/packages, -hardened/x86/parent,
+  -hardened/x86/use.mask:
+  Removed deprecated hardened/arches profiles in favor of hardened/linux/arches
 
   18 Nov 2011; Tony Vroon <chainsaw@gentoo.org> package.mask:
   Module load failure was due to a rapid wrapper restart followed by a layer 9
