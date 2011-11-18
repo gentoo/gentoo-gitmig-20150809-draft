@@ -1,11 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-1.0.4.ebuild,v 1.5 2011/10/23 12:07:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-1.0.4.ebuild,v 1.6 2011/11/18 15:35:03 ssuominen Exp $
 
 EAPI=4
 inherit multilib nsplugins
-
-_fxver=6.0
 
 DESCRIPTION="A browser plugin that uses GNOME MPlayer"
 HOMEPAGE="http://code.google.com/p/gecko-mediaplayer/"
@@ -20,7 +18,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.92
 	>=dev-libs/glib-2.26:2
 	dev-libs/nspr
 	>=media-video/gnome-mplayer-1.0.4[dbus]
-	|| ( >=www-client/firefox-${_fxver} >=net-libs/xulrunner-1.9.2:1.9 )
+	>=net-libs/xulrunner-1.9.2:1.9
 	curl? ( net-misc/curl )
 	!www-client/chromium"
 DEPEND="${RDEPEND}
@@ -30,8 +28,6 @@ DEPEND="${RDEPEND}
 DOCS="ChangeLog DOCS/tech/javascript.txt"
 
 src_configure() {
-	has_version ">=www-client/firefox-${_fxver}" && export PKG_CONFIG_PATH="${FILESDIR}"
-
 	econf \
 		--without-gconf \
 		--with-gio \
