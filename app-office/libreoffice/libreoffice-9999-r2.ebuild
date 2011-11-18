@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.4 2011/11/14 09:06:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.5 2011/11/18 23:11:14 scarabeus Exp $
 
 EAPI=4
 
@@ -69,8 +69,8 @@ unset EXT_URI
 unset ADDONS_SRC
 
 IUSE="binfilter +branding dbus debug eds gnome +graphite gstreamer +gtk
-+jemalloc kde mysql +nsplugin odk opengl pdfimport svg test +vba +webdav
-+xmlsec"
++jemalloc kde mysql +nsplugin odk opengl pdfimport postgres svg test +vba
++webdav +xmlsec"
 LICENSE="LGPL-3"
 SLOT="0"
 [[ ${PV} == *9999* ]] || KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
@@ -135,6 +135,7 @@ COMMON_DEPEND="
 	mysql? ( >=dev-db/mysql-connector-c++-1.1.0 )
 	opengl? ( virtual/opengl )
 	pdfimport? ( >=app-text/poppler-0.16[xpdf-headers,cxx] )
+	postgres? ( >=dev-db/postgresql-base-8.4.0 )
 	svg? ( gnome-base/librsvg )
 	webdav? ( net-libs/neon )
 	xmlsec? ( ${NSS_DEPEND} )
@@ -200,6 +201,8 @@ REQUIRED_USE="
 S="${WORKDIR}/${PN}-core-${PV}"
 
 pkg_pretend() {
+	local pgslot
+
 	if [[ ${MERGE_TYPE} != binary ]]; then
 		CHECKREQS_MEMORY="1G"
 		use debug && CHECKREQS_DISK_BUILD="15G" || CHECKREQS_DISK_BUILD="9G"
@@ -209,6 +212,16 @@ pkg_pretend() {
 			eerror "Compilation with gcc older than 4.0 is not supported"
 			die "Too old gcc found."
 		fi
+	fi
+
+	# ensure pg version
+	if use postgres; then
+		 pgslot=$(postgresql-config show)
+		 if [[ ${pgslot//.} < 84 ]] ; then
+		 	eerror "PostgreSQL slot must be set to 8.4 or higher."
+			eerror "    postgresql-config set 8.4"
+			die "PostgreSQL slot is not set to 8.4 or higher."
+		 fi
 	fi
 }
 
@@ -423,6 +436,7 @@ src_configure() {
 		$(use_enable odk) \
 		$(use_enable opengl) \
 		$(use_enable pdfimport ext-pdfimport) \
+		$(use_enable postgres ext-postgresql-sdbc) \
 		$(use_enable svg librsvg system) \
 		$(use_enable test linkoo) \
 		$(use_enable vba) \
