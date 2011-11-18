@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gmtk/gmtk-1.0.5_beta1.ebuild,v 1.1 2011/11/18 14:33:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gmtk/gmtk-1.0.5_beta1.ebuild,v 1.2 2011/11/18 15:28:16 ssuominen Exp $
 
 EAPI=4
 inherit flag-o-matic toolchain-funcs
@@ -14,7 +14,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86"
-IUSE="alsa dconf +keystore pulseaudio"
+IUSE="alsa +dconf pulseaudio"
 
 COMMON_DEPEND=">=dev-libs/glib-2.26
 	x11-libs/gtk+:3
@@ -28,8 +28,6 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
 
-REQUIRED_USE="|| ( dconf keystore )"
-
 DOCS=( ChangeLog )
 
 S=${WORKDIR}/${MY_P}
@@ -42,7 +40,7 @@ src_configure() {
 		--enable-gtk3 \
 		$(use_enable dconf gsettings) \
 		--disable-gconf \
-		$(use_enable keystore) \
+		$(use_enable !dconf keystore) \
 		--with-gio \
 		$(use_with alsa) \
 		$(use_with pulseaudio)
