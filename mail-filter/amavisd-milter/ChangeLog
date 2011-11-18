@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/amavisd-milter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-milter/ChangeLog,v 1.1 2011/04/25 09:52:07 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-milter/ChangeLog,v 1.2 2011/11/18 20:53:16 eras Exp $
+
+  18 Nov 2011; Eray Aslan <eras@gentoo.org> amavisd-milter-1.5.0.ebuild:
+  Depend on libmilter or sendmail - bug #390927
 
 *amavisd-milter-1.5.0 (25 Apr 2011)
 
