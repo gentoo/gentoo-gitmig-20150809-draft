@@ -16,6 +16,7 @@
   <flag name='ipython'>Add support for <pkg>dev-python/ipython</pkg></flag>
   <flag name='matplotlib'>Add support for <pkg>dev-python/matplotlib</pkg></flag>
   <flag name='numpy'>Add support for <pkg>dev-python/numpy</pkg></flag>
+  <flag name='pep8'>Add support for <pkg>dev-python/pep8</pkg></flag>
   <flag name='pyflakes'>Add support for <pkg>dev-python/pyflakes</pkg></flag>
   <flag name='pylint'>Add support for <pkg>dev-python/pylint</pkg></flag>
   <flag name='rope'>Add support for <pkg>sci-libs/rope</pkg></flag>

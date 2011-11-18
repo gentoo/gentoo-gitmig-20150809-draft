@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/spyder
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/ChangeLog,v 1.20 2011/07/29 23:10:01 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/spyder/ChangeLog,v 1.21 2011/11/18 10:02:59 grozin Exp $
+
+*spyder-2.1.2 (18 Nov 2011)
+
+  18 Nov 2011; Andrey Grozin <grozin@gentoo.org>
+  -files/spyder-2.0.4-disable_sphinx_dependency.patch, -spyder-2.0.8.ebuild,
+  -spyder-2.0.10.ebuild, -spyder-2.0.11.ebuild, +spyder-2.1.2.ebuild,
+  metadata.xml:
+  Version bump (bug #390777), new USE flag pep8, cleaning old versions
 
   29 Jul 2011; Sébastien Fabbro <bicatali@gentoo.org> spyder-2.0.12.ebuild:
   Added desktop file and icon, bug #363409, thanks spiros
