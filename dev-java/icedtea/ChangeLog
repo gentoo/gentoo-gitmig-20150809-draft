@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.52 2011/11/18 21:18:40 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.53 2011/11/18 22:00:15 sera Exp $
+
+  18 Nov 2011; Ralph Sennhauser <sera@gentoo.org> icedtea-6.1.10.4-r1.ebuild,
+  icedtea-7.2.0-r1.ebuild:
+  Remove unneeded pkg_postinst
 
   18 Nov 2011; Vlastimil Babka <caster@gentoo.org> icedtea-6.1.10.4-r1.ebuild,
   icedtea-7.2.0-r1.ebuild:

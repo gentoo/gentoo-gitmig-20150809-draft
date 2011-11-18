@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.0-r1.ebuild,v 1.16 2011/11/18 21:18:40 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.0-r1.ebuild,v 1.17 2011/11/18 22:00:15 sera Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -314,9 +314,4 @@ pkg_preinst() {
 		elog "build VM settings in /etc/java-config-2/build/jdk.conf are not changed"
 		elog "and the same holds for any user VM settings. Sorry for the inconvenience."
 	fi
-}
-
-pkg_postinst() {
-	# Set as default VM if none exists
-	java-vm-2_pkg_postinst
 }
