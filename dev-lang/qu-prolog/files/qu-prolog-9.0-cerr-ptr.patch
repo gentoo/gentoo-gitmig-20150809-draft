@@ -1,0 +1,41 @@
+diff -ur qp9.0.orig/src/gc.cc qp9.0/src/gc.cc
+--- qp9.0.orig/src/gc.cc	2011-07-14 14:48:03.000000000 +1200
++++ qp9.0/src/gc.cc	2011-11-19 09:55:20.000000000 +1300
+@@ -152,7 +152,7 @@
+     {
+       cerr << size << endl;
+       heapobject* ptr = reinterpret_cast<heapobject*>(term);
+-      cerr << hex << (u_int)(ptr) << " : " << *ptr << " " << *(ptr+1) << dec << endl;
++      cerr << hex << (wordptr)(ptr) << " : " << *ptr << " " << *(ptr+1) << dec << endl;
+       return false;
+     }
+   return true;
+diff -ur qp9.0.orig/src/objects.h qp9.0/src/objects.h
+--- qp9.0.orig/src/objects.h	2011-07-14 14:48:03.000000000 +1200
++++ qp9.0/src/objects.h	2011-11-19 09:55:20.000000000 +1300
+@@ -1242,18 +1242,12 @@
+        << this->getName() << "\" ";
+   
+ #ifndef WIN32
+-  switch (hasAssociatedItem())
+-    {
+-    case AssociatedNone:
+-	    std::cerr << "(no info)";
+-      break;
+-    case AssociatedInteger:
+-      std::cerr << "int: " << getAssociatedInteger();
+-      break;
+-    case AssociatedAtom:
+-      std::cerr << "atom: [" << std::hex << (wordptr) getAssociatedAtom() << std::dec << "]";
+-      break;
+-    }
++  if (hasAssociatedInteger())
++    std::cerr << "int: " << getAssociatedInteger();
++  else if (hasAssociatedAtom())
++    std::cerr << "atom: [" << std::hex << (wordptr) getAssociatedAtom() << std::dec << "]";
++  else
++    std::cerr << "(no info)";
+ #endif
+ }
+ #endif
+Only in qp9.0/src: objects.h.orig
