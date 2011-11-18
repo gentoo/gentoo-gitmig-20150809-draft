@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/xfce4-dev-tools
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xfce4-dev-tools/ChangeLog,v 1.45 2011/10/15 11:53:50 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xfce4-dev-tools/ChangeLog,v 1.46 2011/11/18 21:23:27 ssuominen Exp $
+
+*xfce4-dev-tools-4.9.0-r1 (18 Nov 2011)
+
+  18 Nov 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-dev-tools-4.9.0-r1.ebuild,
+  +files/xfce4-dev-tools-4.9.0-update_libtool_syntax.patch:
+  Upstream patch to support LT_PREREQ and LT_INIT libtool syntax.
 
 *xfce4-dev-tools-4.9.0 (15 Oct 2011)
 
