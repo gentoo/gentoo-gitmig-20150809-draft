@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/libvirt-glib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-glib/ChangeLog,v 1.1 2011/11/16 23:38:44 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-glib/ChangeLog,v 1.2 2011/11/18 18:59:56 tetromino Exp $
+
+  18 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libvirt-glib-0.0.1.ebuild:
+  HACKING does not exist in tarball (bug #390917), thanks to Maciej Piechotka
+  <uzytkownik2@gmail.com> for reporting.
 
 *libvirt-glib-0.0.1 (16 Nov 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-glib/libvirt-glib-0.0.1.ebuild,v 1.1 2011/11/16 23:38:44 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-glib/libvirt-glib-0.0.1.ebuild,v 1.2 2011/11/18 18:59:56 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 	vala? ( dev-lang/vala:0.14 )"
 
 pkg_setup() {
-	DOCS="AUTHORS ChangeLog HACKING NEWS README"
+	DOCS="AUTHORS ChangeLog NEWS README"
 	G2CONF="--disable-test-coverage
 		VAPIGEN=$(type -P vapigen-0.14)
 		$(use_enable introspection)
