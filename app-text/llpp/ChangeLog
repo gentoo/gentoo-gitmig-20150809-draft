@@ -1,6 +1,11 @@
 # ChangeLog for app-text/llpp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.16 2011/11/17 18:47:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/ChangeLog,v 1.17 2011/11/18 03:32:27 xmw Exp $
+
+  18 Nov 2011; Michael Weber <xmw@gentoo.org> -llpp-0_p20110504.ebuild,
+  -llpp-5.ebuild, llpp-7.ebuild:
+  Fix x86 compilation bug (thanks to David Abbott for the report, bug 390823).
+  Remove old versions.
 
   17 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> llpp-7.ebuild:
   x86 stable wrt bug #390683
