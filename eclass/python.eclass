@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.139 2011/10/15 20:58:08 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.140 2011/11/18 23:37:03 vapier Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -385,8 +385,6 @@ _python_set_color_variables() {
 		_NORMAL=
 	fi
 }
-
-unset PYTHON_PKG_SETUP_EXECUTED
 
 _python_check_python_pkg_setup_execution() {
 	[[ " ${FUNCNAME[@]:1} " =~ " "(python_set_active_version|python_pkg_setup)" " ]] && return
