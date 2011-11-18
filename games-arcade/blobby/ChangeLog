@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/blobby
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/blobby/ChangeLog,v 1.1 2011/11/18 16:05:15 mr_bones_ Exp $
+
+*blobby-0.9c (18 Nov 2011)
+
+  18 Nov 2011; Michael Sterrett <mr_bones_@gentoo.org> +blobby-0.9c.ebuild,
+  +metadata.xml:
+  Initial commit - ebuild by ssuominen with style changes
+
