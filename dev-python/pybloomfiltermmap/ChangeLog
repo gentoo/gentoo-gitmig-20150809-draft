@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/pybloomfiltermmap
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pybloomfiltermmap/ChangeLog,v 1.1 2011/11/18 20:31:38 hwoarang Exp $
+
+*pybloomfiltermmap-0.2.0 (18 Nov 2011)
+
+  18 Nov 2011; Markos Chandras <hwoarang@gentoo.org> +metadata.xml,
+  +pybloomfiltermmap-0.2.0.ebuild:
+  Initial commit thatnks to LABBE Corentin (Montjoie)
+  <corentin.labbe@geomatys.fr>. Bug #390813
+
