@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina-plugins/remmina-plugins-9999.ebuild,v 1.2 2011/09/30 17:39:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina-plugins/remmina-plugins-9999.ebuild,v 1.3 2011/11/18 20:18:59 hwoarang Exp $
 
 EAPI=2
-EGIT_REPO_URI="git://remmina.git.sourceforge.net/gitroot/remmina/remmina"
+EGIT_REPO_URI="https://github.com/FreeRDP/Remmina.git"
 EGIT_PROJECT="remmina"
 EGIT_SOURCEDIR="${WORKDIR}"
 
