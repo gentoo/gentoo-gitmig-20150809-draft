@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-7.2.0-r1.ebuild,v 1.1 2011/11/15 09:21:36 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-7.2.0-r1.ebuild,v 1.2 2011/11/18 20:27:58 caster Exp $
 
 EAPI="4"
 
@@ -34,26 +34,26 @@ RDEPEND=">=sys-devel/gcc-4.3
 	>=sys-libs/glibc-2.11.2
 	>=media-libs/giflib-4.1.6-r1
 	virtual/jpeg
+	media-libs/lcms:2
 	>=media-libs/libpng-1.5
 	>=sys-libs/zlib-1.2.3-r1
 	"
 PDEPEND="
 	alsa? ( >=media-libs/alsa-lib-1.0.20 )
 	X? (
-		>=media-libs/freetype-2.3.9:2
-		>=media-libs/fontconfig-2.6.0-r2:1.0
-		>=x11-libs/libXext-1.1
-		>=x11-libs/libXi-1.3
-		>=x11-libs/libXtst-1.1
-		>=x11-libs/libX11-1.3
-		x11-libs/libXt
-	)
-	nsplugin? (
 		>=dev-libs/atk-1.30.0
 		>=dev-libs/glib-2.20.5:2
-		>=dev-libs/nspr-4.8
+		>=media-libs/fontconfig-2.6.0-r2:1.0
+		>=media-libs/freetype-2.3.9:2
+		>=net-print/cups-1.4
 		>=x11-libs/cairo-1.8.8
+		x11-libs/gdk-pixbuf:2
 		>=x11-libs/gtk+-2.20.1:2
+		>=x11-libs/libXext-1.1
+		>=x11-libs/libXi-1.3
+		x11-libs/libXrender
+		>=x11-libs/libXtst-1.1
+		>=x11-libs/libX11-1.3
 		>=x11-libs/pango-1.24.5
 	)"
 DEPEND=""
