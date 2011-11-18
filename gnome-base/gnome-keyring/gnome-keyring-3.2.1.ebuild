@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-3.2.1.ebuild,v 1.1 2011/10/30 07:21:57 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-3.2.1.ebuild,v 1.2 2011/11/18 03:40:54 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -101,10 +101,11 @@ fcaps() {
 	res=$?
 
 	if [ $res -ne 0 ]; then
-		ewarn "Failed to set capabilities. Probable reason is missed kernel support."
-		ewarn "Kernel must have SECURITY_FILE_CAPABILITIES, and <FS>_FS_SECURITY"
-		ewarn "enabled (e.g. EXT3_FS_SECURITY) where <FS> is the filesystem to store"
-		ewarn "${path}"
+		ewarn "Failed to set capabilities. Probable reason is missing kernel support."
+		ewarn "Your kernel must have <FS>_FS_SECURITY enabled (e.g. EXT4_FS_SECURITY)"
+		ewarn "where <FS> is the filesystem to store ${path}"
+		ewarn "If you are using kernel 2.6.32 or older, you will also need to enable"
+		ewarn "SECURITY_FILE_CAPABILITIES."
 		ewarn
 		ewarn "Falling back to suid now..."
 		chmod u+s ${path}
