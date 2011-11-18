@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13253 2011/11/18 00:05:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13254 2011/11/18 09:36:00 chainsaw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,10 +30,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Tony Vroon <chainsaw@gentoo.org> (15 Nov 2011)
-# Fails to load any modules on hardened, needs more love
-=net-misc/asterisk-10.0.0*
 
 # Christoph Junghans <ottxor@gentoo.org> (15 Nov 2011)
 # current version of google-talkplugin never clear what you get
