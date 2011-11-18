@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.46 2011/11/11 13:42:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.47 2011/11/18 00:04:29 vapier Exp $
 
 EAPI=4
 
@@ -13,6 +13,9 @@ else
 	MY_P=${P/_/\~}
 	SRC_URI="mirror://gnu/${PN}/${MY_P}.tar.xz
 		mirror://gentoo/${MY_P}.tar.xz"
+	# Masked until documentation guys consolidate the guide and approve
+	# it for usage.
+	#KEYWORDS="~amd64 ~mips ~x86"
 	S=${WORKDIR}/${MY_P}
 fi
 
@@ -24,24 +27,21 @@ HOMEPAGE="http://www.gnu.org/software/grub/"
 
 LICENSE="GPL-3"
 SLOT="2"
-[[ ${PV} != "9999" ]] && KEYWORDS="~amd64 ~mips ~x86"
 IUSE="custom-cflags debug device-mapper efiemu nls static sdl truetype"
 
-GRUB_PLATFORMS="coreboot efi-32 efi-64 emu ieee1275 multiboot pc qemu qemu-mips loongson"
-# everywhere:
-#     emu
-# mips only:
-#     qemu-mips, loongson
-# amd64, x86, ppc, ppc64
-#     ieee1275
-# amd64, x86
-#     coreboot, multiboot, efi-32, pc, qemu
-# amd64
-#     efi-64
-for i in ${GRUB_PLATFORMS}; do
-	IUSE+=" grub_platforms_${i}"
-done
-unset i
+GRUB_PLATFORMS=(
+	# everywhere:
+	emu
+	# mips only:
+	qemu-mips yeeloong
+	# amd64, x86, ppc, ppc64:
+	ieee1275
+	# amd64, x86:
+	coreboot multiboot efi-32 pc qemu
+	# amd64:
+	efi-64
+)
+IUSE+=" ${GRUB_PLATFORMS[@]/#/grub_platforms_}"
 
 # os-prober: Used on runtime to detect other OSes
 # xorriso (dev-libs/libisoburn): Used on runtime for mkrescue
@@ -188,7 +188,7 @@ src_prepare() {
 
 	# get enabled platforms
 	GRUB_ENABLED_PLATFORMS=""
-	for i in ${GRUB_PLATFORMS}; do
+	for i in ${GRUB_PLATFORMS[@]}; do
 		use grub_platforms_${i} && GRUB_ENABLED_PLATFORMS+=" ${i}"
 	done
 	[[ -z ${GRUB_ENABLED_PLATFORMS} ]] && GRUB_ENABLED_PLATFORMS="guessed"

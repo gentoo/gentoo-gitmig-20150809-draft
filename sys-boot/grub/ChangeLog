@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.172 2011/11/11 13:42:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.173 2011/11/18 00:04:29 vapier Exp $
+
+  18 Nov 2011; Mike Frysinger <vapier@gentoo.org> grub-1.99-r2.ebuild,
+  grub-9999.ebuild:
+  Simplify GRUB_PLATFORMS handling, and move masking here.
 
   11 Nov 2011; Diego E. Pettenò <flameeyes@gentoo.org> grub-1.99-r2.ebuild,
   grub-9999.ebuild:
