@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/snortsam
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/ChangeLog,v 1.32 2011/11/18 04:54:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/ChangeLog,v 1.33 2011/11/18 05:09:16 jer Exp $
+
+  18 Nov 2011; Jeroen Roovers <jer@gentoo.org> snortsam-2.70.ebuild:
+  Respect CFLAGS (maybe bug #240864). Fix underlinking by Michael (bug
+  #381343).
 
   18 Nov 2011; Jeroen Roovers <jer@gentoo.org> snortsam-2.70.ebuild:
   Respect LDFLAGS.
