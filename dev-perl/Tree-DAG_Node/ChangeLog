@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Tree-DAG_Node
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tree-DAG_Node/ChangeLog,v 1.18 2011/10/11 20:52:15 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tree-DAG_Node/ChangeLog,v 1.19 2011/11/18 15:30:29 grobian Exp $
+
+  18 Nov 2011; Fabian Groffen <grobian@gentoo.org> Tree-DAG_Node-1.60.0.ebuild:
+  Marked ~x86-solaris
 
   11 Oct 2011; Matt Turner <mattst88@gentoo.org> Tree-DAG_Node-1.60.0.ebuild:
   Added ~mips, bug 384677

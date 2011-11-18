@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Warn
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warn/ChangeLog,v 1.35 2011/10/11 20:52:46 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Warn/ChangeLog,v 1.36 2011/11/18 15:35:12 grobian Exp $
+
+  18 Nov 2011; Fabian Groffen <grobian@gentoo.org> Test-Warn-0.230.0.ebuild:
+  Marked ~x86-solaris
 
   11 Oct 2011; Matt Turner <mattst88@gentoo.org> Test-Warn-0.230.0.ebuild:
   Added ~mips, bug 384677
