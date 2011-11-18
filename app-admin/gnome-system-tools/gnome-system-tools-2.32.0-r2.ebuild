@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.32.0-r2.ebuild,v 1.1 2011/11/05 01:35:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.32.0-r2.ebuild,v 1.2 2011/11/18 22:21:59 ssuominen Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -28,7 +28,7 @@ RDEPEND="
 	samba? ( >=net-fs/samba-3 )
 	policykit? (
 		>=sys-auth/polkit-0.92
-		gnome-extra/polkit-gnome:obsolete
+		|| ( gnome-extra/polkit-gnome:obsolete <gnome-extra/polkit-gnome-0.102 )
 		)"
 DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd:4.1.2
