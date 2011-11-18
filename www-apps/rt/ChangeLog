@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.68 2011/11/02 21:55:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.69 2011/11/18 15:22:35 flameeyes Exp $
+
+*rt-3.8.10-r1 (18 Nov 2011)
+
+  18 Nov 2011; Diego E. Pettenò <flameeyes@gentoo.org> +files/rt.conf.d.2,
+  +files/rt.init.d.2, +rt-3.8.10-r1.ebuild:
+  Add a new revision with revised (no pun intended) init script, so that it
+  actually seem to work and won't get stuck in an infinite loop if it fails to
+  start.
 
   02 Nov 2011; Mike Frysinger <vapier@gentoo.org> rt-3.6.7.ebuild,
   rt-3.8.10.ebuild:
