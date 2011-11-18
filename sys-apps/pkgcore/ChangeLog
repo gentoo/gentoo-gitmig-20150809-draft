@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.130 2011/11/10 00:56:45 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.131 2011/11/18 04:04:58 ferringb Exp $
+
+*pkgcore-0.7.5-r2 (18 Nov 2011)
+
+  18 Nov 2011; Brian Harring <ferringb@gentoo.org> +pkgcore-0.7.5-r2.ebuild,
+  +files/pkgcore-0.7.5-dosym.patch:
+  bug 379889; honor portage dosym behaviour rather than PMS.
 
 *pkgcore-0.7.5-r1 (10 Nov 2011)
 
