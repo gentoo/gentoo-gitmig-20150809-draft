@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-soundmenu-plugin/xfce4-soundmenu-plugin-0.2.4.1.ebuild,v 1.1 2011/10/26 18:07:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-soundmenu-plugin/xfce4-soundmenu-plugin-0.2.4.1.ebuild,v 1.2 2011/11/18 20:57:11 ssuominen Exp $
 
 EAPI=4
 inherit xfconf
@@ -12,7 +12,7 @@ SRC_URI="http://dissonance.googlecode.com/files/${P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug lastfm"
+IUSE="debug +glyr lastfm"
 
 RDEPEND=">=dev-libs/dbus-glib-0.74
 	>=dev-libs/keybinder-0.2
@@ -20,6 +20,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.74
 	>=xfce-base/libxfce4ui-4.8
 	>=xfce-base/libxfce4util-4.8
 	>=xfce-base/xfce4-panel-4.8
+	glyr? ( media-libs/glyr )
 	lastfm? ( media-libs/libclastfm )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
@@ -27,10 +28,9 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 pkg_setup() {
-	# FIXME: Include libglyr in Portage
 	XFCONF=(
 		$(use_enable lastfm libclastfm)
-		--disable-libglyr
+		$(use_enable glyr libglyr)
 		$(xfconf_use_debug)
 		)
 
