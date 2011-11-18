@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/read-edid
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/read-edid/ChangeLog,v 1.25 2011/11/17 18:44:44 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/read-edid/ChangeLog,v 1.26 2011/11/18 03:52:41 xmw Exp $
+
+  18 Nov 2011; Michael Weber <xmw@gentoo.org> -read-edid-2.0.0.ebuild:
+  Remove old version
 
   17 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   read-edid-2.0.0-r1.ebuild:
