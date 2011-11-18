@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.50 2011/11/18 18:11:15 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.51 2011/11/18 21:02:01 caster Exp $
+
+  18 Nov 2011; Vlastimil Babka <caster@gentoo.org> icedtea-6.1.10.4-r1.ebuild,
+  icedtea-7.2.0-r1.ebuild:
+  Remove 'cacao' and 'jamvm' USE flags. Also remove 'zero' flag and have it
+  used only for ppc/ppc64. This functionality was experimental and brought more
+  problems than benefits. Also remove the bootstrapping with cacao due to
+  failures. Fixes numerous bugs.
 
   18 Nov 2011; Ralph Sennhauser <sera@gentoo.org> icedtea-6.1.10.4-r1.ebuild,
   icedtea-7.2.0-r1.ebuild:
