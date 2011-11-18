@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r10.ebuild,v 1.7 2011/11/02 14:56:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r10.ebuild,v 1.8 2011/11/18 12:01:54 grobian Exp $
 
 EAPI="3"
 
@@ -68,6 +68,7 @@ src_configure() {
 		--with-tklibs="${EPREFIX}/usr/$(get_libdir)" \
 		--with-cc="$(tc-getCC)" \
 		--with-cflags="${CFLAGS}" \
+		--with-gnu-ld \
 		$(use_enable jpeg) \
 		$(use_with X x)
 

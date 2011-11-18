@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/blt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.56 2011/11/02 14:56:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.57 2011/11/18 12:01:54 grobian Exp $
+
+  18 Nov 2011; Fabian Groffen <grobian@gentoo.org> blt-2.4z-r10.ebuild:
+  Pass --with-gnu-ld for Solaris, such that we get RPATH entries in libBLT.so
 
   02 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> blt-2.4z-r10.ebuild:
   x86 stable wrt bug #368583
