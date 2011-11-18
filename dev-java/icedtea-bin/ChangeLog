@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/icedtea-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.6 2011/11/18 20:27:58 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.7 2011/11/18 21:32:23 sera Exp $
+
+  18 Nov 2011; Ralph Sennhauser <sera@gentoo.org> icedtea-bin-6.1.10.4.ebuild,
+  icedtea-bin-7.2.0-r1.ebuild:
+  Temporarely add PaX markings for x86
 
   18 Nov 2011; Vlastimil Babka <caster@gentoo.org> icedtea-bin-7.2.0-r1.ebuild:
   Update deps to match scanelf results more closely, fix #390945.

@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-6.1.10.4.ebuild,v 1.2 2011/11/08 23:47:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-6.1.10.4.ebuild,v 1.3 2011/11/18 21:32:23 sera Exp $
 
 EAPI="4"
 
-inherit java-vm-2
+inherit java-vm-2 pax-utils
 
 dist="http://dev.gentoo.org/~caster/distfiles/"
 DESCRIPTION="A Gentoo-made binary build of the Icedtea6 JDK"
@@ -67,6 +67,13 @@ src_install() {
 
 	# doins can't handle symlinks.
 	cp -pRP bin include jre lib man "${ddest}" || die "failed to copy"
+
+	# Remove on next bump as the needed marks are already set by icedtea ebuild.
+	# Set PaX markings on all JDK/JRE executables to allow code-generation on
+	# the heap by the JIT compiler.
+	local marks="m"
+	use x86 && marks="msp"
+	pax-mark ${marks} $(list-paxables "${ddest}"{,/jre}/bin/*)
 
 	dodoc ../doc/{ASSEMBLY_EXCEPTION,THIRD_PARTY_README}
 	if use doc ; then
