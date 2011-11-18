@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13252 2011/11/17 20:59:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13253 2011/11/18 00:05:16 vapier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -558,11 +558,6 @@ dev-php/roadsend-php
 # Masked until bug #378783 is sorted out.
 >=perl-core/ExtUtils-ParseXS-3.0
 >=virtual/perl-ExtUtils-ParseXS-3.0
-
-# Tomáš Chvátal <scarabeus@gentoo.org> (28 Aug 2011)
-# Masked until documentation guys consolidate the guide and approve
-# it for usage.
-~sys-boot/grub-1.99
 
 # Ole Markus With <olemarkus@gentoo.org> (21 Aug 2011)
 # Masking php:5.2. No longer maintained by upstream

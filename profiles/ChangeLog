@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5921 2011/11/17 23:29:14 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5922 2011/11/18 00:05:16 vapier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Nov 2011; Mike Frysinger <vapier@gentoo.org> package.mask:
+  Move grub2 masking to the ebuild.
 
   17 Nov 2011; Anthony G. Basile <blueness@gentoo.org> profiles.desc:
   Removed old selinux profiles from profiles description
