@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3status/i3status-2.3.ebuild,v 1.1 2011/07/22 08:14:00 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3status/i3status-2.3.ebuild,v 1.2 2011/11/18 09:32:09 tetromino Exp $
 
 EAPI=4
 
-inherit toolchain-funcs
+inherit toolchain-funcs versionator
 
 DESCRIPTION="generates a status bar for dzen2, xmobar or similar"
 HOMEPAGE="http://i3wm.org/i3status/"
@@ -28,6 +28,7 @@ DEPEND="${RDEPEND}
 # @DESCRIPTION:
 # fcaps sets the specified capabilities in the effective and permitted set of
 # the given file. In case of failure fcaps sets the given file-mode.
+# Requires versionator.eclass
 fcaps() {
 	local uid_gid=$1
 	local perms=$2
@@ -48,10 +49,13 @@ fcaps() {
 	res=$?
 
 	if [ $res -ne 0 ]; then
-		ewarn "Failed to set capabilities. Probable reason is missed kernel support."
-		ewarn "Kernel must have SECURITY_FILE_CAPABILITIES, and <FS>_FS_SECURITY"
-		ewarn "enabled (e.g. EXT3_FS_SECURITY) where <FS> is the filesystem to store"
-		ewarn "${path}"
+		ewarn "Failed to set capabilities. Probable reason is missing kernel support."
+		ewarn "Your kernel must have <FS>_FS_SECURITY enabled (e.g. EXT4_FS_SECURITY)"
+		ewarn "where <FS> is the filesystem to store ${path}"
+		if ! version_is_at_least 2.6.33 "$(uname -r)"; then
+			ewarn "For kernel 2.6.32 or older, you will also need to enable"
+			ewarn "SECURITY_FILE_CAPABILITIES."
+		fi
 		ewarn
 		ewarn "Falling back to suid now..."
 		chmod u+s ${path}

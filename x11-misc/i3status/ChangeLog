@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/i3status
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3status/ChangeLog,v 1.1 2011/07/22 08:14:00 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3status/ChangeLog,v 1.2 2011/11/18 09:32:09 tetromino Exp $
+
+  18 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org> i3status-2.3.ebuild:
+  Update fcaps() error message for recent kernels (bug #390903). Acked by
+  xarthisius.
 
 *i3status-2.3 (22 Jul 2011)
 
