@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.89 2011/11/16 19:50:05 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.90 2011/11/18 18:25:24 williamh Exp $
 
 EAPI=4
 
@@ -18,7 +18,8 @@ fi
 
 LICENSE="BSD-2"
 SLOT="0"
-IUSE="debug elibc_glibc ncurses pam selinux unicode kernel_linux kernel_FreeBSD"
+IUSE="debug elibc_glibc ncurses pam selinux unicode kernel_linux kernel_FreeBSD
+	static-libs"
 
 RDEPEND="virtual/init
 	kernel_FreeBSD? ( || ( >=sys-freebsd/freebsd-ubin-9.0_rc sys-process/fuser-bsd ) )
@@ -49,6 +50,9 @@ make_args() {
 			MAKE_ARGS="${MAKE_ARGS} MKSELINUX=yes"
 	fi
 	export BRANDING="Gentoo ${brand}"
+	if ! use static-libs; then
+			MAKE_ARGS="${MAKE_ARGS} MKSTATICLIBS=no"
+	fi
 }
 
 pkg_setup() {
