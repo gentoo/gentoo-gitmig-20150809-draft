@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/polarssl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/ChangeLog,v 1.22 2011/10/09 18:12:13 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/ChangeLog,v 1.23 2011/11/19 14:45:31 tommy Exp $
+
+*polarssl-1.0.0 (19 Nov 2011)
+
+  19 Nov 2011; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -files/polarssl-0.12.0-makefile.patch, +polarssl-1.0.0.ebuild,
+  +files/polarssl-1.0.0-makefile.patch:
+  Version bump, drop unused patch
 
   09 Oct 2011; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   -polarssl-0.14.0.ebuild:
