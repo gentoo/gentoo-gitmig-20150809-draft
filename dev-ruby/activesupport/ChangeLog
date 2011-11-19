@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.156 2011/10/05 18:00:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.157 2011/11/19 10:53:57 graaff Exp $
+
+*activesupport-3.0.11 (19 Nov 2011)
+
+  19 Nov 2011; Hans de Graaff <graaff@gentoo.org> +activesupport-3.0.11.ebuild:
+  Version bump for Rails 3.0.11.
 
   05 Oct 2011; Hans de Graaff <graaff@gentoo.org> -activesupport-3.0.7.ebuild,
   -activesupport-3.0.9.ebuild:
