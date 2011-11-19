@@ -1,6 +1,16 @@
 # ChangeLog for net-p2p/fms
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/ChangeLog,v 1.24 2011/06/30 20:32:11 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/ChangeLog,v 1.25 2011/11/19 18:12:10 tommy Exp $
+
+  19 Nov 2011; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> -fms-0.3.58.ebuild,
+  -fms-0.3.61.ebuild, +fms-0.3.63.ebuild:
+  Drop old versions
+
+*fms-0.3.63 (19 Nov 2011)
+
+  19 Nov 2011; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> +fms-0.3.63.ebuild:
+  Version bump, thanks to a Gentoo user, who sent me the sed lines
+  and the need for <=dev-libs/libpcre-8.12
 
 *fms-0.3.61 (30 Jun 2011)
 

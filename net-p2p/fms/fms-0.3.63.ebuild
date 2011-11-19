@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/fms-0.3.61.ebuild,v 1.1 2011/06/30 20:32:11 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/fms-0.3.63.ebuild,v 1.1 2011/11/19 18:12:10 tommy Exp $
 
 EAPI="2"
 
@@ -18,7 +18,10 @@ IUSE="frost"
 RDEPEND="virtual/libiconv
 	frost? ( >=dev-libs/libtomcrypt-1.17-r3[libtommath] )
 	>=dev-libs/poco-1.2.9
-	|| ( >=dev-db/sqlite-3.6.15 =dev-db/sqlite-3.6.13* =dev-db/sqlite-3.6.12* =dev-db/sqlite-3.6.11* =dev-db/sqlite-3.6.6.2* )"
+	>=dev-db/sqlite-3.6.15
+	<dev-libs/libpcre-8.13"
+#added dependency on <=dev-libs/libpcre-8.12 instead of blocking higher versions,
+#to prevent some issues with blocker resolution in portage
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
@@ -33,6 +36,8 @@ src_prepare() {
 	edos2unix src/http/pages/showfilepage.cpp
 	epatch "${FILESDIR}"/${PN}-use-system-libs.patch
 	sed -i "s:LTC_PKCS:LTC_LTC_PKCS:g" src/freenet/frostidentity.cpp
+	sed -i 's:"../../../include/fmsapp.h":"../include/fmsapp.h":' src/*.cpp
+	sed -i 's:"../../../include/fmsapp.h":"../../include/fmsapp.h":' src/*/*.cpp
 }
 
 src_configure() {
