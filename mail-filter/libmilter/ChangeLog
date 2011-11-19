@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/libmilter
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/ChangeLog,v 1.22 2011/06/10 10:56:58 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/ChangeLog,v 1.23 2011/11/19 09:42:42 hwoarang Exp $
+
+  19 Nov 2011; Markos Chandras <hwoarang@gentoo.org> libmilter-1.0.2.ebuild:
+  Stable on amd64 wrt bug #390947
 
 *libmilter-1.0.2 (10 Jun 2011)
 
