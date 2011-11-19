@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libmp4v2
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.65 2010/06/25 01:57:27 mr_bones_ Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.66 2011/11/19 12:44:37 ssuominen Exp $
+
+*libmp4v2-1.9.1_p479 (19 Nov 2011)
+
+  19 Nov 2011; Samuli Suominen <ssuominen@gentoo.org>
+  +libmp4v2-1.9.1_p479.ebuild:
+  Version bump to featured upstream snapshot (unkeyworded for now because of
+  API and ABI break)
 
   25 Jun 2010; Michael Sterrett <mr_bones_@gentoo.org>
   libmp4v2-1.9.1.ebuild:

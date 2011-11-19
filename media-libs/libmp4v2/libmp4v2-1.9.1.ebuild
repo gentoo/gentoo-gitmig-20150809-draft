@@ -1,8 +1,8 @@
 # Copyright 1999-2010 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.9.1.ebuild,v 1.15 2010/09/16 00:37:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.9.1.ebuild,v 1.16 2011/11/19 12:44:37 ssuominen Exp $
 
-EAPI=3
+EAPI=4
 inherit multilib libtool
 
 DESCRIPTION="Functions for accessing ISO-IEC:14496-1:2001 MPEG-4 standard"
@@ -31,12 +31,11 @@ src_configure() {
 	econf \
 		--disable-gch \
 		$(use_enable utils util) \
-		$(use_enable static-libs static) \
-		--disable-dependency-tracking
+		$(use_enable static-libs static)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install
 	dodoc doc/*.txt README
-	find "${ED}" -name '*.la' -exec rm -f '{}' +
+	find "${ED}" -name '*.la' -exec rm -f {} +
 }
