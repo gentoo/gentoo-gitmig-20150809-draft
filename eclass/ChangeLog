@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.19 2011/11/19 20:31:12 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.20 2011/11/19 20:52:50 pesa Exp $
+
+  19 Nov 2011; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass:
+  Add dependency on dev-util/pkgconfig (#385835 and #387783).
 
   19 Nov 2011; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass:
   Remove support for Qt 4.5, add blockers for qt-declarative, small cleanup.
