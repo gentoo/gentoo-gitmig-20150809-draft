@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/qu-prolog
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.82 2011/11/18 21:00:02 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.83 2011/11/19 18:20:30 keri Exp $
+
+*qu-prolog-9.1 (19 Nov 2011)
+
+  19 Nov 2011; <keri@gentoo.org> +qu-prolog-9.1.ebuild,
+  +files/qu-prolog-9.1-cerr-ptr.patch, +files/qu-prolog-9.1-cflags.patch,
+  +files/qu-prolog-9.1-portage.patch:
+  Version bump
 
 *qu-prolog-9.0 (18 Nov 2011)
 
