@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/qcomicbook
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.43 2011/11/13 20:52:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.44 2011/11/19 05:29:48 radhermit Exp $
+
+*qcomicbook-0.8.2 (19 Nov 2011)
+
+  19 Nov 2011; Tim Harder <radhermit@gentoo.org> -qcomicbook-0.6.0.ebuild,
+  -qcomicbook-0.7.2.ebuild, +qcomicbook-0.8.2.ebuild:
+  Version bump and remove old.
 
   13 Nov 2011; Markus Meier <maekke@gentoo.org> qcomicbook-0.8.1.ebuild:
   x86 stable, bug #378381

@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.7.2.ebuild,v 1.3 2011/07/17 20:42:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/qcomicbook-0.8.2.ebuild,v 1.1 2011/11/19 05:29:48 radhermit Exp $
 
-EAPI=2
+EAPI=4
+
 CMAKE_IN_SOURCE_BUILD=1
 inherit cmake-utils flag-o-matic
 
@@ -12,10 +13,11 @@ SRC_URI="http://${PN}.linux-projects.net/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug"
 
-DEPEND="x11-libs/qt-gui:4"
+DEPEND="x11-libs/qt-gui:4
+	app-text/poppler[qt4]"
 RDEPEND="${DEPEND}"
 
 DOCS="AUTHORS ChangeLog NEWS README THANKS TODO"
