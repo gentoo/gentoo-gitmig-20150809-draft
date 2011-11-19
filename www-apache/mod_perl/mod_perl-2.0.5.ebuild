@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.5.ebuild,v 1.7 2011/08/09 15:50:24 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.5.ebuild,v 1.8 2011/11/19 00:27:52 idl0r Exp $
 
 EAPI="3"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://perl.apache.org/"
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE=""
+IUSE="debug"
 SLOT="1"
 
 # Make sure we always use the latest Apache-Test version or even check the
@@ -81,13 +81,20 @@ src_prepare() {
 }
 
 src_configure() {
+	local myargs=
+
+	if use debug; then
+		myargs="MP_TRACE=1 MP_DEBUG=1"
+	else
+		myargs="MP_TRACE=0 MP_DEBUG=0"
+	fi
+
 	perl Makefile.PL \
 		PREFIX="${EPREFIX}"/usr \
 		INSTALLDIRS=vendor \
-		MP_TRACE=1 \
-		MP_DEBUG=1 \
 		MP_USE_DSO=1 \
-		MP_APXS=${APXS} || die
+		MP_APXS=${APXS} \
+		${myargs} || die
 }
 
 src_test() {
