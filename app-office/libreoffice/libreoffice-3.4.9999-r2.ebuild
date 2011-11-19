@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999-r2.ebuild,v 1.2 2011/11/13 10:21:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-3.4.9999-r2.ebuild,v 1.3 2011/11/19 13:53:57 scarabeus Exp $
 
 EAPI=4
 
@@ -175,7 +175,6 @@ DEPEND="${COMMON_DEPEND}
 PATCHES=(
 	"${FILESDIR}/${PN}-3.3.1-neon_remove_SSPI_support.diff"
 	"${FILESDIR}/${PN}-libdb5-fix-check.diff"
-	"${FILESDIR}/${PN}-3.4.1-salfix.diff"
 	"${FILESDIR}/sdext-presenter.diff"
 	"${FILESDIR}/${PN}-svx.patch"
 	"${FILESDIR}/${PN}-vbaobj-visibility-fix.patch"
