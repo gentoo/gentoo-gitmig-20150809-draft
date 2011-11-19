@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.98 2011/11/12 19:01:56 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.99 2011/11/19 20:00:35 pesa Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -185,11 +185,12 @@ qt4-build_src_prepare() {
 				die "visibility fixing sed failed"
 	fi
 
-	# fix libX11 dependency on non X packages
-	if version_is_at_least "4.7.0_beta2"; then
+	if version_is_at_least "4.7"; then
+		# fix libX11 dependency on non X packages
 		local nolibx11_pkgs="qt-core qt-dbus qt-script qt-sql qt-test qt-xmlpatterns"
 		has ${PN} ${nolibx11_pkgs} && qt_nolibx11
-		[[ ${PN} == "qt-assistant" ]] && qt_assistant_cleanup
+
+		qt_assistant_cleanup
 	fi
 
 	if use aqua; then
@@ -823,9 +824,16 @@ qt_mkspecs_dir() {
 # @FUNCTION: qt_assistant_cleanup
 # @RETURN: nothing
 # @DESCRIPTION:
-# Tries to clean up tools.pro for qt-assistant ebuilds
-# Meant to be called in src_prepare
+# Tries to clean up tools.pro for qt-assistant ebuilds.
+# Meant to be called in src_prepare().
+# Since Qt 4.7.4 this function is a no-op.
 qt_assistant_cleanup() {
+	# apply patching to qt-assistant ebuilds only
+	[[ ${PN} != "qt-assistant" ]] && return
+
+	# no longer needed for 4.7.4 and later
+	version_is_at_least "4.7.4" && return
+
 	# different versions (and branches...) may need different handling,
 	# add a case if you need special handling
 	case "${MY_PV_EXTRA}" in

@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.17 2011/11/18 20:51:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.18 2011/11/19 20:00:35 pesa Exp $
+
+  19 Nov 2011; Davide Pesavento <pesa@gentoo.org> qt4-build.eclass:
+  Make qt_assistant_cleanup() a no-op for Qt 4.7.4 and later (bug #386709).
 
   18 Nov 2011; Michał Górny <mgorny@gentoo.org> scons-utils.eclass:
   Add DESTDIR-like variable to the example.
