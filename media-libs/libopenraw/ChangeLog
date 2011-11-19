@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libopenraw
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.49 2011/09/15 10:47:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libopenraw/ChangeLog,v 1.50 2011/11/19 15:16:47 ssuominen Exp $
+
+*libopenraw-0.0.9 (19 Nov 2011)
+
+  19 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> +libopenraw-0.0.9.ebuild:
+  Version bump.
 
 *libopenraw-0.0.8-r1 (15 Sep 2011)
 
