@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5930 2011/11/19 15:05:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5931 2011/11/19 17:43:14 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Nov 2011; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Removed (bug #377695).
 
   19 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Lastrite savage2-bin wrt #390919 (incompatible with current media-libs/fmod)

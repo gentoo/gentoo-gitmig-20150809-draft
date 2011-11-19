@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13258 2011/11/19 15:05:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13259 2011/11/19 17:43:14 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -252,11 +252,6 @@ dev-java/jnlp-bin
 # This package is obsolete and depends on dev-java/jnlp-bin
 # (bug https://bugs.gentoo.org/show_bug.cgi?id=377967)
 app-misc/openjnlp
-
-# Jeroen Roovers <jer@gentoo.org> (18 Oct 2011)
-# Masked for removal on 18 Nov 2011
-# https://bugs.gentoo.org/377695
-sys-apps/lsparisc
 
 # Markos Chandras <hwoarang@gentoo.org> (16 Oct 2011)
 # Does not build with newer kernels. Open bug for version bump
