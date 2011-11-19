@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-Form
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Form/ChangeLog,v 1.9 2011/11/15 18:46:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Form/ChangeLog,v 1.10 2011/11/19 19:48:05 armin76 Exp $
+
+  19 Nov 2011; Raúl Porcel <armin76@gentoo.org> HTML-Form-6.0.0.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #386309
 
   15 Nov 2011; Jeroen Roovers <jer@gentoo.org> HTML-Form-6.0.0.ebuild:
   Stable for HPPA (bug #390083).
