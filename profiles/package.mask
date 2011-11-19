@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13256 2011/11/19 13:02:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13257 2011/11/19 13:08:09 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -36,6 +36,7 @@
 # of (obsolete) gnome-base/gnome-vfs package
 #
 # Removal in 30 days
+app-cdr/serpentine
 gnome-extra/gcursor
 x11-misc/gtodo
 x11-libs/libelysium
