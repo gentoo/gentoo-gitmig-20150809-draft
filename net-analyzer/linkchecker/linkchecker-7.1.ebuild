@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-7.1.ebuild,v 1.1 2011/08/14 11:57:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-7.1.ebuild,v 1.2 2011/11/19 09:55:27 hwoarang Exp $
 
 EAPI="3"
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~ppc-macos ~x64-solaris"
+KEYWORDS="amd64 ~ppc ~x86 ~ppc-macos ~x64-solaris"
 IUSE="bash-completion bookmarks clamav doc geoip gnome login syntax-check X"
 
 RDEPEND="
