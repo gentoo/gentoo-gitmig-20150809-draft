@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.426 2011/11/17 18:54:09 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.427 2011/11/19 21:15:07 vapier Exp $
+
+  19 Nov 2011; Mike Frysinger <vapier@gentoo.org> binutils-2.21.1-r1.ebuild:
+  Mark alpha/arm/ia64/m68k/s390/sh stable #378485.
 
   17 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   binutils-2.21.1-r1.ebuild:
