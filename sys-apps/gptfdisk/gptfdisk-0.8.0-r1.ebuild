@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/gptfdisk-0.8.0-r1.ebuild,v 1.1 2011/10/06 13:52:28 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gptfdisk/gptfdisk-0.8.0-r1.ebuild,v 1.2 2011/11/19 10:04:24 alexxy Exp $
 
 EAPI="4"
 
@@ -20,7 +20,6 @@ DEPEND="
 "
 
 RDEPEND="
-	!sys-apps/gdisk
 	"
 
 src_compile() {
