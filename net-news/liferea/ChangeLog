@@ -1,6 +1,10 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.212 2011/09/26 15:19:32 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.213 2011/11/19 17:53:22 ssuominen Exp $
+
+  19 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> liferea-1.7.6-r1.ebuild,
+  liferea-1.8_rc1.ebuild:
+  Remove USE="gtk" from libindicate depend (as there is no such flag yet)
 
 *liferea-1.8_rc1 (26 Sep 2011)
 

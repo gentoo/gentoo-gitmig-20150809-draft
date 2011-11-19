@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.8_rc1.ebuild,v 1.1 2011/09/26 15:19:32 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.8_rc1.ebuild,v 1.2 2011/11/19 17:53:22 ssuominen Exp $
 
 EAPI=4
 
@@ -30,7 +30,7 @@ RDEPEND=">=x11-libs/gtk+-2.18.0:2
 	>=dev-db/sqlite-3.6.10:3
 	>=net-libs/libsoup-2.28.2:2.4
 	>=net-libs/webkit-gtk-1.2.2:2
-	ayatana? ( dev-libs/libindicate[gtk] )
+	ayatana? ( dev-libs/libindicate )
 	libnotify? ( >=x11-libs/libnotify-0.3.2 )"
 DEPEND="${RDEPEND}
 	dev-util/intltool
