@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/choqok/choqok-1.1-r1.ebuild,v 1.1 2011/09/23 21:39:42 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/choqok/choqok-1.1-r1.ebuild,v 1.2 2011/11/19 17:33:06 ssuominen Exp $
 
 EAPI=4
 
@@ -21,19 +21,19 @@ HOMEPAGE="http://choqok.gnufolks.org/"
 
 LICENSE="GPL-3"
 SLOT="4"
-IUSE="debug indicate"
+IUSE="ayatana debug"
 
 DEPEND="dev-libs/qjson
 	>=dev-libs/qoauth-1.0.1
-	indicate? ( dev-libs/libindicate-qt )
+	ayatana? ( dev-libs/libindicate-qt )
 "
 RDEPEND="${DEPEND}"
 
-PATCHES=( "${FILESDIR}/${P}-twitter.patch" )
+PATCHES=( "${FILESDIR}"/${P}-twitter.patch )
 
 src_prepare(){
 	mycmakeargs=(
-		$(cmake-utils_use !indicate QTINDICATE_DISABLE)
+		$(cmake-utils_use !ayatana QTINDICATE_DISABLE)
 	)
 
 	kde4-base_src_prepare
