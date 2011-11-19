@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/tsocks
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/ChangeLog,v 1.36 2010/06/06 14:40:38 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/ChangeLog,v 1.37 2011/11/19 16:24:03 naota Exp $
+
+*tsocks-1.8_beta5-r6 (19 Nov 2011)
+
+  19 Nov 2011; Naohiro Aota <naota@gentoo.org> +tsocks-1.8_beta5-r6.ebuild:
+  Use MAP_ANON instread of MAP_ANONYMOUS if available. Bug #381917
 
   06 Jun 2010; Raúl Porcel <armin76@gentoo.org> tsocks-1.8_beta5-r5.ebuild:
   arm stable wrt #300830
