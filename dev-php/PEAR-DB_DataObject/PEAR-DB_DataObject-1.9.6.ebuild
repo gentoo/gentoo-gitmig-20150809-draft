@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_DataObject/PEAR-DB_DataObject-1.9.6.ebuild,v 1.2 2011/11/18 15:36:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_DataObject/PEAR-DB_DataObject-1.9.6.ebuild,v 1.3 2011/11/19 10:56:30 hanno Exp $
 
 EAPI="4"
 
@@ -19,8 +19,7 @@ RDEPEND=">=dev-php/PEAR-DB-1.7.6-r1
 	!minimal? ( >=dev-php/PEAR-Validate-0.5.0-r1
 		    >=dev-php/PEAR-MDB2-2.0.0_rc1 )"
 
-src_unpack() {
-	unpack "${A}"
+src_prepare() {
 	# don't install windows-only stuff
-	sed -re 's:<file baseinstalldir="DB" md5sum=".{32}" name="scripts/DB_DataObject_createTables.bat" role="script" />::' -i package.xml || die "sed failed"
+	sed -re 's:<file baseinstalldir="DB" md5sum=".{32}" name="scripts/DB_DataObject_createTables.bat" role="script" />::' -i "${WORKDIR}/package.xml" || die "sed failed"
 }

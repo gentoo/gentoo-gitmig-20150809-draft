@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-DB_DataObject
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_DataObject/ChangeLog,v 1.41 2011/11/18 15:36:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_DataObject/ChangeLog,v 1.42 2011/11/19 10:56:30 hanno Exp $
+
+  19 Nov 2011; Hanno Boeck <hanno@gentoo.org> PEAR-DB_DataObject-1.9.6.ebuild:
+  move sed to src_prepare to avoid repoman warnings.
 
   18 Nov 2011; Jeroen Roovers <jer@gentoo.org> PEAR-DB_DataObject-1.9.6.ebuild:
   Stable for HPPA (bug #390857).
