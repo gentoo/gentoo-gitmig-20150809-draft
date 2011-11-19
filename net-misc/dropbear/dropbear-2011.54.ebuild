@@ -1,6 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-2011.54.ebuild,v 1.1 2011/11/08 13:21:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-2011.54.ebuild,v 1.2 2011/11/19 08:02:21 vapier Exp $
+
+EAPI="4"
 
 inherit eutils savedconfig pam
 
@@ -14,31 +16,22 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="bsdpty minimal multicall pam static syslog zlib"
 
-DEPEND="zlib? ( sys-libs/zlib )
+DEPEND="static? ( zlib? ( sys-libs/zlib[static-libs] ) )
 	pam? ( virtual/pam )"
 RDEPEND="${DEPEND}
+	!static? ( zlib? ( sys-libs/zlib ) )
 	pam? ( >=sys-auth/pambase-20080219.1 )"
 
+REQUIRED_USE="pam? ( !static )"
+
 set_options() {
-	use minimal \
-		&& progs="dropbear dbclient dropbearkey" \
-		|| progs="dropbear dbclient dropbearkey dropbearconvert scp"
-	use multicall && makeopts="${makeopts} MULTI=1"
-	use static && makeopts="${makeopts} STATIC=1"
+	progs="dropbear dbclient dropbearkey"
+	progs+=" $(usex minimal "" "dropbearconvert scp")"
+	use multicall && makeopts+=" MULTI=1"
+	use static && makeopts+=" STATIC=1"
 }
 
-pkg_setup() {
-	if use pam && use static ; then
-		die "USE='pam static' makes no sense ... pick one"
-	fi
-
-	enewgroup sshd 22
-	enewuser sshd 22 -1 /var/empty sshd
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/dropbear-0.46-dbscp.patch
 	sed -i \
 		-e '/SFTPSERVER_PATH/s:".*":"/usr/lib/misc/sftp-server":' \
@@ -50,26 +43,25 @@ src_unpack() {
 	restore_config options.h
 }
 
-src_compile() {
-	if use static && use pam ; then
-		ewarn "You cannot have USE='static pam'.  Assuming static is more important."
-	fi
+src_configure() {
 	econf \
 		$(use_enable zlib) \
 		$(use_enable pam) \
 		$(use_enable !bsdpty openpty) \
-		$(use_enable syslog) \
-		|| die
+		$(use_enable syslog)
+}
+
+src_compile() {
 	set_options
-	emake ${makeopts} PROGRAMS="${progs}" || die "make ${makeopts} failed"
+	emake ${makeopts} PROGRAMS="${progs}"
 }
 
 src_install() {
 	set_options
-	emake install DESTDIR="${D}" ${makeopts} PROGRAMS="${progs}" || die "make install failed"
+	emake install DESTDIR="${D}" ${makeopts} PROGRAMS="${progs}"
 	doman *.8
-	newinitd "${FILESDIR}"/dropbear.init.d dropbear || die
-	newconfd "${FILESDIR}"/dropbear.conf.d dropbear || die
+	newinitd "${FILESDIR}"/dropbear.init.d dropbear
+	newconfd "${FILESDIR}"/dropbear.conf.d dropbear
 	dodoc CHANGES README TODO SMALL MULTI
 
 	# The multi install target does not install the links
@@ -90,6 +82,10 @@ src_install() {
 		mv "${D}"/usr/bin/{,db}scp || die
 	fi
 
-	pamd_mimic system-remote-login dropbear auth account password session \
-		|| die "unable to mimic system-remote-login pamd file."
+	pamd_mimic system-remote-login dropbear auth account password session
+}
+
+pkg_preinst() {
+	enewgroup sshd 22
+	enewuser sshd 22 -1 /var/empty sshd
 }
