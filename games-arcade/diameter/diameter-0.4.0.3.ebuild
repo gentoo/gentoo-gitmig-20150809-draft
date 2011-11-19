@@ -1,9 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/diameter/diameter-0.4.0.3.ebuild,v 1.5 2010/09/11 21:01:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/diameter/diameter-0.4.0.3.ebuild,v 1.6 2011/11/19 18:15:27 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils autotools games
+PYTHON_DEPEND="2"
+inherit python eutils autotools games
 
 DESCRIPTION="Arcade game with elements of economy and adventure"
 HOMEPAGE="http://gamediameter.sourceforge.net/"
@@ -25,6 +26,11 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/gamediameter
+
+pkg_setup() {
+	python_set_active_version 2
+	games_pkg_setup
+}
 
 src_prepare() {
 	sed -i \
