@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cssutils
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/ChangeLog,v 1.18 2010/12/08 15:45:03 arfrever Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/ChangeLog,v 1.19 2011/11/19 09:53:58 hwoarang Exp $
+
+  19 Nov 2011; Markos Chandras <hwoarang@gentoo.org> cssutils-0.9.7.ebuild:
+  Restrict test. Bug #386807. Stable on amd64 wrt bug 386729
 
   08 Dec 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   cssutils-0.9.7.ebuild:
