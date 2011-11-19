@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/freenet
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.142 2011/09/17 18:42:44 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.143 2011/11/19 18:34:57 tommy Exp $
+
+*freenet-0.7.5_p1405 (19 Nov 2011)
+
+  19 Nov 2011; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +freenet-0.7.5_p1405.ebuild:
+  Version bump
 
   17 Sep 2011; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> freenet-9999.ebuild,
   -files/strip-openjdk-check.patch:
