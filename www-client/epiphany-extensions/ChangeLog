@@ -1,6 +1,14 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.156 2011/11/06 06:16:10 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.157 2011/11/19 06:20:52 tetromino Exp $
+
+*epiphany-extensions-3.2.0-r1 (19 Nov 2011)
+
+  19 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -epiphany-extensions-3.2.0.ebuild, +epiphany-extensions-3.2.0-r1.ebuild,
+  +files/epiphany-extensions-3.2.0-dbus-libs.patch:
+  Add patch to prevent immediate crash when rss extension is loaded. Thanks to
+  Travis Glenn Hansen (thansen) for reporting on IRC.
 
 *epiphany-extensions-3.2.0 (06 Nov 2011)
 

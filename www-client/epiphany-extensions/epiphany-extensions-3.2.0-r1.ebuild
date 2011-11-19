@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-3.2.0.ebuild,v 1.1 2011/11/06 05:02:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-3.2.0-r1.ebuild,v 1.1 2011/11/19 06:20:52 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 
-inherit gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="Extensions for the Epiphany web browser"
 HOMEPAGE="http://www.gnome.org/projects/epiphany/extensions.html"
@@ -30,7 +30,9 @@ RDEPEND=">=www-client/epiphany-3.2.0
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40
 	>=dev-util/pkgconfig-0.20
-	>=app-text/gnome-doc-utils-0.3.2"
+	>=app-text/gnome-doc-utils-0.3.2
+
+	gnome-base/gnome-common"
 # eautoreconf dependencies:
 #	  gnome-base/gnome-common
 
@@ -50,4 +52,11 @@ pkg_setup() {
 		--disable-schemas-compile
 		--with-extensions=$(echo "${extensions}" | sed -e 's/[[:space:]]\+/,/g')"
 	DOCS="AUTHORS ChangeLog HACKING NEWS README"
+}
+
+src_prepare() {
+	# https://bugzilla.gnome.org/show_bug.cgi?id=664369; needs eautoreconf
+	epatch "${FILESDIR}/${PN}-3.2.0-dbus-libs.patch"
+	eautoreconf
+	gnome2_src_prepare
 }
