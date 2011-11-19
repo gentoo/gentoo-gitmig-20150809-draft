@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xteddy
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xteddy/ChangeLog,v 1.6 2008/05/30 07:26:36 phreak Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xteddy/ChangeLog,v 1.7 2011/11/19 04:20:20 radhermit Exp $
+
+*xteddy-2.2 (19 Nov 2011)
+
+  19 Nov 2011; Tim Harder <radhermit@gentoo.org> +xteddy-2.2.ebuild:
+  Version bump.
 
   30 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Andrej Kacian (Ticho) from metadata.xml (as per #59986).
