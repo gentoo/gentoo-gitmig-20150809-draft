@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13254 2011/11/18 09:36:00 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13255 2011/11/19 11:08:04 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (19 Nov 2011)
+# Keep masked until the distfile is published somewhere sane.
+=sys-devel/crossdev-20111118
 
 # Christoph Junghans <ottxor@gentoo.org> (15 Nov 2011)
 # current version of google-talkplugin never clear what you get
