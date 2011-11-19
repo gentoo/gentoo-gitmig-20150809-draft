@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<herd>hppa</herd>
-<longdescription lang="en">lsparisc is a utility much like lspci from
-sys-apps/pciutils, only it lists devices on HPPA specific I/O busses.
-</longdescription>
-</pkgmetadata>
-
