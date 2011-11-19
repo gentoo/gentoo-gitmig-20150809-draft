@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/libappindicator-0.4.1-r200.ebuild,v 1.1 2011/11/19 14:47:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/libappindicator-0.4.1-r200.ebuild,v 1.2 2011/11/19 15:57:07 ssuominen Exp $
 
 EAPI=4
 
@@ -29,7 +29,7 @@ RDEPEND="dev-libs/dbus-glib
 	>=x11-libs/gtk+-2.18:2
 	introspection? ( >=dev-libs/gobject-introspection-0.10 )"
 DEPEND="${RDEPEND}
-	dev-lang/vala:${__vala_version}
+	dev-lang/vala:${__vala_version}[vapigen]
 	dev-util/gtk-doc-am
 	dev-util/pkgconfig"
 
