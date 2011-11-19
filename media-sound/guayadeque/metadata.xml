@@ -6,6 +6,6 @@
 		<name>Justin Lecher</name>
 	</maintainer>
 	<use>
-		<flag name="indicate">App indicator support via dev-libs/libindicate</flag>
+		<flag name="ayatana">Build in support for Ayatana notification using the libindicate plugin.</flag>
 	</use>
 </pkgmetadata>
