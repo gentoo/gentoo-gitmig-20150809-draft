@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xnee
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/ChangeLog,v 1.15 2011/08/09 18:48:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/ChangeLog,v 1.16 2011/11/19 05:03:12 radhermit Exp $
+
+*xnee-3.10 (19 Nov 2011)
+
+  19 Nov 2011; Tim Harder <radhermit@gentoo.org> +xnee-3.10.ebuild:
+  Version bump.
 
 *xnee-3.09 (09 Aug 2011)
 
