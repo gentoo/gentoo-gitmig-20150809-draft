@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.207 2011/10/05 17:53:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.208 2011/11/19 11:08:15 graaff Exp $
+
+*rails-3.0.11 (19 Nov 2011)
+
+  19 Nov 2011; Hans de Graaff <graaff@gentoo.org> +rails-3.0.11.ebuild:
+  Version bump for Rails 3.0.11.
 
   05 Oct 2011; Hans de Graaff <graaff@gentoo.org> -rails-3.0.7.ebuild,
   -rails-3.0.9.ebuild:

@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/activeresource
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.98 2011/10/05 17:59:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.99 2011/11/19 11:00:59 graaff Exp $
+
+*activeresource-3.0.11 (19 Nov 2011)
+
+  19 Nov 2011; Hans de Graaff <graaff@gentoo.org>
+  +activeresource-3.0.11.ebuild:
+  Version bump for Rails 3.0.11.
 
   05 Oct 2011; Hans de Graaff <graaff@gentoo.org> -activeresource-3.0.7.ebuild,
   -activeresource-3.0.9.ebuild:
