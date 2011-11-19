@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Encode-Locale
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-Locale/ChangeLog,v 1.16 2011/11/08 23:13:22 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Encode-Locale/ChangeLog,v 1.17 2011/11/19 18:51:41 armin76 Exp $
+
+  19 Nov 2011; Raúl Porcel <armin76@gentoo.org> Encode-Locale-1.20.0.ebuild:
+  alpha/ia64/m68k/s390/sh/sparc stable wrt #386309
 
   08 Nov 2011; Tony Vroon <chainsaw@gentoo.org> Encode-Locale-1.20.0.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
