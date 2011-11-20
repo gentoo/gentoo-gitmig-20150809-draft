@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/geany-plugins
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/ChangeLog,v 1.10 2011/10/27 04:51:22 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany-plugins/ChangeLog,v 1.11 2011/11/20 05:15:39 binki Exp $
+
+*geany-plugins-0.21.1 (20 Nov 2011)
+
+  20 Nov 2011; Nathan Phillip Brink <binki@gentoo.org>
+  +geany-plugins-0.21.1.ebuild, metadata.xml:
+  Bump to geany-plugins-0.21.1, closing bug #389087.
 
   27 Oct 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   geany-plugins-0.19.ebuild, geany-plugins-0.20-r1.ebuild:
