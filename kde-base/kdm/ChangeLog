@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.267 2011/11/02 20:48:16 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.268 2011/11/20 21:49:02 dilfridge Exp $
+
+*kdm-4.7.3-r1 (20 Nov 2011)
+
+  20 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org> -kdm-4.7.3.ebuild,
+  +kdm-4.7.3-r1.ebuild, +files/kdm-4.7.3-revertcrashlogic.patch:
+  Make xdmcp remote login work again by reverting relevant upstream commit, bug
+  389757
 
 *kdm-4.7.3 (02 Nov 2011)
 
