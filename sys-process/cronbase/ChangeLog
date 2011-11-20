@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/cronbase
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.37 2011/10/20 16:35:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.38 2011/11/20 09:41:05 xarthisius Exp $
+
+  20 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> cronbase-0.3.3.ebuild:
+  ppc64 stable wrt #294346
 
   20 Oct 2011; Brent Baude <ranger@gentoo.org> cronbase-0.3.3.ebuild:
   Marking cronbase-0.3.3 ppc for bug 294346
