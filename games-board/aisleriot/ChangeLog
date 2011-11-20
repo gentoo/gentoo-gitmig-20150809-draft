@@ -1,6 +1,12 @@
 # ChangeLog for games-board/aisleriot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/aisleriot/ChangeLog,v 1.1 2011/11/07 04:02:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/aisleriot/ChangeLog,v 1.2 2011/11/20 15:02:38 pacho Exp $
+
+*aisleriot-3.2.2 (20 Nov 2011)
+
+  20 Nov 2011; Pacho Ramos <pacho@gentoo.org> +aisleriot-3.2.2.ebuild:
+  Version bump, also enable sound unconditionally as, per policy, gnome packages
+  don't RDEPEND on libcanberra optionally.
 
 *aisleriot-3.2.1 (07 Nov 2011)
 
