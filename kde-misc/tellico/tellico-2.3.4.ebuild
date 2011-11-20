@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-2.3.4.ebuild,v 1.1 2011/10/17 21:53:18 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-2.3.4.ebuild,v 1.2 2011/11/20 14:34:45 dilfridge Exp $
 
 EAPI=4
 
@@ -36,6 +36,9 @@ DEPEND="
 	yaz? ( >=dev-libs/yaz-2 )
 "
 RDEPEND="${DEPEND}"
+
+# tests need network access and well-defined server responses
+RESTRICT="test"
 
 DOCS=( AUTHORS ChangeLog README )
 
