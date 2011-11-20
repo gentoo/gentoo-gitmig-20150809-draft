@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdeplasma-addons
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.107 2011/11/02 20:48:22 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/ChangeLog,v 1.108 2011/11/20 16:09:59 dilfridge Exp $
+
+*kdeplasma-addons-4.7.3-r1 (20 Nov 2011)
+
+  20 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  +kdeplasma-addons-4.7.3-r1.ebuild,
+  +files/kdeplasma-addons-4.7.3-knowledge.patch:
+  Build knowledgebase plasmoid only if we USE attica, bug 391019
 
 *kdeplasma-addons-4.7.3 (02 Nov 2011)
 
