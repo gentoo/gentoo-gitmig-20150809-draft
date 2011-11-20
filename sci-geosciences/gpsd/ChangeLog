@@ -1,6 +1,14 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.73 2011/07/18 07:09:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.74 2011/11/20 06:59:00 vapier Exp $
+
+*gpsd-3.3 (20 Nov 2011)
+
+  20 Nov 2011; Mike Frysinger <vapier@gentoo.org> +gpsd-3.3.ebuild,
+  +files/gpsd-3.3-release-rev.patch, +files/gpsd-3.3-setup.py,
+  +files/gpsd-3.3-udev-install.patch:
+  Version bump #380883 by Andreas K. Hüttel and Ed Wildgoose. Add USE=X
+  support for #369261 by Patrick.
 
   18 Jul 2011; Tomáš Chvátal <scarabeus@gentoo.org> gpsd-2.96-r1.ebuild:
   Add sys-devel/bc as test dep. Fixes bug #363203.
