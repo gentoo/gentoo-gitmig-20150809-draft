@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.7.2-r2.ebuild,v 1.5 2011/09/27 18:02:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.7.2-r2.ebuild,v 1.6 2011/11/20 19:03:44 pesa Exp $
 
 EAPI="3"
 inherit qt4-build
@@ -10,12 +10,11 @@ SLOT="4"
 KEYWORDS="amd64 arm ~hppa ~ia64 ~mips ppc ppc64 -sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE="+glib iconv +jit optimized-qmake private-headers qt3support ssl"
 
-RDEPEND="sys-libs/zlib
+DEPEND="sys-libs/zlib
 	glib? ( dev-libs/glib )
 	ssl? ( dev-libs/openssl )
 	!<x11-libs/qt-4.4.0:4"
-DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+RDEPEND="${DEPEND}"
 PDEPEND="qt3support? ( ~x11-libs/qt-gui-${PV}[aqua=,glib=,qt3support] )"
 
 PATCHES=(

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.7.4.ebuild,v 1.1 2011/09/08 09:18:55 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/qt-core-4.7.4.ebuild,v 1.2 2011/11/20 19:03:44 pesa Exp $
 
 EAPI="3"
 inherit qt4-build
@@ -10,12 +10,11 @@ SLOT="4"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 -sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE="+glib iconv +jit optimized-qmake private-headers qt3support ssl"
 
-RDEPEND="sys-libs/zlib
+DEPEND="sys-libs/zlib
 	glib? ( dev-libs/glib )
 	ssl? ( dev-libs/openssl )
 	!<x11-libs/qt-4.4.0:4"
-DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+RDEPEND="${DEPEND}"
 PDEPEND="qt3support? ( ~x11-libs/qt-gui-${PV}[aqua=,glib=,qt3support] )"
 
 PATCHES=(
@@ -127,7 +126,7 @@ src_install() {
 	DYLD_LIBRARY_PATH="${S}/lib${DYLD_FPATH}" \
 	LD_LIBRARY_PATH="${S}/lib" "${S}"/bin/lrelease translations/*.ts \
 		|| die "generating translations faied"
-	insinto ${QTTRANSDIR#${EPREFIX}}
+	insinto "${QTTRANSDIR#${EPREFIX}}"
 	doins translations/*.qm || die "doins translations failed"
 
 	setqtenv
@@ -136,7 +135,7 @@ src_install() {
 	# List all the multilib libdirs
 	local libdirs=
 	for libdir in $(get_all_libdirs); do
-		libdirs+=:${EPREFIX}/usr/${libdir}/qt4
+		libdirs+=":${EPREFIX}/usr/${libdir}/qt4"
 	done
 
 	cat <<-EOF > "${T}/44qt4"
@@ -144,8 +143,8 @@ src_install() {
 	EOF
 	doenvd "${T}/44qt4"
 
-	dodir ${QTDATADIR#${EPREFIX}}/mkspecs/gentoo || die "dodir failed"
-	mv "${D}"/${QTDATADIR}/mkspecs/qconfig.pri "${D}${QTDATADIR}"/mkspecs/gentoo \
+	dodir "${QTDATADIR#${EPREFIX}}"/mkspecs/gentoo || die "dodir failed"
+	mv "${D}/${QTDATADIR}"/mkspecs/qconfig.pri "${D}${QTDATADIR}"/mkspecs/gentoo \
 		|| die "Failed to move qconfig.pri"
 
 	# Framework hacking
@@ -169,7 +168,8 @@ src_install() {
 		install_qconfigs
 	fi
 	# remove .la files
-	find "${D}"${QTLIBDIR} -name "*.la" -print0 | xargs -0 rm
+	find "${D}${QTLIBDIR}" -name "*.la" -print0 | xargs -0 rm
+
 	# remove some unnecessary headers
 	rm -f "${D}${QTHEADERDIR}"/{Qt,QtCore}/{\
 qatomic_windows.h,\

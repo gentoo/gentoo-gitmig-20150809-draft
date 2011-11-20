@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.143 2011/09/27 18:02:12 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.144 2011/11/20 19:03:44 pesa Exp $
+
+  20 Nov 2011; Davide Pesavento <pesa@gentoo.org> qt-core-4.6.3-r1.ebuild,
+  qt-core-4.7.2-r2.ebuild, qt-core-4.7.4.ebuild, -files/moc.pro,
+  -files/rcc.pro, -files/uic.pro:
+  Drop redundant dep on dev-util/pkgconfig; remove unused files.
 
   27 Sep 2011; Kacper Kowalik <xarthisius@gentoo.org> qt-core-4.7.2-r2.ebuild:
   ppc/ppc64 stable wrt #382171
