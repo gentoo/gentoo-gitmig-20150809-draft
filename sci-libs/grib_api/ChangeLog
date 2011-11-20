@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/grib_api
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/ChangeLog,v 1.5 2011/06/21 15:18:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/grib_api/ChangeLog,v 1.6 2011/11/20 20:34:45 bicatali Exp $
+
+*grib_api-1.9.9 (20 Nov 2011)
+
+  20 Nov 2011; Sébastien Fabbro <bicatali@gentoo.org> +grib_api-1.9.9.ebuild,
+  +files/grib_api-1.9.9-autotools.patch, +files/grib_api-1.9.9-ieeefloat.patch:
+  Version bump. Still patch the normal version since the autotools does not
+  have the perl bindings. Fix bug #378167, thanks tove.
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> grib_api-1.9.5-r1.ebuild:
   Add dependency on virtual/fortran
