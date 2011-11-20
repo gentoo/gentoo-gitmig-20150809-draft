@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/xmlrpc-c
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.97 2011/10/01 21:44:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.98 2011/11/20 12:06:54 pva Exp $
+
+*xmlrpc-c-1.28.03 (20 Nov 2011)
+
+  20 Nov 2011; Peter Volkov <pva@gentoo.org> +xmlrpc-c-1.28.03.ebuild:
+  Version bump, thank slepnoga for report.
 
 *xmlrpc-c-1.28.00 (01 Oct 2011)
 
