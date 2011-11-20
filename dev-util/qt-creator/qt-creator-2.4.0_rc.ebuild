@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.4.0_rc.ebuild,v 1.1 2011/11/19 20:14:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-2.4.0_rc.ebuild,v 1.2 2011/11/20 16:52:11 hwoarang Exp $
 
 EAPI="4"
 LANGS="cs de es fr hu it ja pl ru sl uk zh_CN"
@@ -48,7 +48,7 @@ RDEPEND="${CDEPEND}
 	subversion? ( dev-vcs/subversion )"
 
 PLUGINS="bookmarks bineditor cmake cvs fakevim git mercurial
-perforce qml qtscript subversion"
+perforce qml qtscript rss subversion"
 
 S="${WORKDIR}"/"${MY_P}"-src
 
@@ -68,6 +68,8 @@ src_prepare() {
 				plugin="cmakeprojectmanager"
 			elif [[ ${plugin} == "qtscript" ]]; then
 				plugin="qtscripteditor"
+			elif [[ ${plugin} == "rss" ]]; then
+				plugin="welcome"
 			elif [[ ${plugin} ==  "qml" ]]; then
 				for x in qmlprojectmanager qmljsinspector qmljseditor qmljstools qmldesigner; do
 					einfo "Disabling ${x} support"
@@ -86,12 +88,6 @@ src_prepare() {
 		ewarn "In order to use it, you need to manually"
 		ewarn "download the perforce client from http://www.perforce.com/perforce/downloads/index.html"
 		ewarn
-	fi
-	# disable rss news on startup ( bug #302978 )
-	if ! use rss; then
-		einfo "Disabling RSS welcome news"
-		sed -i "/m_rssFetcher->fetch/s:^:\/\/:" \
-			src/plugins/welcome/communitywelcomepagewidget.cpp || die
 	fi
 
 	# fix translations
