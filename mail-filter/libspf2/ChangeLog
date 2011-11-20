@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/libspf2
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/ChangeLog,v 1.38 2010/07/10 10:56:15 idl0r Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/ChangeLog,v 1.39 2011/11/20 15:49:13 eras Exp $
+
+*libspf2-1.2.9 (20 Nov 2011)
+
+  20 Nov 2011; Eray Aslan <eras@gentoo.org> +libspf2-1.2.9.ebuild:
+  version bump
 
   10 Jul 2010; Christian Ruppert <idl0r@gentoo.org>
   -files/libspf2-1.2.5-64bit.patch, -files/patch-libspf2-1.2.5-nointernal:
