@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/alltray-0.74.ebuild,v 1.5 2011/03/25 18:45:04 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/alltray-0.74.ebuild,v 1.6 2011/11/20 12:30:26 pacho Exp $
 
 # remove this kludge once old releases have been removed from the tree
 MY_PV="${PV:0:1}.${PV:2:1}.${PV:3:1}"
@@ -33,6 +33,10 @@ S="${WORKDIR}/${MY_P_DEV}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${MY_P}-include-fixes.patch
+
+	# Drop DEPRECATED flags, bug #391101
+	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED::' \
+		src/Makefile.am src/Makefile.in || die
 }
 
 src_install() {
