@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/m17n-lib
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/ChangeLog,v 1.53 2011/11/10 16:27:35 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/ChangeLog,v 1.54 2011/11/20 14:26:45 naota Exp $
+
+  20 Nov 2011; Naohiro Aota <naota@gentoo.org> m17n-lib-1.5.2.ebuild,
+  +files/m17n-lib-1.5.2-fribidi.patch:
+  Add a patch to deal with newer fribidi. Bug #389121
 
 *m17n-lib-1.6.3 (10 Nov 2011)
 

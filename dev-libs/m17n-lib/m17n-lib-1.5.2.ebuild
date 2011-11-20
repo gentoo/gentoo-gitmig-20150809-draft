@@ -1,8 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/m17n-lib-1.5.2.ebuild,v 1.8 2010/01/31 11:49:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/m17n-lib-1.5.2.ebuild,v 1.9 2011/11/20 14:26:45 naota Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="Multilingual Library for Unix/Linux"
 HOMEPAGE="http://www.m17n.org/m17n-lib/"
@@ -39,6 +39,12 @@ pkg_setup() {
 		eerror "'png' to your USE flags, and re-emerge media-libs/gd."
 		die "Missing USE flag."
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-fribidi.patch
 }
 
 src_compile() {
