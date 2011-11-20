@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/etpan-ng
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/etpan-ng/ChangeLog,v 1.11 2011/08/02 06:22:19 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/etpan-ng/ChangeLog,v 1.12 2011/11/20 12:07:31 eras Exp $
+
+  20 Nov 2011; Eray Aslan <eras@gentoo.org> etpan-ng-0.7.1-r1.ebuild:
+  Fix HOMEPAGE
 
   02 Aug 2011; Matt Turner <mattst88@gentoo.org> etpan-ng-0.7.1.ebuild,
   etpan-ng-0.7.1-r1.ebuild:
