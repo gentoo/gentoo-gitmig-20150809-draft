@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.1.90.ebuild,v 1.1 2011/11/20 06:57:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjpeg-turbo/libjpeg-turbo-1.1.90.ebuild,v 1.2 2011/11/20 06:58:20 ssuominen Exp $
 
 EAPI=4
-inherit flag-o-matic java-pkg-opt-2 libtool toolchain-funcs
+inherit java-pkg-opt-2 libtool toolchain-funcs
 
 DESCRIPTION="MMX, SSE, and SSE2 SIMD accelerated JPEG library"
 HOMEPAGE="http://libjpeg-turbo.virtualgl.org/ http://sourceforge.net/projects/libjpeg-turbo/"
