@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/pommed-1.39.ebuild,v 1.1 2011/07/10 06:00:55 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/pommed-1.39.ebuild,v 1.2 2011/11/20 04:17:06 naota Exp $
 
 EAPI="1"
 
@@ -104,7 +104,6 @@ src_install() {
 		doins gpomme/gpomme-c.desktop
 		insinto /usr/share/gpomme/
 		doins -r gpomme/themes
-		doins gpomme/gpomme.glade
 	fi
 
 	if use X ; then
