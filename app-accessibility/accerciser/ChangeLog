@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/accerciser
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/ChangeLog,v 1.23 2011/11/20 22:52:16 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/accerciser/ChangeLog,v 1.24 2011/11/20 23:42:57 tetromino Exp $
+
+  20 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  accerciser-3.2.1.ebuild:
+  QA: update dependencies (gconf and librsvg-python are not used in 3.2.1) and
+  sort them in a sensible order; do not install COPYING; drop nonexistent
+  --without-pyreqs flag; optimize python files in /usr/share too; drop ppc from
+  keywords due to the at-spi2-core-2.1.5 dependency (bug #390345).
 
 *accerciser-3.2.1 (20 Nov 2011)
 
