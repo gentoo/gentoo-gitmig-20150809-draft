@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-0.5.1.ebuild,v 1.2 2011/11/04 22:12:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/libdbusmenu-0.5.1.ebuild,v 1.3 2011/11/20 12:41:25 pacho Exp $
 
 EAPI=4
 
@@ -43,6 +43,15 @@ DEPEND="${RDEPEND}
 "
 
 REQUIRED_USE="vala? ( introspection )"
+
+src_prepare() {
+	# Drop DEPRECATED flags, bug #391103
+	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' \
+		libdbusmenu-glib/Makefile.am libdbusmenu-glib/Makefile.in \
+		libdbusmenu-gtk/Makefile.am libdbusmenu-gtk/Makefile.in \
+		tests/Makefile.am tests/Makefile.in \
+		configure.ac configure || die
+}
 
 src_configure() {
 	local gtkconf
