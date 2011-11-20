@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/isl-0.07-r1.ebuild,v 1.1 2011/11/02 18:39:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/isl-0.07-r1.ebuild,v 1.2 2011/11/20 05:36:52 ssuominen Exp $
 
 EAPI=4
 inherit eutils
@@ -23,6 +23,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.07-gdb-autoload-dir.patch
 
 	# m4/ax_create_pkgconfig_info.m4 is broken but avoid eautoreconf
+	# http://groups.google.com/group/isl-development/t/37ad876557e50f2c
 	sed -i -e '/Libs:/s:@LDFLAGS@ ::' configure || die #382737
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/isl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/ChangeLog,v 1.6 2011/11/02 18:40:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/ChangeLog,v 1.7 2011/11/20 05:36:52 ssuominen Exp $
+
+  20 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> isl-0.07-r1.ebuild:
+  Link to upstream bug report for the LDFLAGS and pkg-config issue.
 
   02 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> -isl-0.06.ebuild,
   -files/isl-0.06-parallel-py.patch, -isl-0.07.ebuild:
