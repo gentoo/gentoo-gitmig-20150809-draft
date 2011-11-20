@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/geoclue-0.12.0_p20110307.ebuild,v 1.3 2011/04/15 20:06:08 signals Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geoclue/geoclue-0.12.0_p20110307.ebuild,v 1.4 2011/11/20 11:06:00 hwoarang Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -12,7 +12,7 @@ SRC_URI="http://dev.gentoo.org/~signals/${P}.tar.bz2"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="geonames gpsd gsmloc gtk hostip manual networkmanager nominatim plazes
+IUSE="geonames gps gsmloc gtk hostip manual networkmanager nominatim plazes
 	skyhook yahoo-geo"
 
 REQUIRED_USE="skyhook? ( networkmanager )"
@@ -24,7 +24,7 @@ RDEPEND="dev-libs/dbus-glib
 	skyhook? ( net-libs/libsoup )
 	sys-apps/dbus
 	gtk? ( x11-libs/gtk+:2 )
-	gpsd? ( sci-geosciences/gpsd )
+	gps? ( sci-geosciences/gpsd )
 	networkmanager? ( net-misc/networkmanager )"
 DEPEND="${RDEPEND}
 	dev-util/gtk-doc
@@ -46,7 +46,7 @@ src_configure() {
 		--disable-conic \
 		--disable-gypsy \
 		$(use_enable geonames) \
-		$(use_enable gpsd) \
+		$(use_enable gps gpsd) \
 		$(use_enable gsmloc) \
 		$(use_enable gtk) \
 		$(use_enable hostip) \
