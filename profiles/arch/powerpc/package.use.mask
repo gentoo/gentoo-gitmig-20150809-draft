@@ -1,6 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.101 2011/11/05 20:26:24 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.102 2011/11/20 09:19:21 xarthisius Exp $
+
+# Kacper Kowalik <xarthisius@gentoo.org> (20 Nov 2011)
+# Dropped dietlibc wrt #364103
+sys-fs/dmraid dietlibc
 
 # Pacho Ramos <pacho@gentoo.org> (24 Oct 2011)
 # Missing keywords in needed packages, bug #388367

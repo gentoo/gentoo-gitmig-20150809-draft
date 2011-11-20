@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.146 2011/11/05 20:26:24 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.147 2011/11/20 09:19:21 xarthisius Exp $
+
+  20 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
+  Masked sys-fs/dmraid[dietlibc] wrt #364103
 
   05 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
   Mask kde-base/solid[bluetooth] until we find someone who is actually using
