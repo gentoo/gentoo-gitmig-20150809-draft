@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13267 2011/11/20 19:12:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13268 2011/11/20 19:32:21 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -599,13 +599,6 @@ dev-php/roadsend-php
 # Ole Markus With <olemarkus@gentoo.org> (21 Aug 2011)
 # Masking beta version
 =dev-php5/pecl-memcached-2.0.0_beta2
-
-# Andreas K. Hüttel <dilfridge@gentoo.org> (21 Aug 2011)
-# Starting with version 4.2, net-libs/libfwbuilder is integrated
-# into net-firewall/fwbuilder (its only reverse dep). Mask
-# libfwbuilder and the old fwbuilder version for removal.
-net-libs/libfwbuilder
-=net-firewall/fwbuilder-3.0.7
 
 # Alexis Ballier <aballier@gentoo.org> (20 Aug 2011)
 # dev-tex/pdftex-1.40.11 is 100% identical to the one in TeX Live 2010;

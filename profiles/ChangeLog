@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5938 2011/11/20 19:12:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5939 2011/11/20 19:32:21 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  remove obsolete pmask of old fwbuilder
 
   20 Nov 2011; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   Add net-libs/gupnp-vala-0.10 to gupnp-0.18 mask.
