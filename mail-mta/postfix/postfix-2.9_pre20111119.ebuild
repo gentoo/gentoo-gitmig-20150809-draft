@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9_pre20111117.ebuild,v 1.1 2011/11/18 07:16:31 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.9_pre20111119.ebuild,v 1.1 2011/11/20 10:32:42 eras Exp $
 
 EAPI=4
 
