@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.12.6.ebuild,v 1.1 2011/08/28 19:26:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.14.0.ebuild,v 1.1 2011/11/20 13:09:24 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="2:2.5"
 
 inherit python
@@ -14,20 +14,20 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-linux"
-IUSE="debug test"
+IUSE="debug +jingle test"
 
 RDEPEND=">=dev-libs/glib-2.24:2
 	>=sys-apps/dbus-1.1.0
 	>=dev-libs/dbus-glib-0.82
-	>=net-libs/telepathy-glib-0.14.5
+	>=net-libs/telepathy-glib-0.15.9
 	>=net-libs/libnice-0.0.11
 	>=net-libs/gnutls-2.10.2
 
 	dev-db/sqlite:3
 	dev-libs/libxml2
 
-	|| ( net-libs/libsoup:2.4[ssl]
-		 >=net-libs/libsoup-2.33.1 )
+	jingle? ( || ( net-libs/libsoup:2.4[ssl]
+		 >=net-libs/libsoup-2.33.1 ) )
 
 	!<net-im/telepathy-mission-control-5.5.0"
 DEPEND="${RDEPEND}
@@ -48,15 +48,17 @@ src_prepare() {
 src_configure() {
 	econf \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
+		$(use_enable jingle google-relay) \
 		$(use_enable debug handle-leak-debug)
 }
 
 src_test() {
 	# Twisted tests fail, upstream bug #30565
-	emake -C tests check-TESTS || die "tests failed"
+	emake -C tests check-TESTS
 }
 
 src_install() {
-	emake install DESTDIR="${D}" || die "emake install failed"
-	dodoc AUTHORS NEWS ChangeLog README || die "dodoc failed"
+	emake install DESTDIR="${D}"
+	dodoc AUTHORS NEWS ChangeLog README
+	find "${D}" -name '*.la' -exec rm -f {} +
 }
