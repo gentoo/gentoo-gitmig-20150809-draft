@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libmemcache
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcache/ChangeLog,v 1.34 2011/04/16 18:25:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmemcache/ChangeLog,v 1.35 2011/11/20 09:39:09 xarthisius Exp $
+
+  20 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  libmemcache-1.4.0_rc2-r1.ebuild,
+  +files/libmemcache-1.4.0_rc2-ppc_ftbfs.patch:
+  Apply debian hack to fix build failure on ppc* wrt #365303. ppc/ppc64 stable
+  wrt #327725
 
   16 Apr 2011; Raúl Porcel <armin76@gentoo.org>
   libmemcache-1.4.0_rc2-r1.ebuild:
