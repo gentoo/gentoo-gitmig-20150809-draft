@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.4-r3.ebuild,v 1.6 2011/11/20 11:08:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.4-r4.ebuild,v 1.1 2011/11/20 11:08:17 jlec Exp $
 
 EAPI=3
 
@@ -13,18 +13,18 @@ MYP="${PN}${PV}"
 DESCRIPTION="Adds a lot of image formats to Tcl/Tk"
 HOMEPAGE="http://tkimg.sourceforge.net/"
 SRC_URI="
-	http://dev.gentoo.org/~jlec/distfiles/${P}-gentoo.patch.xz
+	http://dev.gentoo.org/~jlec/distfiles/${P}-gentoo+bundled-tiff.patch.xz
 	mirror://sourceforge/${PN}/${PV}/${MYP}.tar.bz2"
 
 IUSE="doc test"
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~alpha amd64 ~ppc ~sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="
 	dev-lang/tk
 	>=dev-tcltk/tcllib-1.11
-	=media-libs/tiff-3*:0
+	media-libs/tiff:0
 	media-libs/libpng:0
 	sys-libs/zlib
 	virtual/jpeg"
@@ -40,8 +40,8 @@ RESTRICT="test"
 S="${WORKDIR}/${MYP}"
 
 src_prepare() {
-	epatch "${WORKDIR}"/${P}-gentoo.patch
-	find compat/{libjpeg,libpng,libtiff,zlib} -delete
+	epatch "${WORKDIR}"/${P}-gentoo+bundled-tiff.patch
+	find compat/{libjpeg,libpng,zlib} -delete
 	sed \
 		-e 's:-O2 -fomit-frame-pointer::g' \
 		-e 's: -pipe::g' \
