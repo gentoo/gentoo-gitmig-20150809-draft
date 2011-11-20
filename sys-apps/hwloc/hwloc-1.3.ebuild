@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/hwloc-1.2-r1.ebuild,v 1.3 2011/09/01 16:20:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwloc/hwloc-1.3.ebuild,v 1.1 2011/11/20 14:13:21 xarthisius Exp $
 
-EAPI="4"
+EAPI=4
 
 inherit multilib versionator
 
@@ -13,29 +13,33 @@ HOMEPAGE="http://www.open-mpi.org/projects/hwloc/"
 SRC_URI="http://www.open-mpi.org/software/${PN}/${MY_PV}/downloads/${P}.tar.bz2"
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux"
-IUSE="cairo +numa svg static-libs xml X"
+IUSE="cairo debug +numa +pci svg static-libs xml X"
 SLOT="0"
 LICENSE="BSD"
 
 RDEPEND="sys-libs/ncurses
 	cairo? ( x11-libs/cairo[X?,svg?] )
+	pci? ( sys-apps/pciutils )
 	xml? ( dev-libs/libxml2 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	numa? ( sys-process/numactl )"
 
+DOCS=( AUTHORS NEWS README VERSION )
+
 src_configure() {
 	econf \
-		--docdir="${EPREFIX}/usr/share/doc/${P}" \
+		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		$(use_enable cairo) \
+		$(use_enable debug) \
+		$(use_enable pci) \
 		$(use_enable static-libs static) \
-		$(use_enable xml) \
+		$(use_enable xml libxml2) \
 		$(use_with X x) \
 		--disable-silent-rules
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-	dodoc AUTHORS NEWS README VERSION
+	default
 	use static-libs || rm "${D}"/usr/$(get_libdir)/lib${PN}.la
 }
