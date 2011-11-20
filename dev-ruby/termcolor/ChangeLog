@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/termcolor
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/termcolor/ChangeLog,v 1.1 2011/11/13 08:21:27 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/termcolor/ChangeLog,v 1.2 2011/11/20 09:30:50 graaff Exp $
+
+  20 Nov 2011; Hans de Graaff <graaff@gentoo.org> termcolor-1.2.0.ebuild:
+  Fix building with USE=doc, fix rspec dependency to right slot. Fix running
+  specs on ruby19.
 
 *termcolor-1.2.0 (13 Nov 2011)
 
