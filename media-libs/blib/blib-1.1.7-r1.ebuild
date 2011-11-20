@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/blib/blib-1.1.7-r1.ebuild,v 1.4 2009/08/21 20:14:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/blib/blib-1.1.7-r1.ebuild,v 1.5 2011/11/20 12:46:19 pacho Exp $
 
 EAPI=2
 
@@ -19,6 +19,15 @@ RDEPEND=">=dev-libs/glib-2
 	gtk? ( >=x11-libs/gtk+-2.4.4:2 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_prepare() {
+	# Drop DEPRECATED flags, bug #391105
+	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' \
+		blib/Makefile.am blib/Makefile.in \
+		gfx/Makefile.am gfx/Makefile.in \
+		modules/Makefile.am modules/Makefile.in \
+		test/modules/Makefile.am test/modules/Makefile.in || die
+}
 
 src_configure() {
 	econf \
