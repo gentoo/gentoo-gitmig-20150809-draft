@@ -1,11 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.28.1.ebuild,v 1.3 2011/06/15 16:16:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/glibmm-2.30.1.ebuild,v 1.1 2011/11/20 15:45:42 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-GNOME_TARBALL_SUFFIX="bz2"
 
 inherit gnome2
 
@@ -14,14 +13,15 @@ HOMEPAGE="http://www.gtkmm.org"
 
 LICENSE="|| ( LGPL-2.1 GPL-2 )"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="doc debug examples test"
 
-RDEPEND=">=dev-libs/libsigc++-2.2:2
-	>=dev-libs/glib-2.28:2"
+RDEPEND=">=dev-libs/libsigc++-2.2.10:2
+	>=dev-libs/glib-2.30.0:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )"
+# dev-cpp/mm-common needed for eautoreconf
 
 pkg_setup() {
 	DOCS="AUTHORS ChangeLog NEWS README"
