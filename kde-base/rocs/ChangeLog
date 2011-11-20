@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/rocs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/ChangeLog,v 1.50 2011/11/02 20:48:23 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/rocs/ChangeLog,v 1.51 2011/11/20 13:40:02 dilfridge Exp $
+
+  20 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org> rocs-4.7.3.ebuild,
+  +files/rocs-4.7.3-boost.patch:
+  Add upstream patch to build using Boost exceptions, thanks Johu! Bug 390059
 
 *rocs-4.7.3 (02 Nov 2011)
 
