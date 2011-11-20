@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/gstreamermm-0.10.9.1.ebuild,v 1.3 2011/10/21 13:41:56 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gstreamermm/gstreamermm-0.10.9.1.ebuild,v 1.4 2011/11/20 17:14:38 eva Exp $
 
 EAPI="3"
 GNOME2_LA_PUNT="yes"
@@ -16,9 +16,9 @@ KEYWORDS="amd64 ~ppc x86"
 IUSE="test"
 
 RDEPEND="
-	>=media-libs/gstreamer-0.10.30:0.10
-	>=media-libs/gst-plugins-base-0.10.30:0.10
-	>=dev-cpp/glibmm-2.21.1:2
+	>=media-libs/gstreamer-0.10.32:0.10
+	>=media-libs/gst-plugins-base-0.10.32:0.10
+	>=dev-cpp/glibmm-2.26.1:2
 	>=dev-cpp/libxmlpp-2.14:2.6
 	>=dev-libs/libsigc++-2:2
 "
@@ -29,6 +29,14 @@ DEPEND="${RDEPEND}
 		media-plugins/gst-plugins-vorbis:0.10
 		media-plugins/gst-plugins-x:0.10 )
 "
+
 DOCS="AUTHORS ChangeLog NEWS README"
 # Installs reference docs into /usr/share/doc/gstreamermm-0.10/
 # but that's okay, because the rest of dev-cpp/*mm stuff does the same
+
+src_test() {
+	# explicitly allow parallel make of tests: they are not built in
+	# src_compile() and indeed we'd slow down tremendously to run this
+	# serially.
+	emake check || die "tests failed"
+}
