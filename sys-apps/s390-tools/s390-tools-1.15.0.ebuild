@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.13.0.ebuild,v 1.2 2011/11/20 06:47:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/s390-tools/s390-tools-1.15.0.ebuild,v 1.1 2011/11/20 06:47:19 vapier Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ SRC_URI="http://download.boulder.ibm.com/ibmdl/pub/software/dw/linux390/ht_src/$
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* s390"
+KEYWORDS="-* ~s390"
 IUSE="fuse snmp zfcpdump"
 
 RDEPEND="sys-fs/sysfsutils
