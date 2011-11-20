@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-4.0.1.ebuild,v 1.1 2011/08/19 11:48:38 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-4.2.2.ebuild,v 1.1 2011/11/20 15:47:49 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
@@ -17,11 +17,12 @@ KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-fr
 IUSE=""
 
 # orbit is referenced in configure, but is not used anywhere else
-RDEPEND=">=x11-libs/gtk+-3.0:3
+RDEPEND=">=x11-libs/gtk+-3.0.2:3
 	>=x11-libs/cairo-1.10
+	x11-libs/pango
 	>=x11-themes/gnome-icon-theme-2.22.0
 	>=app-text/enchant-1.1.7
-	gnome-base/gconf:2
+	gnome-base/gsettings-desktop-schemas
 	>=app-text/iso-codes-0.49
 	>=net-libs/libsoup-2.26.0:2.4"
 DEPEND="${RDEPEND}
