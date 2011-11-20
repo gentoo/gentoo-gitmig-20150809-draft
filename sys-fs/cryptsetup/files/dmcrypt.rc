@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/files/dmcrypt.rc,v 1.1 2011/11/13 04:18:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/files/dmcrypt.rc,v 1.2 2011/11/20 23:32:22 vapier Exp $
 
 depend() {
 	before checkfs fsck
@@ -71,9 +71,7 @@ dm_crypt_execute_dmcrypt() {
 	if [ -n "${key}" ] ; then
 		read_abort() {
 			# some colors
-			local red='\x1b[31;01m' green='\x1b[32;01m' off='\x1b[0;0m'
 			local ans
-			local prompt=" ${green}*${off}  $1? (${red}yes${off}/${green}No${off}) "
 			shift
 			[ -z "${NORMAL}" ] && eval $(eval_ecolors)
 			einfon "  $1? (${WARN}yes${NORMAL}/${GOOD}No${NORMAL}) "
