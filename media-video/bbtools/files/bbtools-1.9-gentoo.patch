@@ -54,16 +54,16 @@
 +all: bbainfo bbdmux bbinfo bbvinfo
 +
 +bbdmux: bits.o bbdmux.o
-+	$(CXX) $(CXXFLAGS) -lm -o $@ $^
++	$(CXX) $(CXXFLAGS) $(LDFLAGS) $^ -lm -o $@ 
 +
 +bbinfo: bits.o bbinfo.o
-+	$(CXX) $(CXXFLAGS) -lm -o $@ $^
++	$(CXX) $(CXXFLAGS) $(LDFLAGS) $^ -lm -o $@ 
 +
 +bbvinfo: bits.o bbvinfo.o
-+	$(CXX) $(CXXFLAGS) -lm -o $@ $^
++	$(CXX) $(CXXFLAGS) $(LDFLAGS) $^ -lm -o $@ 
 +
 +bbainfo: bits.o bbainfo.o
-+	$(CXX) $(CXXFLAGS) -lm -o $@ $^
++	$(CXX) $(CXXFLAGS) $(LDFLAGS) $^ -lm -o $@ 
 +
 +%.o: %.c
 +	$(CXX) $(CXXFLAGS) -c -o $@ $<

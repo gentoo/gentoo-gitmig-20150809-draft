@@ -1,8 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bbtools/bbtools-1.9.ebuild,v 1.5 2007/12/01 10:52:19 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bbtools/bbtools-1.9.ebuild,v 1.6 2011/11/20 20:49:51 radhermit Exp $
 
-inherit eutils flag-o-matic
+EAPI=4
+
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="bbdmux, bbinfo, bbvinfo and bbainfo from Brent Beyeler"
 HOMEPAGE="http://members.cox.net/beyeler/bbmpeg.html"
@@ -14,13 +16,10 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
-RDEPEND=""
 
 S=${WORKDIR}
 
-src_unpack() {
-	unpack ${A}
-
+src_prepare() {
 	mv BBINFO.cpp bbinfo.cpp || die
 	mv BITS.CPP bits.cpp || die
 	mv BITS.H bits.h || die
@@ -29,13 +28,11 @@ src_unpack() {
 	edos2unix *.cpp *.h
 
 	epatch "${FILESDIR}"/bbtools-${PV}-gentoo.patch
-}
 
-src_compile() {
 	append-lfs-flags
-	emake || die "emake failed"
+	tc-export CXX
 }
 
 src_install() {
-	dobin bbainfo bbdmux bbinfo bbvinfo || die "dobin failed"
+	dobin bbainfo bbdmux bbinfo bbvinfo
 }
