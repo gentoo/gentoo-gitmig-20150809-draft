@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5940 2011/11/20 19:57:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5941 2011/11/20 20:03:51 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Nov 2011; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  Drop gtetrinet and monster-masher esound related mask.
 
   20 Nov 2011; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   Drop old json-glib mask.
