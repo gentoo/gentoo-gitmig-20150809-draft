@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/guayadeque/guayadeque-0.3.1.ebuild,v 1.4 2011/11/19 17:38:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/guayadeque/guayadeque-0.3.1.ebuild,v 1.5 2011/11/20 12:30:22 jlec Exp $
 
 EAPI=3
 
@@ -64,6 +64,11 @@ src_prepare() {
 	fi
 
 	base_src_prepare
+
+	# otherwise cmake checks for svn
+	find -type d -name .svn -exec rm -rf '{}' +
+
+	sed 's:-O2::g' -i CMakeLists.txt || die
 }
 
 src_configure() {
