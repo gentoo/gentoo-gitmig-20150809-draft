@@ -1,8 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/metro/metro-1.5.1.ebuild,v 1.2 2010/06/13 15:01:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/metro/metro-1.5.1.ebuild,v 1.3 2011/11/20 07:06:00 hollow Exp $
 
-EAPI="2"
+EAPI="3"
+PYTHON_DEPEND="2"
+inherit python
 
 DESCRIPTION="release metatool used for creating Gentoo and Funtoo releases"
 HOMEPAGE="http://www.github.com/funtoo/metro"
@@ -14,8 +16,7 @@ KEYWORDS="~amd64 ~arm ~x86"
 IUSE="+ccache +git threads"
 
 DEPEND=""
-RDEPEND="dev-lang/python
-	threads? ( app-arch/pbzip2 )
+RDEPEND="threads? ( app-arch/pbzip2 )
 	ccache? ( dev-util/ccache )
 	git? ( dev-vcs/git )"
 
@@ -24,4 +25,5 @@ src_install() {
 	doins -r .
 	fperms 0755 /usr/lib/metro/metro
 	dosym /usr/lib/metro/metro /usr/bin/metro
+	python_convert_shebangs -r 2 "${ED}"
 }

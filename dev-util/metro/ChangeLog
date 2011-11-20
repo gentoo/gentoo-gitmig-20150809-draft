@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/metro
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/metro/ChangeLog,v 1.5 2010/06/13 15:01:31 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/metro/ChangeLog,v 1.6 2011/11/20 07:06:00 hollow Exp $
+
+  20 Nov 2011; Benedikt Böhm <hollow@gentoo.org> metro-1.4.1.ebuild,
+  metro-1.5.1.ebuild:
+  use python eclass wrt #326103
 
   13 Jun 2010; Raúl Porcel <armin76@gentoo.org> metro-1.4.1.ebuild,
   metro-1.5.1.ebuild:
