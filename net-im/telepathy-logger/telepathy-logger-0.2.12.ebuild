@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/telepathy-logger-0.1.7.ebuild,v 1.9 2011/03/22 20:07:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/telepathy-logger/telepathy-logger-0.2.12.ebuild,v 1.1 2011/11/20 12:56:09 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 PYTHON_DEPEND="2:2.5"
 
 inherit base python virtualx
@@ -13,26 +13,26 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ppc sparc x86"
-IUSE="doc test"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-linux"
+IUSE="doc +introspection"
 
 RDEPEND=">=dev-libs/glib-2.25.11:2
 	>=sys-apps/dbus-1.1
 	>=dev-libs/dbus-glib-0.82
-	>=net-libs/telepathy-glib-0.11.7
+	>=net-libs/telepathy-glib-0.15.6[introspection?]
 	dev-libs/libxml2
 	dev-libs/libxslt
 	dev-db/sqlite:3
+	introspection? ( >=dev-libs/gobject-introspection-0.9.6 )
 "
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
 	doc? ( >=dev-util/gtk-doc-1.10 )
-	test? ( dev-python/twisted )
 "
 
 pkg_setup() {
-	DOCS="AUTHORS ChangeLog NEWS README"
 	python_set_active_version 2
+	python_pkg_setup
 }
 
 src_prepare() {
@@ -52,10 +52,13 @@ src_configure() {
 
 src_test() {
 	unset DBUS_SESSION_BUS_ADDRESS
+	mkdir -p "${T}/home/cache"
+	export XDG_CACHE_HOME="${T}/home/cache"
 	Xemake check || die "make check failed"
 }
 
 src_install() {
 	base_src_install
-	find "${ED}" -name "*.la" -delete || die "la files removal failed"
+	dodoc AUTHORS ChangeLog NEWS README
+	find "${D}" -name "*.la" -delete || die "la files removal failed"
 }
