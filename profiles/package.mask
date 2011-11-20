@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13266 2011/11/20 19:11:26 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13267 2011/11/20 19:12:30 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -328,6 +328,7 @@ app-emacs/rst
 >=net-libs/gupnp-av-0.10.1
 >=net-libs/gupnp-igd-0.2
 >=net-misc/rygel-0.12.0
+>=net-libs/gupnp-vala-0.10
 
 # Tim Harder <radhermit@gentoo.org> (19 Sep 2011)
 # Mask development releases
