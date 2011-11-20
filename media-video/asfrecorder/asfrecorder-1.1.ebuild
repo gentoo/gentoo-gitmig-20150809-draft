@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/asfrecorder/asfrecorder-1.1.ebuild,v 1.15 2010/01/07 15:18:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/asfrecorder/asfrecorder-1.1.ebuild,v 1.16 2011/11/20 21:06:15 radhermit Exp $
+
+EAPI=4
 
 inherit toolchain-funcs
 
@@ -11,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PN}.zip"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="ppc x86 ~x86-linux ~ppc-macos"
+KEYWORDS="~amd64 ppc x86 ~x86-linux ~ppc-macos"
 IUSE=""
 
 DEPEND="app-arch/unzip"
@@ -22,11 +24,11 @@ src_compile() {
 	# There is a Makefile, but it only works for Cygwin, so we
 	# only compile this single program.
 	cd "${S}"/source
-	$(tc-getCC) -o asfrecorder ${CFLAGS} asfrecorder.c || die "Build failed"
+	$(tc-getCC) -o asfrecorder ${CFLAGS} ${LDFLAGS} asfrecorder.c || die "Build failed"
 }
 
 src_install () {
 	# Again, no makefiles, so just take what we want.
-	dobin "${S}"/source/asfrecorder
-	dodoc "${S}"/README.TXT
+	dobin source/asfrecorder
+	dodoc README.TXT
 }
