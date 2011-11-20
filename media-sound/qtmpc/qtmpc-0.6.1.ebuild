@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtmpc/qtmpc-0.6.1.ebuild,v 1.1 2011/05/12 13:07:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtmpc/qtmpc-0.6.1.ebuild,v 1.2 2011/11/20 21:28:36 dilfridge Exp $
 
 EAPI=4
 
@@ -20,3 +20,5 @@ DEPEND=""
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/QtMPC"
+
+PATCHES=( "${FILESDIR}/${P}-underlinking.patch" )
