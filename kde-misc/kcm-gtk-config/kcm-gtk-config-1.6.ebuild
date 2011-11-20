@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-gtk-config/kcm-gtk-config-1.6.ebuild,v 1.1 2011/06/02 16:21:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-gtk-config/kcm-gtk-config-1.6.ebuild,v 1.2 2011/11/20 14:49:39 dilfridge Exp $
 
 EAPI=4
 
@@ -30,3 +30,12 @@ RDEPEND="${COMMON_DEPEND}
 "
 
 S=${WORKDIR}/${MY_P}
+
+pkg_postinst() {
+	kde4-base_pkg_postinst
+	einfo
+	elog "If you notice missing icons in your GTK applications, you may have to install"
+	elog "the corresponding themes for GTK. A good guess would be x11-themes/oxygen-gtk"
+	elog "for example."
+	einfo
+}
