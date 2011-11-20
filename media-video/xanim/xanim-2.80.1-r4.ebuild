@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.39 2009/12/19 13:02:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.40 2011/11/20 13:39:09 naota Exp $
 
 inherit eutils toolchain-funcs
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://xanim.polter.net/"
 
 LICENSE="XAnim"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="x11-libs/libXext
@@ -42,12 +42,18 @@ _XA_CVID_x86=xa2.0_cvid_linuxELFg21.o
 _XA_IV32_x86=xa2.1_iv32_linuxELFg21.o
 _XA_EXT_x86=.gz
 
+_XA_CYUV_x86_fbsd=xa1.0_cyuv_linuxELFg21.o
+_XA_CVID_x86_fbsd=xa2.0_cvid_linuxELFg21.o
+_XA_IV32_x86_fbsd=xa2.1_iv32_linuxELFg21.o
+_XA_EXT_x86_fbsd=.gz
+
 # This might leave _XA_EXT empty and that's fine, just indicates no
 # particular support for a given arch
-eval _XA_EXT=\${_XA_EXT_${ARCH}}
-eval _XA_CVID=\${_XA_CVID_${ARCH}}
-eval _XA_CYUV=\${_XA_CYUV_${ARCH}}
-eval _XA_IV32=\${_XA_IV32_${ARCH}}
+MY_ARCH=${ARCH/-/_}
+eval _XA_EXT=\${_XA_EXT_${MY_ARCH}}
+eval _XA_CVID=\${_XA_CVID_${MY_ARCH}}
+eval _XA_CYUV=\${_XA_CYUV_${MY_ARCH}}
+eval _XA_IV32=\${_XA_IV32_${MY_ARCH}}
 
 SRC_URI="mirror://gentoo/${MY_P}.tar.gz
 	sparc? (
@@ -69,6 +75,11 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz
 		mirror://gentoo/${_XA_CVID_x86}${_XA_EXT_x86}
 		mirror://gentoo/${_XA_CYUV_x86}${_XA_EXT_x86}
 		mirror://gentoo/${_XA_IV32_x86}${_XA_EXT_x86}
+	)
+	x86-fbsd? (
+		mirror://gentoo/${_XA_CVID_x86}${_XA_EXT_x86}
+		mirror://gentoo/${_XA_CYUV_x86}${_XA_EXT_x86}
+		mirror://gentoo/${_XA_IV32_x86}${_XA_EXT_x86}
 	)"
 
 src_unpack() {
@@ -84,6 +95,9 @@ src_unpack() {
 	sed -i -e 's:/usr/X11R6:/usr:g' Makefile*
 
 	epatch "${FILESDIR}/${P}-gcc41.patch"
+	epatch "${FILESDIR}/${P}-freebsd.patch"
+
+	use elibc_glibc || sed -i -e 's/-ldl//' Makefile*
 }
 
 src_compile() {
