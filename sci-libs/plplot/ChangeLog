@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/plplot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.36 2011/07/28 23:28:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.37 2011/11/20 16:41:04 bicatali Exp $
+
+*plplot-5.9.9 (20 Nov 2011)
+
+  20 Nov 2011; Sébastien Fabbro <bicatali@gentoo.org> +plplot-5.9.9.ebuild,
+  +files/plplot-5.9.9-no-pdftest.patch:
+  Version bump. Fixed examples installation, some automagic dependencies,
+  adapted changeds in CMake options. Added cxx flag, tests for pdf is disabled
+  (Assumes a bundled libharu)
 
   28 Jul 2011; Sébastien Fabbro <bicatali@gentoo.org> plplot-5.9.7-r1.ebuild:
   Fixed syntax error causing qt to be set by plplot when qt4 is not (bug
