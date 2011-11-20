@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/alltray
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.39 2011/11/20 12:30:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.40 2011/11/20 13:07:31 ssuominen Exp $
+
+*alltray-0.7.5.1 (20 Nov 2011)
+
+  20 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> +alltray-0.7.5.1.ebuild:
+  Version bump wrt #390801 by "teidakankan"
 
   20 Nov 2011; Pacho Ramos <pacho@gentoo.org> alltray-0.74.ebuild:
   Drop DEPRECATED flags, bug #391101
