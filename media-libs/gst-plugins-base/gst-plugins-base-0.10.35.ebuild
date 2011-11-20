@@ -1,12 +1,12 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.35.ebuild,v 1.11 2011/10/15 18:12:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/gst-plugins-base-0.10.35.ebuild,v 1.12 2011/11/20 19:19:08 grobian Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
 
 # order is important, gnome2 after gst-plugins
-inherit gst-plugins-base gst-plugins10 gnome2 flag-o-matic eutils
+inherit gst-plugins-base gst-plugins10 gnome2 eutils
 # libtool
 
 DESCRIPTION="Basepack of plugins for gstreamer"
@@ -40,13 +40,14 @@ src_configure() {
 		$(use_enable orc) \
 		--disable-examples \
 		--disable-debug
-}
 
-src_compile() {
-	# gst doesnt handle opts well, last tested with 0.10.15
-	strip-flags
-	replace-flags "-O3" "-O2"
-	emake || die "emake failed."
+	# bug #366931, flag-o-matic for the whole thing is overkill
+	if [[ ${CHOST} == *86-*-darwin* ]] ; then
+		sed -i \
+			-e '/FLAGS = /s|-O[23]|-O1|g' \
+			gst/audioconvert/Makefile \
+			gst/volume/Makefile || die
+	fi  
 }
 
 src_install() {
