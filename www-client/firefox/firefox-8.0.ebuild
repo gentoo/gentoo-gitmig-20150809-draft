@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-8.0.ebuild,v 1.1 2011/11/11 01:36:32 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/firefox-8.0.ebuild,v 1.2 2011/11/20 20:51:46 maekke Exp $
 
 EAPI="3"
 VIRTUALX_REQUIRED="pgo"
@@ -18,7 +18,7 @@ PATCH="${PN}-8.0-patches-0.2"
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.com/firefox"
 
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="bindist +crashreporter +ipc pgo system-sqlite +webm"
