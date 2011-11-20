@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multipart-post/multipart-post-1.1.3.ebuild,v 1.1 2011/07/29 04:58:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multipart-post/multipart-post-1.1.3.ebuild,v 1.2 2011/11/20 08:21:44 graaff Exp $
 
 EAPI="2"
 
@@ -22,6 +22,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 ruby_add_bdepend "test? ( virtual/ruby-test-unit )"
+
+all_ruby_prepare() {
+	cp "${FILESDIR}"/multibyte.txt test/ || die "Unable to copy multibyte.txt"
+}
 
 each_ruby_test() {
 	${RUBY} -S testrb -Ilib test || die "Tests failed."
