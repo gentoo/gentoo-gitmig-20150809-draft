@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/xcin
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/ChangeLog,v 1.20 2009/12/29 16:10:05 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xcin/ChangeLog,v 1.21 2011/11/20 23:40:31 matsuu Exp $
+
+*xcin-2.5.3_pre3-r3 (20 Nov 2011)
+
+  20 Nov 2011; MATSUU Takuto <matsuu@gentoo.org> +xcin-2.5.3_pre3-r3.ebuild,
+  +files/xcin-2.5.3_pre3-ldflags.patch, +files/xcin-2.5.3_pre3-make.patch:
+  Fixed dodoc issue, bug #374811. Respect LDFLAGS, bug #334849. Clean up.
 
   29 Dec 2009; Samuli Suominen <ssuominen@gentoo.org>
   xcin-2.5.3_pre3-r2.ebuild, +files/xcin-2.5.3_pre3-glibc-2.10.patch:
