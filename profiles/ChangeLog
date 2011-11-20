@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5936 2011/11/20 17:54:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5937 2011/11/20 19:11:25 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Nov 2011; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  Add >=app-mobilephone/gnome-phone-manager-0.67 to Gnome 3.2 mask.
 
   20 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Mask not-yet-released calligra
