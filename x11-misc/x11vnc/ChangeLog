@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/x11vnc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.95 2011/11/01 03:56:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.96 2011/11/20 00:31:54 radhermit Exp $
+
+*x11vnc-0.9.13 (20 Nov 2011)
+
+  20 Nov 2011; Tim Harder <radhermit@gentoo.org> +x11vnc-0.9.13.ebuild,
+  +files/x11vnc-0.9.13-warnings.patch:
+  Version bump (bug #384407).
 
   01 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> x11vnc-0.9.9.ebuild,
   x11vnc-0.9.12.ebuild:
