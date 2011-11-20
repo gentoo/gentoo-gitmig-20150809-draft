@@ -1,9 +1,9 @@
 # ChangeLog for dev-libs/libindicate
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.23 2011/11/20 12:16:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate/ChangeLog,v 1.24 2011/11/20 12:19:28 ssuominen Exp $
 
   20 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
-  Move to ayatana herd.
+  Maintained by both ayatana and kde.
 
   19 Nov 2011; Samuli Suominen <ssuominen@gentoo.org>
   -libindicate-0.2.3-r1.ebuild,
