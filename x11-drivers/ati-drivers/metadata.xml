@@ -11,6 +11,9 @@
 	    <description>Proxied co-maintainer</description>
 	</maintainer>
 	<use>
+		<flag name='opencl'>
+			Install OpenCL libraries
+		</flag>
 		<flag name='qt4'>
 			Install qt4 dependent optional tools (e.g Catalyst Control Panel)
 		</flag>
