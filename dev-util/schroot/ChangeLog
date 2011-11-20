@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/schroot
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.28 2011/10/23 01:10:22 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.29 2011/11/20 04:16:58 abcd Exp $
+
+  20 Nov 2011; Jonathan Callen <abcd@gentoo.org> -schroot-1.4.17.ebuild,
+  -schroot-1.4.21.ebuild:
+  remove old
 
 *schroot-1.4.23 (23 Oct 2011)
 
