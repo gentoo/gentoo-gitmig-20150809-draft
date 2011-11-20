@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5942 2011/11/20 22:48:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5943 2011/11/20 23:07:16 abcd Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Nov 2011; Jonathan Callen <abcd@gentoo.org> updates/4Q-2011:
+  Move net-misc/get-flash-videos to media-video/get_flash_videos
 
   20 Nov 2011; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   Add app-accessibility/accerciser-3 to Gnome 3.2 mask.
