@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13268 2011/11/20 19:32:21 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13269 2011/11/20 19:57:11 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -733,10 +733,6 @@ gnome-extra/office-runner
 =virtual/mysql-5.2*
 =dev-db/mariadb-5.3*
 =virtual/mysql-5.3*
-
-# Gilles Dartiguelongue <eva@gentoo.org> (24 Jul 2011)
-# Mask development release
-=dev-libs/json-glib-0.13*
 
 # Peter Volkov <pva@gentoo.org> (23 Jul 2001)
 # Mask release candidates
