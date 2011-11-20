@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/potrace/potrace-1.10-r1.ebuild,v 1.2 2011/11/16 15:36:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/potrace/potrace-1.10-r1.ebuild,v 1.3 2011/11/20 16:34:40 grobian Exp $
 
 EAPI="4"
 
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}"
 
 src_configure() {
 	econf \
-		--docdir=/usr/share/doc/${PF} \
+		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		--enable-zlib \
 		--with-libpotrace \
 		$(use_enable metric a4) \
