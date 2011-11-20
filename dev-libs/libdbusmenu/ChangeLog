@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libdbusmenu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.8 2011/11/04 22:12:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.9 2011/11/20 12:21:36 ssuominen Exp $
+
+  20 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Maintained by both ayatana and kde.
 
   04 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   libdbusmenu-0.5.1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libindicate-qt
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate-qt/ChangeLog,v 1.8 2011/11/19 17:48:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicate-qt/ChangeLog,v 1.9 2011/11/20 12:20:09 ssuominen Exp $
+
+  20 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
+  Maintained by both ayatana and kde.
 
   19 Nov 2011; Samuli Suominen <ssuominen@gentoo.org>
   -libindicate-qt-0.2.5.ebuild, -libindicate-qt-0.2.5-r1.ebuild:
