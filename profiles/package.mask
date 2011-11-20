@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13263 2011/11/20 15:20:05 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13264 2011/11/20 17:54:05 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (20 Nov 2011)
+# Not released yet
+~app-office/calligra-2.3.84
 
 # Eray Aslan <eras@gentoo.org> (20 Nov 2011)
 # Abandoned project. Historical standard. Use one of the DKIM
