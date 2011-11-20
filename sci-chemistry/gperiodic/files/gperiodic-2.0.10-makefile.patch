@@ -1,6 +1,7 @@
 Respect CC, CFLAGS, LDFLAGS
 Fix install paths
 Fix parallel build
+Drop DEPRECATED flags, bug #391099
 
 --- Makefile
 +++ Makefile
@@ -8,7 +9,7 @@ Fix parallel build
 -CC := gcc
 -CFLAGS := `pkg-config --cflags gtk+-2.0` -I. -DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED
 -LIBS :=`pkg-config --libs gtk+-2.0`
-+CFLAGS += `pkg-config --cflags gtk+-2.0` -I. -DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_DEPRECATED
++CFLAGS += `pkg-config --cflags gtk+-2.0` -I.
 +LIBS +=`pkg-config --libs gtk+-2.0`
  bindir ?= /usr/bin
  datadir ?= /usr/share
