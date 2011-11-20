@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/kdevplatform
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/ChangeLog,v 1.59 2011/06/30 00:26:30 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/ChangeLog,v 1.60 2011/11/20 22:32:26 dilfridge Exp $
+
+*kdevplatform-1.2.3-r1 (20 Nov 2011)
+
+  20 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  kdevplatform-1.2.2.ebuild, kdevplatform-1.2.3.ebuild,
+  +kdevplatform-1.2.3-r1.ebuild, +files/kdevplatform-1.2.3-svn17-1.patch,
+  +files/kdevplatform-1.2.3-svn17-2.patch:
+  Fix crash with subversion-1.7, bug 388029
 
 *kdevplatform-1.2.3 (29 Jun 2011)
 
