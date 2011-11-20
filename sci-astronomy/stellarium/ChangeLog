@@ -1,6 +1,13 @@
 # ChangeLog for sci-astronomy/stellarium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.76 2011/08/21 03:29:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.77 2011/11/20 10:49:03 xarthisius Exp $
+
+*stellarium-0.11.1 (20 Nov 2011)
+
+  20 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> +stellarium-0.11.1.ebuild,
+  -stellarium-0.10.6.ebuild, stellarium-0.11.0.ebuild:
+  Fix dosyms, drop old, version bump: move to EAPI4, remove obsolete
+  dependencies, use PN whenever possible
 
   21 Aug 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   stellarium-0.11.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.11.0.ebuild,v 1.4 2011/08/21 03:29:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.11.0.ebuild,v 1.5 2011/11/20 10:49:03 xarthisius Exp $
 
 EAPI=2
 inherit cmake-utils eutils
@@ -51,8 +51,8 @@ src_install() {
 
 	# use the more up-to-date system fonts
 	rm -f "${D}"/usr/share/stellarium/data/DejaVuSans{Mono,}.ttf
-	dosym /usr/share/fonts/dejavu/DejaVuSans.ttf /usr/share/stellarium/data/
-	dosym /usr/share/fonts/dejavu/DejaVuSansMono.ttf /usr/share/stellarium/data/
+	dosym /usr/share/fonts/dejavu/DejaVuSans.ttf /usr/share/stellarium/data/DejaVuSans.ttf
+	dosym /usr/share/fonts/dejavu/DejaVuSansMono.ttf /usr/share/stellarium/data/DejaVuSansMono.ttf
 
 	if use stars ; then
 		insinto /usr/share/${PN}/stars/default
