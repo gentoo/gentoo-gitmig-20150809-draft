@@ -1,7 +1,7 @@
-diff -Naur freeradius-server-2.1.10.orig/configure.in freeradius-server-2.1.10/configure.in
---- freeradius-server-2.1.10.orig/configure.in	2010-09-28 13:03:56.000000000 +0200
-+++ freeradius-server-2.1.10/configure.in	2011-02-09 17:42:53.000000000 +0100
-@@ -556,7 +556,19 @@
+diff -Nru freeradius-server-2.1.12.orig//configure.in freeradius-server-2.1.12/configure.in
+--- freeradius-server-2.1.12.orig//configure.in	2011-09-30 16:12:07.000000000 +0200
++++ freeradius-server-2.1.12/configure.in	2011-11-20 12:50:50.000000000 +0100
+@@ -577,7 +577,19 @@
  	],
  	[ AC_MSG_WARN([pcap library not found, silently disabling the RADIUS sniffer.]) ])
  
@@ -22,11 +22,10 @@ diff -Naur freeradius-server-2.1.10.orig/configure.in freeradius-server-2.1.10/c
  
  dnl #############################################################
  dnl #
-diff -Naur freeradius-server-2.1.10.orig/configure.in.orig freeradius-server-2.1.10/configure.in.orig
-diff -Naur freeradius-server-2.1.10.orig/src/include/radiusd.h freeradius-server-2.1.10/src/include/radiusd.h
---- freeradius-server-2.1.10.orig/src/include/radiusd.h	2010-09-28 13:03:56.000000000 +0200
-+++ freeradius-server-2.1.10/src/include/radiusd.h	2011-02-09 17:42:53.000000000 +0100
-@@ -645,6 +645,7 @@
+diff -Nru freeradius-server-2.1.12.orig//src/include/radiusd.h freeradius-server-2.1.12/src/include/radiusd.h
+--- freeradius-server-2.1.12.orig//src/include/radiusd.h	2011-09-30 16:12:07.000000000 +0200
++++ freeradius-server-2.1.12/src/include/radiusd.h	2011-11-20 12:50:50.000000000 +0100
+@@ -652,6 +652,7 @@
  void event_new_fd(rad_listen_t *listener);
  
  /* evaluate.c */
@@ -34,10 +33,9 @@ diff -Naur freeradius-server-2.1.10.orig/src/include/radiusd.h freeradius-server
  int radius_evaluate_condition(REQUEST *request, int modreturn, int depth,
  			      const char **ptr, int evaluate_it, int *presult);
  int radius_update_attrlist(REQUEST *request, CONF_SECTION *cs,
-diff -Naur freeradius-server-2.1.10.orig/src/include/radiusd.h.orig freeradius-server-2.1.10/src/include/radiusd.h.orig
-diff -Naur freeradius-server-2.1.10.orig/src/lib/Makefile freeradius-server-2.1.10/src/lib/Makefile
---- freeradius-server-2.1.10.orig/src/lib/Makefile	2010-09-28 13:03:56.000000000 +0200
-+++ freeradius-server-2.1.10/src/lib/Makefile	2011-02-09 17:42:53.000000000 +0100
+diff -Nru freeradius-server-2.1.12.orig//src/lib/Makefile freeradius-server-2.1.12/src/lib/Makefile
+--- freeradius-server-2.1.12.orig//src/lib/Makefile	2011-11-20 12:48:22.000000000 +0100
++++ freeradius-server-2.1.12/src/lib/Makefile	2011-11-20 12:50:50.000000000 +0100
 @@ -42,7 +42,7 @@
  
  $(TARGET).la: $(LT_OBJS)
@@ -47,10 +45,9 @@ diff -Naur freeradius-server-2.1.10.orig/src/lib/Makefile freeradius-server-2.1.
  
  $(LT_OBJS): $(INCLUDES)
  
-diff -Naur freeradius-server-2.1.10.orig/src/lib/Makefile.orig freeradius-server-2.1.10/src/lib/Makefile.orig
-diff -Naur freeradius-server-2.1.10.orig/src/main/listen.c freeradius-server-2.1.10/src/main/listen.c
---- freeradius-server-2.1.10.orig/src/main/listen.c	2010-09-28 13:03:56.000000000 +0200
-+++ freeradius-server-2.1.10/src/main/listen.c	2011-02-09 17:42:53.000000000 +0100
+diff -Nru freeradius-server-2.1.12.orig//src/main/listen.c freeradius-server-2.1.12/src/main/listen.c
+--- freeradius-server-2.1.12.orig//src/main/listen.c	2011-09-30 16:12:07.000000000 +0200
++++ freeradius-server-2.1.12/src/main/listen.c	2011-11-20 12:50:50.000000000 +0100
 @@ -49,6 +49,9 @@
  #include <fcntl.h>
  #endif
@@ -61,9 +58,9 @@ diff -Naur freeradius-server-2.1.10.orig/src/main/listen.c freeradius-server-2.1
  
  /*
   *	We'll use this below.
-diff -Naur freeradius-server-2.1.10.orig/src/modules/rlm_passwd/rlm_passwd.c freeradius-server-2.1.10/src/modules/rlm_passwd/rlm_passwd.c
---- freeradius-server-2.1.10.orig/src/modules/rlm_passwd/rlm_passwd.c	2010-09-28 13:03:56.000000000 +0200
-+++ freeradius-server-2.1.10/src/modules/rlm_passwd/rlm_passwd.c	2011-02-09 17:42:53.000000000 +0100
+diff -Nru freeradius-server-2.1.12.orig//src/modules/rlm_passwd/rlm_passwd.c freeradius-server-2.1.12/src/modules/rlm_passwd/rlm_passwd.c
+--- freeradius-server-2.1.12.orig//src/modules/rlm_passwd/rlm_passwd.c	2011-09-30 16:12:07.000000000 +0200
++++ freeradius-server-2.1.12/src/modules/rlm_passwd/rlm_passwd.c	2011-11-20 12:50:50.000000000 +0100
 @@ -247,8 +247,7 @@
  
  static struct mypasswd * get_next(char *name, struct hashtable *ht)

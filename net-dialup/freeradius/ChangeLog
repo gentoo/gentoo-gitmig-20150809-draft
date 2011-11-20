@@ -1,6 +1,17 @@
 # ChangeLog for net-dialup/freeradius
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.97 2011/10/13 12:16:12 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/ChangeLog,v 1.98 2011/11/20 18:54:06 mrness Exp $
+
+*freeradius-2.1.12 (20 Nov 2011)
+
+  20 Nov 2011; Alin Năstac <mrness@gentoo.org>
+  files/freeradius-2.1.10-qafixes.patch, +freeradius-2.1.12.ebuild,
+  +files/freeradius-2.1.12-pkglibdir.patch,
+  +files/freeradius-2.1.12-qafixes.patch, +files/freeradius-2.1.12-ssl.patch,
+  +files/freeradius-2.1.12-versionless-la-files.patch, +files/radius.init-r2:
+  Allow radius service to start even if /var/log/radius directory is missing
+  (#385443). Adapt init script to openrc requirements (#386111). Version bump
+  with a changed daemon user/group (radius iso radiusd).
 
   13 Oct 2011; Andreas Schuerch <nativemad@gentoo.org>
   freeradius-2.1.11.ebuild:
