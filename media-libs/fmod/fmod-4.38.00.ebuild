@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-4.38.00.ebuild,v 1.3 2011/11/02 14:58:38 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-4.38.00.ebuild,v 1.4 2011/11/20 04:49:36 ssuominen Exp $
 
 inherit versionator
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.fmod.org"
 SRC_URI="x86? ( http://www.fmod.org/index.php/release/version/${MY_P}.tar.gz )
 	amd64? ( http://www.fmod.org/index.php/release/version/${MY_P}64.tar.gz )"
 
-LICENSE="fmod"
+LICENSE="BSD BSD-2 fmod"
 SLOT="1"
 KEYWORDS="amd64 x86"
 IUSE="examples"
