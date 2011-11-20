@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/xdx-2.4.2.ebuild,v 1.6 2011/08/12 21:17:14 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xdx/xdx-2.4.2.ebuild,v 1.7 2011/11/20 12:23:23 pacho Exp $
 
 EAPI="2"
 
@@ -25,6 +25,10 @@ src_prepare() {
 	if has_version ">=x11-libs/gtk+-2.20" ; then
 		epatch "${FILESDIR}"/${PN}-gtk-2.20.patch
 	fi
+
+	# Drop DEPRECATED flags, bug #391091
+	sed -i -e 's:-D[A-Z_]*DISABLE_DEPRECATED:$(NULL):g' \
+		src/Makefile.am src/Makefile.in || die
 }
 
 src_configure() {
