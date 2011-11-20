@@ -1,9 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-indicator-plugin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-indicator-plugin/ChangeLog,v 1.9 2011/11/20 12:13:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-indicator-plugin/ChangeLog,v 1.10 2011/11/20 12:14:08 ssuominen Exp $
 
   20 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
-  Move to ayatana herd.
+  Maintained by both ayatana and xfce.
 
   19 Nov 2011; Samuli Suominen <ssuominen@gentoo.org>
   -xfce4-indicator-plugin-0.2.1.ebuild, -xfce4-indicator-plugin-0.3.1.ebuild:
