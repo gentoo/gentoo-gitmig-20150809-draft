@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/alltray
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.40 2011/11/20 13:07:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alltray/ChangeLog,v 1.41 2011/11/20 13:11:22 ssuominen Exp $
+
+*alltray-0.7.4 (20 Nov 2011)
+
+  20 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> +alltray-0.7.4.ebuild,
+  -alltray-0.74.ebuild:
+  Rename 0.74 as 0.7.4 to match upstream versioning scheme.
 
 *alltray-0.7.5.1 (20 Nov 2011)
 
