@@ -1,0 +1,13 @@
+# ChangeLog for app-misc/gcstar
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gcstar/ChangeLog,v 1.1 2011/11/20 06:51:05 tetromino Exp $
+
+*gcstar-1.6.2 (20 Nov 2011)
+
+  20 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +files/gcstar-1.4.0-man.patch, +gcstar-1.6.2.ebuild, +metadata.xml:
+  Add new collection manager ebuild from the sunrise overlay (bug #139940);
+  thanks to Tiziano Müller <gentoo@dev-zero.ch> for the original ebuild, and
+  to Jakub Moc, Dawid Węgliński, Thomas Sachau, and Markos Chandras for
+  helping maintain it in sunrise.
+
