@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/yasm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.47 2011/11/19 23:57:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/yasm/ChangeLog,v 1.48 2011/11/20 00:04:16 ssuominen Exp $
+
+  20 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> yasm-1.1.0-r1.ebuild,
+  yasm-1.2.0.ebuild:
+  Missing BSD-2 license (frontends use it per COPYING) wrt #360501 by "Luke-Jr"
 
 *yasm-1.2.0 (19 Nov 2011)
 
