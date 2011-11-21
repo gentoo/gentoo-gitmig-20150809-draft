@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.34.2.ebuild,v 1.2 2011/11/21 01:12:36 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.34.2.ebuild,v 1.3 2011/11/21 22:26:35 pacho Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -10,6 +10,7 @@ inherit gnome2 multilib eutils autotools
 
 DESCRIPTION="Scalable Vector Graphics (SVG) rendering library"
 HOMEPAGE="http://librsvg.sourceforge.net/"
+SRC_URI="${SRC_URI} mirror://gentoo/introspection.m4.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
@@ -32,7 +33,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12
 	doc? ( >=dev-util/gtk-doc-1.13 )
 
-	>=dev-libs/gobject-introspection-0.6.7
 	>=dev-util/gtk-doc-am-1.13"
 # >=dev-util/gtk-doc-am-1.13 and gobject-introspection needed by eautoreconf
 
@@ -55,7 +55,11 @@ pkg_setup() {
 src_prepare() {
 	# Fix automagic gtk+ dependency, bug #371290
 	epatch "${FILESDIR}/${PN}-2.34.0-automagic-gtk.patch"
-	eautoreconf
+
+	# introspection.m4 needed for eautoreconf
+	mv "${WORKDIR}/introspection.m4" "${S}"/ || die
+
+	AT_M4DIR="." eautoreconf
 
 	gnome2_src_prepare
 }
