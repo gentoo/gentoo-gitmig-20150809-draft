@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.25 2011/11/14 15:54:08 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozconfig-3.eclass,v 1.26 2011/11/21 15:29:36 anarchy Exp $
 #
 # mozconfig.eclass: the new mozilla.eclass
 
@@ -38,7 +38,7 @@ mozconfig_config() {
 
 	mozconfig_use_enable alsa ogg
 	mozconfig_use_enable alsa wave
-	if has crashreporter ${IUSE} ; then
+	if has +crashreporter ${IUSE} ; then
 		mozconfig_use_enable crashreporter
 	fi
 	mozconfig_use_enable dbus
