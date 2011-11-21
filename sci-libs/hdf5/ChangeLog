@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.76 2011/11/17 12:19:37 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.77 2011/11/21 17:33:09 xarthisius Exp $
+
+  21 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  +files/hdf5-1.8.8-array_bounds.patch, +files/hdf5-1.8.8-implicits.patch,
+  hdf5-1.8.8.ebuild:
+  Fix implicits and array out of bounds
 
 *hdf5-1.8.8 (17 Nov 2011)
 
