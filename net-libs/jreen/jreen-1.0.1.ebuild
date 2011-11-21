@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/jreen/jreen-1.0.1.ebuild,v 1.1 2011/11/21 05:25:02 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/jreen/jreen-1.0.1.ebuild,v 1.2 2011/11/21 19:13:29 jmbsvicetto Exp $
 
 EAPI=4
 
@@ -32,11 +32,4 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	if [[ ${PV} != *9999* ]]; then
-		unpack ${A}
-		mv ${MY_P} "${S}" || die move failed
-	else
-		git-2_src_unpack
-	fi
-}
+S="${WORKDIR}/${MY_P}"

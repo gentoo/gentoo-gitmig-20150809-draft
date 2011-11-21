@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/jreen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/jreen/ChangeLog,v 1.2 2011/11/21 05:25:02 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/jreen/ChangeLog,v 1.3 2011/11/21 19:13:29 jmbsvicetto Exp $
+
+  21 Nov 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -jreen-0_p20110709.ebuild, jreen-1.0.1.ebuild, jreen-9999.ebuild:
+  [net-libs/jreen] Drop pre-release now that there was a release and update $S
+  instead of adding a custom SRC_UNPACK.
 
 *jreen-1.0.1 (21 Nov 2011)
 

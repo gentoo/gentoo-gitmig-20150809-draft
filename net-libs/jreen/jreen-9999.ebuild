@@ -1,11 +1,13 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/jreen/jreen-9999.ebuild,v 1.1 2011/11/12 19:18:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/jreen/jreen-9999.ebuild,v 1.2 2011/11/21 19:13:29 jmbsvicetto Exp $
 
 EAPI=4
 
+MY_P=lib${PN}\-${PV}
+
 if [[ ${PV} != *9999* ]]; then
-	SRC_URI="http://dev.gentoo.org/~jmbsvicetto/distfiles/snapshots/${P}.tar.bz2"
+	SRC_URI="http://qutim.org/downloads/${MY_P}.tar.bz2 -> ${P}.tar.bz2"
 	KEYWORDS="~amd64 ~x86"
 else
 	GIT_ECLASS="git-2"
@@ -30,4 +32,4 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}"/"${PN}"
+S="${WORKDIR}/${MY_P}"
