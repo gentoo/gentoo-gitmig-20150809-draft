@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/monomer-db/monomer-db-5.32.ebuild,v 1.1 2011/11/02 10:05:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/monomer-db/monomer-db-5.32.ebuild,v 1.2 2011/11/21 15:24:59 jlec Exp $
 
 EAPI=4
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.ysbl.york.ac.uk/~garib/refmac/data/refmac_experimental/${MY_
 
 SLOT="0"
 LICENSE="ccp4"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE=""
 
 RDEPEND="!<sci-chemistry/ccp4-6.1.3"

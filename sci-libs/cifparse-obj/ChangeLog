@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cifparse-obj
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cifparse-obj/ChangeLog,v 1.13 2011/08/26 16:18:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cifparse-obj/ChangeLog,v 1.14 2011/11/21 15:23:05 jlec Exp $
+
+  21 Nov 2011; Justin Lecher <jlec@gentoo.org> cifparse-obj-7.025.ebuild:
+  keyworded for ~x86-macos ~x64-macos, tested by Johan Hattne #390123
 
   26 Aug 2011; Justin Lecher <jlec@gentoo.org> cifparse-obj-6.302.ebuild,
   cifparse-obj-7.025.ebuild, metadata.xml:

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cifparse-obj/cifparse-obj-7.025.ebuild,v 1.6 2011/08/26 16:18:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cifparse-obj/cifparse-obj-7.025.ebuild,v 1.7 2011/11/21 15:23:05 jlec Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="http://sw-tools.pdb.org/apps/CIFPARSE-OBJ/source/${MY_P}.tar.gz"
 
 LICENSE="PDB"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE=""
 
 RDEPEND=""
