@@ -4,6 +4,15 @@ http://bugs.gentoo.org/show_bug.cgi?id=331129
 
 --- js/src/Makefile.ref
 +++ js/src/Makefile.ref
+@@ -325,7 +325,7 @@
+ 	$(CC) -o $@ -c $(CFLAGS) $<
+ 
+ $(OBJDIR)/jskwgen$(HOST_BIN_SUFFIX): $(OBJDIR)/jskwgen.$(OBJ_SUFFIX)
+-	$(CC) -o $@ $(CFLAGS) $(LDFLAGS) $^
++	$(CC) $(HOST_LDFLAGS) -o $@ $^
+ 
+ endif
+ 
 @@ -338,7 +338,7 @@
  	link.exe -out:"$@" $(EXE_LINK_FLAGS) $^
  else

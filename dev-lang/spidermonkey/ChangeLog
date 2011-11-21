@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.63 2011/11/14 21:01:07 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.64 2011/11/21 18:05:43 axs Exp $
+
+  21 Nov 2011; Ian Stakenvicius <axs@gentoo.org>
+  files/spidermonkey-1.7.0-ldflags.patch:
+  modified ldflags patch to fix ldflags on jskwgen, bug #391079
 
 *spidermonkey-1.8.5-r1 (14 Nov 2011)
 
