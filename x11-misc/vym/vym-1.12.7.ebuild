@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-1.12.7.ebuild,v 1.1 2010/08/26 09:17:29 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/vym-1.12.7.ebuild,v 1.2 2011/11/21 08:46:32 radhermit Exp $
 
 EAPI=2
 inherit eutils qt4-r2
@@ -17,6 +17,7 @@ IUSE=""
 DEPEND="x11-libs/qt-gui:4[qt3support]
 	x11-libs/qt-sql:4[qt3support]"
 RDEPEND="${DEPEND}
+	app-arch/zip
 	x11-libs/libX11
 	x11-libs/libXext"
 
