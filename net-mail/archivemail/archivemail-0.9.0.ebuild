@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/archivemail/archivemail-0.9.0.ebuild,v 1.1 2011/08/26 11:13:07 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/archivemail/archivemail-0.9.0.ebuild,v 1.2 2011/11/21 09:54:01 eras Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -37,4 +37,6 @@ src_test() {
 
 src_install() {
 	distutils_src_install --install-data=/usr/share
+	mv "${D}/usr/share/share/man" "${D}/usr/share/" && \
+		rm -rf "${D}/usr/share/share" || die
 }
