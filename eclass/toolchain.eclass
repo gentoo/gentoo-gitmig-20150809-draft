@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.480 2011/11/20 20:12:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.481 2011/11/21 01:43:44 dirtyepic Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -933,7 +933,7 @@ toolchain_src_unpack() {
 
 	[[ -z ${UCLIBC_VER} ]] && [[ ${CTARGET} == *-uclibc* ]] && die "Sorry, this version does not support uClibc"
 
-	gcc_quick_unpack
+	[[ -z ${GCC_SVN} ]] && gcc_quick_unpack
 	exclude_gcc_patches
 
 	cd "${S}"
@@ -995,7 +995,7 @@ toolchain_src_unpack() {
 
 	gcc_version_patch
 	if [[ ${GCCMAJOR}.${GCCMINOR} > 4.0 ]] ; then
-		if [[ -n ${SNAPSHOT} || -n ${PRERELEASE} ]] ; then
+		if [[ -n ${SNAPSHOT} || -n ${PRERELEASE} || -n ${GCC_SVN} ]] ; then
 			echo ${PV/_/-} > "${S}"/gcc/BASE-VER
 		fi
 	fi
