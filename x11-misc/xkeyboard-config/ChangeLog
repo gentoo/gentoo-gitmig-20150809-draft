@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xkeyboard-config
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.144 2011/10/14 22:07:52 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.145 2011/11/21 00:00:00 chithanh Exp $
+
+*xkeyboard-config-2.4.1-r2 (20 Nov 2011)
+
+  20 Nov 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -xkeyboard-config-2.4.1-r1.ebuild, +xkeyboard-config-2.4.1-r2.ebuild,
+  +files/xkeyboard-config-2.4.1-shift-backspace.patch:
+  Add upstream patch to unbreak shift-backspace, bug #391061 by tetromino.
 
 *xkeyboard-config-2.4.1-r1 (14 Oct 2011)
 

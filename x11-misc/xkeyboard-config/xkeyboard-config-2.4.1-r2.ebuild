@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/xkeyboard-config-2.4.1-r1.ebuild,v 1.1 2011/10/14 22:07:52 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/xkeyboard-config-2.4.1-r2.ebuild,v 1.1 2011/11/21 00:00:00 chithanh Exp $
 
 EAPI=4
 
@@ -36,6 +36,7 @@ XORG_CONFIGURE_OPTIONS=(
 
 PATCHES=(
 	"${FILESDIR}"/${P}-extended-function-keys.patch
+	"${FILESDIR}"/${P}-shift-backspace.patch
 )
 
 src_prepare() {
