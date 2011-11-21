@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/ocaml-mode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.47 2011/03/05 20:43:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ocaml-mode/ChangeLog,v 1.48 2011/11/21 13:14:10 ulm Exp $
+
+*ocaml-mode-3.12.1 (21 Nov 2011)
+
+  21 Nov 2011; Ulrich Mueller <ulm@gentoo.org> +ocaml-mode-3.12.1.ebuild:
+  Version bump.
 
   05 Mar 2011; Ulrich Mueller <ulm@gentoo.org> -ocaml-mode-3.10.2.ebuild:
   Remove old.
