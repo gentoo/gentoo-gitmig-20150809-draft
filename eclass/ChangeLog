@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.23 2011/11/21 15:29:36 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.24 2011/11/21 16:31:49 anarchy Exp $
+
+  21 Nov 2011; Jory A. Pratt <anarchy@gentoo.org> nsplugins.eclass:
+  Assign to mozilla herd, add share_plugins_dir function for mozilla
+  applications.
 
   21 Nov 2011; Jory A. Pratt <anarchy@gentoo.org> mozconfig-3.eclass:
   Fix handling of crashreporter use.

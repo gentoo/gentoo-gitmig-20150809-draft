@@ -1,10 +1,16 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nsplugins.eclass,v 1.26 2011/10/05 15:14:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nsplugins.eclass,v 1.27 2011/11/21 16:31:49 anarchy Exp $
 #
-# Author: Martin Schlemmer <azarah@gentoo.org>
-#
-# Just some re-usable functions for the netscape/moz plugins sharing
+# @ECLASS: nsplugins.eclass
+# @MAINTAINER:
+# Mozilla Team <mozilla@gentoo.org>
+# @AUTHOR:
+# Original Author: Martin Schlemmer <azarah@gentoo.org>
+# @BLURB: reusable functions for netscape/moz plugin sharing
+# @DESCRIPTION:
+# Reusable functions that promote sharing of netscape/moz plugins, also provides
+# share_plugins_dir function for mozilla applications.
 
 inherit eutils
 
@@ -46,4 +52,22 @@ pkg_mv_plugins() {
 inst_plugin() {
 	dodir /usr/$(get_libdir)/${PLUGINS_DIR}
 	dosym ${1} /usr/$(get_libdir)/${PLUGINS_DIR}/$(basename ${1})
+}
+
+# This function ensures we use proper plugin path for Gentoo.
+# This should only be used by mozilla packages.
+# ${MOZILLA_FIVE_HOME} must be defined in src_install to support
+share_plugins_dir() {
+	if [[ ${PN} == seamonkey ]] ; then
+		rm -rf "${D}"${MOZILLA_FIVE_HOME}/plugins \
+			|| die "failed to remove existing plugins dir"
+	fi
+
+	if [[ ${PN} == *-bin ]] ; then
+		PLUGIN_BASE_PATH="/usr/$(get_libdir)"
+	else
+		PLUGIN_BASE_PATH=".."
+	fi
+
+	dosym "${PLUGIN_BASE_PATH}/nsbrowser/plugins" "${MOZILLA_FIVE_HOME}/plugins"
 }
