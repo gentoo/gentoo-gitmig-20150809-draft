@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/icinga
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/ChangeLog,v 1.2 2011/11/15 01:47:18 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/ChangeLog,v 1.3 2011/11/21 23:54:06 prometheanfire Exp $
+
+*icinga-1.5.1-r2 (21 Nov 2011)
+
+  21 Nov 2011; mthode <mthode@gentoo.org> +icinga-1.5.1-r2.ebuild,
+  +files/icinga-init.d-2:
+  Changed directory perms and file locations and initscript, see bug 391143 for
+  more info
 
 *icinga-1.5.1-r1 (15 Nov 2011)
 
