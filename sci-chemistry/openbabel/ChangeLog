@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/openbabel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.55 2011/06/16 23:56:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.56 2011/11/21 15:36:34 jlec Exp $
+
+  21 Nov 2011; Justin Lecher <jlec@gentoo.org> openbabel-2.3.0.ebuild:
+  keyworded for ~ppc-macos, tested by Johan Hattne #352642
 
   16 Jun 2011; Jeroen Roovers <jer@gentoo.org> openbabel-2.2.3.ebuild:
   Drop HPPA keywording (bug #360573).
