@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/kgcc64
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/ChangeLog,v 1.37 2011/11/20 19:06:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/kgcc64/ChangeLog,v 1.38 2011/11/21 11:56:43 jer Exp $
+
+  21 Nov 2011; Jeroen Roovers <jer@gentoo.org> Manifest:
+  Regenerate Manifest by Duncan (bug #391181).
 
   20 Nov 2011; Raúl Porcel <armin76@gentoo.org> kgcc64-4.4.5.ebuild,
   kgcc64-4.5.2.ebuild:
