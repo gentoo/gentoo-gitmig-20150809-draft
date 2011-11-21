@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu-kvm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.75 2011/11/16 04:29:30 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/ChangeLog,v 1.76 2011/11/21 18:11:11 jmbsvicetto Exp $
+
+  21 Nov 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  qemu-kvm-0.15.1-r1.ebuild, qemu-kvm-9999.ebuild:
+  [app-emulation/qemu-kvm] Sync 0.15.1-r1 and 9999 ebuilds
 
   16 Nov 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> ChangeLog:
   [app-emulation/qemu-kvm-9999] Revert to the old kernel.org repository.

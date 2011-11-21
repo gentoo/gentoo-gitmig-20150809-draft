@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.24 2011/11/16 04:27:26 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-kvm/qemu-kvm-9999.ebuild,v 1.25 2011/11/21 18:11:11 jmbsvicetto Exp $
 
 #BACKPORTS=1
 
@@ -11,7 +11,7 @@ if [[ ${PV} = *9999* ]]; then
 	GIT_ECLASS="git-2"
 fi
 
-inherit eutils flag-o-matic ${GIT_ECLASS} linux-info toolchain-funcs multilib
+inherit eutils flag-o-matic ${GIT_ECLASS} linux-info toolchain-funcs multilib python
 
 if [[ ${PV} = *9999* ]]; then
 	SRC_URI=""
@@ -21,7 +21,7 @@ else
 	${BACKPORTS:+
 		http://dev.gentoo.org/~flameeyes/${PN}/${P}-backports-${BACKPORTS}.tar.bz2
 		http://dev.gentoo.org/~cardoe/distfiles/${P}-backports-${BACKPORTS}.tar.bz2}"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 fi
 
 DESCRIPTION="QEMU + Kernel-based Virtual Machine userland tools"
@@ -66,7 +66,8 @@ RDEPEND="
 	sys-apps/pciutils
 	>=sys-apps/util-linux-2.16.0
 	sys-libs/zlib
-	sys-apps/seabios
+	amd64? ( sys-apps/seabios )
+	x86? ( sys-apps/seabios )
 	aio? ( dev-libs/libaio )
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
 	bluetooth? ( net-wireless/bluez )
@@ -128,6 +129,8 @@ pkg_setup() {
 			ewarn "to have vhost-net support."
 		fi
 	fi
+
+	python_set_active_version 2
 
 	enewgroup kvm
 }
@@ -267,10 +270,12 @@ src_install() {
 	newdoc pc-bios/README README.pc-bios || die
 	dohtml qemu-doc.html qemu-tech.html || die
 
-	# Remove SeaBIOS since we're using the SeaBIOS packaged one
-	rm "${D}/usr/share/qemu/bios.bin"
-	insinto /usr/share/qemu
-	dosym ../seabios/bios.bin
+	# FIXME: Need to come up with a solution for non-x86 based systems
+	if use x86 || use amd64; then
+		# Remove SeaBIOS since we're using the SeaBIOS packaged one
+		rm "${D}/usr/share/qemu/bios.bin"
+		dosym ../seabios/bios.bin /usr/share/qemu/bios.bin
+	fi
 }
 
 pkg_postinst() {
