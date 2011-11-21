@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/nokogiri
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.65 2011/11/19 12:56:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/ChangeLog,v 1.66 2011/11/21 20:31:23 graaff Exp $
+
+  21 Nov 2011; Hans de Graaff <graaff@gentoo.org> nokogiri-1.5.0-r2.ebuild:
+  Always require rdoc since the hoe-based build system requires it. Thanks for
+  naota for reporting in bug 389845.
 
 *nokogiri-1.5.0-r2 (19 Nov 2011)
 

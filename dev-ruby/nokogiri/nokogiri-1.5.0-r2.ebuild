@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/nokogiri-1.5.0-r2.ebuild,v 1.1 2011/11/19 12:56:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nokogiri/nokogiri-1.5.0-r2.ebuild,v 1.2 2011/11/21 20:31:23 graaff Exp $
 
 EAPI=4
 
@@ -35,8 +35,8 @@ ruby_add_bdepend "
 	dev-ruby/rake-compiler
 	dev-ruby/rexical
 	dev-ruby/hoe
+	dev-ruby/rdoc
 	dev-ruby/racc
-	doc? ( dev-ruby/rdoc )
 	test? ( dev-ruby/minitest )"
 
 all_ruby_prepare() {
