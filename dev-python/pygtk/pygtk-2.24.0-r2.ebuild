@@ -1,16 +1,18 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.24.0-r2.ebuild,v 1.1 2011/11/10 22:34:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.24.0-r2.ebuild,v 1.2 2011/11/21 23:01:47 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
+GNOME_TARBALL_SUFFIX="bz2"
+
 PYTHON_DEPEND="2:2.6"
 SUPPORT_PYTHON_ABIS="1"
 # dev-python/pycairo does not support Python 2.4 / 2.5.
 RESTRICT_PYTHON_ABIS="2.4 2.5 3.* *-jython"
 PYTHON_EXPORT_PHASE_FUNCTIONS="1"
 
-inherit alternatives autotools eutils flag-o-matic gnome.org python virtualx
+inherit alternatives autotools eutils flag-o-matic gnome.org python virtualx gnome2-utils
 
 DESCRIPTION="GTK+2 bindings for Python"
 HOMEPAGE="http://www.pygtk.org/"
@@ -36,6 +38,9 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"
 
 src_prepare() {
+	# Let tests pass without permissions problems, bug #245103
+	gnome2_environment_reset
+
 	# Fix declaration of codegen in .pc
 	epatch "${FILESDIR}/${PN}-2.13.0-fix-codegen-location.patch"
 	epatch "${FILESDIR}/${PN}-2.14.1-libdir-pc.patch"
@@ -62,7 +67,6 @@ src_test() {
 
 	testing() {
 		cd tests
-		export XDG_CONFIG_HOME="${T}/$(PYTHON --ABI)"
 		Xemake check-local
 	}
 	python_execute_function -s testing
@@ -71,12 +75,12 @@ src_test() {
 src_install() {
 	python_src_install
 	python_clean_installation_image
-	dodoc AUTHORS ChangeLog INSTALL MAPPING NEWS README THREADS TODO || die
+	dodoc AUTHORS ChangeLog INSTALL MAPPING NEWS README THREADS TODO
 
 	if use examples; then
 		rm examples/Makefile*
 		insinto /usr/share/doc/${PF}
-		doins -r examples || die
+		doins -r examples
 	fi
 }
 
