@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.911 2011/11/19 01:03:20 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.912 2011/11/21 18:06:27 zmedico Exp $
+
+*portage-2.1.10.37 (21 Nov 2011)
+
+  21 Nov 2011; Zac Medico <zmedico@gentoo.org> +portage-2.1.10.37.ebuild,
+  -portage-2.1.10.34.ebuild, -portage-2.1.10.35.ebuild:
+  2.1.10.37 version bump. This fixes bug #391199 (repoman "abiguous workdir"
+  error when using <=subversion-1.6). Bug #381649 tracks all bugs fixed since
+  portage-2.1.10.11.
 
 *portage-2.2.0_alpha76 (19 Nov 2011)
 
