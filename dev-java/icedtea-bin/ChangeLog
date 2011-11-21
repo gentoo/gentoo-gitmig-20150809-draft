@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/icedtea-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.7 2011/11/18 21:32:23 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.8 2011/11/21 11:07:41 sera Exp $
+
+  21 Nov 2011; Ralph Sennhauser <sera@gentoo.org> icedtea-bin-6.1.10.4.ebuild,
+  icedtea-bin-7.2.0-r1.ebuild:
+  Use java-vm-2.eclass to set PaX markings
 
   18 Nov 2011; Ralph Sennhauser <sera@gentoo.org> icedtea-bin-6.1.10.4.ebuild,
   icedtea-bin-7.2.0-r1.ebuild:
