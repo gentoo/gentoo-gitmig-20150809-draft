@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/eclean-kernel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eclean-kernel/ChangeLog,v 1.6 2011/11/16 22:44:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eclean-kernel/ChangeLog,v 1.7 2011/11/21 19:04:00 mgorny Exp $
+
+*eclean-kernel-0.1.5 (21 Nov 2011)
+
+  21 Nov 2011; Michał Górny <mgorny@gentoo.org> -eclean-kernel-0.1.4.ebuild,
+  +eclean-kernel-0.1.5.ebuild:
+  Version bump. The new version fixes support for device names in grub,
+  matching kernel-less moduledirs and exclusion support.
 
 *eclean-kernel-0.1.4 (16 Nov 2011)
 
