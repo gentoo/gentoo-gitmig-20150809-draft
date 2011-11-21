@@ -1,6 +1,11 @@
 # ChangeLog for app-text/wdiff
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.62 2011/09/19 16:33:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.63 2011/11/21 08:07:28 radhermit Exp $
+
+*wdiff-1.1.0 (21 Nov 2011)
+
+  21 Nov 2011; Tim Harder <radhermit@gentoo.org> +wdiff-1.1.0.ebuild:
+  Version bump.
 
 *wdiff-1.0.1 (19 Sep 2011)
 
