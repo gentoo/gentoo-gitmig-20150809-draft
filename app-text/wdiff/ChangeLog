@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wdiff
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.63 2011/11/21 08:07:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.64 2011/11/21 08:10:11 radhermit Exp $
+
+  21 Nov 2011; Tim Harder <radhermit@gentoo.org> wdiff-1.0.1.ebuild:
+  Add dependency on screen for testsuite (bug #390737).
 
 *wdiff-1.1.0 (21 Nov 2011)
 
