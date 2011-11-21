@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/banshee
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.143 2011/11/05 12:28:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/ChangeLog,v 1.144 2011/11/21 11:50:05 pacho Exp $
+
+*banshee-2.2.1 (21 Nov 2011)
+
+  21 Nov 2011; Pacho Ramos <pacho@gentoo.org> +banshee-2.2.1.ebuild,
+  -banshee-2.0.0.ebuild, metadata.xml:
+  Version bump, this also handles bpmdetect dependency properly (bug #284036,
+  thanks to Colin Macdonald, Mart Raudsepp, Paweł Hajdan, Jr and others), and
+  fixes notifications (bug #387569 by Travis Hansen).
 
   05 Nov 2011; Markos Chandras <hwoarang@gentoo.org> banshee-2.2.0-r1.ebuild:
   Stable on amd64 wrt bug #389181
