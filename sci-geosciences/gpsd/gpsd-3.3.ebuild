@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-3.3.ebuild,v 1.1 2011/11/20 06:59:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-3.3.ebuild,v 1.2 2011/11/21 22:09:57 vapier Exp $
 
 EAPI="4"
 
@@ -52,6 +52,7 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-release-rev.patch
 	epatch "${FILESDIR}"/${P}-udev-install.patch
+	epatch "${FILESDIR}"/${P}-pkg-config.patch
 
 	# Avoid useless -L paths to the install dir
 	sed -i \
@@ -108,7 +109,7 @@ src_configure() {
 
 src_compile() {
 	export CHRPATH=true
-	tc-export CC CXX
+	tc-export CC CXX PKG_CONFIG
 	export SHLINKFLAGS=${LDFLAGS} LINKFLAGS=${LDFLAGS}
 	escons
 

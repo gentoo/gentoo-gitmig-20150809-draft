@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.74 2011/11/20 06:59:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.75 2011/11/21 22:09:57 vapier Exp $
+
+  21 Nov 2011; Mike Frysinger <vapier@gentoo.org> gpsd-3.3.ebuild,
+  +files/gpsd-3.3-pkg-config.patch:
+  Respect PKG_CONFIG env var when building.
 
 *gpsd-3.3 (20 Nov 2011)
 
