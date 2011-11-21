@@ -1,30 +1,31 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.13.1-r1.ebuild,v 1.2 2011/10/05 19:20:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.13.1-r1.ebuild,v 1.3 2011/11/21 16:22:52 jlec Exp $
 
 EAPI=4
 
-inherit bash-completion eutils flag-o-matic fortran-2 versionator
+inherit bash-completion-r1 eutils flag-o-matic fortran-2 versionator
 
 DESCRIPTION="Language and environment for statistical computing and graphics"
 HOMEPAGE="http://www.r-project.org/"
-SRC_URI="mirror://cran/src/base/R-2/${P}.tar.gz
+SRC_URI="
+	mirror://cran/src/base/R-2/${P}.tar.gz
 	bash-completion? ( mirror://gentoo/R.bash_completion.bz2 )"
 
 LICENSE="|| ( GPL-2 GPL-3 ) LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
-IUSE="cairo doc java jpeg lapack minimal nls openmp perl png profile readline static-libs tk X"
+IUSE="bash-completion cairo doc java jpeg lapack minimal nls openmp perl png profile readline static-libs tk X"
 
 # common depends
-CDEPEND="app-arch/bzip2
+CDEPEND="
+	app-arch/bzip2
 	app-text/ghostscript-gpl
 	dev-libs/libpcre
 	|| ( >=net-libs/libtirpc-0.2.2-r1 <sys-libs/glibc-2.14 sys-freebsd/freebsd-lib )
 	virtual/blas
-	cairo? ( x11-libs/cairo[X]
-		>=x11-libs/pango-1.20[X] )
+	cairo? ( x11-libs/cairo[X] )
 	jpeg? ( virtual/jpeg )
 	lapack? ( virtual/lapack )
 	perl? ( dev-lang/perl )
@@ -35,8 +36,9 @@ CDEPEND="app-arch/bzip2
 
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig
-	doc? ( virtual/latex-base
-		   dev-texlive/texlive-fontsrecommended
+	doc? (
+			virtual/latex-base
+			dev-texlive/texlive-fontsrecommended
 		   )"
 
 RDEPEND="${CDEPEND}
@@ -46,7 +48,7 @@ RDEPEND="${CDEPEND}
 
 RESTRICT="minimal? ( test )"
 
-R_DIR="${EPREFIX}"/usr/$(get_libdir)/${PN}
+R_DIR="${EPREFIX}/usr/$(get_libdir)/${PN}"
 
 pkg_setup() {
 	if use openmp; then
@@ -88,12 +90,14 @@ src_prepare() {
 		|| die "sed failed"
 
 	# fix Rscript
-	sed -i \
+	sed \
 		-e "s:-DR_HOME='\"\$(rhome)\"':-DR_HOME='\"${R_DIR}\"':" \
-		src/unix/Makefile.in || die "sed unix Makefile failed"
+		-i src/unix/Makefile.in || die "sed unix Makefile failed"
 
 	# fix HTML links to manual (bug #273957)
-	sed -i -e 's:\.\./manual/:manual/:g' $(grep -Flr ../manual/ doc) \
+	sed \
+		-e 's:\.\./manual/:manual/:g' \
+		-i $(grep -Flr ../manual/ doc) \
 		|| die "sed for HTML links to manual failed"
 
 	use lapack && \
@@ -116,8 +120,8 @@ src_configure() {
 		--with-system-pcre \
 		--with-system-xz \
 		--with-blas="$(pkg-config --libs blas)" \
-		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
-		rdocdir="${EPREFIX}"/usr/share/doc/${PF} \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
+		rdocdir="${EPREFIX}/usr/share/doc/${PF}" \
 		$(use_enable openmp) \
 		$(use_enable nls) \
 		$(use_enable profile R-profiling) \
@@ -169,7 +173,7 @@ src_install() {
 		R_HOME=${R_DIR}
 	EOF
 	doenvd 99R
-	dobashcompletion "${WORKDIR}"/R.bash_completion
+	use bash-completion && dobashcomp "${WORKDIR}"/R.bash_completion
 }
 
 pkg_postinst() {
@@ -177,4 +181,5 @@ pkg_postinst() {
 		einfo "Re-initializing java paths for ${P}"
 		R CMD javareconf
 	fi
+	bash-completion-r1_pkg_postinst
 }

@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.13.0.ebuild,v 1.2 2011/10/05 19:20:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.13.0.ebuild,v 1.3 2011/11/21 16:22:52 jlec Exp $
 
 EAPI=4
 
-inherit bash-completion eutils flag-o-matic fortran-2 versionator
+inherit bash-completion-r1 eutils flag-o-matic fortran-2 versionator
 
 DESCRIPTION="Language and environment for statistical computing and graphics"
 HOMEPAGE="http://www.r-project.org/"
@@ -16,7 +16,7 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
-IUSE="cairo doc java jpeg lapack minimal nls openmp perl png profile readline static-libs tk X"
+IUSE="bash-completion cairo doc java jpeg lapack minimal nls openmp perl png profile readline static-libs tk X"
 
 # common depends
 CDEPEND="
@@ -24,10 +24,10 @@ CDEPEND="
 	app-text/ghostscript-gpl
 	dev-libs/libpcre
 	virtual/blas
-	virtual/fortran[openmp?]
+	virtual/fortran
 	cairo? (
 		x11-libs/cairo[X]
-		|| ( >=x11-libs/pango-1.20[X] <x11-libs/pango-1.20 ) )
+		>=x11-libs/pango-1.20[X] )
 	jpeg? ( virtual/jpeg )
 	lapack? ( virtual/lapack )
 	perl? ( dev-lang/perl )
@@ -39,9 +39,9 @@ CDEPEND="
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig
 	doc? (
-		virtual/latex-base
-		dev-texlive/texlive-fontsrecommended
-		)"
+			virtual/latex-base
+			dev-texlive/texlive-fontsrecommended
+		   )"
 
 RDEPEND="${CDEPEND}
 	app-arch/unzip
@@ -51,7 +51,7 @@ RDEPEND="${CDEPEND}
 
 RESTRICT="minimal? ( test )"
 
-R_DIR="${EPREFIX}"/usr/$(get_libdir)/${PN}
+R_DIR="${EPREFIX}/usr/$(get_libdir)/${PN}"
 
 pkg_setup() {
 	if use openmp; then
@@ -161,7 +161,7 @@ src_install() {
 		R_HOME=${R_DIR}
 	EOF
 	doenvd 99R || die "doenvd failed"
-	dobashcompletion "${WORKDIR}"/R.bash_completion
+	use bash-completion && dobashcomp "${WORKDIR}"/R.bash_completion
 }
 
 pkg_postinst() {
@@ -169,4 +169,5 @@ pkg_postinst() {
 		einfo "Re-initializing java paths for ${P}"
 		R CMD javareconf
 	fi
+	bash-completion-r1_pkg_postinst
 }

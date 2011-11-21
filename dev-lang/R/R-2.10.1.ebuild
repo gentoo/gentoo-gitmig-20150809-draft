@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.10.1.ebuild,v 1.14 2011/10/17 15:34:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.10.1.ebuild,v 1.15 2011/11/21 16:22:52 jlec Exp $
 
 EAPI=2
 
-inherit bash-completion eutils flag-o-matic fortran-2 versionator
+inherit bash-completion-r1 eutils flag-o-matic fortran-2 versionator
 
 DESCRIPTION="Language and environment for statistical computing and graphics"
 HOMEPAGE="http://www.r-project.org/"
@@ -16,7 +16,7 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
-IUSE="cairo doc java jpeg lapack minimal nls perl png readline threads tk X"
+IUSE="bash-completion cairo doc java jpeg lapack minimal nls perl png readline threads tk X"
 
 # common depends
 CDEPEND="
@@ -27,7 +27,7 @@ CDEPEND="
 	virtual/fortran
 	cairo? (
 		x11-libs/cairo[X]
-		|| ( >=x11-libs/pango-1.20[X] <x11-libs/pango-1.20 ) )
+		>=x11-libs/pango-1.20[X] )
 	jpeg? ( virtual/jpeg )
 	lapack? ( virtual/lapack )
 	perl? ( dev-lang/perl )
@@ -39,9 +39,9 @@ CDEPEND="
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig
 	doc? (
-		virtual/latex-base
-		dev-texlive/texlive-fontsrecommended
-		)"
+			virtual/latex-base
+			dev-texlive/texlive-fontsrecommended
+		   )"
 
 RDEPEND="${CDEPEND}
 	app-arch/unzip
@@ -68,12 +68,14 @@ src_prepare() {
 		|| die "sed failed"
 
 	# fix Rscript
-	sed -i \
+	sed \
 		-e "s:-DR_HOME='\"\$(rhome)\"':-DR_HOME='\"${R_DIR}\"':" \
-		src/unix/Makefile.in || die "sed unix Makefile failed"
+		-i src/unix/Makefile.in || die "sed unix Makefile failed"
 
 	# fix HTML links to manual (bug #273957)
-	sed -i -e 's:\.\./manual/:manual/:g' $(grep -Flr ../manual/ doc) \
+	sed \
+		-e 's:\.\./manual/:manual/:g' \
+		-i $(grep -Flr ../manual/ doc) \
 		|| die "sed for HTML links to manual failed"
 
 	# Fix compability with zlib-1.2.5.1-r1 OF change
@@ -161,7 +163,7 @@ src_install() {
 		R_HOME=${R_DIR}
 	EOF
 	doenvd 99R || die "doenvd failed"
-	dobashcompletion "${WORKDIR}"/R.bash_completion
+	use bash-completion && dobashcomp "${WORKDIR}"/R.bash_completion
 }
 
 pkg_config() {

@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.190 2011/10/17 15:34:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.191 2011/11/21 16:22:52 jlec Exp $
+
+*R-2.14.0 (21 Nov 2011)
+
+  21 Nov 2011; Justin Lecher <jlec@gentoo.org> R-2.10.1.ebuild,
+  -R-2.12.1.ebuild, -R-2.12.2.ebuild, R-2.13.0.ebuild, R-2.13.1-r1.ebuild,
+  +R-2.14.0.ebuild, metadata.xml:
+  Version Bump, #391045, cleaned old, moved to bashcompletion-r1.eclass, sorted
+  minor things in ebuild (adopt changes in between versions)
 
   17 Oct 2011; Samuli Suominen <ssuominen@gentoo.org> R-2.10.1.ebuild:
   Fix building with libpng15 wrt #366223. Fix building with sys-libs/zlib >=
