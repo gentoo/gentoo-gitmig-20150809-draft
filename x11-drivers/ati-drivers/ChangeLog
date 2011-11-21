@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.262 2011/11/20 02:01:26 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.263 2011/11/21 15:45:39 chithanh Exp $
+
+  21 Nov 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  ati-drivers-11.11.ebuild:
+  Fix installation of OpenCL on x86, bug #391249.
 
 *ati-drivers-11.11 (20 Nov 2011)
 

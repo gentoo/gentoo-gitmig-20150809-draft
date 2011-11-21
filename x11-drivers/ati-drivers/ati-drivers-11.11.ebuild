@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-11.11.ebuild,v 1.1 2011/11/20 02:01:26 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-11.11.ebuild,v 1.2 2011/11/21 15:45:39 chithanh Exp $
 
 EAPI=4
 
@@ -33,7 +33,10 @@ RDEPEND="
 	x11-libs/libXinerama
 	x11-libs/libXrandr
 	x11-libs/libXrender
-	multilib? ( app-emulation/emul-linux-x86-opengl )
+	multilib? (
+			app-emulation/emul-linux-x86-opengl
+			app-emulation/emul-linux-x86-xlibs
+	)
 	qt4? (
 			x11-libs/libICE
 			x11-libs/libSM
@@ -46,7 +49,6 @@ RDEPEND="
 "
 
 DEPEND="${RDEPEND}
-	app-portage/portage-utils
 	x11-proto/inputproto
 	x11-proto/xf86miscproto
 	x11-proto/xf86vidmodeproto
@@ -264,9 +266,7 @@ pkg_setup() {
 	elog "r600 chipset and newer."
 	elog "This represent the ATI Radeon HD series at this moment."
 	elog
-	elog "If your card is older then usage of ${CATEGORY}/xf86-video-ati"
-	elog "as replacement is highly recommended. Rather than staying with"
-	elog "old versions of this driver."
+	elog "If your card is older then use ${CATEGORY}/xf86-video-ati"
 	elog "For migration informations please reffer to:"
 	elog "http://www.gentoo.org/proj/en/desktop/x/x11/ati-migration-guide.xml"
 	einfo
@@ -439,7 +439,11 @@ src_install() {
 	# OpenCL
 	if use opencl ; then
 		insinto /etc/OpenCL/vendors/
-		doins "${ARCH_DIR}"/etc/OpenCL/vendors/amdocl64.icd || die "doins failed"
+		if [[ "${ABI}" == "amd64" ]] ; then
+			doins "${ARCH_DIR}"/etc/OpenCL/vendors/amdocl64.icd || die "doins failed"
+		else
+			doins "${ARCH_DIR}"/etc/OpenCL/vendors/amdocl32.icd || die "doins failed"
+		fi
 	fi
 
 	# include.
@@ -569,6 +573,9 @@ pkg_postinst() {
 	elog "Fully rebooting the system after an ${PN} update is recommended"
 	elog "Stopping Xorg, reloading fglrx kernel module and restart Xorg"
 	elog "might not work"
+	elog
+	elog "Some cards need acpid running to handle events"
+	elog "Please add it to boot runlevel with rc-update add acpid boot"
 
 	use modules && linux-mod_pkg_postinst
 	"${ROOT}"/usr/bin/eselect opengl set --use-old ati
