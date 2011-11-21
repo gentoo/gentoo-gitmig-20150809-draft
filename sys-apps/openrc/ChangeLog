@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.174 2011/11/18 18:25:24 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.175 2011/11/21 03:11:18 vapier Exp $
+
+  21 Nov 2011; Mike Frysinger <vapier@gentoo.org> openrc-0.9.4.ebuild,
+  openrc-9999.ebuild:
+  Trim old baselayout-1 dirs in /lib/.
 
   18 Nov 2011; William Hubbs <williamh@gentoo.org> openrc-9999.ebuild:
   Add static-libs use flag for bug #378267
