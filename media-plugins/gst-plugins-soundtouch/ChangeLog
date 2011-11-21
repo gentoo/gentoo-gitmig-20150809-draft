@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-soundtouch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-soundtouch/ChangeLog,v 1.1 2011/10/13 06:43:29 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-soundtouch/ChangeLog,v 1.2 2011/11/21 11:46:22 phajdan.jr Exp $
+
+  21 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  gst-plugins-soundtouch-0.10.22.ebuild:
+  Keyworded ~x86 wrt bug #284036.
 
 *gst-plugins-soundtouch-0.10.22 (13 Oct 2011)
 
