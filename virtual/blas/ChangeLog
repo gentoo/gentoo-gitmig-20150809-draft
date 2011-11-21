@@ -1,6 +1,9 @@
 # ChangeLog for virtual/blas
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/blas/ChangeLog,v 1.5 2011/08/17 16:51:38 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/blas/ChangeLog,v 1.6 2011/11/21 15:30:58 jlec Exp $
+
+  21 Nov 2011; Justin Lecher <jlec@gentoo.org> blas-1.0.ebuild:
+  keyworded for ~x86-macos ~x64-macos, tested by Johan Hattne #390123
 
   17 Aug 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   blas-1.0.ebuild:
