@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/spidermonkey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.64 2011/11/21 18:05:43 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/spidermonkey/ChangeLog,v 1.65 2011/11/21 19:50:31 axs Exp $
+
+  21 Nov 2011; Ian Stakenvicius <axs@gentoo.org>
+  files/spidermonkey-1.7.0-ldflags.patch:
+  fixed erroneous drop of CFLAGS from last patch update
 
   21 Nov 2011; Ian Stakenvicius <axs@gentoo.org>
   files/spidermonkey-1.7.0-ldflags.patch:

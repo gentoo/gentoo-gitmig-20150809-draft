@@ -9,7 +9,7 @@ http://bugs.gentoo.org/show_bug.cgi?id=331129
  
  $(OBJDIR)/jskwgen$(HOST_BIN_SUFFIX): $(OBJDIR)/jskwgen.$(OBJ_SUFFIX)
 -	$(CC) -o $@ $(CFLAGS) $(LDFLAGS) $^
-+	$(CC) $(HOST_LDFLAGS) -o $@ $^
++	$(CC) $(HOST_LDFLAGS) -o $@ $(CFLAGS) $^
  
  endif
  
