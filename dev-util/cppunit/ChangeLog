@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cppunit
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.51 2011/04/10 03:03:50 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppunit/ChangeLog,v 1.52 2011/11/21 15:32:38 jlec Exp $
+
+  21 Nov 2011; Justin Lecher <jlec@gentoo.org> cppunit-1.12.1.ebuild:
+  keyworded for ~x86-macos ~x64-macos, tested by Johan Hattne #390123
 
   10 Apr 2011; Jonathan Callen <abcd@gentoo.org> cppunit-1.12.1.ebuild:
   Add prefix support, bump EAPI to 3, add prefix keywords
