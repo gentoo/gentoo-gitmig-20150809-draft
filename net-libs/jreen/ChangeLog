@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/jreen
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/jreen/ChangeLog,v 1.1 2011/11/12 19:18:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/jreen/ChangeLog,v 1.2 2011/11/21 05:25:02 jmbsvicetto Exp $
+
+*jreen-1.0.1 (21 Nov 2011)
+
+  21 Nov 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +jreen-1.0.1.ebuild:
+  [net-libs/jreen] Version bump 1.0.1 from the kde overlay by Johannes Huber
+  <johu@gmx.de>.
 
 *jreen-9999 (12 Nov 2011)
 *jreen-0_p20110709 (12 Nov 2011)
