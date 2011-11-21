@@ -1,6 +1,12 @@
 # ChangeLog for sys-block/di
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/di/ChangeLog,v 1.32 2011/10/01 20:30:19 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/di/ChangeLog,v 1.33 2011/11/21 01:51:59 radhermit Exp $
+
+*di-4.31 (21 Nov 2011)
+
+  21 Nov 2011; Tim Harder <radhermit@gentoo.org> +di-4.31.ebuild,
+  +files/di-4.31-mkdir.patch:
+  Version bump.
 
 *di-4.29 (01 Oct 2011)
 
