@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openswan
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.79 2011/11/10 14:32:21 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.80 2011/11/21 20:51:51 vapier Exp $
+
+*openswan-2.6.37-r1 (21 Nov 2011)
+
+  21 Nov 2011; Mike Frysinger <vapier@gentoo.org> +openswan-2.6.37-r1.ebuild:
+  Depend on the old output style of ifconfig, and simplify build flags a bit.
 
   10 Nov 2011; Tony Vroon <chainsaw@gentoo.org> openswan-2.6.37.ebuild:
   Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo & Ian
