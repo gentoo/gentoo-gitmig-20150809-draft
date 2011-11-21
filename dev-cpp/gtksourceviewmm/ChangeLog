@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/gtksourceviewmm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/ChangeLog,v 1.20 2011/10/21 14:07:07 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/ChangeLog,v 1.21 2011/11/21 22:05:33 eva Exp $
+
+*gtksourceviewmm-3.2.0 (21 Nov 2011)
+
+  21 Nov 2011; Gilles Dartiguelongue <eva@gentoo.org>
+  -gtksourceviewmm-2.10.1.ebuild, +gtksourceviewmm-3.2.0.ebuild:
+  Version bump. Clean up old revision.
 
   21 Oct 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   gtksourceviewmm-2.10.2.ebuild:
