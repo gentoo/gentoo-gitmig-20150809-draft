@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.29-r1.ebuild,v 1.1 2011/11/11 21:06:44 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.6.0.29-r1.ebuild,v 1.2 2011/11/21 12:15:02 sera Exp $
 
 EAPI="4"
 
-inherit java-vm-2 eutils pax-utils prefix versionator
+inherit java-vm-2 eutils prefix versionator
 
 MY_PV="$(get_version_component_range 2)u$(get_version_component_range 4)"
 S_PV="$(replace_version_separator 3 '_')"
@@ -65,9 +65,8 @@ src_unpack() {
 }
 
 src_compile() {
-	# Set PaX markings on all JDK/JRE executables to allow code-generation on
-	# the heap by the JIT compiler. This needs to be done before CDS - #215225
-	pax-mark m $(list-paxables "${S}"/bin/*)
+	# This needs to be done before CDS - #215225
+	java-vm_set-pax-markings "${S}"
 
 	# see bug #207282
 	einfo "Creating the Class Data Sharing archives"

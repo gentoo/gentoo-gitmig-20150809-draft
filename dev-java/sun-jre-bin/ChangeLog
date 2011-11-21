@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-jre-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.202 2011/11/11 21:06:44 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.203 2011/11/21 12:15:02 sera Exp $
+
+  21 Nov 2011; Ralph Sennhauser <sera@gentoo.org>
+  sun-jre-bin-1.6.0.29-r1.ebuild:
+  Use java-vm-2.eclass to set PaX markings
 
 *sun-jre-bin-1.6.0.29-r1 (11 Nov 2011)
 
