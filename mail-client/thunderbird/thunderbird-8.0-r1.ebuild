@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-8.0-r1.ebuild,v 1.1 2011/11/16 14:50:59 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-8.0-r1.ebuild,v 1.2 2011/11/21 15:15:29 anarchy Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
@@ -244,6 +244,9 @@ src_compile() {
 src_install() {
 	declare MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
 	declare emid
+
+	# Pax mark xpcshell for hardened support, only used for startupcache creation.
+	pax-mark m "${S}"/mozilla/dist/bin/xpcshell
 
 	emake DESTDIR="${D}" install || die "emake install failed"
 

@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.106 2011/11/16 14:50:59 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.107 2011/11/21 15:15:29 anarchy Exp $
+
+  21 Nov 2011; Jory A. Pratt <anarchy@gentoo.org> thunderbird-8.0-r1.ebuild:
+  Fix hardened support with omnijar, bug #391051
 
 *thunderbird-8.0-r1 (16 Nov 2011)
 
