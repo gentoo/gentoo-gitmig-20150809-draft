@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxdl_view
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxdl_view/ChangeLog,v 1.8 2011/06/28 20:05:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxdl_view/ChangeLog,v 1.9 2011/11/21 15:29:08 jlec Exp $
+
+  21 Nov 2011; Justin Lecher <jlec@gentoo.org> libxdl_view-4.2-r1.ebuild:
+  keyworded for ~x86-macos ~x64-macos, tested by Johan Hattne #390123
 
   28 Jun 2011; Brent Baude <ranger@gentoo.org> libxdl_view-4.2-r1.ebuild:
   Marking libxdl_view-4.2-r1 ppc for bug 352117
