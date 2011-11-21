@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/mew
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.73 2010/04/12 18:07:37 fauli Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.74 2011/11/21 13:08:13 ulm Exp $
+
+*mew-6.4 (21 Nov 2011)
+
+  21 Nov 2011; Ulrich Mueller <ulm@gentoo.org> +mew-6.4.ebuild:
+  Version bump.
 
 *mew-6.3 (12 Apr 2010)
 
