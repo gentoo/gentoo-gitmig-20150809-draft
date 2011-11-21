@@ -1,6 +1,8 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.7a-r1.ebuild,v 1.2 2009/05/11 21:03:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.7a-r1.ebuild,v 1.3 2011/11/21 19:57:24 ulm Exp $
+
+EAPI=4
 
 inherit elisp-common eutils
 
@@ -22,40 +24,36 @@ DEPEND="${RDEPEND}
 
 SITEFILE="50${PN}-gentoo.el"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}-ocs-sysdir.patch" #269305
 }
 
 src_compile() {
-	STRIP="no"
-
-	econf || die "econf failed"
 	make clean || die "make clean failed"
-	emake || die "emake failed"
+	emake
 
-	if use emacs ; then
+	if use emacs; then
 		cd "${S}"/contrib/xcscope || die
 		elisp-compile *.el || die
 	fi
 }
 
 src_install() {
-	einstall || die "einstall failed"
-	dodoc AUTHORS ChangeLog NEWS README* TODO || die "dodoc failed"
+	einstall
+	dodoc AUTHORS ChangeLog NEWS README* TODO
 
-	if use emacs ; then
+	if use emacs; then
 		cd "${S}"/contrib/xcscope || die
 		elisp-install ${PN} *.el *.elc || die
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}" || die
-		dobin cscope-indexer || die "dobin failed"
+		dobin cscope-indexer
 	fi
 
 	cd "${S}"/contrib/webcscope || die
 	docinto webcscope
-	dodoc INSTALL TODO cgi-lib.pl cscope hilite.c || die "dodoc failed"
-	insinto /usr/share/doc/${PF}/webcscope/icons; doins icons/*.gif
+	dodoc INSTALL TODO cgi-lib.pl cscope hilite.c
+	docinto webcscope/icons
+	dodoc icons/*.gif
 }
 
 pkg_postinst() {
