@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/fasta
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasta/ChangeLog,v 1.6 2011/01/18 17:03:34 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasta/ChangeLog,v 1.7 2011/11/21 15:30:09 jlec Exp $
+
+  21 Nov 2011; Justin Lecher <jlec@gentoo.org> fasta-35.4.10.ebuild:
+  keyworded for ~x86-macos ~x64-macos, tested by Johan Hattne #390123
 
   18 Jan 2011; Thomas Kahle <tomka@gentoo.org> fasta-35.4.10.ebuild:
   x86 stable per bug 351758

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasta/fasta-35.4.10.ebuild,v 1.7 2011/01/18 17:03:34 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/fasta/fasta-35.4.10.ebuild,v 1.8 2011/11/21 15:30:09 jlec Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://faculty.virginia.edu/wrpearson/${PN}/${PN}3/${P}.tar.gz"
 
 LICENSE="fasta"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE="debug icc sse2 test"
 
 DEPEND="

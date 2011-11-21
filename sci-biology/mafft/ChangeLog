@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/mafft
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mafft/ChangeLog,v 1.8 2010/06/24 19:30:59 jlec Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mafft/ChangeLog,v 1.9 2011/11/21 15:30:19 jlec Exp $
+
+  21 Nov 2011; Justin Lecher <jlec@gentoo.org> mafft-6.811.ebuild:
+  keyworded for ~x86-macos ~x64-macos, tested by Johan Hattne #390123
 
   24 Jun 2010; Justin Lecher <jlec@gentoo.org> mafft-6.240-r1.ebuild,
   mafft-6.707.ebuild, mafft-6.811.ebuild:
