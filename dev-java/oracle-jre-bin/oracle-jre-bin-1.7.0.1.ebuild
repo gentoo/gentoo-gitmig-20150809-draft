@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/oracle-jre-bin-1.7.0.1.ebuild,v 1.1 2011/10/21 23:05:19 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/oracle-jre-bin-1.7.0.1.ebuild,v 1.2 2011/11/21 10:45:21 sera Exp $
 
 EAPI="4"
 
-inherit java-vm-2 eutils pax-utils prefix versionator
+inherit java-vm-2 eutils prefix versionator
 
 UPDATE="$(get_version_component_range 4)"
 UPDATE="${UPDATE#0}"
@@ -75,9 +75,8 @@ src_prepare() {
 }
 
 src_compile() {
-	# Set PaX markings on all JDK/JRE executables to allow code-generation on
-	# the heap by the JIT compiler. This needs to be done before CDS - #215225
-	pax-mark m $(list-paxables "${S}"{,/jre}/bin/*)
+	# This needs to be done before CDS - #215225
+	java-vm_set-pax-markings "${S}"
 
 	# see bug #207282
 	einfo "Creating the Class Data Sharing archives"

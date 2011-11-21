@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/oracle-jre-bin
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/ChangeLog,v 1.5 2011/11/04 09:27:24 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oracle-jre-bin/ChangeLog,v 1.6 2011/11/21 10:45:21 sera Exp $
+
+  21 Nov 2011; Ralph Sennhauser <sera@gentoo.org>
+  oracle-jre-bin-1.7.0.1.ebuild, oracle-jre-bin-1.7.0.1-r1.ebuild:
+  Use java-vm-2.eclass to set PaX markings
 
 *oracle-jre-bin-1.7.0.1-r1 (04 Nov 2011)
 
