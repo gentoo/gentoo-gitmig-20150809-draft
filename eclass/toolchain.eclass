@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.481 2011/11/21 01:43:44 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.482 2011/11/22 15:20:48 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -776,7 +776,7 @@ toolchain_pkg_setup() {
 	# we dont want to use the installed compiler's specs to build gcc!
 	unset GCC_SPECS
 
-	if ! is_cxx ; then
+	if ! use_if_iuse cxx ; then
 		use_if_iuse go && ewarn 'Go requires a C++ compiler, disabled due to USE="-cxx"'
 		use_if_iuse objc++ && ewarn 'Obj-C++ requires a C++ compiler, disabled due to USE="-cxx"'
 		use_if_iuse gcj && ewarn 'GCJ requires a C++ compiler, disabled due to USE="-cxx"'
