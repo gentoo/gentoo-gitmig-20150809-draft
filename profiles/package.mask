@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13275 2011/11/22 16:28:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13276 2011/11/22 16:56:40 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -177,10 +177,6 @@ x11-themes/polyester
 # Jeroen Roovers <jer@gentoo.org> (04 Nov 2011)
 # Masked www-client/opera snapshots
 # http://my.opera.com/desktopteam/blog/2011/11/04/opera-11-60
-=www-client/opera-11.60.1134
-=www-client/opera-11.60.1139
-=www-client/opera-11.60.1144
-=www-client/opera-11.60.1145
 =www-client/opera-11.60.1150
 =www-client/opera-11.60.1159
 =www-client/opera-11.60.1163
