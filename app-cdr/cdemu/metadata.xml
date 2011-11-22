@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
- <email>vanquirius@gentoo.org</email>
+ <email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <use>
 <flag name='cdemud'>Pull <pkg>app-cdr/cdemud</pkg> dependency, useful in chroot environment (bug #315491). Do not disable until you know what you are doing.</flag>
