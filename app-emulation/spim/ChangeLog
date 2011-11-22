@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/spim
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/ChangeLog,v 1.58 2010/11/08 19:45:03 jer Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/ChangeLog,v 1.59 2011/11/22 18:42:06 pacho Exp $
+
+  22 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #195316; remove old.
 
   08 Nov 2010; Jeroen Roovers <jer@gentoo.org> spim-8.0-r1.ebuild:
   Stable for PPC (bug #328973).
