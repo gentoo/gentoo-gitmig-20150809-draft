@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.357 2011/11/17 18:12:20 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.358 2011/11/22 16:15:01 phajdan.jr Exp $
+
+  22 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> bind-9.7.4_p1.ebuild:
+  x86 stable wrt bug #390753
 
   17 Nov 2011; Christian Ruppert <idl0r@gentoo.org> bind-9.8.1_p1.ebuild:
   Fix sdlz patching, thanks to Dessa who reported it via IRC.
