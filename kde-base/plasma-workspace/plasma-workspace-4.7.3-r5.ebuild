@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.7.3-r4.ebuild,v 1.1 2011/11/20 22:04:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.7.3-r5.ebuild,v 1.1 2011/11/22 22:49:57 dilfridge Exp $
 
 EAPI=4
 
@@ -76,6 +76,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-4.4.2-xinerama_cmake_automagic.patch"
 	"${FILESDIR}/${PN}-4.7.3-weathercrash.patch"
 	"${FILESDIR}/${PN}-4.7.3-taskcrash.patch"
+	"${FILESDIR}/${PN}-4.7.3-calendarcrash.patch"
 )
 
 pkg_setup() {
