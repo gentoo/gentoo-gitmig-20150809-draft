@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mboxgrep
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mboxgrep/ChangeLog,v 1.15 2011/06/06 18:01:34 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mboxgrep/ChangeLog,v 1.16 2011/11/22 16:18:11 phajdan.jr Exp $
+
+  22 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  mboxgrep-0.7.9-r1.ebuild:
+  x86 stable wrt bug #391225
 
 *mboxgrep-0.7.9-r1 (06 Jun 2011)
 
