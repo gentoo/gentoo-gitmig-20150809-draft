@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.305 2011/11/22 07:11:39 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.306 2011/11/22 22:03:04 vapier Exp $
+
+  22 Nov 2011; Mike Frysinger <vapier@gentoo.org> postfix-2.8.3-r1.ebuild,
+  postfix-2.8.3-r2.ebuild, postfix-2.8.4.ebuild, postfix-2.8.5.ebuild,
+  postfix-2.8.6.ebuild, postfix-2.8.7.ebuild, postfix-2.9_pre20111121.ebuild:
+  Add s390/sh love #371379 by Eray Aslan.
 
 *postfix-2.9_pre20111121 (22 Nov 2011)
 
