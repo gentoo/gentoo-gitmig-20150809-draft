@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PAR
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR/ChangeLog,v 1.14 2011/09/04 11:20:50 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR/ChangeLog,v 1.15 2011/11/22 19:14:00 tove Exp $
+
+  22 Nov 2011; Torsten Veller <tove@gentoo.org> PAR-1.2.0.ebuild:
+  Drop Module-Signature and Digest-SHA. Both are recommendations (#391159 by
+  William Throwe)
 
   04 Sep 2011; Torsten Veller <tove@gentoo.org> -PAR-1.002.ebuild:
   Cleanup
