@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.297 2011/11/22 16:11:37 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.298 2011/11/22 16:31:35 chainsaw Exp $
+
+  22 Nov 2011; Tony Vroon <chainsaw@gentoo.org> nginx-1.0.10.ebuild:
+  Marked stable on AMD64 based on arch testing by Agostino "ago" Sarubbo &
+  Michael "n0idx80" Harrison in security bug #389319.
 
   22 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> nginx-1.0.10.ebuild:
   x86 stable wrt bug #389319
