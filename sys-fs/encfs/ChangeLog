@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/encfs
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.57 2011/11/22 22:36:22 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/ChangeLog,v 1.58 2011/11/22 23:05:54 sping Exp $
+
+*encfs-1.7.4 (22 Nov 2011)
+
+  22 Nov 2011; Sebastian Pipping <sping@gentoo.org> +encfs-1.7.4.ebuild,
+  +files/encfs-1.7.4-r68:69.patch:
+  Bump to 1.7.4, looks trivial. Post-release upstream bugfix patch included.
 
   22 Nov 2011; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
   Added myself as maintainer
