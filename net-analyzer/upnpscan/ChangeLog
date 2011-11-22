@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/upnpscan
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/upnpscan/ChangeLog,v 1.11 2010/11/03 21:52:46 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/upnpscan/ChangeLog,v 1.12 2011/11/22 17:59:03 pacho Exp $
+
+  22 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #82110
 
   03 Nov 2010; Markus Meier <maekke@gentoo.org> upnpscan-0.4-r2.ebuild:
   x86 stable, bug #343333

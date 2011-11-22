@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-<maintainer>
-    <email>vanquirius@gentoo.org</email>
-    <name>Marcelo Goes</name>
-</maintainer>
 <longdescription>
 NetHogs is a small 'net top' tool. Instead of breaking the traffic down
  per protocol or per subnet, like most tools do, it groups bandwidth by 

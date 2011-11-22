@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-<maintainer>
-    <email>vanquirius@gentoo.org</email>
-    <name>Marcelo Goes</name>
-</maintainer>
 <longdescription>
 A tool that scans the LAN or a given address range for UPnP capable
 devices. This is done by sending M-SEARCH discovery packets to either
