@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/viewnior
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/viewnior/ChangeLog,v 1.9 2011/07/19 19:56:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/viewnior/ChangeLog,v 1.10 2011/11/22 18:45:39 pacho Exp $
+
+  22 Nov 2011; Pacho Ramos <pacho@gentoo.org> -viewnior-1.0.ebuild,
+  metadata.xml:
+  Drop maintainer due retirement, bug #195316; remove old.
 
   19 Jul 2011; Markus Meier <maekke@gentoo.org> viewnior-1.1.ebuild:
   x86 stable, bug #374759
