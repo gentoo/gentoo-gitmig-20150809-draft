@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/isync/isync-1.0.4.ebuild,v 1.3 2011/06/07 11:12:01 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/isync/isync-1.0.4.ebuild,v 1.4 2011/11/22 16:08:45 phajdan.jr Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/isync/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="ssl"
 
 DEPEND=">=sys-libs/db-4.2
