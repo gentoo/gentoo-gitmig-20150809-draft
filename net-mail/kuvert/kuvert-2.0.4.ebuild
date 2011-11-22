@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/kuvert/kuvert-2.0.4.ebuild,v 1.2 2011/06/08 07:47:05 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/kuvert/kuvert-2.0.4.ebuild,v 1.3 2011/11/22 14:24:07 eras Exp $
 
 EAPI=4
+inherit toolchain-funcs
 
 MY_P=${P/-/_}
 
@@ -32,6 +33,10 @@ RDEPEND="app-crypt/gnupg
 	dev-lang/perl
 	virtual/perl-libnet
 	virtual/mta"
+
+src_compile() {
+	emake CC="$(tc-getCC)"
+}
 
 src_install() {
 	emake DESTDIR="${D}" install
