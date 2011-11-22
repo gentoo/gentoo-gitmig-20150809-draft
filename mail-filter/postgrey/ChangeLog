@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/postgrey
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.66 2011/06/08 14:33:36 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.67 2011/11/22 16:10:16 phajdan.jr Exp $
+
+  22 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> postgrey-1.34.ebuild:
+  x86 stable wrt bug #391135
 
 *postgrey-1.34 (08 Jun 2011)
 
