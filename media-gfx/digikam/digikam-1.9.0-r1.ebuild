@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.9.0-r1.ebuild,v 1.5 2011/07/05 11:39:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-1.9.0-r1.ebuild,v 1.6 2011/11/22 23:02:54 dilfridge Exp $
 
 EAPI=4
 
@@ -63,6 +63,9 @@ DEPEND="${CDEPEND}
 "
 
 S="${WORKDIR}/${MY_P}"
+
+RESTRICT=test
+# bug 366505
 
 PATCHES=(
 	"${FILESDIR}/${PN}"-1.9.0-docs.patch
