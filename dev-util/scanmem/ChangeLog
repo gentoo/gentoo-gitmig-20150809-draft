@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/scanmem
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scanmem/ChangeLog,v 1.8 2011/11/22 18:43:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scanmem/ChangeLog,v 1.9 2011/11/22 21:26:55 radhermit Exp $
+
+  22 Nov 2011; Tim Harder <radhermit@gentoo.org> scanmem-0.07.ebuild,
+  metadata.xml:
+  Add myself as maintainer, update to EAPI 4, and respect CFLAGS.
 
   22 Nov 2011; Pacho Ramos <pacho@gentoo.org> -scanmem-0.05.ebuild,
   -scanmem-0.06.ebuild, metadata.xml:
