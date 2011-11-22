@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdemu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.26 2011/11/22 17:45:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.27 2011/11/22 20:32:36 tetromino Exp $
+
+  22 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org> metadata.xml:
+  Add myself as maintainer.
 
   22 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #82110
