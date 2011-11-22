@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/plasma-mpd-nowplaying
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-mpd-nowplaying/ChangeLog,v 1.2 2011/05/12 14:11:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-mpd-nowplaying/ChangeLog,v 1.3 2011/11/22 22:33:41 dilfridge Exp $
+
+  22 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org>
+  plasma-mpd-nowplaying-0.2.ebuild:
+  Add missing dependency media-libs/libmpdclient
 
   12 May 2011; Tomáš Chvátal <scarabeus@gentoo.org>
   plasma-mpd-nowplaying-0.2.ebuild:
