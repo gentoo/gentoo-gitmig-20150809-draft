@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/freewrl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.38 2011/10/13 20:34:46 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freewrl/ChangeLog,v 1.39 2011/11/22 19:53:15 axs Exp $
+
+  22 Nov 2011; Ian Stakenvicius <axs@gentoo.org> freewrl-1.22.12_pre2.ebuild,
+  metadata.xml:
+  fixed dependencies to rely directly on spidermonkey instead of optionally on
+  xulrunner, and to rely on npapi-sdk instead of xulrunner or firefox
 
   13 Oct 2011; Ian Stakenvicius <axs@gentoo.org> ChangeLog:
   Taking over maintainership, thanks Patrick!
