@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/viewnior
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/viewnior/ChangeLog,v 1.10 2011/11/22 18:45:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/viewnior/ChangeLog,v 1.11 2011/11/22 20:25:59 wired Exp $
+
+  22 Nov 2011; Alex Alexander <wired@gentoo.org> metadata.xml:
+  added self as maintainer
 
   22 Nov 2011; Pacho Ramos <pacho@gentoo.org> -viewnior-1.0.ebuild,
   metadata.xml:
