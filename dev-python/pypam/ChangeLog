@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypam
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypam/ChangeLog,v 1.6 2011/10/31 21:28:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypam/ChangeLog,v 1.7 2011/11/22 16:16:48 phajdan.jr Exp $
+
+  22 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> pypam-0.5.0.ebuild:
+  x86 stable wrt bug #391153
 
   31 Oct 2011; Markos Chandras <hwoarang@gentoo.org> pypam-0.5.0.ebuild:
   Restrict Jython ABIs. Patch by Arfrever.
