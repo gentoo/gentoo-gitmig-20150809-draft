@@ -1,9 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-2.10.5-r1.ebuild,v 1.9 2011/04/10 10:50:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/gtksourceview-2.10.5-r1.ebuild,v 1.10 2011/11/22 00:15:49 pacho Exp $
 
-EAPI="2"
+EAPI="4"
 GCONF_DEBUG="no"
+GNOME2_LA_PUNT="yes"
+GNOME_TARBALL_SUFFIX="bz2"
 
 inherit gnome2 virtualx
 
@@ -29,11 +31,9 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	doc? ( >=dev-util/gtk-doc-1.11 )"
 
-DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README"
-
 pkg_setup() {
+	DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README"
 	G2CONF="${G2CONF}
-		--disable-maintainer-mode
 		$(use_enable glade glade-catalog)"
 }
 
@@ -42,6 +42,9 @@ src_prepare() {
 
 	# Skip broken test until upstream bug #621383 is solved
 	sed -i -e "/guess-language/d" tests/test-languagemanager.c || die
+
+	# The same for another broken test, upstream bug #631214
+	sed -i -e "/get-language/d" tests/test-languagemanager.c || die
 }
 
 src_test() {
@@ -50,8 +53,7 @@ src_test() {
 
 src_install() {
 	gnome2_src_install
-	find "${D}" -name '*.la' -exec rm -f {} +
 
 	insinto /usr/share/${PN}-2.0/language-specs
-	doins "${FILESDIR}"/2.0/gentoo.lang || die "doins failed"
+	doins "${FILESDIR}"/2.0/gentoo.lang
 }
