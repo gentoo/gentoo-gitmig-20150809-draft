@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/youtube-dl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.94 2011/11/22 18:46:51 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/ChangeLog,v 1.95 2011/11/22 19:14:44 jer Exp $
+
+  22 Nov 2011; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Adopt package.
 
   22 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Drop maintainer due retirement, bug #195316
