@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ots
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ChangeLog,v 1.29 2010/09/09 13:41:39 ranger Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ots/ChangeLog,v 1.30 2011/11/22 17:48:37 pacho Exp $
+
+  22 Nov 2011; Pacho Ramos <pacho@gentoo.org> -ots-0.4.2.ebuild, metadata.xml:
+  Drop maintainer due retirement, bug #82110; remove old.
 
   09 Sep 2010; Brent Baude <ranger@gentoo.org> ots-0.5.0.ebuild:
   Marking ots-0.5.0 ppc64 for bug 326503
