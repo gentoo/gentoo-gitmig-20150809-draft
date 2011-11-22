@@ -5,9 +5,6 @@
     <email>robbat2@gentoo.org</email>
     <name>Robin H. Johnson</name>
   </maintainer>
-  <maintainer>
-    <email>ricmm@gentoo.org</email>
-  </maintainer>
   <longdescription lang="en">
     Git - Fast Version Control System. Official titled
     "GIT - the stupid content tracker". 
