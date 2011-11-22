@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.296 2011/11/20 06:50:14 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.297 2011/11/22 16:11:37 phajdan.jr Exp $
+
+  22 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> nginx-1.0.10.ebuild:
+  x86 stable wrt bug #389319
 
 *nginx-1.1.8 (20 Nov 2011)
 *nginx-1.0.10 (20 Nov 2011)
