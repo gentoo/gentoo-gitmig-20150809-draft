@@ -1,6 +1,12 @@
 # ChangeLog for net-nntp/sn
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/sn/ChangeLog,v 1.5 2009/09/23 19:45:43 patrick Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/sn/ChangeLog,v 1.6 2011/11/22 01:39:53 radhermit Exp $
+
+  22 Nov 2011; Tim Harder <radhermit@gentoo.org> sn-0.3.8.ebuild,
+  +files/sn-0.3.8-parallel-make.patch, +files/sn-0.3.8-qa.patch:
+  Update to EAPI 4, add ~amd64 keyword, respect CFLAGS (bug #241092), respect
+  LDFLAGS (bug #337884), fix qa warnings (bug #386917 by Michael), and fix
+  parallel make issues.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> sn-0.3.8.ebuild:
   Remove virtual/libc
