@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/bitstring
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bitstring/ChangeLog,v 1.4 2011/06/19 12:50:06 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bitstring/ChangeLog,v 1.5 2011/11/22 13:26:10 grozin Exp $
+
+*bitstring-3.0.1 (22 Nov 2011)
+
+  22 Nov 2011; Andrey Grozin <grozin@gentoo.org> +bitstring-3.0.1.ebuild:
+  Version bump
 
 *bitstring-2.2.0 (19 Jun 2011)
 
