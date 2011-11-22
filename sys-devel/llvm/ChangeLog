@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.50 2011/11/17 18:50:50 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.51 2011/11/22 13:42:23 voyageur Exp $
+
+  22 Nov 2011; Bernard Cafarelli <voyageur@gentoo.org> llvm-3.0_rc3.ebuild,
+  metadata.xml:
+  Add support for gold plugin, thanks Matthias Maier in bug #371951
 
   17 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> llvm-2.9-r2.ebuild:
   x86 stable wrt bug #384709
