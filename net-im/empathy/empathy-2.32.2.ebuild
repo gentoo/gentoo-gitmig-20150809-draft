@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.32.2.ebuild,v 1.14 2011/03/22 19:40:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.32.2.ebuild,v 1.15 2011/11/22 01:01:42 pacho Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="http://live.gnome.org/Empathy"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~ia64 ppc ~sparc x86"
+KEYWORDS="alpha"
 # FIXME: Add location support once geoclue stops being idiotic with automagic deps
 IUSE="eds nautilus networkmanager spell test webkit" # map
 
@@ -40,7 +40,7 @@ RDEPEND=">=dev-libs/glib-2.25.9:2
 	>=net-libs/telepathy-farsight-0.0.14
 	dev-libs/libxml2:2
 	x11-libs/libX11
-	net-voip/telepathy-connection-managers
+	net-im/telepathy-connection-managers
 	>=net-im/telepathy-logger-0.1.5
 	<net-im/telepathy-logger-0.2.0
 
@@ -104,6 +104,6 @@ src_test() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 	elog "Empathy needs telepathy's connection managers to use any IM protocol."
-	elog "See the USE flags on net-voip/telepathy-connection-managers"
+	elog "See the USE flags on net-im/telepathy-connection-managers"
 	elog "to install them."
 }

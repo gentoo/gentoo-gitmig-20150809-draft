@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.2.1.2.ebuild,v 1.1 2011/11/13 19:29:25 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-3.2.1.2.ebuild,v 1.2 2011/11/22 01:01:42 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -44,7 +44,7 @@ RDEPEND=">=dev-libs/glib-2.28:2
 	>=net-im/telepathy-logger-0.2.8
 	net-libs/farsight2
 	>=net-libs/telepathy-farsight-0.0.14
-	net-voip/telepathy-connection-managers
+	net-im/telepathy-connection-managers
 	x11-libs/libX11
 
 	call? (
@@ -115,6 +115,6 @@ src_test() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 	elog "Empathy needs telepathy's connection managers to use any IM protocol."
-	elog "See the USE flags on net-voip/telepathy-connection-managers"
+	elog "See the USE flags on net-im/telepathy-connection-managers"
 	elog "to install them."
 }
