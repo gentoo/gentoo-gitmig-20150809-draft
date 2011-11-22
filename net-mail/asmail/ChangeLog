@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/asmail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/asmail/ChangeLog,v 1.13 2011/06/17 14:51:54 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/asmail/ChangeLog,v 1.14 2011/11/22 16:06:54 phajdan.jr Exp $
+
+  22 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> asmail-2.1.ebuild:
+  x86 stable wrt bug #391205
 
   17 Jun 2011; Eray Aslan <eras@gentoo.org> asmail-2.1.ebuild:
   Fix underlinking - bug #372055
