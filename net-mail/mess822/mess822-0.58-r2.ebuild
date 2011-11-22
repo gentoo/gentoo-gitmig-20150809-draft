@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/mess822-0.58-r2.ebuild,v 1.1 2011/06/06 14:39:21 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/mess822-0.58-r2.ebuild,v 1.2 2011/11/22 16:17:45 phajdan.jr Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ SRC_URI="http://cr.yp.to/software/${P}.tar.gz"
 HOMEPAGE="http://cr.yp.to/mess822.html"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 LICENSE="as-is"
 
