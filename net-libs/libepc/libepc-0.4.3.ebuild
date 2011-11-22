@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libepc/libepc-0.4.1.ebuild,v 1.1 2011/10/09 22:41:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libepc/libepc-0.4.3.ebuild,v 1.1 2011/11/22 13:21:38 pacho Exp $
 
 EAPI="4"
 GCONF_DEBUG="no"
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 RDEPEND=">=net-dns/avahi-0.6[dbus,gtk3]
-	>=dev-libs/glib-2.15.1
+	>=dev-libs/glib-2.15.1:2
 	>=net-libs/gnutls-1.4
 	>=sys-libs/e2fsprogs-libs-1.36
 	>=x11-libs/gtk+-3.0:3
@@ -34,5 +34,5 @@ RESTRICT="test"
 
 src_test() {
 	unset DBUS_SYSTEM_BUS_ADDRESS
-	emake check || die "emake check failed"
+	emake check
 }
