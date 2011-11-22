@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-core/at-spi2-core-2.0.2-r1.ebuild,v 1.1 2011/08/14 14:16:52 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-core/at-spi2-core-2.2.3.ebuild,v 1.1 2011/11/22 13:09:15 pacho Exp $
 
-EAPI="3"
+EAPI="4"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
@@ -16,8 +16,7 @@ SLOT="2"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc +introspection"
 
-RDEPEND="
-	>=dev-libs/glib-2.28:2
+RDEPEND=">=dev-libs/glib-2.28:2
 	>=sys-apps/dbus-1
 	x11-libs/libX11
 	x11-libs/libXi
@@ -38,10 +37,6 @@ pkg_setup() {
 src_prepare() {
 	# disable teamspaces test since that requires Novell.ICEDesktop.Daemon
 	epatch "${FILESDIR}/${PN}-2.0.2-disable-teamspaces-test.patch"
-
-	# https://bugzilla.gnome.org/show_bug.cgi?id=652215
-	# Fixed in upstream git master branch, but not in gnome-3-0 branch
-	epatch "${FILESDIR}/${PN}-2.0.2-abort-if-already-running.patch"
 
 	gnome2_src_prepare
 }
