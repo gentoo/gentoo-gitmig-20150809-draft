@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wyrd/wyrd-1.4.4.ebuild,v 1.4 2010/05/19 16:42:13 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wyrd/wyrd-1.4.4.ebuild,v 1.5 2011/11/22 18:50:07 tove Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ IUSE="unicode"
 
 DEPEND=">=dev-lang/ocaml-3.08
 	sys-libs/ncurses[unicode?]
-	>=x11-misc/remind-03.01"
+	>=app-misc/remind-03.01"
 RDEPEND=${DEPEND}
 
 src_configure() {
