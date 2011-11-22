@@ -1,9 +1,9 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pop-before-smtp/files/pop-before-smtp.init,v 1.4 2004/11/05 13:54:00 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop-before-smtp/files/pop-before-smtp.init,v 1.5 2011/11/22 14:39:26 eras Exp $
 
-opts="reload"
+extra_commands="reload"
 
 depend() {
 	need net
@@ -12,7 +12,7 @@ depend() {
 
 start() {
 	ebegin "Starting pop-before-smtp"
-	start-stop-daemon --start --pidfile /var/run/pop-before-smtp.pid --startas /usr/sbin/pop-before-smtp -- --daemon=/var/run/pop-before-smtp.pid
+	start-stop-daemon --start --pidfile /var/run/pop-before-smtp.pid --exec /usr/sbin/pop-before-smtp -- --daemon=/var/run/pop-before-smtp.pid
 	eend $?
 }
 

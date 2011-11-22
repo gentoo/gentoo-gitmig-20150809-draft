@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/pop-before-smtp
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pop-before-smtp/ChangeLog,v 1.19 2011/06/06 11:33:40 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop-before-smtp/ChangeLog,v 1.20 2011/11/22 14:39:26 eras Exp $
+
+  22 Nov 2011; Eray Aslan <eras@gentoo.org> files/pop-before-smtp.init:
+  Use non-deprecated variables in init script
 
   06 Jun 2011; Eray Aslan <eras@gentoo.org> -pop-before-smtp-1.34.ebuild,
   -pop-before-smtp-1.36.ebuild, pop-before-smtp-1.42.ebuild:
