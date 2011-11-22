@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/pommed
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.55 2011/11/20 04:17:06 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pommed/ChangeLog,v 1.56 2011/11/22 16:05:41 phajdan.jr Exp $
+
+  22 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> pommed-1.31.ebuild:
+  x86 stable wrt bug #389661
 
   20 Nov 2011; Naohiro Aota <naota@gentoo.org> pommed-1.39.ebuild:
   Tiny fix. Remove missing install file.
