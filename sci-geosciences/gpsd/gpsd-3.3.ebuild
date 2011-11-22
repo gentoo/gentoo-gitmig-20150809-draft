@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-3.3.ebuild,v 1.2 2011/11/21 22:09:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-3.3.ebuild,v 1.3 2011/11/22 15:54:07 vapier Exp $
 
 EAPI="4"
 
@@ -58,6 +58,7 @@ src_prepare() {
 	sed -i \
 		-e '/env.Prepend.*LIBPATH=.*installdir/s:env.*:pass:' \
 		-e '/env.Prepend.*RPATH=/s:env.*:pass:' \
+		-e 's:\<STAGING_PREFIX\>:SYSROOT:g' \
 		SConstruct || die
 
 	# Extract python info out of SConstruct so we can use saner distribute
