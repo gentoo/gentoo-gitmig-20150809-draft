@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/versionator.eclass,v 1.18 2011/07/07 00:34:19 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/versionator.eclass,v 1.19 2011/11/22 18:40:14 vapier Exp $
 
 # @ECLASS: versionator.eclass
 # @MAINTAINER:
@@ -116,7 +116,7 @@ get_major_version() {
 }
 
 # @FUNCTION: get_version_component_range
-# @USAGE: [version]
+# @USAGE: <range> [version]
 # @DESCRIPTION:
 # Get a particular component or range of components from the version. If no
 # version parameter is supplied, defaults to $PV.
