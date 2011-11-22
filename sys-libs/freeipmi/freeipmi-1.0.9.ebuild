@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-1.0.7.ebuild,v 1.1 2011/09/28 21:27:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-1.0.9.ebuild,v 1.1 2011/11/22 01:51:50 flameeyes Exp $
 
 EAPI=4
 
@@ -18,6 +18,8 @@ IUSE="debug"
 RDEPEND="dev-libs/libgcrypt"
 DEPEND="${RDEPEND}
 		virtual/os-headers"
+RDEPEND="${RDEPEND}
+	sys-apps/openrc"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.0.5-strictaliasing.patch
@@ -64,8 +66,8 @@ src_install() {
 		/var/lib/freeipmi \
 		/var/log/{freeipmi,ipmiconsole}
 
-	newinitd "${FILESDIR}"/ipmidetectd.initd.2 ipmidetectd
+	newinitd "${FILESDIR}"/ipmidetectd.initd.3 ipmidetectd
 
-	newinitd "${FILESDIR}"/bmc-watchdog.initd.2 bmc-watchdog
+	newinitd "${FILESDIR}"/bmc-watchdog.initd.3 bmc-watchdog
 	newconfd "${FILESDIR}"/bmc-watchdog.confd bmc-watchdog
 }

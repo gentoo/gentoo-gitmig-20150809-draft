@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/freeipmi
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.42 2011/11/10 17:34:29 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.43 2011/11/22 01:51:50 flameeyes Exp $
+
+*freeipmi-1.0.9 (22 Nov 2011)
+
+  22 Nov 2011; Diego E. Pettenò <flameeyes@gentoo.org> +freeipmi-1.0.9.ebuild,
+  -files/bmc-watchdog.initd.2, -files/ipmidetectd.initd.2,
+  -freeipmi-1.0.7-r1.ebuild, -freeipmi-1.0.7.ebuild:
+  Version bump.
 
   10 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> freeipmi-0.8.9.ebuild:
   Drop stable x86 keywords wrt bug #364485.
