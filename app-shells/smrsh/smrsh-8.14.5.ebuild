@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/smrsh/smrsh-8.14.5.ebuild,v 1.1 2011/06/14 15:28:10 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/smrsh/smrsh-8.14.5.ebuild,v 1.2 2011/11/22 16:13:13 phajdan.jr Exp $
 
 EAPI=4
 inherit toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.sendmail.org/pub/sendmail/sendmail.${PV}.tar.gz"
 
 LICENSE="Sendmail"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 DEPEND="sys-devel/m4
