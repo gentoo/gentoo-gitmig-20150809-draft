@@ -4,4 +4,7 @@
   <maintainer>
     <email>jer@gentoo.org</email>
   </maintainer>
+  <maintainer>
+    <email>nirbheek@gentoo.org</email>
+  </maintainer>
 </pkgmetadata>
