@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/icinga-1.5.1-r3.ebuild,v 1.1 2011/11/22 19:21:54 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga/icinga-1.5.1-r3.ebuild,v 1.2 2011/11/22 21:06:50 prometheanfire Exp $
 
 EAPI=2
 
@@ -149,7 +149,7 @@ src_install() {
 
 	emake DESTDIR="${D}" install{,-config,-commandmode} || die
 
-	sed -i -e 's/var\/icinga\/icinga.lock/var\/run\/icinga\/icinga.lock/g' "${D}"/etc/icinga/icinga.cfg || die
+	sed -i -e 's/var\/lib\/icinga\/icinga.lock/var\/run\/icinga\/icinga.lock/g' "${D}"/etc/icinga/icinga.cfg || die
 	sed -i -e 's/var\/icinga\/icinga.tmp/tmp\/icinga\/icinga.tmp/g' "${D}"/etc/icinga/icinga.cfg || die
 
 	if use idoutils ; then
