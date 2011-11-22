@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-6.4.0.ebuild,v 1.1 2011/11/21 20:11:30 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/offlineimap/offlineimap-6.4.0.ebuild,v 1.2 2011/11/22 19:12:27 tomka Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -57,5 +57,18 @@ pkg_postinst() {
 	elog ""
 	elog "You will need to configure offlineimap by creating ~/.offlineimaprc"
 	elog "Sample configurations are in /usr/share/doc/${PF}/"
+	elog ""
+
+	elog "If you upgraded from 6.3.* then you may need to update your config:"
+	elog ""
+	elog "If you use nametrans= settings on a remote repository, you will have"
+	elog "to add a \"reverse\" nametrans setting to the local repository, so that"
+	elog "it knows which folders it should (not) create on the remote side."
+	elog ""
+	elog "If you connect via ssl/tls and don't use CA cert checking, it will"
+	elog "display the server's cert fingerprint and require you to add it to the"
+	elog "configuration file to be sure it connects to the same server every"
+	elog "time. This serves to help fixing CVE-2010-4532 (offlineimap doesn't"
+	elog "check SSL server certificate) in cases where you have no CA cert."
 	elog ""
 }
