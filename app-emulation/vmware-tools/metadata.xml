@@ -2,9 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>vmware</herd>
-    <maintainer>
-		<email>matt@whitlock.name</email>
-		<name>Matt Whitlock</name>
-	</maintainer>
-
+	<maintainer>
+        <email>gentoo@mattwhitlock.name</email>
+        <name>Matt Whitlock</name>
+        <description>proxied co-maintainer</description>
+    </maintainer>
 </pkgmetadata>
