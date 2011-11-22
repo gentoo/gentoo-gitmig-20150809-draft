@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gnome-pty-helper
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gnome-pty-helper/ChangeLog,v 1.9 2011/07/11 15:51:38 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gnome-pty-helper/ChangeLog,v 1.10 2011/11/22 16:14:40 zmedico Exp $
+
+  22 Nov 2011; Zac Medico <zmedico@gentoo.org> gnome-pty-helper-0.28.1.ebuild:
+  Add ~x86-linux keyword.
 
   11 Jul 2011; Matt Turner <mattst88@gentoo.org>
   gnome-pty-helper-0.28.1.ebuild:
