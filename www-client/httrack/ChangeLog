@@ -1,6 +1,10 @@
 # ChangeLog for www-client/httrack
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.30 2011/04/21 16:40:31 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/httrack/ChangeLog,v 1.31 2011/11/22 18:21:52 pacho Exp $
+
+  22 Nov 2011; Pacho Ramos <pacho@gentoo.org> -httrack-3.43.7.ebuild,
+  -httrack-3.43.9.ebuild, metadata.xml:
+  Drop maintainer due retirement, bug #82110; remove old.
 
 *httrack-3.44.1 (21 Apr 2011)
 
