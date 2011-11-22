@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/synergy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.68 2011/11/22 16:29:40 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/ChangeLog,v 1.69 2011/11/22 16:38:20 darkside Exp $
+
+  22 Nov 2011; Jeremy Olexa <darkside@gentoo.org> synergy-1.4.2.ebuild,
+  synergy-1.4.5.ebuild:
+  block x11-misc/qsynergy, bug 357505 by Jan-Matthias Braun
 
 *synergy-1.4.5 (22 Nov 2011)
 
