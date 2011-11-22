@@ -1,10 +1,10 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.77 2011/11/22 18:52:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.78 2011/11/22 20:13:17 vapier Exp $
 
   22 Nov 2011; Diego E. Pettenò <flameeyes@gentoo.org>
   +files/gpsd-3.3-ldflags.patch, gpsd-3.3.ebuild:
-  QA: fix handling of LDFLAGS.
+  QA: fix handling of LDFLAGS #391299 by Maciej Piechotka.
 
   22 Nov 2011; Mike Frysinger <vapier@gentoo.org> gpsd-3.3.ebuild:
   Replace STAGING_PREFIX with SYSROOT.
