@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13273 2011/11/21 23:39:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13274 2011/11/22 00:45:57 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (22 Nov 2011)
+# Mozilla dropped support for it and nothing uses it in
+# the tree. See bug #372243. Removal in 30 days.
+dev-python/gtkmozembed-python
 
 # Pacho Ramos <pacho@gentoo.org> (21 Nov 2011)
 # Unmaintained by upstream for ages, use 
