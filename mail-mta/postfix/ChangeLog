@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.304 2011/11/21 08:18:00 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.305 2011/11/22 07:11:39 eras Exp $
+
+*postfix-2.9_pre20111121 (22 Nov 2011)
+
+  22 Nov 2011; Eray Aslan <eras@gentoo.org> +postfix-2.9_pre20111121.ebuild,
+  -postfix-2.9_pre20111120.ebuild:
+  version bump
 
   21 Nov 2011; Eray Aslan <eras@gentoo.org> postfix-2.9_pre20111120.ebuild:
   Do not change default DB type unnecessarily
