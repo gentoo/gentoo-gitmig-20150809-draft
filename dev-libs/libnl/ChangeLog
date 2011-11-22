@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.57 2011/11/17 16:52:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.58 2011/11/22 15:45:33 jer Exp $
+
+  22 Nov 2011; Jeroen Roovers <jer@gentoo.org> -libnl-3.2.1.ebuild,
+  -libnl-3.2.2.ebuild:
+  ^
 
   17 Nov 2011; Jeroen Roovers <jer@gentoo.org> libnl-1.1-r2.ebuild,
   libnl-3.2.1.ebuild, libnl-3.2.2.ebuild, libnl-3.2.3.ebuild:
