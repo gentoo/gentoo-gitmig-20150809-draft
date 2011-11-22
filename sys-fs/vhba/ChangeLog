@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/vhba
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.22 2011/04/28 19:01:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.23 2011/11/22 18:20:38 pacho Exp $
+
+  22 Nov 2011; Pacho Ramos <pacho@gentoo.org> -vhba-20101015.ebuild,
+  metadata.xml:
+  Drop maintainer due retirement, bug #82110; remove old.
 
   28 Apr 2011; Ulrich Mueller <ulm@gentoo.org> vhba-1.2.1.ebuild,
   vhba-20101015.ebuild, vhba-20101015-r1.ebuild:
