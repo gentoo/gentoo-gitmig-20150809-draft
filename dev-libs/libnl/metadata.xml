@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
-<maintainer>
-    <email>vanquirius@gentoo.org</email>
-    <name>Marcelo Goes</name>
-</maintainer>
 <use>
 <flag name="utils">Install command line interface utils</flag>
 </use>

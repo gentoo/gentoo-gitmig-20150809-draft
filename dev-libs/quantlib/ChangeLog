@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/quantlib
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/ChangeLog,v 1.33 2008/11/09 22:06:16 vanquirius Exp $
+# Copyright 2002-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/ChangeLog,v 1.34 2011/11/22 17:51:14 pacho Exp $
+
+  22 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #82110
 
 *quantlib-0.9.6 (09 Nov 2008)
 

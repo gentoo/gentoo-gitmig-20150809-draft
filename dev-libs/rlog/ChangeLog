@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/rlog
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rlog/ChangeLog,v 1.19 2010/07/03 17:18:18 armin76 Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rlog/ChangeLog,v 1.20 2011/11/22 17:52:22 pacho Exp $
+
+  22 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #82110
 
   03 Jul 2010; Raúl Porcel <armin76@gentoo.org> rlog-1.4.ebuild:
   sparc stable wrt #322489
