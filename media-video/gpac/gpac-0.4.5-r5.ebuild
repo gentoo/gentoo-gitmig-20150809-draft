@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.5-r4.ebuild,v 1.13 2011/11/22 14:17:57 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gpac/gpac-0.4.5-r5.ebuild,v 1.1 2011/11/22 14:17:57 axs Exp $
 
 inherit eutils wxwidgets flag-o-matic multilib toolchain-funcs
 
@@ -14,8 +14,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="a52 aac alsa debug ffmpeg ipv6 jack jpeg jpeg2k javascript mad opengl oss png pulseaudio sdl ssl theora truetype vorbis wxwidgets xml xvid"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE="a52 aac alsa debug ffmpeg ipv6 jack jpeg jpeg2k mad opengl oss png pulseaudio sdl ssl theora truetype vorbis wxwidgets xml xvid"
 
 S=${WORKDIR}/${PN}
 
@@ -26,7 +26,6 @@ RDEPEND="
 	ffmpeg? ( virtual/ffmpeg )
 	jack? ( media-sound/jack-audio-connection-kit )
 	jpeg? ( virtual/jpeg )
-	javascript? ( >=dev-lang/spidermonkey-1.5 <dev-lang/spidermonkey-1.8.5 )
 	mad? ( >=media-libs/libmad-0.15.1b )
 	opengl? ( virtual/opengl media-libs/freeglut )
 	>=media-libs/libogg-1.1
@@ -127,7 +126,6 @@ src_compile() {
 		$(my_use aac faad) \
 		$(my_use jpeg) \
 		$(my_use mad) \
-		$(my_use javascript js) \
 		$(my_use png) \
 		$(my_use truetype ft) \
 		$(my_use xvid) \
