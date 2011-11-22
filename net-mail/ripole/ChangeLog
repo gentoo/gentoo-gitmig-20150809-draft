@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/ripole
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ripole/ChangeLog,v 1.11 2011/08/24 07:01:40 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ripole/ChangeLog,v 1.12 2011/11/22 19:53:08 jer Exp $
+
+  22 Nov 2011; Jeroen Roovers <jer@gentoo.org> ripole-0.2.1.ebuild:
+  Stable for HPPA (bug #391327).
 
 *ripole-0.2.1 (24 Aug 2011)
 
