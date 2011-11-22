@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-2.3.4.ebuild,v 1.2 2011/11/20 14:34:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/tellico-2.3.4.ebuild,v 1.3 2011/11/22 16:09:16 phajdan.jr Exp $
 
 EAPI=4
 
@@ -14,7 +14,7 @@ SRC_URI="http://tellico-project.org/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="addressbook cddb debug +handbook musicbrainz pdf scanner semantic-desktop taglib v4l xmp yaz"
 
 DEPEND="
