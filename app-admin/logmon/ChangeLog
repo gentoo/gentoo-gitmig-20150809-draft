@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/logmon
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logmon/ChangeLog,v 1.10 2008/12/18 22:26:48 loki_val Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logmon/ChangeLog,v 1.11 2011/11/22 17:42:49 pacho Exp $
+
+  22 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #82110
 
   18 Dec 2008; Peter Alfredsen <loki_val@gentoo.org>
   +files/logmon-0.4.4-gcc43.patch,
