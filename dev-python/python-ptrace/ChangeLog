@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-ptrace
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ptrace/ChangeLog,v 1.8 2011/11/22 21:02:59 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ptrace/ChangeLog,v 1.9 2011/11/22 21:43:27 neurogeek Exp $
+
+  22 Nov 2011; Jesus Rivero <neurogeek@gentoo.org>
+  python-ptrace-0.6.3.ebuild, -python-ptrace-0.6.3-r1.ebuild:
+  Reverted the revbump and applied changes to 0.6.3
 
 *python-ptrace-0.6.3-r1 (22 Nov 2011)
 

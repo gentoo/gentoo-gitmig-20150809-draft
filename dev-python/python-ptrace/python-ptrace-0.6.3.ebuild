@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ptrace/python-ptrace-0.6.3.ebuild,v 1.1 2011/07/28 20:19:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ptrace/python-ptrace-0.6.3.ebuild,v 1.2 2011/11/22 21:43:27 neurogeek Exp $
 
 EAPI="3"
 SUPPORT_PYTHON_ABIS="1"
@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="examples"
 
 DEPEND=""
 RDEPEND="dev-libs/distorm64"
@@ -33,4 +33,13 @@ src_prepare() {
 		2to3-${PYTHON_ABI} -dw . > /dev/null || die "2to3 failed"
 	}
 	python_execute_function --action-message 'Applying patches for Python ${PYTHON_ABI}' --failure-message 'Applying patches for Python ${PYTHON_ABI} failed' -s conversion
+}
+
+src_install() {
+	distutils_src_install
+
+	if use examples; then
+	   insinto usr/share/doc/${PF}/examples
+	   doins examples/*
+	fi
 }
