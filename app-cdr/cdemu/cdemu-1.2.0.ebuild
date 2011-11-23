@@ -1,13 +1,13 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-1.2.0.ebuild,v 1.4 2010/07/06 16:55:16 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-1.2.0.ebuild,v 1.5 2011/11/23 10:14:26 tetromino Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
 
 inherit python
 
-DESCRIPTION="Client of cdemu suite, which mounts all kinds of cd images"
+DESCRIPTION="Command-line tool for controlling the CDEmu daemon (cdemud)"
 HOMEPAGE="http://cdemu.org"
 SRC_URI="mirror://sourceforge/cdemu/cdemu-client-${PV}.tar.bz2"
 
