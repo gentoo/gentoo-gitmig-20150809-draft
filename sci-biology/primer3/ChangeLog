@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/primer3
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/ChangeLog,v 1.25 2011/03/09 11:25:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/ChangeLog,v 1.26 2011/11/23 08:10:50 jlec Exp $
+
+  23 Nov 2011; Justin Lecher <jlec@gentoo.org> -primer3-1.0.0.ebuild,
+  primer3-1.1.4.ebuild, primer3-1.1.4-r2.ebuild, primer3-2.2.3.ebuild:
+  Dropped old, respect LDFLAGS, don't mix CFLAGS and CXXFLAGS, move KEYWORDS
+  and fixes from ver-1 to 2
 
   09 Mar 2011; Justin Lecher <jlec@gentoo.org> +primer3-1.0.0.ebuild:
   Reanimate last stable version for ppc/ppc64

@@ -1,18 +1,17 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/primer3-1.1.4.ebuild,v 1.2 2009/09/01 16:07:03 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/primer3/primer3-1.1.4.ebuild,v 1.3 2011/11/23 08:10:50 jlec Exp $
 
-DESCRIPTION="Design primers for PCR reactions."
+DESCRIPTION="Primer Design for PCR reactions"
 HOMEPAGE="http://primer3.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-LICENSE="whitehead"
 
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
+LICENSE="whitehead"
 IUSE=""
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
 
 DEPEND="dev-lang/perl"
-
 RDEPEND=""
 
 S="${WORKDIR}/src"
