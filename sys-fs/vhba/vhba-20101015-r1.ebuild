@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/vhba-20101015-r1.ebuild,v 1.2 2011/04/28 19:01:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/vhba-20101015-r1.ebuild,v 1.3 2011/11/23 09:40:00 tetromino Exp $
 
 # Use svn snapshots:
 # https://sourceforge.net/tracker/?func=detail&atid=603423&aid=3041832&group_id=93175
@@ -12,7 +12,7 @@ EAPI="2"
 inherit linux-mod eutils
 
 MY_P=vhba-module-${PV}
-DESCRIPTION="VHBA module provides Virtual (SCSI) Host Bus Adapter for the cdemu suite"
+DESCRIPTION="Virtual (SCSI) Host Bus Adapter kernel module for the CDEmu suite"
 HOMEPAGE="http://cdemu.org"
 SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 
