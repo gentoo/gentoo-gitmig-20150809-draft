@@ -1,0 +1,21 @@
+https://bugs.gentoo.org/391403
+
+--- python-mode.el-6.0.3-orig/python-mode.el
++++ python-mode.el-6.0.3/python-mode.el
+@@ -163,11 +163,11 @@
+ ;; Execute stuff start
+ 
+ ;; backward compatibility
+-(defalias 'py-python-command 'py-shell-name)
+-(defalias 'py-jpython-command 'py-shell-name)
+-(defalias 'py-jython-command 'py-shell-name)
+-(defalias 'py-default-interpreter 'py-shell-name)
+-(defalias 'python-command 'py-shell-name)
++(defvaralias 'py-python-command 'py-shell-name)
++(defvaralias 'py-jpython-command 'py-shell-name)
++(defvaralias 'py-jython-command 'py-shell-name)
++(defvaralias 'py-default-interpreter 'py-shell-name)
++(defvaralias 'python-command 'py-shell-name)
+ 
+ (defcustom py-encoding-string " # -*- coding: utf-8 -*-"
+   "Default string specifying encoding in the heading of file. "

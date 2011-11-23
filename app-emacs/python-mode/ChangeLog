@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/python-mode
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.51 2011/11/21 18:01:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.52 2011/11/23 17:32:56 ulm Exp $
+
+*python-mode-6.0.3-r1 (23 Nov 2011)
+
+  23 Nov 2011; Ulrich Mueller <ulm@gentoo.org> -python-mode-6.0.3.ebuild,
+  +python-mode-6.0.3-r1.ebuild, +files/python-mode-6.0.3-obsolete-vars.patch:
+  Define obsolete variables properly, in order to prevent a crash with
+  dev-python/ipython. Fixes bug 391403.
 
 *python-mode-6.0.3 (21 Nov 2011)
 

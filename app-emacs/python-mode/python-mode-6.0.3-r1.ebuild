@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/python-mode-6.0.3.ebuild,v 1.1 2011/11/21 18:01:23 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/python-mode-6.0.3-r1.ebuild,v 1.1 2011/11/23 17:32:56 ulm Exp $
 
 EAPI=4
 
@@ -17,10 +17,12 @@ KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~x86 ~x86-fbsd ~x86-free
 IUSE=""
 
 S="${WORKDIR}/${MY_P}"
+ELISP_PATCHES="${P}-obsolete-vars.patch"
 SITEFILE="50${PN}-gentoo.el"
 DOCS="NEWS"
 
 src_prepare() {
+	elisp_src_prepare
 	# remove XEmacs specific file
 	rm highlight-indentation.el || die
 }
