@@ -1,6 +1,14 @@
 # ChangeLog for app-text/libgxps
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libgxps/ChangeLog,v 1.1 2011/11/03 05:10:47 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libgxps/ChangeLog,v 1.2 2011/11/23 20:25:51 tetromino Exp $
+
+*libgxps-0.2.0 (23 Nov 2011)
+
+  23 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libgxps-0.2.0.ebuild, +files/libgxps-0.2.0-libm.patch,
+  +files/libgxps-0.2.0-libpng15.patch:
+  Bump. Improves support for bezier curves and opacity, and adds utilities for
+  converting XPS to other formats.
 
 *libgxps-0.1.0 (03 Nov 2011)
 
