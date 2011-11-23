@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.260 2011/11/21 22:26:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.261 2011/11/23 23:06:13 tetromino Exp $
+
+  23 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  librsvg-2.34.2.ebuild, +files/librsvg-2.34.2-gir-filename.patch:
+  Add patch to fix parallel make failure when USE=introspection; many thanks to
+  Rafał Mużyło <galtgendo@o2.pl> for the solution (bug #391215). Should also
+  fix bug #391213. Thanks to all for reporting.
 
   21 Nov 2011; Pacho Ramos <pacho@gentoo.org> librsvg-2.34.2.ebuild:
   Only pull in introspection.m4, not full gobject-introspection.

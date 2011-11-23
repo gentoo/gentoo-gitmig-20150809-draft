@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.34.2.ebuild,v 1.3 2011/11/21 22:26:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.34.2.ebuild,v 1.4 2011/11/23 23:06:13 tetromino Exp $
 
 EAPI="4"
 GNOME2_LA_PUNT="yes"
@@ -55,6 +55,9 @@ pkg_setup() {
 src_prepare() {
 	# Fix automagic gtk+ dependency, bug #371290
 	epatch "${FILESDIR}/${PN}-2.34.0-automagic-gtk.patch"
+
+	# bug #391215, https://bugzilla.gnome.org/show_bug.cgi?id=664684
+	epatch "${FILESDIR}/${PN}-2.34.2-gir-filename.patch"
 
 	# introspection.m4 needed for eautoreconf
 	mv "${WORKDIR}/introspection.m4" "${S}"/ || die
