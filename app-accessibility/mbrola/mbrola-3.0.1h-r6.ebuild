@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r6.ebuild,v 1.1 2011/03/23 17:22:30 cbrannon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r6.ebuild,v 1.2 2011/11/23 02:04:45 jer Exp $
 
 IUSE="linguas_de linguas_es linguas_fr linguas_it linguas_la linguas_pl
 	linguas_ro linguas_sv"
@@ -45,7 +45,7 @@ QA_PREBUILT="/usr/bin/mbrola"
 
 SLOT="0"
 LICENSE="MBROLA"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 src_unpack () {
 	unpack ${A}
