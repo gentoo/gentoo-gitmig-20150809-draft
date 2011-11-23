@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/entropy-kioslaves
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/entropy-kioslaves/ChangeLog,v 1.14 2011/11/13 09:29:21 lxnay Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/entropy-kioslaves/ChangeLog,v 1.15 2011/11/23 21:54:23 lxnay Exp $
+
+*entropy-kioslaves-1.0_rc77 (23 Nov 2011)
+
+  23 Nov 2011; Fabio Erculiani <lxnay@gentoo.org>
+  +entropy-kioslaves-1.0_rc77.ebuild:
+  version bump
 
 *entropy-kioslaves-1.0_rc76 (13 Nov 2011)
 
