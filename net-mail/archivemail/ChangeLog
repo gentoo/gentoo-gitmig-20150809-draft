@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/archivemail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/archivemail/ChangeLog,v 1.21 2011/11/22 16:06:02 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/archivemail/ChangeLog,v 1.22 2011/11/23 10:26:43 eras Exp $
+
+  23 Nov 2011; Eray Aslan <eras@gentoo.org> -archivemail-0.7.2-r1.ebuild,
+  -archivemail-0.8.0.ebuild, -archivemail-0.8.2.ebuild:
+  remove old
 
   22 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   archivemail-0.9.0.ebuild:
