@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcdemu/gcdemu-1.3.0.ebuild,v 1.4 2011/10/23 21:48:29 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcdemu/gcdemu-1.3.0.ebuild,v 1.5 2011/11/23 10:14:58 tetromino Exp $
 
 EAPI="3"
 
@@ -8,7 +8,7 @@ PYTHON_DEPEND="2"
 
 inherit python gnome2
 
-DESCRIPTION="gCDEmu is a GNOME applet for controlling CDEmu daemon"
+DESCRIPTION="Gtk+ GUI for controlling the CDEmu daemon (cdemud)"
 HOMEPAGE="http://cdemu.org/"
 SRC_URI="mirror://sourceforge/cdemu/${P}.tar.gz"
 
