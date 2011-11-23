@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.6-r4.ebuild,v 1.1 2011/11/22 22:15:19 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.8.6-r4.ebuild,v 1.2 2011/11/23 20:39:10 dilfridge Exp $
 
 EAPI=4
 
@@ -59,6 +59,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-2.8.6-FindBLAS-2.patch
 	"${FILESDIR}"/${PN}-2.8.6-FindLAPACK-2.patch
 	"${FILESDIR}"/${PN}-2.8.6-CodeBlocks.patch
+	"${FILESDIR}"/${PN}-2.8.6-testsvn17.patch
 )
 cmake_src_bootstrap() {
 	# Cleanup args to extract only JOBS.

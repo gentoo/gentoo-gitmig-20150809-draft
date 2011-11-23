@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.177 2011/11/22 22:18:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.178 2011/11/23 20:39:10 dilfridge Exp $
+
+  23 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org> cmake-2.8.6-r4.ebuild,
+  +files/cmake-2.8.6-testsvn17.patch:
+  Fix test CTest.UpdateSVN with subversion-1.7, bug 390533
 
   22 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org>
   -files/cmake-2.8.5-FindBLAS.patch, -files/cmake-2.8.5-FindLAPACK.patch,
