@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bittorrent
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.146 2011/11/19 10:08:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.147 2011/11/23 06:05:59 maekke Exp $
+
+  23 Nov 2011; Markus Meier <maekke@gentoo.org> bittorrent-4.4.0-r2.ebuild:
+  arm stable, bug #390591
 
   19 Nov 2011; Markos Chandras <hwoarang@gentoo.org> bittorrent-4.4.0-r2.ebuild:
   Stable on amd64 wrt bug #390591
