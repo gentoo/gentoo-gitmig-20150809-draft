@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13277 2011/11/23 17:15:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13278 2011/11/23 19:40:18 pacho Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Pacho Ramos <pacho@gentoo.org> (23 Nov 2011)
+# Upstream stopped their development and support for a long
+# time, they are not compatible with recent monodevelop versions.
+# See bug #389473. Removal in 30 days.
+dev-util/monodevelop-boo
+dev-util/monodevelop-debugger-mdb
 
 # Pacho Ramos <pacho@gentoo.org> (22 Nov 2011)
 # Mozilla dropped support for it and nothing uses it in
