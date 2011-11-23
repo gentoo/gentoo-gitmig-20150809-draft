@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5950 2011/11/22 18:51:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5951 2011/11/23 17:15:37 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Nov 2011; Ulrich Mueller <ulm@gentoo.org> package.mask:
+  Remove mask for removed package app-emacs/rst, bug 384561.
 
   22 Nov 2011; Torsten Veller <tove@gentoo.org> updates/4Q-2011:
   Move remind from x11-misc to app-misc (#391221)

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13276 2011/11/22 16:56:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13277 2011/11/23 17:15:37 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -330,11 +330,6 @@ dev-perl/perl-PBS
 # soprano-2.[67].1 as it introduces major breakage.
 ~dev-libs/soprano-2.6.1
 ~dev-libs/soprano-2.7.1
-
-# Ulrich Mueller <ulm@gentoo.org> (26 Sep 2011)
-# Included in app-editors/emacs-23 and later.
-# Masked for removal in 30 days, bug 384561.
-app-emacs/rst
 
 # Olivier Crete <tester@gentoo.org> (20 Sep 2011)
 # Masked because the API was broken and it will  causes crashes in 
