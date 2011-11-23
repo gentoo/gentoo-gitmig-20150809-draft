@@ -1,6 +1,8 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/foremost-1.5.7-r1.ebuild,v 1.2 2010/09/07 12:59:01 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/foremost-1.5.7-r1.ebuild,v 1.3 2011/11/23 04:59:11 radhermit Exp $
+
+EAPI=4
 
 inherit eutils toolchain-funcs
 
@@ -10,24 +12,22 @@ HOMEPAGE="http://foremost.sourceforge.net/"
 # starting to hate sf.net ...
 SRC_URI="http://foremost.sourceforge.net/pkg/${P}.tar.gz"
 
-KEYWORDS="~ppc ~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 LICENSE="public-domain"
 SLOT="0"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.4-config-location.patch"
 }
 
 src_compile() {
 	emake RAW_FLAGS="${CFLAGS} -Wall ${LDFLAGS}" RAW_CC="$(tc-getCC) -DVERSION=\\\"${PV}\\\"" \
-		CONF=/etc || die "emake failed"
+		CONF=/etc
 }
 
 src_install() {
-	dobin foremost || die
+	dobin foremost
 	doman foremost.8.gz
 	insinto /etc
 	doins foremost.conf
