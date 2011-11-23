@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/udunits-2.1.23.ebuild,v 1.1 2011/07/29 00:03:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/udunits/udunits-2.1.23.ebuild,v 1.2 2011/11/23 10:05:04 jlec Exp $
 
 EAPI=4
+
 inherit eutils fortran-2 autotools
 
 DESCRIPTION="Library for manipulating units of physical quantities"
@@ -11,13 +12,13 @@ SRC_URI="ftp://ftp.unidata.ucar.edu/pub/udunits/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="UCAR-Unidata"
+IUSE="doc static-libs"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
 
-RDEPEND="virtual/fortran
+RDEPEND="
+	virtual/fortran
 	dev-libs/expat"
 DEPEND="${RDEPEND}"
-
-IUSE="doc static-libs"
 
 src_prepare() {
 	# respect user's flags, compile with system libexpat
