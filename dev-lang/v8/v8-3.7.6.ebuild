@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.7.6.ebuild,v 1.2 2011/11/23 19:27:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-3.7.6.ebuild,v 1.3 2011/11/23 22:23:20 floppym Exp $
 
 EAPI="4"
 
@@ -29,11 +29,6 @@ pkg_pretend() {
 pkg_setup() {
 	python_set_active_version 2
 	python_pkg_setup
-}
-
-src_prepare() {
-	# Stop -Werror from breaking the build.
-	sed -i -e "s/-Werror//" build/standalone.gypi || die
 }
 
 src_compile() {
