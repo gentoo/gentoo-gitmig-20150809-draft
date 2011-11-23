@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/last/last-184.ebuild,v 1.1 2011/09/25 22:45:35 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/last/last-184.ebuild,v 1.2 2011/11/23 08:23:08 jlec Exp $
 
-EAPI="2"
+EAPI=4
 
 inherit eutils toolchain-funcs
 
@@ -18,14 +18,20 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="app-arch/unzip"
 RDEPEND=""
 
+src_prepare() {
+	sed \
+		-e 's:-o $@:$(LDFLAGS) -o $@:g' \
+		-i src/makefile || die
+}
+
 src_compile() {
 	emake -e -C src CXX="$(tc-getCXX)" \
-		STRICT="${LDFLAGS}" || die
+		STRICT="" || die
 }
 
 src_install() {
-	dobin src/last{al,db,ex} || die
+	dobin src/last{al,db,ex}
 	exeinto /usr/share/${PN}/scripts
-	doexe scripts/* || die
-	dodoc doc/*.txt ChangeLog.txt README.txt || die
+	doexe scripts/*
+	dodoc doc/*.txt ChangeLog.txt README.txt
 }
