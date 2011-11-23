@@ -1,18 +1,18 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-database/monodevelop-database-2.4.ebuild,v 1.4 2010/11/27 16:09:17 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-database/monodevelop-database-2.8.2.ebuild,v 1.1 2011/11/23 19:21:02 pacho Exp $
 
-EAPI=2
+EAPI="4"
 
 inherit mono multilib versionator
 
 DESCRIPTION="Database Browser Extension for MonoDevelop"
 HOMEPAGE="http://www.monodevelop.com/"
-SRC_URI="http://ftp.novell.com/pub/mono/sources/${PN}/${P}.tar.bz2"
+SRC_URI="http://download.mono-project.com/sources/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/mono-2.6.1
@@ -23,12 +23,9 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
 	>=dev-util/pkgconfig-0.19"
 
-src_compile() {
-	emake -j1 || die "make failed"
-}
+MAKEOPTS="${MAKEOPTS} -j1"
 
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
-	dodoc ChangeLog README || die "dodoc failed"
+	default
 	mono_multilib_comply
 }
