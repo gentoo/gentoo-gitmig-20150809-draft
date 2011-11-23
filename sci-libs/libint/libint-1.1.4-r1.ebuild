@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libint/libint-1.1.4-r1.ebuild,v 1.4 2011/06/26 10:38:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libint/libint-1.1.4-r1.ebuild,v 1.5 2011/11/23 09:43:04 jlec Exp $
 
 EAPI=4
 
@@ -35,8 +35,4 @@ src_configure() {
 
 src_compile() {
 	emake LDFLAGS="${LDFLAGS}"
-}
-
-src_install() {
-	einstall
 }
