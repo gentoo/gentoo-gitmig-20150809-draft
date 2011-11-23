@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.509 2011/11/23 22:36:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.510 2011/11/23 22:38:11 floppym Exp $
+
+  23 Nov 2011; Mike Gilbert <floppym@gentoo.org> chromium-9999-r1.ebuild:
+  Lower v8 dep to 3.7.6; it will probably work and makes testing
+  preserve_old_lib easier.
 
   23 Nov 2011; Mike Gilbert <floppym@gentoo.org> chromium-17.0.942.0.ebuild:
   Lower v8 dep to 3.7.6; it will probably work and makes tesing preserve_old_lib
