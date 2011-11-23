@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.7 2011/11/23 16:00:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/libreoffice-9999-r2.ebuild,v 1.8 2011/11/23 16:16:19 scarabeus Exp $
 
 EAPI=4
 
@@ -60,6 +60,7 @@ ADDONS_SRC+=" xmlsec? ( ${ADDONS_URI}/1f24ab1d39f4a51faf22244c94a6203f-xmlsec1-1
 ADDONS_SRC+=" java? ( ${ADDONS_URI}/17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip )"
 ADDONS_SRC+=" java? ( ${ADDONS_URI}/798b2ffdc8bcfe7bca2cf92b62caf685-rhino1_5R5.zip )"
 ADDONS_SRC+=" java? ( ${ADDONS_URI}/35c94d2df8893241173de1d16b6034c0-swingExSrc.zip )"
+ADDONS_SRC+=" java? ( ${ADDONS_URI}/ada24d37d8d638b3d8a9985e80bc2978-source-9.0.0.7-bj.zip )"
 ADDONS_SRC+=" odk? ( http://download.go-oo.org/extern/185d60944ea767075d27247c3162b3bc-unowinreg.dll )"
 SRC_URI+=" ${ADDONS_SRC}"
 
@@ -128,7 +129,6 @@ COMMON_DEPEND="
 		>=dev-java/bsh-2.0_beta4
 		dev-java/lucene:2.9
 		dev-java/lucene-analyzers:2.3
-		dev-java/saxon:0
 	)
 	jemalloc? ( dev-libs/jemalloc )
 	mysql? ( >=dev-db/mysql-connector-c++-1.1.0 )
@@ -315,8 +315,11 @@ src_configure() {
 	"
 
 	if use java; then
+		# hsqldb: system one is too new
+		# saxon: system one does not work properly
 		java_opts="
 			--without-system-hsqldb
+			--without-system-saxon
 			--with-ant-home="${ANT_HOME}"
 			--with-jdk-home=$(java-config --jdk-home 2>/dev/null)
 			--with-java-target-version=$(java-pkg_get-target)
@@ -324,7 +327,6 @@ src_configure() {
 			--with-beanshell-jar=$(java-pkg_getjar bsh bsh.jar)
 			--with-lucene-core-jar=$(java-pkg_getjar lucene-2.9 lucene-core.jar)
 			--with-lucene-analyzers-jar=$(java-pkg_getjar lucene-analyzers-2.3 lucene-analyzers.jar)
-			--with-saxon-jar=$(java-pkg_getjar saxon saxon8.jar)
 		"
 		if use test; then
 			java_opts+=" --with-junit=$(java-pkg_getjar junit-4 junit.jar)"
