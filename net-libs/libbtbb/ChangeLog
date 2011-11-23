@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/libbtbb
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/ChangeLog,v 1.2 2011/10/16 22:54:34 binki Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbtbb/ChangeLog,v 1.3 2011/11/23 17:04:41 binki Exp $
+
+*libbtbb-0.7 (23 Nov 2011)
+
+  23 Nov 2011; Nathan Phillip Brink <binki@gentoo.org> -libbtbb-0.6.ebuild,
+  -files/libbtbb-0.6-soname-symlink.patch, +libbtbb-0.7.ebuild,
+  libbtbb-9999.ebuild:
+  Bump to libbtbb-0.7, dropping 0.6, at zero_chaos's request. No longer
+  requires buildsys patch.
 
 *libbtbb-0.6 (16 Oct 2011)
 
