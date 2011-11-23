@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/idnkit-1.0-r2.ebuild,v 1.1 2011/10/11 15:18:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/idnkit-1.0-r2.ebuild,v 1.2 2011/11/23 13:03:02 naota Exp $
 
 EAPI="4"
 
@@ -12,11 +12,10 @@ SRC_URI="http://www.nic.ad.jp/ja/idn/idnkit/download/sources/${P}-src.tar.gz"
 
 LICENSE="JNIC"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="static-libs"
 
-DEPEND="sys-libs/glibc"
-# non gnu systems need libiconv
+DEPEND="virtual/libiconv"
 
 S=${WORKDIR}/${P}-src
 
@@ -29,7 +28,11 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_enable static-libs static)
+	myconf=""
+	if has_version dev-libs/libiconv; then
+		myconf="--with-iconv"
+	fi
+	econf $(use_enable static-libs static) ${myconf}
 }
 
 src_install() {
