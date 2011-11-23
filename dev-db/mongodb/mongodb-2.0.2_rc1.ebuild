@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.0.2_rc0.ebuild,v 1.1 2011/11/18 08:32:46 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-2.0.2_rc1.ebuild,v 1.1 2011/11/23 12:29:18 ultrabug Exp $
 
 EAPI=4
 SCONS_MIN_VERSION="1.2.0"
@@ -11,7 +11,7 @@ MY_P=${PN}-src-r${PV/_rc/-rc}
 
 DESCRIPTION="A high-performance, open source, schema-free document-oriented database"
 HOMEPAGE="http://www.mongodb.org"
-SRC_URI="https://github.com/mongodb/mongo/tarball/ada33ce4be46e634e8ac9b727167b2173f90f5c8 -> ${MY_P}.tar.gz
+SRC_URI="http://downloads.mongodb.org/src/${MY_P}.tar.gz
 	mms-agent? ( http://dev.gentoo.org/~ultrabug/20111027-10gen-mms-agent.zip )"
 
 LICENSE="AGPL-3 Apache-2.0"
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="mms-agent static-libs v8"
 
 PDEPEND="mms-agent? ( dev-python/pymongo )"
-RDEPEND="!v8? ( <dev-lang/spidermonkey-1.8 )
+RDEPEND="!v8? ( <dev-lang/spidermonkey-1.8[unicode] )
 	v8? ( dev-lang/v8 )
 	dev-libs/boost
 	dev-libs/libpcre[cxx]
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 	sys-libs/readline
 	sys-libs/ncurses"
 
-S="${WORKDIR}/mongodb-mongo-ada33ce"
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	enewgroup mongodb
