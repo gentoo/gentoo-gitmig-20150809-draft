@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/v8
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.112 2011/11/23 22:23:20 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/ChangeLog,v 1.113 2011/11/23 22:28:41 floppym Exp $
+
+  23 Nov 2011; Mike Gilbert <floppym@gentoo.org> v8-3.7.7.ebuild,
+  v8-9999.ebuild:
+  Simplify setting of soname_version.
 
   23 Nov 2011; Mike Gilbert <floppym@gentoo.org> v8-3.7.6.ebuild,
   v8-3.7.7.ebuild:

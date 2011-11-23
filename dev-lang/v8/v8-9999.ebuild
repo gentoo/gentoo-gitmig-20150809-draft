@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.22 2011/11/23 19:29:35 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/v8/v8-9999.ebuild,v 1.23 2011/11/23 22:28:41 floppym Exp $
 
 EAPI="4"
 
@@ -55,12 +55,8 @@ src_compile() {
 	esac
 	mytarget=${myarch}.release
 
-	if [[ ${PV} == "9999" ]]; then
-		subversion_wc_info
-		soname_version="${PV}.${ESVN_WC_REVISION}"
-	else
-		soname_version="${PV}"
-	fi
+	subversion_wc_info
+	soname_version="${PV}.${ESVN_WC_REVISION}"
 
 	local snapshot=on
 	host-is-pax && snapshot=off
