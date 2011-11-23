@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/jxplorer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/ChangeLog,v 1.29 2011/10/19 16:37:41 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/ChangeLog,v 1.30 2011/11/23 11:29:47 jlec Exp $
+
+  23 Nov 2011; Justin Lecher <jlec@gentoo.org> jxplorer-3.2-r1.ebuild,
+  files/jxplorer-pre-r1:
+  Keyworded for ~*-linux, added changes for prefix approved by Betelgeuse
 
 *jxplorer-3.2-r1 (19 Oct 2011)
 

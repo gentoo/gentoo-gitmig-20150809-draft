@@ -1,4 +1,4 @@
-jxplorer_home=/usr/share/jxplorer/
+jxplorer_home=@GENTOO_PORTAGE_EPREFIX@/usr/share/jxplorer/
 
 home="${HOME}/.jxplorer"
 

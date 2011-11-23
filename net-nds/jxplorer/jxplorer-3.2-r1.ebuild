@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/jxplorer-3.2-r1.ebuild,v 1.1 2011/10/19 16:37:41 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/jxplorer/jxplorer-3.2-r1.ebuild,v 1.2 2011/11/23 11:29:47 jlec Exp $
 
 EAPI="4"
 JAVA_PKG_IUSE="doc source"
 
-inherit eutils java-pkg-2 java-ant-2
+inherit eutils java-pkg-2 java-ant-2 prefix
 
 DESCRIPTION="A fully functional ldap browser written in java."
 HOMEPAGE="http://jxplorer.org/"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/JXv${PV}src.tar.bz2
 LICENSE="CAOSL"
 IUSE=""
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
 RDEPEND=">=virtual/jre-1.4
 	>=dev-java/javahelp-2.0.02_p46
 	>=dev-java/log4j-1.2.8
@@ -54,7 +54,7 @@ src_install() {
 	dodir /usr/share/${PN}
 	for i in "icons images htmldocs language templates security connections.txt log4j.xml"
 	do
-		cp -r ${i} "${D}/usr/share/${PN}" || die
+		cp -r ${i} "${ED}/usr/share/${PN}" || die
 	done
 
 	dodoc RELEASE.TXT || die
@@ -65,6 +65,8 @@ src_install() {
 		--pwd '"${HOME}/.jxplorer"' \
 		--pkg_args console \
 		-pre "${FILESDIR}/${PN}-pre-r1"
+
+	eprefixify "${ED}/usr/bin/${PN}"
 
 	use source && java-pkg_dosrc src/com
 	use doc && java-pkg_dojavadoc docs
