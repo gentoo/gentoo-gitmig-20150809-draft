@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.5.ebuild,v 1.1 2011/11/23 08:51:19 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.5.ebuild,v 1.2 2011/11/23 23:01:00 polynomial-c Exp $
 
 EAPI="4"
 
-inherit eutils mozilla-launcher multilib mozextension pax-utils
+inherit eutils mozilla-launcher multilib mozextension pax-utils nsplugins
 
 LANGS=(be ca cs de en-GB en-US es-AR es-ES fi fr gl hu it
 ja lt nb-NO nl pl pt-PT ru sk sv-SE tr zh-CN)
@@ -136,8 +136,8 @@ EOF
 	insinto /etc/revdep-rebuild
 	doins "${FILESDIR}"/10${PN} || die
 
-	ln -sfn "/usr/$(get_libdir)/nsbrowser/plugins" \
-	            "${D}${MOZILLA_FIVE_HOME}/plugins" || die
+	# Handle plugins dir through nsplugins.eclass
+	share_plugins_dir
 
 	# Required in order to use plugins and even run seamonkey on hardened.
 	pax-mark m "${ED}"/${MOZILLA_FIVE_HOME}/{seamonkey,seamonkey-bin,plugin-container}

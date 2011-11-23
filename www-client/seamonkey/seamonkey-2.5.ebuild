@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.5.ebuild,v 1.1 2011/11/23 08:01:27 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.5.ebuild,v 1.2 2011/11/23 22:59:52 polynomial-c Exp $
 
 EAPI="3"
 WANT_AUTOCONF="2.1"
 
-inherit flag-o-matic toolchain-funcs eutils mozconfig-3 multilib pax-utils fdo-mime autotools mozextension versionator python
+inherit flag-o-matic toolchain-funcs eutils mozconfig-3 multilib pax-utils fdo-mime autotools mozextension versionator python nsplugins
 
 PATCH="${PN}-2.5-patches-01"
 EMVER="1.3.3"
@@ -322,10 +322,8 @@ src_install() {
 		> "${D}"${MOZILLA_FIVE_HOME}/defaults/pref/all-gentoo.js \
 			|| die
 
-	# Plugins dir
-	rm -rf "${D}"${MOZILLA_FIVE_HOME}/plugins || die "failed to remove existing plugins dir"
-	dosym ../nsbrowser/plugins "${MOZILLA_FIVE_HOME}"/plugins || die
-	#share_plugins_dir
+	# Handle plugins dir through nsplugins.eclass
+	share_plugins_dir
 
 	doman "${S}"/suite/app/${PN}.1 || die
 }
