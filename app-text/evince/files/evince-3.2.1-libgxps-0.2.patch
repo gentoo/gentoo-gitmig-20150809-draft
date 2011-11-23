@@ -1,0 +1,45 @@
+From 740263e84f812e069c25d32e6fbf40bec4c061e2 Mon Sep 17 00:00:00 2001
+From: Carlos Garcia Campos <carlosgc@gnome.org>
+Date: Sun, 20 Nov 2011 16:18:30 +0100
+Subject: [PATCH] xps: Bump libgxps requirements to 0.2.0
+
+[Alexandre Rostovtsev <tetromino@gentoo.org>: remove update to configure.ac]
+---
+ backend/xps/xps-document.c |   14 ++------------
+ 1 files changed, 2 insertions(+), 12 deletions(-)
+
+diff --git a/backend/xps/xps-document.c b/backend/xps/xps-document.c
+index 6e34f07..cbba96b 100644
+--- a/backend/xps/xps-document.c
++++ b/backend/xps/xps-document.c
+@@ -156,17 +156,7 @@ xps_document_get_page_size (EvDocument *document,
+ 			    double     *width,
+ 			    double     *height)
+ {
+-	GXPSPage *xps_page;
+-	guint     w, h;
+-
+-	xps_page = GXPS_PAGE (page->backend_page);
+-
+-	gxps_page_get_size (xps_page, &w, &h);
+-
+-	if (width)
+-		*width = (gdouble)w;
+-	if (height)
+-		*height = (gdouble)h;
++	gxps_page_get_size (GXPS_PAGE (page->backend_page), width, height);
+ }
+ 
+ static EvDocumentInfo *
+@@ -210,7 +200,7 @@ xps_document_render (EvDocument      *document,
+ 		     EvRenderContext *rc)
+ {
+ 	GXPSPage        *xps_page;
+-	guint            page_width, page_height;
++	gdouble          page_width, page_height;
+ 	guint            width, height;
+ 	cairo_surface_t *surface;
+ 	cairo_t         *cr;
+-- 
+1.7.8.rc3
+
