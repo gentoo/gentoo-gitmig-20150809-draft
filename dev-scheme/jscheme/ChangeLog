@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/jscheme
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/jscheme/ChangeLog,v 1.1 2010/07/02 00:51:06 chiiph Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/jscheme/ChangeLog,v 1.2 2011/11/24 12:48:07 pacho Exp $
+
+  24 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #290906
 
 *jscheme-7.2 (02 Jul 2010)
 

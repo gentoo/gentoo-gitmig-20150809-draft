@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>scheme</herd>
-<maintainer>
-<email>chiiph@gentoo.org</email>
-<name>Tomas Touceda</name>
-</maintainer>
 <longdescription lang="en">
 	Termite Scheme is a variant of Scheme intended for distributed computing. 
 	It offers a simple and powerful concurrency model, inspired by the Erlang 
