@@ -71,6 +71,8 @@ recursively enter the top level.
  	@echo making $@ in ${RL_LIBDIR}
  	@( { test "${RL_LIBDIR}" = "${libdir}" && exit 0; } || \
 
+http://lists.gnu.org/archive/html/bug-bash/2011-10/msg00107.html
+
 the top level Makefile will recurse into the defdir for multiple targets
 (libbuiltins.a, common.o, bashgetopt.o, builtext.h), and since these do
 not have any declared interdependencies, parallel makes will recurse into
