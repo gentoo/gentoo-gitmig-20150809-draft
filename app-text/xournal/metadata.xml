@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-		<email>rbu@gentoo.org</email>
-		<name>Robert Buchholz</name>
-	</maintainer>
-	<maintainer>
 		<email>dilfridge@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">

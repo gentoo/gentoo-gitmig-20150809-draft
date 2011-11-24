@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xournal
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.24 2011/11/22 16:16:28 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xournal/ChangeLog,v 1.25 2011/11/24 12:22:52 pacho Exp $
+
+  24 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #158470
 
   22 Nov 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org>
   xournal-0.4.5_p20111022.ebuild:
