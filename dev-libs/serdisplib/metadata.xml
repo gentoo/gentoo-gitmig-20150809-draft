@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>lcd</herd>
-	<maintainer>
-		<email>rbu@gentoo.org</email>
-		<name>Robert Buchholz</name>
-	</maintainer>
 	<longdescription lang="en">
 		Library to drive displays with built-in controllers connected to
 		a parallel port (and serial port for i2c-displays).

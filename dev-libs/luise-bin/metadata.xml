@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>lcd</herd>
-	<maintainer>
-		<email>rbu@gentoo.org</email>
-		<name>Robert Buchholz</name>
-	</maintainer>
 </pkgmetadata>

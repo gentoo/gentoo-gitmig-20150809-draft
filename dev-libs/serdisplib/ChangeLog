@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/serdisplib
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/serdisplib/ChangeLog,v 1.10 2007/10/16 18:45:00 rbu Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/serdisplib/ChangeLog,v 1.11 2011/11/24 12:24:39 pacho Exp $
+
+  24 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #158470
 
 *serdisplib-1.97.7 (16 Oct 2007)
 
