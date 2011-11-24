@@ -4,12 +4,21 @@ http://bugs.gentoo.org/show_bug.cgi?id=331129
 
 --- js/src/Makefile.ref
 +++ js/src/Makefile.ref
+@@ -87,7 +87,7 @@
+ LDFLAGS                = $(XLDFLAGS)
+ 
+ ifndef NO_LIBM
+-LDFLAGS += -lm
++OTHER_LIBS += -lm
+ endif
+ 
+ # Prevent floating point errors caused by VC++ optimizations
 @@ -325,7 +325,7 @@
  	$(CC) -o $@ -c $(CFLAGS) $<
  
  $(OBJDIR)/jskwgen$(HOST_BIN_SUFFIX): $(OBJDIR)/jskwgen.$(OBJ_SUFFIX)
 -	$(CC) -o $@ $(CFLAGS) $(LDFLAGS) $^
-+	$(CC) $(HOST_LDFLAGS) -o $@ $(CFLAGS) $^
++	$(CC) $(HOST_LDFLAGS) -o $@ $(CFLAGS) $(OTHER_LIBS) $^
  
  endif
  
@@ -18,7 +27,7 @@ http://bugs.gentoo.org/show_bug.cgi?id=331129
  else
  $(PROGRAM): $(PROG_OBJS) $(LIBRARY)
 -	$(CC) -o $@ $(CFLAGS) $(PROG_OBJS) $(LIBRARY) $(LDFLAGS) $(OTHER_LIBS) \
-+	$(CC) $(HOST_LDFLAGS) -o $@ $(CFLAGS) $(PROG_OBJS) $(LIBRARY) $(LDFLAGS) $(OTHER_LIBS) \
++	$(CC) $(HOST_LDFLAGS) -o $@ $(CFLAGS) $(PROG_OBJS) $(LIBRARY) $(OTHER_LIBS) \
  	    $(PROG_LIBS)
  endif
  
