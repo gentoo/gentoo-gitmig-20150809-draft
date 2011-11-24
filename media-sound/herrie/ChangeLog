@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/herrie
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/ChangeLog,v 1.36 2009/06/01 16:13:50 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/ChangeLog,v 1.37 2011/11/24 12:25:30 pacho Exp $
+
+  24 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #158470
 
   01 Jun 2009; Ferris McCormick <fmccor@gentoo.org> herrie-2.2.ebuild:
   Sparc stable, required for Bug #271815.
