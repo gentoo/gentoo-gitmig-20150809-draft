@@ -1,8 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-codecoverage/php-codecoverage-1.1.0.ebuild,v 1.1 2011/11/03 09:28:23 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-codecoverage/php-codecoverage-1.1.0.ebuild,v 1.2 2011/11/24 15:25:18 olemarkus Exp $
 
 PHP_PEAR_CHANNEL="${FILESDIR}/channel.xml"
+PHP_PEAR_URI="pear.phpunit.de"
 PHP_PEAR_PN="PHP_CodeCoverage"
 inherit php-pear-lib-r1
 
