@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/czmq
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/czmq/ChangeLog,v 1.1 2011/11/24 13:07:17 djc Exp $
+
+*czmq-1.1.0 (24 Nov 2011)
+
+  24 Nov 2011; Dirkjan Ochtman <djc@gentoo.org> +czmq-1.1.0.ebuild,
+  +metadata.xml:
+  Initial version 1.1.0 (bug 390237). Thanks to Philip Kovacs.
+
