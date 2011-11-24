@@ -6,10 +6,6 @@
 		<email>hwoarang@gentoo.org</email>
 		<name>Markos Chandras</name>
 	</maintainer>
-	<maintainer>
-		<email>chiiph@gentoo.org</email>
-		<name>Tomas Touceda</name>
-	</maintainer>
 	<longdescription lang="en">
 		Social Networks Visualizer (SocNetV) is a flexible and user-friendly tool for 
 		the analysis and visualization of Social Networks. It lets you construct networks 
