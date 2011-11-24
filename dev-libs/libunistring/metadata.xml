@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>scheme</herd>
-<maintainer>
-<email>chiiph@gentoo.org</email>
-<name>Tomas Touceda</name>
-</maintainer>
 <longdescription lang="en">
 	Text files are nowadays usually encoded in Unicode, and may consist of very
 	different scripts – from Latin letters to Chinese Hanzi –, with many kinds
