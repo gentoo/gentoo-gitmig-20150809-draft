@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/esearch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.71 2011/09/02 15:52:20 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.72 2011/11/24 20:36:42 zmedico Exp $
+
+  24 Nov 2011; Zac Medico <zmedico@gentoo.org> esearch-0.7.2-r2.ebuild:
+  Use relative symlinks, and ED insead of D.
 
   02 Sep 2011; Paul Varner <fuzzyray@gentoo.org>
   -files/120817-unset-emergedefaultopts.patch,

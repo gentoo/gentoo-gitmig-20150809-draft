@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/esearch-0.7.2-r2.ebuild,v 1.2 2011/08/25 00:28:11 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/esearch-0.7.2-r2.ebuild,v 1.3 2011/11/24 20:36:42 zmedico Exp $
 
 EAPI=3
 PYTHON_DEPEND=2:2.4
@@ -37,9 +37,9 @@ src_install() {
 	exeinto /usr/$(get_libdir)/esearch
 	doexe eupdatedb.py esearch.py esync.py common.py || die "doexe failed"
 
-	dosym /usr/$(get_libdir)/esearch/esearch.py /usr/bin/esearch || die "dosym failed"
-	dosym /usr/$(get_libdir)/esearch/eupdatedb.py /usr/sbin/eupdatedb || die "dosym failed"
-	dosym /usr/$(get_libdir)/esearch/esync.py /usr/sbin/esync || die "dosym failed"
+	dosym ../$(get_libdir)/esearch/esearch.py /usr/bin/esearch || die "dosym failed"
+	dosym ../$(get_libdir)/esearch/eupdatedb.py /usr/sbin/eupdatedb || die "dosym failed"
+	dosym ../$(get_libdir)/esearch/esync.py /usr/sbin/esync || die "dosym failed"
 
 	doman en/{esearch,eupdatedb,esync}.1 || die "doman failed"
 	dodoc ChangeLog "${FILESDIR}/eupdatedb.cron" || die "dodoc failed"
@@ -54,7 +54,7 @@ src_install() {
 		doins fr/{esearch,eupdatedb,esync}.1 || die "doins failed"
 	fi
 
-	python_convert_shebangs -r 2 "${D}"
+	python_convert_shebangs -r 2 "${ED}"
 }
 
 pkg_postinst() {
