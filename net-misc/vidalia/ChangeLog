@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vidalia
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.24 2011/11/24 17:36:30 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.25 2011/11/24 19:24:12 blueness Exp $
+
+*vidalia-0.2.15 (24 Nov 2011)
+
+  24 Nov 2011; Anthony G. Basile <blueness@gentoo.org> +vidalia-0.2.15.ebuild:
+  Added latest upstream stable
 
   24 Nov 2011; Anthony G. Basile <blueness@gentoo.org> metadata.xml:
   Added myself as maintainer
