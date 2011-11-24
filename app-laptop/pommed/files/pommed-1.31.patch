@@ -7,7 +7,7 @@ diff -ru pommed-1.31~/gpomme/Makefile pommed-1.31/gpomme/Makefile
  
 -CFLAGS = -g -O2 -Wall $(DBUS_CFLAGS) $(DBUSGLIB_CFLAGS) $(GTK_CFLAGS) $(CONFUSE_CFLAGS) $(GLADE_CFLAGS) $(INOTIFY_CFLAGS)
 -LDFLAGS = -lpthread -lX11 $(DBUS_LIBS) $(DBUSGLIB_LIBS) $(GTK_LIBS) $(CONFUSE_LIBS) $(GLADE_LIBS)
-+CFLAGS += -g -Wall $(DBUS_CFLAGS) $(DBUSGLIB_CFLAGS) $(GTK_CFLAGS) $(CONFUSE_CFLAGS) $(GLADE_CFLAGS) $(INOTIFY_CFLAGS)
++CFLAGS += -Wall $(DBUS_CFLAGS) $(DBUSGLIB_CFLAGS) $(GTK_CFLAGS) $(CONFUSE_CFLAGS) $(GLADE_CFLAGS) $(INOTIFY_CFLAGS)
 +LDFLAGS += -lpthread -lX11 $(DBUS_LIBS) $(DBUSGLIB_LIBS) $(GTK_LIBS) $(CONFUSE_LIBS) $(GLADE_LIBS)
  
  SOURCES = gpomme.c theme.c conffile.c \
@@ -28,7 +28,7 @@ diff -ru pommed-1.31~/pommed/Makefile pommed-1.31/pommed/Makefile
  TIMERFD_CFLAGS = $(shell test -e /usr/include/sys/timerfd.h || echo -DNO_SYS_TIMERFD_H)
  
 -CFLAGS = -g -O2 -Wall $(DBUS_CFLAGS) $(ALSA_CFLAGS) $(AUDIOFILE_CFLAGS) $(CONFUSE_CFLAGS) $(INOTIFY_CFLAGS) $(TIMERFD_CFLAGS)
-+CFLAGS += -g -Wall $(DBUS_CFLAGS) $(ALSA_CFLAGS) $(AUDIOFILE_CFLAGS) $(CONFUSE_CFLAGS) $(INOTIFY_CFLAGS) $(TIMERFD_CFLAGS)
++CFLAGS += -Wall $(DBUS_CFLAGS) $(ALSA_CFLAGS) $(AUDIOFILE_CFLAGS) $(CONFUSE_CFLAGS) $(INOTIFY_CFLAGS) $(TIMERFD_CFLAGS)
  
 -LDFLAGS = -pthread -lrt $(DBUS_LIBS) $(ALSA_LIBS) $(AUDIOFILE_LIBS) $(CONFUSE_LIBS)
 +LDFLAGS += -pthread -lrt $(DBUS_LIBS) $(ALSA_LIBS) $(AUDIOFILE_LIBS) $(CONFUSE_LIBS)
@@ -60,7 +60,7 @@ diff -ru pommed-1.31~/wmpomme/Makefile pommed-1.31/wmpomme/Makefile
  
 -CFLAGS = -g -O2 -Wall $(DBUS_CFLAGS) $(TIMERFD_CFLAGS)
 -LDFLAGS = -lrt -lXpm -lXext -lX11 $(DBUS_LIBS)
-+CFLAGS += -g -Wall $(DBUS_CFLAGS) $(TIMERFD_CFLAGS)
++CFLAGS += -Wall $(DBUS_CFLAGS) $(TIMERFD_CFLAGS)
 +LDFLAGS += -lrt -lXpm -lXext -lX11 $(DBUS_LIBS)
  
  SOURCES = wmgeneral.c wmpomme.c \
