@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-applets
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.344 2011/11/06 02:05:58 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.345 2011/11/24 15:09:45 jlec Exp $
+
+  24 Nov 2011; Justin Lecher <jlec@gentoo.org> gnome-applets-2.32.1.1.ebuild,
+  +files/gnome-applets-2.32.1.1-underlinking.patch:
+  Patch against underlinking when using gold, #370121
 
 *gnome-applets-3.2.1 (06 Nov 2011)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.1.1.ebuild,v 1.14 2011/03/27 10:15:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.32.1.1.ebuild,v 1.15 2011/11/24 15:09:45 jlec Exp $
 
 EAPI="3"
 GCONF_DEBUG="no"
@@ -81,7 +81,9 @@ pkg_setup() {
 src_prepare() {
 	gnome2_src_prepare
 
-	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
+	epatch \
+		"${FILESDIR}"/${P}-libnotify-0.7.patch \
+		"${FILESDIR}"/${P}-underlinking.patch
 
 	# gweather: fix NetworkManager support to compile, see upstream bug 636217 and bug 358043
 	epatch "${FILESDIR}"/${P}-dbus-fix.patch
