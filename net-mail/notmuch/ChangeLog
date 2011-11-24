@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.13 2011/11/24 14:40:58 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.14 2011/11/24 18:07:59 aidecoe Exp $
+
+*notmuch-0.10 (24 Nov 2011)
+
+  24 Nov 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> +notmuch-0.10.ebuild:
+  Version bump. Raised minimum Python version to 2.6 for Python bindings.
 
   24 Nov 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.9-r2.ebuild:
   Added app-misc/dtach which is required in test phase. Sphinx (doc builder)
