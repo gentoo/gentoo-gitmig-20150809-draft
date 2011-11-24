@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/rt73-firmware
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt73-firmware/ChangeLog,v 1.4 2009/11/09 13:54:36 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt73-firmware/ChangeLog,v 1.5 2011/11/24 12:30:25 pacho Exp $
+
+  24 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #158470
 
   09 Nov 2009; Markus Meier <maekke@gentoo.org> rt73-firmware-1.8-r1.ebuild:
   amd64/x86 stable, bug #288776
