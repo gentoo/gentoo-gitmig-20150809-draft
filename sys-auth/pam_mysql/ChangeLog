@@ -1,6 +1,12 @@
 # ChangeLog for sys-auth/pam_mysql
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mysql/ChangeLog,v 1.16 2011/09/13 07:29:13 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_mysql/ChangeLog,v 1.17 2011/11/24 18:27:15 hanno Exp $
+
+*pam_mysql-0.7_rc1-r4 (24 Nov 2011)
+
+  24 Nov 2011; Hanno Boeck <hanno@gentoo.org> +pam_mysql-0.7_rc1-r4.ebuild,
+  +files/pam_mysql-0.7_rc1-memleak.diff:
+  Fix memleak, closes #364639.
 
 *pam_mysql-0.7_rc1-r3 (13 Sep 2011)
 
