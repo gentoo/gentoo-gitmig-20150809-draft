@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.282 2011/11/12 16:26:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.283 2011/11/24 20:02:19 tetromino Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -48,12 +48,6 @@ dev-libs/glib systemtap
 # Markos Chandras <hwoarang@gentoo.org> (19 Aug 2011)
 # Masking rbd spice from qemu-kvm per bug #364889
 app-emulation/qemu-kvm rbd
-
-# Nirbheek Chauhan <nirbheek@gentoo.org> (16 Aug 2011)
-# dev-libs/seed is a messy and unstable package.
-# Let's mask the ebuild use-flags that pull it in.
-dev-libs/libpeas seed
-gnome-extra/gnome-games seed
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (16 Aug 2011)
 # Mask introspection on ebuilds that went stable before it was unmasked.

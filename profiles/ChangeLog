@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5955 2011/11/24 18:03:53 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.5956 2011/11/24 20:02:18 tetromino Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
+  Unmask gnome-3.2 versions of gjs, gobject-introspection, libpeas, seed, and
+  pygobject. Also, unmask gnome-dvb-daemon (since pygobject:3 is unmasked).
 
   24 Nov 2011; Ian Stakenvicius <axs@gentoo.org> package.mask:
   Unmasked dev-lang/spidermonkey-1.8.5 and non-gnome3 package versions that

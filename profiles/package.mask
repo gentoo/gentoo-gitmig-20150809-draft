@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13281 2011/11/24 18:03:53 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13282 2011/11/24 20:02:18 tetromino Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (24 Nov 2011)
+# GNOME 2 versions of seed are largely untested
+<dev-libs/seed-3.2
 
 # Naohiro Aota <naota@gentoo.org> (24 Nov 2011)
 # Masked for removal in 30 days
@@ -263,10 +267,6 @@ games-strategy/dark-oberon
 # unmaintained upstream, obsolete in general. (bug #337657)
 # Masked for removal on 20 Nov 2011
 net-misc/x25_utils
-
-# Matt Turner <mattst88@gentoo.org> (19 Oct 2011)
-# pygobject:3 is masked. Remove this mask when pygobject:3 is unmasked.
->=gnome-extra/gnome-dvb-daemon-0.2.3
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (19 Oct 2011)
 # Requires nautilus[introspection] to run
@@ -805,12 +805,8 @@ sci-chemistry/webmo
 app-admin/eselect-gnome-shell-extensions
 >=app-misc/tracker-0.12
 >=dev-libs/folks-0.6
->=dev-libs/gobject-introspection-1.29
->=dev-libs/gjs-1.29
 >=dev-libs/libgdata-0.9
->=dev-libs/libpeas-1.2
 >=dev-python/pyatspi-2.2
->=dev-python/pygobject-2.28.6-r50
 >=gnome-base/gconf-3.2
 >=gnome-extra/at-spi-2.2
 gnome-extra/gnome-contacts
@@ -1050,11 +1046,6 @@ net-misc/asterisk-spandsp_codec_g726
 # Doug Goldstein <cardoe@gentoo.org> (07 Jul 2010)
 # No actual Gentoo support yet. If you're interested, please see bug #295993
 net-misc/netcf
-
-# Nirbheek Chauhan <nirbheek@gentoo.org> (29 Jun 2010)
-# Mask dev-libs/seed; several ebuild issues, and missing pure-runtime deps
-# Also needs USE=introspection to be unmasked
-dev-libs/seed
 
 # Justin Lecher <jlec@gentoo.org> (16 Jun 10)
 # Just working with the masked experimental version of refmac
