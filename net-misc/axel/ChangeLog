@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/axel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/ChangeLog,v 1.59 2011/05/01 14:49:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/axel/ChangeLog,v 1.60 2011/11/24 12:53:54 pacho Exp $
+
+  24 Nov 2011; Pacho Ramos <pacho@gentoo.org> -axel-2.4.ebuild, metadata.xml:
+  Drop maintainer due retirement, bug #290906; drop old.
 
 *axel-2.4-r1 (01 May 2011)
 
