@@ -1,11 +1,11 @@
 # ChangeLog for www-client/links
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.136 2011/11/24 19:25:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.137 2011/11/24 19:27:47 ssuominen Exp $
 
 *links-2.4 (24 Nov 2011)
 
   24 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> +links-2.4.ebuild:
-  Version bump.
+  Version bump wrt #364711 by Jesse Adelman
 
   22 Nov 2011; Pacho Ramos <pacho@gentoo.org> -links-2.3_pre1.ebuild,
   metadata.xml:
