@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/man-pages-ja
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/ChangeLog,v 1.30 2011/11/23 23:22:14 naota Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/man-pages-ja/ChangeLog,v 1.31 2011/11/24 02:08:07 naota Exp $
+
+*man-pages-ja-20111020 (24 Nov 2011)
+
+  24 Nov 2011; Naohiro Aota <naota@gentoo.org> +man-pages-ja-20111020.ebuild:
+  Version bump. Bug #389235
 
 *man-pages-ja-20101110-r1 (23 Nov 2011)
 
