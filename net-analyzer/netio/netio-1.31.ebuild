@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/netio-1.31.ebuild,v 1.1 2011/11/24 17:28:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/netio-1.31.ebuild,v 1.2 2011/11/24 17:31:19 jer Exp $
 
 EAPI=4
 
@@ -14,6 +14,7 @@ LICENSE="free-noncomm"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE=""
+RESTRICT="mirror" # bug #391789 comment #1
 
 DEPEND="app-arch/unzip
 	>=sys-apps/sed-4"
