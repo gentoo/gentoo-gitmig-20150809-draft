@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.0_rc3.ebuild,v 1.2 2011/11/22 13:42:23 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.0_rc3.ebuild,v 1.3 2011/11/24 08:56:51 grobian Exp $
 
 EAPI="3"
 inherit eutils flag-o-matic multilib toolchain-funcs
@@ -141,6 +141,7 @@ src_install() {
 
 	# Fix install_names on Darwin.  The build system is too complicated
 	# to just fix this, so we correct it post-install
+	local lib= f= odylib=
 	if [[ ${CHOST} == *-darwin* ]] ; then
 		for lib in lib{EnhancedDisassembly,LLVM-${PV},LTO}.dylib {BugpointPasses,LLVMHello,profile_rt}.dylib ; do
 			# libEnhancedDisassembly is Darwin10 only, so non-fatal
@@ -152,9 +153,10 @@ src_install() {
 			eend $?
 		done
 		for f in "${ED}"/usr/bin/* "${ED}"/usr/lib/${PN}/libLTO.dylib ; do
-			ebegin "fixing install_name reference to libLLVM-${PV}.dylib of ${f##*/}"
+			odylib=$(scanmacho -BF'%n#f' "${f}" | tr ',' '\n' | grep libLLVM-${PV}.dylib)
+			ebegin "fixing install_name reference to ${odylib} of ${f##*/}"
 			install_name_tool \
-				-change "@executable_path/../lib/libLLVM-${PV}.dylib" \
+				-change "${odylib}" \
 					"${EPREFIX}"/usr/lib/${PN}/libLLVM-${PV}.dylib \
 				"${f}"
 			eend $?
