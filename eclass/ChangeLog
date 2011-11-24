@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.25 2011/11/24 00:57:00 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.26 2011/11/24 20:05:01 sera Exp $
+
+  24 Nov 2011; Ralph Sennhauser <sera@gentoo.org> java-vm-2.eclass:
+  set_java_env(): Substitute @SLOT@ in vm env files
+  java-vm_check-nsplugin(): Fix handling of IUSE defaults
 
   24 Nov 2011; Maciej Mrozowski <reavertm@gentoo.org> virtuoso.eclass:
   Dependency on <gawk-4 moved to virtuoso-server-6.1.{2,3}.

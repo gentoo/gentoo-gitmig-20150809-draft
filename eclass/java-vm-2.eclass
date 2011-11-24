@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.39 2011/11/21 10:15:46 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-vm-2.eclass,v 1.40 2011/11/24 20:05:01 sera Exp $
 
 # -----------------------------------------------------------------------------
 # @eclass-begin
@@ -68,7 +68,7 @@ java-vm_check-nsplugin() {
 	has ${EAPI:-0} 0 1 2 && ! use prefix && EPREFIX=
 
 	# Install a default nsplugin if we don't already have one
-	if has nsplugin ${IUSE} && use nsplugin; then
+	if in_iuse nsplugin && use nsplugin; then
 		if [[ ! -f "${EPREFIX}"/usr/${libdir}/nsbrowser/plugins/javaplugin.so ]]; then
 			einfo "No system nsplugin currently set."
 			java-vm_set-nsplugin
@@ -150,6 +150,7 @@ set_java_env() {
 		-e "s/@PN@/${PN}/g" \
 		-e "s/@PV@/${PV}/g" \
 		-e "s/@PF@/${PF}/g" \
+		-e "s/@SLOT@/${SLOT}/g" \
 		-e "s/@PLATFORM@/${platform}/g" \
 		-e "s/@LIBDIR@/$(get_libdir)/g" \
 		-e "/^LDPATH=.*lib\\/\\\"/s|\"\\(.*\\)\"|\"\\1${platform}/:\\1${platform}/server/\"|" \
