@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.12 2011/11/07 15:25:25 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.13 2011/11/24 14:40:58 aidecoe Exp $
+
+  24 Nov 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.9-r2.ebuild:
+  Added app-misc/dtach which is required in test phase. Sphinx (doc builder)
+  couldn't find libnotmuch - fixed by defining LD_LIBRARY_PATH. libnotmuch.so
+  couldn't be found when building ruby bindings - fixed by altering extconf.rb.
 
   07 Nov 2011; Amadeusz Żołnowski <aidecoe@gentoo.org> notmuch-0.9-r2.ebuild:
   Removed some debug echo.

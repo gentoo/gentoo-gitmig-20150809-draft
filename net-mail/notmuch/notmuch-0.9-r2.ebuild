@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.9-r2.ebuild,v 1.3 2011/11/07 15:25:25 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.9-r2.ebuild,v 1.4 2011/11/24 14:40:58 aidecoe Exp $
 
 EAPI=4
 
@@ -37,7 +37,7 @@ CDEPEND="
 	"
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig
-	test? ( sys-devel/gdb )
+	test? ( app-misc/dtach sys-devel/gdb )
 	"
 RDEPEND="${CDEPEND}
 	crypt? ( app-crypt/gnupg )
@@ -70,6 +70,15 @@ pkg_setup() {
 src_prepare() {
 	autotools-utils_src_prepare
 	bindings python distutils_src_prepare
+
+	r_fix() {
+		local pattern="\(find_library('notmuch', 'notmuch_database_create', '\)"
+		pattern+="\([^']*\)\(')\)"
+		local replace="\1${WORKDIR}/${PF}_build/lib\3"
+
+		sed -i "s|$pattern|$replace|" extconf.rb || die
+	}
+	bindings ruby r_fix
 }
 
 src_configure() {
@@ -83,17 +92,17 @@ src_configure() {
 		$(use_with zsh-completion)
 	)
 	autotools-utils_src_configure
-
-	r_conf() {
-		${RUBY} extconf.rb || die
-	}
-	bindings ruby r_conf
 }
 
 src_compile() {
 	autotools-utils_src_compile
 	bindings python distutils_src_compile
-	bindings ruby emake
+
+	r_make() {
+		${RUBY} extconf.rb || die
+		emake
+	}
+	bindings ruby r_make
 
 	if use doc; then
 		pydocs() {
@@ -107,7 +116,7 @@ src_compile() {
 			${RDOC} --main 'Notmuch' --title 'Notmuch Ruby API' --op ruby *.c
 		}
 
-		bindings python pydocs
+		LD_LIBRARY_PATH="${WORKDIR}/${PF}_build/lib" bindings python pydocs
 		bindings ruby rdocs
 	fi
 }
