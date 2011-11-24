@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.30.2-r6.ebuild,v 1.2 2011/08/09 18:56:31 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-2.30.2-r6.ebuild,v 1.3 2011/11/24 03:49:04 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -25,7 +25,7 @@ RDEPEND=">=gnome-base/gconf-2:2
 	>=dev-libs/libxslt-1.1.4
 	>=x11-libs/startup-notification-0.8
 	>=dev-libs/dbus-glib-0.71
-	>=net-libs/xulrunner-2.0:1.9
+	net-libs/xulrunner:1.9
 	sys-libs/zlib
 	app-arch/bzip2
 	>=app-text/rarian-0.7
@@ -56,7 +56,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.28.1-system-nspr.patch"
 
 	# Fix build with xulrunner-2.0 (we really need to get rid of this package)
-	epatch "${FILESDIR}/${P}-port-to-xulrunner-2-r1.patch"
+	epatch "${FILESDIR}/${P}-port-to-xulrunner-2-r2.patch"
 
 	# Use g_build_filename to avoid missing slash problem
 	epatch "${FILESDIR}/${P}-missing-slash.patch"
