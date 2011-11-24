@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-1.5.ebuild,v 1.4 2011/06/21 14:46:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/punc-1.5.ebuild,v 1.5 2011/11/24 11:01:47 jlec Exp $
 
 EAPI="3"
 
@@ -73,6 +73,7 @@ src_configure() {
 	econf \
 		$(use_enable static-libs static) \
 		$(use_enable debug vdebug) \
+		--enable-vf2cforce \
 		--enable-shared \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		--disable-triplet \

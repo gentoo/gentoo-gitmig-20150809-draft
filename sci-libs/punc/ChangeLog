@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/punc
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/ChangeLog,v 1.13 2011/06/21 14:46:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/punc/ChangeLog,v 1.14 2011/11/24 11:01:47 jlec Exp $
+
+  24 Nov 2011; Justin Lecher <jlec@gentoo.org> files/1.5-linking.patch,
+  punc-1.5.ebuild, metadata.xml:
+  Use cleanly pkg-config to detect blas
 
   21 Jun 2011; Justin Lecher <jlec@gentoo.org> punc-0.2_p1.ebuild,
   punc-1.4-r1.ebuild, punc-1.5.ebuild:
