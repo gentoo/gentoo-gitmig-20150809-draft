@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-2.2.7-r1.ebuild,v 1.6 2011/04/29 17:34:42 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-2.2.7-r1.ebuild,v 1.7 2011/11/24 14:34:22 jlec Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -65,7 +65,9 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-libnotify-0.7.patch
+	epatch \
+		"${FILESDIR}"/${P}-libnotify-0.7.patch \
+		"${FILESDIR}"/${P}-underlinking.patch
 	gnome2_src_prepare
 }
 
