@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.24 2011/11/21 16:31:49 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.25 2011/11/24 00:57:00 reavertm Exp $
+
+  24 Nov 2011; Maciej Mrozowski <reavertm@gentoo.org> virtuoso.eclass:
+  Dependency on <gawk-4 moved to virtuoso-server-6.1.{2,3}.
 
   21 Nov 2011; Jory A. Pratt <anarchy@gentoo.org> nsplugins.eclass:
   Assign to mozilla herd, add share_plugins_dir function for mozilla

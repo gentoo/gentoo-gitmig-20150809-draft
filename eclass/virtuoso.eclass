@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtuoso.eclass,v 1.11 2011/07/07 23:00:06 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtuoso.eclass,v 1.12 2011/11/24 00:57:00 reavertm Exp $
 
 # @ECLASS: virtuoso.eclass
 # @MAINTAINER:
@@ -40,9 +40,7 @@ HOMEPAGE='http://virtuoso.openlinksw.com/wiki/main/Main/'
 LICENSE='GPL-2'
 SLOT='0'
 
-# Restrict incompatible gawk, bug 374315
 DEPEND='
-	<sys-apps/gawk-4.0.0
 	>=sys-devel/libtool-2.2.6a
 '
 RDEPEND=''
