@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/virtuoso-server-6.1.3-r1.ebuild,v 1.3 2011/09/21 22:25:23 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/virtuoso-server-6.1.4.ebuild,v 1.1 2011/11/24 00:53:23 reavertm Exp $
 
 EAPI=4
 
@@ -26,11 +26,12 @@ COMMON_DEPEND="
 	readline? ( sys-libs/readline:0 )
 "
 DEPEND="${COMMON_DEPEND}
+	sys-apps/gawk
 	>=sys-devel/bison-2.3
 	>=sys-devel/flex-2.5.33
 "
 RDEPEND="${COMMON_DEPEND}
-	>=dev-db/virtuoso-odbc-${PV}:${SLOT}
+	~dev-db/virtuoso-odbc-${PV}:${SLOT}
 "
 
 VOS_EXTRACT="
@@ -50,8 +51,7 @@ VOS_EXTRACT="
 DOCS=(AUTHORS ChangeLog CREDITS INSTALL NEWS README)
 
 PATCHES=(
-	"${FILESDIR}/${P}-unicode.patch"
-	"${FILESDIR}/${P}-unbundle-minizip.patch"
+	"${FILESDIR}/${PN}-6.1.4-unbundle-minizip.patch"
 )
 
 src_prepare() {

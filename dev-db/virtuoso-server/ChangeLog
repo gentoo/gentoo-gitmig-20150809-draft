@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/virtuoso-server
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/ChangeLog,v 1.24 2011/09/21 22:25:23 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/ChangeLog,v 1.25 2011/11/24 00:53:23 reavertm Exp $
+
+*virtuoso-server-6.1.4 (24 Nov 2011)
+
+  24 Nov 2011; Maciej Mrozowski <reavertm@gentoo.org>
+  +files/virtuoso-server-6.1.4-unbundle-minizip.patch,
+  +virtuoso-server-6.1.4.ebuild, -virtuoso-server-6.1.3-r1.ebuild,
+  virtuoso-server-6.1.2.ebuild, virtuoso-server-6.1.3.ebuild:
+  Version bump, remove 6.1.3-r1, add <gawk-4 restriction for 6.1.{2.3}
 
   21 Sep 2011; Maciej Mrozowski <reavertm@gentoo.org>
   virtuoso-server-6.1.3-r1.ebuild,
