@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/josm
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/ChangeLog,v 1.40 2011/07/31 14:10:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/josm/ChangeLog,v 1.41 2011/11/24 18:55:06 hanno Exp $
+
+*josm-4550 (24 Nov 2011)
+
+  24 Nov 2011; Hanno Boeck <hanno@gentoo.org> +josm-4550.ebuild:
+  Bump and use optimized jar.
 
 *josm-4203 (31 Jul 2011)
 
