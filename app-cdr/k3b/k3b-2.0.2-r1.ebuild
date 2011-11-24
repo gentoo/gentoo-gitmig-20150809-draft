@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.2-r1.ebuild,v 1.9 2011/09/18 10:08:03 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-2.0.2-r1.ebuild,v 1.10 2011/11/24 01:55:23 reavertm Exp $
 
 EAPI=4
 
@@ -50,6 +50,7 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	app-cdr/cdrdao
+	$(add_kdebase_dep kdelibs 'udev,udisks(+)')
 	media-sound/cdparanoia
 	virtual/cdrtools
 	dvd? (
