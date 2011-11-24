@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.0.10.ebuild,v 1.3 2011/11/22 16:31:35 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-1.0.10.ebuild,v 1.4 2011/11/24 07:14:31 hollow Exp $
 
 EAPI="4"
 
@@ -70,7 +70,7 @@ NGINX_MODULES_STD="access auth_basic autoindex browser charset empty_gif fastcgi
 geo gzip limit_req limit_zone map memcached proxy referer rewrite scgi ssi
 split_clients upstream_ip_hash userid uwsgi"
 NGINX_MODULES_OPT="addition dav degradation flv geoip gzip_static image_filter
-perl random_index realip secure_link stub_status sub xslt"
+mp4 perl random_index realip secure_link stub_status sub xslt"
 NGINX_MODULES_MAIL="imap pop3 smtp"
 NGINX_MODULES_3RD="
 	http_upload_progress
