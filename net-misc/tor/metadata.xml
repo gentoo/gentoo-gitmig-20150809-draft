@@ -5,10 +5,6 @@
 		<email>blueness@gentoo.org</email>
 		<name>Anthony G. Basile</name>
 	</maintainer>
-	<maintainer>
-		<email>chiiph@gentoo.org</email>
-		<name>Tomás Touceda</name>
-	</maintainer>
 	<use>
 		<flag name='tor-hardening'>Compile tor with hardening on vanilla compilers/linkers</flag>
 		<flag name='transparent-proxy'>Enable transparent proxying</flag>
