@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-6.3.ebuild,v 1.1 2010/04/12 18:07:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-6.3.ebuild,v 1.2 2011/11/24 08:44:09 ulm Exp $
 
 inherit elisp
 
@@ -27,6 +27,7 @@ src_compile() {
 	if use linguas_ja; then
 		emake jinfo || die
 	fi
+	rm -f info/*~				# remove spurious backup files
 }
 
 src_install() {

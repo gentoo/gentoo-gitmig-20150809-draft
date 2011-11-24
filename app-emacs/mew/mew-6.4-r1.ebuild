@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-6.4.ebuild,v 1.1 2011/11/21 13:08:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-6.4-r1.ebuild,v 1.1 2011/11/24 08:44:09 ulm Exp $
 
 EAPI=4
 
@@ -29,6 +29,7 @@ src_configure() {
 src_compile() {
 	emake
 	use linguas_ja && emake jinfo
+	rm -f info/*~				# remove spurious backup files
 }
 
 src_install() {
