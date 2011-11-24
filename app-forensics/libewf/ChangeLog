@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/libewf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/ChangeLog,v 1.14 2011/10/11 17:09:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/libewf/ChangeLog,v 1.15 2011/11/24 22:31:42 radhermit Exp $
+
+  24 Nov 2011; Tim Harder <radhermit@gentoo.org> libewf-20100226-r1.ebuild:
+  Use autotools-utils eclass.
 
   11 Oct 2011; Jeroen Roovers <jer@gentoo.org> libewf-20100226.ebuild:
   Stable for HPPA (bug #374321).
