@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-11.11.ebuild,v 1.2 2011/11/21 15:45:39 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-11.11.ebuild,v 1.3 2011/11/24 15:40:09 chithanh Exp $
 
 EAPI=4
 
@@ -45,6 +45,9 @@ RDEPEND="
 			x11-libs/libXxf86vm
 			x11-libs/qt-core
 			x11-libs/qt-gui
+	)
+	opencl? (
+		!>=x11-drivers/nvidia-drivers-195
 	)
 "
 

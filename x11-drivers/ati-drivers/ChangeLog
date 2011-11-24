@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.263 2011/11/21 15:45:39 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.264 2011/11/24 15:40:09 chithanh Exp $
+
+  24 Nov 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  ati-drivers-11.11.ebuild:
+  Block recent nvidia-drivers when opencl is enabled, bug #391131.
 
   21 Nov 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   ati-drivers-11.11.ebuild:
