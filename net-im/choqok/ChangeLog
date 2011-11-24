@@ -1,6 +1,11 @@
 # ChangeLog for net-im/choqok
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/choqok/ChangeLog,v 1.21 2011/11/19 17:33:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/choqok/ChangeLog,v 1.22 2011/11/24 21:17:28 dilfridge Exp $
+
+*choqok-1.2 (24 Nov 2011)
+
+  24 Nov 2011; Andreas K. Huettel <dilfridge@gentoo.org> +choqok-1.2.ebuild:
+  Version bump, thanks johu!
 
   19 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> choqok-1.1-r1.ebuild,
   metadata.xml:
