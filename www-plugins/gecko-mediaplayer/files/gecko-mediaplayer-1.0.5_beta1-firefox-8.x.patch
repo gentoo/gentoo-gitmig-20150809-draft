@@ -1,0 +1,45 @@
+--- src/np_entry.cpp
++++ src/np_entry.cpp
+@@ -80,9 +80,9 @@
+
+ #endif                          /* XP_WIN */
+
+-char *NPP_GetMIMEDescription();
++const char *NPP_GetMIMEDescription();
+
+-char *NP_GetMIMEDescription()
++const char *NP_GetMIMEDescription()
+ {
+     return NPP_GetMIMEDescription();
+ }
+--- src/npp_gate.cpp
++++ src/npp_gate.cpp
+@@ -44,7 +44,7 @@
+ #include "plugin_types.h"
+ #include "plugin_setup.h"
+
+-char *NPP_GetMIMEDescription(void)
++const char *NPP_GetMIMEDescription(void)
+ {
+     return GetMIMEDescription();
+ }
+--- src/npupp.h
++++ src/npupp.h
+@@ -684,7 +684,7 @@
+
+     NPError OSCALL NP_Shutdown();
+
+-    char *NP_GetMIMEDescription();
++    const char *NP_GetMIMEDescription();
+
+ #ifdef __cplusplus
+ }
+@@ -700,7 +700,7 @@
+
+ /* plugin meta member functions */
+
+-    NP_EXPORT(char *) NP_GetMIMEDescription(void);
++    NP_EXPORT(const char *) NP_GetMIMEDescription(void);
+      NP_EXPORT(NPError) NP_Initialize(NPNetscapeFuncs *, NPPluginFuncs *);
+      NP_EXPORT(NPError) NP_Shutdown(void);
+      NP_EXPORT(NPError) NP_GetValue(void *future, NPPVariable aVariable, void *aValue);
