@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.2 2011/11/24 21:30:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-0.3.2.ebuild,v 1.1 2011/11/24 21:30:49 dilfridge Exp $
 
 EAPI=4
 
