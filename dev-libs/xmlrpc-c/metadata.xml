@@ -9,10 +9,6 @@
 		<email>pva@gentoo.org</email>
 		<name>Peter Volkov</name>
 	</maintainer>
-	<maintainer>
-		<email>loki_val@gentoo.org</email>
-		<name>Peter Alfredsen</name>
-	</maintainer>
 	<use>
 		<flag name='abyss'>Build the Abyss mini web-server.</flag>
 		<flag name='libxml2'>Use dev-libs/libxml2 to parse XML instead of the internal expat library.</flag>
