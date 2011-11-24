@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/libobjc2/libobjc2-1.5.ebuild,v 1.1 2011/08/05 11:47:58 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/libobjc2/libobjc2-1.6.ebuild,v 1.1 2011/11/24 10:54:08 voyageur Exp $
 
-EAPI=3
+EAPI=4
 inherit multilib
 
 # We need gnustep-make, but gnustep-make can depend on libobjc
@@ -37,12 +37,13 @@ src_configure() {
 }
 
 src_compile() {
-	emake GNUSTEP_MAKEFILES="${GSMAKE_S}" || die "compilation failed"
+	emake GNUSTEP_MAKEFILES="${GSMAKE_S}" messages=yes
 }
 
 src_install() {
 	emake GNUSTEP_MAKEFILES="${GSMAKE_S}" \
 		GNUSTEP_CONFIG_FILE="${GSMAKE_S}"/GNUstep.conf \
 		GNUSTEP_INSTALLATION_DOMAIN=SYSTEM \
-		DESTDIR="${D}" install || die "install has failed"
+		messages=yes \
+		DESTDIR="${D}" install
 }
