@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.31 2011/08/22 04:46:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.32 2011/11/24 00:04:13 vapier Exp $
 
 # @ECLASS: ghc-package.eclass
 # @MAINTAINER:
@@ -178,7 +178,7 @@ ghc-makeghcilib() {
 	ld --relocatable --discard-all --output="${outfile}" --whole-archive "$1"
 }
 
-# @FUNCTION: ghc-makeghcilib
+# @FUNCTION: ghc-package-exists
 # @DESCRIPTION:
 # tests if a ghc package exists
 ghc-package-exists() {

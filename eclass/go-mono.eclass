@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/go-mono.eclass,v 1.12 2011/08/22 04:46:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/go-mono.eclass,v 1.13 2011/11/24 00:04:13 vapier Exp $
 
 # @ECLASS: go-mono.eclass
 # @MAINTAINER:
@@ -103,9 +103,9 @@ go-mono_src_configure() {
 		"$@"
 }
 
-# @FUNCTION: go-mono_src_configure
+# @FUNCTION: go-mono_src_compile
 # @DESCRIPTION:
-# Runs default()
+# Runs emake.
 go-mono_src_compile() {
 	emake "$@" || die "emake failed"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qmail.eclass,v 1.4 2011/08/22 04:46:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qmail.eclass,v 1.5 2011/11/24 00:04:13 vapier Exp $
 
 # @ECLASS: qmail.eclass
 # @MAINTAINER:
@@ -106,7 +106,7 @@ qmail_set_cc() {
 	echo "${ld} ${LDFLAGS}" > ./conf-ld || die 'Patching conf-ld failed.'
 }
 
-# @FUNCTION: qmail_create_users
+# @FUNCTION: qmail_create_groups
 # @DESCRIPTION:
 # Keep qmail groups in sync across ebuilds
 qmail_create_groups() {

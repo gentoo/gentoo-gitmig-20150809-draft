@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.33 2011/11/10 19:09:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-sharp-module.eclass,v 1.34 2011/11/24 00:04:13 vapier Exp $
 
 # @ECLASS: gtk-sharp-module.eclass
 # @MAINTAINER:
@@ -257,7 +257,7 @@ DESCRIPTION="GtkSharp's ${GTK_SHARP_MODULE} module of the ${TARBALL} tarball"
 # @DESCRIPTION:
 # Default value: http://www.mono-project.com/GtkSharp
 HOMEPAGE="http://www.mono-project.com/GtkSharp"
-# @ECLASS-VARIABLE: DESCRIPTION
+# @ECLASS-VARIABLE: LICENSE
 # @DESCRIPTION:
 # Default value: LGPL-2.1
 LICENSE="LGPL-2.1"
