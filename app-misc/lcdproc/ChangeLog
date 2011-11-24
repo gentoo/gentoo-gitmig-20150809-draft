@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lcdproc
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.69 2009/11/02 09:33:58 rbu Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.70 2011/11/24 12:22:02 pacho Exp $
+
+  24 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #158470
 
   02 Nov 2009; Robert Buchholz <rbu@gentoo.org> lcdproc-0.5.3.ebuild:
   Fix sed line for DriverPath

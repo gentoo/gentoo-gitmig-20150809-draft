@@ -3,10 +3,6 @@
 <pkgmetadata>
 <herd>lcd</herd>
 <maintainer>
-  <email>rbu@gentoo.org</email>
-  <name>Robert Buchholz</name>
-</maintainer>
-<maintainer>
   <email>bernhard.walle@gmx.de</email>
   <name>Bernhard Walle</name>
   <description>Upstream maintainer wants to be CC'ed directly on bugs.</description>

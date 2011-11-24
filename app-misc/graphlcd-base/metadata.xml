@@ -5,10 +5,6 @@
   <email>vdr@gentoo.org</email>
   <name>gentoo-vdr-project</name>
 </maintainer>
-<maintainer>
-  <email>rbu@gentoo.org</email>
-  <name>Robert Buchholz</name>
-</maintainer>
 <longdescription lang="en">
   This package provides Graphical LCD Driver.
 </longdescription>

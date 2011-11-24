@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lcd4linux
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.38 2010/03/05 23:26:14 ssuominen Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.39 2011/11/24 12:21:15 pacho Exp $
+
+  24 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #158470
 
   05 Mar 2010; Samuli Suominen <ssuominen@gentoo.org>
   lcd4linux-0.10.1_rc2-r2.ebuild,

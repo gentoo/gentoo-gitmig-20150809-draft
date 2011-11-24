@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>lcd</herd>
-	<maintainer>
-		<email>rbu@gentoo.org</email>
-		<name>Robert Buchholz</name>
-	</maintainer>
 	<longdescription lang="en">
 		GLCDprocDriver is the glue between the app-misc/graphlcd-base
 		library, which is written in C++, and app-misc/lcdproc's

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lcd-stuff
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd-stuff/ChangeLog,v 1.17 2009/11/09 13:20:57 maekke Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd-stuff/ChangeLog,v 1.18 2011/11/24 12:20:33 pacho Exp $
+
+  24 Nov 2011; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Drop maintainer due retirement, bug #158470
 
   09 Nov 2009; Markus Meier <maekke@gentoo.org> lcd-stuff-0.1.6.ebuild:
   amd64/x86 stable, bug #286901
