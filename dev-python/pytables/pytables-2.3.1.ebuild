@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/pytables-2.3.ebuild,v 1.1 2011/10/16 09:05:27 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytables/pytables-2.3.1.ebuild,v 1.1 2011/11/25 09:39:22 xarthisius Exp $
 
 EAPI=4
 
@@ -10,14 +10,14 @@ SUPPORT_PYTHON_ABIS="1"
 MY_PN=tables
 MY_P=${MY_PN}-${PV}
 
-inherit distutils eutils
+inherit distutils multilib
 
 DESCRIPTION="A package for managing hierarchical datasets built on top of the HDF5 library."
 HOMEPAGE="http://www.pytables.org http://pypi.python.org/pypi/tables"
 SRC_URI="mirror://sourceforge/${PN}/${PV}/${MY_P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 LICENSE="BSD"
 IUSE="doc contrib examples"
 
@@ -35,6 +35,11 @@ RESTRICT_PYTHON_ABIS="3.*"
 S=${WORKDIR}/${MY_P}
 
 DOCS="ANNOUNCE.txt MIGRATING_TO_2.x.txt RELEASE_NOTES.txt THANKS doc/usersguide-${PV}.pdf"
+
+src_compile() {
+	export HDF5_DIR="${EPREFIX}"/usr
+	distutils_src_compile
+}
 
 src_test() {
 	testing() {
