@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/gnome-phone-manager
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/ChangeLog,v 1.45 2011/11/20 19:20:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/ChangeLog,v 1.46 2011/11/25 07:40:33 tetromino Exp $
+
+  25 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-phone-manager-0.68.ebuild:
+  Drop ppc keyword due to gnome-bluetooth-3 dep (bug #390345).
 
 *gnome-phone-manager-0.68 (20 Nov 2011)
 
