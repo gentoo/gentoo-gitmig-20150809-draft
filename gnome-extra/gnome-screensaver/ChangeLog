@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/gnome-screensaver
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.146 2011/10/30 07:55:51 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.147 2011/11/25 07:01:04 tetromino Exp $
+
+  25 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnome-screensaver-3.0.0-r1.ebuild,
+  -files/gnome-screensaver-3.0.0-clock-skew.patch,
+  -files/gnome-screensaver-3.0.0-user-switcher-crash.patch,
+  -files/gnome-screensaver-3.0.0-watchdog-add_seconds.patch,
+  -gnome-screensaver-3.0.1.ebuild:
+  Drop old.
 
 *gnome-screensaver-3.2.0 (30 Oct 2011)
 
