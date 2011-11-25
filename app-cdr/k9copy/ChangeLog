@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/k9copy
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.65 2011/04/28 21:09:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.66 2011/11/25 23:47:43 hwoarang Exp $
+
+  25 Nov 2011; Markos Chandras <hwoarang@gentoo.org> k9copy-2.3.7.ebuild:
+  Stable on amd64 wrt bug #391611
 
   28 Apr 2011; Alexis Ballier <aballier@gentoo.org> k9copy-2.3.7.ebuild,
   +files/k9copy-2.3.7-ffmpeg.patch:
