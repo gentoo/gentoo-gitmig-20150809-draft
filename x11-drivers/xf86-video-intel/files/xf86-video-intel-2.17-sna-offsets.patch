@@ -1,0 +1,31 @@
+From 16f5e224dcfd97012b38ee1af6c72dbe3c0f3304 Mon Sep 17 00:00:00 2001
+From: Chris Wilson <chris@chris-wilson.co.uk>
+Date: Fri, 25 Nov 2011 16:21:41 +0000
+Subject: sna: Avoid the double application of drawable offsets for tiled spans
+
+As we handle tiled spans indirectly, we need to avoid applying the
+drawable offsets twice (once in the mi layer generating the spans, and
+then once more in the tiled rect renderer).
+
+Reported-by: Ulrich Müller <ulm@gentoo.org>
+Bugzilla: https://bugs.freedesktop.org/show_bug.cgi?id=43245
+Signed-off-by: Chris Wilson <chris@chris-wilson.co.uk>
+---
+diff --git a/src/sna/sna_accel.c b/src/sna/sna_accel.c
+index 1a35c4d..03020c9 100644
+--- a/src/sna/sna_accel.c
++++ b/src/sna/sna_accel.c
+@@ -2790,9 +2790,9 @@ sna_fill_spans(DrawablePtr drawable, GCPtr gc, int n,
+ 				return;
+ 
+ 			for (i = 0; i < n; i++) {
+-				rect[i].x = pt[i].x;
++				rect[i].x = pt[i].x - drawable->x;
+ 				rect[i].width = width[i];
+-				rect[i].y = pt[i].y;
++				rect[i].y = pt[i].y - drawable->y;
+ 				rect[i].height = 1;
+ 			}
+ 
+--
+cgit v0.9.0.2-2-gbebe

@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-intel
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.76 2011/11/17 17:45:18 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.77 2011/11/25 23:30:18 chithanh Exp $
+
+*xf86-video-intel-2.17.0-r1 (25 Nov 2011)
+
+  25 Nov 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -xf86-video-intel-2.17.0.ebuild, +xf86-video-intel-2.17.0-r1.ebuild,
+  +files/xf86-video-intel-2.17-sna-offsets.patch:
+  Add patch to fix screen corruption, bug #391819.
 
 *xf86-video-intel-2.17.0 (17 Nov 2011)
 
