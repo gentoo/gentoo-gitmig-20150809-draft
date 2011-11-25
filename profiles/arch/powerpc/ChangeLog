@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.147 2011/11/20 09:19:21 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.148 2011/11/25 08:00:02 tetromino Exp $
+
+  25 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org> package.use.mask,
+  ppc64/64ul/package.use.mask:
+  Mask USE flags on gnome-3.2 packages due to missing keywords on deps; bug
+  #390345
 
   20 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> package.use.mask:
   Masked sys-fs/dmraid[dietlibc] wrt #364103

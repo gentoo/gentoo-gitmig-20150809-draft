@@ -1,6 +1,16 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.71 2011/11/09 01:31:23 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.use.mask,v 1.72 2011/11/25 08:00:01 tetromino Exp $
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (25 Nov 2011)
+# Mask USE flags on gnome-3.2 packages due to missing keywords on deps;
+# bug #390345
+>=app-cdr/brasero-3 tracker
+app-text/evince xps
+>=dev-libs/folks-0.6 eds socialweb tracker
+>=gnome-base/gnome-menus-3.2 test
+>=gnome-base/gnome-panel-3 eds
+>=gnome-base/nautilus-3 previewer tracker
 
 # Patrick McLean <chutzpah@gentoo.org> (08 Nov 2011)
 # mask conntrack USE flag for dnsmasq as dep is not keyworded
