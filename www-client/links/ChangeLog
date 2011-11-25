@@ -1,9 +1,9 @@
 # ChangeLog for www-client/links
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.141 2011/11/25 00:28:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/ChangeLog,v 1.142 2011/11/25 00:34:29 ssuominen Exp $
 
   25 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> links-2.4-r1.ebuild:
-  The binary name is links, not links2. Fix postinst message.
+  Convert postinst message to REQUIRED_USE: USE="svga" depend on USE="suid"
 
   25 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> -links-2.4.ebuild:
   old

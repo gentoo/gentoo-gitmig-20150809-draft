@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.4-r1.ebuild,v 1.2 2011/11/25 00:28:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.4-r1.ebuild,v 1.3 2011/11/25 00:34:29 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -12,7 +12,7 @@ SRC_URI="http://${PN}.twibright.com/download/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~x86-fbsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~x64-solaris ~x86-solaris"
-IUSE="bzip2 directfb fbcon gpm jpeg livecd ssl svga tiff unicode X zlib"
+IUSE="bzip2 directfb fbcon gpm jpeg livecd ssl suid svga tiff unicode X zlib"
 
 # Note: if X or fbcon usegflag are enabled, links will be built in graphic
 # mode. libpng is required to compile links in graphic mode
@@ -47,6 +47,8 @@ RDEPEND="ssl? ( dev-libs/openssl:0 )
 		)"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+REQUIRED_USE="svga? ( suid )"
 
 DOCS=( AUTHORS BRAILLE_HOWTO BUGS ChangeLog KEYS NEWS README SITES TODO )
 
@@ -87,7 +89,7 @@ src_configure() {
 		myconf="${myconf} --with-libjpeg"
 	fi
 
-	#	$(use_with sdl)
+	# $(use_with sdl)
 	econf \
 		$(use_with X x) \
 		$(use_with jpeg libjpeg) \
@@ -111,13 +113,6 @@ src_install() {
 	dohtml doc/links_cal/*
 
 	dosym links /usr/bin/links2
-}
 
-pkg_postinst() {
-	if use svga; then
-		elog "You had the svga USE flag enabled, but for security reasons"
-		elog "the links binary is NOT setuid by default. In order to"
-		elog "enable links to work in SVGA, please change the permissions"
-		elog "of /usr/bin/links to enable suid."
-	fi
+	use suid && fperms 4755 /usr/bin/links
 }
