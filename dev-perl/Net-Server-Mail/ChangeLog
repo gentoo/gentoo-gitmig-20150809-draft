@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Net-Server-Mail
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Server-Mail/ChangeLog,v 1.2 2011/06/08 07:46:07 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Server-Mail/ChangeLog,v 1.3 2011/11/25 23:35:04 hwoarang Exp $
+
+  25 Nov 2011; Markos Chandras <hwoarang@gentoo.org>
+  Net-Server-Mail-0.170.0.ebuild:
+  Stable on amd64 wrt bug #391241
 
   08 Jun 2011; Kacper Kowalik <xarthisius@gentoo.org>
   Net-Server-Mail-0.170.0.ebuild:
