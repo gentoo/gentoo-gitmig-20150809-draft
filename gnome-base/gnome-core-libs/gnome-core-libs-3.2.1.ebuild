@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-libs/gnome-core-libs-3.2.1.ebuild,v 1.1 2011/11/07 07:48:08 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core-libs/gnome-core-libs-3.2.1.ebuild,v 1.2 2011/11/25 07:51:39 tetromino Exp $
 
 EAPI="4"
 
@@ -40,3 +40,8 @@ RDEPEND="
 "
 DEPEND=""
 S=${WORKDIR}
+
+pkg_pretend() {
+	elog "See http://www.gentoo.org/proj/en/desktop/gnome/howtos/gnome-3.2-upgrade.xml"
+	elog "for the Gentoo GNOME 3.2 upgrade guide."
+}
