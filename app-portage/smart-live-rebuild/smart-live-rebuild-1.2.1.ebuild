@@ -1,8 +1,8 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/smart-live-rebuild-1.2.ebuild,v 1.2 2011/10/26 07:52:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/smart-live-rebuild/smart-live-rebuild-1.2.1.ebuild,v 1.1 2011/11/25 20:34:55 mgorny Exp $
 
-EAPI=3
+EAPI=4
 
 PYTHON_DEPEND='2:2.6'
 SUPPORT_PYTHON_ABIS=1
@@ -33,7 +33,7 @@ src_install() {
 	distutils_src_install
 
 	insinto /etc/portage
-	newins smart-live-rebuild.conf{.example,} || die
+	newins smart-live-rebuild.conf{.example,}
 	insinto /usr/share/portage/config/sets
-	newins sets.conf.example ${PN}.conf || die
+	newins sets.conf.example ${PN}.conf
 }
