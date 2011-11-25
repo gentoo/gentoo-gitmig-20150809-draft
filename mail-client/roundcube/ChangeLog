@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/roundcube
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.60 2011/11/04 16:15:07 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.61 2011/11/25 19:11:11 xarthisius Exp $
+
+  25 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> roundcube-0.6.ebuild:
+  ppc/ppc64 stable wrt #389807
 
   05 Nov 2011; Andreas Schuerch <nativemad@gentoo.org> roundcube-0.6.ebuild:
   x86 stable, see bug 388613
