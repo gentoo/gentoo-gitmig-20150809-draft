@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libbeagle
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbeagle/ChangeLog,v 1.13 2010/06/19 17:14:21 cedk Exp $
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libbeagle/ChangeLog,v 1.14 2011/11/25 20:05:24 floppym Exp $
+
+*libbeagle-0.3.9-r1 (25 Nov 2011)
+
+  25 Nov 2011; Mike Gilbert <floppym@gentoo.org> +libbeagle-0.3.9-r1.ebuild:
+  Python-related improvments by Ian Delaney. Bug 312185.
 
   19 Jun 2010; Cédric Krier <cedk@gentoo.org> metadata.xml:
   Remove myself as maintainer
