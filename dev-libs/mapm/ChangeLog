@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mapm
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mapm/ChangeLog,v 1.7 2009/03/02 13:39:48 dev-zero Exp $
+# Copyright 2000-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mapm/ChangeLog,v 1.8 2011/11/25 23:42:34 hwoarang Exp $
+
+  25 Nov 2011; Markos Chandras <hwoarang@gentoo.org> mapm-4.9.5.ebuild:
+  Stable on amd64 wrt bug #391585
 
 *mapm-4.9.5 (02 Mar 2009)
 

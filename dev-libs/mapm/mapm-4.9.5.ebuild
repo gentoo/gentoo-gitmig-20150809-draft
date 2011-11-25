@@ -1,6 +1,6 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mapm/mapm-4.9.5.ebuild,v 1.1 2009/03/02 13:39:48 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mapm/mapm-4.9.5.ebuild,v 1.2 2011/11/25 23:42:34 hwoarang Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.tc.umn.edu/~ringx004/mapm-main.html"
 SRC_URI="http://www.tc.umn.edu/~ringx004/${P}.tar.gz"
 LICENSE="mapm"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~ppc ~sparc"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=""
