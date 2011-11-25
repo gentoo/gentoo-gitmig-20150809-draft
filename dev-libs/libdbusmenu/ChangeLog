@@ -1,6 +1,24 @@
 # ChangeLog for dev-libs/libdbusmenu
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.10 2011/11/20 12:41:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdbusmenu/ChangeLog,v 1.11 2011/11/25 20:49:59 ssuominen Exp $
+
+  25 Nov 2011; Samuli Suominen <ssuominen@gentoo.org>
+  -libdbusmenu-0.2.8.ebuild, -files/libdbusmenu-0.2.8-1-optional-gtk.patch,
+  -files/libdbusmenu-0.2.8-2-optional-tests.patch,
+  -files/libdbusmenu-0.2.8-no-gobject-introspection.patch,
+  -files/libdbusmenu-0.3.14-fix-aclocal.patch,
+  -files/libdbusmenu-0.3.14-optional-dumper.patch, -libdbusmenu-0.3.16.ebuild,
+  -libdbusmenu-0.3.16-r2.ebuild,
+  -files/libdbusmenu-0.3.16-decouple-testapp.patch,
+  -files/libdbusmenu-0.3.16-fix-introspection.patch,
+  -files/libdbusmenu-0.3.16-optional-gtk.patch,
+  -files/libdbusmenu-0.3.16-optional-tests.patch,
+  -files/libdbusmenu-0.3.16-optional-vala.patch,
+  -files/libdbusmenu-0.3.16-parallel-make.patch,
+  -files/libdbusmenu-0.3.94-decouple-testapp.patch,
+  -files/libdbusmenu-0.3.94-fix-introspection.patch,
+  -files/libdbusmenu-0.3.94-optional-gtk.patch:
+  old
 
   20 Nov 2011; Pacho Ramos <pacho@gentoo.org> libdbusmenu-0.5.1.ebuild:
   Drop DEPRECATED flags, bug #391103
