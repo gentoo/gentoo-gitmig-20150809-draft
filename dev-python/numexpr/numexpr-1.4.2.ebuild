@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numexpr/numexpr-1.4.2.ebuild,v 1.2 2011/08/06 20:28:31 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numexpr/numexpr-1.4.2.ebuild,v 1.3 2011/11/25 09:31:42 xarthisius Exp $
 
 EAPI=3
 
@@ -16,7 +16,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="mkl"
 
 RDEPEND="dev-python/numpy
