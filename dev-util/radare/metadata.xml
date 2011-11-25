@@ -2,15 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <use>
-	<flag name="gui">
-	  Enable the graphical user interface of radare (broken)
-	</flag>
-	<flag name="vala">
-	  Enable support for the vala programming language
-	</flag>
+    <flag name="gui">Enable the graphical user interface of radare (broken)</flag>
   </use>
   <maintainer>
-	<email>maintainer-needed@gentoo.org</email>
+    <email>maintainer-needed@gentoo.org</email>
   </maintainer>
 </pkgmetadata>
-
