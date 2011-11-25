@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Net_IDNA2
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_IDNA2/ChangeLog,v 1.3 2011/11/04 09:29:08 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_IDNA2/ChangeLog,v 1.4 2011/11/25 18:07:08 xarthisius Exp $
+
+  25 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org>
+  PEAR-Net_IDNA2-0.1.1.ebuild:
+  Straight to ppc/ppc64 wrt #388613
 
   04 Nov 2011; Andreas Schuerch <nativemad@gentoo.org>
   PEAR-Net_IDNA2-0.1.1.ebuild:
