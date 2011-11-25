@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_learn/scikits_learn-0.8.ebuild,v 1.1 2011/06/09 14:17:02 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scikits_learn/scikits_learn-0.9.ebuild,v 1.1 2011/11/25 22:13:57 bicatali Exp $
 
 EAPI="3"
 
@@ -11,11 +11,11 @@ DISTUTILS_SRC_TEST="setup.py"
 
 inherit distutils
 
-MY_P="${P/scikits_/scikits.}"
+MYPN="${PN/scikits_/scikit-}"
 
 DESCRIPTION="A set of python modules for machine learning and data mining"
-HOMEPAGE="http://scikit-learn.sourceforge.net/"
-SRC_URI="mirror://sourceforge/scikit-learn/${MY_P}.tar.gz"
+HOMEPAGE="http://scikit-learn.org"
+SRC_URI="mirror://sourceforge/${MYPN}/${MYPN}-${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -32,7 +32,7 @@ DEPEND="${CDEPEND}
 	dev-python/setuptools
 	doc? ( dev-python/sphinx dev-python/matplotlib )"
 
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/${MYPN}-${PV}"
 
 src_prepare() {
 	# use stock libsvm
