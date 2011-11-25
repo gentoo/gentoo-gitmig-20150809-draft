@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.92 2011/11/11 09:07:30 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox/ChangeLog,v 1.93 2011/11/25 10:25:23 polynomial-c Exp $
+
+  25 Nov 2011; Lars Wendler <polynomial-c@gentoo.org>
+  virtualbox-4.1.6-r1.ebuild, +files/virtualbox-4.1.6-yasm120-fix.patch:
+  Fixed compilation with dev-lang/yasm-1.2.0 (bug #391189).
 
   11 Nov 2011; Lars Wendler <polynomial-c@gentoo.org>
   -files/virtualbox-4.1.0-vboxpci-build.patch:
