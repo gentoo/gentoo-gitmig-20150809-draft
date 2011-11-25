@@ -1,11 +1,11 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.4-r1.ebuild,v 1.3 2011/11/25 00:34:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.4-r1.ebuild,v 1.4 2011/11/25 00:46:44 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils
 
-DESCRIPTION="links is a fast lightweight text and graphic web-browser"
+DESCRIPTION="A fast and lightweight web browser running in both graphics and text mode"
 HOMEPAGE="http://links.twibright.com/"
 SRC_URI="http://${PN}.twibright.com/download/${P}.tar.bz2"
 
