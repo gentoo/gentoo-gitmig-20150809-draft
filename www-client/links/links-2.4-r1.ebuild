@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.4-r1.ebuild,v 1.4 2011/11/25 00:46:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.4-r1.ebuild,v 1.5 2011/11/25 00:52:38 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -53,7 +53,7 @@ REQUIRED_USE="svga? ( suid )"
 DOCS=( AUTHORS BRAILLE_HOWTO BUGS ChangeLog KEYS NEWS README SITES TODO )
 
 src_prepare() {
-	if use unicode ; then
+	if use unicode; then
 		pushd intl >/dev/null
 		./gen-intl || die
 		./synclang || die
