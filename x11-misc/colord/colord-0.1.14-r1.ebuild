@@ -1,10 +1,10 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.12.ebuild,v 1.2 2011/10/05 13:19:17 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/colord/colord-0.1.14-r1.ebuild,v 1.1 2011/11/25 18:15:23 tetromino Exp $
 
 EAPI="4"
 
-inherit eutils base
+inherit autotools eutils base
 
 DESCRIPTION="System service to accurately color manage input and output devices"
 HOMEPAGE="http://www.freedesktop.org/software/colord/"
@@ -12,23 +12,22 @@ SRC_URI="http://www.freedesktop.org/software/colord/releases/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="doc examples +introspection scanner +udev"
+KEYWORDS="~amd64 ~arm ~hppa ~x86"
+IUSE="doc elibc_FreeBSD examples +introspection scanner +udev vala"
 
 # FIXME: raise to libusb-1.0.9:1 when available
 COMMON_DEPEND="
 	dev-db/sqlite:3
 	>=dev-libs/glib-2.28.0:2
-	>=dev-libs/libusb-1.0.8:1
 	>=media-libs/lcms-2.2:2
-	>=sys-auth/polkit-0.97
+	elibc_FreeBSD? ( >=sys-freebsd/freebsd-lib-8.0[usb] )
+	!elibc_FreeBSD? ( >=dev-libs/libusb-1.0.8:1 )
 	introspection? ( >=dev-libs/gobject-introspection-0.9.8 )
 	scanner? ( media-gfx/sane-backends )
 	udev? ( || ( sys-fs/udev[gudev] sys-fs/udev[extras] ) )
 "
 RDEPEND="${COMMON_DEPEND}
 	media-gfx/shared-color-profiles"
-# Automagic build-time vala dependency if USE=introspection
 DEPEND="${COMMON_DEPEND}
 	dev-libs/libxslt
 	>=dev-util/intltool-0.35
@@ -38,7 +37,7 @@ DEPEND="${COMMON_DEPEND}
 		app-text/docbook-xml-dtd:4.1.2
 		>=dev-util/gtk-doc-1.9
 	)
-	introspection? ( dev-lang/vala:0.14 )
+	vala? ( dev-lang/vala:0.14[vapigen] )
 "
 
 # FIXME: needs pre-installed dbus service files
@@ -51,11 +50,37 @@ pkg_setup() {
 	enewuser colord -1 -1 /var/lib/colord colord
 }
 
+src_prepare() {
+	# Fix SQL injection vulnerability (bug #391879); will be in next release
+	epatch "${FILESDIR}/${P}-sql-injections"{,-2}.patch
+
+	# Ubuntu patch to allow root and at_console to access colord without polkit;
+	# this behavior matches upstream default polkit settings.
+	epatch "${FILESDIR}/${PN}-0.1.13-use-dbus-security-for-permissions.patch"
+
+	epatch "${FILESDIR}/${PN}-0.1.11-fix-automagic-vala.patch"
+
+	# Use <libusb.h> for freebsd compatibility, bug #387959#c6
+	sed -e 's:#include <libusb-1.0/libusb.h>:#include <libusb.h>:' \
+		-i src/sensors/*.c src/sensors/*.h || die "sed failed"
+
+	eautoreconf
+}
+
 src_configure() {
+	#  bug #387959#c6
+	if use elibc_FreeBSD; then
+		USB_CFLAGS="-I${EPREFIX}/usr/include"
+		USB_LIBS="-lusb"
+		echo "$USB_CFLAGS $USB_LIBS"
+	fi
+
+	# Disable polkit to allow registering devices when colord is running as
+	# non-root; https://bugs.launchpad.net/ubuntu/+source/colord/+bug/837851
 	econf \
 		--disable-examples \
 		--disable-static \
-		--enable-polkit \
+		--disable-polkit \
 		--enable-reverse \
 		--disable-volume-search \
 		--with-daemon-user=colord \
@@ -64,6 +89,7 @@ src_configure() {
 		$(use_enable introspection) \
 		$(use_enable scanner sane) \
 		$(use_enable udev gudev) \
+		$(use_enable vala) \
 		VAPIGEN=$(type -p vapigen-0.14)
 	# parallel make fails in doc/api
 	use doc && MAKEOPTS=-j1
@@ -84,7 +110,7 @@ src_install() {
 		doins examples/*.c
 	fi
 
-	find "${D}" -name "*.la" -delete
+	find "${D}" -name "*.la" -delete || die
 }
 
 pkg_postinst() {
