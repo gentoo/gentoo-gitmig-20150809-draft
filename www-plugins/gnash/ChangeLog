@@ -1,6 +1,13 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.67 2011/11/21 21:30:22 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.68 2011/11/25 17:39:19 chithanh Exp $
+
+*gnash-0.8.9-r2 (25 Nov 2011)
+
+  25 Nov 2011; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  -gnash-0.8.9-r1.ebuild, +gnash-0.8.9-r2.ebuild,
+  +files/gnash-0.8.9-kde4-libdir.patch:
+  Fix kde multilib library path, bug #391283.
 
 *gnash-0.8.9-r1 (21 Nov 2011)
 
