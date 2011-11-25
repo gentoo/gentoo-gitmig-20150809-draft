@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.66 2011/11/03 00:40:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.67 2011/11/25 02:54:59 mattm Exp $
+
+*zabbix-1.8.9 (25 Nov 2011)
+
+  25 Nov 2011; Matthew Marlowe <mattm@gentoo.org> +zabbix-1.8.9.ebuild:
+  Bump for Zabbix 1.8.9 production release
 
   03 Nov 2011; Mike Frysinger <vapier@gentoo.org> zabbix-1.8.3.ebuild,
   zabbix-1.8.5.ebuild, zabbix-1.8.6.ebuild, zabbix-1.8.7.ebuild,
