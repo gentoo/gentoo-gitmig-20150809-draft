@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/glpk
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.48 2011/06/09 12:18:17 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.49 2011/11/25 19:11:22 bicatali Exp $
+
+*glpk-4.47 (25 Nov 2011)
+
+  25 Nov 2011; Sébastien Fabbro <bicatali@gentoo.org> +glpk-4.47.ebuild:
+  Version bump
 
   09 Jun 2011; Alexey Shvetsov <alexxy@gentoo.org> glpk-4.45.ebuild:
   Add ~amd64-linux keyword
