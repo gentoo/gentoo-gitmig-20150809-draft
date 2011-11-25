@@ -1,6 +1,6 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9-r3.ebuild,v 1.1 2010/09/17 05:36:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9-r3.ebuild,v 1.2 2011/11/25 23:33:09 hwoarang Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/jail/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=sys-apps/sed-4"
@@ -30,12 +30,12 @@ src_prepare() {
 
 src_compile() {
 	# configuration files should be installed in /etc not /usr/etc
-	sed -i "s:\$4/etc:\${D}/etc:g" install.sh
+	sed -i "s:\$4/etc:\${D}/etc:g" install.sh || die
 
 	# the destination directory should be /usr not /usr/local
 	cd "${S}"/src
 	sed -i -e "s:usr/local:${D}/usr:g" \
-		-e "s:^COPT =.*:COPT = -Wl,-z,no:g" Makefile
+		-e "s:^COPT =.*:COPT = -Wl,-z,no:g" Makefile || die
 
 	# Below didn't work. Don't know why
 	#append-ldflags -Wl,-z,now
@@ -44,7 +44,7 @@ src_compile() {
 
 src_install() {
 	cd "${S}"/src
-	einstall
+	einstall || die
 
 	# remove //var/tmp/portage/jail-1.9/image//usr from files
 	FILES=( "${D}/usr/bin/mkjailenv"
@@ -66,12 +66,12 @@ src_install() {
 	for f in "${FILES[@]}"; do
 		# documentation says funtion 'dosed' is supposed to do this, but didn't know how to make it work :'(
 		# dosed ${file} || die "error in dosed"
-		sed -i "s:/${D}/usr:/usr:g" ${f}
+		sed -i "s:/${D}/usr:/usr:g" ${f} || die
 	done
 
 	cd "${D}"/usr/lib
-	sed -i "s:/usr/etc:/etc:" libjail.pm
+	sed -i "s:/usr/etc:/etc:" libjail.pm || die
 
 	cd "${S}"/doc
-	dodoc CHANGELOG INSTALL README SECURITY VERSION
+	dodoc CHANGELOG INSTALL README SECURITY VERSION || die
 }
