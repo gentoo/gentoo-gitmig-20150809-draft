@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/radare
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/radare/ChangeLog,v 1.20 2011/03/23 06:20:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/radare/ChangeLog,v 1.21 2011/11/25 20:55:52 ssuominen Exp $
+
+  25 Nov 2011; Samuli Suominen <ssuominen@gentoo.org> -radare-1.4.2.ebuild,
+  -radare-1.5-r1.ebuild, -radare-1.5-r2.ebuild, -radare-1.5.2.ebuild:
+  old
 
   23 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> radare-1.5-r1.ebuild,
   radare-1.5-r2.ebuild, radare-1.5.2.ebuild, radare-1.5.2-r1.ebuild:
