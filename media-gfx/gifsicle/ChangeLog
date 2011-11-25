@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gifsicle
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gifsicle/ChangeLog,v 1.31 2011/08/23 23:34:45 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gifsicle/ChangeLog,v 1.32 2011/11/25 12:34:35 xmw Exp $
+
+*gifsicle-1.64 (25 Nov 2011)
+
+  25 Nov 2011; Michael Weber <xmw@gentoo.org> +gifsicle-1.64.ebuild:
+  Version bump
 
 *gifsicle-1.63 (23 Aug 2011)
 
