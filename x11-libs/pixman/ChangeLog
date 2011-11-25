@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/pixman
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.115 2011/11/07 13:42:46 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pixman/ChangeLog,v 1.116 2011/11/25 00:27:00 naota Exp $
+
+  25 Nov 2011; Naohiro Aota <naota@gentoo.org> pixman-0.24.0.ebuild,
+  +files/pixman-0.24.0-posix-test.patch:
+  Add patch to replace non-POSIX test. Bug #387087
 
 *pixman-0.24.0 (07 Nov 2011)
 
