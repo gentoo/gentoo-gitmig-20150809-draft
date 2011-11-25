@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/itstool
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/itstool/ChangeLog,v 1.1 2011/10/24 16:31:17 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/itstool/ChangeLog,v 1.2 2011/11/25 17:20:56 tetromino Exp $
+
+  25 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  itstool-1.1.1.ebuild:
+  Fix LICENSES (bug #391861, thanks to Hanno Boeck for reporting).
 
 *itstool-1.1.1 (24 Oct 2011)
 
