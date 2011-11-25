@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.124 2011/11/20 13:52:18 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.125 2011/11/25 14:32:46 flameeyes Exp $
+
+*pcsc-lite-1.8.1 (25 Nov 2011)
+
+  25 Nov 2011; Diego E. Pettenò <flameeyes@gentoo.org> +pcsc-lite-1.8.1.ebuild,
+  -pcsc-lite-1.8.0.ebuild:
+  Version bump.
 
 *pcsc-lite-1.8.0 (20 Nov 2011)
 
