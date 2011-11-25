@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13282 2011/11/24 20:02:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.13283 2011/11/25 08:05:46 tetromino Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexandre Rostovtsev <tetromino@gentoo.org> (25 Nov 2011)
+# Development release, not quite ready for general consumption
+=media-sound/rhythmbox-2.90*
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (24 Nov 2011)
 # GNOME 2 versions of seed are largely untested
@@ -267,10 +271,6 @@ games-strategy/dark-oberon
 # unmaintained upstream, obsolete in general. (bug #337657)
 # Masked for removal on 20 Nov 2011
 net-misc/x25_utils
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (19 Oct 2011)
-# Requires nautilus[introspection] to run
->=dev-python/nautilus-python-1.0
 
 # Richard Freeman <rich0@gentoo.org> (19 Oct 2011)
 # Emulator in latest sdk does not yet work
@@ -647,100 +647,6 @@ dev-tex/pdftex
 # upcoming 0.0.13
 =dev-python/pyasn1-0.0.13b
 
-# Nirbheek Chauhan <nirbheek@gentoo.org> (29 Jul 2011)
-# GNOME 3.0 mask for upgrade packages, don't add new packages to this list
-# unless they pull in one of the masked packages
-# The "Better late than never!" release
-#
-# Libraries
->=dev-libs/libgweather-3.0
->=gnome-base/libgnomekbd-3.0
-=media-libs/libcanberra-0.28-r4
-# Core Applications
->=app-accessibility/orca-3.0
->=gnome-base/gdm-3.0
->=gnome-base/gnome-applets-3.0
->=gnome-base/gnome-keyring-3.0
->=gnome-base/gnome-menus-3.0
->=gnome-base/gnome-panel-3.0
->=gnome-base/gnome-session-3.0
->=gnome-base/gnome-settings-daemon-3.0
->=gnome-base/gnome-control-center-3.0
->=gnome-base/gnome-shell-3.0
->=gnome-base/libgnome-keyring-3.0
->=gnome-base/nautilus-3.0
->=x11-wm/metacity-2.34
->=x11-wm/mutter-3.0
-# Extra Applications
->=app-arch/file-roller-3.0
->=app-cdr/brasero-3.0
->=app-crypt/seahorse-3.0
->=app-editors/gedit-3.0
->=app-editors/gedit-plugins-3.0
->=app-text/gtranslator-2.90
->=app-text/evince-3.0
->=dev-util/anjuta-3.0
->=app-pda/gtkpod-2.1.0
->=dev-util/devhelp-3.0
->=gnome-extra/drwright-3.0
->=gnome-extra/evolution-data-server-3.0
->=gnome-extra/evolution-exchange-3.0
->=gnome-extra/gcalctool-6.0
->=gnome-extra/gconf-editor-3.0
->=gnome-extra/gnome-color-manager-3.0
->=gnome-extra/gnome-games-3.0
->=gnome-extra/gnome-games-extra-data-3.0
->=gnome-extra/gnome-media-2.32.0-r300
->=gnome-extra/gnome-packagekit-3.0
->=gnome-extra/gnome-power-manager-3.0
->=gnome-extra/gnome-screensaver-3.0
->=gnome-extra/gnome-system-monitor-3.0
->=gnome-extra/gnome-tweak-tool-3.0
->=gnome-extra/gnome-user-share-3.0
->=gnome-extra/gnome-utils-3.0
->=gnome-extra/gucharmap-3.0
->=gnome-extra/mousetweaks-3.0
->=gnome-extra/nautilus-sendto-3.0
-gnome-extra/office-runner
->=gnome-extra/zenity-3.0
->=mail-client/evolution-3.0
->=media-gfx/eog-3.0
->=media-sound/rhythmbox-2.90
->=media-sound/sound-juicer-2.99
->=media-video/cheese-3.0
->=media-video/totem-3.0
->=net-analyzer/gnome-nettool-3.0
->=net-im/empathy-3.0
->=net-misc/vinagre-3.0
->=net-misc/vino-3.0
->=net-wireless/gnome-bluetooth-3.0
->=sys-apps/gnome-disk-utility-3.0.2-r300
->=www-client/epiphany-3.0
->=www-client/epiphany-extensions-3.0
->=x11-terms/gnome-terminal-3.0
-# Documentation
->=gnome-extra/yelp-3.0
->=dev-util/gnome-devel-docs-3.0
->=gnome-extra/gnome-user-docs-3.0
-# NetworkManager
->=net-misc/networkmanager-0.8.99
->=net-misc/networkmanager-pptp-0.8.99
->=net-misc/networkmanager-openconnect-0.8.99
->=net-misc/networkmanager-openvpn-0.8.99
->=net-misc/networkmanager-openswan-0.8.99
->=net-misc/networkmanager-vpnc-0.8.99
->=gnome-extra/nm-applet-0.8.99
-# Meta packages
->=gnome-base/gnome-core-apps-3.0
->=gnome-base/gnome-extra-apps-3.0
->=gnome-base/gnome-core-libs-3.0
->=gnome-base/gnome-fallback-3.0
->=gnome-base/gnome-light-3.0
->=gnome-base/gnome-3.0
-# Misc applications
->=gnome-extra/nautilus-open-terminal-0.19
->=app-mobilephone/gnome-phone-manager-0.67
-
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (28 Jul 2011)
 # A new update of the mysql / mariadb mask
 # Robin H. Johnson <robbat2@gentoo.org> (01 Feb 2010)
@@ -798,28 +704,6 @@ sci-chemistry/webmo
 # Eray Aslan <eras@gentoo.org> (15 Jun 2011)
 # Mask experimental software
 =mail-mta/postfix-2.9*
-
-# Nirbheek Chauhan <nirbheek@gentoo.org> (14 Jun 2011)
-# GNOME 3.2 mask
->=app-accessibility/caribou-0.4
-app-admin/eselect-gnome-shell-extensions
->=app-misc/tracker-0.12
->=dev-libs/folks-0.6
->=dev-libs/libgdata-0.9
->=dev-python/pyatspi-2.2
->=gnome-base/gconf-3.2
->=gnome-extra/at-spi-2.2
-gnome-extra/gnome-contacts
-gnome-extra/gnome-documents
-gnome-extra/gnome-shell-extensions
->=gnome-extra/nautilus-tracker-tags-0.12
-gnome-extra/sushi
->=media-libs/clutter-1.7
->=media-libs/cogl-1.7
->=net-libs/gnome-online-accounts-3
->=x11-libs/libcryptui-3
->=x11-misc/alacarte-0.13.2-r50
->=app-accessibility/accerciser-3.2
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (8 Jun 2011)
 # Broken upstream
@@ -1187,7 +1071,7 @@ dev-lisp/gcl
 # * No configuration/theming support
 # * No support for auth backends other than PAM
 # * Many more...
->=gnome-base/gdm-2.26
+=gnome-base/gdm-2.3*
 
 # Benedikt Böhm <hollow@gentoo.org> (19 Apr 2009)
 # masked for testing

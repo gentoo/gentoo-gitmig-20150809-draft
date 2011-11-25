@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.284 2011/11/25 00:38:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.285 2011/11/25 08:06:46 tetromino Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -23,11 +23,6 @@ dev-lang/path64 debugger
 # Alexandre Rostovtsev <tetromino@gentoo.org> (31 Oct 2011)
 # Let's not suddenly enable clutter on stable evolution versions
 <mail-client/evolution-3 clutter
-
-# Alexandre Rostovtsev <tetromino@gentoo.org> (27 Oct 2011)
-# GNOME 3 package.use.mask for flags in unmasked packages that
-# would pull in masked ones
->=app-misc/gnote-0.8 applet
 
 # Samuli Suominen <ssuominen@gentoo.org> (16 Oct 2011)
 # Mask libbluray support here, and enable it per arch instead
