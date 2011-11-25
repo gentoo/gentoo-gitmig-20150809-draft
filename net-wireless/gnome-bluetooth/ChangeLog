@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/gnome-bluetooth
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.101 2011/11/02 17:00:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.102 2011/11/25 07:32:07 tetromino Exp $
+
+  25 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnome-bluetooth-3.0.1.ebuild, gnome-bluetooth-3.2.1.ebuild:
+  Drop old + minor eapi4-related qa.
 
 *gnome-bluetooth-3.2.1 (02 Nov 2011)
 
