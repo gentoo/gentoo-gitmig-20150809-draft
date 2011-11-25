@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.4-r1.ebuild,v 1.1 2011/11/25 00:24:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/links/links-2.4-r1.ebuild,v 1.2 2011/11/25 00:28:00 ssuominen Exp $
 
 EAPI=4
 inherit autotools eutils
@@ -74,16 +74,16 @@ src_configure() {
 
 	# Note: ./configure only support 'gpm' features auto-detection, so
 	# we use the autoconf trick
-	( use gpm || use fbcon || use livecd ) || export ac_cv_lib_gpm_Gpm_Open="no"
+	( use gpm || use fbcon || use livecd ) || export ac_cv_lib_gpm_Gpm_Open=no
 
-	if use fbcon || use livecd ; then
+	if use fbcon || use livecd; then
 		myconf="${myconf} --with-fb"
 	else
 		myconf="${myconf} --without-fb"
 	fi
 
 	# force --with-libjpeg if livecd flag is set
-	if use livecd ; then
+	if use livecd; then
 		myconf="${myconf} --with-libjpeg"
 	fi
 
@@ -116,8 +116,8 @@ src_install() {
 pkg_postinst() {
 	if use svga; then
 		elog "You had the svga USE flag enabled, but for security reasons"
-		elog "the links2 binary is NOT setuid by default. In order to"
-		elog "enable links2 to work in SVGA, please change the permissions"
-		elog "of /usr/bin/links2 to enable suid."
+		elog "the links binary is NOT setuid by default. In order to"
+		elog "enable links to work in SVGA, please change the permissions"
+		elog "of /usr/bin/links to enable suid."
 	fi
 }
