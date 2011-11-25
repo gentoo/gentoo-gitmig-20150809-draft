@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.32.0-r2.ebuild,v 1.6 2011/10/05 17:54:16 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.32.0-r2.ebuild,v 1.7 2011/11/25 15:52:19 nirbheek Exp $
 
 EAPI="3"
 GCONF_DEBUG="yes"
@@ -71,6 +71,7 @@ RDEPEND=">=dev-libs/glib-2.25.11:2
 	tracker? ( >=app-misc/tracker-0.8.1 )
 	upnp? ( media-video/coherence )
 	youtube? (
+		<dev-libs/libgdata-0.9
 		>=dev-libs/libgdata-0.4
 		net-libs/libsoup:2.4
 		media-plugins/gst-plugins-soup:0.10
