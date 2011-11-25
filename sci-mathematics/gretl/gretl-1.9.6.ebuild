@@ -1,9 +1,9 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.3.ebuild,v 1.2 2011/03/02 21:06:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.9.6.ebuild,v 1.1 2011/11/25 18:15:57 bicatali Exp $
 
 USE_EINSTALL=true
-EAPI=2
+EAPI=4
 inherit eutils gnome2 elisp-common
 
 DESCRIPTION="Regression, econometrics and time-series library"
@@ -33,8 +33,6 @@ RDEPEND="
 	gnome? ( sci-visualization/gnuplot[gd]
 			 media-libs/gd[png]
 			 gnome-base/libgnomeui
-			 gnome-base/libgnomeprint:2.2
-			 gnome-base/libgnomeprintui:2.2
 			 gnome-base/gconf:2 )
 	R? ( dev-lang/R )
 	sourceview? ( x11-libs/gtksourceview:2.0 )
@@ -83,7 +81,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die "emake failed"
+	emake
 	if use emacs; then
 		elisp-compile utils/emacs/gretl.el || die "elisp-compile failed"
 	fi
@@ -91,9 +89,9 @@ src_compile() {
 
 src_install() {
 	if use gnome; then
-		gnome2_src_install gnome_prefix="${D}"/usr svprefix="${D}usr"
+		gnome2_src_install gnome_prefix="${ED}"/usr svprefix="${ED}usr"
 	else
-		einstall svprefix="${D}usr"
+		einstall svprefix="${ED}usr"
 	fi
 	if use gtk && ! use gnome; then
 		doicon gnome/gretl.png
