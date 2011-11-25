@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.174 2011/11/19 19:46:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.175 2011/11/25 17:25:27 xarthisius Exp $
+
+  25 Nov 2011; Kacper Kowalik <xarthisius@gentoo.org> nspr-4.8.9.ebuild:
+  ppc64 stable wrt #388045
 
   19 Nov 2011; Raúl Porcel <armin76@gentoo.org> nspr-4.8.9.ebuild:
   alpha/ia64/sparc stable wrt #388045
