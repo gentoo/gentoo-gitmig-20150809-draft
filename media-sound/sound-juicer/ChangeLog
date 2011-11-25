@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sound-juicer
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.214 2011/11/03 18:36:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/ChangeLog,v 1.215 2011/11/25 07:20:34 tetromino Exp $
+
+  25 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
+  sound-juicer-2.99.0_pre20111001.ebuild:
+  Drop alpha, ia64, ppc, ppc64, sparc, x86-fbsd keywords due to
+  libgnome-media-profiles dep (bug #390345).
 
   03 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org>
   sound-juicer-2.32.0.ebuild, sound-juicer-2.32.0-r1.ebuild,
