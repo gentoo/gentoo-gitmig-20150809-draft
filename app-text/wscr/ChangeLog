@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wscr
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wscr/ChangeLog,v 1.18 2011/02/06 07:42:29 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wscr/ChangeLog,v 1.19 2011/11/25 23:52:23 hwoarang Exp $
+
+  25 Nov 2011; Markos Chandras <hwoarang@gentoo.org> wscr-1.2-r1.ebuild:
+  Stable on amd64 wrt bug #391609
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> wscr-1.2.ebuild:
   Drop to ~mips
