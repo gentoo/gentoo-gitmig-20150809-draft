@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.522 2011/11/18 08:41:13 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.523 2011/11/25 09:10:47 olemarkus Exp $
+
+*php-5.4.0_rc2 (25 Nov 2011)
+*php-5.3.9_rc2 (25 Nov 2011)
+
+  25 Nov 2011; Ole Markus With <olemarkus@gentoo.org> +php-5.3.9_rc2.ebuild,
+  +php-5.4.0_rc2.ebuild:
+  Bump of the release candidates
 
   18 Nov 2011; Ole Markus With <olemarkus@gentoo.org> files/php-fpm.init:
   Fixed init script for multislotting. Bug 390307. Thanks to Guillaume
