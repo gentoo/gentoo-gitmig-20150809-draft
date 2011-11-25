@@ -1,14 +1,14 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/cgal-3.6.1.ebuild,v 1.3 2011/11/14 11:27:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/cgal-3.9.ebuild,v 1.1 2011/11/25 18:40:02 bicatali Exp $
 
 EAPI=3
 CMAKE_BUILD_TYPE=Release
 inherit base multilib cmake-utils
 
 MY_P=CGAL-${PV}
-PID=27224
-DPID=27230
+PID=29122
+DPID=29120
 
 DESCRIPTION="C++ library for geometric algorithms and data structures"
 HOMEPAGE="http://www.cgal.org/"
