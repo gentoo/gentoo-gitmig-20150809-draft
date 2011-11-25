@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/notmuch
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.14 2011/11/24 18:07:59 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/ChangeLog,v 1.15 2011/11/25 10:38:06 aidecoe Exp $
+
+  25 Nov 2011; Amadeusz Żołnowski <aidecoe@gentoo.org>
+  +files/0.10-fix-test-build.patch, notmuch-0.10.ebuild:
+  Fixed out of tree build of test-suites. Corrected postinst message, btw.
 
 *notmuch-0.10 (24 Nov 2011)
 

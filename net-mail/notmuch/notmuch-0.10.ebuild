@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.10.ebuild,v 1.1 2011/11/24 18:07:59 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/notmuch/notmuch-0.10.ebuild,v 1.2 2011/11/25 10:38:06 aidecoe Exp $
 
 EAPI=4
 
@@ -44,6 +44,7 @@ RDEPEND="${CDEPEND}
 	zsh-completion? ( app-shells/zsh )
 	"
 
+PATCHES=( "${FILESDIR}"/0.10-fix-test-build.patch )
 DOCS=( AUTHORS NEWS README TODO )
 SITEFILE="50${PN}-gentoo.el"
 
@@ -143,7 +144,7 @@ pkg_postinst() {
 
 	if use python; then
 		echo
-		elog "Python API documentation is also online available at:"
+		elog "Python API documentation is also available online at:"
 		elog "  http://packages.python.org/notmuch/"
 	fi
 }
