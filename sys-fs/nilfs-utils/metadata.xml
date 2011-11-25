@@ -4,6 +4,9 @@
 <maintainer>
 <email>matsuu@gentoo.org</email>
 </maintainer>
+<maintainer>
+<email>naota@gentoo.org</email>
+</maintainer>
 <longdescription lang="en">
 NILFS is a new implementation of a log-structured file system for the
 Linux 2.6 operating system. Conventional features of a log-structured
