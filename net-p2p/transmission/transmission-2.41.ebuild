@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.41.ebuild,v 1.2 2011/10/19 11:49:53 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-2.41.ebuild,v 1.3 2011/11/26 22:41:25 eva Exp $
 
 EAPI=4
 inherit eutils fdo-mime gnome2-utils qt4-r2 autotools
@@ -48,6 +48,9 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.33-0001-configure.ac.patch"
 	epatch "${FILESDIR}/${PN}-2.33-0002-config.in-4-qt.pro.patch"
 	epatch "${FILESDIR}/${P}-0003-system-miniupnpc.patch"
+
+	# Fix build failure with USE=-utp, bug #290737
+	epatch "${FILESDIR}/${P}-noutp.patch"
 
 	# Upstream is not interested in this: https://trac.transmissionbt.com/ticket/4324
 	sed -e 's|noinst\(_PROGRAMS = $(TESTS)\)|check\1|' -i libtransmission/Makefile.am || die
