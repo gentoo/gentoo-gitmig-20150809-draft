@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-3.2.1.ebuild,v 1.2 2011/11/16 10:56:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/evince-3.2.1.ebuild,v 1.3 2011/11/26 02:45:45 tetromino Exp $
 
 EAPI="4"
 GCONF_DEBUG="yes"
@@ -92,11 +92,12 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Do not depend on gnome-icon-theme, bug #326855
-	sed 's/gnome-icon-theme//' -i configure.ac || die "sed failed"
-
 	# Fix .desktop file so menu item shows up
 	epatch "${FILESDIR}"/${PN}-0.7.1-display-menu.patch
 
 	gnome2_src_prepare
+
+	# Do not depend on gnome-icon-theme, bug #326855, #391859
+	sed -e 's/gnome-icon-theme >= $GNOME_ICON_THEME_REQUIRED//g' \
+		-i configure || die "sed failed"
 }

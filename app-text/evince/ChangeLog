@@ -1,6 +1,11 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.233 2011/11/23 20:35:27 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.234 2011/11/26 02:45:45 tetromino Exp $
+
+  26 Nov 2011; Alexandre Rostovtsev <tetromino@gentoo.org> evince-3.2.1.ebuild,
+  evince-3.2.1-r1.ebuild:
+  Fix the gnome-icon-theme configure sed (bug #391859, thanks to Florian Faber
+  <faber@faberman.de> for reporting).
 
 *evince-3.2.1-r1 (23 Nov 2011)
 
