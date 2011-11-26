@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/feynmf
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/feynmf/ChangeLog,v 1.40 2011/10/05 19:06:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/feynmf/ChangeLog,v 1.41 2011/11/26 18:55:15 ulm Exp $
+
+  26 Nov 2011; Ulrich Mueller <ulm@gentoo.org> feynmf-1.08-r3.ebuild:
+  Add dev-lang/perl as build dependency, bug 391933.
 
   05 Oct 2011; Alexis Ballier <aballier@gentoo.org> feynmf-1.08-r3.ebuild:
   remove ptex dep as it is going away
