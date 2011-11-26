@@ -1,0 +1,35 @@
+diff -Nur casacore-1.3.0.orig/casa/Arrays/IPosition.h casacore-1.3.0/casa/Arrays/IPosition.h
+--- casacore-1.3.0.orig/casa/Arrays/IPosition.h	2011-05-17 06:03:06.000000000 +0100
++++ casacore-1.3.0/casa/Arrays/IPosition.h	2011-05-17 06:04:15.000000000 +0100
+@@ -33,6 +33,7 @@
+ #include <casa/iosfwd.h>
+ #include <casa/BasicSL/String.h>
+ #include <vector>
++#include <cstddef>
+ #include <unistd.h>
+ 
+ namespace casa { //# NAMESPACE CASA - BEGIN
+diff -Nur casacore-1.3.0.orig/casa/Containers/Block.h casacore-1.3.0/casa/Containers/Block.h
+--- casacore-1.3.0.orig/casa/Containers/Block.h	2011-05-17 06:03:05.000000000 +0100
++++ casacore-1.3.0/casa/Containers/Block.h	2011-05-17 06:05:55.000000000 +0100
+@@ -28,6 +28,7 @@
+ #ifndef CASA_BLOCK_H
+ #define CASA_BLOCK_H
+ 
++#include <cstddef>
+ #include <casa/aips.h>
+ ///#include <casa/Containers/BlockIO.h>
+ #include <casa/Utilities/Copy.h>
+--- casacore-1.3.0.orig/mirlib/sysdep.h	2011-11-26 04:44:52.000000000 +0000
++++ casacore-1.3.0/mirlib/sysdep.h	2011-11-26 04:45:33.000000000 +0000
+@@ -1,3 +1,5 @@
++#ifndef SYSDEP_H
++#define SYSDEP_H
+ /*
+  *  History:
+  *    pjt 31oct89 _trace_ added as defined() option, BUFALIGN 8.
+@@ -133,3 +135,4 @@
+ #  define unpack32_c(a,b,c) memcpy((char *)(b),(a),sizeof(int)*(c))
+ #endif
+ #endif
++#endif
